@@ -1,0 +1,1203 @@
+{
+  "generated_at": "2026-09-05T18:16:50",
+  "rows": [
+    {
+      "name": "flatten_h5",
+      "base": "flatten_h5",
+      "overlay": "base",
+      "book_pct": 22.843,
+      "n_trades": 75,
+      "n_skips": 194,
+      "buy_nneg_le2": {
+        "n": 59,
+        "win": 0.6102,
+        "mean": 4.38
+      },
+      "buy_nneg_ge3": {
+        "n": 6,
+        "win": 0.8333,
+        "mean": 4.702
+      },
+      "require": {}
+    },
+    {
+      "name": "flatten_h5_nneg2",
+      "base": "flatten_h5",
+      "overlay": "nneg2",
+      "book_pct": 16.97,
+      "n_trades": 72,
+      "n_skips": 171,
+      "buy_nneg_le2": {
+        "n": 59,
+        "win": 0.6102,
+        "mean": 4.38
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "n_neg_max": 2
+      }
+    },
+    {
+      "name": "flatten_h5_nneg1",
+      "base": "flatten_h5",
+      "overlay": "nneg1",
+      "book_pct": 14.514,
+      "n_trades": 69,
+      "n_skips": 152,
+      "buy_nneg_le2": {
+        "n": 58,
+        "win": 0.6207,
+        "mean": 4.46
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "n_neg_max": 1
+      }
+    },
+    {
+      "name": "flatten_h5_nneg3",
+      "base": "flatten_h5",
+      "overlay": "nneg3",
+      "book_pct": 7.231,
+      "n_trades": 6,
+      "n_skips": 35,
+      "buy_nneg_le2": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "buy_nneg_ge3": {
+        "n": 6,
+        "win": 0.8333,
+        "mean": 4.702
+      },
+      "require": {
+        "n_neg_min": 3
+      }
+    },
+    {
+      "name": "flatten_h5_news_g",
+      "base": "flatten_h5",
+      "overlay": "news_g",
+      "book_pct": -6.02,
+      "n_trades": 20,
+      "n_skips": 45,
+      "buy_nneg_le2": {
+        "n": 11,
+        "win": 0.4545,
+        "mean": 0.435
+      },
+      "buy_nneg_ge3": {
+        "n": 2,
+        "win": 1.0,
+        "mean": 3.318
+      },
+      "require": {
+        "news": "good"
+      }
+    },
+    {
+      "name": "flatten_h5_burst",
+      "base": "flatten_h5",
+      "overlay": "burst",
+      "book_pct": -1.608,
+      "n_trades": 8,
+      "n_skips": 20,
+      "buy_nneg_le2": {
+        "n": 9,
+        "win": 0.3333,
+        "mean": 6.344
+      },
+      "buy_nneg_ge3": {
+        "n": 1,
+        "win": 1.0,
+        "mean": 7.417
+      },
+      "require": {
+        "burst": true
+      }
+    },
+    {
+      "name": "flatten_h5_burst_nneg2",
+      "base": "flatten_h5",
+      "overlay": "burst_nneg2",
+      "book_pct": -1.608,
+      "n_trades": 8,
+      "n_skips": 21,
+      "buy_nneg_le2": {
+        "n": 9,
+        "win": 0.3333,
+        "mean": 6.344
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "burst": true,
+        "n_neg_max": 2
+      }
+    },
+    {
+      "name": "flatten_h5_burst_news",
+      "base": "flatten_h5",
+      "overlay": "burst_news",
+      "book_pct": -1.722,
+      "n_trades": 2,
+      "n_skips": 4,
+      "buy_nneg_le2": {
+        "n": 1,
+        "win": 0.0,
+        "mean": -1.105
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "burst": true,
+        "news": "good"
+      }
+    },
+    {
+      "name": "flatten_h5_ext15",
+      "base": "flatten_h5",
+      "overlay": "ext15",
+      "book_pct": 15.963,
+      "n_trades": 10,
+      "n_skips": 20,
+      "buy_nneg_le2": {
+        "n": 5,
+        "win": 0.6,
+        "mean": 12.824
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "ret_5_min": 15.0,
+        "last_green": true
+      }
+    },
+    {
+      "name": "flatten_h3",
+      "base": "flatten_h3",
+      "overlay": "base",
+      "book_pct": 11.767,
+      "n_trades": 77,
+      "n_skips": 128,
+      "buy_nneg_le2": {
+        "n": 59,
+        "win": 0.4915,
+        "mean": 2.055
+      },
+      "buy_nneg_ge3": {
+        "n": 6,
+        "win": 0.8333,
+        "mean": 2.252
+      },
+      "require": {}
+    },
+    {
+      "name": "flatten_h3_nneg2",
+      "base": "flatten_h3",
+      "overlay": "nneg2",
+      "book_pct": 11.993,
+      "n_trades": 73,
+      "n_skips": 113,
+      "buy_nneg_le2": {
+        "n": 59,
+        "win": 0.4915,
+        "mean": 2.055
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "n_neg_max": 2
+      }
+    },
+    {
+      "name": "flatten_h3_nneg1",
+      "base": "flatten_h3",
+      "overlay": "nneg1",
+      "book_pct": 11.993,
+      "n_trades": 73,
+      "n_skips": 100,
+      "buy_nneg_le2": {
+        "n": 58,
+        "win": 0.5,
+        "mean": 2.164
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "n_neg_max": 1
+      }
+    },
+    {
+      "name": "flatten_h3_nneg3",
+      "base": "flatten_h3",
+      "overlay": "nneg3",
+      "book_pct": 1.371,
+      "n_trades": 6,
+      "n_skips": 29,
+      "buy_nneg_le2": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "buy_nneg_ge3": {
+        "n": 6,
+        "win": 0.8333,
+        "mean": 2.252
+      },
+      "require": {
+        "n_neg_min": 3
+      }
+    },
+    {
+      "name": "flatten_h3_news_g",
+      "base": "flatten_h3",
+      "overlay": "news_g",
+      "book_pct": 0.47,
+      "n_trades": 14,
+      "n_skips": 23,
+      "buy_nneg_le2": {
+        "n": 11,
+        "win": 0.4545,
+        "mean": -0.84
+      },
+      "buy_nneg_ge3": {
+        "n": 2,
+        "win": 0.5,
+        "mean": 1.157
+      },
+      "require": {
+        "news": "good"
+      }
+    },
+    {
+      "name": "flatten_h3_burst",
+      "base": "flatten_h3",
+      "overlay": "burst",
+      "book_pct": -8.175,
+      "n_trades": 10,
+      "n_skips": 12,
+      "buy_nneg_le2": {
+        "n": 9,
+        "win": 0.4444,
+        "mean": 5.186
+      },
+      "buy_nneg_ge3": {
+        "n": 1,
+        "win": 1.0,
+        "mean": 1.042
+      },
+      "require": {
+        "burst": true
+      }
+    },
+    {
+      "name": "flatten_h3_burst_nneg2",
+      "base": "flatten_h3",
+      "overlay": "burst_nneg2",
+      "book_pct": -7.213,
+      "n_trades": 10,
+      "n_skips": 12,
+      "buy_nneg_le2": {
+        "n": 9,
+        "win": 0.4444,
+        "mean": 5.186
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "burst": true,
+        "n_neg_max": 2
+      }
+    },
+    {
+      "name": "flatten_h3_burst_news",
+      "base": "flatten_h3",
+      "overlay": "burst_news",
+      "book_pct": 0.261,
+      "n_trades": 2,
+      "n_skips": 3,
+      "buy_nneg_le2": {
+        "n": 1,
+        "win": 0.0,
+        "mean": -0.737
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "burst": true,
+        "news": "good"
+      }
+    },
+    {
+      "name": "flatten_h3_ext15",
+      "base": "flatten_h3",
+      "overlay": "ext15",
+      "book_pct": 8.684,
+      "n_trades": 10,
+      "n_skips": 14,
+      "buy_nneg_le2": {
+        "n": 5,
+        "win": 0.4,
+        "mean": 9.231
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "ret_5_min": 15.0,
+        "last_green": true
+      }
+    },
+    {
+      "name": "union_h5",
+      "base": "union_h5",
+      "overlay": "base",
+      "book_pct": 18.844,
+      "n_trades": 100,
+      "n_skips": 242,
+      "buy_nneg_le2": {
+        "n": 71,
+        "win": 0.5634,
+        "mean": 3.108
+      },
+      "buy_nneg_ge3": {
+        "n": 9,
+        "win": 0.6667,
+        "mean": 2.406
+      },
+      "require": {}
+    },
+    {
+      "name": "union_h5_nneg2",
+      "base": "union_h5",
+      "overlay": "nneg2",
+      "book_pct": 17.946,
+      "n_trades": 102,
+      "n_skips": 256,
+      "buy_nneg_le2": {
+        "n": 80,
+        "win": 0.55,
+        "mean": 2.329
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "n_neg_max": 2
+      }
+    },
+    {
+      "name": "union_h5_nneg1",
+      "base": "union_h5",
+      "overlay": "nneg1",
+      "book_pct": 14.764,
+      "n_trades": 107,
+      "n_skips": 253,
+      "buy_nneg_le2": {
+        "n": 80,
+        "win": 0.5625,
+        "mean": 2.495
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "n_neg_max": 1
+      }
+    },
+    {
+      "name": "union_h5_nneg3",
+      "base": "union_h5",
+      "overlay": "nneg3",
+      "book_pct": 5.829,
+      "n_trades": 70,
+      "n_skips": 187,
+      "buy_nneg_le2": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "buy_nneg_ge3": {
+        "n": 59,
+        "win": 0.4746,
+        "mean": 0.854
+      },
+      "require": {
+        "n_neg_min": 3
+      }
+    },
+    {
+      "name": "union_h5_news_g",
+      "base": "union_h5",
+      "overlay": "news_g",
+      "book_pct": -10.09,
+      "n_trades": 89,
+      "n_skips": 202,
+      "buy_nneg_le2": {
+        "n": 57,
+        "win": 0.386,
+        "mean": -1.415
+      },
+      "buy_nneg_ge3": {
+        "n": 10,
+        "win": 0.5,
+        "mean": 0.263
+      },
+      "require": {
+        "news": "good"
+      }
+    },
+    {
+      "name": "union_h5_burst",
+      "base": "union_h5",
+      "overlay": "burst",
+      "book_pct": 4.705,
+      "n_trades": 51,
+      "n_skips": 145,
+      "buy_nneg_le2": {
+        "n": 56,
+        "win": 0.5179,
+        "mean": 1.206
+      },
+      "buy_nneg_ge3": {
+        "n": 10,
+        "win": 0.5,
+        "mean": 3.247
+      },
+      "require": {
+        "burst": true
+      }
+    },
+    {
+      "name": "union_h5_burst_nneg2",
+      "base": "union_h5",
+      "overlay": "burst_nneg2",
+      "book_pct": -0.278,
+      "n_trades": 54,
+      "n_skips": 145,
+      "buy_nneg_le2": {
+        "n": 66,
+        "win": 0.5152,
+        "mean": 0.921
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "burst": true,
+        "n_neg_max": 2
+      }
+    },
+    {
+      "name": "union_h5_burst_news",
+      "base": "union_h5",
+      "overlay": "burst_news",
+      "book_pct": -9.175,
+      "n_trades": 34,
+      "n_skips": 71,
+      "buy_nneg_le2": {
+        "n": 31,
+        "win": 0.2903,
+        "mean": -2.192
+      },
+      "buy_nneg_ge3": {
+        "n": 4,
+        "win": 0.25,
+        "mean": -0.668
+      },
+      "require": {
+        "burst": true,
+        "news": "good"
+      }
+    },
+    {
+      "name": "union_h5_ext15",
+      "base": "union_h5",
+      "overlay": "ext15",
+      "book_pct": 2.676,
+      "n_trades": 42,
+      "n_skips": 126,
+      "buy_nneg_le2": {
+        "n": 56,
+        "win": 0.5179,
+        "mean": 0.874
+      },
+      "buy_nneg_ge3": {
+        "n": 9,
+        "win": 0.3333,
+        "mean": 1.508
+      },
+      "require": {
+        "ret_5_min": 15.0,
+        "last_green": true
+      }
+    },
+    {
+      "name": "union_h3",
+      "base": "union_h3",
+      "overlay": "base",
+      "book_pct": 9.861,
+      "n_trades": 97,
+      "n_skips": 156,
+      "buy_nneg_le2": {
+        "n": 71,
+        "win": 0.4648,
+        "mean": 1.295
+      },
+      "buy_nneg_ge3": {
+        "n": 9,
+        "win": 0.6667,
+        "mean": 0.978
+      },
+      "require": {}
+    },
+    {
+      "name": "union_h3_nneg2",
+      "base": "union_h3",
+      "overlay": "nneg2",
+      "book_pct": 3.528,
+      "n_trades": 101,
+      "n_skips": 171,
+      "buy_nneg_le2": {
+        "n": 80,
+        "win": 0.4375,
+        "mean": 0.636
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "n_neg_max": 2
+      }
+    },
+    {
+      "name": "union_h3_nneg1",
+      "base": "union_h3",
+      "overlay": "nneg1",
+      "book_pct": 1.955,
+      "n_trades": 101,
+      "n_skips": 164,
+      "buy_nneg_le2": {
+        "n": 80,
+        "win": 0.45,
+        "mean": 0.903
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "n_neg_max": 1
+      }
+    },
+    {
+      "name": "union_h3_nneg3",
+      "base": "union_h3",
+      "overlay": "nneg3",
+      "book_pct": 0.16,
+      "n_trades": 80,
+      "n_skips": 150,
+      "buy_nneg_le2": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "buy_nneg_ge3": {
+        "n": 59,
+        "win": 0.4915,
+        "mean": 1.468
+      },
+      "require": {
+        "n_neg_min": 3
+      }
+    },
+    {
+      "name": "union_h3_news_g",
+      "base": "union_h3",
+      "overlay": "news_g",
+      "book_pct": 0.673,
+      "n_trades": 92,
+      "n_skips": 136,
+      "buy_nneg_le2": {
+        "n": 57,
+        "win": 0.4386,
+        "mean": -0.523
+      },
+      "buy_nneg_ge3": {
+        "n": 10,
+        "win": 0.4,
+        "mean": 0.565
+      },
+      "require": {
+        "news": "good"
+      }
+    },
+    {
+      "name": "union_h3_burst",
+      "base": "union_h3",
+      "overlay": "burst",
+      "book_pct": 2.486,
+      "n_trades": 56,
+      "n_skips": 108,
+      "buy_nneg_le2": {
+        "n": 56,
+        "win": 0.5357,
+        "mean": 0.527
+      },
+      "buy_nneg_ge3": {
+        "n": 10,
+        "win": 0.5,
+        "mean": 2.267
+      },
+      "require": {
+        "burst": true
+      }
+    },
+    {
+      "name": "union_h3_burst_nneg2",
+      "base": "union_h3",
+      "overlay": "burst_nneg2",
+      "book_pct": -3.575,
+      "n_trades": 71,
+      "n_skips": 109,
+      "buy_nneg_le2": {
+        "n": 66,
+        "win": 0.5303,
+        "mean": 0.323
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "burst": true,
+        "n_neg_max": 2
+      }
+    },
+    {
+      "name": "union_h3_burst_news",
+      "base": "union_h3",
+      "overlay": "burst_news",
+      "book_pct": 2.644,
+      "n_trades": 40,
+      "n_skips": 50,
+      "buy_nneg_le2": {
+        "n": 31,
+        "win": 0.4194,
+        "mean": -0.551
+      },
+      "buy_nneg_ge3": {
+        "n": 4,
+        "win": 0.0,
+        "mean": -2.134
+      },
+      "require": {
+        "burst": true,
+        "news": "good"
+      }
+    },
+    {
+      "name": "union_h3_ext15",
+      "base": "union_h3",
+      "overlay": "ext15",
+      "book_pct": 3.207,
+      "n_trades": 51,
+      "n_skips": 106,
+      "buy_nneg_le2": {
+        "n": 56,
+        "win": 0.4821,
+        "mean": 0.225
+      },
+      "buy_nneg_ge3": {
+        "n": 9,
+        "win": 0.3333,
+        "mean": 1.864
+      },
+      "require": {
+        "ret_5_min": 15.0,
+        "last_green": true
+      }
+    },
+    {
+      "name": "union_e_green_h3",
+      "base": "union_e_green_h3",
+      "overlay": "base",
+      "book_pct": 47.92,
+      "n_trades": 64,
+      "n_skips": 96,
+      "buy_nneg_le2": {
+        "n": 39,
+        "win": 0.5641,
+        "mean": 0.156
+      },
+      "buy_nneg_ge3": {
+        "n": 12,
+        "win": 0.5,
+        "mean": 3.431
+      },
+      "require": {
+        "earn_react": true,
+        "last_green": true
+      }
+    },
+    {
+      "name": "union_e_green_h3_nneg2",
+      "base": "union_e_green_h3",
+      "overlay": "nneg2",
+      "book_pct": 44.101,
+      "n_trades": 53,
+      "n_skips": 73,
+      "buy_nneg_le2": {
+        "n": 45,
+        "win": 0.5111,
+        "mean": -0.14
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "earn_react": true,
+        "last_green": true,
+        "n_neg_max": 2
+      }
+    },
+    {
+      "name": "union_e_green_h3_nneg1",
+      "base": "union_e_green_h3",
+      "overlay": "nneg1",
+      "book_pct": 44.906,
+      "n_trades": 26,
+      "n_skips": 38,
+      "buy_nneg_le2": {
+        "n": 26,
+        "win": 0.4615,
+        "mean": -0.505
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "earn_react": true,
+        "last_green": true,
+        "n_neg_max": 1
+      }
+    },
+    {
+      "name": "union_e_green_h3_nneg3",
+      "base": "union_e_green_h3",
+      "overlay": "nneg3",
+      "book_pct": -12.666,
+      "n_trades": 19,
+      "n_skips": 35,
+      "buy_nneg_le2": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "buy_nneg_ge3": {
+        "n": 13,
+        "win": 0.4615,
+        "mean": 2.86
+      },
+      "require": {
+        "earn_react": true,
+        "last_green": true,
+        "n_neg_min": 3
+      }
+    },
+    {
+      "name": "union_e_green_h3_news_g",
+      "base": "union_e_green_h3",
+      "overlay": "news_g",
+      "book_pct": 1.452,
+      "n_trades": 3,
+      "n_skips": 3,
+      "buy_nneg_le2": {
+        "n": 2,
+        "win": 0.5,
+        "mean": 2.054
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "earn_react": true,
+        "last_green": true,
+        "news": "good"
+      }
+    },
+    {
+      "name": "union_e_green_h3_burst",
+      "base": "union_e_green_h3",
+      "overlay": "burst",
+      "book_pct": -38.084,
+      "n_trades": 4,
+      "n_skips": 7,
+      "buy_nneg_le2": {
+        "n": 2,
+        "win": 0.0,
+        "mean": -19.663
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "earn_react": true,
+        "last_green": true,
+        "burst": true
+      }
+    },
+    {
+      "name": "union_e_green_h3_burst_nneg2",
+      "base": "union_e_green_h3",
+      "overlay": "burst_nneg2",
+      "book_pct": -38.084,
+      "n_trades": 4,
+      "n_skips": 6,
+      "buy_nneg_le2": {
+        "n": 2,
+        "win": 0.0,
+        "mean": -19.663
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "earn_react": true,
+        "last_green": true,
+        "burst": true,
+        "n_neg_max": 2
+      }
+    },
+    {
+      "name": "union_e_green_h3_burst_news",
+      "base": "union_e_green_h3",
+      "overlay": "burst_news",
+      "book_pct": 0.0,
+      "n_trades": 0,
+      "n_skips": 0,
+      "buy_nneg_le2": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "earn_react": true,
+        "last_green": true,
+        "burst": true,
+        "news": "good"
+      }
+    },
+    {
+      "name": "union_e_green_h3_ext15",
+      "base": "union_e_green_h3",
+      "overlay": "ext15",
+      "book_pct": -25.106,
+      "n_trades": 4,
+      "n_skips": 6,
+      "buy_nneg_le2": {
+        "n": 2,
+        "win": 0.0,
+        "mean": -25.227
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "earn_react": true,
+        "last_green": true,
+        "ret_5_min": 15.0
+      }
+    },
+    {
+      "name": "yday_gainer_h3",
+      "base": "yday_gainer_h3",
+      "overlay": "base",
+      "book_pct": -5.105,
+      "n_trades": 86,
+      "n_skips": 152,
+      "buy_nneg_le2": {
+        "n": 53,
+        "win": 0.3962,
+        "mean": -0.307
+      },
+      "buy_nneg_ge3": {
+        "n": 11,
+        "win": 0.4545,
+        "mean": 2.925
+      },
+      "require": {}
+    },
+    {
+      "name": "yday_gainer_h3_nneg2",
+      "base": "yday_gainer_h3",
+      "overlay": "nneg2",
+      "book_pct": -6.336,
+      "n_trades": 81,
+      "n_skips": 137,
+      "buy_nneg_le2": {
+        "n": 64,
+        "win": 0.3906,
+        "mean": -0.071
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "n_neg_max": 2
+      }
+    },
+    {
+      "name": "yday_gainer_h3_nneg1",
+      "base": "yday_gainer_h3",
+      "overlay": "nneg1",
+      "book_pct": -8.896,
+      "n_trades": 85,
+      "n_skips": 106,
+      "buy_nneg_le2": {
+        "n": 64,
+        "win": 0.3906,
+        "mean": -0.299
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "n_neg_max": 1
+      }
+    },
+    {
+      "name": "yday_gainer_h3_nneg3",
+      "base": "yday_gainer_h3",
+      "overlay": "nneg3",
+      "book_pct": -0.716,
+      "n_trades": 36,
+      "n_skips": 93,
+      "buy_nneg_le2": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "buy_nneg_ge3": {
+        "n": 27,
+        "win": 0.3333,
+        "mean": 0.714
+      },
+      "require": {
+        "n_neg_min": 3
+      }
+    },
+    {
+      "name": "yday_gainer_h3_news_g",
+      "base": "yday_gainer_h3",
+      "overlay": "news_g",
+      "book_pct": 3.633,
+      "n_trades": 47,
+      "n_skips": 69,
+      "buy_nneg_le2": {
+        "n": 27,
+        "win": 0.4074,
+        "mean": -0.965
+      },
+      "buy_nneg_ge3": {
+        "n": 4,
+        "win": 0.5,
+        "mean": 1.21
+      },
+      "require": {
+        "news": "good"
+      }
+    },
+    {
+      "name": "yday_gainer_h3_burst",
+      "base": "yday_gainer_h3",
+      "overlay": "burst",
+      "book_pct": -0.274,
+      "n_trades": 72,
+      "n_skips": 105,
+      "buy_nneg_le2": {
+        "n": 38,
+        "win": 0.4211,
+        "mean": 0.047
+      },
+      "buy_nneg_ge3": {
+        "n": 4,
+        "win": 0.25,
+        "mean": -1.313
+      },
+      "require": {
+        "burst": true
+      }
+    },
+    {
+      "name": "yday_gainer_h3_burst_nneg2",
+      "base": "yday_gainer_h3",
+      "overlay": "burst_nneg2",
+      "book_pct": 2.297,
+      "n_trades": 65,
+      "n_skips": 84,
+      "buy_nneg_le2": {
+        "n": 40,
+        "win": 0.425,
+        "mean": 0.569
+      },
+      "buy_nneg_ge3": {
+        "n": 0,
+        "win": null,
+        "mean": null
+      },
+      "require": {
+        "burst": true,
+        "n_neg_max": 2
+      }
+    },
+    {
+      "name": "yday_gainer_h3_burst_news",
+      "base": "yday_gainer_h3",
+      "overlay": "burst_news",
+      "book_pct": 9.581,
+      "n_trades": 18,
+      "n_skips": 26,
+      "buy_nneg_le2": {
+        "n": 9,
+        "win": 0.4444,
+        "mean": 0.518
+      },
+      "buy_nneg_ge3": {
+        "n": 1,
+        "win": 0.0,
+        "mean": 0.0
+      },
+      "require": {
+        "burst": true,
+        "news": "good"
+      }
+    },
+    {
+      "name": "yday_gainer_h3_ext15",
+      "base": "yday_gainer_h3",
+      "overlay": "ext15",
+      "book_pct": 2.902,
+      "n_trades": 60,
+      "n_skips": 100,
+      "buy_nneg_le2": {
+        "n": 41,
+        "win": 0.439,
+        "mean": 0.349
+      },
+      "buy_nneg_ge3": {
+        "n": 3,
+        "win": 0.3333,
+        "mean": -1.751
+      },
+      "require": {
+        "ret_5_min": 15.0,
+        "last_green": true
+      }
+    }
+  ],
+  "keepers": [],
+  "asst": [
+    {
+      "date": "2026-08-20",
+      "ret_5": 18.886191558296872,
+      "rvol": 2.558132113783588,
+      "break_10": true,
+      "n_neg": 1,
+      "burst": true,
+      "news_box": "missing",
+      "headline_tone": "good",
+      "headline": "Bitcoin DAT Strives Board Director Pierre Rochard Buys ASST Stocks as SATA Nears Par Value",
+      "news": "good"
+    },
+    {
+      "date": "2026-08-24",
+      "ret_5": 47.94965435790457,
+      "rvol": 3.7274822332862563,
+      "break_10": true,
+      "n_neg": 4,
+      "burst": true,
+      "news_box": "missing",
+      "headline_tone": "good",
+      "headline": "Bitcoin DAT Strives Board Director Pierre Rochard Buys ASST Stocks as SATA Nears Par Value",
+      "news": "good"
+    },
+    {
+      "date": "2026-08-25",
+      "ret_5": 47.94965435790457,
+      "rvol": 3.7274822332862563,
+      "break_10": true,
+      "n_neg": 2,
+      "burst": true,
+      "news_box": "missing",
+      "headline_tone": "neutral",
+      "headline": "Strive CEO Says You Are Not Bullish Enough as Bitcoin Signals Its Biggest Cycle Ever",
+      "news": "neutral"
+    }
+  ],
+  "note": "Keepers must beat flatten_h5 (+22.84) and their own base. yday_gainer overlays improved a losing list but stayed far below current methods. Verdict: keep current methods."
+}
