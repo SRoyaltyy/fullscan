@@ -10,6 +10,9 @@ knowable before 09:30:
   * this morning's priced mover BUY calls
   * flatten_robust would-buy / wish-list
   * specialized R:G + candlestick flags on those names (prior bars)
+  * 20-session OHLC "hot" rank on yesterday's liquid tape (top 80),
+    dropping already-exploded names (ret_5 > 18 or rvol > 2.8) and
+    yesterday's top losers
 
 Same-day Change% is never an input. The list is a watchlist — it does
 not change live flatten_robust fills.
@@ -18,9 +21,11 @@ from __future__ import annotations
 
 from . import candle_factor as cf
 from . import gainer_asof as ga
+from . import ohlc_ripper as ohlc
 
 TOP_YDAY_GAINERS = 50
 TOP_YDAY_MOVERS = 40
+OHLC_HOT_N = ohlc.HOT_TOP_N
 
 
 def _tick(v) -> str:
@@ -111,10 +116,28 @@ def watchlist(date: str, *,
         "earn_react": earnings_reaction(prior, session),
         "yday_gainers": yesterday_gainers(prior, top_n=top_gainers),
         "yday_movers": yesterday_movers(prior, top_n=top_movers),
+        "ohlc_hot": ohlc.liquid_hot(prior, session, top_n=OHLC_HOT_N),
     }
+    yday_losers = set()
+    if prior:
+        yday_losers = {
+            _tick(r.get("ticker"))
+            for r in ga.liquid_losers(ga.load_finviz(prior), top_n=25)
+            if _tick(r.get("ticker"))
+        }
+    # Yesterday's losers stay off the OHLC-hot add, but flatten / earnings
+    # / morning BUYs can still carry them (those are explicit lists).
+    protected = set(buckets["flatten"]) | set(buckets["earn_react"]) | set(
+        buckets["mover_buys"]
+    )
+    buckets["ohlc_hot"] = [
+        t for t in buckets["ohlc_hot"]
+        if t in protected or t not in yday_losers
+    ]
     reasons: dict[str, list[str]] = {}
     order: list[str] = []
-    for key in ("flatten", "mover_buys", "earn_react", "yday_gainers", "yday_movers"):
+    for key in ("flatten", "mover_buys", "earn_react", "yday_gainers",
+                "yday_movers", "ohlc_hot"):
         for t in buckets[key]:
             reasons.setdefault(t, [])
             if key not in reasons[t]:
@@ -124,6 +147,7 @@ def watchlist(date: str, *,
     rows = []
     for t in order:
         feat = cf.features(t, session)
+        oh = ohlc.features(t, session)
         rows.append({
             "ticker": t,
             "date": session,
@@ -134,6 +158,12 @@ def watchlist(date: str, *,
             "candle_pattern": feat.get("last_green") and "green" or feat.get("last_red") and "red" or "—",
             "candle_body_rg": feat.get("body_rg"),
             "candle_vol_rg": feat.get("vol_rg"),
+            "ohlc_ret_5": oh.get("ret_5"),
+            "ohlc_ret_10": oh.get("ret_10"),
+            "ohlc_rvol": oh.get("rvol"),
+            "ohlc_nr7": oh.get("nr7"),
+            "ohlc_break_10": oh.get("break_10"),
+            "ohlc_hot_score": oh.get("hot_score"),
         })
     return {
         "date": session,
@@ -147,6 +177,7 @@ def watchlist(date: str, *,
         "n_earn_react": len(buckets["earn_react"]),
         "n_yday_gainers": len(buckets["yday_gainers"]),
         "n_yday_movers": len(buckets["yday_movers"]),
+        "n_ohlc_hot": len(buckets["ohlc_hot"]),
         "n_candle": sum(1 for r in rows if r["candle_capture"]),
     }
 

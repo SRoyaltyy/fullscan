@@ -141,6 +141,8 @@ def test_html_has_toggles_cameras_and_date_filter() -> None:
     assert "Losers chosen" in page
     assert "Flatten lose rate" in page
     assert "R:G" in page
+    assert "RVOL" in page
+    assert "5d%" in page
     assert "E/R/D" in page
     assert "7-30" in page
     assert "engulf" in page
