@@ -18,6 +18,16 @@ on:
         description: "Optional custom tickers (comma)"
         required: false
         default: ""
+      universe:
+        description: "Run / tally universe"
+        type: choice
+        required: true
+        default: flatten
+        options:
+          - flatten
+          - gainers
+          - movers
+          - losers
       preset:
         description: "featured | strict | setups | lane | loose"
         required: false
@@ -47,10 +57,11 @@ jobs:
           FROM_DATE: ${{ inputs.from_date }}
           TO_DATE: ${{ inputs.to_date }}
           TICKERS: ${{ inputs.tickers }}
+          UNIVERSE: ${{ inputs.universe }}
           PRESET: ${{ inputs.preset }}
         run: |
           set -euo pipefail
-          ARGS=(--from-date "${FROM_DATE:-2026-08-13}" --write)
+          ARGS=(--from-date "${FROM_DATE:-2026-08-13}" --write --source "${UNIVERSE:-flatten}")
           [ -n "${TO_DATE:-}" ] && ARGS+=(--to-date "$TO_DATE")
           [ -n "${TICKERS:-}" ] && ARGS+=(--tickers "$TICKERS")
           [ -n "${PRESET:-}" ] && ARGS+=(--preset "$PRESET")

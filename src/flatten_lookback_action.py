@@ -4,13 +4,19 @@ For every session since the dashboard start (2026-08-13):
 
   * take the names ``flatten_robust`` would buy that day (3d robust
     size-book wish-list, or ranked mover BUYs when flatten_ok)
-  * also collect that day's liquid top gainers and priced mover BUY
-    calls so the phone page can toggle Flatten | Gainers | Movers | Custom
+  * also collect that day's liquid top gainers, priced mover BUYs,
+    and liquid top losers so the Action / phone page can toggle
+    Flatten | Gainers | Movers | Losers | Custom and tally how
+    many of each tape flatten chose
+  * stamp the specialized red:green / volume / candlestick factor
+    (prior sessions only) so we can capture would-be top gainers
+    without buying them
   * paint ticker lookback (12 cameras + yΔ, 6 coaches, 🔵/🚨/⚪,
     featured setups, 09:30 BUY / SELL / NO BUY / HOLD)
 
-Same-day Change% only picks the gainer universe. Flatten picks come
-from the prior book + morning S + priced mover BUYs (leak-free).
+Same-day Change% only picks the gainer / loser / tape-mover
+universes and grades flatten win/lose. Flatten picks come from
+the prior book + morning S + priced mover BUYs (leak-free).
 Today's unprinted book never colors cameras or the flatten gate.
 
 CLI: python -m src.flatten_lookback_action --write
@@ -24,6 +30,7 @@ from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
 
+from . import candle_factor as cf
 from . import gainer_asof as ga
 from . import gainer_lookback_action as gla
 from . import lookback_action as act
@@ -42,7 +49,8 @@ START = ga.START
 HORIZONS = act.HORIZONS
 CAMERA_COLS = run.CAMERA_COLS
 DOMAIN_COLS = run.DOMAIN_COLS
-SOURCES = ("flatten", "gainers", "movers", "custom")
+SOURCES = ("flatten", "gainers", "movers", "losers", "custom")
+UNIVERSES = ("flatten", "gainers", "movers", "losers")
 
 
 def _tick(v) -> str:
@@ -241,6 +249,78 @@ def collect_mover_buys(payload: dict, from_date: str, to_date: str | None,
     }
 
 
+def collect_losers(from_date: str = START, to_date: str | None = None,
+                   top_n: int = gla.TOP_N) -> dict:
+    return gla.collect_losers(from_date=from_date, to_date=to_date, top_n=top_n)
+
+
+def _pattern_label(feat: dict) -> str:
+    bits = []
+    if feat.get("engulf_bull"):
+        bits.append("engulf")
+    if feat.get("hammer"):
+        bits.append("hammer")
+    if feat.get("morning_star"):
+        bits.append("morning")
+    if feat.get("three_green"):
+        bits.append("3g")
+    if feat.get("a15"):
+        bits.append("A15")
+    if feat.get("shooting_star"):
+        bits.append("shoot")
+    if feat.get("three_red"):
+        bits.append("3r")
+    if feat.get("engulf_bear"):
+        bits.append("bear-engulf")
+    if bits:
+        return ",".join(bits)
+    if feat.get("last_green"):
+        return "green"
+    if feat.get("last_red"):
+        return "red"
+    return "—"
+
+
+def _attach_candle(rec: dict, date: str, ticker: str) -> dict:
+    feat = cf.features(ticker, date)
+    rec["candle_ok"] = bool(feat.get("ok"))
+    rec["candle_body_rg"] = feat.get("body_rg")
+    rec["candle_vol_rg"] = feat.get("vol_rg")
+    rec["candle_score"] = feat.get("score")
+    rec["candle_capture"] = bool(cf.capture(feat))
+    rec["candle_last_green"] = bool(feat.get("last_green"))
+    rec["candle_pattern"] = _pattern_label(feat)
+    return rec
+
+
+def _chg_of(row: dict) -> float | None:
+    for key in ("day_change", "gainer_change"):
+        raw = row.get(key)
+        if raw is None:
+            continue
+        try:
+            return float(raw)
+        except (TypeError, ValueError):
+            continue
+    oc = (row.get("session_bar") or {}).get("close_open_pct")
+    if oc is None:
+        return None
+    try:
+        return float(oc)
+    except (TypeError, ValueError):
+        return None
+
+
+def _outcome(chg: float | None) -> str | None:
+    if chg is None:
+        return None
+    if chg > 0:
+        return "win"
+    if chg < 0:
+        return "lose"
+    return "flat"
+
+
 def paint_names(tickers: list[str], from_date: str, to_date: str | None,
                 preset: str | None = None) -> dict:
     names = [_tick(t) for t in tickers if _tick(t)]
@@ -305,8 +385,8 @@ def _stamp_row(row: dict, dates: list[str]) -> dict:
 
 
 def _attach_meta(card: dict, date: str, ticker: str, sources: set[str],
-                 flatten_meta: dict, gainer_raw: dict | None,
-                 dates: list[str]) -> dict:
+                 flatten_meta: dict, tape_raw: dict | None,
+                 dates: list[str], day_change: float | None = None) -> dict:
     rec = dict(card)
     rec["ticker"] = ticker
     rec["date"] = date
@@ -321,17 +401,25 @@ def _attach_meta(card: dict, date: str, ticker: str, sources: set[str],
     picks = plan.get("tickers") or []
     if ticker in picks:
         rec["flatten_rank"] = picks.index(ticker) + 1
-    if gainer_raw:
-        rec["gainer_change"] = gainer_raw.get("change_pct")
-        rec["gainer_rank"] = gainer_raw.get("_rank")
-        rec["sector"] = gainer_raw.get("sector") or rec.get("sector")
+    if tape_raw:
+        rec["gainer_change"] = tape_raw.get("change_pct")
+        rec["gainer_rank"] = tape_raw.get("_rank")
+        rec["sector"] = tape_raw.get("sector") or rec.get("sector")
+        rec["tape_side"] = tape_raw.get("_side") or rec.get("tape_side")
+    if day_change is not None:
+        rec["day_change"] = day_change
+    elif rec.get("gainer_change") is not None:
+        rec["day_change"] = rec.get("gainer_change")
+    rec["outcome"] = _outcome(_chg_of(rec))
+    _attach_candle(rec, date, ticker)
     return _stamp_row(rec, dates)
 
 
 def walk(from_date: str = START, to_date: str | None = None,
          top_n: int = gla.TOP_N, min_change: float = gla.MIN_CHANGE,
          preset: str | None = None,
-         extra_tickers: list[str] | None = None) -> dict:
+         extra_tickers: list[str] | None = None,
+         source: str = "flatten") -> dict:
     payload_src = sm.load_payload()
     flatten_meta = collect_flatten(
         from_date=from_date, to_date=to_date, payload=payload_src)
@@ -339,18 +427,34 @@ def walk(from_date: str = START, to_date: str | None = None,
         from_date=flatten_meta["from_date"], to_date=flatten_meta["to_date"],
         top_n=top_n, min_change=min_change,
     )
-    for date, rows in (gainer_meta.get("by_date") or {}).items():
-        for i, raw in enumerate(rows, 1):
+    loser_meta = collect_losers(
+        from_date=flatten_meta["from_date"], to_date=flatten_meta["to_date"],
+        top_n=top_n,
+    )
+    for date, day_rows in (gainer_meta.get("by_date") or {}).items():
+        for i, raw in enumerate(day_rows, 1):
             raw["_rank"] = i
+            raw["_side"] = "gainer"
+    for date, day_rows in (loser_meta.get("by_date") or {}).items():
+        for i, raw in enumerate(day_rows, 1):
+            raw["_rank"] = i
+            raw["_side"] = "loser"
     mover_meta = collect_mover_buys(
         payload_src, flatten_meta["from_date"], flatten_meta["to_date"],
         top_n=top_n,
     )
     extra = [_tick(t) for t in (extra_tickers or []) if _tick(t)]
-    # Paint flatten + custom only. Gainers / movers reuse sister
-    # lookback rows (already stamped) so --write stays a 93-name
-    # sheet, not a 500-name rescan.
-    names = sorted(set(flatten_meta["tickers"]) | set(extra))
+    # Paint flatten + custom. When the Action dropdown is a tape
+    # universe, also paint that set so cameras exist for the tally.
+    names = set(flatten_meta["tickers"]) | set(extra)
+    src = (source or "flatten").lower()
+    if src == "gainers":
+        names |= set(gainer_meta.get("tickers") or [])
+    elif src == "losers":
+        names |= set(loser_meta.get("tickers") or [])
+    elif src == "movers":
+        names |= set(mover_meta.get("tickers") or [])
+    names = sorted(names)
     painted = paint_names(
         names, flatten_meta["from_date"], flatten_meta["to_date"],
         preset=preset,
@@ -358,16 +462,22 @@ def walk(from_date: str = START, to_date: str | None = None,
     by_card = _day_index(painted)
     reused = _reused_cards()
     dates = flatten_meta["session_dates"]
+    chg_maps = {d: ga._finviz_change_map(ga.load_finviz(d)) for d in dates}
     membership: dict[tuple[str, str], set[str]] = defaultdict(set)
     for date, plan in flatten_meta["by_date"].items():
         for t in plan.get("tickers") or []:
             membership[(date, t)].add("flatten")
-    gainer_raw: dict[tuple[str, str], dict] = {}
-    for date, rows in (gainer_meta.get("by_date") or {}).items():
-        for raw in rows:
+    tape_raw: dict[tuple[str, str], dict] = {}
+    for date, day_rows in (gainer_meta.get("by_date") or {}).items():
+        for raw in day_rows:
             t = _tick(raw.get("ticker"))
             membership[(date, t)].add("gainers")
-            gainer_raw[(date, t)] = raw
+            tape_raw[(date, t)] = raw
+    for date, day_rows in (loser_meta.get("by_date") or {}).items():
+        for raw in day_rows:
+            t = _tick(raw.get("ticker"))
+            membership[(date, t)].add("losers")
+            tape_raw.setdefault((date, t), raw)
     for date, ticks in (mover_meta.get("by_date") or {}).items():
         for t in ticks:
             membership[(date, t)].add("movers")
@@ -385,7 +495,8 @@ def walk(from_date: str = START, to_date: str | None = None,
                 })
         rows.append(_attach_meta(
             card, date, ticker, sources, flatten_meta,
-            gainer_raw.get((date, ticker)), dates,
+            tape_raw.get((date, ticker)), dates,
+            day_change=chg_maps.get(date, {}).get(ticker),
         ))
 
     flatten_rows = [r for r in rows if "flatten" in r.get("sources", [])]
@@ -394,18 +505,42 @@ def walk(from_date: str = START, to_date: str | None = None,
     for date in dates:
         plan = flatten_meta["by_date"].get(date) or {}
         day_rows = [r for r in flatten_rows if r.get("date") == date]
+        gset = {str(r["ticker"]).upper()
+                for r in (gainer_meta.get("by_date") or {}).get(date) or []}
+        lset = {str(r["ticker"]).upper()
+                for r in (loser_meta.get("by_date") or {}).get(date) or []}
+        mset = {str(t).upper()
+                for t in (mover_meta.get("by_date") or {}).get(date) or []}
+        chosen = {str(t).upper() for t in (plan.get("tickers") or [])}
+        g_rows = [r for r in rows
+                  if r.get("date") == date and "gainers" in (r.get("sources") or [])]
+        n_win = sum(1 for r in day_rows if r.get("outcome") == "win")
+        n_lose = sum(1 for r in day_rows if r.get("outcome") == "lose")
+        n_out = n_win + n_lose
         daily.append({
             "date": date,
             "score": plan.get("score"),
             "route": plan.get("route"),
             "flatten_ok": bool(plan.get("flatten_ok")),
+            "hard_red": bool(plan.get("hard_red")),
             "n_priced_buys": plan.get("n_priced_buys"),
             "have_prior_book": plan.get("have_prior_book"),
             "why": plan.get("why"),
             "tickers": list(plan.get("tickers") or []),
             "n": len(day_rows),
             "n_buy": sum(1 for r in day_rows if r.get("action_call") == "BUY"),
+            "n_gainers": len(gset),
+            "n_gainers_chosen": len(chosen & gset),
+            "n_gainers_captured": sum(1 for r in g_rows if r.get("candle_capture")),
+            "n_movers": len(mset),
+            "n_movers_chosen": len(chosen & mset),
+            "n_losers": len(lset),
+            "n_losers_chosen": len(chosen & lset),
+            "n_win": n_win,
+            "n_lose": n_lose,
+            "lose_rate": None if not n_out else round(n_lose / n_out, 3),
         })
+    tally = _build_tally(rows, daily, flatten_rows)
     return {
         "generated_at": datetime.now(tl.ET).isoformat(),
         "asof": "09:30_et",
@@ -422,6 +557,9 @@ def walk(from_date: str = START, to_date: str | None = None,
         "n_tickers": len(names),
         "n_gainers": gainer_meta.get("n_gainer_days") or 0,
         "n_movers": mover_meta.get("n_mover_days") or 0,
+        "n_losers": loser_meta.get("n_loser_days") or 0,
+        "universe": src if src in UNIVERSES else "flatten",
+        "tally": tally,
         "custom_tickers": extra,
         "recall_buy": recall_buy,
         "recall_buy_rate": (
@@ -439,6 +577,67 @@ def walk(from_date: str = START, to_date: str | None = None,
             "generated_at": painted.get("generated_at"),
             "n_names": len(painted.get("names") or []),
         },
+    }
+
+
+def _build_tally(rows: list[dict], daily: list[dict],
+                 flatten_rows: list[dict]) -> dict:
+    def _side(name: str) -> list[dict]:
+        return [r for r in rows if name in (r.get("sources") or [])]
+
+    gainers = _side("gainers")
+    movers = _side("movers")
+    losers = _side("losers")
+    n_win = sum(1 for r in flatten_rows if r.get("outcome") == "win")
+    n_lose = sum(1 for r in flatten_rows if r.get("outcome") == "lose")
+    n_flat = sum(1 for r in flatten_rows if r.get("outcome") == "flat")
+    n_out = n_win + n_lose
+    low = [r for r in flatten_rows
+           if r.get("flatten_score") is not None
+           and float(r.get("flatten_score") or 0) < 1.0]
+    low_lose = sum(1 for r in low if r.get("outcome") == "lose")
+    low_out = sum(1 for r in low if r.get("outcome") in ("win", "lose"))
+    hard = [r for r in flatten_rows if r.get("flatten_ok") is False
+            and r.get("flatten_score") is not None
+            and float(r.get("flatten_score") or 0) <= -3.0]
+    hard_lose = sum(1 for r in hard if r.get("outcome") == "lose")
+    hard_out = sum(1 for r in hard if r.get("outcome") in ("win", "lose"))
+
+    def _cap(side_rows: list[dict]) -> dict:
+        chosen = sum(1 for r in side_rows if "flatten" in (r.get("sources") or []))
+        captured = sum(1 for r in side_rows if r.get("candle_capture"))
+        return {
+            "universe": len(side_rows),
+            "chosen": chosen,
+            "chosen_rate": None if not side_rows else round(chosen / len(side_rows), 3),
+            "captured": captured,
+            "captured_rate": (
+                None if not side_rows else round(captured / len(side_rows), 3)
+            ),
+        }
+
+    return {
+        "flatten_picks": len(flatten_rows),
+        "winners": n_win,
+        "losers": n_lose,
+        "flats": n_flat,
+        "lose_rate": None if not n_out else round(n_lose / n_out, 3),
+        "win_rate": None if not n_out else round(n_win / n_out, 3),
+        "lose_target": 0.25,
+        "low_s": {
+            "picks": len(low),
+            "losers": low_lose,
+            "lose_rate": None if not low_out else round(low_lose / low_out, 3),
+        },
+        "hard_red": {
+            "picks": len(hard),
+            "losers": hard_lose,
+            "lose_rate": None if not hard_out else round(hard_lose / hard_out, 3),
+        },
+        "gainers": _cap(gainers),
+        "movers": _cap(movers),
+        "losers_tape": _cap(losers),
+        "n_sessions": len(daily),
     }
 
 
@@ -464,6 +663,98 @@ def _source_cell(row: dict) -> str:
     return ",".join(row.get("sources") or [])
 
 
+def _pct_label(rate) -> str:
+    if rate is None:
+        return "—"
+    return f"{100 * float(rate):.0f}%"
+
+
+def _rg_text(val) -> str:
+    if val is None:
+        return "—"
+    try:
+        return f"{float(val):.2f}"
+    except (TypeError, ValueError):
+        return "—"
+
+
+def _chg_text(val) -> str:
+    if val is None:
+        return "—"
+    try:
+        return f"{float(val):+.2f}%"
+    except (TypeError, ValueError):
+        return "—"
+
+
+def _tally_markdown(tally: dict) -> str:
+    g = tally.get("gainers") or {}
+    m = tally.get("movers") or {}
+    l = tally.get("losers_tape") or {}
+    low = tally.get("low_s") or {}
+    hard = tally.get("hard_red") or {}
+    return "\n".join([
+        "## Chosen tally (flatten ∩ tape)",
+        "",
+        f"- **Top gainers:** flatten chose **{g.get('chosen') or 0}** / "
+        f"{g.get('universe') or 0} "
+        f"({_pct_label(g.get('chosen_rate'))}). "
+        f"Prior R:G / candle capture flagged **{g.get('captured') or 0}** "
+        f"gainers ({_pct_label(g.get('captured_rate'))}) vs "
+        f"**{l.get('captured') or 0}** losers "
+        f"({_pct_label(l.get('captured_rate'))}) — label, not a veto "
+        f"(vetoes on flatten picks raised the lose rate).",
+        f"- **Top movers (priced BUYs):** flatten chose "
+        f"**{m.get('chosen') or 0}** / {m.get('universe') or 0} "
+        f"({_pct_label(m.get('chosen_rate'))}).",
+        f"- **Top losers:** flatten chose **{l.get('chosen') or 0}** / "
+        f"{l.get('universe') or 0} "
+        f"({_pct_label(l.get('chosen_rate'))}).",
+        f"- **Flatten picks win/lose** (same-day Change%): "
+        f"{tally.get('winners') or 0}W / {tally.get('losers') or 0}L / "
+        f"{tally.get('flats') or 0} flat · lose rate "
+        f"**{_pct_label(tally.get('lose_rate'))}** "
+        f"(target ≤ 25%).",
+        f"- **Low-S days (S < +1):** {low.get('picks') or 0} picks · "
+        f"lose {_pct_label(low.get('lose_rate'))}.",
+        f"- **Hard-red wishlist:** {hard.get('picks') or 0} names · "
+        f"lose {_pct_label(hard.get('lose_rate'))}.",
+    ])
+
+
+def _tally_html(tally: dict) -> str:
+    g = tally.get("gainers") or {}
+    m = tally.get("movers") or {}
+    l = tally.get("losers_tape") or {}
+    low = tally.get("low_s") or {}
+    cards = [
+        ("Gainers chosen",
+         f"{g.get('chosen') or 0}/{g.get('universe') or 0}",
+         f"candle {g.get('captured') or 0} gainers / "
+         f"{l.get('captured') or 0} losers"),
+        ("Movers chosen",
+         f"{m.get('chosen') or 0}/{m.get('universe') or 0}",
+         "priced BUY calls ∩ flatten"),
+        ("Losers chosen",
+         f"{l.get('chosen') or 0}/{l.get('universe') or 0}",
+         "want this near zero"),
+        ("Flatten lose rate",
+         _pct_label(tally.get("lose_rate")),
+         f"{tally.get('winners') or 0}W / {tally.get('losers') or 0}L · target ≤25%"),
+        ("Low-S lose rate",
+         _pct_label(low.get("lose_rate")),
+         f"{low.get('picks') or 0} picks when S < +1"),
+    ]
+    bits = []
+    for title, big, sub in cards:
+        bits.append(
+            f"<div><span class='muted'>{html.escape(title)}</span>"
+            f"<b>{html.escape(str(big))}</b>"
+            f"<span class='muted'>{html.escape(sub)}</span></div>"
+        )
+    return "<div class='tally'>" + "".join(bits) + "</div>"
+
+
 def render_markdown(payload: dict, source: str = "flatten",
                     date: str | None = None,
                     tickers: list[str] | None = None) -> str:
@@ -479,7 +770,10 @@ def render_markdown(payload: dict, source: str = "flatten",
         f"{payload.get('n_sessions')} sessions · "
         f"{payload.get('n_flatten_days')} flatten pick-days · "
         f"{payload.get('n_gainers')} gainer-days · "
-        f"{payload.get('n_movers')} priced mover BUYs.",
+        f"{payload.get('n_movers')} priced mover BUYs · "
+        f"{payload.get('n_losers')} loser-days.",
+        "",
+        _tally_markdown(payload.get("tally") or {}),
         "",
         "Default view is the names **flatten_robust would buy** that "
         "session (3d robust size book, or ranked mover BUYs when the "
@@ -488,12 +782,16 @@ def render_markdown(payload: dict, source: str = "flatten",
         "",
         "**Clock:** cameras / setups / hall pass / Action are that date "
         "**09:30 ET**. Same-day Finviz and today's unprinted book never "
-        "color cameras. Same-day Change% only picks the Gainers tab. "
+        "color cameras. Same-day Change% picks the Gainers / Losers "
+        "tabs and grades flatten win/lose — never the 09:30 action. "
         "Movers tab = priced BUY calls the flatten gate actually sees "
         "(not the 2k-name liquid universe), reused from mover lookback. "
-        "Gainers tab reuses the gainer-lookback sheet. Flatten names "
-        "are freshly painted. Custom = ticker filter; re-run with "
-        "`--tickers` to add names that are not already here.",
+        "Gainers tab reuses the gainer-lookback sheet. Losers tab is "
+        "the liquid ≤−2% tape. Flatten names are freshly painted. "
+        "R:G / volume / candle pattern use **prior sessions only**. "
+        "Custom = ticker filter; re-run with `--tickers` to add names "
+        "that are not already here. Action dropdown `universe` = "
+        "flatten | gainers | movers | losers.",
         "",
         f"Phone: `dashboard/flatten-lookback/index.html`. "
         f"Sister boards: [ticker lookback](../dashboard/ticker-lookback/) · "
@@ -503,17 +801,23 @@ def render_markdown(payload: dict, source: str = "flatten",
         "",
         "## Each session (flatten method)",
         "",
-        "| Date | S | Route | Flatten? | Priced BUYs | Prior book | Would-buy | Why |",
-        "|---|---:|---|---|---:|---|---|---|",
+        "| Date | S | Route | Flatten? | "
+        "Gainers chosen | Movers chosen | Losers chosen | "
+        "Win/lose | Would-buy | Why |",
+        "|---|---:|---|---|---:|---:|---:|---|---|---|",
     ]
     for d in payload.get("daily") or []:
         score = d.get("score")
         sc = "—" if score is None else f"{float(score):+.2f}"
+        lose = d.get("lose_rate")
         L.append(
             f"| {d.get('date')} | {sc} | {d.get('route') or '—'} | "
             f"{'yes' if d.get('flatten_ok') else 'no'} | "
-            f"{d.get('n_priced_buys') or 0} | "
-            f"{'yes' if d.get('have_prior_book') else 'no'} | "
+            f"{d.get('n_gainers_chosen') or 0}/{d.get('n_gainers') or 0} | "
+            f"{d.get('n_movers_chosen') or 0}/{d.get('n_movers') or 0} | "
+            f"{d.get('n_losers_chosen') or 0}/{d.get('n_losers') or 0} | "
+            f"{d.get('n_win') or 0}W/{d.get('n_lose') or 0}L"
+            f"{'' if lose is None else f' ({100*lose:.0f}% L)'} | "
             f"{', '.join(d.get('tickers') or []) or '—'} | "
             f"{str(d.get('why') or '—').replace('|', '/')} |"
         )
@@ -524,10 +828,11 @@ def render_markdown(payload: dict, source: str = "flatten",
         + (f" · tickers {','.join(tickers)}" if tickers else ""),
         "",
         "| Date 09:30 ET | Marks | Src | Route | # | Ticker | "
+        "R:G | Vol R:G | Candle | Cap | Δ | "
         "Close 16:00 ET | Open 09:30 ET | o→c | Cond | "
         "Action 09:30 ET | Why | Setups | Cameras | Coaches | "
         "+1d | +3d | +1w |",
-        "|---|---|---|---|---:|---|---|---|---|---|---|---|---|---|---|---|---|---|",
+        "|---|---|---|---|---:|---|---:|---:|---|---|---:|---|---|---|---|---|---|---|---|---|---|---|---|",
     ]
     for r in rows:
         hits = r.get("hits") or {}
@@ -540,6 +845,11 @@ def render_markdown(payload: dict, source: str = "flatten",
             f"{_source_cell(r)} | {r.get('flatten_route') or '—'} | "
             f"{r.get('flatten_rank') or r.get('gainer_rank') or ''} | "
             f"`{r.get('ticker')}` | "
+            f"{_rg_text(r.get('candle_body_rg'))} | "
+            f"{_rg_text(r.get('candle_vol_rg'))} | "
+            f"{r.get('candle_pattern') or '—'} | "
+            f"{'yes' if r.get('candle_capture') else '—'} | "
+            f"{_chg_text(r.get('day_change'))} | "
             f"{act.format_price(bar.get('close'), r.get('date'), act.CLOSE_CLOCK)} | "
             f"{act.format_price(bar.get('open'), r.get('date'), act.OPEN_CLOCK)} | "
             f"{gla._oc_text(bar.get('close_open_pct'), r.get('date'))} | "
@@ -611,6 +921,11 @@ def _row_html(r: dict) -> str:
         f"<td>{html.escape(str(r.get('flatten_route') or '—'))}</td>"
         f"<td>{r.get('flatten_rank') or r.get('gainer_rank') or ''}</td>"
         f"<td>{html.escape(str(r.get('ticker') or ''))}</td>"
+        f"<td>{html.escape(_rg_text(r.get('candle_body_rg')))}</td>"
+        f"<td>{html.escape(_rg_text(r.get('candle_vol_rg')))}</td>"
+        f"<td>{html.escape(str(r.get('candle_pattern') or '—'))}</td>"
+        f"<td>{'yes' if r.get('candle_capture') else '—'}</td>"
+        f"{pct_td(r.get('day_change'), _chg_text(r.get('day_change')))}"
         f"<td>{html.escape(act.format_price(bar.get('close'), r.get('date'), act.CLOSE_CLOCK))}</td>"
         f"<td>{html.escape(act.format_price(bar.get('open'), r.get('date'), act.OPEN_CLOCK))}</td>"
         f"{pct_td(bar.get('close_open_pct'), gla._oc_text(bar.get('close_open_pct'), r.get('date')))}"
@@ -639,13 +954,18 @@ def render_html(payload: dict) -> str:
         score = d.get("score")
         sc = "—" if score is None else f"{float(score):+.2f}"
         names = ", ".join(d.get("tickers") or []) or "—"
+        lose = d.get("lose_rate")
+        wl = (f"{d.get('n_win') or 0}W/{d.get('n_lose') or 0}L"
+              + ("" if lose is None else f" ({100*lose:.0f}% L)"))
         day_rows.append(
             f"<tr><th>{html.escape(str(d.get('date') or ''))}</th>"
             f"<td>{html.escape(sc)}</td>"
             f"<td>{html.escape(str(d.get('route') or '—'))}</td>"
             f"<td>{'yes' if d.get('flatten_ok') else 'no'}</td>"
-            f"<td>{d.get('n_priced_buys') or 0}</td>"
-            f"<td>{'yes' if d.get('have_prior_book') else 'no'}</td>"
+            f"<td>{d.get('n_gainers_chosen') or 0}/{d.get('n_gainers') or 0}</td>"
+            f"<td>{d.get('n_movers_chosen') or 0}/{d.get('n_movers') or 0}</td>"
+            f"<td>{d.get('n_losers_chosen') or 0}/{d.get('n_losers') or 0}</td>"
+            f"<td>{html.escape(wl)}</td>"
             f"<td class='why'>{html.escape(names)}</td>"
             f"<td class='why'>{html.escape(str(d.get('why') or '—'))}</td></tr>"
         )
@@ -656,6 +976,8 @@ def render_html(payload: dict) -> str:
     cam_h = "".join(f"<th>{html.escape(lab)}</th>" for _, lab in CAMERA_COLS)
     dom_h = "".join(f"<th>{html.escape(lab)}</th>" for _, lab in DOMAIN_COLS)
     custom = ",".join(payload.get("custom_tickers") or [])
+    universe = payload.get("universe") or "flatten"
+    tally_html = _tally_html(payload.get("tally") or {})
     return f"""<!doctype html>
 <html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Flatten lookback</title>
@@ -667,6 +989,9 @@ main{{max-width:1280px;margin:auto;padding:16px}}h1,h2{{margin:.4em 0}}
 .bar{{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0;position:sticky;top:0;z-index:4;background:#0b1020ee;padding:8px 0}}
 .chip{{padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--text);cursor:pointer}}
 .chip.on{{background:#edf2ff;color:#0b1020}}
+.tally{{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin:12px 0}}
+.tally div{{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px}}
+.tally b{{display:block;font-size:22px}}
 .bar select,.bar input{{background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px 10px}}
 .sheet{{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}}
 table{{border-collapse:separate;border-spacing:0;min-width:2200px;width:100%;background:var(--card)}}
@@ -693,20 +1018,25 @@ on the names <b>flatten_robust</b> would buy that day.
 <a href="../mover-lookback/">mover lookback</a>.</p>
 <p>🟢 up / 🟡 flat / 🔴 down / ⬛ missing / 🔵 improved / 🚨 worse / ⚪ no red.
 Cameras = knowable by 09:30 ET. Action is that date 09:30 ET — not an end-of-day call.
-Gainers tab uses same-day Change% only to pick the universe (reuses gainer lookback).
+Gainers / Losers tabs use same-day Change% only to pick the universe.
 Movers tab = priced BUY calls the flatten gate sees (reuses mover lookback).
+R:G size, volume R:G, and candle patterns are prior sessions only (pre-09:30).
 Flatten names are freshly painted with cameras.</p>
+{tally_html}
 <p class="muted">{html.escape(str(payload.get('from_date')))} → {html.escape(str(payload.get('to_date')))}
 · {payload.get('n_sessions')} sessions
 · flatten pick-days {payload.get('n_flatten_days')}
 · gainers {payload.get('n_gainers')}
 · mover BUYs {payload.get('n_movers')}
+· losers {payload.get('n_losers')}
+· universe <code>{html.escape(str(universe))}</code>
 · preset <code>{html.escape(str(payload.get('preset') or ''))}</code>
 · policy <code>{html.escape(str(payload.get('policy') or ''))}</code></p>
 <div class="bar" id="filters">
-<button type="button" class="chip on" data-source="flatten">Flatten</button>
-<button type="button" class="chip" data-source="gainers">Gainers</button>
-<button type="button" class="chip" data-source="movers">Movers</button>
+<button type="button" class="chip{' on' if universe=='flatten' else ''}" data-source="flatten">Flatten</button>
+<button type="button" class="chip{' on' if universe=='gainers' else ''}" data-source="gainers">Gainers</button>
+<button type="button" class="chip{' on' if universe=='movers' else ''}" data-source="movers">Movers</button>
+<button type="button" class="chip{' on' if universe=='losers' else ''}" data-source="losers">Losers</button>
 <button type="button" class="chip" data-source="custom">Custom</button>
 <select id="dateSel" aria-label="Session date">{''.join(date_opts)}</select>
 <input id="tickerIn" type="text" placeholder="Custom tickers: TLN,VST" value="{html.escape(custom)}" size="22">
@@ -714,12 +1044,15 @@ Flatten names are freshly painted with cameras.</p>
 </div>
 <p class="muted" id="customNote">Custom filters the painted set. Re-run with <code>--tickers A,B</code> to add names that are not already here.</p>
 <h2>Each session — flatten method</h2>
-<div class="sheet"><table style="min-width:960px">
-<thead><tr><th>Date</th><th>S</th><th>Route</th><th>Flatten?</th><th>Priced BUYs</th><th>Prior book</th><th>Would-buy</th><th>Why</th></tr></thead>
+<div class="sheet"><table style="min-width:1100px">
+<thead><tr><th>Date</th><th>S</th><th>Route</th><th>Flatten?</th>
+<th>Gainers chosen</th><th>Movers chosen</th><th>Losers chosen</th>
+<th>Win/lose</th><th>Would-buy</th><th>Why</th></tr></thead>
 <tbody>{''.join(day_rows)}</tbody></table></div>
 <h2>Picks with cameras</h2>
 <div class="sheet"><table>
 <thead><tr><th>Date 09:30 ET</th><th>Hits 1d/3d/1w</th><th>Src</th><th>Route</th><th>#</th><th>Ticker</th>
+<th>R:G</th><th>Vol R:G</th><th>Candle</th><th>Cap</th><th>Δ</th>
 <th>Close 16:00 ET</th><th>Open 09:30 ET</th><th>o→c 09:30→16:00</th><th>Cond</th>
 <th>Action 09:30 ET</th><th>Hall pass</th><th>Setups</th>
 {cam_h}{dom_h}<th>Trigger</th><th>Flatten why</th>
@@ -732,7 +1065,7 @@ Flatten names are freshly painted with cameras.</p>
   const tickerIn = document.getElementById('tickerIn');
   const rows = [...document.querySelectorAll('#rows tr')];
   const count = document.getElementById('count');
-  let source = 'flatten';
+  let source = (document.querySelector('.chip.on') || {{}}).dataset.source || 'flatten';
   function ticks() {{
     return tickerIn.value.toUpperCase().split(/[\\s,]+/).filter(Boolean);
   }}
@@ -778,6 +1111,15 @@ def _slim_row(r: dict) -> dict:
         "flatten_rank": r.get("flatten_rank"),
         "gainer_rank": r.get("gainer_rank"),
         "gainer_change": r.get("gainer_change"),
+        "day_change": r.get("day_change"),
+        "outcome": r.get("outcome"),
+        "candle_ok": r.get("candle_ok"),
+        "candle_body_rg": r.get("candle_body_rg"),
+        "candle_vol_rg": r.get("candle_vol_rg"),
+        "candle_score": r.get("candle_score"),
+        "candle_capture": r.get("candle_capture"),
+        "candle_last_green": r.get("candle_last_green"),
+        "candle_pattern": r.get("candle_pattern"),
         "session_bar": r.get("session_bar"),
         "horizon_dates": r.get("horizon_dates"),
         "condition": r.get("condition"),
@@ -829,7 +1171,8 @@ def main():
     ap.add_argument("--min-change", type=float, default=gla.MIN_CHANGE)
     ap.add_argument("--preset", default="", help="featured|strict|setups|lane|loose")
     ap.add_argument("--source", default="flatten",
-                    choices=list(SOURCES))
+                    choices=list(SOURCES),
+                    help="Action dropdown / board tab: flatten|gainers|movers|losers|custom")
     ap.add_argument("--date", default="", help="Filter one session YYYY-MM-DD")
     ap.add_argument("--tickers", default="",
                     help="Custom tickers (comma) to paint and filter")
@@ -843,6 +1186,7 @@ def main():
         min_change=args.min_change,
         preset=args.preset or None,
         extra_tickers=extra,
+        source=args.source,
     )
     if args.write:
         write(payload)

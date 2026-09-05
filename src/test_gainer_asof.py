@@ -174,6 +174,17 @@ def test_liquid_losers_are_down():
     assert "XHG" not in ticks
 
 
+def test_liquid_movers_are_abs_change():
+    df = gainer_asof.load_finviz("2026-08-13")
+    if df.empty:
+        return
+    names = gainer_asof.liquid_movers(df, top_n=15)
+    assert names
+    chg = [abs(float(r["change_pct"])) for r in names]
+    assert chg == sorted(chg, reverse=True)
+    assert chg[0] >= chg[-1]
+
+
 def test_cli_accepts_sells_and_losers():
     p = gainer_asof.build_parser()
     args = p.parse_args([
@@ -302,6 +313,7 @@ if __name__ == "__main__":
     test_infer_lane_hall_pass_labels()
     test_grey_icon_for_era_skip_missing()
     test_liquid_losers_are_down()
+    test_liquid_movers_are_abs_change()
     test_cli_accepts_sells_and_losers()
     test_day_walk_carries_hall_pass_and_sides()
     test_pre_lattice_hall_pass_is_grey_not_blocked()
