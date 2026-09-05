@@ -1,19 +1,14 @@
-"""Finviz-chart-style event markers: E (earnings) and R (analyst revisions).
+"""Finviz-chart-style event markers: E (earnings), R (ratings), D (dividends).
 
-On Finviz charts:
-  - Green/Red **E** ≈ earnings print (we color by EPS beat/miss when available)
-  - Green/Red **R** ≈ analyst action (upgrade vs downgrade)
+Authoritative source is the quote-page ``chartEvents`` overlay — the same
+E / R / D chips Finviz paints on the daily chart. See ``src.finviz_events``.
 
-Data sources (no Finviz HTML scrape required for history):
-  E — yfinance get_earnings_dates / earnings history (EPS estimate vs actual)
-  R — yfinance recommendations (when present) + optional quote-page last-2 from
-      data/quote_colors/*_detail.json (B19 path)
-
-Point-in-time: only events with event_date <= asof are used.
+yfinance is an opt-in fallback only (``--yf``). Its earnings dates often
+do not match the Finviz report stamp.
 
 CLI:
-  python -m src.event_markers BB
-  python -m src.event_markers BB --asof 2026-06-01
+  python -m src.event_markers AAPL
+  python -m src.event_markers AAPL --asof 2026-09-04
 """
 from __future__ import annotations
 
@@ -27,6 +22,7 @@ import numpy as np
 import pandas as pd
 
 from . import config
+from . import finviz_events as fe
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT_DIR = ROOT / "data" / "events"
@@ -255,84 +251,37 @@ def _quote_analyst_fallback(ticker: str) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def fetch(ticker: str, limit_earnings: int = 24) -> pd.DataFrame:
-    e = _yf_earnings(ticker, limit=limit_earnings)
-    r = _yf_recommendations(ticker)
-    if r.empty:
-        r = _quote_analyst_fallback(ticker)
-    parts = [x for x in (e, r) if x is not None and len(x)]
-    if not parts:
+def fetch(ticker: str, limit_earnings: int = 24, *,
+          html: str | None = None, live: bool = False,
+          yf: bool = False) -> pd.DataFrame:
+    rows = fe.fetch(ticker, html=html, live=live)
+    if not rows and yf:
+        e = _yf_earnings(ticker, limit=limit_earnings)
+        r = _yf_recommendations(ticker)
+        if r.empty:
+            r = _quote_analyst_fallback(ticker)
+        parts = [x for x in (e, r) if x is not None and len(x)]
+        if parts:
+            out = pd.concat(parts, ignore_index=True, sort=False)
+            out["event_date"] = out["event_date"].astype(str).str[:10]
+            return out.sort_values(["event_date", "kind"]).reset_index(drop=True)
+    if not rows:
         return pd.DataFrame(
             columns=[
-                "ticker",
-                "kind",
-                "event_date",
-                "color",
-                "label",
-                "eps_est",
-                "eps_act",
-                "surprise_pct",
-                "detail",
+                "ticker", "kind", "event_date", "color", "label",
+                "eps_est", "eps_act", "surprise_pct", "detail",
             ]
         )
-    out = pd.concat(parts, ignore_index=True, sort=False)
-    out["event_date"] = out["event_date"].astype(str).str[:10]
-    out = out.sort_values(["event_date", "kind"]).reset_index(drop=True)
-    return out
+    return pd.DataFrame(rows)
 
 
 def asof_snapshot(events: pd.DataFrame, asof: str) -> dict:
-    """PIT summary for one asof day — only events on/before asof."""
-    empty = {
-        "last_E_date": None,
-        "last_E_color": None,
-        "last_E_label": None,
-        "last_E_surprise": np.nan,
-        "days_since_E": np.nan,
-        "flag_E": 0,  # +1 green beat, -1 red miss
-        "last_R_date": None,
-        "last_R_color": None,
-        "last_R_label": None,
-        "days_since_R": np.nan,
-        "flag_R": 0,
-        "n_E_90d": 0,
-        "n_R_90d": 0,
-    }
-    if events is None or events.empty:
-        return empty
-    sub = events[events["event_date"] <= asof].copy()
-    if sub.empty:
-        return empty
-
-    asof_ts = pd.Timestamp(asof)
-    out = dict(empty)
-
-    e = sub[sub["kind"] == "E"]
-    if len(e):
-        last = e.iloc[-1]
-        out["last_E_date"] = last["event_date"]
-        out["last_E_color"] = last.get("color")
-        out["last_E_label"] = last.get("label")
-        out["last_E_surprise"] = last.get("surprise_pct", np.nan)
-        out["days_since_E"] = (asof_ts - pd.Timestamp(last["event_date"])).days
-        col = str(last.get("color") or "")
-        out["flag_E"] = 1 if col == "green" else (-1 if col == "red" else 0)
-        cut = (asof_ts - pd.Timedelta(days=90)).date().isoformat()
-        out["n_E_90d"] = int((e["event_date"] >= cut).sum())
-
-    r = sub[sub["kind"] == "R"]
-    if len(r):
-        last = r.iloc[-1]
-        out["last_R_date"] = last["event_date"]
-        out["last_R_color"] = last.get("color")
-        out["last_R_label"] = last.get("label")
-        out["days_since_R"] = (asof_ts - pd.Timestamp(last["event_date"])).days
-        col = str(last.get("color") or "")
-        out["flag_R"] = 1 if col == "green" else (-1 if col == "red" else 0)
-        cut = (asof_ts - pd.Timedelta(days=90)).date().isoformat()
-        out["n_R_90d"] = int((r["event_date"] >= cut).sum())
-
-    return out
+    if events is not None and not getattr(events, "empty", True):
+        recs = events.to_dict("records")
+        snap = fe.asof_snapshot(recs, asof)
+        # Keep the historical key set plus D / cell from Finviz.
+        return snap
+    return fe.asof_snapshot([], asof)
 
 
 def save(ticker: str, events: pd.DataFrame) -> Path:
@@ -343,8 +292,8 @@ def save(ticker: str, events: pd.DataFrame) -> Path:
     lines = [
         f"# Event markers — {ticker.upper()}",
         "",
-        "Finviz-chart style: **E** = earnings, **R** = analyst action.",
-        "Color: green = beat/upgrade, red = miss/downgrade, white = unknown/init.",
+        "Finviz-chart style: **E** = earnings, **R** = analyst action, **D** = dividend.",
+        "Color: green = beat/upgrade, red = miss/downgrade, blue = ex-div, white = unknown/init.",
         "",
         "| date | kind | color | label | surprise% | detail |",
         "|------|------|-------|-------|----------:|--------|",
@@ -352,7 +301,7 @@ def save(ticker: str, events: pd.DataFrame) -> Path:
     for _, r in events.sort_values("event_date", ascending=False).head(40).iterrows():
         sur = r.get("surprise_pct")
         sur_s = f"{sur:+.1f}" if sur is not None and np.isfinite(sur) else "—"
-        chip = {"green": "🟢", "red": "🔴", "white": "⚪"}.get(str(r.get("color")), "⚪")
+        chip = {"green": "🟢", "red": "🔴", "blue": "🔵", "white": "⚪"}.get(str(r.get("color")), "⚪")
         lines.append(
             f"| {r.get('event_date')} | {r.get('kind')} | {chip} | {r.get('label')} | "
             f"{sur_s} | {str(r.get('detail') or '')[:40]} |"
@@ -367,8 +316,16 @@ def main():
     ap.add_argument("ticker")
     ap.add_argument("--asof", default=None, help="If set, print PIT snapshot only")
     ap.add_argument("--limit", type=int, default=24)
+    ap.add_argument("--html", default="", help="Finviz quote-page HTML")
+    ap.add_argument("--live", action="store_true", help="Fetch Elite quote page")
+    ap.add_argument("--yf", action="store_true", help="yfinance fallback (dates often disagree)")
     args = ap.parse_args()
-    ev = fetch(args.ticker, limit_earnings=args.limit)
+    html = Path(args.html).read_text(encoding="utf-8") if args.html else None
+    ev = fetch(args.ticker, limit_earnings=args.limit,
+               html=html, live=args.live, yf=args.yf)
+    if not ev.empty:
+        recs = ev.to_dict("records")
+        fe.save_ticker_events(args.ticker, recs)
     save(args.ticker, ev)
     if args.asof:
         snap = asof_snapshot(ev, args.asof)

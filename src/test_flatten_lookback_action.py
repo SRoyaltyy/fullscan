@@ -115,6 +115,10 @@ def _sample_payload() -> dict:
             "candle_vol_rg": 1.2,
             "candle_capture": True,
             "candle_pattern": "engulf",
+            "erd_cell": "E🟢 7-30 · R🟢 8-17 · D🔵 8-10",
+            "erd_E_date": "2026-07-30",
+            "erd_R_date": "2026-08-17",
+            "erd_D_date": "2026-08-10",
             "labeled": "join🟢 vol🟢",
             "labeled_domains": "mkt🟢 set🟡",
             "marks_cell": "🔵 — —",
@@ -139,6 +143,8 @@ def test_html_has_toggles_cameras_and_date_filter() -> None:
     assert "R:G" in page
     assert "RVOL" in page
     assert "5d%" in page
+    assert "E/R/D" in page
+    assert "7-30" in page
     assert "engulf" in page
     assert 'id="dateSel"' in page
     assert 'value="2026-08-14"' in page

@@ -19,8 +19,6 @@ not change live flatten_robust fills.
 """
 from __future__ import annotations
 
-from datetime import datetime
-
 from . import candle_factor as cf
 from . import gainer_asof as ga
 from . import ohlc_ripper as ohlc
@@ -43,26 +41,9 @@ def prior_session(cal: list[str], date: str) -> str | None:
 
 
 def parse_earnings(raw) -> tuple[str | None, int | None]:
-    if raw is None:
-        return None, None
-    try:
-        if raw != raw:  # NaN
-            return None, None
-    except Exception:
-        pass
-    text = str(raw).strip()
-    if not text or text.lower() in ("nan", "none", "-", ""):
-        return None, None
-    for fmt in ("%m/%d/%Y %I:%M:%S %p", "%m/%d/%Y", "%Y-%m-%d"):
-        try:
-            dt = datetime.strptime(text, fmt)
-            hm = None
-            if "%I" in fmt or "%H" in fmt:
-                hm = dt.hour * 100 + dt.minute
-            return dt.strftime("%Y-%m-%d"), hm
-        except ValueError:
-            continue
-    return None, None
+    """Finviz Earnings Date → (YYYY-MM-DD, HHMM). Same stamps as the chart E."""
+    from . import finviz_events as fe
+    return fe.parse_finviz_datetime(raw)
 
 
 def earnings_reaction(prior_date: str | None, session_date: str,

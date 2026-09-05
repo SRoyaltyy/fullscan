@@ -12,6 +12,8 @@ For every session since the dashboard start (2026-08-13):
   * stamp the specialized red:green / volume / candlestick factor
     (prior sessions only) so we can capture would-be top gainers
     without buying them
+  * stamp Finviz chart **E / R / D** (earnings, analyst ratings,
+    dividends) knowable by 09:30 — same markers as the quote chart
   * paint ticker lookback (12 cameras + yΔ, 6 coaches, 🔵/🚨/⚪,
     featured setups, 09:30 BUY / SELL / NO BUY / HOLD)
 
@@ -32,6 +34,7 @@ from datetime import datetime
 from pathlib import Path
 
 from . import candle_factor as cf
+from . import finviz_events as fe
 from . import gainer_asof as ga
 from . import gainer_capture as gc
 from . import gainer_lookback_action as gla
@@ -295,6 +298,11 @@ def _attach_candle(rec: dict, date: str, ticker: str) -> dict:
     return rec
 
 
+def _attach_events(rec: dict, date: str, ticker: str) -> dict:
+    """Finviz chart E / R / D knowable by 09:30. Does not change the picker."""
+    return fe.attach_row(rec, date, ticker)
+
+
 def _chg_of(row: dict) -> float | None:
     for key in ("day_change", "gainer_change"):
         raw = row.get(key)
@@ -414,6 +422,7 @@ def _attach_meta(card: dict, date: str, ticker: str, sources: set[str],
         rec["day_change"] = rec.get("gainer_change")
     rec["outcome"] = _outcome(_chg_of(rec))
     _attach_candle(rec, date, ticker)
+    _attach_events(rec, date, ticker)
     return _stamp_row(rec, dates)
 
 
@@ -847,6 +856,8 @@ def render_markdown(payload: dict, source: str = "flatten",
         "Gainers tab reuses the gainer-lookback sheet. Losers tab is "
         "the liquid ≤−2% tape. Flatten names are freshly painted. "
         "R:G / volume / candle pattern use **prior sessions only**. "
+        "E/R/D are Finviz quote-chart markers (earnings / ratings / "
+        "ex-div) knowable by 09:30. "
         "Custom = ticker filter; re-run with `--tickers` to add names "
         "that are not already here. Action dropdown `universe` = "
         "flatten | gainers | movers | losers.",
@@ -886,11 +897,11 @@ def render_markdown(payload: dict, source: str = "flatten",
         + (f" · tickers {','.join(tickers)}" if tickers else ""),
         "",
         "| Date 09:30 ET | Marks | Src | Route | # | Ticker | "
-        "R:G | Vol R:G | Candle | Cap | 5d% | RVOL | OHLC | Δ | "
+        "E/R/D | R:G | Vol R:G | Candle | Cap | 5d% | RVOL | OHLC | Δ | "
         "Close 16:00 ET | Open 09:30 ET | o→c | Cond | "
         "Action 09:30 ET | Why | Setups | Cameras | Coaches | "
         "+1d | +3d | +1w |",
-        "|---|---|---|---|---:|---|---:|---:|---|---|---:|---:|---|---:|---|---|---|---|---|---|---|---|---|---|---|",
+        "|---|---|---|---|---:|---|---|---:|---:|---|---|---:|---:|---|---:|---|---|---|---|---|---|---|---|---|---|---|---|",
     ]
     for r in rows:
         hits = r.get("hits") or {}
@@ -903,6 +914,7 @@ def render_markdown(payload: dict, source: str = "flatten",
             f"{_source_cell(r)} | {r.get('flatten_route') or '—'} | "
             f"{r.get('flatten_rank') or r.get('gainer_rank') or ''} | "
             f"`{r.get('ticker')}` | "
+            f"{r.get('erd_cell') or '—'} | "
             f"{_rg_text(r.get('candle_body_rg'))} | "
             f"{_rg_text(r.get('candle_vol_rg'))} | "
             f"{r.get('candle_pattern') or '—'} | "
@@ -982,6 +994,7 @@ def _row_html(r: dict) -> str:
         f"<td>{html.escape(str(r.get('flatten_route') or '—'))}</td>"
         f"<td>{r.get('flatten_rank') or r.get('gainer_rank') or ''}</td>"
         f"<td>{html.escape(str(r.get('ticker') or ''))}</td>"
+        f"<td class='erd'>{html.escape(str(r.get('erd_cell') or '—'))}</td>"
         f"<td>{html.escape(_rg_text(r.get('candle_body_rg')))}</td>"
         f"<td>{html.escape(_rg_text(r.get('candle_vol_rg')))}</td>"
         f"<td>{html.escape(str(r.get('candle_pattern') or '—'))}</td>"
@@ -1085,6 +1098,7 @@ Cameras = knowable by 09:30 ET. Action is that date 09:30 ET — not an end-of-d
 Gainers / Losers tabs use same-day Change% only to pick the universe.
 Movers tab = priced BUY calls the flatten gate sees (reuses mover lookback).
 R:G size, volume R:G, and candle patterns are prior sessions only (pre-09:30).
+E/R/D = Finviz chart earnings / ratings / dividend markers knowable by 09:30.
 Flatten names are freshly painted with cameras.</p>
 {tally_html}
 <p class="muted">{html.escape(str(payload.get('from_date')))} → {html.escape(str(payload.get('to_date')))}
@@ -1117,7 +1131,7 @@ Flatten names are freshly painted with cameras.</p>
 <h2>Picks with cameras</h2>
 <div class="sheet"><table>
 <thead><tr><th>Date 09:30 ET</th><th>Hits 1d/3d/1w</th><th>Src</th><th>Route</th><th>#</th><th>Ticker</th>
-<th>R:G</th><th>Vol R:G</th><th>Candle</th><th>Cap</th><th>5d%</th><th>RVOL</th><th>OHLC</th><th>Δ</th>
+<th>E/R/D</th><th>R:G</th><th>Vol R:G</th><th>Candle</th><th>Cap</th><th>5d%</th><th>RVOL</th><th>OHLC</th><th>Δ</th>
 <th>Close 16:00 ET</th><th>Open 09:30 ET</th><th>o→c 09:30→16:00</th><th>Cond</th>
 <th>Action 09:30 ET</th><th>Hall pass</th><th>Setups</th>
 {cam_h}{dom_h}<th>Trigger</th><th>Flatten why</th>
@@ -1185,6 +1199,14 @@ def _slim_row(r: dict) -> dict:
         "candle_capture": r.get("candle_capture"),
         "candle_last_green": r.get("candle_last_green"),
         "candle_pattern": r.get("candle_pattern"),
+        "erd_cell": r.get("erd_cell"),
+        "erd_E_date": r.get("erd_E_date"),
+        "erd_E_color": r.get("erd_E_color"),
+        "erd_R_date": r.get("erd_R_date"),
+        "erd_R_color": r.get("erd_R_color"),
+        "erd_D_date": r.get("erd_D_date"),
+        "erd_D_color": r.get("erd_D_color"),
+        "erd_earn_react": r.get("erd_earn_react"),
         "capture_reasons": r.get("capture_reasons"),
         "ohlc_ret_5": r.get("ohlc_ret_5"),
         "ohlc_ret_10": r.get("ohlc_ret_10"),

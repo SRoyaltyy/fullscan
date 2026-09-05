@@ -1,4 +1,7 @@
-name: Event markers (E earnings / R analyst)
+name: Event markers (E earnings / R ratings / D dividends)
+
+# Finviz quote-page chartEvents — same E/R/D chips as the daily chart.
+# yfinance is not the source (its dates disagree with Finviz).
 
 on:
   workflow_dispatch:
@@ -27,8 +30,13 @@ jobs:
       - name: Install
         run: |
           pip install -r requirements.txt
-          pip install yfinance pyarrow
+          pip install pandas pyarrow beautifulsoup4
       - name: Fetch markers
+        env:
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
         run: |
           set -euo pipefail
           T="${{ inputs.tickers }}"
@@ -39,9 +47,9 @@ jobs:
             x=$(echo "$x" | tr -d ' ' | tr '[:lower:]' '[:upper:]')
             [ -z "$x" ] && continue
             if [ -n "$ASOF" ]; then
-              python -m src.event_markers "$x" --asof "$ASOF"
+              python -m src.event_markers "$x" --asof "$ASOF" --live
             else
-              python -m src.event_markers "$x"
+              python -m src.event_markers "$x" --live
             fi
           done
           ls -la data/events/ || true
