@@ -1082,18 +1082,72 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
     return out
 
 
+def slim_start_path(book: dict, start: str, cal: list[str]) -> dict:
+    """Cash-start path: $10k, no lots, same rules, from ``start`` to the end."""
+    daily = book.get("daily") or []
+    d0 = next((d for d in daily if d.get("date") == start),
+              daily[0] if daily else {})
+    buys = []
+    for t in book.get("trades") or []:
+        if t.get("date") == start and t.get("side") in ("BUY", "SHORT"):
+            buys.append({
+                "ticker": t.get("ticker"),
+                "shares": t.get("shares"),
+                "price": t.get("price"),
+                "fees": t.get("fees"),
+                "reason": t.get("reason"),
+            })
+    skips = []
+    for k in book.get("skips") or []:
+        if k.get("date") != start:
+            continue
+        skips.append({
+            "ticker": k.get("ticker"),
+            "kind": k.get("kind"),
+            "reason": k.get("reason"),
+        })
+        if len(skips) >= 16:
+            break
+    eq_by = {d["date"]: d.get("equity") for d in daily}
+    days = []
+    for d in daily:
+        days.append({
+            "date": d.get("date"),
+            "s": d.get("s"),
+            "hard_red": d.get("hard_red"),
+            "bought": d.get("bought") or [],
+            "sold": d.get("sold") or [],
+            "cash": d.get("cash"),
+            "equity": d.get("equity"),
+            "open_cash": d.get("open_cash"),
+            "made_money": d.get("made_money"),
+        })
+    ret = book.get("total_ret_pct")
+    return {
+        "start": start,
+        "return_pct": ret,
+        "made_money": (ret or 0) > 0,
+        "n_sessions": len(daily),
+        "final_equity": book.get("final_equity"),
+        "s": d0.get("s"),
+        "hard_red": bool(d0.get("hard_red")),
+        "open_cash": d0.get("open_cash"),
+        "cash": d0.get("cash"),
+        "bought": d0.get("bought") or [],
+        "buys": buys,
+        "skips": skips,
+        "n_up_days": sum(1 for d in days if d.get("made_money")),
+        "equity": [eq_by.get(d) for d in cal],
+        "days": days,
+    }
+
+
 def replay_starts(panel: dict, rec: dict, **kw) -> list[dict]:
     cal = list(panel.get("session_dates") or [])
     out = []
     for start in cal:
         book = simulate_book(panel, rec, start=start, **kw)
-        out.append({
-            "start": start,
-            "return_pct": book["total_ret_pct"],
-            "made_money": book["total_ret_pct"] > 0,
-            "n_sessions": len(book.get("daily") or []),
-            "final_equity": book["final_equity"],
-        })
+        out.append(slim_start_path(book, start, cal))
     return out
 
 
