@@ -40,6 +40,8 @@ def test_814_watchlist_captures_earn_rip_not_asts_book() -> None:
     ticks = set(wl["tickers"])
     assert "TLN" in ticks or "VST" in ticks
     assert wl["n_earn_react"] >= 3
+    assert wl.get("n_probable", 0) >= 1
+    assert any("probable" in (r.get("reasons") or []) for r in wl["rows"])
     assert len(ticks & {"CAPR", "CELC", "HTFL", "NMAX", "NPWR", "NU"}) >= 3
     # Same-day rip names that were not on the prior calendar stay off
     # the watchlist unless they were a yday gainer / mover / flatten pick.
@@ -51,6 +53,7 @@ def test_html_has_captured_chip() -> None:
                            else __import__("src.test_flatten_lookback_action",
                                            fromlist=["_sample_payload"])._sample_payload())
     assert 'data-source="captured"' in page
+    assert 'data-source="probable"' in page
     assert "Gainers captured" in page
 
 

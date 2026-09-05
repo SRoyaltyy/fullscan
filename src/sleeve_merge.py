@@ -99,6 +99,8 @@ DEFAULT = {
     "io_hold": None,                 # None = until flatten; "3d" recycles
     "hard_red_io_ok": False,         # still refill .io on a hard-red close
     "io_min_names": 4,               # sit rather than force a thin junk book
+    "ripper_top_n": 0,               # 09:30 OHLC continuation overlay
+    "ripper_cash_frac": 0.0,         # cash reserved at 16:00 for next open
 }
 
 
@@ -321,6 +323,16 @@ def io_select_picks(book: dict, pol: dict | None = None, *,
             if len(out) >= max(min_names, 6):
                 break
     return out
+
+
+def ripper_overlay_names(date: str, cal: list[str], top_n: int) -> list[str]:
+    """Leak-free 09:30 continuation names (yesterday's non-exploded gainers)."""
+    if not top_n:
+        return []
+    from . import gainer_capture as gc
+    from . import ohlc_ripper as ohlc
+    return ohlc.continuation(gc.prior_session(list(cal or []), date),
+                             date, top_n=int(top_n))
 
 
 def book_ticker_set(book: dict) -> set[str]:
@@ -989,6 +1001,11 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
         for r in rows:
             if r.get("ticker"):
                 tickers.add(str(r["ticker"]).upper())
+    ripper_n_pre = int(pol.get("ripper_top_n") or 0)
+    if ripper_n_pre:
+        for date in cal:
+            for t in ripper_overlay_names(date, full_cal, ripper_n_pre):
+                tickers.add(t)
     start, end = (cal[0], cal[-1]) if cal else ("2026-08-13", "2026-09-03")
     try:
         cache = get_prices(sorted(tickers), start, end)
@@ -1014,6 +1031,8 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
     hard_red_io_ok = bool(pol.get("hard_red_io_ok", False))
     io_hold_key = pol.get("io_hold")
     io_hold_n = HOLD_SESSIONS.get(io_hold_key) if io_hold_key else None
+    ripper_n = int(pol.get("ripper_top_n") or 0)
+    ripper_frac = float(pol.get("ripper_cash_frac") or 0.0)
     first_targets: list[str] = []
     first_route = ""
 
@@ -1124,6 +1143,42 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
             if room < 1 or cash < 1:
                 break
 
+    def deploy_ripper(date, names):
+        """09:30 leftover-cash sleeve: yesterday's non-exploded gainers."""
+        nonlocal mv_pos
+        if not names:
+            return
+        eq = mark(date, "open")
+        already = sum(p["shares"] * (p.get("last_px") or p["entry_px"])
+                      for p in mv_pos if p["side"] == "BUY")
+        room = min(cash, max(0.0, eq * day_cap - already))
+        held = {p["ticker"] for p in mv_pos} | set(io_pos)
+        for t in names:
+            if not t or t in held:
+                continue
+            px = px_open(t, date)
+            if not px:
+                skipped.append({"date": date, "ticker": t, "side": "BUY",
+                                "reason": "no 09:30 open"})
+                continue
+            xd = next_session(full_cal, date, long_hold_n)
+            if not xd:
+                continue
+            want = min(eq * pol["long_pct"], room, cash)
+            lot = buy(date, t, px, OPEN_CLOCK, int(want // px),
+                      "ripper continuation (yday liquid, not exploded)",
+                      "ripper_long")
+            if lot is None:
+                skipped.append({"date": date, "ticker": t, "side": "BUY",
+                                "reason": "cash tied in open lots / fees"})
+                continue
+            room -= lot["notional"] + lot["fee_in"]
+            lot["exit_date"] = xd
+            mv_pos.append(lot)
+            held.add(t)
+            if room < 1 or cash < 1:
+                break
+
     for date in cal:
         g = regime.get(date) or {}
         score = g.get("predict_score")
@@ -1176,6 +1231,9 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
                     close_lot(io_pos.pop(t), date, px, OPEN_CLOCK,
                               "flatten .io → mover (open)")
             deploy_mover(date, priced_buys, confirm)
+        if ripper_n and not (hard_red_no_new and hard_red) and (
+                io_pos or route_mover):
+            deploy_ripper(date, ripper_overlay_names(date, full_cal, ripper_n))
 
         # 16:00 exit mover due today
         still = []
@@ -1223,6 +1281,10 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
                  if r.get("ticker")]
                 if route_mover else list(targets)
             )
+            if ripper_n:
+                for t in ripper_overlay_names(date, full_cal, ripper_n):
+                    if t not in first_targets:
+                        first_targets.append(t)
         if io_book is not None and not route_mover and not skip_io \
                 and not block_io:
             new = [t for t in targets if t not in io_pos]
@@ -1231,8 +1293,11 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
                 skipped.append({"date": date, "ticker": "*", "side": "BUY",
                                 "reason": f"io {io_hold_key} cannot settle"})
                 new = []
-            if new and cash > 100:
-                per = cash / len(new)
+            spendable = cash
+            if ripper_n and ripper_frac > 0:
+                spendable = cash * (1.0 - min(max(ripper_frac, 0.0), 0.5))
+            if new and spendable > 100:
+                per = spendable / len(new)
                 for t in new:
                     px = px_close(t, date)
                     if not px:
@@ -1344,6 +1409,14 @@ SWEEP = [
      "rotate_mover": True, "carry_last_book": True,
      "hard_red_no_new": True, "hard_red_io_ok": False,
      "io_min_names": 4},
+    {**DEFAULT, "name": "flatten_robust_ripper", "engine": "flatten_switch",
+     "io_sleeve": "3d_size", "io_select": "robust", "io_hold": "3d",
+     "long_top_n": 10, "long_pct": 0.10,
+     "day_cap": 1.00, "sizeup": 1.0, "allow_short": False, "min_buys": 5,
+     "rotate_mover": True, "carry_last_book": True,
+     "hard_red_no_new": True, "hard_red_io_ok": False,
+     "io_min_names": 4,
+     "ripper_top_n": 4, "ripper_cash_frac": 0.18},
 ] + [
     DEFAULT,
     {**DEFAULT, "name": "switch_70", "core_frac": 0.30, "tac_frac": 0.70,
@@ -1473,6 +1546,7 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float,
         "mover_when_flat", "blank_mover_when_flat", "skip_blank_io",
         "hard_red", "hard_red_no_new", "io_select", "io_hold",
         "hard_red_io_ok", "io_min_names",
+        "ripper_top_n", "ripper_cash_frac",
     )
     slim = {k: pol[k] for k in keep if k in pol}
     slim["live"] = pol.get("name") == LIVE_POLICY

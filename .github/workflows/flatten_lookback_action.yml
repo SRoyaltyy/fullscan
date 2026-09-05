@@ -29,6 +29,7 @@ on:
           - movers
           - losers
           - captured
+          - probable
       preset:
         description: "featured | strict | setups | lane | loose"
         required: false

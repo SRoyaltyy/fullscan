@@ -43,6 +43,7 @@ from src.sleeve_merge import (
     load_payload,
     next_session,
     rank_calls,
+    ripper_overlay_names,
     run_flatten_switch,
     session_calendar,
 )
@@ -334,6 +335,8 @@ def plan_today(date: str, capital: float = 100_000,
         for t in io_select_picks(book_map.get(date) or {}, pol, date=date,
                                 top_n=int(pol.get("long_top_n") or 10)):
             tickers.add(t)
+        for t in ripper_overlay_names(date, cal, int(pol.get("ripper_top_n") or 0)):
+            tickers.add(t)
         if tickers:
             start = cal[0] if cal else date
             cache = get_prices(sorted(t for t in tickers if t), start, date)
@@ -506,6 +509,35 @@ def plan_today(date: str, capital: float = 100_000,
             skip(OPEN_CLOCK, "", "BUY",
                  "not flatten (need S≥+1 and ≥5 priced BUYs and a prior book)",
                  "mover_long")
+    ripper_n = int(pol.get("ripper_top_n") or 0)
+    if ripper_n and can_buy and (io_pos or route_mover):
+        eq = cash
+        for p in list(io_pos.values()) + mv_pos:
+            px, _ = _px(p["ticker"], date, "open", cache)
+            eq += p["shares"] * float(px or p.get("last_px") or p["entry_px"])
+        already = sum(
+            p["shares"] * float(p.get("last_px") or p["entry_px"])
+            for p in mv_pos if p.get("side") == "BUY")
+        room = min(cash, max(0.0, eq * float(pol.get("day_cap", 1.0)) - already))
+        held = {p["ticker"] for p in mv_pos} | set(io_pos)
+        long_hold_n = HOLD_SESSIONS[pol.get("long_hold", "1d")]
+        for t in ripper_overlay_names(date, cal, ripper_n):
+            if not t or t in held:
+                continue
+            px, kind = _px(t, date, "open", cache)
+            if not px:
+                skip(OPEN_CLOCK, t, "BUY", "no 09:30 open", "ripper_long")
+                continue
+            want = min(eq * float(pol.get("long_pct", 0.10)), room, cash)
+            lot = try_buy(t, px, kind, OPEN_CLOCK, int(want // px),
+                          "ripper continuation (yday liquid, not exploded)",
+                          "ripper_long")
+            if lot is None:
+                continue
+            room -= lot["notional"] + lot["fee"]
+            held.add(t)
+            if room < 1 or cash < 1:
+                break
     elif hard_red_no_new and hard_red:
         for r in rank_calls(priced_buys, pol.get("long_rank", "cond"))[: pol.get("long_top_n", 10)]:
             t = str(r.get("ticker") or "").upper()
@@ -577,8 +609,12 @@ def plan_today(date: str, capital: float = 100_000,
             skip(CLOSE_CLOCK, "*", "BUY",
                  f"io {io_hold_key} cannot settle", "io_core")
             new = []
-        if new and cash > 100:
-            per = cash / len(new)
+        spendable = cash
+        rfrac = float(pol.get("ripper_cash_frac") or 0.0)
+        if int(pol.get("ripper_top_n") or 0) and rfrac > 0:
+            spendable = cash * (1.0 - min(max(rfrac, 0.0), 0.5))
+        if new and spendable > 100:
+            per = spendable / len(new)
             for t in new:
                 px, kind = _px(t, date, "close", cache)
                 if not px:

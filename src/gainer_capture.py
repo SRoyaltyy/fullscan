@@ -13,6 +13,9 @@ knowable before 09:30:
   * 20-session OHLC "hot" rank on yesterday's liquid tape (top 80),
     dropping already-exploded names (ret_5 > 18 or rvol > 2.8) and
     yesterday's top losers
+  * compact **probable** continuation: yesterday's liquid gainers
+    that are not exploded (ret_5 ≤ 10) — the high-confidence select
+    list (~8/day, g/l > 1 vs next-day top-25)
 
 Same-day Change% is never an input. The list is a watchlist — it does
 not change live flatten_robust fills.
@@ -26,6 +29,7 @@ from . import ohlc_ripper as ohlc
 TOP_YDAY_GAINERS = 50
 TOP_YDAY_MOVERS = 40
 OHLC_HOT_N = ohlc.HOT_TOP_N
+PROBABLE_N = ohlc.CONT_TOP_N
 
 
 def _tick(v) -> str:
@@ -117,6 +121,7 @@ def watchlist(date: str, *,
         "yday_gainers": yesterday_gainers(prior, top_n=top_gainers),
         "yday_movers": yesterday_movers(prior, top_n=top_movers),
         "ohlc_hot": ohlc.liquid_hot(prior, session, top_n=OHLC_HOT_N),
+        "probable": ohlc.continuation(prior, session, top_n=PROBABLE_N),
     }
     yday_losers = set()
     if prior:
@@ -136,8 +141,8 @@ def watchlist(date: str, *,
     ]
     reasons: dict[str, list[str]] = {}
     order: list[str] = []
-    for key in ("flatten", "mover_buys", "earn_react", "yday_gainers",
-                "yday_movers", "ohlc_hot"):
+    for key in ("flatten", "mover_buys", "earn_react", "probable",
+                "yday_gainers", "yday_movers", "ohlc_hot"):
         for t in buckets[key]:
             reasons.setdefault(t, [])
             if key not in reasons[t]:
@@ -178,6 +183,7 @@ def watchlist(date: str, *,
         "n_yday_gainers": len(buckets["yday_gainers"]),
         "n_yday_movers": len(buckets["yday_movers"]),
         "n_ohlc_hot": len(buckets["ohlc_hot"]),
+        "n_probable": len(buckets["probable"]),
         "n_candle": sum(1 for r in rows if r["candle_capture"]),
     }
 
