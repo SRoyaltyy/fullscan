@@ -519,6 +519,12 @@ def walk(from_date: str = START, to_date: str | None = None,
             rec["capture_reasons"] = cap.get("reasons") or []
             if rec.get("candle_capture") is None:
                 rec["candle_capture"] = cap.get("candle_capture")
+            for key in (
+                "ohlc_ret_5", "ohlc_ret_10", "ohlc_rvol",
+                "ohlc_nr7", "ohlc_break_10", "ohlc_hot_score",
+            ):
+                if cap.get(key) is not None:
+                    rec[key] = cap.get(key)
         rows.append(rec)
 
     flatten_rows = [r for r in rows if "flatten" in r.get("sources", [])]
@@ -737,7 +743,8 @@ def _tally_markdown(tally: dict) -> str:
         "## Chosen tally (flatten ∩ tape)",
         "",
         f"- **Capture watchlist** (prior-session top gainers/movers + "
-        f"AMC/BMO earnings + morning priced BUYs + flatten): "
+        f"AMC/BMO earnings + morning priced BUYs + flatten + "
+        f"20-day OHLC hot rank): "
         f"**{cap.get('universe') or 0}** name-days · hit "
         f"**{cap.get('gainer_hits') or 0}** / {g_uni} top gainers "
         f"({_pct_label((cap.get('gainer_hits') or 0) / g_uni if g_uni else None)}) "
@@ -879,11 +886,11 @@ def render_markdown(payload: dict, source: str = "flatten",
         + (f" · tickers {','.join(tickers)}" if tickers else ""),
         "",
         "| Date 09:30 ET | Marks | Src | Route | # | Ticker | "
-        "R:G | Vol R:G | Candle | Cap | Δ | "
+        "R:G | Vol R:G | Candle | Cap | 5d% | RVOL | OHLC | Δ | "
         "Close 16:00 ET | Open 09:30 ET | o→c | Cond | "
         "Action 09:30 ET | Why | Setups | Cameras | Coaches | "
         "+1d | +3d | +1w |",
-        "|---|---|---|---|---:|---|---:|---:|---|---|---:|---|---|---|---|---|---|---|---|---|---|---|---|",
+        "|---|---|---|---|---:|---|---:|---:|---|---|---:|---:|---|---:|---|---|---|---|---|---|---|---|---|---|---|",
     ]
     for r in rows:
         hits = r.get("hits") or {}
@@ -900,6 +907,9 @@ def render_markdown(payload: dict, source: str = "flatten",
             f"{_rg_text(r.get('candle_vol_rg'))} | "
             f"{r.get('candle_pattern') or '—'} | "
             f"{'yes' if r.get('candle_capture') else '—'} | "
+            f"{_rg_text(r.get('ohlc_ret_5'))} | "
+            f"{_rg_text(r.get('ohlc_rvol'))} | "
+            f"{'nr7' if r.get('ohlc_nr7') else ('brk' if r.get('ohlc_break_10') else '—')} | "
             f"{_chg_text(r.get('day_change'))} | "
             f"{act.format_price(bar.get('close'), r.get('date'), act.CLOSE_CLOCK)} | "
             f"{act.format_price(bar.get('open'), r.get('date'), act.OPEN_CLOCK)} | "
@@ -976,6 +986,9 @@ def _row_html(r: dict) -> str:
         f"<td>{html.escape(_rg_text(r.get('candle_vol_rg')))}</td>"
         f"<td>{html.escape(str(r.get('candle_pattern') or '—'))}</td>"
         f"<td>{'yes' if r.get('candle_capture') else '—'}</td>"
+        f"<td>{html.escape(_rg_text(r.get('ohlc_ret_5')))}</td>"
+        f"<td>{html.escape(_rg_text(r.get('ohlc_rvol')))}</td>"
+        f"<td>{'nr7' if r.get('ohlc_nr7') else ('brk' if r.get('ohlc_break_10') else '—')}</td>"
         f"{pct_td(r.get('day_change'), _chg_text(r.get('day_change')))}"
         f"<td>{html.escape(act.format_price(bar.get('close'), r.get('date'), act.CLOSE_CLOCK))}</td>"
         f"<td>{html.escape(act.format_price(bar.get('open'), r.get('date'), act.OPEN_CLOCK))}</td>"
@@ -1104,7 +1117,7 @@ Flatten names are freshly painted with cameras.</p>
 <h2>Picks with cameras</h2>
 <div class="sheet"><table>
 <thead><tr><th>Date 09:30 ET</th><th>Hits 1d/3d/1w</th><th>Src</th><th>Route</th><th>#</th><th>Ticker</th>
-<th>R:G</th><th>Vol R:G</th><th>Candle</th><th>Cap</th><th>Δ</th>
+<th>R:G</th><th>Vol R:G</th><th>Candle</th><th>Cap</th><th>5d%</th><th>RVOL</th><th>OHLC</th><th>Δ</th>
 <th>Close 16:00 ET</th><th>Open 09:30 ET</th><th>o→c 09:30→16:00</th><th>Cond</th>
 <th>Action 09:30 ET</th><th>Hall pass</th><th>Setups</th>
 {cam_h}{dom_h}<th>Trigger</th><th>Flatten why</th>
@@ -1173,6 +1186,12 @@ def _slim_row(r: dict) -> dict:
         "candle_last_green": r.get("candle_last_green"),
         "candle_pattern": r.get("candle_pattern"),
         "capture_reasons": r.get("capture_reasons"),
+        "ohlc_ret_5": r.get("ohlc_ret_5"),
+        "ohlc_ret_10": r.get("ohlc_ret_10"),
+        "ohlc_rvol": r.get("ohlc_rvol"),
+        "ohlc_nr7": r.get("ohlc_nr7"),
+        "ohlc_break_10": r.get("ohlc_break_10"),
+        "ohlc_hot_score": r.get("ohlc_hot_score"),
         "session_bar": r.get("session_bar"),
         "horizon_dates": r.get("horizon_dates"),
         "condition": r.get("condition"),
