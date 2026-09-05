@@ -64,8 +64,15 @@
 <canvas id="chart" height="280"></canvas>
 <div class="legend" id="legend"></div>
 </details>
-<h2>Six effectiveness metrics</h2>
+<h2>Six effectiveness metrics (cash book)</h2>
+<p class="mut">Book % is the $10k sleeve after whole shares, Futubull fees, leftover split, sell-first, min-hold, and hard-red sit. Signal-only is the old equal-weight path — not a fill.</p>
 <table id="stats"></table>
+<details open>
+<summary>Blotter — what was bought / sold</summary>
+<p class="mut" id="blotHint">Pick a recipe chip. Sells run first (cash freed), then leftover cash is split across new names. A name that costs more than its split is skipped.</p>
+<table id="blot"></table>
+<table id="skips"></table>
+</details>
 <details open>
 <summary>Start-date sustainability (would it still make money?)</summary>
 <p class="mut">If the recipe starts on day X and runs to the end, is the compounded return still positive? More YES days = less 8-13 pothole dependence.</p>
@@ -233,7 +240,7 @@ function renderTable(){
   let list=statsList();
   if(q) list=list.filter(s=>s.name.toLowerCase().includes(q) || (s.note||'').toLowerCase().includes(q));
   if(sleeveFilter!=='all') list=list.filter(s=>s.name===sleeveFilter);
-  const head='<tr><th class="tick">Strategy</th><th>Side</th><th>H</th><th>Win%</th><th>$ days</th><th>Starts YES</th><th>Med start</th><th>Top-g</th><th>Losers</th><th>Avg win</th><th>Avg loss</th><th>Pothole</th><th>Tot%</th><th>Eff</th></tr>';
+  const head='<tr><th class="tick">Strategy</th><th>Side</th><th>H</th><th>Win%</th><th>$ days</th><th>Starts YES</th><th>Med start</th><th>Top-g</th><th>Losers</th><th>Book%</th><th>Signal%</th><th>Pothole</th><th>Eff</th></tr>';
   const body=list.map(s=>`<tr>
     <td class="tick">${esc(s.name)}${s.reliable===false?' <span class="mut">thin</span>':''}</td>
     <td>${esc(s.side)}</td>
@@ -244,13 +251,44 @@ function renderTable(){
     <td class="${cls(s.median_start_pct)}">${num(s.median_start_pct,1)}</td>
     <td>${s.gainer_hits||0} <span class="mut">${pct(s.gainer_rate)}</span></td>
     <td class="${(s.loser_rate||0)>0.2?'neg':''}">${s.loser_hits||0} <span class="mut">${pct(s.loser_rate)}</span></td>
-    <td class="pos">${num(s.avg_win_pct)}</td>
-    <td class="neg">${num(s.avg_loss_pct)}</td>
-    <td class="${(s.pothole_pct||0)>=30?'neg':'mut'}">${s.pothole_date?esc(String(s.pothole_date).slice(5))+' '+num(s.pothole_pct,1):'—'}</td>
     <td class="${cls(s.total_ret_pct)}">${num(s.total_ret_pct)}</td>
+    <td class="mut">${num(s.signal_ret_pct)}</td>
+    <td class="${(s.pothole_pct||0)>=30?'neg':'mut'}">${s.pothole_date?esc(String(s.pothole_date).slice(5))+' '+num(s.pothole_pct,1):'—'}</td>
     <td class="gold">${s.effectiveness==null?'—':Number(s.effectiveness).toFixed(1)}</td>
   </tr>`).join('');
   document.getElementById('stats').innerHTML=head+body;
+}
+
+function renderBlotter(){
+  const name = sleeveFilter==='all' ? ((D.featured||[])[0]||'') : sleeveFilter;
+  const hint=document.getElementById('blotHint');
+  const book=(D.books||{})[name];
+  if(hint) hint.textContent = name
+    ? (name+' — sells first, then leftover cash split. Hard-red S≤−3 sits.')
+    : 'Pick a recipe chip to see fills.';
+  if(!book){
+    document.getElementById('blot').innerHTML='';
+    document.getElementById('skips').innerHTML='';
+    return;
+  }
+  const fills=book.trades||[];
+  document.getElementById('blot').innerHTML =
+    '<tr><th>Date</th><th>Side</th><th class="tick">Ticker</th><th>Shares</th><th>Px</th><th>Fees</th><th>P/L</th><th>Cash</th><th class="tick">Why</th></tr>'+
+    fills.map(t=>`<tr>
+      <td>${esc(t.date)}</td>
+      <td class="${t.side==='BUY'||t.side==='SHORT'?'pos':'neg'}">${esc(t.side)}</td>
+      <td class="tick">${esc(t.ticker)}</td>
+      <td>${t.shares}</td><td>$${Number(t.price).toFixed(2)}</td>
+      <td>$${Number(t.fees).toFixed(2)}</td>
+      <td class="${cls(t.pnl)}">${t.pnl==null?'—':('$'+(t.pnl>=0?'+':'')+Number(t.pnl).toFixed(2))}</td>
+      <td>$${Number(t.cash_after).toLocaleString(undefined,{minimumFractionDigits:2})}</td>
+      <td class="tick">${esc(t.reason||'')}</td>
+    </tr>`).join('');
+  const skips=book.skips||[];
+  document.getElementById('skips').innerHTML = skips.length
+    ? '<tr><th>Date</th><th class="tick">Skipped</th><th>Kind</th><th class="tick">Why</th></tr>'+
+      skips.map(k=>`<tr><td>${esc(k.date)}</td><td class="tick">${esc(k.ticker)}</td><td>${esc(k.kind)}</td><td class="tick">${esc(k.reason||'')}</td></tr>`).join('')
+    : '';
 }
 
 function renderStarts(){
@@ -275,13 +313,14 @@ function renderAll(){
     "Generated "+String(D.generated_at||'').slice(0,16).replace('T',' ')+
     " · "+(D.n_sessions||0)+" sessions "+(D.from_date||'')+" → "+(D.to_date||'')+
     " · $"+Number(D.capital||10000).toLocaleString()+" per recipe · "+
-    (D.fill||"09:30 open → horizon close")+
+    (D.fill||"09:30 open, whole shares, Futubull fees")+
     " · "+(D.leak||"leak-free 09:30");
   document.getElementById('fees').textContent =
     "Loser cut = Change% < "+(D.loser_cut)+" · live policy untouched: "+(D.live_untouched||"flatten_robust");
   renderCards();
   renderChips();
   renderTable();
+  renderBlotter();
   renderStarts();
   renderLegend();
   draw();
