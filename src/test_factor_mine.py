@@ -438,6 +438,10 @@ def test_template_has_data_slot() -> None:
     assert "this sleeve only" in text
     assert "Pick a sleeve" in text or "pick a sleeve" in text.lower()
     assert "leak-free" in text.lower() or "Leak-free" in text
+    assert "like you are 10" in text
+    assert "renderExplain" in text
+    assert "fill-card" in text
+    assert "overflow-x:hidden" in text.replace(" ", "")
 
 
 def test_write_outputs_injects_payload(tmp_path=None) -> None:
@@ -462,6 +466,10 @@ def test_write_outputs_injects_payload(tmp_path=None) -> None:
     assert "loser_hits" in payload["stats"][0]
     assert "avg_win_pct" in payload["stats"][0]
     assert payload["stats"][0]["reliable"] is False  # empty book is thin
+    assert payload["stats"][0]["explain"]["kid"]
+    assert payload["stats"][0]["explain"]["buy"]
+    assert payload["stats"][0]["explain"]["sell"]
+    assert payload["recipes"][0]["explain"]["inputs"]
 
 
 def test_dash_payload_ships_every_book_and_features_high_return() -> None:
@@ -507,6 +515,7 @@ def test_dash_payload_ships_every_book_and_features_high_return() -> None:
     assert "marks" in d0
     assert "session_delta" in d0
     assert any(t["side"] == "CLOSE" for t in trades)
+    assert payload["stats"][0]["explain"]["kid"]
 
 
 def test_day_open_explains_overnight_mark() -> None:
@@ -897,6 +906,58 @@ def test_sboost_more_names_on_good_s_still_cash_capped() -> None:
     assert good["audit"]["ok"] is True
 
 
+def test_explain_recipe_union_e_green_h3() -> None:
+    rec = next(r for r in fm.build_recipes() if r["name"] == "union_e_green_h3")
+    ex = fm.explain_recipe(rec)
+    blob = " ".join([ex["kid"], *ex["inputs"], *ex["buy"], *ex["sell"]]).lower()
+    assert rec["require"] == {"earn_react": True, "last_green": True}
+    assert rec["forbid"] == {"alarm": True, "news": "bad"}
+    assert "change%" in blob
+    assert "earnings-reaction" in blob
+    assert "last finished bar was green" in blob
+    assert "🚨" in blob or "alarm" in blob
+    assert "news" in blob and "red" in blob
+    assert "leftover" in blob
+    assert "3 session" in blob or "3 morning" in blob
+    assert "list-drop" in blob or "no longer on" in blob or "falls off" in blob
+    assert "never peek" in blob or "never" in blob
+    assert ex["sell_rule"] == "list"
+    assert ex["hold"] == 3
+    assert ex["universe"] == "union"
+    assert ex["side"] == "long"
+    assert ex["top_n"] == 8
+
+
+def test_explain_covers_all_recipes() -> None:
+    seen = set()
+    for rec in fm.build_recipes():
+        assert rec["name"] not in seen
+        seen.add(rec["name"])
+        ex = fm.explain_recipe(rec)
+        assert ex["kid"]
+        assert ex["inputs"] and ex["buy"] and ex["sell"]
+        assert ex["universe"] == rec["universe"]
+        assert ex["hold"] == rec["hold"]
+        assert ex["side"] == rec["side"]
+        assert ex["size"] == (rec.get("size") or "leftover")
+        assert ex["sell_rule"] == (rec.get("sell") or "list")
+    assert len(seen) >= 100
+
+
+def test_stamp_explains_on_mined_payload() -> None:
+    recs = [fm.make_recipe("demo_h1", hold=1, require={"last_green": True})]
+    payload = {
+        "recipes": recs,
+        "stats": [{"name": "demo_h1", "universe": "union", "hold": 1,
+                   "require": {"last_green": True}, "forbid": {},
+                   "side": "long", "top_n": 8, "size": "leftover",
+                   "sell": "list", "s_boost": "none"}],
+    }
+    fm.stamp_explains(payload)
+    assert "last finished bar was green" in " ".join(payload["stats"][0]["explain"]["inputs"])
+    assert payload["recipes"][0]["explain"]["sell"]
+
+
 def test_action_filters_size_sell_boost() -> None:
     from src import factor_mine_book as fmb
     only = fmb.recipes_from_action(
@@ -939,4 +1000,7 @@ if __name__ == "__main__":
     test_missing_bar_day_carries_mark_no_phantom_session()
     test_marks_explain_fill_gap_across_no_fill_day()
     test_union_e_green_h3_aug21_to_aug25_name_marks()
-    print("31 factor-mine tests passed")
+    test_explain_recipe_union_e_green_h3()
+    test_explain_covers_all_recipes()
+    test_stamp_explains_on_mined_payload()
+    print("34 factor-mine tests passed")
