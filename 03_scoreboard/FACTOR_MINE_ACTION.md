@@ -18,21 +18,22 @@ Live `flatten_robust` is not changed.
 
 | Strategy | Size | Sell | Boost | Book % | Signal-only % | Starts YES | Fills | Skips | Audit | MD |
 |---|---|---|---|---:|---:|---:|---:|---:|---|---|
-| `flatten_h3_half` | half | list | none | +7.04 | +44.29 | 16/17 | 103 | 138 | PASS | [flatten_h3_half.md](factor_mine/flatten_h3_half.md) |
-| `flatten_h3_time` | leftover | time | none | +11.56 | +44.29 | 16/17 | 80 | 129 | PASS | [flatten_h3_time.md](factor_mine/flatten_h3_time.md) |
+| `union_e_green_h3` | leftover | list | none | +47.92 | +23.38 | 15/17 | 64 | 96 | PASS | [union_e_green_h3.md](factor_mine/union_e_green_h3.md) |
+| `union_e_fresh_h3` | leftover | list | none | +27.57 | -12.67 | 16/17 | 69 | 114 | PASS | [union_e_fresh_h3.md](factor_mine/union_e_fresh_h3.md) |
 | `flatten_h5` | leftover | list | none | +22.84 | +67.92 | 16/17 | 75 | 194 | PASS | [flatten_h5.md](factor_mine/flatten_h5.md) |
 | `flatten_h5_cut` | leftover | cut_loser | none | +22.84 | +67.92 | 16/17 | 75 | 194 | PASS | [flatten_h5_cut.md](factor_mine/flatten_h5_cut.md) |
 | `flatten_h5_sizeup` | leftover | list | sizeup | +22.84 | +67.92 | 16/17 | 75 | 194 | PASS | [flatten_h5_sizeup.md](factor_mine/flatten_h5_sizeup.md) |
 | `flatten_h5_time` | leftover | time | none | +22.84 | +67.92 | 16/17 | 75 | 194 | PASS | [flatten_h5_time.md](factor_mine/flatten_h5_time.md) |
 | `flatten_h5_trail` | leftover | trail | none | +22.84 | +67.92 | 16/17 | 75 | 194 | PASS | [flatten_h5_trail.md](factor_mine/flatten_h5_trail.md) |
+| `union_earn_react_h3` | leftover | list | none | +22.58 | -26.79 | 15/17 | 74 | 113 | PASS | [union_earn_react_h3.md](factor_mine/union_earn_react_h3.md) |
+| `flatten_h3_half` | half | list | none | +7.04 | +44.29 | 16/17 | 103 | 138 | PASS | [flatten_h3_half.md](factor_mine/flatten_h3_half.md) |
+| `flatten_h3_time` | leftover | time | none | +11.56 | +44.29 | 16/17 | 80 | 129 | PASS | [flatten_h3_time.md](factor_mine/flatten_h3_time.md) |
 | `flatten_h5_sboost` | leftover | list | both | +22.18 | +67.92 | 16/17 | 79 | 202 | PASS | [flatten_h5_sboost.md](factor_mine/flatten_h5_sboost.md) |
 | `flatten_live_h1` | leftover | list | none | +9.78 | +4.99 | 7/17 | 32 | 0 | PASS | [flatten_live_h1.md](factor_mine/flatten_live_h1.md) |
 | `flatten_live_h3` | leftover | list | none | +4.92 | +9.59 | 7/17 | 26 | 34 | PASS | [flatten_live_h3.md](factor_mine/flatten_live_h3.md) |
 | `flatten_live_h5` | leftover | list | none | +5.85 | +8.02 | 7/17 | 26 | 55 | PASS | [flatten_live_h5.md](factor_mine/flatten_live_h5.md) |
-| `union_e_fresh_h3` | leftover | list | none | +27.57 | -12.67 | 16/17 | 69 | 114 | PASS | [union_e_fresh_h3.md](factor_mine/union_e_fresh_h3.md) |
-| `union_news_g_h5` | leftover | list | none | -10.92 | +152.34 | 4/17 | 81 | 189 | PASS | [union_news_g_h5.md](factor_mine/union_news_g_h5.md) |
-| `union_white_coil_h1` | leftover | list | none | +0.94 | +6.12 | 8/17 | 123 | 8 | PASS | [union_white_coil_h1.md](factor_mine/union_white_coil_h1.md) |
-| `union_e_green_h3` | leftover | list | none | +47.92 | +23.38 | 15/17 | 64 | 96 | PASS | [union_e_green_h3.md](factor_mine/union_e_green_h3.md) |
+| `union_news_g_h5` | leftover | list | none | -10.92 | +152.54 | 4/17 | 81 | 189 | PASS | [union_news_g_h5.md](factor_mine/union_news_g_h5.md) |
+| `union_white_coil_h1` | leftover | list | none | +2.05 | +7.42 | 11/17 | 124 | 8 | PASS | [union_white_coil_h1.md](factor_mine/union_white_coil_h1.md) |
 | `flatten_h5_rankw` | rank_w | list | none | +17.31 | +67.92 | 17/17 | 72 | 187 | PASS | [flatten_h5_rankw.md](factor_mine/flatten_h5_rankw.md) |
 | `union_h5_sboost` | leftover | list | both | +18.18 | +58.01 | 14/17 | 108 | 259 | PASS | [union_h5_sboost.md](factor_mine/union_h5_sboost.md) |
 | `flatten_live_h1_sizeup` | leftover | list | sizeup | +9.78 | +4.99 | 7/17 | 32 | 0 | PASS | [flatten_live_h1_sizeup.md](factor_mine/flatten_live_h1_sizeup.md) |
@@ -86,7 +87,6 @@ Live `flatten_robust` is not changed.
 - [`union_coil_off_h1`](factor_mine/union_coil_off_h1.md)
 - [`union_coil_off_h3`](factor_mine/union_coil_off_h3.md)
 - [`union_earn_react_h1`](factor_mine/union_earn_react_h1.md)
-- [`union_earn_react_h3`](factor_mine/union_earn_react_h3.md)
 - [`union_e_fresh_h1`](factor_mine/union_e_fresh_h1.md)
 - [`union_r_up_h1`](factor_mine/union_r_up_h1.md)
 - [`union_r_up_h3`](factor_mine/union_r_up_h3.md)
