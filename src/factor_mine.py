@@ -81,6 +81,7 @@ _SCAN_CACHE: dict[tuple[str, str], dict | None] = {}
 _OHLC_CACHE: dict[tuple[str, str], dict] = {}
 _CANDLE_CACHE: dict[tuple[str, str], dict] = {}
 _EXPORT_CACHE: dict[str, dict] = {}
+_PLAN: dict | None = None
 
 
 def _tick(v) -> str:
@@ -240,7 +241,11 @@ def build_recipes() -> list[dict]:
 
     add(name="flatten_vol_g_h3", universe="flatten", hold=3,
         require={"vol": "good"}, forbid={"alarm": True},
-        note="flatten book ∩ vol🟢")
+        note="flatten wish-list ∩ vol🟢")
+    for hold in (1, 3, 5):
+        add(name=f"flatten_live_h{hold}", universe="flatten", hold=hold,
+            require={"live_entry": True},
+            note="09:30 tickets only when flatten_robust gate fires (mover)")
     add(name="ohlc_hot_coil_h1", universe="ohlc_hot", hold=1,
         require={"ret_5_min": 0.0, "ret_5_max": 10.0, "rvol_max": 2.2},
         forbid={"alarm": True}, note="hot list ∩ not exploded")
@@ -308,6 +313,40 @@ def _cam_ok(got: str, want) -> bool:
     return got == w
 
 
+def flatten_plan(date: str) -> dict:
+    """Live flatten_robust would-buy / route for one session.
+
+    Cached. Used so ``live_entry`` recipes only buy when the 09:30
+    flatten gate actually fires (green S, ≥5 priced BUYs, prior book).
+    Wish-list HOLD mornings are not tickets.
+    """
+    global _PLAN
+    if not date:
+        return {}
+    try:
+        if _PLAN is None:
+            payload = sm.load_payload()
+            books = sm.list_books()
+            _PLAN = {
+                "payload": payload,
+                "books": books,
+                "book_map": sm.load_book_map(books),
+                "cal": sm.session_calendar(payload, books),
+                "pol": sm.live_policy(),
+                "by_date": {},
+            }
+        hit = _PLAN["by_date"].get(date)
+        if hit is None:
+            hit = fla.flatten_day_targets(
+                date, payload=_PLAN["payload"], books=_PLAN["books"],
+                pol=_PLAN["pol"], book_map=_PLAN["book_map"], cal=_PLAN["cal"],
+            )
+            _PLAN["by_date"][date] = hit
+        return hit
+    except Exception:
+        return {}
+
+
 def matches(row: dict, rec: dict) -> bool:
     uni = rec.get("universe") or "union"
     srcs = set(row.get("sources") or [])
@@ -315,6 +354,12 @@ def matches(row: dict, rec: dict) -> bool:
         return False
     req = rec.get("require") or {}
     forb = rec.get("forbid") or {}
+    if req.get("live_entry"):
+        ok = row.get("flatten_ok")
+        if ok is None:
+            ok = flatten_plan(row.get("date") or "").get("flatten_ok")
+        if not ok:
+            return False
     boxes = row.get("boxes") or {}
     for cam in CAMERAS:
         want = req.get(cam)
@@ -399,7 +444,9 @@ def rank_key(row: dict, rec: dict) -> tuple:
         return (-(0.6 * hot + 0.4 * max(cond, 0)), row["ticker"])
     if how == "w_hot_candle":
         return (-(0.6 * hot + 0.4 * candle), row["ticker"])
-    return (int(row.get("src_rank") or 99), row["ticker"])
+    src = row.get("src_rank")
+    src_i = 99 if src is None else int(src)
+    return (src_i, row["ticker"])
 
 
 def pick_day(rows: list[dict], rec: dict) -> list[dict]:
@@ -841,7 +888,9 @@ def _effectiveness(win_rate, day_rate, start_rate, gainer_rate,
 def run(from_date: str = START, to_date: str | None = None,
         write: bool = False, recipes: list[dict] | None = None,
         panel: dict | None = None, rebuild_panel: bool = False,
-        persist_panel: bool = False) -> dict:
+        persist_panel: bool = False, book: bool = True,
+        bars: dict | None = None) -> dict:
+    from . import factor_mine_book as fmb
     recipes = list(recipes or build_recipes())
     panel = (panel if panel is not None
              else load_or_build_panel(from_date, to_date, rebuild=rebuild_panel))
@@ -852,7 +901,20 @@ def run(from_date: str = START, to_date: str | None = None,
         PANEL_PATH.write_text(json.dumps(slim, indent=2), encoding="utf-8")
     cal = list(panel.get("session_dates") or [])
     tapes = _tapes(cal)
-    stats = [score_recipe(panel, rec, tapes) for rec in recipes]
+    regime = fmb.load_regime() if book else {}
+    fees = pt_fees() if book else None
+    stats = []
+    books = {}
+    for rec in recipes:
+        st = score_recipe(panel, rec, tapes, bars=bars)
+        if book:
+            bk = fmb.simulate_book(
+                panel, rec, bars=bars, fees=fees, regime=regime)
+            starts = fmb.replay_starts(
+                panel, rec, bars=bars, fees=fees, regime=regime)
+            st = fmb.attach_book(st, bk, starts)
+            books[rec["name"]] = bk
+        stats.append(st)
     stats.sort(key=lambda r: (
         0 if r.get("reliable") else 1,
         -(r.get("effectiveness") or -999),
@@ -863,10 +925,19 @@ def run(from_date: str = START, to_date: str | None = None,
     for s in stats:
         eq = s["equity"]
         series[s["name"]] = eq[1:] if len(eq) == len(dates) + 1 else eq
+    extra = [n for n in (
+        "flatten_live_h1", "flatten_live_h3", "flatten_live_h5",
+        "union_e_fresh_h3", "union_news_g_h5", "union_white_coil_h1",
+        "union_e_green_h3",
+    ) if any(s["name"] == n for s in stats)]
+    featured = []
+    for n in [s["name"] for s in stats if s.get("reliable")][:8] + extra:
+        if n not in featured:
+            featured.append(n)
     payload = {
         "generated_at": datetime.now(tl.ET).isoformat(),
         "asof": "09:30_et",
-        "fill": "09:30 open → horizon close; early exit at next 09:30 open",
+        "fill": "09:30 open, whole shares, Futubull fees, leftover split, sell first, hard-red sit",
         "from_date": panel.get("from_date"),
         "to_date": panel.get("to_date"),
         "n_sessions": panel.get("n_sessions"),
@@ -876,21 +947,36 @@ def run(from_date: str = START, to_date: str | None = None,
         "loser_cut": LOSER_CUT,
         "leak": "prior tape + pre-open packet only; news from prior export or morning box",
         "live_untouched": "flatten_robust",
+        "book_rules": dict(fmb.BOOK_RULES),
         "dates": dates,
+        "featured": featured,
         "stats": [{k: v for k, v in s.items()
                    if k not in ("daily", "equity", "starts")} for s in stats],
         "series": series,
         "daily": {s["name"]: s["daily"] for s in stats},
         "starts": {s["name"]: s["starts"] for s in stats},
+        "books": {
+            n: {k: v for k, v in books[n].items()
+                if k in ("daily", "trades", "skips", "open", "n_trades",
+                         "n_skips", "realized", "cash", "total_ret_pct")}
+            for n in featured if n in books
+        },
+        "md_names": [s["name"] for s in stats if s.get("book_n_trades")],
         "recipes": recipes,
         "panel_n": panel.get("n_rows"),
     }
     if write:
-        write_outputs(payload, stats)
+        write_outputs(payload, stats, books=books)
     return payload
 
 
-def write_outputs(payload: dict, stats: list[dict] | None = None) -> None:
+def pt_fees():
+    from . import paper_trade as pt
+    return pt.load_fees()
+
+
+def write_outputs(payload: dict, stats: list[dict] | None = None,
+                  books: dict | None = None) -> None:
     OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
     OUT_START.parent.mkdir(parents=True, exist_ok=True)
     DASH_DIR.mkdir(parents=True, exist_ok=True)
@@ -915,11 +1001,18 @@ def write_outputs(payload: dict, stats: list[dict] | None = None) -> None:
         f"candidate rows **{payload.get('n_rows')}** · "
         f"fill `{payload.get('fill')}`.",
         "",
-        "Research only — does not change live `flatten_robust`.",
+        "Cash book: $10k, whole shares, Futubull fees, leftover split, "
+        "sell first, min-hold, 09:30 open, hard-red S≤−3 sit, shorts "
+        "marked as a liability. Signal-only % is the old equal-weight "
+        "path (not a fill). `flatten_h*` = wish-list (io/HOLD mornings "
+        "still buy). `flatten_live_*` = only when the live flatten gate "
+        "fires. Research only — does not change live `flatten_robust`.",
+        "",
+        "Action blotters: [FACTOR_MINE_ACTION.md](FACTOR_MINE_ACTION.md).",
         "",
         "| Strategy | Side | H | Win% | $ days | Starts YES | "
-        "Med start | Top-g | Losers | Avg win | Avg loss | Pothole | Tot% | Eff |",
-        "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
+        "Med start | Top-g | Losers | Book% | Signal% | Pothole | Eff |",
+        "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for s in (stats or []):
         lines.append(
@@ -929,15 +1022,20 @@ def write_outputs(payload: dict, stats: list[dict] | None = None) -> None:
             f"{s.get('start_green') or 0}/{s.get('start_n') or 0} | "
             f"{_n(s.get('median_start_pct'))} | "
             f"{s.get('gainer_hits') or 0} | {s.get('loser_hits') or 0} | "
-            f"{_n(s.get('avg_win_pct'))} | {_n(s.get('avg_loss_pct'))} | "
+            f"{_n(s.get('total_ret_pct'))} | {_n(s.get('signal_ret_pct'))} | "
             f"{s.get('pothole_date') or '—'} {_n(s.get('pothole_pct'))} | "
-            f"{_n(s.get('total_ret_pct'))} | {s.get('effectiveness')} |"
+            f"{s.get('effectiveness')} |"
         )
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
     if TEMPLATE.is_file():
         html = TEMPLATE.read_text(encoding="utf-8").replace(
             "__DATA__", json.dumps(payload, separators=(",", ":")))
         (DASH_DIR / "index.html").write_text(html, encoding="utf-8")
+    if books:
+        from . import factor_mine_book as fmb
+        featured = payload.get("featured") or [
+            s["name"] for s in (stats or []) if s.get("reliable")][:8]
+        fmb.write_action_mds(payload, stats or [], books, featured)
 
 
 def _pct(v) -> str:
@@ -949,15 +1047,35 @@ def _n(v) -> str:
 
 
 def main(argv=None) -> int:
+    from . import factor_mine_book as fmb
     ap = argparse.ArgumentParser()
     ap.add_argument("--from-date", default=START)
     ap.add_argument("--to-date", default="")
     ap.add_argument("--write", action="store_true")
     ap.add_argument("--rebuild-panel", action="store_true")
+    ap.add_argument("--universe", default="auto", choices=fmb.UNIVERSES)
+    ap.add_argument("--hold", default="auto", choices=fmb.HOLDS)
+    ap.add_argument("--gate", default="auto", choices=fmb.GATES)
+    ap.add_argument("--rank", default="auto", choices=fmb.RANKS)
+    ap.add_argument("--side", default="auto", choices=fmb.SIDES)
+    ap.add_argument("--top-n", default="auto", choices=fmb.TOP_NS)
+    ap.add_argument("--exit", default="auto", choices=fmb.EXITS)
+    ap.add_argument("--entry", default="auto", choices=fmb.ENTRIES)
+    ap.add_argument("--auto-tweak", dest="auto_tweak", action="store_true",
+                    default=True)
+    ap.add_argument("--no-auto-tweak", dest="auto_tweak", action="store_false")
+    ap.add_argument("--no-book", action="store_true",
+                    help="signal-only (do not use; cash book is the default)")
     args = ap.parse_args(argv)
+    recipes = fmb.recipes_from_action(
+        universe=args.universe, hold=args.hold, gate=args.gate,
+        rank=args.rank, side=args.side, top_n=args.top_n, exit=args.exit,
+        entry=args.entry, auto_tweak=args.auto_tweak,
+    )
     payload = run(
         args.from_date, args.to_date or None, write=args.write,
-        rebuild_panel=args.rebuild_panel, persist_panel=args.write,
+        recipes=recipes, rebuild_panel=args.rebuild_panel,
+        persist_panel=args.write, book=not args.no_book,
     )
     print(f"[factor-mine] recipes={payload['n_recipes']} "
           f"rows={payload['n_rows']} sessions={payload['n_sessions']}")

@@ -21,6 +21,9 @@ def test_catalog_has_live_hard_red_and_shipped() -> None:
     assert any(r.get("integrity") == "stitch" for r in rows)
     assert any(r.get("integrity") == "fill" for r in rows)
     assert len(rows) >= 20
+    from pathlib import Path
+    if Path("03_scoreboard/factor_mine.json").is_file():
+        assert any(r.get("family") == "factor mine" for r in rows)
 
 
 def test_render_marks_integrity() -> None:

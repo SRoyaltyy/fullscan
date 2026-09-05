@@ -24,6 +24,7 @@ PAPER_MD = SCOREBOARD / "PAPER_TRADING.md"
 MERGE_SWEEP = ROOT / "data" / "sleeve_merge" / "sweep.json"
 MERGE_STATE = ROOT / "data" / "sleeve_merge" / "state.json"
 MERGE_CURVE = ROOT / "data" / "sleeve_merge" / "equity_curve.csv"
+FACTOR_MINE = SCOREBOARD / "factor_mine.json"
 COMBINE_BT = ROOT / "data" / "sleeve_combine" / "bt.json"
 MOVER_STATE = ROOT / "data" / "mover_paper" / "state.json"
 MOVER_CURVE = ROOT / "data" / "mover_paper" / "equity_curve.csv"
@@ -326,6 +327,68 @@ def excel_books() -> list[dict]:
     return rows
 
 
+def factor_mine_books() -> list[dict]:
+    """Research $10k cash sleeves from the leak-free factor mine."""
+    if not FACTOR_MINE.is_file():
+        return []
+    try:
+        doc = json.loads(FACTOR_MINE.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return []
+    dates = doc.get("dates") or []
+    series = doc.get("series") or {}
+    keep = []
+    always = {
+        "flatten_live_h1", "flatten_live_h3", "flatten_live_h5",
+        "flatten_h5", "flatten_h3", "flatten_h1",
+        "union_news_g_h5", "union_e_fresh_h3", "union_e_green_h3",
+    }
+    for s in doc.get("stats") or []:
+        name = s.get("name") or ""
+        if s.get("side") == "short" and not s.get("reliable"):
+            if name not in always:
+                continue
+        if not (s.get("reliable") or name in always):
+            continue
+        keep.append(s)
+    rows = []
+    for s in keep:
+        name = s["name"]
+        curve = []
+        eq = series.get(name) or []
+        start = float(doc.get("capital") or 10_000)
+        for d, v in zip(dates, eq):
+            if v is None:
+                continue
+            curve.append({
+                "date": d, "equity": v,
+                "idx": round(100.0 * float(v) / start, 4),
+            })
+        live_gate = "live" in name
+        rows.append(_row(
+            id=f"fm_{name}",
+            name=name,
+            family="factor mine",
+            pr=127,
+            integrity="fill",
+            ret_pct=s.get("total_ret_pct"),
+            max_dd_pct=s.get("max_dd_pct"),
+            capital=doc.get("capital") or 10_000,
+            trades=s.get("book_n_trades"),
+            hit=s.get("book_win_rate") or s.get("win_rate"),
+            final_equity=s.get("final_equity"),
+            href="../factor-mine/",
+            note=(
+                "LIVE-GATE research: 09:30 tickets only when flatten_robust fires."
+                if live_gate else
+                "Research $10k cash book, 09:30 open, leftover split, fees. Not live."
+            ),
+            live=False,
+            curve=curve if name in ("flatten_h5", "flatten_live_h5") else [],
+        ))
+    return rows
+
+
 def collect() -> list[dict]:
     rows = []
     rows += merge_books()
@@ -334,6 +397,7 @@ def collect() -> list[dict]:
     rows += io_sleeves()
     rows += book_paper()
     rows += excel_books()
+    rows += factor_mine_books()
     # de-dupe by id, keep first (merge/live first)
     seen = set()
     out = []
@@ -448,14 +512,16 @@ svg text{{fill:var(--muted)}}
 <a href="../flatten-lookback/">flatten lookback</a> ·
 <a href="../mover-paper/">mover paper</a> ·
 <a href="../sleeve-combine/">sleeve combine</a> ·
-<a href="../book-paper/">book paper</a>
+<a href="../book-paper/">book paper</a> ·
+<a href="../factor-mine/">factor mine</a>
 </p>
 <p class="muted">Window {WINDOW[0]} → {WINDOW[1]}. Live production book is
 <b>flatten_robust</b> (3d size book + flatten clock; S ≤ −3: no new buys). Returns are
 not interchangeable: <b>fill</b> is one Futubull cash account,
 <b>stitch</b> is a daily-mark overlay, <b>follow_book</b> is the $10k .io
 sleeves, <b>confirm</b> is Excel (not capital), <b>leak</b> is a known
-same-day recycle.</p>
+same-day recycle. <b>factor mine</b> is a $10k research sleeve (09:30 open);
+<code>flatten_h*</code> is the wish-list, <code>flatten_live_*</code> is the gated book.</p>
 <div class="cards">
 <div class="card">Live method<b>flatten_robust</b></div>
 <div class="card">Live return<b>{live_ret}</b></div>

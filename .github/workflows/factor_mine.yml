@@ -1,7 +1,8 @@
 name: Factor strategy mine
 
-# Research miner: leak-free 09:30 factor recipes vs the six
-# effectiveness metrics. Does not change flatten_robust live.
+# Research miner: leak-free 09:30 recipes on a cash-accounted paper book.
+# Dropdowns pick a slice; auto dims + auto-tweak sweep neighbors so a
+# single run explores the nearby grid. Does not change flatten_robust live.
 
 on:
   workflow_dispatch:
@@ -14,6 +15,59 @@ on:
         description: "Last session YYYY-MM-DD (empty = latest tape)"
         required: false
         default: ""
+      universe:
+        description: "Candidate list"
+        type: choice
+        required: true
+        default: auto
+        options: [auto, union, flatten, probable, yday_gainer, ohlc_hot]
+      hold:
+        description: "Hold (sessions). auto = 1/3/5"
+        type: choice
+        required: true
+        default: auto
+        options: [auto, "1", "3", "5"]
+      gate:
+        description: "09:30 gate"
+        type: choice
+        required: true
+        default: auto
+        options: [auto, none, vol_g, news_g, white, coil_off, join_g, last_green, blue, news_present, join_present, ab_g]
+      rank:
+        description: "Ranker"
+        type: choice
+        required: true
+        default: auto
+        options: [auto, none, hot_score, cond, w_hot_cond, w_hot_candle, ret_5, candle_score]
+      side:
+        description: "Side"
+        type: choice
+        required: true
+        default: auto
+        options: [auto, long, short]
+      top_n:
+        description: "Names per day"
+        type: choice
+        required: true
+        default: auto
+        options: [auto, "4", "8", "12"]
+      exit:
+        description: "Early exit"
+        type: choice
+        required: true
+        default: auto
+        options: [auto, none, alarm, last_red, news_bad]
+      entry:
+        description: "Flatten entry. live = only when flatten_robust 09:30 gate fires. list = wish-list (HOLD mornings still buy). auto = both"
+        type: choice
+        required: true
+        default: auto
+        options: [auto, list, live]
+      auto_tweak:
+        description: "Also run nearby holds/gates/ranks (less manual clicking)"
+        required: false
+        default: true
+        type: boolean
       rebuild_panel:
         description: "Rebuild the candidate panel from scratch"
         required: false
@@ -41,28 +95,47 @@ jobs:
         run: pip install pandas pyarrow openpyxl
       - name: Unit tests
         run: python -m src.test_factor_mine
-      - name: Mine recipes
+      - name: Mine recipes (cash book)
         env:
           FROM_DATE: ${{ inputs.from_date }}
           TO_DATE: ${{ inputs.to_date }}
+          UNIVERSE: ${{ inputs.universe }}
+          HOLD: ${{ inputs.hold }}
+          GATE: ${{ inputs.gate }}
+          RANK: ${{ inputs.rank }}
+          SIDE: ${{ inputs.side }}
+          TOP_N: ${{ inputs.top_n }}
+          EXIT: ${{ inputs.exit }}
+          ENTRY: ${{ inputs.entry }}
+          AUTO: ${{ inputs.auto_tweak }}
           REBUILD: ${{ inputs.rebuild_panel }}
         run: |
           set -euo pipefail
-          ARGS=(--from-date "${FROM_DATE:-2026-08-13}" --write)
+          ARGS=(--from-date "${FROM_DATE:-2026-08-13}" --write
+                --universe "${UNIVERSE:-auto}" --hold "${HOLD:-auto}"
+                --gate "${GATE:-auto}" --rank "${RANK:-auto}"
+                --side "${SIDE:-auto}" --top-n "${TOP_N:-auto}"
+                --exit "${EXIT:-auto}" --entry "${ENTRY:-auto}")
           [ -n "${TO_DATE:-}" ] && ARGS+=(--to-date "$TO_DATE")
           [ "${REBUILD:-false}" = "true" ] && ARGS+=(--rebuild-panel)
+          [ "${AUTO:-true}" = "false" ] && ARGS+=(--no-auto-tweak)
           python -m src.factor_mine "${ARGS[@]}"
           test -s 03_scoreboard/FACTOR_MINE.md
+          test -s 03_scoreboard/FACTOR_MINE_ACTION.md
           test -s 03_scoreboard/factor_mine.json
           test -s dashboard/factor-mine/index.html
           grep -q "TODAY_BEGIN" dashboard/sleeve-merge/index.html
           grep -q "flatten_robust" src/sleeve_merge.py
+          grep -q "whole shares" 03_scoreboard/FACTOR_MINE_ACTION.md
       - name: Publish scoreboard to main
         run: |
           bash scripts/safe_git_push.sh \
             "chore: factor strategy mine ${FROM_DATE:-2026-08-13}" \
             03_scoreboard/FACTOR_MINE.md \
+            03_scoreboard/FACTOR_MINE_ACTION.md \
             03_scoreboard/factor_mine.json \
+            03_scoreboard/factor_mine/ \
+            01_daily/factor_mine_action.md \
             data/factor_mine/start_dates.json \
             dashboard/factor-mine/
         env:
@@ -73,17 +146,20 @@ jobs:
           name: factor-mine
           path: |
             03_scoreboard/FACTOR_MINE.md
+            03_scoreboard/FACTOR_MINE_ACTION.md
             03_scoreboard/factor_mine.json
+            03_scoreboard/factor_mine/
             dashboard/factor-mine/index.html
       - name: Add links to run summary
         run: |
           {
             echo "## Factor strategy mine"
             echo
-            echo "- [Markdown](https://github.com/${GITHUB_REPOSITORY}/blob/main/03_scoreboard/FACTOR_MINE.md)"
+            echo "- [Research table](https://github.com/${GITHUB_REPOSITORY}/blob/main/03_scoreboard/FACTOR_MINE.md)"
+            echo "- [Action blotters](https://github.com/${GITHUB_REPOSITORY}/blob/main/03_scoreboard/FACTOR_MINE_ACTION.md)"
             echo "- [Phone page](https://SRoyaltyy.github.io/fullscan/dashboard/factor-mine/)"
             echo
-            head -n 20 03_scoreboard/FACTOR_MINE.md
+            head -n 24 03_scoreboard/FACTOR_MINE.md
           } >> "$GITHUB_STEP_SUMMARY"
       - name: Refresh GitHub Pages
         env:
