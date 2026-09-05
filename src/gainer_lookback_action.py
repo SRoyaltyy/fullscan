@@ -77,6 +77,47 @@ def collect_gainers(from_date: str = START, to_date: str | None = None,
     }
 
 
+def collect_losers(from_date: str = START, to_date: str | None = None,
+                   top_n: int = TOP_N, min_change: float | None = None,
+                   liquid: bool = True) -> dict:
+    """Liquid Finviz top losers (Change% ≤ floor). Outcome universe only."""
+    floor = ga.LOSER_FLOOR if min_change is None else float(min_change)
+    if floor > 0:
+        floor = -abs(floor)
+    idx = tl.build_index()
+    sessions = [
+        s for s in idx["sessions"]
+        if s["date"] >= from_date and (not to_date or s["date"] <= to_date)
+    ]
+    by_date: dict[str, list[dict]] = {}
+    keys: set[tuple[str, str]] = set()
+    names: set[str] = set()
+    for sess in sessions:
+        date = sess["date"]
+        rows = ga.liquid_losers(
+            ga.load_finviz(date), top_n=top_n, min_change=floor,
+            liquid=liquid,
+        )
+        by_date[date] = rows
+        for row in rows:
+            keys.add((date, row["ticker"]))
+            names.add(row["ticker"])
+    return {
+        "from_date": from_date,
+        "to_date": to_date or (sessions[-1]["date"] if sessions else from_date),
+        "top_n": top_n,
+        "min_change": floor,
+        "liquid": liquid,
+        "n_sessions": len(sessions),
+        "n_loser_days": len(keys),
+        "n_tickers": len(names),
+        "by_date": by_date,
+        "keys": keys,
+        "tickers": sorted(names),
+        "session_dates": [s["date"] for s in sessions],
+    }
+
+
 def _fwd(day: dict) -> dict:
     return day.get("price_changes") or day.get("forward_returns") or {}
 

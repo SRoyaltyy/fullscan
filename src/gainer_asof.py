@@ -355,6 +355,21 @@ def liquid_losers(df: pd.DataFrame, top_n: int = TOP_N,
     )
 
 
+def liquid_movers(df: pd.DataFrame, top_n: int = TOP_N,
+                  liquid: bool = True,
+                  min_mcap_m: float | None = None) -> list[dict]:
+    """Liquid names ranked by |Change%| — top movers, both sides."""
+    rows = _liquid_tape(
+        df, top_n=0, min_change=0.0, liquid=liquid,
+        min_mcap_m=min_mcap_m, side="up", skip_change=True,
+    )
+    rows = [r for r in rows if r.get("change_pct") is not None]
+    rows.sort(key=lambda r: abs(float(r["change_pct"])), reverse=True)
+    if top_n and int(top_n) > 0:
+        rows = rows[: int(top_n)]
+    return rows
+
+
 def _era_skip(date: str) -> list[str]:
     skip = []
     for key, feature in {**BOX_ERA, **DOMAIN_ERA}.items():
