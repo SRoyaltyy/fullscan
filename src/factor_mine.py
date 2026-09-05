@@ -338,6 +338,233 @@ def build_recipes() -> list[dict]:
     return recs
 
 
+# Plain-language labels for the 09:30 cameras and gates. These are the
+# *inputs* a recipe may read — never same-day Change% / Gap / RelVol.
+_UNI_KID = {
+    "union": "the mixed morning shopping list (every name that showed up on any 09:30 list that day)",
+    "flatten": "the flatten wish-list (names the flatten board wanted that morning)",
+    "probable": "yesterday's 'likely to keep moving' list",
+    "yday_gainer": "yesterday's top liquid winners",
+    "ohlc_hot": "names that looked hot on the prior price/volume tape",
+}
+_CAM_KID = {
+    "vol": "the volume camera (is this name unusually active?)",
+    "news": "the news camera (does the morning packet like the headline?)",
+    "ab": "the A/B camera (does our A/B score like this name?)",
+    "join": "the join camera (do several factors agree?)",
+    "catal": "the catalyst camera (is there a known event?)",
+    "buy": "the overnight-buy camera",
+    "peer": "the peer camera (are cousins doing the same thing?)",
+    "digest": "the digest camera",
+    "judge": "the judge camera",
+    "sector": "the sector camera",
+    "gen": "the general-condition camera",
+    "heat": "the heat camera",
+}
+_RANK_KID = {
+    "hot_score": "how hot the prior tape looked",
+    "candle_score": "how clean the prior candles looked",
+    "ret_5": "the prior 5-session return (bigger first)",
+    "cond": "how many morning cameras are green vs red",
+    "w_hot_cond": "a mix of tape-heat and green cameras",
+    "w_hot_candle": "a mix of tape-heat and prior candles",
+}
+
+
+def _gate_kid(key: str, val) -> str:
+    if key == "live_entry":
+        return "the live flatten gate must say GO (green morning S, enough priced BUYs, prior book) — io/HOLD mornings sit"
+    if key == "blue":
+        return "the name is painted 🔵 (a turn higher on a still-red row)"
+    if key == "zero_red":
+        return "no morning camera is red (the 'white' / all-clear row)"
+    if key == "alarm":
+        return "the 🚨 alarm is on (cameras got worse overnight)"
+    if key == "last_green":
+        return "the last finished bar was green (closed up)"
+    if key == "last_red":
+        return "the last finished bar was red (closed down)"
+    if key == "candle_capture":
+        return "the prior-candle capture flag is on"
+    if key == "break_10":
+        return "the name broke its prior 10-session range"
+    if key == "earn_react":
+        return "the name is in an earnings-reaction window (just reported, we are trading the reaction — not today's print)"
+    if key == "news_present":
+        return "the news camera printed something (any color, not blank)"
+    if key == "join_present":
+        return "the join camera printed something (any color, not blank)"
+    if key == "catal_present":
+        return "the catalyst camera printed something (any color, not blank)"
+    if key == "ret_5_min":
+        return f"prior 5-session return is at least {float(val):g}%"
+    if key == "ret_5_max":
+        return f"prior 5-session return is at most {float(val):g}% (not already exploded)"
+    if key == "rvol_min":
+        return f"prior relative volume is at least {float(val):g}"
+    if key == "rvol_max":
+        return f"prior relative volume is at most {float(val):g} (not a blow-off)"
+    if key == "days_since_E_max":
+        return f"earnings (E) printed within the last {int(val)} session(s)"
+    if key == "flag_E_min":
+        return "the earnings flag is on"
+    if key == "days_since_R_max":
+        return f"an analyst revision (R) printed within the last {int(val)} session(s)"
+    if key == "flag_R":
+        if int(val) == 1:
+            return "the latest revision flag is an upgrade"
+        if int(val) == -1:
+            return "the latest revision flag is a downgrade"
+        return f"the revision flag equals {val}"
+    if key in _CAM_KID:
+        tone = {True: "green", False: "off", "good": "green", "bad": "red",
+                "neutral": "yellow", "missing": "blank"}.get(val, str(val))
+        return f"{_CAM_KID[key]} is {tone}"
+    return f"{key} = {val}"
+
+
+def explain_recipe(rec: dict) -> dict:
+    """Kid-plain rules for one sleeve: inputs, buy, sell. No black box."""
+    rec = rec or {}
+    uni = rec.get("universe") or "union"
+    hold = int(rec.get("hold") or 1)
+    side = rec.get("side") or "long"
+    top_n = int(rec.get("top_n") or TOP_N_DEFAULT)
+    req = {k: v for k, v in (rec.get("require") or {}).items()
+           if k != "live_entry" or v}
+    forb = dict(rec.get("forbid") or {})
+    live = bool((rec.get("require") or {}).get("live_entry"))
+    rank = rec.get("rank")
+    size = rec.get("size") or "leftover"
+    sell_mode = rec.get("sell") or "list"
+    boost = rec.get("s_boost") or "none"
+    exit_when = rec.get("exit_when") or {}
+    short = side == "short"
+
+    inputs = [
+        f"Shopping list: {_UNI_KID.get(uni, uni)}.",
+        "Clock: 09:30 ET only. The sleeve never peeks at today's Change%, Gap, RelVol, or the printed book to decide.",
+        "News, if used, is the morning packet box or yesterday's headline — never a later scrape.",
+        "Money: leftover cash from yesterday + the lots we already hold. It can only spend cash it has and only sell shares it holds.",
+        "Fill price: the 09:30 open, whole shares, Futubull fees.",
+        "Morning weather S: if S ≤ −3 the sleeve sits (no new buys).",
+    ]
+    if live:
+        inputs.append(
+            "Live flatten gate: new buys only when flatten_robust would actually send 09:30 tickets."
+        )
+    if rank:
+        inputs.append(f"Sort: {_RANK_KID.get(rank, rank)}.")
+    for k, v in req.items():
+        if k == "live_entry":
+            continue
+        inputs.append(f"Must-have: {_gate_kid(k, v)}.")
+    for k, v in forb.items():
+        inputs.append(f"Must-not: {_gate_kid(k, v)}.")
+
+    buy = [
+        f"At 09:30, take names on {_UNI_KID.get(uni, uni)} that pass the must-haves.",
+    ]
+    if live:
+        buy.append(
+            "If the live flatten gate is HOLD / io that morning, buy nobody new."
+        )
+    buy.append("If morning S ≤ −3, buy nobody new (hard-red sit).")
+    if req:
+        buy.append("A name is allowed only when every must-have is true.")
+    if forb:
+        buy.append("A name is thrown out if any must-not is true.")
+    if rank:
+        buy.append(
+            f"Sort the keepers by {_RANK_KID.get(rank, rank)} and keep the top {top_n}."
+        )
+    else:
+        buy.append(f"Keep the first {top_n} names in list order.")
+    if size == "rank_w":
+        buy.append("Split leftover cash by rank (first name gets the biggest slice).")
+    elif size == "topheavy":
+        buy.append("Give about 40% of leftover cash to the first name; split the rest.")
+    elif size == "half":
+        buy.append("Only spend half of leftover cash; the rest stays cash.")
+    else:
+        buy.append("Split leftover cash equally across *new* names (not ones we already hold).")
+    buy.append("Skip a name if the slice cannot buy 1 share after fees.")
+    if boost == "sizeup":
+        buy.append("On a strong morning (S ≥ +5), spend 1.35× leftover — still capped by cash.")
+    elif boost == "more_names":
+        buy.append(f"On a strong morning (S ≥ +5), raise the name cap by 4 (still cash-capped).")
+    elif boost == "both":
+        buy.append(
+            "On a strong morning (S ≥ +5), spend 1.35× leftover and add 4 extra names — still cash-capped."
+        )
+    if short:
+        buy.append(
+            "This is a SHORT sleeve: it borrows the name and profits if the price falls. "
+            "Equity treats the short as a liability (must keep enough to cover)."
+        )
+    else:
+        buy.append("This is a LONG sleeve: it buys shares and wants the price to go up.")
+
+    sell_bits = [
+        "Sell first, then buy. Never sell a ticker we do not hold.",
+        f"Minimum hold is {hold} session(s) — the buy morning counts as 1.",
+    ]
+    if exit_when.get("alarm"):
+        sell_bits.append("Early exit: sell at the next 09:30 if 🚨 prints, even inside the minimum hold.")
+    if exit_when.get("last_red"):
+        sell_bits.append("Early exit: sell at the next 09:30 if the last bar flipped red, even inside the floor.")
+    if exit_when.get("news") == "bad":
+        sell_bits.append("Early exit: sell at the next 09:30 if the news camera turns red, even inside the floor.")
+    if not exit_when:
+        sell_bits.append("No extra panic button — only the hold timer and the sell rule below.")
+    if sell_mode == "time":
+        sell_bits.append(
+            f"Time-stop: once {hold} session(s) are up, sell at 09:30 even if the name is still on the list."
+        )
+    elif sell_mode == "cut_loser":
+        sell_bits.append(
+            f"After {hold} session(s), sell if the 09:30 open is 3% worse than entry. "
+            "Otherwise sell when the name drops off the list."
+        )
+    elif sell_mode == "trail":
+        sell_bits.append(
+            f"After {hold} session(s), sell if the 09:30 open is 5% off the best price since entry. "
+            "Otherwise sell when the name drops off the list."
+        )
+    else:
+        sell_bits.append(
+            f"List-drop: after {hold} session(s), sell at the 09:30 open if the name is no longer on today's list. "
+            "If it fell off earlier, we still wait out the minimum hold."
+        )
+    sell_bits.append("Fills are at the 09:30 open. Fees come out of cash. Overnight, cash does not change.")
+
+    verb = "short" if short else "buy"
+    kid = (
+        f"Imagine a kid with $10,000 at the 09:30 school bell. "
+        f"They look at {_UNI_KID.get(uni, uni)} and only {verb} names that pass "
+        f"{'every must-have on the checklist' if req else 'the list as written'}"
+        f"{' and skip anything on the must-not list' if forb else ''}. "
+        f"They take up to {top_n} names, spend leftover cash on whole shares, "
+        f"and hold at least {hold} morning(s). "
+        f"{'They sell when the timer rings.' if sell_mode == 'time' else 'They sell when the name falls off the list (after the timer).'} "
+        f"They never peek at today's report card (Change%) to pick. "
+        f"{'This sleeve bets the price will fall.' if short else 'This sleeve bets the price will rise.'}"
+    )
+    return {
+        "kid": kid,
+        "inputs": inputs,
+        "buy": buy,
+        "sell": sell_bits,
+        "universe": uni,
+        "hold": hold,
+        "side": side,
+        "top_n": top_n,
+        "size": size,
+        "sell_rule": sell_mode,
+        "s_boost": boost,
+    }
+
+
 def _tone(boxes: dict | None, key: str) -> str:
     return str((boxes or {}).get(key) or "missing").lower()
 
@@ -1010,8 +1237,24 @@ def run(from_date: str = START, to_date: str | None = None,
         "recipes": recipes,
         "panel_n": panel.get("n_rows"),
     }
+    stamp_explains(payload)
     if write:
         write_outputs(payload, stats, books=books)
+    return payload
+
+
+def stamp_explains(payload: dict) -> dict:
+    """Attach kid-plain inputs / buy / sell to every recipe and stat.
+
+    Safe to run on an already-mined payload — does not resimulate books.
+    """
+    recs = list(payload.get("recipes") or [])
+    rec_by = {r.get("name"): r for r in recs}
+    for rec in recs:
+        rec["explain"] = explain_recipe(rec)
+    for s in payload.get("stats") or []:
+        s["explain"] = explain_recipe(rec_by.get(s.get("name")) or s)
+    payload["recipes"] = recs
     return payload
 
 

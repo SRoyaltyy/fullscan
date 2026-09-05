@@ -1175,6 +1175,29 @@ def _gate_label(rec: dict) -> str:
     return ",".join(f"{k}={v}" for k, v in shown.items())
 
 
+def _explain_md(rec: dict) -> list[str]:
+    """Kid-plain inputs / buy / sell for the Action blotter."""
+    ex = rec.get("explain") or fm.explain_recipe(rec)
+    lines = [
+        "## How this sleeve decides (like you are 10)",
+        "",
+        ex.get("kid") or "",
+        "",
+        "### What it looks at (inputs)",
+        "",
+    ]
+    for x in ex.get("inputs") or []:
+        lines.append(f"- {x}")
+    lines += ["", "### When it buys", ""]
+    for x in ex.get("buy") or []:
+        lines.append(f"- {x}")
+    lines += ["", "### When it sells", ""]
+    for x in ex.get("sell") or []:
+        lines.append(f"- {x}")
+    lines += [""]
+    return lines
+
+
 def render_recipe_md(rec: dict, stats: dict, book: dict) -> str:
     live_gate = bool((rec.get("require") or {}).get("live_entry"))
     wish = rec.get("universe") == "flatten" and not live_gate
@@ -1214,6 +1237,9 @@ def render_recipe_md(rec: dict, stats: dict, book: dict) -> str:
         f"Fills {book.get('n_trades')} · skips {book.get('n_skips')} · "
         f"realized ${book.get('realized'):+.2f}.",
         "",
+    ]
+    lines += _explain_md(rec)
+    lines += [
         "## Why these stocks",
         "",
         "Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): "
