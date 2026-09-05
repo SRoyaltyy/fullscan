@@ -54,6 +54,10 @@ START = book_era.DASHBOARD_START
 LOSER_CUT = -1.5
 TOP_N_DEFAULT = 8
 CAPITAL = 10_000.0
+MIN_GRADED = 20
+MIN_STARTS = 8
+MIN_DAYS = 5
+POTHOLE_CUT = 30.0  # one session's mean % that dominates the path
 NEWS_POS = (
     "beat", "upgrade", "approv", "record high", "surge", "wins ",
     "raises", "buyback", "phase 3", "fda", "breakthrough",
@@ -732,6 +736,16 @@ def score_recipe(panel: dict, rec: dict, tapes: dict,
         })
     n_green = sum(1 for s in starts if s["made_money"])
     start_rate = None if not starts else round(n_green / len(starts), 4)
+    start_rets = [s["return_pct"] for s in starts]
+    median_start = None
+    if start_rets:
+        mid = sorted(start_rets)[len(start_rets) // 2]
+        median_start = round(float(mid), 3)
+    scored_means = [d["mean"] for d in daily if d["mean"] is not None]
+    pothole_pct = max(scored_means) if scored_means else None
+    pothole_date = None
+    if scored_means:
+        pothole_date = next(d["date"] for d in daily if d["mean"] == pothole_pct)
     gainer_hits = sum(1 for p in picks if p["gainer"])
     loser_hits = sum(1 for p in picks if p["loser"])
     n_picks = len(picks)
@@ -745,11 +759,16 @@ def score_recipe(panel: dict, rec: dict, tapes: dict,
     payoff = None
     if avg_win and avg_loss:
         payoff = round(abs(avg_win / avg_loss), 3)
+    reliable = (
+        len(graded) >= MIN_GRADED
+        and len(starts) >= MIN_STARTS
+        and len(days_scored) >= MIN_DAYS
+    )
     effectiveness = _effectiveness(
         win_rate, profitable_days, start_rate,
         (gainer_hits / n_picks) if n_picks else None,
         (loser_hits / n_picks) if n_picks else None,
-        payoff, total_ret,
+        payoff, total_ret, median_start, pothole_pct, reliable,
     )
     return {
         "name": rec["name"],
@@ -780,6 +799,10 @@ def score_recipe(panel: dict, rec: dict, tapes: dict,
         "start_n": len(starts),
         "start_green": n_green,
         "start_rate": start_rate,
+        "median_start_pct": median_start,
+        "pothole_date": pothole_date,
+        "pothole_pct": None if pothole_pct is None else round(float(pothole_pct), 3),
+        "reliable": reliable,
         "total_ret_pct": total_ret,
         "final_equity": equity[-1] if equity else CAPITAL,
         "effectiveness": effectiveness,
@@ -790,18 +813,28 @@ def score_recipe(panel: dict, rec: dict, tapes: dict,
 
 
 def _effectiveness(win_rate, day_rate, start_rate, gainer_rate,
-                   loser_rate, payoff, total_ret) -> float:
+                   loser_rate, payoff, total_ret, median_start=None,
+                   pothole_pct=None, reliable=True) -> float:
     def n(v, default=0.0):
         return default if v is None else float(v)
+    # Cap the one-day jackpot so an 8-13 / 8-19 rip cannot dominate.
+    capped_tot = min(max(n(total_ret), -40.0), 40.0)
+    pothole_pen = 0.0
+    if pothole_pct is not None and float(pothole_pct) >= POTHOLE_CUT:
+        pothole_pen = min(25.0, float(pothole_pct) / 8.0)
     score = (
         40 * n(win_rate)
         + 20 * n(day_rate)
         + 25 * n(start_rate)
+        + 10 * (1.0 if n(median_start) > 0 else 0.0)
         + 15 * n(gainer_rate)
         - 20 * n(loser_rate)
         + 5 * min(n(payoff, 1.0), 3.0)
-        + 0.15 * n(total_ret)
+        + 0.15 * capped_tot
+        - pothole_pen
     )
+    if not reliable:
+        score -= 20.0
     return round(score, 3)
 
 
@@ -820,7 +853,11 @@ def run(from_date: str = START, to_date: str | None = None,
     cal = list(panel.get("session_dates") or [])
     tapes = _tapes(cal)
     stats = [score_recipe(panel, rec, tapes) for rec in recipes]
-    stats.sort(key=lambda r: (-(r.get("effectiveness") or -999), r["name"]))
+    stats.sort(key=lambda r: (
+        0 if r.get("reliable") else 1,
+        -(r.get("effectiveness") or -999),
+        r["name"],
+    ))
     dates = cal
     series = {}
     for s in stats:
@@ -881,16 +918,19 @@ def write_outputs(payload: dict, stats: list[dict] | None = None) -> None:
         "Research only — does not change live `flatten_robust`.",
         "",
         "| Strategy | Side | H | Win% | $ days | Starts YES | "
-        "Top-g | Losers | Avg win | Avg loss | Tot% | Eff |",
-        "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
+        "Med start | Top-g | Losers | Avg win | Avg loss | Pothole | Tot% | Eff |",
+        "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for s in (stats or []):
         lines.append(
-            f"| `{s['name']}` | {s['side']} | {s['hold']} | "
+            f"| `{s['name']}`{' *(thin)*' if not s.get('reliable') else ''} | "
+            f"{s['side']} | {s['hold']} | "
             f"{_pct(s.get('win_rate'))} | {_pct(s.get('profitable_day_rate'))} | "
             f"{s.get('start_green') or 0}/{s.get('start_n') or 0} | "
+            f"{_n(s.get('median_start_pct'))} | "
             f"{s.get('gainer_hits') or 0} | {s.get('loser_hits') or 0} | "
             f"{_n(s.get('avg_win_pct'))} | {_n(s.get('avg_loss_pct'))} | "
+            f"{s.get('pothole_date') or '—'} {_n(s.get('pothole_pct'))} | "
             f"{_n(s.get('total_ret_pct'))} | {s.get('effectiveness')} |"
         )
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")

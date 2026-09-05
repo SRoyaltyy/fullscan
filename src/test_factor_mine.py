@@ -180,6 +180,9 @@ def test_score_recipe_six_metrics_and_start_dates() -> None:
     assert stats["start_rate"] is not None
     assert len(stats["equity"]) == 5  # t0 + 4 days
     assert stats["effectiveness"] is not None
+    assert "reliable" in stats
+    assert "pothole_pct" in stats
+    assert "median_start_pct" in stats
 
 
 def test_short_flips_sign_and_early_exit_uses_open() -> None:
@@ -213,6 +216,17 @@ def test_short_flips_sign_and_early_exit_uses_open() -> None:
         "CCC", "2026-08-17", 3, cal, "short", {}, idx, bars=bars,
     )
     assert ret3 == round(-100.0 * (80 / 100 - 1.0), 4)
+
+
+def test_pothole_and_thin_sample_are_downranked() -> None:
+    jackpot = fm._effectiveness(
+        0.55, 0.5, 0.76, 0.1, 0.7, 3.0, 154.0, 3.0, 158.0, True)
+    steady = fm._effectiveness(
+        0.62, 0.80, 1.0, 0.05, 0.38, 2.0, 43.0, 16.0, 6.0, True)
+    thin = fm._effectiveness(
+        0.50, 1.0, 1.0, 0.0, 0.1, 2.0, 3.0, 3.0, 5.0, False)
+    assert jackpot < steady
+    assert thin < steady
 
 
 def test_recipes_cover_holds_shorts_and_exits() -> None:
@@ -258,6 +272,7 @@ def test_write_outputs_injects_payload(tmp_path=None) -> None:
     assert "gainer_hits" in payload["stats"][0]
     assert "loser_hits" in payload["stats"][0]
     assert "avg_win_pct" in payload["stats"][0]
+    assert payload["stats"][0]["reliable"] is False  # empty book is thin
 
 
 if __name__ == "__main__":
@@ -270,7 +285,8 @@ if __name__ == "__main__":
     test_ohlc_and_candles_are_strictly_prior()
     test_score_recipe_six_metrics_and_start_dates()
     test_short_flips_sign_and_early_exit_uses_open()
+    test_pothole_and_thin_sample_are_downranked()
     test_recipes_cover_holds_shorts_and_exits()
     test_template_has_data_slot()
     test_write_outputs_injects_payload()
-    print("12 factor-mine tests passed")
+    print("13 factor-mine tests passed")

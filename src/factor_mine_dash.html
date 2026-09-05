@@ -107,13 +107,17 @@ function statsList(){
 }
 function names(){ return statsList().map(s=>s.name); }
 
+function reliableList(list){
+  const rel = list.filter(s=>s.reliable!==false && (s.n_graded||0)>=20);
+  return rel.length ? rel : list;
+}
 function pickBest(list, key, pred){
-  const rows = list.filter(s=>s[key]!=null && (!pred || pred(s)));
+  const rows = reliableList(list).filter(s=>s[key]!=null && (!pred || pred(s)));
   if(!rows.length) return null;
   return rows.slice().sort((a,b)=>Number(b[key])-Number(a[key]))[0];
 }
 function pickWorst(list, key){
-  const rows = list.filter(s=>s[key]!=null);
+  const rows = reliableList(list).filter(s=>s[key]!=null);
   if(!rows.length) return null;
   return rows.slice().sort((a,b)=>Number(a[key])-Number(b[key]))[0];
 }
@@ -229,19 +233,20 @@ function renderTable(){
   let list=statsList();
   if(q) list=list.filter(s=>s.name.toLowerCase().includes(q) || (s.note||'').toLowerCase().includes(q));
   if(sleeveFilter!=='all') list=list.filter(s=>s.name===sleeveFilter);
-  const head='<tr><th class="tick">Strategy</th><th>Side</th><th>H</th><th>Win%</th><th>$ days</th><th>Starts YES</th><th>Top-g</th><th>Losers</th><th>Avg win</th><th>Avg loss</th><th>Payoff</th><th>Tot%</th><th>Eff</th></tr>';
+  const head='<tr><th class="tick">Strategy</th><th>Side</th><th>H</th><th>Win%</th><th>$ days</th><th>Starts YES</th><th>Med start</th><th>Top-g</th><th>Losers</th><th>Avg win</th><th>Avg loss</th><th>Pothole</th><th>Tot%</th><th>Eff</th></tr>';
   const body=list.map(s=>`<tr>
-    <td class="tick">${esc(s.name)}</td>
+    <td class="tick">${esc(s.name)}${s.reliable===false?' <span class="mut">thin</span>':''}</td>
     <td>${esc(s.side)}</td>
     <td>${s.hold}</td>
     <td class="${cls(s.win_rate)}">${pct(s.win_rate)}</td>
     <td class="${cls(s.profitable_day_rate)}">${pct(s.profitable_day_rate)}</td>
     <td class="${cls(s.start_rate)}">${s.start_green||0}/${s.start_n||0}</td>
+    <td class="${cls(s.median_start_pct)}">${num(s.median_start_pct,1)}</td>
     <td>${s.gainer_hits||0} <span class="mut">${pct(s.gainer_rate)}</span></td>
     <td class="${(s.loser_rate||0)>0.2?'neg':''}">${s.loser_hits||0} <span class="mut">${pct(s.loser_rate)}</span></td>
     <td class="pos">${num(s.avg_win_pct)}</td>
     <td class="neg">${num(s.avg_loss_pct)}</td>
-    <td>${s.payoff==null?'—':Number(s.payoff).toFixed(2)}</td>
+    <td class="${(s.pothole_pct||0)>=30?'neg':'mut'}">${s.pothole_date?esc(String(s.pothole_date).slice(5))+' '+num(s.pothole_pct,1):'—'}</td>
     <td class="${cls(s.total_ret_pct)}">${num(s.total_ret_pct)}</td>
     <td class="gold">${s.effectiveness==null?'—':Number(s.effectiveness).toFixed(1)}</td>
   </tr>`).join('');
