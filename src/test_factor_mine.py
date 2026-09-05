@@ -456,6 +456,9 @@ def test_template_has_data_slot() -> None:
     assert "buy-banner" in text
     assert "Morning board" in text
     assert "FMSim" in text or "__SIM_JS__" in text
+    assert "syncProbeTickToBuys" in text
+    assert "probeTickers" in text
+    assert "This 09:30" in text
 
 
 def test_write_outputs_injects_payload(tmp_path=None) -> None:

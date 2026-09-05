@@ -471,6 +471,36 @@ function boughtTickers(name){
   extra.sort();
   return canon.concat(extra);
 }
+function probeTickers(name, date){
+  const looks=[], fills=[];
+  const seen=new Set();
+  for(const r of lookRows(date)){
+    if(r.ticker && !seen.has(r.ticker)){ seen.add(r.ticker); looks.push(r.ticker); }
+  }
+  for(const t of boughtTickers(name)){
+    if(t && !seen.has(t)){ seen.add(t); fills.push(t); }
+  }
+  return {looks, fills, all: looks.concat(fills)};
+}
+function tickOptions(groups, cur){
+  const opt=t=>`<option ${t===cur?'selected':''}>${esc(t)}</option>`;
+  let html='';
+  if(groups.looks.length) html+=`<optgroup label="This 09:30">${groups.looks.map(opt).join('')}</optgroup>`;
+  if(groups.fills.length) html+=`<optgroup label="Sleeve fills">${groups.fills.map(opt).join('')}</optgroup>`;
+  return html || '<option value="">(no names)</option>';
+}
+function syncProbeTickToBuys(date){
+  const looks=lookRows(date);
+  const buys=looks.filter(r=>r.buy).map(r=>r.ticker);
+  if(probeTick && buys.includes(probeTick)) return;
+  if(buys.length){ probeTick=buys[0]; return; }
+  if(looks.length){
+    if(!looks.some(r=>r.ticker===probeTick)) probeTick=looks[0].ticker;
+    return;
+  }
+  const ticks=boughtTickers(pickedName());
+  if(ticks.length && !ticks.includes(probeTick)) probeTick=ticks[0];
+}
 function toneOf(v){
   const t=String(v||'missing').toLowerCase();
   return ['good','bad','neutral','missing'].includes(t)?t:'missing';
@@ -538,23 +568,26 @@ function renderTools(){
   const rows=startRows();
   if(startIdx>=rows.length) startIdx=0;
   const sp=startPath();
-  const ticks=boughtTickers(name);
-  if(ticks.length && !ticks.includes(probeTick)) probeTick=ticks[0];
   if(probeIdx>=ds.length) probeIdx=0;
   const startDate=sp?sp.start:(ds[startIdx]||'');
   const probeDate=ds[probeIdx]||'';
+  const groups=probeTickers(name, probeDate);
+  if(groups.all.length && !groups.all.includes(probeTick)){
+    const firstBuy=(lookRows(probeDate).find(r=>r.buy)||{}).ticker;
+    probeTick=firstBuy || groups.all[0];
+  }
   box.innerHTML = `
     <div class="tool">
       <h2>Cash-start date</h2>
-      <p class="mut">Wake the sleeve on this morning with $10k cash and no lots. Same rules: hard-red sit, leftover split, min-hold, 09:30 open. Marks and the blotter match the 8-13 ledger. Investigator date follows these buttons.</p>
+      <p class="mut">Wake the sleeve on this morning with $10k cash and no lots. Same rules: hard-red sit, leftover split, min-hold, 09:30 open. Marks and the blotter match the 8-13 ledger. These buttons also move the investigator date and pick the first BUY that morning.</p>
       ${navButtons('start', startDate)}
       <div id="startLabel">${sp&&sp.hard_red?'<span class="neg">hard-red sit</span>':'cash $10,000'}</div>
       <div id="cashStart"></div>
     </div>
     <div class="tool">
       <h2>Stock investigator</h2>
-      <p class="mut">One name the sleeve bought, one 09:30. Cameras and coaches are what the repo files printed that morning — not today's Change%.</p>
-      <select id="probeTick" aria-label="Ticker">${ticks.map(t=>`<option ${t===probeTick?'selected':''}>${esc(t)}</option>`).join('')||'<option value="">(no fills)</option>'}</select>
+      <p class="mut">One name, one 09:30. The huge badge is whether this recipe would buy it that morning. Horizon % is hold-H from the 09:30 open. Cameras and coaches are repo files — not today's Change%.</p>
+      <select id="probeTick" aria-label="Ticker">${tickOptions(groups, probeTick)}</select>
       ${navButtons('probe', probeDate)}
       <div><b>${esc(probeTick||'—')}</b> · ${esc(probeDate)} 09:30 ET</div>
       <div id="probeOut"></div>
@@ -569,6 +602,7 @@ function renderTools(){
       startIdx=stepDate(b.dataset.step, startIdx, Math.max(0,ds.length-1));
       probeIdx=startIdx;
       _simKey=''; _simBook=null;
+      syncProbeTickToBuys(ds[probeIdx]);
       renderAll();
     };
   });
@@ -926,7 +960,7 @@ function renderStarts(){
     el.onclick=()=>{
       const ds=D.dates||[];
       const i=ds.indexOf(el.dataset.start);
-      if(i>=0){ startIdx=i; probeIdx=i; _simKey=''; _simBook=null; renderAll(); }
+      if(i>=0){ startIdx=i; probeIdx=i; _simKey=''; _simBook=null; syncProbeTickToBuys(ds[i]); renderAll(); }
     };
   });
 }
