@@ -50,6 +50,7 @@ OUT_START = ROOT / "data" / "factor_mine" / "start_dates.json"
 PANEL_PATH = ROOT / "data" / "factor_mine" / "panel.json"
 DASH_DIR = ROOT / "dashboard" / "factor-mine"
 TEMPLATE = Path(__file__).with_name("factor_mine_dash.html")
+SIM_JS = Path(__file__).with_name("factor_mine_sim.js")
 START = book_era.DASHBOARD_START
 LOSER_CUT = -1.5
 TOP_N_DEFAULT = 8
@@ -1239,10 +1240,12 @@ def run(from_date: str = START, to_date: str | None = None,
     }
     stamp_explains(payload)
     from . import factor_mine_probe as fmp
+    from . import factor_mine_sim as fms
     bought = _bought_tickers(books, {s["name"]: s.get("starts") for s in stats})
     payload["probe"] = fmp.slim_probe(fmp.build_probe(panel), bought)
     payload["mornings"] = fmp.build_mornings()
     payload.update(fmp.probe_meta())
+    payload["sim"] = fms.build_sim_pack(panel)
     if write:
         write_outputs(payload, stats, books=books)
     return payload
@@ -1290,6 +1293,19 @@ def stamp_starts_and_probe(payload: dict, panel: dict | None = None,
     payload["probe"] = fmp.slim_probe(fmp.build_probe(panel), bought)
     payload["mornings"] = fmp.build_mornings()
     payload.update(fmp.probe_meta())
+    from . import factor_mine_sim as fms
+    payload["sim"] = fms.build_sim_pack(panel)
+    return payload
+
+
+def stamp_sim(payload: dict, panel: dict | None = None) -> dict:
+    """Attach the compact replay pack. Does not remine books or starts."""
+    from . import factor_mine_sim as fms
+    panel = panel if panel is not None else load_or_build_panel(
+        payload.get("from_date") or START,
+        payload.get("to_date"),
+    )
+    payload["sim"] = fms.build_sim_pack(rehydrate_panel(panel))
     return payload
 
 
@@ -1436,8 +1452,10 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
         )
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
     if TEMPLATE.is_file():
-        html = TEMPLATE.read_text(encoding="utf-8").replace(
-            "__DATA__", json.dumps(payload, separators=(",", ":")))
+        html = TEMPLATE.read_text(encoding="utf-8")
+        if SIM_JS.is_file() and "__SIM_JS__" in html:
+            html = html.replace("__SIM_JS__", SIM_JS.read_text(encoding="utf-8"))
+        html = html.replace("__DATA__", json.dumps(payload, separators=(",", ":")))
         (DASH_DIR / "index.html").write_text(html, encoding="utf-8")
     if books:
         from . import factor_mine_book as fmb
