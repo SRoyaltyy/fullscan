@@ -425,7 +425,9 @@ def test_template_has_data_slot() -> None:
     assert "Win%" in text
     assert "Starts YES" in text
     assert "Blotter" in text
-    assert "Open cash" in text
+    assert "09:30" in text
+    assert "vs yday" in text
+    assert "after sell" in text
     assert "Audit" in text or "audit" in text
     assert "AvgW" in text
     assert "Equity" in text
@@ -489,11 +491,52 @@ def test_dash_payload_ships_every_book_and_features_high_return() -> None:
         book=True, bars=bars,
     )
     assert set(payload["books"]) == {"high_ret_h1", "also_h1"}
-    t0 = (payload["books"]["high_ret_h1"].get("trades") or [None])[0]
-    assert t0 and t0.get("equity_after") is not None
+    trades = payload["books"]["high_ret_h1"].get("trades") or []
+    assert any(t["side"] == "OPEN" for t in trades)
+    t0 = next(t for t in trades if t["side"] == "BUY")
+    assert t0.get("equity_after") is not None
     assert "cameras" not in t0
     assert "daily" not in payload["books"]["high_ret_h1"]
     assert payload["daily"]["high_ret_h1"]
+    d0 = payload["daily"]["high_ret_h1"][0]
+    assert "overnight_delta" in d0
+    assert "open_equity" in d0
+
+
+def test_day_open_explains_overnight_mark() -> None:
+    from src import factor_mine_book as fmb
+    from src import paper_trade as pt
+    cal = ["2026-08-17", "2026-08-18", "2026-08-19"]
+    rows = [_row(d, "AAA") for d in cal]
+    bars = {
+        ("AAA", "2026-08-17"): {"open": 10, "close": 12},
+        ("AAA", "2026-08-18"): {"open": 13, "close": 13},
+        ("AAA", "2026-08-19"): {"open": 13, "close": 13},
+    }
+    rec = fm.make_recipe("union_h3", hold=3, top_n=1)
+    book = fmb.simulate_book(
+        _panel(cal, rows), rec, bars=bars, fees=pt.load_fees(), regime={})
+    opens = [t for t in book["trades"] if t["side"] == "OPEN"]
+    assert len(opens) == 3
+    assert opens[0]["overnight_delta"] == 0
+    assert opens[0]["cash_after"] == 10_000
+    assert opens[0]["open_held"] == []
+    buy = next(t for t in book["trades"] if t["side"] == "BUY")
+    d0 = book["daily"][0]
+    o2 = opens[1]
+    assert o2["cash_after"] == d0["cash"]
+    expect = round(buy["shares"] * (13.0 - 12.0), 2)
+    assert abs(o2["overnight_delta"] - expect) < 0.05
+    names = {n["ticker"]: n for n in (o2.get("overnight") or [])}
+    assert "AAA" in names
+    assert names["AAA"]["yday_px"] == 12
+    assert names["AAA"]["open_px"] == 13
+    assert "yday $12.00 → 09:30 $13.00" in (o2.get("reason") or "")
+    assert "no fees" in (o2.get("reason") or "")
+    assert not any(t["side"] == "SELL" for t in book["trades"])
+    assert book["audit"]["ok"] is True
+    # Buys do not carry a vs-yday equity label; sells would.
+    assert buy.get("vs_yday") is None
 
 
 def _panel(cal, rows, extra=None):
@@ -689,4 +732,5 @@ if __name__ == "__main__":
     test_sboost_more_names_on_good_s_still_cash_capped()
     test_action_filters_size_sell_boost()
     test_dash_payload_ships_every_book_and_features_high_return()
-    print("26 factor-mine tests passed")
+    test_day_open_explains_overnight_mark()
+    print("27 factor-mine tests passed")

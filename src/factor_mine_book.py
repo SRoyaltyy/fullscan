@@ -219,6 +219,58 @@ def _stamp_equity(rec_t: dict, cash: float, pos: dict, date: str,
     rec_t["stock_after"] = round(stock, 2)
 
 
+def _overnight_marks(pos: dict, date: str, bars, side: str,
+                     yday_equity: float, open_cash: float) -> dict:
+    """09:30 snapshot vs yesterday's close. Cash does not change overnight."""
+    names = []
+    open_stock = 0.0
+    bits = []
+    for t, lot in pos.items():
+        shares = int(lot["shares"])
+        yday_px = float(lot.get("close_px") or lot.get("last_px") or lot["entry_px"])
+        opx = _px(t, date, "open", bars)
+        if opx is None:
+            opx = yday_px
+        opx = float(opx)
+        if side == "long":
+            dlt = shares * (opx - yday_px)
+            open_stock += shares * opx
+        else:
+            dlt = shares * (yday_px - opx)
+            open_stock -= shares * opx
+        names.append({
+            "ticker": t, "shares": shares,
+            "yday_px": round(yday_px, 4), "open_px": round(opx, 4),
+            "delta": round(dlt, 2),
+        })
+        bits.append(
+            f"{t}×{shares} yday ${yday_px:.2f} → 09:30 ${opx:.2f} {dlt:+.2f}"
+        )
+    open_eq = float(open_cash) + open_stock
+    overnight_delta = open_eq - float(yday_equity)
+    if not names:
+        why = (
+            f"09:30 open · cash ${open_cash:,.2f} · no holdings · "
+            f"equity ${open_eq:,.2f} vs prior close ${float(yday_equity):,.2f} "
+            f"({overnight_delta:+.2f}). Cash unchanged overnight; no fees."
+        )
+    else:
+        why = (
+            f"09:30 open · cash ${open_cash:,.2f} (unchanged overnight, no fees) · "
+            f"equity ${open_eq:,.2f} vs prior close ${float(yday_equity):,.2f} "
+            f"({overnight_delta:+.2f}) because holdings re-marked: "
+            + "; ".join(bits)
+        )
+    return {
+        "open_stock": round(open_stock, 2),
+        "open_equity": round(open_eq, 2),
+        "yday_equity": round(float(yday_equity), 2),
+        "overnight_delta": round(overnight_delta, 2),
+        "overnight": names,
+        "overnight_why": why,
+    }
+
+
 def _lots_snap(pos: dict) -> list[dict]:
     return [
         {"ticker": t, "shares": int(p["shares"]),
@@ -247,6 +299,8 @@ def audit_book(book: dict, *, capital: float | None = None,
         fee = float(t.get("fees") or 0)
         date = t.get("date")
         kind = t.get("side")
+        if kind == "OPEN":
+            continue
         if shares < 1 or not ticker:
             fails.append(f"{date} empty fill {kind} {ticker}")
             continue
@@ -420,6 +474,7 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
     size_mode = rec.get("size") or "leftover"
     sell_mode = rec.get("sell") or "list"
     s_boost = rec.get("s_boost") or "none"
+    yday_equity = float(rules["capital"])
 
     def mark(date: str, which: str) -> float:
         tot = 0.0
@@ -445,6 +500,21 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
         day_why = []
         open_cash = cash
         open_lots = _lots_snap(pos)
+        ov = _overnight_marks(pos, date, bars, side, yday_equity, open_cash)
+        trades.append({
+            "date": date, "ticker": "", "side": "OPEN",
+            "shares": 0, "price": None, "fees": 0, "pnl": None,
+            "cash_after": round(open_cash, 2),
+            "equity_after": ov["open_equity"],
+            "equity_delta": ov["overnight_delta"],
+            "overnight_delta": ov["overnight_delta"],
+            "stock_after": ov["open_stock"],
+            "yday_equity": ov["yday_equity"],
+            "open_held": [f"{p['ticker']}×{p['shares']}" for p in open_lots],
+            "overnight": ov["overnight"],
+            "reason": ov["overnight_why"],
+            "held": 0, "cameras": "",
+        })
         if good_s and s_boost in ("more_names", "both"):
             day_why.append(f"S={s:+.2f} more_names top_n={rec_day['top_n']}")
         if good_s and s_boost in ("sizeup", "both"):
@@ -481,6 +551,7 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                 continue
             reason = why_sell(t, held, min_hold, early,
                               rec.get("exit_when"), dropped, kind)
+            eq_before = cash + mark(date, "open")
             fee = pt.order_fees(lot["shares"], px, "sell" if side == "long" else "buy", fees)
             if side == "long":
                 proceeds = lot["shares"] * px - fee
@@ -501,6 +572,9 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                 "cameras": camera_stamp(row.get("boxes")),
             }
             _stamp_equity(rec_t, cash, pos, date, bars, side, rules)
+            rec_t["equity_before"] = round(eq_before, 2)
+            rec_t["sell_eq_chg"] = round(rec_t["equity_after"] - eq_before, 2)
+            rec_t["vs_yday"] = round(rec_t["equity_after"] - yday_equity, 2)
             trades.append(rec_t)
             sold.append(rec_t)
             day_why.append(f"SELL {t} ({reason})")
@@ -601,9 +675,18 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
             if t not in held_names:
                 held_names.append(t)
 
+        for lot in pos.values():
+            cpx = _px(lot["ticker"], date, "close", bars)
+            if cpx is not None:
+                lot["close_px"] = float(cpx)
         stock = mark(date, "close")
         equity = cash + stock
         plan = fm.flatten_plan(date)
+        ov_why = ov["overnight_why"]
+        fill_why = "; ".join(day_why) or (
+            f"hard-red sit S={s:+.2f}" if hard_red else
+            ("hold " + ",".join(pos.keys()) if pos else "flat cash")
+        )
         daily.append({
             "date": date,
             "s": None if s is None else round(s, 2),
@@ -613,6 +696,12 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
             "n": len(chosen),
             "open_cash": round(open_cash, 2),
             "open_held": [f"{p['ticker']}×{p['shares']}" for p in open_lots],
+            "open_equity": ov["open_equity"],
+            "open_stock": ov["open_stock"],
+            "yday_equity": ov["yday_equity"],
+            "overnight_delta": ov["overnight_delta"],
+            "overnight": ov["overnight"],
+            "overnight_why": ov_why,
             "cash": round(cash, 2),
             "stock": round(stock, 2),
             "equity": round(equity, 2),
@@ -621,12 +710,10 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
             "held": list(pos.keys()),
             "lots": _lots_snap(pos),
             "skipped": [k["ticker"] for k in skips if k["date"] == date],
-            "why": "; ".join(day_why) or (
-                f"hard-red sit S={s:+.2f}" if hard_red else
-                ("hold " + ",".join(pos.keys()) if pos else "flat cash")
-            ),
+            "why": ov_why + ((" · " + fill_why) if day_why else ""),
             "made_money": False,
         })
+        yday_equity = round(equity, 2)
 
     for i, d in enumerate(daily):
         prev = float(rules["capital"]) if i == 0 else daily[i - 1]["equity"]
@@ -651,7 +738,7 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
              "entry_px": p["entry_px"], "reason": p.get("reason")}
             for t, p in pos.items()
         ],
-        "n_trades": len(trades),
+        "n_trades": len([t for t in trades if t.get("side") != "OPEN"]),
         "n_skips": len(skips),
         "n_closed": len(closed),
         "n_wins": len(wins),
@@ -852,44 +939,78 @@ def render_recipe_md(rec: dict, stats: dict, book: dict) -> str:
     lines += [
         "## Each session (cash + holdings state)",
         "",
-        "| Date | S | Open cash | Open held | Bought | Sold | Close cash | Stock | Equity | Close held | Why |",
-        "|---|---:|---:|---|---|---|---:|---:|---:|---|---|",
+        "| Date | S | 09:30 cash | 09:30 held | 09:30 equity | vs yday close | Bought | Sold | Close cash | Close equity | Close held | 09:30 why |",
+        "|---|---:|---:|---|---:|---:|---|---|---:|---:|---|---|",
     ]
     for d in book.get("daily") or []:
         s = d.get("s")
         lots = d.get("lots") or []
         close_held = ", ".join(f"{p['ticker']}×{p['shares']}" for p in lots) or "—"
+        ov = d.get("overnight_delta")
+        ov_s = "—" if ov is None else f"{ov:+,.2f}"
+        oeq = d.get("open_equity")
         lines.append(
             f"| {d['date']} | {('—' if s is None else f'{s:+.2f}')} | "
             f"${(d.get('open_cash') if d.get('open_cash') is not None else 0):,.2f} | "
             f"{', '.join(d.get('open_held') or []) or '—'} | "
+            f"{'—' if oeq is None else f'${oeq:,.2f}'} | {ov_s} | "
             f"{', '.join(d.get('bought') or []) or '—'} | "
             f"{', '.join(d.get('sold') or []) or '—'} | "
-            f"${d['cash']:,.2f} | ${d['stock']:,.2f} | ${d['equity']:,.2f} | "
+            f"${d['cash']:,.2f} | ${d['equity']:,.2f} | "
             f"{close_held} | "
-            f"{str(d.get('why') or '—').replace('|', '/')} |"
+            f"{str(d.get('overnight_why') or d.get('why') or '—').replace('|', '/')} |"
         )
     lines += [
         "",
-        "## Fills (what was bought / sold)",
+        "## Fills (09:30 open snapshot, then buys / sells)",
         "",
-        "| Date 09:30 ET | Side | Ticker | Shares | Px | Fees | P/L | Cash after | Equity (cash+stock) | Why | Cameras |",
+        "| Date 09:30 ET | Side | Ticker | Shares | Px | Fees | P/L | Cash after | Equity change (sells only) | Why | Cameras |",
         "|---|---|---|---:|---:|---:|---:|---:|---:|---|---|",
     ]
     for t in book.get("trades") or []:
+        kind = t.get("side")
         pnl = t.get("pnl")
-        eq = t.get("equity_after")
-        dlt = t.get("equity_delta")
-        if eq is None:
-            eq_s = "—"
-        elif dlt is None:
-            eq_s = f"${eq:,.2f}"
+        if kind == "OPEN":
+            ov = t.get("equity_delta")
+            mark = "▲" if (ov or 0) >= 0 else "▼"
+            eq_s = (
+                f"{mark} 09:30 equity ${t.get('equity_after'):,.2f} vs yday "
+                f"${t.get('yday_equity'):,.2f} ({ov:+,.2f})"
+                if t.get("equity_after") is not None and ov is not None
+                else "—"
+            )
+            px_s = "—"
+            fee_s = "—"
+            share_s = "—"
+            tick = "09:30 open"
+        elif kind in ("SELL", "COVER"):
+            chg = t.get("pnl")
+            if chg is None:
+                eq_s = "—"
+            else:
+                mark = "▲" if chg > 0 else "▼"
+                fee_vs_mark = t.get("sell_eq_chg")
+                extra = (
+                    f"; vs 09:30 mark {fee_vs_mark:+,.2f}"
+                    if fee_vs_mark is not None else ""
+                )
+                eq_s = (
+                    f"{mark} {chg:+,.2f} after sell → book "
+                    f"${t.get('equity_after'):,.2f}{extra}"
+                )
+            px_s = f"${t['price']:.2f}"
+            fee_s = f"${t['fees']:.2f}"
+            share_s = str(t["shares"])
+            tick = f"`{t['ticker']}`"
         else:
-            mark = "▲" if dlt >= 0 else "▼"
-            eq_s = f"{mark} ${eq:,.2f} ({dlt:+,.2f})"
+            eq_s = "—"
+            px_s = f"${t['price']:.2f}" if t.get("price") is not None else "—"
+            fee_s = f"${t['fees']:.2f}" if t.get("fees") is not None else "—"
+            share_s = str(t.get("shares") or "—")
+            tick = f"`{t['ticker']}`"
         lines.append(
-            f"| {t['date']} 09:30 ET | **{t['side']}** | `{t['ticker']}` | "
-            f"{t['shares']} | ${t['price']:.2f} | ${t['fees']:.2f} | "
+            f"| {t['date']} 09:30 ET | **{kind}** | {tick} | "
+            f"{share_s} | {px_s} | {fee_s} | "
             f"{'—' if pnl is None else f'${pnl:+.2f}'} | "
             f"${t['cash_after']:,.2f} | {eq_s} | "
             f"{str(t.get('reason') or '—').replace('|', '/')} | "
