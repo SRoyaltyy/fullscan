@@ -1003,7 +1003,7 @@ def run(from_date: str = START, to_date: str | None = None,
         "stats": [{k: v for k, v in s.items()
                    if k not in ("daily", "equity", "starts")} for s in stats],
         "series": series,
-        "daily": {s["name"]: s["daily"] for s in stats},
+        "daily": {s["name"]: _slim_dash_daily(s["daily"]) for s in stats},
         "starts": {s["name"]: s["starts"] for s in stats},
         "books": {n: _slim_dash_book(bk) for n, bk in books.items()},
         "md_names": [s["name"] for s in stats if s.get("book_n_trades")],
@@ -1015,6 +1015,30 @@ def run(from_date: str = START, to_date: str | None = None,
     return payload
 
 
+def _slim_mark(m: dict) -> dict:
+    keep = (
+        "ticker", "shares", "shares_open", "shares_close",
+        "yday_px", "open_px", "close_px", "overnight", "session", "day",
+        "held", "vs_entry_open", "vs_entry_close", "entry_px", "delta",
+    )
+    return {k: m.get(k) for k in keep if m.get(k) is not None}
+
+
+def _slim_dash_daily(days: list | None) -> list:
+    """Phone page: structured marks, no duplicated why-paragraphs."""
+    keep = (
+        "date", "s", "hard_red", "open_cash", "open_held", "open_equity",
+        "yday_equity", "overnight_delta", "session_delta", "cash", "stock",
+        "equity", "bought", "sold", "held", "lots", "made_money", "mean",
+    )
+    out = []
+    for d in days or []:
+        row = {k: d.get(k) for k in keep}
+        row["marks"] = [_slim_mark(m) for m in (d.get("marks") or [])]
+        out.append(row)
+    return out
+
+
 def _slim_dash_book(bk: dict) -> dict:
     """Fills for the phone page. Daily state lives on payload['daily']."""
     keep_t = (
@@ -1022,10 +1046,22 @@ def _slim_dash_book(bk: dict) -> dict:
         "cash_after", "equity_after", "equity_delta", "stock_after", "reason",
         "yday_equity", "open_held", "overnight", "overnight_delta",
         "equity_before", "sell_eq_chg", "vs_yday",
+        "session_delta", "intraday", "close_held", "open_equity",
     )
     keep_k = ("date", "ticker", "kind", "reason")
+
+    def slim_t(t: dict) -> dict:
+        row = {k: t.get(k) for k in keep_t}
+        if t.get("overnight"):
+            row["overnight"] = [_slim_mark(n) for n in t["overnight"]]
+        if t.get("intraday"):
+            row["intraday"] = [_slim_mark(n) for n in t["intraday"]]
+        if t.get("side") in ("OPEN", "CLOSE"):
+            row.pop("reason", None)
+        return row
+
     return {
-        "trades": [{k: t.get(k) for k in keep_t} for t in (bk.get("trades") or [])],
+        "trades": [slim_t(t) for t in (bk.get("trades") or [])],
         "skips": [{k: x.get(k) for k in keep_k} for x in (bk.get("skips") or [])],
         "open": bk.get("open"),
         "n_trades": bk.get("n_trades"),
@@ -1050,7 +1086,7 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
     OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
     OUT_START.parent.mkdir(parents=True, exist_ok=True)
     DASH_DIR.mkdir(parents=True, exist_ok=True)
-    OUT_JSON.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    OUT_JSON.write_text(json.dumps(payload, separators=(",", ":")), encoding="utf-8")
     starts = {
         "generated_at": payload.get("generated_at"),
         "rows": [
