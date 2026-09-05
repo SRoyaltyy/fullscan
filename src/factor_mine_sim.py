@@ -23,7 +23,9 @@ ROW_KEEP = (
     "blue", "alarm", "zero_red", "last_green", "last_red",
     "candle_capture", "candle_score",
     "ohlc_ret_5", "ohlc_rvol", "ohlc_hot_score", "ohlc_nr7", "ohlc_break_10",
-    "erd_earn_react", "erd_days_since_E", "erd_days_since_R", "erd_flag_R",
+    "erd_earn_react", "erd_days_since_E", "erd_days_since_R",
+    "erd_flag_E", "erd_flag_R",
+    "e_pol", "e_label", "r_pol", "r_label",
     "cond_good", "cond_bad",
 )
 
@@ -44,9 +46,46 @@ def _num_fees() -> dict:
     return out
 
 
+def pack_rets(xs: list) -> dict:
+    """Win rate + mean for a list of horizon %."""
+    xs = [float(v) for v in xs if v is not None]
+    if not xs:
+        return {"n": 0, "win": None, "mean": None}
+    return {
+        "n": len(xs),
+        "win": round(sum(1 for v in xs if v > 0) / len(xs), 4),
+        "mean": round(sum(xs) / len(xs), 3),
+    }
+
+
+def hit_tally(looks_by_date: dict, hard_dates) -> dict:
+    """BUY / NO / SIT profitable-hit rates, plus n_neg ≤2 vs ≥3."""
+    hard = set(hard_dates or [])
+    buckets = {"buy": [], "no": [], "sit": []}
+    neg = {"le2": [], "ge3": []}
+    for date, looks in (looks_by_date or {}).items():
+        sit = date in hard
+        for x in looks or []:
+            ret = x.get("ret")
+            if ret is None:
+                continue
+            take = "sit" if sit else ("buy" if x.get("buy") else "no")
+            buckets[take].append(ret)
+            (neg["ge3"] if int(x.get("n_neg") or 0) >= 3 else neg["le2"]).append(ret)
+    return {
+        "buy": pack_rets(buckets["buy"]),
+        "no": pack_rets(buckets["no"]),
+        "sit": pack_rets(buckets["sit"]),
+        "n_neg_le2": pack_rets(neg["le2"]),
+        "n_neg_ge3": pack_rets(neg["ge3"]),
+    }
+
+
 def build_sim_pack(panel: dict) -> dict:
     """Rows + tape + fee schedule. No same-day Change%."""
+    from . import factor_mine_probe as fmp
     panel = fm.rehydrate_panel(panel)
+    fmp.attach_erd_polarity(panel)
     cal = list(panel.get("session_dates") or [])
     rows = []
     tickers: set[str] = set()

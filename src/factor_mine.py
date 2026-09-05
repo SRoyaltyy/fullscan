@@ -694,6 +694,143 @@ def matches(row: dict, rec: dict) -> bool:
     return True
 
 
+def match_why(row: dict, rec: dict) -> dict:
+    """Kid-plain pass/fail for one name vs one recipe. No hard-red, no cash."""
+    failed: list[str] = []
+    passed: list[str] = []
+
+    def need(ok: bool, msg: str) -> None:
+        (passed if ok else failed).append(msg)
+
+    uni = rec.get("universe") or "union"
+    srcs = set(row.get("sources") or [])
+    if uni != "union":
+        need(uni in srcs, f"on the {uni} 09:30 list")
+    req = rec.get("require") or {}
+    forb = rec.get("forbid") or {}
+    if req.get("live_entry"):
+        ok = row.get("flatten_ok")
+        if ok is None:
+            ok = flatten_plan(row.get("date") or "").get("flatten_ok")
+        need(bool(ok), "live flatten gate says GO")
+    boxes = row.get("boxes") or {}
+    for cam in CAMERAS:
+        want = req.get(cam)
+        if want:
+            need(_cam_ok(_tone(boxes, cam), want), _gate_kid(cam, want))
+        ban = forb.get(cam)
+        if ban:
+            need(not _cam_ok(_tone(boxes, cam), ban),
+                 f"not {_gate_kid(cam, ban)}")
+    if req.get("blue"):
+        need(bool(row.get("blue")), _gate_kid("blue", True))
+    if req.get("zero_red"):
+        need(bool(row.get("zero_red")), _gate_kid("zero_red", True))
+    if forb.get("alarm"):
+        need(not row.get("alarm"), "no 🚨 overnight alarm")
+    if req.get("alarm"):
+        need(bool(row.get("alarm")), "🚨 alarm is on")
+    if req.get("last_green"):
+        need(bool(row.get("last_green")), _gate_kid("last_green", True))
+    if req.get("last_red"):
+        need(bool(row.get("last_red")), _gate_kid("last_red", True))
+    if req.get("candle_capture"):
+        need(bool(row.get("candle_capture")), _gate_kid("candle_capture", True))
+    if req.get("break_10"):
+        need(bool(row.get("ohlc_break_10")), _gate_kid("break_10", True))
+    if req.get("earn_react"):
+        need(bool(row.get("erd_earn_react")), _gate_kid("earn_react", True))
+    if req.get("news_present"):
+        need(_tone(boxes, "news") != "missing", _gate_kid("news_present", True))
+    if req.get("join_present"):
+        need(_tone(boxes, "join") != "missing", _gate_kid("join_present", True))
+    if req.get("catal_present"):
+        need(_tone(boxes, "catal") != "missing", _gate_kid("catal_present", True))
+    if "ret_5_min" in req:
+        v = _finite(row.get("ohlc_ret_5"))
+        need(v is not None and v >= float(req["ret_5_min"]),
+             _gate_kid("ret_5_min", req["ret_5_min"]))
+    if "ret_5_max" in req:
+        v = _finite(row.get("ohlc_ret_5"))
+        need(v is not None and v <= float(req["ret_5_max"]),
+             _gate_kid("ret_5_max", req["ret_5_max"]))
+    if "rvol_min" in req:
+        v = _finite(row.get("ohlc_rvol"))
+        need(v is not None and v >= float(req["rvol_min"]),
+             _gate_kid("rvol_min", req["rvol_min"]))
+    if "rvol_max" in req:
+        v = _finite(row.get("ohlc_rvol"))
+        need(v is not None and v <= float(req["rvol_max"]),
+             _gate_kid("rvol_max", req["rvol_max"]))
+    if "days_since_E_max" in req:
+        v = row.get("erd_days_since_E")
+        need(v is not None and int(v) <= int(req["days_since_E_max"]),
+             _gate_kid("days_since_E_max", req["days_since_E_max"]))
+    if "flag_E_min" in req:
+        v = row.get("erd_flag_E")
+        need(v is not None and int(v) >= int(req["flag_E_min"]),
+             _gate_kid("flag_E_min", req["flag_E_min"]))
+    if "days_since_R_max" in req:
+        v = row.get("erd_days_since_R")
+        need(v is not None and int(v) <= int(req["days_since_R_max"]),
+             _gate_kid("days_since_R_max", req["days_since_R_max"]))
+    if "flag_R" in req:
+        need(int(row.get("erd_flag_R") or 0) == int(req["flag_R"]),
+             _gate_kid("flag_R", req["flag_R"]))
+    return {"ok": not failed, "failed": failed, "passed": passed}
+
+
+def decision_why(rec: dict, *, hard: bool = False, s=None,
+                 look: dict | None = None, why: dict | None = None) -> dict:
+    """BUY / SIT / NO in sentences, from gates + rank + morning S."""
+    rec = rec or {}
+    why = why or {}
+    failed = list(why.get("failed") or [])
+    passed = list(why.get("passed") or [])
+    top_n = int(rec.get("top_n") or TOP_N_DEFAULT)
+    lines: list[str] = []
+    if hard:
+        s_txt = "—" if s is None else f"{float(s):.2f}"
+        lines.append(f"Morning weather S is {s_txt} (hard-red ≤ −3).")
+        lines.append(
+            "The sleeve sits — no new lots today, even if this name "
+            "would pass the buy gates."
+        )
+        if passed:
+            lines.append("Gates that already pass: " + "; ".join(passed) + ".")
+        if failed:
+            lines.append(
+                "It would still fail these gates if S were above −3: "
+                + "; ".join(failed) + "."
+            )
+        return {"take": "sit", "lines": lines}
+    if look and look.get("buy"):
+        lines.append(
+            "Would buy: on this recipe's shopping list and inside the cash cut."
+        )
+        if passed:
+            lines.append("Gates that fired: " + "; ".join(passed) + ".")
+        rank = look.get("rank")
+        if rank is not None:
+            lines.append(
+                f"Ranked #{int(rank)} of top {top_n} by "
+                f"{rec.get('rank') or 'list order'}."
+            )
+        return {"take": "buy", "lines": lines}
+    if look and look.get("pass"):
+        lines.append(
+            f"Would not buy: passed the gates but ranked #{look.get('rank')} "
+            f"— only the top {top_n} get leftover cash."
+        )
+        return {"take": "no", "lines": lines}
+    lines.append("Would not buy.")
+    if failed:
+        lines.append("Failed: " + "; ".join(failed) + ".")
+    else:
+        lines.append("Not on this recipe's 09:30 universe.")
+    return {"take": "no", "lines": lines}
+
+
 def rank_key(row: dict, rec: dict) -> tuple:
     how = rec.get("rank")
     hot = _finite(row.get("ohlc_hot_score")) or 0.0
@@ -1306,6 +1443,24 @@ def stamp_sim(payload: dict, panel: dict | None = None) -> dict:
         payload.get("to_date"),
     )
     payload["sim"] = fms.build_sim_pack(rehydrate_panel(panel))
+    return payload
+
+
+def stamp_probe_and_sim(payload: dict, panel: dict | None = None) -> dict:
+    """Refresh investigator cards + replay pack. Does not remine books or starts."""
+    from . import factor_mine_probe as fmp
+    from . import factor_mine_sim as fms
+    panel = panel if panel is not None else load_or_build_panel(
+        payload.get("from_date") or START,
+        payload.get("to_date"),
+    )
+    panel = rehydrate_panel(panel)
+    fmp.attach_erd_polarity(panel)
+    bought = _bought_tickers(payload.get("books"), payload.get("starts"))
+    payload["probe"] = fmp.slim_probe(fmp.build_probe(panel), bought)
+    payload["mornings"] = fmp.build_mornings()
+    payload.update(fmp.probe_meta())
+    payload["sim"] = fms.build_sim_pack(panel)
     return payload
 
 

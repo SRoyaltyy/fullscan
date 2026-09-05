@@ -7,6 +7,7 @@ Never uses same-day Change% to color a cell.
 from __future__ import annotations
 
 import json
+import math
 from pathlib import Path
 
 from . import factor_mine as fm
@@ -58,6 +59,112 @@ TONE_WORD = {
 def _round(v, n=2):
     x = fm._finite(v)
     return None if x is None else round(float(x), n)
+
+
+def _parse_num(v):
+    if v is None:
+        return None
+    if isinstance(v, float) and math.isnan(v):
+        return None
+    s = str(v).strip().replace(",", "").replace("%", "")
+    if not s or s.lower() in ("nan", "none", "—", "-"):
+        return None
+    try:
+        return float(s)
+    except ValueError:
+        return None
+
+
+def surprise_polarity(v) -> tuple[str, str]:
+    """EPS surprise → tone. Date-only green is not a beat."""
+    x = _parse_num(v)
+    if x is None:
+        return "missing", "no EPS surprise on the prior export"
+    if x > 0.5:
+        return "good", f"beat · EPS surprise {x:+.1f}% (prior export)"
+    if x < -0.5:
+        return "bad", f"miss · EPS surprise {x:+.1f}% (prior export)"
+    return "neutral", f"inline · EPS surprise {x:+.1f}% (prior export)"
+
+
+def recom_polarity(v) -> tuple[str, str]:
+    """Finviz Analyst Recom (1=strong buy … 5=sell). Level, not a change."""
+    x = _parse_num(v)
+    if x is None:
+        return "missing", "no analyst recom on the prior export"
+    if x <= 2.0:
+        return "good", f"buy-side recom {x:.1f} (level, not a change · prior export)"
+    if x >= 3.5:
+        return "bad", f"sell-side recom {x:.1f} (level, not a change · prior export)"
+    return "neutral", f"hold-ish recom {x:.1f} (level, not a change · prior export)"
+
+
+def erd_polarity(row: dict, fv: dict | None = None) -> dict:
+    """Honest E / R polarity. Never paint green just because a date exists."""
+    fv = fv or {}
+    surp_pol, surp_lab = surprise_polarity(fv.get("EPS Surprise"))
+    rec_pol, rec_lab = recom_polarity(fv.get("Analyst Recom"))
+    days_e = row.get("erd_days_since_E")
+    flag_e = int(row.get("erd_flag_E") or 0)
+    flag_r = int(row.get("erd_flag_R") or 0)
+    label_e = str(row.get("erd_E_label") or "")
+    label_r = str(row.get("erd_R_label") or "")
+    if label_e == "E_BEAT" or (surp_pol == "good"):
+        e_pol, e_label = "good", surp_lab if surp_pol == "good" else "earnings beat"
+    elif label_e == "E_MISS" or (surp_pol == "bad"):
+        e_pol, e_label = "bad", surp_lab if surp_pol == "bad" else "earnings miss"
+    elif surp_pol == "neutral":
+        e_pol, e_label = "neutral", surp_lab
+    elif days_e is not None or flag_e or row.get("erd_earn_react"):
+        e_pol, e_label = "neutral", (
+            f"E {int(days_e)} sess ago · polarity unknown "
+            "(export stamped the date, not beat/miss)"
+            if days_e is not None else
+            "E on file · polarity unknown (date-only green is not a beat)"
+        )
+    else:
+        e_pol, e_label = "missing", "no earnings date on the prior export"
+    if label_r == "R_UP" or flag_r == 1:
+        r_pol, r_label = "good", "analyst upgrade (R)"
+    elif label_r == "R_DOWN" or flag_r == -1:
+        r_pol, r_label = "bad", "analyst downgrade (R)"
+    elif rec_pol != "missing":
+        r_pol, r_label = rec_pol, rec_lab
+    else:
+        r_pol, r_label = "missing", "no analyst revision on file"
+    return {
+        "e_pol": e_pol, "e_label": e_label,
+        "r_pol": r_pol, "r_label": r_label,
+    }
+
+
+_FV_CACHE: dict[str, dict] = {}
+
+
+def _prior_finviz_map(date: str | None) -> dict[str, dict]:
+    if not date:
+        return {}
+    if date in _FV_CACHE:
+        return _FV_CACHE[date]
+    df = ga.load_finviz(date)
+    out: dict[str, dict] = {}
+    if df is not None and not getattr(df, "empty", True) and "Ticker" in df.columns:
+        keep = [c for c in ("Ticker", "EPS Surprise", "Analyst Recom") if c in df.columns]
+        for rec in df[keep].to_dict("records"):
+            t = fm._tick(rec.get("Ticker"))
+            if t:
+                out[t] = rec
+    _FV_CACHE[date] = out
+    return out
+
+
+def attach_erd_polarity(panel: dict) -> dict:
+    """Stamp E/R polarity onto panel rows from the prior Finviz export."""
+    for row in panel.get("rows") or []:
+        prior = row.get("news_export_date") or row.get("prior_date")
+        fv = _prior_finviz_map(prior).get(fm._tick(row.get("ticker"))) or {}
+        row.update(erd_polarity(row, fv))
+    return panel
 
 
 def _finviz_news(date: str | None) -> dict[str, dict]:
@@ -240,7 +347,12 @@ def _card(row: dict, flat: dict | None, news: dict) -> dict:
         "erd": (flat or {}).get("erd_cell") or "",
         "days_E": row.get("erd_days_since_E"),
         "days_R": row.get("erd_days_since_R"),
+        "flag_E": row.get("erd_flag_E"),
         "flag_R": row.get("erd_flag_R"),
+        "e_pol": row.get("e_pol") or "missing",
+        "e_label": row.get("e_label") or "",
+        "r_pol": row.get("r_pol") or "missing",
+        "r_label": row.get("r_label") or "",
         "news": news,
         "cond_good": int(row.get("cond_good") or 0),
         "cond_bad": int(row.get("cond_bad") or 0),
@@ -280,6 +392,12 @@ def _flat_only_card(flat: dict, news: dict) -> dict:
         "break_10": bool(flat.get("ohlc_break_10")),
         "earn_react": bool(flat.get("erd_earn_react")),
         "erd": flat.get("erd_cell") or "",
+        "flag_E": flat.get("erd_flag_E"),
+        "flag_R": flat.get("erd_flag_R"),
+        "e_pol": flat.get("e_pol") or "missing",
+        "e_label": flat.get("e_label") or "",
+        "r_pol": flat.get("r_pol") or "missing",
+        "r_label": flat.get("r_label") or "",
         "news": news,
         "cond_good": int((flat.get("condition") or {}).get("good") or 0),
         "cond_bad": int((flat.get("condition") or {}).get("bad") or 0),
@@ -322,6 +440,7 @@ def build_probe(panel: dict) -> dict:
                           digest_cache.get(date) or {},
                           judge_cache.get(date) or {})
 
+    attach_erd_polarity(panel)
     for row in panel.get("rows") or []:
         date = row.get("date")
         ticker = fm._tick(row.get("ticker"))
