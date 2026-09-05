@@ -84,8 +84,9 @@
   <li><b>Leak-free 09:30 inputs only.</b> Cameras, 🔵/🚨, E/R/D, prior news, 20-bar OHLC, and 8-bar candles must be knowable before the open. Same-day Change% / Gap / RelVol / printed book never pick. News uses the morning box or the <em>prior</em> Finviz export — never a later scrape or post-09:30 headline.</li>
   <li><b>Time.</b> Buy at the 09:30 open. Hold H sessions (entry day counts). Optional early exit at a later 09:30 if 🚨, last-bar red, or news🔴 prints that morning.</li>
   <li><b>Win rate.</b> Share of picks with horizon return &gt; 0 (long or short).</li>
-  <li><b>$ days / average win %.</b> Share of sessions whose equal-weight book made money, plus average win size vs average loss size.</li>
-  <li><b>Sustainability.</b> For every start date X, compound from X to the end. Count how often that path is still green.</li>
+  <li><b>$ days / average win %.</b> Share of sessions whose <em>cash book</em> made money (leftover split, fees, whole shares), plus average closed-trade win vs loss.</li>
+  <li><b>Sustainability.</b> For every start date X, replay the cash book from X to the end. Count how often that path is still green.</li>
+  <li><b>Entry.</b> <code>flatten_h*</code> buys the wish-list on io/HOLD mornings — live Action those days is HOLD. <code>flatten_live_*</code> only buys when the flatten gate fires (mover).</li>
   <li><b>Top gainers / losers in the hold window.</b> Buy 8-17 hold=3 → check 8-17, 8-18, 8-19 liquid top-25 gainers and names that printed &lt; −1.5%.</li>
 </ol>
 <p class="note">Research miner only. Live <code>flatten_robust</code> is untouched.</p>

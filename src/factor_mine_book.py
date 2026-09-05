@@ -40,6 +40,8 @@ RANKS = ("auto", "none", "hot_score", "cond", "w_hot_cond", "w_hot_candle",
 SIDES = ("auto", "long", "short")
 TOP_NS = ("auto", "4", "8", "12")
 EXITS = ("auto", "none", "alarm", "last_red", "news_bad")
+ENTRIES = ("auto", "list", "live")
+BORROW_ANNUAL = 0.01
 BOOK_RULES = {
     "capital": fm.CAPITAL,
     "day_cap": 1.0,
@@ -89,12 +91,22 @@ def why_buy(rec: dict, row: dict) -> str:
     bits = [rec.get("note") or rec["name"]]
     req = rec.get("require") or {}
     if req:
-        bits.append("gate " + ",".join(f"{k}={v}" for k, v in req.items()))
+        shown = {k: v for k, v in req.items() if k != "live_entry"}
+        if shown:
+            bits.append("gate " + ",".join(f"{k}={v}" for k, v in shown.items()))
     if rec.get("rank"):
         bits.append(f"rank {rec['rank']}")
     src = ",".join(row.get("sources") or [])
     if src:
         bits.append(f"list {src}")
+    plan = fm.flatten_plan(row.get("date") or "") if row.get("date") else {}
+    if rec.get("universe") == "flatten" or req.get("live_entry"):
+        if plan.get("flatten_ok"):
+            bits.append(f"live flatten {plan.get('route') or 'mover'}")
+        else:
+            bits.append(
+                f"wish-list (live {plan.get('route') or 'io'} HOLD — not a ticket)"
+            )
     if row.get("blue"):
         bits.append("🔵")
     if row.get("zero_red"):
@@ -122,16 +134,19 @@ def why_sell(ticker: str, held: int, min_hold: int, early: bool,
 
 def recipes_from_action(*, universe="auto", hold="auto", gate="auto",
                         rank="auto", side="auto", top_n="auto",
-                        exit="auto", auto_tweak=True) -> list[dict]:
+                        exit="auto", entry="auto",
+                        auto_tweak=True) -> list[dict]:
     """Filter the systematic grid; auto dims stay swept.
 
     ``auto_tweak`` adds one-knob neighbors so a custom dropdown still
-    explores nearby holds / gates / ranks without a second click.
+    explores nearby holds / gates / ranks / top-n / exits / universes
+    / live-vs-list entry without a second click.
     """
     base = fm.build_recipes()
 
     def gate_name(rec: dict) -> str:
         req = rec.get("require") or {}
+        req = {k: v for k, v in req.items() if k != "live_entry"}
         if not req:
             return "none"
         if req.get("vol") == "good" and len(req) == 1:
@@ -166,7 +181,10 @@ def recipes_from_action(*, universe="auto", hold="auto", gate="auto",
             return "news_bad"
         return "none"
 
-    def keep(rec, *, uni, h, g, rk, sd, tn, ex) -> bool:
+    def entry_name(rec: dict) -> str:
+        return "live" if (rec.get("require") or {}).get("live_entry") else "list"
+
+    def keep(rec, *, uni, h, g, rk, sd, tn, ex, en) -> bool:
         if uni != "auto" and rec["universe"] != uni:
             return False
         if h != "auto" and int(rec["hold"]) != int(h):
@@ -183,24 +201,24 @@ def recipes_from_action(*, universe="auto", hold="auto", gate="auto",
             return False
         if ex != "auto" and exit_name(rec) != ex:
             return False
+        if en != "auto" and entry_name(rec) != en:
+            return False
         return True
 
-    kept = [r for r in base if keep(
-        r, uni=universe, h=hold, g=gate, rk=rank, sd=side, tn=top_n, ex=exit)]
+    pinned = dict(uni=universe, h=hold, g=gate, rk=rank, sd=side,
+                  tn=top_n, ex=exit, en=entry)
+    kept = [r for r in base if keep(r, **pinned)]
     if auto_tweak:
         extras = []
-        if hold != "auto":
-            extras += [r for r in base if keep(
-                r, uni=universe, h="auto", g=gate, rk=rank, sd=side,
-                tn=top_n, ex=exit)]
-        if gate != "auto":
-            extras += [r for r in base if keep(
-                r, uni=universe, h=hold, g="auto", rk=rank, sd=side,
-                tn=top_n, ex=exit)]
-        if rank != "auto":
-            extras += [r for r in base if keep(
-                r, uni=universe, h=hold, g=gate, rk="auto", sd=side,
-                tn=top_n, ex=exit)]
+        dims = ("h", "g", "rk", "tn", "ex", "en", "uni")
+        raw = dict(h=hold, g=gate, rk=rank, tn=top_n, ex=exit,
+                   en=entry, uni=universe)
+        for dim in dims:
+            if raw[dim] == "auto":
+                continue
+            neighbor = dict(pinned)
+            neighbor[dim] = "auto"
+            extras += [r for r in base if keep(r, **neighbor)]
         seen = {r["name"] for r in kept}
         for r in extras:
             if r["name"] not in seen:
@@ -234,7 +252,8 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
             px = _px(lot["ticker"], date, which, bars)
             if px is None:
                 px = lot.get("last_px") or lot["entry_px"]
-            tot += lot["shares"] * float(px)
+            notional = lot["shares"] * float(px)
+            tot += notional if side == "long" else -notional
         return tot
 
     for date in cal:
@@ -302,8 +321,14 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                 day_why.append(f"hard-red S={s:+.2f} sit; no new buys")
             new = []
 
-        if new and cash > 0:
-            room = cash * day_cap
+        if new and (cash > 0 or side == "short"):
+            eq_open = cash + mark(date, "open")
+            if side == "short":
+                # Size from equity, not inflated short proceeds. Cover
+                # constraint: total new notional ≤ equity/2.
+                room = max(0.0, eq_open * min(day_cap, 0.5))
+            else:
+                room = max(0.0, cash * day_cap)
             per = room / len(new)
             for row in new:
                 t = row["ticker"]
@@ -349,7 +374,8 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                             "reason": f"short cover {2*notional:.0f} > equity {eq_now:.0f}",
                         })
                         continue
-                    fee = pt.order_fees(shares, px, "sell", fees)
+                    borrow = notional * BORROW_ANNUAL / 365.0
+                    fee = pt.order_fees(shares, px, "sell", fees) + borrow
                     cash += notional - fee
                     lot = {
                         "ticker": t, "shares": shares, "entry_px": px,
@@ -377,10 +403,13 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
 
         stock = mark(date, "close")
         equity = cash + stock
+        plan = fm.flatten_plan(date)
         daily.append({
             "date": date,
             "s": None if s is None else round(s, 2),
             "hard_red": hard_red,
+            "route": plan.get("route") or "",
+            "flatten_ok": bool(plan.get("flatten_ok")),
             "n": len(chosen),
             "cash": round(cash, 2),
             "stock": round(stock, 2),
@@ -490,6 +519,13 @@ def attach_book(stats: dict, book: dict, starts: list[dict]) -> dict:
     stats["book_n_trades"] = book.get("n_trades")
     stats["book_n_skips"] = book.get("n_skips")
     stats["book_realized"] = book.get("realized")
+    peak = None
+    dd = 0.0
+    for x in book.get("equity") or []:
+        peak = x if peak is None else max(peak, x)
+        if peak and peak > 0:
+            dd = max(dd, (peak - x) / peak)
+    stats["max_dd_pct"] = round(100.0 * dd, 2)
     if book.get("avg_win_pct") is not None:
         stats["avg_win_pct"] = book["avg_win_pct"]
     if book.get("avg_loss_pct") is not None:
@@ -505,13 +541,28 @@ def attach_book(stats: dict, book: dict, starts: list[dict]) -> dict:
 
 
 def render_recipe_md(rec: dict, stats: dict, book: dict) -> str:
+    live_gate = bool((rec.get("require") or {}).get("live_entry"))
+    wish = rec.get("universe") == "flatten" and not live_gate
+    entry_note = (
+        "Buys the flatten **wish-list** even on io/HOLD mornings — live "
+        "`flatten_robust` would not send 09:30 tickets those days. "
+        "See `flatten_live_*` for the gated book."
+        if wish else
+        "New buys only when the live flatten gate fires (green S, ≥5 priced "
+        "BUYs, prior book). io/HOLD mornings sit."
+        if live_gate else
+        "Research universe (not the live flatten gate). Cash/share/fee rules still apply."
+    )
     lines = [
         f"# Factor mine action — `{rec['name']}`",
         "",
         f"_Book rules: $10k · whole shares · Futubull fees · leftover cash "
         f"split on new names · sell first · min-hold **{rec['hold']}** sessions · "
-        f"fill 09:30 open · hard-red S≤{HARD_RED:g} sit. "
+        f"fill 09:30 open · hard-red S≤{HARD_RED:g} sit · shorts marked as "
+        f"liability (equity ≥ 2× notional). "
         f"Live `flatten_robust` is not changed._",
+        "",
+        entry_note,
         "",
         f"Side **{rec['side']}** · universe `{rec['universe']}` · "
         f"top {rec['top_n']} · rank `{rec.get('rank') or 'list'}` · "
@@ -527,13 +578,14 @@ def render_recipe_md(rec: dict, stats: dict, book: dict) -> str:
         "",
         "## Each session",
         "",
-        "| Date | S | Hard-red | Cash | Stock | Equity | Bought | Sold | Skipped | Why |",
-        "|---|---:|---|---:|---:|---:|---|---|---|---|",
+        "| Date | S | Route | Hard-red | Cash | Stock | Equity | Bought | Sold | Skipped | Why |",
+        "|---|---:|---|---|---:|---:|---:|---|---|---|---|",
     ]
     for d in book.get("daily") or []:
         s = d.get("s")
         lines.append(
             f"| {d['date']} | {('—' if s is None else f'{s:+.2f}')} | "
+            f"{d.get('route') or '—'} | "
             f"{'yes' if d.get('hard_red') else 'no'} | "
             f"${d['cash']:,.2f} | ${d['stock']:,.2f} | ${d['equity']:,.2f} | "
             f"{', '.join(d.get('bought') or []) or '—'} | "
@@ -594,18 +646,52 @@ def write_action_mds(payload: dict, stats: list[dict], books: dict,
                      featured: list[str]) -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     recs = {r["name"]: r for r in (payload.get("recipes") or [])}
+    by_stats = {s["name"]: s for s in stats}
+
+    def rec_for(name: str, s: dict) -> dict:
+        return recs.get(name) or {
+            "name": name, "hold": s.get("hold"), "side": s.get("side"),
+            "universe": s.get("universe"), "top_n": s.get("top_n"),
+            "rank": s.get("rank"), "note": s.get("note"),
+            "require": {},
+        }
+
+    for name, b in books.items():
+        s = by_stats.get(name)
+        if not s:
+            continue
+        (OUT_DIR / f"{name}.md").write_text(
+            render_recipe_md(rec_for(name, s), s, b), encoding="utf-8")
+
     index = [
         f"# Factor mine action — {payload.get('from_date')} → {payload.get('to_date')}",
         "",
         "Cash-accounted blotters for the leak-free 09:30 recipes. "
         "Same rules as the paper sleeve book: **$10k, whole shares, "
         "Futubull fees, leftover cash split, sell first, min-hold, "
-        "09:30 open fills, hard-red S≤−3 sit**. "
+        "09:30 open fills, hard-red S≤−3 sit, shorts as a liability "
+        "(equity ≥ 2× notional)**. "
         "Signal-only percentages in the research table are **not** fills.",
+        "",
+        "## Rule check (read this)",
+        "",
+        "- **Cash / shares / fees:** every recipe below is a $10k sleeve. "
+        "Leftover cash is split among *new* names only. A name that costs "
+        "more than its split is skipped (not a fractional).",
+        "- **Hard-red:** morning S ≤ −3 sits — no new buys. Existing lots "
+        "still sell when min-hold is met.",
+        "- **Flatten wish-list ≠ live tickets.** `flatten_h*` buys the 3d "
+        "robust wish-list on io/HOLD mornings (8-13, 8-14, 8-17, …). Live "
+        "`flatten_robust` Action those days is HOLD. `flatten_live_*` is "
+        "the gated book (only 8-20 / 8-21 mover fires in this window).",
+        "- **Shorts** are sized from equity (not short-sale cash) and marked "
+        "as a liability. The first mine's +300–1000% short books were a "
+        "marking bug and are gone.",
         "",
         f"Phone: `dashboard/factor-mine/index.html`. "
         f"Sister: [flatten lookback](../dashboard/flatten-lookback/) · "
-        f"[sleeve merge](../dashboard/sleeve-merge/).",
+        f"[sleeve merge](../dashboard/sleeve-merge/) · "
+        f"[strategy board](../dashboard/strategy-board/).",
         "",
         "Live `flatten_robust` is not changed.",
         "",
@@ -615,21 +701,11 @@ def write_action_mds(payload: dict, stats: list[dict], books: dict,
         "|---|---:|---:|---:|---:|---:|---|",
     ]
     for name in featured:
-        s = next((x for x in stats if x["name"] == name), None)
+        s = by_stats.get(name)
         b = books.get(name) or {}
         if not s:
             continue
         md_name = f"{name}.md"
-        (OUT_DIR / md_name).write_text(
-            render_recipe_md(recs.get(name) or {"name": name, "hold": s.get("hold"),
-                                                "side": s.get("side"),
-                                                "universe": s.get("universe"),
-                                                "top_n": s.get("top_n"),
-                                                "rank": s.get("rank"),
-                                                "note": s.get("note")},
-                             s, b),
-            encoding="utf-8",
-        )
         index.append(
             f"| `{name}` | {s.get('total_ret_pct'):+.2f} | "
             f"{s.get('signal_ret_pct'):+.2f} | "
@@ -637,6 +713,15 @@ def write_action_mds(payload: dict, stats: list[dict], books: dict,
             f"{b.get('n_trades') or 0} | {b.get('n_skips') or 0} | "
             f"[{md_name}](factor_mine/{md_name}) |"
         )
+    others = [n for n in books if n not in set(featured)]
+    if others:
+        index += [
+            "",
+            "## All other blotters",
+            "",
+        ]
+        for name in others:
+            index.append(f"- [`{name}`](factor_mine/{name}.md)")
     OUT_INDEX.write_text("\n".join(index) + "\n", encoding="utf-8")
     DAILY_MD.write_text(
         OUT_INDEX.read_text(encoding="utf-8"), encoding="utf-8")

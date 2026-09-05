@@ -318,6 +318,60 @@ def test_action_dropdown_auto_tweaks_neighbors() -> None:
     tnames = {r["name"] for r in tweaked}
     assert "flatten_h3" in tnames
     assert len(tnames) > len(names)  # nearby holds / gates
+    live = fmb.recipes_from_action(
+        universe="flatten", hold="auto", gate="auto", rank="auto",
+        side="long", top_n="auto", exit="auto", entry="live",
+        auto_tweak=False)
+    assert all((r.get("require") or {}).get("live_entry") for r in live)
+    assert any(r["name"].startswith("flatten_live") for r in live)
+
+
+def test_live_entry_skips_hold_mornings() -> None:
+    rec_wish = fm.make_recipe("flatten_h1", universe="flatten", hold=1)
+    rec_live = fm.make_recipe(
+        "flatten_live_h1", universe="flatten", hold=1,
+        require={"live_entry": True})
+    hold_row = {
+        "date": "2026-08-13", "ticker": "IREN", "sources": ["flatten"],
+        "boxes": {}, "flatten_ok": False, "src_rank": 0,
+    }
+    fire_row = dict(hold_row, flatten_ok=True, date="2026-08-20")
+    assert fm.matches(hold_row, rec_wish) is True
+    assert fm.matches(hold_row, rec_live) is False
+    assert fm.matches(fire_row, rec_live) is True
+
+
+def test_short_book_marks_liability_and_cover() -> None:
+    from src import factor_mine_book as fmb
+    from src import paper_trade as pt
+    cal = ["2026-08-17", "2026-08-18"]
+    rows = [
+        {"date": "2026-08-17", "ticker": "AAA", "sources": ["union"],
+         "boxes": {}, "alarm": True, "src_rank": 0},
+        {"date": "2026-08-18", "ticker": "AAA", "sources": ["union"],
+         "boxes": {}, "alarm": True, "src_rank": 0},
+    ]
+    by_date = {}
+    for r in rows:
+        by_date.setdefault(r["date"], []).append(r)
+    panel = {"session_dates": cal, "rows": rows, "by_date": by_date}
+    bars = {
+        ("AAA", "2026-08-17"): {"open": 100, "close": 100},
+        ("AAA", "2026-08-18"): {"open": 90, "close": 90},
+    }
+    rec = fm.make_recipe("short_alarm_h1", hold=1, side="short",
+                         require={"alarm": True}, top_n=1)
+    book = fmb.simulate_book(panel, rec, bars=bars, fees=pt.load_fees(),
+                             regime={})
+    d0 = book["daily"][0]
+    # Liability mark: stock is negative; equity stays near $10k, not $20k.
+    assert d0["stock"] < 0
+    assert 8_000 < d0["equity"] < 11_000
+    assert book["total_ret_pct"] < 80  # no fantasy +300% from inverted mark
+    shorts = [t for t in book["trades"] if t["side"] == "SHORT"]
+    assert shorts
+    # 2× cover: one name gets ≤ 50% of equity.
+    assert shorts[0]["shares"] * shorts[0]["price"] <= 5_500
 
 
 def test_recipes_cover_holds_shorts_and_exits() -> None:
@@ -333,6 +387,8 @@ def test_recipes_cover_holds_shorts_and_exits() -> None:
     assert "union_h3_exit_alarm" in names
     assert "short_alarm_h1" in names
     assert "union_w_hot_cond_h1" in names
+    assert "flatten_live_h5" in names
+    assert any((r.get("require") or {}).get("live_entry") for r in recs)
 
 
 def test_template_has_data_slot() -> None:
@@ -382,7 +438,9 @@ if __name__ == "__main__":
     test_cash_book_whole_shares_fees_and_hard_red()
     test_min_hold_blocks_sell_until_floor()
     test_action_dropdown_auto_tweaks_neighbors()
+    test_live_entry_skips_hold_mornings()
+    test_short_book_marks_liability_and_cover()
     test_recipes_cover_holds_shorts_and_exits()
     test_template_has_data_slot()
     test_write_outputs_injects_payload()
-    print("16 factor-mine tests passed")
+    print("18 factor-mine tests passed")

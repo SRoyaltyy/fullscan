@@ -57,6 +57,12 @@ on:
         required: true
         default: auto
         options: [auto, none, alarm, last_red, news_bad]
+      entry:
+        description: "Flatten entry. live = only when flatten_robust 09:30 gate fires. list = wish-list (HOLD mornings still buy). auto = both"
+        type: choice
+        required: true
+        default: auto
+        options: [auto, list, live]
       auto_tweak:
         description: "Also run nearby holds/gates/ranks (less manual clicking)"
         required: false
@@ -100,6 +106,7 @@ jobs:
           SIDE: ${{ inputs.side }}
           TOP_N: ${{ inputs.top_n }}
           EXIT: ${{ inputs.exit }}
+          ENTRY: ${{ inputs.entry }}
           AUTO: ${{ inputs.auto_tweak }}
           REBUILD: ${{ inputs.rebuild_panel }}
         run: |
@@ -108,7 +115,7 @@ jobs:
                 --universe "${UNIVERSE:-auto}" --hold "${HOLD:-auto}"
                 --gate "${GATE:-auto}" --rank "${RANK:-auto}"
                 --side "${SIDE:-auto}" --top-n "${TOP_N:-auto}"
-                --exit "${EXIT:-auto}")
+                --exit "${EXIT:-auto}" --entry "${ENTRY:-auto}")
           [ -n "${TO_DATE:-}" ] && ARGS+=(--to-date "$TO_DATE")
           [ "${REBUILD:-false}" = "true" ] && ARGS+=(--rebuild-panel)
           [ "${AUTO:-true}" = "false" ] && ARGS+=(--no-auto-tweak)

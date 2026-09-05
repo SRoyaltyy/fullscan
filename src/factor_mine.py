@@ -81,6 +81,7 @@ _SCAN_CACHE: dict[tuple[str, str], dict | None] = {}
 _OHLC_CACHE: dict[tuple[str, str], dict] = {}
 _CANDLE_CACHE: dict[tuple[str, str], dict] = {}
 _EXPORT_CACHE: dict[str, dict] = {}
+_PLAN: dict | None = None
 
 
 def _tick(v) -> str:
@@ -240,7 +241,11 @@ def build_recipes() -> list[dict]:
 
     add(name="flatten_vol_g_h3", universe="flatten", hold=3,
         require={"vol": "good"}, forbid={"alarm": True},
-        note="flatten book ∩ vol🟢")
+        note="flatten wish-list ∩ vol🟢")
+    for hold in (1, 3, 5):
+        add(name=f"flatten_live_h{hold}", universe="flatten", hold=hold,
+            require={"live_entry": True},
+            note="09:30 tickets only when flatten_robust gate fires (mover)")
     add(name="ohlc_hot_coil_h1", universe="ohlc_hot", hold=1,
         require={"ret_5_min": 0.0, "ret_5_max": 10.0, "rvol_max": 2.2},
         forbid={"alarm": True}, note="hot list ∩ not exploded")
@@ -308,6 +313,40 @@ def _cam_ok(got: str, want) -> bool:
     return got == w
 
 
+def flatten_plan(date: str) -> dict:
+    """Live flatten_robust would-buy / route for one session.
+
+    Cached. Used so ``live_entry`` recipes only buy when the 09:30
+    flatten gate actually fires (green S, ≥5 priced BUYs, prior book).
+    Wish-list HOLD mornings are not tickets.
+    """
+    global _PLAN
+    if not date:
+        return {}
+    try:
+        if _PLAN is None:
+            payload = sm.load_payload()
+            books = sm.list_books()
+            _PLAN = {
+                "payload": payload,
+                "books": books,
+                "book_map": sm.load_book_map(books),
+                "cal": sm.session_calendar(payload, books),
+                "pol": sm.live_policy(),
+                "by_date": {},
+            }
+        hit = _PLAN["by_date"].get(date)
+        if hit is None:
+            hit = fla.flatten_day_targets(
+                date, payload=_PLAN["payload"], books=_PLAN["books"],
+                pol=_PLAN["pol"], book_map=_PLAN["book_map"], cal=_PLAN["cal"],
+            )
+            _PLAN["by_date"][date] = hit
+        return hit
+    except Exception:
+        return {}
+
+
 def matches(row: dict, rec: dict) -> bool:
     uni = rec.get("universe") or "union"
     srcs = set(row.get("sources") or [])
@@ -315,6 +354,12 @@ def matches(row: dict, rec: dict) -> bool:
         return False
     req = rec.get("require") or {}
     forb = rec.get("forbid") or {}
+    if req.get("live_entry"):
+        ok = row.get("flatten_ok")
+        if ok is None:
+            ok = flatten_plan(row.get("date") or "").get("flatten_ok")
+        if not ok:
+            return False
     boxes = row.get("boxes") or {}
     for cam in CAMERAS:
         want = req.get(cam)
@@ -878,7 +923,15 @@ def run(from_date: str = START, to_date: str | None = None,
     for s in stats:
         eq = s["equity"]
         series[s["name"]] = eq[1:] if len(eq) == len(dates) + 1 else eq
-    featured = [s["name"] for s in stats if s.get("reliable")][:8]
+    extra = [n for n in (
+        "flatten_live_h1", "flatten_live_h3", "flatten_live_h5",
+        "union_e_fresh_h3", "union_news_g_h5", "union_white_coil_h1",
+        "union_e_green_h3",
+    ) if any(s["name"] == n for s in stats)]
+    featured = []
+    for n in [s["name"] for s in stats if s.get("reliable")][:8] + extra:
+        if n not in featured:
+            featured.append(n)
     payload = {
         "generated_at": datetime.now(tl.ET).isoformat(),
         "asof": "09:30_et",
@@ -906,6 +959,7 @@ def run(from_date: str = START, to_date: str | None = None,
                          "n_skips", "realized", "cash", "total_ret_pct")}
             for n in featured if n in books
         },
+        "md_names": [s["name"] for s in stats if s.get("book_n_trades")],
         "recipes": recipes,
         "panel_n": panel.get("n_rows"),
     }
@@ -946,9 +1000,11 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
         f"fill `{payload.get('fill')}`.",
         "",
         "Cash book: $10k, whole shares, Futubull fees, leftover split, "
-        "sell first, min-hold, 09:30 open, hard-red S≤−3 sit. "
-        "Signal-only % is the old equal-weight path (not a fill). "
-        "Research only — does not change live `flatten_robust`.",
+        "sell first, min-hold, 09:30 open, hard-red S≤−3 sit, shorts "
+        "marked as a liability. Signal-only % is the old equal-weight "
+        "path (not a fill). `flatten_h*` = wish-list (io/HOLD mornings "
+        "still buy). `flatten_live_*` = only when the live flatten gate "
+        "fires. Research only — does not change live `flatten_robust`.",
         "",
         "Action blotters: [FACTOR_MINE_ACTION.md](FACTOR_MINE_ACTION.md).",
         "",
@@ -1002,6 +1058,7 @@ def main(argv=None) -> int:
     ap.add_argument("--side", default="auto", choices=fmb.SIDES)
     ap.add_argument("--top-n", default="auto", choices=fmb.TOP_NS)
     ap.add_argument("--exit", default="auto", choices=fmb.EXITS)
+    ap.add_argument("--entry", default="auto", choices=fmb.ENTRIES)
     ap.add_argument("--auto-tweak", dest="auto_tweak", action="store_true",
                     default=True)
     ap.add_argument("--no-auto-tweak", dest="auto_tweak", action="store_false")
@@ -1011,7 +1068,7 @@ def main(argv=None) -> int:
     recipes = fmb.recipes_from_action(
         universe=args.universe, hold=args.hold, gate=args.gate,
         rank=args.rank, side=args.side, top_n=args.top_n, exit=args.exit,
-        auto_tweak=args.auto_tweak,
+        entry=args.entry, auto_tweak=args.auto_tweak,
     )
     payload = run(
         args.from_date, args.to_date or None, write=args.write,
