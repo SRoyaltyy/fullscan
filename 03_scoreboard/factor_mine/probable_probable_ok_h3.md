@@ -46,71 +46,71 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## Fills (what was bought / sold)
 
-| Date 09:30 ET | Side | Ticker | Shares | Px | Fees | P/L | Cash after | Why | Cameras |
-|---|---|---|---:|---:|---:|---:|---:|---|---|
-| 2026-08-14 09:30 ET | **BUY** | `ANGX` | 464 | $4.31 | $5.99 | — | $7,994.17 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+0.5; leftover $2000.00 | join🟢 sector🟢 gen🟢 news🟢 vol🟢 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `HYLN` | 478 | $4.18 | $6.17 | — | $5,989.97 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ⚪; ret5=+4.1; leftover $2000.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `WDC` | 3 | $503.50 | $2.00 | — | $4,477.47 | combo gate; gate last_green=True,ret_5_max=10.0; list probable; 🔵; ⚪; ret5=+7.9; leftover $2000.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `ADUR` | 121 | $16.50 | $2.35 | — | $2,478.62 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,ohlc_hot; 🔵; ⚪; ret5=+9.3; leftover $2000.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `ALGM` | 45 | $44.06 | $2.12 | — | $493.79 | combo gate; gate last_green=True,ret_5_max=10.0; list probable; 🔵; ret5=+3.9; leftover $2000.00 | join🟢 sector🟢 gen🟢 news🟡 vol🔴 buy🟡 |
-| 2026-08-17 09:30 ET | **BUY** | `CDNL` | 2 | $39.85 | $0.80 | — | $413.29 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; ⚪; ret5=-38.4; leftover $82.30 | join🟡 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
-| 2026-08-17 09:30 ET | **BUY** | `ABX` | 9 | $9.12 | $0.85 | — | $330.36 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ⚪; ret5=-2.6; leftover $82.30 | join🟢 sector🟢 gen🟢 news🟡 judge🟢 vol🟢 buy🟡 |
-| 2026-08-17 09:30 ET | **BUY** | `VERA` | 2 | $31.30 | $0.63 | — | $267.13 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; ret5=-3.8; leftover $82.30 | join🟡 sector🔴 gen🟢 news🟡 judge🟢 vol🟢 buy🟡 |
-| 2026-08-17 09:30 ET | **BUY** | `OCC` | 4 | $18.24 | $0.74 | — | $193.43 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,ohlc_hot; ⚪; ret5=+9.5; leftover $82.30 | join🟡 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
-| 2026-08-17 09:30 ET | **BUY** | `ALM` | 5 | $16.20 | $0.82 | — | $111.60 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,ohlc_hot; 🔵; ⚪; ret5=+6.4; leftover $82.30 | join🟢 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
-| 2026-08-19 09:30 ET | **SELL** | `ANGX` | 464 | $4.79 | $6.08 | $+210.65 | $2,328.08 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟢 vol🟢 buy🟡 |
-| 2026-08-19 09:30 ET | **SELL** | `HYLN` | 478 | $3.87 | $6.26 | $-160.61 | $4,171.68 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-19 09:30 ET | **SELL** | `WDC` | 3 | $494.28 | $2.02 | $-31.68 | $5,652.50 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-19 09:30 ET | **SELL** | `ADUR` | 121 | $15.65 | $2.39 | $-107.59 | $7,543.76 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-19 09:30 ET | **SELL** | `ALGM` | 45 | $40.00 | $2.15 | $-186.97 | $9,341.61 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-20 09:30 ET | **SELL** | `CDNL` | 2 | $43.13 | $0.89 | $+4.87 | $9,426.98 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-20 09:30 ET | **SELL** | `ABX` | 9 | $9.13 | $0.87 | $-1.63 | $9,508.29 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-20 09:30 ET | **SELL** | `VERA` | 2 | $32.30 | $0.67 | $+0.69 | $9,572.20 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-20 09:30 ET | **SELL** | `OCC` | 4 | $14.10 | $0.60 | $-17.90 | $9,628.01 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-20 09:30 ET | **SELL** | `ALM` | 5 | $15.81 | $0.83 | $-3.60 | $9,706.23 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-20 09:30 ET | **BUY** | `DNA` | 186 | $7.45 | $2.55 | — | $8,317.98 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=+6.9; leftover $1386.60 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 vol🟢 buy🟡 |
-| 2026-08-20 09:30 ET | **BUY** | `MSTR` | 12 | $113.23 | $2.03 | — | $6,957.20 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ret5=+9.9; leftover $1386.60 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 peer🟢 vol🟢 buy🟡 |
-| 2026-08-20 09:30 ET | **BUY** | `EXK` | 128 | $10.77 | $2.37 | — | $5,576.26 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ret5=+3.6; leftover $1386.60 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 vol🟢 buy🟡 |
-| 2026-08-20 09:30 ET | **BUY** | `SCZM` | 146 | $9.46 | $2.43 | — | $4,192.68 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ⚪; ret5=+7.6; leftover $1386.60 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 vol🟢 buy🟡 |
-| 2026-08-20 09:30 ET | **BUY** | `NG` | 165 | $8.38 | $2.48 | — | $2,807.49 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ret5=+7.5; leftover $1386.60 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 vol🟢 buy🟡 |
-| 2026-08-20 09:30 ET | **BUY** | `BLSH` | 47 | $29.20 | $2.13 | — | $1,432.96 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ret5=+9.3; leftover $1386.60 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 vol🟢 buy🟡 |
-| 2026-08-20 09:30 ET | **BUY** | `HYMC` | 50 | $27.25 | $2.14 | — | $68.32 | combo gate; gate last_green=True,ret_5_max=10.0; list probable; 🔵; ret5=+1.6; leftover $1386.60 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 vol🟢 buy🟡 |
-| 2026-08-21 09:30 ET | **BUY** | `BTBT` | 8 | $1.66 | $0.16 | — | $54.88 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=+7.0; leftover $13.66 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 vol🟢 buy🟡 |
-| 2026-08-21 09:30 ET | **BUY** | `ORBS` | 15 | $0.86 | $0.17 | — | $41.75 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,ohlc_hot; ret5=+9.7; leftover $13.66 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 vol🟡 buy🟡 |
-| 2026-08-21 09:30 ET | **BUY** | `GORO` | 4 | $3.11 | $0.14 | — | $29.17 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; ret5=+7.1; leftover $13.66 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 vol🟢 buy🟡 |
-| 2026-08-25 09:30 ET | **SELL** | `DNA` | 186 | $6.82 | $2.59 | $-122.32 | $1,295.10 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-25 09:30 ET | **SELL** | `MSTR` | 12 | $125.56 | $2.05 | $+143.89 | $2,799.78 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-25 09:30 ET | **SELL** | `EXK` | 128 | $10.72 | $2.41 | $-11.18 | $4,169.53 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-25 09:30 ET | **SELL** | `SCZM` | 146 | $9.57 | $2.46 | $+11.17 | $5,564.29 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-25 09:30 ET | **SELL** | `NG` | 165 | $9.34 | $2.52 | $+153.39 | $7,102.86 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-25 09:30 ET | **SELL** | `BLSH` | 47 | $31.00 | $2.15 | $+80.32 | $8,557.71 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-25 09:30 ET | **SELL** | `HYMC` | 50 | $25.73 | $2.16 | $-80.30 | $9,842.05 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-25 09:30 ET | **BUY** | `NPWR` | 1230 | $2.00 | $15.87 | — | $7,366.18 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=-12.8; leftover $2460.51 | join🟡 sector🟢 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 vol🟢 buy🟡 |
-| 2026-08-25 09:30 ET | **BUY** | `ALVO` | 471 | $5.22 | $6.08 | — | $4,901.48 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+9.2; leftover $2460.51 | join🟡 sector🟡 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
-| 2026-08-25 09:30 ET | **BUY** | `ALIT` | 165 | $14.86 | $2.48 | — | $2,447.10 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ret5=+3.0; leftover $2460.51 | join🔴 sector🟡 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟡 vol🟡 buy🟡 |
-| 2026-08-25 09:30 ET | **BUY** | `ZURA` | 382 | $6.38 | $4.93 | — | $5.01 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ⚪; ret5=+5.0; leftover $2460.51 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
-| 2026-08-27 09:30 ET | **SELL** | `BTBT` | 8 | $1.53 | $0.17 | $-1.36 | $17.09 | dropped from list after 4 sess (min 3) | — |
-| 2026-08-27 09:30 ET | **SELL** | `ORBS` | 15 | $0.80 | $0.18 | $-1.32 | $28.90 | dropped from list after 4 sess (min 3) | — |
-| 2026-08-27 09:30 ET | **SELL** | `GORO` | 4 | $3.77 | $0.18 | $+2.32 | $43.80 | dropped from list after 4 sess (min 3) | — |
-| 2026-08-28 09:30 ET | **SELL** | `NPWR` | 1230 | $1.83 | $16.09 | $-241.06 | $2,278.61 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-28 09:30 ET | **SELL** | `ALVO` | 471 | $4.88 | $6.17 | $-172.39 | $4,570.92 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-28 09:30 ET | **SELL** | `ALIT` | 165 | $14.54 | $2.53 | $-57.82 | $6,967.48 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-28 09:30 ET | **SELL** | `ZURA` | 382 | $6.02 | $5.01 | $-147.46 | $9,262.11 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-28 09:30 ET | **BUY** | `ANF` | 12 | $144.70 | $2.03 | — | $7,523.69 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=+0.8; leftover $1852.42 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `BHVN` | 109 | $16.95 | $2.32 | — | $5,673.82 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; ret5=-5.4; leftover $1852.42 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `BZ` | 100 | $18.50 | $2.29 | — | $3,821.53 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; ret5=+2.8; leftover $1852.42 | join🟢 sector🔴 gen🟡 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟢 |
-| 2026-08-28 09:30 ET | **BUY** | `LVWR` | 1342 | $1.38 | $17.31 | — | $1,952.26 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; ret5=+0.0; leftover $1852.42 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🔴 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `GRRR` | 116 | $15.94 | $2.34 | — | $100.88 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=-1.9; leftover $1852.42 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-09-02 09:30 ET | **SELL** | `ANF` | 12 | $142.00 | $2.05 | $-36.48 | $1,802.83 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-02 09:30 ET | **SELL** | `BHVN` | 109 | $15.39 | $2.35 | $-174.71 | $3,477.99 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-02 09:30 ET | **SELL** | `BZ` | 100 | $17.29 | $2.32 | $-125.61 | $5,204.67 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-02 09:30 ET | **SELL** | `LVWR` | 1342 | $1.19 | $17.55 | $-289.84 | $6,784.11 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-02 09:30 ET | **SELL** | `GRRR` | 116 | $14.75 | $2.37 | $-142.75 | $8,492.74 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-03 09:30 ET | **BUY** | `GPRO` | 2320 | $1.22 | $29.93 | — | $5,632.41 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; ret5=+5.9; leftover $2830.91 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `CRK` | 180 | $15.70 | $2.53 | — | $2,803.88 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover,mover_buy; 🔵; ret5=+1.1; leftover $2830.91 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
-| 2026-09-03 09:30 ET | **BUY** | `MMED` | 122 | $22.78 | $2.36 | — | $22.36 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+1.5; leftover $2830.91 | join🟢 sector🟡 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `BAK` | 3 | $1.95 | $0.07 | — | $16.44 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; ret5=+2.1; leftover $7.45 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `EOSE` | 2 | $3.57 | $0.08 | — | $9.23 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=-5.2; leftover $7.45 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| Date 09:30 ET | Side | Ticker | Shares | Px | Fees | P/L | Cash after | Equity (cash+stock) | Why | Cameras |
+|---|---|---|---:|---:|---:|---:|---:|---:|---|---|
+| 2026-08-14 09:30 ET | **BUY** | `ANGX` | 464 | $4.31 | $5.99 | — | $7,994.17 | ▼ $9,994.01 (-5.99) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+0.5; leftover $2000.00 | join🟢 sector🟢 gen🟢 news🟢 vol🟢 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `HYLN` | 478 | $4.18 | $6.17 | — | $5,989.97 | ▼ $9,987.85 (-12.15) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ⚪; ret5=+4.1; leftover $2000.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `WDC` | 3 | $503.50 | $2.00 | — | $4,477.47 | ▼ $9,985.85 (-14.15) | combo gate; gate last_green=True,ret_5_max=10.0; list probable; 🔵; ⚪; ret5=+7.9; leftover $2000.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `ADUR` | 121 | $16.50 | $2.35 | — | $2,478.62 | ▼ $9,983.50 (-16.50) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,ohlc_hot; 🔵; ⚪; ret5=+9.3; leftover $2000.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `ALGM` | 45 | $44.06 | $2.12 | — | $493.79 | ▼ $9,981.37 (-18.63) | combo gate; gate last_green=True,ret_5_max=10.0; list probable; 🔵; ret5=+3.9; leftover $2000.00 | join🟢 sector🟢 gen🟢 news🟡 vol🔴 buy🟡 |
+| 2026-08-17 09:30 ET | **BUY** | `CDNL` | 2 | $39.85 | $0.80 | — | $413.29 | ▲ $10,106.51 (+106.51) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; ⚪; ret5=-38.4; leftover $82.30 | join🟡 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
+| 2026-08-17 09:30 ET | **BUY** | `ABX` | 9 | $9.12 | $0.85 | — | $330.36 | ▲ $10,105.66 (+105.66) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ⚪; ret5=-2.6; leftover $82.30 | join🟢 sector🟢 gen🟢 news🟡 judge🟢 vol🟢 buy🟡 |
+| 2026-08-17 09:30 ET | **BUY** | `VERA` | 2 | $31.30 | $0.63 | — | $267.13 | ▲ $10,105.03 (+105.03) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; ret5=-3.8; leftover $82.30 | join🟡 sector🔴 gen🟢 news🟡 judge🟢 vol🟢 buy🟡 |
+| 2026-08-17 09:30 ET | **BUY** | `OCC` | 4 | $18.24 | $0.74 | — | $193.43 | ▲ $10,104.29 (+104.29) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,ohlc_hot; ⚪; ret5=+9.5; leftover $82.30 | join🟡 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
+| 2026-08-17 09:30 ET | **BUY** | `ALM` | 5 | $16.20 | $0.82 | — | $111.60 | ▲ $10,103.46 (+103.46) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,ohlc_hot; 🔵; ⚪; ret5=+6.4; leftover $82.30 | join🟢 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
+| 2026-08-19 09:30 ET | **SELL** | `ANGX` | 464 | $4.79 | $6.08 | $+210.65 | $2,328.08 | ▼ $9,736.66 (-263.34) | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟢 vol🟢 buy🟡 |
+| 2026-08-19 09:30 ET | **SELL** | `HYLN` | 478 | $3.87 | $6.26 | $-160.61 | $4,171.68 | ▼ $9,730.40 (-269.60) | dropped from list after 3 sess (min 3) | — |
+| 2026-08-19 09:30 ET | **SELL** | `WDC` | 3 | $494.28 | $2.02 | $-31.68 | $5,652.50 | ▼ $9,728.38 (-271.62) | dropped from list after 3 sess (min 3) | — |
+| 2026-08-19 09:30 ET | **SELL** | `ADUR` | 121 | $15.65 | $2.39 | $-107.59 | $7,543.76 | ▼ $9,725.99 (-274.01) | dropped from list after 3 sess (min 3) | — |
+| 2026-08-19 09:30 ET | **SELL** | `ALGM` | 45 | $40.00 | $2.15 | $-186.97 | $9,341.61 | ▼ $9,723.84 (-276.16) | dropped from list after 3 sess (min 3) | — |
+| 2026-08-20 09:30 ET | **SELL** | `CDNL` | 2 | $43.13 | $0.89 | $+4.87 | $9,426.98 | ▼ $9,709.19 (-290.81) | dropped from list after 3 sess (min 3) | — |
+| 2026-08-20 09:30 ET | **SELL** | `ABX` | 9 | $9.13 | $0.87 | $-1.63 | $9,508.29 | ▼ $9,708.33 (-291.67) | dropped from list after 3 sess (min 3) | — |
+| 2026-08-20 09:30 ET | **SELL** | `VERA` | 2 | $32.30 | $0.67 | $+0.69 | $9,572.20 | ▼ $9,707.65 (-292.35) | dropped from list after 3 sess (min 3) | — |
+| 2026-08-20 09:30 ET | **SELL** | `OCC` | 4 | $14.10 | $0.60 | $-17.90 | $9,628.01 | ▼ $9,707.06 (-292.94) | dropped from list after 3 sess (min 3) | — |
+| 2026-08-20 09:30 ET | **SELL** | `ALM` | 5 | $15.81 | $0.83 | $-3.60 | $9,706.23 | ▼ $9,706.23 (-293.77) | dropped from list after 3 sess (min 3) | — |
+| 2026-08-20 09:30 ET | **BUY** | `DNA` | 186 | $7.45 | $2.55 | — | $8,317.98 | ▼ $9,703.68 (-296.32) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=+6.9; leftover $1386.60 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 vol🟢 buy🟡 |
+| 2026-08-20 09:30 ET | **BUY** | `MSTR` | 12 | $113.23 | $2.03 | — | $6,957.20 | ▼ $9,701.66 (-298.34) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ret5=+9.9; leftover $1386.60 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 peer🟢 vol🟢 buy🟡 |
+| 2026-08-20 09:30 ET | **BUY** | `EXK` | 128 | $10.77 | $2.37 | — | $5,576.26 | ▼ $9,699.28 (-300.72) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ret5=+3.6; leftover $1386.60 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 vol🟢 buy🟡 |
+| 2026-08-20 09:30 ET | **BUY** | `SCZM` | 146 | $9.46 | $2.43 | — | $4,192.68 | ▼ $9,696.86 (-303.14) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ⚪; ret5=+7.6; leftover $1386.60 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 vol🟢 buy🟡 |
+| 2026-08-20 09:30 ET | **BUY** | `NG` | 165 | $8.38 | $2.48 | — | $2,807.49 | ▼ $9,694.37 (-305.63) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ret5=+7.5; leftover $1386.60 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 vol🟢 buy🟡 |
+| 2026-08-20 09:30 ET | **BUY** | `BLSH` | 47 | $29.20 | $2.13 | — | $1,432.96 | ▼ $9,692.24 (-307.76) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ret5=+9.3; leftover $1386.60 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 vol🟢 buy🟡 |
+| 2026-08-20 09:30 ET | **BUY** | `HYMC` | 50 | $27.25 | $2.14 | — | $68.32 | ▼ $9,690.10 (-309.90) | combo gate; gate last_green=True,ret_5_max=10.0; list probable; 🔵; ret5=+1.6; leftover $1386.60 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 vol🟢 buy🟡 |
+| 2026-08-21 09:30 ET | **BUY** | `BTBT` | 8 | $1.66 | $0.16 | — | $54.88 | ▲ $10,029.21 (+29.21) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=+7.0; leftover $13.66 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 vol🟢 buy🟡 |
+| 2026-08-21 09:30 ET | **BUY** | `ORBS` | 15 | $0.86 | $0.17 | — | $41.75 | ▲ $10,029.04 (+29.04) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,ohlc_hot; ret5=+9.7; leftover $13.66 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 vol🟡 buy🟡 |
+| 2026-08-21 09:30 ET | **BUY** | `GORO` | 4 | $3.11 | $0.14 | — | $29.17 | ▲ $10,028.90 (+28.90) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; ret5=+7.1; leftover $13.66 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 vol🟢 buy🟡 |
+| 2026-08-25 09:30 ET | **SELL** | `DNA` | 186 | $6.82 | $2.59 | $-122.32 | $1,295.10 | ▼ $9,895.07 (-104.93) | dropped from list after 3 sess (min 3) | — |
+| 2026-08-25 09:30 ET | **SELL** | `MSTR` | 12 | $125.56 | $2.05 | $+143.89 | $2,799.78 | ▼ $9,893.02 (-106.98) | dropped from list after 3 sess (min 3) | — |
+| 2026-08-25 09:30 ET | **SELL** | `EXK` | 128 | $10.72 | $2.41 | $-11.18 | $4,169.53 | ▼ $9,890.62 (-109.38) | dropped from list after 3 sess (min 3) | — |
+| 2026-08-25 09:30 ET | **SELL** | `SCZM` | 146 | $9.57 | $2.46 | $+11.17 | $5,564.29 | ▼ $9,888.16 (-111.84) | dropped from list after 3 sess (min 3) | — |
+| 2026-08-25 09:30 ET | **SELL** | `NG` | 165 | $9.34 | $2.52 | $+153.39 | $7,102.86 | ▼ $9,885.63 (-114.37) | dropped from list after 3 sess (min 3) | — |
+| 2026-08-25 09:30 ET | **SELL** | `BLSH` | 47 | $31.00 | $2.15 | $+80.32 | $8,557.71 | ▼ $9,883.48 (-116.52) | dropped from list after 3 sess (min 3) | — |
+| 2026-08-25 09:30 ET | **SELL** | `HYMC` | 50 | $25.73 | $2.16 | $-80.30 | $9,842.05 | ▼ $9,881.32 (-118.68) | dropped from list after 3 sess (min 3) | — |
+| 2026-08-25 09:30 ET | **BUY** | `NPWR` | 1230 | $2.00 | $15.87 | — | $7,366.18 | ▼ $9,865.45 (-134.55) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=-12.8; leftover $2460.51 | join🟡 sector🟢 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 vol🟢 buy🟡 |
+| 2026-08-25 09:30 ET | **BUY** | `ALVO` | 471 | $5.22 | $6.08 | — | $4,901.48 | ▼ $9,859.37 (-140.63) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+9.2; leftover $2460.51 | join🟡 sector🟡 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-25 09:30 ET | **BUY** | `ALIT` | 165 | $14.86 | $2.48 | — | $2,447.10 | ▼ $9,856.89 (-143.11) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ret5=+3.0; leftover $2460.51 | join🔴 sector🟡 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟡 vol🟡 buy🟡 |
+| 2026-08-25 09:30 ET | **BUY** | `ZURA` | 382 | $6.38 | $4.93 | — | $5.01 | ▼ $9,851.96 (-148.04) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ⚪; ret5=+5.0; leftover $2460.51 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-27 09:30 ET | **SELL** | `BTBT` | 8 | $1.53 | $0.17 | $-1.36 | $17.09 | ▼ $9,555.56 (-444.44) | dropped from list after 4 sess (min 3) | — |
+| 2026-08-27 09:30 ET | **SELL** | `ORBS` | 15 | $0.80 | $0.18 | $-1.32 | $28.90 | ▼ $9,555.37 (-444.63) | dropped from list after 4 sess (min 3) | — |
+| 2026-08-27 09:30 ET | **SELL** | `GORO` | 4 | $3.77 | $0.18 | $+2.32 | $43.80 | ▼ $9,555.19 (-444.81) | dropped from list after 4 sess (min 3) | — |
+| 2026-08-28 09:30 ET | **SELL** | `NPWR` | 1230 | $1.83 | $16.09 | $-241.06 | $2,278.61 | ▼ $9,275.83 (-724.17) | dropped from list after 3 sess (min 3) | — |
+| 2026-08-28 09:30 ET | **SELL** | `ALVO` | 471 | $4.88 | $6.17 | $-172.39 | $4,570.92 | ▼ $9,269.66 (-730.34) | dropped from list after 3 sess (min 3) | — |
+| 2026-08-28 09:30 ET | **SELL** | `ALIT` | 165 | $14.54 | $2.53 | $-57.82 | $6,967.48 | ▼ $9,267.12 (-732.88) | dropped from list after 3 sess (min 3) | — |
+| 2026-08-28 09:30 ET | **SELL** | `ZURA` | 382 | $6.02 | $5.01 | $-147.46 | $9,262.11 | ▼ $9,262.11 (-737.89) | dropped from list after 3 sess (min 3) | — |
+| 2026-08-28 09:30 ET | **BUY** | `ANF` | 12 | $144.70 | $2.03 | — | $7,523.69 | ▼ $9,260.09 (-739.91) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=+0.8; leftover $1852.42 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `BHVN` | 109 | $16.95 | $2.32 | — | $5,673.82 | ▼ $9,257.77 (-742.23) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; ret5=-5.4; leftover $1852.42 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `BZ` | 100 | $18.50 | $2.29 | — | $3,821.53 | ▼ $9,255.48 (-744.52) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; ret5=+2.8; leftover $1852.42 | join🟢 sector🔴 gen🟡 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟢 |
+| 2026-08-28 09:30 ET | **BUY** | `LVWR` | 1342 | $1.38 | $17.31 | — | $1,952.26 | ▼ $9,238.17 (-761.83) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; ret5=+0.0; leftover $1852.42 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `GRRR` | 116 | $15.94 | $2.34 | — | $100.88 | ▼ $9,235.83 (-764.17) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=-1.9; leftover $1852.42 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-02 09:30 ET | **SELL** | `ANF` | 12 | $142.00 | $2.05 | $-36.48 | $1,802.83 | ▼ $8,517.32 (-1,482.68) | dropped from list after 3 sess (min 3) | — |
+| 2026-09-02 09:30 ET | **SELL** | `BHVN` | 109 | $15.39 | $2.35 | $-174.71 | $3,477.99 | ▼ $8,514.97 (-1,485.03) | dropped from list after 3 sess (min 3) | — |
+| 2026-09-02 09:30 ET | **SELL** | `BZ` | 100 | $17.29 | $2.32 | $-125.61 | $5,204.67 | ▼ $8,512.65 (-1,487.35) | dropped from list after 3 sess (min 3) | — |
+| 2026-09-02 09:30 ET | **SELL** | `LVWR` | 1342 | $1.19 | $17.55 | $-289.84 | $6,784.11 | ▼ $8,495.11 (-1,504.89) | dropped from list after 3 sess (min 3) | — |
+| 2026-09-02 09:30 ET | **SELL** | `GRRR` | 116 | $14.75 | $2.37 | $-142.75 | $8,492.74 | ▼ $8,492.74 (-1,507.26) | dropped from list after 3 sess (min 3) | — |
+| 2026-09-03 09:30 ET | **BUY** | `GPRO` | 2320 | $1.22 | $29.93 | — | $5,632.41 | ▼ $8,462.81 (-1,537.19) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; ret5=+5.9; leftover $2830.91 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `CRK` | 180 | $15.70 | $2.53 | — | $2,803.88 | ▼ $8,460.28 (-1,539.72) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover,mover_buy; 🔵; ret5=+1.1; leftover $2830.91 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-09-03 09:30 ET | **BUY** | `MMED` | 122 | $22.78 | $2.36 | — | $22.36 | ▼ $8,457.92 (-1,542.08) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+1.5; leftover $2830.91 | join🟢 sector🟡 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `BAK` | 3 | $1.95 | $0.07 | — | $16.44 | ▼ $9,846.25 (-153.75) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; ret5=+2.1; leftover $7.45 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `EOSE` | 2 | $3.57 | $0.08 | — | $9.23 | ▼ $9,846.18 (-153.82) | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=-5.2; leftover $7.45 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 
 ## Not taken
 

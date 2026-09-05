@@ -271,6 +271,11 @@ def test_cash_book_whole_shares_fees_and_hard_red() -> None:
     cheap_buy = next(t for t in book["trades"] if t["ticker"] == "CHEAP" and t["side"] == "BUY")
     assert cheap_buy["shares"] >= 1
     assert cheap_buy["fees"] > 0
+    assert cheap_buy.get("equity_after") is not None
+    assert cheap_buy["equity_after"] == round(
+        cheap_buy["cash_after"] + cheap_buy["shares"] * 10, 2)
+    assert cheap_buy["equity_after"] < 10_000  # Futubull fees
+    assert cheap_buy["equity_delta"] < 0
     # Hard-red sit: no new buys on 8-17.
     red = fmb.simulate_book(
         panel, rec, bars=bars, fees=fees,
@@ -423,6 +428,10 @@ def test_template_has_data_slot() -> None:
     assert "Open cash" in text
     assert "Audit" in text or "audit" in text
     assert "AvgW" in text
+    assert "Equity" in text
+    assert "selectSleeve" in text
+    assert "this sleeve only" in text
+    assert "Pick a sleeve" in text or "pick a sleeve" in text.lower()
     assert "leak-free" in text.lower() or "Leak-free" in text
 
 
@@ -448,6 +457,43 @@ def test_write_outputs_injects_payload(tmp_path=None) -> None:
     assert "loser_hits" in payload["stats"][0]
     assert "avg_win_pct" in payload["stats"][0]
     assert payload["stats"][0]["reliable"] is False  # empty book is thin
+
+
+def test_dash_payload_ships_every_book_and_features_high_return() -> None:
+    from src import paper_trade as pt
+    cal = ["2026-08-17", "2026-08-18"]
+    rows = [
+        {"date": "2026-08-17", "ticker": "WIN", "sources": ["union"],
+         "boxes": {}, "alarm": False, "src_rank": 0, "last_green": True},
+        {"date": "2026-08-18", "ticker": "WIN", "sources": ["union"],
+         "boxes": {}, "alarm": False, "src_rank": 0, "last_green": True},
+    ]
+    by_date = {}
+    for r in rows:
+        by_date.setdefault(r["date"], []).append(r)
+    panel = {
+        "from_date": "2026-08-17", "to_date": "2026-08-18",
+        "session_dates": cal, "n_rows": 2, "n_sessions": 2,
+        "rows": rows, "by_date": by_date,
+    }
+    bars = {
+        ("WIN", "2026-08-17"): {"open": 10, "close": 12},
+        ("WIN", "2026-08-18"): {"open": 12, "close": 13},
+    }
+    recs = [
+        fm.make_recipe("high_ret_h1", hold=1, top_n=1),
+        fm.make_recipe("also_h1", hold=1, top_n=1),
+    ]
+    payload = fm.run(
+        "2026-08-17", "2026-08-18", write=False, recipes=recs, panel=panel,
+        book=True, bars=bars,
+    )
+    assert set(payload["books"]) == {"high_ret_h1", "also_h1"}
+    t0 = (payload["books"]["high_ret_h1"].get("trades") or [None])[0]
+    assert t0 and t0.get("equity_after") is not None
+    assert "cameras" not in t0
+    assert "daily" not in payload["books"]["high_ret_h1"]
+    assert payload["daily"]["high_ret_h1"]
 
 
 def _panel(cal, rows, extra=None):
@@ -642,4 +688,5 @@ if __name__ == "__main__":
     test_rank_w_gives_more_shares_to_first()
     test_sboost_more_names_on_good_s_still_cash_capped()
     test_action_filters_size_sell_boost()
-    print("25 factor-mine tests passed")
+    test_dash_payload_ships_every_book_and_features_high_return()
+    print("26 factor-mine tests passed")

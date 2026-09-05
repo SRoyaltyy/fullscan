@@ -1,6 +1,6 @@
 # Strategy board — every shipped book
 
-_Generated 2026-09-05T08:57:11 — 2026-08-13 → 2026-09-03_
+_Generated 2026-09-05T10:07:25 — 2026-08-13 → 2026-09-03_
 
 Live production method is **`flatten_robust`**: 3d size-book selection (not raw 2w_size), 3-session recycle, same flatten-switch clock, plus S ≤ −3 blocks new buys. Working lots and due 1d exits stay on.
 

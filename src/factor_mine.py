@@ -976,8 +976,12 @@ def run(from_date: str = START, to_date: str | None = None,
         "union_h5_sboost", "flatten_live_h1_sizeup",
         "union_h3_cut", "union_h1_topheavy",
     ) if any(s["name"] == n for s in stats)]
+    by_ret = [s["name"] for s in sorted(
+        [s for s in stats if s.get("reliable") and s.get("total_ret_pct") is not None],
+        key=lambda s: -float(s["total_ret_pct"]),
+    )[:8]]
     featured = []
-    for n in [s["name"] for s in stats if s.get("reliable")][:8] + extra:
+    for n in by_ret + [s["name"] for s in stats if s.get("reliable")][:8] + extra:
         if n not in featured:
             featured.append(n)
     payload = {
@@ -1001,13 +1005,7 @@ def run(from_date: str = START, to_date: str | None = None,
         "series": series,
         "daily": {s["name"]: s["daily"] for s in stats},
         "starts": {s["name"]: s["starts"] for s in stats},
-        "books": {
-            n: {k: v for k, v in books[n].items()
-                if k in ("daily", "trades", "skips", "open", "n_trades",
-                         "n_skips", "realized", "cash", "total_ret_pct",
-                         "audit", "size", "sell", "s_boost")}
-            for n in featured if n in books
-        },
+        "books": {n: _slim_dash_book(bk) for n, bk in books.items()},
         "md_names": [s["name"] for s in stats if s.get("book_n_trades")],
         "recipes": recipes,
         "panel_n": panel.get("n_rows"),
@@ -1015,6 +1013,29 @@ def run(from_date: str = START, to_date: str | None = None,
     if write:
         write_outputs(payload, stats, books=books)
     return payload
+
+
+def _slim_dash_book(bk: dict) -> dict:
+    """Fills for the phone page. Daily state lives on payload['daily']."""
+    keep_t = (
+        "date", "ticker", "side", "shares", "price", "fees", "pnl",
+        "cash_after", "equity_after", "equity_delta", "stock_after", "reason",
+    )
+    keep_k = ("date", "ticker", "kind", "reason")
+    return {
+        "trades": [{k: t.get(k) for k in keep_t} for t in (bk.get("trades") or [])],
+        "skips": [{k: x.get(k) for k in keep_k} for x in (bk.get("skips") or [])],
+        "open": bk.get("open"),
+        "n_trades": bk.get("n_trades"),
+        "n_skips": bk.get("n_skips"),
+        "realized": bk.get("realized"),
+        "cash": bk.get("cash"),
+        "total_ret_pct": bk.get("total_ret_pct"),
+        "audit": bk.get("audit"),
+        "size": bk.get("size"),
+        "sell": bk.get("sell"),
+        "s_boost": bk.get("s_boost"),
+    }
 
 
 def pt_fees():

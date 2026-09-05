@@ -46,130 +46,130 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## Fills (what was bought / sold)
 
-| Date 09:30 ET | Side | Ticker | Shares | Px | Fees | P/L | Cash after | Why | Cameras |
-|---|---|---|---:|---:|---:|---:|---:|---|---|
-| 2026-08-13 09:30 ET | **BUY** | `BTSG` | 10 | $59.80 | $2.02 | — | $9,399.98 | deploy half leftover; list flatten; ⚪; ret5=-5.3; leftover $625.00 | join🟢 sector🟢 gen🟢 judge🟢 |
-| 2026-08-13 09:30 ET | **BUY** | `IREN` | 13 | $45.98 | $2.03 | — | $8,800.21 | deploy half leftover; list flatten; ⚪; ret5=+12.3; leftover $625.00 | join🟢 sector🟢 gen🟢 judge🟢 |
-| 2026-08-13 09:30 ET | **BUY** | `TPG` | 12 | $50.62 | $2.03 | — | $8,190.71 | deploy half leftover; list flatten; ⚪; ret5=+6.2; leftover $625.00 | join🟢 sector🟢 gen🟢 judge🟢 |
-| 2026-08-13 09:30 ET | **BUY** | `TGTX` | 12 | $49.70 | $2.03 | — | $7,592.28 | deploy half leftover; list flatten; ⚪; ret5=-0.8; leftover $625.00 | join🟢 sector🟢 gen🟢 judge🟢 |
-| 2026-08-13 09:30 ET | **BUY** | `SLS` | 53 | $11.70 | $2.15 | — | $6,970.03 | deploy half leftover; list flatten; ⚪; ret5=-0.8; leftover $625.00 | join🟢 sector🟢 gen🟢 judge🟢 |
-| 2026-08-13 09:30 ET | **BUY** | `HIMS` | 21 | $29.74 | $2.05 | — | $6,343.44 | deploy half leftover; list flatten; ⚪; ret5=-5.3; leftover $625.00 | join🟢 sector🟢 gen🟢 judge🟢 |
-| 2026-08-13 09:30 ET | **BUY** | `INO` | 771 | $0.81 | $8.56 | — | $5,710.37 | deploy half leftover; list flatten; ⚪; ret5=+13.2; leftover $625.00 | join🟢 sector🟢 gen🟢 judge🟢 |
-| 2026-08-13 09:30 ET | **BUY** | `TNDM` | 26 | $23.33 | $2.07 | — | $5,101.72 | deploy half leftover; list flatten; ⚪; ret5=+19.7; leftover $625.00 | join🟢 sector🟢 gen🟢 judge🟢 |
-| 2026-08-14 09:30 ET | **BUY** | `VST` | 2 | $146.90 | $2.00 | — | $4,805.93 | deploy half leftover; list flatten; 🔵; ret5=+3.6; leftover $318.86 | join🟢 sector🟢 gen🟢 news🟢 vol🔴 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `NRG` | 2 | $120.00 | $2.00 | — | $4,563.93 | deploy half leftover; list flatten; 🔵; ret5=+0.6; leftover $318.86 | join🟢 sector🟢 gen🟢 news🟢 vol🔴 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `SLG` | 5 | $57.61 | $2.00 | — | $4,273.88 | deploy half leftover; list flatten; 🔵; ret5=+5.7; leftover $318.86 | join🟢 sector🟢 gen🟢 news🟡 judge🔴 vol🟡 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `MARA` | 35 | $9.01 | $2.10 | — | $3,956.43 | deploy half leftover; list flatten; 🔵; ⚪; ret5=-13.5; leftover $318.86 | join🟢 sector🟢 gen🟢 news🟡 judge🟢 vol🟡 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `LDI` | 340 | $0.94 | $4.21 | — | $3,633.64 | deploy half leftover; list flatten; 🔵; ⚪; ret5=+0.5; leftover $318.86 | join🟢 sector🟢 gen🟢 news🟡 judge🟢 vol🟡 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `BTBT` | 212 | $1.50 | $2.73 | — | $3,312.91 | deploy half leftover; list flatten; 🔵; ⚪; ret5=+9.2; leftover $318.86 | join🟢 sector🟢 gen🟢 news🟡 judge🟢 vol🟢 buy🟡 |
-| 2026-08-17 09:30 ET | **BUY** | `DVN` | 4 | $46.18 | $1.86 | — | $3,126.33 | deploy half leftover; list flatten; 🔵; ret5=+6.7; leftover $207.06 | join🟢 sector🟢 gen🟢 news🟢 vol🔴 buy🟢 |
-| 2026-08-17 09:30 ET | **BUY** | `EOG` | 1 | $142.77 | $1.43 | — | $2,982.13 | deploy half leftover; list flatten; 🔵; ret5=+5.8; leftover $207.06 | join🟢 sector🟢 gen🟢 news🟢 vol🔴 buy🟢 |
-| 2026-08-17 09:30 ET | **BUY** | `FANG` | 1 | $202.70 | $1.99 | — | $2,777.44 | deploy half leftover; list flatten; 🔵; ret5=+8.3; leftover $207.06 | join🟢 sector🟢 gen🟢 news🟢 vol🔴 buy🟢 |
-| 2026-08-17 09:30 ET | **BUY** | `TMC` | 51 | $4.05 | $2.14 | — | $2,568.74 | deploy half leftover; list flatten; 🔵; ⚪; ret5=-12.3; leftover $207.06 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
-| 2026-08-17 09:30 ET | **BUY** | `TGB` | 24 | $8.46 | $2.06 | — | $2,363.64 | deploy half leftover; list flatten; 🔵; ⚪; ret5=+0.4; leftover $207.06 | join🟢 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
-| 2026-08-17 09:30 ET | **BUY** | `ELF` | 2 | $90.54 | $1.82 | — | $2,180.75 | deploy half leftover; list flatten; ret5=-7.2; leftover $207.06 | join🟢 sector🟢 gen🟢 news🟡 vol🔴 buy🟡 |
-| 2026-08-17 09:30 ET | **BUY** | `DNN` | 63 | $3.24 | $2.18 | — | $1,974.45 | deploy half leftover; list flatten; ⚪; ret5=+0.3; leftover $207.06 | join🟢 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
-| 2026-08-17 09:30 ET | **BUY** | `HNST` | 43 | $4.81 | $2.12 | — | $1,765.50 | deploy half leftover; list flatten; ⚪; ret5=-11.4; leftover $207.06 | join🟡 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
-| 2026-08-20 09:30 ET | **SELL** | `BTSG` | 10 | $58.64 | $2.04 | $-15.66 | $2,349.86 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-20 09:30 ET | **SELL** | `IREN` | 13 | $42.46 | $2.05 | $-49.84 | $2,899.79 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-20 09:30 ET | **SELL** | `TPG` | 12 | $53.06 | $2.05 | $+25.17 | $3,534.46 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-20 09:30 ET | **SELL** | `TGTX` | 12 | $51.65 | $2.05 | $+19.33 | $4,152.22 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-20 09:30 ET | **SELL** | `SLS` | 53 | $13.84 | $2.17 | $+109.10 | $4,883.57 | dropped from list after 5 sess (min 5) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟡 buy🟡 |
-| 2026-08-20 09:30 ET | **SELL** | `HIMS` | 21 | $30.66 | $2.07 | $+15.19 | $5,525.35 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-20 09:30 ET | **SELL** | `INO` | 771 | $1.30 | $10.08 | $+359.15 | $6,517.57 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-20 09:30 ET | **SELL** | `TNDM` | 26 | $23.11 | $2.09 | $-9.88 | $7,116.34 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-20 09:30 ET | **BUY** | `AG` | 21 | $20.55 | $2.05 | — | $6,682.74 | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+8.9; leftover $444.77 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
-| 2026-08-20 09:30 ET | **BUY** | `BHP` | 4 | $91.01 | $2.00 | — | $6,316.70 | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+2.4; leftover $444.77 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
-| 2026-08-20 09:30 ET | **BUY** | `CDE` | 21 | $20.65 | $2.05 | — | $5,880.99 | deploy half leftover; list flatten,yday_gainer,yday_mover,mover_buy; 🔵; ⚪; ret5=+11.3; leftover $444.77 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
-| 2026-08-20 09:30 ET | **BUY** | `HDSN` | 77 | $5.77 | $2.22 | — | $5,434.48 | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+4.6; leftover $444.77 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
-| 2026-08-20 09:30 ET | **BUY** | `IAG` | 22 | $19.63 | $2.06 | — | $5,000.57 | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+9.1; leftover $444.77 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
-| 2026-08-20 09:30 ET | **BUY** | `KGC` | 15 | $29.63 | $2.04 | — | $4,554.08 | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+8.7; leftover $444.77 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
-| 2026-08-20 09:30 ET | **BUY** | `NFGC` | 254 | $1.75 | $3.28 | — | $4,106.31 | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+7.9; leftover $444.77 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
-| 2026-08-20 09:30 ET | **BUY** | `WPM` | 3 | $144.54 | $2.00 | — | $3,670.69 | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+9.2; leftover $444.77 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
-| 2026-08-21 09:30 ET | **SELL** | `VST` | 2 | $139.99 | $2.02 | $-17.83 | $3,948.65 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-21 09:30 ET | **SELL** | `NRG` | 2 | $116.58 | $2.02 | $-10.85 | $4,179.79 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-21 09:30 ET | **SELL** | `SLG` | 5 | $58.63 | $2.02 | $+1.07 | $4,470.92 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-21 09:30 ET | **SELL** | `MARA` | 35 | $11.70 | $2.12 | $+89.94 | $4,878.30 | dropped from list after 5 sess (min 5) | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 vol🟢 buy🟡 |
-| 2026-08-21 09:30 ET | **SELL** | `LDI` | 340 | $0.87 | $4.03 | $-32.04 | $5,169.05 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-21 09:30 ET | **SELL** | `BTBT` | 212 | $1.66 | $2.78 | $+28.41 | $5,518.19 | dropped from list after 5 sess (min 5) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 vol🟢 buy🟡 |
-| 2026-08-21 09:30 ET | **BUY** | `AU` | 2 | $119.43 | $2.00 | — | $5,277.33 | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+20.4; leftover $344.89 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
-| 2026-08-21 09:30 ET | **BUY** | `AUPH` | 20 | $17.20 | $2.05 | — | $4,931.28 | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+13.8; leftover $344.89 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟢 |
-| 2026-08-21 09:30 ET | **BUY** | `AEM` | 1 | $216.30 | $1.99 | — | $4,712.99 | deploy half leftover; list flatten,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+17.6; leftover $344.89 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
-| 2026-08-21 09:30 ET | **BUY** | `ARCT` | 30 | $11.13 | $2.08 | — | $4,377.01 | deploy half leftover; list flatten,yday_gainer,mover_buy; 🔵; ⚪; ret5=+39.8; leftover $344.89 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
-| 2026-08-21 09:30 ET | **BUY** | `AUTL` | 139 | $2.47 | $2.41 | — | $4,031.27 | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+10.8; leftover $344.89 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
-| 2026-08-21 09:30 ET | **BUY** | `CRDL` | 178 | $1.93 | $2.52 | — | $3,685.21 | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+10.2; leftover $344.89 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
-| 2026-08-21 09:30 ET | **BUY** | `CRSP` | 5 | $59.72 | $2.00 | — | $3,384.61 | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+7.6; leftover $344.89 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
-| 2026-08-21 09:30 ET | **BUY** | `CYPH` | 261 | $1.32 | $3.37 | — | $3,036.72 | deploy half leftover; list flatten,yday_gainer,mover_buy; 🔵; ⚪; ret5=+83.6; leftover $344.89 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
-| 2026-08-24 09:30 ET | **SELL** | `DVN` | 4 | $48.84 | $1.99 | $+6.80 | $3,230.09 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-24 09:30 ET | **SELL** | `EOG` | 1 | $152.61 | $1.55 | $+6.86 | $3,381.15 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-24 09:30 ET | **SELL** | `FANG` | 1 | $209.47 | $2.01 | $+2.76 | $3,588.61 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-24 09:30 ET | **SELL** | `TMC` | 51 | $4.57 | $2.16 | $+22.21 | $3,819.52 | dropped from list after 5 sess (min 5) | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🔴 peer🟢 vol🟢 buy🟡 |
-| 2026-08-24 09:30 ET | **SELL** | `TGB` | 24 | $9.26 | $2.08 | $+15.06 | $4,039.68 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-24 09:30 ET | **SELL** | `ELF` | 2 | $101.53 | $2.02 | $+18.15 | $4,240.72 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-24 09:30 ET | **SELL** | `DNN` | 63 | $3.50 | $2.20 | $+12.00 | $4,459.02 | dropped from list after 5 sess (min 5) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🟡 ab🟡 peer🟢 vol🟢 buy🟢 |
-| 2026-08-24 09:30 ET | **SELL** | `HNST` | 43 | $5.05 | $2.14 | $+6.06 | $4,674.03 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-25 09:30 ET | **BUY** | `MOS` | 12 | $24.00 | $2.03 | — | $4,384.01 | deploy half leftover; list flatten; ⚪; ret5=+13.0; leftover $292.13 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟡 buy🟢 |
-| 2026-08-25 09:30 ET | **BUY** | `OCUL` | 26 | $10.92 | $2.07 | — | $4,098.02 | deploy half leftover; list flatten; 🔵; ret5=+10.4; leftover $292.13 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 vol🔴 buy🟢 |
-| 2026-08-25 09:30 ET | **BUY** | `INSP` | 4 | $61.47 | $2.00 | — | $3,850.14 | deploy half leftover; list flatten; 🔵; ret5=+9.2; leftover $292.13 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 vol🔴 buy🟢 |
-| 2026-08-25 09:30 ET | **BUY** | `CRMD` | 35 | $8.28 | $2.10 | — | $3,558.24 | deploy half leftover; list flatten; 🔵; ⚪; ret5=+8.8; leftover $292.13 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 vol🟡 buy🟡 |
-| 2026-08-25 09:30 ET | **BUY** | `RZLT` | 55 | $5.23 | $2.15 | — | $3,268.44 | deploy half leftover; list flatten; ret5=+10.7; leftover $292.13 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 vol🔴 buy🟡 |
-| 2026-08-25 09:30 ET | **BUY** | `BMEA` | 180 | $1.62 | $2.53 | — | $2,974.31 | deploy half leftover; list probable,yday_gainer,yday_mover,mover_buy; 🔵; ⚪; ret5=+3.8; leftover $292.13 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
-| 2026-08-25 09:30 ET | **BUY** | `NPWR` | 146 | $2.00 | $2.43 | — | $2,679.88 | deploy half leftover; list probable,yday_gainer,yday_mover; 🔵; ret5=-12.8; leftover $292.13 | join🟡 sector🟢 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 vol🟢 buy🟡 |
-| 2026-08-27 09:30 ET | **SELL** | `AG` | 21 | $20.63 | $2.07 | $-2.45 | $3,111.03 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-27 09:30 ET | **SELL** | `BHP` | 4 | $96.99 | $2.02 | $+19.90 | $3,496.97 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-27 09:30 ET | **SELL** | `CDE` | 21 | $21.00 | $2.07 | $+3.22 | $3,935.90 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-27 09:30 ET | **SELL** | `HDSN` | 77 | $5.51 | $2.24 | $-24.48 | $4,357.93 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-27 09:30 ET | **SELL** | `IAG` | 22 | $21.64 | $2.08 | $+40.09 | $4,831.93 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-27 09:30 ET | **SELL** | `KGC` | 15 | $32.90 | $2.06 | $+44.96 | $5,323.37 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-27 09:30 ET | **SELL** | `NFGC` | 254 | $2.00 | $3.33 | $+56.89 | $5,828.05 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-27 09:30 ET | **SELL** | `WPM` | 3 | $160.93 | $2.02 | $+45.15 | $6,308.82 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-27 09:30 ET | **BUY** | `RRC` | 11 | $40.72 | $2.02 | — | $5,858.87 | deploy half leftover; list flatten; ret5=+1.8; leftover $450.63 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `CRK` | 31 | $14.09 | $2.08 | — | $5,420.00 | deploy half leftover; list flatten; ret5=+1.1; leftover $450.63 | join🟢 sector🔴 gen🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `SLI` | 173 | $2.59 | $2.51 | — | $4,969.42 | deploy half leftover; list flatten; ret5=+4.2; leftover $450.63 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `ACMR` | 5 | $80.97 | $2.00 | — | $4,562.57 | deploy half leftover; list mover_buy; 🔵; ret5=-1.3; leftover $450.63 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `GGB` | 101 | $4.42 | $2.29 | — | $4,113.85 | deploy half leftover; list mover_buy; ret5=-8.6; leftover $450.63 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `MT` | 5 | $75.12 | $2.00 | — | $3,736.25 | deploy half leftover; list mover_buy; ret5=-2.2; leftover $450.63 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-28 09:30 ET | **SELL** | `AU` | 2 | $117.41 | $2.02 | $-8.05 | $3,969.05 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-28 09:30 ET | **SELL** | `AUPH` | 20 | $16.47 | $2.07 | $-18.72 | $4,296.38 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-28 09:30 ET | **SELL** | `AEM` | 1 | $214.11 | $2.01 | $-6.20 | $4,508.48 | dropped from list after 5 sess (min 5) | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
-| 2026-08-28 09:30 ET | **SELL** | `ARCT` | 30 | $15.74 | $2.10 | $+134.12 | $4,978.58 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-28 09:30 ET | **SELL** | `AUTL` | 139 | $2.32 | $2.44 | $-25.70 | $5,298.62 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-28 09:30 ET | **SELL** | `CRDL` | 178 | $2.09 | $2.56 | $+23.39 | $5,668.08 | dropped from list after 5 sess (min 5) | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🟢 buy🟡 |
-| 2026-08-28 09:30 ET | **SELL** | `CRSP` | 5 | $59.12 | $2.02 | $-7.03 | $5,961.65 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-28 09:30 ET | **SELL** | `CYPH` | 261 | $1.75 | $3.42 | $+105.44 | $6,414.98 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-28 09:30 ET | **BUY** | `ANF` | 5 | $144.70 | $2.00 | — | $5,689.48 | deploy half leftover; list probable,yday_gainer,yday_mover; 🔵; ret5=+0.8; leftover $801.87 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `BHVN` | 47 | $16.95 | $2.13 | — | $4,890.69 | deploy half leftover; list probable,yday_gainer,yday_mover; ret5=-5.4; leftover $801.87 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `BZ` | 43 | $18.50 | $2.12 | — | $4,093.08 | deploy half leftover; list probable,yday_gainer,yday_mover; ret5=+2.8; leftover $801.87 | join🟢 sector🔴 gen🟡 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟢 |
-| 2026-08-28 09:30 ET | **BUY** | `CAPR` | 87 | $9.19 | $2.25 | — | $3,291.29 | deploy half leftover; list probable,yday_gainer,yday_mover; ret5=-5.4; leftover $801.87 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-01 09:30 ET | **SELL** | `MOS` | 12 | $24.00 | $2.05 | $-4.07 | $3,577.25 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-01 09:30 ET | **SELL** | `OCUL` | 26 | $10.49 | $2.09 | $-15.34 | $3,847.90 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-01 09:30 ET | **SELL** | `INSP` | 4 | $63.05 | $2.02 | $+2.30 | $4,098.08 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-01 09:30 ET | **SELL** | `CRMD` | 35 | $8.26 | $2.12 | $-4.91 | $4,385.06 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-01 09:30 ET | **SELL** | `RZLT` | 55 | $4.69 | $2.17 | $-34.03 | $4,640.84 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-01 09:30 ET | **SELL** | `BMEA` | 180 | $1.65 | $2.57 | $+0.30 | $4,935.27 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-01 09:30 ET | **SELL** | `NPWR` | 146 | $1.78 | $2.46 | $-37.01 | $5,192.69 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-03 09:30 ET | **SELL** | `RRC` | 11 | $42.10 | $2.04 | $+11.11 | $5,653.74 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-03 09:30 ET | **SELL** | `SLI` | 173 | $2.49 | $2.55 | $-22.36 | $6,081.97 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-03 09:30 ET | **SELL** | `ACMR` | 5 | $70.52 | $2.02 | $-56.28 | $6,432.54 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-03 09:30 ET | **SELL** | `GGB` | 101 | $4.81 | $2.32 | $+34.78 | $6,916.03 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-03 09:30 ET | **SELL** | `MT` | 5 | $73.86 | $2.02 | $-10.33 | $7,283.31 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-03 09:30 ET | **BUY** | `ATRC` | 10 | $49.76 | $2.02 | — | $6,783.69 | deploy half leftover; list flatten; 🔵; ⚪; ret5=+10.6; leftover $520.24 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `HRMY` | 12 | $41.31 | $2.03 | — | $6,285.94 | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+0.1; leftover $520.24 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
-| 2026-09-03 09:30 ET | **BUY** | `CABA` | 159 | $3.27 | $2.47 | — | $5,763.54 | deploy half leftover; list flatten; 🔵; ⚪; ret5=+13.8; leftover $520.24 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `VSTM` | 67 | $7.70 | $2.19 | — | $5,245.45 | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+4.7; leftover $520.24 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
-| 2026-09-03 09:30 ET | **BUY** | `RVTY` | 4 | $125.94 | $2.00 | — | $4,739.69 | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+6.8; leftover $520.24 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `GPRO` | 426 | $1.22 | $5.50 | — | $4,214.47 | deploy half leftover; list probable,yday_gainer,yday_mover; ret5=+5.9; leftover $520.24 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `FRVO` | 28 | $18.40 | $2.07 | — | $3,697.20 | deploy half leftover; list probable,yday_gainer,yday_mover; ret5=-14.4; leftover $520.24 | join🔴 sector🟡 gen🟡 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
-| 2026-09-04 09:30 ET | **SELL** | `CRK` | 31 | $15.45 | $2.10 | $+37.97 | $4,174.05 | dropped from list after 6 sess (min 5) | — |
-| 2026-09-04 09:30 ET | **SELL** | `ANF` | 5 | $137.70 | $2.02 | $-39.03 | $4,860.52 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-04 09:30 ET | **SELL** | `BHVN` | 47 | $15.89 | $2.15 | $-54.10 | $5,605.20 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-04 09:30 ET | **SELL** | `BZ` | 43 | $17.31 | $2.14 | $-55.43 | $6,347.39 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-04 09:30 ET | **SELL** | `CAPR` | 87 | $9.83 | $2.28 | $+51.15 | $7,200.33 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-04 09:30 ET | **BUY** | `ASND` | 2 | $266.94 | $2.00 | — | $6,664.45 | deploy half leftover; list flatten; ret5=+1.9; leftover $720.03 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `OSCR` | 23 | $30.65 | $2.06 | — | $5,957.44 | deploy half leftover; list flatten; 🔵; ret5=-2.2; leftover $720.03 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `NVAX` | 69 | $10.41 | $2.20 | — | $5,236.96 | deploy half leftover; list flatten,ohlc_hot; ⚪; ret5=+11.1; leftover $720.03 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `BVS` | 49 | $14.50 | $2.14 | — | $4,524.32 | deploy half leftover; list flatten; 🔵; ⚪; ret5=+0.8; leftover $720.03 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `BAK` | 369 | $1.95 | $4.76 | — | $3,800.01 | deploy half leftover; list probable,yday_gainer,yday_mover; ret5=+2.1; leftover $720.03 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| Date 09:30 ET | Side | Ticker | Shares | Px | Fees | P/L | Cash after | Equity (cash+stock) | Why | Cameras |
+|---|---|---|---:|---:|---:|---:|---:|---:|---|---|
+| 2026-08-13 09:30 ET | **BUY** | `BTSG` | 10 | $59.80 | $2.02 | — | $9,399.98 | ▼ $9,997.98 (-2.02) | deploy half leftover; list flatten; ⚪; ret5=-5.3; leftover $625.00 | join🟢 sector🟢 gen🟢 judge🟢 |
+| 2026-08-13 09:30 ET | **BUY** | `IREN` | 13 | $45.98 | $2.03 | — | $8,800.21 | ▼ $9,995.95 (-4.05) | deploy half leftover; list flatten; ⚪; ret5=+12.3; leftover $625.00 | join🟢 sector🟢 gen🟢 judge🟢 |
+| 2026-08-13 09:30 ET | **BUY** | `TPG` | 12 | $50.62 | $2.03 | — | $8,190.71 | ▼ $9,993.92 (-6.08) | deploy half leftover; list flatten; ⚪; ret5=+6.2; leftover $625.00 | join🟢 sector🟢 gen🟢 judge🟢 |
+| 2026-08-13 09:30 ET | **BUY** | `TGTX` | 12 | $49.70 | $2.03 | — | $7,592.28 | ▼ $9,991.90 (-8.10) | deploy half leftover; list flatten; ⚪; ret5=-0.8; leftover $625.00 | join🟢 sector🟢 gen🟢 judge🟢 |
+| 2026-08-13 09:30 ET | **BUY** | `SLS` | 53 | $11.70 | $2.15 | — | $6,970.03 | ▼ $9,989.75 (-10.25) | deploy half leftover; list flatten; ⚪; ret5=-0.8; leftover $625.00 | join🟢 sector🟢 gen🟢 judge🟢 |
+| 2026-08-13 09:30 ET | **BUY** | `HIMS` | 21 | $29.74 | $2.05 | — | $6,343.44 | ▼ $9,987.70 (-12.30) | deploy half leftover; list flatten; ⚪; ret5=-5.3; leftover $625.00 | join🟢 sector🟢 gen🟢 judge🟢 |
+| 2026-08-13 09:30 ET | **BUY** | `INO` | 771 | $0.81 | $8.56 | — | $5,710.37 | ▼ $9,979.14 (-20.86) | deploy half leftover; list flatten; ⚪; ret5=+13.2; leftover $625.00 | join🟢 sector🟢 gen🟢 judge🟢 |
+| 2026-08-13 09:30 ET | **BUY** | `TNDM` | 26 | $23.33 | $2.07 | — | $5,101.72 | ▼ $9,977.07 (-22.93) | deploy half leftover; list flatten; ⚪; ret5=+19.7; leftover $625.00 | join🟢 sector🟢 gen🟢 judge🟢 |
+| 2026-08-14 09:30 ET | **BUY** | `VST` | 2 | $146.90 | $2.00 | — | $4,805.93 | ▲ $10,082.42 (+82.42) | deploy half leftover; list flatten; 🔵; ret5=+3.6; leftover $318.86 | join🟢 sector🟢 gen🟢 news🟢 vol🔴 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `NRG` | 2 | $120.00 | $2.00 | — | $4,563.93 | ▲ $10,080.42 (+80.42) | deploy half leftover; list flatten; 🔵; ret5=+0.6; leftover $318.86 | join🟢 sector🟢 gen🟢 news🟢 vol🔴 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `SLG` | 5 | $57.61 | $2.00 | — | $4,273.88 | ▲ $10,078.42 (+78.42) | deploy half leftover; list flatten; 🔵; ret5=+5.7; leftover $318.86 | join🟢 sector🟢 gen🟢 news🟡 judge🔴 vol🟡 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `MARA` | 35 | $9.01 | $2.10 | — | $3,956.43 | ▲ $10,076.32 (+76.32) | deploy half leftover; list flatten; 🔵; ⚪; ret5=-13.5; leftover $318.86 | join🟢 sector🟢 gen🟢 news🟡 judge🟢 vol🟡 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `LDI` | 340 | $0.94 | $4.21 | — | $3,633.64 | ▲ $10,072.11 (+72.11) | deploy half leftover; list flatten; 🔵; ⚪; ret5=+0.5; leftover $318.86 | join🟢 sector🟢 gen🟢 news🟡 judge🟢 vol🟡 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `BTBT` | 212 | $1.50 | $2.73 | — | $3,312.91 | ▲ $10,069.38 (+69.38) | deploy half leftover; list flatten; 🔵; ⚪; ret5=+9.2; leftover $318.86 | join🟢 sector🟢 gen🟢 news🟡 judge🟢 vol🟢 buy🟡 |
+| 2026-08-17 09:30 ET | **BUY** | `DVN` | 4 | $46.18 | $1.86 | — | $3,126.33 | ▲ $10,194.82 (+194.82) | deploy half leftover; list flatten; 🔵; ret5=+6.7; leftover $207.06 | join🟢 sector🟢 gen🟢 news🟢 vol🔴 buy🟢 |
+| 2026-08-17 09:30 ET | **BUY** | `EOG` | 1 | $142.77 | $1.43 | — | $2,982.13 | ▲ $10,193.39 (+193.39) | deploy half leftover; list flatten; 🔵; ret5=+5.8; leftover $207.06 | join🟢 sector🟢 gen🟢 news🟢 vol🔴 buy🟢 |
+| 2026-08-17 09:30 ET | **BUY** | `FANG` | 1 | $202.70 | $1.99 | — | $2,777.44 | ▲ $10,191.40 (+191.40) | deploy half leftover; list flatten; 🔵; ret5=+8.3; leftover $207.06 | join🟢 sector🟢 gen🟢 news🟢 vol🔴 buy🟢 |
+| 2026-08-17 09:30 ET | **BUY** | `TMC` | 51 | $4.05 | $2.14 | — | $2,568.74 | ▲ $10,189.25 (+189.25) | deploy half leftover; list flatten; 🔵; ⚪; ret5=-12.3; leftover $207.06 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
+| 2026-08-17 09:30 ET | **BUY** | `TGB` | 24 | $8.46 | $2.06 | — | $2,363.64 | ▲ $10,187.19 (+187.19) | deploy half leftover; list flatten; 🔵; ⚪; ret5=+0.4; leftover $207.06 | join🟢 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
+| 2026-08-17 09:30 ET | **BUY** | `ELF` | 2 | $90.54 | $1.82 | — | $2,180.75 | ▲ $10,185.38 (+185.38) | deploy half leftover; list flatten; ret5=-7.2; leftover $207.06 | join🟢 sector🟢 gen🟢 news🟡 vol🔴 buy🟡 |
+| 2026-08-17 09:30 ET | **BUY** | `DNN` | 63 | $3.24 | $2.18 | — | $1,974.45 | ▲ $10,183.20 (+183.20) | deploy half leftover; list flatten; ⚪; ret5=+0.3; leftover $207.06 | join🟢 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
+| 2026-08-17 09:30 ET | **BUY** | `HNST` | 43 | $4.81 | $2.12 | — | $1,765.50 | ▲ $10,181.08 (+181.08) | deploy half leftover; list flatten; ⚪; ret5=-11.4; leftover $207.06 | join🟡 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
+| 2026-08-20 09:30 ET | **SELL** | `BTSG` | 10 | $58.64 | $2.04 | $-15.66 | $2,349.86 | ▲ $10,486.02 (+486.02) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-20 09:30 ET | **SELL** | `IREN` | 13 | $42.46 | $2.05 | $-49.84 | $2,899.79 | ▲ $10,483.97 (+483.97) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-20 09:30 ET | **SELL** | `TPG` | 12 | $53.06 | $2.05 | $+25.17 | $3,534.46 | ▲ $10,481.92 (+481.92) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-20 09:30 ET | **SELL** | `TGTX` | 12 | $51.65 | $2.05 | $+19.33 | $4,152.22 | ▲ $10,479.88 (+479.88) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-20 09:30 ET | **SELL** | `SLS` | 53 | $13.84 | $2.17 | $+109.10 | $4,883.57 | ▲ $10,477.71 (+477.71) | dropped from list after 5 sess (min 5) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟡 buy🟡 |
+| 2026-08-20 09:30 ET | **SELL** | `HIMS` | 21 | $30.66 | $2.07 | $+15.19 | $5,525.35 | ▲ $10,475.63 (+475.63) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-20 09:30 ET | **SELL** | `INO` | 771 | $1.30 | $10.08 | $+359.15 | $6,517.57 | ▲ $10,465.55 (+465.55) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-20 09:30 ET | **SELL** | `TNDM` | 26 | $23.11 | $2.09 | $-9.88 | $7,116.34 | ▲ $10,463.46 (+463.46) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-20 09:30 ET | **BUY** | `AG` | 21 | $20.55 | $2.05 | — | $6,682.74 | ▲ $10,461.41 (+461.41) | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+8.9; leftover $444.77 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-20 09:30 ET | **BUY** | `BHP` | 4 | $91.01 | $2.00 | — | $6,316.70 | ▲ $10,459.41 (+459.41) | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+2.4; leftover $444.77 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-20 09:30 ET | **BUY** | `CDE` | 21 | $20.65 | $2.05 | — | $5,880.99 | ▲ $10,457.35 (+457.35) | deploy half leftover; list flatten,yday_gainer,yday_mover,mover_buy; 🔵; ⚪; ret5=+11.3; leftover $444.77 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-20 09:30 ET | **BUY** | `HDSN` | 77 | $5.77 | $2.22 | — | $5,434.48 | ▲ $10,455.13 (+455.13) | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+4.6; leftover $444.77 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-20 09:30 ET | **BUY** | `IAG` | 22 | $19.63 | $2.06 | — | $5,000.57 | ▲ $10,453.08 (+453.08) | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+9.1; leftover $444.77 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-20 09:30 ET | **BUY** | `KGC` | 15 | $29.63 | $2.04 | — | $4,554.08 | ▲ $10,451.04 (+451.04) | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+8.7; leftover $444.77 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-20 09:30 ET | **BUY** | `NFGC` | 254 | $1.75 | $3.28 | — | $4,106.31 | ▲ $10,447.77 (+447.77) | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+7.9; leftover $444.77 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-20 09:30 ET | **BUY** | `WPM` | 3 | $144.54 | $2.00 | — | $3,670.69 | ▲ $10,445.77 (+445.77) | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+9.2; leftover $444.77 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-21 09:30 ET | **SELL** | `VST` | 2 | $139.99 | $2.02 | $-17.83 | $3,948.65 | ▲ $10,736.60 (+736.60) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-21 09:30 ET | **SELL** | `NRG` | 2 | $116.58 | $2.02 | $-10.85 | $4,179.79 | ▲ $10,734.58 (+734.58) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-21 09:30 ET | **SELL** | `SLG` | 5 | $58.63 | $2.02 | $+1.07 | $4,470.92 | ▲ $10,732.56 (+732.56) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-21 09:30 ET | **SELL** | `MARA` | 35 | $11.70 | $2.12 | $+89.94 | $4,878.30 | ▲ $10,730.44 (+730.44) | dropped from list after 5 sess (min 5) | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 vol🟢 buy🟡 |
+| 2026-08-21 09:30 ET | **SELL** | `LDI` | 340 | $0.87 | $4.03 | $-32.04 | $5,169.05 | ▲ $10,726.41 (+726.41) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-21 09:30 ET | **SELL** | `BTBT` | 212 | $1.66 | $2.78 | $+28.41 | $5,518.19 | ▲ $10,723.63 (+723.63) | dropped from list after 5 sess (min 5) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 vol🟢 buy🟡 |
+| 2026-08-21 09:30 ET | **BUY** | `AU` | 2 | $119.43 | $2.00 | — | $5,277.33 | ▲ $10,721.63 (+721.63) | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+20.4; leftover $344.89 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-21 09:30 ET | **BUY** | `AUPH` | 20 | $17.20 | $2.05 | — | $4,931.28 | ▲ $10,719.58 (+719.58) | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+13.8; leftover $344.89 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟢 |
+| 2026-08-21 09:30 ET | **BUY** | `AEM` | 1 | $216.30 | $1.99 | — | $4,712.99 | ▲ $10,717.59 (+717.59) | deploy half leftover; list flatten,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+17.6; leftover $344.89 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-21 09:30 ET | **BUY** | `ARCT` | 30 | $11.13 | $2.08 | — | $4,377.01 | ▲ $10,715.51 (+715.51) | deploy half leftover; list flatten,yday_gainer,mover_buy; 🔵; ⚪; ret5=+39.8; leftover $344.89 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-21 09:30 ET | **BUY** | `AUTL` | 139 | $2.47 | $2.41 | — | $4,031.27 | ▲ $10,713.10 (+713.10) | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+10.8; leftover $344.89 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-21 09:30 ET | **BUY** | `CRDL` | 178 | $1.93 | $2.52 | — | $3,685.21 | ▲ $10,710.58 (+710.58) | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+10.2; leftover $344.89 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-21 09:30 ET | **BUY** | `CRSP` | 5 | $59.72 | $2.00 | — | $3,384.61 | ▲ $10,708.58 (+708.58) | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+7.6; leftover $344.89 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-21 09:30 ET | **BUY** | `CYPH` | 261 | $1.32 | $3.37 | — | $3,036.72 | ▲ $10,705.21 (+705.21) | deploy half leftover; list flatten,yday_gainer,mover_buy; 🔵; ⚪; ret5=+83.6; leftover $344.89 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-24 09:30 ET | **SELL** | `DVN` | 4 | $48.84 | $1.99 | $+6.80 | $3,230.09 | ▲ $10,952.47 (+952.47) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-24 09:30 ET | **SELL** | `EOG` | 1 | $152.61 | $1.55 | $+6.86 | $3,381.15 | ▲ $10,950.92 (+950.92) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-24 09:30 ET | **SELL** | `FANG` | 1 | $209.47 | $2.01 | $+2.76 | $3,588.61 | ▲ $10,948.91 (+948.91) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-24 09:30 ET | **SELL** | `TMC` | 51 | $4.57 | $2.16 | $+22.21 | $3,819.52 | ▲ $10,946.75 (+946.75) | dropped from list after 5 sess (min 5) | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🔴 peer🟢 vol🟢 buy🟡 |
+| 2026-08-24 09:30 ET | **SELL** | `TGB` | 24 | $9.26 | $2.08 | $+15.06 | $4,039.68 | ▲ $10,944.67 (+944.67) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-24 09:30 ET | **SELL** | `ELF` | 2 | $101.53 | $2.02 | $+18.15 | $4,240.72 | ▲ $10,942.65 (+942.65) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-24 09:30 ET | **SELL** | `DNN` | 63 | $3.50 | $2.20 | $+12.00 | $4,459.02 | ▲ $10,940.45 (+940.45) | dropped from list after 5 sess (min 5) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🟡 ab🟡 peer🟢 vol🟢 buy🟢 |
+| 2026-08-24 09:30 ET | **SELL** | `HNST` | 43 | $5.05 | $2.14 | $+6.06 | $4,674.03 | ▲ $10,938.31 (+938.31) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-25 09:30 ET | **BUY** | `MOS` | 12 | $24.00 | $2.03 | — | $4,384.01 | ▲ $10,880.38 (+880.38) | deploy half leftover; list flatten; ⚪; ret5=+13.0; leftover $292.13 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟡 buy🟢 |
+| 2026-08-25 09:30 ET | **BUY** | `OCUL` | 26 | $10.92 | $2.07 | — | $4,098.02 | ▲ $10,878.31 (+878.31) | deploy half leftover; list flatten; 🔵; ret5=+10.4; leftover $292.13 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 vol🔴 buy🟢 |
+| 2026-08-25 09:30 ET | **BUY** | `INSP` | 4 | $61.47 | $2.00 | — | $3,850.14 | ▲ $10,876.31 (+876.31) | deploy half leftover; list flatten; 🔵; ret5=+9.2; leftover $292.13 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 vol🔴 buy🟢 |
+| 2026-08-25 09:30 ET | **BUY** | `CRMD` | 35 | $8.28 | $2.10 | — | $3,558.24 | ▲ $10,874.21 (+874.21) | deploy half leftover; list flatten; 🔵; ⚪; ret5=+8.8; leftover $292.13 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 vol🟡 buy🟡 |
+| 2026-08-25 09:30 ET | **BUY** | `RZLT` | 55 | $5.23 | $2.15 | — | $3,268.44 | ▲ $10,872.06 (+872.06) | deploy half leftover; list flatten; ret5=+10.7; leftover $292.13 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 vol🔴 buy🟡 |
+| 2026-08-25 09:30 ET | **BUY** | `BMEA` | 180 | $1.62 | $2.53 | — | $2,974.31 | ▲ $10,869.53 (+869.53) | deploy half leftover; list probable,yday_gainer,yday_mover,mover_buy; 🔵; ⚪; ret5=+3.8; leftover $292.13 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-25 09:30 ET | **BUY** | `NPWR` | 146 | $2.00 | $2.43 | — | $2,679.88 | ▲ $10,867.10 (+867.10) | deploy half leftover; list probable,yday_gainer,yday_mover; 🔵; ret5=-12.8; leftover $292.13 | join🟡 sector🟢 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 vol🟢 buy🟡 |
+| 2026-08-27 09:30 ET | **SELL** | `AG` | 21 | $20.63 | $2.07 | $-2.45 | $3,111.03 | ▲ $10,983.29 (+983.29) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-27 09:30 ET | **SELL** | `BHP` | 4 | $96.99 | $2.02 | $+19.90 | $3,496.97 | ▲ $10,981.27 (+981.27) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-27 09:30 ET | **SELL** | `CDE` | 21 | $21.00 | $2.07 | $+3.22 | $3,935.90 | ▲ $10,979.20 (+979.20) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-27 09:30 ET | **SELL** | `HDSN` | 77 | $5.51 | $2.24 | $-24.48 | $4,357.93 | ▲ $10,976.96 (+976.96) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-27 09:30 ET | **SELL** | `IAG` | 22 | $21.64 | $2.08 | $+40.09 | $4,831.93 | ▲ $10,974.88 (+974.88) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-27 09:30 ET | **SELL** | `KGC` | 15 | $32.90 | $2.06 | $+44.96 | $5,323.37 | ▲ $10,972.82 (+972.82) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-27 09:30 ET | **SELL** | `NFGC` | 254 | $2.00 | $3.33 | $+56.89 | $5,828.05 | ▲ $10,969.50 (+969.50) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-27 09:30 ET | **SELL** | `WPM` | 3 | $160.93 | $2.02 | $+45.15 | $6,308.82 | ▲ $10,967.48 (+967.48) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-27 09:30 ET | **BUY** | `RRC` | 11 | $40.72 | $2.02 | — | $5,858.87 | ▲ $10,965.45 (+965.45) | deploy half leftover; list flatten; ret5=+1.8; leftover $450.63 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `CRK` | 31 | $14.09 | $2.08 | — | $5,420.00 | ▲ $10,963.37 (+963.37) | deploy half leftover; list flatten; ret5=+1.1; leftover $450.63 | join🟢 sector🔴 gen🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `SLI` | 173 | $2.59 | $2.51 | — | $4,969.42 | ▲ $10,960.86 (+960.86) | deploy half leftover; list flatten; ret5=+4.2; leftover $450.63 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `ACMR` | 5 | $80.97 | $2.00 | — | $4,562.57 | ▲ $10,958.86 (+958.86) | deploy half leftover; list mover_buy; 🔵; ret5=-1.3; leftover $450.63 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `GGB` | 101 | $4.42 | $2.29 | — | $4,113.85 | ▲ $10,956.56 (+956.56) | deploy half leftover; list mover_buy; 🔵; ret5=-8.6; leftover $450.63 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `MT` | 5 | $75.12 | $2.00 | — | $3,736.25 | ▲ $10,954.56 (+954.56) | deploy half leftover; list mover_buy; 🔵; ret5=-2.2; leftover $450.63 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-28 09:30 ET | **SELL** | `AU` | 2 | $117.41 | $2.02 | $-8.05 | $3,969.05 | ▲ $10,995.95 (+995.95) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-28 09:30 ET | **SELL** | `AUPH` | 20 | $16.47 | $2.07 | $-18.72 | $4,296.38 | ▲ $10,993.88 (+993.88) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-28 09:30 ET | **SELL** | `AEM` | 1 | $214.11 | $2.01 | $-6.20 | $4,508.48 | ▲ $10,991.87 (+991.87) | dropped from list after 5 sess (min 5) | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🟡 vol🟡 buy🟡 |
+| 2026-08-28 09:30 ET | **SELL** | `ARCT` | 30 | $15.74 | $2.10 | $+134.12 | $4,978.58 | ▲ $10,989.77 (+989.77) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-28 09:30 ET | **SELL** | `AUTL` | 139 | $2.32 | $2.44 | $-25.70 | $5,298.62 | ▲ $10,987.33 (+987.33) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-28 09:30 ET | **SELL** | `CRDL` | 178 | $2.09 | $2.56 | $+23.39 | $5,668.08 | ▲ $10,984.77 (+984.77) | dropped from list after 5 sess (min 5) | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🟢 buy🟡 |
+| 2026-08-28 09:30 ET | **SELL** | `CRSP` | 5 | $59.12 | $2.02 | $-7.03 | $5,961.65 | ▲ $10,982.74 (+982.74) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-28 09:30 ET | **SELL** | `CYPH` | 261 | $1.75 | $3.42 | $+105.44 | $6,414.98 | ▲ $10,979.32 (+979.32) | dropped from list after 5 sess (min 5) | — |
+| 2026-08-28 09:30 ET | **BUY** | `ANF` | 5 | $144.70 | $2.00 | — | $5,689.48 | ▲ $10,977.32 (+977.32) | deploy half leftover; list probable,yday_gainer,yday_mover; 🔵; ret5=+0.8; leftover $801.87 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `BHVN` | 47 | $16.95 | $2.13 | — | $4,890.69 | ▲ $10,975.18 (+975.18) | deploy half leftover; list probable,yday_gainer,yday_mover; ret5=-5.4; leftover $801.87 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `BZ` | 43 | $18.50 | $2.12 | — | $4,093.08 | ▲ $10,973.07 (+973.07) | deploy half leftover; list probable,yday_gainer,yday_mover; ret5=+2.8; leftover $801.87 | join🟢 sector🔴 gen🟡 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟢 |
+| 2026-08-28 09:30 ET | **BUY** | `CAPR` | 87 | $9.19 | $2.25 | — | $3,291.29 | ▲ $10,970.81 (+970.81) | deploy half leftover; list probable,yday_gainer,yday_mover; ret5=-5.4; leftover $801.87 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-01 09:30 ET | **SELL** | `MOS` | 12 | $24.00 | $2.05 | $-4.07 | $3,577.25 | ▲ $10,857.53 (+857.53) | dropped from list after 5 sess (min 5) | — |
+| 2026-09-01 09:30 ET | **SELL** | `OCUL` | 26 | $10.49 | $2.09 | $-15.34 | $3,847.90 | ▲ $10,855.44 (+855.44) | dropped from list after 5 sess (min 5) | — |
+| 2026-09-01 09:30 ET | **SELL** | `INSP` | 4 | $63.05 | $2.02 | $+2.30 | $4,098.08 | ▲ $10,853.42 (+853.42) | dropped from list after 5 sess (min 5) | — |
+| 2026-09-01 09:30 ET | **SELL** | `CRMD` | 35 | $8.26 | $2.12 | $-4.91 | $4,385.06 | ▲ $10,851.30 (+851.30) | dropped from list after 5 sess (min 5) | — |
+| 2026-09-01 09:30 ET | **SELL** | `RZLT` | 55 | $4.69 | $2.17 | $-34.03 | $4,640.84 | ▲ $10,849.13 (+849.13) | dropped from list after 5 sess (min 5) | — |
+| 2026-09-01 09:30 ET | **SELL** | `BMEA` | 180 | $1.65 | $2.57 | $+0.30 | $4,935.27 | ▲ $10,846.56 (+846.56) | dropped from list after 5 sess (min 5) | — |
+| 2026-09-01 09:30 ET | **SELL** | `NPWR` | 146 | $1.78 | $2.46 | $-37.01 | $5,192.69 | ▲ $10,844.10 (+844.10) | dropped from list after 5 sess (min 5) | — |
+| 2026-09-03 09:30 ET | **SELL** | `RRC` | 11 | $42.10 | $2.04 | $+11.11 | $5,653.74 | ▲ $10,862.80 (+862.80) | dropped from list after 5 sess (min 5) | — |
+| 2026-09-03 09:30 ET | **SELL** | `SLI` | 173 | $2.49 | $2.55 | $-22.36 | $6,081.97 | ▲ $10,860.26 (+860.26) | dropped from list after 5 sess (min 5) | — |
+| 2026-09-03 09:30 ET | **SELL** | `ACMR` | 5 | $70.52 | $2.02 | $-56.28 | $6,432.54 | ▲ $10,858.23 (+858.23) | dropped from list after 5 sess (min 5) | — |
+| 2026-09-03 09:30 ET | **SELL** | `GGB` | 101 | $4.81 | $2.32 | $+34.78 | $6,916.03 | ▲ $10,855.91 (+855.91) | dropped from list after 5 sess (min 5) | — |
+| 2026-09-03 09:30 ET | **SELL** | `MT` | 5 | $73.86 | $2.02 | $-10.33 | $7,283.31 | ▲ $10,853.89 (+853.89) | dropped from list after 5 sess (min 5) | — |
+| 2026-09-03 09:30 ET | **BUY** | `ATRC` | 10 | $49.76 | $2.02 | — | $6,783.69 | ▲ $10,851.87 (+851.87) | deploy half leftover; list flatten; 🔵; ⚪; ret5=+10.6; leftover $520.24 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `HRMY` | 12 | $41.31 | $2.03 | — | $6,285.94 | ▲ $10,849.84 (+849.84) | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+0.1; leftover $520.24 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-03 09:30 ET | **BUY** | `CABA` | 159 | $3.27 | $2.47 | — | $5,763.54 | ▲ $10,847.37 (+847.37) | deploy half leftover; list flatten; 🔵; ⚪; ret5=+13.8; leftover $520.24 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `VSTM` | 67 | $7.70 | $2.19 | — | $5,245.45 | ▲ $10,845.18 (+845.18) | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+4.7; leftover $520.24 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-03 09:30 ET | **BUY** | `RVTY` | 4 | $125.94 | $2.00 | — | $4,739.69 | ▲ $10,843.18 (+843.18) | deploy half leftover; list flatten,mover_buy; 🔵; ⚪; ret5=+6.8; leftover $520.24 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `GPRO` | 426 | $1.22 | $5.50 | — | $4,214.47 | ▲ $10,837.68 (+837.68) | deploy half leftover; list probable,yday_gainer,yday_mover; ret5=+5.9; leftover $520.24 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `FRVO` | 28 | $18.40 | $2.07 | — | $3,697.20 | ▲ $10,835.61 (+835.61) | deploy half leftover; list probable,yday_gainer,yday_mover; ret5=-14.4; leftover $520.24 | join🔴 sector🟡 gen🟡 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-04 09:30 ET | **SELL** | `CRK` | 31 | $15.45 | $2.10 | $+37.97 | $4,174.05 | ▲ $11,167.70 (+1,167.70) | dropped from list after 6 sess (min 5) | — |
+| 2026-09-04 09:30 ET | **SELL** | `ANF` | 5 | $137.70 | $2.02 | $-39.03 | $4,860.52 | ▲ $11,165.67 (+1,165.67) | dropped from list after 5 sess (min 5) | — |
+| 2026-09-04 09:30 ET | **SELL** | `BHVN` | 47 | $15.89 | $2.15 | $-54.10 | $5,605.20 | ▲ $11,163.52 (+1,163.52) | dropped from list after 5 sess (min 5) | — |
+| 2026-09-04 09:30 ET | **SELL** | `BZ` | 43 | $17.31 | $2.14 | $-55.43 | $6,347.39 | ▲ $11,161.38 (+1,161.38) | dropped from list after 5 sess (min 5) | — |
+| 2026-09-04 09:30 ET | **SELL** | `CAPR` | 87 | $9.83 | $2.28 | $+51.15 | $7,200.33 | ▲ $11,159.11 (+1,159.11) | dropped from list after 5 sess (min 5) | — |
+| 2026-09-04 09:30 ET | **BUY** | `ASND` | 2 | $266.94 | $2.00 | — | $6,664.45 | ▲ $11,157.11 (+1,157.11) | deploy half leftover; list flatten; ret5=+1.9; leftover $720.03 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `OSCR` | 23 | $30.65 | $2.06 | — | $5,957.44 | ▲ $11,155.05 (+1,155.05) | deploy half leftover; list flatten; 🔵; ret5=-2.2; leftover $720.03 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `NVAX` | 69 | $10.41 | $2.20 | — | $5,236.96 | ▲ $11,152.86 (+1,152.86) | deploy half leftover; list flatten,ohlc_hot; ⚪; ret5=+11.1; leftover $720.03 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `BVS` | 49 | $14.50 | $2.14 | — | $4,524.32 | ▲ $11,150.72 (+1,150.72) | deploy half leftover; list flatten; 🔵; ⚪; ret5=+0.8; leftover $720.03 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `BAK` | 369 | $1.95 | $4.76 | — | $3,800.01 | ▲ $11,145.96 (+1,145.96) | deploy half leftover; list probable,yday_gainer,yday_mover; ret5=+2.1; leftover $720.03 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 
 ## Not taken
 
