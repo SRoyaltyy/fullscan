@@ -1,6 +1,6 @@
 # Flatten lookback action
 
-_Generated 2026-09-04T15:23:30.399436-04:00_
+_Generated 2026-09-04T23:21:12.175524-04:00_
 
 Live policy **`flatten_robust`**. Window **2026-08-13** → **2026-09-04**. 17 sessions · 122 flatten pick-days · 400 gainer-days · 301 priced mover BUYs.
 

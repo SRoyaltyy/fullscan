@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T15:23:30.399436-04:00",
+  "generated_at": "2026-09-04T23:21:12.175524-04:00",
   "asof": "09:30_et",
   "method": "flatten_lookback_action",
   "policy": "flatten_robust",
@@ -540,7 +540,7 @@
     ]
   },
   "lookback": {
-    "generated_at": "2026-09-04T15:23:14.409627-04:00",
+    "generated_at": "2026-09-04T23:20:50.627756-04:00",
     "n_names": 93
   },
   "rows": [
