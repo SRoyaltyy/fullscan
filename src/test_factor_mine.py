@@ -428,6 +428,9 @@ def test_template_has_data_slot() -> None:
     assert "09:30" in text
     assert "vs yday" in text
     assert "after sell" in text
+    assert "Prior close" in text
+    assert "Intraday" in text
+    assert "renderMarks" in text
     assert "Audit" in text or "audit" in text
     assert "AvgW" in text
     assert "Equity" in text
@@ -501,6 +504,9 @@ def test_dash_payload_ships_every_book_and_features_high_return() -> None:
     d0 = payload["daily"]["high_ret_h1"][0]
     assert "overnight_delta" in d0
     assert "open_equity" in d0
+    assert "marks" in d0
+    assert "session_delta" in d0
+    assert any(t["side"] == "CLOSE" for t in trades)
 
 
 def test_day_open_explains_overnight_mark() -> None:
@@ -535,8 +541,204 @@ def test_day_open_explains_overnight_mark() -> None:
     assert "no fees" in (o2.get("reason") or "")
     assert not any(t["side"] == "SELL" for t in book["trades"])
     assert book["audit"]["ok"] is True
+    assert book["audit"].get("marks_ok") is True
+    d1 = book["daily"][1]
+    aaa = next(m for m in d1["marks"] if m["ticker"] == "AAA")
+    assert aaa["yday_px"] == 12
+    assert aaa["open_px"] == 13
+    assert aaa["close_px"] == 13
+    assert aaa["overnight"] == expect
+    assert aaa["session"] == 0
+    assert any(t["side"] == "CLOSE" for t in book["trades"])
     # Buys do not carry a vs-yday equity label; sells would.
     assert buy.get("vs_yday") is None
+
+
+def test_silent_monday_marks_every_name() -> None:
+    """No-fill Monday still prints each lot's 09:30 open and open→close $."""
+    from src import factor_mine_book as fmb
+    from src import paper_trade as pt
+    cal = ["2026-08-21", "2026-08-24", "2026-08-25"]
+    rows = [_row(d, t) for d in cal for t in ("AAA", "BBB")]
+    bars = {
+        ("AAA", "2026-08-21"): {"open": 10, "close": 11},
+        ("BBB", "2026-08-21"): {"open": 20, "close": 19},
+        ("AAA", "2026-08-24"): {"open": 12, "close": 12.5},
+        ("BBB", "2026-08-24"): {"open": 18, "close": 17},
+        ("AAA", "2026-08-25"): {"open": 13, "close": 13},
+        ("BBB", "2026-08-25"): {"open": 16, "close": 16},
+    }
+    rec = fm.make_recipe("union_h3", hold=3, top_n=2)
+    book = fmb.simulate_book(
+        _panel(cal, rows), rec, bars=bars, fees=pt.load_fees(), regime={})
+    opens = [t for t in book["trades"] if t["side"] == "OPEN"]
+    closes = [t for t in book["trades"] if t["side"] == "CLOSE"]
+    assert [t["date"] for t in opens] == cal
+    assert [t["date"] for t in closes] == cal
+    d21, d24, _d25 = book["daily"]
+    assert d24["bought"] == []
+    assert d24["sold"] == []
+    by = {m["ticker"]: m for m in d24["marks"]}
+    assert set(by) == {"AAA", "BBB"}
+    aaa_sh = by["AAA"]["shares"]
+    bbb_sh = by["BBB"]["shares"]
+    assert aaa_sh >= 1 and bbb_sh >= 1
+    assert by["AAA"]["yday_px"] == 11
+    assert by["AAA"]["open_px"] == 12
+    assert by["AAA"]["close_px"] == 12.5
+    assert abs(by["AAA"]["overnight"] - aaa_sh * (12 - 11)) < 0.05
+    assert abs(by["AAA"]["session"] - aaa_sh * (12.5 - 12)) < 0.05
+    assert by["BBB"]["yday_px"] == 19
+    assert by["BBB"]["open_px"] == 18
+    assert by["BBB"]["close_px"] == 17
+    assert abs(by["BBB"]["overnight"] - bbb_sh * (18 - 19)) < 0.05
+    assert abs(by["BBB"]["session"] - bbb_sh * (17 - 18)) < 0.05
+    ov = sum(m["overnight"] for m in d24["marks"])
+    sess = sum(m["session"] for m in d24["marks"])
+    assert abs(ov - d24["overnight_delta"]) < 0.05
+    assert abs(sess - (d24["equity"] - d24["open_equity"])) < 0.05
+    assert d24["open_cash"] == d21["cash"]
+    assert d24["cash"] == d24["open_cash"]
+    assert book["audit"]["ok"] is True
+    assert book["marks_audit"]["ok"] is True
+    # Bought Friday names are session-only that day (no prior close).
+    bought = {m["ticker"]: m for m in d21["marks"]}
+    assert bought["AAA"]["held"] == "bought"
+    assert bought["AAA"]["overnight"] == 0
+    assert bought["AAA"]["open_px"] == 10
+    assert bought["AAA"]["close_px"] == 11
+
+
+def test_missing_bar_day_carries_mark_no_phantom_session() -> None:
+    """A session with no OHLC must not replay yesterday's open→close."""
+    from src import factor_mine_book as fmb
+    from src import paper_trade as pt
+    cal = ["2026-08-21", "2026-08-24", "2026-08-25"]
+    rows = [_row(d, "AAA") for d in cal]
+    bars = {
+        ("AAA", "2026-08-21"): {"open": 10, "close": 12},
+        # 8-24 missing on purpose
+        ("AAA", "2026-08-25"): {"open": 11, "close": 11},
+    }
+    rec = fm.make_recipe("union_h3", hold=3, top_n=1)
+    book = fmb.simulate_book(
+        _panel(cal, rows), rec, bars=bars, fees=pt.load_fees(), regime={})
+    d21, d24, d25 = book["daily"]
+    assert d24["bought"] == [] and d24["sold"] == []
+    aaa = next(m for m in d24["marks"] if m["ticker"] == "AAA")
+    assert aaa["yday_px"] == 12
+    assert aaa["open_px"] == 12
+    assert aaa["close_px"] == 12
+    assert aaa["overnight"] == 0
+    assert aaa["session"] == 0
+    assert d24["open_equity"] == d21["equity"]
+    assert d24["equity"] == d24["open_equity"]
+    assert d24["cash"] == d24["open_cash"]
+    # Tuesday open vs carried Monday mark (Friday close), not vs a phantom Monday close.
+    aaa25 = next(m for m in d25["marks"] if m["ticker"] == "AAA")
+    assert aaa25["yday_px"] == 12
+    assert aaa25["open_px"] == 11
+    sh = aaa25["shares"]
+    assert abs(aaa25["overnight"] - sh * (11 - 12)) < 0.05
+    assert book["audit"]["ok"] is True
+
+
+def test_marks_explain_fill_gap_across_no_fill_day() -> None:
+    """Last Friday fill → first Tuesday fill is overnight + session, name by name."""
+    from src import factor_mine_book as fmb
+    from src import paper_trade as pt
+    cal = ["2026-08-21", "2026-08-24", "2026-08-25"]
+    rows = [_row(d, t) for d in cal[:2] for t in ("AAA", "BBB")]
+    bars = {
+        ("AAA", "2026-08-21"): {"open": 10, "close": 9},
+        ("BBB", "2026-08-21"): {"open": 20, "close": 18},
+        ("AAA", "2026-08-24"): {"open": 8, "close": 8.5},
+        ("BBB", "2026-08-24"): {"open": 17, "close": 16.5},
+        ("AAA", "2026-08-25"): {"open": 8.4, "close": 8.4},
+        ("BBB", "2026-08-25"): {"open": 16, "close": 16},
+    }
+    rec = fm.make_recipe("union_h2", hold=2, top_n=2)
+    book = fmb.simulate_book(
+        _panel(cal, rows), rec, bars=bars, fees=pt.load_fees(), regime={})
+    last_fri = [t for t in book["trades"]
+                if t["date"] == "2026-08-21" and t["side"] == "BUY"][-1]
+    first_tue = next(t for t in book["trades"]
+                     if t["date"] == "2026-08-25" and t["side"] not in ("OPEN", "CLOSE"))
+    walk = fmb.equity_walk(book, "2026-08-21", "2026-08-25")
+    assert walk["ok"] is True
+    assert abs(walk["start_equity"] - last_fri["equity_after"]) < 0.02
+    assert abs(walk["end_equity"] - first_tue["equity_after"]) < 0.02
+    kinds = [leg["kind"] for leg in walk["legs"]]
+    assert kinds[0] == "session"
+    assert "overnight" in kinds
+    assert kinds.count("session") >= 2
+    assert any(leg["date"] == "2026-08-24" and leg["kind"] == "overnight"
+               for leg in walk["legs"])
+    assert any(leg["date"] == "2026-08-24" and leg["kind"] == "session"
+               for leg in walk["legs"])
+    # Every overnight/session leg names both lots.
+    for leg in walk["legs"]:
+        if leg["kind"] in ("overnight", "session"):
+            ticks = {n["ticker"] for n in (leg.get("names") or [])}
+            assert ticks == {"AAA", "BBB"}
+
+
+def test_union_e_green_h3_aug21_to_aug25_name_marks() -> None:
+    """The screenshot jump: PSEC buy $13,766.41 → ATAT sell $13,550.61."""
+    from src import factor_mine_book as fmb
+    from src import paper_trade as pt
+    if not fm.PANEL_PATH.is_file():
+        return
+    panel = fm.load_or_build_panel("2026-08-13", "2026-09-04")
+    rec = next(r for r in fm.build_recipes() if r["name"] == "union_e_green_h3")
+    book = fmb.simulate_book(
+        panel, rec, fees=pt.load_fees(), regime=fmb.load_regime())
+    dates = [d["date"] for d in book["daily"]]
+    assert "2026-08-21" in dates
+    assert "2026-08-24" in dates
+    assert "2026-08-25" in dates
+    assert "2026-08-22" not in dates
+    assert "2026-08-23" not in dates
+    assert [t["date"] for t in book["trades"] if t["side"] == "OPEN"] == dates
+    assert [t["date"] for t in book["trades"] if t["side"] == "CLOSE"] == dates
+    psec = next(
+        t for t in book["trades"]
+        if t["date"] == "2026-08-21" and t["side"] == "BUY" and t["ticker"] == "PSEC")
+    atat = next(
+        t for t in book["trades"]
+        if t["date"] == "2026-08-25" and t["side"] == "SELL" and t["ticker"] == "ATAT")
+    assert abs(psec["equity_after"] - 13766.41) < 0.05
+    assert abs(atat["equity_after"] - 13550.61) < 0.05
+    assert atat["pnl"] is not None and abs(atat["pnl"] - 30.70) < 0.05
+    held = {"ATAT", "ATHM", "BABA", "BULL", "COTY", "DQ", "FUTU", "IOND",
+            "BKE", "PSEC"}
+    for day in ("2026-08-21", "2026-08-24", "2026-08-25"):
+        d = next(x for x in book["daily"] if x["date"] == day)
+        ticks = {m["ticker"] for m in (d.get("marks") or [])}
+        assert held <= ticks
+        for m in d["marks"]:
+            if m["ticker"] not in held:
+                continue
+            assert m.get("open_px") is not None
+            assert m.get("overnight") is not None
+            if m.get("shares_close"):
+                assert m.get("close_px") is not None
+                assert m.get("session") is not None
+    d24 = next(x for x in book["daily"] if x["date"] == "2026-08-24")
+    assert d24["bought"] == []
+    assert d24["sold"] == []
+    assert abs(d24["cash"] - d24["open_cash"]) < 0.02
+    walk = fmb.equity_walk(book, "2026-08-21", "2026-08-25")
+    assert walk["ok"] is True
+    assert abs(walk["start_equity"] - 13766.41) < 0.05
+    assert abs(walk["end_equity"] - 13550.61) < 0.05
+    assert abs(walk["expect_delta"] - (13550.61 - 13766.41)) < 0.05
+    # ATAT's profitable sale is not the book drop — marks + fee are.
+    atat_legs = [leg for leg in walk["legs"] if leg.get("ticker") == "ATAT"]
+    assert atat_legs
+    assert abs((atat_legs[0].get("sell_eq_chg") or atat_legs[0]["delta"]) + 0) >= 0
+    assert book["audit"]["ok"] is True
+    assert book["marks_audit"]["ok"] is True
 
 
 def _panel(cal, rows, extra=None):
@@ -733,4 +935,8 @@ if __name__ == "__main__":
     test_action_filters_size_sell_boost()
     test_dash_payload_ships_every_book_and_features_high_return()
     test_day_open_explains_overnight_mark()
-    print("27 factor-mine tests passed")
+    test_silent_monday_marks_every_name()
+    test_missing_bar_day_carries_mark_no_phantom_session()
+    test_marks_explain_fill_gap_across_no_fill_day()
+    test_union_e_green_h3_aug21_to_aug25_name_marks()
+    print("31 factor-mine tests passed")

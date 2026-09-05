@@ -1022,6 +1022,7 @@ def _slim_dash_book(bk: dict) -> dict:
         "cash_after", "equity_after", "equity_delta", "stock_after", "reason",
         "yday_equity", "open_held", "overnight", "overnight_delta",
         "equity_before", "sell_eq_chg", "vs_yday",
+        "session_delta", "marks", "intraday", "close_held", "open_equity",
     )
     keep_k = ("date", "ticker", "kind", "reason")
     return {
