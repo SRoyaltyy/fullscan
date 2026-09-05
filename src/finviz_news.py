@@ -31,8 +31,9 @@ _FINVIZ_DATE_TOKEN = re.compile(
     r"(?i)\b([A-Za-z]{3}-\d{1,2}-\d{2,4}|[A-Za-z]{3}-\d{1,2})\b"
 )
 DIVIDEND_RE = re.compile(
-    r"(?i)^(.*(declares|announces).{0,40}(quarterly|regular).{0,20}(cash )?dividend"
-    r"|.*dividend of \$?[\d.]+ per share)"
+    r"(?i)((declares?|announces?|declared).{0,60}dividend"
+    r"|quarterly (cash )?dividend"
+    r"|dividend of \$?[\d.]+ per share)"
 )
 POSITIVE_RE = re.compile(
     r"\b(beat|beats|beating|raises?|raised|upgrade[sd]?|approval|approved|"
@@ -45,6 +46,7 @@ NEGATIVE_RE = re.compile(
     r"cuts? guidance|cuts?.{0,40}price target|price target cut|"
     r"bankrupt(?:cy)?|offering|dilution|fraud|"
     r"investigat(?:e|es|ion)|warning|plunges?|selloff|recall|"
+    r"lawsuit|litigation|sued|class action|"
     r"profit.taking|insider sale|insider sold|ceo .* sold|sold .* stock|"
     r"sells? \$?[\d,.]+ (?:million|billion).*(?:stock|shares))\b",
     re.I,
@@ -209,7 +211,10 @@ def load_company_news(asof: str | None = None, *, path: Path | None = None,
         if not digest and not title:
             continue
         text = digest or title
-        is_div = bool(DIVIDEND_RE.search(text))
+        # Finviz often stamps a quarterly dividend into Daily Digest while
+        # News Title is the real story. Skip only when the headline itself
+        # is the dividend announcement.
+        is_div = bool(DIVIDEND_RE.search(title or digest))
         title_tone = headline_tone(title) if title else "missing"
         digest_tone = headline_tone(digest) if digest else "missing"
         if title_tone in ("good", "bad"):

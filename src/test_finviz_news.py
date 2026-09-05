@@ -23,6 +23,10 @@ def test_headline_tone_grades_catalyst_language() -> None:
     ) == "bad"
     assert headline_tone("My Impressions Watching Baseball in Apple Immersive") == "neutral"
     assert headline_tone(
+        "Apple hit with new £2 billion UK collective lawsuit alleging "
+        "App Tracking Transparency rules favor its own services"
+    ) == "bad"
+    assert headline_tone(
         "Cardinal Health CEO sold $29 million of company stock following "
         "the post-earnings share surge to record levels"
     ) == "bad"
@@ -36,6 +40,10 @@ def test_load_company_news_reads_title_and_digest(tmp_path: Path) -> None:
         "AbbVie announces positive Phase 3 etentamig data,Healthcare,Drug\n"
         "AAPL,Sep-03-26 07:15AM,Apple immersive,"
         "My Impressions Watching Baseball,Technology,Consumer Electronics\n"
+        "KLIC,2026-09-04 08:00:00,Kulicke Advances AI,"
+        "Kulicke declares a quarterly dividend of $0.205 per share,Technology,Semi\n"
+        "NAVI,2026-09-04 08:00:00,Navient declares third quarter common stock dividend,"
+        "Navient announces quarterly dividend,Financial,Credit\n"
         "SPY,2026-09-04 09:00:00,Index wrap,S&P 500 best day,,"
         "\n",
         encoding="utf-8",
@@ -46,10 +54,23 @@ def test_load_company_news_reads_title_and_digest(tmp_path: Path) -> None:
     assert news["ABBV"]["event_date"] == "2026-09-03"
     assert news["AAPL"]["tone"] == "neutral"
     assert news["AAPL"]["event_date"] == "2026-09-03"
+    assert news["KLIC"]["is_dividend"] is False
+    assert news["NAVI"]["is_dividend"] is True
     assert "SPY" not in news
     booked = actions_from_company_news(news)
     assert booked["ABBV"]["net"] > 0
     assert "AAPL" not in booked
+    assert "NAVI" not in booked
+
+
+def test_digest_polarity_fills_vague_title() -> None:
+    csv = Path("data/exports/finviz_2026-09-04.csv")
+    if not csv.exists():
+        return
+    news = load_company_news("2026-09-04", today="2026-09-04")
+    # Vague title, material digest — news box follows the digest.
+    assert news["AAPL"]["news_title"].startswith("My Impressions")
+    assert news["AAPL"]["news_tone"] == "bad"
 
 
 def test_parse_still_handles_quote_page_stamps() -> None:
@@ -85,9 +106,10 @@ def test_real_export_grades_company_headlines() -> None:
         return
     news = load_company_news("2026-09-04", today="2026-09-04")
     assert news["ABBV"]["news_tone"] == "good"
-    assert news["AAPL"]["news_tone"] != "missing"
+    assert news["AAPL"]["news_tone"] == "bad"
     booked = actions_from_company_news(news)
     assert "ABBV" in booked
+    assert "AAPL" in booked
     assert len(booked) > 100
 
 
@@ -99,6 +121,7 @@ def main() -> None:
         test_old_asof_does_not_use_future_export,
         test_lookback_news_box_uses_company_tone,
         test_real_export_grades_company_headlines,
+        test_digest_polarity_fills_vague_title,
     ]
     for fn in tests:
         fn()
@@ -106,7 +129,7 @@ def main() -> None:
     with tempfile.TemporaryDirectory() as tmp:
         test_load_company_news_reads_title_and_digest(Path(tmp))
         print("ok  test_load_company_news_reads_title_and_digest")
-    print("6 tests passed")
+    print("7 tests passed")
 
 
 if __name__ == "__main__":
