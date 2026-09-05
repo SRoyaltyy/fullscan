@@ -12,7 +12,8 @@ Sweep on 2026-08-13 → latest (yesterday-liquid → today's tape):
   * coiled / NR7 ranking does **not** find the rip — that was the miss
 
 Every bar is strictly before ``asof``. Same-day Change% is never an input.
-This list does not change live flatten_robust fills.
+Live flatten_robust keeps the 3d book and spends a reserved
+10% cash sleeve at 09:30 on the top 2 continuation names.
 """
 from __future__ import annotations
 

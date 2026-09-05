@@ -22,9 +22,10 @@ def test_live_policy_is_robust() -> None:
     from src.sleeve_merge import LIVE_POLICY, live_policy, policy_by_name
     assert LIVE_POLICY == "flatten_robust"
     live = live_policy()
-    assert int(live.get("ripper_top_n") or 0) == 0
+    assert int(live.get("ripper_top_n") or 0) == 2
+    assert float(live.get("ripper_cash_frac") or 0) == 0.10
     rip = policy_by_name("flatten_robust_ripper")
-    assert int(rip.get("ripper_top_n") or 0) >= 3
+    assert int(rip.get("ripper_top_n") or 0) == 2
     assert float(rip.get("ripper_cash_frac") or 0) > 0
 
 

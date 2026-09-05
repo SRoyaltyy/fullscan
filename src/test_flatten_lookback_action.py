@@ -14,6 +14,10 @@ def test_flatten_814_is_tln_not_asts() -> None:
     assert "ASTS" not in names
     assert "SITM" not in names
     assert "DOCN" not in names
+    rip = [t.upper() for t in (plan.get("ripper_picks") or [])]
+    assert len(rip) <= 2
+    for t in rip:
+        assert t not in ("ASTS", "SITM", "DOCN")
 
 
 def test_flatten_813_is_3d_book_not_2w_ino_method() -> None:

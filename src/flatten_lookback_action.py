@@ -166,11 +166,6 @@ def flatten_day_targets(date: str, payload: dict | None = None,
         bits.append(f"wish-list {pol.get('io_select', 'size')}:"
                     f"{pol.get('io_sleeve', '2w_size')}")
         why = "; ".join(bits)
-    if ripper_picks:
-        extra = [t for t in ripper_picks if t not in tickers]
-        tickers = list(tickers) + extra
-        if extra:
-            why = (why + f"; +{len(extra)} OHLC continuation at 09:30")
 
     return {
         "date": date,

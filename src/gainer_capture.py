@@ -17,8 +17,9 @@ knowable before 09:30:
     that are not exploded (ret_5 ≤ 10) — the high-confidence select
     list (~8/day, g/l > 1 vs next-day top-25)
 
-Same-day Change% is never an input. The list is a watchlist — it does
-not change live flatten_robust fills.
+Same-day Change% is never an input. The wide watchlist does not
+replace the 3d book. Live flatten_robust also buys the compact
+``probable`` continuation sleeve (2 names, reserved 10% cash).
 """
 from __future__ import annotations
 

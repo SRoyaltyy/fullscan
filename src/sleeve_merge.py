@@ -1408,7 +1408,8 @@ SWEEP = [
      "day_cap": 1.00, "sizeup": 1.0, "allow_short": False, "min_buys": 5,
      "rotate_mover": True, "carry_last_book": True,
      "hard_red_no_new": True, "hard_red_io_ok": False,
-     "io_min_names": 4},
+     "io_min_names": 4,
+     "ripper_top_n": 2, "ripper_cash_frac": 0.10},
     {**DEFAULT, "name": "flatten_robust_ripper", "engine": "flatten_switch",
      "io_sleeve": "3d_size", "io_select": "robust", "io_hold": "3d",
      "long_top_n": 10, "long_pct": 0.10,
@@ -1416,7 +1417,7 @@ SWEEP = [
      "rotate_mover": True, "carry_last_book": True,
      "hard_red_no_new": True, "hard_red_io_ok": False,
      "io_min_names": 4,
-     "ripper_top_n": 4, "ripper_cash_frac": 0.18},
+     "ripper_top_n": 2, "ripper_cash_frac": 0.10},
 ] + [
     DEFAULT,
     {**DEFAULT, "name": "switch_70", "core_frac": 0.30, "tac_frac": 0.70,
