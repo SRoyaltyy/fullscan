@@ -39,6 +39,11 @@ def test_prior_news_tone() -> None:
     assert fm.prior_news_tone("Analyst downgrade, cuts target") == "bad"
     assert fm.prior_news_tone("Company updates outlook") == "neutral"
     assert fm.prior_news_tone("Beat estimates after downgrade") == "neutral"
+    asst = ("Bitcoin DAT Strives Board Director Pierre Rochard "
+            "Buys ASST Stocks as SATA Nears Par Value")
+    assert fm.prior_news_tone(asst) == "good"
+    assert fm.input_news_tone("neutral", asst) == "good"
+    assert fm.input_news_tone("bad", asst) == "bad"
 
 
 def test_input_news_prefers_morning_box_over_headline() -> None:
@@ -463,6 +468,8 @@ def test_template_has_data_slot() -> None:
     assert "erdHtml" in text
     assert "renderHits" in text
     assert "Hit rate" in text
+    assert "renderBurst" in text
+    assert "parabolic" in text.lower()
 
 
 def test_write_outputs_injects_payload(tmp_path=None) -> None:
@@ -1216,6 +1223,24 @@ def test_match_why_and_decision() -> None:
     assert any("Failed:" in x for x in no["lines"])
 
 
+def test_burst_and_nneg_gates() -> None:
+    clean = {
+        "boxes": {"join": "good", "ab": "good"}, "alarm": False,
+        "ohlc_ret_5": 18.9, "ohlc_rvol": 2.56, "ohlc_break_10": True,
+        "last_green": True, "sources": ["union"],
+    }
+    dirty = dict(clean, boxes={"join": "bad", "ab": "bad", "vol": "bad"}, alarm=True)
+    coil = dict(clean, ohlc_ret_5=4.0, ohlc_rvol=1.1, ohlc_break_10=False)
+    assert fm.is_burst(clean) is True
+    assert fm.is_burst(coil) is False
+    assert fm.n_neg(clean) == 0
+    assert fm.n_neg(dirty) >= 3
+    rec2 = fm.make_recipe("t", require={"n_neg_max": 2, "burst": True})
+    assert fm.matches(clean, rec2) is True
+    assert fm.matches(dirty, rec2) is False
+    assert fm.matches(coil, rec2) is False
+
+
 def test_hit_tally_buy_sit_and_nneg() -> None:
     from src import factor_mine_sim as fms
     looks = {
@@ -1305,6 +1330,7 @@ if __name__ == "__main__":
     test_hold_window_includes_entry_day()
     test_feature_export_is_always_prior_session()
     test_prior_news_tone()
+    test_burst_and_nneg_gates()
     test_input_news_prefers_morning_box_over_headline()
     test_matches_ryg_presence_and_ignores_same_day_change()
     test_matches_coil_and_short_alarm()
@@ -1346,4 +1372,4 @@ if __name__ == "__main__":
     test_match_why_and_decision()
     test_hit_tally_buy_sit_and_nneg()
     test_js_sim_matches_python_later_start()
-    print("44 factor-mine tests passed")
+    print("45 factor-mine tests passed")

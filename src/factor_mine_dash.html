@@ -132,6 +132,7 @@
 <p class="mut">Book % is the $10k sleeve after whole shares, Futubull fees, leftover split, sell-first, min-hold, and hard-red sit. Each morning opens at yesterday's leftover cash and the lots still held. Signal-only is the old equal-weight path — not a fill. Click a card, chip, or table row to open <b>only that sleeve</b>.</p>
 <div id="tools" class="tools" hidden></div>
 <div id="explain" class="explain" hidden></div>
+<div id="burstBox" class="explain" hidden></div>
 <div id="audit" class="audit" hidden></div>
 <div class="tbl-wrap"><table id="stats"></table></div>
 <div class="panes">
@@ -167,6 +168,7 @@
   <li><b>Sustainability.</b> For every start date X, replay the cash book from X to the end. Count how often that path is still green. Cash-start <code>&lt;&lt; &lt; &gt; &gt;&gt;</code> is that replay: $10k and no lots on morning X, same hard-red / leftover / min-hold rules. Marks and the blotter stay as detailed as 8-13. It is not “add on top of the 8-13 book.” The investigator date follows this morning.</li>
   <li><b>Stock investigator.</b> Dropdown = names that sleeve actually bought. Date buttons = 09:30 that morning. A big BUY / SIT / NO badge says whether this recipe would take the name, plus the gates that fired or failed. E / R dots are beat-miss / upgrade-downgrade — a date-only stamp is not green. Horizon % is hold-H from the 09:30 open. Cameras / coaches / news are quoted from repo files — never same-day Change%.</li>
   <li><b>Morning board.</b> Every name this recipe looked at that 09:30, ranked by its own rank key, plus would-be horizon % if bought here. −N is red-camera count. Hit-rate tally covers BUY / NO / SIT and the ≤2 vs ≥3 red-camera split.</li>
+  <li><b>−N / burst / green-news sweep.</b> Research overlays on the current cash-book leaders. A new gate is kept only if it beats flatten_h5 on the $10k book. If none do, current methods stay. Live flatten_robust is never changed.</li>
   <li><b>Top-25 gainer capture.</b> Buy 8-17 hold=3 → did a pick land in the liquid top-25 gainers on 8-17, 8-18, or 8-19?</li>
   <li><b>Loser capture.</b> Same window: names that printed Change% &lt; −1.5% (outcome only — never a 09:30 gate).</li>
   <li><b>AvgW vs AvgL.</b> Closed-trade mean % on the cash book (fees in).</li>
@@ -557,6 +559,14 @@ function cardPasses(rec, card){
   if(req.rvol_max!=null && !(card.rvol!=null && card.rvol<=Number(req.rvol_max))) return false;
   if(req.days_since_E_max!=null && !(card.days_E!=null && Number(card.days_E)<=Number(req.days_since_E_max))) return false;
   if(req.flag_R!=null && Number(card.flag_R||0)!==Number(req.flag_R)) return false;
+  const nNeg=Number(card.n_neg||0);
+  if(req.n_neg_max!=null && nNeg>Number(req.n_neg_max)) return false;
+  if(req.n_neg_min!=null && nNeg<Number(req.n_neg_min)) return false;
+  if(req.burst && !card.burst){
+    const ret=card.ret_5, rvol=card.rvol;
+    const burst=ret!=null && ret>=12 && !!card.last_green && (!!card.break_10 || (rvol!=null && rvol>=2));
+    if(!burst) return false;
+  }
   return true;
 }
 function whyHtml(why){
@@ -751,10 +761,11 @@ function renderProbe(){
     `Sleeve checklist: ${pass?'would pass the buy gates (cash and hard-red still apply)':'would not pass the buy gates'}`,
     `Marks: ${card.blue?'🔵 turn higher': 'no 🔵'} · ${card.alarm?'🚨 cameras worse overnight':'no 🚨'} · ${card.white?'⚪ no red cameras':'red cameras present'}`,
     `Last finished bar: ${card.last_green?'green (closed up)':card.last_red?'red (closed down)':'not flagged'}`,
-    `Prior 5-session return: ${card.ret_5==null?'—':(card.ret_5>=0?'+':'')+card.ret_5+'%'} · prior rel vol ${card.rvol==null?'—':card.rvol}${card.nr7?' · NR7':''}${card.break_10?' · broke 10-session range':''}`,
+    `Prior 5-session return: ${card.ret_5==null?'—':(card.ret_5>=0?'+':'')+card.ret_5+'%'} · prior rel vol ${card.rvol==null?'—':card.rvol}${card.nr7?' · NR7':''}${card.break_10?' · broke 10-session range':''}${card.burst?' · parabolic tape (ret5≥12 + last green + break/rvol)':''}`,
     `Candles: ${card.candle||'—'} · capture ${card.candle_capture?'yes':'no'}`,
     `Earnings window: ${card.earn_react?'yes':'no'}${card.days_E!=null?(' · E '+card.days_E+' sess ago'):''}${card.days_R!=null?(' · R '+card.days_R+' sess ago'):''}`,
-    `News: ${newsWord} (${newsTitle}${news.when?'; retrieved '+news.when:''}${news.retrieved?'; prior export '+news.retrieved:''}) · ${news.file||'panel.json'}${news.judge!=null?(' · judge tilt '+news.judge):''}`,
+    `News packet: ${newsWord} (${newsTitle}${news.when?'; retrieved '+news.when:''}${news.retrieved?'; prior export '+news.retrieved:''}) · ${news.file||'panel.json'}${news.judge!=null?(' · judge tilt '+news.judge):''}`,
+    card.headline?`Headline tone: ${(D.tone_word||{})[toneOf(card.headline_tone)]||card.headline_tone} — ${card.headline}`:'',
     `Cond: ${card.cond_good||0} green / ${card.cond_bad||0} red cameras`,
     card.action?`Flatten Action 09:30: ${card.action}${card.action_why?(' — '+card.action_why):''}`:'',
     card.setups?`Setups: ${card.setups}`:'',
@@ -801,6 +812,32 @@ function renderLooks(){
   el.querySelectorAll('[data-look]').forEach(row=>{
     row.onclick=()=>{ probeTick=row.dataset.look; renderTools(); };
   });
+}
+function renderBurst(){
+  const box=document.getElementById('burstBox');
+  if(!box) return;
+  const b=D.burst;
+  if(!b){ box.hidden=true; box.innerHTML=''; return; }
+  box.hidden=false;
+  const rows=(b.rows||[]).slice().sort((a,c)=>(c.book_pct||-999)-(a.book_pct||-999)).slice(0,12);
+  const table='<div class="tbl-wrap"><table><tr><th class="tick">Overlay</th><th>Base</th><th>Book%</th><th>Fills</th></tr>'+
+    rows.map(r=>`<tr><td class="tick">${esc(r.name)}</td><td>${esc(r.overlay)}</td><td class="num ${cls(r.book_pct)}">${num(r.book_pct)}</td><td class="num">${r.n_trades||0}</td></tr>`).join('')+
+    '</table></div>';
+  const nneg=Object.entries(b.buy_nneg||{}).map(([k,v])=>{
+    const lo=v.le2||{}, hi=v.ge3||{};
+    return `<li><code>${esc(k)}</code> buys ≤2 red: ${lo.n||0} names, ${lo.win==null?'—':(100*lo.win).toFixed(0)+'%'} green, mean ${lo.mean==null?'—':lo.mean+'%'} · ≥3 red: ${hi.n||0} names, ${hi.win==null?'—':(100*hi.win).toFixed(0)+'%'} green, mean ${hi.mean==null?'—':hi.mean+'%'}</li>`;
+  }).join('');
+  const asst=(b.asst||[]).map(a=>`<li>${esc(a.date)} ret5=${a.ret_5==null?'—':Number(a.ret_5).toFixed(1)}% rvol=${a.rvol==null?'—':Number(a.rvol).toFixed(2)} −N=${a.n_neg} burst=${a.burst?'yes':'no'} headline=${esc(a.headline_tone||'')} ${esc((a.headline||'').slice(0,90))}</li>`).join('');
+  box.innerHTML =
+    `<h2>−N / green news / parabolic — research sweep</h2>`+
+    `<p class="kid">${esc(b.verdict==='keep current'
+      ? 'None of the new gates beat flatten_h5 (+22.84%) or union_e_green_h3 (+47.92%) on the $10k book. Current methods stay.'
+      : 'A new overlay beat the current phone books — see keepers.')}</p>`+
+    `<p class="mut">Keepers: ${(b.keepers||[]).length?esc(b.keepers.join(', ')):'(none). yday_gainer overlays improved a losing list but stayed far below flatten_h5.'}</p>`+
+    `<h3>Best overlays in this sweep (still below the current champs unless listed as keepers)</h3>${table}`+
+    `<h3>When already picked as a BUY, is −N≥3 worse?</h3><ul>${nneg||'<li>no buy split</li>'}</ul>`+
+    `<h3>ASST (parabolic case)</h3><ul>${asst||'<li>not on the 09:30 lists</li>'}</ul>`+
+    `<p class="mut">${esc(b.note||'')} Live flatten_robust is untouched.</p>`;
 }
 function renderExplain(){
   const box=document.getElementById('explain');
@@ -1062,6 +1099,7 @@ function renderAll(){
   renderCards();
   renderChips();
   renderExplain();
+  renderBurst();
   renderTools();
   renderTable();
   renderAudit();

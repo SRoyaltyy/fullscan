@@ -149,7 +149,8 @@ def _prior_finviz_map(date: str | None) -> dict[str, dict]:
     df = ga.load_finviz(date)
     out: dict[str, dict] = {}
     if df is not None and not getattr(df, "empty", True) and "Ticker" in df.columns:
-        keep = [c for c in ("Ticker", "EPS Surprise", "Analyst Recom") if c in df.columns]
+        keep = [c for c in ("Ticker", "EPS Surprise", "Analyst Recom", "News Title")
+                if c in df.columns]
         for rec in df[keep].to_dict("records"):
             t = fm._tick(rec.get("Ticker"))
             if t:
@@ -164,6 +165,12 @@ def attach_erd_polarity(panel: dict) -> dict:
         prior = row.get("news_export_date") or row.get("prior_date")
         fv = _prior_finviz_map(prior).get(fm._tick(row.get("ticker"))) or {}
         row.update(erd_polarity(row, fv))
+        title = str(fv.get("News Title") or "")
+        row["headline"] = title[:160]
+        row["headline_tone"] = fm.prior_news_tone(title)
+        row["burst"] = fm.is_burst(row)
+        if "n_neg" not in row:
+            row["n_neg"] = fm.n_neg(row)
     return panel
 
 
@@ -353,6 +360,9 @@ def _card(row: dict, flat: dict | None, news: dict) -> dict:
         "e_label": row.get("e_label") or "",
         "r_pol": row.get("r_pol") or "missing",
         "r_label": row.get("r_label") or "",
+        "headline": row.get("headline") or "",
+        "headline_tone": row.get("headline_tone") or "missing",
+        "burst": bool(row.get("burst")),
         "news": news,
         "cond_good": int(row.get("cond_good") or 0),
         "cond_bad": int(row.get("cond_bad") or 0),

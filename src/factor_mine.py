@@ -62,6 +62,8 @@ POTHOLE_CUT = 30.0  # one session's mean % that dominates the path
 NEWS_POS = (
     "beat", "upgrade", "approv", "record high", "surge", "wins ",
     "raises", "buyback", "phase 3", "fda", "breakthrough",
+    "director buys", "insider buy", "buys shares", "buys stock",
+    "purchases shares", "form 4",
 )
 NEWS_NEG = (
     "miss", "downgrade", "lawsuit", "probe", "dilut", "offering",
@@ -120,12 +122,22 @@ def feature_export_date(cal: list[str], date: str) -> str | None:
     return gc.prior_session(cal, date)
 
 
+def _headline_insider_buy(text: str) -> bool:
+    """Director / insider open-market buy — not 'buyback' and not a downgrade."""
+    if any(w in text for w in ("downgrade", "lawsuit", "dilut", "offering")):
+        return False
+    people = any(w in text for w in ("director", "insider", "form 4", "form-4",
+                                     "ceo ", "cfo ", "board"))
+    bought = any(w in text for w in ("buy", "purchase", "acquire"))
+    return people and bought
+
+
 def prior_news_tone(title: str | None) -> str:
     """RYG from a prior-export headline. Empty → missing."""
     text = str(title or "").strip().lower()
     if not text:
         return "missing"
-    hit_pos = any(w in text for w in NEWS_POS)
+    hit_pos = any(w in text for w in NEWS_POS) or _headline_insider_buy(text)
     hit_neg = any(w in text for w in NEWS_NEG)
     if hit_pos and not hit_neg:
         return "good"
@@ -135,11 +147,16 @@ def prior_news_tone(title: str | None) -> str:
 
 
 def input_news_tone(news_box: str | None, prior_title: str | None) -> str:
-    """Morning packet box wins; else prior-export headline. Never D's tape."""
+    """Packet red stays red. A clearly green headline can lift a yellow box."""
     box = str(news_box or "missing").lower()
-    if box != "missing":
-        return box
-    return prior_news_tone(prior_title)
+    prior = prior_news_tone(prior_title)
+    if box == "bad":
+        return "bad"
+    if box == "good" or prior == "good":
+        return "good"
+    if box == "neutral":
+        return "neutral"
+    return prior
 
 
 def _news_title(df, ticker: str) -> str:
@@ -397,6 +414,12 @@ def _gate_kid(key: str, val) -> str:
         return "the join camera printed something (any color, not blank)"
     if key == "catal_present":
         return "the catalyst camera printed something (any color, not blank)"
+    if key == "n_neg_max":
+        return f"at most {int(val)} red cameras (the −N next to the name)"
+    if key == "n_neg_min":
+        return f"at least {int(val)} red cameras"
+    if key == "burst":
+        return "a parabolic / high-intensity prior tape (ret5≥12, last green, and a 10-session break or rvol≥2)"
     if key == "ret_5_min":
         return f"prior 5-session return is at least {float(val):g}%"
     if key == "ret_5_max":
@@ -691,7 +714,33 @@ def matches(row: dict, rec: dict) -> bool:
     if "flag_R" in req:
         if int(row.get("erd_flag_R") or 0) != int(req["flag_R"]):
             return False
+    if "n_neg_max" in req and n_neg(row) > int(req["n_neg_max"]):
+        return False
+    if "n_neg_min" in req and n_neg(row) < int(req["n_neg_min"]):
+        return False
+    if req.get("burst") and not is_burst(row):
+        return False
     return True
+
+
+def n_neg(row: dict) -> int:
+    """Red-camera count plus 🚨 — the −N on the morning board."""
+    boxes = row.get("boxes") or {}
+    n = sum(1 for v in boxes.values() if v == "bad")
+    if row.get("alarm"):
+        n += 1
+    return n
+
+
+def is_burst(row: dict) -> bool:
+    """Parabolic prior tape. Leak-free: ret_5 / rvol / break_10 from date < D."""
+    ret = _finite(row.get("ohlc_ret_5"))
+    rvol = _finite(row.get("ohlc_rvol"))
+    if ret is None or ret < 12.0:
+        return False
+    if not row.get("last_green"):
+        return False
+    return bool(row.get("ohlc_break_10")) or (rvol is not None and rvol >= 2.0)
 
 
 def match_why(row: dict, rec: dict) -> dict:
@@ -777,6 +826,14 @@ def match_why(row: dict, rec: dict) -> dict:
     if "flag_R" in req:
         need(int(row.get("erd_flag_R") or 0) == int(req["flag_R"]),
              _gate_kid("flag_R", req["flag_R"]))
+    if "n_neg_max" in req:
+        need(n_neg(row) <= int(req["n_neg_max"]),
+             _gate_kid("n_neg_max", req["n_neg_max"]))
+    if "n_neg_min" in req:
+        need(n_neg(row) >= int(req["n_neg_min"]),
+             _gate_kid("n_neg_min", req["n_neg_min"]))
+    if req.get("burst"):
+        need(is_burst(row), _gate_kid("burst", True))
     return {"ok": not failed, "failed": failed, "passed": passed}
 
 
@@ -1461,6 +1518,18 @@ def stamp_probe_and_sim(payload: dict, panel: dict | None = None) -> dict:
     payload["mornings"] = fmp.build_mornings()
     payload.update(fmp.probe_meta())
     payload["sim"] = fms.build_sim_pack(panel)
+    from . import factor_mine_burst as fmburst
+    if fmburst.OUT_JSON.is_file():
+        try:
+            raw = json.loads(fmburst.OUT_JSON.read_text(encoding="utf-8"))
+            raw["keepers"] = [
+                k for k in (raw.get("keepers") or [])
+                if any((r.get("name") == k and (r.get("book_pct") or 0) >= 23.84)
+                       for r in (raw.get("rows") or []))
+            ]
+            payload["burst"] = fmburst.slim_for_dash(raw)
+        except (OSError, json.JSONDecodeError):
+            pass
     return payload
 
 

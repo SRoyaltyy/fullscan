@@ -106,6 +106,15 @@
     if (req.flag_E_min != null && !(row.erd_flag_E != null && Number(row.erd_flag_E) >= Number(req.flag_E_min))) return false;
     if (req.days_since_R_max != null && !(row.erd_days_since_R != null && Number(row.erd_days_since_R) <= Number(req.days_since_R_max))) return false;
     if (req.flag_R != null && Number(row.erd_flag_R || 0) !== Number(req.flag_R)) return false;
+    const nNeg = Object.values(row.boxes || {}).filter(v => v === "bad").length + (row.alarm ? 1 : 0);
+    if (req.n_neg_max != null && nNeg > Number(req.n_neg_max)) return false;
+    if (req.n_neg_min != null && nNeg < Number(req.n_neg_min)) return false;
+    if (req.burst) {
+      const ret = finite(row.ohlc_ret_5), rvol = finite(row.ohlc_rvol);
+      const burst = ret != null && ret >= 12 && !!row.last_green
+        && (!!row.ohlc_break_10 || (rvol != null && rvol >= 2));
+      if (!burst) return false;
+    }
     return true;
   }
   function kidGate(key, val) {
