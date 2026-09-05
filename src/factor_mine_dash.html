@@ -70,6 +70,18 @@
  .tool h2{margin:0 0 6px}
  .slide{width:100%;accent-color:var(--gold);max-width:100%}
  .tool select{display:block;width:100%;max-width:100%;background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:13px/1.3 ui-monospace,Menlo,Consolas,monospace;margin:0 0 8px}
+ .navbtns{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 8px}
+ .navbtns button{min-width:40px;padding:7px 10px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--fg);font:700 14px/1 ui-monospace,Menlo,Consolas,monospace;cursor:pointer}
+ .navbtns button:hover{border-color:var(--gold)}
+ .navbtns .nav-date{font:700 14px/1.2 ui-monospace,Menlo,Consolas,monospace}
+ .buy-banner{font:800 26px/1.15 ui-sans-serif,system-ui;text-align:center;padding:12px 10px;border-radius:10px;margin:0 0 8px;letter-spacing:.02em}
+ .buy-banner.yes{background:#14532d;color:#86efac;border:2px solid #4ade80}
+ .buy-banner.sit{background:#7f1d1d;color:#fecaca;border:2px solid #f87171}
+ .buy-banner.no{background:#1f2937;color:#cbd5e1;border:2px solid #64748b}
+ .gl-banner{font:700 20px/1.2 ui-sans-serif,system-ui;text-align:center;padding:8px;border-radius:8px;margin:0 0 8px}
+ .look-row{display:grid;grid-template-columns:32px minmax(52px,1fr) 44px minmax(64px,auto) minmax(56px,auto);gap:6px;align-items:center;padding:4px 0;border-bottom:1px solid var(--line2);font:12px/1.3 ui-monospace,Menlo,Consolas,monospace;cursor:pointer}
+ .look-row:hover{background:rgba(251,191,36,.08)}
+ .look-hd{color:var(--mut);font-weight:600;cursor:default}
  .cam-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(140px,100%),1fr));gap:8px}
  .cam-col h3{margin:0 0 6px;font-size:13px}
  .cam-row{display:flex;align-items:center;justify-content:space-between;gap:8px;font:12px/1.3 ui-monospace,Menlo,Consolas,monospace;margin:0 0 3px}
@@ -143,8 +155,9 @@
   <li><b>Time.</b> Buy at the 09:30 open. Hold H sessions (entry day counts). Optional early exit at a later 09:30 if 🚨, last-bar red, or news🔴 prints that morning.</li>
   <li><b>Win rate.</b> Share of picks with horizon return &gt; 0 (long or short).</li>
   <li><b>$ days / average win vs loss.</b> Share of sessions whose <em>cash book</em> made money (leftover split, fees, whole shares), plus average closed-trade win % vs loss %.</li>
-  <li><b>Sustainability.</b> For every start date X, replay the cash book from X to the end. Count how often that path is still green. The cash-start scroller is that replay: $10k and no lots on morning X, same hard-red / leftover / min-hold rules. It is not “add on top of the 8-13 book.”</li>
-  <li><b>Stock investigator.</b> Dropdown = names that sleeve actually bought. Date scroller = 09:30 that morning. Cameras / coaches / news / tape are quoted from repo files — never same-day Change%.</li>
+  <li><b>Sustainability.</b> For every start date X, replay the cash book from X to the end. Count how often that path is still green. Cash-start <code>&lt;&lt; &lt; &gt; &gt;&gt;</code> is that replay: $10k and no lots on morning X, same hard-red / leftover / min-hold rules. Marks and the blotter stay as detailed as 8-13. It is not “add on top of the 8-13 book.” The investigator date follows this morning.</li>
+  <li><b>Stock investigator.</b> Dropdown = names that sleeve actually bought. Date buttons = 09:30 that morning. A big BUY / SIT / NO badge says whether this recipe would take the name. Horizon % is hold-H from the 09:30 open. Cameras / coaches / news are quoted from repo files — never same-day Change%.</li>
+  <li><b>Morning board.</b> Every name this recipe looked at that 09:30, ranked by its own rank key, plus would-be horizon % if bought here.</li>
   <li><b>Top-25 gainer capture.</b> Buy 8-17 hold=3 → did a pick land in the liquid top-25 gainers on 8-17, 8-18, or 8-19?</li>
   <li><b>Loser capture.</b> Same window: names that printed Change% &lt; −1.5% (outcome only — never a 09:30 gate).</li>
   <li><b>AvgW vs AvgL.</b> Closed-trade mean % on the cash book (fees in).</li>
@@ -157,6 +170,7 @@
 <div class="note" id="fees"></div>
 </div>
 <script>
+__SIM_JS__
 const D = __DATA__;
 const COLORS = ["#60a5fa","#34d399","#fbbf24","#f472b6","#a78bfa","#f87171","#22d3ee","#fb923c","#4ade80","#e879f9","#94a3b8","#38bdf8","#c084fc","#facc15"];
 const hidden = new Set();
@@ -200,7 +214,9 @@ function selectSleeve(name){
   sleeveFilter = name || 'all';
   hidden.clear();
   startIdx = 0;
+  probeIdx = 0;
   probeTick = '';
+  _simKey=''; _simBook=null;
   renderAll();
   const el=document.getElementById('curveTitle');
   if(el) el.scrollIntoView({block:'nearest'});
@@ -383,6 +399,54 @@ function isCanon(){
   const sp=startPath();
   return !sp || !ds.length || sp.start===ds[0];
 }
+let _simKey='', _simBook=null;
+function simBook(){
+  const name=pickedName();
+  const sp=startPath();
+  if(!name || !sp || !D.sim || typeof FMSim==='undefined') return null;
+  const key=name+'|'+sp.start;
+  if(_simKey===key && _simBook) return _simBook;
+  const rec=recipeOf(name);
+  _simBook=FMSim.simulateBook(D.sim, rec, sp.start, D.mornings||{});
+  _simKey=key;
+  return _simBook;
+}
+function activeDaily(){
+  const name=pickedName();
+  if(name && !isCanon()){
+    const b=simBook();
+    if(b && (b.daily||[]).length) return b.daily;
+  }
+  return (D.daily||{})[name] || (((D.books||{})[name]||{}).daily) || [];
+}
+function activeBook(){
+  const name=pickedName();
+  if(name && !isCanon()){
+    const b=simBook();
+    if(b) return b;
+  }
+  return (D.books||{})[name] || null;
+}
+function lookRows(date){
+  const name=pickedName();
+  if(!name || !D.sim || typeof FMSim==='undefined') return [];
+  return FMSim.lookDay(D.sim, recipeOf(name), date, D.mornings||{});
+}
+function stepDate(which, idx, max){
+  if(which==='first') return 0;
+  if(which==='prev') return Math.max(0, idx-1);
+  if(which==='next') return Math.min(max, idx+1);
+  return max;
+}
+function navButtons(id, date){
+  return `<div class="navbtns" data-nav="${id}">
+    <button type="button" data-step="first" aria-label="First date">&lt;&lt;</button>
+    <button type="button" data-step="prev" aria-label="Previous date">&lt;</button>
+    <span class="nav-date">${esc(date||'—')}</span>
+    <button type="button" data-step="next" aria-label="Next date">&gt;</button>
+    <button type="button" data-step="last" aria-label="Last date">&gt;&gt;</button>
+  </div>`;
+}
 function seriesOf(name){
   if(name===pickedName()){
     const sp=startPath();
@@ -406,6 +470,36 @@ function boughtTickers(name){
   }
   extra.sort();
   return canon.concat(extra);
+}
+function probeTickers(name, date){
+  const looks=[], fills=[];
+  const seen=new Set();
+  for(const r of lookRows(date)){
+    if(r.ticker && !seen.has(r.ticker)){ seen.add(r.ticker); looks.push(r.ticker); }
+  }
+  for(const t of boughtTickers(name)){
+    if(t && !seen.has(t)){ seen.add(t); fills.push(t); }
+  }
+  return {looks, fills, all: looks.concat(fills)};
+}
+function tickOptions(groups, cur){
+  const opt=t=>`<option ${t===cur?'selected':''}>${esc(t)}</option>`;
+  let html='';
+  if(groups.looks.length) html+=`<optgroup label="This 09:30">${groups.looks.map(opt).join('')}</optgroup>`;
+  if(groups.fills.length) html+=`<optgroup label="Sleeve fills">${groups.fills.map(opt).join('')}</optgroup>`;
+  return html || '<option value="">(no names)</option>';
+}
+function syncProbeTickToBuys(date){
+  const looks=lookRows(date);
+  const buys=looks.filter(r=>r.buy).map(r=>r.ticker);
+  if(probeTick && buys.includes(probeTick)) return;
+  if(buys.length){ probeTick=buys[0]; return; }
+  if(looks.length){
+    if(!looks.some(r=>r.ticker===probeTick)) probeTick=looks[0].ticker;
+    return;
+  }
+  const ticks=boughtTickers(pickedName());
+  if(ticks.length && !ticks.includes(probeTick)) probeTick=ticks[0];
 }
 function toneOf(v){
   const t=String(v||'missing').toLowerCase();
@@ -474,35 +568,55 @@ function renderTools(){
   const rows=startRows();
   if(startIdx>=rows.length) startIdx=0;
   const sp=startPath();
-  const ticks=boughtTickers(name);
-  if(ticks.length && !ticks.includes(probeTick)) probeTick=ticks[0];
   if(probeIdx>=ds.length) probeIdx=0;
   const startDate=sp?sp.start:(ds[startIdx]||'');
   const probeDate=ds[probeIdx]||'';
+  const groups=probeTickers(name, probeDate);
+  if(groups.all.length && !groups.all.includes(probeTick)){
+    const firstBuy=(lookRows(probeDate).find(r=>r.buy)||{}).ticker;
+    probeTick=firstBuy || groups.all[0];
+  }
   box.innerHTML = `
     <div class="tool">
       <h2>Cash-start date</h2>
-      <p class="mut">Wake the sleeve on this morning with $10k cash and no lots. Same rules: hard-red sit, leftover split, min-hold, 09:30 open. This is not the leftover-from-8-13 book.</p>
-      <input class="slide" id="startSlide" type="range" min="0" max="${Math.max(0,ds.length-1)}" value="${startIdx}" aria-label="Start date">
-      <div><b id="startLabel">${esc(startDate)}</b> · ${sp&&sp.hard_red?'<span class="neg">hard-red sit</span>':'cash $10,000'}</div>
+      <p class="mut">Wake the sleeve on this morning with $10k cash and no lots. Same rules: hard-red sit, leftover split, min-hold, 09:30 open. Marks and the blotter match the 8-13 ledger. These buttons also move the investigator date and pick the first BUY that morning.</p>
+      ${navButtons('start', startDate)}
+      <div id="startLabel">${sp&&sp.hard_red?'<span class="neg">hard-red sit</span>':'cash $10,000'}</div>
       <div id="cashStart"></div>
     </div>
     <div class="tool">
       <h2>Stock investigator</h2>
-      <p class="mut">One name the sleeve bought, one 09:30. Cameras and coaches are what the repo files printed that morning — not today's Change%.</p>
-      <select id="probeTick" aria-label="Ticker">${ticks.map(t=>`<option ${t===probeTick?'selected':''}>${esc(t)}</option>`).join('')||'<option value="">(no fills)</option>'}</select>
-      <input class="slide" id="probeSlide" type="range" min="0" max="${Math.max(0,ds.length-1)}" value="${probeIdx}" aria-label="Investigate date">
+      <p class="mut">One name, one 09:30. The huge badge is whether this recipe would buy it that morning. Horizon % is hold-H from the 09:30 open. Cameras and coaches are repo files — not today's Change%.</p>
+      <select id="probeTick" aria-label="Ticker">${tickOptions(groups, probeTick)}</select>
+      ${navButtons('probe', probeDate)}
       <div><b>${esc(probeTick||'—')}</b> · ${esc(probeDate)} 09:30 ET</div>
       <div id="probeOut"></div>
+    </div>
+    <div class="tool">
+      <h2>Morning board — who it looked at</h2>
+      <p class="mut">${esc(probeDate)} 09:30. Rank is this recipe's own sort (src list, hot score, cond, …). Horizon % is hold-${esc(recipeOf(name).hold)} from the 09:30 open. Same-day Change% is not a gate.</p>
+      <div id="lookOut"></div>
     </div>`;
-  const sl=document.getElementById('startSlide');
-  if(sl) sl.oninput=e=>{ startIdx=Number(e.target.value)||0; renderAll(); };
-  const ps=document.getElementById('probeSlide');
-  if(ps) ps.oninput=e=>{ probeIdx=Number(e.target.value)||0; renderTools(); };
+  box.querySelectorAll('[data-nav="start"] button').forEach(b=>{
+    b.onclick=()=>{
+      startIdx=stepDate(b.dataset.step, startIdx, Math.max(0,ds.length-1));
+      probeIdx=startIdx;
+      _simKey=''; _simBook=null;
+      syncProbeTickToBuys(ds[probeIdx]);
+      renderAll();
+    };
+  });
+  box.querySelectorAll('[data-nav="probe"] button').forEach(b=>{
+    b.onclick=()=>{
+      probeIdx=stepDate(b.dataset.step, probeIdx, Math.max(0,ds.length-1));
+      renderTools();
+    };
+  });
   const pt=document.getElementById('probeTick');
   if(pt) pt.onchange=e=>{ probeTick=e.target.value; renderTools(); };
   renderCashStart();
   renderProbe();
+  renderLooks();
 }
 function renderCashStart(){
   const el=document.getElementById('cashStart');
@@ -529,11 +643,29 @@ function renderProbe(){
   const card=((D.probe||{})[date]||{})[ticker];
   const rec=recipeOf(pickedName());
   const morn=(D.mornings||{})[date]||{};
+  const looks=lookRows(date);
+  const hit=looks.find(x=>x.ticker===ticker);
+  const hard=!!(morn.hard_red || (morn.s!=null && Number(morn.s)<=-3));
+  const filled=!!((simBook()&&(simBook().daily||[]).find(d=>d.date===date)||{}).bought||[]).includes(ticker)
+    || ((startPath()||{}).start===date && ((startPath().bought)||[]).includes(ticker));
   if(!card){
-    el.innerHTML=`<div class="mut">${esc(ticker)} is not in the 09:30 files on ${esc(date)} (not on any shopping list, and not in flatten lookback). Same-day tape was not used.</div>`;
+    const horizon=hit && hit.ret!=null ? hit.ret
+      : (typeof FMSim!=='undefined' && D.sim ? FMSim.holdReturn(D.sim, rec, ticker, date) : null);
+    let badge='NO — would not buy', badgeCls='no';
+    if(hard){ badge='SIT — hard-red, no new buys'; badgeCls='sit'; }
+    else if(filled || (hit&&hit.buy)){ badge=filled?'BUY — filled on this cash-start':'BUY — would take this name'; badgeCls='yes'; }
+    el.innerHTML=`<div class="buy-banner ${badgeCls}">${esc(badge)}</div>
+      <div class="gl-banner ${cls(horizon)}">${horizon==null?'Horizon P/L — not enough tape':('Horizon P/L if bought here: '+(horizon>=0?'+':'')+Number(horizon).toFixed(2)+'% over hold '+esc(rec.hold||'?'))}</div>
+      <div class="mut">${esc(ticker)} is not in the 09:30 camera files on ${esc(date)} (not on any shopping list, and not in flatten lookback). Same-day tape was not used.</div>`;
     return;
   }
   card._date=date;
+  const would=hit?hit.buy: (card.on_list && cardPasses(rec, card) && !hard);
+  let badge='NO — would not buy', badgeCls='no';
+  if(hard){ badge='SIT — hard-red, no new buys'; badgeCls='sit'; }
+  else if(filled || would){ badge=filled?'BUY — filled on this cash-start':'BUY — would take this name'; badgeCls='yes'; }
+  const horizon=hit && hit.ret!=null ? hit.ret
+    : (typeof FMSim!=='undefined' && D.sim ? FMSim.holdReturn(D.sim, rec, ticker, date) : null);
   const pass=card.on_list && cardPasses(rec, card);
   const news=card.news||{};
   const newsWord=(D.tone_word||{})[toneOf(news.tone)]||toneOf(news.tone);
@@ -562,12 +694,40 @@ function renderProbe(){
     `Quoted from: ${(card.files||[]).join(' · ')||'repo files'}`,
   ].filter(Boolean);
   el.innerHTML =
-    `<div class="negbox"><b>Negative factors: ${card.n_neg||0}</b>${negBits.length?' · '+negBits.join(', '):''}</div>
+    `<div class="buy-banner ${badgeCls}">${esc(badge)}</div>
+     <div class="gl-banner ${cls(horizon)}">${horizon==null?'Horizon P/L — not enough tape':('Horizon P/L if bought here: '+(horizon>=0?'+':'')+Number(horizon).toFixed(2)+'% over hold '+esc(rec.hold||'?'))}</div>
+     <div class="negbox"><b>Negative factors: ${card.n_neg||0}</b>${negBits.length?' · '+negBits.join(', '):''}</div>
      <div class="cam-grid">
        <div class="cam-col"><h3>Cameras</h3>${camCol(D.cam_labs, card.boxes, D.cam_file)}</div>
        <div class="cam-col"><h3>Coaches</h3>${card.domains?camCol(D.coach_labs, card.domains, D.coach_file):'<div class="mut">no coach row in flatten lookback for this name-day</div>'}</div>
      </div>
      <ul>${points.map(x=>'<li>'+esc(x)+'</li>').join('')}</ul>`;
+}
+function renderLooks(){
+  const el=document.getElementById('lookOut');
+  if(!el) return;
+  const ds=D.dates||[];
+  const date=ds[probeIdx];
+  if(!date){ el.innerHTML='<div class="mut">Pick a sleeve and a morning.</div>'; return; }
+  const rows=lookRows(date);
+  if(!rows.length){ el.innerHTML='<div class="mut">No shopping-list names for this recipe on '+esc(date)+'.</div>'; return; }
+  const morn=(D.mornings||{})[date]||{};
+  const head=`<div class="look-row look-hd"><span>#</span><span>Name</span><span>Take</span><span>Score</span><span>H%</span></div>`;
+  const body=rows.map(r=>{
+    const take=morn.hard_red?'SIT':(r.buy?'BUY':(r.pass?'look':'NO'));
+    const takeCls=r.buy?'pos':(morn.hard_red||!r.pass?'neg':'gold');
+    return `<div class="look-row" data-look="${esc(r.ticker)}">
+      <span>${r.rank==null?'—':r.rank}</span>
+      <span><b>${esc(r.ticker)}</b>${r.n_neg?(' <span class="neg">−'+r.n_neg+'</span>'):''}</span>
+      <span class="${takeCls}">${take}</span>
+      <span>${r.score==null?'—':Number(r.score).toFixed(2)}</span>
+      <span class="${cls(r.ret)}">${r.ret==null?'—':((r.ret>=0?'+':'')+Number(r.ret).toFixed(2)+'%')}</span>
+    </div>`;
+  }).join('');
+  el.innerHTML=head+body;
+  el.querySelectorAll('[data-look]').forEach(row=>{
+    row.onclick=()=>{ probeTick=row.dataset.look; renderTools(); };
+  });
 }
 function renderExplain(){
   const box=document.getElementById('explain');
@@ -635,24 +795,10 @@ function renderAudit(){
 }
 function renderState(){
   const name=pickedName();
-  const days=(D.daily||{})[name] || (((D.books||{})[name]||{}).daily) || [];
+  const days=activeDaily();
   const el=document.getElementById('state');
   if(!el) return;
   if(!name){ el.innerHTML='<div class="mut">Pick a sleeve (card, chip, or table row) to see its cash / holdings state — not a mash of other recipes.</div>'; return; }
-  const sp=startPath();
-  if(sp && !isCanon() && (sp.days||[]).length){
-    el.innerHTML = (sp.days||[]).map(d=>{
-      return `<div class="day-card">
-        <h4>${esc(d.date)} · S ${d.s==null?'—':num(d.s)}${d.hard_red?' · hard-red sit':''} · book ${money(d.equity)} · leftover ${money(d.cash)}</h4>
-        <div class="pills">
-          <span class="pill">09:30 cash ${money(d.open_cash)}</span>
-          <span class="pill pos">bought: ${esc((d.bought||[]).join(' ')||'—')}</span>
-          <span class="pill neg">sold: ${esc((d.sold||[]).join(' ')||'—')}</span>
-        </div>
-      </div>`;
-    }).join('');
-    return;
-  }
   if(!days.length){ el.innerHTML='<div class="mut">No daily state for '+esc(name)+'.</div>'; return; }
   el.innerHTML = days.map(d=>{
     const lots=d.lots||[];
@@ -681,14 +827,10 @@ function signed(v){
 }
 function renderMarks(){
   const name=pickedName();
-  const days=(D.daily||{})[name] || (((D.books||{})[name]||{}).daily) || [];
+  const days=activeDaily();
   const el=document.getElementById('marks');
   if(!el) return;
   if(!name){ el.innerHTML='<div class="mut">Pick a sleeve to see every held name, every session, at the 09:30 open and at the close.</div>'; return; }
-  if(startPath() && !isCanon()){
-    el.innerHTML='<div class="mut">Per-name 09:30 marks are on the canonical 8-13 book. This cash-start path shows bought / sold chips in the session cards and blotter instead — it began with $10k and no lots.</div>';
-    return;
-  }
   if(!days.length){ el.innerHTML='<div class="mut">No daily marks for '+esc(name)+'.</div>'; return; }
   el.innerHTML = days.map(d=>{
     const marks=d.marks||[];
@@ -721,36 +863,14 @@ function nestMarks(rows, mode){
 function renderBlotter(){
   const name = pickedName();
   const hint=document.getElementById('blotHint');
-  const book=(D.books||{})[name];
+  const book=activeBook();
   const s=(D.stats||[]).find(x=>x.name===name);
   const sp=startPath();
   if(hint) hint.textContent = !name
     ? 'Pick a sleeve to see its 09:30 snapshots and fills only.'
     : (!isCanon() && sp)
-      ? (name+' — cash-start '+sp.start+' with $10k and no lots. Same hard-red / leftover / min-hold rules. This is not the leftover-from-8-13 blotter.')
+      ? (name+' — cash-start '+sp.start+' with $10k and no lots. Same hard-red / leftover / min-hold rules. OPEN / CLOSE marks match the 8-13 ledger.')
       : (name+' — 09:30 OPEN is the per-name overnight mark (cash unchanged, no fees). CLOSE is each remaining lot open→close. BUY has no equity label. SELL/COVER is green if the sale locked in a gain, red if a loss.');
-  if(name && sp && !isCanon()){
-    const buys=sp.buys||[];
-    const days=sp.days||[];
-    document.getElementById('blot').innerHTML =
-      (buys.length?buys.map(b=>`<div class="fill-card fill-up">
-        <div class="fill-top"><span class="pos">BUY</span> <b>${esc(b.ticker)}</b> ${esc(sp.start)} · ${b.shares} sh @ ${b.price==null?'—':('$'+(+b.price).toFixed(2))} · fee ${b.fees==null?'—':('$'+(+b.fees).toFixed(2))}</div>
-        ${b.reason?`<div class="why">${esc(b.reason)}</div>`:''}
-      </div>`).join(''):`<div class="mut">${sp.hard_red?'Hard-red sit — no new buys.':'No first-morning fills.'}</div>`) +
-      days.map(d=>`<div class="fill-card">
-        <div class="fill-top">${esc(d.date)} · leftover ${money(d.cash)} · book ${money(d.equity)}
-          ${d.hard_red?' · <span class="neg">hard-red</span>':''}
-        </div>
-        <div class="pill pos">bought ${(d.bought||[]).join(' ')||'—'}</div>
-        <div class="pill neg">sold ${(d.sold||[]).join(' ')||'—'}</div>
-      </div>`).join('');
-    document.getElementById('skips').innerHTML = (sp.skips||[]).length
-      ? '<div class="day-card"><h4>First-morning skips</h4><div class="pills">'+
-        (sp.skips||[]).map(k=>`<span class="pill">${esc(k.ticker||'')} · ${esc(k.kind)} · ${esc(k.reason||'')}</span>`).join('')+
-        '</div></div>'
-      : '';
-    return;
-  }
   if(!name){
     document.getElementById('blot').innerHTML='<div class="mut">No sleeve selected.</div>';
     document.getElementById('skips').innerHTML='';
@@ -840,7 +960,7 @@ function renderStarts(){
     el.onclick=()=>{
       const ds=D.dates||[];
       const i=ds.indexOf(el.dataset.start);
-      if(i>=0){ startIdx=i; renderAll(); }
+      if(i>=0){ startIdx=i; probeIdx=i; _simKey=''; _simBook=null; syncProbeTickToBuys(ds[i]); renderAll(); }
     };
   });
 }

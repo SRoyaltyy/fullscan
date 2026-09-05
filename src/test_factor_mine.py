@@ -444,13 +444,21 @@ def test_template_has_data_slot() -> None:
     assert "renderExplain" in text
     assert "fill-card" in text
     assert "overflow-x:hidden" in text.replace(" ", "")
-    assert "startSlide" in text
+    assert "startSlide" not in text
     assert "Stock investigator" in text
     assert "cam-grid" in text
     assert "renderProbe" in text
     assert "Cash-start" in text
     assert "renderTools" in text
     assert "sleeve\\'s" not in text
+    assert "__SIM_JS__" in text
+    assert "navbtns" in text
+    assert "buy-banner" in text
+    assert "Morning board" in text
+    assert "FMSim" in text or "__SIM_JS__" in text
+    assert "syncProbeTickToBuys" in text
+    assert "probeTickers" in text
+    assert "This 09:30" in text
 
 
 def test_write_outputs_injects_payload(tmp_path=None) -> None:
@@ -1120,6 +1128,95 @@ def test_stamp_starts_and_probe_on_mined_payload() -> None:
     _ = pt.load_fees()
 
 
+def test_look_day_ranks_and_horizon() -> None:
+    from src import factor_mine_sim as fms
+    cal = ["2026-08-17", "2026-08-18", "2026-08-19"]
+    rows = [
+        {"date": "2026-08-17", "ticker": "AAA", "sources": ["union"],
+         "boxes": {"join": "good"}, "alarm": False, "last_red": False,
+         "src_rank": 0, "cond_good": 3, "cond_bad": 0, "open": 10, "close": 11},
+        {"date": "2026-08-17", "ticker": "BBB", "sources": ["union"],
+         "boxes": {"join": "good"}, "alarm": False, "last_red": False,
+         "src_rank": 1, "cond_good": 1, "cond_bad": 0, "open": 10, "close": 9},
+        {"date": "2026-08-18", "ticker": "AAA", "sources": ["union"],
+         "boxes": {}, "alarm": False, "last_red": False, "src_rank": 0,
+         "open": 11, "close": 12},
+        {"date": "2026-08-19", "ticker": "AAA", "sources": ["union"],
+         "boxes": {}, "alarm": False, "last_red": False, "src_rank": 0,
+         "open": 12, "close": 13},
+    ]
+    by_date = {}
+    for r in rows:
+        by_date.setdefault(r["date"], []).append(r)
+    panel = {"session_dates": cal, "rows": rows, "by_date": by_date}
+    bars = {("AAA", d): {"open": next(x["open"] for x in rows if x["date"]==d and x["ticker"]=="AAA"),
+                          "close": next(x["close"] for x in rows if x["date"]==d and x["ticker"]=="AAA")}
+            for d in cal if any(x["date"]==d and x["ticker"]=="AAA" for x in rows)}
+    bars[("BBB", "2026-08-17")] = {"open": 10, "close": 9}
+    rec = fm.make_recipe("union_h3", hold=3, top_n=8)
+    looks = fms.look_day(panel, rec, "2026-08-17", bars=bars, regime={})
+    assert looks[0]["ticker"] == "AAA"
+    assert looks[0]["rank"] == 1
+    assert looks[0]["buy"] is True
+    assert looks[0]["ret"] is not None
+    assert looks[1]["ticker"] == "BBB"
+    assert looks[1]["rank"] == 2
+
+
+def test_js_sim_matches_python_later_start() -> None:
+    import subprocess
+    from pathlib import Path
+    from src import factor_mine_book as fmb
+    from src import factor_mine_sim as fms
+    from src import paper_trade as pt
+    cal = ["2026-08-17", "2026-08-18", "2026-08-19"]
+    rows = [
+        {"date": d, "ticker": "AAA", "sources": ["union"],
+         "boxes": {}, "alarm": False, "last_red": False, "src_rank": 0,
+         "open": 10 + i, "close": 11 + i}
+        for i, d in enumerate(cal)
+    ]
+    by_date = {}
+    for r in rows:
+        by_date.setdefault(r["date"], []).append(r)
+    panel = {"session_dates": cal, "rows": rows, "by_date": by_date,
+             "from_date": cal[0], "to_date": cal[-1]}
+    bars = {("AAA", d): {"open": 10 + i, "close": 11 + i} for i, d in enumerate(cal)}
+    rec = fm.make_recipe("union_h1", hold=1, top_n=1)
+    book = fmb.simulate_book(
+        panel, rec, bars=bars, fees=pt.load_fees(), regime={}, start="2026-08-18")
+    pack = fms.build_sim_pack(panel)
+    # Overlay fixture tape so JS does not depend on live OHLC.
+    pack["tape"] = {"AAA": {d: [10 + i, 11 + i] for i, d in enumerate(cal)}}
+    pack["s"] = {}
+    payload = {"pack": pack, "rec": rec, "start": "2026-08-18"}
+    Path("/tmp/fm_sim_in.json").write_text(json.dumps(payload), encoding="utf-8")
+    Path("/tmp/fm_sim_run.mjs").write_text(
+        """
+        import { readFileSync, writeFileSync } from 'node:fs';
+        import vm from 'node:vm';
+        vm.runInThisContext(readFileSync('src/factor_mine_sim.js','utf8'));
+        const inp = JSON.parse(readFileSync('/tmp/fm_sim_in.json','utf8'));
+        const book = globalThis.FMSim.simulateBook(inp.pack, inp.rec, inp.start, {});
+        writeFileSync('/tmp/fm_sim_out.json', JSON.stringify({
+          ret: book.total_ret_pct, cash: book.cash,
+          days: book.daily.map(d=>({date:d.date,equity:d.equity,open_cash:d.open_cash,bought:d.bought,marks:d.marks.length})),
+          fills: book.trades.filter(t=>t.side==='BUY'||t.side==='SELL').map(t=>({side:t.side,ticker:t.ticker,shares:t.shares,date:t.date})),
+        }));
+        """,
+        encoding="utf-8",
+    )
+    subprocess.check_call(["node", "/tmp/fm_sim_run.mjs"])
+    js_book = json.loads(Path("/tmp/fm_sim_out.json").read_text(encoding="utf-8"))
+    assert js_book["days"][0]["date"] == "2026-08-18"
+    assert js_book["days"][0]["open_cash"] == 10000
+    assert js_book["days"][0]["bought"] == ["AAA"]
+    assert js_book["days"][0]["marks"] >= 1
+    py_eq = [round(d["equity"], 2) for d in book["daily"]]
+    js_eq = [round(d["equity"], 2) for d in js_book["days"]]
+    assert js_eq == py_eq
+
+
 def test_action_filters_size_sell_boost() -> None:
     from src import factor_mine_book as fmb
     only = fmb.recipes_from_action(
@@ -1170,4 +1267,6 @@ if __name__ == "__main__":
     test_replay_starts_has_first_morning_and_aligned_equity()
     test_build_probe_quotes_repo_files_not_same_day_change()
     test_stamp_starts_and_probe_on_mined_payload()
-    print("39 factor-mine tests passed")
+    test_look_day_ranks_and_horizon()
+    test_js_sim_matches_python_later_start()
+    print("41 factor-mine tests passed")
