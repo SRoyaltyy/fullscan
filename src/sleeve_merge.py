@@ -1784,7 +1784,9 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float,
         "recycle, no Excel vote, no leverage.",
         "",
         "Code: `src/sleeve_merge.py`. Machine: `data/sleeve_merge/`. "
-        "Dashboard: `dashboard/sleeve-merge/index.html`.",
+        "Dashboard: `dashboard/sleeve-merge/index.html`. "
+        "Lookback (cameras / setups / 09:30 action): "
+        "`dashboard/flatten-lookback/index.html`.",
         "",
     ]
     (SCOREBOARD / "SLEEVE_MERGE.md").write_text("\n".join(lines), encoding="utf-8")
@@ -1917,7 +1919,8 @@ td.why{{text-align:left;white-space:normal;max-width:280px;font-size:12px}}
 <h1>Combined sleeve — .io × mover</h1>
 <p class="muted"><a href="../">.io paper</a>
  · <a href="../mover-paper/">mover paper</a>
- · <a href="../book-paper/">book paper</a></p>
+ · <a href="../book-paper/">book paper</a>
+ · <a href="../flatten-lookback/">flatten lookback</a></p>
 <p class="muted">{_html.escape(pol['name'])} · {_html.escape(str(pol.get('engine','combine')))} ·
 {_html.escape(str(pol['io_sleeve']))} · flatten when S≥{pol['long_gate']:+.1f} and
 ≥{pol.get('min_buys',5)} priced BUYs · rotate leftover mover at next green open ·
