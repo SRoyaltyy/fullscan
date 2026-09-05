@@ -28,6 +28,7 @@ on:
           - gainers
           - movers
           - losers
+          - captured
       preset:
         description: "featured | strict | setups | lane | loose"
         required: false

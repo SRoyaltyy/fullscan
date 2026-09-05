@@ -38,6 +38,7 @@ def test_filter_rows_date_and_source() -> None:
         {"date": "2026-08-14", "ticker": "ASTS", "sources": ["gainers"]},
         {"date": "2026-08-20", "ticker": "AG", "sources": ["flatten", "movers"]},
         {"date": "2026-08-18", "ticker": "XYZ", "sources": ["losers"]},
+        {"date": "2026-08-14", "ticker": "CAPR", "sources": ["captured", "gainers"]},
         {"date": "2026-08-14", "ticker": "AAPL", "sources": ["custom"]},
     ]
     only_flat = fla.filter_rows(rows, source="flatten")
@@ -45,9 +46,11 @@ def test_filter_rows_date_and_source() -> None:
     day = fla.filter_rows(rows, source="flatten", date="2026-08-14")
     assert [r["ticker"] for r in day] == ["TLN"]
     gain = fla.filter_rows(rows, source="gainers", date="2026-08-14")
-    assert {r["ticker"] for r in gain} == {"TLN", "ASTS"}
+    assert {r["ticker"] for r in gain} == {"TLN", "ASTS", "CAPR"}
     lose = fla.filter_rows(rows, source="losers")
     assert [r["ticker"] for r in lose] == ["XYZ"]
+    cap = fla.filter_rows(rows, source="captured")
+    assert [r["ticker"] for r in cap] == ["CAPR"]
     custom = fla.filter_rows(rows, source="custom", tickers=["AAPL"])
     assert [r["ticker"] for r in custom] == ["AAPL"]
 
@@ -73,6 +76,8 @@ def _sample_payload() -> dict:
                        "chosen_rate": None, "captured_rate": None},
             "losers_tape": {"universe": 0, "chosen": 0, "captured": 0,
                             "chosen_rate": None, "captured_rate": None},
+            "captured": {"universe": 4, "chosen": 1, "captured": 1,
+                         "gainer_hits": 2, "loser_hits": 0},
             "low_s": {"picks": 0, "losers": 0, "lose_rate": None},
         },
         "preset": "featured",
@@ -125,7 +130,9 @@ def test_html_has_toggles_cameras_and_date_filter() -> None:
     assert 'data-source="gainers"' in page
     assert 'data-source="movers"' in page
     assert 'data-source="losers"' in page
+    assert 'data-source="captured"' in page
     assert 'data-source="custom"' in page
+    assert "Gainers captured" in page
     assert "Gainers chosen" in page
     assert "Losers chosen" in page
     assert "Flatten lose rate" in page
@@ -151,7 +158,7 @@ def test_html_has_toggles_cameras_and_date_filter() -> None:
 
 def test_build_tally_counts_chosen_and_lose_rate() -> None:
     rows = [
-        {"ticker": "TLN", "sources": ["flatten", "gainers"], "outcome": "win",
+        {"ticker": "TLN", "sources": ["flatten", "gainers", "captured"], "outcome": "win",
          "flatten_score": 5.5, "flatten_ok": False, "candle_capture": True},
         {"ticker": "VST", "sources": ["flatten"], "outcome": "lose",
          "flatten_score": -4.0, "flatten_ok": False, "candle_capture": False},
@@ -161,6 +168,8 @@ def test_build_tally_counts_chosen_and_lose_rate() -> None:
          "candle_capture": False},
         {"ticker": "AG", "sources": ["flatten", "movers"], "outcome": "win",
          "flatten_score": 1.2, "flatten_ok": True, "candle_capture": False},
+        {"ticker": "CAPR", "sources": ["captured", "gainers"], "outcome": "win",
+         "candle_capture": True},
     ]
     flat = [r for r in rows if "flatten" in r["sources"]]
     tally = fla._build_tally(rows, [{"date": "2026-08-14"}], flat)
@@ -168,11 +177,13 @@ def test_build_tally_counts_chosen_and_lose_rate() -> None:
     assert tally["winners"] == 2
     assert tally["losers"] == 1
     assert tally["lose_rate"] == 0.333
-    assert tally["gainers"]["universe"] == 2
+    assert tally["gainers"]["universe"] == 3
     assert tally["gainers"]["chosen"] == 1
-    assert tally["gainers"]["captured"] == 2
+    assert tally["gainers"]["captured"] == 3
     assert tally["losers_tape"]["chosen"] == 0
     assert tally["movers"]["chosen"] == 1
+    assert tally["captured"]["gainer_hits"] == 2
+    assert tally["captured"]["universe"] == 2
 
 
 if __name__ == "__main__":

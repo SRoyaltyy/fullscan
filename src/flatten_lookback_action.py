@@ -6,8 +6,9 @@ For every session since the dashboard start (2026-08-13):
     size-book wish-list, or ranked mover BUYs when flatten_ok)
   * also collect that day's liquid top gainers, priced mover BUYs,
     and liquid top losers so the Action / phone page can toggle
-    Flatten | Gainers | Movers | Losers | Custom and tally how
-    many of each tape flatten chose
+    Flatten | Gainers | Movers | Losers | Captured | Custom and
+    tally how many of each tape flatten chose — plus a leak-free
+    capture watchlist (prior tape + earnings reaction + morning BUYs)
   * stamp the specialized red:green / volume / candlestick factor
     (prior sessions only) so we can capture would-be top gainers
     without buying them
@@ -32,6 +33,7 @@ from pathlib import Path
 
 from . import candle_factor as cf
 from . import gainer_asof as ga
+from . import gainer_capture as gc
 from . import gainer_lookback_action as gla
 from . import lookback_action as act
 from . import sleeve_merge as sm
@@ -49,8 +51,8 @@ START = ga.START
 HORIZONS = act.HORIZONS
 CAMERA_COLS = run.CAMERA_COLS
 DOMAIN_COLS = run.DOMAIN_COLS
-SOURCES = ("flatten", "gainers", "movers", "losers", "custom")
-UNIVERSES = ("flatten", "gainers", "movers", "losers")
+SOURCES = ("flatten", "gainers", "movers", "losers", "captured", "custom")
+UNIVERSES = ("flatten", "gainers", "movers", "losers", "captured")
 
 
 def _tick(v) -> str:
@@ -443,6 +445,12 @@ def walk(from_date: str = START, to_date: str | None = None,
         payload_src, flatten_meta["from_date"], flatten_meta["to_date"],
         top_n=top_n,
     )
+    capture_meta = gc.collect_capture(
+        flatten_meta["from_date"], flatten_meta["to_date"],
+        flatten_meta["session_dates"],
+        flatten_meta.get("by_date") or {},
+        mover_meta.get("by_date") or {},
+    )
     extra = [_tick(t) for t in (extra_tickers or []) if _tick(t)]
     # Paint flatten + custom. When the Action dropdown is a tape
     # universe, also paint that set so cameras exist for the tally.
@@ -454,6 +462,8 @@ def walk(from_date: str = START, to_date: str | None = None,
         names |= set(loser_meta.get("tickers") or [])
     elif src == "movers":
         names |= set(mover_meta.get("tickers") or [])
+    elif src == "captured":
+        names |= set(capture_meta.get("tickers") or [])
     names = sorted(names)
     painted = paint_names(
         names, flatten_meta["from_date"], flatten_meta["to_date"],
@@ -481,6 +491,12 @@ def walk(from_date: str = START, to_date: str | None = None,
     for date, ticks in (mover_meta.get("by_date") or {}).items():
         for t in ticks:
             membership[(date, t)].add("movers")
+    capture_raw: dict[tuple[str, str], dict] = {}
+    for date, wl in (capture_meta.get("by_date") or {}).items():
+        for rec in wl.get("rows") or []:
+            t = _tick(rec.get("ticker"))
+            membership[(date, t)].add("captured")
+            capture_raw[(date, t)] = rec
     for t in extra:
         for date in dates:
             membership[(date, t)].add("custom")
@@ -493,11 +509,17 @@ def walk(from_date: str = START, to_date: str | None = None,
                     "date": date, "ticker": ticker, "class": "no_data",
                     "boxes": {k: "missing" for k, _ in tl.BOX_COLS},
                 })
-        rows.append(_attach_meta(
+        rec = _attach_meta(
             card, date, ticker, sources, flatten_meta,
             tape_raw.get((date, ticker)), dates,
             day_change=chg_maps.get(date, {}).get(ticker),
-        ))
+        )
+        cap = capture_raw.get((date, ticker))
+        if cap:
+            rec["capture_reasons"] = cap.get("reasons") or []
+            if rec.get("candle_capture") is None:
+                rec["candle_capture"] = cap.get("candle_capture")
+        rows.append(rec)
 
     flatten_rows = [r for r in rows if "flatten" in r.get("sources", [])]
     recall_buy = sum(1 for r in flatten_rows if r.get("action_call") == "BUY")
@@ -511,6 +533,8 @@ def walk(from_date: str = START, to_date: str | None = None,
                 for r in (loser_meta.get("by_date") or {}).get(date) or []}
         mset = {str(t).upper()
                 for t in (mover_meta.get("by_date") or {}).get(date) or []}
+        cset = {str(t).upper()
+                for t in ((capture_meta.get("by_date") or {}).get(date) or {}).get("tickers") or []}
         chosen = {str(t).upper() for t in (plan.get("tickers") or [])}
         g_rows = [r for r in rows
                   if r.get("date") == date and "gainers" in (r.get("sources") or [])]
@@ -536,6 +560,9 @@ def walk(from_date: str = START, to_date: str | None = None,
             "n_movers_chosen": len(chosen & mset),
             "n_losers": len(lset),
             "n_losers_chosen": len(chosen & lset),
+            "n_captured": len(cset),
+            "n_gainers_watch": len(cset & gset),
+            "n_losers_watch": len(cset & lset),
             "n_win": n_win,
             "n_lose": n_lose,
             "lose_rate": None if not n_out else round(n_lose / n_out, 3),
@@ -558,6 +585,7 @@ def walk(from_date: str = START, to_date: str | None = None,
         "n_gainers": gainer_meta.get("n_gainer_days") or 0,
         "n_movers": mover_meta.get("n_mover_days") or 0,
         "n_losers": loser_meta.get("n_loser_days") or 0,
+        "n_captured": capture_meta.get("n_capture_days") or 0,
         "universe": src if src in UNIVERSES else "flatten",
         "tally": tally,
         "custom_tickers": extra,
@@ -588,6 +616,7 @@ def _build_tally(rows: list[dict], daily: list[dict],
     gainers = _side("gainers")
     movers = _side("movers")
     losers = _side("losers")
+    captured = _side("captured")
     n_win = sum(1 for r in flatten_rows if r.get("outcome") == "win")
     n_lose = sum(1 for r in flatten_rows if r.get("outcome") == "lose")
     n_flat = sum(1 for r in flatten_rows if r.get("outcome") == "flat")
@@ -637,6 +666,15 @@ def _build_tally(rows: list[dict], daily: list[dict],
         "gainers": _cap(gainers),
         "movers": _cap(movers),
         "losers_tape": _cap(losers),
+        "captured": {
+            **_cap(captured),
+            "gainer_hits": sum(
+                1 for r in captured if "gainers" in (r.get("sources") or [])
+            ),
+            "loser_hits": sum(
+                1 for r in captured if "losers" in (r.get("sources") or [])
+            ),
+        },
         "n_sessions": len(daily),
     }
 
@@ -691,19 +729,26 @@ def _tally_markdown(tally: dict) -> str:
     g = tally.get("gainers") or {}
     m = tally.get("movers") or {}
     l = tally.get("losers_tape") or {}
+    cap = tally.get("captured") or {}
     low = tally.get("low_s") or {}
     hard = tally.get("hard_red") or {}
+    g_uni = g.get("universe") or 0
     return "\n".join([
         "## Chosen tally (flatten ∩ tape)",
         "",
+        f"- **Capture watchlist** (prior-session top gainers/movers + "
+        f"AMC/BMO earnings + morning priced BUYs + flatten): "
+        f"**{cap.get('universe') or 0}** name-days · hit "
+        f"**{cap.get('gainer_hits') or 0}** / {g_uni} top gainers "
+        f"({_pct_label((cap.get('gainer_hits') or 0) / g_uni if g_uni else None)}) "
+        f"· {cap.get('loser_hits') or 0} top losers. "
+        f"Not a live buy list.",
         f"- **Top gainers:** flatten chose **{g.get('chosen') or 0}** / "
-        f"{g.get('universe') or 0} "
+        f"{g_uni} "
         f"({_pct_label(g.get('chosen_rate'))}). "
-        f"Prior R:G / candle capture flagged **{g.get('captured') or 0}** "
-        f"gainers ({_pct_label(g.get('captured_rate'))}) vs "
-        f"**{l.get('captured') or 0}** losers "
-        f"({_pct_label(l.get('captured_rate'))}) — label, not a veto "
-        f"(vetoes on flatten picks raised the lose rate).",
+        f"Prior R:G / candle label on the gainer tape: "
+        f"**{g.get('captured') or 0}** "
+        f"({_pct_label(g.get('captured_rate'))}).",
         f"- **Top movers (priced BUYs):** flatten chose "
         f"**{m.get('chosen') or 0}** / {m.get('universe') or 0} "
         f"({_pct_label(m.get('chosen_rate'))}).",
@@ -727,11 +772,17 @@ def _tally_html(tally: dict) -> str:
     m = tally.get("movers") or {}
     l = tally.get("losers_tape") or {}
     low = tally.get("low_s") or {}
+    cap = tally.get("captured") or {}
+    g_uni = g.get("universe") or 0
+    hit = cap.get("gainer_hits") or 0
     cards = [
+        ("Gainers captured",
+         f"{hit}/{g_uni}",
+         f"watchlist {cap.get('universe') or 0} name-days · "
+         f"{cap.get('loser_hits') or 0} losers also on list"),
         ("Gainers chosen",
-         f"{g.get('chosen') or 0}/{g.get('universe') or 0}",
-         f"candle {g.get('captured') or 0} gainers / "
-         f"{l.get('captured') or 0} losers"),
+         f"{g.get('chosen') or 0}/{g_uni}",
+         f"flatten would-buy ∩ top gainers"),
         ("Movers chosen",
          f"{m.get('chosen') or 0}/{m.get('universe') or 0}",
          "priced BUY calls ∩ flatten"),
@@ -1037,6 +1088,7 @@ Flatten names are freshly painted with cameras.</p>
 <button type="button" class="chip{' on' if universe=='gainers' else ''}" data-source="gainers">Gainers</button>
 <button type="button" class="chip{' on' if universe=='movers' else ''}" data-source="movers">Movers</button>
 <button type="button" class="chip{' on' if universe=='losers' else ''}" data-source="losers">Losers</button>
+<button type="button" class="chip{' on' if universe=='captured' else ''}" data-source="captured">Captured</button>
 <button type="button" class="chip" data-source="custom">Custom</button>
 <select id="dateSel" aria-label="Session date">{''.join(date_opts)}</select>
 <input id="tickerIn" type="text" placeholder="Custom tickers: TLN,VST" value="{html.escape(custom)}" size="22">
@@ -1120,6 +1172,7 @@ def _slim_row(r: dict) -> dict:
         "candle_capture": r.get("candle_capture"),
         "candle_last_green": r.get("candle_last_green"),
         "candle_pattern": r.get("candle_pattern"),
+        "capture_reasons": r.get("capture_reasons"),
         "session_bar": r.get("session_bar"),
         "horizon_dates": r.get("horizon_dates"),
         "condition": r.get("condition"),
@@ -1172,7 +1225,7 @@ def main():
     ap.add_argument("--preset", default="", help="featured|strict|setups|lane|loose")
     ap.add_argument("--source", default="flatten",
                     choices=list(SOURCES),
-                    help="Action dropdown / board tab: flatten|gainers|movers|losers|custom")
+                    help="Action dropdown / board tab: flatten|gainers|movers|losers|captured|custom")
     ap.add_argument("--date", default="", help="Filter one session YYYY-MM-DD")
     ap.add_argument("--tickers", default="",
                     help="Custom tickers (comma) to paint and filter")
