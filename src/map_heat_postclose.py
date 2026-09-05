@@ -386,10 +386,21 @@ def run(source_date: str, target_date: str, force: bool = False) -> dict:
         f"{json.dumps(source_reaction, indent=1)}\n\n"
         f"SECTORS/THEMES:\n{json.dumps({'sectors': heat.get('sectors'), 'themes': heat.get('themes'), 'theme_tape': (heat.get('theme_tape') or [])[:30]}, indent=1)[:18000]}"
     )
+    # Cards already meet the 90% gate. Synthesis must not throw them away
+    # the way coverage SystemExit discarded 95 valid cards on 33917326531.
     syn = extract_json(_chat(rubric, user, target_date, "synthesis")) or {}
     opp_errors = opportunity_tickers_valid(syn, cards)
     if opp_errors:
-        raise SystemExit("; ".join(opp_errors[:10]))
+        print(f"[map-postclose] synthesis tickers dropped: {opp_errors[:8]}",
+              flush=True)
+        syn = {
+            **syn,
+            "opportunities": [],
+            "one_paragraph": (
+                str(syn.get("one_paragraph") or "").strip()
+                or "synthesis dropped invented opportunity tickers"
+            ),
+        }
 
     payload = {
         "date": target_date,
