@@ -14,6 +14,10 @@ def test_flatten_814_is_tln_not_asts() -> None:
     assert "ASTS" not in names
     assert "SITM" not in names
     assert "DOCN" not in names
+    rip = [t.upper() for t in (plan.get("ripper_picks") or [])]
+    assert len(rip) <= 2
+    for t in rip:
+        assert t not in ("ASTS", "SITM", "DOCN")
 
 
 def test_flatten_813_is_3d_book_not_2w_ino_method() -> None:
@@ -39,6 +43,7 @@ def test_filter_rows_date_and_source() -> None:
         {"date": "2026-08-20", "ticker": "AG", "sources": ["flatten", "movers"]},
         {"date": "2026-08-18", "ticker": "XYZ", "sources": ["losers"]},
         {"date": "2026-08-14", "ticker": "CAPR", "sources": ["captured", "gainers"]},
+        {"date": "2026-08-14", "ticker": "WWW", "sources": ["probable"]},
         {"date": "2026-08-14", "ticker": "AAPL", "sources": ["custom"]},
     ]
     only_flat = fla.filter_rows(rows, source="flatten")
@@ -51,6 +56,8 @@ def test_filter_rows_date_and_source() -> None:
     assert [r["ticker"] for r in lose] == ["XYZ"]
     cap = fla.filter_rows(rows, source="captured")
     assert [r["ticker"] for r in cap] == ["CAPR"]
+    prob = fla.filter_rows(rows, source="probable")
+    assert [r["ticker"] for r in prob] == ["WWW"]
     custom = fla.filter_rows(rows, source="custom", tickers=["AAPL"])
     assert [r["ticker"] for r in custom] == ["AAPL"]
 
@@ -135,8 +142,10 @@ def test_html_has_toggles_cameras_and_date_filter() -> None:
     assert 'data-source="movers"' in page
     assert 'data-source="losers"' in page
     assert 'data-source="captured"' in page
+    assert 'data-source="probable"' in page
     assert 'data-source="custom"' in page
     assert "Gainers captured" in page
+    assert "Probable rippers" in page
     assert "Gainers chosen" in page
     assert "Losers chosen" in page
     assert "Flatten lose rate" in page

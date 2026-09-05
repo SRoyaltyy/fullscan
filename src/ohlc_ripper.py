@@ -12,7 +12,8 @@ Sweep on 2026-08-13 → latest (yesterday-liquid → today's tape):
   * coiled / NR7 ranking does **not** find the rip — that was the miss
 
 Every bar is strictly before ``asof``. Same-day Change% is never an input.
-This list does not change live flatten_robust fills.
+Live flatten_robust keeps the 3d book and spends a reserved
+10% cash sleeve at 09:30 on the top 2 continuation names.
 """
 from __future__ import annotations
 
@@ -23,6 +24,8 @@ from . import gainer_asof as ga
 
 LOOKBACK = 20
 HOT_TOP_N = 80
+CONT_TOP_N = 8
+CONT_RET5_MAX = 10.0
 
 
 def _tick(v) -> str:
@@ -121,6 +124,38 @@ def liquid_hot(prior_date: str | None, asof: str, top_n: int = HOT_TOP_N) -> lis
     out, seen = [], set()
     for _, t in scored:
         if t in seen:
+            continue
+        seen.add(t)
+        out.append(t)
+        if len(out) >= int(top_n):
+            break
+    return out
+
+
+def continuation(prior_date: str | None, asof: str,
+                 top_n: int = CONT_TOP_N,
+                 ret5_max: float = CONT_RET5_MAX) -> list[str]:
+    """Yesterday's liquid gainers that are not already exploded.
+
+    Sweep (2026-08-14 → latest): top 8, ~7.5 names/day, 9/375 next-day
+    top-25 (vs flatten 2), 15 liquid ≥5%, 7 top-25 losers, g/l 1.29.
+    Earnings reaction is noisier (g/l 0.37) and is not mixed in here.
+    Same-day Change% is never an input.
+    """
+    if not prior_date or not asof:
+        return []
+    out: list[str] = []
+    seen: set[str] = set()
+    for raw in ga.liquid_gainers(
+        ga.load_finviz(prior_date), top_n=60, min_change=0.0, liquid=True,
+    ):
+        t = _tick(raw.get("ticker"))
+        if not t or t in seen:
+            continue
+        feat = features(t, asof)
+        if not feat.get("ok") or too_extended(feat):
+            continue
+        if float(feat.get("ret_5") or 0) > float(ret5_max):
             continue
         seen.add(t)
         out.append(t)

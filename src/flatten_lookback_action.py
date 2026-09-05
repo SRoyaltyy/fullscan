@@ -6,9 +6,11 @@ For every session since the dashboard start (2026-08-13):
     size-book wish-list, or ranked mover BUYs when flatten_ok)
   * also collect that day's liquid top gainers, priced mover BUYs,
     and liquid top losers so the Action / phone page can toggle
-    Flatten | Gainers | Movers | Losers | Captured | Custom and
-    tally how many of each tape flatten chose — plus a leak-free
+    Flatten | Gainers | Movers | Losers | Captured | Probable | Custom
+    and tally how many of each tape flatten chose — plus a leak-free
     capture watchlist (prior tape + earnings reaction + morning BUYs)
+    and a compact probable-ripper list (yesterday's non-exploded
+    liquid gainers)
   * stamp the specialized red:green / volume / candlestick factor
     (prior sessions only) so we can capture would-be top gainers
     without buying them
@@ -54,8 +56,10 @@ START = ga.START
 HORIZONS = act.HORIZONS
 CAMERA_COLS = run.CAMERA_COLS
 DOMAIN_COLS = run.DOMAIN_COLS
-SOURCES = ("flatten", "gainers", "movers", "losers", "captured", "custom")
-UNIVERSES = ("flatten", "gainers", "movers", "losers", "captured")
+SOURCES = ("flatten", "gainers", "movers", "losers", "captured",
+           "probable", "custom")
+UNIVERSES = ("flatten", "gainers", "movers", "losers", "captured",
+             "probable")
 
 
 def _tick(v) -> str:
@@ -130,6 +134,10 @@ def flatten_day_targets(date: str, payload: dict | None = None,
         mover_buys=mover_names,
         top_n=int(pol.get("long_top_n") or 10),
     ) if io_book is not None else []
+    from . import ohlc_ripper as ohlc
+    prior_d = gc.prior_session(cal, date)
+    ripper_n = int(pol.get("ripper_top_n") or 0)
+    ripper_picks = ohlc.continuation(prior_d, date, top_n=ripper_n) if ripper_n else []
 
     if flatten_ok:
         route = "mover"
@@ -171,6 +179,7 @@ def flatten_day_targets(date: str, payload: dict | None = None,
         "tickers": tickers,
         "io_picks": list(io_picks),
         "mover_picks": list(mover_picks),
+        "ripper_picks": list(ripper_picks),
         "sleeve": sleeve,
         "clock": clock,
         "why": why,
@@ -473,6 +482,11 @@ def walk(from_date: str = START, to_date: str | None = None,
         names |= set(mover_meta.get("tickers") or [])
     elif src == "captured":
         names |= set(capture_meta.get("tickers") or [])
+    elif src == "probable":
+        for wl in (capture_meta.get("by_date") or {}).values():
+            for rec in wl.get("rows") or []:
+                if "probable" in (rec.get("reasons") or []):
+                    names.add(_tick(rec.get("ticker")))
     names = sorted(names)
     painted = paint_names(
         names, flatten_meta["from_date"], flatten_meta["to_date"],
@@ -505,6 +519,8 @@ def walk(from_date: str = START, to_date: str | None = None,
         for rec in wl.get("rows") or []:
             t = _tick(rec.get("ticker"))
             membership[(date, t)].add("captured")
+            if "probable" in (rec.get("reasons") or []):
+                membership[(date, t)].add("probable")
             capture_raw[(date, t)] = rec
     for t in extra:
         for date in dates:
@@ -576,8 +592,18 @@ def walk(from_date: str = START, to_date: str | None = None,
             "n_losers": len(lset),
             "n_losers_chosen": len(chosen & lset),
             "n_captured": len(cset),
+            "n_probable": sum(
+                1 for r in rows
+                if r.get("date") == date and "probable" in (r.get("sources") or [])
+            ),
             "n_gainers_watch": len(cset & gset),
             "n_losers_watch": len(cset & lset),
+            "n_gainers_probable": sum(
+                1 for r in rows
+                if r.get("date") == date
+                and "probable" in (r.get("sources") or [])
+                and "gainers" in (r.get("sources") or [])
+            ),
             "n_win": n_win,
             "n_lose": n_lose,
             "lose_rate": None if not n_out else round(n_lose / n_out, 3),
@@ -601,6 +627,9 @@ def walk(from_date: str = START, to_date: str | None = None,
         "n_movers": mover_meta.get("n_mover_days") or 0,
         "n_losers": loser_meta.get("n_loser_days") or 0,
         "n_captured": capture_meta.get("n_capture_days") or 0,
+        "n_probable": sum(
+            1 for r in rows if "probable" in (r.get("sources") or [])
+        ),
         "universe": src if src in UNIVERSES else "flatten",
         "tally": tally,
         "custom_tickers": extra,
@@ -632,6 +661,7 @@ def _build_tally(rows: list[dict], daily: list[dict],
     movers = _side("movers")
     losers = _side("losers")
     captured = _side("captured")
+    probable = _side("probable")
     n_win = sum(1 for r in flatten_rows if r.get("outcome") == "win")
     n_lose = sum(1 for r in flatten_rows if r.get("outcome") == "lose")
     n_flat = sum(1 for r in flatten_rows if r.get("outcome") == "flat")
@@ -690,6 +720,15 @@ def _build_tally(rows: list[dict], daily: list[dict],
                 1 for r in captured if "losers" in (r.get("sources") or [])
             ),
         },
+        "probable": {
+            **_cap(probable),
+            "gainer_hits": sum(
+                1 for r in probable if "gainers" in (r.get("sources") or [])
+            ),
+            "loser_hits": sum(
+                1 for r in probable if "losers" in (r.get("sources") or [])
+            ),
+        },
         "n_sessions": len(daily),
     }
 
@@ -745,6 +784,7 @@ def _tally_markdown(tally: dict) -> str:
     m = tally.get("movers") or {}
     l = tally.get("losers_tape") or {}
     cap = tally.get("captured") or {}
+    prob = tally.get("probable") or {}
     low = tally.get("low_s") or {}
     hard = tally.get("hard_red") or {}
     g_uni = g.get("universe") or 0
@@ -759,6 +799,12 @@ def _tally_markdown(tally: dict) -> str:
         f"({_pct_label((cap.get('gainer_hits') or 0) / g_uni if g_uni else None)}) "
         f"· {cap.get('loser_hits') or 0} top losers. "
         f"Not a live buy list.",
+        f"- **Probable rippers** (yesterday's liquid gainers, drop "
+        f"exploded ret_5 > 10 / rvol > 2.8): "
+        f"**{prob.get('universe') or 0}** name-days · hit "
+        f"**{prob.get('gainer_hits') or 0}** / {g_uni} top gainers "
+        f"({_pct_label((prob.get('gainer_hits') or 0) / g_uni if g_uni else None)}) "
+        f"· {prob.get('loser_hits') or 0} top losers.",
         f"- **Top gainers:** flatten chose **{g.get('chosen') or 0}** / "
         f"{g_uni} "
         f"({_pct_label(g.get('chosen_rate'))}). "
@@ -789,6 +835,7 @@ def _tally_html(tally: dict) -> str:
     l = tally.get("losers_tape") or {}
     low = tally.get("low_s") or {}
     cap = tally.get("captured") or {}
+    prob = tally.get("probable") or {}
     g_uni = g.get("universe") or 0
     hit = cap.get("gainer_hits") or 0
     cards = [
@@ -796,6 +843,10 @@ def _tally_html(tally: dict) -> str:
          f"{hit}/{g_uni}",
          f"watchlist {cap.get('universe') or 0} name-days · "
          f"{cap.get('loser_hits') or 0} losers also on list"),
+        ("Probable rippers",
+         f"{prob.get('gainer_hits') or 0}/{g_uni}",
+         f"{prob.get('universe') or 0} name-days · "
+         f"{prob.get('loser_hits') or 0} losers · yday continuation"),
         ("Gainers chosen",
          f"{g.get('chosen') or 0}/{g_uni}",
          f"flatten would-buy ∩ top gainers"),
@@ -1116,6 +1167,7 @@ Flatten names are freshly painted with cameras.</p>
 <button type="button" class="chip{' on' if universe=='movers' else ''}" data-source="movers">Movers</button>
 <button type="button" class="chip{' on' if universe=='losers' else ''}" data-source="losers">Losers</button>
 <button type="button" class="chip{' on' if universe=='captured' else ''}" data-source="captured">Captured</button>
+<button type="button" class="chip{' on' if universe=='probable' else ''}" data-source="probable">Probable</button>
 <button type="button" class="chip" data-source="custom">Custom</button>
 <select id="dateSel" aria-label="Session date">{''.join(date_opts)}</select>
 <input id="tickerIn" type="text" placeholder="Custom tickers: TLN,VST" value="{html.escape(custom)}" size="22">
@@ -1266,7 +1318,7 @@ def main():
     ap.add_argument("--preset", default="", help="featured|strict|setups|lane|loose")
     ap.add_argument("--source", default="flatten",
                     choices=list(SOURCES),
-                    help="Action dropdown / board tab: flatten|gainers|movers|losers|captured|custom")
+                    help="Action dropdown / board tab: flatten|gainers|movers|losers|captured|probable|custom")
     ap.add_argument("--date", default="", help="Filter one session YYYY-MM-DD")
     ap.add_argument("--tickers", default="",
                     help="Custom tickers (comma) to paint and filter")

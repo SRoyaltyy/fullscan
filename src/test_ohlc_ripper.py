@@ -43,6 +43,19 @@ def test_814_watchlist_keeps_earn_and_adds_ohlc_hot() -> None:
     assert "ohlc_ret_5" in row
 
 
+def test_continuation_is_prior_tape_only() -> None:
+    names = ohlc.continuation("2026-08-13", "2026-08-14", top_n=8)
+    assert names, names
+    assert len(names) <= 8
+    for t in names:
+        bars = ohlc.prior_bars(t, "2026-08-14")
+        assert bars and all(b["date"] < "2026-08-14" for b in bars)
+        feat = ohlc.features(t, "2026-08-14")
+        assert feat.get("ok")
+        assert not ohlc.too_extended(feat)
+        assert float(feat.get("ret_5") or 0) <= ohlc.CONT_RET5_MAX
+
+
 def test_html_has_ohlc_columns() -> None:
     from src.test_flatten_lookback_action import _sample_payload
     page = fla.render_html(_sample_payload())
@@ -54,6 +67,7 @@ def test_html_has_ohlc_columns() -> None:
 if __name__ == "__main__":
     test_features_use_prior_bars_only()
     test_too_extended_cuts_exploded_tape()
+    test_continuation_is_prior_tape_only()
     test_814_watchlist_keeps_earn_and_adds_ohlc_hot()
     test_html_has_ohlc_columns()
-    print("4 ohlc-ripper tests passed")
+    print("5 ohlc-ripper tests passed")
