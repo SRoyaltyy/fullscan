@@ -19,6 +19,8 @@
  .card:hover,.card.on{border-color:var(--gold)}
  .fill-up{background:rgba(74,222,128,.12)}
  .fill-dn{background:rgba(248,113,113,.12)}
+ .open-row{background:rgba(251,191,36,.08)}
+ .open-row td{white-space:normal}
  .card b{display:block;font-size:17px;margin-top:2px;font-variant-numeric:tabular-nums}
  .pos{color:var(--pos)}.neg{color:var(--neg)}.mut{color:var(--mut)}.gold{color:var(--gold)}
  canvas{width:100%;height:280px;background:var(--card);border:1px solid var(--line);border-radius:10px}
@@ -75,13 +77,13 @@
 <table id="stats"></table>
 <div id="audit" class="audit" hidden></div>
 <details open>
-<summary>Each session — cash / holdings state</summary>
-<p class="mut">Day N open cash and open held are day N−1 close after fills. We can only sell lots on hand and only spend leftover cash.</p>
+<summary>Each session — 09:30 open vs yesterday close</summary>
+<p class="mut">09:30 cash is yesterday's leftover (no overnight fees). 09:30 equity re-marks lots at the open. vs yday close is only the overnight mark of names already held — that gap is not a fill.</p>
 <table id="state"></table>
 </details>
 <details open>
-<summary>Blotter — what was bought / sold</summary>
-<p class="mut" id="blotHint">Pick a recipe chip. Sells run first (cash freed), then leftover cash is split across new names. A name that costs more than its split is skipped.</p>
+<summary>Blotter — 09:30 snapshot, then buys / sells</summary>
+<p class="mut" id="blotHint">Pick a recipe chip. Each day starts with a 09:30 OPEN row. Equity change is labelled on SELL/COVER only.</p>
 <table id="blot"></table>
 <table id="skips"></table>
 </details>
@@ -101,6 +103,7 @@
   <li><b>Top-25 gainer capture.</b> Buy 8-17 hold=3 → did a pick land in the liquid top-25 gainers on 8-17, 8-18, or 8-19?</li>
   <li><b>Loser capture.</b> Same window: names that printed Change% &lt; −1.5% (outcome only — never a 09:30 gate).</li>
   <li><b>Avg win vs avg loss.</b> Closed-trade mean % on the cash book (fees in).</li>
+  <li><b>09:30 open audit.</b> Each session starts with cash (yesterday leftover, no overnight fees) and lots still held, re-marked at the open. vs yday close is the sum of those per-name overnight moves. BUY does not label equity (cash↔stock). SELL/COVER labels the change after that sale: green if it locked in a gain, red if a loss.</li>
   <li><b>Butterfly state.</b> Morning leftover cash + lots actually held are the only inputs. Size = leftover / rank_w / topheavy / half. Sell = list / time / cut_loser / trail. S≥+5 can size-up or add names, still cash-capped. Hard-red S≤−3 sits.</li>
   <li><b>Entry.</b> <code>flatten_h*</code> buys the wish-list on io/HOLD mornings — live Action those days is HOLD. <code>flatten_live_*</code> only buys when the flatten gate fires (mover).</li>
 </ol>
@@ -363,24 +366,28 @@ function renderState(){
   if(!name){ el.innerHTML='<tr><td class="tick mut">Pick a sleeve (card, chip, or table row) to see its cash / holdings state — not a mash of other recipes.</td></tr>'; return; }
   if(!days.length){ el.innerHTML='<tr><td class="tick mut">No daily state for '+esc(name)+'.</td></tr>'; return; }
   el.innerHTML =
-    '<tr><th>Date</th><th>S</th><th>Open cash</th><th class="tick">Open held</th><th class="tick">Bought</th><th class="tick">Sold</th><th>Close cash</th><th>Stock</th><th>Equity</th><th class="tick">Close held</th><th class="tick">Why</th></tr>'+
+    '<tr><th>Date</th><th>S</th><th>09:30 cash</th><th class="tick">09:30 held</th><th>09:30 equity</th><th>vs yday</th><th class="tick">Overnight mark</th><th class="tick">Bought</th><th class="tick">Sold</th><th>Close cash</th><th>Close equity</th><th class="tick">Close held</th></tr>'+
     days.map(d=>{
       const lots=d.lots||[];
       const closeHeld=lots.length
         ? lots.map(p=>`${p.ticker}×${p.shares}`).join(', ')
         : (d.held||[]).join(', ')||'—';
+      const ov=(d.overnight||[]).map(n=>`${n.ticker}×${n.shares} ${money(n.yday_px)}→${money(n.open_px)} ${n.delta>=0?'+':''}${Number(n.delta).toFixed(2)}`).join('; ')
+        || 'no holdings';
+      const gap=d.overnight_delta;
       return `<tr>
         <td>${esc(d.date)}</td>
         <td class="${cls(d.s)}">${d.s==null?'—':num(d.s)}</td>
         <td>${money(d.open_cash)}</td>
         <td class="tick">${esc((d.open_held||[]).join(', ')||'—')}</td>
+        <td>${money(d.open_equity)}</td>
+        <td class="${cls(gap)}">${gap==null?'—':((gap>=0?'+':'')+Number(gap).toFixed(2))}</td>
+        <td class="tick">${esc(ov)}</td>
         <td class="tick pos">${esc((d.bought||[]).join(', ')||'—')}</td>
         <td class="tick neg">${esc((d.sold||[]).join(', ')||'—')}</td>
         <td>${money(d.cash)}</td>
-        <td class="${cls(d.stock)}">${money(d.stock)}</td>
-        <td class="${cls(d.equity!=null && D.capital!=null ? d.equity-D.capital : d.equity)}">${money(d.equity)}</td>
+        <td>${money(d.equity)}</td>
         <td class="tick">${esc(closeHeld)}</td>
-        <td class="tick">${esc(d.why||'')}</td>
       </tr>`;
     }).join('');
 }
@@ -390,8 +397,8 @@ function renderBlotter(){
   const book=(D.books||{})[name];
   const s=(D.stats||[]).find(x=>x.name===name);
   if(hint) hint.textContent = name
-    ? (name+' — '+(s?(s.size||'leftover')+' / '+(s.sell||'list')+' / '+(s.s_boost||'none'):'')+' · equity = leftover cash + stock mark at this fill. Green = book above $10k, red = below.')
-    : 'Pick a sleeve to see its fills only. All-recipes view does not mash another book into this table.';
+    ? (name+' — 09:30 OPEN explains overnight mark vs yesterday close (cash unchanged, no fees). BUY has no equity label. SELL/COVER is green if the sale locked in a gain, red if a loss.')
+    : 'Pick a sleeve to see its 09:30 snapshots and fills only.';
   if(!name){
     document.getElementById('blot').innerHTML='<tr><td class="tick mut">No sleeve selected.</td></tr>';
     document.getElementById('skips').innerHTML='';
@@ -402,24 +409,41 @@ function renderBlotter(){
     document.getElementById('skips').innerHTML='';
     return;
   }
-  const cap=Number(D.capital||10000);
   const fills=book.trades||[];
   document.getElementById('blot').innerHTML =
-    '<tr><th>Date</th><th>Side</th><th class="tick">Ticker</th><th>Shares</th><th>Px</th><th>Fees</th><th>P/L</th><th>Cash</th><th>Equity</th><th class="tick">Why</th></tr>'+
+    '<tr><th>Date</th><th>Side</th><th class="tick">Ticker</th><th>Shares</th><th>Px</th><th>Fees</th><th>P/L</th><th>Cash</th><th>Equity change</th><th class="tick">Why</th></tr>'+
     fills.map(t=>{
-      const eq=t.equity_after;
-      const dlt=t.equity_delta!=null?Number(t.equity_delta):(eq==null?null:Number(eq)-cap);
-      const up=dlt!=null && dlt>=0;
-      const row=dlt==null?'':(up?'fill-up':'fill-dn');
+      const kind=t.side;
+      if(kind==='OPEN'){
+        const gap=t.equity_delta;
+        const names=(t.overnight||[]).map(n=>`${n.ticker}×${n.shares} ${money(n.yday_px)}→${money(n.open_px)} ${(n.delta>=0?'+':'')+Number(n.delta).toFixed(2)}`).join('; ')
+          || 'no holdings';
+        return `<tr class="open-row">
+          <td>${esc(t.date)} 09:30</td>
+          <td class="gold">OPEN</td>
+          <td class="tick" colspan="5">${esc((t.open_held||[]).join(', ')||'—')} · cash ${money(t.cash_after)}</td>
+          <td>${money(t.cash_after)}</td>
+          <td class="${cls(gap)}">${money(t.equity_after)} <span class="mut">vs yday ${money(t.yday_equity)} ${gap==null?'':((gap>=0?'+':'')+Number(gap).toFixed(2))}</span></td>
+          <td class="tick">${esc(t.reason||names)}</td>
+        </tr>`;
+      }
+      const isSell=kind==='SELL'||kind==='COVER';
+      const chg=isSell && t.pnl!=null ? Number(t.pnl) : null;
+      const up=chg!=null && chg>0;
+      const row=isSell?(chg==null?'':(up?'fill-up':'fill-dn')):'';
+      const markFee=isSell && t.sell_eq_chg!=null ? Number(t.sell_eq_chg) : null;
+      const eqCell=isSell
+        ? `<span class="${chg==null?'mut':(up?'pos':'neg')}">${chg==null?'—':((chg>=0?'+':'')+Number(chg).toFixed(2)+' after sell')}</span> <span class="mut">→ ${money(t.equity_after)}${markFee==null?'':' · vs 09:30 mark '+(markFee>=0?'+':'')+markFee.toFixed(2)}</span>`
+        : '—';
       return `<tr class="${row}">
       <td>${esc(t.date)}</td>
-      <td class="${t.side==='BUY'||t.side==='SHORT'?'pos':'neg'}">${esc(t.side)}</td>
+      <td class="${kind==='BUY'||kind==='SHORT'?'pos':'neg'}">${esc(kind)}</td>
       <td class="tick">${esc(t.ticker)}</td>
-      <td>${t.shares}</td><td>$${Number(t.price).toFixed(2)}</td>
-      <td>$${Number(t.fees).toFixed(2)}</td>
+      <td>${t.shares}</td><td>${t.price==null?'—':('$'+(+t.price).toFixed(2))}</td>
+      <td>${t.fees==null?'—':('$'+(+t.fees).toFixed(2))}</td>
       <td class="${cls(t.pnl)}">${t.pnl==null?'—':('$'+(t.pnl>=0?'+':'')+Number(t.pnl).toFixed(2))}</td>
       <td>$${Number(t.cash_after).toLocaleString(undefined,{minimumFractionDigits:2})}</td>
-      <td class="${dlt==null?'mut':(up?'pos':'neg')}">${eq==null?'—':(money(eq)+' <span class="mut">'+(dlt>=0?'+':'')+Number(dlt).toFixed(0)+'</span>')}</td>
+      <td>${eqCell}</td>
       <td class="tick">${esc(t.reason||'')}</td>
     </tr>`;
     }).join('');
