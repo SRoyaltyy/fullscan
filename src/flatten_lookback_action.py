@@ -917,7 +917,8 @@ def render_markdown(payload: dict, source: str = "flatten",
         f"Sister boards: [ticker lookback](../dashboard/ticker-lookback/) · "
         f"[gainer lookback](../dashboard/gainer-lookback/) · "
         f"[mover lookback](../dashboard/mover-lookback/) · "
-        f"[sleeve merge](../dashboard/sleeve-merge/).",
+        f"[sleeve merge](../dashboard/sleeve-merge/) · "
+        f"[factor mine](../dashboard/factor-mine/).",
         "",
         "## Each session (flatten method)",
         "",
@@ -1143,7 +1144,8 @@ tbody th.clean{{box-shadow:inset 3px 0 0 #f8fafc;color:#0b1020;background:#e8eef
 on the names <b>flatten_robust</b> would buy that day.
 <a href="../sleeve-merge/">sleeve merge</a> ·
 <a href="../gainer-lookback/">gainer lookback</a> ·
-<a href="../mover-lookback/">mover lookback</a>.</p>
+<a href="../mover-lookback/">mover lookback</a> ·
+<a href="../factor-mine/">factor mine</a>.</p>
 <p>🟢 up / 🟡 flat / 🔴 down / ⬛ missing / 🔵 improved / 🚨 worse / ⚪ no red.
 Cameras = knowable by 09:30 ET. Action is that date 09:30 ET — not an end-of-day call.
 Gainers / Losers tabs use same-day Change% only to pick the universe.

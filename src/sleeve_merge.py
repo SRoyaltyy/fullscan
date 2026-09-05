@@ -1995,7 +1995,8 @@ td.why{{text-align:left;white-space:normal;max-width:280px;font-size:12px}}
 <p class="muted"><a href="../">.io paper</a>
  · <a href="../mover-paper/">mover paper</a>
  · <a href="../book-paper/">book paper</a>
- · <a href="../flatten-lookback/">flatten lookback</a></p>
+ · <a href="../flatten-lookback/">flatten lookback</a>
+ · <a href="../factor-mine/">factor mine</a></p>
 <p class="muted">{_html.escape(pol['name'])} · {_html.escape(str(pol.get('engine','combine')))} ·
 {_html.escape(str(pol['io_sleeve']))} · flatten when S≥{pol['long_gate']:+.1f} and
 ≥{pol.get('min_buys',5)} priced BUYs · rotate leftover mover at next green open ·
