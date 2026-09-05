@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Factor strategy mine — leak-free 09:30</title>
+<style>
+ :root{
+  --bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;
+  --fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;
+  --chip:#2a3450; --day:#121826; --gold:#fbbf24;
+ }
+ *{box-sizing:border-box}
+ html,body{overflow-x:hidden}
+ body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}
+ .wrap{max-width:1180px;margin:0 auto;padding:16px 16px 48px;width:100%}
+ h1{font-size:20px;margin:0 0 4px}
+ .sub{color:var(--mut);font-size:12px;margin:0 0 12px}
+ .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:8px;margin:0 0 14px}
+ .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+ .card b{display:block;font-size:17px;margin-top:2px;font-variant-numeric:tabular-nums}
+ .pos{color:var(--pos)}.neg{color:var(--neg)}.mut{color:var(--mut)}.gold{color:var(--gold)}
+ canvas{width:100%;height:280px;background:var(--card);border:1px solid var(--line);border-radius:10px}
+ .legend{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0}
+ .legend span{cursor:pointer;padding:2px 10px;border-radius:12px;border:1px solid #333;font-size:12px;user-select:none}
+ table{width:100%;border-collapse:collapse;margin:8px 0 14px;font-size:12.5px}
+ th,td{padding:6px 8px;border-bottom:1px solid var(--line2);text-align:right;white-space:nowrap}
+ th{color:var(--mut);font-weight:600;text-align:right} td:first-child,th:first-child{text-align:left}
+ h2{font-size:15px;margin:18px 0 6px;color:#aeb9cf}
+ .note{color:var(--dim);font-size:11.5px;margin-top:8px}
+ .bar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 8px}
+ .bar input,.bar select{background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:13px/1.3 ui-monospace,Menlo,Consolas,monospace}
+ .chip{cursor:pointer;padding:7px 12px;border-radius:999px;border:1px solid var(--chip);background:var(--card);color:#aeb9cf;font-size:12px;font-family:ui-monospace,Menlo,Consolas,monospace}
+ .chip.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+ .how{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:16px 0 8px}
+ .how h2{margin:0 0 8px}
+ .how ol{margin:0;padding-left:18px}
+ .how li{margin:0 0 6px}
+ .how code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(--gold)}
+ details{margin:14px 0}
+ details>summary{cursor:pointer;color:#aeb9cf;font-size:15px;font-weight:600}
+ #stats,#starts{display:block;overflow-x:auto;max-width:100%}
+ td.tick,th.tick{text-align:left;font-family:ui-monospace,Menlo,Consolas,monospace}
+ @media (max-width:640px){
+   canvas{height:220px}
+   .wrap{padding:12px 12px 40px}
+   .bar{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px}
+   .chip,.bar input,.bar select{flex:0 0 auto}
+   table{display:block;overflow-x:auto;max-width:100%}
+ }
+</style></head><body><div class="wrap">
+<h1>Factor strategy mine</h1>
+<div class="sub" id="gen"></div>
+<div class="sub">Books:
+ <a href="../" style="color:#93c5fd">paper book</a>
+ · <a href="../strategy-board/" style="color:#93c5fd">all strategies</a>
+ · <a href="../sleeve-merge/" style="color:#93c5fd">sleeve merge</a>
+ · <a href="../flatten-lookback/" style="color:#93c5fd">flatten lookback</a>
+ · <a href="../sleeve-combine/" style="color:#93c5fd">sleeve combine</a>
+</div>
+<div class="cards" id="cards"></div>
+<div class="bar" id="filterBar"></div>
+<div class="bar" id="sleeveBar"></div>
+<details class="curve-box" open>
+<summary id="curveTitle">Equity curves ($10k / recipe)</summary>
+<canvas id="chart" height="280"></canvas>
+<div class="legend" id="legend"></div>
+</details>
+<h2>Six effectiveness metrics</h2>
+<table id="stats"></table>
+<details open>
+<summary>Start-date sustainability (would it still make money?)</summary>
+<p class="mut">If the recipe starts on day X and runs to the end, is the compounded return still positive? More YES days = less 8-13 pothole dependence.</p>
+<table id="starts"></table>
+</details>
+<section class="how">
+<h2>How a recipe is graded</h2>
+<ol>
+  <li><b>Leak-free 09:30 inputs only.</b> Cameras, 🔵/🚨, E/R/D, prior news, 20-bar OHLC, and 8-bar candles must be knowable before the open. Same-day Change% / Gap / RelVol / printed book never pick. News uses the morning box or the <em>prior</em> Finviz export — never a later scrape or post-09:30 headline.</li>
+  <li><b>Time.</b> Buy at the 09:30 open. Hold H sessions (entry day counts). Optional early exit at a later 09:30 if 🚨, last-bar red, or news🔴 prints that morning.</li>
+  <li><b>Win rate.</b> Share of picks with horizon return &gt; 0 (long or short).</li>
+  <li><b>$ days / average win %.</b> Share of sessions whose equal-weight book made money, plus average win size vs average loss size.</li>
+  <li><b>Sustainability.</b> For every start date X, compound from X to the end. Count how often that path is still green.</li>
+  <li><b>Top gainers / losers in the hold window.</b> Buy 8-17 hold=3 → check 8-17, 8-18, 8-19 liquid top-25 gainers and names that printed &lt; −1.5%.</li>
+</ol>
+<p class="note">Research miner only. Live <code>flatten_robust</code> is untouched.</p>
+</section>
+<div class="note" id="fees"></div>
+</div>
+<script>
+const D = __DATA__;
+const COLORS = ["#60a5fa","#34d399","#fbbf24","#f472b6","#a78bfa","#f87171","#22d3ee","#fb923c","#4ade80","#e879f9","#94a3b8","#38bdf8","#c084fc","#facc15"];
+const hidden = new Set();
+let sleeveFilter = "all";
+let sideFilter = "all";
+let holdFilter = "all";
+
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+function pct(v){return v==null?'—':(100*Number(v)).toFixed(0)+'%';}
+function num(v,d){if(v==null||v==='')return '—'; const x=Number(v); return (x>=0?'+':'')+x.toFixed(d==null?2:d);}
+function cls(v){return v==null?'mut':(Number(v)>=0?'pos':'neg');}
+
+function statsList(){
+  return (D.stats||[]).filter(s=>{
+    if(sideFilter!=='all' && s.side!==sideFilter) return false;
+    if(holdFilter!=='all' && String(s.hold)!==String(holdFilter)) return false;
+    return true;
+  });
+}
+function names(){ return statsList().map(s=>s.name); }
+
+function pickBest(list, key, pred){
+  const rows = list.filter(s=>s[key]!=null && (!pred || pred(s)));
+  if(!rows.length) return null;
+  return rows.slice().sort((a,b)=>Number(b[key])-Number(a[key]))[0];
+}
+function pickWorst(list, key){
+  const rows = list.filter(s=>s[key]!=null);
+  if(!rows.length) return null;
+  return rows.slice().sort((a,b)=>Number(a[key])-Number(b[key]))[0];
+}
+
+function renderCards(){
+  const list = statsList();
+  const best = pickBest(list,'total_ret_pct');
+  const worst = pickWorst(list,'total_ret_pct');
+  const sustain = pickBest(list,'start_rate', s=> (s.start_n||0)>=3);
+  const gain = pickBest(list,'gainer_rate', s=>(s.n_picks||0)>=8);
+  const lose = pickWorst(list,'loser_rate');
+  const win = pickBest(list,'win_rate', s=>(s.n_graded||0)>=8);
+  const cards = [
+    ["Best sleeve", best, best && num(best.total_ret_pct)+'%', best && best.total_ret_pct],
+    ["Worst sleeve", worst, worst && num(worst.total_ret_pct)+'%', worst && worst.total_ret_pct],
+    ["Most sustainable", sustain, sustain && (sustain.start_green+'/'+sustain.start_n+' YES'), sustain && sustain.start_rate],
+    ["Best gainer capture", gain, gain && (gain.gainer_hits+' hits · '+pct(gain.gainer_rate)), gain && gain.gainer_rate],
+    ["Lowest loser rate", lose, lose && (lose.loser_hits+' · '+pct(lose.loser_rate)), lose && (lose.loser_rate==null?null:-lose.loser_rate)],
+    ["Best win rate", win, win && pct(win.win_rate), win && win.win_rate],
+  ];
+  document.getElementById('cards').innerHTML = cards.map(([lab,s,shown,val])=>{
+    const name = s ? s.name : '—';
+    const c = val==null?'mut':(Number(val)>=0?'pos':'neg');
+    return `<div class="card"><span class="mut">${esc(lab)}</span><b>${esc(name)}</b><span class="${c}">${esc(shown||'—')}</span></div>`;
+  }).join('');
+}
+
+function renderFilters(){
+  const holds = [...new Set((D.stats||[]).map(s=>s.hold))].sort((a,b)=>a-b);
+  document.getElementById('filterBar').innerHTML = `
+    <select id="sidePick" aria-label="Side">
+      <option value="all">Long + short</option>
+      <option value="long">Long only</option>
+      <option value="short">Short only</option>
+    </select>
+    <select id="holdPick" aria-label="Hold">
+      <option value="all">All holds</option>
+      ${holds.map(h=>`<option value="${h}">Hold ${h}</option>`).join('')}
+    </select>
+    <input id="q" placeholder="Filter name (e.g. coil)" aria-label="Filter recipe">
+    <span class="mut">${(D.n_recipes||0)} recipes · ${(D.n_rows||0)} candidate rows · ${(D.n_sessions||0)} sessions</span>`;
+  document.getElementById('sidePick').value = sideFilter;
+  document.getElementById('holdPick').value = holdFilter;
+  document.getElementById('sidePick').onchange = e=>{sideFilter=e.target.value; sleeveFilter='all'; renderAll();};
+  document.getElementById('holdPick').onchange = e=>{holdFilter=e.target.value; sleeveFilter='all'; renderAll();};
+  document.getElementById('q').oninput = renderTable;
+}
+
+function renderChips(){
+  const bar=document.getElementById('sleeveBar');
+  const list=statsList().slice(0,24);
+  const chips=[["all","All recipes"], ...list.map(s=>[s.name,s.name])];
+  bar.innerHTML=chips.map(([id,label])=>{
+    const on=sleeveFilter===id?'on':'';
+    return `<button type="button" class="chip ${on}" data-sleeve="${esc(id)}">${esc(label)}</button>`;
+  }).join('');
+  bar.querySelectorAll('.chip').forEach(b=>{
+    b.onclick=()=>{sleeveFilter=b.dataset.sleeve; renderAll();};
+  });
+}
+
+function visibleKeys(){
+  const all = names();
+  if(sleeveFilter!=='all') return all.filter(k=>k===sleeveFilter);
+  return all.filter(k=>!hidden.has(k)).slice(0,12);
+}
+
+function draw(){
+  const cv=document.getElementById('chart'),ctx=cv.getContext('2d');
+  const W=cv.width=cv.clientWidth*2,H=cv.height=560;
+  ctx.clearRect(0,0,W,H);
+  const vis=visibleKeys();
+  let lo=Infinity,hi=-Infinity;
+  vis.forEach(k=>(D.series[k]||[]).forEach(v=>{if(v!=null){lo=Math.min(lo,v);hi=Math.max(hi,v);}}));
+  if(lo===Infinity)return;
+  const pad=(hi-lo)*0.06||1; lo-=pad; hi+=pad;
+  const dates=D.dates||[];
+  const X=i=>40+i/(Math.max(1,dates.length-1))*(W-70);
+  const Y=v=>H-30-(v-lo)/(hi-lo)*(H-60);
+  ctx.strokeStyle='#2a3450';ctx.fillStyle='#66708a';ctx.font='20px sans-serif';
+  for(let g=0;g<=4;g++){
+    const v=lo+(hi-lo)*g/4;
+    ctx.beginPath();ctx.moveTo(40,Y(v));ctx.lineTo(W-30,Y(v));ctx.stroke();
+    ctx.fillText('$'+(v/1000).toFixed(1)+'k',2,Y(v)+6);
+  }
+  dates.forEach((d,i)=>{if(i%Math.ceil(dates.length/6)===0)ctx.fillText(String(d).slice(5),X(i)-18,H-8);});
+  vis.forEach((k,ii)=>{
+    ctx.strokeStyle=COLORS[ii%COLORS.length];
+    ctx.lineWidth=sleeveFilter===k?3:1.8;
+    ctx.beginPath(); let started=false;
+    (D.series[k]||[]).forEach((v,j)=>{if(v==null)return; started?ctx.lineTo(X(j),Y(v)):ctx.moveTo(X(j),Y(v)); started=true;});
+    ctx.stroke();
+  });
+}
+
+function renderLegend(){
+  const vis=visibleKeys();
+  const leg=document.getElementById('legend');
+  leg.innerHTML="";
+  vis.forEach((k,ii)=>{
+    const s=document.createElement('span');
+    s.textContent=k;
+    s.style.borderColor=COLORS[ii%COLORS.length];
+    s.style.color=COLORS[ii%COLORS.length];
+    s.onclick=()=>{hidden.has(k)?hidden.delete(k):hidden.add(k); renderAll();};
+    s.style.opacity=hidden.has(k)?0.3:1;
+    leg.appendChild(s);
+  });
+}
+
+function renderTable(){
+  const q=(document.getElementById('q')?.value||'').trim().toLowerCase();
+  let list=statsList();
+  if(q) list=list.filter(s=>s.name.toLowerCase().includes(q) || (s.note||'').toLowerCase().includes(q));
+  if(sleeveFilter!=='all') list=list.filter(s=>s.name===sleeveFilter);
+  const head='<tr><th class="tick">Strategy</th><th>Side</th><th>H</th><th>Win%</th><th>$ days</th><th>Starts YES</th><th>Top-g</th><th>Losers</th><th>Avg win</th><th>Avg loss</th><th>Payoff</th><th>Tot%</th><th>Eff</th></tr>';
+  const body=list.map(s=>`<tr>
+    <td class="tick">${esc(s.name)}</td>
+    <td>${esc(s.side)}</td>
+    <td>${s.hold}</td>
+    <td class="${cls(s.win_rate)}">${pct(s.win_rate)}</td>
+    <td class="${cls(s.profitable_day_rate)}">${pct(s.profitable_day_rate)}</td>
+    <td class="${cls(s.start_rate)}">${s.start_green||0}/${s.start_n||0}</td>
+    <td>${s.gainer_hits||0} <span class="mut">${pct(s.gainer_rate)}</span></td>
+    <td class="${(s.loser_rate||0)>0.2?'neg':''}">${s.loser_hits||0} <span class="mut">${pct(s.loser_rate)}</span></td>
+    <td class="pos">${num(s.avg_win_pct)}</td>
+    <td class="neg">${num(s.avg_loss_pct)}</td>
+    <td>${s.payoff==null?'—':Number(s.payoff).toFixed(2)}</td>
+    <td class="${cls(s.total_ret_pct)}">${num(s.total_ret_pct)}</td>
+    <td class="gold">${s.effectiveness==null?'—':Number(s.effectiveness).toFixed(1)}</td>
+  </tr>`).join('');
+  document.getElementById('stats').innerHTML=head+body;
+}
+
+function renderStarts(){
+  const list = sleeveFilter==='all' ? statsList().slice(0,12) : statsList().filter(s=>s.name===sleeveFilter);
+  const dates = D.dates||[];
+  const head = '<tr><th class="tick">Strategy</th>'+dates.map(d=>`<th>${esc(String(d).slice(5))}</th>`).join('')+'<th>YES</th></tr>';
+  const body = list.map(s=>{
+    const rows = D.starts[s.name]||[];
+    const by = Object.fromEntries(rows.map(r=>[r.start,r]));
+    const cells = dates.map(d=>{
+      const r=by[d];
+      if(!r) return '<td class="mut">—</td>';
+      return `<td class="${r.made_money?'pos':'neg'}">${r.made_money?'YES':'no'}<div class="mut">${num(r.return_pct,1)}</div></td>`;
+    }).join('');
+    return `<tr><td class="tick">${esc(s.name)}</td>${cells}<td>${s.start_green||0}/${s.start_n||0}</td></tr>`;
+  }).join('');
+  document.getElementById('starts').innerHTML=head+body;
+}
+
+function renderAll(){
+  document.getElementById('gen').textContent =
+    "Generated "+String(D.generated_at||'').slice(0,16).replace('T',' ')+
+    " · "+(D.n_sessions||0)+" sessions "+(D.from_date||'')+" → "+(D.to_date||'')+
+    " · $"+Number(D.capital||10000).toLocaleString()+" per recipe · "+
+    (D.fill||"09:30 open → horizon close")+
+    " · "+(D.leak||"leak-free 09:30");
+  document.getElementById('fees').textContent =
+    "Loser cut = Change% < "+(D.loser_cut)+" · live policy untouched: "+(D.live_untouched||"flatten_robust");
+  renderCards();
+  renderChips();
+  renderTable();
+  renderStarts();
+  renderLegend();
+  draw();
+}
+
+renderFilters();
+renderAll();
+window.addEventListener('resize', draw);
+</script></body></html>

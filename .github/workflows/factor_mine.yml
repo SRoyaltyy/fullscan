@@ -1,0 +1,91 @@
+name: Factor strategy mine
+
+# Research miner: leak-free 09:30 factor recipes vs the six
+# effectiveness metrics. Does not change flatten_robust live.
+
+on:
+  workflow_dispatch:
+    inputs:
+      from_date:
+        description: "First session YYYY-MM-DD"
+        required: false
+        default: "2026-08-13"
+      to_date:
+        description: "Last session YYYY-MM-DD (empty = latest tape)"
+        required: false
+        default: ""
+      rebuild_panel:
+        description: "Rebuild the candidate panel from scratch"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: factor-strategy-mine
+  cancel-in-progress: true
+
+jobs:
+  mine:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pandas pyarrow openpyxl
+      - name: Unit tests
+        run: python -m src.test_factor_mine
+      - name: Mine recipes
+        env:
+          FROM_DATE: ${{ inputs.from_date }}
+          TO_DATE: ${{ inputs.to_date }}
+          REBUILD: ${{ inputs.rebuild_panel }}
+        run: |
+          set -euo pipefail
+          ARGS=(--from-date "${FROM_DATE:-2026-08-13}" --write)
+          [ -n "${TO_DATE:-}" ] && ARGS+=(--to-date "$TO_DATE")
+          [ "${REBUILD:-false}" = "true" ] && ARGS+=(--rebuild-panel)
+          python -m src.factor_mine "${ARGS[@]}"
+          test -s 03_scoreboard/FACTOR_MINE.md
+          test -s 03_scoreboard/factor_mine.json
+          test -s dashboard/factor-mine/index.html
+          grep -q "TODAY_BEGIN" dashboard/sleeve-merge/index.html
+          grep -q "flatten_robust" src/sleeve_merge.py
+      - name: Publish scoreboard to main
+        run: |
+          bash scripts/safe_git_push.sh \
+            "chore: factor strategy mine ${FROM_DATE:-2026-08-13}" \
+            03_scoreboard/FACTOR_MINE.md \
+            03_scoreboard/factor_mine.json \
+            data/factor_mine/start_dates.json \
+            dashboard/factor-mine/
+        env:
+          FROM_DATE: ${{ inputs.from_date }}
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: factor-mine
+          path: |
+            03_scoreboard/FACTOR_MINE.md
+            03_scoreboard/factor_mine.json
+            dashboard/factor-mine/index.html
+      - name: Add links to run summary
+        run: |
+          {
+            echo "## Factor strategy mine"
+            echo
+            echo "- [Markdown](https://github.com/${GITHUB_REPOSITORY}/blob/main/03_scoreboard/FACTOR_MINE.md)"
+            echo "- [Phone page](https://SRoyaltyy.github.io/fullscan/dashboard/factor-mine/)"
+            echo
+            head -n 20 03_scoreboard/FACTOR_MINE.md
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: Refresh GitHub Pages
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy-dashboard.yml --ref main
