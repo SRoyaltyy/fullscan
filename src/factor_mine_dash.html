@@ -15,7 +15,10 @@
  h1{font-size:20px;margin:0 0 4px}
  .sub{color:var(--mut);font-size:12px;margin:0 0 12px}
  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:8px;margin:0 0 14px}
- .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+ .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer}
+ .card:hover,.card.on{border-color:var(--gold)}
+ .fill-up{background:rgba(74,222,128,.12)}
+ .fill-dn{background:rgba(248,113,113,.12)}
  .card b{display:block;font-size:17px;margin-top:2px;font-variant-numeric:tabular-nums}
  .pos{color:var(--pos)}.neg{color:var(--neg)}.mut{color:var(--mut)}.gold{color:var(--gold)}
  canvas{width:100%;height:280px;background:var(--card);border:1px solid var(--line);border-radius:10px}
@@ -67,8 +70,8 @@
 <canvas id="chart" height="280"></canvas>
 <div class="legend" id="legend"></div>
 </details>
-<h2>Six effectiveness metrics (cash book)</h2>
-<p class="mut">Book % is the $10k sleeve after whole shares, Futubull fees, leftover split, sell-first, min-hold, and hard-red sit. Each morning opens at yesterday's leftover cash and the lots still held. Signal-only is the old equal-weight path — not a fill.</p>
+<h2 id="metricsTitle">Six effectiveness metrics (cash book)</h2>
+<p class="mut">Book % is the $10k sleeve after whole shares, Futubull fees, leftover split, sell-first, min-hold, and hard-red sit. Each morning opens at yesterday's leftover cash and the lots still held. Signal-only is the old equal-weight path — not a fill. Click a card, chip, or table row to open <b>only that sleeve</b>.</p>
 <table id="stats"></table>
 <div id="audit" class="audit" hidden></div>
 <details open>
@@ -142,27 +145,61 @@ function pickWorst(list, key){
   return rows.slice().sort((a,b)=>Number(a[key])-Number(b[key]))[0];
 }
 
+function selectSleeve(name){
+  sleeveFilter = name || 'all';
+  hidden.clear();
+  renderAll();
+  const el=document.getElementById('curveTitle');
+  if(el) el.scrollIntoView({block:'nearest'});
+}
+
 function renderCards(){
   const list = statsList();
-  const best = pickBest(list,'total_ret_pct');
-  const worst = pickWorst(list,'total_ret_pct');
-  const sustain = pickBest(list,'start_rate', s=> (s.start_n||0)>=3);
-  const gain = pickBest(list,'gainer_rate', s=>(s.n_picks||0)>=8);
-  const lose = pickWorst(list,'loser_rate');
-  const win = pickBest(list,'win_rate', s=>(s.n_graded||0)>=8);
-  const cards = [
-    ["Best sleeve", best, best && num(best.total_ret_pct)+'%', best && best.total_ret_pct],
-    ["Worst sleeve", worst, worst && num(worst.total_ret_pct)+'%', worst && worst.total_ret_pct],
-    ["Most sustainable", sustain, sustain && (sustain.start_green+'/'+sustain.start_n+' YES'), sustain && sustain.start_rate],
-    ["Best gainer capture", gain, gain && (gain.gainer_hits+' hits · '+pct(gain.gainer_rate)), gain && gain.gainer_rate],
-    ["Lowest loser rate", lose, lose && (lose.loser_hits+' · '+pct(lose.loser_rate)), lose && (lose.loser_rate==null?null:-lose.loser_rate)],
-    ["Best win rate", win, win && pct(win.win_rate), win && win.win_rate],
-  ];
+  const picked = sleeveFilter!=='all' ? list.find(s=>s.name===sleeveFilter) : null;
+  let cards;
+  if(picked){
+    cards = [
+      ["This sleeve", picked, picked.name, picked.total_ret_pct],
+      ["Win rate", picked, pct(picked.win_rate), picked.win_rate],
+      ["$ days", picked, pct(picked.profitable_day_rate), picked.profitable_day_rate],
+      ["Starts YES", picked, (picked.start_green||0)+'/'+(picked.start_n||0), picked.start_rate],
+      ["Top-g / losers", picked, (picked.gainer_hits||0)+' / '+(picked.loser_hits||0), picked.gainer_rate],
+      ["Book %", picked, num(picked.total_ret_pct)+'%', picked.total_ret_pct],
+    ];
+  } else {
+    const best = pickBest(list,'total_ret_pct');
+    const worst = pickWorst(list,'total_ret_pct');
+    const sustain = pickBest(list,'start_rate', s=> (s.start_n||0)>=3);
+    const gain = pickBest(list,'gainer_rate', s=>(s.n_picks||0)>=8);
+    const lose = pickWorst(list,'loser_rate');
+    const win = pickBest(list,'win_rate', s=>(s.n_graded||0)>=8);
+    cards = [
+      ["Best sleeve", best, best && num(best.total_ret_pct)+'%', best && best.total_ret_pct],
+      ["Worst sleeve", worst, worst && num(worst.total_ret_pct)+'%', worst && worst.total_ret_pct],
+      ["Most sustainable", sustain, sustain && (sustain.start_green+'/'+sustain.start_n+' YES'), sustain && sustain.start_rate],
+      ["Best gainer capture", gain, gain && (gain.gainer_hits+' hits · '+pct(gain.gainer_rate)), gain && gain.gainer_rate],
+      ["Lowest loser rate", lose, lose && (lose.loser_hits+' · '+pct(lose.loser_rate)), lose && (lose.loser_rate==null?null:-lose.loser_rate)],
+      ["Best win rate", win, win && pct(win.win_rate), win && win.win_rate],
+    ];
+  }
   document.getElementById('cards').innerHTML = cards.map(([lab,s,shown,val])=>{
-    const name = s ? s.name : '—';
+    const name = s ? s.name : '';
     const c = val==null?'mut':(Number(val)>=0?'pos':'neg');
-    return `<div class="card"><span class="mut">${esc(lab)}</span><b>${esc(name)}</b><span class="${c}">${esc(shown||'—')}</span></div>`;
+    const on = name && sleeveFilter===name ? 'on' : '';
+    const title = picked ? String(shown||'—') : (name||'—');
+    const sub = picked && lab==='This sleeve' ? num(picked.total_ret_pct)+'%' : (picked ? '' : (shown||'—'));
+    return `<div class="card ${on}" data-sleeve="${esc(name)}" title="Open ${esc(name||'')}">
+      <span class="mut">${esc(lab)}</span><b>${esc(title)}</b>
+      ${sub?`<span class="${c}">${esc(sub)}</span>`:''}
+    </div>`;
   }).join('');
+  document.querySelectorAll('#cards .card').forEach(el=>{
+    el.onclick=()=>{
+      const n=el.dataset.sleeve;
+      if(!n) return;
+      selectSleeve(sleeveFilter===n ? 'all' : n);
+    };
+  });
 }
 
 function renderFilters(){
@@ -183,26 +220,44 @@ function renderFilters(){
   document.getElementById('holdPick').value = holdFilter;
   document.getElementById('sidePick').onchange = e=>{sideFilter=e.target.value; sleeveFilter='all'; renderAll();};
   document.getElementById('holdPick').onchange = e=>{holdFilter=e.target.value; sleeveFilter='all'; renderAll();};
-  document.getElementById('q').oninput = renderTable;
+  document.getElementById('q').oninput = ()=>{ renderChips(); renderTable(); };
+}
+
+function chipNames(){
+  const q=(document.getElementById('q')?.value||'').trim().toLowerCase();
+  const list=statsList();
+  if(q){
+    return list.filter(s=>s.name.toLowerCase().includes(q) || (s.note||'').toLowerCase().includes(q))
+      .map(s=>s.name).slice(0,36);
+  }
+  const out=[];
+  const add=n=>{ if(n && !out.includes(n)) out.push(n); };
+  (D.featured||[]).forEach(add);
+  list.slice().sort((a,b)=>Number(b.total_ret_pct)-Number(a.total_ret_pct))
+    .slice(0,12).forEach(s=>add(s.name));
+  list.slice(0,8).forEach(s=>add(s.name));
+  if(sleeveFilter!=='all') add(sleeveFilter);
+  return out.slice(0,36);
 }
 
 function renderChips(){
   const bar=document.getElementById('sleeveBar');
-  const list=statsList().slice(0,24);
-  const chips=[["all","All recipes"], ...list.map(s=>[s.name,s.name])];
+  const chips=[["all","All recipes"], ...chipNames().map(n=>[n,n])];
   bar.innerHTML=chips.map(([id,label])=>{
     const on=sleeveFilter===id?'on':'';
     return `<button type="button" class="chip ${on}" data-sleeve="${esc(id)}">${esc(label)}</button>`;
   }).join('');
   bar.querySelectorAll('.chip').forEach(b=>{
-    b.onclick=()=>{sleeveFilter=b.dataset.sleeve; renderAll();};
+    b.onclick=()=>selectSleeve(b.dataset.sleeve);
   });
 }
 
 function visibleKeys(){
-  const all = names();
-  if(sleeveFilter!=='all') return all.filter(k=>k===sleeveFilter);
-  return all.filter(k=>!hidden.has(k)).slice(0,12);
+  if(sleeveFilter!=='all') return [sleeveFilter];
+  const prefer=[...(D.featured||[])];
+  statsList().slice().sort((a,b)=>Number(b.total_ret_pct)-Number(a.total_ret_pct))
+    .forEach(s=>{ if(!prefer.includes(s.name)) prefer.push(s.name); });
+  return prefer.filter(k=>!hidden.has(k) && (D.series||{})[k]).slice(0,8);
 }
 
 function draw(){
@@ -254,7 +309,7 @@ function renderTable(){
   if(q) list=list.filter(s=>s.name.toLowerCase().includes(q) || (s.note||'').toLowerCase().includes(q));
   if(sleeveFilter!=='all') list=list.filter(s=>s.name===sleeveFilter);
   const head='<tr><th class="tick">Strategy</th><th>Side</th><th>H</th><th>Win%</th><th>$ days</th><th>Starts YES</th><th>Med start</th><th>Top-g</th><th>Losers</th><th>AvgW</th><th>AvgL</th><th>Book%</th><th>Signal%</th><th>Audit</th><th>Eff</th></tr>';
-  const body=list.map(s=>`<tr>
+  const body=list.map(s=>`<tr data-sleeve="${esc(s.name)}" style="cursor:pointer">
     <td class="tick">${esc(s.name)}${s.reliable===false?' <span class="mut">thin</span>':''}<div class="mut">${esc(s.size||'leftover')} · ${esc(s.sell||'list')} · ${esc(s.s_boost||'none')}</div></td>
     <td>${esc(s.side)}</td>
     <td>${s.hold}</td>
@@ -272,6 +327,9 @@ function renderTable(){
     <td class="gold">${s.effectiveness==null?'—':Number(s.effectiveness).toFixed(1)}</td>
   </tr>`).join('');
   document.getElementById('stats').innerHTML=head+body;
+  document.querySelectorAll('#stats tr[data-sleeve]').forEach(tr=>{
+    tr.onclick=()=>selectSleeve(tr.dataset.sleeve);
+  });
 }
 
 function money(v){
@@ -279,7 +337,7 @@ function money(v){
   return '$'+Number(v).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
 }
 function pickedName(){
-  return sleeveFilter==='all' ? ((D.featured||[])[0]||'') : sleeveFilter;
+  return sleeveFilter==='all' ? '' : sleeveFilter;
 }
 function renderAudit(){
   const box=document.getElementById('audit');
@@ -302,7 +360,8 @@ function renderState(){
   const days=(D.daily||{})[name] || (((D.books||{})[name]||{}).daily) || [];
   const el=document.getElementById('state');
   if(!el) return;
-  if(!days.length){ el.innerHTML=''; return; }
+  if(!name){ el.innerHTML='<tr><td class="tick mut">Pick a sleeve (card, chip, or table row) to see its cash / holdings state — not a mash of other recipes.</td></tr>'; return; }
+  if(!days.length){ el.innerHTML='<tr><td class="tick mut">No daily state for '+esc(name)+'.</td></tr>'; return; }
   el.innerHTML =
     '<tr><th>Date</th><th>S</th><th>Open cash</th><th class="tick">Open held</th><th class="tick">Bought</th><th class="tick">Sold</th><th>Close cash</th><th>Stock</th><th>Equity</th><th class="tick">Close held</th><th class="tick">Why</th></tr>'+
     days.map(d=>{
@@ -331,17 +390,28 @@ function renderBlotter(){
   const book=(D.books||{})[name];
   const s=(D.stats||[]).find(x=>x.name===name);
   if(hint) hint.textContent = name
-    ? (name+' — '+(s?(s.size||'leftover')+' / '+(s.sell||'list')+' / '+(s.s_boost||'none'):'')+' · sells first, leftover cash only. Hard-red S≤−3 sits.')
-    : 'Pick a recipe chip to see fills.';
-  if(!book){
-    document.getElementById('blot').innerHTML='';
+    ? (name+' — '+(s?(s.size||'leftover')+' / '+(s.sell||'list')+' / '+(s.s_boost||'none'):'')+' · equity = leftover cash + stock mark at this fill. Green = book above $10k, red = below.')
+    : 'Pick a sleeve to see its fills only. All-recipes view does not mash another book into this table.';
+  if(!name){
+    document.getElementById('blot').innerHTML='<tr><td class="tick mut">No sleeve selected.</td></tr>';
     document.getElementById('skips').innerHTML='';
     return;
   }
+  if(!book){
+    document.getElementById('blot').innerHTML='<tr><td class="tick mut">No fill blotter shipped for '+esc(name)+'. Daily state above still applies.</td></tr>';
+    document.getElementById('skips').innerHTML='';
+    return;
+  }
+  const cap=Number(D.capital||10000);
   const fills=book.trades||[];
   document.getElementById('blot').innerHTML =
-    '<tr><th>Date</th><th>Side</th><th class="tick">Ticker</th><th>Shares</th><th>Px</th><th>Fees</th><th>P/L</th><th>Cash</th><th class="tick">Why</th></tr>'+
-    fills.map(t=>`<tr>
+    '<tr><th>Date</th><th>Side</th><th class="tick">Ticker</th><th>Shares</th><th>Px</th><th>Fees</th><th>P/L</th><th>Cash</th><th>Equity</th><th class="tick">Why</th></tr>'+
+    fills.map(t=>{
+      const eq=t.equity_after;
+      const dlt=t.equity_delta!=null?Number(t.equity_delta):(eq==null?null:Number(eq)-cap);
+      const up=dlt!=null && dlt>=0;
+      const row=dlt==null?'':(up?'fill-up':'fill-dn');
+      return `<tr class="${row}">
       <td>${esc(t.date)}</td>
       <td class="${t.side==='BUY'||t.side==='SHORT'?'pos':'neg'}">${esc(t.side)}</td>
       <td class="tick">${esc(t.ticker)}</td>
@@ -349,8 +419,10 @@ function renderBlotter(){
       <td>$${Number(t.fees).toFixed(2)}</td>
       <td class="${cls(t.pnl)}">${t.pnl==null?'—':('$'+(t.pnl>=0?'+':'')+Number(t.pnl).toFixed(2))}</td>
       <td>$${Number(t.cash_after).toLocaleString(undefined,{minimumFractionDigits:2})}</td>
+      <td class="${dlt==null?'mut':(up?'pos':'neg')}">${eq==null?'—':(money(eq)+' <span class="mut">'+(dlt>=0?'+':'')+Number(dlt).toFixed(0)+'</span>')}</td>
       <td class="tick">${esc(t.reason||'')}</td>
-    </tr>`).join('');
+    </tr>`;
+    }).join('');
   const skips=book.skips||[];
   document.getElementById('skips').innerHTML = skips.length
     ? '<tr><th>Date</th><th class="tick">Skipped</th><th>Kind</th><th class="tick">Why</th></tr>'+
@@ -359,7 +431,9 @@ function renderBlotter(){
 }
 
 function renderStarts(){
-  const list = sleeveFilter==='all' ? statsList().slice(0,12) : statsList().filter(s=>s.name===sleeveFilter);
+  const list = sleeveFilter==='all'
+    ? statsList().filter(s=>visibleKeys().includes(s.name))
+    : statsList().filter(s=>s.name===sleeveFilter);
   const dates = D.dates||[];
   const head = '<tr><th class="tick">Strategy</th>'+dates.map(d=>`<th>${esc(String(d).slice(5))}</th>`).join('')+'<th>YES</th></tr>';
   const body = list.map(s=>{
@@ -384,6 +458,15 @@ function renderAll(){
     " · "+(D.leak||"leak-free 09:30");
   document.getElementById('fees').textContent =
     "Loser cut = Change% < "+(D.loser_cut)+" · live policy untouched: "+(D.live_untouched||"flatten_robust");
+  const curve=document.getElementById('curveTitle');
+  const met=document.getElementById('metricsTitle');
+  if(sleeveFilter==='all'){
+    if(curve) curve.textContent='Equity curves ($10k) — top books + featured (click a sleeve to isolate)';
+    if(met) met.textContent='Six effectiveness metrics (cash book)';
+  } else {
+    if(curve) curve.textContent=sleeveFilter+' — equity only';
+    if(met) met.textContent=sleeveFilter+' — six metrics (this sleeve only)';
+  }
   renderCards();
   renderChips();
   renderTable();

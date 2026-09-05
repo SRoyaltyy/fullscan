@@ -202,6 +202,23 @@ def split_budgets(new: list, room: float, mode: str) -> list[float]:
     return [room / n] * n
 
 
+def _stamp_equity(rec_t: dict, cash: float, pos: dict, date: str,
+                  bars, side: str, rules: dict) -> None:
+    """Cash + open mark of lots still held, as of this fill."""
+    stock = 0.0
+    for lot in pos.values():
+        px = _px(lot["ticker"], date, "open", bars)
+        if px is None:
+            px = lot.get("last_px") or lot["entry_px"]
+        notional = lot["shares"] * float(px)
+        stock += notional if side == "long" else -notional
+    eq = float(cash) + stock
+    cap = float(rules.get("capital") or fm.CAPITAL)
+    rec_t["equity_after"] = round(eq, 2)
+    rec_t["equity_delta"] = round(eq - cap, 2)
+    rec_t["stock_after"] = round(stock, 2)
+
+
 def _lots_snap(pos: dict) -> list[dict]:
     return [
         {"ticker": t, "shares": int(p["shares"]),
@@ -483,6 +500,7 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                 "held": held,
                 "cameras": camera_stamp(row.get("boxes")),
             }
+            _stamp_equity(rec_t, cash, pos, date, bars, side, rules)
             trades.append(rec_t)
             sold.append(rec_t)
             day_why.append(f"SELL {t} ({reason})")
@@ -574,6 +592,7 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                     "held": 0,
                     "cameras": camera_stamp(row.get("boxes")),
                 }
+                _stamp_equity(rec_t, cash, pos, date, bars, side, rules)
                 trades.append(rec_t)
                 bought.append(rec_t)
                 day_why.append(f"{rec_t['side']} {t} x{shares} @ {px:.2f}")
@@ -854,16 +873,25 @@ def render_recipe_md(rec: dict, stats: dict, book: dict) -> str:
         "",
         "## Fills (what was bought / sold)",
         "",
-        "| Date 09:30 ET | Side | Ticker | Shares | Px | Fees | P/L | Cash after | Why | Cameras |",
-        "|---|---|---|---:|---:|---:|---:|---:|---|---|",
+        "| Date 09:30 ET | Side | Ticker | Shares | Px | Fees | P/L | Cash after | Equity (cash+stock) | Why | Cameras |",
+        "|---|---|---|---:|---:|---:|---:|---:|---:|---|---|",
     ]
     for t in book.get("trades") or []:
         pnl = t.get("pnl")
+        eq = t.get("equity_after")
+        dlt = t.get("equity_delta")
+        if eq is None:
+            eq_s = "—"
+        elif dlt is None:
+            eq_s = f"${eq:,.2f}"
+        else:
+            mark = "▲" if dlt >= 0 else "▼"
+            eq_s = f"{mark} ${eq:,.2f} ({dlt:+,.2f})"
         lines.append(
             f"| {t['date']} 09:30 ET | **{t['side']}** | `{t['ticker']}` | "
             f"{t['shares']} | ${t['price']:.2f} | ${t['fees']:.2f} | "
             f"{'—' if pnl is None else f'${pnl:+.2f}'} | "
-            f"${t['cash_after']:,.2f} | "
+            f"${t['cash_after']:,.2f} | {eq_s} | "
             f"{str(t.get('reason') or '—').replace('|', '/')} | "
             f"{t.get('cameras') or '—'} |"
         )
