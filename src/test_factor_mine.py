@@ -450,6 +450,7 @@ def test_template_has_data_slot() -> None:
     assert "renderProbe" in text
     assert "Cash-start" in text
     assert "renderTools" in text
+    assert "sleeve\\'s" not in text
 
 
 def test_write_outputs_injects_payload(tmp_path=None) -> None:

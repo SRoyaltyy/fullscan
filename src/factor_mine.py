@@ -1199,7 +1199,7 @@ def run(from_date: str = START, to_date: str | None = None,
         "flatten_live_h1", "flatten_live_h3", "flatten_live_h5",
         "union_e_fresh_h3", "union_news_g_h5", "union_white_coil_h1",
         "union_e_green_h3",
-        "flatten_h5_rankw", "flatten_h5_time", "flatten_h5_sboost",
+        "flatten_h5", "flatten_h5_rankw", "flatten_h5_time", "flatten_h5_sboost",
         "union_h5_sboost", "flatten_live_h1_sizeup",
         "union_h3_cut", "union_h1_topheavy",
     ) if any(s["name"] == n for s in stats)]

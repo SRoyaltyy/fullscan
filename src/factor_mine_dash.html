@@ -109,8 +109,8 @@
 </details>
 <h2 id="metricsTitle">Six effectiveness metrics (cash book)</h2>
 <p class="mut">Book % is the $10k sleeve after whole shares, Futubull fees, leftover split, sell-first, min-hold, and hard-red sit. Each morning opens at yesterday's leftover cash and the lots still held. Signal-only is the old equal-weight path — not a fill. Click a card, chip, or table row to open <b>only that sleeve</b>.</p>
-<div id="explain" class="explain" hidden></div>
 <div id="tools" class="tools" hidden></div>
+<div id="explain" class="explain" hidden></div>
 <div id="audit" class="audit" hidden></div>
 <div class="tbl-wrap"><table id="stats"></table></div>
 <div class="panes">
@@ -391,16 +391,21 @@ function seriesOf(name){
   return (D.series||{})[name]||[];
 }
 function boughtTickers(name){
-  const set=new Set();
+  const seen=new Set();
+  const canon=[];
+  const extra=[];
   const book=(D.books||{})[name];
   for(const t of (book&&book.trades)||[]){
-    if(t.side==='BUY'||t.side==='SHORT') set.add(t.ticker);
+    if((t.side==='BUY'||t.side==='SHORT') && t.ticker && !seen.has(t.ticker)){
+      seen.add(t.ticker); canon.push(t.ticker);
+    }
   }
   for(const st of (D.starts||{})[name]||[]){
-    for(const b of st.buys||[]) if(b.ticker) set.add(b.ticker);
-    for(const x of st.bought||[]) set.add(x);
+    for(const b of st.buys||[]) if(b.ticker && !seen.has(b.ticker)){ seen.add(b.ticker); extra.push(b.ticker); }
+    for(const x of st.bought||[]) if(x && !seen.has(x)){ seen.add(x); extra.push(x); }
   }
-  return [...set].sort();
+  extra.sort();
+  return canon.concat(extra);
 }
 function toneOf(v){
   const t=String(v||'missing').toLowerCase();
@@ -542,7 +547,7 @@ function renderProbe(){
   }
   if(card.alarm) negBits.push('🚨');
   const points=[
-    `On list this morning: ${card.on_list?'yes ('+(card.sources||[]).join(', ')+')':'no — not on this sleeve\\'s 09:30 lists'}`,
+    `On list this morning: ${card.on_list?'yes ('+(card.sources||[]).join(', ')+')':"no — not on this sleeve's 09:30 lists"}`,
     `Sleeve checklist: ${pass?'would pass the buy gates (cash and hard-red still apply)':'would not pass the buy gates'}`,
     `Marks: ${card.blue?'🔵 turn higher': 'no 🔵'} · ${card.alarm?'🚨 cameras worse overnight':'no 🚨'} · ${card.white?'⚪ no red cameras':'red cameras present'}`,
     `Last finished bar: ${card.last_green?'green (closed up)':card.last_red?'red (closed down)':'not flagged'}`,
