@@ -63,6 +63,37 @@ on:
         required: true
         default: auto
         options: [auto, list, live]
+      size:
+        description: >
+          How leftover cash is split among new names.
+          leftover = equal split (default). rank_w = more cash to better src_rank.
+          topheavy = 40% of leftover to #1. half = deploy half leftover.
+          auto = include default recipes plus neighbors of the chosen value.
+        type: choice
+        required: true
+        default: auto
+        options: [auto, leftover, rank_w, topheavy, half]
+      sell:
+        description: >
+          When a held lot is sold. Min-hold still blocks every mode except 🚨 / last-red / news🔴.
+          list = off the wish-list after min-hold (default). time = at min-hold even if still listed.
+          cut_loser = after min-hold, sell if mark is −3% vs entry.
+          trail = after min-hold, sell if mark is 5% off the lot's peak.
+          auto = include default recipes plus neighbors of the chosen value.
+        type: choice
+        required: true
+        default: auto
+        options: [auto, list, time, cut_loser, trail]
+      s_boost:
+        description: >
+          Extra aggressiveness on S≥+5 days that are not hard-red.
+          none = no boost (default). more_names = raise top_n by 4 that morning.
+          sizeup = deploy 1.35× leftover (still cannot spend past cash). both = more names and size-up.
+          auto = include default recipes plus neighbors of the chosen value.
+        type: choice
+        required: true
+        default: auto
+        options: [auto, none, more_names, sizeup, both]
       auto_tweak:
         description: "Also run nearby holds/gates/ranks (less manual clicking)"
         required: false
@@ -107,6 +138,9 @@ jobs:
           TOP_N: ${{ inputs.top_n }}
           EXIT: ${{ inputs.exit }}
           ENTRY: ${{ inputs.entry }}
+          SIZE: ${{ inputs.size }}
+          SELL: ${{ inputs.sell }}
+          S_BOOST: ${{ inputs.s_boost }}
           AUTO: ${{ inputs.auto_tweak }}
           REBUILD: ${{ inputs.rebuild_panel }}
         run: |
@@ -115,7 +149,9 @@ jobs:
                 --universe "${UNIVERSE:-auto}" --hold "${HOLD:-auto}"
                 --gate "${GATE:-auto}" --rank "${RANK:-auto}"
                 --side "${SIDE:-auto}" --top-n "${TOP_N:-auto}"
-                --exit "${EXIT:-auto}" --entry "${ENTRY:-auto}")
+                --exit "${EXIT:-auto}" --entry "${ENTRY:-auto}"
+                --size "${SIZE:-auto}" --sell "${SELL:-auto}"
+                --s-boost "${S_BOOST:-auto}")
           [ -n "${TO_DATE:-}" ] && ARGS+=(--to-date "$TO_DATE")
           [ "${REBUILD:-false}" = "true" ] && ARGS+=(--rebuild-panel)
           [ "${AUTO:-true}" = "false" ] && ARGS+=(--no-auto-tweak)

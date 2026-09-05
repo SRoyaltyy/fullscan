@@ -404,7 +404,14 @@ def test_recipes_cover_holds_shorts_and_exits() -> None:
     assert "short_alarm_h1" in names
     assert "union_w_hot_cond_h1" in names
     assert "flatten_live_h5" in names
+    assert "flatten_h5_rankw" in names
+    assert "flatten_h5_sboost" in names
+    assert "union_h3_time" in names
     assert any((r.get("require") or {}).get("live_entry") for r in recs)
+    assert any((r.get("size") or "leftover") == "rank_w" for r in recs)
+    assert any((r.get("sell") or "list") == "time" for r in recs)
+    assert any((r.get("s_boost") or "none") == "both" for r in recs)
+    assert len(recs) >= 100
 
 
 def test_template_has_data_slot() -> None:
@@ -413,6 +420,9 @@ def test_template_has_data_slot() -> None:
     assert "Win%" in text
     assert "Starts YES" in text
     assert "Blotter" in text
+    assert "Open cash" in text
+    assert "Audit" in text or "audit" in text
+    assert "AvgW" in text
     assert "leak-free" in text.lower() or "Leak-free" in text
 
 
@@ -440,6 +450,172 @@ def test_write_outputs_injects_payload(tmp_path=None) -> None:
     assert payload["stats"][0]["reliable"] is False  # empty book is thin
 
 
+def _panel(cal, rows, extra=None):
+    by_date = {}
+    for r in rows:
+        by_date.setdefault(r["date"], []).append(r)
+    out = {"session_dates": cal, "rows": rows, "by_date": by_date}
+    if extra:
+        out.update(extra)
+    return out
+
+
+def _row(date, ticker, **kw):
+    r = {
+        "date": date, "ticker": ticker, "sources": ["union"],
+        "boxes": {"vol": "good"}, "blue": False, "alarm": False,
+        "zero_red": True, "last_green": True, "last_red": False,
+        "ohlc_ret_5": 3.0, "ohlc_rvol": 1.0, "ohlc_hot_score": 1.0,
+        "src_rank": 0, "cond_good": 1, "cond_bad": 0,
+    }
+    r.update(kw)
+    return r
+
+
+def test_butterfly_day2_opens_at_day1_leftover() -> None:
+    from src import factor_mine_book as fmb
+    from src import paper_trade as pt
+    cal = ["2026-08-17", "2026-08-18", "2026-08-19"]
+    rows = [
+        _row("2026-08-17", "AAA", src_rank=0),
+        _row("2026-08-18", "AAA", src_rank=0),
+        _row("2026-08-19", "AAA", src_rank=0),
+    ]
+    bars = {("AAA", d): {"open": 10, "close": 11} for d in cal}
+    rec = fm.make_recipe("union_h3", hold=3, top_n=1)
+    book = fmb.simulate_book(
+        _panel(cal, rows), rec, bars=bars, fees=pt.load_fees(), regime={})
+    d0, d1 = book["daily"][0], book["daily"][1]
+    assert d0["open_cash"] == 10_000
+    assert d0["open_held"] == []
+    assert d1["open_cash"] == d0["cash"]
+    assert any(h.startswith("AAA×") for h in d1["open_held"])
+    assert d1["open_cash"] == book["daily"][0]["cash"]
+    assert book["audit"]["ok"] is True
+    # Cannot invent shares: every SELL is a name we opened.
+    held_ever = set()
+    for t in book["trades"]:
+        if t["side"] == "BUY":
+            held_ever.add(t["ticker"])
+        if t["side"] == "SELL":
+            assert t["ticker"] in held_ever
+
+
+def test_audit_fails_on_unheld_sell_and_overspend() -> None:
+    from src import factor_mine_book as fmb
+    from src import paper_trade as pt
+    cal = ["2026-08-17"]
+    rows = [_row("2026-08-17", "AAA")]
+    bars = {("AAA", "2026-08-17"): {"open": 10, "close": 10}}
+    rec = fm.make_recipe("union_h1", hold=1, top_n=1)
+    book = fmb.simulate_book(
+        _panel(cal, rows), rec, bars=bars, fees=pt.load_fees(), regime={})
+    assert book["audit"]["ok"] is True
+    bad = dict(book)
+    bad["trades"] = list(book["trades"]) + [{
+        "date": "2026-08-17", "ticker": "ZZZ", "side": "SELL",
+        "shares": 10, "price": 10, "fees": 0, "cash_after": 99_999,
+    }]
+    aud = fmb.audit_book(bad, capital=10_000, side="long")
+    assert aud["ok"] is False
+    assert any("ZZZ" in f for f in aud["fails"])
+    spend = dict(book)
+    spend["trades"] = list(book["trades"]) + [{
+        "date": "2026-08-17", "ticker": "QQQ", "side": "BUY",
+        "shares": 99999, "price": 100, "fees": 0, "cash_after": -1,
+    }]
+    aud2 = fmb.audit_book(spend, capital=10_000, side="long")
+    assert aud2["ok"] is False
+    assert any("cash" in f.lower() or "buy" in f.lower() for f in aud2["fails"])
+
+
+def test_time_sell_exits_at_min_hold_even_if_listed() -> None:
+    from src import factor_mine_book as fmb
+    from src import paper_trade as pt
+    cal = ["2026-08-17", "2026-08-18"]
+    rows = [_row(d, "AAA") for d in cal]
+    bars = {("AAA", d): {"open": 10, "close": 10} for d in cal}
+    keep = fm.make_recipe("union_h1", hold=1, top_n=1, sell="list")
+    timed = fm.make_recipe("union_h1_time", hold=1, top_n=1, sell="time")
+    fees = pt.load_fees()
+    b_keep = fmb.simulate_book(_panel(cal, rows), keep, bars=bars, fees=fees, regime={})
+    b_time = fmb.simulate_book(_panel(cal, rows), timed, bars=bars, fees=fees, regime={})
+    # list + still listed: no SELL on 8-18 (name never dropped).
+    assert not any(t["side"] == "SELL" and t["date"] == "2026-08-18"
+                   for t in b_keep["trades"])
+    # time-stop: sell at min-hold even though AAA is still on the list.
+    sold = [t for t in b_time["trades"] if t["side"] == "SELL"]
+    assert sold and sold[0]["date"] == "2026-08-18"
+    assert "time-stop" in (sold[0].get("reason") or "")
+    assert b_time["audit"]["ok"] is True
+
+
+def test_rank_w_gives_more_shares_to_first() -> None:
+    from src import factor_mine_book as fmb
+    from src import paper_trade as pt
+    cal = ["2026-08-17"]
+    rows = [
+        _row("2026-08-17", "AAA", src_rank=0),
+        _row("2026-08-17", "BBB", src_rank=1),
+    ]
+    bars = {
+        ("AAA", "2026-08-17"): {"open": 10, "close": 10},
+        ("BBB", "2026-08-17"): {"open": 10, "close": 10},
+    }
+    rec = fm.make_recipe("union_h1_rankw", hold=1, top_n=2, size="rank_w")
+    book = fmb.simulate_book(
+        _panel(cal, rows), rec, bars=bars, fees=pt.load_fees(), regime={})
+    buys = {t["ticker"]: t["shares"] for t in book["trades"] if t["side"] == "BUY"}
+    assert buys["AAA"] > buys["BBB"]
+    leftover = fmb.split_budgets([{}, {}], 100.0, "leftover")
+    rankw = fmb.split_budgets([{}, {}], 100.0, "rank_w")
+    assert leftover[0] == leftover[1]
+    assert rankw[0] > rankw[1]
+    assert abs(sum(rankw) - 100.0) < 1e-9
+    half = fmb.split_budgets([{}, {}], 100.0, "half")
+    assert abs(sum(half) - 50.0) < 1e-9
+
+
+def test_sboost_more_names_on_good_s_still_cash_capped() -> None:
+    from src import factor_mine_book as fmb
+    from src import paper_trade as pt
+    cal = ["2026-08-17"]
+    rows = [_row("2026-08-17", f"T{i}", src_rank=i) for i in range(12)]
+    rows.append(_row("2026-08-17", "DEAR", src_rank=99))
+    bars = {(f"T{i}", "2026-08-17"): {"open": 10, "close": 10} for i in range(12)}
+    bars[("DEAR", "2026-08-17")] = {"open": 9000, "close": 9000}
+    rec = fm.make_recipe(
+        "union_h1_sboost", hold=1, top_n=4, s_boost="more_names")
+    fees = pt.load_fees()
+    good = fmb.simulate_book(
+        _panel(cal, rows), rec, bars=bars, fees=fees,
+        regime={"2026-08-17": {"predict_score": 8.5}})
+    n_try = len([t for t in good["trades"] if t["side"] == "BUY"]) + len([
+        k for k in good["skips"] if k["date"] == "2026-08-17" and k["kind"] == "cash"])
+    assert n_try > 4  # top_n raised by +4
+    spent = sum(
+        t["shares"] * t["price"] + t["fees"]
+        for t in good["trades"] if t["side"] == "BUY")
+    assert spent <= 10_000 + 0.05
+    assert all(t["ticker"] != "DEAR" or t["side"] != "BUY" for t in good["trades"])
+    red = fmb.simulate_book(
+        _panel(cal, rows), rec, bars=bars, fees=fees,
+        regime={"2026-08-17": {"predict_score": -6.2}})
+    assert all(t["side"] != "BUY" for t in red["trades"])
+    assert any(k["kind"] == "hard_red" for k in red["skips"])
+    assert good["audit"]["ok"] is True
+
+
+def test_action_filters_size_sell_boost() -> None:
+    from src import factor_mine_book as fmb
+    only = fmb.recipes_from_action(
+        universe="flatten", hold="5", gate="none", rank="none",
+        side="long", top_n="8", exit="none", size="rank_w",
+        sell="auto", s_boost="auto", auto_tweak=False)
+    assert only and all((r.get("size") or "leftover") == "rank_w" for r in only)
+    assert any(r["name"] == "flatten_h5_rankw" for r in only)
+
+
 if __name__ == "__main__":
     test_hold_window_includes_entry_day()
     test_feature_export_is_always_prior_session()
@@ -460,4 +636,10 @@ if __name__ == "__main__":
     test_recipes_cover_holds_shorts_and_exits()
     test_template_has_data_slot()
     test_write_outputs_injects_payload()
-    print("19 factor-mine tests passed")
+    test_butterfly_day2_opens_at_day1_leftover()
+    test_audit_fails_on_unheld_sell_and_overspend()
+    test_time_sell_exits_at_min_hold_even_if_listed()
+    test_rank_w_gives_more_shares_to_first()
+    test_sboost_more_names_on_good_s_still_cash_capped()
+    test_action_filters_size_sell_boost()
+    print("25 factor-mine tests passed")
