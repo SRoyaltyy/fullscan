@@ -100,9 +100,9 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-28 09:30 ET | **SELL** | `DLO` | 175 | $15.33 | $2.57 | $-52.33 | $5,387.00 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-28 09:30 ET | **SELL** | `SLI` | 1054 | $2.60 | $13.79 | $-16.85 | $8,113.61 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
 | 2026-08-28 09:30 ET | **SELL** | `MRVL` | 11 | $253.44 | $2.06 | $+143.76 | $10,899.39 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `FIGR` | 72 | $37.42 | $2.21 | — | $8,202.94 | top 4 by hot; rank hot_score; list yday_mover; ret5=+24.4; leftover $2724.85 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 heat🟡 vol🟡 buy🟢 |
+| 2026-08-28 09:30 ET | **BUY** | `FIGR` | 72 | $37.42 | $2.21 | — | $8,202.94 | top 4 by hot; rank hot_score; list yday_mover; ret5=+24.4; leftover $2724.85 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 heat🔴 vol🟡 buy🟢 |
 | 2026-08-28 09:30 ET | **BUY** | `NIQ` | 145 | $18.79 | $2.42 | — | $5,475.97 | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+7.6; leftover $2724.85 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `ERO` | 69 | $39.20 | $2.20 | — | $2,768.97 | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+16.6; leftover $2724.85 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-08-28 09:30 ET | **BUY** | `ERO` | 69 | $39.20 | $2.20 | — | $2,768.97 | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+16.6; leftover $2724.85 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
 | 2026-08-28 09:30 ET | **BUY** | `TRLV` | 239 | $11.38 | $3.08 | — | $46.07 | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+15.0; leftover $2724.85 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 heat🟡 vol🟡 buy🟡 |
 | 2026-08-31 09:30 ET | **SELL** | `FIGR` | 72 | $35.50 | $2.24 | $-142.68 | $2,599.83 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-31 09:30 ET | **SELL** | `NIQ` | 145 | $19.20 | $2.47 | $+54.55 | $5,381.36 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🔴 digest🟢 judge🟡 ab🟢 heat🟢 vol🟡 buy🟡 |

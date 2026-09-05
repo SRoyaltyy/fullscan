@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+2.05%** ($10,205) · signal-only (no cash/fees) was +7.42%. Starts YES **11/17**. Fills 124 · skips 8 · realized $+234.04.
+Cash book **+0.94%** ($10,094) · signal-only (no cash/fees) was +6.12%. Starts YES **8/17**. Fills 123 · skips 8 · realized $+234.04.
 
 ## Why these stocks
 
@@ -20,7 +20,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $293.60.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $44.20.
 
 ## Each session (cash + holdings state)
 
@@ -42,7 +42,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-09-01 | -6.30 | $9,949.22 | — | — | — | $9,949.22 | $0.00 | $9,949.22 | — | hard-red sit S=-6.30 |
 | 2026-09-02 | -3.83 | $9,949.22 | — | — | — | $9,949.22 | $0.00 | $9,949.22 | — | hard-red sit S=-3.83 |
 | 2026-09-03 | -0.90 | $9,949.22 | — | HRMY, VSTM, RVTY, MMED, CRDL, BMEA, VIR, NEOV | — | $117.40 | $10,118.39 | $10,235.79 | HRMY×30, VSTM×161, RVTY×9, MMED×54, CRDL×575, BMEA×690, VIR×106, NEOV×339 | BUY HRMY x30 @ 41.31; BUY VSTM x161 @ 7.70; BUY RVTY x9 @ 125.94; BUY MMED x54 @ 22.78; BUY CRDL x575 @ 2.16; BUY BMEA x690 @ 1.80; BUY VIR x106 @ 11.63; BUY NEOV x339 @ 3.66 |
-| 2026-09-04 | — | $117.40 | HRMY×30, VSTM×161, RVTY×9, MMED×54, CRDL×575, BMEA×690, VIR×106, NEOV×339 | BVS, DELL, MLYS, TARS, LENZ, INO | HRMY, VSTM, RVTY, MMED, CRDL, BMEA, VIR, NEOV | $293.60 | $9,911.22 | $10,204.82 | BVS×117, DELL×3, MLYS×58, TARS×20, LENZ×289, INO×1245 | SELL HRMY (dropped from list after 1 sess (min 1)); SELL VSTM (dropped from list after 1 sess (min 1)); SELL RVTY (dropped from list after 1 sess (min 1)); SELL MMED (dropped from list after 1 sess (min 1)); SELL CRDL (dropped from list after 1 sess (min 1)); SELL BMEA (dropped from list after 1 sess (min 1)); SELL VIR (dropped from list after 1 sess (min 1)); SELL NEOV (dropped from list after 1 sess (min 1)); BUY BVS x117 @ 14.50; BUY DELL x3 @ 486.31; BUY MLYS x58 @ 29.15; BUY TARS x20 @ 82.76; BUY LENZ x289 @ 5.90; BUY INO x1245 @ 1.37 |
+| 2026-09-04 | — | $117.40 | HRMY×30, VSTM×161, RVTY×9, MMED×54, CRDL×575, BMEA×690, VIR×106, NEOV×339 | BVS, MLYS, TARS, LENZ, INO | HRMY, VSTM, RVTY, MMED, CRDL, BMEA, VIR, NEOV | $44.20 | $10,049.72 | $10,093.92 | BVS×141, MLYS×70, TARS×24, LENZ×346, INO×1494 | SELL HRMY (dropped from list after 1 sess (min 1)); SELL VSTM (dropped from list after 1 sess (min 1)); SELL RVTY (dropped from list after 1 sess (min 1)); SELL MMED (dropped from list after 1 sess (min 1)); SELL CRDL (dropped from list after 1 sess (min 1)); SELL BMEA (dropped from list after 1 sess (min 1)); SELL VIR (dropped from list after 1 sess (min 1)); SELL NEOV (dropped from list after 1 sess (min 1)); BUY BVS x141 @ 14.50; BUY MLYS x70 @ 29.15; BUY TARS x24 @ 82.76; BUY LENZ x346 @ 5.90; BUY INO x1494 @ 1.37 |
 
 ## Fills (what was bought / sold)
 
@@ -166,12 +166,11 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-09-04 09:30 ET | **SELL** | `BMEA` | 690 | $1.93 | $9.03 | $+71.77 | $7,739.53 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-04 09:30 ET | **SELL** | `VIR` | 106 | $11.54 | $2.34 | $-14.18 | $8,960.44 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-04 09:30 ET | **SELL** | `NEOV` | 339 | $3.77 | $4.44 | $+28.48 | $10,234.03 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-04 09:30 ET | **BUY** | `BVS` | 117 | $14.50 | $2.34 | — | $8,535.19 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; 🔵; ⚪; ret5=+0.8; leftover $1705.67 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `DELL` | 3 | $486.31 | $2.00 | — | $7,074.26 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=-9.9; leftover $1705.67 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `MLYS` | 58 | $29.15 | $2.16 | — | $5,381.39 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+0.0; leftover $1705.67 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `TARS` | 20 | $82.76 | $2.05 | — | $3,724.14 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list yday_gainer; 🔵; ⚪; ret5=+5.1; leftover $1705.67 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `LENZ` | 289 | $5.90 | $3.73 | — | $2,015.31 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list yday_gainer; 🔵; ⚪; ret5=-1.1; leftover $1705.67 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `INO` | 1245 | $1.37 | $16.06 | — | $293.60 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; 🔵; ⚪; ret5=+8.3; leftover $1705.67 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `BVS` | 141 | $14.50 | $2.41 | — | $8,187.11 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; 🔵; ⚪; ret5=+0.8; leftover $2046.81 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `MLYS` | 70 | $29.15 | $2.20 | — | $6,144.41 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+0.0; leftover $2046.81 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `TARS` | 24 | $82.76 | $2.06 | — | $4,156.11 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list yday_gainer; 🔵; ⚪; ret5=+5.1; leftover $2046.81 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `LENZ` | 346 | $5.90 | $4.46 | — | $2,110.25 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list yday_gainer; 🔵; ⚪; ret5=-1.1; leftover $2046.81 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `INO` | 1494 | $1.37 | $19.27 | — | $44.20 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; 🔵; ⚪; ret5=+8.3; leftover $2046.81 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 
 ## Not taken
 
@@ -190,9 +189,8 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `BVS` | 117 | 2026-09-04 @ $14.50 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; 🔵; ⚪; ret5=+0.8; leftover $1705.67 |
-| `DELL` | 3 | 2026-09-04 @ $486.31 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=-9.9; leftover $1705.67 |
-| `MLYS` | 58 | 2026-09-04 @ $29.15 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+0.0; leftover $1705.67 |
-| `TARS` | 20 | 2026-09-04 @ $82.76 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list yday_gainer; 🔵; ⚪; ret5=+5.1; leftover $1705.67 |
-| `LENZ` | 289 | 2026-09-04 @ $5.90 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list yday_gainer; 🔵; ⚪; ret5=-1.1; leftover $1705.67 |
-| `INO` | 1245 | 2026-09-04 @ $1.37 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; 🔵; ⚪; ret5=+8.3; leftover $1705.67 |
+| `BVS` | 141 | 2026-09-04 @ $14.50 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; 🔵; ⚪; ret5=+0.8; leftover $2046.81 |
+| `MLYS` | 70 | 2026-09-04 @ $29.15 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+0.0; leftover $2046.81 |
+| `TARS` | 24 | 2026-09-04 @ $82.76 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list yday_gainer; 🔵; ⚪; ret5=+5.1; leftover $2046.81 |
+| `LENZ` | 346 | 2026-09-04 @ $5.90 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list yday_gainer; 🔵; ⚪; ret5=-1.1; leftover $2046.81 |
+| `INO` | 1494 | 2026-09-04 @ $1.37 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; 🔵; ⚪; ret5=+8.3; leftover $2046.81 |

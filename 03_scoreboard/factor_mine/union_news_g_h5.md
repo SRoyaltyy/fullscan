@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ news_g hold 5, no 🚨
 
-Cash book **-10.92%** ($8,908) · signal-only (no cash/fees) was +152.54%. Starts YES **4/17**. Fills 81 · skips 189 · realized $-876.73.
+Cash book **-10.92%** ($8,908) · signal-only (no cash/fees) was +152.34%. Starts YES **4/17**. Fills 81 · skips 189 · realized $-876.73.
 
 ## Why these stocks
 
@@ -95,14 +95,14 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-27 09:30 ET | **SELL** | `AUTL` | 10 | $2.41 | $0.29 | $-1.17 | $203.90 | dropped from list after 5 sess (min 5) | — |
 | 2026-08-28 09:30 ET | **SELL** | `AU` | 9 | $117.41 | $2.04 | $-22.23 | $1,258.55 | dropped from list after 5 sess (min 5) | — |
 | 2026-08-28 09:30 ET | **SELL** | `CRSP` | 19 | $59.12 | $2.07 | $-15.51 | $2,379.77 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-28 09:30 ET | **SELL** | `FUTU` | 10 | $128.00 | $2.04 | $+124.14 | $3,657.73 | dropped from list after 5 sess (min 5) | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🔴 buy🟡 |
+| 2026-08-28 09:30 ET | **SELL** | `FUTU` | 10 | $128.00 | $2.04 | $+124.14 | $3,657.73 | dropped from list after 5 sess (min 5) | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **SELL** | `DE` | 1 | $628.82 | $2.01 | $+1.55 | $4,284.53 | dropped from list after 5 sess (min 5) | — |
 | 2026-08-28 09:30 ET | **SELL** | `MARA` | 100 | $11.53 | $2.32 | $-21.61 | $5,435.22 | dropped from list after 5 sess (min 5) | — |
 | 2026-08-28 09:30 ET | **SELL** | `BTDR` | 106 | $11.20 | $2.34 | $+6.49 | $6,620.08 | dropped from list after 5 sess (min 5) | — |
 | 2026-08-28 09:30 ET | **SELL** | `HIVE` | 363 | $2.96 | $4.75 | $-111.08 | $7,689.81 | dropped from list after 5 sess (min 5) | — |
 | 2026-08-28 09:30 ET | **BUY** | `RRC` | 26 | $41.44 | $2.07 | — | $6,610.30 | union ∩ news_g hold 5, no 🚨; gate news=good; list flatten; ret5=+1.8; leftover $1098.54 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟢 |
 | 2026-08-28 09:30 ET | **BUY** | `CAPR` | 119 | $9.19 | $2.35 | — | $5,514.34 | union ∩ news_g hold 5, no 🚨; gate news=good; list probable,yday_gainer,yday_mover; ret5=-5.4; leftover $1098.54 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `SEDG` | 32 | $33.78 | $2.09 | — | $4,431.30 | union ∩ news_g hold 5, no 🚨; gate news=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.9; leftover $1098.54 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟡 vol🟢 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `SEDG` | 32 | $33.78 | $2.09 | — | $4,431.30 | union ∩ news_g hold 5, no 🚨; gate news=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.9; leftover $1098.54 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `SMTC` | 7 | $149.40 | $2.01 | — | $3,383.49 | union ∩ news_g hold 5, no 🚨; gate news=good; list probable,yday_gainer,yday_mover,mover_buy; 🔵; ⚪; ret5=-11.6; leftover $1098.54 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `OPTX` | 128 | $8.57 | $2.37 | — | $2,284.15 | union ∩ news_g hold 5, no 🚨; gate news=good; list yday_gainer; ret5=-3.4; leftover $1098.54 | join🟡 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `ERAS` | 56 | $19.30 | $2.16 | — | $1,201.19 | union ∩ news_g hold 5, no 🚨; gate news=good; list yday_gainer; ret5=-4.1; leftover $1098.54 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
@@ -118,7 +118,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-09-03 09:30 ET | **BUY** | `CNXC` | 8 | $31.80 | $2.01 | — | $1,120.39 | union ∩ news_g hold 5, no 🚨; gate news=good; list yday_gainer; 🔵; ret5=+3.7; leftover $271.57 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟡 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `TXG` | 4 | $60.24 | $2.00 | — | $877.43 | union ∩ news_g hold 5, no 🚨; gate news=good; list ohlc_hot; ret5=+16.1; leftover $271.57 | join🟢 sector🟡 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `ZYME` | 9 | $30.00 | $2.02 | — | $605.41 | union ∩ news_g hold 5, no 🚨; gate news=good; list ohlc_hot; ⚪; ret5=+14.1; leftover $271.57 | join🟢 sector🟡 gen🟡 news🟢 digest🟢 judge🟢 ab🟡 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `FCX` | 3 | $73.04 | $2.00 | — | $384.30 | union ∩ news_g hold 5, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+15.3; leftover $271.57 | join🔴 sector🟢 gen🟡 news🟢 digest🟢 judge🔴 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `FCX` | 3 | $73.04 | $2.00 | — | $384.30 | union ∩ news_g hold 5, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+15.3; leftover $271.57 | join🔴 sector🟢 gen🟡 news🟢 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-09-04 09:30 ET | **SELL** | `TRLV` | 22 | $11.89 | $2.08 | $+15.01 | $643.80 | dropped from list after 8 sess (min 5) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-04 09:30 ET | **SELL** | `RRC` | 26 | $42.43 | $2.09 | $+21.58 | $1,744.89 | dropped from list after 5 sess (min 5) | — |
 | 2026-09-04 09:30 ET | **SELL** | `CAPR` | 119 | $9.83 | $2.38 | $+71.44 | $2,912.28 | dropped from list after 5 sess (min 5) | — |
@@ -298,8 +298,8 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-09-01 | `NTNX` | hard_red | hard-red S=-6.30 sit; no new buys |
 | 2026-09-01 | `SLBT` | hard_red | hard-red S=-6.30 sit; no new buys |
 | 2026-09-01 | `TXG` | hard_red | hard-red S=-6.30 sit; no new buys |
+| 2026-09-01 | `SSRM` | hard_red | hard-red S=-6.30 sit; no new buys |
 | 2026-09-01 | `NEM` | hard_red | hard-red S=-6.30 sit; no new buys |
-| 2026-09-01 | `NVDA` | hard_red | hard-red S=-6.30 sit; no new buys |
 | 2026-09-02 | `RRC` | min_hold | dropped but min-hold 3/5 sess — no sell |
 | 2026-09-02 | `CAPR` | min_hold | dropped but min-hold 3/5 sess — no sell |
 | 2026-09-02 | `SEDG` | min_hold | dropped but min-hold 3/5 sess — no sell |

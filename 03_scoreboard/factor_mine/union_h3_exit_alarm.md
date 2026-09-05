@@ -120,7 +120,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-27 09:30 ET | **SELL** | `CYPH` | 12 | $1.60 | $0.25 | $+2.92 | $125.79 | dropped from list after 4 sess (min 3) | — |
 | 2026-08-27 09:30 ET | **BUY** | `CRK` | 1 | $14.09 | $0.14 | — | $111.56 | hold 3d, sell next 09:30 if 🚨; list flatten; ret5=+1.1; leftover $17.97 | join🟢 sector🔴 gen🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `SLI` | 6 | $2.59 | $0.17 | — | $95.85 | hold 3d, sell next 09:30 if 🚨; list flatten; ret5=+4.2; leftover $17.97 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `GGB` | 4 | $4.42 | $0.19 | — | $77.98 | hold 3d, sell next 09:30 if 🚨; list mover_buy; 🔵; ret5=-8.6; leftover $17.97 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `GGB` | 4 | $4.42 | $0.19 | — | $77.98 | hold 3d, sell next 09:30 if 🚨; list mover_buy; ret5=-8.6; leftover $17.97 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **SELL** | `OCUL` | 122 | $10.63 | $2.39 | $-40.12 | $1,372.45 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-28 09:30 ET | **SELL** | `INSP` | 21 | $62.10 | $2.07 | $+9.10 | $2,674.48 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-28 09:30 ET | **SELL** | `CRMD` | 161 | $8.49 | $2.51 | $+28.83 | $4,038.86 | dropped from list after 3 sess (min 3) | — |

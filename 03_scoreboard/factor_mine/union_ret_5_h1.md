@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `ret_5` · size `leftover` · sell `list` · S-boost `none` · rank by ret_5
 
-Cash book **+4.96%** ($10,496) · signal-only (no cash/fees) was -1.46%. Starts YES **11/17**. Fills 136 · skips 64 · realized $+438.34.
+Cash book **+4.96%** ($10,496) · signal-only (no cash/fees) was -1.00%. Starts YES **11/17**. Fills 136 · skips 64 · realized $+438.34.
 
 ## Why these stocks
 
@@ -143,7 +143,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-27 09:30 ET | **BUY** | `MRVL` | 5 | $240.00 | $2.00 | — | $6,735.43 | rank by ret_5; rank ret_5; list mover_buy; 🔵; ret5=+6.8; leftover $1321.09 | join🟢 sector🟢 gen🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `SLI` | 510 | $2.59 | $6.58 | — | $5,407.96 | rank by ret_5; rank ret_5; list flatten; ret5=+4.2; leftover $1321.09 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `PLTR` | 7 | $170.60 | $2.01 | — | $4,211.74 | rank by ret_5; rank ret_5; list mover_buy; 🔵; ret5=+3.4; leftover $1321.09 | join🟢 sector🟢 gen🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `TX` | 23 | $55.20 | $2.06 | — | $2,940.09 | rank by ret_5; rank ret_5; list mover_buy; 🔵; ret5=+3.0; leftover $1321.09 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `TX` | 23 | $55.20 | $2.06 | — | $2,940.09 | rank by ret_5; rank ret_5; list mover_buy; ret5=+3.0; leftover $1321.09 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `RRC` | 32 | $40.72 | $2.09 | — | $1,634.96 | rank by ret_5; rank ret_5; list flatten; ret5=+1.8; leftover $1321.09 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `GEN` | 45 | $28.89 | $2.12 | — | $332.78 | rank by ret_5; rank ret_5; list mover_buy; 🔵; ret5=+1.6; leftover $1321.09 | join🟢 sector🟢 gen🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **SELL** | `MOS` | 53 | $24.00 | $2.17 | $-48.84 | $1,602.62 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
@@ -154,13 +154,13 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-28 09:30 ET | **SELL** | `TX` | 23 | $55.25 | $2.08 | $-2.99 | $7,990.46 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-28 09:30 ET | **SELL** | `RRC` | 32 | $41.44 | $2.11 | $+18.85 | $9,314.43 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟢 |
 | 2026-08-28 09:30 ET | **SELL** | `GEN` | 45 | $29.83 | $2.15 | $+38.03 | $10,654.64 | dropped from list after 1 sess (min 1) | — |
-| 2026-08-28 09:30 ET | **BUY** | `FIGR` | 35 | $37.42 | $2.10 | — | $9,342.84 | rank by ret_5; rank ret_5; list yday_mover; ret5=+24.4; leftover $1331.83 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 heat🟡 vol🟡 buy🟢 |
-| 2026-08-28 09:30 ET | **BUY** | `WPM` | 8 | $155.89 | $2.01 | — | $8,093.71 | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+17.6; leftover $1331.83 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🟡 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `SCCO` | 6 | $214.82 | $2.01 | — | $6,802.78 | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+17.0; leftover $1331.83 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `FIGR` | 35 | $37.42 | $2.10 | — | $9,342.84 | rank by ret_5; rank ret_5; list yday_mover; ret5=+24.4; leftover $1331.83 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-08-28 09:30 ET | **BUY** | `WPM` | 8 | $155.89 | $2.01 | — | $8,093.71 | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+17.6; leftover $1331.83 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `SCCO` | 6 | $214.82 | $2.01 | — | $6,802.78 | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+17.0; leftover $1331.83 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `AMTX` | 712 | $1.87 | $9.18 | — | $5,462.16 | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+16.9; leftover $1331.83 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `SBSW` | 110 | $12.01 | $2.32 | — | $4,138.74 | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+16.8; leftover $1331.83 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟡 peer🔴 heat🔴 vol🟡 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `EQX` | 98 | $13.57 | $2.28 | — | $2,806.59 | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+16.6; leftover $1331.83 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🟡 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `ERO` | 33 | $39.20 | $2.09 | — | $1,510.90 | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+16.6; leftover $1331.83 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-08-28 09:30 ET | **BUY** | `EQX` | 98 | $13.57 | $2.28 | — | $2,806.59 | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+16.6; leftover $1331.83 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `ERO` | 33 | $39.20 | $2.09 | — | $1,510.90 | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+16.6; leftover $1331.83 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
 | 2026-08-28 09:30 ET | **BUY** | `TXG` | 20 | $64.10 | $2.05 | — | $226.85 | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+16.1; leftover $1331.83 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-08-31 09:30 ET | **SELL** | `FIGR` | 35 | $35.50 | $2.12 | $-71.41 | $1,467.24 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-31 09:30 ET | **SELL** | `WPM` | 8 | $152.49 | $2.03 | $-31.25 | $2,685.12 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
@@ -240,19 +240,19 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-09-01 | `CYPH` | hard_red | hard-red S=-6.30 sit; no new buys |
 | 2026-09-01 | `ALEC` | hard_red | hard-red S=-6.30 sit; no new buys |
 | 2026-09-01 | `SUJA` | hard_red | hard-red S=-6.30 sit; no new buys |
+| 2026-09-01 | `SSRM` | hard_red | hard-red S=-6.30 sit; no new buys |
 | 2026-09-01 | `SBSW` | hard_red | hard-red S=-6.30 sit; no new buys |
 | 2026-09-01 | `KOS` | hard_red | hard-red S=-6.30 sit; no new buys |
 | 2026-09-01 | `TXG` | hard_red | hard-red S=-6.30 sit; no new buys |
 | 2026-09-01 | `TRLV` | hard_red | hard-red S=-6.30 sit; no new buys |
-| 2026-09-01 | `GUTS` | hard_red | hard-red S=-6.30 sit; no new buys |
 | 2026-09-02 | `USDE` | hard_red | hard-red S=-3.83 sit; no new buys |
 | 2026-09-02 | `PRQR` | hard_red | hard-red S=-3.83 sit; no new buys |
 | 2026-09-02 | `SUJA` | hard_red | hard-red S=-3.83 sit; no new buys |
 | 2026-09-02 | `WPM` | hard_red | hard-red S=-3.83 sit; no new buys |
-| 2026-09-02 | `SSRM` | hard_red | hard-red S=-3.83 sit; no new buys |
 | 2026-09-02 | `SCCO` | hard_red | hard-red S=-3.83 sit; no new buys |
 | 2026-09-02 | `SBSW` | hard_red | hard-red S=-3.83 sit; no new buys |
 | 2026-09-02 | `EQX` | hard_red | hard-red S=-3.83 sit; no new buys |
+| 2026-09-02 | `ARIS` | hard_red | hard-red S=-3.83 sit; no new buys |
 
 ## Still open (marked at last close)
 

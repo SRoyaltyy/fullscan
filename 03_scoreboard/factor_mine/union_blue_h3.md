@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ blue, no 🚨
 
-Cash book **-1.53%** ($9,847) · signal-only (no cash/fees) was +8.43%. Starts YES **9/17**. Fills 94 · skips 152 · realized $-355.32.
+Cash book **-1.53%** ($9,847) · signal-only (no cash/fees) was +6.12%. Starts YES **9/17**. Fills 94 · skips 152 · realized $-355.32.
 
 ## Why these stocks
 
@@ -115,7 +115,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-28 09:30 ET | **SELL** | `ALVO` | 239 | $4.88 | $3.13 | $-87.48 | $8,674.96 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-28 09:30 ET | **SELL** | `CAPR` | 183 | $9.19 | $2.58 | $+434.08 | $10,354.15 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `ANF` | 8 | $144.70 | $2.01 | — | $9,194.54 | union ∩ blue, no 🚨; gate blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+0.8; leftover $1294.27 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `SEDG` | 38 | $33.78 | $2.10 | — | $7,908.79 | union ∩ blue, no 🚨; gate blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.9; leftover $1294.27 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟡 vol🟢 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `SEDG` | 38 | $33.78 | $2.10 | — | $7,908.79 | union ∩ blue, no 🚨; gate blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.9; leftover $1294.27 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `SMTC` | 8 | $149.40 | $2.01 | — | $6,711.58 | union ∩ blue, no 🚨; gate blue=True; list probable,yday_gainer,yday_mover,mover_buy; 🔵; ⚪; ret5=-11.6; leftover $1294.27 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `GRRR` | 81 | $15.94 | $2.23 | — | $5,418.21 | union ∩ blue, no 🚨; gate blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-1.9; leftover $1294.27 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `URBN` | 15 | $82.70 | $2.04 | — | $4,175.67 | union ∩ blue, no 🚨; gate blue=True; list yday_gainer,yday_mover; 🔵; ret5=-4.6; leftover $1294.27 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
@@ -244,13 +244,13 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-27 | `ALVO` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-08-27 | `CAPR` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-08-27 | `ACMR` | cash | leftover split 3.93 < 1 share @ 80.97 |
-| 2026-08-27 | `GGB` | cash | leftover split 3.93 < 1 share @ 4.42 |
-| 2026-08-27 | `MT` | cash | leftover split 3.93 < 1 share @ 75.12 |
 | 2026-08-27 | `MU` | cash | leftover split 3.93 < 1 share @ 925.74 |
-| 2026-08-27 | `TX` | cash | leftover split 3.93 < 1 share @ 55.20 |
 | 2026-08-27 | `ANET` | cash | leftover split 3.93 < 1 share @ 190.90 |
 | 2026-08-27 | `ASML` | cash | leftover split 3.93 < 1 share @ 1746.33 |
 | 2026-08-27 | `DLO` | cash | leftover split 3.93 < 1 share @ 15.60 |
+| 2026-08-27 | `GEN` | cash | leftover split 3.93 < 1 share @ 28.89 |
+| 2026-08-27 | `LRCX` | cash | leftover split 3.93 < 1 share @ 314.61 |
+| 2026-08-27 | `MRVL` | cash | leftover split 3.93 < 1 share @ 240.00 |
 | 2026-08-31 | `ANF` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-08-31 | `SEDG` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-08-31 | `SMTC` | min_hold | dropped but min-hold 1/3 sess — no sell |
@@ -298,7 +298,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-09-04 | `MMED` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-04 | `CTMX` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-04 | `OSCR` | cash | leftover split 18.25 < 1 share @ 30.65 |
-| 2026-09-04 | `DELL` | cash | leftover split 18.25 < 1 share @ 486.31 |
+| 2026-09-04 | `MLYS` | cash | leftover split 18.25 < 1 share @ 29.15 |
 
 ## Still open (marked at last close)
 

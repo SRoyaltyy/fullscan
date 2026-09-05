@@ -126,19 +126,19 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-27 09:30 ET | **COVER** | `ENHA` | 405 | $1.63 | $5.22 | $+21.85 | $14,940.87 | dropped from list after 4 sess (min 3) | — |
 | 2026-08-27 09:30 ET | **COVER** | `CAN` | 2360 | $0.40 | $16.52 | $-281.12 | $13,980.35 | dropped from list after 4 sess (min 3) | — |
 | 2026-08-27 09:30 ET | **SHORT** | `ACMR` | 6 | $80.97 | $2.04 | — | $14,464.13 | last bar red; gate last_red=True; list mover_buy; 🔵; ret5=-1.3; leftover $564.03 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **SHORT** | `GGB` | 127 | $4.42 | $2.42 | — | $15,023.05 | last bar red; gate last_red=True; list mover_buy; 🔵; ret5=-8.6; leftover $564.03 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **SHORT** | `MT` | 7 | $75.12 | $2.05 | — | $15,546.84 | last bar red; gate last_red=True; list mover_buy; 🔵; ret5=-2.2; leftover $564.03 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **SHORT** | `TX` | 10 | $55.20 | $2.06 | — | $16,096.79 | last bar red; gate last_red=True; list mover_buy; 🔵; ret5=+3.0; leftover $564.03 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **SHORT** | `GGB` | 127 | $4.42 | $2.42 | — | $15,023.05 | last bar red; gate last_red=True; list mover_buy; ret5=-8.6; leftover $564.03 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **SHORT** | `MT` | 7 | $75.12 | $2.05 | — | $15,546.84 | last bar red; gate last_red=True; list mover_buy; ret5=-2.2; leftover $564.03 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **SHORT** | `TX` | 10 | $55.20 | $2.06 | — | $16,096.79 | last bar red; gate last_red=True; list mover_buy; ret5=+3.0; leftover $564.03 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **SHORT** | `LRCX` | 1 | $314.61 | $2.02 | — | $16,409.38 | last bar red; gate last_red=True; list mover_buy; 🔵; ret5=-5.5; leftover $564.03 | join🟡 sector🟢 gen🟢 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **SHORT** | `MRVL` | 2 | $240.00 | $2.03 | — | $16,887.35 | last bar red; gate last_red=True; list mover_buy; 🔵; ret5=+6.8; leftover $564.03 | join🟢 sector🟢 gen🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **SHORT** | `NUE` | 2 | $248.91 | $2.03 | — | $17,383.14 | last bar red; gate last_red=True; list mover_buy; 🔵; ret5=-9.4; leftover $564.03 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **SHORT** | `NUE` | 2 | $248.91 | $2.03 | — | $17,383.14 | last bar red; gate last_red=True; list mover_buy; ret5=-9.4; leftover $564.03 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **COVER** | `OCUL` | 62 | $10.63 | $2.18 | $+13.59 | $16,721.90 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-28 09:30 ET | **COVER** | `CRMD` | 81 | $8.49 | $2.23 | $-21.52 | $16,031.98 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-28 09:30 ET | **COVER** | `PUSA` | 183 | $3.86 | $2.54 | $-34.42 | $15,323.06 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-28 09:30 ET | **COVER** | `SUJA` | 77 | $9.41 | $2.22 | $-52.22 | $14,596.27 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-28 09:30 ET | **COVER** | `FWDI` | 113 | $6.39 | $2.33 | $-49.91 | $13,871.87 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-28 09:30 ET | **COVER** | `JANX` | 36 | $19.00 | $2.10 | $-21.51 | $13,185.77 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-28 09:30 ET | **SHORT** | `SEDG` | 18 | $33.78 | $2.08 | — | $13,791.73 | last bar red; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.9; leftover $628.69 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟡 vol🟢 buy🟡 |
+| 2026-08-28 09:30 ET | **SHORT** | `SEDG` | 18 | $33.78 | $2.08 | — | $13,791.73 | last bar red; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.9; leftover $628.69 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **SHORT** | `SMTC` | 4 | $149.40 | $2.04 | — | $14,387.29 | last bar red; gate last_red=True; list probable,yday_gainer,yday_mover,mover_buy; 🔵; ⚪; ret5=-11.6; leftover $628.69 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **SHORT** | `PYXS` | 189 | $3.31 | $2.62 | — | $15,010.27 | last bar red; gate last_red=True; list yday_gainer; ret5=+2.3; leftover $628.69 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🟡 heat🔴 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **SHORT** | `SAFX` | 1612 | $0.39 | $11.42 | — | $15,627.53 | last bar red; gate last_red=True; list yday_gainer; ret5=-26.5; leftover $628.69 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 heat🟡 vol🔴 buy🟡 |

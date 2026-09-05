@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ news_g, no 🚨
 
-Cash book **-0.31%** ($9,969) · signal-only (no cash/fees) was +0.23%. Starts YES **2/17**. Fills 107 · skips 51 · realized $+120.57.
+Cash book **-0.31%** ($9,969) · signal-only (no cash/fees) was -0.12%. Starts YES **2/17**. Fills 107 · skips 51 · realized $+120.57.
 
 ## Why these stocks
 
@@ -126,7 +126,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-28 09:30 ET | **SELL** | `LRCX` | 5 | $318.88 | $2.03 | $+17.32 | $7,048.68 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-28 09:30 ET | **SELL** | `NVDA` | 7 | $222.86 | $2.03 | $+67.50 | $8,606.67 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-28 09:30 ET | **BUY** | `CAPR` | 133 | $9.19 | $2.39 | — | $7,382.01 | union ∩ news_g, no 🚨; gate news=good; list probable,yday_gainer,yday_mover; ret5=-5.4; leftover $1229.52 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `SEDG` | 36 | $33.78 | $2.10 | — | $6,163.83 | union ∩ news_g, no 🚨; gate news=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.9; leftover $1229.52 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟡 vol🟢 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `SEDG` | 36 | $33.78 | $2.10 | — | $6,163.83 | union ∩ news_g, no 🚨; gate news=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.9; leftover $1229.52 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `SMTC` | 8 | $149.40 | $2.01 | — | $4,966.61 | union ∩ news_g, no 🚨; gate news=good; list probable,yday_gainer,yday_mover,mover_buy; 🔵; ⚪; ret5=-11.6; leftover $1229.52 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `OPTX` | 143 | $8.57 | $2.42 | — | $3,738.69 | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; ret5=-3.4; leftover $1229.52 | join🟡 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `ERAS` | 63 | $19.30 | $2.18 | — | $2,520.61 | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; ret5=-4.1; leftover $1229.52 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
@@ -142,11 +142,11 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-09-01 09:30 ET | **SELL** | `ZYME` | 41 | $29.32 | $2.13 | $-4.66 | $10,023.91 | dropped from list after 2 sess (min 1) | — |
 | 2026-09-03 09:30 ET | **BUY** | `MMED` | 55 | $22.78 | $2.15 | — | $8,768.85 | union ∩ news_g, no 🚨; gate news=good; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+1.5; leftover $1252.99 | join🟢 sector🟡 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `CNXC` | 39 | $31.80 | $2.11 | — | $7,526.55 | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; 🔵; ret5=+3.7; leftover $1252.99 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟡 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `OPTX` | 172 | $7.25 | $2.51 | — | $6,277.04 | union ∩ news_g, no 🚨; gate news=good; list yday_mover; ret5=-3.4; leftover $1252.99 | join🔴 sector🟢 gen🟡 news🟢 digest🟢 judge🟡 ab🔴 peer🔴 heat🟡 vol🔴 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `OPTX` | 172 | $7.25 | $2.51 | — | $6,277.04 | union ∩ news_g, no 🚨; gate news=good; list yday_mover; ret5=-3.4; leftover $1252.99 | join🔴 sector🟢 gen🟡 news🟢 digest🟢 judge🟡 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `TRLV` | 106 | $11.78 | $2.31 | — | $5,026.05 | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+15.0; leftover $1252.99 | join🟢 sector🟡 gen🟡 news🟢 digest🟢 judge🟢 ab🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `TXG` | 20 | $60.24 | $2.05 | — | $3,819.20 | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+16.1; leftover $1252.99 | join🟢 sector🟡 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `ZYME` | 41 | $30.00 | $2.11 | — | $2,587.09 | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ⚪; ret5=+14.1; leftover $1252.99 | join🟢 sector🟡 gen🟡 news🟢 digest🟢 judge🟢 ab🟡 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `FCX` | 17 | $73.04 | $2.04 | — | $1,343.37 | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+15.3; leftover $1252.99 | join🔴 sector🟢 gen🟡 news🟢 digest🟢 judge🔴 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `FCX` | 17 | $73.04 | $2.04 | — | $1,343.37 | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+15.3; leftover $1252.99 | join🔴 sector🟢 gen🟡 news🟢 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `AVGO` | 3 | $369.68 | $2.00 | — | $232.33 | union ∩ news_g, no 🚨; gate news=good; list earn_react; 🔵; ret5=-6.2; leftover $1252.99 | join🔴 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-04 09:30 ET | **SELL** | `MMED` | 55 | $23.88 | $2.18 | $+56.17 | $1,543.55 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-04 09:30 ET | **SELL** | `CNXC` | 39 | $32.88 | $2.13 | $+37.89 | $2,823.75 | dropped from list after 1 sess (min 1) | — |
@@ -201,8 +201,8 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-09-01 | `TRLV` | hard_red | hard-red S=-6.30 sit; no new buys |
 | 2026-09-01 | `SLBT` | hard_red | hard-red S=-6.30 sit; no new buys |
 | 2026-09-01 | `TXG` | hard_red | hard-red S=-6.30 sit; no new buys |
+| 2026-09-01 | `SSRM` | hard_red | hard-red S=-6.30 sit; no new buys |
 | 2026-09-01 | `NEM` | hard_red | hard-red S=-6.30 sit; no new buys |
-| 2026-09-01 | `NVDA` | hard_red | hard-red S=-6.30 sit; no new buys |
 | 2026-09-02 | `AVXL` | hard_red | hard-red S=-3.83 sit; no new buys |
 | 2026-09-02 | `TEL` | hard_red | hard-red S=-3.83 sit; no new buys |
 | 2026-09-02 | `NVS` | hard_red | hard-red S=-3.83 sit; no new buys |

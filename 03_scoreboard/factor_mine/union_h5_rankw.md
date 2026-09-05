@@ -105,8 +105,8 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-27 09:30 ET | **BUY** | `MOS` | 72 | $24.84 | $2.21 | — | $4,551.81 | rank-weighted leftover; list flatten; ret5=+13.0; leftover $1801.38 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟢 |
 | 2026-08-27 09:30 ET | **BUY** | `SLI` | 579 | $2.59 | $7.47 | — | $3,044.73 | rank-weighted leftover; list flatten; ret5=+4.2; leftover $1501.15 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `ACMR` | 14 | $80.97 | $2.03 | — | $1,909.12 | rank-weighted leftover; list mover_buy; 🔵; ret5=-1.3; leftover $1200.92 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `GGB` | 203 | $4.42 | $2.62 | — | $1,009.24 | rank-weighted leftover; list mover_buy; 🔵; ret5=-8.6; leftover $900.69 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `MT` | 7 | $75.12 | $2.01 | — | $481.39 | rank-weighted leftover; list mover_buy; 🔵; ret5=-2.2; leftover $600.46 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `GGB` | 203 | $4.42 | $2.62 | — | $1,009.24 | rank-weighted leftover; list mover_buy; ret5=-8.6; leftover $900.69 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `MT` | 7 | $75.12 | $2.01 | — | $481.39 | rank-weighted leftover; list mover_buy; ret5=-2.2; leftover $600.46 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **SELL** | `AUTL` | 2 | $2.32 | $0.07 | $-0.43 | $485.96 | dropped from list after 5 sess (min 5) | — |
 | 2026-08-28 09:30 ET | **SELL** | `CRDL` | 2 | $2.09 | $0.07 | $+0.21 | $490.07 | dropped from list after 5 sess (min 5) | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **SELL** | `CYPH` | 1 | $1.75 | $0.04 | $+0.37 | $491.78 | dropped from list after 5 sess (min 5) | — |

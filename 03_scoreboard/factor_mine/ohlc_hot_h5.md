@@ -92,15 +92,15 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-25 09:30 ET | **BUY** | `TRLV` | 2 | $11.02 | $0.23 | — | $101.77 | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+15.0; leftover $32.46 | join🔴 sector🟡 gen🟡 news🟢 digest🟢 ab🟢 vol🟡 buy🟡 |
 | 2026-08-27 09:30 ET | **SELL** | `ABTC` | 1 | $8.84 | $0.11 | $+0.18 | $110.50 | dropped from list after 5 sess (min 5) | — |
 | 2026-08-27 09:30 ET | **SELL** | `SBET` | 1 | $8.16 | $0.10 | $+0.43 | $118.56 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-28 09:30 ET | **SELL** | `AEM` | 6 | $214.11 | $2.03 | $-17.18 | $1,401.19 | dropped from list after 5 sess (min 5) | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🟡 vol🟡 buy🟡 |
+| 2026-08-28 09:30 ET | **SELL** | `AEM` | 6 | $214.11 | $2.03 | $-17.18 | $1,401.19 | dropped from list after 5 sess (min 5) | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-08-28 09:30 ET | **SELL** | `ORBS` | 1554 | $0.82 | $17.67 | $-104.14 | $2,657.80 | dropped from list after 5 sess (min 5) | — |
 | 2026-08-28 09:30 ET | **SELL** | `GRAL` | 17 | $79.00 | $2.06 | $-2.06 | $3,998.73 | dropped from list after 5 sess (min 5) | — |
 | 2026-08-28 09:30 ET | **SELL** | `MSTR` | 11 | $126.77 | $2.04 | $+73.81 | $5,391.16 | dropped from list after 5 sess (min 5) | — |
 | 2026-08-28 09:30 ET | **SELL** | `TRON` | 692 | $2.21 | $9.05 | $+168.86 | $6,911.43 | dropped from list after 5 sess (min 5) | — |
 | 2026-08-28 09:30 ET | **SELL** | `AUGO` | 15 | $88.71 | $2.06 | $-9.94 | $8,240.02 | dropped from list after 5 sess (min 5) | — |
 | 2026-08-28 09:30 ET | **BUY** | `ZYME` | 93 | $29.33 | $2.27 | — | $5,510.06 | baseline list, no extra gate; list yday_gainer,ohlc_hot; ret5=+14.1; leftover $2746.67 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `ERO` | 70 | $39.20 | $2.20 | — | $2,763.86 | baseline list, no extra gate; list ohlc_hot; ret5=+16.6; leftover $2746.67 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
-| 2026-08-28 09:30 ET | **BUY** | `FUTU` | 21 | $128.00 | $2.05 | — | $73.81 | baseline list, no extra gate; list ohlc_hot; ret5=+17.5; leftover $2746.67 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🔴 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `ERO` | 70 | $39.20 | $2.20 | — | $2,763.86 | baseline list, no extra gate; list ohlc_hot; ret5=+16.6; leftover $2746.67 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-08-28 09:30 ET | **BUY** | `FUTU` | 21 | $128.00 | $2.05 | — | $73.81 | baseline list, no extra gate; list ohlc_hot; ret5=+17.5; leftover $2746.67 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-09-01 09:30 ET | **SELL** | `AMTX` | 17 | $1.87 | $0.39 | $-0.59 | $105.21 | dropped from list after 5 sess (min 5) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-09-01 09:30 ET | **SELL** | `NIQ` | 1 | $19.06 | $0.21 | $-0.91 | $124.06 | dropped from list after 5 sess (min 5) | — |
 | 2026-09-03 09:30 ET | **BUY** | `NVAX` | 6 | $10.27 | $0.63 | — | $61.80 | baseline list, no extra gate; list yday_gainer,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+11.1; leftover $62.03 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |

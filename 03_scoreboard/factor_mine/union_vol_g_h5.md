@@ -81,7 +81,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-25 09:30 ET | **BUY** | `SUJA` | 2 | $8.79 | $0.18 | — | $12.01 | union ∩ vol_g hold 5, no 🚨; gate vol=good; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+18.5; leftover $21.58 | join🟡 sector🟡 gen🟡 news🟡 digest🟡 ab🟡 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **SELL** | `AU` | 9 | $117.41 | $2.04 | $-22.23 | $1,066.67 | dropped from list after 5 sess (min 5) | — |
 | 2026-08-28 09:30 ET | **SELL** | `AUPH` | 66 | $16.47 | $2.21 | $-52.58 | $2,151.48 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-28 09:30 ET | **SELL** | `AEM` | 5 | $214.11 | $2.02 | $-14.98 | $3,220.00 | dropped from list after 5 sess (min 5) | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🟡 vol🟡 buy🟡 |
+| 2026-08-28 09:30 ET | **SELL** | `AEM` | 5 | $214.11 | $2.02 | $-14.98 | $3,220.00 | dropped from list after 5 sess (min 5) | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-08-28 09:30 ET | **SELL** | `ARCT` | 103 | $15.74 | $2.33 | $+470.20 | $4,838.89 | dropped from list after 5 sess (min 5) | — |
 | 2026-08-28 09:30 ET | **SELL** | `AUTL` | 465 | $2.32 | $6.09 | $-81.83 | $5,911.61 | dropped from list after 5 sess (min 5) | — |
 | 2026-08-28 09:30 ET | **SELL** | `CRDL` | 596 | $2.09 | $7.80 | $+79.87 | $7,149.45 | dropped from list after 5 sess (min 5) | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🟢 buy🟡 |
@@ -90,7 +90,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-28 09:30 ET | **BUY** | `ANF` | 9 | $144.70 | $2.02 | — | $8,479.20 | union ∩ vol_g hold 5, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; 🔵; ret5=+0.8; leftover $1397.65 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `BHVN` | 82 | $16.95 | $2.24 | — | $7,087.07 | union ∩ vol_g hold 5, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; ret5=-5.4; leftover $1397.65 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `BZ` | 75 | $18.50 | $2.21 | — | $5,697.35 | union ∩ vol_g hold 5, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; ret5=+2.8; leftover $1397.65 | join🟢 sector🔴 gen🟡 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟢 |
-| 2026-08-28 09:30 ET | **BUY** | `SEDG` | 41 | $33.78 | $2.11 | — | $4,310.26 | union ∩ vol_g hold 5, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.9; leftover $1397.65 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟡 vol🟢 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `SEDG` | 41 | $33.78 | $2.11 | — | $4,310.26 | union ∩ vol_g hold 5, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.9; leftover $1397.65 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `SMTC` | 9 | $149.40 | $2.02 | — | $2,963.64 | union ∩ vol_g hold 5, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover,mover_buy; 🔵; ⚪; ret5=-11.6; leftover $1397.65 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `URBN` | 16 | $82.70 | $2.04 | — | $1,638.40 | union ∩ vol_g hold 5, no 🚨; gate vol=good; list yday_gainer,yday_mover; 🔵; ret5=-4.6; leftover $1397.65 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `ERAS` | 72 | $19.30 | $2.21 | — | $246.60 | union ∩ vol_g hold 5, no 🚨; gate vol=good; list yday_gainer; ret5=-4.1; leftover $1397.65 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
@@ -117,7 +117,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-09-04 09:30 ET | **BUY** | `CABA` | 353 | $3.63 | $4.55 | — | $7,691.34 | union ∩ vol_g hold 5, no 🚨; gate vol=good; list flatten; 🔵; ⚪; ret5=+13.8; leftover $1282.47 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
 | 2026-09-04 09:30 ET | **BUY** | `BAK` | 657 | $1.95 | $8.48 | — | $6,401.71 | union ∩ vol_g hold 5, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; ret5=+2.1; leftover $1282.47 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-04 09:30 ET | **BUY** | `EOSE` | 359 | $3.57 | $4.63 | — | $5,115.45 | union ∩ vol_g hold 5, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-5.2; leftover $1282.47 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `DELL` | 2 | $486.31 | $2.00 | — | $4,140.84 | union ∩ vol_g hold 5, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=-9.9; leftover $1282.47 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `DELL` | 2 | $486.31 | $2.00 | — | $4,140.84 | union ∩ vol_g hold 5, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; ret5=-9.9; leftover $1282.47 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-04 09:30 ET | **BUY** | `MLYS` | 43 | $29.15 | $2.12 | — | $2,885.27 | union ∩ vol_g hold 5, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+0.0; leftover $1282.47 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-04 09:30 ET | **BUY** | `CCOI` | 125 | $10.22 | $2.37 | — | $1,605.40 | union ∩ vol_g hold 5, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-18.9; leftover $1282.47 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-04 09:30 ET | **BUY** | `SGLD` | 197 | $6.48 | $2.58 | — | $326.26 | union ∩ vol_g hold 5, no 🚨; gate vol=good; list yday_gainer,yday_mover; ret5=+0.0; leftover $1282.47 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
@@ -317,7 +317,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | `CABA` | 353 | 2026-09-04 @ $3.63 | union ∩ vol_g hold 5, no 🚨; gate vol=good; list flatten; 🔵; ⚪; ret5=+13.8; leftover $1282.47 |
 | `BAK` | 657 | 2026-09-04 @ $1.95 | union ∩ vol_g hold 5, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; ret5=+2.1; leftover $1282.47 |
 | `EOSE` | 359 | 2026-09-04 @ $3.57 | union ∩ vol_g hold 5, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-5.2; leftover $1282.47 |
-| `DELL` | 2 | 2026-09-04 @ $486.31 | union ∩ vol_g hold 5, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=-9.9; leftover $1282.47 |
+| `DELL` | 2 | 2026-09-04 @ $486.31 | union ∩ vol_g hold 5, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; ret5=-9.9; leftover $1282.47 |
 | `MLYS` | 43 | 2026-09-04 @ $29.15 | union ∩ vol_g hold 5, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+0.0; leftover $1282.47 |
 | `CCOI` | 125 | 2026-09-04 @ $10.22 | union ∩ vol_g hold 5, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-18.9; leftover $1282.47 |
 | `SGLD` | 197 | 2026-09-04 @ $6.48 | union ∩ vol_g hold 5, no 🚨; gate vol=good; list yday_gainer,yday_mover; ret5=+0.0; leftover $1282.47 |

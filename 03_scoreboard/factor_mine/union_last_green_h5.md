@@ -130,7 +130,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-09-04 09:30 ET | **BUY** | `BVS` | 35 | $14.50 | $2.10 | — | $1,600.07 | union ∩ last_green hold 5, no 🚨; gate last_green=True; list flatten; 🔵; ⚪; ret5=+0.8; leftover $519.06 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-04 09:30 ET | **BUY** | `BAK` | 266 | $1.95 | $3.43 | — | $1,077.94 | union ∩ last_green hold 5, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; ret5=+2.1; leftover $519.06 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-04 09:30 ET | **BUY** | `EOSE` | 145 | $3.57 | $2.42 | — | $557.87 | union ∩ last_green hold 5, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-5.2; leftover $519.06 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `DELL` | 1 | $486.31 | $1.99 | — | $69.56 | union ∩ last_green hold 5, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=-9.9; leftover $519.06 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `DELL` | 1 | $486.31 | $1.99 | — | $69.56 | union ∩ last_green hold 5, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; ret5=-9.9; leftover $519.06 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 
 ## Not taken
 
@@ -369,4 +369,4 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | `BVS` | 35 | 2026-09-04 @ $14.50 | union ∩ last_green hold 5, no 🚨; gate last_green=True; list flatten; 🔵; ⚪; ret5=+0.8; leftover $519.06 |
 | `BAK` | 266 | 2026-09-04 @ $1.95 | union ∩ last_green hold 5, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; ret5=+2.1; leftover $519.06 |
 | `EOSE` | 145 | 2026-09-04 @ $3.57 | union ∩ last_green hold 5, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-5.2; leftover $519.06 |
-| `DELL` | 1 | 2026-09-04 @ $486.31 | union ∩ last_green hold 5, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=-9.9; leftover $519.06 |
+| `DELL` | 1 | 2026-09-04 @ $486.31 | union ∩ last_green hold 5, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; ret5=-9.9; leftover $519.06 |

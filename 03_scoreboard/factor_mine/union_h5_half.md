@@ -127,11 +127,11 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-27 09:30 ET | **BUY** | `CRK` | 31 | $14.09 | $2.08 | — | $5,420.00 | deploy half leftover; list flatten; ret5=+1.1; leftover $450.63 | join🟢 sector🔴 gen🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `SLI` | 173 | $2.59 | $2.51 | — | $4,969.42 | deploy half leftover; list flatten; ret5=+4.2; leftover $450.63 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `ACMR` | 5 | $80.97 | $2.00 | — | $4,562.57 | deploy half leftover; list mover_buy; 🔵; ret5=-1.3; leftover $450.63 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `GGB` | 101 | $4.42 | $2.29 | — | $4,113.85 | deploy half leftover; list mover_buy; 🔵; ret5=-8.6; leftover $450.63 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `MT` | 5 | $75.12 | $2.00 | — | $3,736.25 | deploy half leftover; list mover_buy; 🔵; ret5=-2.2; leftover $450.63 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `GGB` | 101 | $4.42 | $2.29 | — | $4,113.85 | deploy half leftover; list mover_buy; ret5=-8.6; leftover $450.63 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `MT` | 5 | $75.12 | $2.00 | — | $3,736.25 | deploy half leftover; list mover_buy; ret5=-2.2; leftover $450.63 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **SELL** | `AU` | 2 | $117.41 | $2.02 | $-8.05 | $3,969.05 | dropped from list after 5 sess (min 5) | — |
 | 2026-08-28 09:30 ET | **SELL** | `AUPH` | 20 | $16.47 | $2.07 | $-18.72 | $4,296.38 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-28 09:30 ET | **SELL** | `AEM` | 1 | $214.11 | $2.01 | $-6.20 | $4,508.48 | dropped from list after 5 sess (min 5) | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🟡 vol🟡 buy🟡 |
+| 2026-08-28 09:30 ET | **SELL** | `AEM` | 1 | $214.11 | $2.01 | $-6.20 | $4,508.48 | dropped from list after 5 sess (min 5) | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-08-28 09:30 ET | **SELL** | `ARCT` | 30 | $15.74 | $2.10 | $+134.12 | $4,978.58 | dropped from list after 5 sess (min 5) | — |
 | 2026-08-28 09:30 ET | **SELL** | `AUTL` | 139 | $2.32 | $2.44 | $-25.70 | $5,298.62 | dropped from list after 5 sess (min 5) | — |
 | 2026-08-28 09:30 ET | **SELL** | `CRDL` | 178 | $2.09 | $2.56 | $+23.39 | $5,668.08 | dropped from list after 5 sess (min 5) | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🟢 buy🟡 |

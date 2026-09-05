@@ -94,16 +94,16 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-27 09:30 ET | **SELL** | `ENHA` | 7 | $1.63 | $0.16 | $-0.86 | $1,268.80 | dropped from list after 4 sess (min 3) | — |
 | 2026-08-27 09:30 ET | **SELL** | `CAN` | 41 | $0.40 | $0.31 | $+3.80 | $1,284.89 | dropped from list after 4 sess (min 3) | — |
 | 2026-08-27 09:30 ET | **BUY** | `ACMR` | 1 | $80.97 | $0.81 | — | $1,203.11 | union ∩ last_red, no 🚨; gate last_red=True; list mover_buy; 🔵; ret5=-1.3; leftover $160.61 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `GGB` | 36 | $4.42 | $1.70 | — | $1,042.29 | union ∩ last_red, no 🚨; gate last_red=True; list mover_buy; 🔵; ret5=-8.6; leftover $160.61 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `MT` | 2 | $75.12 | $1.51 | — | $890.54 | union ∩ last_red, no 🚨; gate last_red=True; list mover_buy; 🔵; ret5=-2.2; leftover $160.61 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `TX` | 2 | $55.20 | $1.11 | — | $779.03 | union ∩ last_red, no 🚨; gate last_red=True; list mover_buy; 🔵; ret5=+3.0; leftover $160.61 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `GGB` | 36 | $4.42 | $1.70 | — | $1,042.29 | union ∩ last_red, no 🚨; gate last_red=True; list mover_buy; ret5=-8.6; leftover $160.61 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `MT` | 2 | $75.12 | $1.51 | — | $890.54 | union ∩ last_red, no 🚨; gate last_red=True; list mover_buy; ret5=-2.2; leftover $160.61 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `TX` | 2 | $55.20 | $1.11 | — | $779.03 | union ∩ last_red, no 🚨; gate last_red=True; list mover_buy; ret5=+3.0; leftover $160.61 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **SELL** | `OCUL` | 116 | $10.63 | $2.37 | $-38.35 | $2,009.75 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-28 09:30 ET | **SELL** | `CRMD` | 154 | $8.49 | $2.49 | $+27.40 | $3,314.72 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-28 09:30 ET | **SELL** | `PUSA` | 345 | $3.86 | $4.52 | $+46.23 | $4,641.90 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-28 09:30 ET | **SELL** | `SUJA` | 145 | $9.41 | $2.46 | $+85.02 | $6,003.89 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-28 09:30 ET | **SELL** | `FWDI` | 213 | $6.39 | $2.79 | $+79.66 | $7,362.17 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-28 09:30 ET | **SELL** | `JANX` | 68 | $19.00 | $2.22 | $+28.23 | $8,651.95 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-28 09:30 ET | **BUY** | `SEDG` | 36 | $33.78 | $2.10 | — | $7,433.77 | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.9; leftover $1235.99 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟡 vol🟢 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `SEDG` | 36 | $33.78 | $2.10 | — | $7,433.77 | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.9; leftover $1235.99 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `SMTC` | 8 | $149.40 | $2.01 | — | $6,236.56 | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover,mover_buy; 🔵; ⚪; ret5=-11.6; leftover $1235.99 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `OPTX` | 144 | $8.57 | $2.42 | — | $5,000.06 | union ∩ last_red, no 🚨; gate last_red=True; list yday_gainer; ret5=-3.4; leftover $1235.99 | join🟡 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `TTMI` | 9 | $127.07 | $2.02 | — | $3,854.41 | union ∩ last_red, no 🚨; gate last_red=True; list yday_gainer,mover_buy; 🔵; ⚪; ret5=-21.0; leftover $1235.99 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |

@@ -135,7 +135,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-28 09:30 ET | **BUY** | `ERAS` | 64 | $19.30 | $2.18 | — | $3,824.42 | combo gate; gate vol=good,last_green=True; list yday_gainer; ret5=-4.1; leftover $1243.15 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `ZYME` | 42 | $29.33 | $2.12 | — | $2,590.44 | combo gate; gate vol=good,last_green=True; list yday_gainer,ohlc_hot; ret5=+14.1; leftover $1243.15 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `GENB` | 72 | $17.10 | $2.21 | — | $1,357.04 | combo gate; gate vol=good,last_green=True; list yday_mover; ret5=+3.1; leftover $1243.15 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟡 heat🔴 vol🟢 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `TIGR` | 226 | $5.49 | $2.92 | — | $113.38 | combo gate; gate vol=good,last_green=True; list ohlc_hot; ret5=+15.9; leftover $1243.15 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🟢 buy🟢 |
+| 2026-08-28 09:30 ET | **BUY** | `TIGR` | 226 | $5.49 | $2.92 | — | $113.38 | combo gate; gate vol=good,last_green=True; list ohlc_hot; ret5=+15.9; leftover $1243.15 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟢 |
 | 2026-08-31 09:30 ET | **SELL** | `ANF` | 8 | $148.67 | $2.03 | $+27.71 | $1,300.71 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-31 09:30 ET | **SELL** | `BHVN` | 73 | $15.44 | $2.23 | $-114.67 | $2,425.60 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-31 09:30 ET | **SELL** | `BZ` | 67 | $17.89 | $2.21 | $-45.27 | $3,622.02 | dropped from list after 1 sess (min 1) | — |
@@ -161,7 +161,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-09-04 09:30 ET | **SELL** | `NVAX` | 114 | $10.41 | $2.36 | $+11.27 | $8,200.77 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-04 09:30 ET | **BUY** | `BAK` | 600 | $1.95 | $7.74 | — | $7,023.03 | combo gate; gate vol=good,last_green=True; list probable,yday_gainer,yday_mover; ret5=+2.1; leftover $1171.54 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-04 09:30 ET | **BUY** | `EOSE` | 328 | $3.57 | $4.23 | — | $5,847.83 | combo gate; gate vol=good,last_green=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-5.2; leftover $1171.54 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `DELL` | 2 | $486.31 | $2.00 | — | $4,873.22 | combo gate; gate vol=good,last_green=True; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=-9.9; leftover $1171.54 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `DELL` | 2 | $486.31 | $2.00 | — | $4,873.22 | combo gate; gate vol=good,last_green=True; list probable,yday_gainer,yday_mover; ret5=-9.9; leftover $1171.54 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-04 09:30 ET | **BUY** | `OABI` | 230 | $5.08 | $2.97 | — | $3,701.85 | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+28.1; leftover $1171.54 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-04 09:30 ET | **BUY** | `ALEC` | 433 | $2.70 | $5.59 | — | $2,527.17 | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+20.4; leftover $1171.54 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-04 09:30 ET | **BUY** | `FMC` | 88 | $13.30 | $2.25 | — | $1,354.51 | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; ret5=+8.6; leftover $1171.54 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
@@ -223,7 +223,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | `GPRO` | 961 | 2026-09-03 @ $1.22 | combo gate; gate vol=good,last_green=True; list probable,yday_gainer,yday_mover; ret5=+5.9; leftover $1173.06 |
 | `BAK` | 600 | 2026-09-04 @ $1.95 | combo gate; gate vol=good,last_green=True; list probable,yday_gainer,yday_mover; ret5=+2.1; leftover $1171.54 |
 | `EOSE` | 328 | 2026-09-04 @ $3.57 | combo gate; gate vol=good,last_green=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-5.2; leftover $1171.54 |
-| `DELL` | 2 | 2026-09-04 @ $486.31 | combo gate; gate vol=good,last_green=True; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=-9.9; leftover $1171.54 |
+| `DELL` | 2 | 2026-09-04 @ $486.31 | combo gate; gate vol=good,last_green=True; list probable,yday_gainer,yday_mover; ret5=-9.9; leftover $1171.54 |
 | `OABI` | 230 | 2026-09-04 @ $5.08 | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+28.1; leftover $1171.54 |
 | `ALEC` | 433 | 2026-09-04 @ $2.70 | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+20.4; leftover $1171.54 |
 | `FMC` | 88 | 2026-09-04 @ $13.30 | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; ret5=+8.6; leftover $1171.54 |

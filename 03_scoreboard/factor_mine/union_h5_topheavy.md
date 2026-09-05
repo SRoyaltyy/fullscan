@@ -110,8 +110,8 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-27 09:30 ET | **BUY** | `CRK` | 76 | $14.09 | $2.22 | — | $5,399.43 | 40% to #1, rest split; list flatten; ret5=+1.1; leftover $1079.11 | join🟢 sector🔴 gen🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `SLI` | 416 | $2.59 | $5.37 | — | $4,316.63 | 40% to #1, rest split; list flatten; ret5=+4.2; leftover $1079.11 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `ACMR` | 13 | $80.97 | $2.03 | — | $3,261.99 | 40% to #1, rest split; list mover_buy; 🔵; ret5=-1.3; leftover $1079.11 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `GGB` | 244 | $4.42 | $3.15 | — | $2,180.36 | 40% to #1, rest split; list mover_buy; 🔵; ret5=-8.6; leftover $1079.11 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `MT` | 14 | $75.12 | $2.03 | — | $1,126.65 | 40% to #1, rest split; list mover_buy; 🔵; ret5=-2.2; leftover $1079.11 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `GGB` | 244 | $4.42 | $3.15 | — | $2,180.36 | 40% to #1, rest split; list mover_buy; ret5=-8.6; leftover $1079.11 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `MT` | 14 | $75.12 | $2.03 | — | $1,126.65 | 40% to #1, rest split; list mover_buy; ret5=-2.2; leftover $1079.11 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `MU` | 1 | $925.74 | $1.99 | — | $198.91 | 40% to #1, rest split; list mover_buy; 🔵; ret5=-0.5; leftover $1079.11 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **SELL** | `ARCT` | 1 | $15.74 | $0.18 | $+4.32 | $214.47 | dropped from list after 5 sess (min 5) | — |
 | 2026-08-28 09:30 ET | **SELL** | `AUTL` | 5 | $2.32 | $0.15 | $-1.04 | $225.92 | dropped from list after 5 sess (min 5) | — |

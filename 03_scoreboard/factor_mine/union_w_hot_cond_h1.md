@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_cond` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_cond
 
-Cash book **-4.34%** ($9,566) · signal-only (no cash/fees) was +0.19%. Starts YES **4/17**. Fills 140 · skips 54 · realized $-208.59.
+Cash book **-5.82%** ($9,418) · signal-only (no cash/fees) was -1.01%. Starts YES **4/17**. Fills 140 · skips 54 · realized $-360.11.
 
 ## Why these stocks
 
@@ -20,7 +20,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $33.22.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $44.89.
 
 ## Each session (cash + holdings state)
 
@@ -37,12 +37,12 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-25 | +1.80 | $10,140.43 | — | CYPH, XHG, AU, ERO, ASST, HMY, FCX, WPM | — | $266.72 | $9,752.29 | $10,019.01 | CYPH×745, XHG×315, AU×10, ERO×33, ASST×60, HMY×55, FCX×16, WPM×7 | BUY CYPH x745 @ 1.70; BUY XHG x315 @ 4.02; BUY AU x10 @ 119.46; BUY ERO x33 @ 38.00; BUY ASST x60 @ 20.90; BUY HMY x55 @ 22.65; BUY FCX x16 @ 77.90; BUY WPM x7 @ 160.00 |
 | 2026-08-26 | +2.02 | $266.72 | CYPH×745, XHG×315, AU×10, ERO×33, ASST×60, HMY×55, FCX×16, WPM×7 | — | — | $266.72 | $9,847.55 | $10,114.27 | CYPH×745, XHG×315, AU×10, ERO×33, ASST×60, HMY×55, FCX×16, WPM×7 | hold CYPH,XHG,AU,ERO,ASST,HMY,FCX,WPM |
 | 2026-08-27 | — | $266.72 | CYPH×745, XHG×315, AU×10, ERO×33, ASST×60, HMY×55, FCX×16, WPM×7 | MOS, SLI, DLO, TX, MRVL, MU, PLTR, MT | CYPH, XHG, AU, ERO, ASST, HMY, FCX, WPM | $537.29 | $9,511.83 | $10,049.12 | MOS×50, SLI×484, DLO×80, TX×22, MRVL×5, MU×1, PLTR×7, MT×16 | SELL CYPH (dropped from list after 2 sess (min 1)); SELL XHG (dropped from list after 2 sess (min 1)); SELL AU (dropped from list after 2 sess (min 1)); SELL ERO (dropped from list after 2 sess (min 1)); SELL ASST (dropped from list after 2 sess (min 1)); SELL HMY (dropped from list after 2 sess (min 1)); SELL FCX (dropped from list after 2 sess (min 1)); SELL WPM (dropped from list after 2 sess (min 1)); BUY MOS x50 @ 24.84; BUY SLI x484 @ 2.59; BUY DLO x80 @ 15.60; BUY TX x22 @ 55.20; BUY MRVL x5 @ 240.00; BUY MU x1 @ 925.74; BUY PLTR x7 @ 170.60; BUY MT x16 @ 75.12 |
-| 2026-08-28 | +0.75 | $537.29 | MOS×50, SLI×484, DLO×80, TX×22, MRVL×5, MU×1, PLTR×7, MT×16 | ERO, FIGR, BKKT, FCX, QMCO, TIGR, NIQ, VIRT | MOS, SLI, DLO, TX, MRVL, MU, PLTR, MT | $63.59 | $9,988.65 | $10,052.24 | ERO×32, FIGR×33, BKKT×148, FCX×16, QMCO×53, TIGR×229, NIQ×67, VIRT×19 | SELL MOS (dropped from list after 1 sess (min 1)); SELL SLI (dropped from list after 1 sess (min 1)); SELL DLO (dropped from list after 1 sess (min 1)); SELL TX (dropped from list after 1 sess (min 1)); SELL MRVL (dropped from list after 1 sess (min 1)); SELL MU (dropped from list after 1 sess (min 1)); SELL PLTR (dropped from list after 1 sess (min 1)); SELL MT (dropped from list after 1 sess (min 1)); BUY ERO x32 @ 39.20; BUY FIGR x33 @ 37.42; BUY BKKT x148 @ 8.50; BUY FCX x16 @ 78.83; BUY QMCO x53 @ 23.50; BUY TIGR x229 @ 5.49; BUY NIQ x67 @ 18.79; BUY VIRT x19 @ 65.42 |
-| 2026-08-31 | -5.85 | $63.59 | ERO×32, FIGR×33, BKKT×148, FCX×16, QMCO×53, TIGR×229, NIQ×67, VIRT×19 | — | ERO, FIGR, BKKT, FCX, QMCO, NIQ, VIRT | $8,492.45 | $1,147.29 | $9,639.74 | TIGR×229 | SELL ERO (dropped from list after 1 sess (min 1)); SELL FIGR (dropped from list after 1 sess (min 1)); SELL BKKT (dropped from list after 1 sess (min 1)); SELL FCX (dropped from list after 1 sess (min 1)); SELL QMCO (dropped from list after 1 sess (min 1)); SELL NIQ (dropped from list after 1 sess (min 1)); SELL VIRT (dropped from list after 1 sess (min 1)); hard-red S=-5.85 sit; no new buys |
-| 2026-09-01 | -6.30 | $8,492.45 | TIGR×229 | — | TIGR | $9,639.03 | $0.00 | $9,639.03 | — | SELL TIGR (dropped from list after 2 sess (min 1)); hard-red S=-6.30 sit; no new buys |
-| 2026-09-02 | -3.83 | $9,639.03 | — | — | — | $9,639.03 | $0.00 | $9,639.03 | — | hard-red S=-3.83 sit; no new buys |
-| 2026-09-03 | -0.90 | $9,639.03 | — | MRNA, ARCT, XHG, CAN, NVAX, INO, RVTY, ZYME | — | $179.32 | $9,492.03 | $9,671.35 | MRNA×7, ARCT×73, XHG×337, CAN×4016, NVAX×117, INO×899, RVTY×9, ZYME×40 | BUY MRNA x7 @ 151.40; BUY ARCT x73 @ 16.46; BUY XHG x337 @ 3.57; BUY CAN x4016 @ 0.30; BUY NVAX x117 @ 10.27; BUY INO x899 @ 1.34; BUY RVTY x9 @ 125.94; BUY ZYME x40 @ 30.00 |
-| 2026-09-04 | — | $179.32 | MRNA×7, ARCT×73, XHG×337, CAN×4016, NVAX×117, INO×899, RVTY×9, ZYME×40 | OABI, TRLV, ALEC, OMER, ATRC | MRNA, ARCT, CAN, NVAX, RVTY | $33.22 | $9,533.20 | $9,566.42 | XHG×337, INO×899, ZYME×40, OABI×242, TRLV×103, ALEC×456, OMER×64, ATRC×23 | SELL MRNA (dropped from list after 1 sess (min 1)); SELL ARCT (dropped from list after 1 sess (min 1)); SELL CAN (dropped from list after 1 sess (min 1)); SELL NVAX (dropped from list after 1 sess (min 1)); SELL RVTY (dropped from list after 1 sess (min 1)); BUY OABI x242 @ 5.08; BUY TRLV x103 @ 11.89; BUY ALEC x456 @ 2.70; BUY OMER x64 @ 18.99; BUY ATRC x23 @ 52.88 |
+| 2026-08-28 | +0.75 | $537.29 | MOS×50, SLI×484, DLO×80, TX×22, MRVL×5, MU×1, PLTR×7, MT×16 | BKKT, QMCO, NIQ, FIGR, TIGR, ERO, FCX, SMTC | MOS, SLI, DLO, TX, MRVL, MU, PLTR, MT | $111.40 | $9,854.33 | $9,965.73 | BKKT×148, QMCO×53, NIQ×67, FIGR×33, TIGR×229, ERO×32, FCX×16, SMTC×8 | SELL MOS (dropped from list after 1 sess (min 1)); SELL SLI (dropped from list after 1 sess (min 1)); SELL DLO (dropped from list after 1 sess (min 1)); SELL TX (dropped from list after 1 sess (min 1)); SELL MRVL (dropped from list after 1 sess (min 1)); SELL MU (dropped from list after 1 sess (min 1)); SELL PLTR (dropped from list after 1 sess (min 1)); SELL MT (dropped from list after 1 sess (min 1)); BUY BKKT x148 @ 8.50; BUY QMCO x53 @ 23.50; BUY NIQ x67 @ 18.79; BUY FIGR x33 @ 37.42; BUY TIGR x229 @ 5.49; BUY ERO x32 @ 39.20; BUY FCX x16 @ 78.83; BUY SMTC x8 @ 149.40 |
+| 2026-08-31 | -5.85 | $111.40 | BKKT×148, QMCO×53, NIQ×67, FIGR×33, TIGR×229, ERO×32, FCX×16, SMTC×8 | — | BKKT, QMCO, NIQ, FIGR, ERO, FCX, SMTC | $8,343.21 | $1,147.29 | $9,490.50 | TIGR×229 | SELL BKKT (dropped from list after 1 sess (min 1)); SELL QMCO (dropped from list after 1 sess (min 1)); SELL NIQ (dropped from list after 1 sess (min 1)); SELL FIGR (dropped from list after 1 sess (min 1)); SELL ERO (dropped from list after 1 sess (min 1)); SELL FCX (dropped from list after 1 sess (min 1)); SELL SMTC (dropped from list after 1 sess (min 1)); hard-red S=-5.85 sit; no new buys |
+| 2026-09-01 | -6.30 | $8,343.21 | TIGR×229 | — | TIGR | $9,489.78 | $0.00 | $9,489.78 | — | SELL TIGR (dropped from list after 2 sess (min 1)); hard-red S=-6.30 sit; no new buys |
+| 2026-09-02 | -3.83 | $9,489.78 | — | — | — | $9,489.78 | $0.00 | $9,489.78 | — | hard-red S=-3.83 sit; no new buys |
+| 2026-09-03 | -0.90 | $9,489.78 | — | MRNA, ARCT, XHG, CAN, NVAX, INO, RVTY, ZYME | — | $152.91 | $9,368.74 | $9,521.65 | MRNA×7, ARCT×72, XHG×332, CAN×3954, NVAX×115, INO×885, RVTY×9, ZYME×39 | BUY MRNA x7 @ 151.40; BUY ARCT x72 @ 16.46; BUY XHG x332 @ 3.57; BUY CAN x3954 @ 0.30; BUY NVAX x115 @ 10.27; BUY INO x885 @ 1.34; BUY RVTY x9 @ 125.94; BUY ZYME x39 @ 30.00 |
+| 2026-09-04 | — | $152.91 | MRNA×7, ARCT×72, XHG×332, CAN×3954, NVAX×115, INO×885, RVTY×9, ZYME×39 | OABI, TRLV, ALEC, OMER, ATRC | MRNA, ARCT, CAN, NVAX, RVTY | $44.89 | $9,373.35 | $9,418.24 | XHG×332, INO×885, ZYME×39, OABI×239, TRLV×102, ALEC×450, OMER×64, ATRC×22 | SELL MRNA (dropped from list after 1 sess (min 1)); SELL ARCT (dropped from list after 1 sess (min 1)); SELL CAN (dropped from list after 1 sess (min 1)); SELL NVAX (dropped from list after 1 sess (min 1)); SELL RVTY (dropped from list after 1 sess (min 1)); BUY OABI x239 @ 5.08; BUY TRLV x102 @ 11.89; BUY ALEC x450 @ 2.70; BUY OMER x64 @ 18.99; BUY ATRC x22 @ 52.88 |
 
 ## Fills (what was bought / sold)
 
@@ -141,11 +141,11 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-27 09:30 ET | **BUY** | `MOS` | 50 | $24.84 | $2.14 | — | $8,793.69 | rank by w_hot_cond; rank w_hot_cond; list flatten; ret5=+13.0; leftover $1254.73 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟢 |
 | 2026-08-27 09:30 ET | **BUY** | `SLI` | 484 | $2.59 | $6.24 | — | $7,533.88 | rank by w_hot_cond; rank w_hot_cond; list flatten; ret5=+4.2; leftover $1254.73 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `DLO` | 80 | $15.60 | $2.23 | — | $6,283.65 | rank by w_hot_cond; rank w_hot_cond; list mover_buy; 🔵; ret5=+7.1; leftover $1254.73 | join🟢 sector🟢 gen🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `TX` | 22 | $55.20 | $2.06 | — | $5,067.20 | rank by w_hot_cond; rank w_hot_cond; list mover_buy; 🔵; ret5=+3.0; leftover $1254.73 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `TX` | 22 | $55.20 | $2.06 | — | $5,067.20 | rank by w_hot_cond; rank w_hot_cond; list mover_buy; ret5=+3.0; leftover $1254.73 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `MRVL` | 5 | $240.00 | $2.00 | — | $3,865.19 | rank by w_hot_cond; rank w_hot_cond; list mover_buy; 🔵; ret5=+6.8; leftover $1254.73 | join🟢 sector🟢 gen🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `MU` | 1 | $925.74 | $1.99 | — | $2,937.46 | rank by w_hot_cond; rank w_hot_cond; list mover_buy; 🔵; ret5=-0.5; leftover $1254.73 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `PLTR` | 7 | $170.60 | $2.01 | — | $1,741.25 | rank by w_hot_cond; rank w_hot_cond; list mover_buy; 🔵; ret5=+3.4; leftover $1254.73 | join🟢 sector🟢 gen🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `MT` | 16 | $75.12 | $2.04 | — | $537.29 | rank by w_hot_cond; rank w_hot_cond; list mover_buy; 🔵; ret5=-2.2; leftover $1254.73 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `MT` | 16 | $75.12 | $2.04 | — | $537.29 | rank by w_hot_cond; rank w_hot_cond; list mover_buy; ret5=-2.2; leftover $1254.73 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **SELL** | `MOS` | 50 | $24.00 | $2.16 | $-46.30 | $1,735.13 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
 | 2026-08-28 09:30 ET | **SELL** | `SLI` | 484 | $2.60 | $6.33 | $-7.74 | $2,987.19 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
 | 2026-08-28 09:30 ET | **SELL** | `DLO` | 80 | $15.33 | $2.25 | $-26.08 | $4,211.34 | dropped from list after 1 sess (min 1) | — |
@@ -154,40 +154,40 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-28 09:30 ET | **SELL** | `MU` | 1 | $967.01 | $2.01 | $+37.26 | $7,654.94 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-28 09:30 ET | **SELL** | `PLTR` | 7 | $178.75 | $2.03 | $+53.01 | $8,904.16 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-28 09:30 ET | **SELL** | `MT` | 16 | $74.54 | $2.06 | $-13.38 | $10,094.74 | dropped from list after 1 sess (min 1) | — |
-| 2026-08-28 09:30 ET | **BUY** | `ERO` | 32 | $39.20 | $2.09 | — | $8,838.25 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+16.6; leftover $1261.84 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
-| 2026-08-28 09:30 ET | **BUY** | `FIGR` | 33 | $37.42 | $2.09 | — | $7,601.30 | rank by w_hot_cond; rank w_hot_cond; list yday_mover; ret5=+24.4; leftover $1261.84 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 heat🟡 vol🟡 buy🟢 |
-| 2026-08-28 09:30 ET | **BUY** | `BKKT` | 148 | $8.50 | $2.43 | — | $6,340.87 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+12.3; leftover $1261.84 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `FCX` | 16 | $78.83 | $2.04 | — | $5,077.55 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+15.3; leftover $1261.84 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 catal🟡 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `QMCO` | 53 | $23.50 | $2.15 | — | $3,829.90 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=-14.8; leftover $1261.84 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟡 vol🔴 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `TIGR` | 229 | $5.49 | $2.95 | — | $2,569.74 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+15.9; leftover $1261.84 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🟢 buy🟢 |
-| 2026-08-28 09:30 ET | **BUY** | `NIQ` | 67 | $18.79 | $2.19 | — | $1,308.62 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+7.6; leftover $1261.84 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `VIRT` | 19 | $65.42 | $2.05 | — | $63.59 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+13.2; leftover $1261.84 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟡 vol🟡 buy🟡 |
-| 2026-08-31 09:30 ET | **SELL** | `ERO` | 32 | $38.60 | $2.11 | $-23.39 | $1,296.68 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
-| 2026-08-31 09:30 ET | **SELL** | `FIGR` | 33 | $35.50 | $2.11 | $-67.56 | $2,466.08 | dropped from list after 1 sess (min 1) | — |
-| 2026-08-31 09:30 ET | **SELL** | `BKKT` | 148 | $7.58 | $2.47 | $-141.06 | $3,585.45 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-08-31 09:30 ET | **SELL** | `FCX` | 16 | $76.10 | $2.06 | $-47.78 | $4,800.99 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-08-31 09:30 ET | **SELL** | `QMCO` | 53 | $21.70 | $2.17 | $-99.72 | $5,948.92 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
-| 2026-08-31 09:30 ET | **SELL** | `NIQ` | 67 | $19.20 | $2.21 | $+23.07 | $7,233.11 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🔴 digest🟢 judge🟡 ab🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-08-31 09:30 ET | **SELL** | `VIRT` | 19 | $66.39 | $2.07 | $+14.32 | $8,492.45 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-09-01 09:30 ET | **SELL** | `TIGR` | 229 | $5.02 | $3.00 | $-113.59 | $9,639.03 | dropped from list after 2 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `MRNA` | 7 | $151.40 | $2.01 | — | $8,577.22 | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+129.2; leftover $1204.88 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `ARCT` | 73 | $16.46 | $2.21 | — | $7,373.43 | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,mover_buy; 🔵; ⚪; ret5=+63.4; leftover $1204.88 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `XHG` | 337 | $3.57 | $4.35 | — | $6,165.99 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+16.1; leftover $1204.88 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `CAN` | 4016 | $0.30 | $24.10 | — | $4,937.09 | rank by w_hot_cond; rank w_hot_cond; list yday_mover; 🔵; ret5=+54.3; leftover $1204.88 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `NVAX` | 117 | $10.27 | $2.34 | — | $3,733.16 | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+11.1; leftover $1204.88 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `INO` | 899 | $1.34 | $11.60 | — | $2,516.91 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ⚪; ret5=+8.3; leftover $1204.88 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `RVTY` | 9 | $125.94 | $2.02 | — | $1,381.43 | rank by w_hot_cond; rank w_hot_cond; list flatten,mover_buy; 🔵; ⚪; ret5=+6.8; leftover $1204.88 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `ZYME` | 40 | $30.00 | $2.11 | — | $179.32 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ⚪; ret5=+14.1; leftover $1204.88 | join🟢 sector🟡 gen🟡 news🟢 digest🟢 judge🟢 ab🟡 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-04 09:30 ET | **SELL** | `MRNA` | 7 | $145.95 | $2.03 | $-42.19 | $1,198.94 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-04 09:30 ET | **SELL** | `ARCT` | 73 | $16.77 | $2.23 | $+18.19 | $2,420.92 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-04 09:30 ET | **SELL** | `CAN` | 4016 | $0.34 | $26.38 | $+110.16 | $3,759.98 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-04 09:30 ET | **SELL** | `NVAX` | 117 | $10.41 | $2.37 | $+11.67 | $4,975.58 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-04 09:30 ET | **SELL** | `RVTY` | 9 | $132.45 | $2.04 | $+54.54 | $6,165.59 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-04 09:30 ET | **BUY** | `OABI` | 242 | $5.08 | $3.12 | — | $4,933.11 | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+28.1; leftover $1233.12 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `TRLV` | 103 | $11.89 | $2.30 | — | $3,706.14 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ⚪; ret5=+15.0; leftover $1233.12 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `ALEC` | 456 | $2.70 | $5.88 | — | $2,469.06 | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+20.4; leftover $1233.12 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `OMER` | 64 | $18.99 | $2.18 | — | $1,251.51 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+12.1; leftover $1233.12 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `ATRC` | 23 | $52.88 | $2.06 | — | $33.22 | rank by w_hot_cond; rank w_hot_cond; list flatten; 🔵; ⚪; ret5=+10.6; leftover $1233.12 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-08-28 09:30 ET | **BUY** | `BKKT` | 148 | $8.50 | $2.43 | — | $8,834.30 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+12.3; leftover $1261.84 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `QMCO` | 53 | $23.50 | $2.15 | — | $7,586.66 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=-14.8; leftover $1261.84 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟡 vol🔴 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `NIQ` | 67 | $18.79 | $2.19 | — | $6,325.53 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+7.6; leftover $1261.84 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `FIGR` | 33 | $37.42 | $2.09 | — | $5,088.59 | rank by w_hot_cond; rank w_hot_cond; list yday_mover; ret5=+24.4; leftover $1261.84 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-08-28 09:30 ET | **BUY** | `TIGR` | 229 | $5.49 | $2.95 | — | $3,828.42 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+15.9; leftover $1261.84 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟢 |
+| 2026-08-28 09:30 ET | **BUY** | `ERO` | 32 | $39.20 | $2.09 | — | $2,571.94 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+16.6; leftover $1261.84 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-08-28 09:30 ET | **BUY** | `FCX` | 16 | $78.83 | $2.04 | — | $1,308.62 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+15.3; leftover $1261.84 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 catal🟡 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `SMTC` | 8 | $149.40 | $2.01 | — | $111.40 | rank by w_hot_cond; rank w_hot_cond; list probable,yday_gainer,yday_mover,mover_buy; 🔵; ⚪; ret5=-11.6; leftover $1261.84 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-08-31 09:30 ET | **SELL** | `BKKT` | 148 | $7.58 | $2.47 | $-141.06 | $1,230.77 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-08-31 09:30 ET | **SELL** | `QMCO` | 53 | $21.70 | $2.17 | $-99.72 | $2,378.71 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-08-31 09:30 ET | **SELL** | `NIQ` | 67 | $19.20 | $2.21 | $+23.07 | $3,662.89 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🔴 digest🟢 judge🟡 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-08-31 09:30 ET | **SELL** | `FIGR` | 33 | $35.50 | $2.11 | $-67.56 | $4,832.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-08-31 09:30 ET | **SELL** | `ERO` | 32 | $38.60 | $2.11 | $-23.39 | $6,065.38 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-08-31 09:30 ET | **SELL** | `FCX` | 16 | $76.10 | $2.06 | $-47.78 | $7,280.92 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-08-31 09:30 ET | **SELL** | `SMTC` | 8 | $133.04 | $2.03 | $-134.93 | $8,343.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-01 09:30 ET | **SELL** | `TIGR` | 229 | $5.02 | $3.00 | $-113.59 | $9,489.78 | dropped from list after 2 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `MRNA` | 7 | $151.40 | $2.01 | — | $8,427.97 | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+129.2; leftover $1186.22 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `ARCT` | 72 | $16.46 | $2.21 | — | $7,240.65 | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,mover_buy; 🔵; ⚪; ret5=+63.4; leftover $1186.22 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `XHG` | 332 | $3.57 | $4.28 | — | $6,051.12 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+16.1; leftover $1186.22 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `CAN` | 3954 | $0.30 | $23.72 | — | $4,841.20 | rank by w_hot_cond; rank w_hot_cond; list yday_mover; 🔵; ret5=+54.3; leftover $1186.22 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `NVAX` | 115 | $10.27 | $2.33 | — | $3,657.82 | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+11.1; leftover $1186.22 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `INO` | 885 | $1.34 | $11.42 | — | $2,460.50 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ⚪; ret5=+8.3; leftover $1186.22 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `RVTY` | 9 | $125.94 | $2.02 | — | $1,325.02 | rank by w_hot_cond; rank w_hot_cond; list flatten,mover_buy; 🔵; ⚪; ret5=+6.8; leftover $1186.22 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `ZYME` | 39 | $30.00 | $2.11 | — | $152.91 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ⚪; ret5=+14.1; leftover $1186.22 | join🟢 sector🟡 gen🟡 news🟢 digest🟢 judge🟢 ab🟡 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-04 09:30 ET | **SELL** | `MRNA` | 7 | $145.95 | $2.03 | $-42.19 | $1,172.53 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-04 09:30 ET | **SELL** | `ARCT` | 72 | $16.77 | $2.23 | $+17.89 | $2,377.75 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-04 09:30 ET | **SELL** | `CAN` | 3954 | $0.34 | $25.97 | $+108.46 | $3,696.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-04 09:30 ET | **SELL** | `NVAX` | 115 | $10.41 | $2.36 | $+11.40 | $4,890.92 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-04 09:30 ET | **SELL** | `RVTY` | 9 | $132.45 | $2.04 | $+54.54 | $6,080.93 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-04 09:30 ET | **BUY** | `OABI` | 239 | $5.08 | $3.08 | — | $4,863.73 | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+28.1; leftover $1216.19 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `TRLV` | 102 | $11.89 | $2.30 | — | $3,648.65 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ⚪; ret5=+15.0; leftover $1216.19 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `ALEC` | 450 | $2.70 | $5.80 | — | $2,427.85 | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+20.4; leftover $1216.19 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `OMER` | 64 | $18.99 | $2.18 | — | $1,210.31 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+12.1; leftover $1216.19 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `ATRC` | 22 | $52.88 | $2.06 | — | $44.89 | rank by w_hot_cond; rank w_hot_cond; list flatten; 🔵; ⚪; ret5=+10.6; leftover $1216.19 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
 
 ## Not taken
 
@@ -235,10 +235,10 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-09-01 | `NVAX` | hard_red | hard-red S=-6.30 sit; no new buys |
 | 2026-09-01 | `DK` | hard_red | hard-red S=-6.30 sit; no new buys |
 | 2026-09-01 | `OMER` | hard_red | hard-red S=-6.30 sit; no new buys |
+| 2026-09-01 | `UEC` | hard_red | hard-red S=-6.30 sit; no new buys |
 | 2026-09-01 | `VFF` | hard_red | hard-red S=-6.30 sit; no new buys |
 | 2026-09-01 | `OBE` | hard_red | hard-red S=-6.30 sit; no new buys |
 | 2026-09-01 | `INO` | hard_red | hard-red S=-6.30 sit; no new buys |
-| 2026-09-01 | `TRGP` | hard_red | hard-red S=-6.30 sit; no new buys |
 | 2026-09-02 | `USDE` | hard_red | hard-red S=-3.83 sit; no new buys |
 | 2026-09-02 | `XHG` | hard_red | hard-red S=-3.83 sit; no new buys |
 | 2026-09-02 | `TXG` | hard_red | hard-red S=-3.83 sit; no new buys |
@@ -252,11 +252,11 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `XHG` | 337 | 2026-09-03 @ $3.57 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+16.1; leftover $1204.88 |
-| `INO` | 899 | 2026-09-03 @ $1.34 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ⚪; ret5=+8.3; leftover $1204.88 |
-| `ZYME` | 40 | 2026-09-03 @ $30.00 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ⚪; ret5=+14.1; leftover $1204.88 |
-| `OABI` | 242 | 2026-09-04 @ $5.08 | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+28.1; leftover $1233.12 |
-| `TRLV` | 103 | 2026-09-04 @ $11.89 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ⚪; ret5=+15.0; leftover $1233.12 |
-| `ALEC` | 456 | 2026-09-04 @ $2.70 | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+20.4; leftover $1233.12 |
-| `OMER` | 64 | 2026-09-04 @ $18.99 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+12.1; leftover $1233.12 |
-| `ATRC` | 23 | 2026-09-04 @ $52.88 | rank by w_hot_cond; rank w_hot_cond; list flatten; 🔵; ⚪; ret5=+10.6; leftover $1233.12 |
+| `XHG` | 332 | 2026-09-03 @ $3.57 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+16.1; leftover $1186.22 |
+| `INO` | 885 | 2026-09-03 @ $1.34 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ⚪; ret5=+8.3; leftover $1186.22 |
+| `ZYME` | 39 | 2026-09-03 @ $30.00 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ⚪; ret5=+14.1; leftover $1186.22 |
+| `OABI` | 239 | 2026-09-04 @ $5.08 | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+28.1; leftover $1216.19 |
+| `TRLV` | 102 | 2026-09-04 @ $11.89 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ⚪; ret5=+15.0; leftover $1216.19 |
+| `ALEC` | 450 | 2026-09-04 @ $2.70 | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+20.4; leftover $1216.19 |
+| `OMER` | 64 | 2026-09-04 @ $18.99 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+12.1; leftover $1216.19 |
+| `ATRC` | 22 | 2026-09-04 @ $52.88 | rank by w_hot_cond; rank w_hot_cond; list flatten; 🔵; ⚪; ret5=+10.6; leftover $1216.19 |

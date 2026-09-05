@@ -190,10 +190,10 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-27 09:30 ET | **BUY** | `PLTR` | 4 | $170.60 | $2.00 | — | $5,079.97 | top 12 by hot; rank hot_score; list mover_buy; 🔵; ret5=+3.4; leftover $808.21 | join🟢 sector🟢 gen🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `RRC` | 19 | $40.72 | $2.05 | — | $4,304.24 | top 12 by hot; rank hot_score; list flatten; ret5=+1.8; leftover $808.21 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `GEN` | 27 | $28.89 | $2.07 | — | $3,522.14 | top 12 by hot; rank hot_score; list mover_buy; 🔵; ret5=+1.6; leftover $808.21 | join🟢 sector🟢 gen🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `TX` | 14 | $55.20 | $2.03 | — | $2,747.31 | top 12 by hot; rank hot_score; list mover_buy; 🔵; ret5=+3.0; leftover $808.21 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `TX` | 14 | $55.20 | $2.03 | — | $2,747.31 | top 12 by hot; rank hot_score; list mover_buy; ret5=+3.0; leftover $808.21 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `PGY` | 36 | $21.97 | $2.10 | — | $1,954.29 | top 12 by hot; rank hot_score; list mover_buy; 🔵; ret5=+0.6; leftover $808.21 | join🟢 sector🟢 gen🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `ANET` | 4 | $190.90 | $2.00 | — | $1,188.69 | top 12 by hot; rank hot_score; list mover_buy; 🔵; ret5=-5.1; leftover $808.21 | join🟢 sector🟢 gen🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `NUE` | 3 | $248.91 | $2.00 | — | $439.96 | top 12 by hot; rank hot_score; list mover_buy; 🔵; ret5=-9.4; leftover $808.21 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `NUE` | 3 | $248.91 | $2.00 | — | $439.96 | top 12 by hot; rank hot_score; list mover_buy; ret5=-9.4; leftover $808.21 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **SELL** | `MOS` | 32 | $24.00 | $2.11 | $-31.07 | $1,205.86 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
 | 2026-08-28 09:30 ET | **SELL** | `DLO` | 51 | $15.33 | $2.16 | $-18.08 | $1,985.52 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-28 09:30 ET | **SELL** | `SLI` | 312 | $2.60 | $4.09 | $-4.99 | $2,792.64 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
@@ -206,17 +206,17 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-28 09:30 ET | **SELL** | `PGY` | 36 | $22.93 | $2.12 | $+30.34 | $8,267.10 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-28 09:30 ET | **SELL** | `ANET` | 4 | $205.90 | $2.02 | $+55.98 | $9,088.68 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-28 09:30 ET | **SELL** | `NUE` | 3 | $252.00 | $2.02 | $+5.25 | $9,842.66 | dropped from list after 1 sess (min 1) | — |
-| 2026-08-28 09:30 ET | **BUY** | `FIGR` | 21 | $37.42 | $2.05 | — | $9,054.78 | top 12 by hot; rank hot_score; list yday_mover; ret5=+24.4; leftover $820.22 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 heat🟡 vol🟡 buy🟢 |
+| 2026-08-28 09:30 ET | **BUY** | `FIGR` | 21 | $37.42 | $2.05 | — | $9,054.78 | top 12 by hot; rank hot_score; list yday_mover; ret5=+24.4; leftover $820.22 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 heat🔴 vol🟡 buy🟢 |
 | 2026-08-28 09:30 ET | **BUY** | `NIQ` | 43 | $18.79 | $2.12 | — | $8,244.69 | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+7.6; leftover $820.22 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `ERO` | 20 | $39.20 | $2.05 | — | $7,458.64 | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+16.6; leftover $820.22 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-08-28 09:30 ET | **BUY** | `ERO` | 20 | $39.20 | $2.05 | — | $7,458.64 | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+16.6; leftover $820.22 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
 | 2026-08-28 09:30 ET | **BUY** | `TRLV` | 72 | $11.38 | $2.21 | — | $6,637.08 | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+15.0; leftover $820.22 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 heat🟡 vol🟡 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `CVI` | 20 | $40.04 | $2.05 | — | $5,834.23 | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+12.1; leftover $820.22 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `VIRT` | 12 | $65.42 | $2.03 | — | $5,047.16 | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+13.2; leftover $820.22 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟡 vol🟡 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `VIRT` | 12 | $65.42 | $2.03 | — | $5,047.16 | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+13.2; leftover $820.22 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `TXG` | 12 | $64.10 | $2.03 | — | $4,275.94 | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+16.1; leftover $820.22 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `GUTS` | 1108 | $0.74 | $11.52 | — | $3,444.49 | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+14.7; leftover $820.22 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `WPM` | 5 | $155.89 | $2.00 | — | $2,663.04 | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+17.6; leftover $820.22 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🟡 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `WPM` | 5 | $155.89 | $2.00 | — | $2,663.04 | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+17.6; leftover $820.22 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `AMTX` | 438 | $1.87 | $5.65 | — | $1,838.33 | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+16.9; leftover $820.22 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `EGO` | 17 | $46.87 | $2.04 | — | $1,039.50 | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+15.1; leftover $820.22 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🟡 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `EGO` | 17 | $46.87 | $2.04 | — | $1,039.50 | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+15.1; leftover $820.22 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `ZYME` | 27 | $29.33 | $2.07 | — | $245.52 | top 12 by hot; rank hot_score; list yday_gainer,ohlc_hot; ret5=+14.1; leftover $820.22 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-08-31 09:30 ET | **SELL** | `FIGR` | 21 | $35.50 | $2.07 | $-44.45 | $988.94 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-31 09:30 ET | **SELL** | `ERO` | 20 | $38.60 | $2.07 | $-16.12 | $1,758.87 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |

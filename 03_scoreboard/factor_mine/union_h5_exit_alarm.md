@@ -119,8 +119,8 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-27 09:30 ET | **BUY** | `CRK` | 87 | $14.09 | $2.25 | — | $6,162.61 | hold 5d, sell next 09:30 if 🚨; list flatten; ret5=+1.1; leftover $1230.62 | join🟢 sector🔴 gen🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `SLI` | 475 | $2.59 | $6.13 | — | $4,926.23 | hold 5d, sell next 09:30 if 🚨; list flatten; ret5=+4.2; leftover $1230.62 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `ACMR` | 15 | $80.97 | $2.04 | — | $3,709.64 | hold 5d, sell next 09:30 if 🚨; list mover_buy; 🔵; ret5=-1.3; leftover $1230.62 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `GGB` | 278 | $4.42 | $3.59 | — | $2,477.30 | hold 5d, sell next 09:30 if 🚨; list mover_buy; 🔵; ret5=-8.6; leftover $1230.62 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `MT` | 16 | $75.12 | $2.04 | — | $1,273.34 | hold 5d, sell next 09:30 if 🚨; list mover_buy; 🔵; ret5=-2.2; leftover $1230.62 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `GGB` | 278 | $4.42 | $3.59 | — | $2,477.30 | hold 5d, sell next 09:30 if 🚨; list mover_buy; ret5=-8.6; leftover $1230.62 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `MT` | 16 | $75.12 | $2.04 | — | $1,273.34 | hold 5d, sell next 09:30 if 🚨; list mover_buy; ret5=-2.2; leftover $1230.62 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `MU` | 1 | $925.74 | $1.99 | — | $345.61 | hold 5d, sell next 09:30 if 🚨; list mover_buy; 🔵; ret5=-0.5; leftover $1230.62 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **SELL** | `AUPH` | 1 | $16.47 | $0.19 | $-1.09 | $361.89 | dropped from list after 5 sess (min 5) | — |
 | 2026-08-28 09:30 ET | **SELL** | `AUTL` | 10 | $2.32 | $0.28 | $-2.06 | $384.81 | dropped from list after 5 sess (min 5) | — |

@@ -144,11 +144,11 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-27 09:30 ET | **SELL** | `RHI` | 28 | $44.33 | $2.09 | $-9.49 | $7,783.02 | dropped from list after 2 sess (min 1) | — |
 | 2026-08-27 09:30 ET | **SELL** | `SUZ` | 141 | $9.03 | $2.45 | $-10.50 | $9,053.81 | dropped from list after 2 sess (min 1) | — |
 | 2026-08-27 09:30 ET | **BUY** | `ACMR` | 15 | $80.97 | $2.04 | — | $7,837.22 | rank by cond; rank cond; list mover_buy; 🔵; ret5=-1.3; leftover $1293.40 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `GGB` | 292 | $4.42 | $3.77 | — | $6,542.82 | rank by cond; rank cond; list mover_buy; 🔵; ret5=-8.6; leftover $1293.40 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `MT` | 17 | $75.12 | $2.04 | — | $5,263.73 | rank by cond; rank cond; list mover_buy; 🔵; ret5=-2.2; leftover $1293.40 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `GGB` | 292 | $4.42 | $3.77 | — | $6,542.82 | rank by cond; rank cond; list mover_buy; ret5=-8.6; leftover $1293.40 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `MT` | 17 | $75.12 | $2.04 | — | $5,263.73 | rank by cond; rank cond; list mover_buy; ret5=-2.2; leftover $1293.40 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `MU` | 1 | $925.74 | $1.99 | — | $4,336.00 | rank by cond; rank cond; list mover_buy; 🔵; ret5=-0.5; leftover $1293.40 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `SLI` | 499 | $2.59 | $6.44 | — | $3,037.15 | rank by cond; rank cond; list flatten; ret5=+4.2; leftover $1293.40 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `TX` | 23 | $55.20 | $2.06 | — | $1,765.50 | rank by cond; rank cond; list mover_buy; 🔵; ret5=+3.0; leftover $1293.40 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `TX` | 23 | $55.20 | $2.06 | — | $1,765.50 | rank by cond; rank cond; list mover_buy; ret5=+3.0; leftover $1293.40 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `ANET` | 6 | $190.90 | $2.01 | — | $618.09 | rank by cond; rank cond; list mover_buy; 🔵; ret5=-5.1; leftover $1293.40 | join🟢 sector🟢 gen🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **SELL** | `MOS` | 53 | $24.00 | $2.17 | $-4.32 | $1,887.92 | dropped from list after 3 sess (min 1) | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
 | 2026-08-28 09:30 ET | **SELL** | `ACMR` | 15 | $81.65 | $2.06 | $+6.11 | $3,110.61 | dropped from list after 1 sess (min 1) | — |

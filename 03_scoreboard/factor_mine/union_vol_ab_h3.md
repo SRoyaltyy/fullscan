@@ -84,7 +84,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-28 09:30 ET | **SELL** | `BMEA` | 914 | $1.74 | $11.96 | $+85.93 | $1,699.81 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-28 09:30 ET | **SELL** | `ALVO` | 283 | $4.88 | $3.71 | $-103.58 | $3,077.15 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-28 09:30 ET | **SELL** | `ZURA` | 232 | $6.02 | $3.04 | $-89.56 | $4,470.74 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-28 09:30 ET | **SELL** | `DEFT` | 2315 | $0.60 | $21.23 | $-135.59 | $5,838.51 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 heat🟡 vol🔴 buy🟡 |
+| 2026-08-28 09:30 ET | **SELL** | `DEFT` | 2315 | $0.60 | $21.23 | $-135.59 | $5,838.51 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **SELL** | `RUM` | 158 | $9.51 | $2.50 | $+18.73 | $7,338.59 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-28 09:30 ET | **SELL** | `KURA` | 111 | $12.98 | $2.35 | $-40.20 | $8,777.02 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-28 09:30 ET | **SELL** | `EZPW` | 42 | $33.50 | $2.14 | $-45.41 | $10,181.88 | dropped from list after 3 sess (min 3) | — |
@@ -94,7 +94,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-28 09:30 ET | **BUY** | `URBN` | 15 | $82.70 | $2.04 | — | $5,322.32 | combo gate; gate vol=good,ab=good; list yday_gainer,yday_mover; 🔵; ret5=-4.6; leftover $1272.74 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `BBWI` | 68 | $18.68 | $2.19 | — | $4,049.89 | combo gate; gate vol=good,ab=good; list yday_gainer; ret5=+0.2; leftover $1272.74 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `CRDL` | 608 | $2.09 | $7.84 | — | $2,771.33 | combo gate; gate vol=good,ab=good; list yday_gainer; ret5=+3.3; leftover $1272.74 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🟢 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `TIGR` | 231 | $5.49 | $2.98 | — | $1,500.16 | combo gate; gate vol=good,ab=good; list ohlc_hot; ret5=+15.9; leftover $1272.74 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🟢 buy🟢 |
+| 2026-08-28 09:30 ET | **BUY** | `TIGR` | 231 | $5.49 | $2.98 | — | $1,500.16 | combo gate; gate vol=good,ab=good; list ohlc_hot; ret5=+15.9; leftover $1272.74 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟢 |
 | 2026-08-28 09:30 ET | **BUY** | `FINV` | 298 | $4.26 | $3.84 | — | $226.83 | combo gate; gate vol=good,ab=good; list earn_react; ret5=-0.7; leftover $1272.74 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-02 09:30 ET | **SELL** | `ANF` | 8 | $142.00 | $2.03 | $-25.65 | $1,360.80 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-02 09:30 ET | **SELL** | `BZ` | 68 | $17.29 | $2.22 | $-86.69 | $2,534.30 | dropped from list after 3 sess (min 3) | — |

@@ -74,10 +74,10 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-25 09:30 ET | **BUY** | `ERO` | 70 | $38.00 | $2.20 | — | $5,411.71 | top 4 by cond; rank cond; list ohlc_hot,mover_buy; ⚪; ret5=+16.6; leftover $2676.02 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟢 |
 | 2026-08-25 09:30 ET | **BUY** | `FCX` | 34 | $77.90 | $2.09 | — | $2,761.02 | top 4 by cond; rank cond; list ohlc_hot,mover_buy; ⚪; ret5=+15.3; leftover $2676.02 | join🟢 sector🟡 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
 | 2026-08-25 09:30 ET | **BUY** | `CNH` | 228 | $11.72 | $2.94 | — | $85.91 | top 4 by cond; rank cond; list mover_buy; 🔵; ⚪; ret5=+13.7; leftover $2676.02 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `GGB` | 4 | $4.42 | $0.19 | — | $68.05 | top 4 by cond; rank cond; list mover_buy; 🔵; ret5=-8.6; leftover $21.48 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `GGB` | 4 | $4.42 | $0.19 | — | $68.05 | top 4 by cond; rank cond; list mover_buy; ret5=-8.6; leftover $21.48 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **SELL** | `AU` | 22 | $117.41 | $2.09 | $-49.24 | $2,648.98 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-28 09:30 ET | **SELL** | `ERO` | 70 | $39.20 | $2.23 | $+79.57 | $5,390.74 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
-| 2026-08-28 09:30 ET | **SELL** | `FCX` | 34 | $78.83 | $2.12 | $+27.40 | $8,068.84 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 catal🟡 buy🟡 |
+| 2026-08-28 09:30 ET | **SELL** | `ERO` | 70 | $39.20 | $2.23 | $+79.57 | $5,390.74 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-08-28 09:30 ET | **SELL** | `FCX` | 34 | $78.83 | $2.12 | $+27.40 | $8,068.84 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 catal🟡 buy🟡 |
 | 2026-08-28 09:30 ET | **SELL** | `CNH` | 228 | $11.62 | $3.00 | $-28.74 | $10,715.20 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-28 09:30 ET | **BUY** | `KEYS` | 8 | $323.82 | $2.01 | — | $8,122.63 | top 4 by cond; rank cond; list mover_buy; 🔵; ⚪; ret5=-11.7; leftover $2678.80 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `SMTC` | 17 | $149.40 | $2.04 | — | $5,580.79 | top 4 by cond; rank cond; list probable,yday_gainer,yday_mover,mover_buy; 🔵; ⚪; ret5=-11.6; leftover $2678.80 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |

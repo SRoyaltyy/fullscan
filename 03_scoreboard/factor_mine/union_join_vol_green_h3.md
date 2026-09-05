@@ -93,15 +93,15 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-27 09:30 ET | **SELL** | `BTBT` | 2 | $1.53 | $0.06 | $-0.36 | $1,370.21 | dropped from list after 4 sess (min 3) | — |
 | 2026-08-27 09:30 ET | **SELL** | `INDP` | 2 | $1.09 | $0.05 | $-0.68 | $1,372.34 | dropped from list after 4 sess (min 3) | — |
 | 2026-08-28 09:30 ET | **SELL** | `ZURA` | 222 | $6.02 | $2.91 | $-85.70 | $2,705.87 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-28 09:30 ET | **SELL** | `DEFT` | 2214 | $0.60 | $20.30 | $-129.68 | $4,013.96 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 heat🟡 vol🔴 buy🟡 |
+| 2026-08-28 09:30 ET | **SELL** | `DEFT` | 2214 | $0.60 | $20.30 | $-129.68 | $4,013.96 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **SELL** | `GORO` | 401 | $3.59 | $5.25 | $+13.64 | $5,448.30 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-28 09:30 ET | **SELL** | `EZPW` | 41 | $33.50 | $2.13 | $-44.43 | $6,819.67 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-28 09:30 ET | **SELL** | `ERO` | 37 | $39.20 | $2.12 | $+40.18 | $8,267.94 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
-| 2026-08-28 09:30 ET | **SELL** | `FCX` | 17 | $78.83 | $2.06 | $+11.71 | $9,605.99 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 catal🟡 buy🟡 |
+| 2026-08-28 09:30 ET | **SELL** | `ERO` | 37 | $39.20 | $2.12 | $+40.18 | $8,267.94 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
+| 2026-08-28 09:30 ET | **SELL** | `FCX` | 17 | $78.83 | $2.06 | $+11.71 | $9,605.99 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 catal🟡 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `ANF` | 16 | $144.70 | $2.04 | — | $7,288.76 | combo gate; gate join=good,vol=good,last_green=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+0.8; leftover $2401.50 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `BZ` | 129 | $18.50 | $2.38 | — | $4,899.88 | combo gate; gate join=good,vol=good,last_green=True; list probable,yday_gainer,yday_mover; ret5=+2.8; leftover $2401.50 | join🟢 sector🔴 gen🟡 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟢 |
 | 2026-08-28 09:30 ET | **BUY** | `URBN` | 29 | $82.70 | $2.08 | — | $2,499.50 | combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ret5=-4.6; leftover $2401.50 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `TIGR` | 437 | $5.49 | $5.64 | — | $94.73 | combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; ret5=+15.9; leftover $2401.50 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🟢 buy🟢 |
+| 2026-08-28 09:30 ET | **BUY** | `TIGR` | 437 | $5.49 | $5.64 | — | $94.73 | combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; ret5=+15.9; leftover $2401.50 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟢 |
 | 2026-09-02 09:30 ET | **SELL** | `ANF` | 16 | $142.00 | $2.07 | $-47.30 | $2,364.67 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-02 09:30 ET | **SELL** | `BZ` | 129 | $17.29 | $2.42 | $-160.88 | $4,592.66 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-02 09:30 ET | **SELL** | `URBN` | 29 | $79.12 | $2.11 | $-108.00 | $6,885.04 | dropped from list after 3 sess (min 3) | — |

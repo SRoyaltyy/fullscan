@@ -99,8 +99,8 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-27 09:30 ET | **BUY** | `CRK` | 96 | $14.09 | $2.28 | — | $6,843.30 | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ret5=+1.1; leftover $1363.44 | join🟢 sector🔴 gen🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `SLI` | 526 | $2.59 | $6.79 | — | $5,474.18 | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ret5=+4.2; leftover $1363.44 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `ACMR` | 16 | $80.97 | $2.04 | — | $4,176.62 | union ∩ ab_g, no 🚨; gate ab=good; list mover_buy; 🔵; ret5=-1.3; leftover $1363.44 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `GGB` | 308 | $4.42 | $3.97 | — | $2,811.29 | union ∩ ab_g, no 🚨; gate ab=good; list mover_buy; 🔵; ret5=-8.6; leftover $1363.44 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `MT` | 18 | $75.12 | $2.04 | — | $1,457.08 | union ∩ ab_g, no 🚨; gate ab=good; list mover_buy; 🔵; ret5=-2.2; leftover $1363.44 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `GGB` | 308 | $4.42 | $3.97 | — | $2,811.29 | union ∩ ab_g, no 🚨; gate ab=good; list mover_buy; ret5=-8.6; leftover $1363.44 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `MT` | 18 | $75.12 | $2.04 | — | $1,457.08 | union ∩ ab_g, no 🚨; gate ab=good; list mover_buy; ret5=-2.2; leftover $1363.44 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `MU` | 1 | $925.74 | $1.99 | — | $529.35 | union ∩ ab_g, no 🚨; gate ab=good; list mover_buy; 🔵; ret5=-0.5; leftover $1363.44 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **SELL** | `ACMR` | 16 | $81.65 | $2.06 | $+6.78 | $1,833.69 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-28 09:30 ET | **SELL** | `GGB` | 308 | $4.57 | $4.04 | $+38.19 | $3,237.22 | dropped from list after 1 sess (min 1) | — |

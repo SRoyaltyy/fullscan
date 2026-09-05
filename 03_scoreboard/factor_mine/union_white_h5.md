@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ white hold 5, no 🚨
 
-Cash book **+6.18%** ($10,618) · signal-only (no cash/fees) was +14.63%. Starts YES **8/17**. Fills 97 · skips 187 · realized $+738.46.
+Cash book **+4.04%** ($10,404) · signal-only (no cash/fees) was +12.71%. Starts YES **8/17**. Fills 97 · skips 187 · realized $+738.46.
 
 ## Why these stocks
 
@@ -20,7 +20,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $228.82.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $7.75.
 
 ## Each session (cash + holdings state)
 
@@ -42,7 +42,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-09-01 | -6.30 | $793.88 | CRMD×1, BMEA×9, ALVO×2, ZURA×2, SUJA×1, DEFT×24, SMTC×9, SIMO×5, TTMI×11, KEYS×4, AVT×15, CGNX×22, COHR×4, LSCC×11 | — | CRMD, BMEA, ALVO, ZURA, SUJA, DEFT | $861.22 | $9,971.63 | $10,832.85 | SMTC×9, SIMO×5, TTMI×11, KEYS×4, AVT×15, CGNX×22, COHR×4, LSCC×11 | SELL CRMD (dropped from list after 5 sess (min 5)); SELL BMEA (dropped from list after 5 sess (min 5)); SELL ALVO (dropped from list after 5 sess (min 5)); SELL ZURA (dropped from list after 5 sess (min 5)); SELL SUJA (dropped from list after 5 sess (min 5)); SELL DEFT (dropped from list after 5 sess (min 5)) |
 | 2026-09-02 | -3.83 | $861.22 | SMTC×9, SIMO×5, TTMI×11, KEYS×4, AVT×15, CGNX×22, COHR×4, LSCC×11 | — | — | $861.22 | $9,902.10 | $10,763.32 | SMTC×9, SIMO×5, TTMI×11, KEYS×4, AVT×15, CGNX×22, COHR×4, LSCC×11 | hard-red sit S=-3.83 |
 | 2026-09-03 | -0.90 | $861.22 | SMTC×9, SIMO×5, TTMI×11, KEYS×4, AVT×15, CGNX×22, COHR×4, LSCC×11 | ATRC, HRMY, CABA, VSTM, MMED, SLN, CRDL | — | $167.28 | $10,685.19 | $10,852.47 | SMTC×9, SIMO×5, TTMI×11, KEYS×4, AVT×15, CGNX×22, COHR×4, LSCC×11, ATRC×2, HRMY×2, CABA×32, VSTM×13, MMED×4, SLN×7, CRDL×49 | BUY ATRC x2 @ 49.76; BUY HRMY x2 @ 41.31; BUY CABA x32 @ 3.27; BUY VSTM x13 @ 7.70; BUY MMED x4 @ 22.78; BUY SLN x7 @ 14.70; BUY CRDL x49 @ 2.16 |
-| 2026-09-04 | — | $167.28 | SMTC×9, SIMO×5, TTMI×11, KEYS×4, AVT×15, CGNX×22, COHR×4, LSCC×11, ATRC×2, HRMY×2, CABA×32, VSTM×13, MMED×4, SLN×7, CRDL×49 | NVAX, BVS, DELL, MLYS, IRD, OABI | SMTC, SIMO, TTMI, KEYS, AVT, CGNX, COHR, LSCC | $228.82 | $10,388.98 | $10,617.80 | ATRC×2, HRMY×2, CABA×32, VSTM×13, MMED×4, SLN×7, CRDL×49, NVAX×160, BVS×115, DELL×3, MLYS×57, IRD×359, OABI×329 | SELL SMTC (dropped from list after 5 sess (min 5)); SELL SIMO (dropped from list after 5 sess (min 5)); SELL TTMI (dropped from list after 5 sess (min 5)); SELL KEYS (dropped from list after 5 sess (min 5)); SELL AVT (dropped from list after 5 sess (min 5)); SELL CGNX (dropped from list after 5 sess (min 5)); SELL COHR (dropped from list after 5 sess (min 5)); SELL LSCC (dropped from list after 5 sess (min 5)); BUY NVAX x160 @ 10.41; BUY BVS x115 @ 14.50; BUY DELL x3 @ 486.31; BUY MLYS x57 @ 29.15; BUY IRD x359 @ 4.66; BUY OABI x329 @ 5.08 |
+| 2026-09-04 | — | $167.28 | SMTC×9, SIMO×5, TTMI×11, KEYS×4, AVT×15, CGNX×22, COHR×4, LSCC×11, ATRC×2, HRMY×2, CABA×32, VSTM×13, MMED×4, SLN×7, CRDL×49 | NVAX, BVS, MLYS, IRD, OABI, ALEC | SMTC, SIMO, TTMI, KEYS, AVT, CGNX, COHR, LSCC | $7.75 | $10,396.01 | $10,403.76 | ATRC×2, HRMY×2, CABA×32, VSTM×13, MMED×4, SLN×7, CRDL×49, NVAX×160, BVS×115, MLYS×57, IRD×359, OABI×329, ALEC×620 | SELL SMTC (dropped from list after 5 sess (min 5)); SELL SIMO (dropped from list after 5 sess (min 5)); SELL TTMI (dropped from list after 5 sess (min 5)); SELL KEYS (dropped from list after 5 sess (min 5)); SELL AVT (dropped from list after 5 sess (min 5)); SELL CGNX (dropped from list after 5 sess (min 5)); SELL COHR (dropped from list after 5 sess (min 5)); SELL LSCC (dropped from list after 5 sess (min 5)); BUY NVAX x160 @ 10.41; BUY BVS x115 @ 14.50; BUY MLYS x57 @ 29.15; BUY IRD x359 @ 4.66; BUY OABI x329 @ 5.08; BUY ALEC x620 @ 2.70 |
 
 ## Fills (what was bought / sold)
 
@@ -141,10 +141,10 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-09-04 09:30 ET | **SELL** | `LSCC` | 11 | $112.26 | $2.04 | $-101.64 | $10,044.50 | dropped from list after 5 sess (min 5) | — |
 | 2026-09-04 09:30 ET | **BUY** | `NVAX` | 160 | $10.41 | $2.47 | — | $8,376.43 | union ∩ white hold 5, no 🚨; gate zero_red=True; list flatten,ohlc_hot; ⚪; ret5=+11.1; leftover $1674.08 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-04 09:30 ET | **BUY** | `BVS` | 115 | $14.50 | $2.33 | — | $6,706.59 | union ∩ white hold 5, no 🚨; gate zero_red=True; list flatten; 🔵; ⚪; ret5=+0.8; leftover $1674.08 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `DELL` | 3 | $486.31 | $2.00 | — | $5,245.66 | union ∩ white hold 5, no 🚨; gate zero_red=True; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=-9.9; leftover $1674.08 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `MLYS` | 57 | $29.15 | $2.16 | — | $3,581.95 | union ∩ white hold 5, no 🚨; gate zero_red=True; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+0.0; leftover $1674.08 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `IRD` | 359 | $4.66 | $4.63 | — | $1,904.38 | union ∩ white hold 5, no 🚨; gate zero_red=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+12.2; leftover $1674.08 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `OABI` | 329 | $5.08 | $4.24 | — | $228.82 | union ∩ white hold 5, no 🚨; gate zero_red=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+28.1; leftover $1674.08 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `MLYS` | 57 | $29.15 | $2.16 | — | $5,042.88 | union ∩ white hold 5, no 🚨; gate zero_red=True; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+0.0; leftover $1674.08 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `IRD` | 359 | $4.66 | $4.63 | — | $3,365.31 | union ∩ white hold 5, no 🚨; gate zero_red=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+12.2; leftover $1674.08 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `OABI` | 329 | $5.08 | $4.24 | — | $1,689.75 | union ∩ white hold 5, no 🚨; gate zero_red=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+28.1; leftover $1674.08 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `ALEC` | 620 | $2.70 | $8.00 | — | $7.75 | union ∩ white hold 5, no 🚨; gate zero_red=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+20.4; leftover $1674.08 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 
 ## Not taken
 
@@ -351,7 +351,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | `CRDL` | 49 | 2026-09-03 @ $2.16 | union ∩ white hold 5, no 🚨; gate zero_red=True; list probable,yday_gainer,mover_buy; 🔵; ⚪; ret5=+3.3; leftover $107.65 |
 | `NVAX` | 160 | 2026-09-04 @ $10.41 | union ∩ white hold 5, no 🚨; gate zero_red=True; list flatten,ohlc_hot; ⚪; ret5=+11.1; leftover $1674.08 |
 | `BVS` | 115 | 2026-09-04 @ $14.50 | union ∩ white hold 5, no 🚨; gate zero_red=True; list flatten; 🔵; ⚪; ret5=+0.8; leftover $1674.08 |
-| `DELL` | 3 | 2026-09-04 @ $486.31 | union ∩ white hold 5, no 🚨; gate zero_red=True; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=-9.9; leftover $1674.08 |
 | `MLYS` | 57 | 2026-09-04 @ $29.15 | union ∩ white hold 5, no 🚨; gate zero_red=True; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+0.0; leftover $1674.08 |
 | `IRD` | 359 | 2026-09-04 @ $4.66 | union ∩ white hold 5, no 🚨; gate zero_red=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+12.2; leftover $1674.08 |
 | `OABI` | 329 | 2026-09-04 @ $5.08 | union ∩ white hold 5, no 🚨; gate zero_red=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+28.1; leftover $1674.08 |
+| `ALEC` | 620 | 2026-09-04 @ $2.70 | union ∩ white hold 5, no 🚨; gate zero_red=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+20.4; leftover $1674.08 |

@@ -95,9 +95,9 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-28 09:30 ET | **SHORT** | `XPOF` | 113 | $5.59 | $2.38 | — | $12,003.06 | alarm; gate alarm=True; list yday_gainer; ret5=+6.6; leftover $632.69 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **SHORT** | `APMD` | 21 | $29.50 | $2.09 | — | $12,620.47 | alarm; gate alarm=True; list yday_gainer; ret5=-11.7; leftover $632.69 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **SHORT** | `OPTU` | 596 | $1.06 | $7.81 | — | $13,244.41 | alarm; gate alarm=True; list yday_gainer; ret5=-7.8; leftover $632.69 | join🔴 sector🔴 gen🟡 news🟡 digest🟡 ab🔴 heat🔴 vol🔴 buy🟡 |
-| 2026-08-28 09:30 ET | **SHORT** | `ABTC` | 75 | $8.41 | $2.25 | — | $13,872.91 | alarm; gate alarm=True; list yday_mover; ret5=+9.2; leftover $632.69 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 heat🟡 vol🟡 buy🟡 |
+| 2026-08-28 09:30 ET | **SHORT** | `ABTC` | 75 | $8.41 | $2.25 | — | $13,872.91 | alarm; gate alarm=True; list yday_mover; ret5=+9.2; leftover $632.69 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-08-28 09:30 ET | **SHORT** | `XHG` | 155 | $4.06 | $2.51 | — | $14,499.70 | alarm; gate alarm=True; list ohlc_hot; ret5=+16.1; leftover $632.69 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
-| 2026-08-28 09:30 ET | **SHORT** | `DEFT` | 1054 | $0.60 | $9.69 | — | $15,122.41 | alarm; gate alarm=True; list ohlc_hot; ret5=+17.6; leftover $632.69 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 heat🟡 vol🔴 buy🟡 |
+| 2026-08-28 09:30 ET | **SHORT** | `DEFT` | 1054 | $0.60 | $9.69 | — | $15,122.41 | alarm; gate alarm=True; list ohlc_hot; ret5=+17.6; leftover $632.69 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-09-02 09:30 ET | **COVER** | `PYXS` | 191 | $3.24 | $2.56 | $+8.18 | $14,501.01 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-02 09:30 ET | **COVER** | `SAFX` | 1622 | $0.37 | $10.87 | $+10.08 | $13,890.00 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-02 09:30 ET | **COVER** | `XPOF` | 113 | $5.39 | $2.33 | $+17.90 | $13,278.60 | dropped from list after 3 sess (min 3) | — |

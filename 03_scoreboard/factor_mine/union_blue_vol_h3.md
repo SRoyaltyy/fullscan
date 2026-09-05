@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-5.07%** ($9,493) · signal-only (no cash/fees) was -11.54%. Starts YES **3/17**. Fills 78 · skips 114 · realized $-420.58.
+Cash book **-5.17%** ($9,483) · signal-only (no cash/fees) was -13.26%. Starts YES **3/17**. Fills 81 · skips 115 · realized $-428.94.
 
 ## Why these stocks
 
@@ -20,7 +20,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $64.18.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $37.51.
 
 ## Each session (cash + holdings state)
 
@@ -37,12 +37,12 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-25 | +1.80 | $70.94 | AG×57, BHP×12, CDE×56, HDSN×203, IAG×59, KGC×39, NFGC×672, WPM×8, AUPH×1, ARCT×1, AUTL×7, CRDL×9, CYPH×14 | BMEA, NPWR, PUSA, ALVO, CAPR, ZURA, SUJA | AG, BHP, CDE, HDSN, IAG, KGC, NFGC, WPM | $5.76 | $9,994.28 | $10,000.04 | AUPH×1, ARCT×1, AUTL×7, CRDL×9, CYPH×14, BMEA×863, NPWR×699, PUSA×377, ALVO×267, CAPR×205, ZURA×219, SUJA×156 | SELL AG (dropped from list after 3 sess (min 3)); SELL BHP (dropped from list after 3 sess (min 3)); SELL CDE (dropped from list after 3 sess (min 3)); SELL HDSN (dropped from list after 3 sess (min 3)); SELL IAG (dropped from list after 3 sess (min 3)); SELL KGC (dropped from list after 3 sess (min 3)); SELL NFGC (dropped from list after 3 sess (min 3)); SELL WPM (dropped from list after 3 sess (min 3)); BUY BMEA x863 @ 1.62; BUY NPWR x699 @ 2.00; BUY PUSA x377 @ 3.70; BUY ALVO x267 @ 5.22; BUY CAPR x205 @ 6.79; BUY ZURA x219 @ 6.38; BUY SUJA x156 @ 8.79 |
 | 2026-08-26 | +2.02 | $5.76 | AUPH×1, ARCT×1, AUTL×7, CRDL×9, CYPH×14, BMEA×863, NPWR×699, PUSA×377, ALVO×267, CAPR×205, ZURA×219, SUJA×156 | — | — | $5.76 | $9,833.30 | $9,839.06 | AUPH×1, ARCT×1, AUTL×7, CRDL×9, CYPH×14, BMEA×863, NPWR×699, PUSA×377, ALVO×267, CAPR×205, ZURA×219, SUJA×156 | hold AUPH,ARCT,AUTL,CRDL,CYPH,BMEA,NPWR,PUSA,ALVO,CAPR,ZURA,SUJA |
 | 2026-08-27 | — | $5.76 | AUPH×1, ARCT×1, AUTL×7, CRDL×9, CYPH×14, BMEA×863, NPWR×699, PUSA×377, ALVO×267, CAPR×205, ZURA×219, SUJA×156 | — | AUPH, ARCT, AUTL, CRDL, CYPH | $94.16 | $10,206.59 | $10,300.75 | BMEA×863, NPWR×699, PUSA×377, ALVO×267, CAPR×205, ZURA×219, SUJA×156 | SELL AUPH (dropped from list after 4 sess (min 3)); SELL ARCT (dropped from list after 4 sess (min 3)); SELL AUTL (dropped from list after 4 sess (min 3)); SELL CRDL (dropped from list after 4 sess (min 3)); SELL CYPH (dropped from list after 4 sess (min 3)) |
-| 2026-08-28 | +0.75 | $94.16 | BMEA×863, NPWR×699, PUSA×377, ALVO×267, CAPR×205, ZURA×219, SUJA×156 | ANF, SEDG, SMTC, URBN | BMEA, NPWR, PUSA, ALVO, CAPR, ZURA, SUJA | $161.21 | $9,854.80 | $10,016.01 | ANF×17, SEDG×75, SMTC×17, URBN×31 | SELL BMEA (dropped from list after 3 sess (min 3)); SELL NPWR (dropped from list after 3 sess (min 3)); SELL PUSA (dropped from list after 3 sess (min 3)); SELL ALVO (dropped from list after 3 sess (min 3)); SELL CAPR (dropped from list after 3 sess (min 3)); SELL ZURA (dropped from list after 3 sess (min 3)); SELL SUJA (dropped from list after 3 sess (min 3)); BUY ANF x17 @ 144.70; BUY SEDG x75 @ 33.78; BUY SMTC x17 @ 149.40; BUY URBN x31 @ 82.70 |
-| 2026-08-31 | -5.85 | $161.21 | ANF×17, SEDG×75, SMTC×17, URBN×31 | — | — | $161.21 | $9,649.98 | $9,811.19 | ANF×17, SEDG×75, SMTC×17, URBN×31 | hard-red S=-5.85 sit; no new buys |
-| 2026-09-01 | -6.30 | $161.21 | ANF×17, SEDG×75, SMTC×17, URBN×31 | — | — | $161.21 | $9,518.89 | $9,680.10 | ANF×17, SEDG×75, SMTC×17, URBN×31 | hard-red sit S=-6.30 |
-| 2026-09-02 | -3.83 | $161.21 | ANF×17, SEDG×75, SMTC×17, URBN×31 | — | ANF, SEDG, SMTC, URBN | $9,579.40 | $0.00 | $9,579.40 | — | SELL ANF (dropped from list after 3 sess (min 3)); SELL SEDG (dropped from list after 3 sess (min 3)); SELL SMTC (dropped from list after 3 sess (min 3)); SELL URBN (dropped from list after 3 sess (min 3)); hard-red S=-3.83 sit; no new buys |
-| 2026-09-03 | -0.90 | $9,579.40 | — | RVTY, CRK, MMED, CTMX, CRDL, DEFT, MRNA, ARCT | — | $195.99 | $9,413.82 | $9,609.81 | RVTY×9, CRK×76, MMED×52, CTMX×321, CRDL×554, DEFT×1787, MRNA×7, ARCT×72 | BUY RVTY x9 @ 125.94; BUY CRK x76 @ 15.70; BUY MMED x52 @ 22.78; BUY CTMX x321 @ 3.72; BUY CRDL x554 @ 2.16; BUY DEFT x1787 @ 0.67; BUY MRNA x7 @ 151.40; BUY ARCT x72 @ 16.46 |
-| 2026-09-04 | — | $195.99 | RVTY×9, CRK×76, MMED×52, CTMX×321, CRDL×554, DEFT×1787, MRNA×7, ARCT×72 | CABA, GPRO, EOSE, CCOI, IRD, OABI | — | $64.18 | $9,428.95 | $9,493.13 | RVTY×9, CRK×76, MMED×52, CTMX×321, CRDL×554, DEFT×1787, MRNA×7, ARCT×72, CABA×6, GPRO×13, EOSE×6, CCOI×2, IRD×5, OABI×4 | BUY CABA x6 @ 3.63; BUY GPRO x13 @ 1.78; BUY EOSE x6 @ 3.57; BUY CCOI x2 @ 10.22; BUY IRD x5 @ 4.66; BUY OABI x4 @ 5.08 |
+| 2026-08-28 | +0.75 | $94.16 | BMEA×863, NPWR×699, PUSA×377, ALVO×267, CAPR×205, ZURA×219, SUJA×156 | ANF, SEDG, SMTC, URBN, JKS | BMEA, NPWR, PUSA, ALVO, CAPR, ZURA, SUJA | $236.15 | $9,833.66 | $10,069.81 | ANF×14, SEDG×60, SMTC×13, URBN×24, JKS×151 | SELL BMEA (dropped from list after 3 sess (min 3)); SELL NPWR (dropped from list after 3 sess (min 3)); SELL PUSA (dropped from list after 3 sess (min 3)); SELL ALVO (dropped from list after 3 sess (min 3)); SELL CAPR (dropped from list after 3 sess (min 3)); SELL ZURA (dropped from list after 3 sess (min 3)); SELL SUJA (dropped from list after 3 sess (min 3)); BUY ANF x14 @ 144.70; BUY SEDG x60 @ 33.78; BUY SMTC x13 @ 149.40; BUY URBN x24 @ 82.70; BUY JKS x151 @ 13.51 |
+| 2026-08-31 | -5.85 | $236.15 | ANF×14, SEDG×60, SMTC×13, URBN×24, JKS×151 | — | — | $236.15 | $9,741.75 | $9,977.90 | ANF×14, SEDG×60, SMTC×13, URBN×24, JKS×151 | hard-red S=-5.85 sit; no new buys |
+| 2026-09-01 | -6.30 | $236.15 | ANF×14, SEDG×60, SMTC×13, URBN×24, JKS×151 | — | — | $236.15 | $9,432.66 | $9,668.81 | ANF×14, SEDG×60, SMTC×13, URBN×24, JKS×151 | hard-red sit S=-6.30 |
+| 2026-09-02 | -3.83 | $236.15 | ANF×14, SEDG×60, SMTC×13, URBN×24, JKS×151 | — | ANF, SEDG, SMTC, URBN, JKS | $9,571.04 | $0.00 | $9,571.04 | — | SELL ANF (dropped from list after 3 sess (min 3)); SELL SEDG (dropped from list after 3 sess (min 3)); SELL SMTC (dropped from list after 3 sess (min 3)); SELL URBN (dropped from list after 3 sess (min 3)); SELL JKS (dropped from list after 3 sess (min 3)); hard-red S=-3.83 sit; no new buys |
+| 2026-09-03 | -0.90 | $9,571.04 | — | RVTY, CRK, MMED, CTMX, CRDL, DEFT, MRNA, ARCT | — | $191.17 | $9,410.35 | $9,601.52 | RVTY×9, CRK×76, MMED×52, CTMX×321, CRDL×553, DEFT×1785, MRNA×7, ARCT×72 | BUY RVTY x9 @ 125.94; BUY CRK x76 @ 15.70; BUY MMED x52 @ 22.78; BUY CTMX x321 @ 3.72; BUY CRDL x553 @ 2.16; BUY DEFT x1785 @ 0.67; BUY MRNA x7 @ 151.40; BUY ARCT x72 @ 16.46 |
+| 2026-09-04 | — | $191.17 | RVTY×9, CRK×76, MMED×52, CTMX×321, CRDL×553, DEFT×1785, MRNA×7, ARCT×72 | CABA, GPRO, EOSE, CCOI, IRD, OABI, ALEC | — | $37.51 | $9,445.51 | $9,483.02 | RVTY×9, CRK×76, MMED×52, CTMX×321, CRDL×553, DEFT×1785, MRNA×7, ARCT×72, CABA×6, GPRO×13, EOSE×6, CCOI×2, IRD×5, OABI×4, ALEC×8 | BUY CABA x6 @ 3.63; BUY GPRO x13 @ 1.78; BUY EOSE x6 @ 3.57; BUY CCOI x2 @ 10.22; BUY IRD x5 @ 4.66; BUY OABI x4 @ 5.08; BUY ALEC x8 @ 2.70 |
 
 ## Fills (what was bought / sold)
 
@@ -104,28 +104,31 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-28 09:30 ET | **SELL** | `CAPR` | 205 | $9.19 | $2.69 | $+486.66 | $7,485.52 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **SELL** | `ZURA` | 219 | $6.02 | $2.87 | $-84.54 | $8,801.03 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-28 09:30 ET | **SELL** | `SUJA` | 156 | $9.41 | $2.50 | $+91.77 | $10,266.49 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-28 09:30 ET | **BUY** | `ANF` | 17 | $144.70 | $2.04 | — | $7,804.55 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+0.8; leftover $2566.62 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `SEDG` | 75 | $33.78 | $2.21 | — | $5,268.84 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.9; leftover $2566.62 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟡 vol🟢 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `SMTC` | 17 | $149.40 | $2.04 | — | $2,727.00 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover,mover_buy; 🔵; ⚪; ret5=-11.6; leftover $2566.62 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `URBN` | 31 | $82.70 | $2.08 | — | $161.21 | combo gate; gate vol=good,blue=True; list yday_gainer,yday_mover; 🔵; ret5=-4.6; leftover $2566.62 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-02 09:30 ET | **SELL** | `ANF` | 17 | $142.00 | $2.07 | $-50.01 | $2,573.14 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-02 09:30 ET | **SELL** | `SEDG` | 75 | $31.87 | $2.25 | $-147.71 | $4,961.15 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-02 09:30 ET | **SELL** | `SMTC` | 17 | $127.63 | $2.07 | $-374.20 | $7,128.79 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-02 09:30 ET | **SELL** | `URBN` | 31 | $79.12 | $2.11 | $-115.18 | $9,579.40 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-03 09:30 ET | **BUY** | `RVTY` | 9 | $125.94 | $2.02 | — | $8,443.92 | combo gate; gate vol=good,blue=True; list flatten,mover_buy; 🔵; ⚪; ret5=+6.8; leftover $1197.42 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `CRK` | 76 | $15.70 | $2.22 | — | $7,248.50 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover,mover_buy; 🔵; ret5=+1.1; leftover $1197.42 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
-| 2026-09-03 09:30 ET | **BUY** | `MMED` | 52 | $22.78 | $2.15 | — | $6,061.80 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+1.5; leftover $1197.42 | join🟢 sector🟡 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `CTMX` | 321 | $3.72 | $4.14 | — | $4,863.54 | combo gate; gate vol=good,blue=True; list probable,yday_gainer; 🔵; ret5=-2.4; leftover $1197.42 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `CRDL` | 554 | $2.16 | $7.15 | — | $3,659.75 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,mover_buy; 🔵; ⚪; ret5=+3.3; leftover $1197.42 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `DEFT` | 1787 | $0.67 | $17.33 | — | $2,445.12 | combo gate; gate vol=good,blue=True; list yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+17.6; leftover $1197.42 | join🟡 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `MRNA` | 7 | $151.40 | $2.01 | — | $1,383.31 | combo gate; gate vol=good,blue=True; list yday_gainer,yday_mover; 🔵; ret5=+129.2; leftover $1197.42 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `ARCT` | 72 | $16.46 | $2.21 | — | $195.99 | combo gate; gate vol=good,blue=True; list yday_gainer,mover_buy; 🔵; ⚪; ret5=+63.4; leftover $1197.42 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `CABA` | 6 | $3.63 | $0.24 | — | $173.97 | combo gate; gate vol=good,blue=True; list flatten; 🔵; ⚪; ret5=+13.8; leftover $24.50 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
-| 2026-09-04 09:30 ET | **BUY** | `GPRO` | 13 | $1.78 | $0.27 | — | $150.56 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+5.9; leftover $24.50 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `EOSE` | 6 | $3.57 | $0.23 | — | $128.91 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-5.2; leftover $24.50 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `CCOI` | 2 | $10.22 | $0.21 | — | $108.26 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-18.9; leftover $24.50 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `IRD` | 5 | $4.66 | $0.25 | — | $84.71 | combo gate; gate vol=good,blue=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+12.2; leftover $24.50 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `OABI` | 4 | $5.08 | $0.22 | — | $64.18 | combo gate; gate vol=good,blue=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+28.1; leftover $24.50 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `ANF` | 14 | $144.70 | $2.03 | — | $8,238.66 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+0.8; leftover $2053.30 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `SEDG` | 60 | $33.78 | $2.17 | — | $6,209.69 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.9; leftover $2053.30 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `SMTC` | 13 | $149.40 | $2.03 | — | $4,265.46 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover,mover_buy; 🔵; ⚪; ret5=-11.6; leftover $2053.30 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `URBN` | 24 | $82.70 | $2.06 | — | $2,278.60 | combo gate; gate vol=good,blue=True; list yday_gainer,yday_mover; 🔵; ret5=-4.6; leftover $2053.30 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `JKS` | 151 | $13.51 | $2.44 | — | $236.15 | combo gate; gate vol=good,blue=True; list yday_mover; 🔵; ret5=-5.0; leftover $2053.30 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-02 09:30 ET | **SELL** | `ANF` | 14 | $142.00 | $2.06 | $-41.89 | $2,222.09 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-02 09:30 ET | **SELL** | `SEDG` | 60 | $31.87 | $2.20 | $-118.97 | $4,132.10 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-02 09:30 ET | **SELL** | `SMTC` | 13 | $127.63 | $2.05 | $-287.09 | $5,789.23 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-02 09:30 ET | **SELL** | `URBN` | 24 | $79.12 | $2.09 | $-90.07 | $7,686.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-02 09:30 ET | **SELL** | `JKS` | 151 | $12.50 | $2.48 | $-157.44 | $9,571.04 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-03 09:30 ET | **BUY** | `RVTY` | 9 | $125.94 | $2.02 | — | $8,435.57 | combo gate; gate vol=good,blue=True; list flatten,mover_buy; 🔵; ⚪; ret5=+6.8; leftover $1196.38 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `CRK` | 76 | $15.70 | $2.22 | — | $7,240.15 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover,mover_buy; 🔵; ret5=+1.1; leftover $1196.38 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-09-03 09:30 ET | **BUY** | `MMED` | 52 | $22.78 | $2.15 | — | $6,053.44 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+1.5; leftover $1196.38 | join🟢 sector🟡 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `CTMX` | 321 | $3.72 | $4.14 | — | $4,855.18 | combo gate; gate vol=good,blue=True; list probable,yday_gainer; 🔵; ret5=-2.4; leftover $1196.38 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `CRDL` | 553 | $2.16 | $7.13 | — | $3,653.57 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,mover_buy; 🔵; ⚪; ret5=+3.3; leftover $1196.38 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `DEFT` | 1785 | $0.67 | $17.31 | — | $2,440.30 | combo gate; gate vol=good,blue=True; list yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+17.6; leftover $1196.38 | join🟡 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `MRNA` | 7 | $151.40 | $2.01 | — | $1,378.49 | combo gate; gate vol=good,blue=True; list yday_gainer,yday_mover; 🔵; ret5=+129.2; leftover $1196.38 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `ARCT` | 72 | $16.46 | $2.21 | — | $191.17 | combo gate; gate vol=good,blue=True; list yday_gainer,mover_buy; 🔵; ⚪; ret5=+63.4; leftover $1196.38 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `CABA` | 6 | $3.63 | $0.24 | — | $169.15 | combo gate; gate vol=good,blue=True; list flatten; 🔵; ⚪; ret5=+13.8; leftover $23.90 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-09-04 09:30 ET | **BUY** | `GPRO` | 13 | $1.78 | $0.27 | — | $145.74 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+5.9; leftover $23.90 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `EOSE` | 6 | $3.57 | $0.23 | — | $124.09 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-5.2; leftover $23.90 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `CCOI` | 2 | $10.22 | $0.21 | — | $103.44 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-18.9; leftover $23.90 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `IRD` | 5 | $4.66 | $0.25 | — | $79.89 | combo gate; gate vol=good,blue=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+12.2; leftover $23.90 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `OABI` | 4 | $5.08 | $0.22 | — | $59.35 | combo gate; gate vol=good,blue=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+28.1; leftover $23.90 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `ALEC` | 8 | $2.70 | $0.24 | — | $37.51 | combo gate; gate vol=good,blue=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+20.4; leftover $23.90 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 
 ## Not taken
 
@@ -225,6 +228,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-08-31 | `SEDG` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-08-31 | `SMTC` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-08-31 | `URBN` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-08-31 | `JKS` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-08-31 | `VEEV` | hard_red | hard-red S=-5.85 sit; no new buys |
 | 2026-08-31 | `CYPH` | hard_red | hard-red S=-5.85 sit; no new buys |
 | 2026-08-31 | `SRPT` | hard_red | hard-red S=-5.85 sit; no new buys |
@@ -232,6 +236,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-09-01 | `SEDG` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-01 | `SMTC` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-01 | `URBN` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-01 | `JKS` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-02 | `GPRO` | hard_red | hard-red S=-3.83 sit; no new buys |
 | 2026-09-02 | `FRVO` | hard_red | hard-red S=-3.83 sit; no new buys |
 | 2026-09-02 | `YDDL` | hard_red | hard-red S=-3.83 sit; no new buys |
@@ -243,24 +248,24 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 | 2026-09-04 | `DEFT` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-04 | `MRNA` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-04 | `ARCT` | min_hold | dropped but min-hold 1/3 sess — no sell |
-| 2026-09-04 | `DELL` | cash | leftover split 24.50 < 1 share @ 486.31 |
-| 2026-09-04 | `MLYS` | cash | leftover split 24.50 < 1 share @ 29.15 |
+| 2026-09-04 | `MLYS` | cash | leftover split 23.90 < 1 share @ 29.15 |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `RVTY` | 9 | 2026-09-03 @ $125.94 | combo gate; gate vol=good,blue=True; list flatten,mover_buy; 🔵; ⚪; ret5=+6.8; leftover $1197.42 |
-| `CRK` | 76 | 2026-09-03 @ $15.70 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover,mover_buy; 🔵; ret5=+1.1; leftover $1197.42 |
-| `MMED` | 52 | 2026-09-03 @ $22.78 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+1.5; leftover $1197.42 |
-| `CTMX` | 321 | 2026-09-03 @ $3.72 | combo gate; gate vol=good,blue=True; list probable,yday_gainer; 🔵; ret5=-2.4; leftover $1197.42 |
-| `CRDL` | 554 | 2026-09-03 @ $2.16 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,mover_buy; 🔵; ⚪; ret5=+3.3; leftover $1197.42 |
-| `DEFT` | 1787 | 2026-09-03 @ $0.67 | combo gate; gate vol=good,blue=True; list yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+17.6; leftover $1197.42 |
-| `MRNA` | 7 | 2026-09-03 @ $151.40 | combo gate; gate vol=good,blue=True; list yday_gainer,yday_mover; 🔵; ret5=+129.2; leftover $1197.42 |
-| `ARCT` | 72 | 2026-09-03 @ $16.46 | combo gate; gate vol=good,blue=True; list yday_gainer,mover_buy; 🔵; ⚪; ret5=+63.4; leftover $1197.42 |
-| `CABA` | 6 | 2026-09-04 @ $3.63 | combo gate; gate vol=good,blue=True; list flatten; 🔵; ⚪; ret5=+13.8; leftover $24.50 |
-| `GPRO` | 13 | 2026-09-04 @ $1.78 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+5.9; leftover $24.50 |
-| `EOSE` | 6 | 2026-09-04 @ $3.57 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-5.2; leftover $24.50 |
-| `CCOI` | 2 | 2026-09-04 @ $10.22 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-18.9; leftover $24.50 |
-| `IRD` | 5 | 2026-09-04 @ $4.66 | combo gate; gate vol=good,blue=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+12.2; leftover $24.50 |
-| `OABI` | 4 | 2026-09-04 @ $5.08 | combo gate; gate vol=good,blue=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+28.1; leftover $24.50 |
+| `RVTY` | 9 | 2026-09-03 @ $125.94 | combo gate; gate vol=good,blue=True; list flatten,mover_buy; 🔵; ⚪; ret5=+6.8; leftover $1196.38 |
+| `CRK` | 76 | 2026-09-03 @ $15.70 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover,mover_buy; 🔵; ret5=+1.1; leftover $1196.38 |
+| `MMED` | 52 | 2026-09-03 @ $22.78 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+1.5; leftover $1196.38 |
+| `CTMX` | 321 | 2026-09-03 @ $3.72 | combo gate; gate vol=good,blue=True; list probable,yday_gainer; 🔵; ret5=-2.4; leftover $1196.38 |
+| `CRDL` | 553 | 2026-09-03 @ $2.16 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,mover_buy; 🔵; ⚪; ret5=+3.3; leftover $1196.38 |
+| `DEFT` | 1785 | 2026-09-03 @ $0.67 | combo gate; gate vol=good,blue=True; list yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+17.6; leftover $1196.38 |
+| `MRNA` | 7 | 2026-09-03 @ $151.40 | combo gate; gate vol=good,blue=True; list yday_gainer,yday_mover; 🔵; ret5=+129.2; leftover $1196.38 |
+| `ARCT` | 72 | 2026-09-03 @ $16.46 | combo gate; gate vol=good,blue=True; list yday_gainer,mover_buy; 🔵; ⚪; ret5=+63.4; leftover $1196.38 |
+| `CABA` | 6 | 2026-09-04 @ $3.63 | combo gate; gate vol=good,blue=True; list flatten; 🔵; ⚪; ret5=+13.8; leftover $23.90 |
+| `GPRO` | 13 | 2026-09-04 @ $1.78 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+5.9; leftover $23.90 |
+| `EOSE` | 6 | 2026-09-04 @ $3.57 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-5.2; leftover $23.90 |
+| `CCOI` | 2 | 2026-09-04 @ $10.22 | combo gate; gate vol=good,blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-18.9; leftover $23.90 |
+| `IRD` | 5 | 2026-09-04 @ $4.66 | combo gate; gate vol=good,blue=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+12.2; leftover $23.90 |
+| `OABI` | 4 | 2026-09-04 @ $5.08 | combo gate; gate vol=good,blue=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+28.1; leftover $23.90 |
+| `ALEC` | 8 | 2026-09-04 @ $2.70 | combo gate; gate vol=good,blue=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+20.4; leftover $23.90 |
