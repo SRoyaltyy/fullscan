@@ -342,6 +342,7 @@ def factor_mine_books() -> list[dict]:
         "flatten_live_h1", "flatten_live_h3", "flatten_live_h5",
         "flatten_h5", "flatten_h3", "flatten_h1",
         "union_news_g_h5", "union_e_fresh_h3", "union_e_green_h3",
+        "flatten_h5_sboost", "flatten_h5_rankw", "flatten_h5_time",
     }
     for s in doc.get("stats") or []:
         name = s.get("name") or ""

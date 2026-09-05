@@ -41,7 +41,15 @@ SIDES = ("auto", "long", "short")
 TOP_NS = ("auto", "4", "8", "12")
 EXITS = ("auto", "none", "alarm", "last_red", "news_bad")
 ENTRIES = ("auto", "list", "live")
+SIZES = ("auto", "leftover", "rank_w", "topheavy", "half")
+SELLS = ("auto", "list", "time", "cut_loser", "trail")
+S_BOOSTS = ("auto", "none", "sizeup", "more_names", "both")
 BORROW_ANNUAL = 0.01
+GOOD_S = 5.0
+CUT_LOS = 0.03
+TRAIL_OFF = 0.05
+SIZEUP = 1.35
+MORE_NAMES = 4
 BOOK_RULES = {
     "capital": fm.CAPITAL,
     "day_cap": 1.0,
@@ -118,7 +126,7 @@ def why_buy(rec: dict, row: dict) -> str:
 
 
 def why_sell(ticker: str, held: int, min_hold: int, early: bool,
-             exit_when: dict | None, dropped: bool) -> str:
+             exit_when: dict | None, dropped: bool, kind: str = "") -> str:
     if early:
         if (exit_when or {}).get("alarm"):
             return f"exit 🚨 after {held} sess"
@@ -127,20 +135,161 @@ def why_sell(ticker: str, held: int, min_hold: int, early: bool,
         if (exit_when or {}).get("news") == "bad":
             return f"exit news🔴 after {held} sess"
         return f"condition exit after {held} sess"
+    if kind == "time":
+        return f"time-stop after {held} sess (min {min_hold})"
+    if kind == "cut_loser":
+        return f"cut loser after {held} sess (−{CUT_LOS:.0%} vs entry)"
+    if kind == "trail":
+        return f"trail off peak after {held} sess (−{TRAIL_OFF:.0%})"
     if dropped:
         return f"dropped from list after {held} sess (min {min_hold})"
     return f"sold after {held} sess"
 
 
+def lot_should_sell(lot: dict, *, held: int, min_hold: int, early: bool,
+                    dropped: bool, sell_mode: str, px: float | None,
+                    side: str) -> tuple[bool, str]:
+    """Sell only lots we hold. Min-hold blocks everything except early exit."""
+    if early:
+        return True, "early"
+    if held < min_hold:
+        return False, "min_hold"
+    mode = sell_mode or "list"
+    entry = float(lot.get("entry_px") or 0) or 0.0
+    peak = float(lot.get("peak_px") or entry) or entry
+    if mode == "time":
+        return True, "time"
+    if mode == "cut_loser" and px and entry:
+        if side == "long" and px < entry * (1.0 - CUT_LOS):
+            return True, "cut_loser"
+        if side == "short" and px > entry * (1.0 + CUT_LOS):
+            return True, "cut_loser"
+        if dropped:
+            return True, "dropped"
+        return False, "keep"
+    if mode == "trail" and px and peak:
+        if side == "long" and px < peak * (1.0 - TRAIL_OFF):
+            return True, "trail"
+        if side == "short" and px > peak * (1.0 + TRAIL_OFF):
+            return True, "trail"
+        if dropped:
+            return True, "dropped"
+        return False, "keep"
+    if dropped:
+        return True, "dropped"
+    return False, "keep"
+
+
+def split_budgets(new: list, room: float, mode: str) -> list[float]:
+    """Split leftover cash. Never invent money — sum(budgets) ≤ room."""
+    n = len(new)
+    if n < 1 or room <= 0:
+        return [0.0] * n
+    mode = mode or "leftover"
+    if mode == "half":
+        room = room * 0.5
+        return [room / n] * n
+    if mode == "rank_w":
+        weights = list(range(n, 0, -1))
+        tot = float(sum(weights))
+        return [room * w / tot for w in weights]
+    if mode == "topheavy":
+        if n == 1:
+            return [room]
+        first = room * 0.40
+        rest = (room - first) / (n - 1)
+        return [first] + [rest] * (n - 1)
+    return [room / n] * n
+
+
+def _lots_snap(pos: dict) -> list[dict]:
+    return [
+        {"ticker": t, "shares": int(p["shares"]),
+         "entry_date": p.get("entry_date"), "entry_px": p.get("entry_px")}
+        for t, p in pos.items()
+    ]
+
+
+def audit_book(book: dict, *, capital: float | None = None,
+               side: str = "long") -> dict:
+    """Independent replay of fills. Proves the butterfly cash+holdings.
+
+    Fails if a sell names a lot we do not hold, a buy spends past leftover
+    cash, cash goes negative, or a printed cash_after disagrees.
+    """
+    cap = float(capital if capital is not None else (
+        (book.get("rules") or {}).get("capital") or fm.CAPITAL))
+    cash = cap
+    hold: dict[str, int] = {}
+    fails: list[str] = []
+    side = side or "long"
+    for t in book.get("trades") or []:
+        ticker = t.get("ticker")
+        shares = int(t.get("shares") or 0)
+        px = float(t.get("price") or 0)
+        fee = float(t.get("fees") or 0)
+        date = t.get("date")
+        kind = t.get("side")
+        if shares < 1 or not ticker:
+            fails.append(f"{date} empty fill {kind} {ticker}")
+            continue
+        if kind in ("SELL", "COVER"):
+            have = int(hold.get(ticker) or 0)
+            if shares > have:
+                fails.append(
+                    f"{date} sold {ticker} x{shares} but held {have}")
+            else:
+                if side == "long" or kind == "SELL":
+                    cash += shares * px - fee
+                else:
+                    cash -= shares * px + fee
+                left = have - shares
+                if left:
+                    hold[ticker] = left
+                else:
+                    hold.pop(ticker, None)
+        elif kind in ("BUY", "SHORT"):
+            if kind == "BUY" or side == "long":
+                cost = shares * px + fee
+                if cost > cash + 0.05:
+                    fails.append(
+                        f"{date} buy {ticker} ${cost:.2f} > cash ${cash:.2f}")
+                cash -= cost
+                hold[ticker] = int(hold.get(ticker) or 0) + shares
+            else:
+                cash += shares * px - fee
+                hold[ticker] = int(hold.get(ticker) or 0) + shares
+        if cash < -0.05:
+            fails.append(f"{date} cash negative ${cash:.2f} after {kind} {ticker}")
+        printed = t.get("cash_after")
+        if printed is not None and abs(float(printed) - cash) > 0.08:
+            fails.append(
+                f"{date} {kind} {ticker} cash_after ${printed} ≠ replay ${cash:.2f}")
+    last_cash = book.get("cash")
+    if last_cash is not None and abs(float(last_cash) - cash) > 0.08:
+        fails.append(f"final cash ${last_cash} ≠ replay ${cash:.2f}")
+    open_held = {p["ticker"]: int(p["shares"]) for p in (book.get("open") or [])}
+    if open_held != hold:
+        fails.append(f"open lots {open_held} ≠ replay {hold}")
+    return {
+        "ok": not fails,
+        "n_fail": len(fails),
+        "fails": fails[:24],
+        "final_cash": round(cash, 2),
+        "final_held": hold,
+    }
+
+
 def recipes_from_action(*, universe="auto", hold="auto", gate="auto",
                         rank="auto", side="auto", top_n="auto",
-                        exit="auto", entry="auto",
+                        exit="auto", entry="auto", size="auto",
+                        sell="auto", s_boost="auto",
                         auto_tweak=True) -> list[dict]:
     """Filter the systematic grid; auto dims stay swept.
 
     ``auto_tweak`` adds one-knob neighbors so a custom dropdown still
     explores nearby holds / gates / ranks / top-n / exits / universes
-    / live-vs-list entry without a second click.
+    / live-vs-list entry / size / sell / S-boost without a second click.
     """
     base = fm.build_recipes()
 
@@ -184,7 +333,7 @@ def recipes_from_action(*, universe="auto", hold="auto", gate="auto",
     def entry_name(rec: dict) -> str:
         return "live" if (rec.get("require") or {}).get("live_entry") else "list"
 
-    def keep(rec, *, uni, h, g, rk, sd, tn, ex, en) -> bool:
+    def keep(rec, *, uni, h, g, rk, sd, tn, ex, en, sz, sl, sb) -> bool:
         if uni != "auto" and rec["universe"] != uni:
             return False
         if h != "auto" and int(rec["hold"]) != int(h):
@@ -203,16 +352,22 @@ def recipes_from_action(*, universe="auto", hold="auto", gate="auto",
             return False
         if en != "auto" and entry_name(rec) != en:
             return False
+        if sz != "auto" and (rec.get("size") or "leftover") != sz:
+            return False
+        if sl != "auto" and (rec.get("sell") or "list") != sl:
+            return False
+        if sb != "auto" and (rec.get("s_boost") or "none") != sb:
+            return False
         return True
 
     pinned = dict(uni=universe, h=hold, g=gate, rk=rank, sd=side,
-                  tn=top_n, ex=exit, en=entry)
+                  tn=top_n, ex=exit, en=entry, sz=size, sl=sell, sb=s_boost)
     kept = [r for r in base if keep(r, **pinned)]
     if auto_tweak:
         extras = []
-        dims = ("h", "g", "rk", "tn", "ex", "en", "uni")
+        dims = ("h", "g", "rk", "tn", "ex", "en", "uni", "sz", "sl", "sb")
         raw = dict(h=hold, g=gate, rk=rank, tn=top_n, ex=exit,
-                   en=entry, uni=universe)
+                   en=entry, uni=universe, sz=size, sl=sell, sb=s_boost)
         for dim in dims:
             if raw[dim] == "auto":
                 continue
@@ -244,7 +399,10 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
     date_ix = {d: i for i, d in enumerate(cal)}
     min_hold = int(rec["hold"])
     side = rec.get("side") or "long"
-    day_cap = float(rules["day_cap"])
+    day_cap = float(rec.get("day_cap") or rules["day_cap"])
+    size_mode = rec.get("size") or "leftover"
+    sell_mode = rec.get("sell") or "list"
+    s_boost = rec.get("s_boost") or "none"
 
     def mark(date: str, which: str) -> float:
         tot = 0.0
@@ -260,10 +418,20 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
         s = morning_s(regime, date)
         hard_red = (rules.get("hard_red_no_new")
                     and s is not None and float(s) <= float(rules["hard_red"]))
-        chosen = fm.pick_day(by_date.get(date) or [], rec)
+        good_s = (s is not None and float(s) >= GOOD_S and not hard_red)
+        rec_day = rec
+        if good_s and s_boost in ("more_names", "both"):
+            rec_day = dict(rec, top_n=int(rec["top_n"]) + MORE_NAMES)
+        chosen = fm.pick_day(by_date.get(date) or [], rec_day)
         tset = {r["ticker"] for r in chosen}
         sold, bought, held_names = [], [], []
         day_why = []
+        open_cash = cash
+        open_lots = _lots_snap(pos)
+        if good_s and s_boost in ("more_names", "both"):
+            day_why.append(f"S={s:+.2f} more_names top_n={rec_day['top_n']}")
+        if good_s and s_boost in ("sizeup", "both"):
+            day_why.append(f"S={s:+.2f} sizeup x{SIZEUP:g}")
 
         for t in list(pos):
             lot = pos[t]
@@ -271,7 +439,17 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
             row = row_index.get((date, t)) or {}
             early = fm.should_exit(row, rec.get("exit_when"))
             dropped = t not in tset
-            if not early and not (dropped and held >= min_hold):
+            px = _px(t, date, "open", bars)
+            if px is not None:
+                if side == "long":
+                    lot["peak_px"] = max(float(lot.get("peak_px") or lot["entry_px"]), px)
+                else:
+                    lot["peak_px"] = min(float(lot.get("peak_px") or lot["entry_px"]), px)
+                lot["last_px"] = px
+            do_sell, kind = lot_should_sell(
+                lot, held=held, min_hold=min_hold, early=early,
+                dropped=dropped, sell_mode=sell_mode, px=px, side=side)
+            if not do_sell:
                 if dropped and held < min_hold:
                     skips.append({
                         "date": date, "ticker": t, "kind": "min_hold",
@@ -279,14 +457,13 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                     })
                 held_names.append(t)
                 continue
-            px = _px(t, date, "open", bars)
             if px is None:
                 skips.append({"date": date, "ticker": t, "kind": "no_price",
                               "reason": "no 09:30 open — carry"})
                 held_names.append(t)
                 continue
             reason = why_sell(t, held, min_hold, early,
-                              rec.get("exit_when"), dropped)
+                              rec.get("exit_when"), dropped, kind)
             fee = pt.order_fees(lot["shares"], px, "sell" if side == "long" else "buy", fees)
             if side == "long":
                 proceeds = lot["shares"] * px - fee
@@ -324,16 +501,18 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
         if new and (cash > 0 or side == "short"):
             eq_open = cash + mark(date, "open")
             if side == "short":
-                # Size from equity, not inflated short proceeds. Cover
-                # constraint: total new notional ≤ equity/2.
                 room = max(0.0, eq_open * min(day_cap, 0.5))
             else:
                 room = max(0.0, cash * day_cap)
-            per = room / len(new)
-            for row in new:
+            if good_s and s_boost in ("sizeup", "both"):
+                room = min(room * SIZEUP, cash if side == "long" else room * SIZEUP)
+                if side == "long":
+                    room = min(room, cash)
+            budgets = split_budgets(new, room, size_mode)
+            for row, per in zip(new, budgets):
                 t = row["ticker"]
                 px = _px(t, date, "open", bars)
-                reason = why_buy(rec, row)
+                reason = why_buy(rec, row) + f"; leftover ${per:.2f}"
                 if px is None:
                     skips.append({"date": date, "ticker": t, "kind": "no_price",
                                   "reason": "no 09:30 open"})
@@ -363,7 +542,8 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                     lot = {
                         "ticker": t, "shares": shares, "entry_px": px,
                         "entry_date": date, "cost": cost, "fee_in": fee,
-                        "notional": shares * px, "last_px": px, "reason": reason,
+                        "notional": shares * px, "last_px": px, "peak_px": px,
+                        "reason": reason,
                     }
                 else:
                     notional = shares * px
@@ -380,7 +560,8 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                     lot = {
                         "ticker": t, "shares": shares, "entry_px": px,
                         "entry_date": date, "cost": fee, "fee_in": fee,
-                        "notional": notional, "last_px": px, "reason": reason,
+                        "notional": notional, "last_px": px, "peak_px": px,
+                        "reason": reason,
                     }
                 pos[t] = lot
                 rec_t = {
@@ -411,12 +592,15 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
             "route": plan.get("route") or "",
             "flatten_ok": bool(plan.get("flatten_ok")),
             "n": len(chosen),
+            "open_cash": round(open_cash, 2),
+            "open_held": [f"{p['ticker']}×{p['shares']}" for p in open_lots],
             "cash": round(cash, 2),
             "stock": round(stock, 2),
             "equity": round(equity, 2),
             "bought": [b["ticker"] for b in bought],
             "sold": [x["ticker"] for x in sold],
             "held": list(pos.keys()),
+            "lots": _lots_snap(pos),
             "skipped": [k["ticker"] for k in skips if k["date"] == date],
             "why": "; ".join(day_why) or (
                 f"hard-red sit S={s:+.2f}" if hard_red else
@@ -435,9 +619,12 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
     closed = [t for t in trades if t.get("pnl") is not None]
     wins = [t for t in closed if (t.get("pnl") or 0) > 0]
     losses = [t for t in closed if (t.get("pnl") or 0) < 0]
-    return {
+    out = {
         "name": rec["name"],
         "rules": {k: rules[k] for k in BOOK_RULES},
+        "size": size_mode,
+        "sell": sell_mode,
+        "s_boost": s_boost,
         "cash": round(cash, 2),
         "n_open": len(pos),
         "open": [
@@ -465,6 +652,8 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
             sum(100 * t["pnl"] / max((t.get("price") or 1) * t["shares"], 1)
                 for t in losses) / len(losses), 3),
     }
+    out["audit"] = audit_book(out, capital=rules["capital"], side=side)
+    return out
 
 
 def replay_starts(panel: dict, rec: dict, **kw) -> list[dict]:
@@ -519,6 +708,15 @@ def attach_book(stats: dict, book: dict, starts: list[dict]) -> dict:
     stats["book_n_trades"] = book.get("n_trades")
     stats["book_n_skips"] = book.get("n_skips")
     stats["book_realized"] = book.get("realized")
+    aud = book.get("audit") or {}
+    stats["audit_ok"] = bool(aud.get("ok"))
+    stats["audit_n_fail"] = aud.get("n_fail") or 0
+    stats["audit_fails"] = list(aud.get("fails") or [])[:8]
+    stats["size"] = book.get("size")
+    stats["sell"] = book.get("sell")
+    stats["s_boost"] = book.get("s_boost")
+    if not aud.get("ok"):
+        reliable = False
     peak = None
     dd = 0.0
     for x in book.get("equity") or []:
@@ -530,6 +728,9 @@ def attach_book(stats: dict, book: dict, starts: list[dict]) -> dict:
         stats["avg_win_pct"] = book["avg_win_pct"]
     if book.get("avg_loss_pct") is not None:
         stats["avg_loss_pct"] = book["avg_loss_pct"]
+    if stats.get("avg_win_pct") and stats.get("avg_loss_pct"):
+        stats["payoff"] = round(
+            abs(float(stats["avg_win_pct"]) / float(stats["avg_loss_pct"])), 3)
     stats["reliable"] = reliable
     stats["effectiveness"] = fm._effectiveness(
         stats.get("win_rate"), stats.get("profitable_day_rate"),
@@ -538,6 +739,14 @@ def attach_book(stats: dict, book: dict, starts: list[dict]) -> dict:
         stats.get("total_ret_pct"), median_start, pothole_pct, reliable,
     )
     return stats
+
+
+def _gate_label(rec: dict) -> str:
+    req = rec.get("require") or {}
+    shown = {k: v for k, v in req.items() if k != "live_entry"}
+    if not shown:
+        return "none (list as ranked)"
+    return ",".join(f"{k}={v}" for k, v in shown.items())
 
 
 def render_recipe_md(rec: dict, stats: dict, book: dict) -> str:
@@ -566,6 +775,9 @@ def render_recipe_md(rec: dict, stats: dict, book: dict) -> str:
         "",
         f"Side **{rec['side']}** · universe `{rec['universe']}` · "
         f"top {rec['top_n']} · rank `{rec.get('rank') or 'list'}` · "
+        f"size `{rec.get('size') or book.get('size') or 'leftover'}` · "
+        f"sell `{rec.get('sell') or book.get('sell') or 'list'}` · "
+        f"S-boost `{rec.get('s_boost') or book.get('s_boost') or 'none'}` · "
         f"{rec.get('note') or ''}",
         "",
         f"Cash book **{stats.get('total_ret_pct'):+.2f}%** "
@@ -576,21 +788,66 @@ def render_recipe_md(rec: dict, stats: dict, book: dict) -> str:
         f"Fills {book.get('n_trades')} · skips {book.get('n_skips')} · "
         f"realized ${book.get('realized'):+.2f}.",
         "",
-        "## Each session",
+        "## Why these stocks",
         "",
-        "| Date | S | Route | Hard-red | Cash | Stock | Equity | Bought | Sold | Skipped | Why |",
-        "|---|---:|---|---|---:|---:|---:|---|---|---|---|",
+        "Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): "
+        "the 09:30 packet + leftover cash + lots on hand decide the ticket. "
+        "Same-day Change% is outcome only.",
+        "",
+        f"- **Universe** `{rec['universe']}` — candidate list at 09:30 "
+        f"(flatten wish-list, union, probable, yday gainer, or OHLC hot).",
+        f"- **Gate** `{_gate_label(rec)}` · **rank** `{rec.get('rank') or 'list order'}` "
+        f"· **top_n** {rec['top_n']}"
+        + (f" (S≥+5 may raise this when S-boost is `{rec.get('s_boost')}`)"
+           if (rec.get('s_boost') or 'none') != 'none' else "")
+        + ".",
+        f"- **Size** `{rec.get('size') or 'leftover'}` splits leftover cash among "
+        f"*new* names only. Rank-weight / top-heavy still cannot invent money.",
+        f"- **Sell** `{rec.get('sell') or 'list'}` after min-hold **{rec['hold']}**. "
+        f"We never sell a ticker we do not hold. Early 🚨 / last-red / news🔴 "
+        f"can still exit inside the floor.",
+        f"- **Entry:** {entry_note}",
+        "",
+    ]
+    aud = book.get("audit") or {}
+    if aud.get("ok"):
+        lines += [
+            "## State audit",
+            "",
+            f"**PASS** · 0 violations. Independent replay of fills never sold "
+            f"an unheld lot and never spent past leftover cash. Close cash "
+            f"${aud.get('final_cash', book.get('cash')):,.2f}.",
+            "",
+        ]
+    else:
+        fails = aud.get("fails") or ["audit missing"]
+        lines += [
+            "## State audit",
+            "",
+            f"**FAIL** · {aud.get('n_fail', len(fails))} violations.",
+            "",
+        ]
+        for f in fails[:8]:
+            lines.append(f"- {f}")
+        lines.append("")
+    lines += [
+        "## Each session (cash + holdings state)",
+        "",
+        "| Date | S | Open cash | Open held | Bought | Sold | Close cash | Stock | Equity | Close held | Why |",
+        "|---|---:|---:|---|---|---|---:|---:|---:|---|---|",
     ]
     for d in book.get("daily") or []:
         s = d.get("s")
+        lots = d.get("lots") or []
+        close_held = ", ".join(f"{p['ticker']}×{p['shares']}" for p in lots) or "—"
         lines.append(
             f"| {d['date']} | {('—' if s is None else f'{s:+.2f}')} | "
-            f"{d.get('route') or '—'} | "
-            f"{'yes' if d.get('hard_red') else 'no'} | "
-            f"${d['cash']:,.2f} | ${d['stock']:,.2f} | ${d['equity']:,.2f} | "
+            f"${(d.get('open_cash') if d.get('open_cash') is not None else 0):,.2f} | "
+            f"{', '.join(d.get('open_held') or []) or '—'} | "
             f"{', '.join(d.get('bought') or []) or '—'} | "
             f"{', '.join(d.get('sold') or []) or '—'} | "
-            f"{', '.join(d.get('skipped') or []) or '—'} | "
+            f"${d['cash']:,.2f} | ${d['stock']:,.2f} | ${d['equity']:,.2f} | "
+            f"{close_held} | "
             f"{str(d.get('why') or '—').replace('|', '/')} |"
         )
     lines += [
@@ -649,11 +906,17 @@ def write_action_mds(payload: dict, stats: list[dict], books: dict,
     by_stats = {s["name"]: s for s in stats}
 
     def rec_for(name: str, s: dict) -> dict:
-        return recs.get(name) or {
+        have = recs.get(name)
+        if have:
+            return have
+        return {
             "name": name, "hold": s.get("hold"), "side": s.get("side"),
             "universe": s.get("universe"), "top_n": s.get("top_n"),
             "rank": s.get("rank"), "note": s.get("note"),
-            "require": {},
+            "require": s.get("require") or {},
+            "size": s.get("size") or "leftover",
+            "sell": s.get("sell") or "list",
+            "s_boost": s.get("s_boost") or "none",
         }
 
     for name, b in books.items():
@@ -667,26 +930,24 @@ def write_action_mds(payload: dict, stats: list[dict], books: dict,
         f"# Factor mine action — {payload.get('from_date')} → {payload.get('to_date')}",
         "",
         "Cash-accounted blotters for the leak-free 09:30 recipes. "
-        "Same rules as the paper sleeve book: **$10k, whole shares, "
-        "Futubull fees, leftover cash split, sell first, min-hold, "
-        "09:30 open fills, hard-red S≤−3 sit, shorts as a liability "
-        "(equity ≥ 2× notional)**. "
-        "Signal-only percentages in the research table are **not** fills.",
+        "Each recipe is a **daily cash + holdings state machine**: "
+        "morning leftover cash and the lots we actually hold are the only "
+        "inputs to that session's buys/sells. We can only sell shares on "
+        "hand and only spend leftover cash (whole shares, Futubull fees). "
+        "An independent fill-replay **audit** flags any violation.",
         "",
         "## Rule check (read this)",
         "",
-        "- **Cash / shares / fees:** every recipe below is a $10k sleeve. "
-        "Leftover cash is split among *new* names only. A name that costs "
-        "more than its split is skipped (not a fractional).",
-        "- **Hard-red:** morning S ≤ −3 sits — no new buys. Existing lots "
-        "still sell when min-hold is met.",
-        "- **Flatten wish-list ≠ live tickets.** `flatten_h*` buys the 3d "
-        "robust wish-list on io/HOLD mornings (8-13, 8-14, 8-17, …). Live "
-        "`flatten_robust` Action those days is HOLD. `flatten_live_*` is "
-        "the gated book (only 8-20 / 8-21 mover fires in this window).",
-        "- **Shorts** are sized from equity (not short-sale cash) and marked "
-        "as a liability. The first mine's +300–1000% short books were a "
-        "marking bug and are gone.",
+        "- **Butterfly state:** day N open cash/held = day N−1 close after fills. "
+        "A miss on 8-13 leftover changes every later ticket.",
+        "- **Cash / shares / fees:** leftover split (or rank-weight / top-heavy / half) "
+        "among *new* names. Skip if the split cannot buy 1 share.",
+        "- **Sell:** list-drop after min-hold, or time-stop / cut-loser / trail. "
+        "Never sell a ticker we do not hold.",
+        "- **S-boost:** on mornings with general S ≥ +5, optional sizeup (1.35×) "
+        "and/or +4 names — still capped by leftover cash. Hard-red S ≤ −3 sits.",
+        "- **Flatten wish-list ≠ live tickets.** `flatten_h*` buys the wish-list "
+        "on io/HOLD mornings. `flatten_live_*` is the gated book.",
         "",
         f"Phone: `dashboard/factor-mine/index.html`. "
         f"Sister: [flatten lookback](../dashboard/flatten-lookback/) · "
@@ -697,8 +958,8 @@ def write_action_mds(payload: dict, stats: list[dict], books: dict,
         "",
         "## Featured books",
         "",
-        "| Strategy | Book % | Signal-only % | Starts YES | Fills | Skips | MD |",
-        "|---|---:|---:|---:|---:|---:|---|",
+        "| Strategy | Size | Sell | Boost | Book % | Signal-only % | Starts YES | Fills | Skips | Audit | MD |",
+        "|---|---|---|---|---:|---:|---:|---:|---:|---|---|",
     ]
     for name in featured:
         s = by_stats.get(name)
@@ -706,12 +967,15 @@ def write_action_mds(payload: dict, stats: list[dict], books: dict,
         if not s:
             continue
         md_name = f"{name}.md"
+        aud = "PASS" if s.get("audit_ok", True) else f"FAIL×{s.get('audit_n_fail') or '?'}"
         index.append(
-            f"| `{name}` | {s.get('total_ret_pct'):+.2f} | "
+            f"| `{name}` | {s.get('size') or 'leftover'} | "
+            f"{s.get('sell') or 'list'} | {s.get('s_boost') or 'none'} | "
+            f"{s.get('total_ret_pct'):+.2f} | "
             f"{s.get('signal_ret_pct'):+.2f} | "
             f"{s.get('start_green')}/{s.get('start_n')} | "
             f"{b.get('n_trades') or 0} | {b.get('n_skips') or 0} | "
-            f"[{md_name}](factor_mine/{md_name}) |"
+            f"{aud} | [{md_name}](factor_mine/{md_name}) |"
         )
     others = [n for n in books if n not in set(featured)]
     if others:

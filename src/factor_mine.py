@@ -156,6 +156,8 @@ def make_recipe(name: str, *, universe: str = "union", hold: int = 1,
                 side: str = "long", top_n: int = TOP_N_DEFAULT,
                 require: dict | None = None, forbid: dict | None = None,
                 rank: str | None = None, exit_when: dict | None = None,
+                size: str = "leftover", sell: str = "list",
+                s_boost: str = "none", day_cap: float = 1.0,
                 note: str = "") -> dict:
     return {
         "name": name,
@@ -167,6 +169,10 @@ def make_recipe(name: str, *, universe: str = "union", hold: int = 1,
         "forbid": dict(forbid or {}),
         "rank": rank,
         "exit_when": dict(exit_when or {}),
+        "size": size or "leftover",
+        "sell": sell or "list",
+        "s_boost": s_boost or "none",
+        "day_cap": float(day_cap),
         "note": note,
     }
 
@@ -294,6 +300,40 @@ def build_recipes() -> list[dict]:
         for hold in (1, 3):
             add(name=f"{name}_h{hold}", universe="union", hold=hold,
                 side="short", require=req, note=note)
+
+    # Cash-state tweaks on a few proven bases — not a full cartesian.
+    bases = [
+        dict(name="flatten_h5", universe="flatten", hold=5),
+        dict(name="flatten_h3", universe="flatten", hold=3),
+        dict(name="flatten_live_h1", universe="flatten", hold=1,
+             require={"live_entry": True}),
+        dict(name="union_h5", universe="union", hold=5),
+        dict(name="union_h3", universe="union", hold=3),
+        dict(name="union_h1", universe="union", hold=1),
+    ]
+    tweaks = [
+        ("rankw", dict(size="rank_w", note="rank-weighted leftover")),
+        ("topheavy", dict(size="topheavy", note="40% to #1, rest split")),
+        ("half", dict(size="half", note="deploy half leftover")),
+        ("time", dict(sell="time", note="sell at min-hold even if still listed")),
+        ("cut", dict(sell="cut_loser", note="after min-hold, cut −3% losers")),
+        ("trail", dict(sell="trail", note="after min-hold, trail 5% off peak")),
+        ("sboost", dict(s_boost="both", note="S≥+5: sizeup + more names")),
+        ("sizeup", dict(s_boost="sizeup", note="S≥+5: 1.35× leftover")),
+    ]
+    have = {r["name"] for r in recs}
+    for base in bases:
+        for suffix, kw in tweaks:
+            nm = f"{base['name']}_{suffix}"
+            if nm in have:
+                continue
+            add(name=nm, universe=base["universe"], hold=base["hold"],
+                require=base.get("require"),
+                size=kw.get("size", "leftover"),
+                sell=kw.get("sell", "list"),
+                s_boost=kw.get("s_boost", "none"),
+                note=kw["note"])
+            have.add(nm)
 
     return recs
 
@@ -828,6 +868,9 @@ def score_recipe(panel: dict, rec: dict, tapes: dict,
         "forbid": rec.get("forbid") or {},
         "exit_when": rec.get("exit_when") or {},
         "note": rec.get("note") or "",
+        "size": rec.get("size") or "leftover",
+        "sell": rec.get("sell") or "list",
+        "s_boost": rec.get("s_boost") or "none",
         "n_picks": n_picks,
         "n_graded": len(graded),
         "n_days": len(days_scored),
@@ -929,6 +972,9 @@ def run(from_date: str = START, to_date: str | None = None,
         "flatten_live_h1", "flatten_live_h3", "flatten_live_h5",
         "union_e_fresh_h3", "union_news_g_h5", "union_white_coil_h1",
         "union_e_green_h3",
+        "flatten_h5_rankw", "flatten_h5_time", "flatten_h5_sboost",
+        "union_h5_sboost", "flatten_live_h1_sizeup",
+        "union_h3_cut", "union_h1_topheavy",
     ) if any(s["name"] == n for s in stats)]
     featured = []
     for n in [s["name"] for s in stats if s.get("reliable")][:8] + extra:
@@ -937,7 +983,7 @@ def run(from_date: str = START, to_date: str | None = None,
     payload = {
         "generated_at": datetime.now(tl.ET).isoformat(),
         "asof": "09:30_et",
-        "fill": "09:30 open, whole shares, Futubull fees, leftover split, sell first, hard-red sit",
+        "fill": "09:30 open, whole shares, Futubull fees, leftover split, sell first, hard-red sit, cash+holdings audit",
         "from_date": panel.get("from_date"),
         "to_date": panel.get("to_date"),
         "n_sessions": panel.get("n_sessions"),
@@ -958,7 +1004,8 @@ def run(from_date: str = START, to_date: str | None = None,
         "books": {
             n: {k: v for k, v in books[n].items()
                 if k in ("daily", "trades", "skips", "open", "n_trades",
-                         "n_skips", "realized", "cash", "total_ret_pct")}
+                         "n_skips", "realized", "cash", "total_ret_pct",
+                         "audit", "size", "sell", "s_boost")}
             for n in featured if n in books
         },
         "md_names": [s["name"] for s in stats if s.get("book_n_trades")],
@@ -1003,28 +1050,35 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
         "",
         "Cash book: $10k, whole shares, Futubull fees, leftover split, "
         "sell first, min-hold, 09:30 open, hard-red S≤−3 sit, shorts "
-        "marked as a liability. Signal-only % is the old equal-weight "
-        "path (not a fill). `flatten_h*` = wish-list (io/HOLD mornings "
-        "still buy). `flatten_live_*` = only when the live flatten gate "
-        "fires. Research only — does not change live `flatten_robust`.",
+        "marked as a liability. Each session starts from leftover cash "
+        "and lots actually held (butterfly). Size / sell / S-boost "
+        "tweaks sit on the same ledger. Signal-only % is the old "
+        "equal-weight path (not a fill). `flatten_h*` = wish-list "
+        "(io/HOLD mornings still buy). `flatten_live_*` = only when "
+        "the live flatten gate fires. Research only — does not change "
+        "live `flatten_robust`.",
         "",
         "Action blotters: [FACTOR_MINE_ACTION.md](FACTOR_MINE_ACTION.md).",
         "",
-        "| Strategy | Side | H | Win% | $ days | Starts YES | "
-        "Med start | Top-g | Losers | Book% | Signal% | Pothole | Eff |",
-        "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
+        "| Strategy | Side | H | Size | Sell | Boost | Win% | $ days | "
+        "Starts YES | Med start | Top-g | Losers | AvgW | AvgL | "
+        "Book% | Signal% | Audit | Eff |",
+        "|---|---|---:|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|---:|",
     ]
     for s in (stats or []):
+        aud = "PASS" if s.get("audit_ok", True) else f"FAIL×{s.get('audit_n_fail') or '?'}"
         lines.append(
             f"| `{s['name']}`{' *(thin)*' if not s.get('reliable') else ''} | "
             f"{s['side']} | {s['hold']} | "
+            f"{s.get('size') or 'leftover'} | {s.get('sell') or 'list'} | "
+            f"{s.get('s_boost') or 'none'} | "
             f"{_pct(s.get('win_rate'))} | {_pct(s.get('profitable_day_rate'))} | "
             f"{s.get('start_green') or 0}/{s.get('start_n') or 0} | "
             f"{_n(s.get('median_start_pct'))} | "
             f"{s.get('gainer_hits') or 0} | {s.get('loser_hits') or 0} | "
+            f"{_n(s.get('avg_win_pct'))} | {_n(s.get('avg_loss_pct'))} | "
             f"{_n(s.get('total_ret_pct'))} | {_n(s.get('signal_ret_pct'))} | "
-            f"{s.get('pothole_date') or '—'} {_n(s.get('pothole_pct'))} | "
-            f"{s.get('effectiveness')} |"
+            f"{aud} | {s.get('effectiveness')} |"
         )
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
     if TEMPLATE.is_file():
@@ -1061,6 +1115,10 @@ def main(argv=None) -> int:
     ap.add_argument("--top-n", default="auto", choices=fmb.TOP_NS)
     ap.add_argument("--exit", default="auto", choices=fmb.EXITS)
     ap.add_argument("--entry", default="auto", choices=fmb.ENTRIES)
+    ap.add_argument("--size", default="auto", choices=fmb.SIZES)
+    ap.add_argument("--sell", default="auto", choices=fmb.SELLS)
+    ap.add_argument("--s-boost", dest="s_boost", default="auto",
+                    choices=fmb.S_BOOSTS)
     ap.add_argument("--auto-tweak", dest="auto_tweak", action="store_true",
                     default=True)
     ap.add_argument("--no-auto-tweak", dest="auto_tweak", action="store_false")
@@ -1070,7 +1128,8 @@ def main(argv=None) -> int:
     recipes = fmb.recipes_from_action(
         universe=args.universe, hold=args.hold, gate=args.gate,
         rank=args.rank, side=args.side, top_n=args.top_n, exit=args.exit,
-        entry=args.entry, auto_tweak=args.auto_tweak,
+        entry=args.entry, size=args.size, sell=args.sell,
+        s_boost=args.s_boost, auto_tweak=args.auto_tweak,
     )
     payload = run(
         args.from_date, args.to_date or None, write=args.write,
