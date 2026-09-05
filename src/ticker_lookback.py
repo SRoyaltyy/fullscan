@@ -598,9 +598,22 @@ def judge_sector_tone(tilts, sector):
 
 
 def _digest_tones(date):
-    """Ticker → tone from D's pre-open Finviz digest file only."""
-    data = _jload(NEWS_DIR / f"{date}_finviz_digest.json") or {}
+    """Ticker → tone from D's Elite export company news (full tape)."""
+    try:
+        from .finviz_news import load_company_news
+        news = load_company_news(date, today=date)
+    except Exception:
+        news = {}
     out = {}
+    for t, rec in news.items():
+        if rec.get("is_dividend"):
+            continue
+        tone = rec.get("digest_tone") or rec.get("tone")
+        if tone and tone != "missing":
+            out[t] = tone
+    if out:
+        return out
+    data = _jload(NEWS_DIR / f"{date}_finviz_digest.json") or {}
     rows = list(data.get("top_signal") or []) + list(
         data.get("all_ticker_digests_sample") or [])
     for sec_rows in (data.get("by_sector") or {}).values():
@@ -742,35 +755,12 @@ def _heat_asof(date, prior_date=None):
 
 
 def _digest_book(date):
-    """Finviz digest → news-book rows, without stock_book's print side effect."""
+    """Finviz company news → news-book rows, without stock_book's print side effect."""
     try:
-        from .stock_book import _digest_polarity
+        from .finviz_news import actions_from_company_news, load_company_news
+        return actions_from_company_news(load_company_news(date, today=date))
     except Exception:
         return {}
-    data = _jload(NEWS_DIR / f"{date}_finviz_digest.json") or {}
-    out = {}
-    rows = list(data.get("top_signal") or []) + list(
-        data.get("all_ticker_digests_sample") or [])
-    for sec_rows in (data.get("by_sector") or {}).values():
-        rows.extend(sec_rows or [])
-    for row in rows:
-        if not isinstance(row, dict):
-            continue
-        t = _tick(row.get("ticker"))
-        if not t or t in out or t in {"SPY", "QQQ", "DIA", "IWM"}:
-            continue
-        if row.get("is_dividend"):
-            continue
-        text = str(row.get("digest") or row.get("news_title") or "")
-        pol = _digest_polarity(text)
-        if not pol:
-            continue
-        out[t] = {
-            "net": pol,
-            "events": [{"event": "finviz_digest", "digest": text[:160]}],
-            "source": "digest",
-        }
-    return out
 
 
 def _accuracy_gates_asof(date, prior_date=None):

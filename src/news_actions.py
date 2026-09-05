@@ -252,6 +252,51 @@ def build_from_db(hours: int = 48, limit: int = 500) -> dict:
     }
 
 
+def merge_company_news(report: dict, date_str: str) -> dict:
+    """Add Elite-export company headlines so the news box is not RSS-only."""
+    try:
+        from .finviz_news import actions_from_company_news, load_company_news
+        extra = actions_from_company_news(load_company_news(date_str, today=date_str))
+    except Exception as e:
+        print(f"[news_actions] finviz company news skipped: {e}")
+        return report
+    if not extra:
+        return report
+    book = {r["ticker"]: r for r in report.get("ticker_actions") or []}
+    added = 0
+    for t, rec in extra.items():
+        net_add = float(rec.get("net") or 0)
+        if t in book:
+            existing = book[t]
+            if net_add > 0:
+                existing["buy_score"] = float(existing.get("buy_score") or 0) + net_add
+            else:
+                existing["sell_score"] = float(existing.get("sell_score") or 0) + abs(net_add)
+            existing["net"] = round(
+                float(existing.get("buy_score") or 0)
+                - float(existing.get("sell_score") or 0), 2)
+            existing["side"] = (
+                "buy" if existing["net"] > 0
+                else ("sell" if existing["net"] < 0 else "flat")
+            )
+            existing.setdefault("events", []).extend(rec.get("events") or [])
+        else:
+            book[t] = {
+                "ticker": t,
+                "buy_score": net_add if net_add > 0 else 0.0,
+                "sell_score": abs(net_add) if net_add < 0 else 0.0,
+                "net": net_add,
+                "side": rec.get("side") or "flat",
+                "events": rec.get("events") or [],
+            }
+            added += 1
+    report["ticker_actions"] = sorted(
+        book.values(), key=lambda x: -abs(float(x.get("net") or 0)))
+    report["finviz_company_tickers"] = len(extra)
+    print(f"[news_actions] finviz company news +{added} new / {len(extra)} directional")
+    return report
+
+
 def to_markdown(report: dict) -> str:
     lines = [
         f"# News → Actions v4 (full framework) — {report.get('generated_at', '')}",
@@ -342,6 +387,7 @@ def main() -> None:
         print("[news_actions] DATABASE_URL not set — using files / empty news")
 
     report = build_from_db(hours=args.hours, limit=args.limit)
+    report = merge_company_news(report, date_str)
     try:
         from .judge_apply import load_or_parse
         j = load_or_parse(date_str)

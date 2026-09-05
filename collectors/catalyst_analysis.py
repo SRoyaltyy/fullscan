@@ -271,6 +271,27 @@ def safe_create(**kwargs):
         print(f"  ⚠️  {name} exhausted — trying next provider")
     raise last
 
+try:
+    from src.finviz_news import parse_finviz_news_date
+except ImportError:
+    from pathlib import Path as _P
+    import sys as _s
+    _s.path.insert(0, str(_P(__file__).resolve().parent.parent))
+    from src.finviz_news import parse_finviz_news_date
+
+
+def _in_finviz_window(date_str: str) -> bool:
+    if not date_str or len(date_str) < 10:
+        return False
+    d = date_str[:10]
+    if LOOKBACK_START and d < LOOKBACK_START:
+        return False
+    end = CUTOFF_DATE or TODAY
+    if end and d > end:
+        return False
+    return True
+
+
 # ── Finviz news scrape ──────────────────────────────────
 def scrape_finviz_news(ticker):
     try:
@@ -280,28 +301,29 @@ def scrape_finviz_news(ticker):
         if news_df is None or news_df.empty:
             return []
         events = []
+        last_date = None
         for _, row in news_df.iterrows():
-            d = row.get('Date', '')
-            try:
-                parsed = datetime.strptime(str(d), "%I:%M %p %m/%d/%Y")
-                date_str = parsed.strftime("%Y-%m-%d")
-            except ValueError:
-                date_str = str(d)[:10]
-            if CUTOFF_DATE and date_str > CUTOFF_DATE:
+            raw = row.get("Date", row.get("date", ""))
+            date_str = parse_finviz_news_date(raw, last_date=last_date, today=TODAY)
+            if date_str:
+                last_date = date_str
+            if not date_str or not _in_finviz_window(date_str):
                 continue
-            title = str(row.get('Title', ''))
-            source = str(row.get('Source', ''))
-            link = str(row.get('Link', ''))
-            urls = [link] if link and link.startswith('http') else [f"https://finviz.com/quote.ashx?t={ticker}"]
+            title = re.sub(r"\s+", " ", str(row.get("Title", row.get("title", "")) or "")).strip()
+            source = str(row.get("Source", row.get("source", "")) or "").strip()
+            link = str(row.get("Link", row.get("link", row.get("News", ""))) or "").strip()
+            if not title:
+                continue
+            urls = [link] if link.startswith("http") else [f"https://finviz.com/quote.ashx?t={ticker}"]
             events.append({
                 "event_date": date_str,
                 "headline": title,
-                "description": f"{title} (via {source})",
+                "description": f"{title} (via {source})" if source else title,
                 "evidence_excerpt": title[:150],
                 "source_urls": urls,
                 "confidence": 85,
                 "source": "finviz",
-                "finviz_source": source
+                "finviz_source": source,
             })
         return events
     except ImportError:
@@ -818,6 +840,39 @@ def parse_json(raw):
     if objs:
         return objs
     raise ValueError(f"Failed to parse JSON. Start: {text[:200]}")
+
+
+def coerce_context_profile(parsed):
+    """Step 2 must be an object. Salvage may return a list of complete dicts."""
+    if isinstance(parsed, dict):
+        return parsed
+    if isinstance(parsed, list):
+        for item in parsed:
+            if isinstance(item, dict) and (
+                "sensitivity_profile" in item or "extracted_context" in item
+            ):
+                return item
+        profile = {}
+        for item in parsed:
+            if not isinstance(item, dict):
+                continue
+            tax = item.get("taxonomy")
+            if tax and "multiplier" in item:
+                profile[tax] = item
+        if profile:
+            return {"sensitivity_profile": profile}
+    return {}
+
+
+def coerce_final_result(parsed):
+    """Step 4 must be an object with catalyst_grid."""
+    if isinstance(parsed, dict):
+        return parsed
+    if isinstance(parsed, list) and any(
+        isinstance(x, dict) and x.get("taxonomy") for x in parsed
+    ):
+        return {"catalyst_grid": [x for x in parsed if isinstance(x, dict)]}
+    raise ValueError("final result is not an object")
 
 
 def filter_events_to_window(events, lookback_start=None, cutoff=None):
@@ -1349,12 +1404,12 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
     print(f"  📋 Step 1 extracted {len(raw_events)} new raw events (after window)")
 
     try:
-        context_profile = parse_json(step2_raw)
+        context_profile = coerce_context_profile(parse_json(step2_raw))
     except Exception as e:
         print(f"  ❌ Step 2 parse failed: {e}")
         return {"error": "Step 2 parse failure", "raw": step2_raw[:500]}
 
-    sensitivity = context_profile.get("sensitivity_profile", {})
+    sensitivity = context_profile.get("sensitivity_profile", {}) if isinstance(context_profile, dict) else {}
     weighted_taxonomy = {}
     for cat, prof in sensitivity.items():
         base = CATALYST_WEIGHTS.get(cat, 5)
@@ -1383,7 +1438,7 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
                             json.dumps(snapshot, indent=2, default=str))
     final_raw = call_llm(prompt=prompt4, user_msg=f"Finalize {full_name}.", temperature=0.1, max_tokens=25000)
     try:
-        final_result = parse_json(final_raw)
+        final_result = coerce_final_result(parse_json(final_raw))
     except Exception as e:
         print(f"  ❌ Step 4 parse failed: {e}")
         return {"error": "Step 4 parse failure", "raw": final_raw[:500]}
