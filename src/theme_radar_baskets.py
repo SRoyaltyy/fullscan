@@ -351,9 +351,9 @@ def mechanism_rows(basket: dict[str, dict], ts: dict) -> list[dict]:
                 "Surviving both-tape avoid is high-FPE alone; d_RSI / d_mcap "
                 "stay veto *candidates*, not rank fuel. Combined `radar_hot` "
                 "failed both-tape — do not OR into the live veto. "
-                "1d clock only — not flatten_h5 / flatten_robust."
+                "1d clock only. flatten_h5 × FPE = FAIL (5d up-tape flips)."
             ),
-            "veto_not_fuel": "YES on 1d clock only. Does not auto-apply to flatten_h5 / flatten_robust.",
+            "veto_not_fuel": "YES on 1d clock only. flatten_h5 × FPE = FAIL (5d Sign_up 40%). Do not wire.",
             "elevate": "NO — fades are not buy-rank fuel.",
         }, "theme_radar_1d", "1", "1d open→close"),
         _row({

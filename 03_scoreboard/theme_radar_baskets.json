@@ -547,7 +547,7 @@
       "goal": "Avoid (1d only)",
       "fields": "`Forward P/E` \u2265 35; `d_RSI` = \u0394 `Relative Strength Index (14)` (prior \u2212 prior-prior); `d_Market Cap` = % \u0394 `Market Cap` (same vintage). Knobs in `finviz_style_flags`: HIGH_FPE=35, D_RSI_UP=5, D_MCAP_PCT=3.",
       "basket_fire": "high-FPE optics: 10/76; ai_power: 23/95; copper: 0/95; nuclear: 19/95; gold_hit: 0/76. d_RSI\u2191 optics: 2/76; ai_power: 3/95; copper: 9/95; nuclear: 6/95; gold_hit: 7/76. d_mcap\u2191 optics: 12/76; ai_power: 3/95; copper: 15/95; nuclear: 11/95; gold_hit: 7/76. Surviving both-tape avoid is high-FPE alone; d_RSI / d_mcap stay veto *candidates*, not rank fuel. Combined `radar_hot` failed both-tape \u2014 do not OR into the live veto. 1d clock only \u2014 not flatten_h5 / flatten_robust.",
-      "veto_not_fuel": "YES on 1d clock only. Does not auto-apply to flatten_h5 / flatten_robust.",
+      "veto_not_fuel": "YES on 1d clock only. flatten_h5 × FPE = FAIL (5d Sign_up 40%). Do not wire.",
       "elevate": "NO \u2014 fades are not buy-rank fuel.",
       "target_sleeve": "theme_radar_1d",
       "hold_sessions": "1",

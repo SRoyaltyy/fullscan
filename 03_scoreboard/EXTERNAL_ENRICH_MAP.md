@@ -17,9 +17,12 @@ whose hold it was scored on. Next-day IC (`Change from Open`) is the
 **Keep (1d Theme Radar clock only, percent IC):** `radar_high_fpe` /
 optional `Forward P/E` ≥ 35 both-tape YES on `Change from Open`.
 **Fee-aware re-mine: FAIL.** After Futubull $1k unit fills, avoided
-names beat peers (xs $+0.09; up-tape $+0.35). Flatten leftover
-+$326–$723 is **THIN** (n=9–11, 0 SPY-down, io/HOLD only). Live-shaped
-veto never fired. Do not wire anywhere. See
+names beat peers (xs $+0.09; up-tape $+0.35).
+**`flatten_h5` × FPE-avoid = FAIL / do not wire.** Local 5d FPE board:
+IC_up −0.033 Sign_up **40%** (2/5) n=5; IC_down −0.131 Sign_down 100%
+n=10 (up-tape flips). d_RSI / d_mcap 5d inconclusive. Flatten leftover
+h1/h3 **THIN**. Live-shaped veto never fired. FPE stays on the 1d
+Theme Radar clock only. See
 [`OVERLAY_HORIZON_BT.md`](OVERLAY_HORIZON_BT.md).
 
 **Elevate: nothing cleared both-tape as a long on any matching hold.**
@@ -47,7 +50,7 @@ Autopsy: [`OVERLAY_AUTOPSY.md`](OVERLAY_AUTOPSY.md) ·
 | `theme_radar_1d` | 1 | Percent IC autopsy. **Fee-aware FAIL** (xs $+0.09). |
 | `flatten_h1` | 1 | Wish-list leftover. **THIN** FPE avoid (n=11, +$326). |
 | `flatten_h3` | 3 | Wish-list leftover. **THIN** (n=9, +$456). Paper `3d_*` ≠ this. |
-| `flatten_h5` | 5 | Wish-list leftover. **THIN** (n=11, +$723). **1d FPE does not apply.** |
+| `flatten_h5` | 5 | **FAIL / do not wire.** 5d FPE board: Sign_up **40%** (2/5) n=5; IC_down −0.131 n=10. |
 | `flatten_robust` | 3 (recycle) | **LIVE.** Untouched. Gated FPE avoid **FAIL** (never fired). |
 | `flatten_live_h1/h3/h5` | 1 / 3 / 5 | Gated tickets. 2 entry days. FPE **FAIL**. |
 
@@ -59,7 +62,7 @@ name-days on Theme Radar miss lists (graded high then lost) plus gold
 
 | Mechanism | Goal | target_sleeve | hold_sessions | score_clock | Exact Elite / AB / weather field (no new scrape) | Fired on miss baskets? | Veto, not fuel | Elevate? |
 |---|---|---|---:|---|---|---|---|---|
-| **Theme Radar fade vetoes** | **Avoid** (1d percent only) | `theme_radar_1d` | 1 | **1d open→close** | `Forward P/E` ≥ 35; `d_RSI` = Δ `Relative Strength Index (14)` (prior − prior-prior); `d_Market Cap` = % Δ `Market Cap`. Knobs: `HIGH_FPE=35`, `D_RSI_UP=5`, `D_MCAP_PCT=3` in `src/finviz_style_flags.py`. | **Optics** AAOI/COHR/LITE/GLW: high-FPE 10/76 (GLW 8/19). **AI power** GEV/VRT/ETN/PWR/CAT: 23/95 — `GEV` **19/19** (med FPE 39). **Copper** FCX/SCCO/TECK/ERO/HBM: **0/95** (ERO med 7.6). **Nuclear** CEG/VST/OKLO/SMR/CCJ: 19/95 — `CCJ` **19/19** (med 55); CEG/VST mid/cheap. **Gold hit** GDX/GLD/NEM/AEM: **0/76**. Combined `radar_hot` failed both-tape. | Percent IC both-tape YES. **Fee-aware FAIL** (peer $ xs +0.09). Flatten leftover THIN. Live veto never fired. Do not OR `radar_hot`. **Do not wire.** | **NO** — fades are not buy-rank fuel. Keep did not PASS the fee bar. |
+| **Theme Radar fade vetoes** | **Avoid** (1d percent only) | `theme_radar_1d` | 1 | **1d open→close** | `Forward P/E` ≥ 35; `d_RSI` = Δ `Relative Strength Index (14)` (prior − prior-prior); `d_Market Cap` = % Δ `Market Cap`. Knobs: `HIGH_FPE=35`, `D_RSI_UP=5`, `D_MCAP_PCT=3` in `src/finviz_style_flags.py`. | **Optics** AAOI/COHR/LITE/GLW: high-FPE 10/76 (GLW 8/19). **AI power** GEV/VRT/ETN/PWR/CAT: 23/95 — `GEV` **19/19** (med FPE 39). **Copper** FCX/SCCO/TECK/ERO/HBM: **0/95** (ERO med 7.6). **Nuclear** CEG/VST/OKLO/SMR/CCJ: 19/95 — `CCJ` **19/19** (med 55); CEG/VST mid/cheap. **Gold hit** GDX/GLD/NEM/AEM: **0/76**. Combined `radar_hot` failed both-tape. | Percent IC both-tape YES on **1d only**. **Fee-aware FAIL**. **`flatten_h5` × FPE = FAIL** (5d Sign_up 40% 2/5 n=5; IC_down −0.131 n=10). d_RSI/d_mcap 5d inconclusive. Do not OR `radar_hot`. **Do not wire.** | **NO** — fades are not buy-rank fuel. Keep did not PASS. |
 | **CANSLIM** (`KhoiUna/python-canslim`) | **Expand** — *not* Elevate | `theme_radar_1d` | 1 | 1d open→close | Elite EPS/sales YoY+QoQ. Weak ROE ≠ `Return on Invested Capital`. Do **not** scrape Macrotrends. | Swarm "Yes Optics/AI/Nuclear". **In-repo: 0/76 · 0/95 · 0/95 · copper 11/95 then lost.** Panel up xs **−0.35**. | Incomplete CANSLIM. | **NO** — dies on 1d up tapes. Reject until scored on matching hold. |
 | **3WT / cup** (`rmtech1/canslim_tightweek_scanner`) | **Expand** — *not* Elevate | `theme_radar_1d` | 1 | 1d open→close | `52-Week High` + EPS QoQ. Prior `Relative Volume` only. | Letter N not a scored overlay. Full CANSLIM fire on those baskets = **0**. | No cup scrape. | **NO**. |
 | **Magic Formula** (`amladik/Stock-Screener`) | **Expand** / cheap≠long | `theme_radar_1d` | 1 | 1d open→close | `Income` / `Enterprise Value`; ROC = `Return on Invested Capital`; `Market Cap`. 1/PE ≠ EBIT. | **No** — 0/437. Cheap copper still lost. | Don't promote cheap. | **NO** on any hold. |
@@ -103,7 +106,7 @@ Harness: `python3 -m src.overlay_horizon_bt --write` →
 | `theme_radar_1d` | 1 | 1d open→close + Futubull | Percent IC both-tape YES. | **FAIL** — $ xs vs peer +0.09 (up-tape +0.35). | n/a (this is the 1d clock) |
 | `flatten_h1` | 1 | leftover min-hold 1 + Futubull | Wish-list ≠ live tickets. | **THIN** — n=11, 0 SPY-down, leftover +$326. | **No.** |
 | `flatten_h3` | 3 | leftover min-hold 3 + Futubull | Paper `3d_*` is blotter, not this panel. | **THIN** — n=9, leftover +$456. | **No.** |
-| `flatten_h5` | 5 | leftover min-hold 5 + Futubull | 1d FPE does not apply. | **THIN** — n=11, leftover +$723. | **No.** |
+| `flatten_h5` | 5 | leftover min-hold 5 + Futubull | 1d FPE does not apply. | **FAIL** — 5d board IC_up −0.033 Sign_up **40%** (2/5) n=5; IC_down −0.131 Sign_down 100% n=10. Do not wire. | **No.** |
 | `flatten_robust` | 3 (recycle) | live 3d size-book + flatten clock | **LIVE. Untouched.** | **FAIL** — gated gold 08-20/21, veto never fired. | **No.** |
 | `flatten_live_h1` | 1 | gated 09:30 tickets | 2 entry days | **FAIL** — veto never fired. | **No.** |
 | `flatten_live_h3` | 3 | gated 09:30 tickets | 2 entry days | **FAIL** — veto never fired. | **No.** |
@@ -566,9 +569,9 @@ Theme Radar (Elite headers, prior vintage) — **veto candidates, not buy-rank f
 
 | Factor | Exact header / math | Role |
 |---|---|---|
-| high Forward P/E | `Forward P/E` ≥ 35 on **prior** `data/exports/finviz_{prior}.csv` | **Avoid on `theme_radar_1d` only** (n=4827, xs −0.09). **Not** `flatten_h5` / `flatten_robust` until re-mine |
-| d_RSI | `Relative Strength Index (14)`[prior] − same[prior-prior] | Veto *candidate*. Combined with d_mcap **failed** both-tape. Do not feed a long rank. |
-| d_Market Cap | 100 × (`Market Cap`[prior] / `Market Cap`[prior-prior] − 1) | Same. 08-14 jumps look like unit/CA noise |
+| high Forward P/E | `Forward P/E` ≥ 35 on **prior** `data/exports/finviz_{prior}.csv` | **Avoid on `theme_radar_1d` only** (n=4827, xs −0.09). **`flatten_h5` FAIL** — 5d IC_up −0.033 Sign_up 40% (2/5) n=5; IC_down −0.131 n=10. Do not wire. |
+| d_RSI | `Relative Strength Index (14)`[prior] − same[prior-prior] | Veto *candidate*. 1d both-tape NO. **5d inconclusive.** Do not feed a long rank. Do not mine on `flatten_h5`. |
+| d_Market Cap | 100 × (`Market Cap`[prior] / `Market Cap`[prior-prior] − 1) | Same. 1d both-tape NO. **5d inconclusive.** 08-14 jumps look like unit/CA noise |
 | cheap FPE | 0 < `Forward P/E` ≤ 15 | **Not** an elevate. Small both-tape xs (+0.15) on 35% of the panel = "not expensive", not a rescue |
 
 Optional columns (emitted by `src/finviz_style_flags.py`, **not** live gates):

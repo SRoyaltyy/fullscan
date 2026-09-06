@@ -48,6 +48,64 @@ TAPE_EPS = 0.30
 FPE_SWEEP = (35.0, 40.0, 50.0)
 REGIME_SWEEP = ("all", "morn_up", "s_nonneg")
 
+# Local Theme Radar 5d FPE board (war room). Authoritative for flatten_h5.
+# Up-tape sign 40% (2/5) — FAIL both-tape. Do not wire. Do not re-mine FPE on 5d.
+LOCAL_5D_FPE_BOARD = {
+    "source": "theme_radar_5d_fpe_board",
+    "target_sleeve": "flatten_h5",
+    "hold_sessions": 5,
+    "score_clock": "5d Theme Radar FPE IC",
+    "fpe": {
+        "ic_up": -0.033,
+        "sign_up": 0.40,
+        "sign_up_frac": "2/5",
+        "n_up": 5,
+        "ic_down": -0.131,
+        "sign_down": 1.00,
+        "n_down": 10,
+        "both_tape": False,
+        "verdict": "FAIL",
+        "reason": (
+            "Up-tape flips (Sign_up 40%, 2/5, n=5). "
+            "Do not add both-tape 5d FPE Avoid to flatten_h5."
+        ),
+    },
+    "d_rsi": {"verdict": "INCONCLUSIVE", "clock": "5d"},
+    "d_mcap": {"verdict": "INCONCLUSIVE", "clock": "5d"},
+}
+
+
+def fpe_clock_allowed(sleeve: str) -> bool:
+    """FPE Avoid is a 1d Theme Radar signal. flatten_h5 is closed."""
+    return sleeve == "theme_radar_1d"
+
+
+def stamp_local_5d_board(rows: list[dict]) -> list[dict]:
+    """Override leftover THIN on flatten_h5 with the local 5d IC FAIL."""
+    fpe = LOCAL_5D_FPE_BOARD["fpe"]
+    why = (
+        f"Theme Radar 5d FPE board: IC_up {fpe['ic_up']:+.3f} "
+        f"Sign_up {100 * fpe['sign_up']:.0f}% ({fpe['sign_up_frac']}) "
+        f"n={fpe['n_up']}; IC_down {fpe['ic_down']:+.3f} "
+        f"Sign_down {100 * fpe['sign_down']:.0f}% n={fpe['n_down']}. "
+        f"{fpe['reason']}"
+    )
+    for r in rows:
+        if r.get("sleeve") != "flatten_h5":
+            continue
+        gate = dict(r.get("gate") or {})
+        leftover = gate.get("excess_usd")
+        gate["verdict"] = "FAIL"
+        gate["reasons"] = [why]
+        if leftover is not None:
+            gate["reasons"].append(
+                f"leftover $ was {leftover:+.2f} (thin-n, not a rescue)"
+            )
+        gate["local_5d_board"] = LOCAL_5D_FPE_BOARD
+        r["gate"] = gate
+    return rows
+
+
 SLEEVES = (
     {
         "name": "theme_radar_1d",
@@ -873,6 +931,8 @@ def run(cut: float = 35.0, regime: str = "all",
         if chosen:
             picked.append(chosen)
 
+    stamp_local_5d_board(picked)
+    stamp_local_5d_board(results)
     any_pass = any(r["gate"]["verdict"] == "PASS" for r in picked)
     return {
         "generated_note": "research only · live flatten_robust untouched",
@@ -881,6 +941,9 @@ def run(cut: float = 35.0, regime: str = "all",
         "feature": "prior Elite Forward P/E only (date < D)",
         "any_pass": any_pass,
         "default_cut": 35.0,
+        "local_5d_fpe_board": LOCAL_5D_FPE_BOARD,
+        "fpe_clocks_open": ["theme_radar_1d"],
+        "fpe_clocks_closed": ["flatten_h5"],
         "results": results,
         "picked": picked,
         "n_flatten_days": len(flatten_days),
@@ -954,7 +1017,30 @@ def render(payload: dict) -> str:
         why = "; ".join(r["gate"].get("reasons") or [])
         lines.append(f"- `{r['sleeve']}` **{r['gate']['verdict']}** — {why}.")
 
+    board = payload.get("local_5d_fpe_board") or LOCAL_5D_FPE_BOARD
+    fpe = board["fpe"]
     lines += [
+        "",
+        "## Theme Radar 5d FPE board (local) — `flatten_h5` closed",
+        "",
+        "Authoritative IC for a 5-session FPE Avoid. Leftover $ on "
+        "`flatten_h5` is **not** a rescue. FPE is a **1d Theme Radar** "
+        "signal; do not keep mining it on the 5d clock.",
+        "",
+        "| factor | clock | IC_up | Sign_up | n_up | IC_down | Sign_down | n_down | both-tape | verdict |",
+        "|---|---|---:|---:|---:|---:|---:|---:|---|---|",
+        f"| Forward P/E ≥ 35 | 5d Theme Radar | {fpe['ic_up']:+.3f} | "
+        f"**{100 * fpe['sign_up']:.0f}%** ({fpe['sign_up_frac']}) | "
+        f"{fpe['n_up']} | {fpe['ic_down']:+.3f} | "
+        f"{100 * fpe['sign_down']:.0f}% | {fpe['n_down']} | "
+        f"{'YES' if fpe['both_tape'] else '**NO** (up flips)'} | "
+        f"**{fpe['verdict']}** |",
+        "| d_RSI | 5d Theme Radar | — | — | — | — | — | — | — | "
+        f"**{board['d_rsi']['verdict']}** |",
+        "| d_Market Cap | 5d Theme Radar | — | — | — | — | — | — | — | "
+        f"**{board['d_mcap']['verdict']}** |",
+        "",
+        f"{fpe['reason']} `flatten_h5` × FPE-avoid = **FAIL / do not wire.**",
         "",
         "## Full sweep (iterate knobs — do not cherrypick a FAIL default)",
         "",
@@ -1013,22 +1099,21 @@ def render(payload: dict) -> str:
         lines.append(
             "Clean null. Theme Radar 1d percent fade (overlay xs −0.09) "
             "**does not survive** Futubull $ peer-excess (xs $+0.09; "
-            "up-tape xs $+0.35). Flatten leftover books print "
-            "+$326 / +$456 / +$723 vs matched $10k baselines, but "
-            "n=9–11 avoided picks, **0 SPY-down** avoided entries, and "
-            "every skip sits on io/HOLD mornings — live-shaped books "
-            "never fired the veto (gold 08-20/21). Sweep FPE 40/50 × "
+            "up-tape xs $+0.35). Local 5d FPE board **FAIL**s both-tape "
+            "on `flatten_h5` (Sign_up **40%** 2/5 n=5; IC_down −0.131 "
+            "n=10). Flatten leftover +$326 / +$456 / +$723 stays thin "
+            "and is not a rescue. Live-shaped veto never fired. "
+            "d_RSI / d_mcap 5d inconclusive. Sweep FPE 40/50 × "
             "morning-up / S≥0 did not clear the bar."
         )
         lines.append("")
         lines.append(
-            "**Next smallest experiment:** do **not** drop the FPE cut "
-            "or harvest GEV/CCJ lists. Pre-register FPE≥35 on the "
-            "`flatten_h1` wish-list unit clock; wait until avoided n≥20 "
-            "on realized SPY-up **and** SPY-down (or morning-weather "
-            "up **and** down) **before** looking at leftover $. If the "
-            "next book-era still cannot fill both tapes, drop the "
-            "patch. Do not paste 1d IC onto h5. Elevate stays closed."
+            "**Next smallest experiment:** FPE Avoid stays on the "
+            "**1d Theme Radar clock only** (already fee-aware FAIL). "
+            "Do **not** continue FPE / d_RSI / d_mcap mining on "
+            "`flatten_h5`. Other Keep candidates only on their tagged "
+            "sleeves. Do not drop the FPE cut or harvest GEV/CCJ lists. "
+            "Elevate stays closed. No live wire."
         )
     lines += [
         "",
@@ -1045,6 +1130,11 @@ def render(payload: dict) -> str:
 
 def write(payload: dict | None = None) -> dict:
     payload = payload or run()
+    stamp_local_5d_board(payload.get("picked") or [])
+    stamp_local_5d_board(payload.get("results") or [])
+    payload["local_5d_fpe_board"] = LOCAL_5D_FPE_BOARD
+    payload["fpe_clocks_open"] = ["theme_radar_1d"]
+    payload["fpe_clocks_closed"] = ["flatten_h5"]
     OUT_JSON.write_text(json.dumps(payload, indent=2, default=str), encoding="utf-8")
     OUT_MD.write_text(render(payload), encoding="utf-8")
     return payload

@@ -482,14 +482,14 @@ def _horizon_checklist_section() -> list[str]:
         "| `theme_radar_1d` | 1 | 1d open→close + fees | Percent IC both-tape YES (this autopsy). | **FAIL** — after Futubull, avoided $ xs vs peer **+0.09** (up-tape +0.35). Not an avoid. | n/a |",
         "| `flatten_h1` | 1 | leftover min-hold 1 + fees | Wish-list ≠ live. | **THIN** — n=11, 0 SPY-down, leftover +$326. Do not promote. | **No.** |",
         "| `flatten_h3` | 3 | leftover min-hold 3 + fees | Wish-list ≠ live. | **THIN** — n=9, leftover +$456. | **No.** |",
-        "| `flatten_h5` | 5 | leftover min-hold 5 + fees | 1d FPE does not apply. | **THIN** — n=11, leftover +$723. | **No.** |",
+        "| `flatten_h5` | 5 | leftover min-hold 5 + fees | 1d FPE does not apply. | **FAIL** — 5d FPE board up-tape flips: IC_up −0.033 Sign_up **40%** (2/5) n=5; IC_down −0.131 Sign_down 100% n=10. Do not wire. Leftover +$723 is not a rescue. | **No.** |",
         "| `flatten_robust` | 3 (recycle) | live 3d size-book + flatten clock | **LIVE. Untouched.** | **FAIL** — gated 08-20/21 gold, veto never fired. | **No.** |",
         "| `flatten_live_h1/h3/h5` | 1 / 3 / 5 | gated tickets | thin-n (2 entry days) | **FAIL** — veto never fired. | **No.** |",
         "",
-        "Keep did **not** clear a PASS. Elevate stays rejected. "
-        "Next smallest experiment is in `OVERLAY_HORIZON_BT.md` — do not "
-        "drop the FPE cut or harvest name lists. Do not write "
-        "`LIVE_POLICY`.",
+        "Keep did **not** clear a PASS. `flatten_h5` × FPE-avoid = "
+        "**FAIL / do not wire** (5d board, up-tape flips). FPE stays on "
+        "the 1d Theme Radar clock only. d_RSI / d_mcap 5d inconclusive. "
+        "Elevate stays rejected. Do not write `LIVE_POLICY`.",
     ]
 
 
@@ -602,8 +602,8 @@ def render(payload: dict) -> str:
         "Theme Radar: **high `Forward P/E` fades both tapes on the 1d "
         "open→close clock**. Cheap / Magic Formula is **not** an auto long. "
         "This panel is **`theme_radar_1d`** — it does **not** auto-apply to "
-        "`flatten_h5` or live `flatten_robust` until a matching-hold re-mine "
-        "clears both-tape.",
+        "`flatten_h5` or live `flatten_robust`. The 5d FPE re-mine "
+        "**failed both-tape** (Sign_up 40%). Do not wire.",
         "",
         "## Ranked findings",
         "",
@@ -616,9 +616,12 @@ def render(payload: dict) -> str:
     lines.append(
         f"{n_find + 1}. **Fee-aware KEEP re-mine:** `radar_high_fpe` "
         "fails Futubull $ peer-excess on `theme_radar_1d` (xs $+0.09; "
-        "up-tape $+0.35). Flatten leftover +$326–$723 is THIN "
-        "(n=9–11, 0 SPY-down). Live-shaped veto never fired. "
-        "See [`OVERLAY_HORIZON_BT.md`](OVERLAY_HORIZON_BT.md). "
+        "up-tape $+0.35). **`flatten_h5` × FPE-avoid = FAIL** — local "
+        "5d board IC_up −0.033 Sign_up **40%** (2/5) n=5; IC_down "
+        "−0.131 Sign_down 100% n=10 (up-tape flips). Do not wire. "
+        "d_RSI / d_mcap 5d inconclusive. Leftover h1/h3 THIN. "
+        "Live-shaped veto never fired. See "
+        "[`OVERLAY_HORIZON_BT.md`](OVERLAY_HORIZON_BT.md). "
         "Elevate stays closed. No live wire."
     )
     lines += [
@@ -757,8 +760,8 @@ def render(payload: dict) -> str:
         "- Invent scrapes (OpenBB SEC, Zipline data, qlib preds).",
         "- Promote soft 🚨∧fade or optics/AI heat-sit on n=1.",
         "- Elevate on CANSLIM A∧S or gold-miner style without a both-tape bar.",
-        "- Copy 1d Theme Radar FPE onto `flatten_h5` or `flatten_robust` "
-        "without a matching-hold re-mine.",
+        "- Copy 1d Theme Radar FPE onto `flatten_h5` or `flatten_robust`. "
+        "The 5d board **failed both-tape**. Do not wire.",
         "- Elevate on a sleeve whose hold was never scored.",
         "- Edit `LIVE_POLICY` or `flatten_robust`.",
         "",
@@ -919,8 +922,8 @@ def run(write: bool = False) -> dict:
     findings.append(
         "**Strategy-native:** `radar_high_fpe` / optional FPE≥35 are the "
         "**1d Theme Radar clock** (`theme_radar_1d`, open→close). They do "
-        "**not** auto-apply to `flatten_h5` or live `flatten_robust` until "
-        "a matching-hold re-mine clears both-tape. Reject elevates unless "
+        "**not** auto-apply to `flatten_h5` or live `flatten_robust`. The "
+        "matching-hold 5d re-mine **failed both-tape**. Reject elevates unless "
         "scored on the matching hold. See §6."
     )
     findings.append(

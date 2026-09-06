@@ -24,7 +24,7 @@ Fill = 09:30 `Open` · whole shares · [`futubull_fees.json`](../00_grounding/fu
 | `theme_radar_1d` | 1 | 1d open→close + Futubull | 4535 | 31.5% / 31.4% | +0.09 | -0.01 | 0.0% | 31.6% | NO | **FAIL** |
 | `flatten_h1` | 1 | 09:30 leftover · min-hold 1 + fees | 11 | 18.2% / 54.7% | -8.95 | +326.05 | -2.0% | 55.9% | thin-n | **THIN** |
 | `flatten_h3` | 3 | 09:30 leftover · min-hold 3 + fees | 9 | 44.4% / 61.5% | -35.23 | +456.31 | -2.1% | 51.0% | thin-n | **THIN** |
-| `flatten_h5` | 5 | 09:30 leftover · min-hold 5 + fees | 11 | 45.5% / 52.9% | -30.93 | +722.58 | -1.6% | 49.7% | thin-n | **THIN** |
+| `flatten_h5` | 5 | 09:30 leftover · min-hold 5 + fees | 11 | 45.5% / 52.9% | -30.93 | +722.58 | -1.6% | 49.7% | thin-n | **FAIL** |
 | `flatten_live_h5` | 5 | gated leftover · min-hold 5 + fees | 0 | — / 37.5% | — | +0.00 | -0.3% | 0.0% | thin-n | **FAIL** |
 | `flatten_robust_shaped` | 3 | gated leftover · min-hold 3 (live-shaped, not LIVE) | 0 | — / 43.8% | — | +0.00 | -0.3% | 0.0% | thin-n | **FAIL** |
 
@@ -33,9 +33,21 @@ Fill = 09:30 `Open` · whole shares · [`futubull_fees.json`](../00_grounding/fu
 - `theme_radar_1d` **FAIL** — avoided names beat peers after fees (xs $+0.09) — not an avoid.
 - `flatten_h1` **THIN** — thin-n — cannot claim both-tape.
 - `flatten_h3` **THIN** — thin-n — cannot claim both-tape.
-- `flatten_h5` **THIN** — thin-n — cannot claim both-tape.
+- `flatten_h5` **FAIL** — Theme Radar 5d FPE board: IC_up -0.033 Sign_up 40% (2/5) n=5; IC_down -0.131 Sign_down 100% n=10. Up-tape flips (Sign_up 40%, 2/5, n=5). Do not add both-tape 5d FPE Avoid to flatten_h5.; leftover $ was +722.58 (thin-n, not a rescue).
 - `flatten_live_h5` **FAIL** — veto never fired.
 - `flatten_robust_shaped` **FAIL** — veto never fired.
+
+## Theme Radar 5d FPE board (local) — `flatten_h5` closed
+
+Authoritative IC for a 5-session FPE Avoid. Leftover $ on `flatten_h5` is **not** a rescue. FPE is a **1d Theme Radar** signal; do not keep mining it on the 5d clock.
+
+| factor | clock | IC_up | Sign_up | n_up | IC_down | Sign_down | n_down | both-tape | verdict |
+|---|---|---:|---:|---:|---:|---:|---:|---|---|
+| Forward P/E ≥ 35 | 5d Theme Radar | -0.033 | **40%** (2/5) | 5 | -0.131 | 100% | 10 | **NO** (up flips) | **FAIL** |
+| d_RSI | 5d Theme Radar | — | — | — | — | — | — | — | **INCONCLUSIVE** |
+| d_Market Cap | 5d Theme Radar | — | — | — | — | — | — | — | **INCONCLUSIVE** |
+
+Up-tape flips (Sign_up 40%, 2/5, n=5). Do not add both-tape 5d FPE Avoid to flatten_h5. `flatten_h5` × FPE-avoid = **FAIL / do not wire.**
 
 ## Full sweep (iterate knobs — do not cherrypick a FAIL default)
 
@@ -68,15 +80,15 @@ Fill = 09:30 `Open` · whole shares · [`futubull_fees.json`](../00_grounding/fu
 | `flatten_h3` | 50 | all | 6 | -34.07 | +230.10 | thin | 53.0% | THIN |
 | `flatten_h3` | 50 | morn_up | 4 | -52.84 | +340.74 | thin | 66.1% | THIN |
 | `flatten_h3` | 50 | s_nonneg | 4 | -47.60 | +269.23 | thin | 55.1% | THIN |
-| `flatten_h5` | 35 | all | 11 | -30.93 | +722.58 | thin | 49.7% | THIN |
-| `flatten_h5` | 35 | morn_up | 6 | -28.85 | +772.04 | thin | 50.7% | THIN |
-| `flatten_h5` | 35 | s_nonneg | 7 | -29.17 | +771.06 | thin | 50.7% | THIN |
-| `flatten_h5` | 40 | all | 11 | -30.93 | +722.58 | thin | 49.7% | THIN |
-| `flatten_h5` | 40 | morn_up | 6 | -28.85 | +772.04 | thin | 50.7% | THIN |
-| `flatten_h5` | 40 | s_nonneg | 7 | -29.17 | +771.06 | thin | 50.7% | THIN |
-| `flatten_h5` | 50 | all | 7 | -26.19 | +570.80 | thin | 35.6% | THIN |
-| `flatten_h5` | 50 | morn_up | 4 | -32.15 | +491.30 | thin | 52.5% | THIN |
-| `flatten_h5` | 50 | s_nonneg | 4 | -29.72 | +614.38 | thin | 37.0% | THIN |
+| `flatten_h5` | 35 | all | 11 | -30.93 | +722.58 | thin | 49.7% | FAIL |
+| `flatten_h5` | 35 | morn_up | 6 | -28.85 | +772.04 | thin | 50.7% | FAIL |
+| `flatten_h5` | 35 | s_nonneg | 7 | -29.17 | +771.06 | thin | 50.7% | FAIL |
+| `flatten_h5` | 40 | all | 11 | -30.93 | +722.58 | thin | 49.7% | FAIL |
+| `flatten_h5` | 40 | morn_up | 6 | -28.85 | +772.04 | thin | 50.7% | FAIL |
+| `flatten_h5` | 40 | s_nonneg | 7 | -29.17 | +771.06 | thin | 50.7% | FAIL |
+| `flatten_h5` | 50 | all | 7 | -26.19 | +570.80 | thin | 35.6% | FAIL |
+| `flatten_h5` | 50 | morn_up | 4 | -32.15 | +491.30 | thin | 52.5% | FAIL |
+| `flatten_h5` | 50 | s_nonneg | 4 | -29.72 | +614.38 | thin | 37.0% | FAIL |
 | `flatten_live_h5` | 35 | all | 0 | — | +0.00 | thin | 0.0% | FAIL |
 | `flatten_live_h5` | 35 | morn_up | 0 | — | +0.00 | thin | 0.0% | FAIL |
 | `flatten_live_h5` | 35 | s_nonneg | 0 | — | +0.00 | thin | 0.0% | FAIL |
@@ -106,9 +118,9 @@ IREN / HIMS / TNDM (08-13), BTBT (08-14), HNST (08-17), INSP / CRMD (08-24 hard-
 
 ## Null / next smallest experiment
 
-Clean null. Theme Radar 1d percent fade (overlay xs −0.09) **does not survive** Futubull $ peer-excess (xs $+0.09; up-tape xs $+0.35). Flatten leftover books print +$326 / +$456 / +$723 vs matched $10k baselines, but n=9–11 avoided picks, **0 SPY-down** avoided entries, and every skip sits on io/HOLD mornings — live-shaped books never fired the veto (gold 08-20/21). Sweep FPE 40/50 × morning-up / S≥0 did not clear the bar.
+Clean null. Theme Radar 1d percent fade (overlay xs −0.09) **does not survive** Futubull $ peer-excess (xs $+0.09; up-tape xs $+0.35). Local 5d FPE board **FAIL**s both-tape on `flatten_h5` (Sign_up **40%** 2/5 n=5; IC_down −0.131 n=10). Flatten leftover +$326 / +$456 / +$723 stays thin and is not a rescue. Live-shaped veto never fired. d_RSI / d_mcap 5d inconclusive. Sweep FPE 40/50 × morning-up / S≥0 did not clear the bar.
 
-**Next smallest experiment:** do **not** drop the FPE cut or harvest GEV/CCJ lists. Pre-register FPE≥35 on the `flatten_h1` wish-list unit clock; wait until avoided n≥20 on realized SPY-up **and** SPY-down (or morning-weather up **and** down) **before** looking at leftover $. If the next book-era still cannot fill both tapes, drop the patch. Do not paste 1d IC onto h5. Elevate stays closed.
+**Next smallest experiment:** FPE Avoid stays on the **1d Theme Radar clock only** (already fee-aware FAIL). Do **not** continue FPE / d_RSI / d_mcap mining on `flatten_h5`. Other Keep candidates only on their tagged sleeves. Do not drop the FPE cut or harvest GEV/CCJ lists. Elevate stays closed. No live wire.
 
 ## Leak / live asserts
 

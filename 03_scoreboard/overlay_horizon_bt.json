@@ -10699,7 +10699,7 @@
       "max_dd": -0.0158,
       "n_avoided_picks": 13,
       "gate": {
-        "verdict": "THIN",
+        "verdict": "FAIL",
         "excess_usd": 722.5845,
         "concentration": {
           "top1": 0.3259,
@@ -10708,9 +10708,36 @@
           "reject": false
         },
         "reasons": [
-          "thin-n \u2014 cannot claim both-tape"
+          "Theme Radar 5d FPE board: IC_up -0.033 Sign_up 40% (2/5) n=5; IC_down -0.131 Sign_down 100% n=10. Up-tape flips (Sign_up 40%, 2/5, n=5). Do not add both-tape 5d FPE Avoid to flatten_h5.",
+          "leftover $ was +722.58 (thin-n, not a rescue)"
         ],
-        "book_kind": "leftover"
+        "book_kind": "leftover",
+        "local_5d_board": {
+          "source": "theme_radar_5d_fpe_board",
+          "target_sleeve": "flatten_h5",
+          "hold_sessions": 5,
+          "score_clock": "5d Theme Radar FPE IC",
+          "fpe": {
+            "ic_up": -0.033,
+            "sign_up": 0.4,
+            "sign_up_frac": "2/5",
+            "n_up": 5,
+            "ic_down": -0.131,
+            "sign_down": 1.0,
+            "n_down": 10,
+            "both_tape": false,
+            "verdict": "FAIL",
+            "reason": "Up-tape flips (Sign_up 40%, 2/5, n=5). Do not add both-tape 5d FPE Avoid to flatten_h5."
+          },
+          "d_rsi": {
+            "verdict": "INCONCLUSIVE",
+            "clock": "5d"
+          },
+          "d_mcap": {
+            "verdict": "INCONCLUSIVE",
+            "clock": "5d"
+          }
+        }
       },
       "n_unit": 98
     },
@@ -11147,7 +11174,7 @@
       "max_dd": -0.0133,
       "n_avoided_picks": 8,
       "gate": {
-        "verdict": "THIN",
+        "verdict": "FAIL",
         "excess_usd": 772.037,
         "concentration": {
           "top1": 0.3326,
@@ -11156,9 +11183,36 @@
           "reject": false
         },
         "reasons": [
-          "thin-n \u2014 cannot claim both-tape"
+          "Theme Radar 5d FPE board: IC_up -0.033 Sign_up 40% (2/5) n=5; IC_down -0.131 Sign_down 100% n=10. Up-tape flips (Sign_up 40%, 2/5, n=5). Do not add both-tape 5d FPE Avoid to flatten_h5.",
+          "leftover $ was +772.04 (thin-n, not a rescue)"
         ],
-        "book_kind": "leftover"
+        "book_kind": "leftover",
+        "local_5d_board": {
+          "source": "theme_radar_5d_fpe_board",
+          "target_sleeve": "flatten_h5",
+          "hold_sessions": 5,
+          "score_clock": "5d Theme Radar FPE IC",
+          "fpe": {
+            "ic_up": -0.033,
+            "sign_up": 0.4,
+            "sign_up_frac": "2/5",
+            "n_up": 5,
+            "ic_down": -0.131,
+            "sign_down": 1.0,
+            "n_down": 10,
+            "both_tape": false,
+            "verdict": "FAIL",
+            "reason": "Up-tape flips (Sign_up 40%, 2/5, n=5). Do not add both-tape 5d FPE Avoid to flatten_h5."
+          },
+          "d_rsi": {
+            "verdict": "INCONCLUSIVE",
+            "clock": "5d"
+          },
+          "d_mcap": {
+            "verdict": "INCONCLUSIVE",
+            "clock": "5d"
+          }
+        }
       },
       "n_unit": 98
     },
@@ -11595,7 +11649,7 @@
       "max_dd": -0.0134,
       "n_avoided_picks": 9,
       "gate": {
-        "verdict": "THIN",
+        "verdict": "FAIL",
         "excess_usd": 771.059,
         "concentration": {
           "top1": 0.3325,
@@ -11604,9 +11658,36 @@
           "reject": false
         },
         "reasons": [
-          "thin-n \u2014 cannot claim both-tape"
+          "Theme Radar 5d FPE board: IC_up -0.033 Sign_up 40% (2/5) n=5; IC_down -0.131 Sign_down 100% n=10. Up-tape flips (Sign_up 40%, 2/5, n=5). Do not add both-tape 5d FPE Avoid to flatten_h5.",
+          "leftover $ was +771.06 (thin-n, not a rescue)"
         ],
-        "book_kind": "leftover"
+        "book_kind": "leftover",
+        "local_5d_board": {
+          "source": "theme_radar_5d_fpe_board",
+          "target_sleeve": "flatten_h5",
+          "hold_sessions": 5,
+          "score_clock": "5d Theme Radar FPE IC",
+          "fpe": {
+            "ic_up": -0.033,
+            "sign_up": 0.4,
+            "sign_up_frac": "2/5",
+            "n_up": 5,
+            "ic_down": -0.131,
+            "sign_down": 1.0,
+            "n_down": 10,
+            "both_tape": false,
+            "verdict": "FAIL",
+            "reason": "Up-tape flips (Sign_up 40%, 2/5, n=5). Do not add both-tape 5d FPE Avoid to flatten_h5."
+          },
+          "d_rsi": {
+            "verdict": "INCONCLUSIVE",
+            "clock": "5d"
+          },
+          "d_mcap": {
+            "verdict": "INCONCLUSIVE",
+            "clock": "5d"
+          }
+        }
       },
       "n_unit": 98
     },
@@ -12043,7 +12124,7 @@
       "max_dd": -0.0158,
       "n_avoided_picks": 13,
       "gate": {
-        "verdict": "THIN",
+        "verdict": "FAIL",
         "excess_usd": 722.5845,
         "concentration": {
           "top1": 0.3259,
@@ -12052,9 +12133,36 @@
           "reject": false
         },
         "reasons": [
-          "thin-n \u2014 cannot claim both-tape"
+          "Theme Radar 5d FPE board: IC_up -0.033 Sign_up 40% (2/5) n=5; IC_down -0.131 Sign_down 100% n=10. Up-tape flips (Sign_up 40%, 2/5, n=5). Do not add both-tape 5d FPE Avoid to flatten_h5.",
+          "leftover $ was +722.58 (thin-n, not a rescue)"
         ],
-        "book_kind": "leftover"
+        "book_kind": "leftover",
+        "local_5d_board": {
+          "source": "theme_radar_5d_fpe_board",
+          "target_sleeve": "flatten_h5",
+          "hold_sessions": 5,
+          "score_clock": "5d Theme Radar FPE IC",
+          "fpe": {
+            "ic_up": -0.033,
+            "sign_up": 0.4,
+            "sign_up_frac": "2/5",
+            "n_up": 5,
+            "ic_down": -0.131,
+            "sign_down": 1.0,
+            "n_down": 10,
+            "both_tape": false,
+            "verdict": "FAIL",
+            "reason": "Up-tape flips (Sign_up 40%, 2/5, n=5). Do not add both-tape 5d FPE Avoid to flatten_h5."
+          },
+          "d_rsi": {
+            "verdict": "INCONCLUSIVE",
+            "clock": "5d"
+          },
+          "d_mcap": {
+            "verdict": "INCONCLUSIVE",
+            "clock": "5d"
+          }
+        }
       },
       "n_unit": 98
     },
@@ -12491,7 +12599,7 @@
       "max_dd": -0.0133,
       "n_avoided_picks": 8,
       "gate": {
-        "verdict": "THIN",
+        "verdict": "FAIL",
         "excess_usd": 772.037,
         "concentration": {
           "top1": 0.3326,
@@ -12500,9 +12608,36 @@
           "reject": false
         },
         "reasons": [
-          "thin-n \u2014 cannot claim both-tape"
+          "Theme Radar 5d FPE board: IC_up -0.033 Sign_up 40% (2/5) n=5; IC_down -0.131 Sign_down 100% n=10. Up-tape flips (Sign_up 40%, 2/5, n=5). Do not add both-tape 5d FPE Avoid to flatten_h5.",
+          "leftover $ was +772.04 (thin-n, not a rescue)"
         ],
-        "book_kind": "leftover"
+        "book_kind": "leftover",
+        "local_5d_board": {
+          "source": "theme_radar_5d_fpe_board",
+          "target_sleeve": "flatten_h5",
+          "hold_sessions": 5,
+          "score_clock": "5d Theme Radar FPE IC",
+          "fpe": {
+            "ic_up": -0.033,
+            "sign_up": 0.4,
+            "sign_up_frac": "2/5",
+            "n_up": 5,
+            "ic_down": -0.131,
+            "sign_down": 1.0,
+            "n_down": 10,
+            "both_tape": false,
+            "verdict": "FAIL",
+            "reason": "Up-tape flips (Sign_up 40%, 2/5, n=5). Do not add both-tape 5d FPE Avoid to flatten_h5."
+          },
+          "d_rsi": {
+            "verdict": "INCONCLUSIVE",
+            "clock": "5d"
+          },
+          "d_mcap": {
+            "verdict": "INCONCLUSIVE",
+            "clock": "5d"
+          }
+        }
       },
       "n_unit": 98
     },
@@ -12939,7 +13074,7 @@
       "max_dd": -0.0134,
       "n_avoided_picks": 9,
       "gate": {
-        "verdict": "THIN",
+        "verdict": "FAIL",
         "excess_usd": 771.059,
         "concentration": {
           "top1": 0.3325,
@@ -12948,9 +13083,36 @@
           "reject": false
         },
         "reasons": [
-          "thin-n \u2014 cannot claim both-tape"
+          "Theme Radar 5d FPE board: IC_up -0.033 Sign_up 40% (2/5) n=5; IC_down -0.131 Sign_down 100% n=10. Up-tape flips (Sign_up 40%, 2/5, n=5). Do not add both-tape 5d FPE Avoid to flatten_h5.",
+          "leftover $ was +771.06 (thin-n, not a rescue)"
         ],
-        "book_kind": "leftover"
+        "book_kind": "leftover",
+        "local_5d_board": {
+          "source": "theme_radar_5d_fpe_board",
+          "target_sleeve": "flatten_h5",
+          "hold_sessions": 5,
+          "score_clock": "5d Theme Radar FPE IC",
+          "fpe": {
+            "ic_up": -0.033,
+            "sign_up": 0.4,
+            "sign_up_frac": "2/5",
+            "n_up": 5,
+            "ic_down": -0.131,
+            "sign_down": 1.0,
+            "n_down": 10,
+            "both_tape": false,
+            "verdict": "FAIL",
+            "reason": "Up-tape flips (Sign_up 40%, 2/5, n=5). Do not add both-tape 5d FPE Avoid to flatten_h5."
+          },
+          "d_rsi": {
+            "verdict": "INCONCLUSIVE",
+            "clock": "5d"
+          },
+          "d_mcap": {
+            "verdict": "INCONCLUSIVE",
+            "clock": "5d"
+          }
+        }
       },
       "n_unit": 98
     },
@@ -13387,7 +13549,7 @@
       "max_dd": -0.0176,
       "n_avoided_picks": 8,
       "gate": {
-        "verdict": "THIN",
+        "verdict": "FAIL",
         "excess_usd": 570.7956,
         "concentration": {
           "top1": 0.1917,
@@ -13396,9 +13558,36 @@
           "reject": false
         },
         "reasons": [
-          "thin-n \u2014 cannot claim both-tape"
+          "Theme Radar 5d FPE board: IC_up -0.033 Sign_up 40% (2/5) n=5; IC_down -0.131 Sign_down 100% n=10. Up-tape flips (Sign_up 40%, 2/5, n=5). Do not add both-tape 5d FPE Avoid to flatten_h5.",
+          "leftover $ was +570.80 (thin-n, not a rescue)"
         ],
-        "book_kind": "leftover"
+        "book_kind": "leftover",
+        "local_5d_board": {
+          "source": "theme_radar_5d_fpe_board",
+          "target_sleeve": "flatten_h5",
+          "hold_sessions": 5,
+          "score_clock": "5d Theme Radar FPE IC",
+          "fpe": {
+            "ic_up": -0.033,
+            "sign_up": 0.4,
+            "sign_up_frac": "2/5",
+            "n_up": 5,
+            "ic_down": -0.131,
+            "sign_down": 1.0,
+            "n_down": 10,
+            "both_tape": false,
+            "verdict": "FAIL",
+            "reason": "Up-tape flips (Sign_up 40%, 2/5, n=5). Do not add both-tape 5d FPE Avoid to flatten_h5."
+          },
+          "d_rsi": {
+            "verdict": "INCONCLUSIVE",
+            "clock": "5d"
+          },
+          "d_mcap": {
+            "verdict": "INCONCLUSIVE",
+            "clock": "5d"
+          }
+        }
       },
       "n_unit": 98
     },
@@ -13826,7 +14015,7 @@
       "max_dd": -0.0133,
       "n_avoided_picks": 5,
       "gate": {
-        "verdict": "THIN",
+        "verdict": "FAIL",
         "excess_usd": 491.3025,
         "concentration": {
           "top1": 0.318,
@@ -13835,9 +14024,36 @@
           "reject": false
         },
         "reasons": [
-          "thin-n \u2014 cannot claim both-tape"
+          "Theme Radar 5d FPE board: IC_up -0.033 Sign_up 40% (2/5) n=5; IC_down -0.131 Sign_down 100% n=10. Up-tape flips (Sign_up 40%, 2/5, n=5). Do not add both-tape 5d FPE Avoid to flatten_h5.",
+          "leftover $ was +491.30 (thin-n, not a rescue)"
         ],
-        "book_kind": "leftover"
+        "book_kind": "leftover",
+        "local_5d_board": {
+          "source": "theme_radar_5d_fpe_board",
+          "target_sleeve": "flatten_h5",
+          "hold_sessions": 5,
+          "score_clock": "5d Theme Radar FPE IC",
+          "fpe": {
+            "ic_up": -0.033,
+            "sign_up": 0.4,
+            "sign_up_frac": "2/5",
+            "n_up": 5,
+            "ic_down": -0.131,
+            "sign_down": 1.0,
+            "n_down": 10,
+            "both_tape": false,
+            "verdict": "FAIL",
+            "reason": "Up-tape flips (Sign_up 40%, 2/5, n=5). Do not add both-tape 5d FPE Avoid to flatten_h5."
+          },
+          "d_rsi": {
+            "verdict": "INCONCLUSIVE",
+            "clock": "5d"
+          },
+          "d_mcap": {
+            "verdict": "INCONCLUSIVE",
+            "clock": "5d"
+          }
+        }
       },
       "n_unit": 98
     },
@@ -14265,7 +14481,7 @@
       "max_dd": -0.0176,
       "n_avoided_picks": 5,
       "gate": {
-        "verdict": "THIN",
+        "verdict": "FAIL",
         "excess_usd": 614.3846,
         "concentration": {
           "top1": 0.1992,
@@ -14274,9 +14490,36 @@
           "reject": false
         },
         "reasons": [
-          "thin-n \u2014 cannot claim both-tape"
+          "Theme Radar 5d FPE board: IC_up -0.033 Sign_up 40% (2/5) n=5; IC_down -0.131 Sign_down 100% n=10. Up-tape flips (Sign_up 40%, 2/5, n=5). Do not add both-tape 5d FPE Avoid to flatten_h5.",
+          "leftover $ was +614.38 (thin-n, not a rescue)"
         ],
-        "book_kind": "leftover"
+        "book_kind": "leftover",
+        "local_5d_board": {
+          "source": "theme_radar_5d_fpe_board",
+          "target_sleeve": "flatten_h5",
+          "hold_sessions": 5,
+          "score_clock": "5d Theme Radar FPE IC",
+          "fpe": {
+            "ic_up": -0.033,
+            "sign_up": 0.4,
+            "sign_up_frac": "2/5",
+            "n_up": 5,
+            "ic_down": -0.131,
+            "sign_down": 1.0,
+            "n_down": 10,
+            "both_tape": false,
+            "verdict": "FAIL",
+            "reason": "Up-tape flips (Sign_up 40%, 2/5, n=5). Do not add both-tape 5d FPE Avoid to flatten_h5."
+          },
+          "d_rsi": {
+            "verdict": "INCONCLUSIVE",
+            "clock": "5d"
+          },
+          "d_mcap": {
+            "verdict": "INCONCLUSIVE",
+            "clock": "5d"
+          }
+        }
       },
       "n_unit": 98
     },
@@ -23761,7 +24004,7 @@
       "max_dd": -0.0158,
       "n_avoided_picks": 13,
       "gate": {
-        "verdict": "THIN",
+        "verdict": "FAIL",
         "excess_usd": 722.5845,
         "concentration": {
           "top1": 0.3259,
@@ -23770,9 +24013,36 @@
           "reject": false
         },
         "reasons": [
-          "thin-n \u2014 cannot claim both-tape"
+          "Theme Radar 5d FPE board: IC_up -0.033 Sign_up 40% (2/5) n=5; IC_down -0.131 Sign_down 100% n=10. Up-tape flips (Sign_up 40%, 2/5, n=5). Do not add both-tape 5d FPE Avoid to flatten_h5.",
+          "leftover $ was +722.58 (thin-n, not a rescue)"
         ],
-        "book_kind": "leftover"
+        "book_kind": "leftover",
+        "local_5d_board": {
+          "source": "theme_radar_5d_fpe_board",
+          "target_sleeve": "flatten_h5",
+          "hold_sessions": 5,
+          "score_clock": "5d Theme Radar FPE IC",
+          "fpe": {
+            "ic_up": -0.033,
+            "sign_up": 0.4,
+            "sign_up_frac": "2/5",
+            "n_up": 5,
+            "ic_down": -0.131,
+            "sign_down": 1.0,
+            "n_down": 10,
+            "both_tape": false,
+            "verdict": "FAIL",
+            "reason": "Up-tape flips (Sign_up 40%, 2/5, n=5). Do not add both-tape 5d FPE Avoid to flatten_h5."
+          },
+          "d_rsi": {
+            "verdict": "INCONCLUSIVE",
+            "clock": "5d"
+          },
+          "d_mcap": {
+            "verdict": "INCONCLUSIVE",
+            "clock": "5d"
+          }
+        }
       },
       "n_unit": 98
     },
@@ -24656,5 +24926,37 @@
     }
   ],
   "n_flatten_days": 17,
-  "n_radar_days": 18
+  "n_radar_days": 18,
+  "local_5d_fpe_board": {
+    "source": "theme_radar_5d_fpe_board",
+    "target_sleeve": "flatten_h5",
+    "hold_sessions": 5,
+    "score_clock": "5d Theme Radar FPE IC",
+    "fpe": {
+      "ic_up": -0.033,
+      "sign_up": 0.4,
+      "sign_up_frac": "2/5",
+      "n_up": 5,
+      "ic_down": -0.131,
+      "sign_down": 1.0,
+      "n_down": 10,
+      "both_tape": false,
+      "verdict": "FAIL",
+      "reason": "Up-tape flips (Sign_up 40%, 2/5, n=5). Do not add both-tape 5d FPE Avoid to flatten_h5."
+    },
+    "d_rsi": {
+      "verdict": "INCONCLUSIVE",
+      "clock": "5d"
+    },
+    "d_mcap": {
+      "verdict": "INCONCLUSIVE",
+      "clock": "5d"
+    }
+  },
+  "fpe_clocks_open": [
+    "theme_radar_1d"
+  ],
+  "fpe_clocks_closed": [
+    "flatten_h5"
+  ]
 }

@@ -174,6 +174,35 @@ def test_both_tape_uses_peer_excess_not_absolute() -> None:
     assert st["tapes"]["up"]["xs"] > 0
 
 
+def test_local_5d_fpe_board_fails_flatten_h5() -> None:
+    b = oh.LOCAL_5D_FPE_BOARD
+    assert b["target_sleeve"] == "flatten_h5"
+    assert b["hold_sessions"] == 5
+    assert b["fpe"]["both_tape"] is False
+    assert b["fpe"]["n_up"] == 5
+    assert b["fpe"]["n_down"] == 10
+    assert b["fpe"]["sign_up"] == 0.40
+    assert b["fpe"]["ic_up"] == -0.033
+    assert b["fpe"]["ic_down"] == -0.131
+    assert b["fpe"]["verdict"] == "FAIL"
+    assert b["d_rsi"]["verdict"] == "INCONCLUSIVE"
+    assert b["d_mcap"]["verdict"] == "INCONCLUSIVE"
+    assert oh.fpe_clock_allowed("theme_radar_1d") is True
+    assert oh.fpe_clock_allowed("flatten_h5") is False
+    rec = {
+        "sleeve": "flatten_h5",
+        "gate": {"verdict": "THIN", "reasons": ["thin-n"], "excess_usd": 722.58},
+    }
+    oh.stamp_local_5d_board([rec])
+    assert rec["gate"]["verdict"] == "FAIL"
+    why = rec["gate"]["reasons"][0]
+    assert "40%" in why
+    assert "2/5" in why
+    assert "n=5" in why
+    assert "n=10" in why
+    assert "Do not add both-tape 5d FPE Avoid" in why
+
+
 def test_does_not_import_live_policy() -> None:
     text = Path(oh.__file__).read_text(encoding="utf-8")
     assert "LIVE_POLICY" not in text or "untouched" in text
@@ -195,8 +224,9 @@ def main() -> None:
     test_decide_pass_requires_tape_and_book_and_not_concentrated()
     test_decide_fail_when_avoided_beat_peers()
     test_both_tape_uses_peer_excess_not_absolute()
+    test_local_5d_fpe_board_fails_flatten_h5()
     test_does_not_import_live_policy()
-    print("test_overlay_horizon_bt: 12 ok")
+    print("test_overlay_horizon_bt: 13 ok")
 
 
 if __name__ == "__main__":

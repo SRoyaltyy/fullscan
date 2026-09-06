@@ -67,6 +67,8 @@ def test_horizon_checklist_blocks_1d_on_h5() -> None:
     assert "FAIL" in text
     assert "THIN" in text
     assert "OVERLAY_HORIZON_BT" in text
+    assert "40%" in text
+    assert "do not wire" in text.lower() or "Do not wire" in text
 
 
 def test_sift_fold_rejects_canslim_as_as_elevate() -> None:
