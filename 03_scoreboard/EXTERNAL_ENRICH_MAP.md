@@ -34,8 +34,11 @@ name-days on Theme Radar miss lists (graded high then lost) plus gold
 | **AlphaSift L1→L2 re-rank** | **Expand only** | Existing layers: `data/join/{D}_ranked.csv` `total_score` / `score_norm`; book `score_1d`; `data/feature_asof/{D}_feature_asof.csv` `join_rank` / `join` / `ab`. | Join top-quintile already high: optics 26/76 · AI 34/95 · **copper 48/95** · nuclear 26/95 · gold 29/76. L2 on the same layers would have kept them elevated, then they lost. | Do not feed fade columns into a buy re-rank. | **NO** — `total_score` is the existing ranker, not a rescue. Do not bump. |
 | **vectorbt sweeps** | **Expand only** | Wrap `factor_mine_book` 09:30 `open` + Futubull fees. `data/prices/ohlc.parquet` `(date,ticker)`. | Harness not written — **0 fires**. | N/A until scored on the both-tape bar. | **NO**. |
 | **Zipline cross-section** | **Expand only** | Same `ohlc.parquet` + PIT book. No Zipline pipeline in-repo. | **0 fires**. Thin / not wired. Do not pull Zipline data. | N/A. | **NO**. |
-| **OpenBB SEC / surprise** | **Expand** (thin-gap) | Elite already has `EPS Surprise`, `Revenue Surprise`, `Earnings Date`. AB `val_B01_eps_surprise` / `status_B01_eps_surprise`, B02, B17, B18. | No new OpenBB pull. Surprise headers present on names Finviz covers. OKLO/SMR/GDX/GLD often blank FPE — **do not invent 8-K scrapes**. | Same-day surprise on D is a leak. Prior vintage only. | **NO** — do not bump on a beat. |
-| **qlib / FinRL sidecars** | **Expand only** | `sidecars/qlib/`, `sidecars/finrl/`, `data/sidecars/{name}/{asof}/preds.parquet`. Join `ticker` + `asof_date` < D. | No sidecar preds on disk — **0 fires**. Bar not cleared. | N/A. | **NO**. |
+| **OpenBB** (`OpenBB-finance/OpenBB`) | **Expand** (thin-gap) — *not* Elevate | Elite already has `EPS Surprise`, `Revenue Surprise`, `Earnings Date`. AB B01/B02/B17/B18. Gaps only → `data/external/openbb/{dataset}/asof=prior/part.parquet` (`ext_*`). Partial vendor finviz ≠ Elite. | Swarm: maybe-weak. In-repo: **no new pull**. OKLO/SMR/GDX/GLD often blank FPE — do not invent 8-Ks. | Same-day surprise on D is a leak. Do not displace Elite+AB. | **NO** — gap router is not a rescue bump. AGPL. |
+| **MarketDataApp** (`MarketDataApp/sdk-py`) | **Expand** if options hole | Elite `Optionable`. Prior-close OI/IV only. Same asof cache as OpenBB (`data/external/mda/…`). | **No.** | Paid / tiny. Never overwrite Elite. | **NO**. |
+| **FinancialNewsAPI** (`financial-news-api-python`) | **Expand** news sidecar | Morning packet `01_daily/news/` first. Vendor news `asof < D` only. | **Candidate** — `s_news` silent on some books (08-27). Not a Theme Radar fade. | Paid; thin samples. Same-day stream = leak. | **NO**. |
+| **qlib** (`microsoft/qlib`) | **Expand** sidecar | PIT DB / Alpha158/360 / qrun / RD-Agent → `sidecars/qlib/` + `data/sidecars/qlib/{asof}/preds.parquet`. Gap US bars via OpenBB cache, not Yahoo. Parallels `factor_mine`. | **No.** 0 preds on disk. | Official dataset disabled; Yahoo/CN bias. Bar not cleared. | **NO**. |
+| **FinRL** (`AI4Finance-Foundation/FinRL`) | **Expand** later — *not* Avoid | Train on our PIT 09:30 open + Futubull blotter. `sidecars/finrl/`. | **No.** Price-layer duplicate. | Gym multi-vendor OHLCV / close reward = leak. Not an avoid overlay. | **NO**. |
 
 Kid one-liners for the same rows:
 
@@ -45,12 +48,12 @@ Kid one-liners for the same rows:
 | CANSLIM / MF | Old report-card stickers from columns we already have. Copper that printed CANSLIM still lost. |
 | Fail-any / ATR | Almost every homework sheet has a red mark; that is not a veto. ATR is how big a bite, not a theme bet. |
 | AlphaSift / `total_score` | Re-sorting the same line-up does not rescue the kids we already sat in front. |
-| vectorbt / Zipline / OpenBB / qlib / FinRL | Practice kitchen. Same 09:30 bell and fee jar, or they stay outside. |
+| vectorbt / Zipline / OpenBB / MDA / news / qlib / FinRL | Practice kitchen. Same 09:30 bell and fee jar, or they stay outside. OpenBB is a librarian, not a gold star. |
 
-Sift swarm (queued executor notes — `/workspace/sift_ai_data.md` and
-`/workspace/fullscan_autopsy_avoid_elevate.md` were **not on disk** when
-this was written; rows below are from those tables, scored against the
-in-repo autopsy). Autopsy source of truth:
+Sift swarm (executor notes). `/workspace/sift_ai_data.md` was **still
+missing on disk** when this drop was folded — the five AI/data rows are
+copied from the swarm table into the master table above and the
+crosswalk below. Autopsy source of truth:
 [`OVERLAY_AUTOPSY.md`](OVERLAY_AUTOPSY.md) §1–4 ·
 [`theme_radar_baskets.json`](theme_radar_baskets.json).
 
