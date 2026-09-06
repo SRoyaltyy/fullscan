@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rank residual — join top-N autopsy</title>
+<style>
+ :root{--bg:#0f1420;--card:#171e2e;--line:#262f45;--fg:#dfe6f2;--mut:#8b96ab;--pos:#4ade80;--neg:#f87171;--gold:#fbbf24}
+ *{box-sizing:border-box}
+ html,body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 -apple-system,Segoe UI,Roboto,sans-serif}
+ .wrap{max-width:1120px;margin:0 auto;padding:14px 12px 32px}
+ h1{font-size:20px;margin:0 0 4px}
+ h2{font-size:16px;margin:18px 0 8px;color:#aeb9cf}
+ .sub,.mut{color:var(--mut)}
+ .pos{color:var(--pos)}.neg{color:var(--neg)}.gold{color:var(--gold)}
+ .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0 0 10px}
+ .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px}
+ table{width:100%;border-collapse:collapse;font-size:13px}
+ th,td{padding:5px 6px;border-bottom:1px solid var(--line);text-align:right}
+ th{color:var(--mut);font-weight:600} td:first-child,th:first-child{text-align:left}
+ .pill{display:inline-block;border:1px solid var(--line);border-radius:8px;padding:2px 7px;margin:2px;font:12px/1.3 ui-monospace,Menlo,monospace}
+ a{color:#93c5fd}
+ .verdict{line-height:1.55}
+</style></head><body><div class="wrap">
+<h1>Rank residual mine</h1>
+<div class="sub" id="gen"></div>
+<div class="sub">Books:
+ <a href="../">paper book</a> ·
+ <a href="../factor-mine/">factor mine</a> ·
+ <a href="../down-day-mine/">down-day mine</a> ·
+ <a href="../sleeve-combine/">sleeve combine</a>
+</div>
+<p class="mut">Join's own ranked file — not an external screener. Some bad buys are still at #1–15 (incomplete Elite cards, Consumer Defensive China ADRs). Some high-conviction names sit in ranks 16–80. Live <code>flatten_robust</code> is untouched. CANSLIM / Magic Formula / Forward P/E / <code>total_score</code> re-sort stay out (Grok Bot already null'd them).</p>
+<div class="cards" id="cards"></div>
+<div class="card verdict" id="verdict"></div>
+<div class="card" id="clock"></div>
+<h2>Rank bands — 1d open→close</h2>
+<p class="mut">If ranks 16–30 beat ranks 1–15, the ranker is inverted. That band is a diagnosis, not a buy-16–30 recipe.</p>
+<div id="bands"></div>
+<h2>Avoid keepers — inside ranks 1–15</h2>
+<p class="mut">n≥40, lift ≤ −3pp vs the top-15 band, worse mean than the band. Same-day tape never picks.</p>
+<div id="avoid"></div>
+<h2>Elevate keepers — inside ranks 16–80</h2>
+<p class="mut">n≥40, lift ≥ +3pp vs the 16–80 band, positive mean and mean edge.</p>
+<div id="elev"></div>
+<h2>Patched top-8 vs raw join top-8</h2>
+<p class="mut"><code>skip_junk</code> drops incomplete / Consumer Defensive / China ADR and refills. <code>elev_hc</code> then puts Healthcare from ranks ≤80 first. Fee book is $10k / 8 names, Futubull both sides.</p>
+<div id="books"></div>
+<h2>Per-day book means</h2>
+<div id="daily"></div>
+<h2>Buried names the ranker parked mid-list</h2>
+<div id="buried"></div>
+<h2>Worst top-15 junk still printed</h2>
+<div id="junk"></div>
+<h2>How this is graded</h2>
+<ol class="mut">
+ <li>Universe is the morning <code>data/join/YYYY-MM-DD_ranked.csv</code>.</li>
+ <li>Outcome is same-session Finviz Change from Open. Today's Change% / Gap / RelVol / OHLC never pick.</li>
+ <li>Incomplete = earnsurp / rsi / ext missing on that morning card.</li>
+ <li>News Title is used only when News Time is strictly before 09:30 ET.</li>
+ <li>Both-tape splits use that session's SPY close-to-close (robustness, not a 09:30 gate).</li>
+ <li>Do not change <code>join_rules.json</code> or live flatten unless a keeper clears the bar and Cyrus asks to wire it.</li>
+</ol>
+</div>
+<script>
+const D = __DATA__;
+function pct(v){ if(v==null) return '—'; return (100*v).toFixed(1)+'%'; }
+function pp(v){ if(v==null) return '—'; return (v>=0?'+':'')+v.toFixed(1)+'pp'; }
+function oc(v){ if(v==null) return '—'; return (v>=0?'+':'')+(100*v).toFixed(2)+'%'; }
+function usd(v){ if(v==null) return '—'; return (v>=0?'+':'')+'$'+Number(v).toFixed(0); }
+function tbl(rows, cols){
+  if(!rows||!rows.length) return '<div class="mut">None cleared the keeper bar.</div>';
+  const head='<table><thead><tr>'+cols.map(c=>'<th>'+c[1]+'</th>').join('')+'</tr></thead><tbody>';
+  const body=rows.map(r=>{
+    return '<tr>'+cols.map(c=>{
+      const k=c[0], kind=c[2];
+      let v=r[k];
+      if(kind==='pct') v=pct(v);
+      else if(kind==='pp') v=pp(v);
+      else if(kind==='oc') v=oc(v);
+      else if(kind==='usd') v=usd(v);
+      else if(v==null) v='—';
+      const cls = (kind==='oc'||kind==='pp'||kind==='usd')
+        ? ((r[k]||0)>0?'pos':((r[k]||0)<0?'neg':'')) : (k==='feature'?'':'');
+      const txt = (k==='feature'||k==='ticker') ? '<code>'+v+'</code>' : v;
+      return '<td class="'+cls+'">'+txt+'</td>';
+    }).join('')+'</tr>';
+  }).join('');
+  return head+body+'</tbody></table>';
+}
+document.getElementById('gen').textContent =
+  (D.generated_at||'').slice(0,16).replace('T',' ')+' · '+
+  (D.window&&D.window.from||'')+' → '+(D.window&&D.window.to||'')+' · '+
+  (D.leak||'leak-free 09:30');
+const w=D.window||{};
+const b=D.bands||[];
+const t15=b.find(x=>x.band==='ranks_1_15')||{};
+const m30=b.find(x=>x.band==='ranks_16_30')||{};
+const raw=(D.books||{}).raw8||{};
+document.getElementById('cards').innerHTML = [
+  ['Sessions', w.n_sessions],
+  ['Name-days', w.n_name_days],
+  ['Top-15 mean', t15.mean],
+  ['16–30 mean', m30.mean],
+  ['Raw top-8', raw.mean],
+].map(([k,v])=>{
+  const show = String(k).includes('mean')||String(k).includes('8') ? oc(v) : (v==null?'—':Number(v).toLocaleString());
+  const cls = (String(k).includes('mean')||String(k).includes('8')) ? ((v||0)>0?'pos':'neg') : '';
+  return `<div class="card"><div class="mut">${k}</div><b class="${cls}">${show}</b></div>`;
+}).join('');
+document.getElementById('verdict').innerHTML =
+  `<b class="gold">Verdict</b><div style="margin-top:6px">${D.verdict||'—'}</div>`;
+document.getElementById('clock').innerHTML =
+  `<b>Clock</b><div class="mut" style="margin-top:6px">${D.clock||''}</div>`+
+  `<div class="mut">${D.complementary||''}</div>`;
+document.getElementById('bands').innerHTML = tbl(D.bands, [
+  ['band','Band'],['n','n'],['win','Win%','pct'],['mean','Mean oc','oc'],['t','t']
+]);
+document.getElementById('avoid').innerHTML = tbl(D.keepers_avoid, [
+  ['feature','Feature'],['n','n'],['win','Win%','pct'],['lift_pp','Lift','pp'],
+  ['mean','Mean oc','oc'],['t','t'],['why','Why']
+]);
+document.getElementById('elev').innerHTML = tbl(D.keepers_elevate, [
+  ['feature','Feature'],['n','n'],['win','Win%','pct'],['lift_pp','Lift','pp'],
+  ['mean','Mean oc','oc'],['t','t'],['why','Why']
+]);
+const bookRows = ['raw8','skip_junk','elev_hc','elev_hc_cap3','elev_hc_red','mid1630'].map(k=>{
+  const p=(D.books||{})[k]||{};
+  return {feature:k, n:p.n, days:p.days, win:p.win, mean:p.mean, t:p.t,
+          pnl:(p.fee||{}).pnl};
+});
+document.getElementById('books').innerHTML = tbl(bookRows, [
+  ['feature','Book'],['n','n'],['days','Days'],['win','Win%','pct'],
+  ['mean','Mean oc','oc'],['t','t'],['pnl','Fee $','usd']
+]);
+document.getElementById('daily').innerHTML = tbl(D.daily||[], [
+  ['date','Date'],['raw8_mean','raw8','oc'],['skip_junk_mean','skip','oc'],
+  ['elev_hc_mean','elev HC','oc'],['elev_hc_red_mean','HC after red','oc'],
+  ['mid1630_mean','16–30','oc']
+]);
+document.getElementById('buried').innerHTML = tbl(D.buried||[], [
+  ['date','Date'],['ticker','Ticker'],['rank','Rank'],['oc','oc'],
+  ['sector','Sector']
+]).replace(/oc">/g, '">').replace(/>([+-]?\d+\.\d+)<\/td>/, (m, n)=>{
+  return m;
+});
+// buried.oc is already in percent from the miner
+document.getElementById('buried').innerHTML = (D.buried||[]).length
+  ? '<table><thead><tr><th>Date</th><th>Ticker</th><th>Rank</th><th>oc</th><th>Sector</th><th>Complete</th></tr></thead><tbody>'+
+    (D.buried||[]).map(r=>`<tr>
+      <td>${r.date}</td><td><code>${r.ticker}</code></td><td>${r.rank}</td>
+      <td class="${r.oc>0?'pos':'neg'}">${r.oc>=0?'+':''}${r.oc}%</td>
+      <td>${r.sector||'—'}</td><td class="mut">${r.complete?'yes':'no'}</td>
+    </tr>`).join('')+'</tbody></table>'
+  : '<div class="mut">None.</div>';
+document.getElementById('junk').innerHTML = (D.junk||[]).length
+  ? '<table><thead><tr><th>Date</th><th>Ticker</th><th>Rank</th><th>oc</th><th>Why</th></tr></thead><tbody>'+
+    (D.junk||[]).map(r=>{
+      const why=[r.incomplete&&'incomplete', r.cd&&'Consumer Defensive', r.china_adr&&'China ADR'].filter(Boolean).join(', ');
+      return `<tr>
+        <td>${r.date}</td><td><code>${r.ticker}</code></td><td>${r.rank}</td>
+        <td class="${r.oc>0?'pos':'neg'}">${r.oc>=0?'+':''}${r.oc}%</td>
+        <td class="mut">${why||'—'}</td></tr>`;
+    }).join('')+'</tbody></table>'
+  : '<div class="mut">None.</div>';
+</script></body></html>
