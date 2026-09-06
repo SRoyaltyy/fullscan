@@ -469,6 +469,8 @@ serve them yet.
 
 Full blotter + panel: [`OVERLAY_AUTOPSY.md`](OVERLAY_AUTOPSY.md) ·
 `python -m src.overlay_autopsy --write`.
+Sift repo crosswalk (swarm vs our bar): master table + "Sift repo
+crosswalk" above. Swarm Elevate labels are **not** a promote.
 
 Cyrus bar for any overlay column:
 
@@ -579,3 +581,6 @@ flatten clock. **Not on this map.**
 - Feed high Forward P/E, d_RSI, or d_Market Cap into buy-rank fuel.
 - Invent scrapes (OpenBB SEC, Zipline data, qlib preds) for OKLO/SMR/GDX.
 - Wire vectorbt / Zipline / OpenBB / sidecars into avoid or elevate.
+- Treat sift-swarm "Elevate" labels (CANSLIM ≥20, 3WT, vectorbt, OpenBB
+  router, AlphaSift L2) as a promote — our both-tape bar already failed
+  those as long.
