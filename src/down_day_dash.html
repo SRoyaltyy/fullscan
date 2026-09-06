@@ -37,8 +37,10 @@
 <div id="keep"></div>
 <h2>Keepers — yesterday already red (knowable at 09:30)</h2>
 <div id="keepM"></div>
-<h2>Finviz / Excel-card overlay (tagged base)</h2>
+<h2>Finviz / Excel-card overlay — strong (n≥400, t≥2)</h2>
 <p class="mut">Prior-session export only. Lifts are vs other tagged name-days, not the full parquet. Two-day <code>s_red</code> slices are not keepers. Date-only E is not a beat.</p>
+<div id="keepS"></div>
+<h2>Finviz overlay — exploratory (clears lift + mean, thin n or t&lt;2)</h2>
 <div id="keepX"></div>
 <h2>Camera overlay (17-session panel, n≥80)</h2>
 <div id="keepC"></div>
@@ -106,7 +108,8 @@ document.getElementById('excel').innerHTML =
    <div class="mut">${x.note||''}</div>`;
 document.getElementById('keep').innerHTML = tbl(D.keepers);
 document.getElementById('keepM').innerHTML = tbl(D.keepers_morning);
-document.getElementById('keepX').innerHTML = tbl(D.keepers_overlay, {regime:true});
+document.getElementById('keepS').innerHTML = tbl(D.keepers_overlay_strong || D.keepers_overlay, {regime:true});
+document.getElementById('keepX').innerHTML = tbl(D.keepers_overlay_explore, {regime:true});
 document.getElementById('keepC').innerHTML = tbl(D.keepers_camera, {regime:true});
 document.getElementById('near').innerHTML = tbl(D.near);
 document.getElementById('etf').innerHTML = tbl((D.sector_etfs||[]).map(r=>({

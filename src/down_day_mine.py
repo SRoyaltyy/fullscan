@@ -666,6 +666,15 @@ def sweep_extra(df: pd.DataFrame, regime: str, pred, masks, target="oc",
     return out
 
 
+def is_strong(r: dict, *, min_n: int = 400, min_t: float = 2.0) -> bool:
+    return (
+        (r.get("n") or 0) >= min_n
+        and (r.get("t") or 0) >= min_t
+        and (r.get("mean") or 0) > 0
+        and (r.get("mean_edge") or 0) > 0
+    )
+
+
 def pick_keepers(rows: list[dict], *, min_n: int = MIN_N) -> list[dict]:
     keep = []
     for r in rows:
@@ -680,6 +689,7 @@ def pick_keepers(rows: list[dict], *, min_n: int = MIN_N) -> list[dict]:
         if (r.get("mean_edge") or 0) <= 0:
             continue
         keep.append(r)
+    keep.sort(key=lambda r: (-(r.get("lift_pp") or -999), -(r.get("n") or 0)))
     return keep
 
 
@@ -849,15 +859,27 @@ def _verdict(bases: dict, keepers: list[dict], keepers_morn: list[dict],
             "That is winning *after* the red day, not during it."
         )
     xlv = next((e for e in etfs if e.get("ticker") == "XLV"), None)
-    ibb = next((e for e in etfs if e.get("ticker") == "IBB"), None)
     xle = next((e for e in etfs if e.get("ticker") == "XLE"), None)
-    if xlv and xlv.get("win") is not None:
+    xop = next((e for e in etfs if e.get("ticker") == "XOP"), None)
+    uso = next((e for e in etfs if e.get("ticker") == "USO"), None)
+    uup = next((e for e in etfs if e.get("ticker") == "UUP"), None)
+    if xle and xle.get("win") is not None:
         bits.append(
-            f"Sector ETFs on the same 127 red days (no Finviz needed): "
-            f"XLV Healthcare open→close win {xlv['win']*100:.1f}% "
-            f"(mean {100*(xlv.get('mean') or 0):+.2f}%)."
-            + (f" IBB biotech {ibb['win']*100:.1f}%." if ibb and ibb.get("win") else "")
-            + (f" XLE energy {xle['win']*100:.1f}%." if xle and xle.get("win") else "")
+            "On all 127 red days (sector ETFs, no Finviz): Energy/oil is the "
+            f"only long sleeve that actually makes money — XLE "
+            f"{xle['win']*100:.1f}% / {100*(xle.get('mean') or 0):+.2f}%"
+            + (f", XOP {xop['win']*100:.1f}% / {100*(xop.get('mean') or 0):+.2f}%"
+               if xop else "")
+            + (f", USO {uso['win']*100:.1f}% / {100*(uso.get('mean') or 0):+.2f}%"
+               if uso else "")
+            + "."
+            + (f" XLV Healthcare is {xlv['win']*100:.1f}% / "
+               f"{100*(xlv.get('mean') or 0):+.2f}% — more often green than "
+               f"a random stock, still a negative mean."
+               if xlv and xlv.get("win") is not None else "")
+            + (f" UUP (dollar) {uup['win']*100:.1f}% / "
+               f"{100*(uup.get('mean') or 0):+.2f}% (risk-off)."
+               if uup else "")
             + " Inverse SPY ETFs are the control and should win; they are not the answer."
         )
     health = next(
@@ -867,11 +889,25 @@ def _verdict(bases: dict, keepers: list[dict], keepers_morn: list[dict],
     )
     if health:
         bits.append(
-            f"On Finviz-tagged SPY-down name-days (prior export only), Healthcare "
-            f"wins {health['win']*100:.1f}% vs a tagged base of "
+            f"On the smaller Finviz-overlap slice, Healthcare *names* win "
+            f"{health['win']*100:.1f}% vs a tagged base of "
             f"{100*(health.get('base_win') or 0):.1f}% "
             f"(lift {health['lift_pp']:+.1f}pp, mean {100*(health['mean'] or 0):+.2f}%, "
-            f"n={health['n']})."
+            f"n={health['n']}, t={health.get('t')}). "
+            "That is a date-cluster (exports exist), not the full 127-day ETF result."
+        )
+    h_morn = next(
+        (k for k in keepers_fv
+         if k.get("feature") == "fv_health" and k.get("regime") == "prior_spy_red"),
+        None,
+    )
+    if h_morn:
+        bits.append(
+            f"Knowable at 09:30 the morning *after* a red SPY day: tagged "
+            f"Healthcare names win {h_morn['win']*100:.1f}% "
+            f"(lift {h_morn['lift_pp']:+.1f}pp, mean {100*(h_morn['mean'] or 0):+.2f}%, "
+            f"n={h_morn['n']}, t={h_morn.get('t')}). Biotech / diagnostics are in "
+            "the same pocket. That is the strongest name-level edge in this mine."
         )
     if sectors:
         top = sectors[0]
@@ -966,10 +1002,24 @@ def run(prices: pd.DataFrame | None = None) -> dict:
         [r for r in overlay_pool if not str(r.get("feature", "")).startswith("cam_")],
         min_n=MIN_N_OVERLAY,
     )
+    keepers_fv_strong = [r for r in keepers_fv if is_strong(r)]
+    keepers_fv_explore = [r for r in keepers_fv if not is_strong(r)]
     keepers_cam = pick_keepers(
         [r for r in overlay_pool if str(r.get("feature", "")).startswith("cam_")],
         min_n=MIN_N_CAM,
     )
+    # Cap per regime so prior_spy_red (the tradable cousin) is not truncated.
+    def _cap_reg(rows, n=10):
+        by: dict[str, list] = {}
+        for r in rows:
+            by.setdefault(r.get("regime") or "", []).append(r)
+        out = []
+        for key in ("spy_cc_down", "prior_spy_red", "spy_oc_down"):
+            out.extend(by.get(key, [])[:n])
+        return out
+    keepers_fv = _cap_reg(keepers_fv, 10)
+    keepers_fv_strong = _cap_reg(keepers_fv_strong, 8)
+    keepers_fv_explore = _cap_reg(keepers_fv_explore, 6)
     near = pick_near(
         [r for r in sweeps + extras if r.get("target") == "oc"],
         regime="spy_cc_down", min_n=200, lift=3.0,
@@ -1015,7 +1065,9 @@ def run(prices: pd.DataFrame | None = None) -> dict:
         "overlay_bases": overlay_bases,
         "keepers": keepers[:16],
         "keepers_morning": keepers_morn[:16],
-        "keepers_overlay": keepers_fv[:20],
+        "keepers_overlay": keepers_fv,
+        "keepers_overlay_strong": keepers_fv_strong,
+        "keepers_overlay_explore": keepers_fv_explore,
         "keepers_camera": keepers_cam[:12],
         "near": near,
         "sectors": sectors,
@@ -1103,10 +1155,15 @@ def write_outputs(payload: dict) -> None:
         "",
         "## Finviz / Excel-card overlay (tagged base, n≥80)",
         "",
-        "Two-day `s_red` overlays are not keepers. Camera rows need n≥80.",
+        "Two-day `s_red` overlays are not keepers. Camera rows need n≥80. "
+        "**Strong** = n≥400 and t≥2. The rest are exploratory (small n or weak t).",
+        "",
+        "### Strong",
         "",
     ]
-    lines += _md_table(payload.get("keepers_overlay") or [])
+    lines += _md_table(payload.get("keepers_overlay_strong") or [])
+    lines += ["", "### Exploratory", ""]
+    lines += _md_table(payload.get("keepers_overlay_explore") or [])
     if payload.get("keepers_camera"):
         lines += ["", "### Camera overlay (thin 17-session panel)", ""]
         lines += _md_table(payload.get("keepers_camera") or [])

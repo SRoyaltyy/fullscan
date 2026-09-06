@@ -68,6 +68,15 @@ def test_banned_features_never_keep() -> None:
     assert ddm.pick_keepers(fake) == []
 
 
+def test_is_strong_needs_n_and_t() -> None:
+    weak = {"feature": "fv_gold", "n": 158, "t": 1.7, "mean": 0.003,
+            "mean_edge": 0.001, "lift_pp": 14}
+    strong = {"feature": "fv_health", "n": 1849, "t": 2.2, "mean": 0.003,
+              "mean_edge": 0.001, "lift_pp": 8}
+    assert ddm.is_strong(weak) is False
+    assert ddm.is_strong(strong) is True
+
+
 def test_keeper_needs_lift_and_positive_mean() -> None:
     rows = [
         {"feature": "last_green", "n": 500, "win": 0.48, "base_win": 0.40,
@@ -190,6 +199,7 @@ if __name__ == "__main__":
     test_prior_features_ignore_today_close()
     test_spy_down_flags()
     test_banned_features_never_keep()
+    test_is_strong_needs_n_and_t()
     test_keeper_needs_lift_and_positive_mean()
     test_excel_open_cols_exclude_close_knowable()
     test_template_and_write()
@@ -200,5 +210,5 @@ if __name__ == "__main__":
     test_overlay_require_uses_tagged_base()
     test_sector_etf_missing_ok()
     test_attach_panel_skips_missing(None)
-    print("13 down-day mine tests passed")
+    print("14 down-day mine tests passed")
 
