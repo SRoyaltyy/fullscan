@@ -1198,6 +1198,58 @@ def test_erd_polarity_does_not_paint_date_only_green() -> None:
     assert rows[0]["label"] == "E"
 
 
+def test_morning_export_shows_ino_yday_amc_beat() -> None:
+    """#135 hid fake-green date-only E. The real beat lives on finviz_{D}."""
+    from src import factor_mine_probe as fmp
+    assert fmp.polarity_export_date({
+        "date": "2026-08-13", "news_export_date": None, "prior_date": None,
+    }) == "2026-08-13"
+    # Today AMC is not knowable at 09:30 — do not take that file's surprise.
+    assert fmp.surprise_is_knowable(
+        {"Earnings Date": "8/13/2026 4:30:00 PM", "EPS Surprise": "67.70%"},
+        "2026-08-13",
+    ) is False
+    assert fmp.surprise_is_knowable(
+        {"Earnings Date": "8/12/2026 4:30:00 PM", "EPS Surprise": "67.70%"},
+        "2026-08-13",
+    ) is True
+    row = {
+        "date": "2026-08-13", "ticker": "INO",
+        "erd_days_since_E": 1, "erd_flag_E": 1, "erd_earn_react": True,
+        "news_export_date": None, "prior_date": None,
+        "boxes": {}, "alarm": False,
+    }
+    vor = {
+        "date": "2026-08-13", "ticker": "VOR",
+        "erd_days_since_E": 1, "erd_flag_E": 1, "erd_earn_react": True,
+        "news_export_date": None, "prior_date": None,
+        "boxes": {}, "alarm": False,
+    }
+    fmp.attach_erd_polarity({"rows": [row, vor]})
+    assert row["e_pol"] == "good"
+    assert "beat" in row["e_label"]
+    assert "67.7" in row["e_label"]
+    assert "morning export" in row["e_label"]
+    assert row["headline"]
+    leaky = {
+        "date": "2026-08-13", "ticker": "FAKE",
+        "erd_earn_react": True, "erd_days_since_E": 0,
+        "news_export_date": None,
+    }
+    # Same session file, but print is today AMC — surprise must stay unknown.
+    fmp._FV_CACHE["2026-08-13"] = {
+        "FAKE": {
+            "Earnings Date": "8/13/2026 4:30:00 PM",
+            "EPS Surprise": "99.0%",
+            "Analyst Recom": "1.5",
+        },
+    }
+    fmp.attach_erd_polarity({"rows": [leaky]})
+    assert leaky["e_pol"] == "neutral"
+    assert "unknown" in leaky["e_label"]
+    fmp._FV_CACHE.pop("2026-08-13", None)
+
+
 def test_match_why_and_decision() -> None:
     rec = fm.make_recipe("union_e_green_h3", hold=3, top_n=8,
                          require={"earn_react": True, "last_green": True},
@@ -1369,7 +1421,8 @@ if __name__ == "__main__":
     test_stamp_starts_and_probe_on_mined_payload()
     test_look_day_ranks_and_horizon()
     test_erd_polarity_does_not_paint_date_only_green()
+    test_morning_export_shows_ino_yday_amc_beat()
     test_match_why_and_decision()
     test_hit_tally_buy_sit_and_nneg()
     test_js_sim_matches_python_later_start()
-    print("45 factor-mine tests passed")
+    print("46 factor-mine tests passed")

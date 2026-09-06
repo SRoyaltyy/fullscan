@@ -1,8 +1,13 @@
 """Stock investigator cards — what a 09:30 sleeve actually saw.
 
 Quotes cameras / coaches / news / tape from repo files only
-(panel, flatten lookback, prior Finviz export, morning digest).
-Never uses same-day Change% to color a cell.
+(panel, flatten lookback, session-morning Finviz export, morning digest).
+Never uses same-day Change% / Gap / RelVol to color a cell.
+
+E/R polarity reads EPS Surprise from ``finviz_{session}.csv`` — the
+overnight packet named for that 09:30 — so a yday-AMC beat is visible.
+A date-only stamp with no surprise number stays unknown, not green.
+Today's AMC (print after 09:30) is not used.
 """
 from __future__ import annotations
 
@@ -32,7 +37,7 @@ CAM_FILE = {
     "join": "data/join (morning ranked file)",
     "sector": "01_daily/weather sector predict",
     "gen": "01_daily/general morning predict",
-    "news": "01_daily/news actions / prior Finviz News Title",
+    "news": "01_daily/news actions / morning Finviz News Title (News Time < 09:30)",
     "digest": "01_daily/news/*_finviz_digest.json",
     "judge": "01_daily/news/*_judge.json",
     "ab": "data/ab_checklist",
@@ -75,35 +80,98 @@ def _parse_num(v):
         return None
 
 
-def surprise_polarity(v) -> tuple[str, str]:
+def surprise_polarity(v, src: str = "morning export") -> tuple[str, str]:
     """EPS surprise → tone. Date-only green is not a beat."""
     x = _parse_num(v)
     if x is None:
-        return "missing", "no EPS surprise on the prior export"
+        return "missing", f"no EPS surprise on the {src}"
     if x > 0.5:
-        return "good", f"beat · EPS surprise {x:+.1f}% (prior export)"
+        return "good", f"beat · EPS surprise {x:+.1f}% ({src})"
     if x < -0.5:
-        return "bad", f"miss · EPS surprise {x:+.1f}% (prior export)"
-    return "neutral", f"inline · EPS surprise {x:+.1f}% (prior export)"
+        return "bad", f"miss · EPS surprise {x:+.1f}% ({src})"
+    return "neutral", f"inline · EPS surprise {x:+.1f}% ({src})"
 
 
-def recom_polarity(v) -> tuple[str, str]:
+def recom_polarity(v, src: str = "morning export") -> tuple[str, str]:
     """Finviz Analyst Recom (1=strong buy … 5=sell). Level, not a change."""
     x = _parse_num(v)
     if x is None:
-        return "missing", "no analyst recom on the prior export"
+        return "missing", f"no analyst recom on the {src}"
     if x <= 2.0:
-        return "good", f"buy-side recom {x:.1f} (level, not a change · prior export)"
+        return "good", f"buy-side recom {x:.1f} (level, not a change · {src})"
     if x >= 3.5:
-        return "bad", f"sell-side recom {x:.1f} (level, not a change · prior export)"
-    return "neutral", f"hold-ish recom {x:.1f} (level, not a change · prior export)"
+        return "bad", f"sell-side recom {x:.1f} (level, not a change · {src})"
+    return "neutral", f"hold-ish recom {x:.1f} (level, not a change · {src})"
 
 
-def erd_polarity(row: dict, fv: dict | None = None) -> dict:
+_MEM_SURP = {
+    "big_beat": ("good", "big beat vs consensus (morning membership)"),
+    "beat": ("good", "beat vs consensus (morning membership)"),
+    "inline": ("neutral", "inline vs consensus (morning membership)"),
+    "miss": ("bad", "miss vs consensus (morning membership)"),
+    "big_miss": ("bad", "big miss vs consensus (morning membership)"),
+}
+
+
+def polarity_export_date(row: dict) -> str | None:
+    """Finviz file that can hold a yday-AMC / today-BMO surprise.
+
+    ``finviz_{session}.csv`` is the overnight packet named for that 09:30.
+    The prior-session export is too early for last night's AMC print — that
+    was why INO's +67.7% surprise never reached the investigator after #135.
+    """
+    session = str(row.get("date") or "")[:10]
+    prior = row.get("news_export_date") or row.get("prior_date")
+    if session and (EXPORT_DIR / f"finviz_{session}.csv").is_file():
+        return session
+    if prior:
+        return str(prior)[:10]
+    return None
+
+
+def surprise_is_knowable(fv: dict | None, session: str | None) -> bool:
+    """True when the export's last EPS surprise is already public at 09:30.
+
+    Yday AMC and today BMO are in. Today's AMC (hour > 09:30) is out — a
+    later overwrite of the same file must not leak the afternoon print.
+    """
+    from . import finviz_events as fe
+    session = str(session or "")[:10]
+    if not session:
+        return False
+    ed, hm = fe.parse_finviz_datetime((fv or {}).get("Earnings Date"))
+    if not ed:
+        return True
+    if ed < session:
+        return True
+    if ed == session and (hm is None or int(hm) <= 930):
+        return True
+    return False
+
+
+def news_is_pre_open(when, session: str | None) -> bool:
+    """News Time is on or before the session and strictly before 09:30 ET."""
+    from . import finviz_events as fe
+    session = str(session or "")[:10]
+    ed, hm = fe.parse_finviz_datetime(when)
+    if not ed or not session:
+        return False
+    if ed < session:
+        return True
+    if ed == session and (hm is None or int(hm) < 930):
+        return True
+    return False
+
+
+def erd_polarity(row: dict, fv: dict | None = None, *,
+                 src: str = "morning export",
+                 mem_surp: str | None = None) -> dict:
     """Honest E / R polarity. Never paint green just because a date exists."""
     fv = fv or {}
-    surp_pol, surp_lab = surprise_polarity(fv.get("EPS Surprise"))
-    rec_pol, rec_lab = recom_polarity(fv.get("Analyst Recom"))
+    surp_pol, surp_lab = surprise_polarity(fv.get("EPS Surprise"), src)
+    if surp_pol == "missing" and mem_surp in _MEM_SURP:
+        surp_pol, surp_lab = _MEM_SURP[mem_surp]
+    rec_pol, rec_lab = recom_polarity(fv.get("Analyst Recom"), src)
     days_e = row.get("erd_days_since_E")
     flag_e = int(row.get("erd_flag_E") or 0)
     flag_r = int(row.get("erd_flag_R") or 0)
@@ -123,7 +191,7 @@ def erd_polarity(row: dict, fv: dict | None = None) -> dict:
             "E on file · polarity unknown (date-only green is not a beat)"
         )
     else:
-        e_pol, e_label = "missing", "no earnings date on the prior export"
+        e_pol, e_label = "missing", f"no earnings date on the {src}"
     if label_r == "R_UP" or flag_r == 1:
         r_pol, r_label = "good", "analyst upgrade (R)"
     elif label_r == "R_DOWN" or flag_r == -1:
@@ -139,6 +207,7 @@ def erd_polarity(row: dict, fv: dict | None = None) -> dict:
 
 
 _FV_CACHE: dict[str, dict] = {}
+_MEM_CACHE: dict[str, dict] = {}
 
 
 def _prior_finviz_map(date: str | None) -> dict[str, dict]:
@@ -149,8 +218,10 @@ def _prior_finviz_map(date: str | None) -> dict[str, dict]:
     df = ga.load_finviz(date)
     out: dict[str, dict] = {}
     if df is not None and not getattr(df, "empty", True) and "Ticker" in df.columns:
-        keep = [c for c in ("Ticker", "EPS Surprise", "Analyst Recom", "News Title")
-                if c in df.columns]
+        keep = [c for c in (
+            "Ticker", "EPS Surprise", "Analyst Recom", "News Title",
+            "News Time", "Earnings Date",
+        ) if c in df.columns]
         for rec in df[keep].to_dict("records"):
             t = fm._tick(rec.get("Ticker"))
             if t:
@@ -159,13 +230,44 @@ def _prior_finviz_map(date: str | None) -> dict[str, dict]:
     return out
 
 
+def _membership_surp(date: str | None, ticker: str) -> str | None:
+    if not date or not ticker:
+        return None
+    if date not in _MEM_CACHE:
+        path = ROOT / "data" / "universe" / f"{date}_membership.csv"
+        got: dict[str, str] = {}
+        if path.is_file():
+            try:
+                import csv
+                with path.open(encoding="utf-8") as fh:
+                    for rec in csv.DictReader(fh):
+                        t = fm._tick(rec.get("Ticker"))
+                        if t:
+                            got[t] = str(rec.get("earnsurp") or "").strip()
+            except OSError:
+                got = {}
+        _MEM_CACHE[date] = got
+    return _MEM_CACHE[date].get(fm._tick(ticker)) or None
+
+
 def attach_erd_polarity(panel: dict) -> dict:
-    """Stamp E/R polarity onto panel rows from the prior Finviz export."""
+    """Stamp E/R polarity from the session-morning Finviz export."""
     for row in panel.get("rows") or []:
-        prior = row.get("news_export_date") or row.get("prior_date")
-        fv = _prior_finviz_map(prior).get(fm._tick(row.get("ticker"))) or {}
-        row.update(erd_polarity(row, fv))
-        title = str(fv.get("News Title") or "")
+        session = str(row.get("date") or "")[:10]
+        src = polarity_export_date(row)
+        src_lab = (
+            "morning export" if src and src == session else "prior export"
+        )
+        fv = dict(_prior_finviz_map(src).get(fm._tick(row.get("ticker"))) or {})
+        if fv and not surprise_is_knowable(fv, session):
+            fv.pop("EPS Surprise", None)
+        mem = _membership_surp(src or session, fm._tick(row.get("ticker")))
+        if mem and not surprise_is_knowable(fv, session) and src == session:
+            mem = None
+        row.update(erd_polarity(row, fv, src=src_lab, mem_surp=mem))
+        title = ""
+        if news_is_pre_open(fv.get("News Time"), session):
+            title = str(fv.get("News Title") or "")
         row["headline"] = title[:160]
         row["headline_tone"] = fm.prior_news_tone(title)
         row["burst"] = fm.is_burst(row)
@@ -435,7 +537,10 @@ def build_probe(panel: dict) -> dict:
 
     def news_for(date: str, row: dict) -> dict:
         prior = row.get("news_export_date") or row.get("prior_date") or ""
-        if prior not in finviz_cache:
+        morning = date or ""
+        if morning and morning not in finviz_cache:
+            finviz_cache[morning] = _finviz_news(morning)
+        if prior and prior not in finviz_cache:
             finviz_cache[prior] = _finviz_news(prior)
         if date not in digest_cache:
             digest_cache[date] = _digest_map(date)
@@ -444,11 +549,23 @@ def build_probe(panel: dict) -> dict:
                 extra = _digest_map(prior)
                 for k, v in extra.items():
                     digest_cache[date].setdefault(k, v)
+            if morning:
+                extra_m = _digest_map(morning)
+                for k, v in extra_m.items():
+                    digest_cache[date].setdefault(k, v)
         if date not in judge_cache:
             judge_cache[date] = _judge_tilt(date)
-        return _news_blob(row, finviz_cache.get(prior) or {},
+        t = fm._tick(row.get("ticker"))
+        morn_hit = (finviz_cache.get(morning) or {}).get(t) or {}
+        prior_hit = (finviz_cache.get(prior) or {}).get(t) or {}
+        use_morning = bool(morn_hit) and news_is_pre_open(
+            morn_hit.get("when"), date)
+        fv_one = {t: morn_hit if use_morning else prior_hit} if t else {}
+        blob = _news_blob(row, fv_one,
                           digest_cache.get(date) or {},
                           judge_cache.get(date) or {})
+        blob["retrieved"] = morning if use_morning else prior
+        return blob
 
     attach_erd_polarity(panel)
     for row in panel.get("rows") or []:
