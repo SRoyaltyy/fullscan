@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Down-day winner mine — leak-free 09:30</title>
+<style>
+ :root{--bg:#0f1420;--card:#171e2e;--line:#262f45;--fg:#dfe6f2;--mut:#8b96ab;--pos:#4ade80;--neg:#f87171;--gold:#fbbf24}
+ *{box-sizing:border-box}
+ html,body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 -apple-system,Segoe UI,Roboto,sans-serif}
+ .wrap{max-width:1120px;margin:0 auto;padding:14px 12px 32px}
+ h1{font-size:20px;margin:0 0 4px}
+ h2{font-size:16px;margin:18px 0 8px;color:#aeb9cf}
+ .sub,.mut{color:var(--mut)}
+ .pos{color:var(--pos)}.neg{color:var(--neg)}.gold{color:var(--gold)}
+ .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0 0 10px}
+ .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px}
+ table{width:100%;border-collapse:collapse;font-size:13px}
+ th,td{padding:5px 6px;border-bottom:1px solid var(--line);text-align:right}
+ th{color:var(--mut);font-weight:600} td:first-child,th:first-child{text-align:left}
+ .pill{display:inline-block;border:1px solid var(--line);border-radius:8px;padding:2px 7px;margin:2px;font:12px/1.3 ui-monospace,Menlo,monospace}
+ a{color:#93c5fd}
+ .verdict{line-height:1.55}
+</style></head><body><div class="wrap">
+<h1>Down-day winner mine</h1>
+<div class="sub" id="gen"></div>
+<div class="sub">Books:
+ <a href="../">paper book</a> ·
+ <a href="../factor-mine/">factor mine</a> ·
+ <a href="../sleeve-combine/">sleeve combine</a> ·
+ <a href="../flatten-lookback/">flatten lookback</a>
+</div>
+<p class="mut">When SPY finishes red, which leak-free 09:30 inputs still lift the chance a <b>common stock</b> prints open→close &gt; 0? Today's Change% / Gap / RelVol / OHLC never pick. Inverse / leveraged products are dropped. Live <code>flatten_robust</code> is untouched.</p>
+<div class="cards" id="cards"></div>
+<div class="card verdict" id="verdict"></div>
+<div class="card" id="excel"></div>
+<h2>Keepers — SPY close-to-close down (outcome)</h2>
+<p class="mut">The market <em>was</em> down that day. A keeper needs n≥400, win-rate lift ≥3pp, and a positive mean open→close that beats the down-day base.</p>
+<div id="keep"></div>
+<h2>Keepers — yesterday already red (knowable at 09:30)</h2>
+<div id="keepM"></div>
+<h2>Finviz / Excel-card overlay — strong (n≥400, t≥2)</h2>
+<p class="mut">Prior-session export only. Lifts are vs other tagged name-days, not the full parquet. Two-day <code>s_red</code> slices are not keepers. Date-only E is not a beat.</p>
+<div id="keepS"></div>
+<h2>Finviz overlay — exploratory (clears lift + mean, thin n or t&lt;2)</h2>
+<div id="keepX"></div>
+<h2>Camera overlay (17-session panel, n≥80)</h2>
+<div id="keepC"></div>
+<h2>Near-misses — higher win%, still red money</h2>
+<p class="mut">These cameras print green more often on the red day and still have a negative mean open→close.</p>
+<div id="near"></div>
+<h2>Sector ETFs on every SPY-down day</h2>
+<p class="mut">Same parquet, no Finviz required. Inverse SPY products are the control — they should win.</p>
+<div id="etf"></div>
+<h2>Tagged sectors on SPY-down days</h2>
+<div id="sec"></div>
+<h2>Excel card cohorts on the red day</h2>
+<div id="xlc"></div>
+<h2>Worst SPY days — common stocks that still went green</h2>
+<div id="worst"></div>
+<h2>How this is graded</h2>
+<ol class="mut">
+ <li>Liquid common stocks only: prior close ≥ $2 and prior dollar volume ≥ $5M. Indexes, inverse, and leveraged products skipped.</li>
+ <li>Features come from bars with date &lt; D, the prior Finviz export, or morning S. Same-day tape is the outcome.</li>
+ <li><b>spy_cc_down</b> answers “what won <em>during</em> a red market.” <b>prior_spy_red</b> is the tradable cousin.</li>
+ <li>Excel columns A B C G J K L M O are start-of-day; D E F H I N use that day’s OHLC and must not gate a 09:30 pick.</li>
+ <li>Finviz lifts use a tagged-only baseline so a missing export cannot inflate the hurdle.</li>
+</ol>
+</div>
+<script>
+const D = __DATA__;
+function pct(v){ if(v==null) return '—'; return (100*v).toFixed(1)+'%'; }
+function pp(v){ if(v==null) return '—'; return (v>=0?'+':'')+v.toFixed(1)+'pp'; }
+function oc(v){ if(v==null) return '—'; return (v>=0?'+':'')+(100*v).toFixed(2)+'%'; }
+function tbl(rows, extra){
+  if(!rows||!rows.length) return '<div class="mut">None cleared the keeper bar.</div>';
+  const showReg = extra && extra.regime;
+  const head='<table><thead><tr><th>Feature</th>'+(showReg?'<th>Regime</th>':'')+'<th>n</th><th>Win%</th><th>Lift</th><th>Mean oc</th><th>t</th><th>Why</th></tr></thead><tbody>';
+  const body=rows.map(r=>`<tr>
+    <td><code>${r.feature||r.ticker||r.sector||''}</code></td>
+    ${showReg?`<td class="mut">${r.regime||''}</td>`:''}
+    <td>${r.n||r.n_days||''}</td>
+    <td class="${r.win> (r.base_win||0)?'pos':''}">${pct(r.win)}</td>
+    <td class="${(r.lift_pp||0)>0?'pos':'neg'}">${r.lift_pp==null?'—':pp(r.lift_pp)}</td>
+    <td class="${(r.mean||0)>0?'pos':'neg'}">${oc(r.mean)}</td>
+    <td>${r.t==null?'—':r.t}</td><td class="mut">${r.why||r.label||r.why_near||''}</td>
+  </tr>`).join('');
+  return head+body+'</tbody></table>';
+}
+document.getElementById('gen').textContent =
+  (D.generated_at||'').slice(0,16).replace('T',' ')+' · '+
+  (D.window&&D.window.from||'')+' → '+(D.window&&D.window.to||'')+' · '+
+  (D.leak||'leak-free 09:30');
+const b=D.bases||{};
+const cards=[
+  ['SPY sessions', D.spy&&D.spy.n_sessions],
+  ['SPY down (cc)', D.spy&&D.spy.n_cc_down],
+  ['Liquid name-days', D.universe&&D.universe.n_name_days],
+  ['Down-day win%', b.spy_cc_down&&b.spy_cc_down.win],
+];
+document.getElementById('cards').innerHTML = cards.map(([k,v])=>{
+  return `<div class="card"><div class="mut">${k}</div><b>${k.includes('win')?pct(v): (v==null?'—':Number(v).toLocaleString())}</b></div>`;
+}).join('');
+document.getElementById('verdict').innerHTML =
+  `<b class="gold">Verdict</b><div style="margin-top:6px">${D.verdict||'—'}</div>`;
+const x=D.excel||{};
+document.getElementById('excel').innerHTML =
+  `<b>Excel emulator</b> · open-knowable ${ (x.open_knowable_cols||[]).join(' ') } · close-knowable ${ (x.close_knowable_cols||[]).join(' ') }
+   <div class="mut" style="margin-top:6px">${x.timing||''}</div>
+   <div class="mut">${x.note||''}</div>`;
+document.getElementById('keep').innerHTML = tbl(D.keepers);
+document.getElementById('keepM').innerHTML = tbl(D.keepers_morning);
+document.getElementById('keepS').innerHTML = tbl(D.keepers_overlay_strong || D.keepers_overlay, {regime:true});
+document.getElementById('keepX').innerHTML = tbl(D.keepers_overlay_explore, {regime:true});
+document.getElementById('keepC').innerHTML = tbl(D.keepers_camera, {regime:true});
+document.getElementById('near').innerHTML = tbl(D.near);
+document.getElementById('etf').innerHTML = tbl((D.sector_etfs||[]).map(r=>({
+  feature: r.ticker, n: r.n_days||r.n, win: r.win, mean: r.mean, t: r.t,
+  lift_pp: null, why: r.label
+})));
+document.getElementById('sec').innerHTML = tbl((D.sectors||[]).map(r=>({
+  feature: r.sector, n: r.n, win: r.win, mean: r.mean, t: r.t,
+  lift_pp: r.lift_pp, base_win: r.base_win, why: 'vs other tagged sectors'
+})));
+document.getElementById('xlc').innerHTML = tbl(D.excel_cards, {regime:true});
+document.getElementById('worst').innerHTML = (D.worst_days||[]).map(d=>`
+  <div class="card"><b>${d.date}</b> · SPY ${d.spy_cc==null?'—':(d.spy_cc>=0?'+':'')+d.spy_cc+'%'} ·
+  ${d.n_win}/${d.n} liquid names green (${pct(d.base_win)})
+  <div>${(d.top||[]).map(t=>`<span class="pill pos"><b>${t.ticker}</b> ${t.oc>=0?'+':''}${t.oc}% · ${(t.sector||'—')} · last ${t.last_green?'green':'red'} · ret5 ${t.ret_5==null?'—':t.ret_5+'%'}</span>`).join('')}</div>
+  </div>`).join('');
+</script></body></html>
