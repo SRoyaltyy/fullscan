@@ -470,6 +470,10 @@ def test_template_has_data_slot() -> None:
     assert "Hit rate" in text
     assert "renderBurst" in text
     assert "parabolic" in text.lower()
+    assert "earnBits" in text
+    assert "earnFor" in text
+    assert "E beat" in text
+    assert "<span>E</span>" in text
 
 
 def test_write_outputs_injects_payload(tmp_path=None) -> None:
@@ -1172,6 +1176,29 @@ def test_look_day_ranks_and_horizon() -> None:
     assert looks[0]["ret"] is not None
     assert looks[1]["ticker"] == "BBB"
     assert looks[1]["rank"] == 2
+    assert looks[0].get("e_label") == ""
+    assert looks[0].get("e_pol") == ""
+
+
+def test_look_day_copies_eps_surprise() -> None:
+    from src import factor_mine_sim as fms
+    cal = ["2026-08-13"]
+    rows = [{
+        "date": "2026-08-13", "ticker": "INO", "sources": ["union"],
+        "boxes": {}, "alarm": False, "last_green": True, "src_rank": 0,
+        "erd_earn_react": True, "e_pol": "good",
+        "e_label": "beat · EPS surprise +67.7% (morning export)",
+        "open": 0.81, "close": 0.90,
+    }]
+    panel = {"session_dates": cal, "rows": rows, "by_date": {"2026-08-13": rows}}
+    bars = {("INO", "2026-08-13"): {"open": 0.81, "close": 0.90}}
+    rec = fm.make_recipe("union_e_green_h3", hold=3, top_n=8,
+                         require={"earn_react": True, "last_green": True})
+    looks = fms.look_day(panel, rec, "2026-08-13", bars=bars, regime={})
+    assert looks[0]["ticker"] == "INO"
+    assert looks[0]["e_pol"] == "good"
+    assert "67.7" in looks[0]["e_label"]
+    assert looks[0]["earn_react"] is True
 
 
 def test_erd_polarity_does_not_paint_date_only_green() -> None:
@@ -1420,9 +1447,10 @@ if __name__ == "__main__":
     test_build_probe_quotes_repo_files_not_same_day_change()
     test_stamp_starts_and_probe_on_mined_payload()
     test_look_day_ranks_and_horizon()
+    test_look_day_copies_eps_surprise()
     test_erd_polarity_does_not_paint_date_only_green()
     test_morning_export_shows_ino_yday_amc_beat()
     test_match_why_and_decision()
     test_hit_tally_buy_sit_and_nneg()
     test_js_sim_matches_python_later_start()
-    print("46 factor-mine tests passed")
+    print("47 factor-mine tests passed")
