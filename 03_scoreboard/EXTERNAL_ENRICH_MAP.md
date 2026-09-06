@@ -33,9 +33,11 @@ name-days on Theme Radar miss lists (graded high then lost) plus gold
 | **Point score** (`thekuldeepsingh/Stock-Screener-System-`) | **Expand** | `P/E` already on Elite. Fail-any analog = AB `status_*` / join `veto_when` (`earn:today`; `ext:extreme` ∧ weather `risk=off`). | **No.** AB any-BAD ~93% (too wide). Join veto 0/437. | Tutorial hardcoded. Do not invent a screener. | **NO**. |
 | **Mean-var** (`blkpvnthr/screener`) | **Expand** | None as entry. ATR% already `MIN_ATR_PCT=2.5` size floor. | **No** — dilutes themes. | Risk overlay, not a buy rank. | **NO**. |
 | **AlphaSuite / ATR risk caps** | Avoid / **size** (if relevant) | Elite `Average True Range` / `Price` → `atr_pct`. Already `MIN_ATR_PCT=2.5` in `ticker_lookback` / stock-book. | Below floor: optics/AI/copper/nuclear **0**. Gold: **GLD 18/19** (ETF) — would have gated a *hit*. | Size cap only. Do not score ATR% as buy-rank. | **NO**. |
-| **AlphaSift L1→L2 re-rank** | **Expand only** | Existing layers: `data/join/{D}_ranked.csv` `total_score` / `score_norm`; book `score_1d`; `data/feature_asof/{D}_feature_asof.csv` `join_rank` / `join` / `ab`. | Join top-quintile already high: optics 26/76 · AI 34/95 · **copper 48/95** · nuclear 26/95 · gold 29/76. L2 on the same layers would have kept them elevated, then they lost. | Do not feed fade columns into a buy re-rank. | **NO** — `total_score` is the existing ranker, not a rescue. Do not bump. |
-| **vectorbt sweeps** | **Expand only** | Wrap `factor_mine_book` 09:30 `open` + Futubull fees. `data/prices/ohlc.parquet` `(date,ticker)`. | Harness not written — **0 fires**. | N/A until scored on the both-tape bar. | **NO**. |
-| **Zipline cross-section** | **Expand only** | Same `ohlc.parquet` + PIT book. No Zipline pipeline in-repo. | **0 fires**. Thin / not wired. Do not pull Zipline data. | N/A. | **NO**. |
+| **vectorbt** (`polakowo/vectorbt`) | **Expand only** — *not* Elevate | Plug: `from_signals` sweeps **only** if Price = 09:30 `open` from `data/prices/ohlc.parquet` and fees = `00_grounding/futubull_fees.json` via `paper_trade.order_fees`. Wrap `factor_mine_book`. | **No.** Harness not written — 0 fires. | Examples default **Close** = leak. Commons Clause. | **NO**. |
+| **Zipline** (`stefan-jansen/zipline-reloaded`) | **Expand** calendar — *not* Avoid primary | Event calendars / `order_target` as a *tiny* session-sanity check vs vectorbt. Same PIT book. | **No.** | Too slow for grids. Do not pull Zipline data. | **NO**. |
+| **Lean** (`QuantConnect/Lean`) | **Expand** — do **not** run | Copy Futubull fee/fill realism into the vectorbt *wrapper* — already in `futubull_fees.json`. Do not embed Lean. | **No.** | C#/Docker overkill. Not an avoid embed. | **NO**. |
+| **AlphaSift** (`ZhuLinsen/alphasift`) | **Expand only** — *not* Elevate screen | L1 YAML → existing join `total_score` / book `score_1d` / feature_asof `join_rank`. Soft theme / `board_heat` ≠ new scrape. If ever swept, same vectorbt open+fees. | Swarm: Yes. **In-repo: join already high on miss names** (copper 48/95). L2 would have kept them elevated, then they lost. | A-share-first. T+N ≠ full BT. **`total_score` ≠ elevate.** | **NO**. |
+| **Vibe-Trading** (`HKUDS/Vibe-Trading`) | **Expand** patterns — Avoid *the whole stack* | Steal next-bar fill (= our 09:30 open) and warmup≠eval. Futu fees already in-repo. Alpha Zoo / Shadow stay offline. | **Partial** / not wired. | Huge; live complexity. No websocket into preopen. | **NO**. |
 | **OpenBB** (`OpenBB-finance/OpenBB`) | **Expand** (thin-gap) — *not* Elevate | Elite already has `EPS Surprise`, `Revenue Surprise`, `Earnings Date`. AB B01/B02/B17/B18. Gaps only → `data/external/openbb/{dataset}/asof=prior/part.parquet` (`ext_*`). Partial vendor finviz ≠ Elite. | Swarm: maybe-weak. In-repo: **no new pull**. OKLO/SMR/GDX/GLD often blank FPE — do not invent 8-Ks. | Same-day surprise on D is a leak. Do not displace Elite+AB. | **NO** — gap router is not a rescue bump. AGPL. |
 | **MarketDataApp** (`MarketDataApp/sdk-py`) | **Expand** if options hole | Elite `Optionable`. Prior-close OI/IV only. Same asof cache as OpenBB (`data/external/mda/…`). | **No.** | Paid / tiny. Never overwrite Elite. | **NO**. |
 | **FinancialNewsAPI** (`financial-news-api-python`) | **Expand** news sidecar | Morning packet `01_daily/news/` first. Vendor news `asof < D` only. | **Candidate** — `s_news` silent on some books (08-27). Not a Theme Radar fade. | Paid; thin samples. Same-day stream = leak. | **NO**. |
@@ -49,13 +51,11 @@ Kid one-liners for the same rows:
 | Theme Radar fades | Don't buy the expensive / heating stickers. They fade when the class is happy *or* sad. Not a gold star for cheap. |
 | CANSLIM / 3WT / MF | Old report-card stickers from columns we already have. Copper that printed CANSLIM still lost. Swarm "Elevate = 3WT + near-52w + EPS≥20" is **rejected**. |
 | Fail-any / ATR | Almost every homework sheet has a red mark; that is not a veto. ATR is how big a bite, not a theme bet. |
-| AlphaSift / `total_score` | Re-sorting the same line-up does not rescue the kids we already sat in front. |
-| vectorbt / Zipline / OpenBB / MDA / news / qlib / FinRL | Practice kitchen. Same 09:30 bell and fee jar, or they stay outside. OpenBB is a librarian, not a gold star. |
+| AlphaSift / `total_score` | Re-sorting the same line-up does not rescue the kids we already sat in front. Swarm "Elevate screen" is **rejected**. |
+| vectorbt / Zipline / Lean / Vibe / OpenBB / qlib / FinRL | Practice kitchen. Same 09:30 bell and fee jar, or they stay outside. Close fills and Lean are not invited. |
 
-Sift swarm (executor notes). `/workspace/sift_ai_data.md` was **still
-missing on disk** when this drop was folded — the five AI/data rows are
-copied from the swarm table into the master table above and the
-crosswalk below. Autopsy source of truth:
+Sift swarm (executor notes). AI/data + screener + harness drops are on
+the master table. Autopsy source of truth:
 [`OVERLAY_AUTOPSY.md`](OVERLAY_AUTOPSY.md) §1–4 ·
 [`theme_radar_baskets.json`](theme_radar_baskets.json).
 
@@ -66,8 +66,12 @@ fails our bar: full CANSLIM / `elevate_bump` die on up tapes; optics /
 AI / nuclear CANSLIM fire = **0** name-days; copper CANSLIM printed
 then lost. 3WT/cup is not in-repo and will not be scraped. Do not bump.
 
-**Other Elevate labels we also reject:** vectorbt, OpenBB-as-router,
-AlphaSift L2, Lean fee plugins.
+**Harness takeaway we reject.** Swarm Elevate on vectorbt sweeps,
+AlphaSift L2, and Lean fee plugins. None cleared our bar. vectorbt
+defaults to Close (leak). AlphaSift "Yes" on miss baskets is the
+existing ranker staying high — circular. Lean is not an avoid embed.
+Zipline is calendar sanity only, not a primary avoid. Vibe-Trading:
+steal next-bar + warmup≠eval; do not import the stack.
 
 ### Sift repo crosswalk (no new scrape)
 
