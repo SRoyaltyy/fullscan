@@ -58,6 +58,14 @@ def test_thin_n_when_one_tape_small() -> None:
     assert st["both_tape"] is None
 
 
+def test_sift_fold_rejects_canslim_as_as_elevate() -> None:
+    text = "\n".join(oa._sift_fold_section())
+    assert "Do not bump" in text
+    assert "GEV" in text
+    assert "REAX" in text
+    assert "thin-n" in text
+
+
 def test_mechanism_table_render() -> None:
     md = oa._mechanism_table([{
         "mechanism": "Theme Radar fade vetoes",
@@ -88,9 +96,10 @@ def main() -> None:
     test_score_rule_both_tape_avoid_needs_underperform()
     test_cheap_fpe_does_not_survive_as_elevate()
     test_thin_n_when_one_tape_small()
+    test_sift_fold_rejects_canslim_as_as_elevate()
     test_mechanism_table_render()
     test_does_not_touch_live_policy()
-    print("test_overlay_autopsy: 7 ok")
+    print("test_overlay_autopsy: 8 ok")
 
 
 if __name__ == "__main__":

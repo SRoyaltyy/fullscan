@@ -96,7 +96,10 @@ steal next-bar + warmup≠eval; do not import the stack.
 
 ### Fullscan autopsy fold (sift vs in-repo)
 
-Sift `fullscan_autopsy_avoid_elevate.md` (text only; file missing on disk):
+Sift `/workspace/fullscan_autopsy_avoid_elevate.md` was **still missing
+on disk** when folded. Same table lives in
+[`OVERLAY_AUTOPSY.md`](OVERLAY_AUTOPSY.md) §5. Master table above already
+has every AI/data + screener + harness repo from the swarm.
 
 | Sift finding | In-repo check | Keep? |
 |---|---|---|

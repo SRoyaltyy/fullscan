@@ -463,6 +463,48 @@ def _basket_paper_table(rows: list[dict]) -> list[str]:
     return lines
 
 
+def _sift_fold_section() -> list[str]:
+    """Swarm autopsy vs in-repo blotter. File may be missing on disk."""
+    return [
+        "Source: swarm `/workspace/fullscan_autopsy_avoid_elevate.md` "
+        "(often not on disk) scored against this panel. Master table: "
+        "[`EXTERNAL_ENRICH_MAP.md`](EXTERNAL_ENRICH_MAP.md).",
+        "",
+        "| Sift finding | In-repo check | Keep? |",
+        "|---|---|---|",
+        "| FPE≥35 blocked ~2/15 worst buys (BTBT, INDI) | Yes. ACMR FPE 25, "
+        "join/AB ~+1. ERO FPE 8.18, join +0.99. | **Keep.** Optional avoid; "
+        "does not save join-hot cheap names. |",
+        "| ERO = bought copper spike, not a missed theme | Yes. Cheap FPE, "
+        "CANSLIM printed, 1w −11%. 08-27 🔵/🚨/fade **blank** — do not invent "
+        "a 🚨. | **Keep** cheap≠long. Honest thin on fade cameras. |",
+        "| Optics 0/4; AAOI −24% | Always-on high-FPE: AAOI 0/19, COHR 1/19, "
+        "LITE 1/19, GLW 8/19. No 1d/3d paper lot for AAOI. 1d mean −0.05. | "
+        "Partial. Do not invent −24%. GLW is the optics FPE fade. |",
+        "| AI power 0/5; GEV FPE≥35 on 14/14 | GEV **19/19** (med 39). "
+        "VRT 1/19, PWR 3/19, ETN/CAT 0. | **GEV = natural Avoid.** Other four "
+        "are not. |",
+        "| Copper graded high then pain | Join top-q 48/95. FCX/TECK/ERO "
+        "CANSLIM then lost. | **Keep.** Do not elevate copper / CANSLIM. |",
+        "| Nuclear mixed; CEG worked | CEG 1d mean +0.41; paper lots 08-14 / "
+        "08-19 / 09-03 **lost**. VST paper losers. CCJ 19/19 high-FPE. | "
+        "Mixed. Do not elevate CEG. CCJ = Avoid. |",
+        "| Gold mid-ranks ripped (NEM/AEM) | High-FPE 0/76. NEM join high "
+        "12/19, AEM 11/19 — already high. | Fade veto would not have blocked "
+        "the 8/12 hit. Not an MF long. |",
+        "| Only `radar_high_fpe` both-tape YES; no `radar_hot` OR; "
+        "`elevate_bump` failed; cheap≠long | Matches §1–2. | **Keep.** |",
+        "| Top Avoid extras: soft 🚨∧fade; join-hot∧AB-silent micros; "
+        "optics/AI heat sit (n=1) | Early 🚨/fade empty. Micros = gated_out "
+        "(expand). Heat sit n=1 = **thin-n**. | Log only. Do not promote. |",
+        "| Top Elevate: gold-miner; CANSLIM A∧S; log outweighed | Gold is a "
+        "contrast hit. A∧S is an unscored subset of a rule that dies on up "
+        "tapes. Outweighed=20. | **Do not bump.** Log only. |",
+        "| REAX +853% tax | Outweighed **and** FPE 65. | Keep FPE veto "
+        "**optional**. |",
+    ]
+
+
 def _mechanism_table(rows: list[dict]) -> list[str]:
     if not rows:
         return ["_No mechanism payload._"]
@@ -625,6 +667,12 @@ def render(payload: dict) -> str:
     lines.extend(_mechanism_table(p.get("mechanisms") or []))
     lines += [
         "",
+        "## 5. Sift autopsy fold (`fullscan_autopsy_avoid_elevate.md`)",
+        "",
+    ]
+    lines.extend(_sift_fold_section())
+    lines += [
+        "",
         "## Optional columns (not live gates)",
         "",
         "| column | meaning | promote? |",
@@ -657,6 +705,8 @@ def render(payload: dict) -> str:
         "- Feed high Forward P/E, d_RSI, or d_Market Cap into buy-rank fuel.",
         "- Use same-day `Change` / `Gap` / RelVol as an avoid/elevate input.",
         "- Invent scrapes (OpenBB SEC, Zipline data, qlib preds).",
+        "- Promote soft 🚨∧fade or optics/AI heat-sit on n=1.",
+        "- Elevate on CANSLIM A∧S or gold-miner style without a both-tape bar.",
         "- Edit `LIVE_POLICY` or `flatten_robust`.",
         "",
     ]
@@ -804,6 +854,14 @@ def run(write: bool = False) -> dict:
         "Vibe-Trading. flatten_live blotters are thin (7 start days) — not a "
         "second autopsy sample. AB `status_*` fail-any hits ~93% of stock "
         "name-days — too wide. Do not invent scrapes."
+    )
+    findings.append(
+        "**Sift autopsy fold:** FPE veto caught ~2/15 worst buys (BTBT, INDI). "
+        "GEV is a natural Avoid (19/19). Copper was join-high then lost. "
+        "ERO = cheap spike we bought, not a missed expensive theme. "
+        "REAX tax keeps the veto optional. Soft 🚨∧fade / heat-sit n=1 / "
+        "CANSLIM A∧S stay log-only — do not promote. "
+        "See §5 and `EXTERNAL_ENRICH_MAP.md`."
     )
     findings.append(
         "**Thin-n / data caveats:** 08-14 d_RSI often missing (no prior-prior RSI). "
