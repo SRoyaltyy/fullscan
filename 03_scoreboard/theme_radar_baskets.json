@@ -544,11 +544,14 @@
   "mechanisms": [
     {
       "mechanism": "Theme Radar fade vetoes",
-      "goal": "Avoid",
+      "goal": "Avoid (1d only)",
       "fields": "`Forward P/E` \u2265 35; `d_RSI` = \u0394 `Relative Strength Index (14)` (prior \u2212 prior-prior); `d_Market Cap` = % \u0394 `Market Cap` (same vintage). Knobs in `finviz_style_flags`: HIGH_FPE=35, D_RSI_UP=5, D_MCAP_PCT=3.",
-      "basket_fire": "high-FPE optics: 10/76; ai_power: 23/95; copper: 0/95; nuclear: 19/95; gold_hit: 0/76. d_RSI\u2191 optics: 2/76; ai_power: 3/95; copper: 9/95; nuclear: 6/95; gold_hit: 7/76. d_mcap\u2191 optics: 12/76; ai_power: 3/95; copper: 15/95; nuclear: 11/95; gold_hit: 7/76. Surviving both-tape avoid is high-FPE alone; d_RSI / d_mcap stay veto *candidates*, not rank fuel. Combined `radar_hot` failed both-tape \u2014 do not OR into the live veto.",
-      "veto_not_fuel": "YES \u2014 first leak-free patch. Short side was weak early.",
-      "elevate": "NO \u2014 fades are not buy-rank fuel."
+      "basket_fire": "high-FPE optics: 10/76; ai_power: 23/95; copper: 0/95; nuclear: 19/95; gold_hit: 0/76. d_RSI\u2191 optics: 2/76; ai_power: 3/95; copper: 9/95; nuclear: 6/95; gold_hit: 7/76. d_mcap\u2191 optics: 12/76; ai_power: 3/95; copper: 15/95; nuclear: 11/95; gold_hit: 7/76. Surviving both-tape avoid is high-FPE alone; d_RSI / d_mcap stay veto *candidates*, not rank fuel. Combined `radar_hot` failed both-tape \u2014 do not OR into the live veto. 1d clock only \u2014 not flatten_h5 / flatten_robust.",
+      "veto_not_fuel": "YES on 1d clock only. Does not auto-apply to flatten_h5 / flatten_robust.",
+      "elevate": "NO \u2014 fades are not buy-rank fuel.",
+      "target_sleeve": "theme_radar_1d",
+      "hold_sessions": "1",
+      "score_clock": "1d open\u2192close"
     },
     {
       "mechanism": "CANSLIM scanners",
@@ -556,7 +559,10 @@
       "fields": "C `EPS Growth Quarter Over Quarter` + `EPS Surprise`; A `EPS Growth This Year` / `EPS Growth Past 3 Years`; N `52-Week High` (% below high); S prior `Relative Volume` + `Average Volume`; L `Performance (Quarter)` + AB `P01_peer_lead_week`; I `Institutional Ownership` / `Institutional Transactions`; M weather `signals.general_direction` / `signals.risk`.",
       "basket_fire": "optics: 0/76; ai_power: 0/95; copper: 11/95; nuclear: 0/95; gold_hit: 1/76. Fired on copper (FCX/TECK/ERO) \u2014 those names then lost. Panel already failed both-tape as long (up xs \u22120.35). Do not bump.",
       "veto_not_fuel": "Do not invert CANSLIM into a fade veto without a new bar.",
-      "elevate": "NO \u2014 dies on up tapes. Do not bump."
+      "elevate": "NO \u2014 dies on 1d up tapes. Reject until matching hold.",
+      "target_sleeve": "theme_radar_1d",
+      "hold_sessions": "1",
+      "score_clock": "1d open\u2192close"
     },
     {
       "mechanism": "Magic Formula",
@@ -564,7 +570,10 @@
       "fields": "`Income` / `Enterprise Value` (else `1/EV/EBITDA`, else `1/P/E`); ROC = `Return on Invested Capital`. Exclude Financial/Utilities; `Market Cap` < 100 dropped.",
       "basket_fire": "optics: 0/76; ai_power: 0/95; copper: 0/95; nuclear: 0/95; gold_hit: 0/76. Cheap/MF is the gold-contrast trap, not a rescue. Panel up xs \u22120.07 \u2014 failed both-tape as long.",
       "veto_not_fuel": "Not a fade. Do not treat cheap as avoid either.",
-      "elevate": "NO \u2014 do not promote cheap/MF as long."
+      "elevate": "NO \u2014 do not promote cheap/MF as long.",
+      "target_sleeve": "theme_radar_1d",
+      "hold_sessions": "1",
+      "score_clock": "1d open\u2192close"
     },
     {
       "mechanism": "Stock-Screener-System multi-factor fail-any",
@@ -572,7 +581,10 @@
       "fields": "AB `status_*` any BAD / `n_bad` > 0 on prior `{D}_ab_checklist_enriched.csv`. Join `veto_when` already named: `earn:today`; `ext:extreme` AND weather `risk=off` (`00_grounding/join_rules.json`).",
       "basket_fire": "AB fail-any optics: 52/56; ai_power: 65/70; copper: 65/70; nuclear: 65/70; gold_hit: 26/56. ~93% of stock name-days have some `status_*=BAD` \u2014 too wide for a veto. Join `veto_when` optics: 0/76; ai_power: 0/95; copper: 0/95; nuclear: 0/95; gold_hit: 0/76 (0 on these baskets). Enriched AB starts 08-19 \u2014 earlier is thin-n. Do not invent a new screener.",
       "veto_not_fuel": "Fail-any is a veto shape, not a rank add.",
-      "elevate": "NO."
+      "elevate": "NO.",
+      "target_sleeve": "theme_radar_1d",
+      "hold_sessions": "1",
+      "score_clock": "1d open\u2192close"
     },
     {
       "mechanism": "AlphaSuite / ATR risk caps",
@@ -580,7 +592,10 @@
       "fields": "Elite `Average True Range` / `Price` \u2192 `atr_pct`. Already the liquidity floor `MIN_ATR_PCT=2.5` in `ticker_lookback` / stock-book. Not a long rank.",
       "basket_fire": "ATR below floor optics: 0/76; ai_power: 0/95; copper: 0/95; nuclear: 0/95; gold_hit: 18/76. Only GLD (ETF) sits under 2.5% \u2014 a gold *hit*, so the floor would have wrongly gated a winner. Optics/AI/copper/nuclear: 0. Size cap only, not a Theme Radar substitute.",
       "veto_not_fuel": "Size cap only. Do not score ATR% as buy-rank.",
-      "elevate": "NO."
+      "elevate": "NO.",
+      "target_sleeve": "all flatten_* (size floor)",
+      "hold_sessions": "n/a",
+      "score_clock": "prior Elite ATR/Price"
     },
     {
       "mechanism": "AlphaSift L1\u2192L2 re-rank",
@@ -588,7 +603,10 @@
       "fields": "Existing layers only: `data/join/{D}_ranked.csv` `total_score` / `score_norm`; book `score_1d`; `data/feature_asof/{D}_feature_asof.csv` `join_rank` / `join` / `ab`. No new sift scrape.",
       "basket_fire": "join top-quintile optics: 26/76; ai_power: 34/95; copper: 48/95; nuclear: 26/95; gold_hit: 29/76. These miss names were already graded high on join/AB \u2014 L2 on the same layers would have kept them elevated, then they lost.",
       "veto_not_fuel": "Do not feed fade columns into a buy re-rank.",
-      "elevate": "NO \u2014 existing ranker, already high on miss names; do not bump."
+      "elevate": "NO \u2014 existing ranker, already high on miss names; do not bump.",
+      "target_sleeve": "theme_radar_1d",
+      "hold_sessions": "1",
+      "score_clock": "1d open\u2192close"
     },
     {
       "mechanism": "vectorbt sweeps",
@@ -596,7 +614,10 @@
       "fields": "Wrap `factor_mine_book` 09:30 `open` + Futubull fees. Panel: `data/prices/ohlc.parquet` `(date,ticker)`. No vectorbt default close-to-close fills.",
       "basket_fire": "Harness not written \u2014 0 fires. Expand-only sidecar.",
       "veto_not_fuel": "N/A until a recipe is scored on the both-tape bar.",
-      "elevate": "NO \u2014 not a bump column."
+      "elevate": "NO \u2014 not a bump column.",
+      "target_sleeve": "flatten_h1/h3/h5",
+      "hold_sessions": "1/3/5",
+      "score_clock": "Nd open\u2192exit + Futubull"
     },
     {
       "mechanism": "Zipline cross-section",
@@ -604,7 +625,10 @@
       "fields": "Same `data/prices/ohlc.parquet` + PIT book as vectorbt. No Zipline pipeline in-repo. Do not pull Zipline data.",
       "basket_fire": "No in-repo pipeline \u2014 0 fires. Thin-n / not wired.",
       "veto_not_fuel": "N/A.",
-      "elevate": "NO."
+      "elevate": "NO.",
+      "target_sleeve": "flatten_h1/h3/h5",
+      "hold_sessions": "1/3/5",
+      "score_clock": "Nd open\u2192exit"
     },
     {
       "mechanism": "OpenBB SEC / surprise",
@@ -612,7 +636,10 @@
       "fields": "Elite already has `EPS Surprise`, `Revenue Surprise`, `Earnings Date`. AB `val_B01_eps_surprise` / `status_B01_eps_surprise`, B02, B17, B18. Do not replace.",
       "basket_fire": "No new OpenBB pull. Surprise headers already on prior Elite for names Finviz covers. Gap-fill only when the Elite cell is blank \u2014 do not invent 8-K scrapes for OKLO/SMR/GDX.",
       "veto_not_fuel": "Same-day surprise on D is a leak. Prior vintage only.",
-      "elevate": "NO \u2014 do not bump on a beat."
+      "elevate": "NO \u2014 do not bump on a beat.",
+      "target_sleeve": "sidecar",
+      "hold_sessions": "\u2014",
+      "score_clock": "asof < D"
     },
     {
       "mechanism": "qlib / FinRL sidecars",
@@ -620,7 +647,10 @@
       "fields": "`sidecars/qlib/`, `sidecars/finrl/`, `data/sidecars/{name}/{asof}/preds.parquet`. Join `ticker` + `asof_date` < D (or D iff morning-packet vintage).",
       "basket_fire": "No sidecar preds on disk \u2014 0 fires. Bar not cleared.",
       "veto_not_fuel": "N/A.",
-      "elevate": "NO \u2014 offline until the same PIT / fee / audit bar."
+      "elevate": "NO \u2014 offline until the same PIT / fee / audit bar.",
+      "target_sleeve": "sidecar \u2192 flatten_h*",
+      "hold_sessions": "matching hold",
+      "score_clock": "Nd open\u2192exit (unscored)"
     }
   ],
   "paper_or_gap": [

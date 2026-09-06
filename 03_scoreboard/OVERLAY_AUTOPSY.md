@@ -2,7 +2,7 @@
 
 Kid: Stop buying the rotting apples. Pull the good apples we left on the bottom of the barrel. New recipes stay in the practice kitchen.
 
-_Generated 2026-09-06T12:25:44.523524-04:00 · research only · live `flatten_robust` untouched._
+_Generated 2026-09-06T13:06:25.730363-04:00 · research only · live `flatten_robust` untouched._
 
 Leak clock: features = **prior** Elite + prior AB + morning weather. 1d panel outcome = same-day `Change from Open` (never a gate). Book-gap fwd is the committed 1w gap scan. Paper fwd is closed round-trip after fees.
 
@@ -32,8 +32,9 @@ Theme Radar: **high `Forward P/E` fades both tapes on the 1d open→close clock*
 12. **Short side was weak early** (lookback 🔵/🚨/fade empty on early books). First leak-free patch = fade vetoes (high FPE; d_RSI / d_mcap as candidates), **not** a short book and **not** a buy-rank bump.
 13. **Expand only:** vectorbt, Zipline, OpenBB/MDA, qlib/FinRL/AlphaSift/Vibe-Trading. flatten_live blotters are thin (7 start days) — not a second autopsy sample. AB `status_*` fail-any hits ~93% of stock name-days — too wide. Do not invent scrapes.
 14. **Sift autopsy fold:** FPE veto caught ~2/15 worst buys (BTBT, INDI). GEV is a natural Avoid (19/19). Copper was join-high then lost. ERO = cheap spike we bought, not a missed expensive theme. REAX tax keeps the veto optional. Soft 🚨∧fade / heat-sit n=1 / CANSLIM A∧S stay log-only — do not promote. See §5 and `EXTERNAL_ENRICH_MAP.md`.
-15. **Thin-n / data caveats:** 08-14 d_RSI often missing (no prior-prior RSI). Some d_mcap prints look like unit/corporate-action jumps (APPS +270%). Lookback 🔵/🚨/fade columns are empty on early books. 08-27 morning weather is unknown in this run. OKLO/SMR/GDX/GLD often have blank `Forward P/E` — honest thin, no new scrape.
-16. **Strategy-native:** `radar_high_fpe` / optional FPE≥35 are the **1d Theme Radar clock** (`theme_radar_1d`, open→close). They do **not** auto-apply to `flatten_h5` or live `flatten_robust` until a matching-hold re-mine clears both-tape. Reject elevates unless scored on the matching hold. See §6.
+15. **Strategy-native:** `radar_high_fpe` / optional FPE≥35 are the **1d Theme Radar clock** (`theme_radar_1d`, open→close). They do **not** auto-apply to `flatten_h5` or live `flatten_robust` until a matching-hold re-mine clears both-tape. Reject elevates unless scored on the matching hold. See §6.
+16. **Thin-n / data caveats:** 08-14 d_RSI often missing (no prior-prior RSI). Some d_mcap prints look like unit/corporate-action jumps (APPS +270%). Lookback 🔵/🚨/fade columns are empty on early books. 08-27 morning weather is unknown in this run. OKLO/SMR/GDX/GLD often have blank `Forward P/E` — honest thin, no new scrape.
+17. **Fee-aware KEEP re-mine:** `radar_high_fpe` fails Futubull $ peer-excess on `theme_radar_1d` (xs $+0.09; up-tape $+0.35). Flatten leftover +$326–$723 is THIN (n=9–11, 0 SPY-down). Live-shaped veto never fired. See [`OVERLAY_HORIZON_BT.md`](OVERLAY_HORIZON_BT.md). Elevate stays closed. No live wire.
 
 Panel: **50445** liquid name-days · sessions 2026-08-13 → 2026-09-05 · base 1d mean **-0.13** · hit **42.2%**.
 
@@ -141,20 +142,18 @@ Graded high then lost. Features = prior Elite + prior AB + D join / morning weat
 
 Join `total_score` is **not** an elevate. Nothing in this table clears both-tape as a long overlay. Cheap / Magic Formula is not a long.
 
-**Clock:** every scored fire count below is `theme_radar_1d` · hold **1** · **1d open→close**. Sleeve / hold / clock columns for all sift repos live on [`EXTERNAL_ENRICH_MAP.md`](EXTERNAL_ENRICH_MAP.md). `flatten_h5` / `flatten_robust` are **unscored**.
-
-| mechanism | goal | exact Elite / AB / weather field | basket fire | veto, not fuel | elevate |
-|---|---|---|---|---|---|
-| Theme Radar fade vetoes | **Avoid** | `Forward P/E` ≥ 35; `d_RSI` = Δ `Relative Strength Index (14)` (prior − prior-prior); `d_Market Cap` = % Δ `Market Cap` (same vintage). Knobs in `finviz_style_flags`: HIGH_FPE=35, D_RSI_UP=5, D_MCAP_PCT=3. | high-FPE optics: 10/76; ai_power: 23/95; copper: 0/95; nuclear: 19/95; gold_hit: 0/76. d_RSI↑ optics: 2/76; ai_power: 3/95; copper: 9/95; nuclear: 6/95; gold_hit: 7/76. d_mcap↑ optics: 12/76; ai_power: 3/95; copper: 15/95; nuclear: 11/95; gold_hit: 7/76. Surviving both-tape avoid is high-FPE alone; d_RSI / d_mcap stay veto *candidates*, not rank fuel. Combined `radar_hot` failed both-tape — do not OR into the live veto. | YES — first leak-free patch. Short side was weak early. | NO — fades are not buy-rank fuel. |
-| CANSLIM scanners | **Expand (not Elevate)** | C `EPS Growth Quarter Over Quarter` + `EPS Surprise`; A `EPS Growth This Year` / `EPS Growth Past 3 Years`; N `52-Week High` (% below high); S prior `Relative Volume` + `Average Volume`; L `Performance (Quarter)` + AB `P01_peer_lead_week`; I `Institutional Ownership` / `Institutional Transactions`; M weather `signals.general_direction` / `signals.risk`. | optics: 0/76; ai_power: 0/95; copper: 11/95; nuclear: 0/95; gold_hit: 1/76. Fired on copper (FCX/TECK/ERO) — those names then lost. Panel already failed both-tape as long (up xs −0.35). Do not bump. | Do not invert CANSLIM into a fade veto without a new bar. | NO — dies on up tapes. Do not bump. |
-| Magic Formula | **Expand (not Elevate)** | `Income` / `Enterprise Value` (else `1/EV/EBITDA`, else `1/P/E`); ROC = `Return on Invested Capital`. Exclude Financial/Utilities; `Market Cap` < 100 dropped. | optics: 0/76; ai_power: 0/95; copper: 0/95; nuclear: 0/95; gold_hit: 0/76. Cheap/MF is the gold-contrast trap, not a rescue. Panel up xs −0.07 — failed both-tape as long. | Not a fade. Do not treat cheap as avoid either. | NO — do not promote cheap/MF as long. |
-| Stock-Screener-System multi-factor fail-any | **Avoid (shaped)** | AB `status_*` any BAD / `n_bad` > 0 on prior `{D}_ab_checklist_enriched.csv`. Join `veto_when` already named: `earn:today`; `ext:extreme` AND weather `risk=off` (`00_grounding/join_rules.json`). | AB fail-any optics: 52/56; ai_power: 65/70; copper: 65/70; nuclear: 65/70; gold_hit: 26/56. ~93% of stock name-days have some `status_*=BAD` — too wide for a veto. Join `veto_when` optics: 0/76; ai_power: 0/95; copper: 0/95; nuclear: 0/95; gold_hit: 0/76 (0 on these baskets). Enriched AB starts 08-19 — earlier is thin-n. Do not invent a new screener. | Fail-any is a veto shape, not a rank add. | NO. |
-| AlphaSuite / ATR risk caps | **Avoid / size (if relevant)** | Elite `Average True Range` / `Price` → `atr_pct`. Already the liquidity floor `MIN_ATR_PCT=2.5` in `ticker_lookback` / stock-book. Not a long rank. | ATR below floor optics: 0/76; ai_power: 0/95; copper: 0/95; nuclear: 0/95; gold_hit: 18/76. Only GLD (ETF) sits under 2.5% — a gold *hit*, so the floor would have wrongly gated a winner. Optics/AI/copper/nuclear: 0. Size cap only, not a Theme Radar substitute. | Size cap only. Do not score ATR% as buy-rank. | NO. |
-| AlphaSift L1→L2 re-rank | **Expand only** | Existing layers only: `data/join/{D}_ranked.csv` `total_score` / `score_norm`; book `score_1d`; `data/feature_asof/{D}_feature_asof.csv` `join_rank` / `join` / `ab`. No new sift scrape. | join top-quintile optics: 26/76; ai_power: 34/95; copper: 48/95; nuclear: 26/95; gold_hit: 29/76. These miss names were already graded high on join/AB — L2 on the same layers would have kept them elevated, then they lost. | Do not feed fade columns into a buy re-rank. | NO — existing ranker, already high on miss names; do not bump. |
-| vectorbt sweeps | **Expand only** | Wrap `factor_mine_book` 09:30 `open` + Futubull fees. Panel: `data/prices/ohlc.parquet` `(date,ticker)`. No vectorbt default close-to-close fills. | Harness not written — 0 fires. Expand-only sidecar. | N/A until a recipe is scored on the both-tape bar. | NO — not a bump column. |
-| Zipline cross-section | **Expand only** | Same `data/prices/ohlc.parquet` + PIT book as vectorbt. No Zipline pipeline in-repo. Do not pull Zipline data. | No in-repo pipeline — 0 fires. Thin-n / not wired. | N/A. | NO. |
-| OpenBB SEC / surprise | **Expand (thin-gap only)** | Elite already has `EPS Surprise`, `Revenue Surprise`, `Earnings Date`. AB `val_B01_eps_surprise` / `status_B01_eps_surprise`, B02, B17, B18. Do not replace. | No new OpenBB pull. Surprise headers already on prior Elite for names Finviz covers. Gap-fill only when the Elite cell is blank — do not invent 8-K scrapes for OKLO/SMR/GDX. | Same-day surprise on D is a leak. Prior vintage only. | NO — do not bump on a beat. |
-| qlib / FinRL sidecars | **Expand only** | `sidecars/qlib/`, `sidecars/finrl/`, `data/sidecars/{name}/{asof}/preds.parquet`. Join `ticker` + `asof_date` < D (or D iff morning-packet vintage). | No sidecar preds on disk — 0 fires. Bar not cleared. | N/A. | NO — offline until the same PIT / fee / audit bar. |
+| mechanism | goal | target_sleeve | hold | score_clock | exact Elite / AB / weather field | basket fire | veto, not fuel | elevate |
+|---|---|---|---:|---|---|---|---|---|
+| Theme Radar fade vetoes | **Avoid (1d only)** | theme_radar_1d | 1 | 1d open→close | `Forward P/E` ≥ 35; `d_RSI` = Δ `Relative Strength Index (14)` (prior − prior-prior); `d_Market Cap` = % Δ `Market Cap` (same vintage). Knobs in `finviz_style_flags`: HIGH_FPE=35, D_RSI_UP=5, D_MCAP_PCT=3. | high-FPE optics: 10/76; ai_power: 23/95; copper: 0/95; nuclear: 19/95; gold_hit: 0/76. d_RSI↑ optics: 2/76; ai_power: 3/95; copper: 9/95; nuclear: 6/95; gold_hit: 7/76. d_mcap↑ optics: 12/76; ai_power: 3/95; copper: 15/95; nuclear: 11/95; gold_hit: 7/76. Surviving both-tape avoid is high-FPE alone; d_RSI / d_mcap stay veto *candidates*, not rank fuel. Combined `radar_hot` failed both-tape — do not OR into the live veto. 1d clock only — not flatten_h5 / flatten_robust. | YES on 1d clock only. Does not auto-apply to flatten_h5 / flatten_robust. | NO — fades are not buy-rank fuel. |
+| CANSLIM scanners | **Expand (not Elevate)** | theme_radar_1d | 1 | 1d open→close | C `EPS Growth Quarter Over Quarter` + `EPS Surprise`; A `EPS Growth This Year` / `EPS Growth Past 3 Years`; N `52-Week High` (% below high); S prior `Relative Volume` + `Average Volume`; L `Performance (Quarter)` + AB `P01_peer_lead_week`; I `Institutional Ownership` / `Institutional Transactions`; M weather `signals.general_direction` / `signals.risk`. | optics: 0/76; ai_power: 0/95; copper: 11/95; nuclear: 0/95; gold_hit: 1/76. Fired on copper (FCX/TECK/ERO) — those names then lost. Panel already failed both-tape as long (up xs −0.35). Do not bump. | Do not invert CANSLIM into a fade veto without a new bar. | NO — dies on 1d up tapes. Reject until matching hold. |
+| Magic Formula | **Expand (not Elevate)** | theme_radar_1d | 1 | 1d open→close | `Income` / `Enterprise Value` (else `1/EV/EBITDA`, else `1/P/E`); ROC = `Return on Invested Capital`. Exclude Financial/Utilities; `Market Cap` < 100 dropped. | optics: 0/76; ai_power: 0/95; copper: 0/95; nuclear: 0/95; gold_hit: 0/76. Cheap/MF is the gold-contrast trap, not a rescue. Panel up xs −0.07 — failed both-tape as long. | Not a fade. Do not treat cheap as avoid either. | NO — do not promote cheap/MF as long. |
+| Stock-Screener-System multi-factor fail-any | **Avoid (shaped)** | theme_radar_1d | 1 | 1d open→close | AB `status_*` any BAD / `n_bad` > 0 on prior `{D}_ab_checklist_enriched.csv`. Join `veto_when` already named: `earn:today`; `ext:extreme` AND weather `risk=off` (`00_grounding/join_rules.json`). | AB fail-any optics: 52/56; ai_power: 65/70; copper: 65/70; nuclear: 65/70; gold_hit: 26/56. ~93% of stock name-days have some `status_*=BAD` — too wide for a veto. Join `veto_when` optics: 0/76; ai_power: 0/95; copper: 0/95; nuclear: 0/95; gold_hit: 0/76 (0 on these baskets). Enriched AB starts 08-19 — earlier is thin-n. Do not invent a new screener. | Fail-any is a veto shape, not a rank add. | NO. |
+| AlphaSuite / ATR risk caps | **Avoid / size (if relevant)** | all flatten_* (size floor) | n/a | prior Elite ATR/Price | Elite `Average True Range` / `Price` → `atr_pct`. Already the liquidity floor `MIN_ATR_PCT=2.5` in `ticker_lookback` / stock-book. Not a long rank. | ATR below floor optics: 0/76; ai_power: 0/95; copper: 0/95; nuclear: 0/95; gold_hit: 18/76. Only GLD (ETF) sits under 2.5% — a gold *hit*, so the floor would have wrongly gated a winner. Optics/AI/copper/nuclear: 0. Size cap only, not a Theme Radar substitute. | Size cap only. Do not score ATR% as buy-rank. | NO. |
+| AlphaSift L1→L2 re-rank | **Expand only** | theme_radar_1d | 1 | 1d open→close | Existing layers only: `data/join/{D}_ranked.csv` `total_score` / `score_norm`; book `score_1d`; `data/feature_asof/{D}_feature_asof.csv` `join_rank` / `join` / `ab`. No new sift scrape. | join top-quintile optics: 26/76; ai_power: 34/95; copper: 48/95; nuclear: 26/95; gold_hit: 29/76. These miss names were already graded high on join/AB — L2 on the same layers would have kept them elevated, then they lost. | Do not feed fade columns into a buy re-rank. | NO — existing ranker, already high on miss names; do not bump. |
+| vectorbt sweeps | **Expand only** | flatten_h1/h3/h5 | 1/3/5 | Nd open→exit + Futubull | Wrap `factor_mine_book` 09:30 `open` + Futubull fees. Panel: `data/prices/ohlc.parquet` `(date,ticker)`. No vectorbt default close-to-close fills. | Harness not written — 0 fires. Expand-only sidecar. | N/A until a recipe is scored on the both-tape bar. | NO — not a bump column. |
+| Zipline cross-section | **Expand only** | flatten_h1/h3/h5 | 1/3/5 | Nd open→exit | Same `data/prices/ohlc.parquet` + PIT book as vectorbt. No Zipline pipeline in-repo. Do not pull Zipline data. | No in-repo pipeline — 0 fires. Thin-n / not wired. | N/A. | NO. |
+| OpenBB SEC / surprise | **Expand (thin-gap only)** | sidecar | — | asof < D | Elite already has `EPS Surprise`, `Revenue Surprise`, `Earnings Date`. AB `val_B01_eps_surprise` / `status_B01_eps_surprise`, B02, B17, B18. Do not replace. | No new OpenBB pull. Surprise headers already on prior Elite for names Finviz covers. Gap-fill only when the Elite cell is blank — do not invent 8-K scrapes for OKLO/SMR/GDX. | Same-day surprise on D is a leak. Prior vintage only. | NO — do not bump on a beat. |
+| qlib / FinRL sidecars | **Expand only** | sidecar → flatten_h* | matching hold | Nd open→exit (unscored) | `sidecars/qlib/`, `sidecars/finrl/`, `data/sidecars/{name}/{asof}/preds.parquet`. Join `ticker` + `asof_date` < D (or D iff morning-packet vintage). | No sidecar preds on disk — 0 fires. Bar not cleared. | N/A. | NO — offline until the same PIT / fee / audit bar. |
 
 ## 5. Sift autopsy fold (`fullscan_autopsy_avoid_elevate.md`)
 
@@ -172,28 +171,30 @@ Source: swarm `/workspace/fullscan_autopsy_avoid_elevate.md` (often not on disk)
 | Only `radar_high_fpe` both-tape YES; no `radar_hot` OR; `elevate_bump` failed; cheap≠long | Matches §1–2. | **Keep.** |
 | Top Avoid extras: soft 🚨∧fade; join-hot∧AB-silent micros; optics/AI heat sit (n=1) | Early 🚨/fade empty. Micros = gated_out (expand). Heat sit n=1 = **thin-n**. | Log only. Do not promote. |
 | Top Elevate: gold-miner; CANSLIM A∧S; log outweighed | Gold is a contrast hit. A∧S is an unscored subset of a rule that dies on up tapes. Outweighed=20. | **Do not bump.** Log only. |
-| REAX +853% tax | Outweighed **and** FPE 65. | Keep FPE veto **optional** on the **1d** clock only. |
+| REAX +853% tax | Outweighed **and** FPE 65. | Keep FPE veto **optional**. |
 
-## 6. Horizon re-mine checklist (stub)
+## 6. Horizon re-mine checklist (fee-aware KEEP)
 
 Patches must be strategy-native. 1d `Change from Open` is the Theme Radar clock. A `flatten_h5` patch must be scored on **5-session** 09:30-open → exit + Futubull fees (`factor_mine.hold_window`).
 
-| sleeve | hold_sessions | score_clock | overlay status | 1d FPE auto-apply? |
-|---|---:|---|---|---|
-| `theme_radar_1d` | 1 | 1d open→close | **This autopsy.** `radar_high_fpe` both-tape YES (optional). | n/a |
-| `flatten_h1` | 1 | 09:30 open → +1 sess + fees | Not overlay-mined. | No — re-mine with fees/exit. |
-| `flatten_h3` | 3 | 09:30 open → +3 sess + fees | Not overlay-mined. | **No.** |
-| `flatten_h5` | 5 | 09:30 open → +5 sess + fees | Not overlay-mined. | **No.** |
-| `flatten_robust` | 3 (recycle) | live 3d size-book + flatten clock | **LIVE. Untouched.** | **No.** |
-| `flatten_live_h1/h3/h5` | 1 / 3 / 5 | gated tickets | thin-n (7 starts) | No. |
+Fee-aware KEEP re-mine: [`OVERLAY_HORIZON_BT.md`](OVERLAY_HORIZON_BT.md) · `python3 -m src.overlay_horizon_bt --write`. Bar = sleeve clock + prior Elite + 09:30 open + Futubull + peer-excess both-tape + leftover/unit $ + top-2 day share + walk-forward. Universe-sum of skipped losers is rejected.
 
-Re-mine (future, not this PR): prior Elite inputs · 09:30 open · whole shares · Futubull fees · both-tape n≥20 · do not write `LIVE_POLICY`. See `EXTERNAL_ENRICH_MAP.md` Horizon re-mine checklist.
+| sleeve | hold_sessions | score_clock | overlay status | fee-aware FPE avoid | 1d FPE auto-apply? |
+|---|---:|---|---|---|---|
+| `theme_radar_1d` | 1 | 1d open→close + fees | Percent IC both-tape YES (this autopsy). | **FAIL** — after Futubull, avoided $ xs vs peer **+0.09** (up-tape +0.35). Not an avoid. | n/a |
+| `flatten_h1` | 1 | leftover min-hold 1 + fees | Wish-list ≠ live. | **THIN** — n=11, 0 SPY-down, leftover +$326. Do not promote. | **No.** |
+| `flatten_h3` | 3 | leftover min-hold 3 + fees | Wish-list ≠ live. | **THIN** — n=9, leftover +$456. | **No.** |
+| `flatten_h5` | 5 | leftover min-hold 5 + fees | 1d FPE does not apply. | **THIN** — n=11, leftover +$723. | **No.** |
+| `flatten_robust` | 3 (recycle) | live 3d size-book + flatten clock | **LIVE. Untouched.** | **FAIL** — gated 08-20/21 gold, veto never fired. | **No.** |
+| `flatten_live_h1/h3/h5` | 1 / 3 / 5 | gated tickets | thin-n (2 entry days) | **FAIL** — veto never fired. | **No.** |
+
+Keep did **not** clear a PASS. Elevate stays rejected. Next smallest experiment is in `OVERLAY_HORIZON_BT.md` — do not drop the FPE cut or harvest name lists. Do not write `LIVE_POLICY`.
 
 ## Optional columns (not live gates)
 
 | column | meaning | promote? |
 |---|---|---|
-| `avoid_veto` | Theme Radar fade: prior `Forward P/E` ≥ 35 on **1d clock only** | optional sticker on `theme_radar_1d` — **not** live / h5 |
+| `avoid_veto` | Theme Radar fade: prior `Forward P/E` ≥ 35 (surviving both-tape) | optional sticker only |
 | `radar_rsi_up` / `radar_mcap_up` | d_RSI≥5 / d_mcap≥3% | veto *candidates*, **not** buy-rank fuel |
 | `elevate_bump` | CANSLIM + clean radar + AB lead | **do not bump** — failed both-tape |
 | `radar_high_fpe` | `Forward P/E` ≥ 35 (prior Elite) | fade sticker; cheap≠long |

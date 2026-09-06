@@ -64,6 +64,9 @@ def test_horizon_checklist_blocks_1d_on_h5() -> None:
     assert "flatten_robust" in text
     assert "**No.**" in text
     assert "theme_radar_1d" in text
+    assert "FAIL" in text
+    assert "THIN" in text
+    assert "OVERLAY_HORIZON_BT" in text
 
 
 def test_sift_fold_rejects_canslim_as_as_elevate() -> None:

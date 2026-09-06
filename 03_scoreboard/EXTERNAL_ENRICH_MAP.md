@@ -14,9 +14,13 @@ whose hold it was scored on. Next-day IC (`Change from Open`) is the
 (5-session 09:30-open → exit + Futubull fees) or live `flatten_robust`
 (3d size-book recycle) until a re-mine on that horizon clears both-tape.
 
-**Keep (1d Theme Radar clock only):** `radar_high_fpe` / optional
-`Forward P/E` ≥ 35. Until `flatten_h5` / `flatten_robust` re-mine
-clears, do not wire it there.
+**Keep (1d Theme Radar clock only, percent IC):** `radar_high_fpe` /
+optional `Forward P/E` ≥ 35 both-tape YES on `Change from Open`.
+**Fee-aware re-mine: FAIL.** After Futubull $1k unit fills, avoided
+names beat peers (xs $+0.09; up-tape $+0.35). Flatten leftover
++$326–$723 is **THIN** (n=9–11, 0 SPY-down, io/HOLD only). Live-shaped
+veto never fired. Do not wire anywhere. See
+[`OVERLAY_HORIZON_BT.md`](OVERLAY_HORIZON_BT.md).
 
 **Elevate: nothing cleared both-tape as a long on any matching hold.**
 Do not bump on `total_score`, CANSLIM, Magic Formula, or cheap Forward
@@ -40,12 +44,12 @@ Autopsy: [`OVERLAY_AUTOPSY.md`](OVERLAY_AUTOPSY.md) ·
 
 | target_sleeve | hold_sessions | Notes |
 |---|---:|---|
-| `theme_radar_1d` | 1 | This autopsy. Paper `1d_top` / `1d_size` sit here. |
-| `flatten_h1` | 1 | Wish-list research. **Not yet overlay-mined.** |
-| `flatten_h3` | 3 | Wish-list research. Paper `3d_*` is cousin, not a substitute. **Not yet overlay-mined.** |
-| `flatten_h5` | 5 | Wish-list research. **1d FPE does not apply.** |
-| `flatten_robust` | 3 (recycle) | **LIVE.** Do not wire 1d Theme Radar until re-mine clears. |
-| `flatten_live_h1/h3/h5` | 1 / 3 / 5 | Gated tickets. Thin-n (7 start days). |
+| `theme_radar_1d` | 1 | Percent IC autopsy. **Fee-aware FAIL** (xs $+0.09). |
+| `flatten_h1` | 1 | Wish-list leftover. **THIN** FPE avoid (n=11, +$326). |
+| `flatten_h3` | 3 | Wish-list leftover. **THIN** (n=9, +$456). Paper `3d_*` ≠ this. |
+| `flatten_h5` | 5 | Wish-list leftover. **THIN** (n=11, +$723). **1d FPE does not apply.** |
+| `flatten_robust` | 3 (recycle) | **LIVE.** Untouched. Gated FPE avoid **FAIL** (never fired). |
+| `flatten_live_h1/h3/h5` | 1 / 3 / 5 | Gated tickets. 2 entry days. FPE **FAIL**. |
 
 ### Master table — one row per external mechanism
 
@@ -55,7 +59,7 @@ name-days on Theme Radar miss lists (graded high then lost) plus gold
 
 | Mechanism | Goal | target_sleeve | hold_sessions | score_clock | Exact Elite / AB / weather field (no new scrape) | Fired on miss baskets? | Veto, not fuel | Elevate? |
 |---|---|---|---:|---|---|---|---|---|
-| **Theme Radar fade vetoes** | **Avoid** (1d only) | `theme_radar_1d` | 1 | **1d open→close** | `Forward P/E` ≥ 35; `d_RSI` = Δ `Relative Strength Index (14)` (prior − prior-prior); `d_Market Cap` = % Δ `Market Cap`. Knobs: `HIGH_FPE=35`, `D_RSI_UP=5`, `D_MCAP_PCT=3` in `src/finviz_style_flags.py`. | **Optics** AAOI/COHR/LITE/GLW: high-FPE 10/76 (GLW 8/19). **AI power** GEV/VRT/ETN/PWR/CAT: 23/95 — `GEV` **19/19** (med FPE 39). **Copper** FCX/SCCO/TECK/ERO/HBM: **0/95** (ERO med 7.6). **Nuclear** CEG/VST/OKLO/SMR/CCJ: 19/95 — `CCJ` **19/19** (med 55); CEG/VST mid/cheap. **Gold hit** GDX/GLD/NEM/AEM: **0/76**. Combined `radar_hot` failed both-tape. | **YES on 1d clock only.** First leak-free patch *there*. Do not OR `radar_hot`. **Does not auto-apply to `flatten_h5` / `flatten_robust`.** | **NO** — fades are not buy-rank fuel. Re-mine before any other sleeve. |
+| **Theme Radar fade vetoes** | **Avoid** (1d percent only) | `theme_radar_1d` | 1 | **1d open→close** | `Forward P/E` ≥ 35; `d_RSI` = Δ `Relative Strength Index (14)` (prior − prior-prior); `d_Market Cap` = % Δ `Market Cap`. Knobs: `HIGH_FPE=35`, `D_RSI_UP=5`, `D_MCAP_PCT=3` in `src/finviz_style_flags.py`. | **Optics** AAOI/COHR/LITE/GLW: high-FPE 10/76 (GLW 8/19). **AI power** GEV/VRT/ETN/PWR/CAT: 23/95 — `GEV` **19/19** (med FPE 39). **Copper** FCX/SCCO/TECK/ERO/HBM: **0/95** (ERO med 7.6). **Nuclear** CEG/VST/OKLO/SMR/CCJ: 19/95 — `CCJ` **19/19** (med 55); CEG/VST mid/cheap. **Gold hit** GDX/GLD/NEM/AEM: **0/76**. Combined `radar_hot` failed both-tape. | Percent IC both-tape YES. **Fee-aware FAIL** (peer $ xs +0.09). Flatten leftover THIN. Live veto never fired. Do not OR `radar_hot`. **Do not wire.** | **NO** — fades are not buy-rank fuel. Keep did not PASS the fee bar. |
 | **CANSLIM** (`KhoiUna/python-canslim`) | **Expand** — *not* Elevate | `theme_radar_1d` | 1 | 1d open→close | Elite EPS/sales YoY+QoQ. Weak ROE ≠ `Return on Invested Capital`. Do **not** scrape Macrotrends. | Swarm "Yes Optics/AI/Nuclear". **In-repo: 0/76 · 0/95 · 0/95 · copper 11/95 then lost.** Panel up xs **−0.35**. | Incomplete CANSLIM. | **NO** — dies on 1d up tapes. Reject until scored on matching hold. |
 | **3WT / cup** (`rmtech1/canslim_tightweek_scanner`) | **Expand** — *not* Elevate | `theme_radar_1d` | 1 | 1d open→close | `52-Week High` + EPS QoQ. Prior `Relative Volume` only. | Letter N not a scored overlay. Full CANSLIM fire on those baskets = **0**. | No cup scrape. | **NO**. |
 | **Magic Formula** (`amladik/Stock-Screener`) | **Expand** / cheap≠long | `theme_radar_1d` | 1 | 1d open→close | `Income` / `Enterprise Value`; ROC = `Return on Invested Capital`; `Market Cap`. 1/PE ≠ EBIT. | **No** — 0/437. Cheap copper still lost. | Don't promote cheap. | **NO** on any hold. |
@@ -83,23 +87,27 @@ Kid one-liners for the same rows:
 | AlphaSift / `total_score` | Re-sorting the same line-up does not rescue the kids we already sat in front. Swarm "Elevate screen" is **rejected**. |
 | vectorbt / Zipline / Lean / Vibe / OpenBB / qlib / FinRL | Practice kitchen. Same 09:30 bell and fee jar, or they stay outside. Close fills and Lean are not invited. A 5-day sandwich is not graded like a one-bell snack. |
 
-### Horizon re-mine checklist (stub)
+### Horizon re-mine checklist (ran)
 
 Do not copy the 1d Theme Radar FPE sticker onto a longer sleeve. Re-mine
 each row with the **same leak clock** (prior Elite) and the **sleeve's**
-fill/fee/hold. Promote only if both-tape clears on **that** horizon
-(n≥20 per tape).
+fill/fee/hold. Promote only if peer-excess both-tape clears on **that**
+horizon (n≥20 per tape) **and** the leftover/unit book is profitable
+after Futubull without 1–2 day concentration.
 
-| sleeve | hold_sessions | score_clock | overlay status | 1d FPE auto-apply? |
-|---|---:|---|---|---|
-| `theme_radar_1d` | 1 | 1d open→close (`Change from Open`) | **This autopsy.** `radar_high_fpe` both-tape YES (optional). | n/a (this is the 1d clock) |
-| `flatten_h1` | 1 | 09:30 open → +1 sess exit + Futubull | **Not overlay-mined.** Wish-list ≠ live tickets. | No — re-mine (cousin of 1d IC, still needs fees/exit). |
-| `flatten_h3` | 3 | 09:30 open → +3 sess + Futubull | **Not overlay-mined.** Paper `3d_*` losers are blotter, not a panel. | **No.** |
-| `flatten_h5` | 5 | 09:30 open → +5 sess + Futubull | **Not overlay-mined.** | **No.** |
-| `flatten_robust` | 3 (recycle) | live 3d size-book + flatten clock | **LIVE. Untouched.** | **No.** |
-| `flatten_live_h1` | 1 | gated 09:30 tickets | thin-n (7 start days) | No. |
-| `flatten_live_h3` | 3 | gated 09:30 tickets | thin-n | No. |
-| `flatten_live_h5` | 5 | gated 09:30 tickets | thin-n | No. |
+Harness: `python3 -m src.overlay_horizon_bt --write` →
+[`OVERLAY_HORIZON_BT.md`](OVERLAY_HORIZON_BT.md).
+
+| sleeve | hold_sessions | score_clock | overlay status | fee-aware FPE≥35 | 1d FPE auto-apply? |
+|---|---:|---|---|---|---|
+| `theme_radar_1d` | 1 | 1d open→close + Futubull | Percent IC both-tape YES. | **FAIL** — $ xs vs peer +0.09 (up-tape +0.35). | n/a (this is the 1d clock) |
+| `flatten_h1` | 1 | leftover min-hold 1 + Futubull | Wish-list ≠ live tickets. | **THIN** — n=11, 0 SPY-down, leftover +$326. | **No.** |
+| `flatten_h3` | 3 | leftover min-hold 3 + Futubull | Paper `3d_*` is blotter, not this panel. | **THIN** — n=9, leftover +$456. | **No.** |
+| `flatten_h5` | 5 | leftover min-hold 5 + Futubull | 1d FPE does not apply. | **THIN** — n=11, leftover +$723. | **No.** |
+| `flatten_robust` | 3 (recycle) | live 3d size-book + flatten clock | **LIVE. Untouched.** | **FAIL** — gated gold 08-20/21, veto never fired. | **No.** |
+| `flatten_live_h1` | 1 | gated 09:30 tickets | 2 entry days | **FAIL** — veto never fired. | **No.** |
+| `flatten_live_h3` | 3 | gated 09:30 tickets | 2 entry days | **FAIL** — veto never fired. | **No.** |
+| `flatten_live_h5` | 5 | gated 09:30 tickets | 2 entry days | **FAIL** — veto never fired. | **No.** |
 
 Re-mine recipe (when someone runs it — not this PR):
 

@@ -131,20 +131,47 @@ def test_hard_red_sits() -> None:
 
 
 def test_decide_fail_when_book_worse() -> None:
-    ic = {"both_tape": True, "thin": False, "n": 40,
+    ic = {"both_tape": True, "thin": False, "n": 40, "xs": -1.0,
+          "mean_pnl": -2.0,
           "walk_forward": {"ok": True, "thin": False}}
     gate = oh.decide(ic, {"pnl": 100.0}, {"pnl": 50.0},
-                     [2.0] * 10, n_avoided=40)
+                     [2.0] * 10, n_avoided=40, book_kind="leftover")
     assert gate["verdict"] == "FAIL"
     assert gate["excess_usd"] == -50.0
 
 
 def test_decide_pass_requires_tape_and_book_and_not_concentrated() -> None:
-    ic = {"both_tape": True, "thin": False, "n": 40,
+    ic = {"both_tape": True, "thin": False, "n": 40, "xs": -1.0,
+          "mean_pnl": -2.0,
           "walk_forward": {"ok": True, "thin": False}}
     gate = oh.decide(ic, {"pnl": 50.0}, {"pnl": 80.0},
-                     [3.0] * 10, n_avoided=40)
+                     [3.0] * 10, n_avoided=40, book_kind="leftover")
     assert gate["verdict"] == "PASS"
+
+
+def test_decide_fail_when_avoided_beat_peers() -> None:
+    ic = {"both_tape": True, "thin": False, "n": 40, "xs": 0.09,
+          "mean_pnl": -5.8,
+          "walk_forward": {"ok": True, "thin": False}}
+    gate = oh.decide(
+        ic, {"pnl": -100.0, "mean_pnl": -5.95},
+        {"pnl": -80.0, "mean_pnl": -5.96},
+        [3.0] * 10, n_avoided=40, book_kind="unit")
+    assert gate["verdict"] == "FAIL"
+
+
+def test_both_tape_uses_peer_excess_not_absolute() -> None:
+    avoided, kept = [], []
+    for _ in range(25):
+        avoided.append({"pnl": -2.0, "tape": "up"})
+        avoided.append({"pnl": -3.0, "tape": "down"})
+        kept.append({"pnl": -4.0, "tape": "up"})
+        kept.append({"pnl": -5.0, "tape": "down"})
+    # Avoided lose, but less than peers — not an avoid edge.
+    st = oh.both_tape(avoided, kept)
+    assert st["thin"] is False
+    assert st["both_tape"] is False
+    assert st["tapes"]["up"]["xs"] > 0
 
 
 def test_does_not_import_live_policy() -> None:
@@ -166,8 +193,10 @@ def main() -> None:
     test_hard_red_sits()
     test_decide_fail_when_book_worse()
     test_decide_pass_requires_tape_and_book_and_not_concentrated()
+    test_decide_fail_when_avoided_beat_peers()
+    test_both_tape_uses_peer_excess_not_absolute()
     test_does_not_import_live_policy()
-    print("test_overlay_horizon_bt: 10 ok")
+    print("test_overlay_horizon_bt: 12 ok")
 
 
 if __name__ == "__main__":

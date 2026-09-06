@@ -470,18 +470,26 @@ def _horizon_checklist_section() -> list[str]:
         "**5-session** 09:30-open → exit + Futubull fees "
         "(`factor_mine.hold_window`).",
         "",
-        "| sleeve | hold_sessions | score_clock | overlay status | 1d FPE auto-apply? |",
-        "|---|---:|---|---|---|",
-        "| `theme_radar_1d` | 1 | 1d open→close | **This autopsy.** `radar_high_fpe` both-tape YES (optional). | n/a |",
-        "| `flatten_h1` | 1 | 09:30 open → +1 sess + fees | Not overlay-mined. | No — re-mine with fees/exit. |",
-        "| `flatten_h3` | 3 | 09:30 open → +3 sess + fees | Not overlay-mined. | **No.** |",
-        "| `flatten_h5` | 5 | 09:30 open → +5 sess + fees | Not overlay-mined. | **No.** |",
-        "| `flatten_robust` | 3 (recycle) | live 3d size-book + flatten clock | **LIVE. Untouched.** | **No.** |",
-        "| `flatten_live_h1/h3/h5` | 1 / 3 / 5 | gated tickets | thin-n (7 starts) | No. |",
+        "Fee-aware KEEP re-mine: "
+        "[`OVERLAY_HORIZON_BT.md`](OVERLAY_HORIZON_BT.md) · "
+        "`python3 -m src.overlay_horizon_bt --write`. "
+        "Bar = sleeve clock + prior Elite + 09:30 open + Futubull + "
+        "peer-excess both-tape + leftover/unit $ + top-2 day share + "
+        "walk-forward. Universe-sum of skipped losers is rejected.",
         "",
-        "Re-mine (future, not this PR): prior Elite inputs · 09:30 open · "
-        "whole shares · Futubull fees · both-tape n≥20 · do not write "
-        "`LIVE_POLICY`. See `EXTERNAL_ENRICH_MAP.md` Horizon re-mine checklist.",
+        "| sleeve | hold_sessions | score_clock | overlay status | fee-aware FPE avoid | 1d FPE auto-apply? |",
+        "|---|---:|---|---|---|---|",
+        "| `theme_radar_1d` | 1 | 1d open→close + fees | Percent IC both-tape YES (this autopsy). | **FAIL** — after Futubull, avoided $ xs vs peer **+0.09** (up-tape +0.35). Not an avoid. | n/a |",
+        "| `flatten_h1` | 1 | leftover min-hold 1 + fees | Wish-list ≠ live. | **THIN** — n=11, 0 SPY-down, leftover +$326. Do not promote. | **No.** |",
+        "| `flatten_h3` | 3 | leftover min-hold 3 + fees | Wish-list ≠ live. | **THIN** — n=9, leftover +$456. | **No.** |",
+        "| `flatten_h5` | 5 | leftover min-hold 5 + fees | 1d FPE does not apply. | **THIN** — n=11, leftover +$723. | **No.** |",
+        "| `flatten_robust` | 3 (recycle) | live 3d size-book + flatten clock | **LIVE. Untouched.** | **FAIL** — gated 08-20/21 gold, veto never fired. | **No.** |",
+        "| `flatten_live_h1/h3/h5` | 1 / 3 / 5 | gated tickets | thin-n (2 entry days) | **FAIL** — veto never fired. | **No.** |",
+        "",
+        "Keep did **not** clear a PASS. Elevate stays rejected. "
+        "Next smallest experiment is in `OVERLAY_HORIZON_BT.md` — do not "
+        "drop the FPE cut or harvest name lists. Do not write "
+        "`LIVE_POLICY`.",
     ]
 
 
@@ -604,6 +612,15 @@ def render(payload: dict) -> str:
         lines.append(f"{i}. {line}")
     if not p.get("findings"):
         lines.append("_No findings payload — rerun `python -m src.overlay_autopsy --write`._")
+    n_find = len(p.get("findings") or [])
+    lines.append(
+        f"{n_find + 1}. **Fee-aware KEEP re-mine:** `radar_high_fpe` "
+        "fails Futubull $ peer-excess on `theme_radar_1d` (xs $+0.09; "
+        "up-tape $+0.35). Flatten leftover +$326–$723 is THIN "
+        "(n=9–11, 0 SPY-down). Live-shaped veto never fired. "
+        "See [`OVERLAY_HORIZON_BT.md`](OVERLAY_HORIZON_BT.md). "
+        "Elevate stays closed. No live wire."
+    )
     lines += [
         "",
         f"Panel: **{p['panel']['n']}** liquid name-days · sessions "
@@ -700,7 +717,7 @@ def render(payload: dict) -> str:
     lines.extend(_sift_fold_section())
     lines += [
         "",
-        "## 6. Horizon re-mine checklist (stub)",
+        "## 6. Horizon re-mine checklist (fee-aware KEEP)",
         "",
     ]
     lines.extend(_horizon_checklist_section())

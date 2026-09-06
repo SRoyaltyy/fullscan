@@ -446,24 +446,42 @@ def concentration(daily_pnl: list[float]) -> dict:
     }
 
 
-def both_tape(rows: list[dict], pnl_key: str = "pnl") -> dict:
-    by = {"up": [], "down": [], "flat": [], "unknown": []}
-    for r in rows:
-        by.setdefault(r.get("tape") or "unknown", []).append(r.get(pnl_key))
+def _mean(xs: list) -> float | None:
+    xs = [x for x in xs if x is not None]
+    if not xs:
+        return None
+    return sum(xs) / len(xs)
+
+
+def both_tape(avoided: list[dict], kept: list[dict],
+              pnl_key: str = "pnl") -> dict:
+    """Avoid both-tape = negative *excess vs same-tape peers*, not abs. loss.
+
+    The whole liquid tape loses after $1k Futubull fees. Absolute mean<0
+    on both tapes is the market, not an avoid edge.
+    """
     out = {}
-    for k, xs in by.items():
-        xs = [x for x in xs if x is not None]
-        out[k] = {
-            "n": len(xs),
-            "mean": None if not xs else round(sum(xs) / len(xs), 4),
-            "hit": None if not xs else round(sum(1 for x in xs if x > 0) / len(xs), 4),
+    for tape in ("up", "down", "flat", "unknown"):
+        a = [r.get(pnl_key) for r in avoided if (r.get("tape") or "unknown") == tape]
+        k = [r.get(pnl_key) for r in kept if (r.get("tape") or "unknown") == tape]
+        a = [x for x in a if x is not None]
+        k = [x for x in k if x is not None]
+        am, km = _mean(a), _mean(k)
+        out[tape] = {
+            "n": len(a),
+            "n_peer": len(k),
+            "mean": None if am is None else round(am, 4),
+            "mean_peer": None if km is None else round(km, 4),
+            "xs": None if am is None or km is None else round(am - km, 4),
+            "hit": None if not a else round(sum(1 for x in a if x > 0) / len(a), 4),
         }
-    up, dn = out.get("up") or {}, out.get("down") or {}
-    up_ok = (up.get("n") or 0) >= MIN_TAPE
-    dn_ok = (dn.get("n") or 0) >= MIN_TAPE
+    up, dn = out["up"], out["down"]
+    up_ok = up["n"] >= MIN_TAPE and up["n_peer"] >= MIN_TAPE
+    dn_ok = dn["n"] >= MIN_TAPE and dn["n_peer"] >= MIN_TAPE
     both = None
     if up_ok and dn_ok:
-        both = (up.get("mean") or 0) < 0 and (dn.get("mean") or 0) < 0
+        both = (up.get("xs") is not None and up["xs"] < 0
+                and dn.get("xs") is not None and dn["xs"] < 0)
     return {
         "tapes": out,
         "both_tape": both,
@@ -490,29 +508,58 @@ def walk_forward(rows: list[dict], pnl_key: str = "pnl") -> dict:
 
 
 def decide(ic: dict, book_base: dict, book_avoid: dict,
-           delta_daily: list[float], n_avoided: int) -> dict:
-    """PASS only if avoid is applicable and statistically profitable."""
+           delta_daily: list[float], n_avoided: int,
+           book_kind: str = "leftover") -> dict:
+    """PASS only if avoid is applicable and statistically profitable.
+
+    ``book_kind=unit`` (Theme Radar): excess is mean(kept)−mean(all).
+    A universe *sum* of skipped losers is sleight of hand — the whole
+    liquid tape loses after $1k fees. Require peer-excess < 0 (IC) and
+    avoided mean $ < 0 (skip is +EV vs buying that name).
+
+    ``book_kind=leftover`` (flatten): excess is $10k book Δ vs baseline.
+    """
     reasons = []
     verdict = "FAIL"
-    excess = None
-    if book_base and book_avoid:
-        excess = round(book_avoid["pnl"] - book_base["pnl"], 4)
+    xs = ic.get("xs")
+    avoided_mean = ic.get("mean_pnl")
     conc = concentration(delta_daily)
     tape = ic.get("both_tape")
     thin = bool(ic.get("thin"))
     wf = ic.get("walk_forward") or {}
 
+    if book_kind == "unit":
+        base_mean = book_base.get("mean_pnl") if book_base else None
+        avoid_mean = book_avoid.get("mean_pnl") if book_avoid else None
+        if base_mean is None or avoid_mean is None:
+            excess = None
+        else:
+            excess = round(avoid_mean - base_mean, 4)
+    else:
+        if book_base and book_avoid:
+            excess = round(book_avoid["pnl"] - book_base["pnl"], 4)
+        else:
+            excess = None
+
     if n_avoided <= 0:
         reasons.append("veto never fired")
         verdict = "FAIL"
     elif thin and (ic.get("n") or 0) < MIN_UNIT:
-        reasons.append("thin-n IC")
+        reasons.append("thin-n — cannot claim both-tape")
         verdict = "THIN"
+    elif xs is not None and xs >= 0:
+        reasons.append(
+            f"avoided names beat peers after fees (xs ${xs:+.2f}) — not an avoid"
+        )
+        verdict = "FAIL"
     elif tape is False:
-        reasons.append("avoided names do not lose both tapes")
+        reasons.append("peer-excess is not negative on both tapes")
+        verdict = "FAIL"
+    elif book_kind == "unit" and (avoided_mean is None or avoided_mean >= 0):
+        reasons.append("avoided mean $ ≥ 0 after fees — skip is not +EV")
         verdict = "FAIL"
     elif excess is not None and excess <= 0:
-        reasons.append(f"avoid book ${excess:+.2f} vs baseline (not profitable)")
+        reasons.append(f"kept book ${excess:+.2f} vs baseline (not profitable)")
         verdict = "FAIL"
     elif conc.get("reject"):
         reasons.append(
@@ -521,16 +568,16 @@ def decide(ic: dict, book_base: dict, book_avoid: dict,
         verdict = "FAIL"
     elif tape is True and excess is not None and excess > 0 and not conc.get("reject"):
         if wf.get("thin"):
-            reasons.append("IC both-tape + book excess, walk-forward thin")
+            reasons.append("peer-excess both-tape + book excess, walk-forward thin")
             verdict = "ITERATE"
         elif wf.get("ok") is False:
             reasons.append("walk-forward sign flip")
             verdict = "FAIL"
         else:
-            reasons.append("both-tape fade + fee-aware book excess + not 1–2 day")
+            reasons.append("peer-excess both-tape + fee-aware book + not 1–2 day")
             verdict = "PASS"
     elif tape is None and excess is not None and excess > 0:
-        reasons.append("book excess but both-tape thin — do not promote")
+        reasons.append("book $ up but both-tape thin — do not promote")
         verdict = "THIN" if thin else "ITERATE"
     else:
         reasons.append("inconclusive")
@@ -541,6 +588,7 @@ def decide(ic: dict, book_base: dict, book_avoid: dict,
         "excess_usd": excess,
         "concentration": conc,
         "reasons": reasons,
+        "book_kind": book_kind,
     }
 
 
@@ -653,9 +701,11 @@ def book_pair(cal: list[str], flatten_days: list[dict], bars: dict,
         kept = []
         raw = day["tickers"][:TOP_N]
         picks_base[d] = list(raw)
+        gated = (not live_only) or bool(day.get("flatten_ok"))
         for t in raw:
             fpe = (yest.get(t) or {}).get("fpe")
-            if high_fpe(fpe, cut) and regime_ok(regime, morn, day.get("score")):
+            if (gated and high_fpe(fpe, cut)
+                    and regime_ok(regime, morn, day.get("score"))):
                 n_avoided += 1
                 continue
             kept.append(t)
@@ -681,7 +731,7 @@ def ic_from_rows(rows: list[dict]) -> dict:
         sum(1 for r in avoided if r["hit"]) / len(avoided), 4)
     hit_k = None if not kept else round(
         sum(1 for r in kept if r["hit"]) / len(kept), 4)
-    tape = both_tape(avoided)
+    tape = both_tape(avoided, kept)
     wf = walk_forward(avoided)
     return {
         "n": len(avoided),
@@ -753,7 +803,8 @@ def score_sleeve(sleeve: dict, flatten_days: list[dict], cal: list[str],
         dd = max_drawdown([x["equity"] for x in book_avoid["daily"]])
         # leftover n_avoided counts skipped picks; IC n is unit-graded flagged.
 
-    gate = decide(ic, book_base, book_avoid, delta, n_avoided)
+    gate = decide(ic, book_base, book_avoid, delta, n_avoided,
+                  book_kind=sleeve["book"])
     eq_a = [x.get("equity") for x in (book_avoid.get("daily") or []) if x.get("equity") is not None]
     return {
         "sleeve": sleeve["name"],
@@ -871,8 +922,8 @@ def render(payload: dict) -> str:
         "|---|---|",
         "| sleeve clock | tagged `hold_sessions` + leftover or 1d open→close |",
         "| leak | prior Elite only |",
-        "| both-tape | avoided names lose on SPY-up **and** SPY-down, n≥20 each |",
-        "| book | avoid leftover / kept-unit $ > baseline after fees |",
+        "| both-tape | avoided *peer-excess* < 0 on SPY-up **and** SPY-down, n≥20 each |",
+        "| book | leftover: $10k Δ vs baseline. unit: mean(kept)−mean(all), and avoided mean < 0. Universe-sum of skipped losers is rejected. |",
         f"| concentration | top-2 |ΔP&L| share ≥ {100 * TOP2_REJECT:.0f}% → FAIL |",
         "| walk-forward | same-sign avoided-name $ on first/last half, else thin |",
         "",
@@ -923,6 +974,16 @@ def render(payload: dict) -> str:
     any_pass = payload.get("any_pass")
     lines += [
         "",
+        "## Flatten skips (FPE≥35 · wish-list top 8 · not live tickets)",
+        "",
+        "IREN / HIMS / TNDM (08-13), BTBT (08-14), HNST (08-17), "
+        "INSP / CRMD (08-24 hard-red sit; 08-25/26), ATRC (09-03/04). "
+        "Zero avoided names on realized SPY-down. Live gate days "
+        "08-20/21 are gold (AEM/KGC/…) — high-FPE 0. Leftover $ lift "
+        "is wish-list HOLD only; baselines matched published blotters "
+        "(h1 ~+$1.57k vs +$1.55k, h3 ~+$1.17k vs +$1.18k, "
+        "h5 ~+$2.31k vs +$2.28k).",
+        "",
         "## Elevate",
         "",
     ]
@@ -950,19 +1011,24 @@ def render(payload: dict) -> str:
         )
     else:
         lines.append(
-            "Clean null on KEEP FPE avoid across Theme Radar 1d, flatten "
-            "h1/h3/h5 leftover, and live-shaped gated books. Sweep "
-            "(FPE 40/50, morning-up, S≥0) did not produce a PASS that "
-            "survives both-tape + fees + concentration."
+            "Clean null. Theme Radar 1d percent fade (overlay xs −0.09) "
+            "**does not survive** Futubull $ peer-excess (xs $+0.09; "
+            "up-tape xs $+0.35). Flatten leftover books print "
+            "+$326 / +$456 / +$723 vs matched $10k baselines, but "
+            "n=9–11 avoided picks, **0 SPY-down** avoided entries, and "
+            "every skip sits on io/HOLD mornings — live-shaped books "
+            "never fired the veto (gold 08-20/21). Sweep FPE 40/50 × "
+            "morning-up / S≥0 did not clear the bar."
         )
         lines.append("")
         lines.append(
-            "**Next smallest experiment:** fee-aware *unit* IC on "
-            "`flatten_h1` wish-list with a **pre-registered** FPE≥35 "
-            "avoid, split by *morning weather* (knowable) not realized "
-            "SPY, and require n≥20 per tape **before** looking at $ — "
-            "if that cell is still thin, stop. Do not harvest GEV/CCJ "
-            "name lists. Do not paste 1d IC onto h5."
+            "**Next smallest experiment:** do **not** drop the FPE cut "
+            "or harvest GEV/CCJ lists. Pre-register FPE≥35 on the "
+            "`flatten_h1` wish-list unit clock; wait until avoided n≥20 "
+            "on realized SPY-up **and** SPY-down (or morning-weather "
+            "up **and** down) **before** looking at leftover $. If the "
+            "next book-era still cannot fill both tapes, drop the "
+            "patch. Do not paste 1d IC onto h5. Elevate stays closed."
         )
     lines += [
         "",
