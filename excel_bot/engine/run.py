@@ -10,6 +10,10 @@ Modes:
 Outputs (in outputs/):
   grid_<tag>.html   visual replica of the Excel view (columns A-O)
   grid_<tag>.json   per-day values + fill colors (machine-readable)
+  --all-cols        capture EVERY column (A..JL, 275 cols), not just A-O:
+                    every formula cell, static value and conditional fill
+                    the workbook contains. JSON is the full machine-readable
+                    dump; HTML gets horizontal scroll + column-letter header.
 """
 import argparse
 import json
@@ -28,7 +32,9 @@ from validate import build_seeds
 from stockhistory import stockhistory_array, serial
 
 VISIBLE_COLS = list(range(1, 16))  # A..O
+ALL_COLS = list(range(1, 276))     # A..JL (workbook max_col = 275)
 ROW_START, ROW_END = 1, 145
+FULL_ROW_END = 364                 # workbook max_row
 
 
 def seed_live(ev, ticker, run_date, workspace="."):
@@ -73,7 +79,8 @@ def fmt_value(v, col_idx):
     return str(v)
 
 
-def run(ticker=None, run_date=None, from_cache=False, tag=None, workspace="."):
+def run(ticker=None, run_date=None, from_cache=False, tag=None, workspace=".",
+        all_cols=False, row_end=None):
     model = json.load(open(os.path.join(workspace, "engine/model.json")))
     today_serial = model["cached"].get("P1")
     if from_cache:
@@ -94,15 +101,21 @@ def run(ticker=None, run_date=None, from_cache=False, tag=None, workspace="."):
         ev.seed(seeds)
     ce = ColorEngine(ev, os.path.join(workspace, "engine/model.json"))
 
+    cols = ALL_COLS if all_cols else VISIBLE_COLS
+    rend = row_end or (FULL_ROW_END if all_cols else ROW_END)
     grid = []
-    for r in range(ROW_START, ROW_END + 1):
+    for r in range(ROW_START, rend + 1):
         row = []
-        for c in VISIBLE_COLS:
+        for c in cols:
             coord = f"{get_column_letter(c)}{r}"
             v = ev.get_cell(coord)
             if is_arr(v):
                 v = v[0][0]
             fill = ce.fill_for(coord)
+            # skip cells that carry nothing: no value, no fill, no formula
+            if all_cols and v is None and not fill \
+                    and coord not in model["formulas"]:
+                continue
             row.append({"cell": coord, "value": None if isinstance(v, Err) else v,
                         "error": v.code if isinstance(v, Err) else None,
                         "text": fmt_value(v, c), "fill": fill})
@@ -110,22 +123,27 @@ def run(ticker=None, run_date=None, from_cache=False, tag=None, workspace="."):
 
     tag = tag or (f"replica_{ticker}_{run_date}" if from_cache
                   else f"{ticker}_{run_date}")
+    if all_cols:
+        tag += "_full"
     outdir = os.path.join(workspace, "outputs")
     os.makedirs(outdir, exist_ok=True)
     json_path = os.path.join(outdir, f"grid_{tag}.json")
-    json.dump({"ticker": ticker, "date": str(run_date), "grid": grid},
+    json.dump({"ticker": ticker, "date": str(run_date),
+               "all_cols": all_cols, "grid": grid},
               open(json_path, "w"), default=str)
 
     html_path = os.path.join(outdir, f"grid_{tag}.html")
-    write_html(html_path, grid, ticker, run_date, from_cache, ndays, nweeks)
+    write_html(html_path, grid, ticker, run_date, from_cache, ndays, nweeks,
+               all_cols=all_cols)
     return html_path, json_path
 
 
-def write_html(path, grid, ticker, run_date, from_cache, ndays, nweeks):
-    cols = "ABCDEFGHIJKLMNO"
+def write_html(path, grid, ticker, run_date, from_cache, ndays, nweeks,
+               all_cols=False):
     parts = [f"""<!DOCTYPE html><html><head><meta charset="utf-8">
 <title>{ticker} - {run_date}</title><style>
 body {{ font-family: Calibri, Arial, sans-serif; background:#222; color:#eee; padding:16px; }}
+.wrap {{ overflow-x: auto; }}
 table {{ border-collapse: collapse; font-size: 12px; }}
 td {{ border: 1px solid #999; padding: 1px 6px; min-width: 64px; text-align: right;
      color: #111; background: #fff; white-space: nowrap; }}
@@ -133,17 +151,29 @@ td.h {{ background: #ddd; font-weight: bold; }}
 .meta {{ margin-bottom: 10px; }}
 </style></head><body>
 <div class="meta"><b>{ticker}</b> as of {run_date}
-({'Excel cached replica' if from_cache else f'live fetch: {ndays} daily rows, {nweeks} weekly rows'})</div>
-<table>"""]
+({'Excel cached replica' if from_cache else f'live fetch: {ndays} daily rows, {nweeks} weekly rows'})
+{'· FULL capture (all 275 columns)' if all_cols else ''}</div>
+<div class="wrap"><table>"""]
+    if all_cols:
+        # header row with column letters for navigation
+        import re as _re
+        seen = []
+        for row in grid:
+            for cell in row:
+                col = _re.match(r"[A-Z]+", cell["cell"]).group()
+                if col not in seen:
+                    seen.append(col)
+        parts.append("<tr>" + "".join(
+            f'<td class="h">{c}</td>' for c in seen) + "</tr>")
     for i, row in enumerate(grid):
         parts.append("<tr>")
         for cell in row:
             fill = cell["fill"]
             style = f' style="background:#{fill}"' if fill else ""
-            cls = ' class="h"' if i == 0 else ""
+            cls = ' class="h"' if i == 0 and not all_cols else ""
             parts.append(f'<td{cls}{style}>{cell["text"]}</td>')
         parts.append("</tr>")
-    parts.append("</table></body></html>")
+    parts.append("</table></div></body></html>")
     open(path, "w", encoding="utf-8").write("\n".join(parts))
 
 
@@ -153,8 +183,12 @@ if __name__ == "__main__":
     ap.add_argument("--date")
     ap.add_argument("--from-cache", action="store_true")
     ap.add_argument("--tag")
+    ap.add_argument("--all-cols", action="store_true",
+                    help="capture every column (A..JL), not just A-O")
+    ap.add_argument("--row-end", type=int, default=None)
     args = ap.parse_args()
     html, js = run(ticker=args.ticker, run_date=args.date,
-                   from_cache=args.from_cache, tag=args.tag)
+                   from_cache=args.from_cache, tag=args.tag,
+                   all_cols=args.all_cols, row_end=args.row_end)
     print("HTML:", html)
     print("JSON:", js)
