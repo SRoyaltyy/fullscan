@@ -52,7 +52,12 @@ def test_mechanism_rows_are_not_elevate() -> None:
     rows = trb.mechanism_rows(empty, {"join_high": {}})
     assert len(rows) == 10
     goals = {r["mechanism"]: r["goal"] for r in rows}
-    assert goals["Theme Radar fade vetoes"] == "Avoid"
+    assert goals["Theme Radar fade vetoes"].startswith("Avoid")
+    by = {r["mechanism"]: r for r in rows}
+    assert by["Theme Radar fade vetoes"]["target_sleeve"] == "theme_radar_1d"
+    assert by["Theme Radar fade vetoes"]["hold_sessions"] == "1"
+    assert "1d" in by["Theme Radar fade vetoes"]["score_clock"]
+    assert "flatten_h" in by["vectorbt sweeps"]["target_sleeve"]
     assert goals["CANSLIM scanners"].startswith("Expand")
     assert goals["Magic Formula"].startswith("Expand")
     assert goals["vectorbt sweeps"].startswith("Expand")

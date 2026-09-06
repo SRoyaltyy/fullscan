@@ -8,15 +8,44 @@ shopping list.
 column overwrites a Finviz Elite header. No sidecar prediction may color a
 09:30 box until it clears the same leak / fill / fee bar as factor-mine.
 
-**Elevate: nothing cleared both-tape as a long.** Do not bump on
-`total_score`, CANSLIM, Magic Formula, or cheap Forward P/E.
+**Strategy-native (War room).** A patch is only legal on the sleeve
+whose hold it was scored on. Next-day IC (`Change from Open`) is the
+**Theme Radar 1d clock**. It does **not** auto-apply to `flatten_h5`
+(5-session 09:30-open → exit + Futubull fees) or live `flatten_robust`
+(3d size-book recycle) until a re-mine on that horizon clears both-tape.
+
+**Keep (1d Theme Radar clock only):** `radar_high_fpe` / optional
+`Forward P/E` ≥ 35. Until `flatten_h5` / `flatten_robust` re-mine
+clears, do not wire it there.
+
+**Elevate: nothing cleared both-tape as a long on any matching hold.**
+Do not bump on `total_score`, CANSLIM, Magic Formula, or cheap Forward
+P/E. Reject elevates unless scored on the matching hold.
+
 Theme Radar fades (high `Forward P/E`, high `d_RSI`, high `d_Market Cap`)
 are **veto candidates, not buy-rank fuel**. Short side was weak early —
-fade vetoes are the first leak-free patch.
+fade vetoes are the first leak-free patch **on the 1d clock**.
 
 Autopsy: [`OVERLAY_AUTOPSY.md`](OVERLAY_AUTOPSY.md) ·
 `python -m src.overlay_autopsy --write` ·
 `python -m src.theme_radar_baskets --write`.
+
+### Sleeve / hold / score clock
+
+| score_clock | What it grades | Source |
+|---|---|---|
+| **1d open→close** | Same-day Finviz `Change from Open`. Next-day IC. This overlay panel. | `src/overlay_autopsy.py` |
+| **Nd open→exit** | 09:30 `open` on D through `hold` sessions (`hold_window`). Exit at later 09:30 open or horizon close. Whole shares + Futubull fees. | `src/factor_mine.py` `hold_window` · `factor_mine_book` |
+| **3d recycle** | Live `flatten_robust`: 3d size-book + flatten-switch. S ≤ −3 blocks new tickets. | `src/sleeve_merge.py` `LIVE_POLICY` |
+
+| target_sleeve | hold_sessions | Notes |
+|---|---:|---|
+| `theme_radar_1d` | 1 | This autopsy. Paper `1d_top` / `1d_size` sit here. |
+| `flatten_h1` | 1 | Wish-list research. **Not yet overlay-mined.** |
+| `flatten_h3` | 3 | Wish-list research. Paper `3d_*` is cousin, not a substitute. **Not yet overlay-mined.** |
+| `flatten_h5` | 5 | Wish-list research. **1d FPE does not apply.** |
+| `flatten_robust` | 3 (recycle) | **LIVE.** Do not wire 1d Theme Radar until re-mine clears. |
+| `flatten_live_h1/h3/h5` | 1 / 3 / 5 | Gated tickets. Thin-n (7 start days). |
 
 ### Master table — one row per external mechanism
 
@@ -24,25 +53,25 @@ Leak-free 09:30 fields only. No new scrape. Basket fire =
 name-days on Theme Radar miss lists (graded high then lost) plus gold
 8/12 *hit* contrast, sessions 2026-08-13 → 2026-09-05, prior Elite.
 
-| Mechanism | Goal | Exact Elite / AB / weather field (no new scrape) | Fired on miss baskets? | Veto, not fuel | Elevate? |
-|---|---|---|---|---|---|
-| **Theme Radar fade vetoes** | **Avoid** | `Forward P/E` ≥ 35; `d_RSI` = Δ `Relative Strength Index (14)` (prior − prior-prior); `d_Market Cap` = % Δ `Market Cap`. Knobs: `HIGH_FPE=35`, `D_RSI_UP=5`, `D_MCAP_PCT=3` in `src/finviz_style_flags.py`. | **Optics** AAOI/COHR/LITE/GLW: high-FPE 10/76 (GLW 8/19). **AI power** GEV/VRT/ETN/PWR/CAT: 23/95 — `GEV` **19/19** (med FPE 39). **Copper** FCX/SCCO/TECK/ERO/HBM: **0/95** (ERO med 7.6). **Nuclear** CEG/VST/OKLO/SMR/CCJ: 19/95 — `CCJ` **19/19** (med 55); CEG/VST mid/cheap. **Gold hit** GDX/GLD/NEM/AEM: **0/76** (would not have blocked the 8/12 hit). d_RSI↑ / d_mcap↑ sparse. Combined `radar_hot` failed both-tape. | **YES** — first leak-free patch. High FPE survived both-tape. d_RSI / d_mcap stay candidates; do not OR `radar_hot` into the live veto. | **NO** — fades are not buy-rank fuel. |
-| **CANSLIM** (`KhoiUna/python-canslim`) | **Expand** — *not* Elevate | Already on Elite: `EPS Growth Quarter Over Quarter`, `EPS Growth This Year`, `EPS Growth Past 3 Years`, `Sales Growth Quarter Over Quarter`, `Sales Year Over Year TTM`. Weak `Return on Equity` ≠ `Return on Invested Capital`. Do **not** scrape Macrotrends. | Swarm: "Yes Optics/AI/Nuclear when accel≥20%". **In-repo full CANSLIM: optics 0/76 · AI 0/95 · nuclear 0/95 · copper 11/95 then lost.** Panel up xs **−0.35**. | Incomplete CANSLIM. Scrape fragile — we already have the letters. | **NO** — dies on up tapes. Do not bump. |
-| **3WT / cup** (`rmtech1/canslim_tightweek_scanner`) | **Expand** — *not* Elevate | `52-Week High` (% below high) + EPS QoQ. Inst = `Institutional Ownership` / `Transactions`. RelVol = **prior** `Relative Volume` only (same-day = leak). Code≠README; RelVol not even coded upstream. | Swarm: "Yes near-highs Optics/AI/Nuclear". Letter N is not a scored overlay. Full CANSLIM fire on those baskets = **0**. | No cup/handle scrape. Do not invent 3WT. | **NO**. |
-| **Magic Formula** (`amladik/Stock-Screener`) | **Expand** / cheap≠long (swarm: Avoid not long — agree, do not *buy*) | `Income` / `Enterprise Value` (else `1/EV/EBITDA`, else `1/P/E`); ROC = `Return on Invested Capital`; `Market Cap`. 1/PE ≠ EBIT. | **No** — 0/437 basket days. Cheap misses rich themes (copper ERO med FPE 7.6 still lost). | Don't promote cheap. Not a fade veto either. | **NO**. |
-| **Point score** (`thekuldeepsingh/Stock-Screener-System-`) | **Expand** | `P/E` already on Elite. Fail-any analog = AB `status_*` / join `veto_when` (`earn:today`; `ext:extreme` ∧ weather `risk=off`). | **No.** AB any-BAD ~93% (too wide). Join veto 0/437. | Tutorial hardcoded. Do not invent a screener. | **NO**. |
-| **Mean-var** (`blkpvnthr/screener`) | **Expand** | None as entry. ATR% already `MIN_ATR_PCT=2.5` size floor. | **No** — dilutes themes. | Risk overlay, not a buy rank. | **NO**. |
-| **AlphaSuite / ATR risk caps** | Avoid / **size** (if relevant) | Elite `Average True Range` / `Price` → `atr_pct`. Already `MIN_ATR_PCT=2.5` in `ticker_lookback` / stock-book. | Below floor: optics/AI/copper/nuclear **0**. Gold: **GLD 18/19** (ETF) — would have gated a *hit*. | Size cap only. Do not score ATR% as buy-rank. | **NO**. |
-| **vectorbt** (`polakowo/vectorbt`) | **Expand only** — *not* Elevate | Plug: `from_signals` sweeps **only** if Price = 09:30 `open` from `data/prices/ohlc.parquet` and fees = `00_grounding/futubull_fees.json` via `paper_trade.order_fees`. Wrap `factor_mine_book`. | **No.** Harness not written — 0 fires. | Examples default **Close** = leak. Commons Clause. | **NO**. |
-| **Zipline** (`stefan-jansen/zipline-reloaded`) | **Expand** calendar — *not* Avoid primary | Event calendars / `order_target` as a *tiny* session-sanity check vs vectorbt. Same PIT book. | **No.** | Too slow for grids. Do not pull Zipline data. | **NO**. |
-| **Lean** (`QuantConnect/Lean`) | **Expand** — do **not** run | Copy Futubull fee/fill realism into the vectorbt *wrapper* — already in `futubull_fees.json`. Do not embed Lean. | **No.** | C#/Docker overkill. Not an avoid embed. | **NO**. |
-| **AlphaSift** (`ZhuLinsen/alphasift`) | **Expand only** — *not* Elevate screen | L1 YAML → existing join `total_score` / book `score_1d` / feature_asof `join_rank`. Soft theme / `board_heat` ≠ new scrape. If ever swept, same vectorbt open+fees. | Swarm: Yes. **In-repo: join already high on miss names** (copper 48/95). L2 would have kept them elevated, then they lost. | A-share-first. T+N ≠ full BT. **`total_score` ≠ elevate.** | **NO**. |
-| **Vibe-Trading** (`HKUDS/Vibe-Trading`) | **Expand** patterns — Avoid *the whole stack* | Steal next-bar fill (= our 09:30 open) and warmup≠eval. Futu fees already in-repo. Alpha Zoo / Shadow stay offline. | **Partial** / not wired. | Huge; live complexity. No websocket into preopen. | **NO**. |
-| **OpenBB** (`OpenBB-finance/OpenBB`) | **Expand** (thin-gap) — *not* Elevate | Elite already has `EPS Surprise`, `Revenue Surprise`, `Earnings Date`. AB B01/B02/B17/B18. Gaps only → `data/external/openbb/{dataset}/asof=prior/part.parquet` (`ext_*`). Partial vendor finviz ≠ Elite. | Swarm: maybe-weak. In-repo: **no new pull**. OKLO/SMR/GDX/GLD often blank FPE — do not invent 8-Ks. | Same-day surprise on D is a leak. Do not displace Elite+AB. | **NO** — gap router is not a rescue bump. AGPL. |
-| **MarketDataApp** (`MarketDataApp/sdk-py`) | **Expand** if options hole | Elite `Optionable`. Prior-close OI/IV only. Same asof cache as OpenBB (`data/external/mda/…`). | **No.** | Paid / tiny. Never overwrite Elite. | **NO**. |
-| **FinancialNewsAPI** (`financial-news-api-python`) | **Expand** news sidecar | Morning packet `01_daily/news/` first. Vendor news `asof < D` only. | **Candidate** — `s_news` silent on some books (08-27). Not a Theme Radar fade. | Paid; thin samples. Same-day stream = leak. | **NO**. |
-| **qlib** (`microsoft/qlib`) | **Expand** sidecar | PIT DB / Alpha158/360 / qrun / RD-Agent → `sidecars/qlib/` + `data/sidecars/qlib/{asof}/preds.parquet`. Gap US bars via OpenBB cache, not Yahoo. Parallels `factor_mine`. | **No.** 0 preds on disk. | Official dataset disabled; Yahoo/CN bias. Bar not cleared. | **NO**. |
-| **FinRL** (`AI4Finance-Foundation/FinRL`) | **Expand** later — *not* Avoid | Train on our PIT 09:30 open + Futubull blotter. `sidecars/finrl/`. | **No.** Price-layer duplicate. | Gym multi-vendor OHLCV / close reward = leak. Not an avoid overlay. | **NO**. |
+| Mechanism | Goal | target_sleeve | hold_sessions | score_clock | Exact Elite / AB / weather field (no new scrape) | Fired on miss baskets? | Veto, not fuel | Elevate? |
+|---|---|---|---:|---|---|---|---|---|
+| **Theme Radar fade vetoes** | **Avoid** (1d only) | `theme_radar_1d` | 1 | **1d open→close** | `Forward P/E` ≥ 35; `d_RSI` = Δ `Relative Strength Index (14)` (prior − prior-prior); `d_Market Cap` = % Δ `Market Cap`. Knobs: `HIGH_FPE=35`, `D_RSI_UP=5`, `D_MCAP_PCT=3` in `src/finviz_style_flags.py`. | **Optics** AAOI/COHR/LITE/GLW: high-FPE 10/76 (GLW 8/19). **AI power** GEV/VRT/ETN/PWR/CAT: 23/95 — `GEV` **19/19** (med FPE 39). **Copper** FCX/SCCO/TECK/ERO/HBM: **0/95** (ERO med 7.6). **Nuclear** CEG/VST/OKLO/SMR/CCJ: 19/95 — `CCJ` **19/19** (med 55); CEG/VST mid/cheap. **Gold hit** GDX/GLD/NEM/AEM: **0/76**. Combined `radar_hot` failed both-tape. | **YES on 1d clock only.** First leak-free patch *there*. Do not OR `radar_hot`. **Does not auto-apply to `flatten_h5` / `flatten_robust`.** | **NO** — fades are not buy-rank fuel. Re-mine before any other sleeve. |
+| **CANSLIM** (`KhoiUna/python-canslim`) | **Expand** — *not* Elevate | `theme_radar_1d` | 1 | 1d open→close | Elite EPS/sales YoY+QoQ. Weak ROE ≠ `Return on Invested Capital`. Do **not** scrape Macrotrends. | Swarm "Yes Optics/AI/Nuclear". **In-repo: 0/76 · 0/95 · 0/95 · copper 11/95 then lost.** Panel up xs **−0.35**. | Incomplete CANSLIM. | **NO** — dies on 1d up tapes. Reject until scored on matching hold. |
+| **3WT / cup** (`rmtech1/canslim_tightweek_scanner`) | **Expand** — *not* Elevate | `theme_radar_1d` | 1 | 1d open→close | `52-Week High` + EPS QoQ. Prior `Relative Volume` only. | Letter N not a scored overlay. Full CANSLIM fire on those baskets = **0**. | No cup scrape. | **NO**. |
+| **Magic Formula** (`amladik/Stock-Screener`) | **Expand** / cheap≠long | `theme_radar_1d` | 1 | 1d open→close | `Income` / `Enterprise Value`; ROC = `Return on Invested Capital`; `Market Cap`. 1/PE ≠ EBIT. | **No** — 0/437. Cheap copper still lost. | Don't promote cheap. | **NO** on any hold. |
+| **Point score** (`thekuldeepsingh/Stock-Screener-System-`) | **Expand** | `theme_radar_1d` | 1 | 1d open→close | `P/E`. Fail-any → AB `status_*` / join `veto_when`. | **No.** AB any-BAD ~93%. | Tutorial. | **NO**. |
+| **Mean-var** (`blkpvnthr/screener`) | **Expand** | `flatten_h1/h3/h5` (size only) | 1 / 3 / 5 | Nd open→exit (unscored) | None as entry. ATR% already size floor. | **No** — dilutes themes. | Risk overlay. | **NO**. |
+| **AlphaSuite / ATR risk caps** | **size** (already on book) | all `flatten_*` + live | n/a | prior Elite `Average True Range` / `Price` | `MIN_ATR_PCT=2.5` in `ticker_lookback` / stock-book. | Below floor: miss baskets 0 except **GLD 18/19** (gold *hit*). | Size cap only. Not a Theme Radar avoid. | **NO**. |
+| **vectorbt** (`polakowo/vectorbt`) | **Expand only** | `flatten_h1` / `h3` / `h5` (sweep each) | 1 / 3 / 5 | **Nd open→exit + Futubull** | `from_signals` only if Price = 09:30 `open` + `futubull_fees.json`. Wrap `factor_mine_book`. | **No.** Harness not written. | Close default = leak. | **NO** until each hold clears both-tape. |
+| **Zipline** (`stefan-jansen/zipline-reloaded`) | **Expand** calendar | `flatten_h1/h3/h5` sanity | 1 / 3 / 5 | Nd open→exit | Same PIT book. Tiny session calendar vs vectorbt. | **No.** | Too slow. | **NO**. |
+| **Lean** (`QuantConnect/Lean`) | **Expand** — do not run | none | — | — | Copy Futubull fees into the vectorbt wrapper (already in-repo). | **No.** | Do not run Lean. | **NO**. |
+| **AlphaSift** (`ZhuLinsen/alphasift`) | **Expand only** | `theme_radar_1d` (join 1d) | 1 | 1d open→close | Join `total_score` / book `score_1d` / feature_asof `join_rank`. | Join already high on miss names (copper 48/95). | Circular. | **NO** — reject until matching-hold re-rank. |
+| **Vibe-Trading** (`HKUDS/Vibe-Trading`) | **Expand** patterns | `flatten_h1` (next-bar) | 1 | 1d open→exit | Steal next-bar = 09:30 open; warmup≠eval. | **Partial.** | Do not import the stack. | **NO**. |
+| **OpenBB** (`OpenBB-finance/OpenBB`) | **Expand** thin-gap | sidecar (any sleeve attach) | — | asof < D | Elite surprise / earnings already present. `ext_*` parquet only. | No new pull. | Do not displace Elite. | **NO**. |
+| **MarketDataApp** (`MarketDataApp/sdk-py`) | **Expand** | sidecar | — | asof < D | Elite `Optionable`. Prior-close OI/IV only. | **No.** | Paid / tiny. | **NO**. |
+| **FinancialNewsAPI** | **Expand** news | sidecar | — | asof < D | Morning `01_daily/news/` first. | Candidate (`s_news` silent 08-27). | Same-day stream = leak. | **NO**. |
+| **qlib** (`microsoft/qlib`) | **Expand** sidecar | sidecar → then `flatten_h*` | matching hold | Nd open→exit (unscored) | PIT DB / Alpha158/360 → `data/sidecars/qlib/{asof}/`. | **No.** | Yahoo/CN bias. | **NO**. |
+| **FinRL** (`AI4Finance-Foundation/FinRL`) | **Expand** later | sidecar → then `flatten_h*` | matching hold | Nd open→exit (unscored) | Train on PIT open+fee blotter only. | **No.** | Gym close = leak. | **NO**. |
 
 Kid one-liners for the same rows:
 
@@ -52,7 +81,36 @@ Kid one-liners for the same rows:
 | CANSLIM / 3WT / MF | Old report-card stickers from columns we already have. Copper that printed CANSLIM still lost. Swarm "Elevate = 3WT + near-52w + EPS≥20" is **rejected**. |
 | Fail-any / ATR | Almost every homework sheet has a red mark; that is not a veto. ATR is how big a bite, not a theme bet. |
 | AlphaSift / `total_score` | Re-sorting the same line-up does not rescue the kids we already sat in front. Swarm "Elevate screen" is **rejected**. |
-| vectorbt / Zipline / Lean / Vibe / OpenBB / qlib / FinRL | Practice kitchen. Same 09:30 bell and fee jar, or they stay outside. Close fills and Lean are not invited. |
+| vectorbt / Zipline / Lean / Vibe / OpenBB / qlib / FinRL | Practice kitchen. Same 09:30 bell and fee jar, or they stay outside. Close fills and Lean are not invited. A 5-day sandwich is not graded like a one-bell snack. |
+
+### Horizon re-mine checklist (stub)
+
+Do not copy the 1d Theme Radar FPE sticker onto a longer sleeve. Re-mine
+each row with the **same leak clock** (prior Elite) and the **sleeve's**
+fill/fee/hold. Promote only if both-tape clears on **that** horizon
+(n≥20 per tape).
+
+| sleeve | hold_sessions | score_clock | overlay status | 1d FPE auto-apply? |
+|---|---:|---|---|---|
+| `theme_radar_1d` | 1 | 1d open→close (`Change from Open`) | **This autopsy.** `radar_high_fpe` both-tape YES (optional). | n/a (this is the 1d clock) |
+| `flatten_h1` | 1 | 09:30 open → +1 sess exit + Futubull | **Not overlay-mined.** Wish-list ≠ live tickets. | No — re-mine (cousin of 1d IC, still needs fees/exit). |
+| `flatten_h3` | 3 | 09:30 open → +3 sess + Futubull | **Not overlay-mined.** Paper `3d_*` losers are blotter, not a panel. | **No.** |
+| `flatten_h5` | 5 | 09:30 open → +5 sess + Futubull | **Not overlay-mined.** | **No.** |
+| `flatten_robust` | 3 (recycle) | live 3d size-book + flatten clock | **LIVE. Untouched.** | **No.** |
+| `flatten_live_h1` | 1 | gated 09:30 tickets | thin-n (7 start days) | No. |
+| `flatten_live_h3` | 3 | gated 09:30 tickets | thin-n | No. |
+| `flatten_live_h5` | 5 | gated 09:30 tickets | thin-n | No. |
+
+Re-mine recipe (when someone runs it — not this PR):
+
+1. Inputs ⊆ 09:30-knowable (prior Elite + prior AB + morning packet).
+2. Fill = 09:30 `open`, whole shares, `futubull_fees.json`.
+3. Hold = `hold_window(cal, D, N)` (entry morning counts as 1).
+4. Grade path return after fees, not next-day IC.
+5. Both-tape on realized SPY-up **and** SPY-down of the *entry* session
+   (or document a path-tape rule). Each cell n≥20.
+6. Assert `LIVE_POLICY == "flatten_robust"` and do not write it.
+7. Publish next to `FACTOR_MINE.md` only if fill-replay PASS.
 
 Sift swarm (executor notes). AI/data + screener + harness drops are on
 the master table. Autopsy source of truth:
@@ -492,15 +550,15 @@ Cyrus bar for any overlay column:
 
 | Goal | Question | Promote only when |
 |---|---|---|
-| **Avoid** | Would this have killed bad buys we took? | Both-tape excess **< 0** (underperforms SPY-up **and** SPY-down, each n≥20) |
-| **Elevate** | Would this have rescued high-conviction names we ranked mediocre? | Both-tape excess **> 0**, and the set is **not** half the universe |
-| **Expand** | Is this a formula we never wired? | Stays research. vectorbt / OpenBB / sidecars live here only |
+| **Avoid** | Would this have killed bad buys we took **on this sleeve's hold**? | Both-tape excess **< 0** on the **matching** score_clock (n≥20 per tape) |
+| **Elevate** | Would this have rescued high-conviction names we ranked mediocre **on this hold**? | Both-tape excess **> 0** on the matching hold, and the set is **not** half the universe |
+| **Expand** | Is this a formula we never wired? | Stays research. Must still declare target_sleeve / hold / clock |
 
 Theme Radar (Elite headers, prior vintage) — **veto candidates, not buy-rank fuel**:
 
 | Factor | Exact header / math | Role |
 |---|---|---|
-| high Forward P/E | `Forward P/E` ≥ 35 on **prior** `data/exports/finviz_{prior}.csv` | **Avoid** — faded both tapes (n=4827, xs −0.09, up −0.03, down −0.19) |
+| high Forward P/E | `Forward P/E` ≥ 35 on **prior** `data/exports/finviz_{prior}.csv` | **Avoid on `theme_radar_1d` only** (n=4827, xs −0.09). **Not** `flatten_h5` / `flatten_robust` until re-mine |
 | d_RSI | `Relative Strength Index (14)`[prior] − same[prior-prior] | Veto *candidate*. Combined with d_mcap **failed** both-tape. Do not feed a long rank. |
 | d_Market Cap | 100 × (`Market Cap`[prior] / `Market Cap`[prior-prior] − 1) | Same. 08-14 jumps look like unit/CA noise |
 | cheap FPE | 0 < `Forward P/E` ≤ 15 | **Not** an elevate. Small both-tape xs (+0.15) on 35% of the panel = "not expensive", not a rescue |
@@ -600,3 +658,6 @@ flatten clock. **Not on this map.**
 - Treat sift-swarm "Elevate" labels (CANSLIM ≥20, 3WT, vectorbt, OpenBB
   router, AlphaSift L2) as a promote — our both-tape bar already failed
   those as long.
+- Copy 1d Theme Radar FPE / IC onto `flatten_h5` or live `flatten_robust`
+  without a matching-hold re-mine.
+- Elevate on a sleeve whose hold was never scored.

@@ -58,6 +58,14 @@ def test_thin_n_when_one_tape_small() -> None:
     assert st["both_tape"] is None
 
 
+def test_horizon_checklist_blocks_1d_on_h5() -> None:
+    text = "\n".join(oa._horizon_checklist_section())
+    assert "flatten_h5" in text
+    assert "flatten_robust" in text
+    assert "**No.**" in text
+    assert "theme_radar_1d" in text
+
+
 def test_sift_fold_rejects_canslim_as_as_elevate() -> None:
     text = "\n".join(oa._sift_fold_section())
     assert "Do not bump" in text
@@ -74,10 +82,15 @@ def test_mechanism_table_render() -> None:
         "basket_fire": "GEV 19/19",
         "veto_not_fuel": "YES",
         "elevate": "NO",
+        "target_sleeve": "theme_radar_1d",
+        "hold_sessions": "1",
+        "score_clock": "1d open→close",
     }])
     text = "\n".join(md)
     assert "Theme Radar fade vetoes" in text
     assert "**Avoid**" in text
+    assert "theme_radar_1d" in text
+    assert "1d open→close" in text
     assert "NO" in text
 
 
@@ -96,10 +109,11 @@ def main() -> None:
     test_score_rule_both_tape_avoid_needs_underperform()
     test_cheap_fpe_does_not_survive_as_elevate()
     test_thin_n_when_one_tape_small()
+    test_horizon_checklist_blocks_1d_on_h5()
     test_sift_fold_rejects_canslim_as_as_elevate()
     test_mechanism_table_render()
     test_does_not_touch_live_policy()
-    print("test_overlay_autopsy: 8 ok")
+    print("test_overlay_autopsy: 9 ok")
 
 
 if __name__ == "__main__":

@@ -463,6 +463,28 @@ def _basket_paper_table(rows: list[dict]) -> list[str]:
     return lines
 
 
+def _horizon_checklist_section() -> list[str]:
+    return [
+        "Patches must be strategy-native. 1d `Change from Open` is the "
+        "Theme Radar clock. A `flatten_h5` patch must be scored on "
+        "**5-session** 09:30-open → exit + Futubull fees "
+        "(`factor_mine.hold_window`).",
+        "",
+        "| sleeve | hold_sessions | score_clock | overlay status | 1d FPE auto-apply? |",
+        "|---|---:|---|---|---|",
+        "| `theme_radar_1d` | 1 | 1d open→close | **This autopsy.** `radar_high_fpe` both-tape YES (optional). | n/a |",
+        "| `flatten_h1` | 1 | 09:30 open → +1 sess + fees | Not overlay-mined. | No — re-mine with fees/exit. |",
+        "| `flatten_h3` | 3 | 09:30 open → +3 sess + fees | Not overlay-mined. | **No.** |",
+        "| `flatten_h5` | 5 | 09:30 open → +5 sess + fees | Not overlay-mined. | **No.** |",
+        "| `flatten_robust` | 3 (recycle) | live 3d size-book + flatten clock | **LIVE. Untouched.** | **No.** |",
+        "| `flatten_live_h1/h3/h5` | 1 / 3 / 5 | gated tickets | thin-n (7 starts) | No. |",
+        "",
+        "Re-mine (future, not this PR): prior Elite inputs · 09:30 open · "
+        "whole shares · Futubull fees · both-tape n≥20 · do not write "
+        "`LIVE_POLICY`. See `EXTERNAL_ENRICH_MAP.md` Horizon re-mine checklist.",
+    ]
+
+
 def _sift_fold_section() -> list[str]:
     """Swarm autopsy vs in-repo blotter. File may be missing on disk."""
     return [
@@ -509,12 +531,14 @@ def _mechanism_table(rows: list[dict]) -> list[str]:
     if not rows:
         return ["_No mechanism payload._"]
     lines = [
-        "| mechanism | goal | exact Elite / AB / weather field | basket fire | veto, not fuel | elevate |",
-        "|---|---|---|---|---|---|",
+        "| mechanism | goal | target_sleeve | hold | score_clock | exact Elite / AB / weather field | basket fire | veto, not fuel | elevate |",
+        "|---|---|---|---:|---|---|---|---|---|",
     ]
     for r in rows:
         lines.append(
             f"| {r.get('mechanism')} | **{r.get('goal')}** | "
+            f"{r.get('target_sleeve') or '—'} | {r.get('hold_sessions') or '—'} | "
+            f"{r.get('score_clock') or '—'} | "
             f"{r.get('fields')} | {r.get('basket_fire')} | "
             f"{r.get('veto_not_fuel')} | {r.get('elevate')} |"
         )
@@ -567,8 +591,11 @@ def render(payload: dict) -> str:
         "| **Elevate** | Rescue names we ranked 'meh' that then won. | Optional `elevate_bump` |",
         "| **Expand** | New formulas we never wired. | vectorbt / OpenBB / sidecars only |",
         "",
-        "Theme Radar: **high `Forward P/E` fades both tapes**. Cheap / "
-        "Magic Formula is **not** an auto long.",
+        "Theme Radar: **high `Forward P/E` fades both tapes on the 1d "
+        "open→close clock**. Cheap / Magic Formula is **not** an auto long. "
+        "This panel is **`theme_radar_1d`** — it does **not** auto-apply to "
+        "`flatten_h5` or live `flatten_robust` until a matching-hold re-mine "
+        "clears both-tape.",
         "",
         "## Ranked findings",
         "",
@@ -673,6 +700,12 @@ def render(payload: dict) -> str:
     lines.extend(_sift_fold_section())
     lines += [
         "",
+        "## 6. Horizon re-mine checklist (stub)",
+        "",
+    ]
+    lines.extend(_horizon_checklist_section())
+    lines += [
+        "",
         "## Optional columns (not live gates)",
         "",
         "| column | meaning | promote? |",
@@ -707,6 +740,9 @@ def render(payload: dict) -> str:
         "- Invent scrapes (OpenBB SEC, Zipline data, qlib preds).",
         "- Promote soft 🚨∧fade or optics/AI heat-sit on n=1.",
         "- Elevate on CANSLIM A∧S or gold-miner style without a both-tape bar.",
+        "- Copy 1d Theme Radar FPE onto `flatten_h5` or `flatten_robust` "
+        "without a matching-hold re-mine.",
+        "- Elevate on a sleeve whose hold was never scored.",
         "- Edit `LIVE_POLICY` or `flatten_robust`.",
         "",
     ]
@@ -862,6 +898,13 @@ def run(write: bool = False) -> dict:
         "REAX tax keeps the veto optional. Soft 🚨∧fade / heat-sit n=1 / "
         "CANSLIM A∧S stay log-only — do not promote. "
         "See §5 and `EXTERNAL_ENRICH_MAP.md`."
+    )
+    findings.append(
+        "**Strategy-native:** `radar_high_fpe` / optional FPE≥35 are the "
+        "**1d Theme Radar clock** (`theme_radar_1d`, open→close). They do "
+        "**not** auto-apply to `flatten_h5` or live `flatten_robust` until "
+        "a matching-hold re-mine clears both-tape. Reject elevates unless "
+        "scored on the matching hold. See §6."
     )
     findings.append(
         "**Thin-n / data caveats:** 08-14 d_RSI often missing (no prior-prior RSI). "

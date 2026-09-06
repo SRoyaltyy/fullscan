@@ -327,10 +327,17 @@ def mechanism_rows(basket: dict[str, dict], ts: dict) -> list[dict]:
     high = ts.get("join_high") or {}
     up_xs = ((high.get("tapes") or {}).get("up") or {}).get("xs")
     dn_xs = ((high.get("tapes") or {}).get("down") or {}).get("xs")
+
+    def _row(mech: dict, sleeve: str, hold: str, clock: str) -> dict:
+        mech["target_sleeve"] = sleeve
+        mech["hold_sessions"] = hold
+        mech["score_clock"] = clock
+        return mech
+
     return [
-        {
+        _row({
             "mechanism": "Theme Radar fade vetoes",
-            "goal": "Avoid",
+            "goal": "Avoid (1d only)",
             "fields": (
                 "`Forward P/E` ≥ 35; `d_RSI` = Δ `Relative Strength Index (14)` "
                 "(prior − prior-prior); `d_Market Cap` = % Δ `Market Cap` "
@@ -343,12 +350,13 @@ def mechanism_rows(basket: dict[str, dict], ts: dict) -> list[dict]:
                 f"d_RSI↑ {_fired('rsi_up')}. d_mcap↑ {_fired('mcap_up')}. "
                 "Surviving both-tape avoid is high-FPE alone; d_RSI / d_mcap "
                 "stay veto *candidates*, not rank fuel. Combined `radar_hot` "
-                "failed both-tape — do not OR into the live veto."
+                "failed both-tape — do not OR into the live veto. "
+                "1d clock only — not flatten_h5 / flatten_robust."
             ),
-            "veto_not_fuel": "YES — first leak-free patch. Short side was weak early.",
+            "veto_not_fuel": "YES on 1d clock only. Does not auto-apply to flatten_h5 / flatten_robust.",
             "elevate": "NO — fades are not buy-rank fuel.",
-        },
-        {
+        }, "theme_radar_1d", "1", "1d open→close"),
+        _row({
             "mechanism": "CANSLIM scanners",
             "goal": "Expand (not Elevate)",
             "fields": (
@@ -366,9 +374,9 @@ def mechanism_rows(basket: dict[str, dict], ts: dict) -> list[dict]:
                 "(up xs −0.35). Do not bump."
             ),
             "veto_not_fuel": "Do not invert CANSLIM into a fade veto without a new bar.",
-            "elevate": "NO — dies on up tapes. Do not bump.",
-        },
-        {
+            "elevate": "NO — dies on 1d up tapes. Reject until matching hold.",
+        }, "theme_radar_1d", "1", "1d open→close"),
+        _row({
             "mechanism": "Magic Formula",
             "goal": "Expand (not Elevate)",
             "fields": (
@@ -382,8 +390,8 @@ def mechanism_rows(basket: dict[str, dict], ts: dict) -> list[dict]:
             ),
             "veto_not_fuel": "Not a fade. Do not treat cheap as avoid either.",
             "elevate": "NO — do not promote cheap/MF as long.",
-        },
-        {
+        }, "theme_radar_1d", "1", "1d open→close"),
+        _row({
             "mechanism": "Stock-Screener-System multi-factor fail-any",
             "goal": "Avoid (shaped)",
             "fields": (
@@ -401,8 +409,8 @@ def mechanism_rows(basket: dict[str, dict], ts: dict) -> list[dict]:
             ),
             "veto_not_fuel": "Fail-any is a veto shape, not a rank add.",
             "elevate": "NO.",
-        },
-        {
+        }, "theme_radar_1d", "1", "1d open→close"),
+        _row({
             "mechanism": "AlphaSuite / ATR risk caps",
             "goal": "Avoid / size (if relevant)",
             "fields": (
@@ -418,8 +426,8 @@ def mechanism_rows(basket: dict[str, dict], ts: dict) -> list[dict]:
             ),
             "veto_not_fuel": "Size cap only. Do not score ATR% as buy-rank.",
             "elevate": "NO.",
-        },
-        {
+        }, "all flatten_* (size floor)", "n/a", "prior Elite ATR/Price"),
+        _row({
             "mechanism": "AlphaSift L1→L2 re-rank",
             "goal": "Expand only",
             "fields": (
@@ -435,8 +443,8 @@ def mechanism_rows(basket: dict[str, dict], ts: dict) -> list[dict]:
             ),
             "veto_not_fuel": "Do not feed fade columns into a buy re-rank.",
             "elevate": "NO — existing ranker, already high on miss names; do not bump.",
-        },
-        {
+        }, "theme_radar_1d", "1", "1d open→close"),
+        _row({
             "mechanism": "vectorbt sweeps",
             "goal": "Expand only",
             "fields": (
@@ -447,8 +455,8 @@ def mechanism_rows(basket: dict[str, dict], ts: dict) -> list[dict]:
             "basket_fire": "Harness not written — 0 fires. Expand-only sidecar.",
             "veto_not_fuel": "N/A until a recipe is scored on the both-tape bar.",
             "elevate": "NO — not a bump column.",
-        },
-        {
+        }, "flatten_h1/h3/h5", "1/3/5", "Nd open→exit + Futubull"),
+        _row({
             "mechanism": "Zipline cross-section",
             "goal": "Expand only",
             "fields": (
@@ -458,8 +466,8 @@ def mechanism_rows(basket: dict[str, dict], ts: dict) -> list[dict]:
             "basket_fire": "No in-repo pipeline — 0 fires. Thin-n / not wired.",
             "veto_not_fuel": "N/A.",
             "elevate": "NO.",
-        },
-        {
+        }, "flatten_h1/h3/h5", "1/3/5", "Nd open→exit"),
+        _row({
             "mechanism": "OpenBB SEC / surprise",
             "goal": "Expand (thin-gap only)",
             "fields": (
@@ -474,8 +482,8 @@ def mechanism_rows(basket: dict[str, dict], ts: dict) -> list[dict]:
             ),
             "veto_not_fuel": "Same-day surprise on D is a leak. Prior vintage only.",
             "elevate": "NO — do not bump on a beat.",
-        },
-        {
+        }, "sidecar", "—", "asof < D"),
+        _row({
             "mechanism": "qlib / FinRL sidecars",
             "goal": "Expand only",
             "fields": (
@@ -486,7 +494,7 @@ def mechanism_rows(basket: dict[str, dict], ts: dict) -> list[dict]:
             "basket_fire": "No sidecar preds on disk — 0 fires. Bar not cleared.",
             "veto_not_fuel": "N/A.",
             "elevate": "NO — offline until the same PIT / fee / audit bar.",
-        },
+        }, "sidecar → flatten_h*", "matching hold", "Nd open→exit (unscored)"),
     ]
 
 

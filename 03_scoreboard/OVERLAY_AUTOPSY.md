@@ -14,7 +14,7 @@ Leak clock: features = **prior** Elite + prior AB + morning weather. 1d panel ou
 | **Elevate** | Rescue names we ranked 'meh' that then won. | Optional `elevate_bump` |
 | **Expand** | New formulas we never wired. | vectorbt / OpenBB / sidecars only |
 
-Theme Radar: **high `Forward P/E` fades both tapes**. Cheap / Magic Formula is **not** an auto long.
+Theme Radar: **high `Forward P/E` fades both tapes on the 1d open→close clock**. Cheap / Magic Formula is **not** an auto long. This panel is **`theme_radar_1d`** — it does **not** auto-apply to `flatten_h5` or live `flatten_robust` until a matching-hold re-mine clears both-tape.
 
 ## Ranked findings
 
@@ -33,6 +33,7 @@ Theme Radar: **high `Forward P/E` fades both tapes**. Cheap / Magic Formula is *
 13. **Expand only:** vectorbt, Zipline, OpenBB/MDA, qlib/FinRL/AlphaSift/Vibe-Trading. flatten_live blotters are thin (7 start days) — not a second autopsy sample. AB `status_*` fail-any hits ~93% of stock name-days — too wide. Do not invent scrapes.
 14. **Sift autopsy fold:** FPE veto caught ~2/15 worst buys (BTBT, INDI). GEV is a natural Avoid (19/19). Copper was join-high then lost. ERO = cheap spike we bought, not a missed expensive theme. REAX tax keeps the veto optional. Soft 🚨∧fade / heat-sit n=1 / CANSLIM A∧S stay log-only — do not promote. See §5 and `EXTERNAL_ENRICH_MAP.md`.
 15. **Thin-n / data caveats:** 08-14 d_RSI often missing (no prior-prior RSI). Some d_mcap prints look like unit/corporate-action jumps (APPS +270%). Lookback 🔵/🚨/fade columns are empty on early books. 08-27 morning weather is unknown in this run. OKLO/SMR/GDX/GLD often have blank `Forward P/E` — honest thin, no new scrape.
+16. **Strategy-native:** `radar_high_fpe` / optional FPE≥35 are the **1d Theme Radar clock** (`theme_radar_1d`, open→close). They do **not** auto-apply to `flatten_h5` or live `flatten_robust` until a matching-hold re-mine clears both-tape. Reject elevates unless scored on the matching hold. See §6.
 
 Panel: **50445** liquid name-days · sessions 2026-08-13 → 2026-09-05 · base 1d mean **-0.13** · hit **42.2%**.
 
@@ -140,6 +141,8 @@ Graded high then lost. Features = prior Elite + prior AB + D join / morning weat
 
 Join `total_score` is **not** an elevate. Nothing in this table clears both-tape as a long overlay. Cheap / Magic Formula is not a long.
 
+**Clock:** every scored fire count below is `theme_radar_1d` · hold **1** · **1d open→close**. Sleeve / hold / clock columns for all sift repos live on [`EXTERNAL_ENRICH_MAP.md`](EXTERNAL_ENRICH_MAP.md). `flatten_h5` / `flatten_robust` are **unscored**.
+
 | mechanism | goal | exact Elite / AB / weather field | basket fire | veto, not fuel | elevate |
 |---|---|---|---|---|---|
 | Theme Radar fade vetoes | **Avoid** | `Forward P/E` ≥ 35; `d_RSI` = Δ `Relative Strength Index (14)` (prior − prior-prior); `d_Market Cap` = % Δ `Market Cap` (same vintage). Knobs in `finviz_style_flags`: HIGH_FPE=35, D_RSI_UP=5, D_MCAP_PCT=3. | high-FPE optics: 10/76; ai_power: 23/95; copper: 0/95; nuclear: 19/95; gold_hit: 0/76. d_RSI↑ optics: 2/76; ai_power: 3/95; copper: 9/95; nuclear: 6/95; gold_hit: 7/76. d_mcap↑ optics: 12/76; ai_power: 3/95; copper: 15/95; nuclear: 11/95; gold_hit: 7/76. Surviving both-tape avoid is high-FPE alone; d_RSI / d_mcap stay veto *candidates*, not rank fuel. Combined `radar_hot` failed both-tape — do not OR into the live veto. | YES — first leak-free patch. Short side was weak early. | NO — fades are not buy-rank fuel. |
@@ -169,13 +172,28 @@ Source: swarm `/workspace/fullscan_autopsy_avoid_elevate.md` (often not on disk)
 | Only `radar_high_fpe` both-tape YES; no `radar_hot` OR; `elevate_bump` failed; cheap≠long | Matches §1–2. | **Keep.** |
 | Top Avoid extras: soft 🚨∧fade; join-hot∧AB-silent micros; optics/AI heat sit (n=1) | Early 🚨/fade empty. Micros = gated_out (expand). Heat sit n=1 = **thin-n**. | Log only. Do not promote. |
 | Top Elevate: gold-miner; CANSLIM A∧S; log outweighed | Gold is a contrast hit. A∧S is an unscored subset of a rule that dies on up tapes. Outweighed=20. | **Do not bump.** Log only. |
-| REAX +853% tax | Outweighed **and** FPE 65. | Keep FPE veto **optional**. |
+| REAX +853% tax | Outweighed **and** FPE 65. | Keep FPE veto **optional** on the **1d** clock only. |
+
+## 6. Horizon re-mine checklist (stub)
+
+Patches must be strategy-native. 1d `Change from Open` is the Theme Radar clock. A `flatten_h5` patch must be scored on **5-session** 09:30-open → exit + Futubull fees (`factor_mine.hold_window`).
+
+| sleeve | hold_sessions | score_clock | overlay status | 1d FPE auto-apply? |
+|---|---:|---|---|---|
+| `theme_radar_1d` | 1 | 1d open→close | **This autopsy.** `radar_high_fpe` both-tape YES (optional). | n/a |
+| `flatten_h1` | 1 | 09:30 open → +1 sess + fees | Not overlay-mined. | No — re-mine with fees/exit. |
+| `flatten_h3` | 3 | 09:30 open → +3 sess + fees | Not overlay-mined. | **No.** |
+| `flatten_h5` | 5 | 09:30 open → +5 sess + fees | Not overlay-mined. | **No.** |
+| `flatten_robust` | 3 (recycle) | live 3d size-book + flatten clock | **LIVE. Untouched.** | **No.** |
+| `flatten_live_h1/h3/h5` | 1 / 3 / 5 | gated tickets | thin-n (7 starts) | No. |
+
+Re-mine (future, not this PR): prior Elite inputs · 09:30 open · whole shares · Futubull fees · both-tape n≥20 · do not write `LIVE_POLICY`. See `EXTERNAL_ENRICH_MAP.md` Horizon re-mine checklist.
 
 ## Optional columns (not live gates)
 
 | column | meaning | promote? |
 |---|---|---|
-| `avoid_veto` | Theme Radar fade: prior `Forward P/E` ≥ 35 (surviving both-tape) | optional sticker only |
+| `avoid_veto` | Theme Radar fade: prior `Forward P/E` ≥ 35 on **1d clock only** | optional sticker on `theme_radar_1d` — **not** live / h5 |
 | `radar_rsi_up` / `radar_mcap_up` | d_RSI≥5 / d_mcap≥3% | veto *candidates*, **not** buy-rank fuel |
 | `elevate_bump` | CANSLIM + clean radar + AB lead | **do not bump** — failed both-tape |
 | `radar_high_fpe` | `Forward P/E` ≥ 35 (prior Elite) | fade sticker; cheap≠long |
@@ -196,5 +214,7 @@ Join: `Ticker` + feature export date = `feature_export_date(D)`. Script: `python
 - Invent scrapes (OpenBB SEC, Zipline data, qlib preds).
 - Promote soft 🚨∧fade or optics/AI heat-sit on n=1.
 - Elevate on CANSLIM A∧S or gold-miner style without a both-tape bar.
+- Copy 1d Theme Radar FPE onto `flatten_h5` or `flatten_robust` without a matching-hold re-mine.
+- Elevate on a sleeve whose hold was never scored.
 - Edit `LIVE_POLICY` or `flatten_robust`.
 
