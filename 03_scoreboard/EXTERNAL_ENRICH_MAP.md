@@ -47,6 +47,57 @@ Kid one-liners for the same rows:
 | AlphaSift / `total_score` | Re-sorting the same line-up does not rescue the kids we already sat in front. |
 | vectorbt / Zipline / OpenBB / qlib / FinRL | Practice kitchen. Same 09:30 bell and fee jar, or they stay outside. |
 
+Sift swarm (queued executor notes — `/workspace/sift_ai_data.md` and
+`/workspace/fullscan_autopsy_avoid_elevate.md` were **not on disk** when
+this was written; rows below are from those tables, scored against the
+in-repo autopsy). Autopsy source of truth:
+[`OVERLAY_AUTOPSY.md`](OVERLAY_AUTOPSY.md) §1–4 ·
+[`theme_radar_baskets.json`](theme_radar_baskets.json).
+
+**Sift claims we do not take as Elevate.** CANSLIM / 3WT / EPS≥20,
+vectorbt, OpenBB-as-router, AlphaSift L2, and Lean fee plugins were
+labeled Elevate by the swarm. Our leak-free panel already failed
+CANSLIM / `elevate_bump` / MF as long (up-tape die). Optics/AI/nuclear
+CANSLIM fire was **0** name-days. Do not bump.
+
+### Sift repo crosswalk (no new scrape)
+
+| Repo (sift) | Swarm said | Our goal | Exact Elite / AB / weather map | Miss-basket fire (in-repo) | Caveat / autopsy link |
+|---|---|---|---|---|---|
+| Theme Radar fades (locked) | Avoid | **Avoid** | `Forward P/E` ≥ 35; `d_RSI`; `d_Market Cap` | GEV **19/19**, CCJ **19/19**, GLW 8/19. Copper **0/95**. Gold **0/76**. | Only `radar_high_fpe` both-tape YES. Do not OR `radar_hot`. [§4](OVERLAY_AUTOPSY.md) |
+| `KhoiUna/python-canslim` | Elevate if EPS/rev≥20 | **Expand** (not Elevate) | Already have `EPS Growth Quarter Over Quarter`, `EPS Growth This Year`, `Sales Growth Quarter Over Quarter`. Weak ROE ≠ `Return on Invested Capital`. | Full CANSLIM: optics 0/76 · AI 0/95 · nuclear 0/95 · copper 11/95 then lost. | Do not scrape Macrotrends. Incomplete CANSLIM. Panel up xs −0.35. |
+| `rmtech1/canslim_tightweek_scanner` | Elevate 3WT + cup + EPS | **Expand** | `52-Week High` (% below) + EPS QoQ. Inst already on Elite. RelVol = **prior** `Relative Volume` only. | Near-high is letter N, not a scored overlay. | Code≠README. Same-day RelVol is a leak. Do not bump. |
+| `amladik/Stock-Screener` (MF 1/PE) | Avoid (not long) | **Expand** / cheap≠long | `Return on Invested Capital`; `P/E` last-resort EY; `Market Cap`. Prefer `Income`/`Enterprise Value`. | MF **0/437** on baskets. Cheap copper still lost. | 1/PE ≠ EBIT. **Never promote cheap/MF as long.** |
+| `thekuldeepsingh/Stock-Screener-System-` | Expand point score | **Expand** | `P/E` already on Elite. Fail-any → AB `status_*` / join `veto_when`. | AB any-BAD ~93% (too wide). Join veto **0**. | Tutorial hardcoded. Do not invent a screener. |
+| `blkpvnthr/screener` | Expand mean-var | **Expand** | None as entry. ATR% already a size floor. | Dilutes themes. | Risk overlay, not a buy rank. |
+| `polakowo/vectorbt` | Elevate sweeps | **Expand only** | Wrap `factor_mine_book` 09:30 **open** + Futubull fees. | 0 fires (harness not written). | Examples default **Close** = leak. Commons Clause. |
+| `stefan-jansen/zipline-reloaded` | Avoid / calendar | **Expand only** | Same `ohlc.parquet` + PIT book. Session calendar sanity only. | 0 fires. | Too slow for grids. Do not pull Zipline data. |
+| `QuantConnect/Lean` | Avoid embed; copy fees | **Expand** (do not run) | Copy Futubull realism into the vectorbt *wrapper* — already `00_grounding/futubull_fees.json`. | 0. | C#/Docker overkill. Do not run Lean. |
+| `ZhuLinsen/alphasift` | Elevate screen | **Expand only** | Join `total_score` / book `score_1d` / feature_asof `join_rank`. Soft theme ≠ new scrape. | Join already high on miss names (copper 48/95). | A-share-first. L2 on the same layers would have kept losers elevated. **`total_score` ≠ elevate.** |
+| `HKUDS/Vibe-Trading` | Expand; steal next-bar | **Expand only** | Next-bar fill = our 09:30 open. Warmup ≠ eval. Futu fees already in-repo. | Partial / not wired. | Huge; live complexity. No websocket into preopen. |
+| `microsoft/qlib` | Expand sidecar | **Expand only** | Gap → OpenBB *cache* only. Parallels `factor_mine`. | 0 preds on disk. | Official dataset disabled; Yahoo/CN bias. PIT DB required. |
+| `AI4Finance-Foundation/FinRL` | Avoid as data path | **Expand only** | Same. Train on our PIT open+fee blotter. | 0. | Price-layer duplicate. Gym close = leak. Not an avoid overlay. |
+| `OpenBB-finance/OpenBB` | Elevate as gap router | **Expand** (thin-gap) | Elite already has surprise / earnings date. `ext_*` parquet only. | Maybe-weak: no new pull. | AGPL. Partial finviz ≠ Elite. **Do not displace Elite+AB.** Not an elevate. |
+| `MarketDataApp/sdk-py` | Expand if options hole | **Expand** | Elite `Optionable`. Prior-close OI/IV only if ever needed. | No. | Tiny / paid. Same asof cache rules. |
+| `FinancialNewsAPI/financial-news-api-python` | Expand news | **Expand** | Morning packet `01_daily/news/` first. Vendor news `asof < D`. | Candidate only — `s_news` silent on some books (08-27). | Paid; thin samples. Same-day stream = leak. |
+
+### Fullscan autopsy fold (sift vs in-repo)
+
+Sift `fullscan_autopsy_avoid_elevate.md` (text only; file missing on disk):
+
+| Sift finding | In-repo check | Keep? |
+|---|---|---|
+| FPE≥35 blocked ~2/15 worst buys (BTBT, INDI) | Yes. ACMR FPE 25, join/AB ~+1. ERO FPE 8.18, join +0.99. | **Keep.** Surviving avoid is optional; it does not save join-hot cheap names. |
+| ERO = bought copper spike, not a missed theme | Yes. Cheap FPE, CANSLIM/elevate printed, then 1w −11%. 08-27 🔵/🚨/fade cells **blank** in our attach — do not invent a 🚨. | **Keep** the cheap≠long reading. Honest thin on fade cameras. |
+| Optics 0/4; AAOI −24% | Name-level always-on high-FPE: AAOI 0/19, COHR 1/19, LITE 1/19, GLW 8/19. No 1d/3d paper lot for AAOI in-repo. 1d mean −0.05 over 19 days. | Partial. Do not invent a −24% blotter. GLW is the only optics name the FPE veto would have faded often. |
+| AI power 0/5; GEV FPE≥35 on 14/14 | GEV **19/19** on our calendar (med 39). VRT 1/19, PWR 3/19, ETN/CAT 0. | **GEV is a natural Avoid.** The other four are not. |
+| Copper graded high in our book then pain | Join top-q 48/95. FCX/TECK/ERO CANSLIM then lost. | **Keep.** Do not elevate copper / CANSLIM. |
+| Nuclear mixed; CEG worked | CEG 1d mean +0.41 but paper lots 08-14 / 08-19 / 09-03 lost. VST paper losers. CCJ always high-FPE. | Mixed. Do not elevate CEG. CCJ = Avoid. |
+| Gold mid-ranks ripped (NEM/AEM) | High-FPE 0/76. NEM join high 12/19, AEM 11/19 — already high, not a buried rescue. GDX/GLD FPE blank. | Fade veto would **not** have blocked the 8/12 hit. Not an MF long. |
+| REAX +853% tax | Yes. Outweighed **and** FPE 65. | Keep FPE veto **optional**. |
+| Top Avoid extras: soft 🚨∧fade; join-hot∧AB-silent micros; optics/AI heat sit (n=1) | Early 🚨/fade empty. Micros = gated_out (expand, not rank). Heat sit n=1 = **thin-n**. | Log only. Do not promote on n=1. |
+| Top Elevate: gold-miner style; CANSLIM A∧S; log outweighed | Gold is a contrast hit, not a scored both-tape elevate. A∧S is an **unscored subset** of a rule that already dies on up tapes. | **Do not bump.** Log outweighed=20 as research. |
+
 ---
 
 ## Hard leak / fill / fee rules (every layer)
