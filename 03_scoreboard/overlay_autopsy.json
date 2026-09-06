@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T12:14:37.884896-04:00",
+  "generated_at": "2026-09-06T12:25:44.523524-04:00",
   "live_untouched": "flatten_robust",
   "asof": "09:30_et",
   "panel": {
@@ -56,6 +56,54 @@
         }
       },
       "both_tape": true,
+      "thin": false
+    },
+    {
+      "key": "radar_rsi_up",
+      "family": "avoid",
+      "n": 3468,
+      "hit": 0.46539792387543255,
+      "mean": -0.07600634371395616,
+      "xs": 0.05471206247099776,
+      "tapes": {
+        "up": {
+          "n": 1357,
+          "mean": 0.04866617538688284,
+          "xs": -0.20115235013296595,
+          "hit": 0.4694178334561533
+        },
+        "down": {
+          "n": 1135,
+          "mean": 0.1459647577092511,
+          "xs": 0.3345245648800857,
+          "hit": 0.5154185022026432
+        }
+      },
+      "both_tape": false,
+      "thin": false
+    },
+    {
+      "key": "radar_mcap_up",
+      "family": "avoid",
+      "n": 5584,
+      "hit": 0.45254297994269344,
+      "mean": -0.19142191977077366,
+      "xs": -0.06070351358581974,
+      "tapes": {
+        "up": {
+          "n": 1423,
+          "mean": 0.2563387210119466,
+          "xs": 0.006520195492097813,
+          "hit": 0.4799718903724526
+        },
+        "down": {
+          "n": 1374,
+          "mean": -0.08648471615720524,
+          "xs": 0.10207509101362935,
+          "hit": 0.45778748180494905
+        }
+      },
+      "both_tape": false,
       "thin": false
     },
     {
@@ -208,6 +256,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": false,
+      "radar_rsi_up": false,
+      "radar_mcap_up": false,
       "radar_hot": false,
       "fpe": null,
       "d_rsi": null,
@@ -256,6 +306,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": false,
+      "radar_rsi_up": false,
+      "radar_mcap_up": true,
       "radar_hot": false,
       "fpe": null,
       "d_rsi": null,
@@ -304,6 +356,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": false,
+      "radar_rsi_up": false,
+      "radar_mcap_up": true,
       "radar_hot": false,
       "fpe": 30.96,
       "d_rsi": null,
@@ -352,6 +406,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": false,
+      "radar_rsi_up": false,
+      "radar_mcap_up": true,
       "radar_hot": false,
       "fpe": null,
       "d_rsi": null,
@@ -400,6 +456,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": false,
+      "radar_rsi_up": false,
+      "radar_mcap_up": false,
       "radar_hot": false,
       "fpe": 24.93,
       "d_rsi": 1.39,
@@ -448,6 +506,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": true,
+      "radar_rsi_up": false,
+      "radar_mcap_up": true,
       "radar_hot": false,
       "fpe": 11.15,
       "d_rsi": null,
@@ -491,6 +551,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": false,
+      "radar_rsi_up": false,
+      "radar_mcap_up": false,
       "radar_hot": false,
       "fpe": null,
       "d_rsi": 1.61,
@@ -534,6 +596,8 @@
       "elevate_bump": false,
       "radar_high_fpe": true,
       "radar_cheap_fpe": false,
+      "radar_rsi_up": false,
+      "radar_mcap_up": false,
       "radar_hot": false,
       "fpe": 152.5,
       "d_rsi": null,
@@ -577,6 +641,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": true,
+      "radar_rsi_up": false,
+      "radar_mcap_up": true,
       "radar_hot": false,
       "fpe": 11.15,
       "d_rsi": null,
@@ -625,6 +691,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": true,
+      "radar_rsi_up": false,
+      "radar_mcap_up": true,
       "radar_hot": false,
       "fpe": 13.36,
       "d_rsi": null,
@@ -673,6 +741,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": false,
+      "radar_rsi_up": false,
+      "radar_mcap_up": true,
       "radar_hot": false,
       "fpe": 28.25,
       "d_rsi": null,
@@ -721,6 +791,8 @@
       "elevate_bump": false,
       "radar_high_fpe": true,
       "radar_cheap_fpe": false,
+      "radar_rsi_up": false,
+      "radar_mcap_up": true,
       "radar_hot": false,
       "fpe": 211.98,
       "d_rsi": null,
@@ -764,6 +836,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": true,
+      "radar_rsi_up": false,
+      "radar_mcap_up": true,
       "radar_hot": false,
       "fpe": 11.15,
       "d_rsi": null,
@@ -812,6 +886,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": true,
+      "radar_rsi_up": false,
+      "radar_mcap_up": false,
       "radar_hot": false,
       "fpe": 8.18,
       "d_rsi": 2.11,
@@ -860,6 +936,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": true,
+      "radar_rsi_up": false,
+      "radar_mcap_up": false,
       "radar_hot": false,
       "fpe": 11.25,
       "d_rsi": null,
@@ -910,6 +988,8 @@
       "elevate_bump": false,
       "radar_high_fpe": true,
       "radar_cheap_fpe": false,
+      "radar_rsi_up": false,
+      "radar_mcap_up": true,
       "radar_hot": false,
       "fpe": 64.97,
       "d_rsi": 3.4,
@@ -958,6 +1038,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": false,
+      "radar_rsi_up": false,
+      "radar_mcap_up": false,
       "radar_hot": false,
       "fpe": 23.32,
       "d_rsi": 0.67,
@@ -1006,6 +1088,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": true,
+      "radar_rsi_up": false,
+      "radar_mcap_up": false,
       "radar_hot": false,
       "fpe": 9.08,
       "d_rsi": 1.38,
@@ -1054,6 +1138,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": false,
+      "radar_rsi_up": false,
+      "radar_mcap_up": false,
       "radar_hot": false,
       "fpe": null,
       "d_rsi": -1.26,
@@ -1102,6 +1188,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": false,
+      "radar_rsi_up": false,
+      "radar_mcap_up": false,
       "radar_hot": false,
       "fpe": null,
       "d_rsi": -2.26,
@@ -1150,6 +1238,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": false,
+      "radar_rsi_up": false,
+      "radar_mcap_up": false,
       "radar_hot": false,
       "fpe": null,
       "d_rsi": -0.05,
@@ -1198,6 +1288,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": true,
+      "radar_rsi_up": false,
+      "radar_mcap_up": false,
       "radar_hot": false,
       "fpe": 13.26,
       "d_rsi": 0.05,
@@ -1246,6 +1338,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": false,
+      "radar_rsi_up": false,
+      "radar_mcap_up": false,
       "radar_hot": false,
       "fpe": 28.08,
       "d_rsi": -6.8,
@@ -1294,6 +1388,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": true,
+      "radar_rsi_up": false,
+      "radar_mcap_up": false,
       "radar_hot": false,
       "fpe": 6.83,
       "d_rsi": 4.04,
@@ -1342,6 +1438,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": false,
+      "radar_rsi_up": false,
+      "radar_mcap_up": false,
       "radar_hot": false,
       "fpe": 18.16,
       "d_rsi": -1.41,
@@ -1390,6 +1488,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": false,
+      "radar_rsi_up": false,
+      "radar_mcap_up": false,
       "radar_hot": false,
       "fpe": null,
       "d_rsi": -1.48,
@@ -1438,6 +1538,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": false,
+      "radar_rsi_up": false,
+      "radar_mcap_up": false,
       "radar_hot": false,
       "fpe": null,
       "d_rsi": 2.17,
@@ -1486,6 +1588,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": false,
+      "radar_rsi_up": false,
+      "radar_mcap_up": true,
       "radar_hot": false,
       "fpe": 28.26,
       "d_rsi": 4.75,
@@ -1534,6 +1638,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": false,
+      "radar_rsi_up": false,
+      "radar_mcap_up": true,
       "radar_hot": false,
       "fpe": null,
       "d_rsi": 2.61,
@@ -1582,6 +1688,8 @@
       "elevate_bump": false,
       "radar_high_fpe": false,
       "radar_cheap_fpe": false,
+      "radar_rsi_up": false,
+      "radar_mcap_up": false,
       "radar_hot": false,
       "fpe": null,
       "d_rsi": 0.98,
@@ -1612,13 +1720,676 @@
   "n_blind": 11,
   "findings": [
     "**Avoid that cleared both tapes:** `radar_high_fpe` / `avoid_veto` (n=4827, xs=-0.09, up xs=-0.03, down xs=-0.19). High `Forward P/E` \u2265 35 on the **prior** Elite file. Optional column only \u2014 not a live gate.",
+    "**`radar_rsi_up` (d_RSI\u22655) is a veto *candidate*, not buy-rank fuel** (n=3468, both-tape=NO, up xs=-0.20, down xs=+0.33). Do not OR into `avoid_veto` unless both-tape stays YES on a later window.",
+    "**`radar_mcap_up` (d_Market Cap\u22653%) is a veto *candidate*, not buy-rank fuel** (n=5584, both-tape=NO, up xs=+0.01, down xs=+0.10). Same rule: do not OR into the surviving high-FPE veto yet.",
     "**`radar_hot` (d_RSI\u22655 and d_mcap\u22653%) failed both-tape** (n=2311, down xs=+0.35). Do not OR it into `avoid_veto`.",
     "**`elevate_bump` did not clear both-tape** (n=142, up xs=-0.12, down n=24 xs=+1.00). Keep as a research sticker. Down-tape n is borderline (\u226520).",
     "**Cheap FPE is not a rescue overlay.** `radar_cheap_fpe` has a small both-tape xs (+0.15, n=17897, ~35% of the panel). That is 'not expensive', not 'high-conviction we ranked mediocre'. Theme Radar: cheap \u2260 auto long.",
     "**Magic Formula `mf_flag` failed both-tape** (up xs=-0.07, down xs=+0.12). Do not elevate on EY+ROIC alone.",
     "**Bad buys:** 175 paper closed losers in 1d_top, 1d_size, 3d_top, 3d_size + 30 book-gap worst buys. Worst names (VERI \u221225%, AEVA \u221221%, RXT \u221221%, ACMR \u221214%) were join-positive or silent-AB, not CANSLIM. Two of the worst (BTBT FPE 152, INDI FPE 212) would have printed `avoid_veto`.",
     "**Missed rockets:** outweighed=20 (elevate-shaped) \u00b7 gated_out=25 (micro gate \u2014 expand, not a rank miss) \u00b7 blind=11. REAX +853% was outweighed **and** high-FPE \u2014 the surviving avoid would have skipped a winner. That cost is why this stays optional.",
-    "**Expand only:** vectorbt, OpenBB/MDA, qlib/FinRL/AlphaSift/Vibe-Trading. flatten_live blotters are thin (7 start days) \u2014 not a second autopsy sample.",
-    "**Thin-n / data caveats:** 08-14 d_RSI often missing (no prior-prior RSI). Some d_mcap prints look like unit/corporate-action jumps (APPS +270%). Lookback \ud83d\udd35/\ud83d\udea8/fade columns are empty on early books. 08-27 morning weather is unknown in this run."
-  ]
+    "**Elevate: nothing cleared both-tape as a long overlay.** `elevate_bump` / `canslim_flag` / `mf_flag` die on up tapes. Join `total_score` is the existing ranker \u2014 using it to bump is circular. On Theme Radar miss names it was already high (copper 48/95 top-quintile) and they still lost. Do **not** bump.",
+    "**Theme Radar miss baskets** (graded high then lost; 09:30 prior Elite): high-FPE fired every day on `GEV` (19/19, med FPE 39) and `CCJ` (19/19, med 55). `GLW` 8/19. Copper 0/95 (ERO med FPE 7.6 \u2014 cheap, still lost). Gold contrast `GDX/GLD/NEM/AEM` high-FPE 0/76 \u2014 fade veto would not have blocked the 8/12 hit. Paper/book losers in-basket: CEG, VST (08-14 / 08-19 / 09-03), ERO book-gap 08-27 \u221211%. CEG/VST/ERO were mid/cheap FPE \u2014 the surviving avoid would not have saved those buys.",
+    "**Short side was weak early** (lookback \ud83d\udd35/\ud83d\udea8/fade empty on early books). First leak-free patch = fade vetoes (high FPE; d_RSI / d_mcap as candidates), **not** a short book and **not** a buy-rank bump.",
+    "**Expand only:** vectorbt, Zipline, OpenBB/MDA, qlib/FinRL/AlphaSift/Vibe-Trading. flatten_live blotters are thin (7 start days) \u2014 not a second autopsy sample. AB `status_*` fail-any hits ~93% of stock name-days \u2014 too wide. Do not invent scrapes.",
+    "**Thin-n / data caveats:** 08-14 d_RSI often missing (no prior-prior RSI). Some d_mcap prints look like unit/corporate-action jumps (APPS +270%). Lookback \ud83d\udd35/\ud83d\udea8/fade columns are empty on early books. 08-27 morning weather is unknown in this run. OKLO/SMR/GDX/GLD often have blank `Forward P/E` \u2014 honest thin, no new scrape."
+  ],
+  "baskets": {
+    "optics": {
+      "tickers": [
+        "AAOI",
+        "COHR",
+        "LITE",
+        "GLW"
+      ],
+      "n_name_days": 76,
+      "n_with_fwd": 76,
+      "mean_1d": -0.25934210526315793,
+      "hit": 0.4473684210526316,
+      "present": [
+        "AAOI",
+        "COHR",
+        "GLW",
+        "LITE"
+      ],
+      "missing_elite": [],
+      "high_fpe": {
+        "n": 76,
+        "fired": 10,
+        "rate": 0.13157894736842105,
+        "thin": false
+      },
+      "rsi_up": {
+        "n": 76,
+        "fired": 2,
+        "rate": 0.02631578947368421,
+        "thin": false
+      },
+      "mcap_up": {
+        "n": 76,
+        "fired": 12,
+        "rate": 0.15789473684210525,
+        "thin": false
+      },
+      "hot": {
+        "n": 76,
+        "fired": 2,
+        "rate": 0.02631578947368421,
+        "thin": false
+      },
+      "avoid": {
+        "n": 76,
+        "fired": 10,
+        "rate": 0.13157894736842105,
+        "thin": false
+      },
+      "canslim": {
+        "n": 76,
+        "fired": 0,
+        "rate": 0.0,
+        "thin": false
+      },
+      "mf": {
+        "n": 76,
+        "fired": 0,
+        "rate": 0.0,
+        "thin": false
+      },
+      "elevate": {
+        "n": 76,
+        "fired": 0,
+        "rate": 0.0,
+        "thin": false
+      },
+      "join_high": {
+        "n": 76,
+        "fired": 26,
+        "rate": 0.34210526315789475,
+        "thin": false
+      },
+      "join_veto": {
+        "n": 76,
+        "fired": 0,
+        "rate": 0.0,
+        "thin": false
+      },
+      "ab_fail": {
+        "n": 56,
+        "fired": 52,
+        "rate": 0.9285714285714286,
+        "thin": false
+      },
+      "atr_below": {
+        "n": 76,
+        "fired": 0,
+        "rate": 0.0,
+        "thin": false
+      },
+      "feat_n": 44
+    },
+    "ai_power": {
+      "tickers": [
+        "GEV",
+        "VRT",
+        "ETN",
+        "PWR",
+        "CAT"
+      ],
+      "n_name_days": 95,
+      "n_with_fwd": 95,
+      "mean_1d": -0.616421052631579,
+      "hit": 0.3894736842105263,
+      "present": [
+        "CAT",
+        "ETN",
+        "GEV",
+        "PWR",
+        "VRT"
+      ],
+      "missing_elite": [],
+      "high_fpe": {
+        "n": 95,
+        "fired": 23,
+        "rate": 0.24210526315789474,
+        "thin": false
+      },
+      "rsi_up": {
+        "n": 95,
+        "fired": 3,
+        "rate": 0.031578947368421054,
+        "thin": false
+      },
+      "mcap_up": {
+        "n": 95,
+        "fired": 3,
+        "rate": 0.031578947368421054,
+        "thin": false
+      },
+      "hot": {
+        "n": 95,
+        "fired": 1,
+        "rate": 0.010526315789473684,
+        "thin": false
+      },
+      "avoid": {
+        "n": 95,
+        "fired": 23,
+        "rate": 0.24210526315789474,
+        "thin": false
+      },
+      "canslim": {
+        "n": 95,
+        "fired": 0,
+        "rate": 0.0,
+        "thin": false
+      },
+      "mf": {
+        "n": 95,
+        "fired": 0,
+        "rate": 0.0,
+        "thin": false
+      },
+      "elevate": {
+        "n": 95,
+        "fired": 0,
+        "rate": 0.0,
+        "thin": false
+      },
+      "join_high": {
+        "n": 95,
+        "fired": 34,
+        "rate": 0.35789473684210527,
+        "thin": false
+      },
+      "join_veto": {
+        "n": 95,
+        "fired": 0,
+        "rate": 0.0,
+        "thin": false
+      },
+      "ab_fail": {
+        "n": 70,
+        "fired": 65,
+        "rate": 0.9285714285714286,
+        "thin": false
+      },
+      "atr_below": {
+        "n": 95,
+        "fired": 0,
+        "rate": 0.0,
+        "thin": false
+      },
+      "feat_n": 55
+    },
+    "copper": {
+      "tickers": [
+        "FCX",
+        "SCCO",
+        "TECK",
+        "ERO",
+        "HBM"
+      ],
+      "n_name_days": 95,
+      "n_with_fwd": 95,
+      "mean_1d": -0.5052631578947369,
+      "hit": 0.4105263157894737,
+      "present": [
+        "ERO",
+        "FCX",
+        "HBM",
+        "SCCO",
+        "TECK"
+      ],
+      "missing_elite": [],
+      "high_fpe": {
+        "n": 95,
+        "fired": 0,
+        "rate": 0.0,
+        "thin": false
+      },
+      "rsi_up": {
+        "n": 95,
+        "fired": 9,
+        "rate": 0.09473684210526316,
+        "thin": false
+      },
+      "mcap_up": {
+        "n": 95,
+        "fired": 15,
+        "rate": 0.15789473684210525,
+        "thin": false
+      },
+      "hot": {
+        "n": 95,
+        "fired": 9,
+        "rate": 0.09473684210526316,
+        "thin": false
+      },
+      "avoid": {
+        "n": 95,
+        "fired": 0,
+        "rate": 0.0,
+        "thin": false
+      },
+      "canslim": {
+        "n": 95,
+        "fired": 11,
+        "rate": 0.11578947368421053,
+        "thin": false
+      },
+      "mf": {
+        "n": 95,
+        "fired": 0,
+        "rate": 0.0,
+        "thin": false
+      },
+      "elevate": {
+        "n": 95,
+        "fired": 8,
+        "rate": 0.08421052631578947,
+        "thin": false
+      },
+      "join_high": {
+        "n": 95,
+        "fired": 48,
+        "rate": 0.5052631578947369,
+        "thin": false
+      },
+      "join_veto": {
+        "n": 95,
+        "fired": 0,
+        "rate": 0.0,
+        "thin": false
+      },
+      "ab_fail": {
+        "n": 70,
+        "fired": 65,
+        "rate": 0.9285714285714286,
+        "thin": false
+      },
+      "atr_below": {
+        "n": 95,
+        "fired": 0,
+        "rate": 0.0,
+        "thin": false
+      },
+      "feat_n": 55
+    },
+    "nuclear": {
+      "tickers": [
+        "CEG",
+        "VST",
+        "OKLO",
+        "SMR",
+        "CCJ"
+      ],
+      "n_name_days": 95,
+      "n_with_fwd": 95,
+      "mean_1d": -0.2537894736842105,
+      "hit": 0.4842105263157895,
+      "present": [
+        "CCJ",
+        "CEG",
+        "OKLO",
+        "SMR",
+        "VST"
+      ],
+      "missing_elite": [],
+      "high_fpe": {
+        "n": 95,
+        "fired": 19,
+        "rate": 0.2,
+        "thin": false
+      },
+      "rsi_up": {
+        "n": 95,
+        "fired": 6,
+        "rate": 0.06315789473684211,
+        "thin": false
+      },
+      "mcap_up": {
+        "n": 95,
+        "fired": 11,
+        "rate": 0.11578947368421053,
+        "thin": false
+      },
+      "hot": {
+        "n": 95,
+        "fired": 6,
+        "rate": 0.06315789473684211,
+        "thin": false
+      },
+      "avoid": {
+        "n": 95,
+        "fired": 19,
+        "rate": 0.2,
+        "thin": false
+      },
+      "canslim": {
+        "n": 95,
+        "fired": 0,
+        "rate": 0.0,
+        "thin": false
+      },
+      "mf": {
+        "n": 95,
+        "fired": 0,
+        "rate": 0.0,
+        "thin": false
+      },
+      "elevate": {
+        "n": 95,
+        "fired": 0,
+        "rate": 0.0,
+        "thin": false
+      },
+      "join_high": {
+        "n": 95,
+        "fired": 26,
+        "rate": 0.2736842105263158,
+        "thin": false
+      },
+      "join_veto": {
+        "n": 95,
+        "fired": 0,
+        "rate": 0.0,
+        "thin": false
+      },
+      "ab_fail": {
+        "n": 70,
+        "fired": 65,
+        "rate": 0.9285714285714286,
+        "thin": false
+      },
+      "atr_below": {
+        "n": 95,
+        "fired": 0,
+        "rate": 0.0,
+        "thin": false
+      },
+      "feat_n": 55
+    },
+    "gold_hit": {
+      "tickers": [
+        "GDX",
+        "GLD",
+        "NEM",
+        "AEM"
+      ],
+      "n_name_days": 76,
+      "n_with_fwd": 76,
+      "mean_1d": -0.1539473684210526,
+      "hit": 0.47368421052631576,
+      "present": [
+        "AEM",
+        "GDX",
+        "GLD",
+        "NEM"
+      ],
+      "missing_elite": [],
+      "high_fpe": {
+        "n": 76,
+        "fired": 0,
+        "rate": 0.0,
+        "thin": false
+      },
+      "rsi_up": {
+        "n": 76,
+        "fired": 7,
+        "rate": 0.09210526315789473,
+        "thin": false
+      },
+      "mcap_up": {
+        "n": 76,
+        "fired": 7,
+        "rate": 0.09210526315789473,
+        "thin": false
+      },
+      "hot": {
+        "n": 76,
+        "fired": 5,
+        "rate": 0.06578947368421052,
+        "thin": false
+      },
+      "avoid": {
+        "n": 76,
+        "fired": 0,
+        "rate": 0.0,
+        "thin": false
+      },
+      "canslim": {
+        "n": 76,
+        "fired": 1,
+        "rate": 0.013157894736842105,
+        "thin": false
+      },
+      "mf": {
+        "n": 76,
+        "fired": 0,
+        "rate": 0.0,
+        "thin": false
+      },
+      "elevate": {
+        "n": 76,
+        "fired": 1,
+        "rate": 0.013157894736842105,
+        "thin": false
+      },
+      "join_high": {
+        "n": 76,
+        "fired": 29,
+        "rate": 0.3815789473684211,
+        "thin": false
+      },
+      "join_veto": {
+        "n": 76,
+        "fired": 0,
+        "rate": 0.0,
+        "thin": false
+      },
+      "ab_fail": {
+        "n": 56,
+        "fired": 26,
+        "rate": 0.4642857142857143,
+        "thin": false
+      },
+      "atr_below": {
+        "n": 76,
+        "fired": 18,
+        "rate": 0.23684210526315788,
+        "thin": false
+      },
+      "feat_n": 26
+    }
+  },
+  "mechanisms": [
+    {
+      "mechanism": "Theme Radar fade vetoes",
+      "goal": "Avoid",
+      "fields": "`Forward P/E` \u2265 35; `d_RSI` = \u0394 `Relative Strength Index (14)` (prior \u2212 prior-prior); `d_Market Cap` = % \u0394 `Market Cap` (same vintage). Knobs in `finviz_style_flags`: HIGH_FPE=35, D_RSI_UP=5, D_MCAP_PCT=3.",
+      "basket_fire": "high-FPE optics: 10/76; ai_power: 23/95; copper: 0/95; nuclear: 19/95; gold_hit: 0/76. d_RSI\u2191 optics: 2/76; ai_power: 3/95; copper: 9/95; nuclear: 6/95; gold_hit: 7/76. d_mcap\u2191 optics: 12/76; ai_power: 3/95; copper: 15/95; nuclear: 11/95; gold_hit: 7/76. Surviving both-tape avoid is high-FPE alone; d_RSI / d_mcap stay veto *candidates*, not rank fuel. Combined `radar_hot` failed both-tape \u2014 do not OR into the live veto.",
+      "veto_not_fuel": "YES \u2014 first leak-free patch. Short side was weak early.",
+      "elevate": "NO \u2014 fades are not buy-rank fuel."
+    },
+    {
+      "mechanism": "CANSLIM scanners",
+      "goal": "Expand (not Elevate)",
+      "fields": "C `EPS Growth Quarter Over Quarter` + `EPS Surprise`; A `EPS Growth This Year` / `EPS Growth Past 3 Years`; N `52-Week High` (% below high); S prior `Relative Volume` + `Average Volume`; L `Performance (Quarter)` + AB `P01_peer_lead_week`; I `Institutional Ownership` / `Institutional Transactions`; M weather `signals.general_direction` / `signals.risk`.",
+      "basket_fire": "optics: 0/76; ai_power: 0/95; copper: 11/95; nuclear: 0/95; gold_hit: 1/76. Fired on copper (FCX/TECK/ERO) \u2014 those names then lost. Panel already failed both-tape as long (up xs \u22120.35). Do not bump.",
+      "veto_not_fuel": "Do not invert CANSLIM into a fade veto without a new bar.",
+      "elevate": "NO \u2014 dies on up tapes. Do not bump."
+    },
+    {
+      "mechanism": "Magic Formula",
+      "goal": "Expand (not Elevate)",
+      "fields": "`Income` / `Enterprise Value` (else `1/EV/EBITDA`, else `1/P/E`); ROC = `Return on Invested Capital`. Exclude Financial/Utilities; `Market Cap` < 100 dropped.",
+      "basket_fire": "optics: 0/76; ai_power: 0/95; copper: 0/95; nuclear: 0/95; gold_hit: 0/76. Cheap/MF is the gold-contrast trap, not a rescue. Panel up xs \u22120.07 \u2014 failed both-tape as long.",
+      "veto_not_fuel": "Not a fade. Do not treat cheap as avoid either.",
+      "elevate": "NO \u2014 do not promote cheap/MF as long."
+    },
+    {
+      "mechanism": "Stock-Screener-System multi-factor fail-any",
+      "goal": "Avoid (shaped)",
+      "fields": "AB `status_*` any BAD / `n_bad` > 0 on prior `{D}_ab_checklist_enriched.csv`. Join `veto_when` already named: `earn:today`; `ext:extreme` AND weather `risk=off` (`00_grounding/join_rules.json`).",
+      "basket_fire": "AB fail-any optics: 52/56; ai_power: 65/70; copper: 65/70; nuclear: 65/70; gold_hit: 26/56. ~93% of stock name-days have some `status_*=BAD` \u2014 too wide for a veto. Join `veto_when` optics: 0/76; ai_power: 0/95; copper: 0/95; nuclear: 0/95; gold_hit: 0/76 (0 on these baskets). Enriched AB starts 08-19 \u2014 earlier is thin-n. Do not invent a new screener.",
+      "veto_not_fuel": "Fail-any is a veto shape, not a rank add.",
+      "elevate": "NO."
+    },
+    {
+      "mechanism": "AlphaSuite / ATR risk caps",
+      "goal": "Avoid / size (if relevant)",
+      "fields": "Elite `Average True Range` / `Price` \u2192 `atr_pct`. Already the liquidity floor `MIN_ATR_PCT=2.5` in `ticker_lookback` / stock-book. Not a long rank.",
+      "basket_fire": "ATR below floor optics: 0/76; ai_power: 0/95; copper: 0/95; nuclear: 0/95; gold_hit: 18/76. Only GLD (ETF) sits under 2.5% \u2014 a gold *hit*, so the floor would have wrongly gated a winner. Optics/AI/copper/nuclear: 0. Size cap only, not a Theme Radar substitute.",
+      "veto_not_fuel": "Size cap only. Do not score ATR% as buy-rank.",
+      "elevate": "NO."
+    },
+    {
+      "mechanism": "AlphaSift L1\u2192L2 re-rank",
+      "goal": "Expand only",
+      "fields": "Existing layers only: `data/join/{D}_ranked.csv` `total_score` / `score_norm`; book `score_1d`; `data/feature_asof/{D}_feature_asof.csv` `join_rank` / `join` / `ab`. No new sift scrape.",
+      "basket_fire": "join top-quintile optics: 26/76; ai_power: 34/95; copper: 48/95; nuclear: 26/95; gold_hit: 29/76. These miss names were already graded high on join/AB \u2014 L2 on the same layers would have kept them elevated, then they lost.",
+      "veto_not_fuel": "Do not feed fade columns into a buy re-rank.",
+      "elevate": "NO \u2014 existing ranker, already high on miss names; do not bump."
+    },
+    {
+      "mechanism": "vectorbt sweeps",
+      "goal": "Expand only",
+      "fields": "Wrap `factor_mine_book` 09:30 `open` + Futubull fees. Panel: `data/prices/ohlc.parquet` `(date,ticker)`. No vectorbt default close-to-close fills.",
+      "basket_fire": "Harness not written \u2014 0 fires. Expand-only sidecar.",
+      "veto_not_fuel": "N/A until a recipe is scored on the both-tape bar.",
+      "elevate": "NO \u2014 not a bump column."
+    },
+    {
+      "mechanism": "Zipline cross-section",
+      "goal": "Expand only",
+      "fields": "Same `data/prices/ohlc.parquet` + PIT book as vectorbt. No Zipline pipeline in-repo. Do not pull Zipline data.",
+      "basket_fire": "No in-repo pipeline \u2014 0 fires. Thin-n / not wired.",
+      "veto_not_fuel": "N/A.",
+      "elevate": "NO."
+    },
+    {
+      "mechanism": "OpenBB SEC / surprise",
+      "goal": "Expand (thin-gap only)",
+      "fields": "Elite already has `EPS Surprise`, `Revenue Surprise`, `Earnings Date`. AB `val_B01_eps_surprise` / `status_B01_eps_surprise`, B02, B17, B18. Do not replace.",
+      "basket_fire": "No new OpenBB pull. Surprise headers already on prior Elite for names Finviz covers. Gap-fill only when the Elite cell is blank \u2014 do not invent 8-K scrapes for OKLO/SMR/GDX.",
+      "veto_not_fuel": "Same-day surprise on D is a leak. Prior vintage only.",
+      "elevate": "NO \u2014 do not bump on a beat."
+    },
+    {
+      "mechanism": "qlib / FinRL sidecars",
+      "goal": "Expand only",
+      "fields": "`sidecars/qlib/`, `sidecars/finrl/`, `data/sidecars/{name}/{asof}/preds.parquet`. Join `ticker` + `asof_date` < D (or D iff morning-packet vintage).",
+      "basket_fire": "No sidecar preds on disk \u2014 0 fires. Bar not cleared.",
+      "veto_not_fuel": "N/A.",
+      "elevate": "NO \u2014 offline until the same PIT / fee / audit bar."
+    }
+  ],
+  "basket_n": 437,
+  "basket_sessions": [
+    "2026-08-13",
+    "2026-08-14",
+    "2026-08-17",
+    "2026-08-18",
+    "2026-08-19",
+    "2026-08-20",
+    "2026-08-21",
+    "2026-08-24",
+    "2026-08-25",
+    "2026-08-27",
+    "2026-08-28",
+    "2026-08-29",
+    "2026-08-30",
+    "2026-08-31",
+    "2026-09-01",
+    "2026-09-02",
+    "2026-09-03",
+    "2026-09-04",
+    "2026-09-05"
+  ],
+  "basket_paper": [
+    {
+      "date": "2026-08-14",
+      "ticker": "CEG",
+      "kind": "bad_buy",
+      "source": "paper:1d_top",
+      "fwd": -1.9971656791923222
+    },
+    {
+      "date": "2026-08-14",
+      "ticker": "VST",
+      "kind": "bad_buy",
+      "source": "paper:1d_size",
+      "fwd": -1.7532862061316798
+    },
+    {
+      "date": "2026-08-14",
+      "ticker": "VST",
+      "kind": "bad_buy",
+      "source": "paper:1d_top",
+      "fwd": -5.591935012038975
+    },
+    {
+      "date": "2026-08-14",
+      "ticker": "VST",
+      "kind": "bad_buy",
+      "source": "paper:3d_top",
+      "fwd": -4.211165867818808
+    },
+    {
+      "date": "2026-08-19",
+      "ticker": "CEG",
+      "kind": "bad_buy",
+      "source": "paper:1d_top",
+      "fwd": -0.8224824014297698
+    },
+    {
+      "date": "2026-08-27",
+      "ticker": "ERO",
+      "kind": "bad_buy",
+      "source": "book_gaps",
+      "fwd": -11.3
+    },
+    {
+      "date": "2026-09-03",
+      "ticker": "CEG",
+      "kind": "bad_buy",
+      "source": "paper:1d_top",
+      "fwd": -0.705139449219435
+    },
+    {
+      "date": "2026-09-03",
+      "ticker": "CEG",
+      "kind": "bad_buy",
+      "source": "paper:1d_size",
+      "fwd": -0.47009296614629
+    }
+  ],
+  "total_score_note": {
+    "join_high": {
+      "key": "join_high",
+      "family": "elevate",
+      "n": 39888,
+      "hit": 0.46572904131568393,
+      "mean": 0.09909371239470517,
+      "xs": 0.14097047875390886,
+      "tapes": {
+        "up": {
+          "n": 14137,
+          "mean": 0.31890783051566807,
+          "xs": 0.11264177842818537,
+          "hit": 0.5228124778948857
+        },
+        "down": {
+          "n": 7453,
+          "mean": -0.013310076479270093,
+          "xs": 0.2937020021340778,
+          "hit": 0.39983899101033143
+        }
+      },
+      "both_tape": true,
+      "thin": false
+    },
+    "cut_note": "join_high = session total_score \u2265 p80",
+    "do_not_bump": true
+  }
 }

@@ -205,7 +205,13 @@ def test_rsi_and_mcap_up_is_avoid() -> None:
     assert radar["d_rsi"] is not None and radar["d_rsi"] >= 5
     assert radar["d_mcap_pct"] is not None and radar["d_mcap_pct"] >= 3
     assert radar["radar_hot"] is True
+    assert radar["radar_rsi_up"] is True
+    assert radar["radar_mcap_up"] is True
     assert radar["avoid_veto"] is False  # combo failed both-tape; FPE-only veto
+    flags = fsf.flag_rows([row], prior_by_ticker={"HOT": prior})
+    assert flags[0]["radar_rsi_up"] == "1"
+    assert flags[0]["radar_mcap_up"] == "1"
+    assert flags[0]["avoid_veto"] == "0"
 
 
 def test_elevate_needs_canslim_and_ab_or_p01() -> None:

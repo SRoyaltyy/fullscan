@@ -58,6 +58,21 @@ def test_thin_n_when_one_tape_small() -> None:
     assert st["both_tape"] is None
 
 
+def test_mechanism_table_render() -> None:
+    md = oa._mechanism_table([{
+        "mechanism": "Theme Radar fade vetoes",
+        "goal": "Avoid",
+        "fields": "`Forward P/E`",
+        "basket_fire": "GEV 19/19",
+        "veto_not_fuel": "YES",
+        "elevate": "NO",
+    }])
+    text = "\n".join(md)
+    assert "Theme Radar fade vetoes" in text
+    assert "**Avoid**" in text
+    assert "NO" in text
+
+
 def test_does_not_touch_live_policy() -> None:
     from pathlib import Path
     text = Path(oa.__file__).read_text(encoding="utf-8")
@@ -73,8 +88,9 @@ def main() -> None:
     test_score_rule_both_tape_avoid_needs_underperform()
     test_cheap_fpe_does_not_survive_as_elevate()
     test_thin_n_when_one_tape_small()
+    test_mechanism_table_render()
     test_does_not_touch_live_policy()
-    print("test_overlay_autopsy: 6 ok")
+    print("test_overlay_autopsy: 7 ok")
 
 
 if __name__ == "__main__":

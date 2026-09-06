@@ -33,8 +33,9 @@ NEED = [
     fsf.H_TICKER, fsf.H_SECTOR, fsf.H_INCOME, fsf.H_EV, fsf.H_EV_EBITDA,
     fsf.H_PE, fsf.H_ROIC, fsf.H_MCAP, fsf.H_EPS_QOQ, fsf.H_EPS_SURP,
     fsf.H_EPS_THIS, fsf.H_EPS_P3, fsf.H_HIGH_52, fsf.H_RVOL, fsf.H_ADV,
-    fsf.H_PERF_Q, fsf.H_INST_OWN, fsf.H_INST_TX, fsf.H_FPE, fsf.H_RSI,
+    fsf.H_PERF_Q, fsf.H_INST_OWN, fsf.H_INST_TX,     fsf.H_FPE, fsf.H_RSI,
     "Change", "Change from Open",
+    "Average True Range", "Price", "Revenue Surprise",
 ]
 PAPER_SLEEVES = ("1d_top", "1d_size", "3d_top", "3d_size")
 TAPE_EPS = 0.30
@@ -173,6 +174,8 @@ def overlay_bits(date: str, ticker: str, cal: list[str],
         "elevate_bump": flag.get("elevate_bump") == "1",
         "radar_high_fpe": flag.get("radar_high_fpe") == "1",
         "radar_cheap_fpe": flag.get("radar_cheap_fpe") == "1",
+        "radar_rsi_up": flag.get("radar_rsi_up") == "1",
+        "radar_mcap_up": flag.get("radar_mcap_up") == "1",
         "radar_hot": flag.get("radar_hot") == "1",
         "fpe": fsf.finite(flag.get("fpe")),
         "d_rsi": fsf.finite(flag.get("d_rsi")),
@@ -389,6 +392,8 @@ def build_panel(cal: list[str]) -> list[dict]:
                 "elevate_bump": flag.get("elevate_bump") == "1",
                 "radar_high_fpe": flag.get("radar_high_fpe") == "1",
                 "radar_cheap_fpe": flag.get("radar_cheap_fpe") == "1",
+                "radar_rsi_up": flag.get("radar_rsi_up") == "1",
+                "radar_mcap_up": flag.get("radar_mcap_up") == "1",
                 "radar_hot": flag.get("radar_hot") == "1",
                 "mf_flag": flag.get("mf_flag") == "1",
                 "canslim_flag": flag.get("canslim_flag") == "1",
@@ -412,6 +417,64 @@ def _rule_table(stats: list[dict]) -> list[str]:
             f"| `{s['key']}` | {s['n']} | {hit} | {_fmt_num(s['mean'])} | "
             f"{_fmt_num(s['xs'])} | {up['n']} / {_fmt_num(up['xs'])} | "
             f"{dn['n']} / {_fmt_num(dn['xs'])} | {both_s} |"
+        )
+    return lines
+
+
+def _basket_table(baskets: dict) -> list[str]:
+    if not baskets:
+        return ["_No basket payload — rerun `python -m src.overlay_autopsy --write`._"]
+    lines = [
+        "| basket | names | n | mean 1d | hit | high-FPE | d_RSI↑ | d_mcap↑ | CS | MF | join top-q | AB fail-any |",
+        "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
+    ]
+    order = ("optics", "ai_power", "copper", "nuclear", "gold_hit")
+    for name in order:
+        st = baskets.get(name) or {}
+        names = ", ".join(st.get("tickers") or [])
+        def _frac(key):
+            cell = st.get(key) or {}
+            n, f = cell.get("n") or 0, cell.get("fired") or 0
+            return "—" if not n else f"{f}/{n}"
+        hit = st.get("hit")
+        hit_s = "—" if hit is None else f"{100 * hit:.0f}%"
+        lines.append(
+            f"| {name} | {names} | {st.get('n_name_days', 0)} | "
+            f"{_fmt_num(st.get('mean_1d'))} | {hit_s} | "
+            f"{_frac('high_fpe')} | {_frac('rsi_up')} | {_frac('mcap_up')} | "
+            f"{_frac('canslim')} | {_frac('mf')} | {_frac('join_high')} | "
+            f"{_frac('ab_fail')} |"
+        )
+    return lines
+
+
+def _basket_paper_table(rows: list[dict]) -> list[str]:
+    if not rows:
+        return ["_No in-basket paper/gap losers in 1d/3d sleeves._"]
+    lines = [
+        "| date | ticker | fwd | src |",
+        "|---|---|---:|---|",
+    ]
+    for r in rows:
+        lines.append(
+            f"| {r.get('date')} | `{r.get('ticker')}` | "
+            f"{_fmt_num(r.get('fwd'))} | {r.get('source')} |"
+        )
+    return lines
+
+
+def _mechanism_table(rows: list[dict]) -> list[str]:
+    if not rows:
+        return ["_No mechanism payload._"]
+    lines = [
+        "| mechanism | goal | exact Elite / AB / weather field | basket fire | veto, not fuel | elevate |",
+        "|---|---|---|---|---|---|",
+    ]
+    for r in rows:
+        lines.append(
+            f"| {r.get('mechanism')} | **{r.get('goal')}** | "
+            f"{r.get('fields')} | {r.get('basket_fire')} | "
+            f"{r.get('veto_not_fuel')} | {r.get('elevate')} |"
         )
     return lines
 
@@ -489,8 +552,10 @@ def render(payload: dict) -> str:
     lines += [
         "",
         "High `Forward P/E` must fade **both** tapes to stay an avoid. "
-        "If `radar_cheap_fpe` or `mf_flag` prints a *positive* both-tape "
-        "elevate, ignore it — that is the cheap≠auto-long warning.",
+        "`radar_rsi_up` / `radar_mcap_up` are Theme Radar veto *candidates* "
+        "(not buy-rank fuel). Combined `radar_hot` failed both-tape — do not "
+        "OR it into `avoid_veto`. If `radar_cheap_fpe` or `mf_flag` prints a "
+        "*positive* both-tape elevate, ignore it — cheap ≠ auto long.",
         "",
         "### Bad buys we actually took",
         "",
@@ -528,25 +593,57 @@ def render(payload: dict) -> str:
         "",
         "## 3. Expand — stay research",
         "",
-        "vectorbt / OpenBB / MarketDataApp / qlib / FinRL / AlphaSift / "
-        "Vibe-Trading do **not** get avoid or elevate columns. They stay "
-        "expand-only until the same PIT / fee / audit bar as factor-mine.",
+        "vectorbt / Zipline / OpenBB / MarketDataApp / qlib / FinRL / "
+        "AlphaSift / Vibe-Trading do **not** get avoid or elevate columns. "
+        "They stay expand-only until the same PIT / fee / audit bar as "
+        "factor-mine.",
+        "",
+        "## 4. Theme Radar miss baskets (09:30-knowable)",
+        "",
+        "Graded high then lost. Features = prior Elite + prior AB + D join / "
+        "morning weather / feature_asof when the file exists. Outcome = same-day "
+        "`Change from Open`. Gold is the 8/12 *hit* contrast — fade veto should "
+        "not have blocked it. Short side was weak early; fade vetoes are the "
+        "first leak-free patch.",
+        "",
+    ]
+    lines.extend(_basket_table(p.get("baskets") or {}))
+    lines += [
+        "",
+        "### In-basket blotter (paper 1d/3d losers + book-gap worst buys)",
+        "",
+    ]
+    lines.extend(_basket_paper_table(p.get("basket_paper") or []))
+    lines += [
+        "",
+        "### External mechanism map (no new scrape)",
+        "",
+        "Join `total_score` is **not** an elevate. Nothing in this table "
+        "clears both-tape as a long overlay. Cheap / Magic Formula is not a long.",
+        "",
+    ]
+    lines.extend(_mechanism_table(p.get("mechanisms") or []))
+    lines += [
         "",
         "## Optional columns (not live gates)",
         "",
         "| column | meaning | promote? |",
         "|---|---|---|",
-        "| `avoid_veto` | Theme Radar fade: FPE≥"
-        f"{fsf.HIGH_FPE:g} or (d_RSI≥{fsf.D_RSI_UP:g} and d_mcap≥{fsf.D_MCAP_PCT:g}%) | "
-        "only if both-tape YES on the avoid scoreboard |",
+        "| `avoid_veto` | Theme Radar fade: prior `Forward P/E` ≥ "
+        f"{fsf.HIGH_FPE:g} (surviving both-tape) | "
+        "optional sticker only |",
+        "| `radar_rsi_up` / `radar_mcap_up` | d_RSI≥"
+        f"{fsf.D_RSI_UP:g} / d_mcap≥{fsf.D_MCAP_PCT:g}% | "
+        "veto *candidates*, **not** buy-rank fuel |",
         "| `elevate_bump` | CANSLIM + clean radar + AB lead | "
-        "only if both-tape YES on the elevate scoreboard |",
+        "**do not bump** — failed both-tape |",
         "| `radar_high_fpe` | `Forward P/E` ≥ "
         f"{fsf.HIGH_FPE:g} (prior Elite) | fade sticker; cheap≠long |",
         "| `radar_cheap_fpe` | 0 < FPE ≤ "
         f"{fsf.CHEAP_FPE:g} | **not** an elevate |",
-        "| `d_rsi` / `d_mcap_pct` | prior vs prior-prior Elite | inputs to avoid |",
+        "| `d_rsi` / `d_mcap_pct` | prior vs prior-prior Elite | veto inputs, not rank fuel |",
         "| `mf_flag` / `canslim_flag` | existing style flags | expand / combine, not auto-long |",
+        "| join `total_score` | `data/join/{D}_ranked.csv` | **do not bump** |",
         "",
         "Join: `Ticker` + feature export date = `feature_export_date(D)`. "
         "Script: `python -m src.finviz_style_flags --csv data/exports/finviz_{prior}.csv "
@@ -556,7 +653,10 @@ def render(payload: dict) -> str:
         "",
         "- Promote on thin-n or one-tape only.",
         "- Treat Magic Formula cheap as a long overlay.",
+        "- Use join `total_score` / CANSLIM / MF to bump a long.",
+        "- Feed high Forward P/E, d_RSI, or d_Market Cap into buy-rank fuel.",
         "- Use same-day `Change` / `Gap` / RelVol as an avoid/elevate input.",
+        "- Invent scrapes (OpenBB SEC, Zipline data, qlib preds).",
         "- Edit `LIVE_POLICY` or `flatten_robust`.",
         "",
     ]
@@ -585,7 +685,8 @@ def run(write: bool = False) -> dict:
         r.setdefault("fwd", None)
     base = [float(r["fwd"]) for r in panel]
     avoid_stats = [score_rule(panel, k, family="avoid")
-                   for k in ("avoid_veto", "radar_high_fpe", "radar_hot")]
+                   for k in ("avoid_veto", "radar_high_fpe",
+                             "radar_rsi_up", "radar_mcap_up", "radar_hot")]
     elev_stats = [score_rule(panel, k, family="elevate")
                   for k in ("elevate_bump", "canslim_flag",
                             "mf_flag", "radar_cheap_fpe")]
@@ -612,6 +713,26 @@ def run(write: bool = False) -> dict:
     else:
         findings.append(
             "**No avoid rule cleared both-tape** on this window. Do not promote a veto."
+        )
+    rsi_up = _stat("radar_rsi_up", "avoid")
+    mcap_up = _stat("radar_mcap_up", "avoid")
+    if rsi_up:
+        findings.append(
+            f"**`radar_rsi_up` (d_RSI≥{fsf.D_RSI_UP:g}) is a veto *candidate*, "
+            f"not buy-rank fuel** (n={rsi_up['n']}, both-tape="
+            f"{'YES' if rsi_up.get('both_tape') else 'NO'}, "
+            f"up xs={_fmt_num(rsi_up['tapes']['up']['xs'])}, "
+            f"down xs={_fmt_num(rsi_up['tapes']['down']['xs'])}). "
+            f"Do not OR into `avoid_veto` unless both-tape stays YES on a later window."
+        )
+    if mcap_up:
+        findings.append(
+            f"**`radar_mcap_up` (d_Market Cap≥{fsf.D_MCAP_PCT:g}%) is a veto "
+            f"*candidate*, not buy-rank fuel** (n={mcap_up['n']}, both-tape="
+            f"{'YES' if mcap_up.get('both_tape') else 'NO'}, "
+            f"up xs={_fmt_num(mcap_up['tapes']['up']['xs'])}, "
+            f"down xs={_fmt_num(mcap_up['tapes']['down']['xs'])}). "
+            f"Same rule: do not OR into the surviving high-FPE veto yet."
         )
     if hot and hot.get("both_tape") is not True:
         findings.append(
@@ -658,14 +779,38 @@ def run(write: bool = False) -> dict:
         f"would have skipped a winner. That cost is why this stays optional."
     )
     findings.append(
-        "**Expand only:** vectorbt, OpenBB/MDA, qlib/FinRL/AlphaSift/Vibe-Trading. "
-        "flatten_live blotters are thin (7 start days) — not a second autopsy sample."
+        "**Elevate: nothing cleared both-tape as a long overlay.** "
+        "`elevate_bump` / `canslim_flag` / `mf_flag` die on up tapes. "
+        "Join `total_score` is the existing ranker — using it to bump is circular. "
+        "On Theme Radar miss names it was already high (copper 48/95 top-quintile) "
+        "and they still lost. Do **not** bump."
+    )
+    findings.append(
+        "**Theme Radar miss baskets** (graded high then lost; 09:30 prior Elite): "
+        "high-FPE fired every day on `GEV` (19/19, med FPE 39) and `CCJ` (19/19, "
+        "med 55). `GLW` 8/19. Copper 0/95 (ERO med FPE 7.6 — cheap, still lost). "
+        "Gold contrast `GDX/GLD/NEM/AEM` high-FPE 0/76 — fade veto would not have "
+        "blocked the 8/12 hit. Paper/book losers in-basket: CEG, VST (08-14 / "
+        "08-19 / 09-03), ERO book-gap 08-27 −11%. CEG/VST/ERO were mid/cheap FPE "
+        "— the surviving avoid would not have saved those buys."
+    )
+    findings.append(
+        "**Short side was weak early** (lookback 🔵/🚨/fade empty on early books). "
+        "First leak-free patch = fade vetoes (high FPE; d_RSI / d_mcap as "
+        "candidates), **not** a short book and **not** a buy-rank bump."
+    )
+    findings.append(
+        "**Expand only:** vectorbt, Zipline, OpenBB/MDA, qlib/FinRL/AlphaSift/"
+        "Vibe-Trading. flatten_live blotters are thin (7 start days) — not a "
+        "second autopsy sample. AB `status_*` fail-any hits ~93% of stock "
+        "name-days — too wide. Do not invent scrapes."
     )
     findings.append(
         "**Thin-n / data caveats:** 08-14 d_RSI often missing (no prior-prior RSI). "
         "Some d_mcap prints look like unit/corporate-action jumps (APPS +270%). "
         "Lookback 🔵/🚨/fade columns are empty on early books. "
-        "08-27 morning weather is unknown in this run."
+        "08-27 morning weather is unknown in this run. "
+        "OKLO/SMR/GDX/GLD often have blank `Forward P/E` — honest thin, no new scrape."
     )
 
     payload = {
@@ -689,7 +834,38 @@ def run(write: bool = False) -> dict:
         "n_gated": sum(1 for r in rockets if r.get("gap_class") == "gated_out"),
         "n_blind": sum(1 for r in rockets if r.get("gap_class") == "blind"),
         "findings": findings,
+        "baskets": None,
+        "mechanisms": None,
     }
+    try:
+        from . import theme_radar_baskets as trb
+        basket_payload = trb.run()
+        payload["baskets"] = basket_payload.get("baskets")
+        payload["mechanisms"] = basket_payload.get("mechanisms")
+        payload["basket_n"] = basket_payload.get("n_snapshots")
+        payload["basket_sessions"] = basket_payload.get("sessions")
+        payload["basket_paper"] = [
+            {
+                "date": c.get("date"),
+                "ticker": c.get("ticker"),
+                "kind": c.get("kind"),
+                "source": c.get("source"),
+                "fwd": c.get("fwd"),
+            }
+            for c in (basket_payload.get("paper_or_gap") or [])
+        ]
+        payload["total_score_note"] = {
+            "join_high": (basket_payload.get("total_score") or {}).get("join_high"),
+            "cut_note": (basket_payload.get("total_score") or {}).get("cut_note"),
+            "do_not_bump": True,
+        }
+        if write:
+            trb.OUT_JSON.write_text(
+                json.dumps(trb.slim_payload(basket_payload), indent=2, default=str),
+                encoding="utf-8",
+            )
+    except Exception as exc:  # pragma: no cover — keep autopsy writable
+        payload["basket_error"] = str(exc)
     if write:
         # Strip bulky unused keys from case rows for JSON.
         slim = json.loads(json.dumps(payload, default=str))
