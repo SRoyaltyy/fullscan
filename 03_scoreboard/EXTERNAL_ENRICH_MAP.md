@@ -22,12 +22,20 @@ names beat peers (xs $+0.09; up-tape $+0.35).
 IC_up −0.033 Sign_up **40%** (2/5) n=5; IC_down −0.131 Sign_down 100%
 n=10 (up-tape flips). d_RSI / d_mcap 5d inconclusive. Flatten leftover
 h1/h3 **THIN**. Live-shaped veto never fired. FPE stays on the 1d
-Theme Radar clock only. See
+Theme Radar clock only. **Stop mining FPE / d_RSI / d_mcap on
+flatten_h5.**
+
+**Next Avoid (same bar, not OR with FPE):** join-hot ∧ AB-silent
+micro/small on `flatten_h1` / `flatten_h3` / `book_1d` = **THIN**
+(n=6 / 6 / 21; book leftover +$53, top-2 63%, 0 SPY-down, 16/21 on
+08-13). Soft 🚨∧fade = **FAIL** (veto never fired). **Clean stop +
+recommended pause.** Elevate stays closed. See
 [`OVERLAY_HORIZON_BT.md`](OVERLAY_HORIZON_BT.md).
 
 **Elevate: nothing cleared both-tape as a long on any matching hold.**
 Do not bump on `total_score`, CANSLIM, Magic Formula, or cheap Forward
-P/E. Reject elevates unless scored on the matching hold.
+P/E. Reject elevates unless scored on the matching hold. Do **not**
+reopen elevates until an Avoid clears.
 
 Theme Radar fades (high `Forward P/E`, high `d_RSI`, high `d_Market Cap`)
 are **veto candidates, not buy-rank fuel**. Short side was weak early —
@@ -111,6 +119,10 @@ Harness: `python3 -m src.overlay_horizon_bt --write` →
 | `flatten_live_h1` | 1 | gated 09:30 tickets | 2 entry days | **FAIL** — veto never fired. | **No.** |
 | `flatten_live_h3` | 3 | gated 09:30 tickets | 2 entry days | **FAIL** — veto never fired. | **No.** |
 | `flatten_live_h5` | 5 | gated 09:30 tickets | 2 entry days | **FAIL** — veto never fired. | **No.** |
+| `book_1d` | 1 | book 1d BUY leftover + Futubull | JAM **THIN** n=21 leftover +$53 top-2 63% 0 SPY-down. 🚨∧fade **FAIL** never fired. | n/a (not an FPE clock) | **No.** |
+
+JAM + 🚨∧fade = **clean stop.** Do not keep mining join/AB/🚨 knobs on
+these clocks. Do not reopen FPE on `flatten_h5`. Elevate stays closed.
 
 Re-mine recipe (when someone runs it — not this PR):
 
@@ -180,7 +192,7 @@ has every AI/data + screener + harness repo from the swarm.
 | Nuclear mixed; CEG worked | CEG 1d mean +0.41 but paper lots 08-14 / 08-19 / 09-03 lost. VST paper losers. CCJ always high-FPE. | Mixed. Do not elevate CEG. CCJ = Avoid. |
 | Gold mid-ranks ripped (NEM/AEM) | High-FPE 0/76. NEM join high 12/19, AEM 11/19 — already high, not a buried rescue. GDX/GLD FPE blank. | Fade veto would **not** have blocked the 8/12 hit. Not an MF long. |
 | REAX +853% tax | Yes. Outweighed **and** FPE 65. | Keep FPE veto **optional**. |
-| Top Avoid extras: soft 🚨∧fade; join-hot∧AB-silent micros; optics/AI heat sit (n=1) | Early 🚨/fade empty. Micros = gated_out (expand, not rank). Heat sit n=1 = **thin-n**. | Log only. Do not promote on n=1. |
+| Top Avoid extras: soft 🚨∧fade; join-hot∧AB-silent micros; optics/AI heat sit (n=1) | Fee-aware JAM **THIN** (h1/h3 n=6; book_1d n=21, 16 on 08-13, 0 SPY-down). Soft 🚨∧fade never fired on those sleeves. Heat sit n=1 = **thin-n**. | **Clean stop.** Do not promote. Elevate stays closed. |
 | Top Elevate: gold-miner style; CANSLIM A∧S; log outweighed | Gold is a contrast hit, not a scored both-tape elevate. A∧S is an **unscored subset** of a rule that already dies on up tapes. | **Do not bump.** Log outweighed=20 as research. |
 
 ---

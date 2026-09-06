@@ -69,6 +69,8 @@ def test_horizon_checklist_blocks_1d_on_h5() -> None:
     assert "OVERLAY_HORIZON_BT" in text
     assert "40%" in text
     assert "do not wire" in text.lower() or "Do not wire" in text
+    assert "Clean stop" in text
+    assert "join-hot" in text
 
 
 def test_sift_fold_rejects_canslim_as_as_elevate() -> None:
@@ -77,6 +79,7 @@ def test_sift_fold_rejects_canslim_as_as_elevate() -> None:
     assert "GEV" in text
     assert "REAX" in text
     assert "thin-n" in text
+    assert "Clean stop" in text
 
 
 def test_mechanism_table_render() -> None:

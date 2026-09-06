@@ -34,7 +34,7 @@ Theme Radar: **high `Forward P/E` fades both tapes on the 1d open→close clock*
 14. **Sift autopsy fold:** FPE veto caught ~2/15 worst buys (BTBT, INDI). GEV is a natural Avoid (19/19). Copper was join-high then lost. ERO = cheap spike we bought, not a missed expensive theme. REAX tax keeps the veto optional. Soft 🚨∧fade / heat-sit n=1 / CANSLIM A∧S stay log-only — do not promote. See §5 and `EXTERNAL_ENRICH_MAP.md`.
 15. **Strategy-native:** `radar_high_fpe` / optional FPE≥35 are the **1d Theme Radar clock** (`theme_radar_1d`, open→close). They do **not** auto-apply to `flatten_h5` or live `flatten_robust`. The matching-hold 5d re-mine **failed both-tape**. Reject elevates unless scored on the matching hold. See §6.
 16. **Thin-n / data caveats:** 08-14 d_RSI often missing (no prior-prior RSI). Some d_mcap prints look like unit/corporate-action jumps (APPS +270%). Lookback 🔵/🚨/fade columns are empty on early books. 08-27 morning weather is unknown in this run. OKLO/SMR/GDX/GLD often have blank `Forward P/E` — honest thin, no new scrape.
-17. **Fee-aware KEEP re-mine:** `radar_high_fpe` fails Futubull $ peer-excess on `theme_radar_1d` (xs $+0.09; up-tape $+0.35). **`flatten_h5` × FPE-avoid = FAIL** — local 5d board IC_up −0.033 Sign_up **40%** (2/5) n=5; IC_down −0.131 Sign_down 100% n=10 (up-tape flips). Do not wire. d_RSI / d_mcap 5d inconclusive. Leftover h1/h3 THIN. Live-shaped veto never fired. See [`OVERLAY_HORIZON_BT.md`](OVERLAY_HORIZON_BT.md). Elevate stays closed. No live wire.
+17. **Fee-aware KEEP re-mine:** `radar_high_fpe` fails Futubull $ peer-excess on `theme_radar_1d` (xs $+0.09; up-tape $+0.35). **`flatten_h5` × FPE-avoid = FAIL** — local 5d board IC_up −0.033 Sign_up **40%** (2/5) n=5; IC_down −0.131 Sign_down 100% n=10 (up-tape flips). Do not wire. d_RSI / d_mcap 5d inconclusive. Leftover h1/h3 THIN. Live-shaped veto never fired. Next Avoid JAM **THIN** (h1/h3 n=6; book_1d n=21, 0 SPY-down); soft 🚨∧fade **FAIL** (never fired). **Clean stop + recommended pause.** See [`OVERLAY_HORIZON_BT.md`](OVERLAY_HORIZON_BT.md). Elevate stays closed. No live wire.
 
 Panel: **50445** liquid name-days · sessions 2026-08-13 → 2026-09-05 · base 1d mean **-0.13** · hit **42.2%**.
 
@@ -169,7 +169,7 @@ Source: swarm `/workspace/fullscan_autopsy_avoid_elevate.md` (often not on disk)
 | Nuclear mixed; CEG worked | CEG 1d mean +0.41; paper lots 08-14 / 08-19 / 09-03 **lost**. VST paper losers. CCJ 19/19 high-FPE. | Mixed. Do not elevate CEG. CCJ = Avoid. |
 | Gold mid-ranks ripped (NEM/AEM) | High-FPE 0/76. NEM join high 12/19, AEM 11/19 — already high. | Fade veto would not have blocked the 8/12 hit. Not an MF long. |
 | Only `radar_high_fpe` both-tape YES; no `radar_hot` OR; `elevate_bump` failed; cheap≠long | Matches §1–2. | **Keep.** |
-| Top Avoid extras: soft 🚨∧fade; join-hot∧AB-silent micros; optics/AI heat sit (n=1) | Early 🚨/fade empty. Micros = gated_out (expand). Heat sit n=1 = **thin-n**. | Log only. Do not promote. |
+| Top Avoid extras: soft 🚨∧fade; join-hot∧AB-silent micros; optics/AI heat sit (n=1) | Fee-aware JAM: flatten_h1/h3 **THIN** n=6; book_1d **THIN** n=21 (16 on 08-13, 0 SPY-down). Soft 🚨∧fade never fired on those sleeves. Heat sit n=1 = **thin-n**. | **Clean stop.** Do not promote. Elevate stays closed. |
 | Top Elevate: gold-miner; CANSLIM A∧S; log outweighed | Gold is a contrast hit. A∧S is an unscored subset of a rule that dies on up tapes. Outweighed=20. | **Do not bump.** Log only. |
 | REAX +853% tax | Outweighed **and** FPE 65. | Keep FPE veto **optional**. |
 
@@ -189,6 +189,8 @@ Fee-aware KEEP re-mine: [`OVERLAY_HORIZON_BT.md`](OVERLAY_HORIZON_BT.md) · `pyt
 | `flatten_live_h1/h3/h5` | 1 / 3 / 5 | gated tickets | thin-n (2 entry days) | **FAIL** — veto never fired. | **No.** |
 
 Keep did **not** clear a PASS. `flatten_h5` × FPE-avoid = **FAIL / do not wire** (5d board, up-tape flips). FPE stays on the 1d Theme Radar clock only. d_RSI / d_mcap 5d inconclusive. Elevate stays rejected. Do not write `LIVE_POLICY`.
+
+Next Avoid after FPE null (same bar, **not** OR with FPE, not `flatten_h5`): join-hot ∧ AB-silent micro/small — `flatten_h1` **THIN** n=6 leftover +$212; `flatten_h3` **THIN** n=6 xs +$5.37 leftover −$480; `book_1d` **THIN** n=21 leftover +$53 top-2 63% 0 SPY-down (16/21 on 08-13). Soft 🚨∧fade **FAIL** (veto never fired on flatten top-8 / book 1d BUY). **Clean stop + recommended pause.**
 
 ## Optional columns (not live gates)
 
@@ -213,7 +215,7 @@ Join: `Ticker` + feature export date = `feature_export_date(D)`. Script: `python
 - Feed high Forward P/E, d_RSI, or d_Market Cap into buy-rank fuel.
 - Use same-day `Change` / `Gap` / RelVol as an avoid/elevate input.
 - Invent scrapes (OpenBB SEC, Zipline data, qlib preds).
-- Promote soft 🚨∧fade or optics/AI heat-sit on n=1.
+- Promote soft 🚨∧fade or join-hot ∧ AB-silent micros — fee-aware JAM is thin-n; 🚨∧fade never fired on the tradeable sleeves.
 - Elevate on CANSLIM A∧S or gold-miner style without a both-tape bar.
 - Copy 1d Theme Radar FPE onto `flatten_h5` or `flatten_robust`. The 5d board **failed both-tape**. Do not wire.
 - Elevate on a sleeve whose hold was never scored.

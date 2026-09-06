@@ -210,6 +210,8 @@ def test_does_not_import_live_policy() -> None:
     assert "from src import sleeve_merge" not in text
     assert "flatten_robust" in text  # named as untouched / shaped
     assert fsf.HIGH_FPE == 35.0
+    assert "--next-only" in text
+    assert "do not remine FPE" in text
 
 
 def main() -> None:

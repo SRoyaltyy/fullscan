@@ -112,15 +112,73 @@ Up-tape flips (Sign_up 40%, 2/5, n=5). Do not add both-tape 5d FPE Avoid to flat
 
 IREN / HIMS / TNDM (08-13), BTBT (08-14), HNST (08-17), INSP / CRMD (08-24 hard-red sit; 08-25/26), ATRC (09-03/04). Zero avoided names on realized SPY-down. Live gate days 08-20/21 are gold (AEM/KGC/…) — high-FPE 0. Leftover $ lift is wish-list HOLD only; baselines matched published blotters (h1 ~+$1.57k vs +$1.55k, h3 ~+$1.17k vs +$1.18k, h5 ~+$2.31k vs +$2.28k).
 
+## Next experiment — join-hot ∧ AB-silent micros (not FPE)
+
+Kid: The expensive-sticker skip is done. Next we skip the tiny names the crowd is yelling about while the report card is blank. If that is just a handful of days, we stop.
+
+FPE / d_RSI / d_mcap stay **closed** on `flatten_h5`. This Avoid is **not** OR'd with FPE. Elevate stays closed. No live wire.
+
+Pre-register (09:30):
+
+- **join-hot:** session-D `data/join/{D}_ranked.csv` `total_score` ≥ p80 (n≥20 scores and cut ≥ 0; 08-18 p80 = −1 is discarded, not a fire).
+- **AB-silent:** last `ab_checklist_enriched.csv` (else plain) with date **< D** is missing, has no row, or `|s_ab|` < 0.05 (`s_ab` = clip(raw/12). `ticker_lookback.EPS`). 08-13/14 have no AB — everyone silent (honest).
+- **size:** join/book `micro` **or** `small` (VERI + AEVA/RXT). `mid` (ACMR) excluded. Micro-only is a footnote, not a promote.
+- **sleeves:** `flatten_h1` / `flatten_h3` leftover + unit; `book_1d` BUY leftover + unit. **Not** `flatten_h5`.
+- Same bar: 09:30 open, Futubull, peer-excess both-tape, leftover Δ$, top-2 |ΔP&L| ≥ 65% → FAIL.
+
+| sleeve | hold | clock | n avoided | hit vs peer | xs $ | leftover Δ$ | max DD | top-2 day | both-tape | verdict |
+|---|---:|---|---:|---|---:|---:|---:|---:|---|---|
+| `flatten_h1` | 1 | 09:30 leftover · min-hold 1 + fees | 6 | 16.7% / 53.0% | -13.24 | +212.44 | -2.1% | 56.2% | thin-n | **THIN** |
+| `flatten_h3` | 3 | 09:30 leftover · min-hold 3 + fees | 6 | 33.3% / 61.7% | +5.37 | -479.53 | -1.8% | 56.8% | thin-n | **THIN** |
+| `book_1d` | 1 | book 1d BUY leftover · min-hold 1 + fees | 21 | 38.1% / 48.5% | -9.27 | +52.55 | -3.2% | 63.2% | thin-n | **THIN** |
+
+### Why JAM
+
+- `flatten_h1` **THIN** — thin-n — cannot claim both-tape.
+- `flatten_h3` **THIN** — thin-n — cannot claim both-tape.
+- `book_1d` **THIN** — book $ up but both-tape thin — do not promote.
+
+### JAM skips (wish-list / book BUY — not live tickets)
+
+Size split among skipped picks: micro=10 small=23. Named autopsy VERI/AEVA/RXT were book-gap worst buys, **not** flatten top-8 or book 1d BUY — the mechanism is tested on the sleeves we can trade, not harvested as a name list.
+
+- `flatten_h1`: INO (2026-08-13), TNDM (2026-08-13), LDI (2026-08-14), BTBT (2026-08-14), TMC (2026-08-17), HNST (2026-08-17).
+- `flatten_h3`: INO (2026-08-13), TNDM (2026-08-13), LDI (2026-08-14), BTBT (2026-08-14), TMC (2026-08-17), HNST (2026-08-17).
+- `book_1d`: INO (2026-08-13), TNDM (2026-08-13), AGEN (2026-08-13), ACHV (2026-08-13), VOR (2026-08-13), SGRY (2026-08-13), WW (2026-08-13), MBRX (2026-08-13), PROK (2026-08-13), IMNN (2026-08-13), ABEO (2026-08-13), NRXP (2026-08-13), FTRE (2026-08-13), UNCY (2026-08-13), SPRB (2026-08-13), FDMT (2026-08-13), TBCH (2026-08-14), WOLF (2026-08-14), PGY (2026-08-14), TMC (2026-08-17), HNST (2026-08-17).
+
+## Soft 🚨∧fade (only because JAM did not PASS)
+
+`lb_alarm` **and** `lb_fade` on **D's morning stock book**. Early books have no columns (honest empty). **Not** OR'd with FPE. Matching hold only.
+
+| sleeve | hold | clock | n avoided | hit vs peer | xs $ | leftover Δ$ | max DD | top-2 day | both-tape | verdict |
+|---|---:|---|---:|---|---:|---:|---:|---:|---|---|
+| `flatten_h1` | 1 | 09:30 leftover · min-hold 1 + fees | 0 | — / 50.9% | — | +0.00 | -2.0% | 0.0% | thin-n | **FAIL** |
+| `flatten_h3` | 3 | 09:30 leftover · min-hold 3 + fees | 0 | — / 60.0% | — | +0.00 | -1.3% | 0.0% | thin-n | **FAIL** |
+| `book_1d` | 1 | book 1d BUY leftover · min-hold 1 + fees | 0 | — / 47.6% | — | +0.00 | -3.2% | 0.0% | thin-n | **FAIL** |
+
+### Why 🚨∧fade
+
+- `flatten_h1` **FAIL** — veto never fired.
+- `flatten_h3` **FAIL** — veto never fired.
+- `book_1d` **FAIL** — veto never fired.
+
+Veto never fired on flatten top-8 or book 1d BUY.
+
+## Clean stop / recommended pause
+
+**Clean stop.** Join-hot ∧ AB-silent (micro/small) is honest thin-n / concentration / null on `flatten_h1`, `flatten_h3`, and `book_1d`. Soft 🚨∧fade never fired on those sleeves (columns empty early; later 🚨∧fade names are not on the BUY / flatten wish-list). Neither Avoid clears the ship bar.
+
+**Recommended pause:** do not keep mining join p80 / AB-silent / 🚨∧fade knobs on these clocks, and do **not** reopen FPE / d_RSI / d_mcap on `flatten_h5`. Elevate stays closed. No live wire. No merge. Wait for a new 09:30 camera or a longer AB vintage — not another cut on the same thin fires.
+
 ## Elevate
 
 **Keep did not clear.** Elevate mechanisms stay rejected. Do not bump CANSLIM, Magic Formula, cheap Forward P/E, or `total_score`.
 
-## Null / next smallest experiment
+## Null / FPE closed
 
-Clean null. Theme Radar 1d percent fade (overlay xs −0.09) **does not survive** Futubull $ peer-excess (xs $+0.09; up-tape xs $+0.35). Local 5d FPE board **FAIL**s both-tape on `flatten_h5` (Sign_up **40%** 2/5 n=5; IC_down −0.131 n=10). Flatten leftover +$326 / +$456 / +$723 stays thin and is not a rescue. Live-shaped veto never fired. d_RSI / d_mcap 5d inconclusive. Sweep FPE 40/50 × morning-up / S≥0 did not clear the bar.
+FPE Avoid is a **clean null**. Theme Radar 1d percent fade (overlay xs −0.09) **does not survive** Futubull $ peer-excess (xs $+0.09; up-tape xs $+0.35). Local 5d FPE board **FAIL**s both-tape on `flatten_h5` (Sign_up **40%** 2/5 n=5; IC_down −0.131 n=10). Flatten leftover +$326 / +$456 / +$723 stays thin and is not a rescue. Live-shaped veto never fired. d_RSI / d_mcap 5d inconclusive. Sweep FPE 40/50 × morning-up / S≥0 did not clear the bar. **Stop mining FPE / d_RSI / d_mcap on flatten_h5.**
 
-**Next smallest experiment:** FPE Avoid stays on the **1d Theme Radar clock only** (already fee-aware FAIL). Do **not** continue FPE / d_RSI / d_mcap mining on `flatten_h5`. Other Keep candidates only on their tagged sleeves. Do not drop the FPE cut or harvest GEV/CCJ lists. Elevate stays closed. No live wire.
+JAM + soft 🚨∧fade also failed the same bar (see Next experiment). **Clean stop + recommended pause.** Elevate stays closed. No live wire.
 
 ## Leak / live asserts
 

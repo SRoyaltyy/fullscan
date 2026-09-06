@@ -24958,5 +24958,3282 @@
   ],
   "fpe_clocks_closed": [
     "flatten_h5"
-  ]
+  ],
+  "next_avoids": {
+    "generated_note": "research only \u00b7 live flatten_robust untouched",
+    "rule_jam": "join-hot (session D total_score \u2265 p80, n\u226520, cut\u22650) \u2227 AB-silent (prior AB date < D missing/rowless/|s_ab|<0.05) \u2227 size micro|small",
+    "rule_fade": "lb_alarm \u2227 lb_fade on D morning stock book; not OR with FPE",
+    "not_or_with_fpe": true,
+    "fpe_clocks_closed": [
+      "flatten_h5"
+    ],
+    "elevate_closed": true,
+    "sleeves_scored": [
+      "flatten_h1",
+      "flatten_h3",
+      "book_1d"
+    ],
+    "jam": [
+      {
+        "rule": "jam",
+        "sleeve": "flatten_h1",
+        "hold_sessions": 1,
+        "universe": "flatten",
+        "score_clock": "09:30 leftover \u00b7 min-hold 1 + fees",
+        "ic": {
+          "n": 6,
+          "n_peer": 100,
+          "n_all": 106,
+          "hit": 0.1667,
+          "hit_peer": 0.53,
+          "mean_pnl": -7.7218,
+          "mean_peer": 5.5207,
+          "xs": -13.2425,
+          "both_tape": null,
+          "thin": true,
+          "tapes": {
+            "up": {
+              "n": 2,
+              "n_peer": 43,
+              "mean": 43.3318,
+              "mean_peer": 6.0888,
+              "xs": 37.2431,
+              "hit": 0.5
+            },
+            "down": {
+              "n": 0,
+              "n_peer": 31,
+              "mean": null,
+              "mean_peer": 10.0135,
+              "xs": null,
+              "hit": null
+            },
+            "flat": {
+              "n": 4,
+              "n_peer": 26,
+              "mean": -33.2486,
+              "mean_peer": -0.7756,
+              "xs": -32.473,
+              "hit": 0.0
+            },
+            "unknown": {
+              "n": 0,
+              "n_peer": 0,
+              "mean": null,
+              "mean_peer": null,
+              "xs": null,
+              "hit": null
+            }
+          },
+          "walk_forward": {
+            "ok": null,
+            "thin": true,
+            "first": null,
+            "last": null
+          }
+        },
+        "book_base": {
+          "capital": 10000.0,
+          "final_equity": 11569.4906,
+          "pnl": 1569.4906,
+          "n_trades": 58,
+          "n_fills": 116,
+          "hit": 0.6034,
+          "mean_pnl": 27.0602,
+          "daily": [
+            {
+              "date": "2026-08-13",
+              "equity": 10097.857,
+              "pnl": 97.857,
+              "n_bought": 8,
+              "n_sold": 0,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-14",
+              "equity": 10228.5395,
+              "pnl": 130.6825,
+              "n_bought": 8,
+              "n_sold": 8,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 10154.882,
+              "pnl": -73.6575,
+              "n_bought": 8,
+              "n_sold": 8,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 10134.7938,
+              "pnl": -20.0882,
+              "n_bought": 0,
+              "n_sold": 8,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 10134.7938,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 10325.4221,
+              "pnl": 190.6283,
+              "n_bought": 8,
+              "n_sold": 0,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-21",
+              "equity": 10757.2855,
+              "pnl": 431.8634,
+              "n_bought": 8,
+              "n_sold": 8,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 11121.9717,
+              "pnl": 364.6862,
+              "n_bought": 0,
+              "n_sold": 8,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 11104.7584,
+              "pnl": -17.2133,
+              "n_bought": 6,
+              "n_sold": 0,
+              "n_held": 6,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 11104.7584,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 6,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-27",
+              "equity": 11180.5182,
+              "pnl": 75.7598,
+              "n_bought": 3,
+              "n_sold": 5,
+              "n_held": 4,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-28",
+              "equity": 11217.6682,
+              "pnl": 37.15,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 4,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 10988.5711,
+              "pnl": -229.0971,
+              "n_bought": 0,
+              "n_sold": 4,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 10988.5711,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 10988.5711,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 11554.3838,
+              "pnl": 565.8127,
+              "n_bought": 5,
+              "n_sold": 0,
+              "n_held": 5,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-04",
+              "equity": 11569.4906,
+              "pnl": 15.1068,
+              "n_bought": 4,
+              "n_sold": 3,
+              "n_held": 6,
+              "hard_red": false,
+              "gate_ok": true
+            }
+          ]
+        },
+        "book_avoid": {
+          "capital": 10000.0,
+          "final_equity": 11781.9268,
+          "pnl": 1781.9268,
+          "n_trades": 52,
+          "n_fills": 104,
+          "hit": 0.6346,
+          "mean_pnl": 34.2678,
+          "daily": [
+            {
+              "date": "2026-08-13",
+              "equity": 9960.845,
+              "pnl": -39.155,
+              "n_bought": 6,
+              "n_sold": 0,
+              "n_held": 6,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-14",
+              "equity": 10200.1362,
+              "pnl": 239.2912,
+              "n_bought": 6,
+              "n_sold": 6,
+              "n_held": 6,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 10268.4035,
+              "pnl": 68.2673,
+              "n_bought": 6,
+              "n_sold": 6,
+              "n_held": 6,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 10321.7504,
+              "pnl": 53.3469,
+              "n_bought": 0,
+              "n_sold": 6,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 10321.7504,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 10517.0615,
+              "pnl": 195.3111,
+              "n_bought": 8,
+              "n_sold": 0,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-21",
+              "equity": 10956.6086,
+              "pnl": 439.5471,
+              "n_bought": 8,
+              "n_sold": 8,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 11329.4024,
+              "pnl": 372.7938,
+              "n_bought": 0,
+              "n_sold": 8,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 11312.1923,
+              "pnl": -17.2101,
+              "n_bought": 6,
+              "n_sold": 0,
+              "n_held": 6,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 11312.1923,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 6,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-27",
+              "equity": 11390.4492,
+              "pnl": 78.2569,
+              "n_bought": 3,
+              "n_sold": 5,
+              "n_held": 4,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-28",
+              "equity": 11428.6992,
+              "pnl": 38.25,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 4,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 11194.8259,
+              "pnl": -233.8733,
+              "n_bought": 0,
+              "n_sold": 4,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 11194.8259,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 11194.8259,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 11767.1663,
+              "pnl": 572.3404,
+              "n_bought": 5,
+              "n_sold": 0,
+              "n_held": 5,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-04",
+              "equity": 11781.9268,
+              "pnl": 14.7605,
+              "n_bought": 4,
+              "n_sold": 3,
+              "n_held": 6,
+              "hard_red": false,
+              "gate_ok": true
+            }
+          ]
+        },
+        "max_dd": -0.0205,
+        "n_avoided_picks": 6,
+        "skipped": [
+          {
+            "date": "2026-08-13",
+            "ticker": "INO"
+          },
+          {
+            "date": "2026-08-13",
+            "ticker": "TNDM"
+          },
+          {
+            "date": "2026-08-14",
+            "ticker": "LDI"
+          },
+          {
+            "date": "2026-08-14",
+            "ticker": "BTBT"
+          },
+          {
+            "date": "2026-08-17",
+            "ticker": "TMC"
+          },
+          {
+            "date": "2026-08-17",
+            "ticker": "HNST"
+          }
+        ],
+        "gate": {
+          "verdict": "THIN",
+          "excess_usd": 212.4362,
+          "concentration": {
+            "top1": 0.2857,
+            "top2": 0.5616,
+            "n_days": 17,
+            "reject": false
+          },
+          "reasons": [
+            "thin-n \u2014 cannot claim both-tape"
+          ],
+          "book_kind": "leftover"
+        },
+        "n_unit": 106
+      },
+      {
+        "rule": "jam",
+        "sleeve": "flatten_h3",
+        "hold_sessions": 3,
+        "universe": "flatten",
+        "score_clock": "09:30 leftover \u00b7 min-hold 3 + fees",
+        "ic": {
+          "n": 6,
+          "n_peer": 94,
+          "n_all": 100,
+          "hit": 0.3333,
+          "hit_peer": 0.617,
+          "mean_pnl": 28.8449,
+          "mean_peer": 23.4767,
+          "xs": 5.3682,
+          "both_tape": null,
+          "thin": true,
+          "tapes": {
+            "up": {
+              "n": 2,
+              "n_peer": 43,
+              "mean": 159.2142,
+              "mean_peer": 13.6839,
+              "xs": 145.5304,
+              "hit": 0.5
+            },
+            "down": {
+              "n": 0,
+              "n_peer": 31,
+              "mean": null,
+              "mean_peer": 45.981,
+              "xs": null,
+              "hit": null
+            },
+            "flat": {
+              "n": 4,
+              "n_peer": 20,
+              "mean": -36.3398,
+              "mean_peer": 9.6498,
+              "xs": -45.9896,
+              "hit": 0.25
+            },
+            "unknown": {
+              "n": 0,
+              "n_peer": 0,
+              "mean": null,
+              "mean_peer": null,
+              "xs": null,
+              "hit": null
+            }
+          },
+          "walk_forward": {
+            "ok": null,
+            "thin": true,
+            "first": null,
+            "last": null
+          }
+        },
+        "book_base": {
+          "capital": 10000.0,
+          "final_equity": 11173.3386,
+          "pnl": 1173.3386,
+          "n_trades": 42,
+          "n_fills": 84,
+          "hit": 0.5,
+          "mean_pnl": 27.9366,
+          "daily": [
+            {
+              "date": "2026-08-13",
+              "equity": 10097.857,
+              "pnl": 97.857,
+              "n_bought": 8,
+              "n_sold": 0,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-14",
+              "equity": 10354.3755,
+              "pnl": 256.5185,
+              "n_bought": 3,
+              "n_sold": 0,
+              "n_held": 11,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 10499.6288,
+              "pnl": 145.2533,
+              "n_bought": 4,
+              "n_sold": 0,
+              "n_held": 15,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 10361.6159,
+              "pnl": -138.0129,
+              "n_bought": 0,
+              "n_sold": 8,
+              "n_held": 7,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 10361.281,
+              "pnl": -0.3349,
+              "n_bought": 0,
+              "n_sold": 3,
+              "n_held": 4,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 10557.1809,
+              "pnl": 195.8999,
+              "n_bought": 8,
+              "n_sold": 4,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-21",
+              "equity": 10863.8103,
+              "pnl": 306.6294,
+              "n_bought": 5,
+              "n_sold": 0,
+              "n_held": 13,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 10833.7603,
+              "pnl": -30.05,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 13,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 10860.3722,
+              "pnl": 26.6119,
+              "n_bought": 6,
+              "n_sold": 8,
+              "n_held": 11,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 10860.0977,
+              "pnl": -0.2745,
+              "n_bought": 0,
+              "n_sold": 5,
+              "n_held": 6,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-27",
+              "equity": 10809.5677,
+              "pnl": -50.53,
+              "n_bought": 3,
+              "n_sold": 0,
+              "n_held": 9,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-28",
+              "equity": 10774.915,
+              "pnl": -34.6527,
+              "n_bought": 0,
+              "n_sold": 5,
+              "n_held": 4,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 10768.0167,
+              "pnl": -6.8983,
+              "n_bought": 0,
+              "n_sold": 1,
+              "n_held": 3,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 10769.67,
+              "pnl": 1.6533,
+              "n_bought": 0,
+              "n_sold": 3,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 10769.67,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 11325.2467,
+              "pnl": 555.5767,
+              "n_bought": 5,
+              "n_sold": 0,
+              "n_held": 5,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-04",
+              "equity": 11173.3386,
+              "pnl": -151.9081,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 5,
+              "hard_red": false,
+              "gate_ok": true
+            }
+          ]
+        },
+        "book_avoid": {
+          "capital": 10000.0,
+          "final_equity": 10693.8111,
+          "pnl": 693.8111,
+          "n_trades": 38,
+          "n_fills": 76,
+          "hit": 0.5,
+          "mean_pnl": 18.2582,
+          "daily": [
+            {
+              "date": "2026-08-13",
+              "equity": 9960.845,
+              "pnl": -39.155,
+              "n_bought": 6,
+              "n_sold": 0,
+              "n_held": 6,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-14",
+              "equity": 10070.4088,
+              "pnl": 109.5638,
+              "n_bought": 1,
+              "n_sold": 0,
+              "n_held": 7,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 10109.2402,
+              "pnl": 38.8314,
+              "n_bought": 2,
+              "n_sold": 0,
+              "n_held": 9,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 9923.6434,
+              "pnl": -185.5968,
+              "n_bought": 0,
+              "n_sold": 6,
+              "n_held": 3,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 9924.1192,
+              "pnl": 0.4758,
+              "n_bought": 0,
+              "n_sold": 1,
+              "n_held": 2,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 10111.3945,
+              "pnl": 187.2753,
+              "n_bought": 8,
+              "n_sold": 2,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-21",
+              "equity": 10403.7963,
+              "pnl": 292.4018,
+              "n_bought": 5,
+              "n_sold": 0,
+              "n_held": 13,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 10374.3963,
+              "pnl": -29.4,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 13,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 10399.4398,
+              "pnl": 25.0435,
+              "n_bought": 6,
+              "n_sold": 8,
+              "n_held": 11,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 10399.1637,
+              "pnl": -0.2761,
+              "n_bought": 0,
+              "n_sold": 5,
+              "n_held": 6,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-27",
+              "equity": 10350.3321,
+              "pnl": -48.8316,
+              "n_bought": 3,
+              "n_sold": 0,
+              "n_held": 9,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-28",
+              "equity": 10315.984,
+              "pnl": -34.3481,
+              "n_bought": 0,
+              "n_sold": 5,
+              "n_held": 4,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 10309.8857,
+              "pnl": -6.0983,
+              "n_bought": 0,
+              "n_sold": 1,
+              "n_held": 3,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 10311.0851,
+              "pnl": 1.1994,
+              "n_bought": 0,
+              "n_sold": 3,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 10311.0851,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 10839.6458,
+              "pnl": 528.5607,
+              "n_bought": 5,
+              "n_sold": 0,
+              "n_held": 5,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-04",
+              "equity": 10693.8111,
+              "pnl": -145.8347,
+              "n_bought": 2,
+              "n_sold": 0,
+              "n_held": 7,
+              "hard_red": false,
+              "gate_ok": true
+            }
+          ]
+        },
+        "max_dd": -0.0184,
+        "n_avoided_picks": 6,
+        "skipped": [
+          {
+            "date": "2026-08-13",
+            "ticker": "INO"
+          },
+          {
+            "date": "2026-08-13",
+            "ticker": "TNDM"
+          },
+          {
+            "date": "2026-08-14",
+            "ticker": "LDI"
+          },
+          {
+            "date": "2026-08-14",
+            "ticker": "BTBT"
+          },
+          {
+            "date": "2026-08-17",
+            "ticker": "TMC"
+          },
+          {
+            "date": "2026-08-17",
+            "ticker": "HNST"
+          }
+        ],
+        "gate": {
+          "verdict": "THIN",
+          "excess_usd": -479.5275,
+          "concentration": {
+            "top1": 0.2938,
+            "top2": 0.5677,
+            "n_days": 17,
+            "reject": false
+          },
+          "reasons": [
+            "thin-n \u2014 cannot claim both-tape"
+          ],
+          "book_kind": "leftover"
+        },
+        "n_unit": 100
+      },
+      {
+        "rule": "jam",
+        "sleeve": "book_1d",
+        "hold_sessions": 1,
+        "universe": "book_1d",
+        "score_clock": "book 1d BUY leftover \u00b7 min-hold 1 + fees",
+        "ic": {
+          "n": 21,
+          "n_peer": 231,
+          "n_all": 252,
+          "hit": 0.381,
+          "hit_peer": 0.4848,
+          "mean_pnl": -8.0522,
+          "mean_peer": 1.2153,
+          "xs": -9.2675,
+          "both_tape": null,
+          "thin": true,
+          "tapes": {
+            "up": {
+              "n": 16,
+              "n_peer": 75,
+              "mean": -1.1919,
+              "mean_peer": 6.8447,
+              "xs": -8.0366,
+              "hit": 0.5
+            },
+            "down": {
+              "n": 0,
+              "n_peer": 60,
+              "mean": null,
+              "mean_peer": 0.8382,
+              "xs": null,
+              "hit": null
+            },
+            "flat": {
+              "n": 5,
+              "n_peer": 96,
+              "mean": -30.005,
+              "mean_peer": -2.9469,
+              "xs": -27.0582,
+              "hit": 0.0
+            },
+            "unknown": {
+              "n": 0,
+              "n_peer": 0,
+              "mean": null,
+              "mean_peer": null,
+              "xs": null,
+              "hit": null
+            }
+          },
+          "walk_forward": {
+            "ok": null,
+            "thin": true,
+            "first": null,
+            "last": null
+          }
+        },
+        "book_base": {
+          "capital": 10000.0,
+          "final_equity": 9828.2991,
+          "pnl": -171.7009,
+          "n_trades": 148,
+          "n_fills": 296,
+          "hit": 0.3784,
+          "mean_pnl": -1.1601,
+          "daily": [
+            {
+              "date": "2026-08-13",
+              "equity": 9997.3446,
+              "pnl": -2.6554,
+              "n_bought": 17,
+              "n_sold": 0,
+              "n_held": 17,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-14",
+              "equity": 9997.0709,
+              "pnl": -0.2737,
+              "n_bought": 16,
+              "n_sold": 17,
+              "n_held": 16,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 9952.8459,
+              "pnl": -44.225,
+              "n_bought": 10,
+              "n_sold": 3,
+              "n_held": 23,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 9919.2281,
+              "pnl": -33.6178,
+              "n_bought": 0,
+              "n_sold": 15,
+              "n_held": 8,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 9926.0691,
+              "pnl": 6.841,
+              "n_bought": 0,
+              "n_sold": 8,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 9976.8401,
+              "pnl": 50.771,
+              "n_bought": 15,
+              "n_sold": 0,
+              "n_held": 15,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-21",
+              "equity": 10158.1461,
+              "pnl": 181.306,
+              "n_bought": 16,
+              "n_sold": 6,
+              "n_held": 25,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 10039.6735,
+              "pnl": -118.4726,
+              "n_bought": 0,
+              "n_sold": 25,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 10039.6735,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 10039.6735,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-27",
+              "equity": 10045.8235,
+              "pnl": 6.15,
+              "n_bought": 25,
+              "n_sold": 0,
+              "n_held": 25,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-28",
+              "equity": 9993.5656,
+              "pnl": -52.2579,
+              "n_bought": 0,
+              "n_sold": 25,
+              "n_held": 0,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-30",
+              "equity": 9892.0606,
+              "pnl": -101.505,
+              "n_bought": 25,
+              "n_sold": 0,
+              "n_held": 25,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 9837.4255,
+              "pnl": -54.6351,
+              "n_bought": 0,
+              "n_sold": 25,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 9837.4255,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 9837.4255,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 9946.9973,
+              "pnl": 109.5718,
+              "n_bought": 8,
+              "n_sold": 0,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-04",
+              "equity": 9828.2991,
+              "pnl": -118.6982,
+              "n_bought": 16,
+              "n_sold": 8,
+              "n_held": 16,
+              "hard_red": false,
+              "gate_ok": true
+            }
+          ]
+        },
+        "book_avoid": {
+          "capital": 10000.0,
+          "final_equity": 9880.8528,
+          "pnl": -119.1472,
+          "n_trades": 127,
+          "n_fills": 254,
+          "hit": 0.3858,
+          "mean_pnl": -0.9382,
+          "daily": [
+            {
+              "date": "2026-08-13",
+              "equity": 9970.444,
+              "pnl": -29.556,
+              "n_bought": 1,
+              "n_sold": 0,
+              "n_held": 1,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-14",
+              "equity": 9981.249,
+              "pnl": 10.805,
+              "n_bought": 13,
+              "n_sold": 1,
+              "n_held": 13,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 9957.011,
+              "pnl": -24.238,
+              "n_bought": 8,
+              "n_sold": 0,
+              "n_held": 21,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 9964.4494,
+              "pnl": 7.4384,
+              "n_bought": 0,
+              "n_sold": 13,
+              "n_held": 8,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 9977.7194,
+              "pnl": 13.27,
+              "n_bought": 0,
+              "n_sold": 8,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 10028.9774,
+              "pnl": 51.258,
+              "n_bought": 15,
+              "n_sold": 0,
+              "n_held": 15,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-21",
+              "equity": 10210.8844,
+              "pnl": 181.907,
+              "n_bought": 16,
+              "n_sold": 6,
+              "n_held": 25,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 10092.4856,
+              "pnl": -118.3988,
+              "n_bought": 0,
+              "n_sold": 25,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 10092.4856,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 10092.4856,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-27",
+              "equity": 10098.6426,
+              "pnl": 6.157,
+              "n_bought": 25,
+              "n_sold": 0,
+              "n_held": 25,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-28",
+              "equity": 10046.4315,
+              "pnl": -52.2111,
+              "n_bought": 0,
+              "n_sold": 25,
+              "n_held": 0,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-30",
+              "equity": 9945.0905,
+              "pnl": -101.341,
+              "n_bought": 25,
+              "n_sold": 0,
+              "n_held": 25,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 9890.5092,
+              "pnl": -54.5813,
+              "n_bought": 0,
+              "n_sold": 25,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 9890.5092,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 9890.5092,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 10000.0952,
+              "pnl": 109.586,
+              "n_bought": 8,
+              "n_sold": 0,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-04",
+              "equity": 9880.8528,
+              "pnl": -119.2424,
+              "n_bought": 16,
+              "n_sold": 8,
+              "n_held": 16,
+              "hard_red": false,
+              "gate_ok": true
+            }
+          ]
+        },
+        "max_dd": -0.0323,
+        "n_avoided_picks": 21,
+        "skipped": [
+          {
+            "date": "2026-08-13",
+            "ticker": "INO"
+          },
+          {
+            "date": "2026-08-13",
+            "ticker": "TNDM"
+          },
+          {
+            "date": "2026-08-13",
+            "ticker": "AGEN"
+          },
+          {
+            "date": "2026-08-13",
+            "ticker": "ACHV"
+          },
+          {
+            "date": "2026-08-13",
+            "ticker": "VOR"
+          },
+          {
+            "date": "2026-08-13",
+            "ticker": "SGRY"
+          },
+          {
+            "date": "2026-08-13",
+            "ticker": "WW"
+          },
+          {
+            "date": "2026-08-13",
+            "ticker": "MBRX"
+          },
+          {
+            "date": "2026-08-13",
+            "ticker": "PROK"
+          },
+          {
+            "date": "2026-08-13",
+            "ticker": "IMNN"
+          },
+          {
+            "date": "2026-08-13",
+            "ticker": "ABEO"
+          },
+          {
+            "date": "2026-08-13",
+            "ticker": "NRXP"
+          },
+          {
+            "date": "2026-08-13",
+            "ticker": "FTRE"
+          },
+          {
+            "date": "2026-08-13",
+            "ticker": "UNCY"
+          },
+          {
+            "date": "2026-08-13",
+            "ticker": "SPRB"
+          },
+          {
+            "date": "2026-08-13",
+            "ticker": "FDMT"
+          },
+          {
+            "date": "2026-08-14",
+            "ticker": "TBCH"
+          },
+          {
+            "date": "2026-08-14",
+            "ticker": "WOLF"
+          },
+          {
+            "date": "2026-08-14",
+            "ticker": "PGY"
+          },
+          {
+            "date": "2026-08-17",
+            "ticker": "TMC"
+          },
+          {
+            "date": "2026-08-17",
+            "ticker": "HNST"
+          }
+        ],
+        "gate": {
+          "verdict": "THIN",
+          "excess_usd": 52.5537,
+          "concentration": {
+            "top1": 0.3821,
+            "top2": 0.6325,
+            "n_days": 18,
+            "reject": false
+          },
+          "reasons": [
+            "book $ up but both-tape thin \u2014 do not promote"
+          ],
+          "book_kind": "leftover"
+        },
+        "n_unit": 252
+      }
+    ],
+    "alarm_fade": [
+      {
+        "rule": "alarm_fade",
+        "sleeve": "flatten_h1",
+        "hold_sessions": 1,
+        "universe": "flatten",
+        "score_clock": "09:30 leftover \u00b7 min-hold 1 + fees",
+        "ic": {
+          "n": 0,
+          "n_peer": 106,
+          "n_all": 106,
+          "hit": null,
+          "hit_peer": 0.5094,
+          "mean_pnl": null,
+          "mean_peer": 4.7711,
+          "xs": null,
+          "both_tape": null,
+          "thin": true,
+          "tapes": {
+            "up": {
+              "n": 0,
+              "n_peer": 45,
+              "mean": null,
+              "mean_peer": 7.744,
+              "xs": null,
+              "hit": null
+            },
+            "down": {
+              "n": 0,
+              "n_peer": 31,
+              "mean": null,
+              "mean_peer": 10.0135,
+              "xs": null,
+              "hit": null
+            },
+            "flat": {
+              "n": 0,
+              "n_peer": 30,
+              "mean": null,
+              "mean_peer": -5.1053,
+              "xs": null,
+              "hit": null
+            },
+            "unknown": {
+              "n": 0,
+              "n_peer": 0,
+              "mean": null,
+              "mean_peer": null,
+              "xs": null,
+              "hit": null
+            }
+          },
+          "walk_forward": {
+            "ok": null,
+            "thin": true,
+            "first": null,
+            "last": null
+          }
+        },
+        "book_base": {
+          "capital": 10000.0,
+          "final_equity": 11569.4906,
+          "pnl": 1569.4906,
+          "n_trades": 58,
+          "n_fills": 116,
+          "hit": 0.6034,
+          "mean_pnl": 27.0602,
+          "daily": [
+            {
+              "date": "2026-08-13",
+              "equity": 10097.857,
+              "pnl": 97.857,
+              "n_bought": 8,
+              "n_sold": 0,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-14",
+              "equity": 10228.5395,
+              "pnl": 130.6825,
+              "n_bought": 8,
+              "n_sold": 8,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 10154.882,
+              "pnl": -73.6575,
+              "n_bought": 8,
+              "n_sold": 8,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 10134.7938,
+              "pnl": -20.0882,
+              "n_bought": 0,
+              "n_sold": 8,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 10134.7938,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 10325.4221,
+              "pnl": 190.6283,
+              "n_bought": 8,
+              "n_sold": 0,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-21",
+              "equity": 10757.2855,
+              "pnl": 431.8634,
+              "n_bought": 8,
+              "n_sold": 8,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 11121.9717,
+              "pnl": 364.6862,
+              "n_bought": 0,
+              "n_sold": 8,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 11104.7584,
+              "pnl": -17.2133,
+              "n_bought": 6,
+              "n_sold": 0,
+              "n_held": 6,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 11104.7584,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 6,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-27",
+              "equity": 11180.5182,
+              "pnl": 75.7598,
+              "n_bought": 3,
+              "n_sold": 5,
+              "n_held": 4,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-28",
+              "equity": 11217.6682,
+              "pnl": 37.15,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 4,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 10988.5711,
+              "pnl": -229.0971,
+              "n_bought": 0,
+              "n_sold": 4,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 10988.5711,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 10988.5711,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 11554.3838,
+              "pnl": 565.8127,
+              "n_bought": 5,
+              "n_sold": 0,
+              "n_held": 5,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-04",
+              "equity": 11569.4906,
+              "pnl": 15.1068,
+              "n_bought": 4,
+              "n_sold": 3,
+              "n_held": 6,
+              "hard_red": false,
+              "gate_ok": true
+            }
+          ]
+        },
+        "book_avoid": {
+          "capital": 10000.0,
+          "final_equity": 11569.4906,
+          "pnl": 1569.4906,
+          "n_trades": 58,
+          "n_fills": 116,
+          "hit": 0.6034,
+          "mean_pnl": 27.0602,
+          "daily": [
+            {
+              "date": "2026-08-13",
+              "equity": 10097.857,
+              "pnl": 97.857,
+              "n_bought": 8,
+              "n_sold": 0,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-14",
+              "equity": 10228.5395,
+              "pnl": 130.6825,
+              "n_bought": 8,
+              "n_sold": 8,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 10154.882,
+              "pnl": -73.6575,
+              "n_bought": 8,
+              "n_sold": 8,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 10134.7938,
+              "pnl": -20.0882,
+              "n_bought": 0,
+              "n_sold": 8,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 10134.7938,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 10325.4221,
+              "pnl": 190.6283,
+              "n_bought": 8,
+              "n_sold": 0,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-21",
+              "equity": 10757.2855,
+              "pnl": 431.8634,
+              "n_bought": 8,
+              "n_sold": 8,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 11121.9717,
+              "pnl": 364.6862,
+              "n_bought": 0,
+              "n_sold": 8,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 11104.7584,
+              "pnl": -17.2133,
+              "n_bought": 6,
+              "n_sold": 0,
+              "n_held": 6,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 11104.7584,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 6,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-27",
+              "equity": 11180.5182,
+              "pnl": 75.7598,
+              "n_bought": 3,
+              "n_sold": 5,
+              "n_held": 4,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-28",
+              "equity": 11217.6682,
+              "pnl": 37.15,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 4,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 10988.5711,
+              "pnl": -229.0971,
+              "n_bought": 0,
+              "n_sold": 4,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 10988.5711,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 10988.5711,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 11554.3838,
+              "pnl": 565.8127,
+              "n_bought": 5,
+              "n_sold": 0,
+              "n_held": 5,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-04",
+              "equity": 11569.4906,
+              "pnl": 15.1068,
+              "n_bought": 4,
+              "n_sold": 3,
+              "n_held": 6,
+              "hard_red": false,
+              "gate_ok": true
+            }
+          ]
+        },
+        "max_dd": -0.0204,
+        "n_avoided_picks": 0,
+        "skipped": [],
+        "gate": {
+          "verdict": "FAIL",
+          "excess_usd": 0.0,
+          "concentration": {
+            "top1": 0.0,
+            "top2": 0.0,
+            "n_days": 17,
+            "reject": false
+          },
+          "reasons": [
+            "veto never fired"
+          ],
+          "book_kind": "leftover"
+        },
+        "n_unit": 106
+      },
+      {
+        "rule": "alarm_fade",
+        "sleeve": "flatten_h3",
+        "hold_sessions": 3,
+        "universe": "flatten",
+        "score_clock": "09:30 leftover \u00b7 min-hold 3 + fees",
+        "ic": {
+          "n": 0,
+          "n_peer": 100,
+          "n_all": 100,
+          "hit": null,
+          "hit_peer": 0.6,
+          "mean_pnl": null,
+          "mean_peer": 23.7988,
+          "xs": null,
+          "both_tape": null,
+          "thin": true,
+          "tapes": {
+            "up": {
+              "n": 0,
+              "n_peer": 45,
+              "mean": null,
+              "mean_peer": 20.1519,
+              "xs": null,
+              "hit": null
+            },
+            "down": {
+              "n": 0,
+              "n_peer": 31,
+              "mean": null,
+              "mean_peer": 45.981,
+              "xs": null,
+              "hit": null
+            },
+            "flat": {
+              "n": 0,
+              "n_peer": 24,
+              "mean": null,
+              "mean_peer": 1.9848,
+              "xs": null,
+              "hit": null
+            },
+            "unknown": {
+              "n": 0,
+              "n_peer": 0,
+              "mean": null,
+              "mean_peer": null,
+              "xs": null,
+              "hit": null
+            }
+          },
+          "walk_forward": {
+            "ok": null,
+            "thin": true,
+            "first": null,
+            "last": null
+          }
+        },
+        "book_base": {
+          "capital": 10000.0,
+          "final_equity": 11173.3386,
+          "pnl": 1173.3386,
+          "n_trades": 42,
+          "n_fills": 84,
+          "hit": 0.5,
+          "mean_pnl": 27.9366,
+          "daily": [
+            {
+              "date": "2026-08-13",
+              "equity": 10097.857,
+              "pnl": 97.857,
+              "n_bought": 8,
+              "n_sold": 0,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-14",
+              "equity": 10354.3755,
+              "pnl": 256.5185,
+              "n_bought": 3,
+              "n_sold": 0,
+              "n_held": 11,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 10499.6288,
+              "pnl": 145.2533,
+              "n_bought": 4,
+              "n_sold": 0,
+              "n_held": 15,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 10361.6159,
+              "pnl": -138.0129,
+              "n_bought": 0,
+              "n_sold": 8,
+              "n_held": 7,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 10361.281,
+              "pnl": -0.3349,
+              "n_bought": 0,
+              "n_sold": 3,
+              "n_held": 4,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 10557.1809,
+              "pnl": 195.8999,
+              "n_bought": 8,
+              "n_sold": 4,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-21",
+              "equity": 10863.8103,
+              "pnl": 306.6294,
+              "n_bought": 5,
+              "n_sold": 0,
+              "n_held": 13,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 10833.7603,
+              "pnl": -30.05,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 13,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 10860.3722,
+              "pnl": 26.6119,
+              "n_bought": 6,
+              "n_sold": 8,
+              "n_held": 11,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 10860.0977,
+              "pnl": -0.2745,
+              "n_bought": 0,
+              "n_sold": 5,
+              "n_held": 6,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-27",
+              "equity": 10809.5677,
+              "pnl": -50.53,
+              "n_bought": 3,
+              "n_sold": 0,
+              "n_held": 9,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-28",
+              "equity": 10774.915,
+              "pnl": -34.6527,
+              "n_bought": 0,
+              "n_sold": 5,
+              "n_held": 4,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 10768.0167,
+              "pnl": -6.8983,
+              "n_bought": 0,
+              "n_sold": 1,
+              "n_held": 3,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 10769.67,
+              "pnl": 1.6533,
+              "n_bought": 0,
+              "n_sold": 3,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 10769.67,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 11325.2467,
+              "pnl": 555.5767,
+              "n_bought": 5,
+              "n_sold": 0,
+              "n_held": 5,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-04",
+              "equity": 11173.3386,
+              "pnl": -151.9081,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 5,
+              "hard_red": false,
+              "gate_ok": true
+            }
+          ]
+        },
+        "book_avoid": {
+          "capital": 10000.0,
+          "final_equity": 11173.3386,
+          "pnl": 1173.3386,
+          "n_trades": 42,
+          "n_fills": 84,
+          "hit": 0.5,
+          "mean_pnl": 27.9366,
+          "daily": [
+            {
+              "date": "2026-08-13",
+              "equity": 10097.857,
+              "pnl": 97.857,
+              "n_bought": 8,
+              "n_sold": 0,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-14",
+              "equity": 10354.3755,
+              "pnl": 256.5185,
+              "n_bought": 3,
+              "n_sold": 0,
+              "n_held": 11,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 10499.6288,
+              "pnl": 145.2533,
+              "n_bought": 4,
+              "n_sold": 0,
+              "n_held": 15,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 10361.6159,
+              "pnl": -138.0129,
+              "n_bought": 0,
+              "n_sold": 8,
+              "n_held": 7,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 10361.281,
+              "pnl": -0.3349,
+              "n_bought": 0,
+              "n_sold": 3,
+              "n_held": 4,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 10557.1809,
+              "pnl": 195.8999,
+              "n_bought": 8,
+              "n_sold": 4,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-21",
+              "equity": 10863.8103,
+              "pnl": 306.6294,
+              "n_bought": 5,
+              "n_sold": 0,
+              "n_held": 13,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 10833.7603,
+              "pnl": -30.05,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 13,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 10860.3722,
+              "pnl": 26.6119,
+              "n_bought": 6,
+              "n_sold": 8,
+              "n_held": 11,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 10860.0977,
+              "pnl": -0.2745,
+              "n_bought": 0,
+              "n_sold": 5,
+              "n_held": 6,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-27",
+              "equity": 10809.5677,
+              "pnl": -50.53,
+              "n_bought": 3,
+              "n_sold": 0,
+              "n_held": 9,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-28",
+              "equity": 10774.915,
+              "pnl": -34.6527,
+              "n_bought": 0,
+              "n_sold": 5,
+              "n_held": 4,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 10768.0167,
+              "pnl": -6.8983,
+              "n_bought": 0,
+              "n_sold": 1,
+              "n_held": 3,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 10769.67,
+              "pnl": 1.6533,
+              "n_bought": 0,
+              "n_sold": 3,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 10769.67,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 11325.2467,
+              "pnl": 555.5767,
+              "n_bought": 5,
+              "n_sold": 0,
+              "n_held": 5,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-04",
+              "equity": 11173.3386,
+              "pnl": -151.9081,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 5,
+              "hard_red": false,
+              "gate_ok": true
+            }
+          ]
+        },
+        "max_dd": -0.0134,
+        "n_avoided_picks": 0,
+        "skipped": [],
+        "gate": {
+          "verdict": "FAIL",
+          "excess_usd": 0.0,
+          "concentration": {
+            "top1": 0.0,
+            "top2": 0.0,
+            "n_days": 17,
+            "reject": false
+          },
+          "reasons": [
+            "veto never fired"
+          ],
+          "book_kind": "leftover"
+        },
+        "n_unit": 100
+      },
+      {
+        "rule": "alarm_fade",
+        "sleeve": "book_1d",
+        "hold_sessions": 1,
+        "universe": "book_1d",
+        "score_clock": "book 1d BUY leftover \u00b7 min-hold 1 + fees",
+        "ic": {
+          "n": 0,
+          "n_peer": 252,
+          "n_all": 252,
+          "hit": null,
+          "hit_peer": 0.4762,
+          "mean_pnl": null,
+          "mean_peer": 0.443,
+          "xs": null,
+          "both_tape": null,
+          "thin": true,
+          "tapes": {
+            "up": {
+              "n": 0,
+              "n_peer": 91,
+              "mean": null,
+              "mean_peer": 5.4317,
+              "xs": null,
+              "hit": null
+            },
+            "down": {
+              "n": 0,
+              "n_peer": 60,
+              "mean": null,
+              "mean_peer": 0.8382,
+              "xs": null,
+              "hit": null
+            },
+            "flat": {
+              "n": 0,
+              "n_peer": 101,
+              "mean": null,
+              "mean_peer": -4.2864,
+              "xs": null,
+              "hit": null
+            },
+            "unknown": {
+              "n": 0,
+              "n_peer": 0,
+              "mean": null,
+              "mean_peer": null,
+              "xs": null,
+              "hit": null
+            }
+          },
+          "walk_forward": {
+            "ok": null,
+            "thin": true,
+            "first": null,
+            "last": null
+          }
+        },
+        "book_base": {
+          "capital": 10000.0,
+          "final_equity": 9828.2991,
+          "pnl": -171.7009,
+          "n_trades": 148,
+          "n_fills": 296,
+          "hit": 0.3784,
+          "mean_pnl": -1.1601,
+          "daily": [
+            {
+              "date": "2026-08-13",
+              "equity": 9997.3446,
+              "pnl": -2.6554,
+              "n_bought": 17,
+              "n_sold": 0,
+              "n_held": 17,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-14",
+              "equity": 9997.0709,
+              "pnl": -0.2737,
+              "n_bought": 16,
+              "n_sold": 17,
+              "n_held": 16,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 9952.8459,
+              "pnl": -44.225,
+              "n_bought": 10,
+              "n_sold": 3,
+              "n_held": 23,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 9919.2281,
+              "pnl": -33.6178,
+              "n_bought": 0,
+              "n_sold": 15,
+              "n_held": 8,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 9926.0691,
+              "pnl": 6.841,
+              "n_bought": 0,
+              "n_sold": 8,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 9976.8401,
+              "pnl": 50.771,
+              "n_bought": 15,
+              "n_sold": 0,
+              "n_held": 15,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-21",
+              "equity": 10158.1461,
+              "pnl": 181.306,
+              "n_bought": 16,
+              "n_sold": 6,
+              "n_held": 25,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 10039.6735,
+              "pnl": -118.4726,
+              "n_bought": 0,
+              "n_sold": 25,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 10039.6735,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 10039.6735,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-27",
+              "equity": 10045.8235,
+              "pnl": 6.15,
+              "n_bought": 25,
+              "n_sold": 0,
+              "n_held": 25,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-28",
+              "equity": 9993.5656,
+              "pnl": -52.2579,
+              "n_bought": 0,
+              "n_sold": 25,
+              "n_held": 0,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-30",
+              "equity": 9892.0606,
+              "pnl": -101.505,
+              "n_bought": 25,
+              "n_sold": 0,
+              "n_held": 25,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 9837.4255,
+              "pnl": -54.6351,
+              "n_bought": 0,
+              "n_sold": 25,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 9837.4255,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 9837.4255,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 9946.9973,
+              "pnl": 109.5718,
+              "n_bought": 8,
+              "n_sold": 0,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-04",
+              "equity": 9828.2991,
+              "pnl": -118.6982,
+              "n_bought": 16,
+              "n_sold": 8,
+              "n_held": 16,
+              "hard_red": false,
+              "gate_ok": true
+            }
+          ]
+        },
+        "book_avoid": {
+          "capital": 10000.0,
+          "final_equity": 9828.2991,
+          "pnl": -171.7009,
+          "n_trades": 148,
+          "n_fills": 296,
+          "hit": 0.3784,
+          "mean_pnl": -1.1601,
+          "daily": [
+            {
+              "date": "2026-08-13",
+              "equity": 9997.3446,
+              "pnl": -2.6554,
+              "n_bought": 17,
+              "n_sold": 0,
+              "n_held": 17,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-14",
+              "equity": 9997.0709,
+              "pnl": -0.2737,
+              "n_bought": 16,
+              "n_sold": 17,
+              "n_held": 16,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 9952.8459,
+              "pnl": -44.225,
+              "n_bought": 10,
+              "n_sold": 3,
+              "n_held": 23,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 9919.2281,
+              "pnl": -33.6178,
+              "n_bought": 0,
+              "n_sold": 15,
+              "n_held": 8,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 9926.0691,
+              "pnl": 6.841,
+              "n_bought": 0,
+              "n_sold": 8,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 9976.8401,
+              "pnl": 50.771,
+              "n_bought": 15,
+              "n_sold": 0,
+              "n_held": 15,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-21",
+              "equity": 10158.1461,
+              "pnl": 181.306,
+              "n_bought": 16,
+              "n_sold": 6,
+              "n_held": 25,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 10039.6735,
+              "pnl": -118.4726,
+              "n_bought": 0,
+              "n_sold": 25,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 10039.6735,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 10039.6735,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-27",
+              "equity": 10045.8235,
+              "pnl": 6.15,
+              "n_bought": 25,
+              "n_sold": 0,
+              "n_held": 25,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-28",
+              "equity": 9993.5656,
+              "pnl": -52.2579,
+              "n_bought": 0,
+              "n_sold": 25,
+              "n_held": 0,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-30",
+              "equity": 9892.0606,
+              "pnl": -101.505,
+              "n_bought": 25,
+              "n_sold": 0,
+              "n_held": 25,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 9837.4255,
+              "pnl": -54.6351,
+              "n_bought": 0,
+              "n_sold": 25,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 9837.4255,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 9837.4255,
+              "pnl": 0.0,
+              "n_bought": 0,
+              "n_sold": 0,
+              "n_held": 0,
+              "hard_red": true,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 9946.9973,
+              "pnl": 109.5718,
+              "n_bought": 8,
+              "n_sold": 0,
+              "n_held": 8,
+              "hard_red": false,
+              "gate_ok": true
+            },
+            {
+              "date": "2026-09-04",
+              "equity": 9828.2991,
+              "pnl": -118.6982,
+              "n_bought": 16,
+              "n_sold": 8,
+              "n_held": 16,
+              "hard_red": false,
+              "gate_ok": true
+            }
+          ]
+        },
+        "max_dd": -0.0325,
+        "n_avoided_picks": 0,
+        "skipped": [],
+        "gate": {
+          "verdict": "FAIL",
+          "excess_usd": 0.0,
+          "concentration": {
+            "top1": 0.0,
+            "top2": 0.0,
+            "n_days": 18,
+            "reject": false
+          },
+          "reasons": [
+            "veto never fired"
+          ],
+          "book_kind": "leftover"
+        },
+        "n_unit": 252
+      }
+    ],
+    "jam_ran_fade": true,
+    "jam_skips": [
+      {
+        "date": "2026-08-13",
+        "ticker": "INO",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "micro",
+        "size_ok": true,
+        "total_score": 8.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "flatten_h1"
+      },
+      {
+        "date": "2026-08-13",
+        "ticker": "TNDM",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "small",
+        "size_ok": true,
+        "total_score": 8.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "flatten_h1"
+      },
+      {
+        "date": "2026-08-14",
+        "ticker": "LDI",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "small",
+        "size_ok": true,
+        "total_score": 8.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "flatten_h1"
+      },
+      {
+        "date": "2026-08-14",
+        "ticker": "BTBT",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "small",
+        "size_ok": true,
+        "total_score": 8.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "flatten_h1"
+      },
+      {
+        "date": "2026-08-17",
+        "ticker": "TMC",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "small",
+        "size_ok": true,
+        "total_score": 2.0,
+        "join_cut": 1.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "flatten_h1"
+      },
+      {
+        "date": "2026-08-17",
+        "ticker": "HNST",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "small",
+        "size_ok": true,
+        "total_score": 1.0,
+        "join_cut": 1.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "flatten_h1"
+      },
+      {
+        "date": "2026-08-13",
+        "ticker": "INO",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "micro",
+        "size_ok": true,
+        "total_score": 8.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "flatten_h3"
+      },
+      {
+        "date": "2026-08-13",
+        "ticker": "TNDM",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "small",
+        "size_ok": true,
+        "total_score": 8.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "flatten_h3"
+      },
+      {
+        "date": "2026-08-14",
+        "ticker": "LDI",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "small",
+        "size_ok": true,
+        "total_score": 8.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "flatten_h3"
+      },
+      {
+        "date": "2026-08-14",
+        "ticker": "BTBT",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "small",
+        "size_ok": true,
+        "total_score": 8.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "flatten_h3"
+      },
+      {
+        "date": "2026-08-17",
+        "ticker": "TMC",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "small",
+        "size_ok": true,
+        "total_score": 2.0,
+        "join_cut": 1.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "flatten_h3"
+      },
+      {
+        "date": "2026-08-17",
+        "ticker": "HNST",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "small",
+        "size_ok": true,
+        "total_score": 1.0,
+        "join_cut": 1.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "flatten_h3"
+      },
+      {
+        "date": "2026-08-13",
+        "ticker": "INO",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "micro",
+        "size_ok": true,
+        "total_score": 8.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "book_1d"
+      },
+      {
+        "date": "2026-08-13",
+        "ticker": "TNDM",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "small",
+        "size_ok": true,
+        "total_score": 8.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "book_1d"
+      },
+      {
+        "date": "2026-08-13",
+        "ticker": "AGEN",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "small",
+        "size_ok": true,
+        "total_score": 7.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "book_1d"
+      },
+      {
+        "date": "2026-08-13",
+        "ticker": "ACHV",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "small",
+        "size_ok": true,
+        "total_score": 7.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "book_1d"
+      },
+      {
+        "date": "2026-08-13",
+        "ticker": "VOR",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "small",
+        "size_ok": true,
+        "total_score": 7.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "book_1d"
+      },
+      {
+        "date": "2026-08-13",
+        "ticker": "SGRY",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "small",
+        "size_ok": true,
+        "total_score": 8.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "book_1d"
+      },
+      {
+        "date": "2026-08-13",
+        "ticker": "WW",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "micro",
+        "size_ok": true,
+        "total_score": 8.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "book_1d"
+      },
+      {
+        "date": "2026-08-13",
+        "ticker": "MBRX",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "micro",
+        "size_ok": true,
+        "total_score": 7.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "book_1d"
+      },
+      {
+        "date": "2026-08-13",
+        "ticker": "PROK",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "small",
+        "size_ok": true,
+        "total_score": 7.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "book_1d"
+      },
+      {
+        "date": "2026-08-13",
+        "ticker": "IMNN",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "micro",
+        "size_ok": true,
+        "total_score": 7.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "book_1d"
+      },
+      {
+        "date": "2026-08-13",
+        "ticker": "ABEO",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "small",
+        "size_ok": true,
+        "total_score": 7.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "book_1d"
+      },
+      {
+        "date": "2026-08-13",
+        "ticker": "NRXP",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "micro",
+        "size_ok": true,
+        "total_score": 7.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "book_1d"
+      },
+      {
+        "date": "2026-08-13",
+        "ticker": "FTRE",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "small",
+        "size_ok": true,
+        "total_score": 7.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "book_1d"
+      },
+      {
+        "date": "2026-08-13",
+        "ticker": "UNCY",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "micro",
+        "size_ok": true,
+        "total_score": 7.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "book_1d"
+      },
+      {
+        "date": "2026-08-13",
+        "ticker": "SPRB",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "micro",
+        "size_ok": true,
+        "total_score": 7.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "book_1d"
+      },
+      {
+        "date": "2026-08-13",
+        "ticker": "FDMT",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "small",
+        "size_ok": true,
+        "total_score": 7.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "book_1d"
+      },
+      {
+        "date": "2026-08-14",
+        "ticker": "TBCH",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "micro",
+        "size_ok": true,
+        "total_score": 8.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "book_1d"
+      },
+      {
+        "date": "2026-08-14",
+        "ticker": "WOLF",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "small",
+        "size_ok": true,
+        "total_score": 8.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "book_1d"
+      },
+      {
+        "date": "2026-08-14",
+        "ticker": "PGY",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "small",
+        "size_ok": true,
+        "total_score": 8.0,
+        "join_cut": 4.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "book_1d"
+      },
+      {
+        "date": "2026-08-17",
+        "ticker": "TMC",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "small",
+        "size_ok": true,
+        "total_score": 2.0,
+        "join_cut": 1.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "book_1d"
+      },
+      {
+        "date": "2026-08-17",
+        "ticker": "HNST",
+        "join_hot": true,
+        "ab_silent": true,
+        "size": "small",
+        "size_ok": true,
+        "total_score": 1.0,
+        "join_cut": 1.0,
+        "prior_ab": null,
+        "s_ab": null,
+        "sleeve": "book_1d"
+      }
+    ],
+    "fade_skips": [],
+    "jam_size_split": {
+      "micro": 10,
+      "small": 23
+    },
+    "any_pass": false,
+    "jam_pass": false,
+    "fade_pass": false,
+    "clean_stop": true,
+    "named_autopsy": {
+      "VERI": "micro \u00b7 join-hot on 08-14 \u00b7 not flatten top-8 / book 1d BUY",
+      "AEVA": "small \u00b7 join-hot on 08-14 \u00b7 not flatten top-8 / book 1d BUY",
+      "RXT": "small \u00b7 join-hot on 08-14 \u00b7 not flatten top-8 / book 1d BUY",
+      "ACMR": "mid \u00b7 size gate excludes (not a cherrypick drop)"
+    }
+  },
+  "any_next_pass": false,
+  "clean_stop": true
 }

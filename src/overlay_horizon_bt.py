@@ -1058,6 +1058,7 @@ def render(payload: dict) -> str:
         )
 
     any_pass = payload.get("any_pass")
+    next_av = payload.get("next_avoids")
     lines += [
         "",
         "## Flatten skips (FPE≥35 · wish-list top 8 · not live tickets)",
@@ -1070,10 +1071,16 @@ def render(payload: dict) -> str:
         "(h1 ~+$1.57k vs +$1.55k, h3 ~+$1.17k vs +$1.18k, "
         "h5 ~+$2.31k vs +$2.28k).",
         "",
+    ]
+    if next_av:
+        from . import overlay_next_avoid as ona
+        lines += ona.render_section(next_av)
+    lines += [
         "## Elevate",
         "",
     ]
-    if any_pass:
+    next_pass = bool((next_av or {}).get("any_pass")) if next_av else False
+    if any_pass or next_pass:
         lines.append(
             "A KEEP cleared. Reject elevates (CANSLIM / MF / cheap FPE / "
             "`total_score`) still need their **own** matching-hold re-mine "
@@ -1087,7 +1094,7 @@ def render(payload: dict) -> str:
         )
     lines += [
         "",
-        "## Null / next smallest experiment",
+        "## Null / FPE closed",
         "",
     ]
     if any_pass:
@@ -1097,24 +1104,31 @@ def render(payload: dict) -> str:
         )
     else:
         lines.append(
-            "Clean null. Theme Radar 1d percent fade (overlay xs −0.09) "
-            "**does not survive** Futubull $ peer-excess (xs $+0.09; "
-            "up-tape xs $+0.35). Local 5d FPE board **FAIL**s both-tape "
-            "on `flatten_h5` (Sign_up **40%** 2/5 n=5; IC_down −0.131 "
-            "n=10). Flatten leftover +$326 / +$456 / +$723 stays thin "
-            "and is not a rescue. Live-shaped veto never fired. "
-            "d_RSI / d_mcap 5d inconclusive. Sweep FPE 40/50 × "
-            "morning-up / S≥0 did not clear the bar."
+            "FPE Avoid is a **clean null**. Theme Radar 1d percent fade "
+            "(overlay xs −0.09) **does not survive** Futubull $ "
+            "peer-excess (xs $+0.09; up-tape xs $+0.35). Local 5d FPE "
+            "board **FAIL**s both-tape on `flatten_h5` (Sign_up **40%** "
+            "2/5 n=5; IC_down −0.131 n=10). Flatten leftover +$326 / "
+            "+$456 / +$723 stays thin and is not a rescue. Live-shaped "
+            "veto never fired. d_RSI / d_mcap 5d inconclusive. Sweep "
+            "FPE 40/50 × morning-up / S≥0 did not clear the bar. "
+            "**Stop mining FPE / d_RSI / d_mcap on flatten_h5.**"
         )
-        lines.append("")
-        lines.append(
-            "**Next smallest experiment:** FPE Avoid stays on the "
-            "**1d Theme Radar clock only** (already fee-aware FAIL). "
-            "Do **not** continue FPE / d_RSI / d_mcap mining on "
-            "`flatten_h5`. Other Keep candidates only on their tagged "
-            "sleeves. Do not drop the FPE cut or harvest GEV/CCJ lists. "
-            "Elevate stays closed. No live wire."
-        )
+        if next_av and next_av.get("clean_stop"):
+            lines.append("")
+            lines.append(
+                "JAM + soft 🚨∧fade also failed the same bar (see Next "
+                "experiment). **Clean stop + recommended pause.** "
+                "Elevate stays closed. No live wire."
+            )
+        elif not next_av:
+            lines.append("")
+            lines.append(
+                "**Next smallest experiment:** join-hot ∧ AB-silent "
+                "micros on flatten_h1/h3 and book 1d, then soft 🚨∧fade "
+                "if that fails. Do **not** reopen elevates until an "
+                "Avoid clears. No live wire."
+            )
     lines += [
         "",
         "## Leak / live asserts",
@@ -1128,13 +1142,19 @@ def render(payload: dict) -> str:
     return "\n".join(lines) + "\n"
 
 
-def write(payload: dict | None = None) -> dict:
+def write(payload: dict | None = None, next_avoids: bool = True) -> dict:
     payload = payload or run()
     stamp_local_5d_board(payload.get("picked") or [])
     stamp_local_5d_board(payload.get("results") or [])
     payload["local_5d_fpe_board"] = LOCAL_5D_FPE_BOARD
     payload["fpe_clocks_open"] = ["theme_radar_1d"]
     payload["fpe_clocks_closed"] = ["flatten_h5"]
+    if next_avoids:
+        from . import overlay_next_avoid as ona
+        nxt = ona.run_next_avoids()
+        payload["next_avoids"] = nxt
+        payload["any_next_pass"] = bool(nxt.get("any_pass"))
+        payload["clean_stop"] = bool(nxt.get("clean_stop"))
     OUT_JSON.write_text(json.dumps(payload, indent=2, default=str), encoding="utf-8")
     OUT_MD.write_text(render(payload), encoding="utf-8")
     return payload
@@ -1144,13 +1164,30 @@ def main(argv: list[str] | None = None) -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--write", action="store_true")
     ap.add_argument("--no-sweep", action="store_true")
+    ap.add_argument(
+        "--next-only", action="store_true",
+        help="Stamp existing FPE JSON with next Avoids; do not remine FPE.",
+    )
     args = ap.parse_args(argv)
-    payload = run(sweep=not args.no_sweep)
-    if args.write:
-        write(payload)
-        print(f"wrote {OUT_MD} · {OUT_JSON}")
+    if args.next_only:
+        if OUT_JSON.exists():
+            payload = json.loads(OUT_JSON.read_text(encoding="utf-8"))
+        else:
+            payload = run(sweep=not args.no_sweep)
+        if args.write:
+            write(payload, next_avoids=True)
+            print(f"wrote {OUT_MD} · {OUT_JSON} (next-only, FPE not remined)")
+        else:
+            from . import overlay_next_avoid as ona
+            payload["next_avoids"] = ona.run_next_avoids()
+            print(render(payload))
     else:
-        print(render(payload))
+        payload = run(sweep=not args.no_sweep)
+        if args.write:
+            write(payload)
+            print(f"wrote {OUT_MD} · {OUT_JSON}")
+        else:
+            print(render(payload))
     picked = payload.get("picked") or []
     for r in picked:
         print(f"{r['sleeve']}: {r['gate']['verdict']} "
