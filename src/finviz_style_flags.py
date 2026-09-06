@@ -41,6 +41,8 @@ H_ADV = "Average Volume"
 H_PERF_Q = "Performance (Quarter)"
 H_INST_OWN = "Institutional Ownership"
 H_INST_TX = "Institutional Transactions"
+H_FPE = "Forward P/E"
+H_RSI = "Relative Strength Index (14)"
 
 AB_TICKER = "Ticker"
 AB_SCORE = ("score_enriched", "score", "checklist_score")
@@ -57,6 +59,14 @@ N_NEAR_HIGH = -15.0  # Finviz % below the 52w high
 S_RVOL_MIN = 1.0
 S_ADV_MIN = 500.0  # thousands of shares
 I_OWN_MIN = 20.0
+
+# Theme Radar fade knobs (research). High Forward P/E fades both tapes —
+# cheap / Magic Formula is NOT an auto-elevate.
+HIGH_FPE = 35.0
+CHEAP_FPE = 15.0
+D_RSI_UP = 5.0
+D_MCAP_PCT = 3.0
+ELEVATE_AB = 8.0
 
 
 def to_float(v: object) -> float:
@@ -162,9 +172,73 @@ def _bit(ok: bool | None) -> str:
     return "1" if ok else "0"
 
 
+def theme_radar(row: dict, prior: dict | None = None) -> dict:
+    """09:30-knowable Theme Radar bits from this Elite row vs the prior file.
+
+    `row` must be the vintage allowed as a 09:30 input (prior session).
+    `prior` is the file before that (delta). Same-day D tape is not an input.
+    """
+    fpe = finite(row.get(H_FPE))
+    rsi = finite(row.get(H_RSI))
+    mcap = finite(row.get(H_MCAP))
+    d_rsi = None
+    d_mcap_pct = None
+    if prior:
+        prsi = finite(prior.get(H_RSI))
+        pmcap = finite(prior.get(H_MCAP))
+        if rsi is not None and prsi is not None:
+            d_rsi = rsi - prsi
+        if mcap is not None and pmcap is not None and pmcap > 0:
+            d_mcap_pct = 100.0 * (mcap - pmcap) / pmcap
+    high_fpe = fpe is not None and fpe >= HIGH_FPE
+    cheap_fpe = fpe is not None and 0 < fpe <= CHEAP_FPE
+    rsi_up = d_rsi is not None and d_rsi >= D_RSI_UP
+    mcap_up = d_mcap_pct is not None and d_mcap_pct >= D_MCAP_PCT
+    # Combined "hot" fade (RSI↑ and mcap↑) failed both-tape in the autopsy.
+    # The veto that survived is high Forward P/E alone.
+    hot = bool(rsi_up and mcap_up)
+    avoid = bool(high_fpe)
+    return {
+        "fpe": fpe,
+        "rsi": rsi,
+        "d_rsi": d_rsi,
+        "d_mcap_pct": d_mcap_pct,
+        "radar_high_fpe": high_fpe,
+        "radar_cheap_fpe": cheap_fpe,
+        "radar_rsi_up": rsi_up,
+        "radar_mcap_up": mcap_up,
+        "radar_hot": hot,
+        "avoid_veto": avoid,
+    }
+
+
+def elevate_bump(flag: dict, radar: dict) -> bool:
+    """Rescue bump. Never fires on cheap/MF alone (both-tape fade warning)."""
+    if radar.get("radar_high_fpe") or radar.get("avoid_veto"):
+        return False
+    if str(flag.get("canslim_flag") or "") != "1":
+        return False
+    p01 = flag.get("P01_peer_lead_week")
+    ab = finite(flag.get("ab_score"))
+    lead = str(p01) == "1"
+    strong_ab = ab is not None and ab >= ELEVATE_AB
+    return bool(lead or strong_ab)
+
+
+def _fmt(v, nd=4) -> str:
+    if v is None:
+        return ""
+    if isinstance(v, bool):
+        return "1" if v else "0"
+    if isinstance(v, float):
+        return f"{v:.{nd}f}"
+    return str(v)
+
+
 def flag_rows(rows: list[dict], ab_map: dict[str, dict] | None = None,
               mf_top_n: int = MF_TOP_N,
-              exclude_fin_util: bool = True) -> list[dict]:
+              exclude_fin_util: bool = True,
+              prior_by_ticker: dict[str, dict] | None = None) -> list[dict]:
     ab_map = ab_map or {}
     n = len(rows)
     ey = [earnings_yield(r) for r in rows]
@@ -249,6 +323,16 @@ def flag_rows(rows: list[dict], ab_map: dict[str, dict] | None = None,
             "ab_score": "" if ab_score is None else str(ab_score),
             "P01_peer_lead_week": "" if p01 is None else str(p01),
         }
+        prior_row = (prior_by_ticker or {}).get(t)
+        radar = theme_radar(r, prior_row)
+        rec["fpe"] = _fmt(radar["fpe"], 2)
+        rec["d_rsi"] = _fmt(radar["d_rsi"], 2)
+        rec["d_mcap_pct"] = _fmt(radar["d_mcap_pct"], 2)
+        rec["radar_high_fpe"] = _fmt(radar["radar_high_fpe"])
+        rec["radar_cheap_fpe"] = _fmt(radar["radar_cheap_fpe"])
+        rec["radar_hot"] = _fmt(radar["radar_hot"])
+        rec["avoid_veto"] = _fmt(radar["avoid_veto"])
+        rec["elevate_bump"] = _fmt(elevate_bump(rec, radar))
         out.append(rec)
     return out
 
@@ -259,6 +343,8 @@ def write_csv(rows: list[dict], dest) -> None:
         "mf_combo_rank", "mf_place", "mf_flag", "mf_excluded",
         "c_qoq", "a_annual", "n_high", "s_demand", "l_leader", "i_inst",
         "canslim_flag", "ab_score", "P01_peer_lead_week",
+        "fpe", "d_rsi", "d_mcap_pct", "radar_high_fpe", "radar_cheap_fpe",
+        "avoid_veto", "elevate_bump",
     ]
     dest.write(",".join(fields) + "\n")
     w = csv.DictWriter(dest, fieldnames=fields, lineterminator="\n")
@@ -280,6 +366,8 @@ def main(argv: list[str] | None = None) -> int:
                     help="Magic Formula keep first N by combo place")
     ap.add_argument("--keep-fin-util", action="store_true",
                     help="Do not drop Financial / Utilities from MF")
+    ap.add_argument("--prior", default=None,
+                    help="Previous Elite CSV for d_RSI / d_Market Cap")
     args = ap.parse_args(argv)
 
     src = Path(args.csv)
@@ -287,9 +375,16 @@ def main(argv: list[str] | None = None) -> int:
         raise SystemExit(f"[style-flags] missing {src}")
     rows = load_finviz(src)
     ab = load_ab(Path(args.ab) if args.ab else None)
+    prior_map = None
+    if args.prior:
+        pp = Path(args.prior)
+        if not pp.exists():
+            raise SystemExit(f"[style-flags] missing prior {pp}")
+        prior_map = {r[H_TICKER]: r for r in load_finviz(pp)}
     flags = flag_rows(
         rows, ab_map=ab, mf_top_n=max(1, args.top),
         exclude_fin_util=not args.keep_fin_util,
+        prior_by_ticker=prior_map,
     )
 
     if args.out:

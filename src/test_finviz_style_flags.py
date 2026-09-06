@@ -14,6 +14,7 @@ HEADERS = [
     fsf.H_PE, fsf.H_ROIC, fsf.H_MCAP, fsf.H_EPS_QOQ, fsf.H_EPS_SURP,
     fsf.H_EPS_THIS, fsf.H_EPS_P3, fsf.H_HIGH_52, fsf.H_RVOL, fsf.H_ADV,
     fsf.H_PERF_Q, fsf.H_INST_OWN, fsf.H_INST_TX,
+    fsf.H_FPE, fsf.H_RSI,
 ]
 
 
@@ -154,7 +155,7 @@ def test_load_and_cli_roundtrip(tmp_path: Path | None = None) -> None:
             fh.write(",".join([
                 "AAA", "Technology", "50", "200", "8", "10", "40%", "5000",
                 "29%", "7%", "30%", "10%", "-3%", "1.5", "2000",
-                "6%", "50%", "0.2%",
+                "6%", "50%", "0.2%", "22", "55",
             ]) + "\n")
         abp = td / "2026-09-04_ab_checklist_enriched.csv"
         with abp.open("w", encoding="utf-8", newline="") as fh:
@@ -172,6 +173,57 @@ def test_load_and_cli_roundtrip(tmp_path: Path | None = None) -> None:
     finally:
         if ctx is not None:
             ctx.cleanup()
+
+
+def test_theme_radar_high_fpe_is_avoid_and_not_elevate() -> None:
+    row = _row(**{fsf.H_TICKER: "RICH", fsf.H_FPE: "48",
+                  fsf.H_RSI: "62", fsf.H_MCAP: "5000"})
+    prior = _row(**{fsf.H_TICKER: "RICH", fsf.H_RSI: "61", fsf.H_MCAP: "4980"})
+    radar = fsf.theme_radar(row, prior)
+    assert radar["radar_high_fpe"] is True
+    assert radar["avoid_veto"] is True
+    flag = {"canslim_flag": "1", "P01_peer_lead_week": "1", "ab_score": "12"}
+    assert fsf.elevate_bump(flag, radar) is False
+
+
+def test_cheap_fpe_is_not_auto_elevate() -> None:
+    row = _row(**{fsf.H_TICKER: "CHEAP", fsf.H_FPE: "9",
+                  fsf.H_RSI: "45", fsf.H_MCAP: "8000"})
+    radar = fsf.theme_radar(row, None)
+    assert radar["radar_cheap_fpe"] is True
+    assert radar["avoid_veto"] is False
+    # MF / cheap alone — no CANSLIM, no AB lead.
+    assert fsf.elevate_bump({"canslim_flag": "0", "ab_score": ""}, radar) is False
+    assert fsf.elevate_bump({"mf_flag": "1", "canslim_flag": "0"}, radar) is False
+
+
+def test_rsi_and_mcap_up_is_avoid() -> None:
+    row = _row(**{fsf.H_TICKER: "HOT", fsf.H_FPE: "18",
+                  fsf.H_RSI: "68", fsf.H_MCAP: "1200"})
+    prior = _row(**{fsf.H_TICKER: "HOT", fsf.H_RSI: "60", fsf.H_MCAP: "1100"})
+    radar = fsf.theme_radar(row, prior)
+    assert radar["d_rsi"] is not None and radar["d_rsi"] >= 5
+    assert radar["d_mcap_pct"] is not None and radar["d_mcap_pct"] >= 3
+    assert radar["radar_hot"] is True
+    assert radar["avoid_veto"] is False  # combo failed both-tape; FPE-only veto
+
+
+def test_elevate_needs_canslim_and_ab_or_p01() -> None:
+    row = _row(**{
+        fsf.H_TICKER: "WIN", fsf.H_SECTOR: "Technology", fsf.H_FPE: "22",
+        fsf.H_EPS_QOQ: "29%", fsf.H_EPS_SURP: "7%", fsf.H_EPS_THIS: "30%",
+        fsf.H_HIGH_52: "-3%", fsf.H_RVOL: "1.2", fsf.H_ADV: "2000",
+        fsf.H_PERF_Q: "6%", fsf.H_INST_OWN: "50%", fsf.H_INST_TX: "0.2%",
+        fsf.H_MCAP: "5000", fsf.H_RSI: "55",
+    })
+    flags = fsf.flag_rows(
+        [row],
+        ab_map={"WIN": {"ab_score": 9.0, "P01_peer_lead_week": 1}},
+        prior_by_ticker={"WIN": _row(**{fsf.H_RSI: "54", fsf.H_MCAP: "4990"})},
+    )
+    assert flags[0]["canslim_flag"] == "1"
+    assert flags[0]["avoid_veto"] == "0"
+    assert flags[0]["elevate_bump"] == "1"
 
 
 def test_does_not_import_live_policy() -> None:
@@ -194,8 +246,12 @@ def main() -> None:
     test_n_high_uses_finviz_percent_below_high()
     test_ab_join_is_ticker_and_p01_can_veto_leader()
     test_load_and_cli_roundtrip()
+    test_theme_radar_high_fpe_is_avoid_and_not_elevate()
+    test_cheap_fpe_is_not_auto_elevate()
+    test_rsi_and_mcap_up_is_avoid()
+    test_elevate_needs_canslim_and_ab_or_p01()
     test_does_not_import_live_policy()
-    print("test_finviz_style_flags: 11 ok")
+    print("test_finviz_style_flags: 15 ok")
 
 
 if __name__ == "__main__":

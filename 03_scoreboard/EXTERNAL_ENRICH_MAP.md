@@ -8,12 +8,14 @@ shopping list.
 column overwrites a Finviz Elite header. No sidecar prediction may color a
 09:30 box until it clears the same leak / fill / fee bar as factor-mine.
 
-| Layer | Kid one-liner | Status |
-|---|---|---|
-| Magic Formula / CANSLIM | Cheap + good at using money, or growing and leading — from columns we already have. | Offline flags from one Elite CSV. |
-| vectorbt harness | A calculator that tries many shopping lists, but still pays the 09:30 school-bell price and our fees. | Proposed wrapper. Do not use vectorbt's own fills. |
-| OpenBB / MarketDataApp | Only fill empty boxes. Don't redraw the report card. | Thin gaps only. Parquet under `data/`. |
-| qlib / FinRL / AlphaSift / Vibe-Trading | Practice teams in another room until they pass the same test as our sleeves. | Offline sidecars. Bar not cleared. |
+| Layer | Kid one-liner | Status | Cyrus goal |
+|---|---|---|---|
+| Theme Radar `avoid_veto` | Don't buy the expensive stickers — they fade whether the class is happy or sad. | Optional column. Both-tape **YES** on prior `Forward P/E` ≥ 35. | **Avoid** |
+| `elevate_bump` | Pull the kid who did the homework and still sat in the back. | Optional column. **Failed** both-tape on this window — keep research. | **Elevate** |
+| Magic Formula / CANSLIM | Cheap + good at using money, or growing and leading — from columns we already have. | Offline flags. Cheap ≠ auto long. | Expand / combine |
+| vectorbt harness | A calculator that tries many shopping lists, but still pays the 09:30 school-bell price and our fees. | Proposed wrapper. Do not use vectorbt's own fills. | **Expand only** |
+| OpenBB / MarketDataApp | Only fill empty boxes. Don't redraw the report card. | Thin gaps only. Parquet under `data/`. | **Expand only** |
+| qlib / FinRL / AlphaSift / Vibe-Trading | Practice teams in another room until they pass the same test as our sleeves. | Offline sidecars. Bar not cleared. | **Expand only** |
 
 ---
 
@@ -378,18 +380,78 @@ human changes `LIVE_POLICY`. This map does not promote anyone.
 
 ---
 
+## 0. Avoid / Elevate / Expand — ops frame
+
+Kid: Three jobs. (1) Stop buying rotting apples. (2) Rescue the good apple
+we ranked "meh". (3) Invent new recipes in the practice kitchen — do not
+serve them yet.
+
+Full blotter + panel: [`OVERLAY_AUTOPSY.md`](OVERLAY_AUTOPSY.md) ·
+`python -m src.overlay_autopsy --write`.
+
+Cyrus bar for any overlay column:
+
+| Goal | Question | Promote only when |
+|---|---|---|
+| **Avoid** | Would this have killed bad buys we took? | Both-tape excess **< 0** (underperforms SPY-up **and** SPY-down, each n≥20) |
+| **Elevate** | Would this have rescued high-conviction names we ranked mediocre? | Both-tape excess **> 0**, and the set is **not** half the universe |
+| **Expand** | Is this a formula we never wired? | Stays research. vectorbt / OpenBB / sidecars live here only |
+
+Theme Radar (Elite headers, prior vintage):
+
+| Factor | Exact header / math | Role |
+|---|---|---|
+| high Forward P/E | `Forward P/E` ≥ 35 on **prior** `data/exports/finviz_{prior}.csv` | **Avoid** — faded both tapes (n=4827, xs −0.09, up −0.03, down −0.19) |
+| d_RSI | `Relative Strength Index (14)`[prior] − same[prior-prior] | Input only. Combined with d_mcap **failed** both-tape |
+| d_Market Cap | 100 × (`Market Cap`[prior] / `Market Cap`[prior-prior] − 1) | Same. 08-14 jumps look like unit/CA noise |
+| cheap FPE | 0 < `Forward P/E` ≤ 15 | **Not** an elevate. Small both-tape xs (+0.15) on 35% of the panel = "not expensive", not a rescue |
+
+Optional columns (emitted by `src/finviz_style_flags.py`, **not** live gates):
+
+| column | rule | both-tape this window | promote? |
+|---|---|---|---|
+| `avoid_veto` / `radar_high_fpe` | prior `Forward P/E` ≥ 35 | YES (avoid) | Optional sticker only. Human review. |
+| `radar_hot` | d_RSI≥5 **and** d_mcap≥3% | NO | Do not OR into the veto |
+| `elevate_bump` | `canslim_flag` + not high-FPE + (P01=1 or AB≥8) | NO (n=112, up xs ~0) | Keep research |
+| `radar_cheap_fpe` / `mf_flag` | cheap / Magic Formula | cheap YES as a *tiny* mix; MF NO | **Never auto-long** |
+
+Join: `Ticker` + `feature_export_date(D)` = prior session. Same leak clock
+as § Hard rules. Same-day `Change` / `Gap` / RelVol stay outcomes.
+
+**Autopsy sources (no new scrape):**
+
+| Source | Path | What we used |
+|---|---|---|
+| Paper closed lots | `data/paper/roundtrips.csv` sleeves `1d_top/size`, `3d_top/size` | 175 losers after Futubull fees |
+| Book-gap worst buys | `data/stock_book/{D}_book_gaps.json` `worst_buys` | 30 names, 1w fwd |
+| Book-gap missed | same, `missed_movers` | outweighed=20 (elevate-shaped), gated_out=25 (expand), blind=11 |
+| Liquid panel | prior Elite × D `Change from Open` | 50,445 name-days, 2026-08-13 → 2026-09-05 |
+| flatten_live | `03_scoreboard/factor_mine/flatten_live_h*.md` | **thin-n** (7 start days) — not scored |
+
+Worked avoid hits among worst buys: `BTBT` FPE 152, `INDI` FPE 212
+(08-14). Missed: `ACMR`/`ERO` (08-27) had join/AB ~+1 and cheap-to-mid
+FPE — the FPE veto would **not** have saved those; they are join-hot
+losers, not Theme Radar. Cost: `REAX` +853% 1w was outweighed **and**
+FPE 65 — the surviving avoid would have skipped a rocket.
+
+Do not promote `elevate_bump` until a later window clears both tapes.
+Do not feed vectorbt/OpenBB/sidecars into avoid/elevate.
+
+---
+
 ## Wiring cheat-sheet
 
 ```
 prior Elite CSV ──┐
-                  ├─ src/finviz_style_flags.py ── data/style_flags/{prior}.csv
+prior-prior CSV ──┼─ src/finviz_style_flags.py ── avoid_veto / elevate_bump
 prior AB CSV ─────┘         │
                             │ ticker
 09:30 cameras / join / weather / ohlc.open
                             │
+                            ├─ overlay autopsy (both-tape bar) ── 03_scoreboard/OVERLAY_AUTOPSY.md
                             ├─ factor_mine_book (fills + fees + audit)
-                            ├─ vectorbt harness (sweep only, same book)
-                            └─ sidecar preds (offline, asof < D)
+                            ├─ vectorbt harness (EXPAND only)
+                            └─ sidecar preds (EXPAND only)
 
 OpenBB/MDA ── data/external/.../asof=prior/part.parquet
               (ext_* columns only; fill holes; never overwrite Elite)
@@ -412,3 +474,6 @@ flatten clock. **Not on this map.**
   `FACTOR_MINE.md` without the Futubull 09:30 book.
 - Cache vendor "latest" without an `asof_date`.
 - Treat this document as a live gate. Flags are stickers, not tickets.
+- Promote an overlay that failed both-tape or sits on thin-n.
+- Treat cheap `Forward P/E` / Magic Formula as an elevate (cheap ≠ auto long).
+- Wire vectorbt / OpenBB / sidecars into avoid or elevate.
