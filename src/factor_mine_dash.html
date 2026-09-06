@@ -88,7 +88,7 @@
  .erd-chip .erd-lab{color:var(--mut);font:12px/1.35 ui-sans-serif,system-ui;margin-top:3px}
  .tally{border:1px solid var(--line);border-radius:8px;padding:7px 8px;margin:8px 0 0;background:#121826}
  .tally .tally-row{display:flex;flex-wrap:wrap;gap:6px 12px;font:12px/1.35 ui-monospace,Menlo,Consolas,monospace;margin:2px 0}
- .look-row{display:grid;grid-template-columns:32px minmax(52px,1fr) 44px minmax(64px,auto) minmax(56px,auto);gap:6px;align-items:center;padding:4px 0;border-bottom:1px solid var(--line2);font:12px/1.3 ui-monospace,Menlo,Consolas,monospace;cursor:pointer}
+ .look-row{display:grid;grid-template-columns:32px minmax(52px,1fr) 44px minmax(92px,1.2fr) minmax(56px,auto) minmax(56px,auto);gap:6px;align-items:center;padding:4px 0;border-bottom:1px solid var(--line2);font:12px/1.3 ui-monospace,Menlo,Consolas,monospace;cursor:pointer}
  .look-row:hover{background:rgba(251,191,36,.08)}
  .look-hd{color:var(--mut);font-weight:600;cursor:default}
  .cam-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(140px,100%),1fr));gap:8px}
@@ -167,7 +167,7 @@
   <li><b>$ days / average win vs loss.</b> Share of sessions whose <em>cash book</em> made money (leftover split, fees, whole shares), plus average closed-trade win % vs loss %.</li>
   <li><b>Sustainability.</b> For every start date X, replay the cash book from X to the end. Count how often that path is still green. Cash-start <code>&lt;&lt; &lt; &gt; &gt;&gt;</code> is that replay: $10k and no lots on morning X, same hard-red / leftover / min-hold rules. Marks and the blotter stay as detailed as 8-13. It is not “add on top of the 8-13 book.” The investigator date follows this morning.</li>
   <li><b>Stock investigator.</b> Dropdown = names that sleeve actually bought. Date buttons = 09:30 that morning. A big BUY / SIT / NO badge says whether this recipe would take the name, plus the gates that fired or failed. E / R dots are beat-miss / upgrade-downgrade from the session-morning Finviz EPS Surprise when the print is already public (yday AMC / today BMO). A date-only stamp with no surprise number stays unknown — not green. Today's AMC is not used. Horizon % is hold-H from the 09:30 open. Cameras / coaches / news are quoted from repo files — never same-day Change%.</li>
-  <li><b>Morning board.</b> Every name this recipe looked at that 09:30, ranked by its own rank key, plus would-be horizon % if bought here. −N is red-camera count. Hit-rate tally covers BUY / NO / SIT and the ≤2 vs ≥3 red-camera split.</li>
+  <li><b>Morning board.</b> Every name this recipe looked at that 09:30, ranked by its own rank key, plus would-be horizon % if bought here. <b>E</b> is the leak-free morning-export EPS surprise (beat / miss / unknown) — same number as the investigator chip. −N is red-camera count. Hit-rate tally covers BUY / NO / SIT and the ≤2 vs ≥3 red-camera split. Marks chips, blotter BUY rows, and the session bought list also print that E so a beat like INO +67.7% is visible without opening the investigator.</li>
   <li><b>−N / burst / green-news sweep.</b> Research overlays on the current cash-book leaders. A new gate is kept only if it beats flatten_h5 on the $10k book. If none do, current methods stay. Live flatten_robust is never changed.</li>
   <li><b>Top-25 gainer capture.</b> Buy 8-17 hold=3 → did a pick land in the liquid top-25 gainers on 8-17, 8-18, or 8-19?</li>
   <li><b>Loser capture.</b> Same window: names that printed Change% &lt; −1.5% (outcome only — never a 09:30 gate).</li>
@@ -516,6 +516,30 @@ function toneOf(v){
   const t=String(v||'missing').toLowerCase();
   return ['good','bad','neutral','missing'].includes(t)?t:'missing';
 }
+function probeCard(date, ticker){
+  return ((D.probe||{})[date]||{})[ticker] || null;
+}
+function earnBits(src){
+  if(!src) return {pol:'missing', text:'', pct:'', label:''};
+  const pol=toneOf(src.e_pol);
+  const lab=String(src.e_label||'');
+  const m=lab.match(/([+\-]?\d+(?:\.\d+)?%)/);
+  const pct=m?m[1]:'';
+  let text='';
+  if(pol==='good') text='E beat'+(pct?(' '+pct):'');
+  else if(pol==='bad') text='E miss'+(pct?(' '+pct):'');
+  else if(pol==='neutral' && (src.earn_react || src.days_E!=null || lab)) text='E unknown';
+  return {pol, text, pct, label:lab};
+}
+function earnSpan(src){
+  const e=earnBits(src);
+  if(!e.text) return '';
+  const tone=e.pol==='good'?'pos':(e.pol==='bad'?'neg':'mut');
+  return `<span class="${tone}" title="${esc(e.label||e.text)}">${esc(e.text)}</span>`;
+}
+function earnFor(date, ticker){
+  return earnSpan(probeCard(date, ticker));
+}
 function camOk(got, want){
   if(want==null||want==='') return true;
   const w=String(want).toLowerCase();
@@ -666,7 +690,7 @@ function renderTools(){
     </div>
     <div class="tool">
       <h2>Morning board — who it looked at</h2>
-      <p class="mut">${esc(probeDate)} 09:30. Rank is this recipe's own sort. −N next to a name is red-camera count (plus 🚨), not the rank score. Horizon % is hold-${esc(recipeOf(name).hold)} from the 09:30 open.</p>
+      <p class="mut">${esc(probeDate)} 09:30. Rank is this recipe's own sort. E is the morning-export EPS surprise when it was already public. −N next to a name is red-camera count (plus 🚨), not the rank score. Horizon % is hold-${esc(recipeOf(name).hold)} from the 09:30 open.</p>
       <div id="lookOut"></div>
       <div id="hitOut"></div>
     </div>`;
@@ -699,8 +723,12 @@ function renderCashStart(){
   if(!sp){ el.innerHTML='<div class="mut">No cash-start path for this sleeve.</div>'; return; }
   const buys=sp.buys||[];
   const skips=sp.skips||[];
+  const startDate=(sp&&sp.start)||'';
   const pills=buys.length
-    ? buys.map(b=>`<span class="pill pos"><b>${esc(b.ticker)}</b> ×${b.shares} @ ${b.price==null?'—':('$'+(+b.price).toFixed(2))} · ${esc(b.reason||'')}</span>`).join('')
+    ? buys.map(b=>{
+        const earn=earnFor(startDate, b.ticker);
+        return `<span class="pill pos"><b>${esc(b.ticker)}</b> ×${b.shares} @ ${b.price==null?'—':('$'+(+b.price).toFixed(2))}${earn?(' · '+earn):''} · ${esc(b.reason||'')}</span>`;
+      }).join('')
     : `<span class="pill mut">${sp.hard_red?'hard-red S≤−3 — bought nobody, cash still $10k':'no fill this morning (list empty, leftover too small, or live gate HOLD)'}</span>`;
   const skipHtml=skips.length?`<div class="pills" style="margin-top:6px">${skips.map(k=>`<span class="pill">${esc(k.ticker||'')} · ${esc(k.kind)} · ${esc(k.reason||'')}</span>`).join('')}</div>`:'';
   el.innerHTML =
@@ -796,14 +824,16 @@ function renderLooks(){
   const rows=lookRows(date);
   if(!rows.length){ el.innerHTML='<div class="mut">No shopping-list names for this recipe on '+esc(date)+'.</div>'; return; }
   const morn=(D.mornings||{})[date]||{};
-  const head=`<div class="look-row look-hd"><span>#</span><span>Name</span><span>Take</span><span>Score</span><span>H%</span></div>`;
+  const head=`<div class="look-row look-hd"><span>#</span><span>Name</span><span>Take</span><span>E</span><span>Score</span><span>H%</span></div>`;
   const body=rows.map(r=>{
     const take=morn.hard_red?'SIT':(r.buy?'BUY':(r.pass?'look':'NO'));
     const takeCls=r.buy?'pos':(morn.hard_red||!r.pass?'neg':'gold');
+    const earn=earnSpan(r)||earnFor(date, r.ticker)||'<span class="mut">—</span>';
     return `<div class="look-row" data-look="${esc(r.ticker)}">
       <span>${r.rank==null?'—':r.rank}</span>
       <span><b>${esc(r.ticker)}</b>${r.n_neg?(' <span class="neg">−'+r.n_neg+'</span>'):''}</span>
       <span class="${takeCls}">${take}</span>
+      <span>${earn}</span>
       <span>${r.score==null?'—':Number(r.score).toFixed(2)}</span>
       <span class="${cls(r.ret)}">${r.ret==null?'—':((r.ret>=0?'+':'')+Number(r.ret).toFixed(2)+'%')}</span>
     </div>`;
@@ -923,7 +953,12 @@ function renderState(){
         <span class="pill">09:30 cash ${money(d.open_cash)} · 09:30 book ${money(d.open_equity)}</span>
         <span class="pill">overnight <span class="${cls(gap)}">${gap==null?'—':signed(gap)}</span> · session <span class="${cls(sess)}">${sess==null?'—':signed(sess)}</span></span>
         <span class="pill">held at open: ${esc((d.open_held||[]).join(' ')||'—')}</span>
-        <span class="pill pos">bought: ${esc((d.bought||[]).join(' ')||'—')}</span>
+        <span class="pill pos">bought: ${(d.bought||[]).length
+          ? (d.bought||[]).map(t=>{
+              const earn=earnFor(d.date, t);
+              return `<b>${esc(t)}</b>${earn?(' '+earn):''}`;
+            }).join(' · ')
+          : '—'}</span>
         <span class="pill neg">sold: ${esc((d.sold||[]).join(' ')||'—')}</span>
         <span class="pill">held at close: ${esc(closeHeld)}</span>
       </div>
@@ -950,7 +985,9 @@ function renderMarks(){
     const pills=marks.map(m=>{
       const sh=m.shares_close||m.shares_open||m.shares;
       const tag=m.held==='bought'?' new':m.held==='sold'?' sold':'';
+      const earn=earnFor(d.date, m.ticker);
       return `<span class="pill"><b>${esc(m.ticker)}</b>${tag} ×${sh??'—'}
+        ${earn?('· '+earn+' '):''}
         · prior close ${money(m.yday_px)} → 09:30 ${money(m.open_px)}
         <span class="${cls(m.overnight)}">${signed(m.overnight)} overnight</span>
         · close ${money(m.close_px)}
@@ -961,14 +998,21 @@ function renderMarks(){
     return `<div class="day-card"><h4>${esc(d.date)}</h4><div class="pills">${pills}</div></div>`;
   }).join('');
 }
-function nestMarks(rows, mode){
+function nestMarks(rows, mode, date){
   if(!rows||!rows.length) return '<span class="mut">no holdings</span>';
+  const earnOf=n=>date?earnFor(date, n.ticker):'';
   if(mode==='open'){
-    return '<div class="pills">'+rows.map(n=>`<span class="pill"><b>${esc(n.ticker)}</b> ×${n.shares} · prior close ${money(n.yday_px)} → 09:30 ${money(n.open_px)} <span class="${cls(n.overnight!=null?n.overnight:n.delta)}">${signed(n.overnight!=null?n.overnight:n.delta)}</span></span>`).join('')+'</div>';
+    return '<div class="pills">'+rows.map(n=>{
+      const earn=earnOf(n);
+      return `<span class="pill"><b>${esc(n.ticker)}</b>${earn?(' · '+earn):''} ×${n.shares} · prior close ${money(n.yday_px)} → 09:30 ${money(n.open_px)} <span class="${cls(n.overnight!=null?n.overnight:n.delta)}">${signed(n.overnight!=null?n.overnight:n.delta)}</span></span>`;
+    }).join('')+'</div>';
   }
   const held=rows.filter(n=>n.shares_close||n.close_px!=null);
   if(!held.length) return '<span class="mut">no lots at close</span>';
-  return '<div class="pills">'+held.map(n=>`<span class="pill"><b>${esc(n.ticker)}</b> ×${n.shares_close||n.shares} · 09:30 ${money(n.open_px)} → close ${money(n.close_px)} <span class="${cls(n.session)}">${signed(n.session)} Intraday</span></span>`).join('')+'</div>';
+  return '<div class="pills">'+held.map(n=>{
+    const earn=earnOf(n);
+    return `<span class="pill"><b>${esc(n.ticker)}</b>${earn?(' · '+earn):''} ×${n.shares_close||n.shares} · 09:30 ${money(n.open_px)} → close ${money(n.close_px)} <span class="${cls(n.session)}">${signed(n.session)} Intraday</span></span>`;
+  }).join('')+'</div>';
 }
 function renderBlotter(){
   const name = pickedName();
@@ -1002,7 +1046,7 @@ function renderBlotter(){
             · book <span class="${cls(gap)}">${money(t.equity_after)}</span>
             <span class="mut">vs yday ${money(t.yday_equity)} ${gap==null?'':signed(gap)}</span>
           </div>
-          ${nestMarks(t.overnight||[],'open')}
+          ${nestMarks(t.overnight||[],'open', t.date)}
         </div>`;
       }
       if(kind==='CLOSE'){
@@ -1013,7 +1057,7 @@ function renderBlotter(){
             · book <span class="${cls(gap)}">${money(t.equity_after)}</span>
             <span class="mut">vs 09:30 ${money(t.open_equity)} ${gap==null?'':signed(gap)}</span>
           </div>
-          ${nestMarks(t.intraday||t.marks||[],'close')}
+          ${nestMarks(t.intraday||t.marks||[],'close', t.date)}
         </div>`;
       }
       const isSell=kind==='SELL'||kind==='COVER';
@@ -1028,6 +1072,7 @@ function renderBlotter(){
         <div class="fill-top">
           <span class="${kind==='BUY'||kind==='SHORT'?'pos':'neg'}">${esc(kind)}</span>
           <b>${esc(t.ticker)}</b>
+          ${((kind==='BUY'||kind==='SHORT') && earnFor(t.date, t.ticker)) ? (' '+earnFor(t.date, t.ticker)) : ''}
           ${esc(t.date)} · ${t.shares} sh @ ${t.price==null?'—':('$'+(+t.price).toFixed(2))}
           · fee ${t.fees==null?'—':('$'+(+t.fees).toFixed(2))}
           · P/L <span class="${cls(t.pnl)}">${t.pnl==null?'—':('$'+(t.pnl>=0?'+':'')+Number(t.pnl).toFixed(2))}</span>

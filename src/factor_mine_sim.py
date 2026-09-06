@@ -235,6 +235,9 @@ def look_day(panel: dict, rec: dict, date: str, *, bars=None,
             "ret": ret,
             "n_neg": n_neg,
             "src_rank": r.get("src_rank"),
+            "e_pol": r.get("e_pol") or "",
+            "e_label": r.get("e_label") or "",
+            "earn_react": bool(r.get("erd_earn_react")),
         })
     rest = [r for r in looked if r["ticker"] not in seen]
     rest.sort(key=lambda r: fm.rank_key(r, rec))
@@ -253,5 +256,8 @@ def look_day(panel: dict, rec: dict, date: str, *, bars=None,
             "ret": None if ret is None else round(float(ret), 3),
             "n_neg": n_neg,
             "src_rank": r.get("src_rank"),
+            "e_pol": r.get("e_pol") or "",
+            "e_label": r.get("e_label") or "",
+            "earn_react": bool(r.get("erd_earn_react")),
         })
     return out

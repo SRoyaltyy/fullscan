@@ -354,6 +354,8 @@
         pass: true, buy: !hard && (i + 1) <= topN,
         ret: holdReturn(pack, rec, r.ticker, date),
         n_neg: nNeg, src_rank: r.src_rank,
+        e_pol: r.e_pol || "", e_label: r.e_label || "",
+        earn_react: !!r.erd_earn_react,
       });
     });
     looked.filter(r => !seen.has(r.ticker)).sort((a, b) => cmpKey(rankKey(a, rec), rankKey(b, rec)))
@@ -364,6 +366,8 @@
           pass: false, buy: false,
           ret: holdReturn(pack, rec, r.ticker, date),
           n_neg: nNeg, src_rank: r.src_rank,
+          e_pol: r.e_pol || "", e_label: r.e_label || "",
+          earn_react: !!r.erd_earn_react,
         });
       });
     return out;
