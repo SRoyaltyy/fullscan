@@ -313,6 +313,7 @@ def attach_macro(mornings: dict[str, dict],
     for date, rec in mornings.items():
         row = dict(rec)
         row.update(spy_prior_for(date, cal, hit))
+        row["joint"] = joint_regime(row)
         if row.get("prior_session") == date:
             raise ValueError(f"leak: spy prior resolved to selection date {date}")
         pct = row.get("spy_prior_pct")
@@ -384,6 +385,7 @@ def join_macro(rows: list[dict], macro: dict[str, dict]) -> list[dict]:
         rec["weather_risk"] = m["weather_risk"]
         rec["spy_prior"] = m["spy_prior"]
         rec["spy_prior_pct"] = m.get("spy_prior_pct")
+        rec["joint"] = joint_regime(rec)
         rec["flatten_ok"] = m.get("flatten_ok")
         rec["hard_red"] = m.get("hard_red")
         rec["route"] = m.get("route")
@@ -498,8 +500,38 @@ def summarize_group(rows: list[dict], horizon: str, clip: bool = True) -> dict:
     return out
 
 
+def joint_regime(row: dict) -> str:
+    """One morning type: weather_risk × prior-SPY.
+
+    gen_s and weather_risk are the same morning S (down==off, on⊂up,
+    blank S==flat+unknown). Joint avoids counting those twice.
+    """
+    return f"{row.get('weather_risk') or 'unknown'}|spy:{row.get('spy_prior') or 'unknown'}"
+
+
 def bucket_axes() -> tuple[str, ...]:
-    return ("gen_s", "weather_risk", "spy_prior")
+    return ("gen_s", "weather_risk", "spy_prior", "joint")
+
+
+def covers_hostile_joint(rec: dict) -> bool:
+    """True when the factor was actually graded on risk-off *and* a non-off tape."""
+    ax = (rec.get("by_axis") or {}).get("joint") or {}
+    graded = [k for k, v in ax.items() if v.get("verdict") in {"pass", "fail"}]
+    has_off = any(k.startswith("off|") for k in graded)
+    has_risk_onish = any(k.startswith(("on|", "mixed|")) for k in graded)
+    return has_off and has_risk_onish
+
+
+def _axis_verdicts(rec: dict, axis: str) -> tuple[list[str], list[str]]:
+    ax = (rec.get("by_axis") or {}).get(axis) or {}
+    passed, failed = [], []
+    for label, st in ax.items():
+        key = f"{axis}={label}"
+        if st.get("verdict") == "pass":
+            passed.append(key)
+        elif st.get("verdict") == "fail":
+            failed.append(key)
+    return passed, failed
 
 
 def measure_factor(rows: list[dict], spec: dict, horizon: str,
@@ -515,7 +547,8 @@ def measure_factor(rows: list[dict], spec: dict, horizon: str,
     for axis in bucket_axes():
         groups: dict[str, list[dict]] = defaultdict(list)
         for r in rows:
-            groups[str(r.get(axis) or "unknown")].append(r)
+            label = joint_regime(r) if axis == "joint" else str(r.get(axis) or "unknown")
+            groups[label].append(r)
         axis_out = {}
         for label, peers in sorted(groups.items()):
             hit_rows = [r for r in peers if factor_match(r, spec)]
@@ -594,8 +627,17 @@ def rank_factors(rows: list[dict], horizon: str = "1d") -> list[dict]:
             "name": fac["name"], "family": fac["family"],
             "spec": fac["spec"], "horizon": horizon, "min_n": min_n,
         })
+        jpass, jfail = _axis_verdicts(rec, "joint")
+        rec["joint_pass"] = jpass
+        rec["joint_fail"] = jfail
+        rec["n_joint_pass"] = len(jpass)
+        rec["n_joint_fail"] = len(jfail)
+        rec["n_joint_graded"] = len(jpass) + len(jfail)
+        rec["covers_hostile"] = covers_hostile_joint(rec)
         out.append(rec)
     out.sort(key=lambda r: (
+        -(r.get("n_joint_pass") or 0),
+        -(r.get("n_joint_graded") or 0),
         -(r.get("n_pass") or 0),
         -(r.get("survive") or 0),
         -(r.get("edge") or -99),
@@ -628,6 +670,9 @@ def inventory_features(rows: list[dict], macro: dict[str, dict]) -> dict:
             "weather_risk": m.get("weather_risk"),
             "spy_prior": m.get("spy_prior"),
             "spy_prior_pct": m.get("spy_prior_pct"),
+            "prior_session": m.get("prior_session"),
+            "spy_src": m.get("spy_src"),
+            "joint": m.get("joint") or joint_regime(m),
             "route": m.get("route"),
             "flatten_ok": m.get("flatten_ok"),
             "hard_red": m.get("hard_red"),
@@ -996,15 +1041,16 @@ def write_markdown(payload: dict) -> str:
         "",
     ]
     lines += _md_table(
-        ["Date", "S", "gen S", "weather risk", "SPY prior", "prior %",
-         "Route", "Flatten?", "n asof", "n 1d"],
+        ["Date", "S", "gen S", "weather risk", "SPY from", "prior %",
+         "Joint", "Route", "Flatten?", "n asof", "n 1d"],
         [[
             d["date"],
             _num(d.get("s"), 2),
             d.get("gen_s") or "—",
             d.get("weather_risk") or "—",
-            d.get("spy_prior") or "—",
+            d.get("prior_session") or "—",
             _num(d.get("spy_prior_pct"), 2),
+            d.get("joint") or "—",
             d.get("route") or "—",
             "yes" if d.get("flatten_ok") else "no",
             d.get("n") or 0,
@@ -1028,11 +1074,16 @@ def write_markdown(payload: dict) -> str:
         "(WIN = both) with n ≥ min_n. Thin buckets are reported but "
         "do not count as pass or fail.",
         "",
+        "`gen_s` and `weather_risk` are the same morning S "
+        "(`down` == `off`, `on` ⊂ `up`, blank S = `flat` + `unknown`). "
+        "Headline survival uses the **joint** `weather_risk × spy_prior` "
+        "cell so those cuts are not double-counted.",
+        "",
     ]
     top = [r for r in ranked if r.get("n_graded", 0) >= 4][:18]
     lines += _md_table(
         ["Factor", "n", "1d hit", "hit vs peer", "1d xs", "edge",
-         "survive", "pass", "FAIL buckets"],
+         "joint", "cut survive", "joint FAIL"],
         [[
             f"`{r['name']}`",
             r.get("n") or 0,
@@ -1040,9 +1091,9 @@ def write_markdown(payload: dict) -> str:
             _num(r.get("hit") - r["peer_hit"], 3) if r.get("hit") is not None and r.get("peer_hit") is not None else "—",
             _num(r.get("mean_xs")),
             _num(r.get("edge")),
+            f"{r.get('n_joint_pass', 0)}/{r.get('n_joint_graded', 0)}",
             f"{r.get('n_pass', 0)}/{r.get('n_graded', 0)}",
-            ", ".join(r.get("pass") or []) or "—",
-            ", ".join(r.get("fail") or []) or "—",
+            ", ".join(r.get("joint_fail") or []) or "—",
         ] for r in top],
     )
     lines += [
@@ -1074,14 +1125,23 @@ def write_markdown(payload: dict) -> str:
         lines.append(
             f"n={r.get('n')} · 1d hit {_pct(r.get('hit'))} vs peer "
             f"{_pct(r.get('peer_hit'))} · edge {_num(r.get('edge'))} · "
-            f"survival {r.get('n_pass')}/{r.get('n_graded')}."
+            f"joint {r.get('n_joint_pass')}/{r.get('n_joint_graded')} · "
+            f"cuts {r.get('n_pass')}/{r.get('n_graded')}."
         )
+        if r.get("joint_fail"):
+            lines.append("")
+            lines.append("Joint fails: " + ", ".join(f"`{b}`" for b in r["joint_fail"]) + ".")
         if r.get("fail"):
             lines.append("")
-            lines.append("Fails: " + ", ".join(f"`{b}`" for b in r["fail"]) + ".")
-        else:
+            lines.append("Cut fails: " + ", ".join(f"`{b}`" for b in r["fail"]) + ".")
+        if not r.get("joint_fail") and not r.get("fail"):
             lines.append("")
             lines.append("No graded bucket failed.")
+        if not r.get("covers_hostile"):
+            lines.append(
+                "Not graded on both risk-off and a non-off tape — "
+                "not an invariant."
+            )
         if r.get("thin"):
             lines.append(f"Thin (n < {r.get('min_n')}): " + ", ".join(f"`{b}`" for b in r["thin"]) + ".")
         lines.append("")
@@ -1173,45 +1233,59 @@ def write_markdown(payload: dict) -> str:
 
 
 def _headline(ranked: list[dict], side: dict) -> dict:
-    usable = [r for r in ranked if r.get("n_graded", 0) >= 5 and r.get("n", 0) >= 80]
+    usable = [r for r in ranked if r.get("n", 0) >= 80]
 
     def _hits_peer(r):
         h, p = r.get("hit"), r.get("peer_hit")
         return h is not None and p is not None and h >= p
 
+    # Joint weather×SPY is the non-redundant survival score. A full claim
+    # must be graded on risk-off *and* a non-off tape (not just up-tape cells).
     full = [r for r in usable
-            if r.get("n_fail", 0) == 0 and (r.get("edge") or 0) > 0 and _hits_peer(r)]
+            if r.get("n_joint_fail", 0) == 0
+            and r.get("n_joint_graded", 0) >= 4
+            and r.get("covers_hostile")
+            and (r.get("edge") or 0) > 0
+            and _hits_peer(r)]
     almost = [r for r in usable
-              if r.get("n_pass", 0) >= 4 and (r.get("edge") or 0) > 0]
+              if r.get("n_joint_pass", 0) >= 3
+              and r.get("covers_hostile")
+              and (r.get("edge") or 0) > 0]
     if full:
         top = full[0]
         headline = (
             f"Names with `{top['name']}` at 09:30 beat same-bucket peers "
-            f"in {top['n_pass']}/{top['n_graded']} graded regime buckets "
+            f"in {top['n_joint_pass']}/{top['n_joint_graded']} joint "
+            f"weather×SPY-prior regimes "
             f"(1d excess edge {top.get('edge'):+.2f}, n={top.get('n')})."
         )
         body = (
-            "This is the strongest leak-free survival on the liquid asof "
-            "panel. Failing buckets: none among those graded. Thin buckets "
-            f"({', '.join(top.get('thin') or []) or 'none'}) are below min n "
-            "and do not count. The window is short — treat as a research "
-            "lead, not a live promote."
+            "This is the strongest leak-free survival that was actually "
+            "graded on both risk-off and a non-off tape. Joint fails: none. "
+            f"Cut fails (S / weather / SPY, including duplicates of S): "
+            f"{', '.join(top.get('fail') or []) or 'none'}. "
+            "The window is short — research lead, not a live promote."
         )
         kind = "claim"
     elif almost:
         top = almost[0]
+        jfails = top.get("joint_fail") or []
         headline = (
-            f"No factor beat peers in every graded bucket. Closest: "
-            f"`{top['name']}` survives {top['n_pass']}/{top['n_graded']} "
-            f"(1d edge {top.get('edge'):+.2f}, n={top.get('n')}). "
-            f"Fails: {', '.join(top.get('fail') or []) or '—'}."
+            f"No robust leak-free invariant across regimes. Closest powered "
+            f"lead: `{top['name']}` survives "
+            f"{top.get('n_joint_pass', 0)}/{top.get('n_joint_graded', 0)} "
+            f"joint weather×SPY-prior cells "
+            f"(1d hit {_pct(top.get('hit'))} vs peer {_pct(top.get('peer_hit'))}, "
+            f"edge {top.get('edge'):+.2f}, n={top.get('n')}). "
+            f"Joint fails: {', '.join(jfails) or '—'}."
         )
         body = (
-            "Across morning S / weather-risk / prior-SPY, nothing is a "
-            "clean invariant. Several tags that look strong pooled "
-            "(blue, vol=good|ab=good) lose at least one regime. "
-            "That is a clean-enough null for a live promote, with a "
-            "ranked short-list for the next window."
+            "gen_s and weather_risk are the same morning S (down==off). "
+            "Survival is therefore scored on joint weather×prior-SPY cells "
+            "so a tag that is only tested on up-tape is not an invariant. "
+            "`hot+ab+peer` can look perfect on the cells it reaches and "
+            "still be thin on risk-off. That is a clean-enough null for "
+            "a live promote, with a ranked short-list for the next window."
         )
         kind = "partial"
     else:
@@ -1244,7 +1318,9 @@ def _headline(ranked: list[dict], side: dict) -> dict:
         "body": body,
         "top": {k: top.get(k) for k in (
             "name", "n", "hit", "edge", "survive", "n_pass", "n_fail",
-            "n_graded", "fail", "pass", "thin") if top},
+            "n_graded", "fail", "pass", "thin",
+            "n_joint_pass", "n_joint_fail", "n_joint_graded",
+            "joint_fail", "covers_hostile") if top},
         "fingerprint_read": fp_read,
     }
 

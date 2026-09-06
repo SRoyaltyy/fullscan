@@ -170,6 +170,21 @@ def test_pass_requires_hit_and_excess() -> None:
     assert "gen_s=up" in rec["fail"]
 
 
+def test_hostile_joint_requires_risk_off_and_non_off() -> None:
+    rec = {
+        "by_axis": {
+            "joint": {
+                "mixed|spy:up": {"verdict": "pass"},
+                "unknown|spy:up": {"verdict": "pass"},
+                "off|spy:down": {"verdict": "thin"},
+            }
+        }
+    }
+    assert rsm.covers_hostile_joint(rec) is False
+    rec["by_axis"]["joint"]["off|spy:down"] = {"verdict": "fail"}
+    assert rsm.covers_hostile_joint(rec) is True
+
+
 def test_ungated_io_buys_are_the_seven_sit_mornings() -> None:
     assert len(rsm.UNGATED_IO_BUYS) == 7
     assert "2026-08-20" not in rsm.UNGATED_IO_BUYS
@@ -238,6 +253,7 @@ if __name__ == "__main__":
     test_factor_spec_rejects_outcome_columns()
     test_within_bucket_edge_vs_peers()
     test_pass_requires_hit_and_excess()
+    test_hostile_joint_requires_risk_off_and_non_off()
     test_ungated_io_buys_are_the_seven_sit_mornings()
     test_candidate_factors_are_pit_only()
     test_fill_returns_are_later_session_outcomes()
