@@ -27,9 +27,11 @@ name-days on Theme Radar miss lists (graded high then lost) plus gold
 | Mechanism | Goal | Exact Elite / AB / weather field (no new scrape) | Fired on miss baskets? | Veto, not fuel | Elevate? |
 |---|---|---|---|---|---|
 | **Theme Radar fade vetoes** | **Avoid** | `Forward P/E` ≥ 35; `d_RSI` = Δ `Relative Strength Index (14)` (prior − prior-prior); `d_Market Cap` = % Δ `Market Cap`. Knobs: `HIGH_FPE=35`, `D_RSI_UP=5`, `D_MCAP_PCT=3` in `src/finviz_style_flags.py`. | **Optics** AAOI/COHR/LITE/GLW: high-FPE 10/76 (GLW 8/19). **AI power** GEV/VRT/ETN/PWR/CAT: 23/95 — `GEV` **19/19** (med FPE 39). **Copper** FCX/SCCO/TECK/ERO/HBM: **0/95** (ERO med 7.6). **Nuclear** CEG/VST/OKLO/SMR/CCJ: 19/95 — `CCJ` **19/19** (med 55); CEG/VST mid/cheap. **Gold hit** GDX/GLD/NEM/AEM: **0/76** (would not have blocked the 8/12 hit). d_RSI↑ / d_mcap↑ sparse. Combined `radar_hot` failed both-tape. | **YES** — first leak-free patch. High FPE survived both-tape. d_RSI / d_mcap stay candidates; do not OR `radar_hot` into the live veto. | **NO** — fades are not buy-rank fuel. |
-| **CANSLIM scanners** | **Expand** (not Elevate) | C `EPS Growth Quarter Over Quarter` + `EPS Surprise`; A `EPS Growth This Year` / `EPS Growth Past 3 Years`; N `52-Week High` (% below high); S prior `Relative Volume` + `Average Volume`; L `Performance (Quarter)` + AB `P01_peer_lead_week`; I `Institutional Ownership` / `Institutional Transactions`; M weather `signals.general_direction` / `signals.risk`. | Optics 0/76 · AI 0/95 · **copper 11/95** (FCX/TECK/ERO then lost) · nuclear 0/95 · gold 1/76. Panel up xs **−0.35**. | Do not invert into a fade veto without a new bar. | **NO** — dies on up tapes. Do not bump. |
-| **Magic Formula** | **Expand** (not Elevate) | `Income` / `Enterprise Value` (else `1/EV/EBITDA`, else `1/P/E`); ROC = `Return on Invested Capital`. Drop Financial/Utilities; `Market Cap` < 100. | **0/437** basket name-days. Cheap copper (ERO/HBM) still lost. Panel up xs **−0.07**. | Not a fade. Do not treat cheap as avoid either. | **NO** — do not promote cheap/MF as long. |
-| **Stock-Screener-System fail-any** | **Avoid** (shaped) | AB `status_*` == BAD / `n_bad` > 0 on prior `{D}_ab_checklist_enriched.csv`. Join `veto_when` already named: `earn:today`; `ext:extreme` AND weather `risk=off` (`00_grounding/join_rules.json`). | AB any-BAD ≈ **93%** of stock name-days (too wide). Join `veto_when` **0/437**. Enriched AB starts 08-19 — earlier thin-n. | Fail-any is a veto *shape*, not a rank add. Do not invent a new screener. | **NO**. |
+| **CANSLIM** (`KhoiUna/python-canslim`) | **Expand** — *not* Elevate | Already on Elite: `EPS Growth Quarter Over Quarter`, `EPS Growth This Year`, `EPS Growth Past 3 Years`, `Sales Growth Quarter Over Quarter`, `Sales Year Over Year TTM`. Weak `Return on Equity` ≠ `Return on Invested Capital`. Do **not** scrape Macrotrends. | Swarm: "Yes Optics/AI/Nuclear when accel≥20%". **In-repo full CANSLIM: optics 0/76 · AI 0/95 · nuclear 0/95 · copper 11/95 then lost.** Panel up xs **−0.35**. | Incomplete CANSLIM. Scrape fragile — we already have the letters. | **NO** — dies on up tapes. Do not bump. |
+| **3WT / cup** (`rmtech1/canslim_tightweek_scanner`) | **Expand** — *not* Elevate | `52-Week High` (% below high) + EPS QoQ. Inst = `Institutional Ownership` / `Transactions`. RelVol = **prior** `Relative Volume` only (same-day = leak). Code≠README; RelVol not even coded upstream. | Swarm: "Yes near-highs Optics/AI/Nuclear". Letter N is not a scored overlay. Full CANSLIM fire on those baskets = **0**. | No cup/handle scrape. Do not invent 3WT. | **NO**. |
+| **Magic Formula** (`amladik/Stock-Screener`) | **Expand** / cheap≠long (swarm: Avoid not long — agree, do not *buy*) | `Income` / `Enterprise Value` (else `1/EV/EBITDA`, else `1/P/E`); ROC = `Return on Invested Capital`; `Market Cap`. 1/PE ≠ EBIT. | **No** — 0/437 basket days. Cheap misses rich themes (copper ERO med FPE 7.6 still lost). | Don't promote cheap. Not a fade veto either. | **NO**. |
+| **Point score** (`thekuldeepsingh/Stock-Screener-System-`) | **Expand** | `P/E` already on Elite. Fail-any analog = AB `status_*` / join `veto_when` (`earn:today`; `ext:extreme` ∧ weather `risk=off`). | **No.** AB any-BAD ~93% (too wide). Join veto 0/437. | Tutorial hardcoded. Do not invent a screener. | **NO**. |
+| **Mean-var** (`blkpvnthr/screener`) | **Expand** | None as entry. ATR% already `MIN_ATR_PCT=2.5` size floor. | **No** — dilutes themes. | Risk overlay, not a buy rank. | **NO**. |
 | **AlphaSuite / ATR risk caps** | Avoid / **size** (if relevant) | Elite `Average True Range` / `Price` → `atr_pct`. Already `MIN_ATR_PCT=2.5` in `ticker_lookback` / stock-book. | Below floor: optics/AI/copper/nuclear **0**. Gold: **GLD 18/19** (ETF) — would have gated a *hit*. | Size cap only. Do not score ATR% as buy-rank. | **NO**. |
 | **AlphaSift L1→L2 re-rank** | **Expand only** | Existing layers: `data/join/{D}_ranked.csv` `total_score` / `score_norm`; book `score_1d`; `data/feature_asof/{D}_feature_asof.csv` `join_rank` / `join` / `ab`. | Join top-quintile already high: optics 26/76 · AI 34/95 · **copper 48/95** · nuclear 26/95 · gold 29/76. L2 on the same layers would have kept them elevated, then they lost. | Do not feed fade columns into a buy re-rank. | **NO** — `total_score` is the existing ranker, not a rescue. Do not bump. |
 | **vectorbt sweeps** | **Expand only** | Wrap `factor_mine_book` 09:30 `open` + Futubull fees. `data/prices/ohlc.parquet` `(date,ticker)`. | Harness not written — **0 fires**. | N/A until scored on the both-tape bar. | **NO**. |
@@ -45,7 +47,7 @@ Kid one-liners for the same rows:
 | Layer | Kid |
 |---|---|
 | Theme Radar fades | Don't buy the expensive / heating stickers. They fade when the class is happy *or* sad. Not a gold star for cheap. |
-| CANSLIM / MF | Old report-card stickers from columns we already have. Copper that printed CANSLIM still lost. |
+| CANSLIM / 3WT / MF | Old report-card stickers from columns we already have. Copper that printed CANSLIM still lost. Swarm "Elevate = 3WT + near-52w + EPS≥20" is **rejected**. |
 | Fail-any / ATR | Almost every homework sheet has a red mark; that is not a veto. ATR is how big a bite, not a theme bet. |
 | AlphaSift / `total_score` | Re-sorting the same line-up does not rescue the kids we already sat in front. |
 | vectorbt / Zipline / OpenBB / MDA / news / qlib / FinRL | Practice kitchen. Same 09:30 bell and fee jar, or they stay outside. OpenBB is a librarian, not a gold star. |
@@ -57,11 +59,15 @@ crosswalk below. Autopsy source of truth:
 [`OVERLAY_AUTOPSY.md`](OVERLAY_AUTOPSY.md) §1–4 ·
 [`theme_radar_baskets.json`](theme_radar_baskets.json).
 
-**Sift claims we do not take as Elevate.** CANSLIM / 3WT / EPS≥20,
-vectorbt, OpenBB-as-router, AlphaSift L2, and Lean fee plugins were
-labeled Elevate by the swarm. Our leak-free panel already failed
-CANSLIM / `elevate_bump` / MF as long (up-tape die). Optics/AI/nuclear
-CANSLIM fire was **0** name-days. Do not bump.
+**Screener takeaway we reject.** Swarm: "Elevate = 3WT + near-52w +
+EPS/rev≥20; Avoid = don’t long on MF/low Fwd P/E." Second half is
+already locked (cheap/MF ≠ long; high FPE = fade veto). First half
+fails our bar: full CANSLIM / `elevate_bump` die on up tapes; optics /
+AI / nuclear CANSLIM fire = **0** name-days; copper CANSLIM printed
+then lost. 3WT/cup is not in-repo and will not be scraped. Do not bump.
+
+**Other Elevate labels we also reject:** vectorbt, OpenBB-as-router,
+AlphaSift L2, Lean fee plugins.
 
 ### Sift repo crosswalk (no new scrape)
 
