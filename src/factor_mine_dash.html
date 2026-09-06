@@ -161,12 +161,12 @@
 <details class="how">
 <summary>How a recipe is graded</summary>
 <ol>
-  <li><b>Leak-free 09:30 inputs only.</b> Cameras, 🔵/🚨, E/R/D, prior news, 20-bar OHLC, and 8-bar candles must be knowable before the open. Same-day Change% / Gap / RelVol / printed book never pick. News uses the morning box or the <em>prior</em> Finviz export — never a later scrape or post-09:30 headline.</li>
+  <li><b>Leak-free 09:30 inputs only.</b> Cameras, 🔵/🚨, E/R/D, prior news, 20-bar OHLC, and 8-bar candles must be knowable before the open. Same-day Change% / Gap / RelVol / printed book never pick. News uses the morning box, the <em>session-morning</em> Finviz export when News Time is before 09:30, or the prior export — never a later scrape or post-09:30 headline.</li>
   <li><b>Time.</b> Buy at the 09:30 open. Hold H sessions (entry day counts). Optional early exit at a later 09:30 if 🚨, last-bar red, or news🔴 prints that morning.</li>
   <li><b>Win rate.</b> Share of picks with horizon return &gt; 0 (long or short).</li>
   <li><b>$ days / average win vs loss.</b> Share of sessions whose <em>cash book</em> made money (leftover split, fees, whole shares), plus average closed-trade win % vs loss %.</li>
   <li><b>Sustainability.</b> For every start date X, replay the cash book from X to the end. Count how often that path is still green. Cash-start <code>&lt;&lt; &lt; &gt; &gt;&gt;</code> is that replay: $10k and no lots on morning X, same hard-red / leftover / min-hold rules. Marks and the blotter stay as detailed as 8-13. It is not “add on top of the 8-13 book.” The investigator date follows this morning.</li>
-  <li><b>Stock investigator.</b> Dropdown = names that sleeve actually bought. Date buttons = 09:30 that morning. A big BUY / SIT / NO badge says whether this recipe would take the name, plus the gates that fired or failed. E / R dots are beat-miss / upgrade-downgrade — a date-only stamp is not green. Horizon % is hold-H from the 09:30 open. Cameras / coaches / news are quoted from repo files — never same-day Change%.</li>
+  <li><b>Stock investigator.</b> Dropdown = names that sleeve actually bought. Date buttons = 09:30 that morning. A big BUY / SIT / NO badge says whether this recipe would take the name, plus the gates that fired or failed. E / R dots are beat-miss / upgrade-downgrade from the session-morning Finviz EPS Surprise when the print is already public (yday AMC / today BMO). A date-only stamp with no surprise number stays unknown — not green. Today's AMC is not used. Horizon % is hold-H from the 09:30 open. Cameras / coaches / news are quoted from repo files — never same-day Change%.</li>
   <li><b>Morning board.</b> Every name this recipe looked at that 09:30, ranked by its own rank key, plus would-be horizon % if bought here. −N is red-camera count. Hit-rate tally covers BUY / NO / SIT and the ≤2 vs ≥3 red-camera split.</li>
   <li><b>−N / burst / green-news sweep.</b> Research overlays on the current cash-book leaders. A new gate is kept only if it beats flatten_h5 on the $10k book. If none do, current methods stay. Live flatten_robust is never changed.</li>
   <li><b>Top-25 gainer capture.</b> Buy 8-17 hold=3 → did a pick land in the liquid top-25 gainers on 8-17, 8-18, or 8-19?</li>
@@ -763,7 +763,7 @@ function renderProbe(){
     `Last finished bar: ${card.last_green?'green (closed up)':card.last_red?'red (closed down)':'not flagged'}`,
     `Prior 5-session return: ${card.ret_5==null?'—':(card.ret_5>=0?'+':'')+card.ret_5+'%'} · prior rel vol ${card.rvol==null?'—':card.rvol}${card.nr7?' · NR7':''}${card.break_10?' · broke 10-session range':''}${card.burst?' · parabolic tape (ret5≥12 + last green + break/rvol)':''}`,
     `Candles: ${card.candle||'—'} · capture ${card.candle_capture?'yes':'no'}`,
-    `Earnings window: ${card.earn_react?'yes':'no'}${card.days_E!=null?(' · E '+card.days_E+' sess ago'):''}${card.days_R!=null?(' · R '+card.days_R+' sess ago'):''}`,
+    `Earnings window: ${card.earn_react?'yes':'no'}${card.days_E!=null?(' · E '+card.days_E+' sess ago'):''}${card.days_R!=null?(' · R '+card.days_R+' sess ago'):''}${card.e_label?(' · '+card.e_label):''}`,
     `News packet: ${newsWord} (${newsTitle}${news.when?'; retrieved '+news.when:''}${news.retrieved?'; prior export '+news.retrieved:''}) · ${news.file||'panel.json'}${news.judge!=null?(' · judge tilt '+news.judge):''}`,
     card.headline?`Headline tone: ${(D.tone_word||{})[toneOf(card.headline_tone)]||card.headline_tone} — ${card.headline}`:'',
     `Cond: ${card.cond_good||0} green / ${card.cond_bad||0} red cameras`,
