@@ -627,12 +627,43 @@ def write_report(meta, rows, inv, spears):
         "",
     ]
     if new_keeps:
+        seen = set()
+        h1 = []
+        other = []
         for r in new_keeps:
+            key = (r["letter"], r["label"], r.get("hold_n"),
+                   round(r.get("hold_mean") or 0, 5))
+            if key in seen:
+                continue
+            seen.add(key)
+            (h1 if r["label"] == "y_h1" else other).append(r)
+        lines.append(
+            f"Raw KEEP {len(new_keeps)}; **{len(seen)}** after collapsing "
+            f"eq1/ge1/gt0 twins. Same-day H first — that is the fair open "
+            f"question. The rest is mostly next-week bounce on this tape."
+        )
+        lines.append("")
+        lines.append("**Same-day leftover H**")
+        lines.append("")
+        if h1:
+            for r in h1:
+                lines.append(
+                    f"- When **{r['plain']}** ({r['clock']} clock), "
+                    f"same-day H averaged **{fmt_pct(r['hold_mean'])}** "
+                    f"after fees (n={r['hold_n']}, {r.get('hold_tickers') or '—'} "
+                    f"names, t={r['hold_t']:.2f}) vs everyone {fmt_pct(r['uncond'])}."
+                )
+        else:
+            lines.append("None.")
+        lines.append("")
+        lines.append("**Other labels (1w / 2d / next I)** — first 15 unique")
+        lines.append("")
+        other.sort(key=lambda r: -(r["hold_mean"] or 0))
+        for r in other[:15]:
             lines.append(
-                f"- When **{r['plain']}** ({r['clock']} clock), "
-                f"**{r['label_plain']}** averaged **{fmt_pct(r['hold_mean'])}** "
-                f"after fees (n={r['hold_n']}, {r['hold_tickers']} names, "
-                f"t={r['hold_t']:.2f}) vs everyone {fmt_pct(r['uncond'])}."
+                f"- When **{r['plain']}** ({r['clock']}), "
+                f"**{r['label_plain']}** **{fmt_pct(r['hold_mean'])}** "
+                f"(n={r['hold_n']}, t={r['hold_t']:.2f})."
             )
     else:
         lines.append("No new full-sheet gate.")
