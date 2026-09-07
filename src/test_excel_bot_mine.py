@@ -1485,11 +1485,61 @@ def test_hi_horizon_report_is_committed():
             assert "BA_" not in (r.get("def") or "")
 
 
+def test_hi_soft_regime_heat_is_prior_i_only():
+    from mine_hi_soft_regime import (
+        KEEP_SLOTS, ah_from_h, fr_from_vol, heat_bucket, majority_verdict,
+        prior_i_mean, tercile_cuts,
+    )
+    from mine_hi_horizon import load_spy_regimes
+
+    # Today's I cannot enter the open-knowable heat.
+    Is = [0.01, 0.02, 0.03, 0.04, 0.05, 0.99]
+    assert abs(prior_i_mean(Is, 5) - 0.03) < 1e-12
+    assert prior_i_mean(Is, 0) is None
+    assert prior_i_mean([None, None, 0.1], 3) is None  # < 3 prints
+
+    xs = list(range(-15, 15))  # 30 ints; mid is strictly between terciles
+    lo, hi = tercile_cuts(xs)
+    assert heat_bucket(lo - 1, (lo, hi)) == "cold"
+    assert heat_bucket(hi + 1, (lo, hi)) == "hot"
+    assert heat_bucket((lo + hi) / 2, (lo, hi)) == "mid"
+
+    # Excel AH8 = COUNTIF(H2:H7, "<=-0.05")
+    Hs = [0.0, -0.06, -0.04, -0.05, 0.01, -0.07, 0.02]
+    assert ah_from_h(Hs, 6) == 3
+    assert ah_from_h(Hs, 5) is None
+
+    # FR: prior-5 volume median > 1M and/or prior-3 G max ≥ 3
+    vols = [1e6, 1e6, 1.1e6, 1.2e6, 1.3e6, 100.0]
+    assert fr_from_vol(vols, 5) == 1
+    vols2 = [100.0, 100.0, 100.0, 100.0, 400.0, 2000.0]
+    # G at last three priors: 1, 1, 4 → bit2 = 1, median vols < 1M → FR = 1
+    assert fr_from_vol(vols2, 5) == 1
+
+    assert majority_verdict(5, 4, 0) == "KEEP"
+    assert majority_verdict(4, 5, 0) == "DEMOTE"
+    assert majority_verdict(4, 4, 1) == "REGIME-CONDITIONAL"
+    assert len(KEEP_SLOTS) == 9
+    assert all(s[0] != "light_O_AH_FR" for s in KEEP_SLOTS)
+
+    tape = load_spy_regimes()
+    assert tape
+    assert set(tape.values()) <= {1, 0, -1}
+
+    src = (ENG / "mine_hi_soft_regime.py").read_text(encoding="utf-8")
+    assert "from flatten" not in src
+    assert "flatten_robust" in src
+    cap = (ENG / "capture_standing_slim.py").read_text(encoding="utf-8")
+    assert "from flatten" not in cap
+    assert "yahoo_rows_cache" in cap
+
+
 def test_unmined_miner_does_not_wire_live():
     for fn in ("mine_unmined.py", "harden_unmined.py", "harden_open_stack.py",
                "harden_close_cluster.py", "harden_close_peers.py",
                "mine_next_region.py", "mine_same_day.py", "mine_pair_lag.py",
-               "mine_pair_lag_close.py", "mine_hi_horizon.py"):
+               "mine_pair_lag_close.py", "mine_hi_horizon.py",
+               "mine_hi_soft_regime.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "from flatten" not in src
         assert "sleeve_merge_live" not in src
