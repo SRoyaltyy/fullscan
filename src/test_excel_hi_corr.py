@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "excel_bot" / "engine"))
 
 from mine_hi_corr import (  # noqa: E402
+    OPEN_LABELS_BLOCKED,
     add_excel_features,
     add_labels,
     close_gates,
@@ -78,6 +79,10 @@ def test_close_gates_may_use_today_h_i():
     df2["H"] = 0.05
     g1 = close_gates(df2)["H_ge_p2"].fillna(False).to_numpy()
     assert g1.sum() > g0.sum()
+
+
+def test_same_day_i_blocked_as_open_label():
+    assert "y_i1" in OPEN_LABELS_BLOCKED
 
 
 def test_labels_lead_do_not_include_today_i_in_stack():

@@ -29,6 +29,7 @@ FINVIZ = ROOT / "data" / "finviz_with_descriptions.csv"
 OUT_MD = ROOT / "research" / "HI_CORR.md"
 OUT_JSON = ROOT / "research" / "hi_corr.json"
 OUT_PLAN_NOTE = ROOT / "research" / "HI_CORR_PLAN.md"
+PANEL_CACHE = ROOT / "research" / "_hi_panel.parquet"
 
 COST_HI, COST_LO = 0.001, 0.003
 MIN_N = 400
@@ -36,8 +37,13 @@ MIN_TICKERS = 50
 MIN_EDGE = 0.002  # 20 bp vs everyone after costs
 TOP5_CAP = 0.30
 DAY_CAP = 0.18
+WIDE_CAP = 0.25  # gate that fires on >25% of holdout rows is a sleeve, not a signal
 Q1, Q3 = date(2026, 4, 1), date(2026, 7, 1)
+Y2026 = date(2026, 1, 1)
 HORIZONS = (("1d", 1), ("2d", 2), ("3d", 3), ("1w", 5), ("2w", 10))
+# Same-day I already contains the overnight gap: I = gap + H*(1+gap).
+# Scoring an open-time gap/J gate on y_i1 is algebra, not a forecast.
+OPEN_LABELS_BLOCKED = frozenset({"y_i1"})
 
 
 def tstat(vals):
@@ -291,10 +297,13 @@ def split_masks(df, discovery, holdout):
     early = df["date"] < Q3
     late = df["date"] >= Q3
     q1 = df["date"] < Q1
+    y2025 = df["date"] < Y2026
+    y2026 = df["date"] >= Y2026
     spy_up = df["spy_I_l1"] > 0.0015
     spy_dn = df["spy_I_l1"] < -0.0015
     return {
         "disc": disc, "hold": hold, "early": early, "late": late, "q1": q1,
+        "y2025": y2025, "y2026": y2026,
         "spy_up": spy_up, "spy_dn": spy_dn,
         "spy_up_today": df["spy_I"] > 0.0015,
         "spy_dn_today": df["spy_I"] < -0.0015,
@@ -483,6 +492,8 @@ def harden(df, mask, ycol, cost, splits, clock):
         ("early", splits["early"]),
         ("late", splits["late"]),
         ("q1", splits["q1"]),
+        ("y2025", splits["y2025"]),
+        ("y2026", splits["y2026"]),
         ("spy_up", splits["spy_up"] if clock == "open" else splits["spy_up_today"]),
         ("spy_dn", splits["spy_dn"] if clock == "open" else splits["spy_dn_today"]),
     ):
@@ -516,8 +527,18 @@ def harden(df, mask, ycol, cost, splits, clock):
         reasons.append("late")
     if parts.get("q1") and parts["q1"]["mean"] <= 0:
         reasons.append("q1")
+    if parts.get("y2025") and parts["y2025"]["mean"] <= 0:
+        reasons.append("y2025")
+    if parts.get("y2026") and parts["y2026"]["mean"] <= 0:
+        reasons.append("y2026")
+    if uncond and parts.get("y2026") and parts["y2026"]["mean"] < uncond["mean"]:
+        reasons.append("y2026_no_edge")
+    if uncond and parts.get("y2025") and parts["y2025"]["mean"] < uncond["mean"]:
+        reasons.append("y2025_no_edge")
     if uncond and hold["mean"] - uncond["mean"] < MIN_EDGE:
         reasons.append("no_edge")
+    if uncond and uncond["n"] and hold["n"] / uncond["n"] > WIDE_CAP:
+        reasons.append("too_wide")
     day_s, top5 = lottery(y, tick, dt, base & splits["hold"])
     if day_s > DAY_CAP:
         reasons.append("lottery_day")
@@ -534,6 +555,8 @@ def scan_gates(df, gates, labels, clock, splits, mcap):
         gmask = gmask.fillna(False).to_numpy()
         for ycol in labels:
             if ycol not in df.columns:
+                continue
+            if clock == "open" and ycol in OPEN_LABELS_BLOCKED:
                 continue
             v, why, parts, day_s, top5 = harden(df, gmask, ycol, cost, splits, clock)
             hold = parts.get("hold") or {}
@@ -562,6 +585,8 @@ def scan_gates(df, gates, labels, clock, splits, mcap):
                 "early": (parts.get("early") or {}).get("mean"),
                 "late": (parts.get("late") or {}).get("mean"),
                 "q1": (parts.get("q1") or {}).get("mean"),
+                "y2025": (parts.get("y2025") or {}).get("mean"),
+                "y2026": (parts.get("y2026") or {}).get("mean"),
                 "uncond": (uncond or {}).get("mean"),
                 "day_share": day_s,
                 "top5_share": top5,
@@ -627,6 +652,26 @@ def write_report(meta, gates, spears, quints):
     lines.append(f"_Generated {date.today().isoformat()}. Research only. "
                  "Live `flatten_robust` frozen. Labels are Excel H and I._")
     lines.append("")
+    lines.append("## Verdict")
+    lines.append("")
+    if keeps:
+        lines.append(
+            "Number-side gates below cleared the ship bar. Fill-based #144 "
+            "light+O is a separate family (colors not rebuilt here)."
+        )
+    else:
+        lines.append(
+            "Not “zero correlations.” **No new number-only trade card.** "
+            "H and I are A–F (close vs open, close vs yesterday). After a "
+            "Yahoo A–F seed and after throwing out same-row algebra, no "
+            "gap / lag / AH / heat / FR gate beat buy-everyone in **both "
+            "2025 and 2026**, both SPY tapes, after fees. The leftover "
+            "continuous fact is a small overnight **gap fade in H**. "
+            "#144’s morning fill light + green O remains the fill-based "
+            "same-day recipe. Visual I-heat is not a continuation code "
+            "(hottest quintile’s next H is worse)."
+        )
+    lines.append("")
     lines.append("## Plain English")
     lines.append("")
     lines.append(
@@ -668,12 +713,33 @@ def write_report(meta, gates, spears, quints):
         lines.append("### What held")
         lines.append("")
         lines.append(
-            "No new leak-free gate cleared the ship bar on this tape "
-            "(ticker holdout, both halves, both SPY tapes, n + effect, "
-            "no lottery / name ghost, +20 bp vs everyone after fees)."
+            "No new leak-free **number** gate cleared the ship bar on this "
+            "tape (ticker holdout, 2025 and 2026 both ahead of buy-everyone, "
+            "both SPY tapes, n + effect, no lottery / name ghost, not a "
+            "half-the-book sleeve)."
+        )
+        lines.append("")
+        lines.append(
+            "The real number-side finding is **continuous, not a card**: "
+            "a larger overnight gap tends to fade a bit in that same day's H "
+            "(biggest down-gaps: H about +0.14%; biggest up-gaps: H about "
+            "−0.18% on the holdout). Yesterday’s I vs today’s H is a weak "
+            "mean-reversion (ρ ≈ −0.03). None of the binary “gap ≤ −2%” "
+            "recipes kept that leftover H in **2026** after fees."
         )
         lines.append("")
 
+    lines.append("### Algebra, not a forecast (same-day I)")
+    lines.append("")
+    lines.append(
+        "At 09:30 you already know the overnight gap. Excel’s I is "
+        "`gap + H×(1+gap)`. A name that **opens +2%** will print a green I "
+        "that morning unless it crashes more than about 2% from the open. "
+        "Scoring “gap up → same-day I is green” is that identity, not a "
+        "prediction. Those rows are **not keeps**. The only fair same-day "
+        "label at the open is **H** (the leftover move after the gap)."
+    )
+    lines.append("")
     lines.append("### Standing #144 check")
     lines.append("")
     lines.append(
@@ -693,7 +759,9 @@ def write_report(meta, gates, spears, quints):
         if shown >= 18:
             break
         # skip near-tautologies we already understand
-        if r["feat"] in {"H", "I", "gap"} and r["label"] in {"y_h1", "y_i1"}:
+        if r["feat"] in {"H", "I"} and r["label"] in {"y_h1", "y_i1"}:
+            continue
+        if r["feat"] in {"gap", "J"} and r["label"] == "y_i1":
             continue
         lines.append(
             f"| `{r['feat']}` | `{r['label']}` | {r['rho_hold']:+.3f} | "
@@ -721,6 +789,16 @@ def write_report(meta, gates, spears, quints):
     lines.append("|---:|---:|---:|---:|")
     for r in quints:
         if r["feat"] == "heat5" and r["label"] == "y_h1":
+            lines.append(
+                f"| {r['bin']} | {fmt_pct(r['mean'])} | {r['n']} | {r['t']:.2f} |"
+            )
+    lines.append("")
+    lines.append("Overnight gap quintiles vs same-day **H** (the leftover after the gap):")
+    lines.append("")
+    lines.append("| gap quintile (0=most down) | same-day H | n | t |")
+    lines.append("|---:|---:|---:|---:|")
+    for r in quints:
+        if r["feat"] == "gap" and r["label"] == "y_h1":
             lines.append(
                 f"| {r['bin']} | {fmt_pct(r['mean'])} | {r['n']} | {r['t']:.2f} |"
             )
@@ -766,6 +844,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit-tickers", type=int, default=0)
     ap.add_argument("--min-n", type=int, default=0)
+    ap.add_argument("--reuse-panel", action="store_true")
     args = ap.parse_args()
     min_n = args.min_n or MIN_N
     if min_n != MIN_N:
@@ -773,20 +852,28 @@ def main():
 
     discovery, holdout = load_split()
     mcap = load_mcap()
-    print("loading rows…", flush=True)
-    df = load_panel(limit=args.limit_tickers)
-    print(f"  raw {df['ticker'].nunique()} tickers / {len(df)} rows "
-          f"{df['date'].min()} → {df['date'].max()}", flush=True)
-    df = add_excel_features(df)
-    df = add_labels(df)
-    df = attach_spy(df)
-    liq = liquid_mask(df)
-    df = df.loc[liq].reset_index(drop=True)
+    if args.reuse_panel and PANEL_CACHE.exists() and not args.limit_tickers:
+        print(f"loading cached panel {PANEL_CACHE}", flush=True)
+        df = pd.read_parquet(PANEL_CACHE)
+        df["date"] = pd.to_datetime(df["date"]).dt.date
+    else:
+        print("loading rows…", flush=True)
+        df = load_panel(limit=args.limit_tickers)
+        print(f"  raw {df['ticker'].nunique()} tickers / {len(df)} rows "
+              f"{df['date'].min()} → {df['date'].max()}", flush=True)
+        df = add_excel_features(df)
+        df = add_labels(df)
+        df = attach_spy(df)
+        liq = liquid_mask(df)
+        df = df.loc[liq].reset_index(drop=True)
+        if not args.limit_tickers:
+            df.to_parquet(PANEL_CACHE, index=False)
+            print(f"  wrote {PANEL_CACHE}", flush=True)
     print(f"  liquid {df['ticker'].nunique()} / {len(df)}", flush=True)
     splits = split_masks(df, discovery, holdout)
 
     open_labels = [
-        "y_h1", "y_i1",
+        "y_h1",  # same-day I is blocked: it already contains the overnight gap
         "y_from_open_1d", "y_from_open_2d", "y_from_open_3d",
         "y_from_open_1w", "y_from_open_2w",
     ]

@@ -70,6 +70,17 @@ will reprint twins and ghosts.
    name share, edge vs buy-everyone after Futubull costs. Standing
    #144 light+O is a *check*, not re-litigated as a fill mine.
 
+## Outcome (2026-09-07)
+
+Ran on the Yahoo-extended rows (3,531 liquid names, 1.16M name-days, 2024-08-20 → 2026-09-04). Engine H/I match 139/139 on AAPL/MSFT/BBAI.
+
+- Same-day I vs gap/J = algebra → dropped as open labels.
+- Discrete number gates: **KEEP 0 / KILL 307** after 2025+2026 vs book, both tapes, width, lottery.
+- Continuous leftover: overnight gap fades a little in H (Q0 +0.14% / Q4 −0.18%). Not a card.
+- Fill-based #144 light+O is unchanged (colors not rebuilt here).
+
+See `HI_CORR.md`.
+
 ## What would count as a win
 
 Plain English, same shape as the war-room rule:
