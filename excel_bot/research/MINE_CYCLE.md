@@ -122,3 +122,7 @@ Unmined A–JL sweep N=3603 · KEEP 126 raw / 66 unique letter×hold (40 hold1/2
 ## Leftover KEEP harden (unique letters)
 
 Leftover KEEP harden: raw 126 → unique 59 → KEEP 36 (36 hold1/2). Twins killed 67. Letters: AH, AM, BA, BN, CJ, CZ, EH, EJ, EY, FC, FK, FL, FR, GV, HO, HZ, IB, IK, IL, N, R, T, U. Light+O unchanged. Finviz BLOCKED. See `UNMINED_HARDEN.md`.
+
+## Open-stack verdict (light+O vs AH / FR)
+
+Open-stack: light+O ∧ AH/FR KEEP 4 · KILL 2 · THIN 0. Standing light+O unchanged. Close letters out of scope. Finviz BLOCKED. See `OPEN_STACK.md`.

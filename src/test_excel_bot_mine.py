@@ -218,7 +218,7 @@ def test_all_cols_miners_do_not_wire_live():
     for fn in ("mine_all_cols.py", "capture_all_cols.py", "mine_clock.py",
                "mine_first.py", "mine_formula_cut.py", "classify_clocks.py",
                "harden_hyst_open.py", "mine_color_join.py", "pit_joins.py",
-               "mine_unmined.py", "harden_unmined.py"):
+               "mine_unmined.py", "harden_unmined.py", "harden_open_stack.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "sleeve_merge_live" not in src
         assert "LIVE_POLICY" not in src
@@ -1025,8 +1025,56 @@ def test_unmined_harden_report_is_committed():
         assert r.get("q3") and r["q3"].get("n", 0) >= 40
 
 
+def test_open_stack_collapses_to_standing_recipes():
+    from harden_open_stack import STANDING, STACKS, _word, ge1
+    assert STANDING == (
+        ("hyst_open_core_e5_x2", 1),
+        ("hyst_open_core_e5_x2", 2),
+        ("hyst_open_score_e5_x2", 2),
+    )
+    assert [s[0] for s in STACKS] == ["AH", "FR"]
+    assert ge1(1) and ge1(2.0) and not ge1(0) and not ge1(None)
+    assert _word(0.24) == "stronger"
+    assert _word(0.04) == "no better"
+    assert _word(-0.30) == "weaker"
+
+
+def test_open_stack_report_is_committed():
+    md = (ROOT / "excel_bot" / "research" / "OPEN_STACK.md").read_text()
+    assert "Plain English" in md
+    assert md.index("Plain English") < md.index("`hyst_")
+    assert "light+O" in md or "light + green O" in md
+    assert "AH" in md and "FR" in md
+    assert "KEEP" in md and ("KILL" in md or "THIN" in md)
+    assert "2026-07-01" in md or "Q3" in md
+    assert "flatten_robust" in md
+    assert "T, BA" in md or "out of scope" in md
+    assert "light + green O" in md or "light+green O" in md
+    sb = (ROOT / "03_scoreboard" / "EXCEL_BOT_MINE.md").read_text()
+    assert "PASS 376" in sb
+    assert "Open-stack verdict" in sb
+    assert "Color harden" in sb or "green O" in sb
+    payload = json.loads(
+        (ROOT / "excel_bot" / "research" / "open_stack.json").read_text())
+    assert payload["live_untouched"] == "flatten_robust"
+    assert payload["excel_cache_used"] is False
+    assert payload["finviz"] == "BLOCKED"
+    assert payload["standing_ao_keeps"].startswith("light+green O")
+    assert payload["q3_cut"] == "2026-07-01"
+    letters = {r.get("letter") for r in payload["rows"]
+               if str(r.get("layer", "")).startswith("light+O ∧")}
+    assert letters <= {"AH", "FR"}
+    for r in payload["rows"]:
+        if r.get("layer") == "light+O":
+            assert r["verdict"] in ("KEEP", "KILL", "THIN")
+        if r.get("layer", "").startswith("light+O ∧") and r["verdict"] == "KEEP":
+            assert (r.get("vs_parent_pp") or 0) >= 0.20
+            assert r.get("q3") and r["q3"].get("n", 0) >= 40
+            assert (r.get("lottery_day_frac") or 0) <= 0.25
+
+
 def test_unmined_miner_does_not_wire_live():
-    for fn in ("mine_unmined.py", "harden_unmined.py"):
+    for fn in ("mine_unmined.py", "harden_unmined.py", "harden_open_stack.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "from flatten" not in src
         assert "sleeve_merge_live" not in src
