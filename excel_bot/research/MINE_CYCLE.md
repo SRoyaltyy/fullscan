@@ -145,4 +145,4 @@ Same-day multi-letter: KEEP 0 · KILL 32 · THIN 0. A–JL surface exhausted. Li
 
 ## Pair+lag mine (open-entry pilot)
 
-Pair+lag open pilot: KEEP 0 · KILL 2237 · THIN 0. Trees skipped_no_pair_keep. Light+O baseline. See `PAIR_LAG.md` / `PAIR_LAG_PLAN.md`.
+Pair+lag open (locked 44): KEEP 0 · KILL 4266 · THIN 0. Trees skipped_no_pair_keep. Light+O baseline. See `PAIR_LAG.md` / `OPEN_SAME_ROW_LABELS.md`.

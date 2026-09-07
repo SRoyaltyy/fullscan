@@ -1,13 +1,11 @@
-"""Pairwise + lag miner — open-entry pilot.
+"""Pairwise + lag miner — open-entry, Excel-locked same-row gate.
 
-Fair inputs at 9:30: upper rows (lag≥1) of any column; same-row only
-when the clock map says value-open (or a timing-tested open fill).
-Unknown is not open.
+Same-row day X is open only for the 44 value_mine_open cols and the
+timing-tested open fills. Upper rows (t−1…t−N) of any letter are fair.
+Do not invent clocks. Source: CLOCK_MAP.md / clock_map.json.
 
-This beat is a *bounded* open-entry pilot, not the 275×275 explosion.
-Standing five-cell light+green O ± AH/FR is the baseline, not the
-search space. Highlight ghosts (T/BA, weekly+lag, same-day fill
-counts) are not remined unless they appear as numeric lags/pairs.
+O green fill is open; O number is close. AA today is close.
+B/G/K/M numbers, L value, D/E/F/H/I same-row, core_score → close.
 
   python engine/mine_pair_lag.py
   python engine/mine_pair_lag.py --render-only
@@ -23,11 +21,11 @@ from collections import defaultdict
 from datetime import date
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from clock import COST_FUTU_LONG, COST_FUTU_SHORT  # noqa: E402
+from clock import COST_FUTU_LONG  # noqa: E402
 from harden_hyst_open import apply_hold1_keep, splice_md  # noqa: E402
 from mine_next_region import Q1_CUT, deeper  # noqa: E402
 from mine_unmined import (  # noqa: E402
-    HALF_CUT, Q3_CUT, _blk, _cmp, _push, _slot, load_spy, num, pack_row,
+    HALF_CUT, Q3_CUT, _blk, _cmp, _push, _slot, fam, load_spy, num, pack_row,
     s2d, sim,
 )
 
@@ -43,18 +41,29 @@ OUT_MD = os.path.join(RESEARCH, "PAIR_LAG.md")
 OUT_JSON = os.path.join(RESEARCH, "pair_lag.json")
 INV_MD = os.path.join(RESEARCH, "PAIR_LAG_INVENTORY.md")
 PLAN_MD = os.path.join(RESEARCH, "PAIR_LAG_PLAN.md")
+LABELS_MD = os.path.join(RESEARCH, "OPEN_SAME_ROW_LABELS.md")
 SB_MD = os.path.join(SCOREBOARD, "EXCEL_BOT_MINE.md")
 AO_MD = os.path.join(RESEARCH, "AO_FIRST_MINE.md")
 CYCLE_MD = os.path.join(RESEARCH, "MINE_CYCLE.md")
 MARKER = "## Pair+lag mine (open-entry pilot)"
 HOLDS = (1, 2)
 N_LAG = 5
+PAIR_TOP = 30
 
-# Bounded pilot letters — high-coverage numeric + known open + example shape.
-# AH/FR are standing leftover opens (baseline, not this search).
-NOW_NUM = ("C", "J", "Q", "DE", "ES", "ET", "IY", "IZ")
-NOW_TEXT = ("EQ",)  # S / L from prior CP
-LAG_ONLY = ("O", "AA", "H")  # value-close same-row; lag≥1 only at open
+# Excel-locked. Do not invent. Must match clock_map groups.
+VALUE_OPEN_44 = (
+    "A", "C", "J", "Q", "Z", "AC", "AH", "BT", "BV", "CG", "CH", "DC", "DE",
+    "EB", "EK", "EN", "EP", "EQ", "ER", "ES", "ET", "EU", "EV", "FQ", "FR",
+    "FS", "FU", "GD", "GE", "GF", "HF", "HG", "HW", "II", "IR", "IT", "IY",
+    "IZ", "JB", "JC", "JD", "JE", "JF", "JL",
+)
+FILL_OPEN = ("A", "B", "C", "G", "J", "K", "L", "M", "O", "IR", "IS", "IT")
+LANDMINE_VALUE = ("B", "G", "K", "M", "O", "L", "D", "E", "F", "H", "I", "N", "AA")
+# Date serials — in the 44 as open values, not useful as thresholds.
+SKIP_VALUE_OPS = {"A", "IR"}
+TEXT_COLS = {"EQ"}
+# Close-same-row numbers that are still fair as *lags*.
+LAG_EXTRA = ("O", "AA", "H")
 NOW_OPS = (("eq1", "==", 1), ("ge1", ">=", 1), ("lt1", "<", 1), ("gt0", ">", 0))
 LAG_OPS = (("lt1", "<", 1), ("eq1", "==", 1), ("ge1", ">=", 1))
 LAGS = tuple(range(1, N_LAG + 1))
@@ -66,35 +75,64 @@ def load_clocks():
     return raw, by
 
 
+def assert_locked_gate(clocks):
+    """Refuse to invent clocks — Excel's list must match the map."""
+    vo = tuple(clocks["groups"]["value_mine_open"])
+    fo = tuple(clocks["groups"]["fill_mine_open"])
+    if vo != VALUE_OPEN_44:
+        raise ValueError(f"value_mine_open drifted: {vo} != locked 44")
+    if fo != FILL_OPEN:
+        raise ValueError(f"fill_mine_open drifted: {fo} != locked fills")
+    if len(VALUE_OPEN_44) != 44:
+        raise ValueError("locked value-open list is not 44")
+    by = {r["col"]: r for r in clocks["columns"]}
+    for col in LANDMINE_VALUE:
+        if by[col]["value_mine"] == "open":
+            raise ValueError(f"landmine {col} is value-open — do not invent")
+    if by["O"]["fill_mine"] != "open" or by["O"]["value_mine"] != "close":
+        raise ValueError("O fill/value lock broken")
+    if by["AA"]["value_mine"] == "open":
+        raise ValueError("AA today is not licensed same-row open")
+
+
 def atom_name(col, lag, opname):
     return f"{col}_l{lag}_{opname}"
 
 
 def build_atoms(clocks_by):
-    """Return atoms legal at open-entry on this pilot set."""
+    """Open-entry atoms: same-row 44+fills, or any letter at lag≥1."""
     atoms = []
-    for col in NOW_NUM:
+    for col in VALUE_OPEN_44:
         if clocks_by[col]["value_mine"] != "open":
             raise ValueError(f"{col} is not value-open; refuse same-row")
+        if col in SKIP_VALUE_OPS:
+            continue
+        if col in TEXT_COLS:
+            for label in ("S", "L"):
+                atoms.append({
+                    "name": atom_name(col, 0, f"eq{label}"),
+                    "col": col, "lag": 0, "kind": "text",
+                    "opname": f"eq{label}", "op": "==", "th": label,
+                })
+            continue
         for opname, op, th in NOW_OPS:
             atoms.append({
                 "name": atom_name(col, 0, opname),
                 "col": col, "lag": 0, "kind": "num",
                 "opname": opname, "op": op, "th": th,
             })
-    for col in NOW_TEXT:
-        if clocks_by[col]["value_mine"] != "open":
-            raise ValueError(f"{col} is not value-open text")
-        for label in ("S", "L"):
-            atoms.append({
-                "name": atom_name(col, 0, f"eq{label}"),
-                "col": col, "lag": 0, "kind": "text",
-                "opname": f"eq{label}", "op": "==", "th": label,
-            })
-    for col in LAG_ONLY:
-        # Same-row of these is close/unknown — lag≥1 only.
-        if clocks_by[col]["value_mine"] == "open":
-            raise ValueError(f"{col} became value-open; revisit same-row license")
+    for col in FILL_OPEN:
+        if clocks_by[col]["fill_mine"] != "open":
+            raise ValueError(f"{col} fill is not open; refuse same-row fill")
+        atoms.append({
+            "name": atom_name(col, 0, "green"),
+            "col": col, "lag": 0, "kind": "fill",
+            "opname": "green", "op": "==", "th": "green",
+        })
+    # Lags of the 44 (upper rows of open-knowable cols).
+    for col in VALUE_OPEN_44:
+        if col in SKIP_VALUE_OPS or col in TEXT_COLS:
+            continue
         for lag in LAGS:
             for opname, op, th in LAG_OPS:
                 atoms.append({
@@ -102,27 +140,71 @@ def build_atoms(clocks_by):
                     "col": col, "lag": lag, "kind": "num",
                     "opname": opname, "op": op, "th": th,
                 })
+    # Example-shape lags: O/AA/H numbers at t−1…t−5 only.
+    for col in LAG_EXTRA:
+        if col in VALUE_OPEN_44:
+            raise ValueError(f"{col} is value-open; do not treat as lag-only")
+        if clocks_by[col]["value_mine"] == "open":
+            raise ValueError(f"{col} became value-open; refuse invented clock")
+        for lag in LAGS:
+            for opname, op, th in LAG_OPS:
+                atoms.append({
+                    "name": atom_name(col, lag, opname),
+                    "col": col, "lag": lag, "kind": "num",
+                    "opname": opname, "op": op, "th": th,
+                })
+    # No same-row landmine values.
+    for a in atoms:
+        if a["lag"] == 0 and a["kind"] == "num" and a["col"] in LANDMINE_VALUE:
+            raise ValueError(f"landmine same-row value {a['name']}")
+        if a["lag"] == 0 and a["kind"] == "num" and a["col"] not in VALUE_OPEN_44:
+            raise ValueError(f"same-row value not in locked 44: {a['name']}")
+        if a["lag"] == 0 and a["kind"] == "fill" and a["col"] not in FILL_OPEN:
+            raise ValueError(f"same-row fill not in locked fills: {a['name']}")
     return atoms
 
 
-def build_pairs(atoms):
-    now = [a for a in atoms if a["lag"] == 0]
-    lag = [a for a in atoms if a["lag"] >= 1]
+def collapse_twins(atoms):
+    """One atom per (col, lag, kind) — prefer ge1, then eq1, then lt1."""
+    rank = {"ge1": 3, "eq1": 2, "green": 2, "eqS": 2, "eqL": 2, "lt1": 1, "gt0": 0}
+    best = {}
+    for a in atoms:
+        key = (a["col"], a["lag"], a["kind"])
+        cur = best.get(key)
+        if cur is None or rank.get(a["opname"], 0) > rank.get(cur["opname"], 0):
+            best[key] = a
+    return list(best.values())
+
+
+def build_pairs(alive_atoms):
+    """Pair only alive atoms so the 44×44×lag grid does not explode."""
+    now = [a for a in alive_atoms if a["lag"] == 0]
+    lag = [a for a in alive_atoms if a["lag"] >= 1]
     pairs = []
     for left in lag:
         for right in now:
+            if left["name"] == right["name"]:
+                continue
             pairs.append({
                 "name": f"{left['name']}__and__{right['name']}",
                 "left": left["name"],
                 "right": right["name"],
             })
-    # Open-legal sibling of the example O[t−2]<1 ∧ AA[t]=1
-    # (AA[t] is not licensed same-row open; AA[t−1] is).
-    by = {a["name"]: a for a in atoms}
+    now_s = sorted(now, key=lambda a: a["name"])
+    for i, a in enumerate(now_s):
+        for b in now_s[i + 1:]:
+            if a["col"] == b["col"]:
+                continue
+            pairs.append({
+                "name": f"{a['name']}__and__{b['name']}",
+                "left": a["name"],
+                "right": b["name"],
+            })
+    by = {a["name"]: a for a in alive_atoms}
     extra = (
+        ("O_l2_lt1", "ES_l0_eq1"),
         ("O_l2_lt1", "AA_l1_eq1"),
         ("O_l1_lt1", "AA_l1_eq1"),
-        ("O_l2_lt1", "AA_l2_eq1"),
     )
     for a, b in extra:
         if a in by and b in by:
@@ -131,86 +213,95 @@ def build_pairs(atoms):
                 "left": a,
                 "right": b,
             })
-    # de-dupe
     seen, out = set(), []
     for p in pairs:
         if p["name"] in seen:
             continue
-        seen.add(p["name"])
-        out.append(p)
+        # Both legs open-knowable: lag≥1 any col, or same-row 44/fills.
+        for leg in (p["left"], p["right"]):
+            rec = by.get(leg)
+            if rec is None:
+                break
+            if rec["lag"] == 0 and rec["kind"] == "num" and rec["col"] not in VALUE_OPEN_44:
+                break
+            if rec["lag"] == 0 and rec["kind"] == "fill" and rec["col"] not in FILL_OPEN:
+                break
+            if rec["lag"] == 0 and rec["col"] in LANDMINE_VALUE and rec["kind"] != "fill":
+                break
+        else:
+            seen.add(p["name"])
+            out.append(p)
     return out
 
 
-def remaining_inventory(clocks, atoms, pairs):
-    same = clocks.get("same_row_open") or {}
+def remaining_inventory(clocks, atoms, pairs, n_alive=0):
     return {
         "generated": str(date.today()),
         "live_untouched": "flatten_robust",
         "excel_cache_used": False,
         "entry": "open",
+        "gate": "Excel-locked CLOCK_MAP value_mine_open 44 + fill_mine_open",
         "n_lag": N_LAG,
-        "now_num": list(NOW_NUM),
-        "now_text": list(NOW_TEXT),
-        "lag_only": list(LAG_ONLY),
+        "value_open_44": list(VALUE_OPEN_44),
+        "fill_open": list(FILL_OPEN),
+        "landmine_value": list(LANDMINE_VALUE),
         "n_atoms": len(atoms),
+        "n_alive": n_alive,
         "n_pairs": len(pairs),
-        "same_row_open_n": same.get("n"),
-        "standing_open": "five-cell light+O ± AH/FR is baseline, not search",
+        "same_row_open_n": 44,
+        "standing_open": "five-cell light+O ± AH/FR is baseline, not a card",
         "not_reopened": [
             "T/BA close shortboard (highlight ghost)",
             "weekly AP–AU + leftover-open+A lags",
             "same-day multi-letter fill counts",
-            "AH/FR leftover-open singles / light+O stacks",
         ],
-        "example_shape": "O[t−2]<1 ∧ AA[t]=1 is close-entry (AA same-row unlicensed); "
-                         "open siblings are O[t−2]<1 ∧ ES[t]=1 and O[t−2]<1 ∧ AA[t−1]=1",
-        "next": "close-entry pass, then expand letters, then trees only if pairs KEEP",
+        "example_shape": (
+            "O[t−2]<1 ∧ AA[t]=1 is close-entry (AA same-row unlicensed); "
+            "open siblings are O[t−2]<1 ∧ ES[t]=1 and O[t−2]<1 ∧ AA[t−1]=1"
+        ),
+        "next": "close-entry pass (AA-today pairs); trees only if a pair KEEPs",
     }
 
 
 def render_plan(meta):
     return "\n".join([
-        "# Pair+lag mine plan (Cyrus + New Bot reopen)",
+        "# Pair+lag mine plan (Excel-locked open gate)",
         "",
         f"_Generated {meta['generated']} · live `flatten_robust` frozen. "
         "Yahoo/rows A–F seed only. No merge._",
         "",
         "## Plain English",
         "",
-        "The highlight / single-letter threshold pass is not the whole "
-        "sheet. Dumps hold **numbers, text, and fills**. A fair 9:30 "
-        "input is anything already on the sheet by the open of day X: "
-        "upper rows always; same-row only when the formula is "
-        "open-knowable. Example shape: O two days ago is under 1 **and** "
-        "AA today equals 1 — a lag plus a pair, not a highlight count.",
+        "Excel locked the same-row open gate. This mine does **not** "
+        "invent clocks. Same-row day X is the 44 value-open letters "
+        "(numbers/text) plus the timing-tested open fills. Yesterday "
+        "and older of any letter is fair. O green is open; O as a "
+        "number is close. AA today is close.",
         "",
-        "## Order",
+        "## Locked same-row open values (44)",
         "",
-        "1. Clock-map every A–JL cell (done / updated this beat).",
-        "2. Features: values, text, fills; lags 0…5. Open-entry first.",
-        "3. Rules: single-col thresholds, then pairwise cross-col / "
-        "cross-lag, then small trees **only if** pairs clear the bar.",
-        "4. Bar: Futubull, both SPY tapes, walk-forward halves + Q3, "
-        "Q1 / July / five-name ghost, n + ≥20 bp vs buy-everyone. "
-        "Discovery ≠ holdout.",
-        "5. Close-entry after this open pilot. Expand the letter set "
-        "after the pilot, not 275×275 on day one.",
+        "`" + ", ".join(VALUE_OPEN_44) + "`",
         "",
-        "## This pilot (bounded)",
+        "## Locked same-row open fills (not values)",
         "",
-        f"Same-row numbers: `{'/'.join(meta['now_num'])}` (value-open, "
-        "high coverage).",
-        f"Same-row text: `{'/'.join(meta['now_text'])}` (S/L).",
-        f"Lag-only numbers: `{'/'.join(meta['lag_only'])}` (O / AA / H "
-        f"at t−1…t−{meta['n_lag']}). Same-row of those is **not** "
-        "open-licensed.",
-        f"Atoms **{meta['n_atoms']}**. Pairs **{meta['n_pairs']}** "
-        "(lag atom ∧ same-row atom, plus the open-legal AA-lag siblings "
-        "of the example).",
+        "`" + ", ".join(FILL_OPEN) + "`",
+        "",
+        "## Same-row landmines (not open values)",
+        "",
+        "B/G/K/M numbers; O number; L value; D/E/F/H/I same-row; "
+        "core_score → close only. AA today → close.",
+        "",
+        f"Atoms **{meta['n_atoms']}**. Alive for pairing "
+        f"**{meta.get('n_alive', 0)}**. Pairs **{meta['n_pairs']}**. "
+        f"Lags 1…{meta['n_lag']}. Entry **open**.",
         "",
         meta["example_shape"] + ".",
         "",
-        "AH/FR and light+O stay baseline. T/BA highlight ghosts stay KILL.",
+        "Highlight ghosts (T/BA, weekly+lag, same-day fill counts) "
+        "are not reopened. Light+O ± AH/FR is baseline, not a card.",
+        "",
+        "Source: `CLOCK_MAP.md` / `clock_map.json` / "
+        "`OPEN_SAME_ROW_LABELS.md`.",
         "",
         "Research only. Live frozen.",
         "",
@@ -218,32 +309,27 @@ def render_plan(meta):
 
 
 def render_inventory(meta, clocks):
-    same = clocks.get("same_row_open") or {}
-    L = [
-        "# Pair+lag inventory (open-entry pilot)",
+    return "\n".join([
+        "# Pair+lag inventory (Excel-locked 44)",
         "",
         f"_Generated {meta['generated']} · live `flatten_robust` frozen. "
         "Yahoo/rows only. No merge._",
         "",
         "## Plain English",
         "",
-        "Open-knowable same-row formulas are listed on `CLOCK_MAP.md`. "
-        "This beat does not remine highlight ghosts. It scores **numbers "
-        "and one text column**, with lags, on a short letter list.",
+        "Open-entry pairwise + lag on the **Excel-locked 44** value-open "
+        "letters, with timing-tested open fills as optional legs. "
+        "Lags t−1…t−5 of those letters plus O / AA / H numbers.",
         "",
-        f"Same-row open letters in the walk: **{same.get('n', 0)}**. "
-        f"Pilot uses {len(meta['now_num'])} of them plus EQ text and "
-        f"three lag-only columns.",
-        "",
-        f"Atoms {meta['n_atoms']} · pairs {meta['n_pairs']} · "
-        f"lags 1…{meta['n_lag']} · entry **open**.",
+        f"Same-row values: **44**. Open fills: **{len(FILL_OPEN)}**. "
+        f"Atoms {meta['n_atoms']} · alive {meta.get('n_alive', 0)} · "
+        f"pairs {meta['n_pairs']}.",
         "",
         "Not reopened: " + "; ".join(meta["not_reopened"]) + ".",
         "",
         "Research only. Live frozen.",
         "",
-    ]
-    return "\n".join(L)
+    ])
 
 
 def _cell():
@@ -269,6 +355,8 @@ def fire_atom(days, ei, atom):
         if not isinstance(v, str):
             return False
         return v.strip().upper() == atom["th"]
+    if atom["kind"] == "fill":
+        return fam(rec) == atom["th"]
     v = num(rec)
     if v is None:
         return False
@@ -276,15 +364,12 @@ def fire_atom(days, ei, atom):
 
 
 def family_of(name):
-    if "__and__" in name:
-        return "pair"
-    return "single"
+    return "pair" if "__and__" in name else "single"
 
 
 def meaning_of(name):
     def one(tok):
         col, rest = tok.split("_", 1)
-        # l2_lt1
         parts = rest.split("_")
         lag = int(parts[0][1:])
         op = parts[1]
@@ -293,7 +378,7 @@ def meaning_of(name):
         words = {
             "eq1": "equals 1", "ge1": "is at least 1",
             "lt1": "is under 1", "gt0": "is above 0", "lt0": "is below 0",
-            "eqS": "is S", "eqL": "is L",
+            "eqS": "is S", "eqL": "is L", "green": "is green",
         }.get(op, op)
         return f"{col} {when} {words}"
     if "__and__" in name:
@@ -302,19 +387,12 @@ def meaning_of(name):
     return one(name)
 
 
-def mine(atoms, pairs, limit=0):
-    split = json.load(open(SPLIT_PATH))
-    disc, hold = set(split["discovery"]), set(split["holdout"])
-    spy = load_spy()
-    files = [f for f in sorted(glob.glob(os.path.join(DUMPS, "*.json")))
-             if not os.path.basename(f).startswith("_")]
-    if limit:
-        files = files[:limit]
+def walk(files, atoms, pairs, spy, disc, hold, baselines=None):
     cells = defaultdict(_cell)
-    base = defaultdict(lambda: _slot())
-    print(f"[pair_lag] files={len(files)} atoms={len(atoms)} "
-          f"pairs={len(pairs)}", flush=True)
+    base = baselines if baselines is not None else defaultdict(lambda: _slot())
+    fill_base = baselines is None
     n_bad = 0
+    want = {a["name"] for a in atoms}
     for i, path in enumerate(files, 1):
         g = json.load(open(path))
         src, seed = g.get("source"), g.get("seed")
@@ -327,18 +405,21 @@ def mine(atoms, pairs, limit=0):
         if split_t is None:
             continue
         for ei, day in enumerate(days):
-            for h in HOLDS:
-                raw = sim(days, ei, 1, "open", h)
-                if raw is None:
-                    continue
-                _push(base[("open", "long", h)], raw - COST_FUTU_LONG)
+            if fill_base:
+                for h in HOLDS:
+                    raw = sim(days, ei, 1, "open", h)
+                    if raw is None:
+                        continue
+                    _push(base[("open", "long", h)], raw - COST_FUTU_LONG)
             fired = {a["name"] for a in atoms if fire_atom(days, ei, a)}
             if not fired:
                 continue
-            hit = list(fired)
+            hit = [n for n in fired if n in want]
             for p in pairs:
                 if p["left"] in fired and p["right"] in fired:
                     hit.append(p["name"])
+            if not hit:
+                continue
             iso = str(s2d(day["date"]))
             tape = spy.get(iso, 0)
             half = "early" if iso < HALF_CUT else "late"
@@ -371,11 +452,10 @@ def mine(atoms, pairs, limit=0):
             print(f"  ... {i}/{len(files)}", flush=True)
     if n_bad:
         raise RuntimeError(f"refusing {n_bad} dumps that are not rows_cache")
-    baselines = {}
-    for k, sl in base.items():
-        b = _blk(sl)
-        if b:
-            baselines[f"{k[0]}_{k[1]}_h{k[2]}"] = b
+    return cells, base
+
+
+def pack_cells(cells, baselines):
     rows = []
     for (name, clock, side, rule), cell in cells.items():
         row = pack_row(name, clock, side, rule, cell, baselines)
@@ -388,12 +468,81 @@ def mine(atoms, pairs, limit=0):
     for r in rows:
         r["keep"] = r["verdict"]
         r["plain"] = meaning_of(r["def"])
+    return rows
+
+
+def select_alive(rows, atoms):
+    """Hold2 singles with enough discovery mass and a green mean."""
+    by_name = {a["name"]: a for a in atoms}
+    cand = []
+    for r in rows:
+        if r["exit"] != "hold2" or r["family"] != "single":
+            continue
+        d = r.get("discovery") or {}
+        if d.get("n", 0) < 200 or (d.get("avg_net") or 0) <= 0:
+            continue
+        a = by_name.get(r["def"])
+        if a:
+            cand.append((r, a))
+    # Collapse twins, keep best discovery t.
+    best = {}
+    for r, a in cand:
+        key = (a["col"], a["lag"], a["kind"])
+        cur = best.get(key)
+        if cur is None or (r["discovery"].get("t") or -9) > (cur[0]["discovery"].get("t") or -9):
+            best[key] = (r, a)
+    now, lag = [], []
+    for r, a in best.values():
+        (now if a["lag"] == 0 else lag).append((r, a))
+    now.sort(key=lambda x: -((x[0].get("discovery") or {}).get("t") or -9))
+    lag.sort(key=lambda x: -((x[0].get("discovery") or {}).get("t") or -9))
+    picked = [a for _r, a in now[:PAIR_TOP]] + [a for _r, a in lag[:PAIR_TOP]]
+    must = {"O_l2_lt1", "AA_l1_eq1", "ES_l0_eq1", "O_l0_green"}
+    have = {a["name"] for a in picked}
+    for a in atoms:
+        if a["name"] in must and a["name"] not in have:
+            picked.append(a)
+            have.add(a["name"])
+    return picked
+
+
+def mine(atoms, limit=0):
+    split = json.load(open(SPLIT_PATH))
+    disc, hold = set(split["discovery"]), set(split["holdout"])
+    spy = load_spy()
+    files = [f for f in sorted(glob.glob(os.path.join(DUMPS, "*.json")))
+             if not os.path.basename(f).startswith("_")]
+    if limit:
+        files = files[:limit]
+    print(f"[pair_lag] pass1 singles files={len(files)} atoms={len(atoms)}",
+          flush=True)
+    cells1, base = walk(files, atoms, [], spy, disc, hold, baselines=None)
+    baselines = {}
+    for k, sl in base.items():
+        b = _blk(sl)
+        if b:
+            baselines[f"{k[0]}_{k[1]}_h{k[2]}"] = b
+    singles = pack_cells(cells1, baselines)
+    alive = select_alive(singles, atoms)
+    pairs = build_pairs(alive)
+    print(f"[pair_lag] pass2 pairs alive={len(alive)} pairs={len(pairs)}",
+          flush=True)
+    need = {a["name"]: a for a in atoms if a["name"] in {
+        p["left"] for p in pairs
+    } | {p["right"] for p in pairs}}
+    cells2, _ = walk(files, list(need.values()), pairs, spy, disc, hold,
+                     baselines=base)
+    pairs_rows = pack_cells(cells2, baselines)
+    # walk() on pass2 also re-pushes the need-atoms as singles — drop those
+    # so singles stay from pass1.
+    pair_only = [r for r in pairs_rows if r["family"] == "pair"]
+    rows = singles + pair_only
     rows.sort(key=lambda r: (
         0 if r["keep"] == "KEEP" else 1 if r["keep"] == "KILL" else 2,
         0 if r["family"] == "pair" else 1,
         -((r.get("holdout") or {}).get("t") or -9),
     ))
-    return rows, baselines, files
+    return rows, baselines, files, pairs, alive
 
 
 def _pct(b):
@@ -414,18 +563,18 @@ def render(rows, baselines, files, meta):
         MARKER,
         "",
         f"_Generated {date.today()} · live `flatten_robust` frozen. "
-        "Yahoo/rows A–F seed only. No merge. Light+O is baseline. "
+        "Yahoo/rows A–F seed only. No merge. Excel-locked 44. "
         "T/BA highlight ghosts not reopened._",
         "",
         "## Plain English",
         "",
-        "First open-entry **pair + lag** pilot on a short letter list. "
-        "Fair 9:30 inputs only: yesterday-and-older numbers from O / AA / H, "
-        "plus today's open-knowable numbers and the S/L text on EQ. "
-        "Example shape (open-legal siblings): O two days ago under 1 "
-        "and today's ES equals 1; or O two days ago under 1 and "
-        "yesterday's AA equals 1. AA today is **not** licensed same-row "
-        "open — that pair waits for the close-entry pass.",
+        "Open-entry **pair + lag** on Excel's locked same-row gate: "
+        "the 44 value-open letters (numbers/text) and the timing-tested "
+        "open fills. Yesterday-and-older of any letter is fair. "
+        "O green is open; O as a number is close. AA today is close — "
+        "O two days ago under 1 **and** AA today equals 1 waits for "
+        "close-entry. Open siblings (O two days ago under 1 and today's "
+        "ES equals 1; or yesterday's AA equals 1) are in this pilot.",
         "",
     ]
     if keeps:
@@ -440,27 +589,26 @@ def render(rows, baselines, files, meta):
         )
     else:
         L.append(
-            f"**Clean null on the open-entry pilot.** KEEP 0 · "
-            f"KILL {len(kills)} · THIN {len(thins)}. Bounded pair+lag "
-            "does not clear ship + Q1 / July / five-name on this tape. "
-            "Trees skipped. Next: close-entry pass, then a wider letter "
-            "set — not a remine of T/BA highlights."
+            f"**Clean null.** KEEP 0 · KILL {len(kills)} · THIN {len(thins)}. "
+            "The locked 44 plus open-fill legs and lags do not clear "
+            "ship + Q1 / July / five-name on this tape. Trees skipped. "
+            "Next: close-entry (AA-today pairs) — not a remine of T/BA."
         )
     L += [
         "",
         f"Dumps **{len(files)}**. Atoms **{meta['n_atoms']}**. "
-        f"Pairs **{meta['n_pairs']}**. "
+        f"Alive **{meta.get('n_alive', 0)}**. Pairs **{meta['n_pairs']}**. "
         f"Open-long everyone-else hold2 {_pct(baselines.get('open_long_h2'))}. "
-        "Both SPY tapes required. Light+O ± AH/FR untouched.",
+        "Both SPY tapes required. Light+O ± AH/FR baseline.",
         "",
         "### Family scoreboard",
         "",
         "| family | what it is | KEEP | KILL | THIN |",
         "|---|---|---:|---:|---:|",
-        f"| single | one number or EQ text, maybe lagged | "
+        f"| single | locked-44 number/text, open fill, or a lag | "
         f"{by_fam['single']['KEEP']} | {by_fam['single']['KILL']} | "
         f"{by_fam['single']['THIN']} |",
-        f"| pair | lag number ∧ today's open-knowable (or AA lag sibling) | "
+        f"| pair | two open-knowable legs (lag any col ∨ same-row 44/fill) | "
         f"{by_fam['pair']['KEEP']} | {by_fam['pair']['KILL']} | "
         f"{by_fam['pair']['THIN']} |",
         "",
@@ -500,7 +648,7 @@ def render(rows, baselines, files, meta):
         "- T / BA / CZ / EH / IB / HO / IL / GV stay **KILL** as "
         "highlight / leftover-close ghosts.",
         "- Weekly+lag and same-day fill counts stay exhausted.",
-        "- Close-entry pair+lag is **next**, not this pilot.",
+        "- Close-entry pair+lag (AA today) is **next**.",
         "- Finviz BLOCKED. Live `flatten_robust` frozen. No cards.",
         f"- Q1 cut **{Q1_CUT}**. Q3 cut **{Q3_CUT}**. Futubull 0.15%/0.20%.",
         "",
@@ -520,13 +668,15 @@ def write_outputs(rows, baselines, files, meta, clocks):
     n_thin = sum(1 for r in rows if r["keep"] == "THIN")
     payload = {
         "generated": str(date.today()),
-        "spec": "open-entry pair+lag pilot; ship + Q1/name-ghost",
+        "spec": "open-entry pair+lag on Excel-locked 44; ship + Q1/name-ghost",
         "live_untouched": "flatten_robust",
         "excel_cache_used": False,
         "seed": "yahoo_rows_cache",
         "entry": "open",
+        "gate": meta["gate"],
         "n_dumps": len(files),
         "n_atoms": meta["n_atoms"],
+        "n_alive": meta.get("n_alive", 0),
         "n_pairs": meta["n_pairs"],
         "q1_cut": Q1_CUT,
         "q3_cut": Q3_CUT,
@@ -550,9 +700,9 @@ def write_outputs(rows, baselines, files, meta, clocks):
     cy = splice_md(
         CYCLE_MD, MARKER,
         MARKER + "\n\n"
-        f"Pair+lag open pilot: KEEP {n_keep} · KILL {n_kill} · "
+        f"Pair+lag open (locked 44): KEEP {n_keep} · KILL {n_kill} · "
         f"THIN {n_thin}. Trees {payload['trees']}. Light+O baseline. "
-        "See `PAIR_LAG.md` / `PAIR_LAG_PLAN.md`.\n",
+        "See `PAIR_LAG.md` / `OPEN_SAME_ROW_LABELS.md`.\n",
         require_any=("first A–JL cut", "A–O clock cycle"),
     )
     open(SB_MD, "w", encoding="utf-8").write(sb)
@@ -561,21 +711,30 @@ def write_outputs(rows, baselines, files, meta, clocks):
     return payload
 
 
+def stamp_labels():
+    """Keep OPEN_SAME_ROW_LABELS.md as the Excel lock; do not invent."""
+    if not os.path.exists(LABELS_MD):
+        raise FileNotFoundError("OPEN_SAME_ROW_LABELS.md missing — Excel gate")
+    old = open(LABELS_MD, encoding="utf-8").read()
+    if "A, C, J, Q, Z, AC, AH, BT, BV, CG, CH, DC, DE" not in old:
+        raise ValueError("labels file does not carry the locked 44")
+    if "fill_mine_open" not in old and "A, B, C, G, J, K, L, M, O" not in old:
+        raise ValueError("labels file missing open fills")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--render-only", action="store_true")
     ap.add_argument("--limit", type=int, default=0)
     args = ap.parse_args()
+    stamp_labels()
     clocks, by = load_clocks()
-    # Prefer freshly built same_row inventory if the committed map
-    # predates this beat — classify_clocks.build fills it.
     if "same_row_open" not in clocks:
         from classify_clocks import build
         clocks = build()
         by = {r["col"]: r for r in clocks["columns"]}
+    assert_locked_gate(clocks)
     atoms = build_atoms(by)
-    pairs = build_pairs(atoms)
-    meta = remaining_inventory(clocks, atoms, pairs)
     if args.render_only:
         prev = json.load(open(OUT_JSON, encoding="utf-8"))
         files = [None] * int(prev.get("n_dumps") or 0)
@@ -583,17 +742,18 @@ def main():
             prev.get("rows") or [],
             prev.get("baselines") or {},
             files,
-            prev.get("inventory") or meta,
+            prev.get("inventory") or remaining_inventory(clocks, atoms, []),
             clocks,
         )
         print(f"render-only KEEP {payload['n_keep']} KILL {payload['n_kill']}",
               flush=True)
         return payload
-    rows, baselines, files = mine(atoms, pairs, limit=args.limit)
+    rows, baselines, files, pairs, alive = mine(atoms, limit=args.limit)
+    meta = remaining_inventory(clocks, atoms, pairs, n_alive=len(alive))
     payload = write_outputs(rows, baselines, files, meta, clocks)
     print(f"KEEP {payload['n_keep']} KILL {payload['n_kill']} "
-          f"THIN {payload['n_thin']} atoms={len(atoms)} pairs={len(pairs)} "
-          f"trees={payload['trees']}", flush=True)
+          f"THIN {payload['n_thin']} atoms={len(atoms)} alive={len(alive)} "
+          f"pairs={len(pairs)} trees={payload['trees']}", flush=True)
     for r in rows[:16]:
         print(f"  {r['keep']:4} {r['def'][:48]:48} {r['exit']} "
               f"{','.join(r.get('fail_reasons') or [])}", flush=True)

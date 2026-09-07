@@ -1267,26 +1267,37 @@ def test_same_day_report_is_committed():
 
 def test_pair_lag_pilot_is_open_and_bounded():
     from mine_pair_lag import (
-        LAG_ONLY, N_LAG, NOW_NUM, NOW_TEXT, build_atoms, build_pairs,
+        FILL_OPEN, LAG_EXTRA, LANDMINE_VALUE, N_LAG, VALUE_OPEN_44,
+        assert_locked_gate, build_atoms, build_pairs, collapse_twins,
     )
     from classify_clocks import build
     clocks = build()
+    assert_locked_gate(clocks)
+    assert len(VALUE_OPEN_44) == 44
+    assert VALUE_OPEN_44 == tuple(clocks["groups"]["value_mine_open"])
+    assert FILL_OPEN == tuple(clocks["groups"]["fill_mine_open"])
+    assert "AH" in VALUE_OPEN_44 and "FR" in VALUE_OPEN_44
+    assert "O" in FILL_OPEN and "O" not in VALUE_OPEN_44
     by = {r["col"]: r for r in clocks["columns"]}
     atoms = build_atoms(by)
-    pairs = build_pairs(atoms)
     assert N_LAG == 5
-    assert "AH" not in NOW_NUM and "FR" not in NOW_NUM
-    assert "T" not in LAG_ONLY and "BA" not in LAG_ONLY
+    names = {a["name"] for a in atoms}
+    assert "AA_l0_eq1" not in names
+    assert "O_l0_eq1" not in names
+    assert "O_l0_green" in names
+    assert "O_l2_lt1" in names
     for a in atoms:
-        if a["lag"] == 0:
-            assert a["col"] in NOW_NUM or a["col"] in NOW_TEXT
-            assert by[a["col"]]["value_mine"] == "open"
-        else:
-            assert a["col"] in LAG_ONLY
-            assert a["lag"] >= 1
-    assert any(p["name"] == "O_l2_lt1__and__ES_l0_eq1" for p in pairs)
-    assert any(p["name"] == "O_l2_lt1__and__AA_l1_eq1" for p in pairs)
+        if a["lag"] == 0 and a["kind"] == "num":
+            assert a["col"] in VALUE_OPEN_44
+            assert a["col"] not in LANDMINE_VALUE
+        if a["lag"] == 0 and a["kind"] == "fill":
+            assert a["col"] in FILL_OPEN
+        if a["lag"] >= 1:
+            assert a["col"] in VALUE_OPEN_44 or a["col"] in LAG_EXTRA
+    pairs = build_pairs(collapse_twins(atoms)[:80])
     assert not any("AA_l0_" in p["name"] for p in pairs)
+    labels = (ROOT / "excel_bot" / "research" / "OPEN_SAME_ROW_LABELS.md").read_text()
+    assert "value_mine_open" in labels or "44" in labels
     src = (ENG / "mine_pair_lag.py").read_text(encoding="utf-8")
     assert "from flatten" not in src
     assert "flatten_robust" in src
@@ -1312,6 +1323,7 @@ def test_pair_lag_report_is_committed():
     assert payload["live_untouched"] == "flatten_robust"
     assert payload["excel_cache_used"] is False
     assert payload["entry"] == "open"
+    assert payload.get("gate", "").startswith("Excel-locked") or "44" in (payload.get("gate") or "")
     assert "AH/FR" in payload["standing_open"]
     for r in payload["rows"]:
         assert r["clock"] == "open"

@@ -1,15 +1,13 @@
-# Pair+lag inventory (open-entry pilot)
+# Pair+lag inventory (Excel-locked 44)
 
 _Generated 2026-09-07 · live `flatten_robust` frozen. Yahoo/rows only. No merge._
 
 ## Plain English
 
-Open-knowable same-row formulas are listed on `CLOCK_MAP.md`. This beat does not remine highlight ghosts. It scores **numbers and one text column**, with lags, on a short letter list.
+Open-entry pairwise + lag on the **Excel-locked 44** value-open letters, with timing-tested open fills as optional legs. Lags t−1…t−5 of those letters plus O / AA / H numbers.
 
-Same-row open letters in the walk: **44**. Pilot uses 8 of them plus EQ text and three lag-only columns.
+Same-row values: **44**. Open fills: **12**. Atoms 838 · alive 64 · pairs 1521.
 
-Atoms 79 · pairs 1533 · lags 1…5 · entry **open**.
-
-Not reopened: T/BA close shortboard (highlight ghost); weekly AP–AU + leftover-open+A lags; same-day multi-letter fill counts; AH/FR leftover-open singles / light+O stacks.
+Not reopened: T/BA close shortboard (highlight ghost); weekly AP–AU + leftover-open+A lags; same-day multi-letter fill counts.
 
 Research only. Live frozen.

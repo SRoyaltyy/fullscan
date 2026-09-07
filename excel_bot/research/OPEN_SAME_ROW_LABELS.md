@@ -4,7 +4,7 @@ _Generated 2026-09-07 · research only · live `flatten_robust` frozen._
 
 ## Plain English
 
-This file is the **no-peek gate** for the reopen mine (numbers + text + fills, not highlights alone).
+This file is the **Excel-locked no-peek gate** for the reopen mine (numbers + text + fills, not highlights alone). The miner asserts this 44 + open-fill list against `clock_map.json` and will refuse to invent clocks.
 
 - **Same-row day X** is usable at the **open** only when the clock map says open.
 - **Upper rows** (t−1, t−2, …) are always fair — already known by the open of day X.

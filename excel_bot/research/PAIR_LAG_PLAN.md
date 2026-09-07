@@ -1,28 +1,29 @@
-# Pair+lag mine plan (Cyrus + New Bot reopen)
+# Pair+lag mine plan (Excel-locked open gate)
 
 _Generated 2026-09-07 · live `flatten_robust` frozen. Yahoo/rows A–F seed only. No merge._
 
 ## Plain English
 
-The highlight / single-letter threshold pass is not the whole sheet. Dumps hold **numbers, text, and fills**. A fair 9:30 input is anything already on the sheet by the open of day X: upper rows always; same-row only when the formula is open-knowable. Example shape: O two days ago is under 1 **and** AA today equals 1 — a lag plus a pair, not a highlight count.
+Excel locked the same-row open gate. This mine does **not** invent clocks. Same-row day X is the 44 value-open letters (numbers/text) plus the timing-tested open fills. Yesterday and older of any letter is fair. O green is open; O as a number is close. AA today is close.
 
-## Order
+## Locked same-row open values (44)
 
-1. Clock-map every A–JL cell (done / updated this beat).
-2. Features: values, text, fills; lags 0…5. Open-entry first.
-3. Rules: single-col thresholds, then pairwise cross-col / cross-lag, then small trees **only if** pairs clear the bar.
-4. Bar: Futubull, both SPY tapes, walk-forward halves + Q3, Q1 / July / five-name ghost, n + ≥20 bp vs buy-everyone. Discovery ≠ holdout.
-5. Close-entry after this open pilot. Expand the letter set after the pilot, not 275×275 on day one.
+`A, C, J, Q, Z, AC, AH, BT, BV, CG, CH, DC, DE, EB, EK, EN, EP, EQ, ER, ES, ET, EU, EV, FQ, FR, FS, FU, GD, GE, GF, HF, HG, HW, II, IR, IT, IY, IZ, JB, JC, JD, JE, JF, JL`
 
-## This pilot (bounded)
+## Locked same-row open fills (not values)
 
-Same-row numbers: `C/J/Q/DE/ES/ET/IY/IZ` (value-open, high coverage).
-Same-row text: `EQ` (S/L).
-Lag-only numbers: `O/AA/H` (O / AA / H at t−1…t−5). Same-row of those is **not** open-licensed.
-Atoms **79**. Pairs **1533** (lag atom ∧ same-row atom, plus the open-legal AA-lag siblings of the example).
+`A, B, C, G, J, K, L, M, O, IR, IS, IT`
+
+## Same-row landmines (not open values)
+
+B/G/K/M numbers; O number; L value; D/E/F/H/I same-row; core_score → close only. AA today → close.
+
+Atoms **838**. Alive for pairing **64**. Pairs **1521**. Lags 1…5. Entry **open**.
 
 O[t−2]<1 ∧ AA[t]=1 is close-entry (AA same-row unlicensed); open siblings are O[t−2]<1 ∧ ES[t]=1 and O[t−2]<1 ∧ AA[t−1]=1.
 
-AH/FR and light+O stay baseline. T/BA highlight ghosts stay KILL.
+Highlight ghosts (T/BA, weekly+lag, same-day fill counts) are not reopened. Light+O ± AH/FR is baseline, not a card.
+
+Source: `CLOCK_MAP.md` / `clock_map.json` / `OPEN_SAME_ROW_LABELS.md`.
 
 Research only. Live frozen.
