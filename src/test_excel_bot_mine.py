@@ -1420,11 +1420,76 @@ def test_pair_lag_close_report_is_committed():
             assert "T_l0_" not in r.get("def", "")
 
 
+def test_hi_horizon_gate_excludes_same_row_h_i():
+    from mine_hi_horizon import (
+        CLOSE_TODAY, FILL_CLOSE_TODAY, HORIZONS, LABELS, STANDING,
+        assert_hi_gate, build_close_atoms, build_pairs,
+    )
+    from mine_pair_lag import load_clocks
+    clocks, by = load_clocks()
+    if "same_row_open" not in clocks:
+        from classify_clocks import build
+        clocks = build()
+        by = {r["col"]: r for r in clocks["columns"]}
+    assert_hi_gate(clocks, CLOSE_TODAY)
+    assert "H" not in CLOSE_TODAY and "I" not in CLOSE_TODAY
+    assert "H" not in FILL_CLOSE_TODAY and "I" not in FILL_CLOSE_TODAY
+    assert "AA" in CLOSE_TODAY and "O" in CLOSE_TODAY
+    atoms = build_close_atoms(by, CLOSE_TODAY)
+    names = {a["name"] for a in atoms}
+    assert "AA_l0_eq1" in names
+    assert "O_l2_lt1" in names
+    assert "H_l1_lt1" in names  # lag OK
+    assert "I_l1_lt1" in names
+    assert "H_l0_eq1" not in names
+    assert "I_l0_eq1" not in names
+    assert "H_l0_green" not in names
+    pairs = build_pairs(atoms, CLOSE_TODAY)
+    assert any(p["name"] == "O_l2_lt1__and__AA_l0_eq1" for p in pairs)
+    assert HORIZONS == (1, 2, 3, 5, 10)
+    assert "H" in LABELS and "I" in LABELS
+    assert "light_O" in STANDING
+    src = (ENG / "mine_hi_horizon.py").read_text(encoding="utf-8")
+    assert "from flatten" not in src
+    assert "flatten_robust" in src
+    plan = (ROOT / "excel_bot" / "research" / "HI_HORIZON_PLAN.md").read_text()
+    assert "Plain English" in plan
+    assert "column H" in plan and "column I" in plan
+
+
+def test_hi_horizon_report_is_committed():
+    plan = (ROOT / "excel_bot" / "research" / "HI_HORIZON_PLAN.md").read_text()
+    assert "Plain English" in plan
+    md = (ROOT / "excel_bot" / "research" / "HI_HORIZON.md").read_text()
+    assert "Plain English" in md
+    assert md.index("Plain English") < md.index("Code names (after the English)")
+    assert "1d" in md and "2w" in md
+    assert "light" in md.lower() and "green O" in md
+    sb = (ROOT / "03_scoreboard" / "EXCEL_BOT_MINE.md").read_text()
+    assert "PASS 376" in sb
+    assert "H/I multi-horizon" in sb
+    payload = json.loads(
+        (ROOT / "excel_bot" / "research" / "hi_horizon.json").read_text())
+    assert payload["live_untouched"] == "flatten_robust"
+    assert payload["excel_cache_used"] is False
+    assert "H" in payload["labels"] and "I" in payload["labels"]
+    for r in payload["rows"]:
+        if r.get("family") != "standing":
+            name = r.get("def") or ""
+            assert "H_l0_" not in name
+            assert "I_l0_" not in name
+        if r.get("keep") == "KEEP":
+            assert (r.get("top5_share") or 0) <= 0.25
+            assert (r.get("july_share") or 0) <= 0.40
+            assert "T_green" not in (r.get("def") or "")
+            assert "BA_" not in (r.get("def") or "")
+
+
 def test_unmined_miner_does_not_wire_live():
     for fn in ("mine_unmined.py", "harden_unmined.py", "harden_open_stack.py",
                "harden_close_cluster.py", "harden_close_peers.py",
                "mine_next_region.py", "mine_same_day.py", "mine_pair_lag.py",
-               "mine_pair_lag_close.py"):
+               "mine_pair_lag_close.py", "mine_hi_horizon.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "from flatten" not in src
         assert "sleeve_merge_live" not in src
