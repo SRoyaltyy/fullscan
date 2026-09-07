@@ -215,11 +215,12 @@ def test_clock_map_locks_measured_ao():
 
 def test_all_cols_miners_do_not_wire_live():
     for fn in ("mine_all_cols.py", "capture_all_cols.py", "mine_clock.py",
-               "mine_first.py", "mine_formula_cut.py", "classify_clocks.py"):
+               "mine_first.py", "mine_formula_cut.py", "classify_clocks.py",
+               "harden_hyst_open.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "sleeve_merge_live" not in src
         assert "LIVE_POLICY" not in src
-        if fn.startswith("mine"):
+        if fn.startswith("mine") or fn.startswith("harden"):
             assert "flatten_robust" in src
 
 
@@ -343,6 +344,195 @@ def test_first_mine_never_opens_core_score():
             cols = p["defn"].get("feature_cols")
             if cols:
                 assert_clock_legal(cols, "open")
+
+
+def test_load_spy_tape_accepts_list_json():
+    import tempfile
+    from mine_clock import load_spy_tape
+    import mine_clock as mc
+    with tempfile.TemporaryDirectory() as td:
+        tape = Path(td) / "spy_tape.json"
+        tape.write_text(json.dumps([
+            {"date": "2026-01-02", "close": 100.0},
+            {"date": "2026-01-05", "close": 101.0},
+            {"date": "2026-01-06", "close": 99.0},
+        ]), encoding="utf-8")
+        old_rows, old_grids, old_research = mc.ROWS_DIR, mc.GRIDS_DIR, mc.RESEARCH
+        mc.ROWS_DIR = str(Path(td) / "no_rows")
+        mc.GRIDS_DIR = str(Path(td) / "no_grids")
+        mc.RESEARCH = td
+        try:
+            out = load_spy_tape()
+        finally:
+            mc.ROWS_DIR, mc.GRIDS_DIR, mc.RESEARCH = old_rows, old_grids, old_research
+    assert out["2026-01-05"] == 1
+    assert out["2026-01-06"] == -1
+
+
+def test_lottery_day_flags_one_huge_day():
+    from harden_hyst_open import lottery_day
+    trades = [{"date": f"2026-01-{(i % 28) + 1:02d}", "net": 0.01}
+              for i in range(40)]
+    trades.append({"date": "2026-03-04", "net": 8.0})
+    bad, frac, top_d, top_v, n_days = lottery_day(trades)
+    assert bad is True
+    assert top_d == "2026-03-04"
+    assert frac > 0.25
+    assert n_days >= 2
+    assert top_v == 8.0
+
+
+def test_lottery_day_ok_when_spread_across_days():
+    from harden_hyst_open import lottery_day
+    trades = []
+    for i in range(1, 21):
+        trades.append({"date": f"2026-01-{i:02d}", "net": 0.02})
+        trades.append({"date": f"2026-01-{i:02d}", "net": 0.01})
+    bad, frac, _d, _v, n_days = lottery_day(trades)
+    assert bad is False
+    assert frac < 0.25
+    assert n_days == 20
+
+
+def test_harden_candidates_are_the_six():
+    from harden_hyst_open import CANDIDATE_KEYS, CANDIDATE_NAMES, candidate_pats
+    assert len(CANDIDATE_KEYS) == 6
+    assert CANDIDATE_NAMES == (
+        "hyst_open_core_e5_x0",
+        "hyst_open_core_e5_x2",
+        "hyst_open_score_e5_x2",
+    )
+    holds = sorted({h for _n, h in CANDIDATE_KEYS})
+    assert holds == ["hold1", "hold2"]
+    pats = candidate_pats()
+    assert {p["name"] for p in pats} == set(CANDIDATE_NAMES)
+    for p in pats:
+        assert p["clock"] == "open"
+        assert p["kind"] == "hyst"
+        assert p["key"] in ("open_core", "open_score")
+        assert p["enter"] == 5
+
+
+def _toy_trades(n=400, half="late", tape=1, split="holdout", net=0.015):
+    out = []
+    for i in range(n):
+        month = "03" if half == "early" else "07"
+        day = (i % 28) + 1
+        out.append({
+            "def": "hyst_open_core_e5_x2",
+            "hold": 1,
+            "ticker": f"T{i % 80}",
+            "date": f"2026-{month}-{day:02d}",
+            "split": split,
+            "half": half,
+            "tape": tape,
+            "raw": net + 0.0015,
+            "net": net,
+        })
+    return out
+
+
+def test_harden_score_cell_kills_late_red():
+    from harden_hyst_open import score_cell
+    base = {"n": 1000, "avg_net": -0.0007, "t": -1.7, "win": 0.45}
+    trades = (_toy_trades(400, "early", 1, "discovery", 0.02)
+              + _toy_trades(400, "early", -1, "discovery", 0.02)
+              + _toy_trades(200, "late", 1, "holdout", -0.01)
+              + _toy_trades(200, "late", -1, "holdout", -0.01))
+    row = score_cell("hyst_open_core_e5_x2", 1, trades, base)
+    assert row["verdict"] == "KILL"
+    assert "tape_split" in row["fail_reasons"] or "hold_sign" in row["fail_reasons"]
+    assert row["cost_model"] == "futubull"
+    assert row["live_untouched"] == "flatten_robust"
+
+
+def test_harden_score_cell_kills_spy_down():
+    from harden_hyst_open import score_cell
+    base = {"n": 1000, "avg_net": -0.0007, "t": -1.7, "win": 0.45}
+    trades = (_toy_trades(300, "early", 1, "discovery", 0.02)
+              + _toy_trades(300, "early", -1, "discovery", -0.02)
+              + _toy_trades(200, "late", 1, "holdout", 0.02)
+              + _toy_trades(200, "late", -1, "holdout", -0.02))
+    row = score_cell("hyst_open_core_e5_x2", 1, trades, base)
+    assert row["verdict"] == "KILL"
+    assert "spy_regime" in row["fail_reasons"]
+
+
+def test_harden_score_cell_keeps_balanced_book():
+    from harden_hyst_open import apply_hold1_keep, score_cell
+    base = {"n": 1000, "avg_net": -0.0007, "t": -1.7, "win": 0.45}
+    def book(hold):
+        return (
+            _toy_trades(300, "early", 1, "discovery", 0.018)
+            + _toy_trades(300, "early", -1, "discovery", 0.016)
+            + _toy_trades(200, "late", 1, "holdout", 0.017)
+            + _toy_trades(200, "late", -1, "holdout", 0.015)
+        )
+    r1 = score_cell("hyst_open_core_e5_x2", 1, book(1), base)
+    r2 = score_cell("hyst_open_core_e5_x2", 2, book(2),
+                    {"n": 1000, "avg_net": 0.0041, "t": 4.6, "win": 0.46})
+    apply_hold1_keep([r1, r2])
+    assert r1["verdict"] == "KEEP"
+    assert r2["verdict"] == "KEEP"
+    assert r1["lottery_day_frac"] < 0.25
+
+
+def test_harden_hold1_without_hold2_is_kill():
+    from harden_hyst_open import apply_hold1_keep
+    rows = [
+        {"def": "hyst_open_core_e5_x2", "exit": "hold1",
+         "verdict": "KEEP", "fail_reasons": []},
+        {"def": "hyst_open_core_e5_x2", "exit": "hold2",
+         "verdict": "KILL", "fail_reasons": ["tape_split"]},
+    ]
+    apply_hold1_keep(rows)
+    assert rows[0]["verdict"] == "KILL"
+    assert "hold1_without_hold2" in rows[0]["fail_reasons"]
+
+
+def test_hyst_open_core_fires_and_hold1_is_same_day():
+    from harden_hyst_open import candidate_pats
+    from clock import COST_FUTU_LONG
+    days = _days(16)
+    # Paint A,B,C,G,J deep green on days 4-6 so open_core = +10.
+    for i in (4, 5, 6):
+        fills = list(days[i]["fills"])
+        for col in (0, 1, 2, 6, 9):
+            fills[col] = "00AA00"
+        days[i]["fills"] = fills
+    days = annotate_days(days)
+    pat = [p for p in candidate_pats() if p["name"] == "hyst_open_core_e5_x2"][0]
+    cl = detect_pattern(days, pat)
+    longs = [c for c in cl if c["side"] == 1]
+    assert longs
+    c = longs[0]
+    assert days[c["entry_idx"]]["open_core"] >= 5
+    raw = simulate_clock(days, c, "open", "hold1")
+    ei = c["entry_idx"]
+    exp = (days[ei]["close"] - days[ei]["open"]) / days[ei]["open"]
+    assert abs(raw - exp) < 1e-12
+    net = raw - COST_FUTU_LONG
+    assert net == raw - 0.0015
+
+
+def test_harden_plain_english_before_code_names():
+    from harden_hyst_open import PLAIN, render_plain
+    md = render_plain([], 3603)
+    assert md.index("What the cell means") < md.index("`hyst_") if "`hyst_" in md else True
+    assert "buy at that open" in next(iter(PLAIN.values())) or "9:30" in next(iter(PLAIN.values()))
+    assert "Futubull" in md
+    assert "same day's close" in md
+    assert "SPY-up" in md and "SPY-down" in md
+    assert "fattest" in md.lower() or "25%" in md
+    assert "flatten_robust" in md
+
+
+def test_harden_does_not_import_flatten_live():
+    src = (ENG / "harden_hyst_open.py").read_text(encoding="utf-8")
+    assert "import flatten" not in src
+    assert "sleeve_merge_live" not in src
+    assert "LIVE_POLICY" not in src
+    assert "flatten_robust" in src
 
 
 if __name__ == "__main__":

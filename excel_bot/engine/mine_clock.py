@@ -80,7 +80,7 @@ def load_spy_tape():
         if not os.path.exists(path):
             continue
         raw = json.load(open(path))
-        rows = raw.get("days") or raw
+        rows = raw if isinstance(raw, list) else (raw.get("days") or raw)
         out = {}
         prev = None
         for r in rows:
