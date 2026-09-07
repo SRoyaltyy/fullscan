@@ -1,8 +1,12 @@
-"""Lean --all-cols capture from the excel-state rows cache (no Yahoo).
+"""Lean A–JL (275 col) capture from the excel-state rows cache (no Yahoo).
 
-One latest anchor per ticker. Daily rows 2–145, columns A–JL (275):
-value + fill. Research sample only. Live flatten_robust is not changed.
+This is the sample --all-cols rebuild. Daily rows 2–145, columns A–JL:
+value + fill. `run.py --all-cols` dumps the same 275 cols but walks rows
+1–364 and re-fetches Yahoo — minutes/ticker. This path is ~1.2 s/ticker.
 
+Research only. Live flatten_robust is not changed.
+
+  python engine/capture_all_cols.py --from-split --n-disc 100 --n-hold 60
   python engine/capture_all_cols.py --tickers AAPL MSFT --out research/all_cols_sample
 """
 from __future__ import annotations
@@ -23,14 +27,34 @@ from evaluator import Evaluator  # noqa: E402
 from stockhistory import serial  # noqa: E402
 from xlrt import is_arr  # noqa: E402
 
-ROWS_DIR = os.environ.get("ROWS_DIR", "data/rows")
-MODEL = "engine/model.json"
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+ROWS_DIR = os.environ.get("ROWS_DIR", os.path.join(ROOT, "data", "rows"))
+MODEL = os.path.join(HERE, "model.json")
+SPLIT_PATH = os.path.join(HERE, "holdout_split.json")
 ALL_COLS = 275
 ROW_START, ROW_END = 2, 145
 
 
 def deser(rows):
     return [{**r, "date": date.fromisoformat(r["date"])} for r in rows]
+
+
+def stride_pick(xs, n):
+    if n <= 0:
+        return []
+    if len(xs) <= n:
+        return list(xs)
+    step = len(xs) / n
+    return [xs[int(i * step)] for i in range(n)]
+
+
+def tickers_from_split(n_disc, n_hold):
+    split = json.load(open(SPLIT_PATH))
+    have = {fn[:-5] for fn in os.listdir(ROWS_DIR) if fn.endswith(".json")}
+    disc = sorted(t for t in split["discovery"] if t in have)
+    hold = sorted(t for t in split["holdout"] if t in have)
+    return stride_pick(disc, n_disc), stride_pick(hold, n_hold)
 
 
 def capture_ticker(ticker, outdir):
@@ -82,16 +106,35 @@ def capture_ticker(ticker, outdir):
 
 
 def main():
+    os.chdir(ROOT)
     ap = argparse.ArgumentParser()
     ap.add_argument("--tickers", nargs="*", default=[])
+    ap.add_argument("--from-split", action="store_true")
+    ap.add_argument("--n-disc", type=int, default=100)
+    ap.add_argument("--n-hold", type=int, default=60)
     ap.add_argument("--out", default="research/all_cols_sample")
+    ap.add_argument("--skip-existing", action="store_true", default=True)
     args = ap.parse_args()
-    tickers = args.tickers
-    print(f"capture_all_cols n={len(tickers)} -> {args.out}", flush=True)
+    if args.from_split:
+        disc, hold = tickers_from_split(args.n_disc, args.n_hold)
+        tickers = disc + hold
+        print(f"from-split disc={len(disc)} hold={len(hold)}", flush=True)
+    else:
+        tickers = args.tickers
+        disc = hold = []
+    outdir = args.out if os.path.isabs(args.out) else os.path.join(ROOT, args.out)
+    os.makedirs(outdir, exist_ok=True)
+    print(f"capture_all_cols n={len(tickers)} -> {outdir}", flush=True)
     times = []
-    ok = err = 0
+    ok = err = skipped = 0
     for t in tickers:
-        name, n, sec, e = capture_ticker(t, args.out)
+        dest = os.path.join(outdir, f"{t}.json")
+        if args.skip_existing and os.path.exists(dest):
+            skipped += 1
+            times.append(0.0)
+            print(f"  skip {t}", flush=True)
+            continue
+        name, n, sec, e = capture_ticker(t, outdir)
         times.append(sec)
         if e:
             err += 1
@@ -99,14 +142,26 @@ def main():
         else:
             ok += 1
             print(f"  ok {name} days={n} {sec:.1f}s", flush=True)
+    measured = [s for s in times if s > 0]
     meta = {
-        "n_ok": ok, "n_err": err,
+        "n_ok": ok, "n_err": err, "n_skipped": skipped,
+        "n_target": len(tickers),
+        "n_disc": len(disc) if disc else None,
+        "n_hold": len(hold) if hold else None,
         "seconds": times,
-        "minutes_per_ticker": (sum(times) / len(times) / 60.0) if times else None,
+        "seconds_measured": measured,
+        "minutes_per_ticker": (sum(measured) / len(measured) / 60.0) if measured else None,
         "tickers": tickers,
+        "discovery": disc,
+        "holdout": hold,
+        "path": "lean_rows_cache",
+        "cols": "A..JL",
+        "n_cols": ALL_COLS,
+        "rows": f"{ROW_START}-{ROW_END}",
+        "note": "run.py --all-cols is the full 1-364 Yahoo path; this is the cheap sample rebuild",
     }
-    json.dump(meta, open(os.path.join(args.out, "_meta.json"), "w"), indent=1)
-    print(f"DONE ok={ok} err={err} min/ticker="
+    json.dump(meta, open(os.path.join(outdir, "_meta.json"), "w"), indent=1)
+    print(f"DONE ok={ok} skip={skipped} err={err} min/ticker="
           f"{meta['minutes_per_ticker']}")
 
 

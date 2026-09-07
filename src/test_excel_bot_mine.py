@@ -140,7 +140,8 @@ def test_inventory_full_vs_stored():
     assert inv["n_formulas"] > 30000
     assert inv["n_cf_columns"] > 15
     assert inv["all_cols_mode"]["used_in_daily"] is False
-    assert inv["all_cols_mode"].get("phase") == 2
+    assert inv["all_cols_mode"].get("phase") == 1
+    assert inv["all_cols_mode"].get("priority") == "whole_excel_sample"
     assert inv["stored"]["missing_vs_full"]["formula_values_G_to_O"] is True
     assert inv["stored"]["signal_colors"].startswith("A-O")
     assert inv["stored"]["fill_letters"] == "A..O"
@@ -180,9 +181,11 @@ def test_notes_and_scoreboard_exist():
 def test_all_cols_patterns_clocks_are_legal():
     from mine_all_cols import PATS, verdict
     for name, _side, clock in PATS:
-        if name.startswith("lag_"):
+        if name.startswith("lag_") or name in ("A_green", "A_red"):
             assert clock == "open", name
         else:
+            assert clock == "close", name
+        if "core_score" in name:
             assert clock == "close", name
     assert verdict(n=200, n_tickers=25, t=4.0, avg=0.01, early_s=0.01, late_s=0.01) == "THIN"
     assert verdict(n=300, n_tickers=50, t=3.2, avg=0.01, early_s=0.01, late_s=0.01) == "PASS"
@@ -200,21 +203,19 @@ def test_all_cols_miners_do_not_wire_live():
 
 
 def test_all_cols_sample_size_is_thin_by_design():
-    """N=20–50 discovery cannot clear the 50-ticker ship bar."""
+    """Ship ticker bar stays 50 — sample N is chosen to be able to clear it."""
+    from clock import SHIP as CLOCK_SHIP
     from mine_all_cols import SHIP
-    assert SHIP["n_tickers"] == 50
+    assert SHIP["n_tickers"] == CLOCK_SHIP["n_tickers"] == 50
 
 
 def test_all_cols_mine_report_is_committed():
     md = (ROOT / "excel_bot" / "research" / "ALL_COLS_MINE.md").read_text()
-    assert "THIN 90" in md
     assert "flatten_robust" in md
-    assert "| THIN |" in md
     payload = json.loads((ROOT / "excel_bot" / "research" / "all_cols_mine.json").read_text())
-    assert payload["n_thin"] == 90
-    assert payload["n_pass"] == 0
-    assert payload["n_tickers"] >= 20
     assert payload["live_untouched"] == "flatten_robust"
+    assert payload["n_tickers"] >= 20
+    assert payload.get("n_pass", 0) + payload.get("n_fail", 0) + payload.get("n_thin", 0) >= 1
 
 
 def test_pack_cell_quality_fail_is_fail_not_thin():

@@ -8,9 +8,10 @@ Daily / excel-state state is an **A–O fill grid** (15 columns) plus Yahoo OHLC
 The emulator can dump **A–JL (275 columns)** via `run.py --all-cols`, but that
 mode is opt-in, minutes-per-ticker, and **not** what the daily job stores.
 Formula *values* for G–O and every column past O are absent from stored grids.
-Color mining on the ship-bar surface is therefore A–O fills + OHLCV-derived
-formula states (H, I, J, gap). Deeper CF (97 columns past O) is unevaluated
-until someone persists `--all-cols` grids.
+Color mining on the **stored** ship-bar surface is A–O fills + OHLCV-derived
+formula states (H, I, J, gap). Deeper CF (97 columns past O) is **in the
+emulator** (`model.json` max_col 275) and is captured by `--all-cols` /
+`capture_all_cols.py`. A–O-only is not the whole Excel.
 
 ## What excel-state actually keeps
 
@@ -94,21 +95,27 @@ Daily `done_grids` is ~3445 color rebuilds; this cycle rebuilt **3603** A–O
 grids from excel-state rows (2026-01-05 → 2026-09-04). excel-state still
 has **no** persisted grid JSON.
 
-## Standing mine order (ship bar, no live wire)
+## Standing mine order (Cyrus override 2026-09-07)
 
-1. **Open-knowable / a_score** — A-keyed, `open_score`, `open_core`, open
-   color combos, lag (yesterday close-knowable + today A), gap/J value
-   gates. Never `core_score` at open.
-2. **Close-entry** — refresh L3-like + non-TP low-vol holds; then S1/S2.
-   Defer L4/L5 until something stronger than live −4% / −0.55% exists.
-3. **A–JL phase 2** — full `--all-cols` rebuild of 3603 is expensive
-   (`run.py` minutes/ticker; lean capture ~1.2 s × 3603 ≈ 70 min).
-   Do it after the A–O surface is exhausted. Cheap 35-ticker pilot already
-   **THIN 90** (`ALL_COLS_MINE.md`).
+Mine the **whole emulator** (A..JL). A–O-only is a parallel thin track,
+not a substitute.
+
+1. **Sample `--all-cols` rebuild** from excel-state rows / discovery+holdout
+   (`capture_all_cols.py`). Document cost (lean ~1.2 s/ticker, rows 2–145;
+   `run.py --all-cols` is minutes/ticker, rows 1–364).
+2. **Mine A–JL under PIT** — open: A-keyed + yesterday-deeper+today A;
+   close: same-day deeper values/fills and **core_score** (A..J includes
+   D,E,F,H,I → CLOSE only; that is the landmine).
+3. **Sleeve-native BTs** holds 1/2/3/5/8, ship bar, ≥20 bp vs uncond.
+4. **A–O** (`mine_first.py` / `AO_FIRST_MINE.md`) stays a cheap parallel
+   track. Do **not** treat A–O-only as “whole Excel.”
+
+Full 3603 A–JL lean rebuild ≈ 70 min; schedule after the sample either
+keeps or is exhausted.
 
 ## What would exhaust the rest
 
-Persist `--all-cols` (or a chosen subset: L/O values, EL/DD/CP, AI, JA, IY)
-on the same 3,603 tickers and re-run the clock miner. Until then, claiming
-the *workbook* is exhausted would be a lie; claiming the **stored A–O fill
-surface** is exhausted is the honest bar.
+Persist A–JL (or a chosen subset: L/O values, EL/DD/CP, AI, JA, IY) on
+the same 3,603 tickers and re-run the clock miner. The stored A–O fill
+surface is a **subset**. Claiming the workbook is mined after A–O-only
+would be a lie.

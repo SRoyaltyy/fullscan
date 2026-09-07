@@ -50,7 +50,8 @@
   "flag": "python engine/run.py --all-cols",
   "captures": "A..JL (275) values + fills, rows 1\u2013364",
   "used_in_daily": false,
-  "phase": 2,
+  "phase": 1,
+  "priority": "whole_excel_sample",
   "cost": "minutes per ticker via run.py; lean capture ~1.2 s/ticker"
  },
  "visible_A_to_O": [
