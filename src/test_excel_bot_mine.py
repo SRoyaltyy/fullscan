@@ -219,7 +219,7 @@ def test_all_cols_miners_do_not_wire_live():
                "mine_first.py", "mine_formula_cut.py", "classify_clocks.py",
                "harden_hyst_open.py", "mine_color_join.py", "pit_joins.py",
                "mine_unmined.py", "harden_unmined.py", "harden_open_stack.py",
-               "harden_close_cluster.py"):
+               "harden_close_cluster.py", "harden_close_peers.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "sleeve_merge_live" not in src
         assert "LIVE_POLICY" not in src
@@ -1119,9 +1119,50 @@ def test_close_cluster_report_is_committed():
             assert r.get("q3") and r["q3"].get("n", 0) >= 40
 
 
+def test_close_peers_fire_leftover_defs():
+    from harden_close_peers import PEERS, fire
+    assert [p[0] for p in PEERS] == ["CZ", "EH", "IB", "HO", "IL", "GV"]
+    assert fire({"CZ": {"v": 2}}, "CZ", "ge2")
+    assert not fire({"CZ": {"v": 1}}, "CZ", "ge2")
+    assert fire({"EH": {"v": 4}}, "EH", "ge1")
+    assert fire({"IB": {"v": 1}}, "IB", "eq1")
+    assert not fire({"IB": {"v": 3}}, "IB", "eq1")
+    src = (ENG / "harden_close_peers.py").read_text(encoding="utf-8")
+    assert "from flatten" not in src
+    assert "flatten_robust" in src
+    assert "T/BA" in src or "T / BA" in src
+
+
+def test_close_peers_report_is_committed():
+    md = (ROOT / "excel_bot" / "research" / "CLOSE_CLUSTER.md").read_text()
+    assert "Close-cluster peers" in md
+    assert md.index("T alone is KILL") < md.index("Close-cluster peers")
+    assert "CZ" in md and "EH" in md and "IB" in md
+    assert "HO" in md and "IL" in md and "GV" in md
+    assert "Peers table" in md
+    assert "Q1" in md
+    sb = (ROOT / "03_scoreboard" / "EXCEL_BOT_MINE.md").read_text()
+    assert "PASS 376" in sb
+    assert "Close-cluster peers" in sb
+    payload = json.loads(
+        (ROOT / "excel_bot" / "research" / "close_cluster_peers.json").read_text())
+    assert payload["live_untouched"] == "flatten_robust"
+    assert payload["excel_cache_used"] is False
+    assert payload["tba_cluster"].startswith("KILL")
+    assert payload["open_stack"] == "untouched"
+    letters = {r["letter"] for r in payload["rows"]}
+    assert letters == {"CZ", "EH", "IB", "HO", "IL", "GV"}
+    for r in payload["rows"]:
+        assert r["clock"] == "close"
+        if r["verdict"] == "KEEP":
+            q1 = r.get("q1") or {}
+            assert q1.get("avg_net", 0) > 0
+            assert (r.get("top5_share") or 0) <= 0.25
+
+
 def test_unmined_miner_does_not_wire_live():
     for fn in ("mine_unmined.py", "harden_unmined.py", "harden_open_stack.py",
-               "harden_close_cluster.py"):
+               "harden_close_cluster.py", "harden_close_peers.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "from flatten" not in src
         assert "sleeve_merge_live" not in src

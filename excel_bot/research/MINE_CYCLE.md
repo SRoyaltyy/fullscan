@@ -130,3 +130,7 @@ Open-stack: light+O ∧ AH/FR KEEP 4 · KILL 2 · THIN 0. Standing light+O uncha
 ## Close-cluster harden (T / BA)
 
 Close-cluster T/BA: KEEP 0 · KILL 6 · THIN 0. Open recipes untouched. Finviz BLOCKED. See `CLOSE_CLUSTER.md`.
+
+## Close-cluster peers (CZ / EH / IB / HO / IL / GV)
+
+Close-cluster peers CZ/EH/IB/HO/IL/GV: KEEP 0 · KILL 12 · THIN 0. T/BA untouched. Open recipes untouched. See `CLOSE_CLUSTER.md`.

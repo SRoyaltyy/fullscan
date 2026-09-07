@@ -846,3 +846,46 @@ Code names (after the English): `fill_T_green`, `valclose_BA_eq1`, `close_T_gree
 - Calendar half cut **2026-05-01**. Q3 cut **2026-07-01**. Q1 cut **2026-04-01**. Futubull 0.15% long.
 
 Research only. One 2026 regime.
+
+## Close-cluster peers (CZ / EH / IB / HO / IL / GV)
+
+_Generated 2026-09-07 · live `flatten_robust` frozen. Yahoo/rows A–F seed only. Close entry only. T/BA and open recipes untouched._
+
+## Plain English
+
+The leftover unique-36 shortboard still listed six close letters after T and BA: **CZ, EH, IB, HO, IL, GV**. Same deeper bar that killed T/BA: Q1 must not be red, five names must not own the P&L, July must not be the year, both SPY tapes, Futubull, hold1 and hold2, beat buy-everyone by 20 bp.
+
+**CZ, EH, IB, HO, IL, and GV are all KILL** on hold1 and hold2. Same ghost as T/BA: leftover KEEP was a May-cut / Q3 print. EH and IB lose money in Q1. CZ / HO / IL / GV hold2 Q1 is flat to a few basis points of green, but five names still own 30–48% of P&L and the months flip (June red, July fat). Day-lottery stays under 25%. Not a new close keep.
+
+Stacks were skipped — no two peers cleared Q1 and the name-ghost bar, so a pairwise book would only stack ghosts.
+
+Singles: **KEEP 0** · **KILL 12** · **THIN 0**. Dumps **3603**. Close-long everyone-else hold2 +0.83% (n=495012). T/BA stay KILL. Open recipes untouched.
+
+### Peers table
+
+| letter | what it is | hold | holdout | vs everyone | Q1 | Q3 | July share | day-lottery | top-5 names | verdict | why |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| **CZ** | how many recent CP prints were negative is at least 2 | next 1 | +0.97% (n=132153) | +0.50 pp | -0.15% (n=29168) | +1.85% (n=125771) | 41% | 9.8% | 39% | **KILL** | q1_sign,month_split,month_lottery,ticker_ghost |
+| **CZ** | how many recent CP prints were negative is at least 2 | next 2 | +1.51% (n=131044) | +0.68 pp | +0.01% (n=29168) | +2.91% (n=123062) | 38% | 8.7% | 30% | **KILL** | month_split,ticker_ghost |
+| **EH** | any of FP–FU is negative (EH ≥ 1) | next 1 | +0.97% (n=125906) | +0.50 pp | -0.25% (n=33846) | +1.84% (n=119362) | 45% | 8.4% | 42% | **KILL** | q1_sign,month_split,month_lottery,ticker_ghost |
+| **EH** | any of FP–FU is negative (EH ≥ 1) | next 2 | +1.34% (n=124724) | +0.51 pp | -0.13% (n=33846) | +2.74% (n=116468) | 42% | 9.4% | 28% | **KILL** | q1_sign,month_split,month_lottery,ticker_ghost |
+| **IB** | the 0/1 count IB equals 1 (IB≥3 was already mined) | next 1 | +1.01% (n=32167) | +0.54 pp | -0.03% (n=9854) | +2.11% (n=33310) | 41% | 12.4% | 42% | **KILL** | q1_sign,month_split,month_lottery,ticker_ghost |
+| **IB** | the 0/1 count IB equals 1 (IB≥3 was already mined) | next 2 | +1.48% (n=31778) | +0.64 pp | -0.08% (n=9854) | +3.17% (n=32349) | 37% | 8.6% | 44% | **KILL** | q1_sign,month_split,ticker_ghost |
+| **HO** | a signed HN/GU cross equals 1 | next 1 | +3.18% (n=9584) | +2.70 pp | -0.41% (n=3603) | +7.38% (n=8352) | 62% | 22.8% | 58% | **KILL** | disc_t,hold_t,tape_split,q1_sign,month_split,month_lottery,ticker_ghost |
+| **HO** | a signed HN/GU cross equals 1 | next 2 | +3.41% (n=9528) | +2.58 pp | +0.08% (n=3603) | +7.36% (n=8209) | 42% | 19.8% | 48% | **KILL** | month_split,month_lottery,ticker_ghost |
+| **IL** | bins of same-day return H equal 1 | next 1 | +1.86% (n=26313) | +1.38 pp | +0.17% (n=12588) | +3.99% (n=22321) | 35% | 14.7% | 38% | **KILL** | month_split,month_lottery,ticker_ghost |
+| **IL** | bins of same-day return H equal 1 | next 2 | +3.03% (n=26155) | +2.19 pp | +0.14% (n=12588) | +7.47% (n=21895) | 51% | 12.4% | 42% | **KILL** | month_split,month_lottery,ticker_ghost |
+| **GV** | a 0/1 composite of deeper flags equals 1 | next 1 | +1.78% (n=49804) | +1.30 pp | -0.02% (n=17751) | +3.33% (n=46933) | 55% | 11.7% | 53% | **KILL** | q1_sign,month_split,month_lottery,ticker_ghost |
+| **GV** | a 0/1 composite of deeper flags equals 1 | next 2 | +2.56% (n=49429) | +1.73 pp | +0.18% (n=17751) | +5.31% (n=46011) | 50% | 8.7% | 46% | **KILL** | month_split,month_lottery,ticker_ghost |
+
+Code names (after the English): `valclose_CZ_ge2`, `valclose_EH_ge1`, `flag_IB_eq1`, `valclose_HO_eq1`, `valclose_IL_eq1`, `valclose_GV_eq1`.
+
+### What this does not change
+
+- T / BA / T∧BA stay **KILL** from the prior close-cluster beat.
+- Standing A–O keeps stay the **three light + green O** recipes. AH/FR open-stack is not reopened.
+- No new A–JL surface. Close peers only.
+- Finviz volume stays **BLOCKED**. Live `flatten_robust` frozen. No cards.
+- Q1 cut **2026-04-01**. Q3 cut **2026-07-01**. Futubull 0.15% long.
+
+Research only. One 2026 regime.
