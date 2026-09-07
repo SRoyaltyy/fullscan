@@ -110,8 +110,10 @@ not a substitute.
 4. **A–O** (`mine_first.py` / `AO_FIRST_MINE.md`) stays a cheap parallel
    track. Do **not** treat A–O-only as “whole Excel.”
 
-Full 3603 A–JL lean rebuild ≈ 70 min; schedule after the sample either
-keeps or is exhausted.
+This cycle’s sample: **185** tickers (114 discovery / 71 holdout), **1.15 s/ticker**,
+64 patterns, **PASS 0 · FAIL 300 · THIN 5**. No sleeve-shaped keeper.
+Full 3603 A–JL lean rebuild ≈ 70 min; schedule after a stronger sample
+or a column subset, not because A–O is “done.”
 
 ## What would exhaust the rest
 

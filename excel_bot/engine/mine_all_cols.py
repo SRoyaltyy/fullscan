@@ -293,8 +293,9 @@ def pack_row(name, clock, side, rule, cell, baselines):
     if up and dn and up["n"] >= 40 and dn["n"] >= 40:
         if up["avg_net"] <= 0 or dn["avg_net"] <= 0:
             reasons.append("spy_regime")
-    cmp = h if h else d
-    if b and cmp and cmp["avg_net"] < b["avg_net"] + 0.002:
+    beat = 0.002
+    if b and ((d and d["avg_net"] < b["avg_net"] + beat) or
+              (h and h["avg_net"] < b["avg_net"] + beat)):
         reasons.append("no_edge_vs_uncond")
     n_t = len(cell["tickers"])
     if n_t < 50 or d["n"] < 80:
@@ -411,6 +412,11 @@ def render(rows, baselines, files):
     meta_path = os.path.join(SAMPLE, "_meta.json")
     meta = json.load(open(meta_path)) if os.path.exists(meta_path) else {}
     tickers = [os.path.basename(f)[:-5] for f in files]
+    split = json.load(open(os.path.join(HERE, "holdout_split.json")))
+    n_disc_files = sum(1 for t in tickers if t in set(split["discovery"]))
+    n_hold_files = sum(1 for t in tickers if t in set(split["holdout"]))
+    meta["n_disc"] = n_disc_files
+    meta["n_hold"] = n_hold_files
     n_pass = sum(1 for r in rows if r["verdict"] == "PASS")
     n_fail = sum(1 for r in rows if r["verdict"] == "FAIL")
     n_thin = sum(1 for r in rows if r["verdict"] == "THIN")
@@ -434,8 +440,8 @@ def render(rows, baselines, files):
         "### Cost",
         "",
         f"- Lean rows-cache capture (this sample): **{sec} s/ticker** "
-        f"({spt} min/ticker) · rows 2–145 · 275 cols. "
-        f"N={len(files)} → ~{round((spt or 0)*len(files), 2)} min.",
+        f"· rows 2–145 · 275 cols. "
+        f"N={len(files)} → ~{round((spt or 0)*len(files), 1)} min.",
         "- `run.py --all-cols` (Yahoo + rows 1–364): minutes/ticker — not "
         "used for this sample. Full 3603 via lean path ≈ 70 min.",
         "",

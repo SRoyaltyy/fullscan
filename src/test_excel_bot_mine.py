@@ -212,10 +212,17 @@ def test_all_cols_sample_size_is_thin_by_design():
 def test_all_cols_mine_report_is_committed():
     md = (ROOT / "excel_bot" / "research" / "ALL_COLS_MINE.md").read_text()
     assert "flatten_robust" in md
+    assert "whole Excel" in md or "A–JL" in md
+    assert "core_score" in md
     payload = json.loads((ROOT / "excel_bot" / "research" / "all_cols_mine.json").read_text())
     assert payload["live_untouched"] == "flatten_robust"
-    assert payload["n_tickers"] >= 20
+    assert payload["n_tickers"] >= 50
+    assert payload.get("surface") == "A-JL"
+    assert payload.get("ao_is_not_whole_excel") is True
     assert payload.get("n_pass", 0) + payload.get("n_fail", 0) + payload.get("n_thin", 0) >= 1
+    for r in payload.get("cells") or []:
+        if "core_score" in r.get("def", ""):
+            assert r["clock"] == "close"
 
 
 def test_pack_cell_quality_fail_is_fail_not_thin():
