@@ -167,7 +167,8 @@ the book after fees in **2025 and 2026**, both SPY tapes, n≥400, ≥50
 names, not a lottery, not half the book — and is **not** just CE/CF
 washout or the S/DI beaten-up twin.
 
-On this latest tile, that second link is **not there**. The interesting
-new object is CE’s washout, and it still owes 2025.
+The second *morning-streak* link is **not there** on this paint. The
+second *number* link is CE’s washout, and it now has 2025. Still
+research only.
 
 Research only. No cards. No live wire.

@@ -8,6 +8,7 @@ the feature is known. Compact per-letter arrays so the full dump fits.
 from __future__ import annotations
 
 import argparse
+import gc
 import json
 import os
 import sys
@@ -28,6 +29,20 @@ ROOT = HERE.parent
 OUT_MD = ROOT / "research" / "UPPER_LOWER.md"
 OUT_JSON = ROOT / "research" / "upper_lower.json"
 SKIP_NUM = set("A IR P".split())
+# Formula twins on daily rows — one sleeve, many letters.
+LETTER_ALIAS = {
+    "S": "DI", "DI": "DI",
+    "V": "DK", "DK": "DK",
+    "GH": "EC", "EC": "EC",
+    "JD": "HO", "HO": "HO",
+}
+OP_ALIAS = {
+    "eq1": "pos", "ge1": "pos", "gt0": "pos",
+    "eq0": "zero",
+    "lt0": "neg", "le-1": "neg1",
+    "qhi": "qhi", "qlo": "qlo",
+    "green": "green", "red": "red",
+}
 
 LABELS = (
     ("y_h1", "same-day leftover H (open→close)"),
@@ -231,20 +246,59 @@ def build_past_gates(df, inv, disc_mask):
     return out
 
 
-def write_report(meta, rows):
+def op_family(gate: str) -> str:
+    """CE_l1_eq1 → pos; O_l1_green → green; XX_l1_is_FOO → is_FOO."""
+    tail = gate.split("_", 2)[-1] if "_" in gate else gate
+    if tail.startswith("is_"):
+        return tail
+    return OP_ALIAS.get(tail, tail)
+
+
+def letter_family(let: str) -> str:
+    return LETTER_ALIAS.get(let, let)
+
+
+def sleeve_key(r) -> tuple:
+    """Same holdout n + mean + label + side = the same days, reprinted."""
+    return (
+        r["label"],
+        r["side"],
+        r.get("hold_n"),
+        round(r.get("hold_mean") or 0, 4),
+    )
+
+
+def collapse_keeps(rows):
+    """Drop eq1/ge1/gt0 copies and formula twins of one sleeve."""
     keeps = [r for r in rows if r["verdict"] == "KEEP"]
-    seen = set()
+    by_sleeve = defaultdict(list)
+    for r in keeps:
+        by_sleeve[sleeve_key(r)].append(r)
     uniq = []
-    for r in sorted(keeps, key=lambda x: -abs(x.get("hold_mean") or 0)):
-        key = (r["letter"], r["label"], r["side"], r.get("hold_n"),
-               round(r.get("hold_mean") or 0, 4))
-        if key in seen:
-            continue
-        seen.add(key)
-        uniq.append(r)
+    for key, members in by_sleeve.items():
+        members = sorted(members, key=lambda x: (x["letter"], x["gate"]))
+        head = dict(members[0])
+        letters = sorted({m["letter"] for m in members})
+        head["twins"] = letters
+        head["n_twins"] = len(members)
+        uniq.append(head)
+    uniq.sort(key=lambda x: -abs(x.get("hold_mean") or 0))
+    return uniq
+
+
+def _pct(x):
+    if x is None:
+        return "—"
+    return f"{x*100:+.2f}%"
+
+
+def write_report(meta, rows):
+    uniq = collapse_keeps(rows)
     by_lab = defaultdict(list)
     for r in uniq:
         by_lab[r["label"]].append(r)
+    n_keep = sum(1 for r in rows if r["verdict"] == "KEEP")
+    n_kill = sum(1 for r in rows if r["verdict"] == "KILL")
     lines = [
         "# Upper rows → later rows",
         "",
@@ -260,18 +314,25 @@ def write_report(meta, rows):
         f"Dumps **{meta['n_tickers']}** names · **{meta['n_rows']}** liquid "
         f"days · **{meta['date_min']} → {meta['date_max']}** · 2025 days "
         f"**{meta['n_y2025']}** · gates **{meta['n_gates']}** · "
-        f"hardened **{meta['n_hardened']}** · raw KEEP **{meta['n_keep']}** "
-        f"· unique after twins **{len(uniq)}**.",
+        f"hardened **{meta['n_hardened']}** · raw KEEP **{n_keep}** "
+        f"· unique sleeves **{len(uniq)}** · KILL **{n_kill}**.",
         "",
     ]
     if uniq:
         lines.append(
-            f"**KEEP {len(uniq)}** unique past→future links after the ship bar "
-            f"(ticker holdout, both years when present, both SPY tapes, fees, "
-            f"not a lottery / name ghost)."
+            f"**Yes — {len(uniq)} unique past→future sleeve(s)** cleared "
+            f"the ship bar (ticker holdout, both years when present, both "
+            f"SPY tapes, fees, not a lottery / name ghost). Raw KEEP "
+            f"{n_keep} is not {n_keep} edges: `eq1`=`ge1`=`gt0` and "
+            f"S/DI, V/DK, GH/EC, JD/HO are reprints."
         )
     else:
-        lines.append("**KEEP 0** unique past→future links after the ship bar.")
+        lines.append(
+            "**KEEP 0** unique past→future sleeves after the ship bar. "
+            "Older cells still *describe* price (they are formulas on "
+            "A–F). They did not forecast the next few days both years, "
+            "both tapes, after fees, except reprints that died on harden."
+        )
     lines.append("")
     for ycol, title in LABELS:
         chunk = by_lab.get(ycol, [])
@@ -280,18 +341,87 @@ def write_report(meta, rows):
             lines += ["None.", ""]
             continue
         lines += [
-            "| when (older row) | side | holdout after fees | vs book | n |",
-            "|---|---|---:|---:|---:|",
+            "| when (older row) | side | holdout after fees | vs book | "
+            "2025 | 2026 | n | twins |",
+            "|---|---|---:|---:|---:|---:|---:|---|",
         ]
-        for r in chunk[:25]:
+        for r in chunk[:30]:
+            twins = ",".join(r.get("twins") or [r["letter"]])
             lines.append(
                 f"| {r['plain']} | {r['side']} | "
-                f"{(r['hold_mean'] or 0)*100:+.2f}% | "
-                f"{(r.get('uncond') or 0)*100:+.2f}% | {r['hold_n']} |"
+                f"{_pct(r.get('hold_mean'))} | {_pct(r.get('uncond'))} | "
+                f"{_pct(r.get('y2025_mean'))} | {_pct(r.get('y2026_mean'))} | "
+                f"{r.get('hold_n')} | {twins} |"
             )
+        if len(chunk) > 30:
+            lines.append(f"| … | | | | | | | {len(chunk)-30} more |")
+        lines.append("")
+    near = [
+        r for r in rows
+        if r["verdict"] == "KILL"
+        and (r.get("hold_t") or 0) >= 2
+        and abs(r.get("hold_mean") or 0) >= 0.003
+    ]
+    if near:
+        lines += [
+            "### Near-misses (holdout looks real, harden said no)",
+            "",
+            "Usually a 2026 bounce that does not repeat in 2025, or one "
+            "SPY tape only. First 20 unique sleeves.",
+            "",
+            "| when | side | label | holdout | why |",
+            "|---|---|---|---:|---|",
+        ]
+        seen = set()
+        shown = 0
+        for r in sorted(near, key=lambda x: -abs(x.get("hold_mean") or 0)):
+            k = sleeve_key(r)
+            if k in seen:
+                continue
+            seen.add(k)
+            why = ",".join(r.get("why") or [])[:80]
+            lines.append(
+                f"| {r['plain']} | {r['side']} | {r['label']} | "
+                f"{_pct(r.get('hold_mean'))} | {why} |"
+            )
+            shown += 1
+            if shown >= 20:
+                break
         lines.append("")
     lines += ["Research only. No cards. No live wire.", ""]
     OUT_MD.write_text("\n".join(lines))
+    return uniq
+
+
+def _row_from_harden(name, ycol, let, plain, side, v, why, parts, uncond,
+                     day_s, top5):
+    holdp = parts.get("hold") or {}
+    y25 = parts.get("y2025") or {}
+    y26 = parts.get("y2026") or {}
+    return {
+        "gate": name, "letter": let, "plain": plain,
+        "label": ycol, "side": side,
+        "verdict": v, "why": why,
+        "hold_mean": holdp.get("mean"),
+        "hold_n": holdp.get("n"),
+        "hold_t": holdp.get("t"),
+        "hold_tickers": holdp.get("tickers"),
+        "uncond": (uncond or {}).get("mean"),
+        "y2025_mean": y25.get("mean"),
+        "y2025_n": y25.get("n"),
+        "y2026_mean": y26.get("mean"),
+        "y2026_n": y26.get("n"),
+        "day_share": day_s, "top5_share": top5,
+    }
+
+
+def dump_out(meta, rows):
+    uniq = write_report(meta, rows)
+    OUT_JSON.write_text(json.dumps({
+        "meta": meta,
+        "keeps": [r for r in rows if r["verdict"] == "KEEP"],
+        "keeps_unique": uniq,
+    }, indent=2, default=str))
     return uniq
 
 
@@ -299,10 +429,13 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--grids", default="research/all_cols_grids")
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--letters", default="",
+                    help="comma letters to score (default: all)")
     args = ap.parse_args()
     grids = Path(args.grids)
     if not grids.is_absolute():
         grids = ROOT / grids
+    want = {x.strip().upper() for x in args.letters.split(",") if x.strip()}
     discovery, holdout = load_split()
     mcap = load_mcap()
     print(f"ohlc {grids}", flush=True)
@@ -314,75 +447,82 @@ def main():
           f"{df['date'].min()}→{df['date'].max()}", flush=True)
     print("cells…", flush=True)
     letters, values, fills, text_raw, tokens = fill_arrays(files, df)
+    if want:
+        letters = [L for L in letters if L in want]
     print(f"  letters={len(letters)} text={len(tokens)}", flush=True)
     splits = split_masks(df, discovery, holdout)
-    cost = np.array([cost_of(t, mcap) for t in df["ticker"]])
+    cost = np.array([cost_of(t, mcap) for t in df["ticker"]], dtype=np.float32)
     tick = df["ticker"].to_numpy()
     hold = splits["hold"]
     disc = splits["disc"]
+    y_net = {ycol: (df[ycol].to_numpy(dtype=np.float64) - cost)
+             for ycol, _ in LABELS}
     n_gates = 0
-    promoted = []
-    for j, let in enumerate(letters, 1):
-        l1, l2 = lag_by_ticker(values[let], df["ticker"])
-        f1, f2 = lag_by_ticker(fills[let], df["ticker"])
-        t1 = None
-        if let in text_raw:
-            t1, _ = lag_by_ticker(text_raw[let], df["ticker"])
-        gates = letter_gates(let, l1, l2, f1, f2, t1, tokens.get(let), disc)
-        n_gates += len(gates)
-        for name, mask, plain in gates:
-            mask = np.asarray(mask, dtype=bool)
-            for ycol, _title in LABELS:
-                y = df[ycol].to_numpy() - cost
-                side = cheap_either_way(mask, y, tick, hold)
-                if side:
-                    promoted.append((name, ycol, mask.copy(), let, plain, side))
-        if j % 40 == 0:
-            print(f"  letter {j}/{len(letters)} promoted={len(promoted)}",
-                  flush=True)
-    print(f"  gates {n_gates} promoted {len(promoted)}", flush=True)
-    zero = np.zeros(len(df))
-    df["_y"] = 0.0
+    n_promoted = 0
     rows = []
-    for k, (name, ycol, mask, let, plain, side) in enumerate(promoted):
-        net = df[ycol].to_numpy() - cost
-        df["_y"] = net if side == "long" else -net
-        v, why, parts, uncond, day_s, top5 = harden(
-            df, mask, "_y", zero, splits, "open")
-        holdp = parts.get("hold") or {}
-        rows.append({
-            "gate": name, "letter": let, "plain": plain,
-            "label": ycol, "side": side,
-            "verdict": v, "why": why,
-            "hold_mean": holdp.get("mean"),
-            "hold_n": holdp.get("n"),
-            "hold_t": holdp.get("t"),
-            "hold_tickers": holdp.get("tickers"),
-            "uncond": (uncond or {}).get("mean"),
-            "day_share": day_s, "top5_share": top5,
-        })
-        if (k + 1) % 400 == 0:
-            print(f"  hardened {k+1}/{len(promoted)}", flush=True)
+    zero = np.zeros(len(df), dtype=np.float64)
+    df["_y"] = 0.0
     meta = {
         "n_tickers": int(df["ticker"].nunique()),
         "n_rows": int(len(df)),
-        "n_gates": n_gates,
-        "n_hardened": len(promoted),
-        "n_keep": sum(1 for r in rows if r["verdict"] == "KEEP"),
-        "n_kill": sum(1 for r in rows if r["verdict"] == "KILL"),
+        "n_gates": 0,
+        "n_hardened": 0,
+        "n_keep": 0,
+        "n_kill": 0,
         "n_y2025": int(splits["y2025"].sum()),
         "date_min": str(df["date"].min()),
         "date_max": str(df["date"].max()),
         "clock": "lag>=1 only",
         "sides": "long+short",
+        "partial": True,
     }
-    uniq = write_report(meta, rows)
-    OUT_JSON.write_text(json.dumps({
-        "meta": meta,
-        "keeps": [r for r in rows if r["verdict"] == "KEEP"],
-        "keeps_unique": uniq,
-    }, indent=2, default=str))
-    print(f"KEEP {meta['n_keep']} unique {len(uniq)} KILL {meta['n_kill']} → {OUT_MD}")
+    for j, let in enumerate(letters, 1):
+        l1, l2 = lag_by_ticker(values.pop(let), df["ticker"])
+        f1, f2 = lag_by_ticker(fills.pop(let), df["ticker"])
+        t1 = None
+        if let in text_raw:
+            t1, _ = lag_by_ticker(text_raw.pop(let), df["ticker"])
+        gates = letter_gates(let, l1, l2, f1, f2, t1, tokens.get(let), disc)
+        n_gates += len(gates)
+        for name, mask, plain in gates:
+            mask = np.asarray(mask, dtype=bool)
+            for ycol, _title in LABELS:
+                y = y_net[ycol]
+                side = cheap_either_way(mask, y, tick, hold)
+                if not side:
+                    continue
+                n_promoted += 1
+                df["_y"] = y if side == "long" else -y
+                v, why, parts, uncond, day_s, top5 = harden(
+                    df, mask, "_y", zero, splits, "open")
+                rows.append(_row_from_harden(
+                    name, ycol, let, plain, side, v, why, parts, uncond,
+                    day_s, top5))
+        del l1, l2, f1, f2, t1, gates
+        if j % 20 == 0 or j == len(letters):
+            n_keep = sum(1 for r in rows if r["verdict"] == "KEEP")
+            print(f"  letter {j}/{len(letters)} promoted={n_promoted} "
+                  f"KEEP={n_keep}", flush=True)
+            meta = {
+                "n_tickers": int(df["ticker"].nunique()),
+                "n_rows": int(len(df)),
+                "n_gates": n_gates,
+                "n_hardened": n_promoted,
+                "n_keep": n_keep,
+                "n_kill": sum(1 for r in rows if r["verdict"] == "KILL"),
+                "n_y2025": int(splits["y2025"].sum()),
+                "date_min": str(df["date"].min()),
+                "date_max": str(df["date"].max()),
+                "clock": "lag>=1 only",
+                "sides": "long+short",
+                "partial": j < len(letters),
+            }
+            dump_out(meta, rows)
+            gc.collect()
+    meta["partial"] = False
+    uniq = dump_out(meta, rows)
+    print(f"KEEP {meta['n_keep']} unique {len(uniq)} KILL {meta['n_kill']} "
+          f"→ {OUT_MD}")
 
 
 if __name__ == "__main__":
