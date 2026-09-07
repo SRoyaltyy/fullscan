@@ -171,6 +171,46 @@ def test_notes_and_scoreboard_exist():
     assert "D, E, F, H, I, N" in notes
 
 
+def test_all_cols_patterns_clocks_are_legal():
+    from mine_all_cols import PATS, verdict
+    for name, _side, clock in PATS:
+        if name.startswith("lag_"):
+            assert clock == "open", name
+        else:
+            assert clock == "close", name
+    assert verdict(n=200, n_tickers=25, t=4.0, avg=0.01, early_s=0.01, late_s=0.01) == "THIN"
+    assert verdict(n=300, n_tickers=50, t=3.2, avg=0.01, early_s=0.01, late_s=0.01) == "PASS"
+    assert verdict(n=300, n_tickers=50, t=3.2, avg=-0.01, early_s=0.01, late_s=0.01) == "FAIL"
+
+
+def test_all_cols_miners_do_not_wire_live():
+    for fn in ("mine_all_cols.py", "capture_all_cols.py", "mine_clock.py"):
+        src = (ENG / fn).read_text(encoding="utf-8")
+        assert "sleeve_merge_live" not in src
+        assert "LIVE_POLICY" not in src
+        if fn.startswith("mine"):
+            assert "flatten_robust" in src
+
+
+def test_all_cols_sample_size_is_thin_by_design():
+    """N=20–50 discovery cannot clear the 50-ticker ship bar."""
+    from mine_all_cols import SHIP
+    assert SHIP["n_tickers"] == 50
+
+
+def test_all_cols_mine_report_is_committed():
+    md = (ROOT / "excel_bot" / "research" / "ALL_COLS_MINE.md").read_text()
+    sb = (ROOT / "03_scoreboard" / "EXCEL_BOT_MINE.md").read_text()
+    assert "THIN 90" in md and "THIN 90" in sb
+    assert "flatten_robust" in md
+    assert "| THIN |" in md
+    payload = json.loads((ROOT / "excel_bot" / "research" / "all_cols_mine.json").read_text())
+    assert payload["n_thin"] == 90
+    assert payload["n_pass"] == 0
+    assert payload["n_tickers"] >= 20
+    assert payload["live_untouched"] == "flatten_robust"
+
+
 if __name__ == "__main__":
     tests = [v for k, v in list(globals().items()) if k.startswith("test_")]
     for fn in tests:

@@ -196,3 +196,6 @@ protocol unchanged.
   holds 1/2/3/5/8; costs labeled `mcap_bps` or `futubull`; ship bar in
   `clock.SHIP`. Does not emit live cards. Does not touch flatten_robust.
 - Cycle notes: `research/MINE_CYCLE.md` and `03_scoreboard/EXCEL_BOT_MINE.md`.
+- Timed `--all-cols` sample (2026-09-07): 25 discovery + 10 holdout,
+  1.22 s/ticker lean A–JL capture, **PASS 0 / FAIL 0 / THIN 90**.
+  Table: `research/ALL_COLS_MINE.md`. Live flatten_robust untouched.
