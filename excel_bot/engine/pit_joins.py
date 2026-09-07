@@ -123,6 +123,47 @@ def prior_lookup(by_date, iso, ticker=None):
     return prev, None
 
 
+def _fz_num(v):
+    v = (v or "").replace("%", "").replace(",", "").strip()
+    if not v:
+        return None
+    mult = 1.0
+    if v.endswith(("K", "M", "B")):
+        mult = {"K": 1e3, "M": 1e6, "B": 1e9}[v[-1]]
+        v = v[:-1]
+    try:
+        return float(v) * mult
+    except ValueError:
+        return None
+
+
+def load_finviz_asof_highvol(exports_dir=None):
+    """date -> set of tickers with Volatility (Month) > 8% on that export.
+
+    Only dated `finviz_YYYY-MM-DD.csv` files. `finviz_latest.csv` is skipped
+    (that is the current snapshot, not an as-of tape).
+    """
+    exports_dir = exports_dir or os.path.join(REPO, "data", "exports")
+    by = {}
+    for path in sorted(glob.glob(os.path.join(exports_dir, "finviz_????-??-??.csv"))):
+        iso = os.path.basename(path)[7:17]
+        names = set()
+        try:
+            with open(path, encoding="utf-8", errors="replace") as fh:
+                for rec in csv.DictReader(fh):
+                    t = (rec.get("Ticker") or "").strip().upper()
+                    if not t:
+                        continue
+                    vm = _fz_num(rec.get("Volatility (Month)"))
+                    if vm is not None and vm > 8:
+                        names.add(t)
+        except OSError:
+            continue
+        if names:
+            by[iso] = names
+    return by
+
+
 def coverage(by_date):
     keys = sorted(by_date)
     return {

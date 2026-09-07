@@ -800,6 +800,54 @@ def test_color_harden_report_is_committed():
             assert r["best_letter"] == "O"
 
 
+def test_finviz_asof_is_prior_date_only():
+    from pit_joins import load_finviz_asof_highvol, prior_lookup
+    by = load_finviz_asof_highvol()
+    assert by, "dated Elite exports should exist in data/exports"
+    assert "latest" not in by
+    dates = sorted(by)
+    # same-day file is not knowable at 9:30
+    asof, _hit = prior_lookup(by, dates[0], "AAPL")
+    assert asof is None
+    if len(dates) >= 2:
+        asof, _hit = prior_lookup(by, dates[1], "ZZZZNOPE")
+        assert asof == dates[0]
+
+
+def test_join_verdict_script_no_live():
+    src = (ENG / "harden_joins.py").read_text(encoding="utf-8")
+    assert "from flatten" not in src
+    assert "flatten_robust" in src
+    assert "REGIME_CUT" in src
+    assert "2026-07-01" in src
+
+
+def test_join_verdict_report_is_committed():
+    md = (ROOT / "excel_bot" / "research" / "JOIN_VERDICT.md").read_text()
+    assert "Incremental layers" in md
+    assert md.index("### Incremental layers") < md.index("### Second regime")
+    assert "BLOCKED" in md
+    assert "Q3" in md
+    assert "AB" in md and "weather" in md
+    assert "flatten_robust" in md
+    sb = (ROOT / "03_scoreboard" / "EXCEL_BOT_MINE.md").read_text()
+    assert "Join verdict" in sb
+    cj = (ROOT / "excel_bot" / "research" / "COLOR_JOIN_MINE.md").read_text()
+    assert "BLOCKED" in cj
+    payload = json.loads(
+        (ROOT / "excel_bot" / "research" / "join_verdict.json").read_text())
+    assert payload["live_untouched"] == "flatten_robust"
+    assert payload["regime_cut"] == "2026-07-01"
+    assert payload["excel_cache_used"] is False
+    o_keeps = [r for r in payload["scored"]
+               if r["def"].endswith("__O_green") and "fz_" not in r["def"]
+               and r["verdict"] == "KEEP"]
+    assert o_keeps, "light+O should still KEEP on at least one recipe after Q3"
+    for r in payload["scored"]:
+        if "fz_volM_asof" in r["def"]:
+            assert r["verdict"] != "KEEP"
+
+
 def test_af_seed_audit_report_is_committed():
     md = (ROOT / "excel_bot" / "research" / "AF_SEED_AUDIT.md").read_text()
     assert "STOCKHISTORY" in md

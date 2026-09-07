@@ -110,3 +110,7 @@ Harden used Yahoo/rows `source: rows_cache` grids, not Excel's cached STOCKHISTO
 ## Color harden (light + open fill vs light alone)
 
 KEEP 3 recipes · KILL 3. Green O adds +24–45 bp on 3 of 6 lights. Other open colors fail the +20 bp parent bar. No joins in this beat. See `COLOR_HARDEN.md`.
+
+## Join verdict (light vs color vs leak-free joins)
+
+Re-scored cells KEEP 9 · KILL 15. Snapshot Finviz volM is BLOCKED. AB/weather/book KILL (short tape). See `JOIN_VERDICT.md`.

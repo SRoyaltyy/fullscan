@@ -101,3 +101,6 @@ Grids **3598**. Cells scored **122**. **KEEP 9** · **THIN 0** · **KILL 113**.
 
 KEEP still research-only. Join tapes only exist for late Aug–Sep 2026, so most join cells are THIN on dates. Color cells use the full Jan–Sep window. No live wire.
 
+## Second-regime / as-of Finviz
+
+See `JOIN_VERDICT.md`. Snapshot `fz_volM` KEEP is **BLOCKED** until dated Elite history covers both tape halves. Q3 cut is 2026-07-01.
