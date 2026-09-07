@@ -63,13 +63,14 @@ present. Liquid **3,251 / 332,341** days, **2026-01-08 → 2026-09-04**,
 Raw board KEEP 272 / KILL 3866 is **not 272 edges**. After twins:
 
 - **CE yesterday = 1** (fresh 24-day low that is also the 43-day low)
-  → next-day leftover H **+1.32%** after fees (n=2,563). Washout bounce.
-  Open-fair. **2025 not tested.**
-- Almost everything else is S/DI / V/DK / AN / O-low / CF “beaten-up
-  → next week up” on a 2026 tape.
+  → next-day leftover H. **Research keep** after the prev tile:
+  holdout 2026 **+1.25%**, holdout 2025 **+0.69%**, discovery 2025
+  **+0.54%**, full ship bar empty-why. Washout bounce, not a card.
+  `CF` (24-day low only) **KILL**.
+- Almost everything else is S/DI / V/DK / AN / O-low “beaten-up →
+  next week up” on the 2026 latest tile.
 - Standing light+O **did not reprint +2% H** on this ColorEngine paint
-  (H −0.12%). C is mostly orange; the light stays on too often. That is
-  a paint/tile mismatch with #144’s xlsx grids, not a refutation.
+  (H negative in 2025 and 2026). Paint/tile mismatch with #144, not a
+  refutation of that xlsx-grid keep.
 
-See `FULL_GRID_MINE.md`. Prior tile (`--tile prev`) + `score_families.py`
-is the 2025 check. Research only. Live frozen.
+See `FULL_GRID_MINE.md` and `FAMILY_2025.md`. Research only. Live frozen.

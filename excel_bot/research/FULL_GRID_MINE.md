@@ -22,11 +22,12 @@ is `EC`, `JD` is yesterday’s `HO`), you get **two stories**:
 
 1. **A washout flag, CE.** Yesterday the low was a *new* 24-day low
    that was also the 43-day low. Those names’ **next-day leftover H**
-   averaged **+1.32%** after fees (n=2,563 holdout, 986 names, t=10.6)
-   vs everyone **−0.09%**. That is the only same-day H family that
-   looks like a real event on this tape. It is open-fair (lag 1). It
-   has **not** been checked in 2025. It is a bounce-after-new-low,
-   cousin to the A–F gap-fade, not a second live data vendor.
+   averaged **+1.32%** after fees on the latest tile (n=2,563). On the
+   latest+prev tape it **KEEP**s: holdout 2026 **+1.25%**, holdout 2025
+   **+0.69%**, discovery 2025 **+0.54%**, both SPY tapes, fees. Open-fair
+   (lag 1). Bounce-after-new-low, cousin to the A–F gap-fade — **research
+   keep, not a card, not a second live data vendor.** `CF` (any 24-day
+   low) dies.
 2. **A 2026 “beaten-up → next week up” sleeve.** `S`/`DI` red or low,
    `V`/`DK` low, `AN` = −1, `O` low, `CF` = 24-day low, `EC`/`GH` low.
    Those are composites of prior H/lows/volume. They print
@@ -95,9 +96,27 @@ today’s low.
 requirement. It showed up in the 1-week bounce list, not as a
 same-day H keep.
 
-**CE is not a card.** 2026 only. Washout bounces die in other years.
-The prior tile must keep +H vs the book in 2025 before this is even a
-research keep.
+### 2025 check (prior STEP tile, 2025-08-05 → 2026-01)
+
+Prev-tile dumps (`TICKER__tprev.json`) plus latest: **3,449** liquid
+names, **607,571** days, **201,630** in 2025. Same harden as the mine
+(ticker halves, both years vs the book, both SPY tapes, fees, lottery).
+
+| family | 2026 holdout H | 2025 holdout H | 2025 discovery H | ship bar |
+|---|---:|---:|---:|---|
+| **CE yesterday = 1** | **+1.25%** (n=3,907, t=13.3) | **+0.69%** (n=1,539, t=7.0) | **+0.54%** (n=2,372, t=5.7) | **KEEP** |
+| CF yesterday = 1 (24-day low only) | −0.07% | −0.31% | −0.38% | KILL |
+| five-cell light + green O (this paint) | −0.09% | −0.41% | −0.36% | KILL |
+
+**CE is a research keep, not a card.** It is a washout bounce: the
+name just printed a fresh 24-day low that was also the 43-day low;
+the next session’s leftover H is positive after fees in **both 2025
+and 2026**, both ticker halves, both SPY tapes. The milder “any
+24-day low” (`CF`) does **not** work — you need the fresh 43-day
+print. It is still a transform of A–F (the low). It is **not** a
+second morning-fill encoding and it is **not** wired live.
+
+Details: `FAMILY_2025.md`.
 
 ## The 1-week bounce (why the KEEP count exploded)
 
