@@ -1,14 +1,14 @@
-# Excel emulator mine — whole workbook (A–JL)
+# Excel emulator mine — standing cycle
 
 _Generated 2026-09-07 · live `flatten_robust` is not changed. No merge without Cyrus._
 
-## Priority (Cyrus override)
+## War room deliverables
 
-Mine the **whole emulator** (A..JL, 275 cols). Stored daily grids only persist A–O fills — that is the gap, not a missing model. `model.json` already has max_col 275. `run.py --all-cols` dumps it.
+1. **Column clocks A–JL** — `CLOCK_MAP.md` / `clock_map.json`. Measured A–O fills from `timing_test.py` / NOTES. Values from formula inputs + dep walk. Unmeasured fills and unknown → **CLOSE**. `core_score` = CLOSE.
+2. **First cell/formula cut** — `FORMULA_CUT.md`. 185 tickers, 946 leak-free pats, sleeve holds 1/2/3, **futubull**, lottery filter, both-tape required. **PASS 0 · FAIL 1277 · THIN 12. Clean null.**
 
-A–JL sample: **185** tickers · **PASS 0** · **FAIL 300** · **THIN 5** · 1.15 s/ticker.
+20 open-entry “PASSes” on GU/GW/HC/… were demoted (unmeasured fills; same-day color *is* the move).
 
-A–O parallel thin track is in `AO_FIRST_MINE.md` (L3/S1 FAIL; 6 hysteresis hold1/2 research candidates). **A–O-only is not the whole Excel.**
+A–O parallel thin track: `AO_FIRST_MINE.md`. A–JL pattern mine: `ALL_COLS_MINE.md`.
 
-Full A–JL table: `ALL_COLS_MINE.md`. Research only. No live wire.
-
+Research only. No cards. No live wire.

@@ -192,9 +192,30 @@ def test_all_cols_patterns_clocks_are_legal():
     assert verdict(n=300, n_tickers=50, t=3.2, avg=-0.01, early_s=0.01, late_s=0.01) == "FAIL"
 
 
+def test_clock_map_locks_measured_ao():
+    from classify_clocks import build, feature_clock, MEAS_FILL_OPEN, MEAS_FILL_CLOSE
+    inv = build()
+    by = {r["col"]: r for r in inv["columns"]}
+    for c in MEAS_FILL_OPEN:
+        assert by[c]["fill"] == "open", c
+        assert by[c]["fill_mine"] == "open", c
+    for c in MEAS_FILL_CLOSE:
+        assert by[c]["fill"] == "close", c
+        assert by[c]["fill_mine"] == "close", c
+    assert by["B"]["value_mine"] == "close"  # close price
+    assert by["G"]["value_mine"] == "close"  # vol ratio
+    assert feature_clock({"D": "close"}, {"D": "close"}, "D", "fill") == "close"
+    assert feature_clock({"GU": "open"}, {"GU": "open"}, "GU", "fill") == "close"
+    assert inv["unknown_mined_as"] == "close"
+    assert inv["core_score_entry"] == "close"
+    md = (ROOT / "excel_bot" / "research" / "CLOCK_MAP.md").read_text()
+    assert "open / close / unknown" in md
+    assert "D,E,F,H,I" in md
+
+
 def test_all_cols_miners_do_not_wire_live():
     for fn in ("mine_all_cols.py", "capture_all_cols.py", "mine_clock.py",
-               "mine_first.py"):
+               "mine_first.py", "mine_formula_cut.py", "classify_clocks.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "sleeve_merge_live" not in src
         assert "LIVE_POLICY" not in src
@@ -253,6 +274,22 @@ def test_hold8_without_hold2_edge_is_fail():
     ])
     assert rows[0]["verdict"] == "FAIL"
     assert "long_hold_without_hold2" in rows[0]["fail_reasons"]
+
+
+def test_formula_cut_report_is_committed():
+    md = (ROOT / "excel_bot" / "research" / "FORMULA_CUT.md").read_text()
+    assert "futubull" in md
+    assert "flatten_robust" in md
+    payload = json.loads((ROOT / "excel_bot" / "research" / "formula_cut.json").read_text())
+    assert payload["live_untouched"] == "flatten_robust"
+    assert payload["cost_model"] == "futubull"
+    assert payload["core_score_entry"] == "close"
+    assert payload["holds"] == [1, 2, 3]
+    for r in payload.get("keepers") or []:
+        if "core_score" in r["def"]:
+            assert r["clock"] == "close"
+        if r["clock"] == "open" and r["def"].endswith("_fill_green"):
+            assert r["def"].split("_")[0] in list("ABCGJKLMO") or r["def"].startswith("IR")
 
 
 def test_ao_first_mine_report_is_committed():

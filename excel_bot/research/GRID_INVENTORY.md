@@ -95,6 +95,13 @@ Daily `done_grids` is ~3445 color rebuilds; this cycle rebuilt **3603** A–O
 grids from excel-state rows (2026-01-05 → 2026-09-04). excel-state still
 has **no** persisted grid JSON.
 
+## Column clocks (War room)
+
+Every A–JL column is classified open / close / unknown in
+`CLOCK_MAP.md` + `clock_map.json`: measured A–O fills from
+`timing_test.py` / NOTES, value caveats (G/K/M close), formula+CF
+dependency walk. **Unknown → CLOSE.** `core_score` = CLOSE.
+
 ## Standing mine order (Cyrus override 2026-09-07)
 
 Mine the **whole emulator** (A..JL). A–O-only is a parallel thin track,
