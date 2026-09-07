@@ -1,0 +1,1018 @@
+{
+ "generated": "2026-09-07",
+ "model_meta": {
+  "sheet": "Sheet1",
+  "max_row": 364,
+  "max_col": 275,
+  "theme": [
+   "FFFFFF",
+   "000000",
+   "E8E8E8",
+   "0E2841",
+   "156082",
+   "E97132",
+   "196B24",
+   "0F9ED5",
+   "A02B93",
+   "4EA72E"
+  ]
+ },
+ "n_formulas": 35769,
+ "n_cf_rules": 173,
+ "n_cf_columns": 112,
+ "n_formula_columns": 270,
+ "full_cols": 275,
+ "full_col_letters": "A..JL",
+ "stored": {
+  "source": "excel-state rows cache + daily A\u2013O fill rebuild",
+  "n_tickers": 3603,
+  "fields": [
+   "date",
+   "open",
+   "close",
+   "high",
+   "low",
+   "volume",
+   "fills"
+  ],
+  "fill_cols": 15,
+  "fill_letters": "A..O",
+  "missing_vs_full": {
+   "columns": 260,
+   "formula_values_G_to_O": true,
+   "deeper_fills": 97,
+   "note": "grids/<T>.json stores OHLCV + 15 fills. It does not store G\u2013O formula VALUES or any column past O. excel-state itself stores Yahoo rows only \u2014 colors are rebuilt each daily run and not persisted."
+  }
+ },
+ "all_cols_mode": {
+  "flag": "python engine/run.py --all-cols",
+  "captures": "A..JL (275) values + fills, rows 1\u2013364",
+  "used_in_daily": false,
+  "cost": "minutes per ticker; not the 3,603 daily path"
+ },
+ "visible_A_to_O": [
+  {
+   "col": "A",
+   "idx": 0,
+   "clock_fill": "open",
+   "n_formula_rows": 142,
+   "sample": "=IR1",
+   "bucket": "ohlcv_visible",
+   "in_stored_grid": true
+  },
+  {
+   "col": "B",
+   "idx": 1,
+   "clock_fill": "open",
+   "n_formula_rows": 157,
+   "sample": "=IS1",
+   "bucket": "ohlcv_visible",
+   "in_stored_grid": true
+  },
+  {
+   "col": "C",
+   "idx": 2,
+   "clock_fill": "open",
+   "n_formula_rows": 157,
+   "sample": "=IT1",
+   "bucket": "ohlcv_visible",
+   "in_stored_grid": true
+  },
+  {
+   "col": "D",
+   "idx": 3,
+   "clock_fill": "close",
+   "n_formula_rows": 157,
+   "sample": "=IU1",
+   "bucket": "ohlcv_visible",
+   "in_stored_grid": true
+  },
+  {
+   "col": "E",
+   "idx": 4,
+   "clock_fill": "close",
+   "n_formula_rows": 143,
+   "sample": "=IV1",
+   "bucket": "ohlcv_visible",
+   "in_stored_grid": true
+  },
+  {
+   "col": "F",
+   "idx": 5,
+   "clock_fill": "close",
+   "n_formula_rows": 144,
+   "sample": "=IW1",
+   "bucket": "ohlcv_visible",
+   "in_stored_grid": true
+  },
+  {
+   "col": "G",
+   "idx": 6,
+   "clock_fill": "open",
+   "n_formula_rows": 141,
+   "sample": "=IFERROR(F3/F2, \"\")",
+   "bucket": "visible_derived",
+   "in_stored_grid": true
+  },
+  {
+   "col": "H",
+   "idx": 7,
+   "clock_fill": "close",
+   "n_formula_rows": 146,
+   "sample": "=(B2-C2)/C2",
+   "bucket": "visible_derived",
+   "in_stored_grid": true
+  },
+  {
+   "col": "I",
+   "idx": 8,
+   "clock_fill": "close",
+   "n_formula_rows": 143,
+   "sample": "=(B2-B1)/B1",
+   "bucket": "visible_derived",
+   "in_stored_grid": true
+  },
+  {
+   "col": "J",
+   "idx": 9,
+   "clock_fill": "open",
+   "n_formula_rows": 145,
+   "sample": "=($C3-$C2)/$C2",
+   "bucket": "visible_derived",
+   "in_stored_grid": true
+  },
+  {
+   "col": "K",
+   "idx": 10,
+   "clock_fill": "open",
+   "n_formula_rows": 144,
+   "sample": "=(D3-C3)/(C3+0.001)",
+   "bucket": "visible_derived",
+   "in_stored_grid": true
+  },
+  {
+   "col": "L",
+   "idx": 11,
+   "clock_fill": "open",
+   "n_formula_rows": 136,
+   "sample": "=COUNTIF(N7:N9, \">=0\")+COUNTIF(O8:O10, \">=1\")-COUNTIF(N7:O9, \"<0\")+IF(H9<-0.1, 1, 0)+IF(DD10=1, 1, 0)+IF(DD10=0, -1, 0)+IF(COUNTIF(EL6:EL9, \"<=-3\")>0, -2, 0)+IF(COUNTIF(EL5:EL9, \">=2\")>0, 1, 0)+IF(O9<=-2, -3, 0)+IF(AND(L",
+   "bucket": "visible_derived",
+   "in_stored_grid": true
+  },
+  {
+   "col": "M",
+   "idx": 12,
+   "clock_fill": "open",
+   "n_formula_rows": 143,
+   "sample": "=-($E3-$C3)/$C3",
+   "bucket": "visible_derived",
+   "in_stored_grid": true
+  },
+  {
+   "col": "N",
+   "idx": 13,
+   "clock_fill": "close",
+   "n_formula_rows": 145,
+   "sample": "=EL3*IF(ABS(H3)>=0.03, 1, 0)",
+   "bucket": "visible_derived",
+   "in_stored_grid": true
+  },
+  {
+   "col": "O",
+   "idx": 14,
+   "clock_fill": "open",
+   "n_formula_rows": 136,
+   "sample": "=IF(EL9>=2, 1, 0)+IF(AND(H9>0, H9<0.4), 1, 0)+IF(MAX(F7:F9)<120000, -3, 0)+IF(COUNTIF(N7:N9, \"<0\")>COUNTIF(N7:N9, \">0\"), 1, -1)+IF(DD10=1, 1, 0)+IF(DD10=0, -1, 0)+IF(N9<=-3, -1, 0)+IF(SUM(CP7:CP9)>=0, 1, -1)+IF(EL9<=-3, ",
+   "bucket": "visible_derived",
+   "in_stored_grid": true
+  }
+ ],
+ "deeper_bucket_counts": {
+  "deeper_formula": 240,
+  "external_change_lookup": 2,
+  "stockhistory_anchor": 2,
+  "spill_or_blank": 15,
+  "external_vix": 1
+ },
+ "deeper_cf_columns": [
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Z",
+  "AA",
+  "AB",
+  "AC",
+  "AD",
+  "AF",
+  "AH",
+  "AJ",
+  "AM",
+  "AN",
+  "AO",
+  "AP",
+  "AQ",
+  "AS",
+  "AT",
+  "AU",
+  "AW",
+  "AX",
+  "AY",
+  "AZ",
+  "BA",
+  "BN",
+  "BT",
+  "CP",
+  "CU",
+  "CV",
+  "CX",
+  "DB",
+  "DD",
+  "DE",
+  "DF",
+  "DG",
+  "DH",
+  "EC",
+  "ED",
+  "EK",
+  "EL",
+  "FO",
+  "FP",
+  "FQ",
+  "FR",
+  "FS",
+  "FT",
+  "FU",
+  "FW",
+  "FX",
+  "FY",
+  "GG",
+  "GH",
+  "GJ",
+  "GK",
+  "GL",
+  "GM",
+  "GN",
+  "GO",
+  "GP",
+  "GQ",
+  "GR",
+  "GS",
+  "GU",
+  "GV",
+  "GW",
+  "GX",
+  "GY",
+  "GZ",
+  "HB",
+  "HC",
+  "HD",
+  "HE",
+  "HF",
+  "HH",
+  "HI",
+  "HK",
+  "HM",
+  "HN",
+  "HO",
+  "HR",
+  "HS",
+  "HU",
+  "HV",
+  "HW",
+  "HX",
+  "IA",
+  "IB",
+  "IC",
+  "IF",
+  "IP",
+  "JA"
+ ],
+ "deeper_sample": [
+  {
+   "col": "P",
+   "idx": 15,
+   "n_formula_rows": 142,
+   "has_cf": true,
+   "sample": "=TODAY()",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "Q",
+   "idx": 16,
+   "n_formula_rows": 147,
+   "has_cf": true,
+   "sample": "=IFERROR(INDEX([1]Change!$X$1:$X$6000, MATCH(TRUE, EXACT($O1, [1]Change!$Y$1:$Y$6000), 0)), 0)",
+   "bucket": "external_change_lookup",
+   "in_stored_grid": false
+  },
+  {
+   "col": "R",
+   "idx": 17,
+   "n_formula_rows": 143,
+   "has_cf": true,
+   "sample": "=IFERROR(INDEX([1]Change!$W$1:$W$6000, MATCH(TRUE, EXACT($O1, [1]Change!$Y$1:$Y$6000), 0)), 0)",
+   "bucket": "external_change_lookup",
+   "in_stored_grid": false
+  },
+  {
+   "col": "S",
+   "idx": 18,
+   "n_formula_rows": 139,
+   "has_cf": true,
+   "sample": "=SUM(BV130:BV140)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "T",
+   "idx": 19,
+   "n_formula_rows": 124,
+   "has_cf": true,
+   "sample": "=SUM(BW130:BW140)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "U",
+   "idx": 20,
+   "n_formula_rows": 145,
+   "has_cf": true,
+   "sample": "=BO142",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "V",
+   "idx": 21,
+   "n_formula_rows": 120,
+   "has_cf": true,
+   "sample": "=IFERROR(_xlfn.IFS(AND(Q1<=-3, U1<=-1), 1, U1<=-1.5, 1, AND(S1<50, T1<-10), 1, AND(S1>85, U1<0), 1), 0)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "W",
+   "idx": 22,
+   "n_formula_rows": 139,
+   "has_cf": true,
+   "sample": "=MID(O1, FIND(\":\", O1) + 1, LEN(O1))",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "X",
+   "idx": 23,
+   "n_formula_rows": 142,
+   "has_cf": true,
+   "sample": "=SUM(Y133:Y142)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "Y",
+   "idx": 24,
+   "n_formula_rows": 142,
+   "has_cf": false,
+   "sample": "=Q144",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "Z",
+   "idx": 25,
+   "n_formula_rows": 96,
+   "has_cf": true,
+   "sample": "=SUM(T133:T142)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AA",
+   "idx": 26,
+   "n_formula_rows": 137,
+   "has_cf": true,
+   "sample": "=MAX($F$2:$F$140)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AB",
+   "idx": 27,
+   "n_formula_rows": 134,
+   "has_cf": true,
+   "sample": "=IFERROR(_xlfn.IFS(AND(AA9>=1, H9<-0.03), -1, AND(AA9<=-1, H9>=0.05), 1), 0)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AC",
+   "idx": 28,
+   "n_formula_rows": 135,
+   "has_cf": true,
+   "sample": "=IFERROR((D7-CJ7)/CJ7, \"\")",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AD",
+   "idx": 29,
+   "n_formula_rows": 135,
+   "has_cf": true,
+   "sample": "=IF(L8>0, 1, 0)+IF(N7>0, 1, 0)+IF(AA8>0, 1, AA8)+IF(O8>0, 1, 0)+IF(AND(EV8=1, CP7>=0), 1, 0)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AE",
+   "idx": 30,
+   "n_formula_rows": 137,
+   "has_cf": false,
+   "sample": "=EU8",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AF",
+   "idx": 31,
+   "n_formula_rows": 124,
+   "has_cf": true,
+   "sample": "=FC20+IF(AND(L20>0, O20>0), 1, 0)+AG20",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AG",
+   "idx": 32,
+   "n_formula_rows": 124,
+   "has_cf": false,
+   "sample": "=FD20+1",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AH",
+   "idx": 33,
+   "n_formula_rows": 132,
+   "has_cf": true,
+   "sample": "=COUNTIF(H2:H7, \"<=-0.05\")",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AI",
+   "idx": 34,
+   "n_formula_rows": 138,
+   "has_cf": false,
+   "sample": "=IFERROR(_xlfn.IFS(AND(AK7=0, W8=1, CP7<2, X8<>1, AM8>0.12), \"INTRADAY\", AND(X8=1), \"SELL\", AND(AI7=\"INTRADAY\", W8=1, CP7<2, AM8>0.12), \"INTRADAY\", AND(AI7=\"INTRADAY\", W8=1, CP7=2)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AJ",
+   "idx": 35,
+   "n_formula_rows": 136,
+   "has_cf": true,
+   "sample": "=EL8",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AK",
+   "idx": 36,
+   "n_formula_rows": 135,
+   "has_cf": false,
+   "sample": "=IFERROR(_xlfn.IFS(X8=1, 0, Y8=1, 1), AK7)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AL",
+   "idx": 37,
+   "n_formula_rows": 137,
+   "has_cf": false,
+   "sample": "=H135",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AM",
+   "idx": 38,
+   "n_formula_rows": 143,
+   "has_cf": true,
+   "sample": "=IFERROR(IF(DM2<>\"\", DM2, AM1), \"\")",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AN",
+   "idx": 39,
+   "n_formula_rows": 138,
+   "has_cf": true,
+   "sample": "=AC5",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AO",
+   "idx": 40,
+   "n_formula_rows": 124,
+   "has_cf": true,
+   "sample": "=SUM(L135:L137)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AP",
+   "idx": 41,
+   "n_formula_rows": 129,
+   "has_cf": true,
+   "sample": "=_xlfn.STOCKHISTORY(O1, P1-600, P1, 1, 1, 0, 1, 2, 3, 4, 5)",
+   "bucket": "stockhistory_anchor",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AQ",
+   "idx": 42,
+   "n_formula_rows": 131,
+   "has_cf": true,
+   "sample": "=",
+   "bucket": "spill_or_blank",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AR",
+   "idx": 43,
+   "n_formula_rows": 131,
+   "has_cf": false,
+   "sample": "=",
+   "bucket": "spill_or_blank",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AS",
+   "idx": 44,
+   "n_formula_rows": 131,
+   "has_cf": true,
+   "sample": "=",
+   "bucket": "spill_or_blank",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AT",
+   "idx": 45,
+   "n_formula_rows": 131,
+   "has_cf": true,
+   "sample": "=",
+   "bucket": "spill_or_blank",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AU",
+   "idx": 46,
+   "n_formula_rows": 131,
+   "has_cf": true,
+   "sample": "=",
+   "bucket": "spill_or_blank",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AV",
+   "idx": 47,
+   "n_formula_rows": 137,
+   "has_cf": false,
+   "sample": "=AU5/AU4",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AW",
+   "idx": 48,
+   "n_formula_rows": 108,
+   "has_cf": true,
+   "sample": "=(AQ5-AR5)/AR5",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AX",
+   "idx": 49,
+   "n_formula_rows": 108,
+   "has_cf": true,
+   "sample": "=(AQ5-AQ4)/AQ4",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AY",
+   "idx": 50,
+   "n_formula_rows": 108,
+   "has_cf": true,
+   "sample": "=(AS5-AT5)/AT5",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "AZ",
+   "idx": 51,
+   "n_formula_rows": 142,
+   "has_cf": true,
+   "sample": "=IFERROR(_xlfn.IFS(AND(A5=0, B5=0), \"\", AND(S5>=4, S6>=6, MIN(AA5:AA6)>-1), 1, AND(S6>=6, AA6>-1, H5>0.04), 1), 0)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BA",
+   "idx": 52,
+   "n_formula_rows": 142,
+   "has_cf": true,
+   "sample": "=IFERROR(_xlfn.IFS(AND(A5=0, B5=0), \"\", OR(HN6<=-1, CP5<=-1), 1), 0)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BB",
+   "idx": 53,
+   "n_formula_rows": 140,
+   "has_cf": false,
+   "sample": "=IF(ISNUMBER(SEARCH(\"doji\",DF5)),1,0)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BC",
+   "idx": 54,
+   "n_formula_rows": 141,
+   "has_cf": false,
+   "sample": "=IF(A7<>0, (IF(HN7>=4,1,IF(HN7<=-1,-1,0)) & \"$\" &\n IF(HM7>=3,1,IF(HM7<=0,-1,0)) & \"$\" &\n IF(EC7<=2,-1,0) & \"$\" &\n IF(EH7>3,-1,0) & \"$\" &\n IF(EJ7=1,-1,0) & \"$\" &\n CP6 & \"$\" &\n IF(EC",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BD",
+   "idx": 55,
+   "n_formula_rows": 16,
+   "has_cf": false,
+   "sample": "=IF(E128<>\"\", D128-E128, \"\")",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BE",
+   "idx": 56,
+   "n_formula_rows": 17,
+   "has_cf": false,
+   "sample": "=MIN(E2:E25)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BF",
+   "idx": 57,
+   "n_formula_rows": 16,
+   "has_cf": false,
+   "sample": "=IFERROR(_xlfn.IFS(AND(BD128+BE128>$BF$146, E128<>\"\", $Q$1<3), BD128-BE128, AND(BD128-BE128<$BE$146, E137<>\"\"), BD128+BE128), AVERAGE(BD126:BD128))",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BG",
+   "idx": 58,
+   "n_formula_rows": 16,
+   "has_cf": false,
+   "sample": "=IF(Q128=1, BF128, \"\")",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BH",
+   "idx": 59,
+   "n_formula_rows": 13,
+   "has_cf": false,
+   "sample": "=IF(Q129=1, G129, \"\")",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BI",
+   "idx": 60,
+   "n_formula_rows": 18,
+   "has_cf": false,
+   "sample": "=IF(AO122>0.1, C122-B122, \"\")",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BJ",
+   "idx": 61,
+   "n_formula_rows": 138,
+   "has_cf": false,
+   "sample": "=IFERROR(_xlfn.IFS(H7>=0.05, 1, H7<=-0.03, -1), 0)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BK",
+   "idx": 62,
+   "n_formula_rows": 138,
+   "has_cf": false,
+   "sample": "=IFERROR(_xlfn.IFS(BJ7=-1, MIN(0, BK6, BJ6)-1, BJ7=0, 0, BJ7=1, MAX(0, BJ6, BK6)+1), 0)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BL",
+   "idx": 63,
+   "n_formula_rows": 20,
+   "has_cf": false,
+   "sample": "=MIN(BK117:BK141)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BM",
+   "idx": 64,
+   "n_formula_rows": 20,
+   "has_cf": false,
+   "sample": "=IFERROR(IF(Q122=1, BK122, \"\"), \"\")",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BN",
+   "idx": 65,
+   "n_formula_rows": 96,
+   "has_cf": true,
+   "sample": "=F50/AVERAGE(F2:F50)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BO",
+   "idx": 66,
+   "n_formula_rows": 8,
+   "has_cf": false,
+   "sample": "=IFERROR(_xlfn.IFS(AND(BL119>=2, BL118<=BL119), -1, AND(BL117<=-4, BL119>0, BL118<4), -1, AND(BL119=-1, BL118<2, BL117>2), -1, AND(ABS(BL117)<2, BL118<2, BL119=1), -1), 1)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BP",
+   "idx": 67,
+   "n_formula_rows": 21,
+   "has_cf": false,
+   "sample": "=IFERROR(IF(AND(Q120=1, AW120<0.5, H120<0.02, H119<0.02), 1, 0), 0)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BQ",
+   "idx": 68,
+   "n_formula_rows": 139,
+   "has_cf": false,
+   "sample": "=(C2+D2+E2)/3*F2*BU2",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BR",
+   "idx": 69,
+   "n_formula_rows": 126,
+   "has_cf": false,
+   "sample": "=SUMIF(BQ2:BQ15, \">0\")/ABS(SUMIF(BQ2:BQ15, \"<=0\"))",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BS",
+   "idx": 70,
+   "n_formula_rows": 126,
+   "has_cf": false,
+   "sample": "=SUMIF(BR2:BR15, \">0\")/ABS(SUMIF(BR2:BR15, \"<=0\"))",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BT",
+   "idx": 71,
+   "n_formula_rows": 126,
+   "has_cf": true,
+   "sample": "=100-(100/(1+BR15))",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BU",
+   "idx": 72,
+   "n_formula_rows": 139,
+   "has_cf": false,
+   "sample": "=IF((C2+D2+E2)/3-(C1+D1+E1)/3<0, -1, 1)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BV",
+   "idx": 73,
+   "n_formula_rows": 12,
+   "has_cf": false,
+   "sample": "=IF(Q129=1, BT129, \"\")",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BW",
+   "idx": 74,
+   "n_formula_rows": 18,
+   "has_cf": false,
+   "sample": "=IF(Q123=1, BT122-BT118, \"\")",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BX",
+   "idx": 75,
+   "n_formula_rows": 11,
+   "has_cf": false,
+   "sample": "=IF(OR(Q130=1, Q131=1, Q132=1), MAX(H130:I130), \"\")",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BY",
+   "idx": 76,
+   "n_formula_rows": 29,
+   "has_cf": false,
+   "sample": "=IF(AND(COUNTIF(Q114:Q140, 1)>0, G114>=2.5, F114>1000000), C114-B114, \"\")",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "BZ",
+   "idx": 77,
+   "n_formula_rows": 99,
+   "has_cf": false,
+   "sample": "=MAX(D21:D44)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "CA",
+   "idx": 78,
+   "n_formula_rows": 99,
+   "has_cf": false,
+   "sample": "=MAX(D2:D44)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "CB",
+   "idx": 79,
+   "n_formula_rows": 99,
+   "has_cf": false,
+   "sample": "=MIN(E21:E44)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "CC",
+   "idx": 80,
+   "n_formula_rows": 99,
+   "has_cf": false,
+   "sample": "=MIN(E2:E44)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "CD",
+   "idx": 81,
+   "n_formula_rows": 321,
+   "has_cf": false,
+   "sample": "=IF(AND(BZ44=CA44, BZ43<>BZ44, SUM(CD45:CD49)=0, BZ44<>\"\"), 1, 0)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "CE",
+   "idx": 82,
+   "n_formula_rows": 321,
+   "has_cf": false,
+   "sample": "=IF(AND(CB44=CC44, CB43<>CB44, SUM(CE45:CE49)=0, CB44<>\"\"), 1, 0)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "CF",
+   "idx": 83,
+   "n_formula_rows": 320,
+   "has_cf": false,
+   "sample": "=IF(AND(E44=MIN(E21:E44), E44<>\"\"), 1, 0)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "CG",
+   "idx": 84,
+   "n_formula_rows": 8,
+   "has_cf": false,
+   "sample": "=IF(Q135=1, CF135, \"\")",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "CH",
+   "idx": 85,
+   "n_formula_rows": 1,
+   "has_cf": false,
+   "sample": "=IFERROR(_xlfn.IFS(AND(SUM(CD111:CE140)=0),1,AND(SUM(CD119:CD135)>0,SUM(CE136:CE140)>0),0,SUM(BN136:BN141)>0.2,0,SUM(CE136:CE140)>0,1, AND(SUM(CF134:CF140)>=2, SUM(CF139:CF140)>=1)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "CI",
+   "idx": 86,
+   "n_formula_rows": 13,
+   "has_cf": false,
+   "sample": "=_xlfn.IFS(COUNTIF(Q129:Q140, 1)<=0, 0, ABS(I129)<=0.04, 0, I129<H129, -1, I129>=H129, 1)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "CJ",
+   "idx": 87,
+   "n_formula_rows": 102,
+   "has_cf": false,
+   "sample": "=SUM($B$2:B42)/50",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "CK",
+   "idx": 88,
+   "n_formula_rows": 123,
+   "has_cf": false,
+   "sample": "=SUM(B2:B21)/20",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "CL",
+   "idx": 89,
+   "n_formula_rows": 123,
+   "has_cf": false,
+   "sample": "=_xlfn.STDEV.P(B2:B21)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "CM",
+   "idx": 90,
+   "n_formula_rows": 123,
+   "has_cf": false,
+   "sample": "=CK21+2*CL21",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "CN",
+   "idx": 91,
+   "n_formula_rows": 123,
+   "has_cf": false,
+   "sample": "=CK21-2*CL21",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "CO",
+   "idx": 92,
+   "n_formula_rows": 123,
+   "has_cf": false,
+   "sample": "=(CM21+CN21)/2",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "CP",
+   "idx": 93,
+   "n_formula_rows": 123,
+   "has_cf": true,
+   "sample": "=IFERROR(_xlfn.IFS(D21>=CM21, 2, E21<=CN21, -2, AND(D21<=CM21, D21>=CO21, E21<=CO21), 0, D21>=CM21, 2, AND(D21<=CO21, E21>=CN21), -1, AND(D21<=CM21, E21>=CO21), 1), 0)",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  },
+  {
+   "col": "CQ",
+   "idx": 94,
+   "n_formula_rows": 350,
+   "has_cf": false,
+   "sample": "=SUMIF(CS2:CS15, \">0\")/14",
+   "bucket": "deeper_formula",
+   "in_stored_grid": false
+  }
+ ]
+}

@@ -8,3 +8,6 @@ build/
 .venv/
 venv/
 grids_deep/
+excel_bot/grids/
+excel_bot/data/rows/
+excel_bot/engine/.parse_cache.pkl
