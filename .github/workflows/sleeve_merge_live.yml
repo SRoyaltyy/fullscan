@@ -3,6 +3,7 @@ name: Sleeve merge live card
 # Today's flatten_hard_red tickets from leftover cash + open lots.
 # Does not run the 25-policy sweep. Must not sit in front of the 09:30 book.
 
+# SCHEDULE / workflow_run RETIRED — Generate.yml writes the flatten card.
 on:
   workflow_dispatch:
     inputs:
@@ -10,14 +11,9 @@ on:
         description: "YYYY-MM-DD (empty = today ET)"
         required: false
         default: ""
-  schedule:
-    - cron: "25 13 * * 1-5"   # ~09:25 ET — after book heal, around the bell
-  workflow_run:
-    # Stock Book ALL is the later parent. Listening to Pre-Open AND the
-    # book job canceled the first card mid-write (cancel-in-progress).
-    workflows:
-      - "Stock Book ALL (one-shot)"
-    types: [completed]
+  # schedule:
+  #   - cron: "25 13 * * 1-5"
+  # workflow_run:
 
 permissions:
   contents: write

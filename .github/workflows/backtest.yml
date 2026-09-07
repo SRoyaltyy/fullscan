@@ -1,0 +1,59 @@
+name: Backtest
+
+# Refresh historical dashboards from books already on disk.
+# Does not remine factor-mine, does not scrape, does not change
+# flatten_robust / LIVE_POLICY. Today's tickets are Generate.
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_date:
+        description: "As-of YYYY-MM-DD (empty = today ET)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: backtest
+  cancel-in-progress: false
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      FINVIZ_SKIP_LIVE: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install -r requirements.txt && pip install pandas yfinance || true
+      - name: Refresh dashboards
+        run: |
+          DATE="${{ github.event.inputs.run_date }}"
+          ARGS=()
+          [ -n "$DATE" ] && ARGS+=(--date "$DATE")
+          python3 -m src.run_backtest "${ARGS[@]}"
+      - name: Persist
+        run: |
+          bash scripts/safe_git_push.sh \
+            "auto: backtest dashboards" \
+            data/paper/ data/sleeve_merge/ data/sleeve_combine/ \
+            data/strategy_board/ 03_scoreboard/ dashboard/
+      - name: Publish Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bash scripts/publish_dashboard.sh || true
+      - name: URLs
+        run: |
+          echo "https://sroyaltyy.github.io/fullscan/dashboard/"
+          echo "https://sroyaltyy.github.io/fullscan/dashboard/generate/"
+          echo "https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/"
+          echo "https://sroyaltyy.github.io/fullscan/dashboard/strategy-board/"

@@ -1,0 +1,294 @@
+name: Daily
+
+# THE scheduled precursor. Post-close, Elite scrape, morning ranker
+# inputs, diagnostics. Generate (this file + generate.yml) writes tickets.
+# Future PRs that add a morning/night step belong here — not a new cron.
+
+on:
+  schedule:
+    - cron: "40 9 * * 1-5"    # 05:40 ET — Elite scrape
+    - cron: "10 10 * * 1-5"   # 06:10 ET — generate heal
+    - cron: "15 13 * * 1-5"   # 09:15 ET — last-chance tickets
+    - cron: "20 13 * * 1-5"   # 09:20 ET — generate heal
+    - cron: "10 20 * * 1-5"   # 16:10 ET — post-close
+    - cron: "15 21 * * 1-5"   # 17:15 ET — post-close heal
+    - cron: "30 3 * * 2-6"    # 23:30 ET — post-close backup
+  workflow_dispatch:
+    inputs:
+      phase:
+        description: "auto = clock · scrape · morning (ranker) · night · diagnose"
+        required: false
+        default: "auto"
+        type: choice
+        options: [auto, scrape, morning, night, diagnose]
+      run_date:
+        description: "YYYY-MM-DD (empty = today ET)"
+        required: false
+        default: ""
+      force:
+        description: "true = ignore skip-if-good / holiday skip"
+        required: false
+        default: "false"
+      runner:
+        description: "morning packet runner. schedule is always ubuntu."
+        required: false
+        default: "ubuntu"
+        type: choice
+        options: [ubuntu, ecs]
+      skip_llm:
+        description: "true = weather/join/AB/book only (no Grok essays)"
+        required: false
+        default: "true"
+      llm_backend:
+        description: "night / ECS packet backend"
+        required: false
+        default: "deepseek"
+        type: choice
+        options: [auto, grok, deepseek]
+
+permissions:
+  contents: write
+  actions: write
+  pages: write
+
+jobs:
+  clock:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      job: ${{ steps.c.outputs.job }}
+      date: ${{ steps.c.outputs.date }}
+      skip_session: ${{ steps.c.outputs.skip_session }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - id: c
+        env:
+          SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          set -euo pipefail
+          DATE="${{ github.event.inputs.run_date }}"
+          PHASE="${{ github.event.inputs.phase }}"
+          PHASE="${PHASE:-auto}"
+          FORCE="${{ github.event.inputs.force }}"
+          ARGS=(--print-clock --phase "$PHASE")
+          [ -n "$DATE" ] && ARGS+=(--date "$DATE")
+          [ "$FORCE" = "true" ] && ARGS+=(--force)
+          python3 -m src.run_daily "${ARGS[@]}" | tee /tmp/clock.txt
+          job=$(awk -F= '/^JOB=/{print $2}' /tmp/clock.txt)
+          date=$(awk -F= '/^DATE=/{print $2}' /tmp/clock.txt)
+          skip=$(awk -F= '/^SKIP_SESSION=/{print $2}' /tmp/clock.txt)
+          echo "job=$job" >> "$GITHUB_OUTPUT"
+          echo "date=$date" >> "$GITHUB_OUTPUT"
+          echo "skip_session=$skip" >> "$GITHUB_OUTPUT"
+
+  scrape:
+    needs: clock
+    if: ${{ needs.clock.outputs.skip_session != 'yes' && (needs.clock.outputs.job == 'scrape' || needs.clock.outputs.job == 'morning') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    concurrency:
+      group: daily-scrape
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Skip if scrape already good
+        if: github.event.inputs.force != 'true'
+        run: |
+          DATE="${{ needs.clock.outputs.date }}"
+          if python3 -m src.skip_if_good --job finviz_preopen_scrape --date "$DATE"; then
+            echo "skip=yes" >> "$GITHUB_ENV"
+          fi
+      - name: Install
+        if: env.skip != 'yes'
+        run: pip install -r requirements.txt && pip install pandas requests beautifulsoup4 lxml psycopg2-binary || true
+      - name: Elite scrape
+        if: env.skip != 'yes'
+        env:
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+          FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
+        run: |
+          python3 -m src.run_daily --phase scrape --date "${{ needs.clock.outputs.date }}" \
+            ${{ github.event.inputs.force == 'true' && '--force' || '' }}
+      - name: Persist scrape
+        if: always() && env.skip != 'yes'
+        run: |
+          bash scripts/safe_git_push.sh \
+            "auto: daily scrape [${{ needs.clock.outputs.date }}]" \
+            01_daily/news/ 01_daily/map_heat/ data/exports/
+
+  night:
+    needs: clock
+    if: ${{ needs.clock.outputs.job == 'night' }}
+    runs-on: ${{ github.event.inputs.runner == 'ecs' && fromJSON('["self-hosted","ecs"]') || 'ubuntu-latest' }}
+    timeout-minutes: 1080
+    concurrency:
+      group: daily-night-${{ github.event.inputs.runner == 'ecs' && 'ecs' || 'ubuntu' }}
+      cancel-in-progress: false
+    env:
+      FULLSCAN_HOME: ${{ github.event.inputs.runner == 'ecs' && '/home/gha' || '/home/runner' }}
+      HOME: ${{ github.event.inputs.runner == 'ecs' && '/home/gha' || '/home/runner' }}
+      FINVIZ_SKIP_LIVE: "1"
+      LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'deepseek' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Match origin/main
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+      - name: Skip if night pack already good
+        if: github.event.inputs.force != 'true'
+        run: |
+          if python3 -m src.skip_if_good --job postclose_all; then
+            echo "skip=yes" >> "$GITHUB_ENV"
+          fi
+      - uses: actions/setup-python@v5
+        if: env.skip != 'yes'
+        with:
+          python-version: "3.10"
+      - name: Install
+        if: env.skip != 'yes'
+        run: pip install -r requirements.txt && pip install psycopg2-binary yfinance pandas requests openai ddgs || true
+      - name: Post-close ALL
+        if: env.skip != 'yes'
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DATABASE_KEY: ${{ secrets.DATABASE_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENCLAW_TIMEOUT: "900"
+          GROK_ONLY: "0"
+        run: |
+          python3 -m src.run_daily --phase night \
+            ${{ github.event.inputs.force == 'true' && '--force' || '' }} \
+            --llm-backend "${LLM_BACKEND:-deepseek}"
+      - name: Persist night pack
+        if: always() && env.skip != 'yes'
+        run: |
+          bash scripts/safe_git_push.sh \
+            "auto: daily night [${{ needs.clock.outputs.date }}]" \
+            01_daily/general/ 01_daily/sectors/ 01_daily/map_heat/ \
+            01_daily/news/ 01_daily/_transcripts/ 01_daily/_channel1/ \
+            01_daily/*_learnings.md \
+            02_lessons/ 03_scoreboard/ \
+            00_grounding/mutable_policy.md \
+            00_grounding/book_policy.json \
+            00_grounding/weather_rules_proposals.json
+
+  generate:
+    needs: clock
+    if: ${{ needs.clock.outputs.skip_session != 'yes' && (needs.clock.outputs.job == 'generate' || needs.clock.outputs.job == 'morning') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    concurrency:
+      group: daily-generate
+      cancel-in-progress: false
+    env:
+      FINVIZ_SKIP_LIVE: "1"
+      FULLSCAN_HOME: /home/runner
+      HOME: /home/runner
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Pull scrape + ranker inputs from main
+        run: |
+          git fetch origin main
+          git checkout origin/main -- \
+            01_daily/news/ 01_daily/map_heat/ data/exports/ \
+            data/universe/ data/join/ data/ab_checklist/ data/peers/ \
+            data/stock_book/ 01_daily/weather/ || true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Skip if tickets already good
+        if: github.event.inputs.force != 'true'
+        run: |
+          DATE="${{ needs.clock.outputs.date }}"
+          if python3 -m src.skip_if_good --job generate --date "$DATE" \
+             && python3 -m src.skip_if_good --job stock_book_all --date "$DATE"; then
+            echo "skip=yes" >> "$GITHUB_ENV"
+          fi
+      - name: Install
+        if: env.skip != 'yes'
+        run: pip install -r requirements.txt && pip install pandas yfinance requests || true
+      - name: Generate all strategy tickets
+        if: env.skip != 'yes'
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DATABASE_KEY: ${{ secrets.DATABASE_KEY }}
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
+        run: |
+          DATE="${{ needs.clock.outputs.date }}"
+          ARGS=(--date "$DATE")
+          [ "${{ github.event.inputs.force }}" = "true" ] && ARGS+=(--force)
+          python3 -m src.run_generate "${ARGS[@]}"
+      - name: Persist tickets + dashboards
+        if: always() && env.skip != 'yes'
+        run: |
+          DATE="${{ needs.clock.outputs.date }}"
+          bash scripts/safe_git_push.sh \
+            "auto: generate tickets [${DATE}]" \
+            data/generate/ data/stock_book/ data/join/ data/universe/ \
+            data/ab_checklist/ data/paper/ data/sleeve_merge/ data/sleeve_combine/ \
+            data/strategy_board/ \
+            "01_daily/${DATE}_stock_book.md" \
+            "01_daily/${DATE}_flatten_card.md" \
+            "01_daily/${DATE}_generate.md" \
+            "01_daily/${DATE}_stock_book_diag.md" \
+            "01_daily/${DATE}_daily_status.json" \
+            01_daily/weather/ 03_scoreboard/ dashboard/
+      - name: Publish Pages
+        if: always() && env.skip != 'yes'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bash scripts/publish_dashboard.sh || true
+
+  diagnose:
+    needs: [clock, generate, night]
+    if: ${{ always() && needs.clock.outputs.skip_session != 'yes' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Overlay live artifacts
+        run: |
+          git fetch origin main
+          git checkout origin/main -- 01_daily data dashboard 03_scoreboard || true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Diagnose
+        run: |
+          pip install pandas pyarrow || true
+          python3 -m src.run_daily --phase diagnose --date "${{ needs.clock.outputs.date }}"
+      - name: Show tickets
+        if: always()
+        run: |
+          D="${{ needs.clock.outputs.date }}"
+          echo "======== generate $D ========"
+          cat "01_daily/${D}_generate.md" 2>/dev/null || true
+          echo "======== flatten card ========"
+          head -40 "01_daily/${D}_flatten_card.md" 2>/dev/null || true
+          echo "https://sroyaltyy.github.io/fullscan/dashboard/generate/"
+          echo "https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/"

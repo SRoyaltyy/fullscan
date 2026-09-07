@@ -1,9 +1,11 @@
 name: Pre-Open ALL (predictive one-shot)
 
+# MANUAL / ECS packet only. Daily.yml + Generate.yml own the 09:30
+# tickets. ECS systemd 05:55 still starts this Python for Grok essays.
 # One morning button: GH scrape (ubuntu) → book+green (ubuntu, no Grok)
 #   → packet (ECS). The ubuntu ranker does not wait on the ECS box —
 #   a 3h Grok hang must not leave BUY/SELL empty at 09:30.
-# CLOCK: ECS systemd 05:55 ET still owns the unattended start.
+# CLOCK: ECS systemd 05:55 ET still owns the unattended essay start.
 # Skip-if-good: each file already quality-ok is not rewritten (no LLM).
 
 on:

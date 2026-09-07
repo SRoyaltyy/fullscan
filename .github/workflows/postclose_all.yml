@@ -9,24 +9,12 @@ name: Post-Close ALL (grade + learn + next captains)
 # (09-03) and does not spend hours on 09-02 before 17:15 needs 09-04.
 # A queued ECS job must not block the ubuntu backup (split concurrency).
 
+# SCHEDULE / push RETIRED — Daily.yml night lane owns 16:10 / 17:15 / 23:30.
 on:
-  schedule:
-    - cron: "10 20 * * 1-5"   # ~16:10 ET — ubuntu (new cron may skip day 1)
-    - cron: "30 3 * * 2-6"    # ~23:30 ET — ubuntu backup if ECS queued/offline
-  # This agent cannot workflow_dispatch (403). A merge of healer code
-  # must start ubuntu last-closed the same way book push starts a skip.
-  # Do not match 01_daily (GITHUB_TOKEN persist must not retrigger).
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/postclose_all.yml"
-      - "src/run_postclose_all.py"
-      - "src/run_outcome.py"
-      - "src/run_reflect.py"
-      - "src/run_sector_outcome.py"
-      - "src/run_sector_reflect.py"
-      - "src/learn_cycle.py"
-      - "src/map_heat_postclose.py"
+  # schedule:
+  #   - cron: "10 20 * * 1-5"
+  #   - cron: "30 3 * * 2-6"
+  # push:
   workflow_dispatch:
     inputs:
       runner:

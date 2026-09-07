@@ -1,0 +1,107 @@
+name: Generate
+
+# THE tickets button. Writes BUY/SELL for every registered strategy
+# (src/run_generate.py STRATEGIES). If Daily inputs are missing, heals
+# scrape + ubuntu ranker first. Future strategy PRs must update that
+# registry or the new book will not show on the 09:30 board.
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_date:
+        description: "YYYY-MM-DD (empty = today ET)"
+        required: false
+        default: ""
+      force:
+        description: "true = re-rank and rewrite tickets"
+        required: false
+        default: "false"
+      no_heal:
+        description: "true = do not run Daily even if inputs are missing"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: daily-generate
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      FINVIZ_SKIP_LIVE: "1"
+      FULLSCAN_HOME: /home/runner
+      HOME: /home/runner
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Pull Daily artifacts from main
+        run: |
+          git fetch origin main
+          git checkout origin/main -- \
+            01_daily/news/ 01_daily/map_heat/ data/exports/ \
+            data/universe/ data/join/ data/ab_checklist/ data/peers/ \
+            data/stock_book/ data/sleeve_merge/ 01_daily/weather/ || true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Date
+        run: |
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          echo "DATE=$DATE" >> "$GITHUB_ENV"
+      - name: Skip if tickets already good
+        if: github.event.inputs.force != 'true'
+        run: |
+          if python3 -m src.skip_if_good --job generate --date "$DATE" \
+             && python3 -m src.skip_if_good --job stock_book_all --date "$DATE"; then
+            echo "skip=yes" >> "$GITHUB_ENV"
+          fi
+      - name: Install
+        if: env.skip != 'yes'
+        run: pip install -r requirements.txt && pip install pandas yfinance requests || true
+      - name: Generate
+        if: env.skip != 'yes'
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DATABASE_KEY: ${{ secrets.DATABASE_KEY }}
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
+        run: |
+          ARGS=(--date "$DATE")
+          [ "${{ github.event.inputs.force }}" = "true" ] && ARGS+=(--force)
+          [ "${{ github.event.inputs.no_heal }}" = "true" ] && ARGS+=(--no-heal)
+          python3 -m src.run_generate "${ARGS[@]}"
+      - name: Persist
+        if: always() && env.skip != 'yes'
+        run: |
+          bash scripts/safe_git_push.sh \
+            "auto: generate tickets [${DATE}]" \
+            data/generate/ data/stock_book/ data/join/ data/universe/ \
+            data/ab_checklist/ data/paper/ data/sleeve_merge/ data/sleeve_combine/ \
+            data/strategy_board/ \
+            "01_daily/${DATE}_stock_book.md" \
+            "01_daily/${DATE}_flatten_card.md" \
+            "01_daily/${DATE}_generate.md" \
+            "01_daily/${DATE}_stock_book_diag.md" \
+            01_daily/weather/ 03_scoreboard/ dashboard/
+      - name: Publish Pages
+        if: always() && env.skip != 'yes'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bash scripts/publish_dashboard.sh || true
+      - name: Show
+        if: always()
+        run: |
+          echo "======== ${DATE} generate ========"
+          cat "01_daily/${DATE}_generate.md" 2>/dev/null || true
+          echo "https://sroyaltyy.github.io/fullscan/dashboard/generate/"
+          echo "https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/"

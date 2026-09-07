@@ -548,6 +548,49 @@ def check_postclose_all(date: str) -> bool:
                 "outcome + reflect + sectors + sector-reflects + baseline + learnings")
 
 
+def check_generate(date: str) -> bool:
+    """Today's tickets + flatten card + generate board."""
+    tickets = ROOT / "data" / "generate" / f"{date}_tickets.json"
+    if not _exists_gt(tickets, 200):
+        return _log(False, "generate", date, "tickets json missing")
+    try:
+        payload = json.loads(tickets.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return _log(False, "generate", date, "tickets unreadable")
+    if not isinstance(payload, dict) or not payload.get("strategies"):
+        return _log(False, "generate", date, "tickets have no strategies")
+    card = ROOT / "01_daily" / f"{date}_flatten_card.md"
+    today = ROOT / "data" / "sleeve_merge" / "today.json"
+    if not (_exists_gt(card, 200) or _exists_gt(today, 80)):
+        return _log(False, "generate", date, "flatten card missing")
+    board = ROOT / "dashboard" / "generate" / "index.html"
+    if not _exists_gt(board, 200):
+        return _log(False, "generate", date, "generate dashboard missing")
+    return _log(True, "generate", date, "tickets + flatten + generate board")
+
+
+def check_daily_morning(date: str) -> bool:
+    """Scrape + ranker inputs. Essays are optional for the heal path."""
+    if not check_finviz_scrape(date):
+        return _log(False, "daily", date, "scrape missing")
+    if not check_label_weather(date):
+        return _log(False, "daily", date, "weather missing")
+    ranked = ROOT / "data" / "join" / f"{date}_ranked.csv"
+    if not _exists_gt(ranked, 5_000):
+        return _log(False, "daily", date, "join missing")
+    if not check_ab_checklist(date):
+        return _log(False, "daily", date, "AB missing")
+    return _log(True, "daily", date, "scrape + weather + join + AB")
+
+
+def check_daily(date: str | None = None) -> bool:
+    """Morning pack when the cash session is still ahead; else night pack."""
+    now = datetime.now(ET)
+    if now.hour >= 16:
+        return check_postclose_all(date or last_closed_session(now))
+    return check_daily_morning(date or _today())
+
+
 # postclose_all.yml skip-if-good must yield when the last-closed sidecar
 # is already writing. Do not put this in check_postclose_all() — that
 # function is the pack-complete predicate (night_pack_dates, orch).
@@ -608,6 +651,8 @@ JOBS = {
     "sector_outcomes": check_sector_outcomes,
     "sector_reflects": check_sector_reflects,
     "postclose_all": check_postclose_all,
+    "generate": check_generate,
+    "daily": check_daily,
 }
 
 
@@ -621,7 +666,9 @@ def main() -> None:
         print("[skip_if_good] SKIP job=postclose_all "
               "sidecar already writing last-closed")
         raise SystemExit(0)
-    if args.date:
+    if args.job == "daily":
+        ok = check_daily(args.date)
+    elif args.date:
         ok = JOBS[args.job](args.date)
     elif args.job == "postclose_all":
         # Last-closed plus a missing prior weekday (2026-09-03 learnings).
