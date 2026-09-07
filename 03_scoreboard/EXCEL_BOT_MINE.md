@@ -1233,3 +1233,7 @@ Standing light+O ± AH or FR: both SPY tapes green on 1d H, 1d I, and 1d stacked
 Board totals (all labels × horizons): KEEP 85 · KILL 1227 · THIN 0.
 
 Research only. One 2026 regime.
+
+## H/I soft-regime (standing light+O × heat × SPY)
+
+Standing light+O ± AH/FR under soft regimes (prior-I heat terciles × SPY up/down/flat): **DEMOTE** (slots KEEP 2 / DEMOTE 6 / REGIME-CONDITIONAL 1). See `excel_bot/research/HI_SOFT_REGIME.md`. Research only. Live flatten_robust frozen.

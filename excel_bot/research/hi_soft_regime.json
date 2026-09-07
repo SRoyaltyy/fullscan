@@ -1,0 +1,6034 @@
+{
+  "generated": "2026-09-07",
+  "spec": "standing light+O \u00b1 AH/FR \u00d7 prior-I heat terciles \u00d7 SPY tape",
+  "live_untouched": "flatten_robust",
+  "excel_cache_used": false,
+  "seed": "yahoo_rows_cache",
+  "entry": "open",
+  "slots": [
+    [
+      "light_O",
+      "H",
+      1,
+      "research_light_O_1d_H",
+      "same-day H"
+    ],
+    [
+      "light_O",
+      "I",
+      1,
+      "research_light_O_1d_I",
+      "same-day I / 1d stacked I"
+    ],
+    [
+      "light_O",
+      "I_sum",
+      2,
+      "research_light_O_2d_I_stack",
+      "2d stacked I"
+    ],
+    [
+      "light_O_AH",
+      "H",
+      1,
+      "research_light_O_AH_1d_H",
+      "same-day H"
+    ],
+    [
+      "light_O_AH",
+      "I",
+      1,
+      "research_light_O_AH_1d_I",
+      "same-day I / 1d stacked I"
+    ],
+    [
+      "light_O_AH",
+      "I_sum",
+      2,
+      "research_light_O_AH_2d_I_stack",
+      "2d stacked I"
+    ],
+    [
+      "light_O_FR",
+      "H",
+      1,
+      "research_light_O_FR_1d_H",
+      "same-day H"
+    ],
+    [
+      "light_O_FR",
+      "I",
+      1,
+      "research_light_O_FR_1d_I",
+      "same-day I / 1d stacked I"
+    ],
+    [
+      "light_O_FR",
+      "I_sum",
+      2,
+      "research_light_O_FR_2d_I_stack",
+      "2d stacked I"
+    ]
+  ],
+  "heat": {
+    "source": "prior_5d_mean_I",
+    "window": 5,
+    "min_obs": 3,
+    "cuts_from": "discovery",
+    "cuts": {
+      "cold_max": -0.004535028337486282,
+      "hot_min": 0.004799834407023621
+    },
+    "buckets": [
+      "cold",
+      "mid",
+      "hot"
+    ]
+  },
+  "tape": {
+    "source": "spy_tape.json",
+    "flat_bps": 0.0015,
+    "buckets": [
+      "up",
+      "down",
+      "flat"
+    ]
+  },
+  "cost_model": "futubull",
+  "fee_long": 0.0015,
+  "beat": 0.002,
+  "q1_cut": "2026-04-01",
+  "family": {
+    "verdict": "DEMOTE",
+    "n_keep": 2,
+    "n_demote": 6,
+    "n_conditional": 1,
+    "n_slots": 9
+  },
+  "n_dumps": 3559,
+  "n_heat_disc": 281732,
+  "n_keep_cells": 29,
+  "n_kill_cells": 40,
+  "n_thin_cells": 12,
+  "slot_summaries": [
+    {
+      "def": "light_O",
+      "label": "H",
+      "horizon": 1,
+      "card": "research_light_O_1d_H",
+      "plain": "same-day H",
+      "verdict": "KEEP",
+      "n_keep": 7,
+      "n_kill": 1,
+      "n_thin": 1
+    },
+    {
+      "def": "light_O",
+      "label": "I",
+      "horizon": 1,
+      "card": "research_light_O_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "verdict": "DEMOTE",
+      "n_keep": 3,
+      "n_kill": 5,
+      "n_thin": 1
+    },
+    {
+      "def": "light_O",
+      "label": "I_sum",
+      "horizon": 2,
+      "card": "research_light_O_2d_I_stack",
+      "plain": "2d stacked I",
+      "verdict": "DEMOTE",
+      "n_keep": 2,
+      "n_kill": 6,
+      "n_thin": 1
+    },
+    {
+      "def": "light_O_AH",
+      "label": "H",
+      "horizon": 1,
+      "card": "research_light_O_AH_1d_H",
+      "plain": "same-day H",
+      "verdict": "KEEP",
+      "n_keep": 5,
+      "n_kill": 2,
+      "n_thin": 2
+    },
+    {
+      "def": "light_O_AH",
+      "label": "I",
+      "horizon": 1,
+      "card": "research_light_O_AH_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "verdict": "DEMOTE",
+      "n_keep": 2,
+      "n_kill": 5,
+      "n_thin": 2
+    },
+    {
+      "def": "light_O_AH",
+      "label": "I_sum",
+      "horizon": 2,
+      "card": "research_light_O_AH_2d_I_stack",
+      "plain": "2d stacked I",
+      "verdict": "DEMOTE",
+      "n_keep": 2,
+      "n_kill": 5,
+      "n_thin": 2
+    },
+    {
+      "def": "light_O_FR",
+      "label": "H",
+      "horizon": 1,
+      "card": "research_light_O_FR_1d_H",
+      "plain": "same-day H",
+      "verdict": "REGIME-CONDITIONAL",
+      "n_keep": 4,
+      "n_kill": 4,
+      "n_thin": 1
+    },
+    {
+      "def": "light_O_FR",
+      "label": "I",
+      "horizon": 1,
+      "card": "research_light_O_FR_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "verdict": "DEMOTE",
+      "n_keep": 2,
+      "n_kill": 6,
+      "n_thin": 1
+    },
+    {
+      "def": "light_O_FR",
+      "label": "I_sum",
+      "horizon": 2,
+      "card": "research_light_O_FR_2d_I_stack",
+      "plain": "2d stacked I",
+      "verdict": "DEMOTE",
+      "n_keep": 2,
+      "n_kill": 6,
+      "n_thin": 1
+    }
+  ],
+  "rows": [
+    {
+      "discovery": {
+        "n": 251,
+        "avg_net": 0.028980824477675807,
+        "t": 8.415615010217342,
+        "win": 0.7330677290836654
+      },
+      "holdout": {
+        "n": 178,
+        "avg_net": 0.024180899602286598,
+        "t": 7.774279984761826,
+        "win": 0.7191011235955056
+      },
+      "q1": {
+        "n": 55,
+        "avg_net": 0.05083842522194917,
+        "t": 4.263507875875036,
+        "win": 0.7636363636363637
+      },
+      "n_tickers": 372,
+      "n_dates": 59,
+      "baseline": {
+        "n": 91539,
+        "avg_net": 0.012734514200425347,
+        "t": 3.328536746052504,
+        "win": 0.5321338445908301
+      },
+      "book_holdout": {
+        "n": 91539,
+        "avg_net": 0.012734514200425347,
+        "t": 3.328536746052504,
+        "win": 0.5321338445908301
+      },
+      "book_all": {
+        "n": 227070,
+        "avg_net": 0.0076272078826095996,
+        "t": 4.93633905025279,
+        "win": 0.5305324349319593
+      },
+      "edge_vs_book": 0.01144638540186125,
+      "july_share": 0.08326463415485379,
+      "top5_share": 0.13549722083846205,
+      "top5_tickers": [
+        "EDSA",
+        "LHSW",
+        "TGEN",
+        "SRXH",
+        "FGI"
+      ],
+      "lottery_day_frac": 0.11019129761211131,
+      "lottery_top_day": "2026-05-21",
+      "lottery_n_days": 59,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "cold",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 7,
+      "slot_kill": 1,
+      "slot_thin": 1,
+      "slot_verdict": "KEEP"
+    },
+    {
+      "discovery": {
+        "n": 165,
+        "avg_net": 0.019280545670010366,
+        "t": 4.795465473977756,
+        "win": 0.6606060606060606
+      },
+      "holdout": {
+        "n": 123,
+        "avg_net": 0.02388687139794847,
+        "t": 4.108646378260364,
+        "win": 0.6829268292682927
+      },
+      "q1": {
+        "n": 125,
+        "avg_net": 0.026358985995864843,
+        "t": 7.2838999117814955,
+        "win": 0.76
+      },
+      "n_tickers": 269,
+      "n_dates": 48,
+      "baseline": {
+        "n": 74331,
+        "avg_net": -0.0077251875610155245,
+        "t": -40.83525156271667,
+        "win": 0.38878798886063687
+      },
+      "book_holdout": {
+        "n": 74331,
+        "avg_net": -0.0077251875610155245,
+        "t": -40.83525156271667,
+        "win": 0.38878798886063687
+      },
+      "book_all": {
+        "n": 184407,
+        "avg_net": -0.008146564208272967,
+        "t": -62.047793603347834,
+        "win": 0.3853487123590753
+      },
+      "edge_vs_book": 0.031612058958964,
+      "july_share": 0.11435442260017299,
+      "top5_share": 0.20948552880200527,
+      "top5_tickers": [
+        "BVC",
+        "AGPU",
+        "AEHL",
+        "SKYQ",
+        "HQI"
+      ],
+      "lottery_day_frac": 0.12908527219989743,
+      "lottery_top_day": "2026-02-19",
+      "lottery_n_days": 48,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "cold",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 7,
+      "slot_kill": 1,
+      "slot_thin": 1,
+      "slot_verdict": "KEEP"
+    },
+    {
+      "discovery": {
+        "n": 53,
+        "avg_net": 0.027521063020084512,
+        "t": 4.325806586164115,
+        "win": 0.7547169811320755
+      },
+      "holdout": {
+        "n": 28,
+        "avg_net": 0.03665507257117174,
+        "t": 3.13934990685453,
+        "win": 0.75
+      },
+      "q1": {
+        "n": 17,
+        "avg_net": 0.025579912839182917,
+        "t": 2.3016104578673375,
+        "win": 0.7058823529411765
+      },
+      "n_tickers": 80,
+      "n_dates": 16,
+      "baseline": {
+        "n": 24285,
+        "avg_net": -0.0036268856766984185,
+        "t": -6.398132195305808,
+        "win": 0.4420012353304509
+      },
+      "book_holdout": {
+        "n": 24285,
+        "avg_net": -0.0036268856766984185,
+        "t": -6.398132195305808,
+        "win": 0.4420012353304509
+      },
+      "book_all": {
+        "n": 60411,
+        "avg_net": -0.004382411545943544,
+        "t": -15.422914787287146,
+        "win": 0.4399860952475543
+      },
+      "edge_vs_book": 0.040281958247870155,
+      "july_share": 0.05565737893560129,
+      "top5_share": 0.39011066999296656,
+      "top5_tickers": [
+        "DLXY",
+        "PL",
+        "QMCO",
+        "IMTE",
+        "FATN"
+      ],
+      "lottery_day_frac": 0.3051398030333598,
+      "lottery_top_day": "2026-04-02",
+      "lottery_n_days": 16,
+      "fail_reasons": [
+        "thin",
+        "lottery_day",
+        "q1_thin",
+        "ticker_ghost"
+      ],
+      "keep": "THIN",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "cold",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 7,
+      "slot_kill": 1,
+      "slot_thin": 1,
+      "slot_verdict": "KEEP"
+    },
+    {
+      "discovery": {
+        "n": 505,
+        "avg_net": 0.016776105687472266,
+        "t": 10.928104548844331,
+        "win": 0.6693069306930693
+      },
+      "holdout": {
+        "n": 362,
+        "avg_net": 0.015582842198699551,
+        "t": 8.192127455792052,
+        "win": 0.6740331491712708
+      },
+      "q1": {
+        "n": 74,
+        "avg_net": 0.0228100560908672,
+        "t": 4.538824135271023,
+        "win": 0.6351351351351351
+      },
+      "n_tickers": 743,
+      "n_dates": 61,
+      "baseline": {
+        "n": 91602,
+        "avg_net": 0.001475221520857881,
+        "t": 15.052598705117067,
+        "win": 0.48267505076308376
+      },
+      "book_holdout": {
+        "n": 91602,
+        "avg_net": 0.001475221520857881,
+        "t": 15.052598705117067,
+        "win": 0.48267505076308376
+      },
+      "book_all": {
+        "n": 223677,
+        "avg_net": 0.001595119177447896,
+        "t": 24.574432056948133,
+        "win": 0.485052106385547
+      },
+      "edge_vs_book": 0.01410762067784167,
+      "july_share": 0.1323038723489181,
+      "top5_share": 0.08642553298478353,
+      "top5_tickers": [
+        "ZTG",
+        "NRXP",
+        "AGCC",
+        "SSP",
+        "SEGG"
+      ],
+      "lottery_day_frac": 0.06131390032265239,
+      "lottery_top_day": "2026-04-15",
+      "lottery_n_days": 61,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "mid",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 7,
+      "slot_kill": 1,
+      "slot_thin": 1,
+      "slot_verdict": "KEEP"
+    },
+    {
+      "discovery": {
+        "n": 369,
+        "avg_net": 0.010893260704722442,
+        "t": 6.146384696594141,
+        "win": 0.5989159891598916
+      },
+      "holdout": {
+        "n": 254,
+        "avg_net": 0.012118354199620117,
+        "t": 4.754893147182454,
+        "win": 0.5511811023622047
+      },
+      "q1": {
+        "n": 207,
+        "avg_net": 0.020593963081255,
+        "t": 6.485375016745629,
+        "win": 0.6618357487922706
+      },
+      "n_tickers": 564,
+      "n_dates": 50,
+      "baseline": {
+        "n": 77730,
+        "avg_net": -0.004809226115753962,
+        "t": -46.00896999666133,
+        "win": 0.3717097645696642
+      },
+      "book_holdout": {
+        "n": 77730,
+        "avg_net": -0.004809226115753962,
+        "t": -46.00896999666133,
+        "win": 0.3717097645696642
+      },
+      "book_all": {
+        "n": 190056,
+        "avg_net": -0.004941226452201414,
+        "t": -62.591881392960154,
+        "win": 0.36800732415709053
+      },
+      "edge_vs_book": 0.01692758031537408,
+      "july_share": 0.0,
+      "top5_share": 0.16171894697148673,
+      "top5_tickers": [
+        "LUNG",
+        "STKE",
+        "SAFX",
+        "FLUX",
+        "YJ"
+      ],
+      "lottery_day_frac": 0.13633907881157903,
+      "lottery_top_day": "2026-02-27",
+      "lottery_n_days": 50,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "mid",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 7,
+      "slot_kill": 1,
+      "slot_thin": 1,
+      "slot_verdict": "KEEP"
+    },
+    {
+      "discovery": {
+        "n": 173,
+        "avg_net": 0.013869294578713753,
+        "t": 5.908131492020035,
+        "win": 0.6647398843930635
+      },
+      "holdout": {
+        "n": 101,
+        "avg_net": 0.012624126023614906,
+        "t": 3.2805475358303724,
+        "win": 0.6732673267326733
+      },
+      "q1": {
+        "n": 53,
+        "avg_net": 0.011845274773035794,
+        "t": 2.2539518547231596,
+        "win": 0.6415094339622641
+      },
+      "n_tickers": 267,
+      "n_dates": 17,
+      "baseline": {
+        "n": 25965,
+        "avg_net": -0.0008331646188362058,
+        "t": -4.18631581025255,
+        "win": 0.46008087810514153
+      },
+      "book_holdout": {
+        "n": 25965,
+        "avg_net": -0.0008331646188362058,
+        "t": -4.18631581025255,
+        "win": 0.46008087810514153
+      },
+      "book_all": {
+        "n": 63294,
+        "avg_net": -0.0009392677645160614,
+        "t": -7.585630944274711,
+        "win": 0.4612285524694284
+      },
+      "edge_vs_book": 0.013457290642451112,
+      "july_share": 0.07163400992630102,
+      "top5_share": 0.24570668015980765,
+      "top5_tickers": [
+        "NVTS",
+        "LUNR",
+        "INV",
+        "ANIX",
+        "OVID"
+      ],
+      "lottery_day_frac": 0.4527439760492083,
+      "lottery_top_day": "2026-04-02",
+      "lottery_n_days": 17,
+      "fail_reasons": [
+        "lottery_day"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "mid",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 7,
+      "slot_kill": 1,
+      "slot_thin": 1,
+      "slot_verdict": "KEEP"
+    },
+    {
+      "discovery": {
+        "n": 2059,
+        "avg_net": 0.02805419427796061,
+        "t": 7.954169645562996,
+        "win": 0.6755706653715395
+      },
+      "holdout": {
+        "n": 1428,
+        "avg_net": 0.022951569615912375,
+        "t": 15.711076930438823,
+        "win": 0.6624649859943977
+      },
+      "q1": {
+        "n": 287,
+        "avg_net": 0.03898317775255375,
+        "t": 9.75996565363224,
+        "win": 0.7526132404181185
+      },
+      "n_tickers": 2101,
+      "n_dates": 62,
+      "baseline": {
+        "n": 91149,
+        "avg_net": 0.003131622222929182,
+        "t": 18.228225843653778,
+        "win": 0.5041305993483198
+      },
+      "book_holdout": {
+        "n": 91149,
+        "avg_net": 0.003131622222929182,
+        "t": 18.228225843653778,
+        "win": 0.5041305993483198
+      },
+      "book_all": {
+        "n": 225003,
+        "avg_net": 0.003615642997411291,
+        "t": 26.930238030617925,
+        "win": 0.507553232623565
+      },
+      "edge_vs_book": 0.019819947392983192,
+      "july_share": 0.08377318645276802,
+      "top5_share": 0.10988702841017436,
+      "top5_tickers": [
+        "TDIC",
+        "MKDW",
+        "SDOT",
+        "SAFX",
+        "VCIG"
+      ],
+      "lottery_day_frac": 0.08336028996807482,
+      "lottery_top_day": "2026-05-13",
+      "lottery_n_days": 62,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "hot",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 7,
+      "slot_kill": 1,
+      "slot_thin": 1,
+      "slot_verdict": "KEEP"
+    },
+    {
+      "discovery": {
+        "n": 1614,
+        "avg_net": 0.020972123634579922,
+        "t": 10.321737762174171,
+        "win": 0.6239157372986369
+      },
+      "holdout": {
+        "n": 1067,
+        "avg_net": 0.017185837919469062,
+        "t": 9.282132830313913,
+        "win": 0.5951265229615745
+      },
+      "q1": {
+        "n": 760,
+        "avg_net": 0.021335977862870444,
+        "t": 10.066438819174085,
+        "win": 0.6460526315789473
+      },
+      "n_tickers": 1802,
+      "n_dates": 51,
+      "baseline": {
+        "n": 72405,
+        "avg_net": 0.0006361086869952112,
+        "t": 0.17819044797406727,
+        "win": 0.39772115185415374
+      },
+      "book_holdout": {
+        "n": 72405,
+        "avg_net": 0.0006361086869952112,
+        "t": 0.17819044797406727,
+        "win": 0.39772115185415374
+      },
+      "book_all": {
+        "n": 178380,
+        "avg_net": -0.003110154218448547,
+        "t": -2.141260872761029,
+        "win": 0.401732256979482
+      },
+      "edge_vs_book": 0.016549729232473852,
+      "july_share": 0.08951183803692547,
+      "top5_share": 0.1120043915287858,
+      "top5_tickers": [
+        "PFSA",
+        "PIII",
+        "STAK",
+        "EEIQ",
+        "TRT"
+      ],
+      "lottery_day_frac": 0.06447589867005918,
+      "lottery_top_day": "2026-02-27",
+      "lottery_n_days": 51,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "hot",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 7,
+      "slot_kill": 1,
+      "slot_thin": 1,
+      "slot_verdict": "KEEP"
+    },
+    {
+      "discovery": {
+        "n": 678,
+        "avg_net": 0.02223419123851352,
+        "t": 6.371729881076439,
+        "win": 0.6224188790560472
+      },
+      "holdout": {
+        "n": 424,
+        "avg_net": 0.017568930285931372,
+        "t": 8.010677262312122,
+        "win": 0.6179245283018868
+      },
+      "q1": {
+        "n": 126,
+        "avg_net": 0.045767871555614396,
+        "t": 3.1353993935990605,
+        "win": 0.7063492063492064
+      },
+      "n_tickers": 953,
+      "n_dates": 18,
+      "baseline": {
+        "n": 28512,
+        "avg_net": -0.0011596895594756722,
+        "t": -3.675957649799168,
+        "win": 0.4664351851851852
+      },
+      "book_holdout": {
+        "n": 28512,
+        "avg_net": -0.0011596895594756722,
+        "t": -3.675957649799168,
+        "win": 0.4664351851851852
+      },
+      "book_all": {
+        "n": 70416,
+        "avg_net": -0.0008989608598784345,
+        "t": -4.4287062097274115,
+        "win": 0.4671097477845944
+      },
+      "edge_vs_book": 0.018728619845407045,
+      "july_share": 0.1602628412121406,
+      "top5_share": 0.1856695346494068,
+      "top5_tickers": [
+        "RIME",
+        "DFNS",
+        "ACXP",
+        "LVWR",
+        "WLDS"
+      ],
+      "lottery_day_frac": 0.14878599620684185,
+      "lottery_top_day": "2026-04-02",
+      "lottery_n_days": 18,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "hot",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 7,
+      "slot_kill": 1,
+      "slot_thin": 1,
+      "slot_verdict": "KEEP"
+    },
+    {
+      "discovery": {
+        "n": 251,
+        "avg_net": 0.03992974280872758,
+        "t": 6.64394869503608,
+        "win": 0.7290836653386454
+      },
+      "holdout": {
+        "n": 178,
+        "avg_net": 0.029998370927495525,
+        "t": 6.457447263685478,
+        "win": 0.7247191011235955
+      },
+      "q1": {
+        "n": 55,
+        "avg_net": 0.055457177242717856,
+        "t": 3.6849940935591126,
+        "win": 0.7090909090909091
+      },
+      "n_tickers": 372,
+      "n_dates": 59,
+      "baseline": {
+        "n": 91539,
+        "avg_net": 0.014839449848564546,
+        "t": 13.516861442976678,
+        "win": 0.5954511191950972
+      },
+      "book_holdout": {
+        "n": 91539,
+        "avg_net": 0.014839449848564546,
+        "t": 13.516861442976678,
+        "win": 0.5954511191950972
+      },
+      "book_all": {
+        "n": 227070,
+        "avg_net": 0.02028804864050995,
+        "t": 7.932884018961991,
+        "win": 0.5928392125776193
+      },
+      "edge_vs_book": 0.015158921078930979,
+      "july_share": 0.06597422424984344,
+      "top5_share": 0.18790506311640034,
+      "top5_tickers": [
+        "CUE",
+        "EDSA",
+        "ELPW",
+        "TVTX",
+        "BW"
+      ],
+      "lottery_day_frac": 0.11634885003739497,
+      "lottery_top_day": "2026-05-01",
+      "lottery_n_days": 59,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "cold",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 3,
+      "slot_kill": 5,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 165,
+        "avg_net": 0.01309055240436087,
+        "t": 3.018714525973785,
+        "win": 0.5575757575757576
+      },
+      "holdout": {
+        "n": 123,
+        "avg_net": 0.020169247130024413,
+        "t": 3.968572481574484,
+        "win": 0.5609756097560976
+      },
+      "q1": {
+        "n": 125,
+        "avg_net": 0.015559223217688605,
+        "t": 4.035656537749752,
+        "win": 0.584
+      },
+      "n_tickers": 269,
+      "n_dates": 48,
+      "baseline": {
+        "n": 74331,
+        "avg_net": -0.0006449582232767873,
+        "t": -0.19181992979742477,
+        "win": 0.3493158978084514
+      },
+      "book_holdout": {
+        "n": 74331,
+        "avg_net": -0.0006449582232767873,
+        "t": -0.19181992979742477,
+        "win": 0.3493158978084514
+      },
+      "book_all": {
+        "n": 184407,
+        "avg_net": 1.0342169752077304e-05,
+        "t": 0.00512940227915352,
+        "win": 0.3490051896077698
+      },
+      "edge_vs_book": 0.0208142053533012,
+      "july_share": 0.19499280773116331,
+      "top5_share": 0.3211559486961203,
+      "top5_tickers": [
+        "SKYQ",
+        "AGPU",
+        "LIMN",
+        "BVC",
+        "HQI"
+      ],
+      "lottery_day_frac": 0.1311700556956682,
+      "lottery_top_day": "2026-02-19",
+      "lottery_n_days": 48,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "cold",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 3,
+      "slot_kill": 5,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 53,
+        "avg_net": 0.033565385996186387,
+        "t": 2.9983439567703023,
+        "win": 0.7169811320754716
+      },
+      "holdout": {
+        "n": 28,
+        "avg_net": 0.024247556566626804,
+        "t": 2.568344587846935,
+        "win": 0.75
+      },
+      "q1": {
+        "n": 17,
+        "avg_net": 0.01530653998080935,
+        "t": 1.3032874638079404,
+        "win": 0.6470588235294118
+      },
+      "n_tickers": 80,
+      "n_dates": 16,
+      "baseline": {
+        "n": 24285,
+        "avg_net": 0.0023534902166147055,
+        "t": 0.8242966166628539,
+        "win": 0.4474366893143916
+      },
+      "book_holdout": {
+        "n": 24285,
+        "avg_net": 0.0023534902166147055,
+        "t": 0.8242966166628539,
+        "win": 0.4474366893143916
+      },
+      "book_all": {
+        "n": 60411,
+        "avg_net": 0.004031035556556762,
+        "t": 1.3355612360015667,
+        "win": 0.4422207876049064
+      },
+      "edge_vs_book": 0.0218940663500121,
+      "july_share": 0.12194516710560256,
+      "top5_share": 0.47355535388527753,
+      "top5_tickers": [
+        "CUPR",
+        "TE",
+        "PL",
+        "FATN",
+        "DLXY"
+      ],
+      "lottery_day_frac": 0.17715640765154964,
+      "lottery_top_day": "2026-06-24",
+      "lottery_n_days": 16,
+      "fail_reasons": [
+        "thin",
+        "q1_thin",
+        "ticker_ghost"
+      ],
+      "keep": "THIN",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "cold",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 3,
+      "slot_kill": 5,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 505,
+        "avg_net": 0.02186763861523058,
+        "t": 9.910705382749509,
+        "win": 0.695049504950495
+      },
+      "holdout": {
+        "n": 362,
+        "avg_net": 0.01910326214191257,
+        "t": 8.954936046139562,
+        "win": 0.6988950276243094
+      },
+      "q1": {
+        "n": 74,
+        "avg_net": 0.023202232835819157,
+        "t": 4.2993769264879,
+        "win": 0.6081081081081081
+      },
+      "n_tickers": 743,
+      "n_dates": 61,
+      "baseline": {
+        "n": 91602,
+        "avg_net": 0.004050632117611446,
+        "t": 36.192146915568905,
+        "win": 0.5396279557214908
+      },
+      "book_holdout": {
+        "n": 91602,
+        "avg_net": 0.004050632117611446,
+        "t": 36.192146915568905,
+        "win": 0.5396279557214908
+      },
+      "book_all": {
+        "n": 223677,
+        "avg_net": 0.004265619605457036,
+        "t": 49.666803278224194,
+        "win": 0.5426843171179871
+      },
+      "edge_vs_book": 0.015052630024301124,
+      "july_share": 0.1314338595572185,
+      "top5_share": 0.10230663294759232,
+      "top5_tickers": [
+        "LNKS",
+        "NRXP",
+        "BOLD",
+        "ZTG",
+        "SEGG"
+      ],
+      "lottery_day_frac": 0.06585686493870174,
+      "lottery_top_day": "2026-07-28",
+      "lottery_n_days": 61,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "mid",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 3,
+      "slot_kill": 5,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 369,
+        "avg_net": 0.005803743367337184,
+        "t": 2.9207116820207246,
+        "win": 0.5040650406504065
+      },
+      "holdout": {
+        "n": 254,
+        "avg_net": 0.007551696305186407,
+        "t": 2.675981370821536,
+        "win": 0.49606299212598426
+      },
+      "q1": {
+        "n": 207,
+        "avg_net": 0.011037963840336859,
+        "t": 2.9357567702009475,
+        "win": 0.4830917874396135
+      },
+      "n_tickers": 564,
+      "n_dates": 50,
+      "baseline": {
+        "n": 77733,
+        "avg_net": -0.006832726619949186,
+        "t": -33.457690232940365,
+        "win": 0.3394697232835475
+      },
+      "book_holdout": {
+        "n": 77733,
+        "avg_net": -0.006832726619949186,
+        "t": -33.457690232940365,
+        "win": 0.3394697232835475
+      },
+      "book_all": {
+        "n": 190059,
+        "avg_net": -0.006997192566398765,
+        "t": -45.356702390187664,
+        "win": 0.3350906823670544
+      },
+      "edge_vs_book": 0.014384422925135592,
+      "july_share": 0.0,
+      "top5_share": 0.28707261227271796,
+      "top5_tickers": [
+        "SAFX",
+        "LUNG",
+        "INDO",
+        "DELL",
+        "ZVRA"
+      ],
+      "lottery_day_frac": 0.09583178249635335,
+      "lottery_top_day": "2026-05-04",
+      "lottery_n_days": 50,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "mid",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 3,
+      "slot_kill": 5,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 173,
+        "avg_net": 0.010079661808160433,
+        "t": 4.158987318553709,
+        "win": 0.6069364161849711
+      },
+      "holdout": {
+        "n": 101,
+        "avg_net": 0.00974995255825289,
+        "t": 2.682878232729166,
+        "win": 0.5643564356435643
+      },
+      "q1": {
+        "n": 53,
+        "avg_net": 0.015549794560116143,
+        "t": 2.6116403608657395,
+        "win": 0.6037735849056604
+      },
+      "n_tickers": 267,
+      "n_dates": 17,
+      "baseline": {
+        "n": 25965,
+        "avg_net": -0.0011474291137241004,
+        "t": -5.225670811147343,
+        "win": 0.4537261698440208
+      },
+      "book_holdout": {
+        "n": 25965,
+        "avg_net": -0.0011474291137241004,
+        "t": -5.225670811147343,
+        "win": 0.4537261698440208
+      },
+      "book_all": {
+        "n": 63294,
+        "avg_net": -0.001463730102769422,
+        "t": -10.72124005531867,
+        "win": 0.4546402502606882
+      },
+      "edge_vs_book": 0.010897381671976989,
+      "july_share": 0.0963786084528774,
+      "top5_share": 0.3000325745050691,
+      "top5_tickers": [
+        "NVTS",
+        "LUNR",
+        "ALOT",
+        "FABC",
+        "ANIX"
+      ],
+      "lottery_day_frac": 0.2058530280250515,
+      "lottery_top_day": "2026-03-11",
+      "lottery_n_days": 17,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "mid",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 3,
+      "slot_kill": 5,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 2059,
+        "avg_net": 0.029626208454428673,
+        "t": 6.498690551034467,
+        "win": 0.676056338028169
+      },
+      "holdout": {
+        "n": 1428,
+        "avg_net": 0.024599149936644128,
+        "t": 13.004159430428931,
+        "win": 0.6701680672268907
+      },
+      "q1": {
+        "n": 287,
+        "avg_net": 0.04166742686466951,
+        "t": 8.798727950249791,
+        "win": 0.7735191637630662
+      },
+      "n_tickers": 2101,
+      "n_dates": 62,
+      "baseline": {
+        "n": 91149,
+        "avg_net": 0.005345967704235148,
+        "t": 26.76726915809775,
+        "win": 0.531909291380048
+      },
+      "book_holdout": {
+        "n": 91149,
+        "avg_net": 0.005345967704235148,
+        "t": 26.76726915809775,
+        "win": 0.531909291380048
+      },
+      "book_all": {
+        "n": 225003,
+        "avg_net": 0.006203441880775641,
+        "t": 34.73798375922726,
+        "win": 0.5332062239170144
+      },
+      "edge_vs_book": 0.01925318223240898,
+      "july_share": 0.07270320817471648,
+      "top5_share": 0.13915389254770347,
+      "top5_tickers": [
+        "TDIC",
+        "QUCY",
+        "SAFX",
+        "VCIG",
+        "AIIO"
+      ],
+      "lottery_day_frac": 0.10287279321834825,
+      "lottery_top_day": "2026-05-13",
+      "lottery_n_days": 62,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "hot",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 3,
+      "slot_kill": 5,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 1614,
+        "avg_net": 0.01599126103379361,
+        "t": 4.143315010978399,
+        "win": 0.5229244114002478
+      },
+      "holdout": {
+        "n": 1067,
+        "avg_net": 0.010217500272884986,
+        "t": 4.781243367512318,
+        "win": 0.507029053420806
+      },
+      "q1": {
+        "n": 760,
+        "avg_net": 0.013652428025040138,
+        "t": 3.9881782967488864,
+        "win": 0.5
+      },
+      "n_tickers": 1802,
+      "n_dates": 51,
+      "baseline": {
+        "n": 72405,
+        "avg_net": -0.00978888926914111,
+        "t": -39.74246027007301,
+        "win": 0.3598508390304537
+      },
+      "book_holdout": {
+        "n": 72405,
+        "avg_net": -0.00978888926914111,
+        "t": -39.74246027007301,
+        "win": 0.3598508390304537
+      },
+      "book_all": {
+        "n": 178380,
+        "avg_net": -0.008950915488615856,
+        "t": -17.572132509783653,
+        "win": 0.3625630676084763
+      },
+      "edge_vs_book": 0.020006389542026097,
+      "july_share": 0.05825420941318667,
+      "top5_share": 0.30968024424576324,
+      "top5_tickers": [
+        "PFSA",
+        "EEIQ",
+        "PIII",
+        "TRT",
+        "STAK"
+      ],
+      "lottery_day_frac": 0.13392244316317842,
+      "lottery_top_day": "2026-08-18",
+      "lottery_n_days": 51,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "hot",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 3,
+      "slot_kill": 5,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 678,
+        "avg_net": 0.021215789250288223,
+        "t": 3.994954305189899,
+        "win": 0.5737463126843658
+      },
+      "holdout": {
+        "n": 424,
+        "avg_net": 0.013388102218850763,
+        "t": 5.806517771294556,
+        "win": 0.5943396226415094
+      },
+      "q1": {
+        "n": 126,
+        "avg_net": 0.04370801033285943,
+        "t": 2.2022304279355316,
+        "win": 0.6428571428571429
+      },
+      "n_tickers": 953,
+      "n_dates": 18,
+      "baseline": {
+        "n": 28512,
+        "avg_net": -0.0013292154803493648,
+        "t": -1.4839871979783368,
+        "win": 0.4515993265993266
+      },
+      "book_holdout": {
+        "n": 28512,
+        "avg_net": -0.0013292154803493648,
+        "t": -1.4839871979783368,
+        "win": 0.4515993265993266
+      },
+      "book_all": {
+        "n": 70416,
+        "avg_net": -0.0014579803496048362,
+        "t": -3.510509898349608,
+        "win": 0.4538173142467621
+      },
+      "edge_vs_book": 0.014717317699200127,
+      "july_share": 0.22902329588800568,
+      "top5_share": 0.33191582877943115,
+      "top5_tickers": [
+        "RIME",
+        "DFNS",
+        "ACXP",
+        "ZJYL",
+        "LVWR"
+      ],
+      "lottery_day_frac": 0.16451190598724438,
+      "lottery_top_day": "2026-07-27",
+      "lottery_n_days": 18,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "hot",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 3,
+      "slot_kill": 5,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 251,
+        "avg_net": 0.03843299347076038,
+        "t": 4.972890718924149,
+        "win": 0.6334661354581673
+      },
+      "holdout": {
+        "n": 178,
+        "avg_net": 0.011192717079502949,
+        "t": 2.0281105485411675,
+        "win": 0.5280898876404494
+      },
+      "q1": {
+        "n": 55,
+        "avg_net": 0.04127767664245962,
+        "t": 2.577061261078584,
+        "win": 0.6727272727272727
+      },
+      "n_tickers": 372,
+      "n_dates": 59,
+      "baseline": {
+        "n": 89649,
+        "avg_net": 0.017680040184607376,
+        "t": 12.928066303199413,
+        "win": 0.5578422514473111
+      },
+      "book_holdout": {
+        "n": 89649,
+        "avg_net": 0.017680040184607376,
+        "t": 12.928066303199413,
+        "win": 0.5578422514473111
+      },
+      "book_all": {
+        "n": 222489,
+        "avg_net": 0.028204020729113474,
+        "t": 9.133922294457825,
+        "win": 0.5511373595998005
+      },
+      "edge_vs_book": -0.006487323105104427,
+      "july_share": 0.01432412544557482,
+      "top5_share": 0.29660660928602994,
+      "top5_tickers": [
+        "CUE",
+        "CUPR",
+        "AXTI",
+        "EDSA",
+        "TGEN"
+      ],
+      "lottery_day_frac": 0.1139010836526079,
+      "lottery_top_day": "2026-05-22",
+      "lottery_n_days": 59,
+      "fail_reasons": [
+        "ticker_ghost",
+        "no_edge_vs_book"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "cold",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 165,
+        "avg_net": 0.004389593048704086,
+        "t": 0.5479169114898124,
+        "win": 0.4727272727272727
+      },
+      "holdout": {
+        "n": 123,
+        "avg_net": 0.035894332296165975,
+        "t": 3.0644992489974,
+        "win": 0.5040650406504065
+      },
+      "q1": {
+        "n": 125,
+        "avg_net": 0.010897342157016335,
+        "t": 1.6700892154730207,
+        "win": 0.496
+      },
+      "n_tickers": 269,
+      "n_dates": 48,
+      "baseline": {
+        "n": 74331,
+        "avg_net": 0.010128215746722463,
+        "t": 2.3352915722216037,
+        "win": 0.4012188723412843
+      },
+      "book_holdout": {
+        "n": 74331,
+        "avg_net": 0.010128215746722463,
+        "t": 2.3352915722216037,
+        "win": 0.4012188723412843
+      },
+      "book_all": {
+        "n": 184389,
+        "avg_net": 0.011770932802863239,
+        "t": 4.184716615213688,
+        "win": 0.4018352504758961
+      },
+      "edge_vs_book": 0.02576611654944351,
+      "july_share": 0.16579418646910343,
+      "top5_share": 0.5842239087748049,
+      "top5_tickers": [
+        "GLXG",
+        "HCAI",
+        "BESS",
+        "AGPU",
+        "OCGN"
+      ],
+      "lottery_day_frac": 0.14399597620390525,
+      "lottery_top_day": "2026-06-10",
+      "lottery_n_days": 48,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "cold",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 53,
+        "avg_net": 0.047077090252083925,
+        "t": 2.3685733226770487,
+        "win": 0.6037735849056604
+      },
+      "holdout": {
+        "n": 28,
+        "avg_net": 0.038540456287222406,
+        "t": 2.4457943630062084,
+        "win": 0.5714285714285714
+      },
+      "q1": {
+        "n": 17,
+        "avg_net": 0.019261339211754564,
+        "t": 1.1400681231527159,
+        "win": 0.47058823529411764
+      },
+      "n_tickers": 80,
+      "n_dates": 16,
+      "baseline": {
+        "n": 24285,
+        "avg_net": 0.0029848490464682246,
+        "t": 0.8667659360378754,
+        "win": 0.4625077208153181
+      },
+      "book_holdout": {
+        "n": 24285,
+        "avg_net": 0.0029848490464682246,
+        "t": 0.8667659360378754,
+        "win": 0.4625077208153181
+      },
+      "book_all": {
+        "n": 60411,
+        "avg_net": 0.005262967561007679,
+        "t": 1.6147579428975058,
+        "win": 0.45150717584545863
+      },
+      "edge_vs_book": 0.03555560724075418,
+      "july_share": 0.13758360586750443,
+      "top5_share": 0.5367806223757,
+      "top5_tickers": [
+        "FATN",
+        "CUPR",
+        "QMCO",
+        "TE",
+        "KWM"
+      ],
+      "lottery_day_frac": 0.26293582854568875,
+      "lottery_top_day": "2026-05-27",
+      "lottery_n_days": 16,
+      "fail_reasons": [
+        "thin",
+        "lottery_day",
+        "q1_thin",
+        "ticker_ghost"
+      ],
+      "keep": "THIN",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "cold",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 505,
+        "avg_net": 0.021260135123034433,
+        "t": 6.820200154157738,
+        "win": 0.6198019801980198
+      },
+      "holdout": {
+        "n": 362,
+        "avg_net": 0.02180361259609675,
+        "t": 6.500164388170179,
+        "win": 0.6464088397790055
+      },
+      "q1": {
+        "n": 74,
+        "avg_net": 0.02122321341996674,
+        "t": 2.2654538650566747,
+        "win": 0.5405405405405406
+      },
+      "n_tickers": 743,
+      "n_dates": 61,
+      "baseline": {
+        "n": 90156,
+        "avg_net": 0.003781976197142413,
+        "t": 16.994792180495114,
+        "win": 0.5193664315187009
+      },
+      "book_holdout": {
+        "n": 90156,
+        "avg_net": 0.003781976197142413,
+        "t": 16.994792180495114,
+        "win": 0.5193664315187009
+      },
+      "book_all": {
+        "n": 220083,
+        "avg_net": 0.004161580015504258,
+        "t": 31.601620087623395,
+        "win": 0.5234252531999292
+      },
+      "edge_vs_book": 0.018021636398954335,
+      "july_share": 0.13122637138533275,
+      "top5_share": 0.1263960859617829,
+      "top5_tickers": [
+        "SOC",
+        "LNKS",
+        "ZTG",
+        "HURN",
+        "TCRX"
+      ],
+      "lottery_day_frac": 0.1020542733578266,
+      "lottery_top_day": "2026-04-14",
+      "lottery_n_days": 61,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "mid",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 369,
+        "avg_net": 0.006672233077764277,
+        "t": 2.180405758712465,
+        "win": 0.5176151761517616
+      },
+      "holdout": {
+        "n": 254,
+        "avg_net": 0.013910694639261862,
+        "t": 2.5595544654050997,
+        "win": 0.4881889763779528
+      },
+      "q1": {
+        "n": 207,
+        "avg_net": 0.0076171376867002465,
+        "t": 1.5301723713418076,
+        "win": 0.47342995169082125
+      },
+      "n_tickers": 564,
+      "n_dates": 50,
+      "baseline": {
+        "n": 77718,
+        "avg_net": -0.005854645920740216,
+        "t": -26.20443368627286,
+        "win": 0.3936925808692967
+      },
+      "book_holdout": {
+        "n": 77718,
+        "avg_net": -0.005854645920740216,
+        "t": -26.20443368627286,
+        "win": 0.3936925808692967
+      },
+      "book_all": {
+        "n": 190023,
+        "avg_net": -0.005720282610753543,
+        "t": -30.31181787919205,
+        "win": 0.3890686916846908
+      },
+      "edge_vs_book": 0.01976534056000208,
+      "july_share": 0.0,
+      "top5_share": 0.3625884704866566,
+      "top5_tickers": [
+        "IZM",
+        "INDO",
+        "OPTU",
+        "GBR",
+        "DELL"
+      ],
+      "lottery_day_frac": 0.13087242524919207,
+      "lottery_top_day": "2026-06-09",
+      "lottery_n_days": 50,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "mid",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 173,
+        "avg_net": 0.011494751646589314,
+        "t": 3.0275079339179563,
+        "win": 0.5895953757225434
+      },
+      "holdout": {
+        "n": 101,
+        "avg_net": 0.013390260554498662,
+        "t": 2.6489065485415346,
+        "win": 0.6237623762376238
+      },
+      "q1": {
+        "n": 53,
+        "avg_net": -0.002897726409578,
+        "t": -0.5301952004678193,
+        "win": 0.4528301886792453
+      },
+      "n_tickers": 267,
+      "n_dates": 17,
+      "baseline": {
+        "n": 25965,
+        "avg_net": -9.299946890170394e-06,
+        "t": -0.027342550938830437,
+        "win": 0.4853841709994223
+      },
+      "book_holdout": {
+        "n": 25965,
+        "avg_net": -9.299946890170394e-06,
+        "t": -0.027342550938830437,
+        "win": 0.4853841709994223
+      },
+      "book_all": {
+        "n": 63294,
+        "avg_net": -0.00013152244936852722,
+        "t": -0.6430025022522754,
+        "win": 0.49028343918854866
+      },
+      "edge_vs_book": 0.013399560501388833,
+      "july_share": 0.12020863292867094,
+      "top5_share": 0.3731546938332106,
+      "top5_tickers": [
+        "AVEX",
+        "INV",
+        "IXHL",
+        "MMED",
+        "ANIX"
+      ],
+      "lottery_day_frac": 0.2659972663694019,
+      "lottery_top_day": "2026-06-25",
+      "lottery_n_days": 17,
+      "fail_reasons": [
+        "lottery_day",
+        "q1_sign",
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "mid",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 2059,
+        "avg_net": 0.02356763609930064,
+        "t": 9.023426594842421,
+        "win": 0.6066051481301603
+      },
+      "holdout": {
+        "n": 1428,
+        "avg_net": 0.02389772787210968,
+        "t": 9.373628551500255,
+        "win": 0.6141456582633054
+      },
+      "q1": {
+        "n": 287,
+        "avg_net": 0.03747408065022656,
+        "t": 4.65724852762785,
+        "win": 0.6445993031358885
+      },
+      "n_tickers": 2101,
+      "n_dates": 62,
+      "baseline": {
+        "n": 90174,
+        "avg_net": 0.00496526477520081,
+        "t": 13.599452672470031,
+        "win": 0.5133076052964269
+      },
+      "book_holdout": {
+        "n": 90174,
+        "avg_net": 0.00496526477520081,
+        "t": 13.599452672470031,
+        "win": 0.5133076052964269
+      },
+      "book_all": {
+        "n": 222588,
+        "avg_net": 0.005493449818054534,
+        "t": 23.923039004423877,
+        "win": 0.511456143188312
+      },
+      "edge_vs_book": 0.01893246309690887,
+      "july_share": 0.054619773346661904,
+      "top5_share": 0.09330253495418957,
+      "top5_tickers": [
+        "VCIG",
+        "MKDW",
+        "QUCY",
+        "TGHL",
+        "CODX"
+      ],
+      "lottery_day_frac": 0.08098281691812602,
+      "lottery_top_day": "2026-04-14",
+      "lottery_n_days": 62,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "hot",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 1614,
+        "avg_net": 0.013903522124924827,
+        "t": 4.833823935197498,
+        "win": 0.5037174721189591
+      },
+      "holdout": {
+        "n": 1067,
+        "avg_net": 0.006054489368125183,
+        "t": 2.14043617827571,
+        "win": 0.46672914714151825
+      },
+      "q1": {
+        "n": 760,
+        "avg_net": 0.01673160558182277,
+        "t": 4.079459657874182,
+        "win": 0.5144736842105263
+      },
+      "n_tickers": 1802,
+      "n_dates": 51,
+      "baseline": {
+        "n": 72399,
+        "avg_net": -0.006830938512388496,
+        "t": -7.050196477833137,
+        "win": 0.3941490904570505
+      },
+      "book_holdout": {
+        "n": 72399,
+        "avg_net": -0.006830938512388496,
+        "t": -7.050196477833137,
+        "win": 0.3941490904570505
+      },
+      "book_all": {
+        "n": 178347,
+        "avg_net": -0.005737928412011712,
+        "t": -7.18692099666254,
+        "win": 0.3961378660700769
+      },
+      "edge_vs_book": 0.012885427880513679,
+      "july_share": 0.0,
+      "top5_share": 0.25500837795426057,
+      "top5_tickers": [
+        "PFSA",
+        "EEIQ",
+        "PIII",
+        "TRT",
+        "ANTX"
+      ],
+      "lottery_day_frac": 0.08280162469601661,
+      "lottery_top_day": "2026-02-27",
+      "lottery_n_days": 51,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "hot",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 678,
+        "avg_net": 0.024212492664232747,
+        "t": 3.0465758318229743,
+        "win": 0.5929203539823009
+      },
+      "holdout": {
+        "n": 424,
+        "avg_net": 0.013884300005837333,
+        "t": 4.3311037741726555,
+        "win": 0.5966981132075472
+      },
+      "q1": {
+        "n": 126,
+        "avg_net": 0.011395341438079843,
+        "t": 0.7895182935171517,
+        "win": 0.40476190476190477
+      },
+      "n_tickers": 953,
+      "n_dates": 18,
+      "baseline": {
+        "n": 28512,
+        "avg_net": -0.0001815239231817612,
+        "t": -0.17157703975887323,
+        "win": 0.492739898989899
+      },
+      "book_holdout": {
+        "n": 28512,
+        "avg_net": -0.0001815239231817612,
+        "t": -0.17157703975887323,
+        "win": 0.492739898989899
+      },
+      "book_all": {
+        "n": 70416,
+        "avg_net": 0.0003574500043718372,
+        "t": 0.6766336877456494,
+        "win": 0.4950579413769598
+      },
+      "edge_vs_book": 0.014065823929019094,
+      "july_share": 0.23386968907865555,
+      "top5_share": 0.3938961777574361,
+      "top5_tickers": [
+        "DFNS",
+        "RIME",
+        "FOFO",
+        "RPGL",
+        "ACXP"
+      ],
+      "lottery_day_frac": 0.22834673288773347,
+      "lottery_top_day": "2026-07-27",
+      "lottery_n_days": 18,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O",
+      "card": "research_light_O_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "hot",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 187,
+        "avg_net": 0.032822294541984647,
+        "t": 7.560180955956611,
+        "win": 0.7433155080213903
+      },
+      "holdout": {
+        "n": 131,
+        "avg_net": 0.024043812805908425,
+        "t": 6.742019726645785,
+        "win": 0.7251908396946565
+      },
+      "q1": {
+        "n": 42,
+        "avg_net": 0.056517533373772064,
+        "t": 3.764670339922211,
+        "win": 0.7619047619047619
+      },
+      "n_tickers": 280,
+      "n_dates": 56,
+      "baseline": {
+        "n": 91539,
+        "avg_net": 0.012734514200425347,
+        "t": 3.328536746052504,
+        "win": 0.5321338445908301
+      },
+      "book_holdout": {
+        "n": 91539,
+        "avg_net": 0.012734514200425347,
+        "t": 3.328536746052504,
+        "win": 0.5321338445908301
+      },
+      "book_all": {
+        "n": 227070,
+        "avg_net": 0.0076272078826095996,
+        "t": 4.93633905025279,
+        "win": 0.5305324349319593
+      },
+      "edge_vs_book": 0.011309298605483077,
+      "july_share": 0.09327585647579852,
+      "top5_share": 0.16618542061308209,
+      "top5_tickers": [
+        "EDSA",
+        "LHSW",
+        "TGEN",
+        "FGI",
+        "BW"
+      ],
+      "lottery_day_frac": 0.0886422424399687,
+      "lottery_top_day": "2026-06-11",
+      "lottery_n_days": 56,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "cold",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 5,
+      "slot_kill": 2,
+      "slot_thin": 2,
+      "slot_verdict": "KEEP"
+    },
+    {
+      "discovery": {
+        "n": 108,
+        "avg_net": 0.025685914403297278,
+        "t": 5.685054335754239,
+        "win": 0.6851851851851852
+      },
+      "holdout": {
+        "n": 87,
+        "avg_net": 0.01894927291760932,
+        "t": 2.9433746004921035,
+        "win": 0.6781609195402298
+      },
+      "q1": {
+        "n": 83,
+        "avg_net": 0.030734880632134125,
+        "t": 6.230928373263002,
+        "win": 0.7831325301204819
+      },
+      "n_tickers": 182,
+      "n_dates": 45,
+      "baseline": {
+        "n": 74331,
+        "avg_net": -0.0077251875610155245,
+        "t": -40.83525156271667,
+        "win": 0.38878798886063687
+      },
+      "book_holdout": {
+        "n": 74331,
+        "avg_net": -0.0077251875610155245,
+        "t": -40.83525156271667,
+        "win": 0.38878798886063687
+      },
+      "book_all": {
+        "n": 184407,
+        "avg_net": -0.008146564208272967,
+        "t": -62.047793603347834,
+        "win": 0.3853487123590753
+      },
+      "edge_vs_book": 0.026674460478624845,
+      "july_share": 0.12403781306558047,
+      "top5_share": 0.22951692048250075,
+      "top5_tickers": [
+        "AGPU",
+        "AEHL",
+        "ASBP",
+        "ALLR",
+        "HCAI"
+      ],
+      "lottery_day_frac": 0.14446847104659347,
+      "lottery_top_day": "2026-02-19",
+      "lottery_n_days": 45,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "cold",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 5,
+      "slot_kill": 2,
+      "slot_thin": 2,
+      "slot_verdict": "KEEP"
+    },
+    {
+      "discovery": {
+        "n": 35,
+        "avg_net": 0.03019887526176227,
+        "t": 3.3940492547934085,
+        "win": 0.7428571428571429
+      },
+      "holdout": {
+        "n": 17,
+        "avg_net": 0.0433219200581929,
+        "t": 2.3445658882588374,
+        "win": 0.7058823529411765
+      },
+      "q1": {
+        "n": 8,
+        "avg_net": 0.028624983139991234,
+        "t": 1.2803603119042433,
+        "win": 0.5
+      },
+      "n_tickers": 51,
+      "n_dates": 16,
+      "baseline": {
+        "n": 24285,
+        "avg_net": -0.0036268856766984185,
+        "t": -6.398132195305808,
+        "win": 0.4420012353304509
+      },
+      "book_holdout": {
+        "n": 24285,
+        "avg_net": -0.0036268856766984185,
+        "t": -6.398132195305808,
+        "win": 0.4420012353304509
+      },
+      "book_all": {
+        "n": 60411,
+        "avg_net": -0.004382411545943544,
+        "t": -15.422914787287146,
+        "win": 0.4399860952475543
+      },
+      "edge_vs_book": 0.04694880573489132,
+      "july_share": 0.029155115322334134,
+      "top5_share": 0.5405323905046325,
+      "top5_tickers": [
+        "DLXY",
+        "PL",
+        "QMCO",
+        "IMTE",
+        "FATN"
+      ],
+      "lottery_day_frac": 0.27325094932245003,
+      "lottery_top_day": "2026-04-02",
+      "lottery_n_days": 16,
+      "fail_reasons": [
+        "thin",
+        "lottery_day",
+        "q1_thin",
+        "ticker_ghost"
+      ],
+      "keep": "THIN",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "cold",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 5,
+      "slot_kill": 2,
+      "slot_thin": 2,
+      "slot_verdict": "KEEP"
+    },
+    {
+      "discovery": {
+        "n": 152,
+        "avg_net": 0.0241897514740258,
+        "t": 7.014083149383969,
+        "win": 0.7171052631578947
+      },
+      "holdout": {
+        "n": 113,
+        "avg_net": 0.02864727590329616,
+        "t": 5.9189828054381755,
+        "win": 0.7876106194690266
+      },
+      "q1": {
+        "n": 22,
+        "avg_net": 0.04489857542144933,
+        "t": 3.5231660771609206,
+        "win": 0.7272727272727273
+      },
+      "n_tickers": 241,
+      "n_dates": 53,
+      "baseline": {
+        "n": 91602,
+        "avg_net": 0.001475221520857881,
+        "t": 15.052598705117067,
+        "win": 0.48267505076308376
+      },
+      "book_holdout": {
+        "n": 91602,
+        "avg_net": 0.001475221520857881,
+        "t": 15.052598705117067,
+        "win": 0.48267505076308376
+      },
+      "book_all": {
+        "n": 223677,
+        "avg_net": 0.001595119177447896,
+        "t": 24.574432056948133,
+        "win": 0.485052106385547
+      },
+      "edge_vs_book": 0.02717205438243828,
+      "july_share": 0.16849823933687172,
+      "top5_share": 0.162382859176469,
+      "top5_tickers": [
+        "ZTG",
+        "NRXP",
+        "SEGG",
+        "TELA",
+        "PALI"
+      ],
+      "lottery_day_frac": 0.08312418767865161,
+      "lottery_top_day": "2026-04-15",
+      "lottery_n_days": 53,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "mid",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 5,
+      "slot_kill": 2,
+      "slot_thin": 2,
+      "slot_verdict": "KEEP"
+    },
+    {
+      "discovery": {
+        "n": 112,
+        "avg_net": 0.018608889287060483,
+        "t": 4.319300514438173,
+        "win": 0.5892857142857143
+      },
+      "holdout": {
+        "n": 66,
+        "avg_net": 0.026803931830726387,
+        "t": 3.637230401907956,
+        "win": 0.6515151515151515
+      },
+      "q1": {
+        "n": 69,
+        "avg_net": 0.03355056032706578,
+        "t": 4.589333032999009,
+        "win": 0.7101449275362319
+      },
+      "n_tickers": 171,
+      "n_dates": 45,
+      "baseline": {
+        "n": 77730,
+        "avg_net": -0.004809226115753962,
+        "t": -46.00896999666133,
+        "win": 0.3717097645696642
+      },
+      "book_holdout": {
+        "n": 77730,
+        "avg_net": -0.004809226115753962,
+        "t": -46.00896999666133,
+        "win": 0.3717097645696642
+      },
+      "book_all": {
+        "n": 190056,
+        "avg_net": -0.004941226452201414,
+        "t": -62.591881392960154,
+        "win": 0.36800732415709053
+      },
+      "edge_vs_book": 0.03161315794648035,
+      "july_share": 0.0,
+      "top5_share": 0.29462019291063696,
+      "top5_tickers": [
+        "LUNG",
+        "STKE",
+        "SAFX",
+        "FLUX",
+        "XCH"
+      ],
+      "lottery_day_frac": 0.13231093656947993,
+      "lottery_top_day": "2026-02-27",
+      "lottery_n_days": 45,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "mid",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 5,
+      "slot_kill": 2,
+      "slot_thin": 2,
+      "slot_verdict": "KEEP"
+    },
+    {
+      "discovery": {
+        "n": 47,
+        "avg_net": 0.031074265987255944,
+        "t": 4.557711605236464,
+        "win": 0.7446808510638298
+      },
+      "holdout": {
+        "n": 27,
+        "avg_net": 0.04398203209053669,
+        "t": 4.027766604255842,
+        "win": 0.8518518518518519
+      },
+      "q1": {
+        "n": 13,
+        "avg_net": 0.03852882054671966,
+        "t": 2.1049885351864686,
+        "win": 0.8461538461538461
+      },
+      "n_tickers": 73,
+      "n_dates": 16,
+      "baseline": {
+        "n": 25965,
+        "avg_net": -0.0008331646188362058,
+        "t": -4.18631581025255,
+        "win": 0.46008087810514153
+      },
+      "book_holdout": {
+        "n": 25965,
+        "avg_net": -0.0008331646188362058,
+        "t": -4.18631581025255,
+        "win": 0.46008087810514153
+      },
+      "book_all": {
+        "n": 63294,
+        "avg_net": -0.0009392677645160614,
+        "t": -7.585630944274711,
+        "win": 0.4612285524694284
+      },
+      "edge_vs_book": 0.044815196709372895,
+      "july_share": 0.1279884172520727,
+      "top5_share": 0.34094745545594685,
+      "top5_tickers": [
+        "NVTS",
+        "LUNR",
+        "INV",
+        "ANIX",
+        "OVID"
+      ],
+      "lottery_day_frac": 0.3902739727910196,
+      "lottery_top_day": "2026-04-02",
+      "lottery_n_days": 16,
+      "fail_reasons": [
+        "thin",
+        "lottery_day",
+        "q1_thin",
+        "ticker_ghost"
+      ],
+      "keep": "THIN",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "mid",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 5,
+      "slot_kill": 2,
+      "slot_thin": 2,
+      "slot_verdict": "KEEP"
+    },
+    {
+      "discovery": {
+        "n": 661,
+        "avg_net": 0.0470178648057478,
+        "t": 4.4159986965562705,
+        "win": 0.7095310136157338
+      },
+      "holdout": {
+        "n": 436,
+        "avg_net": 0.03876663753873557,
+        "t": 10.639647374599551,
+        "win": 0.7247706422018348
+      },
+      "q1": {
+        "n": 98,
+        "avg_net": 0.04712323398470866,
+        "t": 5.640892934324781,
+        "win": 0.7346938775510204
+      },
+      "n_tickers": 797,
+      "n_dates": 61,
+      "baseline": {
+        "n": 91149,
+        "avg_net": 0.003131622222929182,
+        "t": 18.228225843653778,
+        "win": 0.5041305993483198
+      },
+      "book_holdout": {
+        "n": 91149,
+        "avg_net": 0.003131622222929182,
+        "t": 18.228225843653778,
+        "win": 0.5041305993483198
+      },
+      "book_all": {
+        "n": 225003,
+        "avg_net": 0.003615642997411291,
+        "t": 26.930238030617925,
+        "win": 0.507553232623565
+      },
+      "edge_vs_book": 0.03563501531580639,
+      "july_share": 0.08064200884274478,
+      "top5_share": 0.2061142918151431,
+      "top5_tickers": [
+        "TDIC",
+        "SAFX",
+        "SDOT",
+        "VCIG",
+        "MKDW"
+      ],
+      "lottery_day_frac": 0.15163243528532067,
+      "lottery_top_day": "2026-05-13",
+      "lottery_n_days": 61,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "hot",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 5,
+      "slot_kill": 2,
+      "slot_thin": 2,
+      "slot_verdict": "KEEP"
+    },
+    {
+      "discovery": {
+        "n": 481,
+        "avg_net": 0.03451805339087059,
+        "t": 8.17726857093184,
+        "win": 0.6881496881496881
+      },
+      "holdout": {
+        "n": 315,
+        "avg_net": 0.02965762281012096,
+        "t": 6.909407357656979,
+        "win": 0.6603174603174603
+      },
+      "q1": {
+        "n": 217,
+        "avg_net": 0.03790120150795583,
+        "t": 6.431485510951765,
+        "win": 0.6820276497695853
+      },
+      "n_tickers": 638,
+      "n_dates": 51,
+      "baseline": {
+        "n": 72405,
+        "avg_net": 0.0006361086869952112,
+        "t": 0.17819044797406727,
+        "win": 0.39772115185415374
+      },
+      "book_holdout": {
+        "n": 72405,
+        "avg_net": 0.0006361086869952112,
+        "t": 0.17819044797406727,
+        "win": 0.39772115185415374
+      },
+      "book_all": {
+        "n": 178380,
+        "avg_net": -0.003110154218448547,
+        "t": -2.141260872761029,
+        "win": 0.401732256979482
+      },
+      "edge_vs_book": 0.02902151412312575,
+      "july_share": 0.07823345580633873,
+      "top5_share": 0.14857034191778248,
+      "top5_tickers": [
+        "PIII",
+        "EEIQ",
+        "GAUZ",
+        "HCAI",
+        "HXHX"
+      ],
+      "lottery_day_frac": 0.07633575967566071,
+      "lottery_top_day": "2026-05-15",
+      "lottery_n_days": 51,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "hot",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 5,
+      "slot_kill": 2,
+      "slot_thin": 2,
+      "slot_verdict": "KEEP"
+    },
+    {
+      "discovery": {
+        "n": 165,
+        "avg_net": 0.05532436401310896,
+        "t": 4.190821395028407,
+        "win": 0.7393939393939394
+      },
+      "holdout": {
+        "n": 90,
+        "avg_net": 0.03338917416821204,
+        "t": 5.124280662837866,
+        "win": 0.7222222222222222
+      },
+      "q1": {
+        "n": 31,
+        "avg_net": 0.11446836902305373,
+        "t": 2.0082605117897243,
+        "win": 0.8709677419354839
+      },
+      "n_tickers": 249,
+      "n_dates": 18,
+      "baseline": {
+        "n": 28512,
+        "avg_net": -0.0011596895594756722,
+        "t": -3.675957649799168,
+        "win": 0.4664351851851852
+      },
+      "book_holdout": {
+        "n": 28512,
+        "avg_net": -0.0011596895594756722,
+        "t": -3.675957649799168,
+        "win": 0.4664351851851852
+      },
+      "book_all": {
+        "n": 70416,
+        "avg_net": -0.0008989608598784345,
+        "t": -4.4287062097274115,
+        "win": 0.4671097477845944
+      },
+      "edge_vs_book": 0.034548863727687715,
+      "july_share": 0.2513621493581756,
+      "top5_share": 0.3446661176448658,
+      "top5_tickers": [
+        "RIME",
+        "DFNS",
+        "ACXP",
+        "LVWR",
+        "WLDS"
+      ],
+      "lottery_day_frac": 0.15384555462280688,
+      "lottery_top_day": "2026-02-13",
+      "lottery_n_days": 18,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "hot",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 5,
+      "slot_kill": 2,
+      "slot_thin": 2,
+      "slot_verdict": "KEEP"
+    },
+    {
+      "discovery": {
+        "n": 187,
+        "avg_net": 0.04642772184937776,
+        "t": 5.952614704992192,
+        "win": 0.7486631016042781
+      },
+      "holdout": {
+        "n": 131,
+        "avg_net": 0.03038787954725131,
+        "t": 5.328556617637749,
+        "win": 0.7175572519083969
+      },
+      "q1": {
+        "n": 42,
+        "avg_net": 0.0660255131883227,
+        "t": 3.4851277665327682,
+        "win": 0.7619047619047619
+      },
+      "n_tickers": 280,
+      "n_dates": 56,
+      "baseline": {
+        "n": 91539,
+        "avg_net": 0.014839449848564546,
+        "t": 13.516861442976678,
+        "win": 0.5954511191950972
+      },
+      "book_holdout": {
+        "n": 91539,
+        "avg_net": 0.014839449848564546,
+        "t": 13.516861442976678,
+        "win": 0.5954511191950972
+      },
+      "book_all": {
+        "n": 227070,
+        "avg_net": 0.02028804864050995,
+        "t": 7.932884018961991,
+        "win": 0.5928392125776193
+      },
+      "edge_vs_book": 0.015548429698686764,
+      "july_share": 0.07358417982564612,
+      "top5_share": 0.22636630240426325,
+      "top5_tickers": [
+        "CUE",
+        "EDSA",
+        "ELPW",
+        "TVTX",
+        "BW"
+      ],
+      "lottery_day_frac": 0.135305710244934,
+      "lottery_top_day": "2026-05-01",
+      "lottery_n_days": 56,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "cold",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 5,
+      "slot_thin": 2,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 108,
+        "avg_net": 0.014400103807313984,
+        "t": 2.606645019595534,
+        "win": 0.5555555555555556
+      },
+      "holdout": {
+        "n": 87,
+        "avg_net": 0.014907403782216075,
+        "t": 2.761495904173003,
+        "win": 0.5402298850574713
+      },
+      "q1": {
+        "n": 83,
+        "avg_net": 0.018178991376491354,
+        "t": 3.481463141928908,
+        "win": 0.5783132530120482
+      },
+      "n_tickers": 182,
+      "n_dates": 45,
+      "baseline": {
+        "n": 74331,
+        "avg_net": -0.0006449582232767873,
+        "t": -0.19181992979742477,
+        "win": 0.3493158978084514
+      },
+      "book_holdout": {
+        "n": 74331,
+        "avg_net": -0.0006449582232767873,
+        "t": -0.19181992979742477,
+        "win": 0.3493158978084514
+      },
+      "book_all": {
+        "n": 184407,
+        "avg_net": 1.0342169752077304e-05,
+        "t": 0.00512940227915352,
+        "win": 0.3490051896077698
+      },
+      "edge_vs_book": 0.015552362005492862,
+      "july_share": 0.2088525233640234,
+      "top5_share": 0.40630354045559863,
+      "top5_tickers": [
+        "AGPU",
+        "SKYQ",
+        "HCAI",
+        "AUID",
+        "AEHL"
+      ],
+      "lottery_day_frac": 0.16490916999408656,
+      "lottery_top_day": "2026-02-19",
+      "lottery_n_days": 45,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "cold",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 5,
+      "slot_thin": 2,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 35,
+        "avg_net": 0.04042634562167069,
+        "t": 2.4524237415877677,
+        "win": 0.6857142857142857
+      },
+      "holdout": {
+        "n": 17,
+        "avg_net": 0.02510501903478873,
+        "t": 1.634817736701295,
+        "win": 0.6470588235294118
+      },
+      "q1": {
+        "n": 8,
+        "avg_net": 0.010657785266632785,
+        "t": 0.4369216025396598,
+        "win": 0.5
+      },
+      "n_tickers": 51,
+      "n_dates": 16,
+      "baseline": {
+        "n": 24285,
+        "avg_net": 0.0023534902166147055,
+        "t": 0.8242966166628539,
+        "win": 0.4474366893143916
+      },
+      "book_holdout": {
+        "n": 24285,
+        "avg_net": 0.0023534902166147055,
+        "t": 0.8242966166628539,
+        "win": 0.4474366893143916
+      },
+      "book_all": {
+        "n": 60411,
+        "avg_net": 0.004031035556556762,
+        "t": 1.3355612360015667,
+        "win": 0.4422207876049064
+      },
+      "edge_vs_book": 0.022751528818174025,
+      "july_share": 0.08054024885709911,
+      "top5_share": 0.631995229273376,
+      "top5_tickers": [
+        "CUPR",
+        "TE",
+        "PL",
+        "FATN",
+        "DLXY"
+      ],
+      "lottery_day_frac": 0.2231114754852388,
+      "lottery_top_day": "2026-06-24",
+      "lottery_n_days": 16,
+      "fail_reasons": [
+        "thin",
+        "q1_thin",
+        "ticker_ghost"
+      ],
+      "keep": "THIN",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "cold",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 5,
+      "slot_thin": 2,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 152,
+        "avg_net": 0.03129647786385068,
+        "t": 5.505565742376144,
+        "win": 0.6710526315789473
+      },
+      "holdout": {
+        "n": 113,
+        "avg_net": 0.033466559226831005,
+        "t": 6.039894140649072,
+        "win": 0.7522123893805309
+      },
+      "q1": {
+        "n": 22,
+        "avg_net": 0.03896787522004734,
+        "t": 2.7471039524798595,
+        "win": 0.6363636363636364
+      },
+      "n_tickers": 241,
+      "n_dates": 53,
+      "baseline": {
+        "n": 91602,
+        "avg_net": 0.004050632117611446,
+        "t": 36.192146915568905,
+        "win": 0.5396279557214908
+      },
+      "book_holdout": {
+        "n": 91602,
+        "avg_net": 0.004050632117611446,
+        "t": 36.192146915568905,
+        "win": 0.5396279557214908
+      },
+      "book_all": {
+        "n": 223677,
+        "avg_net": 0.004265619605457036,
+        "t": 49.666803278224194,
+        "win": 0.5426843171179871
+      },
+      "edge_vs_book": 0.02941592710921956,
+      "july_share": 0.14985423473037238,
+      "top5_share": 0.2027580465168771,
+      "top5_tickers": [
+        "LNKS",
+        "NRXP",
+        "ZTG",
+        "SEGG",
+        "TELA"
+      ],
+      "lottery_day_frac": 0.08408418597477556,
+      "lottery_top_day": "2026-04-15",
+      "lottery_n_days": 53,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "mid",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 5,
+      "slot_thin": 2,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 112,
+        "avg_net": 0.009485774630245618,
+        "t": 2.050126659131447,
+        "win": 0.4732142857142857
+      },
+      "holdout": {
+        "n": 66,
+        "avg_net": 0.015096107781751057,
+        "t": 1.8335476399389208,
+        "win": 0.5151515151515151
+      },
+      "q1": {
+        "n": 69,
+        "avg_net": 0.020441956733034068,
+        "t": 2.3436972943962084,
+        "win": 0.4927536231884058
+      },
+      "n_tickers": 171,
+      "n_dates": 45,
+      "baseline": {
+        "n": 77733,
+        "avg_net": -0.006832726619949186,
+        "t": -33.457690232940365,
+        "win": 0.3394697232835475
+      },
+      "book_holdout": {
+        "n": 77733,
+        "avg_net": -0.006832726619949186,
+        "t": -33.457690232940365,
+        "win": 0.3394697232835475
+      },
+      "book_all": {
+        "n": 190059,
+        "avg_net": -0.006997192566398765,
+        "t": -45.356702390187664,
+        "win": 0.3350906823670544
+      },
+      "edge_vs_book": 0.021928834401700244,
+      "july_share": 0.0,
+      "top5_share": 0.5430913725212693,
+      "top5_tickers": [
+        "SAFX",
+        "LUNG",
+        "INDO",
+        "FLUX",
+        "STKE"
+      ],
+      "lottery_day_frac": 0.11471452644686267,
+      "lottery_top_day": "2026-03-26",
+      "lottery_n_days": 45,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "mid",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 5,
+      "slot_thin": 2,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 47,
+        "avg_net": 0.022046860295382806,
+        "t": 3.134052032986481,
+        "win": 0.6808510638297872
+      },
+      "holdout": {
+        "n": 27,
+        "avg_net": 0.038904682319391835,
+        "t": 3.8116788788109037,
+        "win": 0.8148148148148148
+      },
+      "q1": {
+        "n": 13,
+        "avg_net": 0.04061193819922356,
+        "t": 1.9603119870031447,
+        "win": 0.7692307692307693
+      },
+      "n_tickers": 73,
+      "n_dates": 16,
+      "baseline": {
+        "n": 25965,
+        "avg_net": -0.0011474291137241004,
+        "t": -5.225670811147343,
+        "win": 0.4537261698440208
+      },
+      "book_holdout": {
+        "n": 25965,
+        "avg_net": -0.0011474291137241004,
+        "t": -5.225670811147343,
+        "win": 0.4537261698440208
+      },
+      "book_all": {
+        "n": 63294,
+        "avg_net": -0.001463730102769422,
+        "t": -10.72124005531867,
+        "win": 0.4546402502606882
+      },
+      "edge_vs_book": 0.04005211143311593,
+      "july_share": 0.11910534368722692,
+      "top5_share": 0.38398714094383,
+      "top5_tickers": [
+        "NVTS",
+        "LUNR",
+        "FABC",
+        "ANIX",
+        "INV"
+      ],
+      "lottery_day_frac": 0.2577876422298552,
+      "lottery_top_day": "2026-04-02",
+      "lottery_n_days": 16,
+      "fail_reasons": [
+        "thin",
+        "lottery_day",
+        "q1_thin",
+        "ticker_ghost"
+      ],
+      "keep": "THIN",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "mid",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 5,
+      "slot_thin": 2,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 661,
+        "avg_net": 0.04955242797386909,
+        "t": 3.5778613859228416,
+        "win": 0.6792738275340393
+      },
+      "holdout": {
+        "n": 436,
+        "avg_net": 0.038017951524044705,
+        "t": 7.658071359299984,
+        "win": 0.7064220183486238
+      },
+      "q1": {
+        "n": 98,
+        "avg_net": 0.050372460077149864,
+        "t": 4.828831303222599,
+        "win": 0.7857142857142857
+      },
+      "n_tickers": 797,
+      "n_dates": 61,
+      "baseline": {
+        "n": 91149,
+        "avg_net": 0.005345967704235148,
+        "t": 26.76726915809775,
+        "win": 0.531909291380048
+      },
+      "book_holdout": {
+        "n": 91149,
+        "avg_net": 0.005345967704235148,
+        "t": 26.76726915809775,
+        "win": 0.531909291380048
+      },
+      "book_all": {
+        "n": 225003,
+        "avg_net": 0.006203441880775641,
+        "t": 34.73798375922726,
+        "win": 0.5332062239170144
+      },
+      "edge_vs_book": 0.032671983819809555,
+      "july_share": 0.0557804154963227,
+      "top5_share": 0.2702697454481974,
+      "top5_tickers": [
+        "TDIC",
+        "QUCY",
+        "VCIG",
+        "AIIO",
+        "SAFX"
+      ],
+      "lottery_day_frac": 0.19517428139201032,
+      "lottery_top_day": "2026-05-13",
+      "lottery_n_days": 61,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "hot",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 5,
+      "slot_thin": 2,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 481,
+        "avg_net": 0.024853212141398347,
+        "t": 3.6845560118469214,
+        "win": 0.5613305613305614
+      },
+      "holdout": {
+        "n": 315,
+        "avg_net": 0.015885264642794498,
+        "t": 3.192735429776662,
+        "win": 0.546031746031746
+      },
+      "q1": {
+        "n": 217,
+        "avg_net": 0.032043018158077516,
+        "t": 2.951625662034841,
+        "win": 0.5345622119815668
+      },
+      "n_tickers": 638,
+      "n_dates": 51,
+      "baseline": {
+        "n": 72405,
+        "avg_net": -0.00978888926914111,
+        "t": -39.74246027007301,
+        "win": 0.3598508390304537
+      },
+      "book_holdout": {
+        "n": 72405,
+        "avg_net": -0.00978888926914111,
+        "t": -39.74246027007301,
+        "win": 0.3598508390304537
+      },
+      "book_all": {
+        "n": 178380,
+        "avg_net": -0.008950915488615856,
+        "t": -17.572132509783653,
+        "win": 0.3625630676084763
+      },
+      "edge_vs_book": 0.02567415391193561,
+      "july_share": 0.0033161507535225104,
+      "top5_share": 0.3544402271868302,
+      "top5_tickers": [
+        "EEIQ",
+        "PIII",
+        "HXHX",
+        "GAUZ",
+        "HCAI"
+      ],
+      "lottery_day_frac": 0.11466864044894766,
+      "lottery_top_day": "2026-05-15",
+      "lottery_n_days": 51,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "hot",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 5,
+      "slot_thin": 2,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 165,
+        "avg_net": 0.061402814900221946,
+        "t": 2.95524017056187,
+        "win": 0.6666666666666666
+      },
+      "holdout": {
+        "n": 90,
+        "avg_net": 0.02832979243116943,
+        "t": 4.239808258602877,
+        "win": 0.7
+      },
+      "q1": {
+        "n": 31,
+        "avg_net": 0.1332220391349433,
+        "t": 1.7136086419965686,
+        "win": 0.7741935483870968
+      },
+      "n_tickers": 249,
+      "n_dates": 18,
+      "baseline": {
+        "n": 28512,
+        "avg_net": -0.0013292154803493648,
+        "t": -1.4839871979783368,
+        "win": 0.4515993265993266
+      },
+      "book_holdout": {
+        "n": 28512,
+        "avg_net": -0.0013292154803493648,
+        "t": -1.4839871979783368,
+        "win": 0.4515993265993266
+      },
+      "book_all": {
+        "n": 70416,
+        "avg_net": -0.0014579803496048362,
+        "t": -3.510509898349608,
+        "win": 0.4538173142467621
+      },
+      "edge_vs_book": 0.029659007911518796,
+      "july_share": 0.3712903466862254,
+      "top5_share": 0.516741165274356,
+      "top5_tickers": [
+        "RIME",
+        "DFNS",
+        "ACXP",
+        "LVWR",
+        "WLDS"
+      ],
+      "lottery_day_frac": 0.22420065787780705,
+      "lottery_top_day": "2026-07-27",
+      "lottery_n_days": 18,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "hot",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 5,
+      "slot_thin": 2,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 187,
+        "avg_net": 0.04509771059943152,
+        "t": 4.511602804918303,
+        "win": 0.6524064171122995
+      },
+      "holdout": {
+        "n": 131,
+        "avg_net": 0.010092480197490535,
+        "t": 1.4373040604516143,
+        "win": 0.5190839694656488
+      },
+      "q1": {
+        "n": 42,
+        "avg_net": 0.057441404038585456,
+        "t": 2.9084879476036,
+        "win": 0.7142857142857143
+      },
+      "n_tickers": 280,
+      "n_dates": 56,
+      "baseline": {
+        "n": 89649,
+        "avg_net": 0.017680040184607376,
+        "t": 12.928066303199413,
+        "win": 0.5578422514473111
+      },
+      "book_holdout": {
+        "n": 89649,
+        "avg_net": 0.017680040184607376,
+        "t": 12.928066303199413,
+        "win": 0.5578422514473111
+      },
+      "book_all": {
+        "n": 222489,
+        "avg_net": 0.028204020729113474,
+        "t": 9.133922294457825,
+        "win": 0.5511373595998005
+      },
+      "edge_vs_book": -0.00758755998711684,
+      "july_share": 0.029678239777289908,
+      "top5_share": 0.35387626875329437,
+      "top5_tickers": [
+        "CUE",
+        "CUPR",
+        "AXTI",
+        "EDSA",
+        "TGEN"
+      ],
+      "lottery_day_frac": 0.1089489717416594,
+      "lottery_top_day": "2026-02-24",
+      "lottery_n_days": 56,
+      "fail_reasons": [
+        "ticker_ghost",
+        "no_edge_vs_book"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "cold",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 5,
+      "slot_thin": 2,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 108,
+        "avg_net": 0.004421448251705363,
+        "t": 0.4230597789764676,
+        "win": 0.4351851851851852
+      },
+      "holdout": {
+        "n": 87,
+        "avg_net": 0.03703190858017383,
+        "t": 2.373616171548337,
+        "win": 0.45977011494252873
+      },
+      "q1": {
+        "n": 83,
+        "avg_net": 0.012662145389785521,
+        "t": 1.4224024361212102,
+        "win": 0.4457831325301205
+      },
+      "n_tickers": 182,
+      "n_dates": 45,
+      "baseline": {
+        "n": 74331,
+        "avg_net": 0.010128215746722463,
+        "t": 2.3352915722216037,
+        "win": 0.4012188723412843
+      },
+      "book_holdout": {
+        "n": 74331,
+        "avg_net": 0.010128215746722463,
+        "t": 2.3352915722216037,
+        "win": 0.4012188723412843
+      },
+      "book_all": {
+        "n": 184389,
+        "avg_net": 0.011770932802863239,
+        "t": 4.184716615213688,
+        "win": 0.4018352504758961
+      },
+      "edge_vs_book": 0.026903692833451363,
+      "july_share": 0.16588308911303484,
+      "top5_share": 0.8116399633732352,
+      "top5_tickers": [
+        "GLXG",
+        "HCAI",
+        "BESS",
+        "AGPU",
+        "OCGN"
+      ],
+      "lottery_day_frac": 0.16658142252567423,
+      "lottery_top_day": "2026-06-10",
+      "lottery_n_days": 45,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "cold",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 5,
+      "slot_thin": 2,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 35,
+        "avg_net": 0.061876085732870366,
+        "t": 2.1055545153550463,
+        "win": 0.6
+      },
+      "holdout": {
+        "n": 17,
+        "avg_net": 0.05581489784303151,
+        "t": 2.396629816715682,
+        "win": 0.6470588235294118
+      },
+      "q1": {
+        "n": 8,
+        "avg_net": 0.021613758872959854,
+        "t": 0.6826051576183332,
+        "win": 0.5
+      },
+      "n_tickers": 51,
+      "n_dates": 16,
+      "baseline": {
+        "n": 24285,
+        "avg_net": 0.0029848490464682246,
+        "t": 0.8667659360378754,
+        "win": 0.4625077208153181
+      },
+      "book_holdout": {
+        "n": 24285,
+        "avg_net": 0.0029848490464682246,
+        "t": 0.8667659360378754,
+        "win": 0.4625077208153181
+      },
+      "book_all": {
+        "n": 60411,
+        "avg_net": 0.005262967561007679,
+        "t": 1.6147579428975058,
+        "win": 0.45150717584545863
+      },
+      "edge_vs_book": 0.052830048796563285,
+      "july_share": 0.05888536111427851,
+      "top5_share": 0.6160093896475589,
+      "top5_tickers": [
+        "FATN",
+        "CUPR",
+        "QMCO",
+        "TE",
+        "KWM"
+      ],
+      "lottery_day_frac": 0.2866351754035671,
+      "lottery_top_day": "2026-05-27",
+      "lottery_n_days": 16,
+      "fail_reasons": [
+        "thin",
+        "lottery_day",
+        "q1_thin",
+        "ticker_ghost"
+      ],
+      "keep": "THIN",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "cold",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 5,
+      "slot_thin": 2,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 152,
+        "avg_net": 0.026193594023349184,
+        "t": 3.409162233348306,
+        "win": 0.618421052631579
+      },
+      "holdout": {
+        "n": 113,
+        "avg_net": 0.039013504171433316,
+        "t": 4.68434395184727,
+        "win": 0.672566371681416
+      },
+      "q1": {
+        "n": 22,
+        "avg_net": 0.04136202825474201,
+        "t": 1.5454130473190648,
+        "win": 0.5909090909090909
+      },
+      "n_tickers": 241,
+      "n_dates": 53,
+      "baseline": {
+        "n": 90156,
+        "avg_net": 0.003781976197142413,
+        "t": 16.994792180495114,
+        "win": 0.5193664315187009
+      },
+      "book_holdout": {
+        "n": 90156,
+        "avg_net": 0.003781976197142413,
+        "t": 16.994792180495114,
+        "win": 0.5193664315187009
+      },
+      "book_all": {
+        "n": 220083,
+        "avg_net": 0.004161580015504258,
+        "t": 31.601620087623395,
+        "win": 0.5234252531999292
+      },
+      "edge_vs_book": 0.035231527974290903,
+      "july_share": 0.13740179813201575,
+      "top5_share": 0.24450837253984867,
+      "top5_tickers": [
+        "SOC",
+        "LNKS",
+        "ZTG",
+        "NRXP",
+        "SDEV"
+      ],
+      "lottery_day_frac": 0.09040307691378117,
+      "lottery_top_day": "2026-03-04",
+      "lottery_n_days": 53,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "mid",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 5,
+      "slot_thin": 2,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 112,
+        "avg_net": 0.004612219809426077,
+        "t": 0.6991810376477848,
+        "win": 0.45535714285714285
+      },
+      "holdout": {
+        "n": 66,
+        "avg_net": 0.030391776885528375,
+        "t": 1.6541714587304972,
+        "win": 0.48484848484848486
+      },
+      "q1": {
+        "n": 69,
+        "avg_net": 0.006561635859361681,
+        "t": 0.6079055530144324,
+        "win": 0.43478260869565216
+      },
+      "n_tickers": 171,
+      "n_dates": 45,
+      "baseline": {
+        "n": 77718,
+        "avg_net": -0.005854645920740216,
+        "t": -26.20443368627286,
+        "win": 0.3936925808692967
+      },
+      "book_holdout": {
+        "n": 77718,
+        "avg_net": -0.005854645920740216,
+        "t": -26.20443368627286,
+        "win": 0.3936925808692967
+      },
+      "book_all": {
+        "n": 190023,
+        "avg_net": -0.005720282610753543,
+        "t": -30.31181787919205,
+        "win": 0.3890686916846908
+      },
+      "edge_vs_book": 0.036246422806268594,
+      "july_share": 0.0,
+      "top5_share": 0.8460021269380057,
+      "top5_tickers": [
+        "IZM",
+        "INDO",
+        "OPTU",
+        "STKE",
+        "SPCE"
+      ],
+      "lottery_day_frac": 0.2678655826300451,
+      "lottery_top_day": "2026-06-09",
+      "lottery_n_days": 45,
+      "fail_reasons": [
+        "lottery_day",
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "mid",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 5,
+      "slot_thin": 2,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 47,
+        "avg_net": 0.006640033583527462,
+        "t": 0.8428282620462232,
+        "win": 0.5531914893617021
+      },
+      "holdout": {
+        "n": 27,
+        "avg_net": 0.0512548606133718,
+        "t": 3.568490032330495,
+        "win": 0.8148148148148148
+      },
+      "q1": {
+        "n": 13,
+        "avg_net": -0.010649812628802657,
+        "t": -0.6539970961769908,
+        "win": 0.46153846153846156
+      },
+      "n_tickers": 73,
+      "n_dates": 16,
+      "baseline": {
+        "n": 25965,
+        "avg_net": -9.299946890170394e-06,
+        "t": -0.027342550938830437,
+        "win": 0.4853841709994223
+      },
+      "book_holdout": {
+        "n": 25965,
+        "avg_net": -9.299946890170394e-06,
+        "t": -0.027342550938830437,
+        "win": 0.4853841709994223
+      },
+      "book_all": {
+        "n": 63294,
+        "avg_net": -0.00013152244936852722,
+        "t": -0.6430025022522754,
+        "win": 0.49028343918854866
+      },
+      "edge_vs_book": 0.051264160560261965,
+      "july_share": 0.1808414367094962,
+      "top5_share": 0.5868675539272378,
+      "top5_tickers": [
+        "INV",
+        "IXHL",
+        "MMED",
+        "ANIX",
+        "NVTS"
+      ],
+      "lottery_day_frac": 0.2477081175197254,
+      "lottery_top_day": "2026-04-02",
+      "lottery_n_days": 16,
+      "fail_reasons": [
+        "thin",
+        "q1_thin",
+        "ticker_ghost"
+      ],
+      "keep": "THIN",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "mid",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 5,
+      "slot_thin": 2,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 661,
+        "avg_net": 0.0333943927308093,
+        "t": 4.905200615332572,
+        "win": 0.594553706505295
+      },
+      "holdout": {
+        "n": 436,
+        "avg_net": 0.03439905431402931,
+        "t": 5.120409332623869,
+        "win": 0.6284403669724771
+      },
+      "q1": {
+        "n": 98,
+        "avg_net": 0.0409446585584272,
+        "t": 2.097027630294209,
+        "win": 0.5714285714285714
+      },
+      "n_tickers": 797,
+      "n_dates": 61,
+      "baseline": {
+        "n": 90174,
+        "avg_net": 0.00496526477520081,
+        "t": 13.599452672470031,
+        "win": 0.5133076052964269
+      },
+      "book_holdout": {
+        "n": 90174,
+        "avg_net": 0.00496526477520081,
+        "t": 13.599452672470031,
+        "win": 0.5133076052964269
+      },
+      "book_all": {
+        "n": 222588,
+        "avg_net": 0.005493449818054534,
+        "t": 23.923039004423877,
+        "win": 0.511456143188312
+      },
+      "edge_vs_book": 0.029433789538828498,
+      "july_share": 0.03425344723497013,
+      "top5_share": 0.2029798337737896,
+      "top5_tickers": [
+        "VCIG",
+        "MKDW",
+        "QUCY",
+        "CODX",
+        "ROLR"
+      ],
+      "lottery_day_frac": 0.09756060073848478,
+      "lottery_top_day": "2026-05-26",
+      "lottery_n_days": 61,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "hot",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 5,
+      "slot_thin": 2,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 481,
+        "avg_net": 0.017757847308937477,
+        "t": 2.595011444273098,
+        "win": 0.5114345114345115
+      },
+      "holdout": {
+        "n": 315,
+        "avg_net": 0.006103854468606647,
+        "t": 1.0052478551369786,
+        "win": 0.4793650793650794
+      },
+      "q1": {
+        "n": 217,
+        "avg_net": 0.0300067344214823,
+        "t": 2.6296999485967016,
+        "win": 0.5483870967741935
+      },
+      "n_tickers": 638,
+      "n_dates": 51,
+      "baseline": {
+        "n": 72399,
+        "avg_net": -0.006830938512388496,
+        "t": -7.050196477833137,
+        "win": 0.3941490904570505
+      },
+      "book_holdout": {
+        "n": 72399,
+        "avg_net": -0.006830938512388496,
+        "t": -7.050196477833137,
+        "win": 0.3941490904570505
+      },
+      "book_all": {
+        "n": 178347,
+        "avg_net": -0.005737928412011712,
+        "t": -7.18692099666254,
+        "win": 0.3961378660700769
+      },
+      "edge_vs_book": 0.012934792980995143,
+      "july_share": 0.0,
+      "top5_share": 0.4575387669362033,
+      "top5_tickers": [
+        "EEIQ",
+        "PIII",
+        "ANNA",
+        "LASE",
+        "WALD"
+      ],
+      "lottery_day_frac": 0.06696973599870151,
+      "lottery_top_day": "2026-08-06",
+      "lottery_n_days": 51,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "hot",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 5,
+      "slot_thin": 2,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 165,
+        "avg_net": 0.07331587490636947,
+        "t": 2.3439637606358965,
+        "win": 0.593939393939394
+      },
+      "holdout": {
+        "n": 90,
+        "avg_net": 0.01846351893195739,
+        "t": 2.141575334526168,
+        "win": 0.6111111111111112
+      },
+      "q1": {
+        "n": 31,
+        "avg_net": 0.08013454864720979,
+        "t": 1.5731760303314912,
+        "win": 0.5483870967741935
+      },
+      "n_tickers": 249,
+      "n_dates": 18,
+      "baseline": {
+        "n": 28512,
+        "avg_net": -0.0001815239231817612,
+        "t": -0.17157703975887323,
+        "win": 0.492739898989899
+      },
+      "book_holdout": {
+        "n": 28512,
+        "avg_net": -0.0001815239231817612,
+        "t": -0.17157703975887323,
+        "win": 0.492739898989899
+      },
+      "book_all": {
+        "n": 70416,
+        "avg_net": 0.0003574500043718372,
+        "t": 0.6766336877456494,
+        "win": 0.4950579413769598
+      },
+      "edge_vs_book": 0.01864504285513915,
+      "july_share": 0.41592947857632273,
+      "top5_share": 0.6385039855703747,
+      "top5_tickers": [
+        "DFNS",
+        "RIME",
+        "FOFO",
+        "RPGL",
+        "ACXP"
+      ],
+      "lottery_day_frac": 0.34577248600184834,
+      "lottery_top_day": "2026-07-27",
+      "lottery_n_days": 18,
+      "fail_reasons": [
+        "lottery_day",
+        "month_lottery",
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_AH",
+      "card": "research_light_O_AH_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "hot",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 5,
+      "slot_thin": 2,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 144,
+        "avg_net": 0.028701750269242838,
+        "t": 5.578573582694702,
+        "win": 0.7222222222222222
+      },
+      "holdout": {
+        "n": 104,
+        "avg_net": 0.02260671270836971,
+        "t": 5.507812997525538,
+        "win": 0.6730769230769231
+      },
+      "q1": {
+        "n": 31,
+        "avg_net": 0.05696942402639355,
+        "t": 2.971315721683344,
+        "win": 0.7741935483870968
+      },
+      "n_tickers": 221,
+      "n_dates": 55,
+      "baseline": {
+        "n": 91539,
+        "avg_net": 0.012734514200425347,
+        "t": 3.328536746052504,
+        "win": 0.5321338445908301
+      },
+      "book_holdout": {
+        "n": 91539,
+        "avg_net": 0.012734514200425347,
+        "t": 3.328536746052504,
+        "win": 0.5321338445908301
+      },
+      "book_all": {
+        "n": 227070,
+        "avg_net": 0.0076272078826095996,
+        "t": 4.93633905025279,
+        "win": 0.5305324349319593
+      },
+      "edge_vs_book": 0.009872198507944364,
+      "july_share": 0.0564922352986976,
+      "top5_share": 0.22724702019259535,
+      "top5_tickers": [
+        "EDSA",
+        "LHSW",
+        "BW",
+        "TGEN",
+        "AIOS"
+      ],
+      "lottery_day_frac": 0.14039659223349302,
+      "lottery_top_day": "2026-05-21",
+      "lottery_n_days": 55,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "cold",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 4,
+      "slot_kill": 4,
+      "slot_thin": 1,
+      "slot_verdict": "REGIME-CONDITIONAL"
+    },
+    {
+      "discovery": {
+        "n": 98,
+        "avg_net": 0.01840552359867464,
+        "t": 3.127110207669004,
+        "win": 0.6326530612244898
+      },
+      "holdout": {
+        "n": 73,
+        "avg_net": 0.01958058286641399,
+        "t": 2.3783434250319826,
+        "win": 0.6438356164383562
+      },
+      "q1": {
+        "n": 73,
+        "avg_net": 0.022739076446063503,
+        "t": 5.0181443127146474,
+        "win": 0.7397260273972602
+      },
+      "n_tickers": 161,
+      "n_dates": 45,
+      "baseline": {
+        "n": 74331,
+        "avg_net": -0.0077251875610155245,
+        "t": -40.83525156271667,
+        "win": 0.38878798886063687
+      },
+      "book_holdout": {
+        "n": 74331,
+        "avg_net": -0.0077251875610155245,
+        "t": -40.83525156271667,
+        "win": 0.38878798886063687
+      },
+      "book_all": {
+        "n": 184407,
+        "avg_net": -0.008146564208272967,
+        "t": -62.047793603347834,
+        "win": 0.3853487123590753
+      },
+      "edge_vs_book": 0.027305770427429512,
+      "july_share": 0.15434214539482757,
+      "top5_share": 0.34994215653461275,
+      "top5_tickers": [
+        "BVC",
+        "AEHL",
+        "SKYQ",
+        "HQI",
+        "ASBP"
+      ],
+      "lottery_day_frac": 0.12482432761069973,
+      "lottery_top_day": "2026-02-27",
+      "lottery_n_days": 45,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "cold",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 4,
+      "slot_kill": 4,
+      "slot_thin": 1,
+      "slot_verdict": "REGIME-CONDITIONAL"
+    },
+    {
+      "discovery": {
+        "n": 36,
+        "avg_net": 0.019743660083557733,
+        "t": 2.9487234843631254,
+        "win": 0.75
+      },
+      "holdout": {
+        "n": 15,
+        "avg_net": 0.03930827468728586,
+        "t": 2.222130938034427,
+        "win": 0.7333333333333333
+      },
+      "q1": {
+        "n": 10,
+        "avg_net": 0.010817765182199174,
+        "t": 1.7227955698953956,
+        "win": 0.7
+      },
+      "n_tickers": 50,
+      "n_dates": 16,
+      "baseline": {
+        "n": 24285,
+        "avg_net": -0.0036268856766984185,
+        "t": -6.398132195305808,
+        "win": 0.4420012353304509
+      },
+      "book_holdout": {
+        "n": 24285,
+        "avg_net": -0.0036268856766984185,
+        "t": -6.398132195305808,
+        "win": 0.4420012353304509
+      },
+      "book_all": {
+        "n": 60411,
+        "avg_net": -0.004382411545943544,
+        "t": -15.422914787287146,
+        "win": 0.4399860952475543
+      },
+      "edge_vs_book": 0.04293516036398427,
+      "july_share": 0.03363064202167576,
+      "top5_share": 0.537162184238853,
+      "top5_tickers": [
+        "DLXY",
+        "PL",
+        "ACHV",
+        "ASTL",
+        "KWM"
+      ],
+      "lottery_day_frac": 0.2578467037408357,
+      "lottery_top_day": "2026-06-25",
+      "lottery_n_days": 16,
+      "fail_reasons": [
+        "thin",
+        "lottery_day",
+        "q1_thin",
+        "ticker_ghost"
+      ],
+      "keep": "THIN",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "cold",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 4,
+      "slot_kill": 4,
+      "slot_thin": 1,
+      "slot_verdict": "REGIME-CONDITIONAL"
+    },
+    {
+      "discovery": {
+        "n": 234,
+        "avg_net": 0.01975056066001226,
+        "t": 8.149608084270946,
+        "win": 0.688034188034188
+      },
+      "holdout": {
+        "n": 179,
+        "avg_net": 0.0199087861592782,
+        "t": 6.265298392930204,
+        "win": 0.7039106145251397
+      },
+      "q1": {
+        "n": 37,
+        "avg_net": 0.02720163510618407,
+        "t": 3.4239186398259407,
+        "win": 0.6486486486486487
+      },
+      "n_tickers": 361,
+      "n_dates": 61,
+      "baseline": {
+        "n": 91602,
+        "avg_net": 0.001475221520857881,
+        "t": 15.052598705117067,
+        "win": 0.48267505076308376
+      },
+      "book_holdout": {
+        "n": 91602,
+        "avg_net": 0.001475221520857881,
+        "t": 15.052598705117067,
+        "win": 0.48267505076308376
+      },
+      "book_all": {
+        "n": 223677,
+        "avg_net": 0.001595119177447896,
+        "t": 24.574432056948133,
+        "win": 0.485052106385547
+      },
+      "edge_vs_book": 0.01843356463842032,
+      "july_share": 0.13959516674607733,
+      "top5_share": 0.1379190956851379,
+      "top5_tickers": [
+        "ZTG",
+        "NRXP",
+        "SEGG",
+        "SOC",
+        "SSP"
+      ],
+      "lottery_day_frac": 0.07385296822288649,
+      "lottery_top_day": "2026-06-29",
+      "lottery_n_days": 61,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "mid",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 4,
+      "slot_kill": 4,
+      "slot_thin": 1,
+      "slot_verdict": "REGIME-CONDITIONAL"
+    },
+    {
+      "discovery": {
+        "n": 163,
+        "avg_net": 0.010757063697866656,
+        "t": 4.686467730620195,
+        "win": 0.6134969325153374
+      },
+      "holdout": {
+        "n": 115,
+        "avg_net": 0.015746723757642567,
+        "t": 3.413898611959642,
+        "win": 0.5478260869565217
+      },
+      "q1": {
+        "n": 114,
+        "avg_net": 0.020946452068699106,
+        "t": 4.818854240073103,
+        "win": 0.6929824561403509
+      },
+      "n_tickers": 262,
+      "n_dates": 50,
+      "baseline": {
+        "n": 77730,
+        "avg_net": -0.004809226115753962,
+        "t": -46.00896999666133,
+        "win": 0.3717097645696642
+      },
+      "book_holdout": {
+        "n": 77730,
+        "avg_net": -0.004809226115753962,
+        "t": -46.00896999666133,
+        "win": 0.3717097645696642
+      },
+      "book_all": {
+        "n": 190056,
+        "avg_net": -0.004941226452201414,
+        "t": -62.591881392960154,
+        "win": 0.36800732415709053
+      },
+      "edge_vs_book": 0.02055594987339653,
+      "july_share": 0.0,
+      "top5_share": 0.26317873137868963,
+      "top5_tickers": [
+        "LUNG",
+        "SAFX",
+        "XCH",
+        "VRAX",
+        "INV"
+      ],
+      "lottery_day_frac": 0.15531049348989706,
+      "lottery_top_day": "2026-02-27",
+      "lottery_n_days": 50,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "mid",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 4,
+      "slot_kill": 4,
+      "slot_thin": 1,
+      "slot_verdict": "REGIME-CONDITIONAL"
+    },
+    {
+      "discovery": {
+        "n": 73,
+        "avg_net": 0.01979091741743953,
+        "t": 4.14393285655451,
+        "win": 0.6712328767123288
+      },
+      "holdout": {
+        "n": 54,
+        "avg_net": 0.01534003824202254,
+        "t": 2.3144004800876146,
+        "win": 0.6296296296296297
+      },
+      "q1": {
+        "n": 26,
+        "avg_net": 0.01279975469372694,
+        "t": 1.280119994397448,
+        "win": 0.6153846153846154
+      },
+      "n_tickers": 125,
+      "n_dates": 16,
+      "baseline": {
+        "n": 25965,
+        "avg_net": -0.0008331646188362058,
+        "t": -4.18631581025255,
+        "win": 0.46008087810514153
+      },
+      "book_holdout": {
+        "n": 25965,
+        "avg_net": -0.0008331646188362058,
+        "t": -4.18631581025255,
+        "win": 0.46008087810514153
+      },
+      "book_all": {
+        "n": 63294,
+        "avg_net": -0.0009392677645160614,
+        "t": -7.585630944274711,
+        "win": 0.4612285524694284
+      },
+      "edge_vs_book": 0.016173202860858747,
+      "july_share": 0.06547888713593263,
+      "top5_share": 0.3971805353338007,
+      "top5_tickers": [
+        "NVTS",
+        "LUNR",
+        "INV",
+        "ANIX",
+        "OVID"
+      ],
+      "lottery_day_frac": 0.39686866151025685,
+      "lottery_top_day": "2026-04-02",
+      "lottery_n_days": 16,
+      "fail_reasons": [
+        "lottery_day",
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "mid",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 4,
+      "slot_kill": 4,
+      "slot_thin": 1,
+      "slot_verdict": "REGIME-CONDITIONAL"
+    },
+    {
+      "discovery": {
+        "n": 1150,
+        "avg_net": 0.03315533645715452,
+        "t": 5.3569432478512695,
+        "win": 0.6739130434782609
+      },
+      "holdout": {
+        "n": 813,
+        "avg_net": 0.026513210842838465,
+        "t": 12.025058074543304,
+        "win": 0.6691266912669127
+      },
+      "q1": {
+        "n": 170,
+        "avg_net": 0.044154371305977526,
+        "t": 7.660926417081637,
+        "win": 0.7352941176470589
+      },
+      "n_tickers": 1343,
+      "n_dates": 62,
+      "baseline": {
+        "n": 91149,
+        "avg_net": 0.003131622222929182,
+        "t": 18.228225843653778,
+        "win": 0.5041305993483198
+      },
+      "book_holdout": {
+        "n": 91149,
+        "avg_net": 0.003131622222929182,
+        "t": 18.228225843653778,
+        "win": 0.5041305993483198
+      },
+      "book_all": {
+        "n": 225003,
+        "avg_net": 0.003615642997411291,
+        "t": 26.930238030617925,
+        "win": 0.507553232623565
+      },
+      "edge_vs_book": 0.023381588619909282,
+      "july_share": 0.07254666622173202,
+      "top5_share": 0.1645615981769118,
+      "top5_tickers": [
+        "TDIC",
+        "SDOT",
+        "SAFX",
+        "VCIG",
+        "MKDW"
+      ],
+      "lottery_day_frac": 0.11885516993446239,
+      "lottery_top_day": "2026-05-13",
+      "lottery_n_days": 62,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "hot",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 4,
+      "slot_kill": 4,
+      "slot_thin": 1,
+      "slot_verdict": "REGIME-CONDITIONAL"
+    },
+    {
+      "discovery": {
+        "n": 880,
+        "avg_net": 0.025203846642880886,
+        "t": 7.169477571523433,
+        "win": 0.6238636363636364
+      },
+      "holdout": {
+        "n": 618,
+        "avg_net": 0.021109044062453522,
+        "t": 7.139488533266172,
+        "win": 0.5954692556634305
+      },
+      "q1": {
+        "n": 449,
+        "avg_net": 0.022474931471230787,
+        "t": 6.9900122656578345,
+        "win": 0.6391982182628062
+      },
+      "n_tickers": 1115,
+      "n_dates": 51,
+      "baseline": {
+        "n": 72405,
+        "avg_net": 0.0006361086869952112,
+        "t": 0.17819044797406727,
+        "win": 0.39772115185415374
+      },
+      "book_holdout": {
+        "n": 72405,
+        "avg_net": 0.0006361086869952112,
+        "t": 0.17819044797406727,
+        "win": 0.39772115185415374
+      },
+      "book_all": {
+        "n": 178380,
+        "avg_net": -0.003110154218448547,
+        "t": -2.141260872761029,
+        "win": 0.401732256979482
+      },
+      "edge_vs_book": 0.02047293537545831,
+      "july_share": 0.07739803280668996,
+      "top5_share": 0.16324297495663148,
+      "top5_tickers": [
+        "PFSA",
+        "PIII",
+        "STAK",
+        "EEIQ",
+        "GAUZ"
+      ],
+      "lottery_day_frac": 0.07699624114092629,
+      "lottery_top_day": "2026-05-15",
+      "lottery_n_days": 51,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "hot",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 4,
+      "slot_kill": 4,
+      "slot_thin": 1,
+      "slot_verdict": "REGIME-CONDITIONAL"
+    },
+    {
+      "discovery": {
+        "n": 365,
+        "avg_net": 0.03174667061077351,
+        "t": 5.087868417872223,
+        "win": 0.6575342465753424
+      },
+      "holdout": {
+        "n": 229,
+        "avg_net": 0.02045828253425006,
+        "t": 5.983040943289346,
+        "win": 0.6331877729257642
+      },
+      "q1": {
+        "n": 71,
+        "avg_net": 0.06181618909156348,
+        "t": 2.4221375937362106,
+        "win": 0.704225352112676
+      },
+      "n_tickers": 533,
+      "n_dates": 18,
+      "baseline": {
+        "n": 28512,
+        "avg_net": -0.0011596895594756722,
+        "t": -3.675957649799168,
+        "win": 0.4664351851851852
+      },
+      "book_holdout": {
+        "n": 28512,
+        "avg_net": -0.0011596895594756722,
+        "t": -3.675957649799168,
+        "win": 0.4664351851851852
+      },
+      "book_all": {
+        "n": 70416,
+        "avg_net": -0.0008989608598784345,
+        "t": -4.4287062097274115,
+        "win": 0.4671097477845944
+      },
+      "edge_vs_book": 0.02161797209372573,
+      "july_share": 0.20118400350416799,
+      "top5_share": 0.2569996536428985,
+      "top5_tickers": [
+        "RIME",
+        "DFNS",
+        "ACXP",
+        "LVWR",
+        "WLDS"
+      ],
+      "lottery_day_frac": 0.11196623140523944,
+      "lottery_top_day": "2026-07-27",
+      "lottery_n_days": 18,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_1d_H",
+      "plain": "same-day H",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "hot",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 4,
+      "slot_kill": 4,
+      "slot_thin": 1,
+      "slot_verdict": "REGIME-CONDITIONAL"
+    },
+    {
+      "discovery": {
+        "n": 144,
+        "avg_net": 0.04948132295330218,
+        "t": 4.999600166637921,
+        "win": 0.7361111111111112
+      },
+      "holdout": {
+        "n": 104,
+        "avg_net": 0.029621178548019076,
+        "t": 4.154329164164314,
+        "win": 0.7115384615384616
+      },
+      "q1": {
+        "n": 31,
+        "avg_net": 0.06638437043722822,
+        "t": 2.6720265839951933,
+        "win": 0.7419354838709677
+      },
+      "n_tickers": 221,
+      "n_dates": 55,
+      "baseline": {
+        "n": 91539,
+        "avg_net": 0.014839449848564546,
+        "t": 13.516861442976678,
+        "win": 0.5954511191950972
+      },
+      "book_holdout": {
+        "n": 91539,
+        "avg_net": 0.014839449848564546,
+        "t": 13.516861442976678,
+        "win": 0.5954511191950972
+      },
+      "book_all": {
+        "n": 227070,
+        "avg_net": 0.02028804864050995,
+        "t": 7.932884018961991,
+        "win": 0.5928392125776193
+      },
+      "edge_vs_book": 0.01478172869945453,
+      "july_share": 0.048949463599847476,
+      "top5_share": 0.2828371885787208,
+      "top5_tickers": [
+        "CUE",
+        "EDSA",
+        "ELPW",
+        "TVTX",
+        "BW"
+      ],
+      "lottery_day_frac": 0.12848811999638926,
+      "lottery_top_day": "2026-05-01",
+      "lottery_n_days": 55,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "cold",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 98,
+        "avg_net": 0.015160132041603963,
+        "t": 2.4633632246083637,
+        "win": 0.5510204081632653
+      },
+      "holdout": {
+        "n": 73,
+        "avg_net": 0.017756649929402228,
+        "t": 2.6428917785742074,
+        "win": 0.5068493150684932
+      },
+      "q1": {
+        "n": 73,
+        "avg_net": 0.011655671974704686,
+        "t": 2.6121577550561015,
+        "win": 0.547945205479452
+      },
+      "n_tickers": 161,
+      "n_dates": 45,
+      "baseline": {
+        "n": 74331,
+        "avg_net": -0.0006449582232767873,
+        "t": -0.19181992979742477,
+        "win": 0.3493158978084514
+      },
+      "book_holdout": {
+        "n": 74331,
+        "avg_net": -0.0006449582232767873,
+        "t": -0.19181992979742477,
+        "win": 0.3493158978084514
+      },
+      "book_all": {
+        "n": 184407,
+        "avg_net": 1.0342169752077304e-05,
+        "t": 0.00512940227915352,
+        "win": 0.3490051896077698
+      },
+      "edge_vs_book": 0.018401608152679015,
+      "july_share": 0.29793831924352876,
+      "top5_share": 0.5077243157802539,
+      "top5_tickers": [
+        "SKYQ",
+        "LIMN",
+        "BVC",
+        "HQI",
+        "HCAI"
+      ],
+      "lottery_day_frac": 0.1332607933561503,
+      "lottery_top_day": "2026-06-09",
+      "lottery_n_days": 45,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "cold",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 36,
+        "avg_net": 0.02267332234581745,
+        "t": 2.4254787534771043,
+        "win": 0.75
+      },
+      "holdout": {
+        "n": 15,
+        "avg_net": 0.02481402093577484,
+        "t": 1.7590540007651605,
+        "win": 0.8
+      },
+      "q1": {
+        "n": 10,
+        "avg_net": 0.002211536691160243,
+        "t": 0.15582819044803597,
+        "win": 0.6
+      },
+      "n_tickers": 50,
+      "n_dates": 16,
+      "baseline": {
+        "n": 24285,
+        "avg_net": 0.0023534902166147055,
+        "t": 0.8242966166628539,
+        "win": 0.4474366893143916
+      },
+      "book_holdout": {
+        "n": 24285,
+        "avg_net": 0.0023534902166147055,
+        "t": 0.8242966166628539,
+        "win": 0.4474366893143916
+      },
+      "book_all": {
+        "n": 60411,
+        "avg_net": 0.004031035556556762,
+        "t": 1.3355612360015667,
+        "win": 0.4422207876049064
+      },
+      "edge_vs_book": 0.022460530719160134,
+      "july_share": 0.13464725511141268,
+      "top5_share": 0.5970475322832538,
+      "top5_tickers": [
+        "TE",
+        "PL",
+        "DLXY",
+        "HUBS",
+        "ACHV"
+      ],
+      "lottery_day_frac": 0.2509094100851828,
+      "lottery_top_day": "2026-05-18",
+      "lottery_n_days": 16,
+      "fail_reasons": [
+        "thin",
+        "lottery_day",
+        "q1_thin",
+        "ticker_ghost"
+      ],
+      "keep": "THIN",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "cold",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 234,
+        "avg_net": 0.025655727099645313,
+        "t": 6.64931986708116,
+        "win": 0.6923076923076923
+      },
+      "holdout": {
+        "n": 179,
+        "avg_net": 0.023822765767093464,
+        "t": 6.7187246053526275,
+        "win": 0.7262569832402235
+      },
+      "q1": {
+        "n": 37,
+        "avg_net": 0.02696164888021367,
+        "t": 3.082520082898197,
+        "win": 0.6486486486486487
+      },
+      "n_tickers": 361,
+      "n_dates": 61,
+      "baseline": {
+        "n": 91602,
+        "avg_net": 0.004050632117611446,
+        "t": 36.192146915568905,
+        "win": 0.5396279557214908
+      },
+      "book_holdout": {
+        "n": 91602,
+        "avg_net": 0.004050632117611446,
+        "t": 36.192146915568905,
+        "win": 0.5396279557214908
+      },
+      "book_all": {
+        "n": 223677,
+        "avg_net": 0.004265619605457036,
+        "t": 49.666803278224194,
+        "win": 0.5426843171179871
+      },
+      "edge_vs_book": 0.019772133649482018,
+      "july_share": 0.12922712822863353,
+      "top5_share": 0.17089737765245386,
+      "top5_tickers": [
+        "LNKS",
+        "NRXP",
+        "ZTG",
+        "SEGG",
+        "GPRO"
+      ],
+      "lottery_day_frac": 0.07924659171318799,
+      "lottery_top_day": "2026-06-18",
+      "lottery_n_days": 61,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "mid",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 163,
+        "avg_net": 0.004672362391080141,
+        "t": 1.608133975631887,
+        "win": 0.5030674846625767
+      },
+      "holdout": {
+        "n": 115,
+        "avg_net": 0.006250192799966042,
+        "t": 1.2684087896101048,
+        "win": 0.45217391304347826
+      },
+      "q1": {
+        "n": 114,
+        "avg_net": 0.009933673363350685,
+        "t": 1.8520847016342077,
+        "win": 0.4824561403508772
+      },
+      "n_tickers": 262,
+      "n_dates": 50,
+      "baseline": {
+        "n": 77733,
+        "avg_net": -0.006832726619949186,
+        "t": -33.457690232940365,
+        "win": 0.3394697232835475
+      },
+      "book_holdout": {
+        "n": 77733,
+        "avg_net": -0.006832726619949186,
+        "t": -33.457690232940365,
+        "win": 0.3394697232835475
+      },
+      "book_all": {
+        "n": 190059,
+        "avg_net": -0.006997192566398765,
+        "t": -45.356702390187664,
+        "win": 0.3350906823670544
+      },
+      "edge_vs_book": 0.013082919419915228,
+      "july_share": 0.010348406870687875,
+      "top5_share": 0.7228618207571662,
+      "top5_tickers": [
+        "SAFX",
+        "LUNG",
+        "INDO",
+        "DELL",
+        "ORBS"
+      ],
+      "lottery_day_frac": 0.12957510324328175,
+      "lottery_top_day": "2026-03-06",
+      "lottery_n_days": 50,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "mid",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 73,
+        "avg_net": 0.016626405101662627,
+        "t": 3.2830770810946897,
+        "win": 0.6301369863013698
+      },
+      "holdout": {
+        "n": 54,
+        "avg_net": 0.010700784429244116,
+        "t": 1.9503821096089538,
+        "win": 0.5185185185185185
+      },
+      "q1": {
+        "n": 26,
+        "avg_net": 0.018702858607730497,
+        "t": 1.7966573331446887,
+        "win": 0.5384615384615384
+      },
+      "n_tickers": 125,
+      "n_dates": 16,
+      "baseline": {
+        "n": 25965,
+        "avg_net": -0.0011474291137241004,
+        "t": -5.225670811147343,
+        "win": 0.4537261698440208
+      },
+      "book_holdout": {
+        "n": 25965,
+        "avg_net": -0.0011474291137241004,
+        "t": -5.225670811147343,
+        "win": 0.4537261698440208
+      },
+      "book_all": {
+        "n": 63294,
+        "avg_net": -0.001463730102769422,
+        "t": -10.72124005531867,
+        "win": 0.4546402502606882
+      },
+      "edge_vs_book": 0.011848213542968215,
+      "july_share": 0.03341830887036897,
+      "top5_share": 0.4505773122067864,
+      "top5_tickers": [
+        "NVTS",
+        "LUNR",
+        "ALOT",
+        "ANIX",
+        "INV"
+      ],
+      "lottery_day_frac": 0.18017361863384013,
+      "lottery_top_day": "2026-04-02",
+      "lottery_n_days": 16,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "mid",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 1150,
+        "avg_net": 0.034060197093585216,
+        "t": 4.235712398230648,
+        "win": 0.6660869565217391
+      },
+      "holdout": {
+        "n": 813,
+        "avg_net": 0.026267349826477125,
+        "t": 8.950968814103708,
+        "win": 0.6605166051660517
+      },
+      "q1": {
+        "n": 170,
+        "avg_net": 0.04688352151223743,
+        "t": 6.586191254236784,
+        "win": 0.7529411764705882
+      },
+      "n_tickers": 1343,
+      "n_dates": 62,
+      "baseline": {
+        "n": 91149,
+        "avg_net": 0.005345967704235148,
+        "t": 26.76726915809775,
+        "win": 0.531909291380048
+      },
+      "book_holdout": {
+        "n": 91149,
+        "avg_net": 0.005345967704235148,
+        "t": 26.76726915809775,
+        "win": 0.531909291380048
+      },
+      "book_all": {
+        "n": 225003,
+        "avg_net": 0.006203441880775641,
+        "t": 34.73798375922726,
+        "win": 0.5332062239170144
+      },
+      "edge_vs_book": 0.020921382122241976,
+      "july_share": 0.0539100190475637,
+      "top5_share": 0.22101066828364427,
+      "top5_tickers": [
+        "TDIC",
+        "QUCY",
+        "SAFX",
+        "VCIG",
+        "AIIO"
+      ],
+      "lottery_day_frac": 0.15485774924975074,
+      "lottery_top_day": "2026-05-13",
+      "lottery_n_days": 62,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "hot",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 880,
+        "avg_net": 0.01954926916135869,
+        "t": 2.813155765015961,
+        "win": 0.5011363636363636
+      },
+      "holdout": {
+        "n": 618,
+        "avg_net": 0.01242274886050365,
+        "t": 3.638285982834817,
+        "win": 0.4935275080906149
+      },
+      "q1": {
+        "n": 449,
+        "avg_net": 0.015158637016049553,
+        "t": 2.732499704966125,
+        "win": 0.48106904231625836
+      },
+      "n_tickers": 1115,
+      "n_dates": 51,
+      "baseline": {
+        "n": 72405,
+        "avg_net": -0.00978888926914111,
+        "t": -39.74246027007301,
+        "win": 0.3598508390304537
+      },
+      "book_holdout": {
+        "n": 72405,
+        "avg_net": -0.00978888926914111,
+        "t": -39.74246027007301,
+        "win": 0.3598508390304537
+      },
+      "book_all": {
+        "n": 178380,
+        "avg_net": -0.008950915488615856,
+        "t": -17.572132509783653,
+        "win": 0.3625630676084763
+      },
+      "edge_vs_book": 0.02221163812964476,
+      "july_share": 0.04588261191235639,
+      "top5_share": 0.4495600264755916,
+      "top5_tickers": [
+        "PFSA",
+        "EEIQ",
+        "PIII",
+        "TRT",
+        "STAK"
+      ],
+      "lottery_day_frac": 0.18265548237672882,
+      "lottery_top_day": "2026-08-18",
+      "lottery_n_days": 51,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "hot",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 365,
+        "avg_net": 0.03088020435314747,
+        "t": 3.1855624378684593,
+        "win": 0.5808219178082191
+      },
+      "holdout": {
+        "n": 229,
+        "avg_net": 0.015134464612576838,
+        "t": 4.072996247211305,
+        "win": 0.5982532751091703
+      },
+      "q1": {
+        "n": 71,
+        "avg_net": 0.06289968744625273,
+        "t": 1.7992063475584634,
+        "win": 0.6056338028169014
+      },
+      "n_tickers": 533,
+      "n_dates": 18,
+      "baseline": {
+        "n": 28512,
+        "avg_net": -0.0013292154803493648,
+        "t": -1.4839871979783368,
+        "win": 0.4515993265993266
+      },
+      "book_holdout": {
+        "n": 28512,
+        "avg_net": -0.0013292154803493648,
+        "t": -1.4839871979783368,
+        "win": 0.4515993265993266
+      },
+      "book_all": {
+        "n": 70416,
+        "avg_net": -0.0014579803496048362,
+        "t": -3.510509898349608,
+        "win": 0.4538173142467621
+      },
+      "edge_vs_book": 0.016463680092926203,
+      "july_share": 0.2870217727974004,
+      "top5_share": 0.45182105298242775,
+      "top5_tickers": [
+        "RIME",
+        "DFNS",
+        "ACXP",
+        "ZJYL",
+        "LVWR"
+      ],
+      "lottery_day_frac": 0.20249190493690844,
+      "lottery_top_day": "2026-07-27",
+      "lottery_n_days": 18,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_1d_I",
+      "plain": "same-day I / 1d stacked I",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat": "hot",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 144,
+        "avg_net": 0.05609882431193985,
+        "t": 4.711951092049728,
+        "win": 0.6805555555555556
+      },
+      "holdout": {
+        "n": 104,
+        "avg_net": 0.009070820412502055,
+        "t": 1.1794450923406672,
+        "win": 0.49038461538461536
+      },
+      "q1": {
+        "n": 31,
+        "avg_net": 0.05597544486738926,
+        "t": 2.434677278623229,
+        "win": 0.7096774193548387
+      },
+      "n_tickers": 221,
+      "n_dates": 55,
+      "baseline": {
+        "n": 89649,
+        "avg_net": 0.017680040184607376,
+        "t": 12.928066303199413,
+        "win": 0.5578422514473111
+      },
+      "book_holdout": {
+        "n": 89649,
+        "avg_net": 0.017680040184607376,
+        "t": 12.928066303199413,
+        "win": 0.5578422514473111
+      },
+      "book_all": {
+        "n": 222489,
+        "avg_net": 0.028204020729113474,
+        "t": 9.133922294457825,
+        "win": 0.5511373595998005
+      },
+      "edge_vs_book": -0.00860921977210532,
+      "july_share": 0.0,
+      "top5_share": 0.3734346209880171,
+      "top5_tickers": [
+        "CUE",
+        "CUPR",
+        "AXTI",
+        "EDSA",
+        "TVTX"
+      ],
+      "lottery_day_frac": 0.11330275869363617,
+      "lottery_top_day": "2026-05-22",
+      "lottery_n_days": 55,
+      "fail_reasons": [
+        "ticker_ghost",
+        "no_edge_vs_book"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "cold",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 98,
+        "avg_net": 0.009386595234753988,
+        "t": 0.7833234462046921,
+        "win": 0.45918367346938777
+      },
+      "holdout": {
+        "n": 73,
+        "avg_net": 0.03505400375167182,
+        "t": 2.0744838546966795,
+        "win": 0.4520547945205479
+      },
+      "q1": {
+        "n": 73,
+        "avg_net": 0.014184341865993029,
+        "t": 1.5730169189204561,
+        "win": 0.4383561643835616
+      },
+      "n_tickers": 161,
+      "n_dates": 45,
+      "baseline": {
+        "n": 74331,
+        "avg_net": 0.010128215746722463,
+        "t": 2.3352915722216037,
+        "win": 0.4012188723412843
+      },
+      "book_holdout": {
+        "n": 74331,
+        "avg_net": 0.010128215746722463,
+        "t": 2.3352915722216037,
+        "win": 0.4012188723412843
+      },
+      "book_all": {
+        "n": 184389,
+        "avg_net": 0.011770932802863239,
+        "t": 4.184716615213688,
+        "win": 0.4018352504758961
+      },
+      "edge_vs_book": 0.024925788004949358,
+      "july_share": 0.16703419297154698,
+      "top5_share": 0.7931241752430989,
+      "top5_tickers": [
+        "GLXG",
+        "HCAI",
+        "OCGN",
+        "IVDA",
+        "XCH"
+      ],
+      "lottery_day_frac": 0.1962264715288295,
+      "lottery_top_day": "2026-06-10",
+      "lottery_n_days": 45,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "cold",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 36,
+        "avg_net": 0.019394738810415514,
+        "t": 1.5633613148099523,
+        "win": 0.5833333333333334
+      },
+      "holdout": {
+        "n": 15,
+        "avg_net": 0.052688602749035446,
+        "t": 2.448714908350334,
+        "win": 0.6
+      },
+      "q1": {
+        "n": 10,
+        "avg_net": 0.013761467922653436,
+        "t": 0.768516093824745,
+        "win": 0.4
+      },
+      "n_tickers": 50,
+      "n_dates": 16,
+      "baseline": {
+        "n": 24285,
+        "avg_net": 0.0029848490464682246,
+        "t": 0.8667659360378754,
+        "win": 0.4625077208153181
+      },
+      "book_holdout": {
+        "n": 24285,
+        "avg_net": 0.0029848490464682246,
+        "t": 0.8667659360378754,
+        "win": 0.4625077208153181
+      },
+      "book_all": {
+        "n": 60411,
+        "avg_net": 0.005262967561007679,
+        "t": 1.6147579428975058,
+        "win": 0.45150717584545863
+      },
+      "edge_vs_book": 0.04970375370256722,
+      "july_share": 0.22999197475627153,
+      "top5_share": 0.5872670928019627,
+      "top5_tickers": [
+        "TE",
+        "KWM",
+        "HUBS",
+        "PHOE",
+        "DLXY"
+      ],
+      "lottery_day_frac": 0.25430803662466006,
+      "lottery_top_day": "2026-04-29",
+      "lottery_n_days": 16,
+      "fail_reasons": [
+        "thin",
+        "lottery_day",
+        "q1_thin",
+        "ticker_ghost"
+      ],
+      "keep": "THIN",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "cold",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 234,
+        "avg_net": 0.02213632121777206,
+        "t": 4.852707565618994,
+        "win": 0.594017094017094
+      },
+      "holdout": {
+        "n": 179,
+        "avg_net": 0.02496213503075591,
+        "t": 4.463594545435726,
+        "win": 0.659217877094972
+      },
+      "q1": {
+        "n": 37,
+        "avg_net": 0.023223940264479284,
+        "t": 1.5481960220916362,
+        "win": 0.5675675675675675
+      },
+      "n_tickers": 361,
+      "n_dates": 61,
+      "baseline": {
+        "n": 90156,
+        "avg_net": 0.003781976197142413,
+        "t": 16.994792180495114,
+        "win": 0.5193664315187009
+      },
+      "book_holdout": {
+        "n": 90156,
+        "avg_net": 0.003781976197142413,
+        "t": 16.994792180495114,
+        "win": 0.5193664315187009
+      },
+      "book_all": {
+        "n": 220083,
+        "avg_net": 0.004161580015504258,
+        "t": 31.601620087623395,
+        "win": 0.5234252531999292
+      },
+      "edge_vs_book": 0.0211801588336135,
+      "july_share": 0.13377047965539504,
+      "top5_share": 0.22090257559831009,
+      "top5_tickers": [
+        "SOC",
+        "LNKS",
+        "ZTG",
+        "NRXP",
+        "TCRX"
+      ],
+      "lottery_day_frac": 0.09048373708868693,
+      "lottery_top_day": "2026-06-29",
+      "lottery_n_days": 61,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "mid",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 163,
+        "avg_net": 0.003267281862250286,
+        "t": 0.6682439532414081,
+        "win": 0.48466257668711654
+      },
+      "holdout": {
+        "n": 115,
+        "avg_net": 0.021147859725642593,
+        "t": 2.0047640530974404,
+        "win": 0.4956521739130435
+      },
+      "q1": {
+        "n": 114,
+        "avg_net": 0.014377777680828381,
+        "t": 1.9669858526954764,
+        "win": 0.5087719298245614
+      },
+      "n_tickers": 262,
+      "n_dates": 50,
+      "baseline": {
+        "n": 77718,
+        "avg_net": -0.005854645920740216,
+        "t": -26.20443368627286,
+        "win": 0.3936925808692967
+      },
+      "book_holdout": {
+        "n": 77718,
+        "avg_net": -0.005854645920740216,
+        "t": -26.20443368627286,
+        "win": 0.3936925808692967
+      },
+      "book_all": {
+        "n": 190023,
+        "avg_net": -0.005720282610753543,
+        "t": -30.31181787919205,
+        "win": 0.3890686916846908
+      },
+      "edge_vs_book": 0.027002505646382808,
+      "july_share": 0.0,
+      "top5_share": 0.7332772050912676,
+      "top5_tickers": [
+        "IZM",
+        "INDO",
+        "OPTU",
+        "GBR",
+        "DELL"
+      ],
+      "lottery_day_frac": 0.17847800559155935,
+      "lottery_top_day": "2026-06-09",
+      "lottery_n_days": 50,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "mid",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 73,
+        "avg_net": 0.022123386453547157,
+        "t": 2.813357276040109,
+        "win": 0.6301369863013698
+      },
+      "holdout": {
+        "n": 54,
+        "avg_net": 0.009953601516729579,
+        "t": 1.5733061139449709,
+        "win": 0.5185185185185185
+      },
+      "q1": {
+        "n": 26,
+        "avg_net": 0.0032595572697906626,
+        "t": 0.36943703248013904,
+        "win": 0.46153846153846156
+      },
+      "n_tickers": 125,
+      "n_dates": 16,
+      "baseline": {
+        "n": 25965,
+        "avg_net": -9.299946890170394e-06,
+        "t": -0.027342550938830437,
+        "win": 0.4853841709994223
+      },
+      "book_holdout": {
+        "n": 25965,
+        "avg_net": -9.299946890170394e-06,
+        "t": -0.027342550938830437,
+        "win": 0.4853841709994223
+      },
+      "book_all": {
+        "n": 63294,
+        "avg_net": -0.00013152244936852722,
+        "t": -0.6430025022522754,
+        "win": 0.49028343918854866
+      },
+      "edge_vs_book": 0.00996290146361975,
+      "july_share": 0.07002710453282336,
+      "top5_share": 0.5248616876049628,
+      "top5_tickers": [
+        "AVEX",
+        "INV",
+        "ANIX",
+        "ALOT",
+        "NVTS"
+      ],
+      "lottery_day_frac": 0.24091901826028336,
+      "lottery_top_day": "2026-06-25",
+      "lottery_n_days": 16,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "mid",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 1150,
+        "avg_net": 0.025197152359410703,
+        "t": 6.050329036915542,
+        "win": 0.6
+      },
+      "holdout": {
+        "n": 813,
+        "avg_net": 0.02392319523712099,
+        "t": 6.555934967043456,
+        "win": 0.6002460024600246
+      },
+      "q1": {
+        "n": 170,
+        "avg_net": 0.04424061530714003,
+        "t": 3.7001937232008206,
+        "win": 0.6529411764705882
+      },
+      "n_tickers": 1343,
+      "n_dates": 62,
+      "baseline": {
+        "n": 90174,
+        "avg_net": 0.00496526477520081,
+        "t": 13.599452672470031,
+        "win": 0.5133076052964269
+      },
+      "book_holdout": {
+        "n": 90174,
+        "avg_net": 0.00496526477520081,
+        "t": 13.599452672470031,
+        "win": 0.5133076052964269
+      },
+      "book_all": {
+        "n": 222588,
+        "avg_net": 0.005493449818054534,
+        "t": 23.923039004423877,
+        "win": 0.511456143188312
+      },
+      "edge_vs_book": 0.01895793046192018,
+      "july_share": 0.024186197748908907,
+      "top5_share": 0.15373413324653779,
+      "top5_tickers": [
+        "VCIG",
+        "MKDW",
+        "QUCY",
+        "CODX",
+        "SDOT"
+      ],
+      "lottery_day_frac": 0.08565189215816403,
+      "lottery_top_day": "2026-04-14",
+      "lottery_n_days": 62,
+      "fail_reasons": [],
+      "keep": "KEEP",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "hot",
+      "tape": "up",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 880,
+        "avg_net": 0.01598503652517429,
+        "t": 3.335753777043373,
+        "win": 0.5068181818181818
+      },
+      "holdout": {
+        "n": 618,
+        "avg_net": 0.007792055806518897,
+        "t": 1.7436779147566395,
+        "win": 0.47249190938511326
+      },
+      "q1": {
+        "n": 449,
+        "avg_net": 0.0159723198349487,
+        "t": 2.538839796205289,
+        "win": 0.5144766146993318
+      },
+      "n_tickers": 1115,
+      "n_dates": 51,
+      "baseline": {
+        "n": 72399,
+        "avg_net": -0.006830938512388496,
+        "t": -7.050196477833137,
+        "win": 0.3941490904570505
+      },
+      "book_holdout": {
+        "n": 72399,
+        "avg_net": -0.006830938512388496,
+        "t": -7.050196477833137,
+        "win": 0.3941490904570505
+      },
+      "book_all": {
+        "n": 178347,
+        "avg_net": -0.005737928412011712,
+        "t": -7.18692099666254,
+        "win": 0.3961378660700769
+      },
+      "edge_vs_book": 0.014622994318907394,
+      "july_share": 0.0,
+      "top5_share": 0.3754502030507947,
+      "top5_tickers": [
+        "PFSA",
+        "EEIQ",
+        "PIII",
+        "ANTX",
+        "TRT"
+      ],
+      "lottery_day_frac": 0.09454992556628392,
+      "lottery_top_day": "2026-08-18",
+      "lottery_n_days": 51,
+      "fail_reasons": [
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "hot",
+      "tape": "down",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    },
+    {
+      "discovery": {
+        "n": 365,
+        "avg_net": 0.03149495439803688,
+        "t": 2.1651974720131966,
+        "win": 0.5671232876712329
+      },
+      "holdout": {
+        "n": 229,
+        "avg_net": 0.012037368585766966,
+        "t": 2.399115043513508,
+        "win": 0.5633187772925764
+      },
+      "q1": {
+        "n": 71,
+        "avg_net": 0.02313948161723786,
+        "t": 0.9388170054812447,
+        "win": 0.4647887323943662
+      },
+      "n_tickers": 533,
+      "n_dates": 18,
+      "baseline": {
+        "n": 28512,
+        "avg_net": -0.0001815239231817612,
+        "t": -0.17157703975887323,
+        "win": 0.492739898989899
+      },
+      "book_holdout": {
+        "n": 28512,
+        "avg_net": -0.0001815239231817612,
+        "t": -0.17157703975887323,
+        "win": 0.492739898989899
+      },
+      "book_all": {
+        "n": 70416,
+        "avg_net": 0.0003574500043718372,
+        "t": 0.6766336877456494,
+        "win": 0.4950579413769598
+      },
+      "edge_vs_book": 0.012218892508948727,
+      "july_share": 0.3524512789932632,
+      "top5_share": 0.6164004117230553,
+      "top5_tickers": [
+        "DFNS",
+        "RIME",
+        "FOFO",
+        "RPGL",
+        "ACXP"
+      ],
+      "lottery_day_frac": 0.30988448819430564,
+      "lottery_top_day": "2026-07-27",
+      "lottery_n_days": 18,
+      "fail_reasons": [
+        "lottery_day",
+        "ticker_ghost"
+      ],
+      "keep": "KILL",
+      "cost_model": "futubull",
+      "live_untouched": "flatten_robust",
+      "def": "light_O_FR",
+      "card": "research_light_O_FR_2d_I_stack",
+      "plain": "2d stacked I",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat": "hot",
+      "tape": "flat",
+      "family": "standing",
+      "slot_keep": 2,
+      "slot_kill": 6,
+      "slot_thin": 1,
+      "slot_verdict": "DEMOTE"
+    }
+  ],
+  "finviz": "BLOCKED"
+}
