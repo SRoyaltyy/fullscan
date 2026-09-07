@@ -158,7 +158,7 @@ def test_pack_cell_thin_fails_ship_bar():
     }
     row = pack_cell(
         ("toy", "open", "long", "hold2", "ALL", "futubull"), cell)
-    assert row["verdict"] == "FAIL"
+    assert row["verdict"] == "THIN"
     assert "thin_disc" in row["fail_reasons"]
     assert row["live_untouched"] == "flatten_robust"
     assert row["clock"] == "open"
@@ -200,8 +200,7 @@ def test_all_cols_sample_size_is_thin_by_design():
 
 def test_all_cols_mine_report_is_committed():
     md = (ROOT / "excel_bot" / "research" / "ALL_COLS_MINE.md").read_text()
-    sb = (ROOT / "03_scoreboard" / "EXCEL_BOT_MINE.md").read_text()
-    assert "THIN 90" in md and "THIN 90" in sb
+    assert "THIN 90" in md
     assert "flatten_robust" in md
     assert "| THIN |" in md
     payload = json.loads((ROOT / "excel_bot" / "research" / "all_cols_mine.json").read_text())
@@ -209,6 +208,20 @@ def test_all_cols_mine_report_is_committed():
     assert payload["n_pass"] == 0
     assert payload["n_tickers"] >= 20
     assert payload["live_untouched"] == "flatten_robust"
+
+
+def test_pack_cell_quality_fail_is_fail_not_thin():
+    cell = {
+        "raw": [-0.02] * 400, "tickers": set(f"T{i}" for i in range(60)),
+        "dates": set(f"2026-01-{i:02d}" for i in range(1, 22)),
+        "early": [-0.02] * 200, "late": [-0.02] * 200,
+        "spy_up": [-0.02] * 200, "spy_dn": [-0.02] * 200,
+        "disc": [-0.02] * 300, "hold": [-0.02] * 100,
+    }
+    row = pack_cell(
+        ("toy", "close", "long", "hold2", "ALL", "mcap_bps"), cell)
+    assert row["verdict"] == "FAIL"
+    assert "disc_sign" in row["fail_reasons"]
 
 
 if __name__ == "__main__":

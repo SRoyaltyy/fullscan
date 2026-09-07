@@ -249,8 +249,14 @@ def pack_cell(key, cell):
         reasons.append("tape_split")
     if not spy_ok:
         reasons.append("spy_regime")
-    # one-day lottery: hold1-only edge (hold2 must agree on discovery)
-    verdict = "PASS" if not reasons else "FAIL"
+    # Size-bar only → THIN. Any quality miss → FAIL. No reasons → PASS.
+    SIZE = {"thin_disc", "thin_hold", "ticker_bar", "date_bar"}
+    if not reasons:
+        verdict = "PASS"
+    elif set(reasons) <= SIZE:
+        verdict = "THIN"
+    else:
+        verdict = "FAIL"
     return {
         "def": dn, "clock": clock, "side": side, "exit": rule,
         "cohort": cohort, "cost_model": cost,
@@ -278,13 +284,32 @@ def apply_hold1_sibling(rows):
     return rows
 
 
+def _row_line(r):
+    d, h = r.get("discovery") or {}, r.get("holdout") or {}
+
+    def fmt(b):
+        if not b:
+            return "—"
+        return f"{b['n']}/{b['avg_net']*100:+.2f}%/{b['t']:.1f}"
+
+    return (
+        f"| {r['verdict']} | `{r['def']}` | {r['clock']} | {r['side']} | "
+        f"{r['exit']} | {r['cohort']} | {r['cost_model']} | "
+        f"{fmt(d)} | {fmt(h)} | {r['n_tickers']} | "
+        f"{','.join(r.get('fail_reasons') or []) or '—'} |"
+    )
+
+
 def render_md(rows, n_grids, n_pats, spy_n, path):
     keep = [r for r in rows if r["verdict"] == "PASS"]
-    fail = [r for r in rows if r["verdict"] != "PASS"]
+    fail = [r for r in rows if r["verdict"] == "FAIL"]
+    thin = [r for r in rows if r["verdict"] == "THIN"]
+    keep_all = [r for r in keep if r["cohort"] == "ALL"]
     L = [
-        "# Excel emulator mine — clock-aware cycle",
+        "# Excel emulator mine — clock-aware A–O cycle",
         "",
-        f"_Generated {date.today()} · live `flatten_robust` is not changed._",
+        f"_Generated {date.today()} · live `flatten_robust` is not changed. "
+        f"No merge without Cyrus._",
         "",
         "## Ship bar",
         "",
@@ -293,55 +318,67 @@ def render_md(rows, n_grids, n_pats, spy_n, path):
         ">25% of gross wins; trimmed mean (drop best trade) >0; early and "
         "late tape same sign when both n≥40; SPY-up and SPY-down both "
         "positive when both n≥40. Clock labeled on every row. Open entry "
-        "only when the feature reads no close-knowable fill.",
+        "only when the feature reads no close-knowable fill. hold1 only "
+        "if hold2 also PASSes.",
         "",
-        f"Grids mined: **{n_grids}**. Patterns: **{n_pats}**. "
-        f"SPY tape days: **{spy_n}**. Cells scored: **{len(rows)}**. "
-        f"PASS: **{len(keep)}**. FAIL: **{len(fail)}**.",
+        "THIN = size-bar only (n / tickers / dates). FAIL = any quality miss "
+        "(sign, t, lottery, tape, SPY regime, hold1-without-hold2).",
         "",
-        "## Keepers",
+        f"A–O grids mined: **{n_grids}**. Patterns: **{n_pats}**. "
+        f"SPY tape days: **{spy_n}**. Cells scored (disc n≥80): **{len(rows)}**. "
+        f"**PASS {len(keep)}** (ALL-cohort **{len(keep_all)}**) · "
+        f"**FAIL {len(fail)}** · **THIN {len(thin)}**.",
+        "",
+        "All-cols N=25/35 sample stays research-only in `ALL_COLS_MINE.md`. "
+        "Do **not** promote `IZ_eq1` / `deeper_g5` / `AD_ge1`.",
+        "",
+        "## PASS (keepers)",
         "",
     ]
+    hdr = ("| verdict | def | clock | side | exit | cohort | cost | "
+           "disc n/avg/t | hold n/avg/t | tickers | why |")
+    sep = "|---|---|---|---|---|---|---|---|---|---:|---|"
+    show = keep_all[:40] if keep_all else keep[:40]
     if not keep:
         L += ["*(none cleared the ship bar)*", ""]
     else:
-        L += ["| def | clock | side | exit | cohort | cost | disc n/avg/t | "
-              "hold n/avg/t | tickers |",
-              "|---|---|---|---|---|---|---|---|---:|"]
-        for r in keep[:40]:
-            d, h = r["discovery"], r["holdout"]
-            L.append(
-                f"| `{r['def']}` | {r['clock']} | {r['side']} | {r['exit']} | "
-                f"{r['cohort']} | {r['cost_model']} | "
-                f"{d['n']}/{d['avg_net']*100:+.2f}%/{d['t']:.1f} | "
-                f"{h['n']}/{h['avg_net']*100:+.2f}%/{h['t']:.1f} | "
-                f"{r['n_tickers']} |"
-            )
+        if keep_all and len(keep) > len(keep_all):
+            L += [f"ALL-cohort keepers shown first ({len(keep_all)} of "
+                  f"{len(keep)} PASS cells; rest are cohort slices).", ""]
+        L += [hdr, sep]
+        for r in show:
+            L.append(_row_line(r))
         L.append("")
-    # top fails that were close (holdout t>=1.5, disc n ok)
     near = [r for r in fail
             if r.get("discovery") and r["discovery"]["n"] >= 200
-            and r.get("holdout") and r["holdout"].get("t", 0) == r["holdout"].get("t", 0)
+            and r.get("holdout") and r["holdout"].get("t") == r["holdout"].get("t")
             and r["holdout"]["t"] >= 1.5
-            and r["discovery"]["avg_net"] > 0]
+            and r["discovery"]["avg_net"] > 0
+            and r["cohort"] == "ALL"]
     near.sort(key=lambda r: -((r["holdout"] or {}).get("t") or 0))
-    L += ["## Near-miss (holdout t≥1.5, disc avg>0, still FAIL)", ""]
+    L += ["## FAIL (ALL-cohort, holdout t≥1.5, disc avg>0)", ""]
     if not near:
         L += ["*(none)*", ""]
     else:
-        L += ["| def | clock | side | exit | cohort | cost | disc t | hold t | why |",
-              "|---|---|---|---|---|---|---:|---:|---|"]
+        L += [hdr, sep]
         for r in near[:25]:
-            L.append(
-                f"| `{r['def']}` | {r['clock']} | {r['side']} | {r['exit']} | "
-                f"{r['cohort']} | {r['cost_model']} | "
-                f"{r['discovery']['t']:.1f} | {r['holdout']['t']:.1f} | "
-                f"{','.join(r['fail_reasons'])} |"
-            )
+            L.append(_row_line(r))
+        L.append("")
+    L += ["## THIN (size-bar only, ALL-cohort, top by holdout t)", ""]
+    thin_all = [r for r in thin if r["cohort"] == "ALL"]
+    thin_all.sort(key=lambda r: -((r["holdout"] or {}).get("t") or -9))
+    if not thin_all:
+        L += ["*(none at ALL cohort)*", ""]
+    else:
+        L += [hdr, sep]
+        for r in thin_all[:20]:
+            L.append(_row_line(r))
         L.append("")
     L += [
         "## What this cycle mined",
         "",
+        "- A–O fill grids rebuilt from excel-state Yahoo rows "
+        "(`rebuild_grids.py`).",
         "- Existing card defs, A-keyed at **open** and again at **close**.",
         "- New `open_score` / `open_core` (no D,E,F,H,I,N fills).",
         "- Color combos and majority of open-knowable fills.",
@@ -349,8 +386,9 @@ def render_md(rows, n_grids, n_pats, spy_n, path):
         "- Formula-state gates from stored OHLCV: gap, J, H.",
         "- Sleeve holds 1/2/3/5/8. Costs: `mcap_bps` and `futubull`.",
         "",
-        "Deeper A–JL formula values are **not** in stored grids "
-        "(see `GRID_INVENTORY.md`). `--all-cols` is opt-in and unused daily.",
+        "Deeper A–JL values are **not** in these grids. The timed "
+        "`--all-cols` sample is accepted THIN in `ALL_COLS_MINE.md` "
+        "and is not re-run here.",
         "",
         "Research only. No merge without Cyrus. Live flatten_robust untouched.",
         "",
@@ -425,31 +463,47 @@ def main():
             continue
         rows.append(pack_cell(key, cell))
     rows = apply_hold1_sibling(rows)
+    rank = {"PASS": 0, "FAIL": 1, "THIN": 2}
     rows.sort(key=lambda r: (
-        0 if r["verdict"] == "PASS" else 1,
+        rank.get(r["verdict"], 9),
+        0 if r["cohort"] == "ALL" else 1,
         -((r["holdout"] or {}).get("t") or -9),
     ))
 
     os.makedirs(RESEARCH, exist_ok=True)
+    n_pass = sum(1 for r in rows if r["verdict"] == "PASS")
+    n_fail = sum(1 for r in rows if r["verdict"] == "FAIL")
+    n_thin = sum(1 for r in rows if r["verdict"] == "THIN")
     payload = {
         "generated": str(date.today()),
-        "spec": "clock-aware excel_bot mine; live flatten_robust untouched",
+        "spec": "clock-aware A-O excel_bot mine; live flatten_robust untouched",
         "ship": SHIP,
         "grids": seen,
         "patterns": len(pats),
         "spy_days": len(spy),
         "n_cells": len(rows),
-        "n_pass": sum(1 for r in rows if r["verdict"] == "PASS"),
-        "cells": rows,
+        "n_pass": n_pass,
+        "n_fail": n_fail,
+        "n_thin": n_thin,
+        "n_pass_all": sum(1 for r in rows if r["verdict"] == "PASS"
+                          and r["cohort"] == "ALL"),
         "live_untouched": "flatten_robust",
+        "all_cols_not_promoted": ["IZ_eq1", "deeper_g5", "AD_ge1"],
+        "cells": rows,
     }
     jpath = os.path.join(RESEARCH, "mine_clock_results.json")
     json.dump(payload, open(jpath, "w"), indent=1)
+    compact = dict(payload)
+    compact["cells"] = [r for r in rows if r["verdict"] == "PASS"
+                        or (r["cohort"] == "ALL" and r["verdict"] == "FAIL")]
+    json.dump(compact, open(os.path.join(RESEARCH, "mine_clock_summary.json"),
+                            "w"), indent=1)
     md = os.path.join(RESEARCH, "MINE_CYCLE.md")
     render_md(rows, seen, len(pats), len(spy), md)
     sb = os.path.join(SCOREBOARD, "EXCEL_BOT_MINE.md")
     render_md(rows, seen, len(pats), len(spy), sb)
-    print(f"[done] cells={len(rows)} PASS={payload['n_pass']} -> {jpath}")
+    print(f"[done] cells={len(rows)} PASS={n_pass} FAIL={n_fail} "
+          f"THIN={n_thin} ALL-PASS={payload['n_pass_all']} -> {jpath}")
     print(f"       {md}")
     print(f"       {sb}")
 
