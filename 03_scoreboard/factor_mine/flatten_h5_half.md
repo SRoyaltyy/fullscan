@@ -8,6 +8,36 @@ Side **long** · universe `flatten` · top 8 · rank `list` · size `half` · se
 
 Cash book **+12.43%** ($11,243) · signal-only (no cash/fees) was +67.92%. Starts YES **16/17**. Fills 101 · skips 222 · realized $+1010.50.
 
+## How this sleeve decides (like you are 10)
+
+Imagine a kid with $10,000 at the 09:30 school bell. They look at the flatten wish-list (names the flatten board wanted that morning) and only buy names that pass the list as written. They take up to 8 names, spend leftover cash on whole shares, and hold at least 5 morning(s). They sell when the name falls off the list (after the timer). They never peek at today's report card (Change%) to pick. This sleeve bets the price will rise.
+
+### What it looks at (inputs)
+
+- Shopping list: the flatten wish-list (names the flatten board wanted that morning).
+- Clock: 09:30 ET only. The sleeve never peeks at today's Change%, Gap, RelVol, or the printed book to decide.
+- News, if used, is the morning packet box or yesterday's headline — never a later scrape.
+- Money: leftover cash from yesterday + the lots we already hold. It can only spend cash it has and only sell shares it holds.
+- Fill price: the 09:30 open, whole shares, Futubull fees.
+- Morning weather S: if S ≤ −3 the sleeve sits (no new buys).
+
+### When it buys
+
+- At 09:30, take names on the flatten wish-list (names the flatten board wanted that morning) that pass the must-haves.
+- If morning S ≤ −3, buy nobody new (hard-red sit).
+- Keep the first 8 names in list order.
+- Only spend half of leftover cash; the rest stays cash.
+- Skip a name if the slice cannot buy 1 share after fees.
+- This is a LONG sleeve: it buys shares and wants the price to go up.
+
+### When it sells
+
+- Sell first, then buy. Never sell a ticker we do not hold.
+- Minimum hold is 5 session(s) — the buy morning counts as 1.
+- No extra panic button — only the hold timer and the sell rule below.
+- List-drop: after 5 session(s), sell at the 09:30 open if the name is no longer on today's list. If it fell off earlier, we still wait out the minimum hold.
+- Fills are at the 09:30 open. Fees come out of cash. Overnight, cash does not change.
+
 ## Why these stocks
 
 Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 09:30 packet + leftover cash + lots on hand decide the ticket. Same-day Change% is outcome only.
@@ -448,7 +478,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3,194.34 | ▲ 09:30 equity $11,019.52 vs yday $11,016.17 (+3.35) | 09:30 open · cash $3,194.34 (unchanged overnight, no fees) · equity $11,019.52 vs prior close $11,016.17 (+3.35) · 16 name(s) re-marked at the open (per-name table). AU×2 yday $118.11 → 09:30 $117.41 -1.40; AUPH×20 yday $16.54 → 09:30 $16.47 -1.40; AEM×1 yday $214.04 → 09:30 $214.11 +0.07; ARCT×30 yday $15.83 → 09:30 $15.74 -2.70; AUTL×139 yday $2.33 → 09:30 $2.32 -1.39; CRDL×178 yday $2.14 → 09:30 $2.09 -8.90; CRSP×5 yday $59.23 → 09:30 $59.12 -0.55; CYPH×261 yday $1.63 → 09:30 $1.75 +31.32; MOS×16 yday $24.16 → 09:30 $24.00 -2.56; OCUL×35 yday $10.77 → 09:30 $10.63 -4.90; INSP×6 yday $61.80 → 09:30 $62.10 +1.80; CRMD×47 yday $8.39 → 09:30 $8.49 +4.70; RZLT×74 yday $5.04 → 09:30 $5.07 +2.22; RRC×26 yday $41.55 → 09:30 $41.44 -2.86; CRK×75 yday $14.50 → 09:30 $14.42 -6.00; SLI×410 yday $2.61 → 09:30 $2.60 -4.10 | — |
 | 2026-08-28 09:30 ET | **SELL** | `AU` | 2 | $117.41 | $2.02 | $-8.05 | $3,427.15 | ▼ -8.05 after sell → book $11,017.51; vs 09:30 mark -2.01 | dropped from list after 5 sess (min 5) | — |
 | 2026-08-28 09:30 ET | **SELL** | `AUPH` | 20 | $16.47 | $2.07 | $-18.72 | $3,754.48 | ▼ -18.72 after sell → book $11,015.44; vs 09:30 mark -2.07 | dropped from list after 5 sess (min 5) | — |
-| 2026-08-28 09:30 ET | **SELL** | `AEM` | 1 | $214.11 | $2.01 | $-6.20 | $3,966.58 | ▼ -6.20 after sell → book $11,013.43; vs 09:30 mark -2.01 | dropped from list after 5 sess (min 5) | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🟡 vol🟡 buy🟡 |
+| 2026-08-28 09:30 ET | **SELL** | `AEM` | 1 | $214.11 | $2.01 | $-6.20 | $3,966.58 | ▼ -6.20 after sell → book $11,013.43; vs 09:30 mark -2.01 | dropped from list after 5 sess (min 5) | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-08-28 09:30 ET | **SELL** | `ARCT` | 30 | $15.74 | $2.10 | $+134.12 | $4,436.68 | ▲ +134.12 after sell → book $11,011.33; vs 09:30 mark -2.10 | dropped from list after 5 sess (min 5) | — |
 | 2026-08-28 09:30 ET | **SELL** | `AUTL` | 139 | $2.32 | $2.44 | $-25.70 | $4,756.72 | ▼ -25.70 after sell → book $11,008.89; vs 09:30 mark -2.44 | dropped from list after 5 sess (min 5) | — |
 | 2026-08-28 09:30 ET | **SELL** | `CRDL` | 178 | $2.09 | $2.56 | $+23.39 | $5,126.17 | ▲ +23.39 after sell → book $11,006.32; vs 09:30 mark -2.57 | dropped from list after 5 sess (min 5) | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🟢 buy🟡 |

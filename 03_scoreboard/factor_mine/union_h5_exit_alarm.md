@@ -8,6 +8,38 @@ Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · 
 
 Cash book **+13.73%** ($11,374) · signal-only (no cash/fees) was +61.86%. Starts YES **14/17**. Fills 110 · skips 240 · realized $+1034.08.
 
+## How this sleeve decides (like you are 10)
+
+Imagine a kid with $10,000 at the 09:30 school bell. They look at the mixed morning shopping list (every name that showed up on any 09:30 list that day) and only buy names that pass the list as written and skip anything on the must-not list. They take up to 8 names, spend leftover cash on whole shares, and hold at least 5 morning(s). They sell when the name falls off the list (after the timer). They never peek at today's report card (Change%) to pick. This sleeve bets the price will rise.
+
+### What it looks at (inputs)
+
+- Shopping list: the mixed morning shopping list (every name that showed up on any 09:30 list that day).
+- Clock: 09:30 ET only. The sleeve never peeks at today's Change%, Gap, RelVol, or the printed book to decide.
+- News, if used, is the morning packet box or yesterday's headline — never a later scrape.
+- Money: leftover cash from yesterday + the lots we already hold. It can only spend cash it has and only sell shares it holds.
+- Fill price: the 09:30 open, whole shares, Futubull fees.
+- Morning weather S: if S ≤ −3 the sleeve sits (no new buys).
+- Must-not: the 🚨 alarm is on (cameras got worse overnight).
+
+### When it buys
+
+- At 09:30, take names on the mixed morning shopping list (every name that showed up on any 09:30 list that day) that pass the must-haves.
+- If morning S ≤ −3, buy nobody new (hard-red sit).
+- A name is thrown out if any must-not is true.
+- Keep the first 8 names in list order.
+- Split leftover cash equally across *new* names (not ones we already hold).
+- Skip a name if the slice cannot buy 1 share after fees.
+- This is a LONG sleeve: it buys shares and wants the price to go up.
+
+### When it sells
+
+- Sell first, then buy. Never sell a ticker we do not hold.
+- Minimum hold is 5 session(s) — the buy morning counts as 1.
+- Early exit: sell at the next 09:30 if 🚨 prints, even inside the minimum hold.
+- List-drop: after 5 session(s), sell at the 09:30 open if the name is no longer on today's list. If it fell off earlier, we still wait out the minimum hold.
+- Fills are at the 09:30 open. Fees come out of cash. Overnight, cash does not change.
+
 ## Why these stocks
 
 Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 09:30 packet + leftover cash + lots on hand decide the ticket. Same-day Change% is outcome only.
@@ -454,8 +486,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-27 09:30 ET | **BUY** | `CRK` | 87 | $14.09 | $2.25 | — | $6,162.61 | — | hold 5d, sell next 09:30 if 🚨; list flatten; ret5=+1.1; leftover $1230.62 | join🟢 sector🔴 gen🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `SLI` | 475 | $2.59 | $6.13 | — | $4,926.23 | — | hold 5d, sell next 09:30 if 🚨; list flatten; ret5=+4.2; leftover $1230.62 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `ACMR` | 15 | $80.97 | $2.04 | — | $3,709.64 | — | hold 5d, sell next 09:30 if 🚨; list mover_buy; 🔵; ret5=-1.3; leftover $1230.62 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `GGB` | 278 | $4.42 | $3.59 | — | $2,477.30 | — | hold 5d, sell next 09:30 if 🚨; list mover_buy; 🔵; ret5=-8.6; leftover $1230.62 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `MT` | 16 | $75.12 | $2.04 | — | $1,273.34 | — | hold 5d, sell next 09:30 if 🚨; list mover_buy; 🔵; ret5=-2.2; leftover $1230.62 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `GGB` | 278 | $4.42 | $3.59 | — | $2,477.30 | — | hold 5d, sell next 09:30 if 🚨; list mover_buy; ret5=-8.6; leftover $1230.62 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `MT` | 16 | $75.12 | $2.04 | — | $1,273.34 | — | hold 5d, sell next 09:30 if 🚨; list mover_buy; ret5=-2.2; leftover $1230.62 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `MU` | 1 | $925.74 | $1.99 | — | $345.61 | — | hold 5d, sell next 09:30 if 🚨; list mover_buy; 🔵; ret5=-0.5; leftover $1230.62 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $345.61 | ▲ close $11,143.15 vs 09:30 $11,165.96 (session +18.99) | 16:00 close · cash $345.61 · equity $11,143.15 vs 09:30 $11,165.96 (-22.81; session marks +18.99) · 18 name(s) marked open→close (per-name table). AUPH×1 09:30 $16.60 → close $16.54 -0.06; AUTL×10 09:30 $2.41 → close $2.33 -0.80; CRDL×13 09:30 $2.03 → close $2.14 +1.43; CYPH×19 09:30 $1.60 → close $1.63 +0.57; MOS×14 09:30 $24.84 → close $24.16 -9.52; OCUL×32 09:30 $10.79 → close $10.77 -0.64; INSP×5 09:30 $60.07 → close $61.80 +8.65; CRMD×43 09:30 $8.60 → close $8.39 -9.03; RZLT×68 09:30 $5.01 → close $5.04 +2.04; BMEA×220 09:30 $1.75 → close $1.71 -8.80; NPWR×178 09:30 $1.93 → close $1.81 -21.36; RRC×30 09:30 $40.72 → close $41.55 +24.90; CRK×87 09:30 $14.09 → close $14.50 +35.67; SLI×475 09:30 $2.59 → close $2.61 +9.50; ACMR×15 09:30 $80.97 → close $79.11 -27.90; GGB×278 09:30 $4.42 → close $4.46 +11.12; MT×16 09:30 $75.12 → close $74.53 -9.44; MU×1 09:30 $925.74 → close $938.40 +12.66 | — |
 | 2026-08-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $345.61 | ▲ 09:30 equity $11,238.33 vs yday $11,143.15 (+95.18) | 09:30 open · cash $345.61 (unchanged overnight, no fees) · equity $11,238.33 vs prior close $11,143.15 (+95.18) · 18 name(s) re-marked at the open (per-name table). AUPH×1 yday $16.54 → 09:30 $16.47 -0.07; AUTL×10 yday $2.33 → 09:30 $2.32 -0.10; CRDL×13 yday $2.14 → 09:30 $2.09 -0.65; CYPH×19 yday $1.63 → 09:30 $1.75 +2.28; MOS×14 yday $24.16 → 09:30 $24.00 -2.24; OCUL×32 yday $10.77 → 09:30 $10.63 -4.48; INSP×5 yday $61.80 → 09:30 $62.10 +1.50; CRMD×43 yday $8.39 → 09:30 $8.49 +4.30; RZLT×68 yday $5.04 → 09:30 $5.07 +2.04; BMEA×220 yday $1.71 → 09:30 $1.74 +6.60; NPWR×178 yday $1.81 → 09:30 $1.83 +3.56; RRC×30 yday $41.55 → 09:30 $41.44 -3.30; CRK×87 yday $14.50 → 09:30 $14.42 -6.96; SLI×475 yday $2.61 → 09:30 $2.60 -4.75; ACMR×15 yday $79.11 → 09:30 $81.65 +38.10; GGB×278 yday $4.46 → 09:30 $4.57 +30.58; MT×16 yday $74.53 → 09:30 $74.54 +0.16; MU×1 yday $938.40 → 09:30 $967.01 +28.61 | — |
