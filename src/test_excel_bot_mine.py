@@ -660,6 +660,49 @@ def test_color_plain_english_before_code():
     assert "flatten_robust" in md
 
 
+def test_parent_of_matches_same_hold():
+    from mine_color_join import parent_of, rejudge
+    assert parent_of("hyst_open_core_e5_x2__O_green", 2) == (
+        "hyst_open_core_e5_x2", "hold2")
+    assert parent_of("hyst_open_core_e5_x2__O_green", 1) == (
+        "hyst_open_core_e5_x2", "hold1")
+    rows = [{
+        "def": "hyst_open_core_e5_x2__A_green", "hold": 2, "exit": "hold2",
+        "holdout": {"n": 100, "avg_net": 0.0162, "t": 5},
+        "verdict": "KEEP", "fail_reasons": [],
+    }]
+    parents = {("hyst_open_core_e5_x2", "hold2"):
+               {"n": 100, "avg_net": 0.0162, "t": 5}}
+    rejudge(rows, parents)
+    assert rows[0]["verdict"] == "KILL"
+    assert "no_edge_vs_parent" in rows[0]["fail_reasons"]
+
+
+def test_color_join_report_is_committed():
+    md = (ROOT / "excel_bot" / "research" / "COLOR_JOIN_MINE.md").read_text()
+    assert "What a color means" in md
+    assert "A, B, C, G, J, K, L, M, O" in md
+    assert "D, E, F, H, I, N" in md
+    assert "dated before" in md
+    assert "flatten_robust" in md
+    sb = (ROOT / "03_scoreboard" / "EXCEL_BOT_MINE.md").read_text()
+    assert "first A–JL cut" in sb
+    assert "Color + join mine" in sb
+    ao = (ROOT / "excel_bot" / "research" / "AO_FIRST_MINE.md").read_text()
+    assert "VISIBLE_COLS A..O" in ao
+    assert "Color + join mine" in ao
+    payload = json.loads(
+        (ROOT / "excel_bot" / "research" / "color_join_mine.json").read_text())
+    assert payload["live_untouched"] == "flatten_robust"
+    assert payload["cost_model"] == "futubull"
+    assert payload["open_letters"] == "ABCGJKLMO"
+    assert payload["n_keep"] + payload["n_thin"] + payload["n_kill"] >= 1
+    for r in payload.get("cells") or []:
+        if r["def"].startswith("color_"):
+            letter = r["def"].split("_")[1]
+            assert letter in "ABCGJKLMO"
+
+
 def test_color_join_does_not_import_live():
     for fn in ("mine_color_join.py", "pit_joins.py"):
         src = (ENG / fn).read_text(encoding="utf-8")

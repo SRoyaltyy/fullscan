@@ -275,11 +275,15 @@ def load_parents():
     return out
 
 
-def parent_of(name):
-    for pname, rule in CANDIDATE_KEYS:
-        if name.startswith(pname + "__"):
-            return pname, rule
-    return None, None
+def parent_of(name, hold=None):
+    if "__" not in name:
+        return None, None
+    pname = name.split("__", 1)[0]
+    if pname not in CANDIDATE_NAMES:
+        return None, None
+    if hold is None:
+        return pname, None
+    return pname, f"hold{hold}"
 
 
 def score_all(trades, baselines, parents):
@@ -302,9 +306,8 @@ def score_all(trades, baselines, parents):
             letter = name.rsplit("__", 1)[1].split("_")[0]
             plain = fold_plain(name.split("__")[0],
                                f"morning cell {letter} is also green")
-            pname, prule = parent_of(name)
-            if pname and f"hold{hold}" == prule:
-                parent = parents.get((pname, prule))
+            pname, prule = parent_of(name, hold)
+            parent = parents.get((pname, prule)) if pname else None
         elif "__" in name:
             family = "join"
             if name.endswith("__ab_good"):
@@ -324,9 +327,8 @@ def score_all(trades, baselines, parents):
                 plain = fold_plain(name.split("__")[0],
                                    f"Finviz snapshot cohort {slug} "
                                    "(not a historical as-of)")
-            pname, prule = parent_of(name)
-            if pname and f"hold{hold}" == prule:
-                parent = parents.get((pname, prule))
+            pname, prule = parent_of(name, hold)
+            parent = parents.get((pname, prule)) if pname else None
         rows.append(pack(name, hold, side, recs, base, parent, family, plain))
     apply_hold1_keep(rows)
     rank = {"KEEP": 0, "THIN": 1, "KILL": 2}
@@ -380,6 +382,14 @@ def render(rows, n_grids, cov):
         "",
         f"Grids **{n_grids}**. Cells scored **{len(rows)}**. "
         f"**KEEP {len(keep)}** · **THIN {len(thin)}** · **KILL {len(kill)}**.",
+        "",
+        "**Color alone does not clear the bar.** One morning cell being "
+        "green is not enough — the late half of 2026 goes red on same-day "
+        "holds. The already-proved light **plus a green O** adds about "
+        "+20–45 bp over the light itself. High-vol Finviz names add "
+        "+24–64 bp, but that tag is today's snapshot, not 2026 history. "
+        "AB / weather / overnight book only exist for late Aug–Sep, so "
+        "they fail walk-forward (no first half).",
         "",
         "### Color → next-N-days (open letters only)",
         "",
@@ -448,11 +458,35 @@ def render(rows, n_grids, cov):
     return "\n".join(L) + "\n"
 
 
+def rejudge(rows, parents):
+    """Attach the matching-hold parent and re-apply the +20 bp fold bar."""
+    size = {"thin_disc", "thin_hold", "ticker_bar", "date_bar"}
+    for r in rows:
+        pname, prule = parent_of(r["def"], r.get("hold"))
+        parent = parents.get((pname, prule)) if pname else None
+        r["parent"] = parent
+        reasons = [x for x in (r.get("fail_reasons") or [])
+                   if x != "no_edge_vs_parent"]
+        cmp = r.get("holdout") or r.get("discovery")
+        if parent and cmp and cmp.get("avg_net", 0) < parent["avg_net"] + 0.002:
+            reasons.append("no_edge_vs_parent")
+        r["fail_reasons"] = reasons
+        quality = set(reasons) - size
+        if not reasons:
+            r["verdict"] = "KEEP"
+        elif quality:
+            r["verdict"] = "KILL"
+        else:
+            r["verdict"] = "THIN"
+    apply_hold1_keep(rows)
+    return rows
+
+
 def slim(r):
     keys = ("def", "clock", "side", "exit", "hold", "family", "plain",
             "cost_model", "n_tickers", "n_dates", "discovery", "holdout",
             "early", "late", "spy_up", "spy_dn", "lottery_day_frac",
-            "verdict", "fail_reasons", "live_untouched")
+            "parent", "verdict", "fail_reasons", "live_untouched")
     return {k: r[k] for k in keys if k in r}
 
 
@@ -508,8 +542,17 @@ def write_outputs(rows, n_grids, cov):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--workers", type=int, default=min(4, os.cpu_count() or 2))
+    ap.add_argument("--rejudge", action="store_true")
     args = ap.parse_args()
     os.chdir(ROOT)
+    if args.rejudge:
+        raw = json.load(open(os.path.join(RESEARCH, "color_join_mine.json")))
+        rows = rejudge(raw["cells"], load_parents())
+        payload = write_outputs(rows, raw.get("grids") or 3603,
+                                raw.get("join_coverage") or {})
+        print(f"[rejudge] KEEP={payload['n_keep']} THIN={payload['n_thin']} "
+              f"KILL={payload['n_kill']}", flush=True)
+        return
     split = json.load(open(SPLIT_PATH))
     disc, hold = set(x.upper() for x in split["discovery"]), set(
         x.upper() for x in split["holdout"])

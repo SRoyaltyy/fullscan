@@ -98,3 +98,7 @@ Research only. No cards. No merge without Cyrus. Live `flatten_robust` untouched
 ## Harden (6 open-hysteresis lights)
 
 KEEP 6 · KILL 0 · futubull · walk-forward + both-tape + top-day lottery. See `AO_FIRST_MINE.md` / `03_scoreboard/EXCEL_BOT_MINE.md`.
+
+## Color + join mine
+
+KEEP 9 · THIN 0 · KILL 113. Open-knowable fills only. PIT joins (prior AB/weather/book). See `AO_FIRST_MINE.md`.
