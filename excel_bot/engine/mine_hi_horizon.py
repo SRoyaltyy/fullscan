@@ -398,14 +398,13 @@ def pack_hi(cells, baselines):
     return rows
 
 
-def walk(files, atoms, pairs, spy, disc, hold, do_standing=True, all_horizons=True):
-    """all_horizons=False scores close atoms on 1d stacked I only (pass1)."""
+def walk(files, atoms, pairs, spy, disc, hold, do_standing=True,
+         close_h=(1,), close_labs=(PRIMARY,)):
+    """Standing always uses every H/I horizon. Close atoms use close_h/labs."""
     cells = defaultdict(_cell)
     base = defaultdict(lambda: _slot())
     n_bad = 0
     standing_n = 0
-    close_h = HORIZONS if all_horizons else (1,)
-    close_labs = LABELS if all_horizons else (PRIMARY,)
     for i, path in enumerate(files, 1):
         slim = slim_ticker(path)
         if slim is None:
@@ -568,7 +567,7 @@ def mine(atoms, today, limit=0):
     print(f"[hi] pass1 files={len(files)} atoms={len(atoms)}", flush=True)
     cells1, base, standing_n = walk(
         files, atoms, [], spy, disc, hold,
-        do_standing=True, all_horizons=False,
+        do_standing=True, close_h=(1, 2), close_labs=(PRIMARY,),
     )
     baselines = {}
     for (lab, hz), sl in base.items():
@@ -590,7 +589,7 @@ def mine(atoms, today, limit=0):
     } | {p["right"] for p in pairs}}
     cells2, _, _ = walk(
         files, list(need.values()), pairs, spy, disc, hold,
-        do_standing=False, all_horizons=False,
+        do_standing=False, close_h=(1, 2), close_labs=(PRIMARY,),
     )
     pair_rows = [r for r in pack_hi(cells2, baselines) if r["family"] == "pair"]
     rows = standing_rows + close_singles + pair_rows
@@ -660,10 +659,19 @@ def render(rows, baselines, files, meta):
             "automatically print as an H/I keep."
         )
     pair_keep = [r for r in prim_ot if r["keep"] == "KEEP" and r["family"] == "pair"]
-    if pair_keep:
+    single_keep = [r for r in prim_ot if r["keep"] == "KEEP" and r["family"] == "single"]
+    f_green = [r for r in prim_ot if r["keep"] == "KEEP" and "F_l0_green" in r["def"]]
+    aa_rows = [r for r in prim_ot if "AA_l0_" in r["def"] and r.get("horizon") == 1
+               and r.get("label") == PRIMARY]
+    if pair_keep or single_keep:
         L.append(
-            f"**Close-entry pair KEEP {len(pair_keep)}** on 1d stacked I. "
-            "Trees next, not this beat."
+            f"**Close-entry KEEP {len(single_keep)} singles / {len(pair_keep)} pairs** "
+            f"on 1d stacked I. {len(f_green)} of those are today's F-green "
+            "(volume fill) or a twin of it — same-close association with the "
+            "I print, not a lagged forecast. AA-today pairs do not KEEP "
+            "(SPY-down red / no edge). Research only — not a card. "
+            "Trees only if a non-twin pair KEEPs; this F-green cluster is "
+            "one print, not a new family."
         )
     else:
         n_pkill = sum(1 for r in prim_ot if r["family"] == "pair" and r["keep"] == "KILL")
@@ -739,9 +747,23 @@ def render(rows, baselines, files, meta):
         "July | top-5 | verdict | why |",
         "|---|---|---|---|---|---|---|---|---|---|---|",
     ]
-    shown = [r for r in prim_ot if r["keep"] == "KEEP"]
-    shown += [r for r in prim_ot if r["keep"] != "KEEP"]
-    shown = shown[:24]
+    # Show unique-ish KEEPs first (collapse F-green twins), then AA-today, then others.
+    shown, seen = [], set()
+    prefer = [r for r in prim_ot if r["def"] in (
+        "F_l0_green", "F_l0_green__and__G_l0_ge1", "O_l2_lt1__and__AA_l0_eq1",
+        "AA_l0_eq1",
+    )]
+    prefer += [r for r in prim_ot if r["keep"] == "KEEP" and r["def"] == "F_l0_green"]
+    prefer += [r for r in prim_ot if r["keep"] == "KEEP"]
+    prefer += [r for r in prim_ot if "AA_l0_" in r["def"]]
+    prefer += [r for r in prim_ot if r["keep"] != "KEEP"]
+    for r in prefer:
+        if r["def"] in seen:
+            continue
+        seen.add(r["def"])
+        shown.append(r)
+        if len(shown) >= 20:
+            break
     if not shown:
         L.append("| — | — | — | — | — | — | — | — | — | — | — |")
     for r in shown:

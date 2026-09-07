@@ -146,3 +146,7 @@ Same-day multi-letter: KEEP 0 · KILL 32 · THIN 0. A–JL surface exhausted. Li
 ## Pair+lag mine (open-entry pilot)
 
 Pair+lag open (locked 44): KEEP 0 · KILL 4266 · THIN 0. Trees skipped_no_pair_keep. Light+O baseline. See `PAIR_LAG.md` / `OPEN_SAME_ROW_LABELS.md`.
+
+## H/I multi-horizon (standing keep + close pair)
+
+H/I multi-horizon: KEEP 85 · KILL 1227 · THIN 0. Standing light+O re-scored. Close pair AA-today, no same-row H/I. See `HI_HORIZON.md`.
