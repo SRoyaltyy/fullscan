@@ -31,6 +31,71 @@ _Generated 2026-09-07 · live `flatten_robust` is not changed._
 
 **Value CLOSE or unknown→close:** B,D,E,F,G,H,I,K,L,M,N,O,P,R,S,T,U,V,W,X,Y,AA,AB,AD,AE,AF,AG,AI,AJ,AK,AL,AM,AN,AO,AP,AQ,AR,AS,AT,AU,AV,AW,AX,AY,AZ,BA,BB,BC,BD,BE,BF,BG,BH,BI,BJ,BK,BL,BM,BN,BO … (+171)
 
+## Fair inputs at the 9:30 open
+
+Upper rows (lag≥1) of any column are knowable at 9:30. Same-row (lag 0) only if the formula walk is value-open or the fill was timing-tested open. Unknown is not open.
+
+Standing five-cell light + green O ± AH/FR is the **baseline**, not this search space. Highlight ghosts (T/BA, weekly+lag, same-day fill counts) stay KILL unless they return as **numeric** lags or pairs.
+
+## Same-row open-knowable formulas
+
+Excel teammate may label more. This table is the **formula walk only** — no peek. Same-row refs inherit the worse clock. Prior-row refs are already known.
+
+| col | what the same-row formula is | same-row refs |
+|---|---|---|
+| **A** | STOCKHISTORY date alias (IR) | IR |
+| **C** | open price (IT, or prior IT if today's is an error) | IT |
+| **J** | open-to-open return (C[t] vs C[t−1]) | C |
+| **Q** | average of prior P (after the first few G-reading rows) | — (prior/external only) |
+| **Z** | prior-row only (EM) | — (prior/external only) |
+| **AC** | prior-row only (D,CJ,CJ) | — (prior/external only) |
+| **AH** | count of prior H prints ≤ −5% | — (prior/external only) |
+| **BT** | prior-row only (BR) | — (prior/external only) |
+| **BV** | same-row Q,BT (those cols are value-open) plus prior — | Q,BT |
+| **CG** | prior-row only (CG,CG) | — (prior/external only) |
+| **CH** | prior-row only (CD,CE,CD,CD,CE,CE) | — (prior/external only) |
+| **DC** | prior-row only (CV,CX,CV,CX,CX,CY) | — (prior/external only) |
+| **DE** | prior-row only (DB,DB,DB,DB,F,F) | — (prior/external only) |
+| **EB** | prior-row only (EB,EB,EB,EB) | — (prior/external only) |
+| **EK** | prior-row only (H,H,H,H) | — (prior/external only) |
+| **EN** | prior-row only (F,F,F,F,F,F) | — (prior/external only) |
+| **EP** | prior-row only (H,H,H,N) | — (prior/external only) |
+| **EQ** | S or L from prior CP (text) | — (prior/external only) |
+| **ER** | prior-row only (H,I,H,I) | — (prior/external only) |
+| **ES** | carried ER (prior-day signed move) | ER |
+| **ET** | prior W/X flags | — (prior/external only) |
+| **EU** | carried ET | ET |
+| **EV** | same-row Z,Z,Z,Z,Z,Z (those cols are value-open) plus prior — | Z |
+| **FQ** | prior-row only (H) | — (prior/external only) |
+| **FR** | prior volume median over 1M and/or prior G ≥ 3 | — (prior/external only) |
+| **FS** | prior-row only (CP,CP,CP,CP,CP) | — (prior/external only) |
+| **FU** | prior-row only (B,F,F) | — (prior/external only) |
+| **GD** | prior-row only (DN,H) | — (prior/external only) |
+| **GE** | prior-row only (DN,F,F) | — (prior/external only) |
+| **GF** | prior-row only (DN,B) | — (prior/external only) |
+| **HF** | prior-row only (B,B) | — (prior/external only) |
+| **HG** | same-row HF,HF (those cols are value-open) plus prior GU,H,H | HF |
+| **HW** | prior-row only (GU,GU,CP) | — (prior/external only) |
+| **II** | prior-row only (IH) | — (prior/external only) |
+| **IR** | STOCKHISTORY date spill | — (prior/external only) |
+| **IT** | STOCKHISTORY open spill | — (prior/external only) |
+| **IY** | external VIX print (static cache) | — (prior/external only) |
+| **IZ** | prior H vs prior IY | — (prior/external only) |
+| **JB** | prior-row only (H,H,H,H) | — (prior/external only) |
+| **JC** | prior-row only (H,H) | — (prior/external only) |
+| **JD** | prior-row only (HO,HO,GQ) | — (prior/external only) |
+| **JE** | same-row JD,JD (those cols are value-open) plus prior JD,JD,JD,JD | JD |
+| **JF** | same-row JE (those cols are value-open) plus prior H,U,U | JE |
+| **JL** | prior-row only (H,JJ,JJ,JK,JK) | — (prior/external only) |
+
+### Same-row candidates not yet licensed as open
+
+| col | formula shape | why it stays close at lag 0 |
+|---|---|---|
+| **AA** | ES[t] + 1 if N[t−1]<0 else 0 | Daily formula reads same-row ES (value-open) and prior N. Parser leaves it unknown because of _xlfn.IFS — mined close until a teammate label or a parsed walk proves it. AA[t−k], k≥1, is fair at the open either way. |
+| **O** | composite of prior H/F/N/EL/CP plus same-row DD | Fill is timing-tested open. Value reads same-row DD (close/unknown) → value-close. O[t] as a number is close-entry. O[t−k], k≥1, is fair at the open. |
+| **Q** | rows 3–8: IF(G[t]>2.5); row 9+: AVERAGE(prior P) | Representative daily formula is prior-P average (open). The first few rows read same-row G (close). Warmup rows are a leak if mined as open; the rest of the tape is fair. |
+
 ## Landmine
 
 core_score = A..J includes D,E,F,H,I → CLOSE entry only

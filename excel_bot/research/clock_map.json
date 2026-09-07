@@ -4610,7 +4610,639 @@
    "measured_fill": null
   }
  ],
+ "same_row_open": {
+  "n": 44,
+  "letters": [
+   "A",
+   "C",
+   "J",
+   "Q",
+   "Z",
+   "AC",
+   "AH",
+   "BT",
+   "BV",
+   "CG",
+   "CH",
+   "DC",
+   "DE",
+   "EB",
+   "EK",
+   "EN",
+   "EP",
+   "EQ",
+   "ER",
+   "ES",
+   "ET",
+   "EU",
+   "EV",
+   "FQ",
+   "FR",
+   "FS",
+   "FU",
+   "GD",
+   "GE",
+   "GF",
+   "HF",
+   "HG",
+   "HW",
+   "II",
+   "IR",
+   "IT",
+   "IY",
+   "IZ",
+   "JB",
+   "JC",
+   "JD",
+   "JE",
+   "JF",
+   "JL"
+  ],
+  "formulas": [
+   {
+    "col": "A",
+    "row": 10,
+    "formula": "=IR10",
+    "same_row_refs": [
+     "IR"
+    ],
+    "prior_row_refs": [],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "STOCKHISTORY date alias (IR)"
+   },
+   {
+    "col": "C",
+    "row": 10,
+    "formula": "=IF(ISERROR(IT10), IT9, IT10)",
+    "same_row_refs": [
+     "IT"
+    ],
+    "prior_row_refs": [
+     "IT"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "open price (IT, or prior IT if today's is an error)"
+   },
+   {
+    "col": "J",
+    "row": 11,
+    "formula": "=(C11-C10)/C10",
+    "same_row_refs": [
+     "C"
+    ],
+    "prior_row_refs": [
+     "C"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "open-to-open return (C[t] vs C[t\u22121])"
+   },
+   {
+    "col": "Q",
+    "row": 11,
+    "formula": "=AVERAGE(P3:P10)",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "P"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "average of prior P (after the first few G-reading rows)"
+   },
+   {
+    "col": "Z",
+    "row": 58,
+    "formula": "=EM57",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "EM"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior-row only (EM)"
+   },
+   {
+    "col": "AC",
+    "row": 16,
+    "formula": "=IFERROR((D15-CJ15)/CJ15, \"\")",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "D",
+     "CJ"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior-row only (D,CJ,CJ)"
+   },
+   {
+    "col": "AH",
+    "row": 16,
+    "formula": "=COUNTIF(H10:H15, \"<=-0.05\")",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "H"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "count of prior H prints \u2264 \u22125%"
+   },
+   {
+    "col": "BT",
+    "row": 23,
+    "formula": "=100-(100/(1+BR22))",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "BR"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior-row only (BR)"
+   },
+   {
+    "col": "BV",
+    "row": 137,
+    "formula": "=IF(Q137=1, BT137, \"\")",
+    "same_row_refs": [
+     "Q",
+     "BT"
+    ],
+    "prior_row_refs": [],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "same-row Q,BT (those cols are value-open) plus prior \u2014"
+   },
+   {
+    "col": "CG",
+    "row": 143,
+    "formula": "=SUM(CG134:CG140)",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "CG"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior-row only (CG,CG)"
+   },
+   {
+    "col": "CH",
+    "row": 142,
+    "formula": "=IFERROR(_xlfn.IFS(AND(SUM(CD111:CE140)=0),1,AND(SUM(CD119:CD135)>0,SUM(CE136:CE140)>0),0,SUM(BN136:BN141)>0.2,0,SUM(CE136:CE140)>0,1, AND(SUM(CF134:CF140)>=2, SUM(CF139:CF140)>=1)",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "CD",
+     "CE",
+     "BN",
+     "CF"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior-row only (CD,CE,CD,CD,CE,CE)"
+   },
+   {
+    "col": "DC",
+    "row": 29,
+    "formula": "=IFERROR(_xlfn.IFS(AND((CV27-CX27)>=(CV28-CX28), CX28>=0.05), 1, AND(CY28=1, COUNTIF(CX26:CX28, \">0.05\")>=2), 1), 0)",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "CV",
+     "CX",
+     "CY"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior-row only (CV,CX,CV,CX,CX,CY)"
+   },
+   {
+    "col": "DE",
+    "row": 29,
+    "formula": "=IF(AND(COUNTIF(DB20:DB28, 0)=0, COUNTIF(DB27:DB28, 1)>=1, AVERAGE(F25:F28)>=200000, H28>-0.15), 1, 2)",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "DB",
+     "F",
+     "H"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior-row only (DB,DB,DB,DB,F,F)"
+   },
+   {
+    "col": "EB",
+    "row": 150,
+    "formula": "=_xlfn.TAKE(_xlfn._xlws.FILTER(EB1:EB148, EB1:EB148<>\"\"), -1)",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "EB"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior-row only (EB,EB,EB,EB)"
+   },
+   {
+    "col": "EK",
+    "row": 95,
+    "formula": "=AVERAGE(H55:H94)-AVERAGE(H85:H94)",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "H"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior-row only (H,H,H,H)"
+   },
+   {
+    "col": "EN",
+    "row": 15,
+    "formula": "=IF(MAX(F11:F14)<200000, -2, 0)+_xlfn.IFS(AVERAGE(F11:F14)<700000, 0, AND(AVERAGE(F11:F14)>=700000, AVERAGE(F11:F14)<3000000), 1, AND(AVERAGE(F11:F14)>=3000000, AVERAGE(F11:F14)<12",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "F",
+     "H",
+     "CP"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior-row only (F,F,F,F,F,F)"
+   },
+   {
+    "col": "EP",
+    "row": 15,
+    "formula": "=(ABS(H13)*0.4+ABS(H14)*0.6)*IF(AND(H14>0, N14>=2), 1.5, 1)",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "H",
+     "N"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior-row only (H,H,H,N)"
+   },
+   {
+    "col": "EQ",
+    "row": 15,
+    "formula": "=_xlfn.IFS(CP14<>2, \"S\", CP14=2, \"L\")",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "CP"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "S or L from prior CP (text)"
+   },
+   {
+    "col": "ER",
+    "row": 15,
+    "formula": "=IFERROR(_xlfn.IFS(H14<-0.03, -1, I14<-0.03, -1, H14>0.05, 1, I14>0.05, 1), 0)",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "H",
+     "I"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior-row only (H,I,H,I)"
+   },
+   {
+    "col": "ES",
+    "row": 16,
+    "formula": "=IFERROR(_xlfn.IFS(ER16=1, 1, ER16=-1, -1), ES15)",
+    "same_row_refs": [
+     "ER"
+    ],
+    "prior_row_refs": [
+     "ES"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "carried ER (prior-day signed move)"
+   },
+   {
+    "col": "ET",
+    "row": 15,
+    "formula": "=IFERROR(_xlfn.IFS(W14=1, 1, X14=1, -1), 0)",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "W",
+     "X"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior W/X flags"
+   },
+   {
+    "col": "EU",
+    "row": 16,
+    "formula": "=IFERROR(_xlfn.IFS(ET16=1, 1, ET16=-1, -1), EU15)",
+    "same_row_refs": [
+     "ET"
+    ],
+    "prior_row_refs": [
+     "EU"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "carried ET"
+   },
+   {
+    "col": "EV",
+    "row": 15,
+    "formula": "=IFERROR(_xlfn.IFS(AND(Z15>0.206, Z15<0.25), 1, AND(Z15>0.352, Z15<0.4), 1, AND(Z15>0.59, Z15<0.63), 1), \"\")",
+    "same_row_refs": [
+     "Z"
+    ],
+    "prior_row_refs": [],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "same-row Z,Z,Z,Z,Z,Z (those cols are value-open) plus prior \u2014"
+   },
+   {
+    "col": "FQ",
+    "row": 19,
+    "formula": "=IF(H18>0.03, 1, 0)",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "H"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior-row only (H)"
+   },
+   {
+    "col": "FR",
+    "row": 19,
+    "formula": "=IF(MEDIAN(F14:F18)>1000000, 1, 0)+IF(MAX(G16:G18)>=3, 1, 0)",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "F",
+     "G"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior volume median over 1M and/or prior G \u2265 3"
+   },
+   {
+    "col": "FS",
+    "row": 19,
+    "formula": "=IFERROR(_xlfn.IFS(AND(MIN(#REF!)<0, CP18<0), -2, MIN(CP15:CP18)<=-2, -2, CP18=2, 2, AND(MIN(#REF!)>=0, CP18>=0, MAX(#REF!)>0), 1), 0)",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "CP"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior-row only (CP,CP,CP,CP,CP)"
+   },
+   {
+    "col": "FU",
+    "row": 19,
+    "formula": "=IFERROR(_xlfn.IFS(B18<0.2, -3, MAX(F15:F18)<200000, -3, COUNTIF(#REF!, \">=0.05\")+COUNTIF(#REF!, \"<-0.03\")<2, -3), 0)",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "B",
+     "F"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior-row only (B,F,F)"
+   },
+   {
+    "col": "GD",
+    "row": 19,
+    "formula": "=IF($DN18=1, H18, \"\")",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "DN",
+     "H"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior-row only (DN,H)"
+   },
+   {
+    "col": "GE",
+    "row": 20,
+    "formula": "=IF($DN19=1, MEDIAN(F15:F19), \"\")",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "DN",
+     "F"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior-row only (DN,F,F)"
+   },
+   {
+    "col": "GF",
+    "row": 20,
+    "formula": "=IF($DN19=1, B19, \"\")",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "DN",
+     "B"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior-row only (DN,B)"
+   },
+   {
+    "col": "HF",
+    "row": 18,
+    "formula": "=_xlfn.STDEV.P(B10:B17)",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "B"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior-row only (B,B)"
+   },
+   {
+    "col": "HG",
+    "row": 18,
+    "formula": "=IFERROR(_xlfn.IFS(GU17>0.06, 0, HF18<0.01, 1, COUNTIF(H9:H17, \"<-0.03\")=0, 0, HF18>0.02, 0), 1)",
+    "same_row_refs": [
+     "HF"
+    ],
+    "prior_row_refs": [
+     "GU",
+     "H"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "same-row HF,HF (those cols are value-open) plus prior GU,H,H"
+   },
+   {
+    "col": "HW",
+    "row": 18,
+    "formula": "=IF(AND(GU17<-0.03, GU16<-0.03, CP17=2), 1, 0)",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "GU",
+     "CP"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior-row only (GU,GU,CP)"
+   },
+   {
+    "col": "II",
+    "row": 18,
+    "formula": "=IH17",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "IH"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior-row only (IH)"
+   },
+   {
+    "col": "IR",
+    "row": 10,
+    "formula": "=",
+    "same_row_refs": [],
+    "prior_row_refs": [],
+    "unparsed": true,
+    "value_mine": "open",
+    "plain": "STOCKHISTORY date spill"
+   },
+   {
+    "col": "IT",
+    "row": 10,
+    "formula": "=",
+    "same_row_refs": [],
+    "prior_row_refs": [],
+    "unparsed": true,
+    "value_mine": "open",
+    "plain": "STOCKHISTORY open spill"
+   },
+   {
+    "col": "IY",
+    "row": 10,
+    "formula": "=[1]VIX!IQ10",
+    "same_row_refs": [],
+    "prior_row_refs": [],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "external VIX print (static cache)"
+   },
+   {
+    "col": "IZ",
+    "row": 10,
+    "formula": "=IFERROR(_xlfn.IFS(AND(IY9<>1, H9<-0.03), -1, AND(H9>0, IY9=1), 1), 0)",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "IY",
+     "H"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior H vs prior IY"
+   },
+   {
+    "col": "JB",
+    "row": 18,
+    "formula": "=IF(COUNTIF(H10:H17, \">0.03\")+COUNTIF(H10:H17, \"<-0.03\")>=7, 1, 0)",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "H"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior-row only (H,H,H,H)"
+   },
+   {
+    "col": "JC",
+    "row": 18,
+    "formula": "=IF(COUNTIF(H10:H17, \"<-0.03\")=0, 1, 0)",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "H"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior-row only (H,H)"
+   },
+   {
+    "col": "JD",
+    "row": 18,
+    "formula": "=IFERROR(_xlfn.IFS(HO17=1, 1, HO17=-1, 2, GQ17>=14, 3), 0)",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "HO",
+     "GQ"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior-row only (HO,HO,GQ)"
+   },
+   {
+    "col": "JE",
+    "row": 18,
+    "formula": "=IF(AND(JD18=JD16, JD17<>JD16, COUNTIF(JD16:JD18, \"=0\")=0), 1, 0)",
+    "same_row_refs": [
+     "JD"
+    ],
+    "prior_row_refs": [
+     "JD"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "same-row JD,JD (those cols are value-open) plus prior JD,JD,JD,JD"
+   },
+   {
+    "col": "JF",
+    "row": 18,
+    "formula": "=IF(AND(JE18=1, H17<0, MAX(U16, U17)>0.05), 1, 0)",
+    "same_row_refs": [
+     "JE"
+    ],
+    "prior_row_refs": [
+     "H",
+     "U"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "same-row JE (those cols are value-open) plus prior H,U,U"
+   },
+   {
+    "col": "JL",
+    "row": 18,
+    "formula": "=IF(H17>0, MAX(JJ12:JJ17)+MIN(JK12:JK17), 0)",
+    "same_row_refs": [],
+    "prior_row_refs": [
+     "H",
+     "JJ",
+     "JK"
+    ],
+    "unparsed": false,
+    "value_mine": "open",
+    "plain": "prior-row only (H,JJ,JJ,JK,JK)"
+   }
+  ],
+  "candidates_not_yet_open": [
+   {
+    "col": "AA",
+    "formula": "ES[t] + 1 if N[t\u22121]<0 else 0",
+    "why_not_open_yet": "Daily formula reads same-row ES (value-open) and prior N. Parser leaves it unknown because of _xlfn.IFS \u2014 mined close until a teammate label or a parsed walk proves it. AA[t\u2212k], k\u22651, is fair at the open either way."
+   },
+   {
+    "col": "O",
+    "formula": "composite of prior H/F/N/EL/CP plus same-row DD",
+    "why_not_open_yet": "Fill is timing-tested open. Value reads same-row DD (close/unknown) \u2192 value-close. O[t] as a number is close-entry. O[t\u2212k], k\u22651, is fair at the open."
+   },
+   {
+    "col": "Q",
+    "formula": "rows 3\u20138: IF(G[t]>2.5); row 9+: AVERAGE(prior P)",
+    "why_not_open_yet": "Representative daily formula is prior-P average (open). The first few rows read same-row G (close). Warmup rows are a leak if mined as open; the rest of the tape is fair."
+   }
+  ],
+  "note": "Same-row open is the formula walk, not a teammate label. Do not peek. Unknown \u2192 close."
+ },
  "live_untouched": "flatten_robust",
  "unknown_mined_as": "close",
- "core_score_entry": "close"
+ "core_score_entry": "close",
+ "fair_open": "Upper rows (lag\u22651) of any column are knowable at 9:30. Same-row (lag 0) only if the formula walk is value-open or the fill was timing-tested open. Unknown is not open."
 }

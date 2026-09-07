@@ -142,3 +142,7 @@ Next A–JL region: weekly+lag KEEP 0 · KILL 230 · THIN 0. Letter space exhaus
 ## Same-day multi-letter counts (A–JL)
 
 Same-day multi-letter: KEEP 0 · KILL 32 · THIN 0. A–JL surface exhausted. Light+O untouched. T/BA untouched. See `SAME_DAY.md`.
+
+## Pair+lag mine (open-entry pilot)
+
+Pair+lag open pilot: KEEP 0 · KILL 2237 · THIN 0. Trees skipped_no_pair_keep. Light+O baseline. See `PAIR_LAG.md` / `PAIR_LAG_PLAN.md`.

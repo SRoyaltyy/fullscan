@@ -317,6 +317,7 @@ def build(measure=None):
                 "close" if col in MEAS_FILL_CLOSE else None
             ),
         })
+    same_row = same_row_open_inventory(by_col, g, {r["col"]: r for r in cols})
     return {
         "generated": str(date.today()),
         "n_cols": FULL_COLS,
@@ -325,10 +326,116 @@ def build(measure=None):
         "counts": {k: len(v) for k, v in g.items()},
         "groups": g,
         "columns": cols,
+        "same_row_open": same_row,
         "live_untouched": "flatten_robust",
         "unknown_mined_as": "close",
         "core_score_entry": "close",
+        "fair_open": (
+            "Upper rows (lag≥1) of any column are knowable at 9:30. "
+            "Same-row (lag 0) only if the formula walk is value-open "
+            "or the fill was timing-tested open. Unknown is not open."
+        ),
     }
+
+
+def same_row_open_inventory(by_col, groups, by_rec):
+    """Document same-row formulas the walk treats as open-knowable.
+
+    Excel teammate may label more; this list is the formula walk only.
+    """
+    rows = []
+    for col in groups["value_mine_open"]:
+        recs = by_col.get(col) or []
+        r0, f = representative_formula(recs)
+        refs = refs_of(f) if f else []
+        same, prior = [], []
+        unparsed = refs is None
+        if refs:
+            for dcol, drow, ext in refs:
+                if ext is not None or r0 is None:
+                    continue
+                if drow == r0:
+                    same.append(dcol)
+                elif drow < r0:
+                    prior.append(dcol)
+        rows.append({
+            "col": col,
+            "row": r0,
+            "formula": (f or "")[:180],
+            "same_row_refs": list(dict.fromkeys(same)),
+            "prior_row_refs": list(dict.fromkeys(prior))[:8],
+            "unparsed": unparsed,
+            "value_mine": by_rec[col]["value_mine"],
+            "plain": _plain_open_formula(col, f, same, prior, unparsed),
+        })
+    candidates = [
+        {
+            "col": "AA",
+            "formula": "ES[t] + 1 if N[t−1]<0 else 0",
+            "why_not_open_yet": (
+                "Daily formula reads same-row ES (value-open) and prior N. "
+                "Parser leaves it unknown because of _xlfn.IFS — mined close "
+                "until a teammate label or a parsed walk proves it. "
+                "AA[t−k], k≥1, is fair at the open either way."
+            ),
+        },
+        {
+            "col": "O",
+            "formula": "composite of prior H/F/N/EL/CP plus same-row DD",
+            "why_not_open_yet": (
+                "Fill is timing-tested open. Value reads same-row DD "
+                "(close/unknown) → value-close. O[t] as a number is "
+                "close-entry. O[t−k], k≥1, is fair at the open."
+            ),
+        },
+        {
+            "col": "Q",
+            "formula": "rows 3–8: IF(G[t]>2.5); row 9+: AVERAGE(prior P)",
+            "why_not_open_yet": (
+                "Representative daily formula is prior-P average (open). "
+                "The first few rows read same-row G (close). Warmup rows "
+                "are a leak if mined as open; the rest of the tape is fair."
+            ),
+        },
+    ]
+    return {
+        "n": len(rows),
+        "letters": [r["col"] for r in rows],
+        "formulas": rows,
+        "candidates_not_yet_open": candidates,
+        "note": (
+            "Same-row open is the formula walk, not a teammate label. "
+            "Do not peek. Unknown → close."
+        ),
+    }
+
+
+def _plain_open_formula(col, f, same, prior, unparsed):
+    known = {
+        "A": "STOCKHISTORY date alias (IR)",
+        "C": "open price (IT, or prior IT if today's is an error)",
+        "J": "open-to-open return (C[t] vs C[t−1])",
+        "Q": "average of prior P (after the first few G-reading rows)",
+        "AH": "count of prior H prints ≤ −5%",
+        "FR": "prior volume median over 1M and/or prior G ≥ 3",
+        "ES": "carried ER (prior-day signed move)",
+        "ET": "prior W/X flags",
+        "EU": "carried ET",
+        "EQ": "S or L from prior CP (text)",
+        "IY": "external VIX print (static cache)",
+        "IZ": "prior H vs prior IY",
+        "IR": "STOCKHISTORY date spill",
+        "IT": "STOCKHISTORY open spill",
+    }
+    if col in known:
+        return known[col]
+    if unparsed:
+        return "unparsed daily formula; walk still called it value-open"
+    if same:
+        return f"same-row {','.join(same)} (those cols are value-open) plus prior {','.join(prior[:4]) or '—'}"
+    if prior:
+        return f"prior-row only ({','.join(prior[:6])})"
+    return "no sheet refs (literal, spill, or external)"
 
 
 def _join(xs, n=40):
@@ -384,6 +491,43 @@ def render(inv):
         f"**Fill CLOSE or unknown→close:** {_join(g['fill_mine_close'], 60)}",
         "",
         f"**Value CLOSE or unknown→close:** {_join(g['value_mine_close'], 60)}",
+        "",
+        "## Fair inputs at the 9:30 open",
+        "",
+        inv.get("fair_open") or (
+            "Upper rows (lag≥1) of any column are knowable at 9:30. "
+            "Same-row (lag 0) only if value-open or a timing-tested open fill."
+        ),
+        "",
+        "Standing five-cell light + green O ± AH/FR is the **baseline**, "
+        "not this search space. Highlight ghosts (T/BA, weekly+lag, "
+        "same-day fill counts) stay KILL unless they return as **numeric** "
+        "lags or pairs.",
+        "",
+        "## Same-row open-knowable formulas",
+        "",
+        "Excel teammate may label more. This table is the **formula walk "
+        "only** — no peek. Same-row refs inherit the worse clock. "
+        "Prior-row refs are already known.",
+        "",
+        "| col | what the same-row formula is | same-row refs |",
+        "|---|---|---|",
+    ]
+    for rec in (inv.get("same_row_open") or {}).get("formulas") or []:
+        refs = ",".join(rec.get("same_row_refs") or []) or "— (prior/external only)"
+        L.append(f"| **{rec['col']}** | {rec['plain']} | {refs} |")
+    L += [
+        "",
+        "### Same-row candidates not yet licensed as open",
+        "",
+        "| col | formula shape | why it stays close at lag 0 |",
+        "|---|---|---|",
+    ]
+    for rec in (inv.get("same_row_open") or {}).get("candidates_not_yet_open") or []:
+        L.append(
+            f"| **{rec['col']}** | {rec['formula']} | {rec['why_not_open_yet']} |"
+        )
+    L += [
         "",
         "## Landmine",
         "",

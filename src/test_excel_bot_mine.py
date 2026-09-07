@@ -212,6 +212,12 @@ def test_clock_map_locks_measured_ao():
     md = (ROOT / "excel_bot" / "research" / "CLOCK_MAP.md").read_text()
     assert "open / close / unknown" in md
     assert "D,E,F,H,I" in md
+    assert "Same-row open-knowable formulas" in md
+    assert "Fair inputs at the 9:30 open" in md
+    assert inv.get("same_row_open")
+    assert "AA" not in inv["same_row_open"]["letters"]
+    assert by["AA"]["value_mine"] == "close"
+    assert by["O"]["value_mine"] == "close"
 
 
 def test_all_cols_miners_do_not_wire_live():
@@ -220,7 +226,7 @@ def test_all_cols_miners_do_not_wire_live():
                "harden_hyst_open.py", "mine_color_join.py", "pit_joins.py",
                "mine_unmined.py", "harden_unmined.py", "harden_open_stack.py",
                "harden_close_cluster.py", "harden_close_peers.py",
-               "mine_next_region.py", "mine_same_day.py"):
+               "mine_next_region.py", "mine_same_day.py", "mine_pair_lag.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "sleeve_merge_live" not in src
         assert "LIVE_POLICY" not in src
@@ -1259,10 +1265,69 @@ def test_same_day_report_is_committed():
             assert "BA_" not in name
 
 
+def test_pair_lag_pilot_is_open_and_bounded():
+    from mine_pair_lag import (
+        LAG_ONLY, N_LAG, NOW_NUM, NOW_TEXT, build_atoms, build_pairs,
+    )
+    from classify_clocks import build
+    clocks = build()
+    by = {r["col"]: r for r in clocks["columns"]}
+    atoms = build_atoms(by)
+    pairs = build_pairs(atoms)
+    assert N_LAG == 5
+    assert "AH" not in NOW_NUM and "FR" not in NOW_NUM
+    assert "T" not in LAG_ONLY and "BA" not in LAG_ONLY
+    for a in atoms:
+        if a["lag"] == 0:
+            assert a["col"] in NOW_NUM or a["col"] in NOW_TEXT
+            assert by[a["col"]]["value_mine"] == "open"
+        else:
+            assert a["col"] in LAG_ONLY
+            assert a["lag"] >= 1
+    assert any(p["name"] == "O_l2_lt1__and__ES_l0_eq1" for p in pairs)
+    assert any(p["name"] == "O_l2_lt1__and__AA_l1_eq1" for p in pairs)
+    assert not any("AA_l0_" in p["name"] for p in pairs)
+    src = (ENG / "mine_pair_lag.py").read_text(encoding="utf-8")
+    assert "from flatten" not in src
+    assert "flatten_robust" in src
+
+
+def test_pair_lag_report_is_committed():
+    plan = (ROOT / "excel_bot" / "research" / "PAIR_LAG_PLAN.md").read_text()
+    assert "Plain English" in plan
+    assert "09:30" in plan or "open" in plan.lower()
+    inv = (ROOT / "excel_bot" / "research" / "PAIR_LAG_INVENTORY.md").read_text()
+    assert "Plain English" in inv
+    md = (ROOT / "excel_bot" / "research" / "PAIR_LAG.md").read_text()
+    assert "Plain English" in md
+    assert "Code names (after the English)" in md
+    assert md.index("Plain English") < md.index("Code names (after the English)")
+    assert "KEEP" in md and ("KILL" in md or "THIN" in md)
+    assert "light + green O" in md or "light+O" in md
+    sb = (ROOT / "03_scoreboard" / "EXCEL_BOT_MINE.md").read_text()
+    assert "PASS 376" in sb
+    assert "Pair+lag mine" in sb
+    payload = json.loads(
+        (ROOT / "excel_bot" / "research" / "pair_lag.json").read_text())
+    assert payload["live_untouched"] == "flatten_robust"
+    assert payload["excel_cache_used"] is False
+    assert payload["entry"] == "open"
+    assert "AH/FR" in payload["standing_open"]
+    for r in payload["rows"]:
+        assert r["clock"] == "open"
+        if r.get("keep") == "KEEP":
+            q1 = r.get("q1") or {}
+            assert q1.get("avg_net", 0) > 0
+            assert (r.get("top5_share") or 0) <= 0.25
+            assert (r.get("july_share") or 0) <= 0.40
+            assert "T_green" not in r.get("def", "")
+            assert "BA_" not in r.get("def", "")
+
+
 def test_unmined_miner_does_not_wire_live():
     for fn in ("mine_unmined.py", "harden_unmined.py", "harden_open_stack.py",
                "harden_close_cluster.py", "harden_close_peers.py",
-               "mine_next_region.py", "mine_same_day.py"):
+               "mine_next_region.py", "mine_same_day.py", "mine_pair_lag.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "from flatten" not in src
         assert "sleeve_merge_live" not in src
