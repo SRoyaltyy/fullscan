@@ -78,12 +78,13 @@ def load_dumps(grids: Path, limit=0):
     if limit:
         files = files[:limit]
     frames = []
+    chunk = []
     col_seen = Counter()
     col_num = Counter()
     col_fill = Counter()
     col_text = Counter()
     text_tokens = defaultdict(Counter)
-    for p in files:
+    for i, p in enumerate(files, 1):
         raw = json.loads(p.read_text())
         t = raw["ticker"]
         prev_close = None
@@ -137,7 +138,13 @@ def load_dumps(grids: Path, limit=0):
             prev_close, prev_vol = c, float(rec["volume"])
         if len(recs) < 30:
             continue
-        frames.append(pd.DataFrame.from_records(recs))
+        chunk.append(pd.DataFrame.from_records(recs))
+        if len(chunk) >= 200:
+            frames.append(pd.concat(chunk, ignore_index=True))
+            chunk = []
+            print(f"  loaded {i}/{len(files)}", flush=True)
+    if chunk:
+        frames.append(pd.concat(chunk, ignore_index=True))
     if not frames:
         raise SystemExit(f"no dumps in {grids}")
     df = pd.concat(frames, ignore_index=True)
@@ -726,7 +733,7 @@ def main():
     hold = splits["hold"]
     promoted = []
     standing_jobs = []
-    for name, (mask, clock, let, plain) in gates.items():
+    for i, (name, (mask, clock, let, plain)) in enumerate(gates.items(), 1):
         labels = OPEN_LABELS if clock == "open" else CLOSE_LABELS
         for ycol in labels:
             if name in STANDING:
@@ -736,7 +743,10 @@ def main():
             scr = cheap_screen(mask, y - cost, tick, hold)
             if scr:
                 promoted.append((name, ycol, mask, clock, let, plain, scr))
-    for name, left, right, clock, let, plain in specs:
+        if i % 2000 == 0:
+            print(f"  screened {i}/{len(gates)} promoted={len(promoted)}",
+                  flush=True)
+    for j, (name, left, right, clock, let, plain) in enumerate(specs, 1):
         mask = combo_mask(gates, left, right)
         labels = OPEN_LABELS if clock == "open" else CLOSE_LABELS
         for ycol in labels:
@@ -744,6 +754,9 @@ def main():
             scr = cheap_screen(mask, y - cost, tick, hold)
             if scr:
                 promoted.append((name, ycol, mask.copy(), clock, let, plain, scr))
+        if j % 3000 == 0:
+            print(f"  combo {j}/{len(specs)} promoted={len(promoted)}",
+                  flush=True)
     print(f"  promoted {len(promoted)} + standing {len(standing_jobs)}",
           flush=True)
 
