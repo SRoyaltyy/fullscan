@@ -106,3 +106,7 @@ KEEP 9 · THIN 0 · KILL 113. Open-knowable fills only. PIT joins (prior AB/weat
 ## A–F seed (STOCKHISTORY / Yahoo rows)
 
 Harden used Yahoo/rows `source: rows_cache` grids, not Excel's cached STOCKHISTORY. Tile TODAY is the anchor, not each day. See `AF_SEED_AUDIT.md`.
+
+## Color harden (light + open fill vs light alone)
+
+KEEP 3 recipes · KILL 3. Green O adds +24–45 bp on 3 of 6 lights. Other open colors fail the +20 bp parent bar. No joins in this beat. See `COLOR_HARDEN.md`.

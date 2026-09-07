@@ -757,6 +757,49 @@ def test_harden_loaders_refuse_excel_cached_af():
     assert "load_mine_grid" in harden and "load_mine_grid" in color
 
 
+def test_harden_color_is_color_only_no_joins():
+    from harden_color import is_color_fold, recipe_rows, load_folds, OPEN_LETTERS
+    assert OPEN_LETTERS == "ABCGJKLMO"
+    assert is_color_fold({"family": "hyst_color", "def": "hyst_open_core_e5_x2__O_green"})
+    assert not is_color_fold({"family": "join", "def": "hyst_open_core_e5_x2__fz_volM"})
+    assert not is_color_fold({"def": "hyst_open_core_e5_x2__ab_good"})
+    src = (ENG / "harden_color.py").read_text(encoding="utf-8")
+    assert "from flatten" not in src
+    assert "flatten_robust" in src
+    assert "Finviz" in src  # named only to say it is out of scope
+    raw, parents, folds = load_folds()
+    assert folds
+    assert all("fz_" not in c["def"] and "ab_" not in c["def"] for c in folds)
+    recipes = recipe_rows(folds, parents)
+    assert len(recipes) == 6
+    keeps = [r for r in recipes if r["verdict"] == "KEEP"]
+    assert keeps
+    assert all(r["best_letter"] == "O" for r in keeps)
+
+
+def test_color_harden_report_is_committed():
+    md = (ROOT / "excel_bot" / "research" / "COLOR_HARDEN.md").read_text()
+    assert "light + open fill vs light alone" in md
+    assert "What a color means" not in md or "Question" in md
+    assert md.index("Question") < md.index("`hyst_")
+    assert "green O" in md or "O" in md
+    assert "flatten_robust" in md
+    assert "no Finviz" in md or "out of scope" in md
+    sb = (ROOT / "03_scoreboard" / "EXCEL_BOT_MINE.md").read_text()
+    assert "Color harden" in sb
+    assert "A–O clock cycle" in sb or "first A–JL cut" in sb
+    payload = json.loads(
+        (ROOT / "excel_bot" / "research" / "color_harden.json").read_text())
+    assert payload["live_untouched"] == "flatten_robust"
+    assert payload["excel_cache_used"] is False
+    assert payload["n_keep_recipes"] + payload["n_kill_recipes"] == 6
+    assert payload["open_letters"] == "ABCGJKLMO"
+    for r in payload["recipes"]:
+        if r["verdict"] == "KEEP":
+            assert r["best_vs_parent_pp"] >= 0.20
+            assert r["best_letter"] == "O"
+
+
 def test_af_seed_audit_report_is_committed():
     md = (ROOT / "excel_bot" / "research" / "AF_SEED_AUDIT.md").read_text()
     assert "STOCKHISTORY" in md
