@@ -20,18 +20,18 @@ One Yahoo A–F rebuild builds the **name-day panel**. Models train once across 
 
 | fold | train < | holdout | model | label | holdout pnl | vs book | vs gap | IC | gap IC | verdict | why |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| fold_q1 | 2026-01-01 | 2026-04-01 | lgb | H | +1.22% (n=42468) | +1.21 pp | — | ρ=+0.103 / r=+0.019 | ρ=-0.091 / r=-0.048 | **KILL** | tape_thin,q3_missing,ticker_ghost |
-| fold_q1 | 2026-01-01 | 2026-04-01 | ridge | H | +0.63% (n=42468) | +0.62 pp | — | ρ=+0.089 / r=+0.008 | ρ=-0.091 / r=-0.048 | **KILL** | hold_t,tape_thin,spy_regime,q3_missing,ticker_ghost |
-| fold_q1 | 2026-01-01 | 2026-04-01 | lgb | I | +2.44% (n=42468) | +2.58 pp | — | ρ=+0.361 / r=+0.245 | ρ=+0.361 / r=+0.597 | **KILL** | tape_thin,q3_missing,gap_algebra |
-| fold_q1 | 2026-01-01 | 2026-04-01 | ridge | I | +2.24% (n=42468) | +2.39 pp | — | ρ=+0.340 / r=+0.211 | ρ=+0.361 / r=+0.597 | **KILL** | tape_thin,q3_missing,gap_algebra |
-| fold_q2 | 2026-04-01 | 2026-07-01 | lgb | H | +0.45% (n=43694) | +0.48 pp | — | ρ=+0.095 / r=+0.059 | ρ=-0.094 / r=-0.008 | **KILL** | q3_missing,ticker_ghost |
-| fold_q2 | 2026-04-01 | 2026-07-01 | ridge | H | +0.45% (n=43694) | +0.48 pp | — | ρ=+0.093 / r=+0.047 | ρ=-0.094 / r=-0.008 | **KILL** | disc_t,spy_regime,q3_missing,ticker_ghost |
-| fold_q2 | 2026-04-01 | 2026-07-01 | lgb | I | +3.25% (n=43697) | +3.08 pp | — | ρ=+0.361 / r=+0.167 | ρ=+0.365 / r=+0.905 | **KILL** | q3_missing,gap_algebra |
-| fold_q2 | 2026-04-01 | 2026-07-01 | ridge | I | +3.01% (n=43694) | +2.84 pp | — | ρ=+0.341 / r=+0.125 | ρ=+0.365 / r=+0.905 | **KILL** | q3_missing,gap_algebra |
-| fold_q3 | 2026-07-01 | tape end | lgb | H | +0.02% (n=18646) | +0.24 pp | — | ρ=+0.058 / r=+0.019 | ρ=-0.064 / r=-0.004 | **KILL** | disc_t,hold_t,spy_regime,no_edge_vs_uncond,month_split,ticker_ghost |
-| fold_q3 | 2026-07-01 | tape end | ridge | H | -0.06% (n=18270) | +0.15 pp | — | ρ=+0.035 / r=+0.018 | ρ=-0.064 / r=-0.004 | **KILL** | disc_t,hold_t,hold_sign,tape_split,spy_regime,q3_sign,q3_split,no_edge_vs_uncond,month_split,ticker_ghost,no_edge_vs_book |
-| fold_q3 | 2026-07-01 | tape end | lgb | I | +8.27% (n=18277) | +7.34 pp | — | ρ=+0.422 / r=+0.181 | ρ=+0.426 / r=+0.993 | **KILL** | gap_algebra |
-| fold_q3 | 2026-07-01 | tape end | ridge | I | +8.02% (n=18270) | +7.09 pp | — | ρ=+0.385 / r=+0.074 | ρ=+0.426 / r=+0.993 | **KILL** | gap_algebra |
+| fold_q1 | 2026-01-01 | 2026-04-01 | lgb | H | +1.22% (n=42468) | +1.21 pp | +1.76 pp | ρ=+0.103 / r=+0.019 | ρ=-0.091 / r=-0.048 | **KILL** | tape_thin,q3_missing,ticker_ghost |
+| fold_q1 | 2026-01-01 | 2026-04-01 | ridge | H | +0.63% (n=42468) | +0.62 pp | +1.17 pp | ρ=+0.089 / r=+0.008 | ρ=-0.091 / r=-0.048 | **KILL** | hold_t,tape_thin,spy_regime,q3_missing,ticker_ghost |
+| fold_q1 | 2026-01-01 | 2026-04-01 | lgb | I | +2.44% (n=42468) | +2.58 pp | -0.01 pp | ρ=+0.361 / r=+0.245 | ρ=+0.361 / r=+0.597 | **KILL** | tape_thin,q3_missing,gap_algebra,lose_to_gap |
+| fold_q1 | 2026-01-01 | 2026-04-01 | ridge | I | +2.24% (n=42468) | +2.39 pp | -0.21 pp | ρ=+0.340 / r=+0.211 | ρ=+0.361 / r=+0.597 | **KILL** | tape_thin,q3_missing,gap_algebra,lose_to_gap |
+| fold_q2 | 2026-04-01 | 2026-07-01 | lgb | H | +0.45% (n=43694) | +0.48 pp | +0.87 pp | ρ=+0.095 / r=+0.059 | ρ=-0.094 / r=-0.008 | **KILL** | q3_missing,ticker_ghost |
+| fold_q2 | 2026-04-01 | 2026-07-01 | ridge | H | +0.45% (n=43694) | +0.48 pp | +0.86 pp | ρ=+0.093 / r=+0.047 | ρ=-0.094 / r=-0.008 | **KILL** | disc_t,spy_regime,q3_missing,ticker_ghost |
+| fold_q2 | 2026-04-01 | 2026-07-01 | lgb | I | +3.25% (n=43697) | +3.08 pp | -0.02 pp | ρ=+0.361 / r=+0.167 | ρ=+0.365 / r=+0.905 | **KILL** | q3_missing,gap_algebra,lose_to_gap |
+| fold_q2 | 2026-04-01 | 2026-07-01 | ridge | I | +3.01% (n=43694) | +2.84 pp | -0.26 pp | ρ=+0.341 / r=+0.125 | ρ=+0.365 / r=+0.905 | **KILL** | q3_missing,gap_algebra,lose_to_gap |
+| fold_q3 | 2026-07-01 | tape end | lgb | H | +0.02% (n=18646) | +0.24 pp | +0.44 pp | ρ=+0.058 / r=+0.019 | ρ=-0.064 / r=-0.004 | **KILL** | disc_t,hold_t,spy_regime,no_edge_vs_uncond,month_split,ticker_ghost |
+| fold_q3 | 2026-07-01 | tape end | ridge | H | -0.06% (n=18270) | +0.15 pp | +0.36 pp | ρ=+0.035 / r=+0.018 | ρ=-0.064 / r=-0.004 | **KILL** | disc_t,hold_t,hold_sign,tape_split,spy_regime,q3_sign,q3_split,no_edge_vs_uncond,month_split,ticker_ghost,no_edge_vs_book |
+| fold_q3 | 2026-07-01 | tape end | lgb | I | +8.27% (n=18277) | +7.34 pp | -0.03 pp | ρ=+0.422 / r=+0.181 | ρ=+0.426 / r=+0.993 | **KILL** | gap_algebra,lose_to_gap |
+| fold_q3 | 2026-07-01 | tape end | ridge | I | +8.02% (n=18270) | +7.09 pp | -0.28 pp | ρ=+0.385 / r=+0.074 | ρ=+0.426 / r=+0.993 | **KILL** | gap_algebra,lose_to_gap |
 
 ### What was scored
 
@@ -55,10 +55,10 @@ Models: ordinary least squares, ridge (α by train CV), LightGBM (80 trees, dept
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | lgb | H | +0.45% (n=43694) | +0.48 pp | ρ=+0.095 / r=+0.059 | ρ=-0.094 / r=-0.008 | +0.89% (n=90472) | 39% | 0% | +1.51% (n=51402) / +0.01% (n=60102) | **KILL** | q3_missing,ticker_ghost |
 | ridge | H | +0.45% (n=43694) | +0.48 pp | ρ=+0.093 / r=+0.047 | ρ=-0.094 / r=-0.008 | +0.78% (n=90454) | 43% | 0% | +1.36% (n=55229) / -0.07% (n=55815) | **KILL** | disc_t,spy_regime,q3_missing,ticker_ghost |
-| lgb | I | +3.25% (n=43697) | +3.08 pp | ρ=+0.361 / r=+0.167 | ρ=+0.365 / r=+0.905 | +2.15% (n=90667) | 6% | 0% | +2.94% (n=82579) / +1.38% (n=36414) | **KILL** | q3_missing,gap_algebra |
-| ridge | I | +3.01% (n=43694) | +2.84 pp | ρ=+0.341 / r=+0.125 | ρ=+0.365 / r=+0.905 | +1.95% (n=90454) | 7% | 0% | +2.76% (n=82024) / +1.15% (n=36538) | **KILL** | q3_missing,gap_algebra |
-| lgb | I_sum | +3.25% (n=43697) | +3.08 pp | ρ=+0.361 / r=+0.167 | ρ=+0.365 / r=+0.905 | +2.15% (n=90667) | 6% | 0% | +2.94% (n=82579) / +1.38% (n=36414) | **KILL** | q3_missing,gap_algebra |
-| ridge | I_sum | +3.01% (n=43694) | +2.84 pp | ρ=+0.341 / r=+0.125 | ρ=+0.365 / r=+0.905 | +1.95% (n=90454) | 7% | 0% | +2.76% (n=82024) / +1.15% (n=36538) | **KILL** | q3_missing,gap_algebra |
+| lgb | I | +3.25% (n=43697) | +3.08 pp | ρ=+0.361 / r=+0.167 | ρ=+0.365 / r=+0.905 | +2.15% (n=90667) | 6% | 0% | +2.94% (n=82579) / +1.38% (n=36414) | **KILL** | q3_missing,gap_algebra,lose_to_gap |
+| ridge | I | +3.01% (n=43694) | +2.84 pp | ρ=+0.341 / r=+0.125 | ρ=+0.365 / r=+0.905 | +1.95% (n=90454) | 7% | 0% | +2.76% (n=82024) / +1.15% (n=36538) | **KILL** | q3_missing,gap_algebra,lose_to_gap |
+| lgb | I_sum | +3.25% (n=43697) | +3.08 pp | ρ=+0.361 / r=+0.167 | ρ=+0.365 / r=+0.905 | +2.15% (n=90667) | 6% | 0% | +2.94% (n=82579) / +1.38% (n=36414) | **KILL** | q3_missing,gap_algebra,lose_to_gap |
+| ridge | I_sum | +3.01% (n=43694) | +2.84 pp | ρ=+0.341 / r=+0.125 | ρ=+0.365 / r=+0.905 | +1.95% (n=90454) | 7% | 0% | +2.76% (n=82024) / +1.15% (n=36538) | **KILL** | q3_missing,gap_algebra,lose_to_gap |
 
 Code names (after the English): `ml_open_lgb_H_1d`, `ml_open_ridge_H_1d`, `ml_open_lgb_I_1d`, `ml_open_ridge_I_1d`, `ml_open_lgb_I_sum_1d`, `ml_open_ridge_I_sum_1d`.
 
@@ -146,12 +146,12 @@ Manager lock: gap-like open IC is **not** KEEP until holdout beats a simple over
 
 | fold | label | gap holdout | best ML holdout | ML − gap | gap IC | best ML IC | lock |
 |---|---|---|---|---|---|---|---|
-| fold_q1 | H | — | +1.22% (n=42468) | — | -0.091 | +0.103 | **lose_to_gap** |
-| fold_q1 | I | — | +2.44% (n=42468) | — | +0.361 | +0.361 | **lose_to_gap** |
-| fold_q2 | H | — | +0.45% (n=43694) | — | -0.094 | +0.095 | **lose_to_gap** |
-| fold_q2 | I | — | +3.25% (n=43697) | — | +0.365 | +0.361 | **lose_to_gap** |
-| fold_q3 | H | — | +0.02% (n=18646) | — | -0.064 | +0.058 | **lose_to_gap** |
-| fold_q3 | I | — | +8.27% (n=18277) | — | +0.426 | +0.422 | **lose_to_gap** |
+| fold_q1 | H | -0.54% (n=42469) | +1.22% (n=42468) | +1.76 pp | -0.091 | +0.103 | **beats gap** |
+| fold_q1 | I | +2.45% (n=42469) | +2.44% (n=42468) | -0.01 pp | +0.361 | +0.361 | **lose_to_gap** |
+| fold_q2 | H | -0.41% (n=43696) | +0.45% (n=43694) | +0.87 pp | -0.094 | +0.095 | **beats gap** |
+| fold_q2 | I | +3.27% (n=43696) | +3.25% (n=43697) | -0.02 pp | +0.365 | +0.361 | **lose_to_gap** |
+| fold_q3 | H | -0.42% (n=18270) | +0.02% (n=18646) | +0.44 pp | -0.064 | +0.058 | **beats gap** |
+| fold_q3 | I | +8.31% (n=18270) | +8.27% (n=18277) | -0.03 pp | +0.426 | +0.422 | **lose_to_gap** |
 
 ### Coverage (A–JL, not a 44-col subset)
 

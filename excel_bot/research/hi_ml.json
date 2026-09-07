@@ -11068,7 +11068,49 @@
         "pearson": -0.048109766627614736,
         "kind": "overnight\u2192H"
       },
-      "plain": "ridge on open-entry full-sheet DAG \u2192 H 1d; long top 20%"
+      "plain": "ridge on open-entry full-sheet DAG \u2192 H 1d; long top 20%",
+      "gap_recipe": {
+        "def": "gap_open_H_1d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 42469,
+          "avg_net": -0.005407901429858359,
+          "t": -13.733421179282614,
+          "win": 0.4124184699427818
+        },
+        "discovery": {
+          "n": 47987,
+          "avg_net": -0.008815508611823659,
+          "t": -27.744273386168594,
+          "win": 0.37347614979056826
+        },
+        "edge_vs_book_hold": -0.005528871454966443,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "hold_sign",
+          "lottery_day",
+          "tape_thin",
+          "spy_regime",
+          "q3_missing",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_split",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.09100563063501124,
+          "pearson": -0.048109766627614736,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": -0.03636075446022535,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": 0.011717409106142787,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_lgb_H_1d",
@@ -11216,7 +11258,49 @@
         "pearson": -0.048109766627614736,
         "kind": "overnight\u2192H"
       },
-      "plain": "lgb on open-entry full-sheet DAG \u2192 H 1d; long top 20%"
+      "plain": "lgb on open-entry full-sheet DAG \u2192 H 1d; long top 20%",
+      "gap_recipe": {
+        "def": "gap_open_H_1d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 42469,
+          "avg_net": -0.005407901429858359,
+          "t": -13.733421179282614,
+          "win": 0.4124184699427818
+        },
+        "discovery": {
+          "n": 47987,
+          "avg_net": -0.008815508611823659,
+          "t": -27.744273386168594,
+          "win": 0.37347614979056826
+        },
+        "edge_vs_book_hold": -0.005528871454966443,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "hold_sign",
+          "lottery_day",
+          "tape_thin",
+          "spy_regime",
+          "q3_missing",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_split",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.09100563063501124,
+          "pearson": -0.048109766627614736,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": -0.03636075446022535,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": 0.01758518530552098,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_ridge_I_1d",
@@ -11279,7 +11363,8 @@
       "fail_reasons": [
         "tape_thin",
         "q3_missing",
-        "gap_algebra"
+        "gap_algebra",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "I",
@@ -11364,7 +11449,38 @@
         "pearson": 0.5970859668086538,
         "kind": "overnight\u2192label"
       },
-      "plain": "ridge on open-entry full-sheet DAG \u2192 I 1d; long top 20%"
+      "plain": "ridge on open-entry full-sheet DAG \u2192 I 1d; long top 20%",
+      "gap_recipe": {
+        "def": "gap_open_I_1d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 42469,
+          "avg_net": 0.02448546236779644,
+          "t": 30.145962410491226,
+          "win": 0.6699239445242412
+        },
+        "discovery": {
+          "n": 47987,
+          "avg_net": 0.018300174113053905,
+          "t": 36.14007766593917,
+          "win": 0.6260028757788568
+        },
+        "edge_vs_book_hold": 0.02596938052277654,
+        "fail_reasons": [
+          "tape_thin",
+          "q3_missing"
+        ],
+        "ic": {
+          "spearman": 0.36065011092084387,
+          "pearson": 0.5970859668086538,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 0.03720856900155075,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": -0.0020627914525368565,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_lgb_I_1d",
@@ -11427,7 +11543,8 @@
       "fail_reasons": [
         "tape_thin",
         "q3_missing",
-        "gap_algebra"
+        "gap_algebra",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "I",
@@ -11512,7 +11629,38 @@
         "pearson": 0.5970859668086538,
         "kind": "overnight\u2192label"
       },
-      "plain": "lgb on open-entry full-sheet DAG \u2192 I 1d; long top 20%"
+      "plain": "lgb on open-entry full-sheet DAG \u2192 I 1d; long top 20%",
+      "gap_recipe": {
+        "def": "gap_open_I_1d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 42469,
+          "avg_net": 0.02448546236779644,
+          "t": 30.145962410491226,
+          "win": 0.6699239445242412
+        },
+        "discovery": {
+          "n": 47987,
+          "avg_net": 0.018300174113053905,
+          "t": 36.14007766593917,
+          "win": 0.6260028757788568
+        },
+        "edge_vs_book_hold": 0.02596938052277654,
+        "fail_reasons": [
+          "tape_thin",
+          "q3_missing"
+        ],
+        "ic": {
+          "spearman": 0.36065011092084387,
+          "pearson": 0.5970859668086538,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 0.03720856900155075,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": -0.0001254937843988696,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_ridge_I_sum_1d",
@@ -11575,7 +11723,8 @@
       "fail_reasons": [
         "tape_thin",
         "q3_missing",
-        "gap_algebra"
+        "gap_algebra",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "I_sum",
@@ -11660,7 +11809,38 @@
         "pearson": 0.5970859668086538,
         "kind": "overnight\u2192label"
       },
-      "plain": "ridge on open-entry full-sheet DAG \u2192 I_sum 1d; long top 20%"
+      "plain": "ridge on open-entry full-sheet DAG \u2192 I_sum 1d; long top 20%",
+      "gap_recipe": {
+        "def": "gap_open_I_sum_1d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 42469,
+          "avg_net": 0.02448546236779648,
+          "t": 30.14596241049128,
+          "win": 0.6699239445242412
+        },
+        "discovery": {
+          "n": 47987,
+          "avg_net": 0.01830017411305395,
+          "t": 36.140077665939266,
+          "win": 0.6260028757788568
+        },
+        "edge_vs_book_hold": 0.025969380522776555,
+        "fail_reasons": [
+          "tape_thin",
+          "q3_missing"
+        ],
+        "ic": {
+          "spearman": 0.36065011092084387,
+          "pearson": 0.5970859668086538,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 0.03720856900155075,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": -0.00206279145253686,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_lgb_I_sum_1d",
@@ -11723,7 +11903,8 @@
       "fail_reasons": [
         "tape_thin",
         "q3_missing",
-        "gap_algebra"
+        "gap_algebra",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "I_sum",
@@ -11808,7 +11989,38 @@
         "pearson": 0.5970859668086538,
         "kind": "overnight\u2192label"
       },
-      "plain": "lgb on open-entry full-sheet DAG \u2192 I_sum 1d; long top 20%"
+      "plain": "lgb on open-entry full-sheet DAG \u2192 I_sum 1d; long top 20%",
+      "gap_recipe": {
+        "def": "gap_open_I_sum_1d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 42469,
+          "avg_net": 0.02448546236779648,
+          "t": 30.14596241049128,
+          "win": 0.6699239445242412
+        },
+        "discovery": {
+          "n": 47987,
+          "avg_net": 0.01830017411305395,
+          "t": 36.140077665939266,
+          "win": 0.6260028757788568
+        },
+        "edge_vs_book_hold": 0.025969380522776555,
+        "fail_reasons": [
+          "tape_thin",
+          "q3_missing"
+        ],
+        "ic": {
+          "spearman": 0.36065011092084387,
+          "pearson": 0.5970859668086538,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 0.03720856900155075,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": -0.00012549378439886266,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_ridge_H_1d",
@@ -11962,7 +12174,49 @@
         "pearson": -0.008228290572491219,
         "kind": "overnight\u2192H"
       },
-      "plain": "ridge on open-entry full-sheet DAG \u2192 H 1d; long top 20%"
+      "plain": "ridge on open-entry full-sheet DAG \u2192 H 1d; long top 20%",
+      "gap_recipe": {
+        "def": "gap_open_H_1d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 43696,
+          "avg_net": -0.0041398427436221226,
+          "t": -4.733062424511164,
+          "win": 0.41415690223361407
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": -0.007153474161784392,
+          "t": -28.572989255949466,
+          "win": 0.3930837773896124
+        },
+        "edge_vs_book_hold": -0.003840733301390553,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "hold_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_missing",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_split",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.09386312847138518,
+          "pearson": -0.008228290572491219,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": -0.06818912257580824,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": 0.00861737904586033,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_lgb_H_1d",
@@ -12114,7 +12368,49 @@
         "pearson": -0.008228290572491219,
         "kind": "overnight\u2192H"
       },
-      "plain": "lgb on open-entry full-sheet DAG \u2192 H 1d; long top 20%"
+      "plain": "lgb on open-entry full-sheet DAG \u2192 H 1d; long top 20%",
+      "gap_recipe": {
+        "def": "gap_open_H_1d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 43696,
+          "avg_net": -0.0041398427436221226,
+          "t": -4.733062424511164,
+          "win": 0.41415690223361407
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": -0.007153474161784392,
+          "t": -28.572989255949466,
+          "win": 0.3930837773896124
+        },
+        "edge_vs_book_hold": -0.003840733301390553,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "hold_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_missing",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_split",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.09386312847138518,
+          "pearson": -0.008228290572491219,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": -0.06818912257580824,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": 0.008671319702818345,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_ridge_I_1d",
@@ -12181,7 +12477,8 @@
       "verdict": "KILL",
       "fail_reasons": [
         "q3_missing",
-        "gap_algebra"
+        "gap_algebra",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "I",
@@ -12266,7 +12563,37 @@
         "pearson": 0.905389810547225,
         "kind": "overnight\u2192label"
       },
-      "plain": "ridge on open-entry full-sheet DAG \u2192 I 1d; long top 20%"
+      "plain": "ridge on open-entry full-sheet DAG \u2192 I 1d; long top 20%",
+      "gap_recipe": {
+        "def": "gap_open_I_1d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 43696,
+          "avg_net": 0.03270152491845262,
+          "t": 12.795206009636994,
+          "win": 0.6960820212376418
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": 0.02128732246044189,
+          "t": 45.622393644829316,
+          "win": 0.6474561655648174
+        },
+        "edge_vs_book_hold": 0.031004596358045422,
+        "fail_reasons": [
+          "q3_missing"
+        ],
+        "ic": {
+          "spearman": 0.36466489631373705,
+          "pearson": 0.905389810547225,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 0.06214724790566865,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": -0.002625492292916875,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_lgb_I_1d",
@@ -12333,7 +12660,8 @@
       "verdict": "KILL",
       "fail_reasons": [
         "q3_missing",
-        "gap_algebra"
+        "gap_algebra",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "I",
@@ -12418,7 +12746,37 @@
         "pearson": 0.905389810547225,
         "kind": "overnight\u2192label"
       },
-      "plain": "lgb on open-entry full-sheet DAG \u2192 I 1d; long top 20%"
+      "plain": "lgb on open-entry full-sheet DAG \u2192 I 1d; long top 20%",
+      "gap_recipe": {
+        "def": "gap_open_I_1d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 43696,
+          "avg_net": 0.03270152491845262,
+          "t": 12.795206009636994,
+          "win": 0.6960820212376418
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": 0.02128732246044189,
+          "t": 45.622393644829316,
+          "win": 0.6474561655648174
+        },
+        "edge_vs_book_hold": 0.031004596358045422,
+        "fail_reasons": [
+          "q3_missing"
+        ],
+        "ic": {
+          "spearman": 0.36466489631373705,
+          "pearson": 0.905389810547225,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 0.06214724790566865,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": -0.00024198742366852294,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_ridge_I_sum_1d",
@@ -12485,7 +12843,8 @@
       "verdict": "KILL",
       "fail_reasons": [
         "q3_missing",
-        "gap_algebra"
+        "gap_algebra",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "I_sum",
@@ -12570,7 +12929,37 @@
         "pearson": 0.905389810547225,
         "kind": "overnight\u2192label"
       },
-      "plain": "ridge on open-entry full-sheet DAG \u2192 I_sum 1d; long top 20%"
+      "plain": "ridge on open-entry full-sheet DAG \u2192 I_sum 1d; long top 20%",
+      "gap_recipe": {
+        "def": "gap_open_I_sum_1d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 43696,
+          "avg_net": 0.032701524918452664,
+          "t": 12.795206009637011,
+          "win": 0.6960820212376418
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": 0.021287322460441942,
+          "t": 45.62239364482943,
+          "win": 0.6474561655648174
+        },
+        "edge_vs_book_hold": 0.031004596358045436,
+        "fail_reasons": [
+          "q3_missing"
+        ],
+        "ic": {
+          "spearman": 0.36466489631373705,
+          "pearson": 0.905389810547225,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 0.062147247905668654,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": -0.0026254922929168853,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_lgb_I_sum_1d",
@@ -12637,7 +13026,8 @@
       "verdict": "KILL",
       "fail_reasons": [
         "q3_missing",
-        "gap_algebra"
+        "gap_algebra",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "I_sum",
@@ -12722,7 +13112,37 @@
         "pearson": 0.905389810547225,
         "kind": "overnight\u2192label"
       },
-      "plain": "lgb on open-entry full-sheet DAG \u2192 I_sum 1d; long top 20%"
+      "plain": "lgb on open-entry full-sheet DAG \u2192 I_sum 1d; long top 20%",
+      "gap_recipe": {
+        "def": "gap_open_I_sum_1d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 43696,
+          "avg_net": 0.032701524918452664,
+          "t": 12.795206009637011,
+          "win": 0.6960820212376418
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": 0.021287322460441942,
+          "t": 45.62239364482943,
+          "win": 0.6474561655648174
+        },
+        "edge_vs_book_hold": 0.031004596358045436,
+        "fail_reasons": [
+          "q3_missing"
+        ],
+        "ic": {
+          "spearman": 0.36466489631373705,
+          "pearson": 0.905389810547225,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 0.062147247905668654,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": -0.00024198742366853682,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_ridge_H_1d",
@@ -12888,7 +13308,49 @@
         "pearson": -0.004148742117389271,
         "kind": "overnight\u2192H"
       },
-      "plain": "ridge on open-entry full-sheet DAG \u2192 H 1d; long top 20%"
+      "plain": "ridge on open-entry full-sheet DAG \u2192 H 1d; long top 20%",
+      "gap_recipe": {
+        "def": "gap_open_H_1d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 18270,
+          "avg_net": -0.0042239128776700744,
+          "t": -6.870419825837985,
+          "win": 0.42698412698412697
+        },
+        "discovery": {
+          "n": 134166,
+          "avg_net": -0.006144583049852535,
+          "t": -18.55803296422574,
+          "win": 0.4008243519222456
+        },
+        "edge_vs_book_hold": -0.0020633679206248203,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "hold_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_sign",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_split",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.06360289462053,
+          "pearson": -0.004148742117389271,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": -0.062144109097052695,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": 0.003605652133222871,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_lgb_H_1d",
@@ -13049,7 +13511,49 @@
         "pearson": -0.004148742117389271,
         "kind": "overnight\u2192H"
       },
-      "plain": "lgb on open-entry full-sheet DAG \u2192 H 1d; long top 20%"
+      "plain": "lgb on open-entry full-sheet DAG \u2192 H 1d; long top 20%",
+      "gap_recipe": {
+        "def": "gap_open_H_1d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 18270,
+          "avg_net": -0.0042239128776700744,
+          "t": -6.870419825837985,
+          "win": 0.42698412698412697
+        },
+        "discovery": {
+          "n": 134166,
+          "avg_net": -0.006144583049852535,
+          "t": -18.55803296422574,
+          "win": 0.4008243519222456
+        },
+        "edge_vs_book_hold": -0.0020633679206248203,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "hold_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_sign",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_split",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.06360289462053,
+          "pearson": -0.004148742117389271,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": -0.062144109097052695,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": 0.004440174478313368,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_ridge_I_1d",
@@ -13120,7 +13624,8 @@
       "lottery_n_days": 221,
       "verdict": "KILL",
       "fail_reasons": [
-        "gap_algebra"
+        "gap_algebra",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "I",
@@ -13205,7 +13710,35 @@
         "pearson": 0.9927686923623689,
         "kind": "overnight\u2192label"
       },
-      "plain": "ridge on open-entry full-sheet DAG \u2192 I 1d; long top 20%"
+      "plain": "ridge on open-entry full-sheet DAG \u2192 I 1d; long top 20%",
+      "gap_recipe": {
+        "def": "gap_open_I_1d",
+        "keep": "KEEP",
+        "verdict": "KEEP",
+        "holdout": {
+          "n": 18270,
+          "avg_net": 0.08305104845006629,
+          "t": 4.159743406097742,
+          "win": 0.7134099616858237
+        },
+        "discovery": {
+          "n": 134166,
+          "avg_net": 0.025054321875937764,
+          "t": 28.153180406798594,
+          "win": 0.6645946066812755
+        },
+        "edge_vs_book_hold": 0.07370719435195422,
+        "fail_reasons": [],
+        "ic": {
+          "spearman": 0.4256938895947102,
+          "pearson": 0.9927686923623689,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 0.15503892287523116,
+        "july_share": 0.1353370736409208
+      },
+      "edge_vs_gap_hold": -0.0028333720648763966,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_lgb_I_1d",
@@ -13276,7 +13809,8 @@
       "lottery_n_days": 221,
       "verdict": "KILL",
       "fail_reasons": [
-        "gap_algebra"
+        "gap_algebra",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "I",
@@ -13361,7 +13895,35 @@
         "pearson": 0.9927686923623689,
         "kind": "overnight\u2192label"
       },
-      "plain": "lgb on open-entry full-sheet DAG \u2192 I 1d; long top 20%"
+      "plain": "lgb on open-entry full-sheet DAG \u2192 I 1d; long top 20%",
+      "gap_recipe": {
+        "def": "gap_open_I_1d",
+        "keep": "KEEP",
+        "verdict": "KEEP",
+        "holdout": {
+          "n": 18270,
+          "avg_net": 0.08305104845006629,
+          "t": 4.159743406097742,
+          "win": 0.7134099616858237
+        },
+        "discovery": {
+          "n": 134166,
+          "avg_net": 0.025054321875937764,
+          "t": 28.153180406798594,
+          "win": 0.6645946066812755
+        },
+        "edge_vs_book_hold": 0.07370719435195422,
+        "fail_reasons": [],
+        "ic": {
+          "spearman": 0.4256938895947102,
+          "pearson": 0.9927686923623689,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 0.15503892287523116,
+        "july_share": 0.1353370736409208
+      },
+      "edge_vs_gap_hold": -0.0003244040464343151,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_ridge_I_sum_1d",
@@ -13432,7 +13994,8 @@
       "lottery_n_days": 221,
       "verdict": "KILL",
       "fail_reasons": [
-        "gap_algebra"
+        "gap_algebra",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "I_sum",
@@ -13517,7 +14080,37 @@
         "pearson": 0.9927686923623689,
         "kind": "overnight\u2192label"
       },
-      "plain": "ridge on open-entry full-sheet DAG \u2192 I_sum 1d; long top 20%"
+      "plain": "ridge on open-entry full-sheet DAG \u2192 I_sum 1d; long top 20%",
+      "gap_recipe": {
+        "def": "gap_open_I_sum_1d",
+        "keep": "KEEP",
+        "verdict": "KEEP",
+        "holdout": {
+          "n": 18270,
+          "avg_net": 0.08305104845006635,
+          "t": 4.1597434060977445,
+          "win": 0.7134099616858237
+        },
+        "discovery": {
+          "n": 134166,
+          "avg_net": 0.025054321875937816,
+          "t": 28.15318040679865,
+          "win": 0.6645946066812755
+        },
+        "edge_vs_book_hold": 0.07370719435195425,
+        "fail_reasons": [
+          "gap_algebra"
+        ],
+        "ic": {
+          "spearman": 0.4256938895947102,
+          "pearson": 0.9927686923623689,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 0.1550389228752312,
+        "july_share": 0.13533707364092074
+      },
+      "edge_vs_gap_hold": -0.0028333720648764243,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_lgb_I_sum_1d",
@@ -13588,7 +14181,8 @@
       "lottery_n_days": 221,
       "verdict": "KILL",
       "fail_reasons": [
-        "gap_algebra"
+        "gap_algebra",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "I_sum",
@@ -13673,7 +14267,37 @@
         "pearson": 0.9927686923623689,
         "kind": "overnight\u2192label"
       },
-      "plain": "lgb on open-entry full-sheet DAG \u2192 I_sum 1d; long top 20%"
+      "plain": "lgb on open-entry full-sheet DAG \u2192 I_sum 1d; long top 20%",
+      "gap_recipe": {
+        "def": "gap_open_I_sum_1d",
+        "keep": "KEEP",
+        "verdict": "KEEP",
+        "holdout": {
+          "n": 18270,
+          "avg_net": 0.08305104845006635,
+          "t": 4.1597434060977445,
+          "win": 0.7134099616858237
+        },
+        "discovery": {
+          "n": 134166,
+          "avg_net": 0.025054321875937816,
+          "t": 28.15318040679865,
+          "win": 0.6645946066812755
+        },
+        "edge_vs_book_hold": 0.07370719435195425,
+        "fail_reasons": [
+          "gap_algebra"
+        ],
+        "ic": {
+          "spearman": 0.4256938895947102,
+          "pearson": 0.9927686923623689,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 0.1550389228752312,
+        "july_share": 0.13533707364092074
+      },
+      "edge_vs_gap_hold": -0.00032440404643432896,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_close_ridge_H_1d",
@@ -16490,7 +17114,8 @@
         "no_edge_vs_uncond",
         "month_split",
         "ticker_ghost",
-        "no_edge_vs_book"
+        "no_edge_vs_book",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "H",
@@ -16573,7 +17198,49 @@
         "kind": "overnight\u2192H"
       },
       "plain": "linear on open-entry full-sheet DAG \u2192 H 2d; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_H_2d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": -0.0007784343598606574,
+          "t": -2.862044601295977,
+          "win": 0.4624372609460484
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": -0.003625199147209603,
+          "t": -8.748646535766277,
+          "win": 0.43914033652464235
+        },
+        "edge_vs_book_hold": 6.224326987259738e-05,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "hold_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_sign",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_split",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.007265027597307334,
+          "pearson": 0.0033110156831006408,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": -0.12051799124459552,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": 0.00029727876680961173,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_ridge_H_2d",
@@ -16654,7 +17321,8 @@
         "no_edge_vs_uncond",
         "month_split",
         "ticker_ghost",
-        "no_edge_vs_book"
+        "no_edge_vs_book",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "H",
@@ -16737,7 +17405,49 @@
         "kind": "overnight\u2192H"
       },
       "plain": "ridge on open-entry full-sheet DAG \u2192 H 2d; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_H_2d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": -0.0007784343598606574,
+          "t": -2.862044601295977,
+          "win": 0.4624372609460484
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": -0.003625199147209603,
+          "t": -8.748646535766277,
+          "win": 0.43914033652464235
+        },
+        "edge_vs_book_hold": 6.224326987259738e-05,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "hold_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_sign",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_split",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.007265027597307334,
+          "pearson": 0.0033110156831006408,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": -0.12051799124459552,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": 0.0005388073749651613,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_lgb_H_2d",
@@ -16817,7 +17527,8 @@
         "no_edge_vs_uncond",
         "month_split",
         "ticker_ghost",
-        "no_edge_vs_book"
+        "no_edge_vs_book",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "H",
@@ -16900,7 +17611,49 @@
         "kind": "overnight\u2192H"
       },
       "plain": "lgb on open-entry full-sheet DAG \u2192 H 2d; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_H_2d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": -0.0007784343598606574,
+          "t": -2.862044601295977,
+          "win": 0.4624372609460484
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": -0.003625199147209603,
+          "t": -8.748646535766277,
+          "win": 0.43914033652464235
+        },
+        "edge_vs_book_hold": 6.224326987259738e-05,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "hold_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_sign",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_split",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.007265027597307334,
+          "pearson": 0.0033110156831006408,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": -0.12051799124459552,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": 0.0004937568348776924,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_linear_H_3d",
@@ -16981,7 +17734,8 @@
         "no_edge_vs_uncond",
         "month_split",
         "ticker_ghost",
-        "no_edge_vs_book"
+        "no_edge_vs_book",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "H",
@@ -17064,7 +17818,49 @@
         "kind": "overnight\u2192H"
       },
       "plain": "linear on open-entry full-sheet DAG \u2192 H 3d; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_H_3d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": -0.002739031261726576,
+          "t": -11.231407173453272,
+          "win": 0.43204815777157335
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": -0.003103938425512773,
+          "t": -16.297876628337892,
+          "win": 0.4407544166095474
+        },
+        "edge_vs_book_hold": -0.0016369691048159615,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "hold_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_sign",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_split",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.02746653767912147,
+          "pearson": -0.002353172071427157,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": -0.028767311471785528,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": 0.0019502305372969095,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_ridge_H_3d",
@@ -17228,7 +18024,49 @@
         "kind": "overnight\u2192H"
       },
       "plain": "ridge on open-entry full-sheet DAG \u2192 H 3d; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_H_3d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": -0.002739031261726576,
+          "t": -11.231407173453272,
+          "win": 0.43204815777157335
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": -0.003103938425512773,
+          "t": -16.297876628337892,
+          "win": 0.4407544166095474
+        },
+        "edge_vs_book_hold": -0.0016369691048159615,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "hold_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_sign",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_split",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.02746653767912147,
+          "pearson": -0.002353172071427157,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": -0.028767311471785528,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": 0.0021631510201784543,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_lgb_H_3d",
@@ -17309,7 +18147,8 @@
         "no_edge_vs_uncond",
         "month_split",
         "no_edge_vs_book",
-        "no_edge_vs_book_disc"
+        "no_edge_vs_book_disc",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "H",
@@ -17392,7 +18231,49 @@
         "kind": "overnight\u2192H"
       },
       "plain": "lgb on open-entry full-sheet DAG \u2192 H 3d; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_H_3d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": -0.002739031261726576,
+          "t": -11.231407173453272,
+          "win": 0.43204815777157335
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": -0.003103938425512773,
+          "t": -16.297876628337892,
+          "win": 0.4407544166095474
+        },
+        "edge_vs_book_hold": -0.0016369691048159615,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "hold_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_sign",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_split",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.02746653767912147,
+          "pearson": -0.002353172071427157,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": -0.028767311471785528,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": 0.0017849033791010717,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_linear_H_1w",
@@ -17557,7 +18438,46 @@
         "kind": "overnight\u2192H"
       },
       "plain": "linear on open-entry full-sheet DAG \u2192 H 1w; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_H_1w",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": -0.002772004921474154,
+          "t": -11.377034735532073,
+          "win": 0.4359859916401724
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": 0.000785030222179722,
+          "t": 0.2849897356289195,
+          "win": 0.4440046874654521
+        },
+        "edge_vs_book_hold": -0.001666775825632027,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "hold_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_sign",
+          "no_edge_vs_uncond",
+          "month_split",
+          "no_edge_vs_book"
+        ],
+        "ic": {
+          "spearman": -0.031519617641603895,
+          "pearson": -0.0006908876556003911,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": -3.599567617645664,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": 0.002562633071719785,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_ridge_H_1w",
@@ -17722,7 +18642,46 @@
         "kind": "overnight\u2192H"
       },
       "plain": "ridge on open-entry full-sheet DAG \u2192 H 1w; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_H_1w",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": -0.002772004921474154,
+          "t": -11.377034735532073,
+          "win": 0.4359859916401724
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": 0.000785030222179722,
+          "t": 0.2849897356289195,
+          "win": 0.4440046874654521
+        },
+        "edge_vs_book_hold": -0.001666775825632027,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "hold_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_sign",
+          "no_edge_vs_uncond",
+          "month_split",
+          "no_edge_vs_book"
+        ],
+        "ic": {
+          "spearman": -0.031519617641603895,
+          "pearson": -0.0006908876556003911,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": -3.599567617645664,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": 0.002454610052913698,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_lgb_H_1w",
@@ -17803,7 +18762,8 @@
         "no_edge_vs_uncond",
         "month_split",
         "ticker_ghost",
-        "no_edge_vs_book"
+        "no_edge_vs_book",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "H",
@@ -17886,7 +18846,46 @@
         "kind": "overnight\u2192H"
       },
       "plain": "lgb on open-entry full-sheet DAG \u2192 H 1w; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_H_1w",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": -0.002772004921474154,
+          "t": -11.377034735532073,
+          "win": 0.4359859916401724
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": 0.000785030222179722,
+          "t": 0.2849897356289195,
+          "win": 0.4440046874654521
+        },
+        "edge_vs_book_hold": -0.001666775825632027,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "hold_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_sign",
+          "no_edge_vs_uncond",
+          "month_split",
+          "no_edge_vs_book"
+        ],
+        "ic": {
+          "spearman": -0.031519617641603895,
+          "pearson": -0.0006908876556003911,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": -3.599567617645664,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": 0.0018548450007013163,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_linear_H_2w",
@@ -17968,7 +18967,8 @@
         "no_edge_vs_uncond",
         "month_split",
         "no_edge_vs_book",
-        "no_edge_vs_book_disc"
+        "no_edge_vs_book_disc",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "H",
@@ -18051,7 +19051,49 @@
         "kind": "overnight\u2192H"
       },
       "plain": "linear on open-entry full-sheet DAG \u2192 H 2w; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_H_2w",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": -0.0030211239077084853,
+          "t": -12.022400159597307,
+          "win": 0.431951325791198
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": -0.0022173993347236057,
+          "t": -5.415450866216889,
+          "win": 0.45314745616556484
+        },
+        "edge_vs_book_hold": -0.0015847955293738696,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "hold_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_sign",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_split",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.01737012109028925,
+          "pearson": -0.008805823475765192,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": -0.13392449278978705,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": 0.0015022909722423846,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_ridge_H_2w",
@@ -18133,7 +19175,8 @@
         "no_edge_vs_uncond",
         "month_split",
         "no_edge_vs_book",
-        "no_edge_vs_book_disc"
+        "no_edge_vs_book_disc",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "H",
@@ -18216,7 +19259,49 @@
         "kind": "overnight\u2192H"
       },
       "plain": "ridge on open-entry full-sheet DAG \u2192 H 2w; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_H_2w",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": -0.0030211239077084853,
+          "t": -12.022400159597307,
+          "win": 0.431951325791198
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": -0.0022173993347236057,
+          "t": -5.415450866216889,
+          "win": 0.45314745616556484
+        },
+        "edge_vs_book_hold": -0.0015847955293738696,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "hold_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_sign",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_split",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.01737012109028925,
+          "pearson": -0.008805823475765192,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": -0.13392449278978705,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": 0.0014629134613696063,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_lgb_H_2w",
@@ -18297,7 +19382,8 @@
         "no_edge_vs_uncond",
         "month_split",
         "ticker_ghost",
-        "no_edge_vs_book"
+        "no_edge_vs_book",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "H",
@@ -18380,7 +19466,49 @@
         "kind": "overnight\u2192H"
       },
       "plain": "lgb on open-entry full-sheet DAG \u2192 H 2w; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_H_2w",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": -0.0030211239077084853,
+          "t": -12.022400159597307,
+          "win": 0.431951325791198
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": -0.0022173993347236057,
+          "t": -5.415450866216889,
+          "win": 0.45314745616556484
+        },
+        "edge_vs_book_hold": -0.0015847955293738696,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "hold_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_sign",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_split",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.01737012109028925,
+          "pearson": -0.008805823475765192,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": -0.13392449278978705,
+        "july_share": 0.0
+      },
+      "edge_vs_gap_hold": 0.0016494961127970483,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_linear_I_2d",
@@ -18536,7 +19664,49 @@
         "kind": "overnight\u2192label"
       },
       "plain": "linear on open-entry full-sheet DAG \u2192 I 2d; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_I_2d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": 0.0035258358863738044,
+          "t": 1.9135005878169418,
+          "win": 0.4619692397075674
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": -0.001983565275225654,
+          "t": -4.288227701281623,
+          "win": 0.4477082273862958
+        },
+        "edge_vs_book_hold": -0.00043495143694695674,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_split",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_split",
+          "ticker_ghost",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.008457137434510834,
+          "pearson": -0.001303592689338282,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 5.2965670247808925,
+        "july_share": 0.3632801822213389
+      },
+      "edge_vs_gap_hold": 0.003261246554825658,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_ridge_I_2d",
@@ -18691,7 +19861,49 @@
         "kind": "overnight\u2192label"
       },
       "plain": "ridge on open-entry full-sheet DAG \u2192 I 2d; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_I_2d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": 0.0035258358863738044,
+          "t": 1.9135005878169418,
+          "win": 0.4619692397075674
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": -0.001983565275225654,
+          "t": -4.288227701281623,
+          "win": 0.4477082273862958
+        },
+        "edge_vs_book_hold": -0.00043495143694695674,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_split",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_split",
+          "ticker_ghost",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.008457137434510834,
+          "pearson": -0.001303592689338282,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 5.2965670247808925,
+        "july_share": 0.3632801822213389
+      },
+      "edge_vs_gap_hold": 0.003292527509344866,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_lgb_I_2d",
@@ -18847,7 +20059,49 @@
         "kind": "overnight\u2192label"
       },
       "plain": "lgb on open-entry full-sheet DAG \u2192 I 2d; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_I_2d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": 0.0035258358863738044,
+          "t": 1.9135005878169418,
+          "win": 0.4619692397075674
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": -0.001983565275225654,
+          "t": -4.288227701281623,
+          "win": 0.4477082273862958
+        },
+        "edge_vs_book_hold": -0.00043495143694695674,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_split",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_split",
+          "ticker_ghost",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.008457137434510834,
+          "pearson": -0.001303592689338282,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 5.2965670247808925,
+        "july_share": 0.3632801822213389
+      },
+      "edge_vs_gap_hold": 0.01121259774540737,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_linear_I_3d",
@@ -19005,7 +20259,48 @@
         "kind": "overnight\u2192label"
       },
       "plain": "linear on open-entry full-sheet DAG \u2192 I 3d; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_I_3d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": 0.0008014753064230563,
+          "t": 0.4785683143090131,
+          "win": 0.4388586737246421
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": -0.002248485767269743,
+          "t": -5.831080607082286,
+          "win": 0.4434850863422292
+        },
+        "edge_vs_book_hold": -0.003113425185418894,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_split",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_split",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.023308498743104873,
+          "pearson": -0.0010901524724949258,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": -1.1639202120278285,
+        "july_share": 0.17635210860451203
+      },
+      "edge_vs_gap_hold": 0.009364751810947888,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_ridge_I_3d",
@@ -19162,7 +20457,48 @@
         "kind": "overnight\u2192label"
       },
       "plain": "ridge on open-entry full-sheet DAG \u2192 I 3d; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_I_3d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": 0.0008014753064230563,
+          "t": 0.4785683143090131,
+          "win": 0.4388586737246421
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": -0.002248485767269743,
+          "t": -5.831080607082286,
+          "win": 0.4434850863422292
+        },
+        "edge_vs_book_hold": -0.003113425185418894,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_split",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_split",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.023308498743104873,
+          "pearson": -0.0010901524724949258,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": -1.1639202120278285,
+        "july_share": 0.17635210860451203
+      },
+      "edge_vs_gap_hold": 0.008694043611923016,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_lgb_I_3d",
@@ -19319,7 +20655,48 @@
         "kind": "overnight\u2192label"
       },
       "plain": "lgb on open-entry full-sheet DAG \u2192 I 3d; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_I_3d",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": 0.0008014753064230563,
+          "t": 0.4785683143090131,
+          "win": 0.4388586737246421
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": -0.002248485767269743,
+          "t": -5.831080607082286,
+          "win": 0.4434850863422292
+        },
+        "edge_vs_book_hold": -0.003113425185418894,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_split",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_split",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.023308498743104873,
+          "pearson": -0.0010901524724949258,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": -1.1639202120278285,
+        "july_share": 0.17635210860451203
+      },
+      "edge_vs_gap_hold": 0.011457536581408547,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_linear_I_1w",
@@ -19475,7 +20852,49 @@
         "kind": "overnight\u2192label"
       },
       "plain": "linear on open-entry full-sheet DAG \u2192 I 1w; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_I_1w",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": 0.0032331633893020735,
+          "t": 1.744254259704552,
+          "win": 0.4623081516388813
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": -0.001869559432851401,
+          "t": -5.045693122746652,
+          "win": 0.44383885731974265
+        },
+        "edge_vs_book_hold": -0.0008248604180526565,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_split",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_split",
+          "ticker_ghost",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.0029698470195527564,
+          "pearson": -0.001295355082801435,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 6.69310727074681,
+        "july_share": 0.020741661044567445
+      },
+      "edge_vs_gap_hold": 0.003413377293498178,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_ridge_I_1w",
@@ -19631,7 +21050,49 @@
         "kind": "overnight\u2192label"
       },
       "plain": "ridge on open-entry full-sheet DAG \u2192 I 1w; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_I_1w",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": 0.0032331633893020735,
+          "t": 1.744254259704552,
+          "win": 0.4623081516388813
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": -0.001869559432851401,
+          "t": -5.045693122746652,
+          "win": 0.44383885731974265
+        },
+        "edge_vs_book_hold": -0.0008248604180526565,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_split",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_split",
+          "ticker_ghost",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.0029698470195527564,
+          "pearson": -0.001295355082801435,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 6.69310727074681,
+        "july_share": 0.020741661044567445
+      },
+      "edge_vs_gap_hold": 0.003887740191061161,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_lgb_I_1w",
@@ -19789,7 +21250,49 @@
         "kind": "overnight\u2192label"
       },
       "plain": "lgb on open-entry full-sheet DAG \u2192 I 1w; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_I_1w",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": 0.0032331633893020735,
+          "t": 1.744254259704552,
+          "win": 0.4623081516388813
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": -0.001869559432851401,
+          "t": -5.045693122746652,
+          "win": 0.44383885731974265
+        },
+        "edge_vs_book_hold": -0.0008248604180526565,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_split",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_split",
+          "ticker_ghost",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.0029698470195527564,
+          "pearson": -0.001295355082801435,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 6.69310727074681,
+        "july_share": 0.020741661044567445
+      },
+      "edge_vs_gap_hold": 0.010875925615538634,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_linear_I_2w",
@@ -19947,7 +21450,50 @@
         "kind": "overnight\u2192label"
       },
       "plain": "linear on open-entry full-sheet DAG \u2192 I 2w; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_I_2w",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": 0.003741758616179326,
+          "t": 1.013977522037739,
+          "win": 0.4436195794264319
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": -0.000422850401931052,
+          "t": -0.9958178148768072,
+          "win": 0.4681827227098857
+        },
+        "edge_vs_book_hold": -0.0009062317297692558,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_split",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_lottery",
+          "month_split",
+          "ticker_ghost",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.01081769103928698,
+          "pearson": 0.0010687325484600807,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 1.7307171887594446,
+        "july_share": 0.7076223777254949
+      },
+      "edge_vs_gap_hold": 0.0051638354703852744,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_ridge_I_2w",
@@ -20105,7 +21651,50 @@
         "kind": "overnight\u2192label"
       },
       "plain": "ridge on open-entry full-sheet DAG \u2192 I 2w; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_I_2w",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": 0.003741758616179326,
+          "t": 1.013977522037739,
+          "win": 0.4436195794264319
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": -0.000422850401931052,
+          "t": -0.9958178148768072,
+          "win": 0.4681827227098857
+        },
+        "edge_vs_book_hold": -0.0009062317297692558,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_split",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_lottery",
+          "month_split",
+          "ticker_ghost",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.01081769103928698,
+          "pearson": 0.0010687325484600807,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 1.7307171887594446,
+        "july_share": 0.7076223777254949
+      },
+      "edge_vs_gap_hold": 0.004693877645785717,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_lgb_I_2w",
@@ -20262,7 +21851,50 @@
         "kind": "overnight\u2192label"
       },
       "plain": "lgb on open-entry full-sheet DAG \u2192 I 2w; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_I_2w",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": 0.003741758616179326,
+          "t": 1.013977522037739,
+          "win": 0.4436195794264319
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": -0.000422850401931052,
+          "t": -0.9958178148768072,
+          "win": 0.4681827227098857
+        },
+        "edge_vs_book_hold": -0.0009062317297692558,
+        "fail_reasons": [
+          "disc_t",
+          "hold_t",
+          "disc_sign",
+          "lottery_day",
+          "tape_split",
+          "spy_regime",
+          "q3_split",
+          "no_edge_vs_uncond",
+          "q1_sign",
+          "month_lottery",
+          "month_split",
+          "ticker_ghost",
+          "no_edge_vs_book",
+          "no_edge_vs_book_disc"
+        ],
+        "ic": {
+          "spearman": -0.01081769103928698,
+          "pearson": 0.0010687325484600807,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 1.7307171887594446,
+        "july_share": 0.7076223777254949
+      },
+      "edge_vs_gap_hold": 0.008934143669330036,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_linear_I_sum_2d",
@@ -20333,7 +21965,8 @@
       "lottery_n_days": 221,
       "verdict": "KILL",
       "fail_reasons": [
-        "gap_algebra"
+        "gap_algebra",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "I_sum",
@@ -20416,7 +22049,35 @@
         "kind": "overnight\u2192label"
       },
       "plain": "linear on open-entry full-sheet DAG \u2192 I_sum 2d; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_I_sum_2d",
+        "keep": "KEEP",
+        "verdict": "KEEP",
+        "holdout": {
+          "n": 61963,
+          "avg_net": 0.05059062349975003,
+          "t": 8.659961677069692,
+          "win": 0.6420767232057841
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": 0.020417332148283184,
+          "t": 30.573421797275916,
+          "win": 0.591626683175979
+        },
+        "edge_vs_book_hold": 0.04214374810619359,
+        "fail_reasons": [],
+        "ic": {
+          "spearman": 0.27011106611794305,
+          "pearson": 0.7135964101422257,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 0.16289500335663776,
+        "july_share": 0.15571825794515942
+      },
+      "edge_vs_gap_hold": -0.00048010844657266766,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_ridge_I_sum_2d",
@@ -20487,7 +22148,8 @@
       "lottery_n_days": 221,
       "verdict": "KILL",
       "fail_reasons": [
-        "gap_algebra"
+        "gap_algebra",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "I_sum",
@@ -20570,7 +22232,35 @@
         "kind": "overnight\u2192label"
       },
       "plain": "ridge on open-entry full-sheet DAG \u2192 I_sum 2d; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_I_sum_2d",
+        "keep": "KEEP",
+        "verdict": "KEEP",
+        "holdout": {
+          "n": 61963,
+          "avg_net": 0.05059062349975003,
+          "t": 8.659961677069692,
+          "win": 0.6420767232057841
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": 0.020417332148283184,
+          "t": 30.573421797275916,
+          "win": 0.591626683175979
+        },
+        "edge_vs_book_hold": 0.04214374810619359,
+        "fail_reasons": [],
+        "ic": {
+          "spearman": 0.27011106611794305,
+          "pearson": 0.7135964101422257,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 0.16289500335663776,
+        "july_share": 0.15571825794515942
+      },
+      "edge_vs_gap_hold": -0.000385803040137106,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_lgb_I_sum_2d",
@@ -20724,7 +22414,35 @@
         "kind": "overnight\u2192label"
       },
       "plain": "lgb on open-entry full-sheet DAG \u2192 I_sum 2d; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_I_sum_2d",
+        "keep": "KEEP",
+        "verdict": "KEEP",
+        "holdout": {
+          "n": 61963,
+          "avg_net": 0.05059062349975003,
+          "t": 8.659961677069692,
+          "win": 0.6420767232057841
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": 0.020417332148283184,
+          "t": 30.573421797275916,
+          "win": 0.591626683175979
+        },
+        "edge_vs_book_hold": 0.04214374810619359,
+        "fail_reasons": [],
+        "ic": {
+          "spearman": 0.27011106611794305,
+          "pearson": 0.7135964101422257,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 0.16289500335663776,
+        "july_share": 0.15571825794515942
+      },
+      "edge_vs_gap_hold": 0.0027981689209786095,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_linear_I_sum_3d",
@@ -20795,7 +22513,8 @@
       "lottery_n_days": 221,
       "verdict": "KILL",
       "fail_reasons": [
-        "gap_algebra"
+        "gap_algebra",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "I_sum",
@@ -20878,7 +22597,35 @@
         "kind": "overnight\u2192label"
       },
       "plain": "linear on open-entry full-sheet DAG \u2192 I_sum 3d; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_I_sum_3d",
+        "keep": "KEEP",
+        "verdict": "KEEP",
+        "holdout": {
+          "n": 61963,
+          "avg_net": 0.05138010163659424,
+          "t": 8.86951085957771,
+          "win": 0.60900860190759
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": 0.019060715527344077,
+          "t": 27.611020765195114,
+          "win": 0.5622194706701749
+        },
+        "edge_vs_book_hold": 0.03925683124376546,
+        "fail_reasons": [],
+        "ic": {
+          "spearman": 0.20921947764433982,
+          "pearson": 0.6068592560076623,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 0.17202874876253485,
+        "july_share": 0.1588793489063656
+      },
+      "edge_vs_gap_hold": -0.002670666528415029,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_ridge_I_sum_3d",
@@ -20949,7 +22696,8 @@
       "lottery_n_days": 221,
       "verdict": "KILL",
       "fail_reasons": [
-        "gap_algebra"
+        "gap_algebra",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "I_sum",
@@ -21032,7 +22780,35 @@
         "kind": "overnight\u2192label"
       },
       "plain": "ridge on open-entry full-sheet DAG \u2192 I_sum 3d; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_I_sum_3d",
+        "keep": "KEEP",
+        "verdict": "KEEP",
+        "holdout": {
+          "n": 61963,
+          "avg_net": 0.05138010163659424,
+          "t": 8.86951085957771,
+          "win": 0.60900860190759
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": 0.019060715527344077,
+          "t": 27.611020765195114,
+          "win": 0.5622194706701749
+        },
+        "edge_vs_book_hold": 0.03925683124376546,
+        "fail_reasons": [],
+        "ic": {
+          "spearman": 0.20921947764433982,
+          "pearson": 0.6068592560076623,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 0.17202874876253485,
+        "july_share": 0.1588793489063656
+      },
+      "edge_vs_gap_hold": -0.001027152406647469,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_lgb_I_sum_3d",
@@ -21186,7 +22962,35 @@
         "kind": "overnight\u2192label"
       },
       "plain": "lgb on open-entry full-sheet DAG \u2192 I_sum 3d; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_I_sum_3d",
+        "keep": "KEEP",
+        "verdict": "KEEP",
+        "holdout": {
+          "n": 61963,
+          "avg_net": 0.05138010163659424,
+          "t": 8.86951085957771,
+          "win": 0.60900860190759
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": 0.019060715527344077,
+          "t": 27.611020765195114,
+          "win": 0.5622194706701749
+        },
+        "edge_vs_book_hold": 0.03925683124376546,
+        "fail_reasons": [],
+        "ic": {
+          "spearman": 0.20921947764433982,
+          "pearson": 0.6068592560076623,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 0.17202874876253485,
+        "july_share": 0.1588793489063656
+      },
+      "edge_vs_gap_hold": 0.00329696048648552,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_linear_I_sum_1w",
@@ -21257,7 +23061,8 @@
       "lottery_n_days": 221,
       "verdict": "KILL",
       "fail_reasons": [
-        "gap_algebra"
+        "gap_algebra",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "I_sum",
@@ -21340,7 +23145,35 @@
         "kind": "overnight\u2192label"
       },
       "plain": "linear on open-entry full-sheet DAG \u2192 I_sum 1w; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_I_sum_1w",
+        "keep": "KEEP",
+        "verdict": "KEEP",
+        "holdout": {
+          "n": 61963,
+          "avg_net": 0.060863433048180794,
+          "t": 10.47190949899995,
+          "win": 0.5952745993576812
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": 0.017401204904706313,
+          "t": 21.291811137445006,
+          "win": 0.5378313839078427
+        },
+        "edge_vs_book_hold": 0.04137510008948962,
+        "fail_reasons": [],
+        "ic": {
+          "spearman": 0.16944960513610413,
+          "pearson": 0.5159208857817786,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 0.1768409408332814,
+        "july_share": 0.15979583074903475
+      },
+      "edge_vs_gap_hold": -0.0035307171480926727,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_ridge_I_sum_1w",
@@ -21411,7 +23244,8 @@
       "lottery_n_days": 221,
       "verdict": "KILL",
       "fail_reasons": [
-        "gap_algebra"
+        "gap_algebra",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "I_sum",
@@ -21494,7 +23328,35 @@
         "kind": "overnight\u2192label"
       },
       "plain": "ridge on open-entry full-sheet DAG \u2192 I_sum 1w; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_I_sum_1w",
+        "keep": "KEEP",
+        "verdict": "KEEP",
+        "holdout": {
+          "n": 61963,
+          "avg_net": 0.060863433048180794,
+          "t": 10.47190949899995,
+          "win": 0.5952745993576812
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": 0.017401204904706313,
+          "t": 21.291811137445006,
+          "win": 0.5378313839078427
+        },
+        "edge_vs_book_hold": 0.04137510008948962,
+        "fail_reasons": [],
+        "ic": {
+          "spearman": 0.16944960513610413,
+          "pearson": 0.5159208857817786,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 0.1768409408332814,
+        "july_share": 0.15979583074903475
+      },
+      "edge_vs_gap_hold": -0.0031161837628060005,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_lgb_I_sum_1w",
@@ -21648,7 +23510,35 @@
         "kind": "overnight\u2192label"
       },
       "plain": "lgb on open-entry full-sheet DAG \u2192 I_sum 1w; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_I_sum_1w",
+        "keep": "KEEP",
+        "verdict": "KEEP",
+        "holdout": {
+          "n": 61963,
+          "avg_net": 0.060863433048180794,
+          "t": 10.47190949899995,
+          "win": 0.5952745993576812
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": 0.017401204904706313,
+          "t": 21.291811137445006,
+          "win": 0.5378313839078427
+        },
+        "edge_vs_book_hold": 0.04137510008948962,
+        "fail_reasons": [],
+        "ic": {
+          "spearman": 0.16944960513610413,
+          "pearson": 0.5159208857817786,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 0.1768409408332814,
+        "july_share": 0.15979583074903475
+      },
+      "edge_vs_gap_hold": 0.01615497949965703,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_linear_I_sum_2w",
@@ -21804,7 +23694,39 @@
         "kind": "overnight\u2192label"
       },
       "plain": "linear on open-entry full-sheet DAG \u2192 I_sum 2w; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_I_sum_2w",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": 0.11237088402512285,
+          "t": 3.6192184328846073,
+          "win": 0.5589948840437035
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": 0.01749068795986683,
+          "t": 16.09328235559851,
+          "win": 0.52006544763084
+        },
+        "edge_vs_book_hold": 0.06636765235971828,
+        "fail_reasons": [
+          "month_lottery",
+          "month_split",
+          "ticker_ghost"
+        ],
+        "ic": {
+          "spearman": 0.11386765653131888,
+          "pearson": 0.25189518660050153,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 0.41679395538886144,
+        "july_share": 0.430003777986061
+      },
+      "edge_vs_gap_hold": 0.003990898893506692,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_ridge_I_sum_2w",
@@ -21877,7 +23799,8 @@
       "fail_reasons": [
         "month_split",
         "ticker_ghost",
-        "gap_algebra"
+        "gap_algebra",
+        "lose_to_gap"
       ],
       "live_untouched": "flatten_robust",
       "label": "I_sum",
@@ -21960,7 +23883,39 @@
         "kind": "overnight\u2192label"
       },
       "plain": "ridge on open-entry full-sheet DAG \u2192 I_sum 2w; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_I_sum_2w",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": 0.11237088402512285,
+          "t": 3.6192184328846073,
+          "win": 0.5589948840437035
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": 0.01749068795986683,
+          "t": 16.09328235559851,
+          "win": 0.52006544763084
+        },
+        "edge_vs_book_hold": 0.06636765235971828,
+        "fail_reasons": [
+          "month_lottery",
+          "month_split",
+          "ticker_ghost"
+        ],
+        "ic": {
+          "spearman": 0.11386765653131888,
+          "pearson": 0.25189518660050153,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 0.41679395538886144,
+        "july_share": 0.430003777986061
+      },
+      "edge_vs_gap_hold": 0.0003880489348213195,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_open_lgb_I_sum_2w",
@@ -22116,7 +24071,39 @@
         "kind": "overnight\u2192label"
       },
       "plain": "lgb on open-entry full-sheet DAG \u2192 I_sum 2w; long top 20%",
-      "fold": "fold_combined"
+      "fold": "fold_combined",
+      "gap_recipe": {
+        "def": "gap_open_I_sum_2w",
+        "keep": "KILL",
+        "verdict": "KILL",
+        "holdout": {
+          "n": 61963,
+          "avg_net": 0.11237088402512285,
+          "t": 3.6192184328846073,
+          "win": 0.5589948840437035
+        },
+        "discovery": {
+          "n": 90454,
+          "avg_net": 0.01749068795986683,
+          "t": 16.09328235559851,
+          "win": 0.52006544763084
+        },
+        "edge_vs_book_hold": 0.06636765235971828,
+        "fail_reasons": [
+          "month_lottery",
+          "month_split",
+          "ticker_ghost"
+        ],
+        "ic": {
+          "spearman": 0.11386765653131888,
+          "pearson": 0.25189518660050153,
+          "kind": "overnight\u2192label"
+        },
+        "top5_share": 0.41679395538886144,
+        "july_share": 0.430003777986061
+      },
+      "edge_vs_gap_hold": 0.06331045691483117,
+      "gap_baseline": "overnight_gap"
     },
     {
       "def": "ml_close_linear_H_2d",
@@ -27807,6 +29794,3670 @@
       },
       "plain": "lgb on close-entry full-sheet DAG \u2192 I_sum 2w; long top 20%",
       "fold": "fold_combined"
+    },
+    {
+      "def": "gap_open_H_1d",
+      "family": "gap_baseline",
+      "clock": "open",
+      "side": "long",
+      "exit": "hold1",
+      "cohort": "ALL",
+      "cost_model": "futubull",
+      "n_tickers": 3446,
+      "n_dates": 131,
+      "discovery": {
+        "n": 47987,
+        "avg_net": -0.008815508611823659,
+        "t": -27.744273386168594,
+        "win": 0.37347614979056826
+      },
+      "holdout": {
+        "n": 42469,
+        "avg_net": -0.005407901429858359,
+        "t": -13.733421179282614,
+        "win": 0.4124184699427818
+      },
+      "early": {
+        "n": 90456,
+        "avg_net": -0.007215640505662672,
+        "t": -28.833908852700695,
+        "win": 0.3917595294950031
+      },
+      "late": null,
+      "spy_up": {
+        "n": 52361,
+        "avg_net": -0.0003023430304695213,
+        "t": -1.0410639283772396,
+        "win": 0.45936861404480434
+      },
+      "spy_dn": {
+        "n": 27544,
+        "avg_net": -0.02051753218910546,
+        "t": -38.29934479415076,
+        "win": 0.2709846064478652
+      },
+      "q12": {
+        "n": 90456,
+        "avg_net": -0.007215640505662672,
+        "t": -28.833908852700695,
+        "win": 0.3917595294950031
+      },
+      "q3": null,
+      "baseline": {
+        "n": 239929,
+        "avg_net": -0.003011712288393829,
+        "t": -31.843994905378036,
+        "win": 0.43006472748188007
+      },
+      "lottery_day_frac": 0.1653053017479045,
+      "lottery_top_day": "2026-03-31",
+      "lottery_n_days": 131,
+      "verdict": "KILL",
+      "fail_reasons": [
+        "disc_t",
+        "hold_t",
+        "disc_sign",
+        "hold_sign",
+        "lottery_day",
+        "tape_thin",
+        "spy_regime",
+        "q3_missing",
+        "no_edge_vs_uncond",
+        "q1_sign",
+        "month_split",
+        "no_edge_vs_book",
+        "no_edge_vs_book_disc"
+      ],
+      "live_untouched": "flatten_robust",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat_hot": {
+        "n": 30860,
+        "avg_net": -0.007150853318808793,
+        "t": -16.785659696988194,
+        "win": 0.3948152948801037
+      },
+      "heat_mid": {
+        "n": 20358,
+        "avg_net": -0.005341144831870498,
+        "t": -16.48517824845847,
+        "win": 0.3837312113174182
+      },
+      "heat_cold": {
+        "n": 39238,
+        "avg_net": -0.008239146176527096,
+        "t": -18.791795121083663,
+        "win": 0.39352158621744227
+      },
+      "spy_flat": {
+        "n": 10551,
+        "avg_net": -0.006798605586683922,
+        "t": -9.579341686795038,
+        "win": 0.3715287650459672
+      },
+      "ic": {
+        "spearman": -0.09100563063501124,
+        "pearson": -0.048109766627614736,
+        "kind": "overnight\u2192label"
+      },
+      "book": {
+        "discovery": {
+          "n": 239929,
+          "avg_net": -0.003011712288393829,
+          "t": -31.843994905378036,
+          "win": 0.43006472748188007
+        },
+        "holdout": {
+          "n": 212340,
+          "avg_net": 0.00012097002510808445,
+          "t": 0.10197367345030266,
+          "win": 0.45598097390976733
+        }
+      },
+      "edge_vs_book_hold": -0.005528871454966443,
+      "edge_vs_book_disc": -0.00580379632342983,
+      "q1": {
+        "n": 90456,
+        "avg_net": -0.007215640505662672,
+        "t": -28.833908852700695,
+        "win": 0.3917595294950031
+      },
+      "july_share": 0.0,
+      "top5_share": -0.03636075446022535,
+      "top5_tickers": [
+        "PHOE",
+        "MTC",
+        "FLZH",
+        "CYPH",
+        "NUAI"
+      ],
+      "keep": "KILL",
+      "model": "gap",
+      "gap_baseline": "overnight_gap",
+      "fold": "fold_q1",
+      "train_end": "2026-01-01",
+      "hold_end": "2026-04-01",
+      "n_hold_rows": 212340,
+      "gap_ic": {
+        "spearman": -0.09100563063501124,
+        "pearson": -0.048109766627614736,
+        "kind": "overnight\u2192label"
+      },
+      "plain": "overnight-gap baseline \u2192 H 1d; long top 20%"
+    },
+    {
+      "def": "gap_open_I_1d",
+      "family": "gap_baseline",
+      "clock": "open",
+      "side": "long",
+      "exit": "hold1",
+      "cohort": "ALL",
+      "cost_model": "futubull",
+      "n_tickers": 3446,
+      "n_dates": 131,
+      "discovery": {
+        "n": 47987,
+        "avg_net": 0.018300174113053905,
+        "t": 36.14007766593917,
+        "win": 0.6260028757788568
+      },
+      "holdout": {
+        "n": 42469,
+        "avg_net": 0.02448546236779644,
+        "t": 30.145962410491226,
+        "win": 0.6699239445242412
+      },
+      "early": {
+        "n": 90456,
+        "avg_net": 0.021204160657788875,
+        "t": 45.44713237900606,
+        "win": 0.6466237728840541
+      },
+      "late": null,
+      "spy_up": {
+        "n": 52361,
+        "avg_net": 0.02676760922713691,
+        "t": 53.74606123390811,
+        "win": 0.7281373541376215
+      },
+      "spy_dn": {
+        "n": 27544,
+        "avg_net": 0.010135358463581289,
+        "t": 8.859441073280667,
+        "win": 0.4991649724077839
+      },
+      "q12": {
+        "n": 90456,
+        "avg_net": 0.021204160657788875,
+        "t": 45.44713237900606,
+        "win": 0.6466237728840541
+      },
+      "q3": null,
+      "baseline": {
+        "n": 239929,
+        "avg_net": -0.0020749469791585024,
+        "t": -16.325861308957872,
+        "win": 0.44228084141558544
+      },
+      "lottery_day_frac": 0.04392929976392068,
+      "lottery_top_day": "2026-03-31",
+      "lottery_n_days": 131,
+      "verdict": "KILL",
+      "fail_reasons": [
+        "tape_thin",
+        "q3_missing"
+      ],
+      "live_untouched": "flatten_robust",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat_hot": {
+        "n": 30860,
+        "avg_net": 0.02262543552579126,
+        "t": 27.0226279586937,
+        "win": 0.6298120544394038
+      },
+      "heat_mid": {
+        "n": 20358,
+        "avg_net": 0.01718881110398311,
+        "t": 39.165231070786284,
+        "win": 0.6765399351606248
+      },
+      "heat_cold": {
+        "n": 39238,
+        "avg_net": 0.02216965185993758,
+        "t": 27.061300025469865,
+        "win": 0.6443243794281054
+      },
+      "spy_flat": {
+        "n": 10551,
+        "avg_net": 0.022490423296182376,
+        "t": 23.358061783786127,
+        "win": 0.6270495687612548
+      },
+      "ic": {
+        "spearman": 0.36065011092084387,
+        "pearson": 0.5970859668086538,
+        "kind": "overnight\u2192label"
+      },
+      "book": {
+        "discovery": {
+          "n": 239929,
+          "avg_net": -0.0020749469791585024,
+          "t": -16.325861308957872,
+          "win": 0.44228084141558544
+        },
+        "holdout": {
+          "n": 212340,
+          "avg_net": -0.0014839181549801033,
+          "t": -6.261833237106712,
+          "win": 0.4509513045116323
+        }
+      },
+      "edge_vs_book_hold": 0.02596938052277654,
+      "edge_vs_book_disc": 0.020375121092212407,
+      "q1": {
+        "n": 90456,
+        "avg_net": 0.021204160657788875,
+        "t": 45.44713237900606,
+        "win": 0.6466237728840541
+      },
+      "july_share": 0.0,
+      "top5_share": 0.03720856900155075,
+      "top5_tickers": [
+        "DUKR",
+        "SPRB",
+        "PHOE",
+        "BVC",
+        "SPHL"
+      ],
+      "keep": "KILL",
+      "model": "gap",
+      "gap_baseline": "overnight_gap",
+      "fold": "fold_q1",
+      "train_end": "2026-01-01",
+      "hold_end": "2026-04-01",
+      "n_hold_rows": 212340,
+      "gap_ic": {
+        "spearman": 0.36065011092084387,
+        "pearson": 0.5970859668086538,
+        "kind": "overnight\u2192label"
+      },
+      "plain": "overnight-gap baseline \u2192 I 1d; long top 20%"
+    },
+    {
+      "def": "gap_open_I_sum_1d",
+      "family": "gap_baseline",
+      "clock": "open",
+      "side": "long",
+      "exit": "hold1",
+      "cohort": "ALL",
+      "cost_model": "futubull",
+      "n_tickers": 3446,
+      "n_dates": 131,
+      "discovery": {
+        "n": 47987,
+        "avg_net": 0.01830017411305395,
+        "t": 36.140077665939266,
+        "win": 0.6260028757788568
+      },
+      "holdout": {
+        "n": 42469,
+        "avg_net": 0.02448546236779648,
+        "t": 30.14596241049128,
+        "win": 0.6699239445242412
+      },
+      "early": {
+        "n": 90456,
+        "avg_net": 0.02120416065778893,
+        "t": 45.44713237900618,
+        "win": 0.6466237728840541
+      },
+      "late": null,
+      "spy_up": {
+        "n": 52361,
+        "avg_net": 0.02676760922713697,
+        "t": 53.746061233908236,
+        "win": 0.7281373541376215
+      },
+      "spy_dn": {
+        "n": 27544,
+        "avg_net": 0.010135358463581318,
+        "t": 8.859441073280694,
+        "win": 0.4991649724077839
+      },
+      "q12": {
+        "n": 90456,
+        "avg_net": 0.02120416065778893,
+        "t": 45.44713237900618,
+        "win": 0.6466237728840541
+      },
+      "q3": null,
+      "baseline": {
+        "n": 239929,
+        "avg_net": -0.0020749469791584755,
+        "t": -16.325861308957663,
+        "win": 0.44228084141558544
+      },
+      "lottery_day_frac": 0.04392929976392067,
+      "lottery_top_day": "2026-03-31",
+      "lottery_n_days": 131,
+      "verdict": "KILL",
+      "fail_reasons": [
+        "tape_thin",
+        "q3_missing"
+      ],
+      "live_untouched": "flatten_robust",
+      "label": "I_sum",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat_hot": {
+        "n": 30860,
+        "avg_net": 0.0226254355257913,
+        "t": 27.02262795869375,
+        "win": 0.6298120544394038
+      },
+      "heat_mid": {
+        "n": 20358,
+        "avg_net": 0.017188811103983154,
+        "t": 39.1652310707864,
+        "win": 0.6765399351606248
+      },
+      "heat_cold": {
+        "n": 39238,
+        "avg_net": 0.022169651859937623,
+        "t": 27.061300025469915,
+        "win": 0.6443243794281054
+      },
+      "spy_flat": {
+        "n": 10551,
+        "avg_net": 0.022490423296182407,
+        "t": 23.358061783786162,
+        "win": 0.6270495687612548
+      },
+      "ic": {
+        "spearman": 0.36065011092084387,
+        "pearson": 0.5970859668086538,
+        "kind": "overnight\u2192label"
+      },
+      "book": {
+        "discovery": {
+          "n": 239929,
+          "avg_net": -0.0020749469791584755,
+          "t": -16.325861308957663,
+          "win": 0.44228084141558544
+        },
+        "holdout": {
+          "n": 212340,
+          "avg_net": -0.001483918154980076,
+          "t": -6.261833237106596,
+          "win": 0.4509513045116323
+        }
+      },
+      "edge_vs_book_hold": 0.025969380522776555,
+      "edge_vs_book_disc": 0.020375121092212425,
+      "q1": {
+        "n": 90456,
+        "avg_net": 0.02120416065778893,
+        "t": 45.44713237900618,
+        "win": 0.6466237728840541
+      },
+      "july_share": 0.0,
+      "top5_share": 0.03720856900155075,
+      "top5_tickers": [
+        "DUKR",
+        "SPRB",
+        "PHOE",
+        "BVC",
+        "SPHL"
+      ],
+      "keep": "KILL",
+      "model": "gap",
+      "gap_baseline": "overnight_gap",
+      "fold": "fold_q1",
+      "train_end": "2026-01-01",
+      "hold_end": "2026-04-01",
+      "n_hold_rows": 212340,
+      "gap_ic": {
+        "spearman": 0.36065011092084387,
+        "pearson": 0.5970859668086538,
+        "kind": "overnight\u2192label"
+      },
+      "plain": "overnight-gap baseline \u2192 I_sum 1d; long top 20%"
+    },
+    {
+      "def": "gap_open_H_1d",
+      "family": "gap_baseline",
+      "clock": "open",
+      "side": "long",
+      "exit": "hold1",
+      "cohort": "ALL",
+      "cost_model": "futubull",
+      "n_tickers": 3509,
+      "n_dates": 193,
+      "discovery": {
+        "n": 90454,
+        "avg_net": -0.007153474161784392,
+        "t": -28.572989255949466,
+        "win": 0.3930837773896124
+      },
+      "holdout": {
+        "n": 43696,
+        "avg_net": -0.0041398427436221226,
+        "t": -4.733062424511164,
+        "win": 0.41415690223361407
+      },
+      "early": {
+        "n": 106046,
+        "avg_net": -0.006883024347317128,
+        "t": -30.376176255688616,
+        "win": 0.3950078267921468
+      },
+      "late": {
+        "n": 28104,
+        "avg_net": -0.0034883902796667807,
+        "t": -2.623753689255903,
+        "win": 0.4185881013378878
+      },
+      "spy_up": {
+        "n": 82311,
+        "avg_net": -0.0002744205509719921,
+        "t": -0.5614824474247763,
+        "win": 0.45376681124029594
+      },
+      "spy_dn": {
+        "n": 36456,
+        "avg_net": -0.018497894323511992,
+        "t": -41.337682502980975,
+        "win": 0.29383366249725695
+      },
+      "q12": {
+        "n": 134150,
+        "avg_net": -0.006171859264668809,
+        "t": -18.636115214786678,
+        "win": 0.3999478196049199
+      },
+      "q3": null,
+      "baseline": {
+        "n": 452269,
+        "avg_net": -0.0015409199890119866,
+        "t": -2.7554790753648146,
+        "win": 0.4422323882468177
+      },
+      "lottery_day_frac": 0.11467172177614529,
+      "lottery_top_day": "2026-03-31",
+      "lottery_n_days": 193,
+      "verdict": "KILL",
+      "fail_reasons": [
+        "disc_t",
+        "hold_t",
+        "disc_sign",
+        "hold_sign",
+        "lottery_day",
+        "tape_split",
+        "spy_regime",
+        "q3_missing",
+        "no_edge_vs_uncond",
+        "q1_sign",
+        "month_split",
+        "no_edge_vs_book",
+        "no_edge_vs_book_disc"
+      ],
+      "live_untouched": "flatten_robust",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat_hot": {
+        "n": 49330,
+        "avg_net": -0.0055682600376519105,
+        "t": -14.929862352631563,
+        "win": 0.404662477194405
+      },
+      "heat_mid": {
+        "n": 30555,
+        "avg_net": -0.0051368337087841,
+        "t": -19.195044782614733,
+        "win": 0.3942071674030437
+      },
+      "heat_cold": {
+        "n": 54265,
+        "avg_net": -0.007303357573502535,
+        "t": -10.007404039363868,
+        "win": 0.3988943149359624
+      },
+      "spy_flat": {
+        "n": 15383,
+        "avg_net": -0.008516404792716472,
+        "t": -14.5712385478721,
+        "win": 0.3634531625820711
+      },
+      "ic": {
+        "spearman": -0.09386312847138518,
+        "pearson": -0.008228290572491219,
+        "kind": "overnight\u2192label"
+      },
+      "book": {
+        "discovery": {
+          "n": 452269,
+          "avg_net": -0.0015409199890119866,
+          "t": -2.7554790753648146,
+          "win": 0.4422323882468177
+        },
+        "holdout": {
+          "n": 218469,
+          "avg_net": -0.0002991094422315694,
+          "t": -1.5496050138074706,
+          "win": 0.4620838654454408
+        }
+      },
+      "edge_vs_book_hold": -0.003840733301390553,
+      "edge_vs_book_disc": -0.005612554172772405,
+      "q1": {
+        "n": 90454,
+        "avg_net": -0.007153474161784392,
+        "t": -28.572989255949466,
+        "win": 0.3930837773896124
+      },
+      "july_share": 0.0,
+      "top5_share": -0.06818912257580824,
+      "top5_tickers": [
+        "INHD",
+        "PHOE",
+        "TDIC",
+        "MTC",
+        "RGNT"
+      ],
+      "keep": "KILL",
+      "model": "gap",
+      "gap_baseline": "overnight_gap",
+      "fold": "fold_q2",
+      "train_end": "2026-04-01",
+      "hold_end": "2026-07-01",
+      "n_hold_rows": 218469,
+      "gap_ic": {
+        "spearman": -0.09386312847138518,
+        "pearson": -0.008228290572491219,
+        "kind": "overnight\u2192label"
+      },
+      "plain": "overnight-gap baseline \u2192 H 1d; long top 20%"
+    },
+    {
+      "def": "gap_open_I_1d",
+      "family": "gap_baseline",
+      "clock": "open",
+      "side": "long",
+      "exit": "hold1",
+      "cohort": "ALL",
+      "cost_model": "futubull",
+      "n_tickers": 3509,
+      "n_dates": 193,
+      "discovery": {
+        "n": 90454,
+        "avg_net": 0.02128732246044189,
+        "t": 45.622393644829316,
+        "win": 0.6474561655648174
+      },
+      "holdout": {
+        "n": 43696,
+        "avg_net": 0.03270152491845262,
+        "t": 12.795206009636994,
+        "win": 0.6960820212376418
+      },
+      "early": {
+        "n": 106046,
+        "avg_net": 0.022158696546835863,
+        "t": 53.65953634309902,
+        "win": 0.6586858533089414
+      },
+      "late": {
+        "n": 28104,
+        "avg_net": 0.035746091825643304,
+        "t": 9.045323478240569,
+        "win": 0.680686023341873
+      },
+      "spy_up": {
+        "n": 82311,
+        "avg_net": 0.02948272898670551,
+        "t": 39.392700586773046,
+        "win": 0.7312752851988191
+      },
+      "spy_dn": {
+        "n": 36456,
+        "avg_net": 0.013454885927220958,
+        "t": 14.286861397984001,
+        "win": 0.527732060566162
+      },
+      "q12": {
+        "n": 134150,
+        "avg_net": 0.025005212811582214,
+        "t": 28.093945632549538,
+        "win": 0.6632948192322028
+      },
+      "q3": null,
+      "baseline": {
+        "n": 452269,
+        "avg_net": -0.0017974593323680753,
+        "t": -13.816299125460741,
+        "win": 0.4463516181741397
+      },
+      "lottery_day_frac": 0.0298148228203048,
+      "lottery_top_day": "2026-05-18",
+      "lottery_n_days": 193,
+      "verdict": "KILL",
+      "fail_reasons": [
+        "q3_missing"
+      ],
+      "live_untouched": "flatten_robust",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat_hot": {
+        "n": 49330,
+        "avg_net": 0.025860922897661523,
+        "t": 40.54131545032922,
+        "win": 0.6571457530914251
+      },
+      "heat_mid": {
+        "n": 30555,
+        "avg_net": 0.01890980841412444,
+        "t": 41.01840454673997,
+        "win": 0.6919325805923744
+      },
+      "heat_cold": {
+        "n": 54265,
+        "avg_net": 0.0276594633011771,
+        "t": 13.130508990727604,
+        "win": 0.6527596056389938
+      },
+      "spy_flat": {
+        "n": 15383,
+        "avg_net": 0.028420013761046928,
+        "t": 4.53909009564599,
+        "win": 0.6208151855944875
+      },
+      "ic": {
+        "spearman": 0.36466489631373705,
+        "pearson": 0.905389810547225,
+        "kind": "overnight\u2192label"
+      },
+      "book": {
+        "discovery": {
+          "n": 452269,
+          "avg_net": -0.0017974593323680753,
+          "t": -13.816299125460741,
+          "win": 0.4463516181741397
+        },
+        "holdout": {
+          "n": 218469,
+          "avg_net": 0.0016969285604072,
+          "t": 3.2665712947798955,
+          "win": 0.4767678709565201
+        }
+      },
+      "edge_vs_book_hold": 0.031004596358045422,
+      "edge_vs_book_disc": 0.023084781792809966,
+      "q1": {
+        "n": 90454,
+        "avg_net": 0.02128732246044189,
+        "t": 45.622393644829316,
+        "win": 0.6474561655648174
+      },
+      "july_share": 0.0,
+      "top5_share": 0.06214724790566865,
+      "top5_tickers": [
+        "MI",
+        "INHD",
+        "ASBP",
+        "DUKR",
+        "DKI"
+      ],
+      "keep": "KILL",
+      "model": "gap",
+      "gap_baseline": "overnight_gap",
+      "fold": "fold_q2",
+      "train_end": "2026-04-01",
+      "hold_end": "2026-07-01",
+      "n_hold_rows": 218469,
+      "gap_ic": {
+        "spearman": 0.36466489631373705,
+        "pearson": 0.905389810547225,
+        "kind": "overnight\u2192label"
+      },
+      "plain": "overnight-gap baseline \u2192 I 1d; long top 20%"
+    },
+    {
+      "def": "gap_open_I_sum_1d",
+      "family": "gap_baseline",
+      "clock": "open",
+      "side": "long",
+      "exit": "hold1",
+      "cohort": "ALL",
+      "cost_model": "futubull",
+      "n_tickers": 3509,
+      "n_dates": 193,
+      "discovery": {
+        "n": 90454,
+        "avg_net": 0.021287322460441942,
+        "t": 45.62239364482943,
+        "win": 0.6474561655648174
+      },
+      "holdout": {
+        "n": 43696,
+        "avg_net": 0.032701524918452664,
+        "t": 12.795206009637011,
+        "win": 0.6960820212376418
+      },
+      "early": {
+        "n": 106046,
+        "avg_net": 0.022158696546835915,
+        "t": 53.65953634309915,
+        "win": 0.6586858533089414
+      },
+      "late": {
+        "n": 28104,
+        "avg_net": 0.03574609182564334,
+        "t": 9.045323478240578,
+        "win": 0.680686023341873
+      },
+      "spy_up": {
+        "n": 82311,
+        "avg_net": 0.029482728986705564,
+        "t": 39.39270058677312,
+        "win": 0.7312752851988191
+      },
+      "spy_dn": {
+        "n": 36456,
+        "avg_net": 0.013454885927220987,
+        "t": 14.286861397984033,
+        "win": 0.527732060566162
+      },
+      "q12": {
+        "n": 134150,
+        "avg_net": 0.025005212811582272,
+        "t": 28.093945632549605,
+        "win": 0.6632948192322028
+      },
+      "q3": null,
+      "baseline": {
+        "n": 452269,
+        "avg_net": -0.0017974593323680493,
+        "t": -13.816299125460537,
+        "win": 0.4463516181741397
+      },
+      "lottery_day_frac": 0.029814822820304763,
+      "lottery_top_day": "2026-05-18",
+      "lottery_n_days": 193,
+      "verdict": "KILL",
+      "fail_reasons": [
+        "q3_missing"
+      ],
+      "live_untouched": "flatten_robust",
+      "label": "I_sum",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat_hot": {
+        "n": 49330,
+        "avg_net": 0.025860922897661558,
+        "t": 40.54131545032928,
+        "win": 0.6571457530914251
+      },
+      "heat_mid": {
+        "n": 30555,
+        "avg_net": 0.01890980841412448,
+        "t": 41.018404546740065,
+        "win": 0.6919325805923744
+      },
+      "heat_cold": {
+        "n": 54265,
+        "avg_net": 0.02765946330117713,
+        "t": 13.130508990727618,
+        "win": 0.6527596056389938
+      },
+      "spy_flat": {
+        "n": 15383,
+        "avg_net": 0.028420013761046983,
+        "t": 4.5390900956459985,
+        "win": 0.6208151855944875
+      },
+      "ic": {
+        "spearman": 0.36466489631373705,
+        "pearson": 0.905389810547225,
+        "kind": "overnight\u2192label"
+      },
+      "book": {
+        "discovery": {
+          "n": 452269,
+          "avg_net": -0.0017974593323680493,
+          "t": -13.816299125460537,
+          "win": 0.4463516181741397
+        },
+        "holdout": {
+          "n": 218469,
+          "avg_net": 0.0016969285604072283,
+          "t": 3.2665712947799506,
+          "win": 0.4767678709565201
+        }
+      },
+      "edge_vs_book_hold": 0.031004596358045436,
+      "edge_vs_book_disc": 0.02308478179280999,
+      "q1": {
+        "n": 90454,
+        "avg_net": 0.021287322460441942,
+        "t": 45.62239364482943,
+        "win": 0.6474561655648174
+      },
+      "july_share": 0.0,
+      "top5_share": 0.062147247905668654,
+      "top5_tickers": [
+        "MI",
+        "INHD",
+        "ASBP",
+        "DUKR",
+        "DKI"
+      ],
+      "keep": "KILL",
+      "model": "gap",
+      "gap_baseline": "overnight_gap",
+      "fold": "fold_q2",
+      "train_end": "2026-04-01",
+      "hold_end": "2026-07-01",
+      "n_hold_rows": 218469,
+      "gap_ic": {
+        "spearman": 0.36466489631373705,
+        "pearson": 0.905389810547225,
+        "kind": "overnight\u2192label"
+      },
+      "plain": "overnight-gap baseline \u2192 I_sum 1d; long top 20%"
+    },
+    {
+      "def": "gap_open_H_1d",
+      "family": "gap_baseline",
+      "clock": "open",
+      "side": "long",
+      "exit": "hold1",
+      "cohort": "ALL",
+      "cost_model": "futubull",
+      "n_tickers": 3514,
+      "n_dates": 221,
+      "discovery": {
+        "n": 134166,
+        "avg_net": -0.006144583049852535,
+        "t": -18.55803296422574,
+        "win": 0.4008243519222456
+      },
+      "holdout": {
+        "n": 18270,
+        "avg_net": -0.0042239128776700744,
+        "t": -6.870419825837985,
+        "win": 0.42698412698412697
+      },
+      "early": {
+        "n": 103090,
+        "avg_net": -0.006978707040787489,
+        "t": -30.050157779846202,
+        "win": 0.3945193520225046
+      },
+      "late": {
+        "n": 49346,
+        "avg_net": -0.003690878873804955,
+        "t": -4.662255676370848,
+        "win": 0.42368175738661695
+      },
+      "spy_up": {
+        "n": 91479,
+        "avg_net": -0.00023220006932169599,
+        "t": -0.5183867444740401,
+        "win": 0.4552629565255414
+      },
+      "spy_dn": {
+        "n": 41501,
+        "avg_net": -0.01743080625190268,
+        "t": -40.622648936243706,
+        "win": 0.30252283077516207
+      },
+      "q12": {
+        "n": 134166,
+        "avg_net": -0.006144583049852535,
+        "t": -18.55803296422574,
+        "win": 0.4008243519222456
+      },
+      "q3": {
+        "n": 18270,
+        "avg_net": -0.0042239128776700744,
+        "t": -6.870419825837985,
+        "win": 0.42698412698412697
+      },
+      "baseline": {
+        "n": 670738,
+        "avg_net": -0.0011364444585593302,
+        "t": -2.9728057754220885,
+        "win": 0.4486982994850448
+      },
+      "lottery_day_frac": 0.09821005065309496,
+      "lottery_top_day": "2026-03-31",
+      "lottery_n_days": 221,
+      "verdict": "KILL",
+      "fail_reasons": [
+        "disc_t",
+        "hold_t",
+        "disc_sign",
+        "hold_sign",
+        "lottery_day",
+        "tape_split",
+        "spy_regime",
+        "q3_sign",
+        "no_edge_vs_uncond",
+        "q1_sign",
+        "month_split",
+        "no_edge_vs_book",
+        "no_edge_vs_book_disc"
+      ],
+      "live_untouched": "flatten_robust",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat_hot": {
+        "n": 53252,
+        "avg_net": -0.005407661043655408,
+        "t": -15.138851172584936,
+        "win": 0.4093367385262525
+      },
+      "heat_mid": {
+        "n": 35483,
+        "avg_net": -0.004780960119246095,
+        "t": -19.319420291982915,
+        "win": 0.40103711636558353
+      },
+      "heat_cold": {
+        "n": 63701,
+        "avg_net": -0.0069693324113224734,
+        "t": -10.894667075212835,
+        "win": 0.4010926045117031
+      },
+      "spy_flat": {
+        "n": 19456,
+        "avg_net": -0.008065773917551079,
+        "t": -16.109330381362536,
+        "win": 0.37911184210526316
+      },
+      "ic": {
+        "spearman": -0.06360289462053,
+        "pearson": -0.004148742117389271,
+        "kind": "overnight\u2192label"
+      },
+      "book": {
+        "discovery": {
+          "n": 670738,
+          "avg_net": -0.0011364444585593302,
+          "t": -2.9728057754220885,
+          "win": 0.4486982994850448
+        },
+        "holdout": {
+          "n": 91346,
+          "avg_net": -0.002160544957045254,
+          "t": -11.556649895928038,
+          "win": 0.4412344273421934
+        }
+      },
+      "edge_vs_book_hold": -0.0020633679206248203,
+      "edge_vs_book_disc": -0.005008138591293204,
+      "q1": {
+        "n": 86291,
+        "avg_net": -0.0073514905052835255,
+        "t": -28.184851014652086,
+        "win": 0.3919759882258868
+      },
+      "july_share": 0.0,
+      "top5_share": -0.062144109097052695,
+      "top5_tickers": [
+        "INHD",
+        "PHOE",
+        "MTC",
+        "TDIC",
+        "XHLD"
+      ],
+      "keep": "KILL",
+      "model": "gap",
+      "gap_baseline": "overnight_gap",
+      "fold": "fold_q3",
+      "train_end": "2026-07-01",
+      "hold_end": null,
+      "n_hold_rows": 91346,
+      "gap_ic": {
+        "spearman": -0.06360289462053,
+        "pearson": -0.004148742117389271,
+        "kind": "overnight\u2192label"
+      },
+      "plain": "overnight-gap baseline \u2192 H 1d; long top 20%"
+    },
+    {
+      "def": "gap_open_I_1d",
+      "family": "gap_baseline",
+      "clock": "open",
+      "side": "long",
+      "exit": "hold1",
+      "cohort": "ALL",
+      "cost_model": "futubull",
+      "n_tickers": 3514,
+      "n_dates": 221,
+      "discovery": {
+        "n": 134166,
+        "avg_net": 0.025054321875937764,
+        "t": 28.153180406798594,
+        "win": 0.6645946066812755
+      },
+      "holdout": {
+        "n": 18270,
+        "avg_net": 0.08305104845006629,
+        "t": 4.159743406097742,
+        "win": 0.7134099616858237
+      },
+      "early": {
+        "n": 103090,
+        "avg_net": 0.022651859661185884,
+        "t": 53.39660246999995,
+        "win": 0.6611504510621786
+      },
+      "late": {
+        "n": 49346,
+        "avg_net": 0.05154623660515306,
+        "t": 6.670143773529152,
+        "win": 0.6898634134478985
+      },
+      "spy_up": {
+        "n": 91479,
+        "avg_net": 0.036724836624156695,
+        "t": 9.993663933717773,
+        "win": 0.7344527159238733
+      },
+      "spy_dn": {
+        "n": 41501,
+        "avg_net": 0.02206688923139,
+        "t": 6.034606766129716,
+        "win": 0.5449025324690971
+      },
+      "q12": {
+        "n": 134166,
+        "avg_net": 0.025054321875937764,
+        "t": 28.153180406798594,
+        "win": 0.6645946066812755
+      },
+      "q3": {
+        "n": 18270,
+        "avg_net": 0.08305104845006629,
+        "t": 4.159743406097742,
+        "win": 0.7134099616858237
+      },
+      "baseline": {
+        "n": 670738,
+        "avg_net": -0.0006592870079336516,
+        "t": -3.458985538859311,
+        "win": 0.4562586285554121
+      },
+      "lottery_day_frac": 0.11468515361645104,
+      "lottery_top_day": "2026-08-03",
+      "lottery_n_days": 221,
+      "verdict": "KEEP",
+      "fail_reasons": [],
+      "live_untouched": "flatten_robust",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat_hot": {
+        "n": 53252,
+        "avg_net": 0.026911558988755455,
+        "t": 41.08954192754981,
+        "win": 0.6601066626605574
+      },
+      "heat_mid": {
+        "n": 35483,
+        "avg_net": 0.019497718644338358,
+        "t": 47.40364287023368,
+        "win": 0.6999689992390722
+      },
+      "heat_cold": {
+        "n": 63701,
+        "avg_net": 0.04323085844905429,
+        "t": 7.209214247247203,
+        "win": 0.6626426586709785
+      },
+      "spy_flat": {
+        "n": 19456,
+        "avg_net": 0.03101518834582648,
+        "t": 5.672751039839428,
+        "win": 0.6372841282894737
+      },
+      "ic": {
+        "spearman": 0.4256938895947102,
+        "pearson": 0.9927686923623689,
+        "kind": "overnight\u2192label"
+      },
+      "book": {
+        "discovery": {
+          "n": 670738,
+          "avg_net": -0.0006592870079336516,
+          "t": -3.458985538859311,
+          "win": 0.4562586285554121
+        },
+        "holdout": {
+          "n": 91346,
+          "avg_net": 0.009343854098112076,
+          "t": 2.3372430780142452,
+          "win": 0.4544150811201366
+        }
+      },
+      "edge_vs_book_hold": 0.07370719435195422,
+      "edge_vs_book_disc": 0.025713608883871416,
+      "q1": {
+        "n": 86291,
+        "avg_net": 0.022035434046796597,
+        "t": 45.145304991726604,
+        "win": 0.6502763903535711
+      },
+      "july_share": 0.1353370736409208,
+      "top5_share": 0.15503892287523116,
+      "top5_tickers": [
+        "LBGJ",
+        "WETO",
+        "DFNS",
+        "FFAI",
+        "MI"
+      ],
+      "keep": "KEEP",
+      "model": "gap",
+      "gap_baseline": "overnight_gap",
+      "fold": "fold_q3",
+      "train_end": "2026-07-01",
+      "hold_end": null,
+      "n_hold_rows": 91346,
+      "gap_ic": {
+        "spearman": 0.4256938895947102,
+        "pearson": 0.9927686923623689,
+        "kind": "overnight\u2192label"
+      },
+      "plain": "overnight-gap baseline \u2192 I 1d; long top 20%"
+    },
+    {
+      "def": "gap_open_I_sum_1d",
+      "family": "gap_baseline",
+      "clock": "open",
+      "side": "long",
+      "exit": "hold1",
+      "cohort": "ALL",
+      "cost_model": "futubull",
+      "n_tickers": 3514,
+      "n_dates": 221,
+      "discovery": {
+        "n": 134166,
+        "avg_net": 0.025054321875937816,
+        "t": 28.15318040679865,
+        "win": 0.6645946066812755
+      },
+      "holdout": {
+        "n": 18270,
+        "avg_net": 0.08305104845006635,
+        "t": 4.1597434060977445,
+        "win": 0.7134099616858237
+      },
+      "early": {
+        "n": 103090,
+        "avg_net": 0.022651859661185936,
+        "t": 53.39660247000007,
+        "win": 0.6611504510621786
+      },
+      "late": {
+        "n": 49346,
+        "avg_net": 0.05154623660515312,
+        "t": 6.670143773529159,
+        "win": 0.6898634134478985
+      },
+      "spy_up": {
+        "n": 91479,
+        "avg_net": 0.03672483662415677,
+        "t": 9.993663933717793,
+        "win": 0.7344527159238733
+      },
+      "spy_dn": {
+        "n": 41501,
+        "avg_net": 0.02206688923139003,
+        "t": 6.034606766129725,
+        "win": 0.5449025324690971
+      },
+      "q12": {
+        "n": 134166,
+        "avg_net": 0.025054321875937816,
+        "t": 28.15318040679865,
+        "win": 0.6645946066812755
+      },
+      "q3": {
+        "n": 18270,
+        "avg_net": 0.08305104845006635,
+        "t": 4.1597434060977445,
+        "win": 0.7134099616858237
+      },
+      "baseline": {
+        "n": 670738,
+        "avg_net": -0.0006592870079336247,
+        "t": -3.45898553885917,
+        "win": 0.4562586285554121
+      },
+      "lottery_day_frac": 0.11468515361645094,
+      "lottery_top_day": "2026-08-03",
+      "lottery_n_days": 221,
+      "verdict": "KILL",
+      "fail_reasons": [
+        "gap_algebra"
+      ],
+      "live_untouched": "flatten_robust",
+      "label": "I_sum",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat_hot": {
+        "n": 53252,
+        "avg_net": 0.026911558988755493,
+        "t": 41.08954192754987,
+        "win": 0.6601066626605574
+      },
+      "heat_mid": {
+        "n": 35483,
+        "avg_net": 0.019497718644338396,
+        "t": 47.40364287023379,
+        "win": 0.6999689992390722
+      },
+      "heat_cold": {
+        "n": 63701,
+        "avg_net": 0.043230858449054346,
+        "t": 7.209214247247213,
+        "win": 0.6626426586709785
+      },
+      "spy_flat": {
+        "n": 19456,
+        "avg_net": 0.031015188345826512,
+        "t": 5.672751039839434,
+        "win": 0.6372841282894737
+      },
+      "ic": {
+        "spearman": 0.4256938895947102,
+        "pearson": 0.9927686923623689,
+        "kind": "overnight\u2192label"
+      },
+      "book": {
+        "discovery": {
+          "n": 670738,
+          "avg_net": -0.0006592870079336247,
+          "t": -3.45898553885917,
+          "win": 0.4562586285554121
+        },
+        "holdout": {
+          "n": 91346,
+          "avg_net": 0.009343854098112099,
+          "t": 2.337243078014251,
+          "win": 0.4544150811201366
+        }
+      },
+      "edge_vs_book_hold": 0.07370719435195425,
+      "edge_vs_book_disc": 0.02571360888387144,
+      "q1": {
+        "n": 86291,
+        "avg_net": 0.022035434046796653,
+        "t": 45.14530499172672,
+        "win": 0.6502763903535711
+      },
+      "july_share": 0.13533707364092074,
+      "top5_share": 0.1550389228752312,
+      "top5_tickers": [
+        "LBGJ",
+        "WETO",
+        "DFNS",
+        "FFAI",
+        "MI"
+      ],
+      "keep": "KILL",
+      "model": "gap",
+      "gap_baseline": "overnight_gap",
+      "fold": "fold_q3",
+      "train_end": "2026-07-01",
+      "hold_end": null,
+      "n_hold_rows": 91346,
+      "gap_ic": {
+        "spearman": 0.4256938895947102,
+        "pearson": 0.9927686923623689,
+        "kind": "overnight\u2192label"
+      },
+      "plain": "overnight-gap baseline \u2192 I_sum 1d; long top 20%"
+    },
+    {
+      "def": "gap_open_H_1d",
+      "family": "gap_baseline",
+      "clock": "open",
+      "side": "long",
+      "exit": "hold1",
+      "cohort": "ALL",
+      "cost_model": "futubull",
+      "n_tickers": 3515,
+      "n_dates": 221,
+      "discovery": {
+        "n": 90454,
+        "avg_net": -0.007153474161784392,
+        "t": -28.572989255949466,
+        "win": 0.3930837773896124
+      },
+      "holdout": {
+        "n": 61963,
+        "avg_net": -0.004226349130571988,
+        "t": -6.5723863417233614,
+        "win": 0.4171198941303681
+      },
+      "early": {
+        "n": 105663,
+        "avg_net": -0.006891825780479719,
+        "t": -30.314797376694436,
+        "win": 0.3948401995021909
+      },
+      "late": {
+        "n": 46754,
+        "avg_net": -0.0038654796501867627,
+        "t": -4.630285188609396,
+        "win": 0.42096932882748
+      },
+      "spy_up": {
+        "n": 91074,
+        "avg_net": -0.00020430129022736945,
+        "t": -0.4541911733115316,
+        "win": 0.4554208665480818
+      },
+      "spy_dn": {
+        "n": 41796,
+        "avg_net": -0.01756203978369273,
+        "t": -41.12005023025533,
+        "win": 0.29923916164226244
+      },
+      "q12": {
+        "n": 132950,
+        "avg_net": -0.006217692543446451,
+        "t": -18.61317206754172,
+        "win": 0.39923279428356523
+      },
+      "q3": {
+        "n": 19467,
+        "avg_net": -0.004227431004080374,
+        "t": -7.265249272399723,
+        "win": 0.42759541788668004
+      },
+      "baseline": {
+        "n": 452269,
+        "avg_net": -0.0015409199890119866,
+        "t": -2.7554790753648146,
+        "win": 0.4422323882468177
+      },
+      "lottery_day_frac": 0.09947119571019017,
+      "lottery_top_day": "2026-03-31",
+      "lottery_n_days": 221,
+      "verdict": "KILL",
+      "fail_reasons": [
+        "disc_t",
+        "hold_t",
+        "disc_sign",
+        "hold_sign",
+        "lottery_day",
+        "tape_split",
+        "spy_regime",
+        "q3_sign",
+        "no_edge_vs_uncond",
+        "q1_sign",
+        "month_split",
+        "no_edge_vs_book",
+        "no_edge_vs_book_disc"
+      ],
+      "live_untouched": "flatten_robust",
+      "label": "H",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat_hot": {
+        "n": 55672,
+        "avg_net": -0.005330739682140028,
+        "t": -15.423567450858988,
+        "win": 0.40832016094266416
+      },
+      "heat_mid": {
+        "n": 34711,
+        "avg_net": -0.005110313641458998,
+        "t": -20.765569389646245,
+        "win": 0.39693468929157905
+      },
+      "heat_cold": {
+        "n": 62034,
+        "avg_net": -0.0070087466004920725,
+        "t": -10.679429359185939,
+        "win": 0.40126382306477093
+      },
+      "spy_flat": {
+        "n": 19547,
+        "avg_net": -0.007996524914426142,
+        "t": -16.022573168200875,
+        "win": 0.37949557476850665
+      },
+      "ic": {
+        "spearman": -0.08492768142232912,
+        "pearson": -0.0033308720806447508,
+        "kind": "overnight\u2192label"
+      },
+      "book": {
+        "discovery": {
+          "n": 452269,
+          "avg_net": -0.0015409199890119866,
+          "t": -2.7554790753648146,
+          "win": 0.4422323882468177
+        },
+        "holdout": {
+          "n": 309815,
+          "avg_net": -0.0008479359630138815,
+          "t": -5.773871916520712,
+          "win": 0.45593660733018093
+        }
+      },
+      "edge_vs_book_hold": -0.0033784131675581065,
+      "edge_vs_book_disc": -0.005612554172772405,
+      "q1": {
+        "n": 90454,
+        "avg_net": -0.007153474161784392,
+        "t": -28.572989255949466,
+        "win": 0.3930837773896124
+      },
+      "july_share": 0.0,
+      "top5_share": -0.06160449927032879,
+      "top5_tickers": [
+        "INHD",
+        "PHOE",
+        "MTC",
+        "TDIC",
+        "XHLD"
+      ],
+      "keep": "KILL",
+      "model": "gap",
+      "gap_baseline": "overnight_gap",
+      "fold": "fold_combined",
+      "train_end": "2026-04-01",
+      "hold_end": null,
+      "n_hold_rows": 309815,
+      "gap_ic": {
+        "spearman": -0.08492768142232912,
+        "pearson": -0.0033308720806447508,
+        "kind": "overnight\u2192label"
+      },
+      "plain": "overnight-gap baseline \u2192 H 1d; long top 20%"
+    },
+    {
+      "def": "gap_open_H_2d",
+      "family": "gap_baseline",
+      "clock": "open",
+      "side": "long",
+      "exit": "hold2",
+      "cohort": "ALL",
+      "cost_model": "futubull",
+      "n_tickers": 3515,
+      "n_dates": 221,
+      "discovery": {
+        "n": 90454,
+        "avg_net": -0.003625199147209603,
+        "t": -8.748646535766277,
+        "win": 0.43914033652464235
+      },
+      "holdout": {
+        "n": 61963,
+        "avg_net": -0.0007784343598606574,
+        "t": -2.862044601295977,
+        "win": 0.4624372609460484
+      },
+      "early": {
+        "n": 105663,
+        "avg_net": -0.0024411967498801004,
+        "t": -6.735665654515422,
+        "win": 0.45072541949405187
+      },
+      "late": {
+        "n": 46754,
+        "avg_net": -0.002528205495127071,
+        "t": -7.921415945750829,
+        "win": 0.4438336826795568
+      },
+      "spy_up": {
+        "n": 91074,
+        "avg_net": -0.002213389347126676,
+        "t": -12.13742924333086,
+        "win": 0.4536530733249885
+      },
+      "spy_dn": {
+        "n": 41796,
+        "avg_net": -0.0015119178360334506,
+        "t": -1.7395865792720444,
+        "win": 0.4508086898267777
+      },
+      "q12": {
+        "n": 132950,
+        "avg_net": -0.0024873391508473076,
+        "t": -8.194202057939986,
+        "win": 0.4471605866867243
+      },
+      "q3": {
+        "n": 19467,
+        "avg_net": -0.0023350363074247566,
+        "t": -5.843044060445265,
+        "win": 0.45851954589818666
+      },
+      "baseline": {
+        "n": 452269,
+        "avg_net": -0.0014643593989035484,
+        "t": -2.61849095901323,
+        "win": 0.4433379249959648
+      },
+      "lottery_day_frac": 0.08111062387718777,
+      "lottery_top_day": "2025-10-13",
+      "lottery_n_days": 221,
+      "verdict": "KILL",
+      "fail_reasons": [
+        "disc_t",
+        "hold_t",
+        "disc_sign",
+        "hold_sign",
+        "lottery_day",
+        "tape_split",
+        "spy_regime",
+        "q3_sign",
+        "no_edge_vs_uncond",
+        "q1_sign",
+        "month_split",
+        "no_edge_vs_book",
+        "no_edge_vs_book_disc"
+      ],
+      "live_untouched": "flatten_robust",
+      "label": "H",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat_hot": {
+        "n": 55672,
+        "avg_net": -0.0027783245843626334,
+        "t": -10.092679630055352,
+        "win": 0.4497233797959477
+      },
+      "heat_mid": {
+        "n": 34711,
+        "avg_net": -0.0019971098226788586,
+        "t": -8.365553631015548,
+        "win": 0.44936763561983234
+      },
+      "heat_cold": {
+        "n": 62034,
+        "avg_net": -0.0024527086208542366,
+        "t": -4.087408394660258,
+        "win": 0.44719025050778605
+      },
+      "spy_flat": {
+        "n": 19547,
+        "avg_net": -0.005697731244009459,
+        "t": -11.51437462257629,
+        "win": 0.42042257123855326
+      },
+      "ic": {
+        "spearman": -0.007265027597307334,
+        "pearson": 0.0033110156831006408,
+        "kind": "overnight\u2192label"
+      },
+      "book": {
+        "discovery": {
+          "n": 452269,
+          "avg_net": -0.0014643593989035484,
+          "t": -2.61849095901323,
+          "win": 0.4433379249959648
+        },
+        "holdout": {
+          "n": 309815,
+          "avg_net": -0.0008406776297332548,
+          "t": -5.703424122033711,
+          "win": 0.4561754595484402
+        }
+      },
+      "edge_vs_book_hold": 6.224326987259738e-05,
+      "edge_vs_book_disc": -0.0021608397483060546,
+      "q1": {
+        "n": 90454,
+        "avg_net": -0.003625199147209603,
+        "t": -8.748646535766277,
+        "win": 0.43914033652464235
+      },
+      "july_share": 0.0,
+      "top5_share": -0.12051799124459552,
+      "top5_tickers": [
+        "ELPW",
+        "TDIC",
+        "SPRB",
+        "BBGI",
+        "ILLR"
+      ],
+      "keep": "KILL",
+      "model": "gap",
+      "gap_baseline": "overnight_gap",
+      "fold": "fold_combined",
+      "train_end": "2026-04-01",
+      "hold_end": null,
+      "n_hold_rows": 309815,
+      "gap_ic": {
+        "spearman": -0.007265027597307334,
+        "pearson": 0.0033110156831006408,
+        "kind": "overnight\u2192label"
+      },
+      "plain": "overnight-gap baseline \u2192 H 2d; long top 20%"
+    },
+    {
+      "def": "gap_open_H_3d",
+      "family": "gap_baseline",
+      "clock": "open",
+      "side": "long",
+      "exit": "hold3",
+      "cohort": "ALL",
+      "cost_model": "futubull",
+      "n_tickers": 3515,
+      "n_dates": 221,
+      "discovery": {
+        "n": 90454,
+        "avg_net": -0.003103938425512773,
+        "t": -16.297876628337892,
+        "win": 0.4407544166095474
+      },
+      "holdout": {
+        "n": 61963,
+        "avg_net": -0.002739031261726576,
+        "t": -11.231407173453272,
+        "win": 0.43204815777157335
+      },
+      "early": {
+        "n": 105663,
+        "avg_net": -0.003312024736309277,
+        "t": -18.947925153248736,
+        "win": 0.4348542062973794
+      },
+      "late": {
+        "n": 46754,
+        "avg_net": -0.0021500571223653886,
+        "t": -7.411644736877505,
+        "win": 0.4425503700218163
+      },
+      "spy_up": {
+        "n": 91074,
+        "avg_net": -0.0038985254043679388,
+        "t": -20.906502291769964,
+        "win": 0.41903287436590025
+      },
+      "spy_dn": {
+        "n": 41796,
+        "avg_net": -0.0016347738356148297,
+        "t": -5.3797959921026175,
+        "win": 0.46502057613168724
+      },
+      "q12": {
+        "n": 132950,
+        "avg_net": -0.002965945420882896,
+        "t": -18.597299362503794,
+        "win": 0.4374802557352388
+      },
+      "q3": {
+        "n": 19467,
+        "avg_net": -0.002884871665144826,
+        "t": -6.461416474837979,
+        "win": 0.43540350336466843
+      },
+      "baseline": {
+        "n": 452269,
+        "avg_net": -0.0012741195301265947,
+        "t": -2.278258697684998,
+        "win": 0.4464046839380988
+      },
+      "lottery_day_frac": 0.09443894334633385,
+      "lottery_top_day": "2026-03-31",
+      "lottery_n_days": 221,
+      "verdict": "KILL",
+      "fail_reasons": [
+        "disc_t",
+        "hold_t",
+        "disc_sign",
+        "hold_sign",
+        "lottery_day",
+        "tape_split",
+        "spy_regime",
+        "q3_sign",
+        "no_edge_vs_uncond",
+        "q1_sign",
+        "month_split",
+        "no_edge_vs_book",
+        "no_edge_vs_book_disc"
+      ],
+      "live_untouched": "flatten_robust",
+      "label": "H",
+      "horizon": 3,
+      "horizon_plain": "3d",
+      "heat_hot": {
+        "n": 55672,
+        "avg_net": -0.0034041975559568243,
+        "t": -12.88605471983513,
+        "win": 0.4338805862911338
+      },
+      "heat_mid": {
+        "n": 34711,
+        "avg_net": -0.0019194617125845776,
+        "t": -8.14985636566718,
+        "win": 0.4393419953328916
+      },
+      "heat_cold": {
+        "n": 62034,
+        "avg_net": -0.0031327549178022268,
+        "t": -12.494159011855889,
+        "win": 0.439017313086372
+      },
+      "spy_flat": {
+        "n": 19547,
+        "avg_net": -0.0013864496086854708,
+        "t": -3.125324819177646,
+        "win": 0.46247506011152606
+      },
+      "ic": {
+        "spearman": -0.02746653767912147,
+        "pearson": -0.002353172071427157,
+        "kind": "overnight\u2192label"
+      },
+      "book": {
+        "discovery": {
+          "n": 452269,
+          "avg_net": -0.0012741195301265947,
+          "t": -2.278258697684998,
+          "win": 0.4464046839380988
+        },
+        "holdout": {
+          "n": 309815,
+          "avg_net": -0.0011020621569106145,
+          "t": -7.481861886490844,
+          "win": 0.4526636863934929
+        }
+      },
+      "edge_vs_book_hold": -0.0016369691048159615,
+      "edge_vs_book_disc": -0.0018298188953861784,
+      "q1": {
+        "n": 90454,
+        "avg_net": -0.003103938425512773,
+        "t": -16.297876628337892,
+        "win": 0.4407544166095474
+      },
+      "july_share": 0.0,
+      "top5_share": -0.028767311471785528,
+      "top5_tickers": [
+        "CYCU",
+        "FLZH",
+        "JLHL",
+        "AXTI",
+        "SPRB"
+      ],
+      "keep": "KILL",
+      "model": "gap",
+      "gap_baseline": "overnight_gap",
+      "fold": "fold_combined",
+      "train_end": "2026-04-01",
+      "hold_end": null,
+      "n_hold_rows": 309815,
+      "gap_ic": {
+        "spearman": -0.02746653767912147,
+        "pearson": -0.002353172071427157,
+        "kind": "overnight\u2192label"
+      },
+      "plain": "overnight-gap baseline \u2192 H 3d; long top 20%"
+    },
+    {
+      "def": "gap_open_H_1w",
+      "family": "gap_baseline",
+      "clock": "open",
+      "side": "long",
+      "exit": "hold5",
+      "cohort": "ALL",
+      "cost_model": "futubull",
+      "n_tickers": 3515,
+      "n_dates": 221,
+      "discovery": {
+        "n": 90454,
+        "avg_net": 0.000785030222179722,
+        "t": 0.2849897356289195,
+        "win": 0.4440046874654521
+      },
+      "holdout": {
+        "n": 61963,
+        "avg_net": -0.002772004921474154,
+        "t": -11.377034735532073,
+        "win": 0.4359859916401724
+      },
+      "early": {
+        "n": 105663,
+        "avg_net": 0.00039648935771711806,
+        "t": 0.1680706450143597,
+        "win": 0.4441005839319345
+      },
+      "late": {
+        "n": 46754,
+        "avg_net": -0.003051008945474737,
+        "t": -10.719228127893574,
+        "win": 0.4331607990760149
+      },
+      "spy_up": {
+        "n": 91074,
+        "avg_net": 0.0009888822705822556,
+        "t": 0.3614558722324445,
+        "win": 0.4382919384236994
+      },
+      "spy_dn": {
+        "n": 41796,
+        "avg_net": -0.003425168467274737,
+        "t": -11.095717594083208,
+        "win": 0.4423389798066801
+      },
+      "q12": {
+        "n": 132950,
+        "avg_net": -0.00031625883561474047,
+        "t": -0.16851890889342305,
+        "win": 0.440421210981572
+      },
+      "q3": {
+        "n": 19467,
+        "avg_net": -0.003015667798699881,
+        "t": -7.775360035988989,
+        "win": 0.44295474392561773
+      },
+      "baseline": {
+        "n": 452269,
+        "avg_net": -0.0012403861918157519,
+        "t": -2.2179165549131774,
+        "win": 0.44743946633530046
+      },
+      "lottery_day_frac": 0.2556553913177213,
+      "lottery_top_day": "2026-02-18",
+      "lottery_n_days": 221,
+      "verdict": "KILL",
+      "fail_reasons": [
+        "disc_t",
+        "hold_t",
+        "hold_sign",
+        "lottery_day",
+        "tape_split",
+        "spy_regime",
+        "q3_sign",
+        "no_edge_vs_uncond",
+        "month_split",
+        "no_edge_vs_book"
+      ],
+      "live_untouched": "flatten_robust",
+      "label": "H",
+      "horizon": 5,
+      "horizon_plain": "1w",
+      "heat_hot": {
+        "n": 55672,
+        "avg_net": 0.00037579678709128615,
+        "t": 0.10488778876270517,
+        "win": 0.4440293145566892
+      },
+      "heat_mid": {
+        "n": 34711,
+        "avg_net": -0.0025279567526023017,
+        "t": -11.343151613674854,
+        "win": 0.4398317536227709
+      },
+      "heat_cold": {
+        "n": 62034,
+        "avg_net": -0.0005468947532587308,
+        "t": -0.226347967195259,
+        "win": 0.43830802463165364
+      },
+      "spy_flat": {
+        "n": 19547,
+        "avg_net": -0.0024380078725664248,
+        "t": -6.069698405844632,
+        "win": 0.44876451629406044
+      },
+      "ic": {
+        "spearman": -0.031519617641603895,
+        "pearson": -0.0006908876556003911,
+        "kind": "overnight\u2192label"
+      },
+      "book": {
+        "discovery": {
+          "n": 452269,
+          "avg_net": -0.0012403861918157519,
+          "t": -2.2179165549131774,
+          "win": 0.44743946633530046
+        },
+        "holdout": {
+          "n": 309815,
+          "avg_net": -0.001105229095842127,
+          "t": -7.502075447305755,
+          "win": 0.4512467117473331
+        }
+      },
+      "edge_vs_book_hold": -0.001666775825632027,
+      "edge_vs_book_disc": 0.0020254164139954737,
+      "q1": {
+        "n": 90454,
+        "avg_net": 0.000785030222179722,
+        "t": 0.2849897356289195,
+        "win": 0.4440046874654521
+      },
+      "july_share": 0.0,
+      "top5_share": -3.599567617645664,
+      "top5_tickers": [
+        "ILLR",
+        "RGNT",
+        "CGTL",
+        "CMCT",
+        "CODX"
+      ],
+      "keep": "KILL",
+      "model": "gap",
+      "gap_baseline": "overnight_gap",
+      "fold": "fold_combined",
+      "train_end": "2026-04-01",
+      "hold_end": null,
+      "n_hold_rows": 309815,
+      "gap_ic": {
+        "spearman": -0.031519617641603895,
+        "pearson": -0.0006908876556003911,
+        "kind": "overnight\u2192label"
+      },
+      "plain": "overnight-gap baseline \u2192 H 1w; long top 20%"
+    },
+    {
+      "def": "gap_open_H_2w",
+      "family": "gap_baseline",
+      "clock": "open",
+      "side": "long",
+      "exit": "hold10",
+      "cohort": "ALL",
+      "cost_model": "futubull",
+      "n_tickers": 3515,
+      "n_dates": 221,
+      "discovery": {
+        "n": 90454,
+        "avg_net": -0.0022173993347236057,
+        "t": -5.415450866216889,
+        "win": 0.45314745616556484
+      },
+      "holdout": {
+        "n": 61963,
+        "avg_net": -0.0030211239077084853,
+        "t": -12.022400159597307,
+        "win": 0.431951325791198
+      },
+      "early": {
+        "n": 105663,
+        "avg_net": -0.00236749956837266,
+        "t": -6.649169028874416,
+        "win": 0.4478388839991293
+      },
+      "late": {
+        "n": 46754,
+        "avg_net": -0.0029433510121801274,
+        "t": -9.76081958081794,
+        "win": 0.4370535141378278
+      },
+      "spy_up": {
+        "n": 91074,
+        "avg_net": -0.0033936484979927148,
+        "t": -19.021816501307118,
+        "win": 0.44069657641039156
+      },
+      "spy_dn": {
+        "n": 41796,
+        "avg_net": -0.0001310221453734128,
+        "t": -0.4012473389411386,
+        "win": 0.46284333429036273
+      },
+      "q12": {
+        "n": 132950,
+        "avg_net": -0.002586059557508787,
+        "t": -8.828271656132083,
+        "win": 0.4453854832643851
+      },
+      "q3": {
+        "n": 19467,
+        "avg_net": -0.0022578682871356535,
+        "t": -4.45125231962018,
+        "win": 0.4386911183027688
+      },
+      "baseline": {
+        "n": 452269,
+        "avg_net": -0.0011597516487372127,
+        "t": -2.0734326390618376,
+        "win": 0.4494648096597379
+      },
+      "lottery_day_frac": 0.05710534743412368,
+      "lottery_top_day": "2026-04-17",
+      "lottery_n_days": 221,
+      "verdict": "KILL",
+      "fail_reasons": [
+        "disc_t",
+        "hold_t",
+        "disc_sign",
+        "hold_sign",
+        "lottery_day",
+        "tape_split",
+        "spy_regime",
+        "q3_sign",
+        "no_edge_vs_uncond",
+        "q1_sign",
+        "month_split",
+        "no_edge_vs_book",
+        "no_edge_vs_book_disc"
+      ],
+      "live_untouched": "flatten_robust",
+      "label": "H",
+      "horizon": 10,
+      "horizon_plain": "2w",
+      "heat_hot": {
+        "n": 55672,
+        "avg_net": -0.003079641705689833,
+        "t": -4.8351593680932945,
+        "win": 0.4412810748670786
+      },
+      "heat_mid": {
+        "n": 34711,
+        "avg_net": -0.0023641866368042607,
+        "t": -9.70146329580526,
+        "win": 0.44674598830341966
+      },
+      "heat_cold": {
+        "n": 62034,
+        "avg_net": -0.00216425580693111,
+        "t": -7.948369699792801,
+        "win": 0.44620691878647195
+      },
+      "spy_flat": {
+        "n": 19547,
+        "avg_net": -0.0037459044979916275,
+        "t": -2.1464694951036987,
+        "win": 0.42323630224586894
+      },
+      "ic": {
+        "spearman": -0.01737012109028925,
+        "pearson": -0.008805823475765192,
+        "kind": "overnight\u2192label"
+      },
+      "book": {
+        "discovery": {
+          "n": 452269,
+          "avg_net": -0.0011597516487372127,
+          "t": -2.0734326390618376,
+          "win": 0.4494648096597379
+        },
+        "holdout": {
+          "n": 309815,
+          "avg_net": -0.0014363283783346158,
+          "t": -9.774378559749653,
+          "win": 0.44444587899230187
+        }
+      },
+      "edge_vs_book_hold": -0.0015847955293738696,
+      "edge_vs_book_disc": -0.001057647685986393,
+      "q1": {
+        "n": 90454,
+        "avg_net": -0.0022173993347236057,
+        "t": -5.415450866216889,
+        "win": 0.45314745616556484
+      },
+      "july_share": 0.0,
+      "top5_share": -0.13392449278978705,
+      "top5_tickers": [
+        "ELPW",
+        "STAK",
+        "ILLR",
+        "JLHL",
+        "MGRT"
+      ],
+      "keep": "KILL",
+      "model": "gap",
+      "gap_baseline": "overnight_gap",
+      "fold": "fold_combined",
+      "train_end": "2026-04-01",
+      "hold_end": null,
+      "n_hold_rows": 309815,
+      "gap_ic": {
+        "spearman": -0.01737012109028925,
+        "pearson": -0.008805823475765192,
+        "kind": "overnight\u2192label"
+      },
+      "plain": "overnight-gap baseline \u2192 H 2w; long top 20%"
+    },
+    {
+      "def": "gap_open_I_1d",
+      "family": "gap_baseline",
+      "clock": "open",
+      "side": "long",
+      "exit": "hold1",
+      "cohort": "ALL",
+      "cost_model": "futubull",
+      "n_tickers": 3515,
+      "n_dates": 221,
+      "discovery": {
+        "n": 90454,
+        "avg_net": 0.02128732246044189,
+        "t": 45.622393644829316,
+        "win": 0.6474561655648174
+      },
+      "holdout": {
+        "n": 61963,
+        "avg_net": 0.04749726682240808,
+        "t": 7.714110677111169,
+        "win": 0.7007246259864758
+      },
+      "early": {
+        "n": 105663,
+        "avg_net": 0.022217959442618167,
+        "t": 53.61536701049154,
+        "win": 0.6588304326017622
+      },
+      "late": {
+        "n": 46754,
+        "avg_net": 0.05392010012765202,
+        "t": 6.610996434461171,
+        "win": 0.6923471788510074
+      },
+      "spy_up": {
+        "n": 91074,
+        "avg_net": 0.036856103273886394,
+        "t": 9.985033708997126,
+        "win": 0.7349957177679689
+      },
+      "spy_dn": {
+        "n": 41796,
+        "avg_net": 0.0217038534285569,
+        "t": 5.977233641750243,
+        "win": 0.5405301942769642
+      },
+      "q12": {
+        "n": 132950,
+        "avg_net": 0.025147811616318846,
+        "t": 28.003087988703317,
+        "win": 0.6633696878525761
+      },
+      "q3": {
+        "n": 19467,
+        "avg_net": 0.07834771950295995,
+        "t": 4.181139851368588,
+        "win": 0.7083269122104073
+      },
+      "baseline": {
+        "n": 452269,
+        "avg_net": -0.0017974593323680753,
+        "t": -13.816299125460741,
+        "win": 0.4463516181741397
+      },
+      "lottery_day_frac": 0.11495705220984886,
+      "lottery_top_day": "2026-08-03",
+      "lottery_n_days": 221,
+      "verdict": "KEEP",
+      "fail_reasons": [],
+      "live_untouched": "flatten_robust",
+      "label": "I",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat_hot": {
+        "n": 55672,
+        "avg_net": 0.0266431933452828,
+        "t": 42.31614380782334,
+        "win": 0.6613378358959621
+      },
+      "heat_mid": {
+        "n": 34711,
+        "avg_net": 0.019192628720952593,
+        "t": 46.28291810447929,
+        "win": 0.6964650975195184
+      },
+      "heat_cold": {
+        "n": 62034,
+        "avg_net": 0.04383275968826929,
+        "t": 7.118439598572881,
+        "win": 0.6607827965309346
+      },
+      "spy_flat": {
+        "n": 19547,
+        "avg_net": 0.030942323757500594,
+        "t": 5.685823722625983,
+        "win": 0.6370798588018621
+      },
+      "ic": {
+        "spearman": 0.3829841610522851,
+        "pearson": 0.9843897351182785,
+        "kind": "overnight\u2192label"
+      },
+      "book": {
+        "discovery": {
+          "n": 452269,
+          "avg_net": -0.0017974593323680753,
+          "t": -13.816299125460741,
+          "win": 0.4463516181741397
+        },
+        "holdout": {
+          "n": 309815,
+          "avg_net": 0.0039515516747400566,
+          "t": 3.2013538788987157,
+          "win": 0.4701773639107209
+        }
+      },
+      "edge_vs_book_hold": 0.04354571514766803,
+      "edge_vs_book_disc": 0.023084781792809966,
+      "q1": {
+        "n": 90454,
+        "avg_net": 0.02128732246044189,
+        "t": 45.622393644829316,
+        "win": 0.6474561655648174
+      },
+      "july_share": 0.13680468933526774,
+      "top5_share": 0.1553903372565532,
+      "top5_tickers": [
+        "LBGJ",
+        "WETO",
+        "DFNS",
+        "FFAI",
+        "MI"
+      ],
+      "keep": "KEEP",
+      "model": "gap",
+      "gap_baseline": "overnight_gap",
+      "fold": "fold_combined",
+      "train_end": "2026-04-01",
+      "hold_end": null,
+      "n_hold_rows": 309815,
+      "gap_ic": {
+        "spearman": 0.3829841610522851,
+        "pearson": 0.9843897351182785,
+        "kind": "overnight\u2192label"
+      },
+      "plain": "overnight-gap baseline \u2192 I 1d; long top 20%"
+    },
+    {
+      "def": "gap_open_I_2d",
+      "family": "gap_baseline",
+      "clock": "open",
+      "side": "long",
+      "exit": "hold2",
+      "cohort": "ALL",
+      "cost_model": "futubull",
+      "n_tickers": 3515,
+      "n_dates": 221,
+      "discovery": {
+        "n": 90454,
+        "avg_net": -0.001983565275225654,
+        "t": -4.288227701281623,
+        "win": 0.4477082273862958
+      },
+      "holdout": {
+        "n": 61963,
+        "avg_net": 0.0035258358863738044,
+        "t": 1.9135005878169418,
+        "win": 0.4619692397075674
+      },
+      "early": {
+        "n": 105663,
+        "avg_net": -0.0011416967872129788,
+        "t": -2.7965717418200056,
+        "win": 0.4544542555104436
+      },
+      "late": {
+        "n": 46754,
+        "avg_net": 0.003415431048667625,
+        "t": 1.4045352673337035,
+        "win": 0.4513624502716345
+      },
+      "spy_up": {
+        "n": 91074,
+        "avg_net": -8.381891563159445e-05,
+        "t": -0.15475855717315617,
+        "win": 0.45698003821068583
+      },
+      "spy_dn": {
+        "n": 41796,
+        "avg_net": 0.0030088693949696364,
+        "t": 1.1481121589319792,
+        "win": 0.45990046894439657
+      },
+      "q12": {
+        "n": 132950,
+        "avg_net": -0.0009126616243435585,
+        "t": -2.587892788710047,
+        "win": 0.4522452049642723
+      },
+      "q3": {
+        "n": 19467,
+        "avg_net": 0.008238984875871826,
+        "t": 1.4295340691191818,
+        "win": 0.462115374736734
+      },
+      "baseline": {
+        "n": 452269,
+        "avg_net": -0.0016999518306037194,
+        "t": -13.061149410017848,
+        "win": 0.44797012397489105
+      },
+      "lottery_day_frac": 0.11540192657114316,
+      "lottery_top_day": "2026-07-17",
+      "lottery_n_days": 221,
+      "verdict": "KILL",
+      "fail_reasons": [
+        "disc_t",
+        "hold_t",
+        "disc_sign",
+        "lottery_day",
+        "tape_split",
+        "spy_regime",
+        "q3_split",
+        "no_edge_vs_uncond",
+        "q1_sign",
+        "month_split",
+        "ticker_ghost",
+        "no_edge_vs_book",
+        "no_edge_vs_book_disc"
+      ],
+      "live_untouched": "flatten_robust",
+      "label": "I",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat_hot": {
+        "n": 55672,
+        "avg_net": -0.0016890710404818207,
+        "t": -3.470196854485202,
+        "win": 0.4488791493030608
+      },
+      "heat_mid": {
+        "n": 34711,
+        "avg_net": -0.0011456697429797994,
+        "t": -3.971385615371442,
+        "win": 0.45556163752124684
+      },
+      "heat_cold": {
+        "n": 62034,
+        "avg_net": 0.0027863955417412995,
+        "t": 1.4633626226168415,
+        "win": 0.4565077215720411
+      },
+      "spy_flat": {
+        "n": 19547,
+        "avg_net": -0.0040453791214927265,
+        "t": -4.19275622047312,
+        "win": 0.4236455722105694
+      },
+      "ic": {
+        "spearman": -0.008457137434510834,
+        "pearson": -0.001303592689338282,
+        "kind": "overnight\u2192label"
+      },
+      "book": {
+        "discovery": {
+          "n": 452269,
+          "avg_net": -0.0016999518306037194,
+          "t": -13.061149410017848,
+          "win": 0.44797012397489105
+        },
+        "holdout": {
+          "n": 309815,
+          "avg_net": 0.003960787323320761,
+          "t": 3.20645149274964,
+          "win": 0.46964801575133547
+        }
+      },
+      "edge_vs_book_hold": -0.00043495143694695674,
+      "edge_vs_book_disc": -0.0002836134446219346,
+      "q1": {
+        "n": 90454,
+        "avg_net": -0.001983565275225654,
+        "t": -4.288227701281623,
+        "win": 0.4477082273862958
+      },
+      "july_share": 0.3632801822213389,
+      "top5_share": 5.2965670247808925,
+      "top5_tickers": [
+        "DFNS",
+        "KWM",
+        "ELPW",
+        "PRPL",
+        "SPRB"
+      ],
+      "keep": "KILL",
+      "model": "gap",
+      "gap_baseline": "overnight_gap",
+      "fold": "fold_combined",
+      "train_end": "2026-04-01",
+      "hold_end": null,
+      "n_hold_rows": 309815,
+      "gap_ic": {
+        "spearman": -0.008457137434510834,
+        "pearson": -0.001303592689338282,
+        "kind": "overnight\u2192label"
+      },
+      "plain": "overnight-gap baseline \u2192 I 2d; long top 20%"
+    },
+    {
+      "def": "gap_open_I_3d",
+      "family": "gap_baseline",
+      "clock": "open",
+      "side": "long",
+      "exit": "hold3",
+      "cohort": "ALL",
+      "cost_model": "futubull",
+      "n_tickers": 3515,
+      "n_dates": 221,
+      "discovery": {
+        "n": 90454,
+        "avg_net": -0.002248485767269743,
+        "t": -5.831080607082286,
+        "win": 0.4434850863422292
+      },
+      "holdout": {
+        "n": 61963,
+        "avg_net": 0.0008014753064230563,
+        "t": 0.4785683143090131,
+        "win": 0.4388586737246421
+      },
+      "early": {
+        "n": 105663,
+        "avg_net": -0.0021363203467263435,
+        "t": -6.32603274267573,
+        "win": 0.44287972137834436
+      },
+      "late": {
+        "n": 46754,
+        "avg_net": 0.001540131317436441,
+        "t": 0.6957365035400818,
+        "win": 0.43872182059289044
+      },
+      "spy_up": {
+        "n": 91074,
+        "avg_net": -0.003452666011118971,
+        "t": -9.156277415428924,
+        "win": 0.4172211608142829
+      },
+      "spy_dn": {
+        "n": 41796,
+        "avg_net": 0.003714297759397314,
+        "t": 1.5134926936357396,
+        "win": 0.48140970427792135
+      },
+      "q12": {
+        "n": 132950,
+        "avg_net": -0.0015746945118683539,
+        "t": -4.343392129282302,
+        "win": 0.4437156825874389
+      },
+      "q3": {
+        "n": 19467,
+        "avg_net": 0.0028578064505150554,
+        "t": 0.5659727001941591,
+        "win": 0.42718446601941745
+      },
+      "baseline": {
+        "n": 452269,
+        "avg_net": -0.001668396396291052,
+        "t": -12.832179846493748,
+        "win": 0.4490137506660859
+      },
+      "lottery_day_frac": 0.09999424267034747,
+      "lottery_top_day": "2026-07-20",
+      "lottery_n_days": 221,
+      "verdict": "KILL",
+      "fail_reasons": [
+        "disc_t",
+        "hold_t",
+        "disc_sign",
+        "lottery_day",
+        "tape_split",
+        "spy_regime",
+        "q3_split",
+        "no_edge_vs_uncond",
+        "q1_sign",
+        "month_split",
+        "no_edge_vs_book",
+        "no_edge_vs_book_disc"
+      ],
+      "live_untouched": "flatten_robust",
+      "label": "I",
+      "horizon": 3,
+      "horizon_plain": "3d",
+      "heat_hot": {
+        "n": 55672,
+        "avg_net": -0.002656805220000489,
+        "t": -6.489807641594986,
+        "win": 0.43797600229918093
+      },
+      "heat_mid": {
+        "n": 34711,
+        "avg_net": -0.00184586266275683,
+        "t": -7.039464020053002,
+        "win": 0.4444988620322088
+      },
+      "heat_cold": {
+        "n": 62034,
+        "avg_net": 0.0009391411470173785,
+        "t": 0.5460549568283274,
+        "win": 0.4432408034303769
+      },
+      "spy_flat": {
+        "n": 19547,
+        "avg_net": 0.00028048283440474216,
+        "t": 0.32560454082059753,
+        "win": 0.47009771320407223
+      },
+      "ic": {
+        "spearman": -0.023308498743104873,
+        "pearson": -0.0010901524724949258,
+        "kind": "overnight\u2192label"
+      },
+      "book": {
+        "discovery": {
+          "n": 452269,
+          "avg_net": -0.001668396396291052,
+          "t": -12.832179846493748,
+          "win": 0.4490137506660859
+        },
+        "holdout": {
+          "n": 309815,
+          "avg_net": 0.003914900491841951,
+          "t": 3.16929017547486,
+          "win": 0.4692768264932298
+        }
+      },
+      "edge_vs_book_hold": -0.003113425185418894,
+      "edge_vs_book_disc": -0.0005800893709786911,
+      "q1": {
+        "n": 90454,
+        "avg_net": -0.002248485767269743,
+        "t": -5.831080607082286,
+        "win": 0.4434850863422292
+      },
+      "july_share": 0.17635210860451203,
+      "top5_share": -1.1639202120278285,
+      "top5_tickers": [
+        "FFAI",
+        "ASBP",
+        "DUKR",
+        "AEHL",
+        "SPRB"
+      ],
+      "keep": "KILL",
+      "model": "gap",
+      "gap_baseline": "overnight_gap",
+      "fold": "fold_combined",
+      "train_end": "2026-04-01",
+      "hold_end": null,
+      "n_hold_rows": 309815,
+      "gap_ic": {
+        "spearman": -0.023308498743104873,
+        "pearson": -0.0010901524724949258,
+        "kind": "overnight\u2192label"
+      },
+      "plain": "overnight-gap baseline \u2192 I 3d; long top 20%"
+    },
+    {
+      "def": "gap_open_I_1w",
+      "family": "gap_baseline",
+      "clock": "open",
+      "side": "long",
+      "exit": "hold5",
+      "cohort": "ALL",
+      "cost_model": "futubull",
+      "n_tickers": 3515,
+      "n_dates": 221,
+      "discovery": {
+        "n": 90454,
+        "avg_net": -0.001869559432851401,
+        "t": -5.045693122746652,
+        "win": 0.44383885731974265
+      },
+      "holdout": {
+        "n": 61963,
+        "avg_net": 0.0032331633893020735,
+        "t": 1.744254259704552,
+        "win": 0.4623081516388813
+      },
+      "early": {
+        "n": 105663,
+        "avg_net": -0.0010499346797885913,
+        "t": -3.2058149403113303,
+        "win": 0.4529400073819596
+      },
+      "late": {
+        "n": 46754,
+        "avg_net": 0.003040737096776474,
+        "t": 1.2412669333654396,
+        "win": 0.4477477862856654
+      },
+      "spy_up": {
+        "n": 91074,
+        "avg_net": -0.0009049654244202996,
+        "t": -1.6141451780246565,
+        "win": 0.44468234622394975
+      },
+      "spy_dn": {
+        "n": 41796,
+        "avg_net": 0.0010054699098637915,
+        "t": 0.4341527114174659,
+        "win": 0.4573164896162312
+      },
+      "q12": {
+        "n": 132950,
+        "avg_net": -0.00038264437211599824,
+        "t": -0.4903896939857092,
+        "win": 0.45055283941331326
+      },
+      "q3": {
+        "n": 19467,
+        "avg_net": 0.004217390631581466,
+        "t": 1.377192422520305,
+        "win": 0.45677300046232083
+      },
+      "baseline": {
+        "n": 452269,
+        "avg_net": -0.0016239081105266515,
+        "t": -12.489275344473615,
+        "win": 0.4498318478604547
+      },
+      "lottery_day_frac": 0.09045403038494675,
+      "lottery_top_day": "2026-05-12",
+      "lottery_n_days": 221,
+      "verdict": "KILL",
+      "fail_reasons": [
+        "disc_t",
+        "hold_t",
+        "disc_sign",
+        "lottery_day",
+        "tape_split",
+        "spy_regime",
+        "q3_split",
+        "no_edge_vs_uncond",
+        "q1_sign",
+        "month_split",
+        "ticker_ghost",
+        "no_edge_vs_book",
+        "no_edge_vs_book_disc"
+      ],
+      "live_untouched": "flatten_robust",
+      "label": "I",
+      "horizon": 5,
+      "horizon_plain": "1w",
+      "heat_hot": {
+        "n": 55672,
+        "avg_net": -0.0011968261724380083,
+        "t": -2.9048825718247766,
+        "win": 0.4561359390717057
+      },
+      "heat_mid": {
+        "n": 34711,
+        "avg_net": -0.00040857460023531375,
+        "t": -0.3505199899410832,
+        "win": 0.45576330269943244
+      },
+      "heat_cold": {
+        "n": 62034,
+        "avg_net": 0.001806092042636444,
+        "t": 1.0163321420819473,
+        "win": 0.4445787793790502
+      },
+      "spy_flat": {
+        "n": 19547,
+        "avg_net": 0.0036640699270049735,
+        "t": 1.4809338115209039,
+        "win": 0.4696372844937842
+      },
+      "ic": {
+        "spearman": -0.0029698470195527564,
+        "pearson": -0.001295355082801435,
+        "kind": "overnight\u2192label"
+      },
+      "book": {
+        "discovery": {
+          "n": 452269,
+          "avg_net": -0.0016239081105266515,
+          "t": -12.489275344473615,
+          "win": 0.4498318478604547
+        },
+        "holdout": {
+          "n": 309815,
+          "avg_net": 0.00405802380735473,
+          "t": 3.2817948233724694,
+          "win": 0.4698933234349531
+        }
+      },
+      "edge_vs_book_hold": -0.0008248604180526565,
+      "edge_vs_book_disc": -0.0002456513223247495,
+      "q1": {
+        "n": 90454,
+        "avg_net": -0.001869559432851401,
+        "t": -5.045693122746652,
+        "win": 0.44383885731974265
+      },
+      "july_share": 0.020741661044567445,
+      "top5_share": 6.69310727074681,
+      "top5_tickers": [
+        "MI",
+        "KWM",
+        "ELPW",
+        "DUKR",
+        "DKI"
+      ],
+      "keep": "KILL",
+      "model": "gap",
+      "gap_baseline": "overnight_gap",
+      "fold": "fold_combined",
+      "train_end": "2026-04-01",
+      "hold_end": null,
+      "n_hold_rows": 309815,
+      "gap_ic": {
+        "spearman": -0.0029698470195527564,
+        "pearson": -0.001295355082801435,
+        "kind": "overnight\u2192label"
+      },
+      "plain": "overnight-gap baseline \u2192 I 1w; long top 20%"
+    },
+    {
+      "def": "gap_open_I_2w",
+      "family": "gap_baseline",
+      "clock": "open",
+      "side": "long",
+      "exit": "hold10",
+      "cohort": "ALL",
+      "cost_model": "futubull",
+      "n_tickers": 3515,
+      "n_dates": 221,
+      "discovery": {
+        "n": 90454,
+        "avg_net": -0.000422850401931052,
+        "t": -0.9958178148768072,
+        "win": 0.4681827227098857
+      },
+      "holdout": {
+        "n": 61963,
+        "avg_net": 0.003741758616179326,
+        "t": 1.013977522037739,
+        "win": 0.4436195794264319
+      },
+      "early": {
+        "n": 105663,
+        "avg_net": -0.00046192393396831576,
+        "t": -1.245692694226017,
+        "win": 0.4647700708857405
+      },
+      "late": {
+        "n": 46754,
+        "avg_net": 0.005184804455510523,
+        "t": 1.0607691415599936,
+        "win": 0.4433417461607563
+      },
+      "spy_up": {
+        "n": 91074,
+        "avg_net": -0.0008340895768128157,
+        "t": -2.020188813509638,
+        "win": 0.45892351274787535
+      },
+      "spy_dn": {
+        "n": 41796,
+        "avg_net": 0.006859751147969962,
+        "t": 1.2667387995536652,
+        "win": 0.46131208728107953
+      },
+      "q12": {
+        "n": 132950,
+        "avg_net": -0.0006954123119038704,
+        "t": -2.0619508231111814,
+        "win": 0.4605716434749906
+      },
+      "q3": {
+        "n": 19467,
+        "avg_net": 0.014694464773496858,
+        "t": 1.25751738334452,
+        "win": 0.44197873324086917
+      },
+      "baseline": {
+        "n": 452269,
+        "avg_net": -0.0013752503617194538,
+        "t": -10.485992136805935,
+        "win": 0.4535751952930667
+      },
+      "lottery_day_frac": 0.19642316626094436,
+      "lottery_top_day": "2026-07-17",
+      "lottery_n_days": 221,
+      "verdict": "KILL",
+      "fail_reasons": [
+        "disc_t",
+        "hold_t",
+        "disc_sign",
+        "lottery_day",
+        "tape_split",
+        "spy_regime",
+        "q3_split",
+        "no_edge_vs_uncond",
+        "q1_sign",
+        "month_lottery",
+        "month_split",
+        "ticker_ghost",
+        "no_edge_vs_book",
+        "no_edge_vs_book_disc"
+      ],
+      "live_untouched": "flatten_robust",
+      "label": "I",
+      "horizon": 10,
+      "horizon_plain": "2w",
+      "heat_hot": {
+        "n": 55672,
+        "avg_net": -0.0009198650220886415,
+        "t": -1.2540320759567853,
+        "win": 0.4530104900129329
+      },
+      "heat_mid": {
+        "n": 34711,
+        "avg_net": -0.0007883329535539474,
+        "t": -1.9869859669472831,
+        "win": 0.4645789519172597
+      },
+      "heat_cold": {
+        "n": 62034,
+        "avg_net": 0.004387539567633376,
+        "t": 1.1947170285567041,
+        "win": 0.4592803946223039
+      },
+      "spy_flat": {
+        "n": 19547,
+        "avg_net": -0.0008770760722290934,
+        "t": -0.5134360932392786,
+        "win": 0.4481506113470098
+      },
+      "ic": {
+        "spearman": -0.01081769103928698,
+        "pearson": 0.0010687325484600807,
+        "kind": "overnight\u2192label"
+      },
+      "book": {
+        "discovery": {
+          "n": 452269,
+          "avg_net": -0.0013752503617194538,
+          "t": -10.485992136805935,
+          "win": 0.4535751952930667
+        },
+        "holdout": {
+          "n": 309815,
+          "avg_net": 0.004647990345948582,
+          "t": 3.4677573771874934,
+          "win": 0.4604618885463906
+        }
+      },
+      "edge_vs_book_hold": -0.0009062317297692558,
+      "edge_vs_book_disc": 0.0009523999597884018,
+      "q1": {
+        "n": 90454,
+        "avg_net": -0.000422850401931052,
+        "t": -0.9958178148768072,
+        "win": 0.4681827227098857
+      },
+      "july_share": 0.7076223777254949,
+      "top5_share": 1.7307171887594446,
+      "top5_tickers": [
+        "WETO",
+        "KWM",
+        "BYND",
+        "ELPW",
+        "GIBO"
+      ],
+      "keep": "KILL",
+      "model": "gap",
+      "gap_baseline": "overnight_gap",
+      "fold": "fold_combined",
+      "train_end": "2026-04-01",
+      "hold_end": null,
+      "n_hold_rows": 309815,
+      "gap_ic": {
+        "spearman": -0.01081769103928698,
+        "pearson": 0.0010687325484600807,
+        "kind": "overnight\u2192label"
+      },
+      "plain": "overnight-gap baseline \u2192 I 2w; long top 20%"
+    },
+    {
+      "def": "gap_open_I_sum_1d",
+      "family": "gap_baseline",
+      "clock": "open",
+      "side": "long",
+      "exit": "hold1",
+      "cohort": "ALL",
+      "cost_model": "futubull",
+      "n_tickers": 3515,
+      "n_dates": 221,
+      "discovery": {
+        "n": 90454,
+        "avg_net": 0.021287322460441942,
+        "t": 45.62239364482943,
+        "win": 0.6474561655648174
+      },
+      "holdout": {
+        "n": 61963,
+        "avg_net": 0.047497266822408166,
+        "t": 7.714110677111183,
+        "win": 0.7007246259864758
+      },
+      "early": {
+        "n": 105663,
+        "avg_net": 0.02221795944261822,
+        "t": 53.61536701049166,
+        "win": 0.6588304326017622
+      },
+      "late": {
+        "n": 46754,
+        "avg_net": 0.05392010012765209,
+        "t": 6.61099643446118,
+        "win": 0.6923471788510074
+      },
+      "spy_up": {
+        "n": 91074,
+        "avg_net": 0.036856103273886456,
+        "t": 9.985033708997143,
+        "win": 0.7349957177679689
+      },
+      "spy_dn": {
+        "n": 41796,
+        "avg_net": 0.02170385342855694,
+        "t": 5.977233641750254,
+        "win": 0.5405301942769642
+      },
+      "q12": {
+        "n": 132950,
+        "avg_net": 0.025147811616318905,
+        "t": 28.003087988703385,
+        "win": 0.6633696878525761
+      },
+      "q3": {
+        "n": 19467,
+        "avg_net": 0.07834771950295999,
+        "t": 4.181139851368591,
+        "win": 0.7083269122104073
+      },
+      "baseline": {
+        "n": 452269,
+        "avg_net": -0.0017974593323680493,
+        "t": -13.816299125460537,
+        "win": 0.4463516181741397
+      },
+      "lottery_day_frac": 0.11495705220984877,
+      "lottery_top_day": "2026-08-03",
+      "lottery_n_days": 221,
+      "verdict": "KEEP",
+      "fail_reasons": [],
+      "live_untouched": "flatten_robust",
+      "label": "I_sum",
+      "horizon": 1,
+      "horizon_plain": "1d",
+      "heat_hot": {
+        "n": 55672,
+        "avg_net": 0.02664319334528285,
+        "t": 42.31614380782343,
+        "win": 0.6613378358959621
+      },
+      "heat_mid": {
+        "n": 34711,
+        "avg_net": 0.019192628720952638,
+        "t": 46.282918104479414,
+        "win": 0.6964650975195184
+      },
+      "heat_cold": {
+        "n": 62034,
+        "avg_net": 0.04383275968826933,
+        "t": 7.118439598572888,
+        "win": 0.6607827965309346
+      },
+      "spy_flat": {
+        "n": 19547,
+        "avg_net": 0.030942323757500636,
+        "t": 5.685823722625991,
+        "win": 0.6370798588018621
+      },
+      "ic": {
+        "spearman": 0.3829841610522851,
+        "pearson": 0.9843897351182785,
+        "kind": "overnight\u2192label"
+      },
+      "book": {
+        "discovery": {
+          "n": 452269,
+          "avg_net": -0.0017974593323680493,
+          "t": -13.816299125460537,
+          "win": 0.4463516181741397
+        },
+        "holdout": {
+          "n": 309815,
+          "avg_net": 0.003951551674740089,
+          "t": 3.201353878898742,
+          "win": 0.4701773639107209
+        }
+      },
+      "edge_vs_book_hold": 0.04354571514766808,
+      "edge_vs_book_disc": 0.02308478179280999,
+      "q1": {
+        "n": 90454,
+        "avg_net": 0.021287322460441942,
+        "t": 45.62239364482943,
+        "win": 0.6474561655648174
+      },
+      "july_share": 0.13680468933526765,
+      "top5_share": 0.15539033725655324,
+      "top5_tickers": [
+        "LBGJ",
+        "WETO",
+        "DFNS",
+        "FFAI",
+        "MI"
+      ],
+      "keep": "KEEP",
+      "model": "gap",
+      "gap_baseline": "overnight_gap",
+      "fold": "fold_combined",
+      "train_end": "2026-04-01",
+      "hold_end": null,
+      "n_hold_rows": 309815,
+      "gap_ic": {
+        "spearman": 0.3829841610522851,
+        "pearson": 0.9843897351182785,
+        "kind": "overnight\u2192label"
+      },
+      "plain": "overnight-gap baseline \u2192 I_sum 1d; long top 20%"
+    },
+    {
+      "def": "gap_open_I_sum_2d",
+      "family": "gap_baseline",
+      "clock": "open",
+      "side": "long",
+      "exit": "hold2",
+      "cohort": "ALL",
+      "cost_model": "futubull",
+      "n_tickers": 3515,
+      "n_dates": 221,
+      "discovery": {
+        "n": 90454,
+        "avg_net": 0.020417332148283184,
+        "t": 30.573421797275916,
+        "win": 0.591626683175979
+      },
+      "holdout": {
+        "n": 61963,
+        "avg_net": 0.05059062349975003,
+        "t": 8.659961677069692,
+        "win": 0.6420767232057841
+      },
+      "early": {
+        "n": 105663,
+        "avg_net": 0.02224770391186834,
+        "t": 37.59629951494509,
+        "win": 0.6050651599897788
+      },
+      "late": {
+        "n": 46754,
+        "avg_net": 0.056269346528982606,
+        "t": 7.27515162666382,
+        "win": 0.6281173803310947
+      },
+      "spy_up": {
+        "n": 91074,
+        "avg_net": 0.03690128399092505,
+        "t": 11.76580055452992,
+        "win": 0.6579375013725103
+      },
+      "spy_dn": {
+        "n": 41796,
+        "avg_net": 0.02521267453352214,
+        "t": 5.284979949891154,
+        "win": 0.5354579385587137
+      },
+      "q12": {
+        "n": 132950,
+        "avg_net": 0.025503450970025317,
+        "t": 25.289232291781193,
+        "win": 0.6068822865739
+      },
+      "q3": {
+        "n": 19467,
+        "avg_net": 0.08172252322345643,
+        "t": 4.657250666572208,
+        "win": 0.6480197256896286
+      },
+      "baseline": {
+        "n": 452269,
+        "avg_net": -0.002171119659015657,
+        "t": -12.921506145871923,
+        "win": 0.45259126758632584
+      },
+      "lottery_day_frac": 0.09595353843531784,
+      "lottery_top_day": "2026-08-03",
+      "lottery_n_days": 221,
+      "verdict": "KEEP",
+      "fail_reasons": [],
+      "live_untouched": "flatten_robust",
+      "label": "I_sum",
+      "horizon": 2,
+      "horizon_plain": "2d",
+      "heat_hot": {
+        "n": 55672,
+        "avg_net": 0.025877275716531884,
+        "t": 32.06531850468219,
+        "win": 0.6031218565885903
+      },
+      "heat_mid": {
+        "n": 34711,
+        "avg_net": 0.01928451939449033,
+        "t": 40.54682962162317,
+        "win": 0.6350436461064216
+      },
+      "heat_cold": {
+        "n": 62034,
+        "avg_net": 0.046289962273316956,
+        "t": 7.891686004670854,
+        "win": 0.6074088403133765
+      },
+      "spy_flat": {
+        "n": 19547,
+        "avg_net": 0.02900903888388553,
+        "t": 4.905229110212288,
+        "win": 0.5626950427175526
+      },
+      "ic": {
+        "spearman": 0.27011106611794305,
+        "pearson": 0.7135964101422257,
+        "kind": "overnight\u2192label"
+      },
+      "book": {
+        "discovery": {
+          "n": 452269,
+          "avg_net": -0.002171119659015657,
+          "t": -12.921506145871923,
+          "win": 0.45259126758632584
+        },
+        "holdout": {
+          "n": 309815,
+          "avg_net": 0.008446875393556433,
+          "t": 5.5577763574486205,
+          "win": 0.4860900860190759
+        }
+      },
+      "edge_vs_book_hold": 0.04214374810619359,
+      "edge_vs_book_disc": 0.02258845180729884,
+      "q1": {
+        "n": 90454,
+        "avg_net": 0.020417332148283184,
+        "t": 30.573421797275916,
+        "win": 0.591626683175979
+      },
+      "july_share": 0.15571825794515942,
+      "top5_share": 0.16289500335663776,
+      "top5_tickers": [
+        "DFNS",
+        "LBGJ",
+        "WETO",
+        "MI",
+        "ELPW"
+      ],
+      "keep": "KEEP",
+      "model": "gap",
+      "gap_baseline": "overnight_gap",
+      "fold": "fold_combined",
+      "train_end": "2026-04-01",
+      "hold_end": null,
+      "n_hold_rows": 309815,
+      "gap_ic": {
+        "spearman": 0.27011106611794305,
+        "pearson": 0.7135964101422257,
+        "kind": "overnight\u2192label"
+      },
+      "plain": "overnight-gap baseline \u2192 I_sum 2d; long top 20%"
+    },
+    {
+      "def": "gap_open_I_sum_3d",
+      "family": "gap_baseline",
+      "clock": "open",
+      "side": "long",
+      "exit": "hold3",
+      "cohort": "ALL",
+      "cost_model": "futubull",
+      "n_tickers": 3515,
+      "n_dates": 221,
+      "discovery": {
+        "n": 90454,
+        "avg_net": 0.019060715527344077,
+        "t": 27.611020765195114,
+        "win": 0.5622194706701749
+      },
+      "holdout": {
+        "n": 61963,
+        "avg_net": 0.05138010163659424,
+        "t": 8.86951085957771,
+        "win": 0.60900860190759
+      },
+      "early": {
+        "n": 105663,
+        "avg_net": 0.021059216717505554,
+        "t": 34.27247573661791,
+        "win": 0.5745625242516302
+      },
+      "late": {
+        "n": 46754,
+        "avg_net": 0.05737697702863596,
+        "t": 7.482876856756199,
+        "win": 0.5963340035077213
+      },
+      "spy_up": {
+        "n": 91074,
+        "avg_net": 0.03437497643903532,
+        "t": 11.312922532680256,
+        "win": 0.6051891868151174
+      },
+      "spy_dn": {
+        "n": 41796,
+        "avg_net": 0.028013075965250368,
+        "t": 5.634297991517038,
+        "win": 0.5414154464542061
+      },
+      "q12": {
+        "n": 132950,
+        "avg_net": 0.024867786614009114,
+        "t": 24.35483469851233,
+        "win": 0.5784279804437759
+      },
+      "q3": {
+        "n": 19467,
+        "avg_net": 0.08227312732759036,
+        "t": 4.737358208099294,
+        "win": 0.6004520470539888
+      },
+      "baseline": {
+        "n": 452269,
+        "avg_net": -0.0025563873909901524,
+        "t": -12.922571658936652,
+        "win": 0.4546431437927428
+      },
+      "lottery_day_frac": 0.08987631815208308,
+      "lottery_top_day": "2026-08-03",
+      "lottery_n_days": 221,
+      "verdict": "KEEP",
+      "fail_reasons": [],
+      "live_untouched": "flatten_robust",
+      "label": "I_sum",
+      "horizon": 3,
+      "horizon_plain": "3d",
+      "heat_hot": {
+        "n": 55672,
+        "avg_net": 0.024500831863135935,
+        "t": 25.194966279007566,
+        "win": 0.5720290271590746
+      },
+      "heat_mid": {
+        "n": 34711,
+        "avg_net": 0.01881007372394401,
+        "t": 35.06338959048193,
+        "win": 0.6037855434876552
+      },
+      "heat_cold": {
+        "n": 62034,
+        "avg_net": 0.0466011609682175,
+        "t": 8.033910861483307,
+        "win": 0.5768933165683335
+      },
+      "spy_flat": {
+        "n": 19547,
+        "avg_net": 0.03101663031495525,
+        "t": 5.314626079826739,
+        "win": 0.5548165958970686
+      },
+      "ic": {
+        "spearman": 0.20921947764433982,
+        "pearson": 0.6068592560076623,
+        "kind": "overnight\u2192label"
+      },
+      "book": {
+        "discovery": {
+          "n": 452269,
+          "avg_net": -0.0025563873909901524,
+          "t": -12.922571658936652,
+          "win": 0.4546431437927428
+        },
+        "holdout": {
+          "n": 309815,
+          "avg_net": 0.012123270392828782,
+          "t": 7.4255383246279365,
+          "win": 0.49687071316753545
+        }
+      },
+      "edge_vs_book_hold": 0.03925683124376546,
+      "edge_vs_book_disc": 0.02161710291833423,
+      "q1": {
+        "n": 90454,
+        "avg_net": 0.019060715527344077,
+        "t": 27.611020765195114,
+        "win": 0.5622194706701749
+      },
+      "july_share": 0.1588793489063656,
+      "top5_share": 0.17202874876253485,
+      "top5_tickers": [
+        "DFNS",
+        "LBGJ",
+        "WETO",
+        "FFAI",
+        "MI"
+      ],
+      "keep": "KEEP",
+      "model": "gap",
+      "gap_baseline": "overnight_gap",
+      "fold": "fold_combined",
+      "train_end": "2026-04-01",
+      "hold_end": null,
+      "n_hold_rows": 309815,
+      "gap_ic": {
+        "spearman": 0.20921947764433982,
+        "pearson": 0.6068592560076623,
+        "kind": "overnight\u2192label"
+      },
+      "plain": "overnight-gap baseline \u2192 I_sum 3d; long top 20%"
+    },
+    {
+      "def": "gap_open_I_sum_1w",
+      "family": "gap_baseline",
+      "clock": "open",
+      "side": "long",
+      "exit": "hold5",
+      "cohort": "ALL",
+      "cost_model": "futubull",
+      "n_tickers": 3515,
+      "n_dates": 221,
+      "discovery": {
+        "n": 90454,
+        "avg_net": 0.017401204904706313,
+        "t": 21.291811137445006,
+        "win": 0.5378313839078427
+      },
+      "holdout": {
+        "n": 61963,
+        "avg_net": 0.060863433048180794,
+        "t": 10.47190949899995,
+        "win": 0.5952745993576812
+      },
+      "early": {
+        "n": 105663,
+        "avg_net": 0.021541266645889918,
+        "t": 29.325186968166822,
+        "win": 0.5536848281801576
+      },
+      "late": {
+        "n": 46754,
+        "avg_net": 0.06564517758502006,
+        "t": 8.540536840086727,
+        "win": 0.5781323523121017
+      },
+      "spy_up": {
+        "n": 91074,
+        "avg_net": 0.03715298921712484,
+        "t": 11.443771653905698,
+        "win": 0.5775852603377474
+      },
+      "spy_dn": {
+        "n": 41796,
+        "avg_net": 0.03019018302390422,
+        "t": 6.604129277301793,
+        "win": 0.5338788400803904
+      },
+      "q12": {
+        "n": 132950,
+        "avg_net": 0.02664945112089011,
+        "t": 21.490547509797494,
+        "win": 0.5576532531026702
+      },
+      "q3": {
+        "n": 19467,
+        "avg_net": 0.09257949164701171,
+        "t": 5.484577072230626,
+        "win": 0.5852981969486823
+      },
+      "baseline": {
+        "n": 452269,
+        "avg_net": -0.0031900135358829875,
+        "t": -13.222938995010498,
+        "win": 0.45931956424163495
+      },
+      "lottery_day_frac": 0.081362503916567,
+      "lottery_top_day": "2026-08-03",
+      "lottery_n_days": 221,
+      "verdict": "KEEP",
+      "fail_reasons": [],
+      "live_untouched": "flatten_robust",
+      "label": "I_sum",
+      "horizon": 5,
+      "horizon_plain": "1w",
+      "heat_hot": {
+        "n": 55672,
+        "avg_net": 0.025988122993527096,
+        "t": 21.63226004313608,
+        "win": 0.5504203190113522
+      },
+      "heat_mid": {
+        "n": 34711,
+        "avg_net": 0.020660306453403787,
+        "t": 20.872491362309752,
+        "win": 0.58664400334188
+      },
+      "heat_cold": {
+        "n": 62034,
+        "avg_net": 0.051283792917029,
+        "t": 8.838807868140027,
+        "win": 0.5565979946480962
+      },
+      "spy_flat": {
+        "n": 19547,
+        "avg_net": 0.03580034075751933,
+        "t": 6.583880971844035,
+        "win": 0.5431524019031053
+      },
+      "ic": {
+        "spearman": 0.16944960513610413,
+        "pearson": 0.5159208857817786,
+        "kind": "overnight\u2192label"
+      },
+      "book": {
+        "discovery": {
+          "n": 452269,
+          "avg_net": -0.0031900135358829875,
+          "t": -13.222938995010498,
+          "win": 0.45931956424163495
+        },
+        "holdout": {
+          "n": 309815,
+          "avg_net": 0.019488332958691172,
+          "t": 10.507879024656189,
+          "win": 0.5087423139615577
+        }
+      },
+      "edge_vs_book_hold": 0.04137510008948962,
+      "edge_vs_book_disc": 0.020591218440589303,
+      "q1": {
+        "n": 90454,
+        "avg_net": 0.017401204904706313,
+        "t": 21.291811137445006,
+        "win": 0.5378313839078427
+      },
+      "july_share": 0.15979583074903475,
+      "top5_share": 0.1768409408332814,
+      "top5_tickers": [
+        "DFNS",
+        "LBGJ",
+        "MI",
+        "WETO",
+        "FFAI"
+      ],
+      "keep": "KEEP",
+      "model": "gap",
+      "gap_baseline": "overnight_gap",
+      "fold": "fold_combined",
+      "train_end": "2026-04-01",
+      "hold_end": null,
+      "n_hold_rows": 309815,
+      "gap_ic": {
+        "spearman": 0.16944960513610413,
+        "pearson": 0.5159208857817786,
+        "kind": "overnight\u2192label"
+      },
+      "plain": "overnight-gap baseline \u2192 I_sum 1w; long top 20%"
+    },
+    {
+      "def": "gap_open_I_sum_2w",
+      "family": "gap_baseline",
+      "clock": "open",
+      "side": "long",
+      "exit": "hold10",
+      "cohort": "ALL",
+      "cost_model": "futubull",
+      "n_tickers": 3515,
+      "n_dates": 221,
+      "discovery": {
+        "n": 90454,
+        "avg_net": 0.01749068795986683,
+        "t": 16.09328235559851,
+        "win": 0.52006544763084
+      },
+      "holdout": {
+        "n": 61963,
+        "avg_net": 0.11237088402512285,
+        "t": 3.6192184328846073,
+        "win": 0.5589948840437035
+      },
+      "early": {
+        "n": 105663,
+        "avg_net": 0.023795168542925543,
+        "t": 24.299721654116237,
+        "win": 0.5355895630447745
+      },
+      "late": {
+        "n": 46754,
+        "avg_net": 0.12898727128843285,
+        "t": 3.135131587383774,
+        "win": 0.5365744107456046
+      },
+      "spy_up": {
+        "n": 91074,
+        "avg_net": 0.044400066170139724,
+        "t": 8.289811501572954,
+        "win": 0.546742209631728
+      },
+      "spy_dn": {
+        "n": 41796,
+        "avg_net": 0.08890656797292541,
+        "t": 1.9977760652456493,
+        "win": 0.5188534788017992
+      },
+      "q12": {
+        "n": 132950,
+        "avg_net": 0.02653457285720131,
+        "t": 21.137483005869957,
+        "win": 0.5306807070327191
+      },
+      "q3": {
+        "n": 19467,
+        "avg_net": 0.25772683588666867,
+        "t": 2.6144684936993547,
+        "win": 0.5714799404119792
+      },
+      "baseline": {
+        "n": 452269,
+        "avg_net": -0.003973958119822913,
+        "t": -11.788696075261113,
+        "win": 0.4655835354623023
+      },
+      "lottery_day_frac": 0.18357399661775545,
+      "lottery_top_day": "2026-07-17",
+      "lottery_n_days": 221,
+      "verdict": "KILL",
+      "fail_reasons": [
+        "month_lottery",
+        "month_split",
+        "ticker_ghost"
+      ],
+      "live_untouched": "flatten_robust",
+      "label": "I_sum",
+      "horizon": 10,
+      "horizon_plain": "2w",
+      "heat_hot": {
+        "n": 55672,
+        "avg_net": 0.026429803426936772,
+        "t": 15.380890033748889,
+        "win": 0.520674665900273
+      },
+      "heat_mid": {
+        "n": 34711,
+        "avg_net": 0.026219124014148124,
+        "t": 15.768851611713234,
+        "win": 0.5697617469966293
+      },
+      "heat_cold": {
+        "n": 62034,
+        "avg_net": 0.09935596198102759,
+        "t": 3.2048650802867953,
+        "win": 0.5305961247058065
+      },
+      "spy_flat": {
+        "n": 19547,
+        "avg_net": 0.04017543531974807,
+        "t": 6.763358124846995,
+        "win": 0.5217680462475061
+      },
+      "ic": {
+        "spearman": 0.11386765653131888,
+        "pearson": 0.25189518660050153,
+        "kind": "overnight\u2192label"
+      },
+      "book": {
+        "discovery": {
+          "n": 452269,
+          "avg_net": -0.003973958119822913,
+          "t": -11.788696075261113,
+          "win": 0.4655835354623023
+        },
+        "holdout": {
+          "n": 309815,
+          "avg_net": 0.04600323166540456,
+          "t": 6.700262266903396,
+          "win": 0.5168987944418443
+        }
+      },
+      "edge_vs_book_hold": 0.06636765235971828,
+      "edge_vs_book_disc": 0.021464646079689745,
+      "q1": {
+        "n": 90454,
+        "avg_net": 0.01749068795986683,
+        "t": 16.09328235559851,
+        "win": 0.52006544763084
+      },
+      "july_share": 0.430003777986061,
+      "top5_share": 0.41679395538886144,
+      "top5_tickers": [
+        "DFNS",
+        "WETO",
+        "FFAI",
+        "LBGJ",
+        "MI"
+      ],
+      "keep": "KILL",
+      "model": "gap",
+      "gap_baseline": "overnight_gap",
+      "fold": "fold_combined",
+      "train_end": "2026-04-01",
+      "hold_end": null,
+      "n_hold_rows": 309815,
+      "gap_ic": {
+        "spearman": 0.11386765653131888,
+        "pearson": 0.25189518660050153,
+        "kind": "overnight\u2192label"
+      },
+      "plain": "overnight-gap baseline \u2192 I_sum 2w; long top 20%"
     }
   ]
 }
