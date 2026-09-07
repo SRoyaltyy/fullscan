@@ -1,5 +1,8 @@
 """Rebuild A–O color grids from the excel-state Yahoo rows cache (offline).
 
+Seeds A–F (STOCKHISTORY aliases of IR:IW) via backtest.seed_anchor from
+rows dated on or before each tile anchor. Never the xlsx cached spill.
+
 Does not fetch. Does not write live flatten_robust. Resume-safe.
 
   python engine/rebuild_grids.py --workers 6

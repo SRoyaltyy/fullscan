@@ -29,6 +29,7 @@ from clock import (  # noqa: E402
 from mine_clock import lottery as lottery_trade  # noqa: E402
 from mine_first import load_spy  # noqa: E402
 from patterns import detect_pattern, new_score_defs  # noqa: E402
+from audit_af_seed import load_mine_grid  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -167,7 +168,10 @@ def work_grid(path):
     if split is None:
         return None
     try:
-        days = annotate_days(json.load(open(path))["days"])
+        blob = load_mine_grid(path)
+        if blob is None:
+            return None
+        days = annotate_days(blob["days"])
     except Exception:
         return None
     if len(days) < 30:

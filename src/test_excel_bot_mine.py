@@ -712,6 +712,73 @@ def test_color_join_does_not_import_live():
         assert "flatten_robust" in src
 
 
+def test_seed_anchor_drops_bars_after_anchor():
+    from datetime import date
+    from backtest import stockhistory_from_rows
+    rows = [
+        {"date": date(2026, 1, 2), "open": 1, "high": 1, "low": 1,
+         "close": 1, "volume": 10},
+        {"date": date(2026, 1, 5), "open": 2, "high": 2, "low": 2,
+         "close": 2, "volume": 20},
+        {"date": date(2026, 1, 6), "open": 99, "high": 99, "low": 99,
+         "close": 99, "volume": 99},
+    ]
+    grid = stockhistory_from_rows(rows, date(2026, 1, 1), date(2026, 1, 5), 0)
+    dates = [r[0] for r in grid[1:]]
+    from stockhistory import serial
+    assert serial(date(2026, 1, 5)) in dates
+    assert serial(date(2026, 1, 6)) not in dates
+    assert serial(date(2026, 1, 2)) in dates
+
+
+def test_a_f_are_stockhistory_aliases_not_cached_literals():
+    from audit_af_seed import inspect_model
+    meta = inspect_model()
+    assert meta["ir1_is_stockhistory"]
+    assert meta["a_f_are_formulas"]
+    assert meta["aliases"]["A"]["row1"] == "=IR1"
+    assert meta["aliases"]["C"]["row1"] == "=IT1"
+    assert meta["aliases"]["F"]["row1"] == "=IW1"
+    assert "P1" in meta["ir1"]  # STOCKHISTORY end = TODAY()
+
+
+def test_harden_loaders_refuse_excel_cached_af():
+    from audit_af_seed import loader_src_ok, load_mine_grid, is_rows_cache_grid
+    assert loader_src_ok() == []
+    assert is_rows_cache_grid({"source": "rows_cache", "days": []})
+    assert load_mine_grid is not None
+    for fn in ("harden_hyst_open.py", "mine_color_join.py", "rebuild_grids.py"):
+        src = (ENG / fn).read_text(encoding="utf-8")
+        assert "build_seeds" not in src
+        assert "from_cache" not in src
+        assert "--from-cache" not in src
+    harden = (ENG / "harden_hyst_open.py").read_text(encoding="utf-8")
+    color = (ENG / "mine_color_join.py").read_text(encoding="utf-8")
+    assert "load_mine_grid" in harden and "load_mine_grid" in color
+
+
+def test_af_seed_audit_report_is_committed():
+    md = (ROOT / "excel_bot" / "research" / "AF_SEED_AUDIT.md").read_text()
+    assert "STOCKHISTORY" in md
+    assert "Yahoo" in md or "rows" in md
+    assert "flatten_robust" in md
+    assert "tile" in md.lower() or "TODAY" in md
+    assert "Excel-cache" in md or "cached" in md
+    sb = (ROOT / "03_scoreboard" / "EXCEL_BOT_MINE.md").read_text()
+    assert "A–F seed" in sb
+    assert "first A–JL cut" in sb or "A–O clock cycle" in sb
+    ao = (ROOT / "excel_bot" / "research" / "AO_FIRST_MINE.md").read_text()
+    assert "VISIBLE_COLS A..O" in ao
+    assert "A–F seed" in ao
+    payload = json.loads(
+        (ROOT / "excel_bot" / "research" / "af_seed_audit.json").read_text())
+    assert payload["live_untouched"] == "flatten_robust"
+    assert payload["excel_cache_used_by_harden"] is False
+    assert payload["grids_source"] == "rows_cache"
+    assert payload["tile_today_is_anchor"] is True
+    assert payload["corrupt_future_open_fills_changed"] is False
+
+
 if __name__ == "__main__":
     tests = [v for k, v in list(globals().items()) if k.startswith("test_")]
     for fn in tests:

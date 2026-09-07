@@ -102,3 +102,7 @@ KEEP 6 · KILL 0 · futubull · walk-forward + both-tape + top-day lottery. See 
 ## Color + join mine
 
 KEEP 9 · THIN 0 · KILL 113. Open-knowable fills only. PIT joins (prior AB/weather/book). See `AO_FIRST_MINE.md`.
+
+## A–F seed (STOCKHISTORY / Yahoo rows)
+
+Harden used Yahoo/rows `source: rows_cache` grids, not Excel's cached STOCKHISTORY. Tile TODAY is the anchor, not each day. See `AF_SEED_AUDIT.md`.
