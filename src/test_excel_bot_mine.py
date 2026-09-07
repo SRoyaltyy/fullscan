@@ -527,6 +527,42 @@ def test_harden_plain_english_before_code_names():
     assert "flatten_robust" in md
 
 
+def test_harden_report_is_committed():
+    md = (ROOT / "excel_bot" / "research" / "AO_FIRST_MINE.md").read_text()
+    assert "VISIBLE_COLS A..O" in md
+    harden = md.split("## Harden: morning hysteresis light", 1)[1]
+    assert "What the cell means" in harden
+    assert harden.index("What the cell means") < harden.index("`hyst_open_core_e5_x2`")
+    assert "same day's close" in md
+    assert "SPY-up" in md and "SPY-down" in md
+    assert "KEEP 6" in md or "**KEEP**" in md
+    sb = (ROOT / "03_scoreboard" / "EXCEL_BOT_MINE.md").read_text()
+    assert "first A–JL cut" in sb
+    assert "Harden: morning hysteresis light" in sb
+    assert "flatten_robust" in sb
+    payload = json.loads(
+        (ROOT / "excel_bot" / "research" / "hyst_open_harden.json").read_text())
+    assert payload["live_untouched"] == "flatten_robust"
+    assert payload["cost_model"] == "futubull"
+    assert payload["n_keep"] + payload["n_kill"] == 6
+    assert payload["grids"] >= 3000
+    names = {(r["def"], r["exit"]) for r in payload["candidates"]}
+    assert names == {
+        ("hyst_open_core_e5_x2", "hold1"),
+        ("hyst_open_score_e5_x2", "hold1"),
+        ("hyst_open_core_e5_x0", "hold1"),
+        ("hyst_open_core_e5_x2", "hold2"),
+        ("hyst_open_core_e5_x0", "hold2"),
+        ("hyst_open_score_e5_x2", "hold2"),
+    }
+    for r in payload["candidates"]:
+        assert r["clock"] == "open"
+        assert r["cost_model"] == "futubull"
+        assert r["early"] and r["late"]
+        assert r["spy_up"] and r["spy_dn"]
+        assert r["lottery_day_frac"] <= 0.25
+
+
 def test_harden_does_not_import_flatten_live():
     src = (ENG / "harden_hyst_open.py").read_text(encoding="utf-8")
     assert "import flatten" not in src
@@ -543,16 +579,25 @@ def test_harden_splice_keeps_first_cut(tmp_path=None):
         p.write_text("# Excel emulator mine — first A–JL cut\n\n"
                      "PASS 0 · tape early · tape late\n", encoding="utf-8")
         out = splice_md(str(p), "## Harden: morning hysteresis light",
-                        "## Harden: morning hysteresis light\n\nKILL 6.\n")
+                        "## Harden: morning hysteresis light\n\nKILL 6.\n",
+                        require="first A–JL cut")
         assert out.startswith("# Excel emulator mine — first A–JL cut")
         assert "PASS 0" in out and "tape early" in out
         assert out.count("## Harden: morning hysteresis light") == 1
         p.write_text(out, encoding="utf-8")
         out2 = splice_md(str(p), "## Harden: morning hysteresis light",
-                         "## Harden: morning hysteresis light\n\nKEEP 1.\n")
+                         "## Harden: morning hysteresis light\n\nKEEP 1.\n",
+                         require="first A–JL cut")
         assert "KILL 6" not in out2
         assert "KEEP 1" in out2
         assert "first A–JL cut" in out2
+        try:
+            splice_md(str(p), "## Harden: morning hysteresis light",
+                      "## Harden: morning hysteresis light\n\nx\n",
+                      require="VISIBLE_COLS A..O")
+            raise AssertionError("should have refused")
+        except ValueError as e:
+            assert "required lead-in" in str(e)
 
 
 if __name__ == "__main__":

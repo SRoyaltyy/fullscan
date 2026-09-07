@@ -42,3 +42,6 @@ No keeper. No hold1/2 sleeve. Live `flatten_robust` untouched.
 Full table (300 cells / 64 pats): `excel_bot/research/ALL_COLS_MINE.md`.
 Research only. No cards. No merge without Cyrus.
 
+## Harden (6 open-hysteresis lights)
+
+KEEP 6 · KILL 0 · futubull · walk-forward + both-tape + top-day lottery. See `AO_FIRST_MINE.md` / `03_scoreboard/EXCEL_BOT_MINE.md`.

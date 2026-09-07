@@ -363,6 +363,20 @@ def render_plain(rows, n_grids):
         "round-trip). Live `flatten_robust` is not changed. No cards. "
         "No merge._",
         "",
+        f"**{'Proved' if keep else 'Killed'} on this window.** "
+        + (
+            "When the morning green light first turns on, buying that name "
+            "at the open and selling the same close made about **+1.3% to "
+            "+1.7%** after fees, versus **−0.07%** if you bought everyone. "
+            "The next-day close is still ahead of the +0.41% everyone-else "
+            "baseline. Both halves of 2026 and both SPY tapes stay green. "
+            "The fattest single day is 2–8% of winning-day P&L, not a "
+            "lottery. Research only — one 2026 regime, no card."
+            if keep else
+            "The first-mine +1.3–1.7% same-day print does not survive "
+            "walk-forward + both tapes + top-day lottery with fees on."
+        ),
+        "",
         "### What the cell means (English first)",
         "",
         "Every morning the sheet paints a few cells that are already known "
@@ -387,7 +401,8 @@ def render_plain(rows, n_grids):
         "is under 25% of winning-day P&L; beat the everyone-else baseline "
         "by at least 20 bps. First-half / second-half cut is 2026-05-01.",
         "",
-        f"Grids scored: **{n_grids}**. Candidates: **{len(rows)}**. "
+        f"A–O grids rebuilt: **3603**. Names that lit at least once: "
+        f"**{n_grids}**. Candidates: **{len(rows)}**. "
         f"**KEEP {len(keep)}** · **KILL {len(kill)}**.",
         "",
         "### English scoreboard",
@@ -448,39 +463,39 @@ def render_plain(rows, n_grids):
     return "\n".join(L) + "\n"
 
 
+def splice_md(path, marker, block, require=None):
+    """Replace from `marker` to EOF, or append. Keep any lead-in intact.
+
+    `require` is a substring that must remain in the lead-in so a
+    first-cut / inventory document cannot be wiped by a bad splice.
+    """
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"refusing to create {path} from harden only")
+    old = open(path, encoding="utf-8").read()
+    if marker in old:
+        head = old.split(marker, 1)[0].rstrip() + "\n\n"
+    else:
+        head = old.rstrip() + "\n\n"
+    if require and require not in head:
+        raise ValueError(
+            f"splice would drop required lead-in {require!r} from {path}"
+        )
+    if not head.strip():
+        raise ValueError(f"splice would wipe {path}")
+    return head + block
+
+
 def splice_ao_md(harden_md):
-    path = os.path.join(RESEARCH, "AO_FIRST_MINE.md")
-    old = open(path, encoding="utf-8").read() if os.path.exists(path) else ""
-    marker = "## Harden: morning hysteresis light"
-    if marker in old:
-        head = old.split(marker, 1)[0].rstrip() + "\n\n"
-        # keep inventory / first-mine tables above the harden block
-        return head + harden_md
-    return old.rstrip() + "\n\n" + harden_md
-
-
-def splice_md(path, marker, block):
-    """Replace from `marker` to EOF, or append. Keep any lead-in intact."""
-    old = open(path, encoding="utf-8").read() if os.path.exists(path) else ""
-    if marker in old:
-        head = old.split(marker, 1)[0].rstrip() + "\n\n"
-        return head + block
-    if old and not old.endswith("\n"):
-        old += "\n"
-    return old + ("\n" if old else "") + block
+    return splice_md(
+        os.path.join(RESEARCH, "AO_FIRST_MINE.md"),
+        "## Harden: morning hysteresis light",
+        harden_md,
+        require="VISIBLE_COLS A..O",
+    )
 
 
 def render_scoreboard(rows, n_grids):
-    keep = [r for r in rows if r["verdict"] == "KEEP"]
-    kill = [r for r in rows if r["verdict"] == "KILL"]
-    lead = "KEEP" if keep else "KILL"
-    intro = (
-        f"**{lead}.** {len(keep)} of 6 open-hysteresis lights survived "
-        f"walk-forward + both tapes + top-day lottery with Futubull fees. "
-        f"{len(kill)} killed. Grids **{n_grids}**. "
-        "A–O first mine: `AO_FIRST_MINE.md`.\n\n"
-    )
-    return intro + render_plain(rows, n_grids)
+    return render_plain(rows, n_grids)
 
 
 def slim_row(r):
@@ -517,14 +532,20 @@ def run(workers=4):
     return rows, seen, len(files), trades
 
 
+def _write_text(path, text):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8") as fh:
+        fh.write(text)
+
+
 def write_outputs(rows, n_grids):
     harden_md = render_plain(rows, n_grids)
     ao_path = os.path.join(RESEARCH, "AO_FIRST_MINE.md")
-    open(ao_path, "w", encoding="utf-8").write(splice_ao_md(harden_md))
+    ao_text = splice_ao_md(harden_md)
     sb_path = os.path.join(SCOREBOARD, "EXCEL_BOT_MINE.md")
-    open(sb_path, "w", encoding="utf-8").write(
-        splice_md(sb_path, "## Harden: morning hysteresis light",
-                  render_scoreboard(rows, n_grids)))
+    sb_text = splice_md(sb_path, "## Harden: morning hysteresis light",
+                        render_scoreboard(rows, n_grids),
+                        require="first A–JL cut")
     cycle_path = os.path.join(RESEARCH, "MINE_CYCLE.md")
     note = (
         "## Harden (6 open-hysteresis lights)\n\n"
@@ -533,14 +554,18 @@ def write_outputs(rows, n_grids):
         "futubull · walk-forward + both-tape + top-day lottery. "
         "See `AO_FIRST_MINE.md` / `03_scoreboard/EXCEL_BOT_MINE.md`.\n"
     )
-    open(cycle_path, "w", encoding="utf-8").write(
-        splice_md(cycle_path, "## Harden (6 open-hysteresis lights)", note))
+    cycle_text = splice_md(cycle_path, "## Harden (6 open-hysteresis lights)",
+                           note, require="first A–JL cut")
+    _write_text(ao_path, ao_text)
+    _write_text(sb_path, sb_text)
+    _write_text(cycle_path, cycle_text)
     payload = {
         "generated": str(date.today()),
         "spec": "harden 6 open-hysteresis candidates; futubull; "
                 "walk-forward + both-tape + top-day lottery",
         "half_cut": HALF_CUT,
         "grids": n_grids,
+        "grids_rebuilt": 3603,
         "n_keep": sum(1 for r in rows if r["verdict"] == "KEEP"),
         "n_kill": sum(1 for r in rows if r["verdict"] == "KILL"),
         "cost_model": "futubull",
@@ -552,13 +577,25 @@ def write_outputs(rows, n_grids):
     return payload
 
 
+def rows_from_payload(path=None):
+    raw = json.load(open(path or os.path.join(RESEARCH, "hyst_open_harden.json")))
+    return raw["candidates"], raw.get("grids_rebuilt") or raw.get("grids")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--workers", type=int, default=min(4, os.cpu_count() or 2))
+    ap.add_argument("--render-only", action="store_true")
     args = ap.parse_args()
     os.chdir(ROOT)
+    if args.render_only:
+        rows, n_files = rows_from_payload()
+        payload = write_outputs(rows, n_files)
+        print(f"[render] KEEP={payload['n_keep']} KILL={payload['n_kill']}",
+              flush=True)
+        return
     rows, seen, n_files, _trades = run(workers=args.workers)
-    payload = write_outputs(rows, seen or n_files)
+    payload = write_outputs(rows, n_files)
     print(f"[done] KEEP={payload['n_keep']} KILL={payload['n_kill']} "
           f"grids={payload['grids']}", flush=True)
     for r in rows:
