@@ -247,6 +247,26 @@ def test_hold8_without_hold2_edge_is_fail():
     assert "long_hold_without_hold2" in rows[0]["fail_reasons"]
 
 
+def test_ao_first_mine_report_is_committed():
+    md = (ROOT / "excel_bot" / "research" / "AO_FIRST_MINE.md").read_text()
+    assert "VISIBLE_COLS A..O" in md
+    assert "core_score` needs **CLOSE**" in md or "CLOSE" in md
+    assert "FAIL" in md and "tol2_core_score_ml3" in md
+    assert "flatten_robust" in md
+    payload = json.loads((ROOT / "excel_bot" / "research" / "ao_first_mine.json").read_text())
+    assert payload["n_grids"] >= 3000
+    assert payload["n_pass"] >= 0
+    assert payload["live_untouched"] == "flatten_robust"
+    assert payload.get("n_demoted_long_hold", 0) >= 0
+    for r in payload.get("focus") or []:
+        assert r["verdict"] != "PASS"
+    for r in payload.get("primary") or []:
+        assert r["cohort"] == "ALL"
+        assert r["exit"] in ("hold1", "hold2")
+        assert r["clock"] == "open"
+        assert "core_score" not in r["def"]
+
+
 def test_first_mine_never_opens_core_score():
     from mine_first import A_DEFS, A_CLOSE, CLOSE_DEFS, first_mine_pats
     for name, defn, clock, _sides in A_DEFS:

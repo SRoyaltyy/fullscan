@@ -429,6 +429,30 @@ def render(rows, baselines, n_grids, n_pats):
             f"{r['n_tickers']} | {','.join(r['fail_reasons']) or '—'} |"
         )
     keep = [r for r in rows if r["verdict"] == "PASS"]
+    primary = [r for r in keep
+               if r["cohort"] == "ALL" and r["exit"] in ("hold1", "hold2")]
+    L += [
+        "",
+        "### Primary (ALL × hold1/2 only — not cohort/hold8 slices)",
+        "",
+        f"**{len(keep)}** PASS cells include overlapping cohort × hold "
+        "slices of the same defs. The honest sleeve-shaped set is "
+        f"**{len(primary)}** ALL-cohort hold1/2 rows. hold8 / opt / "
+        "hi-vol slices are not independent edges. Research candidates "
+        "only — one Jan–Sep 2026 regime, overlapping cluster days, "
+        "no cards.",
+        "",
+    ]
+    L += _table(
+        primary,
+        "| def | clock | side | exit | hold | base | tickers |",
+        "|---|---|---|---|---|---|---:|",
+        lambda r: (
+            f"| `{r['def']}` | {r['clock']} | {r['side']} | {r['exit']} | "
+            f"{fmt_blk(r['holdout'])} | {fmt_blk(r['baseline'])} | "
+            f"{r['n_tickers']} |"
+        ),
+    )
     L += ["", "### Keepers (ship bar + hold2 sibling + beat baseline)", ""]
     L += _table(
         keep[:25],
@@ -480,6 +504,7 @@ def render(rows, baselines, n_grids, n_pats):
         "baselines": baselines,
         "focus": [slim_row(r) for r in focus],
         "keepers": [slim_row(r) for r in keep],
+        "primary": [slim_row(r) for r in primary],
         "near": [slim_row(r) for r in near[:40]],
         "live_untouched": "flatten_robust",
     }
@@ -531,6 +556,7 @@ def render_cycle(rows, baselines, n_grids, n_pats, ao_md):
 
 
 if __name__ == "__main__":
+    os.chdir(ROOT)
     rows, baselines, n, n_pats = main()
     md, payload = render(rows, baselines, n, n_pats)
     cycle = render_cycle(rows, baselines, n, n_pats, md)
