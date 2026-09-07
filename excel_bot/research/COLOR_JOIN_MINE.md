@@ -101,6 +101,38 @@ Grids **3598**. Cells scored **122**. **KEEP 9** · **THIN 0** · **KILL 113**.
 
 KEEP still research-only. Join tapes only exist for late Aug–Sep 2026, so most join cells are THIN on dates. Color cells use the full Jan–Sep window. No live wire.
 
+**Update — Finviz snapshot `fz_volM` rows above that say KEEP are BLOCKED.** That tag is today’s CSV, not 2026 history. See the second-regime section.
+
 ## Second-regime / as-of Finviz
 
-See `JOIN_VERDICT.md`. Snapshot `fz_volM` KEEP is **BLOCKED** until dated Elite history covers both tape halves. Q3 cut is 2026-07-01.
+_Generated 2026-09-07. No new color-alone or AB/weather/book mines. Live `flatten_robust` frozen._
+
+### Split we used
+
+The first harden already cut the year at **2026-05-01**. This beat holds out a later slice: **Q1–Q2 vs Q3**, cut **2026-07-01**. Same Futubull fees, both SPY tapes, top-day lottery, and the fold must still beat the parent light by 20 bp.
+
+### Light + green O — does Q3 still pay?
+
+Three recipes had already KEEP’d on the May cut. In Q3:
+
+| meaning | hold | Q1–Q2 | Q3 (held out) | vs the light | verdict |
+|---|---|---|---|---|---|
+| Five morning cells first hit +5, and O is also green. Sell same day’s close. | next 1 | +2.15% (n=8836) | **+1.78%** (n=3048) | +0.24 pp | **KEEP** |
+| Same five-cell light + green O. Sell next day’s close. | next 2 | +2.04% (n=8836) | **+1.72%** (n=3048) | +0.27 pp | **KEEP** |
+| Nine morning cells first hit +5, and O is also green. Sell next day’s close. | next 2 | +1.50% (n=9636) | **+2.37%** (n=3307) | +0.45 pp | **KEEP** |
+| Nine-cell light + green O, same-day close. | next 1 | +1.57% (n=9636) | +0.98% (n=3307) | +0.04 pp | **KILL** |
+| Five-cell light that exits at 0 + green O (both holds). | next 1 / 2 | ~+1.6% | +1.00% to +1.21% | +0.17 pp | **KILL** |
+
+**Plain finding:** a green O on the strong five-cell light still beats the light itself after July 1, both same-day and next-day. The nine-cell light + O only keeps the next-day hold. The weaker “exit at 0” light + O does not add a full +20 bp. Research only. No card.
+
+### Finviz high-vol (`fz_volM`)
+
+Today’s snapshot is **not** historical. We joined dated Elite exports already in `data/exports/finviz_YYYY-MM-DD.csv` (21 files, 2026-04-26 then a gap until mid-August). Same-day files are ignored at the open.
+
+| layer | verdict | why |
+|---|---|---|
+| Snapshot `fz_volM` (the old KEEP +24–64 bp) | **BLOCKED** | current CSV, not 2026 history; cannot ship |
+| As-of high-vol (prior Elite file, Volatility Month > 8%) | **KILL** | gappy tape — one spring file, then Aug–Sep only |
+| Light + green O + as-of high-vol | **KILL** | same gap |
+
+`fz_volM` cannot ship until as-of Elite history covers both tape halves. Full table: `JOIN_VERDICT.md`.

@@ -404,10 +404,25 @@ def write_outputs(existing, scored, fz_cov, n_grids):
     if os.path.exists(cj):
         old = open(cj, encoding="utf-8").read()
         pointer = (
-            "\n\n## Second-regime / as-of Finviz\n\n"
-            "See `JOIN_VERDICT.md`. Snapshot `fz_volM` KEEP is **BLOCKED** "
-            "until dated Elite history covers both tape halves. "
-            f"Q3 cut is {REGIME_CUT}.\n"
+            "\n\n**Update — Finviz snapshot `fz_volM` rows above that say "
+            "KEEP are BLOCKED.** That tag is today’s CSV, not 2026 history. "
+            "See the second-regime section.\n"
+            "\n## Second-regime / as-of Finviz\n\n"
+            "_Generated 2026-09-07. No new color-alone or AB/weather/book "
+            "mines. Live `flatten_robust` frozen._\n\n"
+            "### Split we used\n\n"
+            "The first harden already cut the year at **2026-05-01**. This "
+            "beat holds out a later slice: **Q1–Q2 vs Q3**, cut "
+            f"**{REGIME_CUT}**. Same Futubull fees, both SPY tapes, "
+            "top-day lottery, and the fold must still beat the parent "
+            "light by 20 bp.\n\n"
+            "### Light + green O — does Q3 still pay?\n\n"
+            "See the Q3 table on `JOIN_VERDICT.md` / "
+            "`03_scoreboard/EXCEL_BOT_MINE.md`. Three recipes still KEEP "
+            "(five-cell + O hold1/2, nine-cell + O hold2). Snapshot "
+            "`fz_volM` is **BLOCKED**; as-of Elite high-vol is **KILL** "
+            "(gappy). `fz_volM` cannot ship until as-of history covers "
+            "both tape halves.\n"
         )
         if "## Second-regime / as-of Finviz" in old:
             old = old.split("## Second-regime / as-of Finviz", 1)[0].rstrip() + pointer

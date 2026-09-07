@@ -685,9 +685,15 @@ def test_color_join_report_is_committed():
     assert "D, E, F, H, I, N" in md
     assert "dated before" in md
     assert "flatten_robust" in md
+    assert "BLOCKED" in md
+    assert "2026-07-01" in md
+    assert "does Q3 still pay" in md or "Q3" in md
     sb = (ROOT / "03_scoreboard" / "EXCEL_BOT_MINE.md").read_text()
     assert "first A–JL cut" in sb
     assert "Color + join mine" in sb
+    assert "Join verdict" in sb
+    assert "BLOCKED" in sb
+    assert "2026-07-01" in sb
     ao = (ROOT / "excel_bot" / "research" / "AO_FIRST_MINE.md").read_text()
     assert "VISIBLE_COLS A..O" in ao
     assert "Color + join mine" in ao
@@ -834,6 +840,8 @@ def test_join_verdict_report_is_committed():
     assert "Join verdict" in sb
     cj = (ROOT / "excel_bot" / "research" / "COLOR_JOIN_MINE.md").read_text()
     assert "BLOCKED" in cj
+    assert "Q3" in cj or "2026-07-01" in cj
+    assert "cannot ship" in cj or "as-of" in cj.lower()
     payload = json.loads(
         (ROOT / "excel_bot" / "research" / "join_verdict.json").read_text())
     assert payload["live_untouched"] == "flatten_robust"
