@@ -284,6 +284,33 @@ def apply_hold1_sibling(rows):
     return rows
 
 
+def apply_horizon_sibling(rows):
+    """hold1 needs hold2 PASS; hold3/5/8 need hold2 short-horizon edge.
+
+    Short-horizon edge = holdout avg>0 and not `no_edge_vs_uncond`.
+    Stops hold5/8 tape-rides from counting as keepers on a bull window.
+    """
+    apply_hold1_sibling(rows)
+    by = {(r["def"], r["clock"], r["side"], r["cohort"], r.get("cost_model"),
+           r["exit"]): r for r in rows}
+    for r in rows:
+        if r.get("verdict") != "PASS":
+            continue
+        ex = str(r.get("exit") or "")
+        if ex not in ("hold3", "hold5", "hold8"):
+            continue
+        sib = by.get((r["def"], r["clock"], r["side"], r["cohort"],
+                      r.get("cost_model"), "hold2"))
+        h = (sib or {}).get("holdout") or {}
+        reasons = list((sib or {}).get("fail_reasons") or [])
+        ok = bool(sib) and h.get("avg_net", 0) > 0 and "no_edge_vs_uncond" not in reasons
+        if not ok:
+            r["verdict"] = "FAIL"
+            r["fail_reasons"] = list(r.get("fail_reasons") or []) + [
+                "long_hold_without_hold2"]
+    return rows
+
+
 def _row_line(r):
     d, h = r.get("discovery") or {}, r.get("holdout") or {}
 

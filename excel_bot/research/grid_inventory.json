@@ -26,6 +26,7 @@
  "stored": {
   "source": "excel-state rows cache + daily A\u2013O fill rebuild",
   "n_tickers": 3603,
+  "done_grids_approx": 3445,
   "fields": [
    "date",
    "open",
@@ -37,18 +38,20 @@
   ],
   "fill_cols": 15,
   "fill_letters": "A..O",
+  "signal_colors": "A-O strip only (15 fills)",
   "missing_vs_full": {
    "columns": 260,
    "formula_values_G_to_O": true,
    "deeper_fills": 97,
-   "note": "grids/<T>.json stores OHLCV + 15 fills. It does not store G\u2013O formula VALUES or any column past O. excel-state itself stores Yahoo rows only \u2014 colors are rebuilt each daily run and not persisted."
+   "note": "grids/<T>.json stores OHLCV + 15 fills. It does not store G\u2013O formula VALUES or any column past O. excel-state itself stores Yahoo rows only \u2014 colors are rebuilt each daily run and not persisted. Suggestions signal_colors is the A\u2192O strip only."
   }
  },
  "all_cols_mode": {
   "flag": "python engine/run.py --all-cols",
   "captures": "A..JL (275) values + fills, rows 1\u2013364",
   "used_in_daily": false,
-  "cost": "minutes per ticker; not the 3,603 daily path"
+  "phase": 2,
+  "cost": "minutes per ticker via run.py; lean capture ~1.2 s/ticker"
  },
  "visible_A_to_O": [
   {

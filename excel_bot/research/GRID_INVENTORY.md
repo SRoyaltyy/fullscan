@@ -86,13 +86,29 @@ None of those values or their fills are in `grids/<T>.json`.
 
 L1–L5 / S1–S2 were mined on A–O fills, confirmation **close**, 0.1%/0.3% costs,
 discovery/holdout, 6.5-month regime. They do **not** use `--all-cols`.
-This cycle re-tests that surface with correct clocks, sleeve holds 1/2/3/5/8,
-Futubull *and* mcap costs, tape/regime splits, and **new** patterns
-(open scores, color combos, lag combos, gap/J/H value gates).
+`signal_colors` on suggestions is the A→O strip only.
+Live 2026-09-05: L1/L2 −0.55%, L3 +0.35%, L5 −4%. Historical holdout PASS
+does not license another live wire.
+
+Daily `done_grids` is ~3445 color rebuilds; this cycle rebuilt **3603** A–O
+grids from excel-state rows (2026-01-05 → 2026-09-04). excel-state still
+has **no** persisted grid JSON.
+
+## Standing mine order (ship bar, no live wire)
+
+1. **Open-knowable / a_score** — A-keyed, `open_score`, `open_core`, open
+   color combos, lag (yesterday close-knowable + today A), gap/J value
+   gates. Never `core_score` at open.
+2. **Close-entry** — refresh L3-like + non-TP low-vol holds; then S1/S2.
+   Defer L4/L5 until something stronger than live −4% / −0.55% exists.
+3. **A–JL phase 2** — full `--all-cols` rebuild of 3603 is expensive
+   (`run.py` minutes/ticker; lean capture ~1.2 s × 3603 ≈ 70 min).
+   Do it after the A–O surface is exhausted. Cheap 35-ticker pilot already
+   **THIN 90** (`ALL_COLS_MINE.md`).
 
 ## What would exhaust the rest
 
 Persist `--all-cols` (or a chosen subset: L/O values, EL/DD/CP, AI, JA, IY)
-on the same 3,603 tickers and re-run `mine_clock.py`. Until then, claiming
+on the same 3,603 tickers and re-run the clock miner. Until then, claiming
 the *workbook* is exhausted would be a lie; claiming the **stored A–O fill
 surface** is exhausted is the honest bar.

@@ -114,9 +114,11 @@ def build(model_path=MODEL):
         "stored": {
             "source": "excel-state rows cache + daily A–O fill rebuild",
             "n_tickers": 3603,
+            "done_grids_approx": 3445,
             "fields": STORED_FIELDS,
             "fill_cols": STORED_FILL_COLS,
             "fill_letters": "A..O",
+            "signal_colors": "A-O strip only (15 fills)",
             "missing_vs_full": {
                 "columns": FULL_COLS - STORED_FILL_COLS,
                 "formula_values_G_to_O": True,
@@ -125,7 +127,8 @@ def build(model_path=MODEL):
                     "grids/<T>.json stores OHLCV + 15 fills. It does not "
                     "store G–O formula VALUES or any column past O. "
                     "excel-state itself stores Yahoo rows only — colors "
-                    "are rebuilt each daily run and not persisted."
+                    "are rebuilt each daily run and not persisted. "
+                    "Suggestions signal_colors is the A→O strip only."
                 ),
             },
         },
@@ -133,7 +136,8 @@ def build(model_path=MODEL):
             "flag": "python engine/run.py --all-cols",
             "captures": "A..JL (275) values + fills, rows 1–364",
             "used_in_daily": False,
-            "cost": "minutes per ticker; not the 3,603 daily path",
+            "phase": 2,
+            "cost": "minutes per ticker via run.py; lean capture ~1.2 s/ticker",
         },
         "visible_A_to_O": visible,
         "deeper_bucket_counts": dict(buckets),

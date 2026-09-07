@@ -13,7 +13,9 @@ from clock import (  # noqa: E402
     CLOSE_IDX, OPEN_IDX, SHIP, annotate_days, assert_clock_legal,
     feature_clock, futu_cost, hold_exit_idx, mcap_cost, simulate_clock,
 )
-from mine_clock import apply_hold1_sibling, lottery, pack_cell  # noqa: E402
+from mine_clock import (  # noqa: E402
+    apply_hold1_sibling, apply_horizon_sibling, lottery, pack_cell,
+)
 from patterns import detect_pattern, new_lag_defs, pattern_matrix  # noqa: E402
 
 
@@ -138,7 +140,11 @@ def test_inventory_full_vs_stored():
     assert inv["n_formulas"] > 30000
     assert inv["n_cf_columns"] > 15
     assert inv["all_cols_mode"]["used_in_daily"] is False
+    assert inv["all_cols_mode"].get("phase") == 2
     assert inv["stored"]["missing_vs_full"]["formula_values_G_to_O"] is True
+    assert inv["stored"]["signal_colors"].startswith("A-O")
+    assert inv["stored"]["fill_letters"] == "A..O"
+    assert inv["stored"]["done_grids_approx"] == 3445
 
 
 def test_does_not_import_flatten_live():
@@ -184,7 +190,8 @@ def test_all_cols_patterns_clocks_are_legal():
 
 
 def test_all_cols_miners_do_not_wire_live():
-    for fn in ("mine_all_cols.py", "capture_all_cols.py", "mine_clock.py"):
+    for fn in ("mine_all_cols.py", "capture_all_cols.py", "mine_clock.py",
+               "mine_first.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "sleeve_merge_live" not in src
         assert "LIVE_POLICY" not in src
@@ -222,6 +229,44 @@ def test_pack_cell_quality_fail_is_fail_not_thin():
         ("toy", "close", "long", "hold2", "ALL", "mcap_bps"), cell)
     assert row["verdict"] == "FAIL"
     assert "disc_sign" in row["fail_reasons"]
+
+
+def test_hold8_without_hold2_edge_is_fail():
+    def fake(exit_rule, verdict, reasons=None, hold_avg=0.05):
+        return {
+            "def": "strict_A_ml1", "clock": "open", "side": "long",
+            "exit": exit_rule, "cohort": "ALL", "cost_model": "futubull",
+            "verdict": verdict, "fail_reasons": list(reasons or []),
+            "holdout": {"n": 200, "avg_net": hold_avg, "t": 3.0},
+        }
+    rows = apply_horizon_sibling([
+        fake("hold8", "PASS"),
+        fake("hold2", "FAIL", ["no_edge_vs_uncond"], hold_avg=0.001),
+    ])
+    assert rows[0]["verdict"] == "FAIL"
+    assert "long_hold_without_hold2" in rows[0]["fail_reasons"]
+
+
+def test_first_mine_never_opens_core_score():
+    from mine_first import A_DEFS, A_CLOSE, CLOSE_DEFS, first_mine_pats
+    for name, defn, clock, _sides in A_DEFS:
+        assert clock == "open"
+        assert defn.get("key") == "a"
+    for name, defn, clock, _sides in A_CLOSE:
+        assert clock == "close"
+        assert defn.get("key") == "a"
+    for name, defn, clock, _sides in CLOSE_DEFS:
+        assert clock == "close"
+        if "core" in name:
+            assert defn.get("key") == "core_score"
+    pats = first_mine_pats()
+    assert len(pats) >= 20
+    for p in pats:
+        if p["clock"] == "open":
+            assert p["defn"].get("key") != "core_score", p["name"]
+            cols = p["defn"].get("feature_cols")
+            if cols:
+                assert_clock_legal(cols, "open")
 
 
 if __name__ == "__main__":
