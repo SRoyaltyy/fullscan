@@ -218,7 +218,8 @@ def test_all_cols_miners_do_not_wire_live():
     for fn in ("mine_all_cols.py", "capture_all_cols.py", "mine_clock.py",
                "mine_first.py", "mine_formula_cut.py", "classify_clocks.py",
                "harden_hyst_open.py", "mine_color_join.py", "pit_joins.py",
-               "mine_unmined.py", "harden_unmined.py", "harden_open_stack.py"):
+               "mine_unmined.py", "harden_unmined.py", "harden_open_stack.py",
+               "harden_close_cluster.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "sleeve_merge_live" not in src
         assert "LIVE_POLICY" not in src
@@ -1073,8 +1074,54 @@ def test_open_stack_report_is_committed():
             assert (r.get("lottery_day_frac") or 0) <= 0.25
 
 
+def test_close_cluster_is_close_only():
+    from harden_close_cluster import HOLDS, LAYERS, ba_eq1, t_green
+    assert HOLDS == (1, 2)
+    assert [x[0] for x in LAYERS] == ["T", "BA", "T∧BA"]
+    assert t_green({"T": {"f": "C6EFCE", "v": 1}})
+    assert not t_green({"T": {"f": None, "v": 1}})
+    assert ba_eq1({"BA": {"v": 1}})
+    assert not ba_eq1({"BA": {"v": 0}})
+    src = (ENG / "harden_close_cluster.py").read_text(encoding="utf-8")
+    assert "clock\": \"close\"" in src or 'clock": "close"' in src
+    assert "from flatten" not in src
+    assert "flatten_robust" in src
+    assert "AH/FR" in src or "open recipes" in src.lower()
+
+
+def test_close_cluster_report_is_committed():
+    md = (ROOT / "excel_bot" / "research" / "CLOSE_CLUSTER.md").read_text()
+    assert "Plain English" in md
+    assert md.index("Plain English") < md.index("`fill_T_green`")
+    assert "T∧BA" in md or "T and BA" in md
+    assert "KEEP" in md
+    assert "2026-07-01" in md or "Q3" in md
+    assert "flatten_robust" in md
+    assert "light + green O" in md or "light+green O" in md
+    sb = (ROOT / "03_scoreboard" / "EXCEL_BOT_MINE.md").read_text()
+    assert "PASS 376" in sb
+    assert "Close-cluster harden" in sb
+    assert "Open-stack verdict" in sb
+    payload = json.loads(
+        (ROOT / "excel_bot" / "research" / "close_cluster.json").read_text())
+    assert payload["live_untouched"] == "flatten_robust"
+    assert payload["excel_cache_used"] is False
+    assert payload["finviz"] == "BLOCKED"
+    assert payload["open_stack"] == "untouched"
+    assert payload["q3_cut"] == "2026-07-01"
+    letters = {r["letter"] for r in payload["rows"]}
+    assert letters == {"T", "BA", "T∧BA"}
+    for r in payload["rows"]:
+        assert r["clock"] == "close"
+        assert r["exit"] in ("hold1", "hold2")
+        if r["verdict"] == "KEEP":
+            assert (r.get("lottery_day_frac") or 0) <= 0.25
+            assert r.get("q3") and r["q3"].get("n", 0) >= 40
+
+
 def test_unmined_miner_does_not_wire_live():
-    for fn in ("mine_unmined.py", "harden_unmined.py", "harden_open_stack.py"):
+    for fn in ("mine_unmined.py", "harden_unmined.py", "harden_open_stack.py",
+               "harden_close_cluster.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "from flatten" not in src
         assert "sleeve_merge_live" not in src

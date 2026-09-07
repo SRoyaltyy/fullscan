@@ -126,3 +126,7 @@ Leftover KEEP harden: raw 126 → unique 59 → KEEP 36 (36 hold1/2). Twins kill
 ## Open-stack verdict (light+O vs AH / FR)
 
 Open-stack: light+O ∧ AH/FR KEEP 4 · KILL 2 · THIN 0. Standing light+O unchanged. Close letters out of scope. Finviz BLOCKED. See `OPEN_STACK.md`.
+
+## Close-cluster harden (T / BA)
+
+Close-cluster T/BA: KEEP 0 · KILL 6 · THIN 0. Open recipes untouched. Finviz BLOCKED. See `CLOSE_CLUSTER.md`.
