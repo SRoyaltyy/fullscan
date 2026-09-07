@@ -219,7 +219,8 @@ def test_all_cols_miners_do_not_wire_live():
                "mine_first.py", "mine_formula_cut.py", "classify_clocks.py",
                "harden_hyst_open.py", "mine_color_join.py", "pit_joins.py",
                "mine_unmined.py", "harden_unmined.py", "harden_open_stack.py",
-               "harden_close_cluster.py", "harden_close_peers.py"):
+               "harden_close_cluster.py", "harden_close_peers.py",
+               "mine_next_region.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "sleeve_merge_live" not in src
         assert "LIVE_POLICY" not in src
@@ -1160,9 +1161,53 @@ def test_close_peers_report_is_committed():
             assert (r.get("top5_share") or 0) <= 0.25
 
 
+def test_next_region_inventory_skips_tba_and_open_stack():
+    from mine_next_region import SKIP_LAG, WEEKLY, remaining_inventory
+    assert tuple(WEEKLY) == ("AP", "AQ", "AR", "AS", "AT", "AU")
+    assert SKIP_LAG == {"AH", "FR"}
+    meta = remaining_inventory()
+    assert meta["letter_space"] == "exhausted"
+    assert "AH" not in meta["val_open_lag_letters"]
+    assert "FR" not in meta["val_open_lag_letters"]
+    src = (ENG / "mine_next_region.py").read_text(encoding="utf-8")
+    assert "from flatten" not in src
+    assert "flatten_robust" in src
+
+
+def test_next_region_report_is_committed():
+    inv = (ROOT / "excel_bot" / "research" / "NEXT_REGION_INVENTORY.md").read_text()
+    assert "Plain English" in inv
+    assert "exhausted" in inv
+    assert "AP" in inv and "AU" in inv
+    md = (ROOT / "excel_bot" / "research" / "NEXT_REGION.md").read_text()
+    assert "Plain English" in md
+    assert md.index("Plain English") < md.index("`weekly_") if "`weekly_" in md else True
+    assert "KEEP" in md and ("KILL" in md or "THIN" in md)
+    assert "light + green O" in md or "light+O" in md
+    assert "T / BA" in md or "T/BA" in md
+    sb = (ROOT / "03_scoreboard" / "EXCEL_BOT_MINE.md").read_text()
+    assert "PASS 376" in sb
+    assert "Next A–JL region" in sb
+    payload = json.loads(
+        (ROOT / "excel_bot" / "research" / "next_region.json").read_text())
+    assert payload["live_untouched"] == "flatten_robust"
+    assert payload["excel_cache_used"] is False
+    assert payload["letter_space"] == "exhausted"
+    assert payload["close_shortboard"].startswith("KILL")
+    assert "AH/FR" in payload["standing_open"]
+    for r in payload["rows"]:
+        if r.get("keep") == "KEEP":
+            q1 = r.get("q1") or {}
+            assert q1.get("avg_net", 0) > 0
+            assert (r.get("top5_share") or 0) <= 0.25
+            assert r["clock"] in ("open", "close")
+            assert r.get("def", "").split("_")[0] != "T"
+
+
 def test_unmined_miner_does_not_wire_live():
     for fn in ("mine_unmined.py", "harden_unmined.py", "harden_open_stack.py",
-               "harden_close_cluster.py", "harden_close_peers.py"):
+               "harden_close_cluster.py", "harden_close_peers.py",
+               "mine_next_region.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "from flatten" not in src
         assert "sleeve_merge_live" not in src

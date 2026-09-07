@@ -134,3 +134,7 @@ Close-cluster T/BA: KEEP 0 · KILL 6 · THIN 0. Open recipes untouched. Finviz B
 ## Close-cluster peers (CZ / EH / IB / HO / IL / GV)
 
 Close-cluster peers CZ/EH/IB/HO/IL/GV: KEEP 0 · KILL 12 · THIN 0. T/BA untouched. Open recipes untouched. See `CLOSE_CLUSTER.md`.
+
+## Next A–JL region (weekly + leftover lag)
+
+Next A–JL region: weekly+lag KEEP 0 · KILL 230 · THIN 0. Letter space exhausted. Light+O untouched. T/BA untouched. See `NEXT_REGION.md`.
