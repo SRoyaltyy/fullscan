@@ -1552,12 +1552,85 @@ def test_hi_soft_regime_report_is_committed():
     assert "PASS 376" in sb
 
 
+def test_hi_ml_gate_never_peeks_same_row_hi():
+    from mine_hi_ml import (
+        LIVE_UNTOUCHED, OPEN_DERIVED, assert_ml_gate, build_feature_list,
+        feature_is_legal, hi_from_ohlc, overnight_from_ohlc, parse_feat,
+    )
+
+    h, i = hi_from_ohlc(10.0, 11.0, prev_c=10.0)
+    assert abs(h - 0.10) < 1e-12
+    assert abs(i - 0.10) < 1e-12
+    # Overnight is C[t] vs B[t−1] — open-knowable, not H/I.
+    assert abs(overnight_from_ohlc(10.5, 10.0) - 0.05) < 1e-12
+    assert overnight_from_ohlc(10.5, 10.0) != h
+
+    assert feature_is_legal("H", 0, "open") is False
+    assert feature_is_legal("I", 0, "close") is False
+    assert feature_is_legal("H", 1, "open") is True
+    assert feature_is_legal("overnight", 0, "open") is True
+    assert feature_is_legal("B", 0, "open") is False
+    assert feature_is_legal("B", 0, "close") is False  # B = C×(1+H)
+    assert feature_is_legal("BJ", 0, "close") is False
+    assert feature_is_legal("B", 1, "close") is True
+    assert feature_is_legal("core_score", 0, "open") is False
+
+    fo = build_feature_list("open")
+    fc = build_feature_list("close")
+    assert_ml_gate(fo, "open")
+    assert_ml_gate(fc, "close")
+    for name in fo + fc:
+        base, lag = parse_feat(name)
+        if base in ("H", "I"):
+            assert lag >= 1, name
+        if name.startswith("core_score"):
+            raise AssertionError(name)
+    for name in fo:
+        base, lag = parse_feat(name)
+        if lag == 0:
+            assert base not in ("B", "D", "E", "F", "G", "K", "M", "N", "H", "I")
+            assert base in OPEN_DERIVED or feature_is_legal(base, 0, "open")
+    try:
+        assert_ml_gate(["H_l0"], "open")
+        raise AssertionError("should have refused same-row H")
+    except ValueError as e:
+        assert "H/I" in str(e)
+
+    src = (ENG / "mine_hi_ml.py").read_text(encoding="utf-8")
+    assert "from flatten" not in src
+    assert "flatten_robust" in src
+    assert LIVE_UNTOUCHED == "flatten_robust"
+
+
+def test_hi_ml_report_is_committed():
+    md = (ROOT / "excel_bot" / "research" / "HI_ML.md").read_text()
+    assert "Plain English" in md
+    assert md.index("Plain English") < md.index("Code names (after the English)")
+    assert "flatten_robust" in md
+    assert "KEEP" in md or "null" in md
+    payload = json.loads(
+        (ROOT / "excel_bot" / "research" / "hi_ml.json").read_text())
+    assert payload["live_untouched"] == "flatten_robust"
+    assert payload["excel_cache_used"] is False
+    assert payload["verdict"] in ("KEEP", "null", "DEMOTE")
+    assert "H" in payload["labels"] and "I" in payload["labels"]
+    for r in payload.get("rows") or []:
+        name = r.get("def") or ""
+        assert "H_l0" not in name and "I_l0" not in name
+        if r.get("keep") == "KEEP":
+            assert (r.get("top5_share") or 0) <= 0.25
+            assert (r.get("july_share") or 0) <= 0.40
+    sb = (ROOT / "03_scoreboard" / "EXCEL_BOT_MINE.md").read_text()
+    assert "H/I full-sheet ML" in sb
+    assert "PASS 376" in sb
+
+
 def test_unmined_miner_does_not_wire_live():
     for fn in ("mine_unmined.py", "harden_unmined.py", "harden_open_stack.py",
                "harden_close_cluster.py", "harden_close_peers.py",
                "mine_next_region.py", "mine_same_day.py", "mine_pair_lag.py",
                "mine_pair_lag_close.py", "mine_hi_horizon.py",
-               "mine_hi_soft_regime.py"):
+               "mine_hi_soft_regime.py", "mine_hi_ml.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "from flatten" not in src
         assert "sleeve_merge_live" not in src

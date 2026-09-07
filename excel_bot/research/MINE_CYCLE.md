@@ -150,3 +150,7 @@ Pair+lag open (locked 44): KEEP 0 · KILL 4266 · THIN 0. Trees skipped_no_pair_
 ## H/I multi-horizon (standing keep + close pair)
 
 H/I multi-horizon: KEEP 85 · KILL 1227 · THIN 0. Standing light+O re-scored. Close pair AA-today, no same-row H/I. See `HI_HORIZON.md`.
+
+## H/I full-sheet ML (multi-year, clock-clean)
+
+Full-sheet ML → H/I (multi-year, clock-clean): **null**. See `excel_bot/research/HI_ML.md`. Research only. Live flatten_robust frozen.

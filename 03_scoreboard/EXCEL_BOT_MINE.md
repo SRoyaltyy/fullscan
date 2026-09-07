@@ -1237,3 +1237,7 @@ Research only. One 2026 regime.
 ## H/I soft-regime (standing light+O × heat × SPY)
 
 Standing light+O ± AH/FR under soft regimes (prior-I heat terciles × SPY up/down/flat): **DEMOTE** (slots KEEP 2 / DEMOTE 6 / REGIME-CONDITIONAL 1). See `excel_bot/research/HI_SOFT_REGIME.md`. Research only. Live flatten_robust frozen.
+
+## H/I full-sheet ML (multi-year, clock-clean)
+
+Full-sheet ML → H/I (multi-year, clock-clean): **null**. See `excel_bot/research/HI_ML.md`. Research only. Live flatten_robust frozen.
