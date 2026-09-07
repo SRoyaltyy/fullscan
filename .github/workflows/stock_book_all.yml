@@ -48,30 +48,13 @@ on:
         description: "true = always run all 11 sector predicts"
         required: false
         default: "false"
-  # ubuntu-only. ECS systemd 05:55 never starts GH land_book (that job
-  # lives on preopen_all.yml, which has no schedule). A 17:00 UTC ECS
-  # cron used to steal the box and miss 09:30. Schedule MUST force
-  # ubuntu + skip_llm + skip_extras — inputs are empty on cron.
-  schedule:
-    - cron: "10 10 * * 1-5"   # ~06:10 ET — after 05:40 scrape
-    - cron: "15 13 * * 1-5"   # ~09:15 ET — last chance before the bell
-  # Merge of ranker/heal code must not wait for a newly-registered cron.
-  # Do not match data/stock_book commits (GITHUB_TOKEN already will not
-  # retrigger; a PAT still must not start a second rank). Pre-Open ALL
-  # completion is covered by workflow_run. skip-if-good no-ops when
-  # 1d is already all-green.
-  push:
-    branches: [main]
-    paths:
-      - "src/stock_book.py"
-      - "src/green_pile.py"
-      - "src/skip_if_good.py"
-      - "src/run_stock_book_all.py"
-      - "src/weather.py"
-      - ".github/workflows/stock_book_all.yml"
-  workflow_run:
-    workflows: ["Pre-Open ALL (predictive one-shot)"]
-    types: [completed]
+  # SCHEDULE / push / workflow_run RETIRED — Daily.yml + Generate.yml
+  # own 06:10 / 09:15. Keep this file for a manual ECS full-extras click.
+  # schedule:
+  #   - cron: "10 10 * * 1-5"
+  #   - cron: "15 13 * * 1-5"
+  # push:
+  # workflow_run:
 
 permissions:
   contents: write

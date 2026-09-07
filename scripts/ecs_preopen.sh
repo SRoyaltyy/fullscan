@@ -142,22 +142,19 @@ dispatch_ubuntu_book() {
     echo "[ecs-preopen] no GITHUB_TOKEN — skip ubuntu book dispatch"
     return 0
   fi
-  echo "[ecs-preopen] dispatch stock_book_all.yml ubuntu skip-llm (book must not wait on Grok)"
+  echo "[ecs-preopen] dispatch generate.yml (tickets must not wait on Grok)"
   if command -v gh >/dev/null 2>&1; then
     GH_TOKEN="$token" gh api --method POST \
-      "repos/${repo}/actions/workflows/stock_book_all.yml/dispatches" \
+      "repos/${repo}/actions/workflows/generate.yml/dispatches" \
       -f ref=main \
-      -f "inputs[runner]=ubuntu" \
-      -f "inputs[skip_llm]=true" \
-      -f "inputs[skip_extras]=true" \
       -f "inputs[run_date]=$DAY" || true
     return 0
   fi
   curl -sS -X POST \
     -H "Authorization: bearer ${token}" \
     -H "Accept: application/vnd.github+json" \
-    "https://api.github.com/repos/${repo}/actions/workflows/stock_book_all.yml/dispatches" \
-    -d "{\"ref\":\"main\",\"inputs\":{\"runner\":\"ubuntu\",\"skip_llm\":\"true\",\"skip_extras\":\"true\",\"run_date\":\"${DAY}\"}}" \
+    "https://api.github.com/repos/${repo}/actions/workflows/generate.yml/dispatches" \
+    -d "{\"ref\":\"main\",\"inputs\":{\"run_date\":\"${DAY}\"}}" \
     || true
 }
 dispatch_ubuntu_book

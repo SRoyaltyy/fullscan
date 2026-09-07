@@ -26,6 +26,8 @@ def test_missing_date_is_run() -> None:
     assert skip_if_good.check_preopen_full("1999-01-01") is False
     assert skip_if_good.check_postclose_all("1999-01-01") is False
     assert skip_if_good.check_label_weather("1999-01-01") is False
+    assert skip_if_good.check_generate("1999-01-01") is False
+    assert skip_if_good.check_daily_morning("1999-01-01") is False
 
 
 def test_learn_requires_dated_file_not_stale_board() -> None:
@@ -242,6 +244,8 @@ def test_jobs_include_label_weather() -> None:
     assert "label_weather" in skip_if_good.JOBS
     assert "stock_book_all" in skip_if_good.JOBS
     assert "postclose_all" in skip_if_good.JOBS
+    assert "daily" in skip_if_good.JOBS
+    assert "generate" in skip_if_good.JOBS
 
 
 def test_postclose_all_workflow_name_matches_yml() -> None:

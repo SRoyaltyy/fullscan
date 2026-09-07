@@ -4,6 +4,10 @@ Self-improving US-market direction predictor running on GitHub Actions.
 (Companion to the data collectors in this repo — the prediction pipeline
 reads the `news` and `macro_indicators` tables those collectors maintain.)
 
+**09:30 tickets:** four workflows only — Daily, Generate, Backtest, Deploy.
+See [`00_grounding/DAILY_0930.md`](00_grounding/DAILY_0930.md).
+The table below is the old predictor-loop sketch.
+
 ## Daily cycle (Mon–Fri, America/New_York)
 
 | Time | Stage | What happens |

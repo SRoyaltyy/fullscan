@@ -17,14 +17,12 @@ name: Post-Close last-closed (ubuntu/DeepSeek sidecar)
 # no-tool close was another DSML dump (0 chars written). The client now
 # assembles an essay from the thread when the close stays a dump.
 
+# SCHEDULE / push RETIRED — Daily.yml night lane grades last-closed.
 on:
-  schedule:
-    - cron: "25 15 * * 1-5"   # ~11:25 ET — last-closed heal while session is live
-    - cron: "15 20 * * 1-5"   # ~16:15 ET — last_closed flips at the bell (Fri→Mon baseline)
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/postclose_last_closed.yml"
+  # schedule:
+  #   - cron: "25 15 * * 1-5"
+  #   - cron: "15 20 * * 1-5"
+  # push:
   workflow_dispatch:
     inputs:
       force:

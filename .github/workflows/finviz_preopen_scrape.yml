@@ -11,9 +11,10 @@ name: Finviz pre-open scrape (GH-hosted Elite)
 # After US falls back to EST this is 04:40 ET — early, harmless.
 # Post-close 22:00 ET captain research stays on ECS.
 
+# SCHEDULE RETIRED — Daily.yml 05:40 ET owns Elite scrape.
 on:
-  schedule:
-    - cron: "40 9 * * 1-5"
+  # schedule:
+  #   - cron: "40 9 * * 1-5"
   workflow_dispatch:
     inputs:
       run_date:

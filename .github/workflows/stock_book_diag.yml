@@ -20,9 +20,9 @@ on:
         description: "Session YYYY-MM-DD (empty = today ET)"
         required: false
         default: ""
-  schedule:
-    # 08:50 ET — after Pre-Open ALL should have written the book
-    - cron: "50 12 * * 1-5"
+  # schedule RETIRED — Daily.yml diagnose job.
+  # schedule:
+  #   - cron: "50 12 * * 1-5"
 
 permissions:
   contents: read
