@@ -1081,43 +1081,95 @@ The mine now predicts **H** (intraday %, close vs open) and **I** (daily %, clos
 **Standing KEEP 6** on stacked daily I (of 20 standing I-horizon rows). Research only — not a card.
 **Close-entry KEEP 1 singles / 33 pairs** on 1d stacked I. 30 of those are today's F-green (volume fill) or a twin of it — same-close association with the I print, not a lagged forecast. AA-today pairs do not KEEP (SPY-down red / no edge). Research only — not a card. Trees only if a non-twin pair KEEPs; this F-green cluster is one print, not a new family.
 
-Dumps **3603**. Close atoms **228**. Alive **37**. Pairs **430**. Everyone-else 1d stacked I +0.63% (n=498610). Everyone-else 1d H +0.11% (n=498610). Both SPY tapes required for a global KEEP. Light+O is the check, not a new search.
+Excel gate: H and I are **labels only** (same-row close). Open features are the locked 44 + open fills. Close-entry may use other close cols. Same-row H/I never enter as day-X features.
 
-### Standing light+O ± AH/FR on stacked daily I (holdout moves)
+Dumps **3603**. Close atoms **228**. Alive **37**. Pairs **430**. Everyone-else 1d stacked I +0.63% (n=498610). Everyone-else 1d H +0.11% (n=498610). Everyone-else 1d I +0.63% (n=498610). Both SPY tapes required for a global KEEP. Light+O is the check, not a new search.
 
-| meaning | horizon | holdout I-stack | vs everyone | Q1 | spy↑ | spy↓ | heat hot | July | top-5 | verdict | why |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| the five morning cells (A, B, C, G, J) add up to a strong green (+5 or more) and the light stays on until that sum falls to +2, and O is green | 1d | +2.04% (n=4012) | +1.41 pp | +3.00% (n=977) | +2.73% (n=5049) | +1.63% (n=3428) | +2.20% (n=9935) | 0% | 10% | **KEEP** | — |
-| the five morning cells (A, B, C, G, J) add up to a strong green (+5 or more) and the light stays on until that sum falls to +2, and O is green | 2d | +2.08% (n=4012) | +1.10 pp | +3.03% (n=977) | +2.54% (n=5049) | +1.70% (n=3428) | +2.20% (n=9935) | 0% | 13% | **KEEP** | — |
-| the five morning cells (A, B, C, G, J) add up to a strong green (+5 or more) and the light stays on until that sum falls to +2, and O is green | 3d | +3.48% (n=3992) | +2.21 pp | +2.66% (n=977) | +3.68% (n=4991) | +1.67% (n=3428) | +2.84% (n=9877) | 0% | 27% | **KILL** | ticker_ghost |
-| the five morning cells (A, B, C, G, J) add up to a strong green (+5 or more) and the light stays on until that sum falls to +2, and O is green | 1w | +8.22% (n=3957) | +6.36 pp | +2.07% (n=977) | +3.97% (n=4947) | +1.52% (n=3391) | +4.76% (n=9796) | 0% | 53% | **KILL** | hold_t,ticker_ghost |
-| the five morning cells (A, B, C, G, J) add up to a strong green (+5 or more) and the light stays on until that sum falls to +2, and O is green | 2w | +4.55% (n=3852) | +0.74 pp | +1.16% (n=977) | +5.19% (n=4860) | +3.16% (n=3306) | +4.83% (n=9548) | 0% | 45% | **KILL** | ticker_ghost |
-| same five-cell light + green O, and the recent 5% down-day count (AH) is at least 1 | 1d | +3.39% (n=1277) | +2.76 pp | +4.78% (n=341) | +4.22% (n=1700) | +2.60% (n=1080) | +3.60% (n=3177) | 0% | 16% | **KEEP** | — |
-| same five-cell light + green O, and the recent 5% down-day count (AH) is at least 1 | 2d | +3.42% (n=1277) | +2.44 pp | +4.29% (n=341) | +3.82% (n=1700) | +2.80% (n=1080) | +3.57% (n=3177) | 0% | 24% | **KEEP** | — |
-| same five-cell light + green O, and the recent 5% down-day count (AH) is at least 1 | 3d | +7.20% (n=1277) | +5.93 pp | +3.58% (n=341) | +6.78% (n=1700) | +2.41% (n=1080) | +5.17% (n=3177) | 0% | 45% | **KILL** | hold_t,ticker_ghost |
-| same five-cell light + green O, and the recent 5% down-day count (AH) is at least 1 | 1w | +6.82% (n=1266) | +4.96 pp | +2.04% (n=341) | +7.15% (n=1686) | +1.55% (n=1066) | +4.92% (n=3149) | 0% | 41% | **KILL** | ticker_ghost |
-| same five-cell light + green O, and the recent 5% down-day count (AH) is at least 1 | 2w | +10.00% (n=1226) | +6.19 pp | -0.17% (n=341) | +9.50% (n=1658) | +1.61% (n=1037) | +6.78% (n=3062) | 0% | 58% | **KILL** | hold_t,q1_sign,ticker_ghost |
-| same five-cell light + green O, and recent volume over 1M and/or G ≥ 3 (FR) is at least 1 | 1d | +2.34% (n=2222) | +1.72 pp | +3.31% (n=556) | +3.04% (n=2753) | +2.04% (n=1857) | +2.56% (n=5400) | 0% | 15% | **KEEP** | — |
-| same five-cell light + green O, and recent volume over 1M and/or G ≥ 3 (FR) is at least 1 | 2d | +2.44% (n=2222) | +1.46 pp | +3.57% (n=556) | +2.89% (n=2753) | +2.15% (n=1857) | +2.58% (n=5400) | 0% | 20% | **KEEP** | — |
-| same five-cell light + green O, and recent volume over 1M and/or G ≥ 3 (FR) is at least 1 | 3d | +4.70% (n=2210) | +3.43 pp | +3.03% (n=556) | +4.80% (n=2719) | +1.97% (n=1857) | +3.59% (n=5366) | 0% | 38% | **KILL** | ticker_ghost |
-| same five-cell light + green O, and recent volume over 1M and/or G ≥ 3 (FR) is at least 1 | 1w | +12.77% (n=2186) | +10.90 pp | +2.29% (n=556) | +4.90% (n=2694) | +1.62% (n=1832) | +6.88% (n=5316) | 0% | 67% | **KILL** | hold_t,ticker_ghost |
-| same five-cell light + green O, and recent volume over 1M and/or G ≥ 3 (FR) is at least 1 | 2w | +6.29% (n=2117) | +2.47 pp | +0.97% (n=556) | +7.20% (n=2638) | +4.29% (n=1778) | +6.81% (n=5158) | 0% | 59% | **KILL** | ticker_ghost |
-| same five-cell light + green O, and both AH and FR are at least 1 | 1d | +3.81% (n=796) | +3.19 pp | +5.56% (n=203) | +4.70% (n=1011) | +3.26% (n=680) | +4.14% (n=1947) | 0% | 22% | **KILL** | hold1_without_hold2 |
-| same five-cell light + green O, and both AH and FR are at least 1 | 2d | +3.93% (n=796) | +2.95 pp | +5.55% (n=203) | +4.39% (n=1011) | +3.65% (n=680) | +4.25% (n=1947) | 0% | 34% | **KILL** | ticker_ghost |
-| same five-cell light + green O, and both AH and FR are at least 1 | 3d | +10.03% (n=796) | +8.76 pp | +4.52% (n=203) | +9.28% (n=1011) | +2.80% (n=680) | +6.76% (n=1947) | 0% | 56% | **KILL** | hold_t,ticker_ghost |
-| same five-cell light + green O, and both AH and FR are at least 1 | 1w | +8.22% (n=787) | +6.36 pp | +2.47% (n=203) | +8.83% (n=1001) | +1.48% (n=670) | +5.84% (n=1927) | 0% | 54% | **KILL** | hold_t,ticker_ghost |
-| same five-cell light + green O, and both AH and FR are at least 1 | 2w | +13.61% (n=758) | +9.79 pp | -1.40% (n=203) | +13.18% (n=988) | -0.13% (n=650) | +8.40% (n=1876) | 0% | 73% | **KILL** | disc_t,hold_t,spy_regime,q1_sign,ticker_ghost,regime_split |
+### Standing KEEP/KILL grid (H, I print, stacked I × horizon)
 
-Code names (after the English): `light_O` 1d, `light_O` 2d, `light_O` 3d, `light_O` 1w, `light_O` 2w, `light_O_AH` 1d, `light_O_AH` 2d, `light_O_AH` 3d.
+Holdout mean. **KEEP** / **KILL** after the ship + ghost + both-tape bar. 1d H is the same-day intraday print; 1d I is the same-day daily print; stacked I is the k-day compound.
 
-### Same standing recipes on 1d H (intraday print)
+| recipe | label | 1d | 2d | 3d | 1w | 2w |
+|---|---|---|---|---|---|---|
+| five-cell light + green O | H (intraday) | **KEEP** +2.11% (n=4012) | **KILL** +0.04% (n=4012) | **KILL** +0.06% (n=3992) | **KILL** -0.06% (n=3957) | **KILL** -0.07% (n=3852) |
+| five-cell light + green O | I (daily print) | **KEEP** +2.04% (n=4012) | **KILL** -0.03% (n=4012) | **KILL** +1.04% (n=3992) | **KILL** +7.32% (n=3957) | **KILL** -0.08% (n=3852) |
+| five-cell light + green O | I stacked | **KEEP** +2.04% (n=4012) | **KEEP** +2.08% (n=4012) | **KILL** +3.48% (n=3992) | **KILL** +8.22% (n=3957) | **KILL** +4.55% (n=3852) |
+| light+O ∧ AH≥1 | H (intraday) | **KEEP** +3.51% (n=1277) | **KILL** -0.16% (n=1277) | **KILL** -0.17% (n=1277) | **KILL** -0.25% (n=1266) | **KILL** -0.40% (n=1226) |
+| light+O ∧ AH≥1 | I (daily print) | **KEEP** +3.39% (n=1277) | **KILL** -0.18% (n=1277) | **KILL** +2.69% (n=1277) | **KILL** +3.36% (n=1266) | **KILL** -0.47% (n=1226) |
+| light+O ∧ AH≥1 | I stacked | **KEEP** +3.39% (n=1277) | **KEEP** +3.42% (n=1277) | **KILL** +7.20% (n=1277) | **KILL** +6.82% (n=1266) | **KILL** +10.00% (n=1226) |
+| light+O ∧ FR≥1 | H (intraday) | **KEEP** +2.48% (n=2222) | **KILL** +0.07% (n=2222) | **KILL** -0.02% (n=2210) | **KILL** -0.22% (n=2186) | **KILL** -0.02% (n=2117) |
+| light+O ∧ FR≥1 | I (daily print) | **KEEP** +2.34% (n=2222) | **KILL** -0.03% (n=2222) | **KILL** +1.60% (n=2210) | **KILL** +12.81% (n=2186) | **KILL** -0.12% (n=2117) |
+| light+O ∧ FR≥1 | I stacked | **KEEP** +2.34% (n=2222) | **KEEP** +2.44% (n=2222) | **KILL** +4.70% (n=2210) | **KILL** +12.77% (n=2186) | **KILL** +6.29% (n=2117) |
+| light+O ∧ AH≥1 ∧ FR≥1 | H (intraday) | **KILL** +3.93% (n=796) | **KILL** -0.16% (n=796) | **KILL** -0.03% (n=796) | **KILL** -0.68% (n=787) | **KILL** -0.34% (n=758) |
+| light+O ∧ AH≥1 ∧ FR≥1 | I (daily print) | **KILL** +3.81% (n=796) | **KILL** -0.22% (n=796) | **KILL** +4.34% (n=796) | **KILL** +4.32% (n=787) | **KILL** -0.51% (n=758) |
+| light+O ∧ AH≥1 ∧ FR≥1 | I stacked | **KILL** +3.81% (n=796) | **KILL** +3.93% (n=796) | **KILL** +10.03% (n=796) | **KILL** +8.22% (n=787) | **KILL** +13.61% (n=758) |
 
-| meaning | holdout H | spy↑ | spy↓ | verdict | why |
-|---|---|---|---|---|---|
-| the five morning cells (A, B, C, G, J) add up to a strong green (+5 or more) and the light stays on until that sum falls to +2, and O is green | +2.11% (n=4012) | +2.43% (n=5049) | +1.98% (n=3428) | **KEEP** | — |
-| same five-cell light + green O, and the recent 5% down-day count (AH) is at least 1 | +3.51% (n=1277) | +3.84% (n=1700) | +3.27% (n=1080) | **KEEP** | — |
-| same five-cell light + green O, and recent volume over 1M and/or G ≥ 3 (FR) is at least 1 | +2.48% (n=2222) | +2.77% (n=2753) | +2.40% (n=1857) | **KEEP** | — |
-| same five-cell light + green O, and both AH and FR are at least 1 | +3.93% (n=796) | +4.27% (n=1011) | +3.85% (n=680) | **KILL** | hold1_without_hold2 |
+Code names (after the English): `light_O`, `light_O_AH`, `light_O_FR`, `light_O_AH_FR`.
+
+### Standing detail (holdout, both tapes, why)
+
+| recipe | label | horizon | holdout | spy↑ | spy↓ | spy flat | July | top-5 | verdict | why |
+|---|---|---|---|---|---|---|---|---|---|---|
+| five-cell light + green O | H (intraday) | 1d | +2.11% (n=4012) | +2.43% (n=5049) | +1.98% (n=3428) | +1.96% (n=1458) | 0% | 6% | **KEEP** | — |
+| five-cell light + green O | H (intraday) | 2d | +0.04% (n=4012) | -0.06% (n=5049) | +0.15% (n=3428) | +0.42% (n=1458) | 0% | 46% | **KILL** | disc_t,hold_t,tape_split,spy_regime,q3_sign,q3_split,no_edge_vs_uncond,ticker_ghost,regime_split |
+| five-cell light + green O | H (intraday) | 3d | +0.06% (n=3992) | +0.20% (n=4991) | -0.12% (n=3428) | +0.15% (n=1458) | 0% | 61% | **KILL** | disc_t,hold_t,tape_split,spy_regime,q3_sign,q3_split,no_edge_vs_uncond,ticker_ghost,regime_split |
+| five-cell light + green O | H (intraday) | 1w | -0.06% (n=3957) | -0.13% (n=4947) | -0.09% (n=3391) | +0.27% (n=1458) | 0% | -75% | **KILL** | disc_t,hold_t,disc_sign,hold_sign,lottery_day,tape_split,spy_regime,q3_sign,no_edge_vs_uncond |
+| five-cell light + green O | H (intraday) | 2w | -0.07% (n=3852) | -0.06% (n=4860) | -0.03% (n=3306) | -0.00% (n=1382) | 0% | -97% | **KILL** | disc_t,hold_t,disc_sign,hold_sign,lottery_day,tape_split,spy_regime,q3_sign,no_edge_vs_uncond,q1_sign |
+| five-cell light + green O | I (daily print) | 1d | +2.04% (n=4012) | +2.73% (n=5049) | +1.63% (n=3428) | +1.67% (n=1458) | 0% | 10% | **KEEP** | — |
+| five-cell light + green O | I (daily print) | 2d | -0.03% (n=4012) | -0.05% (n=5049) | +0.05% (n=3428) | +0.42% (n=1458) | 0% | 266% | **KILL** | disc_t,hold_t,hold_sign,lottery_day,tape_split,spy_regime,q3_sign,q3_split,no_edge_vs_uncond,q1_sign,ticker_ghost,regime_split |
+| five-cell light + green O | I (daily print) | 3d | +1.04% (n=3992) | +1.04% (n=4991) | -0.07% (n=3428) | +0.11% (n=1458) | 0% | 77% | **KILL** | disc_t,hold_t,spy_regime,no_edge_vs_uncond,q1_sign,ticker_ghost,regime_split |
+| five-cell light + green O | I (daily print) | 1w | +7.32% (n=3957) | +1.00% (n=4947) | -0.18% (n=3391) | +16.87% (n=1458) | 0% | 101% | **KILL** | disc_t,hold_t,disc_sign,lottery_day,spy_regime,no_edge_vs_uncond,q1_sign,ticker_ghost,regime_split |
+| five-cell light + green O | I (daily print) | 2w | -0.08% (n=3852) | -0.12% (n=4860) | +1.50% (n=3306) | +0.20% (n=1382) | 0% | 117% | **KILL** | disc_t,hold_t,hold_sign,lottery_day,spy_regime,no_edge_vs_uncond,ticker_ghost,regime_split |
+| five-cell light + green O | I stacked | 1d | +2.04% (n=4012) | +2.73% (n=5049) | +1.63% (n=3428) | +1.67% (n=1458) | 0% | 10% | **KEEP** | — |
+| five-cell light + green O | I stacked | 2d | +2.08% (n=4012) | +2.54% (n=5049) | +1.70% (n=3428) | +2.23% (n=1458) | 0% | 13% | **KEEP** | — |
+| five-cell light + green O | I stacked | 3d | +3.48% (n=3992) | +3.68% (n=4991) | +1.67% (n=3428) | +2.68% (n=1458) | 0% | 27% | **KILL** | ticker_ghost |
+| five-cell light + green O | I stacked | 1w | +8.22% (n=3957) | +3.97% (n=4947) | +1.52% (n=3391) | +14.97% (n=1458) | 0% | 53% | **KILL** | hold_t,ticker_ghost |
+| five-cell light + green O | I stacked | 2w | +4.55% (n=3852) | +5.19% (n=4860) | +3.16% (n=3306) | +7.53% (n=1382) | 0% | 45% | **KILL** | ticker_ghost |
+| light+O ∧ AH≥1 | H (intraday) | 1d | +3.51% (n=1277) | +3.84% (n=1700) | +3.27% (n=1080) | +3.83% (n=397) | 0% | 10% | **KEEP** | — |
+| light+O ∧ AH≥1 | H (intraday) | 2d | -0.16% (n=1277) | -0.33% (n=1700) | -0.03% (n=1080) | +0.56% (n=397) | 0% | -93% | **KILL** | disc_t,hold_t,disc_sign,hold_sign,lottery_day,tape_split,spy_regime,q3_sign,q3_split,no_edge_vs_uncond,q1_sign |
+| light+O ∧ AH≥1 | H (intraday) | 3d | -0.17% (n=1277) | +0.43% (n=1700) | -0.51% (n=1080) | -0.14% (n=397) | 0% | 308% | **KILL** | disc_t,hold_t,hold_sign,tape_split,spy_regime,q3_sign,q3_split,no_edge_vs_uncond,ticker_ghost,regime_split |
+| light+O ∧ AH≥1 | H (intraday) | 1w | -0.25% (n=1266) | -0.25% (n=1686) | -0.24% (n=1066) | -0.09% (n=397) | 0% | -49% | **KILL** | disc_t,hold_t,disc_sign,hold_sign,lottery_day,tape_split,spy_regime,q3_sign,no_edge_vs_uncond,q1_sign |
+| light+O ∧ AH≥1 | H (intraday) | 2w | -0.40% (n=1226) | -0.39% (n=1658) | -0.24% (n=1037) | -0.13% (n=367) | 0% | -28% | **KILL** | disc_t,hold_t,disc_sign,hold_sign,lottery_day,tape_split,spy_regime,q3_sign,no_edge_vs_uncond,q1_sign |
+| light+O ∧ AH≥1 | I (daily print) | 1d | +3.39% (n=1277) | +4.22% (n=1700) | +2.60% (n=1080) | +3.69% (n=397) | 0% | 16% | **KEEP** | — |
+| light+O ∧ AH≥1 | I (daily print) | 2d | -0.18% (n=1277) | +0.02% (n=1700) | -0.08% (n=1080) | +0.47% (n=397) | 0% | 1065% | **KILL** | disc_t,hold_t,hold_sign,lottery_day,spy_regime,q3_split,no_edge_vs_uncond,q1_sign,ticker_ghost,regime_split |
+| light+O ∧ AH≥1 | I (daily print) | 3d | +2.69% (n=1277) | +2.73% (n=1700) | -0.54% (n=1080) | -0.13% (n=397) | 0% | 96% | **KILL** | disc_t,hold_t,spy_regime,no_edge_vs_uncond,q1_sign,ticker_ghost,regime_split |
+| light+O ∧ AH≥1 | I (daily print) | 1w | +3.36% (n=1266) | +2.60% (n=1686) | -0.40% (n=1066) | -0.05% (n=397) | 0% | 124% | **KILL** | disc_t,hold_t,disc_sign,lottery_day,spy_regime,q3_split,no_edge_vs_uncond,q1_sign,ticker_ghost,regime_split |
+| light+O ∧ AH≥1 | I (daily print) | 2w | -0.47% (n=1226) | -0.58% (n=1658) | -0.38% (n=1037) | +0.02% (n=367) | 0% | -31% | **KILL** | disc_t,hold_t,disc_sign,hold_sign,lottery_day,tape_split,spy_regime,q3_sign,no_edge_vs_uncond |
+| light+O ∧ AH≥1 | I stacked | 1d | +3.39% (n=1277) | +4.22% (n=1700) | +2.60% (n=1080) | +3.69% (n=397) | 0% | 16% | **KEEP** | — |
+| light+O ∧ AH≥1 | I stacked | 2d | +3.42% (n=1277) | +3.82% (n=1700) | +2.80% (n=1080) | +4.64% (n=397) | 0% | 24% | **KEEP** | — |
+| light+O ∧ AH≥1 | I stacked | 3d | +7.20% (n=1277) | +6.78% (n=1700) | +2.41% (n=1080) | +5.77% (n=397) | 0% | 45% | **KILL** | hold_t,ticker_ghost |
+| light+O ∧ AH≥1 | I stacked | 1w | +6.82% (n=1266) | +7.15% (n=1686) | +1.55% (n=1066) | +4.53% (n=397) | 0% | 41% | **KILL** | ticker_ghost |
+| light+O ∧ AH≥1 | I stacked | 2w | +10.00% (n=1226) | +9.50% (n=1658) | +1.61% (n=1037) | +9.10% (n=367) | 0% | 58% | **KILL** | hold_t,q1_sign,ticker_ghost |
+| light+O ∧ FR≥1 | H (intraday) | 1d | +2.48% (n=2222) | +2.77% (n=2753) | +2.40% (n=1857) | +2.54% (n=790) | 0% | 9% | **KEEP** | — |
+| light+O ∧ FR≥1 | H (intraday) | 2d | +0.07% (n=2222) | +0.00% (n=2753) | +0.24% (n=1857) | +0.19% (n=790) | 0% | 58% | **KILL** | disc_t,hold_t,tape_split,q3_sign,q3_split,no_edge_vs_uncond,ticker_ghost |
+| light+O ∧ FR≥1 | H (intraday) | 3d | -0.02% (n=2210) | +0.24% (n=2719) | -0.15% (n=1857) | +0.04% (n=790) | 0% | 128% | **KILL** | disc_t,hold_t,hold_sign,tape_split,spy_regime,q3_sign,q3_split,no_edge_vs_uncond,q1_sign,ticker_ghost,regime_split |
+| light+O ∧ FR≥1 | H (intraday) | 1w | -0.22% (n=2186) | -0.18% (n=2694) | -0.15% (n=1832) | +0.19% (n=790) | 0% | -50% | **KILL** | disc_t,hold_t,disc_sign,hold_sign,lottery_day,tape_split,spy_regime,q3_sign,no_edge_vs_uncond,q1_sign |
+| light+O ∧ FR≥1 | H (intraday) | 2w | -0.02% (n=2117) | -0.02% (n=2638) | -0.12% (n=1778) | +0.06% (n=742) | 0% | -154% | **KILL** | disc_t,hold_t,disc_sign,hold_sign,lottery_day,tape_split,spy_regime,q3_sign,no_edge_vs_uncond,q1_sign |
+| light+O ∧ FR≥1 | I (daily print) | 1d | +2.34% (n=2222) | +3.04% (n=2753) | +2.04% (n=1857) | +2.10% (n=790) | 0% | 15% | **KEEP** | — |
+| light+O ∧ FR≥1 | I (daily print) | 2d | -0.03% (n=2222) | +0.12% (n=2753) | +0.09% (n=1857) | +0.18% (n=790) | 0% | 225% | **KILL** | disc_t,hold_t,hold_sign,lottery_day,no_edge_vs_uncond,ticker_ghost |
+| light+O ∧ FR≥1 | I (daily print) | 3d | +1.60% (n=2210) | +1.72% (n=2719) | -0.27% (n=1857) | +0.04% (n=790) | 0% | 95% | **KILL** | disc_t,hold_t,spy_regime,no_edge_vs_uncond,q1_sign,ticker_ghost,regime_split |
+| light+O ∧ FR≥1 | I (daily print) | 1w | +12.81% (n=2186) | +1.45% (n=2694) | -0.23% (n=1832) | +30.96% (n=790) | 0% | 102% | **KILL** | disc_t,hold_t,disc_sign,lottery_day,spy_regime,no_edge_vs_uncond,q1_sign,ticker_ghost,regime_split |
+| light+O ∧ FR≥1 | I (daily print) | 2w | -0.12% (n=2117) | -0.25% (n=2638) | +2.71% (n=1778) | +0.23% (n=742) | 0% | 123% | **KILL** | disc_t,hold_t,hold_sign,lottery_day,tape_split,spy_regime,q3_split,no_edge_vs_uncond,q1_sign,ticker_ghost,regime_split |
+| light+O ∧ FR≥1 | I stacked | 1d | +2.34% (n=2222) | +3.04% (n=2753) | +2.04% (n=1857) | +2.10% (n=790) | 0% | 15% | **KEEP** | — |
+| light+O ∧ FR≥1 | I stacked | 2d | +2.44% (n=2222) | +2.89% (n=2753) | +2.15% (n=1857) | +2.54% (n=790) | 0% | 20% | **KEEP** | — |
+| light+O ∧ FR≥1 | I stacked | 3d | +4.70% (n=2210) | +4.80% (n=2719) | +1.97% (n=1857) | +3.22% (n=790) | 0% | 38% | **KILL** | ticker_ghost |
+| light+O ∧ FR≥1 | I stacked | 1w | +12.77% (n=2186) | +4.90% (n=2694) | +1.62% (n=1832) | +25.83% (n=790) | 0% | 67% | **KILL** | hold_t,ticker_ghost |
+| light+O ∧ FR≥1 | I stacked | 2w | +6.29% (n=2117) | +7.20% (n=2638) | +4.29% (n=1778) | +11.45% (n=742) | 0% | 59% | **KILL** | ticker_ghost |
+| light+O ∧ AH≥1 ∧ FR≥1 | H (intraday) | 1d | +3.93% (n=796) | +4.27% (n=1011) | +3.85% (n=680) | +4.48% (n=256) | 0% | 14% | **KILL** | hold1_without_hold2 |
+| light+O ∧ AH≥1 ∧ FR≥1 | H (intraday) | 2d | -0.16% (n=796) | -0.20% (n=1011) | -0.05% (n=680) | +0.47% (n=256) | 0% | -295% | **KILL** | disc_t,hold_t,hold_sign,lottery_day,tape_split,spy_regime,q3_sign,q3_split,no_edge_vs_uncond,q1_sign |
+| light+O ∧ AH≥1 ∧ FR≥1 | H (intraday) | 3d | -0.03% (n=796) | +0.71% (n=1011) | -0.70% (n=680) | -0.06% (n=256) | 0% | 155% | **KILL** | disc_t,hold_t,hold_sign,tape_split,spy_regime,q3_sign,q3_split,no_edge_vs_uncond,ticker_ghost,regime_split |
+| light+O ∧ AH≥1 ∧ FR≥1 | H (intraday) | 1w | -0.68% (n=787) | -0.48% (n=1001) | -0.40% (n=670) | -0.05% (n=256) | 0% | -35% | **KILL** | disc_t,hold_t,disc_sign,hold_sign,lottery_day,tape_split,spy_regime,q3_sign,no_edge_vs_uncond,q1_sign |
+| light+O ∧ AH≥1 ∧ FR≥1 | H (intraday) | 2w | -0.34% (n=758) | -0.23% (n=988) | -0.34% (n=650) | +0.11% (n=238) | 0% | -60% | **KILL** | disc_t,hold_t,disc_sign,hold_sign,lottery_day,tape_split,spy_regime,q3_sign,no_edge_vs_uncond,q1_sign |
+| light+O ∧ AH≥1 ∧ FR≥1 | I (daily print) | 1d | +3.81% (n=796) | +4.70% (n=1011) | +3.26% (n=680) | +4.29% (n=256) | 0% | 22% | **KILL** | hold1_without_hold2 |
+| light+O ∧ AH≥1 ∧ FR≥1 | I (daily print) | 2d | -0.22% (n=796) | +0.39% (n=1011) | -0.01% (n=680) | +0.29% (n=256) | 0% | 307% | **KILL** | disc_t,hold_t,hold_sign,lottery_day,spy_regime,q3_split,no_edge_vs_uncond,q1_sign,ticker_ghost,regime_split |
+| light+O ∧ AH≥1 ∧ FR≥1 | I (daily print) | 3d | +4.34% (n=796) | +4.48% (n=1011) | -1.04% (n=680) | +0.06% (n=256) | 0% | 101% | **KILL** | disc_t,hold_t,spy_regime,no_edge_vs_uncond,q1_sign,ticker_ghost,regime_split |
+| light+O ∧ AH≥1 ∧ FR≥1 | I (daily print) | 1w | +4.32% (n=787) | +3.59% (n=1001) | -0.66% (n=670) | +0.09% (n=256) | 0% | 133% | **KILL** | disc_t,hold_t,disc_sign,lottery_day,spy_regime,q3_split,no_edge_vs_uncond,q1_sign,ticker_ghost,regime_split |
+| light+O ∧ AH≥1 ∧ FR≥1 | I (daily print) | 2w | -0.51% (n=758) | -0.67% (n=988) | -0.54% (n=650) | +0.49% (n=238) | 0% | -31% | **KILL** | disc_t,hold_t,disc_sign,hold_sign,lottery_day,tape_split,spy_regime,q3_sign,no_edge_vs_uncond,q1_sign |
+| light+O ∧ AH≥1 ∧ FR≥1 | I stacked | 1d | +3.81% (n=796) | +4.70% (n=1011) | +3.26% (n=680) | +4.29% (n=256) | 0% | 22% | **KILL** | hold1_without_hold2 |
+| light+O ∧ AH≥1 ∧ FR≥1 | I stacked | 2d | +3.93% (n=796) | +4.39% (n=1011) | +3.65% (n=680) | +5.30% (n=256) | 0% | 34% | **KILL** | ticker_ghost |
+| light+O ∧ AH≥1 ∧ FR≥1 | I stacked | 3d | +10.03% (n=796) | +9.28% (n=1011) | +2.80% (n=680) | +7.34% (n=256) | 0% | 56% | **KILL** | hold_t,ticker_ghost |
+| light+O ∧ AH≥1 ∧ FR≥1 | I stacked | 1w | +8.22% (n=787) | +8.83% (n=1001) | +1.48% (n=670) | +5.55% (n=256) | 0% | 54% | **KILL** | hold_t,ticker_ghost |
+| light+O ∧ AH≥1 ∧ FR≥1 | I stacked | 2w | +13.61% (n=758) | +13.18% (n=988) | -0.13% (n=650) | +11.85% (n=238) | 0% | 73% | **KILL** | disc_t,hold_t,spy_regime,q1_sign,ticker_ghost,regime_split |
 
 ### Close-entry pair+lag on 1d stacked I (AA today legal)
 
@@ -1146,9 +1198,28 @@ Code names (after the English): `light_O` 1d, `light_O` 2d, `light_O` 3d, `light
 
 Code names (after the English): `F_l0_green__and__G_l0_ge1`, `F_l0_green`, `AA_l0_eq1`, `O_l2_lt1__and__AA_l0_eq1`, `F_l0_green__and__K_l0_gt0`, `J_l1_lt1__and__F_l0_green`, `H_l4_lt1__and__F_l0_green`, `H_l1_lt1__and__F_l0_green` ….
 
-### Soft regimes
+### Soft regimes (standing 1d KEEPs + F-green)
 
-Sheet heat is the morning five-cell sum (hot ≥5 / mixed / cold ≤0). Tape is SPY up / down / flat. A global KEEP needs SPY-up and SPY-down to agree. Conditional notes stay in the why column (`regime_split`).
+Sheet heat is the morning five-cell sum (hot ≥5 / mixed / cold ≤0). The standing light **is** the hot bucket — mixed/cold are empty on those rows. Tape is SPY up / down / flat (|SPY| < 15 bp). A global KEEP needs SPY-up and SPY-down to agree.
+
+| recipe | label | spy↑ | spy↓ | spy flat | heat hot | agree? |
+|---|---|---|---|---|---|---|
+| five-cell light + green O | H (intraday) | +2.43% (n=5049) | +1.98% (n=3428) | +1.96% (n=1458) | +2.21% (n=9935) | yes |
+| five-cell light + green O | I (daily print) | +2.73% (n=5049) | +1.63% (n=3428) | +1.67% (n=1458) | +2.20% (n=9935) | yes |
+| five-cell light + green O | I stacked | +2.73% (n=5049) | +1.63% (n=3428) | +1.67% (n=1458) | +2.20% (n=9935) | yes |
+| light+O ∧ AH≥1 | H (intraday) | +3.84% (n=1700) | +3.27% (n=1080) | +3.83% (n=397) | +3.64% (n=3177) | yes |
+| light+O ∧ AH≥1 | I (daily print) | +4.22% (n=1700) | +2.60% (n=1080) | +3.69% (n=397) | +3.60% (n=3177) | yes |
+| light+O ∧ AH≥1 | I stacked | +4.22% (n=1700) | +2.60% (n=1080) | +3.69% (n=397) | +3.60% (n=3177) | yes |
+| light+O ∧ FR≥1 | H (intraday) | +2.77% (n=2753) | +2.40% (n=1857) | +2.54% (n=790) | +2.61% (n=5400) | yes |
+| light+O ∧ FR≥1 | I (daily print) | +3.04% (n=2753) | +2.04% (n=1857) | +2.10% (n=790) | +2.56% (n=5400) | yes |
+| light+O ∧ FR≥1 | I stacked | +3.04% (n=2753) | +2.04% (n=1857) | +2.10% (n=790) | +2.56% (n=5400) | yes |
+| light+O ∧ AH≥1 ∧ FR≥1 | H (intraday) | +4.27% (n=1011) | +3.85% (n=680) | +4.48% (n=256) | +4.15% (n=1947) | yes |
+| light+O ∧ AH≥1 ∧ FR≥1 | I stacked | +4.70% (n=1011) | +3.26% (n=680) | +4.29% (n=256) | +4.14% (n=1947) | yes |
+| F today is green (close, same-print) | I stacked 1d | +2.87% (n=89698) | +2.63% (n=59668) | +1.65% (n=22757) | +0.75% (n=80034) | yes |
+
+### Soft regimes (notes)
+
+Standing light+O ± AH or FR: both SPY tapes green on 1d H, 1d I, and 1d stacked I. Flat tape is also green. Heat is hot by construction. 3d+ stacked I stays KILL (five-name ghost) even when both tapes are green. Light+O ∧ both AH and FR fails the 2d name-ghost bar, so 1d is not a keep. F-green agrees on both tapes but is a same-close volume print, not a forecast.
 
 ### What this does not change
 

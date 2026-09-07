@@ -4,7 +4,9 @@ _Generated 2026-09-07 · live `flatten_robust` frozen. Yahoo/rows A–F seed onl
 
 ## Plain English
 
-Cyrus + New Bot retargeted the mine. The label is no longer only Futubull open→close P&L. We predict **column H** (same-day close vs open — the intraday %) and **column I** (close vs yesterday’s close — the daily %) on a ticker train/test split so holdout moves stay visible.
+Cyrus + New Bot retargeted the mine. Excel confirmed: **H and I are labels only** (same-row close). Never same-row H/I as day-X features. Open features = `OPEN_SAME_ROW_LABELS` only. Close-entry may use other close cols, not feed H/I into themselves.
+
+The label is no longer only Futubull open→close P&L. We predict **column H** (same-day close vs open — the intraday %) and **column I** (close vs yesterday’s close — the daily %) on a ticker train/test split so holdout moves stay visible.
 
 Horizons: **1d, 2d, 3d, 1 week (~5d), 2 weeks (~10d)**. Each is reported. 1d is the H / I print on the feature row. Longer horizons use the H / I print that many sessions later, and the stacked daily I over that window so a two-week move is one number.
 

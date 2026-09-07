@@ -683,61 +683,79 @@ def render(rows, baselines, files, meta):
         )
     L += [
         "",
+        "Excel gate: H and I are **labels only** (same-row close). "
+        "Open features are the locked 44 + open fills. Close-entry may "
+        "use other close cols. Same-row H/I never enter as day-X features.",
+        "",
         f"Dumps **{meta['n_dumps']}**. Close atoms **{meta['n_atoms']}**. "
         f"Alive **{meta.get('n_alive', 0)}**. Pairs **{meta['n_pairs']}**. "
         f"Everyone-else 1d stacked I "
         f"{_pct(baselines.get('I_sum_1'))}. "
         f"Everyone-else 1d H {_pct(baselines.get('H_1'))}. "
+        f"Everyone-else 1d I {_pct(baselines.get('I_1'))}. "
         "Both SPY tapes required for a global KEEP. "
         "Light+O is the check, not a new search.",
         "",
-        "### Standing light+O ± AH/FR on stacked daily I (holdout moves)",
+        "### Standing KEEP/KILL grid (H, I print, stacked I × horizon)",
         "",
-        "| meaning | horizon | holdout I-stack | vs everyone | Q1 | spy↑ | spy↓ | "
-        "heat hot | July | top-5 | verdict | why |",
-        "|---|---|---|---|---|---|---|---|---|---|---|---|",
+        "Holdout mean. **KEEP** / **KILL** after the ship + ghost + "
+        "both-tape bar. 1d H is the same-day intraday print; 1d I is "
+        "the same-day daily print; stacked I is the k-day compound.",
+        "",
+        "| recipe | label | 1d | 2d | 3d | 1w | 2w |",
+        "|---|---|---|---|---|---|---|",
+    ]
+    short = {
+        "light_O": "five-cell light + green O",
+        "light_O_AH": "light+O ∧ AH≥1",
+        "light_O_FR": "light+O ∧ FR≥1",
+        "light_O_AH_FR": "light+O ∧ AH≥1 ∧ FR≥1",
+    }
+    lab_plain = {"H": "H (intraday)", "I": "I (daily print)",
+                 "I_sum": "I stacked"}
+    by_st = {(r["def"], r["label"], r.get("horizon")): r for r in standing}
+    for name in STANDING:
+        for lab in ("H", "I", "I_sum"):
+            cells = []
+            for hz in HORIZONS:
+                r = by_st.get((name, lab, hz))
+                if not r:
+                    cells.append("—")
+                    continue
+                cells.append(f"**{r['keep']}** {_pct(r.get('holdout'))}")
+            L.append(
+                f"| {short.get(name, name)} | {lab_plain[lab]} | "
+                + " | ".join(cells) + " |"
+            )
+    L += [
+        "",
+        "Code names (after the English): `light_O`, `light_O_AH`, "
+        "`light_O_FR`, `light_O_AH_FR`.",
+        "",
+        "### Standing detail (holdout, both tapes, why)",
+        "",
+        "| recipe | label | horizon | holdout | spy↑ | spy↓ | spy flat | "
+        "July | top-5 | verdict | why |",
+        "|---|---|---|---|---|---|---|---|---|---|---|",
     ]
     shown_st = sorted(
-        prim_st,
-        key=lambda r: (STANDING.index(r["def"]) if r["def"] in STANDING else 9,
-                       r.get("horizon") or 99),
+        standing,
+        key=lambda r: (
+            STANDING.index(r["def"]) if r["def"] in STANDING else 9,
+            {"H": 0, "I": 1, "I_sum": 2}.get(r.get("label"), 9),
+            r.get("horizon") or 99,
+        ),
     )
-    if not shown_st:
-        L.append("| — | — | — | — | — | — | — | — | — | — | — | — |")
     for r in shown_st:
-        vs = "—"
-        b = baselines.get("I_sum_" + str(r.get("horizon")))
-        if r.get("holdout") and b:
-            vs = f"{(r['holdout']['avg_net'] - b['avg_net'])*100:+.2f} pp"
         L.append(
-            f"| {r.get('plain')} | {r.get('horizon_plain')} | "
-            f"{_pct(r.get('holdout'))} | {vs} | {_pct(r.get('q1'))} | "
+            f"| {short.get(r['def'], r['def'])} | "
+            f"{lab_plain.get(r.get('label'), r.get('label'))} | "
+            f"{r.get('horizon_plain')} | {_pct(r.get('holdout'))} | "
             f"{_pct(r.get('spy_up'))} | {_pct(r.get('spy_dn'))} | "
-            f"{_pct(r.get('heat_hot'))} | "
+            f"{_pct(r.get('spy_flat'))} | "
             f"{(r.get('july_share') or 0)*100:.0f}% | "
             f"{(r.get('top5_share') or 0)*100:.0f}% | **{r['keep']}** | "
             f"{','.join(r.get('fail_reasons') or []) or '—'} |"
-        )
-    L += [
-        "",
-        "Code names (after the English): "
-        + ", ".join(f"`{r['def']}` {r.get('horizon_plain')}" for r in shown_st[:8])
-        + ".",
-        "",
-        "### Same standing recipes on 1d H (intraday print)",
-        "",
-        "| meaning | holdout H | spy↑ | spy↓ | verdict | why |",
-        "|---|---|---|---|---|---|",
-    ]
-    h1 = [r for r in standing if r.get("label") == "H" and r.get("horizon") == 1]
-    h1.sort(key=lambda r: STANDING.index(r["def"]) if r["def"] in STANDING else 9)
-    if not h1:
-        L.append("| — | — | — | — | — | — |")
-    for r in h1:
-        L.append(
-            f"| {r.get('plain')} | {_pct(r.get('holdout'))} | "
-            f"{_pct(r.get('spy_up'))} | {_pct(r.get('spy_dn'))} | "
-            f"**{r['keep']}** | {','.join(r.get('fail_reasons') or []) or '—'} |"
         )
     L += [
         "",
@@ -785,12 +803,62 @@ def render(rows, baselines, files, meta):
         + ", ".join(f"`{r['def']}`" for r in shown[:8])
         + (" …" if len(shown) > 8 else "") + ".",
         "",
-        "### Soft regimes",
+        "### Soft regimes (standing 1d KEEPs + F-green)",
         "",
         "Sheet heat is the morning five-cell sum (hot ≥5 / mixed / cold ≤0). "
-        "Tape is SPY up / down / flat. A global KEEP needs SPY-up and "
-        "SPY-down to agree. Conditional notes stay in the why column "
-        "(`regime_split`).",
+        "The standing light **is** the hot bucket — mixed/cold are empty "
+        "on those rows. Tape is SPY up / down / flat (|SPY| < 15 bp). "
+        "A global KEEP needs SPY-up and SPY-down to agree.",
+        "",
+        "| recipe | label | spy↑ | spy↓ | spy flat | heat hot | agree? |",
+        "|---|---|---|---|---|---|---|",
+    ]
+    regime_defs = [
+        ("light_O", "H", 1), ("light_O", "I", 1), ("light_O", "I_sum", 1),
+        ("light_O_AH", "H", 1), ("light_O_AH", "I", 1), ("light_O_AH", "I_sum", 1),
+        ("light_O_FR", "H", 1), ("light_O_FR", "I", 1), ("light_O_FR", "I_sum", 1),
+        ("light_O_AH_FR", "H", 1), ("light_O_AH_FR", "I_sum", 1),
+    ]
+    for name, lab, hz in regime_defs:
+        r = by_st.get((name, lab, hz))
+        if not r:
+            continue
+        up, dn = r.get("spy_up") or {}, r.get("spy_dn") or {}
+        agree = "yes" if (
+            up.get("n", 0) >= 40 and dn.get("n", 0) >= 40
+            and (up.get("avg_net", 0) > 0) == (dn.get("avg_net", 0) > 0)
+            and (up.get("avg_net", 0) > 0)
+        ) else "no"
+        L.append(
+            f"| {short.get(name, name)} | {lab_plain.get(lab, lab)} | "
+            f"{_pct(r.get('spy_up'))} | {_pct(r.get('spy_dn'))} | "
+            f"{_pct(r.get('spy_flat'))} | {_pct(r.get('heat_hot'))} | "
+            f"{agree} |"
+        )
+    fg = next((r for r in prim_ot if r["def"] == "F_l0_green"), None)
+    if fg:
+        up, dn = fg.get("spy_up") or {}, fg.get("spy_dn") or {}
+        agree = "yes" if (
+            up.get("n", 0) >= 40 and dn.get("n", 0) >= 40
+            and (up.get("avg_net", 0) > 0) == (dn.get("avg_net", 0) > 0)
+            and (up.get("avg_net", 0) > 0)
+        ) else "no"
+        L.append(
+            f"| F today is green (close, same-print) | I stacked 1d | "
+            f"{_pct(fg.get('spy_up'))} | {_pct(fg.get('spy_dn'))} | "
+            f"{_pct(fg.get('spy_flat'))} | {_pct(fg.get('heat_hot'))} | "
+            f"{agree} |"
+        )
+    L += [
+        "",
+        "### Soft regimes (notes)",
+        "",
+        "Standing light+O ± AH or FR: both SPY tapes green on 1d H, 1d I, "
+        "and 1d stacked I. Flat tape is also green. Heat is hot by "
+        "construction. 3d+ stacked I stays KILL (five-name ghost) even "
+        "when both tapes are green. Light+O ∧ both AH and FR fails the "
+        "2d name-ghost bar, so 1d is not a keep. F-green agrees on both "
+        "tapes but is a same-close volume print, not a forecast.",
         "",
         "### What this does not change",
         "",

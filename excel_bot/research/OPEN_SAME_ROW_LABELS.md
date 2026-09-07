@@ -35,7 +35,8 @@ Clustered for pilots: `EP–EV`, `GD–GF`, `JB–JF`.
 | B, G, K, M | fill can look open; **value is close** |
 | O | **green fill** is open; **O number** is unknown→mine **close** |
 | L | value unknown→mine **close** |
-| D, E, F, H, I | same-row close always |
+| D, E, F | same-row close always |
+| **H, I** | **labels only** (intraday % / daily %). Never same-row features on day X. Lags t−1+ are fair. |
 | N | close |
 | `core_score` / any def that reads D/E/F/H/I same-row | **close entry only** |
 
@@ -52,7 +53,9 @@ Any letter at lag t−1+ is fair for open-entry features. Example shape Cyrus na
 
 Same-row **value-close** letters may gate a **close entry** on day X’s own row. The 44 `value_mine_open` letters and the timing-tested **open fills** stay open — do not treat them as close-today.
 
-Bounded then expand: A–O value-close + AA, then through AO, skipping killed highlight letters (T/BA, CZ/EH/IB/HO/IL/GV). Timing-close fills only: `D, E, F, H, I, N`. O green is still open; O number is close.
+Bounded then expand: A–O value-close + AA, then through AO, skipping killed highlight letters (T/BA, CZ/EH/IB/HO/IL/GV) and **never H/I same-row**. Timing-close fills as features: `D, E, F, N` only — not H/I fills. O green is still open; O number is close.
+
+Excel confirmed: H and I are labels only. Open features = this file’s open lists only. Close-entry may use other close cols, not feed H/I into themselves.
 
 ## Pilot order (for Taskforce)
 
