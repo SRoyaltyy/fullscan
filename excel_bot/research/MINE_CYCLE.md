@@ -114,3 +114,7 @@ KEEP 3 recipes · KILL 3. Green O adds +24–45 bp on 3 of 6 lights. Other open 
 ## Join verdict (light vs color vs leak-free joins)
 
 Re-scored cells KEEP 9 · KILL 15. Snapshot Finviz volM is BLOCKED. AB/weather/book KILL (short tape). See `JOIN_VERDICT.md`.
+
+## Remaining A–JL families (unmined sweep)
+
+Unmined A–JL sweep N=400 · KEEP 0 · KILL 2853 · THIN 34. Standing keeps remain light+green O. Finviz BLOCKED. See `UNMINED_SWEEP.md`.

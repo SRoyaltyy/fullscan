@@ -217,7 +217,8 @@ def test_clock_map_locks_measured_ao():
 def test_all_cols_miners_do_not_wire_live():
     for fn in ("mine_all_cols.py", "capture_all_cols.py", "mine_clock.py",
                "mine_first.py", "mine_formula_cut.py", "classify_clocks.py",
-               "harden_hyst_open.py", "mine_color_join.py", "pit_joins.py"):
+               "harden_hyst_open.py", "mine_color_join.py", "pit_joins.py",
+               "mine_unmined.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "sleeve_merge_live" not in src
         assert "LIVE_POLICY" not in src
@@ -876,6 +877,87 @@ def test_af_seed_audit_report_is_committed():
     assert payload["grids_source"] == "rows_cache"
     assert payload["tile_today_is_anchor"] is True
     assert payload["corrupt_future_open_fills_changed"] is False
+
+
+def test_unmined_inventory_is_committed():
+    md = (ROOT / "excel_bot" / "research" / "UNMINED_INVENTORY.md").read_text()
+    assert "Plain English" in md
+    assert "Yahoo" in md or "rows" in md
+    assert "flatten_robust" in md
+    assert "BLOCKED" in md or "Finviz" in md
+    payload = json.loads(
+        (ROOT / "excel_bot" / "research" / "unmined_inventory.json").read_text())
+    assert payload["live_untouched"] == "flatten_robust"
+    assert payload["excel_cache_used"] is False
+    fams = payload["families"]
+    assert fams["val_open"]["letters"]
+    assert fams["val_close"]["letters"]
+    assert fams["fill_new"]["letters"]
+    assert "core_score" in fams["score_killed"]["letters"]
+    # leftover letters are past the first all-cols hand list
+    from mine_all_cols import FILL_CLOSE, VALUE_CLOSE
+    old_val = {row[1] for row in VALUE_CLOSE}
+    assert not set(fams["val_close"]["letters"]) & old_val
+
+
+def test_unmined_specs_clocks_are_legal():
+    from mine_unmined import build_specs, inventory, load_clocks
+    clocks = load_clocks()
+    specs = build_specs(inventory(), clocks)
+    assert len(specs) >= 100
+    for name, clock, _side, kind, col, _extra in specs:
+        if clock == "open":
+            if kind == "fill":
+                assert col in clocks["fill_open"], name
+            else:
+                assert col in clocks["value_open"], name
+        if "core_score" in name:
+            assert clock == "close", name
+        assert not name.startswith("valopen_") or clock == "open", name
+
+
+def test_unmined_sweep_report_is_committed():
+    md = (ROOT / "excel_bot" / "research" / "UNMINED_SWEEP.md").read_text()
+    assert "Plain English" in md
+    assert md.index("Plain English") < md.index("`val") if "`val" in md else True
+    assert "KEEP" in md and "KILL" in md and "THIN" in md
+    assert "2026-07-01" in md or "Q3" in md
+    assert "flatten_robust" in md
+    assert "Yahoo" in md or "rows" in md
+    sb = (ROOT / "03_scoreboard" / "EXCEL_BOT_MINE.md").read_text()
+    assert "PASS 376" in sb
+    assert "FAIL 1160" in sb
+    assert "Remaining A–JL families" in sb
+    assert "first A–JL cut" in sb or "A–O clock cycle" in sb
+    payload = json.loads(
+        (ROOT / "excel_bot" / "research" / "unmined_sweep.json").read_text())
+    assert payload["live_untouched"] == "flatten_robust"
+    assert payload["excel_cache_used"] is False
+    assert payload["n_tickers"] >= 50
+    assert payload["finviz"] == "BLOCKED"
+    assert payload["n_keep"] + payload["n_kill"] + payload["n_thin"] >= 1
+    for r in payload.get("keepers") or []:
+        assert r["clock"] in ("open", "close")
+        if r["clock"] == "open":
+            assert "core_score" not in r["def"]
+        assert r.get("q3") and r["q3"].get("n", 0) >= 40
+        assert (r.get("lottery_day_frac") or 0) <= 0.25
+    for r in payload.get("cells") or []:
+        if r.get("def") == "fill_DE_red":
+            assert r.get("keep") != "KEEP"
+            assert "q3_missing" in (r.get("fail_reasons") or []) or r.get("keep") == "KILL"
+
+
+def test_unmined_miner_does_not_wire_live():
+    src = (ENG / "mine_unmined.py").read_text(encoding="utf-8")
+    assert "from flatten" not in src
+    assert "sleeve_merge_live" not in src
+    assert "LIVE_POLICY" not in src
+    assert "flatten_robust" in src
+    assert "Never Excel" in src or "never" in src.lower()
+    cap = (ENG / "capture_all_cols.py").read_text(encoding="utf-8")
+    assert "yahoo_rows_cache" in cap
+    assert "excel_stockhistory_cache" in cap
 
 
 if __name__ == "__main__":

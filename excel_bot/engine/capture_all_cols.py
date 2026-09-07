@@ -16,6 +16,7 @@ import json
 import os
 import sys
 import time
+from concurrent.futures import ProcessPoolExecutor, as_completed
 from datetime import date
 
 from openpyxl.utils import get_column_letter
@@ -100,7 +101,8 @@ def capture_ticker(ticker, outdir):
         days.append({"date": int(a), **ohlc, "cells": cells})
     os.makedirs(outdir, exist_ok=True)
     json.dump({"ticker": ticker, "anchor": str(anchor), "all_cols": True,
-               "n_cols": ALL_COLS, "days": days},
+               "n_cols": ALL_COLS, "source": "rows_cache",
+               "seed": "yahoo_rows_cache", "days": days},
               open(os.path.join(outdir, f"{ticker}.json"), "w"), default=str)
     return ticker, len(days), time.time() - t0, None
 
@@ -116,6 +118,9 @@ def main():
     ap.add_argument("--skip-existing", action="store_true", default=True)
     ap.add_argument("--force", action="store_true",
                     help="rebuild even if the ticker dump already exists")
+    ap.add_argument("--workers", type=int, default=1,
+                    help="process workers (1 = serial). Each worker seeds A–F "
+                         "from the Yahoo rows cache only.")
     args = ap.parse_args()
     if args.force:
         args.skip_existing = False
@@ -128,17 +133,22 @@ def main():
         disc = hold = []
     outdir = args.out if os.path.isabs(args.out) else os.path.join(ROOT, args.out)
     os.makedirs(outdir, exist_ok=True)
-    print(f"capture_all_cols n={len(tickers)} -> {outdir}", flush=True)
+    print(f"capture_all_cols n={len(tickers)} workers={args.workers} -> {outdir}",
+          flush=True)
     times = []
     ok = err = skipped = 0
+    todo = []
     for t in tickers:
         dest = os.path.join(outdir, f"{t}.json")
         if args.skip_existing and os.path.exists(dest):
             skipped += 1
             times.append(0.0)
             print(f"  skip {t}", flush=True)
-            continue
-        name, n, sec, e = capture_ticker(t, outdir)
+        else:
+            todo.append(t)
+
+    def _record(name, n, sec, e):
+        nonlocal ok, err
         times.append(sec)
         if e:
             err += 1
@@ -146,6 +156,15 @@ def main():
         else:
             ok += 1
             print(f"  ok {name} days={n} {sec:.1f}s", flush=True)
+
+    if args.workers <= 1 or len(todo) <= 1:
+        for t in todo:
+            _record(*capture_ticker(t, outdir))
+    else:
+        with ProcessPoolExecutor(max_workers=args.workers) as pool:
+            futs = {pool.submit(capture_ticker, t, outdir): t for t in todo}
+            for fut in as_completed(futs):
+                _record(*fut.result())
     measured = [s for s in times if s > 0]
     meta = {
         "n_ok": ok, "n_err": err, "n_skipped": skipped,
@@ -159,10 +178,13 @@ def main():
         "discovery": disc,
         "holdout": hold,
         "path": "lean_rows_cache",
+        "seed": "yahoo_rows_cache",
+        "excel_stockhistory_cache": False,
+        "from_cache_flag": False,
         "cols": "A..JL",
         "n_cols": ALL_COLS,
         "rows": f"{ROW_START}-{ROW_END}",
-        "note": "run.py --all-cols is the full 1-364 Yahoo path; this is the cheap sample rebuild",
+        "note": "A–F seeded from Yahoo/rows cache via seed_anchor. Never Excel STOCKHISTORY --from-cache.",
     }
     json.dump(meta, open(os.path.join(outdir, "_meta.json"), "w"), indent=1)
     print(f"DONE ok={ok} skip={skipped} err={err} min/ticker="
