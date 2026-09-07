@@ -218,7 +218,7 @@ def test_all_cols_miners_do_not_wire_live():
     for fn in ("mine_all_cols.py", "capture_all_cols.py", "mine_clock.py",
                "mine_first.py", "mine_formula_cut.py", "classify_clocks.py",
                "harden_hyst_open.py", "mine_color_join.py", "pit_joins.py",
-               "mine_unmined.py"):
+               "mine_unmined.py", "harden_unmined.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "sleeve_merge_live" not in src
         assert "LIVE_POLICY" not in src
@@ -952,12 +952,87 @@ def test_unmined_sweep_report_is_committed():
             assert "q3_missing" in (r.get("fail_reasons") or []) or r.get("keep") == "KILL"
 
 
+def test_unmined_harden_collapses_twins():
+    from harden_unmined import FEATURED, collapse, rejudge
+    twins = [
+        {"def": "valclose_BA_eq1", "family": "val_close", "clock": "close",
+         "side": "long", "exit": "hold2",
+         "discovery": {"n": 1000, "avg_net": 0.02, "t": 5},
+         "holdout": {"n": 400, "avg_net": 0.02, "t": 4},
+         "keep": "KEEP"},
+        {"def": "valclose_BA_ge1", "family": "val_close", "clock": "close",
+         "side": "long", "exit": "hold2",
+         "discovery": {"n": 1000, "avg_net": 0.02, "t": 5},
+         "holdout": {"n": 400, "avg_net": 0.02, "t": 4},
+         "keep": "KEEP"},
+        {"def": "valclose_BA_gt0", "family": "val_close", "clock": "close",
+         "side": "long", "exit": "hold2",
+         "discovery": {"n": 1000, "avg_net": 0.02, "t": 4.5},
+         "holdout": {"n": 400, "avg_net": 0.019, "t": 3.5},
+         "keep": "KEEP"},
+    ]
+    surv, killed = collapse(twins)
+    assert len(surv) == 1
+    assert surv[0]["def"] == "valclose_BA_eq1"
+    assert len(killed) == 2
+    assert all("twin" in k["fail_reasons"][0] for k in killed)
+    bad = {
+        "discovery": {"n": 400, "avg_net": 0.02, "t": 5},
+        "holdout": {"n": 200, "avg_net": 0.02, "t": 4},
+        "early": {"n": 300, "avg_net": 0.02}, "late": {"n": 300, "avg_net": 0.02},
+        "spy_up": {"n": 200, "avg_net": 0.02}, "spy_dn": {"n": 200, "avg_net": 0.02},
+        "q12": {"n": 300, "avg_net": 0.02}, "q3": {"n": 200, "avg_net": 0.02},
+        "baseline": {"n": 1000, "avg_net": 0.001},
+        "lottery_day_frac": 0.1, "n_tickers": 100, "n_dates": 40,
+    }
+    assert rejudge(bad)[0] == "KEEP"
+    late_red = dict(bad, late={"n": 300, "avg_net": -0.01})
+    assert rejudge(late_red)[0] == "KILL"
+    assert FEATURED == ("T", "BA", "AH", "CZ", "EH", "IB")
+
+
+def test_unmined_harden_report_is_committed():
+    md = (ROOT / "excel_bot" / "research" / "UNMINED_HARDEN.md").read_text()
+    assert "Plain English" in md
+    assert md.index("Plain English") < md.index("`val") if "`val" in md else True
+    assert "Killed twins" in md
+    assert "Shortboard" in md
+    assert "light + green O" in md or "light+green O" in md
+    assert "flatten_robust" in md
+    assert "2026-07-01" in md or "Q3" in md
+    sb = (ROOT / "03_scoreboard" / "EXCEL_BOT_MINE.md").read_text()
+    assert "PASS 376" in sb
+    assert "Leftover KEEP harden" in sb
+    assert "Color harden" in sb or "light + green O" in sb or "green O" in sb
+    payload = json.loads(
+        (ROOT / "excel_bot" / "research" / "unmined_harden.json").read_text())
+    assert payload["live_untouched"] == "flatten_robust"
+    assert payload["excel_cache_used"] is False
+    assert payload["finviz"] == "BLOCKED"
+    assert payload["n_tickers"] >= 3000
+    assert payload["n_twins_killed"] >= 1
+    letters = payload["keep_letters"]
+    assert len(letters) == len(set(letters))
+    seen = set()
+    for r in payload["survivors"]:
+        if r["keep"] != "KEEP":
+            continue
+        key = (r["letter"], r["side"], r["exit"])
+        assert key not in seen
+        seen.add(key)
+        assert r["exit"] in ("hold1", "hold2")
+        assert (r.get("lottery_day_frac") or 0) <= 0.25
+        assert r.get("q3") and r["q3"].get("n", 0) >= 40
+
+
 def test_unmined_miner_does_not_wire_live():
+    for fn in ("mine_unmined.py", "harden_unmined.py"):
+        src = (ENG / fn).read_text(encoding="utf-8")
+        assert "from flatten" not in src
+        assert "sleeve_merge_live" not in src
+        assert "LIVE_POLICY" not in src
+        assert "flatten_robust" in src
     src = (ENG / "mine_unmined.py").read_text(encoding="utf-8")
-    assert "from flatten" not in src
-    assert "sleeve_merge_live" not in src
-    assert "LIVE_POLICY" not in src
-    assert "flatten_robust" in src
     assert "Never Excel" in src or "never" in src.lower()
     cap = (ENG / "capture_all_cols.py").read_text(encoding="utf-8")
     assert "yahoo_rows_cache" in cap

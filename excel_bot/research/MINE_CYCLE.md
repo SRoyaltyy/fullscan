@@ -118,3 +118,7 @@ Re-scored cells KEEP 9 · KILL 15. Snapshot Finviz volM is BLOCKED. AB/weather/b
 ## Remaining A–JL families (unmined sweep)
 
 Unmined A–JL sweep N=3603 · KEEP 126 raw / 66 unique letter×hold (40 hold1/2) · KILL 2890 · THIN 15. Letters: AH, AM, BA, BN, CJ, CZ, EH, EJ, EY, FC, FK, FL, FR, GV, HO, HZ, IB, IK, IL, N, R, T, U. Light+O still the only standing A–O color keep. Finviz BLOCKED. See `UNMINED_SWEEP.md`.
+
+## Leftover KEEP harden (unique letters)
+
+Leftover KEEP harden: raw 126 → unique 59 → KEEP 36 (36 hold1/2). Twins killed 67. Letters: AH, AM, BA, BN, CJ, CZ, EH, EJ, EY, FC, FK, FL, FR, GV, HO, HZ, IB, IK, IL, N, R, T, U. Light+O unchanged. Finviz BLOCKED. See `UNMINED_HARDEN.md`.
