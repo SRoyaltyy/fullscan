@@ -48,10 +48,16 @@ Any letter at lag t−1+ is fair for open-entry features. Example shape Cyrus na
 - `O[t−2] < 1` — OK at open (prior row).
 - `AA[t] = 1` — AA today is **value_mine_close** → that pair is **close-entry** unless AA is shifted to a prior row.
 
+## Close-entry today legs (this beat)
+
+Same-row **value-close** letters may gate a **close entry** on day X’s own row. The 44 `value_mine_open` letters and the timing-tested **open fills** stay open — do not treat them as close-today.
+
+Bounded then expand: A–O value-close + AA, then through AO, skipping killed highlight letters (T/BA, CZ/EH/IB/HO/IL/GV). Timing-close fills only: `D, E, F, H, I, N`. O green is still open; O number is close.
+
 ## Pilot order (for Taskforce)
 
-1. **Open-entry pairwise** first: open fills ∪ 44 `value_mine_open` values, lags on any letter, singles then pairwise under ship + ghost bar.
-2. **Close-entry** beat second (includes AA-today-style pairs).
+1. **Open-entry pairwise** first: open fills ∪ 44 `value_mine_open` values, lags on any letter, singles then pairwise under ship + ghost bar. **Accepted null** (KEEP 0 / KILL 4266).
+2. **Close-entry** beat second (includes AA-today-style pairs). This beat.
 3. Do not reopen killed highlight ghosts (T/BA, CZ/EH/IB/HO/IL/GV, same-day counts, etc.).
 
 ## Counts (from clock map)
