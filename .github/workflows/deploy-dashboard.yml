@@ -131,6 +131,11 @@ jobs:
             cp -a dashboard/down-day-mine/. pages_out/dashboard/down-day-mine/
             echo "Overlayed dashboard/down-day-mine from main"
           fi
+          if [ -f dashboard/rank-residual/index.html ]; then
+            mkdir -p pages_out/dashboard/rank-residual
+            cp -a dashboard/rank-residual/. pages_out/dashboard/rank-residual/
+            echo "Overlayed dashboard/rank-residual from main"
+          fi
 
           if [ ! -f pages_out/dashboard/index.html ]; then
             echo "ERROR: no dashboard index.html to publish"
@@ -160,5 +165,6 @@ jobs:
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/strategy-board/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/factor-mine/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/down-day-mine/"
+          echo "https://SRoyaltyy.github.io/fullscan/dashboard/rank-residual/"
           echo "https://SRoyaltyy.github.io/fullscan/"
           echo "If 404: Settings → Pages → Deploy from branch → gh-pages / root"
