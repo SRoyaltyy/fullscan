@@ -11,6 +11,7 @@ are labels, never features. Live flatten_robust is not imported.
 
   python engine/mine_hi_ml.py
   python engine/mine_hi_ml.py --folds-only
+  python engine/mine_hi_ml.py --gap-head
   python engine/mine_hi_ml.py --render-only
 """
 from __future__ import annotations
@@ -67,6 +68,9 @@ FOLDS = (
     ("fold_q3", "2026-07-01", None),
 )
 BEAT = 0.002
+# Manager lock: gap-like open IC is not KEEP until holdout beats
+# the overnight-gap recipe (same labels, same fee, same ghost bar).
+GAP_BASELINE = "overnight_gap"
 FEE = COST_FUTU_LONG
 TOP_Q = 0.20
 LAGS = (1, 2, 5)
@@ -496,7 +500,7 @@ def load_panel(tickers):
     return by
 
 
-def ticker_rows(ticker, rows, feat_open, feat_close):
+def ticker_rows(ticker, rows, feat_open, feat_close, labels_only=False):
     rows = sorted(rows, key=lambda r: r[0])
     if len(rows) < MIN_BARS:
         return []
@@ -521,21 +525,24 @@ def ticker_rows(ticker, rows, feat_open, feat_close):
             labs[k] = lab
         if not ok:
             continue
-        fo = np.empty(len(feat_open), dtype=np.float32)
-        for j, name in enumerate(feat_open):
-            base, lag = parse_feat(name)
-            src = ei - lag
-            fo[j] = S[base][src] if base in S and 0 <= src < n else np.nan
-        fc = np.empty(len(feat_close), dtype=np.float32)
-        for j, name in enumerate(feat_close):
-            base, lag = parse_feat(name)
-            src = ei - lag
-            fc[j] = S[base][src] if base in S and 0 <= src < n else np.nan
-        out.append({
+        rec = {
             "ticker": ticker, "date": iso[ei], "H": labs,
             "heat": S["heat5"][ei], "overnight": S["overnight"][ei],
-            "xo": fo, "xc": fc,
-        })
+        }
+        if not labels_only:
+            fo = np.empty(len(feat_open), dtype=np.float32)
+            for j, name in enumerate(feat_open):
+                base, lag = parse_feat(name)
+                src = ei - lag
+                fo[j] = S[base][src] if base in S and 0 <= src < n else np.nan
+            fc = np.empty(len(feat_close), dtype=np.float32)
+            for j, name in enumerate(feat_close):
+                base, lag = parse_feat(name)
+                src = ei - lag
+                fc[j] = S[base][src] if base in S and 0 <= src < n else np.nan
+            rec["xo"] = fo
+            rec["xc"] = fc
+        out.append(rec)
     return out
 
 
@@ -845,13 +852,15 @@ def _prefer_fold(rows, extra=None):
     return cand
 
 
-def assemble(tickers, disc, hold, feat_open, feat_close, spy):
+def assemble(tickers, disc, hold, feat_open, feat_close, spy,
+             labels_only=False):
     by = load_panel(tickers)
     recs = []
     n_ok = 0
     for i, t in enumerate(tickers, 1):
         rows = by.get(t) or []
-        got = ticker_rows(t, rows, feat_open, feat_close)
+        got = ticker_rows(t, rows, feat_open, feat_close,
+                          labels_only=labels_only)
         if got:
             n_ok += 1
             recs.extend(got)
@@ -876,6 +885,105 @@ def split_masks(recs, disc, hold, train_end=TIME_CUT, hold_end=None):
     name_hold = np.array([r["ticker"] in hold for r in recs])
     name_disc = np.array([r["ticker"] in disc for r in recs])
     return train, time_hold, name_hold, name_disc
+
+
+def slim_gap_recipe(gap_row):
+    return {
+        "def": gap_row.get("def"),
+        "keep": gap_row.get("keep"),
+        "verdict": gap_row.get("verdict"),
+        "holdout": gap_row.get("holdout"),
+        "discovery": gap_row.get("discovery"),
+        "edge_vs_book_hold": gap_row.get("edge_vs_book_hold"),
+        "fail_reasons": gap_row.get("fail_reasons"),
+        "ic": gap_row.get("ic"),
+        "top5_share": gap_row.get("top5_share"),
+        "july_share": gap_row.get("july_share"),
+    }
+
+
+def edge_vs_gap(ml_row, gap_row):
+    mh = (ml_row.get("holdout") or {}).get("avg_net")
+    gh = (gap_row.get("holdout") or {}).get("avg_net")
+    if mh is None or gh is None:
+        return None
+    return float(mh - gh)
+
+
+def attach_gap_head(ml_rows, gap_rows):
+    """Stamp each ML row with the matching overnight-gap recipe."""
+    by = {}
+    for g in gap_rows:
+        by[(g.get("fold"), g.get("clock"), g.get("label"), g.get("horizon"))] = g
+    for r in ml_rows:
+        if r.get("model") == "gap":
+            continue
+        key = (r.get("fold"), r.get("clock"), r.get("label"), r.get("horizon"))
+        g = by.get(key)
+        if g is None and r.get("fold") in (None, "fold_combined"):
+            g = by.get(("fold_combined", r.get("clock"), r.get("label"),
+                        r.get("horizon")))
+        if g is None:
+            continue
+        r["gap_recipe"] = slim_gap_recipe(g)
+        r["edge_vs_gap_hold"] = edge_vs_gap(r, g)
+        r["gap_baseline"] = GAP_BASELINE
+    return ml_rows
+
+
+def run_gap_baselines(recs, spy, disc, hold,
+                      train_end=TIME_CUT, hold_end=None, fold="fold_q2",
+                      clocks=("open",), labels=None, horizons=None):
+    """Long top quintile of overnight. Same labels, fee, and ghost bar as ML."""
+    labels = labels or LABELS
+    horizons = horizons or HORIZONS
+    train_mask, time_hold, _name_hold, _name_disc = split_masks(
+        recs, disc, hold, train_end, hold_end)
+    heats = [r["heat"] for r in recs]
+    train_heat = [heats[i] for i in range(len(recs)) if train_mask[i]
+                  and np.isfinite(heats[i])]
+    cuts = tercile_cuts(train_heat)
+    gap = np.array([r["overnight"] for r in recs], dtype=np.float64)
+    rows = []
+    for clock in clocks:
+        for lab in labels:
+            for hz in horizons:
+                y = np.array([r["H"][hz][lab] for r in recs], dtype=np.float64)
+                if (train_mask & np.isfinite(y)).sum() < 300:
+                    continue
+                ic_gap = {
+                    "spearman": spearman(gap[time_hold], y[time_hold]),
+                    "pearson": pearson(gap[time_hold], y[time_hold]),
+                    "kind": "overnight→label",
+                }
+                cell, book = score_long(
+                    recs, gap, y, None, spy, cuts, y, time_hold,
+                    train_mask=train_mask,
+                )
+                name = f"gap_{clock}_{lab}_{HORIZON_PLAIN.get(hz, hz)}"
+                row = pack_ml(name, clock, lab, hz, cell, book, ic_gap)
+                row["model"] = "gap"
+                row["family"] = "gap_baseline"
+                row["gap_baseline"] = GAP_BASELINE
+                row["fold"] = fold
+                row["train_end"] = train_end
+                row["hold_end"] = hold_end
+                row["n_hold_rows"] = int(time_hold.sum())
+                row["gap_ic"] = ic_gap
+                row["plain"] = (
+                    f"overnight-gap baseline → {lab} "
+                    f"{HORIZON_PLAIN.get(hz, hz)}; long top {int(TOP_Q*100)}%"
+                )
+                rows.append(row)
+                print(
+                    f"  {row['keep']:4} {name:42} "
+                    f"hold={_pct(row.get('holdout'))} "
+                    f"edge={_edge(row.get('edge_vs_book_hold'))} "
+                    f"ic={_ic(ic_gap)} "
+                    f"{','.join(row.get('fail_reasons') or []) or '—'}",
+                    flush=True,
+                )
+    return rows
 
 
 def run_models(recs, feat_names, clock, X, spy, disc, hold,
@@ -933,6 +1041,20 @@ def run_models(recs, feat_names, clock, X, spy, disc, hold,
                     "pearson": pearson(gap[time_hold], y[time_hold]),
                     "kind": "overnight→H",
                 }
+            # Same-recipe overnight baseline (top quintile, same fee / ghost bar).
+            gap_cell, gap_book = score_long(
+                recs, gap, y, None, spy, cuts, book_y, time_hold,
+                train_mask=train_mask,
+            )
+            gap_name = f"gap_{clock}_{lab}_{HORIZON_PLAIN.get(hz, hz)}"
+            gap_row = pack_ml(gap_name, clock, lab, hz, gap_cell, gap_book, ic_gap)
+            gap_row["model"] = "gap"
+            gap_row["family"] = "gap_baseline"
+            gap_row["gap_baseline"] = GAP_BASELINE
+            gap_row["fold"] = fold
+            gap_row["train_end"] = train_end
+            gap_row["hold_end"] = hold_end
+            rows.append(gap_row)
             for kind in models:
                 try:
                     model = FITTERS[kind](Xs[tr], y[tr])
@@ -966,6 +1088,9 @@ def run_models(recs, feat_names, clock, X, spy, disc, hold,
                 row["n_train"] = int(tr.sum())
                 row["n_hold_rows"] = int(time_hold.sum())
                 row["gap_ic"] = ic_gap
+                row["gap_recipe"] = slim_gap_recipe(gap_row)
+                row["edge_vs_gap_hold"] = edge_vs_gap(row, gap_row)
+                row["gap_baseline"] = GAP_BASELINE
                 row["plain"] = (
                     f"{kind} on {clock}-entry full-sheet DAG → "
                     f"{lab} {HORIZON_PLAIN.get(hz, hz)}; long top {int(TOP_Q*100)}%"
@@ -981,7 +1106,8 @@ def run_models(recs, feat_names, clock, X, spy, disc, hold,
                 print(
                     f"  {row['keep']:4} {name:42} "
                     f"hold={_pct(row.get('holdout'))} "
-                    f"edge={_edge(row.get('edge_vs_book_hold'))} "
+                    f"vs_book={_edge(row.get('edge_vs_book_hold'))} "
+                    f"vs_gap={_edge(row.get('edge_vs_gap_hold'))} "
                     f"ic={_ic(ic)} "
                     f"{','.join(row.get('fail_reasons') or []) or '—'}",
                     flush=True,
@@ -995,12 +1121,19 @@ def _spearman(row, key="ic"):
 
 
 def apply_honesty_bar(rows):
-    """Kill gap-algebra I and same-print close 1d H/I. Not a new join."""
+    """Kill gap-algebra I, lose-to-gap recipe, and same-print close 1d H/I."""
     for r in rows:
+        if r.get("model") == "gap":
+            continue
         reasons = list(r.get("fail_reasons") or [])
         lab, hz, clock = r.get("label"), r.get("horizon"), r.get("clock")
         ml = _spearman(r)
         gap = _spearman(r, "gap_ic")
+        # Manager lock: open-entry must beat the overnight-gap *recipe*
+        # on holdout (same labels, same fee). Gap-like IC is not KEEP.
+        evg = r.get("edge_vs_gap_hold")
+        if clock == "open" and evg is not None and evg < BEAT:
+            reasons.append("lose_to_gap")
         if clock == "open" and lab in ("I", "I_sum") and gap is not None and ml is not None:
             # I = overnight + scaled H. If ML ≤ overnight, it is the gap.
             if ml <= gap + 0.02:
@@ -1011,6 +1144,7 @@ def apply_honesty_bar(rows):
         r["fail_reasons"] = list(dict.fromkeys(reasons))
         if r.get("keep") == "KEEP" and (
             "gap_algebra" in r["fail_reasons"]
+            or "lose_to_gap" in r["fail_reasons"]
             or "same_print_close" in r["fail_reasons"]
         ):
             r["verdict"] = "KILL"
@@ -1051,11 +1185,12 @@ def apply_honesty_bar(rows):
 
 
 def family_verdict(rows):
-    """KEEP only if open-entry 1d H or I clears the bar *beyond* the gap."""
+    """KEEP only if open-entry 1d H or I clears the bar *and* beats gap."""
     primary = [r for r in rows
                if r.get("clock") == "open"
                and r.get("horizon") == 1
                and r.get("label") in ("H", "I")
+               and r.get("model") != "gap"
                and r.get("keep") == "KEEP"]
     if primary:
         return "KEEP", primary
@@ -1088,6 +1223,7 @@ def english_lead(verdict, rows, meta):
         )
     prim = [r for r in rows if r.get("clock") == "open" and r.get("horizon") == 1
             and r.get("label") in ("H", "I") and r.get("model") in ("ridge", "lgb")]
+    # Head-to-head vs gap is the KEEP lock; mention it in the lead.
     bits = []
     for r in prim:
         bits.append(
@@ -1111,9 +1247,10 @@ def english_lead(verdict, rows, meta):
 
 
 def render(rows, importances, meta, verdict):
-    keeps = [r for r in rows if r.get("keep") == "KEEP"]
-    kills = [r for r in rows if r.get("keep") == "KILL"]
-    thins = [r for r in rows if r.get("keep") == "THIN"]
+    ml_rows = [r for r in rows if r.get("model") != "gap"]
+    keeps = [r for r in ml_rows if r.get("keep") == "KEEP"]
+    kills = [r for r in ml_rows if r.get("keep") == "KILL"]
+    thins = [r for r in ml_rows if r.get("keep") == "THIN"]
     L = [
         "# Full-sheet ML → H / I (multi-year, clock-clean)",
         "",
@@ -1139,8 +1276,8 @@ def render(rows, importances, meta, verdict):
         "",
         "### Walk-forward folds",
         "",
-        "| fold | train < | holdout | model | label | holdout pnl | vs book | IC | gap IC | verdict | why |",
-        "|---|---|---|---|---|---|---|---|---|---|---|",
+        "| fold | train < | holdout | model | label | holdout pnl | vs book | vs gap | IC | gap IC | verdict | why |",
+        "|---|---|---|---|---|---|---|---|---|---|---|---|",
     ]
     wf = [r for r in rows
           if r.get("fold") in FOLD_NAMES
@@ -1152,14 +1289,15 @@ def render(rows, importances, meta, verdict):
     if not wf:
         L.append(
             "| *(folds not in this file — first pass is the combined "
-            "Apr–Aug holdout below)* | | | | | | | | | | |"
+            "Apr–Aug holdout below)* | | | | | | | | | | | |"
         )
     for r in wf:
         L.append(
             f"| {r.get('fold')} | {r.get('train_end')} | "
             f"{r.get('hold_end') or 'tape end'} | {r.get('model')} | "
             f"{r.get('label')} | {_pct(r.get('holdout'))} | "
-            f"{_edge(r.get('edge_vs_book_hold'))} | {_ic(r.get('ic'))} | "
+            f"{_edge(r.get('edge_vs_book_hold'))} | "
+            f"{_edge(r.get('edge_vs_gap_hold'))} | {_ic(r.get('ic'))} | "
             f"{_ic(r.get('gap_ic'))} | **{r.get('keep')}** | "
             f"{','.join(r.get('fail_reasons') or []) or '—'} |"
         )
@@ -1213,7 +1351,8 @@ def render(rows, importances, meta, verdict):
     prim = _prefer_fold(
         rows,
         lambda r: r.get("clock") == "open" and r.get("horizon") == 1
-        and r.get("label") in ("H", "I", "I_sum"),
+        and r.get("label") in ("H", "I", "I_sum")
+        and r.get("model") != "gap",
     )
     prim.sort(key=lambda r: (r.get("label") or "", r.get("model") or ""))
     for r in prim:
@@ -1265,7 +1404,8 @@ def render(rows, importances, meta, verdict):
     close1 = _prefer_fold(
         rows,
         lambda r: r.get("clock") == "close" and r.get("horizon") == 1
-        and r.get("label") in ("H", "I"),
+        and r.get("label") in ("H", "I")
+        and r.get("model") != "gap",
     )
     for r in close1:
         L.append(
@@ -1318,28 +1458,55 @@ def render(rows, importances, meta, verdict):
             L.append(f"{i}. {it['plain']} (`{it['feat']}`)")
         L.append("")
     L += [
-        "### Gap algebra vs ML",
+        "### Head-to-head: overnight-gap baseline vs ML",
         "",
-        "At the open we already know the overnight gap "
-        "(C[t] vs B[t−1]). Excel I is overnight plus a scaled H. If ML "
-        "IC on I is no better than overnight→I, the sheet is a DAG on "
-        "A–F and there is nothing past gap algebra. That is a clean null.",
+        "Manager lock: gap-like open IC is **not** KEEP until holdout "
+        "beats a simple overnight-gap recipe on the **same labels**, "
+        f"**same {FEE*100:.2f}% fee**, and **same ghost bar**. Recipe = "
+        f"long the top {int(TOP_Q*100)}% of overnight (C[t] vs B[t−1]). "
+        f"ML must beat that holdout by ≥{int(BEAT*10000)} bp.",
         "",
-        "| label | overnight IC | best open ML IC | ML − gap |",
-        "|---|---|---|---|",
+        "| fold | label | gap holdout | best ML holdout | ML − gap | "
+        "gap IC | best ML IC | lock |",
+        "|---|---|---|---|---|---|---|---|",
     ]
-    for lab in ("H", "I"):
-        rs = [r for r in prim if r.get("label") == lab]
-        if not rs:
-            continue
-        gap = (rs[0].get("gap_ic") or {}).get("spearman")
-        best = max(( (r.get("ic") or {}).get("spearman") or -9) for r in rs)
-        gap_s = f"{gap:+.3f}" if gap is not None else "—"
-        delta = (best - gap) if gap is not None and best > -8 else None
-        if delta is None:
-            L.append(f"| {lab} | {gap_s} | {best:+.3f} | — |")
-        else:
-            L.append(f"| {lab} | {gap_s} | {best:+.3f} | {delta:+.3f} |")
+    h2h = [r for r in rows
+           if r.get("clock") == "open" and r.get("horizon") == 1
+           and r.get("label") in ("H", "I")
+           and r.get("model") in ("ridge", "lgb")
+           and r.get("fold") in FOLD_NAMES]
+    h2h_folds = sorted({r.get("fold") for r in h2h})
+    if not h2h_folds:
+        h2h = [r for r in prim if r.get("label") in ("H", "I")
+               and r.get("model") in ("ridge", "lgb")]
+        h2h_folds = sorted({r.get("fold") or "cut" for r in h2h})
+    for fold in h2h_folds:
+        for lab in ("H", "I"):
+            rs = [r for r in h2h if (r.get("fold") or "cut") == fold
+                  and r.get("label") == lab]
+            if not rs:
+                continue
+            gap_r = (rs[0].get("gap_recipe") or {})
+            gap_h = gap_r.get("holdout") or {}
+            best = max(
+                rs,
+                key=lambda r: ((r.get("holdout") or {}).get("avg_net")
+                               if r.get("holdout") else -9),
+            )
+            evg = best.get("edge_vs_gap_hold")
+            lock = (
+                "beats gap" if evg is not None and evg >= BEAT
+                else "lose_to_gap"
+            )
+            gic = (rs[0].get("gap_ic") or {}).get("spearman")
+            mic = max(((r.get("ic") or {}).get("spearman") or -9) for r in rs)
+            gic_s = f"{gic:+.3f}" if gic is not None else "—"
+            mic_s = f"{mic:+.3f}" if mic > -8 else "—"
+            L.append(
+                f"| {fold} | {lab} | {_pct(gap_h)} | "
+                f"{_pct(best.get('holdout'))} | {_edge(evg)} | "
+                f"{gic_s} | {mic_s} | **{lock}** |"
+            )
     n_recon = meta.get("n_reconstructed") or 0
     L += [
         "",
@@ -1372,6 +1539,9 @@ def render(rows, importances, meta, verdict):
         f"tickers, edge vs book ≥{int(BEAT*10000)} bp, Q1 not red, "
         f"top-5 names ≤{int(TOP5_BAR*100)}%, July share ≤{int(JULY_BAR*100)}%, "
         "both SPY tapes, no day lottery, not thin.",
+        f"- Manager lock: open-entry KEEP also needs holdout edge vs the "
+        f"overnight-gap recipe ≥{int(BEAT*10000)} bp (same labels, same "
+        f"{FEE*100:.2f}% fee, same ghost bar). Gap-like IC alone is not KEEP.",
         f"- Q1 cut **{Q1_CUT}**. Half **{HALF_CUT}**. Q3 **{Q3_CUT}**.",
         "",
         "### What this does not change",
@@ -1421,13 +1591,18 @@ def write_outputs(rows, importances, meta, verdict):
         "fee": FEE,
         "top_q": TOP_Q,
         "verdict": verdict,
+        "gap_baseline": GAP_BASELINE,
         "gate": (
             "CLOCK_MAP + OPEN_SAME_ROW_LABELS; same-row H/I labels only; "
-            "no core_score; lags of any letter fair"
+            "no core_score; lags of any letter fair; open KEEP must beat "
+            "overnight-gap recipe on holdout (same labels/fees/ghost bar)"
         ),
-        "n_keep": sum(1 for r in rows if r.get("keep") == "KEEP"),
-        "n_kill": sum(1 for r in rows if r.get("keep") == "KILL"),
-        "n_thin": sum(1 for r in rows if r.get("keep") == "THIN"),
+        "n_keep": sum(1 for r in rows if r.get("keep") == "KEEP"
+                      and r.get("model") != "gap"),
+        "n_kill": sum(1 for r in rows if r.get("keep") == "KILL"
+                      and r.get("model") != "gap"),
+        "n_thin": sum(1 for r in rows if r.get("keep") == "THIN"
+                      and r.get("model") != "gap"),
         "inventory": meta,
         "importances": importances,
         "rows": slim_rows,
@@ -1436,7 +1611,8 @@ def write_outputs(rows, importances, meta, verdict):
     block = (
         MARKER + "\n\n"
         f"Full-sheet ML → H/I (name-day panel, walk-forward folds): "
-        f"**{verdict}**. {PANEL_PATH}. "
+        f"**{verdict}**. Must beat overnight-gap baseline (same labels / "
+        f"fees / ghost bar). {PANEL_PATH}. "
         f"See `excel_bot/research/HI_ML.md`. Research only. "
         f"Live {LIVE_UNTOUCHED} frozen.\n"
     )
@@ -1535,6 +1711,11 @@ def main():
         action="store_true",
         help="rebuild panel once, then ridge+lgb on 1d H/I/I_sum across FOLDS",
     )
+    ap.add_argument(
+        "--gap-head",
+        action="store_true",
+        help="rebuild label panel once; score overnight-gap recipe vs existing ML",
+    )
     args = ap.parse_args()
     clocks, _by = load_clocks()
     vo = tuple(clocks["groups"]["value_mine_open"])
@@ -1553,6 +1734,56 @@ def main():
             "null",
         )
         print(f"render-only verdict={payload['verdict']}", flush=True)
+        return payload
+
+    if args.gap_head:
+        prev = json.load(open(OUT_JSON, encoding="utf-8"))
+        disc, hold = load_split()
+        tickers = locked_tickers()
+        if args.limit:
+            tickers = tickers[: args.limit]
+        print(f"[hi_ml] GAP-HEAD {PANEL_PATH} {GAP_BASELINE}", flush=True)
+        recs, n_ok = assemble(
+            tickers, disc, hold, feat_open, feat_close, {},
+            labels_only=True,
+        )
+        if not recs:
+            raise SystemExit("no panel rows")
+        dates = sorted(r["date"] for r in recs)
+        spy = load_spy_from_parquet(dates)
+        print(f"[hi_ml] label panel rows={len(recs)} tickers_ok={n_ok} "
+              f"span={dates[0]}…{dates[-1]}", flush=True)
+        gap_rows = []
+        for fname, train_end, hold_end in FOLDS:
+            print(f"[hi_ml] gap {fname} train<{train_end} hold<{hold_end}",
+                  flush=True)
+            gap_rows += run_gap_baselines(
+                recs, spy, disc, hold,
+                train_end=train_end, hold_end=hold_end, fold=fname,
+                clocks=("open",), labels=("H", "I", "I_sum"), horizons=(1,),
+            )
+        print("[hi_ml] gap fold_combined train<2026-04-01 hold=tape end",
+              flush=True)
+        gap_rows += run_gap_baselines(
+            recs, spy, disc, hold,
+            train_end=TIME_CUT, hold_end=None, fold="fold_combined",
+            clocks=("open",), labels=("H", "I", "I_sum"), horizons=HORIZONS,
+        )
+        old = [r for r in (prev.get("rows") or []) if r.get("model") != "gap"]
+        rows = attach_gap_head(old, gap_rows) + gap_rows
+        meta = prev.get("inventory") or remaining_inventory(
+            feat_open, feat_close, {
+                "n_reconstructed": len(SHEET_LETTERS),
+                "n_tickers": n_ok,
+                "n_rows": len(recs),
+                "date_span": f"{dates[0]} → {dates[-1]}",
+            })
+        rows = apply_honesty_bar(rows)
+        verdict, _ = family_verdict(rows)
+        payload = write_outputs(
+            rows, prev.get("importances") or {}, meta, verdict)
+        print(f"gap-head verdict={verdict} KEEP={payload['n_keep']} "
+              f"KILL={payload['n_kill']} THIN={payload['n_thin']}", flush=True)
         return payload
 
     disc, hold = load_split()

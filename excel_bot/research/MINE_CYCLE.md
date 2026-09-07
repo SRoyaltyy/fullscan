@@ -153,4 +153,4 @@ H/I multi-horizon: KEEP 85 · KILL 1227 · THIN 0. Standing light+O re-scored. C
 
 ## H/I full-sheet ML (multi-year, clock-clean)
 
-Full-sheet ML → H/I (name-day panel, walk-forward folds): **null**. batch Yahoo/rows → name-day panel → train once → time holdout → next fold. See `excel_bot/research/HI_ML.md`. Research only. Live flatten_robust frozen.
+Full-sheet ML → H/I (name-day panel, walk-forward folds): **null**. Must beat overnight-gap baseline (same labels / fees / ghost bar). batch Yahoo/rows → name-day panel → train once → time holdout → next fold. See `excel_bot/research/HI_ML.md`. Research only. Live flatten_robust frozen.

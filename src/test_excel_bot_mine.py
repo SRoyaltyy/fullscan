@@ -1629,7 +1629,52 @@ def test_hi_ml_is_panel_not_per_ticker():
     src = (ENG / "mine_hi_ml.py").read_text(encoding="utf-8")
     assert "Never ML inside interactive one-stock" in src
     assert "--folds-only" in src
+    assert "--gap-head" in src
     assert "per-ticker" in src
+
+
+def test_hi_ml_must_beat_gap_recipe():
+    from mine_hi_ml import BEAT, apply_honesty_bar, family_verdict
+
+    lose = [{
+        "clock": "open", "label": "I", "horizon": 1, "model": "lgb",
+        "fold": "fold_q2", "keep": "KEEP", "verdict": "KEEP",
+        "fail_reasons": [],
+        "ic": {"spearman": 0.40},
+        "gap_ic": {"spearman": 0.38},
+        "edge_vs_gap_hold": BEAT - 0.0015,
+        "holdout": {"avg_net": 0.03, "n": 200},
+    }]
+    out = apply_honesty_bar(lose)
+    assert out[0]["keep"] == "KILL"
+    assert "lose_to_gap" in out[0]["fail_reasons"]
+    v, prim = family_verdict(out)
+    assert v == "null"
+    assert prim == []
+
+    win = [{
+        "clock": "open", "label": "I", "horizon": 1, "model": "lgb",
+        "fold": "fold_q2", "keep": "KEEP", "verdict": "KEEP",
+        "fail_reasons": [],
+        "ic": {"spearman": 0.50},
+        "gap_ic": {"spearman": 0.38},
+        "edge_vs_gap_hold": BEAT + 0.01,
+        "holdout": {"avg_net": 0.03, "n": 200},
+    }]
+    out2 = apply_honesty_bar(win)
+    assert "lose_to_gap" not in out2[0]["fail_reasons"]
+    assert "gap_algebra" not in out2[0]["fail_reasons"]
+    assert out2[0]["keep"] == "KEEP"
+    v2, prim2 = family_verdict(out2)
+    assert v2 == "KEEP" and prim2
+
+    gap_row = [{
+        "clock": "open", "label": "I", "horizon": 1, "model": "gap",
+        "fold": "fold_q2", "keep": "KEEP", "verdict": "KEEP",
+        "fail_reasons": [],
+    }]
+    v3, _ = family_verdict(gap_row)
+    assert v3 == "null"
 
 
 def test_hi_ml_report_is_committed():
@@ -1640,6 +1685,8 @@ def test_hi_ml_report_is_committed():
     assert "KEEP" in md or "null" in md
     assert "name-day panel" in md
     assert "Walk-forward" in md
+    assert "Head-to-head" in md
+    assert "overnight-gap" in md
     payload = json.loads(
         (ROOT / "excel_bot" / "research" / "hi_ml.json").read_text())
     assert payload["live_untouched"] == "flatten_robust"

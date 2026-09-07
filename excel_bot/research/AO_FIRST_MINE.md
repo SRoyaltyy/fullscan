@@ -1269,4 +1269,4 @@ Research only. One 2026 regime.
 
 ## H/I full-sheet ML (multi-year, clock-clean)
 
-Full-sheet ML → H/I (name-day panel, walk-forward folds): **null**. batch Yahoo/rows → name-day panel → train once → time holdout → next fold. See `excel_bot/research/HI_ML.md`. Research only. Live flatten_robust frozen.
+Full-sheet ML → H/I (name-day panel, walk-forward folds): **null**. Must beat overnight-gap baseline (same labels / fees / ghost bar). batch Yahoo/rows → name-day panel → train once → time holdout → next fold. See `excel_bot/research/HI_ML.md`. Research only. Live flatten_robust frozen.
