@@ -7,6 +7,7 @@ value + fill. `run.py --all-cols` dumps the same 275 cols but walks rows
 Research only. Live flatten_robust is not changed.
 
   python engine/capture_all_cols.py --from-split --n-disc 100 --n-hold 60
+  python engine/capture_all_cols.py --all-rows --workers 4
   python engine/capture_all_cols.py --tickers AAPL MSFT --out research/all_cols_sample
 """
 from __future__ import annotations
@@ -56,6 +57,17 @@ def tickers_from_split(n_disc, n_hold):
     disc = sorted(t for t in split["discovery"] if t in have)
     hold = sorted(t for t in split["holdout"] if t in have)
     return stride_pick(disc, n_disc), stride_pick(hold, n_hold)
+
+
+def tickers_all_rows():
+    """Every Yahoo/rows cache ticker, tagged by the standing holdout split."""
+    split = json.load(open(SPLIT_PATH))
+    have = sorted(fn[:-5] for fn in os.listdir(ROWS_DIR) if fn.endswith(".json"))
+    dset, hset = set(split["discovery"]), set(split["holdout"])
+    disc = [t for t in have if t in dset]
+    hold = [t for t in have if t in hset]
+    extra = [t for t in have if t not in dset and t not in hset]
+    return disc, hold, extra
 
 
 def capture_ticker(ticker, outdir):
@@ -112,6 +124,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--tickers", nargs="*", default=[])
     ap.add_argument("--from-split", action="store_true")
+    ap.add_argument("--all-rows", action="store_true",
+                    help="every ticker in the Yahoo/rows cache (~3603)")
     ap.add_argument("--n-disc", type=int, default=100)
     ap.add_argument("--n-hold", type=int, default=60)
     ap.add_argument("--out", default="research/all_cols_sample")
@@ -124,7 +138,13 @@ def main():
     args = ap.parse_args()
     if args.force:
         args.skip_existing = False
-    if args.from_split:
+    extra = []
+    if args.all_rows:
+        disc, hold, extra = tickers_all_rows()
+        tickers = disc + hold + extra
+        print(f"all-rows disc={len(disc)} hold={len(hold)} extra={len(extra)} "
+              f"n={len(tickers)}", flush=True)
+    elif args.from_split:
         disc, hold = tickers_from_split(args.n_disc, args.n_hold)
         tickers = disc + hold
         print(f"from-split disc={len(disc)} hold={len(hold)}", flush=True)
@@ -143,9 +163,17 @@ def main():
         if args.skip_existing and os.path.exists(dest):
             skipped += 1
             times.append(0.0)
-            print(f"  skip {t}", flush=True)
         else:
             todo.append(t)
+    if skipped:
+        print(f"  skip-existing {skipped}", flush=True)
+
+    def _write_progress(done):
+        json.dump({
+            "n_target": len(tickers), "n_todo": len(todo),
+            "n_ok": ok, "n_err": err, "n_skipped": skipped,
+            "n_done": skipped + ok + err, "seed": "yahoo_rows_cache",
+        }, open(os.path.join(outdir, "_progress.json"), "w"), indent=1)
 
     def _record(name, n, sec, e):
         nonlocal ok, err
@@ -155,7 +183,10 @@ def main():
             print(f"  FAIL {name} {sec:.1f}s {e}", flush=True)
         else:
             ok += 1
-            print(f"  ok {name} days={n} {sec:.1f}s", flush=True)
+            if ok % 25 == 0 or ok + err == len(todo):
+                print(f"  ok {name} days={n} {sec:.1f}s "
+                      f"({ok+err}/{len(todo)} new, skip={skipped})", flush=True)
+                _write_progress(ok + err)
 
     if args.workers <= 1 or len(todo) <= 1:
         for t in todo:
@@ -171,6 +202,10 @@ def main():
         "n_target": len(tickers),
         "n_disc": len(disc) if disc else None,
         "n_hold": len(hold) if hold else None,
+        "n_extra": len(extra) if extra else None,
+        "n_on_disk": sum(1 for fn in os.listdir(outdir)
+                         if fn.endswith(".json") and not fn.startswith("_")),
+        "all_rows": bool(args.all_rows),
         "seconds": times,
         "seconds_measured": measured,
         "minutes_per_ticker": (sum(measured) / len(measured) / 60.0) if measured else None,

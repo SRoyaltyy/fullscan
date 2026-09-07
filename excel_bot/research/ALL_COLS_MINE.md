@@ -106,4 +106,4 @@ Research only. Live frozen. No strategy cards.
 
 ## Remaining A–JL families (unmined sweep)
 
-The 8-def / 16-fill list above is the **old** near-miss (N=499, PASS 0). Leftover P–JL / formula / fill families are scored in `UNMINED_SWEEP.md` (N=400, KEEP 0).
+The 8-def / 16-fill list above is the **old** near-miss (N=499, PASS 0). Leftover P–JL / formula / fill families are scored in `UNMINED_SWEEP.md` (N=3603, KEEP 126 raw / 66 unique).

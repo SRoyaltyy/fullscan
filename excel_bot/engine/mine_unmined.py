@@ -298,9 +298,11 @@ def render_inventory(payload):
         "yesterday+A lags, and a 'five deeper greens' count). That list is "
         "a **clean null** (PASS 0). Most of the sheet was never scored.",
         "",
-        "This inventory names the leftover regions. Standing research keeps "
-        "stay the **three light + green O** recipes. Finviz volume stays "
-        "**BLOCKED**. AB / weather / book stay dead until a long tape exists. "
+        "This inventory names the leftover regions. The **same four "
+        "families** are scored at full Yahoo/rows scale (~3,603), not a "
+        "new tiny hand list. Standing research keeps stay the **three "
+        "light + green O** recipes. Finviz volume stays **BLOCKED**. "
+        "AB / weather / book stay dead until a long tape exists. "
         "score / core / a_score were already killed on the 3,603 A–O grids.",
         "",
         "## What was already mined (do not repeat)",
@@ -397,6 +399,58 @@ def family_of(name):
     if name.startswith("flag_"):
         return "flag"
     return "other"
+
+
+def letter_of(name):
+    for pref in ("valopen_", "valclose_", "fill_", "flag_"):
+        if name.startswith(pref):
+            return name[len(pref):].split("_")[0]
+    return "?"
+
+
+# What the unique KEEP letters actually are (English first).
+LETTER_PLAIN = {
+    "AH": "count of recent same-day drops of 5% or more (open-knowable walk)",
+    "AM": "carried-forward deeper state",
+    "BA": "a 0/1 stress flag (HN/CP)",
+    "BN": "today's volume vs a ~50-day average",
+    "CJ": "a running price sum / 50",
+    "CZ": "how many recent CP prints were negative",
+    "EH": "any of FP–FU is negative → 4, else 0",
+    "EJ": "a 0/1 stress flag (AA/AJ/L)",
+    "EY": "a short-window max of EX",
+    "FC": "carried-forward FA state",
+    "FK": "last open while FH is on",
+    "FL": "last open while X is on",
+    "FR": "recent volume over 1M and/or G ≥ 3 (open-knowable walk)",
+    "GV": "a 0/1 composite of several deeper flags",
+    "HO": "a signed HN/GU cross",
+    "HZ": "carried-forward HT",
+    "IB": "a 0/1 count of HK/HM/HN/HS/HV/IA (IB≥3 was already mined; IB=1 is new)",
+    "IK": "carried-forward HO",
+    "IL": "bins same-day return H (close-knowable)",
+    "N": "EL times a 3% same-day move — stored A–O close fill, not past-O",
+    "R": "column J when the Change-sheet flag Q is on",
+    "T": "alias of EN",
+    "U": "alias of CV (CV fill was on the old hand list; U value/fill was not)",
+}
+
+
+def unique_keeps(keeps):
+    """Collapse eq1/ge1/gt0 twins. One row per letter × clock × side × hold."""
+    best = {}
+    for r in keeps:
+        key = (r["family"], letter_of(r["def"]), r["clock"], r["side"], r["exit"])
+        cur = best.get(key)
+        ht = ((r.get("holdout") or {}).get("t") or -9)
+        if cur is None or ht > ((cur.get("holdout") or {}).get("t") or -9):
+            best[key] = r
+    out = list(best.values())
+    out.sort(key=lambda r: (
+        0 if r["exit"] == "hold2" else 1 if r["exit"] == "hold1" else 2,
+        -((r.get("holdout") or {}).get("t") or -9),
+    ))
+    return out
 
 
 def pack_row(name, clock, side, rule, cell, baselines):
@@ -685,7 +739,7 @@ def _plain_row(r):
     return f"If {what}, {side} {when} {hold}."
 
 
-def render_sweep(rows, baselines, files, inv_payload, specs):
+def render_sweep(rows, baselines, files, inv_payload, specs, locked=None):
     meta_path = os.path.join(SAMPLE, "_meta.json")
     meta = json.load(open(meta_path)) if os.path.exists(meta_path) else {}
     tickers = [os.path.basename(f)[:-5] for f in files]
@@ -702,6 +756,15 @@ def render_sweep(rows, baselines, files, inv_payload, specs):
         b = by_fam[r["family"]]
         b[r["keep"]] += 1
         b["n"] += 1
+    if locked:
+        n_pass = locked.get("n_pass", n_pass)
+        n_fail = locked.get("n_fail", n_fail)
+        n_thin = locked.get("n_thin", n_thin)
+        n_keep = locked.get("n_keep", n_keep)
+        n_kill = locked.get("n_kill", n_kill)
+        if locked.get("family_counts"):
+            by_fam = defaultdict(lambda: {"KEEP": 0, "KILL": 0, "THIN": 0, "n": 0},
+                                 {k: dict(v) for k, v in locked["family_counts"].items()})
     spt = meta.get("minutes_per_ticker")
     sec = round(spt * 60, 2) if spt else None
     L = [
@@ -712,13 +775,14 @@ def render_sweep(rows, baselines, files, inv_payload, specs):
         "",
         "## Plain English",
         "",
-        "We rebuilt a **real hundreds-of-names** A–JL dump from the Yahoo "
-        "row cache (never Excel's STOCKHISTORY cache) and scored the "
-        "leftover cells the first 499-name cut skipped: leftover open "
-        "numbers, leftover close numbers, leftover green/red highlights, "
-        "and 0/1 formula flags. Fees are Futubull. We only buy at the open "
-        "when the sheet already knows the number or the color at 9:30; "
-        "everything else waits for the close.",
+        "Same four leftover families as the 400-name cut "
+        "(open leftover numbers, close leftover numbers, leftover "
+        "green/red highlights, 0/1 formula flags). This beat rebuilds "
+        "A–JL from **every Yahoo/rows cache** (~3,603 names), not a "
+        "new tiny hand list. Never Excel's STOCKHISTORY cache. Fees "
+        "are Futubull. We only buy at the open when the sheet already "
+        "knows the number or the color at 9:30; everything else waits "
+        "for the close.",
         "",
         "A keeper has to work on both ticker halves, both calendar halves "
         "(cut 2026-05-01), **Q3** (cut 2026-07-01), both SPY tapes, and "
@@ -726,15 +790,18 @@ def render_sweep(rows, baselines, files, inv_payload, specs):
         "cannot be more than 25% of winning-day P&L. hold1 needs a hold2 "
         "sibling; hold5 needs hold2 edge.",
         "",
-        f"Sample **{len(files)}** tickers ({n_disc} discovery / {n_hold} "
-        f"holdout) · lean capture **{sec} s/ticker** · specs **{len(specs)}** "
-        f"· scored cells **{len(rows)}**.",
+        f"Full rows-cache rebuild **{len(files)}** tickers ({n_disc} "
+        f"discovery / {n_hold} holdout) · lean capture **{sec} s/ticker** "
+        f"· specs **{len(specs) if not (locked and locked.get('n_specs')) else locked['n_specs']}** "
+        f"· scored cells **{(locked or {}).get('n_rows', len(rows))}**.",
         "",
         f"**KEEP {n_keep} · KILL {n_kill} · THIN {n_thin}** "
         f"(raw PASS {n_pass} / FAIL {n_fail} / THIN {n_thin}).",
         "",
-        "Standing research keeps stay the three light+green O recipes. "
-        "Finviz volume stays BLOCKED. AB / weather / book stay dead.",
+        "Live cards stay frozen. Light+green O remain the only standing "
+        "A–O color keeps. Finviz volume stays BLOCKED. AB / weather / "
+        "book stay dead. Leftover-family KEEPs below are research-only "
+        "on this 2026 tape.",
         "",
         "### Family scoreboard",
         "",
@@ -767,28 +834,40 @@ def render_sweep(rows, baselines, files, inv_payload, specs):
                          f"{b['avg_net']*100:+.2f}% | {b['t']:.1f} | "
                          f"{b['win']:.0%} |")
     keeps = [r for r in rows if r["keep"] == "KEEP"]
-    L += ["", "### KEEP (hardened)", ""]
+    uniq = unique_keeps(keeps)
+    sleeve = [r for r in uniq if r["exit"] in ("hold1", "hold2")]
+    L += ["", "### KEEP (hardened, unique letters)", ""]
     if not keeps:
         L += [
-            "*(none — every leftover family is a clean null on this sample)*",
+            "*(none — every leftover family is a clean null at full rows-cache scale)*",
             "",
         ]
     else:
+        letters = sorted({letter_of(r["def"]) for r in uniq})
         L += [
-            "These cleared the same bar as light+O (both halves, Q3, both "
-            "tapes, top-day lottery, beat baseline, horizon sibling).",
+            f"Raw KEEP **{len(keeps)}** collapses to **{len(uniq)}** "
+            f"letter×hold cells (**{len(sleeve)}** hold1/2) on letters "
+            f"`{'/'.join(letters)}`. eq1/ge1/gt0 twins that fire the "
+            "same days are counted once. These cleared the same bar as "
+            "light+O (both halves, Q3, both tapes, top-day lottery, beat "
+            "baseline, horizon sibling). Research only — one 2026 regime. "
+            "No card.",
             "",
-            "| meaning | def | clock | side | exit | disc | hold | Q3 | "
-            "day-lottery | tickers |",
-            "|---|---|---|---|---|---|---|---|---|---:|",
+            "| letter | what it is | clock | hold | disc | holdout | Q3 | "
+            "vs everyone | day-lottery | def |",
+            "|---|---|---|---|---|---|---|---|---|---|",
         ]
-        for r in keeps:
+        for r in sleeve:
+            let = letter_of(r["def"])
+            b = r.get("baseline") or {}
+            vs = ""
+            if b and r.get("holdout"):
+                vs = f"{(r['holdout']['avg_net']-b['avg_net'])*100:+.2f} pp"
             L.append(
-                f"| {_plain_row(r)} | `{r['def']}` | {r['clock']} | "
-                f"{r['side']} | {r['exit']} | {fmt_blk(r['discovery'])} | "
-                f"{fmt_blk(r['holdout'])} | {fmt_blk(r['q3'])} | "
-                f"{(r.get('lottery_day_frac') or 0)*100:.1f}% | "
-                f"{r['n_tickers']} |"
+                f"| **{let}** | {LETTER_PLAIN.get(let, _plain_row(r))} | "
+                f"{r['clock']} | {r['exit']} | {fmt_blk(r['discovery'])} | "
+                f"{fmt_blk(r['holdout'])} | {fmt_blk(r['q3'])} | {vs} | "
+                f"{(r.get('lottery_day_frac') or 0)*100:.1f}% | `{r['def']}` |"
             )
         L.append("")
     L += [
@@ -798,8 +877,9 @@ def render_sweep(rows, baselines, files, inv_payload, specs):
         "tickers | why |",
         "|---|---|---|---|---|---|---|---|---|---:|---|",
     ]
-    hold12 = [r for r in rows if r["exit"] in ("hold1", "hold2")]
-    show = (hold12 or rows)[:36]
+    hold12 = [r for r in rows if r["exit"] in ("hold1", "hold2")
+              and r.get("keep") != "KEEP"]
+    show = (hold12 or [r for r in rows if r.get("keep") != "KEEP"] or rows)[:36]
     for r in show:
         L.append(
             f"| {r['keep']} | `{r['def']}` | {r['family']} | {r['clock']} | "
@@ -815,31 +895,50 @@ def render_sweep(rows, baselines, files, inv_payload, specs):
                 f"- **{label}** (`{fam}`): clean null — KEEP 0 / KILL "
                 f"{b['KILL']} / THIN {b['THIN']}."
             )
+    de5 = next((r for r in rows if r["def"] == "fill_DE_red"
+                and r["exit"] == "hold5"), None)
+    de2 = next((r for r in rows if r["def"] == "fill_DE_red"
+                and r["exit"] == "hold2"), None)
     L += [
         "",
         "### Ghost that looked like a KEEP (then died)",
         "",
         "Column **DE** paints red when the cell equals 0 (green when it "
         "equals 1). The formula that writes DE also reads same-day volume "
-        "and same-day return H, so we only enter at the **close**. "
-        "`fill_DE_red` short hold5 printed +1.12% / +0.67% on the two "
-        "ticker halves, but the highlight **never shows up in Q3** "
-        "(q3 n=0) and the late 2026 half is only 39 trades. hold2 on the "
-        "same cell is a wash (+0.02% holdout, t=0.08). That is a first-half "
-        "ghost, not a keeper — **KILL** `q3_missing` / `tape_thin` / "
-        "`no_hold2_keep`.",
+        "and same-day return H, so we only enter at the **close**.",
+    ]
+    if de5:
+        L.append(
+            f" `fill_DE_red` short hold5: disc {fmt_blk(de5['discovery'])}, "
+            f"hold {fmt_blk(de5['holdout'])}, Q3 {fmt_blk(de5.get('q3'))}, "
+            f"late {fmt_blk(de5.get('late'))}. hold2: "
+            f"{fmt_blk((de2 or {}).get('holdout'))}. "
+            f"**{de5['keep']}** ({','.join(de5['fail_reasons']) or '—'})."
+        )
+    else:
+        L.append(" `fill_DE_red` did not score enough trades to pack a row.")
+    L += [
         "",
         "### Exhaustion",
         "",
     ]
     if n_keep:
+        scale = ("full Yahoo/rows set" if len(files) >= 3000
+                 else f"{len(files)}-name sample")
         L.append(
-            f"{n_keep} leftover cells KEEP. The regions with KEEP 0 are "
-            "null on this sample; the KEEP rows still need another regime "
-            "before anyone would wire a card."
+            f"{n_keep} leftover cells KEEP on the {scale}. The regions "
+            "with KEEP 0 are null here; KEEP rows still need another "
+            "regime before anyone would wire a card."
         )
     else:
+        scale = ("full Yahoo/rows set (~3,603)" if len(files) >= 3000
+                 else f"{len(files)}-name sample")
         L.append(
+            f"Every leftover family on the {scale} is a **clean null**. "
+            "That is a finding, not a pause: these letters do not buy a "
+            "leak-free edge under the ship bar in Jan–Sep 2026. The "
+            "400-name cut already said null; full scale does not revive them."
+            if len(files) >= 3000 else
             "Every leftover family on this sample is a **clean null**. "
             "That is a finding, not a pause: these letters do not buy a "
             "leak-free edge under the ship bar in Jan–Sep 2026."
@@ -879,8 +978,8 @@ def render_sweep(rows, baselines, files, inv_payload, specs):
         "n_discovery": n_disc,
         "n_holdout": n_hold,
         "minutes_per_ticker": spt,
-        "n_specs": len(specs),
-        "n_rows": len(rows),
+        "n_specs": (locked or {}).get("n_specs") or len(specs),
+        "n_rows": (locked or {}).get("n_rows") or len(rows),
         "n_pass": n_pass, "n_fail": n_fail, "n_thin": n_thin,
         "n_keep": n_keep, "n_kill": n_kill,
         "family_counts": {k: dict(v) for k, v in by_fam.items()},
@@ -896,6 +995,11 @@ def render_sweep(rows, baselines, files, inv_payload, specs):
         "ao_is_not_whole_excel": True,
         "standing_keeps": inv_payload["standing_keeps"],
         "finviz": "BLOCKED",
+        "scale": "full_rows_cache" if len(files) >= 3000 else "sample",
+        "prior_n400_null": True,
+        "n_keep_unique": len(uniq),
+        "n_keep_sleeve": len(sleeve),
+        "keep_letters": sorted({letter_of(r["def"]) for r in uniq}),
     }
     return "\n".join(L) + "\n", payload
 
@@ -912,15 +1016,73 @@ def write_inventory():
     return payload, md
 
 
+def write_reports(md, payload):
+    open(OUT_MD, "w", encoding="utf-8").write(md)
+    json.dump(payload, open(OUT_JSON, "w"), indent=2)
+    block = MARKER + "\n\n" + md
+    sb = splice_md(SB_MD, MARKER, block,
+                   require_any=("first A–JL cut", "A–O clock cycle"))
+    ao = splice_md(AO_MD, MARKER, block, require="VISIBLE_COLS A..O")
+    letters = payload.get("keep_letters") or []
+    cy_note = (
+        MARKER + "\n\n"
+        f"Unmined A–JL sweep N={payload['n_tickers']} · "
+        f"KEEP {payload['n_keep']} raw / {payload.get('n_keep_unique', '?')} "
+        f"unique letter×hold ({payload.get('n_keep_sleeve', '?')} hold1/2) · "
+        f"KILL {payload['n_kill']} · THIN {payload['n_thin']}. "
+        f"Letters: {', '.join(letters) or 'none'}. "
+        "Light+O still the only standing A–O color keep. Finviz BLOCKED. "
+        "See `UNMINED_SWEEP.md`.\n"
+    )
+    cy = splice_md(CYCLE_MD, MARKER, cy_note,
+                   require_any=("first A–JL cut", "A–O clock cycle"))
+    open(SB_MD, "w", encoding="utf-8").write(sb)
+    open(AO_MD, "w", encoding="utf-8").write(ao)
+    open(CYCLE_MD, "w", encoding="utf-8").write(cy)
+    if os.path.exists(ALL_COLS_MD):
+        ac = splice_md(
+            ALL_COLS_MD, MARKER,
+            MARKER + "\n\n"
+            "The 8-def / 16-fill list above is the **old** near-miss "
+            "(N=499, PASS 0). Leftover P–JL / formula / fill families "
+            f"are scored in `UNMINED_SWEEP.md` "
+            f"(N={payload['n_tickers']}, KEEP {payload['n_keep']} raw / "
+            f"{payload.get('n_keep_unique', '?')} unique).\n",
+            require="whole Excel",
+        )
+        open(ALL_COLS_MD, "w", encoding="utf-8").write(ac)
+
+
 def main():
     os.chdir(ROOT)
     ap = argparse.ArgumentParser()
     ap.add_argument("--inventory-only", action="store_true")
+    ap.add_argument("--render-from-json", action="store_true",
+                    help="rewrite reports from unmined_sweep.json (no remine)")
     args = ap.parse_args()
     inv_payload, inv_md = write_inventory()
     print(f"wrote {INV_MD}", flush=True)
     if args.inventory_only:
         return inv_payload, [], {}, []
+    if args.render_from_json:
+        saved = json.load(open(OUT_JSON))
+        files = sorted(f for f in glob.glob(os.path.join(SAMPLE, "*.json"))
+                       if not os.path.basename(f).startswith("_"))
+        rows = list(saved.get("keepers") or [])
+        seen = {(r["def"], r["exit"]) for r in rows}
+        for r in saved.get("cells") or []:
+            key = (r["def"], r["exit"])
+            if key not in seen:
+                rows.append(r)
+                seen.add(key)
+        specs_n = saved.get("n_specs") or 0
+        md, payload = render_sweep(
+            rows, saved.get("baselines") or {}, files, inv_payload,
+            [None] * specs_n, locked=saved)
+        write_reports(md, payload)
+        print(f"KEEP {payload['n_keep']} unique={payload.get('n_keep_unique')} "
+              f"N={payload['n_tickers']}", flush=True)
+        return inv_payload, rows, payload, files
     clocks = load_clocks()
     specs = build_specs(inv_payload, clocks)
     print(f"specs={len(specs)} val_open={len(inv_payload['families']['val_open']['letters'])} "
@@ -929,37 +1091,7 @@ def main():
           f"flag={len(inv_payload['families']['flag']['letters'])}", flush=True)
     rows, baselines, files = mine(specs)
     md, payload = render_sweep(rows, baselines, files, inv_payload, specs)
-    open(OUT_MD, "w", encoding="utf-8").write(md)
-    json.dump(payload, open(OUT_JSON, "w"), indent=2)
-    block = MARKER + "\n\n" + md
-    sb = splice_md(SB_MD, MARKER, block,
-                   require_any=("first A–JL cut", "A–O clock cycle"))
-    ao = splice_md(AO_MD, MARKER, block, require="VISIBLE_COLS A..O")
-    cy_note = (
-        MARKER + "\n\n"
-        f"Unmined A–JL sweep N={payload['n_tickers']} · "
-        f"KEEP {payload['n_keep']} · KILL {payload['n_kill']} · "
-        f"THIN {payload['n_thin']}. "
-        "Standing keeps remain light+green O. Finviz BLOCKED. "
-        "See `UNMINED_SWEEP.md`.\n"
-    )
-    cy = splice_md(CYCLE_MD, MARKER, cy_note,
-                   require_any=("first A–JL cut", "A–O clock cycle"))
-    open(SB_MD, "w", encoding="utf-8").write(sb)
-    open(AO_MD, "w", encoding="utf-8").write(ao)
-    open(CYCLE_MD, "w", encoding="utf-8").write(cy)
-    # Pointer on the standing 499 / 8-def null — do not wipe it.
-    if os.path.exists(ALL_COLS_MD):
-        ac = splice_md(
-            ALL_COLS_MD, MARKER,
-            MARKER + "\n\n"
-            "The 8-def / 16-fill list above is the **old** near-miss "
-            "(N=499, PASS 0). Leftover P–JL / formula / fill families "
-            f"are scored in `UNMINED_SWEEP.md` "
-            f"(N={payload['n_tickers']}, KEEP {payload['n_keep']}).\n",
-            require="whole Excel",
-        )
-        open(ALL_COLS_MD, "w", encoding="utf-8").write(ac)
+    write_reports(md, payload)
     print(f"KEEP {payload['n_keep']} KILL {payload['n_kill']} THIN {payload['n_thin']} "
           f"N={payload['n_tickers']}", flush=True)
     return inv_payload, rows, payload, files

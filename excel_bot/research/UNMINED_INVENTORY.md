@@ -6,7 +6,7 @@ _Generated 2026-09-07 · live `flatten_robust` frozen. Yahoo/rows A–F seed onl
 
 The first whole-Excel dump already looked at **499** names, but only at a short list of cells (a dozen value letters, sixteen fills, yesterday+A lags, and a 'five deeper greens' count). That list is a **clean null** (PASS 0). Most of the sheet was never scored.
 
-This inventory names the leftover regions. Standing research keeps stay the **three light + green O** recipes. Finviz volume stays **BLOCKED**. AB / weather / book stay dead until a long tape exists. score / core / a_score were already killed on the 3,603 A–O grids.
+This inventory names the leftover regions. The **same four families** are scored at full Yahoo/rows scale (~3,603), not a new tiny hand list. Standing research keeps stay the **three light + green O** recipes. Finviz volume stays **BLOCKED**. AB / weather / book stay dead until a long tape exists. score / core / a_score were already killed on the 3,603 A–O grids.
 
 ## What was already mined (do not repeat)
 

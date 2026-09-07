@@ -933,9 +933,13 @@ def test_unmined_sweep_report_is_committed():
         (ROOT / "excel_bot" / "research" / "unmined_sweep.json").read_text())
     assert payload["live_untouched"] == "flatten_robust"
     assert payload["excel_cache_used"] is False
-    assert payload["n_tickers"] >= 50
+    assert payload["n_tickers"] >= 3000
+    assert payload.get("scale") == "full_rows_cache"
     assert payload["finviz"] == "BLOCKED"
     assert payload["n_keep"] + payload["n_kill"] + payload["n_thin"] >= 1
+    if payload["n_keep"]:
+        assert payload.get("n_keep_unique", 0) >= 1
+        assert payload.get("keep_letters")
     for r in payload.get("keepers") or []:
         assert r["clock"] in ("open", "close")
         if r["clock"] == "open":
@@ -958,6 +962,8 @@ def test_unmined_miner_does_not_wire_live():
     cap = (ENG / "capture_all_cols.py").read_text(encoding="utf-8")
     assert "yahoo_rows_cache" in cap
     assert "excel_stockhistory_cache" in cap
+    assert "--all-rows" in cap
+    assert "tickers_all_rows" in cap
 
 
 if __name__ == "__main__":
