@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "status": "pending_full_dump",
+    "surface": "A-JO",
+    "seed": "yahoo_rows_cache",
+    "note": "AAPL-only smoke is not a result. Overwritten by mine_full_grid.py."
+  },
+  "keeps": [],
+  "standing": [],
+  "kills": [],
+  "spearman": []
+}

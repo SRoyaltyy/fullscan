@@ -10,4 +10,5 @@ venv/
 grids_deep/
 excel_bot/data/rows/
 excel_bot/research/_hi_panel.parquet
+excel_bot/research/all_cols_grids/
 excel_bot/grids/
