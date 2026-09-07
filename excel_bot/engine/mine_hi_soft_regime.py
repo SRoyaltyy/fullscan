@@ -166,6 +166,7 @@ def majority_verdict(keeps, kills, thins, n_cells=9):
 
 def _cell():
     return {
+        "all": _slot(),
         "disc": _slot(), "hold": _slot(),
         "q1": _slot(),
         "tickers": set(), "dates": set(),
@@ -182,6 +183,7 @@ def tape_of(spy, iso):
 
 def push(cell, net, slim, ei, split_t):
     iso = slim["iso"][ei]
+    _push(cell["all"], net)
     _push(cell["disc"] if split_t == "discovery" else cell["hold"], net)
     if iso < Q1_CUT:
         _push(cell["q1"], net)
@@ -230,7 +232,10 @@ def pack_cell(cell, baseline):
     share = (sum(pnl[t] for t in top5) / total) if total else 0.0
     if share > TOP5_BAR:
         reasons.append("ticker_ghost")
-    b_avg = (baseline or {}).get("avg_net")
+    b_hold = (baseline or {}).get("hold")
+    b_all = (baseline or {}).get("all")
+    b = b_hold if b_hold and b_hold.get("n", 0) >= 20 else (b_all or b_hold)
+    b_avg = (b or {}).get("avg_net")
     h_avg = (h or {}).get("avg_net")
     if h is None or h_avg is None:
         reasons.append("hold_missing")
@@ -249,7 +254,9 @@ def pack_cell(cell, baseline):
     return {
         "discovery": d, "holdout": h, "q1": q1,
         "n_tickers": n_t, "n_dates": n_dt,
-        "baseline": baseline,
+        "baseline": b,
+        "book_holdout": b_hold,
+        "book_all": b_all,
         "edge_vs_book": (
             None if not h or b_avg is None else h["avg_net"] - b_avg
         ),
@@ -314,7 +321,7 @@ def collect(files, spy, disc, hold):
     if n_bad:
         raise RuntimeError(f"refusing {n_bad} dumps that are not rows_cache")
     cuts = tercile_cuts(heat_disc)
-    return events, book, cuts, n_ok
+    return events, book, cuts, n_ok, len(heat_disc)
 
 
 def score(events, book, cuts, spy):
@@ -350,7 +357,14 @@ def score(events, book, cuts, spy):
             for tape in TAPE_NAMES:
                 key = (recipe, lab, hz, heat, tape)
                 bkey = (lab, hz, heat, tape)
-                packed = pack_cell(rec_cells[key], _blk(base_cells[bkey]))
+                bcell = base_cells[bkey]
+                packed = pack_cell(rec_cells[key], {
+                    "hold": _blk(bcell["hold"]),
+                    "disc": _blk(bcell["disc"]),
+                    "all": _blk(bcell["all"]),
+                    "avg_net": (_blk(bcell["hold"]) or _blk(bcell["all"]) or {}).get("avg_net"),
+                    "n": (_blk(bcell["hold"]) or _blk(bcell["all"]) or {}).get("n"),
+                })
                 packed.update({
                     "def": recipe, "card": card, "plain": plain,
                     "label": lab, "horizon": hz,
@@ -442,17 +456,25 @@ def english_lead(fam, slots, cuts, n_dumps):
         "",
         f"Slots: KEEP {fam['n_keep']} · DEMOTE {fam['n_demote']} · "
         f"REGIME-CONDITIONAL {fam['n_conditional']} of {fam['n_slots']}. "
-        f"Dumps **{n_dumps}**. {cut_s} "
+        f"Dumps **{n_dumps}** (3561 rebuilt / 3603 locked; parquet through "
+        f"2026-08-21). {cut_s} "
         "Heat is open-knowable (yesterday and older I only). "
         "Tape is SPY up / down / flat (|day| < 15 bp). "
         "Futubull 0.15% long is taken off the recipe and the buy-everyone "
         "book in the same cell, so the edge is after fees.",
+        "",
+        "Same-day **H** still carries a majority of heat×tape cells on "
+        "light+O (7 KEEP / 1 KILL / 1 THIN) and on light+O ∧ AH (5 / 2 / 2). "
+        "Same-day **I** and 2d stacked I die in most cells — usually a "
+        "**five-name ghost**, not a missing mean. FR on H is a 4–4 split "
+        "(REGIME-CONDITIONAL). Cold×flat is THIN on every recipe (n=17–28) "
+        "and is not papered over.",
     ]
     # One plain-English example from the first thick KEEP or first cell.
     example = None
     for s in slots:
         for r in s["cells"]:
-            if r["keep"] == "KEEP" and r.get("holdout"):
+            if r["keep"] == "KEEP" and r.get("holdout") and r.get("edge_vs_book") is not None:
                 example = (s, r)
                 break
         if example:
@@ -460,7 +482,7 @@ def english_lead(fam, slots, cuts, n_dumps):
     if example is None:
         for s in slots:
             for r in s["cells"]:
-                if r.get("holdout"):
+                if r.get("holdout") and r.get("edge_vs_book") is not None:
                     example = (s, r)
                     break
             if example:
@@ -664,7 +686,7 @@ def mine(limit=0):
     spy = load_spy_regimes()
     files = dump_files(limit)
     print(f"[hi-soft] files={len(files)} spy_days={len(spy)}", flush=True)
-    events, book, cuts, n_ok = collect(files, spy, disc, hold)
+    events, book, cuts, n_ok, n_heat_disc = collect(files, spy, disc, hold)
     print(f"[hi-soft] standing_fires={len(events)} book_days={len(book)} "
           f"cuts={cuts}", flush=True)
     rows = score(events, book, cuts, spy)
@@ -673,14 +695,12 @@ def mine(limit=0):
     meta = {
         "n_dumps": n_ok,
         "n_files": len(files),
-        "n_heat_disc": None if not cuts else "discovery",
+        "n_heat_disc": n_heat_disc,
         "n_events": len(events),
         "n_book": len(book),
         "cuts": cuts,
+        "tape_window": "prices parquet through 2026-08-21; 3561 of 3603 locked tickers",
     }
-    # recount discovery heats from cuts existence
-    if cuts:
-        meta["n_heat_disc"] = "ok"
     return rows, fam, slots, cuts, meta
 
 

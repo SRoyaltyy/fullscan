@@ -1534,6 +1534,24 @@ def test_hi_soft_regime_heat_is_prior_i_only():
     assert "yahoo_rows_cache" in cap
 
 
+def test_hi_soft_regime_report_is_committed():
+    md = (ROOT / "excel_bot" / "research" / "HI_SOFT_REGIME.md").read_text()
+    assert "Plain English" in md
+    assert md.index("Plain English") < md.index("Family verdict")
+    assert "DEMOTE" in md or "KEEP" in md or "REGIME-CONDITIONAL" in md
+    assert "flatten_robust" in md
+    assert "THIN" in md
+    payload = json.loads(
+        (ROOT / "excel_bot" / "research" / "hi_soft_regime.json").read_text())
+    assert payload["live_untouched"] == "flatten_robust"
+    assert payload["excel_cache_used"] is False
+    assert payload["family"]["verdict"] in ("KEEP", "DEMOTE", "REGIME-CONDITIONAL")
+    assert len(payload.get("rows") or []) == 81
+    sb = (ROOT / "03_scoreboard" / "EXCEL_BOT_MINE.md").read_text()
+    assert "H/I soft-regime" in sb
+    assert "PASS 376" in sb
+
+
 def test_unmined_miner_does_not_wire_live():
     for fn in ("mine_unmined.py", "harden_unmined.py", "harden_open_stack.py",
                "harden_close_cluster.py", "harden_close_peers.py",
