@@ -176,16 +176,18 @@ def add_labels(df):
 
 def add_lags(df, letters):
     g = df.groupby("ticker", sort=False)
-    df = df.copy()
+    extra = {}
     for let in letters:
         vk, fk, tk = f"{let}_v", f"{let}_f", f"{let}_t"
         if vk in df.columns:
-            df[f"{let}_v_l1"] = g[vk].shift(1)
-            df[f"{let}_v_l2"] = g[vk].shift(2)
+            extra[f"{let}_v_l1"] = g[vk].shift(1)
+            extra[f"{let}_v_l2"] = g[vk].shift(2)
         if fk in df.columns:
-            df[f"{let}_f_l1"] = g[fk].shift(1)
+            extra[f"{let}_f_l1"] = g[fk].shift(1)
         if tk in df.columns:
-            df[f"{let}_t_l1"] = g[tk].shift(1)
+            extra[f"{let}_t_l1"] = g[tk].shift(1)
+    if extra:
+        df = pd.concat([df, pd.DataFrame(extra, index=df.index)], axis=1)
     return df
 
 
@@ -778,6 +780,7 @@ def main():
         "n_hardened": len(standing_jobs) + len(promoted),
         "n_keep": sum(1 for r in rows if r["verdict"] == "KEEP"),
         "n_kill": sum(1 for r in rows if r["verdict"] == "KILL"),
+        "n_thin": sum(1 for r in rows if r["verdict"] == "THIN"),
         "n_keep_new": sum(1 for r in rows
                           if r["verdict"] == "KEEP" and not _is_standing(r)),
         "surface": "A-JO",
