@@ -13,7 +13,8 @@ sys.path.insert(0, str(ROOT / "excel_bot" / "engine"))
 
 from mine_upper_lower import (  # noqa: E402
     add_future, add_past, build_past_gates, cheap_either_way,
-    collapse_keeps, letter_gates, op_family, sleeve_key,
+    cheap_positive, collapse_keeps, letter_gates, op_family,
+    signed_nets, sleeve_key,
 )
 
 
@@ -105,12 +106,34 @@ def test_collapse_keeps_twins():
     assert ("y_h1", "long", 20000, 0.006) in keys
 
 
+def test_short_pays_the_fee():
+    y = np.array([-0.01, 0.02, -0.03])
+    cost = np.array([0.002, 0.002, 0.002])
+    long_n, short_n = signed_nets(y, cost)
+    np.testing.assert_allclose(long_n, y - 0.002)
+    np.testing.assert_allclose(short_n, -y - 0.002)
+    # A 1% drop is +80 bp short after a 20 bp fee, not +120 bp.
+    assert abs(short_n[0] - 0.008) < 1e-12
+    n = 400
+    tick = np.array([f"T{i%80}" for i in range(n)])
+    hold = np.ones(n, dtype=bool)
+    mask = np.ones(n, dtype=bool)
+    # price down ~1%, fee 20 bp → short works, long does not
+    rng = np.random.default_rng(0)
+    ylab = np.full(n, -0.01) + rng.normal(0, 0.001, n)
+    c = np.full(n, 0.002)
+    ln, sn = signed_nets(ylab, c)
+    assert cheap_positive(mask, ln, tick, hold) is False
+    assert cheap_positive(mask, sn, tick, hold) is True
+
+
 def run_all():
     test_future_labels_look_ahead_not_back()
     test_past_gates_are_lag_only()
     test_cheap_promotes_short_when_mean_down()
     test_letter_gates_are_lag_only()
     test_collapse_keeps_twins()
+    test_short_pays_the_fee()
     print("test_excel_upper_lower: ok")
 
 

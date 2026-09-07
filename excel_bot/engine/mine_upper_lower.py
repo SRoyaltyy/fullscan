@@ -191,22 +191,33 @@ def letter_gates(let, l1, l2, f1, f2, t1, toks, disc):
     return out
 
 
-def cheap_either_way(mask, y, tick, hold, min_n=300):
+def cheap_positive(mask, y, tick, hold, min_n=300):
+    """True when this signed PnL is fat and positive on holdout."""
     m = np.asarray(mask, dtype=bool) & hold & np.isfinite(y)
     yy = y[m]
     if yy.size < min_n:
-        return None
+        return False
     if np.unique(tick[m]).size < MIN_TICKERS:
-        return None
+        return False
     mu = float(yy.mean())
     t = tstat(yy)
-    if not np.isfinite(t) or abs(t) < 2:
-        return None
-    if mu > 0:
+    return bool(np.isfinite(t) and t >= 2 and mu > 0)
+
+
+def cheap_either_way(mask, y, tick, hold, min_n=300):
+    """Test helper: `y` is already the intended-side PnL (no extra fee)."""
+    if cheap_positive(mask, y, tick, hold, min_n=min_n):
         return "long"
-    if mu < 0:
+    if cheap_positive(mask, -y, tick, hold, min_n=min_n):
         return "short"
     return None
+
+
+def signed_nets(y_label, cost):
+    """Long and short both pay the fee: y−c and −y−c."""
+    y_label = np.asarray(y_label, dtype=np.float64)
+    cost = np.asarray(cost, dtype=np.float64)
+    return y_label - cost, -y_label - cost
 
 
 def add_past(df, letters):
@@ -455,8 +466,10 @@ def main():
     tick = df["ticker"].to_numpy()
     hold = splits["hold"]
     disc = splits["disc"]
-    y_net = {ycol: (df[ycol].to_numpy(dtype=np.float64) - cost)
-             for ycol, _ in LABELS}
+    y_raw = {ycol: df[ycol].to_numpy(dtype=np.float64) for ycol, _ in LABELS}
+    y_long, y_short = {}, {}
+    for ycol, _ in LABELS:
+        y_long[ycol], y_short[ycol] = signed_nets(y_raw[ycol], cost)
     n_gates = 0
     n_promoted = 0
     rows = []
@@ -487,12 +500,14 @@ def main():
         for name, mask, plain in gates:
             mask = np.asarray(mask, dtype=bool)
             for ycol, _title in LABELS:
-                y = y_net[ycol]
-                side = cheap_either_way(mask, y, tick, hold)
-                if not side:
+                if cheap_positive(mask, y_long[ycol], tick, hold):
+                    side, signed = "long", y_long[ycol]
+                elif cheap_positive(mask, y_short[ycol], tick, hold):
+                    side, signed = "short", y_short[ycol]
+                else:
                     continue
                 n_promoted += 1
-                df["_y"] = y if side == "long" else -y
+                df["_y"] = signed
                 v, why, parts, uncond, day_s, top5 = harden(
                     df, mask, "_y", zero, splits, "open")
                 rows.append(_row_from_harden(
