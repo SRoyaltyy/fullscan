@@ -1552,12 +1552,166 @@ def test_hi_soft_regime_report_is_committed():
     assert "PASS 376" in sb
 
 
+def test_hi_ml_gate_never_peeks_same_row_hi():
+    from mine_hi_ml import (
+        LIVE_UNTOUCHED, OPEN_DERIVED, assert_ml_gate, build_feature_list,
+        feature_is_legal, hi_from_ohlc, overnight_from_ohlc, parse_feat,
+    )
+
+    h, i = hi_from_ohlc(10.0, 11.0, prev_c=10.0)
+    assert abs(h - 0.10) < 1e-12
+    assert abs(i - 0.10) < 1e-12
+    # Overnight is C[t] vs B[t−1] — open-knowable, not H/I.
+    assert abs(overnight_from_ohlc(10.5, 10.0) - 0.05) < 1e-12
+    assert overnight_from_ohlc(10.5, 10.0) != h
+
+    assert feature_is_legal("H", 0, "open") is False
+    assert feature_is_legal("I", 0, "close") is False
+    assert feature_is_legal("H", 1, "open") is True
+    assert feature_is_legal("overnight", 0, "open") is True
+    assert feature_is_legal("B", 0, "open") is False
+    assert feature_is_legal("B", 0, "close") is False  # B = C×(1+H)
+    assert feature_is_legal("BJ", 0, "close") is False
+    assert feature_is_legal("B", 1, "close") is True
+    assert feature_is_legal("core_score", 0, "open") is False
+
+    fo = build_feature_list("open")
+    fc = build_feature_list("close")
+    assert_ml_gate(fo, "open")
+    assert_ml_gate(fc, "close")
+    for name in fo + fc:
+        base, lag = parse_feat(name)
+        if base in ("H", "I"):
+            assert lag >= 1, name
+        if name.startswith("core_score"):
+            raise AssertionError(name)
+    for name in fo:
+        base, lag = parse_feat(name)
+        if lag == 0:
+            assert base not in ("B", "D", "E", "F", "G", "K", "M", "N", "H", "I")
+            assert base in OPEN_DERIVED or feature_is_legal(base, 0, "open")
+    try:
+        assert_ml_gate(["H_l0"], "open")
+        raise AssertionError("should have refused same-row H")
+    except ValueError as e:
+        assert "H/I" in str(e)
+
+    src = (ENG / "mine_hi_ml.py").read_text(encoding="utf-8")
+    assert "from flatten" not in src
+    assert "flatten_robust" in src
+    assert LIVE_UNTOUCHED == "flatten_robust"
+
+
+def test_hi_ml_is_panel_not_per_ticker():
+    from mine_hi_ml import FOLDS, PANEL_PATH, fold_masks, fold_plan
+
+    assert "name-day panel" in PANEL_PATH
+    assert "next fold" in PANEL_PATH
+    assert FOLDS[0] == ("fold_q1", "2026-01-01", "2026-04-01")
+    assert FOLDS[1] == ("fold_q2", "2026-04-01", "2026-07-01")
+    assert FOLDS[2][0] == "fold_q3" and FOLDS[2][1] == "2026-07-01"
+    recs = [
+        {"date": "2025-12-31"},
+        {"date": "2026-01-15"},
+        {"date": "2026-04-15"},
+        {"date": "2026-07-15"},
+    ]
+    tr, ho = fold_masks(recs, "2026-01-01", "2026-04-01")
+    assert list(tr) == [True, False, False, False]
+    assert list(ho) == [False, True, False, False]
+    tr2, ho2 = fold_masks(recs, "2026-07-01", None)
+    assert list(tr2) == [True, True, True, False]
+    assert list(ho2) == [False, False, False, True]
+    plan = fold_plan(True)
+    assert [p["name"] for p in plan] == ["fold_q1", "fold_q2", "fold_q3"]
+    assert plan[0]["horizons"] == (1,)
+    assert plan[0]["models"] == ("ridge", "lgb")
+    src = (ENG / "mine_hi_ml.py").read_text(encoding="utf-8")
+    assert "Never ML inside interactive one-stock" in src
+    assert "--folds-only" in src
+    assert "--gap-head" in src
+    assert "per-ticker" in src
+
+
+def test_hi_ml_must_beat_gap_recipe():
+    from mine_hi_ml import BEAT, apply_honesty_bar, family_verdict
+
+    lose = [{
+        "clock": "open", "label": "I", "horizon": 1, "model": "lgb",
+        "fold": "fold_q2", "keep": "KEEP", "verdict": "KEEP",
+        "fail_reasons": [],
+        "ic": {"spearman": 0.40},
+        "gap_ic": {"spearman": 0.38},
+        "edge_vs_gap_hold": BEAT - 0.0015,
+        "holdout": {"avg_net": 0.03, "n": 200},
+    }]
+    out = apply_honesty_bar(lose)
+    assert out[0]["keep"] == "KILL"
+    assert "lose_to_gap" in out[0]["fail_reasons"]
+    v, prim = family_verdict(out)
+    assert v == "null"
+    assert prim == []
+
+    win = [{
+        "clock": "open", "label": "I", "horizon": 1, "model": "lgb",
+        "fold": "fold_q2", "keep": "KEEP", "verdict": "KEEP",
+        "fail_reasons": [],
+        "ic": {"spearman": 0.50},
+        "gap_ic": {"spearman": 0.38},
+        "edge_vs_gap_hold": BEAT + 0.01,
+        "holdout": {"avg_net": 0.03, "n": 200},
+    }]
+    out2 = apply_honesty_bar(win)
+    assert "lose_to_gap" not in out2[0]["fail_reasons"]
+    assert "gap_algebra" not in out2[0]["fail_reasons"]
+    assert out2[0]["keep"] == "KEEP"
+    v2, prim2 = family_verdict(out2)
+    assert v2 == "KEEP" and prim2
+
+    gap_row = [{
+        "clock": "open", "label": "I", "horizon": 1, "model": "gap",
+        "fold": "fold_q2", "keep": "KEEP", "verdict": "KEEP",
+        "fail_reasons": [],
+    }]
+    v3, _ = family_verdict(gap_row)
+    assert v3 == "null"
+
+
+def test_hi_ml_report_is_committed():
+    md = (ROOT / "excel_bot" / "research" / "HI_ML.md").read_text()
+    assert "Plain English" in md
+    assert md.index("Plain English") < md.index("Code names (after the English)")
+    assert "flatten_robust" in md
+    assert "KEEP" in md or "null" in md
+    assert "name-day panel" in md
+    assert "Walk-forward" in md
+    assert "Head-to-head" in md
+    assert "overnight-gap" in md
+    payload = json.loads(
+        (ROOT / "excel_bot" / "research" / "hi_ml.json").read_text())
+    assert payload["live_untouched"] == "flatten_robust"
+    assert payload["excel_cache_used"] is False
+    assert payload["verdict"] in ("KEEP", "null", "DEMOTE")
+    assert "H" in payload["labels"] and "I" in payload["labels"]
+    assert "name-day panel" in (payload.get("panel_path") or "")
+    assert payload.get("folds")
+    for r in payload.get("rows") or []:
+        name = r.get("def") or ""
+        assert "H_l0" not in name and "I_l0" not in name
+        if r.get("keep") == "KEEP":
+            assert (r.get("top5_share") or 0) <= 0.25
+            assert (r.get("july_share") or 0) <= 0.40
+    sb = (ROOT / "03_scoreboard" / "EXCEL_BOT_MINE.md").read_text()
+    assert "H/I full-sheet ML" in sb
+    assert "PASS 376" in sb
+
+
 def test_unmined_miner_does_not_wire_live():
     for fn in ("mine_unmined.py", "harden_unmined.py", "harden_open_stack.py",
                "harden_close_cluster.py", "harden_close_peers.py",
                "mine_next_region.py", "mine_same_day.py", "mine_pair_lag.py",
                "mine_pair_lag_close.py", "mine_hi_horizon.py",
-               "mine_hi_soft_regime.py"):
+               "mine_hi_soft_regime.py", "mine_hi_ml.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "from flatten" not in src
         assert "sleeve_merge_live" not in src
