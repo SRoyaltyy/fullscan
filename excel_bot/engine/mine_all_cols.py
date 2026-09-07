@@ -9,6 +9,7 @@ Research only. Live flatten_robust is not changed.
 """
 from __future__ import annotations
 
+import argparse
 import glob
 import json
 import math
@@ -514,8 +515,8 @@ def render(rows, baselines, files):
     ]
     slim = lambda r: {k: r[k] for k in (
         "def", "clock", "side", "exit", "n_tickers", "n_dates",
-        "discovery", "holdout", "baseline", "verdict", "fail_reasons",
-        "live_untouched",
+        "discovery", "holdout", "early", "late", "baseline",
+        "verdict", "fail_reasons", "live_untouched",
     ) if k in r}
     payload = {
         "generated": str(date.today()),
@@ -538,46 +539,79 @@ def render(rows, baselines, files):
     return "\n".join(L) + "\n", payload
 
 
-def render_standing(all_md, payload):
-    ao_note = ""
-    if os.path.exists(AO_MD):
-        ao_note = (
-            "A–O parallel thin track is in `AO_FIRST_MINE.md` "
-            "(L3/S1 FAIL; 6 hysteresis hold1/2 research candidates). "
-            "**A–O-only is not the whole Excel.**"
+def render_first_cut(payload, rows):
+    """Standing scoreboard: first PASS/FAIL/THIN with n, effect, tape."""
+    spt = payload.get("minutes_per_ticker")
+    sec = round(spt * 60, 2) if spt else None
+    n = payload["n_tickers"]
+    n_disc = payload.get("n_discovery") or "?"
+    n_hold = payload.get("n_holdout") or "?"
+    n_pass = payload["n_pass"]
+    n_fail = payload["n_fail"]
+    n_thin = payload["n_thin"]
+    hold12 = [r for r in rows if r["exit"] in ("hold1", "hold2")]
+    lead = hold12 if hold12 else rows
+    show = lead[:24]
+    lines = [
+        "# Excel emulator mine — first A–JL cut",
+        "",
+        f"_Generated {date.today()} · live `flatten_robust` frozen. No merge._",
+        "",
+        "## First cut (critical path)",
+        "",
+        f"Lean `--all-cols` sample rebuild: **N={n}** "
+        f"({n_disc} discovery / {n_hold} holdout) · "
+        f"**{sec} s/ticker** · {round((spt or 0) * n, 1)} min total · "
+        f"rows 2–145 · 275 cols. 0 capture errors.",
+        "",
+        f"**PASS {n_pass} · FAIL {n_fail} · THIN {n_thin}.** "
+        + ("Clean null." if n_pass == 0 else ""),
+        "",
+        "Ship bar: disc n≥300 t≥3; hold n≥100 t≥2; ≥50 tickers; ≥20 dates; "
+        "lottery; both tape halves; spy↑/↓; ≥20 bp vs uncond; "
+        "hold3/5/8 need hold2. Futubull 0.15%/0.20%.",
+        "",
+        "| verdict | def | clock | side | exit | n / effect (disc) | "
+        "hold | tape early | tape late | why |",
+        "|---|---|---|---|---|---|---|---|---|---|",
+    ]
+    for r in show:
+        lines.append(
+            f"| {r['verdict']} | `{r['def']}` | {r['clock']} | {r['side']} | "
+            f"{r['exit']} | {fmt_blk(r['discovery'])} | "
+            f"{fmt_blk(r['holdout'])} | {fmt_blk(r.get('early'))} | "
+            f"{fmt_blk(r.get('late'))} | "
+            f"{','.join(r['fail_reasons']) or '—'} |"
         )
-    return "\n".join([
-        "# Excel emulator mine — whole workbook (A–JL)",
+    if n_pass == 0:
+        lines += [
+            "",
+            "No keeper. No hold1/2 sleeve. Live `flatten_robust` untouched.",
+        ]
+    lines += [
         "",
-        f"_Generated {date.today()} · live `flatten_robust` is not changed. "
-        f"No merge without Cyrus._",
+        f"Full table ({payload['n_rows']} cells / {payload['n_pats']} pats): "
+        f"`excel_bot/research/ALL_COLS_MINE.md`.",
+        "Research only. No cards. No merge without Cyrus.",
         "",
-        "## Priority (Cyrus override)",
-        "",
-        "Mine the **whole emulator** (A..JL, 275 cols). Stored daily grids "
-        "only persist A–O fills — that is the gap, not a missing model. "
-        "`model.json` already has max_col 275. `run.py --all-cols` dumps it.",
-        "",
-        f"A–JL sample: **{payload['n_tickers']}** tickers · "
-        f"**PASS {payload['n_pass']}** · **FAIL {payload['n_fail']}** · "
-        f"**THIN {payload['n_thin']}** · "
-        f"{payload.get('minutes_per_ticker') and round(payload['minutes_per_ticker']*60, 2)} s/ticker.",
-        "",
-        ao_note,
-        "",
-        "Full A–JL table: `ALL_COLS_MINE.md`. Research only. No live wire.",
-        "",
-    ]) + "\n"
+    ]
+    return "\n".join(lines) + "\n"
 
 
 if __name__ == "__main__":
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--grids", default=None,
+                    help="A–JL dump dir (default ALL_COLS_DIR or all_cols_sample)")
+    args = ap.parse_args()
+    if args.grids:
+        SAMPLE = args.grids if os.path.isabs(args.grids) else os.path.join(ROOT, args.grids)
+        globals()["SAMPLE"] = SAMPLE
     rows, baselines, files = main()
     md, payload = render(rows, baselines, files)
-    standing = render_standing(md, payload)
+    first = render_first_cut(payload, rows)
     open(OUT_MD, "w").write(md)
-    # Standing scoreboard leads with A–JL; keep the full table there too.
-    open(SB_MD, "w").write(standing + "\n" + md)
-    open(CYCLE_MD, "w").write(standing)
+    open(SB_MD, "w").write(first)
+    open(CYCLE_MD, "w").write(first)
     json.dump(payload, open(OUT_JSON, "w"), indent=1)
     print(f"tickers={payload['n_tickers']} rows={payload['n_rows']} "
           f"PASS={payload['n_pass']} FAIL={payload['n_fail']} "

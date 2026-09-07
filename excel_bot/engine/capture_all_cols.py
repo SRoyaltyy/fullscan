@@ -114,7 +114,11 @@ def main():
     ap.add_argument("--n-hold", type=int, default=60)
     ap.add_argument("--out", default="research/all_cols_sample")
     ap.add_argument("--skip-existing", action="store_true", default=True)
+    ap.add_argument("--force", action="store_true",
+                    help="rebuild even if the ticker dump already exists")
     args = ap.parse_args()
+    if args.force:
+        args.skip_existing = False
     if args.from_split:
         disc, hold = tickers_from_split(args.n_disc, args.n_hold)
         tickers = disc + hold

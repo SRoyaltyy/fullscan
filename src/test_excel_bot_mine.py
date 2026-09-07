@@ -246,6 +246,17 @@ def test_all_cols_mine_report_is_committed():
             assert r["clock"] == "close"
 
 
+def test_scoreboard_leads_with_first_cut():
+    """Manager critical path: first PASS/FAIL/THIN with n, effect, tape."""
+    for rel in ("03_scoreboard/EXCEL_BOT_MINE.md",
+                "excel_bot/research/MINE_CYCLE.md"):
+        md = (ROOT / rel).read_text()
+        assert "first A–JL cut" in md
+        assert "PASS 0" in md
+        assert "tape early" in md and "tape late" in md
+        assert "flatten_robust" in md
+
+
 def test_pack_cell_quality_fail_is_fail_not_thin():
     cell = {
         "raw": [-0.02] * 400, "tickers": set(f"T{i}" for i in range(60)),

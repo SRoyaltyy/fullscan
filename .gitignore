@@ -14,4 +14,6 @@ excel_bot/engine/.parse_cache.pkl
 excel_bot/outputs/
 excel_bot/research/all_cols_sample/*.json
 !excel_bot/research/all_cols_sample/_meta.json
+excel_bot/research/all_cols_first/*.json
+!excel_bot/research/all_cols_first/_meta.json
 excel_bot/research/mine_clock_results.json
