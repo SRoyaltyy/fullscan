@@ -90,9 +90,20 @@ research keep, not a card.
 | Names / liquid days | 3,449 / 607,571. **2025-08-05 → 2026-09-04**. 2025 days 201,630. |
 | Clock | Lag ≥ 1 only. No same-row H/I. No same-row fills. |
 | Gates scored | 4,590 single-letter lag-1/2 × four horizons × both sides. |
+| Fee-correct board | Promoted 1,327 · raw KEEP **290** · unique sleeves **186** · KILL 1,021. (The first finish’s 685 / 458 had shorts collecting the fee.) |
 | Ship bar | Ticker holdout, both years vs the book, both SPY tapes, fees, n≥400, ≥50 names, not a lottery / name ghost. |
 
-Detail tables: `UPPER_STORIES.md`. Auto sleeve dump (fee-correct
-rescore): `UPPER_LOWER_RAW.md` / `upper_lower.json`.
+186 sleeves are not 186 edges. Same-day leftover H collapses to
+**CE long** and **CD / HE / AH-red / JB short**, plus a tiny **R = 1**
+long (+0.37%) from the static `[1]Change!` lookup on O. Most of the
+rest is the same wild/crash continuation reprinted on 2d / 3d / 1w
+(`eq1`=`ge1`=`gt0`, AH counts, DC/DB flags). Bottom-of-sheet letters
+(FM, CI, BD, BF) and weekly `AP:AU` sitting on the wrong date have
+**no 2025** — harden skipped the year when n<20; do not count them.
+Rare extra downs (AC ≥ 1, CU red, FI ≥ 1) look like the same
+“already extended / already violent” sleeve, not a third vendor.
+
+Detail tables: `UPPER_STORIES.md`. Auto sleeve dump:
+`UPPER_LOWER_RAW.md` / `upper_lower.json`.
 
 Research only. No cards. No live wire.
