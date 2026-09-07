@@ -26,7 +26,7 @@ from signals import classify_fill  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
-OUT_MD = ROOT / "research" / "UPPER_LOWER.md"
+OUT_MD = ROOT / "research" / "UPPER_LOWER_RAW.md"
 OUT_JSON = ROOT / "research" / "upper_lower.json"
 SKIP_NUM = set("A IR P".split())
 # Formula twins on daily rows — one sleeve, many letters.
