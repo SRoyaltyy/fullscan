@@ -216,11 +216,11 @@ def test_clock_map_locks_measured_ao():
 def test_all_cols_miners_do_not_wire_live():
     for fn in ("mine_all_cols.py", "capture_all_cols.py", "mine_clock.py",
                "mine_first.py", "mine_formula_cut.py", "classify_clocks.py",
-               "harden_hyst_open.py"):
+               "harden_hyst_open.py", "mine_color_join.py", "pit_joins.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "sleeve_merge_live" not in src
         assert "LIVE_POLICY" not in src
-        if fn.startswith("mine") or fn.startswith("harden"):
+        if fn.startswith("mine") or fn.startswith("harden") or fn == "pit_joins.py":
             assert "flatten_robust" in src
 
 
@@ -598,6 +598,61 @@ def test_harden_splice_keeps_first_cut(tmp_path=None):
             raise AssertionError("should have refused")
         except ValueError as e:
             assert "required lead-in" in str(e)
+
+
+def test_pit_joins_use_prior_date_only():
+    from pit_joins import prior_lookup
+    ab = {"2026-09-03": {"AAA": "good"}, "2026-09-04": {"AAA": "bad"}}
+    asof, tone = prior_lookup(ab, "2026-09-04", "AAA")
+    assert asof == "2026-09-03" and tone == "good"
+    asof, tone = prior_lookup(ab, "2026-09-03", "AAA")
+    assert asof is None and tone is None
+    asof, tone = prior_lookup(ab, "2026-09-05", "AAA")
+    assert asof == "2026-09-04" and tone == "bad"
+    book = {"2026-09-03": {"HOOD", "AAPL"}}
+    asof, hit = prior_lookup(book, "2026-09-04", "hood")
+    assert asof == "2026-09-03" and hit is True
+    asof, hit = prior_lookup(book, "2026-09-04", "ZZZ")
+    assert hit is False
+
+
+def test_color_mine_open_letters_only():
+    from clock import CLOSE_LETTERS, OPEN_LETTERS
+    from mine_color_join import OPEN_IDX
+    assert set(OPEN_IDX) == set(OPEN_LETTERS)
+    assert set(OPEN_IDX).isdisjoint(set(CLOSE_LETTERS))
+    src = (ENG / "mine_color_join.py").read_text(encoding="utf-8")
+    assert "CLOSE_LETTERS" in src
+    assert "never enter open" in src or "never_open" in src or "Never" in src or "never start" in src
+
+
+def test_color_plain_english_before_code():
+    from mine_color_join import color_plain, fold_plain, render
+    text = color_plain("A", "green", 1)
+    assert "highlighted green" in text
+    assert "same day's close" in text
+    assert "hyst_" not in text
+    fold = fold_plain("hyst_open_core_e5_x2", "yesterday's AB tape already liked the name")
+    assert "yesterday's AB" in fold
+    md = render([], 3603, {
+        "ab": {"n_dates": 2, "first": "2026-08-18", "last": "2026-09-06"},
+        "book": {"n_dates": 2, "first": "2026-08-18", "last": "2026-09-06"},
+        "wx": {"n_dates": 2, "first": "2026-08-12", "last": "2026-09-06"},
+    })
+    assert md.index("What a color means") < md.index("`color_") if "`color_" in md else True
+    assert "A, B, C, G, J, K, L, M, O" in md
+    assert "D, E, F, H, I, N" in md
+    assert "dated before" in md
+    assert "flatten_robust" in md
+
+
+def test_color_join_does_not_import_live():
+    for fn in ("mine_color_join.py", "pit_joins.py"):
+        src = (ENG / fn).read_text(encoding="utf-8")
+        assert "from flatten" not in src
+        assert "sleeve_merge_live" not in src
+        assert "LIVE_POLICY" not in src
+        assert "flatten_robust" in src
 
 
 if __name__ == "__main__":
