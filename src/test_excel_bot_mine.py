@@ -535,6 +535,26 @@ def test_harden_does_not_import_flatten_live():
     assert "flatten_robust" in src
 
 
+def test_harden_splice_keeps_first_cut(tmp_path=None):
+    import tempfile
+    from harden_hyst_open import splice_md
+    with tempfile.TemporaryDirectory() as td:
+        p = Path(td) / "board.md"
+        p.write_text("# Excel emulator mine — first A–JL cut\n\n"
+                     "PASS 0 · tape early · tape late\n", encoding="utf-8")
+        out = splice_md(str(p), "## Harden: morning hysteresis light",
+                        "## Harden: morning hysteresis light\n\nKILL 6.\n")
+        assert out.startswith("# Excel emulator mine — first A–JL cut")
+        assert "PASS 0" in out and "tape early" in out
+        assert out.count("## Harden: morning hysteresis light") == 1
+        p.write_text(out, encoding="utf-8")
+        out2 = splice_md(str(p), "## Harden: morning hysteresis light",
+                         "## Harden: morning hysteresis light\n\nKEEP 1.\n")
+        assert "KILL 6" not in out2
+        assert "KEEP 1" in out2
+        assert "first A–JL cut" in out2
+
+
 if __name__ == "__main__":
     tests = [v for k, v in list(globals().items()) if k.startswith("test_")]
     for fn in tests:

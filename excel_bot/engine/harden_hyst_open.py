@@ -459,26 +459,28 @@ def splice_ao_md(harden_md):
     return old.rstrip() + "\n\n" + harden_md
 
 
+def splice_md(path, marker, block):
+    """Replace from `marker` to EOF, or append. Keep any lead-in intact."""
+    old = open(path, encoding="utf-8").read() if os.path.exists(path) else ""
+    if marker in old:
+        head = old.split(marker, 1)[0].rstrip() + "\n\n"
+        return head + block
+    if old and not old.endswith("\n"):
+        old += "\n"
+    return old + ("\n" if old else "") + block
+
+
 def render_scoreboard(rows, n_grids):
     keep = [r for r in rows if r["verdict"] == "KEEP"]
     kill = [r for r in rows if r["verdict"] == "KILL"]
     lead = "KEEP" if keep else "KILL"
-    L = [
-        "# Excel emulator — morning hysteresis harden",
-        "",
-        f"_Generated {date.today()} · live `flatten_robust` frozen. "
-        "No cards. No merge._",
-        "",
+    intro = (
         f"**{lead}.** {len(keep)} of 6 open-hysteresis lights survived "
         f"walk-forward + both tapes + top-day lottery with Futubull fees. "
-        f"{len(kill)} killed. Grids **{n_grids}**.",
-        "",
-        "Clock map: `excel_bot/research/CLOCK_MAP.md`. First A–O mine: "
-        "`AO_FIRST_MINE.md`. A–JL formula cut stays a clean null "
-        "(`FORMULA_CUT.md`).",
-        "",
-    ]
-    return "\n".join(L) + "\n" + render_plain(rows, n_grids)
+        f"{len(kill)} killed. Grids **{n_grids}**. "
+        "A–O first mine: `AO_FIRST_MINE.md`.\n\n"
+    )
+    return intro + render_plain(rows, n_grids)
 
 
 def slim_row(r):
@@ -519,23 +521,20 @@ def write_outputs(rows, n_grids):
     harden_md = render_plain(rows, n_grids)
     ao_path = os.path.join(RESEARCH, "AO_FIRST_MINE.md")
     open(ao_path, "w", encoding="utf-8").write(splice_ao_md(harden_md))
-    sb = render_scoreboard(rows, n_grids)
-    open(os.path.join(SCOREBOARD, "EXCEL_BOT_MINE.md"), "w",
-         encoding="utf-8").write(sb)
+    sb_path = os.path.join(SCOREBOARD, "EXCEL_BOT_MINE.md")
+    open(sb_path, "w", encoding="utf-8").write(
+        splice_md(sb_path, "## Harden: morning hysteresis light",
+                  render_scoreboard(rows, n_grids)))
     cycle_path = os.path.join(RESEARCH, "MINE_CYCLE.md")
-    cycle = open(cycle_path, encoding="utf-8").read() if os.path.exists(cycle_path) else ""
     note = (
-        f"\n## Harden (6 open-hysteresis lights)\n\n"
+        "## Harden (6 open-hysteresis lights)\n\n"
         f"KEEP {sum(1 for r in rows if r['verdict']=='KEEP')} · "
         f"KILL {sum(1 for r in rows if r['verdict']=='KILL')} · "
-        f"futubull · walk-forward + both-tape + top-day lottery. "
-        f"See `AO_FIRST_MINE.md` / `03_scoreboard/EXCEL_BOT_MINE.md`.\n"
+        "futubull · walk-forward + both-tape + top-day lottery. "
+        "See `AO_FIRST_MINE.md` / `03_scoreboard/EXCEL_BOT_MINE.md`.\n"
     )
-    if "## Harden (6 open-hysteresis lights)" in cycle:
-        head, _rest = cycle.split("## Harden (6 open-hysteresis lights)", 1)
-        # drop old harden tail
-        cycle = head.rstrip() + "\n"
-    open(cycle_path, "w", encoding="utf-8").write(cycle.rstrip() + "\n" + note)
+    open(cycle_path, "w", encoding="utf-8").write(
+        splice_md(cycle_path, "## Harden (6 open-hysteresis lights)", note))
     payload = {
         "generated": str(date.today()),
         "spec": "harden 6 open-hysteresis candidates; futubull; "
