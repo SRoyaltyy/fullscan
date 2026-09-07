@@ -1602,18 +1602,52 @@ def test_hi_ml_gate_never_peeks_same_row_hi():
     assert LIVE_UNTOUCHED == "flatten_robust"
 
 
+def test_hi_ml_is_panel_not_per_ticker():
+    from mine_hi_ml import FOLDS, PANEL_PATH, fold_masks, fold_plan
+
+    assert "name-day panel" in PANEL_PATH
+    assert "next fold" in PANEL_PATH
+    assert FOLDS[0] == ("fold_q1", "2026-01-01", "2026-04-01")
+    assert FOLDS[1] == ("fold_q2", "2026-04-01", "2026-07-01")
+    assert FOLDS[2][0] == "fold_q3" and FOLDS[2][1] == "2026-07-01"
+    recs = [
+        {"date": "2025-12-31"},
+        {"date": "2026-01-15"},
+        {"date": "2026-04-15"},
+        {"date": "2026-07-15"},
+    ]
+    tr, ho = fold_masks(recs, "2026-01-01", "2026-04-01")
+    assert list(tr) == [True, False, False, False]
+    assert list(ho) == [False, True, False, False]
+    tr2, ho2 = fold_masks(recs, "2026-07-01", None)
+    assert list(tr2) == [True, True, True, False]
+    assert list(ho2) == [False, False, False, True]
+    plan = fold_plan(True)
+    assert [p["name"] for p in plan] == ["fold_q1", "fold_q2", "fold_q3"]
+    assert plan[0]["horizons"] == (1,)
+    assert plan[0]["models"] == ("ridge", "lgb")
+    src = (ENG / "mine_hi_ml.py").read_text(encoding="utf-8")
+    assert "Never ML inside interactive one-stock" in src
+    assert "--folds-only" in src
+    assert "per-ticker" in src
+
+
 def test_hi_ml_report_is_committed():
     md = (ROOT / "excel_bot" / "research" / "HI_ML.md").read_text()
     assert "Plain English" in md
     assert md.index("Plain English") < md.index("Code names (after the English)")
     assert "flatten_robust" in md
     assert "KEEP" in md or "null" in md
+    assert "name-day panel" in md
+    assert "Walk-forward" in md
     payload = json.loads(
         (ROOT / "excel_bot" / "research" / "hi_ml.json").read_text())
     assert payload["live_untouched"] == "flatten_robust"
     assert payload["excel_cache_used"] is False
     assert payload["verdict"] in ("KEEP", "null", "DEMOTE")
     assert "H" in payload["labels"] and "I" in payload["labels"]
+    assert "name-day panel" in (payload.get("panel_path") or "")
+    assert payload.get("folds")
     for r in payload.get("rows") or []:
         name = r.get("def") or ""
         assert "H_l0" not in name and "I_l0" not in name

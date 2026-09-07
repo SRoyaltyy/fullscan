@@ -6,9 +6,21 @@ _Generated 2026-09-07 · live `flatten_robust` frozen. Yahoo/rows A–F seed the
 
 Full-sheet ML on clock-clean A–JL values (Yahoo A–F DAG, as far back as the book / parquet go) does not beat the overnight gap. Clean **null**. Predicting I at the open is gap algebra: I = overnight + scaled H, and overnight is knowable at 9:30 (C today vs B yesterday). Ridge and LightGBM IC on I match the gap (or lose). Predicting H (the rest of the day) dies on both tapes and a five-name ghost. Hand gates did not hide a nonlinear join. Research only; live flatten_robust stays frozen.
 
-Panel: **3548** names · **762084** name-days · 2025-09-23 → 2026-08-10. Open-entry features **208** (locked 44 + open-derived + lags of every reconstructed letter, never same-row H/I). Chronological cut **2026-04-01**. Futubull 0.15% long off the top-20% recipe and the buy-everyone book. ridge → H 1d holdout +0.36% (n=61963) vs book +0.44 pp IC ρ=+0.085 / r=+0.045 (**KILL**); lgb → H 1d holdout +0.41% (n=61964) vs book +0.49 pp IC ρ=+0.098 / r=+0.064 (**KILL**); ridge → I 1d holdout +4.47% (n=61963) vs book +4.07 pp IC ρ=+0.359 / r=+0.081 (**KILL**); lgb → I 1d holdout +4.72% (n=62001) vs book +4.33 pp IC ρ=+0.380 / r=+0.123 (**KILL**).
+**Panel path (not per-ticker chat):** batch Yahoo/rows → name-day panel → train once → time holdout → next fold. Panel: **3548** names · **762084** name-days · 2025-09-23 → 2026-08-10. Open-entry features **208** (locked 44 + open-derived + lags of every reconstructed letter, never same-row H/I). Walk-forward folds fold_q1, fold_q2, fold_q3; primary cut **2026-04-01**. Futubull 0.15% long off the top-20% recipe and the buy-everyone book. cut ridge → H 1d holdout +0.36% (n=61963) vs book +0.44 pp IC ρ=+0.085 / r=+0.045 (**KILL**); cut lgb → H 1d holdout +0.41% (n=61964) vs book +0.49 pp IC ρ=+0.098 / r=+0.064 (**KILL**); cut ridge → I 1d holdout +4.47% (n=61963) vs book +4.07 pp IC ρ=+0.359 / r=+0.081 (**KILL**); cut lgb → I 1d holdout +4.72% (n=62001) vs book +4.33 pp IC ρ=+0.380 / r=+0.123 (**KILL**).
 
 **Family verdict: null**
+
+### Path (not per-ticker chat)
+
+**batch Yahoo/rows → name-day panel → train once → time holdout → next fold**
+
+One Yahoo A–F rebuild builds the **name-day panel**. Models train once across that panel, then the next expanding-window fold re-uses the same matrix. Iterative = rebuild → train → holdout → next fold. There is no interactive one-stock Excel loop and no per-ticker chat fit.
+
+### Walk-forward folds
+
+| fold | train < | holdout | model | label | holdout pnl | vs book | IC | gap IC | verdict | why |
+|---|---|---|---|---|---|---|---|---|---|---|
+| *(folds not in this file — first pass is the combined Apr–Aug holdout below)* | | | | | | | | | | |
 
 ### What was scored
 
@@ -22,11 +34,11 @@ Excel gate (enforced in `assert_ml_gate`):
 - Open-entry same-row out: B/G/K/M/O/L numbers, D/E/F/N, unknown→close.
 - Close-entry: other close cols OK same-row; still never H/I.
 
-Labels are built from Yahoo A–F the same way the sheet does: H = (B−C)/C, I = (B−B[t−1])/B[t−1], stacked I is the k-day compound. Horizons 1d / 2d / 3d / 1w / 2w. Train is **chronological** (before 2026-04-01); holdout is on or after. Name-holdout IC is reported as a ghost check, not the keep bar.
+Labels are built from Yahoo A–F the same way the sheet does: H = (B−C)/C, I = (B−B[t−1])/B[t−1], stacked I is the k-day compound. Horizons 1d / 2d / 3d / 1w / 2w. Train is **chronological** on the name-day panel. Expanding-window folds: `fold_q1` train < 2026-01-01, hold [2026-01-01, 2026-04-01); `fold_q2` train < 2026-04-01, hold [2026-04-01, 2026-07-01); `fold_q3` train < 2026-07-01, hold ≥ 2026-07-01. Primary cut **2026-04-01**. Name-holdout IC is reported as a ghost check, not the keep bar.
 
 Models: ordinary least squares, ridge (α by train CV), LightGBM (80 trees, depth 4). Recipe = long the top quintile of the score. Edge is versus buy-everyone after the same 15 bp fee.
 
-### Open-entry 1d (primary)
+### Open-entry 1d (primary fold)
 
 | model | label | holdout | vs book | IC Spearman/Pearson | gap IC | Q1 | top-5 | July | tapes ↑/↓ | verdict | why |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -140,7 +152,9 @@ At the open we already know the overnight gap (C[t] vs B[t−1]). Excel I is ove
 
 ### Cuts and bars
 
-- Chronological train < **2026-04-01** · holdout ≥ 2026-04-01.
+- Panel path: **batch Yahoo/rows → name-day panel → train once → time holdout → next fold**.
+- Walk-forward: fold_q1 train < 2026-01-01 / hold 2026-04-01; fold_q2 train < 2026-04-01 / hold 2026-07-01; fold_q3 train < 2026-07-01 / hold tape end.
+- Primary chronological train < **2026-04-01** · holdout ≥ 2026-04-01 (first pass combined Apr–Aug; folds split that window).
 - Name-holdout IC is extra (existing `holdout_split.json`).
 - Long top 20% of the score vs buy-everyone, Futubull 0.15% off both.
 - KEEP needs holdout n≥100, ≥50 tickers, edge vs book ≥20 bp, Q1 not red, top-5 names ≤25%, July share ≤40%, both SPY tapes, no day lottery, not thin.

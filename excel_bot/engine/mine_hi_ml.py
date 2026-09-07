@@ -1,10 +1,16 @@
 """Full-sheet supervised ML → Excel H / I. Research only.
 
+PANEL PATH (war room): batch-rebuild Yahoo/rows for many tickers ×
+multi-year into a **name-day panel**, then train **once** across that
+panel with a time holdout. Iterative = rebuild → train → holdout →
+next fold. Never ML inside interactive one-stock Excel loops.
+
 Clock-clean feature matrix from the Yahoo A–F DAG that *is* the
 workbook (every reconstructable A–JL value + lags). Same-row H/I
 are labels, never features. Live flatten_robust is not imported.
 
   python engine/mine_hi_ml.py
+  python engine/mine_hi_ml.py --folds-only
   python engine/mine_hi_ml.py --render-only
 """
 from __future__ import annotations
@@ -49,7 +55,17 @@ MARKER = "## H/I full-sheet ML (multi-year, clock-clean)"
 
 # live flatten_robust stays frozen — named so tests can see the label
 LIVE_UNTOUCHED = "flatten_robust"
-TIME_CUT = "2026-04-01"  # chronological train < cut ≤ holdout
+# Batch panel, not per-ticker Excel chat.
+PANEL_PATH = (
+    "batch Yahoo/rows → name-day panel → train once → time holdout → next fold"
+)
+TIME_CUT = "2026-04-01"  # primary chronological train < cut ≤ holdout
+# Expanding-window folds. Each holdout is [train_end, hold_end).
+FOLDS = (
+    ("fold_q1", "2026-01-01", "2026-04-01"),
+    ("fold_q2", "2026-04-01", "2026-07-01"),
+    ("fold_q3", "2026-07-01", None),
+)
 BEAT = 0.002
 FEE = COST_FUTU_LONG
 TOP_Q = 0.20
@@ -684,13 +700,18 @@ def push_trade(cell, ticker, iso, net, split_t, spy, heat, cuts):
     _push(cell["month"][iso[:7]], net)
 
 
-def score_long(recs, pred, y, split_of, spy, cuts, book_y, time_hold):
+def score_long(recs, pred, y, split_of, spy, cuts, book_y, time_hold,
+               train_mask=None):
     """Long the top quintile of pred on each side of the split."""
     hold_mask = np.asarray(time_hold, dtype=bool)
+    if train_mask is None:
+        train_mask = ~hold_mask
+    else:
+        train_mask = np.asarray(train_mask, dtype=bool)
     cell = _cell()
     book = _cell()
     for is_hold in (False, True):
-        m = hold_mask if is_hold else ~hold_mask
+        m = hold_mask if is_hold else train_mask
         sl = "holdout" if is_hold else "discovery"
         if m.sum() < 10:
             continue
@@ -810,6 +831,20 @@ def _ic(d):
     return f"ρ={sp:+.3f} / r={pe:+.3f}" if sp is not None else f"r={pe:+.3f}"
 
 
+FOLD_NAMES = {f[0] for f in FOLDS}
+
+
+def _prefer_fold(rows, extra=None):
+    """Prefer expanding-window q2, then the first-pass combined holdout."""
+    extra = extra or (lambda _r: True)
+    cand = [r for r in rows if extra(r)]
+    present = {r.get("fold") for r in cand}
+    for pref in ("fold_q2", "fold_combined", None):
+        if pref in present:
+            return [r for r in cand if r.get("fold") == pref]
+    return cand
+
+
 def assemble(tickers, disc, hold, feat_open, feat_close, spy):
     by = load_panel(tickers)
     recs = []
@@ -825,36 +860,53 @@ def assemble(tickers, disc, hold, feat_open, feat_close, spy):
     return recs, n_ok
 
 
-def split_masks(recs, disc, hold):
-    time_hold = np.array([r["date"] >= TIME_CUT for r in recs])
+def fold_masks(recs, train_end, hold_end=None):
+    """Train is date < train_end. Holdout is [train_end, hold_end)."""
+    train = np.array([r["date"] < train_end for r in recs])
+    hold = np.array([
+        (r["date"] >= train_end)
+        and (hold_end is None or r["date"] < hold_end)
+        for r in recs
+    ])
+    return train, hold
+
+
+def split_masks(recs, disc, hold, train_end=TIME_CUT, hold_end=None):
+    train, time_hold = fold_masks(recs, train_end, hold_end)
     name_hold = np.array([r["ticker"] in hold for r in recs])
     name_disc = np.array([r["ticker"] in disc for r in recs])
-    return time_hold, name_hold, name_disc
+    return train, time_hold, name_hold, name_disc
 
 
-def run_models(recs, feat_names, clock, X, spy, disc, hold):
-    time_hold, name_hold, name_disc = split_masks(recs, disc, hold)
+def run_models(recs, feat_names, clock, X, spy, disc, hold,
+               train_end=TIME_CUT, hold_end=None, fold="fold_q2",
+               models=None, labels=None, horizons=None):
+    models = models or MODELS
+    labels = labels or LABELS
+    horizons = horizons or HORIZONS
+    train_mask, time_hold, name_hold, name_disc = split_masks(
+        recs, disc, hold, train_end, hold_end)
     heats = [r["heat"] for r in recs]
-    train_heat = [heats[i] for i in range(len(recs)) if not time_hold[i]
+    train_heat = [heats[i] for i in range(len(recs)) if train_mask[i]
                   and np.isfinite(heats[i])]
     cuts = tercile_cuts(train_heat)
     rows = []
     importances = {}
-    # prep X
-    train_X = X[~time_hold] if (~time_hold).any() else X
+    # prep X on this fold's train only — do not leak later folds
+    train_X = X[train_mask] if train_mask.any() else X
     lo, hi = winsor_fit(train_X)
     X = winsor_apply(X, lo, hi)
-    med = median_fill_fit(X[~time_hold] if (~time_hold).any() else X)
+    med = median_fill_fit(X[train_mask] if train_mask.any() else X)
     X = median_fill_apply(X, med)
-    mu, sd = standardize_fit(X[~time_hold] if (~time_hold).any() else X)
+    mu, sd = standardize_fit(X[train_mask] if train_mask.any() else X)
     X = standardize_apply(X, mu, sd)
     Xs = X
 
-    for lab in LABELS:
-        for hz in HORIZONS:
+    for lab in labels:
+        for hz in horizons:
             y = np.array([r["H"][hz][lab] for r in recs], dtype=np.float64)
             book_y = y  # buy-everyone = the same label
-            tr = (~time_hold) & np.isfinite(y)
+            tr = train_mask & np.isfinite(y)
             if tr.sum() < 300:
                 continue
             # cap train size so ridge/LGB stay inside the 15 GB box
@@ -881,7 +933,7 @@ def run_models(recs, feat_names, clock, X, spy, disc, hold):
                     "pearson": pearson(gap[time_hold], y[time_hold]),
                     "kind": "overnight→H",
                 }
-            for kind in MODELS:
+            for kind in models:
                 try:
                     model = FITTERS[kind](Xs[tr], y[tr])
                 except Exception as e:
@@ -902,10 +954,14 @@ def run_models(recs, feat_names, clock, X, spy, disc, hold):
                 cell, book = score_long(
                     recs, pred, y,
                     None, spy, cuts, book_y, split_recs_flag,
+                    train_mask=train_mask,
                 )
                 name = f"ml_{clock}_{kind}_{lab}_{HORIZON_PLAIN.get(hz, hz)}"
                 row = pack_ml(name, clock, lab, hz, cell, book, ic)
                 row["model"] = kind
+                row["fold"] = fold
+                row["train_end"] = train_end
+                row["hold_end"] = hold_end
                 row["n_features"] = len(feat_names)
                 row["n_train"] = int(tr.sum())
                 row["n_hold_rows"] = int(time_hold.sum())
@@ -915,9 +971,13 @@ def run_models(recs, feat_names, clock, X, spy, disc, hold):
                     f"{lab} {HORIZON_PLAIN.get(hz, hz)}; long top {int(TOP_Q*100)}%"
                 )
                 rows.append(row)
-                key = (clock, kind, lab, hz)
-                importances[f"{clock}_{kind}_{lab}_{hz}"] = importance(
-                    model, feat_names, kind)
+                key = f"{fold}_{clock}_{kind}_{lab}_{hz}"
+                imp = importance(model, feat_names, kind)
+                importances[key] = imp
+                # fold_q2 keeps the unprefixed key so the first-pass
+                # driver section still resolves.
+                if fold == "fold_q2":
+                    importances[f"{clock}_{kind}_{lab}_{hz}"] = imp
                 print(
                     f"  {row['keep']:4} {name:42} "
                     f"hold={_pct(row.get('holdout'))} "
@@ -956,26 +1016,33 @@ def apply_honesty_bar(rows):
             r["verdict"] = "KILL"
             r["keep"] = "KILL"
     # Stacked I KEEP after a 1d I gap is the same overnight, compounded.
-    open_i1_gap = any(
-        r.get("clock") == "open" and r.get("label") == "I" and r.get("horizon") == 1
-        and "gap_algebra" in (r.get("fail_reasons") or [])
+    # Apply per fold so q1/q2/q3 do not smear each other.
+    open_i1_gap = {
+        r.get("fold")
         for r in rows
-    )
+        if r.get("clock") == "open" and r.get("label") == "I" and r.get("horizon") == 1
+        and "gap_algebra" in (r.get("fail_reasons") or [])
+    }
     if open_i1_gap:
         for r in rows:
-            if r.get("clock") == "open" and r.get("label") == "I_sum" and r.get("keep") == "KEEP":
+            if (r.get("clock") == "open" and r.get("label") == "I_sum"
+                    and r.get("keep") == "KEEP"
+                    and r.get("fold") in open_i1_gap):
                 r.setdefault("fail_reasons", []).append("gap_algebra")
                 r["fail_reasons"] = list(dict.fromkeys(r["fail_reasons"]))
                 r["verdict"] = "KILL"
                 r["keep"] = "KILL"
-    close_i1_print = any(
-        r.get("clock") == "close" and r.get("label") == "I" and r.get("horizon") == 1
-        and "same_print_close" in (r.get("fail_reasons") or [])
+    close_i1_print = {
+        r.get("fold")
         for r in rows
-    )
+        if r.get("clock") == "close" and r.get("label") == "I" and r.get("horizon") == 1
+        and "same_print_close" in (r.get("fail_reasons") or [])
+    }
     if close_i1_print:
         for r in rows:
-            if r.get("clock") == "close" and r.get("label") == "I_sum" and r.get("keep") == "KEEP":
+            if (r.get("clock") == "close" and r.get("label") == "I_sum"
+                    and r.get("keep") == "KEEP"
+                    and r.get("fold") in close_i1_print):
                 r.setdefault("fail_reasons", []).append("same_print_close")
                 r["fail_reasons"] = list(dict.fromkeys(r["fail_reasons"]))
                 r["verdict"] = "KILL"
@@ -1024,17 +1091,20 @@ def english_lead(verdict, rows, meta):
     bits = []
     for r in prim:
         bits.append(
-            f"{r['model']} → {r['label']} 1d holdout {_pct(r.get('holdout'))} "
+            f"{r.get('fold') or 'cut'} {r['model']} → {r['label']} 1d "
+            f"holdout {_pct(r.get('holdout'))} "
             f"vs book {_edge(r.get('edge_vs_book_hold'))} "
             f"IC {_ic(r.get('ic'))} (**{r['keep']}**)"
         )
     extra = (" " + "; ".join(bits) + ".") if bits else ""
     return (
         wrap + "\n\n"
+        f"**Panel path (not per-ticker chat):** {PANEL_PATH}. "
         f"Panel: **{n_t}** names · **{n_r}** name-days · {span}. "
         f"Open-entry features **{n_feat}** (locked 44 + open-derived + "
         f"lags of every reconstructed letter, never same-row H/I). "
-        f"Chronological cut **{TIME_CUT}**. Futubull 0.15% long off the "
+        f"Walk-forward folds {', '.join(f[0] for f in FOLDS)}; primary "
+        f"cut **{TIME_CUT}**. Futubull 0.15% long off the "
         f"top-{int(TOP_Q*100)}% recipe and the buy-everyone book."
         + extra
     )
@@ -1056,6 +1126,44 @@ def render(rows, importances, meta, verdict):
         english_lead(verdict, rows, meta),
         "",
         f"**Family verdict: {verdict}**",
+        "",
+        "### Path (not per-ticker chat)",
+        "",
+        f"**{PANEL_PATH}**",
+        "",
+        "One Yahoo A–F rebuild builds the **name-day panel**. Models "
+        "train once across that panel, then the next expanding-window "
+        "fold re-uses the same matrix. Iterative = rebuild → train → "
+        "holdout → next fold. There is no interactive one-stock Excel "
+        "loop and no per-ticker chat fit.",
+        "",
+        "### Walk-forward folds",
+        "",
+        "| fold | train < | holdout | model | label | holdout pnl | vs book | IC | gap IC | verdict | why |",
+        "|---|---|---|---|---|---|---|---|---|---|---|",
+    ]
+    wf = [r for r in rows
+          if r.get("fold") in FOLD_NAMES
+          and r.get("clock") == "open" and r.get("horizon") == 1
+          and r.get("label") in ("H", "I")
+          and r.get("model") in ("ridge", "lgb")]
+    wf.sort(key=lambda r: (
+        r.get("fold") or "", r.get("label") or "", r.get("model") or ""))
+    if not wf:
+        L.append(
+            "| *(folds not in this file — first pass is the combined "
+            "Apr–Aug holdout below)* | | | | | | | | | | |"
+        )
+    for r in wf:
+        L.append(
+            f"| {r.get('fold')} | {r.get('train_end')} | "
+            f"{r.get('hold_end') or 'tape end'} | {r.get('model')} | "
+            f"{r.get('label')} | {_pct(r.get('holdout'))} | "
+            f"{_edge(r.get('edge_vs_book_hold'))} | {_ic(r.get('ic'))} | "
+            f"{_ic(r.get('gap_ic'))} | **{r.get('keep')}** | "
+            f"{','.join(r.get('fail_reasons') or []) or '—'} |"
+        )
+    L += [
         "",
         "### What was scored",
         "",
@@ -1084,21 +1192,29 @@ def render(rows, importances, meta, verdict):
         f"Labels are built from Yahoo A–F the same way the sheet does: "
         f"H = (B−C)/C, I = (B−B[t−1])/B[t−1], stacked I is the k-day "
         f"compound. Horizons 1d / 2d / 3d / 1w / 2w. Train is "
-        f"**chronological** (before {TIME_CUT}); holdout is on or after. "
+        f"**chronological** on the name-day panel. Expanding-window "
+        f"folds: " + "; ".join(
+            f"`{n}` train < {te}, hold "
+            f"{'≥ '+te if he is None else f'[{te}, {he})'}"
+            for n, te, he in FOLDS
+        ) + f". Primary cut **{TIME_CUT}**. "
         "Name-holdout IC is reported as a ghost check, not the keep bar.",
         "",
         "Models: ordinary least squares, ridge (α by train CV), LightGBM "
         "(80 trees, depth 4). Recipe = long the top quintile of the "
         "score. Edge is versus buy-everyone after the same 15 bp fee.",
         "",
-        "### Open-entry 1d (primary)",
+        "### Open-entry 1d (primary fold)",
         "",
         "| model | label | holdout | vs book | IC Spearman/Pearson | "
         "gap IC | Q1 | top-5 | July | tapes ↑/↓ | verdict | why |",
         "|---|---|---|---|---|---|---|---|---|---|---|---|",
     ]
-    prim = [r for r in rows if r.get("clock") == "open" and r.get("horizon") == 1
-            and r.get("label") in ("H", "I", "I_sum")]
+    prim = _prefer_fold(
+        rows,
+        lambda r: r.get("clock") == "open" and r.get("horizon") == 1
+        and r.get("label") in ("H", "I", "I_sum"),
+    )
     prim.sort(key=lambda r: (r.get("label") or "", r.get("model") or ""))
     for r in prim:
         L.append(
@@ -1124,9 +1240,14 @@ def render(rows, importances, meta, verdict):
         for lab in LABELS:
             cells = []
             for hz in HORIZONS:
-                r = next((x for x in rows if x.get("clock") == "open"
-                          and x.get("model") == kind and x.get("label") == lab
-                          and x.get("horizon") == hz), None)
+                pool = _prefer_fold(
+                    rows,
+                    lambda x, k=kind, lb=lab, h=hz: (
+                        x.get("clock") == "open" and x.get("model") == k
+                        and x.get("label") == lb and x.get("horizon") == h
+                    ),
+                )
+                r = pool[0] if pool else None
                 if not r:
                     cells.append("—")
                 else:
@@ -1141,8 +1262,11 @@ def render(rows, importances, meta, verdict):
         "| model | label | holdout | vs book | IC | verdict | why |",
         "|---|---|---|---|---|---|---|",
     ]
-    close1 = [r for r in rows if r.get("clock") == "close" and r.get("horizon") == 1
-              and r.get("label") in ("H", "I")]
+    close1 = _prefer_fold(
+        rows,
+        lambda r: r.get("clock") == "close" and r.get("horizon") == 1
+        and r.get("label") in ("H", "I"),
+    )
     for r in close1:
         L.append(
             f"| {r.get('model')} | {r.get('label')} | {_pct(r.get('holdout'))} | "
@@ -1234,7 +1358,13 @@ def render(rows, importances, meta, verdict):
         "",
         "### Cuts and bars",
         "",
-        f"- Chronological train < **{TIME_CUT}** · holdout ≥ {TIME_CUT}.",
+        f"- Panel path: **{PANEL_PATH}**.",
+        f"- Walk-forward: " + "; ".join(
+            f"{n} train < {te} / hold {he or 'tape end'}"
+            for n, te, he in FOLDS
+        ) + ".",
+        f"- Primary chronological train < **{TIME_CUT}** · holdout ≥ {TIME_CUT} "
+        "(first pass combined Apr–Aug; folds split that window).",
         f"- Name-holdout IC is extra (existing `holdout_split.json`).",
         f"- Long top {int(TOP_Q*100)}% of the score vs buy-everyone, "
         f"Futubull {FEE*100:.2f}% off both.",
@@ -1281,6 +1411,11 @@ def write_outputs(rows, importances, meta, verdict):
         "horizons": list(HORIZONS),
         "models": list(MODELS),
         "time_cut": TIME_CUT,
+        "panel_path": PANEL_PATH,
+        "iterative": "rebuild → train → holdout → next fold",
+        "folds": [
+            {"name": n, "train_end": te, "hold_end": he} for n, te, he in FOLDS
+        ],
         "q1_cut": Q1_CUT,
         "q3_cut": Q3_CUT,
         "fee": FEE,
@@ -1300,7 +1435,8 @@ def write_outputs(rows, importances, meta, verdict):
     json.dump(payload, open(OUT_JSON, "w"), indent=2, default=str)
     block = (
         MARKER + "\n\n"
-        f"Full-sheet ML → H/I (multi-year, clock-clean): **{verdict}**. "
+        f"Full-sheet ML → H/I (name-day panel, walk-forward folds): "
+        f"**{verdict}**. {PANEL_PATH}. "
         f"See `excel_bot/research/HI_ML.md`. Research only. "
         f"Live {LIVE_UNTOUCHED} frozen.\n"
     )
@@ -1334,6 +1470,8 @@ def remaining_inventory(feat_open, feat_close, extra=None):
         "n_rows": extra.get("n_rows", 0),
         "date_span": extra.get("date_span", ""),
         "time_cut": TIME_CUT,
+        "panel_path": PANEL_PATH,
+        "folds": [n for n, _te, _he in FOLDS],
         "gate": "Excel-locked CLOCK_MAP / OPEN_SAME_ROW_LABELS",
         "not_this_pass": [
             "ColorEngine fills (no 275-col dump on disk)",
@@ -1345,10 +1483,58 @@ def remaining_inventory(feat_open, feat_close, extra=None):
     }
 
 
+def fold_plan(folds_only):
+    """One panel rebuild, then each expanding-window fold. Not per-ticker."""
+    plan = []
+    for fname, train_end, hold_end in FOLDS:
+        full = (not folds_only) and fname == "fold_q2"
+        plan.append({
+            "name": fname,
+            "train_end": train_end,
+            "hold_end": hold_end,
+            "models": MODELS if full else ("ridge", "lgb"),
+            "labels": LABELS if full else ("H", "I", "I_sum"),
+            "horizons": HORIZONS if full else (1,),
+        })
+    return plan
+
+
+def merge_legacy_rows(new_rows, prev):
+    """Keep first-pass combined-holdout horizons that this fold run skipped."""
+    if not prev:
+        return new_rows, prev.get("importances") if prev else {}
+    covered = {
+        (r.get("fold"), r.get("clock"), r.get("model"),
+         r.get("label"), r.get("horizon"))
+        for r in new_rows
+    }
+    has_q2 = any(r.get("fold") == "fold_q2" for r in new_rows)
+    kept = []
+    for r in prev.get("rows") or []:
+        rr = dict(r)
+        if rr.get("fold") in FOLD_NAMES:
+            continue
+        rr.setdefault("fold", "fold_combined")
+        key = (rr.get("fold"), rr.get("clock"), rr.get("model"),
+               rr.get("label"), rr.get("horizon"))
+        if key in covered:
+            continue
+        if has_q2 and rr.get("horizon") == 1 and rr.get("fold") == "fold_combined":
+            # 1d is re-scored on the split folds; drop the combined 1d twin.
+            continue
+        kept.append(rr)
+    return new_rows + kept, prev.get("importances") or {}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--render-only", action="store_true")
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument(
+        "--folds-only",
+        action="store_true",
+        help="rebuild panel once, then ridge+lgb on 1d H/I/I_sum across FOLDS",
+    )
     args = ap.parse_args()
     clocks, _by = load_clocks()
     vo = tuple(clocks["groups"]["value_mine_open"])
@@ -1373,6 +1559,7 @@ def main():
     tickers = locked_tickers()
     if args.limit:
         tickers = tickers[: args.limit]
+    print(f"[hi_ml] PANEL {PANEL_PATH}", flush=True)
     print(f"[hi_ml] tickers={len(tickers)} feat_open={len(feat_open)} "
           f"feat_close={len(feat_close)}", flush=True)
     recs, n_ok = assemble(tickers, disc, hold, feat_open, feat_close, {})
@@ -1384,7 +1571,7 @@ def main():
     xc_list = [r.pop("xc") for r in recs]
     Xo = np.stack(xo_list)
     del xo_list
-    print(f"[hi_ml] rows={len(recs)} tickers_ok={n_ok} "
+    print(f"[hi_ml] panel rows={len(recs)} tickers_ok={n_ok} "
           f"span={dates[0]}…{dates[-1]} Xo={Xo.shape}", flush=True)
     meta = remaining_inventory(feat_open, feat_close, {
         "n_reconstructed": len(SHEET_LETTERS),
@@ -1392,21 +1579,48 @@ def main():
         "n_rows": len(recs),
         "date_span": f"{dates[0]} → {dates[-1]}",
     })
-    print("[hi_ml] open-entry models", flush=True)
-    rows_o, imp_o, _cuts = run_models(
-        recs, feat_open, "open", Xo, spy, disc, hold)
-    del Xo
     import gc
+    plan = fold_plan(args.folds_only)
+    rows = []
+    importances = {}
+    print("[hi_ml] open-entry folds (same panel, new train/hold each time)",
+          flush=True)
+    for step in plan:
+        print(f"[hi_ml] {step['name']} open train<{step['train_end']} "
+              f"hold<{step['hold_end']}", flush=True)
+        ro, io, _ = run_models(
+            recs, feat_open, "open", Xo.copy(), spy, disc, hold,
+            train_end=step["train_end"], hold_end=step["hold_end"],
+            fold=step["name"], models=step["models"],
+            labels=step["labels"], horizons=step["horizons"],
+        )
+        rows += ro
+        importances.update(io)
+        gc.collect()
+    del Xo
     gc.collect()
     Xc = np.stack(xc_list)
     del xc_list
-    print(f"[hi_ml] close-entry models Xc={Xc.shape}", flush=True)
-    rows_c, imp_c, _ = run_models(
-        recs, feat_close, "close", Xc, spy, disc, hold)
+    print(f"[hi_ml] close-entry folds Xc={Xc.shape}", flush=True)
+    for step in plan:
+        print(f"[hi_ml] {step['name']} close train<{step['train_end']} "
+              f"hold<{step['hold_end']}", flush=True)
+        rc, ic, _ = run_models(
+            recs, feat_close, "close", Xc.copy(), spy, disc, hold,
+            train_end=step["train_end"], hold_end=step["hold_end"],
+            fold=step["name"], models=step["models"],
+            labels=step["labels"], horizons=step["horizons"],
+        )
+        rows += rc
+        importances.update(ic)
+        gc.collect()
     del Xc
     gc.collect()
-    rows = apply_honesty_bar(rows_o + rows_c)
-    importances = {**imp_o, **imp_c}
+    if args.folds_only and os.path.exists(OUT_JSON):
+        prev = json.load(open(OUT_JSON, encoding="utf-8"))
+        rows, old_imp = merge_legacy_rows(rows, prev)
+        importances = {**old_imp, **importances}
+    rows = apply_honesty_bar(rows)
     verdict, _prim = family_verdict(rows)
     payload = write_outputs(rows, importances, meta, verdict)
     print(f"verdict={verdict} KEEP={payload['n_keep']} "

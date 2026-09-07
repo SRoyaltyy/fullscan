@@ -23,6 +23,25 @@
     "lgb"
   ],
   "time_cut": "2026-04-01",
+  "panel_path": "batch Yahoo/rows \u2192 name-day panel \u2192 train once \u2192 time holdout \u2192 next fold",
+  "iterative": "rebuild \u2192 train \u2192 holdout \u2192 next fold",
+  "folds": [
+    {
+      "name": "fold_q1",
+      "train_end": "2026-01-01",
+      "hold_end": "2026-04-01"
+    },
+    {
+      "name": "fold_q2",
+      "train_end": "2026-04-01",
+      "hold_end": "2026-07-01"
+    },
+    {
+      "name": "fold_q3",
+      "train_end": "2026-07-01",
+      "hold_end": null
+    }
+  ],
   "q1_cut": "2026-04-01",
   "q3_cut": "2026-07-01",
   "fee": 0.0015,
