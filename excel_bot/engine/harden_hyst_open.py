@@ -463,11 +463,12 @@ def render_plain(rows, n_grids):
     return "\n".join(L) + "\n"
 
 
-def splice_md(path, marker, block, require=None):
+def splice_md(path, marker, block, require=None, require_any=None):
     """Replace from `marker` to EOF, or append. Keep any lead-in intact.
 
     `require` is a substring that must remain in the lead-in so a
     first-cut / inventory document cannot be wiped by a bad splice.
+    `require_any` accepts any one of several standing leads.
     """
     if not os.path.exists(path):
         raise FileNotFoundError(f"refusing to create {path} from harden only")
@@ -479,6 +480,10 @@ def splice_md(path, marker, block, require=None):
     if require and require not in head:
         raise ValueError(
             f"splice would drop required lead-in {require!r} from {path}"
+        )
+    if require_any and not any(s in head for s in require_any):
+        raise ValueError(
+            f"splice would drop required lead-in {require_any!r} from {path}"
         )
     if not head.strip():
         raise ValueError(f"splice would wipe {path}")
@@ -545,7 +550,7 @@ def write_outputs(rows, n_grids):
     sb_path = os.path.join(SCOREBOARD, "EXCEL_BOT_MINE.md")
     sb_text = splice_md(sb_path, "## Harden: morning hysteresis light",
                         render_scoreboard(rows, n_grids),
-                        require="first A–JL cut")
+                        require_any=("first A–JL cut", "A–O clock cycle"))
     cycle_path = os.path.join(RESEARCH, "MINE_CYCLE.md")
     note = (
         "## Harden (6 open-hysteresis lights)\n\n"
@@ -555,7 +560,7 @@ def write_outputs(rows, n_grids):
         "See `AO_FIRST_MINE.md` / `03_scoreboard/EXCEL_BOT_MINE.md`.\n"
     )
     cycle_text = splice_md(cycle_path, "## Harden (6 open-hysteresis lights)",
-                           note, require="first A–JL cut")
+                           note, require_any=("first A–JL cut", "A–O clock cycle"))
     _write_text(ao_path, ao_text)
     _write_text(sb_path, sb_text)
     _write_text(cycle_path, cycle_text)

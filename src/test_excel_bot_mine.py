@@ -165,6 +165,7 @@ def test_pack_cell_thin_fails_ship_bar():
     }
     row = pack_cell(
         ("toy", "open", "long", "hold2", "ALL", "futubull"), cell)
+    assert row["def"] == "toy"
     assert row["verdict"] == "THIN"
     assert "thin_disc" in row["fail_reasons"]
     assert row["live_untouched"] == "flatten_robust"
@@ -247,15 +248,28 @@ def test_all_cols_mine_report_is_committed():
             assert r["clock"] == "close"
 
 
-def test_scoreboard_leads_with_first_cut():
-    """Manager critical path: first PASS/FAIL/THIN with n, effect, tape."""
+def test_scoreboard_leads_with_ao_clock_mine():
+    """Standing cycle: A–O mine_clock keepers + scaled all-cols, n/effect/tape."""
     for rel in ("03_scoreboard/EXCEL_BOT_MINE.md",
                 "excel_bot/research/MINE_CYCLE.md"):
         md = (ROOT / rel).read_text()
-        assert "first A–JL cut" in md
-        assert "PASS 0" in md
+        assert "A–O" in md
+        assert "PASS 376" in md
+        assert "FAIL 1160" in md
+        assert "THIN 18" in md
         assert "tape early" in md and "tape late" in md
         assert "flatten_robust" in md
+        assert "499" in md
+        assert "PASS 0" in md  # scaled all-cols null
+    payload = json.loads(
+        (ROOT / "excel_bot" / "research" / "mine_clock_summary.json").read_text())
+    assert payload["live_untouched"] == "flatten_robust"
+    assert payload["grids"] >= 3000
+    assert payload["n_pass"] >= 1
+    for r in payload.get("keepers_hold12_futubull") or []:
+        assert r["verdict"] == "PASS"
+        assert r["exit"] in ("hold1", "hold2")
+        assert r["cohort"] == "ALL"
 
 
 def test_pack_cell_quality_fail_is_fail_not_thin():

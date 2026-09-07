@@ -8,7 +8,7 @@ _Generated 2026-09-07 · live `flatten_robust` is not changed. No merge without 
 
 ### Cost
 
-- Lean rows-cache capture (this sample): **1.15 s/ticker** · rows 2–145 · 275 cols. N=55 → ~1.1 min.
+- Lean rows-cache capture (this sample): **1.32 s/ticker** · rows 2–145 · 275 cols. N=499 → ~11.0 min.
 - `run.py --all-cols` (Yahoo + rows 1–364): minutes/ticker — not used for this sample. Full 3603 via lean path ≈ 70 min.
 
 ### PIT
@@ -17,7 +17,7 @@ _Generated 2026-09-07 · live `flatten_robust` is not changed. No merge without 
 - Close: same-day deeper values/fills; **core_score** (A..J includes D,E,F,H,I — landmine, CLOSE only).
 - Sleeve holds 1/2/3/5/8. Futubull 0.15%/0.20%. Ship bar + ≥20 bp vs uncond. hold3/5/8 need hold2 edge.
 
-Sample **55** tickers (40 discovery / 15 holdout). Patterns **64**. Cells **300**. **PASS 0** · **FAIL 275** · **THIN 25**.
+Sample **499** tickers (311 discovery / 188 holdout). Patterns **64**. Cells **305**. **PASS 0** · **FAIL 305** · **THIN 0**.
 
 A–O first mine is a **parallel thin track** (`AO_FIRST_MINE.md`) — not a substitute for this surface.
 
@@ -25,26 +25,26 @@ A–O first mine is a **parallel thin track** (`AO_FIRST_MINE.md`) — not a sub
 
 | clock | side | hold | n | avg net | t | win |
 |---|---|---:|---:|---:|---:|---:|
-| open | long | 1 | 7700 | -0.12% | -1.9 | 44% |
-| open | long | 2 | 7645 | +0.00% | 0.0 | 46% |
-| open | long | 3 | 7590 | -0.07% | -0.6 | 47% |
-| open | long | 5 | 7480 | -0.07% | -0.4 | 47% |
-| open | long | 8 | 7315 | +0.09% | 0.5 | 48% |
-| open | short | 1 | 7700 | -0.23% | -3.4 | 45% |
-| open | short | 2 | 7645 | -0.35% | -2.6 | 47% |
-| open | short | 3 | 7590 | -0.28% | -2.4 | 48% |
-| open | short | 5 | 7480 | -0.28% | -1.9 | 49% |
-| open | short | 8 | 7315 | -0.44% | -2.5 | 49% |
-| close | long | 1 | 7645 | +0.21% | 0.8 | 45% |
-| close | long | 2 | 7590 | +0.17% | 0.6 | 46% |
-| close | long | 3 | 7535 | +0.20% | 0.7 | 46% |
-| close | long | 5 | 7425 | +0.16% | 0.8 | 47% |
-| close | long | 8 | 7260 | +0.21% | 1.1 | 48% |
-| close | short | 1 | 7645 | -0.56% | -2.1 | 45% |
-| close | short | 2 | 7590 | -0.52% | -1.9 | 47% |
-| close | short | 3 | 7535 | -0.55% | -1.9 | 47% |
-| close | short | 5 | 7425 | -0.51% | -2.4 | 48% |
-| close | short | 8 | 7260 | -0.56% | -2.9 | 49% |
+| open | long | 1 | 69753 | -0.14% | -7.6 | 44% |
+| open | long | 2 | 69254 | +0.80% | 1.7 | 46% |
+| open | long | 3 | 68755 | +1.16% | 2.4 | 47% |
+| open | long | 5 | 67757 | +1.51% | 2.9 | 47% |
+| open | long | 8 | 66260 | +2.03% | 4.2 | 48% |
+| open | short | 1 | 69753 | -0.21% | -11.1 | 46% |
+| open | short | 2 | 69254 | -1.15% | -2.5 | 48% |
+| open | short | 3 | 68755 | -1.51% | -3.1 | 48% |
+| open | short | 5 | 67757 | -1.86% | -3.6 | 49% |
+| open | short | 8 | 66260 | -2.38% | -4.9 | 49% |
+| close | long | 1 | 69254 | +0.93% | 2.0 | 45% |
+| close | long | 2 | 68755 | +1.20% | 2.4 | 47% |
+| close | long | 3 | 68256 | +1.31% | 2.9 | 47% |
+| close | long | 5 | 67258 | +1.79% | 3.8 | 47% |
+| close | long | 8 | 65761 | +2.25% | 4.9 | 48% |
+| close | short | 1 | 69254 | -1.28% | -2.7 | 46% |
+| close | short | 2 | 68755 | -1.55% | -3.1 | 47% |
+| close | short | 3 | 68256 | -1.66% | -3.6 | 48% |
+| close | short | 5 | 67258 | -2.14% | -4.6 | 49% |
+| close | short | 8 | 65761 | -2.60% | -5.7 | 49% |
 
 ### Primary (hold1/2 PASS)
 
@@ -54,53 +54,53 @@ A–O first mine is a **parallel thin track** (`AO_FIRST_MINE.md`) — not a sub
 
 | verdict | def | clock | side | exit | disc | hold | base | tickers | why |
 |---|---|---|---|---|---|---|---|---:|---|
-| FAIL | `HF_fill_green` | close | long | hold8 | 4820/+0.01%/t=0.0 | 1764/+1.60%/t=5.6 | 7260/+0.21%/t=1.1 | 55 | disc_t,lottery,tape_split,no_edge_vs_uncond |
-| FAIL | `HD_fill_green` | close | long | hold8 | 2398/+0.70%/t=1.6 | 944/+2.03%/t=4.9 | 7260/+0.21%/t=1.1 | 55 | disc_t |
-| FAIL | `deeper_g5` | close | long | hold8 | 4831/+0.04%/t=0.1 | 1829/+1.30%/t=4.8 | 7260/+0.21%/t=1.1 | 55 | disc_t,lottery,tape_split,no_edge_vs_uncond |
-| FAIL | `HH_fill_green` | close | long | hold8 | 3213/+0.34%/t=1.3 | 1263/+1.59%/t=4.5 | 7260/+0.21%/t=1.1 | 55 | disc_t,no_edge_vs_uncond |
-| FAIL | `HF_fill_red` | close | short | hold8 | 420/+1.34%/t=0.6 | 201/+1.75%/t=4.5 | 7260/-0.56%/t=-2.9 | 55 | disc_t,tape_split,spy_regime |
-| FAIL | `HF_fill_green` | close | long | hold5 | 4936/-0.12%/t=-0.8 | 1805/+0.84%/t=4.0 | 7425/+0.16%/t=0.8 | 55 | disc_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `GU_fill_green` | close | long | hold8 | 2290/-0.35%/t=-1.2 | 877/+1.61%/t=3.8 | 7260/+0.21%/t=1.1 | 55 | disc_t,disc_sign,lottery,tape_split,no_edge_vs_uncond |
-| FAIL | `HB_fill_green` | close | long | hold8 | 2309/-0.35%/t=-1.2 | 881/+1.59%/t=3.8 | 7260/+0.21%/t=1.1 | 55 | disc_t,disc_sign,lottery,tape_split,no_edge_vs_uncond |
-| FAIL | `IB_ge3` | close | long | hold8 | 2298/-0.15%/t=-0.5 | 922/+1.40%/t=3.7 | 7260/+0.21%/t=1.1 | 55 | disc_t,disc_sign,lottery,tape_split,no_edge_vs_uncond |
-| FAIL | `CP_ge1` | close | long | hold8 | 1837/-0.45%/t=-1.8 | 820/+1.27%/t=3.7 | 7260/+0.21%/t=1.1 | 55 | disc_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `A_green` | open | long | hold8 | 3405/-0.22%/t=-0.9 | 1355/+1.11%/t=3.7 | 7315/+0.09%/t=0.5 | 55 | disc_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `HD_fill_green` | close | long | hold5 | 2448/+0.51%/t=1.3 | 966/+1.09%/t=3.5 | 7425/+0.16%/t=0.8 | 55 | disc_t |
-| FAIL | `deeper_g5` | close | long | hold5 | 4939/-0.03%/t=-0.1 | 1871/+0.68%/t=3.4 | 7425/+0.16%/t=0.8 | 55 | disc_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `AD_ge1` | close | long | hold8 | 1633/-0.26%/t=-0.5 | 553/+1.70%/t=3.2 | 7260/+0.21%/t=1.1 | 55 | disc_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `HH_fill_green` | close | long | hold5 | 3290/+0.33%/t=1.5 | 1294/+0.78%/t=3.1 | 7425/+0.16%/t=0.8 | 55 | disc_t,no_edge_vs_uncond |
-| FAIL | `HN_ge3` | close | long | hold8 | 1823/-0.61%/t=-2.4 | 764/+1.25%/t=3.0 | 7260/+0.21%/t=1.1 | 55 | disc_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `IB_ge3` | close | long | hold5 | 2357/+0.02%/t=0.1 | 946/+0.82%/t=3.0 | 7425/+0.16%/t=0.8 | 55 | disc_t,lottery,tape_split,no_edge_vs_uncond |
-| FAIL | `GR_fill_green` | close | long | hold8 | 2800/-0.24%/t=-0.9 | 1051/+1.02%/t=2.8 | 7260/+0.21%/t=1.1 | 55 | disc_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `core_score_ge2` | close | long | hold8 | 1985/-0.60%/t=-2.3 | 767/+1.22%/t=2.8 | 7260/+0.21%/t=1.1 | 55 | disc_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `HF_fill_green` | close | long | hold3 | 5013/-0.12%/t=-1.1 | 1830/+0.43%/t=2.7 | 7535/+0.20%/t=0.7 | 55 | disc_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `EL_fill_green` | close | long | hold8 | 2425/-0.36%/t=-1.1 | 901/+1.09%/t=2.7 | 7260/+0.21%/t=1.1 | 55 | disc_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `AD_ge1` | close | long | hold5 | 1663/-0.55%/t=-1.4 | 571/+1.08%/t=2.7 | 7425/+0.16%/t=0.8 | 55 | disc_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `GU_fill_green` | close | long | hold5 | 2333/-0.30%/t=-1.3 | 895/+0.81%/t=2.6 | 7425/+0.16%/t=0.8 | 55 | disc_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `HF_fill_red` | close | short | hold5 | 424/-1.74%/t=-0.5 | 205/+0.79%/t=2.6 | 7425/-0.51%/t=-2.4 | 55 | disc_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `HB_fill_green` | close | long | hold5 | 2352/-0.30%/t=-1.3 | 899/+0.80%/t=2.6 | 7425/+0.16%/t=0.8 | 55 | disc_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `CP_ge1` | close | long | hold5 | 1883/-0.32%/t=-1.5 | 844/+0.70%/t=2.6 | 7425/+0.16%/t=0.8 | 55 | disc_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `IZ_eq1` | close | long | hold8 | 474/+0.85%/t=1.3 | 184/+2.20%/t=2.6 | 7260/+0.21%/t=1.1 | 55 | disc_t,tape_split |
-| FAIL | `A_green` | open | long | hold5 | 3476/-0.15%/t=-0.7 | 1387/+0.56%/t=2.5 | 7480/-0.07%/t=-0.4 | 55 | disc_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `deeper_g5` | close | long | hold3 | 5017/-0.07%/t=-0.4 | 1898/+0.35%/t=2.4 | 7535/+0.20%/t=0.7 | 55 | disc_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `HD_fill_green` | close | long | hold3 | 2479/+0.17%/t=0.5 | 975/+0.51%/t=2.3 | 7535/+0.20%/t=0.7 | 55 | disc_t,lottery,tape_split,no_edge_vs_uncond |
-| FAIL | `HN_ge3` | close | long | hold5 | 1868/-0.42%/t=-2.1 | 786/+0.68%/t=2.3 | 7425/+0.16%/t=0.8 | 55 | disc_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `IZ_eq1` | close | long | hold5 | 474/+0.96%/t=1.9 | 184/+1.30%/t=2.1 | 7425/+0.16%/t=0.8 | 55 | disc_t,tape_split |
-| FAIL | `HI_fill_green` | close | long | hold8 | 1189/-1.07%/t=-3.0 | 482/+0.99%/t=2.0 | 7260/+0.21%/t=1.1 | 55 | disc_t,hold_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `HF_fill_green` | close | long | hold2 | 5052/-0.16%/t=-1.6 | 1842/+0.25%/t=1.9 | 7590/+0.17%/t=0.6 | 55 | disc_t,hold_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `EL_ge2` | close | long | hold8 | 1664/-0.64%/t=-2.0 | 586/+1.05%/t=1.9 | 7260/+0.21%/t=1.1 | 55 | disc_t,hold_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `lag_IZeq1_Agreen` | open | long | hold8 | 377/+0.82%/t=1.3 | 149/+1.56%/t=1.9 | 7315/+0.09%/t=0.5 | 55 | disc_t,hold_t,tape_split |
-| FAIL | `CP_ge1` | close | long | hold3 | 1903/-0.28%/t=-1.6 | 859/+0.37%/t=1.9 | 7535/+0.20%/t=0.7 | 55 | disc_t,hold_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `lag_JAge1_Agreen` | open | long | hold8 | 616/-0.72%/t=-1.4 | 266/+1.20%/t=1.8 | 7315/+0.09%/t=0.5 | 55 | disc_t,hold_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `GR_fill_green` | close | long | hold5 | 2864/-0.14%/t=-0.6 | 1076/+0.51%/t=1.8 | 7425/+0.16%/t=0.8 | 55 | disc_t,hold_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `HH_fill_green` | close | long | hold3 | 3334/+0.08%/t=0.5 | 1308/+0.33%/t=1.8 | 7535/+0.20%/t=0.7 | 55 | disc_t,hold_t,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `EL_fill_green` | close | long | hold5 | 2477/-0.15%/t=-0.6 | 922/+0.54%/t=1.8 | 7425/+0.16%/t=0.8 | 55 | disc_t,hold_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `lag_IZeq1_Agreen` | open | long | hold5 | 377/+0.78%/t=1.5 | 149/+1.15%/t=1.8 | 7480/-0.07%/t=-0.4 | 55 | disc_t,hold_t,tape_split |
-| FAIL | `JA_eq1` | close | long | hold5 | 689/-0.38%/t=-0.9 | 284/+0.96%/t=1.8 | 7425/+0.16%/t=0.8 | 55 | disc_t,hold_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
-| FAIL | `lag_IZeq1_Agreen` | open | long | hold2 | 390/+0.68%/t=2.6 | 154/+0.48%/t=1.7 | 7645/+0.00%/t=0.0 | 55 | disc_t,hold_t,tape_split,spy_regime |
-| FAIL | `HI_fill_green` | close | long | hold5 | 1217/-0.71%/t=-2.4 | 498/+0.69%/t=1.7 | 7425/+0.16%/t=0.8 | 55 | disc_t,hold_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
+| FAIL | `deeper_g5` | close | long | hold8 | 37499/+1.48%/t=5.3 | 22547/+3.53%/t=2.9 | 65761/+2.25%/t=4.9 | 499 | no_edge_vs_uncond |
+| FAIL | `deeper_g5` | close | long | hold5 | 38356/+0.86%/t=4.0 | 23059/+3.22%/t=2.5 | 67258/+1.79%/t=3.8 | 499 | no_edge_vs_uncond |
+| FAIL | `CV_fill_green` | close | long | hold8 | 5761/+1.58%/t=1.4 | 3139/+18.41%/t=2.3 | 65761/+2.25%/t=4.9 | 400 | disc_t,no_edge_vs_uncond |
+| FAIL | `T_ge2` | close | long | hold8 | 2507/-0.06%/t=-0.1 | 1529/+37.48%/t=2.2 | 65761/+2.25%/t=4.9 | 294 | disc_t,disc_sign,lottery,no_edge_vs_uncond |
+| FAIL | `CU_fill_green` | close | long | hold8 | 3427/+6.04%/t=2.9 | 1934/+29.23%/t=2.2 | 65761/+2.25%/t=4.9 | 410 | disc_t |
+| FAIL | `T_ge2` | close | long | hold5 | 2562/-0.55%/t=-1.6 | 1555/+32.04%/t=2.2 | 67258/+1.79%/t=3.8 | 294 | disc_t,disc_sign,lottery,no_edge_vs_uncond |
+| FAIL | `DD_ge2` | close | long | hold5 | 25058/+0.67%/t=2.4 | 14853/+4.04%/t=2.2 | 67258/+1.79%/t=3.8 | 499 | disc_t,no_edge_vs_uncond |
+| FAIL | `CU_fill_red` | close | short | hold3 | 258/-4.10%/t=-0.5 | 128/+4.64%/t=2.1 | 68256/-1.66%/t=-3.6 | 140 | thin_disc,disc_t,disc_sign,lottery,tape_split,spy_regime,no_edge_vs_uncond |
+| FAIL | `DD_ge2` | close | long | hold8 | 24849/+1.24%/t=3.5 | 14742/+3.54%/t=2.1 | 65761/+2.25%/t=4.9 | 499 | no_edge_vs_uncond |
+| FAIL | `CU_fill_green` | close | long | hold5 | 3475/+3.06%/t=2.1 | 1959/+22.53%/t=2.1 | 67258/+1.79%/t=3.8 | 410 | disc_t |
+| FAIL | `GU_fill_green` | close | long | hold8 | 17759/+0.91%/t=2.6 | 10794/+4.68%/t=2.1 | 65761/+2.25%/t=4.9 | 499 | disc_t,no_edge_vs_uncond |
+| FAIL | `HB_fill_green` | close | long | hold8 | 17909/+0.90%/t=2.6 | 10879/+4.62%/t=2.0 | 65761/+2.25%/t=4.9 | 499 | disc_t,no_edge_vs_uncond |
+| FAIL | `HF_fill_green` | close | long | hold8 | 37220/+0.89%/t=4.4 | 22489/+2.27%/t=2.0 | 65761/+2.25%/t=4.9 | 498 | no_edge_vs_uncond |
+| FAIL | `EL_fill_green` | close | long | hold8 | 18689/+1.45%/t=3.7 | 11248/+1.82%/t=2.0 | 65761/+2.25%/t=4.9 | 499 | no_edge_vs_uncond |
+| FAIL | `T_ge2` | close | long | hold3 | 2602/-0.47%/t=-1.9 | 1568/+38.09%/t=2.0 | 68256/+1.31%/t=2.9 | 295 | disc_t,hold_t,disc_sign,lottery,no_edge_vs_uncond |
+| FAIL | `lag_IZeq1_Agreen` | open | long | hold2 | 3125/+0.47%/t=4.4 | 1871/+0.26%/t=2.0 | 69254/+0.80%/t=1.7 | 499 | hold_t,tape_split,spy_regime,no_edge_vs_uncond |
+| FAIL | `deeper_g5` | close | long | hold3 | 38908/+0.48%/t=2.8 | 23392/+2.51%/t=2.0 | 68256/+1.31%/t=2.9 | 499 | disc_t,hold_t,no_edge_vs_uncond |
+| FAIL | `CV_fill_green` | close | long | hold5 | 5837/+0.51%/t=0.7 | 3180/+14.37%/t=1.9 | 67258/+1.79%/t=3.8 | 400 | disc_t,hold_t,lottery,no_edge_vs_uncond |
+| FAIL | `HD_fill_green` | close | long | hold8 | 19231/+0.68%/t=3.0 | 11203/+3.75%/t=1.9 | 65761/+2.25%/t=4.9 | 498 | hold_t,no_edge_vs_uncond |
+| FAIL | `AD_ge1` | close | long | hold8 | 12458/+1.23%/t=3.0 | 6967/+2.62%/t=1.8 | 65761/+2.25%/t=4.9 | 499 | hold_t,no_edge_vs_uncond |
+| FAIL | `T_ge2` | close | long | hold2 | 2616/-0.42%/t=-2.1 | 1575/+37.22%/t=1.8 | 68755/+1.20%/t=2.4 | 295 | disc_t,hold_t,disc_sign,lottery,no_edge_vs_uncond |
+| FAIL | `HF_fill_green` | close | long | hold5 | 38109/+0.53%/t=3.1 | 23023/+1.60%/t=1.8 | 67258/+1.79%/t=3.8 | 498 | hold_t,no_edge_vs_uncond |
+| FAIL | `CU_fill_green` | close | long | hold2 | 3557/+2.82%/t=1.8 | 2005/+28.34%/t=1.8 | 68755/+1.20%/t=2.4 | 410 | disc_t,hold_t |
+| FAIL | `deeper_g5` | close | long | hold2 | 39187/+0.39%/t=2.3 | 23557/+2.43%/t=1.8 | 68755/+1.20%/t=2.4 | 499 | disc_t,hold_t,no_edge_vs_uncond |
+| FAIL | `CU_fill_green` | close | long | hold3 | 3535/+3.66%/t=2.5 | 1995/+19.10%/t=1.7 | 68256/+1.31%/t=2.9 | 410 | disc_t,hold_t |
+| FAIL | `HF_fill_green` | close | long | hold3 | 38703/+0.32%/t=2.2 | 23369/+2.12%/t=1.7 | 68256/+1.31%/t=2.9 | 498 | disc_t,hold_t,no_edge_vs_uncond |
+| FAIL | `deeper_g5` | close | long | hold1 | 39469/+0.21%/t=1.5 | 23732/+2.26%/t=1.7 | 69254/+0.93%/t=2.0 | 499 | disc_t,hold_t,no_edge_vs_uncond |
+| FAIL | `CU_fill_red` | close | short | hold8 | 251/+1.87%/t=0.5 | 126/+6.81%/t=1.7 | 65761/-2.60%/t=-5.7 | 139 | thin_disc,disc_t,hold_t,tape_split |
+| FAIL | `EL_ge2` | close | long | hold8 | 12547/+0.96%/t=2.3 | 7553/+2.05%/t=1.7 | 65761/+2.25%/t=4.9 | 498 | disc_t,hold_t,no_edge_vs_uncond |
+| FAIL | `HF_fill_green` | close | long | hold2 | 39001/+0.22%/t=1.5 | 23546/+2.29%/t=1.7 | 68755/+1.20%/t=2.4 | 499 | disc_t,hold_t,no_edge_vs_uncond |
+| FAIL | `CU_fill_green` | close | long | hold1 | 3568/+1.56%/t=1.2 | 2008/+26.02%/t=1.7 | 69254/+0.93%/t=2.0 | 410 | disc_t,hold_t,lottery |
+| FAIL | `lag_IZeq1_Agreen` | open | long | hold3 | 3125/+0.49%/t=3.5 | 1871/+0.29%/t=1.6 | 68755/+1.16%/t=2.4 | 499 | hold_t,tape_split,spy_regime,no_edge_vs_uncond |
+| FAIL | `DD_ge2` | close | long | hold3 | 25187/+0.26%/t=1.3 | 14920/+1.93%/t=1.6 | 68256/+1.31%/t=2.9 | 499 | disc_t,hold_t,no_edge_vs_uncond |
+| FAIL | `L_ge1` | close | long | hold8 | 9893/+1.13%/t=2.4 | 5766/+2.30%/t=1.6 | 65761/+2.25%/t=4.9 | 499 | disc_t,hold_t,no_edge_vs_uncond |
+| FAIL | `lag_IZeq1_Agreen` | open | long | hold5 | 3051/+0.78%/t=3.6 | 1827/+0.35%/t=1.6 | 67757/+1.51%/t=2.9 | 499 | hold_t,tape_split,spy_regime,no_edge_vs_uncond |
+| FAIL | `L_ge1` | close | long | hold5 | 10061/+0.60%/t=1.5 | 5858/+2.63%/t=1.6 | 67258/+1.79%/t=3.8 | 499 | disc_t,hold_t,no_edge_vs_uncond |
+| FAIL | `HF_fill_green` | close | long | hold1 | 39297/+0.07%/t=0.6 | 23723/+2.11%/t=1.6 | 69254/+0.93%/t=2.0 | 499 | disc_t,hold_t,lottery,tape_split,no_edge_vs_uncond |
+| FAIL | `IB_ge3` | close | long | hold8 | 17546/+0.52%/t=2.5 | 10420/+1.17%/t=1.6 | 65761/+2.25%/t=4.9 | 498 | disc_t,hold_t,no_edge_vs_uncond |
+| FAIL | `DD_ge2` | close | long | hold2 | 25250/+0.08%/t=0.6 | 14947/+3.06%/t=1.6 | 68755/+1.20%/t=2.4 | 499 | disc_t,hold_t,lottery,no_edge_vs_uncond |
+| FAIL | `GU_fill_green` | close | long | hold5 | 18123/+0.38%/t=1.5 | 11015/+3.07%/t=1.5 | 67258/+1.79%/t=3.8 | 499 | disc_t,hold_t,no_edge_vs_uncond |
+| FAIL | `HB_fill_green` | close | long | hold5 | 18273/+0.37%/t=1.5 | 11100/+3.03%/t=1.5 | 67258/+1.79%/t=3.8 | 499 | disc_t,hold_t,no_edge_vs_uncond |
+| FAIL | `CV_fill_green` | close | long | hold1 | 5944/+0.54%/t=0.8 | 3248/+9.56%/t=1.5 | 69254/+0.93%/t=2.0 | 400 | disc_t,hold_t,lottery,no_edge_vs_uncond |
+| FAIL | `O_ge1` | close | long | hold8 | 6660/+0.20%/t=0.6 | 3776/+3.65%/t=1.5 | 65761/+2.25%/t=4.9 | 482 | disc_t,hold_t,no_edge_vs_uncond |
+| FAIL | `HH_fill_green` | close | long | hold8 | 25269/+0.77%/t=3.4 | 15126/+0.69%/t=1.4 | 65761/+2.25%/t=4.9 | 499 | hold_t,no_edge_vs_uncond |
+| FAIL | `T_ge2` | close | long | hold1 | 2626/-0.34%/t=-2.1 | 1583/+17.29%/t=1.4 | 69254/+0.93%/t=2.0 | 295 | disc_t,hold_t,disc_sign,lottery,spy_regime,no_edge_vs_uncond |
 
-Tickers: A, AAL, AENT, AMC, ARE, ARVN, AZN, BLND, BMHL, BYRN, CETX, CLNE, CMS, CTO, DHI, DJCO, E, EPR, FBRT, FEAM, FRNM, GGZ, GRAF, H, HUHU, INFQ, INSM, JRSH, LAKE, LEA, LSTA, MDIA, MOS, MTB, NAMS, NOW, OC, OGN, OXLC, PL, PRDO, QBTS, RIME, RY, SAGT, SHLS, SOPH, SUIG, SVCO, THG, TTEK, UTMD, VBNK, VSTD, WNEB.
+Tickers: A, AAL, AAPL, ABOS, ACCO, ACI, ACOG, ACXP, ADBE, ADMA, ADUS, AEHR, AERT, AEVA, AGI, AGIG, AGRO, AIFA, AIOT, AIRS, ALEC, ALG, ALMS, ALMU, AMBO, AMC, AMKR, AMR, AMRX, AN, ANNA, APA, APAM, APT, ARCT, ARE, AROC, ASAN, ASB, ASPI, ASTI, ATEX, ATKR, ATPC, AUNA, AUR, AVPT, AWRE, AX, AZN, BAC, BALL, BBAI, BBIO, BBOT, BCO, BCV, BEBE, BFLY, BFRG, BGY, BHRB, BIPC, BKE, BLFS, BLSH, BMHL, BN, BOH, BON, BRAI, BRLS, BSL, BTCS, BTT, BUDA, BWA, BWLP, BYRN, CAC, CAE, CANG, CASS, CAT, CB, CBRL, CCL, CCU, CDW, CDXS, CEPS, CFBK, CGEN, CHEF, CHT, CIGI, CION, CLMT, CLNE, CLSK, CMDB, CMP, CMS, CNMD, CNX, COGT, COLB, COOK, CPA, CPRI, CRDF, CRMD, CROX, CSTM, CTGO, CTSH, CUZ, CVE, CVV, CVX, CYAB, CZNC, DAKT, DBGI, DCOY, DDD, DFH, DFLI, DHI, DIS, DJCO, DJT, DMRC, DOLE, DOO, DRI, DSWL, DSY, DUKR, DUOL, DXLG, EBMT, ECC, EDSA, EGAN, EGO, EIM, ELTX, ELVR, EMF, ENTG, EPR, EPRT, ERC, ES, ESI, ETO, ETR, EVH, EVR, EXC, EZPW, FAST, FBRT, FDBC, FENC, FF, FICO, FIZZ, FLNA, FLUX, FMFC, FNV, FOA, FRA, FRNM, FRST, FTDR, FTF, FUFU, FWDI, GANX, GBLI, GBX, GDOT, GELS, GENB, GIFT, GILT, GLAS, GLDG, GLOB, GLV, GNE, GNT, GOOGL, GPN, GRAF, GRND, GT, GTEC, H, HAFN, HBNB, HCA, HD, HDRN, HEQ, HIMS, HIX, HNGE, HODO, HQI, HRI, HSHP, HUBB, HUN, HWH, HXHX, IART, IBTA, IDA, IDT, IIIV, IMNN, IMUX, INFQ, INKT, INSM, INTC, INTJ, IOTR, IP, IRDM, IREN, ISRG, ITRG, IVDA, JANX, JBTM, JGH, JLL, JNJ, JWEL, KD, KEN, KGEI, KLIC, KMRK, KNX, KO, KOPN, KRMN, KTB, KTF, LABT, LAKE, LBTYB, LEA, LEGO, LFVN, LGI, LHX, LIQT, LMND, LNTH, LOAR, LPCN, LQDA, LUCD, LWLG, LXFR, MAAS, MAMO, MASK, MBLY, MBOT, MCD, MCRP, MDIA, MEGI, MF, MGNI, MHF, MINE, MIR, MKTX, MLKN, MLTX, MNOV, MOD, MORN, MPC, MRKR, MSCI, MSFT, MSLE, MTB, MTG, MUC, MXC, MYGN, NAMS, NAT, NBHC, NCL, NCNO, NEM, NEON, NFGC, NFLX, NHTC, NIXX, NKTX, NMS, NOA, NOMA, NRDY, NSC, NSIT, NTR, NTRB, NUWE, NVAX, NVDA, NVS, NXGL, NXPL, NZF, OC, OFLX, OGN, OIO, OMH, ONB, OPEN, OPY, ORA, ORCL, ORN, OSIS, OVBC, OVID, PACK, PASG, PAVS, PBYI, PCT, PDX, PEG, PEP, PESI, PFE, PGC, PHIN, PHVS, PL, PLBY, PLSM, PLUR, POAS, POCI, PPT, PRDO, PROV, PRVA, PSHG, PSTL, PTRN, PUSA, PXED, QCOM, QLYS, QTTB, RAIL, RAIN, RBB, RCON, RDNT, REFR, RETO, RFM, RIME, RIOT, RKT, RMCO, RMI, RMTI, ROC, RPGL, RSF, RSKD, RVSN, RY, SA, SAN, SBCF, SBRA, SBUX, SCYX, SEAT, SENS, SEZL, SFNC, SGHC, SHBI, SHLS, SII, SITC, SKYA, SLF, SLGB, SMA, SMP, SNA, SNAL, SOAR, SON, SPCB, SPMC, SPSC, SPWH, SRFM, SRXH, SSTI, STGW, STKE, STRR, SUIG, SVCO, SVM, SYM, TAOP, TAOX, TBCH, TDAY, TDUP, TDW, TEI, TFC, TGHL, THRY, TILE, TLS, TMDE, TNMG, TPB, TRDA, TRN, TRON, TSLA, TSSI, TTEK, TVE, TWG, TWLO, TXN, TYRA, UEC, UMH, UP, URGN, USIO, UVSP, VBNK, VCEL, VFS, VICI, VIVS, VKI, VOXR, VPG, VRSN, VRXA, VSTD, VTGN, VVR, VZ, WAL, WBX, WEA, WEYS, WGS, WIX, WLTH, WMS, WMT, WRBY, WSHP, WTTR, WYY, XEL, XFOR, XPEL, XTNT, YIBO, YORW, ZBRA, ZKIN.
 
 Research only. Live frozen. No strategy cards.
 

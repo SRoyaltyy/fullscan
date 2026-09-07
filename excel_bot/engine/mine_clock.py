@@ -4,7 +4,7 @@ and does not touch flatten_robust.
 Universe : discovery / holdout from engine/holdout_split.json
 Patterns : patterns.pattern_matrix() (card defs + new color/value/lag)
 Holds    : sleeve-native 1/2/3/5/8 (clock.py hold_exit_idx)
-Costs    : labeled `mcap_bps` (0.1%/0.3%) AND `futubull` (1.5%/2.0%)
+Costs    : labeled `mcap_bps` (0.1%/0.3%) AND `futubull` (0.15%/0.20%)
 Clock    : every cell carries clock=open|close
 Tape     : early/late date split + SPY cc up/down when SPY rows exist
 Ship bar : clock.SHIP (n, t, tickers, dates, lottery, both-tape)
@@ -80,7 +80,7 @@ def load_spy_tape():
         if not os.path.exists(path):
             continue
         raw = json.load(open(path))
-        rows = raw if isinstance(raw, list) else (raw.get("days") or raw)
+        rows = raw if isinstance(raw, list) else (raw.get("days") or [])
         out = {}
         prev = None
         for r in rows:
@@ -99,19 +99,40 @@ def load_spy_tape():
     return {}
 
 
-def _init(discovery, holdout, fz, pats, spy, holds):
+def _init(discovery, holdout, fz, pats, spy, holds, all_only=False):
     _G["discovery"] = discovery
     _G["holdout"] = holdout
     _G["fz"] = fz
     _G["pats"] = pats
     _G["spy"] = spy
     _G["holds"] = holds
+    _G["all_only"] = all_only
 
 
 _G = {}
 
 
+def _merge_slot(dst, src):
+    dst["n"] += src["n"]
+    dst["s"] += src["s"]
+    dst["sq"] += src["sq"]
+    dst["w"] += src["w"]
+    dst["pos"] += src["pos"]
+    if src["mx"] > dst["mx"]:
+        dst["mx"] = src["mx"]
+
+
+def merge_packed(cells, packed):
+    key = tuple(packed["key"])
+    cell = cells[key]
+    for k in ("raw", "disc", "hold", "early", "late", "spy_up", "spy_dn"):
+        _merge_slot(cell[k], packed[k])
+    cell["tickers"].update(packed["tickers"])
+    cell["dates"].update(packed["dates"])
+
+
 def work_grid(path):
+    """Fold one ticker into compact slots so the parent never queues trades."""
     t = os.path.basename(path)[:-5]
     if t.startswith("_"):
         return None
@@ -126,10 +147,11 @@ def work_grid(path):
     if len(days) < 30:
         return None
     rec = _G["fz"].get(t)
-    cohorts = ["ALL"] + (cohorts_of(rec) if rec else [])
+    all_only = _G.get("all_only", False)
+    cohorts = ["ALL"] if all_only else (["ALL"] + (cohorts_of(rec) if rec else []))
     mc = rec["mcap"] if rec else None
     cost_m = mcap_cost(mc)
-    trades = []
+    local = _accum()
     for pat in _G["pats"]:
         clock = pat["clock"]
         try:
@@ -147,22 +169,56 @@ def work_grid(path):
                 tape = _G["spy"].get(iso, 0)
                 half = "early" if iso < "2026-05-01" else "late"
                 side = "long" if c["side"] == 1 else "short"
-                trades.append({
+                tr = {
                     "def": pat["name"], "clock": clock, "side": side,
                     "exit": rule, "split": split, "raw": raw,
                     "cost_mcap": cost_m, "cost_futu": futu_cost(c["side"]),
                     "ticker": t, "date": iso, "tape": tape, "half": half,
                     "cohorts": cohorts, "family": pat["kind"],
-                })
-    return trades
+                }
+                for cost_name, cost in (("mcap_bps", tr["cost_mcap"]),
+                                        ("futubull", tr["cost_futu"])):
+                    add_trade(local, tr, cost_name, cost, "ALL")
+                    for co in cohorts:
+                        if co != "ALL":
+                            add_trade(local, tr, cost_name, cost, co)
+    packed = []
+    for key, cell in local.items():
+        packed.append({
+            "key": key,
+            "raw": cell["raw"], "disc": cell["disc"], "hold": cell["hold"],
+            "early": cell["early"], "late": cell["late"],
+            "spy_up": cell["spy_up"], "spy_dn": cell["spy_dn"],
+            "tickers": list(cell["tickers"]),
+            "dates": list(cell["dates"]),
+        })
+    return packed
+
+
+def _slot():
+    return {"n": 0, "s": 0.0, "sq": 0.0, "w": 0, "mx": -1e9, "pos": 0.0}
+
+
+def _push(slot, net):
+    slot["n"] += 1
+    slot["s"] += net
+    slot["sq"] += net * net
+    if net > 0:
+        slot["w"] += 1
+        slot["pos"] += net
+    if net > slot["mx"]:
+        slot["mx"] = net
+
+
+def _is_slot(x):
+    return isinstance(x, dict) and "s" in x and "avg_net" not in x
 
 
 def _accum():
-    # key -> lists
     return defaultdict(lambda: {
-        "raw": [], "tickers": set(), "dates": set(),
-        "early": [], "late": [], "spy_up": [], "spy_dn": [],
-        "disc": [], "hold": [],
+        "raw": _slot(), "tickers": set(), "dates": set(),
+        "early": _slot(), "late": _slot(), "spy_up": _slot(), "spy_dn": _slot(),
+        "disc": _slot(), "hold": _slot(),
     })
 
 
@@ -170,18 +226,18 @@ def add_trade(cells, tr, cost_name, cost, cohort):
     key = (tr["def"], tr["clock"], tr["side"], tr["exit"], cohort, cost_name)
     cell = cells[key]
     net = tr["raw"] - cost
-    cell["raw"].append(net)
+    _push(cell["raw"], net)
     cell["tickers"].add(tr["ticker"])
     cell["dates"].add(tr["date"])
-    cell[tr["half"]].append(net)
+    _push(cell[tr["half"]], net)
     if tr["tape"] == 1:
-        cell["spy_up"].append(net)
+        _push(cell["spy_up"], net)
     elif tr["tape"] == -1:
-        cell["spy_dn"].append(net)
+        _push(cell["spy_dn"], net)
     if tr["split"] == "discovery":
-        cell["disc"].append(net)
+        _push(cell["disc"], net)
     else:
-        cell["hold"].append(net)
+        _push(cell["hold"], net)
     return cell
 
 
@@ -203,28 +259,51 @@ def lottery(vals):
     return bad, frac, trimmed
 
 
+def lottery_slot(slot):
+    n, s, mx, pos = slot["n"], slot["s"], slot["mx"], slot["pos"]
+    if n < 3:
+        return True, 1.0, float("nan")
+    frac = (mx / pos) if (pos > 0 and mx > 0) else 0.0
+    trimmed = (s - mx) / (n - 1)
+    return frac > SHIP["max_trade_frac"] or trimmed <= 0, frac, trimmed
+
+
+def _blk_any(vals):
+    if vals is None:
+        return None
+    if _is_slot(vals):
+        n, s, sq, w = vals["n"], vals["s"], vals["sq"], vals["w"]
+        if n < 2:
+            return None
+        m = s / n
+        var = max(sq - s * s / n, 0.0) / (n - 1)
+        t = m / math.sqrt(var / n) if var > 0 else 0.0
+        return {"n": n, "avg_net": m, "t": t, "win": w / n}
+    if len(vals) < 2:
+        return None
+    m = sum(vals) / len(vals)
+    return {"n": len(vals), "avg_net": m, "t": tstat(vals),
+            "win": sum(1 for v in vals if v > 0) / len(vals)}
+
+
 def pack_cell(key, cell):
-    dn, clock, side, rule, cohort, cost = key
+    name, clock, side, rule, cohort, cost = key
     disc, hold = cell["disc"], cell["hold"]
     allv = cell["raw"]
 
-    def blk(vals):
-        if len(vals) < 2:
-            return None
-        m = sum(vals) / len(vals)
-        return {"n": len(vals), "avg_net": m, "t": tstat(vals),
-                "win": sum(1 for v in vals if v > 0) / len(vals)}
-
-    d, h = blk(disc), blk(hold)
-    lot_bad, lot_frac, trimmed = lottery(disc if disc else allv)
-    early, late = blk(cell["early"]), blk(cell["late"])
-    up, dn = blk(cell["spy_up"]), blk(cell["spy_dn"])
+    d, h = _blk_any(disc), _blk_any(hold)
+    if _is_slot(disc) or _is_slot(allv):
+        lot_bad, lot_frac, trimmed = lottery_slot(disc if _is_slot(disc) and disc["n"] else allv)
+    else:
+        lot_bad, lot_frac, trimmed = lottery(disc if disc else allv)
+    early, late = _blk_any(cell["early"]), _blk_any(cell["late"])
+    up_spy, dn_spy = _blk_any(cell["spy_up"]), _blk_any(cell["spy_dn"])
     tape_ok = True
     if early and late and early["n"] >= SHIP["min_tape_n"] and late["n"] >= SHIP["min_tape_n"]:
         tape_ok = (early["avg_net"] > 0) == (late["avg_net"] > 0) and late["avg_net"] > 0
     spy_ok = True
-    if up and dn and up["n"] >= SHIP["min_tape_n"] and dn["n"] >= SHIP["min_tape_n"]:
-        spy_ok = (up["avg_net"] > 0) and (dn["avg_net"] > 0)
+    if up_spy and dn_spy and up_spy["n"] >= SHIP["min_tape_n"] and dn_spy["n"] >= SHIP["min_tape_n"]:
+        spy_ok = (up_spy["avg_net"] > 0) and (dn_spy["avg_net"] > 0)
 
     reasons = []
     if not d or d["n"] < SHIP["disc_n"]:
@@ -258,11 +337,11 @@ def pack_cell(key, cell):
     else:
         verdict = "FAIL"
     return {
-        "def": dn, "clock": clock, "side": side, "exit": rule,
+        "def": name, "clock": clock, "side": side, "exit": rule,
         "cohort": cohort, "cost_model": cost,
         "n_tickers": len(cell["tickers"]), "n_dates": len(cell["dates"]),
         "discovery": d, "holdout": h,
-        "early": early, "late": late, "spy_up": up, "spy_dn": dn,
+        "early": early, "late": late, "spy_up": up_spy, "spy_dn": dn_spy,
         "lottery_frac": lot_frac, "trimmed_avg": trimmed,
         "verdict": verdict, "fail_reasons": reasons,
         "live_untouched": "flatten_robust",
@@ -311,18 +390,19 @@ def apply_horizon_sibling(rows):
     return rows
 
 
+def _fmt_blk(b):
+    if not b:
+        return "—"
+    return f"{b['n']}/{b['avg_net']*100:+.2f}%/t={b['t']:.1f}"
+
+
 def _row_line(r):
-    d, h = r.get("discovery") or {}, r.get("holdout") or {}
-
-    def fmt(b):
-        if not b:
-            return "—"
-        return f"{b['n']}/{b['avg_net']*100:+.2f}%/{b['t']:.1f}"
-
     return (
         f"| {r['verdict']} | `{r['def']}` | {r['clock']} | {r['side']} | "
         f"{r['exit']} | {r['cohort']} | {r['cost_model']} | "
-        f"{fmt(d)} | {fmt(h)} | {r['n_tickers']} | "
+        f"{_fmt_blk(r.get('discovery'))} | {_fmt_blk(r.get('holdout'))} | "
+        f"{_fmt_blk(r.get('early'))} | {_fmt_blk(r.get('late'))} | "
+        f"{r['n_tickers']} | "
         f"{','.join(r.get('fail_reasons') or []) or '—'} |"
     )
 
@@ -363,8 +443,9 @@ def render_md(rows, n_grids, n_pats, spy_n, path):
         "",
     ]
     hdr = ("| verdict | def | clock | side | exit | cohort | cost | "
-           "disc n/avg/t | hold n/avg/t | tickers | why |")
-    sep = "|---|---|---|---|---|---|---|---|---|---:|---|"
+           "disc n/effect | hold n/effect | tape early | tape late | "
+           "tickers | why |")
+    sep = "|---|---|---|---|---|---|---|---|---|---|---|---:|---|"
     show = keep_all[:40] if keep_all else keep[:40]
     if not keep:
         L += ["*(none cleared the ship bar)*", ""]
@@ -431,6 +512,8 @@ def main():
     ap.add_argument("--workers", type=int, default=min(6, os.cpu_count() or 2))
     ap.add_argument("--new-only", action="store_true")
     ap.add_argument("--holds", default="1,2,3,5,8")
+    ap.add_argument("--all-only", action="store_true",
+                    help="score ALL cohort only (no finviz slices; safer RAM)")
     args = ap.parse_args()
     holds = tuple(int(x) for x in args.holds.split(","))
     assert all(h in SLEEVE_HOLDS for h in holds)
@@ -446,50 +529,45 @@ def main():
     files = [f for f in sorted(glob.glob(os.path.join(GRIDS_DIR, "*.json")))
              if not os.path.basename(f).startswith("_")]
     print(f"[mine_clock] grids={len(files)} pats={len(pats)} "
-          f"holds={holds} spy_days={len(spy)}", flush=True)
+          f"holds={holds} spy_days={len(spy)} all_only={args.all_only}",
+          flush=True)
 
     cells = _accum()
     seen = 0
+    init_args = (discovery, holdout, fz, pats, spy, holds, args.all_only)
     if args.workers > 1 and files:
         from multiprocessing import Pool
-        with Pool(args.workers, initializer=_init,
-                  initargs=(discovery, holdout, fz, pats, spy, holds)) as pool:
-            for i, trades in enumerate(pool.imap_unordered(work_grid, files,
-                                                           chunksize=8), 1):
-                if not trades:
+        with Pool(args.workers, initializer=_init, initargs=init_args) as pool:
+            for i, packed in enumerate(pool.imap_unordered(work_grid, files,
+                                                           chunksize=4), 1):
+                if not packed:
                     continue
                 seen += 1
-                for tr in trades:
-                    for cost_name, cost in (("mcap_bps", tr["cost_mcap"]),
-                                            ("futubull", tr["cost_futu"])):
-                        add_trade(cells, tr, cost_name, cost, "ALL")
-                        for co in tr["cohorts"]:
-                            if co == "ALL":
-                                continue
-                            add_trade(cells, tr, cost_name, cost, co)
+                for rec in packed:
+                    merge_packed(cells, rec)
                 if i % 200 == 0:
-                    print(f"  ... {i}/{len(files)}", flush=True)
+                    print(f"  ... {i}/{len(files)} cells={len(cells)}",
+                          flush=True)
     else:
-        _init(discovery, holdout, fz, pats, spy, holds)
-        for f in files:
-            trades = work_grid(f)
-            if not trades:
+        _init(*init_args)
+        for i, f in enumerate(files, 1):
+            packed = work_grid(f)
+            if not packed:
                 continue
             seen += 1
-            for tr in trades:
-                for cost_name, cost in (("mcap_bps", tr["cost_mcap"]),
-                                        ("futubull", tr["cost_futu"])):
-                    add_trade(cells, tr, cost_name, cost, "ALL")
-                    for co in tr["cohorts"]:
-                        if co != "ALL":
-                            add_trade(cells, tr, cost_name, cost, co)
+            for rec in packed:
+                merge_packed(cells, rec)
+            if i % 200 == 0:
+                print(f"  ... {i}/{len(files)} cells={len(cells)}", flush=True)
 
     rows = []
     for key, cell in cells.items():
-        if len(cell["disc"]) < args.min_n:
+        disc = cell["disc"]
+        n_disc = disc["n"] if _is_slot(disc) else len(disc)
+        if n_disc < args.min_n:
             continue
         rows.append(pack_cell(key, cell))
-    rows = apply_hold1_sibling(rows)
+    rows = apply_horizon_sibling(rows)
     rank = {"PASS": 0, "FAIL": 1, "THIN": 2}
     rows.sort(key=lambda r: (
         rank.get(r["verdict"], 9),
@@ -518,13 +596,15 @@ def main():
         "all_cols_not_promoted": ["IZ_eq1", "deeper_g5", "AD_ge1"],
         "cells": rows,
     }
-    jpath = os.path.join(RESEARCH, "mine_clock_results.json")
-    json.dump(payload, open(jpath, "w"), indent=1)
     compact = dict(payload)
     compact["cells"] = [r for r in rows if r["verdict"] == "PASS"
-                        or (r["cohort"] == "ALL" and r["verdict"] == "FAIL")]
-    json.dump(compact, open(os.path.join(RESEARCH, "mine_clock_summary.json"),
-                            "w"), indent=1)
+                        or (r["cohort"] == "ALL")]
+    jpath = os.path.join(RESEARCH, "mine_clock_summary.json")
+    json.dump(compact, open(jpath, "w"), indent=1)
+    # Full dump is gitignored and huge; skip indent to limit RAM.
+    payload["cells"] = compact["cells"]
+    json.dump(payload, open(os.path.join(RESEARCH, "mine_clock_results.json"),
+                            "w"))
     md = os.path.join(RESEARCH, "MINE_CYCLE.md")
     render_md(rows, seen, len(pats), len(spy), md)
     sb = os.path.join(SCOREBOARD, "EXCEL_BOT_MINE.md")
