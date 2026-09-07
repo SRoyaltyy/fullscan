@@ -220,7 +220,7 @@ def test_all_cols_miners_do_not_wire_live():
                "harden_hyst_open.py", "mine_color_join.py", "pit_joins.py",
                "mine_unmined.py", "harden_unmined.py", "harden_open_stack.py",
                "harden_close_cluster.py", "harden_close_peers.py",
-               "mine_next_region.py"):
+               "mine_next_region.py", "mine_same_day.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "sleeve_merge_live" not in src
         assert "LIVE_POLICY" not in src
@@ -1204,10 +1204,65 @@ def test_next_region_report_is_committed():
             assert r.get("def", "").split("_")[0] != "T"
 
 
+def test_same_day_skips_tba_weekly_and_open_stack():
+    from mine_same_day import (
+        AND_PAIRS, SHORTBOARD, SKIP_TBA, STANDING_OPEN, remaining_inventory,
+    )
+    assert SKIP_TBA == {"T", "BA"}
+    assert "T" in SHORTBOARD and "BA" in SHORTBOARD
+    assert STANDING_OPEN == {"AH", "FR"}
+    meta = remaining_inventory()
+    assert "T" not in meta["fresh_letters"]
+    assert "BA" not in meta["fresh_letters"]
+    assert "AH" not in meta["fresh_letters"]
+    assert "FR" not in meta["fresh_letters"]
+    for a, b in AND_PAIRS:
+        assert a not in SKIP_TBA and b not in SKIP_TBA
+        assert a not in STANDING_OPEN and b not in STANDING_OPEN
+    src = (ENG / "mine_same_day.py").read_text(encoding="utf-8")
+    assert "from flatten" not in src
+    assert "flatten_robust" in src
+    assert "weekly" in src.lower() or "AP" in src
+
+
+def test_same_day_report_is_committed():
+    inv = (ROOT / "excel_bot" / "research" / "SAME_DAY_INVENTORY.md").read_text()
+    assert "Plain English" in inv
+    assert "T/BA" in inv or "T / BA" in inv
+    md = (ROOT / "excel_bot" / "research" / "SAME_DAY.md").read_text()
+    assert "Plain English" in md
+    assert md.index("Plain English") < md.index("`close_") if "`close_" in md else True
+    assert "KEEP" in md and ("KILL" in md or "THIN" in md)
+    assert "exhausted" in md.lower()
+    assert "light + green O" in md or "light+O" in md
+    sb = (ROOT / "03_scoreboard" / "EXCEL_BOT_MINE.md").read_text()
+    assert "PASS 376" in sb
+    assert "Same-day multi-letter" in sb
+    payload = json.loads(
+        (ROOT / "excel_bot" / "research" / "same_day.json").read_text())
+    assert payload["live_untouched"] == "flatten_robust"
+    assert payload["excel_cache_used"] is False
+    assert payload["ajl_surface"] in ("exhausted", "not_exhausted")
+    assert payload["close_shortboard"].startswith("KILL")
+    assert "AH/FR" in payload["standing_open"]
+    assert payload["n_keep"] == 0 or payload["ajl_surface"] == "not_exhausted"
+    for r in payload["rows"]:
+        if r.get("keep") == "KEEP":
+            q1 = r.get("q1") or {}
+            assert q1.get("avg_net", 0) > 0
+            assert (r.get("top5_share") or 0) <= 0.25
+            assert (r.get("july_share") or 0) <= 0.40
+            name = r.get("def", "")
+            assert not name.startswith("weekly_")
+            assert "lag_" not in name
+            assert "T_green" not in name
+            assert "BA_" not in name
+
+
 def test_unmined_miner_does_not_wire_live():
     for fn in ("mine_unmined.py", "harden_unmined.py", "harden_open_stack.py",
                "harden_close_cluster.py", "harden_close_peers.py",
-               "mine_next_region.py"):
+               "mine_next_region.py", "mine_same_day.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "from flatten" not in src
         assert "sleeve_merge_live" not in src

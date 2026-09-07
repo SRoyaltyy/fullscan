@@ -138,3 +138,7 @@ Close-cluster peers CZ/EH/IB/HO/IL/GV: KEEP 0 · KILL 12 · THIN 0. T/BA untouch
 ## Next A–JL region (weekly + leftover lag)
 
 Next A–JL region: weekly+lag KEEP 0 · KILL 230 · THIN 0. Letter space exhausted. Light+O untouched. T/BA untouched. See `NEXT_REGION.md`.
+
+## Same-day multi-letter counts (A–JL)
+
+Same-day multi-letter: KEEP 0 · KILL 32 · THIN 0. A–JL surface exhausted. Light+O untouched. T/BA untouched. See `SAME_DAY.md`.
