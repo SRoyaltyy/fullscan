@@ -531,6 +531,6 @@ Beat same-window fullscan-alone (join top-8) by ≥20 bp after Futubull 15 bp, g
 
 Gate: `OPEN_SAME_ROW_LABELS + CLOCK_MAP`. Fills open: A, B, C, G, J, K, L, M, O, IR, IS, IT. Live frozen.
 
-Tip `d2df1e99` · family **CONDITIONAL**.
+Tip `612f9298` · family **CONDITIONAL**.
 
 Research only.

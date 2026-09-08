@@ -1,6 +1,6 @@
 # Research cards — Excel J × fullscan join (post-8-13)
 
-_Generated 2026-09-08 · tip `d2df1e99` / `JOIN_POST_813.md` · **research cards only** · live frozen._
+_Generated 2026-09-08 · tip `612f9298` / `JOIN_POST_813.md` · **research cards only** · live frozen._
 
 ## Plain English
 
@@ -478,4 +478,4 @@ These two name-days illustrate the rule. They are not a new holdout. Family stay
 
 ## Source
 
-`JOIN_POST_813.md` tip `d2df1e99` · PR #153. Gate: `OPEN_SAME_ROW_LABELS.md` / `CLOCK_MAP.md`. Research only. Live frozen.
+`JOIN_POST_813.md` tip `612f9298` · PR #153. Gate: `OPEN_SAME_ROW_LABELS.md` / `CLOCK_MAP.md`. Research only. Live frozen.
