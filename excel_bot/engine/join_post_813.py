@@ -1557,7 +1557,10 @@ def main():
             f"the same-day no-rule book, ≥{MIN_FIRES} fires): **CLEAR** — "
             + "; ".join(wr_clears)
             + f". {FEE_CAVEAT} Prior 6/8 weighted-book avoid and 5/8 "
-            "green-pile elev are **PROVISIONAL** (n<30)."
+            "green-pile elev are **PROVISIONAL** (n<30). "
+            "y2025 does not confirm liquid vol_top8 / prior_green_top8 "
+            "(those sit 47–54% in 2025). Unranked ohlc_all / mem avoid "
+            "CLEARs are the already-demoted microcap lottery (H+ ~41%)."
         )
     else:
         win_plain = (

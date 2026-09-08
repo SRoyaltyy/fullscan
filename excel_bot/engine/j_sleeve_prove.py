@@ -939,7 +939,14 @@ def render_winrate_md(payload, sleeves):
         f"**Provisional >55% but n_fires<{MIN_FIRES} (demoted, not a call):** "
         + ("; ".join(prints) if prints else "none."),
         "",
-        f"Fee caveat: {FEE_CAVEAT}",
+        "Native weighted-book avoid (6/8) and green-pile elev (5/8) stay "
+        "**PROVISIONAL** — Finviz/join/stock_book dumps are ~16 weekdays. "
+        "Long analogs: `ohlc_liq vol_top8` ≈ weighted book; "
+        "`ohlc_liq prior_green_top8` ≈ green pile. "
+        "y2025 does **not** confirm those liquid ranked recipes (47–54%). "
+        "Unranked `ohlc_all` / `mem_20260426` avoid CLEARs are the "
+        "already-demoted microcap lottery (H+ ~41%, ghost FAIL on mean edge). "
+        f"{FEE_CAVEAT} Do not wire.",
         "",
     ]
     return L, clears, prints

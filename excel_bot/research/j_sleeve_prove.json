@@ -144,7 +144,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -175,7 +175,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -345,7 +345,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -423,7 +423,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -501,7 +501,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.7142857142857143,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -2546,7 +2546,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -2702,7 +2702,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -3786,7 +3786,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -3942,7 +3942,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -8328,7 +8328,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -8359,7 +8359,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -8406,7 +8406,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -8498,7 +8498,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -8654,7 +8654,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -8746,7 +8746,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -8994,7 +8994,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -9150,7 +9150,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -9273,7 +9273,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -9320,7 +9320,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -9351,7 +9351,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -9429,8 +9429,8 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.875,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 46,
@@ -9521,7 +9521,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -9568,7 +9568,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -9599,7 +9599,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -9677,7 +9677,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -9769,7 +9769,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -9816,7 +9816,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -9847,7 +9847,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -9925,8 +9925,8 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.875,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 39,
@@ -10017,7 +10017,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -10064,7 +10064,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -10095,7 +10095,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -10142,7 +10142,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -10173,8 +10173,8 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.75,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 23,
@@ -10265,7 +10265,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -10312,7 +10312,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -10343,7 +10343,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -10390,7 +10390,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -10421,7 +10421,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8571428571428571,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -10643,7 +10643,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -10721,7 +10721,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -10799,7 +10799,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.7142857142857143,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -11108,7 +11108,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -11139,7 +11139,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -11217,7 +11217,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -11264,7 +11264,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.7142857142857143,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -11295,8 +11295,8 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.7777777777777778,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 53,
@@ -11356,7 +11356,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -11465,7 +11465,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -11512,7 +11512,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -11543,7 +11543,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.7142857142857143,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -11604,7 +11604,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -11635,7 +11635,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -11713,7 +11713,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -11760,7 +11760,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -11791,8 +11791,8 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8888888888888888,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 51,
@@ -11852,7 +11852,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -11883,7 +11883,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -11961,7 +11961,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -12008,7 +12008,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -12039,8 +12039,8 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.875,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 37,
@@ -12100,7 +12100,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -12178,7 +12178,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -12256,7 +12256,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -12348,7 +12348,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -12426,7 +12426,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -12504,7 +12504,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -12596,7 +12596,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -12627,7 +12627,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -12705,7 +12705,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -12752,7 +12752,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -12783,8 +12783,8 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.875,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 43,
@@ -12844,7 +12844,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -12875,7 +12875,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -12953,7 +12953,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -13000,7 +13000,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -13031,7 +13031,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -13201,7 +13201,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -13279,8 +13279,8 @@
               "n_ties": 0,
               "n_losses": 4,
               "win_rate": 0.5555555555555556,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 46,
@@ -13449,7 +13449,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -13527,7 +13527,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -13619,7 +13619,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -13666,7 +13666,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -13697,7 +13697,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -13775,8 +13775,8 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.6666666666666666,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 47,
@@ -13836,7 +13836,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -13867,7 +13867,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -13914,7 +13914,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -13945,7 +13945,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -13992,7 +13992,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -14023,7 +14023,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8333333333333334,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -14580,7 +14580,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -14611,7 +14611,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -14658,7 +14658,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -14689,7 +14689,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -14736,7 +14736,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -14767,8 +14767,8 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.6666666666666666,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 42,
@@ -14828,7 +14828,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -14984,7 +14984,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -15107,7 +15107,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -15263,8 +15263,8 @@
               "n_ties": 0,
               "n_losses": 4,
               "win_rate": 0.5555555555555556,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 47,
@@ -15355,7 +15355,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -15511,7 +15511,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -15572,7 +15572,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -15603,7 +15603,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -15728,7 +15728,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -15759,7 +15759,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -15851,7 +15851,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -15898,7 +15898,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -15929,7 +15929,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -15976,7 +15976,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -16007,8 +16007,8 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.7777777777777778,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 53,
@@ -16146,7 +16146,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -16177,7 +16177,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -16425,7 +16425,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -16564,7 +16564,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -16595,7 +16595,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -16642,7 +16642,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -16673,7 +16673,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -16720,7 +16720,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -16751,7 +16751,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.7142857142857143,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -16812,7 +16812,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -16843,7 +16843,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -16890,7 +16890,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -16921,7 +16921,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -16968,7 +16968,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -16999,7 +16999,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8333333333333334,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -17060,7 +17060,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -17138,7 +17138,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -17169,7 +17169,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -17216,7 +17216,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8333333333333334,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -17386,7 +17386,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -17417,7 +17417,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -17464,7 +17464,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -17495,7 +17495,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -17556,7 +17556,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -17634,7 +17634,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -17665,7 +17665,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -17712,7 +17712,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8333333333333334,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -17743,7 +17743,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -17804,7 +17804,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -17835,7 +17835,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -17882,7 +17882,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -17913,7 +17913,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -17960,7 +17960,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -17991,7 +17991,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -18130,7 +18130,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -18161,7 +18161,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -18208,7 +18208,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -18239,8 +18239,8 @@
               "n_ties": 0,
               "n_losses": 4,
               "win_rate": 0.5555555555555556,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 46,
@@ -18378,7 +18378,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -18409,7 +18409,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -18456,7 +18456,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -18487,8 +18487,8 @@
               "n_ties": 0,
               "n_losses": 4,
               "win_rate": 0.5555555555555556,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 46,
@@ -18626,7 +18626,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -18657,7 +18657,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -18704,7 +18704,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -18735,8 +18735,8 @@
               "n_ties": 0,
               "n_losses": 4,
               "win_rate": 0.5555555555555556,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 45,
@@ -18874,7 +18874,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -18905,7 +18905,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -18952,7 +18952,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -18983,8 +18983,8 @@
               "n_ties": 0,
               "n_losses": 4,
               "win_rate": 0.5555555555555556,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 45,
@@ -19122,7 +19122,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -19153,7 +19153,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -19200,7 +19200,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -19231,8 +19231,8 @@
               "n_ties": 0,
               "n_losses": 4,
               "win_rate": 0.5555555555555556,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 50,
@@ -19370,7 +19370,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -19401,7 +19401,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -19448,7 +19448,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -19479,8 +19479,8 @@
               "n_ties": 0,
               "n_losses": 4,
               "win_rate": 0.5555555555555556,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 46,
@@ -19618,7 +19618,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -19649,7 +19649,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -19727,8 +19727,8 @@
               "n_ties": 0,
               "n_losses": 4,
               "win_rate": 0.5555555555555556,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 54,
@@ -19866,7 +19866,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -19897,7 +19897,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -19944,7 +19944,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -19975,8 +19975,8 @@
               "n_ties": 0,
               "n_losses": 4,
               "win_rate": 0.5555555555555556,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 45,
@@ -20114,7 +20114,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -20145,7 +20145,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -20192,7 +20192,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -20223,8 +20223,8 @@
               "n_ties": 0,
               "n_losses": 4,
               "win_rate": 0.5555555555555556,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 46,
@@ -20362,7 +20362,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -20393,7 +20393,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -20440,7 +20440,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -20610,7 +20610,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -20641,7 +20641,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -20688,7 +20688,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -20858,7 +20858,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -20889,7 +20889,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -20936,7 +20936,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -21028,7 +21028,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -21106,7 +21106,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -21137,7 +21137,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -21184,7 +21184,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.7142857142857143,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -21215,8 +21215,8 @@
               "n_ties": 0,
               "n_losses": 4,
               "win_rate": 0.5555555555555556,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 29,
@@ -21354,7 +21354,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -21385,7 +21385,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -21432,7 +21432,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -21463,7 +21463,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -21602,7 +21602,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -21633,7 +21633,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -21680,7 +21680,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -21711,8 +21711,8 @@
               "n_ties": 0,
               "n_losses": 4,
               "win_rate": 0.5555555555555556,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 43,
@@ -21850,7 +21850,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -21881,7 +21881,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -21928,7 +21928,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -22098,7 +22098,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -22129,7 +22129,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -22176,7 +22176,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -22346,7 +22346,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -22377,7 +22377,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -22424,7 +22424,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -22594,7 +22594,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -22625,7 +22625,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -22672,7 +22672,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -22764,7 +22764,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -22842,7 +22842,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -22873,7 +22873,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -22920,7 +22920,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.7142857142857143,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -23090,7 +23090,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -23121,7 +23121,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -23168,7 +23168,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -23338,7 +23338,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -23369,7 +23369,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -23416,7 +23416,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -23447,8 +23447,8 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.625,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 32,
@@ -23586,7 +23586,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -23617,7 +23617,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -23664,7 +23664,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -23695,8 +23695,8 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.625,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 32,
@@ -23834,7 +23834,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -23865,7 +23865,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -23912,7 +23912,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -24082,7 +24082,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -24113,7 +24113,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -24160,7 +24160,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -24191,8 +24191,8 @@
               "n_ties": 0,
               "n_losses": 4,
               "win_rate": 0.5555555555555556,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 41,
@@ -24252,7 +24252,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -24283,7 +24283,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -24330,7 +24330,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -24361,7 +24361,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -24408,7 +24408,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.7142857142857143,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -24439,8 +24439,8 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.6666666666666666,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 28,
@@ -24578,7 +24578,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -24609,7 +24609,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -24656,7 +24656,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -24687,8 +24687,8 @@
               "n_ties": 0,
               "n_losses": 4,
               "win_rate": 0.5555555555555556,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 34,
@@ -24826,7 +24826,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -24857,7 +24857,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -24904,7 +24904,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -24935,8 +24935,8 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.625,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 32,
@@ -25074,7 +25074,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -25105,7 +25105,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -25152,7 +25152,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -25183,8 +25183,8 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.625,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 32,
@@ -25322,7 +25322,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -25353,7 +25353,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -25400,7 +25400,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -25570,7 +25570,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -25601,7 +25601,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -25648,7 +25648,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -25679,8 +25679,8 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.625,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 32,
@@ -25740,7 +25740,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -25771,7 +25771,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -25818,7 +25818,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -25849,7 +25849,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -25896,8 +25896,8 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.75,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 29,
@@ -25927,8 +25927,8 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8888888888888888,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 79,
@@ -25988,7 +25988,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -26019,7 +26019,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -26066,7 +26066,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -26097,7 +26097,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -26144,7 +26144,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -26175,8 +26175,8 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.7777777777777778,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 18,
@@ -26267,7 +26267,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -26314,7 +26314,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -26345,7 +26345,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -26392,7 +26392,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.7142857142857143,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -26423,8 +26423,8 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.7777777777777778,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 47,
@@ -26515,7 +26515,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -26562,7 +26562,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -26593,7 +26593,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -26640,7 +26640,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.7142857142857143,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -26671,8 +26671,8 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.7777777777777778,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 32,
@@ -26841,7 +26841,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -26919,8 +26919,8 @@
               "n_ties": 0,
               "n_losses": 4,
               "win_rate": 0.5555555555555556,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 51,
@@ -26980,7 +26980,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -27089,7 +27089,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -27136,7 +27136,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -27167,8 +27167,8 @@
               "n_ties": 0,
               "n_losses": 4,
               "win_rate": 0.5555555555555556,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 32,
@@ -27306,7 +27306,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -27337,7 +27337,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -27384,7 +27384,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -27415,8 +27415,8 @@
               "n_ties": 0,
               "n_losses": 4,
               "win_rate": 0.5555555555555556,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 46,
@@ -27476,7 +27476,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -27554,7 +27554,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -27585,7 +27585,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -27632,7 +27632,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.7142857142857143,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -27663,8 +27663,8 @@
               "n_ties": 0,
               "n_losses": 4,
               "win_rate": 0.5555555555555556,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 29,
@@ -27972,7 +27972,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -28251,7 +28251,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -28298,7 +28298,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -28329,7 +28329,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -28376,7 +28376,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -28407,8 +28407,8 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.6666666666666666,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 46,
@@ -28546,7 +28546,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -28577,7 +28577,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -28624,7 +28624,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -28655,7 +28655,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -28794,7 +28794,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -28825,7 +28825,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -28872,7 +28872,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -29073,7 +29073,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -29321,7 +29321,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -29399,7 +29399,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -29460,7 +29460,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -29491,7 +29491,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -29538,7 +29538,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -29616,7 +29616,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8333333333333334,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -29708,7 +29708,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -29739,7 +29739,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -29786,7 +29786,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -29864,7 +29864,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -29956,7 +29956,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -30282,7 +30282,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -30313,7 +30313,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -30360,7 +30360,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -30391,7 +30391,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -30530,7 +30530,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -30561,7 +30561,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -30608,7 +30608,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -30639,7 +30639,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -30778,7 +30778,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -30809,7 +30809,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -30887,8 +30887,8 @@
               "n_ties": 0,
               "n_losses": 4,
               "win_rate": 0.5555555555555556,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 48,
@@ -30948,7 +30948,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -31026,7 +31026,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -31057,7 +31057,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -31104,7 +31104,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -31196,7 +31196,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -31227,7 +31227,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -31352,7 +31352,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -31383,7 +31383,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -31444,7 +31444,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -31475,7 +31475,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -31600,7 +31600,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -31631,7 +31631,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -31718,7 +31718,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -31749,7 +31749,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -31827,7 +31827,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -31874,8 +31874,8 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.625,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 20,
@@ -31905,8 +31905,8 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8888888888888888,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 47,
@@ -31966,7 +31966,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -31997,7 +31997,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -32075,7 +32075,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -32122,7 +32122,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -32153,8 +32153,8 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8888888888888888,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 35,
@@ -32710,7 +32710,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -32741,7 +32741,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -32819,7 +32819,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -32866,7 +32866,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -32897,8 +32897,8 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.625,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 47,
@@ -32958,7 +32958,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -33067,7 +33067,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -33114,7 +33114,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -33206,7 +33206,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -33237,7 +33237,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -33315,7 +33315,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -33362,7 +33362,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -33393,7 +33393,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -33485,7 +33485,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -33563,7 +33563,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -33641,8 +33641,8 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.75,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 47,
@@ -33811,7 +33811,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -33976,7 +33976,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -34007,7 +34007,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -34054,7 +34054,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -34085,7 +34085,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -34132,7 +34132,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8571428571428571,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -34163,8 +34163,8 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.7777777777777778,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 47,
@@ -34224,7 +34224,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -34255,7 +34255,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -34302,7 +34302,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -34333,7 +34333,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -34380,7 +34380,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8333333333333334,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -34411,7 +34411,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8571428571428571,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -34503,7 +34503,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -34550,7 +34550,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -34581,7 +34581,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -34628,7 +34628,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.7142857142857143,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -34659,8 +34659,8 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.7777777777777778,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 48,
@@ -34751,7 +34751,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -34798,7 +34798,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -34829,7 +34829,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -34876,7 +34876,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.7142857142857143,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -34907,8 +34907,8 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.7777777777777778,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 31,
@@ -34999,7 +34999,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -35046,7 +35046,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -35077,7 +35077,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -35124,7 +35124,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -35155,8 +35155,8 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.75,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 43,
@@ -35216,7 +35216,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -35247,7 +35247,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -35294,7 +35294,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -35325,7 +35325,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -35372,7 +35372,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -35403,7 +35403,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8333333333333334,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -35573,7 +35573,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -35651,8 +35651,8 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.625,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 46,
@@ -35821,7 +35821,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -35899,7 +35899,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -35960,7 +35960,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -36069,7 +36069,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -36116,7 +36116,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -36147,7 +36147,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -36208,7 +36208,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -36239,7 +36239,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -36286,7 +36286,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -36317,7 +36317,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -36364,7 +36364,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -36395,8 +36395,8 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.875,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 46,
@@ -36456,7 +36456,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -36487,7 +36487,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -36534,7 +36534,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -36565,7 +36565,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -36612,7 +36612,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -36643,7 +36643,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8571428571428571,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -36704,7 +36704,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -36735,7 +36735,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -36782,7 +36782,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -36813,7 +36813,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -36860,7 +36860,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.75,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -36891,7 +36891,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8333333333333334,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -36983,7 +36983,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -37200,7 +37200,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -37309,8 +37309,8 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.625,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 61,
@@ -37387,8 +37387,8 @@
               "n_ties": 0,
               "n_losses": 4,
               "win_rate": 0.5555555555555556,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 84,
@@ -37448,7 +37448,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -37479,7 +37479,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8333333333333334,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -37526,8 +37526,8 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.75,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 37,
@@ -37557,7 +37557,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -37604,8 +37604,8 @@
               "n_ties": 0,
               "n_losses": 5,
               "win_rate": 0.6666666666666666,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 82,
@@ -37635,8 +37635,8 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.7777777777777778,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 119,
@@ -37727,7 +37727,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -38022,7 +38022,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -38053,7 +38053,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -38100,7 +38100,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -38131,8 +38131,8 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.75,
-              "verdict": "CLEAR",
-              "clears_55": true,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
               "prints_55": true,
               "hit_h": {
                 "n": 52,
@@ -38192,7 +38192,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -38270,7 +38270,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -38348,7 +38348,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8333333333333334,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -38440,7 +38440,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -38596,7 +38596,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -39014,7 +39014,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -39092,7 +39092,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -39184,7 +39184,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -39262,7 +39262,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -39340,7 +39340,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -39510,7 +39510,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -39588,7 +39588,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -39758,7 +39758,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -39789,7 +39789,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -39928,7 +39928,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -39959,7 +39959,7 @@
               "n_ties": 0,
               "n_losses": 2,
               "win_rate": 0.6,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -40006,7 +40006,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -40084,7 +40084,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.8333333333333334,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -40254,7 +40254,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -40332,7 +40332,7 @@
               "n_ties": 0,
               "n_losses": 3,
               "win_rate": 0.5714285714285714,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -40502,7 +40502,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -40750,7 +40750,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -41011,7 +41011,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -41042,7 +41042,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -41089,7 +41089,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -41181,7 +41181,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -41259,7 +41259,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -41290,7 +41290,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -41337,7 +41337,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -41368,7 +41368,7 @@
               "n_ties": 0,
               "n_losses": 1,
               "win_rate": 0.6666666666666666,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -41689,7 +41689,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -41963,7 +41963,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -42211,7 +42211,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -42511,7 +42511,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -42902,7 +42902,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {
@@ -43267,7 +43267,7 @@
               "n_ties": 0,
               "n_losses": 0,
               "win_rate": 1.0,
-              "verdict": "PRINT",
+              "verdict": "PROVISIONAL",
               "clears_55": false,
               "prints_55": true,
               "hit_h": {

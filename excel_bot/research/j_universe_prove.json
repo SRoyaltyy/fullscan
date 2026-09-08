@@ -11,11 +11,4675 @@
     "n_ohlc_days": 619,
     "first": "2024-03-05",
     "last": "2026-08-21",
+    "long_fires": {
+      "ohlc_liq": {
+        "long": {
+          "n_days": 617,
+          "lo": "2024-03-06",
+          "hi": "2026-08-21",
+          "kinds": {
+            "unranked": {
+              "n_days": 617,
+              "n_base": 617367,
+              "avoid_J_ge0": {
+                "n_fires": 413,
+                "n_wins": 201,
+                "n_ties": 0,
+                "n_losses": 212,
+                "win_rate": 0.48668280871670705,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 298877,
+                  "hit": 0.4551604840787347,
+                  "n_pos": 136037
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": null,
+                "n_ties": null,
+                "n_losses": null,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": null,
+                "prints_55": null,
+                "hit_h": null,
+                "hit_i": null,
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+              }
+            },
+            "vol_top8": {
+              "n_days": 617,
+              "n_base": 2887,
+              "avoid_J_ge0": {
+                "n_fires": 406,
+                "n_wins": 217,
+                "n_ties": 0,
+                "n_losses": 189,
+                "win_rate": 0.5344827586206896,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 2569,
+                  "hit": 0.4527053328143246,
+                  "n_pos": 1163
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 279,
+                "n_wins": 156,
+                "n_ties": 0,
+                "n_losses": 123,
+                "win_rate": 0.5591397849462365,
+                "verdict": "CLEAR",
+                "clears_55": true,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 2887,
+                  "hit": 0.44821614132317283,
+                  "n_pos": 1294
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            },
+            "vol_top80": {
+              "n_days": 617,
+              "n_base": 22975,
+              "avoid_J_ge0": {
+                "n_fires": 413,
+                "n_wins": 209,
+                "n_ties": 0,
+                "n_losses": 204,
+                "win_rate": 0.5060532687651331,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 22657,
+                  "hit": 0.4493092642450457,
+                  "n_pos": 10180
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": 0,
+                "n_ties": 0,
+                "n_losses": 0,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 22975,
+                  "hit": 0.45257889009793256,
+                  "n_pos": 10398
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            },
+            "prior_green_unranked": {
+              "n_days": 617,
+              "n_base": 264322,
+              "avoid_J_ge0": {
+                "n_fires": 294,
+                "n_wins": 146,
+                "n_ties": 0,
+                "n_losses": 148,
+                "win_rate": 0.4965986394557823,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 37399,
+                  "hit": 0.47191101366346694,
+                  "n_pos": 17649
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": null,
+                "n_ties": null,
+                "n_losses": null,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": null,
+                "prints_55": null,
+                "hit_h": null,
+                "hit_i": null,
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+              }
+            },
+            "prior_green_top8": {
+              "n_days": 617,
+              "n_base": 2515,
+              "avoid_J_ge0": {
+                "n_fires": 294,
+                "n_wins": 158,
+                "n_ties": 0,
+                "n_losses": 136,
+                "win_rate": 0.5374149659863946,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 2263,
+                  "hit": 0.449403446752099,
+                  "n_pos": 1017
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 253,
+                "n_wins": 141,
+                "n_ties": 0,
+                "n_losses": 112,
+                "win_rate": 0.5573122529644269,
+                "verdict": "CLEAR",
+                "clears_55": true,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 2480,
+                  "hit": 0.4560483870967742,
+                  "n_pos": 1131
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            },
+            "prior_green_top80": {
+              "n_days": 617,
+              "n_base": 22531,
+              "avoid_J_ge0": {
+                "n_fires": 294,
+                "n_wins": 154,
+                "n_ties": 0,
+                "n_losses": 140,
+                "win_rate": 0.5238095238095238,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 19691,
+                  "hit": 0.45492864760550505,
+                  "n_pos": 8958
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": 0,
+                "n_ties": 0,
+                "n_losses": 0,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 22531,
+                  "hit": 0.4472060716346367,
+                  "n_pos": 10076
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            }
+          }
+        },
+        "y2025": {
+          "n_days": 250,
+          "lo": "2025-01-02",
+          "hi": "2025-12-31",
+          "kinds": {
+            "unranked": {
+              "n_days": 250,
+              "n_base": 243247,
+              "avoid_J_ge0": {
+                "n_fires": 172,
+                "n_wins": 88,
+                "n_ties": 0,
+                "n_losses": 84,
+                "win_rate": 0.5116279069767442,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 116611,
+                  "hit": 0.448619770004545,
+                  "n_pos": 52314
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": null,
+                "n_ties": null,
+                "n_losses": null,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": null,
+                "prints_55": null,
+                "hit_h": null,
+                "hit_i": null,
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+              }
+            },
+            "vol_top8": {
+              "n_days": 250,
+              "n_base": 1213,
+              "avoid_J_ge0": {
+                "n_fires": 167,
+                "n_wins": 86,
+                "n_ties": 0,
+                "n_losses": 81,
+                "win_rate": 0.5149700598802395,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 1084,
+                  "hit": 0.45202952029520294,
+                  "n_pos": 490
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 119,
+                "n_wins": 64,
+                "n_ties": 0,
+                "n_losses": 55,
+                "win_rate": 0.5378151260504201,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 1213,
+                  "hit": 0.4476504534212696,
+                  "n_pos": 543
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            },
+            "vol_top80": {
+              "n_days": 250,
+              "n_base": 9781,
+              "avoid_J_ge0": {
+                "n_fires": 172,
+                "n_wins": 88,
+                "n_ties": 0,
+                "n_losses": 84,
+                "win_rate": 0.5116279069767442,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 9652,
+                  "hit": 0.4336924989639453,
+                  "n_pos": 4186
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": 0,
+                "n_ties": 0,
+                "n_losses": 0,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 9781,
+                  "hit": 0.43625396176260095,
+                  "n_pos": 4267
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            },
+            "prior_green_unranked": {
+              "n_days": 250,
+              "n_base": 102839,
+              "avoid_J_ge0": {
+                "n_fires": 127,
+                "n_wins": 65,
+                "n_ties": 0,
+                "n_losses": 62,
+                "win_rate": 0.5118110236220472,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 11925,
+                  "hit": 0.4668343815513627,
+                  "n_pos": 5567
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": null,
+                "n_ties": null,
+                "n_losses": null,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": null,
+                "prints_55": null,
+                "hit_h": null,
+                "hit_i": null,
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+              }
+            },
+            "prior_green_top8": {
+              "n_days": 250,
+              "n_base": 1070,
+              "avoid_J_ge0": {
+                "n_fires": 127,
+                "n_wins": 60,
+                "n_ties": 0,
+                "n_losses": 67,
+                "win_rate": 0.47244094488188976,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 963,
+                  "hit": 0.42679127725856697,
+                  "n_pos": 411
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 100,
+                "n_wins": 53,
+                "n_ties": 0,
+                "n_losses": 47,
+                "win_rate": 0.53,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 1050,
+                  "hit": 0.43523809523809526,
+                  "n_pos": 457
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            },
+            "prior_green_top80": {
+              "n_days": 250,
+              "n_base": 9566,
+              "avoid_J_ge0": {
+                "n_fires": 127,
+                "n_wins": 67,
+                "n_ties": 0,
+                "n_losses": 60,
+                "win_rate": 0.5275590551181102,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 7767,
+                  "hit": 0.44251319685850393,
+                  "n_pos": 3437
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": 0,
+                "n_ties": 0,
+                "n_losses": 0,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 9566,
+                  "hit": 0.43048296048505125,
+                  "n_pos": 4118
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            }
+          }
+        },
+        "pre813": {
+          "n_days": 153,
+          "lo": "2026-01-02",
+          "hi": "2026-08-12",
+          "kinds": {
+            "unranked": {
+              "n_days": 153,
+              "n_base": 357809,
+              "avoid_J_ge0": {
+                "n_fires": 153,
+                "n_wins": 76,
+                "n_ties": 0,
+                "n_losses": 77,
+                "win_rate": 0.49673202614379086,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 174214,
+                  "hit": 0.4625632842366285,
+                  "n_pos": 80585
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": null,
+                "n_ties": null,
+                "n_losses": null,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": null,
+                "prints_55": null,
+                "hit_h": null,
+                "hit_i": null,
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+              }
+            },
+            "vol_top8": {
+              "n_days": 153,
+              "n_base": 1224,
+              "avoid_J_ge0": {
+                "n_fires": 151,
+                "n_wins": 92,
+                "n_ties": 0,
+                "n_losses": 59,
+                "win_rate": 0.609271523178808,
+                "verdict": "CLEAR",
+                "clears_55": true,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 1224,
+                  "hit": 0.4665032679738562,
+                  "n_pos": 571
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 153,
+                "n_wins": 87,
+                "n_ties": 0,
+                "n_losses": 66,
+                "win_rate": 0.5686274509803921,
+                "verdict": "CLEAR",
+                "clears_55": true,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 1224,
+                  "hit": 0.4616013071895425,
+                  "n_pos": 565
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            },
+            "vol_top80": {
+              "n_days": 153,
+              "n_base": 12240,
+              "avoid_J_ge0": {
+                "n_fires": 153,
+                "n_wins": 80,
+                "n_ties": 0,
+                "n_losses": 73,
+                "win_rate": 0.5228758169934641,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 12240,
+                  "hit": 0.46111111111111114,
+                  "n_pos": 5644
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": 0,
+                "n_ties": 0,
+                "n_losses": 0,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 12240,
+                  "hit": 0.4673202614379085,
+                  "n_pos": 5720
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            },
+            "prior_green_unranked": {
+              "n_days": 153,
+              "n_base": 155095,
+              "avoid_J_ge0": {
+                "n_fires": 153,
+                "n_wins": 71,
+                "n_ties": 0,
+                "n_losses": 82,
+                "win_rate": 0.46405228758169936,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 24495,
+                  "hit": 0.4790773627270872,
+                  "n_pos": 11735
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": null,
+                "n_ties": null,
+                "n_losses": null,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": null,
+                "prints_55": null,
+                "hit_h": null,
+                "hit_i": null,
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+              }
+            },
+            "prior_green_top8": {
+              "n_days": 153,
+              "n_base": 1224,
+              "avoid_J_ge0": {
+                "n_fires": 153,
+                "n_wins": 87,
+                "n_ties": 0,
+                "n_losses": 66,
+                "win_rate": 0.5686274509803921,
+                "verdict": "CLEAR",
+                "clears_55": true,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 1224,
+                  "hit": 0.46568627450980393,
+                  "n_pos": 570
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 146,
+                "n_wins": 83,
+                "n_ties": 0,
+                "n_losses": 63,
+                "win_rate": 0.5684931506849316,
+                "verdict": "CLEAR",
+                "clears_55": true,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 1210,
+                  "hit": 0.47768595041322315,
+                  "n_pos": 578
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            },
+            "prior_green_top80": {
+              "n_days": 153,
+              "n_base": 12240,
+              "avoid_J_ge0": {
+                "n_fires": 153,
+                "n_wins": 75,
+                "n_ties": 0,
+                "n_losses": 78,
+                "win_rate": 0.49019607843137253,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 11379,
+                  "hit": 0.46559451621407855,
+                  "n_pos": 5298
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": 0,
+                "n_ties": 0,
+                "n_losses": 0,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 12240,
+                  "hit": 0.4610294117647059,
+                  "n_pos": 5643
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            }
+          }
+        },
+        "post813_ohlc": {
+          "n_days": 6,
+          "lo": "2026-08-14",
+          "hi": "2026-08-21",
+          "kinds": {
+            "unranked": {
+              "n_days": 6,
+              "n_base": 13610,
+              "avoid_J_ge0": {
+                "n_fires": 6,
+                "n_wins": 2,
+                "n_ties": 0,
+                "n_losses": 4,
+                "win_rate": 0.3333333333333333,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 6763,
+                  "hit": 0.37217211296761793,
+                  "n_pos": 2517
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": null,
+                "n_ties": null,
+                "n_losses": null,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": null,
+                "prints_55": null,
+                "hit_h": null,
+                "hit_i": null,
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+              }
+            },
+            "vol_top8": {
+              "n_days": 6,
+              "n_base": 48,
+              "avoid_J_ge0": {
+                "n_fires": 6,
+                "n_wins": 4,
+                "n_ties": 0,
+                "n_losses": 2,
+                "win_rate": 0.6666666666666666,
+                "verdict": "PROVISIONAL",
+                "clears_55": false,
+                "prints_55": true,
+                "hit_h": {
+                  "n": 48,
+                  "hit": 0.3541666666666667,
+                  "n_pos": 17
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 6,
+                "n_wins": 4,
+                "n_ties": 0,
+                "n_losses": 2,
+                "win_rate": 0.6666666666666666,
+                "verdict": "PROVISIONAL",
+                "clears_55": false,
+                "prints_55": true,
+                "hit_h": {
+                  "n": 48,
+                  "hit": 0.4166666666666667,
+                  "n_pos": 20
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            },
+            "vol_top80": {
+              "n_days": 6,
+              "n_base": 480,
+              "avoid_J_ge0": {
+                "n_fires": 6,
+                "n_wins": 6,
+                "n_ties": 0,
+                "n_losses": 0,
+                "win_rate": 1.0,
+                "verdict": "PROVISIONAL",
+                "clears_55": false,
+                "prints_55": true,
+                "hit_h": {
+                  "n": 480,
+                  "hit": 0.4625,
+                  "n_pos": 222
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": 0,
+                "n_ties": 0,
+                "n_losses": 0,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 480,
+                  "hit": 0.42916666666666664,
+                  "n_pos": 206
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            },
+            "prior_green_unranked": {
+              "n_days": 6,
+              "n_base": 5348,
+              "avoid_J_ge0": {
+                "n_fires": 6,
+                "n_wins": 3,
+                "n_ties": 0,
+                "n_losses": 3,
+                "win_rate": 0.5,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 865,
+                  "hit": 0.33410404624277457,
+                  "n_pos": 289
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": null,
+                "n_ties": null,
+                "n_losses": null,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": null,
+                "prints_55": null,
+                "hit_h": null,
+                "hit_i": null,
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+              }
+            },
+            "prior_green_top8": {
+              "n_days": 6,
+              "n_base": 48,
+              "avoid_J_ge0": {
+                "n_fires": 6,
+                "n_wins": 4,
+                "n_ties": 0,
+                "n_losses": 2,
+                "win_rate": 0.6666666666666666,
+                "verdict": "PROVISIONAL",
+                "clears_55": false,
+                "prints_55": true,
+                "hit_h": {
+                  "n": 48,
+                  "hit": 0.4166666666666667,
+                  "n_pos": 20
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 6,
+                "n_wins": 4,
+                "n_ties": 0,
+                "n_losses": 2,
+                "win_rate": 0.6666666666666666,
+                "verdict": "PROVISIONAL",
+                "clears_55": false,
+                "prints_55": true,
+                "hit_h": {
+                  "n": 47,
+                  "hit": 0.44680851063829785,
+                  "n_pos": 21
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            },
+            "prior_green_top80": {
+              "n_days": 6,
+              "n_base": 480,
+              "avoid_J_ge0": {
+                "n_fires": 6,
+                "n_wins": 5,
+                "n_ties": 0,
+                "n_losses": 1,
+                "win_rate": 0.8333333333333334,
+                "verdict": "PROVISIONAL",
+                "clears_55": false,
+                "prints_55": true,
+                "hit_h": {
+                  "n": 445,
+                  "hit": 0.38202247191011235,
+                  "n_pos": 170
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": 0,
+                "n_ties": 0,
+                "n_losses": 0,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 480,
+                  "hit": 0.4125,
+                  "n_pos": 198
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            }
+          }
+        }
+      },
+      "mem_20260426": {
+        "long": {
+          "n_days": 279,
+          "lo": "2024-03-06",
+          "hi": "2026-08-21",
+          "kinds": {
+            "unranked": {
+              "n_days": 279,
+              "n_base": 2827171,
+              "avoid_J_ge0": {
+                "n_fires": 279,
+                "n_wins": 198,
+                "n_ties": 0,
+                "n_losses": 81,
+                "win_rate": 0.7096774193548387,
+                "verdict": "CLEAR",
+                "clears_55": true,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 1332777,
+                  "hit": 0.41232479251967885,
+                  "n_pos": 549537
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": null,
+                "n_ties": null,
+                "n_losses": null,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": null,
+                "prints_55": null,
+                "hit_h": null,
+                "hit_i": null,
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+              }
+            },
+            "vol_top8": {
+              "n_days": 279,
+              "n_base": 2232,
+              "avoid_J_ge0": {
+                "n_fires": 272,
+                "n_wins": 150,
+                "n_ties": 0,
+                "n_losses": 122,
+                "win_rate": 0.5514705882352942,
+                "verdict": "CLEAR",
+                "clears_55": true,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 2232,
+                  "hit": 0.4551971326164875,
+                  "n_pos": 1016
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 279,
+                "n_wins": 158,
+                "n_ties": 0,
+                "n_losses": 121,
+                "win_rate": 0.5663082437275986,
+                "verdict": "CLEAR",
+                "clears_55": true,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 2232,
+                  "hit": 0.45161290322580644,
+                  "n_pos": 1008
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            },
+            "vol_top80": {
+              "n_days": 279,
+              "n_base": 22320,
+              "avoid_J_ge0": {
+                "n_fires": 279,
+                "n_wins": 143,
+                "n_ties": 0,
+                "n_losses": 136,
+                "win_rate": 0.5125448028673835,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 22320,
+                  "hit": 0.4492831541218638,
+                  "n_pos": 10028
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": 0,
+                "n_ties": 0,
+                "n_losses": 0,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 22320,
+                  "hit": 0.4528225806451613,
+                  "n_pos": 10107
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            },
+            "prior_green_top8": {
+              "n_days": 279,
+              "n_base": 2224,
+              "avoid_J_ge0": {
+                "n_fires": 278,
+                "n_wins": 152,
+                "n_ties": 0,
+                "n_losses": 126,
+                "win_rate": 0.5467625899280576,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 2224,
+                  "hit": 0.4527877697841727,
+                  "n_pos": 1007
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 257,
+                "n_wins": 142,
+                "n_ties": 0,
+                "n_losses": 115,
+                "win_rate": 0.5525291828793775,
+                "verdict": "CLEAR",
+                "clears_55": true,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 2189,
+                  "hit": 0.4582000913659205,
+                  "n_pos": 1003
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            },
+            "prior_green_unranked": {
+              "n_days": 279,
+              "n_base": 1282569,
+              "avoid_J_ge0": {
+                "n_fires": 278,
+                "n_wins": 223,
+                "n_ties": 0,
+                "n_losses": 55,
+                "win_rate": 0.802158273381295,
+                "verdict": "CLEAR",
+                "clears_55": true,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 214966,
+                  "hit": 0.44692183880241526,
+                  "n_pos": 96073
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": null,
+                "n_ties": null,
+                "n_losses": null,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": null,
+                "prints_55": null,
+                "hit_h": null,
+                "hit_i": null,
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+              }
+            }
+          }
+        },
+        "y2025": {
+          "n_days": 119,
+          "lo": "2025-01-02",
+          "hi": "2025-12-31",
+          "kinds": {
+            "unranked": {
+              "n_days": 119,
+              "n_base": 1165302,
+              "avoid_J_ge0": {
+                "n_fires": 119,
+                "n_wins": 89,
+                "n_ties": 0,
+                "n_losses": 30,
+                "win_rate": 0.7478991596638656,
+                "verdict": "CLEAR",
+                "clears_55": true,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 546130,
+                  "hit": 0.4083551535348727,
+                  "n_pos": 223015
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": null,
+                "n_ties": null,
+                "n_losses": null,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": null,
+                "prints_55": null,
+                "hit_h": null,
+                "hit_i": null,
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+              }
+            },
+            "vol_top8": {
+              "n_days": 119,
+              "n_base": 952,
+              "avoid_J_ge0": {
+                "n_fires": 114,
+                "n_wins": 56,
+                "n_ties": 0,
+                "n_losses": 58,
+                "win_rate": 0.49122807017543857,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 952,
+                  "hit": 0.4474789915966387,
+                  "n_pos": 426
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 119,
+                "n_wins": 63,
+                "n_ties": 0,
+                "n_losses": 56,
+                "win_rate": 0.5294117647058824,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 952,
+                  "hit": 0.4422268907563025,
+                  "n_pos": 421
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            },
+            "vol_top80": {
+              "n_days": 119,
+              "n_base": 9520,
+              "avoid_J_ge0": {
+                "n_fires": 119,
+                "n_wins": 59,
+                "n_ties": 0,
+                "n_losses": 60,
+                "win_rate": 0.4957983193277311,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 9520,
+                  "hit": 0.43350840336134455,
+                  "n_pos": 4127
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": 0,
+                "n_ties": 0,
+                "n_losses": 0,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 9520,
+                  "hit": 0.43592436974789917,
+                  "n_pos": 4150
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            },
+            "prior_green_top8": {
+              "n_days": 119,
+              "n_base": 944,
+              "avoid_J_ge0": {
+                "n_fires": 118,
+                "n_wins": 63,
+                "n_ties": 0,
+                "n_losses": 55,
+                "win_rate": 0.5338983050847458,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 944,
+                  "hit": 0.4343220338983051,
+                  "n_pos": 410
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 103,
+                "n_wins": 56,
+                "n_ties": 0,
+                "n_losses": 47,
+                "win_rate": 0.5436893203883495,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 924,
+                  "hit": 0.43398268398268397,
+                  "n_pos": 401
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            },
+            "prior_green_unranked": {
+              "n_days": 119,
+              "n_base": 527550,
+              "avoid_J_ge0": {
+                "n_fires": 118,
+                "n_wins": 104,
+                "n_ties": 0,
+                "n_losses": 14,
+                "win_rate": 0.8813559322033898,
+                "verdict": "CLEAR",
+                "clears_55": true,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 78355,
+                  "hit": 0.4398953480952077,
+                  "n_pos": 34468
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": null,
+                "n_ties": null,
+                "n_losses": null,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": null,
+                "prints_55": null,
+                "hit_h": null,
+                "hit_i": null,
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+              }
+            }
+          }
+        },
+        "pre813": {
+          "n_days": 153,
+          "lo": "2026-01-02",
+          "hi": "2026-08-12",
+          "kinds": {
+            "unranked": {
+              "n_days": 153,
+              "n_base": 1587682,
+              "avoid_J_ge0": {
+                "n_fires": 153,
+                "n_wins": 104,
+                "n_ties": 0,
+                "n_losses": 49,
+                "win_rate": 0.6797385620915033,
+                "verdict": "CLEAR",
+                "clears_55": true,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 750330,
+                  "hit": 0.41935548358722163,
+                  "n_pos": 314655
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": null,
+                "n_ties": null,
+                "n_losses": null,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": null,
+                "prints_55": null,
+                "hit_h": null,
+                "hit_i": null,
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+              }
+            },
+            "vol_top8": {
+              "n_days": 153,
+              "n_base": 1224,
+              "avoid_J_ge0": {
+                "n_fires": 151,
+                "n_wins": 91,
+                "n_ties": 0,
+                "n_losses": 60,
+                "win_rate": 0.6026490066225165,
+                "verdict": "CLEAR",
+                "clears_55": true,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 1224,
+                  "hit": 0.46486928104575165,
+                  "n_pos": 569
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 153,
+                "n_wins": 90,
+                "n_ties": 0,
+                "n_losses": 63,
+                "win_rate": 0.5882352941176471,
+                "verdict": "CLEAR",
+                "clears_55": true,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 1224,
+                  "hit": 0.4616013071895425,
+                  "n_pos": 565
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            },
+            "vol_top80": {
+              "n_days": 153,
+              "n_base": 12240,
+              "avoid_J_ge0": {
+                "n_fires": 153,
+                "n_wins": 77,
+                "n_ties": 0,
+                "n_losses": 76,
+                "win_rate": 0.5032679738562091,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 12240,
+                  "hit": 0.46045751633986925,
+                  "n_pos": 5636
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": 0,
+                "n_ties": 0,
+                "n_losses": 0,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 12240,
+                  "hit": 0.46601307189542485,
+                  "n_pos": 5704
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            },
+            "prior_green_top8": {
+              "n_days": 153,
+              "n_base": 1224,
+              "avoid_J_ge0": {
+                "n_fires": 153,
+                "n_wins": 84,
+                "n_ties": 0,
+                "n_losses": 69,
+                "win_rate": 0.5490196078431373,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 1224,
+                  "hit": 0.46486928104575165,
+                  "n_pos": 569
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 147,
+                "n_wins": 81,
+                "n_ties": 0,
+                "n_losses": 66,
+                "win_rate": 0.5510204081632653,
+                "verdict": "CLEAR",
+                "clears_55": true,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 1210,
+                  "hit": 0.47520661157024796,
+                  "n_pos": 575
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            },
+            "prior_green_unranked": {
+              "n_days": 153,
+              "n_base": 725952,
+              "avoid_J_ge0": {
+                "n_fires": 153,
+                "n_wins": 113,
+                "n_ties": 0,
+                "n_losses": 40,
+                "win_rate": 0.738562091503268,
+                "verdict": "CLEAR",
+                "clears_55": true,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 131361,
+                  "hit": 0.4555537792799994,
+                  "n_pos": 59842
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": null,
+                "n_ties": null,
+                "n_losses": null,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": null,
+                "prints_55": null,
+                "hit_h": null,
+                "hit_i": null,
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+              }
+            }
+          }
+        },
+        "post813_ohlc": {
+          "n_days": 6,
+          "lo": "2026-08-14",
+          "hi": "2026-08-21",
+          "kinds": {
+            "unranked": {
+              "n_days": 6,
+              "n_base": 63535,
+              "avoid_J_ge0": {
+                "n_fires": 6,
+                "n_wins": 4,
+                "n_ties": 0,
+                "n_losses": 2,
+                "win_rate": 0.6666666666666666,
+                "verdict": "PROVISIONAL",
+                "clears_55": false,
+                "prints_55": true,
+                "hit_h": {
+                  "n": 32178,
+                  "hit": 0.3073839269065821,
+                  "n_pos": 9891
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": null,
+                "n_ties": null,
+                "n_losses": null,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": null,
+                "prints_55": null,
+                "hit_h": null,
+                "hit_i": null,
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+              }
+            },
+            "vol_top8": {
+              "n_days": 6,
+              "n_base": 48,
+              "avoid_J_ge0": {
+                "n_fires": 6,
+                "n_wins": 3,
+                "n_ties": 0,
+                "n_losses": 3,
+                "win_rate": 0.5,
+                "verdict": "FAIL",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 48,
+                  "hit": 0.3541666666666667,
+                  "n_pos": 17
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 6,
+                "n_wins": 4,
+                "n_ties": 0,
+                "n_losses": 2,
+                "win_rate": 0.6666666666666666,
+                "verdict": "PROVISIONAL",
+                "clears_55": false,
+                "prints_55": true,
+                "hit_h": {
+                  "n": 48,
+                  "hit": 0.375,
+                  "n_pos": 18
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            },
+            "vol_top80": {
+              "n_days": 6,
+              "n_base": 480,
+              "avoid_J_ge0": {
+                "n_fires": 6,
+                "n_wins": 6,
+                "n_ties": 0,
+                "n_losses": 0,
+                "win_rate": 1.0,
+                "verdict": "PROVISIONAL",
+                "clears_55": false,
+                "prints_55": true,
+                "hit_h": {
+                  "n": 480,
+                  "hit": 0.45416666666666666,
+                  "n_pos": 218
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": 0,
+                "n_ties": 0,
+                "n_losses": 0,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": false,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 480,
+                  "hit": 0.43333333333333335,
+                  "n_pos": 208
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            },
+            "prior_green_top8": {
+              "n_days": 6,
+              "n_base": 48,
+              "avoid_J_ge0": {
+                "n_fires": 6,
+                "n_wins": 4,
+                "n_ties": 0,
+                "n_losses": 2,
+                "win_rate": 0.6666666666666666,
+                "verdict": "PROVISIONAL",
+                "clears_55": false,
+                "prints_55": true,
+                "hit_h": {
+                  "n": 48,
+                  "hit": 0.4791666666666667,
+                  "n_pos": 23
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 6,
+                "n_wins": 4,
+                "n_ties": 0,
+                "n_losses": 2,
+                "win_rate": 0.6666666666666666,
+                "verdict": "PROVISIONAL",
+                "clears_55": false,
+                "prints_55": true,
+                "hit_h": {
+                  "n": 47,
+                  "hit": 0.48936170212765956,
+                  "n_pos": 23
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              }
+            },
+            "prior_green_unranked": {
+              "n_days": 6,
+              "n_base": 24896,
+              "avoid_J_ge0": {
+                "n_fires": 6,
+                "n_wins": 5,
+                "n_ties": 0,
+                "n_losses": 1,
+                "win_rate": 0.8333333333333334,
+                "verdict": "PROVISIONAL",
+                "clears_55": false,
+                "prints_55": true,
+                "hit_h": {
+                  "n": 4808,
+                  "hit": 0.3136439267886855,
+                  "n_pos": 1508
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": null,
+                "n_ties": null,
+                "n_losses": null,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": null,
+                "prints_55": null,
+                "hit_h": null,
+                "hit_i": null,
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+              }
+            }
+          }
+        }
+      },
+      "ohlc_all": {
+        "long": {
+          "n_days": 618,
+          "lo": "2024-03-06",
+          "hi": "2026-08-21",
+          "kinds": {
+            "unranked": {
+              "n_days": 618,
+              "n_base": 2891790,
+              "avoid_J_ge0": {
+                "n_fires": 542,
+                "n_wins": 333,
+                "n_ties": 0,
+                "n_losses": 209,
+                "win_rate": 0.6143911439114391,
+                "verdict": "CLEAR",
+                "clears_55": true,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 1363125,
+                  "hit": 0.4110606143970656,
+                  "n_pos": 560327
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": null,
+                "n_ties": null,
+                "n_losses": null,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": null,
+                "prints_55": null,
+                "hit_h": null,
+                "hit_i": null,
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+              }
+            }
+          }
+        },
+        "y2025": {
+          "n_days": 250,
+          "lo": "2025-01-02",
+          "hi": "2025-12-31",
+          "kinds": {
+            "unranked": {
+              "n_days": 250,
+              "n_base": 1178400,
+              "avoid_J_ge0": {
+                "n_fires": 218,
+                "n_wins": 142,
+                "n_ties": 0,
+                "n_losses": 76,
+                "win_rate": 0.6513761467889908,
+                "verdict": "CLEAR",
+                "clears_55": true,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 552198,
+                  "hit": 0.40855091833001933,
+                  "n_pos": 225601
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": null,
+                "n_ties": null,
+                "n_losses": null,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": null,
+                "prints_55": null,
+                "hit_h": null,
+                "hit_i": null,
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+              }
+            }
+          }
+        },
+        "pre813": {
+          "n_days": 153,
+          "lo": "2026-01-02",
+          "hi": "2026-08-12",
+          "kinds": {
+            "unranked": {
+              "n_days": 153,
+              "n_base": 1632105,
+              "avoid_J_ge0": {
+                "n_fires": 153,
+                "n_wins": 104,
+                "n_ties": 0,
+                "n_losses": 49,
+                "win_rate": 0.6797385620915033,
+                "verdict": "CLEAR",
+                "clears_55": true,
+                "prints_55": false,
+                "hit_h": {
+                  "n": 771148,
+                  "hit": 0.4173958825024509,
+                  "n_pos": 321874
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": null,
+                "n_ties": null,
+                "n_losses": null,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": null,
+                "prints_55": null,
+                "hit_h": null,
+                "hit_i": null,
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+              }
+            }
+          }
+        },
+        "post813_ohlc": {
+          "n_days": 6,
+          "lo": "2026-08-14",
+          "hi": "2026-08-21",
+          "kinds": {
+            "unranked": {
+              "n_days": 6,
+              "n_base": 68931,
+              "avoid_J_ge0": {
+                "n_fires": 6,
+                "n_wins": 4,
+                "n_ties": 0,
+                "n_losses": 2,
+                "win_rate": 0.6666666666666666,
+                "verdict": "PROVISIONAL",
+                "clears_55": false,
+                "prints_55": true,
+                "hit_h": {
+                  "n": 34969,
+                  "hit": 0.30324001258257316,
+                  "n_pos": 10604
+                },
+                "hit_i": {
+                  "n": 0,
+                  "hit": null,
+                  "n_pos": 0
+                },
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": null
+              },
+              "elev_cap2_J_le-1": {
+                "n_fires": 0,
+                "n_wins": null,
+                "n_ties": null,
+                "n_losses": null,
+                "win_rate": null,
+                "verdict": "null",
+                "clears_55": null,
+                "prints_55": null,
+                "hit_h": null,
+                "hit_i": null,
+                "min_fires": 30,
+                "bar": 0.55,
+                "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+              }
+            }
+          }
+        }
+      }
+    },
     "universe_names": [
       "ohlc_all",
       "ohlc_liq",
       "mem_20260426"
     ]
+  },
+  "long_fires": {
+    "ohlc_liq": {
+      "long": {
+        "n_days": 617,
+        "lo": "2024-03-06",
+        "hi": "2026-08-21",
+        "kinds": {
+          "unranked": {
+            "n_days": 617,
+            "n_base": 617367,
+            "avoid_J_ge0": {
+              "n_fires": 413,
+              "n_wins": 201,
+              "n_ties": 0,
+              "n_losses": 212,
+              "win_rate": 0.48668280871670705,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 298877,
+                "hit": 0.4551604840787347,
+                "n_pos": 136037
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": null,
+              "n_ties": null,
+              "n_losses": null,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": null,
+              "prints_55": null,
+              "hit_h": null,
+              "hit_i": null,
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+            }
+          },
+          "vol_top8": {
+            "n_days": 617,
+            "n_base": 2887,
+            "avoid_J_ge0": {
+              "n_fires": 406,
+              "n_wins": 217,
+              "n_ties": 0,
+              "n_losses": 189,
+              "win_rate": 0.5344827586206896,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2569,
+                "hit": 0.4527053328143246,
+                "n_pos": 1163
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 279,
+              "n_wins": 156,
+              "n_ties": 0,
+              "n_losses": 123,
+              "win_rate": 0.5591397849462365,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2887,
+                "hit": 0.44821614132317283,
+                "n_pos": 1294
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          },
+          "vol_top80": {
+            "n_days": 617,
+            "n_base": 22975,
+            "avoid_J_ge0": {
+              "n_fires": 413,
+              "n_wins": 209,
+              "n_ties": 0,
+              "n_losses": 204,
+              "win_rate": 0.5060532687651331,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 22657,
+                "hit": 0.4493092642450457,
+                "n_pos": 10180
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 22975,
+                "hit": 0.45257889009793256,
+                "n_pos": 10398
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          },
+          "prior_green_unranked": {
+            "n_days": 617,
+            "n_base": 264322,
+            "avoid_J_ge0": {
+              "n_fires": 294,
+              "n_wins": 146,
+              "n_ties": 0,
+              "n_losses": 148,
+              "win_rate": 0.4965986394557823,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 37399,
+                "hit": 0.47191101366346694,
+                "n_pos": 17649
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": null,
+              "n_ties": null,
+              "n_losses": null,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": null,
+              "prints_55": null,
+              "hit_h": null,
+              "hit_i": null,
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+            }
+          },
+          "prior_green_top8": {
+            "n_days": 617,
+            "n_base": 2515,
+            "avoid_J_ge0": {
+              "n_fires": 294,
+              "n_wins": 158,
+              "n_ties": 0,
+              "n_losses": 136,
+              "win_rate": 0.5374149659863946,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2263,
+                "hit": 0.449403446752099,
+                "n_pos": 1017
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 253,
+              "n_wins": 141,
+              "n_ties": 0,
+              "n_losses": 112,
+              "win_rate": 0.5573122529644269,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2480,
+                "hit": 0.4560483870967742,
+                "n_pos": 1131
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          },
+          "prior_green_top80": {
+            "n_days": 617,
+            "n_base": 22531,
+            "avoid_J_ge0": {
+              "n_fires": 294,
+              "n_wins": 154,
+              "n_ties": 0,
+              "n_losses": 140,
+              "win_rate": 0.5238095238095238,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 19691,
+                "hit": 0.45492864760550505,
+                "n_pos": 8958
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 22531,
+                "hit": 0.4472060716346367,
+                "n_pos": 10076
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          }
+        }
+      },
+      "y2025": {
+        "n_days": 250,
+        "lo": "2025-01-02",
+        "hi": "2025-12-31",
+        "kinds": {
+          "unranked": {
+            "n_days": 250,
+            "n_base": 243247,
+            "avoid_J_ge0": {
+              "n_fires": 172,
+              "n_wins": 88,
+              "n_ties": 0,
+              "n_losses": 84,
+              "win_rate": 0.5116279069767442,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 116611,
+                "hit": 0.448619770004545,
+                "n_pos": 52314
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": null,
+              "n_ties": null,
+              "n_losses": null,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": null,
+              "prints_55": null,
+              "hit_h": null,
+              "hit_i": null,
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+            }
+          },
+          "vol_top8": {
+            "n_days": 250,
+            "n_base": 1213,
+            "avoid_J_ge0": {
+              "n_fires": 167,
+              "n_wins": 86,
+              "n_ties": 0,
+              "n_losses": 81,
+              "win_rate": 0.5149700598802395,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1084,
+                "hit": 0.45202952029520294,
+                "n_pos": 490
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 119,
+              "n_wins": 64,
+              "n_ties": 0,
+              "n_losses": 55,
+              "win_rate": 0.5378151260504201,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1213,
+                "hit": 0.4476504534212696,
+                "n_pos": 543
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          },
+          "vol_top80": {
+            "n_days": 250,
+            "n_base": 9781,
+            "avoid_J_ge0": {
+              "n_fires": 172,
+              "n_wins": 88,
+              "n_ties": 0,
+              "n_losses": 84,
+              "win_rate": 0.5116279069767442,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 9652,
+                "hit": 0.4336924989639453,
+                "n_pos": 4186
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 9781,
+                "hit": 0.43625396176260095,
+                "n_pos": 4267
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          },
+          "prior_green_unranked": {
+            "n_days": 250,
+            "n_base": 102839,
+            "avoid_J_ge0": {
+              "n_fires": 127,
+              "n_wins": 65,
+              "n_ties": 0,
+              "n_losses": 62,
+              "win_rate": 0.5118110236220472,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 11925,
+                "hit": 0.4668343815513627,
+                "n_pos": 5567
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": null,
+              "n_ties": null,
+              "n_losses": null,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": null,
+              "prints_55": null,
+              "hit_h": null,
+              "hit_i": null,
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+            }
+          },
+          "prior_green_top8": {
+            "n_days": 250,
+            "n_base": 1070,
+            "avoid_J_ge0": {
+              "n_fires": 127,
+              "n_wins": 60,
+              "n_ties": 0,
+              "n_losses": 67,
+              "win_rate": 0.47244094488188976,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 963,
+                "hit": 0.42679127725856697,
+                "n_pos": 411
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 100,
+              "n_wins": 53,
+              "n_ties": 0,
+              "n_losses": 47,
+              "win_rate": 0.53,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1050,
+                "hit": 0.43523809523809526,
+                "n_pos": 457
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          },
+          "prior_green_top80": {
+            "n_days": 250,
+            "n_base": 9566,
+            "avoid_J_ge0": {
+              "n_fires": 127,
+              "n_wins": 67,
+              "n_ties": 0,
+              "n_losses": 60,
+              "win_rate": 0.5275590551181102,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 7767,
+                "hit": 0.44251319685850393,
+                "n_pos": 3437
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 9566,
+                "hit": 0.43048296048505125,
+                "n_pos": 4118
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          }
+        }
+      },
+      "pre813": {
+        "n_days": 153,
+        "lo": "2026-01-02",
+        "hi": "2026-08-12",
+        "kinds": {
+          "unranked": {
+            "n_days": 153,
+            "n_base": 357809,
+            "avoid_J_ge0": {
+              "n_fires": 153,
+              "n_wins": 76,
+              "n_ties": 0,
+              "n_losses": 77,
+              "win_rate": 0.49673202614379086,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 174214,
+                "hit": 0.4625632842366285,
+                "n_pos": 80585
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": null,
+              "n_ties": null,
+              "n_losses": null,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": null,
+              "prints_55": null,
+              "hit_h": null,
+              "hit_i": null,
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+            }
+          },
+          "vol_top8": {
+            "n_days": 153,
+            "n_base": 1224,
+            "avoid_J_ge0": {
+              "n_fires": 151,
+              "n_wins": 92,
+              "n_ties": 0,
+              "n_losses": 59,
+              "win_rate": 0.609271523178808,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4665032679738562,
+                "n_pos": 571
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 153,
+              "n_wins": 87,
+              "n_ties": 0,
+              "n_losses": 66,
+              "win_rate": 0.5686274509803921,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4616013071895425,
+                "n_pos": 565
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          },
+          "vol_top80": {
+            "n_days": 153,
+            "n_base": 12240,
+            "avoid_J_ge0": {
+              "n_fires": 153,
+              "n_wins": 80,
+              "n_ties": 0,
+              "n_losses": 73,
+              "win_rate": 0.5228758169934641,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 12240,
+                "hit": 0.46111111111111114,
+                "n_pos": 5644
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 12240,
+                "hit": 0.4673202614379085,
+                "n_pos": 5720
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          },
+          "prior_green_unranked": {
+            "n_days": 153,
+            "n_base": 155095,
+            "avoid_J_ge0": {
+              "n_fires": 153,
+              "n_wins": 71,
+              "n_ties": 0,
+              "n_losses": 82,
+              "win_rate": 0.46405228758169936,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 24495,
+                "hit": 0.4790773627270872,
+                "n_pos": 11735
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": null,
+              "n_ties": null,
+              "n_losses": null,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": null,
+              "prints_55": null,
+              "hit_h": null,
+              "hit_i": null,
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+            }
+          },
+          "prior_green_top8": {
+            "n_days": 153,
+            "n_base": 1224,
+            "avoid_J_ge0": {
+              "n_fires": 153,
+              "n_wins": 87,
+              "n_ties": 0,
+              "n_losses": 66,
+              "win_rate": 0.5686274509803921,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.46568627450980393,
+                "n_pos": 570
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 146,
+              "n_wins": 83,
+              "n_ties": 0,
+              "n_losses": 63,
+              "win_rate": 0.5684931506849316,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1210,
+                "hit": 0.47768595041322315,
+                "n_pos": 578
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          },
+          "prior_green_top80": {
+            "n_days": 153,
+            "n_base": 12240,
+            "avoid_J_ge0": {
+              "n_fires": 153,
+              "n_wins": 75,
+              "n_ties": 0,
+              "n_losses": 78,
+              "win_rate": 0.49019607843137253,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 11379,
+                "hit": 0.46559451621407855,
+                "n_pos": 5298
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 12240,
+                "hit": 0.4610294117647059,
+                "n_pos": 5643
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          }
+        }
+      },
+      "post813_ohlc": {
+        "n_days": 6,
+        "lo": "2026-08-14",
+        "hi": "2026-08-21",
+        "kinds": {
+          "unranked": {
+            "n_days": 6,
+            "n_base": 13610,
+            "avoid_J_ge0": {
+              "n_fires": 6,
+              "n_wins": 2,
+              "n_ties": 0,
+              "n_losses": 4,
+              "win_rate": 0.3333333333333333,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 6763,
+                "hit": 0.37217211296761793,
+                "n_pos": 2517
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": null,
+              "n_ties": null,
+              "n_losses": null,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": null,
+              "prints_55": null,
+              "hit_h": null,
+              "hit_i": null,
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+            }
+          },
+          "vol_top8": {
+            "n_days": 6,
+            "n_base": 48,
+            "avoid_J_ge0": {
+              "n_fires": 6,
+              "n_wins": 4,
+              "n_ties": 0,
+              "n_losses": 2,
+              "win_rate": 0.6666666666666666,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
+              "prints_55": true,
+              "hit_h": {
+                "n": 48,
+                "hit": 0.3541666666666667,
+                "n_pos": 17
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 6,
+              "n_wins": 4,
+              "n_ties": 0,
+              "n_losses": 2,
+              "win_rate": 0.6666666666666666,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
+              "prints_55": true,
+              "hit_h": {
+                "n": 48,
+                "hit": 0.4166666666666667,
+                "n_pos": 20
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          },
+          "vol_top80": {
+            "n_days": 6,
+            "n_base": 480,
+            "avoid_J_ge0": {
+              "n_fires": 6,
+              "n_wins": 6,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": 1.0,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
+              "prints_55": true,
+              "hit_h": {
+                "n": 480,
+                "hit": 0.4625,
+                "n_pos": 222
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 480,
+                "hit": 0.42916666666666664,
+                "n_pos": 206
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          },
+          "prior_green_unranked": {
+            "n_days": 6,
+            "n_base": 5348,
+            "avoid_J_ge0": {
+              "n_fires": 6,
+              "n_wins": 3,
+              "n_ties": 0,
+              "n_losses": 3,
+              "win_rate": 0.5,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 865,
+                "hit": 0.33410404624277457,
+                "n_pos": 289
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": null,
+              "n_ties": null,
+              "n_losses": null,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": null,
+              "prints_55": null,
+              "hit_h": null,
+              "hit_i": null,
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+            }
+          },
+          "prior_green_top8": {
+            "n_days": 6,
+            "n_base": 48,
+            "avoid_J_ge0": {
+              "n_fires": 6,
+              "n_wins": 4,
+              "n_ties": 0,
+              "n_losses": 2,
+              "win_rate": 0.6666666666666666,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
+              "prints_55": true,
+              "hit_h": {
+                "n": 48,
+                "hit": 0.4166666666666667,
+                "n_pos": 20
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 6,
+              "n_wins": 4,
+              "n_ties": 0,
+              "n_losses": 2,
+              "win_rate": 0.6666666666666666,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
+              "prints_55": true,
+              "hit_h": {
+                "n": 47,
+                "hit": 0.44680851063829785,
+                "n_pos": 21
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          },
+          "prior_green_top80": {
+            "n_days": 6,
+            "n_base": 480,
+            "avoid_J_ge0": {
+              "n_fires": 6,
+              "n_wins": 5,
+              "n_ties": 0,
+              "n_losses": 1,
+              "win_rate": 0.8333333333333334,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
+              "prints_55": true,
+              "hit_h": {
+                "n": 445,
+                "hit": 0.38202247191011235,
+                "n_pos": 170
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 480,
+                "hit": 0.4125,
+                "n_pos": 198
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          }
+        }
+      }
+    },
+    "mem_20260426": {
+      "long": {
+        "n_days": 279,
+        "lo": "2024-03-06",
+        "hi": "2026-08-21",
+        "kinds": {
+          "unranked": {
+            "n_days": 279,
+            "n_base": 2827171,
+            "avoid_J_ge0": {
+              "n_fires": 279,
+              "n_wins": 198,
+              "n_ties": 0,
+              "n_losses": 81,
+              "win_rate": 0.7096774193548387,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1332777,
+                "hit": 0.41232479251967885,
+                "n_pos": 549537
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": null,
+              "n_ties": null,
+              "n_losses": null,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": null,
+              "prints_55": null,
+              "hit_h": null,
+              "hit_i": null,
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+            }
+          },
+          "vol_top8": {
+            "n_days": 279,
+            "n_base": 2232,
+            "avoid_J_ge0": {
+              "n_fires": 272,
+              "n_wins": 150,
+              "n_ties": 0,
+              "n_losses": 122,
+              "win_rate": 0.5514705882352942,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2232,
+                "hit": 0.4551971326164875,
+                "n_pos": 1016
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 279,
+              "n_wins": 158,
+              "n_ties": 0,
+              "n_losses": 121,
+              "win_rate": 0.5663082437275986,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2232,
+                "hit": 0.45161290322580644,
+                "n_pos": 1008
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          },
+          "vol_top80": {
+            "n_days": 279,
+            "n_base": 22320,
+            "avoid_J_ge0": {
+              "n_fires": 279,
+              "n_wins": 143,
+              "n_ties": 0,
+              "n_losses": 136,
+              "win_rate": 0.5125448028673835,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 22320,
+                "hit": 0.4492831541218638,
+                "n_pos": 10028
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 22320,
+                "hit": 0.4528225806451613,
+                "n_pos": 10107
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          },
+          "prior_green_top8": {
+            "n_days": 279,
+            "n_base": 2224,
+            "avoid_J_ge0": {
+              "n_fires": 278,
+              "n_wins": 152,
+              "n_ties": 0,
+              "n_losses": 126,
+              "win_rate": 0.5467625899280576,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2224,
+                "hit": 0.4527877697841727,
+                "n_pos": 1007
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 257,
+              "n_wins": 142,
+              "n_ties": 0,
+              "n_losses": 115,
+              "win_rate": 0.5525291828793775,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2189,
+                "hit": 0.4582000913659205,
+                "n_pos": 1003
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          },
+          "prior_green_unranked": {
+            "n_days": 279,
+            "n_base": 1282569,
+            "avoid_J_ge0": {
+              "n_fires": 278,
+              "n_wins": 223,
+              "n_ties": 0,
+              "n_losses": 55,
+              "win_rate": 0.802158273381295,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 214966,
+                "hit": 0.44692183880241526,
+                "n_pos": 96073
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": null,
+              "n_ties": null,
+              "n_losses": null,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": null,
+              "prints_55": null,
+              "hit_h": null,
+              "hit_i": null,
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+            }
+          }
+        }
+      },
+      "y2025": {
+        "n_days": 119,
+        "lo": "2025-01-02",
+        "hi": "2025-12-31",
+        "kinds": {
+          "unranked": {
+            "n_days": 119,
+            "n_base": 1165302,
+            "avoid_J_ge0": {
+              "n_fires": 119,
+              "n_wins": 89,
+              "n_ties": 0,
+              "n_losses": 30,
+              "win_rate": 0.7478991596638656,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 546130,
+                "hit": 0.4083551535348727,
+                "n_pos": 223015
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": null,
+              "n_ties": null,
+              "n_losses": null,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": null,
+              "prints_55": null,
+              "hit_h": null,
+              "hit_i": null,
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+            }
+          },
+          "vol_top8": {
+            "n_days": 119,
+            "n_base": 952,
+            "avoid_J_ge0": {
+              "n_fires": 114,
+              "n_wins": 56,
+              "n_ties": 0,
+              "n_losses": 58,
+              "win_rate": 0.49122807017543857,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 952,
+                "hit": 0.4474789915966387,
+                "n_pos": 426
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 119,
+              "n_wins": 63,
+              "n_ties": 0,
+              "n_losses": 56,
+              "win_rate": 0.5294117647058824,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 952,
+                "hit": 0.4422268907563025,
+                "n_pos": 421
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          },
+          "vol_top80": {
+            "n_days": 119,
+            "n_base": 9520,
+            "avoid_J_ge0": {
+              "n_fires": 119,
+              "n_wins": 59,
+              "n_ties": 0,
+              "n_losses": 60,
+              "win_rate": 0.4957983193277311,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 9520,
+                "hit": 0.43350840336134455,
+                "n_pos": 4127
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 9520,
+                "hit": 0.43592436974789917,
+                "n_pos": 4150
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          },
+          "prior_green_top8": {
+            "n_days": 119,
+            "n_base": 944,
+            "avoid_J_ge0": {
+              "n_fires": 118,
+              "n_wins": 63,
+              "n_ties": 0,
+              "n_losses": 55,
+              "win_rate": 0.5338983050847458,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 944,
+                "hit": 0.4343220338983051,
+                "n_pos": 410
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 103,
+              "n_wins": 56,
+              "n_ties": 0,
+              "n_losses": 47,
+              "win_rate": 0.5436893203883495,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 924,
+                "hit": 0.43398268398268397,
+                "n_pos": 401
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          },
+          "prior_green_unranked": {
+            "n_days": 119,
+            "n_base": 527550,
+            "avoid_J_ge0": {
+              "n_fires": 118,
+              "n_wins": 104,
+              "n_ties": 0,
+              "n_losses": 14,
+              "win_rate": 0.8813559322033898,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 78355,
+                "hit": 0.4398953480952077,
+                "n_pos": 34468
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": null,
+              "n_ties": null,
+              "n_losses": null,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": null,
+              "prints_55": null,
+              "hit_h": null,
+              "hit_i": null,
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+            }
+          }
+        }
+      },
+      "pre813": {
+        "n_days": 153,
+        "lo": "2026-01-02",
+        "hi": "2026-08-12",
+        "kinds": {
+          "unranked": {
+            "n_days": 153,
+            "n_base": 1587682,
+            "avoid_J_ge0": {
+              "n_fires": 153,
+              "n_wins": 104,
+              "n_ties": 0,
+              "n_losses": 49,
+              "win_rate": 0.6797385620915033,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 750330,
+                "hit": 0.41935548358722163,
+                "n_pos": 314655
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": null,
+              "n_ties": null,
+              "n_losses": null,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": null,
+              "prints_55": null,
+              "hit_h": null,
+              "hit_i": null,
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+            }
+          },
+          "vol_top8": {
+            "n_days": 153,
+            "n_base": 1224,
+            "avoid_J_ge0": {
+              "n_fires": 151,
+              "n_wins": 91,
+              "n_ties": 0,
+              "n_losses": 60,
+              "win_rate": 0.6026490066225165,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.46486928104575165,
+                "n_pos": 569
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 153,
+              "n_wins": 90,
+              "n_ties": 0,
+              "n_losses": 63,
+              "win_rate": 0.5882352941176471,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4616013071895425,
+                "n_pos": 565
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          },
+          "vol_top80": {
+            "n_days": 153,
+            "n_base": 12240,
+            "avoid_J_ge0": {
+              "n_fires": 153,
+              "n_wins": 77,
+              "n_ties": 0,
+              "n_losses": 76,
+              "win_rate": 0.5032679738562091,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 12240,
+                "hit": 0.46045751633986925,
+                "n_pos": 5636
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 12240,
+                "hit": 0.46601307189542485,
+                "n_pos": 5704
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          },
+          "prior_green_top8": {
+            "n_days": 153,
+            "n_base": 1224,
+            "avoid_J_ge0": {
+              "n_fires": 153,
+              "n_wins": 84,
+              "n_ties": 0,
+              "n_losses": 69,
+              "win_rate": 0.5490196078431373,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.46486928104575165,
+                "n_pos": 569
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 147,
+              "n_wins": 81,
+              "n_ties": 0,
+              "n_losses": 66,
+              "win_rate": 0.5510204081632653,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1210,
+                "hit": 0.47520661157024796,
+                "n_pos": 575
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          },
+          "prior_green_unranked": {
+            "n_days": 153,
+            "n_base": 725952,
+            "avoid_J_ge0": {
+              "n_fires": 153,
+              "n_wins": 113,
+              "n_ties": 0,
+              "n_losses": 40,
+              "win_rate": 0.738562091503268,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 131361,
+                "hit": 0.4555537792799994,
+                "n_pos": 59842
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": null,
+              "n_ties": null,
+              "n_losses": null,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": null,
+              "prints_55": null,
+              "hit_h": null,
+              "hit_i": null,
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+            }
+          }
+        }
+      },
+      "post813_ohlc": {
+        "n_days": 6,
+        "lo": "2026-08-14",
+        "hi": "2026-08-21",
+        "kinds": {
+          "unranked": {
+            "n_days": 6,
+            "n_base": 63535,
+            "avoid_J_ge0": {
+              "n_fires": 6,
+              "n_wins": 4,
+              "n_ties": 0,
+              "n_losses": 2,
+              "win_rate": 0.6666666666666666,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
+              "prints_55": true,
+              "hit_h": {
+                "n": 32178,
+                "hit": 0.3073839269065821,
+                "n_pos": 9891
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": null,
+              "n_ties": null,
+              "n_losses": null,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": null,
+              "prints_55": null,
+              "hit_h": null,
+              "hit_i": null,
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+            }
+          },
+          "vol_top8": {
+            "n_days": 6,
+            "n_base": 48,
+            "avoid_J_ge0": {
+              "n_fires": 6,
+              "n_wins": 3,
+              "n_ties": 0,
+              "n_losses": 3,
+              "win_rate": 0.5,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 48,
+                "hit": 0.3541666666666667,
+                "n_pos": 17
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 6,
+              "n_wins": 4,
+              "n_ties": 0,
+              "n_losses": 2,
+              "win_rate": 0.6666666666666666,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
+              "prints_55": true,
+              "hit_h": {
+                "n": 48,
+                "hit": 0.375,
+                "n_pos": 18
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          },
+          "vol_top80": {
+            "n_days": 6,
+            "n_base": 480,
+            "avoid_J_ge0": {
+              "n_fires": 6,
+              "n_wins": 6,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": 1.0,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
+              "prints_55": true,
+              "hit_h": {
+                "n": 480,
+                "hit": 0.45416666666666666,
+                "n_pos": 218
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 480,
+                "hit": 0.43333333333333335,
+                "n_pos": 208
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          },
+          "prior_green_top8": {
+            "n_days": 6,
+            "n_base": 48,
+            "avoid_J_ge0": {
+              "n_fires": 6,
+              "n_wins": 4,
+              "n_ties": 0,
+              "n_losses": 2,
+              "win_rate": 0.6666666666666666,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
+              "prints_55": true,
+              "hit_h": {
+                "n": 48,
+                "hit": 0.4791666666666667,
+                "n_pos": 23
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 6,
+              "n_wins": 4,
+              "n_ties": 0,
+              "n_losses": 2,
+              "win_rate": 0.6666666666666666,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
+              "prints_55": true,
+              "hit_h": {
+                "n": 47,
+                "hit": 0.48936170212765956,
+                "n_pos": 23
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          },
+          "prior_green_unranked": {
+            "n_days": 6,
+            "n_base": 24896,
+            "avoid_J_ge0": {
+              "n_fires": 6,
+              "n_wins": 5,
+              "n_ties": 0,
+              "n_losses": 1,
+              "win_rate": 0.8333333333333334,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
+              "prints_55": true,
+              "hit_h": {
+                "n": 4808,
+                "hit": 0.3136439267886855,
+                "n_pos": 1508
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": null,
+              "n_ties": null,
+              "n_losses": null,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": null,
+              "prints_55": null,
+              "hit_h": null,
+              "hit_i": null,
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+            }
+          }
+        }
+      }
+    },
+    "ohlc_all": {
+      "long": {
+        "n_days": 618,
+        "lo": "2024-03-06",
+        "hi": "2026-08-21",
+        "kinds": {
+          "unranked": {
+            "n_days": 618,
+            "n_base": 2891790,
+            "avoid_J_ge0": {
+              "n_fires": 542,
+              "n_wins": 333,
+              "n_ties": 0,
+              "n_losses": 209,
+              "win_rate": 0.6143911439114391,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1363125,
+                "hit": 0.4110606143970656,
+                "n_pos": 560327
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": null,
+              "n_ties": null,
+              "n_losses": null,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": null,
+              "prints_55": null,
+              "hit_h": null,
+              "hit_i": null,
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+            }
+          }
+        }
+      },
+      "y2025": {
+        "n_days": 250,
+        "lo": "2025-01-02",
+        "hi": "2025-12-31",
+        "kinds": {
+          "unranked": {
+            "n_days": 250,
+            "n_base": 1178400,
+            "avoid_J_ge0": {
+              "n_fires": 218,
+              "n_wins": 142,
+              "n_ties": 0,
+              "n_losses": 76,
+              "win_rate": 0.6513761467889908,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 552198,
+                "hit": 0.40855091833001933,
+                "n_pos": 225601
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": null,
+              "n_ties": null,
+              "n_losses": null,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": null,
+              "prints_55": null,
+              "hit_h": null,
+              "hit_i": null,
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+            }
+          }
+        }
+      },
+      "pre813": {
+        "n_days": 153,
+        "lo": "2026-01-02",
+        "hi": "2026-08-12",
+        "kinds": {
+          "unranked": {
+            "n_days": 153,
+            "n_base": 1632105,
+            "avoid_J_ge0": {
+              "n_fires": 153,
+              "n_wins": 104,
+              "n_ties": 0,
+              "n_losses": 49,
+              "win_rate": 0.6797385620915033,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 771148,
+                "hit": 0.4173958825024509,
+                "n_pos": 321874
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": null,
+              "n_ties": null,
+              "n_losses": null,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": null,
+              "prints_55": null,
+              "hit_h": null,
+              "hit_i": null,
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+            }
+          }
+        }
+      },
+      "post813_ohlc": {
+        "n_days": 6,
+        "lo": "2026-08-14",
+        "hi": "2026-08-21",
+        "kinds": {
+          "unranked": {
+            "n_days": 6,
+            "n_base": 68931,
+            "avoid_J_ge0": {
+              "n_fires": 6,
+              "n_wins": 4,
+              "n_ties": 0,
+              "n_losses": 2,
+              "win_rate": 0.6666666666666666,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
+              "prints_55": true,
+              "hit_h": {
+                "n": 34969,
+                "hit": 0.30324001258257316,
+                "n_pos": 10604
+              },
+              "hit_i": {
+                "n": 0,
+                "hit": null,
+                "n_pos": 0
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 0,
+              "n_wins": null,
+              "n_ties": null,
+              "n_losses": null,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": null,
+              "prints_55": null,
+              "hit_h": null,
+              "hit_i": null,
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": "elev_cap2 needs a ranked book; unranked is avoid-only"
+            }
+          }
+        }
+      }
+    }
   },
   "finviz_slices": {
     "discovery": [
@@ -30,6 +4694,11 @@
       "2026-08-14",
       "2026-09-07"
     ]
+  },
+  "fire_bar": {
+    "win": ">55% of fire days beat the same-day no-rule book after fees",
+    "min_fires": 30,
+    "fee_caveat": "After-fee H is the equal-weight day-mean minus 15 bp Futubull, not dollar-weighted."
   },
   "universes": {
     "join_full": {
