@@ -16857,13 +16857,13 @@
         "S4_ETF_TAPE": 0.0
       },
       "leading_sum": 1.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 168.2899932861328,
+      "actual_close": 167.1300048828125,
+      "actual_pct_change": -2.5196804562987674,
+      "actual_direction": "down",
+      "actual_magnitude_band": "severe",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
@@ -16897,7 +16897,9 @@
       },
       "sector": "Healthcare",
       "etf": "XLV",
-      "rubric": "00_grounding/sectors/healthcare.md"
+      "rubric": "00_grounding/sectors/healthcare.md",
+      "spy_pct_change": -0.5492125910932955,
+      "rel_pct_change": -1.970467865205472
     },
     {
       "date": "2026-09-08",
