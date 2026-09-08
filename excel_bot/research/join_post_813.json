@@ -1,0 +1,942 @@
+{
+  "generated": "2026-09-08",
+  "family": "KEEP",
+  "plain": "On the post-2026-08-13 window, joining Excel open-gate numbers (J / AH / ER / FQ / JB / JC and H/I/J/G lags) onto the morning join rank **does** beat fullscan-alone. Best Excel KEEP `avoid_J_ge0` holdout H +0.50% vs join top-8 -0.01% (+0.51 pp, n=121). avoid_incomplete is a fullscan-only control (not Excel). Live flatten_robust stays frozen.",
+  "gate": {
+    "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
+    "fill_open": [
+      "A",
+      "B",
+      "C",
+      "G",
+      "J",
+      "K",
+      "L",
+      "M",
+      "O",
+      "IR",
+      "IS",
+      "IT"
+    ],
+    "value_mine_open": [
+      "A",
+      "C",
+      "J",
+      "Q",
+      "Z",
+      "AC",
+      "AH",
+      "BT",
+      "BV",
+      "CG",
+      "CH",
+      "DC",
+      "DE",
+      "EB",
+      "EK",
+      "EN",
+      "EP",
+      "EQ",
+      "ER",
+      "ES",
+      "ET",
+      "EU",
+      "EV",
+      "FQ",
+      "FR",
+      "FS",
+      "FU",
+      "GD",
+      "GE",
+      "GF",
+      "HF",
+      "HG",
+      "HW",
+      "II",
+      "IR",
+      "IT",
+      "IY",
+      "IZ",
+      "JB",
+      "JC",
+      "JD",
+      "JE",
+      "JF",
+      "JL"
+    ],
+    "value_out_same_row": [
+      "B",
+      "G",
+      "K",
+      "M",
+      "O",
+      "L",
+      "D",
+      "E",
+      "F",
+      "H",
+      "I",
+      "N",
+      "AA"
+    ],
+    "core_score": "close",
+    "m_number": "close",
+    "lags": "any letter from rows above",
+    "live_untouched": "flatten_robust"
+  },
+  "hold_cut": "2026-08-13",
+  "primary_label": "same-day H (Finviz Change from Open) \u2212 15 bp Futubull",
+  "secondary_label": "feature_asof ret_1d; flatten ret_pct",
+  "fullscan_features": [
+    "join rank / total_score / families_known (same-day ranked.csv)",
+    "prior-day stock_book 1d buy (PIT)",
+    "feature_asof join_good / blue / ab_good (morning, when present)",
+    "flatten_robust tickets (overlay only)"
+  ],
+  "excel_features": [
+    "J, AH, ER, FQ, JB, JC (44, same-row open)",
+    "H[t-1], I[t-1], J[t-1], G[t-1] (lags)"
+  ],
+  "excel_not_joined": [
+    "open fills A B C G J K L M O IR IS IT (no grid on disk)",
+    "CE/CD (need 43d High/Low)",
+    "M #95CA82 / O green / five-cell light"
+  ],
+  "n_panel": 129045,
+  "n_join_days": 18,
+  "first_day": "2026-08-14",
+  "last_day": "2026-09-07",
+  "n_fz_dates": 22,
+  "fz_first": "2026-04-26",
+  "fz_last": "2026-09-07",
+  "baseline": {
+    "name": "join_top8",
+    "kind": "baseline",
+    "verdict": "KILL",
+    "fail_reasons": [
+      "hold_sign",
+      "ghost:month_split",
+      "spy_tape"
+    ],
+    "n": 144,
+    "n_tickers": 88,
+    "n_dates": 18,
+    "holdout_mean": -9.65277777777783e-05,
+    "t": -0.05045299647152918,
+    "vs_fullscan_pp": null,
+    "win": 0.4375,
+    "ghost": {
+      "name": "PASS",
+      "month": "FAIL",
+      "day": "PASS",
+      "reasons": [
+        "month_split"
+      ],
+      "pass": false,
+      "n_tickers": 88,
+      "n_dates": 18,
+      "top_name": "PR",
+      "top_name_n": 5
+    },
+    "tapes": {
+      "up": {
+        "n": 48,
+        "mean": 0.0030229166666666664
+      },
+      "dn": {
+        "n": 88,
+        "mean": -0.001105681818181819
+      },
+      "enough": true
+    },
+    "asof_1d_mean": 0.004674062499999999,
+    "asof_1d_n": 32,
+    "notes": "fullscan-alone morning rank",
+    "live_untouched": "flatten_robust"
+  },
+  "baseline15": {
+    "name": "join_top15",
+    "kind": "baseline",
+    "verdict": "KILL",
+    "fail_reasons": [
+      "hold_sign",
+      "ghost:month_split",
+      "spy_tape"
+    ],
+    "n": 270,
+    "n_tickers": 162,
+    "n_dates": 18,
+    "holdout_mean": -0.0008829629629629633,
+    "t": -0.6068889686990221,
+    "vs_fullscan_pp": null,
+    "win": 0.44814814814814813,
+    "ghost": {
+      "name": "PASS",
+      "month": "FAIL",
+      "day": "PASS",
+      "reasons": [
+        "month_split"
+      ],
+      "pass": false,
+      "n_tickers": 162,
+      "n_dates": 18,
+      "top_name": "REGN",
+      "top_name_n": 7
+    },
+    "tapes": {
+      "up": {
+        "n": 90,
+        "mean": 0.0023377777777777776
+      },
+      "dn": {
+        "n": 165,
+        "mean": -0.0027018181818181824
+      },
+      "enough": true
+    },
+    "asof_1d_mean": 0.0025650819672131137,
+    "asof_1d_n": 61,
+    "notes": "",
+    "live_untouched": "flatten_robust"
+  },
+  "recipes": [
+    {
+      "name": "avoid_J_ge1",
+      "kind": "avoid",
+      "verdict": "KILL",
+      "fail_reasons": [
+        "no_edge_vs_fullscan"
+      ],
+      "n": 144,
+      "n_tickers": 100,
+      "n_dates": 18,
+      "holdout_mean": 0.0016604166666666662,
+      "t": 0.807814238651422,
+      "vs_fullscan_pp": 0.17569444444444443,
+      "win": 0.4513888888888889,
+      "ghost": {
+        "name": "PASS",
+        "month": "PASS",
+        "day": "PASS",
+        "reasons": [],
+        "pass": true,
+        "n_tickers": 100,
+        "n_dates": 18,
+        "top_name": "REGN",
+        "top_name_n": 4
+      },
+      "tapes": {
+        "up": {
+          "n": 48,
+          "mean": 0.0016166666666666664
+        },
+        "dn": {
+          "n": 88,
+          "mean": 0.0015681818181818173
+        },
+        "enough": true
+      },
+      "asof_1d_mean": 0.012026206896551723,
+      "asof_1d_n": 29,
+      "notes": "Excel: drop join buys with same-row J\u2265+1% (44), refill",
+      "live_untouched": "flatten_robust"
+    },
+    {
+      "name": "avoid_J_ge0",
+      "kind": "avoid",
+      "verdict": "KEEP",
+      "fail_reasons": [],
+      "n": 121,
+      "n_tickers": 100,
+      "n_dates": 16,
+      "holdout_mean": 0.00499090909090909,
+      "t": 2.1014130204821995,
+      "vs_fullscan_pp": 0.5087436868686869,
+      "win": 0.5785123966942148,
+      "ghost": {
+        "name": "PASS",
+        "month": "PASS",
+        "day": "PASS",
+        "reasons": [],
+        "pass": true,
+        "n_tickers": 100,
+        "n_dates": 16,
+        "top_name": "ERO",
+        "top_name_n": 3
+      },
+      "tapes": {
+        "up": {
+          "n": 48,
+          "mean": 0.003072916666666666
+        },
+        "dn": {
+          "n": 65,
+          "mean": 0.007143076923076922
+        },
+        "enough": true
+      },
+      "asof_1d_mean": 0.015594848484848486,
+      "asof_1d_n": 33,
+      "notes": "Excel: drop join buys with J\u22650, refill from J<0",
+      "live_untouched": "flatten_robust"
+    },
+    {
+      "name": "avoid_JB",
+      "kind": "avoid",
+      "verdict": "KILL",
+      "fail_reasons": [
+        "hold_sign",
+        "no_edge_vs_fullscan",
+        "ghost:month_split",
+        "spy_tape"
+      ],
+      "n": 144,
+      "n_tickers": 88,
+      "n_dates": 18,
+      "holdout_mean": -9.65277777777783e-05,
+      "t": -0.05045299647152918,
+      "vs_fullscan_pp": 0.0,
+      "win": 0.4375,
+      "ghost": {
+        "name": "PASS",
+        "month": "FAIL",
+        "day": "PASS",
+        "reasons": [
+          "month_split"
+        ],
+        "pass": false,
+        "n_tickers": 88,
+        "n_dates": 18,
+        "top_name": "PR",
+        "top_name_n": 5
+      },
+      "tapes": {
+        "up": {
+          "n": 48,
+          "mean": 0.0030229166666666664
+        },
+        "dn": {
+          "n": 88,
+          "mean": -0.001105681818181819
+        },
+        "enough": true
+      },
+      "asof_1d_mean": 0.004674062499999999,
+      "asof_1d_n": 32,
+      "notes": "Excel: drop join buys with JB=1 (prior-8 |H|>3%), refill",
+      "live_untouched": "flatten_robust"
+    },
+    {
+      "name": "avoid_FQ",
+      "kind": "avoid",
+      "verdict": "KILL",
+      "fail_reasons": [
+        "hold_sign",
+        "no_edge_vs_fullscan",
+        "ghost:month_split",
+        "spy_tape"
+      ],
+      "n": 144,
+      "n_tickers": 91,
+      "n_dates": 18,
+      "holdout_mean": -0.0009486111111111114,
+      "t": -0.44830192018415166,
+      "vs_fullscan_pp": -0.08520833333333332,
+      "win": 0.4305555555555556,
+      "ghost": {
+        "name": "PASS",
+        "month": "FAIL",
+        "day": "PASS",
+        "reasons": [
+          "month_split"
+        ],
+        "pass": false,
+        "n_tickers": 91,
+        "n_dates": 18,
+        "top_name": "PR",
+        "top_name_n": 5
+      },
+      "tapes": {
+        "up": {
+          "n": 48,
+          "mean": 0.0012270833333333328
+        },
+        "dn": {
+          "n": 88,
+          "mean": -0.0015204545454545462
+        },
+        "enough": true
+      },
+      "asof_1d_mean": -0.0014900000000000007,
+      "asof_1d_n": 31,
+      "notes": "Excel: drop join buys with FQ=1 (yesterday H>+3%), refill",
+      "live_untouched": "flatten_robust"
+    },
+    {
+      "name": "avoid_ER_p1",
+      "kind": "avoid",
+      "verdict": "KILL",
+      "fail_reasons": [
+        "no_edge_vs_fullscan",
+        "ghost:month_split"
+      ],
+      "n": 144,
+      "n_tickers": 88,
+      "n_dates": 18,
+      "holdout_mean": 0.0007284722222222216,
+      "t": 0.3651499671818896,
+      "vs_fullscan_pp": 0.08249999999999999,
+      "win": 0.4513888888888889,
+      "ghost": {
+        "name": "PASS",
+        "month": "FAIL",
+        "day": "PASS",
+        "reasons": [
+          "month_split"
+        ],
+        "pass": false,
+        "n_tickers": 88,
+        "n_dates": 18,
+        "top_name": "PR",
+        "top_name_n": 5
+      },
+      "tapes": {
+        "up": {
+          "n": 48,
+          "mean": 0.0031374999999999997
+        },
+        "dn": {
+          "n": 88,
+          "mean": 0.00018181818181818097
+        },
+        "enough": true
+      },
+      "asof_1d_mean": 0.005545937499999999,
+      "asof_1d_n": 32,
+      "notes": "Excel: drop join buys with ER=+1 (yesterday +5% H/I), refill",
+      "live_untouched": "flatten_robust"
+    },
+    {
+      "name": "avoid_incomplete",
+      "kind": "control",
+      "verdict": "KEEP",
+      "fail_reasons": [],
+      "n": 136,
+      "n_tickers": 85,
+      "n_dates": 17,
+      "holdout_mean": 0.003046323529411764,
+      "t": 1.2391839985297228,
+      "vs_fullscan_pp": 0.31428513071895425,
+      "win": 0.5367647058823529,
+      "ghost": {
+        "name": "PASS",
+        "month": "PASS",
+        "day": "PASS",
+        "reasons": [],
+        "pass": true,
+        "n_tickers": 85,
+        "n_dates": 17,
+        "top_name": "HRMY",
+        "top_name_n": 6
+      },
+      "tapes": {
+        "up": {
+          "n": 40,
+          "mean": 0.004605
+        },
+        "dn": {
+          "n": 88,
+          "mean": 0.00014659090909090826
+        },
+        "enough": true
+      },
+      "asof_1d_mean": 0.010804814814814812,
+      "asof_1d_n": 27,
+      "notes": "fullscan-only control: drop incomplete cards, refill",
+      "live_untouched": "flatten_robust"
+    },
+    {
+      "name": "avoid_incomplete_or_Jge1",
+      "kind": "control",
+      "verdict": "KILL",
+      "fail_reasons": [
+        "no_edge_vs_incomplete_control"
+      ],
+      "n": 136,
+      "n_tickers": 102,
+      "n_dates": 17,
+      "holdout_mean": 0.0026360294117647055,
+      "t": 0.9970546209696439,
+      "vs_fullscan_pp": 0.2732557189542484,
+      "win": 0.5147058823529411,
+      "ghost": {
+        "name": "PASS",
+        "month": "PASS",
+        "day": "PASS",
+        "reasons": [],
+        "pass": true,
+        "n_tickers": 102,
+        "n_dates": 17,
+        "top_name": "HRMY",
+        "top_name_n": 4
+      },
+      "tapes": {
+        "up": {
+          "n": 40,
+          "mean": 0.00422
+        },
+        "dn": {
+          "n": 88,
+          "mean": 0.002085227272727272
+        },
+        "enough": true
+      },
+      "asof_1d_mean": -0.0007035999999999998,
+      "asof_1d_n": 25,
+      "notes": "control: incomplete OR J\u2265+1% \u2014 Excel must beat incomplete alone",
+      "live_untouched": "flatten_robust"
+    },
+    {
+      "name": "elev_cap2_J_le-1",
+      "kind": "elevate",
+      "verdict": "KEEP",
+      "fail_reasons": [],
+      "n": 144,
+      "n_tickers": 100,
+      "n_dates": 18,
+      "holdout_mean": 0.0025722222222222214,
+      "t": 1.2481519012309874,
+      "vs_fullscan_pp": 0.266875,
+      "win": 0.5138888888888888,
+      "ghost": {
+        "name": "PASS",
+        "month": "PASS",
+        "day": "PASS",
+        "reasons": [],
+        "pass": true,
+        "n_tickers": 100,
+        "n_dates": 18,
+        "top_name": "REGN",
+        "top_name_n": 4
+      },
+      "tapes": {
+        "up": {
+          "n": 48,
+          "mean": 0.00460625
+        },
+        "dn": {
+          "n": 88,
+          "mean": 0.0011511363636363629
+        },
+        "enough": true
+      },
+      "asof_1d_mean": 0.008958709677419354,
+      "asof_1d_n": 31,
+      "notes": "Excel: swap \u22642 J\u22650 names in top-8 for J\u2264\u22121% from ranks 9\u201380",
+      "live_untouched": "flatten_robust"
+    },
+    {
+      "name": "elev_cap2_J_lt0",
+      "kind": "elevate",
+      "verdict": "KILL",
+      "fail_reasons": [
+        "no_edge_vs_fullscan"
+      ],
+      "n": 144,
+      "n_tickers": 100,
+      "n_dates": 18,
+      "holdout_mean": 0.0018659722222222218,
+      "t": 0.9070165339737745,
+      "vs_fullscan_pp": 0.19625000000000004,
+      "win": 0.4861111111111111,
+      "ghost": {
+        "name": "PASS",
+        "month": "PASS",
+        "day": "PASS",
+        "reasons": [],
+        "pass": true,
+        "n_tickers": 100,
+        "n_dates": 18,
+        "top_name": "REGN",
+        "top_name_n": 4
+      },
+      "tapes": {
+        "up": {
+          "n": 48,
+          "mean": 0.0029604166666666663
+        },
+        "dn": {
+          "n": 88,
+          "mean": 0.0011715909090909084
+        },
+        "enough": true
+      },
+      "asof_1d_mean": 0.00978258064516129,
+      "asof_1d_n": 31,
+      "notes": "Excel: swap \u22642 J\u22650 names in top-8 for J<0 from ranks 9\u201380",
+      "live_untouched": "flatten_robust"
+    },
+    {
+      "name": "elev_cap2_ER_m1",
+      "kind": "elevate",
+      "verdict": "KILL",
+      "fail_reasons": [
+        "hold_sign",
+        "no_edge_vs_fullscan",
+        "spy_tape"
+      ],
+      "n": 141,
+      "n_tickers": 93,
+      "n_dates": 18,
+      "holdout_mean": -0.0009524822695035467,
+      "t": -0.4164729177871719,
+      "vs_fullscan_pp": -0.08559544917257685,
+      "win": 0.44680851063829785,
+      "ghost": {
+        "name": "PASS",
+        "month": "PASS",
+        "day": "PASS",
+        "reasons": [],
+        "pass": true,
+        "n_tickers": 93,
+        "n_dates": 18,
+        "top_name": "REGN",
+        "top_name_n": 5
+      },
+      "tapes": {
+        "up": {
+          "n": 47,
+          "mean": 0.004359574468085106
+        },
+        "dn": {
+          "n": 86,
+          "mean": -0.0032267441860465125
+        },
+        "enough": true
+      },
+      "asof_1d_mean": 0.005439666666666666,
+      "asof_1d_n": 30,
+      "notes": "Excel: swap \u22642 tail names for ER=\u22121 from ranks 9\u201380",
+      "live_untouched": "flatten_robust"
+    },
+    {
+      "name": "elev_cap2_AH_ge1",
+      "kind": "elevate",
+      "verdict": "KILL",
+      "fail_reasons": [
+        "hold_sign",
+        "no_edge_vs_fullscan",
+        "ghost:month_split",
+        "spy_tape"
+      ],
+      "n": 142,
+      "n_tickers": 92,
+      "n_dates": 18,
+      "holdout_mean": -0.002370422535211268,
+      "t": -1.0802310638904564,
+      "vs_fullscan_pp": -0.227389475743349,
+      "win": 0.4507042253521127,
+      "ghost": {
+        "name": "PASS",
+        "month": "FAIL",
+        "day": "PASS",
+        "reasons": [
+          "month_split"
+        ],
+        "pass": false,
+        "n_tickers": 92,
+        "n_dates": 18,
+        "top_name": "REGN",
+        "top_name_n": 5
+      },
+      "tapes": {
+        "up": {
+          "n": 48,
+          "mean": 0.0018104166666666661
+        },
+        "dn": {
+          "n": 86,
+          "mean": -0.0037081395348837216
+        },
+        "enough": true
+      },
+      "asof_1d_mean": 0.002991666666666666,
+      "asof_1d_n": 30,
+      "notes": "Excel: swap \u22642 tail names for AH\u22651 from ranks 9\u201380",
+      "live_untouched": "flatten_robust"
+    },
+    {
+      "name": "replace_J_lt0",
+      "kind": "replace",
+      "verdict": "KEEP",
+      "fail_reasons": [],
+      "n": 144,
+      "n_tickers": 107,
+      "n_dates": 18,
+      "holdout_mean": 0.003382638888888888,
+      "t": 1.6059533508461996,
+      "vs_fullscan_pp": 0.34791666666666665,
+      "win": 0.5486111111111112,
+      "ghost": {
+        "name": "PASS",
+        "month": "PASS",
+        "day": "PASS",
+        "reasons": [],
+        "pass": true,
+        "n_tickers": 107,
+        "n_dates": 18,
+        "top_name": "ERO",
+        "top_name_n": 3
+      },
+      "tapes": {
+        "up": {
+          "n": 48,
+          "mean": 0.003072916666666666
+        },
+        "dn": {
+          "n": 88,
+          "mean": 0.003948863636363636
+        },
+        "enough": true
+      },
+      "asof_1d_mean": 0.015594848484848486,
+      "asof_1d_n": 33,
+      "notes": "not a join: replace the eight with J<0 from ranks 1\u201380",
+      "live_untouched": "flatten_robust"
+    },
+    {
+      "name": "top8_and_J_lt0",
+      "kind": "intersect",
+      "verdict": "KILL",
+      "fail_reasons": [
+        "ghost:name_win_share,lottery_day"
+      ],
+      "n": 46,
+      "n_tickers": 40,
+      "n_dates": 14,
+      "holdout_mean": 0.004730434782608694,
+      "t": 1.1640200285352846,
+      "vs_fullscan_pp": 0.4826962560386473,
+      "win": 0.45652173913043476,
+      "ghost": {
+        "name": "FAIL",
+        "month": "PASS",
+        "day": "FAIL",
+        "reasons": [
+          "name_win_share",
+          "lottery_day"
+        ],
+        "pass": false,
+        "n_tickers": 40,
+        "n_dates": 14,
+        "top_name": "ONC",
+        "top_name_n": 3
+      },
+      "tapes": {
+        "up": {
+          "n": 19,
+          "mean": 0.0005263157894736838
+        },
+        "dn": {
+          "n": 23,
+          "mean": 0.009343478260869564
+        },
+        "enough": true
+      },
+      "asof_1d_mean": 0.018823,
+      "asof_1d_n": 10,
+      "notes": "keep join top-8 only when J<0 (smaller book)",
+      "live_untouched": "flatten_robust"
+    },
+    {
+      "name": "top8_and_J_le-1",
+      "kind": "intersect",
+      "verdict": "KILL",
+      "fail_reasons": [
+        "ghost:name_win_share,lottery_day",
+        "spy_tape"
+      ],
+      "n": 29,
+      "n_tickers": 26,
+      "n_dates": 12,
+      "holdout_mean": 0.005720689655172414,
+      "t": 1.022776536909429,
+      "vs_fullscan_pp": 0.5817217432950192,
+      "win": 0.4482758620689655,
+      "ghost": {
+        "name": "FAIL",
+        "month": "PASS",
+        "day": "FAIL",
+        "reasons": [
+          "name_win_share",
+          "lottery_day"
+        ],
+        "pass": false,
+        "n_tickers": 26,
+        "n_dates": 12,
+        "top_name": "EG",
+        "top_name_n": 2
+      },
+      "tapes": {
+        "up": {
+          "n": 11,
+          "mean": -0.0016000000000000005
+        },
+        "dn": {
+          "n": 15,
+          "mean": 0.012373333333333332
+        },
+        "enough": true
+      },
+      "asof_1d_mean": 0.026406666666666665,
+      "asof_1d_n": 6,
+      "notes": "keep join top-8 only when J\u2264\u22121% (smaller book)",
+      "live_untouched": "flatten_robust"
+    },
+    {
+      "name": "top8_and_ER_m1",
+      "kind": "intersect",
+      "verdict": "KILL",
+      "fail_reasons": [
+        "ghost:name:SM=2/13,name_win_share,lottery_day"
+      ],
+      "n": 13,
+      "n_tickers": 12,
+      "n_dates": 8,
+      "holdout_mean": 0.002138461538461538,
+      "t": 0.16738171491878046,
+      "vs_fullscan_pp": 0.2234989316239316,
+      "win": 0.3076923076923077,
+      "ghost": {
+        "name": "FAIL",
+        "month": "PASS",
+        "day": "FAIL",
+        "reasons": [
+          "name:SM=2/13",
+          "name_win_share",
+          "lottery_day"
+        ],
+        "pass": false,
+        "n_tickers": 12,
+        "n_dates": 8,
+        "top_name": "SM",
+        "top_name_n": 2
+      },
+      "tapes": {
+        "up": {
+          "n": 5,
+          "mean": 0.0031799999999999997
+        },
+        "dn": {
+          "n": 8,
+          "mean": 0.0014874999999999992
+        },
+        "enough": false
+      },
+      "asof_1d_mean": -0.040455000000000005,
+      "asof_1d_n": 2,
+      "notes": "keep join top-8 only when ER=\u22121",
+      "live_untouched": "flatten_robust"
+    }
+  ],
+  "flatten": {
+    "n_all": 30,
+    "mean_all": 0.020593333333333335,
+    "cuts": [
+      {
+        "name": "all tickets",
+        "n": 30,
+        "mean": 0.020593333333333335,
+        "delta_pp": "+0.00 pp"
+      },
+      {
+        "name": "avoid J\u2265+1%",
+        "n": 13,
+        "mean": -0.0038846153846153844,
+        "delta_pp": "-2.45 pp"
+      },
+      {
+        "name": "avoid JB",
+        "n": 30,
+        "mean": 0.020593333333333335,
+        "delta_pp": "+0.00 pp"
+      },
+      {
+        "name": "keep J\u2264\u22121% only",
+        "n": 7,
+        "mean": 0.01572857142857143,
+        "delta_pp": "-0.49 pp"
+      },
+      {
+        "name": "keep ER=\u22121 only",
+        "n": 4,
+        "mean": -0.0438,
+        "delta_pp": "-6.44 pp"
+      }
+    ]
+  },
+  "clocks_groups": {
+    "value_mine_open": [
+      "A",
+      "C",
+      "J",
+      "Q",
+      "Z",
+      "AC",
+      "AH",
+      "BT",
+      "BV",
+      "CG",
+      "CH",
+      "DC",
+      "DE",
+      "EB",
+      "EK",
+      "EN",
+      "EP",
+      "EQ",
+      "ER",
+      "ES",
+      "ET",
+      "EU",
+      "EV",
+      "FQ",
+      "FR",
+      "FS",
+      "FU",
+      "GD",
+      "GE",
+      "GF",
+      "HF",
+      "HG",
+      "HW",
+      "II",
+      "IR",
+      "IT",
+      "IY",
+      "IZ",
+      "JB",
+      "JC",
+      "JD",
+      "JE",
+      "JF",
+      "JL"
+    ],
+    "fill_mine_open": [
+      "A",
+      "B",
+      "C",
+      "G",
+      "J",
+      "K",
+      "L",
+      "M",
+      "O",
+      "IR",
+      "IS",
+      "IT"
+    ]
+  },
+  "live_untouched": "flatten_robust",
+  "tip_sha": "adc79b9a"
+}
