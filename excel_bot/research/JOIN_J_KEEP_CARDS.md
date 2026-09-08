@@ -1,6 +1,6 @@
 # Research cards — Excel J × fullscan join (post-8-13)
 
-_Generated 2026-09-08 · tip `bd1d298b` / `JOIN_POST_813.md` · **research cards only** · live frozen._
+_Generated 2026-09-08 · tip `fc335798` / `JOIN_POST_813.md` · **research cards only** · live frozen._
 
 ## Plain English
 
@@ -132,4 +132,4 @@ Movers on 08-20/21 gapped up (J>0) and paid sleeve. Blanket J-avoid fights that 
 
 ## Source
 
-`JOIN_POST_813.md` tip `bd1d298b` · PR #153. Gate: `OPEN_SAME_ROW_LABELS.md` / `CLOCK_MAP.md`. Research only. Live frozen.
+`JOIN_POST_813.md` tip `fc335798` · PR #153. Gate: `OPEN_SAME_ROW_LABELS.md` / `CLOCK_MAP.md`. Research only. Live frozen.
