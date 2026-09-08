@@ -16224,18 +16224,125 @@
         "B7_OIL_DOLLAR": -1.0
       },
       "leading_sum": -10.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7717.81,
+      "actual_close": 7673.52,
+      "actual_pct_change": -0.58,
+      "actual_direction": "down",
+      "actual_magnitude_band": "mild",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": -3.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": -1.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": -1.0,
+          "status": "hit"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://www.nytimes.com/2026/09/08/business/oil-prices-iran-war.html",
+          "date_accessed": "2026-09-08",
+          "summary": "NYT confirms the Houthi attack on Saudi Arabia as the catalyst for oil's surge toward $100.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.reuters.com/business/energy/oil-rises-risks-prolonged-mideast-conflict-heighten-supply-worries-2026-09-08/",
+          "date_accessed": "2026-09-08",
+          "summary": "Reuters confirms oil's rise to six-week highs on the Houthi attack.",
+          "verification": "http_401"
+        },
+        {
+          "url": "https://www.foxnews.com/politics/iran-backed-attacks-threaten-second-major-oil-chokepoint-new-risk-emerges-us-consumers",
+          "date_accessed": "2026-09-08",
+          "summary": "Fox News confirms the scale of the attack and its threat to oil chokepoints.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/08/canada-retaliatory-tariffs.html",
+          "date_accessed": "2026-09-08",
+          "summary": "CNBC confirms Canada's retaliatory tariffs took effect today as scheduled.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-09082026-12110868",
+          "date_accessed": "2026-09-08",
+          "summary": "Investopedia identifies Amgen as the worst Dow performer, down 9.5%, due to the Novartis trial read-through.",
+          "verification": "http_402"
+        },
+        {
+          "url": "https://www.fiercebiotech.com/biotech/novartis-lpa-drug-fails-lower-cardiovascular-risk-closely-watched-ph-3-trial",
+          "date_accessed": "2026-09-08",
+          "summary": "FierceBiotech confirms the Phase III failure that triggered the biotech selloff.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.pbs.org/newshour/economy/fed-governor-waller-muddies-outlook-on-possible-rate-hike-later-this-month",
+          "date_accessed": "2026-09-08",
+          "summary": "PBS confirms elevated rate-hike odds ahead of the September FOMC.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://tradingeconomics.com/united-states/government-bond-yield",
+          "date_accessed": "2026-09-08",
+          "summary": "Trading Economics confirms the 10-year yield at 4.79%, near recent highs.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cruxinvestor.com/posts/copper-hits-record-high-as-us-tariff-delay-divides-producers",
+          "date_accessed": "2026-09-08",
+          "summary": "Copper reached record highs on September 8, a notable divergence from equity weakness.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://goldsilver.com/industry-news/goldsilver-news/four-signals-hard-assets-trade-broadening/",
+          "date_accessed": "2026-09-08",
+          "summary": "Gold fell despite geopolitical risk, a notable divergence from typical safe-haven behavior.",
+          "verification": "http_403"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -16262,7 +16369,14 @@
           "confidence": 0.4
         }
       },
-      "news_judge_present": true
+      "news_judge_present": true,
+      "ops_fail": false,
+      "path_shape": "trend down (closed near day low)",
+      "primary_driver": "Houthi attack on Saudi energy facilities (73 wounded) drove oil toward $100, reviving stagflation fears and reinforcing Fed hike expectations",
+      "key_interaction": "Oil spike (Houthi attack) × Fed hike expectations — oil toward $100 feeds inflation fears, reinforcing ~65% September hike odds, creating a stagflationary feedback loop that pressured equities all session",
+      "knowable_at_9am": "yes — the Houthi attack and oil surge were known premarket; futures confirmed the down day",
+      "attribution_contested": "yes — most outlets lead with oil/geopolitics, but Investrade frames the day as healthcare sector rotation led by Amgen's decline",
+      "outlier_watch": "Gold FELL (-0.84%) despite geopolitical escalation; copper hit record high on a risk-off day; VIX stayed low (15.49) despite oil near $100; dollar fell despite safe-haven demand"
     },
     {
       "date": "2026-09-08",
