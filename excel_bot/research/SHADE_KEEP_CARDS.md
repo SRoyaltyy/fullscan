@@ -1,6 +1,6 @@
 # Research cards — shade hex open entry (same-day H)
 
-_Generated 2026-09-08 · tip pending commit · **research cards only** · live `flatten_robust` frozen · **not** under `strategies/` · expanded-universe open-only re-score of #150 **landed**: family **null** · **DEMOTE**.
+_Generated 2026-09-08 · tip `35cbab9d` · **research cards only** · live `flatten_robust` frozen · **not** under `strategies/` · expanded-universe open-only re-score of #150 **landed**: family **null** · **DEMOTE**.
 
 ## Plain English
 
