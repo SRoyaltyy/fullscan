@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "A day where NQ outperforms ES by ≥25bp at the open, XLC still underperforms SPY by >50bp, AND the underperformance is driven by META/GOOGL-specific news (not broad tape) would falsify this lesson. Also falsified if NQ/ES divergence ≥25bp occurs but XLC underperforms due to telecom/other non-mega-cap components."
 sector: "Communication Services"
 date: "2026-09-08"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Communication Services — 2026-09-08

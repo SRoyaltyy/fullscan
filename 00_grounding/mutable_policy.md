@@ -1,6 +1,6 @@
 ---
 status: living_policy
-updated: 2026-09-04
+updated: 2026-09-08
 source: src/learn_cycle.py
 covers: general, sectors, news
 note: Injected into general + sector PREDICT. Core output formats unchanged.
@@ -9,20 +9,20 @@ see_also: 03_scoreboard/LEARNINGS.md
 
 # Mutable policy (all workflows)
 
-Last learn_cycle: **2026-09-04**. Promoted: 0. Human digest: `03_scoreboard/LEARNINGS.md`.
+Last learn_cycle: **2026-09-08**. Promoted: 10. Human digest: `03_scoreboard/LEARNINGS.md`.
 
 ## Accuracy by topic (graded window)
 
 - **general**: 40% (6/15)
-- **sector:Basic Materials**: 54% (7/13)
-- **sector:Communication Services**: 23% (3/13)
-- **sector:Consumer Cyclical**: 62% (8/13)
-- **sector:Consumer Defensive**: 46% (6/13)
-- **sector:Energy**: 46% (6/13)
-- **sector:Financial**: 31% (4/13)
-- **sector:Healthcare**: 64% (7/11)
-- **sector:Industrials**: 23% (3/13)
-- **sector:Real Estate**: 46% (6/13)
+- **sector:Basic Materials**: 50% (7/14)
+- **sector:Communication Services**: 29% (4/14)
+- **sector:Consumer Cyclical**: 64% (9/14)
+- **sector:Consumer Defensive**: 43% (6/14)
+- **sector:Energy**: 50% (7/14)
+- **sector:Financial**: 36% (5/14)
+- **sector:Healthcare**: 58% (7/12)
+- **sector:Industrials**: 21% (3/14)
+- **sector:Real Estate**: 43% (6/14)
 - **sector:Technology**: 38% (5/13)
 - **sector:Utilities**: 38% (5/13)
 
@@ -496,6 +496,11 @@ evidence_cited: "2026-08-13 XLB actual -0.51%, SPY +0.70
 trigger_pattern: "For a bond-proxy/defensive sector, when S0 and S1 are both neutral because the macro forces are offsetting (risk-on equity tape vs easing/intermediate yields but elevated long-end), and the only negative components are carried relative-breadth/outflow scores (S2/S3) with no fresh decisive sector-level negative, the model over-commits to `down` instead of `flat`. Separately, if the PREDICT block contains explicit `predicted_direction` and `predicted_magnitude_band`, the scoreboard must not later record `predicted None/None`."
 corrected_behavior: "When S0=0 and S1=0, and the only negatives are carried S2/S3 relative/flow scores, prefer `flat` (or `flat/up`) with a mild band on a risk-on tape; do not manufacture a directional down call from carried negatives alone. Reser
 
+### fresh-overnight-kinetic-oil-supply-increment-houthi-attack-o.md
+---
+trigger_pattern: "Fresh overnight kinetic/oil-supply increment (Houthi attack on Saudi energy, Iran tanker attack in Hormuz) with confirming negative US index futures (ES -0.44%, NQ -0.21%, Dow -0.91%) and oil spiking toward $100 (WTI +3.18%, Brent +2.16%)"
+corrected_behavior: "No correction required. Continue to score fresh overnight kinetic/oil-supply increments at B1=-3 when the escalation is severe and fresh (73 wounded, multiple Saudi cities, energy facilities ablaze), score B7=-1.0 for the oil spike transmission, and allow B6=-0.5 when futures independently confirm weakness. Do not soften live geopolitical escalation under the bad-news-good regime lens. The multi-channel scoring of one macro shock across B1/B2/B3/B7 is legitimate when each bucket captures a distinct transmission 
+
 ### fresh-overnight-kinetic-oil-supply-increment-not-leftover-ta.md
 ---
 trigger_pattern: "Fresh overnight kinetic/oil-supply increment (not leftover-tape) with independently confirming NQ ≤ −0.5%, Europe already red, paid hawkish Fed text scored only in B3, BN=GN confined to data, no same-morning mega-cap or hard-data miss."
@@ -778,6 +783,19 @@ corrected_behavior: "When the analysis text identifies a dampening factor that r
 trigger_pattern: "When a geopolitical supply-shock headline is active but internally conflicting — one source says a deal is agreed / strikes called off, another says it is stalled / demands unresolved — and the pre-fetched Channel 1 oil-futures tape shows a move consistent with the premature/deal-resolved headline, do not treat that pre-fetched tape as authoritative for an Energy call. The oil-price sign is the load-bearing factor for S1; if it is stale or wrong, it cascades into S1, the divergence check, the multiplier, and the final direction call."
 corrected_behavior: "For Energy, before scoring S1 and final direction, verify the current oil-price sign against at least one independent live source. If the pre-fetched Channel 1 oil tape conflicts with active headlines or with indepen
 
+### when-a-live-geopolitical-oil-supply-shock-risk-off-day-is-pr.md
+---
+trigger_pattern: "When a live geopolitical/oil supply-shock risk-off day is present (oil spiking toward $100, negative futures), and the sector is Financials (XLF), the model assumes a 'value shield' — that financials will be relatively protected vs long-duration tech because they are value/cyclical. This assumption fails because financials carry credit/default sensitivity that tech does not. On a stagflation shock (oil → inflation → yields up → credit risk repricing), financials can underperform the broad market even when credit spreads are still tight (HY 2.65). The model must not treat 'value' as a shield for financials on oil-driven stagflation days; instead, it must recognize that the oil → long-end yield → rate-sensitive financials channel is a direct negative transmission, not m
+
+### when-a-live-geopolitical-oil-supply-shock-wti-spiking-3-towa.md
+---
+trigger_pattern: "When a live geopolitical/oil supply shock (WTI spiking +3% toward $94-100, Brent +2% toward $99) is present at the open with confirming negative futures (ES −0.44%, NQ −0.16%) and the sector is Consumer Cyclical (XLY with AMZN ~24% + TSLA ~17%), the model correctly scores S0 = −2 (dominant macro driver, more negative for discretionary) and S1 = −1 (gasoline transmission channel) without double-counting, and correctly caps magnitude at mild when no severe-cap-breaking premarket action is present in mega-cap holdings."
+corrected_behavior: "No correction needed — the model's handling of the live oil shock (S0 = −2 dominant, S1 = −1 transmission, no double-count, mild cap) was validated by the outcome. Continue this pattern for future live oil/geopolitical shocks affectin
+
+### when-a-live-oil-geopolitical-supply-shock-is-present-at-the.md
+---
+trigger_pattern: "When a live oil/geopolitical supply shock is present at the open (WTI +3% toward $94-100) AND the sector ETF is a crowded-long, high-duration defensive book (XLV with 1m rel +1.71%, biotech sleeve with duration sensitivity), the model applies the 08-17 lesson (oil/geo risk-off → XLV defensive relative bid) without checking whether the oil price level and the sector's positioning regime make the shock an inflation/stagflation negative rather than a flight-to-safety bid. The model must distinguish between (a) a fresh oil shock from low levels that triggers a defensive rotation INTO healthcare, versus (b) an incremental shock at already-elevated oil prices ($94-100) that reads as an inflation scare, hitting the crowded-long, duration-sensitive sector as an unwind candida
+
 ### when-a-scheduled-high-impact-macro-release-nfp-cpi-fomc-is-p.md
 ---
 trigger_pattern: "When a scheduled high-impact macro release (NFP/CPI/FOMC) is pending and the model has already identified the pre-existing regime as hawkish (Fed/Warsh repricing, rising real yields, 10Y-SPX corr −0.943), the model treats the binary as symmetric and caps at flat/mild rather than pre-scoring the asymmetric downside for long-duration growth sectors. The model also fails to distinguish between the pipeline's deterministic flat output and its own narrative 'up/mild' lean — the narrative and the scored output must be reconciled before submission."
@@ -788,6 +806,16 @@ corrected_behavior: "When a scheduled high-impact macro release is pending AND t
 trigger_pattern: "When a sector call is verified correct — predicted up/flat, actual XLY +0.475% classified as flat, post-session review says both direction and magnitude HIT — but the individual scoreboard line records magnitude_hit False while the same scoreboard's rolling mag=0.5 (n=4) arithmetically requires the current run to be a hit, the False flag is a scoreboard/accounting data error, not a sector reasoning miss."
 corrected_behavior: "Reconcile the scoreboard flag against the band classification and rolling accuracy before writing a lesson. If predicted flat and actual +0.475% is classified as flat by the outcome, and the post-session verdict says magnitude HIT, score it as a magnitude HIT and flag the individual False line as a data-entry/accounting error. Do not convert a ph
 
+### when-a-sector-etf-has-a-composition-where-the-dominant-sleev.md
+---
+trigger_pattern: "When a sector ETF has a composition where the dominant sleeve (chemicals/processors ~40-50% of XLB) faces a direct cost headwind (oil spike) while a minority sleeve (copper miners ~10-15%) benefits from a commodity surge, the model scores S1 based on the headline commodity move (copper at records = +1) rather than the composition-weighted net. The model must weight sector-factor scores by the ETF's actual holdings breakdown — a minority-sleeve positive cannot offset a majority-sleeve negative when the cost channel is direct and knowable."
+corrected_behavior: "Before scoring S1, decompose the sector ETF by holdings weight. If a majority sleeve faces a direct, knowable cost/margin headwind (oil feedstock for chemicals) while a minority sleeve benefits from a commodity s
+
+### when-a-sector-etf-has-a-large-pre-existing-1d-relative-cushi.md
+---
+trigger_pattern: "When a sector ETF has a large pre-existing 1d relative cushion (+0.5% or greater vs SPY) going into a risk-off session, and the model has identified that cushion as a 'defensive bid,' the model treats the cushion as a magnitude cap (allowing down/mild) rather than as a direction override signal (pointing to flat). The model applies an 'asymmetric downside' lesson (09-04) too aggressively when the defensive cushion is already large and positive, failing to recognize that the cushion's size relative to the expected macro drag determines whether it caps magnitude or flips direction."
+corrected_behavior: "When the 1d relative cushion is ≥ +0.5% (or the sector has outperformed SPY on the prior session by a similar margin) AND the macro drag is a moderate risk-off day (ES −
+
 ### when-a-sector-etf-is-a-deep-medium-term-laggard-1m-rel-5-and.md
 ---
 trigger_pattern: "When a sector ETF is a deep medium-term laggard (1m rel ≤ −5%) AND a hawkish macro shock (hot jobs print, Fed repricing) is the dominant same-day driver, the model treats laggard status as purely negative (S2/S4 = −1) without considering the relative-shield interaction: in a risk-off tape, the selloff targets crowded recent winners (tech/AI) first, so already-de-risked laggards often outperform. The model must not double-count the same laggard fact in both S2 and S4, and must consider that laggard status can be a relative positive in a hawkish tape."
@@ -797,10 +825,20 @@ corrected_behavior: "When a sector is a deep laggard AND the dominant driver is 
 ---
 trigger_pattern: "When a sector ETF is a rate-sensitive bond-proxy (REITs) with a persistent hawkish backdrop (30Y ~5.27% stress zone, real yields up 1w/1m, Fed held with 3 dissents for hike, Warsh signaling September hike risk), and the live curve is flat-to-slightly-down at the open following a prior-session relief rally, the model treats the flat open as a genuine offset and predicts flat — but the structural backdrop creates a knowable risk asymmetry: the flat open is more likely to resolve upward (rates grinding higher intraday) than downward, because the hawkish Fed repricing is the persistent dominant object and the relief rally is a one-day artifact. The model must not let a single morning snapshot of a flat-to-easing curve override the structural backdrop when the backdrop is 
 
+### when-a-sector-has-a-fresh-overnight-geopolitical-catalyst-oi.md
+---
+trigger_pattern: "When a sector has a fresh overnight geopolitical catalyst (oil supply shock) that is NOT in the morning's Channel 1 data, AND the broad equity tape is deeply risk-off (ES −0.44%, SPY −0.55%), the model over-extrapolates the fresh catalyst into a notable magnitude call despite (a) the sector's low magnitude hit-rate (~0.3), (b) the risk-off tape capping extension, and (c) the catalyst being partially priced from the prior session's run. The model's own magnitude discipline note ('Energy mag hit-rate is 0.3', 'Do not emit severe') flags the risk but does not cascade into a mild call when the fresh headline is strong."
+corrected_behavior: "When a fresh overnight catalyst is present but the broad tape is deeply risk-off AND the sector's magnitude hit-rate is ≤0.3, the mod
+
 ### when-a-sector-s-own-etf-tape-is-decisively-negative-across-a.md
 ---
 trigger_pattern: "When a sector's own ETF tape is decisively negative across all timeframes (1d/3d/1w/1m relative all negative) AND there is a fresh knowable-at-open single-name negative (e.g., strike authorization on a top-weight name), a positive broad-market futures bounce (ES/NQ/Asia/Europe all up) does NOT automatically rescue the sector. The 08-21 reversal checklist (positive futures → avoid down call) must be weighed against the sector's own tape; when S4=-1 is decisive and S1 contains a fresh negative, the relative call should be down:mild, not flat."
 corrected_behavior: "When S4=-1 (decisive negative tape across all timeframes) AND S1 contains a fresh knowable-at-open negative (not just carried/structural positives), the positive-futures bounce should be treated as a SPY-level
+
+### when-a-sector-specific-negative-cluster-packaged-food-margin.md
+---
+trigger_pattern: "When a sector-specific negative cluster (packaged-food margin/dividend stress) is fresh and has already demonstrated it can override a defensive bid (prior session showed XLP underperforming despite macro crosscurrents), the model still scores S0 positive for a geopolitical/oil risk-off FTS bid, treating the macro tailwind and sector drag as roughly offsetting. The model fails to weight the demonstrated precedent — if the sector-specific drag dominated the FTS bid on the prior session with the same cluster active, it should dominate again today, making S0 closer to 0 or negative rather than +0.5."
+corrected_behavior: "When a sector-specific negative cluster is fresh AND has already demonstrated dominance over the FTS bid in a prior session (XLP rel −1.36% on 09-03 wit
 
 ### when-a-technology-xlk-narrative-explicitly-applies-an-active.md
 ---
@@ -830,6 +868,11 @@ falsifier: "Clipping join/news to ≥0 on high-AB names with earnings inside 7d 
 current_behavior: "The six-family ranker treats join/news as unrestricted fades; the events addon is healthy but unused in ranking, so CRM/NOW look like ordinary weak-join large caps."
 evidence_cited: "CRM 2026-08-21 outweighed i
 
+### when-nq-futures-are-holding-up-significantly-better-than-es.md
+---
+trigger_pattern: "When NQ futures are holding up significantly better than ES futures (divergence ≥ ~25bp) on a risk-off day, and the sector ETF is a mega-cap growth/duration book (XLC with META ~17% + GOOGL ~18-19%), the model scores S2 (breadth) and S4 (ETF tape) negative based on the macro thesis inference ('risk-off → mega-cap growth hit hardest') rather than reading the NQ/ES divergence as direct evidence that the sector's core holdings are relatively defended. The model also fails to distinguish between direction (down, correct) and relative performance (XLC vs SPY, wrong) — treating a broad risk-off as necessarily worse for the duration/growth sector when the futures tape already signals mega-cap relative strength."
+corrected_behavior: "When NQ futures are outperforming ES futur
+
 ### when-s1-sector-factors-and-s4-etf-tape-are-both-negative-1-e.md
 ---
 trigger_pattern: "When S1 (sector factors) and S4 (ETF tape) are both negative (−1 each) and the 1d relative tape is decisively red (rel ≤ −1.5%), the total score should map to a mild DOWN direction, not 'flat' — the flat band should be reserved for cases where negative components are offset by positive ones or where the negative evidence is sub-threshold (single −1 with no tape confirmation)."
@@ -842,6 +885,11 @@ corrected_behavior: "Add an events-addon exception to the join eligibility gate 
 falsifier: "Names admitted only by that events exception underperform the 1w top-10, or CHPT-like prints still lose after they are allowed through."
 current_behavior: "Join (and related) eligibility floors drop the name before six-family scoring; events addon is health-ok (49 events) but is not a ranker overlay, so CHPT-style prints never compete."
 evidence_cited: "CHPT 2026-08-27 gated_out (join -0.315, AB 0.635, news 0.0,
+
+### when-the-model-s-narrative-essay-and-the-pipeline-computed-d.md
+---
+trigger_pattern: "When the model's narrative essay and the pipeline-computed decision disagree on direction (narrative says down/mild, pipeline says flat/flat), and the model has an explicit DO-INSTEAD rule ('when score fights tape, cut conviction / prefer flat/mild'), the model must reconcile to a single final call rather than letting the narrative drift from the deterministic pipeline output. The divergence between narrative and pipeline is itself a signal that the leading-factor score is not robust enough to override the tape."
+corrected_behavior: "When the narrative essay's final call diverges from the pipeline-computed decision, the model must explicitly reconcile: (a) state the pipeline output, (b) state the narrative output, (c) identify which components drive the disagreement, 
 
 ### when-the-pre-fetched-commodity-tape-conflicts-with-live-sour.md
 ---
@@ -868,57 +916,57 @@ falsifier: "Future evidence that Waller’s 09-03 remarks were on a known pre-op
 ## Per-scope DO-INSTEAD
 
 ### scope `general` — wins=6 losses=9
-- **loss 2026-09-02:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-09-03:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-09-04:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **win 2026-09-08:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 
 ### scope `news` — wins=1 losses=0
 - **win news:** [news] Rank event families by 1d close, not ever-touch MFE.
 
-### scope `sector_basic_materials` — wins=7 losses=6
-- **loss 2026-08-28:** [sector_basic_materials] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+### scope `sector_basic_materials` — wins=7 losses=7
 - **loss 2026-09-03:** [sector_basic_materials] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **win 2026-09-04:** [sector_basic_materials] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+- **loss 2026-09-08:** [sector_basic_materials] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 
-### scope `sector_communication_services` — wins=3 losses=10
-- **loss 2026-08-28:** [sector_communication_services] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+### scope `sector_communication_services` — wins=4 losses=10
 - **loss 2026-09-03:** [sector_communication_services] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-09-04:** [sector_communication_services] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **win 2026-09-08:** [sector_communication_services] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 
-### scope `sector_consumer_cyclical` — wins=8 losses=5
-- **loss 2026-08-28:** [sector_consumer_cyclical] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+### scope `sector_consumer_cyclical` — wins=9 losses=5
 - **loss 2026-09-03:** [sector_consumer_cyclical] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **win 2026-09-04:** [sector_consumer_cyclical] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+- **win 2026-09-08:** [sector_consumer_cyclical] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 
-### scope `sector_consumer_defensive` — wins=6 losses=7
-- **loss 2026-08-28:** [sector_consumer_defensive] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+### scope `sector_consumer_defensive` — wins=6 losses=8
 - **loss 2026-09-03:** [sector_consumer_defensive] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **win 2026-09-04:** [sector_consumer_defensive] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+- **loss 2026-09-08:** [sector_consumer_defensive] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 
-### scope `sector_energy` — wins=6 losses=7
-- **loss 2026-08-28:** [sector_energy] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+### scope `sector_energy` — wins=7 losses=7
 - **loss 2026-09-03:** [sector_energy] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-09-04:** [sector_energy] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **win 2026-09-08:** [sector_energy] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 
-### scope `sector_financial` — wins=4 losses=9
-- **loss 2026-08-28:** [sector_financial] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+### scope `sector_financial` — wins=5 losses=9
 - **loss 2026-09-03:** [sector_financial] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-09-04:** [sector_financial] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **win 2026-09-08:** [sector_financial] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 
-### scope `sector_healthcare` — wins=7 losses=4
-- **win 2026-08-28:** [sector_healthcare] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+### scope `sector_healthcare` — wins=7 losses=5
 - **loss 2026-09-03:** [sector_healthcare] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-09-04:** [sector_healthcare] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **loss 2026-09-08:** [sector_healthcare] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 
-### scope `sector_industrials` — wins=3 losses=10
-- **win 2026-08-28:** [sector_industrials] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+### scope `sector_industrials` — wins=3 losses=11
 - **loss 2026-09-03:** [sector_industrials] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-09-04:** [sector_industrials] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **loss 2026-09-08:** [sector_industrials] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 
-### scope `sector_real_estate` — wins=6 losses=7
-- **win 2026-08-28:** [sector_real_estate] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+### scope `sector_real_estate` — wins=6 losses=8
 - **loss 2026-09-03:** [sector_real_estate] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-09-04:** [sector_real_estate] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **loss 2026-09-08:** [sector_real_estate] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 
 ### scope `sector_technology` — wins=5 losses=8
 - **loss 2026-08-28:** [sector_technology] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.

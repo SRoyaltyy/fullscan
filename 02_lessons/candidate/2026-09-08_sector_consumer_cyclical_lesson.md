@@ -7,7 +7,7 @@ error_category: "NONE"
 falsifier: "This pattern would be falsified if a live oil shock (WTI +3% toward $94+) with negative futures produced an XLY gain or flat day (direction MISS), or if XLY fell >1.5% (severe) when mega-caps were not breaking premarket. The 2026-09-08 outcome (XLY −0.80%, mild) confirms the pattern."
 sector: "Consumer Cyclical"
 date: "2026-09-08"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Cyclical — 2026-09-08

@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "If XLRE has a 1d relative cushion ≥ +0.4% going into a risk-off session with 30Y in stress zone, and XLRE still falls ≥ −0.5% (direction down confirmed despite cushion), this lesson would be falsified. Also falsified if the model downgrades to flat on a large cushion and XLRE falls > −0.5% on three consecutive similar setups."
 sector: "Real Estate"
 date: "2026-09-08"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Real Estate — 2026-09-08

@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "A session where a fresh sector-specific negative cluster (e.g., packaged-food dividend cuts) is active, a geopolitical/oil risk-off tape is present, and XLP nonetheless outperforms SPY (rel > 0) would falsify this lesson. Also falsified if XLP underperforms but the underperformance is traceable to a different driver (e.g., rates shock) rather than the sector-specific cluster."
 sector: "Consumer Defensive"
 date: "2026-09-08"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Defensive — 2026-09-08

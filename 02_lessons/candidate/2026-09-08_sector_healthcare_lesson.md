@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "A future session where oil spikes from low levels (<$80 WTI) with XLV not crowded-long (1m rel < +1%) and XLV outperforms SPY — this would confirm the 08-17 lesson still fires in the right regime and this lesson is properly scoped to elevated-oil/crowded-long conditions."
 sector: "Healthcare"
 date: "2026-09-08"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Healthcare — 2026-09-08
