@@ -5,45 +5,45 @@ Export `finviz_2026-09-08.csv` · 11605 names · generated 2026-09-08T01:58:38.2
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7709.25 | -0.16% |
-| Nasdaq 100 (NQ) | 29637.5 | +0.27% |
-| Russell 2000 (ER2) | 2965.3 | -0.36% |
-| DJIA (YM) | 53039.0 | -0.74% |
-| VIX (VX) | 16.3 | -0.10% |
-| Crude Oil WTI (CL) | 93.41 | +2.15% |
-| Crude Oil Brent (QA) | 98.06 | +1.09% |
-| Natural Gas (NG) | 2.959 | -0.54% |
-| Heating Oil (HO) | 4.7208 | +3.99% |
-| Gasoline RBOB (RB) | 3.2444 | +0.93% |
-| Gold (GC) | 4469.9 | -0.14% |
-| Silver (SI) | 67.37 | +0.95% |
-| Copper (HG) | 6.7745 | +1.40% |
-| Platinum (PL) | 1839.1 | +0.77% |
-| Palladium (PA) | 1411.5 | +0.54% |
-| USD (DX) | 98.775 | -0.38% |
-| EUR (6E) | 1.16305 | +0.14% |
-| JPY (6J) | 0.65205 | +1.81% |
-| GBP (6B) | 1.354 | +0.18% |
-| AUD (6A) | 0.7217 | +0.20% |
+| S&P 500 (ES) | 7691.0 | -0.41% |
+| Nasdaq 100 (NQ) | 29507.25 | -0.22% |
+| Russell 2000 (ER2) | 2958.7 | -0.63% |
+| DJIA (YM) | 52953.0 | -0.91% |
+| VIX (VX) | 16.55 | +1.74% |
+| Crude Oil WTI (CL) | 94.4 | +3.18% |
+| Crude Oil Brent (QA) | 99.1 | +2.16% |
+| Natural Gas (NG) | 2.975 | -0.07% |
+| Heating Oil (HO) | 4.6862 | +3.22% |
+| Gasoline RBOB (RB) | 3.2488 | +1.14% |
+| Gold (GC) | 4439.3 | -0.84% |
+| Silver (SI) | 66.48 | -0.39% |
+| Copper (HG) | 6.7715 | +1.31% |
+| Platinum (PL) | 1833.0 | +0.47% |
+| Palladium (PA) | 1402.0 | +0.01% |
+| USD (DX) | 98.915 | -0.24% |
+| EUR (6E) | 1.1617 | +0.03% |
+| JPY (6J) | 0.6495500000000001 | +1.43% |
+| GBP (6B) | 1.353 | +0.13% |
+| AUD (6A) | 0.72095 | +0.09% |
 | CAD (6C) | 0.7251 | +0.31% |
-| CHF (6S) | 1.23695 | +0.14% |
-| NZD (6N) | 0.5863 | -0.32% |
-| 10 Year Note (ZN) | 107.421875 | -0.04% |
-| 5 Year Note (ZF) | 105.53125 | -0.01% |
-| 2 Year Note (ZT) | 102.58203125 | +0.02% |
-| 30 Year Bond (ZB) | 108.5625 | -0.12% |
-| Nikkei 225 (NKD) | 65880.0 | +0.15% |
-| DAX (DY) | 25979.0 | -0.08% |
-| Euro Stoxx 50 (EX) | 6400.0 | -0.08% |
-| Corn (ZC) | 542.5 | +1.07% |
-| Soybeans (ZS) | 1319.5 | +0.69% |
-| Wheat (ZW) | 761.0 | +3.68% |
-| Soybean oil (ZL) | 69.63 | +1.07% |
-| Soybean Meal (ZM) | 347.9 | -0.06% |
-| Oats (ZO) | 371.0 | +0.61% |
+| CHF (6S) | 1.2337 | -0.11% |
+| NZD (6N) | 0.58425 | -0.67% |
+| 10 Year Note (ZN) | 107.3125 | -0.15% |
+| 5 Year Note (ZF) | 105.4609375 | -0.07% |
+| 2 Year Note (ZT) | 102.55859375 | -0.00% |
+| 30 Year Bond (ZB) | 108.1875 | -0.46% |
+| Nikkei 225 (NKD) | 65015.0 | -1.06% |
+| DAX (DY) | 25875.0 | -0.52% |
+| Euro Stoxx 50 (EX) | 6380.0 | -0.41% |
+| Corn (ZC) | 541.75 | +1.02% |
+| Soybeans (ZS) | 1313.5 | +0.29% |
+| Wheat (ZW) | 760.25 | +3.64% |
+| Soybean oil (ZL) | 69.52 | +0.91% |
+| Soybean Meal (ZM) | 345.5 | -0.78% |
+| Oats (ZO) | 372.0 | +0.88% |
 | Rough Rice (ZR) | 15.83 | -0.25% |
-| Coffee (KC) | 292.9 | +0.08% |
-| Sugar (SB) | 18.02 | +0.00% |
+| Coffee (KC) | 290.65 | -1.79% |
+| Sugar (SB) | 18.38 | +1.72% |
 | Cotton (CT) | 87.28 | +1.10% |
 | Cocoa (CC) | 6175.0 | +0.23% |
 | Orange Juice (JO) | 155.05 | +0.26% |
@@ -51,18 +51,18 @@ Export `finviz_2026-09-08.csv` · 11605 names · generated 2026-09-08T01:58:38.2
 | Live Cattle (LC) | 213.15 | -0.63% |
 | Lean Hogs (LH) | 82.25 | -1.38% |
 | Feeder Cattle (FC) | 320.75 | -0.30% |
-| Bitcoin (BTC) | 78770.0 | -1.62% |
-| 3 Month SOFR (SR3) | 96.14 | +0.00% |
+| Bitcoin (BTC) | 78670.0 | -1.70% |
+| 3 Month SOFR (SR3) | 96.14 | -0.00% |
 | 30 Day Fed Funds (ZQ) | 96.3025 | +0.00% |
-| Aluminum (ALI) | 3462.25 | +0.00% |
-| Canola (RS) | 835.2 | +1.51% |
-| Coal Newcastle (NCF) | 148.4 | -0.61% |
+| Aluminum (ALI) | 3464.25 | +0.06% |
+| Canola (RS) | 831.7 | +1.13% |
+| Coal Newcastle (NCF) | 147.5 | -0.17% |
 | Ethanol (ZK) | 2.08 | -0.83% |
-| Gasoil (G) | 1382.5 | +0.56% |
+| Gasoil (G) | 1372.25 | -0.15% |
 | Iron Ore (TIO) | 99.57 | +0.15% |
 | Steel HRC (HRC) | 1226.0 | +0.00% |
-| Ultra 10 Year Note (TN) | 109.140625 | -0.06% |
-| Ultra Bond (UB) | 110.03125 | -0.09% |
+| Ultra 10 Year Note (TN) | 108.96875 | -0.24% |
+| Ultra Bond (UB) | 109.59375 | -0.51% |
 | Uranium (UX) | 89.65 | +0.22% |
 
 ## CALENDAR
@@ -117,15 +117,15 @@ Mega-cap earnings:
 - BMO **AZO**  EPS est 54.5786  (Autozone Inc)
 - BMO **KR**  EPS est 1.0546  (Kroger Co)
 - AMC **CPRT**  EPS est 0.3832  (Copart Inc)
-- BMO **SUNB**  EPS est 1.0358  (Sunbelt Rentals Holdings Inc)
 - AMC **CASY**  EPS est 6.7776  (Casey's General Stores Inc)
+- BMO **SUNB**  EPS est 1.0358  (Sunbelt Rentals Holdings Inc)
 - AMC **TCOM**  EPS est 0.8854  (Trip.com Group Ltd ADR)
 - BMO **DRI**  EPS est 2.0527  (Darden Restaurants Inc)
+- BMO **SNX**  EPS est 4.6419  (TD Synnex Corp)
 - BMO **GIS**  EPS est 0.7167  (General Mills Inc)
-- AMC **LEN**  EPS est 1.2975  (Lennar Corp)
+- AMC **LEN**  EPS est 1.291  (Lennar Corp)
 - AMC **COO**  EPS est 1.1237  (Cooper Companies Inc)
 - BMO **SAIL**  EPS est 0.0791  (Sailpoint Inc)
-- AMC **ABVX**  EPS est -0.9585  (Abivax ADR)
 
 Options event-vol flags (NOT direction):
 - **ORCL** exp 2026-09-11 ATM IV 0.0078 implied move +0.1% put/call OI —
@@ -134,8 +134,8 @@ Options event-vol flags (NOT direction):
 - **AZO** exp 2026-09-18 ATM IV 0.001 implied move +0.0% put/call OI —
 - **KR** exp 2026-09-11 ATM IV 0.0078 implied move +0.1% put/call OI —
 - **CPRT** exp 2026-09-18 ATM IV 0.0313 implied move +0.5% put/call OI —
-- **SUNB** exp 2026-09-18 ATM IV 0.0156 implied move +0.3% put/call OI —
 - **CASY** exp 2026-09-18 ATM IV 0.0039 implied move +0.1% put/call OI —
+- **SUNB** exp 2026-09-18 ATM IV 0.0156 implied move +0.3% put/call OI —
 
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
@@ -255,31 +255,31 @@ COLD (1w):
 - **Natural Resources** -0.5% 1d +0.3% 1w · GUNR, GNR, PHO
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 20 min **BIRK** BIRK Stock Rises Overnight: Michael Burry Says Hes Been A 'Proud Birkie Since '87'  And Now Owns 5.2% Of Birkenstock (Stocktwits)
-- 24 min **XPEV** XPEV Jumps In Hong Kong: Xpeng Flips The Switch On Humanoid Robot Mass Production  And Says Margins Could Beat EVs (Stocktwits)
-- 28 min **BBNX** Beta Bionics, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - BBNX (PR Newswire)
-- 49 min **NVDA** NVDA Rises Overnight After Strong Week: CEO Jensen Huang Pumps Nvidia Chips As Highly Rentable Money-Minting Assets (Stocktwits)
-- 57 min **HOOD** HOOD Stock Gains Overnight: Retail Gets Bullish As Robinhood Lands First IPO Underwriting Gig (Stocktwits)
-- 58 min **AMZN,META** Local Data Center Fights Are Reshaping the Midterms-Here's How (Barrons.com)
-- 1 hour **UBS** UBS Names Three Places to Put Money as Fed Rate Hike Odds Reach 60% (BeInCrypto)
-- 1 hour **NVDA** Nvidia reportedly shifts Rubin Ultra toward 8-high HBM as memory costs rise (DigiTimes)
-- 1 hour **GORO** Goldgroup Reports Strong First Results from 26,000 Metre San Francisco Drill Program (Newsfile Corp.)
-- 1 hour **QCOM** Intel CPU prices reportedly rising 10% again as Qualcomm and MediaTek target IPC and IoT gaps (DigiTimes)
-- 1 hour **ELF** Escape "Unglammy Valley" with e.l.f. Cosmetic's Soft Glam Satin Foundation (Business Wire)
-- Sep-07 **AGRO** Gold and Bitcoin Are Hedges, But Why Is a Stablecoin Company Buying Farmland? (BeInCrypto)
-- Sep-07 **PERF** QWEEN Launches Hyper-Realistic 3D Jewellery Virtual Try-On for Indian Shoppers with Perfect Corp. (Business Wire)
-- Sep-07 **DELL,VOD,ZETA** Why Did DELL, VOD, ZETA Stocks Surge To 52-Week Highs Last Week? (Stocktwits)
-- Sep-07 **ORCL** ORCL Stock Rallies Into Earnings Week: OpenAI GPT-6 Astra Buzz, Morgan Stanleys Big Target Give Bulls A Boost (Stocktwits)
-- Sep-07 **LULU,TFC** LULU Stock Is Down Over 50% YTD As Heidi ONeill Takes Over: What Wall Street Wants Fixed First (Stocktwits)
-- Sep-07 **XPEV** IRON, the World's First Advanced General-Purpose Humanoid Robot, Walks off the Production Lines as XPENG's Humanoid Robot Manufacturing Facility Is Officially Commissioned (PR Newswire)
-- Sep-07 **LMND** Lemonade CFO to Participate in Upcoming Investor Conferences (PR Newswire)
-- Sep-07 **INTC,MU,ORCL** Dow, S&P 500 Futures Decline Amid Rising Oil Prices As Iran War Escalates: MU, ORCL, INTC, BE Stocks In Focus (Stocktwits)
-- Sep-07 **KEP,SKHY** Samsung, SK Hynix Lead Kospi Higher as Wall Street Faces Tough Opening After Labor Day (BeInCrypto)
-- Sep-07 **MNY** MoneyHero's Moneymax Partners with EastWest to Expand Personal Loan Access in the Philippines (GlobeNewswire)
-- Sep-07 **ANET,CL,DELL,MU,NKE** Why SNDK, DELL, PANW Stocks Are Rallying Overnight Ahead Of Fresh Trading Week (Stocktwits)
-- Sep-07 **MRK,MRNA,TEM** The Cure for Cancer is Becoming an Investable Opportunity: Analyst Sees $600 Million for Tempus AI (BeInCrypto)
-- Sep-07 **SGML** SGML Stock Tumbles Overnight: Sigma Lithium Says Mining Operations Continue Despite Brazilian Court Ruling (Stocktwits)
-- Sep-07 **BE** BE Stock Soars Overnight On S&P 500 Inclusion: Analyst Sees Upside Of Over 28% (Stocktwits)
+- 10 min **HIMX** Himax Unveils Industry-Leading eDP TDDI, Advancing Automotive Display Technology (GlobeNewswire)
+- 13 min **ASML** Mistral AI raises record 3 billion in Samsung-led funding round (Euronews)
+- 20 min **ORCL,INTC,BABA,TSLA,NVDA** Dow, S&P 500, Nasdaq Futures Slide As Iran Conflict Sends Oil Back Toward $100: TSLA,  NVDA, ORCL, INTC, BIDU, BABA, BE In Focus (Stocktwits)
+- 22 min **FOFO** Hang Feng Technology Innovation Co., Ltd. Announces First Half 2026 Financial Results (PR Newswire)
+- 23 min **PATH,TFC** PATH Stock Wrapped Its Worst Week In 4 Months: UiPath Wins Higher Price Targets, But Analysts Still Want AI Proof (Stocktwits)
+- 23 min **JPM** High Mortgage Rates Keep Multifamily Demand Elevated (CRE Daily)
+- 24 min **LCO** Oil near $100, Fed rate fears and Iran tensions - whats moving markets (Investing.com)
+- 34 min **OPEN** OPEN Stock Has Lost 46% Since New CEO Took Over Nearly A Year Ago  Now He Admits He Hasnt Moved Fast Enough (Stocktwits)
+- 36 min **ASML** Mistral AIs 3B Series D Makes It Europes Sovereign AI Champion  With a Paradox Built Into Its Foundation (Forkast News)
+- 37 min **NVS,AMGN** Why the Dow is being dragged down by a Swiss company's bad news (MarketWatch)
+- 47 min **ORCL** Stock market today: Dow, S&P 500, Nasdaq futures slip amid rising oil prices (Yahoo Finance)
+- 48 min **OKLO** OKLO Stock Rises Premarket: Here's Why This Strategist Sees A 'Bigger Opportunity' (Stocktwits)
+- 49 min **SW** North American containerboard prices rise as capacity cuts tighten supply (Packaging Gateway)
+- 52 min **ISOU** IsoEnergy Completes Summer Drilling at Larocque East, Intersecting Widespread and Strongest Radioactivity to Date Along the Hurricane South Trend (PR Newswire)
+- 52 min **EGHT** CIOs Carry the Blame for AI Failure, Often Without the Authority to Prevent It, 8x8 Survey Finds (Business Wire)
+- 1 hour **AMGN,TTAN,ABM,AVO,BRZE** Stock Market Today: Dow set to retreat as Amgen falls, while S&P 500 and Nasdaq set for mixed start after Labor Day (MarketWatch)
+- 1 hour **AMGN** Dow set for losses as Amgen falls on rival's missed target for experimental drug (MarketWatch)
+- 1 hour **GLND** 80 Mile consolidates porfolio with deal to merge with (Proactive)
+- 1 hour **NVDA** Jensen Huang Says a 22% Rent Jump Proves Old Nvidia Chips Keep Earning (BeInCrypto)
+- 1 hour **UPB** Upstream Bio Presents Results from the Phase 2 VALIANT Trial of Verekitug for the Treatment of Severe Asthma in Oral Presentation at ERS Congress 2026 (GlobeNewswire)
+- 1 hour **VRSK** Unmasking Fraud: Verisk Releases Fraud Discovery, connecting intelligence, analytics and investigations in one powerful fraud platform (GlobeNewswire)
+- 1 hour **BRSL** Brightstar Lottery PLC Announces Tender Offer and a Benchmark Offering of Senior Secured Notes Due 2032 (PR Newswire)
+- 1 hour **NVS** European shares dip as higher crude revives inflation worries; Novartis drags (Reuters)
+- 1 hour **LOGI** Logitech Unveils MX Keypad for Developers: The Customizable Multi-App AI Control Center (Business Wire)
+- 1 hour **BAM** Brookfield Selected by Nuclear Liabilities Fund for Multi-Decade Investment Mandate (GlobeNewswire)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
