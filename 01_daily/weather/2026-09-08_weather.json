@@ -1,6 +1,6 @@
 {
  "date": "2026-09-08",
- "generated_at": "2026-09-08T09:52:52.963218-04:00",
+ "generated_at": "2026-09-08T09:42:49.434179-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -20,17 +20,17 @@
   "dgs10_current": 4.77,
   "dollar": "soft",
   "dollar_source": "dxy",
-  "dxy_pct_1d": -0.31,
-  "vix_ratio": 0.849,
-  "vix_spot": 15.4,
-  "vix_delta_1d": 0.1,
-  "vix_ratio_source": "vix/vix3m",
-  "vix": "falling",
-  "oil_pct_1d": 2.07,
+  "dxy_pct_1d": -0.33,
+  "vix_ratio": 1.015,
+  "vix_spot": 15.32,
+  "vix_delta_1d": 0.02,
+  "vix_ratio_source": "vix/ma20",
+  "vix": "calm",
+  "oil_pct_1d": 1.71,
   "oil": "rising",
   "fear_greed": 58.2,
   "fear_greed_label": "Greed",
-  "regime_corr": -0.895,
+  "regime_corr": -0.858,
   "sectors": {
    "Basic Materials": {
     "score": -0.6,
@@ -244,12 +244,12 @@
    "high": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "risk-unknown, VIX falling"
+    "why": "risk-unknown, VIX calm"
    },
    "low": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "risk-unknown, VIX falling"
+    "why": "risk-unknown, VIX calm"
    },
    "mid": {
     "stance": "neutral",

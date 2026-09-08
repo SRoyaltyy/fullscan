@@ -5,8 +5,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** UNKNOWN
-- **Yields:** flat (fred_dgs10) | **Dollar:** soft (dxy) | **Oil:** rising | **VIX:** falling (ratio 0.85 via vix/vix3m) spot 15.4
-- **Fear & Greed:** 58 (Greed) | **Yield/SPX 5d corr:** -0.90
+- **Yields:** flat (fred_dgs10) | **Dollar:** soft (dxy) | **Oil:** rising | **VIX:** calm (ratio 1.01 via vix/ma20) spot 15.32
+- **Fear & Greed:** 58 (Greed) | **Yield/SPX 5d corr:** -0.86
 - **High-impact events:** 4 bullish vs 6 bearish
 - ⚠️ **Data gaps:** general predict run, general predict factor scoreboard
 
@@ -40,8 +40,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| beta:high | ⛅ neutral | low | risk-unknown, VIX falling |
-| beta:low | ⛅ neutral | low | risk-unknown, VIX falling |
+| beta:high | ⛅ neutral | low | risk-unknown, VIX calm |
+| beta:low | ⛅ neutral | low | risk-unknown, VIX calm |
 | beta:mid | ⛅ neutral | low | beta-neutral zone |
 
 ## Short interest (multiplier, not direction)
