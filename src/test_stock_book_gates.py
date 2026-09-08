@@ -22,7 +22,9 @@ from src.stock_book import (
     _horizon_pick,
     _keep_liquid,
     _load_finviz_liquidity,
+    write_report,
 )
+import src.stock_book as stock_book_mod
 
 
 def _row(ticker, join=0.9, gen=0.2, ab=0.9, peer=0.5, sector=0.2, news=0.0,
@@ -373,6 +375,55 @@ def test_liquidity_empty_keeps_universe() -> None:
     assert set(out["Ticker"]) == {"AAA", "BBB"}
 
 
+def test_write_report_green_json_uses_meta_not_local_gp() -> None:
+    """write_report used to NameError on `gp` and skip green.json (2026-09-08)."""
+    with tempfile.TemporaryDirectory() as tmp:
+        out = Path(tmp) / "book"
+        daily = Path(tmp) / "daily"
+        out.mkdir()
+        daily.mkdir()
+        old_out, old_daily = stock_book_mod.OUT_DIR, stock_book_mod.DAILY
+        stock_book_mod.OUT_DIR = out
+        stock_book_mod.DAILY = daily
+        try:
+            df = pd.DataFrame({
+                "Ticker": ["AAA", "BBB"],
+                "green": [True, False],
+                "sector": ["Tech", "Tech"],
+                "size": ["mid", "mid"],
+                "market_cap_m": [2000, 2000],
+                "score_1d": [1.0, 0.1],
+                "score_3d": [1.0, 0.1],
+                "score_1w": [1.0, 0.1],
+                "score_2w": [1.0, 0.1],
+                "score_1m": [1.0, 0.1],
+            })
+            meta = {
+                "date": "2026-09-08",
+                "generated_at": "t",
+                "general_bias": 0.0,
+                "n_news_tickers": 0,
+                "n_universe": 2,
+                "green_pile": {
+                    "n_pile": 1, "used": False,
+                    "buy_mode": "weighted_fallback",
+                    "sell_mode": "core_weights",
+                    "reason": "thin pile",
+                },
+                "sell_excludes_addons": True,
+                "weather_risk": None,
+                "weights": {},
+            }
+            write_report(df, meta, 1)
+            js = json.loads((out / "2026-09-08_green.json").read_text())
+            assert js["n_pile"] == 1
+            assert js["reason"] == "thin pile"
+            assert js["tickers"] == ["AAA"]
+        finally:
+            stock_book_mod.OUT_DIR = old_out
+            stock_book_mod.DAILY = old_daily
+
+
 def main() -> None:
     tests = [
         test_event_tilt_cannot_invert_essay,
@@ -389,6 +440,7 @@ def main() -> None:
         test_book_liquidity_requires_recent_atr,
         test_runs_for_date_fills_from_predict_md,
         test_liquidity_empty_keeps_universe,
+        test_write_report_green_json_uses_meta_not_local_gp,
     ]
     failed = 0
     for fn in tests:

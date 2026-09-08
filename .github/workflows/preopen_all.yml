@@ -6,7 +6,8 @@ name: Pre-Open ALL (predictive one-shot)
 # CLOCK: ECS systemd 05:55 ET still owns the unattended start.
 # Skip-if-good: each file already quality-ok is not rewritten (no LLM).
 # This file is a poke: a main push that touches it starts the packet
-# (workflow_dispatch is 403 from the cloud agent).
+# (workflow_dispatch is 403 from the cloud agent). Push is ubuntu/DeepSeek
+# so a queued ECS job (offline runner) cannot block the 09:30 packet.
 
 on:
   push:
@@ -55,7 +56,9 @@ permissions:
   pages: write
 
 concurrency:
-  group: preopen-all
+  # Queued self-hosted runs sit forever if ecs-openclaw is offline.
+  # Ubuntu/DeepSeek must not share that group or the heal never starts.
+  group: preopen-all-${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'ubuntu' || 'ecs' }}
   cancel-in-progress: false
 
 jobs:
@@ -179,27 +182,31 @@ jobs:
   preopen:
     needs: scrape
     if: always()
-    runs-on: ${{ github.event.inputs.runner == 'ubuntu' && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
+    runs-on: ${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
     timeout-minutes: 360
     env:
       OPENCLAW_TIMEOUT: "10800"
       FULLSCAN_PERSIST: "/home/gha/fullscan-persist"
-      FULLSCAN_HOME: "/home/gha"
-      HOME: "/home/gha"
+      FULLSCAN_HOME: ${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
+      HOME: ${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
       FINVIZ_SKIP_LIVE: "1"
       PREOPEN_LOCK: "/home/gha/fullscan-persist/locks/preopen.lock"
     steps:
       - name: Wait if ECS systemd pre-open owns the box
         run: |
           echo "waited_for_lock=no" >> "$GITHUB_ENV"
-          mkdir -p "$(dirname "$PREOPEN_LOCK")"
-          exec 9>"$PREOPEN_LOCK"
-          if flock -n 9; then
-            echo "lock is free"
-            flock -u 9 || true
+          LOCK="${PREOPEN_LOCK:-/home/gha/fullscan-persist/locks/preopen.lock}"
+          if mkdir -p "$(dirname "$LOCK")" 2>/dev/null; then
+            exec 9>"$LOCK"
+            if flock -n 9; then
+              echo "lock is free"
+              flock -u 9 || true
+            else
+              echo "ECS systemd job holds the lock — backing off"
+              echo "skip=yes" >> "$GITHUB_ENV"
+            fi
           else
-            echo "ECS systemd job holds the lock — backing off"
-            echo "skip=yes" >> "$GITHUB_ENV"
+            echo "no persist lock dir (ubuntu) — continue"
           fi
 
       - uses: actions/checkout@v4
@@ -222,7 +229,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          export HOME="${FULLSCAN_HOME:-/home/gha}"
+          export HOME="${HOME:-${FULLSCAN_HOME:-/home/gha}}"
           chmod +x scripts/ensure_openclaw_timeouts.sh scripts/ensure_ecs_clock.sh \
             scripts/install_ecs_preopen.sh scripts/ecs_preopen.sh \
             scripts/ecs_map_postclose.sh scripts/safe_git_push.sh || true
@@ -265,16 +272,20 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENCLAW_TIMEOUT: "10800"
           GROK_ONLY: "0"
-          LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'auto' }}
+          LLM_BACKEND: ${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'deepseek' || github.event.inputs.llm_backend || 'auto' }}
           FINVIZ_SKIP_LIVE: "1"
         run: |
           set -e
-          export HOME="${FULLSCAN_HOME:-/home/gha}"
-          mkdir -p "$(dirname "${PREOPEN_LOCK:-/tmp/fullscan-preopen.lock}")"
-          exec 9>"${PREOPEN_LOCK:-/tmp/fullscan-preopen.lock}"
-          if ! flock -n 9; then
-            echo "ECS systemd job grabbed the lock — backing off"
-            exit 0
+          export HOME="${HOME:-${FULLSCAN_HOME:-/home/gha}}"
+          LOCK="${PREOPEN_LOCK:-/home/gha/fullscan-persist/locks/preopen.lock}"
+          if mkdir -p "$(dirname "$LOCK")" 2>/dev/null; then
+            exec 9>"$LOCK"
+            if ! flock -n 9; then
+              echo "ECS systemd job grabbed the lock — backing off"
+              exit 0
+            fi
+          else
+            echo "no persist lock (ubuntu) — continue"
           fi
           DATE="${{ github.event.inputs.run_date }}"
           FORCE="${{ github.event.inputs.force }}"
@@ -302,7 +313,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          export HOME="${FULLSCAN_HOME:-/home/gha}"
+          export HOME="${HOME:-${FULLSCAN_HOME:-/home/gha}}"
           unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
           cd "${GITHUB_WORKSPACE:-.}"
           PATHS=(01_daily/_ecs_clock.md)

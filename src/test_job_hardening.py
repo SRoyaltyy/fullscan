@@ -714,6 +714,19 @@ def test_ubuntu_postclose_skips_grok_and_keeps_runner_home() -> None:
     assert "postclose_last_closed.yml" not in post_yml.split("push:")[1].split("workflow_dispatch:")[0]
 
 
+def test_ubuntu_preopen_not_blocked_by_queued_ecs() -> None:
+    """A queued ecs-openclaw job must not block the ubuntu/DeepSeek packet."""
+    yml = (WF / "preopen_all.yml").read_text(encoding="utf-8")
+    assert "group: preopen-all-${{" in yml
+    assert "&& 'ubuntu' || 'ecs'" in yml
+    assert "github.event_name == 'push'" in yml
+    assert "&& 'deepseek'" in yml
+    assert "'/home/runner'" in yml
+    assert "no persist lock dir (ubuntu)" in yml
+    assert 'export HOME="${FULLSCAN_HOME:-/home/gha}"' not in yml
+    assert "HOME: \"/home/gha\"" not in yml
+
+
 def test_last_closed_sidecar_does_not_share_ubuntu_concurrency() -> None:
     """A hung postclose-all-ubuntu push must not block yesterday's grade."""
     yml = (WF / "postclose_last_closed.yml").read_text(encoding="utf-8")
@@ -800,6 +813,7 @@ def main() -> None:
         test_general_reflect_writes_gate_file_and_reuses_transcript,
         test_postclose_pushes_after_each_llm_layer,
         test_ubuntu_postclose_skips_grok_and_keeps_runner_home,
+        test_ubuntu_preopen_not_blocked_by_queued_ecs,
         test_last_closed_sidecar_does_not_share_ubuntu_concurrency,
         test_search_and_sector_rounds_are_bounded,
     ]
