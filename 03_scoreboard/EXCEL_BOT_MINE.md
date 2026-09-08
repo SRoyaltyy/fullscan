@@ -1237,3 +1237,7 @@ Research only. One 2026 regime.
 ## Shade hex + onset (open-entry)
 
 _Generated 2026-09-08 · live `flatten_robust` frozen. Shade hex + onset on open-knowable fills. Family **null**. GHOST FAIL. M mid GHOST FAIL; O onset GHOST THIN. Expanded open-only M mid `#95CA82` / ge15 is a **DEMOTE** (not the 4.4k H-fill leak). Same-day H KEEP 0 · KILL 5. See `SHADE_OPEN.md` / `SHADE_KEEP_CARDS.md`._
+
+## Shade clock-gate pairs (M fill × open 44 / lags)
+
+_Generated 2026-09-08 · live `flatten_robust` frozen. Excel clock gate (`OPEN_SAME_ROW_LABELS` + `CLOCK_MAP`). M mid `#95CA82` fill × locked 44 / lags. Family **null**. GHOST FAIL. KEEP 0 · KILL 24. See `SHADE_GATE.md`. Live frozen._

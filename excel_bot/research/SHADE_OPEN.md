@@ -14,10 +14,18 @@ Shade hex and onset on open-knowable fills do not beat any-green or the book aft
 
 The 4.4k / +10.6% KEEP was **H’s fill** (close-knowable `H≥5%`) mis-indexed as M. This rebuild is **5223** tickers × **2018-09-10 → 2026-09-04** (8.54M name-days). Real M mid `#95CA82` holdout **−0.19%** (n=320499) vs book −0.10% (−0.09 pp). Time split early −0.18% / late −0.41%. Soft-regime majority is N/A (no KEEP). Live frozen.
 
+### Excel clock gate (source of truth)
+
+Same-row open fills: **A B C G J K L M O IR IS IT**. Same-row numbers/text: the **44 `value_mine_open` cols** (never H/I). Lags of any letter are fair. OUT: M’s number, B/G/K/M/O numbers, D/E/F/H/I same-row, `core_score`. Docs: `OPEN_SAME_ROW_LABELS.md` + `CLOCK_MAP.md`. M `#95CA82` × 44/lag pairs: family **null** (KEEP 0 · KILL 24) — `SHADE_GATE.md`.
+
 ### Open-only gate (standing bar)
 
-Every **feature** is knowable at that day's open — fill shade, number, and text. This is the War room clock, not a slogan.
+Every **feature** is knowable at that day's open — fill shade, number, and text. This is the Excel clock gate, not a slogan.
 
+- Shades/fills at open: only **A B C G J K L M O IR IS IT**. Mid-M `#95CA82` expand stays **open-fill only**.
+- Numbers/text at open: only the **44 `value_mine_open` cols**. Never same-row H/I.
+- Lags: any letter from rows above is fair.
+- OUT: M’s number, B/G/K/M/O numbers, D/E/F/H/I same-row, `core_score`.
 - **M fill** `#95CA82` / ge15 is the feature. CF `IZ=1` reads *yesterday's* H and the static IY row (lag). Known at 9:30.
 - **M's number** `-(low-open)/open` is same-day low → close-only. Never a feature. Never a gate.
 - Close fills **D E F H I N** do not start a trade. Same-row H/I values, fills, text, and transforms are **labels only**.

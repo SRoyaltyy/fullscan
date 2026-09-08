@@ -38,6 +38,10 @@ from clock import (  # noqa: E402
     CLOSE_LETTERS, COST_FUTU_LONG, OPEN_CORE_IDX, OPEN_LETTERS, SHIP,
     VISIBLE, annotate_days, assert_clock_legal, feature_clock,
 )
+from excel_clock_gate import (  # noqa: E402
+    FILL_OPEN as GATE_FILL_OPEN, VALUE_OPEN_44, VALUE_OUT_SAME_ROW,
+    assert_excel_clock_gate,
+)
 from harden_hyst_open import lottery_day, s2d, splice_md  # noqa: E402
 from mine_hi_horizon import FLAT_BPS, load_spy_regimes  # noqa: E402
 from mine_next_region import Q1_CUT, deeper  # noqa: E402
@@ -218,10 +222,22 @@ def cf_inventory(model=None):
 def assert_open_gate():
     """Abort if any feature path can read a close-knowable same-row cell.
 
-    Standing bar (Cyrus / War room): open-knowable only — fills, numbers,
-    text. M shade `#95CA82` at the open. Never M's number. Never same-row
-    H/I (value, fill, or transform). Prior-row lags are legal.
+    Excel clock gate (OPEN_SAME_ROW_LABELS + CLOCK_MAP) is the source of
+    truth: open fills A B C G J K L M O IR IS IT; numbers/text the 44
+    value_mine_open cols; lags any letter; OUT M/B/G/K/O numbers,
+    D/E/F/H/I same-row, core_score. Mid-M `#95CA82` stays open-fill only.
     """
+    assert_excel_clock_gate()
+    if set(OPEN_FILL) | set(OPEN_ALIASES) != set(GATE_FILL_OPEN):
+        raise AssertionError("shade OPEN_FILL drifted from Excel fill gate")
+    for col in ("H", "I", "D", "E", "F", "N"):
+        if col in OPEN_FILL or col in OPEN_ALIASES:
+            raise AssertionError(f"close fill {col} leaked into open fills")
+        if col in VALUE_OPEN_44:
+            raise AssertionError(f"{col} must not be value_mine_open")
+    for col in ("B", "G", "K", "M", "O"):
+        if col not in VALUE_OUT_SAME_ROW:
+            raise AssertionError(f"{col} number must stay on the OUT list")
     cols = tuple(VISIBLE.index(c) for c in OPEN_FILL)
     assert feature_clock(cols) == "open"
     assert_clock_legal(cols, "open")
@@ -1369,11 +1385,26 @@ def render(inv_cf, inv_dump, rows, soft, n_grids, n_days, verd, why, lo, hi,
         "(−0.09 pp). Time split early −0.18% / late −0.41%. Soft-regime "
         "majority is N/A (no KEEP). Live frozen.",
         "",
+        "### Excel clock gate (source of truth)",
+        "",
+        "Same-row open fills: **A B C G J K L M O IR IS IT**. "
+        "Same-row numbers/text: the **44 `value_mine_open` cols** "
+        "(never H/I). Lags of any letter are fair. OUT: M’s number, "
+        "B/G/K/M/O numbers, D/E/F/H/I same-row, `core_score`. "
+        "Docs: `OPEN_SAME_ROW_LABELS.md` + `CLOCK_MAP.md`. "
+        "Mid-M `#95CA82` expand stays open-fill only. See `SHADE_GATE.md`.",
+        "",
         "### Open-only gate (standing bar)",
         "",
         "Every **feature** is knowable at that day's open — fill shade, "
-        "number, and text. This is the War room clock, not a slogan.",
+        "number, and text. This is the Excel clock gate, not a slogan.",
         "",
+        "- Shades/fills at open: only **A B C G J K L M O IR IS IT**.",
+        "- Numbers/text at open: only the **44 `value_mine_open` cols**. "
+        "Never same-row H/I.",
+        "- Lags: any letter from rows above is fair.",
+        "- OUT: M’s number, B/G/K/M/O numbers, D/E/F/H/I same-row, "
+        "`core_score`.",
         "- **M fill** `#95CA82` / ge15 is the feature. CF `IZ=1` reads "
         "*yesterday's* H and the static IY row (lag). Known at 9:30.",
         "- **M's number** `-(low-open)/open` is same-day low → close-only. "

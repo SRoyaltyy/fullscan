@@ -22,6 +22,10 @@ from datetime import date
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from clock import COST_FUTU_LONG  # noqa: E402
+from excel_clock_gate import (  # noqa: E402
+    FILL_OPEN, LANDMINE_VALUE, SKIP_VALUE_OPS, VALUE_OPEN_44,
+    assert_excel_clock_gate,
+)
 from harden_hyst_open import apply_hold1_keep, splice_md  # noqa: E402
 from mine_next_region import Q1_CUT, deeper  # noqa: E402
 from mine_unmined import (  # noqa: E402
@@ -50,17 +54,7 @@ HOLDS = (1, 2)
 N_LAG = 5
 PAIR_TOP = 30
 
-# Excel-locked. Do not invent. Must match clock_map groups.
-VALUE_OPEN_44 = (
-    "A", "C", "J", "Q", "Z", "AC", "AH", "BT", "BV", "CG", "CH", "DC", "DE",
-    "EB", "EK", "EN", "EP", "EQ", "ER", "ES", "ET", "EU", "EV", "FQ", "FR",
-    "FS", "FU", "GD", "GE", "GF", "HF", "HG", "HW", "II", "IR", "IT", "IY",
-    "IZ", "JB", "JC", "JD", "JE", "JF", "JL",
-)
-FILL_OPEN = ("A", "B", "C", "G", "J", "K", "L", "M", "O", "IR", "IS", "IT")
-LANDMINE_VALUE = ("B", "G", "K", "M", "O", "L", "D", "E", "F", "H", "I", "N", "AA")
-# Date serials — in the 44 as open values, not useful as thresholds.
-SKIP_VALUE_OPS = {"A", "IR"}
+# Excel-locked lists live in excel_clock_gate (CLOCK_MAP + OPEN_SAME_ROW_LABELS).
 TEXT_COLS = {"EQ"}
 # Close-same-row numbers that are still fair as *lags*.
 LAG_EXTRA = ("O", "AA", "H")
@@ -77,22 +71,7 @@ def load_clocks():
 
 def assert_locked_gate(clocks):
     """Refuse to invent clocks — Excel's list must match the map."""
-    vo = tuple(clocks["groups"]["value_mine_open"])
-    fo = tuple(clocks["groups"]["fill_mine_open"])
-    if vo != VALUE_OPEN_44:
-        raise ValueError(f"value_mine_open drifted: {vo} != locked 44")
-    if fo != FILL_OPEN:
-        raise ValueError(f"fill_mine_open drifted: {fo} != locked fills")
-    if len(VALUE_OPEN_44) != 44:
-        raise ValueError("locked value-open list is not 44")
-    by = {r["col"]: r for r in clocks["columns"]}
-    for col in LANDMINE_VALUE:
-        if by[col]["value_mine"] == "open":
-            raise ValueError(f"landmine {col} is value-open — do not invent")
-    if by["O"]["fill_mine"] != "open" or by["O"]["value_mine"] != "close":
-        raise ValueError("O fill/value lock broken")
-    if by["AA"]["value_mine"] == "open":
-        raise ValueError("AA today is not licensed same-row open")
+    return assert_excel_clock_gate(clocks)
 
 
 def atom_name(col, lag, opname):

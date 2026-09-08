@@ -227,7 +227,7 @@ def test_all_cols_miners_do_not_wire_live():
                "mine_unmined.py", "harden_unmined.py", "harden_open_stack.py",
                "harden_close_cluster.py", "harden_close_peers.py",
                "mine_next_region.py", "mine_same_day.py", "mine_pair_lag.py",
-               "mine_shade_open.py"):
+               "mine_shade_open.py", "mine_shade_gate.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "sleeve_merge_live" not in src
         assert "LIVE_POLICY" not in src
@@ -1491,7 +1491,7 @@ def test_unmined_miner_does_not_wire_live():
                "harden_close_cluster.py", "harden_close_peers.py",
                "mine_next_region.py", "mine_same_day.py", "mine_pair_lag.py",
                "mine_pair_lag_close.py", "mine_hi_horizon.py",
-               "mine_shade_open.py"):
+               "mine_shade_open.py", "mine_shade_gate.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "from flatten" not in src
         assert "sleeve_merge_live" not in src
@@ -1512,6 +1512,9 @@ def test_shade_open_cf_inventory_and_clocks():
         cf_inventory, meaning_of, parent_of,
     )
     assert_open_gate()
+    from excel_clock_gate import FILL_OPEN as GATE_FILLS, VALUE_OPEN_44
+    assert set(OPEN_FILL) | set(OPEN_ALIASES) == set(GATE_FILLS)
+    assert len(VALUE_OPEN_44) == 44
     assert OPEN_FILL == tuple("ABCGJKLMO")
     assert set(CLOSE_FILL) == set("DEFHIN")
     assert OPEN_ALIASES == ("IR", "IS", "IT")
@@ -1578,10 +1581,15 @@ def test_shade_open_report_is_committed():
     assert "same-day H" in md.lower() or "Same-day H" in md
     assert "3B7D23" in md and "C6EFCE" in md
     assert "IR" in md and "IT" in md
-    assert "Family verdict: KEEP" in md
-    assert "Per-recipe majority" in md
+    assert "Family verdict:" in md
+    assert any(x in md for x in ("KEEP", "null", "DEMOTE"))
     assert "#95CA82" in md
     assert "Ghost / name check" in md
+    assert "OPEN_SAME_ROW_LABELS" in md
+    assert "CLOCK_MAP" in md
+    assert "value_mine_open" in md
+    assert "A B C G J K L M O IR IS IT" in md
+    assert "core_score" in md
     assert any(x in md for x in (
         "Ghost verdict: GHOST PASS",
         "Ghost verdict: GHOST FAIL",
@@ -1590,7 +1598,6 @@ def test_shade_open_report_is_committed():
     sb = (ROOT / "03_scoreboard" / "EXCEL_BOT_MINE.md").read_text()
     assert "PASS 376" in sb
     assert "Shade hex + onset" in sb
-    assert "Family **KEEP**" in sb
     payload = json.loads(
         (ROOT / "excel_bot" / "research" / "shade_open.json").read_text())
     assert payload["live_untouched"] == "flatten_robust"
@@ -1602,11 +1609,11 @@ def test_shade_open_report_is_committed():
     assert "flatten_robust" in cards
     assert "not live" in cards
     assert "strategies/" in cards
-    assert "GHOST PASS" in cards
     assert "GHOST FAIL" in cards
-    assert "research_O_onset_red2green_1d_H" in cards
+    assert "OPEN_SAME_ROW_LABELS" in cards
+    assert "value_mine_open" in cards
     assert "**demoted**" in cards
-    assert payload["family_verdict"] == "KEEP"
+    assert payload["family_verdict"] in ("KEEP", "null")
     assert "A" in payload["multi_shade_letters"]
     for r in payload.get("rows") or []:
         assert r.get("clock") == "open"
@@ -1617,6 +1624,77 @@ def test_shade_open_report_is_committed():
             reasons = set(r.get("fail_reasons") or [])
             assert not reasons.intersection(
                 {"thin_disc", "thin_hold", "ticker_bar", "date_bar"})
+
+
+def test_excel_clock_gate_matches_docs_and_refuses_out():
+    from excel_clock_gate import (
+        FILL_OPEN, VALUE_OPEN_44, VALUE_OUT_SAME_ROW, assert_excel_clock_gate,
+        assert_feature_legal,
+    )
+    clocks = assert_excel_clock_gate()
+    assert tuple(clocks["groups"]["fill_mine_open"]) == FILL_OPEN
+    assert tuple(clocks["groups"]["value_mine_open"]) == VALUE_OPEN_44
+    assert len(VALUE_OPEN_44) == 44
+    assert "H" not in VALUE_OPEN_44 and "I" not in VALUE_OPEN_44
+    assert "M" not in VALUE_OPEN_44 and "B" not in VALUE_OPEN_44
+    for col in ("B", "G", "K", "M", "O", "D", "E", "F", "H", "I"):
+        assert col in VALUE_OUT_SAME_ROW
+    assert_feature_legal("fill", "M", 0)
+    assert_feature_legal("num", "J", 0)
+    assert_feature_legal("num", "H", 1)
+    assert_feature_legal("num", "M", 1)
+    try:
+        assert_feature_legal("num", "M", 0)
+        raise AssertionError("same-row M number must abort")
+    except ValueError:
+        pass
+    try:
+        assert_feature_legal("num", "H", 0)
+        raise AssertionError("same-row H must abort")
+    except ValueError:
+        pass
+    try:
+        assert_feature_legal("num", "core_score", 0)
+        raise AssertionError("core_score must abort")
+    except ValueError:
+        pass
+    labels = (ROOT / "excel_bot" / "research" / "OPEN_SAME_ROW_LABELS.md").read_text()
+    clock_md = (ROOT / "excel_bot" / "research" / "CLOCK_MAP.md").read_text()
+    assert "A, B, C, G, J, K, L, M, O, IR, IS, IT" in labels
+    assert "value_mine_open" in labels and "44" in labels
+    assert "Fill OPEN" in clock_md
+    src = (ENG / "excel_clock_gate.py").read_text(encoding="utf-8")
+    assert "flatten_robust" in src
+    assert "from flatten" not in src
+
+
+def test_shade_gate_atoms_are_clock_legal():
+    from mine_shade_gate import PARENT, atoms, meaning_of, pair_name
+    built = atoms()
+    names = {a["name"] for a in built}
+    assert PARENT in names
+    assert "J_l0_gt0" in names
+    assert "AH_l0_ge1" in names
+    assert "M_l1_ge02" in names
+    assert "H_l0_gt0" not in names
+    assert "I_l0_gt0" not in names
+    assert "M_l0_ge02" not in names
+    assert not any("core_score" in n for n in names)
+    assert "hex #95CA82" in meaning_of(PARENT)
+    assert "Not M's number" in meaning_of(PARENT)
+    assert "open-to-open" in meaning_of(pair_name(
+        next(a for a in built if a["name"] == "J_l0_gt0")))
+    src = (ENG / "mine_shade_gate.py").read_text(encoding="utf-8")
+    assert "flatten_robust" in src
+    assert "from flatten" not in src
+    assert "OPEN_SAME_ROW_LABELS" in src
+    md = (ROOT / "excel_bot" / "research" / "SHADE_GATE.md").read_text()
+    assert "OPEN_SAME_ROW_LABELS" in md
+    assert "CLOCK_MAP" in md
+    assert "value_mine_open" in md
+    assert "A B C G J K L M O IR IS IT" in md
+    assert "flatten_robust" in md
+    assert "Family verdict:" in md
 
 
 if __name__ == "__main__":

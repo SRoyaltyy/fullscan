@@ -10,7 +10,7 @@ This file is the **Excel-locked no-peek gate** for the reopen mine (numbers + te
 - **Upper rows** (t−1, t−2, …) are always fair — already known by the open of day X.
 - Do **not** re-litigate killed highlight ghosts. Standing open keep stays five-cell light + green O ± AH/FR.
 
-Source of truth: `CLOCK_MAP.md` + `clock_map.json` tip on this branch.
+Source of truth: `CLOCK_MAP.md` + `clock_map.json` tip on this branch. Shade miners (`mine_shade_open`, `mine_shade_gate`) lock this list and refuse to invent clocks. Mid-M `#95CA82` expand stays **open-fill only** — M’s number is OUT.
 
 ## Same-row OPEN — fill / highlight (timing-proven)
 
