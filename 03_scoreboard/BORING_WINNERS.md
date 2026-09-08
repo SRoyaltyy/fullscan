@@ -958,12 +958,12 @@ Overlay 1d — · 2d — · 3d — · 1w — · W/L 0/0 · stock-book BUY 1d —
 | # | action | Ticker | src | stack | Marks | Cond | Hall-pass | cameras | coaches | 1d | 2d | 3d | 1w |
 |---:|---|---|---|---|---|---|---|---|---|---:|---:|---:|---:|
 | 1 | buy | `CMCO` | book | `blue_white` | 🔵 — ⚪ | 🟢 6/1/2 | group leader | join🟢 sect🔴 gen🟢 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟢 | mkt🟡 par🟡 chd🟢 co🟡 set🟢 flw🟢 | — | — | — | — |
-| 2 | buy | `CRSR` | book | `blue_white` | 🔵 — ⚪ | 🟢 6/2/1 | group leader | join🟢 sect🟡 gen🟢 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🔴 | mkt🟡 par🟢 chd🟢 co🟡 set🟢 flw🟢 | — | — | — | — |
+| 2 | buy | `CRSR` | book | `blue_white` | 🔵 — ⚪ | 🟢 7/1/1 | group leader | join🟢 sect🟢 gen🟢 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🔴 | mkt🟡 par🟢 chd🟢 co🟡 set🟢 flw🟢 | — | — | — | — |
 | 3 | buy | `ZIM` | extra | `hot_ab_peer` | 🔵 — ⚪ | 🟡 4/4/1 | group leader | join🟡 sect🔴 gen🟢 news⬛ dig🟢 jdg⬛ AB🟢 peer🟡 heat🟢 vol🟡 cat⬛ buy🟡 yΔ🟢 | mkt🟡 par🟡 chd🟢 co🟡 set🟢 flw🟢 | — | — | — | — |
 | 4 | buy | `IOVA` | extra | `blue_white` | 🔵 — ⚪ | 🟢 7/1/2 | standard | join🟢 sect🟢 gen🟢 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟡 yΔ🟢 | mkt🟡 par🟡 chd🟡 co🟡 set🟢 flw🟡 | — | — | — | — |
 | 5 | buy | `OSCR` | extra | `blue_white` | 🔵 — ⚪ | 🟢 7/1/2 | standard | join🟢 sect🟢 gen🟢 news⬛ dig🟢 jdg🟢 AB🟢 peer🟢 heat🔴 vol🔴 cat⬛ buy🟡 yΔ🟢 | mkt🟡 par🟡 chd🟡 co🟡 set🟢 flw🟡 | — | — | — | — |
-| 6 | buy | `INSW` | extra | `blue_white` | 🔵 — ⚪ | 🟡 3/5/1 | standard | join🟢 sect🟡 gen🟡 news⬛ dig🟢 jdg⬛ AB🟢 peer🟡 heat🔴 vol🟡 cat⬛ buy🟡 yΔ🟢 | mkt🟡 par🟡 chd🟡 co🟡 set🟢 flw🟢 | — | — | — | — |
-| 7 | buy | `UGP` | extra | `blue_white` | 🔵 — ⚪ | 🟢 6/3/0 | standard | join🟢 sect🟡 gen🟡 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🟡 cat⬛ buy🟢 yΔ🟢 | mkt🟡 par🟡 chd🟢 co🟡 set🟢 flw🟢 | — | — | — | — |
+| 6 | buy | `INSW` | extra | `blue_white` | 🔵 — ⚪ | 🟡 3/4/2 | standard | join🟢 sect🔴 gen🟡 news⬛ dig🟢 jdg⬛ AB🟢 peer🟡 heat🔴 vol🟡 cat⬛ buy🟡 yΔ🟢 | mkt🟡 par🟡 chd🟡 co🟡 set🟢 flw🟢 | — | — | — | — |
+| 7 | buy | `UGP` | extra | `blue_white` | 🔵 — ⚪ | 🟢 6/2/1 | standard | join🟢 sect🔴 gen🟡 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🟡 cat⬛ buy🟢 yΔ🟢 | mkt🟡 par🟡 chd🟢 co🟡 set🟢 flw🟢 | — | — | — | — |
 
 Sold overnight:
 

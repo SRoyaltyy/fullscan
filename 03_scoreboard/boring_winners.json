@@ -53867,7 +53867,7 @@
           "action": "buy",
           "rule": "blue_white",
           "src": "book",
-          "book_score": 0.6895658159633593,
+          "book_score": 0.6755658159633593,
           "marks": {
             "blue": true,
             "alarm": false,
@@ -53955,7 +53955,7 @@
           "action": "buy",
           "rule": "blue_white",
           "src": "book",
-          "book_score": 0.6830631439032218,
+          "book_score": 0.6635631439032217,
           "marks": {
             "blue": true,
             "alarm": false,
@@ -53969,26 +53969,26 @@
           "marks_cell": "\ud83d\udd35 \u2014 \u26aa",
           "condition": {
             "tone": "good",
-            "good": 6,
-            "neutral": 2,
+            "good": 7,
+            "neutral": 1,
             "bad": 1,
             "n": 9
           },
           "region": {
             "tone": "good",
-            "good": 6,
-            "neutral": 2,
+            "good": 7,
+            "neutral": 1,
             "bad": 1,
             "n": 9,
-            "balance": 0.556
+            "balance": 0.667
           },
           "lane": "group_leader",
           "lane_label": "group leader",
-          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe1 gen\ud83d\udfe2 news\u2b1b dig\ud83d\udfe2 jdg\u2b1b AB\ud83d\udfe2 peer\ud83d\udfe2 heat\ud83d\udfe2 vol\ud83d\udd34 cat\u2b1b buy\ud83d\udfe1 y\u0394\ud83d\udd34",
+          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe2 gen\ud83d\udfe2 news\u2b1b dig\ud83d\udfe2 jdg\u2b1b AB\ud83d\udfe2 peer\ud83d\udfe2 heat\ud83d\udfe2 vol\ud83d\udd34 cat\u2b1b buy\ud83d\udfe1 y\u0394\ud83d\udd34",
           "labeled_domains": "mkt\ud83d\udfe1 par\ud83d\udfe2 chd\ud83d\udfe2 co\ud83d\udfe1 set\ud83d\udfe2 flw\ud83d\udfe2",
           "boxes": {
             "join": "good",
-            "sector": "neutral",
+            "sector": "good",
             "gen": "good",
             "news": "missing",
             "digest": "good",
@@ -54043,7 +54043,7 @@
           "action": "buy",
           "rule": "hot_ab_peer",
           "src": "extra",
-          "book_score": 0.6211958755411204,
+          "book_score": 0.6421958755411206,
           "marks": {
             "blue": true,
             "alarm": false,
@@ -54322,25 +54322,25 @@
           "condition": {
             "tone": "neutral",
             "good": 3,
-            "neutral": 5,
-            "bad": 1,
+            "neutral": 4,
+            "bad": 2,
             "n": 9
           },
           "region": {
-            "tone": "good",
+            "tone": "neutral",
             "good": 3,
-            "neutral": 5,
-            "bad": 1,
+            "neutral": 4,
+            "bad": 2,
             "n": 9,
-            "balance": 0.222
+            "balance": 0.111
           },
           "lane": "standard",
           "lane_label": "standard",
-          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe1 gen\ud83d\udfe1 news\u2b1b dig\ud83d\udfe2 jdg\u2b1b AB\ud83d\udfe2 peer\ud83d\udfe1 heat\ud83d\udd34 vol\ud83d\udfe1 cat\u2b1b buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
+          "labeled": "join\ud83d\udfe2 sect\ud83d\udd34 gen\ud83d\udfe1 news\u2b1b dig\ud83d\udfe2 jdg\u2b1b AB\ud83d\udfe2 peer\ud83d\udfe1 heat\ud83d\udd34 vol\ud83d\udfe1 cat\u2b1b buy\ud83d\udfe1 y\u0394\ud83d\udfe2",
           "labeled_domains": "mkt\ud83d\udfe1 par\ud83d\udfe1 chd\ud83d\udfe1 co\ud83d\udfe1 set\ud83d\udfe2 flw\ud83d\udfe2",
           "boxes": {
             "join": "good",
-            "sector": "neutral",
+            "sector": "bad",
             "gen": "neutral",
             "news": "missing",
             "digest": "good",
@@ -54410,25 +54410,25 @@
           "condition": {
             "tone": "good",
             "good": 6,
-            "neutral": 3,
-            "bad": 0,
+            "neutral": 2,
+            "bad": 1,
             "n": 9
           },
           "region": {
             "tone": "good",
             "good": 6,
-            "neutral": 3,
-            "bad": 0,
+            "neutral": 2,
+            "bad": 1,
             "n": 9,
-            "balance": 0.667
+            "balance": 0.556
           },
           "lane": "standard",
           "lane_label": "standard",
-          "labeled": "join\ud83d\udfe2 sect\ud83d\udfe1 gen\ud83d\udfe1 news\u2b1b dig\ud83d\udfe2 jdg\u2b1b AB\ud83d\udfe2 peer\ud83d\udfe2 heat\ud83d\udfe2 vol\ud83d\udfe1 cat\u2b1b buy\ud83d\udfe2 y\u0394\ud83d\udfe2",
+          "labeled": "join\ud83d\udfe2 sect\ud83d\udd34 gen\ud83d\udfe1 news\u2b1b dig\ud83d\udfe2 jdg\u2b1b AB\ud83d\udfe2 peer\ud83d\udfe2 heat\ud83d\udfe2 vol\ud83d\udfe1 cat\u2b1b buy\ud83d\udfe2 y\u0394\ud83d\udfe2",
           "labeled_domains": "mkt\ud83d\udfe1 par\ud83d\udfe1 chd\ud83d\udfe2 co\ud83d\udfe1 set\ud83d\udfe2 flw\ud83d\udfe2",
           "boxes": {
             "join": "good",
-            "sector": "neutral",
+            "sector": "bad",
             "gen": "neutral",
             "news": "missing",
             "digest": "good",
