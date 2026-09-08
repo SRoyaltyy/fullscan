@@ -1,80 +1,76 @@
 # Research cards — shade hex open entry (same-day H)
 
-_Generated 2026-09-08 · tip `5be0f044` / `SHADE_OPEN.md` · **research cards only** · live `flatten_robust` frozen · **not** under `strategies/` · ghost/name deepen on #150 **landed**: family **GHOST CONDITIONAL**._
+_Generated 2026-09-08 · tip pending commit · **research cards only** · live `flatten_robust` frozen · **not** under `strategies/` · expanded-universe open-only re-score of #150 **landed**: family **null** · **DEMOTE**.
 
 ## Plain English
 
-Shade ≠ any-green. From the open-knowable fill gate (`A B C G J K L M O IR IS IT`), two recipes stand out on same-day **H** (intraday %) at **open entry**:
+**DEMOTE.** Standing M mid-green fill `#95CA82` / ge15 does **not** hold once the feature is actually column M’s **fill** at the open, on all stocks × all Yahoo/excel_bot history.
 
-1. Morning cell **M** mid-green hex `#95CA82` (score ≥ 1.5) — ~**+10.6%** holdout after fees vs book (~+7.9 pp vs any-green M).
-2. Morning cell **O** red→green onset — ~**+7.2%** holdout after fees.
+The 1000-grid / **4.4k** KEEP (`+10.57%`) was a close-knowable leak: `enumerate(OPEN_FILL)` made letter M read `fills[7]` = **H**. That is same-day `H≥5%` as both feature and label. Aborted.
 
-Soft-regime majority held on the shade board (M mid 8/9). Ghost/name deepen **cleared standing M mid** (GHOST PASS — drop-5 leftover still +9.51%). **M hex-onset is GHOST CONDITIONAL** (holdout top-5 15.1%). **O red→green onset is GHOST FAIL** (INHD 19.7% of holdout P&L; leftover no longer beats any-green O). **Not a live wire.** Clock: M fill is open-knowable at 9:30; M **value** is still close-only — this card is **fill shade**, not the number.
+This cut paints real M from locked CF (`IZ=1` → `#95CA82`: *prior-row* H > 0 and IY = 1 — a lag, known at 9:30). M’s **number** (same-day low wick) is never a feature. Excel vs fast M match **12048/12048**.
 
-## Card 1 — M mid-green `#95CA82`
+| panel | value |
+|---|---|
+| tickers with rows / grids | **5223** / 5223 |
+| date range | **2018-09-10 → 2026-09-04** |
+| median / max sessions | 2008 / 2008 |
+| panel name-days | **8,537,720** |
+| M `#95CA82` fires (holdout / discovery) | **320,499 / 478,008** (≫ 4.4k) |
+| buy-everyone book (holdout H) | −0.10% (n=3,421,306) |
+
+## Card 1 — M mid-green `#95CA82` — DEMOTE
 
 | field | value |
 |---|---|
 | name | `research_M_hex_95CA82_1d_H` |
-| recipe | morning M fill hex `#95CA82` (mid green / score ≥ 1.5) |
+| recipe | morning M **fill** hex `#95CA82` (mid green / score ≥ 1.5). Not M’s number. |
 | entry | open |
-| label | H (intraday %, same day) |
+| label | H (intraday %, same day) — outcome, not a feature |
 | horizon | 1d |
-| holdout | **+10.57%** (n=4423) |
-| vs book | +10.66 pp |
-| vs any-green M | +7.86 pp |
-| SPY↑ / ↓ | +10.30% / +10.22% |
-| top-5 / July | 7% / 10% |
-| holdout top-5 (ghost) | 13.9% (INHD 8.0%) · drop-5 leftover +9.51% |
-| codes | `M_hex_95CA82`, `M_ge15` (same print on this dump) |
-| verdict | **KEEP** · **GHOST PASS** |
-| status | research card · not live |
+| holdout | **−0.19%** (n=320499) |
+| discovery | −0.19% (n=478008) |
+| vs book | **−0.09 pp** (loses) |
+| vs any-green M | **+0.00 pp** (same trades — real M has one green hex) |
+| time holdout | early −0.18% · late −0.41% (cut 2026-05-01); both red |
+| Q1 | −0.20% (n=299468) red |
+| SPY↑ / ↓ | +0.27% (does not beat that tape’s book) / **−0.74%** red |
+| drop-5 leftover | −0.20% (n=319875) |
+| codes | `M_hex_95CA82`, `M_ge15` (identical on this dump) |
+| verdict | **DEMOTE** · **GHOST FAIL** · family **null** |
+| status | research card · **demoted** · not live |
 
-## Card 2 — M mid-green onset `#95CA82`
+## Card 2 — M mid-green onset `#95CA82` — DEMOTE
 
 | field | value |
 |---|---|
 | name | `research_M_onset_hex_95CA82_1d_H` |
-| recipe | M flips onto `#95CA82` today |
+| recipe | M fill flips onto `#95CA82` today (yesterday’s fill is the lag) |
 | entry | open |
 | label | H |
-| horizon | 1d |
-| holdout | **+10.34%** (n=3731) |
-| vs book | +10.43 pp |
-| holdout top-5 (ghost) | 15.1% (INHD 9.5%) · drop-5 leftover +9.10% |
-| code | `M_onset_hex_95CA82` |
-| verdict | **GHOST CONDITIONAL** (holdout top-5 just over 15%) |
-| status | research card · not live · not demoted |
+| holdout | **−0.23%** (n=250101) |
+| vs book | −0.13 pp |
+| vs any-green M | −0.04 pp |
+| verdict | **DEMOTE** · **GHOST FAIL** |
+| status | research card · **demoted** · not live |
 
 ## Card 3 — O red→green onset
 
-| field | value |
-|---|---|
-| name | `research_O_onset_red2green_1d_H` |
-| recipe | O red yesterday → green today |
-| entry | open |
-| label | H |
-| horizon | 1d |
-| holdout | **+7.21%** (n=2502) |
-| vs book | +7.30 pp |
-| vs parent any-green O | +1.52 pp |
-| SPY↑ / ↓ | +6.52% / +6.39% |
-| top-5 / July | 12% / 11% |
-| holdout top-5 (ghost) | **25.6%** (INHD 19.7%) · drop-5 leftover +5.56% (loses vs parent) |
-| code | `O_onset_red2green` |
-| verdict | **GHOST FAIL** (demoted by name check) |
-| status | research card · **demoted** · not live |
+Not re-painted on this M-only expand (O fills absent). Prior ghost FAIL on the 1000-grid cut stands. **THIN** here.
 
-## Explicitly not carded (for now)
+## Open-only gate
 
-| candidate | why |
-|---|---|
-| M any-green / M pale `#DCEDD5` | weaker / loses to mid |
-| A / B / L standing shade | KILL on shade board |
-| K deep `#3B7D23` | weaker; New Bot called regime-conditional |
-| heat-green (prior I) | out of scope |
-| light+O family (pre-shade) | soft-regime demoted |
+Every feature is knowable at that day’s open:
+
+- M **fill** `#95CA82` only. CF uses prior-row H + IY (lag).
+- M **value** `-(E-C)/C` is close-only — excluded.
+- No same-row H/I value, fill, text, or transform as a feature. H is the label.
+- Soft-regime heat = prior-5 I (`[ei-5, ei)`). SPY tape is a ship-bar slice, not a buy feature.
+
+## Explicitly not a live wire
+
+Live `flatten_robust` stays frozen. No card under `strategies/`. Soft-regime majority is N/A (no H KEEP candidates). Pale `#DCEDD5` on the old “M” dump was H’s fill from the index leak.
 
 ## Source
 
-`excel_bot/research/SHADE_OPEN.md` tip `5be0f044` · PR #150. Fill gate: Excel open list. Research only. Live frozen.
+`excel_bot/research/SHADE_OPEN.md` · `shade_panel_stats.json` · PR #150. Fill gate: Excel open list. Research only. Live frozen.

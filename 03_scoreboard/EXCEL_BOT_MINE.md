@@ -1236,4 +1236,4 @@ Research only. One 2026 regime.
 
 ## Shade hex + onset (open-entry)
 
-_Generated 2026-09-08 · live `flatten_robust` frozen. Shade hex + onset on open-knowable fills. Family **KEEP**. GHOST CONDITIONAL. M mid GHOST PASS; O onset GHOST FAIL. Same-day H KEEP 24 · KILL 59. See `excel_bot/research/SHADE_OPEN.md`._
+_Generated 2026-09-08 · live `flatten_robust` frozen. Shade hex + onset on open-knowable fills. Family **null**. GHOST FAIL. M mid GHOST FAIL; O onset GHOST THIN. Expanded open-only M mid `#95CA82` / ge15 is a **DEMOTE** (not the 4.4k H-fill leak). Same-day H KEEP 0 · KILL 5. See `SHADE_OPEN.md` / `SHADE_KEEP_CARDS.md`._

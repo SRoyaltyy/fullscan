@@ -1,8 +1,20 @@
 """Shade hex + onset on open-knowable fills. Open entry. Same-day H first.
 
-Cyrus: shades of green (stored fill hex / CF color), not prior-I heat-green.
-Open-knowable fills only: A, B, C, G, J, K, L, M, O (+ IR/IS/IT inventory).
-Any other letter's fill at lag 0 is close-entry — excluded.
+Cyrus / War room standing bar: EVERY feature must be knowable as of that
+day's open — text, numeric, AND highlight shades.
+
+  * Open-knowable fills only (A B C G J K L M O). Close fills D E F H I N
+    never start a trade.
+  * M **fill** `#95CA82` is the feature (CF IZ=1 from *prior-row* H and IY).
+    M's **number** `-(E-C)/C` is same-day low — close-only — never a feature.
+  * No same-row peek of H/I values, fills, text, or transforms. Labels may
+    be same-day H (the outcome). Lags from prior rows are fine.
+  * Soft-regime heat is the prior-5 mean of I (range [ei-5, ei), not ei).
+    SPY tape is a ship-bar slice, not a buy feature.
+
+The 1000-grid / 4.4k KEEP indexed OPEN_FILL into the A–O array, so letter
+M read column H (close-knowable same-day return fill). FILL_IDX maps
+through VISIBLE. That leak is aborted.
 
 Live flatten_robust frozen. No cards. No live push.
 
@@ -204,18 +216,37 @@ def cf_inventory(model=None):
 
 
 def assert_open_gate():
-    """Open recipes read only timing-tested open fills."""
+    """Abort if any feature path can read a close-knowable same-row cell.
+
+    Standing bar (Cyrus / War room): open-knowable only — fills, numbers,
+    text. M shade `#95CA82` at the open. Never M's number. Never same-row
+    H/I (value, fill, or transform). Prior-row lags are legal.
+    """
     cols = tuple(VISIBLE.index(c) for c in OPEN_FILL)
     assert feature_clock(cols) == "open"
     assert_clock_legal(cols, "open")
     assert FILL_IDX["M"] == VISIBLE.index("M") == 12
     assert FILL_IDX["O"] == VISIBLE.index("O") == 14
+    # The old 4.4k KEEP used enumerate(OPEN_FILL) so M → fills[7] == H.
+    assert FILL_IDX["M"] != VISIBLE.index("H")
+    assert "H" not in OPEN_FILL and "I" not in OPEN_FILL
+    for letter, li in FILL_IDX.items():
+        mapped = VISIBLE[li]
+        if mapped in CLOSE_FILL or mapped != letter:
+            raise AssertionError(
+                f"open-only abort: letter {letter} mapped to {mapped} "
+                f"(idx {li}) — close-knowable leak"
+            )
+        if letter in CLOSE_FILL:
+            raise AssertionError(f"close fill {letter} must not be a feature")
     for c in CLOSE_FILL:
         try:
             assert_clock_legal((VISIBLE.index(c),), "open")
         except ValueError:
             continue
         raise AssertionError(f"close fill {c} must not be open-legal")
+    # M number is close-only (same-day low). Feature is fill shade only.
+    assert "M" in OPEN_FILL, "M fill is open-knowable; M value is not"
 
 
 def _cell():
@@ -1153,7 +1184,9 @@ def ghost_family(scores):
     if m_slot == "FAIL":
         family = "GHOST FAIL"
         why = (
-            "A handful of names is carrying the M mid-green print. "
+            "Standing M mid-green `#95CA82` / ge15 does not clear the "
+            "ghost / name bar (holdout sign, leftover vs book/parent, "
+            "or a handful). "
             f"{_brief(m_mid, 'M mid `#95CA82` / ge15')} "
             f"{_brief(m_on, 'M hex-onset')} "
             f"{_brief(o_on, 'O red→green')} "
@@ -1276,10 +1309,10 @@ def render_ghost(ghost):
             )
     L += [
         "",
-        "M_ge15 and M_hex_95CA82 are the same trades (mid-green ≡ `#95CA82`). "
-        "Drop-5 leftover is the holdout mean after removing the five fattest "
-        "names. If that leftover still beats the book and any-green M, the "
-        "+10.6% is not a five-name ghost.",
+        "M_ge15 and M_hex_95CA82 are the same trades (real M has one green "
+        "hex). Drop-5 leftover is the holdout mean after removing the five "
+        "fattest names. A red leftover is not a five-name ghost of a "
+        "winner — there is no winner.",
         "",
     ]
     return L
@@ -1324,9 +1357,35 @@ def render(inv_cf, inv_dump, rows, soft, n_grids, n_days, verd, why, lo, hi,
         "IR/IS/IT are the STOCKHISTORY aliases of A/B/C; they have **no** "
         "CF of their own.",
         "",
-        f"**Family verdict: {verd}**",
+        f"**Family verdict: {verd}** — expanded-universe M mid is a "
+        f"**DEMOTE** (KEEP 0 / KILL {n_kill} / THIN {n_thin}).",
         "",
         why,
+        "",
+        "The 4.4k / +10.6% KEEP was **H’s fill** (close-knowable "
+        "`H≥5%`) mis-indexed as M. This rebuild is **5223** tickers × "
+        "**2018-09-10 → 2026-09-04** (8.54M name-days). Real M mid "
+        "`#95CA82` holdout **−0.19%** (n=320499) vs book −0.10% "
+        "(−0.09 pp). Time split early −0.18% / late −0.41%. Soft-regime "
+        "majority is N/A (no KEEP). Live frozen.",
+        "",
+        "### Open-only gate (standing bar)",
+        "",
+        "Every **feature** is knowable at that day's open — fill shade, "
+        "number, and text. This is the War room clock, not a slogan.",
+        "",
+        "- **M fill** `#95CA82` / ge15 is the feature. CF `IZ=1` reads "
+        "*yesterday's* H and the static IY row (lag). Known at 9:30.",
+        "- **M's number** `-(low-open)/open` is same-day low → close-only. "
+        "Never a feature. Never a gate.",
+        "- Close fills **D E F H I N** do not start a trade. Same-row H/I "
+        "values, fills, text, and transforms are **labels only**.",
+        "- Onset uses yesterday's M fill (lag). Soft-regime heat is the "
+        "prior-5 mean of I (`[ei-5, ei)`). SPY tape is a ship-bar slice, "
+        "not a buy feature.",
+        "- `FILL_IDX` maps through `VISIBLE` (M=12). The 1000-grid / 4.4k "
+        "KEEP had `enumerate(OPEN_FILL)` so M read **H's fill** "
+        "(close-knowable `H≥5%`). That path is aborted.",
         "",
     ]
     if ghost:
@@ -1337,7 +1396,7 @@ def render(inv_cf, inv_dump, rows, soft, n_grids, n_days, verd, why, lo, hi,
             "",
         ]
     L += [
-        f"Dumps **{n_grids}**. Name-days scored **{n_days}**. "
+        f"Dumps **{n_grids}** tickers. Calendar days **{n_days}**. "
         f"Same-day H recipes: **KEEP {n_keep}** · **KILL {n_kill}** · "
         f"**THIN {n_thin}**. Futubull 0.15% long is taken off the recipe "
         "and the buy-everyone book. Beat the book by ≥20 bp. Ghost bar: "
@@ -1413,12 +1472,14 @@ def render(inv_cf, inv_dump, rows, soft, n_grids, n_days, verd, why, lo, hi,
         )
 
     show = [r for r in h1 if r["family"] != "green_on" or r.get("keep") == "KEEP"]
-    # always show green-on baselines for multi-shade + O
-    want_base = set(MULTI_SHADE) | {"O"}
+    # always show green-on baselines for multi-shade + M/O (M is the KEEP card)
+    want_base = set(MULTI_SHADE) | {"O", "M"}
+    have = {r["def"] for r in show}
     for r in h1:
         if r["family"] == "green_on" and r["def"].split("_")[0] in want_base:
-            if r not in show:
+            if r["def"] not in have:
                 show.append(r)
+                have.add(r["def"])
     if "light_on" in {r["def"] for r in h1}:
         lo_r = next(r for r in h1 if r["def"] == "light_on")
         if lo_r not in show:
@@ -1506,7 +1567,8 @@ def render(inv_cf, inv_dump, rows, soft, n_grids, n_days, verd, why, lo, hi,
         "- Prior-I heat-green is not remine.",
         "- Close-entry fills stay out of the open clock.",
         "",
-        "Research only. One 2026 regime.",
+        "Research only. Expanded panel is 2018-09 → 2026-09. "
+        "Live frozen.",
         "",
     ]
     return "\n".join(L)
@@ -1520,8 +1582,10 @@ def splice_scoreboard(md, verd, n_keep, n_kill, ghost=None):
         f"{MARKER}\n\n"
         f"_Generated {date.today().isoformat()} · live `flatten_robust` "
         f"frozen. Shade hex + onset on open-knowable fills. Family "
-        f"**{verd}**.{g} Same-day H KEEP {n_keep} · KILL {n_kill}. "
-        f"See `excel_bot/research/SHADE_OPEN.md`._\n"
+        f"**{verd}**.{g} Expanded open-only M mid `#95CA82` / ge15 is a "
+        f"**DEMOTE** (not the 4.4k H-fill leak). Same-day H KEEP "
+        f"{n_keep} · KILL {n_kill}. See `SHADE_OPEN.md` / "
+        f"`SHADE_KEEP_CARDS.md`._\n"
     )
     if os.path.exists(SB_MD):
         return splice_md(SB_MD, MARKER, block, require="PASS 376")
@@ -1615,6 +1679,11 @@ def main():
         payload["n_keep_h1"] = sum(1 for r in h1 if r.get("keep") == "KEEP")
         payload["n_kill_h1"] = sum(1 for r in h1 if r.get("keep") == "KILL")
         payload["n_thin_h1"] = sum(1 for r in h1 if r.get("keep") == "THIN")
+        payload["open_only_gate"] = True
+        payload["m_number_excluded"] = True
+        stats_path = os.path.join(RESEARCH, "shade_panel_stats.json")
+        if os.path.exists(stats_path):
+            payload["panel"] = json.load(open(stats_path))
         n_days = payload.get("n_days") or 170
         ghost = payload.get("ghost")
         if ghost and ghost.get("recipes"):

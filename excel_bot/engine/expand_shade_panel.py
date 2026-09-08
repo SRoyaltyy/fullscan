@@ -146,10 +146,13 @@ def yahoo_one(job):
 
 
 def paint_m(rows, iy):
-    """Excel-faithful M fill: IZ_r from H_{r-1} and IY_{r-1}.
+    """Excel-faithful M *fill* only — open-knowable, never M's number.
+
+    IZ_r = 1 iff prior-row H > 0 and prior-row IY = 1 (lag). Same-row
+    close / low / H / I are not read. CF M10:M142 → #95CA82.
 
     STOCKHISTORY window is [anchor-200d, anchor], oldest first, row 2 =
-    first day. CF M10:M142. Same tiling as backtest.build_ticker.
+    first day. Same tiling as backtest.build_ticker.
     """
     if len(rows) < 40:
         return []

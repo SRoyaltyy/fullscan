@@ -1,0 +1,31 @@
+{
+  "n_tickers_with_rows": 5223,
+  "n_requested": 5223,
+  "date_min": "2018-09-10",
+  "date_max": "2026-09-04",
+  "median_sessions": 2008,
+  "mean_sessions": 1634.6390963048057,
+  "min_sessions": 40,
+  "max_sessions": 2008,
+  "name_days": 8537720,
+  "generated": "2026-09-08",
+  "live_untouched": "flatten_robust",
+  "n_grids_painted": 5223,
+  "n_grid_days": 8537715,
+  "iy_ones": 26,
+  "iy_rows": 133,
+  "m_cf": "IZ=1 \u2192 #95CA82 (prior-row H>0 and IY=1)",
+  "index_fix": "FILL_IDX uses VISIBLE (M=12), not OPEN_FILL order",
+  "excel_validate": {
+    "agree": 12048,
+    "total": 12048,
+    "sample": [
+      "A",
+      "AA",
+      "AAL",
+      "AAME",
+      "AAMI",
+      "AAOI"
+    ]
+  }
+}
