@@ -150,3 +150,7 @@ Pair+lag open (locked 44): KEEP 0 · KILL 4266 · THIN 0. Trees skipped_no_pair_
 ## H/I multi-horizon (standing keep + close pair)
 
 H/I multi-horizon: KEEP 85 · KILL 1227 · THIN 0. Standing light+O re-scored. Close pair AA-today, no same-row H/I. See `HI_HORIZON.md`.
+
+## Shade 2d/3d cumulative (open-entry stacked I)
+
+Open shade → 2d/3d stacked I: family **null**. KEEP 0 · KILL 8. See `SHADE_2D3D.md`.
