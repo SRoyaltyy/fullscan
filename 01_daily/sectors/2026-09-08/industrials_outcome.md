@@ -2,66 +2,71 @@
 
 Actuals: {'etf': 'XLI', 'pct': -0.48496952290494333, 'spy_pct': -0.5492125910932955, 'rel': 0.06424306818835213, 'open': 175.13999938964844, 'close': 174.4199981689453, 'source': 'yf_download'}
 
-# Sector Post-Session Review — Industrials (XLI) — 2026-09-08
+## Post-session review — SECTOR OUTCOME Industrials 2026-09-08
 
-## 0. FACTS
+DeepSeek returned tool-call dumps on the no-tool close, so this essay is assembled from the deterministic actuals and the search results already gathered in this thread. The night pack must not stay on a leaked tool-call stub.
 
-| Metric | Value |
-|---|---|
-| XLI % change | **−0.48%** |
-| SPY % change | **−0.55%** |
-| Relative return | **+0.06%** |
-| Open → Close | $175.14 → $174.42 (drifted lower, no reversal) |
-| Actual direction | **Down** |
-| Actual magnitude | **Mild** |
-
-## 1. What drove the sector today
-
-The dominant driver was the **live geopolitical oil supply shock** — Iran-backed Houthis attacked four Saudi cities including energy facilities, wounding 73 people, with Saudi Arabia halting energy operations and Strait of Hormuz disruptions choking supply. Oil prices surged toward $100/barrel (WTI +3.18% to $94.40, Brent +2.16% to $99.10), holding near six-week highs through the session.
-
-For Industrials specifically, this was a **cost/stagflation headwind** — higher fuel costs pressure transports, trucking, and airlines, while the risk-off tape (ES −0.44%, DJIA −0.91% with the Dow heaviest hit on transports/industrials exposure) dragged the whole complex lower. XLI opened at $175.14 and drifted to $174.42, a steady grind down rather than a sharp selloff.
-
-The relative performance (+0.06% vs SPY) confirms the **laggard-shield dynamic** — XLI, already down −4.73% over the past month, had less room to fall than the broader market. Defense/aerospace names (BA, LMT, RTX) provided some offset on geopolitical escalation narratives, though the Fortune-documented defense-tech investor losses in the Iran war tempered any sustained bid.
-
-## 2. Audit of Morning S0–S4 Reads
-
-**S0 (Shared Macro) = −1 → CORRECT.** The morning correctly identified this as a live 08-11/08-12 supply-shock trigger. Oil was confirmed up on a genuine supply disruption, futures were risk-off, and the Dow (transports/industrials) was the worst-hit index. The −1 (not −2) call was right — VIX at 15.49 was not a panic print, credit was tight (HY OAS 2.65), and no hard-data miss occurred. **Verdict: HIT.**
-
-**S1 (Sector Factors) = 0 → CORRECT.** No fresh same-morning industrials print was available. ISM manufacturing (54.6, slowing) and ISM Services (55.4) were already in the tape. Grid/AI power (GEV ~$176B RPO) was carried but not a same-session raise. Aerospace/defense was correctly scored as MIXED — the geo escalation is a defense narrative, but the oil spike is a cost headwind for the broader sector. The cap at 0 (not +1 or +2) without same-morning confirmation was disciplined. **Verdict: HIT.**
-
-**S2 (Breadth) = −1 → CORRECT.** XLI was a medium-term laggard (1m rel −4.73%) with a 3-day bounce (+1.01%). The morning correctly scored the medium-term lag once here and did not double-count. The Dow being worst-hit confirmed that industrials/transports were not leading on this oil-shock day. **Verdict: HIT.**
-
-**S3 (Flows) = 0 → CORRECT.** No material XLI-specific flows were found. Rotation out of industrials into tech was already reflected in the 1m relative underperformance. **Verdict: HIT.**
-
-**S4 (ETF Tape) = 0 → CORRECT.** The morning noted the 1d rel +0.22% and 3d rel +1.01% as mildly positive, creating a mild divergence against the down-leading factors. The tape was used as confirmation only, not as a directional override. **Verdict: HIT.**
-
-## 3. Interactions / Double-Count / Knowable-at-Open Test
-
-**No double-counting:** Oil was counted once in S0 and not re-scored in S1. The medium-term lag was scored once in S2. The 08-18 cap on S1 at 0/+1 was respected.
-
-**Key interaction:** The **laggard-shield (09-04 lesson)** interacted with the **oil-shock cap (08-11/08-12 lesson)**. The oil shock capped any severe-down move (no panic VIX, tight credit), while the laggard-shield meant XLI's prior underperformance provided relative cushion. The result was a mild down day with XLI roughly matching SPY — exactly what the interaction predicted.
-
-**Knowable at open: YES.** The oil shock was fully in the pre-market tape (WTI +3.18%, futures risk-off, DJIA worst-hit). The morning correctly identified the direction (down) and magnitude (mild). The only uncertainty was whether XLI would underperform or match SPY — the relative resilience was knowable from the 3d tape.
-
-## 4. Outliers Inside the Sector
-
-- **Defense/aerospace (BA, LMT, RTX, NOC):** Likely outperformed on geopolitical escalation — the Houthi attacks on Saudi Arabia expand the Middle East conflict, supporting defense-order narratives. This is the primary offset within XLI.
-- **Transports/freight (UNP, NSC, UPS, FDX):** Likely underperformed on oil-cost headwinds — higher fuel prices directly pressure operating margins.
-- **Heavy machinery/capital goods (CAT, DE, EMR):** Likely middling — exposed to construction slowdown and oil-cost pass-through, but less directly fuel-sensitive than transports.
-- **Grid/AI power (GEV, ETN, AME):** Mixed — structural backlog supports, but 08-18 lesson says these are not a downside cushion on risk-off days.
-
----
-
-OUTCOME_BEGIN
+### Actuals and morning packet
+DATE: 2026-09-08
 SECTOR: Industrials
 ETF: XLI
-ETF_PCT: -0.48
-SPY_PCT: -0.55
-REL_PCT: +0.06
-ACTUAL_DIRECTION: down
-ACTUAL_MAGNITUDE: mild
-PRIMARY_DRIVER: Live geopolitical oil supply shock (Houthi attacks on Saudi energy facilities, Hormuz disruptions) — cost/stagflation headwind for transports/manufacturers with risk-off tape
-KEY_INTERACTION: Oil-shock cap (08-11/08-12) limited magnitude to mild while laggard-shield (09-04) provided relative cushion — XLI matched SPY rather than underperforming
-KNOWABLE_AT_OPEN: yes
-MORNING_READ_VERDICT: Correct — down/mild call matched actuals; all S0–S4 scores validated; no double-counting; relative resilience correctly anticipated
-OUTCOME_END
+
+=== MORNING SECTOR PREDICTION ===
+# Sector Prediction — Industrials — 2026-09-08
+
+- ETF: **XLI**
+- rubric: `00_grounding/sectors/industrials.md`
+- predicted_direction: **flat**
+- predicted_magnitude_band: **flat**
+- total_score: **-3.6** (mult 0.9)
+- regime: risk_off
+- divergence_flagged: **False**
+
+## Channel 1 sector ETF tape
+
+```
+ETF XLI vs SPY (yfinance, through 2026-09-08):
+  1d: XLI -0.07% | SPY -0.30% | rel +0.22%
+  3d: XLI +1.37% | SPY +0.36% | rel +1.01%
+  1w: XLI +0.01% | SPY +0.11% | rel -0.10%
+  1m: XLI -5.42% | SPY -0.69% | rel -4.73%
+```
+
+I now have a clear picture. This is a major geopolitical/oil supply-shock day. Let me compile my analysis.
+
+**Key facts for today (2026-09-08):**
+- **Oil surging toward $100** (WTI +3.18% to $94.40, Brent +2.16% to $99.10) on Houthi attacks on Saudi energy facilities (73 wounded, fires at oil facilities, Saudi halting energy operations) and Strait of Hormuz disruptions.
+- **Futures risk-off**: ES -0.44%, NQ -0.16%, DJIA -0.91%, RTY -0.63%. Europe/Asia red.
+- **Rates**: 10Y 4.77, 30Y 5.25 (stress zone), real yield 2.42. 5-day 10Y-SPX corr -0.948 (strongly negative).
+- **XLI tape**: 1d rel +0.22% (mild positive), 3d rel +1.01%, 1w rel -0.10%, 1m rel -4.73%. XLI is a medium-term laggard that has bounced over the last 3 days.
+- **CPI due this week** (this is the "busy week" - CPI, war, tariffs, 9/11 anniversary). Fed hike odds contested (Warsh hawkish, Waller muddied outlook).
+- **ISM manufacturing** already printed 09-01: PMI 54.6 (expansion, slowing). ISM Services 55.4 printed 09-03.
+
+This is a **live geopolitical/oil supply-shock** day hitting an oil-sensitive cyclical sector. Per the 08-11/08-12 Industrials lessons, this caps S0 and prevents severe-up. The oil spike is a cost/stagflation headwind for transports/manufacturers, though defense/aerospace can bid on geo.
+
+Let me now write the analysis.
+
+MEMORY_CONFIRM: Reviewed prior runs for sector Industrials. Rolling dir=0.2 / mag=0.1 (n=10); last 30 dir=0.25 / mag=0.083 (n=12). Last graded 08-28: narrative down/mild vs pipeline down/flat, actual XLI −0.93% (dir HIT, mag MISS on pipeline flat). 09-01 down/mild, 09-02 flat/flat, 09-03 flat/flat (missed +1.03% on ISM Services beat), 09-04 down/flat (missed +0.41% up on laggard-shield). Governing today: **08-11/08-12 supply-shock cap FIRES** — oil is surging toward $100 on Houthi attacks on Saudi energy facilities + Hormuz disruptions, a live geopolitical supply shoc
+
+### Research gathered
+- query: XLI industrials stocks September 8 2026 oil Houthi Saudi (ddg)
+  - Stock Market Sep 8, 2026: Health Care Sinks, Energy Leads (https://currentlogic.substack.com/p/dispersion-brief-sep-8-2026)
+    2 hours ago · Saudi oil strike lifted Energy 1.11%. Houthi strike on Saudi ed WTI crude up 2.36% to $93.64; the dollar slipped 0.31% and gold fell 1.52%. ...
+  - Stock Market News for July 21, 2026 | | easternprogress.com (https://www.easternprogress.com/stock-market-news-for-july-21-2026/article_8d289cc4-7efb-5236-ab13-986415270249.html)
+    Jul 21, 2026 · Brent crude climbed above $89 a barrel. Houthis announced a naval blockade against Saudi Arabia, raising concerns over global energy supplies.
+  - Dow Jones Futures Rise, Oil Prices Above $100 (https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-oil-prices-near-100-iran-war-drags-tesla-deliveries/)
+    Mar 30, 2026 · Dow Jones futures rose amid President Trump's Iran war comments. So did oil prices. Stocks have rallied to start the past four losing weeks.
+  - XLI Holdings | MarketWatch (https://www.marketwatch.com/investing/fund/xli/holdings)
+    Oil prices climb after reports of Saudi Aramco refinery being hit by Houthi rebels. Updated: Sep 4, 2026. Delayed quote $ 174.17 -1.10. Industrials 82.66% ...
+- query: industrials sector September 8 2026 defense aerospace oil supply shock (ddg)
+  - Current price of oil as of September 8, 2026 - Yahoo Finance (https://finance.yahoo.com/energy/articles/current-price-oil-september-8-130000481.html)
+    10 hours ago · Aerospace & Defense Enterprise ・ oil sold for $99.85 per barrel ・ go a long way toward softening crippling price hikes during supply shocks.
+  - Sector Market Perspectives: Q3 2026 | State Street (https://www.ssga.com/us/en/individual/insights/sector-market-perspectives-q3-2026)
+    Jul 8, 2026 · Aerospace and defense companies, a component of the industrial sector, can be significantly affected by government spending policies because ...
+  - Wall Street ends lower as higher yields, rising oil prices mark ... (https://www.reuters.com/business/wall-st-futures-kick-off-september-under-pressure-yields-oil-prices-rise-2026-09-01/)
+    8 days ago · A HAWKISH FED SEEN HIKING RATES IN SEPTEMBER. The ramp-up of hostilities drove crude prices higher, further exacerbating inflation fears just ...
+  - 2026 Aerospace and Defense Industry Outlook | Deloitte Insights (https://www.deloitte.com/us/en/insights/industry/aerospace-defense/aerospace-and-defense-industry-outlook.html)
+    Nov 13, 2025 · The aerospace and defense sector is entering a new phase of expansion, driven by advancements in AI, digital sustainment, and increasing ...
+
+### Close
+Direction and magnitude follow the ETF_PCT / REL_PCT actuals above. Rewrite with a model essay on the next heal if a provider returns prose; do not replace this file with a tool-call stub.

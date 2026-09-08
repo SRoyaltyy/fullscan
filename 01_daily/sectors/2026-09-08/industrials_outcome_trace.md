@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"XLI industrials stocks September 8 2026 market close"* → got 6 results (via gnews_rss)
+**Step 1 — Research.** The model wanted to know: *"XLI industrials stocks September 8 2026 oil Houthi Saudi"* → got 6 results (via ddg)
 
-  - Stock Market News for Sep 8, 2026 - Zacks Investment Research (https://news.google.com/rss/articles/CBMifkFVX3lxTE9KT08wdGIzcFNRX2lydmZBWGo0ZmZDZTlmdWdGWmdDYzlrOERDMUM5XzZSb3BzRUc0cllMaGVCYS1UNTdDY2pGTy00d2NqM3RvOEEzQ2MxaFVFUElJb0RiN2Vkb1dDQUVDTXBlTVdPS3l6UWNkWk14b1BremFkUQ?oc=5)
+  - Stock Market Sep 8, 2026: Health Care Sinks, Energy Leads (https://currentlogic.substack.com/p/dispersion-brief-sep-8-2026)
 
-  - Ten industrials stocks combining strong revenue growth with attractive valuations (XLI:NYSEARCA) - Seeking Alpha (https://news.google.com/rss/articles/CBMiuwFBVV95cUxNY2N4c294NmtoQnFRUmh2NHRaclhmalc5RThRZ1hsM29MaDJjUXRIcE1qM2NyYUpGTk1obUYzY0JkY3VPYzlpVThNTGtPRXZEMW1Ec3hoeUNQZnF2T0RUbXpLbkhmUkpxT21fbjBNaHFiUTlvcllqWGhYWWxoVFVZcEhHd1A5SG9nVzEyeHY3SUNMRG1Va1hZY3JmY1ZWLS11aDBXbFRwYmwzS1RDdXZac2lfTk5YQTNncUU0?oc=5)
+  - Stock Market News for July 21, 2026 | | easternprogress.com (https://www.easternprogress.com/stock-market-news-for-july-21-2026/article_8d289cc4-7efb-5236-ab13-986415270249.html)
 
-  - Is CoreWeave At The Mercy Of The Bond Market? - Real Investment Advice (https://news.google.com/rss/articles/CBMimAFBVV95cUxOV3NkTkY3Tk9sMzZKV1h1WlNxS2wwYW9SQ3NveXNya3p1cUtvMUUzVW9IVDlZOVRxYzl1enlqM2lwTHpmQXVLVGRxamhVQkM1cmJTbXV0UTlFZWdNWWhkUzhfU2JMZjZhaEhyajhzNnJfTmhpRnh6clhFbk54QXhuRVNtdUg5V1hQQW1nUW8tWUZ1RTVsY1JzMQ?oc=5)
+  - Dow Jones Futures Rise, Oil Prices Above $100 (https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-oil-prices-near-100-iran-war-drags-tesla-deliveries/)
 
-**Step 2 — Research.** The model wanted to know: *"oil price Houthi Saudi energy facilities September 8 2026"* → got 6 results (via gnews_rss)
+**Step 2 — Research.** The model wanted to know: *"industrials sector September 8 2026 defense aerospace oil supply shock"* → got 6 results (via ddg)
 
-  - Iran-backed Houthis attack four Saudi cities in expansion of Middle East war, 73 hurt - Reuters (https://news.google.com/rss/articles/CBMixgFBVV95cUxNT2RnNWprQ01ScjN2Q05RSHRWdmRqVzh2U01LUVVPVmhiRDVYNER3anQxQlNWV24wS3RZR2ZqS1FxNnFKWFRqSmlYbnQwSFk1eU5Cbnh1SVpxbTZCWUwtelFqbFV6LTNLVHZZbGRaYTVucy1VT1JwNDZPM3gydkZRU2VCWHFoVnpTVU9ILXlfRHpKMnBsT3RJOUlkejRzT1FJa25YekFnMVl6dUJnbERxeXo1UnpOZTVaQ281aFJrbjFEWmN3T2c?oc=5)
+  - Current price of oil as of September 8, 2026 - Yahoo Finance (https://finance.yahoo.com/energy/articles/current-price-oil-september-8-130000481.html)
 
-  - Oil prices hold near six-week high after Houthis hit Saudi sites - Yahoo Finance (https://news.google.com/rss/articles/CBMilAFBVV95cUxOdGtmZE5OYl9FVzNfRTl0b3B6Uk5GdHJiVmNvbkZCNjJHR3prT1BtbzNvRVViSVZ1ZlFhdkhxQTBfS0FHNDRzMFJYZUxQaUNPbUxmRDlfWHZKUFBLdDlfUGxPRHRrYUpoRnptRXNWcVFQcW1JTmo1dlVmYWxWdl9RNWY2MVNTQjdEVU0zVUhnRXZCU0o0?oc=5)
+  - Sector Market Perspectives: Q3 2026 | State Street (https://www.ssga.com/us/en/individual/insights/sector-market-perspectives-q3-2026)
 
-  - Oil prices approaching $100 per barrel as Houthis attack Saudi sites - upi.com (https://news.google.com/rss/articles/CBMiwgFBVV95cUxNdjB2NG9kZUpUR2xMbGNFUXFHOGZSb0xsWkFZcHlQVGcwSUMwVTZMeVZUWnNaTDJMUThJcmZHdEZpRjA3N2FtZHVXYTdkaWx1NTFTQ1ExWG1CR3FkUVpXbDBjcURTRjVVM296elQ4dThqRjlxYjNZallHdzU3dVRJc3c3ODdWNElhZmRkT1ZqZ0hKWTRVSUkzMUVBSkhfM3ZVTDJkRnBhWUxJSk15RVZsdGJrdnNqeXJQQXV6dFRUUGl0d9IBxwFBVV95cUxPQkFMR1pOaVVXQnNlOHMtNDAxaGlkaWNjZWE5dVJBeTExRGYwc25Sd1NnMVNDVFlEbUJMZ2ZVdDlIRU1hOGpYdnphU0ZXNmZGN0tLb2w3X2dEZk5UVEhid3g5YTZLeGpsaElja3VpaEhVY0syUTJuR21ET2w4TlZOVkNuX202Q0YxWkVUc3g5NUlkcUY0eGpKVjdKYXQ3WUg1QldaRVVnQjZiSGFSQ2M5TWRmXzdrTlVyaDB4dWpPYWw4QXFxVzdB?oc=5)
+  - Wall Street ends lower as higher yields, rising oil prices mark ... (https://www.reuters.com/business/wall-st-futures-kick-off-september-under-pressure-yields-oil-prices-rise-2026-09-01/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
