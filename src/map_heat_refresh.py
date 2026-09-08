@@ -170,10 +170,24 @@ def _write_passthrough(date: str, heat: dict, baseline: dict,
     return payload
 
 
-def run(date: str, force: bool = False) -> dict:
-    preopen.refuse_if_late("map_heat_refresh", force=force)
+def run(date: str, force: bool = False, passthrough: bool = False) -> dict:
     heat_path = OUT / f"{date}_map_heat.json"
     base_path = OUT / f"{date}_research_baseline.json"
+    if passthrough:
+        # Night cards only — not a new LLM write. Safe after 09:25.
+        if not heat_path.exists():
+            raise SystemExit(
+                f"passthrough needs map heat: {heat_path}"
+            )
+        heat = _load(heat_path)
+        if not base_path.exists():
+            print("[map-refresh] passthrough: no baseline — bootstrap")
+            return _write_bootstrap(date, heat)
+        baseline = _load(base_path)
+        return _write_passthrough(
+            date, heat, baseline,
+            ["subprocess_timeout_or_search_flake"])
+    preopen.refuse_if_late("map_heat_refresh", force=force)
     final_path = OUT / f"{date}_research.json"
     final_md = OUT / f"{date}_research.md"
     if not force and final_path.exists() and final_md.exists():
@@ -301,9 +315,11 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=None)
     ap.add_argument("--force", action="store_true")
+    ap.add_argument("--passthrough", action="store_true",
+                    help="Write night baseline as morning_refresh (no LLM)")
     args = ap.parse_args()
     date = args.date or datetime.now(ET).date().isoformat()
-    run(date, force=args.force)
+    run(date, force=args.force, passthrough=args.passthrough)
 
 
 if __name__ == "__main__":
