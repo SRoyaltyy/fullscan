@@ -1,10 +1,11 @@
 name: Pre-Open finish holes 2026-09-08
 
 # One-shot writer for the EXISTING 2026-09-08 packet on tip 78eac85.
-# Fills only the holes: news parse, news judge (if parse QC-ok),
-# Technology + Utilities predicts, catalyst (bounded), paper dashboard
-# stamp, then QC/status + commit.
+# Fills only the holes: news parse → judge → actions (if parse usable),
+# general predict (skip-if-good), Technology + Utilities, catalyst
+# (bounded), paper dashboard stamp, then QC/status + commit.
 #
+# Late heal: --force (preopen.refuse_if_late). No --bypass-cutoff CLI.
 # Unique concurrency — do NOT share preopen-all / HALT groups.
 # Do NOT edit or poke .github/workflows/preopen_all.yml (still HALTed).
 # Do NOT touch harden PR #160 / #161.
@@ -87,7 +88,7 @@ jobs:
             echo "# NEWS PARSE FAIL — ${DATE}"
             echo ""
             echo "LOUD FAIL. news_parse did not land a quality-ok \`01_daily/news/${DATE}_parsed.json\`."
-            echo "Do **not** invent a parsed.json stub. news_judge is skipped."
+            echo "Do **not** invent a parsed.json stub. news_judge and news_actions are skipped."
             echo ""
             echo "- classified_error: **${KIND}**"
             echo "- exit_code: ${RC}"
@@ -130,7 +131,7 @@ jobs:
             echo "judge=skip_no_parse" >> "$GITHUB_ENV"
             exit 0
           fi
-          echo "CMD: python -m src.run_news_judge --date ${DATE} --force"
+          echo "CMD: python -m src.run_news_judge --date ${DATE} --force  # late-heal (no --bypass-cutoff CLI)"
           python -m src.run_news_judge --date "${DATE}" --force
           RC=$?
           if python -m src.output_qc --kind judge --path "01_daily/news/${DATE}_judge.md"; then
@@ -138,6 +139,68 @@ jobs:
             echo "FINISH_TAGS=${FINISH_TAGS}judge/" >> "$GITHUB_ENV"
           else
             echo "judge=fail:${RC}" >> "$GITHUB_ENV"
+          fi
+          exit 0
+
+      - name: news_actions
+        continue-on-error: true
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
+        run: |
+          set +e
+          DATE="${DATE}"
+          if ! python -m src.output_qc --kind parse --path "01_daily/news/${DATE}_parsed.json"; then
+            echo "SKIP news_actions — parse failed loud / no usable ${DATE}_parsed.json"
+            echo "actions=skip_no_parse" >> "$GITHUB_ENV"
+            exit 0
+          fi
+          USABLE=0
+          python -m src.output_qc --kind parse --path "01_daily/news/${DATE}_parsed.json" && USABLE=1
+          python -m src.output_qc --kind judge --path "01_daily/news/${DATE}_judge.md" && USABLE=1
+          if [ "$USABLE" -ne 1 ]; then
+            echo "SKIP news_actions — parse/judge produced nothing usable"
+            echo "actions=skip_unusable" >> "$GITHUB_ENV"
+            exit 0
+          fi
+          echo "CMD: python -m src.news_actions --hours 48 --limit 400 --date ${DATE} --force  # late-heal"
+          python -m src.news_actions --hours 48 --limit 400 --date "${DATE}" --force
+          RC=$?
+          if python -m src.output_qc --kind actions --path "01_daily/news/${DATE}_actions.json"; then
+            echo "actions=ok" >> "$GITHUB_ENV"
+            echo "FINISH_TAGS=${FINISH_TAGS}actions/" >> "$GITHUB_ENV"
+          else
+            echo "actions=fail:${RC}" >> "$GITHUB_ENV"
+          fi
+          exit 0
+
+      - name: general predict (skip-if-good)
+        continue-on-error: true
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          OPENCLAW_TIMEOUT: "1800"
+          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          set +e
+          DATE="${DATE}"
+          P="01_daily/general/${DATE}_predict.md"
+          if python -m src.output_qc --kind general --path "$P"; then
+            echo "skip-if-good general predict already quality-ok (tip 78eac85)"
+            echo "general=ok_existing" >> "$GITHUB_ENV"
+            exit 0
+          fi
+          echo "CMD: python -m src.run_predict --date ${DATE} --force  # late-heal; no --bypass-cutoff CLI"
+          python -m src.run_predict --date "${DATE}" --force
+          RC=$?
+          if python -m src.output_qc --kind general --path "$P"; then
+            echo "general=ok" >> "$GITHUB_ENV"
+            echo "FINISH_TAGS=${FINISH_TAGS}general/" >> "$GITHUB_ENV"
+          else
+            echo "general=fail:${RC}" >> "$GITHUB_ENV"
           fi
           exit 0
 
@@ -172,7 +235,7 @@ jobs:
             exit 0
           fi
           SECTORS=$(IFS=,; echo "${NEED[*]}")
-          echo "CMD: python -m src.run_sector_predict --date ${DATE} --sectors ${SECTORS} --force"
+          echo "CMD: python -m src.run_sector_predict --date ${DATE} --sectors ${SECTORS} --force  # late-heal"
           python -m src.run_sector_predict --date "${DATE}" --sectors "${SECTORS}" --force
           python -m src.sector_board --date "${DATE}" || true
           TAGS="${FINISH_TAGS}"
@@ -338,6 +401,21 @@ jobs:
           set +e
           DATE="${DATE}"
           python -m src.output_qc --date "${DATE}" --preopen --write || true
+          {
+            echo "# Finish holes stub — ${DATE}"
+            echo ""
+            echo "| hole | status |"
+            echo "|---|---|"
+            echo "| parse | ${parse:-unknown} |"
+            echo "| judge | ${judge:-unknown} |"
+            echo "| actions | ${actions:-unknown} |"
+            echo "| general | ${general:-unknown} |"
+            echo "| tech | ${technology:-unknown} |"
+            echo "| utilities | ${utilities:-unknown} |"
+            echo "| catalyst | ${catalyst:-unknown} |"
+            echo "| dashboard | ${dashboard:-unknown} |"
+          } > "01_daily/${DATE}_finish_holes.md"
+          echo "Wrote 01_daily/${DATE}_finish_holes.md"
           python - <<'PY'
           import json
           from datetime import datetime
@@ -359,7 +437,7 @@ jobs:
           for item in report.get("items") or []:
               by_kind.setdefault(item.get("kind"), []).append(item)
           missing = []
-          for key in ("news_parse", "news_judge"):
+          for key in ("news_parse", "news_judge", "news_actions", "general_predict"):
               rows = by_kind.get(key) or []
               if not (rows and all(r.get("ok") for r in rows)):
                   missing.append(key)
@@ -429,11 +507,13 @@ jobs:
           echo "COMMIT: $MSG"
           bash scripts/safe_git_push.sh "$MSG" \
             "01_daily/news/" \
+            "01_daily/general/" \
             "01_daily/sectors/${DATE}/" \
             "01_daily/catalyst/" \
             "01_daily/${DATE}_preopen_qc.json" \
             "01_daily/${DATE}_preopen_status.json" \
             "01_daily/${DATE}_preopen_status.md" \
+            "01_daily/${DATE}_finish_holes.md" \
             "01_daily/${DATE}_dashboard_stamp_note.md" \
             "01_daily/${DATE}_grok_review.json" \
             "01_daily/${DATE}_grok_review.md" \
