@@ -16917,13 +16917,13 @@
         "S4_ETF_TAPE": 0.0
       },
       "leading_sum": -4.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 175.13999938964844,
+      "actual_close": 174.4199981689453,
+      "actual_pct_change": -0.48496952290494333,
+      "actual_direction": "down",
+      "actual_magnitude_band": "mild",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
@@ -16957,7 +16957,9 @@
       },
       "sector": "Industrials",
       "etf": "XLI",
-      "rubric": "00_grounding/sectors/industrials.md"
+      "rubric": "00_grounding/sectors/industrials.md",
+      "spy_pct_change": -0.5492125910932955,
+      "rel_pct_change": 0.06424306818835213
     },
     {
       "date": "2026-09-08",
