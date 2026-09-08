@@ -16977,13 +16977,13 @@
         "S4_ETF_TAPE": 0.0
       },
       "leading_sum": -5.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 43.665000915527344,
+      "actual_close": 43.900001525878906,
+      "actual_pct_change": -0.06828768287838738,
+      "actual_direction": "flat",
+      "actual_magnitude_band": "flat",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
@@ -17017,7 +17017,9 @@
       },
       "sector": "Real Estate",
       "etf": "XLRE",
-      "rubric": "00_grounding/sectors/real_estate.md"
+      "rubric": "00_grounding/sectors/real_estate.md",
+      "spy_pct_change": -0.5492125910932955,
+      "rel_pct_change": 0.4809249082149081
     }
   ]
 }
