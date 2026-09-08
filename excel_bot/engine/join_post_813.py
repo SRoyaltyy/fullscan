@@ -1159,6 +1159,30 @@ def render(payload):
         "",
         payload.get("universe_plain") or "",
         "",
+        "### Dashboard sleeves (open J vs sleeve-alone)",
+        "",
+        "Same leak bar: open J only. Each sleeve is scored against **its own** "
+        "morning picks after Futubull 15 bp — not against join top-8. "
+        "List books (green / weighted / unweighted) refill from the ranked leftover. "
+        "Ticket books (flatten fills, factor-mine BUYs, paper) filter the names "
+        "they actually took; elev is drop ≤2 J≥0 / day. Shorts and excel/`strategies/` "
+        "are null. Live stays frozen.",
+        "",
+        payload.get("sleeve_plain") or "",
+        "",
+        "#### Featured",
+        "",
+    ]
+    from j_sleeve_prove import render_sleeve_tables
+    L += render_sleeve_tables(payload.get("sleeves") or [], featured_only=True)
+    L += [
+        "",
+        "#### All dashboard / STRATEGY_BOARD sleeves",
+        "",
+    ]
+    L += render_sleeve_tables(payload.get("sleeves") or [], featured_only=False)
+    L += [
+        "",
         "### What was joined",
         "",
         "**Excel (clock gate, open-only):**",
@@ -1180,6 +1204,10 @@ def render(payload):
         "- `data/stock_book/` **1d buy, prior date only**.",
         "- `data/feature_asof/` morning tags when present. `ret_*` labels only.",
         "- `data/sleeve_merge/trades.csv` — flatten_robust tickets (overlay).",
+        "- `03_scoreboard/factor_mine/*.md` — 09:30 BUY fills (flatten_h5 / live / unions).",
+        "- `data/stock_book/*_green.json` / `*_unweighted.json` / 1d buy — prior-day PIT.",
+        "- `data/paper/roundtrips.csv`, `data/sleeve_combine/bt_trades.csv`, "
+        "book/mover paper fills.",
         "",
         "### Labels",
         "",
@@ -1266,6 +1294,7 @@ def scoreboard_line(payload):
         f"n={a['n']} ghost {_ghost_s(a['ghost'])}; "
         f"`elev_cap2_J_le-1` {_pp_s(e.get('vs_fullscan_pp'))} "
         f"n={e['n']} ghost {_ghost_s(e['ghost'])}. "
+        f"Sleeves: {(payload.get('sleeve_plain') or '')[:220]} "
         f"Tip `{tip}`. See `excel_bot/research/JOIN_POST_813.md`._\n"
     )
 
@@ -1496,8 +1525,15 @@ def main():
         "is flat to negative. Join top-8 stays **CONDITIONAL** (discovery only)."
     )
     family = "CONDITIONAL"
+    from j_sleeve_prove import compact as _sl_compact, run as run_sleeves
+    print("scoring dashboard sleeves …", flush=True)
+    sl_raw = run_sleeves(panel=panel, flags_by_day=flags_by_day, spy=spy,
+                         fz=fz, hist=hist, panel_index=panel_index)
+    sl = _sl_compact(sl_raw)
+    sleeve_plain = sl_raw.get("plain") or ""
     plain = (
         f"J clock leak **{leak['verdict']}**. " + plain + " " + uni_plain
+        + " " + sleeve_plain
     )
 
     fz_dates = sorted(fz)
@@ -1517,6 +1553,9 @@ def main():
         "cases": cases,
         "universes": uni.get("universes"),
         "universe_plain": uni_plain,
+        "sleeves": sl.get("sleeves"),
+        "sleeve_plain": sleeve_plain,
+        "sleeve_counts": sl.get("counts"),
         "ohlc": uni.get("ohlc"),
         "primary_label": "same-day H (Finviz Change from Open) − 15 bp Futubull",
         "secondary_label": "flatten ret_pct (io 3d / mover 1d); feature_asof ret_1d",
@@ -1567,6 +1606,10 @@ def main():
               indent=2, default=str)
     json.dump(uni, open(os.path.join(RESEARCH, "j_universe_prove.json"), "w"),
               indent=2, default=str)
+    json.dump(sl, open(os.path.join(RESEARCH, "j_sleeve_prove.json"), "w"),
+              indent=2, default=str)
+    from j_sleeve_prove import write_keep_cards
+    write_keep_cards(payload, sl)
     sb = scoreboard_line(payload)
     open(os.path.join(SCOREBOARD, "JOIN_POST_813.md"), "w", encoding="utf-8").write(sb)
     excel_sb = os.path.join(SCOREBOARD, "EXCEL_BOT_MINE.md")
@@ -1599,6 +1642,14 @@ def main():
             print(f"    {r.get('verdict','—'):12} {r['name']:22} n={r['n']:4} "
                   f"{_pct_s(r['holdout_mean'])} vs={r.get('vs_fullscan_pp')}",
                   flush=True)
+    print("dashboard sleeves:", payload.get("sleeve_plain"), flush=True)
+    for s in (payload.get("sleeves") or []):
+        if s.get("name") in (
+            "flatten_robust", "flatten_h5", "flatten_live_h5",
+            "green_pile_prior", "green_book_prior",
+            "weighted_book_1d_prior", "unweighted_book_prior",
+        ) or s.get("verdict") == "KEEP":
+            print(f"  {s.get('verdict','?'):12} {s.get('name')}", flush=True)
 
 
 if __name__ == "__main__":

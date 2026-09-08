@@ -13,6 +13,9 @@ from join_post_813 import (
     j_fresh, j_from_opens, prior_bars,
 )
 from j_universe_prove import universe_verdict
+from j_sleeve_prove import (
+    elev_drop2, family_verdict, parse_factor_mine_md, recipe_verdict,
+)
 
 
 def test_clock_gate_locked():
@@ -152,6 +155,49 @@ def test_j_is_open_only_and_ignores_same_row_labels():
         pass
 
 
+def test_parse_factor_mine_buys():
+    import tempfile
+    text = (
+        "# Factor mine action — `flatten_h5`\n"
+        "Side **long** · universe `flatten`\n"
+        "| 2026-08-20 09:30 ET | **BUY** | `AG` | 66 | $20.55 |\n"
+        "| 2026-08-20 09:30 ET | **SELL** | `INO` | 10 | $1.20 |\n"
+        "| 2026-08-21 09:30 ET | **BUY** | `CYPH` | 20 | $1.32 |\n"
+    )
+    path = os.path.join(tempfile.gettempdir(), "fm_parse_test.md")
+    open(path, "w", encoding="utf-8").write(text)
+    parsed = parse_factor_mine_md(path)
+    assert parsed["side"] == "long"
+    assert [(b["date"], b["ticker"]) for b in parsed["buys"]] == [
+        ("2026-08-20", "AG"),
+        ("2026-08-21", "CYPH"),
+    ]
+
+
+def test_elev_drop2():
+    rows = [
+        {"date": "2026-08-20", "ticker": "A", "flags": {"J_ge0": True}, "J": 0.04},
+        {"date": "2026-08-20", "ticker": "B", "flags": {"J_ge0": True}, "J": 0.02},
+        {"date": "2026-08-20", "ticker": "C", "flags": {"J_ge0": True}, "J": 0.01},
+        {"date": "2026-08-20", "ticker": "D", "flags": {"J_ge0": False}, "J": -0.02},
+    ]
+    kept = {(r["ticker"]) for r in elev_drop2(rows)}
+    assert kept == {"C", "D"}  # drop two largest J≥0 (A, B)
+
+
+def test_sleeve_recipe_verdict():
+    assert recipe_verdict(0.40, 20, True, 0.01) == "KEEP"
+    assert recipe_verdict(0.40, 20, False, 0.01) == "CONDITIONAL"
+    assert recipe_verdict(0.05, 20, True, 0.01) == "KILL"
+    assert recipe_verdict(0.40, 8, True, 0.01) == "null"
+    keep = {"avoid_J_ge0": {"family_bar": "KEEP"}}
+    kill = {"avoid_J_ge0": {"family_bar": "KILL"}}
+    assert family_verdict(keep, keep) == "KEEP"
+    assert family_verdict(keep, kill) == "CONDITIONAL"  # pooled only
+    assert family_verdict(kill, kill) == "KILL"
+    assert family_verdict(keep, keep, clock_ok=False) == "CONDITIONAL"
+
+
 if __name__ == "__main__":
     test_clock_gate_locked()
     test_atoms_are_legal()
@@ -164,4 +210,7 @@ if __name__ == "__main__":
     test_prove_is_after_discovery()
     test_j_is_open_only_and_ignores_same_row_labels()
     test_universe_verdict()
+    test_parse_factor_mine_buys()
+    test_elev_drop2()
+    test_sleeve_recipe_verdict()
     print("ok")
