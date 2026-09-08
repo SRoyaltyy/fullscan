@@ -27,7 +27,9 @@ from join_post_813 import (  # noqa: E402
     excel_features, is_session, load_book_1d,
     load_flatten, mean, pick_book, prior_date, score_book,
 )
-from j_winrate import hit_s, pack_rule_clock, wr_s  # noqa: E402
+from j_winrate import (  # noqa: E402
+    FEE_CAVEAT, MIN_FIRES, hit_s, iter_long_fire_rows, pack_rule_clock, wr_s,
+)
 
 SLEEVE_JSON = os.path.join(os.path.dirname(HERE), "research", "j_sleeve_prove.json")
 CATALOG = os.path.join(REPO, "data", "strategy_board", "catalog.json")
@@ -856,14 +858,20 @@ def _wr_row(label, recipe, window):
 def render_winrate_md(payload, sleeves):
     """Cyrus bar: >55% of fire days the rule book beats the same-day no-rule book."""
     L = [
-        "### Win-rate bar (Cyrus: >55% of fires)",
+        "### Win-rate bar (Cyrus: >55% of fires, n≥30)",
         "",
         "**Fire** = a morning the rule changes the book (ticker set ≠ no-rule set). "
         "**Win** = that day’s rule-book mean after-fee H beats the same-day no-rule book. "
-        "Ties do not beat. **CLEAR** needs win-rate >55% and ≥8 fires. "
-        "A thin print (>55% but n_fires<8) is shown as PRINT, not a clear. "
+        "Ties do not beat. **CLEAR** needs win-rate **>55% and ≥30 fires** on the "
+        "prove/pooled window used for the call. n=8 is **not** proven. "
+        "A print that is >55% but n_fires<30 is **PROVISIONAL** (demoted) — "
+        "including the prior weighted-book avoid 6/8 and green-pile elev 5/8. "
+        f"{FEE_CAVEAT} "
         "Separately: % of the rule’s name-days with after-fee H>0 and I>0. "
-        "Live = wired into the cash/paper bot — docs are not live. Live stays frozen.",
+        "Native Finviz/join/stock_book dumps are ~16 weekdays and cannot reach "
+        "30 fires alone; longer Yahoo OHLC day-books (2024-03→2026-08-21) are "
+        "the material-n tape. Live = wired into the cash/paper bot — docs are "
+        "not live. Live stays frozen.",
         "",
         "| circumstance | window | recipe | fire bar | fire win-rate | H+ after fees | I+ after fees | mean vs |",
         "|---|---|---|---|---|---|---|---|",
@@ -878,12 +886,23 @@ def render_winrate_md(payload, sleeves):
         for rec_name in ("avoid_J_ge0", "elev_cap2_J_le-1"):
             rec = w.get(rec_name) or {}
             wr = rec.get("winrate") or {}
-            label = f"join top-8"
+            label = "join top-8"
             L.append(_wr_row(label, rec, wname))
             if wr.get("clears_55"):
                 clears.append(f"{label} {wname} `{rec_name}` {wr_s(wr)}")
             elif wr.get("prints_55"):
                 prints.append(f"{label} {wname} `{rec_name}` {wr_s(wr)}")
+    # Long Yahoo tape first — this is the only path that can hit ≥30 fires.
+    long_windows = ("long", "y2025", "pre813")
+    for label, wname, rec_name, rec in iter_long_fire_rows(payload.get("long_fires")):
+        if wname not in long_windows:
+            continue
+        wr = rec.get("winrate") or rec
+        L.append(_wr_row(label, rec, wname))
+        if wr.get("clears_55"):
+            clears.append(f"{label} {wname} `{rec_name}` {wr_s(wr)}")
+        elif wr.get("prints_55"):
+            prints.append(f"{label} {wname} `{rec_name}` {wr_s(wr)}")
     want = set(NAMED_CIRCUMSTANCES)
     extra = []
     for s in sleeves or []:
@@ -914,11 +933,13 @@ def render_winrate_md(payload, sleeves):
                 prints.append(f"{s['name']} {win} `{rec_name}` {wr_s(wr)}")
     L += [
         "",
-        "**Clears >55% with ≥8 fires:** "
+        f"**Clears >55% with ≥{MIN_FIRES} fires:** "
         + ("; ".join(clears) if clears else "none."),
         "",
-        "**Prints >55% but thin (n_fires<8):** "
+        f"**Provisional >55% but n_fires<{MIN_FIRES} (demoted, not a call):** "
         + ("; ".join(prints) if prints else "none."),
+        "",
+        f"Fee caveat: {FEE_CAVEAT}",
         "",
     ]
     return L, clears, prints
@@ -961,7 +982,7 @@ def write_keep_cards(payload, sl):
         "",
         "pick_book reads only J flags + join rank. See `JOIN_POST_813.md` leak section.",
         "",
-        "## Win-rate bar (Cyrus: >55% of fires)",
+        "## Win-rate bar (Cyrus: >55% of fires, n≥30)",
         "",
     ]
     wr_md, _, _ = render_winrate_md(payload, sleeves)

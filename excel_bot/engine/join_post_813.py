@@ -1544,23 +1544,31 @@ def main():
     sl = _sl_compact(sl_raw)
     sleeve_plain = sl_raw.get("plain") or ""
     from j_sleeve_prove import render_winrate_md as _wr_md
+    from j_winrate import FEE_CAVEAT, MIN_FIRES
+    long_fires = uni.get("long_fires") or (uni.get("ohlc") or {}).get("long_fires")
     _tmp = {
         "windows": windows,
+        "long_fires": long_fires,
     }
     _, wr_clears, wr_prints = _wr_md(_tmp, sl_raw.get("sleeves") or [])
     if wr_clears:
         win_plain = (
             "Cyrus fire bar (>55% of days the rule changes the book vs "
-            "the same-day no-rule book): **CLEAR** — "
-            + "; ".join(wr_clears) + "."
+            f"the same-day no-rule book, ≥{MIN_FIRES} fires): **CLEAR** — "
+            + "; ".join(wr_clears)
+            + f". {FEE_CAVEAT} Prior 6/8 weighted-book avoid and 5/8 "
+            "green-pile elev are **PROVISIONAL** (n<30)."
         )
     else:
         win_plain = (
             "Cyrus fire bar (>55% of days the rule changes the book vs "
-            "the same-day no-rule book): **no CLEAR** "
-            "(≥8 fires required). "
-            + (("Thin prints: " + "; ".join(wr_prints) + ".") if wr_prints
-               else "No circumstance printed >55%.")
+            f"the same-day no-rule book): **no CLEAR** "
+            f"(≥{MIN_FIRES} fires required; n=8 is not proven). "
+            + (("Provisional >55% at n<30 (demoted): "
+                + "; ".join(wr_prints) + ". ") if wr_prints
+               else "No circumstance printed >55%. ")
+            + f"{FEE_CAVEAT} Prior weighted-book avoid 6/8 and "
+            "green-pile elev 5/8 are **PROVISIONAL** until they clear this floor."
         )
     plain = (
         f"J clock leak **{leak['verdict']}**. " + win_plain + " "
@@ -1588,6 +1596,7 @@ def main():
         "sleeve_plain": sleeve_plain,
         "sleeve_counts": sl.get("counts"),
         "ohlc": uni.get("ohlc"),
+        "long_fires": long_fires,
         "primary_label": "same-day H (Finviz Change from Open) − 15 bp Futubull",
         "secondary_label": "flatten ret_pct (io 3d / mover 1d); feature_asof ret_1d",
         "fullscan_features": [

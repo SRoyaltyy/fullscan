@@ -16,7 +16,7 @@ from j_universe_prove import universe_verdict
 from j_sleeve_prove import (
     elev_drop2, family_verdict, parse_factor_mine_md, recipe_verdict,
 )
-from j_winrate import fire_winrate, hit_rate
+from j_winrate import MIN_FIRES, fire_winrate, hit_rate
 
 
 def test_clock_gate_locked():
@@ -224,12 +224,42 @@ def test_fire_winrate_day_book():
     assert wr["n_losses"] == 1
     assert abs(wr["win_rate"] - 0.5) < 1e-12
     assert wr["clears_55"] is False
+    assert wr["verdict"] == "FAIL"
     hits = hit_rate(
         [{"net": 0.02}, {"net": -0.01}, {"net": 0.00, "i_net": 0.01}],
         "net",
     )
     assert hits["n"] == 3
     assert hits["n_pos"] == 1
+
+
+def _n_day_books(n_fires, n_wins):
+    """n fire days; first n_wins beat the no-rule book."""
+    base, rule = [], []
+    for i in range(n_fires):
+        d = f"d{i:03d}"
+        base.append({"date": d, "ticker": "A", "net": 0.0})
+        rule.append({"date": d, "ticker": "B",
+                     "net": 0.01 if i < n_wins else -0.01})
+    return fire_winrate(base, rule)
+
+
+def test_fire_floor_30():
+    """CLEAR needs ≥30 fires and >55%. n=8 and n=29 are PROVISIONAL."""
+    assert MIN_FIRES == 30
+    wr30 = _n_day_books(30, 17)  # 17/30 = 56.7%
+    assert wr30["n_fires"] == 30
+    assert wr30["verdict"] == "CLEAR"
+    assert wr30["clears_55"] is True
+    wr29 = _n_day_books(29, 29)  # 100% but n<30
+    assert wr29["verdict"] == "PROVISIONAL"
+    assert wr29["clears_55"] is False
+    assert wr29["prints_55"] is True
+    wr8 = _n_day_books(8, 6)  # prior 6/8 CLEAR — now demoted
+    assert wr8["verdict"] == "PROVISIONAL"
+    assert wr8["clears_55"] is False
+    wr_fail = _n_day_books(30, 16)  # 16/30 = 53.3%
+    assert wr_fail["verdict"] == "FAIL"
 
 
 if __name__ == "__main__":
@@ -248,4 +278,5 @@ if __name__ == "__main__":
     test_elev_drop2()
     test_sleeve_recipe_verdict()
     test_fire_winrate_day_book()
+    test_fire_floor_30()
     print("ok")

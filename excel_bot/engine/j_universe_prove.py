@@ -25,6 +25,7 @@ from join_post_813 import (  # noqa: E402
     load_book_1d, load_finviz, load_join_days, mean, prior_bars,
     score_book, tapes, history_index,
 )
+from j_winrate import score_long_universe_fires, slim_long_fires  # noqa: E402
 
 UNIVERSE_JSON = os.path.join(os.path.dirname(HERE), "research", "j_universe_prove.json")
 OHLC_PATH = os.path.join(REPO, "data", "prices", "ohlc.parquet")
@@ -307,12 +308,29 @@ def run(panel=None, flags_by_day=None, joins=None, spy=None, fz=None, hist=None)
                 "slices": scored, "verdict": verdict, "clock": "Yahoo OHLC Open J",
                 "note": note,
             }
+        print("scoring long-history day-book fires (n≥30 floor) …", flush=True)
+        long_fires = score_long_universe_fires(
+            {
+                "ohlc_liq": liq_nd,
+                "mem_20260426": mem_nd,
+                "ohlc_all": all_nd,
+            },
+            ohlc_slices,
+            kinds_by_universe={
+                "mem_20260426": (
+                    "unranked", "vol_top8", "vol_top80",
+                    "prior_green_top8", "prior_green_unranked",
+                ),
+                "ohlc_all": ("unranked",),  # microcap lottery; skip vol rank
+            },
+        )
         ohlc_block = {
             "available": True,
             "n_ohlc_days": len({r["date"] for r in all_nd}),
             "first": min((r["date"] for r in all_nd), default=None),
             "last": max((r["date"] for r in all_nd), default=None),
             "universes": ohlc_scored,
+            "long_fires": slim_long_fires(long_fires),
         }
         universes.update(ohlc_scored)
 
@@ -327,7 +345,16 @@ def run(panel=None, flags_by_day=None, joins=None, spy=None, fz=None, hist=None)
         "no_fresh_j_before": "2026-08-14 on Finviz (08-13 prior is 04-26)",
         "universes": universes,
         "ohlc": ohlc_block,
+        "long_fires": (ohlc_block or {}).get("long_fires"),
         "finviz_slices": slices,
+        "fire_bar": {
+            "win": ">55% of fire days beat the same-day no-rule book after fees",
+            "min_fires": 30,
+            "fee_caveat": (
+                "After-fee H is the equal-weight day-mean minus 15 bp Futubull, "
+                "not dollar-weighted."
+            ),
+        },
     }
     return payload
 
@@ -351,6 +378,8 @@ def compact(payload):
         }
 
     out = {k: v for k, v in payload.items() if k != "universes"}
+    if out.get("long_fires"):
+        out["long_fires"] = slim_long_fires(payload.get("long_fires"))
     unis = {}
     for name, u in payload["universes"].items():
         slices = {}
