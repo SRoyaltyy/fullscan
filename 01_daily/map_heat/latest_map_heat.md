@@ -1,81 +1,81 @@
-# MAP HEAT — 2026-09-05
+# MAP HEAT — 2026-09-08
 
-Export `finviz_2026-09-05.csv` · 11646 names · generated 2026-09-05T01:45:05.916865-04:00
+Export `finviz_2026-09-08.csv` · 11605 names · generated 2026-09-08T01:58:38.299618-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7715.0 | -0.42% |
-| Nasdaq 100 (NQ) | 29523.0 | +0.14% |
-| Russell 2000 (ER2) | 2973.8 | +0.23% |
-| DJIA (YM) | 53275.0 | -0.57% |
-| VIX (VX) | 16.25 | +0.80% |
-| Crude Oil WTI (CL) | 91.22 | +0.20% |
-| Crude Oil Brent (QA) | 95.85 | +0.80% |
-| Natural Gas (NG) | 2.939 | +2.13% |
-| Heating Oil (HO) | 4.547 | -1.16% |
-| Gasoline RBOB (RB) | 3.1998 | +2.54% |
-| Gold (GC) | 4477.2 | -1.39% |
-| Silver (SI) | 66.82 | -1.41% |
-| Copper (HG) | 6.668 | +0.27% |
-| Platinum (PL) | 1828.5 | -0.44% |
-| Palladium (PA) | 1400.0 | -2.50% |
-| USD (DX) | 99.12 | +0.27% |
-| EUR (6E) | 1.16185 | -0.21% |
-| JPY (6J) | 0.6404 | -0.47% |
-| GBP (6B) | 1.3517 | -0.18% |
-| AUD (6A) | 0.72035 | -0.03% |
-| CAD (6C) | 0.723 | -0.38% |
-| CHF (6S) | 1.23565 | -0.43% |
-| NZD (6N) | 0.58815 | -0.05% |
-| 10 Year Note (ZN) | 107.5 | -0.17% |
-| 5 Year Note (ZF) | 105.5546875 | -0.16% |
-| 2 Year Note (ZT) | 102.578125 | -0.07% |
-| 30 Year Bond (ZB) | 108.65625 | +0.00% |
-| Nikkei 225 (NKD) | 65795.0 | +1.94% |
-| DAX (DY) | 26082.0 | +0.16% |
-| Euro Stoxx 50 (EX) | 6405.0 | +0.19% |
-| Corn (ZC) | 536.75 | -0.74% |
-| Soybeans (ZS) | 1310.25 | -0.49% |
-| Wheat (ZW) | 732.75 | -2.68% |
-| Soybean oil (ZL) | 68.77 | -1.06% |
-| Soybean Meal (ZM) | 347.9 | -0.11% |
-| Oats (ZO) | 367.5 | +0.07% |
-| Rough Rice (ZR) | 15.84 | +1.08% |
+| S&P 500 (ES) | 7709.25 | -0.16% |
+| Nasdaq 100 (NQ) | 29637.5 | +0.27% |
+| Russell 2000 (ER2) | 2965.3 | -0.36% |
+| DJIA (YM) | 53039.0 | -0.74% |
+| VIX (VX) | 16.3 | -0.10% |
+| Crude Oil WTI (CL) | 93.41 | +2.15% |
+| Crude Oil Brent (QA) | 98.06 | +1.09% |
+| Natural Gas (NG) | 2.959 | -0.54% |
+| Heating Oil (HO) | 4.7208 | +3.99% |
+| Gasoline RBOB (RB) | 3.2444 | +0.93% |
+| Gold (GC) | 4469.9 | -0.14% |
+| Silver (SI) | 67.37 | +0.95% |
+| Copper (HG) | 6.7745 | +1.40% |
+| Platinum (PL) | 1839.1 | +0.77% |
+| Palladium (PA) | 1411.5 | +0.54% |
+| USD (DX) | 98.775 | -0.38% |
+| EUR (6E) | 1.16305 | +0.14% |
+| JPY (6J) | 0.65205 | +1.81% |
+| GBP (6B) | 1.354 | +0.18% |
+| AUD (6A) | 0.7217 | +0.20% |
+| CAD (6C) | 0.7251 | +0.31% |
+| CHF (6S) | 1.23695 | +0.14% |
+| NZD (6N) | 0.5863 | -0.32% |
+| 10 Year Note (ZN) | 107.421875 | -0.04% |
+| 5 Year Note (ZF) | 105.53125 | -0.01% |
+| 2 Year Note (ZT) | 102.58203125 | +0.02% |
+| 30 Year Bond (ZB) | 108.5625 | -0.12% |
+| Nikkei 225 (NKD) | 65880.0 | +0.15% |
+| DAX (DY) | 25979.0 | -0.08% |
+| Euro Stoxx 50 (EX) | 6400.0 | -0.08% |
+| Corn (ZC) | 542.5 | +1.07% |
+| Soybeans (ZS) | 1319.5 | +0.69% |
+| Wheat (ZW) | 761.0 | +3.68% |
+| Soybean oil (ZL) | 69.63 | +1.07% |
+| Soybean Meal (ZM) | 347.9 | -0.06% |
+| Oats (ZO) | 371.0 | +0.61% |
+| Rough Rice (ZR) | 15.83 | -0.25% |
 | Coffee (KC) | 292.9 | +0.08% |
 | Sugar (SB) | 18.02 | +0.00% |
-| Cotton (CT) | 86.43 | -0.14% |
+| Cotton (CT) | 87.28 | +1.10% |
 | Cocoa (CC) | 6175.0 | +0.23% |
 | Orange Juice (JO) | 155.05 | +0.26% |
 | Lumber (LB) | 566.0 | -0.70% |
 | Live Cattle (LC) | 213.15 | -0.63% |
 | Lean Hogs (LH) | 82.25 | -1.38% |
 | Feeder Cattle (FC) | 320.75 | -0.30% |
-| Bitcoin (BTC) | 79830.0 | -0.28% |
-| 3 Month SOFR (SR3) | 96.145 | -0.03% |
-| 30 Day Fed Funds (ZQ) | 96.305 | -0.01% |
-| Aluminum (ALI) | 3459.5 | -0.74% |
-| Canola (RS) | 820.9 | -0.75% |
-| Coal Newcastle (NCF) | 148.5 | +1.12% |
+| Bitcoin (BTC) | 78770.0 | -1.62% |
+| 3 Month SOFR (SR3) | 96.14 | +0.00% |
+| 30 Day Fed Funds (ZQ) | 96.3025 | +0.00% |
+| Aluminum (ALI) | 3462.25 | +0.00% |
+| Canola (RS) | 835.2 | +1.51% |
+| Coal Newcastle (NCF) | 148.4 | -0.61% |
 | Ethanol (ZK) | 2.08 | -0.83% |
-| Gasoil (G) | 1323.25 | -2.04% |
+| Gasoil (G) | 1382.5 | +0.56% |
 | Iron Ore (TIO) | 99.57 | +0.15% |
-| Steel HRC (HRC) | 1226.0 | +0.25% |
-| Ultra 10 Year Note (TN) | 109.21875 | -0.14% |
-| Ultra Bond (UB) | 110.125 | +0.03% |
+| Steel HRC (HRC) | 1226.0 | +0.00% |
+| Ultra 10 Year Note (TN) | 109.140625 | -0.06% |
+| Ultra Bond (UB) | 110.03125 | -0.09% |
 | Uranium (UX) | 89.65 | +0.22% |
 
 ## CALENDAR
-No high-impact print / mega-cap earnings flagged.
+**SIZE GATE on** — high-impact print and/or mega-cap earnings today.
 
 Econ (importance ≥ 2):
 - 08:15 ET  ADP Employment Change Weekly  actual —  cons —  surprise —  prev 11.75K
 - 07:00 ET  MBA 30-Year Mortgage Rate  actual —  cons —  surprise —  prev 6.79%
 - 16:30 ET  API Crude Oil Stock Change  actual —  cons —  surprise —  prev -2.6M
-- 08:30 ET  PPI MoM  actual —  cons 0.3%  surprise —  prev 0%
+- 08:30 ET  PPI MoM  actual —  cons 0.4%  surprise —  prev 0%
 - 08:30 ET  Core PPI MoM  actual —  cons 0.3%  surprise —  prev 0.2%
-- 08:30 ET  Initial Jobless Claims  actual —  cons 209.0K  surprise —  prev 206K
-- 10:00 ET  Existing Home Sales  actual —  cons 4.03M  surprise —  prev 4.06M
+- 08:30 ET  Initial Jobless Claims  actual —  cons 205K  surprise —  prev 206K
+- 10:00 ET  Existing Home Sales  actual —  cons 3.99M  surprise —  prev 4.06M
 - 10:00 ET  Existing Home Sales MoM  actual —  cons -0.2%  surprise —  prev -1.7%
 - 12:00 ET  EIA Crude Oil Stocks Change  actual —  cons —  surprise —  prev -4.45M
 - 12:00 ET  EIA Gasoline Stocks Change  actual —  cons —  surprise —  prev -1.173M
@@ -83,10 +83,10 @@ Econ (importance ≥ 2):
 - 08:30 ET  Core Inflation Rate YoY  actual —  cons 2.4%  surprise —  prev 2.5%
 - 08:30 ET  Inflation Rate MoM  actual —  cons 0.4%  surprise —  prev 0.1%
 - 08:30 ET  Inflation Rate YoY  actual —  cons 3.4%  surprise —  prev 3.4%
-- 08:30 ET  CPI  actual —  cons 334.9  surprise —  prev 333.92
+- 08:30 ET  CPI  actual —  cons 334.85  surprise —  prev 333.92
 - 08:30 ET  CPI s.a  actual —  cons 334.14  surprise —  prev 332.81
-- 10:00 ET  Michigan Consumer Sentiment Prel  actual —  cons 51.5  surprise —  prev 51.7
-- 14:00 ET  Monthly Budget Statement  actual —  cons -$480.0B  surprise —  prev -$432B
+- 10:00 ET  Michigan Consumer Sentiment Prel  actual —  cons 51  surprise —  prev 51.7
+- 14:00 ET  Monthly Budget Statement  actual —  cons -$202.5B  surprise —  prev -$432B
 - 08:15 ET  ADP Employment Change Weekly  actual —  cons —  surprise —  prev —
 - 08:30 ET  NY Empire State Manufacturing Index  actual —  cons -9  surprise —  prev 20.60
 - 16:30 ET  API Crude Oil Stock Change  actual —  cons —  surprise —  prev —
@@ -112,27 +112,30 @@ Econ (importance ≥ 2):
 
 Mega-cap earnings:
 - AMC **ORCL**  EPS est 1.7392  (Oracle Corp)
-- BMO **ACN**  EPS est 3.7098  (Accenture plc)
+- AMC **COST**  EPS est 6.548  (Costco Wholesale Corp)
 - AMC **ADBE**  EPS est 6.0751  (Adobe Inc)
+- BMO **AZO**  EPS est 54.5786  (Autozone Inc)
 - BMO **KR**  EPS est 1.0546  (Kroger Co)
 - AMC **CPRT**  EPS est 0.3832  (Copart Inc)
 - BMO **SUNB**  EPS est 1.0358  (Sunbelt Rentals Holdings Inc)
 - AMC **CASY**  EPS est 6.7776  (Casey's General Stores Inc)
-- AMC **TCOM**  EPS est 0.8776  (Trip.com Group Ltd ADR)
+- AMC **TCOM**  EPS est 0.8854  (Trip.com Group Ltd ADR)
+- BMO **DRI**  EPS est 2.0527  (Darden Restaurants Inc)
+- BMO **GIS**  EPS est 0.7167  (General Mills Inc)
 - AMC **LEN**  EPS est 1.2975  (Lennar Corp)
 - AMC **COO**  EPS est 1.1237  (Cooper Companies Inc)
 - BMO **SAIL**  EPS est 0.0791  (Sailpoint Inc)
 - AMC **ABVX**  EPS est -0.9585  (Abivax ADR)
 
 Options event-vol flags (NOT direction):
-- **ORCL** exp 2026-09-11 ATM IV 1.0527 implied move +13.5% put/call OI 0.061
-- **ACN** exp 2026-09-11 ATM IV 0.495 implied move +6.3% put/call OI 0.96
-- **ADBE** exp 2026-09-11 ATM IV 0.7362 implied move +9.4% put/call OI 24.6
-- **KR** exp 2026-09-11 ATM IV 0.5085 implied move +6.5% put/call OI 0.269
-- **CPRT** exp 2026-09-18 ATM IV 0.5584 implied move +10.5% put/call OI 1.679
-- **SUNB** exp 2026-09-18 ATM IV 0.7695 implied move +14.5% put/call OI 0.455
-- **CASY** exp 2026-09-18 ATM IV 0.5721 implied move +10.8% put/call OI 1.786
-- **TCOM** exp 2026-09-18 ATM IV 0.5132 implied move +9.7% put/call OI 10.765
+- **ORCL** exp 2026-09-11 ATM IV 0.0078 implied move +0.1% put/call OI —
+- **COST** exp 2026-09-11 ATM IV 0.001 implied move +0.0% put/call OI —
+- **ADBE** exp 2026-09-11 ATM IV 0.0039 implied move +0.0% put/call OI —
+- **AZO** exp 2026-09-18 ATM IV 0.001 implied move +0.0% put/call OI —
+- **KR** exp 2026-09-11 ATM IV 0.0078 implied move +0.1% put/call OI —
+- **CPRT** exp 2026-09-18 ATM IV 0.0313 implied move +0.5% put/call OI —
+- **SUNB** exp 2026-09-18 ATM IV 0.0156 implied move +0.3% put/call OI —
+- **CASY** exp 2026-09-18 ATM IV 0.0039 implied move +0.1% put/call OI —
 
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
@@ -156,7 +159,7 @@ HOT (1w):
 - **Utilities - Independent Power Producers** (Utilities)  +4.5% 1d  +7.5% 1w  vs parent +6.7%
   SPX: CEG +4.9% none, VST +3.5% pos · RUT: HNRG +3.0% none
 - **Computer Hardware** (Technology)  +4.5% 1d  +7.2% 1w  vs parent +5.8%
-  SPX: DELL +1.5% neg, SNDK +11.9% none · RUT: QBTS -1.4% none, RGTI +0.1% none
+  SPX: DELL +1.5% pos, SNDK +11.9% none · RUT: QBTS -1.4% none, RGTI +0.1% none
 - **Department Stores** (Consumer Cyclical)  +1.3% 1d  +6.0% 1w  vs parent +8.0%
   SPX: — · RUT: KSS +0.5% none
 - **Agricultural Inputs** (Basic Materials)  -1.1% 1d  +6.0% 1w  vs parent +7.2%
@@ -239,8 +242,8 @@ COLD (1w):
 - **Materials** -0.7% 1d -1.1% 1w · GDX, GDXJ, XLB
 - **Real Estate** -0.3% 1d -1.1% 1w · VNQ, SCHH, XLRE
 - **Technology** +1.1% 1d +0.9% 1w · VGT, XLK, SMH
-- **Utilities** +0.1% 1d +0.9% 1w · XLU, VPU, FUTY
-- **Cannabis Based Businesses** +1.9% 1d +0.8% 1w · MSOS, MJ, CNBS
+- **Utilities** +0.2% 1d +0.9% 1w · XLU, VPU, FUTY
+- **Cannabis Based Businesses** +2.0% 1d +0.8% 1w · MSOS, MJ, CNBS
 - **Financials** -0.8% 1d +0.5% 1w · XLF, VFH, KBWB
 - **Metaverse and Web3** +0.2% 1d +0.5% 1w · METV, FMET, GAMR
 - **Economic Environment Themed** -0.2% 1d +0.5% 1w · THRO, SAMT, MSSS
@@ -252,31 +255,31 @@ COLD (1w):
 - **Natural Resources** -0.5% 1d +0.3% 1w · GUNR, GNR, PHO
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 34 min **CL** Irans oil blockade leverage weakens as U.S. keeps Gulf crude flowing (Investing.com)
-- 1 hour **NVDA,TSM** Japan, U.S. advance $550 billion investment pact with AI, chips in focus (Investing.com)
-- Sep-04 **SPCX,HWM** Howmets SpaceX threat looks more like a buying opportunity: Bernstein (Investing.com)
-- Sep-04 **LCO** U.S. shields 35% stake in Venezuela oil venture from dilution, Reuters reports (Investing.com)
-- Sep-04 **AMD,NOW,NVDA,CSCO** Thinking Machines Lab Seeks $40B Valuation as Nvidia Extends Its Capital Allocator Role Into Model-Space (Forkast News)
-- Sep-04 **HOOD** Robinhood Chain Brings Arbitrum Token Back from the Dead. ARB is Up 90% (BeInCrypto)
-- Sep-04 **ADBE,WDAY,MSFT** AI hiring boom could turn into a surprise tailwind for software: Bernstein (Investing.com)
-- Sep-04 **MMI** Marcus & Millichap's IPA Capital Markets Arranges $75.1 Million Recapitalization for The Monroe Hotel in Miami Beach's Faena District (Business Wire)
-- Sep-04 **ELF** Our e.l.f. Beauty Stock Pick Had an Ugly Year. Better Days Lie Ahead. (Barrons.com)
-- Sep-04 **BKR** Basin rig count up one as prices surge (Odessa American, Texas)
-- Sep-04 **SNDK** Review & Preview: A Strong Jobs Report Has Investors Bracing for a Rate Hike (Barrons.com)
-- Sep-04 **SNDK,BE,HUBS,ILMN** BE, P, ILMN Join S&P 500; LNG Misses Out  Bloom Energy Stock Gains While Cheniere Energy Slips (Stocktwits)
-- Sep-04 **AMZN** Barnes & Noble tops 720 stores in major revival (USA TODAY)
-- Sep-04 **ADBE,TSLA,AAPL** Self-Driving's Next Task: Potholes (Barrons.com)
-- Sep-04 **SNDK,AXTI,BE,TTD** Bloom Energy, Illumina, and Everpure Set to Join S&P 500; Others to Join S&P 100, S&P MidCap 400, and S&P SmallCap 600 (PR Newswire)
-- Sep-04 **RPRX** Royalty Pharma announces update on Novartis' Phase 3 topline results for pelacarsen (GlobeNewswire)
-- Sep-04 **AAOI,VRT,INOD** 3 AI-Related Stocks Worth a Closer Look After Pullbacks (Zacks)
-- Sep-04 **CPB** The Campbell's Co (CPB) (Q4 2026) Earnings Call Highlights: Strategic Pivot Amid Inflation and ... (GuruFocus.com)
-- Sep-04 **GNK,IMTX,ALLT,TBCH,AUPH** Immatics and 4 More Stocks See Action From Activist Investors (Barrons.com)
-- Sep-04 **IONS,AMGN,NVS** NVS, IONS, AMGN Stocks Drop After-Hours  Whats Driving The Selloff? (Stocktwits)
-- Sep-04 **MS,GS** Anthropic Weighs Morgan Stanley And Goldman Sachs For Key Roles In $2 Trillion IPO, Says Report (Stocktwits)
-- Sep-04 **SYK** Schedule update: Stryker to participate in the 2026 Wells Fargo Healthcare Conference (GlobeNewswire)
-- Sep-04 **GOOGL,META,NVDA,AVGO** Broadcom (AVGO) Stock Is Down After Q3 Earnings: Is It Too Soon to Buy the Dip? (Zacks)
-- Sep-04 **TSLA,NFLX,NVDA,DIA,SPY** S&P 500, Dow End Lower As Blowout Jobs Report Fans Rate Hike Fears, While Chipmaker Strength Aids Nasdaq TSLA, NFLX, BE, NVDA In Focus (Stocktwits)
-- Sep-04 **BE,ILMN,P** Bloom Energy and These 2 Stocks Are Joining the S&P 500 (Barrons.com)
+- 20 min **BIRK** BIRK Stock Rises Overnight: Michael Burry Says Hes Been A 'Proud Birkie Since '87'  And Now Owns 5.2% Of Birkenstock (Stocktwits)
+- 24 min **XPEV** XPEV Jumps In Hong Kong: Xpeng Flips The Switch On Humanoid Robot Mass Production  And Says Margins Could Beat EVs (Stocktwits)
+- 28 min **BBNX** Beta Bionics, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - BBNX (PR Newswire)
+- 49 min **NVDA** NVDA Rises Overnight After Strong Week: CEO Jensen Huang Pumps Nvidia Chips As Highly Rentable Money-Minting Assets (Stocktwits)
+- 57 min **HOOD** HOOD Stock Gains Overnight: Retail Gets Bullish As Robinhood Lands First IPO Underwriting Gig (Stocktwits)
+- 58 min **AMZN,META** Local Data Center Fights Are Reshaping the Midterms-Here's How (Barrons.com)
+- 1 hour **UBS** UBS Names Three Places to Put Money as Fed Rate Hike Odds Reach 60% (BeInCrypto)
+- 1 hour **NVDA** Nvidia reportedly shifts Rubin Ultra toward 8-high HBM as memory costs rise (DigiTimes)
+- 1 hour **GORO** Goldgroup Reports Strong First Results from 26,000 Metre San Francisco Drill Program (Newsfile Corp.)
+- 1 hour **QCOM** Intel CPU prices reportedly rising 10% again as Qualcomm and MediaTek target IPC and IoT gaps (DigiTimes)
+- 1 hour **ELF** Escape "Unglammy Valley" with e.l.f. Cosmetic's Soft Glam Satin Foundation (Business Wire)
+- Sep-07 **AGRO** Gold and Bitcoin Are Hedges, But Why Is a Stablecoin Company Buying Farmland? (BeInCrypto)
+- Sep-07 **PERF** QWEEN Launches Hyper-Realistic 3D Jewellery Virtual Try-On for Indian Shoppers with Perfect Corp. (Business Wire)
+- Sep-07 **DELL,VOD,ZETA** Why Did DELL, VOD, ZETA Stocks Surge To 52-Week Highs Last Week? (Stocktwits)
+- Sep-07 **ORCL** ORCL Stock Rallies Into Earnings Week: OpenAI GPT-6 Astra Buzz, Morgan Stanleys Big Target Give Bulls A Boost (Stocktwits)
+- Sep-07 **LULU,TFC** LULU Stock Is Down Over 50% YTD As Heidi ONeill Takes Over: What Wall Street Wants Fixed First (Stocktwits)
+- Sep-07 **XPEV** IRON, the World's First Advanced General-Purpose Humanoid Robot, Walks off the Production Lines as XPENG's Humanoid Robot Manufacturing Facility Is Officially Commissioned (PR Newswire)
+- Sep-07 **LMND** Lemonade CFO to Participate in Upcoming Investor Conferences (PR Newswire)
+- Sep-07 **INTC,MU,ORCL** Dow, S&P 500 Futures Decline Amid Rising Oil Prices As Iran War Escalates: MU, ORCL, INTC, BE Stocks In Focus (Stocktwits)
+- Sep-07 **KEP,SKHY** Samsung, SK Hynix Lead Kospi Higher as Wall Street Faces Tough Opening After Labor Day (BeInCrypto)
+- Sep-07 **MNY** MoneyHero's Moneymax Partners with EastWest to Expand Personal Loan Access in the Philippines (GlobeNewswire)
+- Sep-07 **ANET,CL,DELL,MU,NKE** Why SNDK, DELL, PANW Stocks Are Rallying Overnight Ahead Of Fresh Trading Week (Stocktwits)
+- Sep-07 **MRK,MRNA,TEM** The Cure for Cancer is Becoming an Investable Opportunity: Analyst Sees $600 Million for Tempus AI (BeInCrypto)
+- Sep-07 **SGML** SGML Stock Tumbles Overnight: Sigma Lithium Says Mining Operations Continue Despite Brazilian Court Ruling (Stocktwits)
+- Sep-07 **BE** BE Stock Soars Overnight On S&P 500 Inclusion: Analyst Sees Upside Of Over 28% (Stocktwits)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
