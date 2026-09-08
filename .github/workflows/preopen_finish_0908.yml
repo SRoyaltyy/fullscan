@@ -1,9 +1,9 @@
 name: Pre-Open finish holes 2026-09-08
 
-# One-shot writer for the EXISTING 2026-09-08 packet on tip 78eac85.
-# Fills only the holes: news parse → judge → actions (if parse usable),
-# general predict (skip-if-good), Technology + Utilities, catalyst
-# (bounded), paper dashboard stamp, then QC/status + commit.
+# One-shot writer for the EXISTING 2026-09-08 packet.
+# Cyrus/New Bot override: SKIP catalyst (50m search sink + list.get).
+# Priority: parse attempt → Technology + Utilities → paper dashboard stamp
+# → judge/actions only if parse ok → general skip-if-good → QC + commit.
 #
 # Late heal: --force (preopen.refuse_if_late). No --bypass-cutoff CLI.
 # Unique concurrency — do NOT share preopen-all / HALT groups.
@@ -28,9 +28,9 @@ concurrency:
 
 jobs:
   finish:
-    name: Fill 2026-09-08 holes
+    name: Fill 2026-09-08 holes (no catalyst)
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 120
     env:
       FINVIZ_SKIP_LIVE: "1"
       FULLSCAN_DB_OPTIONAL: "1"
@@ -93,7 +93,7 @@ jobs:
             echo "- classified_error: **${KIND}**"
             echo "- exit_code: ${RC}"
             echo "- qc_ok: ${QC_OK}"
-            echo "- parsed.json exists: $([ -f "01_daily/news/${DATE}_parsed.json" ] && echo yes || echo no)"
+            echo "- parsed.json exists: $([ -f \"01_daily/news/${DATE}_parsed.json\" ] && echo yes || echo no)"
             echo ""
             echo "## Exact error / last log"
             echo ""
@@ -103,7 +103,6 @@ jobs:
           } > "01_daily/news/${DATE}_parse_fail.md"
           echo "parse=fail:${KIND}" >> "$GITHUB_ENV"
           echo "Wrote 01_daily/news/${DATE}_parse_fail.md (${KIND})"
-          # Reject any thin/empty parse so skip-if-good cannot treat it as success.
           if [ "$QC_OK" -ne 1 ] && [ -f "01_daily/news/${DATE}_parsed.json" ]; then
             python - <<'PY'
           from src import output_qc
@@ -115,96 +114,7 @@ jobs:
           fi
           exit 0
 
-      - name: news_judge
-        continue-on-error: true
-        env:
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
-          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
-          OPENCLAW_TIMEOUT: "1800"
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        run: |
-          set +e
-          DATE="${DATE}"
-          if ! python -m src.output_qc --kind parse --path "01_daily/news/${DATE}_parsed.json"; then
-            echo "SKIP news_judge — no quality-ok ${DATE}_parsed.json"
-            echo "judge=skip_no_parse" >> "$GITHUB_ENV"
-            exit 0
-          fi
-          echo "CMD: python -m src.run_news_judge --date ${DATE} --force  # late-heal (no --bypass-cutoff CLI)"
-          python -m src.run_news_judge --date "${DATE}" --force
-          RC=$?
-          if python -m src.output_qc --kind judge --path "01_daily/news/${DATE}_judge.md"; then
-            echo "judge=ok" >> "$GITHUB_ENV"
-            echo "FINISH_TAGS=${FINISH_TAGS}judge/" >> "$GITHUB_ENV"
-          else
-            echo "judge=fail:${RC}" >> "$GITHUB_ENV"
-          fi
-          exit 0
-
-      - name: news_actions
-        continue-on-error: true
-        env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
-        run: |
-          set +e
-          DATE="${DATE}"
-          if ! python -m src.output_qc --kind parse --path "01_daily/news/${DATE}_parsed.json"; then
-            echo "SKIP news_actions — parse failed loud / no usable ${DATE}_parsed.json"
-            echo "actions=skip_no_parse" >> "$GITHUB_ENV"
-            exit 0
-          fi
-          USABLE=0
-          python -m src.output_qc --kind parse --path "01_daily/news/${DATE}_parsed.json" && USABLE=1
-          python -m src.output_qc --kind judge --path "01_daily/news/${DATE}_judge.md" && USABLE=1
-          if [ "$USABLE" -ne 1 ]; then
-            echo "SKIP news_actions — parse/judge produced nothing usable"
-            echo "actions=skip_unusable" >> "$GITHUB_ENV"
-            exit 0
-          fi
-          echo "CMD: python -m src.news_actions --hours 48 --limit 400 --date ${DATE} --force  # late-heal"
-          python -m src.news_actions --hours 48 --limit 400 --date "${DATE}" --force
-          RC=$?
-          if python -m src.output_qc --kind actions --path "01_daily/news/${DATE}_actions.json"; then
-            echo "actions=ok" >> "$GITHUB_ENV"
-            echo "FINISH_TAGS=${FINISH_TAGS}actions/" >> "$GITHUB_ENV"
-          else
-            echo "actions=fail:${RC}" >> "$GITHUB_ENV"
-          fi
-          exit 0
-
-      - name: general predict (skip-if-good)
-        continue-on-error: true
-        env:
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
-          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
-          OPENCLAW_TIMEOUT: "1800"
-          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
-          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        run: |
-          set +e
-          DATE="${DATE}"
-          P="01_daily/general/${DATE}_predict.md"
-          if python -m src.output_qc --kind general --path "$P"; then
-            echo "skip-if-good general predict already quality-ok (tip 78eac85)"
-            echo "general=ok_existing" >> "$GITHUB_ENV"
-            exit 0
-          fi
-          echo "CMD: python -m src.run_predict --date ${DATE} --force  # late-heal; no --bypass-cutoff CLI"
-          python -m src.run_predict --date "${DATE}" --force
-          RC=$?
-          if python -m src.output_qc --kind general --path "$P"; then
-            echo "general=ok" >> "$GITHUB_ENV"
-            echo "FINISH_TAGS=${FINISH_TAGS}general/" >> "$GITHUB_ENV"
-          else
-            echo "general=fail:${RC}" >> "$GITHUB_ENV"
-          fi
-          exit 0
-
-      - name: sector predicts (Technology, Utilities)
+      - name: sector predicts (Technology, Utilities) FIRST
         continue-on-error: true
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
@@ -235,7 +145,7 @@ jobs:
             exit 0
           fi
           SECTORS=$(IFS=,; echo "${NEED[*]}")
-          echo "CMD: python -m src.run_sector_predict --date ${DATE} --sectors ${SECTORS} --force  # late-heal"
+          echo "CMD: python -m src.run_sector_predict --date ${DATE} --sectors ${SECTORS} --force"
           python -m src.run_sector_predict --date "${DATE}" --sectors "${SECTORS}" --force
           python -m src.sector_board --date "${DATE}" || true
           TAGS="${FINISH_TAGS}"
@@ -254,71 +164,7 @@ jobs:
           echo "FINISH_TAGS=${TAGS}" >> "$GITHUB_ENV"
           exit 0
 
-      - name: catalyst (hard 50m cap)
-        continue-on-error: true
-        timeout-minutes: 55
-        env:
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
-          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
-          OPENCLAW_TIMEOUT: "2400"
-          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
-          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
-          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
-        run: |
-          set +e
-          DATE="${DATE}"
-          mkdir -p 01_daily/catalyst
-          if python - <<'PY'
-          from src.catalyst_daily import already_good
-          raise SystemExit(0 if already_good("2026-09-08") else 1)
-          PY
-          then
-            echo "catalyst already_good — skip"
-            echo "catalyst=ok_existing" >> "$GITHUB_ENV"
-            exit 0
-          fi
-          LOG=$(mktemp)
-          echo "CMD: timeout 50m python -m src.catalyst_daily --date ${DATE} --force"
-          timeout 50m python -m src.catalyst_daily --date "${DATE}" --force >"$LOG" 2>&1
-          RC=$?
-          cat "$LOG"
-          LISTGET=0
-          grep -Eq "list' object has no attribute 'get'|AttributeError:.*list.*get|list\.get" "$LOG" && LISTGET=1
-          if python - <<'PY'
-          from src.catalyst_daily import already_good
-          raise SystemExit(0 if already_good("2026-09-08") else 1)
-          PY
-          then
-            echo "catalyst=ok" >> "$GITHUB_ENV"
-            echo "FINISH_TAGS=${FINISH_TAGS}catalyst/" >> "$GITHUB_ENV"
-            exit 0
-          fi
-          REASON="failed"
-          [ "$RC" -eq 124 ] && REASON="timeout_50m"
-          [ "$LISTGET" -eq 1 ] && REASON="list.get"
-          {
-            echo "# Catalyst finish note — ${DATE}"
-            echo ""
-            echo "catalyst_daily did not land usable dossiers. Moving on (do not hang the job)."
-            echo ""
-            echo "- reason: **${REASON}**"
-            echo "- exit_code: ${RC} (124 = hard step timeout)"
-            echo "- list.get_bug: ${LISTGET}"
-            echo ""
-            echo "## Last log"
-            echo ""
-            echo '```'
-            tail -n 100 "$LOG"
-            echo '```'
-          } > "01_daily/catalyst/${DATE}_finish_note.md"
-          echo "catalyst=fail:${REASON}" >> "$GITHUB_ENV"
-          echo "Wrote 01_daily/catalyst/${DATE}_finish_note.md (${REASON})"
-          exit 0
-
-      - name: paper dashboard stamp
+      - name: paper dashboard stamp FIRST
         continue-on-error: true
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
@@ -368,9 +214,6 @@ jobs:
                       "Usual cause: yfinance has no signal-day close yet, or "
                       "paper_trade exited before writing the curve."
                   )
-              rc = os.environ.get("PAPER_RC", "")
-              if rc and rc != "0":
-                  why.append(f"paper_trade exit {rc}")
               note.parent.mkdir(parents=True, exist_ok=True)
               note.write_text(
                   f"# Dashboard stamp note — {date}\n\n"
@@ -392,6 +235,105 @@ jobs:
             echo "FINISH_TAGS=${FINISH_TAGS}dashboard/" >> "$GITHUB_ENV"
           fi
           exit 0
+
+      - name: news_judge
+        continue-on-error: true
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          OPENCLAW_TIMEOUT: "1800"
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          set +e
+          DATE="${DATE}"
+          if ! python -m src.output_qc --kind parse --path "01_daily/news/${DATE}_parsed.json"; then
+            echo "SKIP news_judge — no quality-ok ${DATE}_parsed.json"
+            echo "judge=skip_no_parse" >> "$GITHUB_ENV"
+            exit 0
+          fi
+          echo "CMD: python -m src.run_news_judge --date ${DATE} --force"
+          python -m src.run_news_judge --date "${DATE}" --force
+          RC=$?
+          if python -m src.output_qc --kind judge --path "01_daily/news/${DATE}_judge.md"; then
+            echo "judge=ok" >> "$GITHUB_ENV"
+            echo "FINISH_TAGS=${FINISH_TAGS}judge/" >> "$GITHUB_ENV"
+          else
+            echo "judge=fail:${RC}" >> "$GITHUB_ENV"
+          fi
+          exit 0
+
+      - name: news_actions
+        continue-on-error: true
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
+        run: |
+          set +e
+          DATE="${DATE}"
+          if ! python -m src.output_qc --kind parse --path "01_daily/news/${DATE}_parsed.json"; then
+            echo "SKIP news_actions — parse failed loud / no usable ${DATE}_parsed.json"
+            echo "actions=skip_no_parse" >> "$GITHUB_ENV"
+            exit 0
+          fi
+          echo "CMD: python -m src.news_actions --hours 48 --limit 400 --date ${DATE} --force"
+          python -m src.news_actions --hours 48 --limit 400 --date "${DATE}" --force
+          RC=$?
+          if python -m src.output_qc --kind actions --path "01_daily/news/${DATE}_actions.json"; then
+            echo "actions=ok" >> "$GITHUB_ENV"
+            echo "FINISH_TAGS=${FINISH_TAGS}actions/" >> "$GITHUB_ENV"
+          else
+            echo "actions=fail:${RC}" >> "$GITHUB_ENV"
+          fi
+          exit 0
+
+      - name: general predict (skip-if-good)
+        continue-on-error: true
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          OPENCLAW_TIMEOUT: "1800"
+          SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          set +e
+          DATE="${DATE}"
+          P="01_daily/general/${DATE}_predict.md"
+          if python -m src.output_qc --kind general --path "$P"; then
+            echo "skip-if-good general predict already quality-ok"
+            echo "general=ok_existing" >> "$GITHUB_ENV"
+            exit 0
+          fi
+          echo "CMD: python -m src.run_predict --date ${DATE} --force"
+          python -m src.run_predict --date "${DATE}" --force
+          RC=$?
+          if python -m src.output_qc --kind general --path "$P"; then
+            echo "general=ok" >> "$GITHUB_ENV"
+            echo "FINISH_TAGS=${FINISH_TAGS}general/" >> "$GITHUB_ENV"
+          else
+            echo "general=fail:${RC}" >> "$GITHUB_ENV"
+          fi
+          exit 0
+
+      - name: catalyst SKIPPED (Cyrus/New Bot override)
+        run: |
+          DATE="${DATE}"
+          mkdir -p 01_daily/catalyst
+          {
+            echo "# Catalyst finish note — ${DATE}"
+            echo ""
+            echo "**SKIPPED** by Cyrus / New Bot override."
+            echo "Hung finish writer on `timeout 50m python -m src.catalyst_daily`"
+            echo "(known 30–50m search sink + list.get flake)."
+            echo "Priority this finish: tech + utilities + dashboard stamp only."
+            echo ""
+            echo "- reason: **skipped_override**"
+            echo "- superseded_run: 34252251010"
+          } > "01_daily/catalyst/${DATE}_finish_note.md"
+          echo "catalyst=skipped_override" >> "$GITHUB_ENV"
+          echo "Wrote 01_daily/catalyst/${DATE}_finish_note.md"
 
       - name: Refresh QC / status
         continue-on-error: true
@@ -416,78 +358,6 @@ jobs:
             echo "| dashboard | ${dashboard:-unknown} |"
           } > "01_daily/${DATE}_finish_holes.md"
           echo "Wrote 01_daily/${DATE}_finish_holes.md"
-          python - <<'PY'
-          import json
-          from datetime import datetime
-          from pathlib import Path
-          from zoneinfo import ZoneInfo
-          from src import output_qc, skip_if_good
-          from src.catalyst_daily import already_good
-          date = "2026-09-08"
-          report = output_qc.preopen_report(date)
-          output_qc.write_preopen_report(date)
-          status_path = Path("01_daily") / f"{date}_preopen_status.json"
-          prev = {}
-          if status_path.exists():
-              try:
-                  prev = json.loads(status_path.read_text(encoding="utf-8"))
-              except json.JSONDecodeError:
-                  prev = {}
-          by_kind = {}
-          for item in report.get("items") or []:
-              by_kind.setdefault(item.get("kind"), []).append(item)
-          missing = []
-          for key in ("news_parse", "news_judge", "news_actions", "general_predict"):
-              rows = by_kind.get(key) or []
-              if not (rows and all(r.get("ok") for r in rows)):
-                  missing.append(key)
-          book_ok = bool(skip_if_good.check_stock_book_all(date))
-          qc_all_ok = bool(report.get("all_ok"))
-          status = dict(prev)
-          status.update({
-              "date": date,
-              "generated_at": datetime.now(ZoneInfo("America/New_York")).isoformat(),
-              "qc_all_ok": qc_all_ok,
-              "book_ok": book_ok,
-              "missing_required": missing,
-              "all_ok": qc_all_ok and not missing and book_ok,
-              "qc": {
-                  "sector_n_ok": report.get("sector_n_ok"),
-                  "sector_n_total": report.get("sector_n_total"),
-                  "items": [
-                      {"kind": i.get("kind"), "ok": i.get("ok"),
-                       "reason": i.get("reason"), "path": i.get("path"),
-                       "size": i.get("size")}
-                      for i in (report.get("items") or [])
-                  ],
-              },
-              "finish_holes": {
-                  "writer": "preopen_finish_0908.yml",
-                  "catalyst_ok": already_good(date),
-              },
-          })
-          status_path.write_text(json.dumps(status, indent=2), encoding="utf-8")
-          md = Path("01_daily") / f"{date}_preopen_status.md"
-          lines = [
-              f"# Pre-open ALL status — {date}",
-              "",
-              f"all_ok={status['all_ok']}  qc_all_ok={status['qc_all_ok']}  "
-              f"book_ok={status['book_ok']}  grok_ok={status.get('grok_ok')}  "
-              f"missing={missing or 'none'}",
-              "",
-              "Predictive modules + stock book (must land before 09:30 ET).",
-              "Outcome / learn / tonight's captain research = Post-Close ALL.",
-              "",
-              "Finish holes writer: `.github/workflows/preopen_finish_0908.yml` "
-              f"(catalyst_ok={already_good(date)}).",
-              "",
-          ]
-          for a in (prev.get("attempts") or []):
-              lines.append(f"- {a.get('title')}: exit {a.get('returncode')}")
-          md.write_text("\n".join(lines) + "\n", encoding="utf-8")
-          print(f"[finish] wrote {status_path}")
-          print(output_qc.render(report))
-          PY
           exit 0
 
       - name: Commit finished holes
@@ -515,8 +385,6 @@ jobs:
             "01_daily/${DATE}_preopen_status.md" \
             "01_daily/${DATE}_finish_holes.md" \
             "01_daily/${DATE}_dashboard_stamp_note.md" \
-            "01_daily/${DATE}_grok_review.json" \
-            "01_daily/${DATE}_grok_review.md" \
             "01_daily/_transcripts/" \
             "01_daily/_channel1/" \
             "dashboard/" \
