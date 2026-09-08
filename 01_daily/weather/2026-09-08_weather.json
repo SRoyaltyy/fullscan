@@ -1,6 +1,6 @@
 {
  "date": "2026-09-08",
- "generated_at": "2026-09-08T08:29:39.687801-04:00",
+ "generated_at": "2026-09-08T09:42:49.434179-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -20,17 +20,17 @@
   "dgs10_current": 4.77,
   "dollar": "soft",
   "dollar_source": "dxy",
-  "dxy_pct_1d": -0.19,
-  "vix_ratio": 1.037,
-  "vix_spot": 15.67,
-  "vix_delta_1d": 0.37,
+  "dxy_pct_1d": -0.33,
+  "vix_ratio": 1.015,
+  "vix_spot": 15.32,
+  "vix_delta_1d": 0.02,
   "vix_ratio_source": "vix/ma20",
   "vix": "calm",
-  "oil_pct_1d": 2.59,
+  "oil_pct_1d": 1.71,
   "oil": "rising",
   "fear_greed": 58.2,
   "fear_greed_label": "Greed",
-  "regime_corr": -0.968,
+  "regime_corr": -0.858,
   "sectors": {
    "Basic Materials": {
     "score": -0.6,
@@ -112,8 +112,8 @@
    "Technology": -0.46,
    "Utilities": 0.56
   },
-  "events_bull": 0,
-  "events_bear": 0,
+  "events_bull": 4,
+  "events_bear": 6,
   "china_event_dir": null
  },
  "stances": {
@@ -437,7 +437,6 @@
  },
  "data_gaps": [
   "general predict run",
-  "general predict factor scoreboard",
-  "event scanner output"
+  "general predict factor scoreboard"
  ]
 }
