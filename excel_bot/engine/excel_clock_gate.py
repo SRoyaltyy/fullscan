@@ -7,6 +7,9 @@ Same-row OPEN fills (timing-proven): A B C G J K L M O IR IS IT
 Same-row OPEN numbers/text: the 44 value_mine_open cols (never same-row H/I)
 Lags: any letter from rows above is fair
 OUT same-row: M/B/G/K/O numbers, D/E/F/H/I, L/N/AA values, core_score
+Beyond-J: DF/DG/DH/BB and BQ/BU are close same-row — lag t−1+ only.
+Same-row DF/BB/BQ at 9:30 is a leak (abort). Open-44 tally subs:
+AH, JB, JC, FQ, FR, ER, EP, EN.
 """
 from __future__ import annotations
 
@@ -32,6 +35,12 @@ FILL_OPEN = ("A", "B", "C", "G", "J", "K", "L", "M", "O", "IR", "IS", "IT")
 VALUE_OUT_SAME_ROW = (
     "B", "G", "K", "M", "O", "L", "D", "E", "F", "H", "I", "N", "AA",
 )
+# Beyond-J cut: candles + BQ/BU tallies are close same-row. Lag t−1+ only.
+LAG_ONLY_CLOSE = ("DF", "DG", "DH", "BB", "BQ", "BU")
+# Same-row at 9:30 is a leak — abort that path (do not substitute).
+SAME_ROW_LEAK_ABORT = ("DF", "BB", "BQ")
+# Open same-row substitutes already in the 44 (prior-print tallies).
+OPEN_44_TALLY_SUBS = ("AH", "JB", "JC", "FQ", "FR", "ER", "EP", "EN")
 LANDMINE_VALUE = VALUE_OUT_SAME_ROW
 CORE_SCORE_OUT = "core_score"
 # Date serials — in the 44 as open values, not useful as thresholds.
@@ -71,6 +80,17 @@ def assert_excel_clock_gate(clocks=None):
     for col in ("D", "E", "F", "H", "I"):
         if by[col]["value_mine"] != "close" or by[col]["fill_mine"] != "close":
             raise ValueError(f"{col} same-row must stay close")
+    for col in LAG_ONLY_CLOSE:
+        rec = by.get(col)
+        if rec is None:
+            continue
+        if rec.get("value_mine") == "open":
+            raise ValueError(f"{col} must stay value-close same-row (lag only)")
+    for col in OPEN_44_TALLY_SUBS:
+        if col not in VALUE_OPEN_44:
+            raise ValueError(f"open-44 tally sub {col} missing from locked 44")
+        if by[col]["value_mine"] != "open":
+            raise ValueError(f"{col} is the open-44 prior-print sub — must stay open")
     if clocks.get("core_score_entry") not in (None, "close"):
         # classify_clocks stores this at top level when present
         if clocks.get("core_score_entry") == "open":
@@ -93,6 +113,13 @@ def assert_feature_legal(kind, col, lag):
     """Refuse a close-knowable same-row atom. Lags of any letter are fair."""
     if col == CORE_SCORE_OUT or (isinstance(col, str) and "core_score" in col):
         raise ValueError("core_score is close-entry only")
+    if col in SAME_ROW_LEAK_ABORT and (not lag or lag < 1):
+        raise ValueError(
+            f"LEAK abort: same-row {col} at 9:30 is close-knowable "
+            f"(DF/BB/BQ). Use lag t−1+ only."
+        )
+    if col in LAG_ONLY_CLOSE and (not lag or lag < 1):
+        raise ValueError(f"same-row {col} is close — open-legal only as lag t−1+")
     if lag and lag >= 1:
         return
     if kind == "fill":
@@ -119,5 +146,8 @@ def gate_payload():
         "core_score": "close",
         "m_number": "close",
         "lags": "any letter from rows above",
+        "lag_only_close": list(LAG_ONLY_CLOSE),
+        "same_row_leak_abort": list(SAME_ROW_LEAK_ABORT),
+        "open_44_tally_subs": list(OPEN_44_TALLY_SUBS),
         "live_untouched": "flatten_robust",
     }
