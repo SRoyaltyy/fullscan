@@ -1688,6 +1688,13 @@ def test_shade_gate_atoms_are_clock_legal():
     assert "flatten_robust" in src
     assert "from flatten" not in src
     assert "OPEN_SAME_ROW_LABELS" in src
+    md = (ROOT / "excel_bot" / "research" / "SHADE_GATE.md").read_text()
+    assert "OPEN_SAME_ROW_LABELS" in md
+    assert "CLOCK_MAP" in md
+    assert "value_mine_open" in md
+    assert "A B C G J K L M O IR IS IT" in md
+    assert "flatten_robust" in md
+    assert "Family verdict:" in md
 
 
 if __name__ == "__main__":

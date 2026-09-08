@@ -529,6 +529,25 @@ def render(rows, n_grids, n_days, verd, why, ghost=None, panel=None):
             f"**{r.get('keep')}** | {','.join(r.get('fail_reasons') or []) or '—'} | "
             f"`{r['def']}` |"
         )
+    near = [r for r in h1 if r["def"] != PARENT
+            and (r.get("holdout") or {}).get("avg_net", -1) > 0
+            and (r.get("vs_book_pp") or -9) >= 0.20
+            and (r.get("vs_parent_pp") or -9) >= 0.20]
+    if near:
+        L += [
+            "",
+            "### Near-miss (green holdout, beats book and parent by ≥20 bp, not KEEP)",
+            "",
+        ]
+        for r in near:
+            h = r.get("holdout") or {}
+            L.append(
+                f"- `{r['def']}` holdout {_pct(h)}, vs book "
+                f"{r.get('vs_book_pp'):+.2f} pp, vs parent "
+                f"{r.get('vs_parent_pp'):+.2f} pp. Killed by "
+                f"{','.join(r.get('fail_reasons') or []) or '—'}. "
+                "Not a card."
+            )
     L += [
         "",
         "### What this does not change",
@@ -736,9 +755,12 @@ def main():
                     payload.get("n_days") or 0, verd, why, ghost, panel)
         open(OUT_MD, "w").write(md)
         json.dump(payload, open(OUT_JSON, "w"), indent=2)
-        open(SB_MD, "w").write(splice_scoreboard(
-            md, verd, payload["n_keep_h1"], payload["n_kill_h1"], ghost))
+        sb = splice_scoreboard(
+            md, verd, payload["n_keep_h1"], payload["n_kill_h1"], ghost)
+        open(SB_MD, "w").write(sb)
         splice_shade_open(verd, payload["n_keep_h1"], payload["n_kill_h1"])
+        open(os.path.join(RESEARCH, "SHADE_GATE_CARDS.md"), "w").write(
+            write_cards(rows, verd, ghost, panel))
         print(f"render-only VERDICT {verd}", OUT_MD)
         return
     split = json.load(open(SPLIT_PATH))
@@ -795,8 +817,9 @@ def main():
         "clock_generated": clocks.get("generated"),
     }
     json.dump(payload, open(OUT_JSON, "w"), indent=2)
-    open(SB_MD, "w").write(splice_scoreboard(
-        md, verd, payload["n_keep_h1"], payload["n_kill_h1"], ghost))
+    sb = splice_scoreboard(
+        md, verd, payload["n_keep_h1"], payload["n_kill_h1"], ghost)
+    open(SB_MD, "w").write(sb)
     splice_shade_open(verd, payload["n_keep_h1"], payload["n_kill_h1"])
     cards = write_cards(rows, verd, ghost, panel)
     # Keep SHADE_KEEP_CARDS as the M-mid DEMOTE file; write pairs beside it.

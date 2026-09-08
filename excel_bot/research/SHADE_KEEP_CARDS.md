@@ -67,7 +67,7 @@ Not re-painted on this M-only expand (O fills absent). Prior ghost FAIL on the 1
 - Lags: any letter from rows above is fair
 - OUT: M’s number, B/G/K/M/O numbers, D/E/F/H/I same-row, `core_score`
 
-Mid-M `#95CA82` expand stays **open-fill only** under this gate. Pairs with the locked 44 / lags: `SHADE_GATE.md`.
+Mid-M `#95CA82` expand stays **open-fill only** under this gate. Pairs with the locked 44 / lags: **KEEP 0 · KILL 24 · family null** (`SHADE_GATE.md`). Near-miss `M fill ∧ J≤−1%` holdout +0.71% (n=14758, vs book +0.81 pp) — killed by month_split, not a card.
 
 ## Open-only gate
 

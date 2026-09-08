@@ -16,7 +16,7 @@ The 4.4k / +10.6% KEEP was **H’s fill** (close-knowable `H≥5%`) mis-indexed 
 
 ### Excel clock gate (source of truth)
 
-Same-row open fills: **A B C G J K L M O IR IS IT**. Same-row numbers/text: the **44 `value_mine_open` cols** (never H/I). Lags of any letter are fair. OUT: M’s number, B/G/K/M/O numbers, D/E/F/H/I same-row, `core_score`. Docs: `OPEN_SAME_ROW_LABELS.md` + `CLOCK_MAP.md`. M `#95CA82` × 44/lag pairs: family pending — `SHADE_GATE.md`.
+Same-row open fills: **A B C G J K L M O IR IS IT**. Same-row numbers/text: the **44 `value_mine_open` cols** (never H/I). Lags of any letter are fair. OUT: M’s number, B/G/K/M/O numbers, D/E/F/H/I same-row, `core_score`. Docs: `OPEN_SAME_ROW_LABELS.md` + `CLOCK_MAP.md`. M `#95CA82` × 44/lag pairs: family **null** (KEEP 0 · KILL 24) — `SHADE_GATE.md`.
 
 ### Open-only gate (standing bar)
 

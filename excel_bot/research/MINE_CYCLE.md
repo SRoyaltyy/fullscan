@@ -153,4 +153,4 @@ H/I multi-horizon: KEEP 85 · KILL 1227 · THIN 0. Standing light+O re-scored. C
 
 ## Shade clock-gate pairs (M fill × open 44 / lags)
 
-Excel clock gate locked (`OPEN_SAME_ROW_LABELS` + `CLOCK_MAP`). Mid-M `#95CA82` stays open-fill only. Pair harness on the 5223-name expand: pending score. See `SHADE_GATE.md`. Live frozen.
+Excel clock gate locked (`OPEN_SAME_ROW_LABELS` + `CLOCK_MAP`). Mid-M `#95CA82` stays open-fill only. Pair mine on the 5223-name expand: KEEP 0 · KILL 24 · THIN 0. Near-miss `M fill ∧ J≤−1%` holdout +0.71% (month_split). See `SHADE_GATE.md`. Live frozen.
