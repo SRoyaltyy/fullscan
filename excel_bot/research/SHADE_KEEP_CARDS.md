@@ -94,3 +94,11 @@ Live `flatten_robust` stays frozen. No card under `strategies/`. Soft-regime maj
 ## Source
 
 `excel_bot/research/SHADE_OPEN.md` · `shade_panel_stats.json` · PR #150 · expand tip `35cbab9d`. `SHADE_GATE.md` if present. Research only. Live frozen.
+
+## 2d / 3d stacked I recut (follow-on)
+
+_Pending full Yahoo panel + `mine_shade_2d3d.py`._ Primary labels are HI_HORIZON `I_sum` 2d and 3d (compound daily I). Same-day H is baseline only. Same expand panel as #150/#151. Must beat any-green parent on the same letter. Live `flatten_robust` frozen.
+
+**Cyrus (visual):** Deep green/red look predictive because the loudest paints are same-row outcome color: Excel CF paints H>5% `#95CA82` and H>0 pale `#DCEDD5` (I>3% mint) after the close — that is H/I itself, not an open forecast; the one open-knowable mid-green (M `#95CA82` from yesterday's H × IY) is not that paint.
+
+See `SHADE_2D3D.md`.

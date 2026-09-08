@@ -24,9 +24,23 @@ from datetime import date, datetime, timedelta
 from multiprocessing import Pool
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from backtest import pick_anchors  # noqa: E402
 from fastfetch import fetch_daily_fast  # noqa: E402
 from stockhistory import serial  # noqa: E402
+
+STEP = 120  # same tiling as backtest.pick_anchors
+
+
+def pick_anchors(rows, earliest, latest):
+    """Anchor dates (trading days) so coverage tiles [earliest, latest]."""
+    tdays = [r["date"] for r in rows if earliest <= r["date"] <= latest]
+    if not tdays:
+        return []
+    anchors = [tdays[-1]]
+    i = len(tdays) - 1 - STEP
+    while i >= 0:
+        anchors.append(tdays[i])
+        i -= STEP
+    return sorted(anchors)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
