@@ -1597,6 +1597,15 @@ def test_shade_open_report_is_committed():
     assert payload["excel_cache_used"] is False
     assert payload["entry"] == "open"
     assert payload["cost_model"] == "futubull"
+    cards = (ROOT / "excel_bot" / "research" / "SHADE_KEEP_CARDS.md").read_text()
+    assert cards.index("Plain English") < cards.index("Card 1")
+    assert "flatten_robust" in cards
+    assert "not live" in cards
+    assert "strategies/" in cards
+    assert "GHOST PASS" in cards
+    assert "GHOST FAIL" in cards
+    assert "research_O_onset_red2green_1d_H" in cards
+    assert "**demoted**" in cards
     assert payload["family_verdict"] == "KEEP"
     assert "A" in payload["multi_shade_letters"]
     for r in payload.get("rows") or []:
