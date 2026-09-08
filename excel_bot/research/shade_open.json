@@ -61760,5 +61760,947 @@
     }
   ],
   "source": "rows_cache",
-  "n_days": 170
+  "n_days": 170,
+  "ghost": {
+    "family": "GHOST CONDITIONAL",
+    "why": "Standing M mid-green `#95CA82` / ge15 still beats the book and any-green M after drop-top-5 \u2014 that +10.6% is **not** a five-name ghost. Hex-onset is a hair over the 15% holdout top-5 cut (INHD is the fat name). O red\u2192green onset **fails**: INHD is ~20% of that holdout P&L and leftover no longer beats any-green O. Research KEEP on standing M mid. Do not wire. M mid **GHOST PASS** \u2014 holdout +10.57% (n=4423), vs book +10.66 pp, vs parent +7.86 pp. Holdout top-5 13.9% (INHD, JLHL, ZCMD, RTB, DLXY). Drop-5 leftover +9.51% (n=4235). M onset **GHOST CONDITIONAL** \u2014 holdout +10.34% (n=3731), vs book +10.43 pp, vs parent +7.63 pp. Holdout top-5 15.1% (INHD, JLHL, ZCMD, CPOP, JZXN). Drop-5 leftover +9.10% (n=3601). O onset **GHOST FAIL** \u2014 holdout +7.21% (n=2502), vs book +7.30 pp, vs parent +1.52 pp. Holdout top-5 25.6% (INHD, JLHL, SRXH, TDTH, ASTC). Drop-5 leftover +5.56% (n=2413).",
+    "m_mid": "PASS",
+    "m_onset": "CONDITIONAL",
+    "o_onset": "FAIL",
+    "live_untouched": "flatten_robust",
+    "recipes": [
+      {
+        "def": "M_ge15",
+        "plain": "morning cell M is mid-or-deep green (score \u2265 1.5) (known at 9:30)",
+        "ghost": "PASS",
+        "handful": false,
+        "reasons": [],
+        "checks": [
+          {
+            "code": "vs_book",
+            "slot": "PASS",
+            "text": "holdout +10.57% (n=4423) vs book -0.09% (+10.66 pp)"
+          },
+          {
+            "code": "vs_parent",
+            "slot": "PASS",
+            "text": "holdout vs parent +7.86 pp (parent +2.71%, n=32247)"
+          },
+          {
+            "code": "name_split",
+            "slot": "PASS",
+            "text": "name-split discovery +9.94% (n=6690) / holdout +10.57% (n=4423)"
+          },
+          {
+            "code": "top5_holdout",
+            "slot": "PASS",
+            "text": "holdout top-5 INHD, JLHL, ZCMD, RTB, DLXY = 13.9% of holdout P&L (top-1 8.0%, top-10 19.1%)",
+            "share": 0.13896276318025738,
+            "names": [
+              "INHD",
+              "JLHL",
+              "ZCMD",
+              "RTB",
+              "DLXY"
+            ],
+            "top1_share": 0.08023458440737255,
+            "top10_share": 0.19068862432982578
+          },
+          {
+            "code": "drop5",
+            "slot": "PASS",
+            "text": "drop top-5 leftover holdout +9.51% (n=4235) still beats book and parent; not a handful-of-names print"
+          },
+          {
+            "code": "drop1",
+            "slot": "PASS",
+            "text": "drop top-1 leftover +9.78% (n=4398)"
+          },
+          {
+            "code": "july_holdout",
+            "slot": "PASS",
+            "text": "July is 9.8% of holdout winning-month P&L",
+            "share": 0.0984167574359063
+          },
+          {
+            "code": "month_split",
+            "slot": "PASS",
+            "text": "no holdout month with n\u226540 is red"
+          },
+          {
+            "code": "day_lottery_holdout",
+            "slot": "PASS",
+            "text": "fattest holdout day 2026-06-08 is 8.0% of winning-day P&L",
+            "share": 0.07969500974627389,
+            "top_day": "2026-06-08"
+          },
+          {
+            "code": "q1_holdout",
+            "slot": "PASS",
+            "text": "Q1 holdout +9.71% (n=1510)"
+          },
+          {
+            "code": "spy_up",
+            "slot": "PASS",
+            "text": "holdout spy_up +11.16% (n=2506) vs book +0.43%"
+          },
+          {
+            "code": "spy_dn",
+            "slot": "PASS",
+            "text": "holdout spy_dn +9.95% (n=1352) vs book -0.61%"
+          },
+          {
+            "code": "time_early",
+            "slot": "PASS",
+            "text": "holdout early time-split +9.73% (n=2114, cut 2026-05-01)"
+          },
+          {
+            "code": "time_late",
+            "slot": "PASS",
+            "text": "holdout late time-split +11.34% (n=2309, cut 2026-05-01)"
+          }
+        ],
+        "holdout": {
+          "n": 4423,
+          "avg_net": 0.105718761786639
+        },
+        "discovery": {
+          "n": 6690,
+          "avg_net": 0.09937970821033479
+        },
+        "parent_holdout": {
+          "n": 32247,
+          "avg_net": 0.02713476915237992
+        },
+        "book_holdout": {
+          "n": 68832,
+          "avg_net": -0.0008686040904432742
+        },
+        "vs_book_pp": 10.658736587708226,
+        "vs_parent_pp": 7.858399263425908,
+        "top5_holdout_share": 0.13896276318025738,
+        "top1_holdout_share": 0.08023458440737255,
+        "top10_holdout_share": 0.19068862432982578,
+        "top5_tickers": [
+          "INHD",
+          "JLHL",
+          "ZCMD",
+          "RTB",
+          "DLXY"
+        ],
+        "top_names": [
+          {
+            "ticker": "INHD",
+            "n": 25,
+            "pnl": 37.51721695152549,
+            "avg": 1.5006886780610196,
+            "share": 0.08023458440737255
+          },
+          {
+            "ticker": "JLHL",
+            "n": 41,
+            "pnl": 10.547480068654536,
+            "avg": 0.25725561143059844,
+            "share": 0.022556915161030665
+          },
+          {
+            "ticker": "ZCMD",
+            "n": 42,
+            "pnl": 6.505450769346302,
+            "avg": 0.15489168498443576,
+            "share": 0.01391260283340124
+          },
+          {
+            "ticker": "RTB",
+            "n": 38,
+            "pnl": 5.418249804970063,
+            "avg": 0.14258552118342271,
+            "share": 0.011587507193798493
+          },
+          {
+            "ticker": "DLXY",
+            "n": 42,
+            "pnl": 4.989768279048281,
+            "avg": 0.1188040066440067,
+            "share": 0.010671153584654435
+          }
+        ],
+        "drop5_holdout": {
+          "n": 4235,
+          "avg_net": 0.09506869362662564
+        },
+        "drop1_holdout": {
+          "n": 4398,
+          "avg_net": 0.09778919200336035
+        },
+        "july_holdout_share": 0.0984167574359063,
+        "months_holdout": [
+          {
+            "month": "2026-01",
+            "n": 434,
+            "avg_net": 0.09548720505042939,
+            "pnl": 41.44144699188634
+          },
+          {
+            "month": "2026-02",
+            "n": 534,
+            "avg_net": 0.09611287500842004,
+            "pnl": 51.32427525449631
+          },
+          {
+            "month": "2026-03",
+            "n": 542,
+            "avg_net": 0.09933959298644958,
+            "pnl": 53.842059398655714
+          },
+          {
+            "month": "2026-04",
+            "n": 604,
+            "avg_net": 0.09780537792547513,
+            "pnl": 59.074448266986984
+          },
+          {
+            "month": "2026-05",
+            "n": 584,
+            "avg_net": 0.1056754565058316,
+            "pnl": 61.714466599405654
+          },
+          {
+            "month": "2026-06",
+            "n": 650,
+            "avg_net": 0.1508831293949044,
+            "pnl": 98.07403410668778
+          },
+          {
+            "month": "2026-07",
+            "n": 470,
+            "avg_net": 0.09791296485681099,
+            "pnl": 46.01909348270118
+          },
+          {
+            "month": "2026-08",
+            "n": 512,
+            "avg_net": 0.09323543906390369,
+            "pnl": 47.73654480071869
+          },
+          {
+            "month": "2026-09",
+            "n": 93,
+            "avg_net": 0.08997542452436141,
+            "pnl": 8.367714480765612
+          }
+        ],
+        "day_lottery_holdout": 0.07969500974627389,
+        "lottery_top_day": "2026-06-08",
+        "q1_holdout": {
+          "n": 1510,
+          "avg_net": 0.09709124612254194
+        },
+        "n_tickers_holdout": 328,
+        "n_tickers": 800,
+        "live_untouched": "flatten_robust"
+      },
+      {
+        "def": "M_hex_95CA82",
+        "plain": "morning cell M is hex #95CA82 (mid green) (known at 9:30)",
+        "ghost": "PASS",
+        "handful": false,
+        "reasons": [],
+        "checks": [
+          {
+            "code": "vs_book",
+            "slot": "PASS",
+            "text": "holdout +10.57% (n=4423) vs book -0.09% (+10.66 pp)"
+          },
+          {
+            "code": "vs_parent",
+            "slot": "PASS",
+            "text": "holdout vs parent +7.86 pp (parent +2.71%, n=32247)"
+          },
+          {
+            "code": "name_split",
+            "slot": "PASS",
+            "text": "name-split discovery +9.94% (n=6690) / holdout +10.57% (n=4423)"
+          },
+          {
+            "code": "top5_holdout",
+            "slot": "PASS",
+            "text": "holdout top-5 INHD, JLHL, ZCMD, RTB, DLXY = 13.9% of holdout P&L (top-1 8.0%, top-10 19.1%)",
+            "share": 0.13896276318025738,
+            "names": [
+              "INHD",
+              "JLHL",
+              "ZCMD",
+              "RTB",
+              "DLXY"
+            ],
+            "top1_share": 0.08023458440737255,
+            "top10_share": 0.19068862432982578
+          },
+          {
+            "code": "drop5",
+            "slot": "PASS",
+            "text": "drop top-5 leftover holdout +9.51% (n=4235) still beats book and parent; not a handful-of-names print"
+          },
+          {
+            "code": "drop1",
+            "slot": "PASS",
+            "text": "drop top-1 leftover +9.78% (n=4398)"
+          },
+          {
+            "code": "july_holdout",
+            "slot": "PASS",
+            "text": "July is 9.8% of holdout winning-month P&L",
+            "share": 0.0984167574359063
+          },
+          {
+            "code": "month_split",
+            "slot": "PASS",
+            "text": "no holdout month with n\u226540 is red"
+          },
+          {
+            "code": "day_lottery_holdout",
+            "slot": "PASS",
+            "text": "fattest holdout day 2026-06-08 is 8.0% of winning-day P&L",
+            "share": 0.07969500974627389,
+            "top_day": "2026-06-08"
+          },
+          {
+            "code": "q1_holdout",
+            "slot": "PASS",
+            "text": "Q1 holdout +9.71% (n=1510)"
+          },
+          {
+            "code": "spy_up",
+            "slot": "PASS",
+            "text": "holdout spy_up +11.16% (n=2506) vs book +0.43%"
+          },
+          {
+            "code": "spy_dn",
+            "slot": "PASS",
+            "text": "holdout spy_dn +9.95% (n=1352) vs book -0.61%"
+          },
+          {
+            "code": "time_early",
+            "slot": "PASS",
+            "text": "holdout early time-split +9.73% (n=2114, cut 2026-05-01)"
+          },
+          {
+            "code": "time_late",
+            "slot": "PASS",
+            "text": "holdout late time-split +11.34% (n=2309, cut 2026-05-01)"
+          }
+        ],
+        "holdout": {
+          "n": 4423,
+          "avg_net": 0.105718761786639
+        },
+        "discovery": {
+          "n": 6690,
+          "avg_net": 0.09937970821033479
+        },
+        "parent_holdout": {
+          "n": 32247,
+          "avg_net": 0.02713476915237992
+        },
+        "book_holdout": {
+          "n": 68832,
+          "avg_net": -0.0008686040904432742
+        },
+        "vs_book_pp": 10.658736587708226,
+        "vs_parent_pp": 7.858399263425908,
+        "top5_holdout_share": 0.13896276318025738,
+        "top1_holdout_share": 0.08023458440737255,
+        "top10_holdout_share": 0.19068862432982578,
+        "top5_tickers": [
+          "INHD",
+          "JLHL",
+          "ZCMD",
+          "RTB",
+          "DLXY"
+        ],
+        "top_names": [
+          {
+            "ticker": "INHD",
+            "n": 25,
+            "pnl": 37.51721695152549,
+            "avg": 1.5006886780610196,
+            "share": 0.08023458440737255
+          },
+          {
+            "ticker": "JLHL",
+            "n": 41,
+            "pnl": 10.547480068654536,
+            "avg": 0.25725561143059844,
+            "share": 0.022556915161030665
+          },
+          {
+            "ticker": "ZCMD",
+            "n": 42,
+            "pnl": 6.505450769346302,
+            "avg": 0.15489168498443576,
+            "share": 0.01391260283340124
+          },
+          {
+            "ticker": "RTB",
+            "n": 38,
+            "pnl": 5.418249804970063,
+            "avg": 0.14258552118342271,
+            "share": 0.011587507193798493
+          },
+          {
+            "ticker": "DLXY",
+            "n": 42,
+            "pnl": 4.989768279048281,
+            "avg": 0.1188040066440067,
+            "share": 0.010671153584654435
+          }
+        ],
+        "drop5_holdout": {
+          "n": 4235,
+          "avg_net": 0.09506869362662564
+        },
+        "drop1_holdout": {
+          "n": 4398,
+          "avg_net": 0.09778919200336035
+        },
+        "july_holdout_share": 0.0984167574359063,
+        "months_holdout": [
+          {
+            "month": "2026-01",
+            "n": 434,
+            "avg_net": 0.09548720505042939,
+            "pnl": 41.44144699188634
+          },
+          {
+            "month": "2026-02",
+            "n": 534,
+            "avg_net": 0.09611287500842004,
+            "pnl": 51.32427525449631
+          },
+          {
+            "month": "2026-03",
+            "n": 542,
+            "avg_net": 0.09933959298644958,
+            "pnl": 53.842059398655714
+          },
+          {
+            "month": "2026-04",
+            "n": 604,
+            "avg_net": 0.09780537792547513,
+            "pnl": 59.074448266986984
+          },
+          {
+            "month": "2026-05",
+            "n": 584,
+            "avg_net": 0.1056754565058316,
+            "pnl": 61.714466599405654
+          },
+          {
+            "month": "2026-06",
+            "n": 650,
+            "avg_net": 0.1508831293949044,
+            "pnl": 98.07403410668778
+          },
+          {
+            "month": "2026-07",
+            "n": 470,
+            "avg_net": 0.09791296485681099,
+            "pnl": 46.01909348270118
+          },
+          {
+            "month": "2026-08",
+            "n": 512,
+            "avg_net": 0.09323543906390369,
+            "pnl": 47.73654480071869
+          },
+          {
+            "month": "2026-09",
+            "n": 93,
+            "avg_net": 0.08997542452436141,
+            "pnl": 8.367714480765612
+          }
+        ],
+        "day_lottery_holdout": 0.07969500974627389,
+        "lottery_top_day": "2026-06-08",
+        "q1_holdout": {
+          "n": 1510,
+          "avg_net": 0.09709124612254194
+        },
+        "n_tickers_holdout": 328,
+        "n_tickers": 800,
+        "live_untouched": "flatten_robust"
+      },
+      {
+        "def": "M_onset_hex_95CA82",
+        "plain": "morning cell M flips onto hex #95CA82 (mid) today (known at 9:30)",
+        "ghost": "CONDITIONAL",
+        "handful": true,
+        "reasons": [
+          "top5_holdout",
+          "drop5_handful"
+        ],
+        "checks": [
+          {
+            "code": "vs_book",
+            "slot": "PASS",
+            "text": "holdout +10.34% (n=3731) vs book -0.09% (+10.43 pp)"
+          },
+          {
+            "code": "vs_parent",
+            "slot": "PASS",
+            "text": "holdout vs parent +7.63 pp (parent +2.71%, n=32247)"
+          },
+          {
+            "code": "name_split",
+            "slot": "PASS",
+            "text": "name-split discovery +9.49% (n=5601) / holdout +10.34% (n=3731)"
+          },
+          {
+            "code": "top5_holdout",
+            "slot": "CONDITIONAL",
+            "text": "holdout top-5 INHD, JLHL, ZCMD, CPOP, JZXN = 15.1% of holdout P&L (top-1 9.5%, top-10 19.7%)",
+            "share": 0.15061871403803023,
+            "names": [
+              "INHD",
+              "JLHL",
+              "ZCMD",
+              "CPOP",
+              "JZXN"
+            ],
+            "top1_share": 0.09460099493558806,
+            "top10_share": 0.19659777875512185
+          },
+          {
+            "code": "drop5_handful",
+            "slot": "CONDITIONAL",
+            "text": "drop top-5 leftover +9.10% (n=3601) \u2014 a handful still moves the mean a lot"
+          },
+          {
+            "code": "drop1",
+            "slot": "PASS",
+            "text": "drop top-1 leftover +9.42% (n=3711)"
+          },
+          {
+            "code": "july_holdout",
+            "slot": "PASS",
+            "text": "July is 10.6% of holdout winning-month P&L",
+            "share": 0.10644632856787384
+          },
+          {
+            "code": "month_split",
+            "slot": "PASS",
+            "text": "no holdout month with n\u226540 is red"
+          },
+          {
+            "code": "day_lottery_holdout",
+            "slot": "PASS",
+            "text": "fattest holdout day 2026-06-08 is 9.5% of winning-day P&L",
+            "share": 0.09537330854184503,
+            "top_day": "2026-06-08"
+          },
+          {
+            "code": "q1_holdout",
+            "slot": "PASS",
+            "text": "Q1 holdout +9.30% (n=1281)"
+          },
+          {
+            "code": "spy_up",
+            "slot": "PASS",
+            "text": "holdout spy_up +11.10% (n=2127) vs book +0.43%"
+          },
+          {
+            "code": "spy_dn",
+            "slot": "PASS",
+            "text": "holdout spy_dn +9.46% (n=1132) vs book -0.61%"
+          },
+          {
+            "code": "time_early",
+            "slot": "PASS",
+            "text": "holdout early time-split +9.29% (n=1787, cut 2026-05-01)"
+          },
+          {
+            "code": "time_late",
+            "slot": "PASS",
+            "text": "holdout late time-split +11.31% (n=1944, cut 2026-05-01)"
+          }
+        ],
+        "holdout": {
+          "n": 3731,
+          "avg_net": 0.10344502738292993
+        },
+        "discovery": {
+          "n": 5601,
+          "avg_net": 0.09492648405089009
+        },
+        "parent_holdout": {
+          "n": 32247,
+          "avg_net": 0.02713476915237992
+        },
+        "book_holdout": {
+          "n": 68832,
+          "avg_net": -0.0008686040904432742
+        },
+        "vs_book_pp": 10.43136314733732,
+        "vs_parent_pp": 7.631025823055001,
+        "top5_holdout_share": 0.15061871403803023,
+        "top1_holdout_share": 0.09460099493558806,
+        "top10_holdout_share": 0.19659777875512185,
+        "top5_tickers": [
+          "INHD",
+          "JLHL",
+          "ZCMD",
+          "CPOP",
+          "JZXN"
+        ],
+        "top_names": [
+          {
+            "ticker": "INHD",
+            "n": 20,
+            "pnl": 36.51157537064649,
+            "avg": 1.8255787685323246,
+            "share": 0.09460099493558806
+          },
+          {
+            "ticker": "JLHL",
+            "n": 28,
+            "pnl": 8.108662552605601,
+            "avg": 0.28959509116448573,
+            "share": 0.02100943433106794
+          },
+          {
+            "ticker": "ZCMD",
+            "n": 32,
+            "pnl": 5.312250911718072,
+            "avg": 0.16600784099118976,
+            "share": 0.013763969823116295
+          },
+          {
+            "ticker": "CPOP",
+            "n": 25,
+            "pnl": 4.177553577172705,
+            "avg": 0.16710214308690818,
+            "share": 0.010823984470278014
+          },
+          {
+            "ticker": "JZXN",
+            "n": 25,
+            "pnl": 4.021761947565754,
+            "avg": 0.16087047790263015,
+            "share": 0.010420330477979921
+          }
+        ],
+        "drop5_holdout": {
+          "n": 3601,
+          "avg_net": 0.09103626570563815
+        },
+        "drop1_holdout": {
+          "n": 3711,
+          "avg_net": 0.09416378921990437
+        },
+        "july_holdout_share": 0.10644632856787384,
+        "months_holdout": [
+          {
+            "month": "2026-01",
+            "n": 369,
+            "avg_net": 0.0933980439310252,
+            "pnl": 34.4638782105483
+          },
+          {
+            "month": "2026-02",
+            "n": 440,
+            "avg_net": 0.09152606504562873,
+            "pnl": 40.27146862007662
+          },
+          {
+            "month": "2026-03",
+            "n": 472,
+            "avg_net": 0.09400825862205818,
+            "pnl": 44.37189806961147
+          },
+          {
+            "month": "2026-04",
+            "n": 506,
+            "avg_net": 0.09273453107561144,
+            "pnl": 46.92367272425938
+          },
+          {
+            "month": "2026-05",
+            "n": 472,
+            "avg_net": 0.10299898587902397,
+            "pnl": 48.61552133489931
+          },
+          {
+            "month": "2026-06",
+            "n": 541,
+            "avg_net": 0.1564871373452742,
+            "pnl": 84.65954130379325
+          },
+          {
+            "month": "2026-07",
+            "n": 422,
+            "avg_net": 0.09735384390186831,
+            "pnl": 41.083322126588435
+          },
+          {
+            "month": "2026-08",
+            "n": 436,
+            "avg_net": 0.09091615885225947,
+            "pnl": 39.63944525958515
+          },
+          {
+            "month": "2026-09",
+            "n": 73,
+            "avg_net": 0.08115958241574775,
+            "pnl": 5.924649516349584
+          }
+        ],
+        "day_lottery_holdout": 0.09537330854184503,
+        "lottery_top_day": "2026-06-08",
+        "q1_holdout": {
+          "n": 1281,
+          "avg_net": 0.09297989453570367
+        },
+        "n_tickers_holdout": 328,
+        "n_tickers": 800,
+        "live_untouched": "flatten_robust"
+      },
+      {
+        "def": "O_onset_red2green",
+        "plain": "morning cell O flips from red yesterday to green today (known at 9:30)",
+        "ghost": "FAIL",
+        "handful": true,
+        "reasons": [
+          "top5_holdout",
+          "drop5_vs_parent",
+          "day_lottery_holdout"
+        ],
+        "checks": [
+          {
+            "code": "vs_book",
+            "slot": "PASS",
+            "text": "holdout +7.21% (n=2502) vs book -0.09% (+7.30 pp)"
+          },
+          {
+            "code": "vs_parent",
+            "slot": "PASS",
+            "text": "holdout vs parent +1.52 pp (parent +5.69%, n=9687)"
+          },
+          {
+            "code": "name_split",
+            "slot": "PASS",
+            "text": "name-split discovery +5.84% (n=3917) / holdout +7.21% (n=2502)"
+          },
+          {
+            "code": "top5_holdout",
+            "slot": "FAIL",
+            "text": "holdout top-5 INHD, JLHL, SRXH, TDTH, ASTC = 25.6% of holdout P&L (top-1 19.7%, top-10 30.7%)",
+            "share": 0.25627419873854895,
+            "names": [
+              "INHD",
+              "JLHL",
+              "SRXH",
+              "TDTH",
+              "ASTC"
+            ],
+            "top1_share": 0.19657435793885955,
+            "top10_share": 0.30666221378733627
+          },
+          {
+            "code": "drop5_vs_parent",
+            "slot": "CONDITIONAL",
+            "text": "drop top-5 leftover +5.56% beats book but not parent (+5.69%)"
+          },
+          {
+            "code": "drop1",
+            "slot": "PASS",
+            "text": "drop top-1 leftover +5.84% (n=2484)"
+          },
+          {
+            "code": "july_holdout",
+            "slot": "PASS",
+            "text": "July is 12.2% of holdout winning-month P&L",
+            "share": 0.1222786213759995
+          },
+          {
+            "code": "month_split",
+            "slot": "PASS",
+            "text": "no holdout month with n\u226540 is red"
+          },
+          {
+            "code": "day_lottery_holdout",
+            "slot": "CONDITIONAL",
+            "text": "fattest holdout day 2026-06-08 is 20.1% of winning-day P&L",
+            "share": 0.20099392474556213,
+            "top_day": "2026-06-08"
+          },
+          {
+            "code": "q1_holdout",
+            "slot": "PASS",
+            "text": "Q1 holdout +5.84% (n=879)"
+          },
+          {
+            "code": "spy_up",
+            "slot": "PASS",
+            "text": "holdout spy_up +7.85% (n=1587) vs book +0.43%"
+          },
+          {
+            "code": "spy_dn",
+            "slot": "PASS",
+            "text": "holdout spy_dn +6.53% (n=626) vs book -0.61%"
+          },
+          {
+            "code": "time_early",
+            "slot": "PASS",
+            "text": "holdout early time-split +5.75% (n=1184, cut 2026-05-01)"
+          },
+          {
+            "code": "time_late",
+            "slot": "PASS",
+            "text": "holdout late time-split +8.53% (n=1318, cut 2026-05-01)"
+          }
+        ],
+        "holdout": {
+          "n": 2502,
+          "avg_net": 0.07211705992798463
+        },
+        "discovery": {
+          "n": 3917,
+          "avg_net": 0.058360985612389935
+        },
+        "parent_holdout": {
+          "n": 9687,
+          "avg_net": 0.05693261676480679
+        },
+        "book_holdout": {
+          "n": 68832,
+          "avg_net": -0.0008686040904432742
+        },
+        "vs_book_pp": 7.29856640184279,
+        "vs_parent_pp": 1.5184443163177839,
+        "top5_holdout_share": 0.25627419873854895,
+        "top1_holdout_share": 0.19657435793885955,
+        "top10_holdout_share": 0.30666221378733627,
+        "top5_tickers": [
+          "INHD",
+          "JLHL",
+          "SRXH",
+          "TDTH",
+          "ASTC"
+        ],
+        "top_names": [
+          {
+            "ticker": "INHD",
+            "n": 18,
+            "pnl": 35.469264608958156,
+            "avg": 1.9705147004976753,
+            "share": 0.19657435793885955
+          },
+          {
+            "ticker": "JLHL",
+            "n": 20,
+            "pnl": 4.309538651143199,
+            "avg": 0.21547693255715994,
+            "share": 0.023883911964366393
+          },
+          {
+            "ticker": "SRXH",
+            "n": 20,
+            "pnl": 2.190191548678648,
+            "avg": 0.10950957743393239,
+            "share": 0.012138269631219958
+          },
+          {
+            "ticker": "TDTH",
+            "n": 14,
+            "pnl": 2.1363568601060834,
+            "avg": 0.15259691857900595,
+            "share": 0.011839912181251357
+          },
+          {
+            "ticker": "ASTC",
+            "n": 17,
+            "pnl": 2.1359661856712067,
+            "avg": 0.1256450697453651,
+            "share": 0.011837747022851664
+          }
+        ],
+        "drop5_holdout": {
+          "n": 2413,
+          "avg_net": 0.05561357898270214
+        },
+        "drop1_holdout": {
+          "n": 2484,
+          "avg_net": 0.058360555286175286
+        },
+        "july_holdout_share": 0.1222786213759995,
+        "months_holdout": [
+          {
+            "month": "2026-01",
+            "n": 196,
+            "avg_net": 0.049830088479116255,
+            "pnl": 9.766697341906788
+          },
+          {
+            "month": "2026-02",
+            "n": 307,
+            "avg_net": 0.06448508100211936,
+            "pnl": 19.79691986765064
+          },
+          {
+            "month": "2026-03",
+            "n": 376,
+            "avg_net": 0.057796567470983176,
+            "pnl": 21.731509369089668
+          },
+          {
+            "month": "2026-04",
+            "n": 305,
+            "avg_net": 0.054984690679384454,
+            "pnl": 16.770330657212238
+          },
+          {
+            "month": "2026-05",
+            "n": 283,
+            "avg_net": 0.05787443662327741,
+            "pnl": 16.378465564387508
+          },
+          {
+            "month": "2026-06",
+            "n": 358,
+            "avg_net": 0.1580217303244026,
+            "pnl": 56.57177945613617
+          },
+          {
+            "month": "2026-07",
+            "n": 346,
+            "avg_net": 0.06376755321832979,
+            "pnl": 22.063573413542116
+          },
+          {
+            "month": "2026-08",
+            "n": 284,
+            "avg_net": 0.05295212203699395,
+            "pnl": 15.038402658506273
+          },
+          {
+            "month": "2026-09",
+            "n": 47,
+            "avg_net": 0.04934480024225897,
+            "pnl": 2.3192056113861717
+          }
+        ],
+        "day_lottery_holdout": 0.20099392474556213,
+        "lottery_top_day": "2026-06-08",
+        "q1_holdout": {
+          "n": 879,
+          "avg_net": 0.05835623046490001
+        },
+        "n_tickers_holdout": 327,
+        "n_tickers": 795,
+        "live_untouched": "flatten_robust"
+      }
+    ]
+  },
+  "ghost_n_grids": 1000
 }

@@ -12,6 +12,10 @@ Labels are Excel **H** (intraday %) first — that is where the leftover same-da
 
 Shade hex is not the same as green-on. Mid-green M (#95CA82 / score ≥ 1.5) and its onset beat any-green M and the book after fees, both tapes, and the ghost bar (`M_ge15`, `M_hex_95CA82`). Soft-regime majority holds on those recipes. Not a live wire.
 
+**Ghost / name check: GHOST CONDITIONAL**
+
+Standing M mid-green `#95CA82` / ge15 still beats the book and any-green M after drop-top-5 — that +10.6% is **not** a five-name ghost. Hex-onset is a hair over the 15% holdout top-5 cut (INHD is the fat name). O red→green onset **fails**: INHD is ~20% of that holdout P&L and leftover no longer beats any-green O. Research KEEP on standing M mid. Do not wire. M mid **GHOST PASS** — holdout +10.57% (n=4423), vs book +10.66 pp, vs parent +7.86 pp. Holdout top-5 13.9% (INHD, JLHL, ZCMD, RTB, DLXY). Drop-5 leftover +9.51% (n=4235). M onset **GHOST CONDITIONAL** — holdout +10.34% (n=3731), vs book +10.43 pp, vs parent +7.63 pp. Holdout top-5 15.1% (INHD, JLHL, ZCMD, CPOP, JZXN). Drop-5 leftover +9.10% (n=3601). O onset **GHOST FAIL** — holdout +7.21% (n=2502), vs book +7.30 pp, vs parent +1.52 pp. Holdout top-5 25.6% (INHD, JLHL, SRXH, TDTH, ASTC). Drop-5 leftover +5.56% (n=2413).
+
 Dumps **1000**. Name-days scored **170**. Same-day H recipes: **KEEP 24** · **KILL 59** · **THIN 5**. Futubull 0.15% long is taken off the recipe and the buy-everyone book. Beat the book by ≥20 bp. Ghost bar: Q1 not red, five names ≤25% of P&L, July ≤40% of winning-month P&L, fattest day ≤25%. Both SPY tapes. Soft-regime heat is the open-knowable prior-5 mean of I (discovery terciles cold ≤ -0.45%, hot ≥ 0.44%).
 
 ### Inventory — which open fills have more than one green hex
@@ -36,6 +40,46 @@ CF rules in `model.json` (first matching rule wins). Dumps confirm which hexes a
 CF-multi letters: **A, G, K, L**. Dump-multi letters (the ones that actually fire two greens): **A, K, L, M**. A / K / L / M have two greens in the dumps. G has two greens in CF but **no green fires** on this rebuild (purple/blue instead). J's CF green `#95CA82` is also absent here. O is a single mint `#C6EFCE` — shade-of-O is identical to green-O. B is one mid green `#95CA82`. C is peach. IR / IS / IT have zero CF rules.
 
 Do **not** rehash prior-I heat-green. Soft-regime below is only a gate on shade KEEP candidates, not a new I-heat mine.
+
+
+### Ghost / name check (harder than soft-regime majority)
+
+Family KEEP already cleared the usual 25% top-5 / 40% July / 25% day-lottery bar. This cut asks whether a **handful of names** is the +10.6%. Holdout-only top-5 (PASS ≤15%, FAIL >25%), drop top-5 leftover still beating the book and any-green M, July holdout ≤25% of winning-month P&L, fattest holdout day ≤15%, Q1 **on holdout names** not red, both SPY tapes on holdout, name-split (discovery vs holdout tickers) and time-split (cut 2026-05-01). Futubull 0.15% is on every print. Live stays frozen.
+
+**Ghost verdict: GHOST CONDITIONAL**
+
+Standing M mid-green `#95CA82` / ge15 still beats the book and any-green M after drop-top-5 — that +10.6% is **not** a five-name ghost. Hex-onset is a hair over the 15% holdout top-5 cut (INHD is the fat name). O red→green onset **fails**: INHD is ~20% of that holdout P&L and leftover no longer beats any-green O. Research KEEP on standing M mid. Do not wire. M mid **GHOST PASS** — holdout +10.57% (n=4423), vs book +10.66 pp, vs parent +7.86 pp. Holdout top-5 13.9% (INHD, JLHL, ZCMD, RTB, DLXY). Drop-5 leftover +9.51% (n=4235). M onset **GHOST CONDITIONAL** — holdout +10.34% (n=3731), vs book +10.43 pp, vs parent +7.63 pp. Holdout top-5 15.1% (INHD, JLHL, ZCMD, CPOP, JZXN). Drop-5 leftover +9.10% (n=3601). O onset **GHOST FAIL** — holdout +7.21% (n=2502), vs book +7.30 pp, vs parent +1.52 pp. Holdout top-5 25.6% (INHD, JLHL, SRXH, TDTH, ASTC). Drop-5 leftover +5.56% (n=2413).
+
+M mid `#95CA82` / ge15: **GHOST PASS**. M hex-onset: **GHOST CONDITIONAL**. O red→green onset: **GHOST FAIL**.
+
+| recipe | holdout | vs book | vs parent | drop-5 leftover | holdout top-5 | July | day | Q1 holdout | SPY↑ | SPY↓ | handful? | ghost |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `M_ge15` | +10.57% (n=4423) | +10.66 pp | +7.86 pp | +9.51% (n=4235) | 13.9% (INHD, JLHL, ZCMD, RTB, DLXY) | 9.8% | 8.0% | +9.71% (n=1510) | holdout spy_up +11.16% | holdout spy_dn +9.95% | no | **PASS** |
+| `M_hex_95CA82` | +10.57% (n=4423) | +10.66 pp | +7.86 pp | +9.51% (n=4235) | 13.9% (INHD, JLHL, ZCMD, RTB, DLXY) | 9.8% | 8.0% | +9.71% (n=1510) | holdout spy_up +11.16% | holdout spy_dn +9.95% | no | **PASS** |
+| `M_onset_hex_95CA82` | +10.34% (n=3731) | +10.43 pp | +7.63 pp | +9.10% (n=3601) | 15.1% (INHD, JLHL, ZCMD, CPOP, JZXN) | 10.6% | 9.5% | +9.30% (n=1281) | holdout spy_up +11.10% | holdout spy_dn +9.46% | yes | **CONDITIONAL** |
+| `O_onset_red2green` | +7.21% (n=2502) | +7.30 pp | +1.52 pp | +5.56% (n=2413) | 25.6% (INHD, JLHL, SRXH, TDTH, ASTC) | 12.2% | 20.1% | +5.84% (n=879) | holdout spy_up +7.85% | holdout spy_dn +6.53% | yes | **FAIL** |
+
+Holdout top names (P&L share of that recipe's holdout book):
+
+| recipe | name | n | holdout avg | holdout P&L share |
+|---|---|---:|---:|---:|
+| `M_ge15` | INHD | 25 | +150.07% | 8.0% |
+| `M_ge15` | JLHL | 41 | +25.73% | 2.3% |
+| `M_ge15` | ZCMD | 42 | +15.49% | 1.4% |
+| `M_ge15` | RTB | 38 | +14.26% | 1.2% |
+| `M_ge15` | DLXY | 42 | +11.88% | 1.1% |
+| `M_onset_hex_95CA82` | INHD | 20 | +182.56% | 9.5% |
+| `M_onset_hex_95CA82` | JLHL | 28 | +28.96% | 2.1% |
+| `M_onset_hex_95CA82` | ZCMD | 32 | +16.60% | 1.4% |
+| `M_onset_hex_95CA82` | CPOP | 25 | +16.71% | 1.1% |
+| `M_onset_hex_95CA82` | JZXN | 25 | +16.09% | 1.0% |
+| `O_onset_red2green` | INHD | 18 | +197.05% | 19.7% |
+| `O_onset_red2green` | JLHL | 20 | +21.55% | 2.4% |
+| `O_onset_red2green` | SRXH | 20 | +10.95% | 1.2% |
+| `O_onset_red2green` | TDTH | 14 | +15.26% | 1.2% |
+| `O_onset_red2green` | ASTC | 17 | +12.56% | 1.2% |
+
+M_ge15 and M_hex_95CA82 are the same trades (mid-green ≡ `#95CA82`). Drop-5 leftover is the holdout mean after removing the five fattest names. If that leftover still beats the book and any-green M, the +10.6% is not a five-name ghost.
 
 ### Same-day H (primary)
 

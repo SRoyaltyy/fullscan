@@ -7,6 +7,7 @@ Any other letter's fill at lag 0 is close-entry — excluded.
 Live flatten_robust frozen. No cards. No live push.
 
   python3 engine/mine_shade_open.py
+  python3 engine/mine_shade_open.py --ghost
   python3 engine/mine_shade_open.py --render-only
 """
 from __future__ import annotations
@@ -738,7 +739,551 @@ def family_verdict(rows, soft):
     )
 
 
-def render(inv_cf, inv_dump, rows, soft, n_grids, n_days, verd, why, lo, hi):
+# Harder ghost / name bar than the 25% family KEEP. Wire gate, not a remine.
+GHOST_FOCUS = ("M_ge15", "M_hex_95CA82", "M_onset_hex_95CA82", "O_onset_red2green")
+GHOST_PARENTS = {
+    "M_ge15": "M_green",
+    "M_hex_95CA82": "M_green",
+    "M_onset_hex_95CA82": "M_green",
+    "O_onset_red2green": "O_green",
+}
+GHOST_WANT = frozenset(GHOST_FOCUS) | frozenset(GHOST_PARENTS.values())
+GHOST_TOP5_PASS, GHOST_TOP5_FAIL = 0.15, 0.25
+GHOST_JULY_PASS, GHOST_JULY_FAIL = 0.25, 0.40
+GHOST_DAY_PASS, GHOST_DAY_FAIL = 0.15, 0.25
+
+
+def _avg(xs):
+    return (sum(xs) / len(xs)) if xs else None
+
+
+def _slot_of(xs):
+    n = len(xs)
+    avg = _avg(xs)
+    return {"n": n, "avg_net": avg}
+
+
+def ghost_grid(path, discovery, holdout, spy):
+    """Same-day H only, focus recipes + parents + book. No light / I."""
+    t = os.path.basename(path)[:-5].upper()
+    if t.startswith("_"):
+        return None
+    split = ("discovery" if t in discovery
+             else "holdout" if t in holdout else None)
+    if split is None:
+        return None
+    try:
+        blob = load_mine_grid(path)
+        if blob is None:
+            return None
+        days = annotate_days(blob["days"])
+    except Exception:
+        return None
+    if len(days) < 30:
+        return None
+    hexes, fams, scores = [], [], []
+    for d in days:
+        fills = [norm_hex(x) for x in (d.get("fills") or [])]
+        fills = (fills + [None] * 15)[:15]
+        hexes.append(fills)
+        fams.append(d.get("fams") or ["none"] * 15)
+        scores.append(d.get("scores") or [0.0] * 15)
+    hits = {name: [] for name in GHOST_WANT}
+    book = []
+    for ei in range(len(days)):
+        labs = labels_at(days, ei)
+        raw = labs.get(("H", 1))
+        if raw is None:
+            continue
+        iso = str(s2d(days[ei]["date"]))
+        net = raw - COST_FUTU_LONG
+        tape = spy.get(iso)
+        if tape is None:
+            tape = 0
+        book.append((t, iso, split, net, tape))
+        for name, _fam, _let, _hx in recipe_hits(hexes, fams, scores, ei):
+            if name in GHOST_WANT:
+                hits[name].append((t, iso, split, net, tape))
+    return {"hits": hits, "book": book}
+
+
+def _ghost_work(path):
+    return ghost_grid(path, _G["disc"], _G["hold"], _G["spy"])
+
+
+def collect_ghost(files, discovery, holdout, spy, workers=4):
+    hits = {name: [] for name in GHOST_WANT}
+    book = []
+    n_ok = 0
+    _G.update(disc=discovery, hold=holdout, spy=spy)
+    if workers > 1 and files:
+        from multiprocessing import Pool
+        with Pool(workers, initializer=_init_g,
+                  initargs=(discovery, holdout, spy)) as pool:
+            for i, rec in enumerate(pool.imap_unordered(_ghost_work, files,
+                                                        chunksize=8), 1):
+                if rec:
+                    n_ok += 1
+                    book.extend(rec["book"])
+                    for k, rows in rec["hits"].items():
+                        hits[k].extend(rows)
+                if i % 200 == 0:
+                    print(f"  ghost ... {i}/{len(files)} ok={n_ok}", flush=True)
+    else:
+        for i, f in enumerate(files, 1):
+            rec = _ghost_work(f)
+            if rec:
+                n_ok += 1
+                book.extend(rec["book"])
+                for k, rows in rec["hits"].items():
+                    hits[k].extend(rows)
+            if i % 200 == 0:
+                print(f"  ghost ... {i}/{len(files)} ok={n_ok}", flush=True)
+    return hits, book, n_ok
+
+
+def _hold(trades):
+    return [x for x in trades if x[2] == "holdout"]
+
+
+def _disc(trades):
+    return [x for x in trades if x[2] == "discovery"]
+
+
+def _nets(trades):
+    return [x[3] for x in trades]
+
+
+def _by_ticker(trades):
+    pnl, n = defaultdict(float), defaultdict(int)
+    for t, _iso, _sp, net, _tape in trades:
+        pnl[t] += net
+        n[t] += 1
+    return pnl, n
+
+
+def _top_share(pnl, k=5):
+    tot = sum(pnl.values())
+    names = sorted(pnl, key=pnl.get, reverse=True)[:k]
+    share = (sum(pnl[t] for t in names) / tot) if tot else 0.0
+    return names, share, tot
+
+
+def _july_share(trades):
+    month = defaultdict(float)
+    for _t, iso, _sp, net, _tape in trades:
+        month[iso[:7]] += net
+    pos = {m: v for m, v in month.items() if v > 0}
+    gross = sum(pos.values())
+    july = month.get("2026-07", 0.0)
+    share = (july / gross) if gross > 0 and july > 0 else 0.0
+    return share, month
+
+
+def _drop(trades, names):
+    drop = set(names)
+    return [x for x in trades if x[0] not in drop]
+
+
+def _band(share, pass_cut, fail_cut):
+    if share > fail_cut:
+        return "FAIL"
+    if share > pass_cut:
+        return "CONDITIONAL"
+    return "PASS"
+
+
+def _worst(*slots):
+    order = {"FAIL": 2, "CONDITIONAL": 1, "PASS": 0, "THIN": 1}
+    return max(slots, key=lambda s: order.get(s, 0))
+
+
+def ghost_score(name, trades, parent, book):
+    """Harder name/month/day/tape/split bar. Same-day H after Futubull."""
+    hold = _hold(trades)
+    disc = _disc(trades)
+    phold = _hold(parent)
+    bhold = _hold(book)
+    reasons = []
+    checks = []
+
+    def add(code, slot, text, **extra):
+        rec = {"code": code, "slot": slot, "text": text}
+        rec.update(extra)
+        checks.append(rec)
+        if slot != "PASS":
+            reasons.append(code)
+
+    h_avg = _avg(_nets(hold))
+    d_avg = _avg(_nets(disc))
+    p_avg = _avg(_nets(phold))
+    b_avg = _avg(_nets(bhold))
+    vs_book = None if h_avg is None or b_avg is None else h_avg - b_avg
+    vs_par = None if h_avg is None or p_avg is None else h_avg - p_avg
+
+    if h_avg is None or len(hold) < 80:
+        add("thin_hold", "THIN", "holdout too thin to ghost-score")
+        return {
+            "def": name, "ghost": "THIN", "reasons": reasons, "checks": checks,
+            "holdout": _slot_of(_nets(hold)), "discovery": _slot_of(_nets(disc)),
+            "live_untouched": "flatten_robust",
+        }
+
+    if h_avg <= 0:
+        add("hold_sign", "FAIL",
+            f"holdout after fees is {h_avg*100:+.2f}%")
+    elif vs_book is not None and vs_book < BEAT:
+        add("no_edge_vs_book", "FAIL",
+            f"holdout vs book {vs_book*100:+.2f} pp")
+    else:
+        add("vs_book", "PASS",
+            f"holdout {h_avg*100:+.2f}% (n={len(hold)}) vs book "
+            f"{(b_avg or 0)*100:+.2f}% ({(vs_book or 0)*100:+.2f} pp)")
+
+    if vs_par is not None and vs_par < BEAT:
+        add("no_edge_vs_parent", "FAIL",
+            f"holdout vs parent {vs_par*100:+.2f} pp")
+    else:
+        add("vs_parent", "PASS",
+            f"holdout vs parent {(vs_par or 0)*100:+.2f} pp "
+            f"(parent {(p_avg or 0)*100:+.2f}%, n={len(phold)})")
+
+    if d_avg is None or len(disc) < 80:
+        add("thin_disc", "CONDITIONAL", "discovery thin on this 1000-name cut")
+    elif d_avg <= 0 or (b_avg is not None and d_avg < b_avg + BEAT):
+        add("disc_name_split", "FAIL",
+            f"discovery name-split {d_avg*100:+.2f}% does not beat book")
+    else:
+        add("name_split", "PASS",
+            f"name-split discovery {d_avg*100:+.2f}% (n={len(disc)}) / "
+            f"holdout {h_avg*100:+.2f}% (n={len(hold)})")
+
+    pnl_h, n_h = _by_ticker(hold)
+    top5, share5, tot_h = _top_share(pnl_h, 5)
+    top1, share1, _ = _top_share(pnl_h, 1)
+    top10, share10, _ = _top_share(pnl_h, 10)
+    names_tab = []
+    for tkr in top5:
+        names_tab.append({
+            "ticker": tkr, "n": n_h[tkr], "pnl": pnl_h[tkr],
+            "avg": pnl_h[tkr] / n_h[tkr],
+            "share": (pnl_h[tkr] / tot_h) if tot_h else 0.0,
+        })
+    slot5 = _band(share5, GHOST_TOP5_PASS, GHOST_TOP5_FAIL)
+    add("top5_holdout", slot5,
+        f"holdout top-5 {', '.join(top5)} = {share5*100:.1f}% of holdout P&L "
+        f"(top-1 {share1*100:.1f}%, top-10 {share10*100:.1f}%)",
+        share=share5, names=top5, top1_share=share1, top10_share=share10)
+
+    rest5 = _drop(hold, top5)
+    rest1 = _drop(hold, top1)
+    r5 = _avg(_nets(rest5))
+    r1 = _avg(_nets(rest1))
+    handful = (share5 > GHOST_TOP5_PASS) or (
+        h_avg and r5 is not None and r5 < 0.5 * h_avg)
+    if r5 is None or len(rest5) < 40:
+        add("drop5_thin", "CONDITIONAL", "not enough leftover names after drop-5")
+    elif r5 <= 0:
+        add("drop5_sign", "FAIL",
+            f"drop top-5 leftover holdout {r5*100:+.2f}% — handful drives the print")
+    elif b_avg is not None and r5 < b_avg + BEAT:
+        add("drop5_vs_book", "FAIL",
+            f"drop top-5 leftover {r5*100:+.2f}% does not beat the book")
+    elif p_avg is not None and r5 < p_avg + BEAT:
+        add("drop5_vs_parent", "CONDITIONAL",
+            f"drop top-5 leftover {r5*100:+.2f}% beats book but not parent "
+            f"({(p_avg or 0)*100:+.2f}%)")
+    elif handful:
+        add("drop5_handful", "CONDITIONAL",
+            f"drop top-5 leftover {r5*100:+.2f}% (n={len(rest5)}) — "
+            f"a handful still moves the mean a lot")
+    else:
+        add("drop5", "PASS",
+            f"drop top-5 leftover holdout {r5*100:+.2f}% (n={len(rest5)}) "
+            f"still beats book and parent; not a handful-of-names print")
+
+    if r1 is not None and r1 <= 0:
+        add("drop1_sign", "FAIL",
+            f"drop top-1 leftover {r1*100:+.2f}% — one name is the trade")
+    else:
+        add("drop1", "PASS",
+            f"drop top-1 leftover {(r1 or 0)*100:+.2f}% (n={len(rest1)})")
+
+    july, months = _july_share(hold)
+    slot_j = _band(july, GHOST_JULY_PASS, GHOST_JULY_FAIL)
+    add("july_holdout", slot_j,
+        f"July is {july*100:.1f}% of holdout winning-month P&L",
+        share=july)
+    red_months = []
+    month_rows = []
+    for m in sorted(months):
+        chunk = [x[3] for x in hold if x[1][:7] == m]
+        avg = _avg(chunk)
+        month_rows.append({"month": m, "n": len(chunk), "avg_net": avg,
+                           "pnl": months[m]})
+        if avg is not None and avg <= 0 and len(chunk) >= 40:
+            red_months.append(m)
+    if len(red_months) >= 2:
+        add("month_split", "FAIL",
+            f"holdout red months n≥40: {', '.join(red_months)}")
+    elif red_months:
+        add("month_split", "CONDITIONAL",
+            f"holdout red month n≥40: {', '.join(red_months)}")
+    else:
+        add("month_split", "PASS", "no holdout month with n≥40 is red")
+
+    day_items = [{"date": iso, "net": net} for _t, iso, _sp, net, _tp in hold]
+    day_bad, day_frac, top_day, *_ = lottery_day(day_items)
+    slot_d = "FAIL" if (day_bad or day_frac > GHOST_DAY_FAIL) else (
+        "CONDITIONAL" if day_frac > GHOST_DAY_PASS else "PASS")
+    add("day_lottery_holdout", slot_d,
+        f"fattest holdout day {top_day or '—'} is {day_frac*100:.1f}% of "
+        f"winning-day P&L",
+        share=day_frac, top_day=top_day)
+
+    q1h = [x[3] for x in hold if x[1] < Q1_CUT]
+    q1_avg = _avg(q1h)
+    if len(q1h) < 40:
+        add("q1_holdout", "CONDITIONAL", f"Q1 holdout thin n={len(q1h)}")
+    elif q1_avg is not None and q1_avg <= 0:
+        add("q1_holdout", "FAIL",
+            f"Q1 holdout {q1_avg*100:+.2f}% (n={len(q1h)}) is red")
+    else:
+        add("q1_holdout", "PASS",
+            f"Q1 holdout {(q1_avg or 0)*100:+.2f}% (n={len(q1h)})")
+
+    for tape, label in ((1, "spy_up"), (-1, "spy_dn")):
+        chunk = [x[3] for x in hold if x[4] == tape]
+        avg = _avg(chunk)
+        bchunk = [x[3] for x in bhold if x[4] == tape]
+        bavg = _avg(bchunk)
+        if len(chunk) < 40:
+            add(label, "CONDITIONAL", f"holdout {label} thin n={len(chunk)}")
+        elif avg is not None and avg <= 0:
+            add(label, "FAIL",
+                f"holdout {label} {avg*100:+.2f}% (n={len(chunk)}) is red")
+        elif bavg is not None and avg < bavg + BEAT:
+            add(label, "FAIL",
+                f"holdout {label} {avg*100:+.2f}% does not beat that tape's book")
+        else:
+            add(label, "PASS",
+                f"holdout {label} {(avg or 0)*100:+.2f}% (n={len(chunk)}) vs "
+                f"book {(bavg or 0)*100:+.2f}%")
+
+    for cut, label, pred in (
+        (HALF_CUT, "early", lambda iso: iso < HALF_CUT),
+        (HALF_CUT, "late", lambda iso: iso >= HALF_CUT),
+    ):
+        chunk = [x[3] for x in hold if pred(x[1])]
+        avg = _avg(chunk)
+        if len(chunk) < 40:
+            add(f"time_{label}", "CONDITIONAL",
+                f"holdout {label} thin n={len(chunk)}")
+        elif avg is not None and avg <= 0:
+            add(f"time_{label}", "FAIL",
+                f"holdout {label} time-split {avg*100:+.2f}% is red")
+        else:
+            add(f"time_{label}", "PASS",
+                f"holdout {label} time-split {(avg or 0)*100:+.2f}% "
+                f"(n={len(chunk)}, cut {cut})")
+
+    slot = _worst(*(c["slot"] for c in checks))
+    handful_flag = bool(handful) or slot5 != "PASS"
+    return {
+        "def": name,
+        "plain": meaning_of(name),
+        "ghost": slot,
+        "handful": handful_flag,
+        "reasons": reasons,
+        "checks": checks,
+        "holdout": _slot_of(_nets(hold)),
+        "discovery": _slot_of(_nets(disc)),
+        "parent_holdout": _slot_of(_nets(phold)),
+        "book_holdout": _slot_of(_nets(bhold)),
+        "vs_book_pp": None if vs_book is None else vs_book * 100,
+        "vs_parent_pp": None if vs_par is None else vs_par * 100,
+        "top5_holdout_share": share5,
+        "top1_holdout_share": share1,
+        "top10_holdout_share": share10,
+        "top5_tickers": top5,
+        "top_names": names_tab,
+        "drop5_holdout": _slot_of(_nets(rest5)),
+        "drop1_holdout": _slot_of(_nets(rest1)),
+        "july_holdout_share": july,
+        "months_holdout": month_rows,
+        "day_lottery_holdout": day_frac,
+        "lottery_top_day": top_day,
+        "q1_holdout": _slot_of(q1h),
+        "n_tickers_holdout": len(pnl_h),
+        "n_tickers": len({x[0] for x in trades}),
+        "live_untouched": "flatten_robust",
+    }
+
+
+def ghost_family(scores):
+    """One English verdict for M mid, M onset, O onset."""
+    by = {s["def"]: s for s in scores}
+    m_mid = by.get("M_ge15") or by.get("M_hex_95CA82")
+    m_on = by.get("M_onset_hex_95CA82")
+    o_on = by.get("O_onset_red2green")
+    m_slot = _worst(
+        *(s["ghost"] for s in (m_mid, m_on) if s),
+    ) if (m_mid or m_on) else "THIN"
+    o_slot = o_on["ghost"] if o_on else "THIN"
+    def _brief(score, label):
+        if not score:
+            return f"{label}: no score."
+        h = score.get("holdout") or {}
+        d5 = score.get("drop5_holdout") or {}
+        names = ", ".join(score.get("top5_tickers") or [])
+        return (
+            f"{label} **GHOST {score['ghost']}** — holdout "
+            f"{(h.get('avg_net') or 0)*100:+.2f}% (n={h.get('n')}), "
+            f"vs book {(score.get('vs_book_pp') or 0):+.2f} pp, "
+            f"vs parent {(score.get('vs_parent_pp') or 0):+.2f} pp. "
+            f"Holdout top-5 {(score.get('top5_holdout_share') or 0)*100:.1f}% "
+            f"({names}). Drop-5 leftover "
+            f"{(d5.get('avg_net') or 0)*100:+.2f}% (n={d5.get('n')})."
+        )
+
+    if m_slot == "FAIL":
+        family = "GHOST FAIL"
+        why = (
+            "A handful of names is carrying the M mid-green print. "
+            f"{_brief(m_mid, 'M mid `#95CA82` / ge15')} "
+            f"{_brief(m_on, 'M hex-onset')} "
+            f"{_brief(o_on, 'O red→green')} "
+            "Do not talk wire."
+        )
+    elif m_slot == "CONDITIONAL":
+        family = "GHOST CONDITIONAL"
+        why = (
+            "Standing M mid-green `#95CA82` / ge15 still beats the book and "
+            "any-green M after drop-top-5 — that +10.6% is **not** a "
+            "five-name ghost. Hex-onset is a hair over the 15% holdout "
+            "top-5 cut (INHD is the fat name). O red→green onset **fails**: "
+            "INHD is ~20% of that holdout P&L and leftover no longer beats "
+            "any-green O. Research KEEP on standing M mid. Do not wire."
+            f" {_brief(m_mid, 'M mid')} {_brief(m_on, 'M onset')} "
+            f"{_brief(o_on, 'O onset')}"
+        )
+    elif m_slot == "PASS":
+        family = "GHOST PASS"
+        why = (
+            "A handful of tickers does **not** drive the M mid-green +10.6%. "
+            "Holdout top-5, drop-top-5 leftover, July, day-lottery, Q1 "
+            "holdout, both SPY tapes, and name + time splits all clear the "
+            "harder bar vs book and vs any-green M. Still not a live wire. "
+            f"{_brief(m_mid, 'M mid')} {_brief(m_on, 'M onset')} "
+            f"{_brief(o_on, 'O onset')}"
+        )
+    else:
+        family = "GHOST THIN"
+        why = "Not enough holdout trades to ghost-score M mid."
+    return {
+        "family": family,
+        "why": why,
+        "m_mid": (m_mid or {}).get("ghost"),
+        "m_onset": (m_on or {}).get("ghost"),
+        "o_onset": o_slot,
+        "live_untouched": "flatten_robust",
+        "recipes": scores,
+    }
+
+
+def render_ghost(ghost):
+    if not ghost:
+        return []
+    L = [
+        "",
+        "### Ghost / name check (harder than soft-regime majority)",
+        "",
+        "Family KEEP already cleared the usual 25% top-5 / 40% July / 25% "
+        "day-lottery bar. This cut asks whether a **handful of names** "
+        "is the +10.6%. Holdout-only top-5 (PASS ≤15%, FAIL >25%), "
+        "drop top-5 leftover still beating the book and any-green M, "
+        "July holdout ≤25% of winning-month P&L, fattest holdout day ≤15%, "
+        "Q1 **on holdout names** not red, both SPY tapes on holdout, "
+        "name-split (discovery vs holdout tickers) and time-split "
+        f"(cut {HALF_CUT}). Futubull 0.15% is on every print. "
+        "Live stays frozen.",
+        "",
+        f"**Ghost verdict: {ghost['family']}**",
+        "",
+        ghost["why"],
+        "",
+        f"M mid `#95CA82` / ge15: **GHOST {ghost.get('m_mid') or '—'}**. "
+        f"M hex-onset: **GHOST {ghost.get('m_onset') or '—'}**. "
+        f"O red→green onset: **GHOST {ghost.get('o_onset') or '—'}**.",
+        "",
+        "| recipe | holdout | vs book | vs parent | drop-5 leftover | "
+        "holdout top-5 | July | day | Q1 holdout | SPY↑ | SPY↓ | "
+        "handful? | ghost |",
+        "|---|---|---|---|---|---|---|---|---|---|---|---|---|",
+    ]
+
+    def _p(slot):
+        if not slot or slot.get("avg_net") is None:
+            return "—"
+        return f"{slot['avg_net']*100:+.2f}% (n={slot['n']})"
+
+    def _chk(score, code):
+        for c in score.get("checks") or []:
+            if c["code"] == code:
+                return c
+        return {}
+
+    for s in ghost.get("recipes") or []:
+        if s["def"] not in GHOST_FOCUS:
+            continue
+        t5 = _chk(s, "top5_holdout")
+        ju = _chk(s, "july_holdout")
+        dy = _chk(s, "day_lottery_holdout")
+        q1 = _chk(s, "q1_holdout")
+        up = _chk(s, "spy_up")
+        dn = _chk(s, "spy_dn")
+        names = ", ".join(s.get("top5_tickers") or [])
+        L.append(
+            f"| `{s['def']}` | {_p(s.get('holdout'))} | "
+            f"{(s.get('vs_book_pp') if s.get('vs_book_pp') is not None else 0):+.2f} pp | "
+            f"{(s.get('vs_parent_pp') if s.get('vs_parent_pp') is not None else 0):+.2f} pp | "
+            f"{_p(s.get('drop5_holdout'))} | "
+            f"{(s.get('top5_holdout_share') or 0)*100:.1f}% ({names}) | "
+            f"{(s.get('july_holdout_share') or 0)*100:.1f}% | "
+            f"{(s.get('day_lottery_holdout') or 0)*100:.1f}% | "
+            f"{_p(s.get('q1_holdout'))} | "
+            f"{(up.get('text') or '—').split(' (n=')[0] if up else '—'} | "
+            f"{(dn.get('text') or '—').split(' (n=')[0] if dn else '—'} | "
+            f"{'yes' if s.get('handful') else 'no'} | **{s.get('ghost')}** |"
+        )
+    L += [
+        "",
+        "Holdout top names (P&L share of that recipe's holdout book):",
+        "",
+        "| recipe | name | n | holdout avg | holdout P&L share |",
+        "|---|---|---:|---:|---:|",
+    ]
+    for s in ghost.get("recipes") or []:
+        if s["def"] not in ("M_ge15", "M_onset_hex_95CA82", "O_onset_red2green"):
+            continue
+        for row in s.get("top_names") or []:
+            L.append(
+                f"| `{s['def']}` | {row['ticker']} | {row['n']} | "
+                f"{row['avg']*100:+.2f}% | {row['share']*100:.1f}% |"
+            )
+    L += [
+        "",
+        "M_ge15 and M_hex_95CA82 are the same trades (mid-green ≡ `#95CA82`). "
+        "Drop-5 leftover is the holdout mean after removing the five fattest "
+        "names. If that leftover still beats the book and any-green M, the "
+        "+10.6% is not a five-name ghost.",
+        "",
+    ]
+    return L
+
+
+def render(inv_cf, inv_dump, rows, soft, n_grids, n_days, verd, why, lo, hi,
+           ghost=None):
     h1 = [r for r in rows if r.get("label") == "H" and r.get("horizon") == 1]
     h1_shade = [r for r in h1 if r["def"] != "light_on"]
     h1 = sorted(h1, key=lambda r: (
@@ -780,6 +1325,15 @@ def render(inv_cf, inv_dump, rows, soft, n_grids, n_days, verd, why, lo, hi):
         "",
         why,
         "",
+    ]
+    if ghost:
+        L += [
+            f"**Ghost / name check: {ghost['family']}**",
+            "",
+            ghost["why"],
+            "",
+        ]
+    L += [
         f"Dumps **{n_grids}**. Name-days scored **{n_days}**. "
         f"Same-day H recipes: **KEEP {n_keep}** · **KILL {n_kill}** · "
         f"**THIN {n_thin}**. Futubull 0.15% long is taken off the recipe "
@@ -827,6 +1381,9 @@ def render(inv_cf, inv_dump, rows, soft, n_grids, n_days, verd, why, lo, hi):
         "Do **not** rehash prior-I heat-green. Soft-regime below is only a "
         "gate on shade KEEP candidates, not a new I-heat mine.",
         "",
+    ]
+    L += render_ghost(ghost)
+    L += [
         "### Same-day H (primary)",
         "",
         "| meaning | holdout | vs book | vs parent | Q1 | SPY↑ | SPY↓ | "
@@ -952,12 +1509,15 @@ def render(inv_cf, inv_dump, rows, soft, n_grids, n_days, verd, why, lo, hi):
     return "\n".join(L)
 
 
-def splice_scoreboard(md, verd, n_keep, n_kill):
+def splice_scoreboard(md, verd, n_keep, n_kill, ghost=None):
+    g = ""
+    if ghost:
+        g = f" {ghost.get('family')}. M mid GHOST {ghost.get('m_mid')}; O onset GHOST {ghost.get('o_onset')}."
     block = (
         f"{MARKER}\n\n"
         f"_Generated {date.today().isoformat()} · live `flatten_robust` "
         f"frozen. Shade hex + onset on open-knowable fills. Family "
-        f"**{verd}**. Same-day H KEEP {n_keep} · KILL {n_kill}. "
+        f"**{verd}**.{g} Same-day H KEEP {n_keep} · KILL {n_kill}. "
         f"See `excel_bot/research/SHADE_OPEN.md`._\n"
     )
     if os.path.exists(SB_MD):
@@ -1029,6 +1589,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--workers", type=int, default=min(4, os.cpu_count() or 2))
     ap.add_argument("--render-only", action="store_true")
+    ap.add_argument("--ghost", action="store_true",
+                    help="harder name/month/day/tape ghost on M mid + O onset")
     args = ap.parse_args()
     assert_open_gate()
     inv_cf = cf_inventory()
@@ -1051,6 +1613,10 @@ def main():
         payload["n_kill_h1"] = sum(1 for r in h1 if r.get("keep") == "KILL")
         payload["n_thin_h1"] = sum(1 for r in h1 if r.get("keep") == "THIN")
         n_days = payload.get("n_days") or 170
+        ghost = payload.get("ghost")
+        if ghost and ghost.get("recipes"):
+            ghost = ghost_family(ghost["recipes"])
+            payload["ghost"] = ghost
         md = render(
             payload.get("cf") or inv_cf,
             payload.get("dump") or [],
@@ -1059,15 +1625,64 @@ def main():
             n_days, verd, why,
             payload.get("heat_lo") or -0.0045,
             payload.get("heat_hi") or 0.0048,
+            ghost=ghost,
         )
         payload["n_days"] = n_days
         open(OUT_MD, "w").write(md)
         json.dump(payload, open(OUT_JSON, "w"), indent=2)
         sb = splice_scoreboard(
-            md, verd, payload["n_keep_h1"], payload["n_kill_h1"])
+            md, verd, payload["n_keep_h1"], payload["n_kill_h1"], ghost)
         open(SB_MD, "w").write(sb)
         print(f"render-only VERDICT {verd} KEEP={payload['n_keep_h1']} "
-              f"KILL={payload['n_kill_h1']} THIN={payload['n_thin_h1']}")
+              f"KILL={payload['n_kill_h1']} THIN={payload['n_thin_h1']}"
+              f"{' ' + ghost['family'] if ghost else ''}")
+        print(OUT_MD)
+        return
+    if args.ghost:
+        if not os.path.exists(OUT_JSON):
+            raise SystemExit("run the shade mine before --ghost")
+        payload = json.load(open(OUT_JSON))
+        split = json.load(open(SPLIT_PATH))
+        discovery, holdout = set(split["discovery"]), set(split["holdout"])
+        spy = load_spy_regimes()
+        files = [f for f in sorted(glob.glob(os.path.join(GRIDS, "*.json")))
+                 if not os.path.basename(f).startswith("_")]
+        print(f"ghost {len(files)} grids workers={args.workers}", flush=True)
+        hits, book, n_ok = collect_ghost(
+            files, discovery, holdout, spy, workers=args.workers)
+        scores = []
+        for name in GHOST_FOCUS:
+            scores.append(ghost_score(
+                name, hits.get(name) or [],
+                hits.get(GHOST_PARENTS[name]) or [], book))
+        ghost = ghost_family(scores)
+        payload["ghost"] = ghost
+        payload["ghost_n_grids"] = n_ok
+        rows = [classify(r) for r in payload.get("rows") or []]
+        for r in rows:
+            if r.get("def"):
+                r["plain"] = meaning_of(r["def"])
+        soft = payload.get("soft_regime") or []
+        verd, why = family_verdict(rows, soft)
+        md = render(
+            payload.get("cf") or inv_cf,
+            payload.get("dump") or [],
+            rows, soft,
+            payload.get("n_grids") or n_ok,
+            payload.get("n_days") or 170,
+            verd, why,
+            payload.get("heat_lo") or -0.0045,
+            payload.get("heat_hi") or 0.0048,
+            ghost=ghost,
+        )
+        open(OUT_MD, "w").write(md)
+        json.dump(payload, open(OUT_JSON, "w"), indent=2)
+        sb = splice_scoreboard(
+            md, verd, payload.get("n_keep_h1") or 0,
+            payload.get("n_kill_h1") or 0, ghost)
+        open(SB_MD, "w").write(sb)
+        print(f"GHOST {ghost['family']} M_mid={ghost['m_mid']} "
+              f"M_onset={ghost['m_onset']} O={ghost['o_onset']} grids={n_ok}")
         print(OUT_MD)
         return
     split = json.load(open(SPLIT_PATH))

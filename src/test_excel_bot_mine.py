@@ -1536,6 +1536,39 @@ def test_shade_open_cf_inventory_and_clocks():
     assert "from flatten" not in src
     assert "flatten_robust" in src
     assert "H_l0_" not in src or "never" in src.lower()
+    from mine_shade_open import ghost_family, ghost_score
+    # handful of names drive a fake +10% → GHOST FAIL
+    fat = [("AAA", "2026-02-02", "holdout", 0.50, 1)] * 20
+    fat += [("BBB", "2026-02-03", "holdout", 0.40, 1)] * 20
+    fat += [("CCC", "2026-02-04", "holdout", 0.30, -1)] * 20
+    fat += [("DDD", "2026-06-01", "holdout", 0.20, 1)] * 20
+    fat += [("EEE", "2026-06-02", "holdout", 0.20, -1)] * 20
+    rest = [(f"Z{i:03d}", "2026-03-02", "holdout", -0.01, 1) for i in range(80)]
+    disc = [(f"D{i:03d}", "2026-02-02", "discovery", 0.08, 1) for i in range(100)]
+    trades = fat + rest + disc
+    parent = [(t, iso, sp, 0.02, tape) for t, iso, sp, _n, tape in trades]
+    book = [(t, iso, sp, 0.00, tape) for t, iso, sp, _n, tape in trades]
+    g = ghost_score("M_ge15", trades, parent, book)
+    assert g["live_untouched"] == "flatten_robust"
+    assert g["ghost"] == "FAIL"
+    assert g["handful"] is True
+    # even spread → not a handful
+    even = []
+    for i in range(200):
+        d_early = f"2026-02-{(i % 18) + 2:02d}"
+        d_late = f"2026-06-{(i % 18) + 2:02d}"
+        even.append((f"H{i:03d}", d_early, "holdout", 0.10, 1 if i % 2 == 0 else -1))
+        even.append((f"H{i:03d}", d_late, "holdout", 0.10, -1 if i % 2 == 0 else 1))
+        even.append((f"D{i:03d}", d_early, "discovery", 0.09, 1))
+    parent_e = [(t, iso, sp, 0.02, tape) for t, iso, sp, _n, tape in even]
+    book_e = [(t, iso, sp, 0.00, tape) for t, iso, sp, _n, tape in even]
+    g2 = ghost_score("M_ge15", even, parent_e, book_e)
+    assert g2["ghost"] == "PASS"
+    assert g2["handful"] is False
+    fam = ghost_family([g2, {**g2, "def": "M_onset_hex_95CA82"},
+                        {**g2, "def": "O_onset_red2green"}])
+    assert fam["family"] == "GHOST PASS"
+    assert fam["live_untouched"] == "flatten_robust"
 
 
 def test_shade_open_report_is_committed():
@@ -1548,6 +1581,12 @@ def test_shade_open_report_is_committed():
     assert "Family verdict: KEEP" in md
     assert "Per-recipe majority" in md
     assert "#95CA82" in md
+    assert "Ghost / name check" in md
+    assert any(x in md for x in (
+        "Ghost verdict: GHOST PASS",
+        "Ghost verdict: GHOST FAIL",
+        "Ghost verdict: GHOST CONDITIONAL",
+    ))
     sb = (ROOT / "03_scoreboard" / "EXCEL_BOT_MINE.md").read_text()
     assert "PASS 376" in sb
     assert "Shade hex + onset" in sb
