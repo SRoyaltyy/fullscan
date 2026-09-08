@@ -1602,10 +1602,11 @@ def test_shade_open_report_is_committed():
     assert "flatten_robust" in cards
     assert "not live" in cards
     assert "strategies/" in cards
-    assert "GHOST PASS" in cards
     assert "GHOST FAIL" in cards
     assert "research_O_onset_red2green_1d_H" in cards
     assert "**demoted**" in cards
+    assert "DEMOTE" in cards
+    assert "H-fill index leak" in cards or "H’s fill" in cards or "H's fill" in cards
     assert payload["family_verdict"] == "KEEP"
     assert "A" in payload["multi_shade_letters"]
     for r in payload.get("rows") or []:
