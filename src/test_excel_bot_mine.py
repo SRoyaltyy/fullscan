@@ -226,7 +226,8 @@ def test_all_cols_miners_do_not_wire_live():
                "harden_hyst_open.py", "mine_color_join.py", "pit_joins.py",
                "mine_unmined.py", "harden_unmined.py", "harden_open_stack.py",
                "harden_close_cluster.py", "harden_close_peers.py",
-               "mine_next_region.py", "mine_same_day.py", "mine_pair_lag.py"):
+               "mine_next_region.py", "mine_same_day.py", "mine_pair_lag.py",
+               "mine_shade_open.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "sleeve_merge_live" not in src
         assert "LIVE_POLICY" not in src
@@ -1489,7 +1490,8 @@ def test_unmined_miner_does_not_wire_live():
     for fn in ("mine_unmined.py", "harden_unmined.py", "harden_open_stack.py",
                "harden_close_cluster.py", "harden_close_peers.py",
                "mine_next_region.py", "mine_same_day.py", "mine_pair_lag.py",
-               "mine_pair_lag_close.py", "mine_hi_horizon.py"):
+               "mine_pair_lag_close.py", "mine_hi_horizon.py",
+               "mine_shade_open.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "from flatten" not in src
         assert "sleeve_merge_live" not in src
@@ -1502,6 +1504,71 @@ def test_unmined_miner_does_not_wire_live():
     assert "excel_stockhistory_cache" in cap
     assert "--all-rows" in cap
     assert "tickers_all_rows" in cap
+
+
+def test_shade_open_cf_inventory_and_clocks():
+    from mine_shade_open import (
+        CLOSE_FILL, MULTI_SHADE, OPEN_ALIASES, OPEN_FILL, assert_open_gate,
+        cf_inventory, meaning_of, parent_of,
+    )
+    assert_open_gate()
+    assert OPEN_FILL == tuple("ABCGJKLMO")
+    assert set(CLOSE_FILL) == set("DEFHIN")
+    assert OPEN_ALIASES == ("IR", "IS", "IT")
+    inv = cf_inventory()
+    assert inv["live_untouched"] == "flatten_robust"
+    assert set(inv["multi_shade_letters"]) == set(MULTI_SHADE) == {"A", "G", "K", "L"}
+    assert "O" in inv["single_green_letters"]
+    assert "C" in inv["no_green_cf"]
+    assert "IR" in inv["no_green_cf"]
+    by = {r["col"]: r for r in inv["letters"]}
+    assert by["A"]["green_hexes"] == ["3B7D23", "B8DCAB"]
+    assert by["O"]["green_hexes"] == ["C6EFCE"]
+    assert by["IR"]["n_rules"] == 0
+    assert parent_of("A_hex_3B7D23") == "A_green"
+    assert parent_of("light__A_hex_3B7D23") == "light__A_green"
+    assert parent_of("light__A_green") == "light_on"
+    assert parent_of("A_onset_green") == "A_green"
+    assert "deep green" in meaning_of("A_ge20")
+    assert "flips from red" in meaning_of("A_onset_red2green")
+    assert "pale" in meaning_of("M_hex_DCEDD5")
+    src = (ENG / "mine_shade_open.py").read_text(encoding="utf-8")
+    assert "from flatten" not in src
+    assert "flatten_robust" in src
+    assert "H_l0_" not in src or "never" in src.lower()
+
+
+def test_shade_open_report_is_committed():
+    md = (ROOT / "excel_bot" / "research" / "SHADE_OPEN.md").read_text()
+    assert md.index("Plain English") < md.index("Inventory")
+    assert "flatten_robust" in md
+    assert "same-day H" in md.lower() or "Same-day H" in md
+    assert "3B7D23" in md and "C6EFCE" in md
+    assert "IR" in md and "IT" in md
+    assert "Family verdict: KEEP" in md
+    assert "Per-recipe majority" in md
+    assert "#95CA82" in md
+    sb = (ROOT / "03_scoreboard" / "EXCEL_BOT_MINE.md").read_text()
+    assert "PASS 376" in sb
+    assert "Shade hex + onset" in sb
+    assert "Family **KEEP**" in sb
+    payload = json.loads(
+        (ROOT / "excel_bot" / "research" / "shade_open.json").read_text())
+    assert payload["live_untouched"] == "flatten_robust"
+    assert payload["excel_cache_used"] is False
+    assert payload["entry"] == "open"
+    assert payload["cost_model"] == "futubull"
+    assert payload["family_verdict"] == "KEEP"
+    assert "A" in payload["multi_shade_letters"]
+    for r in payload.get("rows") or []:
+        assert r.get("clock") == "open"
+        name = r.get("def") or ""
+        assert "H_l0_" not in name and "I_l0_" not in name
+        if r.get("keep") == "KEEP":
+            assert (r.get("top5_share") or 0) <= 0.25
+            reasons = set(r.get("fail_reasons") or [])
+            assert not reasons.intersection(
+                {"thin_disc", "thin_hold", "ticker_bar", "date_bar"})
 
 
 if __name__ == "__main__":
