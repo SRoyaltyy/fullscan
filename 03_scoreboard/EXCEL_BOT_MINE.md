@@ -1233,3 +1233,7 @@ Standing light+O ± AH or FR: both SPY tapes green on 1d H, 1d I, and 1d stacked
 Board totals (all labels × horizons): KEEP 85 · KILL 1227 · THIN 0.
 
 Research only. One 2026 regime.
+
+## Shade hex + onset (open-entry)
+
+_Generated 2026-09-08 · live `flatten_robust` frozen. Shade hex + onset on open-knowable fills. Family **null**. GHOST FAIL. M mid GHOST FAIL; O onset GHOST THIN. Expanded open-only M mid `#95CA82` / ge15 is a **DEMOTE** (not the 4.4k H-fill leak). Same-day H KEEP 0 · KILL 5. See `SHADE_OPEN.md` / `SHADE_KEEP_CARDS.md`._

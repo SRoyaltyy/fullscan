@@ -226,7 +226,8 @@ def test_all_cols_miners_do_not_wire_live():
                "harden_hyst_open.py", "mine_color_join.py", "pit_joins.py",
                "mine_unmined.py", "harden_unmined.py", "harden_open_stack.py",
                "harden_close_cluster.py", "harden_close_peers.py",
-               "mine_next_region.py", "mine_same_day.py", "mine_pair_lag.py"):
+               "mine_next_region.py", "mine_same_day.py", "mine_pair_lag.py",
+               "mine_shade_open.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "sleeve_merge_live" not in src
         assert "LIVE_POLICY" not in src
@@ -1489,7 +1490,8 @@ def test_unmined_miner_does_not_wire_live():
     for fn in ("mine_unmined.py", "harden_unmined.py", "harden_open_stack.py",
                "harden_close_cluster.py", "harden_close_peers.py",
                "mine_next_region.py", "mine_same_day.py", "mine_pair_lag.py",
-               "mine_pair_lag_close.py", "mine_hi_horizon.py"):
+               "mine_pair_lag_close.py", "mine_hi_horizon.py",
+               "mine_shade_open.py"):
         src = (ENG / fn).read_text(encoding="utf-8")
         assert "from flatten" not in src
         assert "sleeve_merge_live" not in src
@@ -1502,6 +1504,120 @@ def test_unmined_miner_does_not_wire_live():
     assert "excel_stockhistory_cache" in cap
     assert "--all-rows" in cap
     assert "tickers_all_rows" in cap
+
+
+def test_shade_open_cf_inventory_and_clocks():
+    from mine_shade_open import (
+        CLOSE_FILL, MULTI_SHADE, OPEN_ALIASES, OPEN_FILL, assert_open_gate,
+        cf_inventory, meaning_of, parent_of,
+    )
+    assert_open_gate()
+    assert OPEN_FILL == tuple("ABCGJKLMO")
+    assert set(CLOSE_FILL) == set("DEFHIN")
+    assert OPEN_ALIASES == ("IR", "IS", "IT")
+    inv = cf_inventory()
+    assert inv["live_untouched"] == "flatten_robust"
+    assert set(inv["multi_shade_letters"]) == set(MULTI_SHADE) == {"A", "G", "K", "L"}
+    assert "O" in inv["single_green_letters"]
+    assert "C" in inv["no_green_cf"]
+    assert "IR" in inv["no_green_cf"]
+    by = {r["col"]: r for r in inv["letters"]}
+    assert by["A"]["green_hexes"] == ["3B7D23", "B8DCAB"]
+    assert by["O"]["green_hexes"] == ["C6EFCE"]
+    assert by["IR"]["n_rules"] == 0
+    assert parent_of("A_hex_3B7D23") == "A_green"
+    assert parent_of("light__A_hex_3B7D23") == "light__A_green"
+    assert parent_of("light__A_green") == "light_on"
+    assert parent_of("A_onset_green") == "A_green"
+    assert "deep green" in meaning_of("A_ge20")
+    assert "flips from red" in meaning_of("A_onset_red2green")
+    assert "pale" in meaning_of("M_hex_DCEDD5")
+    src = (ENG / "mine_shade_open.py").read_text(encoding="utf-8")
+    assert "from flatten" not in src
+    assert "flatten_robust" in src
+    assert "H_l0_" not in src or "never" in src.lower()
+    from mine_shade_open import ghost_family, ghost_score
+    # handful of names drive a fake +10% → GHOST FAIL
+    fat = [("AAA", "2026-02-02", "holdout", 0.50, 1)] * 20
+    fat += [("BBB", "2026-02-03", "holdout", 0.40, 1)] * 20
+    fat += [("CCC", "2026-02-04", "holdout", 0.30, -1)] * 20
+    fat += [("DDD", "2026-06-01", "holdout", 0.20, 1)] * 20
+    fat += [("EEE", "2026-06-02", "holdout", 0.20, -1)] * 20
+    rest = [(f"Z{i:03d}", "2026-03-02", "holdout", -0.01, 1) for i in range(80)]
+    disc = [(f"D{i:03d}", "2026-02-02", "discovery", 0.08, 1) for i in range(100)]
+    trades = fat + rest + disc
+    parent = [(t, iso, sp, 0.02, tape) for t, iso, sp, _n, tape in trades]
+    book = [(t, iso, sp, 0.00, tape) for t, iso, sp, _n, tape in trades]
+    g = ghost_score("M_ge15", trades, parent, book)
+    assert g["live_untouched"] == "flatten_robust"
+    assert g["ghost"] == "FAIL"
+    assert g["handful"] is True
+    # even spread → not a handful
+    even = []
+    for i in range(200):
+        d_early = f"2026-02-{(i % 18) + 2:02d}"
+        d_late = f"2026-06-{(i % 18) + 2:02d}"
+        even.append((f"H{i:03d}", d_early, "holdout", 0.10, 1 if i % 2 == 0 else -1))
+        even.append((f"H{i:03d}", d_late, "holdout", 0.10, -1 if i % 2 == 0 else 1))
+        even.append((f"D{i:03d}", d_early, "discovery", 0.09, 1))
+    parent_e = [(t, iso, sp, 0.02, tape) for t, iso, sp, _n, tape in even]
+    book_e = [(t, iso, sp, 0.00, tape) for t, iso, sp, _n, tape in even]
+    g2 = ghost_score("M_ge15", even, parent_e, book_e)
+    assert g2["ghost"] == "PASS"
+    assert g2["handful"] is False
+    fam = ghost_family([g2, {**g2, "def": "M_onset_hex_95CA82"},
+                        {**g2, "def": "O_onset_red2green"}])
+    assert fam["family"] == "GHOST PASS"
+    assert fam["live_untouched"] == "flatten_robust"
+
+
+def test_shade_open_report_is_committed():
+    md = (ROOT / "excel_bot" / "research" / "SHADE_OPEN.md").read_text()
+    assert md.index("Plain English") < md.index("Inventory")
+    assert "flatten_robust" in md
+    assert "same-day H" in md.lower() or "Same-day H" in md
+    assert "3B7D23" in md and "C6EFCE" in md
+    assert "IR" in md and "IT" in md
+    assert "Family verdict: KEEP" in md
+    assert "Per-recipe majority" in md
+    assert "#95CA82" in md
+    assert "Ghost / name check" in md
+    assert any(x in md for x in (
+        "Ghost verdict: GHOST PASS",
+        "Ghost verdict: GHOST FAIL",
+        "Ghost verdict: GHOST CONDITIONAL",
+    ))
+    sb = (ROOT / "03_scoreboard" / "EXCEL_BOT_MINE.md").read_text()
+    assert "PASS 376" in sb
+    assert "Shade hex + onset" in sb
+    assert "Family **KEEP**" in sb
+    payload = json.loads(
+        (ROOT / "excel_bot" / "research" / "shade_open.json").read_text())
+    assert payload["live_untouched"] == "flatten_robust"
+    assert payload["excel_cache_used"] is False
+    assert payload["entry"] == "open"
+    assert payload["cost_model"] == "futubull"
+    cards = (ROOT / "excel_bot" / "research" / "SHADE_KEEP_CARDS.md").read_text()
+    assert cards.index("Plain English") < cards.index("Card 1")
+    assert "flatten_robust" in cards
+    assert "not live" in cards
+    assert "strategies/" in cards
+    assert "GHOST FAIL" in cards
+    assert "research_O_onset_red2green_1d_H" in cards
+    assert "**demoted**" in cards
+    assert "DEMOTE" in cards
+    assert "H-fill index leak" in cards or "H’s fill" in cards or "H's fill" in cards
+    assert payload["family_verdict"] == "KEEP"
+    assert "A" in payload["multi_shade_letters"]
+    for r in payload.get("rows") or []:
+        assert r.get("clock") == "open"
+        name = r.get("def") or ""
+        assert "H_l0_" not in name and "I_l0_" not in name
+        if r.get("keep") == "KEEP":
+            assert (r.get("top5_share") or 0) <= 0.25
+            reasons = set(r.get("fail_reasons") or [])
+            assert not reasons.intersection(
+                {"thin_disc", "thin_hold", "ticker_bar", "date_bar"})
 
 
 if __name__ == "__main__":
