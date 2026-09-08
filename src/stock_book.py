@@ -2148,6 +2148,10 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
     )
     green_path = OUT_DIR / f"{date}_green.json"
     try:
+        gp = meta.get("green_pile") or {
+            "n_pile": 0, "used": False, "buy_mode": "weighted_fallback",
+            "sell_mode": "core_weights", "reason": "green_pile missing from meta",
+        }
         tickers: list[str] = []
         if "green" in df.columns and "Ticker" in df.columns:
             tickers = [str(t) for t in df.loc[df["green"] == True, "Ticker"].tolist()]  # noqa: E712
