@@ -186,19 +186,28 @@ def recipe_verdict(vs_pp, n, ghost_pass, h_mean):
     return "KILL"
 
 
+def _best_bar(slice_dict):
+    """Best recipe bar that has enough n. Thin recipes do not promote."""
+    def rank(v):
+        return {"KEEP": 3, "CONDITIONAL": 2, "KILL": 1, "null": 0}.get(v, 0)
+
+    keys = ("avoid_J_ge0", "elev_cap2_J_le-1")
+    best = "null"
+    for rec in ((slice_dict or {}).get(k) for k in keys):
+        if not rec or (rec.get("n") or 0) < MIN_N:
+            continue
+        if rank(rec.get("family_bar")) > rank(best):
+            best = rec.get("family_bar")
+    return best
+
+
 def family_verdict(pooled, prove, clock_ok=True, sleeve_disagree=False):
     """KEEP only if prove clears. Else CONDITIONAL / KILL / null."""
     def rank(v):
         return {"KEEP": 3, "CONDITIONAL": 2, "KILL": 1, "null": 0}.get(v, 0)
 
-    p_best = "null"
-    for rec in (prove or {}).values():
-        if rank(rec.get("family_bar")) > rank(p_best):
-            p_best = rec.get("family_bar")
-    o_best = "null"
-    for rec in (pooled or {}).values():
-        if rank(rec.get("family_bar")) > rank(o_best):
-            o_best = rec.get("family_bar")
+    p_best = _best_bar(prove)
+    o_best = _best_bar(pooled)
     if p_best == "null" and o_best == "null":
         out = "null"
     elif p_best == "KEEP":
@@ -704,13 +713,23 @@ def _plain_sleeves(sleeves, featured, counts):
     return " ".join(bits)
 
 
+def hold_slice(s):
+    """Prove if avoid n is usable; else pooled (cash books buy little later)."""
+    sl = s.get("slices") or {}
+    prove = sl.get("prove") or {}
+    a = (prove.get("avoid_J_ge0") or {})
+    e = (prove.get("elev_cap2_J_le-1") or {})
+    if max(a.get("n") or 0, e.get("n") or 0) >= MIN_PROVE_N:
+        return "prove", prove
+    pooled = sl.get("pooled") or prove
+    return "pooled", pooled
+
+
 def line_for_sleeve(s):
     """One plain-English line: NAME: VERDICT — avoid …; elev …."""
-    sl = s.get("slices") or {}
-    hold = sl.get("prove") or sl.get("pooled") or {}
+    win, hold = hold_slice(s)
     a = hold.get("avoid_J_ge0") or {}
     e = hold.get("elev_cap2_J_le-1") or {}
-    win = "prove" if sl.get("prove") else "pooled"
     return (
         f"{s['name']}: **{s['verdict']}** — {win} avoid "
         f"{_pp(a.get('vs_fullscan_pp')) or '—'} n={a.get('n', 0)}; "
@@ -769,8 +788,7 @@ def render_sleeve_tables(sleeves, featured_only=False):
         "|---|---|---|---:|---:|---:|---|---|",
     ]
     for s in rows:
-        sl = s.get("slices") or {}
-        hold = sl.get("prove") or sl.get("pooled") or {}
+        _win, hold = hold_slice(s)
         a = hold.get("avoid_J_ge0") or {}
         e = hold.get("elev_cap2_J_le-1") or {}
         L.append(

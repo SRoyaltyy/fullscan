@@ -190,8 +190,8 @@ def test_sleeve_recipe_verdict():
     assert recipe_verdict(0.40, 20, False, 0.01) == "CONDITIONAL"
     assert recipe_verdict(0.05, 20, True, 0.01) == "KILL"
     assert recipe_verdict(0.40, 8, True, 0.01) == "null"
-    keep = {"avoid_J_ge0": {"family_bar": "KEEP"}}
-    kill = {"avoid_J_ge0": {"family_bar": "KILL"}}
+    keep = {"avoid_J_ge0": {"family_bar": "KEEP", "n": 20}}
+    kill = {"avoid_J_ge0": {"family_bar": "KILL", "n": 20}}
     assert family_verdict(keep, keep) == "KEEP"
     assert family_verdict(keep, kill) == "CONDITIONAL"  # pooled only
     assert family_verdict(kill, kill) == "KILL"
