@@ -32,6 +32,8 @@ concurrency:
 
 jobs:
   guard:
+    # HALT 2026-09-08 — do not dispatch evening postclose / book heals. Revert to resume.
+    if: false
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
