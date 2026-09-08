@@ -1,61 +1,61 @@
 {
   "date": "2026-09-08",
   "policy": "flatten_robust",
-  "generated": "2026-09-08T14:35:36",
-  "cash": 10996.34,
+  "generated": "2026-09-08T14:36:55",
+  "cash": 11513.75,
   "io": [
     {
       "ticker": "ATRC",
       "sleeve": "io_core",
-      "shares": 401,
+      "shares": 396,
       "entry_px": 52.459999084472656,
       "entry_date": "2026-09-03",
       "last_px": 51.52000045776367,
-      "mv": 20659.52,
+      "mv": 20401.92,
       "exit_date": "2026-09-08",
       "reason": "io robust:3d_size"
     },
     {
       "ticker": "HRMY",
       "sleeve": "io_core",
-      "shares": 503,
+      "shares": 496,
       "entry_px": 41.86000061035156,
       "entry_date": "2026-09-03",
       "last_px": 42.25,
-      "mv": 21251.75,
+      "mv": 20956.0,
       "exit_date": "2026-09-08",
       "reason": "io robust:3d_size"
     },
     {
       "ticker": "CABA",
       "sleeve": "io_core",
-      "shares": 6055,
+      "shares": 5975,
       "entry_px": 3.4800000190734863,
       "entry_date": "2026-09-03",
       "last_px": 3.470000028610229,
-      "mv": 21010.85,
+      "mv": 20733.25,
       "exit_date": "2026-09-08",
       "reason": "io robust:3d_size"
     },
     {
       "ticker": "VSTM",
       "sleeve": "io_core",
-      "shares": 2640,
+      "shares": 2606,
       "entry_px": 7.980000019073486,
       "entry_date": "2026-09-03",
       "last_px": 8.199999809265137,
-      "mv": 21648.0,
+      "mv": 21369.2,
       "exit_date": "2026-09-08",
       "reason": "io robust:3d_size"
     },
     {
       "ticker": "RVTY",
       "sleeve": "io_core",
-      "shares": 161,
+      "shares": 159,
       "entry_px": 130.6300048828125,
       "entry_date": "2026-09-03",
       "last_px": 130.22000122070312,
-      "mv": 20965.42,
+      "mv": 20704.98,
       "exit_date": "2026-09-08",
       "reason": "io robust:3d_size"
     }
