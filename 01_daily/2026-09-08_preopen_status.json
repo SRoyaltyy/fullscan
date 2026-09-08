@@ -1,6 +1,6 @@
 {
   "date": "2026-09-08",
-  "generated_at": "2026-09-08T09:38:27.234595-04:00",
+  "generated_at": "2026-09-08T09:56:24.437111-04:00",
   "all_ok": false,
   "qc_all_ok": false,
   "book_ok": false,
@@ -17,74 +17,30 @@
       "key": "weather",
       "title": "Weather / regime",
       "returncode": 0
-    },
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "returncode": 1
-    },
-    {
-      "key": "events",
-      "title": "Event scanner (primary)",
-      "returncode": 0
-    },
-    {
-      "key": "events_catcher",
-      "title": "Event catcher (gap hunt, no carry)",
-      "returncode": 0
-    },
-    {
-      "key": "news_judge",
-      "title": "News judge",
-      "returncode": 0
-    },
-    {
-      "key": "map_heat_research",
-      "title": "Map heat morning delta refresh",
-      "returncode": 0
-    },
-    {
-      "key": "news_actions",
-      "title": "News actions",
-      "returncode": 0
-    },
-    {
-      "key": "general_predict",
-      "title": "General market predict",
-      "returncode": 0
-    },
-    {
-      "key": "sector_predict",
-      "title": "Per-sector predict (all 11)",
-      "returncode": 0
-    },
-    {
-      "key": "sector_board",
-      "title": "Sector board",
-      "returncode": 0
-    },
-    {
-      "key": "catalyst",
-      "title": "Catalyst dossiers (after book)",
-      "returncode": 0
     }
   ],
   "github_runs": [
     {
       "workflow": "preopen_all.yml",
-      "n_today": 7,
+      "n_today": 8,
       "latest": {
-        "id": 34229320047,
+        "id": 34234748508,
         "status": "in_progress",
         "conclusion": null,
         "event": "push",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/34229320047"
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/34234748508"
       }
     },
     {
       "workflow": "finviz_preopen_scrape.yml",
-      "n_today": 0,
-      "latest": null
+      "n_today": 1,
+      "latest": {
+        "id": 34234348923,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "schedule",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/34234348923"
+      }
     },
     {
       "workflow": "finviz_digest.yml",
