@@ -1,6 +1,6 @@
 {
   "generated": "2026-09-08",
-  "tip_sha": null,
+  "tip_sha": "e6fa4e33",
   "leak": "PASS",
   "live_untouched": "flatten_robust",
   "gate": {

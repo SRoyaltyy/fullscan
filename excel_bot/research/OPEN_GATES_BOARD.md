@@ -1,6 +1,6 @@
 # Open gates board — beyond J (lag candles + open-44 tallies)
 
-_Generated 2026-09-08 · tip `pending` · **research only** · live frozen._
+_Generated 2026-09-08 · tip `e6fa4e33` · **research only** · live frozen._
 
 ## Plain English
 
@@ -424,4 +424,4 @@ No recipe is wired into `flatten_robust` or cash/paper. Docs are not live. Do no
 
 ## Source
 
-`CLOCK_MAP.md` / `OPEN_SAME_ROW_LABELS.md` / `excel_clock_gate.py` · PR #153 J-only · this board tip `pending`. Research only. Live frozen.
+`CLOCK_MAP.md` / `OPEN_SAME_ROW_LABELS.md` / `excel_clock_gate.py` · PR #153 J-only · this board tip `e6fa4e33`. Research only. Live frozen.
