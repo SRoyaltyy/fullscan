@@ -1,225 +1,138 @@
 # Event Scan — 2026-09-08
 
-- events tracked: **27** (via openclaw)
+- events tracked: **31** (via repair, repaired) (merged with earlier same-day scan)
 - uncertainty: **elevated**
-- summary: Global markets face a high-stakes two weeks with the FOMC decision (Sep 15-16) as the centerpiece, now tilted toward a hike after the +162k NFP blowout and Warsh's hawkish Jackson Hole speech. The US-Iran conflict continues to escalate with CENTCOM striking Iranian tankers Sep 7, pushing Brent toward $99 and complicating the inflation picture ahead of CPI (Sep 11). Central banks globally (ECB, BOJ, BOE) are all leaning hawkish on energy-driven inflation. Trade tensions are escalating with Canada's retaliatory tariffs effective today and USMCA 4th-round talks this week. Apple's iPhone 18/foldable event and Oracle/Adobe/Kroger earnings offer sector-specific catalysts.
+- summary: Global markets face a confluence of escalating geopolitical risk (US-Iran conflict, Houthi attacks on Saudi energy, Canada-US trade war) and a hawkish central bank repricing led by the Fed, ECB, and BOJ. Oil near $100 threatens to push inflation higher just as the FOMC weighs its first hike under Chair Warsh. Key data (CPI, PPI, retail sales) and the FOMC decision dominate the next two weeks, while the Trump-Xi summit and BRICS meeting add diplomatic uncertainty. Equity markets are vulnerable to a risk-off shock if oil breaches $100 or the Fed delivers a hawkish surprise.
 
-## Events tracked (27)
+## Events tracked (31)
 
-1. **FOMC September decision (first Warsh SEP/dots)**
-   - macro_data | upcoming | 2026-09-15..2026-09-16 | impact 5/5 | mixed
-   - regions: US | sectors: BROAD, Financial
-   - Funds rate 3.50-3.75%; blowout NFP (+162k) and Warsh's hawkish Jackson Hole speech have pushed hike odds to ~53-60%, making this the single biggest market catalyst of the window.
-2. **US-Iran Strait of Hormuz conflict escalation**
-   - geopolitical | ongoing | 2026-08-31..2026-09-18 | impact 5/5 | bearish
-   - regions: US, Middle East | sectors: Energy, BROAD
-   - CENTCOM struck 3 Iranian oil tankers Sep 7 after Iran fired missiles at US warships; Brent ~$97-99, Hormuz throughput severely disrupted, feeding global inflation into the FOMC.
-3. **US August CPI**
-   - macro_data | upcoming | 2026-09-11 | impact 4/5 | bearish
-   - regions: US | sectors: BROAD
-   - July CPI was +3.4% y/y; August will capture the Hormuz oil spike feeding the energy channel directly into the FOMC decision.
-4. **US August PPI**
-   - macro_data | upcoming | 2026-09-10 | impact 3/5 | mixed
-   - regions: US | sectors: BROAD, Industrials
-   - July PPI was +4.7% y/y; pipeline read into CPI and the FOMC decision.
-5. **ECB rate decision (Berlin)**
-   - macro_data | upcoming | 2026-09-10 | impact 3/5 | bearish
-   - regions: EU | sectors: BROAD, Financial, Energy
-   - Deposit rate 2.25%; euro-area flash CPI hit 3.3% y/y in August on energy (+14.3%), markets price ~80-95% odds of a 25bp hike to 2.50%.
-6. **Bank of Japan policy meeting**
-   - macro_data | upcoming | 2026-09-17..2026-09-18 | impact 3/5 | mixed
-   - regions: Japan | sectors: BROAD, Financial
-   - Policy rate 1.0%; Reuters poll shows majority of economists expect a hike to 1.25% in September as yen weakness and energy import costs lift upside inflation risks.
-7. **Bank of England rate decision**
-   - macro_data | upcoming | 2026-09-17 | impact 2/5 | mixed
-   - regions: EU | sectors: BROAD, Financial
-   - Bank Rate 3.75% after June/July holds; energy volatility has trimmed hike odds versus the ECB's near-certain move.
-8. **Canada dollar-for-dollar tariffs take effect**
-   - government | today | 2026-09-08 | impact 3/5 | bearish
-   - regions: US, Canada | sectors: Consumer Cyclical, Industrials, Basic Materials, BROAD
-   - Ottawa matches US 50% Section 338 duties on ~$27.6B of US goods (steel, furniture, apparel, dairy, electronics) effective 12:01 a.m. today.
-9. **Apple 'Surprise and Shine' iPhone 18 / foldable Ultra event**
-   - ongoing | upcoming | 2026-09-09 | impact 3/5 | mixed
-   - regions: US, China, South Korea | sectors: Technology, Consumer Cyclical
-   - First hardware event under CEO John Ternus; expected iPhone 18 Pro/Pro Max and first foldable (iPhone Ultra) starting near $2,000.
-10. **Oracle Q1 FY2027 earnings**
-   - earnings | upcoming | 2026-09-10 | impact 3/5 | bullish
-   - regions: US | sectors: Technology
-   - Cloud-infrastructure print tests AI-capex spend beyond Nvidia/Dell/Broadcom hardware; $638B RPO backlog up 363% y/y needs to convert to revenue.
-11. **Adobe Q3 FY2026 earnings**
-   - earnings | upcoming | 2026-09-10 | impact 2/5 | mixed
-   - regions: US | sectors: Technology
-   - Software/AI-tools bellwether tests whether generative-AI monetization (AI-first ARR tripled to $500M+) is offsetting creative-cloud saturation.
-12. **Kroger Q2 FY2026 earnings**
+1. **Kroger Q2 FY2026 earnings**
    - earnings | upcoming | 2026-09-11 | impact 2/5 | mixed
    - regions: US | sectors: Consumer Defensive
-   - Grocery bellwether tests consumer resilience amid food inflation and the July retail-sales decline.
-13. **OPEC+ JMMC meeting (October quotas) — output unchanged**
+   - Grocery bellwether tests consumer resilience amid food inflation and the July retail-sales decline; revenue est. $34.65B.
+2. **OPEC+ JMMC meeting (October quotas) — output unchanged**
    - geopolitical | past | 2026-09-06 | impact 3/5 | mixed
    - regions: Middle East | sectors: Energy, BROAD
    - OPEC+ kept October output unchanged at September levels; Hormuz disruptions, not quotas, are the binding supply constraint.
-14. **China August trade data — exports +25% y/y**
+3. **China August trade data — exports +25% y/y**
    - macro_data | today | 2026-09-08 | impact 2/5 | bullish
    - regions: China | sectors: BROAD, Industrials, Technology
    - Exports surged 25% y/y to $401B, imports +28.2%, trade surplus widened to $119B — AI/electronics demand and tariff diversion still offset weak domestic demand.
-15. **China August CPI/PPI**
-   - macro_data | upcoming | 2026-09-09 | impact 2/5 | mixed
-   - regions: China | sectors: BROAD, Consumer Defensive
-   - July CPI was only +0.5% y/y; a still-soft print keeps the easing-bias case alive even as PBoC holds LPR at record lows.
-16. **US August retail sales**
-   - macro_data | upcoming | 2026-09-16 | impact 3/5 | mixed
-   - regions: US | sectors: Consumer Cyclical, Consumer Defensive, BROAD
-   - July retail sales fell -0.6% (first decline in 9 months); drops on FOMC day two and is the consumer-resilience check.
-17. **US August NFP — +162k blowout**
+4. **US August NFP — +162k blowout**
    - macro_data | past | 2026-09-04 | impact 4/5 | bearish
    - regions: US | sectors: BROAD
    - Nonfarm payrolls surged to +162k vs ~53-58k expected, unemployment steady at 4.1% — reshaped Fed hike odds higher and roiled markets.
-18. **Google ad-tech antitrust ruling — no breakup**
+5. **Google ad-tech antitrust ruling — no breakup**
    - judicial | past | 2026-09-02 | impact 3/5 | bullish
    - regions: US | sectors: Technology, Communication Services
-   - Judge Brinkema ordered behavioral changes but rejected DOJ's breakup request — third straight Big Tech antitrust win for Google.
-19. **US Section 232 drone/UAS tariffs live**
+   - Federal judge ruled Google must change ad-tech practices but rejected DOJ's breakup request — third Big Tech antitrust loss that avoids structural remedy.
+6. **US Section 232 drone/UAS tariffs live**
    - government | past | 2026-09-03 | impact 2/5 | mixed
    - regions: US, China, EU, Japan, South Korea | sectors: Industrials, Technology
    - 100% duties on larger/thermal UAS and 25% on smaller drones went live Sept 3, aimed at China supply chains with 10-15% allied caps.
-20. **Boeing SPEEA engineer contract negotiations resume**
+7. **Boeing SPEEA engineer contract negotiations resume**
    - ongoing | today | 2026-09-08 | impact 2/5 | mixed
    - regions: US | sectors: Industrials
    - Engineers/technicians rejected Boeing's 'best and final offer' and authorized a strike; talks resume today — a strike could threaten the 737 MAX 42/month rate.
-21. **USMCA 4th round review talks (Washington)**
+8. **USMCA 4th round review talks (Washington)**
    - geopolitical | upcoming | 2026-09-08..2026-09-15 | impact 3/5 | mixed
    - regions: US, Mexico, Canada | sectors: Industrials, Consumer Cyclical, Basic Materials, BROAD
    - US withheld USMCA renewal July 1, leaving pact on annual clock; 4th round in Washington this week is decisive for auto rules-of-origin and Section 232 tariffs.
-22. **US midterm elections (Nov 3) — positioning builds**
+9. **US midterm elections (Nov 3) — positioning builds**
    - legislative | upcoming | 2026-11-03 | impact 3/5 | mixed
    - regions: US | sectors: BROAD
    - Democrats favored to win at least one chamber; markets starting to price divided-government scenarios and potential debt-ceiling fights.
-23. **US debt ceiling / X-date risk building**
+10. **US debt ceiling / X-date risk building**
    - legislative | upcoming | 2026-10-01..2026-11-30 | impact 4/5 | bearish
    - regions: US | sectors: BROAD, Financial
    - Debt ceiling at $41.1T; CBO projects X-date could hit in late 2026, with Treasury accounting devices giving a few months of leeway.
-24. **Hurricane Lowell / Atlantic hurricane season**
+11. **Hurricane Lowell / Atlantic hurricane season**
    - ongoing | past | 2026-09-06..2026-09-09 | impact 2/5 | mixed
    - regions: US | sectors: Energy, Utilities, Consumer Cyclical
    - Major Hurricane Lowell passing west of Hawaii; Tropical Storm Edouard made landfall in Louisiana — active season adds energy/insurance volatility.
-25. **AI trade fatigue / Broadcom beat-and-slide aftermath**
-   - ongoing | ongoing | 2026-08-25..2026-09-22 | impact 3/5 | mixed
-   - regions: US, South Korea, Taiwan | sectors: Technology
-   - AI chip complex has seen selloffs on valuation concerns; Oracle/Adobe prints this week test whether AI-capex narrative holds.
-26. **ISM Services PMI (August) — 55.4 beat**
+12. **ISM Services PMI (August) — 55.4 beat**
    - macro_data | past | 2026-09-03 | impact 3/5 | bullish
    - regions: US | sectors: BROAD, Industrials, Financial
    - Services PMI surged to 55.4 from 54.1, beating forecasts — but employment subindex softness complicates the Fed's read.
-27. **Fed's Waller hold-lean comments**
+13. **Fed's Waller hold-lean comments**
    - macro_data | past | 2026-09-03 | impact 3/5 | bullish
    - regions: US | sectors: BROAD, Financial
    - Governor Waller said he's inclined to leave rates unchanged if inflation softens — but the NFP blowout 1 day later muddied that signal.
+14. **FOMC September decision (first Warsh SEP/dots)**
+   - macro_data | upcoming | 2026-09-15..2026-09-16 | impact 5/5 | mixed
+   - regions: US | sectors: BROAD, Financial
+   - Funds rate 3.50-3.75%; blowout NFP (+162k) and Warsh's hawkish Jackson Hole speech have pushed hike odds to ~50-60%, making this the single biggest market catalyst of the window.
+15. **US-Iran Strait of Hormuz conflict escalation**
+   - geopolitical | ongoing | 2026-08-31..2026-09-18 | impact 5/5 | bearish
+   - regions: US, Middle East | sectors: Energy, BROAD
+   - CENTCOM struck 3 Iranian oil tankers Sep 7; Houthis attacked Saudi energy facilities Sep 8 wounding 73; Brent ~$98 and Dow dropped 500 points as oil nears $100.
+16. **US August CPI**
+   - macro_data | upcoming | 2026-09-11 | impact 4/5 | bearish
+   - regions: US | sectors: BROAD
+   - July CPI was +3.4% y/y; August will capture the Hormuz oil spike feeding the energy channel directly into the FOMC decision.
+17. **US August PPI**
+   - macro_data | upcoming | 2026-09-10 | impact 3/5 | mixed
+   - regions: US | sectors: BROAD, Industrials
+   - July PPI was +4.7% y/y; pipeline read into CPI and the FOMC decision.
+18. **ECB rate decision (Berlin)**
+   - macro_data | upcoming | 2026-09-10 | impact 3/5 | bearish
+   - regions: EU | sectors: BROAD, Financial, Energy
+   - Deposit rate 2.25%; euro-area flash CPI hit 3.3% y/y in August on energy (+14.3%), markets price ~80-95% odds of a 25bp hike to 2.50%.
+19. **Bank of Japan policy meeting**
+   - macro_data | upcoming | 2026-09-17..2026-09-18 | impact 3/5 | mixed
+   - regions: Japan | sectors: BROAD, Financial
+   - Policy rate 1.0%; Reuters poll shows majority of economists expect a hike to 1.25% in September as yen weakness and energy import costs lift upside inflation risks.
+20. **Bank of England rate decision**
+   - macro_data | upcoming | 2026-09-17 | impact 2/5 | mixed
+   - regions: EU | sectors: BROAD, Financial
+   - Bank Rate 3.75% after June/July holds; inflation climbed to 2.9%, markets moved from pricing cuts to pricing first rise.
+21. **Canada dollar-for-dollar tariffs take effect**
+   - government | today | 2026-09-08 | impact 3/5 | bearish
+   - regions: US, Canada | sectors: Consumer Cyclical, Industrials, Basic Materials, BROAD
+   - Ottawa matches US 50% Section 338 duties on ~$27.6B of US goods (steel, furniture, apparel, dairy, electronics) effective 12:01 a.m. today.
+22. **Apple 'Surprise and Shine' iPhone 18 / foldable Ultra event**
+   - ongoing | upcoming | 2026-09-09 | impact 3/5 | mixed
+   - regions: US, China, South Korea | sectors: Technology, Consumer Cyclical
+   - First hardware event under CEO John Ternus; expected iPhone 18 Pro/Pro Max and first foldable (iPhone Ultra) starting near $2,000.
+23. **Oracle Q1 FY2027 earnings**
+   - earnings | upcoming | 2026-09-10 | impact 3/5 | bullish
+   - regions: US | sectors: Technology
+   - Cloud-infrastructure print tests AI-capex spend beyond Nvidia/Dell/Broadcom hardware; consensus EPS $1.74 on revenue $19.13B.
+24. **Adobe Q3 FY2026 earnings**
+   - earnings | upcoming | 2026-09-10 | impact 2/5 | mixed
+   - regions: US | sectors: Technology
+   - Software/AI-tools bellwether tests whether generative-AI monetization is offsetting creative-cloud saturation; EPS est. $6.09.
+25. **OPEC+ JMMC meeting — output unchanged**
+   - geopolitical | past | 2026-09-06 | impact 3/5 | mixed
+   - regions: Middle East | sectors: Energy, BROAD
+   - OPEC+ kept October output unchanged at September levels; Hormuz disruptions, not quotas, are the binding supply constraint.
+26. **China August CPI/PPI**
+   - macro_data | upcoming | 2026-09-09 | impact 2/5 | mixed
+   - regions: China | sectors: BROAD, Consumer Defensive
+   - July CPI was only +0.5% y/y; a still-soft print keeps the easing-bias case alive even as PBoC holds LPR at record lows.
+27. **US August retail sales**
+   - macro_data | upcoming | 2026-09-16 | impact 3/5 | mixed
+   - regions: US | sectors: Consumer Cyclical, Consumer Defensive, BROAD
+   - July retail sales fell -0.6% (first decline in 9 months); drops on FOMC day two and is the consumer-resilience check.
+28. **Houthi attacks on Saudi energy facilities**
+   - geopolitical | today | 2026-09-08 | impact 4/5 | bearish
+   - regions: Middle East, US | sectors: Energy, BROAD
+   - Iran-backed Houthis attacked Saudi cities and energy facilities wounding 73, igniting fires at oil facilities — Brent near $98 and Dow dropped 500 points.
+29. **Trump-Xi summit in Washington (Sept 24)**
+   - geopolitical | upcoming | 2026-09-24 | impact 4/5 | mixed
+   - regions: US, China | sectors: BROAD, Technology, Industrials
+   - Xi to visit White House Sept 24; trade truce extension 'almost certain' but China's record $119B monthly surplus and new tariff threats loom over talks.
+30. **BRICS Summit — New Delhi**
+   - geopolitical | upcoming | 2026-09-11..2026-09-13 | impact 2/5 | mixed
+   - regions: India, China, Russia, Middle East | sectors: BROAD, Energy, Basic Materials
+   - India hosts BRICS with expansion debate (Pakistan, Bangladesh aspirants); Modi-Putin bilateral on agenda; China uses bloc to project alternative to US-led order.
+31. **Germany state election — AfD landslide in Saxony-Anhalt**
+   - geopolitical | past | 2026-09-06 | impact 3/5 | bearish
+   - regions: Germany, EU | sectors: BROAD
+   - AfD won a historic state election victory, signaling rising anti-establishment sentiment and potential policy paralysis in Berlin ahead of federal elections.
 
 ---
 
 ## Model narrative
 
-I now have comprehensive coverage across all categories. Let me compile the final scan with the JSON block first.
-
-Key updates from the previous scan:
-- NFP came in at +162k (vs ~53-58k expected) — big beat, reshaped Fed hike odds
-- Google ad-tech antitrust ruling (Sep 2) — no breakup, behavioral remedies only
-- OPEC+ JMMC (Sep 6) — kept October output unchanged
-- China trade data (Sep 8, today) — exports +25% y/y
-- Canada tariffs effective today (Sep 8)
-- US-Iran conflict escalated further — CENTCOM struck 3 Iranian oil tankers Sep 7, Brent ~$97-99
-- Boeing SPEEA negotiations resume today (Sep 8)
-- USMCA 4th round talks in Washington early September
-
-Let me finalize the JSON.
-
----
-
-## TODAY — 2026-09-08
-
-**Government / Trade**
-- **Canada dollar-for-dollar tariffs take effect** (today) — Ottawa matches US 50% Section 338 duties on ~$27.6B of US goods. Sectors: Consumer Cyclical, Industrials, Basic Materials, BROAD. Why: cross-border supply-chain disruption and US exporter pain. Watch: whether talks resume.
-- **USMCA 4th-round review talks (Washington)** (this week) — US withheld renewal July 1; auto rules-of-origin and Section 232 tariffs are the sticking points. Sectors: Industrials, Consumer Cyclical, Basic Materials, BROAD.
-
-**Macro data**
-- **China August trade data released** — exports +25% y/y to $401B, imports +28.2%, surplus widened to $119B. Bullish for global tech/industrials. Watch: whether the widening surplus escalates US pressure.
-
-**Ongoing / Labor**
-- **Boeing SPEEA engineer contract negotiations resume** (today) — engineers rejected 'best and final offer' and authorized strike. Sectors: Industrials. Watch: strike risk to 737 MAX 42/month rate.
-
-## THIS WEEK AND NEXT (upcoming)
-
-**Macro data & central banks**
-- **US August PPI** (Sep 10) — July was +4.7% y/y; pipeline read into CPI and FOMC.
-- **ECB rate decision** (Sep 10) — ~80-95% odds of 25bp hike to 2.50% on energy-driven inflation.
-- **US August CPI** (Sep 11) — July +3.4% y/y; will capture Hormuz oil spike. Critical for FOMC.
-- **FOMC September decision** (Sep 15-16) — coin flip between hold and hike (~53-60% hike odds) after NFP blowout.
-- **US August retail sales** (Sep 16) — July fell -0.6%; consumer-resilience check on FOMC day two.
-- **Bank of Japan** (Sep 17-18) — majority of economists expect hike to 1.25%.
-- **Bank of England** (Sep 17) — Bank Rate 3.75%; energy volatility trims hike odds.
-- **China August CPI/PPI** (Sep 9) — soft print keeps easing-bias case alive.
-
-**Earnings**
-- **Oracle Q1 FY2027** (Sep 10) — AI-capex test; $638B RPO backlog.
-- **Adobe Q3 FY2026** (Sep 10) — generative-AI monetization test.
-- **Kroger Q2 FY2026** (Sep 11) — consumer-resilience bellwether.
-
-**Ongoing / Corporate**
-- **Apple iPhone 18 / foldable Ultra event** (Sep 9) — first Ternus-era hardware event.
-
-## STILL IN PLAY (recent past)
-
-- **US-Iran Hormuz conflict** — CENTCOM struck 3 Iranian tankers Sep 7 after missile attacks on US warships; Brent ~$97-99. Market effect far from finished.
-- **US August NFP +162k blowout** (Sep 4) — reshaped Fed hike odds higher; roiled markets.
-- **Google ad-tech antitrust ruling** (Sep 2) — no breakup, behavioral remedies only; positive for Big Tech.
-- **OPEC+ JMMC** (Sep 6) — kept October output unchanged; Hormuz, not quotas, is the binding constraint.
-- **ISM Services PMI 55.4** (Sep 3) — beat, but employment subindex soft.
-- **Fed's Waller hold-lean** (Sep 3) — muddied by the NFP blowout a day later.
-- **US Section 232 drone tariffs** (Sep 3) — live, aimed at China supply chains.
-- **AI trade fatigue** — Broadcom beat-and-slide aftermath; Oracle/Adobe prints this week test the narrative.
-
-## TOP RISKS
-
-1. **FOMC September hike** (53-60% odds) — a surprise hike or hawkish dots could trigger broad risk-off.
-2. **US-Iran conflict escalation** — oil near $99; further Hormuz disruption pushes Brent past $100 and feeds global inflation.
-3. **August CPI hot print** (Sep 11) — confirming energy pass-through into the FOMC decision.
-4. **Canada tariff war + USMCA 4th-round failure** — escalation risk for North American trade.
-5. **Debt-ceiling X-date** approaching late 2026 with no legislative path visible.
-
-## TOP OPPORTUNITIES
-
-1. **Google ad-tech no-breakup ruling** — positive for Big Tech and communication services.
-2. **China exports +25%** — AI/electronics demand resilience supports global tech supply chain.
-3. **Oracle/Adobe earnings** — strong RPO conversion could reignite the AI-capex trade.
-4. **Apple foldable iPhone Ultra launch** — potential consumer upgrade catalyst.
-5. **Strong NFP (+162k)** — signals labor-market resilience despite Fed tightening.
-
-## UNCERTAINTY
-
-**elevated** — The FOMC decision is a genuine coin flip, the US-Iran conflict is escalating with oil near $99, and the CPI print lands just days before the Fed decision, creating a dense cluster of binary catalysts in the next two weeks.
-
-## RESEARCH APPENDIX
-
-Coverage rounds performed (all with live web search):
-1. White House executive orders / presidential actions (Sep 4, 7)
-2. Congress / budget / debt ceiling
-3. Fed FOMC September + Warsh + Waller + hike odds
-4. US CPI/PPI August (Sep 10-11)
-5. NFP August result (+162k)
-6. ECB, BOJ, BOE decisions
-7. China trade data (today) + CPI/PPI (Sep 9)
-8. US-Iran / Hormuz conflict escalation
-9. OPEC+ JMMC (Sep 6)
-10. Apple iPhone 18 event
-11. Oracle/Adobe/Kroger earnings
-12. Canada tariffs (effective today)
-13. USMCA 4th round talks
-14. Boeing SPEEA negotiations
-15. Google antitrust ruling
-16. AI trade fatigue
-17. Hurricane season / weather
-18. Midterm elections positioning
-19. IPO calendar (quiet — no blockbuster US listings in window)
-20. South Korea chip exports / HBM
-
-Note: IPO calendar is genuinely quiet for the window — no blockbuster US listings scheduled between Sep 9-22. The AI trade and central-bank decisions dominate the near-term catalyst calendar.
+I have enough data now. Let me compile the comprehensive event scan. The BRICS summit appears to be in New Delhi around September 11-13 based on the bank holiday reference. Let me finalize the JSON.

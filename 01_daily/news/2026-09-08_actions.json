@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-09-08T10:47:49.645946-04:00",
+  "hours": 48,
+  "raw_headlines": 0,
+  "unique_events": 0,
+  "universe_rows": 11606,
+  "interactions": [],
+  "reasoned_events": [],
+  "edge_actions": [],
+  "ticker_actions": [
+    {
+      "ticker": "AMGN",
+      "buy_score": 3.0,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "news_judge",
+          "side": "buy",
+          "weight": 3.0,
+          "bucket": "judge"
+        }
+      ],
+      "net": 3.0,
+      "side": "buy"
+    },
+    {
+      "ticker": "XLU",
+      "buy_score": 0.0,
+      "sell_score": 1.5,
+      "events": [
+        {
+          "event": "news_judge",
+          "side": "sell",
+          "weight": 1.5,
+          "bucket": "judge"
+        }
+      ],
+      "net": -1.5,
+      "side": "sell"
+    }
+  ],
+  "judge_tickers": {
+    "AMGN": 3.0,
+    "XLU": -1.5
+  }
+}

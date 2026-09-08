@@ -1,6 +1,6 @@
 {
   "date": "2026-09-08",
-  "generated_at": "2026-09-08T10:53:00.420923-04:00",
+  "generated_at": "2026-09-08T11:44:16.898468-04:00",
   "inputs": [
     {
       "name": "finviz_export",
@@ -21,13 +21,13 @@
       "family": "join",
       "status": "ok",
       "n": 5902,
-      "detail": "std=0.987"
+      "detail": "std=0.988"
     },
     {
       "name": "news_actions",
       "family": "news",
-      "status": "missing",
-      "n": 0,
+      "status": "degraded",
+      "n": 2,
       "detail": ""
     },
     {
@@ -70,7 +70,7 @@
       "family": "addon",
       "status": "ok",
       "n": null,
-      "detail": "27 events, scan_date=2026-09-08"
+      "detail": "31 events, scan_date=2026-09-08"
     },
     {
       "name": "map_heat",
@@ -82,16 +82,16 @@
     {
       "name": "general_predict",
       "family": "general",
-      "status": "missing",
+      "status": "ok",
       "n": null,
-      "detail": "s_general=0 \u2014 weight renormalized away"
+      "detail": ""
     },
     {
       "name": "sector_predicts",
       "family": "sector",
-      "status": "missing",
-      "n": 0,
-      "detail": "0/11 quality"
+      "status": "degraded",
+      "n": 9,
+      "detail": "9/11 quality"
     },
     {
       "name": "price_store",
@@ -107,8 +107,8 @@
     "ab": "ok",
     "peer": "ok",
     "heat": "ok",
-    "general": "missing",
-    "sector": "missing"
+    "general": "ok",
+    "sector": "degraded"
   },
   "families_present": {
     "join": true,
@@ -116,8 +116,8 @@
     "ab": true,
     "peer": true,
     "heat": true,
-    "general": false,
-    "sector": false
+    "general": true,
+    "sector": true
   },
   "learn_grade": true,
   "worst": "missing"
