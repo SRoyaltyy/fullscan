@@ -8,7 +8,7 @@ name: Pre-Open ALL (predictive one-shot)
 # This file is a poke: a main push that touches it starts the packet
 # (workflow_dispatch is 403 from the cloud agent). Push is ubuntu/DeepSeek
 # so a queued ECS job (offline runner) cannot block the 09:30 packet.
-# poke 2026-09-08 ~08:54 ET — cancel zombie; DeepSeek credits live; ubuntu LLM refire
+# poke 2026-09-08 ~09:00 ET — gh cancel 403; new ubuntu group so LLM can start
 
 on:
   push:
@@ -59,7 +59,7 @@ permissions:
 concurrency:
   # Queued self-hosted runs sit forever if ecs-openclaw is offline.
   # Ubuntu/DeepSeek must not share that group or the heal never starts.
-  group: preopen-all-${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'ubuntu' || 'ecs' }}
+  group: preopen-all-${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-0900' || 'ecs' }}
   cancel-in-progress: true
 
 jobs:
