@@ -30,7 +30,7 @@ Source: `OPEN_SAME_ROW_LABELS.md` + `CLOCK_MAP.md` + `clock.py`. `excel_clock_ga
 - Onset uses yesterday's M fill (lag). Soft-regime heat is the prior-5 mean of I (`[ei-5, ei)`). SPY tape is a ship-bar slice.
 - `FILL_IDX` maps through `VISIBLE` (M=12). The 4.4k / +10.6% KEEP had `enumerate(OPEN_FILL)` so M read **H's fill** (H>5%). Aborted.
 
-Panel **5193** tickers · **2018-09-04 → 2026-09-04** · **8,543,587** name-days · calendar days **2012**. Futubull 0.15% long off the recipe and the buy-everyone book. Beat book **and** any-green parent by ≥20 bp. Ghost: top-5 / drop-5 / July / day lottery / Q1. Both SPY tapes. Heat terciles cold ≤ -0.37%, hot ≥ 0.39%. Tip `2899245a`.
+Panel **5193** tickers · **2018-09-04 → 2026-09-04** · **8,543,587** name-days · calendar days **2012**. Futubull 0.15% long off the recipe and the buy-everyone book. Beat book **and** any-green parent by ≥20 bp. Ghost: top-5 / drop-5 / July / day lottery / Q1. Both SPY tapes. Heat terciles cold ≤ -0.37%, hot ≥ 0.39%. Tip `c2537d95`.
 
 A / G / K / L multi-shade and O mint are **not painted** on this expand (same M-only panel as #150/#151). IR/IS/IT have no CF.
 

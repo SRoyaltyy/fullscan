@@ -1240,4 +1240,4 @@ _Generated 2026-09-08 · live `flatten_robust` frozen. Shade hex + onset on open
 
 ## Shade 2d/3d cumulative (open-entry)
 
-_Generated 2026-09-08 · live `flatten_robust` frozen. Open shade → 2d/3d stacked I (HI_HORIZON `I_sum`). Family **null**. KEEP 0 · KILL 8. See `SHADE_2D3D.md`. Tip `2899245a`. Not live._
+_Generated 2026-09-08 · live `flatten_robust` frozen. Open shade → 2d/3d stacked I (HI_HORIZON `I_sum`). Family **null**. KEEP 0 · KILL 8. See `SHADE_2D3D.md`. Tip `c2537d95`. Not live._

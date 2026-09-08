@@ -97,7 +97,7 @@ Live `flatten_robust` stays frozen. No card under `strategies/`. Soft-regime maj
 
 ## 2d / 3d stacked I recut (follow-on)
 
-_Generated 2026-09-08 · tip `2899245a` · **research cards only** · live `flatten_robust` frozen · family **null**._
+_Generated 2026-09-08 · tip `c2537d95` · **research cards only** · live `flatten_robust` frozen · family **null**._
 
 Primary labels are HI_HORIZON `I_sum` 2d and 3d (compound daily I). Same-day H is baseline only. Same expand panel as #150/#151 (5193 names, 2018-09-04 → 2026-09-04).
 
