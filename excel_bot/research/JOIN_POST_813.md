@@ -97,4 +97,6 @@ Live tickets after 2026-08-13: **30** (mean +2.06%). Avoid/elevate on this book 
 
 Gate: `OPEN_SAME_ROW_LABELS + CLOCK_MAP`. Fills open: A, B, C, G, J, K, L, M, O, IR, IS, IT. Live frozen.
 
+Tip `c3df984f` · n=144 join top-8 / n=121 avoid_J_ge0 · +0.51 pp / +0.27 pp.
+
 Research only.

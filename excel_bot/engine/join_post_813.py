@@ -799,6 +799,9 @@ def render(payload):
         f"Gate: `{g['gate']}`. Fills open: {', '.join(g['fill_open'])}. "
         "Live frozen.",
         "",
+        f"Tip `{payload.get('tip_sha') or 'local'}` · "
+        f"n={payload['baseline']['n']} join top-8.",
+        "",
         "Research only.",
         "",
     ]
