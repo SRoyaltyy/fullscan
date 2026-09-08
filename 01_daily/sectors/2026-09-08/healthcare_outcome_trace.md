@@ -8,18 +8,18 @@
 
 **Step 1 — Research.** The model wanted to know: *"healthcare stocks XLV decline September 8 2026"* → got 6 results (via ddg)
 
-  - Sector Update: Healthcare Stocks Decline Late Afternoon (https://finance.yahoo.com/healthcare/articles/sector-healthcare-stocks-decline-afternoon-195314180.html)
+  - Sector Update: Healthcare Stocks Decline Late Afternoon (https://finance.yahoo.com/healthcare/articles/sector-healthcare-stocks-decline-afternoon-194843740.html)
 
-  - Health Care Select Sector SPDR Fund (XLV) ETF Analysis (https://tickeron.com/ticker/XLV/)
+  - XLV Price: Quote, Forecast, Charts & News - Perplexity (https://www.perplexity.ai/finance/XLV)
 
-  - State Street Health Care Select Sector SPDR ETF (XLV) - Nasdaq (https://www.nasdaq.com/market-activity/etf/xlv)
+  - XLV: State Street® Health Care Select Sector SPDR® ETF (https://www.ssga.com/us/en/intermediary/etfs/state-street-health-care-select-sector-spdr-etf-xlv)
 
-**Step 2 — Research.** The model wanted to know: *"pharma biotech selloff September 8 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"pharma biotech sector selloff September 8 2026"* → got 6 results (via ddg)
 
-  - Fierce Biotech Layoff Tracker 2026: Novartis nixes Swiss site (https://www.fiercebiotech.com/biotech/fierce-biotech-layoff-tracker-2026)
+  - BioPharma Dive: Biotech and Pharma Industry News (https://www.biopharmadive.com/)
 
   - Here's Why Ionis Pharmaceuticals' Steep Sell-off Was Overdone (https://finance.yahoo.com/healthcare/articles/heres-why-ionis-pharmaceuticals-steep-090400669.html)
 
-  - BioPharma Dive: Biotech and Pharma Industry News (https://www.biopharmadive.com/)
+  - Fierce Biotech Layoff Tracker 2026: Novartis nixes Swiss site (https://www.fiercebiotech.com/biotech/fierce-biotech-layoff-tracker-2026)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
