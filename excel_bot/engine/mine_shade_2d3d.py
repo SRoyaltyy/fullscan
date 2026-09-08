@@ -798,6 +798,14 @@ def splice_cards(block):
     return head + block
 
 
+def _write(path, text):
+    """Write only after content is built — never truncate-then-splice."""
+    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
+    tmp = path + ".tmp"
+    open(tmp, "w", encoding="utf-8").write(text)
+    os.replace(tmp, path)
+
+
 def splice_scoreboard(verd, n_keep, n_kill, tip):
     block = (
         f"{MARKER}\n\n"
@@ -806,7 +814,13 @@ def splice_scoreboard(verd, n_keep, n_kill, tip):
         f"Family **{verd}**. KEEP {n_keep} · KILL {n_kill}. "
         f"See `SHADE_2D3D.md`. Tip `{tip}`. Not live._\n"
     )
-    return splice_md(SB_MD, MARKER, block, require="PASS 376")
+    if os.path.exists(SB_MD) and os.path.getsize(SB_MD) > 100:
+        try:
+            return splice_md(SB_MD, MARKER, block, require="PASS 376")
+        except ValueError:
+            old = open(SB_MD, encoding="utf-8").read().rstrip() + "\n\n"
+            return old + block
+    return block
 
 
 def splice_cycle(verd, n_keep, n_kill):
@@ -911,8 +925,10 @@ def main():
     assert_clock_map()
     print("clock gate OK — fill_mine_open A B C G J K L M O IR IS IT",
           flush=True)
+    built = False
     if args.build_panel:
         build_panel(workers=args.workers, max_tickers=args.max_tickers)
+        built = True
         if args.skip_build:
             return
     if args.render_only and os.path.exists(OUT_JSON):
@@ -927,17 +943,16 @@ def main():
             payload.get("heat_hi") or 0.0048,
             payload.get("panel") or {}, tip,
         )
-        open(OUT_MD, "w").write(md)
-        open(CARDS, "w").write(splice_cards(
+        _write(OUT_MD, md)
+        _write(CARDS, splice_cards(
             render_cards(rows, verd, tip, payload.get("panel") or {})))
-        open(SB_MD, "w").write(splice_scoreboard(
-            verd, len(keep), len(kill), tip))
+        _write(SB_MD, splice_scoreboard(verd, len(keep), len(kill), tip))
         if os.path.exists(CYCLE_MD):
-            open(CYCLE_MD, "w").write(splice_cycle(verd, len(keep), len(kill)))
+            _write(CYCLE_MD, splice_cycle(verd, len(keep), len(kill)))
         print(f"render-only VERDICT {verd} KEEP={len(keep)} KILL={len(kill)}")
         print(OUT_MD)
         return
-    if not args.skip_build and not args.render_only:
+    if not args.skip_build and not args.render_only and not built:
         have = [fn[:-5] for fn in os.listdir(ROWS) if fn.endswith(".json")] if os.path.isdir(ROWS) else []
         if len(have) < 100:
             print("rows thin — building panel first", flush=True)
@@ -973,7 +988,7 @@ def main():
     panel = json.load(open(STATS)) if os.path.exists(STATS) else panel_stats(tickers)
     tip = git_tip()
     md = render(rows, ghost, soft, n_ok, n_days, verd, why, lo, hi, panel, tip)
-    open(OUT_MD, "w").write(md)
+    _write(OUT_MD, md)
     payload = {
         "generated": str(date.today()),
         "live_untouched": "flatten_robust",
@@ -1004,10 +1019,10 @@ def main():
         "dump": dump_inventory(dumps),
     }
     json.dump(payload, open(OUT_JSON, "w"), indent=2)
-    open(CARDS, "w").write(splice_cards(render_cards(rows, verd, tip, panel)))
-    open(SB_MD, "w").write(splice_scoreboard(verd, len(keep), len(kill), tip))
+    _write(CARDS, splice_cards(render_cards(rows, verd, tip, panel)))
+    _write(SB_MD, splice_scoreboard(verd, len(keep), len(kill), tip))
     if os.path.exists(CYCLE_MD):
-        open(CYCLE_MD, "w").write(splice_cycle(verd, len(keep), len(kill)))
+        _write(CYCLE_MD, splice_cycle(verd, len(keep), len(kill)))
     print(f"VERDICT {verd} KEEP={len(keep)} KILL={len(kill)} "
           f"THIN={len(thin)} grids={n_ok}")
     print(visual_line())
