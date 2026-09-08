@@ -714,6 +714,42 @@ def test_ubuntu_postclose_skips_grok_and_keeps_runner_home() -> None:
     assert "postclose_last_closed.yml" not in post_yml.split("push:")[1].split("workflow_dispatch:")[0]
 
 
+def test_persist_dir_falls_back_when_gha_unwritable() -> None:
+    """GH-hosted ubuntu cannot mkdir /home/gha — snapshot must still land."""
+    import tempfile
+
+    from src import run_preopen_all as rpa
+
+    home = tempfile.mkdtemp(prefix="fs-persist-home-")
+    prev = {k: os.environ.get(k) for k in (
+        "FULLSCAN_PERSIST", "FULLSCAN_HOME", "HOME")}
+    try:
+        os.environ["FULLSCAN_PERSIST"] = "/root/fullscan-persist-denied"
+        os.environ["FULLSCAN_HOME"] = home
+        os.environ["HOME"] = home
+        got = rpa.persist_dir()
+        assert got == Path(home) / "fullscan-persist"
+        assert got.is_dir()
+        probe = got / "ok.txt"
+        probe.write_text("ok", encoding="utf-8")
+        assert probe.read_text(encoding="utf-8") == "ok"
+    finally:
+        for k, v in prev.items():
+            if v is None:
+                os.environ.pop(k, None)
+            else:
+                os.environ[k] = v
+
+
+def test_safe_git_push_keeps_dated_ranker_on_conflict() -> None:
+    """Land-book vs stock-book race must not abort the essay/book persist."""
+    text = (ROOT / "scripts" / "safe_git_push.sh").read_text(encoding="utf-8")
+    assert "restore_ours_ranker" in text
+    assert "data/stock_book" in text
+    assert "01_daily/weather" in text
+    assert "keeping our 01_daily + dated ranker" in text
+
+
 def test_ubuntu_preopen_not_blocked_by_queued_ecs() -> None:
     """A queued ecs-openclaw job must not block the ubuntu/DeepSeek packet."""
     yml = (WF / "preopen_all.yml").read_text(encoding="utf-8")
@@ -813,6 +849,8 @@ def main() -> None:
         test_general_reflect_writes_gate_file_and_reuses_transcript,
         test_postclose_pushes_after_each_llm_layer,
         test_ubuntu_postclose_skips_grok_and_keeps_runner_home,
+        test_persist_dir_falls_back_when_gha_unwritable,
+        test_safe_git_push_keeps_dated_ranker_on_conflict,
         test_ubuntu_preopen_not_blocked_by_queued_ecs,
         test_last_closed_sidecar_does_not_share_ubuntu_concurrency,
         test_search_and_sector_rounds_are_bounded,
