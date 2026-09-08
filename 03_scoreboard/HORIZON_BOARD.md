@@ -1,14 +1,14 @@
 # Horizon board — multi-timeframe prediction grades
 
-Updated: 2026-09-04. Calls are graded at T+h trading days using the scoreboard's own close history. Magnitude bands scale by √h (a 'mild' month ≈ ±1.4%, a 'severe' month ≈ ±9.2%).
+Updated: 2026-09-08. Calls are graded at T+h trading days using the scoreboard's own close history. Magnitude bands scale by √h (a 'mild' month ≈ ±1.4%, a 'severe' month ≈ ±9.2%).
 
 ## Hit rates by topic × horizon
 
 | Topic | Horizon | Graded | Dir hit | Mag hit | Avg actual % |
 |---|---|---|---|---|---|
-| general | 3d | 10 | 10% (1/10) | 40% (4/10) | -0.16% |
+| general | 3d | 11 | 9% (1/11) | 36% (4/11) | -0.14% |
 | general | 1w | 9 | 33% (3/9) | 56% (5/9) | -0.11% |
-| general | 2w | 7 | 43% (3/7) | 43% (3/7) | -0.34% |
+| general | 2w | 8 | 38% (3/8) | 38% (3/8) | -0.30% |
 | sector:Basic Materials | 3d | 7 | 29% (2/7) | 29% (2/7) | +0.44% |
 | sector:Basic Materials | 1w | 5 | 20% (1/5) | 60% (3/5) | +1.48% |
 | sector:Basic Materials | 2w | 1 | 100% (1/1) | 0% (0/1) | +0.25% |
@@ -46,6 +46,8 @@ Updated: 2026-09-04. Calls are graded at T+h trading days using the scoreboard's
 
 | Date | Topic | Horizon | Call | Actual | Dir | Mag |
 |---|---|---|---|---|---|---|
+| 2026-09-02 | general | 3d | down/mild | +0.09% (flat/flat) | ❌ | ❌ |
+| 2026-08-23 | general | 2w | up/mild | -0.01% (flat/flat) | ❌ | ❌ |
 | 2026-09-01 | general | 3d | down/mild | +1.14% (up/mild) | ❌ | ✅ |
 | 2026-08-27 | sector:Utilities | 3d | up/mild | -0.23% (flat/flat) | ❌ | ❌ |
 | 2026-08-27 | sector:Technology | 3d | up/mild | -0.69% (down/mild) | ❌ | ✅ |
@@ -69,8 +71,6 @@ Updated: 2026-09-04. Calls are graded at T+h trading days using the scoreboard's
 | 2026-08-13 | sector:Consumer Cyclical | 2w | up/mild | -2.99% (down/mild) | ❌ | ✅ |
 | 2026-08-13 | sector:Communication Services | 2w | flat/mild | -0.46% (down/flat) | ❌ | ❌ |
 | 2026-08-13 | sector:Basic Materials | 2w | flat/mild | +0.25% (flat/flat) | ✅ | ❌ |
-| 2026-08-28 | general | 1w | flat/mild | +0.47% (up/flat) | ❌ | ❌ |
-| 2026-08-26 | sector:Utilities | 3d | flat/mild | -1.10% (down/mild) | ❌ | ✅ |
 
-*488 calls still maturing (T+h close not recorded yet).*
+*526 calls still maturing (T+h close not recorded yet).*
 

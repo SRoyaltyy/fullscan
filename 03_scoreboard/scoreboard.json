@@ -8808,6 +8808,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.4
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-08",
+          "actual_pct": -0.01,
+          "actual_direction": "flat",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       },
       "lesson_schema_ok": true
@@ -13997,7 +14009,20 @@
       "knowable_at_9am": "partially",
       "attribution_contested": "yes",
       "outlier_watch": "PANW −9.3% on an AI-cyber beat; real estate red; oil up with stocks up; NDX trend vs SPX chop",
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-08",
+          "actual_pct": 0.09,
+          "actual_direction": "flat",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.52
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -16232,7 +16257,7 @@
       "direction_hit": true,
       "magnitude_hit": true,
       "divergence_flagged": false,
-      "divergence_verdict": null,
+      "divergence_verdict": "none_flagged — leading sum -10 and B6 -0.5 both confirmed downside; no divergence between leading indicators and futures.",
       "per_factor_breakdown": [
         {
           "factor": "B0_ASIA",
@@ -16280,7 +16305,7 @@
           "status": "hit"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-09-08_lesson.md",
       "sources_used": [
         {
           "url": "https://www.nytimes.com/2026/09/08/business/oil-prices-iran-war.html",
@@ -16376,7 +16401,9 @@
       "key_interaction": "Oil spike (Houthi attack) × Fed hike expectations — oil toward $100 feeds inflation fears, reinforcing ~65% September hike odds, creating a stagflationary feedback loop that pressured equities all session",
       "knowable_at_9am": "yes — the Houthi attack and oil surge were known premarket; futures confirmed the down day",
       "attribution_contested": "yes — most outlets lead with oil/geopolitics, but Investrade frames the day as healthcare sector rotation led by Amgen's decline",
-      "outlier_watch": "Gold FELL (-0.84%) despite geopolitical escalation; copper hit record high on a risk-off day; VIX stayed low (15.49) despite oil near $100; dollar fell despite safe-haven demand"
+      "outlier_watch": "Gold FELL (-0.84%) despite geopolitical escalation; copper hit record high on a risk-off day; VIX stayed low (15.49) despite oil near $100; dollar fell despite safe-haven demand",
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-09-08",
