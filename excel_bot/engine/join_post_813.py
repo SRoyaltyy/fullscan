@@ -651,10 +651,13 @@ def build_panel(joins, fz, hist, books, asof, spy, start=HOLD_CUT,
             day_flags[t] = flags
             asof_ret = _num(a.get("ret_1d"))
             asof_net = None if asof_ret is None else asof_ret / 100.0 - FEE_RT
+            i = fz_t.get("i")
             rows.append({
                 **rec, "date": iso, "xl": xl, "flags": flags,
-                "h": fz_t["h"], "open": fz_t["open"], "close": fz_t.get("close"),
+                "h": fz_t["h"], "i": i,
+                "open": fz_t["open"], "close": fz_t.get("close"),
                 "net": fz_t["h"] - FEE_RT,
+                "i_net": None if i is None else i - FEE_RT,
                 "asof_net": asof_net,
                 "prior_book_date": prev_b,
             })
@@ -917,6 +920,9 @@ def score_window(name, joins, flags_by_day, panel_index, spy, lo, hi, n=TOP_N):
                    "Excel: drop J≥0, refill from J<0")
     e = score_book("elev_cap2_J_le-1", "elevate", elev, base, spy,
                    "Excel: swap ≤2 J≥0 in the book for J≤−1% from ranks n+1–80")
+    from j_winrate import pack_rule_clock
+    a["winrate"] = pack_rule_clock(raw, avoid)
+    e["winrate"] = pack_rule_clock(raw, elev)
     return {
         "name": name, "lo": lo, "hi": hi, "n_book": n,
         "days": sorted({tr["date"] for tr in raw}),
@@ -1170,6 +1176,11 @@ def render(payload):
         "",
         payload.get("sleeve_plain") or "",
         "",
+    ]
+    from j_sleeve_prove import render_winrate_md
+    wr_md, _, _ = render_winrate_md(payload, payload.get("sleeves") or [])
+    L += wr_md
+    L += [
         "#### Featured",
         "",
     ]
@@ -1294,7 +1305,8 @@ def scoreboard_line(payload):
         f"n={a['n']} ghost {_ghost_s(a['ghost'])}; "
         f"`elev_cap2_J_le-1` {_pp_s(e.get('vs_fullscan_pp'))} "
         f"n={e['n']} ghost {_ghost_s(e['ghost'])}. "
-        f"Sleeves: {(payload.get('sleeve_plain') or '')[:220]} "
+        f"Sleeves: {(payload.get('sleeve_plain') or '')[:180]} "
+        f"Fire bar: {(payload.get('plain') or '')[:160]} "
         f"Tip `{tip}`. See `excel_bot/research/JOIN_POST_813.md`._\n"
     )
 
@@ -1531,9 +1543,28 @@ def main():
                          fz=fz, hist=hist, panel_index=panel_index)
     sl = _sl_compact(sl_raw)
     sleeve_plain = sl_raw.get("plain") or ""
+    from j_sleeve_prove import render_winrate_md as _wr_md
+    _tmp = {
+        "windows": windows,
+    }
+    _, wr_clears, wr_prints = _wr_md(_tmp, sl_raw.get("sleeves") or [])
+    if wr_clears:
+        win_plain = (
+            "Cyrus fire bar (>55% of days the rule changes the book vs "
+            "the same-day no-rule book): **CLEAR** — "
+            + "; ".join(wr_clears) + "."
+        )
+    else:
+        win_plain = (
+            "Cyrus fire bar (>55% of days the rule changes the book vs "
+            "the same-day no-rule book): **no CLEAR** "
+            "(≥8 fires required). "
+            + (("Thin prints: " + "; ".join(wr_prints) + ".") if wr_prints
+               else "No circumstance printed >55%.")
+        )
     plain = (
-        f"J clock leak **{leak['verdict']}**. " + plain + " " + uni_plain
-        + " " + sleeve_plain
+        f"J clock leak **{leak['verdict']}**. " + win_plain + " "
+        + plain + " " + uni_plain + " " + sleeve_plain
     )
 
     fz_dates = sorted(fz)

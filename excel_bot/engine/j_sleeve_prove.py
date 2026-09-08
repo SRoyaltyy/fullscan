@@ -27,6 +27,7 @@ from join_post_813 import (  # noqa: E402
     excel_features, is_session, load_book_1d,
     load_flatten, mean, pick_book, prior_date, score_book,
 )
+from j_winrate import hit_s, pack_rule_clock, wr_s  # noqa: E402
 
 SLEEVE_JSON = os.path.join(os.path.dirname(HERE), "research", "j_sleeve_prove.json")
 CATALOG = os.path.join(REPO, "data", "strategy_board", "catalog.json")
@@ -84,6 +85,14 @@ def attach_name_day(iso, ticker, hist, fz, panel_index, sleeve_net=None):
     h_net = None if h is None else h - FEE_RT
     if panel and panel.get("net") is not None:
         h_net = panel["net"]
+    i = None
+    if panel and panel.get("i") is not None:
+        i = panel["i"]
+    elif fz_t.get("i") is not None:
+        i = fz_t["i"]
+    i_net = None if i is None else i - FEE_RT
+    if panel and panel.get("i_net") is not None:
+        i_net = panel["i_net"]
     flags = {
         "J_fresh": bool(xl.get("J_fresh")),
         "J_ge0": j is not None and j >= 0,
@@ -92,7 +101,8 @@ def attach_name_day(iso, ticker, hist, fz, panel_index, sleeve_net=None):
     }
     return {
         "date": iso, "ticker": t, "J": j, "xl": xl, "flags": flags,
-        "net": h_net, "h_net": h_net, "sleeve_net": sleeve_net,
+        "net": h_net, "h_net": h_net, "i": i, "i_net": i_net,
+        "sleeve_net": sleeve_net,
         "session": is_session(iso),
     }
 
@@ -282,6 +292,8 @@ def score_ticket_rows(name, family, rows, spy, note="", clock_ok=True):
         elev = elev_drop2(sub)
         a = _pack_recipe("avoid_J_ge0", "avoid", avoid, dummy, spy)
         e = _pack_recipe("elev_cap2_J_le-1", "elevate", elev, dummy, spy)
+        a["winrate"] = pack_rule_clock(sub, avoid)
+        e["winrate"] = pack_rule_clock(sub, elev)
         slices[sname] = {
             "lo": lo, "hi": hi,
             "baseline": base, "avoid_J_ge0": a, "elev_cap2_J_le-1": e,
@@ -357,6 +369,8 @@ def score_list_days(name, family, day_lists, hist, fz, panel_index, spy,
         dummy["holdout_mean"] = base["holdout_mean"]
         a = _pack_recipe("avoid_J_ge0", "avoid", blob["avoid"], dummy, spy)
         e = _pack_recipe("elev_cap2_J_le-1", "elevate", blob["elev"], dummy, spy)
+        a["winrate"] = pack_rule_clock(blob["base"], blob["avoid"])
+        e["winrate"] = pack_rule_clock(blob["base"], blob["elev"])
         slices[sname] = {
             "lo": lo, "hi": hi,
             "baseline": base, "avoid_J_ge0": a, "elev_cap2_J_le-1": e,
@@ -730,12 +744,27 @@ def line_for_sleeve(s):
     win, hold = hold_slice(s)
     a = hold.get("avoid_J_ge0") or {}
     e = hold.get("elev_cap2_J_le-1") or {}
+    aw, ew = a.get("winrate") or {}, e.get("winrate") or {}
     return (
         f"{s['name']}: **{s['verdict']}** — {win} avoid "
-        f"{_pp(a.get('vs_fullscan_pp')) or '—'} n={a.get('n', 0)}; "
-        f"elev {_pp(e.get('vs_fullscan_pp')) or '—'} n={e.get('n', 0)}. "
+        f"{_pp(a.get('vs_fullscan_pp')) or '—'} n={a.get('n', 0)} "
+        f"fire {wr_s(aw)}; "
+        f"elev {_pp(e.get('vs_fullscan_pp')) or '—'} n={e.get('n', 0)} "
+        f"fire {wr_s(ew)}. "
         f"{s.get('note') or ''}"
     ).strip()
+
+
+def slim_wr(wr):
+    if not wr:
+        return None
+    return {
+        "n_fires": wr.get("n_fires"), "n_wins": wr.get("n_wins"),
+        "n_ties": wr.get("n_ties"), "n_losses": wr.get("n_losses"),
+        "win_rate": wr.get("win_rate"), "verdict": wr.get("verdict"),
+        "clears_55": wr.get("clears_55"), "prints_55": wr.get("prints_55"),
+        "hit_h": wr.get("hit_h"), "hit_i": wr.get("hit_i"),
+    }
 
 
 def slim_sleeve(s):
@@ -752,6 +781,7 @@ def slim_sleeve(s):
             "ghost": _ghost_s(g),
             "verdict": r.get("verdict"),
             "family_bar": r.get("family_bar"),
+            "winrate": slim_wr(r.get("winrate")),
         }
 
     slices = {}
@@ -784,21 +814,114 @@ def render_sleeve_tables(sleeves, featured_only=False):
         want = set(FEATURED)
         rows = [s for s in sleeves if s["name"] in want]
     L = [
-        "| sleeve | family | verdict | n | avoid vs sleeve | elev vs sleeve | ghost | note |",
-        "|---|---|---|---:|---:|---:|---|---|",
+        "| sleeve | family | verdict | n | avoid vs | avoid fire>55 | elev vs | elev fire>55 | H+ | I+ |",
+        "|---|---|---|---:|---:|---|---:|---|---|---|",
     ]
     for s in rows:
         _win, hold = hold_slice(s)
         a = hold.get("avoid_J_ge0") or {}
         e = hold.get("elev_cap2_J_le-1") or {}
+        aw, ew = a.get("winrate") or {}, e.get("winrate") or {}
         L.append(
             f"| `{s['name']}` | {s.get('family','')} | **{s['verdict']}** | "
             f"{a.get('n', s.get('n_all') or 0)} | "
             f"{_pp(a.get('vs_fullscan_pp')) or '—'} | "
+            f"{wr_s(aw)} {aw.get('verdict','')} | "
             f"{_pp(e.get('vs_fullscan_pp')) or '—'} | "
-            f"{_ghost_s(a.get('ghost'))} | {(s.get('note') or '')[:80]} |"
+            f"{wr_s(ew)} {ew.get('verdict','')} | "
+            f"{hit_s(aw.get('hit_h'))} | {hit_s(aw.get('hit_i'))} |"
         )
     return L
+
+
+NAMED_CIRCUMSTANCES = FEATURED + (
+    "1d_top", "1d_size", "3d_top", "3d_size",
+    "union_h1", "union_e_fresh_h1", "union_e_green_h3",
+    "union_coil_green_h1", "union_w_hot_candle_h1",
+    "union_hot_n12_h1", "book_paper_1w", "mover_paper_live",
+    "sleeve_combine_bt",
+)
+
+
+def _wr_row(label, recipe, window):
+    wr = (recipe or {}).get("winrate") or {}
+    return (
+        f"| {label} | {window} | `{recipe.get('name','')}` | "
+        f"**{wr.get('verdict', '—')}** | {wr_s(wr)} | "
+        f"{hit_s(wr.get('hit_h'))} | {hit_s(wr.get('hit_i'))} | "
+        f"{_pp(recipe.get('vs_fullscan_pp')) or '—'} |"
+    )
+
+
+def render_winrate_md(payload, sleeves):
+    """Cyrus bar: >55% of fire days the rule book beats the same-day no-rule book."""
+    L = [
+        "### Win-rate bar (Cyrus: >55% of fires)",
+        "",
+        "**Fire** = a morning the rule changes the book (ticker set ≠ no-rule set). "
+        "**Win** = that day’s rule-book mean after-fee H beats the same-day no-rule book. "
+        "Ties do not beat. **CLEAR** needs win-rate >55% and ≥8 fires. "
+        "A thin print (>55% but n_fires<8) is shown as PRINT, not a clear. "
+        "Separately: % of the rule’s name-days with after-fee H>0 and I>0. "
+        "Live = wired into the cash/paper bot — docs are not live. Live stays frozen.",
+        "",
+        "| circumstance | window | recipe | fire bar | fire win-rate | H+ after fees | I+ after fees | mean vs |",
+        "|---|---|---|---|---|---|---|---|",
+    ]
+    clears = []
+    prints = []
+    windows = payload.get("windows") or {}
+    for wname in ("prove", "discovery", "pooled_sessions"):
+        w = windows.get(wname)
+        if not w:
+            continue
+        for rec_name in ("avoid_J_ge0", "elev_cap2_J_le-1"):
+            rec = w.get(rec_name) or {}
+            wr = rec.get("winrate") or {}
+            label = f"join top-8"
+            L.append(_wr_row(label, rec, wname))
+            if wr.get("clears_55"):
+                clears.append(f"{label} {wname} `{rec_name}` {wr_s(wr)}")
+            elif wr.get("prints_55"):
+                prints.append(f"{label} {wname} `{rec_name}` {wr_s(wr)}")
+    want = set(NAMED_CIRCUMSTANCES)
+    extra = []
+    for s in sleeves or []:
+        if s.get("name") in want:
+            extra.append(s)
+            continue
+        if s.get("verdict") != "CONDITIONAL":
+            continue
+        sl = (s.get("slices") or {}).get("pooled") or {}
+        a = sl.get("avoid_J_ge0") or {}
+        if (a.get("n") or 0) >= MIN_N and (a.get("vs_fullscan_pp") or 0) >= BEAT_PP:
+            extra.append(s)
+    seen = set()
+    for s in extra:
+        if s["name"] in seen:
+            continue
+        seen.add(s["name"])
+        win, hold = hold_slice(s)
+        for rec_name in ("avoid_J_ge0", "elev_cap2_J_le-1"):
+            rec = hold.get(rec_name) or {}
+            wr = rec.get("winrate") or {}
+            rec = dict(rec)
+            rec.setdefault("name", rec_name)
+            L.append(_wr_row(s["name"], rec, win))
+            if wr.get("clears_55"):
+                clears.append(f"{s['name']} {win} `{rec_name}` {wr_s(wr)}")
+            elif wr.get("prints_55"):
+                prints.append(f"{s['name']} {win} `{rec_name}` {wr_s(wr)}")
+    L += [
+        "",
+        "**Clears >55% with ≥8 fires:** "
+        + ("; ".join(clears) if clears else "none."),
+        "",
+        "**Prints >55% but thin (n_fires<8):** "
+        + ("; ".join(prints) if prints else "none."),
+        "",
+    ]
+    return L, clears, prints
 
 
 def write_keep_cards(payload, sl):
@@ -837,6 +960,13 @@ def write_keep_cards(payload, sl):
         "| Stale | 08-13 vs 04-26 Open unused. 08-26 missing Finviz → 08-27 J uses 08-25 Open (hole, not future). |",
         "",
         "pick_book reads only J flags + join rank. See `JOIN_POST_813.md` leak section.",
+        "",
+        "## Win-rate bar (Cyrus: >55% of fires)",
+        "",
+    ]
+    wr_md, _, _ = render_winrate_md(payload, sleeves)
+    L += wr_md[2:]  # skip the ### heading, we already have ##
+    L += [
         "",
         "## Universes (same open J, beat same-universe baseline)",
         "",

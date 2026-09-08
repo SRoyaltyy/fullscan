@@ -16,6 +16,7 @@ from j_universe_prove import universe_verdict
 from j_sleeve_prove import (
     elev_drop2, family_verdict, parse_factor_mine_md, recipe_verdict,
 )
+from j_winrate import fire_winrate, hit_rate
 
 
 def test_clock_gate_locked():
@@ -198,6 +199,39 @@ def test_sleeve_recipe_verdict():
     assert family_verdict(keep, keep, clock_ok=False) == "CONDITIONAL"
 
 
+def test_fire_winrate_day_book():
+    """Fire = ticker set changed. Win = rule day-mean H > baseline day-mean H."""
+    base = [
+        {"date": "2026-08-20", "ticker": "A", "net": 0.02},
+        {"date": "2026-08-20", "ticker": "B", "net": -0.04},
+        {"date": "2026-08-21", "ticker": "C", "net": 0.01},
+        {"date": "2026-08-21", "ticker": "D", "net": 0.01},
+        {"date": "2026-08-24", "ticker": "E", "net": 0.03},
+        {"date": "2026-08-24", "ticker": "F", "net": 0.03},
+    ]
+    # 08-20: drop B (loser) → rule beats. 08-21: same set → not a fire.
+    # 08-24: swap F for G worse → rule loses.
+    rule = [
+        {"date": "2026-08-20", "ticker": "A", "net": 0.02},
+        {"date": "2026-08-21", "ticker": "C", "net": 0.01},
+        {"date": "2026-08-21", "ticker": "D", "net": 0.01},
+        {"date": "2026-08-24", "ticker": "E", "net": 0.03},
+        {"date": "2026-08-24", "ticker": "G", "net": -0.05},
+    ]
+    wr = fire_winrate(base, rule)
+    assert wr["n_fires"] == 2
+    assert wr["n_wins"] == 1
+    assert wr["n_losses"] == 1
+    assert abs(wr["win_rate"] - 0.5) < 1e-12
+    assert wr["clears_55"] is False
+    hits = hit_rate(
+        [{"net": 0.02}, {"net": -0.01}, {"net": 0.00, "i_net": 0.01}],
+        "net",
+    )
+    assert hits["n"] == 3
+    assert hits["n_pos"] == 1
+
+
 if __name__ == "__main__":
     test_clock_gate_locked()
     test_atoms_are_legal()
@@ -213,4 +247,5 @@ if __name__ == "__main__":
     test_parse_factor_mine_buys()
     test_elev_drop2()
     test_sleeve_recipe_verdict()
+    test_fire_winrate_day_book()
     print("ok")
