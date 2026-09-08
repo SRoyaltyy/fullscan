@@ -8,7 +8,10 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
 from excel_clock_gate import assert_excel_clock_gate, assert_feature_legal
-from join_post_813 import EXCEL_ATOMS, HOLD_CUT, excel_features
+from join_post_813 import (
+    DISCOVERY, EXCEL_ATOMS, HOLD_CUT, PROVE, excel_features, is_session,
+    j_fresh, prior_bars,
+)
 
 
 def test_clock_gate_locked():
@@ -54,6 +57,55 @@ def test_excel_features_ignore_same_row_h():
     assert xl["J"] is not None
     assert xl["H_l1"] == -0.02
     assert "h" not in xl  # same-row H is not a feature
+    assert xl["J_fresh"] is True
+    assert xl["prior_open_date"] == "2026-08-13"
+
+
+def test_sunday_is_not_a_session():
+    assert is_session("2026-08-28") is True   # Friday
+    assert is_session("2026-08-29") is False  # Saturday
+    assert is_session("2026-08-30") is False  # Sunday
+    assert is_session("2026-08-31") is True   # Monday
+
+
+def test_j_skips_weekend_open():
+    hist = {
+        "AAA": [
+            ("2026-08-28", {"open": 10.0, "h": 0.01, "i": 0.01, "vol": 100}),
+            ("2026-08-29", {"open": 99.0, "h": 0.50, "i": 0.50, "vol": 100}),
+            ("2026-08-30", {"open": 99.0, "h": 0.50, "i": 0.50, "vol": 100}),
+        ]
+    }
+    prior = prior_bars(hist, "AAA", "2026-08-31")
+    assert [d for d, _ in prior] == ["2026-08-28"]
+    xl = excel_features(hist, "AAA", "2026-08-31", 10.2)
+    assert abs(xl["J"] - 0.02) < 1e-9
+    assert xl["prior_open_date"] == "2026-08-28"
+    assert xl["J_fresh"] is True
+
+
+def test_april_open_is_stale_j():
+    # 2026-04-24 is Friday (session); 04-26 dump is Sunday and is skipped.
+    hist = {
+        "AAA": [
+            ("2026-04-24", {"open": 10.0, "h": 0.01, "i": 0.0, "vol": 100}),
+            ("2026-04-26", {"open": 10.0, "h": 0.01, "i": 0.0, "vol": 100}),
+        ]
+    }
+    xl = excel_features(hist, "AAA", "2026-08-13", 12.0)
+    assert xl["prior_open_date"] == "2026-04-24"
+    assert xl["J"] is not None
+    assert xl["J_fresh"] is False
+    assert j_fresh(xl["prior_open_date"], "2026-08-13") is False
+    # Sunday-only history is not a session Open — no J.
+    xl2 = excel_features({"AAA": [hist["AAA"][1]]}, "AAA", "2026-08-13", 12.0)
+    assert xl2["J"] is None
+    assert xl2["J_fresh"] is False
+
+
+def test_prove_is_after_discovery():
+    assert DISCOVERY[1] < PROVE[0]
+    assert HOLD_CUT < DISCOVERY[0]
 
 
 if __name__ == "__main__":
@@ -62,4 +114,8 @@ if __name__ == "__main__":
     test_same_row_hi_rejected()
     test_holdout_is_after_813()
     test_excel_features_ignore_same_row_h()
+    test_sunday_is_not_a_session()
+    test_j_skips_weekend_open()
+    test_april_open_is_stale_j()
+    test_prove_is_after_discovery()
     print("ok")

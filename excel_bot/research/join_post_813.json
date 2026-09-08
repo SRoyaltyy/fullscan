@@ -1,7 +1,8 @@
 {
   "generated": "2026-09-08",
-  "family": "KEEP",
-  "plain": "On the post-2026-08-13 window, joining Excel open-gate numbers (J / AH / ER / FQ / JB / JC and H/I/J/G lags) onto the morning join rank **does** beat fullscan-alone. Best Excel KEEP `avoid_J_ge0` holdout H +0.50% vs join top-8 -0.01% (+0.51 pp, n=121). avoid_incomplete is a fullscan-only control (not Excel). Live flatten_robust stays frozen.",
+  "family": "CONDITIONAL",
+  "plain": "Prove (weekday 2026-08-26\u21922026-09-07) does **not** re-clear the ship bar. `avoid_J_ge0` n=64 H +0.22% (+0.04 pp vs same-window top-8, ghost PASS/FAIL/FAIL). `elev_cap2_J_le-1` n=64 H +0.33% (+0.15 pp, ghost PASS/FAIL/FAIL). Discovery half still prints (`avoid_J_ge0` +0.72 pp n=64) \u2014 that is the peek, not prove. Pooled weekday leftover is `avoid_J_ge0` +0.38 pp n=128 / `elev_cap2_J_le-1` +0.26 pp n=128 (includes discovery; not a holdout). Wider book (top-80) prove `avoid_J_ge0` +0.12 pp n=640. Join dumps do not add sessions before 8-13 with a fresh J (08-13 prior Open is 04-26). Family is **CONDITIONAL**: not KEEP holds, not a full KILL of the discovery print. Live flatten_robust stays frozen. Do not wire.",
+  "flatten_plain": "First flatten cut used J\u2265+1%, not the KEEP recipes. Correct recipes: `avoid_J_ge0` on all post-8-13 tickets is n=11, sleeve +0.27% (-1.79 pp vs all) and same-day H +0.81% (-0.59 pp). Movers on 08-20/21 gapped up (J>0) and paid sleeve; blanket J-avoid removes those winners. Fair clock \u2014 J-avoid on io_core only, movers untouched \u2014 is n=27, sleeve +3.01% (+0.95 pp vs all). H and sleeve disagree on names like CYPH (sleeve +25%, H \u22123%). Flatten does not confirm a blanket KEEP. Do not wire.",
   "gate": {
     "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
     "fill_open": [
@@ -85,44 +86,939 @@
     "live_untouched": "flatten_robust"
   },
   "hold_cut": "2026-08-13",
+  "discovery": [
+    "2026-08-14",
+    "2026-08-25"
+  ],
+  "prove": [
+    "2026-08-26",
+    "2026-09-07"
+  ],
+  "session_only": true,
+  "j_prior": "prior weekday session Open",
   "primary_label": "same-day H (Finviz Change from Open) \u2212 15 bp Futubull",
-  "secondary_label": "feature_asof ret_1d; flatten ret_pct",
+  "secondary_label": "flatten ret_pct (io 3d / mover 1d); feature_asof ret_1d",
   "fullscan_features": [
-    "join rank / total_score / families_known (same-day ranked.csv)",
+    "join rank / total_score / families_known (weekday ranked.csv)",
     "prior-day stock_book 1d buy (PIT)",
     "feature_asof join_good / blue / ab_good (morning, when present)",
     "flatten_robust tickets (overlay only)"
   ],
   "excel_features": [
-    "J, AH, ER, FQ, JB, JC (44, same-row open)",
-    "H[t-1], I[t-1], J[t-1], G[t-1] (lags)"
+    "J (44, same-row open; prior weekday session Open; fresh \u22645d)",
+    "AH, ER, FQ, JB, JC (legal, not in standing KEEP pair)",
+    "H[t-1], I[t-1], J[t-1], G[t-1] (weekday lags)"
   ],
   "excel_not_joined": [
     "open fills A B C G J K L M O IR IS IT (no grid on disk)",
     "CE/CD (need 43d High/Low)",
-    "M #95CA82 / O green / five-cell light"
+    "M #95CA82 / O green / five-cell light",
+    "Sunday join dumps 2026-08-30 / 2026-09-06 (not a 1d session)",
+    "2026-08-13 J vs 2026-04-26 Open (stale)"
   ],
-  "n_panel": 129045,
-  "n_join_days": 18,
+  "n_panel": 117214,
+  "n_join_days": 16,
+  "n_session_days": 16,
   "first_day": "2026-08-14",
   "last_day": "2026-09-07",
   "n_fz_dates": 22,
   "fz_first": "2026-04-26",
   "fz_last": "2026-09-07",
+  "windows": {
+    "discovery": {
+      "name": "discovery",
+      "lo": "2026-08-14",
+      "hi": "2026-08-25",
+      "n_book": 8,
+      "days": [
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25"
+      ],
+      "baseline": {
+        "name": "join_top8",
+        "kind": "baseline",
+        "verdict": "KILL",
+        "fail_reasons": [
+          "hold_sign",
+          "ghost:name_win_share,lottery_day",
+          "spy_tape"
+        ],
+        "n": 64,
+        "n_tickers": 55,
+        "n_dates": 8,
+        "holdout_mean": -0.0008312500000000008,
+        "t": -0.2534486087420634,
+        "vs_fullscan_pp": null,
+        "win": 0.375,
+        "ghost": {
+          "name": "FAIL",
+          "month": "PASS",
+          "day": "FAIL",
+          "reasons": [
+            "name_win_share",
+            "lottery_day"
+          ],
+          "pass": false,
+          "n_tickers": 55,
+          "n_dates": 8,
+          "top_name": "HIG",
+          "top_name_n": 2
+        },
+        "tapes": {
+          "up": {
+            "n": 24,
+            "mean": -0.002283333333333334
+          },
+          "dn": {
+            "n": 40,
+            "mean": 3.999999999999889e-05
+          },
+          "enough": true
+        },
+        "asof_1d_mean": 0.004674062499999999,
+        "asof_1d_n": 32,
+        "notes": "fullscan-alone top-8",
+        "live_untouched": "flatten_robust"
+      },
+      "avoid_J_ge0": {
+        "name": "avoid_J_ge0",
+        "kind": "avoid",
+        "verdict": "KILL",
+        "fail_reasons": [
+          "ghost:lottery_day"
+        ],
+        "n": 64,
+        "n_tickers": 59,
+        "n_dates": 8,
+        "holdout_mean": 0.006339062499999999,
+        "t": 1.5215563765945923,
+        "vs_fullscan_pp": 0.71703125,
+        "win": 0.640625,
+        "ghost": {
+          "name": "PASS",
+          "month": "PASS",
+          "day": "FAIL",
+          "reasons": [
+            "lottery_day"
+          ],
+          "pass": false,
+          "n_tickers": 59,
+          "n_dates": 8,
+          "top_name": "WTW",
+          "top_name_n": 2
+        },
+        "tapes": {
+          "up": {
+            "n": 24,
+            "mean": 0.00042499999999999954
+          },
+          "dn": {
+            "n": 40,
+            "mean": 0.009887499999999999
+          },
+          "enough": true
+        },
+        "asof_1d_mean": 0.015594848484848486,
+        "asof_1d_n": 33,
+        "notes": "Excel: drop J\u22650, refill from J<0",
+        "live_untouched": "flatten_robust"
+      },
+      "elev_cap2_J_le-1": {
+        "name": "elev_cap2_J_le-1",
+        "kind": "elevate",
+        "verdict": "KILL",
+        "fail_reasons": [
+          "ghost:lottery_day"
+        ],
+        "n": 64,
+        "n_tickers": 58,
+        "n_dates": 8,
+        "holdout_mean": 0.002799999999999999,
+        "t": 0.6873067054685252,
+        "vs_fullscan_pp": 0.363125,
+        "win": 0.515625,
+        "ghost": {
+          "name": "PASS",
+          "month": "PASS",
+          "day": "FAIL",
+          "reasons": [
+            "lottery_day"
+          ],
+          "pass": false,
+          "n_tickers": 58,
+          "n_dates": 8,
+          "top_name": "EG",
+          "top_name_n": 2
+        },
+        "tapes": {
+          "up": {
+            "n": 24,
+            "mean": 0.0005708333333333332
+          },
+          "dn": {
+            "n": 40,
+            "mean": 0.004137499999999999
+          },
+          "enough": true
+        },
+        "asof_1d_mean": 0.008958709677419354,
+        "asof_1d_n": 31,
+        "notes": "Excel: swap \u22642 J\u22650 in the book for J\u2264\u22121% from ranks n+1\u201380",
+        "live_untouched": "flatten_robust"
+      }
+    },
+    "prove": {
+      "name": "prove",
+      "lo": "2026-08-26",
+      "hi": "2026-09-07",
+      "n_book": 8,
+      "days": [
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-07"
+      ],
+      "baseline": {
+        "name": "join_top8",
+        "kind": "baseline",
+        "verdict": "KILL",
+        "fail_reasons": [
+          "ghost:month_split,lottery_day",
+          "spy_tape"
+        ],
+        "n": 64,
+        "n_tickers": 39,
+        "n_dates": 8,
+        "holdout_mean": 0.0017906249999999997,
+        "t": 0.7128394378580508,
+        "vs_fullscan_pp": null,
+        "win": 0.5,
+        "ghost": {
+          "name": "PASS",
+          "month": "FAIL",
+          "day": "FAIL",
+          "reasons": [
+            "month_split",
+            "lottery_day"
+          ],
+          "pass": false,
+          "n_tickers": 39,
+          "n_dates": 8,
+          "top_name": "REGN",
+          "top_name_n": 4
+        },
+        "tapes": {
+          "up": {
+            "n": 24,
+            "mean": 0.008329166666666667
+          },
+          "dn": {
+            "n": 32,
+            "mean": -0.0007375000000000004
+          },
+          "enough": true
+        },
+        "asof_1d_mean": null,
+        "asof_1d_n": 0,
+        "notes": "fullscan-alone top-8",
+        "live_untouched": "flatten_robust"
+      },
+      "avoid_J_ge0": {
+        "name": "avoid_J_ge0",
+        "kind": "avoid",
+        "verdict": "KILL",
+        "fail_reasons": [
+          "no_edge_vs_fullscan",
+          "ghost:month_split,lottery_day"
+        ],
+        "n": 64,
+        "n_tickers": 54,
+        "n_dates": 8,
+        "holdout_mean": 0.0022124999999999996,
+        "t": 1.204339094558064,
+        "vs_fullscan_pp": 0.042187499999999996,
+        "win": 0.484375,
+        "ghost": {
+          "name": "PASS",
+          "month": "FAIL",
+          "day": "FAIL",
+          "reasons": [
+            "month_split",
+            "lottery_day"
+          ],
+          "pass": false,
+          "n_tickers": 54,
+          "n_dates": 8,
+          "top_name": "ONC",
+          "top_name_n": 3
+        },
+        "tapes": {
+          "up": {
+            "n": 24,
+            "mean": 0.005720833333333332
+          },
+          "dn": {
+            "n": 32,
+            "mean": 0.00038124999999999986
+          },
+          "enough": true
+        },
+        "asof_1d_mean": null,
+        "asof_1d_n": 0,
+        "notes": "Excel: drop J\u22650, refill from J<0",
+        "live_untouched": "flatten_robust"
+      },
+      "elev_cap2_J_le-1": {
+        "name": "elev_cap2_J_le-1",
+        "kind": "elevate",
+        "verdict": "KILL",
+        "fail_reasons": [
+          "no_edge_vs_fullscan",
+          "ghost:month_split,lottery_day",
+          "spy_tape"
+        ],
+        "n": 64,
+        "n_tickers": 46,
+        "n_dates": 8,
+        "holdout_mean": 0.0032874999999999996,
+        "t": 1.7562902309609023,
+        "vs_fullscan_pp": 0.1496875,
+        "win": 0.515625,
+        "ghost": {
+          "name": "PASS",
+          "month": "FAIL",
+          "day": "FAIL",
+          "reasons": [
+            "month_split",
+            "lottery_day"
+          ],
+          "pass": false,
+          "n_tickers": 46,
+          "n_dates": 8,
+          "top_name": "REGN",
+          "top_name_n": 4
+        },
+        "tapes": {
+          "up": {
+            "n": 24,
+            "mean": 0.008641666666666667
+          },
+          "dn": {
+            "n": 32,
+            "mean": -0.0014062500000000002
+          },
+          "enough": true
+        },
+        "asof_1d_mean": null,
+        "asof_1d_n": 0,
+        "notes": "Excel: swap \u22642 J\u22650 in the book for J\u2264\u22121% from ranks n+1\u201380",
+        "live_untouched": "flatten_robust"
+      }
+    },
+    "pooled_sessions": {
+      "name": "pooled_sessions",
+      "lo": "2026-08-14",
+      "hi": "2026-09-07",
+      "n_book": 8,
+      "days": [
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-07"
+      ],
+      "baseline": {
+        "name": "join_top8",
+        "kind": "baseline",
+        "verdict": "KILL",
+        "fail_reasons": [
+          "ghost:month_split",
+          "spy_tape"
+        ],
+        "n": 128,
+        "n_tickers": 84,
+        "n_dates": 16,
+        "holdout_mean": 0.0004796874999999995,
+        "t": 0.23277504015501588,
+        "vs_fullscan_pp": null,
+        "win": 0.4375,
+        "ghost": {
+          "name": "PASS",
+          "month": "FAIL",
+          "day": "PASS",
+          "reasons": [
+            "month_split"
+          ],
+          "pass": false,
+          "n_tickers": 84,
+          "n_dates": 16,
+          "top_name": "REGN",
+          "top_name_n": 5
+        },
+        "tapes": {
+          "up": {
+            "n": 48,
+            "mean": 0.0030229166666666664
+          },
+          "dn": {
+            "n": 72,
+            "mean": -0.00030555555555555636
+          },
+          "enough": true
+        },
+        "asof_1d_mean": 0.004674062499999999,
+        "asof_1d_n": 32,
+        "notes": "fullscan-alone top-8",
+        "live_untouched": "flatten_robust"
+      },
+      "avoid_J_ge0": {
+        "name": "avoid_J_ge0",
+        "kind": "avoid",
+        "verdict": "KEEP",
+        "fail_reasons": [],
+        "n": 128,
+        "n_tickers": 103,
+        "n_dates": 16,
+        "holdout_mean": 0.004275781249999999,
+        "t": 1.8794518328943186,
+        "vs_fullscan_pp": 0.37960937499999997,
+        "win": 0.5625,
+        "ghost": {
+          "name": "PASS",
+          "month": "PASS",
+          "day": "PASS",
+          "reasons": [],
+          "pass": true,
+          "n_tickers": 103,
+          "n_dates": 16,
+          "top_name": "ERO",
+          "top_name_n": 3
+        },
+        "tapes": {
+          "up": {
+            "n": 48,
+            "mean": 0.003072916666666666
+          },
+          "dn": {
+            "n": 72,
+            "mean": 0.005662499999999999
+          },
+          "enough": true
+        },
+        "asof_1d_mean": 0.015594848484848486,
+        "asof_1d_n": 33,
+        "notes": "Excel: drop J\u22650, refill from J<0",
+        "live_untouched": "flatten_robust"
+      },
+      "elev_cap2_J_le-1": {
+        "name": "elev_cap2_J_le-1",
+        "kind": "elevate",
+        "verdict": "KEEP",
+        "fail_reasons": [],
+        "n": 128,
+        "n_tickers": 97,
+        "n_dates": 16,
+        "holdout_mean": 0.0030437499999999996,
+        "t": 1.3631216398317674,
+        "vs_fullscan_pp": 0.25640625,
+        "win": 0.515625,
+        "ghost": {
+          "name": "PASS",
+          "month": "PASS",
+          "day": "PASS",
+          "reasons": [],
+          "pass": true,
+          "n_tickers": 97,
+          "n_dates": 16,
+          "top_name": "REGN",
+          "top_name_n": 5
+        },
+        "tapes": {
+          "up": {
+            "n": 48,
+            "mean": 0.00460625
+          },
+          "dn": {
+            "n": 72,
+            "mean": 0.0016736111111111103
+          },
+          "enough": true
+        },
+        "asof_1d_mean": 0.008958709677419354,
+        "asof_1d_n": 31,
+        "notes": "Excel: swap \u22642 J\u22650 in the book for J\u2264\u22121% from ranks n+1\u201380",
+        "live_untouched": "flatten_robust"
+      }
+    }
+  },
+  "wide": {
+    "discovery": {
+      "name": "discovery80",
+      "lo": "2026-08-14",
+      "hi": "2026-08-25",
+      "n_book": 80,
+      "days": [
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25"
+      ],
+      "baseline": {
+        "name": "join_top80",
+        "kind": "baseline",
+        "verdict": "KILL",
+        "fail_reasons": [
+          "ghost:lottery_day"
+        ],
+        "n": 640,
+        "n_tickers": 462,
+        "n_dates": 8,
+        "holdout_mean": 0.0005728124999999996,
+        "t": 0.6158795878442782,
+        "vs_fullscan_pp": null,
+        "win": 0.45625,
+        "ghost": {
+          "name": "PASS",
+          "month": "PASS",
+          "day": "FAIL",
+          "reasons": [
+            "lottery_day"
+          ],
+          "pass": false,
+          "n_tickers": 462,
+          "n_dates": 8,
+          "top_name": "EXE",
+          "top_name_n": 5
+        },
+        "tapes": {
+          "up": {
+            "n": 240,
+            "mean": 0.0003624999999999999
+          },
+          "dn": {
+            "n": 400,
+            "mean": 0.0006989999999999995
+          },
+          "enough": true
+        },
+        "asof_1d_mean": 0.03865314371257485,
+        "asof_1d_n": 334,
+        "notes": "fullscan-alone top-80",
+        "live_untouched": "flatten_robust"
+      },
+      "avoid_J_ge0": {
+        "name": "avoid_J_ge0",
+        "kind": "avoid",
+        "verdict": "KILL",
+        "fail_reasons": [
+          "no_edge_vs_fullscan",
+          "ghost:lottery_day"
+        ],
+        "n": 640,
+        "n_tickers": 521,
+        "n_dates": 8,
+        "holdout_mean": 0.0010085937499999997,
+        "t": 0.9598871813344197,
+        "vs_fullscan_pp": 0.04357812500000001,
+        "win": 0.490625,
+        "ghost": {
+          "name": "PASS",
+          "month": "PASS",
+          "day": "FAIL",
+          "reasons": [
+            "lottery_day"
+          ],
+          "pass": false,
+          "n_tickers": 521,
+          "n_dates": 8,
+          "top_name": "BKR",
+          "top_name_n": 4
+        },
+        "tapes": {
+          "up": {
+            "n": 240,
+            "mean": 0.0008837499999999998
+          },
+          "dn": {
+            "n": 400,
+            "mean": 0.0010834999999999998
+          },
+          "enough": true
+        },
+        "asof_1d_mean": 0.03798465624999999,
+        "asof_1d_n": 320,
+        "notes": "Excel: drop J\u22650, refill from J<0",
+        "live_untouched": "flatten_robust"
+      },
+      "elev_cap2_J_le-1": {
+        "name": "elev_cap2_J_le-1",
+        "kind": "elevate",
+        "verdict": "KILL",
+        "fail_reasons": [
+          "no_edge_vs_fullscan",
+          "ghost:lottery_day"
+        ],
+        "n": 640,
+        "n_tickers": 462,
+        "n_dates": 8,
+        "holdout_mean": 0.0005728124999999996,
+        "t": 0.6158795878442782,
+        "vs_fullscan_pp": 0.0,
+        "win": 0.45625,
+        "ghost": {
+          "name": "PASS",
+          "month": "PASS",
+          "day": "FAIL",
+          "reasons": [
+            "lottery_day"
+          ],
+          "pass": false,
+          "n_tickers": 462,
+          "n_dates": 8,
+          "top_name": "EXE",
+          "top_name_n": 5
+        },
+        "tapes": {
+          "up": {
+            "n": 240,
+            "mean": 0.0003624999999999999
+          },
+          "dn": {
+            "n": 400,
+            "mean": 0.0006989999999999995
+          },
+          "enough": true
+        },
+        "asof_1d_mean": 0.03865314371257485,
+        "asof_1d_n": 334,
+        "notes": "Excel: swap \u22642 J\u22650 in the book for J\u2264\u22121% from ranks n+1\u201380",
+        "live_untouched": "flatten_robust"
+      }
+    },
+    "prove": {
+      "name": "prove80",
+      "lo": "2026-08-26",
+      "hi": "2026-09-07",
+      "n_book": 80,
+      "days": [
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-07"
+      ],
+      "baseline": {
+        "name": "join_top80",
+        "kind": "baseline",
+        "verdict": "KILL",
+        "fail_reasons": [
+          "spy_tape"
+        ],
+        "n": 640,
+        "n_tickers": 368,
+        "n_dates": 8,
+        "holdout_mean": 0.00252328125,
+        "t": 3.2209442764125793,
+        "vs_fullscan_pp": null,
+        "win": 0.5015625,
+        "ghost": {
+          "name": "PASS",
+          "month": "PASS",
+          "day": "PASS",
+          "reasons": [],
+          "pass": true,
+          "n_tickers": 368,
+          "n_dates": 8,
+          "top_name": "REGN",
+          "top_name_n": 6
+        },
+        "tapes": {
+          "up": {
+            "n": 240,
+            "mean": 0.006790416666666666
+          },
+          "dn": {
+            "n": 320,
+            "mean": -0.0005559375
+          },
+          "enough": true
+        },
+        "asof_1d_mean": null,
+        "asof_1d_n": 0,
+        "notes": "fullscan-alone top-80",
+        "live_untouched": "flatten_robust"
+      },
+      "avoid_J_ge0": {
+        "name": "avoid_J_ge0",
+        "kind": "avoid",
+        "verdict": "KILL",
+        "fail_reasons": [
+          "no_edge_vs_fullscan"
+        ],
+        "n": 640,
+        "n_tickers": 469,
+        "n_dates": 8,
+        "holdout_mean": 0.0036959374999999996,
+        "t": 5.276836343553427,
+        "vs_fullscan_pp": 0.11726562499999997,
+        "win": 0.49375,
+        "ghost": {
+          "name": "PASS",
+          "month": "PASS",
+          "day": "PASS",
+          "reasons": [],
+          "pass": true,
+          "n_tickers": 469,
+          "n_dates": 8,
+          "top_name": "ONC",
+          "top_name_n": 5
+        },
+        "tapes": {
+          "up": {
+            "n": 240,
+            "mean": 0.006064583333333333
+          },
+          "dn": {
+            "n": 320,
+            "mean": 0.0011675
+          },
+          "enough": true
+        },
+        "asof_1d_mean": null,
+        "asof_1d_n": 0,
+        "notes": "Excel: drop J\u22650, refill from J<0",
+        "live_untouched": "flatten_robust"
+      },
+      "elev_cap2_J_le-1": {
+        "name": "elev_cap2_J_le-1",
+        "kind": "elevate",
+        "verdict": "KILL",
+        "fail_reasons": [
+          "no_edge_vs_fullscan",
+          "spy_tape"
+        ],
+        "n": 640,
+        "n_tickers": 368,
+        "n_dates": 8,
+        "holdout_mean": 0.00252328125,
+        "t": 3.2209442764125793,
+        "vs_fullscan_pp": 0.0,
+        "win": 0.5015625,
+        "ghost": {
+          "name": "PASS",
+          "month": "PASS",
+          "day": "PASS",
+          "reasons": [],
+          "pass": true,
+          "n_tickers": 368,
+          "n_dates": 8,
+          "top_name": "REGN",
+          "top_name_n": 6
+        },
+        "tapes": {
+          "up": {
+            "n": 240,
+            "mean": 0.006790416666666666
+          },
+          "dn": {
+            "n": 320,
+            "mean": -0.0005559375
+          },
+          "enough": true
+        },
+        "asof_1d_mean": null,
+        "asof_1d_n": 0,
+        "notes": "Excel: swap \u22642 J\u22650 in the book for J\u2264\u22121% from ranks n+1\u201380",
+        "live_untouched": "flatten_robust"
+      }
+    },
+    "pooled_sessions": {
+      "name": "pooled80",
+      "lo": "2026-08-14",
+      "hi": "2026-09-07",
+      "n_book": 80,
+      "days": [
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-07"
+      ],
+      "baseline": {
+        "name": "join_top80",
+        "kind": "baseline",
+        "verdict": "KEEP",
+        "fail_reasons": [],
+        "n": 1280,
+        "n_tickers": 686,
+        "n_dates": 16,
+        "holdout_mean": 0.0015480468749999997,
+        "t": 2.5444877191421056,
+        "vs_fullscan_pp": null,
+        "win": 0.47890625,
+        "ghost": {
+          "name": "PASS",
+          "month": "PASS",
+          "day": "PASS",
+          "reasons": [],
+          "pass": true,
+          "n_tickers": 686,
+          "n_dates": 16,
+          "top_name": "REGN",
+          "top_name_n": 10
+        },
+        "tapes": {
+          "up": {
+            "n": 480,
+            "mean": 0.003576458333333333
+          },
+          "dn": {
+            "n": 720,
+            "mean": 0.0001412499999999997
+          },
+          "enough": true
+        },
+        "asof_1d_mean": 0.03865314371257485,
+        "asof_1d_n": 334,
+        "notes": "fullscan-alone top-80",
+        "live_untouched": "flatten_robust"
+      },
+      "avoid_J_ge0": {
+        "name": "avoid_J_ge0",
+        "kind": "avoid",
+        "verdict": "KILL",
+        "fail_reasons": [
+          "no_edge_vs_fullscan"
+        ],
+        "n": 1280,
+        "n_tickers": 832,
+        "n_dates": 16,
+        "holdout_mean": 0.0023522656249999998,
+        "t": 3.7203870140740642,
+        "vs_fullscan_pp": 0.080421875,
+        "win": 0.4921875,
+        "ghost": {
+          "name": "PASS",
+          "month": "PASS",
+          "day": "PASS",
+          "reasons": [],
+          "pass": true,
+          "n_tickers": 832,
+          "n_dates": 16,
+          "top_name": "ONC",
+          "top_name_n": 6
+        },
+        "tapes": {
+          "up": {
+            "n": 480,
+            "mean": 0.0034741666666666666
+          },
+          "dn": {
+            "n": 720,
+            "mean": 0.001120833333333333
+          },
+          "enough": true
+        },
+        "asof_1d_mean": 0.03798465624999999,
+        "asof_1d_n": 320,
+        "notes": "Excel: drop J\u22650, refill from J<0",
+        "live_untouched": "flatten_robust"
+      },
+      "elev_cap2_J_le-1": {
+        "name": "elev_cap2_J_le-1",
+        "kind": "elevate",
+        "verdict": "KILL",
+        "fail_reasons": [
+          "no_edge_vs_fullscan"
+        ],
+        "n": 1280,
+        "n_tickers": 686,
+        "n_dates": 16,
+        "holdout_mean": 0.0015480468749999997,
+        "t": 2.5444877191421056,
+        "vs_fullscan_pp": 0.0,
+        "win": 0.47890625,
+        "ghost": {
+          "name": "PASS",
+          "month": "PASS",
+          "day": "PASS",
+          "reasons": [],
+          "pass": true,
+          "n_tickers": 686,
+          "n_dates": 16,
+          "top_name": "REGN",
+          "top_name_n": 10
+        },
+        "tapes": {
+          "up": {
+            "n": 480,
+            "mean": 0.003576458333333333
+          },
+          "dn": {
+            "n": 720,
+            "mean": 0.0001412499999999997
+          },
+          "enough": true
+        },
+        "asof_1d_mean": 0.03865314371257485,
+        "asof_1d_n": 334,
+        "notes": "Excel: swap \u22642 J\u22650 in the book for J\u2264\u22121% from ranks n+1\u201380",
+        "live_untouched": "flatten_robust"
+      }
+    }
+  },
   "baseline": {
     "name": "join_top8",
     "kind": "baseline",
     "verdict": "KILL",
     "fail_reasons": [
-      "hold_sign",
       "ghost:month_split",
       "spy_tape"
     ],
-    "n": 144,
-    "n_tickers": 88,
-    "n_dates": 18,
-    "holdout_mean": -9.65277777777783e-05,
-    "t": -0.05045299647152918,
+    "n": 128,
+    "n_tickers": 84,
+    "n_dates": 16,
+    "holdout_mean": 0.0004796874999999995,
+    "t": 0.23277504015501588,
     "vs_fullscan_pp": null,
     "win": 0.4375,
     "ghost": {
@@ -133,9 +1029,9 @@
         "month_split"
       ],
       "pass": false,
-      "n_tickers": 88,
-      "n_dates": 18,
-      "top_name": "PR",
+      "n_tickers": 84,
+      "n_dates": 16,
+      "top_name": "REGN",
       "top_name_n": 5
     },
     "tapes": {
@@ -144,59 +1040,14 @@
         "mean": 0.0030229166666666664
       },
       "dn": {
-        "n": 88,
-        "mean": -0.001105681818181819
+        "n": 72,
+        "mean": -0.00030555555555555636
       },
       "enough": true
     },
     "asof_1d_mean": 0.004674062499999999,
     "asof_1d_n": 32,
-    "notes": "fullscan-alone morning rank",
-    "live_untouched": "flatten_robust"
-  },
-  "baseline15": {
-    "name": "join_top15",
-    "kind": "baseline",
-    "verdict": "KILL",
-    "fail_reasons": [
-      "hold_sign",
-      "ghost:month_split",
-      "spy_tape"
-    ],
-    "n": 270,
-    "n_tickers": 162,
-    "n_dates": 18,
-    "holdout_mean": -0.0008829629629629633,
-    "t": -0.6068889686990221,
-    "vs_fullscan_pp": null,
-    "win": 0.44814814814814813,
-    "ghost": {
-      "name": "PASS",
-      "month": "FAIL",
-      "day": "PASS",
-      "reasons": [
-        "month_split"
-      ],
-      "pass": false,
-      "n_tickers": 162,
-      "n_dates": 18,
-      "top_name": "REGN",
-      "top_name_n": 7
-    },
-    "tapes": {
-      "up": {
-        "n": 90,
-        "mean": 0.0023377777777777776
-      },
-      "dn": {
-        "n": 165,
-        "mean": -0.0027018181818181824
-      },
-      "enough": true
-    },
-    "asof_1d_mean": 0.0025650819672131137,
-    "asof_1d_n": 61,
-    "notes": "",
+    "notes": "fullscan-alone top-8",
     "live_untouched": "flatten_robust"
   },
   "recipes": [
@@ -205,25 +1056,27 @@
       "kind": "avoid",
       "verdict": "KILL",
       "fail_reasons": [
-        "no_edge_vs_fullscan"
+        "ghost:lottery_day"
       ],
-      "n": 144,
-      "n_tickers": 100,
-      "n_dates": 18,
-      "holdout_mean": 0.0016604166666666662,
-      "t": 0.807814238651422,
-      "vs_fullscan_pp": 0.17569444444444443,
-      "win": 0.4513888888888889,
+      "n": 128,
+      "n_tickers": 98,
+      "n_dates": 16,
+      "holdout_mean": 0.0028078124999999995,
+      "t": 1.2745632863943879,
+      "vs_fullscan_pp": 0.23281249999999998,
+      "win": 0.453125,
       "ghost": {
         "name": "PASS",
         "month": "PASS",
-        "day": "PASS",
-        "reasons": [],
-        "pass": true,
-        "n_tickers": 100,
-        "n_dates": 18,
-        "top_name": "REGN",
-        "top_name_n": 4
+        "day": "FAIL",
+        "reasons": [
+          "lottery_day"
+        ],
+        "pass": false,
+        "n_tickers": 98,
+        "n_dates": 16,
+        "top_name": "EG",
+        "top_name_n": 3
       },
       "tapes": {
         "up": {
@@ -231,8 +1084,8 @@
           "mean": 0.0016166666666666664
         },
         "dn": {
-          "n": 88,
-          "mean": 0.0015681818181818173
+          "n": 72,
+          "mean": 0.0035874999999999987
         },
         "enough": true
       },
@@ -246,20 +1099,20 @@
       "kind": "avoid",
       "verdict": "KEEP",
       "fail_reasons": [],
-      "n": 121,
-      "n_tickers": 100,
+      "n": 128,
+      "n_tickers": 103,
       "n_dates": 16,
-      "holdout_mean": 0.00499090909090909,
-      "t": 2.1014130204821995,
-      "vs_fullscan_pp": 0.5087436868686869,
-      "win": 0.5785123966942148,
+      "holdout_mean": 0.004275781249999999,
+      "t": 1.8794518328943186,
+      "vs_fullscan_pp": 0.37960937499999997,
+      "win": 0.5625,
       "ghost": {
         "name": "PASS",
         "month": "PASS",
         "day": "PASS",
         "reasons": [],
         "pass": true,
-        "n_tickers": 100,
+        "n_tickers": 103,
         "n_dates": 16,
         "top_name": "ERO",
         "top_name_n": 3
@@ -270,8 +1123,8 @@
           "mean": 0.003072916666666666
         },
         "dn": {
-          "n": 65,
-          "mean": 0.007143076923076922
+          "n": 72,
+          "mean": 0.005662499999999999
         },
         "enough": true
       },
@@ -285,16 +1138,15 @@
       "kind": "avoid",
       "verdict": "KILL",
       "fail_reasons": [
-        "hold_sign",
         "no_edge_vs_fullscan",
         "ghost:month_split",
         "spy_tape"
       ],
-      "n": 144,
-      "n_tickers": 88,
-      "n_dates": 18,
-      "holdout_mean": -9.65277777777783e-05,
-      "t": -0.05045299647152918,
+      "n": 128,
+      "n_tickers": 84,
+      "n_dates": 16,
+      "holdout_mean": 0.0004796874999999995,
+      "t": 0.23277504015501588,
       "vs_fullscan_pp": 0.0,
       "win": 0.4375,
       "ghost": {
@@ -305,9 +1157,9 @@
           "month_split"
         ],
         "pass": false,
-        "n_tickers": 88,
-        "n_dates": 18,
-        "top_name": "PR",
+        "n_tickers": 84,
+        "n_dates": 16,
+        "top_name": "REGN",
         "top_name_n": 5
       },
       "tapes": {
@@ -316,8 +1168,8 @@
           "mean": 0.0030229166666666664
         },
         "dn": {
-          "n": 88,
-          "mean": -0.001105681818181819
+          "n": 72,
+          "mean": -0.00030555555555555636
         },
         "enough": true
       },
@@ -331,18 +1183,16 @@
       "kind": "avoid",
       "verdict": "KILL",
       "fail_reasons": [
-        "hold_sign",
         "no_edge_vs_fullscan",
-        "ghost:month_split",
-        "spy_tape"
+        "ghost:month_split"
       ],
-      "n": 144,
-      "n_tickers": 91,
-      "n_dates": 18,
-      "holdout_mean": -0.0009486111111111114,
-      "t": -0.44830192018415166,
-      "vs_fullscan_pp": -0.08520833333333332,
-      "win": 0.4305555555555556,
+      "n": 128,
+      "n_tickers": 86,
+      "n_dates": 16,
+      "holdout_mean": 0.0001039062499999996,
+      "t": 0.045515994069017955,
+      "vs_fullscan_pp": -0.03757812499999999,
+      "win": 0.4375,
       "ghost": {
         "name": "PASS",
         "month": "FAIL",
@@ -351,9 +1201,9 @@
           "month_split"
         ],
         "pass": false,
-        "n_tickers": 91,
-        "n_dates": 18,
-        "top_name": "PR",
+        "n_tickers": 86,
+        "n_dates": 16,
+        "top_name": "REGN",
         "top_name_n": 5
       },
       "tapes": {
@@ -362,8 +1212,8 @@
           "mean": 0.0012270833333333328
         },
         "dn": {
-          "n": 88,
-          "mean": -0.0015204545454545462
+          "n": 72,
+          "mean": 0.00022361111111111044
         },
         "enough": true
       },
@@ -380,13 +1230,13 @@
         "no_edge_vs_fullscan",
         "ghost:month_split"
       ],
-      "n": 144,
-      "n_tickers": 88,
-      "n_dates": 18,
-      "holdout_mean": 0.0007284722222222216,
-      "t": 0.3651499671818896,
-      "vs_fullscan_pp": 0.08249999999999999,
-      "win": 0.4513888888888889,
+      "n": 128,
+      "n_tickers": 84,
+      "n_dates": 16,
+      "holdout_mean": 0.0014078124999999993,
+      "t": 0.65340008153377,
+      "vs_fullscan_pp": 0.09281249999999999,
+      "win": 0.453125,
       "ghost": {
         "name": "PASS",
         "month": "FAIL",
@@ -395,9 +1245,9 @@
           "month_split"
         ],
         "pass": false,
-        "n_tickers": 88,
-        "n_dates": 18,
-        "top_name": "PR",
+        "n_tickers": 84,
+        "n_dates": 16,
+        "top_name": "REGN",
         "top_name_n": 5
       },
       "tapes": {
@@ -406,8 +1256,8 @@
           "mean": 0.0031374999999999997
         },
         "dn": {
-          "n": 88,
-          "mean": 0.00018181818181818097
+          "n": 72,
+          "mean": 0.0012680555555555546
         },
         "enough": true
       },
@@ -421,23 +1271,23 @@
       "kind": "control",
       "verdict": "KEEP",
       "fail_reasons": [],
-      "n": 136,
-      "n_tickers": 85,
-      "n_dates": 17,
-      "holdout_mean": 0.003046323529411764,
-      "t": 1.2391839985297228,
-      "vs_fullscan_pp": 0.31428513071895425,
-      "win": 0.5367647058823529,
+      "n": 120,
+      "n_tickers": 79,
+      "n_dates": 15,
+      "holdout_mean": 0.0033808333333333325,
+      "t": 1.2844978278205554,
+      "vs_fullscan_pp": 0.2901145833333333,
+      "win": 0.5333333333333333,
       "ghost": {
         "name": "PASS",
         "month": "PASS",
         "day": "PASS",
         "reasons": [],
         "pass": true,
-        "n_tickers": 85,
-        "n_dates": 17,
+        "n_tickers": 79,
+        "n_dates": 15,
         "top_name": "HRMY",
-        "top_name_n": 6
+        "top_name_n": 5
       },
       "tapes": {
         "up": {
@@ -445,8 +1295,8 @@
           "mean": 0.004605
         },
         "dn": {
-          "n": 88,
-          "mean": 0.00014659090909090826
+          "n": 72,
+          "mean": 5.972222222222129e-05
         },
         "enough": true
       },
@@ -462,23 +1312,23 @@
       "fail_reasons": [
         "no_edge_vs_incomplete_control"
       ],
-      "n": 136,
-      "n_tickers": 102,
-      "n_dates": 17,
-      "holdout_mean": 0.0026360294117647055,
-      "t": 0.9970546209696439,
-      "vs_fullscan_pp": 0.2732557189542484,
-      "win": 0.5147058823529411,
+      "n": 120,
+      "n_tickers": 100,
+      "n_dates": 15,
+      "holdout_mean": 0.0031983333333333325,
+      "t": 1.1275971561107225,
+      "vs_fullscan_pp": 0.2718645833333333,
+      "win": 0.5,
       "ghost": {
         "name": "PASS",
         "month": "PASS",
         "day": "PASS",
         "reasons": [],
         "pass": true,
-        "n_tickers": 102,
-        "n_dates": 17,
-        "top_name": "HRMY",
-        "top_name_n": 4
+        "n_tickers": 100,
+        "n_dates": 15,
+        "top_name": "ERO",
+        "top_name_n": 3
       },
       "tapes": {
         "up": {
@@ -486,8 +1336,8 @@
           "mean": 0.00422
         },
         "dn": {
-          "n": 88,
-          "mean": 0.002085227272727272
+          "n": 72,
+          "mean": 0.002899999999999999
         },
         "enough": true
       },
@@ -501,23 +1351,23 @@
       "kind": "elevate",
       "verdict": "KEEP",
       "fail_reasons": [],
-      "n": 144,
-      "n_tickers": 100,
-      "n_dates": 18,
-      "holdout_mean": 0.0025722222222222214,
-      "t": 1.2481519012309874,
-      "vs_fullscan_pp": 0.266875,
-      "win": 0.5138888888888888,
+      "n": 128,
+      "n_tickers": 97,
+      "n_dates": 16,
+      "holdout_mean": 0.0030437499999999996,
+      "t": 1.3631216398317674,
+      "vs_fullscan_pp": 0.25640625,
+      "win": 0.515625,
       "ghost": {
         "name": "PASS",
         "month": "PASS",
         "day": "PASS",
         "reasons": [],
         "pass": true,
-        "n_tickers": 100,
-        "n_dates": 18,
+        "n_tickers": 97,
+        "n_dates": 16,
         "top_name": "REGN",
-        "top_name_n": 4
+        "top_name_n": 5
       },
       "tapes": {
         "up": {
@@ -525,8 +1375,8 @@
           "mean": 0.00460625
         },
         "dn": {
-          "n": 88,
-          "mean": 0.0011511363636363629
+          "n": 72,
+          "mean": 0.0016736111111111103
         },
         "enough": true
       },
@@ -542,23 +1392,23 @@
       "fail_reasons": [
         "no_edge_vs_fullscan"
       ],
-      "n": 144,
-      "n_tickers": 100,
-      "n_dates": 18,
-      "holdout_mean": 0.0018659722222222218,
-      "t": 0.9070165339737745,
-      "vs_fullscan_pp": 0.19625000000000004,
-      "win": 0.4861111111111111,
+      "n": 128,
+      "n_tickers": 96,
+      "n_dates": 16,
+      "holdout_mean": 0.0021539062499999996,
+      "t": 0.9650991937630252,
+      "vs_fullscan_pp": 0.16742187500000003,
+      "win": 0.4765625,
       "ghost": {
         "name": "PASS",
         "month": "PASS",
         "day": "PASS",
         "reasons": [],
         "pass": true,
-        "n_tickers": 100,
-        "n_dates": 18,
+        "n_tickers": 96,
+        "n_dates": 16,
         "top_name": "REGN",
-        "top_name_n": 4
+        "top_name_n": 5
       },
       "tapes": {
         "up": {
@@ -566,8 +1416,8 @@
           "mean": 0.0029604166666666663
         },
         "dn": {
-          "n": 88,
-          "mean": 0.0011715909090909084
+          "n": 72,
+          "mean": 0.0015291666666666657
         },
         "enough": true
       },
@@ -581,25 +1431,27 @@
       "kind": "elevate",
       "verdict": "KILL",
       "fail_reasons": [
-        "hold_sign",
         "no_edge_vs_fullscan",
+        "ghost:month_split",
         "spy_tape"
       ],
-      "n": 141,
-      "n_tickers": 93,
-      "n_dates": 18,
-      "holdout_mean": -0.0009524822695035467,
-      "t": -0.4164729177871719,
-      "vs_fullscan_pp": -0.08559544917257685,
-      "win": 0.44680851063829785,
+      "n": 125,
+      "n_tickers": 88,
+      "n_dates": 16,
+      "holdout_mean": 0.0010615999999999993,
+      "t": 0.43921423067831883,
+      "vs_fullscan_pp": 0.05819124999999999,
+      "win": 0.472,
       "ghost": {
         "name": "PASS",
-        "month": "PASS",
+        "month": "FAIL",
         "day": "PASS",
-        "reasons": [],
-        "pass": true,
-        "n_tickers": 93,
-        "n_dates": 18,
+        "reasons": [
+          "month_split"
+        ],
+        "pass": false,
+        "n_tickers": 88,
+        "n_dates": 16,
         "top_name": "REGN",
         "top_name_n": 5
       },
@@ -609,8 +1461,8 @@
           "mean": 0.004359574468085106
         },
         "dn": {
-          "n": 86,
-          "mean": -0.0032267441860465125
+          "n": 70,
+          "mean": -0.00015000000000000088
         },
         "enough": true
       },
@@ -629,13 +1481,13 @@
         "ghost:month_split",
         "spy_tape"
       ],
-      "n": 142,
-      "n_tickers": 92,
-      "n_dates": 18,
-      "holdout_mean": -0.002370422535211268,
-      "t": -1.0802310638904564,
-      "vs_fullscan_pp": -0.227389475743349,
-      "win": 0.4507042253521127,
+      "n": 125,
+      "n_tickers": 86,
+      "n_dates": 16,
+      "holdout_mean": -0.0003768000000000006,
+      "t": -0.15436265911591154,
+      "vs_fullscan_pp": -0.08564875000000001,
+      "win": 0.472,
       "ghost": {
         "name": "PASS",
         "month": "FAIL",
@@ -644,19 +1496,19 @@
           "month_split"
         ],
         "pass": false,
-        "n_tickers": 92,
-        "n_dates": 18,
+        "n_tickers": 86,
+        "n_dates": 16,
         "top_name": "REGN",
         "top_name_n": 5
       },
       "tapes": {
         "up": {
           "n": 48,
-          "mean": 0.0018104166666666661
+          "mean": 0.0041937499999999996
         },
         "dn": {
-          "n": 86,
-          "mean": -0.0037081395348837216
+          "n": 69,
+          "mean": -0.002084057971014494
         },
         "enough": true
       },
@@ -670,21 +1522,21 @@
       "kind": "replace",
       "verdict": "KEEP",
       "fail_reasons": [],
-      "n": 144,
-      "n_tickers": 107,
-      "n_dates": 18,
-      "holdout_mean": 0.003382638888888888,
-      "t": 1.6059533508461996,
-      "vs_fullscan_pp": 0.34791666666666665,
-      "win": 0.5486111111111112,
+      "n": 128,
+      "n_tickers": 103,
+      "n_dates": 16,
+      "holdout_mean": 0.004275781249999999,
+      "t": 1.8794518328943186,
+      "vs_fullscan_pp": 0.37960937499999997,
+      "win": 0.5625,
       "ghost": {
         "name": "PASS",
         "month": "PASS",
         "day": "PASS",
         "reasons": [],
         "pass": true,
-        "n_tickers": 107,
-        "n_dates": 18,
+        "n_tickers": 103,
+        "n_dates": 16,
         "top_name": "ERO",
         "top_name_n": 3
       },
@@ -694,8 +1546,8 @@
           "mean": 0.003072916666666666
         },
         "dn": {
-          "n": 88,
-          "mean": 0.003948863636363636
+          "n": 72,
+          "mean": 0.005662499999999999
         },
         "enough": true
       },
@@ -709,26 +1561,27 @@
       "kind": "intersect",
       "verdict": "KILL",
       "fail_reasons": [
-        "ghost:name_win_share,lottery_day"
+        "ghost:name_win_share,month_split,lottery_day"
       ],
-      "n": 46,
-      "n_tickers": 40,
-      "n_dates": 14,
-      "holdout_mean": 0.004730434782608694,
-      "t": 1.1640200285352846,
-      "vs_fullscan_pp": 0.4826962560386473,
-      "win": 0.45652173913043476,
+      "n": 51,
+      "n_tickers": 42,
+      "n_dates": 15,
+      "holdout_mean": 0.003162745098039215,
+      "t": 0.8390883111462931,
+      "vs_fullscan_pp": 0.2683057598039215,
+      "win": 0.43137254901960786,
       "ghost": {
         "name": "FAIL",
-        "month": "PASS",
+        "month": "FAIL",
         "day": "FAIL",
         "reasons": [
           "name_win_share",
+          "month_split",
           "lottery_day"
         ],
         "pass": false,
-        "n_tickers": 40,
-        "n_dates": 14,
+        "n_tickers": 42,
+        "n_dates": 15,
         "top_name": "ONC",
         "top_name_n": 3
       },
@@ -738,8 +1591,8 @@
           "mean": 0.0005263157894736838
         },
         "dn": {
-          "n": 23,
-          "mean": 0.009343478260869564
+          "n": 28,
+          "mean": 0.005664285714285713
         },
         "enough": true
       },
@@ -756,13 +1609,13 @@
         "ghost:name_win_share,lottery_day",
         "spy_tape"
       ],
-      "n": 29,
-      "n_tickers": 26,
-      "n_dates": 12,
-      "holdout_mean": 0.005720689655172414,
-      "t": 1.022776536909429,
-      "vs_fullscan_pp": 0.5817217432950192,
-      "win": 0.4482758620689655,
+      "n": 33,
+      "n_tickers": 30,
+      "n_dates": 13,
+      "holdout_mean": 0.0034424242424242416,
+      "t": 0.6749593360696655,
+      "vs_fullscan_pp": 0.2962736742424242,
+      "win": 0.42424242424242425,
       "ghost": {
         "name": "FAIL",
         "month": "PASS",
@@ -772,9 +1625,9 @@
           "lottery_day"
         ],
         "pass": false,
-        "n_tickers": 26,
-        "n_dates": 12,
-        "top_name": "EG",
+        "n_tickers": 30,
+        "n_dates": 13,
+        "top_name": "ERO",
         "top_name_n": 2
       },
       "tapes": {
@@ -783,8 +1636,8 @@
           "mean": -0.0016000000000000005
         },
         "dn": {
-          "n": 15,
-          "mean": 0.012373333333333332
+          "n": 19,
+          "mean": 0.007015789473684209
         },
         "enough": true
       },
@@ -798,29 +1651,28 @@
       "kind": "intersect",
       "verdict": "KILL",
       "fail_reasons": [
-        "ghost:name:SM=2/13,name_win_share,lottery_day"
+        "ghost:name_win_share,lottery_day"
       ],
-      "n": 13,
-      "n_tickers": 12,
-      "n_dates": 8,
-      "holdout_mean": 0.002138461538461538,
-      "t": 0.16738171491878046,
-      "vs_fullscan_pp": 0.2234989316239316,
-      "win": 0.3076923076923077,
+      "n": 8,
+      "n_tickers": 8,
+      "n_dates": 5,
+      "holdout_mean": 0.011687499999999998,
+      "t": 0.594382121990358,
+      "vs_fullscan_pp": 1.1207812499999998,
+      "win": 0.5,
       "ghost": {
         "name": "FAIL",
         "month": "PASS",
         "day": "FAIL",
         "reasons": [
-          "name:SM=2/13",
           "name_win_share",
           "lottery_day"
         ],
         "pass": false,
-        "n_tickers": 12,
-        "n_dates": 8,
-        "top_name": "SM",
-        "top_name_n": 2
+        "n_tickers": 8,
+        "n_dates": 5,
+        "top_name": "VERI",
+        "top_name_n": 1
       },
       "tapes": {
         "up": {
@@ -828,8 +1680,8 @@
           "mean": 0.0031799999999999997
         },
         "dn": {
-          "n": 8,
-          "mean": 0.0014874999999999992
+          "n": 3,
+          "mean": 0.025866666666666663
         },
         "enough": false
       },
@@ -841,39 +1693,66 @@
   ],
   "flatten": {
     "n_all": 30,
-    "mean_all": 0.020593333333333335,
     "cuts": [
       {
         "name": "all tickets",
         "n": 30,
-        "mean": 0.020593333333333335,
-        "delta_pp": "+0.00 pp"
+        "sleeve_mean": 0.020593333333333335,
+        "h_mean": 0.014003333333333335,
+        "vs_sleeve_pp": null,
+        "vs_h_pp": null
       },
       {
-        "name": "avoid J\u2265+1%",
-        "n": 13,
-        "mean": -0.0038846153846153844,
-        "delta_pp": "-2.45 pp"
+        "name": "avoid_J_ge0 (keep J<0)",
+        "n": 11,
+        "sleeve_mean": 0.002718181818181819,
+        "h_mean": 0.008090909090909091,
+        "vs_sleeve_pp": -1.7875151515151517,
+        "vs_h_pp": -0.5912424242424243
       },
       {
-        "name": "avoid JB",
-        "n": 30,
-        "mean": 0.020593333333333335,
-        "delta_pp": "+0.00 pp"
+        "name": "elev_cap2 analogue (drop \u22642 J\u22650 / day)",
+        "n": 23,
+        "sleeve_mean": 0.018695652173913044,
+        "h_mean": 0.015891304347826086,
+        "vs_sleeve_pp": -0.18976811594202914,
+        "vs_h_pp": 0.1887971014492751
       },
       {
-        "name": "keep J\u2264\u22121% only",
+        "name": "io_core only",
+        "n": 10,
+        "sleeve_mean": -0.013090000000000001,
+        "h_mean": 0.0031600000000000005,
+        "vs_sleeve_pp": -3.3683333333333336,
+        "vs_h_pp": -1.0843333333333334
+      },
+      {
+        "name": "mover_long only",
+        "n": 20,
+        "sleeve_mean": 0.037435,
+        "h_mean": 0.019425,
+        "vs_sleeve_pp": 1.6841666666666668,
+        "vs_h_pp": 0.5421666666666667
+      },
+      {
+        "name": "io_core avoid_J_ge0",
         "n": 7,
-        "mean": 0.01572857142857143,
-        "delta_pp": "-0.49 pp"
+        "sleeve_mean": 0.009171428571428572,
+        "h_mean": 0.0024142857142857147,
+        "vs_sleeve_pp": 2.226142857142857,
+        "vs_h_pp": -0.07457142857142858
       },
       {
-        "name": "keep ER=\u22121 only",
-        "n": 4,
-        "mean": -0.0438,
-        "delta_pp": "-6.44 pp"
+        "name": "fair: J-avoid on io only, movers untouched",
+        "n": 27,
+        "sleeve_mean": 0.030107407407407406,
+        "h_mean": 0.015014814814814814,
+        "vs_sleeve_pp": 0.951407407407407,
+        "vs_h_pp": 0.10114814814814796
       }
-    ]
+    ],
+    "n_stale_j": 0,
+    "note": "KEEP is a join top-8 1d H overlay. Flatten is io_core 3d + mover_long 1d sleeve-native P&L. Blanket J-avoid fights the mover thesis (buy gap-up). Fair test applies J-avoid to io only."
   },
   "clocks_groups": {
     "value_mine_open": [
@@ -938,5 +1817,5 @@
     ]
   },
   "live_untouched": "flatten_robust",
-  "tip_sha": "c3df984f"
+  "tip_sha": "418d1d49"
 }

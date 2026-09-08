@@ -40,13 +40,23 @@ EXPORTS = os.path.join(REPO, "data", "exports")
 SLEEVE = os.path.join(REPO, "data", "sleeve_merge", "trades.csv")
 FEES_PATH = os.path.join(REPO, "00_grounding", "futubull_fees.json")
 
-HOLD_CUT = "2026-08-13"  # KEEP decision is strictly after this date
+HOLD_CUT = "2026-08-13"  # discovery KEEP was strictly after this date
+PANEL_START = "2026-08-13"  # first join+Finviz date on disk
 FEE_RT = 0.0015  # Futubull ~15 bp round-trip (Excel ship bar)
 BEAT_PP = 0.20  # must beat fullscan-alone by ≥20 bp after fees
 TOP_N = 8
+WIDE_N = 80
 ELEV_BAND = 80
 MIN_TAPE = 8  # window-adapted; Excel usual 40 is larger than this tape
 MIN_MONTH = 12
+J_FRESH_DAYS = 5  # prior session Open must be this close (skip April gap)
+
+# Time holdout. Discovery = first half of the published post-8-13 tape.
+# Prove = later sessions. Both are weekday US sessions only.
+DISCOVERY = ("2026-08-14", "2026-08-25")
+PROVE = ("2026-08-26", "2026-09-07")
+ORIG = ("2026-08-14", "2026-09-07")
+KEEP_RECIPES = ("avoid_J_ge0", "elev_cap2_J_le-1")
 
 # Pre-specified Excel atoms (prior mines / CLOCK_MAP). Not searched on holdout.
 EXCEL_ATOMS = (
@@ -162,23 +172,53 @@ def history_index(fz):
     return hist
 
 
-def prior_bars(hist, ticker, iso):
+def weekday(iso):
+    return date.fromisoformat(iso).weekday()  # 0=Mon … 6=Sun
+
+
+def is_session(iso):
+    """US equity session = Mon–Fri. Sunday join dumps are not a 1d clock."""
+    return weekday(iso) < 5
+
+
+def prior_bars(hist, ticker, iso, sessions_only=True):
+    """Prior Finviz rows. Default skips Sat/Sun dumps (not session Opens)."""
     rows = hist.get(ticker) or []
-    return [(d, r) for d, r in rows if d < iso]
+    out = []
+    for d, r in rows:
+        if d >= iso:
+            continue
+        if sessions_only and not is_session(d):
+            continue
+        out.append((d, r))
+    return out
+
+
+def j_fresh(prior_iso, iso, max_days=J_FRESH_DAYS):
+    if not prior_iso:
+        return False
+    return (date.fromisoformat(iso) - date.fromisoformat(prior_iso)).days <= max_days
 
 
 def excel_features(hist, ticker, iso, today_open):
-    """Open-knowable Excel atoms for name-day. Never same-row H/I."""
+    """Open-knowable Excel atoms for name-day. Never same-row H/I.
+
+    J uses the prior *session* Open (weekday Finviz only). A Sunday or
+    April dump is not yesterday's session.
+    """
     prior = prior_bars(hist, ticker, iso)
     out = {
         "J": None, "AH": None, "ER": None, "FQ": None, "JB": None, "JC": None,
         "H_l1": None, "I_l1": None, "J_l1": None, "G_l1": None,
         "n_prior": len(prior),
+        "prior_open_date": prior[-1][0] if prior else None,
+        "J_fresh": False,
     }
     if today_open and prior and prior[-1][1].get("open"):
         po = prior[-1][1]["open"]
         if po:
             out["J"] = (today_open - po) / po
+            out["J_fresh"] = j_fresh(out["prior_open_date"], iso)
     if len(prior) >= 2:
         o0 = prior[-1][1].get("open")
         o1 = prior[-2][1].get("open")
@@ -530,12 +570,21 @@ def pick_book(ranked, flags, mode, avoid_key=None, elev_key=None, n=TOP_N,
     return ranked[:n]
 
 
-def build_panel(joins, fz, hist, books, asof, spy):
+def build_panel(joins, fz, hist, books, asof, spy, start=HOLD_CUT,
+                sessions_only=True):
+    """Name-days with a Finviz H label.
+
+    start is exclusive (same as the original HOLD_CUT filter) unless
+    start is None, in which case every join+Finviz date is kept.
+    sessions_only drops Sat/Sun join dumps — those are not a 1d clock.
+    """
     book_dates = sorted(books)
     rows = []
     flags_by_day = {}
     for iso in sorted(joins):
-        if iso <= HOLD_CUT:
+        if start is not None and iso <= start:
+            continue
+        if sessions_only and not is_session(iso):
             continue
         if iso not in fz:
             continue
@@ -554,11 +603,13 @@ def build_panel(joins, fz, hist, books, asof, spy):
                 continue
             xl = excel_features(hist, t, iso, fz_t["open"])
             a = asof_day.get(t) or {}
+            j = xl["J"] if xl.get("J_fresh") else None
             flags = {
-                "J_le-1": xl["J"] is not None and xl["J"] <= -0.01,
-                "J_lt0": xl["J"] is not None and xl["J"] < 0,
-                "J_ge0": xl["J"] is not None and xl["J"] >= 0,
-                "J_ge1": xl["J"] is not None and xl["J"] >= 0.01,
+                "J_fresh": bool(xl.get("J_fresh")),
+                "J_le-1": j is not None and j <= -0.01,
+                "J_lt0": j is not None and j < 0,
+                "J_ge0": j is not None and j >= 0,
+                "J_ge1": j is not None and j >= 0.01,
                 "AH_ge1": (xl["AH"] or 0) >= 1,
                 "AH_ge2": (xl["AH"] or 0) >= 2,
                 "ER_m1": xl["ER"] == -1,
@@ -589,16 +640,44 @@ def build_panel(joins, fz, hist, books, asof, spy):
     return rows, flags_by_day
 
 
-def materialize(joins, flags_by_day, panel_index, spy, mode, avoid=None, elev=None):
+def in_window(iso, lo, hi):
+    if lo and iso < lo:
+        return False
+    if hi and iso > hi:
+        return False
+    return True
+
+
+def materialize(joins, flags_by_day, panel_index, spy, mode, avoid=None,
+                elev=None, n=TOP_N, lo=None, hi=None, special=None):
     trades = []
     day_picks = {}
     for iso, ranked in sorted(joins.items()):
-        if iso <= HOLD_CUT:
+        if iso not in flags_by_day:
+            continue
+        if not in_window(iso, lo, hi):
             continue
         fl = flags_by_day.get(iso) or {}
-        # only names that have a label
         ranked = [r for r in ranked if r["ticker"] in fl]
-        picks = pick_book(ranked, fl, mode, avoid, elev, n=TOP_N, cap=2)
+        if special == "avoid_J_ge0":
+            picks = []
+            for r in ranked:
+                if not fl.get(r["ticker"], {}).get("J_lt0"):
+                    continue
+                picks.append(r)
+                if len(picks) >= n:
+                    break
+        elif special == "avoid_incomplete_or_Jge1":
+            picks = []
+            for r in ranked:
+                f = fl.get(r["ticker"]) or {}
+                if f.get("incomplete") or f.get("J_ge1"):
+                    continue
+                picks.append(r)
+                if len(picks) >= n:
+                    break
+        else:
+            picks = pick_book(ranked, fl, mode, avoid, elev, n=n, cap=2)
         day_picks[iso] = []
         for r in picks:
             key = (iso, r["ticker"])
@@ -609,27 +688,38 @@ def materialize(joins, flags_by_day, panel_index, spy, mode, avoid=None, elev=No
     return trades, day_picks
 
 
-def flatten_overlay(flat, hist, fz):
+def flatten_overlay(flat, hist, fz, start=HOLD_CUT):
+    """Sleeve tickets with clock-clean J + same-day H.
+
+    start exclusive (post-8-13) matches the published flatten n=30.
+    Pass start=None to include the 08-13 io_core tickets (J is stale).
+    """
     out = []
     for rec in flat:
         iso, t = rec["_date"], rec["_ticker"]
-        if iso <= HOLD_CUT:
+        if start is not None and iso <= start:
             continue
         fz_t = (fz.get(iso) or {}).get(t) or {}
         xl = excel_features(hist, t, iso, fz_t.get("open"))
+        j = xl["J"] if xl.get("J_fresh") else None
         flags = {
-            "J_ge1": xl["J"] is not None and xl["J"] >= 0.01,
+            "J_fresh": bool(xl.get("J_fresh")),
+            "J_ge1": j is not None and j >= 0.01,
+            "J_ge0": j is not None and j >= 0,
+            "J_lt0": j is not None and j < 0,
             "JB": xl["JB"] == 1,
             "FQ": xl["FQ"] == 1,
-            "J_le-1": xl["J"] is not None and xl["J"] <= -0.01,
+            "J_le-1": j is not None and j <= -0.01,
             "ER_m1": xl["ER"] == -1,
         }
         ret = rec["_ret"]
         net = None if ret is None else ret / 100.0  # already fee-native
+        h_net = None if fz_t.get("h") is None else fz_t["h"] - FEE_RT
         out.append({
             "date": iso, "ticker": t, "flags": flags, "xl": xl,
-            "net": net, "pnl": rec["_pnl"], "sleeve": rec.get("sleeve"),
-            "ret_pct": ret,
+            "net": net, "h_net": h_net, "pnl": rec["_pnl"],
+            "sleeve": rec.get("sleeve"), "ret_pct": ret,
+            "session": is_session(iso),
         })
     return out
 
@@ -643,13 +733,114 @@ def _pct_s(x, n=None):
     return s
 
 
+def _ghost_s(g):
+    return f"{g['name']}/{g['month']}/{g['day']}"
+
+
+def _pp_s(x):
+    return "—" if x is None else f"{x:+.2f} pp"
+
+
+def score_window(name, joins, flags_by_day, panel_index, spy, lo, hi, n=TOP_N):
+    """Baseline + the two standing KEEP recipes on one window / book size."""
+    raw, _ = materialize(joins, flags_by_day, panel_index, spy, "raw",
+                         n=n, lo=lo, hi=hi)
+    base = score_book(f"join_top{n}", "baseline", raw, None, spy,
+                      f"fullscan-alone top-{n}")
+    base["holdout_mean"] = mean([tr["net"] for tr in raw])
+    avoid, _ = materialize(joins, flags_by_day, panel_index, spy, "raw",
+                           n=n, lo=lo, hi=hi, special="avoid_J_ge0")
+    elev, _ = materialize(joins, flags_by_day, panel_index, spy, "elev_cap",
+                          "J_ge0", "J_le-1", n=n, lo=lo, hi=hi)
+    a = score_book("avoid_J_ge0", "avoid", avoid, base, spy,
+                   "Excel: drop J≥0, refill from J<0")
+    e = score_book("elev_cap2_J_le-1", "elevate", elev, base, spy,
+                   "Excel: swap ≤2 J≥0 in the book for J≤−1% from ranks n+1–80")
+    return {
+        "name": name, "lo": lo, "hi": hi, "n_book": n,
+        "days": sorted({tr["date"] for tr in raw}),
+        "baseline": base, "avoid_J_ge0": a, "elev_cap2_J_le-1": e,
+    }
+
+
+def flatten_keep_score(flat_rows):
+    """KEEP recipes on flatten tickets: sleeve-native P&L vs same-day H."""
+    if not flat_rows:
+        return {}
+
+    def pack(name, rows, vs_rows=None):
+        sl = [r["net"] for r in rows if r.get("net") is not None]
+        hh = [r["h_net"] for r in rows if r.get("h_net") is not None]
+        sl_m, h_m = mean(sl), mean(hh)
+        vs_sl = vs_h = None
+        if vs_rows is not None:
+            vsl = mean([r["net"] for r in vs_rows if r.get("net") is not None])
+            vh = mean([r["h_net"] for r in vs_rows if r.get("h_net") is not None])
+            if sl_m is not None and vsl is not None:
+                vs_sl = (sl_m - vsl) * 100
+            if h_m is not None and vh is not None:
+                vs_h = (h_m - vh) * 100
+        return {
+            "name": name, "n": len(sl),
+            "sleeve_mean": sl_m, "h_mean": h_m,
+            "vs_sleeve_pp": vs_sl, "vs_h_pp": vs_h,
+        }
+
+    all_rows = flat_rows
+    avoid = [r for r in all_rows if r["flags"].get("J_lt0")]
+    # elev_cap2 analogue: cannot swap names that were not ticketed.
+    # Drop up to 2 J≥0 tickets per day (prefer largest J).
+    by_d = defaultdict(list)
+    for r in all_rows:
+        by_d[r["date"]].append(r)
+    elev = []
+    for _iso, rows in by_d.items():
+        jpos = sorted([r for r in rows if r["flags"].get("J_ge0")],
+                      key=lambda r: (r["xl"].get("J") or 0), reverse=True)
+        jneg = [r for r in rows if not r["flags"].get("J_ge0")]
+        elev.extend(jneg + jpos[2:])
+    io = [r for r in all_rows if r.get("sleeve") == "io_core"]
+    mv = [r for r in all_rows if r.get("sleeve") == "mover_long"]
+    io_avoid = [r for r in io if r["flags"].get("J_lt0")]
+    fair = io_avoid + mv
+    stale_j = [r for r in all_rows if not r["flags"].get("J_fresh")]
+    return {
+        "n_all": len(all_rows),
+        "cuts": [
+            pack("all tickets", all_rows),
+            pack("avoid_J_ge0 (keep J<0)", avoid, all_rows),
+            pack("elev_cap2 analogue (drop ≤2 J≥0 / day)", elev, all_rows),
+            pack("io_core only", io, all_rows),
+            pack("mover_long only", mv, all_rows),
+            pack("io_core avoid_J_ge0", io_avoid, io),
+            pack("fair: J-avoid on io only, movers untouched", fair, all_rows),
+        ],
+        "n_stale_j": len(stale_j),
+        "note": (
+            "KEEP is a join top-8 1d H overlay. Flatten is io_core 3d + "
+            "mover_long 1d sleeve-native P&L. Blanket J-avoid fights the "
+            "mover thesis (buy gap-up). Fair test applies J-avoid to io only."
+        ),
+    }
+
+
+def _win_row(label, rec):
+    gh = rec["ghost"]
+    vs = rec.get("vs_fullscan_pp")
+    return (
+        f"| {label} | {rec['n']} | {rec.get('n_dates', '—')} | "
+        f"{_pct_s(rec['holdout_mean'])} | {_pp_s(vs)} | "
+        f"{(rec['win'] or 0)*100:.1f}% | {_ghost_s(gh)} | "
+        f"**{rec.get('verdict', '—')}** |"
+    )
+
+
 def render(payload):
     g = payload["gate"]
-    base = payload["baseline"]
     recs = payload["recipes"]
     flat = payload["flatten"]
     L = [
-        "# JOIN Excel open-gate × fullscan — post-8-13 holdout",
+        "# JOIN Excel open-gate × fullscan — prove (post-8-13 KEEP)",
         "",
         f"_Generated {payload['generated']} · live `flatten_robust` frozen · "
         "research only · no live push._",
@@ -660,98 +851,140 @@ def render(payload):
         "",
         f"**Family verdict: {payload['family']}**",
         "",
-        "Excel KEEP (vs join top-8, after fees, ghost pass, both tapes green):",
+        "Standing recipes (research only, not live): `avoid_J_ge0` and "
+        "`elev_cap2_J_le-1` on morning join top-8. Open Excel **J only** "
+        "(clock-clean prior-session Open). Live stays frozen.",
         "",
+        "### Prove (time holdout, weekday sessions)",
+        "",
+        "Post-8-13 was discovery. Prove = later weekday sessions "
+        f"({PROVE[0]} → {PROVE[1]}), J vs prior weekday Open. "
+        "Sunday join dumps (2026-08-30, 2026-09-06) are **not** a 1d clock "
+        "and are held out. 2026-08-13 J is stale (only prior Open is 2026-04-26) "
+        "and is not used.",
+        "",
+        "| window | book | recipe | n | days | after-fee H | vs fullscan | win | ghost | bar |",
+        "|---|---|---|---:|---:|---:|---:|---:|---|---|",
     ]
-    for r in payload["recipes"]:
-        if r["kind"] in ("avoid", "elevate") and r["verdict"] == "KEEP":
+    for wname, w in payload["windows"].items():
+        for rec_name in ("baseline", "avoid_J_ge0", "elev_cap2_J_le-1"):
+            rec = w[rec_name]
+            vs = "—" if rec.get("vs_fullscan_pp") is None else _pp_s(rec["vs_fullscan_pp"])
+            bar = rec.get("verdict", "—") if rec_name != "baseline" else "—"
             L.append(
-                f"- `{r['name']}` — {_pct_s(r['holdout_mean'], r['n'])} · "
-                f"{r['vs_fullscan_pp']:+.2f} pp · win {(r['win'] or 0)*100:.1f}% · "
-                f"{r['notes']}"
+                f"| {wname} | top-{w['n_book']} | `{rec['name']}` | {rec['n']} | "
+                f"{rec['n_dates']} | {_pct_s(rec['holdout_mean'])} | {vs} | "
+                f"{(rec['win'] or 0)*100:.1f}% | {_ghost_s(rec['ghost'])} | "
+                f"**{bar}** |"
             )
     L += [
         "",
-        "Flatten_robust tickets on this same window do **not** confirm: dropping "
-        "J≥+1% names from the live book **hurts** sleeve-native P&L (movers on "
-        "08-20/21 gapped up and paid). Primary label is the join 1d H clock, "
-        "not flatten 3d.",
+        "### Wider book (more name-days on the same dumps)",
+        "",
+        "Join ranked files on disk stop at 2026-08-12 / 2026-09-07. No older "
+        "weekday join+Finviz pair exists (04-26 has Finviz+membership, no weather, "
+        "no ranked file). Wider book = ranks 1–80 on the same sessions.",
+        "",
+        "| window | recipe | n | days | after-fee H | vs top-80 | win | ghost | bar |",
+        "|---|---|---:|---:|---:|---:|---:|---|---|",
+    ]
+    for wname, w in payload["wide"].items():
+        for rec_name in ("baseline", "avoid_J_ge0", "elev_cap2_J_le-1"):
+            rec = w[rec_name]
+            vs = "—" if rec.get("vs_fullscan_pp") is None else _pp_s(rec["vs_fullscan_pp"])
+            bar = rec.get("verdict", "—") if rec_name != "baseline" else "—"
+            L.append(
+                f"| {wname} | `{rec['name']}` | {rec['n']} | {rec['n_dates']} | "
+                f"{_pct_s(rec['holdout_mean'])} | {vs} | "
+                f"{(rec['win'] or 0)*100:.1f}% | {_ghost_s(rec['ghost'])} | "
+                f"**{bar}** |"
+            )
+    L += [
+        "",
+        "cap=2 on an 80-name book is a 2.5% swap — elev_cap2 is a top-8 recipe "
+        "and is not expected to move the wide book.",
+        "",
+        "### Flatten / sleeve confirm (KEEP recipes, not J≥+1%)",
+        "",
+        payload.get("flatten_plain") or "",
+        "",
+    ]
+    if not flat:
+        L.append("No flatten tickets after 2026-08-13.")
+    else:
+        L.append(
+            f"Live tickets after {HOLD_CUT}: **{flat['n_all']}**. "
+            f"{flat.get('note', '')} Avoid/elevate here does not change live."
+        )
+        L.append("")
+        L.append("| cut | n | sleeve P&L | vs sleeve | same-day H | vs H |")
+        L.append("|---|---:|---:|---:|---:|---:|")
+        for row in flat.get("cuts") or []:
+            L.append(
+                f"| {row['name']} | {row['n']} | {_pct_s(row.get('sleeve_mean'))} | "
+                f"{_pp_s(row.get('vs_sleeve_pp'))} | {_pct_s(row.get('h_mean'))} | "
+                f"{_pp_s(row.get('vs_h_pp'))} |"
+            )
+    L += [
         "",
         "### What was joined",
         "",
         "**Excel (clock gate, open-only):**",
         "",
-        f"- Same-row numbers from the locked 44: **J, AH, ER, FQ, JB, JC** "
-        f"(asserted via `excel_clock_gate.py`).",
-        "- Lags (any letter from rows above): **H[t−1], I[t−1], J[t−1], G[t−1]**.",
-        "- Fills A B C G J K L M O IR IS IT are legal but **not on these dumps** "
-        "(no Excel grid / M-hex / O-green / five-cell light in the morning files). "
+        "- Same-row numbers from the locked 44: **J** is the standing recipe "
+        "(AH / ER / FQ / JB / JC still asserted legal, not in the KEEP pair). "
+        "J = (today Open − prior *weekday session* Open) / prior Open.",
+        "- Lags (any letter from rows above): **H[t−1], I[t−1], J[t−1], G[t−1]** "
+        "from weekday bars only.",
+        "- Fills A B C G J K L M O IR IS IT are legal but **not on these dumps**. "
         "Not invented.",
-        "- OUT: same-row H/I, M number, B/G/K/O numbers, D/E/F, `core_score`.",
+        "- OUT: same-row H/I, M number, B/G/K/O numbers, D/E/F, `core_score`, "
+        "H paint.",
         "",
         "**Fullscan (standing dumps, open or earliest fair clock):**",
         "",
-        "- `data/join/YYYY-MM-DD_ranked.csv` — morning rank, `total_score`, "
-        "`families_known` / incomplete. Same-day file is the 09:30 ranker.",
-        "- `data/stock_book/YYYY-MM-DD_stock_book.json` **1d buy, prior date only** "
-        "(same-day book is stamped afternoon — not an open feature).",
-        "- `data/feature_asof/` morning tags (`join_good`, `blue`, `ab_good`) when "
-        "the dated file exists. Forward `ret_*` are labels only.",
-        "- `data/sleeve_merge/trades.csv` — live flatten_robust tickets (overlay).",
+        "- `data/join/YYYY-MM-DD_ranked.csv` — morning rank. Sunday files "
+        "(08-30, 09-06) exist but are held out of prove.",
+        "- `data/stock_book/` **1d buy, prior date only**.",
+        "- `data/feature_asof/` morning tags when present. `ret_*` labels only.",
+        "- `data/sleeve_merge/trades.csv` — flatten_robust tickets (overlay).",
         "",
         "### Labels",
         "",
         "- **Primary:** same-day Excel **H** = Finviz Change from Open, minus "
-        f"{FEE_RT*100:.2f} pp Futubull. This is the join / stock-book 1d clock.",
-        "- **Secondary:** feature_asof `ret_1d` (sleeve-native forward) when the "
-        "asof file exists; flatten ticket `ret_pct` (already fee-native).",
+        f"{FEE_RT*100:.2f} pp Futubull. Join / stock-book 1d clock.",
+        "- **Secondary:** flatten ticket `ret_pct` (already fee-native; io 3d / "
+        "mover 1d). feature_asof `ret_1d` when present.",
         "",
-        "### Window",
+        "### Window / dumps",
         "",
-        f"- KEEP decision: names/days **after {HOLD_CUT}** only.",
-        f"- Join days with a Finviz label: **{payload['n_join_days']}** "
-        f"({payload['first_day']} → {payload['last_day']}).",
-        f"- Panel name-days with H: **{payload['n_panel']}**.",
-        f"- Finviz history dates (for lags): **{payload['n_fz_dates']}** "
-        f"({payload['fz_first']} → {payload['fz_last']}).",
-        "- Recipes were pre-specified from earlier Excel mines (J≤−1, AH, ER, "
-        "JB, FQ). They were not searched on this holdout.",
+        f"- Discovery (in-sample peek): weekday sessions {DISCOVERY[0]} → {DISCOVERY[1]}.",
+        f"- Prove (time holdout): weekday sessions {PROVE[0]} → {PROVE[1]} "
+        "(08-26 has join, no Finviz H — skipped).",
+        f"- Published 18-day tape included Sundays; session-clean pooled tape is "
+        f"**{payload.get('n_session_days')}** weekdays "
+        f"({payload.get('first_day')} → {payload.get('last_day')}).",
+        f"- Panel name-days with H (weekday): **{payload['n_panel']}**.",
+        f"- Finviz history dates: **{payload['n_fz_dates']}** "
+        f"({payload['fz_first']} → {payload['fz_last']}); Sat/Sun dumps are "
+        "not used as prior Open.",
+        "- Recipes were pre-specified. They were not re-searched on prove.",
         "",
         "### Ship bar",
         "",
-        f"Beat fullscan-alone (join top-{TOP_N}) by ≥{int(BEAT_PP*100)} bp after "
-        "Futubull 15 bp, ghost (name/month/day), leak-free. Both SPY tapes "
-        f"if each has n≥{MIN_TAPE}; otherwise tape-thin is noted, not a KILL. "
-        "KEEP only if the join elevates and/or avoids better than fullscan alone.",
+        f"Beat same-window fullscan-alone (join top-{TOP_N}) by ≥{int(BEAT_PP*100)} bp "
+        "after Futubull 15 bp, ghost (name/month/day), leak-free. "
+        "KEEP holds only if the **prove** window clears that bar. "
+        "Pooled leftover that still includes discovery is not a holdout.",
         "",
-        "### Fullscan-alone baseline (primary)",
+        "### Discovery-pool recipes vs join top-8 (session-clean, not a holdout)",
         "",
-        f"| book | n | after-fee H | win | t | ghost |",
-        f"|---|---:|---:|---:|---:|---|",
-    ]
-    def _base_row(label, rec):
-        tt = f"{rec['t']:.2f}" if rec.get("t") is not None else "—"
-        gh = rec["ghost"]
-        return (
-            f"| {label} | {rec['n']} | {_pct_s(rec['holdout_mean'])} | "
-            f"{(rec['win'] or 0)*100:.1f}% | {tt} | "
-            f"{gh['name']}/{gh['month']}/{gh['day']} |"
-        )
-
-    L.append(_base_row(f"join top-{TOP_N}", base))
-    if payload.get("baseline15"):
-        L.append(_base_row("join top-15", payload["baseline15"]))
-    L += [
-        "",
-        "### Recipes vs join top-8",
-        "",
-        "| recipe | kind | holdout H | vs fullscan | win | n | ghost | tapes | asof 1d | verdict | why |",
+        "| recipe | kind | H | vs fullscan | win | n | ghost | tapes | asof 1d | verdict | why |",
         "|---|---|---:|---:|---:|---:|---|---|---:|---|---|",
     ]
     for r in recs:
         vs = "—" if r["vs_fullscan_pp"] is None else f"{r['vs_fullscan_pp']:+.2f} pp"
         win = "—" if r["win"] is None else f"{r['win']*100:.1f}%"
-        gh = r["ghost"]
         tp = r["tapes"]
         tape_s = "thin"
         if tp["enough"]:
@@ -761,31 +994,10 @@ def render(payload):
         asof_s = _pct_s(r["asof_1d_mean"], r["asof_1d_n"]) if r["asof_1d_n"] else "—"
         L.append(
             f"| `{r['name']}` | {r['kind']} | {_pct_s(r['holdout_mean'])} | {vs} | "
-            f"{win} | {r['n']} | {gh['name']}/{gh['month']}/{gh['day']} | {tape_s} | "
+            f"{win} | {r['n']} | {_ghost_s(r['ghost'])} | {tape_s} | "
             f"{asof_s} | **{r['verdict']}** | "
             f"{','.join(r['fail_reasons']) or '—'} |"
         )
-    L += [
-        "",
-        "### Flatten_robust overlay (sleeve-native P&L, already fee-native)",
-        "",
-    ]
-    if not flat:
-        L.append("No flatten tickets after 2026-08-13.")
-    else:
-        L.append(
-            f"Live tickets after {HOLD_CUT}: **{flat['n_all']}** "
-            f"(mean { _pct_s(flat['mean_all']) }). Avoid/elevate on this book "
-            "does not change live."
-        )
-        L.append("")
-        L.append("| cut | n | mean ret | leftover vs all |")
-        L.append("|---|---:|---:|---:|")
-        for row in flat.get("cuts") or []:
-            L.append(
-                f"| {row['name']} | {row['n']} | {_pct_s(row['mean'])} | "
-                f"{row['delta_pp'] if row['delta_pp'] is not None else '—'} |"
-            )
     L += [
         "",
         "### What this does not do",
@@ -793,14 +1005,14 @@ def render(payload):
         "- Does not wire live `flatten_robust` / `LIVE_POLICY` / `join_rules.json`.",
         "- Does not use same-row H/I, H paint, or M’s number.",
         "- Does not treat afternoon stock-book prints as 09:30 features.",
-        "- Does not claim CE/CD (need 43 sessions of High/Low; Finviz tape is too short).",
+        "- Does not score Sunday join dumps as a 1d session.",
+        "- Does not claim CE/CD (need 43 sessions of High/Low).",
         "- Does not re-open shade hex / light+O (fills not in these dumps).",
         "",
         f"Gate: `{g['gate']}`. Fills open: {', '.join(g['fill_open'])}. "
         "Live frozen.",
         "",
-        f"Tip `{payload.get('tip_sha') or 'local'}` · "
-        f"n={payload['baseline']['n']} join top-8.",
+        f"Tip `{payload.get('tip_sha') or 'local'}` · family **{payload['family']}**.",
         "",
         "Research only.",
         "",
@@ -809,26 +1021,18 @@ def render(payload):
 
 
 def scoreboard_line(payload):
-    excel = [r for r in payload["recipes"] if r["kind"] in ("avoid", "elevate", "intersect")]
-    keep = sum(1 for r in excel if r["verdict"] == "KEEP")
-    kill = sum(1 for r in excel if r["verdict"] == "KILL")
     tip = payload.get("tip_sha") or "local"
-    n = payload["baseline"]["n"]
-    h = payload["baseline"]["holdout_mean"]
-    best = None
-    for r in excel:
-        if r["verdict"] == "KEEP":
-            if best is None or (r.get("vs_fullscan_pp") or -9) > (best.get("vs_fullscan_pp") or -9):
-                best = r
-    if best:
-        effect = f"{best['name']} {best['vs_fullscan_pp']:+.2f} pp vs join top-8 n={best['n']}"
-    else:
-        effect = "no elevate/avoid beat"
+    prove = payload["windows"]["prove"]
+    a = prove["avoid_J_ge0"]
+    e = prove["elev_cap2_J_le-1"]
     return (
         f"## Join Excel open-gate × fullscan (post-8-13)\n\n"
         f"_Generated {payload['generated']} · live `flatten_robust` frozen. "
-        f"Family **{payload['family']}**. Excel KEEP {keep} · KILL {kill}. "
-        f"Baseline join top-8 after-fee H {_pct_s(h)} n={n}. {effect}. "
+        f"Family **{payload['family']}** (not KEEP holds). "
+        f"Prove weekday top-8: `avoid_J_ge0` {_pp_s(a.get('vs_fullscan_pp'))} "
+        f"n={a['n']} ghost {_ghost_s(a['ghost'])}; "
+        f"`elev_cap2_J_le-1` {_pp_s(e.get('vs_fullscan_pp'))} "
+        f"n={e['n']} ghost {_ghost_s(e['ghost'])}. "
         f"Tip `{tip}`. See `excel_bot/research/JOIN_POST_813.md`._\n"
     )
 
@@ -845,31 +1049,33 @@ def main():
     books = load_book_1d()
     asof = load_asof()
     spy = {}
-    panel, flags_by_day = build_panel(joins, fz, hist, books, asof, spy)
+    # Session-clean panel: weekdays after HOLD_CUT, J vs prior weekday Open.
+    panel, flags_by_day = build_panel(joins, fz, hist, books, asof, spy,
+                                      start=HOLD_CUT, sessions_only=True)
     panel_index = {(r["date"], r["ticker"]): r for r in panel}
-    print(f"panel {len(panel)} days={len(flags_by_day)} fz={len(fz)}", flush=True)
+    print(f"panel {len(panel)} session_days={len(flags_by_day)} fz={len(fz)}",
+          flush=True)
 
-    fees = load_fees()
-    raw, raw_days = materialize(joins, flags_by_day, panel_index, spy, "raw")
-    raw15, _ = materialize(joins, flags_by_day, panel_index, spy, "raw")
-    # top-15 baseline separately
-    raw15_trades = []
-    for iso, ranked in sorted(joins.items()):
-        if iso <= HOLD_CUT or iso not in flags_by_day:
-            continue
-        fl = flags_by_day[iso]
-        for r in ranked[:15]:
-            tr = panel_index.get((iso, r["ticker"]))
-            if tr:
-                raw15_trades.append(tr)
+    windows = {
+        "discovery": score_window("discovery", joins, flags_by_day, panel_index,
+                                  spy, DISCOVERY[0], DISCOVERY[1], TOP_N),
+        "prove": score_window("prove", joins, flags_by_day, panel_index,
+                              spy, PROVE[0], PROVE[1], TOP_N),
+        "pooled_sessions": score_window("pooled_sessions", joins, flags_by_day,
+                                        panel_index, spy, ORIG[0], ORIG[1], TOP_N),
+    }
+    wide = {
+        "discovery": score_window("discovery80", joins, flags_by_day, panel_index,
+                                  spy, DISCOVERY[0], DISCOVERY[1], WIDE_N),
+        "prove": score_window("prove80", joins, flags_by_day, panel_index,
+                              spy, PROVE[0], PROVE[1], WIDE_N),
+        "pooled_sessions": score_window("pooled80", joins, flags_by_day,
+                                        panel_index, spy, ORIG[0], ORIG[1], WIDE_N),
+    }
 
-    baseline = score_book("join_top8", "baseline", raw, None, spy,
-                          "fullscan-alone morning rank")
-    baseline["holdout_mean"] = mean([tr["net"] for tr in raw])
-    baseline15 = score_book("join_top15", "baseline", raw15_trades, None, spy)
-
+    # Full recipe card on the session-clean pooled tape (not a holdout).
+    baseline = windows["pooled_sessions"]["baseline"]
     recipes_spec = [
-        # Excel avoid (refill keeps book size)
         ("avoid_J_ge1", "avoid", "avoid_refill", "J_ge1", None,
          "Excel: drop join buys with same-row J≥+1% (44), refill"),
         ("avoid_J_ge0", "avoid", "avoid_refill", None, None,
@@ -880,12 +1086,10 @@ def main():
          "Excel: drop join buys with FQ=1 (yesterday H>+3%), refill"),
         ("avoid_ER_p1", "avoid", "avoid_refill", "ER_p1", None,
          "Excel: drop join buys with ER=+1 (yesterday +5% H/I), refill"),
-        # fullscan-only control (PR 143) — not an Excel join
         ("avoid_incomplete", "control", "avoid_refill", "incomplete", None,
          "fullscan-only control: drop incomplete cards, refill"),
         ("avoid_incomplete_or_Jge1", "control", "avoid_refill",
          None, None, "control: incomplete OR J≥+1% — Excel must beat incomplete alone"),
-        # capped elevate: swap ≤2 names in the eight
         ("elev_cap2_J_le-1", "elevate", "elev_cap", "J_ge0", "J_le-1",
          "Excel: swap ≤2 J≥0 names in top-8 for J≤−1% from ranks 9–80"),
         ("elev_cap2_J_lt0", "elevate", "elev_cap", "J_ge0", "J_lt0",
@@ -894,7 +1098,6 @@ def main():
          "Excel: swap ≤2 tail names for ER=−1 from ranks 9–80"),
         ("elev_cap2_AH_ge1", "elevate", "elev_cap", None, "AH_ge1",
          "Excel: swap ≤2 tail names for AH≥1 from ranks 9–80"),
-        # replace-book (not a join overlay) — reported, not family KEEP
         ("replace_J_lt0", "replace", "elev", None, "J_lt0",
          "not a join: replace the eight with J<0 from ranks 1–80"),
         ("top8_and_J_lt0", "intersect", "intersect", None, "J_lt0",
@@ -904,66 +1107,15 @@ def main():
         ("top8_and_ER_m1", "intersect", "intersect", None, "ER_m1",
          "keep join top-8 only when ER=−1"),
     ]
-
     scored = []
+    lo, hi = ORIG
     for name, kind, mode, avoid, elev, note in recipes_spec:
-        if name in ("avoid_incomplete_or_Jge1", "avoid_J_ge0"):
-            trades = []
-            for iso, ranked in sorted(joins.items()):
-                if iso <= HOLD_CUT or iso not in flags_by_day:
-                    continue
-                fl = flags_by_day[iso]
-                ranked = [r for r in ranked if r["ticker"] in fl]
-                out = []
-                for r in ranked:
-                    f = fl[r["ticker"]]
-                    if name == "avoid_J_ge0" and not f.get("J_lt0"):
-                        continue
-                    if name == "avoid_incomplete_or_Jge1" and (
-                            f.get("incomplete") or f.get("J_ge1")):
-                        continue
-                    out.append(r)
-                    if len(out) >= TOP_N:
-                        break
-                for r in out:
-                    tr = panel_index.get((iso, r["ticker"]))
-                    if tr:
-                        trades.append(tr)
-            scored.append(score_book(name, kind, trades, baseline, spy, note))
-            continue
-        trades, _days = materialize(joins, flags_by_day, panel_index, spy,
-                                    mode, avoid, elev)
+        special = name if name in ("avoid_J_ge0", "avoid_incomplete_or_Jge1") else None
+        trades, _ = materialize(joins, flags_by_day, panel_index, spy,
+                                mode, avoid, elev, n=TOP_N, lo=lo, hi=hi,
+                                special=special)
         scored.append(score_book(name, kind, trades, baseline, spy, note))
 
-    # flatten overlay
-    flat_rows = flatten_overlay(load_flatten(), hist, fz)
-    flat_payload = {}
-    if flat_rows:
-        all_n = [r["net"] for r in flat_rows if r["net"] is not None]
-        cuts = []
-        for cname, key, want in (
-            ("all tickets", None, None),
-            ("avoid J≥+1%", "J_ge1", False),
-            ("avoid JB", "JB", False),
-            ("keep J≤−1% only", "J_le-1", True),
-            ("keep ER=−1 only", "ER_m1", True),
-        ):
-            if key is None:
-                sub = flat_rows
-            elif want:
-                sub = [r for r in flat_rows if r["flags"].get(key)]
-            else:
-                sub = [r for r in flat_rows if not r["flags"].get(key)]
-            xs = [r["net"] for r in sub if r["net"] is not None]
-            m = mean(xs)
-            dpp = None if (m is None or mean(all_n) is None) else (m - mean(all_n)) * 100
-            cuts.append({"name": cname, "n": len(xs), "mean": m,
-                         "delta_pp": None if dpp is None else f"{dpp:+.2f} pp"})
-        flat_payload = {
-            "n_all": len(all_n), "mean_all": mean(all_n), "cuts": cuts,
-        }
-
-    # incomplete-alone is a fullscan control; Excel must beat it to claim that mix
     inc = next((r for r in scored if r["name"] == "avoid_incomplete"), None)
     mix = next((r for r in scored if r["name"] == "avoid_incomplete_or_Jge1"), None)
     if mix and inc and mix.get("holdout_mean") is not None and inc.get("holdout_mean") is not None:
@@ -971,50 +1123,64 @@ def main():
             mix["verdict"] = "KILL"
             mix["fail_reasons"] = list(dict.fromkeys(
                 (mix.get("fail_reasons") or []) + ["no_edge_vs_incomplete_control"]))
-    excel_scored = [r for r in scored if r["kind"] in ("avoid", "elevate", "intersect")]
-    keep_n = sum(1 for r in excel_scored if r["verdict"] == "KEEP")
-    kill_n = sum(1 for r in excel_scored if r["verdict"] == "KILL")
-    family = "KEEP" if keep_n else "KILL" if excel_scored else "null"
-    if keep_n == 0 and excel_scored and all(r["n"] < 20 for r in excel_scored):
-        family = "null"
 
-    best_keep = [r for r in excel_scored if r["verdict"] == "KEEP"]
-    if family == "KEEP" and best_keep:
-        b0 = max(best_keep, key=lambda r: r.get("vs_fullscan_pp") or -9)
-        plain = (
-            f"On the post-{HOLD_CUT} window, joining Excel open-gate numbers "
-            "(J / AH / ER / FQ / JB / JC and H/I/J/G lags) onto the morning "
-            f"join rank **does** beat fullscan-alone. Best Excel KEEP "
-            f"`{b0['name']}` holdout H {_pct_s(b0['holdout_mean'])} vs join "
-            f"top-8 {_pct_s(baseline['holdout_mean'])} "
-            f"({b0['vs_fullscan_pp']:+.2f} pp, n={b0['n']}). "
-            "avoid_incomplete is a fullscan-only control (not Excel). "
-            "Flatten tickets do not confirm (avoid J≥+1% hurts sleeve P&L). "
-            "Live flatten_robust stays frozen."
-        )
-    elif family == "KILL":
-        inc_s = ""
-        if inc and inc.get("holdout_mean") is not None:
-            inc_s = (
-                f" The fullscan-only incomplete avoid still prints "
-                f"{_pct_s(inc['holdout_mean'])} (n={inc['n']}) — that is PR 143, "
-                "not this join."
-            )
-        plain = (
-            f"On the post-{HOLD_CUT} window, joining Excel open-gate numbers "
-            "(J / AH / ER / FQ / JB / JC and H/I/J/G lags) onto the morning "
-            "join rank does **not** elevate or avoid better than fullscan-alone "
-            f"(join top-8 after-fee H {_pct_s(baseline['holdout_mean'])}, "
-            f"n={baseline['n']}). Excel KEEP 0 · KILL {kill_n}.{inc_s} "
-            "Fills (light+O / M hex) were not on these dumps and were not invented. "
-            "Live flatten_robust stays frozen. Do not wire."
-        )
+    flat_rows = flatten_overlay(load_flatten(), hist, fz, start=HOLD_CUT)
+    flat_payload = flatten_keep_score(flat_rows)
+
+    prove_a = windows["prove"]["avoid_J_ge0"]
+    prove_e = windows["prove"]["elev_cap2_J_le-1"]
+    prove_clears = (
+        prove_a.get("verdict") == "KEEP" or prove_e.get("verdict") == "KEEP"
+    )
+    # Family: KEEP holds only if the time-holdout clears the ship bar.
+    # Pooled leftover that still includes discovery is not a holdout.
+    if prove_clears:
+        family = "KEEP holds"
     else:
-        plain = (
-            f"Post-{HOLD_CUT} join is **null** — not enough powered name-days "
-            "to KEEP or honestly KILL an elevate/avoid vs fullscan-alone. "
-            "Live frozen."
-        )
+        family = "CONDITIONAL"
+
+    pa, pe = prove_a, prove_e
+    disc_a = windows["discovery"]["avoid_J_ge0"]
+    pool_a = windows["pooled_sessions"]["avoid_J_ge0"]
+    pool_e = windows["pooled_sessions"]["elev_cap2_J_le-1"]
+    wide_p = wide["prove"]["avoid_J_ge0"]
+    avoid_sl = next((c for c in (flat_payload.get("cuts") or [])
+                     if c["name"].startswith("avoid_J_ge0")), None)
+    fair_sl = next((c for c in (flat_payload.get("cuts") or [])
+                    if c["name"].startswith("fair:")), None)
+    flatten_plain = (
+        "First flatten cut used J≥+1%, not the KEEP recipes. Correct recipes: "
+        f"`avoid_J_ge0` on all post-8-13 tickets is n={avoid_sl['n'] if avoid_sl else 0}, "
+        f"sleeve {_pct_s(avoid_sl['sleeve_mean'] if avoid_sl else None)} "
+        f"({_pp_s(avoid_sl['vs_sleeve_pp'] if avoid_sl else None)} vs all) and "
+        f"same-day H {_pct_s(avoid_sl['h_mean'] if avoid_sl else None)} "
+        f"({_pp_s(avoid_sl['vs_h_pp'] if avoid_sl else None)}). "
+        "Movers on 08-20/21 gapped up (J>0) and paid sleeve; blanket J-avoid "
+        "removes those winners. Fair clock — J-avoid on io_core only, movers "
+        f"untouched — is n={fair_sl['n'] if fair_sl else 0}, sleeve "
+        f"{_pct_s(fair_sl['sleeve_mean'] if fair_sl else None)} "
+        f"({_pp_s(fair_sl['vs_sleeve_pp'] if fair_sl else None)} vs all). "
+        "H and sleeve disagree on names like CYPH (sleeve +25%, H −3%). "
+        "Flatten does not confirm a blanket KEEP. Do not wire."
+    )
+    plain = (
+        f"Prove (weekday {PROVE[0]}→{PROVE[1]}) does **not** re-clear the ship bar. "
+        f"`avoid_J_ge0` n={pa['n']} H {_pct_s(pa['holdout_mean'])} "
+        f"({_pp_s(pa.get('vs_fullscan_pp'))} vs same-window top-8, "
+        f"ghost {_ghost_s(pa['ghost'])}). "
+        f"`elev_cap2_J_le-1` n={pe['n']} H {_pct_s(pe['holdout_mean'])} "
+        f"({_pp_s(pe.get('vs_fullscan_pp'))}, ghost {_ghost_s(pe['ghost'])}). "
+        f"Discovery half still prints (`avoid_J_ge0` {_pp_s(disc_a.get('vs_fullscan_pp'))} "
+        f"n={disc_a['n']}) — that is the peek, not prove. "
+        f"Pooled weekday leftover is `avoid_J_ge0` {_pp_s(pool_a.get('vs_fullscan_pp'))} "
+        f"n={pool_a['n']} / `elev_cap2_J_le-1` {_pp_s(pool_e.get('vs_fullscan_pp'))} "
+        f"n={pool_e['n']} (includes discovery; not a holdout). "
+        f"Wider book (top-80) prove `avoid_J_ge0` {_pp_s(wide_p.get('vs_fullscan_pp'))} "
+        f"n={wide_p['n']}. Join dumps do not add sessions before 8-13 with a "
+        "fresh J (08-13 prior Open is 04-26). "
+        "Family is **CONDITIONAL**: not KEEP holds, not a full KILL of the "
+        "discovery print. Live flatten_robust stays frozen. Do not wire."
+    )
 
     fz_dates = sorted(fz)
     join_eval = sorted(flags_by_day)
@@ -1022,34 +1188,44 @@ def main():
         "generated": str(date.today()),
         "family": family,
         "plain": plain,
+        "flatten_plain": flatten_plain,
         "gate": gate_payload(),
         "hold_cut": HOLD_CUT,
+        "discovery": list(DISCOVERY),
+        "prove": list(PROVE),
+        "session_only": True,
+        "j_prior": "prior weekday session Open",
         "primary_label": "same-day H (Finviz Change from Open) − 15 bp Futubull",
-        "secondary_label": "feature_asof ret_1d; flatten ret_pct",
+        "secondary_label": "flatten ret_pct (io 3d / mover 1d); feature_asof ret_1d",
         "fullscan_features": [
-            "join rank / total_score / families_known (same-day ranked.csv)",
+            "join rank / total_score / families_known (weekday ranked.csv)",
             "prior-day stock_book 1d buy (PIT)",
             "feature_asof join_good / blue / ab_good (morning, when present)",
             "flatten_robust tickets (overlay only)",
         ],
         "excel_features": [
-            "J, AH, ER, FQ, JB, JC (44, same-row open)",
-            "H[t-1], I[t-1], J[t-1], G[t-1] (lags)",
+            "J (44, same-row open; prior weekday session Open; fresh ≤5d)",
+            "AH, ER, FQ, JB, JC (legal, not in standing KEEP pair)",
+            "H[t-1], I[t-1], J[t-1], G[t-1] (weekday lags)",
         ],
         "excel_not_joined": [
             "open fills A B C G J K L M O IR IS IT (no grid on disk)",
             "CE/CD (need 43d High/Low)",
             "M #95CA82 / O green / five-cell light",
+            "Sunday join dumps 2026-08-30 / 2026-09-06 (not a 1d session)",
+            "2026-08-13 J vs 2026-04-26 Open (stale)",
         ],
         "n_panel": len(panel),
         "n_join_days": len(join_eval),
+        "n_session_days": len(join_eval),
         "first_day": join_eval[0] if join_eval else None,
         "last_day": join_eval[-1] if join_eval else None,
         "n_fz_dates": len(fz_dates),
         "fz_first": fz_dates[0] if fz_dates else None,
         "fz_last": fz_dates[-1] if fz_dates else None,
+        "windows": windows,
+        "wide": wide,
         "baseline": baseline,
-        "baseline15": baseline15,
         "recipes": scored,
         "flatten": flat_payload,
         "clocks_groups": {
@@ -1081,13 +1257,21 @@ def main():
         open(excel_sb, "w", encoding="utf-8").write(
             "# Excel bot mine scoreboard\n\nResearch only. Live `flatten_robust` frozen.\n\n" + sb
         )
-    print(f"family={family} KEEP={keep_n} KILL={kill_n} baseline_n={baseline['n']}",
+    print(f"family={family} pooled_n={baseline['n']} session_days={len(join_eval)}",
           flush=True)
-    print(f"baseline H={_pct_s(baseline['holdout_mean'])}", flush=True)
-    for r in scored:
-        print(f"  {r['verdict']:5} {r['name']:28} n={r['n']:4} "
-              f"{_pct_s(r['holdout_mean'])} vs={r['vs_fullscan_pp']}",
-              flush=True)
+    print(
+        f"prove avoid vs={prove_a.get('vs_fullscan_pp')} "
+        f"elev vs={prove_e.get('vs_fullscan_pp')} "
+        f"ghost { _ghost_s(prove_a['ghost']) } / { _ghost_s(prove_e['ghost']) }",
+        flush=True,
+    )
+    for wname, w in windows.items():
+        print(f"  [{wname} top-8]", flush=True)
+        for key in ("baseline", "avoid_J_ge0", "elev_cap2_J_le-1"):
+            r = w[key]
+            print(f"    {r.get('verdict','—'):12} {r['name']:22} n={r['n']:4} "
+                  f"{_pct_s(r['holdout_mean'])} vs={r.get('vs_fullscan_pp')}",
+                  flush=True)
 
 
 if __name__ == "__main__":
