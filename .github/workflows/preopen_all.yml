@@ -5,8 +5,14 @@ name: Pre-Open ALL (predictive one-shot)
 #   a 3h Grok hang must not leave BUY/SELL empty at 09:30.
 # CLOCK: ECS systemd 05:55 ET still owns the unattended start.
 # Skip-if-good: each file already quality-ok is not rewritten (no LLM).
+# This file is a poke: a main push that touches it starts the packet
+# (workflow_dispatch is 403 from the cloud agent).
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/preopen_all.yml"
   workflow_dispatch:
     inputs:
       runner:
