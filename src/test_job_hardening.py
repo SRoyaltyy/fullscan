@@ -94,7 +94,6 @@ def test_db_optional_when_url_missing() -> None:
 
 def test_cancel_in_progress_off_on_grok_jobs() -> None:
     for name in (
-        "preopen_all.yml",
         "postclose_all.yml",
         "postclose_last_closed.yml",
         "map_heat_postclose.yml",
@@ -106,6 +105,13 @@ def test_cancel_in_progress_off_on_grok_jobs() -> None:
         text = (WF / name).read_text(encoding="utf-8")
         assert "cancel-in-progress: true" not in text, name
         assert "cancel-in-progress: false" in text, name
+    # Fix #1: ubuntu Pre-Open must cancel twins. ECS Grok stays uncanceled.
+    pre = (WF / "preopen_all.yml").read_text(encoding="utf-8")
+    assert "&& 'ubuntu' || 'ecs'" in pre
+    group_line = next(ln for ln in pre.splitlines() if ln.strip().startswith("group: preopen-all-"))
+    assert "ubuntu-0" not in group_line and "ubuntu-stop" not in group_line
+    assert "&& 'ubuntu' || 'ecs'" in group_line
+    assert "cancel-in-progress: ${{ github.event_name == 'push' || github.event.inputs.runner == 'ubuntu' }}" in pre
 
 
 def test_safe_git_push_used_by_failing_commit_jobs() -> None:
@@ -315,7 +321,9 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "refresh_ranker" in book
     assert "safe_git_push.sh" in pre
     assert "timeout_s=45 if late" in pre
-    assert "No retry" in pre
+    assert "passthrough after timeout" in pre
+    assert "MAP_HEAT_REFRESH_TIMEOUT" in pre
+    assert "--passthrough" in pre
     assert 'PREOPEN_LLM_TIMEOUT", "420"' in pre
     assert "10800s ate 2026-09-04" in pre
     assert "subprocess {llm_sub_t}s" in pre or "llm_sub_t" in pre
@@ -753,6 +761,24 @@ def test_safe_git_push_keeps_dated_ranker_on_conflict() -> None:
     assert "skip missing" in text
     assert 'git add -- "$p"' in text
     assert 'git add "$@"' not in text
+    # Fix #2: sleeve-merge / dashboard HTML must not drop the LLM packet.
+    assert "take_main_dashboard" in text
+    assert "resolve_unmerged" in text
+    assert "clean_to_local" in text
+    assert "keeping origin/main (sleeve-merge / Pages)" in text
+
+
+def test_preopen_harden_halt_reverted() -> None:
+    """2026-09-08 HALT must not stay on for tomorrow's unattended run."""
+    orch = (WF / "daily_orchestrator.yml").read_text(encoding="utf-8")
+    book = (WF / "stock_book_all.yml").read_text(encoding="utf-8")
+    pre = (WF / "preopen_all.yml").read_text(encoding="utf-8")
+    assert "if: false" not in orch
+    assert "HALT 2026-09-08" not in orch
+    assert "if: false" not in book
+    assert "HALT 2026-09-08" not in book
+    assert "if: false" not in pre
+    assert "STOP all live writers" not in pre
 
 
 def test_ubuntu_preopen_not_blocked_by_queued_ecs() -> None:
@@ -766,6 +792,20 @@ def test_ubuntu_preopen_not_blocked_by_queued_ecs() -> None:
     assert "no persist lock dir (ubuntu)" in yml
     assert 'export HOME="${FULLSCAN_HOME:-/home/gha}"' not in yml
     assert "HOME: \"/home/gha\"" not in yml
+    # Fix #1 / #4: group line is stable ubuntu|ecs — no HHMM fork in the
+    # expression. Comments may mention the 2026-09-08 hole.
+    group_line = next(ln for ln in yml.splitlines() if ln.strip().startswith("group: preopen-all-"))
+    assert "ubuntu-0" not in group_line
+    assert "ubuntu-stop" not in group_line
+    assert "&& 'ubuntu' || 'ecs'" in group_line
+    assert "ARGS=(--llm-backend \"$BACKEND\" --force)" not in yml
+    assert "--bypass-cutoff" in yml
+    assert "if: false" not in yml
+    assert "HALT 2026-09-08" not in yml
+    # Packet commit must not include dashboard/ (fix #2 twin HTML race).
+    commit = yml.split("Commit predictive artifacts")[1].split("Commit dashboard")[0]
+    assert "dashboard/" not in commit
+    assert "01_daily/general/" in commit
 
 
 def test_last_closed_sidecar_does_not_share_ubuntu_concurrency() -> None:
@@ -857,6 +897,7 @@ def main() -> None:
         test_persist_dir_falls_back_when_gha_unwritable,
         test_safe_git_push_keeps_dated_ranker_on_conflict,
         test_ubuntu_preopen_not_blocked_by_queued_ecs,
+        test_preopen_harden_halt_reverted,
         test_last_closed_sidecar_does_not_share_ubuntu_concurrency,
         test_search_and_sector_rounds_are_bounded,
     ]

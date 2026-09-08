@@ -23,7 +23,8 @@ this job waits ~10 min, git-pulls those files, then runs Grok.
 
 CLI:
   python -m src.run_preopen_all [--date YYYY-MM-DD] [--force]
-                               [--no-book] [--llm-backend auto]
+                               [--bypass-cutoff] [--no-book]
+                               [--llm-backend auto]
 """
 from __future__ import annotations
 
@@ -424,8 +425,11 @@ def _packet_step_done(key: str, date: str) -> bool:
 
 
 def run(date: str | None = None, force: bool = False,
-        with_book: bool = True, llm_backend: str | None = None) -> None:
+        with_book: bool = True, llm_backend: str | None = None,
+        bypass_cutoff: bool = False) -> None:
     date = date or _today()
+    if bypass_cutoff:
+        os.environ["PREOPEN_BYPASS_CUTOFF"] = "1"
     config.apply_llm_backend(llm_backend)
     print("")
     print("=" * 72)
@@ -438,7 +442,7 @@ def run(date: str | None = None, force: bool = False,
 
     skip_writes = False
     restore_persist(date)
-    late = (not force) and preopen.past_predict_cutoff()
+    late = (not force) and (not bypass_cutoff) and preopen.past_predict_cutoff()
     # A late heal must not spend 15 minutes waiting on scrape/baseline.
     wait_for_gh_scrape(date, timeout_s=45 if late else None)
     wait_for_night_baseline(date, timeout_s=20 if late else None)
@@ -471,7 +475,8 @@ def run(date: str | None = None, force: bool = False,
 
     def step(key: str, title: str, cmd: list[str],
              timeout_s: int | None = None) -> int:
-        if (not force) and key in llm_steps and preopen.past_predict_cutoff():
+        if ((not force) and (not bypass_cutoff) and key in llm_steps
+                and preopen.past_predict_cutoff()):
             print(f"[preopen-all] skip {title} (past 09:25 ET — book still runs)")
             attempts.append({"key": key, "title": title, "cmd": cmd,
                              "returncode": 0, "skipped": True})
@@ -555,14 +560,28 @@ def run(date: str | None = None, force: bool = False,
             # Last night's 11-sector baseline is mandatory. One overnight delta
             # refresh only; never 11 sector batches in the time-critical window.
             prev_timeout = os.environ.get("OPENCLAW_TIMEOUT")
-            os.environ["OPENCLAW_TIMEOUT"] = os.environ.get(
-                "MAP_HEAT_REFRESH_TIMEOUT", "1200")
+            # 2026-09-08: 1260s + internal retry blocked essays past 09:25
+            # (exit 124, research.md missing). One short attempt, then
+            # night-baseline passthrough so the packet continues.
+            map_heat_http = os.environ.get("MAP_HEAT_REFRESH_TIMEOUT", "480")
+            os.environ["OPENCLAW_TIMEOUT"] = map_heat_http
             try:
-                step("map_heat_research", "Map heat morning delta refresh",
-                     [py, "-m", "src.map_heat_refresh", "--date", date, *fa],
-                     timeout_s=1260)
-                # No retry: a second 20-min timeout ate 2026-09-02 and
-                # pushed predicts/book past 09:30. Night baseline stands.
+                try:
+                    map_heat_sub = max(180, int(map_heat_http) + 60)
+                except ValueError:
+                    map_heat_sub = 540
+                heat_code = step(
+                    "map_heat_research", "Map heat morning delta refresh",
+                    [py, "-m", "src.map_heat_refresh", "--date", date, *fa],
+                    timeout_s=map_heat_sub)
+                if heat_code == 124:
+                    print("[preopen-all] map heat refresh timed out — "
+                          "writing night baseline passthrough (no 2nd 21m wait)")
+                    step("map_heat_research",
+                         "Map heat passthrough after timeout",
+                         [py, "-m", "src.map_heat_refresh", "--date", date,
+                          "--passthrough", *fa],
+                         timeout_s=60)
             finally:
                 os.environ["OPENCLAW_TIMEOUT"] = prev_timeout or morning_to
             step("news_actions", "News actions",
@@ -666,7 +685,7 @@ def run(date: str | None = None, force: bool = False,
         grok = {"ok": True, "notes": "prior Grok text review still good — skipped",
                 "fails": []}
         print("[preopen-all] skip Grok text review (prior_ok)")
-    elif (not force) and preopen.past_predict_cutoff():
+    elif (not force) and (not bypass_cutoff) and preopen.past_predict_cutoff():
         grok = {"ok": True, "notes": "past 09:25 ET — skipped; book already landed",
                 "fails": []}
         print("[preopen-all] skip Grok text review (past 09:25 ET)")
@@ -831,7 +850,9 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=None)
     ap.add_argument("--force", action="store_true",
-                    help="Ignore 09:25 ET cutoff and skip-if-good")
+                    help="Ignore 09:25 ET cutoff AND skip-if-good (full rewrite)")
+    ap.add_argument("--bypass-cutoff", action="store_true",
+                    help="Ignore 09:25 ET cutoff only; skip-if-good still on")
     ap.add_argument("--no-book", action="store_true",
                     help="Packet only — do not rank or paper-trade")
     ap.add_argument("--llm-backend", default=None,
@@ -839,7 +860,8 @@ def main() -> None:
                     help="auto=Grok then DeepSeek; grok=Grok only; deepseek=no Grok")
     args = ap.parse_args()
     run(date=args.date, force=args.force,
-        with_book=not args.no_book, llm_backend=args.llm_backend)
+        with_book=not args.no_book, llm_backend=args.llm_backend,
+        bypass_cutoff=args.bypass_cutoff)
 
 
 if __name__ == "__main__":

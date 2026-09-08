@@ -258,10 +258,35 @@ def polarity_counts(items: list[dict]) -> dict[str, int]:
     return c
 
 
+def _empty_error_report(hours: int, reason: str, detail: str) -> dict:
+    return {
+        "generated_at": datetime.now(ZoneInfo(config.TZ)).isoformat(),
+        "hours": hours,
+        "error": reason,
+        "error_detail": detail,
+        "raw_count": 0,
+        "parsed_count": 0,
+        "usable_count": 0,
+        "single_name_count": 0,
+        "noise_count": 0,
+        "polarity_usable": {"+": 0, "-": 0, "mixed": 0, "neutral": 0},
+        "by_macro_usable": {},
+        "by_sector_usable": {},
+        "usable_top": [],
+        "single_name_top": [],
+        "noise_sample": [],
+        "all_items": [],
+    }
+
+
 def build_report(hours: int = 48, limit: int = 300) -> dict:
-    rows = db.recent_news(hours=hours, limit=limit)
-    if not rows:
-        rows = db.recent_news(hours=24 * 7, limit=limit)
+    try:
+        rows = db.recent_news(hours=hours, limit=limit)
+        if not rows:
+            rows = db.recent_news(hours=24 * 7, limit=limit)
+    except db.NewsDbError as e:
+        print(f"[news_parse] DB FAIL {e.reason}: {e}")
+        return _empty_error_report(hours, e.reason, str(e))
     parsed = parse_rows(rows)
     usable = [p for p in parsed if p["usable"]]
     single = [p for p in parsed if p["class"] == "single_name"]
@@ -390,6 +415,11 @@ def main() -> None:
         print("[news_parse] DATABASE_URL not set — writing from files only")
     report = build_report(hours=args.hours, limit=args.limit)
     jp, mp = save_report(report, date_str)
+    if report.get("error"):
+        print(f"[news_parse] FAIL {report['error']}: {report.get('error_detail')}")
+        print(f"[news_parse] wrote error stub {jp} so QC is actionable "
+              "(not a silent empty parse)")
+        raise SystemExit(f"news parse {report['error']}")
     qc = output_qc.qc_news_parse(jp)
     if not qc.ok:
         print(f"[news_parse] QC FAIL ({qc.reason}) — throwing out")
