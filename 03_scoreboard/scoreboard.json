@@ -16421,13 +16421,13 @@
         "S4_ETF_TAPE": 0.5
       },
       "leading_sum": 1.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 52.36000061035156,
+      "actual_close": 51.939998626708984,
+      "actual_pct_change": -0.9534706580738517,
+      "actual_direction": "down",
+      "actual_magnitude_band": "mild",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
@@ -16461,7 +16461,9 @@
       },
       "sector": "Basic Materials",
       "etf": "XLB",
-      "rubric": "00_grounding/sectors/basic_materials.md"
+      "rubric": "00_grounding/sectors/basic_materials.md",
+      "spy_pct_change": -0.5492125910932955,
+      "rel_pct_change": -0.4042580669805562
     },
     {
       "date": "2026-09-08",
