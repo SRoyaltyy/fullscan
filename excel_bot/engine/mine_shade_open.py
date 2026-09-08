@@ -51,6 +51,9 @@ MARKER = "## Shade hex + onset (open-entry)"
 # Timing-tested open fills. IR/IS/IT are STOCKHISTORY aliases of A/B/C.
 OPEN_FILL = tuple(OPEN_LETTERS)  # A B C G J K L M O
 OPEN_ALIASES = ("IR", "IS", "IT")
+# fills[] / fams[] / scores[] are A–O (VISIBLE), not OPEN_FILL order.
+# Using enumerate(OPEN_FILL) as the index reads H when the letter is M.
+FILL_IDX = {c: VISIBLE.index(c) for c in OPEN_FILL}
 # Close fills never start an open trade.
 CLOSE_FILL = tuple(CLOSE_LETTERS)
 
@@ -205,6 +208,8 @@ def assert_open_gate():
     cols = tuple(VISIBLE.index(c) for c in OPEN_FILL)
     assert feature_clock(cols) == "open"
     assert_clock_legal(cols, "open")
+    assert FILL_IDX["M"] == VISIBLE.index("M") == 12
+    assert FILL_IDX["O"] == VISIBLE.index("O") == 14
     for c in CLOSE_FILL:
         try:
             assert_clock_legal((VISIBLE.index(c),), "open")
@@ -280,7 +285,8 @@ def recipe_hits(hexes, fams, scores, ei):
     prev_h = hexes[ei - 1] if ei else None
     today_f, today_s = fams[ei], scores[ei]
     today_h = hexes[ei]
-    for li, letter in enumerate(OPEN_FILL):
+    for letter in OPEN_FILL:
+        li = FILL_IDX[letter]
         fam = today_f[li] if li < len(today_f) else "none"
         sc = today_s[li] if li < len(today_s) else 0.0
         hx = today_h[li] if li < len(today_h) else None
@@ -336,8 +342,8 @@ def work_grid(path, discovery, holdout, spy):
         scores.append(d.get("scores") or [0.0] * 15)
         ivals.append(d.get("i_ret"))
         cores.append(d.get("open_core") or 0.0)
-        for li, letter in enumerate(OPEN_FILL):
-            dump[(letter, fills[li] or "none")] += 1
+        for letter in OPEN_FILL:
+            dump[(letter, fills[FILL_IDX[letter]] or "none")] += 1
     light = set()
     for c in _hysteresis(cores, 5, 2, 2):
         if c.get("side") == 1:
@@ -713,10 +719,8 @@ def family_verdict(rows, soft):
     if shade_ok:
         names = ", ".join(f"`{r['def']}`" for r in shade_ok[:4])
         return "KEEP", (
-            "Shade hex is not the same as green-on. Mid-green M "
-            "(#95CA82 / score ≥ 1.5) and its onset beat any-green M "
-            f"and the book after fees, both tapes, and the ghost bar "
-            f"({names}). Soft-regime majority holds on those recipes. "
+            "Shade hex is not the same as green-on. Standing shade "
+            f"KEEP after fees, tapes, and soft-regime majority: {names}. "
             "Not a live wire."
         )
     if onset_ok:
@@ -1158,19 +1162,18 @@ def ghost_family(scores):
     elif m_slot == "CONDITIONAL":
         family = "GHOST CONDITIONAL"
         why = (
-            "Standing M mid-green `#95CA82` / ge15 still beats the book and "
-            "any-green M after drop-top-5 — that +10.6% is **not** a "
-            "five-name ghost. Hex-onset is a hair over the 15% holdout "
-            "top-5 cut (INHD is the fat name). O red→green onset **fails**: "
-            "INHD is ~20% of that holdout P&L and leftover no longer beats "
-            "any-green O. Research KEEP on standing M mid. Do not wire."
-            f" {_brief(m_mid, 'M mid')} {_brief(m_on, 'M onset')} "
+            "Standing M mid-green `#95CA82` / ge15 is not a clean "
+            "GHOST PASS on the harder name bar (top-5 share, drop-5 "
+            "leftover, or a sibling). Research KEEP on standing M mid "
+            "only if the leftover still beats the book and any-green M. "
+            "Do not wire. "
+            f"{_brief(m_mid, 'M mid')} {_brief(m_on, 'M onset')} "
             f"{_brief(o_on, 'O onset')}"
         )
     elif m_slot == "PASS":
         family = "GHOST PASS"
         why = (
-            "A handful of tickers does **not** drive the M mid-green +10.6%. "
+            "A handful of tickers does **not** drive the M mid-green print. "
             "Holdout top-5, drop-top-5 leftover, July, day-lottery, Q1 "
             "holdout, both SPY tapes, and name + time splits all clear the "
             "harder bar vs book and vs any-green M. Still not a live wire. "
@@ -1200,7 +1203,7 @@ def render_ghost(ghost):
         "",
         "Family KEEP already cleared the usual 25% top-5 / 40% July / 25% "
         "day-lottery bar. This cut asks whether a **handful of names** "
-        "is the +10.6%. Holdout-only top-5 (PASS ≤15%, FAIL >25%), "
+        "is the holdout print. Holdout-only top-5 (PASS ≤15%, FAIL >25%), "
         "drop top-5 leftover still beating the book and any-green M, "
         "July holdout ≤25% of winning-month P&L, fattest holdout day ≤15%, "
         "Q1 **on holdout names** not red, both SPY tapes on holdout, "
