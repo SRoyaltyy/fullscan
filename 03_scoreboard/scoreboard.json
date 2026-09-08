@@ -16617,13 +16617,13 @@
         "S4_ETF_TAPE": -1.0
       },
       "leading_sum": -7.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 114.47000122070312,
+      "actual_close": 113.98999786376953,
+      "actual_pct_change": -0.8006315977894363,
+      "actual_direction": "down",
+      "actual_magnitude_band": "mild",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
@@ -16657,7 +16657,9 @@
       },
       "sector": "Consumer Cyclical",
       "etf": "XLY",
-      "rubric": "00_grounding/sectors/consumer_cyclical.md"
+      "rubric": "00_grounding/sectors/consumer_cyclical.md",
+      "spy_pct_change": -0.5492125910932955,
+      "rel_pct_change": -0.2514190066961408
     },
     {
       "date": "2026-09-08",
