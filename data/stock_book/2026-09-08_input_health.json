@@ -1,6 +1,6 @@
 {
   "date": "2026-09-08",
-  "generated_at": "2026-09-08T09:18:54.214913-04:00",
+  "generated_at": "2026-09-08T09:36:01.875137-04:00",
   "inputs": [
     {
       "name": "finviz_export",
@@ -68,16 +68,16 @@
     {
       "name": "events",
       "family": "addon",
-      "status": "stale",
+      "status": "ok",
       "n": null,
-      "detail": "scan_date=2026-09-04 (4d old \u2014 tilt ignored)"
+      "detail": "27 events, scan_date=2026-09-08"
     },
     {
       "name": "map_heat",
       "family": "heat",
-      "status": "degraded",
-      "n": 15,
-      "detail": "morning research missing; Finviz industry residuals applied (15 OVERRIDE/SPLIT rows)"
+      "status": "ok",
+      "n": null,
+      "detail": "post-close baseline + morning evidence refresh"
     },
     {
       "name": "general_predict",
@@ -106,7 +106,7 @@
     "news": "missing",
     "ab": "ok",
     "peer": "ok",
-    "heat": "degraded",
+    "heat": "ok",
     "general": "missing",
     "sector": "missing"
   },
