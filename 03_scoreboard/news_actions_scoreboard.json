@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "updated_at": "2026-09-08T18:51:33.750352-04:00",
+=======
+  "updated_at": "2026-09-08T18:51:26.095793-04:00",
+>>>>>>> origin/main
   "grading_rule": {
     "entry": "open of first trading day at/after generated_at (same day if signal < 09:30 ET, else next day)",
     "window_trading_days": 14,

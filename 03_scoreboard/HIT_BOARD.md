@@ -1,6 +1,10 @@
 # HIT Board — general + sectors (all dates)
 
+<<<<<<< HEAD
 Generated: **2026-09-08T18:51:33.964863-04:00**
+=======
+Generated: **2026-09-08T18:51:26.306731-04:00**
+>>>>>>> origin/main
 
 Source: `03_scoreboard/scoreboard.json`.
 

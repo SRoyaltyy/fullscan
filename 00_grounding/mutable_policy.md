@@ -811,10 +811,17 @@ corrected_behavior: "Reconcile the scoreboard flag against the band classificati
 trigger_pattern: "When a sector ETF has a composition where the dominant sleeve (chemicals/processors ~40-50% of XLB) faces a direct cost headwind (oil spike) while a minority sleeve (copper miners ~10-15%) benefits from a commodity surge, the model scores S1 based on the headline commodity move (copper at records = +1) rather than the composition-weighted net. The model must weight sector-factor scores by the ETF's actual holdings breakdown — a minority-sleeve positive cannot offset a majority-sleeve negative when the cost channel is direct and knowable."
 corrected_behavior: "Before scoring S1, decompose the sector ETF by holdings weight. If a majority sleeve faces a direct, knowable cost/margin headwind (oil feedstock for chemicals) while a minority sleeve benefits from a commodity s
 
+<<<<<<< HEAD
 ### when-a-sector-etf-has-a-pre-existing-1d-relative-cushion-vs.md
 ---
 trigger_pattern: "When a sector ETF has a pre-existing 1d relative cushion vs SPY (≥ +0.4%) that is confirmed by the prior session's actuals (XLRE +0.24% vs SPY −0.28% on 09-05), and the morning identifies a negative rate spine (30Y stress zone, oil spike, risk-off futures), the model treats the cushion as a magnitude cap only (down/mild) rather than considering it as a potential direction override toward flat. The model applies the 09-04 'asymmetric downside' lesson too aggressively without checking whether the defensive cushion is already large and established enough to neutralize the same-day downside translation."
 corrected_behavior: "When the 1d relative cushion is ≥ +0.4% AND the prior session confirmed XLRE outperforming SPY on a risk-off day, the cushion must be scored as a pos
+=======
+### when-a-sector-etf-has-a-large-pre-existing-1d-relative-cushi.md
+---
+trigger_pattern: "When a sector ETF has a large pre-existing 1d relative cushion (+0.5% or greater vs SPY) going into a risk-off session, and the model has identified that cushion as a 'defensive bid,' the model treats the cushion as a magnitude cap (allowing down/mild) rather than as a direction override signal (pointing to flat). The model applies an 'asymmetric downside' lesson (09-04) too aggressively when the defensive cushion is already large and positive, failing to recognize that the cushion's size relative to the expected macro drag determines whether it caps magnitude or flips direction."
+corrected_behavior: "When the 1d relative cushion is ≥ +0.5% (or the sector has outperformed SPY on the prior session by a similar margin) AND the macro drag is a moderate risk-off day (ES −
+>>>>>>> origin/main
 
 ### when-a-sector-etf-is-a-deep-medium-term-laggard-1m-rel-5-and.md
 ---

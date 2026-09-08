@@ -1,6 +1,10 @@
 # Learnings report — 2026-09-08
 
+<<<<<<< HEAD
 Generated: **2026-09-08T18:51:34.186824-04:00** by `src/learn_cycle.py`.
+=======
+Generated: **2026-09-08T18:51:26.518189-04:00** by `src/learn_cycle.py`.
+>>>>>>> origin/main
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -503,7 +507,11 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 - `when-a-live-geopolitical-oil-supply-shock-risk-off-day-is-pr.md`
 - `when-a-live-oil-geopolitical-supply-shock-is-present-at-the.md`
 - `when-the-model-s-narrative-essay-and-the-pipeline-computed-d.md`
+<<<<<<< HEAD
 - `when-a-sector-etf-has-a-pre-existing-1d-relative-cushion-vs.md`
+=======
+- `when-a-sector-etf-has-a-large-pre-existing-1d-relative-cushi.md`
+>>>>>>> origin/main
 
 Full text lives in `02_lessons/active/`. Summaries also feed `mutable_policy.md`.
 
