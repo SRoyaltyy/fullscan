@@ -85,6 +85,8 @@ concurrency:
 
 jobs:
   all:
+    # HALT 2026-09-08 — skip workflow_run after Pre-Open cancel. Revert to resume.
+    if: false
     runs-on: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
     timeout-minutes: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && 90 || 360 }}
     env:
