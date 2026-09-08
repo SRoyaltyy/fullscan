@@ -84,9 +84,23 @@ resolve_scoreboard() {
   fi
 }
 
+# Dated ranker / weather / book this job just wrote. Main's copies are
+# the ubuntu land vs Stock Book ALL race. Take ours so rebase/merge
+# can finish; scoreboard still unions separately.
+RANKER_PATHS=(
+  data/stock_book data/join data/universe data/ab_checklist
+  data/peers data/paper data/exports data/catalyst
+  01_daily/weather
+)
+
 restore_ours_daily() {
   git checkout "$LOCAL" -- 01_daily 02_lessons 01_daily/_transcripts 2>/dev/null || true
   git add 01_daily 02_lessons || true
+}
+
+restore_ours_ranker() {
+  git checkout "$LOCAL" -- "${RANKER_PATHS[@]}" 2>/dev/null || true
+  git add "${RANKER_PATHS[@]}" 2>/dev/null || true
 }
 
 try_rebase() {
@@ -98,11 +112,12 @@ try_rebase() {
     git stash drop >/dev/null 2>&1 || true
     return 0
   fi
-  echo "[safe-push] rebase conflict — keeping our 01_daily, merging scoreboard"
-  git checkout --theirs -- 01_daily 02_lessons 2>/dev/null || restore_ours_daily
+  echo "[safe-push] rebase conflict — keeping our 01_daily + dated ranker, merging scoreboard"
+  git checkout --theirs -- 01_daily 02_lessons "${RANKER_PATHS[@]}" 2>/dev/null || restore_ours_daily
+  restore_ours_ranker
   git checkout --ours -- 03_scoreboard/scoreboard.json 2>/dev/null || true
   resolve_scoreboard
-  git add 01_daily 02_lessons 03_scoreboard 2>/dev/null || git add -A
+  git add 01_daily 02_lessons 03_scoreboard "${RANKER_PATHS[@]}" 2>/dev/null || git add -A
   if GIT_EDITOR=true git rebase --continue; then
     git stash drop >/dev/null 2>&1 || true
     return 0
@@ -126,11 +141,12 @@ try_merge() {
     git stash drop >/dev/null 2>&1 || true
     return 0
   fi
-  echo "[safe-push] merge conflict — ours daily + union scoreboard"
+  echo "[safe-push] merge conflict — ours daily + dated ranker + union scoreboard"
   restore_ours_daily
+  restore_ours_ranker
   git checkout origin/main -- 03_scoreboard/scoreboard.json 2>/dev/null || true
   resolve_scoreboard
-  git add 01_daily 02_lessons 03_scoreboard 2>/dev/null || git add -A
+  git add 01_daily 02_lessons 03_scoreboard "${RANKER_PATHS[@]}" 2>/dev/null || git add -A
   git commit -m "merge main (ours daily + merged scoreboard)" || true
   git stash drop >/dev/null 2>&1 || true
   return 0

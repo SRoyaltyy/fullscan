@@ -44,9 +44,40 @@ from . import config, grok_review, output_qc, preopen
 
 ROOT = Path(__file__).resolve().parent.parent
 ET = ZoneInfo(config.TZ)
-# Lives on the ECS disk, OUTSIDE the Actions work tree. checkout --clean
-# must not be able to delete a finished day's files, or skip-if-good is a lie.
-PERSIST = Path(os.environ.get("FULLSCAN_PERSIST", "/home/gha/fullscan-persist"))
+# Lives outside the Actions work tree so checkout --clean cannot wipe a
+# finished day. ECS owns /home/gha; GH-hosted ubuntu cannot mkdir that
+# (Errno 13) — fall back to $HOME so snapshot/restore still work.
+
+
+def persist_dir() -> Path:
+    """Writable sidecar. Prefer FULLSCAN_PERSIST, then runner HOME."""
+    raw = (os.environ.get("FULLSCAN_PERSIST") or "").strip()
+    home = (os.environ.get("FULLSCAN_HOME")
+            or os.environ.get("HOME") or "").strip()
+    candidates: list[Path] = []
+    if raw:
+        candidates.append(Path(raw))
+    if home:
+        candidates.append(Path(home) / "fullscan-persist")
+    candidates.append(Path("/home/gha/fullscan-persist"))
+    seen: set[str] = set()
+    for p in candidates:
+        key = str(p)
+        if key in seen:
+            continue
+        seen.add(key)
+        try:
+            p.mkdir(parents=True, exist_ok=True)
+            probe = p / ".writable"
+            probe.write_text("ok", encoding="utf-8")
+            probe.unlink(missing_ok=True)
+            return p
+        except OSError:
+            continue
+    fallback = ROOT / ".persist"
+    fallback.mkdir(parents=True, exist_ok=True)
+    return fallback
+
 
 # Logical modules this one-button job is responsible for. Keys match
 # daily_orchestrator.yml workflow files (minus .yml) where possible.
@@ -137,11 +168,12 @@ def _date_paths(root: Path, date: str) -> list[Path]:
 
 def restore_persist(date: str) -> int:
     """Copy a finished day back into the checkout so skip-if-good can see it."""
-    if not PERSIST.is_dir():
+    persist = persist_dir()
+    if not persist.is_dir():
         return 0
     n = 0
-    for src in _date_paths(PERSIST, date):
-        rel = src.relative_to(PERSIST)
+    for src in _date_paths(persist, date):
+        rel = src.relative_to(persist)
         dest = ROOT / rel
         dest.parent.mkdir(parents=True, exist_ok=True)
         if src.is_dir():
@@ -150,22 +182,18 @@ def restore_persist(date: str) -> int:
             shutil.copy2(src, dest)
         n += 1
     if n:
-        print(f"[preopen-all] persist restore {date}: {n} paths from {PERSIST}",
+        print(f"[preopen-all] persist restore {date}: {n} paths from {persist}",
               flush=True)
     return n
 
 
 def snapshot_persist(date: str) -> int:
     """Mirror today's artifacts off the checkout so a later clean cannot wipe them."""
-    try:
-        PERSIST.mkdir(parents=True, exist_ok=True)
-    except OSError as e:
-        print(f"[preopen-all] persist mkdir failed: {e}", flush=True)
-        return 0
+    persist = persist_dir()
     n = 0
     for src in _date_paths(ROOT, date):
         rel = src.relative_to(ROOT)
-        dest = PERSIST / rel
+        dest = persist / rel
         dest.parent.mkdir(parents=True, exist_ok=True)
         if src.is_dir():
             shutil.copytree(src, dest, dirs_exist_ok=True)
@@ -173,7 +201,7 @@ def snapshot_persist(date: str) -> int:
             shutil.copy2(src, dest)
         n += 1
     if n:
-        print(f"[preopen-all] persist snapshot {date}: {n} paths → {PERSIST}",
+        print(f"[preopen-all] persist snapshot {date}: {n} paths → {persist}",
               flush=True)
     return n
 
@@ -404,7 +432,7 @@ def run(date: str | None = None, force: bool = False,
     print(f"  PRE-OPEN ALL — {date} (America/New_York)")
     print("  Packet + stock book. Must finish before 09:30 ET.")
     print("  Skip-if-good: each quality file for THIS day is not rewritten.")
-    print("  Persist: /home/gha/fullscan-persist survives Actions checkout.")
+    print(f"  Persist: {persist_dir()} survives Actions checkout.")
     print("  Carry-forwards / timeout stubs are trash and fail the job.")
     print("=" * 72)
 
