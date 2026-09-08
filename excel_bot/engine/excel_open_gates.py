@@ -225,7 +225,8 @@ def ohlc_liq_rows(hist):
             if pv < PRIOR_VOL_LIQ:
                 prior.append({"o": o, "h": h, "l": l, "c": c, "v": v})
                 continue
-            xl = open_features(prior, o)
+            # 20 completed prior bars cover CP (20d), AH (6d), JB/JC (8d).
+            xl = open_features(prior[-20:], o)
             if xl.get("same_row_df") or xl.get("same_row_bb") or xl.get("same_row_bq"):
                 raise ValueError("LEAK abort: same-row DF/BB/BQ on an open path")
             net = (c - o) / o - FEE_RT
@@ -380,6 +381,8 @@ def write_board(payload):
         lines.append(f"| **{col}** | {kind} | {clock} | {what} | {note} |")
     lines += [
         "",
+        "EQ / FS are open-44 and reconstructed (prior CP) but **not scored** "
+        "this cut — they were not in the user’s open-44 tally list.\n"
         "Worth gating later (open 44, not scored here): Q warmup, Z/AC/BT/BV "
         "chains, CG/CH/DC/DE/EB/EK carry, ES–EV, FU, GD–GF, HF/HG/HW, II, "
         "IY/IZ (VIX), JD–JF/JL (HO family). Fill-only A/B/C/G/K/L/M/O/IR/IS/IT "
@@ -389,15 +392,55 @@ def write_board(payload):
         "## Which CLEAR (≥30 fires and >55%)?",
         "",
     ]
+    ranked_kinds = {"vol_top8", "prior_green_top8"}
+    by_rec = defaultdict(list)
+    for c in clears:
+        if c.get("kind") in ranked_kinds:
+            by_rec[c["recipe"]].append(c)
+    confirmed, long_only = [], []
+    for name, items in by_rec.items():
+        wins = {(c["kind"], c["window"]) for c in items}
+        long_ok = any(w == "long" for _, w in wins)
+        y_ok = any(w == "y2025" for _, w in wins)
+        if long_ok and y_ok:
+            confirmed.append((name, items))
+        elif long_ok:
+            long_only.append((name, items))
+    lines.append("**Confirmed** = liquid ranked (`vol_top8` ≈ weighted book, "
+                 "`prior_green_top8` ≈ green pile) CLEAR on **long and y2025**. "
+                 "J elev CLEARs long and fails y2025 — these do not.")
+    lines.append("")
+    if confirmed:
+        lines.append("### Confirmed (long + y2025, liquid ranked)")
+        lines.append("")
+        for name, items in confirmed:
+            bits = [f"{c['kind']} {c['window']} {wr_s(c['wr'])}" for c in items
+                    if c["window"] in ("long", "y2025")]
+            lines.append(f"- `{name}` — " + "; ".join(bits))
+        lines.append("")
+    if long_only:
+        lines.append("### Long CLEAR, y2025 did not confirm (liquid ranked)")
+        lines.append("")
+        for name, items in long_only:
+            bits = [f"{c['kind']} {wr_s(c['wr'])}" for c in items if c["window"] == "long"]
+            lines.append(f"- `{name}` — " + "; ".join(bits))
+        lines.append("")
+    lines.append("### All long-tape CLEARs (includes unranked / pre813)")
+    lines.append("")
     if clears:
         for c in clears:
             wr = c["wr"]
             hh, ii = wr.get("hit_h") or {}, wr.get("hit_i") or {}
             lines.append(
-                f"- **{c['label']}** {wr_s(wr)} · H+ {hit_s(hh)} · I+ {hit_s(ii)}"
+                f"- {c['label']}: {wr_s(wr)} · H+ {hit_s(hh)} · I+ {hit_s(ii)}"
             )
     else:
         lines.append("**None.** No recipe on the long liquid tape clears the bar.")
+    lines.append("")
+    lines.append("BQ/BU lag recipes **FAIL** the long liquid ranked tape "
+                 "(~53–54%). They only CLEAR pre813 — not a pooled-long call. "
+                 "#153 J elev still CLEARs long `vol_top8` / `prior_green_top8` "
+                 "and still fails y2025.")
     lines += [
         "",
         "### Fee H+ / I+ caveat",

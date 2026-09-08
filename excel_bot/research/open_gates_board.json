@@ -1,0 +1,6894 @@
+{
+  "generated": "2026-09-08",
+  "tip_sha": null,
+  "leak": "PASS",
+  "live_untouched": "flatten_robust",
+  "gate": {
+    "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
+    "fill_open": [
+      "A",
+      "B",
+      "C",
+      "G",
+      "J",
+      "K",
+      "L",
+      "M",
+      "O",
+      "IR",
+      "IS",
+      "IT"
+    ],
+    "value_mine_open": [
+      "A",
+      "C",
+      "J",
+      "Q",
+      "Z",
+      "AC",
+      "AH",
+      "BT",
+      "BV",
+      "CG",
+      "CH",
+      "DC",
+      "DE",
+      "EB",
+      "EK",
+      "EN",
+      "EP",
+      "EQ",
+      "ER",
+      "ES",
+      "ET",
+      "EU",
+      "EV",
+      "FQ",
+      "FR",
+      "FS",
+      "FU",
+      "GD",
+      "GE",
+      "GF",
+      "HF",
+      "HG",
+      "HW",
+      "II",
+      "IR",
+      "IT",
+      "IY",
+      "IZ",
+      "JB",
+      "JC",
+      "JD",
+      "JE",
+      "JF",
+      "JL"
+    ],
+    "value_out_same_row": [
+      "B",
+      "G",
+      "K",
+      "M",
+      "O",
+      "L",
+      "D",
+      "E",
+      "F",
+      "H",
+      "I",
+      "N",
+      "AA"
+    ],
+    "core_score": "close",
+    "m_number": "close",
+    "lags": "any letter from rows above",
+    "lag_only_close": [
+      "DF",
+      "DG",
+      "DH",
+      "BB",
+      "BQ",
+      "BU"
+    ],
+    "same_row_leak_abort": [
+      "DF",
+      "BB",
+      "BQ"
+    ],
+    "open_44_tally_subs": [
+      "AH",
+      "JB",
+      "JC",
+      "FQ",
+      "FR",
+      "ER",
+      "EP",
+      "EN"
+    ],
+    "live_untouched": "flatten_robust"
+  },
+  "fire_bar": {
+    "win": ">55% of fire days beat the same-day no-rule book after fees",
+    "min_fires": 30,
+    "fee_caveat": "After-fee H is the equal-weight day-mean minus 15 bp Futubull, not dollar-weighted."
+  },
+  "ohlc_liq_n": 617369,
+  "long_fires": {
+    "long": {
+      "n_days": 617,
+      "lo": "2024-03-06",
+      "hi": "2026-08-21",
+      "kinds": {
+        "vol_top8": {
+          "n_days": 617,
+          "recipes": {
+            "avoid_J_ge0": {
+              "n_fires": 406,
+              "n_wins": 217,
+              "n_ties": 0,
+              "n_losses": 189,
+              "win_rate": 0.5344827586206896,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2569,
+                "hit": 0.4527053328143246,
+                "n_pos": 1163
+              },
+              "hit_i": {
+                "n": 2569,
+                "hit": 0.3604515375632542,
+                "n_pos": 926
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 279,
+              "n_wins": 156,
+              "n_ties": 0,
+              "n_losses": 123,
+              "win_rate": 0.5591397849462365,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2887,
+                "hit": 0.44821614132317283,
+                "n_pos": 1294
+              },
+              "hit_i": {
+                "n": 2887,
+                "hit": 0.4038794596466921,
+                "n_pos": 1166
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_bearish": {
+              "n_fires": 394,
+              "n_wins": 189,
+              "n_ties": 0,
+              "n_losses": 205,
+              "win_rate": 0.4796954314720812,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2614,
+                "hit": 0.4525631216526396,
+                "n_pos": 1183
+              },
+              "hit_i": {
+                "n": 2614,
+                "hit": 0.4349655700076511,
+                "n_pos": 1137
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_bullish": {
+              "n_fires": 279,
+              "n_wins": 141,
+              "n_ties": 0,
+              "n_losses": 138,
+              "win_rate": 0.5053763440860215,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2887,
+                "hit": 0.4516799445791479,
+                "n_pos": 1304
+              },
+              "hit_i": {
+                "n": 2887,
+                "hit": 0.4405957741600277,
+                "n_pos": 1272
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "presence_lag_bullish": {
+              "n_fires": 400,
+              "n_wins": 178,
+              "n_ties": 0,
+              "n_losses": 222,
+              "win_rate": 0.445,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1401,
+                "hit": 0.41755888650963596,
+                "n_pos": 585
+              },
+              "hit_i": {
+                "n": 1401,
+                "hit": 0.4161313347608851,
+                "n_pos": 583
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_doji": {
+              "n_fires": 202,
+              "n_wins": 106,
+              "n_ties": 0,
+              "n_losses": 96,
+              "win_rate": 0.5247524752475248,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2829,
+                "hit": 0.44609402615765287,
+                "n_pos": 1262
+              },
+              "hit_i": {
+                "n": 2829,
+                "hit": 0.4354895722870272,
+                "n_pos": 1232
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_doji": {
+              "n_fires": 278,
+              "n_wins": 149,
+              "n_ties": 0,
+              "n_losses": 129,
+              "win_rate": 0.5359712230215827,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2881,
+                "hit": 0.4460256855258591,
+                "n_pos": 1285
+              },
+              "hit_i": {
+                "n": 2881,
+                "hit": 0.43110031239153074,
+                "n_pos": 1242
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "presence_lag_doji": {
+              "n_fires": 202,
+              "n_wins": 101,
+              "n_ties": 0,
+              "n_losses": 101,
+              "win_rate": 0.5,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 263,
+                "hit": 0.39543726235741444,
+                "n_pos": 104
+              },
+              "hit_i": {
+                "n": 263,
+                "hit": 0.3916349809885932,
+                "n_pos": 103
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_bear_engulf": {
+              "n_fires": 229,
+              "n_wins": 131,
+              "n_ties": 0,
+              "n_losses": 98,
+              "win_rate": 0.5720524017467249,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2813,
+                "hit": 0.4546747244934234,
+                "n_pos": 1279
+              },
+              "hit_i": {
+                "n": 2813,
+                "hit": 0.439033060789193,
+                "n_pos": 1235
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_bull_engulf": {
+              "n_fires": 277,
+              "n_wins": 153,
+              "n_ties": 0,
+              "n_losses": 124,
+              "win_rate": 0.5523465703971119,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2884,
+                "hit": 0.4521497919556172,
+                "n_pos": 1304
+              },
+              "hit_i": {
+                "n": 2884,
+                "hit": 0.42857142857142855,
+                "n_pos": 1236
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_hammer": {
+              "n_fires": 169,
+              "n_wins": 97,
+              "n_ties": 0,
+              "n_losses": 72,
+              "win_rate": 0.5739644970414202,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2805,
+                "hit": 0.4488413547237077,
+                "n_pos": 1259
+              },
+              "hit_i": {
+                "n": 2805,
+                "hit": 0.4370766488413547,
+                "n_pos": 1226
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_evening": {
+              "n_fires": 179,
+              "n_wins": 86,
+              "n_ties": 0,
+              "n_losses": 93,
+              "win_rate": 0.48044692737430167,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2838,
+                "hit": 0.44467935165609584,
+                "n_pos": 1262
+              },
+              "hit_i": {
+                "n": 2838,
+                "hit": 0.4295278365045807,
+                "n_pos": 1219
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_morning": {
+              "n_fires": 272,
+              "n_wins": 142,
+              "n_ties": 0,
+              "n_losses": 130,
+              "win_rate": 0.5220588235294118,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2859,
+                "hit": 0.45260580622595314,
+                "n_pos": 1294
+              },
+              "hit_i": {
+                "n": 2859,
+                "hit": 0.42917103882476393,
+                "n_pos": 1227
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_BU_l1_neg": {
+              "n_fires": 397,
+              "n_wins": 210,
+              "n_ties": 0,
+              "n_losses": 187,
+              "win_rate": 0.5289672544080605,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2552,
+                "hit": 0.45572100313479624,
+                "n_pos": 1163
+              },
+              "hit_i": {
+                "n": 2552,
+                "hit": 0.42280564263322884,
+                "n_pos": 1079
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_BU_l1_pos": {
+              "n_fires": 278,
+              "n_wins": 150,
+              "n_ties": 0,
+              "n_losses": 128,
+              "win_rate": 0.539568345323741,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2887,
+                "hit": 0.45445098718392796,
+                "n_pos": 1312
+              },
+              "hit_i": {
+                "n": 2887,
+                "hit": 0.43574644960166264,
+                "n_pos": 1258
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_BQ_l1_neg": {
+              "n_fires": 397,
+              "n_wins": 210,
+              "n_ties": 0,
+              "n_losses": 187,
+              "win_rate": 0.5289672544080605,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2552,
+                "hit": 0.45572100313479624,
+                "n_pos": 1163
+              },
+              "hit_i": {
+                "n": 2552,
+                "hit": 0.42280564263322884,
+                "n_pos": 1079
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_BQ_l1_pos": {
+              "n_fires": 278,
+              "n_wins": 150,
+              "n_ties": 0,
+              "n_losses": 128,
+              "win_rate": 0.539568345323741,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2887,
+                "hit": 0.45445098718392796,
+                "n_pos": 1312
+              },
+              "hit_i": {
+                "n": 2887,
+                "hit": 0.43574644960166264,
+                "n_pos": 1258
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_AH_ge1": {
+              "n_fires": 446,
+              "n_wins": 253,
+              "n_ties": 0,
+              "n_losses": 193,
+              "win_rate": 0.5672645739910314,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2696,
+                "hit": 0.46624629080118696,
+                "n_pos": 1257
+              },
+              "hit_i": {
+                "n": 2696,
+                "hit": 0.47997032640949555,
+                "n_pos": 1294
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_JC": {
+              "n_fires": 279,
+              "n_wins": 152,
+              "n_ties": 0,
+              "n_losses": 127,
+              "win_rate": 0.5448028673835126,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2887,
+                "hit": 0.45583650848631796,
+                "n_pos": 1316
+              },
+              "hit_i": {
+                "n": 2887,
+                "hit": 0.4450987183927953,
+                "n_pos": 1285
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_FQ": {
+              "n_fires": 317,
+              "n_wins": 191,
+              "n_ties": 0,
+              "n_losses": 126,
+              "win_rate": 0.6025236593059937,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2818,
+                "hit": 0.4528034066713982,
+                "n_pos": 1276
+              },
+              "hit_i": {
+                "n": 2818,
+                "hit": 0.44535131298793473,
+                "n_pos": 1255
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_FR_eq0": {
+              "n_fires": 2,
+              "n_wins": 2,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": 1.0,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
+              "prints_55": true,
+              "hit_h": {
+                "n": 2885,
+                "hit": 0.44020797227036396,
+                "n_pos": 1270
+              },
+              "hit_i": {
+                "n": 2885,
+                "hit": 0.4294627383015598,
+                "n_pos": 1239
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_FR_ge1": {
+              "n_fires": 275,
+              "n_wins": 155,
+              "n_ties": 0,
+              "n_losses": 120,
+              "win_rate": 0.5636363636363636,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2887,
+                "hit": 0.45514374783512296,
+                "n_pos": 1314
+              },
+              "hit_i": {
+                "n": 2887,
+                "hit": 0.43713197090405265,
+                "n_pos": 1262
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_ER_p1": {
+              "n_fires": 290,
+              "n_wins": 172,
+              "n_ties": 0,
+              "n_losses": 118,
+              "win_rate": 0.593103448275862,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2840,
+                "hit": 0.4517605633802817,
+                "n_pos": 1283
+              },
+              "hit_i": {
+                "n": 2840,
+                "hit": 0.44295774647887326,
+                "n_pos": 1258
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_ER_m1": {
+              "n_fires": 279,
+              "n_wins": 156,
+              "n_ties": 0,
+              "n_losses": 123,
+              "win_rate": 0.5591397849462365,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2885,
+                "hit": 0.4502599653379549,
+                "n_pos": 1299
+              },
+              "hit_i": {
+                "n": 2885,
+                "hit": 0.43951473136915076,
+                "n_pos": 1268
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_EN_le0": {
+              "n_fires": 95,
+              "n_wins": 48,
+              "n_ties": 0,
+              "n_losses": 47,
+              "win_rate": 0.5052631578947369,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2350,
+                "hit": 0.43957446808510636,
+                "n_pos": 1033
+              },
+              "hit_i": {
+                "n": 2350,
+                "hit": 0.4297872340425532,
+                "n_pos": 1010
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_EN_ge2": {
+              "n_fires": 276,
+              "n_wins": 145,
+              "n_ties": 0,
+              "n_losses": 131,
+              "win_rate": 0.5253623188405797,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2887,
+                "hit": 0.4502944232767579,
+                "n_pos": 1300
+              },
+              "hit_i": {
+                "n": 2887,
+                "hit": 0.43713197090405265,
+                "n_pos": 1262
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_EP_ge03": {
+              "n_fires": 454,
+              "n_wins": 259,
+              "n_ties": 0,
+              "n_losses": 195,
+              "win_rate": 0.5704845814977973,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2694,
+                "hit": 0.45434298440979953,
+                "n_pos": 1224
+              },
+              "hit_i": {
+                "n": 2694,
+                "hit": 0.4732739420935412,
+                "n_pos": 1275
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_JB": {
+              "n_fires": 266,
+              "n_wins": 132,
+              "n_ties": 0,
+              "n_losses": 134,
+              "win_rate": 0.49624060150375937,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2863,
+                "hit": 0.4366049598323437,
+                "n_pos": 1250
+              },
+              "hit_i": {
+                "n": 2863,
+                "hit": 0.4208871812783793,
+                "n_pos": 1205
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          }
+        },
+        "prior_green_top8": {
+          "n_days": 617,
+          "recipes": {
+            "avoid_J_ge0": {
+              "n_fires": 294,
+              "n_wins": 158,
+              "n_ties": 0,
+              "n_losses": 136,
+              "win_rate": 0.5374149659863946,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2263,
+                "hit": 0.449403446752099,
+                "n_pos": 1017
+              },
+              "hit_i": {
+                "n": 2263,
+                "hit": 0.1948740609809987,
+                "n_pos": 441
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 253,
+              "n_wins": 141,
+              "n_ties": 0,
+              "n_losses": 112,
+              "win_rate": 0.5573122529644269,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2480,
+                "hit": 0.4560483870967742,
+                "n_pos": 1131
+              },
+              "hit_i": {
+                "n": 2480,
+                "hit": 0.3943548387096774,
+                "n_pos": 978
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_bearish": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2515,
+                "hit": 0.4536779324055666,
+                "n_pos": 1141
+              },
+              "hit_i": {
+                "n": 2515,
+                "hit": 0.45606361829025843,
+                "n_pos": 1147
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_bullish": {
+              "n_fires": 278,
+              "n_wins": 145,
+              "n_ties": 0,
+              "n_losses": 133,
+              "win_rate": 0.5215827338129496,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2515,
+                "hit": 0.46043737574552684,
+                "n_pos": 1158
+              },
+              "hit_i": {
+                "n": 2515,
+                "hit": 0.4516898608349901,
+                "n_pos": 1136
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "presence_lag_bullish": {
+              "n_fires": 205,
+              "n_wins": 83,
+              "n_ties": 0,
+              "n_losses": 122,
+              "win_rate": 0.40487804878048783,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2133,
+                "hit": 0.4388185654008439,
+                "n_pos": 936
+              },
+              "hit_i": {
+                "n": 2133,
+                "hit": 0.4477262072198781,
+                "n_pos": 955
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_doji": {
+              "n_fires": 143,
+              "n_wins": 76,
+              "n_ties": 0,
+              "n_losses": 67,
+              "win_rate": 0.5314685314685315,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2487,
+                "hit": 0.45958986731001206,
+                "n_pos": 1143
+              },
+              "hit_i": {
+                "n": 2487,
+                "hit": 0.4563731403297145,
+                "n_pos": 1135
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_doji": {
+              "n_fires": 278,
+              "n_wins": 142,
+              "n_ties": 0,
+              "n_losses": 136,
+              "win_rate": 0.5107913669064749,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2505,
+                "hit": 0.4487025948103792,
+                "n_pos": 1124
+              },
+              "hit_i": {
+                "n": 2505,
+                "hit": 0.4471057884231537,
+                "n_pos": 1120
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "presence_lag_doji": {
+              "n_fires": 143,
+              "n_wins": 80,
+              "n_ties": 0,
+              "n_losses": 63,
+              "win_rate": 0.5594405594405595,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 200,
+                "hit": 0.43,
+                "n_pos": 86
+              },
+              "hit_i": {
+                "n": 200,
+                "hit": 0.45,
+                "n_pos": 90
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_bear_engulf": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2515,
+                "hit": 0.4536779324055666,
+                "n_pos": 1141
+              },
+              "hit_i": {
+                "n": 2515,
+                "hit": 0.45606361829025843,
+                "n_pos": 1147
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_bull_engulf": {
+              "n_fires": 278,
+              "n_wins": 154,
+              "n_ties": 0,
+              "n_losses": 124,
+              "win_rate": 0.5539568345323741,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2515,
+                "hit": 0.4572564612326044,
+                "n_pos": 1150
+              },
+              "hit_i": {
+                "n": 2515,
+                "hit": 0.45566600397614315,
+                "n_pos": 1146
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_hammer": {
+              "n_fires": 231,
+              "n_wins": 124,
+              "n_ties": 0,
+              "n_losses": 107,
+              "win_rate": 0.5367965367965368,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2460,
+                "hit": 0.4548780487804878,
+                "n_pos": 1119
+              },
+              "hit_i": {
+                "n": 2460,
+                "hit": 0.46016260162601624,
+                "n_pos": 1132
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_evening": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2515,
+                "hit": 0.4536779324055666,
+                "n_pos": 1141
+              },
+              "hit_i": {
+                "n": 2515,
+                "hit": 0.45606361829025843,
+                "n_pos": 1147
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_morning": {
+              "n_fires": 276,
+              "n_wins": 137,
+              "n_ties": 0,
+              "n_losses": 139,
+              "win_rate": 0.4963768115942029,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2508,
+                "hit": 0.4461722488038278,
+                "n_pos": 1119
+              },
+              "hit_i": {
+                "n": 2508,
+                "hit": 0.45015948963317387,
+                "n_pos": 1129
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_BU_l1_neg": {
+              "n_fires": 259,
+              "n_wins": 133,
+              "n_ties": 0,
+              "n_losses": 126,
+              "win_rate": 0.5135135135135135,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2409,
+                "hit": 0.46077210460772106,
+                "n_pos": 1110
+              },
+              "hit_i": {
+                "n": 2409,
+                "hit": 0.45579078455790784,
+                "n_pos": 1098
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_BU_l1_pos": {
+              "n_fires": 278,
+              "n_wins": 140,
+              "n_ties": 0,
+              "n_losses": 138,
+              "win_rate": 0.5035971223021583,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2515,
+                "hit": 0.46043737574552684,
+                "n_pos": 1158
+              },
+              "hit_i": {
+                "n": 2515,
+                "hit": 0.45089463220675946,
+                "n_pos": 1134
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_BQ_l1_neg": {
+              "n_fires": 259,
+              "n_wins": 133,
+              "n_ties": 0,
+              "n_losses": 126,
+              "win_rate": 0.5135135135135135,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2409,
+                "hit": 0.46077210460772106,
+                "n_pos": 1110
+              },
+              "hit_i": {
+                "n": 2409,
+                "hit": 0.45579078455790784,
+                "n_pos": 1098
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_BQ_l1_pos": {
+              "n_fires": 278,
+              "n_wins": 140,
+              "n_ties": 0,
+              "n_losses": 138,
+              "win_rate": 0.5035971223021583,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2515,
+                "hit": 0.46043737574552684,
+                "n_pos": 1158
+              },
+              "hit_i": {
+                "n": 2515,
+                "hit": 0.45089463220675946,
+                "n_pos": 1134
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_AH_ge1": {
+              "n_fires": 294,
+              "n_wins": 167,
+              "n_ties": 0,
+              "n_losses": 127,
+              "win_rate": 0.5680272108843537,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2448,
+                "hit": 0.4775326797385621,
+                "n_pos": 1169
+              },
+              "hit_i": {
+                "n": 2448,
+                "hit": 0.48570261437908496,
+                "n_pos": 1189
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_JC": {
+              "n_fires": 278,
+              "n_wins": 146,
+              "n_ties": 0,
+              "n_losses": 132,
+              "win_rate": 0.5251798561151079,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2515,
+                "hit": 0.4572564612326044,
+                "n_pos": 1150
+              },
+              "hit_i": {
+                "n": 2515,
+                "hit": 0.4608349900596421,
+                "n_pos": 1159
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_FQ": {
+              "n_fires": 311,
+              "n_wins": 191,
+              "n_ties": 0,
+              "n_losses": 120,
+              "win_rate": 0.6141479099678456,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2447,
+                "hit": 0.4695545565999183,
+                "n_pos": 1149
+              },
+              "hit_i": {
+                "n": 2447,
+                "hit": 0.4785451573355129,
+                "n_pos": 1171
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_FR_eq0": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2515,
+                "hit": 0.4536779324055666,
+                "n_pos": 1141
+              },
+              "hit_i": {
+                "n": 2515,
+                "hit": 0.45606361829025843,
+                "n_pos": 1147
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_FR_ge1": {
+              "n_fires": 275,
+              "n_wins": 143,
+              "n_ties": 0,
+              "n_losses": 132,
+              "win_rate": 0.52,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2515,
+                "hit": 0.4588469184890656,
+                "n_pos": 1154
+              },
+              "hit_i": {
+                "n": 2515,
+                "hit": 0.4524850894632207,
+                "n_pos": 1138
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_ER_p1": {
+              "n_fires": 292,
+              "n_wins": 184,
+              "n_ties": 0,
+              "n_losses": 108,
+              "win_rate": 0.6301369863013698,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2469,
+                "hit": 0.47671121911705144,
+                "n_pos": 1177
+              },
+              "hit_i": {
+                "n": 2469,
+                "hit": 0.4819765087079789,
+                "n_pos": 1190
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_ER_m1": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2515,
+                "hit": 0.4536779324055666,
+                "n_pos": 1141
+              },
+              "hit_i": {
+                "n": 2515,
+                "hit": 0.45606361829025843,
+                "n_pos": 1147
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_EN_le0": {
+              "n_fires": 25,
+              "n_wins": 9,
+              "n_ties": 0,
+              "n_losses": 16,
+              "win_rate": 0.36,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2275,
+                "hit": 0.4531868131868132,
+                "n_pos": 1031
+              },
+              "hit_i": {
+                "n": 2275,
+                "hit": 0.45714285714285713,
+                "n_pos": 1040
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_EN_ge2": {
+              "n_fires": 276,
+              "n_wins": 148,
+              "n_ties": 0,
+              "n_losses": 128,
+              "win_rate": 0.5362318840579711,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2515,
+                "hit": 0.447713717693837,
+                "n_pos": 1126
+              },
+              "hit_i": {
+                "n": 2515,
+                "hit": 0.45009940357852884,
+                "n_pos": 1132
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_EP_ge03": {
+              "n_fires": 319,
+              "n_wins": 199,
+              "n_ties": 0,
+              "n_losses": 120,
+              "win_rate": 0.6238244514106583,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2435,
+                "hit": 0.4759753593429158,
+                "n_pos": 1159
+              },
+              "hit_i": {
+                "n": 2435,
+                "hit": 0.48706365503080085,
+                "n_pos": 1186
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_JB": {
+              "n_fires": 245,
+              "n_wins": 117,
+              "n_ties": 0,
+              "n_losses": 128,
+              "win_rate": 0.4775510204081633,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 2471,
+                "hit": 0.44880615135572643,
+                "n_pos": 1109
+              },
+              "hit_i": {
+                "n": 2471,
+                "hit": 0.4415216511533792,
+                "n_pos": 1091
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          }
+        },
+        "unranked": {
+          "n_days": 617,
+          "recipes": {
+            "avoid_J_ge0": {
+              "n_fires": 413,
+              "n_wins": 201,
+              "n_ties": 0,
+              "n_losses": 212,
+              "win_rate": 0.48668280871670705,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 298877,
+                "hit": 0.4551604840787347,
+                "n_pos": 136037
+              },
+              "hit_i": {
+                "n": 298877,
+                "hit": 0.39034786885575,
+                "n_pos": 116666
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_bearish": {
+              "n_fires": 415,
+              "n_wins": 213,
+              "n_ties": 0,
+              "n_losses": 202,
+              "win_rate": 0.5132530120481927,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 387740,
+                "hit": 0.4414246660133079,
+                "n_pos": 171158
+              },
+              "hit_i": {
+                "n": 387740,
+                "hit": 0.45626708619177797,
+                "n_pos": 176913
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "presence_lag_bullish": {
+              "n_fires": 410,
+              "n_wins": 219,
+              "n_ties": 0,
+              "n_losses": 191,
+              "win_rate": 0.5341463414634147,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 287934,
+                "hit": 0.44009738342814675,
+                "n_pos": 126719
+              },
+              "hit_i": {
+                "n": 287934,
+                "hit": 0.4541943639861913,
+                "n_pos": 130778
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_doji": {
+              "n_fires": 332,
+              "n_wins": 178,
+              "n_ties": 0,
+              "n_losses": 154,
+              "win_rate": 0.536144578313253,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 552986,
+                "hit": 0.44550856622048296,
+                "n_pos": 246360
+              },
+              "hit_i": {
+                "n": 552986,
+                "hit": 0.46530291906124205,
+                "n_pos": 257306
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "presence_lag_doji": {
+              "n_fires": 332,
+              "n_wins": 154,
+              "n_ties": 0,
+              "n_losses": 178,
+              "win_rate": 0.463855421686747,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 64381,
+                "hit": 0.42949006694521674,
+                "n_pos": 27651
+              },
+              "hit_i": {
+                "n": 64381,
+                "hit": 0.4430810332240879,
+                "n_pos": 28526
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_bear_engulf": {
+              "n_fires": 334,
+              "n_wins": 179,
+              "n_ties": 0,
+              "n_losses": 155,
+              "win_rate": 0.5359281437125748,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 543678,
+                "hit": 0.4429754376671486,
+                "n_pos": 240836
+              },
+              "hit_i": {
+                "n": 543678,
+                "hit": 0.46087941759644496,
+                "n_pos": 250570
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_evening": {
+              "n_fires": 321,
+              "n_wins": 162,
+              "n_ties": 0,
+              "n_losses": 159,
+              "win_rate": 0.5046728971962616,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 566814,
+                "hit": 0.44363406690731,
+                "n_pos": 251458
+              },
+              "hit_i": {
+                "n": 566814,
+                "hit": 0.4629737444734957,
+                "n_pos": 262420
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_BU_l1_neg": {
+              "n_fires": 422,
+              "n_wins": 221,
+              "n_ties": 0,
+              "n_losses": 201,
+              "win_rate": 0.523696682464455,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 320332,
+                "hit": 0.43400909056853515,
+                "n_pos": 139027
+              },
+              "hit_i": {
+                "n": 320332,
+                "hit": 0.44911217112246044,
+                "n_pos": 143865
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_BQ_l1_neg": {
+              "n_fires": 422,
+              "n_wins": 221,
+              "n_ties": 0,
+              "n_losses": 201,
+              "win_rate": 0.523696682464455,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 320332,
+                "hit": 0.43400909056853515,
+                "n_pos": 139027
+              },
+              "hit_i": {
+                "n": 320332,
+                "hit": 0.44911217112246044,
+                "n_pos": 143865
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_AH_ge1": {
+              "n_fires": 450,
+              "n_wins": 242,
+              "n_ties": 0,
+              "n_losses": 208,
+              "win_rate": 0.5377777777777778,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 478192,
+                "hit": 0.43940509251514037,
+                "n_pos": 210120
+              },
+              "hit_i": {
+                "n": 478192,
+                "hit": 0.4615405527486867,
+                "n_pos": 220705
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_FQ": {
+              "n_fires": 344,
+              "n_wins": 183,
+              "n_ties": 0,
+              "n_losses": 161,
+              "win_rate": 0.5319767441860465,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 541153,
+                "hit": 0.44126522443745114,
+                "n_pos": 238792
+              },
+              "hit_i": {
+                "n": 541153,
+                "hit": 0.46270832832858727,
+                "n_pos": 250396
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_FR_eq0": {
+              "n_fires": 277,
+              "n_wins": 147,
+              "n_ties": 0,
+              "n_losses": 130,
+              "win_rate": 0.5306859205776173,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 579120,
+                "hit": 0.4433001795828153,
+                "n_pos": 256724
+              },
+              "hit_i": {
+                "n": 579120,
+                "hit": 0.4623566790993231,
+                "n_pos": 267760
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_ER_p1": {
+              "n_fires": 322,
+              "n_wins": 173,
+              "n_ties": 0,
+              "n_losses": 149,
+              "win_rate": 0.5372670807453416,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 577773,
+                "hit": 0.44294039354556203,
+                "n_pos": 255919
+              },
+              "hit_i": {
+                "n": 577773,
+                "hit": 0.463503832820156,
+                "n_pos": 267800
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_EN_le0": {
+              "n_fires": 374,
+              "n_wins": 187,
+              "n_ties": 0,
+              "n_losses": 187,
+              "win_rate": 0.5,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 215323,
+                "hit": 0.44044528452603765,
+                "n_pos": 94838
+              },
+              "hit_i": {
+                "n": 215323,
+                "hit": 0.45754053213079887,
+                "n_pos": 98519
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_EP_ge03": {
+              "n_fires": 454,
+              "n_wins": 240,
+              "n_ties": 0,
+              "n_losses": 214,
+              "win_rate": 0.5286343612334802,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 464327,
+                "hit": 0.43614306297070815,
+                "n_pos": 202513
+              },
+              "hit_i": {
+                "n": 464327,
+                "hit": 0.4596674326498351,
+                "n_pos": 213436
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          }
+        }
+      }
+    },
+    "y2025": {
+      "n_days": 250,
+      "lo": "2025-01-02",
+      "hi": "2025-12-31",
+      "kinds": {
+        "vol_top8": {
+          "n_days": 250,
+          "recipes": {
+            "avoid_J_ge0": {
+              "n_fires": 167,
+              "n_wins": 86,
+              "n_ties": 0,
+              "n_losses": 81,
+              "win_rate": 0.5149700598802395,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1084,
+                "hit": 0.45202952029520294,
+                "n_pos": 490
+              },
+              "hit_i": {
+                "n": 1084,
+                "hit": 0.4003690036900369,
+                "n_pos": 434
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 119,
+              "n_wins": 64,
+              "n_ties": 0,
+              "n_losses": 55,
+              "win_rate": 0.5378151260504201,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1213,
+                "hit": 0.4476504534212696,
+                "n_pos": 543
+              },
+              "hit_i": {
+                "n": 1213,
+                "hit": 0.4336356141797197,
+                "n_pos": 526
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_bearish": {
+              "n_fires": 160,
+              "n_wins": 77,
+              "n_ties": 0,
+              "n_losses": 83,
+              "win_rate": 0.48125,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1106,
+                "hit": 0.4448462929475588,
+                "n_pos": 492
+              },
+              "hit_i": {
+                "n": 1106,
+                "hit": 0.4394213381555154,
+                "n_pos": 486
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_bullish": {
+              "n_fires": 119,
+              "n_wins": 62,
+              "n_ties": 0,
+              "n_losses": 57,
+              "win_rate": 0.5210084033613446,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1213,
+                "hit": 0.45671887881286066,
+                "n_pos": 554
+              },
+              "hit_i": {
+                "n": 1213,
+                "hit": 0.45671887881286066,
+                "n_pos": 554
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "presence_lag_bullish": {
+              "n_fires": 161,
+              "n_wins": 77,
+              "n_ties": 0,
+              "n_losses": 84,
+              "win_rate": 0.4782608695652174,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 615,
+                "hit": 0.4195121951219512,
+                "n_pos": 258
+              },
+              "hit_i": {
+                "n": 615,
+                "hit": 0.43577235772357725,
+                "n_pos": 268
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_doji": {
+              "n_fires": 82,
+              "n_wins": 46,
+              "n_ties": 0,
+              "n_losses": 36,
+              "win_rate": 0.5609756097560976,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1192,
+                "hit": 0.45553691275167785,
+                "n_pos": 543
+              },
+              "hit_i": {
+                "n": 1192,
+                "hit": 0.4563758389261745,
+                "n_pos": 544
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_doji": {
+              "n_fires": 119,
+              "n_wins": 64,
+              "n_ties": 0,
+              "n_losses": 55,
+              "win_rate": 0.5378151260504201,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1210,
+                "hit": 0.44545454545454544,
+                "n_pos": 539
+              },
+              "hit_i": {
+                "n": 1210,
+                "hit": 0.45289256198347105,
+                "n_pos": 548
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "presence_lag_doji": {
+              "n_fires": 82,
+              "n_wins": 34,
+              "n_ties": 0,
+              "n_losses": 48,
+              "win_rate": 0.4146341463414634,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 103,
+                "hit": 0.33980582524271846,
+                "n_pos": 35
+              },
+              "hit_i": {
+                "n": 103,
+                "hit": 0.3883495145631068,
+                "n_pos": 40
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_bear_engulf": {
+              "n_fires": 98,
+              "n_wins": 52,
+              "n_ties": 0,
+              "n_losses": 46,
+              "win_rate": 0.5306122448979592,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1180,
+                "hit": 0.4542372881355932,
+                "n_pos": 536
+              },
+              "hit_i": {
+                "n": 1180,
+                "hit": 0.45847457627118643,
+                "n_pos": 541
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_bull_engulf": {
+              "n_fires": 117,
+              "n_wins": 63,
+              "n_ties": 0,
+              "n_losses": 54,
+              "win_rate": 0.5384615384615384,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1212,
+                "hit": 0.4513201320132013,
+                "n_pos": 547
+              },
+              "hit_i": {
+                "n": 1212,
+                "hit": 0.44884488448844884,
+                "n_pos": 544
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_hammer": {
+              "n_fires": 81,
+              "n_wins": 49,
+              "n_ties": 0,
+              "n_losses": 32,
+              "win_rate": 0.6049382716049383,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1177,
+                "hit": 0.45879354290569246,
+                "n_pos": 540
+              },
+              "hit_i": {
+                "n": 1177,
+                "hit": 0.45794392523364486,
+                "n_pos": 539
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_evening": {
+              "n_fires": 77,
+              "n_wins": 36,
+              "n_ties": 0,
+              "n_losses": 41,
+              "win_rate": 0.4675324675324675,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1193,
+                "hit": 0.4492875104777871,
+                "n_pos": 536
+              },
+              "hit_i": {
+                "n": 1193,
+                "hit": 0.4492875104777871,
+                "n_pos": 536
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_morning": {
+              "n_fires": 115,
+              "n_wins": 59,
+              "n_ties": 0,
+              "n_losses": 56,
+              "win_rate": 0.5130434782608696,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1202,
+                "hit": 0.4525790349417637,
+                "n_pos": 544
+              },
+              "hit_i": {
+                "n": 1202,
+                "hit": 0.4492512479201331,
+                "n_pos": 540
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_BU_l1_neg": {
+              "n_fires": 164,
+              "n_wins": 86,
+              "n_ties": 0,
+              "n_losses": 78,
+              "win_rate": 0.524390243902439,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1084,
+                "hit": 0.45295202952029523,
+                "n_pos": 491
+              },
+              "hit_i": {
+                "n": 1084,
+                "hit": 0.45018450184501846,
+                "n_pos": 488
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_BU_l1_pos": {
+              "n_fires": 118,
+              "n_wins": 59,
+              "n_ties": 0,
+              "n_losses": 59,
+              "win_rate": 0.5,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1213,
+                "hit": 0.4542456718878813,
+                "n_pos": 551
+              },
+              "hit_i": {
+                "n": 1213,
+                "hit": 0.46413849958779885,
+                "n_pos": 563
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_BQ_l1_neg": {
+              "n_fires": 164,
+              "n_wins": 86,
+              "n_ties": 0,
+              "n_losses": 78,
+              "win_rate": 0.524390243902439,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1084,
+                "hit": 0.45295202952029523,
+                "n_pos": 491
+              },
+              "hit_i": {
+                "n": 1084,
+                "hit": 0.45018450184501846,
+                "n_pos": 488
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_BQ_l1_pos": {
+              "n_fires": 118,
+              "n_wins": 59,
+              "n_ties": 0,
+              "n_losses": 59,
+              "win_rate": 0.5,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1213,
+                "hit": 0.4542456718878813,
+                "n_pos": 551
+              },
+              "hit_i": {
+                "n": 1213,
+                "hit": 0.46413849958779885,
+                "n_pos": 563
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_AH_ge1": {
+              "n_fires": 190,
+              "n_wins": 98,
+              "n_ties": 0,
+              "n_losses": 92,
+              "win_rate": 0.5157894736842106,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1122,
+                "hit": 0.4768270944741533,
+                "n_pos": 535
+              },
+              "hit_i": {
+                "n": 1122,
+                "hit": 0.4982174688057041,
+                "n_pos": 559
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_JC": {
+              "n_fires": 119,
+              "n_wins": 65,
+              "n_ties": 0,
+              "n_losses": 54,
+              "win_rate": 0.5462184873949579,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1213,
+                "hit": 0.4682605111294312,
+                "n_pos": 568
+              },
+              "hit_i": {
+                "n": 1213,
+                "hit": 0.4756801319043693,
+                "n_pos": 577
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_FQ": {
+              "n_fires": 142,
+              "n_wins": 80,
+              "n_ties": 0,
+              "n_losses": 62,
+              "win_rate": 0.5633802816901409,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1176,
+                "hit": 0.45068027210884354,
+                "n_pos": 530
+              },
+              "hit_i": {
+                "n": 1176,
+                "hit": 0.46683673469387754,
+                "n_pos": 549
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_FR_eq0": {
+              "n_fires": 2,
+              "n_wins": 2,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": 1.0,
+              "verdict": "PROVISIONAL",
+              "clears_55": false,
+              "prints_55": true,
+              "hit_h": {
+                "n": 1211,
+                "hit": 0.44508670520231214,
+                "n_pos": 539
+              },
+              "hit_i": {
+                "n": 1211,
+                "hit": 0.4508670520231214,
+                "n_pos": 546
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_FR_ge1": {
+              "n_fires": 115,
+              "n_wins": 65,
+              "n_ties": 0,
+              "n_losses": 50,
+              "win_rate": 0.5652173913043478,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1213,
+                "hit": 0.45754328112118714,
+                "n_pos": 555
+              },
+              "hit_i": {
+                "n": 1213,
+                "hit": 0.46413849958779885,
+                "n_pos": 563
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_ER_p1": {
+              "n_fires": 130,
+              "n_wins": 67,
+              "n_ties": 0,
+              "n_losses": 63,
+              "win_rate": 0.5153846153846153,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1184,
+                "hit": 0.44510135135135137,
+                "n_pos": 527
+              },
+              "hit_i": {
+                "n": 1184,
+                "hit": 0.46030405405405406,
+                "n_pos": 545
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_ER_m1": {
+              "n_fires": 119,
+              "n_wins": 58,
+              "n_ties": 0,
+              "n_losses": 61,
+              "win_rate": 0.48739495798319327,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1211,
+                "hit": 0.43022295623451695,
+                "n_pos": 521
+              },
+              "hit_i": {
+                "n": 1211,
+                "hit": 0.44921552436003304,
+                "n_pos": 544
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_EN_le0": {
+              "n_fires": 44,
+              "n_wins": 22,
+              "n_ties": 0,
+              "n_losses": 22,
+              "win_rate": 0.5,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1009,
+                "hit": 0.4400396432111001,
+                "n_pos": 444
+              },
+              "hit_i": {
+                "n": 1009,
+                "hit": 0.4509415262636274,
+                "n_pos": 455
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_EN_ge2": {
+              "n_fires": 116,
+              "n_wins": 55,
+              "n_ties": 0,
+              "n_losses": 61,
+              "win_rate": 0.47413793103448276,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1213,
+                "hit": 0.44929925803792253,
+                "n_pos": 545
+              },
+              "hit_i": {
+                "n": 1213,
+                "hit": 0.45671887881286066,
+                "n_pos": 554
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_EP_ge03": {
+              "n_fires": 198,
+              "n_wins": 107,
+              "n_ties": 0,
+              "n_losses": 91,
+              "win_rate": 0.5404040404040404,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1121,
+                "hit": 0.45851917930419267,
+                "n_pos": 514
+              },
+              "hit_i": {
+                "n": 1121,
+                "hit": 0.49687778768956287,
+                "n_pos": 557
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_JB": {
+              "n_fires": 106,
+              "n_wins": 45,
+              "n_ties": 0,
+              "n_losses": 61,
+              "win_rate": 0.42452830188679247,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1197,
+                "hit": 0.42857142857142855,
+                "n_pos": 513
+              },
+              "hit_i": {
+                "n": 1197,
+                "hit": 0.4327485380116959,
+                "n_pos": 518
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          }
+        },
+        "prior_green_top8": {
+          "n_days": 250,
+          "recipes": {
+            "avoid_J_ge0": {
+              "n_fires": 127,
+              "n_wins": 60,
+              "n_ties": 0,
+              "n_losses": 67,
+              "win_rate": 0.47244094488188976,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 963,
+                "hit": 0.42679127725856697,
+                "n_pos": 411
+              },
+              "hit_i": {
+                "n": 963,
+                "hit": 0.18483904465212878,
+                "n_pos": 178
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 100,
+              "n_wins": 53,
+              "n_ties": 0,
+              "n_losses": 47,
+              "win_rate": 0.53,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1050,
+                "hit": 0.43523809523809526,
+                "n_pos": 457
+              },
+              "hit_i": {
+                "n": 1050,
+                "hit": 0.4038095238095238,
+                "n_pos": 424
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_bearish": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1070,
+                "hit": 0.44018691588785047,
+                "n_pos": 471
+              },
+              "hit_i": {
+                "n": 1070,
+                "hit": 0.45514018691588787,
+                "n_pos": 487
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_bullish": {
+              "n_fires": 118,
+              "n_wins": 60,
+              "n_ties": 0,
+              "n_losses": 58,
+              "win_rate": 0.5084745762711864,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1070,
+                "hit": 0.4532710280373832,
+                "n_pos": 485
+              },
+              "hit_i": {
+                "n": 1070,
+                "hit": 0.45514018691588787,
+                "n_pos": 487
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "presence_lag_bullish": {
+              "n_fires": 83,
+              "n_wins": 35,
+              "n_ties": 0,
+              "n_losses": 48,
+              "win_rate": 0.42168674698795183,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 914,
+                "hit": 0.43435448577680524,
+                "n_pos": 397
+              },
+              "hit_i": {
+                "n": 914,
+                "hit": 0.4540481400437637,
+                "n_pos": 415
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_doji": {
+              "n_fires": 51,
+              "n_wins": 28,
+              "n_ties": 0,
+              "n_losses": 23,
+              "win_rate": 0.5490196078431373,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1060,
+                "hit": 0.44528301886792454,
+                "n_pos": 472
+              },
+              "hit_i": {
+                "n": 1060,
+                "hit": 0.46037735849056605,
+                "n_pos": 488
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_doji": {
+              "n_fires": 118,
+              "n_wins": 62,
+              "n_ties": 0,
+              "n_losses": 56,
+              "win_rate": 0.5254237288135594,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1068,
+                "hit": 0.4400749063670412,
+                "n_pos": 470
+              },
+              "hit_i": {
+                "n": 1068,
+                "hit": 0.45131086142322097,
+                "n_pos": 482
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "presence_lag_doji": {
+              "n_fires": 51,
+              "n_wins": 25,
+              "n_ties": 0,
+              "n_losses": 26,
+              "win_rate": 0.49019607843137253,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 71,
+                "hit": 0.39436619718309857,
+                "n_pos": 28
+              },
+              "hit_i": {
+                "n": 71,
+                "hit": 0.39436619718309857,
+                "n_pos": 28
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_bear_engulf": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1070,
+                "hit": 0.44018691588785047,
+                "n_pos": 471
+              },
+              "hit_i": {
+                "n": 1070,
+                "hit": 0.45514018691588787,
+                "n_pos": 487
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_bull_engulf": {
+              "n_fires": 118,
+              "n_wins": 58,
+              "n_ties": 0,
+              "n_losses": 60,
+              "win_rate": 0.4915254237288136,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1070,
+                "hit": 0.43457943925233644,
+                "n_pos": 465
+              },
+              "hit_i": {
+                "n": 1070,
+                "hit": 0.4457943925233645,
+                "n_pos": 477
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_hammer": {
+              "n_fires": 101,
+              "n_wins": 56,
+              "n_ties": 0,
+              "n_losses": 45,
+              "win_rate": 0.5544554455445545,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1048,
+                "hit": 0.4484732824427481,
+                "n_pos": 470
+              },
+              "hit_i": {
+                "n": 1048,
+                "hit": 0.4580152671755725,
+                "n_pos": 480
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_evening": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1070,
+                "hit": 0.44018691588785047,
+                "n_pos": 471
+              },
+              "hit_i": {
+                "n": 1070,
+                "hit": 0.45514018691588787,
+                "n_pos": 487
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_morning": {
+              "n_fires": 117,
+              "n_wins": 56,
+              "n_ties": 0,
+              "n_losses": 61,
+              "win_rate": 0.47863247863247865,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1068,
+                "hit": 0.4344569288389513,
+                "n_pos": 464
+              },
+              "hit_i": {
+                "n": 1068,
+                "hit": 0.44569288389513106,
+                "n_pos": 476
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_BU_l1_neg": {
+              "n_fires": 111,
+              "n_wins": 59,
+              "n_ties": 0,
+              "n_losses": 52,
+              "win_rate": 0.5315315315315315,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1022,
+                "hit": 0.4657534246575342,
+                "n_pos": 476
+              },
+              "hit_i": {
+                "n": 1022,
+                "hit": 0.46966731898238745,
+                "n_pos": 480
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_BU_l1_pos": {
+              "n_fires": 118,
+              "n_wins": 57,
+              "n_ties": 0,
+              "n_losses": 61,
+              "win_rate": 0.4830508474576271,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1070,
+                "hit": 0.44766355140186914,
+                "n_pos": 479
+              },
+              "hit_i": {
+                "n": 1070,
+                "hit": 0.4532710280373832,
+                "n_pos": 485
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_BQ_l1_neg": {
+              "n_fires": 111,
+              "n_wins": 59,
+              "n_ties": 0,
+              "n_losses": 52,
+              "win_rate": 0.5315315315315315,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1022,
+                "hit": 0.4657534246575342,
+                "n_pos": 476
+              },
+              "hit_i": {
+                "n": 1022,
+                "hit": 0.46966731898238745,
+                "n_pos": 480
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_BQ_l1_pos": {
+              "n_fires": 118,
+              "n_wins": 57,
+              "n_ties": 0,
+              "n_losses": 61,
+              "win_rate": 0.4830508474576271,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1070,
+                "hit": 0.44766355140186914,
+                "n_pos": 479
+              },
+              "hit_i": {
+                "n": 1070,
+                "hit": 0.4532710280373832,
+                "n_pos": 485
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_AH_ge1": {
+              "n_fires": 125,
+              "n_wins": 72,
+              "n_ties": 0,
+              "n_losses": 53,
+              "win_rate": 0.576,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1034,
+                "hit": 0.4584139264990329,
+                "n_pos": 474
+              },
+              "hit_i": {
+                "n": 1034,
+                "hit": 0.4758220502901354,
+                "n_pos": 492
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_JC": {
+              "n_fires": 118,
+              "n_wins": 63,
+              "n_ties": 0,
+              "n_losses": 55,
+              "win_rate": 0.5338983050847458,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1070,
+                "hit": 0.44018691588785047,
+                "n_pos": 471
+              },
+              "hit_i": {
+                "n": 1070,
+                "hit": 0.45607476635514016,
+                "n_pos": 488
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_FQ": {
+              "n_fires": 139,
+              "n_wins": 88,
+              "n_ties": 0,
+              "n_losses": 51,
+              "win_rate": 0.6330935251798561,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1033,
+                "hit": 0.45885769603097776,
+                "n_pos": 474
+              },
+              "hit_i": {
+                "n": 1033,
+                "hit": 0.47337850919651503,
+                "n_pos": 489
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_FR_eq0": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1070,
+                "hit": 0.44018691588785047,
+                "n_pos": 471
+              },
+              "hit_i": {
+                "n": 1070,
+                "hit": 0.45514018691588787,
+                "n_pos": 487
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_FR_ge1": {
+              "n_fires": 115,
+              "n_wins": 56,
+              "n_ties": 0,
+              "n_losses": 59,
+              "win_rate": 0.48695652173913045,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1070,
+                "hit": 0.4514018691588785,
+                "n_pos": 483
+              },
+              "hit_i": {
+                "n": 1070,
+                "hit": 0.45607476635514016,
+                "n_pos": 488
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_ER_p1": {
+              "n_fires": 129,
+              "n_wins": 74,
+              "n_ties": 0,
+              "n_losses": 55,
+              "win_rate": 0.5736434108527132,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1042,
+                "hit": 0.45681381957773515,
+                "n_pos": 476
+              },
+              "hit_i": {
+                "n": 1042,
+                "hit": 0.472168905950096,
+                "n_pos": 492
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_ER_m1": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1070,
+                "hit": 0.44018691588785047,
+                "n_pos": 471
+              },
+              "hit_i": {
+                "n": 1070,
+                "hit": 0.45514018691588787,
+                "n_pos": 487
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_EN_le0": {
+              "n_fires": 16,
+              "n_wins": 6,
+              "n_ties": 0,
+              "n_losses": 10,
+              "win_rate": 0.375,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 971,
+                "hit": 0.4387229660144181,
+                "n_pos": 426
+              },
+              "hit_i": {
+                "n": 971,
+                "hit": 0.45829042224510813,
+                "n_pos": 445
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_EN_ge2": {
+              "n_fires": 116,
+              "n_wins": 61,
+              "n_ties": 0,
+              "n_losses": 55,
+              "win_rate": 0.5258620689655172,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1070,
+                "hit": 0.43457943925233644,
+                "n_pos": 465
+              },
+              "hit_i": {
+                "n": 1070,
+                "hit": 0.4485981308411215,
+                "n_pos": 480
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_EP_ge03": {
+              "n_fires": 144,
+              "n_wins": 88,
+              "n_ties": 0,
+              "n_losses": 56,
+              "win_rate": 0.6111111111111112,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1025,
+                "hit": 0.4653658536585366,
+                "n_pos": 477
+              },
+              "hit_i": {
+                "n": 1025,
+                "hit": 0.47609756097560973,
+                "n_pos": 488
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_JB": {
+              "n_fires": 95,
+              "n_wins": 48,
+              "n_ties": 0,
+              "n_losses": 47,
+              "win_rate": 0.5052631578947369,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1051,
+                "hit": 0.43101807802093245,
+                "n_pos": 453
+              },
+              "hit_i": {
+                "n": 1051,
+                "hit": 0.44433872502378685,
+                "n_pos": 467
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          }
+        },
+        "unranked": {
+          "n_days": 250,
+          "recipes": {
+            "avoid_J_ge0": {
+              "n_fires": 172,
+              "n_wins": 88,
+              "n_ties": 0,
+              "n_losses": 84,
+              "win_rate": 0.5116279069767442,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 116611,
+                "hit": 0.448619770004545,
+                "n_pos": 52314
+              },
+              "hit_i": {
+                "n": 116611,
+                "hit": 0.3982128615653755,
+                "n_pos": 46436
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_bearish": {
+              "n_fires": 174,
+              "n_wins": 89,
+              "n_ties": 0,
+              "n_losses": 85,
+              "win_rate": 0.5114942528735632,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 151681,
+                "hit": 0.430067048608593,
+                "n_pos": 65233
+              },
+              "hit_i": {
+                "n": 151681,
+                "hit": 0.4540515951239773,
+                "n_pos": 68871
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "presence_lag_bullish": {
+              "n_fires": 168,
+              "n_wins": 79,
+              "n_ties": 0,
+              "n_losses": 89,
+              "win_rate": 0.47023809523809523,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 112419,
+                "hit": 0.4289399478735801,
+                "n_pos": 48221
+              },
+              "hit_i": {
+                "n": 112419,
+                "hit": 0.453063983846147,
+                "n_pos": 50933
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_doji": {
+              "n_fires": 140,
+              "n_wins": 77,
+              "n_ties": 0,
+              "n_losses": 63,
+              "win_rate": 0.55,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 218096,
+                "hit": 0.4351111437165285,
+                "n_pos": 94896
+              },
+              "hit_i": {
+                "n": 218096,
+                "hit": 0.45937110263370257,
+                "n_pos": 100187
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "presence_lag_doji": {
+              "n_fires": 140,
+              "n_wins": 63,
+              "n_ties": 0,
+              "n_losses": 77,
+              "win_rate": 0.45,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 25151,
+                "hit": 0.42177249413542206,
+                "n_pos": 10608
+              },
+              "hit_i": {
+                "n": 25151,
+                "hit": 0.44622480219474375,
+                "n_pos": 11223
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_bear_engulf": {
+              "n_fires": 145,
+              "n_wins": 71,
+              "n_ties": 0,
+              "n_losses": 74,
+              "win_rate": 0.4896551724137931,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 213829,
+                "hit": 0.43252786104784663,
+                "n_pos": 92487
+              },
+              "hit_i": {
+                "n": 213829,
+                "hit": 0.457496410683303,
+                "n_pos": 97826
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_evening": {
+              "n_fires": 136,
+              "n_wins": 71,
+              "n_ties": 0,
+              "n_losses": 65,
+              "win_rate": 0.5220588235294118,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 223299,
+                "hit": 0.43393835171675643,
+                "n_pos": 96898
+              },
+              "hit_i": {
+                "n": 223299,
+                "hit": 0.45844808978096635,
+                "n_pos": 102371
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_BU_l1_neg": {
+              "n_fires": 179,
+              "n_wins": 94,
+              "n_ties": 0,
+              "n_losses": 85,
+              "win_rate": 0.5251396648044693,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 128524,
+                "hit": 0.41464629174317635,
+                "n_pos": 53292
+              },
+              "hit_i": {
+                "n": 128524,
+                "hit": 0.4420341726058946,
+                "n_pos": 56812
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_BQ_l1_neg": {
+              "n_fires": 179,
+              "n_wins": 94,
+              "n_ties": 0,
+              "n_losses": 85,
+              "win_rate": 0.5251396648044693,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 128524,
+                "hit": 0.41464629174317635,
+                "n_pos": 53292
+              },
+              "hit_i": {
+                "n": 128524,
+                "hit": 0.4420341726058946,
+                "n_pos": 56812
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_AH_ge1": {
+              "n_fires": 193,
+              "n_wins": 97,
+              "n_ties": 0,
+              "n_losses": 96,
+              "win_rate": 0.5025906735751295,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 193362,
+                "hit": 0.4285123240347121,
+                "n_pos": 82858
+              },
+              "hit_i": {
+                "n": 193362,
+                "hit": 0.4548101488399996,
+                "n_pos": 87943
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_FQ": {
+              "n_fires": 153,
+              "n_wins": 90,
+              "n_ties": 0,
+              "n_losses": 63,
+              "win_rate": 0.5882352941176471,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 217137,
+                "hit": 0.43296167857159307,
+                "n_pos": 94012
+              },
+              "hit_i": {
+                "n": 217137,
+                "hit": 0.45789064047122324,
+                "n_pos": 99425
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_FR_eq0": {
+              "n_fires": 117,
+              "n_wins": 56,
+              "n_ties": 0,
+              "n_losses": 61,
+              "win_rate": 0.47863247863247865,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 228306,
+                "hit": 0.432967158112358,
+                "n_pos": 98849
+              },
+              "hit_i": {
+                "n": 228306,
+                "hit": 0.4574124201729258,
+                "n_pos": 104430
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_ER_p1": {
+              "n_fires": 145,
+              "n_wins": 87,
+              "n_ties": 0,
+              "n_losses": 58,
+              "win_rate": 0.6,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 229760,
+                "hit": 0.4336568593314763,
+                "n_pos": 99637
+              },
+              "hit_i": {
+                "n": 229760,
+                "hit": 0.45850887883008357,
+                "n_pos": 105347
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_EN_le0": {
+              "n_fires": 163,
+              "n_wins": 79,
+              "n_ties": 0,
+              "n_losses": 84,
+              "win_rate": 0.48466257668711654,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 82635,
+                "hit": 0.42321050402371874,
+                "n_pos": 34972
+              },
+              "hit_i": {
+                "n": 82635,
+                "hit": 0.44921643371452774,
+                "n_pos": 37121
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_EP_ge03": {
+              "n_fires": 198,
+              "n_wins": 100,
+              "n_ties": 0,
+              "n_losses": 98,
+              "win_rate": 0.5050505050505051,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 190088,
+                "hit": 0.42723896300660746,
+                "n_pos": 81213
+              },
+              "hit_i": {
+                "n": 190088,
+                "hit": 0.4547314927822903,
+                "n_pos": 86439
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          }
+        }
+      }
+    },
+    "pre813": {
+      "n_days": 153,
+      "lo": "2026-01-02",
+      "hi": "2026-08-12",
+      "kinds": {
+        "vol_top8": {
+          "n_days": 153,
+          "recipes": {
+            "avoid_J_ge0": {
+              "n_fires": 151,
+              "n_wins": 92,
+              "n_ties": 0,
+              "n_losses": 59,
+              "win_rate": 0.609271523178808,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4665032679738562,
+                "n_pos": 571
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.3349673202614379,
+                "n_pos": 410
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 153,
+              "n_wins": 87,
+              "n_ties": 0,
+              "n_losses": 66,
+              "win_rate": 0.5686274509803921,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4616013071895425,
+                "n_pos": 565
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.3741830065359477,
+                "n_pos": 458
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_bearish": {
+              "n_fires": 148,
+              "n_wins": 69,
+              "n_ties": 0,
+              "n_losses": 79,
+              "win_rate": 0.46621621621621623,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4665032679738562,
+                "n_pos": 571
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.4305555555555556,
+                "n_pos": 527
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_bullish": {
+              "n_fires": 153,
+              "n_wins": 77,
+              "n_ties": 0,
+              "n_losses": 76,
+              "win_rate": 0.5032679738562091,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4632352941176471,
+                "n_pos": 567
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.43790849673202614,
+                "n_pos": 536
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "presence_lag_bullish": {
+              "n_fires": 151,
+              "n_wins": 53,
+              "n_ties": 0,
+              "n_losses": 98,
+              "win_rate": 0.3509933774834437,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 592,
+                "hit": 0.41385135135135137,
+                "n_pos": 245
+              },
+              "hit_i": {
+                "n": 592,
+                "hit": 0.3902027027027027,
+                "n_pos": 231
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_doji": {
+              "n_fires": 83,
+              "n_wins": 42,
+              "n_ties": 0,
+              "n_losses": 41,
+              "win_rate": 0.5060240963855421,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4485294117647059,
+                "n_pos": 549
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.42320261437908496,
+                "n_pos": 518
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_doji": {
+              "n_fires": 152,
+              "n_wins": 84,
+              "n_ties": 0,
+              "n_losses": 68,
+              "win_rate": 0.5526315789473685,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1221,
+                "hit": 0.4610974610974611,
+                "n_pos": 563
+              },
+              "hit_i": {
+                "n": 1221,
+                "hit": 0.4201474201474201,
+                "n_pos": 513
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "presence_lag_doji": {
+              "n_fires": 83,
+              "n_wins": 45,
+              "n_ties": 0,
+              "n_losses": 38,
+              "win_rate": 0.5421686746987951,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 114,
+                "hit": 0.4473684210526316,
+                "n_pos": 51
+              },
+              "hit_i": {
+                "n": 114,
+                "hit": 0.37719298245614036,
+                "n_pos": 43
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_bear_engulf": {
+              "n_fires": 98,
+              "n_wins": 56,
+              "n_ties": 0,
+              "n_losses": 42,
+              "win_rate": 0.5714285714285714,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.46486928104575165,
+                "n_pos": 569
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.42320261437908496,
+                "n_pos": 518
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_bull_engulf": {
+              "n_fires": 153,
+              "n_wins": 88,
+              "n_ties": 0,
+              "n_losses": 65,
+              "win_rate": 0.5751633986928104,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1222,
+                "hit": 0.469721767594108,
+                "n_pos": 574
+              },
+              "hit_i": {
+                "n": 1222,
+                "hit": 0.4148936170212766,
+                "n_pos": 507
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_hammer": {
+              "n_fires": 85,
+              "n_wins": 47,
+              "n_ties": 0,
+              "n_losses": 38,
+              "win_rate": 0.5529411764705883,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1180,
+                "hit": 0.4533898305084746,
+                "n_pos": 535
+              },
+              "hit_i": {
+                "n": 1180,
+                "hit": 0.42627118644067796,
+                "n_pos": 503
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_evening": {
+              "n_fires": 75,
+              "n_wins": 37,
+              "n_ties": 0,
+              "n_losses": 38,
+              "win_rate": 0.49333333333333335,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4493464052287582,
+                "n_pos": 550
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.41421568627450983,
+                "n_pos": 507
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_morning": {
+              "n_fires": 150,
+              "n_wins": 80,
+              "n_ties": 0,
+              "n_losses": 70,
+              "win_rate": 0.5333333333333333,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1207,
+                "hit": 0.46975973487986744,
+                "n_pos": 567
+              },
+              "hit_i": {
+                "n": 1207,
+                "hit": 0.4175642087821044,
+                "n_pos": 504
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_BU_l1_neg": {
+              "n_fires": 143,
+              "n_wins": 81,
+              "n_ties": 0,
+              "n_losses": 62,
+              "win_rate": 0.5664335664335665,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4738562091503268,
+                "n_pos": 580
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.4019607843137255,
+                "n_pos": 492
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_BU_l1_pos": {
+              "n_fires": 153,
+              "n_wins": 86,
+              "n_ties": 0,
+              "n_losses": 67,
+              "win_rate": 0.5620915032679739,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4738562091503268,
+                "n_pos": 580
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.4166666666666667,
+                "n_pos": 510
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_BQ_l1_neg": {
+              "n_fires": 143,
+              "n_wins": 81,
+              "n_ties": 0,
+              "n_losses": 62,
+              "win_rate": 0.5664335664335665,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4738562091503268,
+                "n_pos": 580
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.4019607843137255,
+                "n_pos": 492
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_BQ_l1_pos": {
+              "n_fires": 153,
+              "n_wins": 86,
+              "n_ties": 0,
+              "n_losses": 67,
+              "win_rate": 0.5620915032679739,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4738562091503268,
+                "n_pos": 580
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.4166666666666667,
+                "n_pos": 510
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_AH_ge1": {
+              "n_fires": 152,
+              "n_wins": 85,
+              "n_ties": 0,
+              "n_losses": 67,
+              "win_rate": 0.5592105263157895,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.46405228758169936,
+                "n_pos": 568
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.46895424836601307,
+                "n_pos": 574
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_JC": {
+              "n_fires": 153,
+              "n_wins": 86,
+              "n_ties": 0,
+              "n_losses": 67,
+              "win_rate": 0.5620915032679739,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4665032679738562,
+                "n_pos": 571
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.4305555555555556,
+                "n_pos": 527
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_FQ": {
+              "n_fires": 137,
+              "n_wins": 84,
+              "n_ties": 0,
+              "n_losses": 53,
+              "win_rate": 0.6131386861313869,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4681372549019608,
+                "n_pos": 573
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.434640522875817,
+                "n_pos": 532
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_FR_eq0": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.44689542483660133,
+                "n_pos": 547
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.4158496732026144,
+                "n_pos": 509
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_FR_ge1": {
+              "n_fires": 153,
+              "n_wins": 86,
+              "n_ties": 0,
+              "n_losses": 67,
+              "win_rate": 0.5620915032679739,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4730392156862745,
+                "n_pos": 579
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.4215686274509804,
+                "n_pos": 516
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_ER_p1": {
+              "n_fires": 136,
+              "n_wins": 84,
+              "n_ties": 0,
+              "n_losses": 52,
+              "win_rate": 0.6176470588235294,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4714052287581699,
+                "n_pos": 577
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.4362745098039216,
+                "n_pos": 534
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_ER_m1": {
+              "n_fires": 153,
+              "n_wins": 93,
+              "n_ties": 0,
+              "n_losses": 60,
+              "win_rate": 0.6078431372549019,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4812091503267974,
+                "n_pos": 589
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.4395424836601307,
+                "n_pos": 538
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_EN_le0": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.44689542483660133,
+                "n_pos": 547
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.4158496732026144,
+                "n_pos": 509
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_EN_ge2": {
+              "n_fires": 153,
+              "n_wins": 88,
+              "n_ties": 0,
+              "n_losses": 65,
+              "win_rate": 0.5751633986928104,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4714052287581699,
+                "n_pos": 577
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.4297385620915033,
+                "n_pos": 526
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_EP_ge03": {
+              "n_fires": 153,
+              "n_wins": 85,
+              "n_ties": 0,
+              "n_losses": 68,
+              "win_rate": 0.5555555555555556,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.46405228758169936,
+                "n_pos": 568
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.46405228758169936,
+                "n_pos": 568
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_JB": {
+              "n_fires": 153,
+              "n_wins": 83,
+              "n_ties": 0,
+              "n_losses": 70,
+              "win_rate": 0.5424836601307189,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1216,
+                "hit": 0.4564144736842105,
+                "n_pos": 555
+              },
+              "hit_i": {
+                "n": 1216,
+                "hit": 0.4128289473684211,
+                "n_pos": 502
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          }
+        },
+        "prior_green_top8": {
+          "n_days": 153,
+          "recipes": {
+            "avoid_J_ge0": {
+              "n_fires": 153,
+              "n_wins": 87,
+              "n_ties": 0,
+              "n_losses": 66,
+              "win_rate": 0.5686274509803921,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.46568627450980393,
+                "n_pos": 570
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.20016339869281047,
+                "n_pos": 245
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_J_le-1": {
+              "n_fires": 146,
+              "n_wins": 83,
+              "n_ties": 0,
+              "n_losses": 63,
+              "win_rate": 0.5684931506849316,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1210,
+                "hit": 0.47768595041322315,
+                "n_pos": 578
+              },
+              "hit_i": {
+                "n": 1210,
+                "hit": 0.3793388429752066,
+                "n_pos": 459
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_bearish": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4722222222222222,
+                "n_pos": 578
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.4591503267973856,
+                "n_pos": 562
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_bullish": {
+              "n_fires": 153,
+              "n_wins": 78,
+              "n_ties": 0,
+              "n_losses": 75,
+              "win_rate": 0.5098039215686274,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.46977124183006536,
+                "n_pos": 575
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.44689542483660133,
+                "n_pos": 547
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "presence_lag_bullish": {
+              "n_fires": 109,
+              "n_wins": 38,
+              "n_ties": 0,
+              "n_losses": 71,
+              "win_rate": 0.3486238532110092,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1028,
+                "hit": 0.4464980544747082,
+                "n_pos": 459
+              },
+              "hit_i": {
+                "n": 1028,
+                "hit": 0.4455252918287938,
+                "n_pos": 458
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_doji": {
+              "n_fires": 78,
+              "n_wins": 41,
+              "n_ties": 0,
+              "n_losses": 37,
+              "win_rate": 0.5256410256410257,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4795751633986928,
+                "n_pos": 587
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.4542483660130719,
+                "n_pos": 556
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_doji": {
+              "n_fires": 153,
+              "n_wins": 76,
+              "n_ties": 0,
+              "n_losses": 77,
+              "win_rate": 0.49673202614379086,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1216,
+                "hit": 0.4597039473684211,
+                "n_pos": 559
+              },
+              "hit_i": {
+                "n": 1216,
+                "hit": 0.4432565789473684,
+                "n_pos": 539
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "presence_lag_doji": {
+              "n_fires": 78,
+              "n_wins": 45,
+              "n_ties": 0,
+              "n_losses": 33,
+              "win_rate": 0.5769230769230769,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 104,
+                "hit": 0.4423076923076923,
+                "n_pos": 46
+              },
+              "hit_i": {
+                "n": 104,
+                "hit": 0.49038461538461536,
+                "n_pos": 51
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_bear_engulf": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4722222222222222,
+                "n_pos": 578
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.4591503267973856,
+                "n_pos": 562
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_bull_engulf": {
+              "n_fires": 153,
+              "n_wins": 91,
+              "n_ties": 0,
+              "n_losses": 62,
+              "win_rate": 0.5947712418300654,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4795751633986928,
+                "n_pos": 587
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.46405228758169936,
+                "n_pos": 568
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_hammer": {
+              "n_fires": 124,
+              "n_wins": 64,
+              "n_ties": 0,
+              "n_losses": 60,
+              "win_rate": 0.5161290322580645,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1193,
+                "hit": 0.4660519698239732,
+                "n_pos": 556
+              },
+              "hit_i": {
+                "n": 1193,
+                "hit": 0.4652137468566639,
+                "n_pos": 555
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_evening": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4722222222222222,
+                "n_pos": 578
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.4591503267973856,
+                "n_pos": 562
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_lag_morning": {
+              "n_fires": 152,
+              "n_wins": 80,
+              "n_ties": 0,
+              "n_losses": 72,
+              "win_rate": 0.5263157894736842,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1219,
+                "hit": 0.4602132895816243,
+                "n_pos": 561
+              },
+              "hit_i": {
+                "n": 1219,
+                "hit": 0.45365053322395404,
+                "n_pos": 553
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_BU_l1_neg": {
+              "n_fires": 127,
+              "n_wins": 65,
+              "n_ties": 0,
+              "n_losses": 62,
+              "win_rate": 0.5118110236220472,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4665032679738562,
+                "n_pos": 571
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.44689542483660133,
+                "n_pos": 547
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_BU_l1_pos": {
+              "n_fires": 153,
+              "n_wins": 78,
+              "n_ties": 0,
+              "n_losses": 75,
+              "win_rate": 0.5098039215686274,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.47630718954248363,
+                "n_pos": 583
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.44607843137254904,
+                "n_pos": 546
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_BQ_l1_neg": {
+              "n_fires": 127,
+              "n_wins": 65,
+              "n_ties": 0,
+              "n_losses": 62,
+              "win_rate": 0.5118110236220472,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4665032679738562,
+                "n_pos": 571
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.44689542483660133,
+                "n_pos": 547
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_BQ_l1_pos": {
+              "n_fires": 153,
+              "n_wins": 78,
+              "n_ties": 0,
+              "n_losses": 75,
+              "win_rate": 0.5098039215686274,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.47630718954248363,
+                "n_pos": 583
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.44607843137254904,
+                "n_pos": 546
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_AH_ge1": {
+              "n_fires": 144,
+              "n_wins": 79,
+              "n_ties": 0,
+              "n_losses": 65,
+              "win_rate": 0.5486111111111112,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.494281045751634,
+                "n_pos": 605
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.49019607843137253,
+                "n_pos": 600
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_JC": {
+              "n_fires": 153,
+              "n_wins": 78,
+              "n_ties": 0,
+              "n_losses": 75,
+              "win_rate": 0.5098039215686274,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.47467320261437906,
+                "n_pos": 581
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.46486928104575165,
+                "n_pos": 569
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_FQ": {
+              "n_fires": 152,
+              "n_wins": 88,
+              "n_ties": 0,
+              "n_losses": 64,
+              "win_rate": 0.5789473684210527,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4803921568627451,
+                "n_pos": 588
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.47875816993464054,
+                "n_pos": 586
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_FR_eq0": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4722222222222222,
+                "n_pos": 578
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.4591503267973856,
+                "n_pos": 562
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_FR_ge1": {
+              "n_fires": 153,
+              "n_wins": 80,
+              "n_ties": 0,
+              "n_losses": 73,
+              "win_rate": 0.5228758169934641,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4681372549019608,
+                "n_pos": 573
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.4477124183006536,
+                "n_pos": 548
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_ER_p1": {
+              "n_fires": 148,
+              "n_wins": 97,
+              "n_ties": 0,
+              "n_losses": 51,
+              "win_rate": 0.6554054054054054,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4950980392156863,
+                "n_pos": 606
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.4861111111111111,
+                "n_pos": 595
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_ER_m1": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4722222222222222,
+                "n_pos": 578
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.4591503267973856,
+                "n_pos": 562
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_EN_le0": {
+              "n_fires": 0,
+              "n_wins": 0,
+              "n_ties": 0,
+              "n_losses": 0,
+              "win_rate": null,
+              "verdict": "null",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4722222222222222,
+                "n_pos": 578
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.4591503267973856,
+                "n_pos": 562
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_EN_ge2": {
+              "n_fires": 153,
+              "n_wins": 82,
+              "n_ties": 0,
+              "n_losses": 71,
+              "win_rate": 0.5359477124183006,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.4624183006535948,
+                "n_pos": 566
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.45098039215686275,
+                "n_pos": 552
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_EP_ge03": {
+              "n_fires": 151,
+              "n_wins": 92,
+              "n_ties": 0,
+              "n_losses": 59,
+              "win_rate": 0.609271523178808,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1224,
+                "hit": 0.48447712418300654,
+                "n_pos": 593
+              },
+              "hit_i": {
+                "n": 1224,
+                "hit": 0.49019607843137253,
+                "n_pos": 600
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "elev_cap2_JB": {
+              "n_fires": 143,
+              "n_wins": 67,
+              "n_ties": 0,
+              "n_losses": 76,
+              "win_rate": 0.46853146853146854,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 1199,
+                "hit": 0.46872393661384487,
+                "n_pos": 562
+              },
+              "hit_i": {
+                "n": 1199,
+                "hit": 0.43869891576313597,
+                "n_pos": 526
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          }
+        },
+        "unranked": {
+          "n_days": 153,
+          "recipes": {
+            "avoid_J_ge0": {
+              "n_fires": 153,
+              "n_wins": 76,
+              "n_ties": 0,
+              "n_losses": 77,
+              "win_rate": 0.49673202614379086,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 174214,
+                "hit": 0.4625632842366285,
+                "n_pos": 80585
+              },
+              "hit_i": {
+                "n": 174214,
+                "hit": 0.38696660429127394,
+                "n_pos": 67415
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_bearish": {
+              "n_fires": 153,
+              "n_wins": 81,
+              "n_ties": 0,
+              "n_losses": 72,
+              "win_rate": 0.5294117647058824,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 226176,
+                "hit": 0.45025113186191285,
+                "n_pos": 101836
+              },
+              "hit_i": {
+                "n": 226176,
+                "hit": 0.45858092812676854,
+                "n_pos": 103720
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "presence_lag_bullish": {
+              "n_fires": 153,
+              "n_wins": 91,
+              "n_ties": 0,
+              "n_losses": 62,
+              "win_rate": 0.5947712418300654,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 168289,
+                "hit": 0.4484606837048173,
+                "n_pos": 75471
+              },
+              "hit_i": {
+                "n": 168289,
+                "hit": 0.45567446476002593,
+                "n_pos": 76685
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_doji": {
+              "n_fires": 153,
+              "n_wins": 82,
+              "n_ties": 0,
+              "n_losses": 71,
+              "win_rate": 0.5359477124183006,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 320292,
+                "hit": 0.4542823423625941,
+                "n_pos": 145503
+              },
+              "hit_i": {
+                "n": 320292,
+                "hit": 0.47005232725138313,
+                "n_pos": 150554
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "presence_lag_doji": {
+              "n_fires": 153,
+              "n_wins": 71,
+              "n_ties": 0,
+              "n_losses": 82,
+              "win_rate": 0.46405228758169936,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 37517,
+                "hit": 0.4357224724791428,
+                "n_pos": 16347
+              },
+              "hit_i": {
+                "n": 37517,
+                "hit": 0.4411866620465389,
+                "n_pos": 16552
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_bear_engulf": {
+              "n_fires": 153,
+              "n_wins": 84,
+              "n_ties": 0,
+              "n_losses": 69,
+              "win_rate": 0.5490196078431373,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 315407,
+                "hit": 0.4514991740830102,
+                "n_pos": 142406
+              },
+              "hit_i": {
+                "n": 315407,
+                "hit": 0.46369928378254127,
+                "n_pos": 146254
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_lag_evening": {
+              "n_fires": 153,
+              "n_wins": 76,
+              "n_ties": 0,
+              "n_losses": 77,
+              "win_rate": 0.49673202614379086,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 328507,
+                "hit": 0.4518533851637865,
+                "n_pos": 148437
+              },
+              "hit_i": {
+                "n": 328507,
+                "hit": 0.4667297804917399,
+                "n_pos": 153324
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_BU_l1_neg": {
+              "n_fires": 153,
+              "n_wins": 85,
+              "n_ties": 0,
+              "n_losses": 68,
+              "win_rate": 0.5555555555555556,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 183390,
+                "hit": 0.44909755166584875,
+                "n_pos": 82360
+              },
+              "hit_i": {
+                "n": 183390,
+                "hit": 0.4552211134740171,
+                "n_pos": 83483
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_BQ_l1_neg": {
+              "n_fires": 153,
+              "n_wins": 85,
+              "n_ties": 0,
+              "n_losses": 68,
+              "win_rate": 0.5555555555555556,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 183390,
+                "hit": 0.44909755166584875,
+                "n_pos": 82360
+              },
+              "hit_i": {
+                "n": 183390,
+                "hit": 0.4552211134740171,
+                "n_pos": 83483
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_AH_ge1": {
+              "n_fires": 153,
+              "n_wins": 75,
+              "n_ties": 0,
+              "n_losses": 78,
+              "win_rate": 0.49019607843137253,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 272307,
+                "hit": 0.44901159353229997,
+                "n_pos": 122269
+              },
+              "hit_i": {
+                "n": 272307,
+                "hit": 0.46672689280848456,
+                "n_pos": 127093
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_FQ": {
+              "n_fires": 153,
+              "n_wins": 68,
+              "n_ties": 0,
+              "n_losses": 85,
+              "win_rate": 0.4444444444444444,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 309738,
+                "hit": 0.4487470055337091,
+                "n_pos": 138994
+              },
+              "hit_i": {
+                "n": 309738,
+                "hit": 0.46652977677908425,
+                "n_pos": 144502
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_FR_eq0": {
+              "n_fires": 153,
+              "n_wins": 88,
+              "n_ties": 0,
+              "n_losses": 65,
+              "win_rate": 0.5751633986928104,
+              "verdict": "CLEAR",
+              "clears_55": true,
+              "prints_55": false,
+              "hit_h": {
+                "n": 335454,
+                "hit": 0.4518890816624634,
+                "n_pos": 151588
+              },
+              "hit_i": {
+                "n": 335454,
+                "hit": 0.4663351756127517,
+                "n_pos": 156434
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_ER_p1": {
+              "n_fires": 153,
+              "n_wins": 67,
+              "n_ties": 0,
+              "n_losses": 86,
+              "win_rate": 0.43790849673202614,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 332827,
+                "hit": 0.4509850462853074,
+                "n_pos": 150100
+              },
+              "hit_i": {
+                "n": 332827,
+                "hit": 0.467513152478615,
+                "n_pos": 155601
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_EN_le0": {
+              "n_fires": 153,
+              "n_wins": 79,
+              "n_ties": 0,
+              "n_losses": 74,
+              "win_rate": 0.5163398692810458,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 127016,
+                "hit": 0.4526043962965296,
+                "n_pos": 57488
+              },
+              "hit_i": {
+                "n": 127016,
+                "hit": 0.46398091579013667,
+                "n_pos": 58933
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            },
+            "avoid_EP_ge03": {
+              "n_fires": 153,
+              "n_wins": 72,
+              "n_ties": 0,
+              "n_losses": 81,
+              "win_rate": 0.47058823529411764,
+              "verdict": "FAIL",
+              "clears_55": false,
+              "prints_55": false,
+              "hit_h": {
+                "n": 262113,
+                "hit": 0.44433126170773674,
+                "n_pos": 116465
+              },
+              "hit_i": {
+                "n": 262113,
+                "hit": 0.4636473582004708,
+                "n_pos": 121528
+              },
+              "min_fires": 30,
+              "bar": 0.55,
+              "note": null
+            }
+          }
+        }
+      }
+    }
+  },
+  "native": {
+    "join_top8": {
+      "prove": {
+        "recipes": {}
+      },
+      "discovery": {
+        "recipes": {}
+      },
+      "pooled": {
+        "recipes": {}
+      }
+    },
+    "green_pile_prior": {
+      "prove": {
+        "recipes": {}
+      },
+      "discovery": {
+        "recipes": {}
+      },
+      "pooled": {
+        "recipes": {}
+      }
+    },
+    "weighted_book_1d_prior": {
+      "prove": {
+        "recipes": {}
+      },
+      "discovery": {
+        "recipes": {}
+      },
+      "pooled": {
+        "recipes": {}
+      }
+    }
+  },
+  "clears": [
+    {
+      "label": "ohlc_liq vol_top8 long `elev_cap2_J_le-1`",
+      "window": "long",
+      "kind": "vol_top8",
+      "recipe": "elev_cap2_J_le-1",
+      "wr": {
+        "n_fires": 279,
+        "n_wins": 156,
+        "n_ties": 0,
+        "n_losses": 123,
+        "win_rate": 0.5591397849462365,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 2887,
+          "hit": 0.44821614132317283,
+          "n_pos": 1294
+        },
+        "hit_i": {
+          "n": 2887,
+          "hit": 0.4038794596466921,
+          "n_pos": 1166
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 long `avoid_lag_bear_engulf`",
+      "window": "long",
+      "kind": "vol_top8",
+      "recipe": "avoid_lag_bear_engulf",
+      "wr": {
+        "n_fires": 229,
+        "n_wins": 131,
+        "n_ties": 0,
+        "n_losses": 98,
+        "win_rate": 0.5720524017467249,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 2813,
+          "hit": 0.4546747244934234,
+          "n_pos": 1279
+        },
+        "hit_i": {
+          "n": 2813,
+          "hit": 0.439033060789193,
+          "n_pos": 1235
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 long `elev_cap2_lag_bull_engulf`",
+      "window": "long",
+      "kind": "vol_top8",
+      "recipe": "elev_cap2_lag_bull_engulf",
+      "wr": {
+        "n_fires": 277,
+        "n_wins": 153,
+        "n_ties": 0,
+        "n_losses": 124,
+        "win_rate": 0.5523465703971119,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 2884,
+          "hit": 0.4521497919556172,
+          "n_pos": 1304
+        },
+        "hit_i": {
+          "n": 2884,
+          "hit": 0.42857142857142855,
+          "n_pos": 1236
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 long `elev_cap2_lag_hammer`",
+      "window": "long",
+      "kind": "vol_top8",
+      "recipe": "elev_cap2_lag_hammer",
+      "wr": {
+        "n_fires": 169,
+        "n_wins": 97,
+        "n_ties": 0,
+        "n_losses": 72,
+        "win_rate": 0.5739644970414202,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 2805,
+          "hit": 0.4488413547237077,
+          "n_pos": 1259
+        },
+        "hit_i": {
+          "n": 2805,
+          "hit": 0.4370766488413547,
+          "n_pos": 1226
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 long `avoid_AH_ge1`",
+      "window": "long",
+      "kind": "vol_top8",
+      "recipe": "avoid_AH_ge1",
+      "wr": {
+        "n_fires": 446,
+        "n_wins": 253,
+        "n_ties": 0,
+        "n_losses": 193,
+        "win_rate": 0.5672645739910314,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 2696,
+          "hit": 0.46624629080118696,
+          "n_pos": 1257
+        },
+        "hit_i": {
+          "n": 2696,
+          "hit": 0.47997032640949555,
+          "n_pos": 1294
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 long `avoid_FQ`",
+      "window": "long",
+      "kind": "vol_top8",
+      "recipe": "avoid_FQ",
+      "wr": {
+        "n_fires": 317,
+        "n_wins": 191,
+        "n_ties": 0,
+        "n_losses": 126,
+        "win_rate": 0.6025236593059937,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 2818,
+          "hit": 0.4528034066713982,
+          "n_pos": 1276
+        },
+        "hit_i": {
+          "n": 2818,
+          "hit": 0.44535131298793473,
+          "n_pos": 1255
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 long `elev_cap2_FR_ge1`",
+      "window": "long",
+      "kind": "vol_top8",
+      "recipe": "elev_cap2_FR_ge1",
+      "wr": {
+        "n_fires": 275,
+        "n_wins": 155,
+        "n_ties": 0,
+        "n_losses": 120,
+        "win_rate": 0.5636363636363636,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 2887,
+          "hit": 0.45514374783512296,
+          "n_pos": 1314
+        },
+        "hit_i": {
+          "n": 2887,
+          "hit": 0.43713197090405265,
+          "n_pos": 1262
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 long `avoid_ER_p1`",
+      "window": "long",
+      "kind": "vol_top8",
+      "recipe": "avoid_ER_p1",
+      "wr": {
+        "n_fires": 290,
+        "n_wins": 172,
+        "n_ties": 0,
+        "n_losses": 118,
+        "win_rate": 0.593103448275862,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 2840,
+          "hit": 0.4517605633802817,
+          "n_pos": 1283
+        },
+        "hit_i": {
+          "n": 2840,
+          "hit": 0.44295774647887326,
+          "n_pos": 1258
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 long `elev_cap2_ER_m1`",
+      "window": "long",
+      "kind": "vol_top8",
+      "recipe": "elev_cap2_ER_m1",
+      "wr": {
+        "n_fires": 279,
+        "n_wins": 156,
+        "n_ties": 0,
+        "n_losses": 123,
+        "win_rate": 0.5591397849462365,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 2885,
+          "hit": 0.4502599653379549,
+          "n_pos": 1299
+        },
+        "hit_i": {
+          "n": 2885,
+          "hit": 0.43951473136915076,
+          "n_pos": 1268
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 long `avoid_EP_ge03`",
+      "window": "long",
+      "kind": "vol_top8",
+      "recipe": "avoid_EP_ge03",
+      "wr": {
+        "n_fires": 454,
+        "n_wins": 259,
+        "n_ties": 0,
+        "n_losses": 195,
+        "win_rate": 0.5704845814977973,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 2694,
+          "hit": 0.45434298440979953,
+          "n_pos": 1224
+        },
+        "hit_i": {
+          "n": 2694,
+          "hit": 0.4732739420935412,
+          "n_pos": 1275
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq prior_green_top8 long `elev_cap2_J_le-1`",
+      "window": "long",
+      "kind": "prior_green_top8",
+      "recipe": "elev_cap2_J_le-1",
+      "wr": {
+        "n_fires": 253,
+        "n_wins": 141,
+        "n_ties": 0,
+        "n_losses": 112,
+        "win_rate": 0.5573122529644269,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 2480,
+          "hit": 0.4560483870967742,
+          "n_pos": 1131
+        },
+        "hit_i": {
+          "n": 2480,
+          "hit": 0.3943548387096774,
+          "n_pos": 978
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq prior_green_top8 long `presence_lag_doji`",
+      "window": "long",
+      "kind": "prior_green_top8",
+      "recipe": "presence_lag_doji",
+      "wr": {
+        "n_fires": 143,
+        "n_wins": 80,
+        "n_ties": 0,
+        "n_losses": 63,
+        "win_rate": 0.5594405594405595,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 200,
+          "hit": 0.43,
+          "n_pos": 86
+        },
+        "hit_i": {
+          "n": 200,
+          "hit": 0.45,
+          "n_pos": 90
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq prior_green_top8 long `elev_cap2_lag_bull_engulf`",
+      "window": "long",
+      "kind": "prior_green_top8",
+      "recipe": "elev_cap2_lag_bull_engulf",
+      "wr": {
+        "n_fires": 278,
+        "n_wins": 154,
+        "n_ties": 0,
+        "n_losses": 124,
+        "win_rate": 0.5539568345323741,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 2515,
+          "hit": 0.4572564612326044,
+          "n_pos": 1150
+        },
+        "hit_i": {
+          "n": 2515,
+          "hit": 0.45566600397614315,
+          "n_pos": 1146
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq prior_green_top8 long `avoid_AH_ge1`",
+      "window": "long",
+      "kind": "prior_green_top8",
+      "recipe": "avoid_AH_ge1",
+      "wr": {
+        "n_fires": 294,
+        "n_wins": 167,
+        "n_ties": 0,
+        "n_losses": 127,
+        "win_rate": 0.5680272108843537,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 2448,
+          "hit": 0.4775326797385621,
+          "n_pos": 1169
+        },
+        "hit_i": {
+          "n": 2448,
+          "hit": 0.48570261437908496,
+          "n_pos": 1189
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq prior_green_top8 long `avoid_FQ`",
+      "window": "long",
+      "kind": "prior_green_top8",
+      "recipe": "avoid_FQ",
+      "wr": {
+        "n_fires": 311,
+        "n_wins": 191,
+        "n_ties": 0,
+        "n_losses": 120,
+        "win_rate": 0.6141479099678456,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 2447,
+          "hit": 0.4695545565999183,
+          "n_pos": 1149
+        },
+        "hit_i": {
+          "n": 2447,
+          "hit": 0.4785451573355129,
+          "n_pos": 1171
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq prior_green_top8 long `avoid_ER_p1`",
+      "window": "long",
+      "kind": "prior_green_top8",
+      "recipe": "avoid_ER_p1",
+      "wr": {
+        "n_fires": 292,
+        "n_wins": 184,
+        "n_ties": 0,
+        "n_losses": 108,
+        "win_rate": 0.6301369863013698,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 2469,
+          "hit": 0.47671121911705144,
+          "n_pos": 1177
+        },
+        "hit_i": {
+          "n": 2469,
+          "hit": 0.4819765087079789,
+          "n_pos": 1190
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq prior_green_top8 long `avoid_EP_ge03`",
+      "window": "long",
+      "kind": "prior_green_top8",
+      "recipe": "avoid_EP_ge03",
+      "wr": {
+        "n_fires": 319,
+        "n_wins": 199,
+        "n_ties": 0,
+        "n_losses": 120,
+        "win_rate": 0.6238244514106583,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 2435,
+          "hit": 0.4759753593429158,
+          "n_pos": 1159
+        },
+        "hit_i": {
+          "n": 2435,
+          "hit": 0.48706365503080085,
+          "n_pos": 1186
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 y2025 `avoid_lag_doji`",
+      "window": "y2025",
+      "kind": "vol_top8",
+      "recipe": "avoid_lag_doji",
+      "wr": {
+        "n_fires": 82,
+        "n_wins": 46,
+        "n_ties": 0,
+        "n_losses": 36,
+        "win_rate": 0.5609756097560976,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1192,
+          "hit": 0.45553691275167785,
+          "n_pos": 543
+        },
+        "hit_i": {
+          "n": 1192,
+          "hit": 0.4563758389261745,
+          "n_pos": 544
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 y2025 `elev_cap2_lag_hammer`",
+      "window": "y2025",
+      "kind": "vol_top8",
+      "recipe": "elev_cap2_lag_hammer",
+      "wr": {
+        "n_fires": 81,
+        "n_wins": 49,
+        "n_ties": 0,
+        "n_losses": 32,
+        "win_rate": 0.6049382716049383,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1177,
+          "hit": 0.45879354290569246,
+          "n_pos": 540
+        },
+        "hit_i": {
+          "n": 1177,
+          "hit": 0.45794392523364486,
+          "n_pos": 539
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 y2025 `avoid_FQ`",
+      "window": "y2025",
+      "kind": "vol_top8",
+      "recipe": "avoid_FQ",
+      "wr": {
+        "n_fires": 142,
+        "n_wins": 80,
+        "n_ties": 0,
+        "n_losses": 62,
+        "win_rate": 0.5633802816901409,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1176,
+          "hit": 0.45068027210884354,
+          "n_pos": 530
+        },
+        "hit_i": {
+          "n": 1176,
+          "hit": 0.46683673469387754,
+          "n_pos": 549
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 y2025 `elev_cap2_FR_ge1`",
+      "window": "y2025",
+      "kind": "vol_top8",
+      "recipe": "elev_cap2_FR_ge1",
+      "wr": {
+        "n_fires": 115,
+        "n_wins": 65,
+        "n_ties": 0,
+        "n_losses": 50,
+        "win_rate": 0.5652173913043478,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1213,
+          "hit": 0.45754328112118714,
+          "n_pos": 555
+        },
+        "hit_i": {
+          "n": 1213,
+          "hit": 0.46413849958779885,
+          "n_pos": 563
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq prior_green_top8 y2025 `elev_cap2_lag_hammer`",
+      "window": "y2025",
+      "kind": "prior_green_top8",
+      "recipe": "elev_cap2_lag_hammer",
+      "wr": {
+        "n_fires": 101,
+        "n_wins": 56,
+        "n_ties": 0,
+        "n_losses": 45,
+        "win_rate": 0.5544554455445545,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1048,
+          "hit": 0.4484732824427481,
+          "n_pos": 470
+        },
+        "hit_i": {
+          "n": 1048,
+          "hit": 0.4580152671755725,
+          "n_pos": 480
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq prior_green_top8 y2025 `avoid_AH_ge1`",
+      "window": "y2025",
+      "kind": "prior_green_top8",
+      "recipe": "avoid_AH_ge1",
+      "wr": {
+        "n_fires": 125,
+        "n_wins": 72,
+        "n_ties": 0,
+        "n_losses": 53,
+        "win_rate": 0.576,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1034,
+          "hit": 0.4584139264990329,
+          "n_pos": 474
+        },
+        "hit_i": {
+          "n": 1034,
+          "hit": 0.4758220502901354,
+          "n_pos": 492
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq prior_green_top8 y2025 `avoid_FQ`",
+      "window": "y2025",
+      "kind": "prior_green_top8",
+      "recipe": "avoid_FQ",
+      "wr": {
+        "n_fires": 139,
+        "n_wins": 88,
+        "n_ties": 0,
+        "n_losses": 51,
+        "win_rate": 0.6330935251798561,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1033,
+          "hit": 0.45885769603097776,
+          "n_pos": 474
+        },
+        "hit_i": {
+          "n": 1033,
+          "hit": 0.47337850919651503,
+          "n_pos": 489
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq prior_green_top8 y2025 `avoid_ER_p1`",
+      "window": "y2025",
+      "kind": "prior_green_top8",
+      "recipe": "avoid_ER_p1",
+      "wr": {
+        "n_fires": 129,
+        "n_wins": 74,
+        "n_ties": 0,
+        "n_losses": 55,
+        "win_rate": 0.5736434108527132,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1042,
+          "hit": 0.45681381957773515,
+          "n_pos": 476
+        },
+        "hit_i": {
+          "n": 1042,
+          "hit": 0.472168905950096,
+          "n_pos": 492
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq prior_green_top8 y2025 `avoid_EP_ge03`",
+      "window": "y2025",
+      "kind": "prior_green_top8",
+      "recipe": "avoid_EP_ge03",
+      "wr": {
+        "n_fires": 144,
+        "n_wins": 88,
+        "n_ties": 0,
+        "n_losses": 56,
+        "win_rate": 0.6111111111111112,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1025,
+          "hit": 0.4653658536585366,
+          "n_pos": 477
+        },
+        "hit_i": {
+          "n": 1025,
+          "hit": 0.47609756097560973,
+          "n_pos": 488
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq unranked y2025 `avoid_FQ`",
+      "window": "y2025",
+      "kind": "unranked",
+      "recipe": "avoid_FQ",
+      "wr": {
+        "n_fires": 153,
+        "n_wins": 90,
+        "n_ties": 0,
+        "n_losses": 63,
+        "win_rate": 0.5882352941176471,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 217137,
+          "hit": 0.43296167857159307,
+          "n_pos": 94012
+        },
+        "hit_i": {
+          "n": 217137,
+          "hit": 0.45789064047122324,
+          "n_pos": 99425
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq unranked y2025 `avoid_ER_p1`",
+      "window": "y2025",
+      "kind": "unranked",
+      "recipe": "avoid_ER_p1",
+      "wr": {
+        "n_fires": 145,
+        "n_wins": 87,
+        "n_ties": 0,
+        "n_losses": 58,
+        "win_rate": 0.6,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 229760,
+          "hit": 0.4336568593314763,
+          "n_pos": 99637
+        },
+        "hit_i": {
+          "n": 229760,
+          "hit": 0.45850887883008357,
+          "n_pos": 105347
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 pre813 `avoid_J_ge0`",
+      "window": "pre813",
+      "kind": "vol_top8",
+      "recipe": "avoid_J_ge0",
+      "wr": {
+        "n_fires": 151,
+        "n_wins": 92,
+        "n_ties": 0,
+        "n_losses": 59,
+        "win_rate": 0.609271523178808,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1224,
+          "hit": 0.4665032679738562,
+          "n_pos": 571
+        },
+        "hit_i": {
+          "n": 1224,
+          "hit": 0.3349673202614379,
+          "n_pos": 410
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 pre813 `elev_cap2_J_le-1`",
+      "window": "pre813",
+      "kind": "vol_top8",
+      "recipe": "elev_cap2_J_le-1",
+      "wr": {
+        "n_fires": 153,
+        "n_wins": 87,
+        "n_ties": 0,
+        "n_losses": 66,
+        "win_rate": 0.5686274509803921,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1224,
+          "hit": 0.4616013071895425,
+          "n_pos": 565
+        },
+        "hit_i": {
+          "n": 1224,
+          "hit": 0.3741830065359477,
+          "n_pos": 458
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 pre813 `elev_cap2_lag_doji`",
+      "window": "pre813",
+      "kind": "vol_top8",
+      "recipe": "elev_cap2_lag_doji",
+      "wr": {
+        "n_fires": 152,
+        "n_wins": 84,
+        "n_ties": 0,
+        "n_losses": 68,
+        "win_rate": 0.5526315789473685,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1221,
+          "hit": 0.4610974610974611,
+          "n_pos": 563
+        },
+        "hit_i": {
+          "n": 1221,
+          "hit": 0.4201474201474201,
+          "n_pos": 513
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 pre813 `avoid_lag_bear_engulf`",
+      "window": "pre813",
+      "kind": "vol_top8",
+      "recipe": "avoid_lag_bear_engulf",
+      "wr": {
+        "n_fires": 98,
+        "n_wins": 56,
+        "n_ties": 0,
+        "n_losses": 42,
+        "win_rate": 0.5714285714285714,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1224,
+          "hit": 0.46486928104575165,
+          "n_pos": 569
+        },
+        "hit_i": {
+          "n": 1224,
+          "hit": 0.42320261437908496,
+          "n_pos": 518
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 pre813 `elev_cap2_lag_bull_engulf`",
+      "window": "pre813",
+      "kind": "vol_top8",
+      "recipe": "elev_cap2_lag_bull_engulf",
+      "wr": {
+        "n_fires": 153,
+        "n_wins": 88,
+        "n_ties": 0,
+        "n_losses": 65,
+        "win_rate": 0.5751633986928104,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1222,
+          "hit": 0.469721767594108,
+          "n_pos": 574
+        },
+        "hit_i": {
+          "n": 1222,
+          "hit": 0.4148936170212766,
+          "n_pos": 507
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 pre813 `elev_cap2_lag_hammer`",
+      "window": "pre813",
+      "kind": "vol_top8",
+      "recipe": "elev_cap2_lag_hammer",
+      "wr": {
+        "n_fires": 85,
+        "n_wins": 47,
+        "n_ties": 0,
+        "n_losses": 38,
+        "win_rate": 0.5529411764705883,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1180,
+          "hit": 0.4533898305084746,
+          "n_pos": 535
+        },
+        "hit_i": {
+          "n": 1180,
+          "hit": 0.42627118644067796,
+          "n_pos": 503
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 pre813 `avoid_BU_l1_neg`",
+      "window": "pre813",
+      "kind": "vol_top8",
+      "recipe": "avoid_BU_l1_neg",
+      "wr": {
+        "n_fires": 143,
+        "n_wins": 81,
+        "n_ties": 0,
+        "n_losses": 62,
+        "win_rate": 0.5664335664335665,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1224,
+          "hit": 0.4738562091503268,
+          "n_pos": 580
+        },
+        "hit_i": {
+          "n": 1224,
+          "hit": 0.4019607843137255,
+          "n_pos": 492
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 pre813 `elev_cap2_BU_l1_pos`",
+      "window": "pre813",
+      "kind": "vol_top8",
+      "recipe": "elev_cap2_BU_l1_pos",
+      "wr": {
+        "n_fires": 153,
+        "n_wins": 86,
+        "n_ties": 0,
+        "n_losses": 67,
+        "win_rate": 0.5620915032679739,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1224,
+          "hit": 0.4738562091503268,
+          "n_pos": 580
+        },
+        "hit_i": {
+          "n": 1224,
+          "hit": 0.4166666666666667,
+          "n_pos": 510
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 pre813 `avoid_BQ_l1_neg`",
+      "window": "pre813",
+      "kind": "vol_top8",
+      "recipe": "avoid_BQ_l1_neg",
+      "wr": {
+        "n_fires": 143,
+        "n_wins": 81,
+        "n_ties": 0,
+        "n_losses": 62,
+        "win_rate": 0.5664335664335665,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1224,
+          "hit": 0.4738562091503268,
+          "n_pos": 580
+        },
+        "hit_i": {
+          "n": 1224,
+          "hit": 0.4019607843137255,
+          "n_pos": 492
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 pre813 `elev_cap2_BQ_l1_pos`",
+      "window": "pre813",
+      "kind": "vol_top8",
+      "recipe": "elev_cap2_BQ_l1_pos",
+      "wr": {
+        "n_fires": 153,
+        "n_wins": 86,
+        "n_ties": 0,
+        "n_losses": 67,
+        "win_rate": 0.5620915032679739,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1224,
+          "hit": 0.4738562091503268,
+          "n_pos": 580
+        },
+        "hit_i": {
+          "n": 1224,
+          "hit": 0.4166666666666667,
+          "n_pos": 510
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 pre813 `avoid_AH_ge1`",
+      "window": "pre813",
+      "kind": "vol_top8",
+      "recipe": "avoid_AH_ge1",
+      "wr": {
+        "n_fires": 152,
+        "n_wins": 85,
+        "n_ties": 0,
+        "n_losses": 67,
+        "win_rate": 0.5592105263157895,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1224,
+          "hit": 0.46405228758169936,
+          "n_pos": 568
+        },
+        "hit_i": {
+          "n": 1224,
+          "hit": 0.46895424836601307,
+          "n_pos": 574
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 pre813 `elev_cap2_JC`",
+      "window": "pre813",
+      "kind": "vol_top8",
+      "recipe": "elev_cap2_JC",
+      "wr": {
+        "n_fires": 153,
+        "n_wins": 86,
+        "n_ties": 0,
+        "n_losses": 67,
+        "win_rate": 0.5620915032679739,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1224,
+          "hit": 0.4665032679738562,
+          "n_pos": 571
+        },
+        "hit_i": {
+          "n": 1224,
+          "hit": 0.4305555555555556,
+          "n_pos": 527
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 pre813 `avoid_FQ`",
+      "window": "pre813",
+      "kind": "vol_top8",
+      "recipe": "avoid_FQ",
+      "wr": {
+        "n_fires": 137,
+        "n_wins": 84,
+        "n_ties": 0,
+        "n_losses": 53,
+        "win_rate": 0.6131386861313869,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1224,
+          "hit": 0.4681372549019608,
+          "n_pos": 573
+        },
+        "hit_i": {
+          "n": 1224,
+          "hit": 0.434640522875817,
+          "n_pos": 532
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 pre813 `elev_cap2_FR_ge1`",
+      "window": "pre813",
+      "kind": "vol_top8",
+      "recipe": "elev_cap2_FR_ge1",
+      "wr": {
+        "n_fires": 153,
+        "n_wins": 86,
+        "n_ties": 0,
+        "n_losses": 67,
+        "win_rate": 0.5620915032679739,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1224,
+          "hit": 0.4730392156862745,
+          "n_pos": 579
+        },
+        "hit_i": {
+          "n": 1224,
+          "hit": 0.4215686274509804,
+          "n_pos": 516
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 pre813 `avoid_ER_p1`",
+      "window": "pre813",
+      "kind": "vol_top8",
+      "recipe": "avoid_ER_p1",
+      "wr": {
+        "n_fires": 136,
+        "n_wins": 84,
+        "n_ties": 0,
+        "n_losses": 52,
+        "win_rate": 0.6176470588235294,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1224,
+          "hit": 0.4714052287581699,
+          "n_pos": 577
+        },
+        "hit_i": {
+          "n": 1224,
+          "hit": 0.4362745098039216,
+          "n_pos": 534
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 pre813 `elev_cap2_ER_m1`",
+      "window": "pre813",
+      "kind": "vol_top8",
+      "recipe": "elev_cap2_ER_m1",
+      "wr": {
+        "n_fires": 153,
+        "n_wins": 93,
+        "n_ties": 0,
+        "n_losses": 60,
+        "win_rate": 0.6078431372549019,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1224,
+          "hit": 0.4812091503267974,
+          "n_pos": 589
+        },
+        "hit_i": {
+          "n": 1224,
+          "hit": 0.4395424836601307,
+          "n_pos": 538
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 pre813 `elev_cap2_EN_ge2`",
+      "window": "pre813",
+      "kind": "vol_top8",
+      "recipe": "elev_cap2_EN_ge2",
+      "wr": {
+        "n_fires": 153,
+        "n_wins": 88,
+        "n_ties": 0,
+        "n_losses": 65,
+        "win_rate": 0.5751633986928104,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1224,
+          "hit": 0.4714052287581699,
+          "n_pos": 577
+        },
+        "hit_i": {
+          "n": 1224,
+          "hit": 0.4297385620915033,
+          "n_pos": 526
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 pre813 `avoid_EP_ge03`",
+      "window": "pre813",
+      "kind": "vol_top8",
+      "recipe": "avoid_EP_ge03",
+      "wr": {
+        "n_fires": 153,
+        "n_wins": 85,
+        "n_ties": 0,
+        "n_losses": 68,
+        "win_rate": 0.5555555555555556,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1224,
+          "hit": 0.46405228758169936,
+          "n_pos": 568
+        },
+        "hit_i": {
+          "n": 1224,
+          "hit": 0.46405228758169936,
+          "n_pos": 568
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq prior_green_top8 pre813 `avoid_J_ge0`",
+      "window": "pre813",
+      "kind": "prior_green_top8",
+      "recipe": "avoid_J_ge0",
+      "wr": {
+        "n_fires": 153,
+        "n_wins": 87,
+        "n_ties": 0,
+        "n_losses": 66,
+        "win_rate": 0.5686274509803921,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1224,
+          "hit": 0.46568627450980393,
+          "n_pos": 570
+        },
+        "hit_i": {
+          "n": 1224,
+          "hit": 0.20016339869281047,
+          "n_pos": 245
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq prior_green_top8 pre813 `elev_cap2_J_le-1`",
+      "window": "pre813",
+      "kind": "prior_green_top8",
+      "recipe": "elev_cap2_J_le-1",
+      "wr": {
+        "n_fires": 146,
+        "n_wins": 83,
+        "n_ties": 0,
+        "n_losses": 63,
+        "win_rate": 0.5684931506849316,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1210,
+          "hit": 0.47768595041322315,
+          "n_pos": 578
+        },
+        "hit_i": {
+          "n": 1210,
+          "hit": 0.3793388429752066,
+          "n_pos": 459
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq prior_green_top8 pre813 `presence_lag_doji`",
+      "window": "pre813",
+      "kind": "prior_green_top8",
+      "recipe": "presence_lag_doji",
+      "wr": {
+        "n_fires": 78,
+        "n_wins": 45,
+        "n_ties": 0,
+        "n_losses": 33,
+        "win_rate": 0.5769230769230769,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 104,
+          "hit": 0.4423076923076923,
+          "n_pos": 46
+        },
+        "hit_i": {
+          "n": 104,
+          "hit": 0.49038461538461536,
+          "n_pos": 51
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq prior_green_top8 pre813 `elev_cap2_lag_bull_engulf`",
+      "window": "pre813",
+      "kind": "prior_green_top8",
+      "recipe": "elev_cap2_lag_bull_engulf",
+      "wr": {
+        "n_fires": 153,
+        "n_wins": 91,
+        "n_ties": 0,
+        "n_losses": 62,
+        "win_rate": 0.5947712418300654,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1224,
+          "hit": 0.4795751633986928,
+          "n_pos": 587
+        },
+        "hit_i": {
+          "n": 1224,
+          "hit": 0.46405228758169936,
+          "n_pos": 568
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq prior_green_top8 pre813 `avoid_FQ`",
+      "window": "pre813",
+      "kind": "prior_green_top8",
+      "recipe": "avoid_FQ",
+      "wr": {
+        "n_fires": 152,
+        "n_wins": 88,
+        "n_ties": 0,
+        "n_losses": 64,
+        "win_rate": 0.5789473684210527,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1224,
+          "hit": 0.4803921568627451,
+          "n_pos": 588
+        },
+        "hit_i": {
+          "n": 1224,
+          "hit": 0.47875816993464054,
+          "n_pos": 586
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq prior_green_top8 pre813 `avoid_ER_p1`",
+      "window": "pre813",
+      "kind": "prior_green_top8",
+      "recipe": "avoid_ER_p1",
+      "wr": {
+        "n_fires": 148,
+        "n_wins": 97,
+        "n_ties": 0,
+        "n_losses": 51,
+        "win_rate": 0.6554054054054054,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1224,
+          "hit": 0.4950980392156863,
+          "n_pos": 606
+        },
+        "hit_i": {
+          "n": 1224,
+          "hit": 0.4861111111111111,
+          "n_pos": 595
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq prior_green_top8 pre813 `avoid_EP_ge03`",
+      "window": "pre813",
+      "kind": "prior_green_top8",
+      "recipe": "avoid_EP_ge03",
+      "wr": {
+        "n_fires": 151,
+        "n_wins": 92,
+        "n_ties": 0,
+        "n_losses": 59,
+        "win_rate": 0.609271523178808,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 1224,
+          "hit": 0.48447712418300654,
+          "n_pos": 593
+        },
+        "hit_i": {
+          "n": 1224,
+          "hit": 0.49019607843137253,
+          "n_pos": 600
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq unranked pre813 `presence_lag_bullish`",
+      "window": "pre813",
+      "kind": "unranked",
+      "recipe": "presence_lag_bullish",
+      "wr": {
+        "n_fires": 153,
+        "n_wins": 91,
+        "n_ties": 0,
+        "n_losses": 62,
+        "win_rate": 0.5947712418300654,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 168289,
+          "hit": 0.4484606837048173,
+          "n_pos": 75471
+        },
+        "hit_i": {
+          "n": 168289,
+          "hit": 0.45567446476002593,
+          "n_pos": 76685
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq unranked pre813 `avoid_BU_l1_neg`",
+      "window": "pre813",
+      "kind": "unranked",
+      "recipe": "avoid_BU_l1_neg",
+      "wr": {
+        "n_fires": 153,
+        "n_wins": 85,
+        "n_ties": 0,
+        "n_losses": 68,
+        "win_rate": 0.5555555555555556,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 183390,
+          "hit": 0.44909755166584875,
+          "n_pos": 82360
+        },
+        "hit_i": {
+          "n": 183390,
+          "hit": 0.4552211134740171,
+          "n_pos": 83483
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq unranked pre813 `avoid_BQ_l1_neg`",
+      "window": "pre813",
+      "kind": "unranked",
+      "recipe": "avoid_BQ_l1_neg",
+      "wr": {
+        "n_fires": 153,
+        "n_wins": 85,
+        "n_ties": 0,
+        "n_losses": 68,
+        "win_rate": 0.5555555555555556,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 183390,
+          "hit": 0.44909755166584875,
+          "n_pos": 82360
+        },
+        "hit_i": {
+          "n": 183390,
+          "hit": 0.4552211134740171,
+          "n_pos": 83483
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq unranked pre813 `avoid_FR_eq0`",
+      "window": "pre813",
+      "kind": "unranked",
+      "recipe": "avoid_FR_eq0",
+      "wr": {
+        "n_fires": 153,
+        "n_wins": 88,
+        "n_ties": 0,
+        "n_losses": 65,
+        "win_rate": 0.5751633986928104,
+        "verdict": "CLEAR",
+        "clears_55": true,
+        "prints_55": false,
+        "hit_h": {
+          "n": 335454,
+          "hit": 0.4518890816624634,
+          "n_pos": 151588
+        },
+        "hit_i": {
+          "n": 335454,
+          "hit": 0.4663351756127517,
+          "n_pos": 156434
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    }
+  ],
+  "provisional": [
+    {
+      "label": "ohlc_liq vol_top8 long `avoid_FR_eq0`",
+      "window": "long",
+      "kind": "vol_top8",
+      "recipe": "avoid_FR_eq0",
+      "wr": {
+        "n_fires": 2,
+        "n_wins": 2,
+        "n_ties": 0,
+        "n_losses": 0,
+        "win_rate": 1.0,
+        "verdict": "PROVISIONAL",
+        "clears_55": false,
+        "prints_55": true,
+        "hit_h": {
+          "n": 2885,
+          "hit": 0.44020797227036396,
+          "n_pos": 1270
+        },
+        "hit_i": {
+          "n": 2885,
+          "hit": 0.4294627383015598,
+          "n_pos": 1239
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    },
+    {
+      "label": "ohlc_liq vol_top8 y2025 `avoid_FR_eq0`",
+      "window": "y2025",
+      "kind": "vol_top8",
+      "recipe": "avoid_FR_eq0",
+      "wr": {
+        "n_fires": 2,
+        "n_wins": 2,
+        "n_ties": 0,
+        "n_losses": 0,
+        "win_rate": 1.0,
+        "verdict": "PROVISIONAL",
+        "clears_55": false,
+        "prints_55": true,
+        "hit_h": {
+          "n": 1211,
+          "hit": 0.44508670520231214,
+          "n_pos": 539
+        },
+        "hit_i": {
+          "n": 1211,
+          "hit": 0.4508670520231214,
+          "n_pos": 546
+        },
+        "min_fires": 30,
+        "bar": 0.55,
+        "note": null
+      },
+      "family": null
+    }
+  ],
+  "clocks_generated": "2026-09-07"
+}

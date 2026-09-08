@@ -39,6 +39,8 @@ def test_clock_and_leak_abort():
         for col, lag in rec[6]:
             if col in SAME_ROW_LEAK_ABORT:
                 assert lag >= 1, rec[0]
+    scored_cols = {c for rec in RECIPES for c, _lag in rec[6]}
+    assert "EQ" not in scored_cols and "FS" not in scored_cols
 
 
 def test_doji_and_hammer():
