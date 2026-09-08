@@ -10,7 +10,7 @@ sys.path.insert(0, HERE)
 from excel_clock_gate import assert_excel_clock_gate, assert_feature_legal
 from join_post_813 import (
     DISCOVERY, EXCEL_ATOMS, HOLD_CUT, PROVE, excel_features, is_session,
-    j_fresh, prior_bars,
+    j_fresh, j_from_opens, prior_bars,
 )
 
 
@@ -108,6 +108,41 @@ def test_prove_is_after_discovery():
     assert HOLD_CUT < DISCOVERY[0]
 
 
+def test_j_is_open_only_and_ignores_same_row_labels():
+    """J must not move if same-row H/I/close/high/low are scrambled."""
+    hist = {
+        "AAA": [
+            ("2026-08-25", {
+                "open": 10.0, "h": -0.08, "i": -0.09,
+                "close": 9.0, "high": 12.0, "low": 8.0, "vol": 100,
+            }),
+        ]
+    }
+    today_open = 10.4
+    xl = excel_features(hist, "AAA", "2026-08-27", today_open)
+    assert abs(xl["J"] - j_from_opens(10.4, 10.0)) < 1e-12
+    hist2 = {
+        "AAA": [
+            ("2026-08-25", {
+                "open": 10.0, "h": 0.99, "i": 0.99,
+                "close": 99.0, "high": 99.0, "low": 1.0, "vol": 100,
+            }),
+        ]
+    }
+    xl2 = excel_features(hist2, "AAA", "2026-08-27", today_open)
+    assert xl["J"] == xl2["J"]
+    try:
+        assert_feature_legal("value", "H", 0)
+        raise AssertionError("H")
+    except ValueError:
+        pass
+    try:
+        assert_feature_legal("value", "core_score", 0)
+        raise AssertionError("core_score")
+    except ValueError:
+        pass
+
+
 if __name__ == "__main__":
     test_clock_gate_locked()
     test_atoms_are_legal()
@@ -118,4 +153,5 @@ if __name__ == "__main__":
     test_j_skips_weekend_open()
     test_april_open_is_stale_j()
     test_prove_is_after_discovery()
+    test_j_is_open_only_and_ignores_same_row_labels()
     print("ok")

@@ -200,6 +200,28 @@ def j_fresh(prior_iso, iso, max_days=J_FRESH_DAYS):
     return (date.fromisoformat(iso) - date.fromisoformat(prior_iso)).days <= max_days
 
 
+def j_from_opens(today_open, prior_open):
+    """Excel J value: (C[t] − C[t−1]) / C[t−1]. Opens only."""
+    if not today_open or not prior_open:
+        return None
+    return (today_open - prior_open) / prior_open
+
+
+# Prove-window case studies (real name-days). Avoid + elevate.
+CASE_AVOID = {
+    "recipe": "avoid_J_ge0",
+    "date": "2026-08-27",
+    "dropped": "FIGR",
+    "added": "EMBJ",
+}
+CASE_ELEV = {
+    "recipe": "elev_cap2_J_le-1",
+    "date": "2026-09-04",
+    "dropped": "HRMY",
+    "added": "AVAH",
+}
+
+
 def excel_features(hist, ticker, iso, today_open):
     """Open-knowable Excel atoms for name-day. Never same-row H/I.
 
@@ -217,7 +239,7 @@ def excel_features(hist, ticker, iso, today_open):
     if today_open and prior and prior[-1][1].get("open"):
         po = prior[-1][1]["open"]
         if po:
-            out["J"] = (today_open - po) / po
+            out["J"] = j_from_opens(today_open, po)
             out["J_fresh"] = j_fresh(out["prior_open_date"], iso)
     if len(prior) >= 2:
         o0 = prior[-1][1].get("open")
@@ -724,6 +746,145 @@ def flatten_overlay(flat, hist, fz, start=HOLD_CUT):
     return out
 
 
+def audit_j_clock(fz, hist, joins, flags_by_day):
+    """Absolute time-leak re-audit of the J value used by avoid/elevate.
+
+    PASS only if every scored J is (today Finviz Open − prior weekday Open)
+    / prior Open, and H/I/Close/High/Low never enter that number.
+    """
+    reasons = []
+    n_checked = 0
+    n_mismatch = 0
+    sample_ok = None
+    for iso, fl in sorted(flags_by_day.items()):
+        if iso not in joins or iso not in fz:
+            continue
+        for rec in joins[iso][:80]:
+            t = rec["ticker"]
+            if t not in fl or not fl[t].get("J_fresh"):
+                continue
+            fz_t = fz[iso].get(t) or {}
+            today_open = fz_t.get("open")
+            prior = prior_bars(hist, t, iso)
+            if not today_open or not prior or not prior[-1][1].get("open"):
+                continue
+            recon = j_from_opens(today_open, prior[-1][1]["open"])
+            xl = excel_features(hist, t, iso, today_open)
+            n_checked += 1
+            if xl["J"] is None or recon is None or abs(xl["J"] - recon) > 1e-12:
+                n_mismatch += 1
+            # Flat zeros (J=H=I=0) are coincidence, not a peek.
+            if xl["J"] is not None and abs(xl["J"]) > 1e-12:
+                if fz_t.get("h") is not None and abs(xl["J"] - fz_t["h"]) < 1e-12:
+                    reasons.append(f"nonzero J equals same-row H for {t} {iso}")
+                if fz_t.get("i") is not None and abs(xl["J"] - fz_t["i"]) < 1e-12:
+                    reasons.append(f"nonzero J equals same-row I for {t} {iso}")
+            if sample_ok is None:
+                sample_ok = {
+                    "ticker": t, "date": iso,
+                    "today_open": today_open,
+                    "prior_open_date": prior[-1][0],
+                    "prior_open": prior[-1][1]["open"],
+                    "J": xl["J"],
+                }
+    if n_checked < 50:
+        reasons.append(f"too few J checks ({n_checked})")
+    if n_mismatch:
+        reasons.append(f"J reconstruct mismatch n={n_mismatch}")
+    # Gate: J value is in the locked 44; H/I/M/core_score are not features.
+    try:
+        assert_feature_legal("value", "J", 0)
+    except ValueError as e:
+        reasons.append(f"J lag0 not legal: {e}")
+    for col in ("H", "I", "M", "core_score"):
+        try:
+            assert_feature_legal("value", col, 0)
+        except ValueError:
+            pass
+        else:
+            reasons.append(f"same-row {col} was accepted as a feature")
+    verdict = "PASS" if not reasons else "FAIL"
+    return {
+        "verdict": verdict,
+        "n_checked": n_checked,
+        "n_mismatch": n_mismatch,
+        "reasons": reasons,
+        "formula": "J = (Finviz Open[t] − Finviz Open[prior weekday]) / Open[prior weekday]",
+        "excel_map": "CLOCK_MAP J = C[t] vs C[t−1] (value-open). C = Open / IT.",
+        "inputs": "Finviz Open only (09:30 print). Prior bar skips Sat/Sun dumps.",
+        "not_inputs": [
+            "same-row H (Change from Open) — label only",
+            "same-row I (Change) — label only",
+            "High / Low / Close / Price",
+            "M number / H paint / core_score",
+        ],
+        "file_clock": (
+            "Finviz CSVs are EOD dumps; the Open column is still the 09:30 "
+            "print (Excel C). Using it at the open is not a close peek."
+        ),
+        "holes": [
+            "2026-08-26 has join but no Finviz — 08-27 J uses 08-25 Open (missing bar, not future).",
+            "2026-08-13 J vs 2026-04-26 is stale and is not used.",
+        ],
+        "sample": sample_ok,
+    }
+
+
+def _case_leg(iso, ticker, joins, fz, hist, flags_by_day, role):
+    ranked = joins.get(iso) or []
+    rec = next((r for r in ranked if r["ticker"] == ticker), None)
+    fz_t = (fz.get(iso) or {}).get(ticker) or {}
+    prior = prior_bars(hist, ticker, iso)
+    pdate = prior[-1][0] if prior else None
+    po = prior[-1][1].get("open") if prior else None
+    to = fz_t.get("open")
+    xl = excel_features(hist, ticker, iso, to)
+    h, i = fz_t.get("h"), fz_t.get("i")
+    return {
+        "role": role,
+        "ticker": ticker,
+        "date": iso,
+        "rank": rec["rank"] if rec else None,
+        "total_score": rec.get("total_score") if rec else None,
+        "J": xl.get("J"),
+        "J_fresh": xl.get("J_fresh"),
+        "today_open": to,
+        "prior_open_date": pdate,
+        "prior_open": po,
+        "h": h,
+        "h_fee": None if h is None else h - FEE_RT,
+        "i": i,
+        "i_fee": None if i is None else i - FEE_RT,
+        "in_top8": bool(rec and rec["rank"] <= TOP_N),
+    }
+
+
+def prove_case_studies(joins, fz, hist, flags_by_day):
+    """One avoid + one elevate name-day from the prove window."""
+    out = []
+    for spec, without, with_ in (
+        (CASE_AVOID,
+         "join top-8 keeps FIGR (rank 3)",
+         "avoid_J_ge0 drops FIGR (J≥0) and refills EMBJ (J<0, rank 9)"),
+        (CASE_ELEV,
+         "join top-8 keeps HRMY (rank 1)",
+         "elev_cap2 swaps HRMY (J≥0) for AVAH (J≤−1%, rank 13)"),
+    ):
+        iso = spec["date"]
+        dropped = _case_leg(iso, spec["dropped"], joins, fz, hist, flags_by_day,
+                            "dropped")
+        added = _case_leg(iso, spec["added"], joins, fz, hist, flags_by_day,
+                          "added")
+        out.append({
+            **spec,
+            "without_rule": without,
+            "with_rule": with_,
+            "dropped": dropped,
+            "added": added,
+        })
+    return out
+
+
 def _pct_s(x, n=None):
     if x is None:
         return "—"
@@ -855,6 +1016,50 @@ def render(payload):
         "`elev_cap2_J_le-1` on morning join top-8. Open Excel **J only** "
         "(clock-clean prior-session Open). Live stays frozen.",
         "",
+        "### J clock / leak re-audit",
+        "",
+    ]
+    leak = payload.get("leak") or {}
+    L += [
+        f"**Clock verdict: {leak.get('verdict', '—')}** "
+        f"({leak.get('n_checked', 0)} name-days reconstructed).",
+        "",
+        f"- Formula: `{leak.get('formula', '')}`",
+        f"- Excel map: {leak.get('excel_map', '')}",
+        f"- Inputs: {leak.get('inputs', '')}",
+        "- Not inputs: " + "; ".join(leak.get("not_inputs") or []),
+        f"- File clock: {leak.get('file_clock', '')}",
+    ]
+    for hole in leak.get("holes") or []:
+        L.append(f"- Hole (not a future peek): {hole}")
+    if leak.get("reasons"):
+        L.append("- FAIL reasons: " + "; ".join(leak["reasons"]))
+    L += [
+        "",
+        "Same-row H/I, M number, H paint, and `core_score` are not features. "
+        "pick_book reads only J flags (`J_ge0` / `J_lt0` / `J_le-1`) plus join rank.",
+        "",
+        "### Case studies (prove window)",
+        "",
+    ]
+    for cs in payload.get("cases") or []:
+        d, a = cs["dropped"], cs["added"]
+        L += [
+            f"**{cs['recipe']}** — {cs['date']} `{d['ticker']}` → `{a['ticker']}`",
+            "",
+            f"- Without J: {cs['without_rule']}.",
+            f"- With J: {cs['with_rule']}.",
+            f"- `{d['ticker']}` at open: J {_pct_s(d['J'])} "
+            f"(Open {d['today_open']} vs {d['prior_open_date']} Open {d['prior_open']}), "
+            f"join rank {d['rank']}. After fees: H {_pct_s(d['h_fee'])} "
+            f"(raw {_pct_s(d['h'])}), I {_pct_s(d['i_fee'])} (raw {_pct_s(d['i'])}).",
+            f"- `{a['ticker']}` at open: J {_pct_s(a['J'])} "
+            f"(Open {a['today_open']} vs {a['prior_open_date']} Open {a['prior_open']}), "
+            f"join rank {a['rank']}. After fees: H {_pct_s(a['h_fee'])} "
+            f"(raw {_pct_s(a['h'])}), I {_pct_s(a['i_fee'])} (raw {_pct_s(a['i'])}).",
+            "",
+        ]
+    L += [
         "### Prove (time holdout, weekday sessions)",
         "",
         "Post-8-13 was discovery. Prove = later weekday sessions "
@@ -1182,6 +1387,12 @@ def main():
         "discovery print. Live flatten_robust stays frozen. Do not wire."
     )
 
+    leak = audit_j_clock(fz, hist, joins, flags_by_day)
+    cases = prove_case_studies(joins, fz, hist, flags_by_day)
+    plain = (
+        f"J clock leak **{leak['verdict']}**. " + plain
+    )
+
     fz_dates = sorted(fz)
     join_eval = sorted(flags_by_day)
     payload = {
@@ -1195,6 +1406,8 @@ def main():
         "prove": list(PROVE),
         "session_only": True,
         "j_prior": "prior weekday session Open",
+        "leak": leak,
+        "cases": cases,
         "primary_label": "same-day H (Finviz Change from Open) − 15 bp Futubull",
         "secondary_label": "flatten ret_pct (io 3d / mover 1d); feature_asof ret_1d",
         "fullscan_features": [
@@ -1257,6 +1470,8 @@ def main():
         open(excel_sb, "w", encoding="utf-8").write(
             "# Excel bot mine scoreboard\n\nResearch only. Live `flatten_robust` frozen.\n\n" + sb
         )
+    print(f"family={family} leak={leak['verdict']} n_j={leak['n_checked']}",
+          flush=True)
     print(f"family={family} pooled_n={baseline['n']} session_days={len(join_eval)}",
           flush=True)
     print(

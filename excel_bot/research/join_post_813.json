@@ -1,7 +1,7 @@
 {
   "generated": "2026-09-08",
   "family": "CONDITIONAL",
-  "plain": "Prove (weekday 2026-08-26\u21922026-09-07) does **not** re-clear the ship bar. `avoid_J_ge0` n=64 H +0.22% (+0.04 pp vs same-window top-8, ghost PASS/FAIL/FAIL). `elev_cap2_J_le-1` n=64 H +0.33% (+0.15 pp, ghost PASS/FAIL/FAIL). Discovery half still prints (`avoid_J_ge0` +0.72 pp n=64) \u2014 that is the peek, not prove. Pooled weekday leftover is `avoid_J_ge0` +0.38 pp n=128 / `elev_cap2_J_le-1` +0.26 pp n=128 (includes discovery; not a holdout). Wider book (top-80) prove `avoid_J_ge0` +0.12 pp n=640. Join dumps do not add sessions before 8-13 with a fresh J (08-13 prior Open is 04-26). Family is **CONDITIONAL**: not KEEP holds, not a full KILL of the discovery print. Live flatten_robust stays frozen. Do not wire.",
+  "plain": "J clock leak **PASS**. Prove (weekday 2026-08-26\u21922026-09-07) does **not** re-clear the ship bar. `avoid_J_ge0` n=64 H +0.22% (+0.04 pp vs same-window top-8, ghost PASS/FAIL/FAIL). `elev_cap2_J_le-1` n=64 H +0.33% (+0.15 pp, ghost PASS/FAIL/FAIL). Discovery half still prints (`avoid_J_ge0` +0.72 pp n=64) \u2014 that is the peek, not prove. Pooled weekday leftover is `avoid_J_ge0` +0.38 pp n=128 / `elev_cap2_J_le-1` +0.26 pp n=128 (includes discovery; not a holdout). Wider book (top-80) prove `avoid_J_ge0` +0.12 pp n=640. Join dumps do not add sessions before 8-13 with a fresh J (08-13 prior Open is 04-26). Family is **CONDITIONAL**: not KEEP holds, not a full KILL of the discovery print. Live flatten_robust stays frozen. Do not wire.",
   "flatten_plain": "First flatten cut used J\u2265+1%, not the KEEP recipes. Correct recipes: `avoid_J_ge0` on all post-8-13 tickets is n=11, sleeve +0.27% (-1.79 pp vs all) and same-day H +0.81% (-0.59 pp). Movers on 08-20/21 gapped up (J>0) and paid sleeve; blanket J-avoid removes those winners. Fair clock \u2014 J-avoid on io_core only, movers untouched \u2014 is n=27, sleeve +3.01% (+0.95 pp vs all). H and sleeve disagree on names like CYPH (sleeve +25%, H \u22123%). Flatten does not confirm a blanket KEEP. Do not wire.",
   "gate": {
     "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
@@ -96,6 +96,116 @@
   ],
   "session_only": true,
   "j_prior": "prior weekday session Open",
+  "leak": {
+    "verdict": "PASS",
+    "n_checked": 1280,
+    "n_mismatch": 0,
+    "reasons": [],
+    "formula": "J = (Finviz Open[t] \u2212 Finviz Open[prior weekday]) / Open[prior weekday]",
+    "excel_map": "CLOCK_MAP J = C[t] vs C[t\u22121] (value-open). C = Open / IT.",
+    "inputs": "Finviz Open only (09:30 print). Prior bar skips Sat/Sun dumps.",
+    "not_inputs": [
+      "same-row H (Change from Open) \u2014 label only",
+      "same-row I (Change) \u2014 label only",
+      "High / Low / Close / Price",
+      "M number / H paint / core_score"
+    ],
+    "file_clock": "Finviz CSVs are EOD dumps; the Open column is still the 09:30 print (Excel C). Using it at the open is not a close peek.",
+    "holes": [
+      "2026-08-26 has join but no Finviz \u2014 08-27 J uses 08-25 Open (missing bar, not future).",
+      "2026-08-13 J vs 2026-04-26 is stale and is not used."
+    ],
+    "sample": {
+      "ticker": "WOLF",
+      "date": "2026-08-14",
+      "today_open": 31.25,
+      "prior_open_date": "2026-08-13",
+      "prior_open": 31.13,
+      "J": 0.0038548024413749115
+    }
+  },
+  "cases": [
+    {
+      "recipe": "avoid_J_ge0",
+      "date": "2026-08-27",
+      "dropped": {
+        "role": "dropped",
+        "ticker": "FIGR",
+        "date": "2026-08-27",
+        "rank": 3,
+        "total_score": 5.65,
+        "J": 0.03819533452960785,
+        "J_fresh": true,
+        "today_open": 40.5,
+        "prior_open_date": "2026-08-25",
+        "prior_open": 39.01,
+        "h": -0.08439999999999999,
+        "h_fee": -0.08589999999999999,
+        "i": -0.0987,
+        "i_fee": -0.1002,
+        "in_top8": true
+      },
+      "added": {
+        "role": "added",
+        "ticker": "EMBJ",
+        "date": "2026-08-27",
+        "rank": 9,
+        "total_score": 5.5,
+        "J": -0.020930232558139594,
+        "J_fresh": true,
+        "today_open": 75.78,
+        "prior_open_date": "2026-08-25",
+        "prior_open": 77.4,
+        "h": -0.0067,
+        "h_fee": -0.0082,
+        "i": 0.0086,
+        "i_fee": 0.0071,
+        "in_top8": false
+      },
+      "without_rule": "join top-8 keeps FIGR (rank 3)",
+      "with_rule": "avoid_J_ge0 drops FIGR (J\u22650) and refills EMBJ (J<0, rank 9)"
+    },
+    {
+      "recipe": "elev_cap2_J_le-1",
+      "date": "2026-09-04",
+      "dropped": {
+        "role": "dropped",
+        "ticker": "HRMY",
+        "date": "2026-09-04",
+        "rank": 1,
+        "total_score": 5.875,
+        "J": 0.03921568627450974,
+        "J_fresh": true,
+        "today_open": 42.93,
+        "prior_open_date": "2026-09-03",
+        "prior_open": 41.31,
+        "h": -0.024900000000000002,
+        "h_fee": -0.026400000000000003,
+        "i": -0.0233,
+        "i_fee": -0.024800000000000003,
+        "in_top8": true
+      },
+      "added": {
+        "role": "added",
+        "ticker": "AVAH",
+        "date": "2026-09-04",
+        "rank": 13,
+        "total_score": 5.2,
+        "J": -0.02291204730229111,
+        "J_fresh": true,
+        "today_open": 13.22,
+        "prior_open_date": "2026-09-03",
+        "prior_open": 13.53,
+        "h": 0.0318,
+        "h_fee": 0.0303,
+        "i": 0.0333,
+        "i_fee": 0.0318,
+        "in_top8": false
+      },
+      "without_rule": "join top-8 keeps HRMY (rank 1)",
+      "with_rule": "elev_cap2 swaps HRMY (J\u22650) for AVAH (J\u2264\u22121%, rank 13)"
+    }
+  ],
   "primary_label": "same-day H (Finviz Change from Open) \u2212 15 bp Futubull",
   "secondary_label": "flatten ret_pct (io 3d / mover 1d); feature_asof ret_1d",
   "fullscan_features": [
@@ -1817,5 +1927,5 @@
     ]
   },
   "live_untouched": "flatten_robust",
-  "tip_sha": "7c7116c7"
+  "tip_sha": "6745b63c"
 }

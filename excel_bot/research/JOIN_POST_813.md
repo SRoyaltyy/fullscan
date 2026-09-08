@@ -4,11 +4,41 @@ _Generated 2026-09-08 · live `flatten_robust` frozen · research only · no liv
 
 ## Plain English
 
-Prove (weekday 2026-08-26→2026-09-07) does **not** re-clear the ship bar. `avoid_J_ge0` n=64 H +0.22% (+0.04 pp vs same-window top-8, ghost PASS/FAIL/FAIL). `elev_cap2_J_le-1` n=64 H +0.33% (+0.15 pp, ghost PASS/FAIL/FAIL). Discovery half still prints (`avoid_J_ge0` +0.72 pp n=64) — that is the peek, not prove. Pooled weekday leftover is `avoid_J_ge0` +0.38 pp n=128 / `elev_cap2_J_le-1` +0.26 pp n=128 (includes discovery; not a holdout). Wider book (top-80) prove `avoid_J_ge0` +0.12 pp n=640. Join dumps do not add sessions before 8-13 with a fresh J (08-13 prior Open is 04-26). Family is **CONDITIONAL**: not KEEP holds, not a full KILL of the discovery print. Live flatten_robust stays frozen. Do not wire.
+J clock leak **PASS**. Prove (weekday 2026-08-26→2026-09-07) does **not** re-clear the ship bar. `avoid_J_ge0` n=64 H +0.22% (+0.04 pp vs same-window top-8, ghost PASS/FAIL/FAIL). `elev_cap2_J_le-1` n=64 H +0.33% (+0.15 pp, ghost PASS/FAIL/FAIL). Discovery half still prints (`avoid_J_ge0` +0.72 pp n=64) — that is the peek, not prove. Pooled weekday leftover is `avoid_J_ge0` +0.38 pp n=128 / `elev_cap2_J_le-1` +0.26 pp n=128 (includes discovery; not a holdout). Wider book (top-80) prove `avoid_J_ge0` +0.12 pp n=640. Join dumps do not add sessions before 8-13 with a fresh J (08-13 prior Open is 04-26). Family is **CONDITIONAL**: not KEEP holds, not a full KILL of the discovery print. Live flatten_robust stays frozen. Do not wire.
 
 **Family verdict: CONDITIONAL**
 
 Standing recipes (research only, not live): `avoid_J_ge0` and `elev_cap2_J_le-1` on morning join top-8. Open Excel **J only** (clock-clean prior-session Open). Live stays frozen.
+
+### J clock / leak re-audit
+
+**Clock verdict: PASS** (1280 name-days reconstructed).
+
+- Formula: `J = (Finviz Open[t] − Finviz Open[prior weekday]) / Open[prior weekday]`
+- Excel map: CLOCK_MAP J = C[t] vs C[t−1] (value-open). C = Open / IT.
+- Inputs: Finviz Open only (09:30 print). Prior bar skips Sat/Sun dumps.
+- Not inputs: same-row H (Change from Open) — label only; same-row I (Change) — label only; High / Low / Close / Price; M number / H paint / core_score
+- File clock: Finviz CSVs are EOD dumps; the Open column is still the 09:30 print (Excel C). Using it at the open is not a close peek.
+- Hole (not a future peek): 2026-08-26 has join but no Finviz — 08-27 J uses 08-25 Open (missing bar, not future).
+- Hole (not a future peek): 2026-08-13 J vs 2026-04-26 is stale and is not used.
+
+Same-row H/I, M number, H paint, and `core_score` are not features. pick_book reads only J flags (`J_ge0` / `J_lt0` / `J_le-1`) plus join rank.
+
+### Case studies (prove window)
+
+**avoid_J_ge0** — 2026-08-27 `FIGR` → `EMBJ`
+
+- Without J: join top-8 keeps FIGR (rank 3).
+- With J: avoid_J_ge0 drops FIGR (J≥0) and refills EMBJ (J<0, rank 9).
+- `FIGR` at open: J +3.82% (Open 40.5 vs 2026-08-25 Open 39.01), join rank 3. After fees: H -8.59% (raw -8.44%), I -10.02% (raw -9.87%).
+- `EMBJ` at open: J -2.09% (Open 75.78 vs 2026-08-25 Open 77.4), join rank 9. After fees: H -0.82% (raw -0.67%), I +0.71% (raw +0.86%).
+
+**elev_cap2_J_le-1** — 2026-09-04 `HRMY` → `AVAH`
+
+- Without J: join top-8 keeps HRMY (rank 1).
+- With J: elev_cap2 swaps HRMY (J≥0) for AVAH (J≤−1%, rank 13).
+- `HRMY` at open: J +3.92% (Open 42.93 vs 2026-09-03 Open 41.31), join rank 1. After fees: H -2.64% (raw -2.49%), I -2.48% (raw -2.33%).
+- `AVAH` at open: J -2.29% (Open 13.22 vs 2026-09-03 Open 13.53), join rank 13. After fees: H +3.03% (raw +3.18%), I +3.18% (raw +3.33%).
 
 ### Prove (time holdout, weekday sessions)
 
@@ -125,6 +155,6 @@ Beat same-window fullscan-alone (join top-8) by ≥20 bp after Futubull 15 bp, g
 
 Gate: `OPEN_SAME_ROW_LABELS + CLOCK_MAP`. Fills open: A, B, C, G, J, K, L, M, O, IR, IS, IT. Live frozen.
 
-Tip `7c7116c7` · family **CONDITIONAL**.
+Tip `6745b63c` · family **CONDITIONAL**.
 
 Research only.
