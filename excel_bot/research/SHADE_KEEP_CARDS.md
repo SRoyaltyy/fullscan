@@ -58,6 +58,17 @@ This cut paints real M from locked CF (`IZ=1` → `#95CA82`: *prior-row* H > 0 a
 
 Not re-painted on this M-only expand (O fills absent). Prior ghost FAIL on the 1000-grid cut stands. **THIN** here.
 
+## Excel clock gate (source of truth)
+
+`OPEN_SAME_ROW_LABELS.md` + `CLOCK_MAP.md`. Enforce exactly:
+
+- Shades/fills at open: only **A B C G J K L M O IR IS IT**
+- Numbers/text at open: only the **44 `value_mine_open` cols** (never same-row H/I)
+- Lags: any letter from rows above is fair
+- OUT: M’s number, B/G/K/M/O numbers, D/E/F/H/I same-row, `core_score`
+
+Mid-M `#95CA82` expand stays **open-fill only** under this gate. Pairs with the locked 44 / lags: `SHADE_GATE.md`.
+
 ## Open-only gate
 
 Every feature is knowable at that day’s open:
@@ -73,4 +84,4 @@ Live `flatten_robust` stays frozen. No card under `strategies/`. Soft-regime maj
 
 ## Source
 
-`excel_bot/research/SHADE_OPEN.md` · `shade_panel_stats.json` · PR #150. Fill gate: Excel open list. Research only. Live frozen.
+`excel_bot/research/SHADE_OPEN.md` · `shade_panel_stats.json` · PR #150. Gate: `OPEN_SAME_ROW_LABELS.md` + `CLOCK_MAP.md`. Pairs: `SHADE_GATE.md`. Research only. Live frozen.

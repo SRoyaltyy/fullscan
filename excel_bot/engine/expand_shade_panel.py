@@ -25,6 +25,7 @@ from multiprocessing import Pool
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from backtest import pick_anchors  # noqa: E402
+from excel_clock_gate import assert_excel_clock_gate  # noqa: E402
 from fastfetch import fetch_daily_fast  # noqa: E402
 from stockhistory import serial  # noqa: E402
 
@@ -260,6 +261,7 @@ def main():
     ap.add_argument("--workers", type=int, default=min(4, os.cpu_count() or 2))
     ap.add_argument("--paint-only", action="store_true")
     args = ap.parse_args()
+    assert_excel_clock_gate()  # M paint is open-fill only under this gate
 
     split = json.load(open(SPLIT_PATH))
     want = sorted(set(split["discovery"]) | set(split["holdout"]) | {"SPY"})
