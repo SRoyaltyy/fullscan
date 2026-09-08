@@ -4,7 +4,7 @@ _Generated 2026-09-08 · live `flatten_robust` frozen · research only · no liv
 
 ## Plain English
 
-J clock leak **PASS**. Prove (weekday 2026-08-26→2026-09-07) does **not** re-clear the ship bar. `avoid_J_ge0` n=64 H +0.22% (+0.04 pp vs same-window top-8, ghost PASS/FAIL/FAIL). `elev_cap2_J_le-1` n=64 H +0.33% (+0.15 pp, ghost PASS/FAIL/FAIL). Discovery half still prints (`avoid_J_ge0` +0.72 pp n=64) — that is the peek, not prove. Pooled weekday leftover is `avoid_J_ge0` +0.38 pp n=128 / `elev_cap2_J_le-1` +0.26 pp n=128 (includes discovery; not a holdout). Wider book (top-80) prove `avoid_J_ge0` +0.12 pp n=640. Join dumps do not add sessions before 8-13 with a fresh J (08-13 prior Open is 04-26). Family is **CONDITIONAL**: not KEEP holds, not a full KILL of the discovery print. Live flatten_robust stays frozen. Do not wire.
+J clock leak **PASS**. Prove (weekday 2026-08-26→2026-09-07) does **not** re-clear the ship bar. `avoid_J_ge0` n=64 H +0.22% (+0.04 pp vs same-window top-8, ghost PASS/FAIL/FAIL). `elev_cap2_J_le-1` n=64 H +0.33% (+0.15 pp, ghost PASS/FAIL/FAIL). Discovery half still prints (`avoid_J_ge0` +0.72 pp n=64) — that is the peek, not prove. Pooled weekday leftover is `avoid_J_ge0` +0.38 pp n=128 / `elev_cap2_J_le-1` +0.26 pp n=128 (includes discovery; not a holdout). Wider book (top-80) prove `avoid_J_ge0` +0.12 pp n=640. Join dumps do not add sessions before 8-13 with a fresh J (08-13 prior Open is 04-26). Family is **CONDITIONAL**: not KEEP holds, not a full KILL of the discovery print. Live flatten_robust stays frozen. Do not wire. Expanded prove: the J overlay does **not** hold as a general rule. Yahoo liquid names (prior-session volume ≥ 1M, 2024–2026) are about flat (+2 to +5 bp, ghost month fail). The all-name Yahoo tape’s large mean is a microcap lottery (ghost FAIL). Join-full / membership on the Finviz window is +5 to +13 bp (under 20 bp). membership_liq is flat to negative. Join top-8 stays **CONDITIONAL** (discovery only).
 
 **Family verdict: CONDITIONAL**
 
@@ -90,6 +90,26 @@ Live tickets after 2026-08-13: **30**. KEEP is a join top-8 1d H overlay. Flatte
 | io_core avoid_J_ge0 | 7 | +0.92% | +2.23 pp | +0.24% | -0.07 pp |
 | fair: J-avoid on io only, movers untouched | 27 | +3.01% | +0.95 pp | +1.50% | +0.10 pp |
 
+### Universes beyond join top-8
+
+Same open J. Each universe beats **its own** fullscan-alone book (not join top-8). Yahoo OHLC (`data/prices/ohlc.parquet`) covers 2024-03-04 → 2026-08-21. Join ranked files start 2026-08-12. Fresh Finviz J starts 2026-08-14.
+
+| universe | clock | holdout slice | avoid n | avoid vs | ghost | filter J≤−1 vs | family |
+|---|---|---|---:|---:|---|---:|---|
+| `join_full` | Finviz Open J | prove | 24822 | +0.13 pp | PASS/PASS/PASS | +0.18 pp | **DEMOTE** |
+| `join_top15` | Finviz Open J | prove | 53 | -0.01 pp | PASS/FAIL/FAIL | -0.06 pp | **CONDITIONAL** |
+| `membership` | Finviz Open J | prove | 24822 | +0.13 pp | PASS/PASS/PASS | +0.18 pp | **DEMOTE** |
+| `membership_liq` | Finviz Open J | prove | 4591 | +0.00 pp | PASS/FAIL/PASS | +0.04 pp | **DEMOTE** |
+| `book_1d_prior` | Finviz Open J | prove | 43 | +0.54 pp | FAIL/FAIL/FAIL | +0.63 pp | **DEMOTE** |
+| `book_3d_prior` | Finviz Open J | prove | 49 | +0.14 pp | PASS/FAIL/FAIL | -0.08 pp | **DEMOTE** |
+| `ohlc_all` | Yahoo OHLC Open J | pre813 | 771148 | +0.64 pp | FAIL/FAIL/FAIL | +1.70 pp | **DEMOTE** |
+| `ohlc_liq` | Yahoo OHLC Open J | pre813 | 174214 | +0.02 pp | PASS/FAIL/PASS | +0.06 pp | **DEMOTE** |
+| `mem_20260426` | Yahoo OHLC Open J | pre813 | 750330 | +0.66 pp | FAIL/FAIL/FAIL | +1.75 pp | **DEMOTE** |
+| `join_top8` | Finviz Open J | prove | 64 | +0.04 pp | PASS/FAIL/FAIL | +0.15 pp | **CONDITIONAL** |
+| `join_top80` | Finviz Open J | prove | 640 | +0.12 pp | PASS/PASS/PASS | +0.00 pp | **DEMOTE** |
+
+Expanded prove: the J overlay does **not** hold as a general rule. Yahoo liquid names (prior-session volume ≥ 1M, 2024–2026) are about flat (+2 to +5 bp, ghost month fail). The all-name Yahoo tape’s large mean is a microcap lottery (ghost FAIL). Join-full / membership on the Finviz window is +5 to +13 bp (under 20 bp). membership_liq is flat to negative. Join top-8 stays **CONDITIONAL** (discovery only).
+
 ### What was joined
 
 **Excel (clock gate, open-only):**
@@ -155,6 +175,6 @@ Beat same-window fullscan-alone (join top-8) by ≥20 bp after Futubull 15 bp, g
 
 Gate: `OPEN_SAME_ROW_LABELS + CLOCK_MAP`. Fills open: A, B, C, G, J, K, L, M, O, IR, IS, IT. Live frozen.
 
-Tip `bd1d298b` · family **CONDITIONAL**.
+Tip `77d4973e` · family **CONDITIONAL**.
 
 Research only.

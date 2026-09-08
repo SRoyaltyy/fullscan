@@ -4,9 +4,7 @@ _Generated 2026-09-08 · tip `bd1d298b` / `JOIN_POST_813.md` · **research cards
 
 ## Plain English
 
-Post-8-13 was discovery. Prove (weekday sessions after 2026-08-25, J vs prior weekday Open, Sunday dumps held out) **does not re-clear** the ship bar. Family is **CONDITIONAL** — not KEEP holds. Do not wire.
-
-Discovery half still printed. Pooled weekday leftover still prints. The later half does not. Flatten does not confirm a blanket overlay.
+Post-8-13 was too recent. Expanded J avoid/elevate across every in-repo universe that can take open J (Yahoo OHLC 2024-03-04→2026-08-21, join books, membership, prior-day stock books). **The rule does not hold outside the short join top-8 discovery half.** Join top-8 stays **CONDITIONAL**. Every broader / longer universe is **DEMOTE**. Do not wire.
 
 Clock: **J value is open** (today Open vs prior weekday session Open). Never same-row H/I or H-fill paint.
 
@@ -26,6 +24,24 @@ Clock: **J value is open** (today Open vs prior weekday session Open). Never sam
 | Stale | 08-13 vs 04-26 Open unused. 08-26 missing Finviz → 08-27 J uses 08-25 Open (hole, not future). |
 
 pick_book reads only J flags + join rank. See `JOIN_POST_813.md` leak section.
+
+## Universes (same open J, beat same-universe baseline)
+
+| universe | n (holdout) | avoid vs | ghost | family |
+|---|---:|---:|---|---|
+| join top-8 (prove weekdays) | 64 | +0.04 pp | PASS/FAIL/FAIL | **CONDITIONAL** |
+| join top-15 (prove) | 53 | −0.01 pp | PASS/FAIL/FAIL | **CONDITIONAL** (pooled leftover +0.35 pp is not a holdout) |
+| join top-80 (prove) | 640 | +0.12 pp | PASS | **DEMOTE** |
+| join full / membership (prove) | 24822 | +0.13 pp | PASS | **DEMOTE** |
+| membership liq=high (prove) | 4591 | +0.00 pp | FAIL | **DEMOTE** |
+| book 1d prior (prove) | 43 | +0.54 pp | FAIL | **DEMOTE** (thin + ghost) |
+| book 3d prior (prove) | 49 | +0.14 pp | FAIL | **DEMOTE** |
+| Yahoo all names (pre-8-13 2026) | 771148 | +0.64 pp | FAIL | **DEMOTE** (microcap lottery) |
+| Yahoo liquid prior-vol ≥1M (2024–2026) | 298877 | +0.03 pp | FAIL | **DEMOTE** |
+| Yahoo liquid 2025 | 116611 | +0.03 pp | FAIL | **DEMOTE** |
+| 04-26 membership on later OHLC | 750330 | +0.66 pp | FAIL | **DEMOTE** (same lottery) |
+
+Yahoo OHLC cannot invent join ranks before 2026-08-12. Prices parquet ends 2026-08-21. No earlier join+J holdout exists.
 
 ## Case studies (prove window)
 

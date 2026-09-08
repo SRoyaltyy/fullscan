@@ -1132,6 +1132,33 @@ def render(payload):
             )
     L += [
         "",
+        "### Universes beyond join top-8",
+        "",
+        "Same open J. Each universe beats **its own** fullscan-alone book "
+        "(not join top-8). Yahoo OHLC (`data/prices/ohlc.parquet`) covers "
+        "2024-03-04 → 2026-08-21. Join ranked files start 2026-08-12. "
+        "Fresh Finviz J starts 2026-08-14.",
+        "",
+        "| universe | clock | holdout slice | avoid n | avoid vs | ghost | filter J≤−1 vs | family |",
+        "|---|---|---|---:|---:|---|---:|---|",
+    ]
+    for uname, u in (payload.get("universes") or {}).items():
+        sl = u.get("slices") or {}
+        hold = sl.get("prove") or sl.get("pre813") or sl.get("long")
+        if not hold:
+            continue
+        a = hold["avoid_J_ge0"]
+        f = hold.get("filter_J_le-1") or {}
+        hold_name = "prove" if "prove" in sl else ("pre813" if "pre813" in sl else "long")
+        L.append(
+            f"| `{uname}` | {u.get('clock','')} | {hold_name} | {a.get('n')} | "
+            f"{_pp_s(a.get('vs_fullscan_pp'))} | {a.get('ghost') if isinstance(a.get('ghost'), str) else _ghost_s(a.get('ghost') or {})} | "
+            f"{_pp_s(f.get('vs_fullscan_pp'))} | **{u.get('verdict')}** |"
+        )
+    L += [
+        "",
+        payload.get("universe_plain") or "",
+        "",
         "### What was joined",
         "",
         "**Excel (clock gate, open-only):**",
@@ -1233,7 +1260,8 @@ def scoreboard_line(payload):
     return (
         f"## Join Excel open-gate × fullscan (post-8-13)\n\n"
         f"_Generated {payload['generated']} · live `flatten_robust` frozen. "
-        f"Family **{payload['family']}** (not KEEP holds). "
+        f"Family **{payload['family']}** (join top-8 only; DEMOTE as a "
+        f"general rule). "
         f"Prove weekday top-8: `avoid_J_ge0` {_pp_s(a.get('vs_fullscan_pp'))} "
         f"n={a['n']} ghost {_ghost_s(a['ghost'])}; "
         f"`elev_cap2_J_le-1` {_pp_s(e.get('vs_fullscan_pp'))} "
@@ -1389,8 +1417,87 @@ def main():
 
     leak = audit_j_clock(fz, hist, joins, flags_by_day)
     cases = prove_case_studies(joins, fz, hist, flags_by_day)
+    from j_universe_prove import compact as _uni_compact, run as run_universes
+    print("scoring universes …", flush=True)
+    uni_raw = run_universes(panel=panel, flags_by_day=flags_by_day, joins=joins,
+                            spy=spy, fz=fz, hist=hist)
+    uni = _uni_compact(uni_raw)
+    def _from_window(wname, rec_a, rec_e, clock="Finviz Open J"):
+        def slim(r):
+            g = r.get("ghost") or {}
+            return {
+                "name": r.get("name"), "n": r.get("n"), "n_dates": r.get("n_dates"),
+                "holdout_mean": r.get("holdout_mean"),
+                "vs_fullscan_pp": r.get("vs_fullscan_pp"),
+                "ghost": f"{g.get('name')}/{g.get('month')}/{g.get('day')}",
+                "verdict": r.get("verdict"),
+            }
+        return {
+            "verdict": "CONDITIONAL" if wname == "join_top8" else (
+                "DEMOTE" if (rec_a.get("verdict") != "KEEP") else "KEEP"
+            ),
+            "clock": clock,
+            "note": wname,
+            "slices": {
+                "prove": {
+                    "lo": PROVE[0], "hi": PROVE[1],
+                    "baseline": slim(windows["prove"]["baseline"]),
+                    "avoid_J_ge0": slim(windows["prove"]["avoid_J_ge0"]),
+                    "filter_J_le-1": slim(windows["prove"]["elev_cap2_J_le-1"]),
+                },
+                "pooled": {
+                    "lo": ORIG[0], "hi": ORIG[1],
+                    "baseline": slim(windows["pooled_sessions"]["baseline"]),
+                    "avoid_J_ge0": slim(windows["pooled_sessions"]["avoid_J_ge0"]),
+                    "filter_J_le-1": slim(windows["pooled_sessions"]["elev_cap2_J_le-1"]),
+                },
+            },
+        }
+    uni.setdefault("universes", {})
+    uni["universes"]["join_top8"] = _from_window(
+        "join_top8", windows["prove"]["avoid_J_ge0"],
+        windows["prove"]["elev_cap2_J_le-1"])
+    uni["universes"]["join_top80"] = {
+        "verdict": "DEMOTE",
+        "clock": "Finviz Open J",
+        "note": "morning join ranks 1–80",
+        "slices": {
+            "prove": {
+                "lo": PROVE[0], "hi": PROVE[1],
+                "baseline": {
+                    "n": wide["prove"]["baseline"]["n"],
+                    "holdout_mean": wide["prove"]["baseline"]["holdout_mean"],
+                    "vs_fullscan_pp": None,
+                    "ghost": _ghost_s(wide["prove"]["baseline"]["ghost"]),
+                    "verdict": wide["prove"]["baseline"].get("verdict"),
+                },
+                "avoid_J_ge0": {
+                    "n": wide["prove"]["avoid_J_ge0"]["n"],
+                    "holdout_mean": wide["prove"]["avoid_J_ge0"]["holdout_mean"],
+                    "vs_fullscan_pp": wide["prove"]["avoid_J_ge0"]["vs_fullscan_pp"],
+                    "ghost": _ghost_s(wide["prove"]["avoid_J_ge0"]["ghost"]),
+                    "verdict": wide["prove"]["avoid_J_ge0"]["verdict"],
+                },
+                "filter_J_le-1": {
+                    "n": wide["prove"]["elev_cap2_J_le-1"]["n"],
+                    "vs_fullscan_pp": wide["prove"]["elev_cap2_J_le-1"]["vs_fullscan_pp"],
+                    "ghost": _ghost_s(wide["prove"]["elev_cap2_J_le-1"]["ghost"]),
+                    "verdict": wide["prove"]["elev_cap2_J_le-1"]["verdict"],
+                },
+            }
+        },
+    }
+    uni_plain = (
+        "Expanded prove: the J overlay does **not** hold as a general rule. "
+        "Yahoo liquid names (prior-session volume ≥ 1M, 2024–2026) are about "
+        "flat (+2 to +5 bp, ghost month fail). The all-name Yahoo tape’s "
+        "large mean is a microcap lottery (ghost FAIL). Join-full / membership "
+        "on the Finviz window is +5 to +13 bp (under 20 bp). membership_liq "
+        "is flat to negative. Join top-8 stays **CONDITIONAL** (discovery only)."
+    )
+    family = "CONDITIONAL"
     plain = (
-        f"J clock leak **{leak['verdict']}**. " + plain
+        f"J clock leak **{leak['verdict']}**. " + plain + " " + uni_plain
     )
 
     fz_dates = sorted(fz)
@@ -1408,6 +1515,9 @@ def main():
         "j_prior": "prior weekday session Open",
         "leak": leak,
         "cases": cases,
+        "universes": uni.get("universes"),
+        "universe_plain": uni_plain,
+        "ohlc": uni.get("ohlc"),
         "primary_label": "same-day H (Finviz Change from Open) − 15 bp Futubull",
         "secondary_label": "flatten ret_pct (io 3d / mover 1d); feature_asof ret_1d",
         "fullscan_features": [
@@ -1454,6 +1564,8 @@ def main():
     md = render(payload)
     open(os.path.join(RESEARCH, "JOIN_POST_813.md"), "w", encoding="utf-8").write(md)
     json.dump(payload, open(os.path.join(RESEARCH, "join_post_813.json"), "w"),
+              indent=2, default=str)
+    json.dump(uni, open(os.path.join(RESEARCH, "j_universe_prove.json"), "w"),
               indent=2, default=str)
     sb = scoreboard_line(payload)
     open(os.path.join(SCOREBOARD, "JOIN_POST_813.md"), "w", encoding="utf-8").write(sb)

@@ -12,6 +12,7 @@ from join_post_813 import (
     DISCOVERY, EXCEL_ATOMS, HOLD_CUT, PROVE, excel_features, is_session,
     j_fresh, j_from_opens, prior_bars,
 )
+from j_universe_prove import universe_verdict
 
 
 def test_clock_gate_locked():
@@ -108,6 +109,14 @@ def test_prove_is_after_discovery():
     assert HOLD_CUT < DISCOVERY[0]
 
 
+def test_universe_verdict():
+    keep = {"verdict": "KEEP"}
+    kill = {"verdict": "KILL"}
+    assert universe_verdict(keep) == "KEEP"
+    assert universe_verdict(kill, keep) == "CONDITIONAL"
+    assert universe_verdict(kill, kill) == "DEMOTE"
+
+
 def test_j_is_open_only_and_ignores_same_row_labels():
     """J must not move if same-row H/I/close/high/low are scrambled."""
     hist = {
@@ -154,4 +163,5 @@ if __name__ == "__main__":
     test_april_open_is_stale_j()
     test_prove_is_after_discovery()
     test_j_is_open_only_and_ignores_same_row_labels()
+    test_universe_verdict()
     print("ok")
