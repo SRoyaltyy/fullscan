@@ -6,7 +6,40 @@ New buys only when the live flatten gate fires (green S, ≥5 priced BUYs, prior
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · 09:30 tickets only when flatten_robust gate fires (mover)
 
-Cash book **+4.92%** ($10,492) · signal-only (no cash/fees) was +9.59%. Starts YES **7/17**. Fills 26 · skips 34 · realized $+491.55.
+Cash book **+4.92%** ($10,492) · signal-only (no cash/fees) was +9.59%. Starts YES **7/18**. Fills 26 · skips 34 · realized $+491.55.
+
+## How this sleeve decides (like you are 10)
+
+Imagine a kid with $10,000 at the 09:30 school bell. They look at the flatten wish-list (names the flatten board wanted that morning) and only buy names that pass every must-have on the checklist. They take up to 8 names, spend leftover cash on whole shares, and hold at least 3 morning(s). They sell when the name falls off the list (after the timer). They never peek at today's report card (Change%) to pick. This sleeve bets the price will rise.
+
+### What it looks at (inputs)
+
+- Shopping list: the flatten wish-list (names the flatten board wanted that morning).
+- Clock: 09:30 ET only. The sleeve never peeks at today's Change%, Gap, RelVol, or the printed book to decide.
+- News, if used, is the morning packet box or yesterday's headline — never a later scrape.
+- Money: leftover cash from yesterday + the lots we already hold. It can only spend cash it has and only sell shares it holds.
+- Fill price: the 09:30 open, whole shares, Futubull fees.
+- Morning weather S: if S ≤ −3 the sleeve sits (no new buys).
+- Live flatten gate: new buys only when flatten_robust would actually send 09:30 tickets.
+
+### When it buys
+
+- At 09:30, take names on the flatten wish-list (names the flatten board wanted that morning) that pass the must-haves.
+- If the live flatten gate is HOLD / io that morning, buy nobody new.
+- If morning S ≤ −3, buy nobody new (hard-red sit).
+- A name is allowed only when every must-have is true.
+- Keep the first 8 names in list order.
+- Split leftover cash equally across *new* names (not ones we already hold).
+- Skip a name if the slice cannot buy 1 share after fees.
+- This is a LONG sleeve: it buys shares and wants the price to go up.
+
+### When it sells
+
+- Sell first, then buy. Never sell a ticker we do not hold.
+- Minimum hold is 3 session(s) — the buy morning counts as 1.
+- No extra panic button — only the hold timer and the sell rule below.
+- List-drop: after 3 session(s), sell at the 09:30 open if the name is no longer on today's list. If it fell off earlier, we still wait out the minimum hold.
+- Fills are at the 09:30 open. Fees come out of cash. Overnight, cash does not change.
 
 ## Why these stocks
 
@@ -98,6 +131,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-02 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-03 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-04 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-07 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -120,6 +154,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-02 | -3.83 | $10,491.55 | — | $10,491.55 | -0.00 | +0.00 | — | — | $10,491.55 | $10,491.55 | — |
 | 2026-09-03 | -0.90 | $10,491.55 | — | $10,491.55 | -0.00 | +0.00 | — | — | $10,491.55 | $10,491.55 | — |
 | 2026-09-04 | — | $10,491.55 | — | $10,491.55 | -0.00 | +0.00 | — | — | $10,491.55 | $10,491.55 | — |
+| 2026-09-07 | — | $10,491.55 | — | $10,491.55 | -0.00 | +0.00 | — | — | $10,491.55 | $10,491.55 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -185,6 +220,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,491.55 | ▲ close $10,491.55 vs 09:30 $10,491.55 (session +0.00) | 16:00 close · cash $10,491.55 · no lots left · equity $10,491.55. | — |
 | 2026-09-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,491.55 | ▲ 09:30 equity $10,491.55 vs yday $10,491.55 (-0.00) | 09:30 open · cash $10,491.55 · no holdings · equity $10,491.55 vs prior close $10,491.55 (-0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,491.55 | ▲ close $10,491.55 vs 09:30 $10,491.55 (session +0.00) | 16:00 close · cash $10,491.55 · no lots left · equity $10,491.55. | — |
+| 2026-09-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,491.55 | ▲ 09:30 equity $10,491.55 vs yday $10,491.55 (-0.00) | 09:30 open · cash $10,491.55 · no holdings · equity $10,491.55 vs prior close $10,491.55 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,491.55 | ▲ close $10,491.55 vs 09:30 $10,491.55 (session +0.00) | 16:00 close · cash $10,491.55 · no lots left · equity $10,491.55. | — |
 
 ## Not taken
 

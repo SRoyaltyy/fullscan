@@ -6,7 +6,39 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **+2.77%** ($10,277) · signal-only (no cash/fees) was +11.88%. Starts YES **12/17**. Fills 58 · skips 110 · realized $+276.81.
+Cash book **+1.92%** ($10,192) · signal-only (no cash/fees) was +10.79%. Starts YES **12/18**. Fills 66 · skips 110 · realized $+276.81.
+
+## How this sleeve decides (like you are 10)
+
+Imagine a kid with $10,000 at the 09:30 school bell. They look at the mixed morning shopping list (every name that showed up on any 09:30 list that day) and only short names that pass every must-have on the checklist. They take up to 8 names, spend leftover cash on whole shares, and hold at least 3 morning(s). They sell when the name falls off the list (after the timer). They never peek at today's report card (Change%) to pick. This sleeve bets the price will fall.
+
+### What it looks at (inputs)
+
+- Shopping list: the mixed morning shopping list (every name that showed up on any 09:30 list that day).
+- Clock: 09:30 ET only. The sleeve never peeks at today's Change%, Gap, RelVol, or the printed book to decide.
+- News, if used, is the morning packet box or yesterday's headline — never a later scrape.
+- Money: leftover cash from yesterday + the lots we already hold. It can only spend cash it has and only sell shares it holds.
+- Fill price: the 09:30 open, whole shares, Futubull fees.
+- Morning weather S: if S ≤ −3 the sleeve sits (no new buys).
+- Must-have: the 🚨 alarm is on (cameras got worse overnight).
+
+### When it buys
+
+- At 09:30, take names on the mixed morning shopping list (every name that showed up on any 09:30 list that day) that pass the must-haves.
+- If morning S ≤ −3, buy nobody new (hard-red sit).
+- A name is allowed only when every must-have is true.
+- Keep the first 8 names in list order.
+- Split leftover cash equally across *new* names (not ones we already hold).
+- Skip a name if the slice cannot buy 1 share after fees.
+- This is a SHORT sleeve: it borrows the name and profits if the price falls. Equity treats the short as a liability (must keep enough to cover).
+
+### When it sells
+
+- Sell first, then buy. Never sell a ticker we do not hold.
+- Minimum hold is 3 session(s) — the buy morning counts as 1.
+- No extra panic button — only the hold timer and the sell rule below.
+- List-drop: after 3 session(s), sell at the 09:30 open if the name is no longer on today's list. If it fell off earlier, we still wait out the minimum hold.
+- Fills are at the 09:30 open. Fees come out of cash. Overnight, cash does not change.
 
 ## Why these stocks
 
@@ -20,7 +52,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $10,276.82.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $15,355.90.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -154,6 +186,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-02 | `DEFT` | 1054 | $0.61 | $0.63 | -21.08 | $0.66 | -31.62 | -52.70 | -31.62 | -63.24 |
 | 2026-09-03 | `DEFT` | 1054 | $0.66 | $0.67 | -10.54 | — | +0.00 | -10.54 | -73.78 | — |
 | 2026-09-04 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-07 | `CABA` | 185 | — | $3.46 | +0.00 | $3.47 | -1.85 | -1.85 | -0.00 | -1.85 |
+| 2026-09-07 | `ALT` | 195 | — | $3.28 | +0.00 | $3.42 | -27.30 | -27.30 | -0.00 | -27.30 |
+| 2026-09-07 | `XLAB` | 138 | — | $4.63 | +0.00 | $4.39 | +33.12 | +33.12 | -0.00 | +33.12 |
+| 2026-09-07 | `DPRO` | 100 | — | $6.36 | +0.00 | $6.12 | +24.00 | +24.00 | -0.00 | +24.00 |
+| 2026-09-07 | `ADBT` | 2071 | — | $0.31 | +0.00 | $0.33 | -41.42 | -41.42 | -0.00 | -41.42 |
+| 2026-09-07 | `RARE` | 41 | — | $15.48 | +0.00 | $15.30 | +7.38 | +7.38 | -0.00 | +7.38 |
+| 2026-09-07 | `CNTB` | 321 | — | $2.00 | +0.00 | $1.84 | +51.36 | +51.36 | -0.00 | +51.36 |
+| 2026-09-07 | `GPRO` | 433 | — | $1.48 | +0.00 | $1.70 | -95.26 | -95.26 | -0.00 | -95.26 |
 
 ## Each session (cash + holdings state)
 
@@ -176,6 +216,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-02 | -3.83 | $15,122.41 | PYXS×191, SAFX×1622, XPOF×113, APMD×21, OPTU×596, ABTC×75, XHG×155, DEFT×1054 | $10,359.34 | -60.26 | -31.62 | — | PYXS, SAFX, XPOF, APMD, OPTU, ABTC, XHG | $10,993.22 | $10,297.58 | DEFT×1054 |
 | 2026-09-03 | -0.90 | $10,993.22 | DEFT×1054 | $10,287.04 | -10.54 | +0.00 | — | DEFT | $10,276.82 | $10,276.82 | — |
 | 2026-09-04 | — | $10,276.82 | — | $10,276.82 | -0.00 | +0.00 | — | — | $10,276.82 | $10,276.82 | — |
+| 2026-09-07 | — | $10,276.82 | — | $10,276.82 | -0.00 | -49.97 | CABA, ALT, XLAB, DPRO, ADBT, RARE, CNTB, GPRO | — | $15,355.90 | $10,191.76 | CABA×185, ALT×195, XLAB×138, DPRO×100, ADBT×2071, RARE×41, CNTB×321, GPRO×433 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -251,9 +292,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-28 09:30 ET | **SHORT** | `XPOF` | 113 | $5.59 | $2.38 | — | $12,003.06 | — | alarm; gate alarm=True; list yday_gainer; ret5=+6.6; leftover $632.69 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **SHORT** | `APMD` | 21 | $29.50 | $2.09 | — | $12,620.47 | — | alarm; gate alarm=True; list yday_gainer; ret5=-11.7; leftover $632.69 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **SHORT** | `OPTU` | 596 | $1.06 | $7.81 | — | $13,244.41 | — | alarm; gate alarm=True; list yday_gainer; ret5=-7.8; leftover $632.69 | join🔴 sector🔴 gen🟡 news🟡 digest🟡 ab🔴 heat🔴 vol🔴 buy🟡 |
-| 2026-08-28 09:30 ET | **SHORT** | `ABTC` | 75 | $8.41 | $2.25 | — | $13,872.91 | — | alarm; gate alarm=True; list yday_mover; ret5=+9.2; leftover $632.69 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 heat🟡 vol🟡 buy🟡 |
+| 2026-08-28 09:30 ET | **SHORT** | `ABTC` | 75 | $8.41 | $2.25 | — | $13,872.91 | — | alarm; gate alarm=True; list yday_mover; ret5=+9.2; leftover $632.69 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-08-28 09:30 ET | **SHORT** | `XHG` | 155 | $4.06 | $2.51 | — | $14,499.70 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+16.1; leftover $632.69 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
-| 2026-08-28 09:30 ET | **SHORT** | `DEFT` | 1054 | $0.60 | $9.69 | — | $15,122.41 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+17.6; leftover $632.69 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 heat🟡 vol🔴 buy🟡 |
+| 2026-08-28 09:30 ET | **SHORT** | `DEFT` | 1054 | $0.60 | $9.69 | — | $15,122.41 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+17.6; leftover $632.69 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-08-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,122.41 | ▲ close $10,136.94 vs 09:30 $10,123.08 (session +54.70) | 16:00 close · cash $15,122.41 · equity $10,136.94 vs 09:30 $10,123.08 (+13.86; session marks +54.70) · 8 name(s) marked open→close (per-name table). PYXS×191 09:30 $3.31 → close $3.32 -1.91; SAFX×1622 09:30 $0.39 → close $0.37 +32.44; XPOF×113 09:30 $5.59 → close $5.39 +22.60; APMD×21 09:30 $29.50 → close $28.72 +16.38; OPTU×596 09:30 $1.06 → close $1.02 +23.84; ABTC×75 09:30 $8.41 → close $8.76 -26.25; XHG×155 09:30 $4.06 → close $3.80 +40.30; DEFT×1054 09:30 $0.60 → close $0.65 -52.70 | — |
 | 2026-08-31 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,122.41 | ▲ 09:30 equity $10,275.38 vs yday $10,136.94 (+138.44) | 09:30 open · cash $15,122.41 (unchanged overnight, no fees) · equity $10,275.38 vs prior close $10,136.94 (+138.44) · 8 name(s) re-marked at the open (per-name table). PYXS×191 yday $3.32 → 09:30 $3.23 +17.19; SAFX×1622 yday $0.37 → 09:30 $0.38 -16.22; XPOF×113 yday $5.39 → 09:30 $5.43 -4.52; APMD×21 yday $28.72 → 09:30 $29.80 -22.68; OPTU×596 yday $1.02 → 09:30 $1.02 -0.00; ABTC×75 yday $8.76 → 09:30 $7.73 +77.25; XHG×155 yday $3.80 → 09:30 $3.44 +55.80; DEFT×1054 yday $0.65 → 09:30 $0.62 +31.62 | — |
 | 2026-08-31 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,122.41 | ▲ close $10,285.60 vs 09:30 $10,275.38 (session +10.22) | 16:00 close · cash $15,122.41 · equity $10,285.60 vs 09:30 $10,275.38 (+10.22; session marks +10.22) · 8 name(s) marked open→close (per-name table). PYXS×191 09:30 $3.23 → close $3.23 -0.00; SAFX×1622 09:30 $0.38 → close $0.37 +16.22; XPOF×113 09:30 $5.43 → close $5.43 -0.00; APMD×21 09:30 $29.80 → close $29.80 -0.00; OPTU×596 09:30 $1.02 → close $1.02 -0.00; ABTC×75 09:30 $7.73 → close $7.81 -6.00; XHG×155 09:30 $3.44 → close $3.44 -0.00; DEFT×1054 09:30 $0.62 → close $0.62 -0.00 | — |
@@ -273,6 +314,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,276.82 | ▲ close $10,276.82 vs 09:30 $10,287.04 (session +0.00) | 16:00 close · cash $10,276.82 · no lots left · equity $10,276.82. | — |
 | 2026-09-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,276.82 | ▲ 09:30 equity $10,276.82 vs yday $10,276.82 (-0.00) | 09:30 open · cash $10,276.82 · no holdings · equity $10,276.82 vs prior close $10,276.82 (-0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,276.82 | ▲ close $10,276.82 vs 09:30 $10,276.82 (session +0.00) | 16:00 close · cash $10,276.82 · no lots left · equity $10,276.82. | — |
+| 2026-09-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,276.82 | ▲ 09:30 equity $10,276.82 vs yday $10,276.82 (-0.00) | 09:30 open · cash $10,276.82 · no holdings · equity $10,276.82 vs prior close $10,276.82 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-07 09:30 ET | **SHORT** | `CABA` | 185 | $3.46 | $2.60 | — | $10,914.32 | — | alarm; gate alarm=True; list flatten; ⚪; ret5=+13.8; leftover $642.30 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-07 09:30 ET | **SHORT** | `ALT` | 195 | $3.28 | $2.63 | — | $11,551.28 | — | alarm; gate alarm=True; list flatten; ret5=+5.8; leftover $642.30 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-09-07 09:30 ET | **SHORT** | `XLAB` | 138 | $4.63 | $2.45 | — | $12,187.77 | — | alarm; gate alarm=True; list yday_gainer,yday_mover; ret5=+0.0; leftover $642.30 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-09-07 09:30 ET | **SHORT** | `DPRO` | 100 | $6.36 | $2.33 | — | $12,821.43 | — | alarm; gate alarm=True; list yday_gainer; ret5=-8.2; leftover $642.30 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-07 09:30 ET | **SHORT** | `ADBT` | 2071 | $0.31 | $13.00 | — | $13,450.44 | — | alarm; gate alarm=True; list yday_mover; ret5=+0.0; leftover $642.30 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-07 09:30 ET | **SHORT** | `RARE` | 41 | $15.48 | $2.15 | — | $14,082.97 | — | alarm; gate alarm=True; list yday_mover; ret5=-2.5; leftover $642.30 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-07 09:30 ET | **SHORT** | `CNTB` | 321 | $2.00 | $4.22 | — | $14,720.75 | — | alarm; gate alarm=True; list yday_mover; ret5=-7.5; leftover $642.30 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-07 09:30 ET | **SHORT** | `GPRO` | 433 | $1.48 | $5.69 | — | $15,355.90 | — | alarm; gate alarm=True; list yday_mover; ret5=+5.9; leftover $642.30 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,355.90 | ▼ close $10,191.76 vs 09:30 $10,276.82 (session -49.97) | 16:00 close · cash $15,355.90 · equity $10,191.76 vs 09:30 $10,276.82 (-85.06; session marks -49.97) · 8 name(s) marked open→close (per-name table). CABA×185 09:30 $3.46 → close $3.47 -1.85; ALT×195 09:30 $3.28 → close $3.42 -27.30; XLAB×138 09:30 $4.63 → close $4.39 +33.12; DPRO×100 09:30 $6.36 → close $6.12 +24.00; ADBT×2071 09:30 $0.31 → close $0.33 -41.42; RARE×41 09:30 $15.48 → close $15.30 +7.38; CNTB×321 09:30 $2.00 → close $1.84 +51.36; GPRO×433 09:30 $1.48 → close $1.70 -95.26 | — |
 
 ## Not taken
 
@@ -388,3 +439,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-02 | `ERO` | hard_red | hard-red S=-3.83 sit; no new buys |
 | 2026-09-02 | `FUTU` | hard_red | hard-red S=-3.83 sit; no new buys |
 | 2026-09-02 | `CVI` | hard_red | hard-red S=-3.83 sit; no new buys |
+
+## Still open (marked at last close)
+
+| Ticker | Shares | Entry | Why |
+|---|---:|---|---|
+| `CABA` | 185 | 2026-09-07 @ $3.46 | alarm; gate alarm=True; list flatten; ⚪; ret5=+13.8; leftover $642.30 |
+| `ALT` | 195 | 2026-09-07 @ $3.28 | alarm; gate alarm=True; list flatten; ret5=+5.8; leftover $642.30 |
+| `XLAB` | 138 | 2026-09-07 @ $4.63 | alarm; gate alarm=True; list yday_gainer,yday_mover; ret5=+0.0; leftover $642.30 |
+| `DPRO` | 100 | 2026-09-07 @ $6.36 | alarm; gate alarm=True; list yday_gainer; ret5=-8.2; leftover $642.30 |
+| `ADBT` | 2071 | 2026-09-07 @ $0.31 | alarm; gate alarm=True; list yday_mover; ret5=+0.0; leftover $642.30 |
+| `RARE` | 41 | 2026-09-07 @ $15.48 | alarm; gate alarm=True; list yday_mover; ret5=-2.5; leftover $642.30 |
+| `CNTB` | 321 | 2026-09-07 @ $2.00 | alarm; gate alarm=True; list yday_mover; ret5=-7.5; leftover $642.30 |
+| `GPRO` | 433 | 2026-09-07 @ $1.48 | alarm; gate alarm=True; list yday_mover; ret5=+5.9; leftover $642.30 |

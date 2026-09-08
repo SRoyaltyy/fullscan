@@ -6,7 +6,37 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-5.07%** ($9,493) · signal-only (no cash/fees) was -3.30%. Starts YES **5/17**. Fills 84 · skips 28 · realized $-418.83.
+Cash book **-5.98%** ($9,402) · signal-only (no cash/fees) was -3.86%. Starts YES **0/18**. Fills 86 · skips 28 · realized $-489.93.
+
+## How this sleeve decides (like you are 10)
+
+Imagine a kid with $10,000 at the 09:30 school bell. They look at names that looked hot on the prior price/volume tape and only buy names that pass the list as written. They take up to 8 names, spend leftover cash on whole shares, and hold at least 1 morning(s). They sell when the name falls off the list (after the timer). They never peek at today's report card (Change%) to pick. This sleeve bets the price will rise.
+
+### What it looks at (inputs)
+
+- Shopping list: names that looked hot on the prior price/volume tape.
+- Clock: 09:30 ET only. The sleeve never peeks at today's Change%, Gap, RelVol, or the printed book to decide.
+- News, if used, is the morning packet box or yesterday's headline — never a later scrape.
+- Money: leftover cash from yesterday + the lots we already hold. It can only spend cash it has and only sell shares it holds.
+- Fill price: the 09:30 open, whole shares, Futubull fees.
+- Morning weather S: if S ≤ −3 the sleeve sits (no new buys).
+
+### When it buys
+
+- At 09:30, take names on names that looked hot on the prior price/volume tape that pass the must-haves.
+- If morning S ≤ −3, buy nobody new (hard-red sit).
+- Keep the first 8 names in list order.
+- Split leftover cash equally across *new* names (not ones we already hold).
+- Skip a name if the slice cannot buy 1 share after fees.
+- This is a LONG sleeve: it buys shares and wants the price to go up.
+
+### When it sells
+
+- Sell first, then buy. Never sell a ticker we do not hold.
+- Minimum hold is 1 session(s) — the buy morning counts as 1.
+- No extra panic button — only the hold timer and the sell rule below.
+- List-drop: after 1 session(s), sell at the 09:30 open if the name is no longer on today's list. If it fell off earlier, we still wait out the minimum hold.
+- Fills are at the 09:30 open. Fees come out of cash. Overnight, cash does not change.
 
 ## Why these stocks
 
@@ -20,7 +50,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $13.27.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9.93.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -163,6 +193,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 | `FUTU` | 9 | $118.08 | $118.19 | +0.99 | $122.01 | +34.38 | +35.37 | -88.29 | -53.91 |
 | 2026-09-04 | `NVAX` | 118 | $10.32 | $10.41 | +10.62 | $10.34 | -8.26 | +2.36 | +16.52 | +8.26 |
 | 2026-09-04 | `NIQ` | 65 | $18.35 | $18.66 | +20.15 | $18.82 | +10.40 | +30.55 | +3.90 | +14.30 |
+| 2026-09-07 | `XHG` | 296 | $3.43 | $3.42 | -2.96 | $3.31 | -32.56 | -35.52 | -189.44 | -222.00 |
+| 2026-09-07 | `DEFT` | 2003 | $0.68 | $0.69 | +20.03 | $0.68 | -20.03 | +0.00 | +180.27 | +160.24 |
+| 2026-09-07 | `OMER` | 65 | $19.11 | $19.00 | -7.15 | $18.95 | -3.25 | -10.40 | +49.40 | +46.15 |
+| 2026-09-07 | `ERO` | 30 | $35.32 | $34.72 | -18.00 | $34.90 | +5.40 | -12.60 | -134.40 | -129.00 |
+| 2026-09-07 | `TRLV` | 105 | $11.99 | $11.90 | -9.45 | $12.11 | +22.05 | +12.60 | +54.60 | +76.65 |
+| 2026-09-07 | `FUTU` | 9 | $122.01 | $120.55 | -13.14 | — | +0.00 | -13.14 | -67.05 | — |
+| 2026-09-07 | `NVAX` | 118 | $10.34 | $10.50 | +18.88 | $10.22 | -33.04 | -14.16 | +27.14 | -5.90 |
+| 2026-09-07 | `NIQ` | 65 | $18.82 | $18.52 | -19.50 | $18.39 | -8.45 | -27.95 | -5.20 | -13.65 |
+| 2026-09-07 | `HOOD` | 9 | — | $120.47 | +0.00 | $122.11 | +14.76 | +14.76 | +0.00 | +14.76 |
 
 ## Each session (cash + holdings state)
 
@@ -185,6 +224,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-02 | -3.83 | $2,438.66 | XHG×296, DEFT×2003, OMER×65, ERO×30, TRLV×105, FUTU×9 | $9,312.11 | -1.68 | +57.06 | — | — | $2,438.66 | $9,369.17 | XHG×296, DEFT×2003, OMER×65, ERO×30, TRLV×105, FUTU×9 |
 | 2026-09-03 | -0.90 | $2,438.66 | XHG×296, DEFT×2003, OMER×65, ERO×30, TRLV×105, FUTU×9 | $9,451.08 | +81.91 | -179.23 | NVAX, NIQ | — | $13.27 | $9,267.32 | XHG×296, DEFT×2003, OMER×65, ERO×30, TRLV×105, FUTU×9, NVAX×118, NIQ×65 |
 | 2026-09-04 | — | $13.27 | XHG×296, DEFT×2003, OMER×65, ERO×30, TRLV×105, FUTU×9, NVAX×118, NIQ×65 | $9,378.09 | +110.77 | +114.71 | — | — | $13.27 | $9,492.80 | XHG×296, DEFT×2003, OMER×65, ERO×30, TRLV×105, FUTU×9, NVAX×118, NIQ×65 |
+| 2026-09-07 | — | $13.27 | XHG×296, DEFT×2003, OMER×65, ERO×30, TRLV×105, FUTU×9, NVAX×118, NIQ×65 | $9,461.51 | -31.29 | -55.12 | HOOD | FUTU | $9.93 | $9,402.33 | XHG×296, DEFT×2003, OMER×65, ERO×30, TRLV×105, NVAX×118, NIQ×65, HOOD×9 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -288,11 +328,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-28 09:30 ET | **BUY** | `ZYME` | 40 | $29.33 | $2.11 | — | $8,439.85 | — | baseline list, no extra gate; list yday_gainer,ohlc_hot; ret5=+14.1; leftover $1201.89 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `XHG` | 296 | $4.06 | $3.82 | — | $7,234.27 | — | baseline list, no extra gate; list ohlc_hot; ret5=+16.1; leftover $1201.89 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `NIQ` | 63 | $18.79 | $2.18 | — | $6,048.32 | — | baseline list, no extra gate; list ohlc_hot; ret5=+7.6; leftover $1201.89 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `DEFT` | 2003 | $0.60 | $18.03 | — | $4,828.49 | — | baseline list, no extra gate; list ohlc_hot; ret5=+17.6; leftover $1201.89 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 heat🟡 vol🔴 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `DEFT` | 2003 | $0.60 | $18.03 | — | $4,828.49 | — | baseline list, no extra gate; list ohlc_hot; ret5=+17.6; leftover $1201.89 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `OMER` | 65 | $18.24 | $2.19 | — | $3,640.71 | — | baseline list, no extra gate; list ohlc_hot; ret5=+12.1; leftover $1201.89 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `ERO` | 30 | $39.20 | $2.08 | — | $2,462.63 | — | baseline list, no extra gate; list ohlc_hot; ret5=+16.6; leftover $1201.89 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-08-28 09:30 ET | **BUY** | `ERO` | 30 | $39.20 | $2.08 | — | $2,462.63 | — | baseline list, no extra gate; list ohlc_hot; ret5=+16.6; leftover $1201.89 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟢 |
 | 2026-08-28 09:30 ET | **BUY** | `TRLV` | 105 | $11.38 | $2.31 | — | $1,265.42 | — | baseline list, no extra gate; list ohlc_hot; ret5=+15.0; leftover $1201.89 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 heat🟡 vol🟡 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `FUTU` | 9 | $128.00 | $2.02 | — | $111.41 | — | baseline list, no extra gate; list ohlc_hot; ret5=+17.5; leftover $1201.89 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🔴 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `FUTU` | 9 | $128.00 | $2.02 | — | $111.41 | — | baseline list, no extra gate; list ohlc_hot; ret5=+17.5; leftover $1201.89 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-08-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $111.41 | ▲ close $9,625.10 vs 09:30 $9,615.16 (session +44.66) | 16:00 close · cash $111.41 · equity $9,625.10 vs 09:30 $9,615.16 (+9.94; session marks +44.66) · 8 name(s) marked open→close (per-name table). ZYME×40 09:30 $29.33 → close $29.01 -12.80; XHG×296 09:30 $4.06 → close $3.80 -76.96; NIQ×63 09:30 $18.79 → close $19.07 +17.64; DEFT×2003 09:30 $0.60 → close $0.65 +100.15; OMER×65 09:30 $18.24 → close $19.25 +65.65; ERO×30 09:30 $39.20 → close $39.82 +18.60; TRLV×105 09:30 $11.38 → close $11.03 -36.75; FUTU×9 09:30 $128.00 → close $124.57 -30.87 | — |
 | 2026-08-31 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $111.41 | ▼ 09:30 equity $9,487.99 vs yday $9,625.10 (-137.11) | 09:30 open · cash $111.41 (unchanged overnight, no fees) · equity $9,487.99 vs prior close $9,625.10 (-137.11) · 8 name(s) re-marked at the open (per-name table). ZYME×40 yday $29.01 → 09:30 $28.27 -29.60; XHG×296 yday $3.80 → 09:30 $3.44 -106.56; NIQ×63 yday $19.07 → 09:30 $19.20 +8.19; DEFT×2003 yday $0.65 → 09:30 $0.62 -60.09; OMER×65 yday $19.25 → 09:30 $18.61 -41.60; ERO×30 yday $39.82 → 09:30 $38.60 -36.60; TRLV×105 yday $11.03 → 09:30 $12.41 +144.90; FUTU×9 yday $124.57 → 09:30 $122.82 -15.75 | — |
 | 2026-08-31 09:30 ET | **SELL** | `ZYME` | 40 | $28.27 | $2.13 | $-46.64 | $1,240.08 | ▼ -46.64 after sell → book $9,485.86; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
@@ -308,6 +348,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13.27 | ▼ close $9,267.32 vs 09:30 $9,451.08 (session -179.23) | 16:00 close · cash $13.27 · equity $9,267.32 vs 09:30 $9,451.08 (-183.76; session marks -179.23) · 8 name(s) marked open→close (per-name table). XHG×296 09:30 $3.57 → close $3.32 -74.00; DEFT×2003 09:30 $0.67 → close $0.65 -40.06; OMER×65 09:30 $18.97 → close $18.86 -7.15; ERO×30 09:30 $35.62 → close $34.76 -25.80; TRLV×105 09:30 $11.78 → close $11.69 -9.45; FUTU×9 09:30 $119.46 → close $118.08 -12.42; NVAX×118 09:30 $10.27 → close $10.32 +5.90; NIQ×65 09:30 $18.60 → close $18.35 -16.25 | — |
 | 2026-09-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13.27 | ▲ 09:30 equity $9,378.09 vs yday $9,267.32 (+110.77) | 09:30 open · cash $13.27 (unchanged overnight, no fees) · equity $9,378.09 vs prior close $9,267.32 (+110.77) · 8 name(s) re-marked at the open (per-name table). XHG×296 yday $3.32 → 09:30 $3.38 +17.76; DEFT×2003 yday $0.65 → 09:30 $0.65 +0.00; OMER×65 yday $18.86 → 09:30 $18.99 +8.45; ERO×30 yday $34.76 → 09:30 $35.82 +31.80; TRLV×105 yday $11.69 → 09:30 $11.89 +21.00; FUTU×9 yday $118.08 → 09:30 $118.19 +0.99; NVAX×118 yday $10.32 → 09:30 $10.41 +10.62; NIQ×65 yday $18.35 → 09:30 $18.66 +20.15 | — |
 | 2026-09-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13.27 | ▲ close $9,492.80 vs 09:30 $9,378.09 (session +114.71) | 16:00 close · cash $13.27 · equity $9,492.80 vs 09:30 $9,378.09 (+114.71; session marks +114.71) · 8 name(s) marked open→close (per-name table). XHG×296 09:30 $3.38 → close $3.43 +14.80; DEFT×2003 09:30 $0.65 → close $0.68 +60.09; OMER×65 09:30 $18.99 → close $19.11 +7.80; ERO×30 09:30 $35.82 → close $35.32 -15.00; TRLV×105 09:30 $11.89 → close $11.99 +10.50; FUTU×9 09:30 $118.19 → close $122.01 +34.38; NVAX×118 09:30 $10.41 → close $10.34 -8.26; NIQ×65 09:30 $18.66 → close $18.82 +10.40 | — |
+| 2026-09-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13.27 | ▼ 09:30 equity $9,461.51 vs yday $9,492.80 (-31.29) | 09:30 open · cash $13.27 (unchanged overnight, no fees) · equity $9,461.51 vs prior close $9,492.80 (-31.29) · 8 name(s) re-marked at the open (per-name table). XHG×296 yday $3.43 → 09:30 $3.42 -2.96; DEFT×2003 yday $0.68 → 09:30 $0.69 +20.03; OMER×65 yday $19.11 → 09:30 $19.00 -7.15; ERO×30 yday $35.32 → 09:30 $34.72 -18.00; TRLV×105 yday $11.99 → 09:30 $11.90 -9.45; FUTU×9 yday $122.01 → 09:30 $120.55 -13.14; NVAX×118 yday $10.34 → 09:30 $10.50 +18.88; NIQ×65 yday $18.82 → 09:30 $18.52 -19.50 | — |
+| 2026-09-07 09:30 ET | **SELL** | `FUTU` | 9 | $120.55 | $2.04 | $-71.10 | $1,096.18 | ▼ -71.10 after sell → book $9,459.47; vs 09:30 mark -2.04 | dropped from list after 6 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-09-07 09:30 ET | **BUY** | `HOOD` | 9 | $120.47 | $2.02 | — | $9.93 | — | baseline list, no extra gate; list yday_gainer,yday_mover,ohlc_hot; 🔵; ⚪; ret5=+13.2; leftover $1096.18 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-09-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9.93 | ▼ close $9,402.33 vs 09:30 $9,461.51 (session -55.12) | 16:00 close · cash $9.93 · equity $9,402.33 vs 09:30 $9,461.51 (-59.18; session marks -55.12) · 8 name(s) marked open→close (per-name table). XHG×296 09:30 $3.42 → close $3.31 -32.56; DEFT×2003 09:30 $0.69 → close $0.68 -20.03; OMER×65 09:30 $19.00 → close $18.95 -3.25; ERO×30 09:30 $34.72 → close $34.90 +5.40; TRLV×105 09:30 $11.90 → close $12.11 +22.05; NVAX×118 09:30 $10.50 → close $10.22 -33.04; NIQ×65 09:30 $18.52 → close $18.39 -8.45; HOOD×9 09:30 $120.47 → close $122.11 +14.76 | — |
 
 ## Not taken
 
@@ -351,6 +395,6 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | `OMER` | 65 | 2026-08-28 @ $18.24 | baseline list, no extra gate; list ohlc_hot; ret5=+12.1; leftover $1201.89 |
 | `ERO` | 30 | 2026-08-28 @ $39.20 | baseline list, no extra gate; list ohlc_hot; ret5=+16.6; leftover $1201.89 |
 | `TRLV` | 105 | 2026-08-28 @ $11.38 | baseline list, no extra gate; list ohlc_hot; ret5=+15.0; leftover $1201.89 |
-| `FUTU` | 9 | 2026-08-28 @ $128.00 | baseline list, no extra gate; list ohlc_hot; ret5=+17.5; leftover $1201.89 |
 | `NVAX` | 118 | 2026-09-03 @ $10.27 | baseline list, no extra gate; list yday_gainer,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+11.1; leftover $1219.33 |
 | `NIQ` | 65 | 2026-09-03 @ $18.60 | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+7.6; leftover $1219.33 |
+| `HOOD` | 9 | 2026-09-07 @ $120.47 | baseline list, no extra gate; list yday_gainer,yday_mover,ohlc_hot; 🔵; ⚪; ret5=+13.2; leftover $1096.18 |

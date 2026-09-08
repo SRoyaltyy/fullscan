@@ -6,7 +6,39 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · news🔴
 
-Cash book **+0.28%** ($10,028) · signal-only (no cash/fees) was +7.11%. Starts YES **17/17**. Fills 59 · skips 21 · realized $-108.78.
+Cash book **-0.71%** ($9,929) · signal-only (no cash/fees) was +6.60%. Starts YES **11/18**. Fills 62 · skips 21 · realized $-52.47.
+
+## How this sleeve decides (like you are 10)
+
+Imagine a kid with $10,000 at the 09:30 school bell. They look at the mixed morning shopping list (every name that showed up on any 09:30 list that day) and only short names that pass every must-have on the checklist. They take up to 8 names, spend leftover cash on whole shares, and hold at least 1 morning(s). They sell when the name falls off the list (after the timer). They never peek at today's report card (Change%) to pick. This sleeve bets the price will fall.
+
+### What it looks at (inputs)
+
+- Shopping list: the mixed morning shopping list (every name that showed up on any 09:30 list that day).
+- Clock: 09:30 ET only. The sleeve never peeks at today's Change%, Gap, RelVol, or the printed book to decide.
+- News, if used, is the morning packet box or yesterday's headline — never a later scrape.
+- Money: leftover cash from yesterday + the lots we already hold. It can only spend cash it has and only sell shares it holds.
+- Fill price: the 09:30 open, whole shares, Futubull fees.
+- Morning weather S: if S ≤ −3 the sleeve sits (no new buys).
+- Must-have: the news camera (does the morning packet like the headline?) is red.
+
+### When it buys
+
+- At 09:30, take names on the mixed morning shopping list (every name that showed up on any 09:30 list that day) that pass the must-haves.
+- If morning S ≤ −3, buy nobody new (hard-red sit).
+- A name is allowed only when every must-have is true.
+- Keep the first 8 names in list order.
+- Split leftover cash equally across *new* names (not ones we already hold).
+- Skip a name if the slice cannot buy 1 share after fees.
+- This is a SHORT sleeve: it borrows the name and profits if the price falls. Equity treats the short as a liability (must keep enough to cover).
+
+### When it sells
+
+- Sell first, then buy. Never sell a ticker we do not hold.
+- Minimum hold is 1 session(s) — the buy morning counts as 1.
+- No extra panic button — only the hold timer and the sell rule below.
+- List-drop: after 1 session(s), sell at the 09:30 open if the name is no longer on today's list. If it fell off earlier, we still wait out the minimum hold.
+- Fills are at the 09:30 open. Fees come out of cash. Overnight, cash does not change.
 
 ## Why these stocks
 
@@ -20,7 +52,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $16,021.55.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $16,136.15.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -99,6 +131,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 | `TX` | 22 | $56.87 | $57.73 | -18.92 | — | +0.00 | -18.92 | -34.32 | — |
 | 2026-09-04 | `GSM` | 542 | — | $4.55 | +0.00 | $4.53 | +10.84 | +10.84 | -0.00 | +10.84 |
 | 2026-09-04 | `OPK` | 1442 | — | $1.71 | +0.00 | $1.61 | +144.20 | +144.20 | -0.00 | +144.20 |
+| 2026-09-07 | `NOG` | 47 | $25.89 | $25.73 | +7.52 | $25.92 | -8.93 | -1.41 | +17.39 | +8.46 |
+| 2026-09-07 | `GSM` | 542 | $4.53 | $4.67 | -75.88 | — | +0.00 | -75.88 | -65.04 | — |
+| 2026-09-07 | `OPK` | 1442 | $1.61 | $1.59 | +28.84 | — | +0.00 | +28.84 | +173.04 | — |
+| 2026-09-07 | `GEMI` | 1066 | — | $4.67 | +0.00 | $4.68 | -10.66 | -10.66 | -0.00 | -10.66 |
 
 ## Each session (cash + holdings state)
 
@@ -121,6 +157,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-02 | -3.83 | $9,955.23 | — | $9,955.23 | -0.00 | +0.00 | — | — | $9,955.23 | $9,955.23 | — |
 | 2026-09-03 | -0.90 | $9,955.23 | — | $9,955.23 | -0.00 | -29.96 | SLN, NIQ, NOG, TX | — | $14,871.23 | $9,916.43 | SLN×84, NIQ×66, NOG×47, TX×22 |
 | 2026-09-04 | — | $14,871.23 | SLN×84, NIQ×66, NOG×47, TX×22 | $9,872.48 | -43.95 | +187.94 | GSM, OPK | SLN, NIQ, TX | $16,021.55 | $10,027.84 | NOG×47, GSM×542, OPK×1442 |
+| 2026-09-07 | — | $16,021.55 | NOG×47, GSM×542, OPK×1442 | $9,988.32 | -39.52 | -19.59 | GEMI | GSM, OPK | $16,136.15 | $9,929.03 | NOG×47, GEMI×1066 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -219,6 +256,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 09:30 ET | **SHORT** | `GSM` | 542 | $4.55 | $7.17 | — | $13,574.66 | — | news🔴; gate news=bad; list yday_gainer; ret5=-7.1; leftover $2466.50 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-04 09:30 ET | **SHORT** | `OPK` | 1442 | $1.71 | $18.93 | — | $16,021.55 | — | news🔴; gate news=bad; list yday_gainer; 🔵; ⚪; ret5=+7.2; leftover $2466.50 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,021.55 | ▲ close $10,027.84 vs 09:30 $9,872.48 (session +187.94) | 16:00 close · cash $16,021.55 · equity $10,027.84 vs 09:30 $9,872.48 (+155.36; session marks +187.94) · 3 name(s) marked open→close (per-name table). NOG×47 09:30 $26.59 → close $25.89 +32.90; GSM×542 09:30 $4.55 → close $4.53 +10.84; OPK×1442 09:30 $1.71 → close $1.61 +144.20 | — |
+| 2026-09-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16,021.55 | ▼ 09:30 equity $9,988.32 vs yday $10,027.84 (-39.52) | 09:30 open · cash $16,021.55 (unchanged overnight, no fees) · equity $9,988.32 vs prior close $10,027.84 (-39.52) · 3 name(s) re-marked at the open (per-name table). NOG×47 yday $25.89 → 09:30 $25.73 +7.52; GSM×542 yday $4.53 → 09:30 $4.67 -75.88; OPK×1442 yday $1.61 → 09:30 $1.59 +28.84 | — |
+| 2026-09-07 09:30 ET | **COVER** | `GSM` | 542 | $4.67 | $6.99 | $-79.20 | $13,483.42 | ▼ -79.20 after sell → book $9,981.33; vs 09:30 mark -6.99 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-07 09:30 ET | **COVER** | `OPK` | 1442 | $1.59 | $18.60 | $+135.51 | $11,172.03 | ▲ +135.51 after sell → book $9,962.72; vs 09:30 mark -18.61 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-07 09:30 ET | **SHORT** | `GEMI` | 1066 | $4.67 | $14.10 | — | $16,136.15 | — | news🔴; gate news=bad; list yday_gainer; 🔵; ⚪; ret5=+9.2; leftover $4981.36 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 judge🟢 ab🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-09-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,136.15 | ▼ close $9,929.03 vs 09:30 $9,988.32 (session -19.59) | 16:00 close · cash $16,136.15 · equity $9,929.03 vs 09:30 $9,988.32 (-59.29; session marks -19.59) · 2 name(s) marked open→close (per-name table). NOG×47 09:30 $25.73 → close $25.92 -8.93; GEMI×1066 09:30 $4.67 → close $4.68 -10.66 | — |
 
 ## Not taken
 
@@ -251,5 +293,4 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
 | `NOG` | 47 | 2026-09-03 @ $26.10 | news🔴; gate news=bad; list ohlc_hot; ret5=+11.6; leftover $1244.40 |
-| `GSM` | 542 | 2026-09-04 @ $4.55 | news🔴; gate news=bad; list yday_gainer; ret5=-7.1; leftover $2466.50 |
-| `OPK` | 1442 | 2026-09-04 @ $1.71 | news🔴; gate news=bad; list yday_gainer; 🔵; ⚪; ret5=+7.2; leftover $2466.50 |
+| `GEMI` | 1066 | 2026-09-07 @ $4.67 | news🔴; gate news=bad; list yday_gainer; 🔵; ⚪; ret5=+9.2; leftover $4981.36 |

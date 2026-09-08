@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_green hold 5, no 🚨
 
-Cash book **+19.41%** ($11,941) · signal-only (no cash/fees) was +52.19%. Starts YES **12/17**. Fills 83 · skips 216 · realized $+1545.07.
+Cash book **+22.60%** ($12,260) · signal-only (no cash/fees) was +68.43%. Starts YES **15/18**. Fills 86 · skips 232 · realized $+1545.07.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $69.56.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $43.31.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -296,6 +296,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 | `BAK` | 266 | — | $1.95 | +0.00 | $1.94 | -2.66 | -2.66 | +0.00 | -2.66 |
 | 2026-09-04 | `EOSE` | 145 | — | $3.57 | +0.00 | $3.50 | -10.15 | -10.15 | +0.00 | -10.15 |
 | 2026-09-04 | `DELL` | 1 | — | $486.31 | +0.00 | $516.39 | +30.08 | +30.08 | +0.00 | +30.08 |
+| 2026-09-07 | `ATRC` | 24 | $52.46 | $52.03 | -10.32 | $51.52 | -12.24 | -22.56 | +54.48 | +42.24 |
+| 2026-09-07 | `HRMY` | 29 | $41.86 | $41.50 | -10.44 | $42.25 | +21.75 | +11.31 | +5.51 | +27.26 |
+| 2026-09-07 | `VSTM` | 159 | $7.98 | $7.91 | -11.13 | $8.20 | +46.11 | +34.98 | +33.39 | +79.50 |
+| 2026-09-07 | `RVTY` | 9 | $130.63 | $130.03 | -5.40 | $130.22 | +1.71 | -3.69 | +36.81 | +38.52 |
+| 2026-09-07 | `GPRO` | 1006 | $1.39 | $1.48 | +90.54 | $1.70 | +221.32 | +311.86 | +261.56 | +482.88 |
+| 2026-09-07 | `MMED` | 53 | $23.84 | $23.84 | +0.00 | $23.28 | -29.68 | -29.68 | +56.18 | +26.50 |
+| 2026-09-07 | `SLN` | 83 | $14.79 | $14.63 | -13.28 | $14.59 | -3.32 | -16.60 | -5.81 | -9.13 |
+| 2026-09-07 | `OSCR` | 16 | $32.24 | $32.19 | -0.80 | $32.25 | +0.96 | +0.16 | +24.64 | +25.60 |
+| 2026-09-07 | `NVAX` | 49 | $10.34 | $10.50 | +7.84 | $10.22 | -13.72 | -5.88 | +4.41 | -9.31 |
+| 2026-09-07 | `BVS` | 35 | $14.36 | $14.11 | -8.75 | $14.07 | -1.40 | -10.15 | -13.65 | -15.05 |
+| 2026-09-07 | `BAK` | 266 | $1.94 | $1.94 | +0.00 | $1.89 | -13.30 | -13.30 | -2.66 | -15.96 |
+| 2026-09-07 | `EOSE` | 145 | $3.50 | $3.52 | +2.90 | $3.88 | +52.20 | +55.10 | -7.25 | +44.95 |
+| 2026-09-07 | `DELL` | 1 | $516.39 | $513.78 | -2.61 | $524.14 | +10.36 | +7.75 | +27.47 | +37.83 |
+| 2026-09-07 | `UGP` | 1 | — | $7.18 | +0.00 | $7.28 | +0.10 | +0.10 | +0.00 | +0.10 |
+| 2026-09-07 | `CHPT` | 1 | — | $9.28 | +0.00 | $9.89 | +0.61 | +0.61 | +0.00 | +0.61 |
+| 2026-09-07 | `CHGG` | 10 | — | $0.95 | +0.00 | $0.85 | -1.00 | -1.00 | +0.00 | -1.00 |
 
 ## Each session (cash + holdings state)
 
@@ -318,6 +334,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-02 | -3.83 | $138.78 | RRC×35, CRK×102, MOS×58, SLI×558, ANET×7, DLO×92, GEN×50, ANF×2, BHVN×24, BZ×22, LVWR×296 | $11,735.69 | +100.49 | -79.37 | — | — | $138.78 | $11,656.32 | RRC×35, CRK×102, MOS×58, SLI×558, ANET×7, DLO×92, GEN×50, ANF×2, BHVN×24, BZ×22, LVWR×296 |
 | 2026-09-03 | -0.90 | $138.78 | RRC×35, CRK×102, MOS×58, SLI×558, ANET×7, DLO×92, GEN×50, ANF×2, BHVN×24, BZ×22, LVWR×296 | $11,614.34 | -41.98 | +713.02 | ATRC, HRMY, VSTM, RVTY, GPRO, MMED, SLN | RRC, MOS, SLI, ANET, DLO, GEN | $166.91 | $12,283.28 | CRK×102, ANF×2, BHVN×24, BZ×22, LVWR×296, ATRC×24, HRMY×29, VSTM×159, RVTY×9, GPRO×1006, MMED×53, SLN×83 |
 | 2026-09-04 | — | $166.91 | CRK×102, ANF×2, BHVN×24, BZ×22, LVWR×296, ATRC×24, HRMY×29, VSTM×159, RVTY×9, GPRO×1006, MMED×53, SLN×83 | $12,398.49 | +115.21 | -430.50 | OSCR, NVAX, BVS, BAK, EOSE, DELL | CRK, ANF, BHVN, BZ, LVWR | $69.56 | $11,941.49 | ATRC×24, HRMY×29, VSTM×159, RVTY×9, GPRO×1006, MMED×53, SLN×83, OSCR×16, NVAX×49, BVS×35, BAK×266, EOSE×145, DELL×1 |
+| 2026-09-07 | — | $69.56 | ATRC×24, HRMY×29, VSTM×159, RVTY×9, GPRO×1006, MMED×53, SLN×83, OSCR×16, NVAX×49, BVS×35, BAK×266, EOSE×145, DELL×1 | $11,980.04 | +38.55 | +280.46 | UGP, CHPT, CHGG | — | $43.31 | $12,260.21 | ATRC×24, HRMY×29, VSTM×159, RVTY×9, GPRO×1006, MMED×53, SLN×83, OSCR×16, NVAX×49, BVS×35, BAK×266, EOSE×145, DELL×1, UGP×1, CHPT×1, CHGG×10 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -440,6 +457,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 09:30 ET | **BUY** | `EOSE` | 145 | $3.57 | $2.42 | — | $557.87 | — | union ∩ last_green hold 5, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-5.2; leftover $519.06 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-04 09:30 ET | **BUY** | `DELL` | 1 | $486.31 | $1.99 | — | $69.56 | — | union ∩ last_green hold 5, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; ret5=-9.9; leftover $519.06 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $69.56 | ▼ close $11,941.49 vs 09:30 $12,398.49 (session -430.50) | 16:00 close · cash $69.56 · equity $11,941.49 vs 09:30 $12,398.49 (-457.00; session marks -430.50) · 13 name(s) marked open→close (per-name table). ATRC×24 09:30 $52.88 → close $52.46 -10.08; HRMY×29 09:30 $42.93 → close $41.86 -31.03; VSTM×159 09:30 $8.03 → close $7.98 -7.95; RVTY×9 09:30 $132.45 → close $130.63 -16.38; GPRO×1006 09:30 $1.78 → close $1.39 -392.34; MMED×53 09:30 $23.88 → close $23.84 -2.12; SLN×83 09:30 $14.85 → close $14.79 -4.98; OSCR×16 09:30 $30.65 → close $32.24 +25.44; NVAX×49 09:30 $10.41 → close $10.34 -3.43; BVS×35 09:30 $14.50 → close $14.36 -4.90; BAK×266 09:30 $1.95 → close $1.94 -2.66; EOSE×145 09:30 $3.57 → close $3.50 -10.15; DELL×1 09:30 $486.31 → close $516.39 +30.08 | — |
+| 2026-09-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $69.56 | ▲ 09:30 equity $11,980.04 vs yday $11,941.49 (+38.55) | 09:30 open · cash $69.56 (unchanged overnight, no fees) · equity $11,980.04 vs prior close $11,941.49 (+38.55) · 13 name(s) re-marked at the open (per-name table). ATRC×24 yday $52.46 → 09:30 $52.03 -10.32; HRMY×29 yday $41.86 → 09:30 $41.50 -10.44; VSTM×159 yday $7.98 → 09:30 $7.91 -11.13; RVTY×9 yday $130.63 → 09:30 $130.03 -5.40; GPRO×1006 yday $1.39 → 09:30 $1.48 +90.54; MMED×53 yday $23.84 → 09:30 $23.84 +0.00; SLN×83 yday $14.79 → 09:30 $14.63 -13.28; OSCR×16 yday $32.24 → 09:30 $32.19 -0.80; NVAX×49 yday $10.34 → 09:30 $10.50 +7.84; BVS×35 yday $14.36 → 09:30 $14.11 -8.75; BAK×266 yday $1.94 → 09:30 $1.94 +0.00; EOSE×145 yday $3.50 → 09:30 $3.52 +2.90; DELL×1 yday $516.39 → 09:30 $513.78 -2.61 | — |
+| 2026-09-07 09:30 ET | **BUY** | `UGP` | 1 | $7.18 | $0.07 | — | $62.31 | — | union ∩ last_green hold 5, no 🚨; gate last_green=True; list flatten; 🔵; ret5=+9.4; leftover $9.94 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-07 09:30 ET | **BUY** | `CHPT` | 1 | $9.28 | $0.10 | — | $52.93 | — | union ∩ last_green hold 5, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.1; leftover $9.94 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-07 09:30 ET | **BUY** | `CHGG` | 10 | $0.95 | $0.12 | — | $43.31 | — | union ∩ last_green hold 5, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+3.8; leftover $9.94 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $43.31 | ▲ close $12,260.21 vs 09:30 $11,980.04 (session +280.46) | 16:00 close · cash $43.31 · equity $12,260.21 vs 09:30 $11,980.04 (+280.17; session marks +280.46) · 16 name(s) marked open→close (per-name table). ATRC×24 09:30 $52.03 → close $51.52 -12.24; HRMY×29 09:30 $41.50 → close $42.25 +21.75; VSTM×159 09:30 $7.91 → close $8.20 +46.11; RVTY×9 09:30 $130.03 → close $130.22 +1.71; GPRO×1006 09:30 $1.48 → close $1.70 +221.32; MMED×53 09:30 $23.84 → close $23.28 -29.68; SLN×83 09:30 $14.63 → close $14.59 -3.32; OSCR×16 09:30 $32.19 → close $32.25 +0.96; NVAX×49 09:30 $10.50 → close $10.22 -13.72; BVS×35 09:30 $14.11 → close $14.07 -1.40; BAK×266 09:30 $1.94 → close $1.89 -13.30; EOSE×145 09:30 $3.52 → close $3.88 +52.20; DELL×1 09:30 $513.78 → close $524.14 +10.36; UGP×1 09:30 $7.18 → close $7.28 +0.10; CHPT×1 09:30 $9.28 → close $9.89 +0.61; CHGG×10 09:30 $0.95 → close $0.85 -1.00 | — |
 
 ## Not taken
 
@@ -661,6 +683,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 | `RVTY` | min_hold | dropped but min-hold 1/5 sess — no sell |
 | 2026-09-04 | `MMED` | min_hold | dropped but min-hold 1/5 sess — no sell |
 | 2026-09-04 | `SLN` | min_hold | dropped but min-hold 1/5 sess — no sell |
+| 2026-09-07 | `ATRC` | min_hold | dropped but min-hold 2/5 sess — no sell |
+| 2026-09-07 | `HRMY` | min_hold | dropped but min-hold 2/5 sess — no sell |
+| 2026-09-07 | `VSTM` | min_hold | dropped but min-hold 2/5 sess — no sell |
+| 2026-09-07 | `RVTY` | min_hold | dropped but min-hold 2/5 sess — no sell |
+| 2026-09-07 | `GPRO` | min_hold | dropped but min-hold 2/5 sess — no sell |
+| 2026-09-07 | `MMED` | min_hold | dropped but min-hold 2/5 sess — no sell |
+| 2026-09-07 | `SLN` | min_hold | dropped but min-hold 2/5 sess — no sell |
+| 2026-09-07 | `OSCR` | min_hold | dropped but min-hold 1/5 sess — no sell |
+| 2026-09-07 | `BVS` | min_hold | dropped but min-hold 1/5 sess — no sell |
+| 2026-09-07 | `BAK` | min_hold | dropped but min-hold 1/5 sess — no sell |
+| 2026-09-07 | `EOSE` | min_hold | dropped but min-hold 1/5 sess — no sell |
+| 2026-09-07 | `DELL` | min_hold | dropped but min-hold 1/5 sess — no sell |
+| 2026-09-07 | `BSX` | cash | leftover split 9.94 < 1 share @ 46.92 |
+| 2026-09-07 | `LPG` | cash | leftover split 9.94 < 1 share @ 53.90 |
+| 2026-09-07 | `SMMT` | cash | leftover split 9.94 < 1 share @ 16.93 |
+| 2026-09-07 | `SNOW` | cash | leftover split 9.94 < 1 share @ 353.63 |
 
 ## Still open (marked at last close)
 
@@ -679,3 +717,6 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | `BAK` | 266 | 2026-09-04 @ $1.95 | union ∩ last_green hold 5, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; ret5=+2.1; leftover $519.06 |
 | `EOSE` | 145 | 2026-09-04 @ $3.57 | union ∩ last_green hold 5, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-5.2; leftover $519.06 |
 | `DELL` | 1 | 2026-09-04 @ $486.31 | union ∩ last_green hold 5, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; ret5=-9.9; leftover $519.06 |
+| `UGP` | 1 | 2026-09-07 @ $7.18 | union ∩ last_green hold 5, no 🚨; gate last_green=True; list flatten; 🔵; ret5=+9.4; leftover $9.94 |
+| `CHPT` | 1 | 2026-09-07 @ $9.28 | union ∩ last_green hold 5, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.1; leftover $9.94 |
+| `CHGG` | 10 | 2026-09-07 @ $0.95 | union ∩ last_green hold 5, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+3.8; leftover $9.94 |

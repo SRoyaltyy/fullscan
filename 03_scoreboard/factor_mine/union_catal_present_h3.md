@@ -6,7 +6,41 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ catal_present, no 🚨
 
-Cash book **-7.86%** ($9,214) · signal-only (no cash/fees) was -10.11%. Starts YES **4/17**. Fills 5 · skips 7 · realized $-928.07.
+Cash book **-9.38%** ($9,062) · signal-only (no cash/fees) was -11.48%. Starts YES **0/18**. Fills 5 · skips 8 · realized $-928.07.
+
+## How this sleeve decides (like you are 10)
+
+Imagine a kid with $10,000 at the 09:30 school bell. They look at the mixed morning shopping list (every name that showed up on any 09:30 list that day) and only buy names that pass every must-have on the checklist and skip anything on the must-not list. They take up to 8 names, spend leftover cash on whole shares, and hold at least 3 morning(s). They sell when the name falls off the list (after the timer). They never peek at today's report card (Change%) to pick. This sleeve bets the price will rise.
+
+### What it looks at (inputs)
+
+- Shopping list: the mixed morning shopping list (every name that showed up on any 09:30 list that day).
+- Clock: 09:30 ET only. The sleeve never peeks at today's Change%, Gap, RelVol, or the printed book to decide.
+- News, if used, is the morning packet box or yesterday's headline — never a later scrape.
+- Money: leftover cash from yesterday + the lots we already hold. It can only spend cash it has and only sell shares it holds.
+- Fill price: the 09:30 open, whole shares, Futubull fees.
+- Morning weather S: if S ≤ −3 the sleeve sits (no new buys).
+- Must-have: the catalyst camera printed something (any color, not blank).
+- Must-not: the 🚨 alarm is on (cameras got worse overnight).
+
+### When it buys
+
+- At 09:30, take names on the mixed morning shopping list (every name that showed up on any 09:30 list that day) that pass the must-haves.
+- If morning S ≤ −3, buy nobody new (hard-red sit).
+- A name is allowed only when every must-have is true.
+- A name is thrown out if any must-not is true.
+- Keep the first 8 names in list order.
+- Split leftover cash equally across *new* names (not ones we already hold).
+- Skip a name if the slice cannot buy 1 share after fees.
+- This is a LONG sleeve: it buys shares and wants the price to go up.
+
+### When it sells
+
+- Sell first, then buy. Never sell a ticker we do not hold.
+- Minimum hold is 3 session(s) — the buy morning counts as 1.
+- No extra panic button — only the hold timer and the sell rule below.
+- List-drop: after 3 session(s), sell at the 09:30 open if the name is no longer on today's list. If it fell off earlier, we still wait out the minimum hold.
+- Fills are at the 09:30 open. Fees come out of cash. Overnight, cash does not change.
 
 ## Why these stocks
 
@@ -53,6 +87,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-03 | `CF` | 34 | — | $133.57 | +0.00 | $139.27 | +193.80 | +193.80 | +0.00 | +193.80 |
 | 2026-09-04 | `UEC` | 375 | $11.62 | $11.75 | +48.75 | — | +0.00 | +48.75 | -581.25 | — |
 | 2026-09-04 | `CF` | 34 | $139.27 | $138.60 | -22.78 | $137.81 | -26.86 | -49.64 | +171.02 | +144.16 |
+| 2026-09-07 | `CF` | 34 | $137.81 | $135.43 | -80.92 | $133.35 | -70.72 | -151.64 | +63.24 | -7.48 |
 
 ## Each session (cash + holdings state)
 
@@ -75,6 +110,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-02 | -3.83 | $39.19 | UEC×375, FCX×63 | $9,022.84 | -131.52 | -3.75 | — | FCX | $4,670.62 | $9,016.87 | UEC×375 |
 | 2026-09-03 | -0.90 | $4,670.62 | UEC×375 | $9,031.87 | +15.00 | +190.05 | CF | — | $127.15 | $9,219.83 | UEC×375, CF×34 |
 | 2026-09-04 | — | $127.15 | UEC×375, CF×34 | $9,245.80 | +25.97 | -26.86 | — | UEC | $4,528.46 | $9,214.00 | CF×34 |
+| 2026-09-07 | — | $4,528.46 | CF×34 | $9,133.08 | -80.92 | -70.72 | — | — | $4,528.46 | $9,062.36 | CF×34 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -103,8 +139,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-08-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,000.00 | ▲ close $10,000.00 vs 09:30 $10,000.00 (session +0.00) | 16:00 close · cash $10,000.00 · no lots left · equity $10,000.00. | — |
 | 2026-08-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-08-28 09:30 ET | **BUY** | `UEC` | 375 | $13.30 | $4.84 | — | $5,007.66 | — | union ∩ catal_present, no 🚨; gate catal_present=True; list ohlc_hot; ret5=+13.8; leftover $5000.00 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 catal🟡 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `FCX` | 63 | $78.83 | $2.18 | — | $39.19 | — | union ∩ catal_present, no 🚨; gate catal_present=True; list ohlc_hot; ret5=+15.3; leftover $5000.00 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 catal🟡 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `UEC` | 375 | $13.30 | $4.84 | — | $5,007.66 | — | union ∩ catal_present, no 🚨; gate catal_present=True; list ohlc_hot; ret5=+13.8; leftover $5000.00 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 catal🟡 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `FCX` | 63 | $78.83 | $2.18 | — | $39.19 | — | union ∩ catal_present, no 🚨; gate catal_present=True; list ohlc_hot; ret5=+15.3; leftover $5000.00 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 catal🟡 buy🟡 |
 | 2026-08-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $39.19 | ▲ close $10,087.15 vs 09:30 $10,000.00 (session +94.17) | 16:00 close · cash $39.19 · equity $10,087.15 vs 09:30 $10,000.00 (+87.15; session marks +94.17) · 2 name(s) marked open→close (per-name table). UEC×375 09:30 $13.30 → close $13.62 +120.00; FCX×63 09:30 $78.83 → close $78.42 -25.83 | — |
 | 2026-08-31 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $39.19 | ▼ 09:30 equity $9,472.24 vs yday $10,087.15 (-614.91) | 09:30 open · cash $39.19 (unchanged overnight, no fees) · equity $9,472.24 vs prior close $10,087.15 (-614.91) · 2 name(s) re-marked at the open (per-name table). UEC×375 yday $13.62 → 09:30 $12.37 -468.75; FCX×63 yday $78.42 → 09:30 $76.10 -146.16 | — |
 | 2026-08-31 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $39.19 | ▲ close $9,521.11 vs 09:30 $9,472.24 (session +48.87) | 16:00 close · cash $39.19 · equity $9,521.11 vs 09:30 $9,472.24 (+48.87; session marks +48.87) · 2 name(s) marked open→close (per-name table). UEC×375 09:30 $12.37 → close $12.46 +33.75; FCX×63 09:30 $76.10 → close $76.34 +15.12 | — |
@@ -119,6 +155,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $127.15 | ▲ 09:30 equity $9,245.80 vs yday $9,219.83 (+25.97) | 09:30 open · cash $127.15 (unchanged overnight, no fees) · equity $9,245.80 vs prior close $9,219.83 (+25.97) · 2 name(s) re-marked at the open (per-name table). UEC×375 yday $11.62 → 09:30 $11.75 +48.75; CF×34 yday $139.27 → 09:30 $138.60 -22.78 | — |
 | 2026-09-04 09:30 ET | **SELL** | `UEC` | 375 | $11.75 | $4.93 | $-591.02 | $4,528.46 | ▼ -591.02 after sell → book $9,240.86; vs 09:30 mark -4.93 | dropped from list after 5 sess (min 3) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-09-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,528.46 | ▼ close $9,214.00 vs 09:30 $9,245.80 (session -26.86) | 16:00 close · cash $4,528.46 · equity $9,214.00 vs 09:30 $9,245.80 (-31.80; session marks -26.86) · 1 name(s) marked open→close (per-name table). CF×34 09:30 $138.60 → close $137.81 -26.86 | — |
+| 2026-09-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,528.46 | ▼ 09:30 equity $9,133.08 vs yday $9,214.00 (-80.92) | 09:30 open · cash $4,528.46 (unchanged overnight, no fees) · equity $9,133.08 vs prior close $9,214.00 (-80.92) · 1 name(s) re-marked at the open (per-name table). CF×34 yday $137.81 → 09:30 $135.43 -80.92 | — |
+| 2026-09-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,528.46 | ▼ close $9,062.36 vs 09:30 $9,133.08 (session -70.72) | 16:00 close · cash $4,528.46 · equity $9,062.36 vs 09:30 $9,133.08 (-70.72; session marks -70.72) · 1 name(s) marked open→close (per-name table). CF×34 09:30 $135.43 → close $133.35 -70.72 | — |
 
 ## Not taken
 
@@ -131,6 +169,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-01 | `FCX` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-01 | `TXG` | hard_red | hard-red S=-6.30 sit; no new buys |
 | 2026-09-04 | `CF` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-07 | `CF` | min_hold | dropped but min-hold 2/3 sess — no sell |
 
 ## Still open (marked at last close)
 

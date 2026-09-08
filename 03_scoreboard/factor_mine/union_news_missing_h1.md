@@ -6,7 +6,41 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ news_missing, no 🚨
 
-Cash book **+1.92%** ($10,192) · signal-only (no cash/fees) was +2.56%. Starts YES **11/17**. Fills 32 · skips 0 · realized $+192.43.
+Cash book **+1.92%** ($10,192) · signal-only (no cash/fees) was +2.56%. Starts YES **11/18**. Fills 32 · skips 0 · realized $+192.43.
+
+## How this sleeve decides (like you are 10)
+
+Imagine a kid with $10,000 at the 09:30 school bell. They look at the mixed morning shopping list (every name that showed up on any 09:30 list that day) and only buy names that pass every must-have on the checklist and skip anything on the must-not list. They take up to 8 names, spend leftover cash on whole shares, and hold at least 1 morning(s). They sell when the name falls off the list (after the timer). They never peek at today's report card (Change%) to pick. This sleeve bets the price will rise.
+
+### What it looks at (inputs)
+
+- Shopping list: the mixed morning shopping list (every name that showed up on any 09:30 list that day).
+- Clock: 09:30 ET only. The sleeve never peeks at today's Change%, Gap, RelVol, or the printed book to decide.
+- News, if used, is the morning packet box or yesterday's headline — never a later scrape.
+- Money: leftover cash from yesterday + the lots we already hold. It can only spend cash it has and only sell shares it holds.
+- Fill price: the 09:30 open, whole shares, Futubull fees.
+- Morning weather S: if S ≤ −3 the sleeve sits (no new buys).
+- Must-have: the news camera (does the morning packet like the headline?) is blank.
+- Must-not: the 🚨 alarm is on (cameras got worse overnight).
+
+### When it buys
+
+- At 09:30, take names on the mixed morning shopping list (every name that showed up on any 09:30 list that day) that pass the must-haves.
+- If morning S ≤ −3, buy nobody new (hard-red sit).
+- A name is allowed only when every must-have is true.
+- A name is thrown out if any must-not is true.
+- Keep the first 8 names in list order.
+- Split leftover cash equally across *new* names (not ones we already hold).
+- Skip a name if the slice cannot buy 1 share after fees.
+- This is a LONG sleeve: it buys shares and wants the price to go up.
+
+### When it sells
+
+- Sell first, then buy. Never sell a ticker we do not hold.
+- Minimum hold is 1 session(s) — the buy morning counts as 1.
+- No extra panic button — only the hold timer and the sell rule below.
+- List-drop: after 1 session(s), sell at the 09:30 open if the name is no longer on today's list. If it fell off earlier, we still wait out the minimum hold.
+- Fills are at the 09:30 open. Fees come out of cash. Overnight, cash does not change.
 
 ## Why these stocks
 
@@ -75,6 +109,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-02 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-03 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-04 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-07 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -97,6 +132,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-02 | -3.83 | $10,192.44 | — | $10,192.44 | -0.00 | +0.00 | — | — | $10,192.44 | $10,192.44 | — |
 | 2026-09-03 | -0.90 | $10,192.44 | — | $10,192.44 | -0.00 | +0.00 | — | — | $10,192.44 | $10,192.44 | — |
 | 2026-09-04 | — | $10,192.44 | — | $10,192.44 | -0.00 | +0.00 | — | — | $10,192.44 | $10,192.44 | — |
+| 2026-09-07 | — | $10,192.44 | — | $10,192.44 | -0.00 | +0.00 | — | — | $10,192.44 | $10,192.44 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -142,9 +178,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-27 09:30 ET | **BUY** | `CRK` | 89 | $14.09 | $2.26 | — | $8,887.64 | — | union ∩ news_missing, no 🚨; gate news=missing; list flatten; ret5=+1.1; leftover $1267.99 | join🟢 sector🔴 gen🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `MOS` | 51 | $24.84 | $2.14 | — | $7,618.66 | — | union ∩ news_missing, no 🚨; gate news=missing; list flatten; ret5=+13.0; leftover $1267.99 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟢 |
 | 2026-08-27 09:30 ET | **BUY** | `SLI` | 489 | $2.59 | $6.31 | — | $6,345.84 | — | union ∩ news_missing, no 🚨; gate news=missing; list flatten; ret5=+4.2; leftover $1267.99 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `GGB` | 286 | $4.42 | $3.69 | — | $5,078.03 | — | union ∩ news_missing, no 🚨; gate news=missing; list mover_buy; 🔵; ret5=-8.6; leftover $1267.99 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `MT` | 16 | $75.12 | $2.04 | — | $3,874.07 | — | union ∩ news_missing, no 🚨; gate news=missing; list mover_buy; 🔵; ret5=-2.2; leftover $1267.99 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `TX` | 22 | $55.20 | $2.06 | — | $2,657.62 | — | union ∩ news_missing, no 🚨; gate news=missing; list mover_buy; 🔵; ret5=+3.0; leftover $1267.99 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `GGB` | 286 | $4.42 | $3.69 | — | $5,078.03 | — | union ∩ news_missing, no 🚨; gate news=missing; list mover_buy; ret5=-8.6; leftover $1267.99 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `MT` | 16 | $75.12 | $2.04 | — | $3,874.07 | — | union ∩ news_missing, no 🚨; gate news=missing; list mover_buy; ret5=-2.2; leftover $1267.99 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `TX` | 22 | $55.20 | $2.06 | — | $2,657.62 | — | union ∩ news_missing, no 🚨; gate news=missing; list mover_buy; ret5=+3.0; leftover $1267.99 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `ANET` | 6 | $190.90 | $2.01 | — | $1,510.21 | — | union ∩ news_missing, no 🚨; gate news=missing; list mover_buy; 🔵; ret5=-5.1; leftover $1267.99 | join🟢 sector🟢 gen🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `DLO` | 81 | $15.60 | $2.23 | — | $244.38 | — | union ∩ news_missing, no 🚨; gate news=missing; list mover_buy; 🔵; ret5=+7.1; leftover $1267.99 | join🟢 sector🟢 gen🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $244.38 | ▲ close $10,181.89 vs 09:30 $10,143.91 (session +60.71) | 16:00 close · cash $244.38 · equity $10,181.89 vs 09:30 $10,143.91 (+37.98; session marks +60.71) · 8 name(s) marked open→close (per-name table). CRK×89 09:30 $14.09 → close $14.50 +36.49; MOS×51 09:30 $24.84 → close $24.16 -34.68; SLI×489 09:30 $2.59 → close $2.61 +9.78; GGB×286 09:30 $4.42 → close $4.46 +11.44; MT×16 09:30 $75.12 → close $74.53 -9.44; TX×22 09:30 $55.20 → close $55.13 -1.54; ANET×6 09:30 $190.90 → close $202.25 +68.10; DLO×81 09:30 $15.60 → close $15.36 -19.44 | — |
@@ -168,3 +204,5 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,192.44 | ▲ close $10,192.44 vs 09:30 $10,192.44 (session +0.00) | 16:00 close · cash $10,192.44 · no lots left · equity $10,192.44. | — |
 | 2026-09-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,192.44 | ▲ 09:30 equity $10,192.44 vs yday $10,192.44 (-0.00) | 09:30 open · cash $10,192.44 · no holdings · equity $10,192.44 vs prior close $10,192.44 (-0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,192.44 | ▲ close $10,192.44 vs 09:30 $10,192.44 (session +0.00) | 16:00 close · cash $10,192.44 · no lots left · equity $10,192.44. | — |
+| 2026-09-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,192.44 | ▲ 09:30 equity $10,192.44 vs yday $10,192.44 (-0.00) | 09:30 open · cash $10,192.44 · no holdings · equity $10,192.44 vs prior close $10,192.44 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,192.44 | ▲ close $10,192.44 vs 09:30 $10,192.44 (session +0.00) | 16:00 close · cash $10,192.44 · no lots left · equity $10,192.44. | — |

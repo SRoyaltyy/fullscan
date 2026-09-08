@@ -6,7 +6,43 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-10.54%** ($8,946) · signal-only (no cash/fees) was +1.52%. Starts YES **12/17**. Fills 32 · skips 9 · realized $-1292.17.
+Cash book **-12.04%** ($8,796) · signal-only (no cash/fees) was +1.52%. Starts YES **5/18**. Fills 34 · skips 9 · realized $-1204.15.
+
+## How this sleeve decides (like you are 10)
+
+Imagine a kid with $10,000 at the 09:30 school bell. They look at names that looked hot on the prior price/volume tape and only buy names that pass every must-have on the checklist and skip anything on the must-not list. They take up to 8 names, spend leftover cash on whole shares, and hold at least 1 morning(s). They sell when the name falls off the list (after the timer). They never peek at today's report card (Change%) to pick. This sleeve bets the price will rise.
+
+### What it looks at (inputs)
+
+- Shopping list: names that looked hot on the prior price/volume tape.
+- Clock: 09:30 ET only. The sleeve never peeks at today's Change%, Gap, RelVol, or the printed book to decide.
+- News, if used, is the morning packet box or yesterday's headline — never a later scrape.
+- Money: leftover cash from yesterday + the lots we already hold. It can only spend cash it has and only sell shares it holds.
+- Fill price: the 09:30 open, whole shares, Futubull fees.
+- Morning weather S: if S ≤ −3 the sleeve sits (no new buys).
+- Must-have: prior 5-session return is at least 0%.
+- Must-have: prior 5-session return is at most 10% (not already exploded).
+- Must-have: prior relative volume is at most 2.2 (not a blow-off).
+- Must-not: the 🚨 alarm is on (cameras got worse overnight).
+
+### When it buys
+
+- At 09:30, take names on names that looked hot on the prior price/volume tape that pass the must-haves.
+- If morning S ≤ −3, buy nobody new (hard-red sit).
+- A name is allowed only when every must-have is true.
+- A name is thrown out if any must-not is true.
+- Keep the first 8 names in list order.
+- Split leftover cash equally across *new* names (not ones we already hold).
+- Skip a name if the slice cannot buy 1 share after fees.
+- This is a LONG sleeve: it buys shares and wants the price to go up.
+
+### When it sells
+
+- Sell first, then buy. Never sell a ticker we do not hold.
+- Minimum hold is 1 session(s) — the buy morning counts as 1.
+- No extra panic button — only the hold timer and the sell rule below.
+- List-drop: after 1 session(s), sell at the 09:30 open if the name is no longer on today's list. If it fell off earlier, we still wait out the minimum hold.
+- Fills are at the 09:30 open. Fees come out of cash. Overnight, cash does not change.
 
 ## Why these stocks
 
@@ -20,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8.16.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,795.84.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -73,6 +109,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-03 | `NIQ` | 235 | — | $18.60 | +0.00 | $18.35 | -58.75 | -58.75 | +0.00 | -58.75 |
 | 2026-09-04 | `INO` | 3320 | $1.36 | $1.37 | +33.20 | $1.36 | -33.20 | +0.00 | +265.60 | +232.40 |
 | 2026-09-04 | `NIQ` | 235 | $18.35 | $18.66 | +72.85 | $18.82 | +37.60 | +110.45 | +14.10 | +51.70 |
+| 2026-09-07 | `INO` | 3320 | $1.36 | $1.35 | -33.20 | — | +0.00 | -33.20 | +199.20 | — |
+| 2026-09-07 | `NIQ` | 235 | $18.82 | $18.52 | -70.50 | — | +0.00 | -70.50 | -18.80 | — |
 
 ## Each session (cash + holdings state)
 
@@ -95,6 +133,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-02 | -3.83 | $4,382.19 | INO×3320 | $8,565.39 | -33.20 | +232.40 | — | — | $4,382.19 | $8,797.79 | INO×3320 |
 | 2026-09-03 | -0.90 | $4,382.19 | INO×3320 | $8,830.99 | +33.20 | +7.65 | NIQ | — | $8.16 | $8,835.61 | INO×3320, NIQ×235 |
 | 2026-09-04 | — | $8.16 | INO×3320, NIQ×235 | $8,941.66 | +106.05 | +4.40 | — | — | $8.16 | $8,946.06 | INO×3320, NIQ×235 |
+| 2026-09-07 | — | $8.16 | INO×3320, NIQ×235 | $8,842.36 | -103.70 | +0.00 | — | INO, NIQ | $8,795.84 | $8,795.84 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -166,6 +205,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8.16 | ▲ close $8,835.61 vs 09:30 $8,830.99 (session +7.65) | 16:00 close · cash $8.16 · equity $8,835.61 vs 09:30 $8,830.99 (+4.62; session marks +7.65) · 2 name(s) marked open→close (per-name table). INO×3320 09:30 $1.34 → close $1.36 +66.40; NIQ×235 09:30 $18.60 → close $18.35 -58.75 | — |
 | 2026-09-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8.16 | ▲ 09:30 equity $8,941.66 vs yday $8,835.61 (+106.05) | 09:30 open · cash $8.16 (unchanged overnight, no fees) · equity $8,941.66 vs prior close $8,835.61 (+106.05) · 2 name(s) re-marked at the open (per-name table). INO×3320 yday $1.36 → 09:30 $1.37 +33.20; NIQ×235 yday $18.35 → 09:30 $18.66 +72.85 | — |
 | 2026-09-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8.16 | ▲ close $8,946.06 vs 09:30 $8,941.66 (session +4.40) | 16:00 close · cash $8.16 · equity $8,946.06 vs 09:30 $8,941.66 (+4.40; session marks +4.40) · 2 name(s) marked open→close (per-name table). INO×3320 09:30 $1.37 → close $1.36 -33.20; NIQ×235 09:30 $18.66 → close $18.82 +37.60 | — |
+| 2026-09-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8.16 | ▼ 09:30 equity $8,842.36 vs yday $8,946.06 (-103.70) | 09:30 open · cash $8.16 (unchanged overnight, no fees) · equity $8,842.36 vs prior close $8,946.06 (-103.70) · 2 name(s) re-marked at the open (per-name table). INO×3320 yday $1.36 → 09:30 $1.35 -33.20; NIQ×235 yday $18.82 → 09:30 $18.52 -70.50 | — |
+| 2026-09-07 09:30 ET | **SELL** | `INO` | 3320 | $1.35 | $43.41 | $+112.96 | $4,446.74 | ▲ +112.96 after sell → book $8,798.94; vs 09:30 mark -43.42 | dropped from list after 6 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟡 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-07 09:30 ET | **SELL** | `NIQ` | 235 | $18.52 | $3.11 | $-24.94 | $8,795.84 | ▼ -24.94 after sell → book $8,795.84; vs 09:30 mark -3.10 | dropped from list after 2 sess (min 1) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,795.84 | ▲ close $8,795.84 vs 09:30 $8,842.36 (session +0.00) | 16:00 close · cash $8,795.84 · no lots left · equity $8,795.84. | — |
 
 ## Not taken
 
@@ -180,10 +223,3 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-19 | `AMTX` | hard_red | hard-red S=-7.20 sit; no new buys |
 | 2026-08-19 | `PSX` | hard_red | hard-red S=-7.20 sit; no new buys |
 | 2026-09-01 | `VFF` | hard_red | hard-red S=-6.30 sit; no new buys |
-
-## Still open (marked at last close)
-
-| Ticker | Shares | Entry | Why |
-|---|---:|---|---|
-| `INO` | 3320 | 2026-08-28 @ $1.29 | hot list ∩ not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; ret5=+8.3; leftover $4325.86 |
-| `NIQ` | 235 | 2026-09-03 @ $18.60 | hot list ∩ not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+7.6; leftover $4382.19 |

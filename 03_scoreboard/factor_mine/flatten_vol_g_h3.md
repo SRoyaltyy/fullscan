@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · flatten wish-list ∩ vol🟢
 
-Cash book **-1.69%** ($9,831) · signal-only (no cash/fees) was +0.40%. Starts YES **14/17**. Fills 34 · skips 43 · realized $-516.65.
+Cash book **-2.00%** ($9,800) · signal-only (no cash/fees) was -0.20%. Starts YES **14/18**. Fills 34 · skips 45 · realized $-516.65.
 
 ## How this sleeve decides (like you are 10)
 
@@ -141,6 +141,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-03 | `RVTY` | 75 | — | $125.94 | +0.00 | $130.94 | +375.00 | +375.00 | +0.00 | +375.00 |
 | 2026-09-04 | `RVTY` | 75 | $130.94 | $132.45 | +113.25 | $130.63 | -136.50 | -23.25 | +488.25 | +351.75 |
 | 2026-09-04 | `CABA` | 9 | — | $3.63 | +0.00 | $3.48 | -1.35 | -1.35 | +0.00 | -1.35 |
+| 2026-09-07 | `RVTY` | 75 | $130.63 | $130.03 | -45.00 | $130.22 | +14.25 | -30.75 | +306.75 | +321.00 |
+| 2026-09-07 | `CABA` | 9 | $3.48 | $3.46 | -0.18 | $3.47 | +0.09 | -0.09 | -1.53 | -1.44 |
 
 ## Each session (cash + holdings state)
 
@@ -163,6 +165,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-02 | -3.83 | $9,483.33 | — | $9,483.33 | -0.00 | +0.00 | — | — | $9,483.33 | $9,483.33 | — |
 | 2026-09-03 | -0.90 | $9,483.33 | — | $9,483.33 | -0.00 | +375.00 | RVTY | — | $35.61 | $9,856.11 | RVTY×75 |
 | 2026-09-04 | — | $35.61 | RVTY×75 | $9,969.36 | +113.25 | -137.85 | CABA | — | $2.59 | $9,831.16 | RVTY×75, CABA×9 |
+| 2026-09-07 | — | $2.59 | RVTY×75, CABA×9 | $9,785.98 | -45.18 | +14.34 | — | — | $2.59 | $9,800.32 | RVTY×75, CABA×9 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -236,6 +239,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $35.61 | ▲ 09:30 equity $9,969.36 vs yday $9,856.11 (+113.25) | 09:30 open · cash $35.61 (unchanged overnight, no fees) · equity $9,969.36 vs prior close $9,856.11 (+113.25) · 1 name(s) re-marked at the open (per-name table). RVTY×75 yday $130.94 → 09:30 $132.45 +113.25 | — |
 | 2026-09-04 09:30 ET | **BUY** | `CABA` | 9 | $3.63 | $0.35 | — | $2.59 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+13.8; leftover $35.61 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
 | 2026-09-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.59 | ▼ close $9,831.16 vs 09:30 $9,969.36 (session -137.85) | 16:00 close · cash $2.59 · equity $9,831.16 vs 09:30 $9,969.36 (-138.20; session marks -137.85) · 2 name(s) marked open→close (per-name table). RVTY×75 09:30 $132.45 → close $130.63 -136.50; CABA×9 09:30 $3.63 → close $3.48 -1.35 | — |
+| 2026-09-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.59 | ▼ 09:30 equity $9,785.98 vs yday $9,831.16 (-45.18) | 09:30 open · cash $2.59 (unchanged overnight, no fees) · equity $9,785.98 vs prior close $9,831.16 (-45.18) · 2 name(s) re-marked at the open (per-name table). RVTY×75 yday $130.63 → 09:30 $130.03 -45.00; CABA×9 yday $3.48 → 09:30 $3.46 -0.18 | — |
+| 2026-09-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.59 | ▲ close $9,800.32 vs 09:30 $9,785.98 (session +14.34) | 16:00 close · cash $2.59 · equity $9,800.32 vs 09:30 $9,785.98 (+14.34; session marks +14.34) · 2 name(s) marked open→close (per-name table). RVTY×75 09:30 $130.03 → close $130.22 +14.25; CABA×9 09:30 $3.46 → close $3.47 +0.09 | — |
 
 ## Not taken
 
@@ -284,6 +289,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-26 | `CRDL` | no_price | no 09:30 open — carry |
 | 2026-08-26 | `CYPH` | no_price | no 09:30 open — carry |
 | 2026-09-04 | `RVTY` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-07 | `RVTY` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-07 | `CABA` | min_hold | dropped but min-hold 1/3 sess — no sell |
 
 ## Still open (marked at last close)
 

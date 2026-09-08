@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ news_g hold 5, no 🚨
 
-Cash book **-11.63%** ($8,837) · signal-only (no cash/fees) was +152.34%. Starts YES **7/17**. Fills 83 · skips 194 · realized $-946.97.
+Cash book **-12.83%** ($8,717) · signal-only (no cash/fees) was +144.33%. Starts YES **5/18**. Fills 83 · skips 202 · realized $-946.97.
 
 ## How this sleeve decides (like you are 10)
 
@@ -308,6 +308,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 | `FCX` | 3 | $73.93 | $75.34 | +4.23 | $72.56 | -8.34 | -4.11 | +6.90 | -1.44 |
 | 2026-09-04 | `BAK` | 2017 | — | $1.95 | +0.00 | $1.94 | -20.17 | -20.17 | +0.00 | -20.17 |
 | 2026-09-04 | `AMTX` | 2033 | — | $1.91 | +0.00 | $1.83 | -162.64 | -162.64 | +0.00 | -162.64 |
+| 2026-09-07 | `MMED` | 11 | $23.84 | $23.84 | +0.00 | $23.28 | -6.16 | -6.16 | +11.66 | +5.50 |
+| 2026-09-07 | `CNXC` | 7 | $32.85 | $32.48 | -2.59 | $32.16 | -2.24 | -4.83 | +4.76 | +2.52 |
+| 2026-09-07 | `TXG` | 4 | $63.22 | $62.54 | -2.72 | $62.65 | +0.44 | -2.28 | +9.20 | +9.64 |
+| 2026-09-07 | `ZYME` | 8 | $29.90 | $29.81 | -0.72 | $29.19 | -4.96 | -5.68 | -1.52 | -6.48 |
+| 2026-09-07 | `FCX` | 3 | $72.56 | $71.72 | -2.52 | $72.73 | +3.03 | +0.51 | -3.96 | -0.93 |
+| 2026-09-07 | `BAK` | 2017 | $1.94 | $1.94 | +0.00 | $1.89 | -100.85 | -100.85 | -20.17 | -121.02 |
+| 2026-09-07 | `AMTX` | 2033 | $1.83 | $1.83 | +0.00 | $1.83 | +0.00 | +0.00 | -162.64 | -162.64 |
 
 ## Each session (cash + holdings state)
 
@@ -330,6 +337,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-02 | -3.83 | $1,518.68 | TRLV×21, RRC×26, CAPR×120, SEDG×32, SMTC×7, OPTX×129, ERAS×57, BBWI×59 | $9,190.86 | +8.96 | -164.04 | — | — | $1,518.68 | $9,026.82 | TRLV×21, RRC×26, CAPR×120, SEDG×32, SMTC×7, OPTX×129, ERAS×57, BBWI×59 |
 | 2026-09-03 | -0.90 | $1,518.68 | TRLV×21, RRC×26, CAPR×120, SEDG×32, SMTC×7, OPTX×129, ERAS×57, BBWI×59 | $9,026.23 | -0.59 | +82.74 | MMED, CNXC, TXG, ZYME, FCX | — | $335.37 | $9,098.92 | TRLV×21, RRC×26, CAPR×120, SEDG×32, SMTC×7, OPTX×129, ERAS×57, BBWI×59, MMED×11, CNXC×7, TXG×4, ZYME×8, FCX×3 |
 | 2026-09-04 | — | $335.37 | TRLV×21, RRC×26, CAPR×120, SEDG×32, SMTC×7, OPTX×129, ERAS×57, BBWI×59, MMED×11, CNXC×7, TXG×4, ZYME×8, FCX×3 | $9,106.18 | +7.26 | -199.84 | BAK, AMTX | TRLV, RRC, CAPR, SEDG, SMTC, OPTX, ERAS, BBWI | $1.32 | $8,836.64 | MMED×11, CNXC×7, TXG×4, ZYME×8, FCX×3, BAK×2017, AMTX×2033 |
+| 2026-09-07 | — | $1.32 | MMED×11, CNXC×7, TXG×4, ZYME×8, FCX×3, BAK×2017, AMTX×2033 | $8,828.09 | -8.55 | -110.74 | — | — | $1.32 | $8,717.35 | MMED×11, CNXC×7, TXG×4, ZYME×8, FCX×3, BAK×2017, AMTX×2033 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -452,6 +460,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 09:30 ET | **BUY** | `BAK` | 2017 | $1.95 | $26.02 | — | $3,910.58 | — | union ∩ news_g hold 5, no 🚨; gate news=good; list probable,yday_gainer,yday_mover; ret5=+2.1; leftover $3934.87 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-04 09:30 ET | **BUY** | `AMTX` | 2033 | $1.91 | $26.23 | — | $1.32 | — | union ∩ news_g hold 5, no 🚨; gate news=good; list ohlc_hot; ret5=+16.9; leftover $3934.87 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-09-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.32 | ▼ close $8,836.64 vs 09:30 $9,106.18 (session -199.84) | 16:00 close · cash $1.32 · equity $8,836.64 vs 09:30 $9,106.18 (-269.54; session marks -199.84) · 7 name(s) marked open→close (per-name table). MMED×11 09:30 $23.88 → close $23.84 -0.44; CNXC×7 09:30 $32.88 → close $32.85 -0.21; TXG×4 09:30 $62.35 → close $63.22 +3.48; ZYME×8 09:30 $31.34 → close $29.90 -11.52; FCX×3 09:30 $75.34 → close $72.56 -8.34; BAK×2017 09:30 $1.95 → close $1.94 -20.17; AMTX×2033 09:30 $1.91 → close $1.83 -162.64 | — |
+| 2026-09-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.32 | ▼ 09:30 equity $8,828.09 vs yday $8,836.64 (-8.55) | 09:30 open · cash $1.32 (unchanged overnight, no fees) · equity $8,828.09 vs prior close $8,836.64 (-8.55) · 7 name(s) re-marked at the open (per-name table). MMED×11 yday $23.84 → 09:30 $23.84 +0.00; CNXC×7 yday $32.85 → 09:30 $32.48 -2.59; TXG×4 yday $63.22 → 09:30 $62.54 -2.72; ZYME×8 yday $29.90 → 09:30 $29.81 -0.72; FCX×3 yday $72.56 → 09:30 $71.72 -2.52; BAK×2017 yday $1.94 → 09:30 $1.94 +0.00; AMTX×2033 yday $1.83 → 09:30 $1.83 +0.00 | — |
+| 2026-09-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.32 | ▼ close $8,717.35 vs 09:30 $8,828.09 (session -110.74) | 16:00 close · cash $1.32 · equity $8,717.35 vs 09:30 $8,828.09 (-110.74; session marks -110.74) · 7 name(s) marked open→close (per-name table). MMED×11 09:30 $23.84 → close $23.28 -6.16; CNXC×7 09:30 $32.48 → close $32.16 -2.24; TXG×4 09:30 $62.54 → close $62.65 +0.44; ZYME×8 09:30 $29.81 → close $29.19 -4.96; FCX×3 09:30 $71.72 → close $72.73 +3.03; BAK×2017 09:30 $1.94 → close $1.89 -100.85; AMTX×2033 09:30 $1.83 → close $1.83 +0.00 | — |
 
 ## Not taken
 
@@ -651,6 +661,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-03 | `AVGO` | cash | leftover split 253.11 < 1 share @ 369.68 |
 | 2026-09-04 | `MMED` | min_hold | dropped but min-hold 1/5 sess — no sell |
 | 2026-09-04 | `CNXC` | min_hold | dropped but min-hold 1/5 sess — no sell |
+| 2026-09-07 | `MMED` | min_hold | dropped but min-hold 2/5 sess — no sell |
+| 2026-09-07 | `CNXC` | min_hold | dropped but min-hold 2/5 sess — no sell |
+| 2026-09-07 | `BAK` | min_hold | dropped but min-hold 1/5 sess — no sell |
+| 2026-09-07 | `AMTX` | min_hold | dropped but min-hold 1/5 sess — no sell |
+| 2026-09-07 | `CHPT` | cash | leftover split 0.33 < 1 share @ 9.28 |
+| 2026-09-07 | `SMMT` | cash | leftover split 0.33 < 1 share @ 16.93 |
+| 2026-09-07 | `SNOW` | cash | leftover split 0.33 < 1 share @ 353.63 |
+| 2026-09-07 | `MSTR` | cash | leftover split 0.33 < 1 share @ 137.35 |
 
 ## Still open (marked at last close)
 

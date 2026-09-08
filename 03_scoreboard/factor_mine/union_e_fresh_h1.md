@@ -6,7 +6,42 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ e_fresh, no 🚨
 
-Cash book **+8.62%** ($10,862) · signal-only (no cash/fees) was -4.91%. Starts YES **4/17**. Fills 108 · skips 38 · realized $+870.61.
+Cash book **+3.76%** ($10,376) · signal-only (no cash/fees) was -4.91%. Starts YES **3/18**. Fills 116 · skips 38 · realized $+376.42.
+
+## How this sleeve decides (like you are 10)
+
+Imagine a kid with $10,000 at the 09:30 school bell. They look at the mixed morning shopping list (every name that showed up on any 09:30 list that day) and only buy names that pass every must-have on the checklist and skip anything on the must-not list. They take up to 8 names, spend leftover cash on whole shares, and hold at least 1 morning(s). They sell when the name falls off the list (after the timer). They never peek at today's report card (Change%) to pick. This sleeve bets the price will rise.
+
+### What it looks at (inputs)
+
+- Shopping list: the mixed morning shopping list (every name that showed up on any 09:30 list that day).
+- Clock: 09:30 ET only. The sleeve never peeks at today's Change%, Gap, RelVol, or the printed book to decide.
+- News, if used, is the morning packet box or yesterday's headline — never a later scrape.
+- Money: leftover cash from yesterday + the lots we already hold. It can only spend cash it has and only sell shares it holds.
+- Fill price: the 09:30 open, whole shares, Futubull fees.
+- Morning weather S: if S ≤ −3 the sleeve sits (no new buys).
+- Must-have: earnings (E) printed within the last 1 session(s).
+- Must-have: the earnings flag is on.
+- Must-not: the 🚨 alarm is on (cameras got worse overnight).
+
+### When it buys
+
+- At 09:30, take names on the mixed morning shopping list (every name that showed up on any 09:30 list that day) that pass the must-haves.
+- If morning S ≤ −3, buy nobody new (hard-red sit).
+- A name is allowed only when every must-have is true.
+- A name is thrown out if any must-not is true.
+- Keep the first 8 names in list order.
+- Split leftover cash equally across *new* names (not ones we already hold).
+- Skip a name if the slice cannot buy 1 share after fees.
+- This is a LONG sleeve: it buys shares and wants the price to go up.
+
+### When it sells
+
+- Sell first, then buy. Never sell a ticker we do not hold.
+- Minimum hold is 1 session(s) — the buy morning counts as 1.
+- No extra panic button — only the hold timer and the sell rule below.
+- List-drop: after 1 session(s), sell at the 09:30 open if the name is no longer on today's list. If it fell off earlier, we still wait out the minimum hold.
+- Fills are at the 09:30 open. Fees come out of cash. Overnight, cash does not change.
 
 ## Why these stocks
 
@@ -20,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $248.60.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $10,376.42.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -151,6 +186,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 | `IOT` | 36 | — | $37.69 | +0.00 | $38.75 | +38.16 | +38.16 | +0.00 | +38.16 |
 | 2026-09-04 | `LULU` | 11 | — | $121.15 | +0.00 | $121.77 | +6.82 | +6.82 | +0.00 | +6.82 |
 | 2026-09-04 | `MAMA` | 86 | — | $15.62 | +0.00 | $15.96 | +29.24 | +29.24 | +0.00 | +29.24 |
+| 2026-09-07 | `AMBA` | 20 | $63.38 | $63.18 | -4.00 | — | +0.00 | -4.00 | -68.60 | — |
+| 2026-09-07 | `ASAN` | 133 | $10.09 | $8.74 | -179.55 | — | +0.00 | -179.55 | -188.86 | — |
+| 2026-09-07 | `DOCU` | 20 | $65.97 | $68.52 | +51.00 | — | +0.00 | +51.00 | +29.20 | — |
+| 2026-09-07 | `DOMO` | 359 | $3.79 | $3.62 | -61.03 | — | +0.00 | -61.03 | -57.44 | — |
+| 2026-09-07 | `GWRE` | 6 | $202.86 | $167.55 | -211.86 | — | +0.00 | -211.86 | -182.70 | — |
+| 2026-09-07 | `IOT` | 36 | $38.75 | $44.90 | +221.40 | — | +0.00 | +221.40 | +259.56 | — |
+| 2026-09-07 | `LULU` | 11 | $121.77 | $98.15 | -259.82 | — | +0.00 | -259.82 | -253.00 | — |
+| 2026-09-07 | `MAMA` | 86 | $15.96 | $15.70 | -22.36 | — | +0.00 | -22.36 | +6.88 | — |
 
 ## Each session (cash + holdings state)
 
@@ -173,6 +216,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-02 | -3.83 | $10,872.01 | — | $10,872.01 | +0.00 | +0.00 | — | — | $10,872.01 | $10,872.01 | — |
 | 2026-09-03 | -0.90 | $10,872.01 | — | $10,872.01 | +0.00 | -39.61 | AI, AVGO, CHPT, CIEN, CPB, FIVE, HPE, MEI | — | $685.47 | $10,814.27 | AI×131, AVGO×3, CHPT×256, CIEN×3, CPB×57, FIVE×5, HPE×26, MEI×74 |
 | 2026-09-04 | — | $685.47 | AI×131, AVGO×3, CHPT×256, CIEN×3, CPB×57, FIVE×5, HPE×26, MEI×74 | $10,888.95 | +74.68 | +11.26 | AMBA, ASAN, DOCU, DOMO, GWRE, IOT, LULU, MAMA | AI, AVGO, CHPT, CIEN, CPB, FIVE, HPE, MEI | $248.60 | $10,862.37 | AMBA×20, ASAN×133, DOCU×20, DOMO×359, GWRE×6, IOT×36, LULU×11, MAMA×86 |
+| 2026-09-07 | — | $248.60 | AMBA×20, ASAN×133, DOCU×20, DOMO×359, GWRE×6, IOT×36, LULU×11, MAMA×86 | $10,396.15 | -466.22 | +0.00 | — | AMBA, ASAN, DOCU, DOMO, GWRE, IOT, LULU, MAMA | $10,376.42 | $10,376.42 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -276,7 +320,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-28 09:30 ET | **BUY** | `FRO` | 31 | $42.51 | $2.08 | — | $4,185.93 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+6.0; leftover $1355.86 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `GAP` | 65 | $20.75 | $2.19 | — | $2,834.99 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-3.9; leftover $1355.86 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟡 heat🟢 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `HAFN` | 171 | $7.91 | $2.50 | — | $1,479.88 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+5.4; leftover $1355.86 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `IREN` | 33 | $40.65 | $2.09 | — | $136.34 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-4.9; leftover $1355.86 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 heat🟡 vol🟡 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `IREN` | 33 | $40.65 | $2.09 | — | $136.34 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-4.9; leftover $1355.86 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-08-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $136.34 | ▲ close $10,884.12 vs 09:30 $10,849.13 (session +56.49) | 16:00 close · cash $136.34 · equity $10,884.12 vs 09:30 $10,849.13 (+34.99; session marks +56.49) · 8 name(s) marked open→close (per-name table). ADSK×5 09:30 $261.47 → close $270.58 +45.55; BBAR×90 09:30 $14.96 → close $14.60 -32.40; ESTC×16 09:30 $82.64 → close $83.74 +17.60; FINV×318 09:30 $4.26 → close $4.02 -76.32; FRO×31 09:30 $42.51 → close $43.75 +38.44; GAP×65 09:30 $20.75 → close $20.79 +2.60; HAFN×171 09:30 $7.91 → close $8.29 +64.98; IREN×33 09:30 $40.65 → close $40.53 -3.96 | — |
 | 2026-08-31 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $136.34 | ▲ 09:30 equity $10,891.51 vs yday $10,884.12 (+7.39) | 09:30 open · cash $136.34 (unchanged overnight, no fees) · equity $10,891.51 vs prior close $10,884.12 (+7.39) · 8 name(s) re-marked at the open (per-name table). ADSK×5 yday $270.58 → 09:30 $258.50 -60.40; BBAR×90 yday $14.60 → 09:30 $14.50 -9.00; ESTC×16 yday $83.74 → 09:30 $99.99 +260.00; FINV×318 yday $4.02 → 09:30 $3.46 -178.08; FRO×31 yday $43.75 → 09:30 $43.54 -6.51; GAP×65 yday $20.79 → 09:30 $22.89 +136.50; HAFN×171 yday $8.29 → 09:30 $8.43 +23.94; IREN×33 yday $40.53 → 09:30 $35.71 -159.06 | — |
 | 2026-08-31 09:30 ET | **SELL** | `ADSK` | 5 | $258.50 | $2.03 | $-18.88 | $1,426.82 | ▼ -18.88 after sell → book $10,889.49; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
@@ -296,11 +340,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-03 09:30 ET | **BUY** | `AI` | 131 | $10.30 | $2.38 | — | $9,520.33 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=+3.7; leftover $1359.00 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `AVGO` | 3 | $369.68 | $2.00 | — | $8,409.29 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-6.2; leftover $1359.00 | join🔴 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `CHPT` | 256 | $5.30 | $3.30 | — | $7,049.19 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=+1.1; leftover $1359.00 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `CIEN` | 3 | $357.25 | $2.00 | — | $5,975.44 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-7.7; leftover $1359.00 | join🟡 sector🟢 gen🟡 news🟢 digest🟢 judge🟡 ab🔴 peer🔴 heat🟡 vol🟡 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `CIEN` | 3 | $357.25 | $2.00 | — | $5,975.44 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-7.7; leftover $1359.00 | join🟡 sector🟢 gen🟡 news🟢 digest🟢 judge🟡 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `CPB` | 57 | $23.80 | $2.16 | — | $4,616.68 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+0.5; leftover $1359.00 | join🔴 sector🟢 gen🟡 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `FIVE` | 5 | $244.98 | $2.00 | — | $3,389.77 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=+2.3; leftover $1359.00 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `HPE` | 26 | $51.99 | $2.07 | — | $2,035.96 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-9.0; leftover $1359.00 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟡 ab🟢 peer🔴 heat🟡 vol🟡 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `MEI` | 74 | $18.22 | $2.21 | — | $685.47 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-16.7; leftover $1359.00 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟡 vol🔴 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `HPE` | 26 | $51.99 | $2.07 | — | $2,035.96 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-9.0; leftover $1359.00 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `MEI` | 74 | $18.22 | $2.21 | — | $685.47 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-16.7; leftover $1359.00 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-09-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $685.47 | ▼ close $10,814.27 vs 09:30 $10,872.01 (session -39.61) | 16:00 close · cash $685.47 · equity $10,814.27 vs 09:30 $10,872.01 (-57.74; session marks -39.61) · 8 name(s) marked open→close (per-name table). AI×131 09:30 $10.30 → close $10.52 +28.82; AVGO×3 09:30 $369.68 → close $367.24 -7.32; CHPT×256 09:30 $5.30 → close $5.19 -28.16; CIEN×3 09:30 $357.25 → close $354.16 -9.27; CPB×57 09:30 $23.80 → close $23.78 -1.14; FIVE×5 09:30 $244.98 → close $243.08 -9.50; HPE×26 09:30 $51.99 → close $51.83 -4.16; MEI×74 09:30 $18.22 → close $18.10 -8.88 | — |
 | 2026-09-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $685.47 | ▲ 09:30 equity $10,888.95 vs yday $10,814.27 (+74.68) | 09:30 open · cash $685.47 (unchanged overnight, no fees) · equity $10,888.95 vs prior close $10,814.27 (+74.68) · 8 name(s) re-marked at the open (per-name table). AI×131 yday $10.52 → 09:30 $10.74 +28.82; AVGO×3 yday $367.24 → 09:30 $351.74 -46.50; CHPT×256 yday $5.19 → 09:30 $6.90 +437.76; CIEN×3 yday $354.16 → 09:30 $354.49 +0.99; CPB×57 yday $23.78 → 09:30 $22.32 -83.22; FIVE×5 yday $243.08 → 09:30 $256.99 +69.55; HPE×26 yday $51.83 → 09:30 $47.60 -109.98; MEI×74 yday $18.10 → 09:30 $15.09 -222.74 | — |
 | 2026-09-04 09:30 ET | **SELL** | `AI` | 131 | $10.74 | $2.42 | $+52.84 | $2,090.00 | ▲ +52.84 after sell → book $10,886.54; vs 09:30 mark -2.41 | dropped from list after 1 sess (min 1) | — |
@@ -311,7 +355,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 09:30 ET | **SELL** | `FIVE` | 5 | $256.99 | $2.03 | $+56.02 | $8,520.67 | ▲ +56.02 after sell → book $10,874.93; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-04 09:30 ET | **SELL** | `HPE` | 26 | $47.60 | $2.09 | $-118.30 | $9,756.18 | ▼ -118.30 after sell → book $10,872.84; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-04 09:30 ET | **SELL** | `MEI` | 74 | $15.09 | $2.23 | $-236.07 | $10,870.61 | ▼ -236.07 after sell → book $10,870.61; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-04 09:30 ET | **BUY** | `AMBA` | 20 | $66.61 | $2.05 | — | $9,536.36 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-10.1; leftover $1358.83 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟡 vol🟡 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `AMBA` | 20 | $66.61 | $2.05 | — | $9,536.36 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-10.1; leftover $1358.83 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-09-04 09:30 ET | **BUY** | `ASAN` | 133 | $10.16 | $2.39 | — | $8,182.69 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=+4.8; leftover $1358.83 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-09-04 09:30 ET | **BUY** | `DOCU` | 20 | $67.06 | $2.05 | — | $6,839.44 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-0.1; leftover $1358.83 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-09-04 09:30 ET | **BUY** | `DOMO` | 359 | $3.78 | $4.63 | — | $5,477.79 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-2.8; leftover $1358.83 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
@@ -320,6 +364,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 09:30 ET | **BUY** | `LULU` | 11 | $121.15 | $2.02 | — | $1,594.17 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+1.3; leftover $1358.83 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-09-04 09:30 ET | **BUY** | `MAMA` | 86 | $15.62 | $2.25 | — | $248.60 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-4.7; leftover $1358.83 | join🔴 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-09-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $248.60 | ▲ close $10,862.37 vs 09:30 $10,888.95 (session +11.26) | 16:00 close · cash $248.60 · equity $10,862.37 vs 09:30 $10,888.95 (-26.58; session marks +11.26) · 8 name(s) marked open→close (per-name table). AMBA×20 09:30 $66.61 → close $63.38 -64.60; ASAN×133 09:30 $10.16 → close $10.09 -9.31; DOCU×20 09:30 $67.06 → close $65.97 -21.80; DOMO×359 09:30 $3.78 → close $3.79 +3.59; GWRE×6 09:30 $198.00 → close $202.86 +29.16; IOT×36 09:30 $37.69 → close $38.75 +38.16; LULU×11 09:30 $121.15 → close $121.77 +6.82; MAMA×86 09:30 $15.62 → close $15.96 +29.24 | — |
+| 2026-09-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $248.60 | ▼ 09:30 equity $10,396.15 vs yday $10,862.37 (-466.22) | 09:30 open · cash $248.60 (unchanged overnight, no fees) · equity $10,396.15 vs prior close $10,862.37 (-466.22) · 8 name(s) re-marked at the open (per-name table). AMBA×20 yday $63.38 → 09:30 $63.18 -4.00; ASAN×133 yday $10.09 → 09:30 $8.74 -179.55; DOCU×20 yday $65.97 → 09:30 $68.52 +51.00; DOMO×359 yday $3.79 → 09:30 $3.62 -61.03; GWRE×6 yday $202.86 → 09:30 $167.55 -211.86; IOT×36 yday $38.75 → 09:30 $44.90 +221.40; LULU×11 yday $121.77 → 09:30 $98.15 -259.82; MAMA×86 yday $15.96 → 09:30 $15.70 -22.36 | — |
+| 2026-09-07 09:30 ET | **SELL** | `AMBA` | 20 | $63.18 | $2.07 | $-72.72 | $1,510.13 | ▼ -72.72 after sell → book $10,394.08; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-07 09:30 ET | **SELL** | `ASAN` | 133 | $8.74 | $2.42 | $-193.67 | $2,670.13 | ▼ -193.67 after sell → book $10,391.66; vs 09:30 mark -2.42 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-07 09:30 ET | **SELL** | `DOCU` | 20 | $68.52 | $2.07 | $+25.08 | $4,038.46 | ▲ +25.08 after sell → book $10,389.59; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-07 09:30 ET | **SELL** | `DOMO` | 359 | $3.62 | $4.70 | $-66.77 | $5,333.34 | ▼ -66.77 after sell → book $10,384.89; vs 09:30 mark -4.70 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-07 09:30 ET | **SELL** | `GWRE` | 6 | $167.55 | $2.03 | $-186.74 | $6,336.61 | ▼ -186.74 after sell → book $10,382.86; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-07 09:30 ET | **SELL** | `IOT` | 36 | $44.90 | $2.12 | $+255.34 | $7,950.89 | ▲ +255.34 after sell → book $10,380.74; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-07 09:30 ET | **SELL** | `LULU` | 11 | $98.15 | $2.04 | $-257.07 | $9,028.50 | ▼ -257.07 after sell → book $10,378.70; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-07 09:30 ET | **SELL** | `MAMA` | 86 | $15.70 | $2.27 | $+2.36 | $10,376.42 | ▲ +2.36 after sell → book $10,376.42; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,376.42 | ▲ close $10,376.42 vs 09:30 $10,396.15 (session +0.00) | 16:00 close · cash $10,376.42 · no lots left · equity $10,376.42. | — |
 
 ## Not taken
 
@@ -363,16 +417,3 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-02 | `MDB` | hard_red | hard-red S=-3.83 sit; no new buys |
 | 2026-09-02 | `OLLI` | hard_red | hard-red S=-3.83 sit; no new buys |
 | 2026-09-02 | `PANW` | hard_red | hard-red S=-3.83 sit; no new buys |
-
-## Still open (marked at last close)
-
-| Ticker | Shares | Entry | Why |
-|---|---:|---|---|
-| `AMBA` | 20 | 2026-09-04 @ $66.61 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-10.1; leftover $1358.83 |
-| `ASAN` | 133 | 2026-09-04 @ $10.16 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=+4.8; leftover $1358.83 |
-| `DOCU` | 20 | 2026-09-04 @ $67.06 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-0.1; leftover $1358.83 |
-| `DOMO` | 359 | 2026-09-04 @ $3.78 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-2.8; leftover $1358.83 |
-| `GWRE` | 6 | 2026-09-04 @ $198.00 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+7.7; leftover $1358.83 |
-| `IOT` | 36 | 2026-09-04 @ $37.69 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+0.4; leftover $1358.83 |
-| `LULU` | 11 | 2026-09-04 @ $121.15 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+1.3; leftover $1358.83 |
-| `MAMA` | 86 | 2026-09-04 @ $15.62 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-4.7; leftover $1358.83 |
