@@ -748,6 +748,11 @@ def test_safe_git_push_keeps_dated_ranker_on_conflict() -> None:
     assert "data/stock_book" in text
     assert "01_daily/weather" in text
     assert "keeping our 01_daily + dated ranker" in text
+    # 2026-09-08 finish-holes: one missing note pathspec made
+    # `git add a b missing` stage nothing, so dashboard never reached main.
+    assert "skip missing" in text
+    assert 'git add -- "$p"' in text
+    assert 'git add "$@"' not in text
 
 
 def test_ubuntu_preopen_not_blocked_by_queued_ecs() -> None:

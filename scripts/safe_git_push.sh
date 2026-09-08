@@ -57,8 +57,22 @@ if [ "$#" -lt 1 ]; then
   exit 0
 fi
 
-git add "$@" || true
-if git diff --staged --quiet; then
+# Add each path on its own. `git add a b missing` fails the whole
+# add when one pathspec is absent, so a listed note file can drop
+# dashboard/ + essays even when they were written on the runner.
+added=0
+for p in "$@"; do
+  if [ -e "$p" ]; then
+    if git add -- "$p"; then
+      added=$((added + 1))
+    else
+      echo "[safe-push] WARN: git add failed for $p"
+    fi
+  else
+    echo "[safe-push] skip missing $p"
+  fi
+done
+if [ "$added" -eq 0 ] || git diff --staged --quiet; then
   echo "[safe-push] no staged changes"
   git status -sb || true
   exit 0
