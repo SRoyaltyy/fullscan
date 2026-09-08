@@ -8808,18 +8808,6 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.4
-        },
-        "HORIZON_2W": {
-          "label": "2w",
-          "target_date": "2026-09-08",
-          "actual_pct": -0.01,
-          "actual_direction": "flat",
-          "actual_magnitude_band": "flat",
-          "direction_hit": false,
-          "magnitude_hit": false,
-          "predicted_direction": "up",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.4
         }
       },
       "lesson_schema_ok": true
@@ -16308,64 +16296,64 @@
       "reflection_lesson_ref": "02_lessons/candidate/2026-09-08_lesson.md",
       "sources_used": [
         {
-          "url": "https://www.nytimes.com/2026/09/08/business/oil-prices-iran-war.html",
+          "url": "https://www.cnbc.com/2026/09/07/stock-market-tuesday-live-updates.html",
           "date_accessed": "2026-09-08",
-          "summary": "NYT confirms the Houthi attack on Saudi Arabia as the catalyst for oil's surge toward $100.",
-          "verification": "http_403"
+          "summary": "CNBC confirms the actual close numbers for all three major indices.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnn.com/2026/09/08/middleeast/houthis-attack-saudi-arabia-yemen-intl-hnk",
+          "date_accessed": "2026-09-08",
+          "summary": "CNN confirms the Houthi attack on Saudi energy infrastructure as a major escalation.",
+          "verification": "quote_not_found"
         },
         {
           "url": "https://www.reuters.com/business/energy/oil-rises-risks-prolonged-mideast-conflict-heighten-supply-worries-2026-09-08/",
           "date_accessed": "2026-09-08",
-          "summary": "Reuters confirms oil's rise to six-week highs on the Houthi attack.",
+          "summary": "Reuters confirms oil's surge to six-week highs on the Houthi attack.",
           "verification": "http_401"
         },
         {
-          "url": "https://www.foxnews.com/politics/iran-backed-attacks-threaten-second-major-oil-chokepoint-new-risk-emerges-us-consumers",
+          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-09-08-2026/card/amgen-stock-poised-for-worst-day-in-more-than-two-decades-viUxcynt4325crpnKMl2",
           "date_accessed": "2026-09-08",
-          "summary": "Fox News confirms the scale of the attack and its threat to oil chokepoints.",
+          "summary": "WSJ confirms Amgen's worst day in over two decades, triggered by Novartis's pelacarsen trial failure.",
+          "verification": "http_401"
+        },
+        {
+          "url": "https://www.alainguillot.com/stock-market-recap-september-8-2026/",
+          "date_accessed": "2026-09-08",
+          "summary": "Alain Guillot's recap confirms the software selloff and attributes it to AI disruption fears.",
+          "verification": "http_406"
+        },
+        {
+          "url": "https://tradingeconomics.com/united-states/government-bond-yield",
+          "date_accessed": "2026-09-08",
+          "summary": "Trading Economics confirms the 10-year yield at 4.79%, near the key 4.8% level.",
           "verification": "quote_not_found"
         },
         {
-          "url": "https://www.cnbc.com/2026/09/08/canada-retaliatory-tariffs.html",
+          "url": "https://tradingeconomics.com/china/balance-of-trade",
           "date_accessed": "2026-09-08",
-          "summary": "CNBC confirms Canada's retaliatory tariffs took effect today as scheduled.",
+          "summary": "Trading Economics confirms China's strong export growth and record trade surplus.",
           "verification": "quote_not_found"
         },
         {
           "url": "https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-09082026-12110868",
           "date_accessed": "2026-09-08",
-          "summary": "Investopedia identifies Amgen as the worst Dow performer, down 9.5%, due to the Novartis trial read-through.",
+          "summary": "Investopedia confirms the holiday-shortened week context.",
           "verification": "http_402"
         },
         {
-          "url": "https://www.fiercebiotech.com/biotech/novartis-lpa-drug-fails-lower-cardiovascular-risk-closely-watched-ph-3-trial",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-september-8-dow-sp-500-nasdaq-080440338.html",
           "date_accessed": "2026-09-08",
-          "summary": "FierceBiotech confirms the Phase III failure that triggered the biotech selloff.",
+          "summary": "Yahoo Finance confirms Intel's 5% gain as a notable outlier on a down day.",
           "verification": "quote_not_found"
         },
         {
-          "url": "https://www.pbs.org/newshour/economy/fed-governor-waller-muddies-outlook-on-possible-rate-hike-later-this-month",
+          "url": "https://www.investopedia.com/5-things-to-know-before-the-stock-market-opens-on-tuesday-september-8-2026-12110869",
           "date_accessed": "2026-09-08",
-          "summary": "PBS confirms elevated rate-hike odds ahead of the September FOMC.",
-          "verification": "quote_not_found"
-        },
-        {
-          "url": "https://tradingeconomics.com/united-states/government-bond-yield",
-          "date_accessed": "2026-09-08",
-          "summary": "Trading Economics confirms the 10-year yield at 4.79%, near recent highs.",
-          "verification": "quote_not_found"
-        },
-        {
-          "url": "https://www.cruxinvestor.com/posts/copper-hits-record-high-as-us-tariff-delay-divides-producers",
-          "date_accessed": "2026-09-08",
-          "summary": "Copper reached record highs on September 8, a notable divergence from equity weakness.",
-          "verification": "quote_not_found"
-        },
-        {
-          "url": "https://goldsilver.com/industry-news/goldsilver-news/four-signals-hard-assets-trade-broadening/",
-          "date_accessed": "2026-09-08",
-          "summary": "Gold fell despite geopolitical risk, a notable divergence from typical safe-haven behavior.",
-          "verification": "http_403"
+          "summary": "Investopedia confirms Novartis's premarket crash on the trial failure.",
+          "verification": "http_402"
         }
       ],
       "horizon_calls": {
@@ -16397,11 +16385,11 @@
       "news_judge_present": true,
       "ops_fail": false,
       "path_shape": "trend down (closed near day low)",
-      "primary_driver": "Houthi attack on Saudi energy facilities (73 wounded) drove oil toward $100, reviving stagflation fears and reinforcing Fed hike expectations",
-      "key_interaction": "Oil spike (Houthi attack) × Fed hike expectations — oil toward $100 feeds inflation fears, reinforcing ~65% September hike odds, creating a stagflationary feedback loop that pressured equities all session",
-      "knowable_at_9am": "yes — the Houthi attack and oil surge were known premarket; futures confirmed the down day",
-      "attribution_contested": "yes — most outlets lead with oil/geopolitics, but Investrade frames the day as healthcare sector rotation led by Amgen's decline",
-      "outlier_watch": "Gold FELL (-0.84%) despite geopolitical escalation; copper hit record high on a risk-off day; VIX stayed low (15.49) despite oil near $100; dollar fell despite safe-haven demand",
+      "primary_driver": "Oil/geopolitical escalation — Houthi attack on Saudi energy (73 wounded) + Iran tanker attack in Hormuz pushed WTI toward $95 and Brent toward $100, feeding stagflation fears ahead of CPI",
+      "key_interaction": "Oil spike → inflation expectations → Fed hike odds → higher yields → equity multiple compression — the stagflation amplification loop, compounded by Amgen's Dow-level single-stock shock",
+      "knowable_at_9am": "yes — all major drivers (Houthi attack, oil spike, Amgen trial failure, yields) were in premarket data",
+      "attribution_contested": "yes — CNBC/Investopedia lead with Amgen/Salesforce; Reuters/Yahoo lead with oil/Middle East; Alain Guillot emphasizes AI disruption in software",
+      "outlier_watch": "Gold fell −0.84% despite geopolitical risk-off (suggests inflation/Fed concern dominates over safe-haven demand); Intel +5% on company news; energy stocks likely rose while everything else fell; NDX outperformed Dow despite software weakness",
       "horizon_grades": {},
       "lesson_schema_ok": true
     },
