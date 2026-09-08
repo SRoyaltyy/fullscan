@@ -774,6 +774,7 @@ def test_preopen_harden_halt_reverted() -> None:
     assert "HALT 2026-09-08" not in book
     assert "if: false" not in pre
     assert "STOP all live writers" not in pre
+    assert "No live poke on 2026-09-08" in pre
 
 
 def test_ubuntu_preopen_not_blocked_by_queued_ecs() -> None:
@@ -797,6 +798,8 @@ def test_ubuntu_preopen_not_blocked_by_queued_ecs() -> None:
     assert "--bypass-cutoff" in yml
     assert "if: false" not in yml
     assert "HALT 2026-09-08" not in yml
+    assert "2026-09-08 analysis hold" in yml
+    assert "needs.gate.outputs.go == 'yes'" in yml
     # Packet commit must not include dashboard/ (fix #2 twin HTML race).
     commit = yml.split("Commit predictive artifacts")[1].split("Commit dashboard")[0]
     assert "dashboard/" not in commit

@@ -3,10 +3,20 @@
 Unattended clock is ECS systemd `fullscan-preopen.timer` at **05:55 ET**.
 GitHub `preopen_all.yml` is a poke / ubuntu heal, not the primary clock.
 
+## Merge tonight without a live poke
+
+#159 (`a5cfc119`) HALT is on `main`. This harden **reverts** that `if: false`
+so 2026-09-09 can run. A merge touches `preopen_all.yml` and would normally
+push-poke Pre-Open. The workflow **swallows push events on 2026-09-08 ET**
+(`gate` job → `go=no`). Safe to merge tonight. Do not re-touch the workflow
+tomorrow morning (ECS systemd 05:55 is the clock).
+
 ## Tomorrow morning checklist (2026-09-09)
 
 1. **HALT is reverted on this branch.** `preopen_all.yml`, `stock_book_all.yml`,
-   and `daily_orchestrator.yml` must not contain `if: false` / HALT.
+   and `daily_orchestrator.yml` must not contain `if: false` / HALT. The
+   2026-09-08 **push swallow** expires at midnight ET and does not block
+   2026-09-09.
 2. **One ubuntu writer.** Concurrency group is `preopen-all-ubuntu` (push or
    `runner=ubuntu`) or `preopen-all-ecs`. Never `ubuntu-HHMM`. A new ubuntu
    poke **cancels** the prior ubuntu run. ECS does **not** cancel-in-progress.
