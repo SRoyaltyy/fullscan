@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "A future run where the narrative and pipeline disagree, the model explicitly reconciles them, adopts one call with clear justification, and the adopted call is correct (dir HIT). If the model reconciles but still misses, the lesson is not falsified — reconciliation is necessary but not sufficient for accuracy."
 sector: "Industrials"
 date: "2026-09-08"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Industrials — 2026-09-08

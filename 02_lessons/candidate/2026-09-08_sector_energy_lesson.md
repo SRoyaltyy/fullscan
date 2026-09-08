@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "A session where oil is up >3%, SPY is red >0.3%, and XLE still delivers >2% (notable) would falsify this lesson. Also falsified if Energy's mag hit-rate improves above 0.5 over the next 10 graded runs while the rule remains in place."
 sector: "Energy"
 date: "2026-09-08"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Energy — 2026-09-08

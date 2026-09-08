@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "A day where oil spikes +3% toward $100 on geopolitical supply shock, long-end yields are in stress zone (30Y ≥ 5.2%), yet XLF outperforms SPY (positive relative return) would falsify this lesson. Also, a day where oil spikes but credit spreads blow out simultaneously (HY widening > 20bp) would require re-evaluation — the lesson assumes tight credit at the open, and a credit event would be a different, more severe transmission channel."
 sector: "Financial"
 date: "2026-09-08"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Financial — 2026-09-08

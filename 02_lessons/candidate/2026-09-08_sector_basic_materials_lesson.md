@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "A session where copper surges to records AND oil spikes simultaneously, but XLB closes positive or flat despite the chemicals drag — if chemicals sleeve does not actually drag (e.g., chemicals companies with pricing power pass through costs), the composition-weighting assumption fails."
 sector: "Basic Materials"
 date: "2026-09-08"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Basic Materials — 2026-09-08

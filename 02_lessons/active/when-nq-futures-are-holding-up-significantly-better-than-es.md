@@ -1,0 +1,29 @@
+---
+trigger_pattern: "When NQ futures are holding up significantly better than ES futures (divergence ≥ ~25bp) on a risk-off day, and the sector ETF is a mega-cap growth/duration book (XLC with META ~17% + GOOGL ~18-19%), the model scores S2 (breadth) and S4 (ETF tape) negative based on the macro thesis inference ('risk-off → mega-cap growth hit hardest') rather than reading the NQ/ES divergence as direct evidence that the sector's core holdings are relatively defended. The model also fails to distinguish between direction (down, correct) and relative performance (XLC vs SPY, wrong) — treating a broad risk-off as necessarily worse for the duration/growth sector when the futures tape already signals mega-cap relative strength."
+corrected_behavior: "When NQ futures are outperforming ES futures by ≥ ~25bp on a risk-off morning, treat this as direct evidence that mega-cap growth (XLC's ~35-37% META+GOOGL weight) is relatively defended. Score S2 = 0 (not -1) unless there is sector-specific evidence of large-cap failure beyond the macro inference. For S4, apply the 08-28 leftover ban strictly: prior 3d relative weakness describes prior close only and must not influence the directional score. Additionally, separate the direction call (down, driven by S0 macro) from the relative call (XLC vs SPY) — a broad risk-off with NQ outperforming ES supports down direction but NOT XLC underperformance vs SPY."
+falsifier: "A day where NQ outperforms ES by ≥25bp at the open, XLC still underperforms SPY by >50bp, AND the underperformance is driven by META/GOOGL-specific news (not broad tape) would falsify this lesson. Also falsified if NQ/ES divergence ≥25bp occurs but XLC underperforms due to telecom/other non-mega-cap components."
+current_behavior: "Scores S2 = -1 and S4 = -1 on risk-off days for XLC based on the inference that duration/growth books get hit hardest, without weighting the NQ/ES futures divergence as a same-morning signal about XLC's specific composition. Notes the NQ/ES gap in the narrative but does not let it temper component scores. Also treats prior 3d relative underperformance (S4) as mildly predictive despite the 08-28 leftover ban."
+evidence_cited: "2026-09-08: NQ -0.16% vs ES -0.44% (28bp gap favoring mega-cap growth) at morning read. XLC actual: -0.46% vs SPY -0.55%, relative +0.09% (XLC outperformed). S2 = -1 and S4 = -1 were both scored wrong. The outcome review explicitly noted: 'NQ -0.16% vs ES -0.44%... was a signal that mega-cap growth (XLC's core) might be relatively defended. The morning noted this but did not weight it heavily enough."
+error_category: "B"
+scope: "general"
+date: "2026-09-08"
+status: "active"
+occurrences: "1"
+promoted_on: "2026-09-08"
+sources: "['2026-09-08_sector_communication_services_lesson.md']"
+schema_ok: "true"
+---
+
+## RULE
+When NQ futures are outperforming ES futures by ≥ ~25bp on a risk-off morning, treat this as direct evidence that mega-cap growth (XLC's ~35-37% META+GOOGL weight) is relatively defended. Score S2 = 0 (not -1) unless there is sector-specific evidence of large-cap failure beyond the macro inference. For S4, apply the 08-28 leftover ban strictly: prior 3d relative weakness describes prior close only and must not influence the directional score. Additionally, separate the direction call (down, driven by S0 macro) from the relative call (XLC vs SPY) — a broad risk-off with NQ outperforming ES supports down direction but NOT XLC underperformance vs SPY.
+
+## WHEN IT FIRES
+When NQ futures are holding up significantly better than ES futures (divergence ≥ ~25bp) on a risk-off day, and the sector ETF is a mega-cap growth/duration book (XLC with META ~17% + GOOGL ~18-19%), the model scores S2 (breadth) and S4 (ETF tape) negative based on the macro thesis inference ("risk-off → mega-cap growth hit hardest") rather than reading the NQ/ES divergence as direct evidence that the sector's core holdings are relatively defended. The model also fails to distinguish between direction (down, correct) and relative performance (XLC vs SPY, wrong) — treating a broad risk-off as necessarily worse for the duration/growth sector when the futures tape already signals mega-cap relative strength.
+
+## WRONG IF
+A day where NQ outperforms ES by ≥25bp at the open, XLC still underperforms SPY by >50bp, AND the underperformance is driven by META/GOOGL-specific news (not broad tape) would falsify this lesson. Also falsified if NQ/ES divergence ≥25bp occurs but XLC underperforms due to telecom/other non-mega-cap components.
+
+## EVIDENCE
+2026-09-08: NQ -0.16% vs ES -0.44% (28bp gap favoring mega-cap growth) at morning read. XLC actual: -0.46% vs SPY -0.55%, relative +0.09% (XLC outperformed). S2 = -1 and S4 = -1 were both scored wrong. The outcome review explicitly noted: "NQ -0.16% vs ES -0.44%... was a signal that mega-cap growth (XLC's core) might be relatively defended. The morning noted this but did not weight it heavily enough.
+
+(learn_cycle promote)
