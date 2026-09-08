@@ -8,7 +8,7 @@ name: Pre-Open ALL (predictive one-shot)
 # This file is a poke: a main push that touches it starts the packet
 # (workflow_dispatch is 403 from the cloud agent). Push is ubuntu/DeepSeek
 # so a queued ECS job (offline runner) cannot block the 09:30 packet.
-# poke 2026-09-08 08:11 ET — refire ubuntu heal; ECS 34215042304 already writing
+# poke 2026-09-08 ~08:47 ET — DeepSeek credits restored; ubuntu/deepseek refire
 
 on:
   push:
