@@ -1237,3 +1237,7 @@ Research only. One 2026 regime.
 ## Shade hex + onset (open-entry)
 
 _Generated 2026-09-08 · live `flatten_robust` frozen. Shade hex + onset on open-knowable fills. Family **null**. GHOST FAIL. M mid GHOST FAIL; O onset GHOST THIN. Expanded open-only M mid `#95CA82` / ge15 is a **DEMOTE** (not the 4.4k H-fill leak). Same-day H KEEP 0 · KILL 5. See `SHADE_OPEN.md` / `SHADE_KEEP_CARDS.md`._
+
+## Shade 2d/3d cumulative (open-entry)
+
+_Generated 2026-09-08 · live `flatten_robust` frozen. Open shade → 2d/3d stacked I (HI_HORIZON `I_sum`). Family **null**. KEEP 0 · KILL 8. See `SHADE_2D3D.md`. Tip `c2537d95`. Not live._

@@ -94,3 +94,30 @@ Live `flatten_robust` stays frozen. No card under `strategies/`. Soft-regime maj
 ## Source
 
 `excel_bot/research/SHADE_OPEN.md` · `shade_panel_stats.json` · PR #150 · expand tip `35cbab9d`. `SHADE_GATE.md` if present. Research only. Live frozen.
+
+## 2d / 3d stacked I recut (follow-on)
+
+_Generated 2026-09-08 · tip `c2537d95` · **research cards only** · live `flatten_robust` frozen · family **null**._
+
+Primary labels are HI_HORIZON `I_sum` 2d and 3d (compound daily I). Same-day H is baseline only. Same expand panel as #150/#151 (5193 names, 2018-09-04 → 2026-09-04).
+
+**Cyrus (visual):** Deep green/red look predictive because the loudest paints are same-row outcome color: Excel CF paints H>5% `#95CA82` and H>0 pale `#DCEDD5` (I>3% mint) after the close — that is H/I itself, not an open forecast; the one open-knowable mid-green (M `#95CA82` from yesterday's H × IY) is not that paint.
+
+| field | value |
+|---|---|
+| family | **null** |
+| panel | 5193 names / 8,543,587 name-days |
+| live | frozen (`flatten_robust`) |
+
+| recipe | label | holdout | vs book | vs parent | verdict |
+|---|---|---|---|---|---|
+| `M_ge15` | I_sum@2d | -0.08% (n=318151) | -0.29 pp | +0.00 pp | **KILL** |
+| `M_green` | I_sum@2d | -0.08% (n=318151) | -0.29 pp | — | **KILL** |
+| `M_hex_95CA82` | I_sum@2d | -0.08% (n=318151) | -0.29 pp | +0.00 pp | **KILL** |
+| `M_onset_hex_95CA82` | I_sum@2d | -0.13% (n=249061) | -0.34 pp | -0.05 pp | **KILL** |
+| `M_ge15` | I_sum@3d | -0.06% (n=318145) | -0.41 pp | +0.00 pp | **KILL** |
+| `M_green` | I_sum@3d | -0.06% (n=318145) | -0.41 pp | — | **KILL** |
+| `M_hex_95CA82` | I_sum@3d | -0.06% (n=318145) | -0.41 pp | +0.00 pp | **KILL** |
+| `M_onset_hex_95CA82` | I_sum@3d | -0.15% (n=249056) | -0.51 pp | -0.09 pp | **KILL** |
+
+Status: retired research · not live. Must beat any-green parent on the same letter, not just the book.
