@@ -1,0 +1,972 @@
+{
+  "generated": "2026-09-08",
+  "tip_sha": "e6fa4e33",
+  "live_untouched": "flatten_robust",
+  "leak": "PASS",
+  "sleeves": {
+    "join_top8": {
+      "n_days": 16,
+      "recipes": {
+        "avoid_FQ": {
+          "n_fires": 5,
+          "n_wins": 2,
+          "n_ties": 0,
+          "n_losses": 3,
+          "win_rate": 0.4,
+          "win_rate_ex_tie": 0.4,
+          "clears_55": false,
+          "prints_55": false,
+          "bar": 0.55,
+          "min_fires": 30,
+          "label": "net",
+          "verdict": "FAIL",
+          "hit_h": {
+            "n": 128,
+            "hit": 0.4375,
+            "n_pos": 56
+          },
+          "hit_i": {
+            "n": 0,
+            "hit": null,
+            "n_pos": 0
+          }
+        },
+        "avoid_ER_p1": {
+          "n_fires": 3,
+          "n_wins": 2,
+          "n_ties": 0,
+          "n_losses": 1,
+          "win_rate": 0.6666666666666666,
+          "win_rate_ex_tie": 0.6666666666666666,
+          "clears_55": false,
+          "prints_55": true,
+          "bar": 0.55,
+          "min_fires": 30,
+          "label": "net",
+          "verdict": "PROVISIONAL",
+          "hit_h": {
+            "n": 128,
+            "hit": 0.4453125,
+            "n_pos": 57
+          },
+          "hit_i": {
+            "n": 0,
+            "hit": null,
+            "n_pos": 0
+          }
+        },
+        "avoid_EP_ge03": {
+          "n_fires": 3,
+          "n_wins": 2,
+          "n_ties": 0,
+          "n_losses": 1,
+          "win_rate": 0.6666666666666666,
+          "win_rate_ex_tie": 0.6666666666666666,
+          "clears_55": false,
+          "prints_55": true,
+          "bar": 0.55,
+          "min_fires": 30,
+          "label": "net",
+          "verdict": "PROVISIONAL",
+          "hit_h": {
+            "n": 128,
+            "hit": 0.4296875,
+            "n_pos": 55
+          },
+          "hit_i": {
+            "n": 0,
+            "hit": null,
+            "n_pos": 0
+          }
+        },
+        "avoid_AH_ge1": {
+          "n_fires": 3,
+          "n_wins": 2,
+          "n_ties": 0,
+          "n_losses": 1,
+          "win_rate": 0.6666666666666666,
+          "win_rate_ex_tie": 0.6666666666666666,
+          "clears_55": false,
+          "prints_55": true,
+          "bar": 0.55,
+          "min_fires": 30,
+          "label": "net",
+          "verdict": "PROVISIONAL",
+          "hit_h": {
+            "n": 128,
+            "hit": 0.4296875,
+            "n_pos": 55
+          },
+          "hit_i": {
+            "n": 0,
+            "hit": null,
+            "n_pos": 0
+          }
+        },
+        "elev_cap2_lag_hammer": {
+          "n_fires": 10,
+          "n_wins": 5,
+          "n_ties": 0,
+          "n_losses": 5,
+          "win_rate": 0.5,
+          "win_rate_ex_tie": 0.5,
+          "clears_55": false,
+          "prints_55": false,
+          "bar": 0.55,
+          "min_fires": 30,
+          "label": "net",
+          "verdict": "FAIL",
+          "hit_h": {
+            "n": 121,
+            "hit": 0.4380165289256198,
+            "n_pos": 53
+          },
+          "hit_i": {
+            "n": 0,
+            "hit": null,
+            "n_pos": 0
+          }
+        },
+        "elev_cap2_FR_ge1": {
+          "n_fires": 12,
+          "n_wins": 3,
+          "n_ties": 0,
+          "n_losses": 9,
+          "win_rate": 0.25,
+          "win_rate_ex_tie": 0.25,
+          "clears_55": false,
+          "prints_55": false,
+          "bar": 0.55,
+          "min_fires": 30,
+          "label": "net",
+          "verdict": "FAIL",
+          "hit_h": {
+            "n": 128,
+            "hit": 0.4375,
+            "n_pos": 56
+          },
+          "hit_i": {
+            "n": 0,
+            "hit": null,
+            "n_pos": 0
+          }
+        }
+      }
+    },
+    "green_pile_prior": {
+      "n_days": 16,
+      "recipes": {
+        "avoid_FQ": {
+          "n_fires": 8,
+          "n_wins": 2,
+          "n_ties": 0,
+          "n_losses": 6,
+          "win_rate": 0.25,
+          "win_rate_ex_tie": 0.25,
+          "clears_55": false,
+          "prints_55": false,
+          "bar": 0.55,
+          "min_fires": 30,
+          "label": "net",
+          "verdict": "FAIL",
+          "hit_h": {
+            "n": 128,
+            "hit": 0.46875,
+            "n_pos": 60
+          },
+          "hit_i": {
+            "n": 0,
+            "hit": null,
+            "n_pos": 0
+          }
+        },
+        "avoid_ER_p1": {
+          "n_fires": 1,
+          "n_wins": 0,
+          "n_ties": 0,
+          "n_losses": 1,
+          "win_rate": 0.0,
+          "win_rate_ex_tie": 0.0,
+          "clears_55": false,
+          "prints_55": false,
+          "bar": 0.55,
+          "min_fires": 30,
+          "label": "net",
+          "verdict": "FAIL",
+          "hit_h": {
+            "n": 128,
+            "hit": 0.484375,
+            "n_pos": 62
+          },
+          "hit_i": {
+            "n": 0,
+            "hit": null,
+            "n_pos": 0
+          }
+        },
+        "avoid_EP_ge03": {
+          "n_fires": 8,
+          "n_wins": 3,
+          "n_ties": 0,
+          "n_losses": 5,
+          "win_rate": 0.375,
+          "win_rate_ex_tie": 0.375,
+          "clears_55": false,
+          "prints_55": false,
+          "bar": 0.55,
+          "min_fires": 30,
+          "label": "net",
+          "verdict": "FAIL",
+          "hit_h": {
+            "n": 128,
+            "hit": 0.484375,
+            "n_pos": 62
+          },
+          "hit_i": {
+            "n": 0,
+            "hit": null,
+            "n_pos": 0
+          }
+        },
+        "avoid_AH_ge1": {
+          "n_fires": 2,
+          "n_wins": 2,
+          "n_ties": 0,
+          "n_losses": 0,
+          "win_rate": 1.0,
+          "win_rate_ex_tie": 1.0,
+          "clears_55": false,
+          "prints_55": true,
+          "bar": 0.55,
+          "min_fires": 30,
+          "label": "net",
+          "verdict": "PROVISIONAL",
+          "hit_h": {
+            "n": 128,
+            "hit": 0.5,
+            "n_pos": 64
+          },
+          "hit_i": {
+            "n": 0,
+            "hit": null,
+            "n_pos": 0
+          }
+        },
+        "elev_cap2_lag_hammer": {
+          "n_fires": 8,
+          "n_wins": 2,
+          "n_ties": 0,
+          "n_losses": 6,
+          "win_rate": 0.25,
+          "win_rate_ex_tie": 0.25,
+          "clears_55": false,
+          "prints_55": false,
+          "bar": 0.55,
+          "min_fires": 30,
+          "label": "net",
+          "verdict": "FAIL",
+          "hit_h": {
+            "n": 122,
+            "hit": 0.48360655737704916,
+            "n_pos": 59
+          },
+          "hit_i": {
+            "n": 0,
+            "hit": null,
+            "n_pos": 0
+          }
+        },
+        "elev_cap2_FR_ge1": {
+          "n_fires": 12,
+          "n_wins": 2,
+          "n_ties": 0,
+          "n_losses": 10,
+          "win_rate": 0.16666666666666666,
+          "win_rate_ex_tie": 0.16666666666666666,
+          "clears_55": false,
+          "prints_55": false,
+          "bar": 0.55,
+          "min_fires": 30,
+          "label": "net",
+          "verdict": "FAIL",
+          "hit_h": {
+            "n": 127,
+            "hit": 0.44881889763779526,
+            "n_pos": 57
+          },
+          "hit_i": {
+            "n": 0,
+            "hit": null,
+            "n_pos": 0
+          }
+        }
+      }
+    },
+    "weighted_book_1d_prior": {
+      "n_days": 16,
+      "recipes": {
+        "avoid_FQ": {
+          "n_fires": 5,
+          "n_wins": 2,
+          "n_ties": 0,
+          "n_losses": 3,
+          "win_rate": 0.4,
+          "win_rate_ex_tie": 0.4,
+          "clears_55": false,
+          "prints_55": false,
+          "bar": 0.55,
+          "min_fires": 30,
+          "label": "net",
+          "verdict": "FAIL",
+          "hit_h": {
+            "n": 118,
+            "hit": 0.3898305084745763,
+            "n_pos": 46
+          },
+          "hit_i": {
+            "n": 0,
+            "hit": null,
+            "n_pos": 0
+          }
+        },
+        "avoid_ER_p1": {
+          "n_fires": 2,
+          "n_wins": 1,
+          "n_ties": 0,
+          "n_losses": 1,
+          "win_rate": 0.5,
+          "win_rate_ex_tie": 0.5,
+          "clears_55": false,
+          "prints_55": false,
+          "bar": 0.55,
+          "min_fires": 30,
+          "label": "net",
+          "verdict": "FAIL",
+          "hit_h": {
+            "n": 119,
+            "hit": 0.3949579831932773,
+            "n_pos": 47
+          },
+          "hit_i": {
+            "n": 0,
+            "hit": null,
+            "n_pos": 0
+          }
+        },
+        "avoid_EP_ge03": {
+          "n_fires": 8,
+          "n_wins": 3,
+          "n_ties": 0,
+          "n_losses": 5,
+          "win_rate": 0.375,
+          "win_rate_ex_tie": 0.375,
+          "clears_55": false,
+          "prints_55": false,
+          "bar": 0.55,
+          "min_fires": 30,
+          "label": "net",
+          "verdict": "FAIL",
+          "hit_h": {
+            "n": 118,
+            "hit": 0.3813559322033898,
+            "n_pos": 45
+          },
+          "hit_i": {
+            "n": 0,
+            "hit": null,
+            "n_pos": 0
+          }
+        },
+        "avoid_AH_ge1": {
+          "n_fires": 3,
+          "n_wins": 3,
+          "n_ties": 0,
+          "n_losses": 0,
+          "win_rate": 1.0,
+          "win_rate_ex_tie": 1.0,
+          "clears_55": false,
+          "prints_55": true,
+          "bar": 0.55,
+          "min_fires": 30,
+          "label": "net",
+          "verdict": "PROVISIONAL",
+          "hit_h": {
+            "n": 120,
+            "hit": 0.4083333333333333,
+            "n_pos": 49
+          },
+          "hit_i": {
+            "n": 0,
+            "hit": null,
+            "n_pos": 0
+          }
+        },
+        "elev_cap2_lag_hammer": {
+          "n_fires": 6,
+          "n_wins": 3,
+          "n_ties": 0,
+          "n_losses": 3,
+          "win_rate": 0.5,
+          "win_rate_ex_tie": 0.5,
+          "clears_55": false,
+          "prints_55": false,
+          "bar": 0.55,
+          "min_fires": 30,
+          "label": "net",
+          "verdict": "FAIL",
+          "hit_h": {
+            "n": 115,
+            "hit": 0.4,
+            "n_pos": 46
+          },
+          "hit_i": {
+            "n": 0,
+            "hit": null,
+            "n_pos": 0
+          }
+        },
+        "elev_cap2_FR_ge1": {
+          "n_fires": 11,
+          "n_wins": 5,
+          "n_ties": 0,
+          "n_losses": 6,
+          "win_rate": 0.45454545454545453,
+          "win_rate_ex_tie": 0.45454545454545453,
+          "clears_55": false,
+          "prints_55": false,
+          "bar": 0.55,
+          "min_fires": 30,
+          "label": "net",
+          "verdict": "FAIL",
+          "hit_h": {
+            "n": 118,
+            "hit": 0.3898305084745763,
+            "n_pos": 46
+          },
+          "hit_i": {
+            "n": 0,
+            "hit": null,
+            "n_pos": 0
+          }
+        }
+      }
+    },
+    "flatten_robust": {
+      "n_tickets": 30,
+      "recipes": {
+        "avoid_FQ": {
+          "n_fires": 2,
+          "n_wins": 1,
+          "n_ties": 0,
+          "n_losses": 1,
+          "win_rate": 0.5,
+          "win_rate_ex_tie": 0.5,
+          "clears_55": false,
+          "prints_55": false,
+          "bar": 0.55,
+          "min_fires": 30,
+          "label": "net",
+          "verdict": "FAIL",
+          "hit_h": {
+            "n": 20,
+            "hit": 0.4,
+            "n_pos": 8
+          },
+          "hit_i": {
+            "n": 0,
+            "hit": null,
+            "n_pos": 0
+          }
+        },
+        "avoid_ER_p1": {
+          "n_fires": 2,
+          "n_wins": 0,
+          "n_ties": 0,
+          "n_losses": 2,
+          "win_rate": 0.0,
+          "win_rate_ex_tie": 0.0,
+          "clears_55": false,
+          "prints_55": false,
+          "bar": 0.55,
+          "min_fires": 30,
+          "label": "net",
+          "verdict": "FAIL",
+          "hit_h": {
+            "n": 26,
+            "hit": 0.46153846153846156,
+            "n_pos": 12
+          },
+          "hit_i": {
+            "n": 0,
+            "hit": null,
+            "n_pos": 0
+          }
+        },
+        "avoid_EP_ge03": {
+          "n_fires": 3,
+          "n_wins": 1,
+          "n_ties": 0,
+          "n_losses": 2,
+          "win_rate": 0.3333333333333333,
+          "win_rate_ex_tie": 0.3333333333333333,
+          "clears_55": false,
+          "prints_55": false,
+          "bar": 0.55,
+          "min_fires": 30,
+          "label": "net",
+          "verdict": "FAIL",
+          "hit_h": {
+            "n": 19,
+            "hit": 0.42105263157894735,
+            "n_pos": 8
+          },
+          "hit_i": {
+            "n": 0,
+            "hit": null,
+            "n_pos": 0
+          }
+        },
+        "avoid_AH_ge1": {
+          "n_fires": 2,
+          "n_wins": 2,
+          "n_ties": 0,
+          "n_losses": 0,
+          "win_rate": 1.0,
+          "win_rate_ex_tie": 1.0,
+          "clears_55": false,
+          "prints_55": true,
+          "bar": 0.55,
+          "min_fires": 30,
+          "label": "net",
+          "verdict": "PROVISIONAL",
+          "hit_h": {
+            "n": 28,
+            "hit": 0.5,
+            "n_pos": 14
+          },
+          "hit_i": {
+            "n": 0,
+            "hit": null,
+            "n_pos": 0
+          }
+        },
+        "elev_cap2_lag_hammer": {
+          "n_fires": 0,
+          "n_wins": 0,
+          "n_ties": 0,
+          "n_losses": 0,
+          "win_rate": null,
+          "win_rate_ex_tie": null,
+          "clears_55": false,
+          "prints_55": false,
+          "bar": 0.55,
+          "min_fires": 30,
+          "label": "net",
+          "verdict": "null",
+          "hit_h": {
+            "n": 30,
+            "hit": 0.5,
+            "n_pos": 15
+          },
+          "hit_i": {
+            "n": 0,
+            "hit": null,
+            "n_pos": 0
+          }
+        },
+        "elev_cap2_FR_ge1": {
+          "n_fires": 0,
+          "n_wins": 0,
+          "n_ties": 0,
+          "n_losses": 0,
+          "win_rate": null,
+          "win_rate_ex_tie": null,
+          "clears_55": false,
+          "prints_55": false,
+          "bar": 0.55,
+          "min_fires": 30,
+          "label": "net",
+          "verdict": "null",
+          "hit_h": {
+            "n": 30,
+            "hit": 0.5,
+            "n_pos": 15
+          },
+          "hit_i": {
+            "n": 0,
+            "hit": null,
+            "n_pos": 0
+          }
+        }
+      },
+      "drops": {
+        "avoid_FQ": [
+          {
+            "date": "2026-08-20",
+            "dropped": [
+              "AG",
+              "CDE",
+              "HDSN",
+              "KGC",
+              "NFGC",
+              "WPM",
+              "AEM"
+            ],
+            "kept": [
+              "BHP",
+              "IAG",
+              "ABUS"
+            ],
+            "drop_ret": [
+              6.44,
+              5.2,
+              -2.18,
+              8.48,
+              0.8,
+              6.99,
+              5.75
+            ]
+          },
+          {
+            "date": "2026-08-21",
+            "dropped": [
+              "AU",
+              "AEM",
+              "ARCT"
+            ],
+            "kept": [
+              "AUPH",
+              "AUTL",
+              "CRDL",
+              "CRSP",
+              "CYPH",
+              "FUTU",
+              "GMAB"
+            ],
+            "drop_ret": [
+              -0.69,
+              -1.07,
+              23.4
+            ]
+          }
+        ],
+        "avoid_ER_p1": [
+          {
+            "date": "2026-08-20",
+            "dropped": [
+              "CDE",
+              "KGC"
+            ],
+            "kept": [
+              "AG",
+              "BHP",
+              "HDSN",
+              "IAG",
+              "NFGC",
+              "WPM",
+              "ABUS",
+              "AEM"
+            ],
+            "drop_ret": [
+              5.2,
+              8.48
+            ]
+          },
+          {
+            "date": "2026-08-21",
+            "dropped": [
+              "AU",
+              "ARCT"
+            ],
+            "kept": [
+              "AUPH",
+              "AEM",
+              "AUTL",
+              "CRDL",
+              "CRSP",
+              "CYPH",
+              "FUTU",
+              "GMAB"
+            ],
+            "drop_ret": [
+              -0.69,
+              23.4
+            ]
+          }
+        ],
+        "avoid_EP_ge03": [
+          {
+            "date": "2026-08-20",
+            "dropped": [
+              "AG",
+              "CDE",
+              "HDSN",
+              "KGC",
+              "WPM"
+            ],
+            "kept": [
+              "BHP",
+              "IAG",
+              "NFGC",
+              "ABUS",
+              "AEM"
+            ],
+            "drop_ret": [
+              6.44,
+              5.2,
+              -2.18,
+              8.48,
+              6.99
+            ]
+          },
+          {
+            "date": "2026-08-21",
+            "dropped": [
+              "AU",
+              "AEM",
+              "ARCT",
+              "CYPH",
+              "FUTU"
+            ],
+            "kept": [
+              "AUPH",
+              "AUTL",
+              "CRDL",
+              "CRSP",
+              "GMAB"
+            ],
+            "drop_ret": [
+              -0.69,
+              -1.07,
+              23.4,
+              25.3,
+              0.5
+            ]
+          },
+          {
+            "date": "2026-08-25",
+            "dropped": [
+              "RZLT"
+            ],
+            "kept": [
+              "MOS",
+              "OCUL",
+              "INSP",
+              "CRMD",
+              "HCA"
+            ],
+            "drop_ret": [
+              -8.3
+            ]
+          }
+        ],
+        "avoid_AH_ge1": [
+          {
+            "date": "2026-08-20",
+            "dropped": [
+              "HDSN"
+            ],
+            "kept": [
+              "AG",
+              "BHP",
+              "CDE",
+              "IAG",
+              "KGC",
+              "NFGC",
+              "WPM",
+              "ABUS",
+              "AEM"
+            ],
+            "drop_ret": [
+              -2.18
+            ]
+          },
+          {
+            "date": "2026-08-21",
+            "dropped": [
+              "FUTU"
+            ],
+            "kept": [
+              "AU",
+              "AUPH",
+              "AEM",
+              "ARCT",
+              "AUTL",
+              "CRDL",
+              "CRSP",
+              "CYPH",
+              "GMAB"
+            ],
+            "drop_ret": [
+              0.5
+            ]
+          }
+        ],
+        "elev_cap2_lag_hammer": [],
+        "elev_cap2_FR_ge1": []
+      }
+    }
+  },
+  "case": {
+    "date": "2026-09-04",
+    "join": {
+      "date": "2026-09-04",
+      "dropped": [
+        "HRMY",
+        "HALO",
+        "NU"
+      ],
+      "added": [
+        "COF",
+        "INCY",
+        "KRYS"
+      ],
+      "before": [
+        "HRMY",
+        "HALO",
+        "CDNA",
+        "WAY",
+        "PLMR",
+        "ONC",
+        "KKR",
+        "NU"
+      ],
+      "after": [
+        "CDNA",
+        "WAY",
+        "PLMR",
+        "ONC",
+        "KKR",
+        "COF",
+        "INCY",
+        "KRYS"
+      ]
+    },
+    "green": {
+      "date": "2026-09-04",
+      "dropped": [
+        "HRMY",
+        "HALO"
+      ],
+      "added": [
+        "PCRX",
+        "KNSA"
+      ],
+      "before": [
+        "EXEL",
+        "HRMY",
+        "CDNA",
+        "ZVRA",
+        "LIVN",
+        "BLFS",
+        "CRMD",
+        "HALO"
+      ],
+      "after": [
+        "EXEL",
+        "CDNA",
+        "ZVRA",
+        "LIVN",
+        "BLFS",
+        "CRMD",
+        "PCRX",
+        "KNSA"
+      ]
+    },
+    "weighted": {
+      "date": "2026-09-04",
+      "dropped": [
+        "CEG",
+        "VAL"
+      ],
+      "added": [],
+      "before": [
+        "AVGO",
+        "HPE",
+        "CEG",
+        "ADM",
+        "VFF",
+        "VEEV",
+        "VAL",
+        "WAY"
+      ],
+      "after": [
+        "AVGO",
+        "HPE",
+        "ADM",
+        "VFF",
+        "VEEV",
+        "WAY"
+      ]
+    },
+    "flatten": null,
+    "notes": {
+      "HRMY": {
+        "FQ": true,
+        "H_l1": 0.037521181312030916,
+        "df": "Bullish Belt Hold",
+        "h": -0.024900000000000002
+      },
+      "HALO": {
+        "FQ": true,
+        "H_l1": 0.03609221466364317,
+        "df": "Bullish Big White Candle",
+        "h": 0.0084
+      },
+      "NU": {
+        "FQ": true,
+        "H_l1": 0.06060606060606066,
+        "df": "Bullish Big White Candle",
+        "h": 0.0006
+      },
+      "COF": {
+        "FQ": false,
+        "H_l1": 0.02300099182921648,
+        "df": "Bullish Belt Hold",
+        "h": 0.0060999999999999995
+      },
+      "INCY": {
+        "FQ": false,
+        "H_l1": 0.018982836352131657,
+        "df": "None",
+        "h": -0.0129
+      },
+      "KRYS": {
+        "FQ": false,
+        "H_l1": 0.008825136612021908,
+        "df": "Bullish Spinning Top",
+        "h": 0.0002
+      },
+      "CDNA": {
+        "FQ": false,
+        "H_l1": 0.0010090817356206714,
+        "df": "Bullish Doji",
+        "h": 0.0022
+      },
+      "WAY": {
+        "FQ": false,
+        "H_l1": -0.0034870205346764767,
+        "df": "Bullish Doji",
+        "h": -0.0023
+      },
+      "PLMR": {
+        "FQ": false,
+        "H_l1": 0.0019717882602759812,
+        "df": "Bullish Inverted Hammer",
+        "h": 0.0218
+      },
+      "ONC": {
+        "FQ": false,
+        "H_l1": -0.008794761500315176,
+        "df": "None",
+        "h": 0.003
+      },
+      "KKR": {
+        "FQ": false,
+        "H_l1": 0.0019770288081341365,
+        "df": "Bullish Doji",
+        "h": 0.0242
+      }
+    }
+  }
+}

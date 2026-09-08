@@ -86,11 +86,12 @@ def test_open_features_ignore_today_hlc():
 
 
 def test_no_flatten_import():
-    path = os.path.join(HERE, "excel_open_gates.py")
-    text = open(path, encoding="utf-8").read()
-    assert "flatten_robust" in text
-    assert "from flatten" not in text
-    assert "import flatten" not in text
+    for fname in ("excel_open_gates.py", "excel_open_gates_sleeves.py"):
+        path = os.path.join(HERE, fname)
+        text = open(path, encoding="utf-8").read()
+        assert "flatten_robust" in text
+        assert "from flatten" not in text
+        assert "import flatten" not in text
 
 
 def test_fire_floor_still_30():
