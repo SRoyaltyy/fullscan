@@ -191,13 +191,22 @@ clean_to_local() {
   git reset --hard "$LOCAL" >/dev/null 2>&1 || true
 }
 
+restore_unstaged() {
+  # Pop, do not drop. `stash push -u` + `stash drop` after the 01:58
+  # digest land deleted the untracked Elite export
+  # (finviz_2026-09-09.csv, 11MB / 11610 lines). The same drop would
+  # erase 06:10 membership before join. Pop restores untracked files
+  # to the work tree without adding them to this commit.
+  git stash pop >/dev/null 2>&1 || git stash drop >/dev/null 2>&1 || true
+}
+
 try_rebase() {
   git fetch origin main || return 1
   # Unstaged leftover files on the self-hosted work tree (clean:false)
   # made run #7 rebase abort and then dump 60 extra files. Stash them.
   git stash push --keep-index -u -m "safe-push-unstaged" >/dev/null 2>&1 || true
   if git rebase origin/main; then
-    git stash drop >/dev/null 2>&1 || true
+    restore_unstaged
     return 0
   fi
   echo "[safe-push] rebase conflict — keeping our 01_daily + dated ranker, merging scoreboard"
@@ -209,12 +218,12 @@ try_rebase() {
   resolve_unmerged
   git add 01_daily 02_lessons 03_scoreboard "${RANKER_PATHS[@]}" "${DASHBOARD_PATHS[@]}" 2>/dev/null || git add -A
   if GIT_EDITOR=true git rebase --continue; then
-    git stash drop >/dev/null 2>&1 || true
+    restore_unstaged
     return 0
   fi
   echo "[safe-push] rebase --continue failed; aborting back to LOCAL"
   git rebase --abort >/dev/null 2>&1 || true
-  git stash drop >/dev/null 2>&1 || true
+  restore_unstaged
   clean_to_local
   return 1
 }
@@ -230,7 +239,7 @@ try_merge() {
     if ! git diff --staged --quiet; then
       git commit -m "merge main (scoreboard union)" || true
     fi
-    git stash drop >/dev/null 2>&1 || true
+    restore_unstaged
     return 0
   fi
   echo "[safe-push] merge conflict — ours daily + dated ranker; main dashboard"
@@ -242,12 +251,12 @@ try_merge() {
   resolve_unmerged
   git add 01_daily 02_lessons 03_scoreboard "${RANKER_PATHS[@]}" "${DASHBOARD_PATHS[@]}" 2>/dev/null || git add -A
   if git commit -m "merge main (ours daily + merged scoreboard)"; then
-    git stash drop >/dev/null 2>&1 || true
+    restore_unstaged
     return 0
   fi
   echo "[safe-push] merge commit failed — packet files stay on LOCAL; dashboard dropped"
   git merge --abort >/dev/null 2>&1 || true
-  git stash drop >/dev/null 2>&1 || true
+  restore_unstaged
   clean_to_local
   return 1
 }

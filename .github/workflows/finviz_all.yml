@@ -153,6 +153,15 @@ jobs:
           ls -la data/exports/finviz_*.csv 2>/dev/null | tail -5 || true
           wc -l "$DEST" data/finviz/latest.csv 2>/dev/null || true
 
+      - name: Land Elite export before digest
+        if: always()
+        run: |
+          # Digest land used to stash -u / drop this 11MB file.
+          bash scripts/safe_git_push.sh \
+            "auto: land finviz export [${DATE}]" \
+            "data/exports/finviz_${DATE}.csv" data/finviz/latest.csv \
+            || echo "[export] land failed — leftover commit may still catch it"
+
       - name: Finviz daily digest --force
         env:
           FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}

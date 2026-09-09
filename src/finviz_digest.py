@@ -454,7 +454,13 @@ def main() -> None:
     print(inject_block(report["date"])[:1200])
     try:
         from . import land_file
-        land_file.land(report["date"], "finviz_digest", title="Finviz digest")
+        # Land the Elite export in the same push. A later overlay land
+        # used to `stash -u` + drop and erase the untracked CSV.
+        d = report["date"]
+        land_file.land(d, "finviz_digest", title="Finviz digest", extra_paths=[
+            ROOT / "data" / "exports" / f"finviz_{d}.csv",
+            ROOT / "data" / "finviz" / "latest.csv",
+        ])
     except Exception as e:  # noqa: BLE001
         print(f"[finviz_digest] WARN: land failed: {e}")
 

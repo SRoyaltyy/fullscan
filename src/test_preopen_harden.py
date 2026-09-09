@@ -122,8 +122,10 @@ def test_incremental_land_hooks() -> None:
         encoding="utf-8")
     assert "FULLSCAN_LAND" in scrape
     assert "src.finviz_digest --date $DATE --force" in scrape
+    assert "collectors.finviz_financials" in scrape
     digest = (ROOT / "src" / "finviz_digest.py").read_text(encoding="utf-8")
     assert "land_file.land" in digest
+    assert "finviz_{d}.csv" in digest or "finviz_{" in digest
     assert "existing_digest_is_morning_ok" in digest
     assert "weather_stamped_before_open" in digest
     fin_all = (ROOT / ".github" / "workflows" / "finviz_all.yml").read_text(
