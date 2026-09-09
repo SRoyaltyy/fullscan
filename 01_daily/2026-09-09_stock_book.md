@@ -1,6 +1,6 @@
 # Stock book — 2026-09-09
 
-_Generated 2026-09-09T06:25:59.612178-04:00_
+_Generated 2026-09-09T06:45:33.035015-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -251,7 +251,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
 | join × weather | 0.15 | +0.90 | +0.131 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | -0.08 | -0.000 | same-day sector LLM, 0 if that file is missing |
+| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.30 | +0.61 | +0.185 | headlines + news-judge ticker tilts |
 | AB checklist | 0.30 | +0.94 | +0.287 | structure + P01–P04 peer/industry/sector |
@@ -269,7 +269,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
 | join × weather | 0.15 | +0.32 | +0.047 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| sector predict | 0.00 | -0.20 | -0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.30 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
 | AB checklist | 0.30 | +0.96 | +0.294 | structure + P01–P04 peer/industry/sector |
@@ -287,7 +287,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
 | join × weather | 0.15 | +0.47 | +0.068 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| sector predict | 0.00 | -0.20 | -0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.30 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
 | AB checklist | 0.30 | +0.93 | +0.282 | structure + P01–P04 peer/industry/sector |
@@ -409,7 +409,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
 | join × weather | 0.31 | +0.90 | +0.274 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | -0.08 | -0.000 | same-day sector LLM, 0 if that file is missing |
+| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
 | AB checklist | 0.42 | +0.93 | +0.386 | structure + P01–P04 peer/industry/sector |
@@ -427,7 +427,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
 | join × weather | 0.31 | +0.99 | +0.302 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| sector predict | 0.00 | -0.08 | -0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
 | AB checklist | 0.42 | +0.93 | +0.386 | structure + P01–P04 peer/industry/sector |
@@ -445,7 +445,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
 | join × weather | 0.31 | +0.84 | +0.256 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | -0.08 | -0.000 | same-day sector LLM, 0 if that file is missing |
+| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
 | AB checklist | 0.42 | +0.94 | +0.392 | structure + P01–P04 peer/industry/sector |
@@ -463,7 +463,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
 | join × weather | 0.31 | +0.70 | +0.215 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| sector predict | 0.00 | -0.20 | -0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
 | AB checklist | 0.42 | +0.81 | +0.337 | structure + P01–P04 peer/industry/sector |
@@ -481,7 +481,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
 | join × weather | 0.31 | +0.56 | +0.173 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| sector predict | 0.00 | -0.20 | -0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
 | AB checklist | 0.42 | +0.97 | +0.405 | structure + P01–P04 peer/industry/sector |
@@ -499,7 +499,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
 | join × weather | 0.31 | +0.66 | +0.201 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | -0.08 | -0.000 | same-day sector LLM, 0 if that file is missing |
+| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
 | AB checklist | 0.42 | +0.76 | +0.317 | structure + P01–P04 peer/industry/sector |
@@ -517,7 +517,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
 | join × weather | 0.31 | +0.47 | +0.142 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| sector predict | 0.00 | -0.20 | -0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
 | AB checklist | 0.42 | +0.93 | +0.386 | structure + P01–P04 peer/industry/sector |
@@ -535,7 +535,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
 | join × weather | 0.31 | +0.59 | +0.179 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | -0.08 | -0.000 | same-day sector LLM, 0 if that file is missing |
+| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
 | AB checklist | 0.42 | +0.93 | +0.386 | structure + P01–P04 peer/industry/sector |
@@ -553,7 +553,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
 | join × weather | 0.31 | +0.80 | +0.244 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| sector predict | 0.00 | -0.20 | -0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
 | AB checklist | 0.42 | +0.85 | +0.353 | structure + P01–P04 peer/industry/sector |
@@ -571,7 +571,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
 | join × weather | 0.31 | +0.98 | +0.299 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| sector predict | 0.00 | -0.08 | -0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
 | AB checklist | 0.42 | +0.93 | +0.386 | structure + P01–P04 peer/industry/sector |
@@ -589,7 +589,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
 | join × weather | 0.31 | +0.61 | +0.186 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| sector predict | 0.00 | +0.20 | +0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
 | AB checklist | 0.42 | +0.96 | +0.402 | structure + P01–P04 peer/industry/sector |
@@ -625,7 +625,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
 | join × weather | 0.31 | +0.98 | +0.301 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| sector predict | 0.00 | -0.08 | -0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
 | AB checklist | 0.42 | +0.93 | +0.386 | structure + P01–P04 peer/industry/sector |
@@ -661,7 +661,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
 | join × weather | 0.31 | +0.99 | +0.302 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| sector predict | 0.00 | -0.08 | -0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.31 | +0.000 | headlines + news-judge ticker tilts |
 | AB checklist | 0.42 | +0.88 | +0.367 | structure + P01–P04 peer/industry/sector |
@@ -697,7 +697,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
 | join × weather | 0.31 | +0.60 | +0.183 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| sector predict | 0.00 | +0.20 | +0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
 | AB checklist | 0.42 | +0.70 | +0.293 | structure + P01–P04 peer/industry/sector |
@@ -715,7 +715,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
 | join × weather | 0.31 | +0.74 | +0.225 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| sector predict | 0.00 | +0.20 | +0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
 | AB checklist | 0.42 | +0.97 | +0.405 | structure + P01–P04 peer/industry/sector |
@@ -733,7 +733,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
 | join × weather | 0.31 | +0.37 | +0.112 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| sector predict | 0.00 | -0.20 | -0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
 | AB checklist | 0.42 | +0.91 | +0.377 | structure + P01–P04 peer/industry/sector |
@@ -751,7 +751,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
 | join × weather | 0.31 | +0.25 | +0.075 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| sector predict | 0.00 | +0.20 | +0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
 | AB checklist | 0.42 | +0.96 | +0.402 | structure + P01–P04 peer/industry/sector |
@@ -769,7 +769,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
 | join × weather | 0.31 | +0.16 | +0.050 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| sector predict | 0.00 | -0.20 | -0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
 | AB checklist | 0.42 | +0.95 | +0.398 | structure + P01–P04 peer/industry/sector |
@@ -787,7 +787,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
 | join × weather | 0.31 | +0.62 | +0.189 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| sector predict | 0.00 | -0.20 | -0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
 | AB checklist | 0.42 | +0.81 | +0.337 | structure + P01–P04 peer/industry/sector |
@@ -823,7 +823,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
 | join × weather | 0.31 | +0.37 | +0.112 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| sector predict | 0.00 | +0.20 | +0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
 | AB checklist | 0.42 | +0.85 | +0.353 | structure + P01–P04 peer/industry/sector |
