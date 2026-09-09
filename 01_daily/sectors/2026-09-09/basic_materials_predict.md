@@ -11,55 +11,84 @@
 ## Channel 1 sector ETF tape
 
 ```
-ETF XLB vs SPY (yfinance, through 2026-09-08):
-  1d: XLB -0.95% | SPY -0.55% | rel -0.40%
-  3d: XLB -1.91% | SPY +0.10% | rel -2.01%
-  1w: XLB -1.42% | SPY -0.14% | rel -1.28%
-  1m: XLB -1.74% | SPY -0.94% | rel -0.80%
+ETF XLB vs SPY (yfinance, through 2026-09-09):
+  1d: XLB -0.27% | SPY -0.27% | rel -0.00%
+  3d: XLB -1.56% | SPY -1.20% | rel -0.36%
+  1w: XLB -0.52% | SPY +0.28% | rel -0.80%
+  1m: XLB -2.59% | SPY -1.18% | rel -1.42%
 ```
 
-I have enough context. Let me synthesize the analysis. Today is 2026-09-09 (Wednesday), a follow-through session after the 09-08 Hormuz/oil risk-off shock. Key facts:
+This is a critical development. The searches reveal that **today (09-09) is a FRESH kinetic escalation day**: Brent has broken above **$100** on fresh US strikes on Iranian tankers near Hormuz. This is NOT leftover — it's a fresh, escalating supply shock. This is the 8/18 setup: oil spiking into equity risk-off, metals co-moving down with equities (copper falling from record highs on Mideast worries), and the chemicals-heavy XLB book facing an oil cost squeeze.
 
-- **Channel 1 tape through 09-08**: 1d XLB −0.95% / SPY −0.55% / rel −0.40%; 3d rel −2.01%; 1w rel −1.28%; 1m rel −0.80%. Decisively negative across all timeframes.
-- **09-08 was a risk-off Hormuz/oil shock** (WTI +3.18% to $94.4, Brent +2.16% to $99.1 near $100). Copper hit records but XLB fell −0.95% because the chemicals-heavy book (LIN/SHW/ECL ~40-50%) was dragged by oil cost squeeze while copper miners (FCX ~10-15%) couldn't offset.
-- **CPI is Friday 09-11** (not today). Today 09-09 has no 8:30 high-impact print.
-- **Gold ~$4,400** (fading on hawkish Fed), silver ~$66 (steady). Copper ~$6.69-6.77 (firm/records).
-- **Hormuz/oil still elevated** (~$96 Brent) — the geopolitical overlay persists.
-- **China**: August NBS mfg PMI 49.8 (still <50), construction 46.9 — contraction persists.
+This changes the frame substantially from the prior-day predict (which treated Hormuz as T-1). Let me finalize the analysis.
+
+Key facts for today (09-09):
+- **Brent >$100** on fresh US strikes on Iranian tankers near Hormuz — **fresh kinetic escalation TODAY**
+- **US index futures gap-down** (Dow/S&P/Nasdaq futures slip)
+- **Copper falling from record highs** on Mideast worries (metals co-moving down with equities — 8/18 pattern firing)
+- **Gold below $4,350** (sliding on hawkish Fed + risk-off)
+- **China**: August NBS mfg PMI 49.8 (still <50), construction 46.9 — contraction persists
+- **XLB tape**: 1d rel −0.00%, 3d −0.36%, 1w −0.80%, 1m −1.42% — decisively negative medium-term
+- **Chemicals** (LIN/SHW/ECL ~40-50% of XLB) face direct oil-cost headwind
+- **APD** beat/raised (single-name positive, already traded)
+- **CPI Friday 09-11** (not today)
+
+This is the **8/18 metals-co-move floor ban** firing cleanly: oil spiking >$100 on Hormuz into equity risk-off, copper and gold co-moving DOWN with equities. The 09-08 composition lesson also applies: chemicals majority sleeve faces oil cost drag.
 
 Let me write the analysis.
 
-MEMORY_CONFIRM: Sector Basic Materials / XLB only. Rolling last-10 dir=0.5 mag=0.7 (n=10); last graded 2026-09-08 flat/flat vs XLB −0.95% / SPY −0.55% / rel −0.40% (dir MISS, mag MISS). Memory index unavailable this run — used injected scoreboard/lessons only. Active XLB rules checked: **8/18 metals-as-floor** (oil spiking on Hormuz into equity risk-off — do NOT use copper/gold as a floor); **8/14 gold-offset** (gold is NOT green — fading ~$4,400); **8/25 composition/transmission** (chemicals-heavy book); **8/27 S4-cap** (1d rel −0.40% <0.5% → S4 cannot be ± confirmation); **8/28 leftover-S2/S4 down-mandate** (S0/S1 live, not net-zero); **09-03 exhaustion-bounce** (sector in mean-reversion chop, 1w rel still negative); **09-04 T-1-lag** (do not copy prior-day lag into S4); **09-08 composition-weighting** (chemicals ~40-50% of XLB vs copper miners ~10-15% — a minority-sleeve copper positive cannot offset a majority-sleeve chemicals cost headwind). No open experiment for `sector_basic_materials`. DO-INSTEAD: prefer flat/mild when score sign conflicts with tape/breadth.
+---
+
+# Sector Prediction — Basic Materials — 2026-09-09
+
+- ETF: **XLB**
+- predicted_direction: **down**
+- predicted_magnitude_band: **mild**
+- total_score: **-4.5** (mult 0.9)
+- regime: risk_off
+- divergence_flagged: **False**
+
+## Channel 1 sector ETF tape
+
+```
+ETF XLB vs SPY (yfinance, through 2026-09-09):
+  1d: XLB -0.27% | SPY -0.27% | rel -0.00%
+  3d: XLB -1.56% | SPY -1.20% | rel -0.36%
+  1w: XLB -0.52% | SPY +0.28% | rel -0.80%
+  1m: XLB -2.59% | SPY -1.18% | rel -1.42%
+```
+
+MEMORY_CONFIRM: Sector Basic Materials / XLB only. Rolling last-10 dir=0.5 mag=0.7 (n=10); last graded 2026-09-08 flat/flat vs XLB −0.95% / SPY −0.55% / rel −0.40% (dir MISS, mag MISS). Memory index unavailable this run — used injected scoreboard/lessons only. Active XLB rules checked: **8/18 metals-as-floor is the BINDING rule** — oil spiking >$100 on fresh Hormuz escalation into equity risk-off, copper and gold co-moving DOWN with equities (do NOT use metals as a floor); **8/14 gold-offset OFF** (gold below $4,350, sliding on hawkish Fed); **8/25 composition/transmission** (chemicals-heavy book); **8/27 S4-cap** (1d rel −0.00% <0.5% → S4 cannot be ± confirmation); **8/28 leftover-S2/S4 down-mandate OFF** (S0/S1 live-negative, not net-zero); **09-03 exhaustion-bounce** (sector in mean-reversion chop, 1w rel still negative); **09-04 T-1-lag** (do not copy prior-day lag into S4); **09-08 composition-weighting** (chemicals ~40-50% of XLB vs copper miners ~10-15% — a minority-sleeve copper positive cannot offset a majority-sleeve chemicals cost headwind). No open experiment for `sector_basic_materials`. DO-INSTEAD: prefer flat/mild when score sign conflicts with tape/breadth.
 
 ## Analysis — XLB, session of 2026-09-09
 
-This is a **Wednesday follow-through after Tuesday's Hormuz/oil risk-off shock**, not a copper-squeeze day and not a fresh kinetic escalation. Channel 1 tape through 09-08 is **decisively negative across all timeframes**: 1d rel **−0.40%**, 3d **−2.01%**, 1w **−1.28%**, 1m **−0.80%**. Tuesday's session was the live test of the 09-08 composition lesson: copper hit records (FCX +5.35%) but XLB fell **−0.95%** because the chemicals-heavy book (LIN/SHW/ECL ~40-50%) was dragged by the oil cost squeeze. That lesson is now **the binding frame** for today.
+This is a **Wednesday fresh kinetic escalation day**: Brent has broken above **$100** on fresh US strikes on Iranian tankers near the Strait of Hormuz. This is **NOT leftover** — it is a fresh, escalating supply shock that has driven US index futures to a **gap-down open** (Dow/S&P/Nasdaq futures all lower). This is the **8/18 metals-co-move floor ban firing cleanly**: oil spiking into equity risk-off, with copper and gold **co-moving DOWN with equities** rather than acting as a hedge.
 
 ### 1. Shared macro as it hits materials (S0)
 
-The Hormuz/oil overlay **persists** but is **not a fresh kinetic increment** today. Brent is still elevated (~$96, near $100) after Tuesday's +2.16% surge, but the escalation is now **T-1** — the shock has already transmitted through Tuesday's close. Per 09-04 T-1-lag, do not re-score Tuesday's oil spike as a fresh same-morning liquidation.
+The dominant live driver is the **fresh Hormuz/oil escalation**: Brent **>$100** (Reuters: "Brent crude oil rises above $100 a barrel as Middle East conflict intensifies"), WTI near $95+, on US strikes on IRGC-linked tankers. This is a **fresh kinetic increment TODAY**, not T-1. Broad equity tape is **decisively risk-off**: US index futures gap-down (Dow/S&P/Nasdaq all lower), Asia composite negative.
 
-The hawkish Fed backdrop persists: gold fading (~$4,400, down from the $4,600+ peak), silver steady ~$66, real yields elevated (10Y ~4.77%, 30Y ~5.25% stress zone). **CPI is Friday 09-11** — not today's 8:30. No high-impact print today.
+The hawkish Fed backdrop persists (gold below **$4,350**, sliding >3% on Warsh's Jackson Hole comments boosting Sep hike odds; real yields elevated). **CPI is Friday 09-11** — not today's 8:30. No high-impact print today, but the oil shock is the inflation driver.
 
-Offsets: copper is **firm** (~$6.69-6.77, at/near records on tariff/supply + AI data-center demand). USD is not spiking. But the equity tape is still digesting the oil shock and hawkish Fed.
+Per 8/18: on geopolitical/oil risk-off days, metals co-move with equities. **Copper is falling from record highs** on Mideast worries (Bloomberg: "Metals Fall From Record High in London as Mideast Tensions Flare"). Gold is sliding. The commodity bid is **not** acting as a floor — it is reversing with the tape.
 
-**S0 = −1.** Persistent Hormuz/oil + hawkish Fed + elevated real yields map negative to this cyclical. Not −2: no fresh kinetic increment, copper firm, CPI is 2 days out (not a same-morning binary), oil is not re-spiking today.
+**S0 = −1.** Fresh Hormuz/oil escalation >$100 + hawkish Fed + equity risk-off map negative to this cyclical. Not −2: copper is still near records (not a collapse), no same-morning China print, CPI is 2 days out.
 
 ### 2. Spine + secondary (S1)
 
-**Industrial metals — firm, at records.** Copper ~$6.69-6.77/lb, at/near records on tariff/supply + AI data-center demand. Spine "surge" is **partial HIT** — but per 09-08 composition-weighting, this is a **minority sleeve** (~10-15% copper miners in XLB).
+**Industrial metals — fading from records, not surging.** Copper is **falling from record highs** on Mideast worries (Bloomberg, Business Recorder). The record copper bid that supported XLB on 09-08 is **reversing** as the oil shock drags the complex down with equities. Spine "surge" is **off** (fading intraday). Spine "collapse" is **not** a clean HIT (still near records).
 
-**Chemicals — the dominant sleeve, still under oil-cost pressure.** LIN ~13%, SHW, ECL ~40-50% combined. Oil at ~$96 is a **direct feedstock/energy cost headwind** for processors. MAP HEAT Chemicals dir=down (DOW oil-cost drag outweighs HUN/REX positives). This is the **majority-sleeve negative** that dictates the ETF outcome.
+**Chemicals — the dominant sleeve, under direct oil-cost pressure.** LIN ~13%, SHW, ECL ~40-50% combined. Oil >$100 is a **direct feedstock/energy cost headwind** for processors. MAP HEAT Chemicals dir=down (DOW oil-cost drag outweighs HUN/REX positives). This is the **majority-sleeve negative** that dictates the ETF outcome. APD's beat/raise is a **single-name**, already traded (AD HOC: APD heads into open after 1.2% decline).
 
-**Monetary metals — fade.** Gold ~$4,400 (down from peak), silver ~$66 steady. 8/14 does not pay (gold not green). NEM/gold miners are the exposed sleeve.
+**Monetary metals — fade.** Gold below **$4,350** (sliding >3% on Warsh hawkish), silver steady-to-down. 8/14 does not pay (gold not green). NEM/gold miners are the exposed sleeve.
 
 **China demand — still the offset.** August NBS mfg PMI **49.8** (still <50), construction **46.9**. Still contractionary, not a rebound.
 
-**S1 = −1.** Chemicals oil-cost drag (majority sleeve) + China contraction + gold fade, net of copper firmness (minority sleeve). Per 09-08, the copper positive cannot offset the chemicals negative. Capped below −2: copper is genuinely firm, not a collapse.
+**S1 = −1.** Chemicals oil-cost drag (majority sleeve) + copper fading from records + China contraction + gold fade. Per 09-08 composition-weighting, the copper positive (now fading) cannot offset the chemicals negative. Capped below −2: copper still near records, not a collapse.
 
 ### 3. Breadth (S2)
 
-Compositional split persists: copper miners (FCX) firm on record copper, chemicals (LIN/SHW/ECL) under oil-cost pressure, gold miners (NEM) fade. Not a clean breadth expansion or failure. Per 8/28, do not copy yesterday's lag into S2. **S2 = 0.**
+Compositional split persists: copper miners (FCX) fading from record copper, chemicals (LIN/SHW/ECL) under oil-cost pressure, gold miners (NEM) sliding. Not a clean breadth expansion or failure. Per 8/28, do not copy yesterday's lag into S2. **S2 = 0.**
 
 ### 4. Flows / positioning (S3)
 
@@ -67,13 +96,11 @@ XLB mild outflows from prior logs (~−$180M 1m range). Not a washout, not a vol
 
 ### 5. Tape (S4, confirmation only)
 
-1d rel **−0.40%** is **sub-0.5%** — per 8/27 S4-cap, this cannot be a ± confirmation. It is a modest negative, not decisive. **S4 = 0.**
+1d rel **−0.00%** is **sub-0.5%** — per 8/27 S4-cap, this cannot be a ± confirmation. It is flat, not decisive. Per 09-04 T-1-lag, do not copy the prior-day −0.40% rel into S4.
 
 ### Reconciliation
 
-Total = (−1 + −1 + 0 + 0 + 0) × 0.9 = **−1.8** → **down/flat** to **down/mild**.
-
-Given the persistent Hormuz/oil overlay + hawkish Fed + chemicals cost drag (majority sleeve), direction is **down**. But magnitude is capped at **flat/mild** because: (a) copper is firm (minority sleeve buffer), (b) no fresh kinetic escalation today, (c) CPI is 2 days out, (d) 1d rel is only −0.40% (sub-threshold), (e) rolling mag discipline favors mild. I'll emit **down/flat** — the composition buffer (copper firm + chemicals not collapsing) prevents a notable decline, and the sub-0.5% tape does not confirm a decisive move.
+Total = (−1 + −1 + 0 + 0 + 0) × 0.9 = **−1.8** → **down/flat** to **down/mild**. Given the fresh Hormuz/oil escalation >$100 and the 8/18 metals-co-move pattern firing, I'll emit **down/mild** with the understanding that the chemicals-heavy book faces a direct oil-cost squeeze while copper/gold fade with the tape.
 
 SECTOR_SCORES_BEGIN
 S0_SHARED_MACRO: -1
@@ -86,22 +113,27 @@ CONFIDENCE: 0.55
 REGIME: risk_off
 TOTAL_SCORE: -1.8
 PREDICTED_DIRECTION: down
-PREDICTED_MAGNITUDE_BAND: flat
-HORIZON_3D: down:mild:0.5
-HORIZON_1W: down:mild:0.5
-HORIZON_2W: flat:mild:0.45
-HORIZON_1M: flat:mild:0.4
+PREDICTED_MAGNITUDE_BAND: mild
 SECTOR_SCORES_END
 
 HIT_GRID_BEGIN
-Risk-off tape / flight to safety|HIT|0.7|2026-09-09|Hormuz/oil overlay persists, hawkish Fed
-Real yields rising|HIT|0.6|2026-09-09|10Y ~4.77%, 30Y ~5.25% stress zone
-Industrial metal price surge (copper/aluminum/iron ore)|HIT|0.6|2026-09-09|Copper ~$6.69-6.77 at/near records
-China demand shock / property stress|HIT|0.6|2026-09-09|NBS mfg 49.8, construction 46.9 still contraction
-Margin compression / cost inflation without pricing power|HIT|0.6|2026-09-09|Oil ~$96 cost headwind for chemicals-heavy XLB
-Gold/silver price surge (monetary metals)|MISS|0.7|2026-09-09|Gold fading ~$4,400, not green
-Sector rotation out of materials|HIT|0.5|2026-09-09|Chemicals under oil-cost drag, 3d/1w rel negative
+Risk-off tape / flight to safety|HIT|0.8|2026-09-09|Brent >$100 on fresh US strikes on Iranian tankers near Hormuz; US index futures gap-down
+Real yields rising|HIT|0.7|2026-09-09|Gold below $4,350 sliding >3% on Warsh hawkish; Sep hike odds up
+Industrial metal price surge (copper/aluminum/iron ore)|MISS|0.6|2026-09-09|Copper fading from record highs on Mideast worries (Bloomberg)
+Gold/silver price surge (monetary metals)|MISS|0.7|2026-09-09|Gold below $4,350, sliding on hawkish Fed
+China demand shock / property stress|HIT|0.6|2026-09-09|August NBS mfg PMI 49.8 still <50, construction 46.9
+Margin compression / cost inflation without pricing power|HIT|0.6|2026-09-09|Oil >$100 is direct feedstock/energy cost headwind for chemicals (LIN/SHW/ECL ~40-50% of XLB)
+Sector rotation out of materials|HIT|0.5|2026-09-09|Chemicals-heavy book under oil-cost pressure; copper/gold fading with tape
 HIT_GRID_END
+
+HORIZON_3D: down/mild
+HORIZON_1W: down/mild
+HORIZON_2W: flat/mild
+HORIZON_1M: flat/mild
+
+---
+
+**Bottom line:** This is a **fresh Hormuz/oil escalation day** (Brent >$100 on US strikes on Iranian tankers), not leftover. The 8/18 metals-co-move floor ban fires cleanly: copper is fading from record highs and gold is sliding — the commodity bid is co-moving DOWN with equities, not acting as a floor. The chemicals-heavy XLB book (LIN/SHW/ECL ~40-50%) faces a direct oil-cost squeeze while the minority copper-miner sleeve fades. China contraction persists. Net: **down/mild**.
 
 ---
 ## Pipeline-computed decision (deterministic)

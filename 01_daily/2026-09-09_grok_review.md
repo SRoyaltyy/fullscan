@@ -2,9 +2,8 @@
 
 ok=False
 
-The day fails because three required core artifacts are missing: the general market predict, the news judge, and the news parse. While the events JSON, finviz digest, map-heat tables, and 10 of 11 sector predicts are present and appear to be real, same-day, and complete, the absence of these three core files means the packet is not a human-usable same-day artifact. The missing real_estate sector predict is noted but does not independently fail the day since 10 sector essays are present and quality-ok.
+The general predict, events JSON, news judge, finviz digest, map_heat tables, and all 11 sector predicts are present, same-day (2026-09-09), complete with required markers (SCORES_BEGIN, SECTOR_SCORES_BEGIN, HIT_GRID_BEGIN, etc.), and take clear directional stances. However, the day fails on two mandatory core requirements: (1) the news_parse JSON file is entirely missing, and (2) the research.md file, which claims a morning_refresh phase, explicitly states it failed QC due to a subprocess timeout and reused prior data without re-scoring, making it a non-compliant refresh artifact. The baseline file is present and the research file is not a morning_bootstrap, so the research failure is not excused.
 
 ## Fails
-- `01_daily/general/2026-09-09_predict.md`: Missing required general market predict file.
-- `01_daily/news/2026-09-09_judge.md`: Missing required news judge file.
-- `01_daily/news/2026-09-09_parsed.json`: Missing required news parse file.
+- `01_daily/news/2026-09-09_parsed.json`: Required core file is missing (regex FAIL: missing). The news judge file contains a NEWS_PARSE_BEGIN/END block, but the standalone parsed.json artifact is absent, which is a required core file for a complete same-day packet.
+- `01_daily/map_heat/2026-09-09_research.md`: Research file claims phase=morning_refresh (size_gate=True set by pre-open refresh) but contains explicit failure text: 'Morning delta refresh failed captain-evidence QC (subprocess_timeout_or_search_flake). Using last night's post-close captain cards... Overnight tape/news was not re-scored.' This is a timeout/flake stub, not a valid morning_refresh artifact. It is not a morning_bootstrap safe no

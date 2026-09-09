@@ -3,137 +3,128 @@
 - ETF: **XLP**
 - rubric: `00_grounding/sectors/consumer_defensive.md`
 - predicted_direction: **down**
-- predicted_magnitude_band: **mild**
-- total_score: **-3.825** (mult 0.9)
+- predicted_magnitude_band: **flat**
+- total_score: **-2.925** (mult 0.9)
 - regime: risk_off
 - divergence_flagged: **False**
 
 ## Channel 1 sector ETF tape
 
 ```
-ETF XLP vs SPY (yfinance, through 2026-09-08):
-  1d: XLP -0.66% | SPY -0.55% | rel -0.11%
-  3d: XLP -1.77% | SPY +0.10% | rel -1.87%
-  1w: XLP -1.13% | SPY -0.14% | rel -0.99%
-  1m: XLP -1.29% | SPY -0.94% | rel -0.35%
+ETF XLP vs SPY (yfinance, through 2026-09-09):
+  1d: XLP -0.83% | SPY -0.24% | rel -0.59%
+  3d: XLP -2.28% | SPY -1.17% | rel -1.10%
+  1w: XLP -2.26% | SPY +0.30% | rel -2.57%
+  1m: XLP -1.92% | SPY -1.16% | rel -0.76%
 ```
 
-I now have a comprehensive picture of today's (2026-09-09) market conditions. Let me compile the analysis.
+I have enough information to compile the analysis. Let me review the key facts and apply the sector methodology.
 
-Key facts for today:
-- **Oil has breached $100** (Brent ~$99.94-100, up ~2%) on escalating US-Iran conflict / Houthi attacks. This is a **live, escalating geopolitical/oil supply-shock** — the strongest version of the Hormuz-type trigger.
-- **US stock futures are muted/flat** (little changed) — traders balancing Oracle's after-hours rally against oil and Fed hike worries. 10Y yields near 4.81% (multi-year highs), ~60% odds of a Fed 25bp hike next week ahead of CPI.
-- **The food-crash cluster is still active** — Campbell's cut dividend 36% (09-03), General Mills/Kraft Heinz weak, Conagra also cut. Barron's: "Campbell's and Other Staples Stocks Have Hit a Rough Patch." This is a **fresh, demonstrated sector-specific negative** that overrode the FTS bid on 09-03 (rel −1.36%) and 09-08 (rel −0.11%).
-- **Barclays Global Consumer Staples Conference is TODAY** (Sept 9) — MDLZ, CHD, Unilever, Molson Coors presenting. This is a sector-specific catalyst day that could provide fresh commentary on pricing power/margins.
-- **Channel 1 tape:** XLP 1d −0.66% vs SPY −0.55% (rel −0.11%), 3d rel −1.87%, 1w rel −0.99%, 1m rel −0.35%. XLP is a **multi-horizon laggard** with the food-crash drag dominating.
+**Key facts for today (2026-09-09):**
+- **Oil has breached $100** (Brent ~$100+, up ~2%) on escalating US-Iran conflict / Houthi attacks. This is a **live, escalating geopolitical/oil supply-shock** — the strongest version of the Hormuz-type trigger.
+- **US markets point lower** as crude breaches $100 with Iran conflict intensifying. Global shares mostly lower.
+- **The food-crash cluster is still active** — Campbell's cut dividend 36% (09-03), General Mills/Kraft Heinz weak, Conagra also cut. This is a **demonstrated sector-specific negative** that overrode the FTS bid on 09-03 (rel −1.36%) and 09-08 (rel −0.11%).
+- **Barclays Global Consumer Staples Conference is TODAY** (Sept 9) — General Mills reaffirmed annual guidance, Kimberly-Clark presented, Hormel participating. This is a sector-specific catalyst day.
+- **Channel 1 tape:** XLP 1d −0.83% vs SPY −0.24% (rel −0.59%), 3d rel −1.10%, 1w rel −2.57%, 1m rel −0.76%. XLP is a **multi-horizon laggard** with the food-crash drag dominating.
+- **MAP HEAT:** Discount Stores dir=up (WMT $2.9B windfall catalyst), Farm Products dir=up (ADM), but Beverages/Brewers dir=down, Confectioners dir=down, Food Distribution dir=down, Household Products dir=flat. Mixed-to-negative breadth inside the sector.
 
 Let me apply the lessons carefully.
 
-**09-08 (demonstrated food-crash dominance over FTS bid → S0=0 or negative):** This is the KEY active lesson. The food-crash cluster (CPB dividend cut, GIS/KHC weakness) has demonstrated it can override the FTS bid on 09-03 (rel −1.36%) and 09-08 (rel −0.11%). Today oil is at $100 — an even stronger FTS trigger. But the demonstrated precedent says the food-crash drag dominates. Per the 09-08 lesson, I should score S0=0 or negative for the FTS bid.
+**09-08 (demonstrated food-crash dominance over FTS bid → S0=0 or negative):** This is the KEY active lesson. The food-crash cluster has demonstrated it can override the FTS bid on 09-03 (rel −1.36%) and 09-08 (rel −0.11%). Today oil is at $100 — an even stronger FTS trigger. But the demonstrated precedent says the food-crash drag dominates. Per the 09-08 lesson, I should score S0=0 or negative for the FTS bid.
 
-**08-11 (geo/oil risk-off → S0 negative, down/mild if already lagging):** Oil at $100 is the strongest version of this trigger. But the 09-08 lesson refines this: when a sector-specific negative cluster has demonstrated dominance, the FTS bid is not reliable. XLP is a chronic laggard (3d rel −1.87%).
+**08-11 (geo/oil risk-off → S0 negative, down/mild if already lagging):** Oil at $100 is the strongest version of this trigger. But the 09-08 lesson refines this: when a sector-specific negative cluster has demonstrated dominance, the FTS bid is not reliable.
 
-**08-18 utilities (bond-proxy + risk-off + rising yields → relative outperformance / flat-to-negative absolute):** XLP has both a risk-off defensive bid (oil $100) AND a hawkish rate backdrop (10Y 4.81%, ~60% hike odds). The correct default is relative outperformance / flat-to-negative absolute. But the food-crash drag challenges even the relative outperformance.
+**08-18 utilities (bond-proxy + risk-off + rising yields → relative outperformance / flat-to-negative absolute):** XLP has both a risk-off defensive bid (oil $100) AND a hawkish rate backdrop (10Y ~4.81%, ~60% hike odds). The correct default is relative outperformance / flat-to-negative absolute. But the food-crash drag challenges even the relative outperformance.
 
-**Barclays Conference today:** This is a fresh sector-specific catalyst. MDLZ/CHD/Unilever presenting could provide commentary on pricing power/margins. This is two-sided — could confirm the food-crash stress OR show resilience. Not a clean directional input.
+**Barclays Conference today:** General Mills reaffirmed guidance (positive), Kimberly-Clark presented. This is a fresh sector catalyst that could provide some support. But it's two-sided — could confirm stress or show resilience.
 
 Let me think about the dominant driver. Oil at $100 is a **major risk-off overlay** that would normally bid defensives relatively. But:
-1. The **food-crash cluster** (CPB dividend cut, GIS/KHC weakness) has **demonstrated dominance** over the FTS bid on 09-03 and 09-08.
-2. The **hawkish rate backdrop** (10Y 4.81%, ~60% hike odds) caps absolute upside for bond-proxy defensives.
-3. **Oil at $100** is itself an **input-cost negative** for staples (freight, packaging, ag feedstocks) — it's not just a defensive bid, it's a margin squeeze.
+1. The **food-crash cluster** has **demonstrated dominance** over the FTS bid on 09-03 and 09-08.
+2. The **hawkish rate backdrop** (10Y ~4.81%, ~60% hike odds) caps absolute upside for bond-proxy defensives.
+3. **Oil at $100** is itself an **input-cost negative** for staples (freight, packaging, ag feedstocks).
 4. **Wheat/corn elevated** — food input cost pressure.
+5. **MAP HEAT shows mixed-to-negative breadth** inside the sector — discount stores (WMT) and farm products (ADM) are up, but beverages, confectioners, food distribution are down.
 
-This is the classic **relative outperformance / flat-to-negative absolute** bond-proxy pattern, but with a **demonstrated sector-specific negative** (food-crash) that makes even relative outperformance unreliable.
+The 09-08 lesson says score S0=0 or negative when the sector-specific negative cluster has demonstrated dominance. The food-crash cluster is still active (CPB dividend cut was 09-03, still being digested). Oil at $100 is an input-cost negative for staples, not just a defensive bid.
 
 For XLP specifically:
 - **Relative:** The risk-off bid is theoretically positive, but the food-crash cluster has demonstrated it overrides the FTS bid. XLP has underperformed SPY on 09-03 and 09-08 despite risk-off crosscurrents.
 - **Absolute:** The hawkish rate backdrop + input-cost pressure (oil $100, wheat up) + food-crash drag points to **flat-to-down/mild**.
 
-Given the demonstrated food-crash dominance (09-08 lesson) and the oil-at-$100 input-cost squeeze, I lean **down/mild** on a relative basis. The absolute move is likely **flat-to-mild-down**.
+Given the demonstrated food-crash dominance (09-08 lesson) and the oil-at-$100 input-cost squeeze, I lean **down/mild**. The absolute move is likely **flat-to-mild-down**.
 
 Let me score:
-- **S0_SHARED_MACRO:** Oil at $100 = risk-off overlay = theoretical relative bid for defensives. But the 09-08 lesson says: when a sector-specific negative cluster has demonstrated dominance over the FTS bid, score S0=0 or negative. The hawkish rate backdrop (10Y 4.81%, ~60% hike odds) is a duration headwind. Oil at $100 is itself an input-cost negative for staples. **0** (FTS bid neutralized by demonstrated food-crash dominance + rate/input headwinds).
-- **S1_SECTOR_FACTORS:** Flight-to-safety RS is a PARTIAL HIT (theoretical bid, but demonstrated food-crash dominance). Input-cost relief is MISS (oil $100, wheat up). Food-crash cluster (CPB dividend cut) is a **fresh, demonstrated sector-specific negative**. Private-label HIT (structural). Barclays Conference today is two-sided. Net **-0.5** (food-crash drag dominates).
-- **S2_BREADTH:** XLP is a chronic laggard (3d rel -1.87%). No confirmed breadth expansion. **0**.
+- **S0_SHARED_MACRO:** Oil at $100 = risk-off overlay = theoretical relative bid for defensives. But the 09-08 lesson says: when a sector-specific negative cluster has demonstrated dominance over the FTS bid, score S0=0 or negative. The hawkish rate backdrop (10Y ~4.81%, ~60% hike odds) is a duration headwind. Oil at $100 is itself an input-cost negative for staples. **0** (FTS bid neutralized by demonstrated food-crash dominance + rate/input headwinds).
+- **S1_SECTOR_FACTORS:** Flight-to-safety RS is a PARTIAL HIT (theoretical bid, but demonstrated food-crash dominance). Input-cost relief is MISS (oil $100, wheat up). Food-crash cluster (CPB dividend cut) is a **fresh, demonstrated sector-specific negative**. Private-label HIT (structural). Barclays Conference today is two-sided but General Mills reaffirmed guidance (mild positive). Net **-0.5** (food-crash drag dominates).
+- **S2_BREADTH:** XLP is a chronic laggard (3d rel -1.10%, 1w rel -2.57%). MAP HEAT shows mixed-to-negative breadth inside the sector. **0**.
 - **S3_FLOWS_POSITIONING:** No confirmed inflows. **0**.
-- **S4_ETF_TAPE:** 1d rel -0.11% (XLP slightly lagging SPY). This is not confirming a defensive bid. **-0.5**.
+- **S4_ETF_TAPE:** 1d rel -0.59% (XLP lagging SPY). This is not confirming a defensive bid. **-0.5**.
 
 Multiplier: 0.9 (modest conviction, magnitude historically misses).
 
 Total: (0 + -0.5 + 0 + 0 + -0.5) × 0.9 = -1.0 × 0.9 = -0.9 → **flat/flat** direction.
 
-Given the demonstrated food-crash dominance and the oil-at-$100 input-cost squeeze, I lean **flat-to-down/mild**. The absolute move is likely contained (flat-to-mild-down). Direction: **flat** (with down bias). Magnitude: **flat/mild**.
+Hmm, but the 09-08 lesson says the food-crash dominance should push toward down. Let me reconsider. The 09-08 lesson's corrected behavior says "Score S0 = 0 or negative for the FTS bid when the sector has shown it cannot hold a defensive bid under the active sector-specific drag." And the demonstrated precedent (09-03 rel −1.36%, 09-08 rel −0.11%) points to continued underperformance.
 
-Wait — let me reconsider. The 09-08 lesson says the food-crash drag dominates the FTS bid. On 09-08, XLP closed −0.66% (down/mild). Today oil is at $100 — an even stronger FTS trigger, but also an even stronger input-cost squeeze. The demonstrated precedent (09-03 rel −1.36%, 09-08 rel −0.11%) says XLP underperforms even on risk-off days when the food-crash cluster is active.
+Given the food-crash drag is still active AND oil at $100 is an input-cost negative (not just a defensive bid), I think the down bias is stronger than flat. Let me adjust S1 to -1 (food-crash drag + input-cost squeeze from oil at $100) and S4 to -0.5.
 
-Given the demonstrated dominance, I should lean **down/mild** rather than flat. The food-crash drag + oil input-cost squeeze + hawkish rates all point down. The only offset is the theoretical FTS bid, which the 09-08 lesson says to discount.
+Total: (0 + -1 + 0 + 0 + -0.5) × 0.9 = -1.5 × 0.9 = -1.35 → **down/flat** or **flat/mild**.
 
-Let me score S0 slightly negative and S1 more negative:
-- **S0_SHARED_MACRO:** **-0.5** (oil at $100 is an input-cost negative for staples, not just a defensive bid; hawkish rates cap; FTS bid discounted per 09-08).
-- **S1_SECTOR_FACTORS:** **-1** (food-crash drag demonstrated dominant; oil input-cost squeeze; no pricing-power relief).
-- **S2_BREADTH:** **0**.
-- **S3_FLOWS_POSITIONING:** **0**.
-- **S4_ETF_TAPE:** **-0.5** (1d rel -0.11%, not confirming defensive bid).
+Actually, given the demonstrated food-crash dominance and the oil input-cost squeeze, I lean **down/mild**. The magnitude is likely mild given the offsetting FTS bid (even if unreliable) and the Barclays conference support.
 
-Multiplier: 0.9.
+Let me finalize with down/mild.
 
-Total: (-0.5 + -1 + 0 + 0 + -0.5) × 0.9 = -2.0 × 0.9 = -1.8 → **down/flat** direction.
-
-Given the demonstrated food-crash dominance and the oil-at-$100 input-cost squeeze, I lean **down/mild**. The absolute move is likely mild-down. Direction: **down**. Magnitude: **mild**.
-
-Let me finalize with the analysis and scores.
-
-MEMORY_CONFIRM: Consumer Defensive / XLP only. Rolling dir=0.4 / mag=0.5 (n=10). Last graded 2026-08-28 predicted down/mild vs XLP +0.43% / SPY −0.23% / rel +0.66% (dir MISS, mag HIT). 09-08 predicted flat/flat vs actual XLP −0.66% / SPY −0.55% / rel −0.11% (dir MISS, mag MISS): S0=+0.5 for the Hormuz FTS bid was overweighted against the demonstrated food-crash drag. The 09-08 lesson is now active: when a sector-specific negative cluster (packaged-food margin/dividend stress) is fresh AND has already demonstrated dominance over the FTS bid in a prior session, score S0=0 or negative for the FTS bid. Today oil has breached $100 (Brent ~$99.94, up ~2%) on escalating US-Iran conflict — the strongest FTS trigger yet. But the food-crash cluster (CPB dividend cut 09-03, GIS/KHC weakness) has demonstrated dominance on 09-03 (rel −1.36%) and 09-08 (rel −0.11%). Per 09-08, I discount the FTS bid and treat oil-at-$100 as an input-cost squeeze for staples, not a defensive tailwind. Barclays Global Consumer Staples Conference is today (MDLZ/CHD/Unilever) — two-sided sector catalyst.
+MEMORY_CONFIRM: Consumer Defensive / XLP only. Rolling dir=0.4 / mag=0.5 (n=10). Last graded 2026-08-28 predicted down/mild vs XLP +0.43% / SPY −0.23% / rel +0.66% (dir MISS, mag HIT). 09-08 predicted flat/flat vs XLP −0.66% / SPY −0.55% / rel −0.11% (dir MISS, mag MISS) — the food-crash cluster demonstrated dominance over the FTS bid. 09-09 predicted down/mild is still ungraded. The 09-08 lesson (demonstrated food-crash dominance → S0=0 or negative) is the KEY active lesson. Today oil is at $100 — the strongest FTS trigger yet — but the food-crash cluster (CPB dividend cut 09-03, GIS/KHC weakness) has demonstrated it overrides the FTS bid on 09-03 and 09-08. Barclays Conference today (General Mills reaffirmed guidance) is a two-sided sector catalyst. I do **not** re-litigate stale WMT (08-20), do **not** copy 3d/1w/1m lag into S2/S4, do **not** treat the food-crash as stale (it's fresh, 09-03), do **not** score S0 positive for the FTS bid (09-08 lesson), do **not** fire 08-27's down/notable gate (NQ not leading ≥0.5%), and I **do** treat oil at $100 as an input-cost negative for staples (not just a defensive bid).
 
 ## Consumer Defensive (XLP) — 2026-09-09
 
 Object is the **near-session XLP environment**, not SPX and not a stock picker. Channel 1 numbers are used as given.
 
 ### Channel 1 tape (confirmation only)
-XLP is a **chronic, broad laggard**: **1d −0.66% vs SPY −0.55% (rel −0.11%)**, 3d rel **−1.87%**, 1w rel **−0.99%**, 1m rel **−0.35%**. The food-crash cluster (CPB dividend cut 09-03, GIS/KHC weakness) has driven XLP to underperform SPY on 09-03 (rel −1.36%) and 09-08 (rel −0.11%) — **demonstrated dominance** over any FTS bid. S4 may describe the −0.11% 1d. It does **not** independently forecast a second down day, but the food-crash catalyst is **fresh and demonstrated**.
+XLP is a **chronic, broad laggard**: **1d −0.83% vs SPY −0.24% (rel −0.59%)**, 3d rel **−1.10%**, 1w rel **−2.57%**, 1m rel **−0.76%**. The food-crash cluster (CPB dividend cut 09-03, GIS/KHC weakness) has **demonstrated dominance** over the FTS bid on 09-03 (rel −1.36%) and 09-08 (rel −0.11%). S4 may describe the −0.59% 1d rel. It does **not** independently forecast a second down day (08-28), but the food-crash catalyst is **fresh** (09-03) and still being digested.
 
-Macro panel as it maps here: **Oil has breached $100** — Brent ~$99.94 (up ~2%), WTI elevated, on escalating US-Iran conflict / Houthi attacks. This is the **strongest Hormuz-type FTS trigger yet**. US stock futures are **muted/flat** (little changed) — traders balancing Oracle's after-hours rally against oil and Fed hike worries. **10Y yields near 4.81%** (multi-year highs), **~60% odds of a Fed 25bp hike next week** ahead of CPI. This is a **hawkish rate backdrop** that caps absolute upside for bond-proxy defensives. Wheat/corn elevated (input-cost pressure). **Barclays Global Consumer Staples Conference is today** (MDLZ 8:15am, CHD 2:15pm, Unilever, Molson Coors) — a sector-specific catalyst that could provide fresh commentary on pricing power/margins.
+Macro panel as it maps here: **Oil has breached $100** (Brent ~$100+, up ~2%) on escalating US-Iran conflict / Houthi attacks — the strongest version of the Hormuz-type trigger. **US markets point lower** as crude breaches $100. 10Y yields near **4.81%** (multi-year highs), ~**60% odds** of a Fed 25bp hike next week ahead of CPI. Gold sliding >3% after Warsh's hawkish Jackson Hole comments. **Barclays Global Consumer Staples Conference is TODAY** (Sept 9) — General Mills reaffirmed annual guidance, Kimberly-Clark presented, Hormel participating.
 
 ### Channel 2 — required categories
 
-**1. Shared macro → this sector.** Oil at $100 is the dominant macro object. For a defensive bond-proxy, an oil spike on geopolitical risk-off is **theoretically** a relative FTS bid. **BUT** the 09-08 lesson is explicit: when a sector-specific negative cluster (food-crash) has **demonstrated dominance** over the FTS bid in prior sessions (09-03 rel −1.36%, 09-08 rel −0.11%), score S0=0 or negative for the FTS bid. The demonstrated precedent beats the theoretical FTS channel. Moreover, oil at $100 is **itself an input-cost negative** for staples (freight, packaging, ag feedstocks) — it is not just a defensive bid, it is a margin squeeze. The hawkish rate backdrop (10Y 4.81%, ~60% hike odds) is a duration headwind for bond-proxy defensives. Count oil-at-$100 + hawkish rates + food-crash as **one** stagflation/input-cost regime, not three separate positives. S0 carries the **input-cost/rate overlay**, not a second copy of the FTS bid.
+**1. Shared macro → this sector.** Oil at $100 is a **major risk-off overlay** that would normally bid defensives relatively. But the **09-08 lesson** is the KEY active rule: when a sector-specific negative cluster (food-crash) has **demonstrated dominance** over the FTS bid (09-03 rel −1.36%, 09-08 rel −0.11%), score S0=0 or negative for the FTS bid. The hawkish rate backdrop (10Y ~4.81%, ~60% hike odds) is a duration headwind for bond-proxy defensives. **Oil at $100 is itself an input-cost negative** for staples (freight, packaging, ag feedstocks) — it's not just a defensive bid, it's a margin squeeze. Gold sliding >3% (no metals floor). Count the oil spike + rate backdrop + food-crash as **one** regime object, not three separate negatives. S0 stays **0** (FTS bid neutralized by demonstrated food-crash dominance + rate/input headwinds).
 
 **2. Spine (mandatory).**
-- **Flight-to-safety RS vs cyclicals (primary):** **MISS live / demonstrated override.** The theoretical FTS bid is present (oil $100), but the food-crash cluster has **demonstrated** it overrides the FTS bid on 09-03 and 09-08. XLP is a chronic laggard (3d rel −1.87%). Do not score the theoretical FTS channel as a positive when the demonstrated precedent says it fails.
-- **Risk-on rotation away from defensives:** **PARTIAL.** Not a risk-on tape (futures muted), but XLP is lagging on 1d/3d/1w/1m.
-- **Pricing power held without volume collapse:** **MISS / under pressure.** The **food-crash cluster** (CPB dividend cut, GIS/KHC weakness, Conagra cut) is a **fresh, demonstrated** challenge to pricing power and margin stability in the packaged-food sleeve. This is not stale WMT (08-20); it's the active sector-specific drag.
-- **Volume decline accelerating:** **PARTIAL.** July retail −0.6% is known; oil at $100 threatens a new wave of price pain (LA Times: "From gas to groceries, $100 oil threatens a new wave of price pain").
+- **Flight-to-safety RS vs cyclicals (primary):** **MISS live.** XLP 1d rel **−0.59%** on a risk-off day. The food-crash cluster has demonstrated it overrides the FTS bid. The primary regime signal is **not** FTS this morning.
+- **Risk-on rotation away from defensives:** **PARTIAL.** The food-crash drag is sector-specific, not a broad rotation. But XLP is lagging on every horizon.
+- **Pricing power held without volume collapse:** **MISS / under pressure.** The **food-crash cluster** (CPB dividend cut, GIS/KHC weakness) directly challenges pricing power and margin stability in the packaged-food sleeve. This is **fresh** (09-03), not stale.
+- **Volume decline accelerating:** **PARTIAL.** July retail −0.6% is known; the food-crash reflects volume/margin pressure.
 
 **3. Secondary.**
-- **Input cost relief (ag, packaging, freight):** **MISS.** Oil at $100 is a **freight/energy cost spike**, not relief. Wheat/corn elevated. No ag relief.
-- **Input cost spike without pricing power:** **HIT.** Oil at $100 + elevated wheat/corn + demonstrated food-crash margin stress = the exact input-cost-spike-without-pricing-power setup.
+- **Input cost relief (ag, packaging, freight):** **MISS.** Oil at $100 is a **cost spike**, not relief. Wheat/corn elevated. This is an input-cost negative for staples.
+- **Input cost spike without pricing power:** **HIT as the oil/ag sleeve.** Oil at $100 + elevated wheat/corn = margin squeeze for packaged food.
 - **Volume stabilization:** checked, nothing material and new.
-- **Staples earnings beat / stable margins:** **checked, nothing material for the ETF.** Barclays Conference today (MDLZ/CHD/Unilever) is two-sided — could confirm stress or show resilience. Not a clean directional input.
-- **Private-label share gain against brands:** **HIT (structural)** — Circana/PLMA H1'26 data.
+- **Staples earnings beat / stable margins:** **PARTIAL.** Barclays Conference today — General Mills **reaffirmed** annual guidance (mild positive), Kimberly-Clark presented. But no fresh beat that re-rates the book.
+- **Private-label share gain against brands:** **HIT (structural)** — Circana/PLMA H1'26.
 - **Rotation into/out of defensives:** **out** on 1d/3d/1w/1m tape.
 
-**4. Breadth / leadership.** The food-crash is **not** single-name: CPB, GIS, KHC, CAG all weak. Large-cap / low-beta **lag**, not ETF-up/names-flat. Single-ticker rule: WMT (~10%) is context; COST/PG/KO participated in the lag. Do not let one name drive the ETF call.
+**4. Breadth / leadership.** MAP HEAT shows **mixed-to-negative breadth** inside the sector: Discount Stores dir=up (WMT $2.9B windfall catalyst), Farm Products dir=up (ADM), but Beverages/Brewers dir=down, Confectioners dir=down, Food Distribution dir=down, Household Products dir=flat. The food-crash drag is broad (CPB, GIS, KHC, Conagra), not single-name. Single-ticker rule: WMT (~10%) is context; the packaged-food drag is broad.
 
-**5. Flows / positioning.** No confirmed XLP inflows. Consumer-staples funds saw outflows in the week through 08-19. No fresh flow catalyst.
+**5. Flows / positioning.** No confirmed inflows. Consumer-staples funds have seen outflows. No crowding signal.
 
-**6. Earnings/guidance or policy catalysts.** Barclays Global Consumer Staples Conference today (MDLZ 8:15am, CHD 2:15pm, Unilever, Molson Coors) — sector-specific catalyst that could provide fresh commentary on pricing power/margins. Two-sided. No major XLP-weight earnings today.
+**6. Earnings/guidance/policy catalysts.** Barclays Conference today (General Mills reaffirmed guidance, Kimberly-Clark presented). No fresh earnings prints. No policy catalyst specific to staples.
 
-### Component scoring
+### Scoring
 
-- **S0_SHARED_MACRO (−2..+2):** Oil at $100 is an **input-cost negative** for staples (freight, packaging, ag), not just a defensive bid. Hawkish rates (10Y 4.81%, ~60% hike odds) cap bond-proxy upside. Per 09-08, the FTS bid is discounted when a sector-specific negative has demonstrated dominance. **−0.5**.
-- **S1_SECTOR_FACTORS (−3..+3):** Food-crash cluster (CPB dividend cut, GIS/KHC/CAG weakness) is a **fresh, demonstrated** negative that has overridden the FTS bid on 09-03 and 09-08. Oil at $100 is an input-cost spike without pricing power. No pricing-power relief. Private-label HIT is structural but not a session driver. **−1**.
-- **S2_BREADTH (−2..+2):** XLP is a chronic laggard (3d rel −1.87%). No breadth expansion. **0**.
-- **S3_FLOWS_POSITIONING (−2..+2):** No confirmed inflows. **0**.
-- **S4_ETF_TAPE (−1..+1):** 1d rel −0.11% (XLP slightly lagging SPY). Not confirming a defensive bid. **−0.5**.
+- **S0_SHARED_MACRO (0):** Oil at $100 is a theoretical FTS bid, but the 09-08 lesson says score S0=0 or negative when the food-crash cluster has demonstrated dominance. The hawkish rate backdrop + oil input-cost squeeze neutralize the FTS bid.
+- **S1_SECTOR_FACTORS (−1):** Food-crash cluster (CPB dividend cut, GIS/KHC weakness) is a **fresh, demonstrated sector-specific negative**. Oil at $100 is an input-cost spike. Private-label HIT is structural but doesn't offset the food-crash drag. Barclays Conference is two-sided (General Mills reaffirmed, mild positive).
+- **S2_BREADTH (0):** XLP is a chronic laggard. MAP HEAT shows mixed-to-negative breadth inside the sector. No confirmed breadth expansion.
+- **S3_FLOWS_POSITIONING (0):** No confirmed inflows or crowding signal.
+- **S4_ETF_TAPE (−0.5):** 1d rel −0.59% (XLP lagging SPY). Not confirming a defensive bid.
 
-Multiplier: **0.9** (modest conviction, magnitude historically misses).
+Multiplier: 0.9 (modest conviction, magnitude historically misses).
 
-Total: (−0.5 + −1 + 0 + 0 + −0.5) × 0.9 = −2.0 × 0.9 = **−1.8** → **down/flat**.
+Total: (0 + −1 + 0 + 0 + −0.5) × 0.9 = −1.5 × 0.9 = **−1.35** → **down/mild**.
 
-Given the demonstrated food-crash dominance (09-08) and the oil-at-$100 input-cost squeeze, I lean **down/mild**. The absolute move is likely mild-down. Direction: **down**. Magnitude: **mild**.
+Given the demonstrated food-crash dominance (09-08 lesson) and the oil-at-$100 input-cost squeeze, I lean **down/mild**. The magnitude is likely mild given the offsetting FTS bid (even if unreliable) and the Barclays conference support.
 
 SECTOR_SCORES_BEGIN
-S0_SHARED_MACRO: -0.5
+S0_SHARED_MACRO: 0
 S1_SECTOR_FACTORS: -1
 S2_BREADTH: 0
 S3_FLOWS_POSITIONING: 0
@@ -141,27 +132,29 @@ S4_ETF_TAPE: -0.5
 MULTIPLIER: 0.9
 CONFIDENCE: 0.55
 REGIME: risk_off
-TOTAL_SCORE: -1.8
+TOTAL_SCORE: -1.35
 PREDICTED_DIRECTION: down
 PREDICTED_MAGNITUDE_BAND: mild
-HORIZON_3D: down:mild:0.5
-HORIZON_1W: flat:mild:0.45
-HORIZON_2W: flat:mild:0.4
-HORIZON_1M: flat:mild:0.4
 SECTOR_SCORES_END
 
 HIT_GRID_BEGIN
-Risk-off tape / flight to safety|MISS (demonstrated override by food-crash)|0.6|2026-09-09|web_search
-Input cost spike without pricing power|HIT|0.7|2026-09-09|web_search (oil $100, wheat/corn elevated)
-Flight-to-safety relative strength vs cyclicals|MISS (chronic laggard, food-crash drag)|0.6|2026-09-09|Channel 1 tape
-Private-label share gain against brands|HIT|0.6|2026-09-09|structural (Circana/PLMA)
-Sector rotation out of defensives|HIT|0.6|2026-09-09|Channel 1 tape (1d/3d/1w/1m lag)
-Real yields rising|HIT|0.6|2026-09-09|web_search (10Y 4.81%, ~60% hike odds)
+Risk-off tape / flight to safety|partial|0.5|2026-09-09|Oil at $100 is a theoretical FTS bid, but food-crash dominance demonstrated on 09-03/09-08
+Flight-to-safety relative strength vs cyclicals|miss|0.6|2026-09-09|XLP 1d rel -0.59%, lagging on all horizons
+Input cost spike without pricing power|hit|0.6|2026-09-09|Oil at $100 + elevated wheat/corn = margin squeeze for packaged food
+Sector rotation out of defensives|partial|0.5|2026-09-09|Food-crash drag is sector-specific, not broad rotation
+Private-label share gain against brands|hit|0.7|2026-09-09|Circana/PLMA H1'26 structural
+Volume decline accelerating|partial|0.4|2026-09-09|Food-crash reflects volume/margin pressure
+Staples earnings beat stable margins|partial|0.4|2026-09-09|Barclays Conference - General Mills reaffirmed guidance
 HIT_GRID_END
+
+HORIZON_3D: down/mild
+HORIZON_1W: down/mild
+HORIZON_2W: flat/mild
+HORIZON_1M: flat/mild
 
 ---
 ## Pipeline-computed decision (deterministic)
 
 ```json
-{'components': {'S0_SHARED_MACRO': -0.5, 'S1_SECTOR_FACTORS': -1.0, 'S2_BREADTH': 0.0, 'S3_FLOWS_POSITIONING': 0.0, 'S4_ETF_TAPE': -0.5}, 'multiplier': 0.9, 'leading_sum': -4.0, 'divergence_flagged': False, 'total_score': -3.825, 'predicted_direction': 'down', 'predicted_magnitude_band': 'mild', 'confidence_score': 0.55, 'regime': 'risk_off', 'calendar_size_gate_applied': True, 'calendar_size_gate_reason': 'set by pre-open refresh'}
+{'components': {'S0_SHARED_MACRO': 0.0, 'S1_SECTOR_FACTORS': -1.0, 'S2_BREADTH': 0.0, 'S3_FLOWS_POSITIONING': 0.0, 'S4_ETF_TAPE': -0.5}, 'multiplier': 0.9, 'leading_sum': -3.0, 'divergence_flagged': False, 'total_score': -2.925, 'predicted_direction': 'down', 'predicted_magnitude_band': 'flat', 'confidence_score': 0.55, 'regime': 'risk_off', 'calendar_size_gate_applied': True, 'calendar_size_gate_reason': 'set by pre-open refresh'}
 ```

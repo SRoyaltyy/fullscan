@@ -1,12 +1,12 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T10:38:56.558396-04:00",
+  "generated_at": "2026-09-09T10:38:20.594971-04:00",
   "inputs": [
     {
       "name": "finviz_export",
       "family": "join",
       "status": "ok",
-      "n": 11614,
+      "n": 11609,
       "detail": "finviz_2026-09-09.csv"
     },
     {
@@ -21,7 +21,7 @@
       "family": "join",
       "status": "ok",
       "n": 5902,
-      "detail": "std=0.997"
+      "detail": "std=0.987"
     },
     {
       "name": "news_actions",
@@ -55,7 +55,7 @@
       "name": "peer_rs",
       "family": "peer",
       "status": "ok",
-      "n": 5118,
+      "n": 5120,
       "detail": ""
     },
     {
@@ -70,7 +70,7 @@
       "family": "addon",
       "status": "ok",
       "n": null,
-      "detail": "71 events, scan_date=2026-09-09"
+      "detail": "37 events, scan_date=2026-09-09"
     },
     {
       "name": "map_heat",
@@ -82,16 +82,16 @@
     {
       "name": "general_predict",
       "family": "general",
-      "status": "missing",
+      "status": "ok",
       "n": null,
-      "detail": "s_general=0 \u2014 weight renormalized away"
+      "detail": ""
     },
     {
       "name": "sector_predicts",
       "family": "sector",
-      "status": "degraded",
-      "n": 10,
-      "detail": "10/11 quality"
+      "status": "ok",
+      "n": 11,
+      "detail": "11/11 quality"
     },
     {
       "name": "price_store",
@@ -107,8 +107,8 @@
     "ab": "ok",
     "peer": "ok",
     "heat": "ok",
-    "general": "missing",
-    "sector": "degraded"
+    "general": "ok",
+    "sector": "ok"
   },
   "families_present": {
     "join": true,
@@ -116,9 +116,9 @@
     "ab": true,
     "peer": true,
     "heat": true,
-    "general": false,
+    "general": true,
     "sector": true
   },
   "learn_grade": true,
-  "worst": "missing"
+  "worst": "stale"
 }

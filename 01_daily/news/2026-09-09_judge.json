@@ -4,20 +4,13 @@
   "bearish",
   "bearish"
  ],
- "sector_tilts": {
-  "Energy": "bullish",
-  "Healthcare": "bullish",
-  "Technology": "mixed",
-  "Financial": "bearish",
-  "Consumer Defensive": "bearish",
-  "Real Estate": "bearish"
- },
+ "sector_tilts": {},
  "tickers": {
-  "XLE": 4.0,
-  "XLK": 3.0,
   "XLU": -1.5,
-  "ADI": 1.5
+  "XLK": 3.0,
+  "ADI": 1.5,
+  "AVGO": -1.5
  },
- "b1_inject": "NEWS_JUDGE: n=8 rescued=0\nMACRO stagflation: [bearish] Oil spike + hawkish Fed (Warsh) + gold slide = one risk-off cluster (session/1d-1w)\nSECTOR Energy: [bullish] Oil supply shock is a direct tailwind for XLE (object: XLE)\nSECTOR Healthcare: [bullish] ABBV Phase 3 success + M&A is a sector-level catalyst (object: XLV, XBI)\nSECTOR Technology: [mixed] AI-demand news is positive but faces hawkish rates headwind; likely relative strength only (object: XLK, SMH)\nSECTOR Financials: [bearish] Stagflation shock hits rate-sensitive financials via credit/long-end channel (object: XLF)\nSECTOR Staples: [bearish] Food-crash cluster + oil-driven inflation outweighs any defensive bid (object: XLP)\nSECTOR Real Estate: [bearish] Hawkish Fed + rising long-end yields are a direct negative (object: XLRE)\nINTERACTION: Oil spike + hawkish Fed = one stagflation cluster; do not buy tech on AI news alone\nWATCH: Key inflation data is the next binary; ranking is contested if it prints cool and reverses the risk-off tape",
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=8\nMACRO stagflation: [bearish] Oil spike + hawkish Warsh repricing = one rates/risk cluster; hits long-duration, bids energy/financials (regime/1w)\nSECTOR Energy (XLE): [bullish] Oil rally on Middle East tensions is the dominant driver; expect relative outperformance (sector_etf)\nSECTOR Financials (XLF): [bullish] Hawkish Fed repricing is NIM+; but credit-sensitivity on oil shock caps upside (sector_etf)\nSECTOR Healthcare (XLV): [bullish] AbbVie Phase 3 positive supports defensive bid on risk-off tape (sector_etf)\nSECTOR Technology (XLK): [mixed] AI demand (NVDA/Dell/ADI) vs AVGO PT cut; semis mixed, do not double-count (sector_etf)\nSECTOR Basic Materials (XLB): [bearish] Oil cost headwind on chemicals sleeve outweighs metals bid; composition math dictates (sector_etf)\nINTERACTION: Oil spike + hawkish Fed = one stagflation cluster; do not double-count\nWATCH: Ranking is thin on single-name detail; the macro cluster is the dominant driver",
  "date": "2026-09-09"
 }

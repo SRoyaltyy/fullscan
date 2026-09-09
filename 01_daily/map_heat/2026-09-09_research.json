@@ -3,7 +3,7 @@
   "phase": "morning_refresh",
   "passthrough": true,
   "source_baseline_generated_at": "2026-09-08T19:11:26.281885-04:00",
-  "generated_at": "2026-09-09T10:14:43.519515-04:00",
+  "generated_at": "2026-09-09T09:35:51.494109-04:00",
   "n_targets": 142,
   "n_cards": 142,
   "n_refreshed": 0,
@@ -8337,103 +8337,103 @@
     {
       "ticker": "ES",
       "label": "S&P 500",
-      "last": 7656.5,
-      "change": -0.32
+      "last": 7655.25,
+      "change": -0.34
     },
     {
       "ticker": "NQ",
       "label": "Nasdaq 100",
-      "last": 29417.75,
-      "change": -0.43
+      "last": 29393.5,
+      "change": -0.51
     },
     {
       "ticker": "ER2",
       "label": "Russell 2000",
-      "last": 2949.3,
-      "change": -0.49
+      "last": 2947.2,
+      "change": -0.56
     },
     {
       "ticker": "YM",
       "label": "DJIA",
-      "last": 52565.0,
-      "change": -0.5
+      "last": 52514.0,
+      "change": -0.6
     },
     {
       "ticker": "VX",
       "label": "VIX",
-      "last": 16.85,
-      "change": 1.33
+      "last": 16.95,
+      "change": 1.93
     },
     {
       "ticker": "CL",
       "label": "Crude Oil WTI",
-      "last": 95.81,
-      "change": 2.96
+      "last": 95.78,
+      "change": 2.99
     },
     {
       "ticker": "QA",
       "label": "Crude Oil Brent",
-      "last": 100.77,
-      "change": 2.83
+      "last": 100.74,
+      "change": 2.88
     },
     {
       "ticker": "NG",
       "label": "Natural Gas",
-      "last": 2.848,
-      "change": -2.33
+      "last": 2.849,
+      "change": -2.3
     },
     {
       "ticker": "HO",
       "label": "Heating Oil",
-      "last": 4.6987,
-      "change": 2.87
+      "last": 4.7199,
+      "change": 3.29
     },
     {
       "ticker": "RB",
       "label": "Gasoline RBOB",
-      "last": 3.2183,
-      "change": -1.23
+      "last": 3.2401,
+      "change": -0.32
     },
     {
       "ticker": "GC",
       "label": "Gold",
-      "last": 4462.2,
-      "change": 0.49
+      "last": 4443.1,
+      "change": 0.08
     },
     {
       "ticker": "SI",
       "label": "Silver",
-      "last": 67.835,
-      "change": 1.13
+      "last": 66.9,
+      "change": -0.15
     },
     {
       "ticker": "HG",
       "label": "Copper",
-      "last": 6.824,
-      "change": 0.01
+      "last": 6.786,
+      "change": -0.59
     },
     {
       "ticker": "PL",
       "label": "Platinum",
-      "last": 1909.2,
-      "change": 3.02
+      "last": 1865.9,
+      "change": 0.68
     },
     {
       "ticker": "PA",
       "label": "Palladium",
-      "last": 1374.5,
-      "change": 0.39
+      "last": 1354.5,
+      "change": -1.18
     },
     {
       "ticker": "DX",
       "label": "USD",
-      "last": 98.395,
-      "change": -0.14
+      "last": 98.38,
+      "change": -0.15
     },
     {
       "ticker": "6E",
       "label": "EUR",
-      "last": 1.1648,
+      "last": 1.1649,
       "change": 0.15
     },
     {
@@ -8445,49 +8445,49 @@
     {
       "ticker": "6B",
       "label": "GBP",
-      "last": 1.355,
-      "change": 0.03
+      "last": 1.3554,
+      "change": 0.05
     },
     {
       "ticker": "6A",
       "label": "AUD",
-      "last": 0.7226,
-      "change": 0.05
+      "last": 0.7223,
+      "change": 0.01
     },
     {
       "ticker": "6C",
       "label": "CAD",
-      "last": 0.7258,
-      "change": -0.01
+      "last": 0.7262,
+      "change": 0.05
     },
     {
       "ticker": "6S",
       "label": "CHF",
-      "last": 1.23895,
+      "last": 1.23905,
       "change": 0.18
     },
     {
       "ticker": "6N",
       "label": "NZD",
-      "last": 0.5854,
-      "change": -0.09
+      "last": 0.58555,
+      "change": -0.07
     },
     {
       "ticker": "ZN",
       "label": "10 Year Note",
-      "last": 107.265625,
-      "change": -0.04
+      "last": 107.25,
+      "change": -0.07
     },
     {
       "ticker": "ZF",
       "label": "5 Year Note",
-      "last": 105.3828125,
-      "change": -0.06
+      "last": 105.3671875,
+      "change": -0.07
     },
     {
       "ticker": "ZT",
       "label": "2 Year Note",
-      "last": 102.49609375,
+      "last": 102.48828125,
       "change": -0.03
     },
     {
@@ -8499,38 +8499,38 @@
     {
       "ticker": "NKD",
       "label": "Nikkei 225",
-      "last": 64530.0,
-      "change": -0.88
+      "last": 64455.0,
+      "change": -1.0
     },
     {
       "ticker": "DY",
       "label": "DAX",
-      "last": 25648.0,
-      "change": -1.37
+      "last": 25618.0,
+      "change": -1.52
     },
     {
       "ticker": "EX",
       "label": "Euro Stoxx 50",
-      "last": 6316.0,
-      "change": -1.51
+      "last": 6301.0,
+      "change": -1.78
     },
     {
       "ticker": "ZC",
       "label": "Corn",
       "last": 529.75,
-      "change": -0.7
+      "change": -0.75
     },
     {
       "ticker": "ZS",
       "label": "Soybeans",
       "last": 1313.5,
-      "change": -0.21
+      "change": -0.25
     },
     {
       "ticker": "ZW",
       "label": "Wheat",
       "last": 746.5,
-      "change": -0.07
+      "change": -0.03
     },
     {
       "ticker": "ZL",
@@ -8559,32 +8559,32 @@
     {
       "ticker": "KC",
       "label": "Coffee",
-      "last": 297.5,
-      "change": 2.06
+      "last": 297.8,
+      "change": 2.33
     },
     {
       "ticker": "SB",
       "label": "Sugar",
-      "last": 18.37,
-      "change": 1.49
+      "last": 18.23,
+      "change": 0.72
     },
     {
       "ticker": "CT",
       "label": "Cotton",
-      "last": 87.46,
-      "change": 1.38
+      "last": 87.18,
+      "change": 1.0
     },
     {
       "ticker": "CC",
       "label": "Cocoa",
-      "last": 5947.0,
-      "change": 0.47
+      "last": 5885.0,
+      "change": -0.47
     },
     {
       "ticker": "JO",
       "label": "Orange Juice",
-      "last": 149.5,
-      "change": -0.6
+      "last": 148.55,
+      "change": -1.36
     },
     {
       "ticker": "LB",
@@ -8613,14 +8613,14 @@
     {
       "ticker": "BTC",
       "label": "Bitcoin",
-      "last": 79760.0,
-      "change": 1.48
+      "last": 79735.0,
+      "change": 1.46
     },
     {
       "ticker": "SR3",
       "label": "3 Month SOFR",
-      "last": 96.1325,
-      "change": -0.0
+      "last": 96.13,
+      "change": -0.01
     },
     {
       "ticker": "ZQ",
@@ -8637,8 +8637,8 @@
     {
       "ticker": "RS",
       "label": "Canola",
-      "last": 836.4,
-      "change": -0.31
+      "last": 835.8,
+      "change": -0.37
     },
     {
       "ticker": "NCF",
@@ -8655,8 +8655,8 @@
     {
       "ticker": "G",
       "label": "Gasoil",
-      "last": 1381.5,
-      "change": 2.16
+      "last": 1385.25,
+      "change": 2.48
     },
     {
       "ticker": "TIO",
@@ -8673,8 +8673,8 @@
     {
       "ticker": "TN",
       "label": "Ultra 10 Year Note",
-      "last": 109.015625,
-      "change": -0.03
+      "last": 109.0,
+      "change": -0.04
     },
     {
       "ticker": "UB",
@@ -9137,7 +9137,7 @@
       "company": "Oracle Corp",
       "datetime": "2026-09-10T16:30:00",
       "session": "AMC",
-      "mcap": 470092.8491441953,
+      "mcap": 468969.4672344366,
       "eps_est": 1.7395
     },
     {
@@ -9145,7 +9145,7 @@
       "company": "Costco Wholesale Corp",
       "datetime": "2026-09-24T16:30:00",
       "session": "AMC",
-      "mcap": 403870.40220737265,
+      "mcap": 403477.02588261676,
       "eps_est": 6.548
     },
     {
@@ -9153,7 +9153,7 @@
       "company": "Adobe Inc",
       "datetime": "2026-09-10T16:30:00",
       "session": "AMC",
-      "mcap": 102968.39948791184,
+      "mcap": 102662.31673585891,
       "eps_est": 6.0753
     },
     {
@@ -9161,7 +9161,7 @@
       "company": "Autozone Inc",
       "datetime": "2026-09-22T08:30:00",
       "session": "BMO",
-      "mcap": 48323.04796671904,
+      "mcap": 48649.555047575246,
       "eps_est": 54.5786
     },
     {
@@ -9169,7 +9169,7 @@
       "company": "Kroger Co",
       "datetime": "2026-09-11T08:30:00",
       "session": "BMO",
-      "mcap": 35165.95994130301,
+      "mcap": 35077.73810311713,
       "eps_est": 1.0548
     },
     {
@@ -9177,7 +9177,7 @@
       "company": "Copart Inc",
       "datetime": "2026-09-10T16:30:00",
       "session": "AMC",
-      "mcap": 30311.06656164352,
+      "mcap": 30181.45,
       "eps_est": 0.3832
     },
     {
@@ -9185,7 +9185,7 @@
       "company": "Sunbelt Rentals Holdings Inc",
       "datetime": "2026-09-09T08:30:00",
       "session": "BMO",
-      "mcap": 29585.920136970308,
+      "mcap": 29294.8576907533,
       "eps_est": 1.0363
     },
     {
@@ -9193,7 +9193,7 @@
       "company": "Trip.com Group Ltd ADR",
       "datetime": "2026-09-15T16:30:00",
       "session": "AMC",
-      "mcap": 26275.51149559021,
+      "mcap": 26197.562589416506,
       "eps_est": 0.8855
     },
     {
@@ -9201,7 +9201,7 @@
       "company": "Darden Restaurants Inc",
       "datetime": "2026-09-24T08:30:00",
       "session": "BMO",
-      "mcap": 24175.31,
+      "mcap": 24218.456420827115,
       "eps_est": 2.0527
     },
     {
@@ -9209,7 +9209,7 @@
       "company": "TD Synnex Corp",
       "datetime": "2026-09-24T08:30:00",
       "session": "BMO",
-      "mcap": 20987.570291840562,
+      "mcap": 20693.320283407513,
       "eps_est": 4.6419
     },
     {
@@ -9217,7 +9217,7 @@
       "company": "General Mills Inc",
       "datetime": "2026-09-23T08:30:00",
       "session": "BMO",
-      "mcap": 20235.730659134973,
+      "mcap": 20171.575674646287,
       "eps_est": 0.7167
     },
     {
@@ -9225,7 +9225,7 @@
       "company": "Lennar Corp",
       "datetime": "2026-09-16T16:30:00",
       "session": "AMC",
-      "mcap": 19335.325793931173,
+      "mcap": 19450.126306202706,
       "eps_est": 1.291
     },
     {
@@ -9233,7 +9233,7 @@
       "company": "Cooper Companies Inc",
       "datetime": "2026-09-09T16:30:00",
       "session": "AMC",
-      "mcap": 13301.084521177458,
+      "mcap": 13213.321358264362,
       "eps_est": 1.1237
     },
     {
@@ -9241,7 +9241,7 @@
       "company": "Abivax ADR",
       "datetime": "2026-09-21T16:30:00",
       "session": "AMC",
-      "mcap": 10312.94973373413,
+      "mcap": 10317.3125,
       "eps_est": -0.9585
     }
   ]
