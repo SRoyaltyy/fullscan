@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T12:14:39.335202-04:00",
+  "generated_at": "2026-09-09T12:15:05.227191-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -212,7 +212,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 6626
+          "size": 6611
         },
         {
           "key": "status",
@@ -221,7 +221,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False missing=['news_parse']",
-          "size": 7236
+          "size": 7696
         },
         {
           "key": "review",
@@ -229,8 +229,8 @@
           "path": "01_daily/2026-09-09_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=False The core packet is otherwise complete and same-day: general predict, events, news judge, finviz digest, map-heat tables,",
-          "size": 854
+          "reason": "ok=False The general predict, events JSON, news judge, finviz digest, map_heat tables, and all 11 sector predicts are present, sa",
+          "size": 1714
         },
         {
           "key": "sector_basic_materials",
@@ -372,8 +372,8 @@
           "path": "01_daily/weather/2026-09-09_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10538 vix=falling yields=flat",
-          "size": 10538
+          "reason": "sectors=11 bytes=10540 vix=falling yields=flat",
+          "size": 10540
         }
       ],
       "said": "favorable 2 \u00b7 hostile 5 \u00b7 neutral 4",
@@ -521,8 +521,8 @@
           "path": "01_daily/weather/2026-09-09_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10538 vix=falling yields=flat",
-          "size": 10538
+          "reason": "sectors=11 bytes=10540 vix=falling yields=flat",
+          "size": 10540
         },
         {
           "key": "in_ab",
@@ -599,7 +599,7 @@
       ],
       "said": "215 rows",
       "bullets": [
-        "ONC, ARGX, EXE, DVN, PR"
+        "ONC, ARGX, EXE, DVN, REGN"
       ]
     },
     {
@@ -2690,6 +2690,31 @@
         }
       ],
       "preview": "1d BUY CIG, ATRO, EMBJ, MIR, NXE, BG, AR, ITT \u00b7 SELL METC, SLQT, CPB, COIN, SPIR, RZLV, CLPT, BGS \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 # Stock book \u2014 2026-09-09\n_Generated 2026-09-09T12:14:37.122903-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T12:15:04.314629-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-09_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10540,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.5, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': 0.9, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Consumer Cyclical={'score': -7.5, 'dir': 'down', 'conf': 0.6, 'source': 'llm'}, Consumer Defensive={'score': -2.925, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Energy={'score': 8.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Financial={'score': -6.075, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': -6.525, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Industrials={'score': -4.05, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-09_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 6060,
+          "preview": "# Weather report \u2014 2026-09-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.5, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': 0.9, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Consumer Cyclical={'score': -7.5, 'dir': 'down', 'conf': 0.6, 'source': 'llm'}, Consumer Defensive={'score': -2.925, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Energy={'score': 8.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Financial={'score': -6.075, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': -6.525, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Industrials={'score': -4.05, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
