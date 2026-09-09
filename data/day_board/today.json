@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T09:02:30.558257-04:00",
+  "generated_at": "2026-09-09T09:04:44.317840-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -12,49 +12,53 @@
   "buy_1d": [
     {
       "ticker": "NVT",
-      "score": 0.7018462501247229
+      "score": 0.6081932140222619
     },
     {
       "ticker": "DINO",
-      "score": 0.3164404448254038
+      "score": 0.3792112265780485
     },
     {
       "ticker": "UGP",
-      "score": 0.7952388940832091
+      "score": 0.829334975468365
+    },
+    {
+      "ticker": "CVI",
+      "score": 0.8383879486165673
     }
   ],
   "sell_1d": [
     {
       "ticker": "BGS",
-      "score": -0.2874761881804064
+      "score": -0.4158775493338465
+    },
+    {
+      "ticker": "XHG",
+      "score": -0.38231292819943274
+    },
+    {
+      "ticker": "METC",
+      "score": -0.555774163088432
     },
     {
       "ticker": "SMPL",
-      "score": -0.1821293280028169
+      "score": -0.37044391012687466
+    },
+    {
+      "ticker": "NG",
+      "score": -0.35537526970335365
     },
     {
       "ticker": "BRBR",
-      "score": -0.1425165945091207
+      "score": -0.32562696307416694
+    },
+    {
+      "ticker": "BRO",
+      "score": -0.2374502796489299
     },
     {
       "ticker": "GIS",
-      "score": -0.43778665775791
-    },
-    {
-      "ticker": "CPB",
-      "score": -0.09063668475929186
-    },
-    {
-      "ticker": "FLO",
-      "score": -0.23367889223599247
-    },
-    {
-      "ticker": "INFY",
-      "score": -0.3627805913164508
-    },
-    {
-      "ticker": "HRL",
-      "score": -0.11030699935304038
+      "score": -0.489074188139194
     }
   ],
   "flatten": {
@@ -267,29 +271,29 @@
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-09\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
     },
     {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
+      "key": "finviz",
+      "title": "Finviz universe export",
       "date": "2026-09-09",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-09T09:02:29.708548-04:00",
+      "at": "2026-09-09T09:04:43.468390-04:00",
       "files": [
         {
-          "path": "01_daily/news/2026-09-09_finviz_digest.json",
+          "path": "data/exports/finviz_2026-09-09.csv",
           "ok": true,
           "reason": "",
-          "size": 2,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+          "size": 10975195,
+          "preview": "11614 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
         },
         {
-          "path": "01_daily/news/2026-09-09_finviz_digest.md",
+          "path": "data/finviz/latest.csv",
           "ok": true,
           "reason": "",
-          "size": 11401,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-09\n_Generated 2026-09-09T05:11:24.316414-04:00 \u00b7 export=data/exports/finviz_2026-09-08.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+          "size": 11365687,
+          "preview": "11606 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
         }
       ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-09\n_Generated 2026-09-09T05:11:24.316414-04:00 \u00b7 export=data/exports/finviz_2026-09-08.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+      "preview": "11614 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11606 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
