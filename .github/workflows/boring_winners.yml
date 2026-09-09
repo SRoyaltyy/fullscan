@@ -24,20 +24,40 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Skip until today's book exists
+        if: github.event_name == 'workflow_run'
+        run: |
+          DATE=$(TZ=America/New_York date +%F)
+          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          echo "DATE=$DATE ET_HM=$ET_HM"
+          if [ "$ET_HM" -lt 900 ]; then
+            echo "before 09:00 ET — gated Stock Book success is not a book"
+            echo "skip=yes" >> "$GITHUB_ENV"
+          elif [ ! -f "data/stock_book/${DATE}_stock_book.json" ]; then
+            echo "no ${DATE} book — skip boring overlay"
+            echo "skip=yes" >> "$GITHUB_ENV"
+          fi
 
       - uses: actions/setup-python@v5
+        if: env.skip != 'yes'
         with:
           python-version: "3.12"
 
       - name: Install
+        if: env.skip != 'yes'
         run: pip install pandas pyarrow
 
       - name: Tests
+        if: env.skip != 'yes'
         run: |
           python -m src.test_boring_winners_backtest
           python -m src.test_boring_winners_lab
 
       - name: Seat
+        if: env.skip != 'yes'
         run: |
           set -euo pipefail
           test -s 03_scoreboard/feature_asof_panel.parquet
@@ -55,6 +75,7 @@ jobs:
           test -s 01_daily/latest_boring_winners.md
 
       - name: Publish
+        if: env.skip != 'yes'
         run: |
           set -euo pipefail
           mapfile -t FILES < <(
@@ -77,6 +98,7 @@ jobs:
             "${FILES[@]}"
 
       - name: Merge boring-winners onto gh-pages
+        if: env.skip != 'yes'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |

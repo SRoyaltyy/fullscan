@@ -37,10 +37,14 @@ jobs:
   scrape:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    env:
+      FULLSCAN_LAND: "1"
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          persist-credentials: true
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-python@v5
         with:
@@ -127,9 +131,14 @@ jobs:
               sys.exit(1)
           "
 
-      - name: Commit
+      - name: Leftover sweep
         if: always() && env.skip != 'yes'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # Digest + overlay already land via src.land_file. This catches
+          # elite CSV / stragglers if a mid-job land failed.
           bash scripts/safe_git_push.sh \
-            "auto: finviz preopen scrape (digest + overlay) [$(date -u +%F_%H%M)]" \
-            01_daily/news/ 01_daily/map_heat/ data/exports/
+            "auto: finviz preopen leftover sweep [$(date -u +%F_%H%M)]" \
+            01_daily/news/ 01_daily/map_heat/ data/exports/ data/day_board/ \
+            || echo "[scrape] leftover sweep failed — lands already on main"

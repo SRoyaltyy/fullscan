@@ -423,6 +423,11 @@ def main() -> None:
     print(f"[finviz_digest] {mp}")
     print("--- inject preview ---")
     print(inject_block(report["date"])[:1200])
+    try:
+        from . import land_file
+        land_file.land(report["date"], "finviz_digest", title="Finviz digest")
+    except Exception as e:  # noqa: BLE001
+        print(f"[finviz_digest] WARN: land failed: {e}")
 
 
 if __name__ == "__main__":

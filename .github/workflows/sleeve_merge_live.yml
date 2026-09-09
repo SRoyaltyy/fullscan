@@ -37,14 +37,34 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Skip until today's book exists
+        run: |
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          echo "DATE=$DATE ET_HM=$ET_HM"
+          # Comment on this file: must not sit in front of the 09:30 book.
+          # Gated 01:00 Stock Book successes were writing a hollow flatten
+          # card (no prices) and storming gh-pages.
+          if [ "$ET_HM" -lt 900 ]; then
+            echo "before 09:00 ET — wait for scrape + book"
+            echo "skip=yes" >> "$GITHUB_ENV"
+          elif [ ! -f "data/stock_book/${DATE}_stock_book.json" ]; then
+            echo "no ${DATE} book — skip hollow flatten card"
+            echo "skip=yes" >> "$GITHUB_ENV"
+          fi
+
       - uses: actions/setup-python@v5
+        if: env.skip != 'yes'
         with:
           python-version: "3.12"
 
       - name: Install
+        if: env.skip != 'yes'
         run: pip install pandas numpy yfinance
 
       - name: Write today's card
+        if: env.skip != 'yes'
         env:
           RUN_DATE: ${{ github.event.inputs.run_date }}
         run: |
@@ -61,6 +81,7 @@ jobs:
           head -40 "01_daily/${DATE}_flatten_card.md"
 
       - name: Publish card to main
+        if: env.skip != 'yes'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -74,6 +95,7 @@ jobs:
             dashboard/sleeve-merge/
 
       - name: Overlay Pages
+        if: env.skip != 'yes'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
