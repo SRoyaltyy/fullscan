@@ -197,7 +197,10 @@ restore_unstaged() {
   # (finviz_2026-09-09.csv, 11MB / 11610 lines). The same drop would
   # erase 06:10 membership before join. Pop restores untracked files
   # to the work tree without adding them to this commit.
-  git stash pop >/dev/null 2>&1 || git stash drop >/dev/null 2>&1 || true
+  # If pop conflicts, KEEP the stash — a later leftover sweep can
+  # `stash pop` again. Dropping is how the 11MB CSV vanished.
+  git stash pop >/dev/null 2>&1 || \
+    echo "[safe-push] stash pop failed — keeping stash (do not drop export/membership)"
 }
 
 try_rebase() {

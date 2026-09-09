@@ -349,6 +349,8 @@ def run(
                         check=False, timeout_s=180)
             if code != 0:
                 print("[all] WARN: Finviz export failed — labeling may fail without today's file")
+            if _file_ge("data", "exports", f"finviz_{date}.csv", min_bytes=50_000):
+                _land(date, "finviz", "Finviz universe export")
         else:
             print("[all] skip Finviz universe export (DONE for this day)")
 
@@ -362,6 +364,9 @@ def run(
                     "cannot rank; leaving any existing book/dashboard"
                 )
                 return
+            # Land before weather. Weather land used to stash -u / drop
+            # this untracked membership and join then returned empty.
+            _land(date, "universe", "Universe labels")
         else:
             print("[all] skip Stock labeling (DONE for this day)")
     else:
