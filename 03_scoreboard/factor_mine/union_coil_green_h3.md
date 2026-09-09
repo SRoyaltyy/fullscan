@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+6.01%** ($10,601) · signal-only (no cash/fees) was +0.57%. Starts YES **12/18**. Fills 63 · skips 136 · realized $+106.95.
+Cash book **+6.61%** ($10,661) · signal-only (no cash/fees) was +0.36%. Starts YES **12/19**. Fills 70 · skips 143 · realized $+105.50.
 
 ## How this sleeve decides (like you are 10)
 
@@ -59,7 +59,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $15.56.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,825.59.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -203,7 +203,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-07 | `CNXC` | 39 | $32.85 | $32.48 | -14.43 | $32.16 | -12.48 | -26.91 | +26.52 | +14.04 |
 | 2026-09-07 | `VIR` | 108 | $11.45 | $11.31 | -15.12 | $11.39 | +8.64 | -6.48 | -34.56 | -25.92 |
 | 2026-09-07 | `CDXS` | 831 | $1.42 | $1.43 | +8.31 | $1.46 | +24.93 | +33.24 | -74.79 | -49.86 |
-| 2026-09-07 | `CHGG` | 7 | — | $0.95 | +0.00 | $0.85 | -0.70 | -0.70 | +0.00 | -0.70 |
+| 2026-09-07 | `CHGG` | 4 | — | $0.95 | +0.00 | $0.85 | -0.40 | -0.40 | +0.00 | -0.40 |
+| 2026-09-08 | `RVTY` | 10 | $130.22 | $130.22 | +0.00 | — | +0.00 | +0.00 | +42.80 | — |
+| 2026-09-08 | `GPRO` | 1035 | $1.70 | $1.81 | +113.85 | $1.77 | -41.40 | +72.45 | +610.65 | +569.25 |
+| 2026-09-08 | `CRK` | 80 | $15.26 | $15.59 | +26.40 | — | +0.00 | +26.40 | -8.80 | — |
+| 2026-09-08 | `MMED` | 55 | $23.28 | $23.00 | -15.40 | — | +0.00 | -15.40 | +12.10 | — |
+| 2026-09-08 | `CLYM` | 85 | $15.52 | $15.52 | +0.00 | — | +0.00 | +0.00 | +62.05 | — |
+| 2026-09-08 | `CNXC` | 39 | $32.16 | $32.16 | +0.00 | — | +0.00 | +0.00 | +14.04 | — |
+| 2026-09-08 | `VIR` | 108 | $11.39 | $11.39 | +0.00 | — | +0.00 | +0.00 | -25.92 | — |
+| 2026-09-08 | `CDXS` | 831 | $1.46 | $1.46 | +0.00 | — | +0.00 | +0.00 | -49.86 | — |
+| 2026-09-08 | `CHGG` | 4 | $0.85 | $0.91 | +0.24 | $0.88 | -0.12 | +0.12 | -0.16 | -0.28 |
 
 ## Each session (cash + holdings state)
 
@@ -225,8 +234,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-01 | -6.30 | $1,584.53 | SLI×3, RRC×35, CRK×102, ANF×10, GENB×86, CLYM×92, MNRO×118 | $9,978.49 | -245.87 | +47.42 | — | SLI | $1,592.52 | $10,025.80 | RRC×35, CRK×102, ANF×10, GENB×86, CLYM×92, MNRO×118 |
 | 2026-09-02 | -3.83 | $1,592.52 | RRC×35, CRK×102, ANF×10, GENB×86, CLYM×92, MNRO×118 | $10,120.38 | +94.58 | +0.00 | — | RRC, CRK, ANF, GENB, CLYM, MNRO | $10,106.95 | $10,106.95 | — |
 | 2026-09-03 | -0.90 | $10,106.95 | — | $10,106.95 | +0.00 | +574.60 | RVTY, GPRO, CRK, MMED, CLYM, CNXC, VIR, CDXS | — | $22.30 | $10,644.41 | RVTY×10, GPRO×1035, CRK×80, MMED×55, CLYM×85, CNXC×39, VIR×108, CDXS×831 |
-| 2026-09-04 | — | $22.30 | RVTY×10, GPRO×1035, CRK×80, MMED×55, CLYM×85, CNXC×39, VIR×108, CDXS×831 | $10,683.62 | +39.21 | -471.25 | — | — | $22.30 | $10,212.37 | RVTY×10, GPRO×1035, CRK×80, MMED×55, CLYM×85, CNXC×39, VIR×108, CDXS×831 |
-| 2026-09-07 | — | $22.30 | RVTY×10, GPRO×1035, CRK×80, MMED×55, CLYM×85, CNXC×39, VIR×108, CDXS×831 | $10,273.78 | +61.41 | +327.54 | CHGG | — | $15.56 | $10,601.23 | RVTY×10, GPRO×1035, CRK×80, MMED×55, CLYM×85, CNXC×39, VIR×108, CDXS×831, CHGG×7 |
+| 2026-09-04 | +2.25 | $22.30 | RVTY×10, GPRO×1035, CRK×80, MMED×55, CLYM×85, CNXC×39, VIR×108, CDXS×831 | $10,683.62 | +39.21 | -471.25 | — | — | $22.30 | $10,212.37 | RVTY×10, GPRO×1035, CRK×80, MMED×55, CLYM×85, CNXC×39, VIR×108, CDXS×831 |
+| 2026-09-07 | — | $22.30 | RVTY×10, GPRO×1035, CRK×80, MMED×55, CLYM×85, CNXC×39, VIR×108, CDXS×831 | $10,273.78 | +61.41 | +327.84 | CHGG | — | $18.45 | $10,601.57 | RVTY×10, GPRO×1035, CRK×80, MMED×55, CLYM×85, CNXC×39, VIR×108, CDXS×831, CHGG×4 |
+| 2026-09-08 | -11.47 | $18.45 | RVTY×10, GPRO×1035, CRK×80, MMED×55, CLYM×85, CNXC×39, VIR×108, CDXS×831, CHGG×4 | $10,726.66 | +125.09 | -41.52 | — | RVTY, CRK, MMED, CLYM, CNXC, VIR, CDXS | $8,825.59 | $10,661.06 | GPRO×1035, CHGG×4 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -329,8 +339,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $22.30 | ▲ 09:30 equity $10,683.62 vs yday $10,644.41 (+39.21) | 09:30 open · cash $22.30 (unchanged overnight, no fees) · equity $10,683.62 vs prior close $10,644.41 (+39.21) · 8 name(s) re-marked at the open (per-name table). RVTY×10 yday $130.94 → 09:30 $132.45 +15.10; GPRO×1035 yday $1.69 → 09:30 $1.78 +93.15; CRK×80 yday $15.54 → 09:30 $15.45 -7.20; MMED×55 yday $23.76 → 09:30 $23.88 +6.60; CLYM×85 yday $15.05 → 09:30 $13.96 -92.65; CNXC×39 yday $32.37 → 09:30 $32.88 +19.89; VIR×108 yday $11.50 → 09:30 $11.54 +4.32; CDXS×831 yday $1.48 → 09:30 $1.48 +0.00 | — |
 | 2026-09-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $22.30 | ▼ close $10,212.37 vs 09:30 $10,683.62 (session -471.25) | 16:00 close · cash $22.30 · equity $10,212.37 vs 09:30 $10,683.62 (-471.25; session marks -471.25) · 8 name(s) marked open→close (per-name table). RVTY×10 09:30 $132.45 → close $130.63 -18.20; GPRO×1035 09:30 $1.78 → close $1.39 -403.65; CRK×80 09:30 $15.45 → close $14.95 -40.00; MMED×55 09:30 $23.88 → close $23.84 -2.20; CLYM×85 09:30 $13.96 → close $14.59 +53.55; CNXC×39 09:30 $32.88 → close $32.85 -1.17; VIR×108 09:30 $11.54 → close $11.45 -9.72; CDXS×831 09:30 $1.48 → close $1.42 -49.86 | — |
 | 2026-09-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $22.30 | ▲ 09:30 equity $10,273.78 vs yday $10,212.37 (+61.41) | 09:30 open · cash $22.30 (unchanged overnight, no fees) · equity $10,273.78 vs prior close $10,212.37 (+61.41) · 8 name(s) re-marked at the open (per-name table). RVTY×10 yday $130.63 → 09:30 $130.03 -6.00; GPRO×1035 yday $1.39 → 09:30 $1.48 +93.15; CRK×80 yday $14.95 → 09:30 $15.00 +4.00; MMED×55 yday $23.84 → 09:30 $23.84 +0.00; CLYM×85 yday $14.59 → 09:30 $14.49 -8.50; CNXC×39 yday $32.85 → 09:30 $32.48 -14.43; VIR×108 yday $11.45 → 09:30 $11.31 -15.12; CDXS×831 yday $1.42 → 09:30 $1.43 +8.31 | — |
-| 2026-09-07 09:30 ET | **BUY** | `CHGG` | 7 | $0.95 | $0.09 | — | $15.56 | — | combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer,yday_mover; 🔵; ret5=+3.8; leftover $7.43 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15.56 | ▲ close $10,601.23 vs 09:30 $10,273.78 (session +327.54) | 16:00 close · cash $15.56 · equity $10,601.23 vs 09:30 $10,273.78 (+327.45; session marks +327.54) · 9 name(s) marked open→close (per-name table). RVTY×10 09:30 $130.03 → close $130.22 +1.90; GPRO×1035 09:30 $1.48 → close $1.70 +227.70; CRK×80 09:30 $15.00 → close $15.26 +20.80; MMED×55 09:30 $23.84 → close $23.28 -30.80; CLYM×85 09:30 $14.49 → close $15.52 +87.55; CNXC×39 09:30 $32.48 → close $32.16 -12.48; VIR×108 09:30 $11.31 → close $11.39 +8.64; CDXS×831 09:30 $1.43 → close $1.46 +24.93; CHGG×7 09:30 $0.95 → close $0.85 -0.70 | — |
+| 2026-09-07 09:30 ET | **BUY** | `CHGG` | 4 | $0.95 | $0.05 | — | $18.45 | — | combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer,yday_mover; 🔵; ret5=+3.8; leftover $4.46 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18.45 | ▲ close $10,601.57 vs 09:30 $10,273.78 (session +327.84) | 16:00 close · cash $18.45 · equity $10,601.57 vs 09:30 $10,273.78 (+327.79; session marks +327.84) · 9 name(s) marked open→close (per-name table). RVTY×10 09:30 $130.03 → close $130.22 +1.90; GPRO×1035 09:30 $1.48 → close $1.70 +227.70; CRK×80 09:30 $15.00 → close $15.26 +20.80; MMED×55 09:30 $23.84 → close $23.28 -30.80; CLYM×85 09:30 $14.49 → close $15.52 +87.55; CNXC×39 09:30 $32.48 → close $32.16 -12.48; VIR×108 09:30 $11.31 → close $11.39 +8.64; CDXS×831 09:30 $1.43 → close $1.46 +24.93; CHGG×4 09:30 $0.95 → close $0.85 -0.40 | — |
+| 2026-09-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $18.45 | ▲ 09:30 equity $10,726.66 vs yday $10,601.57 (+125.09) | 09:30 open · cash $18.45 (unchanged overnight, no fees) · equity $10,726.66 vs prior close $10,601.57 (+125.09) · 9 name(s) re-marked at the open (per-name table). RVTY×10 yday $130.22 → 09:30 $130.22 +0.00; GPRO×1035 yday $1.70 → 09:30 $1.81 +113.85; CRK×80 yday $15.26 → 09:30 $15.59 +26.40; MMED×55 yday $23.28 → 09:30 $23.00 -15.40; CLYM×85 yday $15.52 → 09:30 $15.52 +0.00; CNXC×39 yday $32.16 → 09:30 $32.16 +0.00; VIR×108 yday $11.39 → 09:30 $11.39 +0.00; CDXS×831 yday $1.46 → 09:30 $1.46 +0.00; CHGG×4 yday $0.85 → 09:30 $0.91 +0.24 | — |
+| 2026-09-08 09:30 ET | **SELL** | `RVTY` | 10 | $130.22 | $2.04 | $+38.74 | $1,318.61 | ▲ +38.74 after sell → book $10,724.62; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-08 09:30 ET | **SELL** | `CRK` | 80 | $15.59 | $2.25 | $-13.28 | $2,563.56 | ▼ -13.28 after sell → book $10,722.37; vs 09:30 mark -2.25 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-08 09:30 ET | **SELL** | `MMED` | 55 | $23.00 | $2.18 | $+7.77 | $3,826.38 | ▲ +7.77 after sell → book $10,720.19; vs 09:30 mark -2.18 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-08 09:30 ET | **SELL** | `CLYM` | 85 | $15.52 | $2.27 | $+57.54 | $5,143.31 | ▲ +57.54 after sell → book $10,717.92; vs 09:30 mark -2.27 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-08 09:30 ET | **SELL** | `CNXC` | 39 | $32.16 | $2.13 | $+9.81 | $6,395.42 | ▲ +9.81 after sell → book $10,715.79; vs 09:30 mark -2.13 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-08 09:30 ET | **SELL** | `VIR` | 108 | $11.39 | $2.34 | $-30.58 | $7,623.20 | ▼ -30.58 after sell → book $10,713.45; vs 09:30 mark -2.34 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-08 09:30 ET | **SELL** | `CDXS` | 831 | $1.46 | $10.87 | $-71.45 | $8,825.59 | ▼ -71.45 after sell → book $10,702.58; vs 09:30 mark -10.87 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,825.59 | ▼ close $10,661.06 vs 09:30 $10,726.66 (session -41.52) | 16:00 close · cash $8,825.59 · equity $10,661.06 vs 09:30 $10,726.66 (-65.60; session marks -41.52) · 2 name(s) marked open→close (per-name table). GPRO×1035 09:30 $1.81 → close $1.77 -41.40; CHGG×4 09:30 $0.91 → close $0.88 -0.12 | — |
 
 ## Not taken
 
@@ -453,36 +472,36 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 | `MMED` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-04 | `CLYM` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-04 | `CNXC` | min_hold | dropped but min-hold 1/3 sess — no sell |
-| 2026-09-04 | `VIR` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-04 | `CDXS` | min_hold | dropped but min-hold 1/3 sess — no sell |
-| 2026-09-04 | `BVS` | cash | leftover split 3.19 < 1 share @ 14.50 |
-| 2026-09-04 | `FMC` | cash | leftover split 3.19 < 1 share @ 13.30 |
-| 2026-09-04 | `TARS` | cash | leftover split 3.19 < 1 share @ 82.76 |
-| 2026-09-04 | `PLAY` | cash | leftover split 3.19 < 1 share @ 9.36 |
-| 2026-09-04 | `ASAN` | cash | leftover split 3.19 < 1 share @ 10.16 |
-| 2026-09-04 | `GWRE` | cash | leftover split 3.19 < 1 share @ 198.00 |
-| 2026-09-04 | `LULU` | cash | leftover split 3.19 < 1 share @ 121.15 |
+| 2026-09-04 | `FMC` | cash | leftover split 3.72 < 1 share @ 13.30 |
+| 2026-09-04 | `TARS` | cash | leftover split 3.72 < 1 share @ 82.76 |
+| 2026-09-04 | `PLAY` | cash | leftover split 3.72 < 1 share @ 9.36 |
+| 2026-09-04 | `ASAN` | cash | leftover split 3.72 < 1 share @ 10.16 |
+| 2026-09-04 | `GWRE` | cash | leftover split 3.72 < 1 share @ 198.00 |
+| 2026-09-04 | `LULU` | cash | leftover split 3.72 < 1 share @ 121.15 |
 | 2026-09-07 | `RVTY` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-07 | `GPRO` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-07 | `CRK` | min_hold | dropped but min-hold 2/3 sess — no sell |
-| 2026-09-07 | `MMED` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-07 | `CLYM` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-07 | `CNXC` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-07 | `VIR` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-07 | `CDXS` | min_hold | dropped but min-hold 2/3 sess — no sell |
-| 2026-09-07 | `LPG` | cash | leftover split 7.43 < 1 share @ 53.90 |
-| 2026-09-07 | `CHPT` | cash | leftover split 7.43 < 1 share @ 9.28 |
+| 2026-09-07 | `LPG` | cash | leftover split 4.46 < 1 share @ 53.90 |
+| 2026-09-07 | `CHPT` | cash | leftover split 4.46 < 1 share @ 9.28 |
+| 2026-09-07 | `MRX` | cash | leftover split 4.46 < 1 share @ 75.65 |
+| 2026-09-07 | `XP` | cash | leftover split 4.46 < 1 share @ 19.67 |
+| 2026-09-08 | `CHGG` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-08 | `SUZ` | hard_red | hard-red S=-11.47 sit; no new buys |
+| 2026-09-08 | `TYRA` | hard_red | hard-red S=-11.47 sit; no new buys |
+| 2026-09-08 | `TARS` | hard_red | hard-red S=-11.47 sit; no new buys |
+| 2026-09-08 | `TWI` | hard_red | hard-red S=-11.47 sit; no new buys |
+| 2026-09-08 | `GWRE` | hard_red | hard-red S=-11.47 sit; no new buys |
+| 2026-09-08 | `PATH` | hard_red | hard-red S=-11.47 sit; no new buys |
+| 2026-09-08 | `ASAN` | hard_red | hard-red S=-11.47 sit; no new buys |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `RVTY` | 10 | 2026-09-03 @ $125.94 | combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list flatten,mover_buy; 🔵; ⚪; ret5=+6.8; leftover $1263.37 |
 | `GPRO` | 1035 | 2026-09-03 @ $1.22 | combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer,yday_mover; ret5=+5.9; leftover $1263.37 |
-| `CRK` | 80 | 2026-09-03 @ $15.70 | combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer,yday_mover,mover_buy; 🔵; ret5=+1.1; leftover $1263.37 |
-| `MMED` | 55 | 2026-09-03 @ $22.78 | combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+1.5; leftover $1263.37 |
-| `CLYM` | 85 | 2026-09-03 @ $14.79 | combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list yday_gainer; 🔵; ret5=+5.8; leftover $1263.37 |
-| `CNXC` | 39 | 2026-09-03 @ $31.80 | combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list yday_gainer; 🔵; ret5=+3.7; leftover $1263.37 |
-| `VIR` | 108 | 2026-09-03 @ $11.63 | combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list yday_gainer; 🔵; ⚪; ret5=+5.8; leftover $1263.37 |
-| `CDXS` | 831 | 2026-09-03 @ $1.52 | combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list yday_mover; ret5=+7.1; leftover $1263.37 |
-| `CHGG` | 7 | 2026-09-07 @ $0.95 | combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer,yday_mover; 🔵; ret5=+3.8; leftover $7.43 |
+| `CHGG` | 4 | 2026-09-07 @ $0.95 | combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer,yday_mover; 🔵; ret5=+3.8; leftover $4.46 |

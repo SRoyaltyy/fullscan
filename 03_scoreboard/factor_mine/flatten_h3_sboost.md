@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `both` · S≥+5: sizeup + more names
 
-Cash book **+11.97%** ($11,197) · signal-only (no cash/fees) was +45.15%. Starts YES **17/18**. Fills 81 · skips 141 · realized $+747.30.
+Cash book **+12.81%** ($11,281) · signal-only (no cash/fees) was +46.49%. Starts YES **17/19**. Fills 86 · skips 147 · realized $+1280.61.
 
 ## How this sleeve decides (like you are 10)
 
@@ -51,7 +51,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $3.44.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $11,280.61.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -235,6 +235,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-07 | `CABA` | 657 | $3.48 | $3.46 | -13.14 | $3.47 | +6.57 | -6.57 | +124.83 | +131.40 |
 | 2026-09-07 | `VSTM` | 279 | $7.98 | $7.91 | -19.53 | $8.20 | +80.91 | +61.38 | +58.59 | +139.50 |
 | 2026-09-07 | `RVTY` | 17 | $130.63 | $130.03 | -10.20 | $130.22 | +3.23 | -6.97 | +69.53 | +72.76 |
+| 2026-09-08 | `ATRC` | 43 | $51.52 | $52.37 | +36.55 | — | +0.00 | +36.55 | +112.23 | — |
+| 2026-09-08 | `HRMY` | 52 | $42.25 | $43.93 | +87.36 | — | +0.00 | +87.36 | +136.24 | — |
+| 2026-09-08 | `CABA` | 657 | $3.47 | $3.56 | +59.13 | — | +0.00 | +59.13 | +190.53 | — |
+| 2026-09-08 | `VSTM` | 279 | $8.20 | $7.91 | -80.91 | — | +0.00 | -80.91 | +58.59 | — |
+| 2026-09-08 | `RVTY` | 17 | $130.22 | $130.22 | +0.00 | — | +0.00 | +0.00 | +72.76 | — |
 
 ## Each session (cash + holdings state)
 
@@ -256,8 +261,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-01 | -6.30 | $10,560.87 | RRC×1, CRK×5, SLI×28 | $10,749.34 | +3.86 | +0.00 | — | RRC, CRK, SLI | $10,747.29 | $10,747.29 | — |
 | 2026-09-02 | -3.83 | $10,747.29 | — | $10,747.29 | +0.00 | +0.00 | — | — | $10,747.29 | $10,747.29 | — |
 | 2026-09-03 | -0.90 | $10,747.29 | — | $10,747.29 | +0.00 | +573.67 | ATRC, HRMY, CABA, VSTM, RVTY | — | $3.44 | $11,302.58 | ATRC×43, HRMY×52, CABA×657, VSTM×279, RVTY×17 |
-| 2026-09-04 | — | $3.44 | ATRC×43, HRMY×52, CABA×657, VSTM×279, RVTY×17 | $11,386.57 | +83.99 | -217.14 | — | — | $3.44 | $11,169.43 | ATRC×43, HRMY×52, CABA×657, VSTM×279, RVTY×17 |
+| 2026-09-04 | +2.25 | $3.44 | ATRC×43, HRMY×52, CABA×657, VSTM×279, RVTY×17 | $11,386.57 | +83.99 | -217.14 | — | — | $3.44 | $11,169.43 | ATRC×43, HRMY×52, CABA×657, VSTM×279, RVTY×17 |
 | 2026-09-07 | — | $3.44 | ATRC×43, HRMY×52, CABA×657, VSTM×279, RVTY×17 | $11,089.35 | -80.08 | +107.78 | — | — | $3.44 | $11,197.13 | ATRC×43, HRMY×52, CABA×657, VSTM×279, RVTY×17 |
+| 2026-09-08 | -11.47 | $3.44 | ATRC×43, HRMY×52, CABA×657, VSTM×279, RVTY×17 | $11,299.26 | +102.13 | +0.00 | — | ATRC, HRMY, CABA, VSTM, RVTY | $11,280.61 | $11,280.61 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -380,6 +386,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.44 | ▼ close $11,169.43 vs 09:30 $11,386.57 (session -217.14) | 16:00 close · cash $3.44 · equity $11,169.43 vs 09:30 $11,386.57 (-217.14; session marks -217.14) · 5 name(s) marked open→close (per-name table). ATRC×43 09:30 $52.88 → close $52.46 -18.06; HRMY×52 09:30 $42.93 → close $41.86 -55.64; CABA×657 09:30 $3.63 → close $3.48 -98.55; VSTM×279 09:30 $8.03 → close $7.98 -13.95; RVTY×17 09:30 $132.45 → close $130.63 -30.94 | — |
 | 2026-09-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3.44 | ▼ 09:30 equity $11,089.35 vs yday $11,169.43 (-80.08) | 09:30 open · cash $3.44 (unchanged overnight, no fees) · equity $11,089.35 vs prior close $11,169.43 (-80.08) · 5 name(s) re-marked at the open (per-name table). ATRC×43 yday $52.46 → 09:30 $52.03 -18.49; HRMY×52 yday $41.86 → 09:30 $41.50 -18.72; CABA×657 yday $3.48 → 09:30 $3.46 -13.14; VSTM×279 yday $7.98 → 09:30 $7.91 -19.53; RVTY×17 yday $130.63 → 09:30 $130.03 -10.20 | — |
 | 2026-09-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.44 | ▲ close $11,197.13 vs 09:30 $11,089.35 (session +107.78) | 16:00 close · cash $3.44 · equity $11,197.13 vs 09:30 $11,089.35 (+107.78; session marks +107.78) · 5 name(s) marked open→close (per-name table). ATRC×43 09:30 $52.03 → close $51.52 -21.93; HRMY×52 09:30 $41.50 → close $42.25 +39.00; CABA×657 09:30 $3.46 → close $3.47 +6.57; VSTM×279 09:30 $7.91 → close $8.20 +80.91; RVTY×17 09:30 $130.03 → close $130.22 +3.23 | — |
+| 2026-09-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3.44 | ▲ 09:30 equity $11,299.26 vs yday $11,197.13 (+102.13) | 09:30 open · cash $3.44 (unchanged overnight, no fees) · equity $11,299.26 vs prior close $11,197.13 (+102.13) · 5 name(s) re-marked at the open (per-name table). ATRC×43 yday $51.52 → 09:30 $52.37 +36.55; HRMY×52 yday $42.25 → 09:30 $43.93 +87.36; CABA×657 yday $3.47 → 09:30 $3.56 +59.13; VSTM×279 yday $8.20 → 09:30 $7.91 -80.91; RVTY×17 yday $130.22 → 09:30 $130.22 +0.00 | — |
+| 2026-09-08 09:30 ET | **SELL** | `ATRC` | 43 | $52.37 | $2.15 | $+107.96 | $2,253.21 | ▲ +107.96 after sell → book $11,297.12; vs 09:30 mark -2.14 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-08 09:30 ET | **SELL** | `HRMY` | 52 | $43.93 | $2.17 | $+131.92 | $4,535.39 | ▲ +131.92 after sell → book $11,294.94; vs 09:30 mark -2.18 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-08 09:30 ET | **SELL** | `CABA` | 657 | $3.56 | $8.60 | $+173.45 | $6,865.71 | ▲ +173.45 after sell → book $11,286.34; vs 09:30 mark -8.60 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-08 09:30 ET | **SELL** | `VSTM` | 279 | $7.91 | $3.66 | $+51.33 | $9,068.94 | ▲ +51.33 after sell → book $11,282.68; vs 09:30 mark -3.66 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-08 09:30 ET | **SELL** | `RVTY` | 17 | $130.22 | $2.07 | $+68.65 | $11,280.61 | ▲ +68.65 after sell → book $11,280.61; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,280.61 | ▲ close $11,280.61 vs 09:30 $11,299.26 (session +0.00) | 16:00 close · cash $11,280.61 · no lots left · equity $11,280.61. | — |
 
 ## Not taken
 
@@ -513,26 +526,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 | `HRMY` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-04 | `VSTM` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-04 | `RVTY` | min_hold | dropped but min-hold 1/3 sess — no sell |
-| 2026-09-04 | `ASND` | cash | leftover split 0.86 < 1 share @ 266.94 |
-| 2026-09-04 | `OSCR` | cash | leftover split 0.86 < 1 share @ 30.65 |
-| 2026-09-04 | `NVAX` | cash | leftover split 0.86 < 1 share @ 10.41 |
-| 2026-09-04 | `BVS` | cash | leftover split 0.86 < 1 share @ 14.50 |
+| 2026-09-04 | `ALEC` | cash | leftover split 0.57 < 1 share @ 2.70 |
+| 2026-09-04 | `BHC` | cash | leftover split 0.57 < 1 share @ 6.91 |
+| 2026-09-04 | `BMEA` | cash | leftover split 0.57 < 1 share @ 1.93 |
+| 2026-09-04 | `OABI` | cash | leftover split 0.57 < 1 share @ 5.08 |
+| 2026-09-04 | `OPK` | cash | leftover split 0.57 < 1 share @ 1.71 |
+| 2026-09-04 | `VIR` | cash | leftover split 0.57 < 1 share @ 11.54 |
 | 2026-09-07 | `ATRC` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-07 | `HRMY` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-07 | `VSTM` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-07 | `RVTY` | min_hold | dropped but min-hold 2/3 sess — no sell |
-| 2026-09-07 | `BSX` | cash | leftover split 0.69 < 1 share @ 46.92 |
+| 2026-09-07 | `NVAX` | cash | leftover split 0.69 < 1 share @ 10.50 |
 | 2026-09-07 | `UGP` | cash | leftover split 0.69 < 1 share @ 7.18 |
 | 2026-09-07 | `LPG` | cash | leftover split 0.69 < 1 share @ 53.90 |
-| 2026-09-07 | `NVAX` | cash | leftover split 0.69 < 1 share @ 10.50 |
+| 2026-09-07 | `BSX` | cash | leftover split 0.69 < 1 share @ 46.92 |
 | 2026-09-07 | `ALT` | cash | leftover split 0.69 < 1 share @ 3.28 |
-
-## Still open (marked at last close)
-
-| Ticker | Shares | Entry | Why |
-|---|---:|---|---|
-| `ATRC` | 43 | 2026-09-03 @ $49.76 | S≥+5: sizeup + more names; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+10.6; leftover $2149.46 |
-| `HRMY` | 52 | 2026-09-03 @ $41.31 | S≥+5: sizeup + more names; list flatten,mover_buy; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+0.1; leftover $2149.46 |
-| `CABA` | 657 | 2026-09-03 @ $3.27 | S≥+5: sizeup + more names; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+13.8; leftover $2149.46 |
-| `VSTM` | 279 | 2026-09-03 @ $7.70 | S≥+5: sizeup + more names; list flatten,mover_buy; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+4.7; leftover $2149.46 |
-| `RVTY` | 17 | 2026-09-03 @ $125.94 | S≥+5: sizeup + more names; list flatten,mover_buy; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+6.8; leftover $2149.46 |
+| 2026-09-08 | `GGB` | hard_red | hard-red S=-11.47 sit; no new buys |
+| 2026-09-08 | `SID` | hard_red | hard-red S=-11.47 sit; no new buys |
+| 2026-09-08 | `SUZ` | hard_red | hard-red S=-11.47 sit; no new buys |
+| 2026-09-08 | `TX` | hard_red | hard-red S=-11.47 sit; no new buys |

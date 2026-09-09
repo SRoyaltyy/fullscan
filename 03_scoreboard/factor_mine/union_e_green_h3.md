@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+50.00%** ($15,000) · signal-only (no cash/fees) was +17.90%. Starts YES **15/18**. Fills 64 · skips 108 · realized $+3500.43.
+Cash book **+49.90%** ($14,990) · signal-only (no cash/fees) was +15.44%. Starts YES **15/19**. Fills 72 · skips 114 · realized $+4995.84.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $213.89.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $14,839.29.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -205,6 +205,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-07 | `DOMO` | 12 | $3.79 | $3.62 | -2.04 | $3.88 | +3.12 | +1.08 | -1.92 | +1.20 |
 | 2026-09-07 | `IOT` | 1 | $38.75 | $44.90 | +6.15 | $40.20 | -4.70 | +1.45 | +7.21 | +2.51 |
 | 2026-09-07 | `MAMA` | 2 | $15.96 | $15.70 | -0.52 | $15.16 | -1.08 | -1.60 | +0.16 | -0.92 |
+| 2026-09-08 | `CHPT` | 318 | $9.89 | $9.98 | +28.62 | — | +0.00 | +28.62 | +1488.24 | — |
+| 2026-09-08 | `FIVE` | 6 | $252.20 | $252.92 | +4.32 | — | +0.00 | +4.32 | +47.64 | — |
+| 2026-09-08 | `HPE` | 32 | $52.00 | $51.68 | -10.24 | — | +0.00 | -10.24 | -9.92 | — |
+| 2026-09-08 | `MOMO` | 310 | $5.37 | $5.37 | +0.00 | — | +0.00 | +0.00 | -18.60 | — |
+| 2026-09-08 | `NTSK` | 121 | $13.94 | $13.91 | -3.63 | — | +0.00 | -3.63 | -3.63 | — |
+| 2026-09-08 | `PHR` | 143 | $10.94 | $10.94 | +0.00 | — | +0.00 | +0.00 | -121.55 | — |
+| 2026-09-08 | `PVH` | 23 | $74.33 | $74.33 | +0.00 | — | +0.00 | +0.00 | +28.29 | — |
+| 2026-09-08 | `SNOW` | 5 | $337.18 | $336.00 | -5.90 | — | +0.00 | -5.90 | +127.30 | — |
+| 2026-09-08 | `ASAN` | 4 | $8.81 | $8.73 | -0.32 | $8.62 | -0.44 | -0.76 | -5.72 | -6.16 |
+| 2026-09-08 | `DOMO` | 12 | $3.88 | $3.85 | -0.36 | $3.85 | +0.00 | -0.36 | +0.84 | +0.84 |
+| 2026-09-08 | `IOT` | 1 | $40.20 | $39.99 | -0.21 | $39.83 | -0.16 | -0.37 | +2.30 | +2.14 |
+| 2026-09-08 | `MAMA` | 2 | $15.16 | $15.30 | +0.28 | $15.26 | -0.08 | +0.20 | -0.64 | -0.72 |
 
 ## Each session (cash + holdings state)
 
@@ -226,8 +238,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-01 | -6.30 | $310.52 | ADSK×6, ESTC×19, HAFN×208, PD×132, RBRK×16, S×75, ULTA×3, WDAY×8 | $13,597.54 | +13.22 | -43.35 | — | — | $310.52 | $13,554.19 | ADSK×6, ESTC×19, HAFN×208, PD×132, RBRK×16, S×75, ULTA×3, WDAY×8 |
 | 2026-09-02 | -3.83 | $310.52 | ADSK×6, ESTC×19, HAFN×208, PD×132, RBRK×16, S×75, ULTA×3, WDAY×8 | $13,518.04 | -36.15 | +0.00 | — | ADSK, ESTC, HAFN, PD, RBRK, S, ULTA, WDAY | $13,500.43 | $13,500.43 | — |
 | 2026-09-03 | -0.90 | $13,500.43 | — | $13,500.43 | -0.00 | -89.44 | CHPT, FIVE, HPE, MOMO, NTSK, PHR, PVH, SNOW | — | $370.42 | $13,389.95 | CHPT×318, FIVE×6, HPE×32, MOMO×310, NTSK×121, PHR×143, PVH×23, SNOW×5 |
-| 2026-09-04 | — | $370.42 | CHPT×318, FIVE×6, HPE×32, MOMO×310, NTSK×121, PHR×143, PVH×23, SNOW×5 | $14,397.61 | +1,007.66 | +396.04 | ASAN, DOMO, IOT, MAMA | — | $213.89 | $14,792.05 | CHPT×318, FIVE×6, HPE×32, MOMO×310, NTSK×121, PHR×143, PVH×23, SNOW×5, ASAN×4, DOMO×12, IOT×1, MAMA×2 |
+| 2026-09-04 | +2.25 | $370.42 | CHPT×318, FIVE×6, HPE×32, MOMO×310, NTSK×121, PHR×143, PVH×23, SNOW×5 | $14,397.61 | +1,007.66 | +396.04 | ASAN, DOMO, IOT, MAMA | — | $213.89 | $14,792.05 | CHPT×318, FIVE×6, HPE×32, MOMO×310, NTSK×121, PHR×143, PVH×23, SNOW×5, ASAN×4, DOMO×12, IOT×1, MAMA×2 |
 | 2026-09-07 | — | $213.89 | CHPT×318, FIVE×6, HPE×32, MOMO×310, NTSK×121, PHR×143, PVH×23, SNOW×5, ASAN×4, DOMO×12, IOT×1, MAMA×2 | $14,805.32 | +13.27 | +194.46 | — | — | $213.89 | $14,999.78 | CHPT×318, FIVE×6, HPE×32, MOMO×310, NTSK×121, PHR×143, PVH×23, SNOW×5, ASAN×4, DOMO×12, IOT×1, MAMA×2 |
+| 2026-09-08 | -11.47 | $213.89 | CHPT×318, FIVE×6, HPE×32, MOMO×310, NTSK×121, PHR×143, PVH×23, SNOW×5, ASAN×4, DOMO×12, IOT×1, MAMA×2 | $15,012.34 | +12.56 | -0.68 | — | CHPT, FIVE, HPE, MOMO, NTSK, PHR, PVH, SNOW | $14,839.29 | $14,990.32 | ASAN×4, DOMO×12, IOT×1, MAMA×2 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -318,7 +331,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,500.43 | ▲ 09:30 equity $13,500.43 vs yday $13,500.43 (-0.00) | 09:30 open · cash $13,500.43 · no holdings · equity $13,500.43 vs prior close $13,500.43 (-0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-03 09:30 ET | **BUY** | `CHPT` | 318 | $5.30 | $4.10 | — | $11,810.92 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+1.1; leftover $1687.55 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `FIVE` | 6 | $244.98 | $2.01 | — | $10,339.04 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+2.3; leftover $1687.55 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `HPE` | 32 | $51.99 | $2.09 | — | $8,673.27 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-9.0; leftover $1687.55 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `HPE` | 32 | $51.99 | $2.09 | — | $8,673.27 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-9.0; leftover $1687.55 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟡 ab🟢 peer🔴 heat🟡 vol🟡 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `MOMO` | 310 | $5.43 | $4.00 | — | $6,985.97 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+0.0; leftover $1687.55 | join🟢 sector🟡 gen🟡 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `NTSK` | 121 | $13.94 | $2.35 | — | $5,296.88 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-8.2; leftover $1687.55 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `PHR` | 143 | $11.79 | $2.42 | — | $3,608.49 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-1.3; leftover $1687.55 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
@@ -333,6 +346,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $213.89 | ▲ close $14,792.05 vs 09:30 $14,397.61 (session +396.04) | 16:00 close · cash $213.89 · equity $14,792.05 vs 09:30 $14,397.61 (+394.44; session marks +396.04) · 12 name(s) marked open→close (per-name table). CHPT×318 09:30 $6.90 → close $9.08 +693.24; FIVE×6 09:30 $256.99 → close $239.96 -102.18; HPE×32 09:30 $47.60 → close $54.44 +218.88; MOMO×310 09:30 $5.50 → close $5.10 -124.00; NTSK×121 09:30 $15.51 → close $14.34 -141.57; PHR×143 09:30 $11.02 → close $11.10 +11.44; PVH×23 09:30 $74.96 → close $72.46 -57.50; SNOW×5 09:30 $377.24 → close $356.47 -103.85; ASAN×4 09:30 $10.16 → close $10.09 -0.28; DOMO×12 09:30 $3.78 → close $3.79 +0.12; IOT×1 09:30 $37.69 → close $38.75 +1.06; MAMA×2 09:30 $15.62 → close $15.96 +0.68 | — |
 | 2026-09-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $213.89 | ▲ 09:30 equity $14,805.32 vs yday $14,792.05 (+13.27) | 09:30 open · cash $213.89 (unchanged overnight, no fees) · equity $14,805.32 vs prior close $14,792.05 (+13.27) · 12 name(s) re-marked at the open (per-name table). CHPT×318 yday $9.08 → 09:30 $9.28 +63.60; FIVE×6 yday $239.96 → 09:30 $238.88 -6.48; HPE×32 yday $54.44 → 09:30 $53.85 -18.88; MOMO×310 yday $5.10 → 09:30 $5.13 +9.30; NTSK×121 yday $14.34 → 09:30 $14.15 -22.99; PHR×143 yday $11.10 → 09:30 $11.08 -2.86; PVH×23 yday $72.46 → 09:30 $72.79 +7.59; SNOW×5 yday $356.47 → 09:30 $353.63 -14.20; ASAN×4 yday $10.09 → 09:30 $8.74 -5.40; DOMO×12 yday $3.79 → 09:30 $3.62 -2.04; IOT×1 yday $38.75 → 09:30 $44.90 +6.15; MAMA×2 yday $15.96 → 09:30 $15.70 -0.52 | — |
 | 2026-09-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $213.89 | ▲ close $14,999.78 vs 09:30 $14,805.32 (session +194.46) | 16:00 close · cash $213.89 · equity $14,999.78 vs 09:30 $14,805.32 (+194.46; session marks +194.46) · 12 name(s) marked open→close (per-name table). CHPT×318 09:30 $9.28 → close $9.89 +193.98; FIVE×6 09:30 $238.88 → close $252.20 +79.92; HPE×32 09:30 $53.85 → close $52.00 -59.20; MOMO×310 09:30 $5.13 → close $5.37 +74.40; NTSK×121 09:30 $14.15 → close $13.94 -25.41; PHR×143 09:30 $11.08 → close $10.94 -20.02; PVH×23 09:30 $72.79 → close $74.33 +35.42; SNOW×5 09:30 $353.63 → close $337.18 -82.25; ASAN×4 09:30 $8.74 → close $8.81 +0.28; DOMO×12 09:30 $3.62 → close $3.88 +3.12; IOT×1 09:30 $44.90 → close $40.20 -4.70; MAMA×2 09:30 $15.70 → close $15.16 -1.08 | — |
+| 2026-09-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $213.89 | ▲ 09:30 equity $15,012.34 vs yday $14,999.78 (+12.56) | 09:30 open · cash $213.89 (unchanged overnight, no fees) · equity $15,012.34 vs prior close $14,999.78 (+12.56) · 12 name(s) re-marked at the open (per-name table). CHPT×318 yday $9.89 → 09:30 $9.98 +28.62; FIVE×6 yday $252.20 → 09:30 $252.92 +4.32; HPE×32 yday $52.00 → 09:30 $51.68 -10.24; MOMO×310 yday $5.37 → 09:30 $5.37 +0.00; NTSK×121 yday $13.94 → 09:30 $13.91 -3.63; PHR×143 yday $10.94 → 09:30 $10.94 +0.00; PVH×23 yday $74.33 → 09:30 $74.33 +0.00; SNOW×5 yday $337.18 → 09:30 $336.00 -5.90; ASAN×4 yday $8.81 → 09:30 $8.73 -0.32; DOMO×12 yday $3.88 → 09:30 $3.85 -0.36; IOT×1 yday $40.20 → 09:30 $39.99 -0.21; MAMA×2 yday $15.16 → 09:30 $15.30 +0.28 | — |
+| 2026-09-08 09:30 ET | **SELL** | `CHPT` | 318 | $9.98 | $4.18 | $+1479.96 | $3,383.35 | ▲ +1,479.96 after sell → book $15,008.16; vs 09:30 mark -4.18 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-08 09:30 ET | **SELL** | `FIVE` | 6 | $252.92 | $2.03 | $+43.60 | $4,898.84 | ▲ +43.60 after sell → book $15,006.13; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-08 09:30 ET | **SELL** | `HPE` | 32 | $51.68 | $2.11 | $-14.12 | $6,550.49 | ▼ -14.12 after sell → book $15,004.02; vs 09:30 mark -2.11 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-08 09:30 ET | **SELL** | `MOMO` | 310 | $5.37 | $4.06 | $-26.66 | $8,211.12 | ▼ -26.66 after sell → book $14,999.95; vs 09:30 mark -4.07 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-08 09:30 ET | **SELL** | `NTSK` | 121 | $13.91 | $2.39 | $-8.37 | $9,891.85 | ▼ -8.37 after sell → book $14,997.57; vs 09:30 mark -2.38 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-08 09:30 ET | **SELL** | `PHR` | 143 | $10.94 | $2.46 | $-126.42 | $11,453.81 | ▼ -126.42 after sell → book $14,995.11; vs 09:30 mark -2.46 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-08 09:30 ET | **SELL** | `PVH` | 23 | $74.33 | $2.08 | $+24.15 | $13,161.32 | ▲ +24.15 after sell → book $14,993.03; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-08 09:30 ET | **SELL** | `SNOW` | 5 | $336.00 | $2.03 | $+123.27 | $14,839.29 | ▲ +123.27 after sell → book $14,991.00; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,839.29 | ▼ close $14,990.32 vs 09:30 $15,012.34 (session -0.68) | 16:00 close · cash $14,839.29 · equity $14,990.32 vs 09:30 $15,012.34 (-22.02; session marks -0.68) · 4 name(s) marked open→close (per-name table). ASAN×4 09:30 $8.73 → close $8.62 -0.44; DOMO×12 09:30 $3.85 → close $3.85 +0.00; IOT×1 09:30 $39.99 → close $39.83 -0.16; MAMA×2 09:30 $15.30 → close $15.26 -0.08 | — |
 
 ## Not taken
 
@@ -446,19 +469,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-07 | `DOMO` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-07 | `IOT` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-07 | `MAMA` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-08 | `ASAN` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-08 | `DOMO` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-08 | `IOT` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-08 | `MAMA` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-08 | `CAN` | hard_red | hard-red S=-11.47 sit; no new buys |
+| 2026-09-08 | `UNFI` | hard_red | hard-red S=-11.47 sit; no new buys |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `CHPT` | 318 | 2026-09-03 @ $5.30 | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+1.1; leftover $1687.55 |
-| `FIVE` | 6 | 2026-09-03 @ $244.98 | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+2.3; leftover $1687.55 |
-| `HPE` | 32 | 2026-09-03 @ $51.99 | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-9.0; leftover $1687.55 |
-| `MOMO` | 310 | 2026-09-03 @ $5.43 | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+0.0; leftover $1687.55 |
-| `NTSK` | 121 | 2026-09-03 @ $13.94 | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-8.2; leftover $1687.55 |
-| `PHR` | 143 | 2026-09-03 @ $11.79 | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-1.3; leftover $1687.55 |
-| `PVH` | 23 | 2026-09-03 @ $73.10 | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-4.8; leftover $1687.55 |
-| `SNOW` | 5 | 2026-09-03 @ $310.54 | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+1.2; leftover $1687.55 |
 | `ASAN` | 4 | 2026-09-04 @ $10.16 | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+4.8; leftover $46.30 |
 | `DOMO` | 12 | 2026-09-04 @ $3.78 | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-2.8; leftover $46.30 |
 | `IOT` | 1 | 2026-09-04 @ $37.69 | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+0.4; leftover $46.30 |
