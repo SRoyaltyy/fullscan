@@ -17471,18 +17471,143 @@
         "B7_OIL_DOLLAR": -1.0
       },
       "leading_sum": -12.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7660.68,
+      "actual_close": 7636.36,
+      "actual_pct_change": -0.48,
+      "actual_direction": "down",
+      "actual_magnitude_band": "mild",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": -1.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": -3.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": -1.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": -1.0,
+          "status": "hit"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://www.cnbc.com/2026/09/08/stock-market-today-live-updates.html",
+          "date_accessed": "2026-09-09",
+          "summary": "CNBC confirms the exact closing numbers for all three major indices.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.usnews.com/news/world/articles/2026-09-09/iran-attacks-us-base-in-jordan-ships-near-hormuz-after-tankers-sunk",
+          "date_accessed": "2026-09-09",
+          "summary": "Reuters via US News confirms the scale of the Iran-US tanker escalation on September 9.",
+          "verification": "unreachable"
+        },
+        {
+          "url": "https://tradingeconomics.com/commodity/brent-crude-oil",
+          "date_accessed": "2026-09-09",
+          "summary": "Trading Economics confirms Brent crossed $100 on September 9 with a ~15% one-month gain.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://keyt.com/news/money-and-business/cnn-business-consumer/2026/09/09/bond-yields-rise-after-treasury-department-announces-size-of-buyback-operation/",
+          "date_accessed": "2026-09-09",
+          "summary": "CNN via KEYT confirms 10-year yields approached multi-year closing highs on September 9.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/09/treasury-department-to-buy-back-6-billion-in-longer-term-debt-triple-the-normal-level.html",
+          "date_accessed": "2026-09-09",
+          "summary": "CNBC confirms the Treasury's tripling of buyback operations to $6 billion.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://finance.yahoo.com/technology/ai/articles/meta-stock-jumps-5-ai-164113999.html",
+          "date_accessed": "2026-09-09",
+          "summary": "Yahoo Finance confirms Meta's strong gain on the Muse AI launch.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://stockstotrade.com/news/alphabet-inc-googl-news-2026_09_09/",
+          "date_accessed": "2026-09-09",
+          "summary": "Stockstotrade confirms Alphabet's decline on regulatory concerns.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/09/apple-event-today-live-updates.html",
+          "date_accessed": "2026-09-09",
+          "summary": "CNBC confirms Apple's muted sell-the-news reaction to its product event.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-09-2026",
+          "date_accessed": "2026-09-09",
+          "summary": "TheStreet confirms the Dow's underperformance and the oil/yield drivers.",
+          "verification": "http_404"
+        },
+        {
+          "url": "https://vistapglobal.com/stock-market-today-sept-9-2026-sp-500-dow-and-nasdaq-fall-as-oil-rallies-rates-rise-and-risk-appetite-fades-dell-ser-soc-uso-vix-rise/",
+          "date_accessed": "2026-09-09",
+          "summary": "Confirms small caps significantly underperformed large caps on September 9.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://tradingeconomics.com/united-states/stock-market",
+          "date_accessed": "2026-09-09",
+          "summary": "Trading Economics confirms energy stocks were the day's winners.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://intellectia.ai/blog/fed-rate-hike-september-2026",
+          "date_accessed": "2026-09-09",
+          "summary": "Confirms the market's elevated expectations for a September Fed hike.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.supplychaindive.com/news/trump-escalates-canada-trade-war-with-new-tariffs-import-bans/829876/",
+          "date_accessed": "2026-09-09",
+          "summary": "Supply Chain Dive confirms the ongoing US-Canada trade war escalation.",
+          "verification": "quote_not_found"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -17509,7 +17634,14 @@
           "confidence": 0.45
         }
       },
-      "news_judge_present": true
+      "news_judge_present": true,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "Oil >$100 Brent + Iran-US tanker war escalation (biggest wave of shipping attacks since war began) triggering stagflation amplification loop through Fed hike odds and Treasury yields at 52-week highs",
+      "key_interaction": "Oil spike × Fed hike odds × Treasury yields — the Iran escalation pushed oil >$100, which fed inflation expectations, which raised hike odds under hawkish Warsh, which pushed 10Y yields to 52-week highs, which compressed equity multiples — a self-reinforcing stagflation loop",
+      "knowable_at_9am": "yes — oil >$100 and Iran tanker escalation headlines were fully known premarket; the dominant driver was identifiable before the open",
+      "attribution_contested": "no — major outlets consistently attribute the decline to oil >$100 and rising Treasury yields; secondary emphasis varies (tech weakness, Apple event) but no fundamental disagreement",
+      "outlier_watch": "Meta +5-7% on Muse AI launch defied the broad risk-off tape; energy stocks (Chevron +2.47%) rallied while everything else fell; Treasury buyback tripling to $6B failed to stop yields from rising to 52-week highs"
     },
     {
       "date": "2026-09-09",
