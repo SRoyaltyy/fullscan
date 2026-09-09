@@ -1,6 +1,6 @@
 # flatten_robust card — 2026-09-09
 
-_Generated 2026-09-09T11:57:37 — live `flatten_robust`._
+_Generated 2026-09-09T12:26:16 — live `flatten_robust`._
 
 **morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
 
@@ -34,8 +34,8 @@ Sized from marked equity **$108,616.66** as if the book were flat. `io 3d_size (
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
 | 16:00 ET | SM | io_core | 479 | $37.76 | $18,087.04 | cash tied |
+| 16:00 ET | WTTR | io_core | 870 | $20.80 | $18,096.00 | cash tied |
 | 16:00 ET | UROY | io_core | 3755 | $4.82 | $18,099.10 | cash tied |
-| 16:00 ET | ORIC | io_core | 1434 | $12.62 | $18,097.08 | cash tied |
 | 16:00 ET | NU | io_core | 1180 | $15.33 | $18,089.40 | cash tied |
 | 16:00 ET | NVT | io_core | 111 | $162.57 | $18,045.27 | cash tied |
 | 16:00 ET | XP | io_core | 905 | $19.99 | $18,090.95 | cash tied |
