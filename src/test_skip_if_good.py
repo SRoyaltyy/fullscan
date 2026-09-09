@@ -90,6 +90,20 @@ def test_1d_buy_not_all_green_is_not_good() -> None:
         assert skip_if_good.book_1d_breaks_all_green(js) is False
 
 
+def test_weather_before_0535_is_not_good() -> None:
+    assert skip_if_good.weather_stamped_before_open({
+        "generated_at": "2026-09-09T01:40:33.000000-04:00",
+        "signals": {"sectors": {"X": 1, "Y": 1, "Z": 1, "A": 1, "B": 1}},
+    }, "2026-09-09") is True
+    assert skip_if_good.weather_stamped_before_open({
+        "generated_at": "2026-09-09T05:55:01.000000-04:00",
+        "signals": {"sectors": {"X": 1, "Y": 1, "Z": 1, "A": 1, "B": 1}},
+    }, "2026-09-09") is False
+    assert skip_if_good.weather_stamped_before_open({
+        "generated_at": "2026-09-08T22:10:00.000000-04:00",
+    }, "2026-09-09") is False
+
+
 def test_dead_relvol_1d_buy_is_not_good() -> None:
     with tempfile.TemporaryDirectory() as tmp:
         js = Path(tmp) / "book.json"
@@ -326,6 +340,7 @@ if __name__ == "__main__":
     test_stock_book_requires_green_and_ranker_inputs()
     test_book_without_essays_is_not_good()
     test_1d_buy_not_all_green_is_not_good()
+    test_weather_before_0535_is_not_good()
     test_dead_relvol_1d_buy_is_not_good()
     test_night_pack_dates_heals_prior_session_after_bell()
     test_next_session_skips_labor_day_2026()
