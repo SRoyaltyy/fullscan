@@ -33,5 +33,5 @@ date,strat,side,rule,n_keep,n_add,n_drop,n_book_buy,mine_only_1d,n_bought,bought
 2026-09-07,boring_winners_overlay,sell,none,,,,,,0,,0,,0,,0,,,,,,0,0,0,0,book SELL ∩ fade
 2026-09-08,boring_winners_overlay,buy,hot_ab_peer+blue,1.0,5.0,0.0,1.0,0.0,6,ZIM ST ACMR ORA GRND TUYA,11,ALAB BKR CRWD DHT GPRK HPE JCI MOS MRX TARS WWW,0,,6,0.0,,,,0.0,0,0,0,0,"1d BUY walk × mined stacks: keep / drop fade / swap stack-less / add gated extras → scalp `hot+ab+peer` (70.6% hit, small n) → baseline `blue`"
 2026-09-08,boring_winners_overlay,sell,fade,,,,,,7,CPB BYND DJT TMC COLD SGML FLO,0,,0,,7,-0.0,,,,,0,0,0,0,book SELL ∩ fade
-2026-09-09,boring_winners_overlay,buy,ab_and_peer+hot_ab_peer+blue,6.0,3.0,0.0,6.0,,8,AEHR NXT SANM DINO BG DEC MIR DK,5,ACMR GRND ORA ST TUYA,1,ZIM,9,,,,,,0,0,0,0,"1d BUY walk × mined stacks: keep / drop fade / swap stack-less / add gated extras → scalp `ab AND peer` (high hit, modest mean) → scalp `hot+ab+peer` (70.6% hit, small n) → baseline `blue`"
-2026-09-09,boring_winners_overlay,sell,fade,,,,,,3,METC BGS RZLV,6,BYND COLD DJT FLO SGML TMC,1,CPB,4,,,,,,0,0,0,0,book SELL ∩ fade
+2026-09-09,boring_winners_overlay,buy,blue,9.0,4.0,0.0,9.0,,13,CIG MIR XIFR ATRO NXE AR BG ITT EMBJ TDS IMAX EFXT XPRO,6,ACMR GRND ORA ST TUYA ZIM,0,,13,,,,,,0,0,0,0,1d BUY walk × mined stacks: keep / drop fade / swap stack-less / add gated extras → baseline `blue`
+2026-09-09,boring_winners_overlay,sell,fade,,,,,,7,METC SLQT COIN RZLV CLPT BGS STEP,6,BYND COLD DJT FLO SGML TMC,1,CPB,8,,,,,,0,0,0,0,book SELL ∩ fade
