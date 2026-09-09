@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T09:36:47.718577-04:00",
+  "generated_at": "2026-09-09T09:36:53.514058-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -59,7 +59,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 16910
+          "size": 17269
         }
       ],
       "said": "tables on disk",
@@ -707,11 +707,11 @@
       }
     ],
     "flatten": {
-      "said": "0 priced buys \u00b7 0 lots \u00b7 cash $108,616.66 \u00b7 morning S missing",
+      "said": "0 priced buys \u00b7 0 lots \u00b7 cash $107,448.18 \u00b7 morning S missing",
       "bullets": [
         "0 priced buys",
         "0 lots",
-        "cash $108,616.66",
+        "cash $107,448.18",
         "morning S missing"
       ]
     },
@@ -1527,6 +1527,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-09\n_Generated 2026-09-09T08:58:39.271762-04:00 \u00b7 export=data/exports/finviz_2026-09-09.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat tables",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T09:36:52.615453-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-09_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 27,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-09_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 17590,
+          "preview": "# MAP HEAT \u2014 2026-09-09\nExport `finviz_2026-09-08.csv` \u00b7 11608 names \u00b7 generated 2026-09-09T01:59:54.403331-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-09\nExport `finviz_2026-09-08.csv` \u00b7 11608 names \u00b7 generated 2026-09-09T01:59:54.403331-04:00"
     }
   ],
   "href": {
