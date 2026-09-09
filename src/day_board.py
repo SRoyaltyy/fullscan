@@ -17,6 +17,7 @@ from zoneinfo import ZoneInfo
 
 from . import config, stock_book_diag as diag
 from . import stock_book_diag_signals as signals
+from . import day_board_say as say
 
 ROOT = Path(__file__).resolve().parent.parent
 ET = ZoneInfo(config.TZ)
@@ -42,16 +43,7 @@ def _load_json(path: Path) -> dict:
 def _selections(date: str) -> dict:
     book = signals._load_book(date)  # noqa: SLF001 — same 1d lists as readiness
     buys, sells = signals._horizon_rows(book, "1d")  # noqa: SLF001
-    flatten = ""
-    fp = ROOT / "01_daily" / f"{date}_flatten_card.md"
-    if fp.is_file():
-        try:
-            flatten = "\n".join(
-                ln.strip() for ln in fp.read_text(encoding="utf-8").splitlines()
-                if ln.strip()
-            )[:700]
-        except OSError:
-            flatten = ""
+    flatten = say.flatten_card(date) or {}
     return {
         "buy_1d": [
             {"ticker": str(r.get("ticker") or ""),
@@ -64,6 +56,10 @@ def _selections(date: str) -> dict:
             for r in sells[:15]
         ],
         "flatten": flatten,
+        "general": say.general_predict(date) or {},
+        "sectors": say.sector_board(date) or {},
+        "news": say.news_parse(date) or {},
+        "weather": say.weather(date) or {},
     }
 
 
@@ -135,6 +131,7 @@ def build(date: str, lands: list[dict] | None = None) -> dict:
                 "reason": f.reason,
                 "size": f.size,
             })
+        extract = say.summarize_process(w.key, date) or {}
         processes.append({
             "key": w.key,
             "name": w.name,
@@ -146,6 +143,8 @@ def build(date: str, lands: list[dict] | None = None) -> dict:
             "n_opt_ok": w.n_opt_ok,
             "n_opt": w.n_opt,
             "files": files,
+            "said": extract.get("said") or "",
+            "bullets": extract.get("bullets") or [],
         })
         if w.status == "OK":
             n_ok += 1
@@ -217,7 +216,9 @@ def write_json(board: dict) -> list[Path]:
         "counts": board.get("counts") or {},
         "buy_1d": sel.get("buy_1d") or [],
         "sell_1d": sel.get("sell_1d") or [],
-        "flatten": sel.get("flatten") or "",
+        "flatten": sel.get("flatten") or {},
+        "general": sel.get("general") or {},
+        "sectors": sel.get("sectors") or {},
         "lands": (board.get("lands") or [])[-8:],
         "day_board": PAGES_URL,
     }, indent=2), encoding="utf-8")
@@ -236,7 +237,6 @@ def note_land(date: str, *, key: str, title: str, files: list[dict],
     }
     if "at" not in entry:
         entry["at"] = datetime.now(ET).isoformat()
-    # Replace last row for the same key if it is the same step retry.
     if lands and lands[-1].get("key") == key:
         lands[-1] = entry
     else:
@@ -246,171 +246,9 @@ def note_land(date: str, *, key: str, title: str, files: list[dict],
 
 
 def write_html() -> Path:
+    """Keep dashboard/day-board/index.html as the source of truth."""
     DASH_DIR.mkdir(parents=True, exist_ok=True)
-    path = DASH_DIR / "index.html"
-    path.write_text(DASH_HTML, encoding="utf-8")
-    return path
-
-
-DASH_HTML = r"""<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Day board — which processes ran</title>
-<meta http-equiv="refresh" content="90">
-<style>
- :root{
-  --bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;
-  --fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;
-  --gold:#fbbf24; --day:#121826;
- }
- *{box-sizing:border-box}
- html,body{margin:0;background:var(--bg);color:var(--fg);
-   font:14px/1.45 -apple-system,Segoe UI,Roboto,sans-serif}
- .wrap{max-width:1080px;margin:0 auto;padding:16px 14px 48px}
- h1{font-size:20px;margin:0 0 4px}
- .sub{color:var(--mut);font-size:12px;margin:0 0 12px}
- .sub a{color:#93c5fd}
- .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px}
- select,button{background:var(--card);color:var(--fg);border:1px solid var(--line);
-   border-radius:8px;padding:8px 10px;font:13px/1.3 ui-monospace,Menlo,monospace}
- .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:8px;margin:0 0 14px}
- .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
- .card b{display:block;font-size:18px;margin-top:2px;font-variant-numeric:tabular-nums}
- .ok{color:var(--pos)} .fail{color:var(--neg)} .part{color:var(--gold)} .mut{color:var(--mut)}
- .proc{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:0 0 10px;overflow:hidden}
- .proc h3{margin:0;padding:10px 12px;background:var(--day);font-size:14px;
-   display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;justify-content:space-between}
- .proc table{width:100%;border-collapse:collapse;font-size:12.5px}
- th,td{padding:5px 10px;border-top:1px solid var(--line2);text-align:left;vertical-align:top}
- th{color:var(--mut);font-weight:600}
- td.path{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;word-break:break-all}
- .preview{white-space:pre-wrap;font:12px/1.4 ui-monospace,Menlo,monospace;
-   color:#c5d0e6;background:var(--day);border-radius:8px;padding:8px 10px;margin:8px 12px 12px}
- .land{border-left:3px solid var(--gold);padding:8px 12px;margin:0 0 8px;background:var(--card);
-   border-radius:0 8px 8px 0}
- .land .when{color:var(--dim);font:11px/1.3 ui-monospace,Menlo,monospace}
- .pills{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}
- .pill{border:1px solid var(--line);border-radius:999px;padding:3px 10px;
-   font:12px/1.3 ui-monospace,Menlo,monospace}
- .pill.buy{border-color:#166534;color:var(--pos)}
- .pill.sell{border-color:#7f1d1d;color:var(--neg)}
- .note{color:var(--dim);font-size:11.5px;margin-top:14px}
-</style></head><body><div class="wrap">
-<h1>Day board</h1>
-<div class="sub">Same process list as Stock Book readiness, on
- <a href="https://sroyaltyy.github.io/fullscan/dashboard/">.io</a> —
- no Action click. Polls <code>main</code> so a file that just passed QC
- shows up here even if Pages has not rebuilt.
- · <a href="../factor-mine/">factor mine</a>
- · <a href="../">paper book</a>
- · <a href="../sleeve-merge/">sleeve merge</a></div>
-<div class="bar">
-  <label>Trading day
-    <select id="dateSel"></select>
-  </label>
-  <button type="button" id="reload">Reload now</button>
-  <span class="mut" id="stamp">loading…</span>
-</div>
-<div class="cards" id="cards"></div>
-<h2>Today's selections</h2>
-<div class="pills" id="sels"></div>
-<pre class="preview" id="flatten" hidden></pre>
-<h2>What was just pushed</h2>
-<div id="lands"></div>
-<h2>Processes</h2>
-<div id="procs"></div>
-<p class="note">OK = every required output exists and passes QC.
-PARTIAL = some required files are good. FAIL = missing / empty / timeout stub.
-Lands are write → QC → push of that file only. A later commit race cannot
-erase a land that already reached <code>main</code>.</p>
-</div>
-<script>
-const RAW = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board";
-const mark = {OK:"ok", PARTIAL:"part", FAIL:"fail"};
-const fileMark = {OK:"✅", FAIL:"❌", MISSING:"⬜", SKIP:"➖", PARTIAL:"⚠️"};
-function $(id){return document.getElementById(id)}
-async function fetchJson(url){
-  const u = url + (url.includes("?") ? "&" : "?") + "t=" + Date.now();
-  const r = await fetch(u, {cache:"no-store"});
-  if(!r.ok) throw new Error(r.status + " " + url);
-  return r.json();
-}
-function tickers(rows, cls){
-  return (rows||[]).map(r => {
-    const t = (r.ticker||"").toUpperCase();
-    if(!t) return "";
-    return `<span class="pill ${cls}">${t}</span>`;
-  }).join("");
-}
-function render(board){
-  $("stamp").textContent = (board.generated_at||"") + " · overall " + (board.overall||"?");
-  const c = board.counts||{};
-  $("cards").innerHTML = [
-    ["Overall", board.overall||"—", mark[board.overall]||"mut"],
-    ["Ranker", board.ranker_ready ? "READY" : "BLOCKED", board.ranker_ready?"ok":"fail"],
-    ["OK", c.ok??"—", "ok"],
-    ["Partial", c.partial??"—", "part"],
-    ["Fail / missing", c.fail??"—", "fail"],
-  ].map(([k,v,cls]) => `<div class="card">${k}<b class="${cls}">${v}</b></div>`).join("");
-  const sel = board.selections||{};
-  const buys = tickers(sel.buy_1d, "buy");
-  const sells = tickers(sel.sell_1d, "sell");
-  $("sels").innerHTML = (buys || sells)
-    ? (buys + sells)
-    : `<span class="mut">No 1d BUY/SELL on disk for ${board.date}.</span>`;
-  if(sel.flatten){
-    $("flatten").hidden = false;
-    $("flatten").textContent = sel.flatten;
-  } else {
-    $("flatten").hidden = true;
-  }
-  const lands = (board.lands||[]).slice().reverse();
-  $("lands").innerHTML = lands.length ? lands.map(L => {
-    const files = (L.files||[]).map(f =>
-      `${f.ok?"✅":"❌"} ${f.path}${f.reason?" — "+f.reason:""}`).join("\n");
-    const body = L.preview || files || "(no preview)";
-    return `<div class="land"><div class="when">${L.at||""} · ${L.key||""} · pushed=${L.pushed?"yes":"no"}</div>
-      <div><b>${L.title||L.key||""}</b></div>
-      <pre class="preview">${esc(body)}</pre></div>`;
-  }).join("") : `<p class="mut">Nothing landed incrementally yet for this date.</p>`;
-  $("procs").innerHTML = (board.processes||[]).map(p => {
-    const rows = (p.files||[]).map(f => `<tr>
-      <td class="path">${esc(f.path)}</td>
-      <td>${f.role||""}</td>
-      <td>${fileMark[f.status]||f.status} ${f.status}</td>
-      <td>${esc(f.reason||"")}${f.size? " · "+f.size+"B":""}</td>
-    </tr>`).join("");
-    return `<div class="proc"><h3><span>${esc(p.name)}</span>
-      <span class="${mark[p.status]||"mut"}">${p.status} · req ${p.n_req_ok}/${p.n_req}</span></h3>
-      <table><thead><tr><th>File</th><th>Need</th><th>Status</th><th>Detail</th></tr></thead>
-      <tbody>${rows}</tbody></table></div>`;
-  }).join("");
-}
-function esc(s){
-  return String(s||"").replace(/[&<>]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[ch]));
-}
-async function loadDate(date){
-  const board = await fetchJson(`${RAW}/${date}.json`);
-  render(board);
-}
-async function boot(){
-  let latest;
-  try { latest = await fetchJson(`${RAW}/latest.json`); }
-  catch(e){ $("stamp").textContent = "Could not reach main JSON: "+e; return; }
-  const dates = latest.dates || [latest.date];
-  const sel = $("dateSel");
-  sel.innerHTML = dates.map(d => `<option value="${d}">${d}</option>`).join("");
-  const q = new URLSearchParams(location.search).get("date");
-  const want = q && dates.includes(q) ? q : (latest.date || dates[0]);
-  sel.value = want;
-  await loadDate(want);
-  sel.onchange = () => loadDate(sel.value);
-  $("reload").onclick = () => loadDate(sel.value);
-}
-boot();
-setInterval(() => { const d=$("dateSel").value; if(d) loadDate(d); }, 30000);
-</script></body></html>
-"""
+    return DASH_DIR / "index.html"
 
 
 def main() -> None:
@@ -418,7 +256,7 @@ def main() -> None:
     ap.add_argument("--date", default="")
     ap.add_argument("--write", action="store_true")
     ap.add_argument("--html", action="store_true",
-                    help="Rewrite dashboard/day-board/index.html")
+                    help="Touch dashboard/day-board/index.html path only")
     args = ap.parse_args()
     date = args.date or _today()
     board = build(date)
@@ -428,16 +266,18 @@ def main() -> None:
         f"ok={board['counts']['ok']}/{board['counts']['n']}"
     )
     for p in board["processes"]:
-        if p["status"] == "OK":
+        said = p.get("said") or ""
+        if p["status"] == "OK" and not said:
             continue
-        print(f"  [{p['status']:<7}] {p['name']}")
+        extra = f" | {said}" if said else ""
+        print(f"  [{p['status']:<7}] {p['name']}{extra}")
     if args.write:
         paths = write_json(board)
         for p in paths:
             print(f"[day-board] wrote {p}")
     if args.html or args.write:
         hp = write_html()
-        print(f"[day-board] wrote {hp}")
+        print(f"[day-board] html {hp}")
 
 
 if __name__ == "__main__":
