@@ -364,6 +364,7 @@ _UNI_KID = {
     "probable": "yesterday's 'likely to keep moving' list",
     "yday_gainer": "yesterday's top liquid winners",
     "ohlc_hot": "names that looked hot on the prior price/volume tape",
+    "combo": "several existing sleeves sharing one $10k book (each kid still uses its own 09:30 list)",
 }
 _CAM_KID = {
     "vol": "the volume camera (is this name unusually active?)",
@@ -450,6 +451,17 @@ def _gate_kid(key: str, val) -> str:
 def explain_recipe(rec: dict) -> dict:
     """Kid-plain rules for one sleeve: inputs, buy, sell. No black box."""
     rec = rec or {}
+    if rec.get("universe") == "combo" or rec.get("members"):
+        from . import factor_mine_combo as fmc
+        spec = {
+            "name": rec.get("name"),
+            "members": list(rec.get("members") or []),
+            "weights": list(rec.get("weights") or [1]),
+            "net": rec.get("net") or "priority",
+            "pool": rec.get("pool") or "shared",
+        }
+        if spec["members"]:
+            return fmc.explain_combo(spec)
     uni = rec.get("universe") or "union"
     hold = int(rec.get("hold") or 1)
     side = rec.get("side") or "long"
@@ -1354,7 +1366,7 @@ def run(from_date: str = START, to_date: str | None = None,
         write: bool = False, recipes: list[dict] | None = None,
         panel: dict | None = None, rebuild_panel: bool = False,
         persist_panel: bool = False, book: bool = True,
-        bars: dict | None = None) -> dict:
+        bars: dict | None = None, combos: bool = True) -> dict:
     from . import factor_mine_book as fmb
     recipes = list(recipes or build_recipes())
     if write or persist_panel or rebuild_panel:
@@ -1387,7 +1399,31 @@ def run(from_date: str = START, to_date: str | None = None,
             st = fmb.attach_book(st, bk, starts)
             books[rec["name"]] = bk
         stats.append(st)
+    combo_meta = {"n": 0, "outperform": [], "rule": ""}
+    if book and combos:
+        from . import factor_mine_combo as fmc
+        member_stat_by = {s["name"]: s for s in stats}
+        combo_stats, combo_books = fmc.run_combos(
+            panel, recipes, bars=bars, fees=fees, regime=regime,
+            member_stat_by=member_stat_by)
+        for st in combo_stats:
+            stats.append(st)
+            books[st["name"]] = combo_books[st["name"]]
+            recipes.append(fmc.combo_recipe({
+                "name": st["name"],
+                "members": st.get("members") or [],
+                "weights": st.get("weights") or [],
+                "net": st.get("net") or "priority",
+                "pool": st.get("pool") or "shared",
+            }))
+        fmc.write_combo_sidecar(combo_stats)
+        combo_meta = {
+            "n": len(combo_stats),
+            "outperform": [s["name"] for s in combo_stats if s.get("outperforms")],
+            "rule": fmc.OUTPERFORM_RULE,
+        }
     stats.sort(key=lambda r: (
+        0 if r.get("outperforms") else 1,
         0 if r.get("reliable") else 1,
         -(r.get("effectiveness") or -999),
         r["name"],
@@ -1410,7 +1446,9 @@ def run(from_date: str = START, to_date: str | None = None,
         key=lambda s: -float(s["total_ret_pct"]),
     )[:8]]
     featured = []
-    for n in by_ret + [s["name"] for s in stats if s.get("reliable")][:8] + extra:
+    winners = list(combo_meta.get("outperform") or [])
+    for n in (winners + by_ret
+              + [s["name"] for s in stats if s.get("reliable")][:8] + extra):
         if n not in featured:
             featured.append(n)
     payload = {
@@ -1438,6 +1476,7 @@ def run(from_date: str = START, to_date: str | None = None,
         "md_names": [s["name"] for s in stats if s.get("book_n_trades")],
         "recipes": recipes,
         "panel_n": panel.get("n_rows"),
+        "combos": combo_meta,
     }
     stamp_explains(payload)
     from . import factor_mine_probe as fmp
@@ -1482,8 +1521,10 @@ def stamp_starts_and_probe(payload: dict, panel: dict | None = None,
     regime = fmb.load_regime()
     fees = pt_fees()
     recs = list(payload.get("recipes") or [])
-    starts = {}
+    starts = dict(payload.get("starts") or {})
     for i, rec in enumerate(recs, 1):
+        if rec.get("universe") == "combo" or rec.get("members"):
+            continue
         starts[rec["name"]] = fmb.replay_starts(
             panel, rec, bars=bars, fees=fees, regime=regime)
         if i == 1 or i == len(recs) or i % 20 == 0:
@@ -1587,6 +1628,7 @@ def _slim_dash_book(bk: dict) -> dict:
         "yday_equity", "open_held", "overnight", "overnight_delta",
         "equity_before", "sell_eq_chg", "vs_yday",
         "session_delta", "intraday", "close_held", "open_equity",
+        "owner",
     )
     keep_k = ("date", "ticker", "kind", "reason")
 
@@ -1659,6 +1701,22 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
         "`flatten_live_*` = only when the live flatten gate fires. "
         "Research only — does not change live `flatten_robust`.",
         "",
+    ]
+    combos = payload.get("combos") or {}
+    if combos.get("n"):
+        wins = combos.get("outperform") or []
+        lines += [
+            f"Combination books: **{combos['n']}** mixes on the same $10k "
+            f"cash ledger (shared leftover or split sleeves, official 09:30 / "
+            f"16:00, hard-red sit, owner min-hold). "
+            f"Outperformers: "
+            + (", ".join(f"`{n}`" for n in wins) if wins else "none this window")
+            + ".",
+            "",
+            str(combos.get("rule") or ""),
+            "",
+        ]
+    lines += [
         "Action blotters: [FACTOR_MINE_ACTION.md](FACTOR_MINE_ACTION.md).",
         "",
         "| Strategy | Side | H | Size | Sell | Boost | Win% | $ days | "
@@ -1727,6 +1785,8 @@ def main(argv=None) -> int:
     ap.add_argument("--no-auto-tweak", dest="auto_tweak", action="store_false")
     ap.add_argument("--no-book", action="store_true",
                     help="signal-only (do not use; cash book is the default)")
+    ap.add_argument("--no-combo", action="store_true",
+                    help="skip combination books (single-recipe mine only)")
     args = ap.parse_args(argv)
     recipes = fmb.recipes_from_action(
         universe=args.universe, hold=args.hold, gate=args.gate,
@@ -1738,6 +1798,7 @@ def main(argv=None) -> int:
         args.from_date, args.to_date or None, write=args.write,
         recipes=recipes, rebuild_panel=args.rebuild_panel,
         persist_panel=args.write, book=not args.no_book,
+        combos=not args.no_combo,
     )
     print(f"[factor-mine] recipes={payload['n_recipes']} "
           f"rows={payload['n_rows']} sessions={payload['n_sessions']}")

@@ -183,6 +183,7 @@
   <li><b>09:30 open audit.</b> Each session starts with cash (yesterday leftover, no overnight fees) and lots still held, re-marked at the open. vs yday close is the sum of those per-name overnight moves. Every held name also prints its 09:30 open, prior close, overnight $, close, and open→close $ — including days with zero fills. BUY does not label equity (cash↔stock). SELL/COVER labels the change after that sale: green if the sale locked in a gain, red if a loss.</li>
   <li><b>Butterfly state.</b> Morning leftover cash + lots actually held are the only inputs. Size = leftover / rank_w / topheavy / half. Sell = list / time / cut_loser / trail. S≥+5 can size-up or add names, still cash-capped. Hard-red S≤−3 sits.</li>
   <li><b>Entry.</b> <code>flatten_h*</code> buys the wish-list on io/HOLD mornings — live Action those days is HOLD. <code>flatten_live_*</code> only buys when the flatten gate fires (mover).</li>
+  <li><b>Combinations.</b> A <code>combo_*</code> row is not a mashed shopping list. Each member still runs its own leak-free 09:30 <code>pick_day</code> on the same $10k cash book (shared leftover or split sleeves). Official 09:30 / 16:00 only. One ticker, one side. Owner min-hold. Hard-red S≤−3 sits. <b>WIN</b> means the combo cash book outperforms every member — either a higher Book% than all of them, or Book% within 2pp of the richest member with a smaller drawdown than every member, at least the best start-rate, both halves green, and a no-worse worst day. Signal% / Eff do not award WIN. Eighteen sessions rank this tape; they do not prove a live edge. Live <code>flatten_robust</code> is unchanged.</li>
 </ol>
 <p class="note">Research miner only. Live <code>flatten_robust</code> is untouched.</p>
 </details>
@@ -196,6 +197,7 @@ const hidden = new Set();
 let sleeveFilter = "all";
 let sideFilter = "all";
 let holdFilter = "all";
+let kindFilter = "all";
 let startIdx = 0;
 let probeIdx = 0;
 let probeTick = "";
@@ -205,9 +207,18 @@ function pct(v){return v==null?'—':(100*Number(v)).toFixed(0)+'%';}
 function num(v,d){if(v==null||v==='')return '—'; const x=Number(v); return (x>=0?'+':'')+x.toFixed(d==null?2:d);}
 function cls(v){return v==null?'mut':(Number(v)>=0?'pos':'neg');}
 
+function isCombo(s){
+  if(!s) return false;
+  if(typeof s==='string') s=(D.stats||[]).find(x=>x.name===s) || recipeOf(s);
+  return !!(s && (s.universe==='combo' || (s.members||[]).length || String(s.name||'').indexOf('combo_')===0));
+}
 function statsList(){
   return (D.stats||[]).filter(s=>{
-    if(sideFilter!=='all' && s.side!==sideFilter) return false;
+    if(kindFilter==='combo' && !isCombo(s)) return false;
+    if(kindFilter==='single' && isCombo(s)) return false;
+    if(sideFilter==='combo' && !isCombo(s)) return false;
+    if(sideFilter==='long' && s.side!=='long') return false;
+    if(sideFilter==='short' && s.side!=='short') return false;
     if(holdFilter!=='all' && String(s.hold)!==String(holdFilter)) return false;
     return true;
   });
@@ -296,19 +307,27 @@ function renderCards(){
 function renderFilters(){
   const holds = [...new Set((D.stats||[]).map(s=>s.hold))].sort((a,b)=>a-b);
   document.getElementById('filterBar').innerHTML = `
+    <select id="kindPick" aria-label="Kind">
+      <option value="all">Singles + combos</option>
+      <option value="combo">Combos only</option>
+      <option value="single">Single recipes</option>
+    </select>
     <select id="sidePick" aria-label="Side">
       <option value="all">Long + short</option>
       <option value="long">Long only</option>
       <option value="short">Short only</option>
+      <option value="combo">Combos</option>
     </select>
     <select id="holdPick" aria-label="Hold">
       <option value="all">All holds</option>
       ${holds.map(h=>`<option value="${h}">Hold ${h}</option>`).join('')}
     </select>
     <input id="q" placeholder="Filter name (e.g. coil)" aria-label="Filter recipe">
-    <span class="mut">${(D.n_recipes||0)} recipes · ${(D.n_rows||0)} candidate rows · ${(D.n_sessions||0)} sessions</span>`;
+    <span class="mut">${(D.n_recipes||0)} recipes · ${((D.combos||{}).n||0)} combos · ${(D.n_rows||0)} candidate rows · ${(D.n_sessions||0)} sessions</span>`;
+  document.getElementById('kindPick').value = kindFilter;
   document.getElementById('sidePick').value = sideFilter;
   document.getElementById('holdPick').value = holdFilter;
+  document.getElementById('kindPick').onchange = e=>{kindFilter=e.target.value; sleeveFilter='all'; renderAll();};
   document.getElementById('sidePick').onchange = e=>{sideFilter=e.target.value; sleeveFilter='all'; renderAll();};
   document.getElementById('holdPick').onchange = e=>{holdFilter=e.target.value; sleeveFilter='all'; renderAll();};
   document.getElementById('q').oninput = ()=>{ renderChips(); renderTable(); };
@@ -323,6 +342,7 @@ function chipNames(){
   }
   const out=[];
   const add=n=>{ if(n && !out.includes(n)) out.push(n); };
+  ((D.combos&&D.combos.outperform)||[]).forEach(add);
   (D.featured||[]).forEach(add);
   list.slice().sort((a,b)=>Number(b.total_ret_pct)-Number(a.total_ret_pct))
     .slice(0,12).forEach(s=>add(s.name));
@@ -433,14 +453,19 @@ function simBook(){
 function activeDaily(){
   const name=pickedName();
   if(name && !isCanon()){
-    const b=simBook();
-    if(b && (b.daily||[]).length) return b.daily;
+    if(isCombo(name)){
+      const sp=startPath();
+      if(sp && (sp.days||[]).length) return sp.days;
+    } else {
+      const b=simBook();
+      if(b && (b.daily||[]).length) return b.daily;
+    }
   }
   return (D.daily||{})[name] || (((D.books||{})[name]||{}).daily) || [];
 }
 function activeBook(){
   const name=pickedName();
-  if(name && !isCanon()){
+  if(name && !isCanon() && !isCombo(name)){
     const b=simBook();
     if(b) return b;
   }
@@ -884,9 +909,24 @@ function renderExplain(){
   const ex=explainOf(name);
   if(!name || !ex){ box.hidden=true; box.innerHTML=''; return; }
   box.hidden=false;
+  const s=(D.stats||[]).find(x=>x.name===name)||{};
+  const sc=s.scorecard||{};
+  const members=(s.members||[]).map((n,i)=>{
+    const w=((s.weights||[])[i]*100);
+    return n+(Number.isFinite(w)?(' '+w.toFixed(0)+'%'):'');
+  }).join(' · ');
+  const score = isCombo(s)
+    ? `<div class="how" style="margin:8px 0 0;padding:8px 10px">
+        <b>${s.outperforms?'<span class="pos">WIN — outperforms its members on the cash book</span>':'<span class="mut">Does not outperform every member on the cash-book rule</span>'}</b>
+        <div class="mut">${esc(members||'')} · pool ${esc(s.pool||'')} · net ${esc(s.net||'')}</div>
+        <div>Book ${num(s.total_ret_pct)}% vs best member ${num(sc.best_member_book)}% · DD ${num(s.max_dd_pct)} vs safest ${num(sc.safest_member_dd)} · starts ${s.start_green||0}/${s.start_n||0}</div>
+        <div class="mut">${esc((D.combos&&D.combos.rule)||'')}</div>
+      </div>`
+    : '';
   box.innerHTML =
     `<h2>How <code>${esc(name)}</code> decides — like you are 10</h2>`+
     `<p class="kid">${esc(ex.kid||'')}</p>`+
+    score+
     `<div class="cols">`+
       `<div><h3>What it looks at (inputs)</h3>${listHtml(ex.inputs)}</div>`+
       `<div><h3>When it buys</h3>${listHtml(ex.buy)}</div>`+
@@ -898,18 +938,27 @@ function renderTable(){
   let list=statsList();
   if(q) list=list.filter(s=>s.name.toLowerCase().includes(q) || (s.note||'').toLowerCase().includes(q) || ((s.explain||{}).kid||'').toLowerCase().includes(q));
   if(sleeveFilter!=='all') list=list.filter(s=>s.name===sleeveFilter);
-  const head='<tr><th class="tick">Strategy</th><th>Side</th><th>H</th><th>Win%</th><th>$ days</th><th>Starts</th><th>Book%</th><th>Signal%</th><th>Audit</th></tr>';
-  const body=list.map(s=>`<tr data-sleeve="${esc(s.name)}" style="cursor:pointer">
-    <td class="tick">${esc(s.name)}${s.reliable===false?' <span class="mut">thin</span>':''}<div class="mut">${esc(s.size||'leftover')} · ${esc(s.sell||'list')} · ${esc(s.s_boost||'none')}</div></td>
+  const head='<tr><th class="tick">Strategy</th><th>Side</th><th>H</th><th>Win%</th><th>$ days</th><th>Starts</th><th>Book%</th><th>DD%</th><th>vs members</th><th>Signal%</th><th>Audit</th></tr>';
+  const body=list.map(s=>{
+    const sc=s.scorecard||{};
+    const vs = isCombo(s)
+      ? (s.outperforms?'<span class="pos">WIN</span>':'<span class="mut">no</span>')
+        + ` <span class="mut">best ${num(sc.best_member_book)}</span>`
+      : '—';
+    return `<tr data-sleeve="${esc(s.name)}" style="cursor:pointer">
+    <td class="tick">${esc(s.name)}${s.reliable===false?' <span class="mut">thin</span>':''}${s.outperforms?' <span class="pos">WIN</span>':''}<div class="mut">${esc(s.size||'leftover')} · ${esc(s.sell||'list')} · ${esc(s.s_boost||'none')}${(s.members||[]).length?(' · '+(s.members||[]).join('+')):''}</div></td>
     <td>${esc(s.side)}</td>
-    <td class="num">${s.hold}</td>
+    <td class="num">${isCombo(s)?'mix':s.hold}</td>
     <td class="num ${cls(s.win_rate)}">${pct(s.win_rate)}</td>
     <td class="num ${cls(s.profitable_day_rate)}">${pct(s.profitable_day_rate)}</td>
     <td class="num ${cls(s.start_rate)}">${s.start_green||0}/${s.start_n||0}</td>
     <td class="num ${cls(s.total_ret_pct)}">${num(s.total_ret_pct)}</td>
+    <td class="num ${cls(s.max_dd_pct==null?null:-s.max_dd_pct)}">${s.max_dd_pct==null?'—':Number(s.max_dd_pct).toFixed(2)}</td>
+    <td>${vs}</td>
     <td class="num mut">${num(s.signal_ret_pct)}</td>
     <td class="${s.audit_ok===false?'neg':'pos'}">${s.audit_ok===false?('FAIL×'+(s.audit_n_fail||'?')):'PASS'}</td>
-  </tr>`).join('');
+  </tr>`;
+  }).join('');
   document.getElementById('stats').innerHTML=head+body;
   document.querySelectorAll('#stats tr[data-sleeve]').forEach(tr=>{
     tr.onclick=()=>selectSleeve(tr.dataset.sleeve);
@@ -1079,7 +1128,7 @@ function renderBlotter(){
       return `<div class="fill-card ${row}">
         <div class="fill-top">
           <span class="${kind==='BUY'||kind==='SHORT'?'pos':'neg'}">${esc(kind)}</span>
-          <b>${esc(t.ticker)}</b>
+          <b>${esc(t.ticker)}</b>${t.owner?` <span class="mut">${esc(t.owner)}</span>`:''}
           ${((kind==='BUY'||kind==='SHORT') && earnFor(t.date, t.ticker)) ? (' '+earnFor(t.date, t.ticker)) : ''}
           ${esc(t.date)} · ${t.shares} sh @ ${t.price==null?'—':('$'+(+t.price).toFixed(2))}
           · fee ${t.fees==null?'—':('$'+(+t.fees).toFixed(2))}
@@ -1134,7 +1183,10 @@ function renderAll(){
     " · "+(D.n_sessions||0)+" sessions "+(D.from_date||'')+" → "+(D.to_date||'')+
     " · $"+Number(D.capital||10000).toLocaleString()+" per recipe · "+
     (D.fill||"09:30 open, whole shares, Futubull fees")+
-    " · "+(D.leak||"leak-free 09:30");
+    " · "+(D.leak||"leak-free 09:30")+
+    (((D.combos||{}).n)
+      ? (" · "+D.combos.n+" combo books"+(((D.combos.outperform||[]).length)?" · "+D.combos.outperform.length+" WIN":""))
+      : "");
   document.getElementById('fees').textContent =
     "Loser cut = Change% < "+(D.loser_cut)+" · live policy untouched: "+(D.live_untouched||"flatten_robust");
   const curve=document.getElementById('curveTitle');

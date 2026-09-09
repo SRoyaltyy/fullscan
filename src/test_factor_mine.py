@@ -474,6 +474,10 @@ def test_template_has_data_slot() -> None:
     assert "earnFor" in text
     assert "E beat" in text
     assert "<span>E</span>" in text
+    assert "combo" in text.lower()
+    assert "outperform" in text.lower()
+    assert "kindPick" in text
+    assert "vs members" in text
 
 
 def test_write_outputs_injects_payload(tmp_path=None) -> None:
