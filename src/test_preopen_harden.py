@@ -109,6 +109,7 @@ def test_incremental_land_hooks() -> None:
     assert "before 05:35 ET" in book_yml
     assert "go=no" in book_yml
     assert "needs: gate" in book_yml
+    assert 'github.event_name }}" != "workflow_dispatch"' in book_yml
     orch = (ROOT / ".github" / "workflows" / "daily_orchestrator.yml").read_text(
         encoding="utf-8")
     assert "news_judge.yml" in orch

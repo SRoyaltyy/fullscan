@@ -240,6 +240,21 @@ def check_map_heat_postclose(date: str) -> bool:
                 f"target={target} baseline present")
 
 
+def weather_stamped_before_open(payload: dict, date: str) -> bool:
+    """True when weather was written before the 05:35 ET morning clock.
+
+    A merge-triggered 01:00 rank must not skip the 05:55 / 06:10 rewrite.
+    """
+    gen = str(payload.get("generated_at") or "")
+    if not gen.startswith(date) or len(gen) < 16 or gen[10] != "T":
+        return False
+    try:
+        hm = int(gen[11:13]) * 100 + int(gen[14:16])
+    except ValueError:
+        return False
+    return hm < 535
+
+
 def check_label_weather(date: str) -> bool:
     """Weather JSON with enough sector stances to rank."""
     p = ROOT / "01_daily" / "weather" / f"{date}_weather.json"
@@ -249,6 +264,10 @@ def check_label_weather(date: str) -> bool:
         payload = json.loads(p.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         return _log(False, "label_weather", date, "weather unreadable")
+    if weather_stamped_before_open(payload, date):
+        return _log(False, "label_weather", date,
+                    f"weather stamped {payload.get('generated_at')} "
+                    "before 05:35 ET")
     secs = (payload.get("signals") or {}).get("sectors") or {}
     n = len(secs) if isinstance(secs, dict) else 0
     ok = n >= 5
