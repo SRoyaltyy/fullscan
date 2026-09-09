@@ -456,15 +456,8 @@ def _packet_step_done(key: str, date: str) -> bool:
     if key == "sector_board":
         return _exists("01_daily", "sectors", date, "_board.json")
     if key == "weather":
-        p = _p("01_daily", "weather", f"{date}_weather.json")
-        if not p.is_file():
-            return False
-        try:
-            secs = ((json.loads(p.read_text(encoding="utf-8")).get("signals")
-                     or {}).get("sectors") or {})
-            return len(secs) >= 5
-        except (OSError, json.JSONDecodeError, TypeError):
-            return False
+        from . import skip_if_good
+        return skip_if_good.check_label_weather(date)
     if key == "catalyst":
         return catalyst_daily.already_good(date)
     return False
