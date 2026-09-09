@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T01:38:28.379115-04:00",
+  "generated_at": "2026-09-09T01:41:38.961306-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -9,13 +9,12 @@
     "MISSING News actions JSON `01_daily/news/2026-09-09_actions.json` \u2014 missing",
     "MISSING Finviz digest JSON `01_daily/news/2026-09-09_finviz_digest.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-09-09_judge.md` \u2014 missing",
-    "MISSING Weather JSON `01_daily/weather/2026-09-09_weather.json` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-09-09_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 1,
+    "ok": 2,
     "partial": 1,
-    "fail": 6,
+    "fail": 5,
     "n": 8
   },
   "processes": [
@@ -341,9 +340,9 @@
       "key": "weather",
       "name": "Label + weather",
       "yaml": "label_weather.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
       "n_opt_ok": 0,
       "n_opt": 0,
@@ -362,9 +361,9 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-09-09_weather.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "sectors=11",
+          "size": 9269
         }
       ]
     },
@@ -500,9 +499,9 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-09-09_weather.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "sectors=11",
+          "size": 9269
         },
         {
           "key": "in_ab",
@@ -633,7 +632,33 @@
     "sell_1d": [],
     "flatten": ""
   },
-  "lands": [],
+  "lands": [
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T01:41:38.850392-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-09_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -0.6, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.665, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.355, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.365, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 1.15, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.08, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.85, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.04, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-09_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5031,
+          "preview": "# Weather report \u2014 2026-09-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -0.6, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.665, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.355, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.365, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 1.15, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.08, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.85, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.04, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    }
+  ],
   "href": {
     "pages": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/",
     "readiness_action": "https://github.com/SRoyaltyy/fullscan/actions/workflows/stock_book_diag.yml",
