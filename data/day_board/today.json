@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T10:38:49.292521-04:00",
+  "generated_at": "2026-09-09T10:38:53.097796-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -88,24 +88,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T09:40:09.081246-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-09-09_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2171776,
-          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HRMY, HALO, CDNA, GMAB, ONC"
-        }
-      ],
-      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HRMY, HALO, CDNA, GMAB, ONC"
-    },
     {
       "key": "ab",
       "title": "AB checklist",
@@ -280,6 +262,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.5, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': 0.9, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Consumer Cyclical={'score': -7.5, 'dir': 'down', 'conf': 0.6, 'source': 'llm'}, Consumer Defensive={'score': -3.825, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Energy={'score': 8.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Financial={'score': -6.075, 'dir': 'down', 'conf': 0.5, 'source': 'llm'}, Healthcare={'score': -6.075, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Industrials={'score': -1.8, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T10:38:52.249917-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-09_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2171776,
+          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HRMY, HALO, CDNA, GMAB, ONC"
+        }
+      ],
+      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HRMY, HALO, CDNA, GMAB, ONC"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
