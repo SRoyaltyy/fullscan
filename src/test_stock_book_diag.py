@@ -95,19 +95,45 @@ def test_inspect_weather_and_ab(tmp_path: Path):
     wx = tmp_path / "wx.json"
     wx.write_text(json.dumps({
         "date": "2026-08-31",
-        "signals": {"sectors": {s: {"dir": "flat"} for s in (
-            "Technology", "Energy", "Financial", "Healthcare", "Utilities",
-        )}},
+        "signals": {
+            "sectors": {s: {"dir": "flat"} for s in (
+                "Technology", "Energy", "Financial", "Healthcare", "Utilities",
+            )},
+            "vix": "falling",
+            "vix_spot": 16.4,
+            "yields": "flat",
+            "dgs10_current": 4.12,
+        },
+        "pad": "x" * 900,
     }), encoding="utf-8")
     status, reason, _ = inspect_kind("weather", wx, "2026-08-31")
     assert status == "OK", reason
 
     thin = tmp_path / "thin.json"
-    thin.write_text(json.dumps({"date": "2026-08-31", "signals": {"sectors": {}}}
-                               ), encoding="utf-8")
+    thin.write_text(json.dumps({
+        "date": "2026-08-31",
+        "signals": {"sectors": {}, "vix": "falling", "yields": "flat"},
+        "pad": "x" * 900,
+    }), encoding="utf-8")
     status, reason, _ = inspect_kind("weather", thin, "2026-08-31")
     assert status == "FAIL"
     assert "too_few_sectors" in reason
+
+    unk = tmp_path / "unk.json"
+    unk.write_text(json.dumps({
+        "date": "2026-08-31",
+        "signals": {
+            "sectors": {s: {"dir": "flat"} for s in (
+                "Technology", "Energy", "Financial", "Healthcare", "Utilities",
+            )},
+            "vix": "unknown",
+            "yields": "flat",
+        },
+        "pad": "x" * 900,
+    }), encoding="utf-8")
+    status, reason, _ = inspect_kind("weather", unk, "2026-08-31")
+    assert status == "FAIL"
+    assert "vix" in reason
 
     ab = tmp_path / "ab.csv"
     rows = ["Ticker,score_enriched\n"] + [f"AAA{i},{i + 1}\n" for i in range(60)]

@@ -322,7 +322,7 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "refresh_ranker" in book
     assert "land_file.land" in pre
     assert "safe_git_push.sh" in (ROOT / "src" / "land_file.py").read_text(encoding="utf-8")
-    assert "timeout_s=45 if late" in pre
+    assert "timeout_s=45 if clock_late" in pre
     assert "passthrough after timeout" in pre
     assert "MAP_HEAT_REFRESH_TIMEOUT" in pre
     assert "--passthrough" in pre
@@ -818,6 +818,12 @@ def test_incremental_land_and_day_board() -> None:
     gates = (ROOT / "src" / "packet_gates.py").read_text(encoding="utf-8")
     assert "MIN_JSON_BYTES = 80" in gates
     assert "MIN_WEATHER_BYTES = 800" in gates
+    assert "min_bytes: int = MIN_WEATHER_BYTES" in gates
+    assert "vix_unknown" in gates
+    assert "yields_unknown" in gates
+    land = (ROOT / "src" / "land_file.py").read_text(encoding="utf-8")
+    assert land.index('endswith("_weather.json")') < land.index("json_too_small")
+    assert "MIN_WEATHER_BYTES" in land
     qc = (ROOT / "src" / "output_qc.py").read_text(encoding="utf-8")
     assert "packet_gates.json_too_small" in qc
     assert "Path(path).stat().st_size" in qc

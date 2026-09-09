@@ -480,21 +480,24 @@ def run(date: str | None = None, force: bool = False,
     print("=" * 72)
 
     skip_writes = False
+    skip_essays = False
     restore_persist(date)
-    late = (not force) and (not bypass_cutoff) and preopen.past_predict_cutoff()
-    # A late heal must not spend 15 minutes waiting on scrape/baseline.
-    wait_for_gh_scrape(date, timeout_s=45 if late else None)
-    wait_for_night_baseline(date, timeout_s=20 if late else None)
+    clock_late = preopen.past_predict_cutoff()
+    late = (not force) and (not bypass_cutoff) and clock_late
+    # A late heal must not spend 15 minutes waiting on scrape/baseline
+    # even when --bypass-cutoff lets essays run (900s used to eat parse).
+    wait_for_gh_scrape(date, timeout_s=45 if clock_late else None)
+    wait_for_night_baseline(date, timeout_s=20 if clock_late else None)
     if _scrape_ready(date):
         _land(date, "finviz_digest", "Finviz digest")
         _land(date, "map_heat", "Map heat tables")
     if _baseline_ready(date):
         _land(date, "map_heat_baseline", "Map heat night baseline")
-    # 09:25 gates LLM essays, not weather / AB / join / the book.
+    # 09:25 gates LLM essays, not weather / parse / AB / join / the book.
     if late:
-        print(f"[preopen-all] {date}: past 09:25 ET — skip LLM packet; "
-              "weather/AB/join/book still run so BUY/SELL can land")
-        skip_writes = True
+        print(f"[preopen-all] {date}: past 09:25 ET — skip LLM essays; "
+              "parse still runs if missing (digest/events fallback)")
+        skip_essays = True
     elif not force:
         pre = output_qc.preopen_report(date)
         grok_ok = grok_review.prior_ok(date)
@@ -512,7 +515,9 @@ def run(date: str | None = None, force: bool = False,
     attempts: list[dict] = []
 
     llm_steps = {
-        "news_parse", "events", "events_catcher", "news_judge",
+        # news_parse is file/DB (digest fallback) — not an essay. Keep it
+        # off this set so 09:25 cannot skip the last required packet hole.
+        "events", "events_catcher", "news_judge",
         "map_heat_research", "news_actions", "general_predict",
         "sector_predict", "catalyst",
     }
@@ -581,11 +586,28 @@ def run(date: str | None = None, force: bool = False,
         snapshot_persist(date)
         _land(date, "ab", "AB checklist")
 
-    if not skip_writes and not _deepseek_credits_ok():
-        print("[preopen-all] skip LLM packet (DeepSeek credits)")
-        skip_writes = True
+    if not skip_writes and not skip_essays and not _deepseek_credits_ok():
+        print("[preopen-all] skip LLM essays (DeepSeek credits); "
+              "parse still runs if missing")
+        skip_essays = True
 
     if not skip_writes:
+        # Parse is required on the day-board and does not need DeepSeek —
+        # digest / Channel 1 cache / events are enough when Postgres dies.
+        parse_t = 120
+        step("news_parse", "News parse",
+             [py, "-m", "src.news_parse", "--hours", "48", "--limit", "400",
+              "--date", date, *fa], timeout_s=parse_t)
+        parsed_p = _p("01_daily", "news", f"{date}_parsed.json")
+        if not output_qc.qc_news_parse(parsed_p).ok:
+            print("[preopen-all] parse thin — retry --limit 80 (file/DB)")
+            _run([py, "-m", "src.news_parse", "--hours", "48",
+                  "--limit", "80", "--date", date, *fa], timeout_s=90)
+            snapshot_persist(date)
+            if output_qc.qc_news_parse(parsed_p).ok:
+                _land(date, "news_parse", "News parse (limit-80 retry)")
+
+    if not skip_writes and not skip_essays:
         # A single hung Grok call at 10800s ate 2026-09-04 (0 essays on ECS).
         # Morning packet must fail over to DeepSeek in minutes, not hours.
         prev_llm_to = os.environ.get("OPENCLAW_TIMEOUT")
@@ -599,18 +621,6 @@ def run(date: str | None = None, force: bool = False,
               f"subprocess {llm_sub_t}s "
               "(hung Grok fails over; 10800s ate 2026-09-04)")
         try:
-            parse_t = 120
-            step("news_parse", "News parse",
-                 [py, "-m", "src.news_parse", "--hours", "48", "--limit", "400",
-                  "--date", date, *fa], timeout_s=parse_t)
-            parsed_p = _p("01_daily", "news", f"{date}_parsed.json")
-            if not output_qc.qc_news_parse(parsed_p).ok:
-                print("[preopen-all] parse thin — retry --limit 80 (file/DB)")
-                _run([py, "-m", "src.news_parse", "--hours", "48",
-                      "--limit", "80", "--date", date, *fa], timeout_s=90)
-                snapshot_persist(date)
-                if output_qc.qc_news_parse(parsed_p).ok:
-                    _land(date, "news_parse", "News parse (limit-80 retry)")
             step("events", "Event scanner (primary)",
                  [py, "-m", "src.run_events", "--date", date, *fa],
                  timeout_s=llm_sub_t)
@@ -721,7 +731,7 @@ def run(date: str | None = None, force: bool = False,
     else:
         print("[preopen-all] --no-book: leaving stock book to a later click")
 
-    if not skip_writes:
+    if not skip_writes and not skip_essays:
         step("catalyst", "Catalyst dossiers (after book)",
              [py, "-m", "src.catalyst_daily", "--date", date, *fa],
              timeout_s=1800)

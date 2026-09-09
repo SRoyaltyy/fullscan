@@ -169,17 +169,18 @@ def _qc_one(path: Path, date: str) -> output_qc.QCResult:
         return output_qc.qc_general_predict(path)
     if "events" in rel and name.endswith(".json"):
         return output_qc.qc_events_path(path)
+    if name.endswith("_weather.json"):
+        from . import packet_gates
+        ok, reason = packet_gates.weather_ok(
+            path, min_bytes=packet_gates.MIN_WEATHER_BYTES)
+        if ok:
+            return output_qc._ok("weather", rel, reason)
+        return output_qc._fail("weather", rel, reason)
     if name.endswith(".json"):
         from . import packet_gates
         tiny = packet_gates.json_too_small(path)
         if tiny:
             return output_qc._fail("file", rel, tiny, empty=True)
-    if name.endswith("_weather.json"):
-        from . import packet_gates
-        ok, reason = packet_gates.weather_ok(path)
-        if ok:
-            return output_qc._ok("weather", rel, reason)
-        return output_qc._fail("weather", rel, reason)
     size = path.stat().st_size
     if size < 80:
         return output_qc._fail("file", rel, f"too_small({size})", empty=True)

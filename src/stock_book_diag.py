@@ -269,20 +269,21 @@ def _qc_morning_research_json(path: Path) -> tuple[str, str, int]:
 
 
 def _qc_weather(path: Path, date: str) -> tuple[str, str, int]:
-    if not path.exists():
+    from . import packet_gates
+    size = packet_gates.file_bytes(path)
+    if size <= 0:
         return "MISSING", "missing", 0
-    data = _read_json(path)
-    text = _read(path)
-    size = len(text)
+    data = packet_gates.load_json(path)
     if not isinstance(data, dict):
         return "FAIL", "unparseable_json", size
     stale = _stale_date(data, date)
     if stale:
         return "FAIL", stale, size
-    sectors = (data.get("signals") or {}).get("sectors") or {}
-    if not isinstance(sectors, dict) or len(sectors) < 5:
-        return "FAIL", f"too_few_sectors({len(sectors) if isinstance(sectors, dict) else 0})", size
-    return "OK", f"sectors={len(sectors)}", size
+    ok, reason = packet_gates.weather_ok(
+        path, min_bytes=packet_gates.MIN_WEATHER_BYTES)
+    if not ok:
+        return "FAIL", reason, size
+    return "OK", reason, size
 
 
 def _qc_ab_csv(path: Path, date: str, *, enriched: bool) -> tuple[str, str, int]:

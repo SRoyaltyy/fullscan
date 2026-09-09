@@ -119,6 +119,51 @@ def test_offline_derive_uses_disk() -> None:
     assert len(sig["sectors"]) >= 5
 
 
+def test_weather_ok_requires_vix_and_yields() -> None:
+    from src import packet_gates
+    with tempfile.TemporaryDirectory() as d:
+        fat_unknown = Path(d) / "wx.json"
+        fat_unknown.write_text(json.dumps({
+            "date": "2026-09-09",
+            "signals": {
+                "sectors": {s: {"dir": "flat"} for s in (
+                    "Technology", "Energy", "Financial", "Healthcare",
+                    "Utilities",
+                )},
+                "vix": "unknown",
+                "yields": "unknown",
+            },
+            "pad": "x" * 900,
+        }), encoding="utf-8")
+        ok, reason = packet_gates.weather_ok(fat_unknown)
+        assert ok is False
+        assert "vix" in reason
+
+        stub = Path(d) / "stub.json"
+        stub.write_text('{"ok":true}', encoding="utf-8")
+        ok, reason = packet_gates.weather_ok(stub)
+        assert ok is False
+        assert reason.startswith("too_small")
+
+        good = Path(d) / "good.json"
+        good.write_text(json.dumps({
+            "date": "2026-09-09",
+            "signals": {
+                "sectors": {s: {"dir": "flat"} for s in (
+                    "Technology", "Energy", "Financial", "Healthcare",
+                    "Utilities",
+                )},
+                "vix": "falling",
+                "vix_spot": 15.8,
+                "yields": "flat",
+                "dgs10_current": 4.05,
+            },
+            "pad": "x" * 900,
+        }), encoding="utf-8")
+        ok, reason = packet_gates.weather_ok(good)
+        assert ok is True, reason
+
+
 if __name__ == "__main__":
     test_run_from_sector_md()
     test_run_from_general_md_footer()
@@ -126,4 +171,5 @@ if __name__ == "__main__":
     test_load_runs_fills_missing_scoreboard_from_md()
     test_build_skip_news_does_not_touch_db()
     test_live_channel1_is_budgeted()
-    print("6 tests passed")
+    test_weather_ok_requires_vix_and_yields()
+    print("7 tests passed")
