@@ -1,63 +1,64 @@
-# Weather report — 2026-09-08
+# Weather report — 2026-09-09
 
 Is today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade.
 
 ## Snapshot
 
-- **Risk state:** OFF (general predict down score -11.5, conf 0.65)
-- **Yields:** flat (fred_dgs10) | **Dollar:** soft (dxy) | **Oil:** rising | **VIX:** falling (ratio 0.85 via vix/vix3m) spot 15.41
-- **Fear & Greed:** 58 (Greed) | **Yield/SPX 5d corr:** -0.94
+- **Risk state:** UNKNOWN
+- **Yields:** flat (fred_dgs10) | **Dollar:** soft (dxy) | **Oil:** rising | **VIX:** calm (ratio 1.08 via vix/ma20) spot 16.36
+- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.97
 - **High-impact events:** 4 bullish vs 8 bearish | China: bull
+- ⚠️ **Data gaps:** general predict run, general predict factor scoreboard
 
 ## Sectors
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| sector:Basic Materials | ⛅ neutral | high | sector predict score +1.1 dir flat conf 0.5 [sector board] |
-| sector:Communication Services | 🌧️ hostile | high | sector predict score -6.8 dir down conf 0.55 [sector board] |
+| sector:Basic Materials | 🌧️ hostile | high | sector predict score -4.5 dir down conf 0.55 [sector board] |
+| sector:Communication Services | ⛅ neutral | high | sector predict score +0.9 dir flat conf 0.5 [sector board] |
 | sector:Consumer Cyclical | 🌧️ hostile | high | sector predict score -7.5 dir down conf 0.6 [sector board] |
-| sector:Consumer Defensive | ⛅ neutral | high | sector predict score -0.7 dir flat conf 0.5 [sector board] |
-| sector:Energy | 🌤️ favorable | high | sector predict score +8.5 dir up conf 0.58 [sector board] |
+| sector:Consumer Defensive | 🌧️ hostile | high | sector predict score -3.8 dir down conf 0.55 [sector board] |
+| sector:Energy | 🌤️ favorable | high | sector predict score +8.5 dir up conf 0.55 [sector board] |
 | sector:Financial | 🌤️ favorable | medium | news_judge SECTOR Financial [bullish] |
 | sector:Healthcare | 🌤️ favorable | medium | news_judge SECTOR Healthcare [bullish] |
-| sector:Industrials | 🌧️ hostile | high | sector predict score -3.6 dir flat conf 0.55 [sector board] |
+| sector:Industrials | ⛅ neutral | high | sector predict score -1.8 dir flat conf 0.5 [sector board] |
 | sector:Real Estate | 🌧️ hostile | medium | news_judge SECTOR Real Estate [bearish] |
-| sector:Technology | ⛅ neutral | medium | finviz sector median week -0.46% [tape] |
-| sector:Utilities | ⛅ neutral | medium | finviz sector median week +0.56% [tape] |
+| sector:Technology | ⛅ neutral | high | sector predict score +0.0 dir flat conf 0.55 [sector board] |
+| sector:Utilities | ⛅ neutral | high | sector predict score +0.5 dir flat conf 0.55 [sector board] |
 
 ## Size
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| size:micro | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar soft [general predict + factors] |
-| size:small | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar soft [general predict + factors] |
-| size:large | 🌤️ favorable | medium | risk-off — defensive/quality bid concentrates in large & mega [general predict] |
-| size:mega | 🌤️ favorable | medium | risk-off — defensive/quality bid concentrates in large & mega [general predict] |
-| size:mid | ⛅ neutral | low | no dedicated mid-cap signal in v1 |
+| size:micro | ❔ unknown | low | no general predict |
+| size:small | ❔ unknown | low | no general predict |
+| size:mid | ❔ unknown | low | no general predict |
+| size:large | ❔ unknown | low | no general predict |
+| size:mega | ❔ unknown | low | no general predict |
 
 ## Beta & volatility
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| beta:high | 🌧️ hostile | medium | risk-off — high beta is the exit door [channel1 + general] |
-| beta:low | 🌤️ favorable | medium | defensive ballast bid in stress [general + channel1] |
+| beta:high | ⛅ neutral | low | risk-unknown, VIX calm |
+| beta:low | ⛅ neutral | low | risk-unknown, VIX calm |
 | beta:mid | ⛅ neutral | low | beta-neutral zone |
 
 ## Short interest (multiplier, not direction)
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| short:high | 🌧️ hostile | medium | risk-off — heavy short interest marks balance-sheet/dilution stress; it amplifies falls [general] |
-| short:extreme | 🌧️ hostile | medium | risk-off — heavy short interest marks balance-sheet/dilution stress; it amplifies falls [general] |
-| short:low | ⛅ neutral | low | low short is not a tailwind by itself |
-| short:mid | ⛅ neutral | low | no strong crowding signal |
+| short:low | ❔ unknown | low | no general predict |
+| short:mid | ❔ unknown | low | no general predict |
+| short:high | ❔ unknown | low | no general predict |
+| short:extreme | ❔ unknown | low | no general predict |
 
 ## Profitability & style
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| profit:no | 🌧️ hostile | high | risk-off — unprofitable names are sold first [general] |
-| profit:yes | 🌤️ favorable | medium | risk-off — quality/profitability bid [general] |
+| profit:no | ⛅ neutral | low | risk-unknown, F&G None |
+| profit:yes | ⛅ neutral | low | — |
 | profit:thin | ⛅ neutral | low | — |
 
 ## Style (growth/value)
@@ -72,8 +73,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| lev:high | 🌧️ hostile | medium | risk-off — leverage amplifies the downside [factors + general] |
-| lev:low | 🌤️ favorable | low | balance-sheet strength preferred in stress |
+| lev:high | ⛅ neutral | low | — |
+| lev:low | ⛅ neutral | low | — |
 | lev:mid | ⛅ neutral | low | — |
 | lev:neg_equity | 🌧️ hostile | low | negative equity is distressed in any regime |
 
@@ -81,35 +82,35 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| mom:uptrend | ⛅ neutral | low | uptrends under test in risk-off |
-| mom:downtrend | 🌧️ hostile | low | downtrends get no bid in risk-off |
-| mom:mixed | ⛅ neutral | low | — |
+| mom:uptrend | ❔ unknown | low | no general predict |
+| mom:downtrend | ❔ unknown | low | no general predict |
+| mom:mixed | ❔ unknown | low | no general predict |
 
 ## Extension state
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| ext:washed | 🌧️ hostile | medium | falling knives stay sharp in risk-off |
-| ext:extended | 🌧️ hostile | medium | parabolic + risk-off = nasty unwind risk |
-| ext:extreme | 🌧️ hostile | medium | parabolic + risk-off = nasty unwind risk |
-| ext:neutral | ⛅ neutral | low | — |
+| ext:extreme | ❔ unknown | low | no general predict |
+| ext:extended | ❔ unknown | low | no general predict |
+| ext:washed | ❔ unknown | low | no general predict |
+| ext:neutral | ❔ unknown | low | no general predict |
 
 ## 52-week zone
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| range:deep_low | 🌧️ hostile | medium | falling knife zone in risk-off |
-| range:top | 🌧️ hostile | low | high-zone names unwind in risk-off |
-| range:breakout | 🌧️ hostile | low | high-zone names unwind in risk-off |
-| range:low | ⛅ neutral | low | — |
-| range:mid | ⛅ neutral | low | — |
-| range:high | ⛅ neutral | low | — |
+| range:deep_low | ❔ unknown | low | no general predict |
+| range:low | ❔ unknown | low | no general predict |
+| range:mid | ❔ unknown | low | no general predict |
+| range:high | ❔ unknown | low | no general predict |
+| range:top | ❔ unknown | low | no general predict |
+| range:breakout | ❔ unknown | low | no general predict |
 
 ## Geography
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| geo:US | 🌧️ hostile | low | mirrors general risk-off [general predict] |
+| geo:US | ❔ unknown | low | mirrors general risk-unknown [general predict] |
 | geo:ADR-China | 🌤️ favorable | medium | high-impact China event(s) lean bull [event scanner] |
 
 ## Gates (always-on cautions)
@@ -119,8 +120,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 - **liq:low** — thin dollar volume — gaps on news, hard to exit; down-rank
 - **rvol:hot** — abnormal participation — moves are 'real' but confirm direction first
 - **ext:extreme + risk-off** — parabolic names into a hostile tape = veto longs
-- **elevated_short_caution** — True
+- **elevated_short_caution** — False
 - **earnings_proximity** — True
 - **veto_earn_today** — True
-- **veto_extreme_risk_off** — True
+- **veto_extreme_risk_off** — False
 
