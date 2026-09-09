@@ -4,13 +4,19 @@
   "bearish",
   "bearish"
  ],
- "sector_tilts": {},
+ "sector_tilts": {
+  "Energy": "bullish",
+  "Healthcare": "bullish",
+  "Technology": "mixed",
+  "Basic Materials": "mixed",
+  "Real Estate/Utilities": "bearish"
+ },
  "tickers": {
-  "XLU": -1.5,
-  "XLK": 3.0,
-  "ADI": 1.5,
+  "XLE": 4.0,
+  "XLK": 1.5,
+  "XLU": -5.5,
   "AVGO": -1.5
  },
- "b1_inject": "NEWS_JUDGE: n=8 rescued=8\nMACRO stagflation: [bearish] Oil spike + hawkish Warsh repricing = one rates/risk cluster; hits long-duration, bids energy/financials (regime/1w)\nSECTOR Energy (XLE): [bullish] Oil rally on Middle East tensions is the dominant driver; expect relative outperformance (sector_etf)\nSECTOR Financials (XLF): [bullish] Hawkish Fed repricing is NIM+; but credit-sensitivity on oil shock caps upside (sector_etf)\nSECTOR Healthcare (XLV): [bullish] AbbVie Phase 3 positive supports defensive bid on risk-off tape (sector_etf)\nSECTOR Technology (XLK): [mixed] AI demand (NVDA/Dell/ADI) vs AVGO PT cut; semis mixed, do not double-count (sector_etf)\nSECTOR Basic Materials (XLB): [bearish] Oil cost headwind on chemicals sleeve outweighs metals bid; composition math dictates (sector_etf)\nINTERACTION: Oil spike + hawkish Fed = one stagflation cluster; do not double-count\nWATCH: Ranking is thin on single-name detail; the macro cluster is the dominant driver",
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=4\nMACRO stagflation: [bearish] Oil supply shock + hawkish Fed repricing (gold -3%) is the dominant risk-off spine (session/1d-1w)\nSECTOR Energy: [bullish] Oil toward $100 on Houthi/Saudi attacks is a direct XLE driver (object: XLE)\nSECTOR Healthcare: [bullish] ABBV Phase 3 + $10.9B M&A is a sector catalyst, not single-name (object: XLV)\nSECTOR Technology: [mixed] Nvidia/Dell demand vs BofA AVGO circular-financing cut; semis mixed (object: XLK/SMH)\nSECTOR Basic Materials: [mixed] APD beat/raise vs oil cost headwind on chemicals; gold slide hits miners (object: XLB)\nSECTOR Real Estate/Utilities: [bearish] Hawkish Fed repricing + rising yields is a direct duration headwind (object: XLRE/XLU)\nINTERACTION: Oil shock + hawkish Fed = one stagflation cluster; do not double-count\nWATCH: Ranking is thin on fresh macro data; the inflation print is the key binary risk",
  "date": "2026-09-09"
 }
