@@ -588,18 +588,51 @@ def order_fees(shares: int, price: float, side: str, f: dict) -> float:
 
 # -------------------------------------------------------------- prices ----
 
+def _official_close_panel(tickers: list[str], start: str, end: str) -> pd.DataFrame:
+    """Regular-session Close from data/prices/ohlc.parquet (printed tape)."""
+    from .price_store import STORE_PATH, _load_store
+    if not tickers or not STORE_PATH.exists():
+        return pd.DataFrame()
+    try:
+        df = _load_store()
+    except Exception:
+        return pd.DataFrame()
+    if df.empty:
+        return pd.DataFrame()
+    names = {str(t).upper() for t in tickers}
+    lo = pd.Timestamp(start) - pd.Timedelta(days=10)
+    hi = pd.Timestamp(end) + pd.Timedelta(days=1)
+    df = df[df["ticker"].isin(names) & (df["date"] >= lo) & (df["date"] <= hi)]
+    if df.empty:
+        return pd.DataFrame()
+    panel = df.pivot_table(index="date", columns="ticker", values="close", aggfunc="last")
+    panel.index = pd.to_datetime(panel.index)
+    return panel
+
+
 def get_prices(tickers: list[str], start: str, end: str) -> pd.DataFrame:
     """Date-indexed close prices; incremental cache in data/paper/.
 
-    Fetches a padded window (books are generated pre-market, so the signal
-    day's own close may not exist yet — fills then use the last available
-    close on/before the signal date, resolved in run_sim)."""
+    Official regular-session closes from the OHLC store win. Yahoo is
+    only a hole-fill — never a same-day Finviz last-trade, and never a
+    full-universe refresh just because one new session appeared.
+    """
     cache = pd.DataFrame()
     if PRICE_CACHE.exists():
         cache = pd.read_csv(PRICE_CACHE, index_col=0, parse_dates=True)
-    missing_cols = [t for t in tickers if t not in cache.columns]
-    need_refresh = len(cache) == 0 or cache.index.max() < pd.Timestamp(end)
-    if missing_cols or need_refresh:
+    official = _official_close_panel(list(tickers) + list(cache.columns), start, end)
+    if not official.empty:
+        cache = official.combine_first(cache) if not cache.empty else official
+    cutoff = pd.Timestamp(end)
+    fetch = []
+    for t in tickers:
+        if t not in cache.columns:
+            fetch.append(t)
+            continue
+        series = cache[t].dropna()
+        if series.empty or series.index.max() < cutoff:
+            fetch.append(t)
+    if fetch and len(fetch) <= 120:
         try:
             import yfinance as yf
         except ImportError:
@@ -607,12 +640,9 @@ def get_prices(tickers: list[str], start: str, end: str) -> pd.DataFrame:
                 raise SystemExit("[paper] yfinance missing and no prices_cache.csv")
             print("[paper] yfinance not installed — using prices_cache.csv")
             return cache
-        fetch = sorted(set(tickers) | set(cache.columns))
-        # yfinance `end` is EXCLUSIVE — pad so the signal day is included once
-        # its close exists; start padded back for a pre-book price baseline.
         start_pad = (pd.Timestamp(start) - pd.Timedelta(days=10)).date().isoformat()
         end_excl = (pd.Timestamp(end) + pd.Timedelta(days=6)).date().isoformat()
-        raw = yf.download(fetch, start=start_pad, end=end_excl, auto_adjust=True,
+        raw = yf.download(fetch, start=start_pad, end=end_excl, auto_adjust=False,
                           group_by="ticker", progress=False, threads=True)
         frames = {}
         for t in fetch:
@@ -621,15 +651,17 @@ def get_prices(tickers: list[str], start: str, end: str) -> pd.DataFrame:
             except KeyError:
                 continue
             frames[t] = s.dropna()
-        if not frames:
-            raise SystemExit("[paper] yfinance returned no prices at all")
-        new = pd.DataFrame(frames)
-        new.index = pd.to_datetime(new.index)
-        # new data wins on overlap; keep older cached rows outside the window
-        combined = new.combine_first(cache) if not cache.empty else new
-        cache = combined.dropna(how="all").sort_index()
-        PAPER_DIR.mkdir(parents=True, exist_ok=True)
-        cache.to_csv(PRICE_CACHE)
+        if frames:
+            new = pd.DataFrame(frames)
+            new.index = pd.to_datetime(new.index)
+            filled = new.combine_first(cache) if not cache.empty else new
+            if not official.empty:
+                filled = official.combine_first(filled)
+            cache = filled.dropna(how="all").sort_index()
+            PAPER_DIR.mkdir(parents=True, exist_ok=True)
+            cache.to_csv(PRICE_CACHE)
+    elif fetch:
+        print(f"[paper] skip yahoo hole-fill n={len(fetch)} — use ohlc.parquet")
     return cache
 
 

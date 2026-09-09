@@ -41,6 +41,13 @@ def test_session_calendar_drops_weekend_book() -> None:
     assert session_calendar(payload, books) == ["2026-08-28", "2026-08-31"]
 
 
+def test_session_calendar_drops_nyse_holiday() -> None:
+    from src.sleeve_merge import session_calendar
+    payload = {"session_dates": ["2026-09-04", "2026-09-07", "2026-09-08"]}
+    books = [("2026-09-07", None)]
+    assert session_calendar(payload, books) == ["2026-09-04", "2026-09-08"]
+
+
 def test_next_session_skips_weekend() -> None:
     cal = ["2026-08-14", "2026-08-17", "2026-08-18"]
     assert next_session(cal, "2026-08-14", 1) == "2026-08-17"
@@ -493,6 +500,7 @@ def main() -> None:
     test_live_policy_is_robust()
     test_two_week_is_ten_sessions()
     test_session_calendar_drops_weekend_book()
+    test_session_calendar_drops_nyse_holiday()
     test_next_session_skips_weekend()
     test_rank_calls_cond_then_conviction()
     test_io_picks_size_bucket()
@@ -513,7 +521,7 @@ def main() -> None:
     test_card_cost_fits_leftover_cash()
     test_card_would_buy_ignores_holdings()
     test_card_writes_today_json()
-    print("test_sleeve_merge: 23 ok")
+    print("test_sleeve_merge: 24 ok")
 
 
 if __name__ == "__main__":

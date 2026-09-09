@@ -1357,6 +1357,13 @@ def run(from_date: str = START, to_date: str | None = None,
         bars: dict | None = None) -> dict:
     from . import factor_mine_book as fmb
     recipes = list(recipes or build_recipes())
+    if write or persist_panel or rebuild_panel:
+        try:
+            from . import price_store as ps
+            ps.ensure_through(to_date)
+            tl.reset_price_caches()
+        except Exception as e:
+            print(f"[factor-mine] price ensure skipped: {e}", flush=True)
     panel = (panel if panel is not None
              else load_or_build_panel(from_date, to_date, rebuild=rebuild_panel))
     if persist_panel or write:
