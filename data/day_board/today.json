@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T07:33:49.232089-04:00",
+  "generated_at": "2026-09-09T07:34:43.532391-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -57,47 +57,8 @@
       "score": -0.11030699935304038
     }
   ],
-  "flatten": "# flatten_robust card \u2014 2026-09-09\n_Generated 2026-09-09T10:46:11 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Open lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66**\n## Open holdings\n| Ticker | Sleeve | Shares | Entry | Since | Mark | MV |\n|---|---|---:|---:|---|---:|---:|\n| \u2014 | \u2014 | | | | | |\n## Tickets\n| Clock | Side | Ticker | Sleeve | Shares | Px | $ | Why |\n|---|---|---|---|---:|---",
+  "flatten": "# flatten_robust card \u2014 2026-09-09\n_Generated 2026-09-09T11:34:42 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Open lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66**\n## Open holdings\n| Ticker | Sleeve | Shares | Entry | Since | Mark | MV |\n|---|---|---:|---:|---|---:|---:|\n| \u2014 | \u2014 | | | | | |\n## Tickets\n| Clock | Side | Ticker | Sleeve | Shares | Px | $ | Why |\n|---|---|---|---|---:|---",
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T06:26:02.878252-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-09_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1442994,
-          "preview": "1d BUY NVT, DINO, UGP \u00b7 SELL BGS, SMPL, BRBR, GIS, CPB, FLO, INFY, HRL"
-        },
-        {
-          "path": "data/stock_book/2026-09-09_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-09-09_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2542,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "01_daily/2026-09-09_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 77556,
-          "preview": "# Stock book \u2014 2026-09-09\n_Generated 2026-09-09T06:25:59.612178-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY NVT, DINO, UGP \u00b7 SELL BGS, SMPL, BRBR, GIS, CPB, FLO, INFY, HRL \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 # Stock book \u2014 2026-09-09\n_Generated 2026-09-09T06:25:59.612178-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -286,6 +247,31 @@
         }
       ],
       "preview": "1d BUY NVT, DINO, UGP \u00b7 SELL BGS, SMPL, BRBR, GIS, CPB, FLO, INFY, HRL \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 # Stock book \u2014 2026-09-09\n_Generated 2026-09-09T07:33:46.606075-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "flatten",
+      "title": "Flatten live card",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T07:34:42.871056-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-09-09_flatten_card.md",
+          "ok": true,
+          "reason": "",
+          "size": 1639,
+          "preview": "# flatten_robust card \u2014 2026-09-09\n_Generated 2026-09-09T11:34:42 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Open lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66**"
+        },
+        {
+          "path": "data/sleeve_merge/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 3873,
+          "preview": "keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930"
+        }
+      ],
+      "preview": "# flatten_robust card \u2014 2026-09-09\n_Generated 2026-09-09T11:34:42 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Open lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66** \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
