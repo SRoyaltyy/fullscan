@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T11:38:06.779769-04:00",
+  "generated_at": "2026-09-09T11:38:23.162348-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -540,7 +540,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5902",
-          "size": 2249188
+          "size": 2249803
         },
         {
           "key": "peers",
@@ -557,8 +557,8 @@
           "path": "data/stock_book/2026-09-09_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=211",
-          "size": 1545868
+          "reason": "horizons=5 names=214",
+          "size": 1565665
         },
         {
           "key": "book_md",
@@ -567,7 +567,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 80517
+          "size": 81528
         },
         {
           "key": "green",
@@ -597,9 +597,9 @@
           "size": 3693862
         }
       ],
-      "said": "215 rows",
+      "said": "216 rows",
       "bullets": [
-        "ONC, ARGX, EXE, DVN, PR"
+        "EXE, DVN, PR, RRC, EQT"
       ]
     },
     {
@@ -619,8 +619,8 @@
           "path": "data/stock_book/2026-09-09_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=211",
-          "size": 1545868
+          "reason": "horizons=5 names=214",
+          "size": 1565665
         },
         {
           "key": "dash_html",
@@ -658,27 +658,27 @@
     "buy_1d": [
       {
         "ticker": "CIG",
-        "score": 0.7242815504164775
-      },
-      {
-        "ticker": "ATRO",
-        "score": 0.5210078151822785
+        "score": 0.7295940640445366
       },
       {
         "ticker": "EMBJ",
-        "score": 0.13038406873849306
+        "score": 0.15947751100763663
+      },
+      {
+        "ticker": "ATRO",
+        "score": 0.546294838227393
       },
       {
         "ticker": "MIR",
-        "score": 0.5956938762730717
+        "score": 0.5956986194371858
       },
       {
         "ticker": "NXE",
-        "score": 0.5135764674626018
+        "score": 0.5174102314598985
       },
       {
         "ticker": "BG",
-        "score": 0.38511479236914936
+        "score": 0.3907384184956642
       },
       {
         "ticker": "AR",
@@ -686,29 +686,33 @@
       },
       {
         "ticker": "ITT",
-        "score": 0.3667763704975007
-      },
-      {
-        "ticker": "XIFR",
-        "score": 0.5613846130666518
+        "score": 0.3940987951618214
       }
     ],
     "sell_1d": [
+      {
+        "ticker": "CLPT",
+        "score": -0.4386191971076979
+      },
       {
         "ticker": "METC",
         "score": -0.5485976282394803
       },
       {
         "ticker": "SLQT",
-        "score": -0.6107984629198537
+        "score": -0.6032524221274975
       },
       {
-        "ticker": "CPB",
-        "score": -0.33646948880033895
+        "ticker": "AORT",
+        "score": -0.46485344709091075
       },
       {
         "ticker": "COIN",
-        "score": -0.4791543714722759
+        "score": -0.4771223733068348
+      },
+      {
+        "ticker": "CPB",
+        "score": -0.3146502608807358
       },
       {
         "ticker": "SPIR",
@@ -716,23 +720,15 @@
       },
       {
         "ticker": "RZLV",
-        "score": -0.22462681350392838
+        "score": -0.21870658665417902
       },
       {
-        "ticker": "CLPT",
-        "score": -0.3293765034500459
-      },
-      {
-        "ticker": "BGS",
-        "score": -0.3820704157914411
+        "ticker": "QSI",
+        "score": -0.326437912635797
       },
       {
         "ticker": "APLD",
-        "score": -0.0979744695509498
-      },
-      {
-        "ticker": "STEP",
-        "score": -0.3890342596883298
+        "score": -0.09626475347201541
       }
     ],
     "flatten": {
@@ -2209,6 +2205,31 @@
         }
       ],
       "preview": "1d BUY CIG, ATRO, EMBJ, MIR, NXE, BG, AR, ITT \u00b7 SELL METC, SLQT, CPB, COIN, SPIR, RZLV, CLPT, BGS \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 # Stock book \u2014 2026-09-09\n_Generated 2026-09-09T11:38:04.611649-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T11:38:22.237893-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-09_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10542,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.5, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': 0.9, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Consumer Cyclical={'score': -7.5, 'dir': 'down', 'conf': 0.6, 'source': 'llm'}, Consumer Defensive={'score': -2.925, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Energy={'score': 8.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Financial={'score': -6.075, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': -6.525, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Industrials={'score': -4.05, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-09_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 6067,
+          "preview": "# Weather report \u2014 2026-09-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.5, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': 0.9, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Consumer Cyclical={'score': -7.5, 'dir': 'down', 'conf': 0.6, 'source': 'llm'}, Consumer Defensive={'score': -2.925, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Energy={'score': 8.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Financial={'score': -6.075, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': -6.525, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Industrials={'score': -4.05, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
