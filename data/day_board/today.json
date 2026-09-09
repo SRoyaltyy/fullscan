@@ -1,12 +1,12 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T05:20:15.711123-04:00",
+  "generated_at": "2026-09-09T05:41:00.996386-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 4,
-    "partial": 2,
-    "fail": 2,
+    "partial": 3,
+    "fail": 1,
     "n": 8
   },
   "buy_1d": [],
@@ -180,6 +180,31 @@
         }
       ],
       "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AVO, RPRX, SKM, CFFN, HSBC \u00b7 2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SHEL, AMD, TECK, SR, EC"
+    },
+    {
+      "key": "events_catcher",
+      "title": "Event catcher (gap hunt, no carry)",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T05:41:00.059929-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-09-09_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 18160,
+          "preview": "17 events \u00b7 IEEPA national emergency on U.S. bulk-power system equipment | U.S. Section 338 bans and tariff-scope reset vs Canada | House clears FY2027 CR through Dec. 11, shutdown risk off | OFAC sanctions remaining Iranian airlines (Operation Economic Outcast) | EO: Packers & Stockyards enforcement and interstate meat access | EO adjusting Defense Production Act energy delegations"
+        },
+        {
+          "path": "01_daily/events/2026-09-09_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 6971,
+          "preview": "# Event Scan \u2014 2026-09-09 (catcher as primary)\n- events tracked: **17** (primary parse failed; catcher replaced it)"
+        }
+      ],
+      "preview": "17 events \u00b7 IEEPA national emergency on U.S. bulk-power system equipment | U.S. Section 338 bans and tariff-scope reset vs Canada | House clears FY2027 CR through Dec. 11, shutdown risk off | OFAC sanctions remaining Iranian airlines (Operation Economic Outcast) | EO: Packers & Stockyards enforcement and interstate meat access | EO adjusting Defense Production Act energy delegations \u00b7 # Event Scan \u2014 2026-09-09 (catcher as primary)\n- events tracked: **17** (primary parse failed; catcher replaced it)"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

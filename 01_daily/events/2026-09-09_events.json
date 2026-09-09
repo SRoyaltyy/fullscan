@@ -1,0 +1,431 @@
+{
+  "scan_date": "2026-09-09",
+  "events": [
+    {
+      "title": "IEEPA national emergency on U.S. bulk-power system equipment",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-08-26",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Utilities",
+        "Industrials",
+        "Energy",
+        "Information Technology"
+      ],
+      "expected_direction": "mixed",
+      "impact": 4,
+      "confidence": "high",
+      "why_it_matters": "The order lets DOE prohibit or condition foreign-produced grid equipment (transformers, inverters, BESS, industrial controls) tied to covered foreign entities, with FAR procurement preference for U.S.-made energy infrastructure.",
+      "what_to_watch": "DOE implementing rules due within 120 days, Covered Foreign Entity designations, and any forced rip-and-replace of installed Chinese/embargo-country kit at utilities and data-center interconnects.",
+      "status": "new",
+      "sources": [
+        "https://www.whitehouse.gov/presidential-actions/2026/08/declaring-a-national-emergency-to-secure-the-united-states-bulk-power-system/",
+        "https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2026"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "U.S. Section 338 bans and tariff-scope reset vs Canada",
+      "category": "government",
+      "timing": "today",
+      "date_or_window": "2026-09-09",
+      "regions": [
+        "US",
+        "Canada"
+      ],
+      "sectors": [
+        "Consumer Staples",
+        "Industrials",
+        "Consumer Discretionary",
+        "Materials",
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 4,
+      "confidence": "high",
+      "why_it_matters": "After Canada's ~$20bn retaliatory tariffs, Trump signed five Section 338 proclamations banning some Canadian alcohol and dairy and swapping products (ATVs, more dairy in; rock salt/cement out); duties stack on Section 232 and apply even to USMCA-origin goods.",
+      "what_to_watch": "Scope changes effective 2026-09-15, import bans 2026-09-29, threatened 50% auto tariffs from 2027-01-01, and any GSA delisting of Canadian-origin products.",
+      "status": "new",
+      "sources": [
+        "https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-responds-to-canadas-retaliation/"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "House clears FY2027 CR through Dec. 11, shutdown risk off",
+      "category": "legislative",
+      "timing": "past",
+      "date_or_window": "2026-09-01",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD",
+        "Industrials",
+        "Financials"
+      ],
+      "expected_direction": "bullish",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "A 370-48 House vote sent a Senate-passed stopgap (90-6 on Aug. 8) to the President, funding agencies through 2026-12-11 at FY2026 levels and removing the Oct. 1 shutdown threat before midterms.",
+      "what_to_watch": "Presidential signature, Dec. 11 cliff, blocked $1bn Trump-class battleship start vs other Navy shipbuilding anomalies, and hemp-ban/OMB-grant riders that Freedom Caucus opposed.",
+      "status": "new",
+      "sources": [
+        "https://rollcall.com/2026/09/01/funding-extension-clears-house-avoiding-shutdown-threat/",
+        "https://www.politico.com/news/2026/09/01/congress-funding-patch-shutdown-midterms-01060046",
+        "https://www.govexec.com/management/2026/09/shutdown-threat-lifted-house-passes-stopgap-spending-bill/415753/"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "OFAC sanctions remaining Iranian airlines (Operation Economic Outcast)",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-09-08",
+      "regions": [
+        "US",
+        "Iran",
+        "UAE",
+        "Turkey"
+      ],
+      "sectors": [
+        "Energy",
+        "Industrials",
+        "Financials"
+      ],
+      "expected_direction": "mixed",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "Treasury designated 36 targets including 27 Iranian airlines, third-country aircraft intermediaries, and GSAs, and suspended Iran aviation authorizations, widening secondary-sanctions risk around Iran oil/aviation logistics.",
+      "what_to_watch": "SDN fallout for UAE/Turkey/Malaysia facilitators, FinCEN aviation-procurement alert compliance, and any further squeeze on remaining Iran crude export routes.",
+      "status": "new",
+      "sources": [
+        "https://home.treasury.gov/news/press-releases/sb0623",
+        "https://ofac.treasury.gov/recent-actions/20260908"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "EO: Packers & Stockyards enforcement and interstate meat access",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-09-04",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Consumer Staples",
+        "Industrials"
+      ],
+      "expected_direction": "mixed",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "USDA must intensify Packers and Stockyards Act probes with DOJ, ease interstate shipment for state-inspected meat, and stand up SPUR loans for small/regional processors—pressure on concentrated packers, support for ranchers.",
+      "what_to_watch": "60-day USDA enforcement and barrier reports, DOJ referrals, and any MCOOL/wolf-delisting follow-through in the companion ranchers order.",
+      "status": "new",
+      "sources": [
+        "https://www.whitehouse.gov/presidential-actions/2026/09/promoting-fair-competition-in-livestock-markets-and-expanding-market-access-for-american-meat-producers/",
+        "https://www.whitehouse.gov/presidential-actions/2026/09/supporting-americas-ranchers/"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "EO adjusting Defense Production Act energy delegations",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-09-08",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Energy",
+        "Industrials"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "Interior and Energy now independently share DPA energy authorities, with energy disputes routed first to the National Energy Dominance Council—faster, potentially conflicting priority ratings for fuels, minerals, and grid buildout.",
+      "what_to_watch": "First Interior vs DOE DPA uses on energy projects and any dual-hatting fights that hit permitting or offtake.",
+      "status": "new",
+      "sources": [
+        "https://www.whitehouse.gov/presidential-actions/2026/09/adjusting-certain-delegations-under-the-defense-production-act-e2de/"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "August employment report: +162k, jobless rate 4.1%",
+      "category": "macro_data",
+      "timing": "past",
+      "date_or_window": "2026-09-04",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD",
+        "Financials"
+      ],
+      "expected_direction": "bearish",
+      "impact": 5,
+      "confidence": "high",
+      "why_it_matters": "Payrolls crushed ~65k consensus with +55k prior-month revisions, lifting CME FedWatch September hike odds to ~60% and pushing 10-year yields toward 4.8%.",
+      "what_to_watch": "Whether Sept. 11 CPI confirms a hike at the Sept. 16 FOMC; 2-year yield and rate-sensitive growth/tech.",
+      "status": "new",
+      "sources": [
+        "https://www.latimes.com/business/story/2026-09-04/stocks-fall-after-surprisingly-strong-jobs-report-raises-prospects-of-interest-rate-hike"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "Broadcom FQ3: AI beat, FY27 AI revenue double talk, Q4 guide a hair light",
+      "category": "earnings",
+      "timing": "past",
+      "date_or_window": "2026-09-02",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Information Technology"
+      ],
+      "expected_direction": "mixed",
+      "impact": 4,
+      "confidence": "high",
+      "why_it_matters": "Revenue $29.59bn vs $29.36bn, adj. EPS $3.32 vs $3.24, AI semis $16.7bn; Q4 rev guided $34.8bn vs ~$35.03bn while Tan sketched $115bn AI revenue in FY27 and residual-value support for labs.",
+      "what_to_watch": "Custom ASIC share vs NVDA, Anthropic/Google TPU GW ramps, and whether financing/guarantee language becomes a sector overhang.",
+      "status": "new",
+      "sources": [
+        "https://www.cnbc.com/2026/09/02/broadcom-avgo-q3-earnings-report-2026.html",
+        "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000076/0001730168-26-000076.txt"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "U.S.–Iran tanker strikes; Hormuz supply shock, oil toward $100",
+      "category": "geopolitical",
+      "timing": "past",
+      "date_or_window": "2026-09-05..2026-09-08",
+      "regions": [
+        "US",
+        "Iran",
+        "Middle East"
+      ],
+      "sectors": [
+        "Energy",
+        "Industrials",
+        "BROAD"
+      ],
+      "expected_direction": "mixed",
+      "impact": 5,
+      "confidence": "high",
+      "why_it_matters": "CENTCOM struck Iranian crude carriers after IRGC shots at U.S. ships; Hormuz remains effectively closed, Brent tagged ~$100, diesel at record highs—stagflation input into the FOMC.",
+      "what_to_watch": "Iran's threatened new restricted zone, tanker traffic/AIS, SPR draws, and whether CPI energy keeps a September hike on the table.",
+      "status": "new",
+      "sources": [
+        "https://www.nytimes.com/2026/09/08/world/middleeast/us-strikes-iran-tankers.html",
+        "https://www.thenationalnews.com/business/energy/2026/09/09/oil-hits-100-as-houthi-attacks-and-us-strikes-on-tankers-stoke-supply-fears/",
+        "https://www.reuters.com/world/middle-east/iran-says-announce-new-restricted-zone-gulf-coming-days-2026-09-07/"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "China 360bn yuan recap of state banks and insurers",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-09-07",
+      "regions": [
+        "CN"
+      ],
+      "sectors": [
+        "Financials"
+      ],
+      "expected_direction": "bullish",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "Finance ministry-led ~¥360bn (~$45–50bn) private placements (ABC, ICBC, China Life, PICC, ExIm, etc.) to keep credit flowing as growth slows, with CNY at strongest vs USD since Jan 2023.",
+      "what_to_watch": "Follow-through lending vs property still-weak, Sept. 20 LPR, and any Bessent–He Lifeng deliverables ahead of a late-September Washington visit.",
+      "status": "new",
+      "sources": [
+        "https://www.euronews.com/business/2026/09/07/china-injects-over-45-billion-into-state-banks-and-insurers-as-growth-slows"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "August CPI (pre-FOMC inflation print)",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-09-11",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD",
+        "Financials",
+        "Energy"
+      ],
+      "expected_direction": "unclear",
+      "impact": 5,
+      "confidence": "high",
+      "why_it_matters": "Last major CPI before the Sept. 16 decision; consensus near 3.4% y/y headline with oil/war upside risk after a hot payrolls print.",
+      "what_to_watch": "Core vs energy; a hot print likely locks a 25bp hike, a cool print reopens a hold (Waller's data-dependent split).",
+      "status": "new",
+      "sources": [
+        "https://www.bls.gov/schedule/2026/09_sched_list.htm",
+        "https://www.latimes.com/business/story/2026-09-04/stocks-fall-after-surprisingly-strong-jobs-report-raises-prospects-of-interest-rate-hike"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "August PPI",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-09-10",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD",
+        "Financials"
+      ],
+      "expected_direction": "unclear",
+      "impact": 4,
+      "confidence": "high",
+      "why_it_matters": "Pipeline inflation print 24 hours before CPI; energy and goods pipeline will set Friday's CPI surprise risk.",
+      "what_to_watch": "Core PPI ex-food/energy and trade-services; a hot PPI into CPI is the cleanest path to a Sept. 16 hike.",
+      "status": "new",
+      "sources": [
+        "https://www.bls.gov/schedule/2026/09_sched_list.htm",
+        "https://fedratecalc.com/us-economic-calendar/september-2026/"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "FOMC decision, SEP/dot plot, Warsh press conference",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-09-16",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD",
+        "Financials",
+        "Real Estate"
+      ],
+      "expected_direction": "mixed",
+      "impact": 5,
+      "confidence": "high",
+      "why_it_matters": "Projections meeting with hike odds already ~60% after 162k payrolls and war-driven oil; first real test of Chair Warsh's Jackson Hole 'more work to do' line.",
+      "what_to_watch": "25bp vs hold, dots vs 2026–27 median, QT language, and dissent; 2s/10s and rate-sensitive housing/tech.",
+      "status": "new",
+      "sources": [
+        "https://fedratecalc.com/fomc-meeting-schedule/september-2026/",
+        "https://www.latimes.com/business/story/2026-09-04/stocks-fall-after-surprisingly-strong-jobs-report-raises-prospects-of-interest-rate-hike"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "Oracle Q1 FY2027 earnings",
+      "category": "earnings",
+      "timing": "upcoming",
+      "date_or_window": "2026-09-10",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Information Technology"
+      ],
+      "expected_direction": "unclear",
+      "impact": 4,
+      "confidence": "high",
+      "why_it_matters": "Company-confirmed AMC print/call is the next large-cap AI-cloud capex/RPO checkpoint after Broadcom's custom-chip beat.",
+      "what_to_watch": "Cloud infrastructure growth, remaining performance obligations, capex, and any AI-lab concentration commentary.",
+      "status": "new",
+      "sources": [
+        "https://s23.q4cdn.com/440135859/files/doc_news/2026/09/v2/Earnings-Date-Announcement-Q1FY27-final.pdf",
+        "https://www.oracle.com/corporate/investor_relations/faq.html"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "ECB Governing Council decision (Berlin)",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-09-10",
+      "regions": [
+        "EU"
+      ],
+      "sectors": [
+        "Financials",
+        "BROAD"
+      ],
+      "expected_direction": "mixed",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "Policy meeting Sept. 9–10 with a hold at 2.25% deposit widely expected, but energy-war inflation keeps a hawkish lean in play versus the Fed's hike debate.",
+      "what_to_watch": "Statement on energy/Middle East, any hike bias, and EUR/USD vs U.S. CPI/FOMC week.",
+      "status": "new",
+      "sources": [
+        "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "BoJ MPM: hike risk to ~1.25%",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-09-17..2026-09-18",
+      "regions": [
+        "JP"
+      ],
+      "sectors": [
+        "Financials",
+        "BROAD"
+      ],
+      "expected_direction": "mixed",
+      "impact": 4,
+      "confidence": "medium",
+      "why_it_matters": "Ueda has said hikes are on the table every meeting; energy, weak yen, and tight labor raise odds of +25bp from ~1.00%, a USD/JPY event with global duration spillovers.",
+      "what_to_watch": "Policy-rate vote, yen reaction around intervention-sensitive levels, and JGB/global 10-year backup.",
+      "status": "new",
+      "sources": [
+        "https://www.boj.or.jp/mopo/mpmsche_minu",
+        "https://asia.nikkei.com/economy/bank-of-japan/boj-chief-says-rate-hikes-on-table-at-every-meeting-including-this-month-s"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "Treasury 9y11m / 29y11m reopenings",
+      "category": "macro_data",
+      "timing": "today",
+      "date_or_window": "2026-09-09..2026-09-10",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Financials",
+        "BROAD"
+      ],
+      "expected_direction": "unclear",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "About $39bn 10-year-equivalent today and $22bn 30-year-equivalent Thursday settle into 10s near three-year highs (~4.8%) after hot payrolls and oil.",
+      "what_to_watch": "High yield vs when-issued, bid-to-cover, dealer vs international take-down; a tail would tighten financial conditions into CPI/FOMC.",
+      "status": "new",
+      "sources": [
+        "https://www.treasurydirect.gov/auctions/when-auctions-happen/",
+        "https://fiscaldata.treasury.gov/datasets/treasury-securities-auctions-data/"
+      ],
+      "origin": "catcher"
+    }
+  ],
+  "catcher": {
+    "ran": true,
+    "replaced_primary": true,
+    "found": 17,
+    "duplicates_dropped": 0,
+    "coverage_assessment": "Primary scan returned zero events, so this pass is the full book: White House/Federal Register actions, the CR, OFAC, Canada 338, payrolls/FOMC path, Hormuz oil, China recap, Broadcom/Oracle, and G3 central banks. Blind spots that were checked and not elevated: no in-window SCOTUS/tariff-antitrust rulings, no new CFIUS block, FDA Sun Pharma Halol is a 2025 leftover, and China LPR is only a mid-window print with no cut signaled.",
+    "biggest_gap": "U.S.–Iran tanker war / Hormuz closure driving oil toward $100 into CPI and the Sept. 16 FOMC—plus the IEEPA bulk-power emergency and Canada Section 338 bans, none of which a failed primary captured."
+  }
+}
