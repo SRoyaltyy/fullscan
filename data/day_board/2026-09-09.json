@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T10:38:53.097796-04:00",
+  "generated_at": "2026-09-09T10:39:04.056098-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -555,8 +555,8 @@
           "path": "data/stock_book/2026-09-09_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=212",
-          "size": 1466097
+          "reason": "horizons=5 names=216",
+          "size": 1495133
         },
         {
           "key": "book_md",
@@ -565,7 +565,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 82635
+          "size": 83186
         },
         {
           "key": "green",
@@ -617,8 +617,8 @@
           "path": "data/stock_book/2026-09-09_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=212",
-          "size": 1466097
+          "reason": "horizons=5 names=216",
+          "size": 1495133
         },
         {
           "key": "dash_html",
@@ -669,6 +669,22 @@
       {
         "ticker": "VLO",
         "score": 0.4646372726015126
+      },
+      {
+        "ticker": "NVT",
+        "score": 0.6806943336713436
+      },
+      {
+        "ticker": "BG",
+        "score": 0.22012433126872596
+      },
+      {
+        "ticker": "GPRK",
+        "score": 0.7311432021370101
+      },
+      {
+        "ticker": "CWEN",
+        "score": 0.6532406384426253
       }
     ],
     "sell_1d": [
@@ -677,32 +693,32 @@
         "score": -0.5650490501849281
       },
       {
-        "ticker": "XHG",
-        "score": -0.3839088612658864
-      },
-      {
-        "ticker": "SMPL",
-        "score": -0.37044391012687466
-      },
-      {
-        "ticker": "ZBH",
-        "score": -0.004451213233972323
-      },
-      {
-        "ticker": "BKNG",
-        "score": -0.31510168854488385
-      },
-      {
-        "ticker": "NG",
-        "score": -0.35992257126381716
-      },
-      {
         "ticker": "CPB",
-        "score": -0.2967796001557242
+        "score": -0.3467796001557242
       },
       {
-        "ticker": "NN",
-        "score": -0.20028979038449085
+        "ticker": "GIS",
+        "score": -0.48603520763226443
+      },
+      {
+        "ticker": "FLO",
+        "score": -0.32353150790179425
+      },
+      {
+        "ticker": "TRIP",
+        "score": -0.2764383573591321
+      },
+      {
+        "ticker": "HRL",
+        "score": -0.21195255089061163
+      },
+      {
+        "ticker": "XHG",
+        "score": -0.3752128612658864
+      },
+      {
+        "ticker": "ENHA",
+        "score": -0.3468967011258824
       }
     ],
     "flatten": {
@@ -1830,6 +1846,45 @@
         }
       ],
       "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HRMY, HALO, CDNA, GMAB, ONC"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T10:39:03.215016-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-09_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1495133,
+          "preview": "1d BUY MSTR, UGP, TER, VLO, NVT, BG, GPRK, CWEN \u00b7 SELL METC, CPB, GIS, FLO, TRIP, HRL, XHG, ENHA"
+        },
+        {
+          "path": "data/stock_book/2026-09-09_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-09_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2511,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "01_daily/2026-09-09_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 84290,
+          "preview": "# Stock book \u2014 2026-09-09\n_Generated 2026-09-09T10:39:00.712447-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY MSTR, UGP, TER, VLO, NVT, BG, GPRK, CWEN \u00b7 SELL METC, CPB, GIS, FLO, TRIP, HRL, XHG, ENHA \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 # Stock book \u2014 2026-09-09\n_Generated 2026-09-09T10:39:00.712447-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
