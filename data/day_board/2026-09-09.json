@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T11:39:30.764207-04:00",
+  "generated_at": "2026-09-09T11:39:36.408470-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -2387,6 +2387,34 @@
         }
       ],
       "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-09\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-09",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-09-09T11:39:34.260193-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T11:39:35.483458-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-09/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 7106,
+          "preview": "keys: date, generated_at, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, sectors"
     }
   ],
   "href": {
