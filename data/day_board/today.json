@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T09:08:22.184042-04:00",
+  "generated_at": "2026-09-09T09:08:35.247163-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -11,54 +11,54 @@
   },
   "buy_1d": [
     {
-      "ticker": "NVT",
-      "score": 0.6081932140222619
-    },
-    {
-      "ticker": "DINO",
-      "score": 0.3792112265780485
+      "ticker": "MSTR",
+      "score": 0.3032590777212682
     },
     {
       "ticker": "UGP",
-      "score": 0.829334975468365
+      "score": 0.7857826466615021
     },
     {
-      "ticker": "CVI",
-      "score": 0.8383879486165673
+      "ticker": "TER",
+      "score": 0.5159317444486419
+    },
+    {
+      "ticker": "VLO",
+      "score": 0.4646372726015126
     }
   ],
   "sell_1d": [
     {
-      "ticker": "BGS",
-      "score": -0.4158775493338465
+      "ticker": "METC",
+      "score": -0.5650490501849281
     },
     {
       "ticker": "XHG",
-      "score": -0.38231292819943274
-    },
-    {
-      "ticker": "METC",
-      "score": -0.555774163088432
+      "score": -0.3839088612658864
     },
     {
       "ticker": "SMPL",
       "score": -0.37044391012687466
     },
     {
+      "ticker": "ZBH",
+      "score": -0.004451213233972323
+    },
+    {
+      "ticker": "BKNG",
+      "score": -0.31510168854488385
+    },
+    {
       "ticker": "NG",
-      "score": -0.35537526970335365
+      "score": -0.35992257126381716
     },
     {
-      "ticker": "BRBR",
-      "score": -0.32562696307416694
+      "ticker": "CPB",
+      "score": -0.2967796001557242
     },
     {
-      "ticker": "BRO",
-      "score": -0.2374502796489299
-    },
-    {
-      "ticker": "GIS",
-      "score": -0.489074188139194
+      "ticker": "NN",
+      "score": -0.20028979038449085
     }
   ],
   "flatten": {
@@ -88,31 +88,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "map_heat_baseline",
-      "title": "Map heat night baseline",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T07:32:21.432267-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-09_research_baseline.json",
-          "ok": true,
-          "reason": "",
-          "size": 22,
-          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-09_research_baseline.md",
-          "ok": true,
-          "reason": "",
-          "size": 36519,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-09\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-09\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-    },
     {
       "key": "news_judge",
       "title": "News judge",
@@ -266,6 +241,45 @@
         }
       ],
       "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AVO, RPRX, SKM, CFFN, HSBC \u00b7 2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, SHEL, AMD, WDS, TECK"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T09:08:34.442812-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-09_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1466097,
+          "preview": "1d BUY MSTR, UGP, TER, VLO \u00b7 SELL METC, XHG, SMPL, ZBH, BKNG, NG, CPB, NN"
+        },
+        {
+          "path": "data/stock_book/2026-09-09_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-09_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2545,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "01_daily/2026-09-09_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 78732,
+          "preview": "# Stock book \u2014 2026-09-09\n_Generated 2026-09-09T09:08:32.029326-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY MSTR, UGP, TER, VLO \u00b7 SELL METC, XHG, SMPL, ZBH, BKNG, NG, CPB, NN \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 # Stock book \u2014 2026-09-09\n_Generated 2026-09-09T09:08:32.029326-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
