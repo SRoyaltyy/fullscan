@@ -1,6 +1,6 @@
 # Learnings report — 2026-09-09
 
-Generated: **2026-09-09T18:42:27.798362-04:00** by `src/learn_cycle.py`.
+Generated: **2026-09-09T18:48:15.842241-04:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -15,7 +15,7 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 | Graded runs mined | 176 |
 | Hypotheses written | 177 (wins=79, losses=98) |
 | News hypotheses | 1 |
-| Lessons promoted to active | 12 |
+| Lessons promoted to active | 0 |
 | Active lesson files now | 169 |
 
 ## 2. Accuracy by topic (evidence this cycle learned from)
@@ -494,18 +494,7 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 
 ## 4. Promoted standing rules (this cycle)
 
-- `fresh-overnight-kinetic-oil-supply-escalation-iran-us-tanker.md`
-- `when-a-fresh-kinetic-oil-supply-shock-brent-100-is-present-a.md`
-- `when-a-sector-prediction-calls-flat-flat-at-low-confidence-0.md`
-- `when-a-live-geopolitical-oil-supply-shock-brent-100-is-prese.md`
-- `when-a-sector-specific-negative-cluster-packaged-food-margin.md`
-- `when-a-fresh-severe-kinetic-escalation-us-iran-direct-tanker.md`
-- `when-a-live-geopolitical-oil-supply-shock-risk-off-day-is-pr.md`
-- `when-a-sector-is-crowded-long-with-persistent-multi-day-rela.md`
-- `when-a-live-geopolitical-oil-supply-shock-day-is-present-oil.md`
-- `when-a-live-risk-off-oil-shock-hawkish-fed-day-is-present-oi.md`
-- `when-a-sector-has-a-scheduled-mega-cap-catalyst-event-e-g-ap.md`
-- `when-a-sector-has-a-large-1d-relative-cushion-0-4-built-on-a.md`
+_No new promotions this cycle (candidates incomplete or already active)._
 
 Full text lives in `02_lessons/active/`. Summaries also feed `mutable_policy.md`.
 
