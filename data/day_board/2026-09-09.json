@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T11:39:39.868598-04:00",
+  "generated_at": "2026-09-09T11:40:51.438212-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -373,12 +373,12 @@
           "role": "required",
           "status": "OK",
           "reason": "sectors=11",
-          "size": 10521
+          "size": 10486
         }
       ],
-      "said": "favorable 1 \u00b7 hostile 6 \u00b7 neutral 4",
+      "said": "favorable 2 \u00b7 hostile 5 \u00b7 neutral 4",
       "bullets": [
-        "hostile: Basic Materials, Consumer Cyclical, Financial, Healthcare, Industrials, Real Estate",
+        "hostile: Basic Materials, Consumer Cyclical, Financial, Industrials, Real Estate",
         "events bull 3 / bear 8"
       ]
     },
@@ -522,7 +522,7 @@
           "role": "input",
           "status": "OK",
           "reason": "sectors=11",
-          "size": 10521
+          "size": 10486
         },
         {
           "key": "in_ab",
@@ -540,7 +540,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5902",
-          "size": 2249803
+          "size": 2249188
         },
         {
           "key": "peers",
@@ -597,9 +597,9 @@
           "size": 3693862
         }
       ],
-      "said": "216 rows",
+      "said": "215 rows",
       "bullets": [
-        "EXE, DVN, PR, RRC, EQT"
+        "ONC, ARGX, EXE, DVN, REGN"
       ]
     },
     {
@@ -769,9 +769,9 @@
     },
     "news": {},
     "weather": {
-      "said": "favorable 1 \u00b7 hostile 6 \u00b7 neutral 4",
+      "said": "favorable 2 \u00b7 hostile 5 \u00b7 neutral 4",
       "bullets": [
-        "hostile: Basic Materials, Consumer Cyclical, Financial, Healthcare, Industrials, Real Estate",
+        "hostile: Basic Materials, Consumer Cyclical, Financial, Industrials, Real Estate",
         "events bull 3 / bear 8"
       ]
     }
@@ -2465,6 +2465,31 @@
         }
       ],
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-09\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T11:40:50.468265-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-09_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10542,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.5, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': 0.9, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Consumer Cyclical={'score': -7.5, 'dir': 'down', 'conf': 0.6, 'source': 'llm'}, Consumer Defensive={'score': -2.925, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Energy={'score': 8.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Financial={'score': -6.075, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': -6.525, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Industrials={'score': -4.05, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-09_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 6067,
+          "preview": "# Weather report \u2014 2026-09-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.5, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': 0.9, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Consumer Cyclical={'score': -7.5, 'dir': 'down', 'conf': 0.6, 'source': 'llm'}, Consumer Defensive={'score': -2.925, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Energy={'score': 8.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Financial={'score': -6.075, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': -6.525, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Industrials={'score': -4.05, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
