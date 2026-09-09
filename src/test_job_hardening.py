@@ -99,12 +99,13 @@ def test_cancel_in_progress_off_on_grok_jobs() -> None:
         "map_heat_postclose.yml",
         "daily_pipeline.yml",
         "learn_cycle.yml",
-        "stock_book_all.yml",
         "xai_reauth.yml",
     ):
         text = (WF / name).read_text(encoding="utf-8")
         assert "cancel-in-progress: true" not in text, name
         assert "cancel-in-progress: false" in text, name
+    book = (WF / "stock_book_all.yml").read_text(encoding="utf-8")
+    assert "cancel-in-progress: ${{ github.event_name == 'schedule'" in book
     # Fix #1: ubuntu Pre-Open must cancel twins. ECS Grok stays uncanceled.
     pre = (WF / "preopen_all.yml").read_text(encoding="utf-8")
     assert "&& 'ubuntu' || 'ecs'" in pre
@@ -319,7 +320,8 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "skip_extras=True" in pre
     assert "refresh_ranker=True" in pre
     assert "refresh_ranker" in book
-    assert "safe_git_push.sh" in pre
+    assert "land_file.land" in pre
+    assert "safe_git_push.sh" in (ROOT / "src" / "land_file.py").read_text(encoding="utf-8")
     assert "timeout_s=45 if late" in pre
     assert "passthrough after timeout" in pre
     assert "MAP_HEAT_REFRESH_TIMEOUT" in pre
@@ -766,6 +768,8 @@ def test_safe_git_push_keeps_dated_ranker_on_conflict() -> None:
     assert "resolve_unmerged" in text
     assert "clean_to_local" in text
     assert "keeping origin/main (sleeve-merge / Pages)" in text
+    assert "x-access-token" in text
+    assert "data/day_board" in text
 
 
 def test_preopen_harden_halt_reverted() -> None:
@@ -779,6 +783,21 @@ def test_preopen_harden_halt_reverted() -> None:
     assert "HALT 2026-09-08" not in book
     assert "if: false" not in pre
     assert "STOP all live writers" not in pre
+
+
+def test_incremental_land_and_day_board() -> None:
+    """Write A → QC A → push A. Day board is an .io page, not an Action."""
+    pre = (ROOT / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
+    assert "land_file.land" in pre
+    assert "leftover sweep" in (WF / "preopen_all.yml").read_text(encoding="utf-8")
+    assert "leftover sweep" in (WF / "stock_book_all.yml").read_text(encoding="utf-8")
+    pub = (ROOT / "scripts" / "publish_dashboard.sh").read_text(encoding="utf-8")
+    assert "day-board" in pub
+    dep = (WF / "deploy-dashboard.yml").read_text(encoding="utf-8")
+    assert "id-token: write" in dep
+    assert "day-board" in dep
+    orch = (WF / "daily_orchestrator.yml").read_text(encoding="utf-8")
+    assert "news_parse.yml" in orch
 
 
 def test_ubuntu_preopen_not_blocked_by_queued_ecs() -> None:
@@ -898,6 +917,7 @@ def main() -> None:
         test_safe_git_push_keeps_dated_ranker_on_conflict,
         test_ubuntu_preopen_not_blocked_by_queued_ecs,
         test_preopen_harden_halt_reverted,
+        test_incremental_land_and_day_board,
         test_last_closed_sidecar_does_not_share_ubuntu_concurrency,
         test_search_and_sector_rounds_are_bounded,
     ]

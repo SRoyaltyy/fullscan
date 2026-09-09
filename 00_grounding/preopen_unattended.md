@@ -1,49 +1,56 @@
-# Pre-Open ALL — unattended morning + cancel auth
+# Pre-Open ALL — unattended morning + incremental land
 
 Unattended clock is ECS systemd `fullscan-preopen.timer` at **05:55 ET**.
 GitHub `preopen_all.yml` is a poke / ubuntu heal, not the primary clock.
 
-## Tomorrow morning checklist (2026-09-09)
+## Incremental land (write A → QC A → push A)
 
-1. **HALT is reverted on this branch.** `preopen_all.yml`, `stock_book_all.yml`,
-   and `daily_orchestrator.yml` must not contain `if: false` / HALT.
-2. **One ubuntu writer.** Concurrency group is `preopen-all-ubuntu` (push or
-   `runner=ubuntu`) or `preopen-all-ecs`. Never `ubuntu-HHMM`. A new ubuntu
-   poke **cancels** the prior ubuntu run. ECS does **not** cancel-in-progress.
-3. **On-time 09:25 gate stays.** Essays skip after 09:25 unless:
-   - `workflow_dispatch` `force=true` → `--force` (rewrite + cutoff), or
-   - a **push poke between 09:25 and 12:00 ET** → `--bypass-cutoff`
-     (essays may run; skip-if-good still keeps quality-ok files).
-   Morning ECS / on-time ubuntu runs do **not** pass `--force`.
-4. **Do not poke live salvage** after this harden lands. Watch the 05:55 ET
-   ECS start and the ~05:40 ET Finviz scrape. If ubuntu heal is needed,
-   touch only `preopen_all.yml` so it joins the **same** `preopen-all-ubuntu`
-   group (GitHub cancels the prior run).
-5. **QC tokens to read** in `01_daily/YYYY-MM-DD_preopen_status.md`:
-   - `news_parse` `db_timeout` = Postgres statement timeout after retries
-     (not a silent empty parse).
-   - `map_heat_research` passthrough = search flake; night baseline stands;
-     packet continues (no 21-minute block).
+Do **not** wait until the end of the job to commit. After each step
+passes QC, `src.land_file` pushes those dated files to `main` and
+updates `data/day_board/{date}.json`. A later timeout, 402, or
+sleeve-merge rebase cannot erase weather / parse / book that already
+landed.
 
-## Cancel auth (fix #1 / #F)
+The YAML "Commit predictive artifacts" / "Commit everything" steps are
+**leftover sweeps** only.
 
-- This workflow has `permissions: actions: write` so **the same concurrency
-  group** can cancel the previous ubuntu run. That is the supported cancel path.
-- `workflow_dispatch` and `gh run cancel` from a cloud/integration token are
-  often **403**. That is not a paywall — the token lacks `Actions: write` on
-  the repo, or the hung run is in a **different** concurrency group.
-- **Owner UI → Force cancel** is required when:
-  - the token is 403, or
-  - a zombie sits in another group (`ubuntu-0945` vs `ubuntu-0950` was the
-    2026-09-08 hole; those forks are gone), or
-  - GitHub concurrency cancel was submitted but the runner did not die.
-- Do not invent a new `ubuntu-HHMM` group to “supersede” a hang. Use the
-  stable `ubuntu` group so cancel-in-progress works.
+Live board (no Action click):
+https://sroyaltyy.github.io/fullscan/dashboard/day-board/
+
+JSON (updates as soon as `main` has the file, Pages rebuild not required):
+`https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/latest.json`
+
+Factor mine shows the same 1d BUY/SELL strip:
+https://sroyaltyy.github.io/fullscan/dashboard/factor-mine/
+
+## Morning checklist
+
+1. **HALT is reverted.** `preopen_all.yml`, `stock_book_all.yml`, and
+   `daily_orchestrator.yml` must not contain `if: false` / HALT.
+2. **One ubuntu writer.** Group `preopen-all-ubuntu` or `preopen-all-ecs`.
+   Never `ubuntu-HHMM`. Ubuntu cancels twins. ECS does not.
+3. **On-time 09:25 gate stays.** Late push 09:25–12:00 ET uses
+   `--bypass-cutoff`. Only `force=true` rewrites quality-ok files.
+4. **DeepSeek preflight.** A 402 skips essays; weather / join / book
+   still land. Top up the key before 05:55 if the preflight fails.
+5. **Holiday / missing night heat.** Overlay copies last session groups
+   instead of hard-failing (Labor Day 09-07 hole).
+6. **ECS git.** `safe_git_push.sh` pins `x-access-token` from
+   `GITHUB_TOKEN` so `could not read Username` cannot drop a packet.
+7. **Day board.** Open the .io page; do not run Stock Book readiness
+   just to see which processes exist.
+
+## Cancel auth
+
+- `permissions: actions: write` so the same ubuntu group can cancel.
+- Cloud `gh run cancel` is often 403. Owner Force cancel for zombies.
+- Do not invent `ubuntu-HHMM`.
 
 ## Files
 
-- `.github/workflows/preopen_all.yml` — concurrency, late-heal, packet commit
-- `scripts/safe_git_push.sh` — dashboard/sleeve-merge take main
+- `src/land_file.py` `src/day_board.py` — incremental QC+push + .io board
+- `.github/workflows/preopen_all.yml` — concurrency, late-heal, leftover sweep
+- `scripts/safe_git_push.sh` — dashboard/sleeve-merge take main; token remote
 - `src/db.py` / `src/news_parse.py` / `src/output_qc.py` — DB timeout
-- `src/preopen.py` / `src/run_preopen_all.py` — `--bypass-cutoff`
-- `src/map_heat_refresh.py` — `--passthrough` after timeout
+- `src/preopen.py` / `src/run_preopen_all.py` — `--bypass-cutoff` + land
+- `src/map_heat.py` / `src/map_heat_refresh.py` — last-session overlay + passthrough

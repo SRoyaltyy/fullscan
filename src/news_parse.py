@@ -435,6 +435,11 @@ def main() -> None:
     print(f"[news_parse] {mp}")
     print("--- channel1 preview ---")
     print(to_markdown_for_channel1(report))
+    try:
+        from . import land_file
+        land_file.land(date_str, "news_parse", title="News parse")
+    except Exception as e:  # noqa: BLE001
+        print(f"[news_parse] WARN: land failed: {e}")
 
 
 if __name__ == "__main__":

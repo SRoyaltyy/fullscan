@@ -76,8 +76,29 @@ concurrency:
   cancel-in-progress: ${{ github.event_name == 'push' || github.event.inputs.runner == 'ubuntu' }}
 
 jobs:
+  gate:
+    name: Clock gate (merge poke is not a 01:00 packet)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      go: ${{ steps.g.outputs.go }}
+    steps:
+      - id: g
+        run: |
+          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          FORCE="${{ github.event.inputs.force }}"
+          echo "ET_HM=$ET_HM event=${{ github.event_name }} force=$FORCE"
+          if [ "${{ github.event_name }}" = "push" ] && [ "$ET_HM" -lt 535 ] && [ "$FORCE" != "true" ]; then
+            echo "before 05:35 ET — merge/touch is not a packet. ECS 05:55 + 05:40 scrape own the clock."
+            echo "go=no" >> "$GITHUB_OUTPUT"
+          else
+            echo "go=yes" >> "$GITHUB_OUTPUT"
+          fi
+
   scrape:
     name: Finviz scrape (ubuntu — ECS 403s)
+    needs: gate
+    if: needs.gate.outputs.go == 'yes'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -125,8 +146,8 @@ jobs:
 
   land_book:
     name: Land book + green (ubuntu — no Grok, no ECS)
-    needs: scrape
-    if: ${{ always() && github.event.inputs.with_book != 'false' }}
+    needs: [gate, scrape]
+    if: ${{ needs.gate.outputs.go == 'yes' && always() && github.event.inputs.with_book != 'false' }}
     runs-on: ubuntu-latest
     timeout-minutes: 90
     env:
@@ -194,8 +215,8 @@ jobs:
             "01_daily/${DATE}_stock_book.md"
 
   preopen:
-    needs: scrape
-    if: always()
+    needs: [gate, scrape]
+    if: ${{ needs.gate.outputs.go == 'yes' && always() }}
     runs-on: ${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
     timeout-minutes: 360
     env:
@@ -205,6 +226,7 @@ jobs:
       HOME: ${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
       FINVIZ_SKIP_LIVE: "1"
       PREOPEN_LOCK: "/home/gha/fullscan-persist/locks/preopen.lock"
+      FULLSCAN_LAND: "1"
     steps:
       - name: Wait if ECS systemd pre-open owns the box
         run: |
@@ -227,6 +249,8 @@ jobs:
         if: env.skip != 'yes'
         with:
           clean: false
+          persist-credentials: true
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Skip if packet AND stock book already on disk (no LLM)
         if: env.skip != 'yes' && github.event.inputs.force != 'true'
@@ -340,9 +364,10 @@ jobs:
           export HOME="${HOME:-${FULLSCAN_HOME:-/home/gha}}"
           unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
           cd "${GITHUB_WORKSPACE:-.}"
-          # Packet only — sleeve-merge Pages HTML is a twin-writer race
-          # (fix #2). Pages still publish via publish_dashboard.sh.
-          PATHS=(01_daily/_ecs_clock.md)
+          # Leftover sweep only. Each QC-ok file already pushed itself
+          # via src.land_file (write A → QC A → push A). This step
+          # catches stragglers if a mid-job land failed.
+          PATHS=(01_daily/_ecs_clock.md data/day_board/)
           if [ "${skip_python:-}" != "yes" ]; then
             PATHS+=(01_daily/general/ 01_daily/sectors/ 01_daily/events
               01_daily/news/ 01_daily/map_heat/ 01_daily/catalyst/
@@ -356,8 +381,8 @@ jobs:
               03_scoreboard/ 02_lessons/)
           fi
           bash scripts/safe_git_push.sh \
-            "auto: pre-open ALL [$(date -u +%F_%H%M)]" \
-            "${PATHS[@]}"
+            "auto: pre-open leftover sweep [$(date -u +%F_%H%M)]" \
+            "${PATHS[@]}" || echo "[preopen] leftover sweep failed — lands already on main"
 
       - name: Commit dashboard HTML (best-effort; never fail the packet)
         if: always() && env.skip != 'yes' && env.skip_python != 'yes'

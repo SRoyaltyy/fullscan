@@ -92,6 +92,38 @@ def test_run_preopen_cli_has_bypass_not_permanent_force() -> None:
     assert "ARGS=(--llm-backend \"$BACKEND\" --force)" not in yml
 
 
+def test_incremental_land_hooks() -> None:
+    pre = (ROOT / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
+    book = (ROOT / "src" / "run_stock_book_all.py").read_text(encoding="utf-8")
+    yml = (ROOT / ".github" / "workflows" / "preopen_all.yml").read_text(
+        encoding="utf-8")
+    assert "from . import land_file" in pre
+    assert "_land(date, key, title)" in pre
+    assert "land_file.land" in book
+    assert "leftover sweep" in yml
+    assert "FULLSCAN_LAND" in yml
+    assert "before 05:35 ET" in yml
+    assert "go=no" in yml
+    dash = (ROOT / "src" / "day_board.py").read_text(encoding="utf-8")
+    assert "raw.githubusercontent.com" in dash
+    assert "dashboard/day-board" in dash
+
+
+def test_holiday_overlay_uses_last_session() -> None:
+    text = (ROOT / "src" / "map_heat.py").read_text(encoding="utf-8")
+    assert "last_closed_session" in text
+    assert "copied" in text and "last session" in text
+
+
+def test_deepseek_preflight_is_wired() -> None:
+    pre = (ROOT / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
+    assert "_deepseek_credits_ok" in pre
+    assert "credits_preflight" in pre
+    ds = (ROOT / "src" / "deepseek_client.py").read_text(encoding="utf-8")
+    assert "def credits_preflight" in ds
+    assert "402" in ds
+
+
 def test_map_heat_passthrough_flag_skips_llm(tmp_path: Path | None = None) -> None:
     orig = mr.OUT
     with tempfile.TemporaryDirectory() as d:
@@ -129,6 +161,9 @@ def main() -> None:
         test_bypass_cutoff_skips_refuse,
         test_run_preopen_cli_has_bypass_not_permanent_force,
         test_map_heat_passthrough_flag_skips_llm,
+        test_incremental_land_hooks,
+        test_holiday_overlay_uses_last_session,
+        test_deepseek_preflight_is_wired,
     ]
     failed = 0
     for fn in tests:

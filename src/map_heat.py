@@ -17,6 +17,7 @@ import argparse
 import json
 import os
 import re
+import shutil
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -826,10 +827,21 @@ def main() -> None:
     js = OUT_DIR / f"{date}_map_heat.json"
     if args.overlay:
         if not js.exists():
-            raise SystemExit(
-                f"post-close map heat missing: {js} — industry groups must be "
-                "scraped at 22:00 ET, not in the premarket"
-            )
+            # Labor Day 2026-09-07: night scrape never ran; overlay hard-failed
+            # and Tuesday inherited a hole. Copy the last session groups.
+            from .skip_if_good import last_closed_session
+            prev = last_closed_session()
+            prev_js = OUT_DIR / f"{prev}_map_heat.json"
+            if prev_js.exists() and prev != date:
+                OUT_DIR.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(prev_js, js)
+                print(f"[map_heat] overlay: no {date} groups — copied "
+                      f"last session {prev} as the industry baseline")
+            else:
+                raise SystemExit(
+                    f"post-close map heat missing: {js} — industry groups must be "
+                    "scraped at 22:00 ET, not in the premarket"
+                )
         try:
             payload = json.loads(js.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError) as e:

@@ -59,6 +59,15 @@ fi
 git config user.name "Market-Bot-Automaton"
 git config user.email "bot@users.noreply.github.com"
 
+# ECS 2026-09-07/08: `could not read Username for 'https://github.com'`.
+# GITHUB_TOKEN is already on the job; pin origin so push is not interactive.
+TOKEN="${GITHUB_TOKEN:-${GH_TOKEN:-}}"
+REPO="${GITHUB_REPOSITORY:-SRoyaltyy/fullscan}"
+if [ -n "$TOKEN" ]; then
+  git remote set-url origin \
+    "https://x-access-token:${TOKEN}@github.com/${REPO}.git" 2>/dev/null || true
+fi
+
 if [ "$#" -lt 1 ]; then
   echo "[safe-push] no paths given — nothing to do"
   exit 0
@@ -110,7 +119,7 @@ resolve_scoreboard() {
 # can finish; scoreboard still unions separately.
 RANKER_PATHS=(
   data/stock_book data/join data/universe data/ab_checklist
-  data/peers data/paper data/exports data/catalyst
+  data/peers data/paper data/exports data/catalyst data/day_board
   01_daily/weather
 )
 
@@ -136,6 +145,8 @@ take_main_dashboard() {
   echo "[safe-push] dashboard conflict — keeping origin/main (sleeve-merge / Pages)"
   git checkout origin/main -- dashboard 2>/dev/null \
     || git checkout --ours -- dashboard 2>/dev/null || true
+  # Incremental day-board / factor-mine live strip is THIS job's product.
+  git checkout "$LOCAL" -- dashboard/day-board 2>/dev/null || true
   git add dashboard 2>/dev/null || true
 }
 
@@ -160,7 +171,7 @@ resolve_unmerged() {
       03_scoreboard/scoreboard.json)
         git checkout origin/main -- "$f" 2>/dev/null || true
         ;;
-      01_daily/*|02_lessons/*|data/stock_book/*|data/join/*|data/universe/*|data/ab_checklist/*|data/peers/*|data/paper/*|data/exports/*|data/catalyst/*)
+      01_daily/*|02_lessons/*|data/stock_book/*|data/join/*|data/universe/*|data/ab_checklist/*|data/peers/*|data/paper/*|data/exports/*|data/catalyst/*|data/day_board/*|dashboard/day-board/*)
         git checkout "$LOCAL" -- "$f" 2>/dev/null \
           || git checkout --theirs -- "$f" 2>/dev/null || true
         ;;

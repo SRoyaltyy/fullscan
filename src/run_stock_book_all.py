@@ -46,6 +46,14 @@ def _p(*parts: str) -> Path:
     return ROOT.joinpath(*parts)
 
 
+def _land(date: str, key: str, title: str = "") -> None:
+    try:
+        from . import land_file
+        land_file.land(date, key, title=title or key)
+    except Exception as e:  # noqa: BLE001
+        print(f"[all] WARN: land {key} failed: {e}", flush=True)
+
+
 def _exists(*parts: str) -> bool:
     return _p(*parts).exists()
 
@@ -396,6 +404,7 @@ def run(
             f"01_daily/weather/{date}_weather.json — cannot rank today"
         )
         return
+    _land(date, "weather", "Weather / regime")
 
     print("[all] → Join / match rank")
     _run([sys.executable, "-m", "src.join", "--date", date],
@@ -409,6 +418,7 @@ def run(
         print(f"[all] WARN: join ranked missing/thin for {date} "
               f"({join_sz} bytes) — cannot rank today")
         return
+    _land(date, "join", "Join / match rank")
 
     if need("peer_rs"):
         print("[all] → Peer relative strength")
@@ -433,6 +443,8 @@ def run(
             print("[all] WARN: AB missing — book ranks without s_ab (goldmine unused)")
         elif not _ab_enriched(date):
             print("[all] WARN: AB enrich missing — book will use raw checklist score")
+        else:
+            _land(date, "ab", "AB checklist")
     else:
         print("[all] skip AB checklist + enrich (DONE for this day)")
 
@@ -563,6 +575,8 @@ def run(
     if not (_exists("data", "stock_book", f"{date}_stock_book.json")
             or _exists("01_daily", f"{date}_stock_book.md")):
         print(f"[all] WARN: stock book files missing for {date}")
+    else:
+        _land(date, "stock_book", "Stock book + green")
 
     if skip_extras:
         print("[all] skip extras (catalyst/backtest/paper/sleeve) — "
@@ -573,6 +587,7 @@ def run(
              "--date", date, "--write-card"],
             check=False,
         )
+        _land(date, "flatten", "Flatten live card")
         print("\n[all] FINAL STATUS after run:")
         _print_status(date, _status_for_day(date))
         print(f"[all] book → 01_daily/{date}_stock_book.md")
@@ -616,6 +631,8 @@ def run(
          "--date", date, "--write-card"],
         check=False,
     )
+    _land(date, "flatten", "Flatten live card")
+    _land(date, "paper", "Paper dashboard")
 
     print("[all] → Sleeve merge (.io × mover dashboard, live=hard-red)")
     _run(

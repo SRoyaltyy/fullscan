@@ -111,10 +111,18 @@
    h1{font-size:16px}
  }
 </style></head><body><div class="wrap">
+<div id="liveDay" class="audit" style="margin:0 0 10px">
+  <b>Today’s packet</b>
+  <div class="mut" id="liveDayStamp">loading day board…</div>
+  <div class="pills" id="liveDayPills"></div>
+  <div class="mut"><a href="../day-board/" style="color:#93c5fd">day board</a>
+   — which processes ran, plus what was just pushed.</div>
+</div>
 <h1>Factor strategy mine</h1>
 <div class="sub" id="gen"></div>
 <div class="sub">Books:
  <a href="../" style="color:#93c5fd">paper book</a>
+ · <a href="../day-board/" style="color:#93c5fd">day board</a>
  · <a href="../strategy-board/" style="color:#93c5fd">all strategies</a>
  · <a href="../sleeve-merge/" style="color:#93c5fd">sleeve merge</a>
  · <a href="../flatten-lookback/" style="color:#93c5fd">flatten lookback</a>
@@ -1159,4 +1167,20 @@ function renderAll(){
 renderFilters();
 renderAll();
 window.addEventListener('resize', draw);
+(function(){
+  var RAW='https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today.json';
+  var stamp=document.getElementById('liveDayStamp');
+  var pills=document.getElementById('liveDayPills');
+  if(!stamp||!pills) return;
+  fetch(RAW+'?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){
+    var c=d.counts||{};
+    stamp.textContent=(d.date||'')+' · '+(d.overall||'?')+' · ranker '+(d.ranker_ready?'READY':'BLOCKED')+' · processes ok '+(c.ok||0)+'/'+(c.n||'?');
+    var html='';
+    (d.buy_1d||[]).forEach(function(x){if(x.ticker) html+='<span class="pill on">BUY '+x.ticker+'</span>';});
+    (d.sell_1d||[]).forEach(function(x){if(x.ticker) html+='<span class="pill">SELL '+x.ticker+'</span>';});
+    var last=(d.lands||[])[0];
+    if(last&&last.preview) html+='<div class="mut" style="margin-top:6px">last land: '+String(last.key||'')+' — '+String(last.preview).slice(0,220)+'</div>';
+    pills.innerHTML=html||'<span class="mut">No 1d names on disk yet.</span>';
+  }).catch(function(){ stamp.textContent='day board JSON not on main yet'; });
+})();
 </script></body></html>

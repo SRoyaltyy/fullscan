@@ -1,0 +1,683 @@
+{
+  "date": "2026-09-08",
+  "generated_at": "2026-09-09T01:20:11.023367-04:00",
+  "overall": "PARTIAL",
+  "ranker_ready": true,
+  "blockers": [
+    "MISSING News judge MD `01_daily/news/2026-09-08_judge.md` \u2014 missing"
+  ],
+  "counts": {
+    "ok": 6,
+    "partial": 2,
+    "fail": 0,
+    "n": 8
+  },
+  "processes": [
+    {
+      "key": "postclose",
+      "name": "Post-close research",
+      "yaml": "map_heat_postclose.yml",
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
+      "n_req": 2,
+      "n_opt_ok": 2,
+      "n_opt": 2,
+      "files": [
+        {
+          "key": "baseline_json",
+          "name": "Captain baseline JSON",
+          "path": "01_daily/map_heat/2026-09-08_research_baseline.json",
+          "role": "required",
+          "status": "OK",
+          "reason": "",
+          "size": 22
+        },
+        {
+          "key": "baseline_md",
+          "name": "Captain baseline MD",
+          "path": "01_daily/map_heat/2026-09-08_research_baseline.md",
+          "role": "optional",
+          "status": "OK",
+          "reason": "",
+          "size": 34078
+        },
+        {
+          "key": "heat_json",
+          "name": "Map heat tables JSON",
+          "path": "01_daily/map_heat/2026-09-08_map_heat.json",
+          "role": "required",
+          "status": "OK",
+          "reason": "",
+          "size": 27
+        },
+        {
+          "key": "heat_md",
+          "name": "Map heat tables MD",
+          "path": "01_daily/map_heat/2026-09-08_map_heat.md",
+          "role": "optional",
+          "status": "OK",
+          "reason": "",
+          "size": 17311
+        }
+      ]
+    },
+    {
+      "key": "finviz",
+      "name": "Finviz scrape",
+      "yaml": "finviz_preopen_scrape.yml",
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 1,
+      "n_req": 1,
+      "n_opt_ok": 1,
+      "n_opt": 1,
+      "files": [
+        {
+          "key": "digest_json",
+          "name": "Finviz digest JSON",
+          "path": "01_daily/news/2026-09-08_finviz_digest.json",
+          "role": "required",
+          "status": "OK",
+          "reason": "",
+          "size": 2
+        },
+        {
+          "key": "digest_md",
+          "name": "Finviz digest MD",
+          "path": "01_daily/news/2026-09-08_finviz_digest.md",
+          "role": "optional",
+          "status": "OK",
+          "reason": "",
+          "size": 11415
+        }
+      ]
+    },
+    {
+      "key": "preopen",
+      "name": "Pre-Open ALL",
+      "yaml": "preopen_all.yml",
+      "status": "PARTIAL",
+      "inputs_ready": true,
+      "n_req_ok": 16,
+      "n_req": 20,
+      "n_opt_ok": 2,
+      "n_opt": 2,
+      "files": [
+        {
+          "key": "in_digest",
+          "name": "Finviz digest JSON",
+          "path": "01_daily/news/2026-09-08_finviz_digest.json",
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 2
+        },
+        {
+          "key": "in_baseline",
+          "name": "Captain baseline JSON",
+          "path": "01_daily/map_heat/2026-09-08_research_baseline.json",
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 22
+        },
+        {
+          "key": "in_heat",
+          "name": "Map heat tables JSON",
+          "path": "01_daily/map_heat/2026-09-08_map_heat.json",
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 27
+        },
+        {
+          "key": "parsed",
+          "name": "News parse JSON",
+          "path": "01_daily/news/2026-09-08_parsed.json",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "events",
+          "name": "Events JSON",
+          "path": "01_daily/events/2026-09-08_events.json",
+          "role": "required",
+          "status": "OK",
+          "reason": "",
+          "size": 29635
+        },
+        {
+          "key": "judge",
+          "name": "News judge MD",
+          "path": "01_daily/news/2026-09-08_judge.md",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "research_json",
+          "name": "Morning refresh JSON",
+          "path": "01_daily/map_heat/2026-09-08_research.json",
+          "role": "required",
+          "status": "OK",
+          "reason": "cards=142",
+          "size": 317007
+        },
+        {
+          "key": "research_md",
+          "name": "Morning refresh MD",
+          "path": "01_daily/map_heat/2026-09-08_research.md",
+          "role": "required",
+          "status": "OK",
+          "reason": "",
+          "size": 34324
+        },
+        {
+          "key": "actions",
+          "name": "News actions JSON",
+          "path": "01_daily/news/2026-09-08_actions.json",
+          "role": "optional",
+          "status": "OK",
+          "reason": "",
+          "size": 2
+        },
+        {
+          "key": "general",
+          "name": "General predict MD",
+          "path": "01_daily/general/2026-09-08_predict.md",
+          "role": "required",
+          "status": "OK",
+          "reason": "",
+          "size": 10669
+        },
+        {
+          "key": "board",
+          "name": "Sector board JSON",
+          "path": "01_daily/sectors/2026-09-08/_board.json",
+          "role": "optional",
+          "status": "OK",
+          "reason": "",
+          "size": 6915
+        },
+        {
+          "key": "qc",
+          "name": "Pre-open QC JSON",
+          "path": "01_daily/2026-09-08_preopen_qc.json",
+          "role": "required",
+          "status": "OK",
+          "reason": "all_ok=False",
+          "size": 6625
+        },
+        {
+          "key": "status",
+          "name": "Pre-open status JSON",
+          "path": "01_daily/2026-09-08_preopen_status.json",
+          "role": "required",
+          "status": "OK",
+          "reason": "all_ok=False missing=['news_parse', 'news_judge']",
+          "size": 7097
+        },
+        {
+          "key": "review",
+          "name": "Grok review JSON",
+          "path": "01_daily/2026-09-08_grok_review.json",
+          "role": "required",
+          "status": "OK",
+          "reason": "ok=False The general predict, events JSON, finviz digest, map-heat tables, and research/baseline files are present and appear sam",
+          "size": 1128
+        },
+        {
+          "key": "sector_basic_materials",
+          "name": "Sector predict \u2014 basic_materials",
+          "path": "01_daily/sectors/2026-09-08/basic_materials_predict.md",
+          "role": "required",
+          "status": "OK",
+          "reason": "",
+          "size": 8523
+        },
+        {
+          "key": "sector_communication_services",
+          "name": "Sector predict \u2014 communication_services",
+          "path": "01_daily/sectors/2026-09-08/communication_services_predict.md",
+          "role": "required",
+          "status": "OK",
+          "reason": "",
+          "size": 11279
+        },
+        {
+          "key": "sector_consumer_cyclical",
+          "name": "Sector predict \u2014 consumer_cyclical",
+          "path": "01_daily/sectors/2026-09-08/consumer_cyclical_predict.md",
+          "role": "required",
+          "status": "OK",
+          "reason": "",
+          "size": 11968
+        },
+        {
+          "key": "sector_consumer_defensive",
+          "name": "Sector predict \u2014 consumer_defensive",
+          "path": "01_daily/sectors/2026-09-08/consumer_defensive_predict.md",
+          "role": "required",
+          "status": "OK",
+          "reason": "",
+          "size": 21033
+        },
+        {
+          "key": "sector_energy",
+          "name": "Sector predict \u2014 energy",
+          "path": "01_daily/sectors/2026-09-08/energy_predict.md",
+          "role": "required",
+          "status": "OK",
+          "reason": "",
+          "size": 8486
+        },
+        {
+          "key": "sector_financial",
+          "name": "Sector predict \u2014 financial",
+          "path": "01_daily/sectors/2026-09-08/financial_predict.md",
+          "role": "required",
+          "status": "OK",
+          "reason": "",
+          "size": 14211
+        },
+        {
+          "key": "sector_healthcare",
+          "name": "Sector predict \u2014 healthcare",
+          "path": "01_daily/sectors/2026-09-08/healthcare_predict.md",
+          "role": "required",
+          "status": "OK",
+          "reason": "",
+          "size": 8963
+        },
+        {
+          "key": "sector_industrials",
+          "name": "Sector predict \u2014 industrials",
+          "path": "01_daily/sectors/2026-09-08/industrials_predict.md",
+          "role": "required",
+          "status": "OK",
+          "reason": "",
+          "size": 10969
+        },
+        {
+          "key": "sector_real_estate",
+          "name": "Sector predict \u2014 real_estate",
+          "path": "01_daily/sectors/2026-09-08/real_estate_predict.md",
+          "role": "required",
+          "status": "OK",
+          "reason": "",
+          "size": 10329
+        },
+        {
+          "key": "sector_technology",
+          "name": "Sector predict \u2014 technology",
+          "path": "01_daily/sectors/2026-09-08/technology_predict.md",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "sector_utilities",
+          "name": "Sector predict \u2014 utilities",
+          "path": "01_daily/sectors/2026-09-08/utilities_predict.md",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        }
+      ]
+    },
+    {
+      "key": "weather",
+      "name": "Label + weather",
+      "yaml": "label_weather.yml",
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 1,
+      "n_req": 1,
+      "n_opt_ok": 0,
+      "n_opt": 0,
+      "files": [
+        {
+          "key": "in_digest",
+          "name": "Finviz digest JSON",
+          "path": "01_daily/news/2026-09-08_finviz_digest.json",
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 2
+        },
+        {
+          "key": "weather",
+          "name": "Weather JSON",
+          "path": "01_daily/weather/2026-09-08_weather.json",
+          "role": "required",
+          "status": "OK",
+          "reason": "sectors=11",
+          "size": 10449
+        }
+      ]
+    },
+    {
+      "key": "ab",
+      "name": "AB checklist",
+      "yaml": "ab_checklist.yml",
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 1,
+      "n_req": 1,
+      "n_opt_ok": 1,
+      "n_opt": 1,
+      "files": [
+        {
+          "key": "ab_raw",
+          "name": "AB checklist raw",
+          "path": "data/ab_checklist/2026-09-08_ab_checklist.csv",
+          "role": "optional",
+          "status": "OK",
+          "reason": "rows=2666",
+          "size": 7646720
+        },
+        {
+          "key": "ab_enriched",
+          "name": "AB checklist enriched",
+          "path": "data/ab_checklist/2026-09-08_ab_checklist_enriched.csv",
+          "role": "required",
+          "status": "OK",
+          "reason": "rows=2666",
+          "size": 8473978
+        }
+      ]
+    },
+    {
+      "key": "catalyst",
+      "name": "Catalyst dossiers",
+      "yaml": "catalyst_daily.yml",
+      "status": "PARTIAL",
+      "inputs_ready": true,
+      "n_req_ok": 0,
+      "n_req": 0,
+      "n_opt_ok": 0,
+      "n_opt": 1,
+      "files": [
+        {
+          "key": "in_actions",
+          "name": "News actions JSON",
+          "path": "01_daily/news/2026-09-08_actions.json",
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 2
+        },
+        {
+          "key": "in_digest",
+          "name": "Finviz digest JSON",
+          "path": "01_daily/news/2026-09-08_finviz_digest.json",
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 2
+        },
+        {
+          "key": "dossiers",
+          "name": "Catalyst dossiers JSON",
+          "path": "01_daily/catalyst/2026-09-08_dossiers.json",
+          "role": "optional",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        }
+      ]
+    },
+    {
+      "key": "stock_book",
+      "name": "Stock Book ALL",
+      "yaml": "stock_book_all.yml",
+      "status": "OK",
+      "inputs_ready": false,
+      "n_req_ok": 4,
+      "n_req": 4,
+      "n_opt_ok": 3,
+      "n_opt": 3,
+      "files": [
+        {
+          "key": "in_general",
+          "name": "General predict MD",
+          "path": "01_daily/general/2026-09-08_predict.md",
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 10669
+        },
+        {
+          "key": "in_board",
+          "name": "Sector board JSON",
+          "path": "01_daily/sectors/2026-09-08/_board.json",
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 6915
+        },
+        {
+          "key": "in_actions",
+          "name": "News actions JSON",
+          "path": "01_daily/news/2026-09-08_actions.json",
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 2
+        },
+        {
+          "key": "in_digest",
+          "name": "Finviz digest JSON",
+          "path": "01_daily/news/2026-09-08_finviz_digest.json",
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 2
+        },
+        {
+          "key": "in_judge",
+          "name": "News judge MD",
+          "path": "01_daily/news/2026-09-08_judge.md",
+          "role": "input",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "in_weather",
+          "name": "Weather JSON",
+          "path": "01_daily/weather/2026-09-08_weather.json",
+          "role": "input",
+          "status": "OK",
+          "reason": "sectors=11",
+          "size": 10449
+        },
+        {
+          "key": "in_ab",
+          "name": "AB checklist enriched",
+          "path": "data/ab_checklist/2026-09-08_ab_checklist_enriched.csv",
+          "role": "input",
+          "status": "OK",
+          "reason": "rows=2666",
+          "size": 8473978
+        },
+        {
+          "key": "join",
+          "name": "Join ranked CSV",
+          "path": "data/join/2026-09-08_ranked.csv",
+          "role": "required",
+          "status": "OK",
+          "reason": "rows=5902",
+          "size": 2248695
+        },
+        {
+          "key": "peers",
+          "name": "Peer RS CSV",
+          "path": "data/peers/2026-09-08_peer_rs.csv",
+          "role": "required",
+          "status": "OK",
+          "reason": "rows=5120",
+          "size": 815136
+        },
+        {
+          "key": "book_json",
+          "name": "Stock book JSON",
+          "path": "data/stock_book/2026-09-08_stock_book.json",
+          "role": "required",
+          "status": "OK",
+          "reason": "horizons=5 names=167",
+          "size": 1332665
+        },
+        {
+          "key": "book_md",
+          "name": "Stock book MD",
+          "path": "01_daily/2026-09-08_stock_book.md",
+          "role": "required",
+          "status": "OK",
+          "reason": "",
+          "size": 54305
+        },
+        {
+          "key": "green",
+          "name": "Green-pile JSON",
+          "path": "data/stock_book/2026-09-08_green.json",
+          "role": "optional",
+          "status": "OK",
+          "reason": "",
+          "size": 585
+        },
+        {
+          "key": "paper",
+          "name": "Paper trading MD",
+          "path": "03_scoreboard/PAPER_TRADING.md",
+          "role": "optional",
+          "status": "OK",
+          "reason": "",
+          "size": 1795
+        },
+        {
+          "key": "dashboard",
+          "name": "Dashboard HTML",
+          "path": "dashboard/index.html",
+          "role": "optional",
+          "status": "OK",
+          "reason": "generated=2026-09-08T14:45:28.923749-04:00 last=2026-09-08",
+          "size": 3693862
+        }
+      ]
+    },
+    {
+      "key": "publish",
+      "name": "Dashboard / .io",
+      "yaml": "deploy-dashboard.yml",
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
+      "n_req": 2,
+      "n_opt_ok": 0,
+      "n_opt": 1,
+      "files": [
+        {
+          "key": "in_book",
+          "name": "Stock book JSON",
+          "path": "data/stock_book/2026-09-08_stock_book.json",
+          "role": "input",
+          "status": "OK",
+          "reason": "horizons=5 names=167",
+          "size": 1332665
+        },
+        {
+          "key": "dash_html",
+          "name": "Dashboard HTML (repo)",
+          "path": "dashboard/index.html",
+          "role": "required",
+          "status": "OK",
+          "reason": "generated=2026-09-08T14:45:28.923749-04:00 last=2026-09-08",
+          "size": 3693862
+        },
+        {
+          "key": "paper",
+          "name": "Paper trading MD",
+          "path": "03_scoreboard/PAPER_TRADING.md",
+          "role": "required",
+          "status": "OK",
+          "reason": "",
+          "size": 1795
+        },
+        {
+          "key": "pages",
+          "name": "Live GitHub Pages",
+          "path": "https://sroyaltyy.github.io/fullscan/dashboard/",
+          "role": "optional",
+          "status": "SKIP",
+          "reason": "day-board reads main disk, not live Pages",
+          "size": 0
+        }
+      ]
+    }
+  ],
+  "selections": {
+    "buy_1d": [
+      {
+        "ticker": "ZIM",
+        "score": 0.5123631288948107
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "SLQT",
+        "score": -0.4187531318580195
+      },
+      {
+        "ticker": "CPB",
+        "score": 0.18301585532641992
+      },
+      {
+        "ticker": "BYND",
+        "score": -0.10639729500847392
+      },
+      {
+        "ticker": "DJT",
+        "score": -0.12374607396746728
+      },
+      {
+        "ticker": "TMC",
+        "score": -0.21331310881826632
+      },
+      {
+        "ticker": "IE",
+        "score": -0.16475612286187874
+      },
+      {
+        "ticker": "COLD",
+        "score": -0.4803840532754435
+      },
+      {
+        "ticker": "SGML",
+        "score": -0.2006190766695211
+      },
+      {
+        "ticker": "FLO",
+        "score": -0.11897248948368622
+      },
+      {
+        "ticker": "OPEN",
+        "score": -0.4895149305393223
+      }
+    ],
+    "flatten": "# flatten_robust card \u2014 2026-09-08\n_Generated 2026-09-08T17:18:15 \u2014 live `flatten_robust`._\n**S=-11.47; hard-red: no new buys; holds and due 1d exits stay**\n- Score **-11.47** (DOWN) \u00b7 route **hold** \u00b7 HARD-RED\n- Cash leftover **$11,513.75** (after 09:30 $11,513.75 \u00b7 after 16:00 $119,048.93)\n- Open lots **5** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$119,048.92**\n## Open holdings\n| Ticker | Sleeve | Shares | Entry | Since | Mark | MV |\n|---|---|---:|---:|---|---:|---:|\n| ATRC | io_core | 396 | $52.46 | 2026-09-03 | $51.52 | $20,402 |\n| HRMY | io_core | 496 | $41.86 | 2026-09-03 | $42.25 | $20,956 |\n| CABA | io_core | 5975 | $3.48 | 2026"
+  },
+  "lands": [],
+  "href": {
+    "pages": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/",
+    "readiness_action": "https://github.com/SRoyaltyy/fullscan/actions/workflows/stock_book_diag.yml",
+    "factor_mine": "https://sroyaltyy.github.io/fullscan/dashboard/factor-mine/",
+    "paper": "https://sroyaltyy.github.io/fullscan/dashboard/"
+  }
+}

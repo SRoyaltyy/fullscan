@@ -175,6 +175,20 @@ jobs:
           elif [ "$ET_HM" -lt 1600 ]; then
             echo "past 09:00 ET — heal ranker on ubuntu (ECS may still be in Grok)"
             maybe stock_book_all.yml
+            # 09-08: Pre-Open skipped essays after 09:25 and standalone
+            # news/judge/actions never ran. Dispatch ubuntu writers.
+            if [ "$FORCE" = "true" ] || ! python3 -m src.skip_if_good --job preopen_full --date "$TODAY"; then
+              if ! already_running "news_parse.yml"; then
+                echo "MISSING news parse → news_parse.yml"
+                gh api --method POST "repos/${REPO}/actions/workflows/news_parse.yml/dispatches" \
+                  -f ref=main -f "inputs[run_date]=$TODAY" || true
+              fi
+              if ! already_running "news_actions.yml"; then
+                echo "MISSING news actions → news_actions.yml"
+                gh api --method POST "repos/${REPO}/actions/workflows/news_actions.yml/dispatches" \
+                  -f ref=main -f "inputs[run_date]=$TODAY" || true
+              fi
+            fi
           else
             echo "skip morning ALL — session already open"
           fi

@@ -29,7 +29,7 @@ touch pages_out/.nojekyll
 cp -a dashboard/. pages_out/dashboard/
 cp dashboard/index.html pages_out/index.html
 
-for sub in boring-winners ticker-lookback gainer-lookback mover-lookback sleeve-combine sleeve-merge mover-paper book-paper strategy-board factor-mine; do
+for sub in boring-winners ticker-lookback gainer-lookback mover-lookback sleeve-combine sleeve-merge mover-paper book-paper strategy-board factor-mine day-board down-day-mine; do
   if [ -f "dashboard/${sub}/index.html" ]; then
     mkdir -p "pages_out/dashboard/${sub}"
     cp -a "dashboard/${sub}/." "pages_out/dashboard/${sub}/"
@@ -55,7 +55,13 @@ git -C "$TMP" remote add origin \
 if git -C "$TMP" push --force origin gh-pages; then
   echo "[pages] published https://SRoyaltyy.github.io/fullscan/dashboard/"
 else
-  echo "[pages] WARN: gh-pages push failed — files are on main"
+  echo "[pages] WARN: gh-pages first push failed — retry lock"
+  sleep 8
+  if git -C "$TMP" push --force origin gh-pages; then
+    echo "[pages] published on retry https://SRoyaltyy.github.io/fullscan/dashboard/"
+  else
+    echo "[pages] WARN: gh-pages push failed — files are on main"
+  fi
 fi
 rm -rf "$TMP"
 exit 0

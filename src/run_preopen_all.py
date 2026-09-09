@@ -211,6 +211,33 @@ def _force_args(force: bool) -> list[str]:
     return ["--force"] if force else []
 
 
+def _land(date: str, key: str, title: str = "") -> None:
+    """QC this step and push it to main before the next file starts."""
+    try:
+        from . import land_file
+        land_file.land(date, key, title=title or key)
+    except Exception as e:  # noqa: BLE001 — never abort the packet on land
+        print(f"[preopen-all] WARN: land {key} failed: {e}", flush=True)
+
+
+def _deepseek_credits_ok() -> bool:
+    """Do not start essays if DeepSeek is already 402 / no key on ubuntu."""
+    try:
+        from . import deepseek_client as dc
+        hit = dc.credits_preflight()
+    except Exception as e:  # noqa: BLE001
+        print(f"[preopen-all] WARN: DeepSeek preflight crashed: {e}", flush=True)
+        return True
+    if hit.get("ok"):
+        print(f"[preopen-all] DeepSeek preflight ok ({hit.get('reason')})",
+              flush=True)
+        return True
+    print(f"[preopen-all] DeepSeek preflight FAIL {hit.get('reason')} — "
+          f"{hit.get('detail') or ''} essays will empty; skip LLM packet",
+          flush=True)
+    return False
+
+
 def _scrape_ready(date: str) -> bool:
     digest = _p("01_daily", "news", f"{date}_finviz_digest.json")
     heat = _p("01_daily", "map_heat", f"{date}_map_heat.json")
@@ -291,6 +318,25 @@ def wait_for_night_baseline(date: str, timeout_s: int | None = None) -> bool:
             return True
         time.sleep(20)
     print("[preopen-all] WARN: night baseline missing after wait — "
+          "trying last session copy (holiday / weekend hole)", flush=True)
+    try:
+        from .skip_if_good import last_closed_session
+        prev = last_closed_session()
+    except Exception:
+        prev = ""
+    if prev and prev != date:
+        src = _p("01_daily", "map_heat", f"{prev}_research_baseline.json")
+        dest = _p("01_daily", "map_heat", f"{date}_research_baseline.json")
+        if src.is_file():
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(src, dest)
+            md = _p("01_daily", "map_heat", f"{prev}_research_baseline.md")
+            if md.is_file():
+                shutil.copy2(md, dest.with_suffix(".md"))
+            print(f"[preopen-all] copied night baseline {prev} → {date}",
+                  flush=True)
+            return _baseline_ready(date)
+    print("[preopen-all] WARN: night baseline still missing — "
           "map-heat refresh will bootstrap / QC-fail", flush=True)
     return False
 
@@ -446,6 +492,11 @@ def run(date: str | None = None, force: bool = False,
     # A late heal must not spend 15 minutes waiting on scrape/baseline.
     wait_for_gh_scrape(date, timeout_s=45 if late else None)
     wait_for_night_baseline(date, timeout_s=20 if late else None)
+    if _scrape_ready(date):
+        _land(date, "finviz_digest", "Finviz digest")
+        _land(date, "map_heat", "Map heat tables")
+    if _baseline_ready(date):
+        _land(date, "map_heat_baseline", "Map heat night baseline")
     # 09:25 gates LLM essays, not weather / AB / join / the book.
     if late:
         print(f"[preopen-all] {date}: past 09:25 ET — skip LLM packet; "
@@ -493,6 +544,8 @@ def run(date: str | None = None, force: bool = False,
         if code != 0:
             print(f"[preopen-all] WARN: {title} exited {code}")
         snapshot_persist(date)
+        if code == 0 or _packet_step_done(key, date):
+            _land(date, key, title)
         return code
 
     fa = _force_args(force)
@@ -505,6 +558,7 @@ def run(date: str | None = None, force: bool = False,
         print("[preopen-all] → Universe labels (segments)")
         _run([py, "-m", "src.segments", "--date", date], timeout_s=180)
         snapshot_persist(date)
+        _land(date, "universe", "Universe labels")
     step("weather", "Weather / regime",
          [py, "-m", "src.weather", "--date", date], timeout_s=180)
     from . import skip_if_good
@@ -513,11 +567,13 @@ def run(date: str | None = None, force: bool = False,
         _run([py, "-m", "src.weather", "--date", date, "--offline"],
              timeout_s=60)
         snapshot_persist(date)
+        _land(date, "weather", "Weather / regime (offline retry)")
     if force or not _exists_gt("data", "join", f"{date}_ranked.csv",
                                min_bytes=5_000):
         print("[preopen-all] → Join / match rank")
         _run([py, "-m", "src.join", "--date", date], timeout_s=180)
         snapshot_persist(date)
+        _land(date, "join", "Join / match rank")
     if force or not _exists_gt("data", "ab_checklist",
                                f"{date}_ab_checklist_enriched.csv",
                                min_bytes=5_000):
@@ -529,6 +585,11 @@ def run(date: str | None = None, force: bool = False,
         print("[preopen-all] → AB enrich")
         _run([py, "-m", "src.ab_enrich", "--date", date], timeout_s=180)
         snapshot_persist(date)
+        _land(date, "ab", "AB checklist")
+
+    if not skip_writes and not _deepseek_credits_ok():
+        print("[preopen-all] skip LLM packet (DeepSeek credits)")
+        skip_writes = True
 
     if not skip_writes:
         # A single hung Grok call at 10800s ate 2026-09-04 (0 essays on ECS).
@@ -646,27 +707,18 @@ def run(date: str | None = None, force: bool = False,
             # Push the ranker layer now so 09:30 sees BUY/SELL even if
             # paper/sleeve/catalyst hang after this.
             print("[preopen-all] → push book + green.json + ranker inputs")
-            _run([
-                "bash", "scripts/safe_git_push.sh",
-                f"auto: stock book layer [{date}]",
-                f"data/stock_book/{date}_stock_book.json",
-                f"data/stock_book/{date}_green.json",
-                f"01_daily/{date}_stock_book.md",
-                f"01_daily/weather/{date}_weather.json",
-                f"01_daily/weather/{date}_weather.md",
-                f"data/join/{date}_ranked.csv",
-                f"data/ab_checklist/{date}_ab_checklist_enriched.csv",
-                f"data/universe/{date}_membership.csv",
-            ])
+            _land(date, "stock_book", "Stock book + green")
             if force or not preopen.past_predict_cutoff():
                 print("[preopen-all] → paper / sleeve (after book is on main)")
                 _run([py, "-m", "src.paper_trade", "--date", date, "--top", "10"])
+                _land(date, "paper", "Paper dashboard")
                 _run([py, "-m", "src.sleeve_combine_bt",
                       "--mode", "io_boost", "--hold", "3d"])
                 print("[preopen-all] → flatten_hard_red live card (after book)")
                 _run([py, "-m", "src.sleeve_merge", "--card",
                       "--date", date, "--write-card"])
                 snapshot_persist(date)
+                _land(date, "flatten", "Flatten live card")
     else:
         print("[preopen-all] --no-book: leaving stock book to a later click")
 
@@ -829,6 +881,7 @@ def run(date: str | None = None, force: bool = False,
     print(f"[preopen-all] wrote {status_path}")
     print(f"[preopen-all] wrote {md_path}")
     snapshot_persist(date)
+    _land(date, "status", "Pre-open status packet")
 
     degraded = bool(
         missing_required or not report.get("all_ok") or not grok.get("ok")
