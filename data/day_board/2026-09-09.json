@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T11:14:20.207141-04:00",
+  "generated_at": "2026-09-09T11:14:31.432566-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -557,8 +557,8 @@
           "path": "data/stock_book/2026-09-09_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=207",
-          "size": 1515349
+          "reason": "horizons=5 names=210",
+          "size": 1543655
         },
         {
           "key": "book_md",
@@ -567,7 +567,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 73900
+          "size": 78095
         },
         {
           "key": "green",
@@ -619,8 +619,8 @@
           "path": "data/stock_book/2026-09-09_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=207",
-          "size": 1515349
+          "reason": "horizons=5 names=210",
+          "size": 1543655
         },
         {
           "key": "dash_html",
@@ -667,6 +667,18 @@
       {
         "ticker": "AEHR",
         "score": 0.5050915151408446
+      },
+      {
+        "ticker": "SANM",
+        "score": 0.2809319106479421
+      },
+      {
+        "ticker": "NXT",
+        "score": 0.31380727492726307
+      },
+      {
+        "ticker": "DK",
+        "score": 0.39624476436402634
       }
     ],
     "sell_1d": [
@@ -679,28 +691,28 @@
         "score": -0.5040543708330787
       },
       {
+        "ticker": "BGS",
+        "score": -0.42999030854364406
+      },
+      {
+        "ticker": "RZLV",
+        "score": -0.22187066433974872
+      },
+      {
         "ticker": "SPIR",
         "score": -0.3581655044575633
       },
       {
+        "ticker": "CLPT",
+        "score": -0.23851184692207814
+      },
+      {
         "ticker": "SLQT",
-        "score": -0.45577029691638177
+        "score": -0.5057702969163818
       },
       {
         "ticker": "BYND",
         "score": -0.2759944181524371
-      },
-      {
-        "ticker": "XHG",
-        "score": -0.32696450788475273
-      },
-      {
-        "ticker": "WHR",
-        "score": -0.4870966542007144
-      },
-      {
-        "ticker": "FLO",
-        "score": -0.40844084981050965
       }
     ],
     "flatten": {
@@ -1924,6 +1936,45 @@
         }
       ],
       "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HRMY, ONC, NU, REGN, HALO"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T11:14:30.594419-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-09_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1543655,
+          "preview": "1d BUY DINO, BG, AEHR, SANM, NXT, DK \u00b7 SELL CPB, METC, BGS, RZLV, SPIR, CLPT, SLQT, BYND"
+        },
+        {
+          "path": "data/stock_book/2026-09-09_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-09_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2443,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "01_daily/2026-09-09_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 79177,
+          "preview": "# Stock book \u2014 2026-09-09\n_Generated 2026-09-09T11:14:28.044936-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY DINO, BG, AEHR, SANM, NXT, DK \u00b7 SELL CPB, METC, BGS, RZLV, SPIR, CLPT, SLQT, BYND \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 # Stock book \u2014 2026-09-09\n_Generated 2026-09-09T11:14:28.044936-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
