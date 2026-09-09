@@ -1,69 +1,17 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T12:11:55.743257-04:00",
+  "generated_at": "2026-09-09T12:16:59.511061-04:00",
   "all_ok": false,
-  "qc_all_ok": false,
+  "qc_all_ok": true,
   "book_ok": false,
-  "grok_ok": false,
-  "grok_fails": [
-    {
-      "path": "01_daily/news/2026-09-09_parsed.json",
-      "reason": "Required core file is missing (regex FAIL: missing)."
-    }
-  ],
-  "missing_required": [
-    "news_parse"
-  ],
+  "grok_ok": true,
+  "grok_fails": [],
+  "missing_required": [],
   "attempts": [
     {
       "key": "weather",
       "title": "Weather / regime",
       "returncode": 0
-    },
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "returncode": 0
-    },
-    {
-      "key": "events",
-      "title": "Event scanner (primary)",
-      "returncode": 0
-    },
-    {
-      "key": "events_catcher",
-      "title": "Event catcher (gap hunt, no carry)",
-      "returncode": 0
-    },
-    {
-      "key": "news_actions",
-      "title": "News actions",
-      "returncode": 0
-    },
-    {
-      "key": "news_judge",
-      "title": "News judge",
-      "returncode": 0
-    },
-    {
-      "key": "general_predict",
-      "title": "General market predict",
-      "returncode": 0
-    },
-    {
-      "key": "sector_predict",
-      "title": "Per-sector predict (all 11)",
-      "returncode": 0
-    },
-    {
-      "key": "map_heat_research",
-      "title": "Map heat morning delta refresh",
-      "returncode": 0
-    },
-    {
-      "key": "catalyst",
-      "title": "Catalyst dossiers (after book)",
-      "returncode": 124
     }
   ],
   "github_runs": [
@@ -72,7 +20,7 @@
       "n_today": 8,
       "latest": {
         "id": 34374548362,
-        "status": "pending",
+        "status": "in_progress",
         "conclusion": null,
         "event": "push",
         "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/34374548362"
@@ -180,10 +128,10 @@
       },
       {
         "kind": "news_parse",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/news/2026-09-09_parsed.json",
-        "size": 0
+        "size": 46613
       },
       {
         "kind": "news_actions",

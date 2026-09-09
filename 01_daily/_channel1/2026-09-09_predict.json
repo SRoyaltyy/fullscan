@@ -1,6 +1,6 @@
 {
   "stage": "predict",
-  "fetched_at": "2026-09-09T12:14:26.418671-04:00",
+  "fetched_at": "2026-09-09T12:16:02.352353-04:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -70,59 +70,59 @@
   "vix": {
     "vix": {
       "date": "2026-09-09",
-      "current": 16.37,
-      "delta_1d": 0.65,
-      "delta_1w": 1.17
+      "current": 16.35,
+      "delta_1d": 0.63,
+      "delta_1w": 1.15
     },
     "vix3m": {
       "date": "2026-09-09",
-      "current": 18.84,
+      "current": 18.83,
       "source": "^VIX3M"
     },
-    "ratio": 0.869,
+    "ratio": 0.868,
     "ratio_source": "vix/vix3m",
     "vix_ma20": 15.2,
-    "ratio_ma20": 1.077
+    "ratio_ma20": 1.075
   },
   "commodities_fx": {
     "CL=F": {
       "available": true,
       "date": "2026-09-09",
-      "last": 96.41,
-      "pct_1d": 3.63
+      "last": 96.49,
+      "pct_1d": 3.72
     },
     "BZ=F": {
       "available": true,
       "date": "2026-09-09",
-      "last": 101.29,
-      "pct_1d": 3.44
+      "last": 101.33,
+      "pct_1d": 3.48
     },
     "GC=F": {
       "available": true,
       "date": "2026-09-09",
-      "last": 4445.4,
-      "pct_1d": 1.17
+      "last": 4444.8,
+      "pct_1d": 1.16
     },
     "DXY": {
       "available": true,
       "date": "2026-09-09",
       "source": "DX-Y.NYB",
-      "pct_1d": -0.05,
-      "pct_1m": -1.03
+      "pct_1d": -0.07,
+      "pct_1m": -1.04
     }
   },
   "futures": {
     "ES=F": {
       "available": true,
       "date": "2026-09-09",
-      "last": 7642.0,
-      "pct_1d": -0.5
+      "last": 7643.75,
+      "pct_1d": -0.48
     },
     "NQ=F": {
       "available": true,
       "date": "2026-09-09",
-      "last": 29449.25,
-      "pct_1d": -0.3
+      "last": 29461.0,
+      "pct_1d": -0.26
     }
   },
   "finviz_futures_tape": {
@@ -485,13 +485,82 @@
       }
     ]
   },
-  "global_sessions": {},
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-09-08",
+          "last": 65269.33,
+          "pct_1d": -1.7
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-09-08",
+          "last": 25317.18,
+          "pct_1d": -0.38
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-09-08",
+          "last": 3940.55,
+          "pct_1d": 0.2
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-09-08",
+          "last": 6954.52,
+          "pct_1d": -0.58
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-09-08",
+          "last": 8920.8,
+          "pct_1d": -1.0
+        }
+      },
+      "composite_avg": -0.69
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-09-09",
+          "last": 10670.06,
+          "pct_1d": -1.31
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-09-09",
+          "last": 25576.45,
+          "pct_1d": -1.66
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-09-09",
+          "last": 8156.67,
+          "pct_1d": -1.94
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-09-09",
+          "last": 6311.56,
+          "pct_1d": -1.58
+        }
+      },
+      "composite_avg": -1.62
+    }
+  },
   "yield_spx_corr": {
-    "available": false
+    "available": true,
+    "corr_5d": -0.963,
+    "window": "2026-09-01..2026-09-09"
   },
   "fear_greed": {
-    "available": false,
-    "note": "fetch failed: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata; no Supabase fallback data"
+    "available": true,
+    "value": 58.2,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-27 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
   },
   "fedwatch": {
     "available": false,

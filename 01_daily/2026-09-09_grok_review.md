@@ -1,8 +1,5 @@
 # Grok text review — 2026-09-09
 
-ok=False
+ok=True
 
-The core packet is otherwise complete and same-day: general predict, events, news judge, finviz digest, map-heat tables, and 11/11 sector predicts are all present, dated 2026-09-09, and contain the required contract markers. The map_heat_research.md explicitly states it is a morning_refresh that failed QC and fell back to prior cards, but it is not a timeout stub and contains 142 usable cards, so it does not fail the day. The single missing news_parse file is a required core artifact and cannot be waived.
-
-## Fails
-- `01_daily/news/2026-09-09_parsed.json`: Required core file is missing (regex FAIL: missing).
+All required core artifacts for 2026-09-09 are present, same-day, complete, and human-usable. The general predict is a substantive DOWN/MILD call with full factor scoring, memory confirm, and SCORES_BEGIN/END markers. Events JSON is a real same-day scan (scan_date 2026-09-09) with fresh geopolitical/oil catalysts and proper status fields. News judge and parsed JSON are complete with NEWS_PARSE_BEGIN/END markers and coherent sector/macro injections. Finviz digest and map-heat tables contain live futures tape, sector RS, industry heat, and calendar data. All 11 sector predicts are present, each with distinct analysis, SECTOR_SCORES_BEGIN/END and HIT_GRID_BEGIN/END markers, and clear directional calls. The research baseline and research.md files are both present; research.md notes a morning r
