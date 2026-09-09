@@ -55,7 +55,7 @@ Live overlay 25 daily, pre-drawdown window before HARD_RED lattice (2026-08-31).
 | 2026-09-06 | 12 | 0 | 12 | 15 | -58.91 | 1,963 |
 | 2026-09-07 | 11 | 0 | 11 | 0 | +0.00 | 1,963 |
 | 2026-09-08 | 6 | 6 | 0 | 0 | -0.54 | 1,953 |
-| 2026-09-09 | 7 | 0 | 7 | 6 | -62.07 | 741 |
+| 2026-09-09 | 10 | 0 | 10 | 6 | -62.07 | 741 |
 
 Live book is still `overlay_25_h1`. The lab is how we pick the next default.
 
