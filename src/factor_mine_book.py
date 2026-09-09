@@ -1280,7 +1280,8 @@ def render_recipe_md(rec: dict, stats: dict, book: dict) -> str:
         f"# Factor mine action — `{rec['name']}`",
         "",
         f"_Book rules: $10k · whole shares · Futubull fees · leftover cash "
-        f"split on new names · sell first · min-hold **{rec['hold']}** sessions · "
+        f"split on new names · sell first · "
+        f"min-hold **{'owner mix' if rec.get('universe')=='combo' or rec.get('members') else rec['hold']}** sessions · "
         f"fill 09:30 open · hard-red S≤{HARD_RED:g} sit · shorts marked as "
         f"liability (equity ≥ 2× notional). "
         f"Live `flatten_robust` is not changed._",

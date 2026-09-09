@@ -1277,10 +1277,10 @@ def main(argv=None) -> int:
             raise SystemExit("03_scoreboard/factor_mine.json missing — "
                              "run python -m src.factor_mine --write first")
         payload = merge_into_payload(raw, stats, books)
-        fm.write_outputs(payload, payload["stats"], books={
-            **(raw.get("books") or {}),
-            **books,
-        })
+        # Dashboard + scoreboard from the merged payload. Action blotters
+        # only for combo books — passing member slims would strip their
+        # per-name mark tables.
+        fm.write_outputs(payload, payload["stats"], books=books)
         print(f"[combo] wrote {fm.OUT_JSON} n_recipes={payload['n_recipes']}")
     return 0
 
