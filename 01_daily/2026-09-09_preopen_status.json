@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T11:09:17.981852-04:00",
+  "generated_at": "2026-09-09T12:11:55.743257-04:00",
   "all_ok": false,
   "qc_all_ok": false,
   "book_ok": false,
@@ -8,11 +8,7 @@
   "grok_fails": [
     {
       "path": "01_daily/news/2026-09-09_parsed.json",
-      "reason": "Required core file is missing (regex FAIL: missing). The news judge file contains a NEWS_PARSE_BEGIN/END block, but the standalone parsed.json artifact is absent, which is a required core file for a complete same-day packet."
-    },
-    {
-      "path": "01_daily/map_heat/2026-09-09_research.md",
-      "reason": "Research file claims phase=morning_refresh (size_gate=True set by pre-open refresh) but contains explicit failure text: 'Morning delta refresh failed captain-evidence QC (subprocess_timeout_or_search_flake). Using last night's post-close captain cards... Overnight tape/news was not re-scored.' This is a timeout/flake stub, not a valid morning_refresh artifact. It is not a morning_bootstrap safe no"
+      "reason": "Required core file is missing (regex FAIL: missing)."
     }
   ],
   "missing_required": [
@@ -22,12 +18,12 @@
     {
       "key": "weather",
       "title": "Weather / regime",
-      "returncode": 124
+      "returncode": 0
     },
     {
       "key": "news_parse",
       "title": "News parse",
-      "returncode": 124
+      "returncode": 0
     },
     {
       "key": "events",
@@ -37,27 +33,17 @@
     {
       "key": "events_catcher",
       "title": "Event catcher (gap hunt, no carry)",
-      "returncode": 124
-    },
-    {
-      "key": "news_judge",
-      "title": "News judge",
-      "returncode": 0
-    },
-    {
-      "key": "map_heat_research",
-      "title": "Map heat morning delta refresh",
-      "returncode": 124
-    },
-    {
-      "key": "map_heat_research",
-      "title": "Map heat passthrough after timeout",
       "returncode": 0
     },
     {
       "key": "news_actions",
       "title": "News actions",
-      "returncode": 124
+      "returncode": 0
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "returncode": 0
     },
     {
       "key": "general_predict",
@@ -67,11 +53,11 @@
     {
       "key": "sector_predict",
       "title": "Per-sector predict (all 11)",
-      "returncode": 124
+      "returncode": 0
     },
     {
-      "key": "sector_board",
-      "title": "Sector board",
+      "key": "map_heat_research",
+      "title": "Map heat morning delta refresh",
       "returncode": 0
     },
     {
@@ -85,11 +71,11 @@
       "workflow": "preopen_all.yml",
       "n_today": 8,
       "latest": {
-        "id": 34357637365,
-        "status": "completed",
-        "conclusion": "failure",
-        "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/34357637365"
+        "id": 34374548362,
+        "status": "pending",
+        "conclusion": null,
+        "event": "push",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/34374548362"
       }
     },
     {
@@ -115,24 +101,36 @@
     },
     {
       "workflow": "news_parse.yml",
-      "n_today": 1,
+      "n_today": 2,
       "latest": {
-        "id": 34346774795,
+        "id": 34369741849,
         "status": "completed",
-        "conclusion": "cancelled",
+        "conclusion": "failure",
         "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/34346774795"
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/34369741849"
       }
     },
     {
       "workflow": "news_judge.yml",
-      "n_today": 0,
-      "latest": null
+      "n_today": 1,
+      "latest": {
+        "id": 34369745465,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "workflow_dispatch",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/34369745465"
+      }
     },
     {
       "workflow": "news_actions.yml",
-      "n_today": 0,
-      "latest": null
+      "n_today": 1,
+      "latest": {
+        "id": 34369748711,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "workflow_dispatch",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/34369748711"
+      }
     },
     {
       "workflow": "catalyst_daily.yml",
@@ -164,21 +162,21 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/general/2026-09-09_predict.md",
-        "size": 10592
+        "size": 10855
       },
       {
         "kind": "events",
         "ok": true,
         "reason": "",
         "path": "01_daily/events/2026-09-09_events.json",
-        "size": 37808
+        "size": 37865
       },
       {
         "kind": "news_judge",
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-09_judge.md",
-        "size": 11798
+        "size": 12027
       },
       {
         "kind": "news_parse",
@@ -192,112 +190,112 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-09_actions.json",
-        "size": 2
+        "size": 1459
       },
       {
         "kind": "finviz_digest",
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-09_finviz_digest.json",
-        "size": 2
+        "size": 86399
       },
       {
         "kind": "map_heat",
         "ok": true,
         "reason": "",
         "path": "01_daily/map_heat/2026-09-09_map_heat.json",
-        "size": 27
+        "size": 271871
       },
       {
         "kind": "map_heat_baseline",
         "ok": true,
         "reason": "",
         "path": "01_daily/map_heat/2026-09-09_research_baseline.json",
-        "size": 22
+        "size": 312331
       },
       {
         "kind": "map_heat_research",
         "ok": true,
         "reason": "",
         "path": "01_daily/map_heat/2026-09-09_research.md",
-        "size": 36697
+        "size": 36730
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-09/basic_materials_predict.md",
-        "size": 10262
+        "size": 10349
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-09/communication_services_predict.md",
-        "size": 10252
+        "size": 10384
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-09/consumer_cyclical_predict.md",
-        "size": 9365
+        "size": 9495
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-09/consumer_defensive_predict.md",
-        "size": 15609
+        "size": 15743
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-09/energy_predict.md",
-        "size": 10979
+        "size": 11047
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-09/financial_predict.md",
-        "size": 8302
+        "size": 8404
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-09/healthcare_predict.md",
-        "size": 10017
+        "size": 10099
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-09/industrials_predict.md",
-        "size": 11535
+        "size": 11659
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-09/real_estate_predict.md",
-        "size": 11374
+        "size": 11509
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-09/technology_predict.md",
-        "size": 11096
+        "size": 11200
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-09/utilities_predict.md",
-        "size": 11816
+        "size": 11932
       }
     ]
   }
