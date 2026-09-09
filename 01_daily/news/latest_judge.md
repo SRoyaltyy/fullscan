@@ -2,183 +2,175 @@
 
 ### IMPORTANT NEWS (my ranking)
 
-1. **Middle East tensions spur oil rally ahead of key inflation data; S&P 500, Dow end lower** — This is the dominant macro driver: an oil supply shock (Houthi/Saudi attacks, oil toward $100) colliding with a scheduled high-impact inflation print creates a stagflation risk-off tape that sets the session's risk appetite. Channel: risk.
-2. **Gold prices slide >3% after Fed Chair Warsh's Jackson Hole comments boost September rate hike expectations** — A hawkish Fed repricing is the key rates driver; it hits long-duration assets (REITs, utilities, gold) and is the direct opposite of the prior week's dovish hopes. Channel: rates.
-3. **AbbVie announces positive Phase 3 etentamig multiple myeloma data, closes $10.9B Apogee deal and reaffirms guidance** — A large-cap pharma Phase 3 success plus a major M&A close is a sector-fundamental catalyst that can lift the Healthcare complex (XLV), not just ABBV. Channel: sector_fundamental.
-4. **Nvidia AI deal and Dell server backlog spark semis rally lifting Applied Materials 5%** — Confirms the AI-infrastructure demand spine is intact; supports semis (XLK) and the AI-power complex despite the macro risk-off. Channel: sector_fundamental.
-5. **S&P 500 inclusion speculation fuels Astera Labs 12% intraday surge** — Index-inclusion speculation is a high-beta, sentiment-driven catalyst that can lift the whole AI/semis basket and is a classic crowded-trade accelerant. Channel: sentiment.
-6. **Air Products beats fiscal Q3 2026 EPS, raises FY26 EPS outlook, takes $2.9B clean energy exit charge** — A major Basic Materials (XLB) component beat with guidance raise is a sector-fundamental positive that can offset some of the oil-cost drag on chemicals. Channel: sector_fundamental.
-7. **Fabrinet earnings weakness and rising yields spark 6.5% APH drop** — A single-name tech hardware miss that signals potential supply-chain/optical weakness; relevant to the AI-infra trade but not a broad sector driver on its own. Channel: sector_fundamental.
-8. **Bank of America cuts Broadcom price target despite raising earnings estimates, cites rising exposure to Anthropic and OpenAI** — Highlights the circular-financing/AI-capex sustainability concern that has repeatedly hit semis; a sentiment negative for the AI trade. Channel: sentiment.
+1.  **Middle East Tensions Spur Oil Rally Ahead of Key Inflation Data** – This is the dominant macro driver for the session, setting the risk-off tone and directly impacting energy, consumer, and rate-sensitive sectors.
+2.  **Gold Prices Slide >3% on Fed Chair Warsh's Hawkish Jackson Hole Comments** – This is a major rates and sentiment shock, directly contradicting the "gold surge" headline and signaling a hawkish repricing that pressures all risk assets and long-duration sectors.
+3.  **AbbVie Announces Positive Phase 3 Multiple Myeloma Data, Closes $10.9B Apogee Deal** – A major positive catalyst for a large-cap pharma, with potential for sector-wide sympathy in Healthcare, especially given the recent focus on biotech.
+4.  **S&P 500 Inclusion Speculation Fuels Astera Labs 12% Intraday Surge** – A significant single-name event with sector implications, highlighting the strength and momentum in the AI/semis complex.
+5.  **Nvidia AI Deal and Dell Server Backlog Spark Semis Rally Lifting Applied Materials 5%** – This reinforces the AI-infrastructure demand narrative, a key driver for Technology sector performance.
+6.  **Air Products Beats Fiscal Q3 2026 EPS, Raises FY26 Outlook, Takes $2.9B Clean Energy Exit Charge** – A positive fundamental catalyst for a major Basic Materials name, suggesting strength within the sector despite macro headwinds.
+7.  **Fabrinet Earnings Weakness and Rising Yields Spark 6.5% APH Drop** – A negative data point for the tech supply chain, highlighting the vulnerability of high-multiple names to rising yields and any sign of demand weakness.
+8.  **Duke Energy's Florida Subsidiary Files to Lower Customer Rates** – A sector-specific fundamental story for Utilities, but likely a minor driver compared to the macro rates shock.
 
 ---
-
 ### STEP 1 — FRAMEWORK SCORE
 
-**1. Middle East tensions spur oil rally ahead of key inflation data**
-- keep: **keep**
-- us_relevance: **high** — Oil supply shock + inflation print directly sets Fed path and risk appetite for all US equities.
-- channel: **risk**
-- geography: **global_priced**
-- severity: **session**
-- horizon: **1d-1w**
-- action_object: **spx**
-- action_object_detail: SPX beta, XLE, XLY (negative)
-- polarity: **bearish**
-- polarity_why: Stagflation shock (oil up + inflation data pending) compresses multiples and hits consumer cyclicals.
-- confidence: **0.85**
+1.  **Middle East Tensions Spur Oil Rally Ahead of Key Inflation Data**
+    *   **keep**: keep
+    *   **us_relevance**: high – Directly impacts US inflation expectations, consumer spending, and equity risk appetite.
+    *   **channel**: risk
+    *   **geography**: global_priced
+    *   **severity**: session
+    *   **horizon**: 1d-1w
+    *   **action_object**: spx
+    *   **action_object_detail**: SPX beta, XLE, XLY
+    *   **polarity**: bearish
+    *   **polarity_why**: Oil rally adds to inflation concerns, reducing the odds of Fed cuts and pressuring equity multiples.
+    *   **confidence**: 0.8
 
-**2. Gold prices slide >3% after Warsh's hawkish Jackson Hole comments**
-- keep: **keep**
-- us_relevance: **high** — Hawkish Fed repricing is the dominant rates driver; hits all duration-sensitive assets.
-- channel: **rates**
-- geography: **us_domestic**
-- severity: **session**
-- horizon: **1d-1w**
-- action_object: **sector_etf**
-- action_object_detail: XLB (gold miners), XLRE, XLU (negative)
-- polarity: **bearish**
-- polarity_why: Higher-for-longer rates pressure long-duration and monetary-metal assets.
-- confidence: **0.8**
+2.  **Gold Prices Slide >3% on Fed Chair Warsh's Hawkish Jackson Hole Comments**
+    *   **keep**: keep
+    *   **us_relevance**: high – Signals a hawkish Fed, which is a primary driver for US equity valuations and rate-sensitive sectors.
+    *   **channel**: rates
+    *   **geography**: us_domestic
+    *   **severity**: regime
+    *   **horizon**: 1w
+    *   **action_object**: spx
+    *   **action_object_detail**: SPX beta, XLK, XLU, XLRE
+    *   **polarity**: hawkish
+    *   **polarity_why**: Hawkish Fed comments boost rate-hike expectations, pressuring long-duration assets and supporting the dollar.
+    *   **confidence**: 0.9
 
-**3. AbbVie positive Phase 3 + $10.9B Apogee deal**
-- keep: **keep**
-- us_relevance: **high** — Large-cap pharma catalyst with M&A can lift the whole Healthcare sector.
-- channel: **sector_fundamental**
-- geography: **us_domestic**
-- severity: **session**
-- horizon: **1d-1w**
-- action_object: **sector_etf**
-- action_object_detail: XLV, Healthcare basket
-- polarity: **bullish**
-- polarity_why: Positive trial data + M&A validates pharma pipeline and sector risk appetite.
-- confidence: **0.7**
+3.  **AbbVie Announces Positive Phase 3 Multiple Myeloma Data, Closes $10.9B Apogee Deal**
+    *   **keep**: keep
+    *   **us_relevance**: high – A major positive catalyst for a top-10 S&P 500 healthcare name, likely to drive sector performance.
+    *   **channel**: sector_fundamental
+    *   **geography**: us_domestic
+    *   **severity**: session
+    *   **horizon**: 1d-1w
+    *   **action_object**: sector_etf
+    *   **action_object_detail**: XLV, IBB
+    *   **polarity**: bullish
+    *   **polarity_why**: Positive late-stage data and a large M&A deal signal strength and growth within the pharma/biotech complex.
+    *   **confidence**: 0.85
 
-**4. Nvidia AI deal and Dell server backlog spark semis rally**
-- keep: **keep**
-- us_relevance: **high** — Confirms AI-infrastructure demand, the core of the XLK/QQQ trade.
-- channel: **sector_fundamental**
-- geography: **us_supply_chain**
-- severity: **session**
-- horizon: **1d-1w**
-- action_object: **sector_etf**
-- action_object_detail: XLK, SMH, NVDA, AMAT
-- polarity: **bullish**
-- polarity_why: Fresh demand confirmation for AI chips and servers.
-- confidence: **0.75**
+4.  **S&P 500 Inclusion Speculation Fuels Astera Labs 12% Intraday Surge**
+    *   **keep**: conditional
+    *   **us_relevance**: medium – Single-name move, but highlights momentum in the AI/semis complex which has broad market influence.
+    *   **channel**: sector_fundamental
+    *   **geography**: us_domestic
+    *   **severity**: session
+    *   **horizon**: 1d
+    *   **action_object**: single_name
+    *   **action_object_detail**: ALAB
+    *   **polarity**: bullish
+    *   **polarity_why**: Index inclusion speculation is a strong positive catalyst for the specific stock.
+    *   **confidence**: 0.7
 
-**5. S&P 500 inclusion speculation fuels Astera Labs 12% surge**
-- keep: **conditional**
-- us_relevance: **medium** — Single-name speculation but with sector-wide sentiment implications for AI/semis.
-- channel: **sentiment**
-- geography: **us_domestic**
-- severity: **noise**
-- horizon: **1d**
-- action_object: **single_name**
-- action_object_detail: ALAB, AI/semis basket
-- polarity: **bullish**
-- polarity_why: Index-inclusion speculation is a high-beta sentiment driver.
-- confidence: **0.6**
+5.  **Nvidia AI Deal and Dell Server Backlog Spark Semis Rally Lifting Applied Materials 5%**
+    *   **keep**: keep
+    *   **us_relevance**: high – Confirms the AI demand supercycle, a key driver for the largest sector in the S&P 500.
+    *   **channel**: sector_fundamental
+    *   **geography**: us_supply_chain
+    *   **severity**: session
+    *   **horizon**: 1d-1w
+    *   **action_object**: sector_etf
+    *   **action_object_detail**: XLK, SMH
+    *   **polarity**: bullish
+    *   **polarity_why**: Strong demand signals from key AI players support revenue growth for the entire semiconductor supply chain.
+    *   **confidence**: 0.8
 
-**6. Air Products beats, raises FY26 outlook, takes clean energy exit charge**
-- keep: **keep**
-- us_relevance: **medium** — Major XLB component beat with guidance raise.
-- channel: **sector_fundamental**
-- geography: **us_domestic**
-- severity: **session**
-- horizon: **1d-1w**
-- action_object: **sector_etf**
-- action_object_detail: XLB, APD
-- polarity: **bullish**
-- polarity_why: Earnings beat + raise is a positive for the chemicals-heavy XLB.
-- confidence: **0.65**
+6.  **Air Products Beats Fiscal Q3 2026 EPS, Raises FY26 Outlook, Takes $2.9B Clean Energy Exit Charge**
+    *   **keep**: conditional
+    *   **us_relevance**: medium – A positive for a major industrial/materials name, but the "exit charge" adds a layer of complexity.
+    *   **channel**: sector_fundamental
+    *   **geography**: us_domestic
+    *   **severity**: session
+    *   **horizon**: 1d
+    *   **action_object**: single_name
+    *   **action_object_detail**: APD
+    *   **polarity**: mixed
+    *   **polarity_why**: EPS beat and raised guidance are positive, but the large exit charge signals a strategic shift that may have mixed market reception.
+    *   **confidence**: 0.6
 
-**7. Fabrinet earnings weakness and rising yields spark 6.5% APH drop**
-- keep: **conditional**
-- us_relevance: **medium** — Signals potential optical/supply-chain weakness in the AI trade.
-- channel: **sector_fundamental**
-- geography: **us_supply_chain**
-- severity: **noise**
-- horizon: **1d-1w**
-- action_object: **single_name**
-- action_object_detail: APH, optical/semis supply chain
-- polarity: **bearish**
-- polarity_why: Earnings weakness in a key AI supply-chain name is a negative tell.
-- confidence: **0.6**
+7.  **Fabrinet Earnings Weakness and Rising Yields Spark 6.5% APH Drop**
+    *   **keep**: conditional
+    *   **us_relevance**: medium – A negative read on the tech supply chain, potentially offsetting some of the positive AI sentiment.
+    *   **channel**: sector_fundamental
+    *   **geography**: us_supply_chain
+    *   **severity**: session
+    *   **horizon**: 1d
+    *   **action_object**: single_name
+    *   **action_object_detail**: APH, FN
+    *   **polarity**: bearish
+    *   **polarity_why**: Indicates potential demand softness or margin pressure in parts of the tech hardware ecosystem.
+    *   **confidence**: 0.6
 
-**8. BofA cuts Broadcom price target on Anthropic/OpenAI exposure**
-- keep: **conditional**
-- us_relevance: **medium** — Highlights the circular-financing concern that has repeatedly hit semis.
-- channel: **sentiment**
-- geography: **us_domestic**
-- severity: **noise**
-- horizon: **1d**
-- action_object: **single_name**
-- action_object_detail: AVGO, AI/semis basket
-- polarity: **bearish**
-- polarity_why: Raises sustainability concerns about AI capex and customer financing.
-- confidence: **0.55**
+8.  **Duke Energy's Florida Subsidiary Files to Lower Customer Rates**
+    *   **keep**: drop
+    *   **us_relevance**: low – A company-specific regulatory filing with minimal impact on the broader Utilities sector or market.
+    *   **channel**: sector_fundamental
+    *   **geography**: us_domestic
+    *   **severity**: noise
+    *   **horizon**: 1w-1m
+    *   **action_object**: single_name
+    *   **action_object_detail**: DUK
+    *   **polarity**: neutral
+    *   **polarity_why**: Rate changes are a slow-moving, regulatory-driven process with limited immediate market impact.
+    *   **confidence**: 0.5
 
 ---
-
 ### STEP 2 — INTERACTIONS
 
-- **Oil supply shock + hawkish Fed repricing (gold slide)**: Treat as ONE stagflation cluster. The oil spike feeds inflation expectations, which reinforces the hawkish Fed path. This is a double-negative for long-duration assets (XLRE, XLU) and consumer cyclicals (XLY), and a relative positive for Energy (XLE).
-- **AI chip demand (Nvidia/Dell) + Broadcom PT cut**: Semis are mixed. The positive demand signal is offset by the circular-financing concern. Do not double-count the AI demand as a pure positive when the financing sustainability is being questioned.
-- **AbbVie Phase 3 + Healthcare sector**: Single-name biotech/pharma success with M&A should be treated as a Healthcare basket (XLV) catalyst, not just an ABBV event, given the sector's defensive bid in a risk-off tape.
-- **Oil up + Air Products beat**: XLB is mixed. The oil cost headwind on chemicals is partially offset by a major component's earnings beat. Do not short XLB on the oil spike alone.
+*   **Hawkish Fed (Gold Slide) + Oil Rally (Middle East Tensions)**: This is a stagflationary shock. The combination of rising rates and rising energy costs is a powerful negative for equity multiples and consumer spending. Treat this as ONE macro risk-off cluster, not two separate events.
+*   **AI Chip Demand (Nvidia/Dell) + Rising Yields (Hawkish Fed)**: The positive AI demand narrative is a strong tailwind for semis, but it will be tested against the headwind of rising discount rates. Do not double-count the AI strength as a reason to buy all of tech; the move may be concentrated in AI hardware names.
+*   **AbbVie Phase 3 Success + Healthcare Sector**: This is a potential sector-level catalyst. The positive data and M&A activity could drive sympathy moves across large-cap pharma and biotech, supporting the Healthcare ETF (XLV) even in a risk-off tape.
 
 ---
-
 ### STEP 3 — RECLASSIFY AUDIT
 
-**DROPPED_FROM_USABLE:**
-- None. The mechanical set is thin (mostly ticker actions) and none of the items are clearly noise.
-
-**RESCUED_FROM_NOISE:**
-- **Gold prices slide >3% after Warsh's hawkish comments** — This is a rates/session driver, not noise. It sets the tone for all duration-sensitive sectors.
-- **AbbVie positive Phase 3 + $10.9B Apogee deal** — This is a Healthcare sector_fundamental catalyst, not just a single-name story.
-- **Air Products beats, raises FY26 outlook** — This is a Basic Materials sector_fundamental catalyst, not just a single-name story.
-- **Nvidia AI deal and Dell server backlog spark semis rally** — This is a Technology sector_fundamental catalyst, not just a single-name story.
+*   **DROPPED_FROM_USABLE**:
+    *   **Duke Energy's Florida subsidiary files to lower customer rates** – Minor regulatory news, not a market driver.
+*   **RESCUED_FROM_NOISE**:
+    *   **AbbVie announces positive Phase 3 etentamig multiple myeloma data, closes $10.9B Apogee deal and reaffirms guidance** – Major fundamental catalyst for a large-cap pharma, should be a top-tier item.
+    *   **S&P 500 inclusion speculation fuels Astera Labs 12% intraday surge** – High-impact single-name event with sector implications for AI/semis.
+    *   **Nvidia AI deal and Dell server backlog spark semis rally lifting Applied Materials 5%** – Confirms a key market theme (AI demand) and should be elevated.
+    *   **Air Products beats fiscal Q3 2026 EPS, raises FY26 EPS outlook, takes $2.9B clean energy exit charge** – Significant single-name fundamental news for a major Basic Materials company.
+    *   **Fabrinet earnings weakness and rising yields spark 6.5% APH drop** – Negative read on the tech supply chain, relevant for sector positioning.
 
 ---
-
 ### STEP 4 — B1 / SECTOR INJECT
 
-NEWS_JUDGE: n=8 rescued=4
-MACRO stagflation: [bearish] Oil supply shock + hawkish Fed repricing (gold -3%) is the dominant risk-off spine (session/1d-1w)
-SECTOR Energy: [bullish] Oil toward $100 on Houthi/Saudi attacks is a direct XLE driver (object: XLE)
-SECTOR Healthcare: [bullish] ABBV Phase 3 + $10.9B M&A is a sector catalyst, not single-name (object: XLV)
-SECTOR Technology: [mixed] Nvidia/Dell demand vs BofA AVGO circular-financing cut; semis mixed (object: XLK/SMH)
-SECTOR Basic Materials: [mixed] APD beat/raise vs oil cost headwind on chemicals; gold slide hits miners (object: XLB)
-SECTOR Real Estate/Utilities: [bearish] Hawkish Fed repricing + rising yields is a direct duration headwind (object: XLRE/XLU)
-INTERACTION: Oil shock + hawkish Fed = one stagflation cluster; do not double-count
-WATCH: Ranking is thin on fresh macro data; the inflation print is the key binary risk
+NEWS_JUDGE: n=8 rescued=5
+MACRO risk: [bearish] Middle East oil rally + hawkish Fed comments form a stagflationary shock, pressuring equities broadly. (session/1d-1w)
+SECTOR Energy: [bullish] Oil rally on geopolitical tensions is a direct tailwind for XLE. (object: XLE)
+SECTOR Healthcare: [bullish] ABBV Phase 3 success and M&A could drive sector sympathy, offering a defensive bid in a risk-off tape. (object: XLV)
+SECTOR Technology: [mixed] AI demand narrative (NVDA/DELL) is strong, but rising yields from hawkish Fed are a major headwind for high-multiple names. (object: XLK)
+SECTOR Basic Materials: [mixed] APD beat is positive, but a hawkish Fed and strong dollar are headwinds for commodity prices. (object: XLB)
+INTERACTION: Hawkish Fed + Oil Rally = stagflation shock; do not buy rate-sensitive or consumer-discretionary on dips without confirmation of cooling inflation.
+WATCH: The market may look past the hawkish Fed if the oil rally fades or if AI earnings momentum proves resilient.
 
 ---
-
 NEWS_PARSE_BEGIN
 IMPORTANT_COUNT: 8
 TOP_ITEMS:
-- Middle East tensions spur oil rally ahead of key inflation data | keep=keep | channel=risk | severity=session | horizon=1d-1w | object=spx:SPX beta | pol=bearish | conf=0.85
-- Gold prices slide >3% after Warsh's hawkish Jackson Hole comments | keep=keep | channel=rates | severity=session | horizon=1d-1w | object=sector_etf:XLB/XLRE/XLU | pol=bearish | conf=0.8
-- AbbVie positive Phase 3 + $10.9B Apogee deal | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XLV | pol=bullish | conf=0.7
-- Nvidia AI deal and Dell server backlog spark semis rally | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XLK/SMH | pol=bullish | conf=0.75
-- S&P 500 inclusion speculation fuels Astera Labs 12% surge | keep=conditional | channel=sentiment | severity=noise | horizon=1d | object=single_name:ALAB | pol=bullish | conf=0.6
-- Air Products beats, raises FY26 outlook, takes clean energy exit charge | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XLB | pol=bullish | conf=0.65
-- Fabrinet earnings weakness and rising yields spark 6.5% APH drop | keep=conditional | channel=sector_fundamental | severity=noise | horizon=1d-1w | object=single_name:APH | pol=bearish | conf=0.6
-- BofA cuts Broadcom price target on Anthropic/OpenAI exposure | keep=conditional | channel=sentiment | severity=noise | horizon=1d | object=single_name:AVGO | pol=bearish | conf=0.55
-INTERACTIONS: Oil shock + hawkish Fed = one stagflation cluster; AI demand vs circular-financing = semis mixed; ABBV Phase 3 = XLV basket not single-name
-RESCUED_FROM_NOISE: Gold prices slide >3% after Warsh's hawkish comments; AbbVie positive Phase 3 + $10.9B Apogee deal; Air Products beats, raises FY26 outlook; Nvidia AI deal and Dell server backlog spark semis rally
-DROPPED_FROM_USABLE: none
+- Middle East Tensions Spur Oil Rally Ahead of Key Inflation Data | keep=keep | channel=risk | severity=session | horizon=1d-1w | object=spx:SPX beta, XLE, XLY | pol=bearish | conf=0.8
+- Gold Prices Slide >3% on Fed Chair Warsh's Hawkish Jackson Hole Comments | keep=keep | channel=rates | severity=regime | horizon=1w | object=spx:SPX beta, XLK, XLU, XLRE | pol=hawkish | conf=0.9
+- AbbVie Announces Positive Phase 3 Multiple Myeloma Data, Closes $10.9B Apogee Deal | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XLV, IBB | pol=bullish | conf=0.85
+- S&P 500 Inclusion Speculation Fuels Astera Labs 12% Intraday Surge | keep=conditional | channel=sector_fundamental | severity=session | horizon=1d | object=single_name:ALAB | pol=bullish | conf=0.7
+- Nvidia AI Deal and Dell Server Backlog Spark Semis Rally Lifting Applied Materials 5% | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XLK, SMH | pol=bullish | conf=0.8
+- Air Products Beats Fiscal Q3 2026 EPS, Raises FY26 Outlook, Takes $2.9B Clean Energy Exit Charge | keep=conditional | channel=sector_fundamental | severity=session | horizon=1d | object=single_name:APD | pol=mixed | conf=0.6
+- Fabrinet Earnings Weakness and Rising Yields Spark 6.5% APH Drop | keep=conditional | channel=sector_fundamental | severity=session | horizon=1d | object=single_name:APH, FN | pol=bearish | conf=0.6
+- Duke Energy's Florida Subsidiary Files to Lower Customer Rates | keep=drop | channel=sector_fundamental | severity=noise | horizon=1w-1m | object=single_name:DUK | pol=neutral | conf=0.5
+INTERACTIONS: Hawkish Fed + Oil Rally = stagflation shock; do not buy rate-sensitive or consumer-discretionary on dips without confirmation of cooling inflation.
+RESCUED_FROM_NOISE: AbbVie announces positive Phase 3 etentamig multiple myeloma data, closes $10.9B Apogee deal and reaffirms guidance; S&P 500 inclusion speculation fuels Astera Labs 12% intraday surge; Nvidia AI deal and Dell server backlog spark semis rally lifting Applied Materials 5%; Air Products beats fiscal Q3 2026 EPS, raises FY26 EPS outlook, takes $2.9B clean energy exit charge; Fabrinet earnings weakness and rising yields spark 6.5% APH drop
+DROPPED_FROM_USABLE: Duke Energy's Florida subsidiary files to lower customer rates
 B1_INJECT:
-NEWS_JUDGE: n=8 rescued=4
-MACRO stagflation: [bearish] Oil supply shock + hawkish Fed repricing (gold -3%) is the dominant risk-off spine (session/1d-1w)
-SECTOR Energy: [bullish] Oil toward $100 on Houthi/Saudi attacks is a direct XLE driver (object: XLE)
-SECTOR Healthcare: [bullish] ABBV Phase 3 + $10.9B M&A is a sector catalyst, not single-name (object: XLV)
-SECTOR Technology: [mixed] Nvidia/Dell demand vs BofA AVGO circular-financing cut; semis mixed (object: XLK/SMH)
-SECTOR Basic Materials: [mixed] APD beat/raise vs oil cost headwind on chemicals; gold slide hits miners (object: XLB)
-SECTOR Real Estate/Utilities: [bearish] Hawkish Fed repricing + rising yields is a direct duration headwind (object: XLRE/XLU)
-INTERACTION: Oil shock + hawkish Fed = one stagflation cluster; do not double-count
-WATCH: Ranking is thin on fresh macro data; the inflation print is the key binary risk
+NEWS_JUDGE: n=8 rescued=5
+MACRO risk: [bearish] Middle East oil rally + hawkish Fed comments form a stagflationary shock, pressuring equities broadly. (session/1d-1w)
+SECTOR Energy: [bullish] Oil rally on geopolitical tensions is a direct tailwind for XLE. (object: XLE)
+SECTOR Healthcare: [bullish] ABBV Phase 3 success and M&A could drive sector sympathy, offering a defensive bid in a risk-off tape. (object: XLV)
+SECTOR Technology: [mixed] AI demand narrative (NVDA/DELL) is strong, but rising yields from hawkish Fed are a major headwind for high-multiple names. (object: XLK)
+SECTOR Basic Materials: [mixed] APD beat is positive, but a hawkish Fed and strong dollar are headwinds for commodity prices. (object: XLB)
+INTERACTION: Hawkish Fed + Oil Rally = stagflation shock; do not buy rate-sensitive or consumer-discretionary on dips without confirmation of cooling inflation.
+WATCH: The market may look past the hawkish Fed if the oil rally fades or if AI earnings momentum proves resilient.
 NEWS_PARSE_END
