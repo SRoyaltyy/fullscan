@@ -1,11 +1,10 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T10:05:12.064160-04:00",
+  "generated_at": "2026-09-09T10:05:38.800519-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-09-09_predict.md` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-09-09_judge.md` \u2014 missing"
+    "MISSING General predict MD `01_daily/general/2026-09-09_predict.md` \u2014 missing"
   ],
   "counts": {
     "ok": 5,
@@ -104,7 +103,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 16,
+      "n_req_ok": 17,
       "n_req": 20,
       "n_opt_ok": 2,
       "n_opt": 2,
@@ -159,9 +158,9 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-09-09_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 12468
         },
         {
           "key": "research_json",
@@ -510,9 +509,9 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-09-09_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 12468
         },
         {
           "key": "in_weather",
@@ -1713,6 +1712,31 @@
         }
       ],
       "preview": "71 events \u00b7 IEEPA national emergency on U.S. bulk-power system equipment | U.S. Section 338 bans and tariff-scope reset vs Canada | House clears FY2027 CR through Dec. 11, shutdown risk off | OFAC sanctions remaining Iranian airlines (Operation Economic Outcast) | EO: Packers & Stockyards enforcement and interstate meat access | EO adjusting Defense Production Act energy delegations \u00b7 # Event Scan \u2014 2026-09-09\n- events tracked: **37** (via repair, repaired) (merged with earlier same-day scan)\n- uncertainty: **elevated**\n- summary: The September 9, 2026 scan shows an environment dominated by escalating US-Iran conflict with oil near $99 and Saudi energy halts, alongside a hawkish Fed pivot ahead of the September FOMC. Key upcoming catalysts include US CPI/PPI, ECB and BOJ decisions, China inflation data, and the Trump-Xi summit. Trade tensions are intensifying with Canada's retaliatory tariffs and USMCA talks, while earnings from Oracle, Adobe, and Kroger will test AI and consumer narratives. The overall risk environment is elevated with high geopolitical and monetary policy uncertainty."
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T10:05:37.888443-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-09_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 12468,
+          "preview": "# News Judge \u2014 2026-09-09"
+        },
+        {
+          "path": "01_daily/news/2026-09-09_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1384,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-09-09 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
     }
   ],
   "href": {

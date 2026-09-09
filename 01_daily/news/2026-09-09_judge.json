@@ -2,19 +2,22 @@
  "risk_tilt": "off",
  "macros": [
   "bearish",
-  "bearish",
-  "bearish",
   "bearish"
  ],
  "sector_tilts": {
+  "Energy": "bullish",
   "Healthcare": "bullish",
-  "Financial": "bullish",
+  "Technology": "mixed",
+  "Financial": "bearish",
+  "Consumer Defensive": "bearish",
   "Real Estate": "bearish"
  },
  "tickers": {
-  "AMGN": 3.0,
-  "XLU": -1.5
+  "XLE": 4.0,
+  "XLK": 3.0,
+  "XLU": -1.5,
+  "ADI": 1.5
  },
- "b1_inject": "NEWS_JUDGE: n=8 rescued=4\nMACRO Fed-hawkish: [hawkish] Divided Fed holds, 3 dissent; Warsh signals Sep hike risk; hike odds rising (regime/1w)\nMACRO Rates: [bearish] US borrowing costs hit 19-yr high; long-end yields persistent headwind for duration (regime/1w-1m)\nMACRO Gold: [bearish] Gold -3% on Warsh comments; monetary-metals bid inverts, hits XLB/GDX (session/1d-1w)\nSECTOR Healthcare: [bullish] ABBV Phase 3 + AMGN mortality data form sector-fundamental cluster; XLV relative bid (sector_etf)\nSECTOR Financials: [bullish] Hawkish repricing + steepening curve = NIM tailwind; XLF relative strength (sector_etf)\nSECTOR Real Estate: [bearish] 19-yr high borrowing costs crush duration; XLRE underperforms (sector_etf)\nINTERACTION: Fed-hawkish + gold slide = one rates cluster; do not double-count. Healthcare cluster + defensive bid supports XLV.\nWATCH: Prior-session relief rally at risk of reversal if Warsh-hawkish repricing dominates; watch for SPX fade.",
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=0\nMACRO stagflation: [bearish] Oil spike + hawkish Fed (Warsh) + gold slide = one risk-off cluster (session/1d-1w)\nSECTOR Energy: [bullish] Oil supply shock is a direct tailwind for XLE (object: XLE)\nSECTOR Healthcare: [bullish] ABBV Phase 3 success + M&A is a sector-level catalyst (object: XLV, XBI)\nSECTOR Technology: [mixed] AI-demand news is positive but faces hawkish rates headwind; likely relative strength only (object: XLK, SMH)\nSECTOR Financials: [bearish] Stagflation shock hits rate-sensitive financials via credit/long-end channel (object: XLF)\nSECTOR Staples: [bearish] Food-crash cluster + oil-driven inflation outweighs any defensive bid (object: XLP)\nSECTOR Real Estate: [bearish] Hawkish Fed + rising long-end yields are a direct negative (object: XLRE)\nINTERACTION: Oil spike + hawkish Fed = one stagflation cluster; do not buy tech on AI news alone\nWATCH: Key inflation data is the next binary; ranking is contested if it prints cool and reverses the risk-off tape",
  "date": "2026-09-09"
 }
