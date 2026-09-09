@@ -22,6 +22,9 @@ name: Pre-Open ALL (predictive one-shot)
 #      can cancel the prior ubuntu run. Owner UI Force cancel is still
 #      required when the token is 403 or the hung job is in another group.
 #      `gh run cancel` from a cloud/integration token is often 403.
+# HARDEN 2026-09-09c: ubuntu group suffix ubuntu-h0909c so a hung
+#   run 51 (cancel 202 but runner ignores SIGTERM on LLM socket) cannot
+#   block the 09:30 heal. preopen job cap 90m; python step cap 55m.
 
 on:
   push:
@@ -72,7 +75,7 @@ permissions:
 concurrency:
   # Stable names only. ubuntu-HHMM forks cannot cancel each other
   # (2026-09-08: ubuntu-0945 vs ubuntu-0950 vs ubuntu-stop-1108 twins).
-  group: preopen-all-${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'ubuntu' || 'ecs' }}
+  group: preopen-all-${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-h0909c' || 'ecs' }}
   cancel-in-progress: ${{ github.event_name == 'push' || github.event.inputs.runner == 'ubuntu' }}
 
 jobs:
@@ -217,8 +220,8 @@ jobs:
   preopen:
     needs: [gate, scrape]
     if: ${{ needs.gate.outputs.go == 'yes' && always() }}
-    runs-on: ${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
-    timeout-minutes: 360
+    runs-on: ${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('[\"self-hosted\",\"ecs\"]') }}
+    timeout-minutes: 90
     env:
       OPENCLAW_TIMEOUT: "10800"
       FULLSCAN_PERSIST: "/home/gha/fullscan-persist"
@@ -232,8 +235,8 @@ jobs:
         run: |
           echo "waited_for_lock=no" >> "$GITHUB_ENV"
           LOCK="${PREOPEN_LOCK:-/home/gha/fullscan-persist/locks/preopen.lock}"
-          if mkdir -p "$(dirname "$LOCK")" 2>/dev/null; then
-            exec 9>"$LOCK"
+          if mkdir -p "$(dirname \"$LOCK\")" 2>/dev/null; then
+            exec 9>\"$LOCK\"
             if flock -n 9; then
               echo "lock is free"
               flock -u 9 || true
@@ -257,7 +260,7 @@ jobs:
         run: |
           DATE="${{ github.event.inputs.run_date }}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
-          if python3 -m src.skip_if_good --job preopen_full --date "$DATE"; then
+          if python3 -m src.skip_if_good --job preopen_full --date \"$DATE\"; then
             echo "Packet + stock book already on disk — no Grok/DeepSeek"
             echo "skip_python=yes" >> "$GITHUB_ENV"
           fi
@@ -313,12 +316,14 @@ jobs:
           GROK_ONLY: "0"
           LLM_BACKEND: ${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'deepseek' || github.event.inputs.llm_backend || 'auto' }}
           FINVIZ_SKIP_LIVE: "1"
+          PREOPEN_LLM_TIMEOUT: "900"
+        timeout-minutes: 55
         run: |
           set -e
           export HOME="${HOME:-${FULLSCAN_HOME:-/home/gha}}"
           LOCK="${PREOPEN_LOCK:-/home/gha/fullscan-persist/locks/preopen.lock}"
-          if mkdir -p "$(dirname "$LOCK")" 2>/dev/null; then
-            exec 9>"$LOCK"
+          if mkdir -p "$(dirname \"$LOCK\")" 2>/dev/null; then
+            exec 9>\"$LOCK\"
             if ! flock -n 9; then
               echo "ECS systemd job grabbed the lock — backing off"
               exit 0
@@ -332,9 +337,6 @@ jobs:
           BACKEND="${LLM_BACKEND:-auto}"
           FORCE="${{ github.event.inputs.force }}"
           ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
-          # Push events have empty inputs.force — never treat that as --force.
-          # On-time (before 09:25) honors the skip gate. Late push heal
-          # (09:25–12:00 ET) bypasses the cutoff only; skip-if-good stays on.
           ARGS=(--llm-backend "$BACKEND")
           [ -n "$DATE" ] && ARGS+=(--date "$DATE")
           [ "$BOOK" = "false" ] && ARGS+=(--no-book)
@@ -364,9 +366,6 @@ jobs:
           export HOME="${HOME:-${FULLSCAN_HOME:-/home/gha}}"
           unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
           cd "${GITHUB_WORKSPACE:-.}"
-          # Leftover sweep only. Each QC-ok file already pushed itself
-          # via src.land_file (write A → QC A → push A). This step
-          # catches stragglers if a mid-job land failed.
           PATHS=(01_daily/_ecs_clock.md data/day_board/)
           if [ "${skip_python:-}" != "yes" ]; then
             PATHS+=(01_daily/general/ 01_daily/sectors/ 01_daily/events
