@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T08:25:28.430056-04:00",
+  "generated_at": "2026-09-09T08:25:38.624359-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -533,7 +533,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=211",
-          "size": 1446043
+          "size": 1459101
         },
         {
           "key": "book_md",
@@ -542,7 +542,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 76456
+          "size": 77062
         },
         {
           "key": "green",
@@ -591,7 +591,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=211",
-          "size": 1446043
+          "size": 1459101
         },
         {
           "key": "dash_html",
@@ -627,49 +627,49 @@
     "buy_1d": [
       {
         "ticker": "NVT",
-        "score": 0.7018462501247229
+        "score": 0.6124360445345847
       },
       {
         "ticker": "DINO",
-        "score": 0.3164404448254038
+        "score": 0.2980268793852083
       },
       {
         "ticker": "UGP",
-        "score": 0.7952388940832091
+        "score": 0.7650064359947992
       }
     ],
     "sell_1d": [
       {
         "ticker": "BGS",
-        "score": -0.2874761881804064
+        "score": -0.4232519147363987
+      },
+      {
+        "ticker": "XHG",
+        "score": -0.4050387451388413
       },
       {
         "ticker": "SMPL",
-        "score": -0.1821293280028169
+        "score": -0.37044391012687466
+      },
+      {
+        "ticker": "METC",
+        "score": -0.5237677090795047
       },
       {
         "ticker": "BRBR",
-        "score": -0.1425165945091207
+        "score": -0.32973158242259604
+      },
+      {
+        "ticker": "BRO",
+        "score": -0.2331439560346588
       },
       {
         "ticker": "GIS",
-        "score": -0.43778665775791
+        "score": -0.4900687853313184
       },
       {
         "ticker": "CPB",
-        "score": -0.09063668475929186
-      },
-      {
-        "ticker": "FLO",
-        "score": -0.23367889223599247
-      },
-      {
-        "ticker": "INFY",
-        "score": -0.3627805913164508
-      },
-      {
-        "ticker": "HRL",
-        "score": -0.11030699935304038
+        "score": -0.2834966473534064
       }
     ],
     "flatten": "# flatten_robust card \u2014 2026-09-09\n_Generated 2026-09-09T11:57:37 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Open lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66**\n## Open holdings\n| Ticker | Sleeve | Shares | Entry | Since | Mark | MV |\n|---|---|---:|---:|---|---:|---:|\n| \u2014 | \u2014 | | | | | |\n## Tickets\n| Clock | Side | Ticker | Sleeve | Shares | Px | $ | Why |\n|---|---|---|---|---:|---"
@@ -1321,6 +1321,45 @@
         }
       ],
       "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HRMY, CDNA, ONC, WAY, NU"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T08:25:37.789794-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-09_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1459101,
+          "preview": "1d BUY NVT, DINO, UGP \u00b7 SELL BGS, XHG, SMPL, METC, BRBR, BRO, GIS, CPB"
+        },
+        {
+          "path": "data/stock_book/2026-09-09_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-09_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2545,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "01_daily/2026-09-09_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 78137,
+          "preview": "# Stock book \u2014 2026-09-09\n_Generated 2026-09-09T08:25:35.867447-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY NVT, DINO, UGP \u00b7 SELL BGS, XHG, SMPL, METC, BRBR, BRO, GIS, CPB \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 # Stock book \u2014 2026-09-09\n_Generated 2026-09-09T08:25:35.867447-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
