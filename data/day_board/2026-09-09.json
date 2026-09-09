@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T13:18:22.850873-04:00",
+  "generated_at": "2026-09-09T13:18:53.681593-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -158,7 +158,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 13574
+          "size": 13459
         },
         {
           "key": "research_json",
@@ -372,8 +372,8 @@
           "path": "01_daily/weather/2026-09-09_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10543 vix=falling yields=flat",
-          "size": 10543
+          "reason": "sectors=11 bytes=10538 vix=falling yields=flat",
+          "size": 10538
         }
       ],
       "said": "favorable 2 \u00b7 hostile 5 \u00b7 neutral 4",
@@ -513,7 +513,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 13574
+          "size": 13459
         },
         {
           "key": "in_weather",
@@ -521,8 +521,8 @@
           "path": "01_daily/weather/2026-09-09_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10543 vix=falling yields=flat",
-          "size": 10543
+          "reason": "sectors=11 bytes=10538 vix=falling yields=flat",
+          "size": 10538
         },
         {
           "key": "in_ab",
@@ -736,11 +736,11 @@
       }
     ],
     "flatten": {
-      "said": "0 priced buys \u00b7 0 lots \u00b7 cash $107,448.18",
+      "said": "0 priced buys \u00b7 0 lots \u00b7 cash $108,616.66",
       "bullets": [
         "0 priced buys",
         "0 lots",
-        "cash $107,448.18"
+        "cash $108,616.66"
       ]
     },
     "general": {
@@ -791,31 +791,6 @@
     }
   },
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat tables",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T07:32:18.606838-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-09_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 27,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-09_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 17383,
-          "preview": "# MAP HEAT \u2014 2026-09-09\nExport `finviz_2026-09-08.csv` \u00b7 11608 names \u00b7 generated 2026-09-09T01:59:54.403331-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-09\nExport `finviz_2026-09-08.csv` \u00b7 11608 names \u00b7 generated 2026-09-09T01:59:54.403331-04:00"
-    },
     {
       "key": "map_heat_baseline",
       "title": "Map heat night baseline",
@@ -2817,6 +2792,31 @@
         }
       ],
       "preview": "# News Judge \u2014 2026-09-09 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "flatten",
+      "title": "Flatten live card",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T13:18:53.062666-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-09-09_flatten_card.md",
+          "ok": true,
+          "reason": "",
+          "size": 1796,
+          "preview": "# flatten_robust card \u2014 2026-09-09\n_Generated 2026-09-09T17:18:52 \u2014 live `flatten_robust`._\n**S=-13.95; hard-red: no new buys; holds and due 1d exits stay**\n- Score **-13.95** (DOWN) \u00b7 route **hold** \u00b7 HARD-RED\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Open lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66**"
+        },
+        {
+          "path": "data/sleeve_merge/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 4821,
+          "preview": "keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930"
+        }
+      ],
+      "preview": "# flatten_robust card \u2014 2026-09-09\n_Generated 2026-09-09T17:18:52 \u2014 live `flatten_robust`._\n**S=-13.95; hard-red: no new buys; holds and due 1d exits stay**\n- Score **-13.95** (DOWN) \u00b7 route **hold** \u00b7 HARD-RED\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Open lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66** \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930"
     }
   ],
   "href": {
