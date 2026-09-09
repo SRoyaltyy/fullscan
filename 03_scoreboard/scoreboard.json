@@ -17718,13 +17718,13 @@
         "S4_ETF_TAPE": 1.0
       },
       "leading_sum": 0.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 43.400001525878906,
+      "actual_close": 42.939998626708984,
+      "actual_pct_change": -1.1737678418304531,
+      "actual_direction": "down",
+      "actual_magnitude_band": "notable",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
@@ -17758,7 +17758,9 @@
       },
       "sector": "Utilities",
       "etf": "XLU",
-      "rubric": "00_grounding/sectors/utilities.md"
+      "rubric": "00_grounding/sectors/utilities.md",
+      "spy_pct_change": -0.46477589645284034,
+      "rel_pct_change": -0.7089919453776128
     },
     {
       "date": "2026-09-09",
