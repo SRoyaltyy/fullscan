@@ -26,7 +26,7 @@ import json
 import math
 import random
 import re
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -127,12 +127,13 @@ def price_tone(x, eps=PRICE_EPS):
 
 
 def is_trading_date(date_str) -> bool:
-    """True for Mon–Fri. Weekend artifact dumps are not market sessions."""
+    """True for a NYSE session. Weekends and full-day holidays are not."""
     try:
-        d = datetime.strptime(str(date_str)[:10], "%Y-%m-%d")
+        d = datetime.strptime(str(date_str)[:10], "%Y-%m-%d").date()
     except (TypeError, ValueError):
         return False
-    return d.weekday() < 5
+    from .skip_if_good import is_nyse_holiday
+    return d.weekday() < 5 and not is_nyse_holiday(d)
 
 
 def _tone_rank(tone):
@@ -953,6 +954,14 @@ def horizon_dates(date: str, dates: list[str] | None = None) -> dict[str, str | 
     }
 
 
+def reset_price_caches() -> None:
+    """Drop in-memory OHLC / Finviz bar caches (tests + after a store update)."""
+    global _OHLC_BARS, _FINVIZ_BARS, _PRICE_PANEL
+    _OHLC_BARS = None
+    _FINVIZ_BARS = {}
+    _PRICE_PANEL = None
+
+
 def _ohlc_bars():
     """Full daily OHLC indexed by (date, ticker). Close-only panel stays separate."""
     global _OHLC_BARS
@@ -976,9 +985,18 @@ def _ohlc_bars():
 
 
 def _finviz_bar(ticker: str, date: str) -> dict:
-    """Same-day Finviz Open / Price when the OHLC store has no bar yet."""
+    """Finviz Open / Price / Prev Close from the export *named* `date`.
+
+    That file is the overnight packet for that 09:30 (prior session tape)
+    or a live last-trade if scraped after the open. It is not `date`'s
+    official 09:30 / 16:00 print. Callers that need a completed session
+    must go through `_finviz_completed_bar`.
+    """
     d = str(date or "")[:10]
-    empty = {"open": None, "close": None, "close_open_pct": None}
+    empty = {
+        "open": None, "high": None, "low": None, "close": None,
+        "prev_close": None, "close_open_pct": None,
+    }
     if not d:
         return empty
     if d not in _FINVIZ_BARS:
@@ -991,6 +1009,9 @@ def _finviz_bar(ticker: str, date: str) -> dict:
                     continue
                 o = _num(rec.get("Open"))
                 c = _num(rec.get("Price"))
+                h = _num(rec.get("High"))
+                low = _num(rec.get("Low"))
+                prev = _num(rec.get("Prev Close") or rec.get("Previous Close"))
                 oc = _num(rec.get("Change from Open"))
                 if oc is None and o and c:
                     oc = round(100.0 * (c / o - 1.0), 3)
@@ -998,45 +1019,144 @@ def _finviz_bar(ticker: str, date: str) -> dict:
                     oc = round(float(oc), 3)
                 out[name] = {
                     "open": None if o is None else round(float(o), 4),
+                    "high": None if h is None else round(float(h), 4),
+                    "low": None if low is None else round(float(low), 4),
                     "close": None if c is None else round(float(c), 4),
+                    "prev_close": None if prev is None else round(float(prev), 4),
                     "close_open_pct": oc,
                 }
         _FINVIZ_BARS[d] = out
     return _FINVIZ_BARS[d].get(_tick(ticker)) or empty
 
 
+def _px_matches(a, b) -> bool:
+    if a is None or b is None:
+        return False
+    try:
+        fa, fb = float(a), float(b)
+    except (TypeError, ValueError):
+        return False
+    return abs(fa - fb) <= max(0.005, 0.0005 * abs(fb))
+
+
+def _official_ohlc(ticker: str, date: str, bars=None) -> dict:
+    """Printed regular-session OHLC from the price store, or empty."""
+    empty = {"open": None, "high": None, "low": None, "close": None}
+    t = _tick(ticker)
+    d = str(date or "")[:10]
+    if not t or not d:
+        return empty
+    if bars is None:
+        bars = _ohlc_bars()
+    if bars is None or getattr(bars, "empty", True):
+        return empty
+    try:
+        row = bars.loc[(d, t)]
+    except (KeyError, TypeError, ValueError):
+        return empty
+    if row is None:
+        return empty
+    if isinstance(row, pd.DataFrame):
+        row = row.iloc[-1]
+    def _cell(name: str):
+        if hasattr(row, "get"):
+            return _num(row.get(name))
+        try:
+            return _num(row[name])
+        except Exception:
+            return None
+    return {
+        "open": _cell("open"),
+        "high": _cell("high"),
+        "low": _cell("low"),
+        "close": _cell("close"),
+    }
+
+
+def _finviz_completed_bar(ticker: str, date: str) -> dict:
+    """Recover session D's regular-session tape from a *later* Finviz file.
+
+    Never read ``finviz_{D}.csv`` as D's 09:30 / 16:00 — that file is the
+    overnight packet (prior tape) or a live last-trade. CABA 2026-09-08
+    printed official 3.43 → 3.27; the same-day export said 3.56 → 3.89.
+
+    A later file is D's completed tape when:
+
+    * the file date is a weekend/holiday dump whose last session is D, or
+    * Prev Close matches the prior session's official close (pre-open D+1
+      packet) rather than D's close (live D+1 tape).
+    """
+    empty = {
+        "open": None, "high": None, "low": None, "close": None,
+        "close_open_pct": None,
+    }
+    d = str(date or "")[:10]
+    t = _tick(ticker)
+    if not d or not t or not is_trading_date(d):
+        return empty
+    from .skip_if_good import _prev_weekday
+    prior = _prev_weekday(d)
+    prior_close = _official_ohlc(t, prior).get("close")
+    start = datetime.strptime(d, "%Y-%m-%d").date()
+    for i in range(1, 5):
+        later = (start + timedelta(days=i)).isoformat()
+        fv = _finviz_bar(t, later)
+        if fv.get("open") is None or fv.get("close") is None:
+            continue
+        if is_trading_date(later):
+            if prior_close is None or not _px_matches(fv.get("prev_close"), prior_close):
+                continue
+        else:
+            if _prev_weekday(later) != d:
+                continue
+        oc = fv.get("close_open_pct")
+        if oc is None and fv.get("open") and fv.get("close"):
+            oc = round(100.0 * (fv["close"] / fv["open"] - 1.0), 3)
+        return {
+            "open": fv.get("open"),
+            "high": fv.get("high"),
+            "low": fv.get("low"),
+            "close": fv.get("close"),
+            "close_open_pct": oc,
+        }
+    return empty
+
+
 def session_bar(ticker: str, date: str) -> dict:
-    """Regular-session OHLC on `date` (open ≈ 09:30 ET, close ≈ 16:00 ET)."""
+    """Regular-session OHLC on `date` (open = 09:30 ET, close = 16:00 ET).
+
+    Source order:
+
+    1. Official daily tape in ``data/prices/ohlc.parquet`` (Yahoo
+       regular-session Open / High / Low / Close, not split-adjusted
+       fiction and not a live last-trade).
+    2. A *later* Finviz export that is verifiably D's completed tape.
+    3. Empty — never the same-dated Finviz Price / Open.
+
+    NYSE holidays (Labor Day 2026-09-07) return empty.
+    """
     t = _tick(ticker)
     empty = {
         "open": None, "high": None, "low": None, "close": None,
         "close_open_pct": None, "open_clock": "09:30 ET",
         "close_clock": "16:00 ET",
     }
-    if not t or not date:
+    d = str(date or "")[:10]
+    if not t or not d or not is_trading_date(d):
         return empty
-    bars = _ohlc_bars()
-    key = (str(date)[:10], t)
-    o = h = low = c = oc = None
-    if not bars.empty:
-        try:
-            row = bars.loc[key]
-        except KeyError:
-            row = None
-        if row is not None:
-            if isinstance(row, pd.DataFrame):
-                row = row.iloc[-1]
-            o = _num(row.get("open") if hasattr(row, "get") else row["open"])
-            h = _num(row.get("high") if hasattr(row, "get") else row["high"])
-            low = _num(row.get("low") if hasattr(row, "get") else row["low"])
-            c = _num(row.get("close") if hasattr(row, "get") else row["close"])
-            oc = None if not o or not c else round(100.0 * (c / o - 1.0), 3)
+    off = _official_ohlc(t, d)
+    o, h, low, c = off.get("open"), off.get("high"), off.get("low"), off.get("close")
+    oc = None if not o or not c else round(100.0 * (c / o - 1.0), 3)
     if o is None or c is None:
-        fv = _finviz_bar(t, date)
+        fv = _finviz_completed_bar(t, d)
         if o is None:
             o = fv.get("open")
         if c is None:
             c = fv.get("close")
+        if h is None:
+            h = fv.get("high")
+        if low is None:
+            low = fv.get("low")
         if oc is None:
             oc = fv.get("close_open_pct")
             if oc is None and o and c:

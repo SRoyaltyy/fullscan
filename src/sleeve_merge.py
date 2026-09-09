@@ -119,15 +119,17 @@ def list_books(book_dir: Path = BOOK_DIR) -> list[tuple[str, Path]]:
 
 
 def session_calendar(payload: dict, books: list[tuple[str, Path]]) -> list[str]:
+    from .skip_if_good import is_nyse_holiday
     sd = list(payload.get("session_dates") or [])
     sd += [d for d, _ in books]
     sd += [r.get("date") for r in (payload.get("called_rows") or []) if r.get("date")]
     out = []
     for d in sorted({x for x in sd if x and len(x) == 10}):
         try:
-            if datetime.strptime(d, "%Y-%m-%d").weekday() >= 5:
-                continue
+            dt = datetime.strptime(d, "%Y-%m-%d")
         except ValueError:
+            continue
+        if dt.weekday() >= 5 or is_nyse_holiday(dt.date()):
             continue
         out.append(d)
     return out

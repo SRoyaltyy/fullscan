@@ -108,52 +108,89 @@ def _yf_download(tickers: list[str], start: str, end: str) -> pd.DataFrame:
     if not tickers:
         return pd.DataFrame()
     try:
+        # Printed regular-session Open/High/Low/Close — not split-adjusted
+        # history and not a live last-trade. Factor-mine 09:30 / 16:00
+        # marks must match the tape the user can look up.
         raw = yf.download(
             tickers=tickers, start=start, end=end, group_by="ticker",
-            auto_adjust=True, threads=True, progress=False,
+            auto_adjust=False, actions=False, threads=True, progress=False,
         )
     except Exception as e:
         print(f"[price_store] download failed ({len(tickers)}): {e}")
         return pd.DataFrame()
     if raw is None or raw.empty:
         return pd.DataFrame()
-    rows = []
-    if len(tickers) == 1:
-        sym = tickers[0]
-        if not isinstance(raw, pd.DataFrame) or "Close" not in raw.columns:
+    return _flatten_yf(raw, tickers)
+
+
+def _flatten_yf(raw: pd.DataFrame, tickers: list[str]) -> pd.DataFrame:
+    """Normalize yfinance 0.2 / 1.x column layouts to a long OHLC table."""
+    def _one(df: pd.DataFrame, sym: str) -> pd.DataFrame:
+        if df is None or df.empty:
             return pd.DataFrame()
-        part = raw.copy().reset_index()
+        part = df.dropna(how="all").copy()
+        if part.empty:
+            return pd.DataFrame()
+        if isinstance(part.columns, pd.MultiIndex):
+            part.columns = [
+                str(c[-1] if c[-1] not in ("", None) else c[0]) for c in part.columns
+            ]
+        cols = {str(c): c for c in part.columns}
+        lower = {str(c).strip().lower(): c for c in part.columns}
+        need = {"open": None, "high": None, "low": None, "close": None, "volume": None}
+        for key in list(need):
+            for cand in (key, key.title(), key.capitalize()):
+                if cand in cols:
+                    need[key] = cols[cand]
+                    break
+                if cand in lower:
+                    need[key] = lower[cand]
+                    break
+        if need["close"] is None:
+            return pd.DataFrame()
+        part = part.reset_index()
         date_col = "Date" if "Date" in part.columns else part.columns[0]
-        part["ticker"] = sym
-        part = part.rename(columns={
-            date_col: "date", "Open": "open", "High": "high", "Low": "low",
-            "Close": "close", "Volume": "volume",
+        out = pd.DataFrame({
+            "date": pd.to_datetime(part[date_col], errors="coerce"),
+            "ticker": sym,
+            "open": part[need["open"]] if need["open"] is not None else None,
+            "high": part[need["high"]] if need["high"] is not None else None,
+            "low": part[need["low"]] if need["low"] is not None else None,
+            "close": part[need["close"]],
+            "volume": part[need["volume"]] if need["volume"] is not None else None,
         })
-        keep = [c for c in ["date", "ticker", "open", "high", "low", "close", "volume"] if c in part.columns]
-        return part[keep].dropna(subset=["close"])
+        return out.dropna(subset=["close"])
+
     if not isinstance(raw.columns, pd.MultiIndex):
+        if len(tickers) == 1:
+            return _one(raw, tickers[0])
         return pd.DataFrame()
-    level0 = set(raw.columns.get_level_values(0))
-    for sym in tickers:
-        if sym not in level0:
-            continue
-        try:
-            sub = raw[sym].dropna(how="all").copy().reset_index()
-        except Exception:
-            continue
-        if sub.empty or "Close" not in sub.columns:
-            continue
-        date_col = "Date" if "Date" in sub.columns else sub.columns[0]
-        sub["ticker"] = sym
-        sub = sub.rename(columns={
-            date_col: "date", "Open": "open", "High": "high", "Low": "low",
-            "Close": "close", "Volume": "volume",
-        })
-        keep = [c for c in ["date", "ticker", "open", "high", "low", "close", "volume"] if c in sub.columns]
-        rows.append(sub[keep])
+    levels0 = set(raw.columns.get_level_values(0))
+    levels1 = set(raw.columns.get_level_values(1)) if raw.columns.nlevels > 1 else set()
+    rows = []
+    ticker_set = {str(t).upper() for t in tickers}
+    if ticker_set & {str(x).upper() for x in levels0}:
+        for sym in tickers:
+            if sym not in levels0:
+                continue
+            try:
+                rows.append(_one(raw[sym], sym))
+            except Exception:
+                continue
+    elif ticker_set & {str(x).upper() for x in levels1}:
+        for sym in tickers:
+            try:
+                sub = raw.xs(sym, axis=1, level=1, drop_level=True)
+            except Exception:
+                continue
+            rows.append(_one(sub, sym))
+    else:
+        if len(tickers) == 1:
+            rows.append(_one(raw, tickers[0]))
+    rows = [r for r in rows if r is not None and len(r)]
     if not rows:
         return pd.DataFrame()
-    return pd.concat(rows, ignore_index=True).dropna(subset=["close"])
+    return pd.concat(rows, ignore_index=True)
 
 
 def bootstrap(days: int = 400, tickers: list[str] | None = None, resume: bool = True) -> None:
@@ -195,17 +232,82 @@ def update(lookback_days: int = 7) -> None:
         start = end - timedelta(days=max(lookback_days, 30))
         print("[price_store] empty store — short window; run bootstrap for full history")
     print(f"[price_store] update {start} → {end} for {len(names)} tickers")
+    import time
     frames = [existing] if len(existing) else []
+    n_chunks = max(1, (len(names) - 1) // CHUNK + 1)
     for i in range(0, len(names), CHUNK):
         batch = names[i : i + CHUNK]
-        if (i // CHUNK) % 10 == 0:
-            print(f"[price_store] update chunk {i//CHUNK+1}/{(len(names)-1)//CHUNK+1}")
+        print(f"[price_store] update chunk {i//CHUNK+1}/{n_chunks}")
         part = _yf_download(batch, start.isoformat(), end.isoformat())
+        if not len(part):
+            time.sleep(4)
+            part = _yf_download(batch, start.isoformat(), end.isoformat())
         if len(part):
             frames.append(part)
+        time.sleep(1.5)
     if not frames:
         raise SystemExit("[price_store] update got nothing")
     _save_store(pd.concat(frames, ignore_index=True))
+
+
+def fill_range(start: str, end: str, tickers: list[str] | None = None) -> None:
+    """Download official regular-session bars for every universe name in [start, end].
+
+    ``update()`` keys off the store's max date, so a handful of seeded
+    tickers through Friday would skip everyone else. Factor-mine marks
+    every name; this fills the hole.
+    """
+    import time
+    names = tickers or _universe_tickers()
+    existing = _load_store()
+    print(f"[price_store] fill_range {start} → {end} for {len(names)} tickers")
+    frames = [existing] if len(existing) else []
+    n_chunks = max(1, (len(names) - 1) // CHUNK + 1)
+    for i in range(0, len(names), CHUNK):
+        batch = names[i : i + CHUNK]
+        print(f"[price_store] fill chunk {i//CHUNK+1}/{n_chunks} ({batch[0]}…{batch[-1]})")
+        part = _yf_download(batch, start, end)
+        if not len(part):
+            time.sleep(6)
+            part = _yf_download(batch, start, end)
+        if len(part):
+            frames.append(part)
+            if (i // CHUNK) % 8 == 7:
+                _save_store(pd.concat(frames, ignore_index=True))
+                frames = [_load_store()]
+        time.sleep(1.5)
+    if frames:
+        _save_store(pd.concat(frames, ignore_index=True))
+
+
+def ensure_through(end: str | None = None) -> None:
+    """Fill official regular-session bars through the last closed session.
+
+    No-op when the store already covers `end` (or last close). Used by
+    factor-mine --write so 09:30 / 16:00 marks cannot fall back to a
+    stale parquet + same-day Finviz last-trade.
+    """
+    from .skip_if_good import last_closed_session
+
+    existing = _load_store()
+    closed = last_closed_session()
+    target_s = str(end or closed)[:10]
+    if target_s > closed:
+        target_s = closed
+    n_on = 0
+    if len(existing):
+        last = existing["date"].max().date().isoformat()
+        on = existing[existing["date"] == pd.Timestamp(target_s)]
+        n_on = int(on["ticker"].nunique()) if len(on) else 0
+        # Max date can be a handful of seeded names. Need broad coverage
+        # before factor-mine marks every lot.
+        if last >= target_s and n_on >= 8000:
+            print(f"[price_store] ensure_through {target_s} have {n_on} tickers")
+            return
+    print(f"[price_store] ensure_through → {target_s} (have {n_on} bars that day)")
+    start = (datetime.strptime(target_s, "%Y-%m-%d") - timedelta(days=21)).date().isoformat()
+    stop = (datetime.strptime(target_s, "%Y-%m-%d") + timedelta(days=1)).isoformat()
+    fill_range(start, stop)
 
 
 def candle_bias(ohlc: pd.DataFrame, lookback: int = 10) -> dict:
@@ -386,6 +488,10 @@ def main() -> None:
     b.add_argument("--no-resume", action="store_true")
     u = sub.add_parser("update")
     u.add_argument("--lookback-days", type=int, default=7)
+    f = sub.add_parser("fill-range")
+    f.add_argument("--start", required=True)
+    f.add_argument("--end", required=True)
+    f.add_argument("--tickers", default=None)
     sub.add_parser("status")
     args = ap.parse_args()
     if args.cmd == "status":
@@ -395,6 +501,9 @@ def main() -> None:
         bootstrap(days=args.days, tickers=tickers, resume=not args.no_resume)
     elif args.cmd == "update":
         update(lookback_days=args.lookback_days)
+    elif args.cmd == "fill-range":
+        tickers = [t.strip().upper() for t in args.tickers.split(",")] if args.tickers else None
+        fill_range(args.start, args.end, tickers=tickers)
 
 
 if __name__ == "__main__":

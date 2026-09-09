@@ -77,24 +77,25 @@ def load_regime() -> dict:
 
 
 def _px(ticker: str, date: str, which: str, bars: dict | None):
+    """One official print. Do not substitute close for a missing open.
+
+    A missing 09:30 used to silently become the 16:00 print and mark the
+    session flat (ATRC 2026-09-08 09:30 $52.37 → close $52.37). Reality
+    that day was 09:30 $54.31 → close $53.73.
+    """
     bar = fm._bar(ticker, date, bars)
-    return fm._finite(bar.get(which)) or fm._finite(bar.get("close"))
+    return fm._finite(bar.get(which))
 
 
 def _lot_px(lot: dict, date: str, which: str, bars) -> float:
     """Open/close for a held lot. A missing tape carries the last mark.
 
-    Never fall back to a stale last_px from a prior session's *open* when
-    today's bar is empty — that would replay yesterday's open→close as
-    today's session.
+    Never substitute today's open for a missing close — that reprints a
+    flat session. Never replay a prior session's open as today's open.
     """
     px = _px(lot["ticker"], date, which, bars)
     if px is not None:
         return float(px)
-    if which == "close":
-        opx = _px(lot["ticker"], date, "open", bars)
-        if opx is not None:
-            return float(opx)
     return float(lot.get("close_px") or lot.get("last_px") or lot["entry_px"])
 
 

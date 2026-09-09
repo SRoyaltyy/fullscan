@@ -23,9 +23,11 @@ def test_session_dates_skip_weekends() -> None:
     assert "2026-08-29" not in dates  # Saturday dump
     assert "2026-08-30" not in dates  # Sunday dump
     assert "2026-04-26" not in dates  # Sunday dump
+    assert "2026-09-07" not in dates  # Labor Day — NYSE closed
     from datetime import datetime
     for d in dates:
         assert datetime.strptime(d, "%Y-%m-%d").weekday() < 5
+        assert tl.is_trading_date(d)
 
 
 def test_any_finviz_name_gets_cards_without_book() -> None:
