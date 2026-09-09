@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T09:00:40.806034-04:00",
+  "generated_at": "2026-09-09T09:00:51.064772-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -12,49 +12,53 @@
   "buy_1d": [
     {
       "ticker": "NVT",
-      "score": 0.6124360445345847
+      "score": 0.6081932140222619
     },
     {
       "ticker": "DINO",
-      "score": 0.2980268793852083
+      "score": 0.3792112265780485
     },
     {
       "ticker": "UGP",
-      "score": 0.7650064359947992
+      "score": 0.829334975468365
+    },
+    {
+      "ticker": "CVI",
+      "score": 0.8383879486165673
     }
   ],
   "sell_1d": [
     {
       "ticker": "BGS",
-      "score": -0.4232519147363987
+      "score": -0.4158775493338465
     },
     {
       "ticker": "XHG",
-      "score": -0.4050387451388413
+      "score": -0.38231292819943274
+    },
+    {
+      "ticker": "METC",
+      "score": -0.555774163088432
     },
     {
       "ticker": "SMPL",
       "score": -0.37044391012687466
     },
     {
-      "ticker": "METC",
-      "score": -0.5237677090795047
+      "ticker": "NG",
+      "score": -0.35537526970335365
     },
     {
       "ticker": "BRBR",
-      "score": -0.32973158242259604
+      "score": -0.32562696307416694
     },
     {
       "ticker": "BRO",
-      "score": -0.2331439560346588
+      "score": -0.2374502796489299
     },
     {
       "ticker": "GIS",
-      "score": -0.4900687853313184
-    },
-    {
-      "ticker": "CPB",
-      "score": -0.2834966473534064
+      "score": -0.489074188139194
     }
   ],
   "flatten": {
@@ -84,24 +88,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "sector_predict",
-      "title": "Per-sector predict (all 11)",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T08:19:17.298273-04:00",
-      "files": [
-        {
-          "path": "01_daily/sectors/2026-09-09",
-          "ok": true,
-          "reason": "",
-          "size": 5,
-          "preview": "10/10 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
-        }
-      ],
-      "preview": "10/10 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -283,6 +269,45 @@
         }
       ],
       "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HRMY, CDNA, ONC, DVN, WAY"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T09:00:50.249676-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-09_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1463822,
+          "preview": "1d BUY NVT, DINO, UGP, CVI \u00b7 SELL BGS, XHG, METC, SMPL, NG, BRBR, BRO, GIS"
+        },
+        {
+          "path": "data/stock_book/2026-09-09_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-09_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2545,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "01_daily/2026-09-09_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 79795,
+          "preview": "# Stock book \u2014 2026-09-09\n_Generated 2026-09-09T09:00:47.965396-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY NVT, DINO, UGP, CVI \u00b7 SELL BGS, XHG, METC, SMPL, NG, BRBR, BRO, GIS \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 # Stock book \u2014 2026-09-09\n_Generated 2026-09-09T09:00:47.965396-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
