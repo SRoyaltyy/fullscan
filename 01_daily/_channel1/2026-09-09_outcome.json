@@ -1,6 +1,6 @@
 {
   "stage": "outcome",
-  "fetched_at": "2026-09-09T18:33:22.086263-04:00",
+  "fetched_at": "2026-09-09T18:46:01.793514-04:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -88,20 +88,20 @@
     "CL=F": {
       "available": true,
       "date": "2026-09-09",
-      "last": 97.1,
-      "pct_1d": 4.37
+      "last": 97.03,
+      "pct_1d": 4.3
     },
     "BZ=F": {
       "available": true,
       "date": "2026-09-09",
-      "last": 102.03,
-      "pct_1d": 4.2
+      "last": 101.94,
+      "pct_1d": 4.11
     },
     "GC=F": {
       "available": true,
       "date": "2026-09-09",
-      "last": 4446.8,
-      "pct_1d": 1.2
+      "last": 4445.6,
+      "pct_1d": 1.18
     },
     "DXY": {
       "available": true,
@@ -115,13 +115,13 @@
     "ES=F": {
       "available": true,
       "date": "2026-09-09",
-      "last": 7646.75,
+      "last": 7646.5,
       "pct_1d": -0.44
     },
     "NQ=F": {
       "available": true,
       "date": "2026-09-09",
-      "last": 29428.75,
+      "last": 29429.0,
       "pct_1d": -0.37
     }
   },
@@ -557,8 +557,10 @@
     "window": "2026-09-01..2026-09-09"
   },
   "fear_greed": {
-    "available": false,
-    "note": "fetch failed: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata; no Supabase fallback data"
+    "available": true,
+    "value": 58.2,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-27 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
   },
   "fedwatch": {
     "available": false,
@@ -567,7 +569,8 @@
   "news_24h": {
     "available": false,
     "count": 0,
-    "items": []
+    "items": [],
+    "error": "db_timeout"
   },
   "actual_close": {
     "SPX": {

@@ -2,43 +2,35 @@
 
 
 
-**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (22,991 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
+**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (23,169 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
 
 
 
-**Step 1 — Research.** The model wanted to know: *"stock market close September 9 2026 S&P 500 oil Iran tanker"* → got 6 results (via searxng)
+**Step 1 — Research.** The model wanted to know: *"stock market close September 9 2026 S&P 500 Dow Nasdaq"* → got 6 results (via ddg)
 
-  - Stock market news for Sept. 8, 2026 (https://www.cnbc.com/2026/09/07/stock-market-tuesday-live-updates.html)
+  - Stock Market Today, September 9, 2026: S&P 500, Nasdaq Close Recap (https://tickerdaily.com/article/stock-market-today-september-9-2026-sandp-500-nasdaq-close-recap)
 
-  - United States Stock Market Index - Quote - Chart - Historical Data - News | Trading Economics (https://tradingeconomics.com/united-states/stock-market)
+  - How major US stock indexes fared Wednesday 9/9/2026 (https://apnews.com/article/wall-street-stocks-dow-nasdaq-31c966aef214740b8fec71e399a051b8)
 
-  - Wall Street ends lower as higher yields, rising oil prices ... (https://www.reuters.com/business/wall-st-futures-kick-off-september-under-pressure-yields-oil-prices-rise-2026-09-01/)
+  - US Stock Market Today Sep 09, 2026 — S&P 500, Dow & Nasdaq Close (https://vittarthi.com/markets/us)
 
-**Step 2 — Research.** The model wanted to know: *"Iran US tanker attacks oil shipping September 9 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"Iran US tanker attacks oil shipping Hormuz September 2026"* → got 6 results (via ddg)
+
+  - 2026 Strait of Hormuz crisis - Wikipedia (https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis)
 
   - U.S. strikes Iran oil tankers for first time in retaliation for Hormuz strikes (https://www.axios.com/2026/09/02/iran-tankers-hormuz-attacks-oil)
 
-  - US, Iran engaged in tanker war: Where is the months-long conflict headed? | US-Israel war on Iran News | Al Jazeera (https://www.aljazeera.com/news/2026/9/6/us-iran-engaged-in-tanker-war-where-is-the-months-long-conflict-headed)
+  - US strikes oil tankers, Tehran claims attacks on US-linked vessels - ABC News (https://abcnews.com/International/live-updates/iran-live-updates-centcom-targeted-iranian-forces-posed/?id=136080582)
 
-  - U.S. Strikes Three Iranian ‘Shadow Network’ Oil Tankers, Military Says - The New York Times (https://www.nytimes.com/2026/09/05/world/middleeast/iran-us-kharg-oil-tanker-attack.html)
+**Step 4 — Research.** The model wanted to know: *"stock market September 9 2026 oil $100 Treasury yields Fed rate hike"* → got 6 results (via ddg)
 
-**Step 4 — Research.** The model wanted to know: *"TheStreet stock market today September 9 2026 Dow S&P 500 Nasdaq close"* → got 6 results (via ddg)
+  - Stock Market Today: 10-Year Treasury Yield Hits Multiyear High (https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-09-09-2026)
 
-  - Stock market news for Sept. 9, 2026 (https://www.cnbc.com/2026/09/08/stock-market-today-live-updates.html)
+  - Stock Market Today: Major Indexes End Lower for 3rd Straight ... (https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-09092026-12112269)
 
-  - Stock Market Midday, Sept. 9: Stocks Slide as Oil Surges Past $100, While Meta Gains | The Motley Fool (https://www.fool.com/coverage/stock-market-today/2026/09/09/stock-market-midday-sept-9-stocks-slide-as-oil-surges-past-usd100-while-meta-gains/)
+  - US Stock Market Pre-Open Analysis September 9, 2026 (https://www.facebook.com/FxMarketLeaders/posts/fxleaders-trade-the-newsdaily-analysis-september-9-2026us-markets-pre-openus-sto/1680882763944557/)
 
-  - S&P 500 posts back-to-back gains as Treasury yields retreat (https://www.cnbc.com/2026/09/02/stock-market-today-live-updates.html)
-
-**Step 5 — Research.** The model wanted to know: *"Treasury yields 52-week high September 9 2026 10-year"* → got 6 results (via ddg)
-
-  - Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity, Quoted on an Investment Basis (DGS10) | FRED | St. Louis Fed (https://fred.stlouisfed.org/series/DGS10)
-
-  - US 10 Year Treasury Note Yield - Quote - Chart - Historical Data - News (https://tradingeconomics.com/united-states/government-bond-yield)
-
-  - US10Y: U.S. 10 Year Treasury - Stock Price, Quote and News - CNBC (https://www.cnbc.com/quotes/US10Y)
-
-**Step 7 — Research.** The model wanted to know: *"Apple foldable iPhone event September 9 2026 stock reaction"* → got 6 results (via ddg)
+**Step 5 — Research.** The model wanted to know: *"Apple foldable iPhone event September 9 2026 stock reaction"* → got 6 results (via ddg)
 
   - Apple event live updates: First foldable, the iPhone Duo ... (https://finance.yahoo.com/markets/stocks/live/apple-event-live-updates-first-foldable-iphone-iphone-18-pro-and-watches-expected-122840434.html)
 
@@ -46,124 +38,132 @@
 
   - Apple Special Event Announced for September 9: 'Surprise and ... (https://www.reddit.com/r/apple/comments/1vz18l3/apple_special_event_announced_for_september_9/)
 
-**Step 8 — Research.** The model wanted to know: *"Treasury buyback triple $6 billion September 9 2026 yields"* → got 6 results (via ddg)
+**Step 7 — Research.** The model wanted to know: *""September 9 2026" stock market sectors energy oil stocks winners losers"* → got 6 results (via ddg)
 
-  - Treasury Department to buy back up to $6 billion in longer-term debt, triple the normal level (https://www.cnbc.com/2026/09/09/treasury-department-to-buy-back-6-billion-in-longer-term-debt-triple-the-normal-level.html)
+  - Stock Market Midday, Sept. 9: Stocks Slide as Oil Surges Past $100, While Meta Gains (https://finance.yahoo.com/markets/stocks/articles/stock-market-midday-sept-9-165800985.html)
+
+  - Market Review: September 09, 2026 - Investrade (https://investrade.com/market-review-september-09-2026/)
+
+  - Stock market news for Sept. 2, 2026 (https://www.cnbc.com/2026/09/01/stock-market-today-live-updates.html)
+
+**Step 8 — Research.** The model wanted to know: *"Warsh Fed rate hike September 2026 hawkish oil inflation"* → got 6 results (via ddg)
+
+  - Fed Rate Hike September 2026: Markets Brace for 25bps Move Amid ... (https://intellectia.ai/blog/fed-rate-hike-september-2026)
+
+  - Jackson Hole analyst roundup: Fed's Warsh sounds more hawkish - CNBC (https://www.cnbc.com/2026/08/31/jackson-hole-fed-chair-kevin-warsh-hawkish-rate-hikes-analysts.html)
+
+  - Warsh Sounds Hawkish, but Will There Be a September Rate Hike? (https://www.morningstar.com/economy/warsh-sounds-hawkish-will-there-be-september-rate-hike)
+
+**Step 10 — Research.** The model wanted to know: *"10-year Treasury yield September 9 2026 highest since 2023 4.8%"* → got 6 results (via ddg)
+
+  - 10-year U.S. Treasury yield hits highest level since November 2023 (https://www.cnbc.com/2026/09/02/bond-yields-treasurys-inflation.html)
+
+  - US 10 Year Treasury Note Yield - Quote - Chart - Historical Data - News (https://tradingeconomics.com/united-states/government-bond-yield)
+
+  - Bond yields hit highest levels since 2023 after Treasury Department announces up to $6 billion in buybacks | CNN Business (https://www.cnn.com/2026/09/09/economy/bond-market-treasury)
+
+**Step 11 — Research.** The model wanted to know: *"China CPI inflation data September 9 2026 exports"* → got 6 results (via ddg)
+
+  - China Inflation Rate (https://tradingeconomics.com/china/inflation-cpi)
+
+  - China Consumer Price Index (CPI) (https://tradingeconomics.com/china/consumer-price-index-cpi)
+
+  - Inflation, consumer prices (annual %) - China | Data (https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=CN)
+
+**Step 13 — Research.** The model wanted to know: *"Treasury buyback $6 billion September 9 2026 bond yields"* → got 6 results (via ddg)
 
   - Treasury Announces Increased Sizes of Nominal Long-End Liquidity Support Buybacks Beginning September 9 | U.S. Department of the Treasury (https://home.treasury.gov/news/press-releases/sb0607)
 
-  - U.S. Treasury is set to triple long-bond buybacks to $6B, and yields are still climbing | Seeking Alpha (https://seekingalpha.com/news/4641283-us-treasury-is-set-to-triple-long-bond-buybacks-to-6b-and-yields-are-still-climbing)
+  - Treasury increases maximum buyback to $6 billion in effort to lower bond yields (https://thehill.com/business/6079152-treasury-increases-maximum-buyback-to-6-billion-in-effort-to-lower-bond-yields/)
 
-**Step 10 — Research.** The model wanted to know: *"Warsh Fed rate hike September 2026 hawkish oil inflation"* → got 6 results (via ddg)
+  - Treasury announces $6 billion in bond buybacks - UPI.com (https://www.upi.com/Top_News/US/2026/09/09/treasury-bessent-buyback-6-billion/2701788983238)
 
-  - Jackson Hole analyst roundup: Warsh's speech sends hike chances higher, may put Fed 'at odds' with Treasury (https://www.cnbc.com/2026/08/31/jackson-hole-fed-chair-kevin-warsh-hawkish-rate-hikes-analysts.html)
+**Step 14 — Research.** The model wanted to know: *"Apple stock September 9 2026 iPhone Duo event close"* → got 6 results (via ddg)
 
-  - Fed Rate Hike September 2026: Markets Brace for 25bps Move Amid Inflation Fears (https://intellectia.ai/blog/fed-rate-hike-september-2026)
+  - Apple event: CEO John Ternus reveals foldable iPhone Duo | CNN Business (https://www.cnn.com/2026/09/09/business/live-news/apple-event-foldable-iphone-ternus)
 
-  - Warsh Sounds Hawkish, but Will There Be a September Rate Hike? | Morningstar (https://www.morningstar.com/economy/warsh-sounds-hawkish-will-there-be-september-rate-hike)
+  - Apple Stock Rises on iPhone Duo Launch at $1,999 - Apple (NASDAQ:AAPL) - Benzinga (https://www.benzinga.com/markets/tech/26/09/61699396/apple-stock-iphone-duo-foldable-launch-1999-price-preorder-october)
 
-**Step 11 — Research.** The model wanted to know: *"stock market September 9 2026 Apple event sell the news Alphabet Meta"* → got 6 results (via ddg)
+  - Apple’s iPhone Duo Makes Its Debut, but Wall Street’s Real Test Comes With Holiday Guidance (https://www.ainvest.com/news/apple-iphone-duo-debut-wall-street-real-test-holiday-guidance-2609/)
 
-  - Apple Inc. (AAPL) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/AAPL/)
+**Step 16 — Research.** The model wanted to know: *"stock market September 9 2026 third straight decline oil $100 10-year yield multiyear high"* → got 6 results (via ddg)
 
-  - Crude Hits $100, Denting Stocks Before Apple Event | Charles Schwab (https://www.schwab.com/learn/story/stock-market-update-open)
+  - Stock Market Today: 10-Year Treasury Yield Hits Multiyear High (https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-09-09-2026)
 
-  - How Apple stock usually reacts to big iPhone reveal events (https://finance.yahoo.com/technology/article/how-apple-stock-usually-reacts-to-big-iphone-reveal-events-152915777.html)
+  - Dow Drops as $100 Oil, High Yields Sink Stocks - Barron's (https://www.barrons.com/livecoverage/stock-market-news-today-090926)
 
-**Step 13 — Research.** The model wanted to know: *"Alphabet stock drop September 9 2026 reason"* → got 6 results (via ddg)
+  - Stock market news for Sept. 8, 2026 - CNBC (https://www.cnbc.com/2026/09/07/stock-market-tuesday-live-updates.html)
 
-  - Why Alphabet Stock Just Crashed - Yahoo Finance (https://finance.yahoo.com/markets/stocks/articles/why-alphabet-stock-just-crashed-163518443.html)
+**Step 17 — Research.** The model wanted to know: *"September 9 2026 market intraday path choppy rebound midday"* → got 6 results (via ddg)
 
-  - Why Alphabet (GOOGL) Shares Are Getting Obliterated Today (https://finance.yahoo.com/markets/stocks/articles/why-alphabet-googl-shares-getting-230719406.html)
+  - Midday Stock Market Update 9/8/2026 - Facebook (https://www.facebook.com/garyslonereports/posts/midday-stock-market-update-982026/1711518800980501/)
 
-  - Google Stock Has Been Falling – Here Are Two Reasons Why (https://www.tipranks.com/news/google-stock-has-been-falling-here-are-two-reasons-why)
+  - These stocks were the S&P 500, Nasdaq and Dow's top market ... (https://www.facebook.com/cnbc/posts/these-stocks-were-the-sp-500-nasdaq-and-dows-top-market-movers-for-the-day-septe/1474204061247649/)
 
-**Step 14 — Research.** The model wanted to know: *""September 9, 2026" stock market oil Brent $101 yields 52-week high close"* → got 6 results (via ddg)
+  - Stock market today: Dow, S&P 500, Nasdaq rise for second day ... (https://finance.yahoo.com/news/live/stock-market-today-dow-sp-500-nasdaq-rise-for-second-day-in-a-row-with-fed-decision-on-deck-200307065.html)
 
-  - Brent oil - Price - Chart - Historical Data - News (https://tradingeconomics.com/commodity/brent-crude-oil)
+**Step 19 — Research.** The model wanted to know: *"Investopedia stock market today September 9 2026 oil $100 10-year yield highest"* → got 6 results (via ddg)
 
-  - Crude Hits $100, Denting Stocks Before Apple Event | Charles Schwab (https://www.schwab.com/learn/story/stock-market-update-open)
+  - Markets News, Sept. 8, 2026: Dow Drops, Indexes End Lower ... (https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-09082026-12110868)
 
-  - Morning Preview: September 09, 2026 - Investrade (https://investrade.com/morning-preview-september-09-2026/)
+  - Investopedia (https://www.investopedia.com/)
 
-**Step 16 — Research.** The model wanted to know: *"Alphabet GOOGL stock September 9 2026 antitrust ruling"* → got 6 results (via ddg)
+  - Major U.S. stock indexes declined Wednesday as global ... (https://www.threads.com/@investopedia/post/DdEzSmhlOyx/major-u-s-stock-indexes-declined-wednesday-as-global-benchmark-oil-prices-rose/)
 
-  - Google Ad Tech Ruling: No Breakup, What Changes (Sept 2026 ... (https://explainx.ai/blog/google-ad-tech-antitrust-ruling-no-breakup-2026)
+**Step 20 — Research.** The model wanted to know: *"oil settles above $100 September 9 2026 Brent WTI close"* → got 6 results (via ddg)
 
-  - Google's 90% Search Monopoly Faces DOJ Breakup [2026] (https://tech-insider.org/google-antitrust-appeal-doj-search-monopoly-2026/)
+  - Price of oil - Wikipedia (https://en.wikipedia.org/wiki/Price_of_oil)
 
-  - GOOGL Slides As Legal Risks Mount And AI Rivals Circle (https://stockstotrade.com/news/alphabet-inc-googl-news-2026_09_09/)
+  - Benchmark Brent crude oil futures rose past $100 a barrel on ... (https://www.facebook.com/Reuters/posts/benchmark-brent-crude-oil-futures-rose-past-100-a-barrel-on-september-9-breachin/1665400692117323/)
 
-**Step 17 — Research.** The model wanted to know: *"Russell 2000 small caps September 9 2026 decline 1.3%"* → got 6 results (via ddg)
+  - Brent oil - Price - Chart - Historical Data - Trading Economics (https://tradingeconomics.com/commodity/brent-crude-oil)
 
-  - Us equities mixed as small caps decline August 2026 - Facebook (https://www.facebook.com/investwithSIB/posts/in-our-roundup-of-last-weeks-globalmarkets-activity-us-equities-ended-the-week-m/1409820284581514/)
+**Step 22 — Research.** The model wanted to know: *"Reuters Wall Street close September 9 2026 stocks oil yields"* → got 6 results (via ddg)
 
-  - The bull case for small-cap stocks is narrowing - LinkedIn (https://www.linkedin.com/pulse/bull-case-small-cap-stocks-narrowing-phil-rosen-qhuue)
+  - Wall Street ends lower as higher yields, rising oil prices ... (https://www.reuters.com/business/wall-st-futures-kick-off-september-under-pressure-yields-oil-prices-rise-2026-09-01/)
 
-  - Andrew Graham says 2026 has seen the strongest opening of ... (https://www.facebook.com/schwabnetwork/videos/andrew-graham-says-2026-has-seen-the-strongest-opening-of-any-year-for-the-russe/2406922953095917/)
+  - Wall Street ends lower as yields, oil prices rise (https://www.reuters.com/video/watch/idRW947701092026RP1/)
 
-**Step 19 — Research.** The model wanted to know: *"Chevron energy stocks gain September 9 2026 oil rally winners"* → got 6 results (via ddg)
+  - Wall St ends higher as stocks reclaim some shine (https://www.reuters.com/business/us-stock-index-futures-subdued-oil-treasury-yields-rise-iran-tensions-2026-09-02/)
 
-  - Chevron Stock Just Got a New Street-High Price Target. How to ... (https://finance.yahoo.com/markets/stocks/articles/chevron-stock-just-got-street-110002106.html)
+**Step 23 — Research.** The model wanted to know: *""September 9" 2026 market close energy stocks gain industrials fall Apple sell the news"* → got 6 results (via ddg)
 
-  - Chevron Corporation Stock Price - Perplexity (https://www.perplexity.ai/finance/CVX)
+  - Crude Hits $100, Denting Stocks Before Apple Event (https://www.schwab.com/learn/story/stock-market-update-open)
 
-  - Chevron on Friday reported second-quarter profits that surged ... (https://www.facebook.com/cnbc/videos/chevron-on-friday-reported-second-quarter-profits-that-surged-on-rising-oil-pric/1362182042199190/)
+  - Stock market today: Dow, S&P 500, Nasdaq fall as Treasury ... (https://finance.yahoo.com/markets/live/stock-market-today-wednesday-september-9-dow-sp-500-nasdaq-futures-080411279.html)
 
-**Step 20 — Research.** The model wanted to know: *"Meta Muse AI agent stock jump September 9 2026"* → got 6 results (via ddg)
+  - These stocks were the S&P 500, Nasdaq and Dow's top market ... (https://www.facebook.com/cnbc/posts/these-stocks-were-the-sp-500-nasdaq-and-dows-top-market-movers-for-the-day-septe/1474204061247649/)
 
-  - Meta Stock Jumps 5% After New AI Agent Muse Takes Aim at ... (https://finance.yahoo.com/technology/ai/articles/meta-stock-jumps-5-ai-164113999.html)
+**Step 25 — Research.** The model wanted to know: *"Yahoo Finance stock market today September 9 2026 Dow S&P Nasdaq Treasury yields oil tops 100"* → got 6 results (via ddg)
 
-  - Meta stock jumps as new personal AI agent Muse addresses a ... (https://www.morningstar.com/news/marketwatch/20260909109/meta-stock-jumps-as-new-personal-ai-agent-muse-addresses-a-major-investor-concern)
+  - Stock market today: Dow, S&P 500, Nasdaq fall as Treasury ... (https://finance.yahoo.com/markets/live/stock-market-today-wednesday-september-9-dow-sp-500-nasdaq-futures-080411279.html)
 
-  - Meta's stock popped after introducing Muse, a standalone AI ... (https://www.facebook.com/yahoofinance/posts/metas-stock-popped-after-introducing-muse-a-standalone-ai-assistant-that-analyst/1439326614728779/)
+  - Yahoo Finance - Stock Market Live, Quotes, Business ... (https://finance.yahoo.com/)
 
-**Step 22 — Research.** The model wanted to know: *"Apple stock close September 9 2026 iPhone Duo event reaction"* → got 6 results (via ddg)
+  - S&P 500 (^GSPC) Charts, Data & News - Yahoo Finance (https://finance.yahoo.com/quote/^GSPC/)
 
-  - Apple event 2026 recap: iPhone Duo, iPhone 18 Pro, and more (https://www.cnbc.com/2026/09/09/apple-event-today-live-updates.html)
+**Step 26 — Research.** The model wanted to know: *"10-year Treasury auction September 9 2026 results demand"* → got 6 results (via gnews_rss)
 
-  - WOLF on X: "This is how Apple $AAPL stock is doing following ... (https://x.com/WOLF_Financial/status/2097776864399909375)
+  - US: 10-Yr Note Auction - CME Group (https://news.google.com/rss/articles/CBMiaEFVX3lxTFBXRWxoYW9PZS1ZbHlFZXNEMFBvN1VLMFpEM3ZQY09heGF0X090S0M2TmZGVEpqSDJNRnlWb2pnemRSQi1sYTJoYnd0OVFMVGFPNEdhS3Z5RHNKTHBXOVFMWksyVm1lY2RM?oc=5)
 
-  - Apple: With Launch of Foldable iPhone Duo, Things Look ... (https://global.morningstar.com/en-gb/stocks/apple-with-launch-foldable-iphone-duo-things-look-twice-nice)
+  - 10-Year Treasury Yield Near 4.83% After Strong Auction—Why Oil Still Matters - TechStock² (https://news.google.com/rss/articles/CBMinAFBVV95cUxNUDVMZE1XX3hMVklWb2R6V0lmV1hXRzhQaGJESDBpVnVLbHhvRUZ5T182VHJvdjgzTld0YnJTQ0sxaFJTbjBsZE1FOTJ0RGM1VGMxLTMyckJ1ZHlCQXAyLXdBZzJibDF2TFNxSVpXRnRsV0ZRYjRvTTZFclNNVGVZVjIzbkpXMlZtcENRdHpjVGNuWEd1WGRLbkx5NVY?oc=5)
 
-**Step 23 — Research.** The model wanted to know: *"US Canada trade war Section 338 tariffs September 9 2026"* → got 6 results (via ddg)
+  - USD/MXN Forecast: Neutrality Remains the Dominant Theme - FOREX.com (https://news.google.com/rss/articles/CBMiowFBVV95cUxOMGRvblVlNWl5WE5ISXZReUx4RkpEUUZoMTVhdGIzYzlRN2JiRWlVa0dwcnJPZDRDU2NDckhDbFA2cUdBT1VVd1RnbjJGYzFYNDY5TTcwZUN2c1VFa3M2RTh3MzZBSWZQQy0taVJTSEp3Zkh0Ylg3T3FMYXd5TTN0cVNaekxnY1E5ZmhMRXk4R0YxSGd2cE9LTFJpbmlwWnlwOGpn?oc=5)
 
-  - 2025–2026 United States trade war with Canada and Mexico (https://en.wikipedia.org/wiki/2025–2026_United_States_trade_war_with_Canada_and_Mexico)
+**Step 28 — Research.** The model wanted to know: *""10-year Treasury yield" "4.83" OR "4.84" September 9 2026 auction strong"* → got 6 results (via ddg)
 
-  - New U.S. tariff retaliation: What it means for Canada's economy (https://www.rbc.com/en/economics/canadian-analysis/featured-analysis/insights/new-u-s-tariff-retaliation-what-it-means-for-canadas-economy/)
+  - 10-year Treasury auction brings afternoon relief to bond market (https://seekingalpha.com/news/4641315-10-year-treasury-auction-brings-afternoon-relief-to-bond-market)
 
-  - WATCH: Canada is officially striking back in the trade war with ... (https://www.facebook.com/WGME13/videos/watch-canada-is-officially-striking-back-in-the-trade-war-with-the-united-states/1620048229553367/)
+  - Stock Market Today: 10-Year Treasury Yield Hits Multiyear High (https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-09-09-2026)
 
-**Step 25 — Research.** The model wanted to know: *"stock market close September 9 2026 recap CNBC what drove decline"* → got 6 results (via ddg)
+  - #AUCTIONRESULT: Treasury Partially Awards Re-Issued ... (https://www.facebook.com/TreasuryPh/posts/auctionresult-treasury-partially-awards-re-issued-treasury-bond-series-10-71-ful/1409013351418526/)
 
-  - Stock Market Today, September 9, 2026: S&P 500, Nasdaq Close Recap (https://tickerdaily.com/article/stock-market-today-september-9-2026-sandp-500-nasdaq-close-recap)
+**Step 29 — Research.** The model wanted to know: *"US Iran tanker attacks September 9 2026 oil spike market reaction energy stocks"* → got 6 results (via ddg)
 
-  - Stock Market Recap September 9, 2026: Yield Spike Sinks Stocks (https://tradingstrategyguides.com/stock-market-recap-september-9-2026-yield-spike-sinks-stocks/)
+  - Economic impact of the 2026 Iran war - Wikipedia (https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war)
 
-  - How major US stock indexes fared Wednesday 9/9/2026 (https://apnews.com/article/wall-street-stocks-dow-nasdaq-31c966aef214740b8fec71e399a051b8)
+  - Brent Oil Hits $100 as US-Iran War Shows Little Sign of Abating (https://www.youtube.com/watch)
 
-**Step 26 — Research.** The model wanted to know: *"10-year Treasury yield 4.82% September 9 2026 record high close"* → got 6 results (via ddg)
-
-  - How low will 10-year Treasury yield get in September? (https://polymarket.com/event/how-low-will-10-year-treasury-yield-get-in-september)
-
-  - U.S. 10-year yield hits 4.82% intraday, highest in 34 months ... (https://www.facebook.com/arirangtvnews/videos/us-10-year-yield-hits-482-intraday-highest-in-34-months-amid-bond-sell-off/1052103954215163/)
-
-  - 10-Year Treasury Yield Near 4.82% Amid Inflation Fears (https://www.briefs.co/news/10-year-treasury-yield-hits-multiyear-high-as-inflation-and/)
-
-**Step 28 — Research.** The model wanted to know: *"Investopedia stock market September 9 2026 third straight loss recap"* → got 6 results (via ddg)
-
-  - Markets News, July 9, 2026: Stocks End Higher, Powered by ... (https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-07092026-12014853)
-
-  - Markets News, Sept. 2, 2026: Stocks Snap 3-Session Skid as ... (https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-09022026-12076478)
-
-  - New all time highs for the #stockmarket | Investopedia - Facebook (https://www.facebook.com/Investopedia/videos/new-all-time-highs-for-the-stockmarket-/965846005827943/)
-
-**Step 29 — Research.** The model wanted to know: *"tradingstrategyguides stock market recap September 9 2026 yield spike"* → got 6 results (via ddg)
-
-  - Oil Prices In Focus: What To Watch On September 7, 2026 (https://tradingstrategyguides.com/oil-prices-in-focus-what-to-watch-on-september-7-2026/)
-
-  - Closing Bell September 1, 2026: Dell AI Surges As Dow Breaks ... (https://tradingstrategyguides.com/closing-bell-september-1-2026-dell-ai-surges-as-dow-breaks-50-day-line/)
-
-  - SLV SPIKES 3.1%: Silver Explodes Past $60 On September 3 ... (https://tradingstrategyguides.com/slv-spikes-3-1-silver-explodes-past-60-on-september-3-2026/)
+  - The conflict between the U.S. and Iran is escalating, with U.S. ... (https://www.facebook.com/GoodMorningAmerica/videos/the-conflict-between-the-us-and-iran-is-escalating-with-us-strikes-on-iranian-oi/1343775344228081/)
 
 **Step 31 — Search budget exhausted.** Forced to conclude with what it already gathered.

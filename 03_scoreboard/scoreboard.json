@@ -2792,18 +2792,6 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
-        },
-        "HORIZON_1M": {
-          "label": "1m",
-          "target_date": "2026-09-09",
-          "actual_pct": -2.09,
-          "actual_direction": "down",
-          "actual_magnitude_band": "mild",
-          "direction_hit": false,
-          "magnitude_hit": true,
-          "predicted_direction": "flat",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.4
         }
       },
       "lesson_schema_ok": true
@@ -4304,18 +4292,6 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
-        },
-        "HORIZON_2W": {
-          "label": "2w",
-          "target_date": "2026-09-08",
-          "actual_pct": -3.56,
-          "actual_direction": "down",
-          "actual_magnitude_band": "notable",
-          "direction_hit": false,
-          "magnitude_hit": false,
-          "predicted_direction": "flat",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.5
         }
       }
     },
@@ -4402,18 +4378,6 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
-        },
-        "HORIZON_2W": {
-          "label": "2w",
-          "target_date": "2026-09-08",
-          "actual_pct": -2.4,
-          "actual_direction": "down",
-          "actual_magnitude_band": "mild",
-          "direction_hit": false,
-          "magnitude_hit": true,
-          "predicted_direction": "flat",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.45
         }
       }
     },
@@ -4500,18 +4464,6 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
-        },
-        "HORIZON_2W": {
-          "label": "2w",
-          "target_date": "2026-09-08",
-          "actual_pct": 4.62,
-          "actual_direction": "up",
-          "actual_magnitude_band": "notable",
-          "direction_hit": false,
-          "magnitude_hit": false,
-          "predicted_direction": "flat",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.45
         }
       }
     },
@@ -4597,18 +4549,6 @@
           "magnitude_hit": false,
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
-          "confidence": 0.5
-        },
-        "HORIZON_2W": {
-          "label": "2w",
-          "target_date": "2026-09-08",
-          "actual_pct": -1.48,
-          "actual_direction": "down",
-          "actual_magnitude_band": "mild",
-          "direction_hit": false,
-          "magnitude_hit": false,
-          "predicted_direction": "up",
-          "predicted_magnitude_band": "notable",
           "confidence": 0.5
         }
       }
@@ -4782,18 +4722,6 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
-        },
-        "HORIZON_2W": {
-          "label": "2w",
-          "target_date": "2026-09-08",
-          "actual_pct": -6.48,
-          "actual_direction": "down",
-          "actual_magnitude_band": "severe",
-          "direction_hit": false,
-          "magnitude_hit": false,
-          "predicted_direction": "up",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.55
         }
       }
     },
@@ -4880,18 +4808,6 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
-        },
-        "HORIZON_2W": {
-          "label": "2w",
-          "target_date": "2026-09-08",
-          "actual_pct": -3.03,
-          "actual_direction": "down",
-          "actual_magnitude_band": "mild",
-          "direction_hit": false,
-          "magnitude_hit": true,
-          "predicted_direction": "flat",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.5
         }
       }
     },
@@ -6961,18 +6877,6 @@
           "actual_magnitude_band": "notable",
           "direction_hit": true,
           "magnitude_hit": false,
-          "predicted_direction": "up",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.6
-        },
-        "HORIZON_1W": {
-          "label": "1w",
-          "target_date": "2026-09-08",
-          "actual_pct": -1.53,
-          "actual_direction": "down",
-          "actual_magnitude_band": "mild",
-          "direction_hit": false,
-          "magnitude_hit": true,
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.6
@@ -10176,18 +10080,6 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
-        },
-        "HORIZON_1W": {
-          "label": "1w",
-          "target_date": "2026-09-08",
-          "actual_pct": -2.71,
-          "actual_direction": "down",
-          "actual_magnitude_band": "notable",
-          "direction_hit": false,
-          "magnitude_hit": false,
-          "predicted_direction": "up",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.5
         }
       }
     },
@@ -10262,18 +10154,6 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
-        },
-        "HORIZON_1W": {
-          "label": "1w",
-          "target_date": "2026-09-08",
-          "actual_pct": -2.61,
-          "actual_direction": "down",
-          "actual_magnitude_band": "notable",
-          "direction_hit": false,
-          "magnitude_hit": false,
-          "predicted_direction": "up",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.5
         }
       }
     },
@@ -10348,18 +10228,6 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
-        },
-        "HORIZON_1W": {
-          "label": "1w",
-          "target_date": "2026-09-08",
-          "actual_pct": 3.75,
-          "actual_direction": "up",
-          "actual_magnitude_band": "notable",
-          "direction_hit": false,
-          "magnitude_hit": false,
-          "predicted_direction": "down",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.52
         }
       }
     },
@@ -10434,18 +10302,6 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
-        },
-        "HORIZON_1W": {
-          "label": "1w",
-          "target_date": "2026-09-08",
-          "actual_pct": -1.65,
-          "actual_direction": "down",
-          "actual_magnitude_band": "mild",
-          "direction_hit": false,
-          "magnitude_hit": true,
-          "predicted_direction": "up",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.55
         }
       }
     },
@@ -10513,18 +10369,6 @@
           "label": "3d",
           "target_date": "2026-09-03",
           "actual_pct": -3.21,
-          "actual_direction": "down",
-          "actual_magnitude_band": "notable",
-          "direction_hit": true,
-          "magnitude_hit": false,
-          "predicted_direction": "down",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.5
-        },
-        "HORIZON_1W": {
-          "label": "1w",
-          "target_date": "2026-09-08",
-          "actual_pct": -3.28,
           "actual_direction": "down",
           "actual_magnitude_band": "notable",
           "direction_hit": true,
@@ -10606,18 +10450,6 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
-        },
-        "HORIZON_1W": {
-          "label": "1w",
-          "target_date": "2026-09-08",
-          "actual_pct": -2.64,
-          "actual_direction": "down",
-          "actual_magnitude_band": "notable",
-          "direction_hit": false,
-          "magnitude_hit": false,
-          "predicted_direction": "up",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.48
         }
       }
     },
@@ -13539,18 +13371,6 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.52
-        },
-        "HORIZON_1W": {
-          "label": "1w",
-          "target_date": "2026-09-09",
-          "actual_pct": 0.06,
-          "actual_direction": "flat",
-          "actual_magnitude_band": "flat",
-          "direction_hit": false,
-          "magnitude_hit": false,
-          "predicted_direction": "down",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.48
         }
       },
       "lesson_schema_ok": true
@@ -17841,82 +17661,64 @@
       "reflection_lesson_ref": "02_lessons/candidate/2026-09-09_lesson.md",
       "sources_used": [
         {
-          "url": "https://www.cnbc.com/2026/09/08/stock-market-today-live-updates.html",
+          "url": "https://www.aljazeera.com/news/2026/9/9/us-destroys-five-iranian-tankers-iran-retaliates-with-attacks-on-jordan-base",
           "date_accessed": "2026-09-09",
-          "summary": "CNBC confirms the exact closing numbers for all three major indices.",
+          "summary": "The US-Iran conflict escalated sharply with mutual tanker attacks overnight, driving oil above $100.",
           "verification": "quote_not_found"
         },
         {
-          "url": "https://www.usnews.com/news/world/articles/2026-09-09/iran-attacks-us-base-in-jordan-ships-near-hormuz-after-tankers-sunk",
+          "url": "https://www.pbs.org/newshour/economy/oil-rises-past-100-a-barrel-after-the-latest-wave-of-middle-east-attacks",
           "date_accessed": "2026-09-09",
-          "summary": "Reuters via US News confirms the scale of the Iran-US tanker escalation on September 9.",
-          "verification": "unreachable"
-        },
-        {
-          "url": "https://tradingeconomics.com/commodity/brent-crude-oil",
-          "date_accessed": "2026-09-09",
-          "summary": "Trading Economics confirms Brent crossed $100 on September 9 with a ~15% one-month gain.",
+          "summary": "Oil breached $100 as US-Iran tanker attacks escalated, pressuring equities broadly.",
           "verification": "quote_not_found"
         },
         {
-          "url": "https://keyt.com/news/money-and-business/cnn-business-consumer/2026/09/09/bond-yields-rise-after-treasury-department-announces-size-of-buyback-operation/",
+          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-09-09-2026",
           "date_accessed": "2026-09-09",
-          "summary": "CNN via KEYT confirms 10-year yields approached multi-year closing highs on September 9.",
-          "verification": "quote_not_found"
+          "summary": "The 10-year yield reached its highest level in nearly three years, pressuring equity valuations.",
+          "verification": "http_401"
         },
         {
           "url": "https://www.cnbc.com/2026/09/09/treasury-department-to-buy-back-6-billion-in-longer-term-debt-triple-the-normal-level.html",
           "date_accessed": "2026-09-09",
-          "summary": "CNBC confirms the Treasury's tripling of buyback operations to $6 billion.",
+          "summary": "Treasury's enlarged buyback initially pushed yields higher before the 10-year auction showed strong demand.",
           "verification": "quote_not_found"
         },
         {
-          "url": "https://finance.yahoo.com/technology/ai/articles/meta-stock-jumps-5-ai-164113999.html",
+          "url": "https://www.cnn.com/2026/09/09/business/live-news/apple-event-foldable-iphone-ternus",
           "date_accessed": "2026-09-09",
-          "summary": "Yahoo Finance confirms Meta's strong gain on the Muse AI launch.",
+          "summary": "Apple's foldable iPhone launch was a modest negative for the stock, reflecting sell-the-news dynamics.",
           "verification": "quote_not_found"
         },
         {
-          "url": "https://stockstotrade.com/news/alphabet-inc-googl-news-2026_09_09/",
+          "url": "https://www.bssnews.net/business/422587",
           "date_accessed": "2026-09-09",
-          "summary": "Stockstotrade confirms Alphabet's decline on regulatory concerns.",
-          "verification": "quote_not_found"
-        },
-        {
-          "url": "https://www.cnbc.com/2026/09/09/apple-event-today-live-updates.html",
-          "date_accessed": "2026-09-09",
-          "summary": "CNBC confirms Apple's muted sell-the-news reaction to its product event.",
-          "verification": "quote_not_found"
-        },
-        {
-          "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-09-2026",
-          "date_accessed": "2026-09-09",
-          "summary": "TheStreet confirms the Dow's underperformance and the oil/yield drivers.",
-          "verification": "http_404"
-        },
-        {
-          "url": "https://vistapglobal.com/stock-market-today-sept-9-2026-sp-500-dow-and-nasdaq-fall-as-oil-rallies-rates-rise-and-risk-appetite-fades-dell-ser-soc-uso-vix-rise/",
-          "date_accessed": "2026-09-09",
-          "summary": "Confirms small caps significantly underperformed large caps on September 9.",
-          "verification": "quote_not_found"
-        },
-        {
-          "url": "https://tradingeconomics.com/united-states/stock-market",
-          "date_accessed": "2026-09-09",
-          "summary": "Trading Economics confirms energy stocks were the day's winners.",
+          "summary": "China data was mixed — strong exports but weak domestic demand signals.",
           "verification": "quote_not_found"
         },
         {
           "url": "https://intellectia.ai/blog/fed-rate-hike-september-2026",
           "date_accessed": "2026-09-09",
-          "summary": "Confirms the market's elevated expectations for a September Fed hike.",
+          "summary": "Fed hike expectations remain elevated, amplified by oil-driven inflation concerns.",
           "verification": "http_403"
         },
         {
-          "url": "https://www.supplychaindive.com/news/trump-escalates-canada-trade-war-with-new-tariffs-import-bans/829876/",
+          "url": "https://seekingalpha.com/news/4641315-10-year-treasury-auction-brings-afternoon-relief-to-bond-market",
           "date_accessed": "2026-09-09",
-          "summary": "Supply Chain Dive confirms the ongoing US-Canada trade war escalation.",
+          "summary": "Strong auction demand helped yields ease from session highs, providing modest equity support.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-midday-sept-9-165800985.html",
+          "date_accessed": "2026-09-09",
+          "summary": "Oil-shock sector rotation was evident — energy gained while rate-sensitive and consumer sectors fell.",
           "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-09092026-12112269",
+          "date_accessed": "2026-09-09",
+          "summary": "The third consecutive down day reflects persistent macro pressure from oil and yields.",
+          "verification": "http_402"
         }
       ],
       "horizon_calls": {
@@ -17948,11 +17750,11 @@
       "news_judge_present": true,
       "ops_fail": false,
       "path_shape": "choppy / range-bound",
-      "primary_driver": "Oil >$100 Brent + Iran-US tanker war escalation (biggest wave of shipping attacks since war began) triggering stagflation amplification loop through Fed hike odds and Treasury yields at 52-week highs",
-      "key_interaction": "Oil spike × Fed hike odds × Treasury yields — the Iran escalation pushed oil >$100, which fed inflation expectations, which raised hike odds under hawkish Warsh, which pushed 10Y yields to 52-week highs, which compressed equity multiples — a self-reinforcing stagflation loop",
-      "knowable_at_9am": "yes — oil >$100 and Iran tanker escalation headlines were fully known premarket; the dominant driver was identifiable before the open",
-      "attribution_contested": "no — major outlets consistently attribute the decline to oil >$100 and rising Treasury yields; secondary emphasis varies (tech weakness, Apple event) but no fundamental disagreement",
-      "outlier_watch": "Meta +5-7% on Muse AI launch defied the broad risk-off tape; energy stocks (Chevron +2.47%) rallied while everything else fell; Treasury buyback tripling to $6B failed to stop yields from rising to 52-week highs",
+      "primary_driver": "US-Iran tanker escalation pushing Brent crude above $100, feeding inflation fears and driving 10-year Treasury yield to 4.84% (highest since Nov 2023)",
+      "key_interaction": "Oil spike × Fed hike odds × yield backup formed a stagflation amplification loop — each factor compounded the others, with the Treasury buyback announcement and 10-year auction acting as offsetting mechanical forces in the afternoon",
+      "knowable_at_9am": "yes — the dominant drivers (oil >$100, US-Iran escalation, yield backup, Fed odds) were all visible in premarket data",
+      "attribution_contested": "no — major outlets consistently attribute the day to oil >$100 and multi-year high yields, though they differ on which to lead with",
+      "outlier_watch": "Apple stock recovered from −1.4% to −0.28% despite sell-the-news expectations; technology sector relatively resilient (+0.29%) while industrials fell −1.01%; gold bid (+1.18%) despite rising yields; dollar soft despite higher rates",
       "horizon_grades": {},
       "lesson_schema_ok": true
     },
