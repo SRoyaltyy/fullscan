@@ -130,6 +130,9 @@ def test_incremental_land_hooks() -> None:
     assert "no ${DATE} book — skip hollow flatten card" in sleeve
     assert "before 09:00 ET" in sleeve
     assert "no checkout" in sleeve
+    ecs = (ROOT / "scripts" / "ecs_preopen.sh").read_text(encoding="utf-8")
+    assert "FULLSCAN_LAND=1" in ecs
+    assert "overlay_at" in ecs
 
 
 def test_holiday_overlay_uses_last_session() -> None:

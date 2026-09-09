@@ -45,6 +45,9 @@ export FULLSCAN_PERSIST="${FULLSCAN_PERSIST:-/home/gha/fullscan-persist}"
 export FULLSCAN_HOME="${FULLSCAN_HOME:-/home/gha}"
 export PYTHONUNBUFFERED=1
 export FINVIZ_SKIP_LIVE=1
+# systemd is not GITHUB_ACTIONS. Without this, src.land_file skips the
+# push and the packet is all-or-nothing again (the 09-08 failure mode).
+export FULLSCAN_LAND=1
 
 write_clock() {
   mkdir -p "$ROOT/01_daily"
@@ -116,8 +119,11 @@ wait_finviz_scrape() {
       "01_daily/map_heat/${DAY}_map_heat.md" 2>/dev/null || true
     if [ -s "01_daily/news/${DAY}_finviz_digest.json" ] \
        && [ -s "01_daily/map_heat/${DAY}_map_heat.json" ]; then
-      if grep -q "morning_overlay" "01_daily/map_heat/${DAY}_map_heat.json" 2>/dev/null; then
-        echo "[ecs-preopen] GH Finviz scrape on disk"
+      # The 09-09 file already said phase=morning_overlay from a last-
+      # session copy with overlay_at=2026-09-08. Require today's stamp.
+      if grep -q "\"overlay_at\": \"${DAY}" \
+           "01_daily/map_heat/${DAY}_map_heat.json" 2>/dev/null; then
+        echo "[ecs-preopen] GH Finviz scrape on disk (overlay_at=$DAY)"
         return 0
       fi
     fi
@@ -191,6 +197,7 @@ bash scripts/safe_git_push.sh \
   01_daily/*_stock_book.md 01_daily/_ecs_clock.md \
   data/stock_book/ data/paper/ data/join/ data/universe/ \
   data/ab_checklist/ data/peers/ data/checklist/ data/catalyst/ \
+  data/day_board/ dashboard/day-board/ \
   dashboard/ 02_lessons/ 03_scoreboard/
 
 chmod +x scripts/publish_dashboard.sh || true
