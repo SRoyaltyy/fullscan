@@ -64,9 +64,18 @@ jobs:
       - name: Date + session unit tests
         run: |
           DATE="${{ github.event.inputs.run_date }}"
-          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          if [ -z "$DATE" ]; then
+            DATE="$(TZ=America/New_York date +%F)"
+            # 21:10 ET cron delayed past midnight must not stamp the next
+            # session. 05:40 scrape owns today's digest + overlay.
+            if [ "${{ github.event_name }}" = "schedule" ] && [ "$ET_HM" -lt 535 ]; then
+              DATE="$(python3 -c 'from src.skip_if_good import last_closed_session; print(last_closed_session())')"
+              echo "delayed schedule before 05:35 ET — last closed $DATE"
+            fi
+          fi
           echo "DATE=$DATE" >> "$GITHUB_ENV"
-          echo "DATE=$DATE"
+          echo "DATE=$DATE ET_HM=$ET_HM"
           python -m src.test_finviz_session
 
       - name: Pull Elite export CSV

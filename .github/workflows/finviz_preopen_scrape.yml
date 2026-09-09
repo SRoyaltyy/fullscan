@@ -81,8 +81,8 @@ jobs:
           set -euo pipefail
           DATE="${{ github.event.inputs.run_date }}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
-          echo "CMD: python -m src.finviz_digest --date $DATE"
-          python -m src.finviz_digest --date "$DATE"
+          echo "CMD: python -m src.finviz_digest --date $DATE --force"
+          python -m src.finviz_digest --date "$DATE" --force
           echo "CMD: python -m collectors.finviz_financials (elite CSV for the book)"
           FULLSCAN_DB_OPTIONAL=1 python -m collectors.finviz_financials || echo "[warn] elite export soft-failed"
 

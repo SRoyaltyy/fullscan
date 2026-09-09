@@ -121,8 +121,15 @@ def test_incremental_land_hooks() -> None:
     scrape = (ROOT / ".github" / "workflows" / "finviz_preopen_scrape.yml").read_text(
         encoding="utf-8")
     assert "FULLSCAN_LAND" in scrape
+    assert "src.finviz_digest --date $DATE --force" in scrape
     digest = (ROOT / "src" / "finviz_digest.py").read_text(encoding="utf-8")
     assert "land_file.land" in digest
+    assert "existing_digest_is_morning_ok" in digest
+    assert "weather_stamped_before_open" in digest
+    fin_all = (ROOT / ".github" / "workflows" / "finviz_all.yml").read_text(
+        encoding="utf-8")
+    assert "last_closed_session" in fin_all
+    assert "delayed schedule before 05:35 ET" in fin_all
     heat = (ROOT / "src" / "map_heat.py").read_text(encoding="utf-8")
     assert "land_file.land" in heat
     sleeve = (ROOT / ".github" / "workflows" / "sleeve_merge_live.yml").read_text(

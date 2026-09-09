@@ -405,6 +405,7 @@ def test_ranker_inputs_before_llm_packet() -> None:
     scrape_yml = (WF / "finviz_preopen_scrape.yml").read_text(encoding="utf-8")
     assert "collectors.finviz_financials" in scrape_yml
     assert "data/exports/" in scrape_yml
+    assert "src.finviz_digest --date $DATE --force" in scrape_yml
     skip = (ROOT / "src" / "skip_if_good.py").read_text(encoding="utf-8")
     assert "elite export missing/thin" in skip
     assert "1d BUY has printed dead relvol" in skip
