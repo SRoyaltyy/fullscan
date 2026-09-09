@@ -330,11 +330,10 @@ def main() -> None:
     if existing.ok and not args.force:
         print(f"[news_actions] {date_str}: skip, quality-ok already on disk")
         return
-    if preopen.past_predict_cutoff() and not args.force:
-        if existing.ok:
-            print(f"[news_actions] {date_str}: past 09:25 ET, keeping quality-ok")
-            return
-        print(f"[news_actions] {date_str}: past 09:25 ET — not writing a late copy")
+    if (preopen.past_predict_cutoff() and not args.force
+            and not preopen.bypass_cutoff()):
+        print(f"[news_actions] {date_str}: past 09:25 ET — not writing a late "
+              "copy (set PREOPEN_BYPASS_CUTOFF=1 or --force)")
         return
     if args.finviz:
         os.environ["FINVIZ_CSV"] = args.finviz
