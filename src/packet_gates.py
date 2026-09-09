@@ -10,6 +10,9 @@ import json
 from pathlib import Path
 
 MIN_JSON_BYTES = 80
+# Offline/thin weather with 5 unknown sectors is ~200–400B. A morning
+# rewrite that actually stamped VIX/yields is kilobytes (09-09 heal: 9KB).
+MIN_WEATHER_BYTES = 800
 
 
 def file_bytes(path: str | Path) -> int:
@@ -33,14 +36,14 @@ def load_json(path: str | Path):
         return None
 
 
-def weather_ok(path: str | Path) -> tuple[bool, str]:
-    bad = json_too_small(path)
-    if bad:
-        return False, bad
+def weather_ok(path: str | Path, min_bytes: int = MIN_JSON_BYTES) -> tuple[bool, str]:
+    n = file_bytes(path)
+    if n < min_bytes:
+        return False, f"too_small({n}B)"
     data = load_json(path)
     if not isinstance(data, dict):
         return False, "unparseable_json"
     secs = ((data.get("signals") or {}).get("sectors") or {})
     if not isinstance(secs, dict) or len(secs) < 5:
         return False, "thin_or_unreadable"
-    return True, f"sectors={len(secs)}"
+    return True, f"sectors={len(secs)} bytes={n}"

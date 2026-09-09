@@ -175,7 +175,8 @@ def load_channel1(date_str: str, live: bool = True) -> dict:
         return disk
     try:
         from . import fetch_channel1
-        data = fetch_channel1.build("predict")
+        data = fetch_channel1.build(
+            "predict", date_str, budget_s=45, skip_news=True)
         fetch_channel1.save(data, date_str, "predict")
         # fill holes from disk so a Yahoo outage doesn't blank VIX
         if disk:

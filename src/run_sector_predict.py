@@ -218,7 +218,8 @@ def main() -> None:
     else:
         sectors = list(FINVIZ_SECTORS)
     try:
-        ch1 = fetch_channel1.build("predict")
+        ch1 = fetch_channel1.build(
+            "predict", date_str, budget_s=45, skip_news=True)
         fetch_channel1.save(ch1, date_str, "sector_predict")
         ch1_md = fetch_channel1.to_markdown(ch1)
     except Exception as e:  # noqa: BLE001

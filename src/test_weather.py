@@ -7,8 +7,9 @@ from __future__ import annotations
 import json
 import tempfile
 from pathlib import Path
+from unittest import mock
 
-from src import weather
+from src import fetch_channel1, weather
 
 
 def test_run_from_sector_md() -> None:
@@ -78,6 +79,38 @@ def test_load_runs_fills_missing_scoreboard_from_md() -> None:
     weather.SCOREBOARD = orig_board
 
 
+def test_build_skip_news_does_not_touch_db() -> None:
+    with mock.patch.object(fetch_channel1, "fetch_vix", return_value={"vix": {}}), \
+            mock.patch.object(fetch_channel1, "fetch_commodities_fx", return_value={}), \
+            mock.patch.object(fetch_channel1, "fetch_fred_block", return_value={}), \
+            mock.patch.object(fetch_channel1, "fetch_futures", return_value={}), \
+            mock.patch.object(fetch_channel1, "fetch_finviz_tape",
+                              return_value={"available": False, "rows": []}), \
+            mock.patch.object(fetch_channel1, "fetch_fear_greed",
+                              return_value={"available": False}), \
+            mock.patch.object(fetch_channel1, "fetch_yield_spx_corr",
+                              return_value={"available": False}), \
+            mock.patch.object(fetch_channel1, "fetch_global_sessions",
+                              return_value={}), \
+            mock.patch.object(
+                fetch_channel1, "fetch_news_block",
+                side_effect=AssertionError("news must be skipped")):
+        data = fetch_channel1.build(
+            "predict", "2026-09-09", budget_s=30, skip_news=True)
+    assert data["news_24h"].get("skipped") == "weather"
+
+
+def test_live_channel1_is_budgeted() -> None:
+    src = Path(__file__).resolve().parent / "weather.py"
+    text = src.read_text(encoding="utf-8")
+    assert "budget_s=45" in text
+    assert "skip_news=True" in text
+    ch1 = (Path(__file__).resolve().parent / "fetch_channel1.py").read_text(
+        encoding="utf-8")
+    assert "skip remaining FRED" in ch1
+    assert "NewsDbError" in ch1
+
+
 def test_offline_derive_uses_disk() -> None:
     rules = weather._load_json(weather.RULES_PATH) or {}
     th = rules.get("thresholds", {})
@@ -91,4 +124,6 @@ if __name__ == "__main__":
     test_run_from_general_md_footer()
     test_offline_derive_uses_disk()
     test_load_runs_fills_missing_scoreboard_from_md()
-    print("4 tests passed")
+    test_build_skip_news_does_not_touch_db()
+    test_live_channel1_is_budgeted()
+    print("6 tests passed")

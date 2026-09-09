@@ -12,6 +12,7 @@ import argparse
 import json
 import math
 import os
+import time
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -19,6 +20,27 @@ from zoneinfo import ZoneInfo
 import requests
 
 from . import config, db
+
+# Weather / pre-open must not wait on 30 sequential Yahoo + 8 FRED + news
+# DB calls. Socket/HTTP caps drop when a deadline is set.
+_YF_TIMEOUT = 20
+_FRED_TIMEOUT = 20
+
+
+class _Budget:
+    def __init__(self, seconds: float | None) -> None:
+        self.deadline = (
+            time.monotonic() + float(seconds)
+            if seconds and float(seconds) > 0 else None
+        )
+
+    def ok(self) -> bool:
+        return self.deadline is None or time.monotonic() < self.deadline
+
+    def remaining(self) -> float:
+        if self.deadline is None:
+            return 30.0
+        return max(0.4, self.deadline - time.monotonic())
 
 FRED_URL = "https://api.stlouisfed.org/fred/series/observations"
 FRED_SERIES = ["DGS30", "DGS10", "DFII10", "BAMLH0A0HYM2", "SOFR", "IORB",
@@ -33,7 +55,7 @@ def _yf_history(symbol: str, days: int = 45) -> list[dict]:
 
         import yfinance as yf
         prev = socket.getdefaulttimeout()
-        socket.setdefaulttimeout(20)
+        socket.setdefaulttimeout(min(20, _YF_TIMEOUT))
         try:
             hist = yf.Ticker(symbol).history(period=f"{days}d", interval="1d")
         finally:
@@ -63,7 +85,7 @@ def _fred(series_id: str) -> list[tuple[str, float]]:
             r = requests.get(FRED_URL, params={
                 "series_id": series_id, "api_key": config.FRED_API_KEY,
                 "file_type": "json", "sort_order": "desc", "limit": 45},
-                timeout=20)
+                timeout=min(20, _FRED_TIMEOUT))
             r.raise_for_status()
             rows = [(o["date"], float(o["value"]))
                     for o in r.json().get("observations", [])
@@ -92,8 +114,14 @@ def _delta_block(rows: list[tuple[str, float]]) -> dict:
 
 
 # ------------------------------------------------------------------ fetchers
-def fetch_fred_block() -> dict:
-    return {s: _delta_block(_fred(s)) for s in FRED_SERIES}
+def fetch_fred_block(budget: _Budget | None = None) -> dict:
+    out: dict = {}
+    for s in FRED_SERIES:
+        if budget is not None and not budget.ok():
+            print(f"[ch1] skip remaining FRED at {s} (budget)")
+            break
+        out[s] = _delta_block(_fred(s))
+    return out
 
 
 def fetch_vix() -> dict:
@@ -322,7 +350,11 @@ def fetch_actual_close(date_str: str | None = None) -> dict:
 
 
 def fetch_news_block() -> dict:
-    rows = db.recent_news(hours=24, limit=30)
+    try:
+        rows = db.recent_news(hours=24, limit=30)
+    except db.NewsDbError as e:
+        print(f"[ch1] news_24h skipped ({e.reason})")
+        return {"available": False, "count": 0, "items": [], "error": e.reason}
     return {"available": bool(rows), "count": len(rows), "items": rows}
 
 
@@ -342,26 +374,83 @@ def fetch_finviz_tape(date_str: str | None = None) -> dict:
 
 
 # ------------------------------------------------------------------ assembly
-def build(stage: str, date_str: str | None = None) -> dict:
-    data = {
-        "stage": stage,
-        "fetched_at": datetime.now(ZoneInfo(config.TZ)).isoformat(),
-        "fred": fetch_fred_block(),
-        "vix": fetch_vix(),
-        "commodities_fx": fetch_commodities_fx(),
-        "futures": fetch_futures(),
-        "finviz_futures_tape": fetch_finviz_tape(date_str),
-        "global_sessions": fetch_global_sessions(),
-        "yield_spx_corr": fetch_yield_spx_corr(),
-        "fear_greed": fetch_fear_greed(),
-        "fedwatch": {"available": False,
-                     "note": "CME FedWatch not directly scrapable; "
-                             "CONFIDENCE low — derive via Channel 2 search"},
-        "news_24h": fetch_news_block(),
-    }
-    if stage == "outcome":
-        data["actual_close"] = fetch_actual_close(date_str)
-    return data
+def _env_budget_s() -> float | None:
+    raw = (os.environ.get("FULLSCAN_CH1_BUDGET_S") or "").strip()
+    if not raw:
+        return None
+    try:
+        val = float(raw)
+    except ValueError:
+        return None
+    return val if val > 0 else None
+
+
+def build(stage: str, date_str: str | None = None,
+          budget_s: float | None = None, skip_news: bool = False) -> dict:
+    """Assemble Channel 1. `budget_s` stops remaining live fetches so
+    morning weather cannot hang the 180s Pre-Open slot (2026-09-09).
+    """
+    global _YF_TIMEOUT, _FRED_TIMEOUT
+    if budget_s is None:
+        budget_s = _env_budget_s()
+    budget = _Budget(budget_s)
+    prev_yf, prev_fred = _YF_TIMEOUT, _FRED_TIMEOUT
+    if budget.deadline is not None:
+        cap = max(4, min(8, int(budget.remaining())))
+        _YF_TIMEOUT = cap
+        _FRED_TIMEOUT = cap
+
+    def take(name: str, fn, default):
+        if not budget.ok():
+            print(f"[ch1] skip {name} (budget)")
+            return default
+        try:
+            return fn()
+        except Exception as e:  # noqa: BLE001
+            print(f"[ch1] {name} failed ({e})")
+            return default
+
+    try:
+        # VIX / DXY / yields first — weather's risk/vix/yields gates.
+        vix = take("vix", fetch_vix, {})
+        fx = take("commodities_fx", fetch_commodities_fx, {})
+        fred = take("fred", lambda: fetch_fred_block(budget), {})
+        futures = take("futures", fetch_futures, {})
+        tape = fetch_finviz_tape(date_str)
+        fg = take("fear_greed", fetch_fear_greed, {"available": False})
+        corr = take("yield_spx_corr", fetch_yield_spx_corr, {"available": False})
+        glob = take("global_sessions", fetch_global_sessions, {})
+        if skip_news or not budget.ok():
+            news = {"available": False, "count": 0, "items": [],
+                    "skipped": "weather" if skip_news else "budget"}
+        else:
+            news = take("news_24h", fetch_news_block,
+                        {"available": False, "count": 0, "items": []})
+        data = {
+            "stage": stage,
+            "fetched_at": datetime.now(ZoneInfo(config.TZ)).isoformat(),
+            "fred": fred,
+            "vix": vix,
+            "commodities_fx": fx,
+            "futures": futures,
+            "finviz_futures_tape": tape,
+            "global_sessions": glob,
+            "yield_spx_corr": corr,
+            "fear_greed": fg,
+            "fedwatch": {"available": False,
+                         "note": "CME FedWatch not directly scrapable; "
+                                 "CONFIDENCE low — derive via Channel 2 search"},
+            "news_24h": news,
+        }
+        if stage == "outcome":
+            data["actual_close"] = take(
+                "actual_close",
+                lambda: fetch_actual_close(date_str),
+                {},
+            )
+        return data
+    finally:
+        _YF_TIMEOUT, _FRED_TIMEOUT = prev_yf, prev_fred
 
 
 def _fmt_delta(label: str, b: dict, unit: str = "") -> str:
