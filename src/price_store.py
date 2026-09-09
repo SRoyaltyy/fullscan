@@ -294,13 +294,20 @@ def ensure_through(end: str | None = None) -> None:
     target_s = str(end or closed)[:10]
     if target_s > closed:
         target_s = closed
+    n_on = 0
     if len(existing):
         last = existing["date"].max().date().isoformat()
-        if last >= target_s:
-            print(f"[price_store] ensure_through {target_s} already have {last}")
+        on = existing[existing["date"] == pd.Timestamp(target_s)]
+        n_on = int(on["ticker"].nunique()) if len(on) else 0
+        # Max date can be a handful of seeded names. Need broad coverage
+        # before factor-mine marks every lot.
+        if last >= target_s and n_on >= 8000:
+            print(f"[price_store] ensure_through {target_s} have {n_on} tickers")
             return
-    print(f"[price_store] ensure_through → {target_s}")
-    update(lookback_days=21)
+    print(f"[price_store] ensure_through → {target_s} (have {n_on} bars that day)")
+    start = (datetime.strptime(target_s, "%Y-%m-%d") - timedelta(days=21)).date().isoformat()
+    stop = (datetime.strptime(target_s, "%Y-%m-%d") + timedelta(days=1)).isoformat()
+    fill_range(start, stop)
 
 
 def candle_bias(ohlc: pd.DataFrame, lookback: int = 10) -> dict:
