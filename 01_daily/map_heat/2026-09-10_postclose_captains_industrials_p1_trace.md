@@ -8,7 +8,7 @@
 
 **Step 1 — Research.** The model wanted to know: *"PWR Quanta Services news September 2026"* → got 6 results (via gnews_rss)
 
-  - Former Amazon cloud executive joins Quanta's board - stocktitan.net (https://news.google.com/rss/articles/CBMinAFBVV95cUxQYUhHV3BuSmdJTFJMYlZCMnNONHFTRlBJRkRPblU0X0l5blFPcVBxeEZrVnd6eWxXVWJISzYwd2JDekFTRWhyd19QSFNBTjJHXzNsRVJiU3h4Y3drNHdJZXBaWkRpekNOTzlFU0FIaWVKc2JKbzctRzFFVzI2X0JJa2d3cVJpVjZZZnR3d3ozc0M3RXB5VWlxSnVSdHI?oc=5)
+  - Former Amazon cloud executive joins Quanta's board - Stock Titan (https://news.google.com/rss/articles/CBMinAFBVV95cUxQYUhHV3BuSmdJTFJMYlZCMnNONHFTRlBJRkRPblU0X0l5blFPcVBxeEZrVnd6eWxXVWJISzYwd2JDekFTRWhyd19QSFNBTjJHXzNsRVJiU3h4Y3drNHdJZXBaWkRpekNOTzlFU0FIaWVKc2JKbzctRzFFVzI2X0JJa2d3cVJpVjZZZnR3d3ozc0M3RXB5VWlxSnVSdHI?oc=5)
 
   - Ellen Rubin Joins Quanta Services Board of Directors - TradingView (https://news.google.com/rss/articles/CBMiswFBVV95cUxOdGh2SC03R21lY0EybGxDMEo2eTNEa09DNVVQSzFyVXJ2QjVLa1hSaUNFWWtNZjVmQ3hGM1dkY3E2Vjh6NS1Pb2RHVk5qeHpmcFYwTzBYRGdIWVlUT1lKaHp3eE5RVExrMWxPUUFhaVVJRU5yTlo0UXVrLTh1Tk5zYjJ3RkNyR3MtOFN5X2w0bkp1MmlQd09xelpVYVUyckhlSU82ZHE1dFRtVWhJQkRmbzRkcw?oc=5)
 

@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"VICI Properties dividend news September 2026"* → got 6 results (via gnews_rss)
+**Step 1 — Research.** The model wanted to know: *"VICI Properties dividend increase news September 2026"* → got 6 results (via gnews_rss)
 
   - VICI Properties Inc. Increases Regular Quarterly Dividend - Yahoo Finance Singapore (https://news.google.com/rss/articles/CBMijwFBVV95cUxNeEFDNERNRWRhcDFST1ZHWU1iaTJCZ0Y2QklDcTRhV3JCbmw3VHpObTlrNnNRT181VnprMm1ndzR6ajN5WUYzcjNJVGRDODVmVGh4WU03VHYzb1N1R1FzdEp5OEFYeldKaGtKYVFVcUdhTkFRa2RLaGJQaHJFMWoxLXFPS1FCU3cya1Rrd2Jndw?oc=5)
 
-  - VICI Properties (VICI) Lifts Dividend On An Undervalued REIT Narrative - simplywall.st (https://news.google.com/rss/articles/CBMi0AFBVV95cUxQcHFuS3U1T3hDSXp0NE5ycDFtQjFncHVZdmU5OEpnRmRwX3VkZ2xPZzIxZEo0eFdOTWdNTzhhUjgxV210NjZyb1V1MEJ1NkJrZDNjZVQ2bFVQemxBRjJTdHU1VGdjc1JzU3Y4Y2dSLW83MHdDQzhYSEY1ZHlCSE1faGRnbVMwbjQ4MGc1Zzd5Nl9USHlPWWZBVkt5TkhNdlo1N1lURWJ6czZrQmpxdGZxTF9PT3ZmYUpVWXdyTk9jelFYZEduZFNnWTBWS3VrRmQx0gHWAUFVX3lxTE4zOHkyMGJRcG54OTBqS1VidUNCd3pLSVBkaXFham5wNkFHZFhaWENMOUVGWUVMbldwb0ZIQ1BXYWY3a29wOUdTT3NPaHB5S0h6ZDVqeVZOU3JwZW04Nm9Ma2FWTThoQXpkV0txSWZJbzdxMmhTeGlRZ3pRTU9QMWhiRWhLVXJjcFJfVUdMQzF3SlRHa1o4REdIa1RlMEw5ZGc3bnNqRkNoVDRqNlBfN2VvZ3JxaGl6M214Tk5wbHQtRWVjQld0SFJZejZMSTNjY1VYNE5jaVE?oc=5)
+  - 3 Dividend Stocks With Yield Over 3% - simplywall.st (https://news.google.com/rss/articles/CBMipAFBVV95cUxNaGhIMGZrX3AyRXVXT3ZyTE5KNVpubFVIQmJaOVdUQnFScHpsaFhtcDdCMVd5QzUteEJ1NTBTWXE0YUp3eDk5bWt3SkVtU0hPRnoyN1VheDJpM1VNMFpsakNDbGtLckJRSDZURHFMRnFmZ2FoS0Q3SGRSaWRERzdLYlpzYVAxMVFCaFlvdEZQU3JWRkN0TS1VeERqUy1lOHduVVN0LdIBqgFBVV95cUxPWk1FaGNRV2liV3Z4YjBSNFBYVzI4SGJhM1Q2c2t4YzBDOXd3T1JrOWxZT2hOZ1V6LUtOLWlEWi1sOFVDNldiQnJjN0t3NEhLYVRvcWhiR0NfMkozRHdpS2h3SFNFUGlwLU5paF9hV0RuSE5TenhyOURjRnVCVXRyRW1hRzdBaW1VbW1takp0cHZjVlpDWFF3TVgycWQ3OTQtQ0ZSbVlGM1VCZw?oc=5)
 
-  - VICI Properties stock hits fresh 52-week low as analysts trim targets - AD HOC NEWS (https://news.google.com/rss/articles/CBMizAFBVV95cUxOTExSeU54TDBqR2tIRHFKNU9kRzJGR1pBQ3pZVmliSlVLR21ITWZ5eF9EU1VJYWNoTlFQWTR5QnRLWjYzcFdlZXRMeVQyYldTUmNZUGJpOTN0WWs1X1F5OUZzZG5Da1RfNDZseF9tTDBTS2JEVHkxWWp1b05RdW9qZUgwTzhqNDU4WUx6dXAzblpaaEpETGM4TGZvc0JfeUViTzM3dG15TTZaYm13WkY1Wkh0RkFyTS1lVHpxWXRaZS1jX05TRTU0R2VEZ3A?oc=5)
+  - Vici Properties Inc. Increases Regular Quarterly Dividend for the Period from July 1, 2026 to September 30, 2026, Payable on October 8, 2026 - marketscreener.com (https://news.google.com/rss/articles/CBMi5gFBVV95cUxNa1FVZXRGQnVfNjBYdTNiLTVOVGVHbjFLUV9IcEs5QXV5eDQtSjk5d0VXREtxYTlFMm9wV1RXZVRQcjJpQTRlY2tWODNFU1dmYXRUd1BVQTZ2dnQxN3pBOHc5WDY2c2xYZm9TTkdQdnFzVVlsVWdJeFBhSFRsVkZZQW5XbzZ4N0tmZ0VrN2FOMDhfb08ydUxDQnNyYWR3NDNPNXJaY1ZxRVpmQXFlTWpzaVNRMGYtWG1hNlRLNGFrZ3FTU3lZQTF5U0dQaVNRYTFqRU9TYzNQSkstR1VwUGppeC13QVBudw?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"Broadstone Net Lease BNL news September 2026"* → got 6 results (via gnews_rss)
+**Step 2 — Research.** The model wanted to know: *"Global Net Lease Modiv Industrial acquisition Greenberg Traurig"* → got 6 results (via gnews_rss)
 
-  - Broadstone Net Lease (NYSE: BNL) director buys shares in open-market trades - Stock Titan (https://news.google.com/rss/articles/CBMiuAFBVV95cUxQOE0yZ3hIVjVITG05UnFLV2ZtdzI3RURlSlFkcVFfOHFDRHF5WWpTNkpNLUlTZUhyZGlESFFZcUFJSW5LTkEyMHR1a1lCNHRpZ2JodGhSWjd5cEJjaDI0MlpWcEJHODlqNkpnUmNfUHhPR2N4M0ZjX3o1dWduQU1vUWRHdl9McWlGcXV1MXhfd243UUVITFFEdGhPNkMzYVBKMmxwYnRtd1lXRk9FNC02d1VZQUxMcHFH?oc=5)
+  - Greenberg Traurig Advises Global Net Lease on $535M Modiv Industrial Acquisition - PR Newswire (https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZTV0NWE4cHBpUzdaYUFPdnZMUVhnbmpsTVVJTnRVUnloSUJPdlZkNExFSmZDUkktWUlWQ205YU1NTTdXeE9rZlNYbDBZa2pMN3Ffd3VVdHZFU0hQYkRJNWZsR281bm8yMjIxRkVqNlhuaVhkeHZHSFJ5QXBmalh0MFk4aE5sXzNzVzY0V1oyWXhsQ2NlbjNOaThEUDBXSUFFS1RLOERjVzhYRzRYZ3d5U2tnUE82aTRYNElVTlRlWE1LYnB2RHhrVkthS2t3M25i?oc=5)
 
-  - Broadstone Net Lease Announces Second Quarter 2026 Results - Business Wire (https://news.google.com/rss/articles/CBMitgFBVV95cUxQRUhhUWxoRkxxcXpTbl9kanFKc2VKMDJYUW0wZjhfTVhYdWZWVDZZV3RaaVdUMzc0V1hzZEFIRWNPZkhhVFF2dzhHNy1fOTBEUlpTTm5iaWVPOUJFdkdhQV9ja0JOT1UxUnhSYmdna0pIODZ2Wm14SmRJUU9rd3lmTzd6TVNQbTE5cHh5Mm1sUkRiOFYyR3hzT0kwYnhfTUxCNUk3TDRrcEQwZC0xRWlESlBlRFpBUQ?oc=5)
+  - Global Net Lease acquires $535M Modiv Industria... - Pluang (https://news.google.com/rss/articles/CBMiqwFBVV95cUxNVjE1bWJFN2hIX2lwWFlzbVpEMmtEYVVDNE85R0ZLd0tlUWVzSFV4T0xrQmJqRHJMSmZZNkJSWGlNaGg5cWZra0o5bjRIbEpWczZRWmo3enJCTWVwbG0xU1ZleTU4TUF6MHpzUDFuWi1RUzJFdDZ5dFkwdGY0RXQ2WVgzM1pyZUJiQkxTamNWU3dwVlZ3VDF2N3N1UG5lWjBQSEhIemdpblNxR3M?oc=5)
 
-  - BNL stock holds steady as net lease REIT focuses on income stability - AD HOC NEWS (https://news.google.com/rss/articles/CBMixgFBVV95cUxNbXUwUDdCUldJc2Yxamh0bmRtX2xkSzRZTjAtU0hVN0tERTFmWUlBTDk5WjdEYWtySkpnV2VnTGRKSmRrTXRSUEFPbDdRb2N5Wlc0Q1NpNmlXd0Fod1JUMzVHN2I3VU5DTWxITUwySkVtZy1mTUtlRXBMVFM0Z1Y4c190dXdFNEFpRWptQy1ObFBzbC1qdVc2Ulp3el9zeXFpQTVuM01pdDlVN3FxSzdFWFR0a3RNTXY2SF8wdTQtWVdJREpRX3c?oc=5)
+  - Modiv Industrial Stockholders Approve Merger with Global Net Lease - Business Wire (https://news.google.com/rss/articles/CBMiwAFBVV95cUxOVFRtcEc5dWVpclVpYkh5eGxKYk9xUUZJQVFGdmlFRHhRSHhtQ1JZLUg5eHh6dDRZY3l2aEVDb1pCUWNUeV9kWmxqQ04weTRIODhUWnFBMVFUbXpUTFJkaTdseFg4bU5ESlBzS1hLVnF3VWJiZjd5cV80SHI4dmZjQjdRYmp5WWRoV0s5S0U4aXBxb084N01yVDhUVTVKR0k3RHUtTmVRVWxKZUlzX0VjYk5jaU5yeFgxZHlIbDFKZTU?oc=5)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

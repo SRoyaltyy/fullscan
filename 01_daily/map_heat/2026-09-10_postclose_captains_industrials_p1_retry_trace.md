@@ -2,7 +2,7 @@
 
 
 
-**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (10,531 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
+**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (5,323 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
 
 
 

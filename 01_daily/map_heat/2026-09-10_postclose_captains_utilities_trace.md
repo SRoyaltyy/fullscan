@@ -14,12 +14,12 @@
 
   - Sempra stock heads into the open after a 1.61 percent gain - AD HOC NEWS (https://news.google.com/rss/articles/CBMivgFBVV95cUxNWEFwY3NuTmVfTXJmaEJfZHdzbE1sNHlWWXE1czVuQ21KRnNXWHpIZFBNdkd6czh3TmdQQkNfck5EUHJuM3lMSGhpNVdpOVRINmNGanFodzFwN0xuZVZ4dEg4dDcwMlpfd3VKUFJiaWx0TmVFbkNveDNjN2RhT1NDT1pXclFEQkZtQkxrTVh5bE9QR1hRa0NUNWdUd2hNRV8yNmItVnA3WDExOE1rRnpvc1hRTDZpcnNHcDlzNXFn?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"AES Corp news September 2026"* → got 6 results (via gnews_rss)
+**Step 2 — Research.** The model wanted to know: *"CEG Constellation Energy news September 2026"* → got 6 results (via ddg)
 
-  - AES Corp stock trades around recent earnings beat as institutional investors adjust positions - AD HOC NEWS (https://news.google.com/rss/articles/CBMiyAFBVV95cUxPSXhvWFN4MHVZUE1xTFY0dWM0cHdUdzcxSDc0VFlQdTRBRXVyd3pfSXdrVFFnSEpVN0FWQ3M4ZHNwUk5GMG44Q1RNbDNMMmpoMGNubjcxdmJmdncxc2lnb2VZcUtVQmJobGJTSDJLbDh0NlBtcURlRlVkdi1nSXdhZGNnZFN5VHNjX19Mbm1QdlpBbHczYXlyVDgzZXYyOWw3aHNHZzZQcVVuRE9OZzBvYjUyVzZ2UDBqM3dRUXQ1a0VWMXRCb0JlYw?oc=5)
+  - Constellation Energy Corporation (CEG) - Yahoo Finance (https://finance.yahoo.com/quote/CEG/)
 
-  - AES Andes begins testing 340 MW/1.36 GWh Cristales BESS - ESS News (https://news.google.com/rss/articles/CBMilwFBVV95cUxNbnZuVVAtdTVPakpJeUYzVXNORkRRcmQtcGJTX2E4ZUFYNnluejZxS0VNZTJyd3ctRHhZNlVkWTRkV2M3VzFuLVR2NDNEWmtpZHpEQnF6b251VU1DZmxhc3NXS1VQS0hBR0JXQXZuVUtOTFZGS1BTT0RzQnhHZlJESkZnQ2NzR3NXbVJ3RVRTWGNSR3VKcXQ4?oc=5)
+  - Investor Relations | Constellation Energy Corporation (https://investors.constellationenergy.com/)
 
-  - PE consortium strikes $33.4B deal for AES Corp. - Markets Group (https://news.google.com/rss/articles/CBMihgFBVV95cUxOck03N0hkSkRiOHJwbWt5QUp6ZnozU2QzTjJESldRREdvOEl5dERQZGcyWm0wOWFlMm1SOXkwYS1GVlV1cGVDOG5ON3NYMTBqUDNhMXJ0eV94bzBVMUZmQWNxLVlrcElZZ29Ud3c0RFdNX0xKWWpBZFM0ZkRfTkNkVEJXWWdaZw?oc=5)
+  - Constellation Energy (CEG) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/CEG/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

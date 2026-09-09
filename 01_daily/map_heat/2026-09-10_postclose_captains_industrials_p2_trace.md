@@ -14,12 +14,12 @@
 
   - United Rentals, Inc. (URI) Latest Press Releases & Corporate ... (https://finance.yahoo.com/quote/URI/press-releases/)
 
-**Step 2 — Research.** The model wanted to know: *"GATX news September 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"GATX Corporation news September 2026"* → got 6 results (via gnews_rss)
 
-  - GATX Stock News | StockTitan (https://www.stocktitan.net/news/GATX/)
+  - People News: HNTB, GATX - Railway Age (https://news.google.com/rss/articles/CBMiZEFVX3lxTE5QcUt3akhnTmd1ZFZVa1hBQTJwWVdEUU9pejR6SWtlVmFpTmpSUExtTzVQNmI2ai0teWJlMEt2R2tiWkF5emRnVVZaZ29EMU1ubW5UMkg0by1oRTBSa2VlVXY3X2s?oc=5)
 
-  - GATX Corporation Reports 2026 Second-Quarter Results (https://www.businesswire.com/news/home/20260730040221/en/GATX-Corporation-Reports-2026-Second-Quarter-Results)
+  - GATX (NYSE: GATX) insider shifts 6,472 shares into family trust - stocktitan.net (https://news.google.com/rss/articles/CBMipgFBVV95cUxQS1Y4bEhkX0w0Zks2WXBsVkJOUmpTMk9SZ3NCUWpJdjJGS2hhNHFHZWFVWmxzMGhXakEtYl9DTi1HREg2akxQcFlaRjNQNU1lRjR3cFNjaGg0dzR4WUZHRjFuanVsRHdzUzduSUVTenFCSHN0MExJR3J0U0VzYkV3WU5scWZMWHRpVHJONjlRNDAtMWI1SFRfM3R1VjRwUEVfcXdfYzhn?oc=5)
 
-  - GATX Corporation (GATX) Stock Price, News, Quote & History (https://finance.yahoo.com/quote/GATX/)
+  - GATX Corporation Reports 2026 Second-Quarter Results - Business Wire (https://news.google.com/rss/articles/CBMirgFBVV95cUxOTkRuNzEwaFh0WmRNdzdyZFN2VVZVRlpnaV83WS12QnZ2TndEdGlUT0pjNlBmbW5CdUJLd1NuazVzdFlyZXZ1V0xpeU4wYTNQak9oY1Q4cXllTDVnV3ZES2VrcnlqTlprcVZLLTB6T0dHZDJDbnpPd3FHWVRLRGYxYlNEc0FXb3JZMmZNVUNaakdfTnFJLWllZ0RuWFBwQ2w1WF9mSTNXdkcxd3MxX3c?oc=5)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
