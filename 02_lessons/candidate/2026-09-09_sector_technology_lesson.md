@@ -7,7 +7,7 @@ error_category: "NONE"
 falsifier: "A future session where a scheduled mega-cap catalyst is explicitly named in the morning analysis, scored as an offset, and the sector still moves against the catalyst (e.g., oil shock dominates despite Apple event) would falsify the implied strength of scheduled catalysts. Also, a session where the model names a scheduled catalyst but the sector moves flat/down without it would not falsify — the lesson only requires naming, not assigning excessive weight."
 sector: "Technology"
 date: "2026-09-09"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Technology — 2026-09-09

@@ -7,7 +7,7 @@ error_category: "NONE"
 falsifier: "A falsifying case would be: (1) a day with oil >$100 + hawkish Fed repricing + risk-off tape where XLRE rallies or goes flat (flight-to-safety bid into REITs despite the negative rate spine) — this would falsify the asymmetric-downside mechanism; (2) a day with no defensive cushion where the model predicts down/mild but XLRE drops >2% (notable magnitude) — this would suggest the mild cap is too conservative when the asymmetric-downside mechanism is strong; (3) a day with a +0.4% cushion where the model overrides to flat but XLRE still drops >1% — this would falsify the cushion override. None of these occurred today."
 sector: "Real Estate"
 date: "2026-09-09"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Real Estate — 2026-09-09

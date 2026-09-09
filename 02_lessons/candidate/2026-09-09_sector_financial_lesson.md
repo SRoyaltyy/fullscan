@@ -7,7 +7,7 @@ error_category: "NONE"
 falsifier: "If on a subsequent oil-shock day with Brent >$100 and long-end yields in stress zone, XLF falls ≥1% (notable) despite tight credit (HY <2.75), then the "tight credit tempers to mild" assumption is falsified. Conversely, if XLF falls <0.2% (flat) on such a day, the S0=−2 / S1=−0.5 scoring is too negative. The lesson would also be falsified if XLF rises (up) on an oil-shock day with long-end stress, which would indicate the "value shield" dynamic can re-emerge under certain conditions not yet identified."
 sector: "Financial"
 date: "2026-09-09"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Financial — 2026-09-09

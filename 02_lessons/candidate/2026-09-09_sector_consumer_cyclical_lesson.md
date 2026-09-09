@@ -7,7 +7,7 @@ error_category: "NONE"
 falsifier: "This lesson would be falsified if a future oil-shock day with Brent >$100 at the open and XLY multi-horizon lag produced a flat or positive XLY day (direction miss), or if XLY moved >−2% (severe) when no mega-cap premarket breakdown was present. Also falsified if the S0 = −2 / S1 = −1 separation proved to be double-counting (i.e., if a similar setup produced a much larger decline than the mild band on a consistent basis, suggesting the scores should have been more negative)."
 sector: "Consumer Cyclical"
 date: "2026-09-09"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Cyclical — 2026-09-09

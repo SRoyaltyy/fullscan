@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "A future session where the narrative calls down/mild on a live oil-shock day with negative 1d rel tape, the pipeline outputs flat/flat, and the actual is flat or up (XLI ≥ −0.2%) — this would falsify the corrected behavior of preferring the narrative's down call. Conversely, if the narrative's down call on such a day repeatedly misses (actual flat/up), the correction should be reverted."
 sector: "Industrials"
 date: "2026-09-09"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Industrials — 2026-09-09

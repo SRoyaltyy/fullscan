@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "A future session where XLU has a ≥ +0.4% 1d relative cushion from a defensive spike, the shock is static (oil holding, no new escalation), yet XLU closes flat or up (cushion holds, no mean-reversion) would falsify this lesson. Also falsified if a static shock with a large cushion leads to down but the magnitude exceeds mild (≥ 2%) — the lesson predicts mild, not notable."
 sector: "Utilities"
 date: "2026-09-09"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Utilities — 2026-09-09

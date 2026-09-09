@@ -1,0 +1,29 @@
+---
+trigger_pattern: "When a live geopolitical/oil supply-shock day is present (oil breaching $100 on escalating Middle East conflict, futures down pre-market) and the sector is a deep medium-term laggard (1m rel ≤ −5%) with a negative 1d relative tape, the model's narrative essay correctly identifies down/mild but the pipeline-computed decision overrides to flat/flat via the sector_rs_veto and calendar_size_gate, causing a direction MISS on a day where the macro shock is the dominant, unambiguous driver."
+corrected_behavior: "When the narrative essay and pipeline disagree, the model must reconcile toward the narrative when the narrative's directional drivers are (a) a live, escalating macro shock (oil >$100, confirmed by futures down) and (b) confirming negative sector tape (1d rel negative, deep 1m laggard). The sector_rs_veto and calendar_size_gate should not override a live macro shock with confirming tape — these gates are for ambiguous/low-conviction setups, not for days where S0 is a confirmed −1 or −2 with negative 1d relative confirmation. When the narrative says down and the pipeline says flat on a live oil-shock day with negative 1d rel, emit down/mild (or at minimum down/flat), not flat/flat. The 09-08 lesson's DO-INSTEAD (cut conviction / prefer flat/mild when score fights tape) applies when the tape is POSITIVE or mixed (1d/3d rel positive), NOT when the tape confirms the negative score (1d rel negative)."
+falsifier: "A future session where the narrative calls down/mild on a live oil-shock day with negative 1d rel tape, the pipeline outputs flat/flat, and the actual is flat or up (XLI ≥ −0.2%) — this would falsify the corrected behavior of preferring the narrative's down call. Conversely, if the narrative's down call on such a day repeatedly misses (actual flat/up), the correction should be reverted."
+current_behavior: "The model writes a narrative essay concluding down/mild with S0=−1, S2=−1, S4=−1 (total −2.7), but the pipeline-computed decision (deterministic) outputs flat/flat with total_score −4.05, applying sector_rs_veto_applied=True and calendar_size_gate_applied=True. The final submitted prediction is flat/flat, contradicting the narrative's own directional call. The 09-08 lesson (reconcile narrative vs pipeline) is cited but the reconciliation resolves toward the pipeline's flat rather than the narrative's down."
+evidence_cited: "2026-09-09 Industrials: narrative concluded 'Down/mild is the honest call' with S0=−1 (oil >$100 live escalation), S2=−1 (deep laggard 1m rel −5.19%), S4=−1 (1d rel −0.64% negative confirmation). Pipeline output flat/flat (total −4.05) with sector_rs_veto_applied=True and calendar_size_gate_applied=True. Actual: XLI −1.51%, SPY −0.46%, rel −1.04% — direction down, magnitude notable. The narrative's directional call was correct; the pipeline's flat override caused the MISS. The 09-08 lesson (same sector, same pattern) also resulted in a flat/flat prediction that MISSED a down day (XLI −0.485%), showing this is a recurring error: two consecutive sessions where the pipeline flat-overrode a narrative down call on oil-shock days, both MISSING."
+error_category: "A"
+scope: "general"
+date: "2026-09-09"
+status: "active"
+occurrences: "1"
+promoted_on: "2026-09-09"
+sources: "['2026-09-09_sector_industrials_lesson.md']"
+schema_ok: "true"
+---
+
+## RULE
+When the narrative essay and pipeline disagree, the model must reconcile toward the narrative when the narrative's directional drivers are (a) a live, escalating macro shock (oil >$100, confirmed by futures down) and (b) confirming negative sector tape (1d rel negative, deep 1m laggard). The sector_rs_veto and calendar_size_gate should not override a live macro shock with confirming tape — these gates are for ambiguous/low-conviction setups, not for days where S0 is a confirmed −1 or −2 with negative 1d relative confirmation. When the narrative says down and the pipeline says flat on a live oil-shock day with negative 1d rel, emit down/mild (or at minimum down/flat), not flat/flat. The 09-08 lesson's DO-INSTEAD (cut conviction / prefer flat/mild when score fights tape) applies when the tape is POSITIVE or mixed (1d/3d rel positive), NOT when the tape confirms the negative score (1d rel negative).
+
+## WHEN IT FIRES
+When a live geopolitical/oil supply-shock day is present (oil breaching $100 on escalating Middle East conflict, futures down pre-market) and the sector is a deep medium-term laggard (1m rel ≤ −5%) with a negative 1d relative tape, the model's narrative essay correctly identifies down/mild but the pipeline-computed decision overrides to flat/flat via the sector_rs_veto and calendar_size_gate, causing a direction MISS on a day where the macro shock is the dominant, unambiguous driver.
+
+## WRONG IF
+A future session where the narrative calls down/mild on a live oil-shock day with negative 1d rel tape, the pipeline outputs flat/flat, and the actual is flat or up (XLI ≥ −0.2%) — this would falsify the corrected behavior of preferring the narrative's down call. Conversely, if the narrative's down call on such a day repeatedly misses (actual flat/up), the correction should be reverted.
+
+## EVIDENCE
+2026-09-09 Industrials: narrative concluded "Down/mild is the honest call" with S0=−1 (oil >$100 live escalation), S2=−1 (deep laggard 1m rel −5.19%), S4=−1 (1d rel −0.64% negative confirmation). Pipeline output flat/flat (total −4.05) with sector_rs_veto_applied=True and calendar_size_gate_applied=True. Actual: XLI −1.51%, SPY −0.46%, rel −1.04% — direction down, magnitude notable. The narrative's directional call was correct; the pipeline's flat override caused the MISS. The 09-08 lesson (same sector, same pattern) also resulted in a flat/flat prediction that MISSED a down day (XLI −0.485%), showing this is a recurring error: two consecutive sessions where the pipeline flat-overrode a narrative down call on oil-shock days, both MISSING.
+
+(learn_cycle promote)

@@ -7,7 +7,7 @@ error_category: "NONE"
 falsifier: "A future instance where the food-crash cluster has demonstrated dominance on 2+ sessions, oil is >$100, but XLP rallies on a genuine FTS bid (rel > +0.5%) would falsify the "food-crash always dominates" inference. Also, if the food-crash cluster fades (no new dividend cuts, earnings stabilize) and the model still scores S0=0 on a fresh oil shock, that would be over-applying this lesson."
 sector: "Consumer Defensive"
 date: "2026-09-09"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Defensive — 2026-09-09

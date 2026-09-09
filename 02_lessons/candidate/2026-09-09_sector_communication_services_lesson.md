@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "If a future pre-CPI day with oil elevated and hawkish Fed backdrop shows XLC flat or positive despite a single-name positive catalyst and no breadth confirmation, this lesson would be falsified. Conversely, if the model scores down/mild on such setups and XLC is flat or positive, the lesson needs revision."
 sector: "Communication Services"
 date: "2026-09-09"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Communication Services — 2026-09-09

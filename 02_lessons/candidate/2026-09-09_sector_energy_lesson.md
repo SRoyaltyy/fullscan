@@ -7,7 +7,7 @@ error_category: "NONE"
 falsifier: "This lesson would be falsified if a fresh severe kinetic escalation with Brent >$100 produced XLE gains >2% (notable+) despite a risk-off tape — i.e., if the risk-off tape did NOT cap energy upside. It would also be falsified if the model capped at mild and XLE delivered notable gains (>2%) on two consecutive similar setups. The 09-08 and 09-09 actuals (+1.11%, +0.83%) both confirm the mild cap was correct."
 sector: "Energy"
 date: "2026-09-09"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Energy — 2026-09-09

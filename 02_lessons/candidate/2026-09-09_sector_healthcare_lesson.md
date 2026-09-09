@@ -7,7 +7,7 @@ error_category: "NONE"
 falsifier: "This lesson would be falsified if XLV rose on a day with Brent ≥$100, crowded-long positioning, and persistent multi-day lag — i.e., if the sector were bid defensively despite the elevated-oil unwind conditions. It would also be falsified if the 1d relative stabilization (+0.14%) had reversed into a notable down day (rel < −1%), which would indicate the stabilization was not a reliable magnitude cap."
 sector: "Healthcare"
 date: "2026-09-09"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Healthcare — 2026-09-09

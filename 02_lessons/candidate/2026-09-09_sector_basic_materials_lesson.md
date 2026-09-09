@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "A future session where the 8/18 metals-co-move pattern fires (oil >$100 into equity risk-off), all four S1 sub-factors align negative, but XLB declines less than 0.5% (mild magnitude) despite S1 = −2 and S2 = −1 scoring. If the sector shows resilience despite the uniform negative alignment, the magnitude underweight correction would be disproven."
 sector: "Basic Materials"
 date: "2026-09-09"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Basic Materials — 2026-09-09
