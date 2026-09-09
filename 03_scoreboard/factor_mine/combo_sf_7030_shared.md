@@ -4,45 +4,53 @@ _Book rules: $10k · whole shares · Futubull fees · leftover cash split on new
 
 Combination book: each member still runs its own leak-free 09:30 `pick_day`. Shared leftover (or split cash) · one ticker one side · official 09:30 / 16:00 · owner min-hold. Does not change live `flatten_robust`.
 
-Side **mix** · universe `combo` · top 8 · rank `list` · size `combo` · sell `owner_list` · S-boost `none` · shared short_news_r_h3/flatten_h5 w=0.7,0.3 net=priority
+Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/flatten_h5 w=0.7,0.3 net=priority
 
 Cash book **+20.30%** ($12,030) · signal-only (no cash/fees) was —. Starts YES **16/18**. Fills 144 · skips 278 · realized $+1831.22.
 
 ## How this sleeve decides (like you are 10)
 
-Imagine the same $10,000 school-bell book, but 2 kids share it: short_news_r_h3, flatten_h5. Each kid still uses only the 09:30 list and never peeks at today's Change%. They share one leftover-cash pile — unused cash spills to the next kid. If two kids want the same name, the earlier claim wins. They never hold the same name long and short.
+Imagine 2 kids at the same 09:30 school bell sharing one $10,000 book: short_news_r_h3 70%, flatten_h5 30%. This is not a new shopping list mashed together. Each kid still uses only their own leak-free 09:30 list and never peeks at today's Change%, Gap, RelVol, or the printed book. They share one leftover-cash pile. After sells, leftover is offered in claim order. A kid who cannot spend their slice leaves the unused cash for the next kid. Weights still cap each kid’s share of whatever cash is left. If two kids want the same name, the earlier claim wins (fresh-E, then heat, then other longs, then shorts). They never open a second lot in that name. Money, fills, fees, min-hold, and the hard-red sit are the same rules as every other sleeve on this board. A lot remembers which kid bought it, so that kid’s hold timer and list-drop apply. A shared mix can beat both kids because unused leftover spills — it is not the average of their Book%.
 
 ### What it looks at (inputs)
 
-- Members: short_news_r_h3 70%, flatten_h5 30%.
-- Clock: 09:30 ET only. Same leak-free cameras / prior news / prior tape as each member.
-- Fill price: official 09:30 open. Close marks are official 16:00. No Finviz Price as a session print.
-- Money: $10k, whole shares, Futubull fees, sell first, hard-red S≤−3 sit.
-- Pool: shared. Net: priority.
-- Each lot keeps the owner's min-hold and list-drop rule.
+- Shopping list: each member keeps its own 09:30 list. This combo does not invent a mashed list.
+- Clock: 09:30 ET only. The sleeve never peeks at today's Change%, Gap, RelVol, or the printed book to decide.
+- News, if used, is the morning packet box or yesterday's headline — never a later scrape.
+- Money: leftover cash from yesterday + the lots we already hold. It can only spend cash it has and only sell shares it holds.
+- Fill price: the 09:30 open, whole shares, Futubull fees. Close marks are the official 16:00 print. A missing open is never replaced by the close.
+- Morning weather S: if S ≤ −3 the sleeve sits (no new buys). Lots already held are not dumped just because S is red.
+- Members and weights: short_news_r_h3 70%, flatten_h5 30%.
+- Member: short_news_r_h3 (70% · short · hold 3).
+- Member: flatten_h5 (30% · long · hold 5).
+- Each lot remembers the owner kid, so that kid’s min-hold and list-drop rule apply. A hold-3 fresh-E lot is not sold because the heat kid only holds 1 day.
 
 ### When it buys
 
-- Each member runs its own 09:30 pick_day (no mashed shopping list).
-- If S ≤ −3, nobody opens a new lot.
-- One ticker, one side. Claim order: fresh-E, then heat, then the other longs, then shorts.
-- Shared pool: leftover cash is offered in claim order (fresh-E, then heat, then other longs, then shorts). Unused room spills to the next member; weights still cap each kid's slice.
-- Skip a name if the slice cannot buy 1 share after fees, or if there is no official 09:30.
+- At 09:30, each member runs its own pick_day on its own list and gates. Nobody mashes the names into one ranked list first.
+- If morning S ≤ −3, buy nobody new (hard-red sit).
+- One ticker, one side. Claim order: fresh-E, then heat, then the other longs, then shorts. A name already held cannot be opened on the other side.
+- Shared pile: leftover cash is offered in claim order (fresh-E, then heat, then other longs, then shorts). Each kid splits their room equally across *their* new names (leftover, whole shares, fees out of cash). Unused room spills to the next kid. A short fill adds cash; that cash can later fund a long, still capped by the cover rule (equity ≥ 2× notional).
+- Skip a name if the slice cannot buy 1 share after fees.
+- Skip a name if there is no official 09:30 open.
+- Long lots buy shares (want the price up). Short lots borrow (want the price down) and are marked as a liability.
 
 ### When it sells
 
-- Sell first, then buy. A lot is only sold if that sleeve holds it.
-- Min-hold and list-drop are the owner's. A hold-5 flatten lot is not dumped by a hold-1 heat card.
-- Fills at the 09:30 open. Overnight, cash does not change.
+- Sell first, then buy. Never sell a ticker we do not hold.
+- Minimum hold is the owner kid’s hold — the buy morning counts as 1.
+- No extra panic button unless that owner recipe has one (🚨 / last-red / news🔴).
+- List-drop: after the owner’s min-hold, sell at the 09:30 open if the name is no longer on *that owner’s* list today. The heat kid falling off does not sell a fresh-E lot.
+- Fills are at the 09:30 open. Fees come out of cash. Overnight, cash does not change.
 
 ## Why these stocks
 
 Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 09:30 packet + leftover cash + lots on hand decide the ticket. Same-day Change% is outcome only.
 
-- **Universe** `combo` — candidate list at 09:30 (flatten wish-list, union, probable, yday gainer, or OHLC hot).
+- **Universe** `combo` — each member keeps its own 09:30 list (not a mashed shopping list).
 - **Gate** `none (list as ranked)` · **rank** `list order` · **top_n** 8.
-- **Size** `combo` splits leftover cash among *new* names only. Rank-weight / top-heavy still cannot invent money.
-- **Sell** `owner_list` after min-hold **5**. We never sell a ticker we do not hold. Early 🚨 / last-red / news🔴 can still exit inside the floor.
+- **Size** `leftover` splits leftover cash among *new* names only. Rank-weight / top-heavy still cannot invent money.
+- **Sell** `list` after min-hold **owner mix**. We never sell a ticker we do not hold. Early 🚨 / last-red / news🔴 can still exit inside the floor.
 - **Entry:** Combination book: each member still runs its own leak-free 09:30 `pick_day`. Shared leftover (or split cash) · one ticker one side · official 09:30 / 16:00 · owner min-hold. Does not change live `flatten_robust`.
 
 ## State audit

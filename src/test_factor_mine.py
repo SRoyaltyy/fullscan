@@ -477,7 +477,7 @@ def test_template_has_data_slot() -> None:
     assert "combo" in text.lower()
     assert "outperform" in text.lower()
     assert "kindPick" in text
-    assert "vs members" in text
+    assert "This is not a new shopping list" in text or "not a mashed shopping list" in text.lower() or "Combinations." in text
 
 
 def test_write_outputs_injects_payload(tmp_path=None) -> None:

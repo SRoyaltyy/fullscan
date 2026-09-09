@@ -636,8 +636,8 @@ def simulate_shared(panel: dict, recs: list[dict], weights: list[float],
         "members": [r["name"] for r in recs],
         "weights": ws,
         "rules": dict(fmb.BOOK_RULES),
-        "size": "combo",
-        "sell": "owner_list",
+        "size": "leftover",
+        "sell": "list",
         "s_boost": "none",
         "cash": round(cash, 2),
         "n_open": len(pos),
@@ -755,8 +755,8 @@ def simulate_split(panel: dict, recs: list[dict], weights: list[float],
         "members": [r["name"] for r in recs],
         "weights": ws,
         "rules": dict(fmb.BOOK_RULES),
-        "size": "combo",
-        "sell": "owner_list",
+        "size": "leftover",
+        "sell": "list",
         "s_boost": "none",
         "cash": daily[-1]["cash"] if daily else CAPITAL,
         "n_open": sum(int(b.get("n_open") or 0) for b in books),
@@ -889,8 +889,8 @@ def combo_recipe(spec: dict) -> dict:
         hold=5,
         side="mix",
         top_n=8,
-        size="combo",
-        sell="owner_list",
+        size="leftover",
+        sell="list",
         note=(f"{spec['pool']} {'/'.join(spec['members'])} "
               f"w={','.join(str(round(w, 2)) for w in _norm_w(spec['weights']))} "
               f"net={spec['net']}"),
@@ -906,48 +906,125 @@ def combo_recipe(spec: dict) -> dict:
 
 
 def explain_combo(spec: dict) -> dict:
-    members = ", ".join(spec["members"])
-    w = ", ".join(f"{n} {100*x:.0f}%"
-                  for n, x in zip(spec["members"], _norm_w(spec["weights"])))
-    pool = spec["pool"]
-    net = spec["net"]
+    members = list(spec["members"] or [])
+    ws = _norm_w(spec.get("weights") or [1] * max(1, len(members)))
+    w = ", ".join(f"{n} {100 * x:.0f}%" for n, x in zip(members, ws))
+    pool = spec.get("pool") or "shared"
+    net = spec.get("net") or "priority"
+    rec_by = {r["name"]: r for r in fm.build_recipes()}
+    kid_parts = []
+    for n, wt in zip(members, ws):
+        r = rec_by.get(n) or {}
+        kid_parts.append(
+            f"{n} ({100 * wt:.0f}% · {r.get('side') or 'long'} · hold {r.get('hold') or '?'})"
+        )
+    if net == "skip":
+        net_kid = (
+            "If two kids want the same name on opposite sides, both sit. "
+            "If they agree on the side, the earlier claim still takes the only lot."
+        )
+        net_buy = (
+            "If two kids want the same name on opposite sides, skip it entirely. "
+            "If they agree, the earlier claim (fresh-E, then heat, then other longs, then shorts) takes the only lot."
+        )
+    elif net == "weather":
+        net_kid = (
+            "If two kids want the same name on opposite sides, the short kid wins "
+            "when morning S is below 0; otherwise the long kid wins. Same-side ties still go to the earlier claim."
+        )
+        net_buy = (
+            "Opposite-side fight: short wins if morning S < 0, else long. "
+            "Same-side ties go to the earlier claim (fresh-E, then heat, then other longs, then shorts)."
+        )
+    else:
+        net_kid = (
+            "If two kids want the same name, the earlier claim wins "
+            "(fresh-E, then heat, then other longs, then shorts). They never open a second lot in that name."
+        )
+        net_buy = (
+            "One ticker, one side. Claim order: fresh-E, then heat, then the other longs, then shorts. "
+            "A name already held cannot be opened on the other side."
+        )
+    if pool == "split":
+        pool_kid = (
+            "Each kid gets their own slice of the $10,000 and keeps it — two (or three) tiny books "
+            "added together. They do not share leftover cash, so the same name can appear in two slices."
+        )
+        pool_buy = (
+            "Split pile: each member is a normal leftover book at its weight × $10k. "
+            "Unused cash in one slice stays in that slice."
+        )
+    else:
+        pool_kid = (
+            "They share one leftover-cash pile. After sells, leftover is offered in claim order. "
+            "A kid who cannot spend their slice leaves the unused cash for the next kid. "
+            "Weights still cap each kid’s share of whatever cash is left."
+        )
+        pool_buy = (
+            "Shared pile: leftover cash is offered in claim order (fresh-E, then heat, then other longs, then shorts). "
+            "Each kid splits their room equally across *their* new names (leftover, whole shares, fees out of cash). "
+            "Unused room spills to the next kid. A short fill adds cash; that cash can later fund a long, "
+            "still capped by the cover rule (equity ≥ 2× notional)."
+        )
+    if pool == "split":
+        kid_open = (
+            f"Imagine {len(members)} kids at the same 09:30 school bell, "
+            f"each with their own slice of $10,000: {w}."
+        )
+    else:
+        kid_open = (
+            f"Imagine {len(members)} kids at the same 09:30 school bell "
+            f"sharing one $10,000 book: {w}."
+        )
     kid = (
-        f"Imagine the same $10,000 school-bell book, but {len(spec['members'])} "
-        f"kids share it: {members}. Each kid still uses only the 09:30 list "
-        f"and never peeks at today's Change%. "
-        f"{'They share one leftover-cash pile — unused cash spills to the next kid.' if pool=='shared' else 'Each kid gets their own slice of the $10k and keeps it.'} "
-        f"If two kids want the same name, "
-        f"{'the earlier claim wins' if net=='priority' else 'they both sit if they disagree on long vs short' if net=='skip' else 'the short kid wins on a red-S morning, otherwise the long kid'}. "
-        f"They never hold the same name long and short."
+        f"{kid_open} This is not a new shopping list mashed together. Each kid still uses only their own leak-free "
+        f"09:30 list and never peeks at today's Change%, Gap, RelVol, or the printed book. "
+        f"{pool_kid} {net_kid} "
+        f"Money, fills, fees, min-hold, and the hard-red sit are the same rules as every other sleeve on this board. "
+        f"A lot remembers which kid bought it, so that kid’s hold timer and list-drop apply. "
+        f"A shared mix can beat both kids because unused leftover spills — it is not the average of their Book%."
     )
+    inputs = [
+        "Shopping list: each member keeps its own 09:30 list. This combo does not invent a mashed list.",
+        "Clock: 09:30 ET only. The sleeve never peeks at today's Change%, Gap, RelVol, or the printed book to decide.",
+        "News, if used, is the morning packet box or yesterday's headline — never a later scrape.",
+        "Money: leftover cash from yesterday + the lots we already hold. It can only spend cash it has and only sell shares it holds.",
+        "Fill price: the 09:30 open, whole shares, Futubull fees. Close marks are the official 16:00 print. A missing open is never replaced by the close.",
+        "Morning weather S: if S ≤ −3 the sleeve sits (no new buys). Lots already held are not dumped just because S is red.",
+        f"Members and weights: {w}.",
+    ]
+    inputs.extend(f"Member: {bit}." for bit in kid_parts)
+    inputs.append(
+        "Each lot remembers the owner kid, so that kid’s min-hold and list-drop rule apply. "
+        "A hold-3 fresh-E lot is not sold because the heat kid only holds 1 day."
+    )
+    buy = [
+        "At 09:30, each member runs its own pick_day on its own list and gates. Nobody mashes the names into one ranked list first.",
+        "If morning S ≤ −3, buy nobody new (hard-red sit).",
+        net_buy,
+        pool_buy,
+        "Skip a name if the slice cannot buy 1 share after fees.",
+        "Skip a name if there is no official 09:30 open.",
+        "Long lots buy shares (want the price up). Short lots borrow (want the price down) and are marked as a liability.",
+    ]
+    sell = [
+        "Sell first, then buy. Never sell a ticker we do not hold.",
+        "Minimum hold is the owner kid’s hold — the buy morning counts as 1.",
+        "No extra panic button unless that owner recipe has one (🚨 / last-red / news🔴).",
+        "List-drop: after the owner’s min-hold, sell at the 09:30 open if the name is no longer on *that owner’s* list today. The heat kid falling off does not sell a fresh-E lot.",
+        "Fills are at the 09:30 open. Fees come out of cash. Overnight, cash does not change.",
+    ]
     return {
         "kid": kid,
-        "inputs": [
-            f"Members: {w}.",
-            "Clock: 09:30 ET only. Same leak-free cameras / prior news / prior tape as each member.",
-            "Fill price: official 09:30 open. Close marks are official 16:00. No Finviz Price as a session print.",
-            "Money: $10k, whole shares, Futubull fees, sell first, hard-red S≤−3 sit.",
-            f"Pool: {pool}. Net: {net}.",
-            "Each lot keeps the owner's min-hold and list-drop rule.",
-        ],
-        "buy": [
-            "Each member runs its own 09:30 pick_day (no mashed shopping list).",
-            "If S ≤ −3, nobody opens a new lot.",
-            "One ticker, one side. Claim order: fresh-E, then heat, then the other longs, then shorts.",
-            "Shared pool: leftover cash is offered in claim order (fresh-E, then heat, then other longs, then shorts). Unused room spills to the next member; weights still cap each kid's slice.",
-            "Skip a name if the slice cannot buy 1 share after fees, or if there is no official 09:30.",
-        ],
-        "sell": [
-            "Sell first, then buy. A lot is only sold if that sleeve holds it.",
-            "Min-hold and list-drop are the owner's. A hold-5 flatten lot is not dumped by a hold-1 heat card.",
-            "Fills at the 09:30 open. Overnight, cash does not change.",
-        ],
+        "inputs": inputs,
+        "buy": buy,
+        "sell": sell,
         "universe": "combo",
         "hold": 5,
         "side": "mix",
         "top_n": 8,
-        "size": "combo",
-        "sell_rule": "owner_list",
+        "size": "leftover",
+        "sell_rule": "list",
         "s_boost": "none",
     }
 
@@ -1033,8 +1110,8 @@ def attach_combo(spec: dict, book: dict, starts: list[dict],
         "forbid": {},
         "exit_when": {},
         "note": combo_recipe(spec)["note"],
-        "size": "combo",
-        "sell": "owner_list",
+        "size": "leftover",
+        "sell": "list",
         "s_boost": "none",
         "members": spec["members"],
         "weights": _norm_w(spec["weights"]),
@@ -1201,6 +1278,13 @@ def merge_into_payload(payload: dict, combo_stats: list[dict],
 
 
 def write_combo_sidecar(combo_stats: list[dict]) -> None:
+    if not combo_stats and OUT_JSON.is_file():
+        try:
+            raw = json.loads(OUT_JSON.read_text(encoding="utf-8"))
+            if int(raw.get("n") or 0) > 0:
+                return
+        except (OSError, json.JSONDecodeError, TypeError, ValueError):
+            pass
     rows = []
     for s in combo_stats:
         sc = s.get("scorecard") or {}

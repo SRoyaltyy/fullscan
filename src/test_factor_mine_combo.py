@@ -267,6 +267,10 @@ def test_explain_recipe_combo_does_not_int_mix() -> None:
     blob = " ".join([ex.get("kid") or ""] + list(ex.get("inputs") or []))
     assert "09:30" in blob
     assert "Change%" in blob
+    assert "leftover" in (ex.get("kid") or "").lower()
+    assert ex.get("size") == "leftover"
+    assert ex.get("sell_rule") == "list"
+    assert "mashed" in (ex.get("kid") or "").lower()
 
 
 def test_run_skips_combos_when_members_absent() -> None:

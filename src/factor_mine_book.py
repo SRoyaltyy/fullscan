@@ -1258,7 +1258,9 @@ def _explain_md(rec: dict) -> list[str]:
 def render_recipe_md(rec: dict, stats: dict, book: dict) -> str:
     live_gate = bool((rec.get("require") or {}).get("live_entry"))
     wish = rec.get("universe") == "flatten" and not live_gate
-    if rec.get("universe") == "combo" or rec.get("members"):
+    combo = bool(rec.get("universe") == "combo" or rec.get("members"))
+    hold_txt = "owner mix" if combo else rec["hold"]
+    if combo:
         entry_note = (
             "Combination book: each member still runs its own leak-free "
             "09:30 `pick_day`. Shared leftover (or split cash) · one ticker "
@@ -1281,7 +1283,7 @@ def render_recipe_md(rec: dict, stats: dict, book: dict) -> str:
         "",
         f"_Book rules: $10k · whole shares · Futubull fees · leftover cash "
         f"split on new names · sell first · "
-        f"min-hold **{'owner mix' if rec.get('universe')=='combo' or rec.get('members') else rec['hold']}** sessions · "
+        f"min-hold **{hold_txt}** sessions · "
         f"fill 09:30 open · hard-red S≤{HARD_RED:g} sit · shorts marked as "
         f"liability (equity ≥ 2× notional). "
         f"Live `flatten_robust` is not changed._",
@@ -1312,8 +1314,10 @@ def render_recipe_md(rec: dict, stats: dict, book: dict) -> str:
         "the 09:30 packet + leftover cash + lots on hand decide the ticket. "
         "Same-day Change% is outcome only.",
         "",
-        f"- **Universe** `{rec['universe']}` — candidate list at 09:30 "
-        f"(flatten wish-list, union, probable, yday gainer, or OHLC hot).",
+        f"- **Universe** `{rec['universe']}` — "
+        + ("each member keeps its own 09:30 list (not a mashed shopping list)."
+           if combo else
+           "candidate list at 09:30 (flatten wish-list, union, probable, yday gainer, or OHLC hot)."),
         f"- **Gate** `{_gate_label(rec)}` · **rank** `{rec.get('rank') or 'list order'}` "
         f"· **top_n** {rec['top_n']}"
         + (f" (S≥+5 may raise this when S-boost is `{rec.get('s_boost')}`)"
@@ -1321,7 +1325,7 @@ def render_recipe_md(rec: dict, stats: dict, book: dict) -> str:
         + ".",
         f"- **Size** `{rec.get('size') or 'leftover'}` splits leftover cash among "
         f"*new* names only. Rank-weight / top-heavy still cannot invent money.",
-        f"- **Sell** `{rec.get('sell') or 'list'}` after min-hold **{rec['hold']}**. "
+        f"- **Sell** `{rec.get('sell') or 'list'}` after min-hold **{hold_txt}**. "
         f"We never sell a ticker we do not hold. Early 🚨 / last-red / news🔴 "
         f"can still exit inside the floor.",
         f"- **Entry:** {entry_note}",
@@ -1551,6 +1555,11 @@ def write_action_mds(payload: dict, stats: list[dict], books: dict,
             "size": s.get("size") or "leftover",
             "sell": s.get("sell") or "list",
             "s_boost": s.get("s_boost") or "none",
+            "members": s.get("members") or [],
+            "weights": s.get("weights") or [],
+            "net": s.get("net"),
+            "pool": s.get("pool"),
+            "explain": s.get("explain"),
         }
 
     for name, b in books.items():

@@ -1416,7 +1416,8 @@ def run(from_date: str = START, to_date: str | None = None,
                 "net": st.get("net") or "priority",
                 "pool": st.get("pool") or "shared",
             }))
-        fmc.write_combo_sidecar(combo_stats)
+        if write:
+            fmc.write_combo_sidecar(combo_stats)
         combo_meta = {
             "n": len(combo_stats),
             "outperform": [s["name"] for s in combo_stats if s.get("outperforms")],
