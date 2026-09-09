@@ -771,6 +771,10 @@ def test_safe_git_push_keeps_dated_ranker_on_conflict() -> None:
     assert "keeping origin/main (sleeve-merge / Pages)" in text
     assert "x-access-token" in text
     assert "data/day_board" in text
+    # Incremental land must not delete untracked export / membership.
+    assert "restore_unstaged" in text
+    assert "git stash pop" in text
+    assert "finviz_2026-09-09.csv" in text
 
 
 def test_preopen_harden_halt_reverted() -> None:
