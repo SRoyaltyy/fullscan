@@ -376,7 +376,7 @@ def run(
     # or 11 sector essays must not eat the clock and leave join/AB empty.
     # Always cap — a default ECS click (skip_extras=false) used to hang
     # forever on yfinance / Grok and never write green.json.
-    wx_t = 180
+    wx_t = 50
     join_t = 180
     peer_t = 120
     ab_t = 1500
@@ -485,10 +485,11 @@ def run(
 
             if need("news_parse"):
                 print("[all] → News parse")
+                parse_t = 120
                 _run(
                     [sys.executable, "-m", "src.news_parse", "--hours", "48",
                      "--limit", "400", "--date", date],
-                    check=False, timeout_s=llm_sub_t,
+                    check=False, timeout_s=parse_t,
                 )
             else:
                 print("[all] skip News parse (DONE for this day)")

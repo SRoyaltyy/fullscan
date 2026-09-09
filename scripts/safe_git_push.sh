@@ -105,6 +105,11 @@ if [ -f 03_scoreboard/scoreboard.json ]; then
   OURS_SB=$(mktemp)
   cp 03_scoreboard/scoreboard.json "$OURS_SB"
 fi
+OURS_DB=""
+if [ -d data/day_board ]; then
+  OURS_DB=$(mktemp -d)
+  cp -a data/day_board/. "$OURS_DB/" 2>/dev/null || true
+fi
 LOCAL=$(git rev-parse HEAD)
 
 resolve_scoreboard() {
@@ -114,12 +119,21 @@ resolve_scoreboard() {
   fi
 }
 
+# ubuntu land vs ECS land both rewrite latest/today/dated JSON.
+# Take main's copy, then union OUR lands (do not clobber either side).
+resolve_day_board() {
+  if [ -n "$OURS_DB" ] && [ -d "$OURS_DB" ]; then
+    python3 -m src.day_board --merge-ours "$OURS_DB" || true
+    git add data/day_board 2>/dev/null || true
+  fi
+}
+
 # Dated ranker / weather / book this job just wrote. Main's copies are
 # the ubuntu land vs Stock Book ALL race. Take ours so rebase/merge
 # can finish; scoreboard still unions separately.
 RANKER_PATHS=(
   data/stock_book data/join data/universe data/ab_checklist
-  data/peers data/paper data/exports data/catalyst data/day_board
+  data/peers data/paper data/exports data/catalyst
   01_daily/weather
 )
 
@@ -171,7 +185,11 @@ resolve_unmerged() {
       03_scoreboard/scoreboard.json)
         git checkout origin/main -- "$f" 2>/dev/null || true
         ;;
-      01_daily/*|02_lessons/*|data/stock_book/*|data/join/*|data/universe/*|data/ab_checklist/*|data/peers/*|data/paper/*|data/exports/*|data/catalyst/*|data/day_board/*|dashboard/day-board/*)
+      data/day_board|data/day_board/*)
+        git checkout origin/main -- "$f" 2>/dev/null \
+          || git checkout --ours -- "$f" 2>/dev/null || true
+        ;;
+      01_daily/*|02_lessons/*|data/stock_book/*|data/join/*|data/universe/*|data/ab_checklist/*|data/peers/*|data/paper/*|data/exports/*|data/catalyst/*|dashboard/day-board/*)
         git checkout "$LOCAL" -- "$f" 2>/dev/null \
           || git checkout --theirs -- "$f" 2>/dev/null || true
         ;;
@@ -212,13 +230,14 @@ try_rebase() {
     restore_unstaged
     return 0
   fi
-  echo "[safe-push] rebase conflict — keeping our 01_daily + dated ranker, merging scoreboard"
+  echo "[safe-push] rebase conflict — keeping our 01_daily + dated ranker, merging scoreboard + day_board"
   git checkout --theirs -- 01_daily 02_lessons "${RANKER_PATHS[@]}" 2>/dev/null || restore_ours_daily
   restore_ours_ranker
   take_main_dashboard
   git checkout --ours -- 03_scoreboard/scoreboard.json 2>/dev/null || true
   resolve_scoreboard
   resolve_unmerged
+  resolve_day_board
   git add 01_daily 02_lessons 03_scoreboard "${RANKER_PATHS[@]}" "${DASHBOARD_PATHS[@]}" 2>/dev/null || git add -A
   if GIT_EDITOR=true git rebase --continue; then
     restore_unstaged
@@ -237,6 +256,7 @@ try_merge() {
   git stash push --keep-index -u -m "safe-push-unstaged" >/dev/null 2>&1 || true
   if git merge origin/main --no-edit; then
     resolve_scoreboard
+    resolve_day_board
     # Only commit if resolve_scoreboard staged something. Do NOT git-add
     # dirty 01_daily leftovers from the self-hosted work tree.
     if ! git diff --staged --quiet; then
@@ -252,6 +272,7 @@ try_merge() {
   git checkout origin/main -- 03_scoreboard/scoreboard.json 2>/dev/null || true
   resolve_scoreboard
   resolve_unmerged
+  resolve_day_board
   git add 01_daily 02_lessons 03_scoreboard "${RANKER_PATHS[@]}" "${DASHBOARD_PATHS[@]}" 2>/dev/null || git add -A
   if git commit -m "merge main (ours daily + merged scoreboard)"; then
     restore_unstaged
@@ -276,6 +297,7 @@ push_once() {
 if push_once; then
   echo "[safe-push] pushed $(git rev-parse --short HEAD)"
   [ -n "$OURS_SB" ] && rm -f "$OURS_SB"
+  [ -n "$OURS_DB" ] && rm -rf "$OURS_DB"
   exit 0
 fi
 
@@ -287,10 +309,12 @@ for attempt in 1 2 3 4; do
     if push_once; then
       echo "[safe-push] pushed on retry ${attempt} $(git rev-parse --short HEAD)"
       [ -n "$OURS_SB" ] && rm -f "$OURS_SB"
+      [ -n "$OURS_DB" ] && rm -rf "$OURS_DB"
       exit 0
     fi
   fi
 done
 echo "[safe-push] FATAL: push failed after retries — files are on the runner"
 [ -n "$OURS_SB" ] && rm -f "$OURS_SB"
+[ -n "$OURS_DB" ] && rm -rf "$OURS_DB"
 exit 1

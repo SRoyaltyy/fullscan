@@ -8,9 +8,10 @@ from . import config
 
 # 2026-09-08: variant-1 full-table CASE regex scan hit statement_timeout
 # (~5.5 min) and news_parse wrote empty → judge/actions cascade miss.
-# Bound every query, set a session timeout, retry with backoff, and
-# raise NewsDbError so QC can say db_timeout instead of empty_parse.
-_DEFAULT_STATEMENT_TIMEOUT_MS = 90_000
+# 2026-09-09: 90s × 3 variants × 3 retries still ate the 480s parse slot
+# (exit 124) so judge/actions never started. Morning default is 20s,
+# jump to last-N LIMIT after the first timeout, retry once.
+_DEFAULT_STATEMENT_TIMEOUT_MS = 20_000
 
 
 class NewsDbError(RuntimeError):
@@ -38,20 +39,20 @@ def _conn():
         return None
     last = None
     timeout_ms = _statement_timeout_ms()
-    for attempt in range(3):
+    for attempt in range(2):
         try:
             import psycopg2
             conn = psycopg2.connect(
                 config.DATABASE_URL,
-                connect_timeout=10,
+                connect_timeout=8,
                 options=f"-c statement_timeout={timeout_ms}",
             )
             return conn
         except Exception as e:  # noqa: BLE001
             last = e
-            print(f"[db] connect failed (try {attempt + 1}/3): {e}")
-            if attempt < 2:
-                time.sleep(2 * (attempt + 1))
+            print(f"[db] connect failed (try {attempt + 1}/2): {e}")
+            if attempt < 1:
+                time.sleep(2)
     print(f"[db] giving up — morning/collectors continue without Postgres ({last})")
     return None
 
@@ -86,7 +87,9 @@ def _recent_news_once(hours: int, limit: int) -> list[dict]:
     try:
         cur = conn.cursor()
         try:
-            for i, (q, params) in enumerate(queries):
+            i = 0
+            while i < len(queries):
+                q, params = queries[i]
                 try:
                     cur.execute(q, params)
                     rows = [{"source": s, "title": t, "url": u,
@@ -96,10 +99,16 @@ def _recent_news_once(hours: int, limit: int) -> list[dict]:
                         return rows
                 except Exception as e:  # noqa: BLE001
                     last_err = e
-                    if _is_timeout(e):
-                        saw_timeout = True
                     conn.rollback()
                     print(f"[db] news query variant {i} failed: {e}")
+                    if _is_timeout(e):
+                        saw_timeout = True
+                        if i < len(queries) - 1:
+                            print("[db] statement_timeout — jumping to last-N LIMIT")
+                            i = len(queries) - 1
+                            continue
+                        break
+                i += 1
             if saw_timeout:
                 raise NewsDbError(
                     "db_timeout",
@@ -122,14 +131,14 @@ def recent_news(hours: int = 24, limit: int = 30) -> list[dict]:
     so news_parse can fail loud instead of writing empty_parse.
     """
     last: NewsDbError | None = None
-    for attempt in range(3):
+    for attempt in range(2):
         try:
             return _recent_news_once(hours, limit)
         except NewsDbError as e:
             last = e
-            print(f"[db] recent_news {e.reason} (try {attempt + 1}/3): {e}")
-            if attempt < 2:
-                time.sleep(2 * (attempt + 1))
+            print(f"[db] recent_news {e.reason} (try {attempt + 1}/2): {e}")
+            if attempt < 1:
+                time.sleep(2)
     if last is not None:
         raise last
     return []

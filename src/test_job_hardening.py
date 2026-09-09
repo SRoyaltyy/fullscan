@@ -335,6 +335,9 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "weather missing/thin — retry --offline" in pre
     assert "timeout_s=1500" in pre
     assert "timeout_s=180" in pre
+    assert "timeout_s=50" in pre
+    assert "parse_t = 120" in pre
+    assert "Bound live, then offline" in pre
     assert "_exists_gt" in pre
     assert "skip_extras" in book
     extras_gate = book.find("skip extras before book")
@@ -342,7 +345,8 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert 0 <= extras_gate < news_parse
     assert "TimeoutExpired" in book
     assert "ab_t = 1500" in book
-    assert "wx_t = 180" in book
+    assert "wx_t = 50" in book
+    assert "parse_t = 120" in book
     assert "PREOPEN_LLM_TIMEOUT" in book
     assert "hung Grok must not block the book" in book
     assert "--offline" in book
@@ -423,7 +427,9 @@ def test_ranker_inputs_before_llm_packet() -> None:
     fin = (ROOT / "collectors" / "finviz_financials.py").read_text(encoding="utf-8")
     assert "America/New_York" in fin
     ch1 = (ROOT / "src" / "fetch_channel1.py").read_text(encoding="utf-8")
-    assert "setdefaulttimeout(20)" in ch1
+    assert "setdefaulttimeout(min(20, _YF_TIMEOUT))" in ch1
+    assert "_YF_TIMEOUT = 20" in ch1
+    assert "skip remaining FRED" in ch1
     book_yml = (WF / "stock_book_all.yml").read_text(encoding="utf-8")
     assert "skip_extras:" in book_yml
     assert "past 09:25 ET — skip LLM + extras" in book_yml
@@ -771,6 +777,8 @@ def test_safe_git_push_keeps_dated_ranker_on_conflict() -> None:
     assert "keeping origin/main (sleeve-merge / Pages)" in text
     assert "x-access-token" in text
     assert "data/day_board" in text
+    assert "resolve_day_board" in text
+    assert "src.day_board --merge-ours" in text
     # Incremental land must not delete untracked export / membership.
     assert "restore_unstaged" in text
     assert "git stash pop" in text

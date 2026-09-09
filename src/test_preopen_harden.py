@@ -17,6 +17,47 @@ from src import map_heat_refresh as mr
 ROOT = Path(__file__).resolve().parent.parent
 
 
+def test_news_parse_falls_back_to_digest() -> None:
+    from src import news_parse
+
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        news = root / "01_daily" / "news"
+        news.mkdir(parents=True)
+        (news / "2026-09-09_finviz_digest.json").write_text(json.dumps({
+            "index_digests": [{
+                "digest": "S&P 500 slips as Middle East tensions lift oil "
+                          "ahead of CPI",
+                "source": "finviz_elite_news",
+            }],
+            "top_signal": [{
+                "news_title": "Fed officials signal patience on rate cuts",
+                "digest": "Bernstein upgrades semis on AI capex",
+                "source": "finviz_export",
+            }],
+        }), encoding="utf-8")
+        orig_dir = news_parse.NEWS_DIR
+        news_parse.NEWS_DIR = str(news)
+        try:
+            with mock.patch.object(
+                    news_parse.db, "recent_news",
+                    side_effect=news_parse.db.NewsDbError(
+                        "db_timeout", "statement timeout")):
+                cwd = os.getcwd()
+                os.chdir(root)
+                try:
+                    report = news_parse.build_report(
+                        hours=48, limit=40, date_str="2026-09-09")
+                finally:
+                    os.chdir(cwd)
+        finally:
+            news_parse.NEWS_DIR = orig_dir
+    assert report.get("error") in (None, "")
+    assert report["raw_count"] >= 2
+    titles = " ".join(r.get("title") or "" for r in report.get("all_items") or [])
+    assert "CPI" in titles or "rate cuts" in titles
+
+
 def test_qc_news_parse_db_timeout_is_actionable() -> None:
     with tempfile.TemporaryDirectory() as d:
         p = Path(d) / "parsed.json"
@@ -64,7 +105,7 @@ def test_recent_news_raises_after_timeout_retries() -> None:
                 raise AssertionError("expected NewsDbError")
             except db.NewsDbError as e:
                 assert e.reason == "db_timeout"
-        assert len(sleeps) == 2
+        assert len(sleeps) == 1
     finally:
         db._conn = orig
 
@@ -202,6 +243,7 @@ def test_map_heat_passthrough_flag_skips_llm(tmp_path: Path | None = None) -> No
 
 def main() -> None:
     tests = [
+        test_news_parse_falls_back_to_digest,
         test_qc_news_parse_db_timeout_is_actionable,
         test_recent_news_raises_after_timeout_retries,
         test_bypass_cutoff_skips_refuse,

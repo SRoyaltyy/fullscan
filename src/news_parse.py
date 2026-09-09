@@ -22,6 +22,7 @@ import os
 import re
 from collections import defaultdict
 from datetime import datetime
+from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from . import config, db, output_qc, preopen
@@ -279,14 +280,99 @@ def _empty_error_report(hours: int, reason: str, detail: str) -> dict:
     }
 
 
-def build_report(hours: int = 48, limit: int = 300) -> dict:
+def rows_from_local_files(date_str: str, limit: int) -> list[dict]:
+    """Headlines already on disk when Postgres is down or timed out.
+
+    2026-09-08/09: statement_timeout ate the 480s parse slot and
+    judge/actions never started. Finviz digest + Channel 1 cache
+    are enough for a usable parse so the packet continues.
+    """
+    rows: list[dict] = []
+    seen: set[str] = set()
+
+    def add(title: str, source: str, url: str = "", published: str = "") -> None:
+        title = (title or "").strip()
+        key = title.lower()
+        if not title or key in seen:
+            return
+        seen.add(key)
+        rows.append({
+            "source": source or "local_file",
+            "title": title,
+            "url": url or "",
+            "published_at": published or "",
+        })
+
+    digest_p = Path(NEWS_DIR) / f"{date_str}_finviz_digest.json"
+    try:
+        data = json.loads(digest_p.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError, TypeError):
+        data = {}
+    if isinstance(data, dict):
+        for row in data.get("index_digests") or []:
+            if isinstance(row, dict):
+                add(str(row.get("digest") or ""),
+                    str(row.get("source") or "finviz_elite_news"))
+        for row in data.get("top_signal") or []:
+            if not isinstance(row, dict):
+                continue
+            add(str(row.get("news_title") or ""),
+                str(row.get("source") or "finviz_export"))
+            add(str(row.get("digest") or ""),
+                str(row.get("source") or "finviz_export"))
+
+    ch1_p = Path("01_daily") / "_channel1" / f"{date_str}_predict.json"
+    try:
+        ch1 = json.loads(ch1_p.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError, TypeError):
+        ch1 = {}
+    items = []
+    if isinstance(ch1, dict):
+        items = ((ch1.get("news_24h") or {}) or {}).get("items") or []
+    for row in items:
+        if isinstance(row, dict):
+            add(str(row.get("title") or ""),
+                str(row.get("source") or "channel1"),
+                str(row.get("url") or ""),
+                str(row.get("published_at") or ""))
+
+    ev_p = Path("01_daily") / "events" / f"{date_str}_events.json"
+    try:
+        ev = json.loads(ev_p.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError, TypeError):
+        ev = {}
+    for row in (ev.get("events") or []) if isinstance(ev, dict) else []:
+        if isinstance(row, dict):
+            add(str(row.get("title") or row.get("event") or row.get("name") or ""),
+                str(row.get("source") or "events"))
+    return rows[:limit]
+
+
+def build_report(hours: int = 48, limit: int = 300,
+                 date_str: str | None = None) -> dict:
+    rows: list[dict] = []
+    db_err: db.NewsDbError | None = None
     try:
         rows = db.recent_news(hours=hours, limit=limit)
-        if not rows:
-            rows = db.recent_news(hours=24 * 7, limit=limit)
     except db.NewsDbError as e:
+        db_err = e
         print(f"[news_parse] DB FAIL {e.reason}: {e}")
-        return _empty_error_report(hours, e.reason, str(e))
+    if not rows and db_err is None:
+        # Connected but empty window — one wider shot, no extra retry storm.
+        try:
+            rows = db._recent_news_once(hours=24 * 7, limit=limit)
+        except db.NewsDbError as e:
+            db_err = e
+            print(f"[news_parse] DB FAIL week window {e.reason}: {e}")
+    if not rows and date_str:
+        file_rows = rows_from_local_files(date_str, limit)
+        if file_rows:
+            why = db_err.reason if db_err is not None else "empty"
+            print(f"[news_parse] using {len(file_rows)} on-disk headlines "
+                  f"(db {why})")
+            rows = file_rows
+    if not rows and db_err is not None:
+        return _empty_error_report(hours, db_err.reason, str(db_err))
     parsed = parse_rows(rows)
     usable = [p for p in parsed if p["usable"]]
     single = [p for p in parsed if p["class"] == "single_name"]
@@ -413,7 +499,7 @@ def main() -> None:
         return
     if not config.DATABASE_URL:
         print("[news_parse] DATABASE_URL not set — writing from files only")
-    report = build_report(hours=args.hours, limit=args.limit)
+    report = build_report(hours=args.hours, limit=args.limit, date_str=date_str)
     jp, mp = save_report(report, date_str)
     if report.get("error"):
         print(f"[news_parse] FAIL {report['error']}: {report.get('error_detail')}")

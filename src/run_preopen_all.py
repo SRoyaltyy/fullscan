@@ -552,8 +552,10 @@ def run(date: str | None = None, force: bool = False,
         _run([py, "-m", "src.segments", "--date", date], timeout_s=180)
         snapshot_persist(date)
         _land(date, "universe", "Universe labels")
+    # 2026-09-09: live Channel 1 (30 Yahoo + FRED + news DB) ate 180s
+    # and left VIX unknown. Bound live, then offline stamp so join runs.
     step("weather", "Weather / regime",
-         [py, "-m", "src.weather", "--date", date], timeout_s=180)
+         [py, "-m", "src.weather", "--date", date], timeout_s=50)
     from . import skip_if_good
     if not skip_if_good.check_label_weather(date):
         print("[preopen-all] weather missing/thin — retry --offline")
@@ -598,9 +600,10 @@ def run(date: str | None = None, force: bool = False,
               f"subprocess {llm_sub_t}s "
               "(hung Grok fails over; 10800s ate 2026-09-04)")
         try:
+            parse_t = 120
             step("news_parse", "News parse",
                  [py, "-m", "src.news_parse", "--hours", "48", "--limit", "400",
-                  "--date", date, *fa], timeout_s=llm_sub_t)
+                  "--date", date, *fa], timeout_s=parse_t)
             step("events", "Event scanner (primary)",
                  [py, "-m", "src.run_events", "--date", date, *fa],
                  timeout_s=llm_sub_t)
@@ -663,7 +666,7 @@ def run(date: str | None = None, force: bool = False,
     # Book is next. Catalyst / Grok review wait until BUY/SELL is on disk —
     # 2026-09-02 eight dossiers ate the morning and the ranker never started.
     print("[preopen-all] → Weather / join refresh (before book)")
-    _run([py, "-m", "src.weather", "--date", date], timeout_s=180)
+    _run([py, "-m", "src.weather", "--date", date], timeout_s=50)
     if not skip_if_good.check_label_weather(date):
         print("[preopen-all] weather refresh thin — retry --offline")
         _run([py, "-m", "src.weather", "--date", date, "--offline"],

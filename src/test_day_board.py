@@ -110,6 +110,28 @@ def test_land_pushes_qc_ok_file() -> None:
     assert pushed and any("parsed.json" in x for x in pushed[0])
 
 
+def test_merge_boards_unions_lands() -> None:
+    theirs = {
+        "date": "2026-09-09",
+        "generated_at": "2026-09-09T06:10:00-04:00",
+        "ranker_ready": True,
+        "selections": {"buy_1d": [{"ticker": "AAA"}], "sell_1d": []},
+        "lands": [{"key": "join", "at": "2026-09-09T06:05:00-04:00"}],
+    }
+    ours = {
+        "date": "2026-09-09",
+        "generated_at": "2026-09-09T06:00:00-04:00",
+        "ranker_ready": False,
+        "selections": {"buy_1d": [], "sell_1d": []},
+        "lands": [{"key": "weather", "at": "2026-09-09T05:58:00-04:00"}],
+    }
+    merged = day_board.merge_boards(theirs, ours)
+    keys = {row["key"] for row in merged["lands"]}
+    assert keys == {"join", "weather"}
+    assert merged["ranker_ready"] is True
+    assert merged["selections"]["buy_1d"][0]["ticker"] == "AAA"
+
+
 def test_day_board_html_has_raw_poll() -> None:
     html = day_board.DASH_HTML
     assert "raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board" in html
@@ -154,6 +176,7 @@ def main() -> None:
         test_qc_rejects_db_timeout_parse,
         test_land_does_not_push_when_qc_fails,
         test_land_pushes_qc_ok_file,
+        test_merge_boards_unions_lands,
         test_day_board_html_has_raw_poll,
         test_should_not_push_locally,
         test_land_never_raises,
