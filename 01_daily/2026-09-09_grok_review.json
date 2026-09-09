@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-09",
+  "generated_at": "2026-09-09T08:56:25.293999-04:00",
+  "ok": false,
+  "fails": [
+    {
+      "path": "01_daily/general/2026-09-09_predict.md",
+      "reason": "Missing required general market predict file."
+    },
+    {
+      "path": "01_daily/news/2026-09-09_judge.md",
+      "reason": "Missing required news judge file."
+    },
+    {
+      "path": "01_daily/news/2026-09-09_parsed.json",
+      "reason": "Missing required news parse file."
+    }
+  ],
+  "notes": "The day fails because three required core artifacts are missing: the general market predict, the news judge, and the news parse. While the events JSON, finviz digest, map-heat tables, and 10 of 11 sector predicts are present and appear to be real, same-day, and complete, the absence of these three core files means the packet is not a human-usable same-day artifact. The missing real_estate sector predict is noted but does not independently fail the day since 10 sector essays are present and quality-ok.",
+  "prompt_chars": 192570,
+  "reply_chars": 857,
+  "reviewer": "grok-4.6-text"
+}
