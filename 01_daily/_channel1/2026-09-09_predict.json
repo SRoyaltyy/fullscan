@@ -1,6 +1,6 @@
 {
   "stage": "predict",
-  "fetched_at": "2026-09-09T11:39:59.467099-04:00",
+  "fetched_at": "2026-09-09T12:14:26.418671-04:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -70,59 +70,59 @@
   "vix": {
     "vix": {
       "date": "2026-09-09",
-      "current": 16.63,
-      "delta_1d": 0.91,
-      "delta_1w": 1.43
+      "current": 16.37,
+      "delta_1d": 0.65,
+      "delta_1w": 1.17
     },
     "vix3m": {
       "date": "2026-09-09",
-      "current": 18.93,
+      "current": 18.84,
       "source": "^VIX3M"
     },
-    "ratio": 0.878,
+    "ratio": 0.869,
     "ratio_source": "vix/vix3m",
-    "vix_ma20": 15.22,
-    "ratio_ma20": 1.093
+    "vix_ma20": 15.2,
+    "ratio_ma20": 1.077
   },
   "commodities_fx": {
     "CL=F": {
       "available": true,
       "date": "2026-09-09",
-      "last": 96.59,
-      "pct_1d": 3.83
+      "last": 96.41,
+      "pct_1d": 3.63
     },
     "BZ=F": {
       "available": true,
       "date": "2026-09-09",
-      "last": 101.43,
-      "pct_1d": 3.58
+      "last": 101.29,
+      "pct_1d": 3.44
     },
     "GC=F": {
       "available": true,
       "date": "2026-09-09",
-      "last": 4437.3,
-      "pct_1d": 0.99
+      "last": 4445.4,
+      "pct_1d": 1.17
     },
     "DXY": {
       "available": true,
       "date": "2026-09-09",
       "source": "DX-Y.NYB",
-      "pct_1d": 0.01,
-      "pct_1m": -0.97
+      "pct_1d": -0.05,
+      "pct_1m": -1.03
     }
   },
   "futures": {
     "ES=F": {
       "available": true,
       "date": "2026-09-09",
-      "last": 7634.75,
-      "pct_1d": -0.6
+      "last": 7642.0,
+      "pct_1d": -0.5
     },
     "NQ=F": {
       "available": true,
       "date": "2026-09-09",
-      "last": 29388.25,
-      "pct_1d": -0.51
+      "last": 29449.25,
+      "pct_1d": -0.3
     }
   },
   "finviz_futures_tape": {
@@ -485,82 +485,13 @@
       }
     ]
   },
-  "global_sessions": {
-    "asia": {
-      "per_index": {
-        "Nikkei": {
-          "available": true,
-          "date": "2026-09-08",
-          "last": 65269.33,
-          "pct_1d": -1.7
-        },
-        "Hang Seng": {
-          "available": true,
-          "date": "2026-09-09",
-          "last": 25274.96,
-          "pct_1d": -0.17
-        },
-        "Shanghai": {
-          "available": true,
-          "date": "2026-09-09",
-          "last": 3951.51,
-          "pct_1d": 0.28
-        },
-        "Kospi": {
-          "available": true,
-          "date": "2026-09-08",
-          "last": 6954.52,
-          "pct_1d": -0.58
-        },
-        "ASX200": {
-          "available": true,
-          "date": "2026-09-08",
-          "last": 8920.8,
-          "pct_1d": -1.0
-        }
-      },
-      "composite_avg": -0.63
-    },
-    "europe": {
-      "per_index": {
-        "FTSE": {
-          "available": true,
-          "date": "2026-09-09",
-          "last": 10659.86,
-          "pct_1d": -1.4
-        },
-        "DAX": {
-          "available": true,
-          "date": "2026-09-09",
-          "last": 25526.69,
-          "pct_1d": -1.85
-        },
-        "CAC": {
-          "available": true,
-          "date": "2026-09-09",
-          "last": 8150.1,
-          "pct_1d": -2.02
-        },
-        "EuroStoxx50": {
-          "available": true,
-          "date": "2026-09-09",
-          "last": 6295.97,
-          "pct_1d": -1.83
-        }
-      },
-      "composite_avg": -1.77
-    }
-  },
+  "global_sessions": {},
   "yield_spx_corr": {
-    "available": true,
-    "corr_5d": -0.915,
-    "window": "2026-09-01..2026-09-09"
+    "available": false
   },
   "fear_greed": {
-    "available": true,
-    "value": 58.2,
-    "label": "Greed",
-    "note": "from Supabase macro_indicators as of 2026-08-27 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+    "available": false,
+    "note": "fetch failed: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata; no Supabase fallback data"
   },
   "fedwatch": {
     "available": false,
