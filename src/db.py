@@ -1,67 +1,109 @@
 """Optional Supabase (Postgres) access. Degrades gracefully if unavailable."""
 from __future__ import annotations
 
+import os
+import time
+
 from . import config
+
+# 2026-09-08: variant-1 full-table CASE regex scan hit statement_timeout
+# (~5.5 min) and news_parse wrote empty → judge/actions cascade miss.
+# Bound every query, set a session timeout, retry with backoff, and
+# raise NewsDbError so QC can say db_timeout instead of empty_parse.
+_DEFAULT_STATEMENT_TIMEOUT_MS = 90_000
+
+
+class NewsDbError(RuntimeError):
+    """News table read failed after retries. reason is a QC token."""
+
+    def __init__(self, reason: str, detail: str = "") -> None:
+        self.reason = reason
+        super().__init__(detail or reason)
+
+
+def _statement_timeout_ms() -> int:
+    raw = (os.environ.get("FULLSCAN_DB_STATEMENT_TIMEOUT_MS") or "").strip()
+    if raw.isdigit():
+        return max(5_000, int(raw))
+    return _DEFAULT_STATEMENT_TIMEOUT_MS
+
+
+def _is_timeout(err: BaseException) -> bool:
+    text = str(err).lower()
+    return "statement timeout" in text or "querycanceled" in text
 
 
 def _conn():
     if not config.DATABASE_URL:
         return None
     last = None
+    timeout_ms = _statement_timeout_ms()
     for attempt in range(3):
         try:
             import psycopg2
-            return psycopg2.connect(config.DATABASE_URL, connect_timeout=10)
+            conn = psycopg2.connect(
+                config.DATABASE_URL,
+                connect_timeout=10,
+                options=f"-c statement_timeout={timeout_ms}",
+            )
+            return conn
         except Exception as e:  # noqa: BLE001
             last = e
             print(f"[db] connect failed (try {attempt + 1}/3): {e}")
             if attempt < 2:
-                import time
                 time.sleep(2 * (attempt + 1))
     print(f"[db] giving up — morning/collectors continue without Postgres ({last})")
     return None
 
 
-def recent_news(hours: int = 24, limit: int = 30) -> list[dict]:
-    """Last-N-hours rows from the `news` table (rss/newsapi collectors).
-    Market-relevant sources are ranked first. Tries `collected_at` first,
-    falls back to `published_at` ordering — the table schema comes from
-    migrations, so be liberal."""
+def _recent_news_once(hours: int, limit: int) -> list[dict]:
+    """One connection, bounded variants. Raises NewsDbError on timeout."""
     conn = _conn()
     if conn is None:
         return []
+    # Variant 0: collected_at window, no per-row regex (that scan timed out).
+    # Variant 1: published_at window (text column; still bounded).
+    # Variant 2: last-N rows only — last resort, still LIMIT, no full sort regex.
     queries = [
-        """SELECT source, title, url, published_at
-           FROM news
-           WHERE collected_at >= NOW() - INTERVAL '%s hours'
-           ORDER BY CASE WHEN lower(source) ~
-                '(market|financ|cnbc|macro|business|bloomberg|reuters|wsj|stock|econom)'
-                THEN 0 ELSE 1 END,
-                collected_at DESC
-           LIMIT %s""",
-        """SELECT source, title, url, published_at
-           FROM news
-           ORDER BY CASE WHEN lower(source) ~
-                '(market|financ|cnbc|macro|business|bloomberg|reuters|wsj|stock|econom)'
-                THEN 0 ELSE 1 END,
-                published_at DESC
-           LIMIT %s""",
+        ("""SELECT source, title, url, published_at
+            FROM news
+            WHERE collected_at >= NOW() - (%s * INTERVAL '1 hour')
+            ORDER BY collected_at DESC
+            LIMIT %s""", (hours, limit)),
+        ("""SELECT source, title, url, published_at
+            FROM news
+            WHERE published_at IS NOT NULL AND published_at <> ''
+              AND published_at::timestamptz >= NOW() - (%s * INTERVAL '1 hour')
+            ORDER BY published_at::timestamptz DESC
+            LIMIT %s""", (hours, limit)),
+        ("""SELECT source, title, url, published_at
+            FROM news
+            ORDER BY collected_at DESC NULLS LAST
+            LIMIT %s""", (limit,)),
     ]
+    last_err: BaseException | None = None
+    saw_timeout = False
     try:
         cur = conn.cursor()
         try:
-            for i, q in enumerate(queries):
+            for i, (q, params) in enumerate(queries):
                 try:
-                    params = (hours, limit) if i == 0 else (limit,)
                     cur.execute(q, params)
                     rows = [{"source": s, "title": t, "url": u,
                              "published_at": str(p)}
                             for s, t, u, p in cur.fetchall()]
-                    if rows or i == 1:
+                    if rows:
                         return rows
                 except Exception as e:  # noqa: BLE001
+                    last_err = e
+                    if _is_timeout(e):
+                        saw_timeout = True
                     conn.rollback()
                     print(f"[db] news query variant {i} failed: {e}")
+            if saw_timeout:
+                raise NewsDbError(
+                    "db_timeout",
+                    f"news query statement_timeout after variants ({last_err})")
             return []
         finally:
             try:
@@ -70,6 +112,27 @@ def recent_news(hours: int = 24, limit: int = 30) -> list[dict]:
                 pass
     finally:
         conn.close()
+
+
+def recent_news(hours: int = 24, limit: int = 30) -> list[dict]:
+    """Last-N-hours rows from the `news` table (rss/newsapi collectors).
+
+    Bounded time window + session statement_timeout. Retries timeouts
+    with backoff. Raises NewsDbError(db_timeout) if every attempt dies
+    so news_parse can fail loud instead of writing empty_parse.
+    """
+    last: NewsDbError | None = None
+    for attempt in range(3):
+        try:
+            return _recent_news_once(hours, limit)
+        except NewsDbError as e:
+            last = e
+            print(f"[db] recent_news {e.reason} (try {attempt + 1}/3): {e}")
+            if attempt < 2:
+                time.sleep(2 * (attempt + 1))
+    if last is not None:
+        raise last
+    return []
 
 
 def macro_series(series_id: str, limit: int = 45) -> list[tuple[str, float]]:

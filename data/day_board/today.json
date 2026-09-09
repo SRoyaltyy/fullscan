@@ -1,0 +1,17 @@
+{
+  "date": "2026-09-09",
+  "generated_at": "2026-09-09T01:38:28.379115-04:00",
+  "overall": "PARTIAL",
+  "ranker_ready": false,
+  "counts": {
+    "ok": 1,
+    "partial": 1,
+    "fail": 6,
+    "n": 8
+  },
+  "buy_1d": [],
+  "sell_1d": [],
+  "flatten": "",
+  "lands": [],
+  "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
+}

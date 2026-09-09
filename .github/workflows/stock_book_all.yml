@@ -80,13 +80,34 @@ permissions:
 
 concurrency:
   # Ubuntu heal must not queue behind a 6h ECS Grok book.
+  # Ubuntu twins cancel each other (09-08 commit-race pile-up).
+  # ECS Grok stays uncanceled.
   group: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && 'stock-book-all-ubuntu' || 'stock-book-all-ecs' }}
-  cancel-in-progress: false
+  cancel-in-progress: ${{ github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu' }}
 
 jobs:
+  gate:
+    name: Clock gate (merge poke is not a 01:00 book)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      go: ${{ steps.g.outputs.go }}
+    steps:
+      - id: g
+        run: |
+          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          FORCE="${{ github.event.inputs.force }}"
+          echo "ET_HM=$ET_HM event=${{ github.event_name }} force=$FORCE"
+          if [ "${{ github.event_name }}" = "push" ] && [ "$ET_HM" -lt 535 ] && [ "$FORCE" != "true" ]; then
+            echo "before 05:35 ET — merge/touch is not a book. 06:10 schedule + 05:40 scrape own the clock."
+            echo "go=no" >> "$GITHUB_OUTPUT"
+          else
+            echo "go=yes" >> "$GITHUB_OUTPUT"
+          fi
+
   all:
-    # HALT 2026-09-08 — skip workflow_run after Pre-Open cancel. Revert to resume.
-    if: false
+    needs: gate
+    if: needs.gate.outputs.go == 'yes'
     runs-on: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
     timeout-minutes: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && 90 || 360 }}
     env:
@@ -96,10 +117,13 @@ jobs:
       FULLSCAN_HOME: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
       HOME: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
       FINVIZ_SKIP_LIVE: "1"
+      FULLSCAN_LAND: "1"
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          persist-credentials: true
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Pull scrape + ranker inputs from main
         run: |
@@ -222,13 +246,15 @@ jobs:
           cd "${GITHUB_WORKSPACE:-.}"
           git checkout -- data/prices 2>/dev/null || true
           git clean -fd data/prices 2>/dev/null || true
+          # Leftover sweep. Book / weather / join already landed per-file.
           bash scripts/safe_git_push.sh \
-            "auto: stock book ALL + paper dashboard" \
+            "auto: stock book leftover sweep" \
             data/universe data/exports data/join data/stock_book data/paper \
-            data/sleeve_merge \
+            data/sleeve_merge data/day_board \
             data/peers data/checklist data/ab_checklist data/catalyst \
             01_daily/ 03_scoreboard/ 00_grounding/mutable_policy.md \
-            00_grounding/book_policy.json 02_lessons/ dashboard/
+            00_grounding/book_policy.json 02_lessons/ dashboard/ \
+            || echo "[book] leftover sweep failed — lands already on main"
 
       - name: Deploy dashboard to GitHub Pages (gh-pages)
         if: always() && env.skip != 'yes'

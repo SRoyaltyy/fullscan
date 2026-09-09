@@ -385,6 +385,11 @@ def main() -> None:
         print(f"[news_actions] QC FAIL ({qc.reason}) — throwing out")
         output_qc.reject(jp, mp)
         raise SystemExit("news actions produced no quality-ok file")
+    try:
+        from . import land_file
+        land_file.land(date_str, "news_actions", title="News actions")
+    except Exception as e:  # noqa: BLE001
+        print(f"[news_actions] WARN: land failed: {e}")
 
 
 if __name__ == "__main__":

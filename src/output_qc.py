@@ -235,6 +235,10 @@ def qc_news_parse(path: str | Path) -> QCResult:
     data = _read_json(p)
     if not isinstance(data, dict):
         return _fail("news_parse", p, "unparseable_json", empty=True)
+    err = str(data.get("error") or "").strip()
+    if err:
+        # 2026-09-08: DB statement_timeout used to look like empty_parse.
+        return _fail("news_parse", p, err, empty=True)
     raw = int(data.get("raw_count") or 0)
     if raw <= 0 and not (data.get("usable_top") or data.get("all_items")):
         return _fail("news_parse", p, "empty_parse", empty=True)

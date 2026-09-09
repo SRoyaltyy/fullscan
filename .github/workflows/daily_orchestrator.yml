@@ -12,6 +12,7 @@ on:
   schedule:
     - cron: "50 11 * * 1-5"
     - cron: "20 13 * * 1-5"   # ~09:20 ET EDT — book heal if pre-open died
+    - cron: "35 13 * * 1-5"   # ~09:35 ET — after 09:25 skip, force standalone news
     - cron: "20 20 * * 1-5"   # ~16:20 ET — if the new 16:10 postclose cron skipped day 1
     - cron: "15 21 * * 1-5"   # ~17:15 ET — Post-Close ALL / sidecar if 16:10 still missed
     - cron: "30 16 * * 0"
@@ -32,8 +33,6 @@ concurrency:
 
 jobs:
   guard:
-    # HALT 2026-09-08 — do not dispatch evening postclose / book heals. Revert to resume.
-    if: false
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -177,6 +176,27 @@ jobs:
           elif [ "$ET_HM" -lt 1600 ]; then
             echo "past 09:00 ET — heal ranker on ubuntu (ECS may still be in Grok)"
             maybe stock_book_all.yml
+            # 09-08: Pre-Open skipped essays after 09:25 and standalone
+            # news/judge/actions never ran. Dispatch ubuntu writers.
+            if [ "$FORCE" = "true" ] || ! python3 -m src.skip_if_good --job preopen_full --date "$TODAY"; then
+              # force=true is required: the Python CLIs no-op after 09:25
+              # unless --force (09-08 standalone news was a silent skip).
+              if ! already_running "news_parse.yml"; then
+                echo "MISSING news parse → news_parse.yml force"
+                gh api --method POST "repos/${REPO}/actions/workflows/news_parse.yml/dispatches" \
+                  -f ref=main -f "inputs[run_date]=$TODAY" -f "inputs[force]=true" || true
+              fi
+              if ! already_running "news_judge.yml"; then
+                echo "MISSING news judge → news_judge.yml force"
+                gh api --method POST "repos/${REPO}/actions/workflows/news_judge.yml/dispatches" \
+                  -f ref=main -f "inputs[run_date]=$TODAY" -f "inputs[force]=true" || true
+              fi
+              if ! already_running "news_actions.yml"; then
+                echo "MISSING news actions → news_actions.yml force"
+                gh api --method POST "repos/${REPO}/actions/workflows/news_actions.yml/dispatches" \
+                  -f ref=main -f "inputs[run_date]=$TODAY" -f "inputs[force]=true" || true
+              fi
+            fi
           else
             echo "skip morning ALL — session already open"
           fi

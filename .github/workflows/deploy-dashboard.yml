@@ -23,6 +23,8 @@ on:
 permissions:
   contents: write
   actions: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
@@ -131,6 +133,11 @@ jobs:
             cp -a dashboard/down-day-mine/. pages_out/dashboard/down-day-mine/
             echo "Overlayed dashboard/down-day-mine from main"
           fi
+          if [ -f dashboard/day-board/index.html ]; then
+            mkdir -p pages_out/dashboard/day-board
+            cp -a dashboard/day-board/. pages_out/dashboard/day-board/
+            echo "Overlayed dashboard/day-board from main"
+          fi
 
           if [ ! -f pages_out/dashboard/index.html ]; then
             echo "ERROR: no dashboard index.html to publish"
@@ -159,6 +166,7 @@ jobs:
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/mover-paper/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/strategy-board/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/factor-mine/"
+          echo "https://SRoyaltyy.github.io/fullscan/dashboard/day-board/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/down-day-mine/"
           echo "https://SRoyaltyy.github.io/fullscan/"
           echo "If 404: Settings → Pages → Deploy from branch → gh-pages / root"

@@ -1,0 +1,192 @@
+"""Contracts for the 2026-09-08 Pre-Open harden (fixes #1–#5).
+
+Run: PYTHONPATH=. python3 -m src.test_preopen_harden
+"""
+from __future__ import annotations
+
+import json
+import os
+import tempfile
+from pathlib import Path
+from unittest import mock
+
+from src import db, output_qc, preopen
+from src import map_heat_refresh as mr
+
+
+ROOT = Path(__file__).resolve().parent.parent
+
+
+def test_qc_news_parse_db_timeout_is_actionable() -> None:
+    with tempfile.TemporaryDirectory() as d:
+        p = Path(d) / "parsed.json"
+        p.write_text(json.dumps({
+            "error": "db_timeout",
+            "error_detail": "statement timeout",
+            "raw_count": 0,
+            "usable_top": [],
+            "all_items": [],
+        }), encoding="utf-8")
+        r = output_qc.qc_news_parse(p)
+        assert not r.ok
+        assert r.reason == "db_timeout"
+        assert "empty_parse" not in r.reason
+
+
+def test_recent_news_raises_after_timeout_retries() -> None:
+    class _Cur:
+        def execute(self, q, params=None):
+            raise RuntimeError("canceling statement due to statement timeout")
+
+        def fetchall(self):
+            return []
+
+        def close(self):
+            return None
+
+    class _Conn:
+        def cursor(self):
+            return _Cur()
+
+        def rollback(self):
+            return None
+
+        def close(self):
+            return None
+
+    orig = db._conn
+    db._conn = lambda: _Conn()  # type: ignore[method-assign]
+    sleeps: list[float] = []
+    try:
+        with mock.patch.object(db.time, "sleep", side_effect=sleeps.append):
+            try:
+                db.recent_news(hours=48, limit=10)
+                raise AssertionError("expected NewsDbError")
+            except db.NewsDbError as e:
+                assert e.reason == "db_timeout"
+        assert len(sleeps) == 2
+    finally:
+        db._conn = orig
+
+
+def test_bypass_cutoff_skips_refuse() -> None:
+    os.environ.pop("PREOPEN_BYPASS_CUTOFF", None)
+    assert preopen.bypass_cutoff() is False
+    os.environ["PREOPEN_BYPASS_CUTOFF"] = "1"
+    try:
+        assert preopen.bypass_cutoff() is True
+        with mock.patch.object(preopen, "past_predict_cutoff", return_value=True):
+            preopen.refuse_if_late("news_parse", force=False)
+    finally:
+        os.environ.pop("PREOPEN_BYPASS_CUTOFF", None)
+
+
+def test_run_preopen_cli_has_bypass_not_permanent_force() -> None:
+    src = (ROOT / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
+    assert "--bypass-cutoff" in src
+    assert "bypass_cutoff=args.bypass_cutoff" in src
+    assert "PREOPEN_BYPASS_CUTOFF" in src
+    yml = (ROOT / ".github" / "workflows" / "preopen_all.yml").read_text(
+        encoding="utf-8")
+    assert "ARGS+=(--bypass-cutoff)" in yml
+    assert "ARGS=(--llm-backend \"$BACKEND\" --force)" not in yml
+
+
+def test_incremental_land_hooks() -> None:
+    pre = (ROOT / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
+    book = (ROOT / "src" / "run_stock_book_all.py").read_text(encoding="utf-8")
+    yml = (ROOT / ".github" / "workflows" / "preopen_all.yml").read_text(
+        encoding="utf-8")
+    assert "from . import land_file" in pre
+    assert "_land(date, key, title)" in pre
+    assert "land_file.land" in book
+    assert "leftover sweep" in yml
+    assert "FULLSCAN_LAND" in yml
+    assert "before 05:35 ET" in yml
+    assert "go=no" in yml
+    book_yml = (ROOT / ".github" / "workflows" / "stock_book_all.yml").read_text(
+        encoding="utf-8")
+    assert "before 05:35 ET" in book_yml
+    assert "go=no" in book_yml
+    assert "needs: gate" in book_yml
+    orch = (ROOT / ".github" / "workflows" / "daily_orchestrator.yml").read_text(
+        encoding="utf-8")
+    assert "news_judge.yml" in orch
+    assert 'inputs[force]=true' in orch
+    assert "35 13" in orch
+    dash = (ROOT / "src" / "day_board.py").read_text(encoding="utf-8")
+    assert "raw.githubusercontent.com" in dash
+    assert "dashboard/day-board" in dash
+
+
+def test_holiday_overlay_uses_last_session() -> None:
+    text = (ROOT / "src" / "map_heat.py").read_text(encoding="utf-8")
+    assert "last_closed_session" in text
+    assert "copied" in text and "last session" in text
+
+
+def test_deepseek_preflight_is_wired() -> None:
+    pre = (ROOT / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
+    assert "_deepseek_credits_ok" in pre
+    assert "credits_preflight" in pre
+    ds = (ROOT / "src" / "deepseek_client.py").read_text(encoding="utf-8")
+    assert "def credits_preflight" in ds
+    assert "402" in ds
+
+
+def test_map_heat_passthrough_flag_skips_llm(tmp_path: Path | None = None) -> None:
+    orig = mr.OUT
+    with tempfile.TemporaryDirectory() as d:
+        out = Path(d)
+        mr.OUT = out
+        date = "2026-09-09"
+        (out / f"{date}_map_heat.json").write_text(json.dumps({
+            "macro_gate": False, "size_gate": False, "earnings_gate": False,
+            "tape": [{"ticker": "ES"}], "econ": [], "earnings": [],
+        }), encoding="utf-8")
+        cards = [{
+            "industry": f"I{i}", "sector": "X", "action": "HEAT",
+            "subsector_dir": "flat", "conviction": "low",
+            "captains": [{"ticker": "AAA", "sent": "none",
+                          "search_note": "n/a", "evidence": []}],
+        } for i in range(22)]
+        (out / f"{date}_research_baseline.json").write_text(json.dumps({
+            "generated_at": "2026-09-08T22:00:00",
+            "n_targets": 22,
+            "cards": cards,
+            "opportunities": [],
+            "parent_splits": [],
+        }), encoding="utf-8")
+        payload = mr.run(date, passthrough=True)
+        assert payload["passthrough"] is True
+        qc = output_qc.qc_map_heat_research(out / f"{date}_research.md")
+        assert qc.ok, qc.reason
+    mr.OUT = orig
+
+
+def main() -> None:
+    tests = [
+        test_qc_news_parse_db_timeout_is_actionable,
+        test_recent_news_raises_after_timeout_retries,
+        test_bypass_cutoff_skips_refuse,
+        test_run_preopen_cli_has_bypass_not_permanent_force,
+        test_map_heat_passthrough_flag_skips_llm,
+        test_incremental_land_hooks,
+        test_holiday_overlay_uses_last_session,
+        test_deepseek_preflight_is_wired,
+    ]
+    failed = 0
+    for fn in tests:
+        try:
+            fn()
+            print(f"ok  {fn.__name__}")
+        except Exception as e:  # noqa: BLE001
+            failed += 1
+            print(f"FAIL {fn.__name__}: {e}")
+    if failed:
+        raise SystemExit(f"{failed} test(s) failed")
+    print(f"{len(tests)} tests passed")
+
+
+if __name__ == "__main__":
+    main()

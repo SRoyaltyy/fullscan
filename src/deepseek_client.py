@@ -56,6 +56,42 @@ SEARCH_TOOL = {
 }
 
 
+def credits_preflight() -> dict:
+    """Cheap DeepSeek ping before a 11-sector essay burn.
+
+    2026-09-08 402 Insufficient Balance emptied events + predict + 11
+    sectors. A 1-token call fails loud so Pre-Open can skip LLM and
+    still land weather / join / the book.
+    """
+    key = (config.DEEPSEEK_API_KEY or "").strip()
+    if not key:
+        return {"ok": False, "reason": "no_key",
+                "detail": "DEEPSEEK_API_KEY empty"}
+    url = f"{config.DEEPSEEK_BASE_URL}/chat/completions"
+    payload = {
+        "model": "deepseek-chat",
+        "messages": [{"role": "user", "content": "ping"}],
+        "max_tokens": 1,
+        "temperature": 0,
+    }
+    try:
+        r = requests.post(
+            url,
+            headers={"Authorization": f"Bearer {key}",
+                     "Content-Type": "application/json"},
+            json=payload, timeout=(10, 20),
+        )
+    except requests.RequestException as e:
+        return {"ok": False, "reason": "network", "detail": str(e)[:200]}
+    if r.status_code == 402:
+        return {"ok": False, "reason": "402",
+                "detail": (r.text or "")[:200]}
+    if r.status_code >= 400:
+        return {"ok": False, "reason": f"http_{r.status_code}",
+                "detail": (r.text or "")[:200]}
+    return {"ok": True, "reason": str(r.status_code)}
+
+
 def web_search(query: str, max_results: int = 6) -> str:
     """Return JSON string of results; never raises. Delegates to the shared
     backend chain in src/websearch.py (logs which backend served/failed)."""
