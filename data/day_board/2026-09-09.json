@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T11:40:57.418044-04:00",
+  "generated_at": "2026-09-09T11:41:06.525586-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -557,8 +557,8 @@
           "path": "data/stock_book/2026-09-09_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=214",
-          "size": 1565665
+          "reason": "horizons=5 names=211",
+          "size": 1545868
         },
         {
           "key": "book_md",
@@ -619,8 +619,8 @@
           "path": "data/stock_book/2026-09-09_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=214",
-          "size": 1565665
+          "reason": "horizons=5 names=211",
+          "size": 1545868
         },
         {
           "key": "dash_html",
@@ -658,27 +658,27 @@
     "buy_1d": [
       {
         "ticker": "CIG",
-        "score": 0.7295940640445366
-      },
-      {
-        "ticker": "EMBJ",
-        "score": 0.15947751100763663
+        "score": 0.7242815504164775
       },
       {
         "ticker": "ATRO",
-        "score": 0.546294838227393
+        "score": 0.5210078151822785
+      },
+      {
+        "ticker": "EMBJ",
+        "score": 0.13038406873849306
       },
       {
         "ticker": "MIR",
-        "score": 0.5956986194371858
+        "score": 0.5956938762730717
       },
       {
         "ticker": "NXE",
-        "score": 0.5174102314598985
+        "score": 0.5135764674626018
       },
       {
         "ticker": "BG",
-        "score": 0.3907384184956642
+        "score": 0.38511479236914936
       },
       {
         "ticker": "AR",
@@ -686,33 +686,29 @@
       },
       {
         "ticker": "ITT",
-        "score": 0.3940987951618214
+        "score": 0.3667763704975007
+      },
+      {
+        "ticker": "XIFR",
+        "score": 0.5613846130666518
       }
     ],
     "sell_1d": [
-      {
-        "ticker": "CLPT",
-        "score": -0.4386191971076979
-      },
       {
         "ticker": "METC",
         "score": -0.5485976282394803
       },
       {
         "ticker": "SLQT",
-        "score": -0.6032524221274975
-      },
-      {
-        "ticker": "AORT",
-        "score": -0.46485344709091075
-      },
-      {
-        "ticker": "COIN",
-        "score": -0.4771223733068348
+        "score": -0.6107984629198537
       },
       {
         "ticker": "CPB",
-        "score": -0.3146502608807358
+        "score": -0.33646948880033895
+      },
+      {
+        "ticker": "COIN",
+        "score": -0.4791543714722759
       },
       {
         "ticker": "SPIR",
@@ -720,15 +716,23 @@
       },
       {
         "ticker": "RZLV",
-        "score": -0.21870658665417902
+        "score": -0.22462681350392838
       },
       {
-        "ticker": "QSI",
-        "score": -0.326437912635797
+        "ticker": "CLPT",
+        "score": -0.3293765034500459
+      },
+      {
+        "ticker": "BGS",
+        "score": -0.3820704157914411
       },
       {
         "ticker": "APLD",
-        "score": -0.09626475347201541
+        "score": -0.0979744695509498
+      },
+      {
+        "ticker": "STEP",
+        "score": -0.3890342596883298
       }
     ],
     "flatten": {
@@ -2508,6 +2512,45 @@
         }
       ],
       "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, ARGX, EXE, DVN, REGN"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T11:41:05.602959-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-09_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1545868,
+          "preview": "1d BUY CIG, ATRO, EMBJ, MIR, NXE, BG, AR, ITT \u00b7 SELL METC, SLQT, CPB, COIN, SPIR, RZLV, CLPT, BGS"
+        },
+        {
+          "path": "data/stock_book/2026-09-09_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-09_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2454,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "01_daily/2026-09-09_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 81671,
+          "preview": "# Stock book \u2014 2026-09-09\n_Generated 2026-09-09T11:41:03.980141-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CIG, ATRO, EMBJ, MIR, NXE, BG, AR, ITT \u00b7 SELL METC, SLQT, CPB, COIN, SPIR, RZLV, CLPT, BGS \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 # Stock book \u2014 2026-09-09\n_Generated 2026-09-09T11:41:03.980141-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
