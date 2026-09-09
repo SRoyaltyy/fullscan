@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T13:12:31.670783-04:00",
+  "generated_at": "2026-09-09T13:12:35.007794-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -599,7 +599,7 @@
       ],
       "said": "215 rows",
       "bullets": [
-        "ONC, ARGX, EXE, DVN, PR"
+        "ONC, ARGX, EXE, DVN, REGN"
       ]
     },
     {
@@ -791,31 +791,6 @@
     }
   },
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T06:25:37.899985-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-09-09_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 10,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.3050000000000002, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.73, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.935, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 1.0950000000000002, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.0, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.56, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 0.6, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-09-09_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5035,
-          "preview": "# Weather report \u2014 2026-09-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.3050000000000002, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.73, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.935, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 1.0950000000000002, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.0, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.56, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 0.6, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -2817,6 +2792,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.5, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': 0.9, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Consumer Cyclical={'score': -7.5, 'dir': 'down', 'conf': 0.6, 'source': 'llm'}, Consumer Defensive={'score': -2.925, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Energy={'score': 8.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Financial={'score': -6.075, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': -6.525, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Industrials={'score': -4.05, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T13:12:34.174130-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-09_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2249188,
+          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, ARGX, EXE, DVN, REGN"
+        }
+      ],
+      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, ARGX, EXE, DVN, REGN"
     }
   ],
   "href": {
