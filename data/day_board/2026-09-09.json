@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T05:41:00.996386-04:00",
+  "generated_at": "2026-09-09T05:41:07.831779-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -823,6 +823,24 @@
         }
       ],
       "preview": "17 events \u00b7 IEEPA national emergency on U.S. bulk-power system equipment | U.S. Section 338 bans and tariff-scope reset vs Canada | House clears FY2027 CR through Dec. 11, shutdown risk off | OFAC sanctions remaining Iranian airlines (Operation Economic Outcast) | EO: Packers & Stockyards enforcement and interstate meat access | EO adjusting Defense Production Act energy delegations \u00b7 # Event Scan \u2014 2026-09-09 (catcher as primary)\n- events tracked: **17** (primary parse failed; catcher replaced it)"
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T05:41:07.046437-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-09_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1252,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
     }
   ],
   "href": {
