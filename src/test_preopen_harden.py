@@ -129,6 +129,7 @@ def test_incremental_land_hooks() -> None:
         encoding="utf-8")
     assert "no ${DATE} book — skip hollow flatten card" in sleeve
     assert "before 09:00 ET" in sleeve
+    assert "no checkout" in sleeve
 
 
 def test_holiday_overlay_uses_last_session() -> None:

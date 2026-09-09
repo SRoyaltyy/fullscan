@@ -33,23 +33,30 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
+      - name: Clock gate (no clone before 09:00)
+        if: github.event_name == 'workflow_run'
+        run: |
+          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          echo "ET_HM=$ET_HM"
+          # Gated 01:00 Stock Book successes must not clone this repo
+          # or write a hollow flatten card.
+          if [ "$ET_HM" -lt 900 ]; then
+            echo "before 09:00 ET — wait for scrape + book (no checkout)"
+            echo "skip=yes" >> "$GITHUB_ENV"
+          fi
+
       - uses: actions/checkout@v4
+        if: env.skip != 'yes'
         with:
           fetch-depth: 0
 
-      - name: Skip until today's book exists
+      - name: Skip if today's book is missing
+        if: env.skip != 'yes'
         run: |
           DATE="${{ github.event.inputs.run_date }}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
-          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
-          echo "DATE=$DATE ET_HM=$ET_HM"
-          # Comment on this file: must not sit in front of the 09:30 book.
-          # Gated 01:00 Stock Book successes were writing a hollow flatten
-          # card (no prices) and storming gh-pages.
-          if [ "$ET_HM" -lt 900 ]; then
-            echo "before 09:00 ET — wait for scrape + book"
-            echo "skip=yes" >> "$GITHUB_ENV"
-          elif [ ! -f "data/stock_book/${DATE}_stock_book.json" ]; then
+          echo "DATE=$DATE"
+          if [ ! -f "data/stock_book/${DATE}_stock_book.json" ]; then
             echo "no ${DATE} book — skip hollow flatten card"
             echo "skip=yes" >> "$GITHUB_ENV"
           fi
