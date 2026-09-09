@@ -1,12 +1,12 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T05:18:41.505759-04:00",
+  "generated_at": "2026-09-09T05:20:15.711123-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 2,
-    "fail": 3,
+    "fail": 2,
     "n": 8
   },
   "buy_1d": [],
@@ -155,6 +155,31 @@
         }
       ],
       "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HRMY, CDNA, ONC, WAY, ETON"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T05:20:14.750643-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-09_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7658911,
+          "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AVO, RPRX, SKM, CFFN, HSBC"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-09_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8480518,
+          "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SHEL, AMD, TECK, SR, EC"
+        }
+      ],
+      "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AVO, RPRX, SKM, CFFN, HSBC \u00b7 2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SHEL, AMD, TECK, SR, EC"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
