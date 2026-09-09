@@ -1,36 +1,36 @@
-# Weather report — 2026-09-09
+# Weather report — 2026-09-08
 
 Is today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade.
 
 ## Snapshot
 
-- **Risk state:** OFF (general predict down score -13.9, conf 0.65)
-- **Yields:** flat (fred_dgs10) | **Dollar:** flat (dxy) | **Oil:** rising | **VIX:** falling (ratio 0.87 via vix/vix3m) spot 16.35
-- **Fear & Greed:** 58 (Greed) | **Yield/SPX 5d corr:** -0.96
-- **High-impact events:** 3 bullish vs 8 bearish | China: bull
+- **Risk state:** OFF (general predict down score -11.5, conf 0.65)
+- **Yields:** flat (fred_dgs10) | **Dollar:** soft (dxy) | **Oil:** rising | **VIX:** falling (ratio 0.85 via vix/vix3m) spot 15.41
+- **Fear & Greed:** 58 (Greed) | **Yield/SPX 5d corr:** -0.94
+- **High-impact events:** 4 bullish vs 8 bearish | China: bull
 
 ## Sectors
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| sector:Basic Materials | 🌧️ hostile | high | sector predict score -4.5 dir down conf 0.55 [sector board] |
-| sector:Communication Services | ⛅ neutral | high | sector predict score +0.9 dir flat conf 0.5 [sector board] |
+| sector:Basic Materials | ⛅ neutral | high | sector predict score +1.1 dir flat conf 0.5 [sector board] |
+| sector:Communication Services | 🌧️ hostile | high | sector predict score -6.8 dir down conf 0.55 [sector board] |
 | sector:Consumer Cyclical | 🌧️ hostile | high | sector predict score -7.5 dir down conf 0.6 [sector board] |
-| sector:Consumer Defensive | ⛅ neutral | high | sector predict score -2.9 dir down conf 0.55 [sector board] |
-| sector:Energy | 🌤️ favorable | medium | news_judge SECTOR Energy [bullish] |
-| sector:Financial | 🌧️ hostile | high | sector predict score -6.1 dir down conf 0.55 [sector board] |
+| sector:Consumer Defensive | ⛅ neutral | high | sector predict score -0.7 dir flat conf 0.5 [sector board] |
+| sector:Energy | 🌤️ favorable | high | sector predict score +8.5 dir up conf 0.58 [sector board] |
+| sector:Financial | 🌤️ favorable | medium | news_judge SECTOR Financial [bullish] |
 | sector:Healthcare | 🌤️ favorable | medium | news_judge SECTOR Healthcare [bullish] |
-| sector:Industrials | 🌧️ hostile | high | sector predict score -4.0 dir flat conf 0.55 [sector board] |
-| sector:Real Estate | 🌧️ hostile | high | sector predict score -6.8 dir down conf 0.55 [sector board] |
-| sector:Technology | ⛅ neutral | high | sector predict score +0.0 dir flat conf 0.55 [sector board] |
-| sector:Utilities | ⛅ neutral | high | sector predict score +0.5 dir flat conf 0.55 [sector board] |
+| sector:Industrials | 🌧️ hostile | high | sector predict score -3.6 dir flat conf 0.55 [sector board] |
+| sector:Real Estate | 🌧️ hostile | medium | news_judge SECTOR Real Estate [bearish] |
+| sector:Technology | ⛅ neutral | medium | finviz sector median week -0.46% [tape] |
+| sector:Utilities | ⛅ neutral | medium | finviz sector median week +0.56% [tape] |
 
 ## Size
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| size:micro | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar flat [general predict + factors] |
-| size:small | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar flat [general predict + factors] |
+| size:micro | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar soft [general predict + factors] |
+| size:small | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar soft [general predict + factors] |
 | size:large | 🌤️ favorable | medium | risk-off — defensive/quality bid concentrates in large & mega [general predict] |
 | size:mega | 🌤️ favorable | medium | risk-off — defensive/quality bid concentrates in large & mega [general predict] |
 | size:mid | ⛅ neutral | low | no dedicated mid-cap signal in v1 |
