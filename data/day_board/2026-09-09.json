@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T09:00:33.742100-04:00",
+  "generated_at": "2026-09-09T09:00:40.806034-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -59,7 +59,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 17022
+          "size": 16910
         }
       ],
       "said": "tables on disk",
@@ -92,7 +92,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11401
+          "size": 11379
         }
       ],
       "said": "",
@@ -539,7 +539,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5902",
-          "size": 2139841
+          "size": 2170452
         },
         {
           "key": "peers",
@@ -596,9 +596,9 @@
           "size": 3693862
         }
       ],
-      "said": "210 rows",
+      "said": "208 rows",
       "bullets": [
-        "HRMY, CDNA, ONC, WAY, NU"
+        "HRMY, CDNA, ONC, DVN, WAY"
       ]
     },
     {
@@ -1505,6 +1505,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.5, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': 0.9, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Consumer Cyclical={'score': -7.5, 'dir': 'down', 'conf': 0.6, 'source': 'llm'}, Consumer Defensive={'score': -3.825, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Energy={'score': 8.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Financial={'score': -6.075, 'dir': 'down', 'conf': 0.5, 'source': 'llm'}, Healthcare={'score': -6.075, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Industrials={'score': -1.8, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T09:00:40.002075-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-09_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2170452,
+          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HRMY, CDNA, ONC, DVN, WAY"
+        }
+      ],
+      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HRMY, CDNA, ONC, DVN, WAY"
     }
   ],
   "href": {

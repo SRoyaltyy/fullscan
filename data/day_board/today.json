@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T09:00:33.742100-04:00",
+  "generated_at": "2026-09-09T09:00:40.806034-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -84,31 +84,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "map_heat_research",
-      "title": "Map heat morning delta refresh",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T07:40:36.900437-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-09_research.json",
-          "ok": true,
-          "reason": "",
-          "size": 36697,
-          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-09_research.md",
-          "ok": true,
-          "reason": "",
-          "size": 36697,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-09\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-09\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
-    },
     {
       "key": "sector_predict",
       "title": "Per-sector predict (all 11)",
@@ -290,6 +265,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.5, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': 0.9, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Consumer Cyclical={'score': -7.5, 'dir': 'down', 'conf': 0.6, 'source': 'llm'}, Consumer Defensive={'score': -3.825, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Energy={'score': 8.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Financial={'score': -6.075, 'dir': 'down', 'conf': 0.5, 'source': 'llm'}, Healthcare={'score': -6.075, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Industrials={'score': -1.8, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T09:00:40.002075-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-09_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2170452,
+          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HRMY, CDNA, ONC, DVN, WAY"
+        }
+      ],
+      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HRMY, CDNA, ONC, DVN, WAY"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
