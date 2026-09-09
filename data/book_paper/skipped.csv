@@ -215,3 +215,42 @@ date,ticker,side,conviction,reason
 2026-09-02,OXY,BUY,0.5047038033754504,day gate CLOSED: predict DOWN score -3.83 < +1.00
 2026-09-02,EOG,BUY,0.39412582093564563,day gate CLOSED: predict DOWN score -3.83 < +1.00
 2026-09-02,CVX,BUY,0.27810347309158207,day gate CLOSED: predict DOWN score -3.83 < +1.00
+2026-09-03,AVGO,BUY,0.42266687931221275,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,HPE,BUY,0.09935687610598602,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,CEG,BUY,0.5677989469950185,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,ADM,BUY,0.387461767886616,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VFF,BUY,0.6436910541077241,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VEEV,BUY,0.4536660732056732,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,VAL,BUY,0.49912963019089207,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-03,WAY,BUY,0.77753838775741,day gate CLOSED: predict FLAT score -0.90 < +1.00
+2026-09-04,OSCR,BUY,0.8384606851992276,no exit price (unsettleable)
+2026-09-04,NVAX,BUY,0.8295709961302176,no exit price (unsettleable)
+2026-09-04,ATRC,BUY,0.7830323459649424,no exit price (unsettleable)
+2026-09-04,DUOL,BUY,0.7223826504470412,no exit price (unsettleable)
+2026-09-04,MRX,BUY,0.7172027286909501,no exit price (unsettleable)
+2026-09-04,SONO,BUY,0.6792156241251746,no exit price (unsettleable)
+2026-09-04,FUBO,BUY,0.6631874904305253,no exit price (unsettleable)
+2026-09-04,VNT,BUY,0.6405692868682137,no exit price (unsettleable)
+2026-09-04,NU,BUY,0.6165177576734543,no exit price (unsettleable)
+2026-09-04,HOOD,BUY,0.583947123477578,no exit price (unsettleable)
+2026-09-04,STGW,BUY,0.577088794383571,no exit price (unsettleable)
+2026-09-04,XP,BUY,0.5581377110242598,no exit price (unsettleable)
+2026-09-04,MTCH,BUY,0.5342848704806492,no exit price (unsettleable)
+2026-09-04,NCNO,BUY,0.5210485759959811,no exit price (unsettleable)
+2026-09-04,UPWK,BUY,0.5047970440328411,no exit price (unsettleable)
+2026-09-04,ASND,BUY,0.41205508729761764,no exit price (unsettleable)
+2026-09-06,WWW,BUY,0.7172408880113452,no exit price (unsettleable)
+2026-09-06,VYX,BUY,0.6746734452640146,no exit price (unsettleable)
+2026-09-06,CMBT,BUY,0.665708400715499,no exit price (unsettleable)
+2026-09-06,MHK,BUY,0.6161399255963644,no exit price (unsettleable)
+2026-09-06,ORCL,BUY,0.49842625564521237,no exit price (unsettleable)
+2026-09-06,KNX,BUY,0.4602310197078293,no exit price (unsettleable)
+2026-09-06,WCC,BUY,0.34725635339814664,no exit price (unsettleable)
+2026-09-06,FIVE,BUY,0.29862270786473283,no exit price (unsettleable)
+2026-09-07,ALAB,BUY,0.6212365462968437,no exit price (unsettleable)
+2026-09-07,MOS,BUY,0.5359729136349469,no exit price (unsettleable)
+2026-09-07,JCI,BUY,0.4309811511409545,no exit price (unsettleable)
+2026-09-07,BKR,BUY,0.4251921615587142,no exit price (unsettleable)
+2026-09-07,HPE,BUY,0.23058907241802473,no exit price (unsettleable)
+2026-09-07,CRWD,BUY,0.1016909636276609,no exit price (unsettleable)
+2026-09-08,ZIM,BUY,0.5123631288948107,day gate CLOSED: predict DOWN score -11.47 < +1.00
