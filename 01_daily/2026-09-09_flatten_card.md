@@ -1,13 +1,13 @@
 # flatten_robust card — 2026-09-09
 
-_Generated 2026-09-09T13:36:27 — live `flatten_robust`._
+_Generated 2026-09-09T13:42:58 — live `flatten_robust`._
 
 **morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
 
 - Score **—** (—) · route **io**
-- Cash leftover **$107,448.18** (after 09:30 $107,448.18 · after 16:00 $107,448.18)
+- Cash leftover **$108,616.66** (after 09:30 $108,616.66 · after 16:00 $108,616.66)
 - Open lots **0** · priced mover BUYs **0** · prior book yes
-- Planned buy cost **$0.00** ≤ leftover after sells **$107,448.18**
+- Planned buy cost **$0.00** ≤ leftover after sells **$108,616.66**
 
 ## Open holdings
 
@@ -29,13 +29,14 @@ _Generated 2026-09-09T13:36:27 — live `flatten_robust`._
 
 ## Would have bought — holdings disregarded
 
-Sized from marked equity **$107,448.18** as if the book were flat. `io 3d_size (holdings disregarded)`. Not live tickets.
+Sized from marked equity **$108,616.66** as if the book were flat. `io 3d_size (holdings disregarded)`. Not live tickets.
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | UGP | io_core | 3610 | $7.44 | $26,858.40 | cash tied |
-| 16:00 ET | WTTR | io_core | 1283 | $20.93 | $26,853.19 | cash tied |
-| 16:00 ET | GPRK | io_core | 2223 | $12.08 | $26,853.84 | cash tied |
-| 16:00 ET | HOS | io_core | 2892 | $9.25 | $26,751.00 | cash tied |
+| 16:00 ET | LEU | io_core | 117 | $185.56 | $21,710.52 | cash tied |
+| 16:00 ET | SM | io_core | 563 | $38.54 | $21,698.02 | cash tied |
+| 16:00 ET | UROY | io_core | 4419 | $4.92 | $21,719.38 | cash tied |
+| 16:00 ET | GPRK | io_core | 1810 | $12.00 | $21,720.00 | cash tied |
+| 16:00 ET | NAT | io_core | 3043 | $7.11 | $21,638.47 | cash tied |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
