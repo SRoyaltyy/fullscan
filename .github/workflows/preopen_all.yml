@@ -26,6 +26,8 @@ name: Pre-Open ALL (predictive one-shot)
 # HARDEN 2026-09-09d: restore stable `ubuntu` group (h0909c forks
 #   cannot cancel each other). Job 240m / python step 180m so general
 #   predict is not killed at 55m after AB + map-heat (run 55 exit 124).
+# HARDEN 2026-09-09e: poke so #181 writes missing 2026-09-09_parsed.json.
+#   news_parse now honors PREOPEN_BYPASS_CUTOFF (late heal after 09:25).
 
 on:
   push:
