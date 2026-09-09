@@ -2,6 +2,450 @@
   "generated_at": "2026-09-09T02:57:30.752534-04:00",
   "rows": [
     {
+      "name": "combo_sh_5050_shared",
+      "start_green": 17,
+      "start_n": 18,
+      "start_rate": 0.9444
+    },
+    {
+      "name": "combo_jse_333_shared",
+      "start_green": 16,
+      "start_n": 18,
+      "start_rate": 0.8889
+    },
+    {
+      "name": "combo_sh_7030_shared",
+      "start_green": 17,
+      "start_n": 18,
+      "start_rate": 0.9444
+    },
+    {
+      "name": "combo_sh_3070_shared",
+      "start_green": 17,
+      "start_n": 18,
+      "start_rate": 0.9444
+    },
+    {
+      "name": "combo_se_5050_skip",
+      "start_green": 16,
+      "start_n": 18,
+      "start_rate": 0.8889
+    },
+    {
+      "name": "combo_seh_451540_shared",
+      "start_green": 17,
+      "start_n": 18,
+      "start_rate": 0.9444
+    },
+    {
+      "name": "combo_ej_5050_shared",
+      "start_green": 15,
+      "start_n": 18,
+      "start_rate": 0.8333
+    },
+    {
+      "name": "combo_seh_601525_shared",
+      "start_green": 17,
+      "start_n": 18,
+      "start_rate": 0.9444
+    },
+    {
+      "name": "combo_seh_502525_shared",
+      "start_green": 17,
+      "start_n": 18,
+      "start_rate": 0.9444
+    },
+    {
+      "name": "combo_seh_333_skip",
+      "start_green": 16,
+      "start_n": 18,
+      "start_rate": 0.8889
+    },
+    {
+      "name": "combo_jer_5050_shared",
+      "start_green": 14,
+      "start_n": 18,
+      "start_rate": 0.7778
+    },
+    {
+      "name": "combo_se_5050_shared",
+      "start_green": 16,
+      "start_n": 18,
+      "start_rate": 0.8889
+    },
+    {
+      "name": "combo_se_5050_weather",
+      "start_green": 16,
+      "start_n": 18,
+      "start_rate": 0.8889
+    },
+    {
+      "name": "combo_se_3070_shared",
+      "start_green": 16,
+      "start_n": 18,
+      "start_rate": 0.8889
+    },
+    {
+      "name": "combo_es_8020_shared",
+      "start_green": 16,
+      "start_n": 18,
+      "start_rate": 0.8889
+    },
+    {
+      "name": "combo_seh_404020_shared",
+      "start_green": 16,
+      "start_n": 18,
+      "start_rate": 0.8889
+    },
+    {
+      "name": "combo_seh_403525_shared",
+      "start_green": 16,
+      "start_n": 18,
+      "start_rate": 0.8889
+    },
+    {
+      "name": "combo_se1_5050_shared",
+      "start_green": 16,
+      "start_n": 18,
+      "start_rate": 0.8889
+    },
+    {
+      "name": "combo_ser_5050_shared",
+      "start_green": 16,
+      "start_n": 18,
+      "start_rate": 0.8889
+    },
+    {
+      "name": "combo_nse_333_shared",
+      "start_green": 16,
+      "start_n": 18,
+      "start_rate": 0.8889
+    },
+    {
+      "name": "combo_ers_7030_shared",
+      "start_green": 15,
+      "start_n": 18,
+      "start_rate": 0.8333
+    },
+    {
+      "name": "combo_es_9010_shared",
+      "start_green": 14,
+      "start_n": 18,
+      "start_rate": 0.7778
+    },
+    {
+      "name": "combo_seh_333_shared",
+      "start_green": 16,
+      "start_n": 18,
+      "start_rate": 0.8889
+    },
+    {
+      "name": "combo_seh_333_weather",
+      "start_green": 16,
+      "start_n": 18,
+      "start_rate": 0.8889
+    },
+    {
+      "name": "combo_se_7030_shared",
+      "start_green": 16,
+      "start_n": 18,
+      "start_rate": 0.8889
+    },
+    {
+      "name": "combo_ehs_601525_shared",
+      "start_green": 16,
+      "start_n": 18,
+      "start_rate": 0.8889
+    },
+    {
+      "name": "combo_sj_5050_shared",
+      "start_green": 17,
+      "start_n": 18,
+      "start_rate": 0.9444
+    },
+    {
+      "name": "combo_sj_3070_shared",
+      "start_green": 17,
+      "start_n": 18,
+      "start_rate": 0.9444
+    },
+    {
+      "name": "combo_e1s_7030_shared",
+      "start_green": 16,
+      "start_n": 18,
+      "start_rate": 0.8889
+    },
+    {
+      "name": "combo_ner_5050_shared",
+      "start_green": 9,
+      "start_n": 18,
+      "start_rate": 0.5
+    },
+    {
+      "name": "combo_sf_7030_shared",
+      "start_green": 16,
+      "start_n": 18,
+      "start_rate": 0.8889
+    },
+    {
+      "name": "combo_sf_5050_shared",
+      "start_green": 16,
+      "start_n": 18,
+      "start_rate": 0.8889
+    },
+    {
+      "name": "combo_sf_3070_shared",
+      "start_green": 11,
+      "start_n": 18,
+      "start_rate": 0.6111
+    },
+    {
+      "name": "combo_sj_7030_shared",
+      "start_green": 17,
+      "start_n": 18,
+      "start_rate": 0.9444
+    },
+    {
+      "name": "combo_snj_333_shared",
+      "start_green": 17,
+      "start_n": 18,
+      "start_rate": 0.9444
+    },
+    {
+      "name": "combo_sn_5050_shared",
+      "start_green": 17,
+      "start_n": 18,
+      "start_rate": 0.9444
+    },
+    {
+      "name": "combo_sn_3070_shared",
+      "start_green": 17,
+      "start_n": 18,
+      "start_rate": 0.9444
+    },
+    {
+      "name": "combo_je1_5050_shared",
+      "start_green": 14,
+      "start_n": 18,
+      "start_rate": 0.7778
+    },
+    {
+      "name": "combo_ne1_5050_shared",
+      "start_green": 7,
+      "start_n": 18,
+      "start_rate": 0.3889
+    },
+    {
+      "name": "combo_ee1_3070_shared",
+      "start_green": 12,
+      "start_n": 18,
+      "start_rate": 0.6667
+    },
+    {
+      "name": "combo_ee1_5050_shared",
+      "start_green": 12,
+      "start_n": 18,
+      "start_rate": 0.6667
+    },
+    {
+      "name": "combo_ee1_7030_shared",
+      "start_green": 12,
+      "start_n": 18,
+      "start_rate": 0.6667
+    },
+    {
+      "name": "combo_en_7030_shared",
+      "start_green": 11,
+      "start_n": 18,
+      "start_rate": 0.6111
+    },
+    {
+      "name": "combo_ehs_702010_shared",
+      "start_green": 12,
+      "start_n": 18,
+      "start_rate": 0.6667
+    },
+    {
+      "name": "combo_en_5050_shared",
+      "start_green": 11,
+      "start_n": 18,
+      "start_rate": 0.6111
+    },
+    {
+      "name": "combo_en_3070_shared",
+      "start_green": 10,
+      "start_n": 18,
+      "start_rate": 0.5556
+    },
+    {
+      "name": "combo_eh_7030_shared",
+      "start_green": 12,
+      "start_n": 18,
+      "start_rate": 0.6667
+    },
+    {
+      "name": "combo_eh_5050_shared",
+      "start_green": 12,
+      "start_n": 18,
+      "start_rate": 0.6667
+    },
+    {
+      "name": "combo_se_5050_split",
+      "start_green": 16,
+      "start_n": 18,
+      "start_rate": 0.8889
+    },
+    {
+      "name": "combo_fse_333_shared",
+      "start_green": 16,
+      "start_n": 18,
+      "start_rate": 0.8889
+    },
+    {
+      "name": "combo_ef_7030_shared",
+      "start_green": 12,
+      "start_n": 18,
+      "start_rate": 0.6667
+    },
+    {
+      "name": "combo_fes_403030_shared",
+      "start_green": 14,
+      "start_n": 18,
+      "start_rate": 0.7778
+    },
+    {
+      "name": "combo_seh_333_split",
+      "start_green": 15,
+      "start_n": 18,
+      "start_rate": 0.8333
+    },
+    {
+      "name": "combo_eh_3070_shared",
+      "start_green": 8,
+      "start_n": 18,
+      "start_rate": 0.4444
+    },
+    {
+      "name": "combo_eer_5050_shared",
+      "start_green": 8,
+      "start_n": 18,
+      "start_rate": 0.4444
+    },
+    {
+      "name": "combo_seh_502525_split",
+      "start_green": 16,
+      "start_n": 18,
+      "start_rate": 0.8889
+    },
+    {
+      "name": "combo_hn_7030_shared",
+      "start_green": 11,
+      "start_n": 18,
+      "start_rate": 0.6111
+    },
+    {
+      "name": "combo_sn_7030_shared",
+      "start_green": 17,
+      "start_n": 18,
+      "start_rate": 0.9444
+    },
+    {
+      "name": "combo_her_5050_shared",
+      "start_green": 11,
+      "start_n": 18,
+      "start_rate": 0.6111
+    },
+    {
+      "name": "combo_ef_5050_shared",
+      "start_green": 11,
+      "start_n": 18,
+      "start_rate": 0.6111
+    },
+    {
+      "name": "combo_fe_5050_shared",
+      "start_green": 11,
+      "start_n": 18,
+      "start_rate": 0.6111
+    },
+    {
+      "name": "combo_hn_5050_shared",
+      "start_green": 10,
+      "start_n": 18,
+      "start_rate": 0.5556
+    },
+    {
+      "name": "combo_he1_5050_shared",
+      "start_green": 8,
+      "start_n": 18,
+      "start_rate": 0.4444
+    },
+    {
+      "name": "combo_jf_5050_shared",
+      "start_green": 10,
+      "start_n": 18,
+      "start_rate": 0.5556
+    },
+    {
+      "name": "combo_hn_3070_shared",
+      "start_green": 15,
+      "start_n": 18,
+      "start_rate": 0.8333
+    },
+    {
+      "name": "combo_fer_5050_shared",
+      "start_green": 8,
+      "start_n": 18,
+      "start_rate": 0.4444
+    },
+    {
+      "name": "combo_nf_5050_shared",
+      "start_green": 7,
+      "start_n": 18,
+      "start_rate": 0.3889
+    },
+    {
+      "name": "combo_hj_5050_shared",
+      "start_green": 11,
+      "start_n": 18,
+      "start_rate": 0.6111
+    },
+    {
+      "name": "combo_ef_3070_shared",
+      "start_green": 7,
+      "start_n": 18,
+      "start_rate": 0.3889
+    },
+    {
+      "name": "combo_hf_5050_shared",
+      "start_green": 8,
+      "start_n": 18,
+      "start_rate": 0.4444
+    },
+    {
+      "name": "combo_fh_7030_shared",
+      "start_green": 8,
+      "start_n": 18,
+      "start_rate": 0.4444
+    },
+    {
+      "name": "combo_fe1_5050_shared",
+      "start_green": 6,
+      "start_n": 18,
+      "start_rate": 0.3333
+    },
+    {
+      "name": "combo_nj_5050_shared",
+      "start_green": 15,
+      "start_n": 18,
+      "start_rate": 0.8333
+    },
+    {
+      "name": "combo_e1er_5050_shared",
+      "start_green": 7,
+      "start_n": 18,
+      "start_rate": 0.3889
+    },
+    {
       "name": "short_news_r_h3",
       "start_green": 17,
       "start_n": 18,

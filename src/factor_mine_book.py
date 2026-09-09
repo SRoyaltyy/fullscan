@@ -1185,6 +1185,8 @@ def attach_book(stats: dict, book: dict, starts: list[dict]) -> dict:
     stats["pothole_pct"] = None if pothole_pct is None else round(float(pothole_pct), 3)
     stats["profitable_day_rate"] = None if not days else round(
         sum(1 for d in days if d["made_money"]) / len(days), 4)
+    worst = min(means) if means else None
+    stats["worst_day_pct"] = None if worst is None else round(float(worst), 3)
     stats["book_win_rate"] = book.get("win_rate")
     stats["book_n_trades"] = book.get("n_trades")
     stats["book_n_skips"] = book.get("n_skips")
@@ -1256,21 +1258,32 @@ def _explain_md(rec: dict) -> list[str]:
 def render_recipe_md(rec: dict, stats: dict, book: dict) -> str:
     live_gate = bool((rec.get("require") or {}).get("live_entry"))
     wish = rec.get("universe") == "flatten" and not live_gate
-    entry_note = (
-        "Buys the flatten **wish-list** even on io/HOLD mornings — live "
-        "`flatten_robust` would not send 09:30 tickets those days. "
-        "See `flatten_live_*` for the gated book."
-        if wish else
-        "New buys only when the live flatten gate fires (green S, ≥5 priced "
-        "BUYs, prior book). io/HOLD mornings sit."
-        if live_gate else
-        "Research universe (not the live flatten gate). Cash/share/fee rules still apply."
-    )
+    combo = bool(rec.get("universe") == "combo" or rec.get("members"))
+    hold_txt = "owner mix" if combo else rec["hold"]
+    if combo:
+        entry_note = (
+            "Combination book: each member still runs its own leak-free "
+            "09:30 `pick_day`. Shared leftover (or split cash) · one ticker "
+            "one side · official 09:30 / 16:00 · owner min-hold. "
+            "Does not change live `flatten_robust`."
+        )
+    else:
+        entry_note = (
+            "Buys the flatten **wish-list** even on io/HOLD mornings — live "
+            "`flatten_robust` would not send 09:30 tickets those days. "
+            "See `flatten_live_*` for the gated book."
+            if wish else
+            "New buys only when the live flatten gate fires (green S, ≥5 priced "
+            "BUYs, prior book). io/HOLD mornings sit."
+            if live_gate else
+            "Research universe (not the live flatten gate). Cash/share/fee rules still apply."
+        )
     lines = [
         f"# Factor mine action — `{rec['name']}`",
         "",
         f"_Book rules: $10k · whole shares · Futubull fees · leftover cash "
-        f"split on new names · sell first · min-hold **{rec['hold']}** sessions · "
+        f"split on new names · sell first · "
+        f"min-hold **{hold_txt}** sessions · "
         f"fill 09:30 open · hard-red S≤{HARD_RED:g} sit · shorts marked as "
         f"liability (equity ≥ 2× notional). "
         f"Live `flatten_robust` is not changed._",
@@ -1287,7 +1300,7 @@ def render_recipe_md(rec: dict, stats: dict, book: dict) -> str:
         f"Cash book **{stats.get('total_ret_pct'):+.2f}%** "
         f"(${stats.get('final_equity'):,.0f}) · "
         f"signal-only (no cash/fees) was "
-        f"{stats.get('signal_ret_pct'):+.2f}%. "
+        f"{'—' if stats.get('signal_ret_pct') is None else format(float(stats.get('signal_ret_pct')), '+.2f') + '%'}. "
         f"Starts YES **{stats.get('start_green')}/{stats.get('start_n')}**. "
         f"Fills {book.get('n_trades')} · skips {book.get('n_skips')} · "
         f"realized ${book.get('realized'):+.2f}.",
@@ -1301,8 +1314,10 @@ def render_recipe_md(rec: dict, stats: dict, book: dict) -> str:
         "the 09:30 packet + leftover cash + lots on hand decide the ticket. "
         "Same-day Change% is outcome only.",
         "",
-        f"- **Universe** `{rec['universe']}` — candidate list at 09:30 "
-        f"(flatten wish-list, union, probable, yday gainer, or OHLC hot).",
+        f"- **Universe** `{rec['universe']}` — "
+        + ("each member keeps its own 09:30 list (not a mashed shopping list)."
+           if combo else
+           "candidate list at 09:30 (flatten wish-list, union, probable, yday gainer, or OHLC hot)."),
         f"- **Gate** `{_gate_label(rec)}` · **rank** `{rec.get('rank') or 'list order'}` "
         f"· **top_n** {rec['top_n']}"
         + (f" (S≥+5 may raise this when S-boost is `{rec.get('s_boost')}`)"
@@ -1310,7 +1325,7 @@ def render_recipe_md(rec: dict, stats: dict, book: dict) -> str:
         + ".",
         f"- **Size** `{rec.get('size') or 'leftover'}` splits leftover cash among "
         f"*new* names only. Rank-weight / top-heavy still cannot invent money.",
-        f"- **Sell** `{rec.get('sell') or 'list'}` after min-hold **{rec['hold']}**. "
+        f"- **Sell** `{rec.get('sell') or 'list'}` after min-hold **{hold_txt}**. "
         f"We never sell a ticker we do not hold. Early 🚨 / last-red / news🔴 "
         f"can still exit inside the floor.",
         f"- **Entry:** {entry_note}",
@@ -1540,6 +1555,11 @@ def write_action_mds(payload: dict, stats: list[dict], books: dict,
             "size": s.get("size") or "leftover",
             "sell": s.get("sell") or "list",
             "s_boost": s.get("s_boost") or "none",
+            "members": s.get("members") or [],
+            "weights": s.get("weights") or [],
+            "net": s.get("net"),
+            "pool": s.get("pool"),
+            "explain": s.get("explain"),
         }
 
     for name, b in books.items():
@@ -1598,7 +1618,7 @@ def write_action_mds(payload: dict, stats: list[dict], books: dict,
             f"| `{name}` | {s.get('size') or 'leftover'} | "
             f"{s.get('sell') or 'list'} | {s.get('s_boost') or 'none'} | "
             f"{s.get('total_ret_pct'):+.2f} | "
-            f"{s.get('signal_ret_pct'):+.2f} | "
+            f"{'—' if s.get('signal_ret_pct') is None else format(float(s.get('signal_ret_pct')), '+.2f')} | "
             f"{s.get('start_green')}/{s.get('start_n')} | "
             f"{b.get('n_trades') or 0} | {b.get('n_skips') or 0} | "
             f"{aud} | [{md_name}](factor_mine/{md_name}) |"

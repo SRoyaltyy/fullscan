@@ -183,6 +183,7 @@
   <li><b>09:30 open audit.</b> Each session starts with cash (yesterday leftover, no overnight fees) and lots still held, re-marked at the open. vs yday close is the sum of those per-name overnight moves. Every held name also prints its 09:30 open, prior close, overnight $, close, and open→close $ — including days with zero fills. BUY does not label equity (cash↔stock). SELL/COVER labels the change after that sale: green if the sale locked in a gain, red if a loss.</li>
   <li><b>Butterfly state.</b> Morning leftover cash + lots actually held are the only inputs. Size = leftover / rank_w / topheavy / half. Sell = list / time / cut_loser / trail. S≥+5 can size-up or add names, still cash-capped. Hard-red S≤−3 sits.</li>
   <li><b>Entry.</b> <code>flatten_h*</code> buys the wish-list on io/HOLD mornings — live Action those days is HOLD. <code>flatten_live_*</code> only buys when the flatten gate fires (mover).</li>
+  <li><b>Combinations.</b> A <code>combo_*</code> row is the same $10k cash book as every other recipe — leftover split, whole shares, Futubull fees, sell first, 09:30 open, hard-red S≤−3 sit. Same table columns, same leftover · list · none line, same three-column explain. It is <em>not</em> a mashed shopping list and not a blend of daily return series. At 09:30 each member still runs its own leak-free <code>pick_day</code> (same cameras / prior news / prior tape; never today’s Change%). Shared pile: one leftover-cash stack; unused cash spills in claim order (fresh-E, then heat, then other longs, then shorts); weights cap each kid’s slice of whatever cash is left. That spill is why a shared mix can beat both kids — it is not the average of their Book%. A short fill adds cash (borrow) that can later fund a long, still capped by equity ≥ 2× notional. Split pile: each member is a normal book at its weight × $10k, then the books are added (two accounts; the same name can sit in both). One ticker, one side on a shared pile. Each lot keeps the owner’s min-hold and list-drop — a hold-3 fresh-E lot is not dumped by a hold-1 heat card. Lots already held are not sold just because S is red. <b>WIN</b> (next to the name, same place as <em>thin</em>) means this cash Book% is higher than every member, or it stays within 2pp of the richest member with a smaller drawdown than every member, the best start-rate, both halves green, and a no-worse worst day. Signal% / Eff do not award WIN. Eighteen sessions rank this tape. Live <code>flatten_robust</code> is unchanged.</li>
 </ol>
 <p class="note">Research miner only. Live <code>flatten_robust</code> is untouched.</p>
 </details>
@@ -196,6 +197,7 @@ const hidden = new Set();
 let sleeveFilter = "all";
 let sideFilter = "all";
 let holdFilter = "all";
+let kindFilter = "all";
 let startIdx = 0;
 let probeIdx = 0;
 let probeTick = "";
@@ -205,9 +207,18 @@ function pct(v){return v==null?'—':(100*Number(v)).toFixed(0)+'%';}
 function num(v,d){if(v==null||v==='')return '—'; const x=Number(v); return (x>=0?'+':'')+x.toFixed(d==null?2:d);}
 function cls(v){return v==null?'mut':(Number(v)>=0?'pos':'neg');}
 
+function isCombo(s){
+  if(!s) return false;
+  if(typeof s==='string') s=(D.stats||[]).find(x=>x.name===s) || recipeOf(s);
+  return !!(s && (s.universe==='combo' || (s.members||[]).length || String(s.name||'').indexOf('combo_')===0));
+}
 function statsList(){
   return (D.stats||[]).filter(s=>{
-    if(sideFilter!=='all' && s.side!==sideFilter) return false;
+    if(kindFilter==='combo' && !isCombo(s)) return false;
+    if(kindFilter==='single' && isCombo(s)) return false;
+    if(sideFilter==='combo' && !isCombo(s)) return false;
+    if(sideFilter==='long' && s.side!=='long') return false;
+    if(sideFilter==='short' && s.side!=='short') return false;
     if(holdFilter!=='all' && String(s.hold)!==String(holdFilter)) return false;
     return true;
   });
@@ -296,19 +307,27 @@ function renderCards(){
 function renderFilters(){
   const holds = [...new Set((D.stats||[]).map(s=>s.hold))].sort((a,b)=>a-b);
   document.getElementById('filterBar').innerHTML = `
+    <select id="kindPick" aria-label="Kind">
+      <option value="all">Singles + combos</option>
+      <option value="combo">Combos only</option>
+      <option value="single">Single recipes</option>
+    </select>
     <select id="sidePick" aria-label="Side">
       <option value="all">Long + short</option>
       <option value="long">Long only</option>
       <option value="short">Short only</option>
+      <option value="combo">Combos</option>
     </select>
     <select id="holdPick" aria-label="Hold">
       <option value="all">All holds</option>
       ${holds.map(h=>`<option value="${h}">Hold ${h}</option>`).join('')}
     </select>
     <input id="q" placeholder="Filter name (e.g. coil)" aria-label="Filter recipe">
-    <span class="mut">${(D.n_recipes||0)} recipes · ${(D.n_rows||0)} candidate rows · ${(D.n_sessions||0)} sessions</span>`;
+    <span class="mut">${(D.n_recipes||0)} recipes · ${((D.combos||{}).n||0)} combos · ${(D.n_rows||0)} candidate rows · ${(D.n_sessions||0)} sessions</span>`;
+  document.getElementById('kindPick').value = kindFilter;
   document.getElementById('sidePick').value = sideFilter;
   document.getElementById('holdPick').value = holdFilter;
+  document.getElementById('kindPick').onchange = e=>{kindFilter=e.target.value; sleeveFilter='all'; renderAll();};
   document.getElementById('sidePick').onchange = e=>{sideFilter=e.target.value; sleeveFilter='all'; renderAll();};
   document.getElementById('holdPick').onchange = e=>{holdFilter=e.target.value; sleeveFilter='all'; renderAll();};
   document.getElementById('q').oninput = ()=>{ renderChips(); renderTable(); };
@@ -323,6 +342,7 @@ function chipNames(){
   }
   const out=[];
   const add=n=>{ if(n && !out.includes(n)) out.push(n); };
+  ((D.combos&&D.combos.outperform)||[]).forEach(add);
   (D.featured||[]).forEach(add);
   list.slice().sort((a,b)=>Number(b.total_ret_pct)-Number(a.total_ret_pct))
     .slice(0,12).forEach(s=>add(s.name));
@@ -433,14 +453,19 @@ function simBook(){
 function activeDaily(){
   const name=pickedName();
   if(name && !isCanon()){
-    const b=simBook();
-    if(b && (b.daily||[]).length) return b.daily;
+    if(isCombo(name)){
+      const sp=startPath();
+      if(sp && (sp.days||[]).length) return sp.days;
+    } else {
+      const b=simBook();
+      if(b && (b.daily||[]).length) return b.daily;
+    }
   }
   return (D.daily||{})[name] || (((D.books||{})[name]||{}).daily) || [];
 }
 function activeBook(){
   const name=pickedName();
-  if(name && !isCanon()){
+  if(name && !isCanon() && !isCombo(name)){
     const b=simBook();
     if(b) return b;
   }
@@ -449,7 +474,22 @@ function activeBook(){
 function lookRows(date){
   const name=pickedName();
   if(!name || !D.sim || typeof FMSim==='undefined') return [];
-  return FMSim.lookDay(D.sim, recipeOf(name), date, D.mornings||{});
+  const rec=recipeOf(name);
+  if(isCombo(rec) && (rec.members||[]).length){
+    const out=[], seen=new Set();
+    (rec.members||[]).forEach(mn=>{
+      const mr=recipeOf(mn);
+      if(!mr || !mr.name) return;
+      FMSim.lookDay(D.sim, mr, date, D.mornings||{}).forEach(r=>{
+        const key=r.ticker+'|'+(r.buy?'buy':'no');
+        if(seen.has(key)) return;
+        seen.add(key);
+        out.push(Object.assign({}, r, {owner: mn}));
+      });
+    });
+    return out;
+  }
+  return FMSim.lookDay(D.sim, rec, date, D.mornings||{});
 }
 function stepDate(which, idx, max){
   if(which==='first') return 0;
@@ -559,6 +599,12 @@ function camOk(got, want){
 }
 function cardPasses(rec, card){
   if(!rec||!card) return false;
+  if(rec.universe==='combo' || (rec.members||[]).length){
+    return (rec.members||[]).some(n=>{
+      const mr=recipeOf(n);
+      return mr && mr.name && mr.universe!=='combo' && cardPasses(mr, card);
+    });
+  }
   const uni=rec.universe||'union';
   const src=new Set(card.sources||[]);
   if(uni!=='union' && !src.has(uni)) return false;
@@ -900,7 +946,7 @@ function renderTable(){
   if(sleeveFilter!=='all') list=list.filter(s=>s.name===sleeveFilter);
   const head='<tr><th class="tick">Strategy</th><th>Side</th><th>H</th><th>Win%</th><th>$ days</th><th>Starts</th><th>Book%</th><th>Signal%</th><th>Audit</th></tr>';
   const body=list.map(s=>`<tr data-sleeve="${esc(s.name)}" style="cursor:pointer">
-    <td class="tick">${esc(s.name)}${s.reliable===false?' <span class="mut">thin</span>':''}<div class="mut">${esc(s.size||'leftover')} · ${esc(s.sell||'list')} · ${esc(s.s_boost||'none')}</div></td>
+    <td class="tick">${esc(s.name)}${s.reliable===false?' <span class="mut">thin</span>':''}${s.outperforms?' <span class="pos">WIN</span>':''}<div class="mut">${esc(s.size||'leftover')} · ${esc(s.sell||'list')} · ${esc(s.s_boost||'none')}</div></td>
     <td>${esc(s.side)}</td>
     <td class="num">${s.hold}</td>
     <td class="num ${cls(s.win_rate)}">${pct(s.win_rate)}</td>
@@ -1079,7 +1125,7 @@ function renderBlotter(){
       return `<div class="fill-card ${row}">
         <div class="fill-top">
           <span class="${kind==='BUY'||kind==='SHORT'?'pos':'neg'}">${esc(kind)}</span>
-          <b>${esc(t.ticker)}</b>
+          <b>${esc(t.ticker)}</b>${t.owner?` <span class="mut">${esc(t.owner)}</span>`:''}
           ${((kind==='BUY'||kind==='SHORT') && earnFor(t.date, t.ticker)) ? (' '+earnFor(t.date, t.ticker)) : ''}
           ${esc(t.date)} · ${t.shares} sh @ ${t.price==null?'—':('$'+(+t.price).toFixed(2))}
           · fee ${t.fees==null?'—':('$'+(+t.fees).toFixed(2))}
@@ -1134,7 +1180,10 @@ function renderAll(){
     " · "+(D.n_sessions||0)+" sessions "+(D.from_date||'')+" → "+(D.to_date||'')+
     " · $"+Number(D.capital||10000).toLocaleString()+" per recipe · "+
     (D.fill||"09:30 open, whole shares, Futubull fees")+
-    " · "+(D.leak||"leak-free 09:30");
+    " · "+(D.leak||"leak-free 09:30")+
+    (((D.combos||{}).n)
+      ? (" · "+D.combos.n+" combo books"+(((D.combos.outperform||[]).length)?" · "+D.combos.outperform.length+" WIN":""))
+      : "");
   document.getElementById('fees').textContent =
     "Loser cut = Change% < "+(D.loser_cut)+" · live policy untouched: "+(D.live_untouched||"flatten_robust");
   const curve=document.getElementById('curveTitle');

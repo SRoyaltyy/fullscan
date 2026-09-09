@@ -1,13 +1,91 @@
 # Factor strategy mine — 2026-08-13 → 2026-09-08
 
-Leak-free 09:30 recipes: **161** · candidate rows **1408** · fill `09:30 open, whole shares, Futubull fees, leftover split, sell first, hard-red sit, cash+holdings audit`.
+Leak-free 09:30 recipes: **235** · candidate rows **1408** · fill `09:30 open, whole shares, Futubull fees, leftover split, sell first, hard-red sit, cash+holdings audit`.
 
 Cash book: $10k, whole shares, Futubull fees, leftover split, sell first, min-hold, 09:30 open, hard-red S≤−3 sit, shorts marked as a liability. Each session starts from leftover cash and lots actually held (butterfly). Cash-start buttons wake a sleeve on date X with $10k and no lots (same rules). Stock investigator quotes 09:30 cameras / coaches / news from repo files. Size / sell / S-boost tweaks sit on the same ledger. Signal-only % is the old equal-weight path (not a fill). `flatten_h*` = wish-list (io/HOLD mornings still buy). `flatten_live_*` = only when the live flatten gate fires. Research only — does not change live `flatten_robust`.
+
+Combination books: **74** mixes on the same $10k cash ledger (shared leftover or split sleeves, official 09:30 / 16:00, hard-red sit, owner min-hold). Outperformers: `combo_sh_5050_shared`, `combo_jse_333_shared`, `combo_sh_7030_shared`, `combo_sh_3070_shared`, `combo_se_5050_skip`, `combo_seh_451540_shared`, `combo_ej_5050_shared`, `combo_seh_601525_shared`, `combo_seh_502525_shared`, `combo_seh_333_skip`, `combo_jer_5050_shared`, `combo_se_5050_shared`, `combo_se_5050_weather`, `combo_se_3070_shared`, `combo_es_8020_shared`, `combo_seh_404020_shared`, `combo_seh_403525_shared`, `combo_se1_5050_shared`, `combo_ser_5050_shared`, `combo_nse_333_shared`, `combo_ers_7030_shared`, `combo_es_9010_shared`, `combo_seh_333_shared`, `combo_seh_333_weather`, `combo_se_7030_shared`, `combo_ehs_601525_shared`, `combo_sj_5050_shared`, `combo_sj_3070_shared`, `combo_e1s_7030_shared`, `combo_ner_5050_shared`, `combo_sf_7030_shared`, `combo_sf_5050_shared`, `combo_sf_3070_shared`, `combo_sj_7030_shared`, `combo_snj_333_shared`, `combo_sn_5050_shared`, `combo_sn_3070_shared`, `combo_je1_5050_shared`, `combo_ne1_5050_shared`.
+
+A combo outperforms its members on the cash book when the audit passes and either (1) Book% is strictly higher than every member, or (2) Book% stays within 2pp of the richest member, max drawdown is strictly smaller than every member's drawdown, start-rate is at least the best member, both halves are green, and the worst session is no worse than the worst member session. Effectiveness / Signal% do not decide WIN.
 
 Action blotters: [FACTOR_MINE_ACTION.md](FACTOR_MINE_ACTION.md).
 
 | Strategy | Side | H | Size | Sell | Boost | Win% | $ days | Starts YES | Med start | Top-g | Losers | AvgW | AvgL | Book% | Signal% | Audit | Eff |
 |---|---|---:|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|---:|
+| `combo_sh_5050_shared` | mix | 5 | leftover | list | none | 60% | 67% | 17/18 | +14.71 | 0 | 0 | +5.45 | -4.07 | +35.53 | — | PASS | 76.147 |
+| `combo_jse_333_shared` | mix | 5 | leftover | list | none | 61% | 67% | 16/18 | +4.88 | 0 | 0 | +5.53 | -5.96 | +33.09 | — | PASS | 71.665 |
+| `combo_sh_7030_shared` | mix | 5 | leftover | list | none | 60% | 72% | 17/18 | +13.85 | 0 | 0 | +5.42 | -4.13 | +30.59 | — | PASS | 76.373 |
+| `combo_sh_3070_shared` | mix | 5 | leftover | list | none | 59% | 61% | 17/18 | +11.25 | 0 | 0 | +5.51 | -3.96 | +30.58 | — | PASS | 73.951 |
+| `combo_se_5050_skip` | mix | 5 | leftover | list | none | 67% | 61% | 16/18 | +5.38 | 0 | 0 | +5.58 | -8.40 | +30.02 | — | PASS | 68.955 |
+| `combo_seh_451540_shared` | mix | 5 | leftover | list | none | 49% | 72% | 17/18 | +9.40 | 0 | 0 | +6.12 | -6.22 | +29.87 | — | PASS | 68.949 |
+| `combo_ej_5050_shared` | mix | 5 | leftover | list | none | 51% | 56% | 15/18 | +1.53 | 0 | 0 | +6.02 | -6.38 | +29.11 | — | PASS | 64.239 |
+| `combo_seh_601525_shared` | mix | 5 | leftover | list | none | 49% | 78% | 17/18 | +8.86 | 0 | 0 | +6.11 | -6.26 | +29.05 | — | PASS | 69.898 |
+| `combo_seh_502525_shared` | mix | 5 | leftover | list | none | 50% | 72% | 17/18 | +5.89 | 0 | 0 | +6.13 | -6.28 | +28.80 | — | PASS | 69.133 |
+| `combo_seh_333_skip` | mix | 5 | leftover | list | none | 54% | 72% | 16/18 | +3.93 | 0 | 0 | +5.96 | -6.42 | +28.30 | — | PASS | 69.031 |
+| `combo_jer_5050_shared` | mix | 5 | leftover | list | none | 46% | 56% | 14/18 | +1.53 | 0 | 0 | +6.33 | -6.70 | +28.09 | — | PASS | 60.536 |
+| `combo_se_5050_shared` | mix | 5 | leftover | list | none | 63% | 61% | 16/18 | +5.38 | 0 | 0 | +5.65 | -7.95 | +28.00 | — | PASS | 67.147 |
+| `combo_se_5050_weather` | mix | 5 | leftover | list | none | 63% | 61% | 16/18 | +5.38 | 0 | 0 | +5.65 | -7.95 | +28.00 | — | PASS | 67.147 |
+| `combo_se_3070_shared` | mix | 5 | leftover | list | none | 54% | 61% | 16/18 | +5.10 | 0 | 0 | +5.92 | -7.79 | +27.68 | — | PASS | 63.7 |
+| `combo_es_8020_shared` | mix | 5 | leftover | list | none | 51% | 61% | 16/18 | +4.73 | 0 | 0 | +6.11 | -7.32 | +27.14 | — | PASS | 62.762 |
+| `combo_seh_404020_shared` | mix | 5 | leftover | list | none | 51% | 67% | 16/18 | +4.39 | 0 | 0 | +5.91 | -6.47 | +26.97 | — | PASS | 66.623 |
+| `combo_seh_403525_shared` | mix | 5 | leftover | list | none | 50% | 67% | 16/18 | +4.56 | 0 | 0 | +6.15 | -6.25 | +26.95 | — | PASS | 66.403 |
+| `combo_se1_5050_shared` | mix | 5 | leftover | list | none | 58% | 78% | 16/18 | +10.14 | 0 | 0 | +4.73 | -6.26 | +26.88 | — | PASS | 71.038 |
+| `combo_ser_5050_shared` | mix | 5 | leftover | list | none | 58% | 50% | 16/18 | +4.62 | 0 | 0 | +5.74 | -8.34 | +26.45 | — | PASS | 62.263 |
+| `combo_nse_333_shared` | mix | 5 | leftover | list | none | 52% | 56% | 16/18 | +4.99 | 0 | 0 | +5.05 | -6.34 | +26.16 | — | PASS | 64.434 |
+| `combo_ers_7030_shared` | mix | 5 | leftover | list | none | 51% | 50% | 15/18 | +4.61 | 0 | 0 | +6.01 | -8.63 | +26.02 | — | PASS | 57.994 |
+| `combo_es_9010_shared` | mix | 5 | leftover | list | none | 47% | 61% | 14/18 | +3.50 | 0 | 0 | +6.61 | -6.64 | +25.62 | — | PASS | 58.956 |
+| `combo_seh_333_shared` | mix | 5 | leftover | list | none | 50% | 67% | 16/18 | +3.85 | 0 | 0 | +6.02 | -6.34 | +25.48 | — | PASS | 66.194 |
+| `combo_seh_333_weather` | mix | 5 | leftover | list | none | 50% | 67% | 16/18 | +3.85 | 0 | 0 | +6.02 | -6.34 | +25.48 | — | PASS | 66.194 |
+| `combo_se_7030_shared` | mix | 5 | leftover | list | none | 64% | 61% | 16/18 | +3.32 | 0 | 0 | +5.54 | -7.73 | +25.02 | — | PASS | 67.207 |
+| `combo_ehs_601525_shared` | mix | 5 | leftover | list | none | 46% | 61% | 16/18 | +3.56 | 0 | 0 | +6.31 | -6.04 | +24.76 | — | PASS | 63.759 |
+| `combo_sj_5050_shared` | mix | 5 | leftover | list | none | 56% | 78% | 17/18 | +17.74 | 0 | 0 | +5.17 | -4.72 | +24.26 | — | PASS | 74.023 |
+| `combo_sj_3070_shared` | mix | 5 | leftover | list | none | 56% | 72% | 17/18 | +16.53 | 0 | 0 | +5.16 | -4.73 | +22.56 | — | PASS | 72.631 |
+| `combo_e1s_7030_shared` | mix | 5 | leftover | list | none | 57% | 72% | 16/18 | +6.14 | 0 | 0 | +4.84 | -6.04 | +22.20 | — | PASS | 68.986 |
+| `combo_ner_5050_shared` | mix | 5 | leftover | list | none | 44% | 50% | 9/18 | +0.10 | 0 | 0 | +5.23 | -6.78 | +20.59 | — | PASS | 49.936 |
+| `combo_sf_7030_shared` | mix | 5 | leftover | list | none | 63% | 78% | 16/18 | +4.85 | 0 | 0 | +6.70 | -4.69 | +20.30 | — | PASS | 73.428 |
+| `combo_sf_5050_shared` | mix | 5 | leftover | list | none | 63% | 78% | 16/18 | +3.39 | 0 | 0 | +7.18 | -4.53 | +20.24 | — | PASS | 74.199 |
+| `combo_sf_3070_shared` | mix | 5 | leftover | list | none | 61% | 67% | 11/18 | +0.33 | 0 | 0 | +7.57 | -4.83 | +19.91 | — | PASS | 63.934 |
+| `combo_sj_7030_shared` | mix | 5 | leftover | list | none | 54% | 67% | 17/18 | +14.35 | 0 | 0 | +5.24 | -4.68 | +19.49 | — | PASS | 70.29 |
+| `combo_snj_333_shared` | mix | 5 | leftover | list | none | 53% | 67% | 17/18 | +12.98 | 0 | 0 | +4.67 | -4.63 | +17.69 | — | PASS | 70.418 |
+| `combo_sn_5050_shared` | mix | 5 | leftover | list | none | 60% | 78% | 17/18 | +11.49 | 0 | 0 | +4.30 | -4.39 | +16.76 | — | PASS | 74.093 |
+| `combo_sn_3070_shared` | mix | 5 | leftover | list | none | 58% | 72% | 17/18 | +9.55 | 0 | 0 | +4.41 | -4.21 | +15.03 | — | PASS | 72.373 |
+| `combo_je1_5050_shared` | mix | 5 | leftover | list | none | 50% | 50% | 14/18 | +3.96 | 0 | 0 | +4.79 | -5.34 | +13.45 | — | PASS | 61.592 |
+| `combo_ne1_5050_shared` | mix | 5 | leftover | list | none | 52% | 39% | 7/18 | -0.38 | 0 | 0 | +4.10 | -5.45 | +10.13 | — | PASS | 39.321 |
+| `combo_ee1_3070_shared` | mix | 5 | leftover | list | none | 36% | 61% | 12/18 | +1.57 | 0 | 0 | +8.53 | -8.31 | +22.78 | — | PASS | 54.011 |
+| `combo_ee1_5050_shared` | mix | 5 | leftover | list | none | 36% | 61% | 12/18 | +1.57 | 0 | 0 | +8.53 | -8.31 | +22.78 | — | PASS | 54.011 |
+| `combo_ee1_7030_shared` | mix | 5 | leftover | list | none | 36% | 61% | 12/18 | +1.57 | 0 | 0 | +8.53 | -8.31 | +22.78 | — | PASS | 54.011 |
+| `combo_en_7030_shared` | mix | 5 | leftover | list | none | 42% | 50% | 11/18 | +0.37 | 0 | 0 | +5.50 | -6.23 | +22.06 | — | PASS | 53.157 |
+| `combo_ehs_702010_shared` | mix | 5 | leftover | list | none | 39% | 56% | 12/18 | +2.66 | 0 | 0 | +7.19 | -5.46 | +21.99 | — | PASS | 55.305 |
+| `combo_en_5050_shared` | mix | 5 | leftover | list | none | 46% | 50% | 11/18 | +0.45 | 0 | 0 | +5.10 | -6.43 | +21.69 | — | PASS | 54.397 |
+| `combo_en_3070_shared` | mix | 5 | leftover | list | none | 46% | 44% | 10/18 | +0.11 | 0 | 0 | +5.20 | -6.13 | +20.58 | — | PASS | 51.742 |
+| `combo_eh_7030_shared` | mix | 5 | leftover | list | none | 35% | 50% | 12/18 | +1.67 | 0 | 0 | +7.93 | -5.63 | +19.10 | — | PASS | 53.36 |
+| `combo_eh_5050_shared` | mix | 5 | leftover | list | none | 41% | 50% | 12/18 | +0.08 | 0 | 0 | +6.89 | -6.05 | +17.76 | — | PASS | 54.232 |
+| `combo_se_5050_split` | mix | 5 | leftover | list | none | 49% | 67% | 16/18 | +4.82 | 0 | 0 | +6.54 | -6.90 | +17.68 | — | PASS | 62.391 |
+| `combo_fse_333_shared` | mix | 5 | leftover | list | none | 55% | 72% | 16/18 | +1.75 | 0 | 0 | +6.39 | -6.79 | +17.67 | — | PASS | 65.844 |
+| `combo_ef_7030_shared` | mix | 5 | leftover | list | none | 48% | 67% | 12/18 | +1.46 | 0 | 0 | +7.82 | -7.40 | +16.64 | — | PASS | 57.132 |
+| `combo_fes_403030_shared` | mix | 5 | leftover | list | none | 52% | 72% | 14/18 | +1.01 | 0 | 0 | +6.69 | -6.48 | +16.23 | — | PASS | 62.297 |
+| `combo_seh_333_split` | mix | 5 | leftover | list | none | 50% | 61% | 15/18 | +2.49 | 0 | 0 | +6.05 | -6.16 | +16.12 | — | PASS | 62.065 |
+| `combo_eh_3070_shared` | mix | 5 | leftover | list | none | 42% | 39% | 8/18 | +0.00 | 0 | 0 | +6.63 | -6.33 | +15.90 | — | PASS | 36.198 |
+| `combo_eer_5050_shared` | mix | 5 | leftover | list | none | 35% | 44% | 8/18 | +0.00 | 0 | 0 | +7.82 | -10.07 | +15.71 | — | PASS | 29.534 |
+| `combo_seh_502525_split` | mix | 5 | leftover | list | none | 48% | 72% | 16/18 | +3.78 | 0 | 0 | +6.35 | -6.05 | +15.03 | — | PASS | 65.26 |
+| `combo_hn_7030_shared` | mix | 5 | leftover | list | none | 52% | 39% | 11/18 | +2.57 | 0 | 0 | +4.46 | -4.34 | +14.64 | — | PASS | 57.905 |
+| `combo_sn_7030_shared` | mix | 5 | leftover | list | none | 60% | 72% | 17/18 | +9.37 | 0 | 0 | +4.15 | -4.60 | +14.53 | — | PASS | 72.262 |
+| `combo_her_5050_shared` | mix | 5 | leftover | list | none | 43% | 56% | 11/18 | +0.08 | 0 | 0 | +6.43 | -8.05 | +13.98 | — | PASS | 52.159 |
+| `combo_ef_5050_shared` | mix | 5 | leftover | list | none | 49% | 67% | 11/18 | +0.73 | 0 | 0 | +8.19 | -7.26 | +13.13 | — | PASS | 55.631 |
+| `combo_fe_5050_shared` | mix | 5 | leftover | list | none | 49% | 67% | 11/18 | +0.73 | 0 | 0 | +8.19 | -7.26 | +13.13 | — | PASS | 55.631 |
+| `combo_hn_5050_shared` | mix | 5 | leftover | list | none | 53% | 39% | 10/18 | +1.94 | 0 | 0 | +4.48 | -4.33 | +13.09 | — | PASS | 56.716 |
+| `combo_he1_5050_shared` | mix | 5 | leftover | list | none | 50% | 44% | 8/18 | +0.00 | 0 | 0 | +4.98 | -5.38 | +12.77 | — | PASS | 41.863 |
+| `combo_jf_5050_shared` | mix | 5 | leftover | list | none | 50% | 72% | 10/18 | +0.55 | 0 | 0 | +6.68 | -4.38 | +12.12 | — | PASS | 61.215 |
+| `combo_hn_3070_shared` | mix | 5 | leftover | list | none | 54% | 56% | 15/18 | +2.27 | 0 | 0 | +4.51 | -4.31 | +11.89 | — | PASS | 67.057 |
+| `combo_fer_5050_shared` | mix | 5 | leftover | list | none | 46% | 61% | 8/18 | +0.00 | 0 | 0 | +8.01 | -8.54 | +11.38 | — | PASS | 37.767 |
+| `combo_nf_5050_shared` | mix | 5 | leftover | list | none | 49% | 67% | 7/18 | -0.46 | 0 | 0 | +7.18 | -4.33 | +11.33 | — | PASS | 46.652 |
+| `combo_hj_5050_shared` | mix | 5 | leftover | list | none | 48% | 39% | 11/18 | +1.96 | 0 | 0 | +5.04 | -4.32 | +10.64 | — | PASS | 55.869 |
+| `combo_ef_3070_shared` | mix | 5 | leftover | list | none | 51% | 67% | 7/18 | -0.43 | 0 | 0 | +8.23 | -7.42 | +10.29 | — | PASS | 40.459 |
+| `combo_hf_5050_shared` | mix | 5 | leftover | list | none | 54% | 56% | 8/18 | +0.00 | 0 | 0 | +6.43 | -4.54 | +8.92 | — | PASS | 45.402 |
+| `combo_fh_7030_shared` | mix | 5 | leftover | list | none | 52% | 67% | 8/18 | +0.00 | 0 | 0 | +6.58 | -4.86 | +7.05 | — | PASS | 46.304 |
+| `combo_fe1_5050_shared` | mix | 5 | leftover | list | none | 50% | 61% | 6/18 | -0.67 | 0 | 0 | +6.02 | -5.75 | +6.56 | — | PASS | 39.454 |
+| `combo_nj_5050_shared` | mix | 5 | leftover | list | none | 49% | 39% | 15/18 | +5.95 | 0 | 0 | +4.50 | -4.53 | +5.95 | — | PASS | 60.772 |
+| `combo_e1er_5050_shared` | mix | 5 | leftover | list | none | 44% | 22% | 7/18 | -1.13 | 0 | 0 | +4.50 | -8.10 | -2.58 | — | PASS | 25.96 |
 | `short_news_r_h3` | short | 3 | leftover | list | none | 55% | 61% | 17/18 | +9.98 | 6 | 31 | +5.02 | -4.82 | +14.68 | +11.71 | PASS | 65.132 |
 | `union_news_g_h1` | long | 1 | leftover | list | none | 54% | 44% | 15/18 | +3.60 | 2 | 18 | +4.00 | -4.07 | +5.89 | +15.55 | PASS | 64.413 |
 | `short_news_r_h1` | short | 1 | leftover | list | none | 53% | 44% | 16/18 | +2.48 | 4 | 13 | +3.08 | -3.45 | +1.04 | +4.17 | PASS | 63.095 |
