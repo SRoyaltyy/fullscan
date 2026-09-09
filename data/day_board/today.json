@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T08:44:18.770744-04:00",
+  "generated_at": "2026-09-09T08:46:14.955201-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -253,29 +253,29 @@
       "preview": "# flatten_robust card \u2014 2026-09-09\n_Generated 2026-09-09T12:26:16 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Open lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66** \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930"
     },
     {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
+      "key": "weather",
+      "title": "Weather / regime",
       "date": "2026-09-09",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-09T08:44:17.854641-04:00",
+      "at": "2026-09-09T08:46:14.071700-04:00",
       "files": [
         {
-          "path": "01_daily/news/2026-09-09_finviz_digest.json",
+          "path": "01_daily/weather/2026-09-09_weather.json",
           "ok": true,
           "reason": "",
-          "size": 2,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+          "size": 10,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.3050000000000002, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.73, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.935, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 1.0950000000000002, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.0, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.56, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 0.6, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
         },
         {
-          "path": "01_daily/news/2026-09-09_finviz_digest.md",
+          "path": "01_daily/weather/2026-09-09_weather.md",
           "ok": true,
           "reason": "",
-          "size": 11401,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-09\n_Generated 2026-09-09T05:11:24.316414-04:00 \u00b7 export=data/exports/finviz_2026-09-08.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+          "size": 5035,
+          "preview": "# Weather report \u2014 2026-09-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
         }
       ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-09\n_Generated 2026-09-09T05:11:24.316414-04:00 \u00b7 export=data/exports/finviz_2026-09-08.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.3050000000000002, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.73, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.935, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 1.0950000000000002, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.0, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.56, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 0.6, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
