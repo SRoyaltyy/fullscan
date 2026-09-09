@@ -1,11 +1,10 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T05:54:28.312166-04:00",
+  "generated_at": "2026-09-09T06:19:30.170903-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-09_predict.md` \u2014 missing",
-    "MISSING Sector board JSON `01_daily/sectors/2026-09-09/_board.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-09-09_judge.md` \u2014 missing"
   ],
   "counts": {
@@ -101,9 +100,9 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 3,
+      "n_req_ok": 4,
       "n_req": 20,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 2,
       "files": [
         {
@@ -201,18 +200,18 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-09-09/_board.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 5243
         },
         {
           "key": "qc",
           "name": "Pre-open QC JSON",
           "path": "01_daily/2026-09-09_preopen_qc.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "all_ok=False",
+          "size": 6697
         },
         {
           "key": "status",
@@ -460,9 +459,9 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-09-09/_board.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 5243
         },
         {
           "key": "in_actions",
@@ -890,6 +889,24 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-09T05:54:22.565188-04:00\nraw=400 unique_events=5 tickers=69"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T06:19:29.219103-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-09/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 5243,
+          "preview": "keys: date, generated_at, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, sectors"
     }
   ],
   "href": {
