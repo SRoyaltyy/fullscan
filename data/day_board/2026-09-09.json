@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T07:33:40.134365-04:00",
+  "generated_at": "2026-09-09T07:33:49.232089-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1185,6 +1185,45 @@
         }
       ],
       "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HRMY, CDNA, ONC, WAY, NU"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T07:33:48.574743-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-09_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1446043,
+          "preview": "1d BUY NVT, DINO, UGP \u00b7 SELL BGS, SMPL, BRBR, GIS, CPB, FLO, INFY, HRL"
+        },
+        {
+          "path": "data/stock_book/2026-09-09_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-09_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2542,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "01_daily/2026-09-09_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 77556,
+          "preview": "# Stock book \u2014 2026-09-09\n_Generated 2026-09-09T07:33:46.606075-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY NVT, DINO, UGP \u00b7 SELL BGS, SMPL, BRBR, GIS, CPB, FLO, INFY, HRL \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 # Stock book \u2014 2026-09-09\n_Generated 2026-09-09T07:33:46.606075-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
