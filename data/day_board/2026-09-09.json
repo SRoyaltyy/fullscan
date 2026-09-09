@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T09:01:45.085931-04:00",
+  "generated_at": "2026-09-09T09:02:30.558257-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -59,7 +59,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 16910
+          "size": 17022
         }
       ],
       "said": "tables on disk",
@@ -92,7 +92,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11379
+          "size": 11401
         }
       ],
       "said": "",
@@ -104,7 +104,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 16,
+      "n_req_ok": 3,
       "n_req": 20,
       "n_opt_ok": 2,
       "n_opt": 2,
@@ -213,99 +213,99 @@
           "name": "Pre-open QC JSON",
           "path": "01_daily/2026-09-09_preopen_qc.json",
           "role": "required",
-          "status": "OK",
-          "reason": "all_ok=False",
-          "size": 6622
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "status",
           "name": "Pre-open status JSON",
           "path": "01_daily/2026-09-09_preopen_status.json",
           "role": "required",
-          "status": "OK",
-          "reason": "all_ok=False missing=['news_parse', 'news_judge', 'general_predict']",
-          "size": 6960
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "review",
           "name": "Grok review JSON",
           "path": "01_daily/2026-09-09_grok_review.json",
           "role": "required",
-          "status": "OK",
-          "reason": "ok=False The day fails because three required core artifacts are missing: the general market predict, the news judge, and the new",
-          "size": 1080
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "sector_basic_materials",
           "name": "Sector predict \u2014 basic_materials",
           "path": "01_daily/sectors/2026-09-09/basic_materials_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 8240
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "sector_communication_services",
           "name": "Sector predict \u2014 communication_services",
           "path": "01_daily/sectors/2026-09-09/communication_services_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 10021
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "sector_consumer_cyclical",
           "name": "Sector predict \u2014 consumer_cyclical",
           "path": "01_daily/sectors/2026-09-09/consumer_cyclical_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 11302
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "sector_consumer_defensive",
           "name": "Sector predict \u2014 consumer_defensive",
           "path": "01_daily/sectors/2026-09-09/consumer_defensive_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 16439
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "sector_energy",
           "name": "Sector predict \u2014 energy",
           "path": "01_daily/sectors/2026-09-09/energy_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 8548
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "sector_financial",
           "name": "Sector predict \u2014 financial",
           "path": "01_daily/sectors/2026-09-09/financial_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 13353
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "sector_healthcare",
           "name": "Sector predict \u2014 healthcare",
           "path": "01_daily/sectors/2026-09-09/healthcare_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 12369
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "sector_industrials",
           "name": "Sector predict \u2014 industrials",
           "path": "01_daily/sectors/2026-09-09/industrials_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 9397
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "sector_real_estate",
@@ -321,18 +321,18 @@
           "name": "Sector predict \u2014 technology",
           "path": "01_daily/sectors/2026-09-09/technology_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 11096
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "sector_utilities",
           "name": "Sector predict \u2014 utilities",
           "path": "01_daily/sectors/2026-09-09/utilities_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 11816
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         }
       ],
       "said": "sectors 0 up / 0 down / 0 flat",
@@ -372,13 +372,13 @@
           "role": "required",
           "status": "OK",
           "reason": "sectors=11",
-          "size": 9347
+          "size": 9279
         }
       ],
-      "said": "favorable 3 \u00b7 hostile 4 \u00b7 neutral 4",
+      "said": "favorable 2 \u00b7 hostile 2 \u00b7 neutral 7",
       "bullets": [
-        "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Real Estate",
-        "events bull 4 / bear 8"
+        "hostile: Consumer Defensive, Real Estate",
+        "events bull 2 / bear 2"
       ]
     },
     {
@@ -521,7 +521,7 @@
           "role": "input",
           "status": "OK",
           "reason": "sectors=11",
-          "size": 9347
+          "size": 9279
         },
         {
           "key": "in_ab",
@@ -539,7 +539,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5902",
-          "size": 2170452
+          "size": 2139841
         },
         {
           "key": "peers",
@@ -556,8 +556,8 @@
           "path": "data/stock_book/2026-09-09_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=212",
-          "size": 1463822
+          "reason": "horizons=5 names=211",
+          "size": 1446043
         },
         {
           "key": "book_md",
@@ -566,7 +566,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 78710
+          "size": 76456
         },
         {
           "key": "green",
@@ -596,9 +596,9 @@
           "size": 3693862
         }
       ],
-      "said": "208 rows",
+      "said": "211 rows",
       "bullets": [
-        "HRMY, CDNA, ONC, DVN, WAY"
+        "HRMY, CDNA, ONC, WAY, NU"
       ]
     },
     {
@@ -618,8 +618,8 @@
           "path": "data/stock_book/2026-09-09_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=212",
-          "size": 1463822
+          "reason": "horizons=5 names=211",
+          "size": 1446043
         },
         {
           "key": "dash_html",
@@ -657,53 +657,49 @@
     "buy_1d": [
       {
         "ticker": "NVT",
-        "score": 0.6081932140222619
+        "score": 0.7018462501247229
       },
       {
         "ticker": "DINO",
-        "score": 0.3792112265780485
+        "score": 0.3164404448254038
       },
       {
         "ticker": "UGP",
-        "score": 0.829334975468365
-      },
-      {
-        "ticker": "CVI",
-        "score": 0.8383879486165673
+        "score": 0.7952388940832091
       }
     ],
     "sell_1d": [
       {
         "ticker": "BGS",
-        "score": -0.4158775493338465
-      },
-      {
-        "ticker": "XHG",
-        "score": -0.38231292819943274
-      },
-      {
-        "ticker": "METC",
-        "score": -0.555774163088432
+        "score": -0.2874761881804064
       },
       {
         "ticker": "SMPL",
-        "score": -0.37044391012687466
-      },
-      {
-        "ticker": "NG",
-        "score": -0.35537526970335365
+        "score": -0.1821293280028169
       },
       {
         "ticker": "BRBR",
-        "score": -0.32562696307416694
-      },
-      {
-        "ticker": "BRO",
-        "score": -0.2374502796489299
+        "score": -0.1425165945091207
       },
       {
         "ticker": "GIS",
-        "score": -0.489074188139194
+        "score": -0.43778665775791
+      },
+      {
+        "ticker": "CPB",
+        "score": -0.09063668475929186
+      },
+      {
+        "ticker": "FLO",
+        "score": -0.23367889223599247
+      },
+      {
+        "ticker": "INFY",
+        "score": -0.3627805913164508
+      },
+      {
+        "ticker": "HRL",
+        "score": -0.11030699935304038
       }
     ],
     "flatten": {
@@ -734,10 +730,10 @@
     },
     "news": {},
     "weather": {
-      "said": "favorable 3 \u00b7 hostile 4 \u00b7 neutral 4",
+      "said": "favorable 2 \u00b7 hostile 2 \u00b7 neutral 7",
       "bullets": [
-        "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Real Estate",
-        "events bull 4 / bear 8"
+        "hostile: Consumer Defensive, Real Estate",
+        "events bull 2 / bear 2"
       ]
     }
   },
@@ -1329,268 +1325,29 @@
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-09\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
     },
     {
-      "key": "sector_predict",
-      "title": "Per-sector predict (all 11)",
+      "key": "finviz_digest",
+      "title": "Finviz digest",
       "date": "2026-09-09",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-09T08:19:17.298273-04:00",
+      "at": "2026-09-09T09:02:29.708548-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-09-09",
+          "path": "01_daily/news/2026-09-09_finviz_digest.json",
           "ok": true,
           "reason": "",
-          "size": 5,
-          "preview": "10/10 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
+          "size": 2,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-09_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11401,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-09\n_Generated 2026-09-09T05:11:24.316414-04:00 \u00b7 export=data/exports/finviz_2026-09-08.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
         }
       ],
-      "preview": "10/10 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
-    },
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T08:25:23.622757-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-09-09_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 10,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.3050000000000002, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.73, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.935, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 1.0950000000000002, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.0, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.56, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 0.6, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-09-09_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5035,
-          "preview": "# Weather report \u2014 2026-09-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.3050000000000002, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.73, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.935, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 1.0950000000000002, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.0, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.56, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 0.6, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T08:25:27.602380-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-09-09_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2139841,
-          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HRMY, CDNA, ONC, WAY, NU"
-        }
-      ],
-      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HRMY, CDNA, ONC, WAY, NU"
-    },
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T08:25:37.789794-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-09_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1459101,
-          "preview": "1d BUY NVT, DINO, UGP \u00b7 SELL BGS, XHG, SMPL, METC, BRBR, BRO, GIS, CPB"
-        },
-        {
-          "path": "data/stock_book/2026-09-09_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-09-09_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2545,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "01_daily/2026-09-09_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 78137,
-          "preview": "# Stock book \u2014 2026-09-09\n_Generated 2026-09-09T08:25:35.867447-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY NVT, DINO, UGP \u00b7 SELL BGS, XHG, SMPL, METC, BRBR, BRO, GIS, CPB \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 # Stock book \u2014 2026-09-09\n_Generated 2026-09-09T08:25:35.867447-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
-    {
-      "key": "flatten",
-      "title": "Flatten live card",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T08:26:17.488374-04:00",
-      "files": [
-        {
-          "path": "01_daily/2026-09-09_flatten_card.md",
-          "ok": true,
-          "reason": "",
-          "size": 1638,
-          "preview": "# flatten_robust card \u2014 2026-09-09\n_Generated 2026-09-09T12:26:16 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Open lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66**"
-        },
-        {
-          "path": "data/sleeve_merge/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 3871,
-          "preview": "keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930"
-        }
-      ],
-      "preview": "# flatten_robust card \u2014 2026-09-09\n_Generated 2026-09-09T12:26:16 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Open lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66** \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930"
-    },
-    {
-      "key": "status",
-      "title": "Pre-open status packet",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T08:56:33.642145-04:00",
-      "files": [
-        {
-          "path": "01_daily/2026-09-09_preopen_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 6622,
-          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
-        },
-        {
-          "path": "01_daily/2026-09-09_preopen_status.json",
-          "ok": true,
-          "reason": "",
-          "size": 6960,
-          "preview": "keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc"
-        },
-        {
-          "path": "01_daily/2026-09-09_preopen_status.md",
-          "ok": true,
-          "reason": "",
-          "size": 634,
-          "preview": "# Pre-open ALL status \u2014 2026-09-09\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  missing=['news_parse', 'news_judge', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 124\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News judge: exit 0\n- Map heat morning delta refresh: exit 0\n- News actions: exit 0\n- General market predict: exit 124\n- Per-sector predict (all 11): exit 0\n- Sector board: exit 0\n- Catalyst dossiers (after book): exit 124"
-        }
-      ],
-      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc \u00b7 # Pre-open ALL status \u2014 2026-09-09\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  missing=['news_parse', 'news_judge', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 124\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News judge: exit 0\n- Map heat morning delta refresh: exit 0\n- News actions: exit 0\n- General market predict: exit 124\n- Per-sector predict (all 11): exit 0\n- Sector board: exit 0\n- Catalyst dossiers (after book): exit 124"
-    },
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T09:00:32.855823-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-09-09_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 10,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.5, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': 0.9, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Consumer Cyclical={'score': -7.5, 'dir': 'down', 'conf': 0.6, 'source': 'llm'}, Consumer Defensive={'score': -3.825, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Energy={'score': 8.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Financial={'score': -6.075, 'dir': 'down', 'conf': 0.5, 'source': 'llm'}, Healthcare={'score': -6.075, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Industrials={'score': -1.8, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}"
-        },
-        {
-          "path": "01_daily/weather/2026-09-09_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5174,
-          "preview": "# Weather report \u2014 2026-09-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.5, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': 0.9, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Consumer Cyclical={'score': -7.5, 'dir': 'down', 'conf': 0.6, 'source': 'llm'}, Consumer Defensive={'score': -3.825, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Energy={'score': 8.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Financial={'score': -6.075, 'dir': 'down', 'conf': 0.5, 'source': 'llm'}, Healthcare={'score': -6.075, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Industrials={'score': -1.8, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T09:00:40.002075-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-09-09_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2170452,
-          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HRMY, CDNA, ONC, DVN, WAY"
-        }
-      ],
-      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HRMY, CDNA, ONC, DVN, WAY"
-    },
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T09:00:50.249676-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-09_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1463822,
-          "preview": "1d BUY NVT, DINO, UGP, CVI \u00b7 SELL BGS, XHG, METC, SMPL, NG, BRBR, BRO, GIS"
-        },
-        {
-          "path": "data/stock_book/2026-09-09_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-09-09_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2545,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "01_daily/2026-09-09_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 79795,
-          "preview": "# Stock book \u2014 2026-09-09\n_Generated 2026-09-09T09:00:47.965396-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY NVT, DINO, UGP, CVI \u00b7 SELL BGS, XHG, METC, SMPL, NG, BRBR, BRO, GIS \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 # Stock book \u2014 2026-09-09\n_Generated 2026-09-09T09:00:47.965396-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
-    {
-      "key": "flatten",
-      "title": "Flatten live card",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T09:01:44.283703-04:00",
-      "files": [
-        {
-          "path": "01_daily/2026-09-09_flatten_card.md",
-          "ok": true,
-          "reason": "",
-          "size": 1570,
-          "preview": "# flatten_robust card \u2014 2026-09-09\n_Generated 2026-09-09T13:01:43 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Open lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66**"
-        },
-        {
-          "path": "data/sleeve_merge/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 3451,
-          "preview": "keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930"
-        }
-      ],
-      "preview": "# flatten_robust card \u2014 2026-09-09\n_Generated 2026-09-09T13:01:43 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Open lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66** \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930"
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-09\n_Generated 2026-09-09T05:11:24.316414-04:00 \u00b7 export=data/exports/finviz_2026-09-08.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
     }
   ],
   "href": {
