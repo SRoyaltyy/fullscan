@@ -322,7 +322,7 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "refresh_ranker" in book
     assert "land_file.land" in pre
     assert "safe_git_push.sh" in (ROOT / "src" / "land_file.py").read_text(encoding="utf-8")
-    assert "timeout_s=45 if late" in pre
+    assert "timeout_s=45 if clock_late" in pre
     assert "passthrough after timeout" in pre
     assert "MAP_HEAT_REFRESH_TIMEOUT" in pre
     assert "--passthrough" in pre

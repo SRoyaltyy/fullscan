@@ -209,6 +209,22 @@ def test_deepseek_preflight_is_wired() -> None:
     assert "402" in ds
 
 
+def test_parse_runs_when_credits_fail_or_past_cutoff() -> None:
+    """09-09 hole: skip_writes ate parse on 402 / 09:25. Parse is file/DB."""
+    pre = (ROOT / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
+    parse_at = pre.index('step("news_parse"')
+    essays_at = pre.index('step("events"')
+    credits_at = pre.index("skip LLM essays (DeepSeek credits)")
+    assert parse_at < essays_at
+    assert "skip_essays" in pre
+    assert '"news_parse"' not in pre[pre.index("llm_steps"):pre.index("def step")]
+    # 402 / late must not set skip_writes (that skipped parse).
+    assert "skip LLM packet (DeepSeek credits)" not in pre
+    assert "parse still runs if missing" in pre
+    assert credits_at < essays_at
+    assert "timeout_s=45 if clock_late" in pre
+
+
 def test_map_heat_passthrough_flag_skips_llm(tmp_path: Path | None = None) -> None:
     orig = mr.OUT
     with tempfile.TemporaryDirectory() as d:
@@ -251,6 +267,7 @@ def main() -> None:
         test_holiday_overlay_uses_last_session,
         test_weather_step_rejects_pre_0535_stamp,
         test_deepseek_preflight_is_wired,
+        test_parse_runs_when_credits_fail_or_past_cutoff,
     ]
     failed = 0
     for fn in tests:
