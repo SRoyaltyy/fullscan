@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T09:42:06.511856-04:00",
+  "generated_at": "2026-09-09T09:42:16.520372-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -12,53 +12,69 @@
   "buy_1d": [
     {
       "ticker": "MSTR",
-      "score": 0.3032590777212682
+      "score": 0.3534361807611726
     },
     {
-      "ticker": "UGP",
-      "score": 0.7857826466615021
+      "ticker": "BE",
+      "score": 0.6403081197889274
     },
     {
       "ticker": "TER",
-      "score": 0.5159317444486419
+      "score": 0.5922255384423224
     },
     {
       "ticker": "VLO",
-      "score": 0.4646372726015126
+      "score": 0.48520040193695885
+    },
+    {
+      "ticker": "AXTI",
+      "score": 0.8315446114618958
+    },
+    {
+      "ticker": "AEHR",
+      "score": 0.6864328592813527
+    },
+    {
+      "ticker": "UCTT",
+      "score": 0.5767852148995258
+    },
+    {
+      "ticker": "SM",
+      "score": 0.8927893299734102
     }
   ],
   "sell_1d": [
     {
       "ticker": "METC",
-      "score": -0.5650490501849281
-    },
-    {
-      "ticker": "XHG",
-      "score": -0.3839088612658864
-    },
-    {
-      "ticker": "SMPL",
-      "score": -0.37044391012687466
-    },
-    {
-      "ticker": "ZBH",
-      "score": -0.004451213233972323
-    },
-    {
-      "ticker": "BKNG",
-      "score": -0.31510168854488385
-    },
-    {
-      "ticker": "NG",
-      "score": -0.35992257126381716
+      "score": -0.5119405834649153
     },
     {
       "ticker": "CPB",
-      "score": -0.2967796001557242
+      "score": -0.33784410247033636
     },
     {
-      "ticker": "NN",
-      "score": -0.20028979038449085
+      "ticker": "GIS",
+      "score": -0.488487527335083
+    },
+    {
+      "ticker": "FLO",
+      "score": -0.37999181074897237
+    },
+    {
+      "ticker": "TRIP",
+      "score": -0.3876185459896564
+    },
+    {
+      "ticker": "BRBR",
+      "score": -0.23051847647973728
+    },
+    {
+      "ticker": "BGS",
+      "score": -0.3892867205221038
+    },
+    {
+      "ticker": "JBS",
+      "score": -0.02789001090394186
     }
   ],
   "flatten": {
@@ -88,31 +104,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "ab",
-      "title": "AB checklist",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T09:08:21.373550-04:00",
-      "files": [
-        {
-          "path": "data/ab_checklist/2026-09-09_ab_checklist.csv",
-          "ok": true,
-          "reason": "",
-          "size": 7658911,
-          "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AVO, RPRX, SKM, CFFN, HSBC"
-        },
-        {
-          "path": "data/ab_checklist/2026-09-09_ab_checklist_enriched.csv",
-          "ok": true,
-          "reason": "",
-          "size": 8492786,
-          "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, SHEL, AMD, WDS, TECK"
-        }
-      ],
-      "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AVO, RPRX, SKM, CFFN, HSBC \u00b7 2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, SHEL, AMD, WDS, TECK"
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -287,6 +278,45 @@
         }
       ],
       "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AVO, RPRX, SKM, CFFN, HSBC \u00b7 2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AVO, SHEL, CFFN, PBR, EC"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T09:42:15.783877-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-09_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1502514,
+          "preview": "1d BUY MSTR, BE, TER, VLO, AXTI, AEHR, UCTT, SM \u00b7 SELL METC, CPB, GIS, FLO, TRIP, BRBR, BGS, JBS"
+        },
+        {
+          "path": "data/stock_book/2026-09-09_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-09_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2545,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "01_daily/2026-09-09_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 83731,
+          "preview": "# Stock book \u2014 2026-09-09\n_Generated 2026-09-09T09:42:14.164867-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY MSTR, BE, TER, VLO, AXTI, AEHR, UCTT, SM \u00b7 SELL METC, CPB, GIS, FLO, TRIP, BRBR, BGS, JBS \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 # Stock book \u2014 2026-09-09\n_Generated 2026-09-09T09:42:14.164867-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
