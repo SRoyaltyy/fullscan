@@ -40,11 +40,65 @@ def _latest_parsed_date() -> str | None:
     return files[-1].name.replace("_parsed.json", "")
 
 
-def _load_parsed(date_str: str) -> dict:
-    p = Path(NEWS_DIR) / f"{date_str}_parsed.json"
-    if not p.exists():
+def _load_json(path: Path) -> dict:
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError, json.JSONDecodeError):
         return {}
-    return json.loads(p.read_text(encoding="utf-8"))
+    return data if isinstance(data, dict) else {}
+
+
+def _load_parsed(date_str: str) -> dict:
+    """Prefer parsed.json. If missing/thin, stitch actions/events/digest."""
+    p = Path(NEWS_DIR) / f"{date_str}_parsed.json"
+    report = _load_json(p) if p.exists() else {}
+    if report and (report.get("usable_top") or report.get("all_items")
+                   or int(report.get("raw_count") or 0) > 0):
+        return report
+    print(f"[news_judge] parsed.json missing/thin for {date_str} — fallback")
+    usable: list[dict] = []
+    actions = _load_json(Path(NEWS_DIR) / f"{date_str}_actions.json")
+    for row in (actions.get("ticker_actions") or actions.get("edge_actions") or []):
+        if isinstance(row, dict):
+            usable.append({
+                "title": row.get("title") or row.get("headline") or str(row.get("ticker") or ""),
+                "ticker": row.get("ticker"),
+                "source": "actions",
+                "usable": True,
+                "polarity": row.get("polarity") or row.get("stance") or "",
+            })
+    digest = _load_json(Path(NEWS_DIR) / f"{date_str}_finviz_digest.json")
+    for block in (digest.get("index_digests") or []):
+        if isinstance(block, dict):
+            for h in (block.get("headlines") or block.get("items") or [])[:8]:
+                if isinstance(h, dict):
+                    usable.append({
+                        "title": h.get("title") or h.get("headline") or "",
+                        "source": "finviz_digest",
+                        "usable": True,
+                    })
+                elif isinstance(h, str):
+                    usable.append({"title": h, "source": "finviz_digest", "usable": True})
+    ev_path = Path("01_daily/events") / f"{date_str}_events.json"
+    events = _load_json(ev_path)
+    for e in (events.get("events") or [])[:25]:
+        if isinstance(e, dict):
+            usable.append({
+                "title": e.get("title") or e.get("event") or e.get("name") or "",
+                "source": "events",
+                "usable": True,
+            })
+    usable = [u for u in usable if (u.get("title") or "").strip()]
+    if not usable:
+        return {}
+    return {
+        "date": date_str,
+        "raw_count": len(usable),
+        "usable_count": len(usable),
+        "usable_top": usable,
+        "all_items": usable,
+        "fallback": "actions_events_digest",
+    }
 
 
 def _fmt_items(items: list[dict], limit: int = 40) -> str:
@@ -163,8 +217,11 @@ def main() -> None:
 
     report = _load_parsed(date_str)
     if not report:
-        print(f"[news_judge] no parsed report for {date_str}")
+        print(f"[news_judge] no parsed report and no fallback sources for {date_str}")
         return
+    if report.get("fallback"):
+        print(f"[news_judge] using {report['fallback']} "
+              f"({report.get('usable_count')} items)")
 
     system = _read(PROMPT_PATH) or "You are the news priority judge. Follow the user instructions exactly."
     user_msg = _build_user_msg(date_str, report)
