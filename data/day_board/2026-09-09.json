@@ -1,18 +1,17 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T05:50:13.034291-04:00",
+  "generated_at": "2026-09-09T05:54:23.554458-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-09_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-09/_board.json` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-09-09_actions.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-09-09_judge.md` \u2014 missing"
   ],
   "counts": {
     "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "partial": 4,
+    "fail": 0,
     "n": 8
   },
   "processes": [
@@ -104,7 +103,7 @@
       "inputs_ready": true,
       "n_req_ok": 3,
       "n_req": 20,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 2,
       "files": [
         {
@@ -184,9 +183,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-09_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 2
         },
         {
           "key": "general",
@@ -400,8 +399,8 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "FAIL",
-      "inputs_ready": false,
+      "status": "PARTIAL",
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -412,9 +411,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-09_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 2
         },
         {
           "key": "in_digest",
@@ -470,9 +469,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-09_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 2
         },
         {
           "key": "in_digest",
@@ -866,6 +865,31 @@
         }
       ],
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-09\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T05:54:22.577321-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-09_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 2,
+          "preview": "keys: generated_at, hours, raw_headlines, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-09-09_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 11570,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-09-09T05:54:22.565188-04:00\nraw=400 unique_events=5 tickers=69"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-09T05:54:22.565188-04:00\nraw=400 unique_events=5 tickers=69"
     }
   ],
   "href": {
