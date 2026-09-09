@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T08:56:38.780428-04:00",
+  "generated_at": "2026-09-09T10:31:59.327737-04:00",
   "items": [
     {
       "ok": false,
@@ -18,21 +18,21 @@
       "kind": "events",
       "path": "01_daily/events/2026-09-09_events.json",
       "reason": "",
-      "size": 18160,
+      "size": 67253,
       "carried": false,
       "timeout": false,
       "empty": false,
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "news_judge",
       "path": "01_daily/news/2026-09-09_judge.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 12468,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
