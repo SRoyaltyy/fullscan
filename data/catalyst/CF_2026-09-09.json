@@ -1,6 +1,6 @@
 {
   "error": "Step 1 parse failure",
-  "raw": "Now I have a comprehensive set of events. Let me compile them into the JSON output. Let me verify a few dates and details.\n\nKey events I've identified:\n1. Q1 2026 earnings (May 6, 2026) - beat\n2. Q2/H1 2026 earnings (Aug 5, 2026) - miss\n3. FY 2025 earnings (Feb 18, 2026)\n4. Dividend increase 20% (July 8, 2026)\n5. Andrew Scribner elected CFO (May 5, 2026)\n6. Chris Bohn became CEO (Jan 5, 2026)\n7. Richard Hoker CAO retirement announced (Aug 31/Sep 3, 2026)\n8. Blue Point One groundbreaking (Aug 26,",
+  "raw": "## Post-session review \u2014 CATALYST STEP1 CF\n\nDeepSeek returned tool-call dumps on the no-tool close, so this essay is assembled from the deterministic actuals and the search results already gathered in this thread. The night pack must not stay on a leaked tool-call stub.\n\n### Actuals and morning packet\n(no DATE/ACTUALS user turn in this thread)\n\n### Research gathered\n- query: CF Industries Holdings Inc CF earnings results 2026 (ddg)\n  - CF Industries Holdings, Inc. Reports First Half 2026 Net ...",
   "ticker": "CF",
   "generated_at": "2026-09-09",
   "cutoff_date": null,

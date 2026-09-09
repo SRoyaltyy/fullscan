@@ -1,19 +1,15 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T11:09:12.234932-04:00",
+  "generated_at": "2026-09-09T12:11:50.741077-04:00",
   "ok": false,
   "fails": [
     {
       "path": "01_daily/news/2026-09-09_parsed.json",
-      "reason": "Required core file is missing (regex FAIL: missing). The news judge file contains a NEWS_PARSE_BEGIN/END block, but the standalone parsed.json artifact is absent, which is a required core file for a complete same-day packet."
-    },
-    {
-      "path": "01_daily/map_heat/2026-09-09_research.md",
-      "reason": "Research file claims phase=morning_refresh (size_gate=True set by pre-open refresh) but contains explicit failure text: 'Morning delta refresh failed captain-evidence QC (subprocess_timeout_or_search_flake). Using last night's post-close captain cards... Overnight tape/news was not re-scored.' This is a timeout/flake stub, not a valid morning_refresh artifact. It is not a morning_bootstrap safe no"
+      "reason": "Required core file is missing (regex FAIL: missing)."
     }
   ],
-  "notes": "The general predict, events JSON, news judge, finviz digest, map_heat tables, and all 11 sector predicts are present, same-day (2026-09-09), complete with required markers (SCORES_BEGIN, SECTOR_SCORES_BEGIN, HIT_GRID_BEGIN, etc.), and take clear directional stances. However, the day fails on two mandatory core requirements: (1) the news_parse JSON file is entirely missing, and (2) the research.md file, which claims a morning_refresh phase, explicitly states it failed QC due to a subprocess timeout and reused prior data without re-scoring, making it a non-compliant refresh artifact. The baseline file is present and the research file is not a morning_bootstrap, so the research failure is not excused.",
-  "prompt_chars": 224134,
-  "reply_chars": 1585,
+  "notes": "The core packet is otherwise complete and same-day: general predict, events, news judge, finviz digest, map-heat tables, and 11/11 sector predicts are all present, dated 2026-09-09, and contain the required contract markers. The map_heat_research.md explicitly states it is a morning_refresh that failed QC and fell back to prior cards, but it is not a timeout stub and contains 142 usable cards, so it does not fail the day. The single missing news_parse file is a required core artifact and cannot be waived.",
+  "prompt_chars": 212744,
+  "reply_chars": 675,
   "reviewer": "grok-4.6-text"
 }

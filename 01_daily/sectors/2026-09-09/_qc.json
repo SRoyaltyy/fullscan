@@ -7,67 +7,67 @@
       "sector": "Basic Materials",
       "ok": true,
       "reason": "",
-      "size": 10262
+      "size": 10349
     },
     {
       "sector": "Communication Services",
       "ok": true,
       "reason": "",
-      "size": 10252
+      "size": 10384
     },
     {
       "sector": "Consumer Cyclical",
       "ok": true,
       "reason": "",
-      "size": 9365
+      "size": 9495
     },
     {
       "sector": "Consumer Defensive",
       "ok": true,
       "reason": "",
-      "size": 15609
+      "size": 15743
     },
     {
       "sector": "Energy",
       "ok": true,
       "reason": "",
-      "size": 10979
+      "size": 11047
     },
     {
       "sector": "Financial",
       "ok": true,
       "reason": "",
-      "size": 8302
+      "size": 8404
     },
     {
       "sector": "Healthcare",
       "ok": true,
       "reason": "",
-      "size": 10017
+      "size": 10099
     },
     {
       "sector": "Industrials",
       "ok": true,
       "reason": "",
-      "size": 11535
+      "size": 11659
     },
     {
       "sector": "Real Estate",
       "ok": true,
       "reason": "",
-      "size": 11374
+      "size": 11509
     },
     {
       "sector": "Technology",
       "ok": true,
       "reason": "",
-      "size": 11096
+      "size": 11200
     },
     {
       "sector": "Utilities",
       "ok": true,
       "reason": "",
-      "size": 11816
+      "size": 11932
     }
   ]
 }
