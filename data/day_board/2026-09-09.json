@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T13:18:19.769570-04:00",
+  "generated_at": "2026-09-09T13:18:22.850873-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -158,7 +158,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 13459
+          "size": 13574
         },
         {
           "key": "research_json",
@@ -372,8 +372,8 @@
           "path": "01_daily/weather/2026-09-09_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10538 vix=falling yields=flat",
-          "size": 10538
+          "reason": "sectors=11 bytes=10543 vix=falling yields=flat",
+          "size": 10543
         }
       ],
       "said": "favorable 2 \u00b7 hostile 5 \u00b7 neutral 4",
@@ -513,7 +513,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 13459
+          "size": 13574
         },
         {
           "key": "in_weather",
@@ -521,8 +521,8 @@
           "path": "01_daily/weather/2026-09-09_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10538 vix=falling yields=flat",
-          "size": 10538
+          "reason": "sectors=11 bytes=10543 vix=falling yields=flat",
+          "size": 10543
         },
         {
           "key": "in_ab",
@@ -791,31 +791,6 @@
     }
   },
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T07:32:14.783090-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-09_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 2,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-09-09_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11401,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-09\n_Generated 2026-09-09T05:11:24.316414-04:00 \u00b7 export=data/exports/finviz_2026-09-08.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-09\n_Generated 2026-09-09T05:11:24.316414-04:00 \u00b7 export=data/exports/finviz_2026-09-08.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -2817,6 +2792,31 @@
         }
       ],
       "preview": "1d BUY CIG, ATRO, EMBJ, MIR, NXE, BG, AR, ITT \u00b7 SELL METC, SLQT, CPB, COIN, SPIR, RZLV, CLPT, BGS \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 # Stock book \u2014 2026-09-09\n_Generated 2026-09-09T13:18:18.041623-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T13:18:22.137615-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-09_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 13574,
+          "preview": "# News Judge \u2014 2026-09-09"
+        },
+        {
+          "path": "01_daily/news/2026-09-09_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1530,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-09-09 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
     }
   ],
   "href": {

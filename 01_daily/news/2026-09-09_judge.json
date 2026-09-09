@@ -1,19 +1,22 @@
 {
  "risk_tilt": "off",
  "macros": [
-  "bearish",
-  "bearish"
+  "hawkish",
+  "hawkish"
  ],
  "sector_tilts": {
   "Energy": "bullish",
   "Healthcare": "bullish",
-  "Technology": "mixed",
-  "Basic Materials": "mixed"
+  "Technology": "bullish",
+  "Basic Materials": "mixed",
+  "Utilities": "bearish"
  },
  "tickers": {
   "XLE": 2.5,
-  "XLU": -1.5
+  "XLK": 5.5,
+  "XLU": -7.0,
+  "B": 1.5
  },
- "b1_inject": "NEWS_JUDGE: n=8 rescued=5\nMACRO risk: [bearish] Middle East oil rally + hawkish Fed comments form a stagflationary shock, pressuring equities broadly. (session/1d-1w)\nSECTOR Energy: [bullish] Oil rally on geopolitical tensions is a direct tailwind for XLE. (object: XLE)\nSECTOR Healthcare: [bullish] ABBV Phase 3 success and M&A could drive sector sympathy, offering a defensive bid in a risk-off tape. (object: XLV)\nSECTOR Technology: [mixed] AI demand narrative (NVDA/DELL) is strong, but rising yields from hawkish Fed are a major headwind for high-multiple names. (object: XLK)\nSECTOR Basic Materials: [mixed] APD beat is positive, but a hawkish Fed and strong dollar are headwinds for commodity prices. (object: XLB)\nINTERACTION: Hawkish Fed + Oil Rally = stagflation shock; do not buy rate-sensitive or consumer-discretionary on dips without confirmation of cooling inflation.\nWATCH: The market may look past the hawkish Fed if the oil rally fades or if AI earnings momentum proves resilient.",
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=3\nMACRO risk-off: [bearish] Oil rally on Middle East tensions ahead of key inflation data pressures equities (session/1d-1w)\nMACRO rates: [hawkish] Fed Chair Warsh comments boost September rate hike expectations, pressuring gold and rate-sensitive sectors (session/1d-1w)\nSECTOR Energy: [bullish] Oil rally on geopolitical supply risk is a direct tailwind for XLE (object: XLE)\nSECTOR Healthcare: [bullish] AbbVie positive Phase 3 data and M&A is a sector-level catalyst, lifting XLV and IBB (object: XLV, IBB)\nSECTOR Technology: [bullish] Nvidia AI deal and Dell backlog confirm AI demand, supporting XLK and SMH (object: XLK, SMH)\nSECTOR Basic Materials: [mixed] Gold price conflict (surge vs. slide) creates high volatility; Barrick's move is a positive for GDX but a hawkish Fed is a headwind (object: XLB, GDX)\nSECTOR Utilities: [bearish] Duke Energy rate cut filing is a negative regulatory signal for XLU (object: XLU)\nINTERACTION: Fed path + gold price conflict is a single high-volatility rates cluster; do not double-count.\nWATCH: Ranking is contested by conflicting Fed signals; treat gold and rate-sensitive sectors as high-volatility, not directional.",
  "date": "2026-09-09"
 }
