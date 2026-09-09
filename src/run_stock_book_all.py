@@ -59,16 +59,8 @@ def _exists(*parts: str) -> bool:
 
 
 def _weather_has_sectors(date: str) -> bool:
-    p = _p("01_daily", "weather", f"{date}_weather.json")
-    if not p.exists():
-        return False
-    try:
-        import json
-        d = json.loads(p.read_text(encoding="utf-8"))
-        secs = (d.get("signals") or {}).get("sectors") or {}
-        return len(secs) >= 5
-    except Exception:
-        return False
+    from . import skip_if_good
+    return skip_if_good.check_label_weather(date)
 
 
 def _events_n(date: str) -> int:

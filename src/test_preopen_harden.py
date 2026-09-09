@@ -137,6 +137,15 @@ def test_holiday_overlay_uses_last_session() -> None:
     assert "copied" in text and "last session" in text
 
 
+def test_weather_step_rejects_pre_0535_stamp() -> None:
+    pre = (ROOT / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
+    book = (ROOT / "src" / "run_stock_book_all.py").read_text(encoding="utf-8")
+    assert "skip_if_good.check_label_weather" in pre
+    assert "skip_if_good.check_label_weather" in book
+    assert "weather_stamped_before_open" in (
+        ROOT / "src" / "skip_if_good.py").read_text(encoding="utf-8")
+
+
 def test_deepseek_preflight_is_wired() -> None:
     pre = (ROOT / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
     assert "_deepseek_credits_ok" in pre
@@ -185,6 +194,7 @@ def main() -> None:
         test_map_heat_passthrough_flag_skips_llm,
         test_incremental_land_hooks,
         test_holiday_overlay_uses_last_session,
+        test_weather_step_rejects_pre_0535_stamp,
         test_deepseek_preflight_is_wired,
     ]
     failed = 0
