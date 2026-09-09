@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T09:04:44.317840-04:00",
+  "generated_at": "2026-09-09T09:04:58.978351-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -104,7 +104,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 3,
+      "n_req_ok": 16,
       "n_req": 20,
       "n_opt_ok": 2,
       "n_opt": 2,
@@ -213,99 +213,99 @@
           "name": "Pre-open QC JSON",
           "path": "01_daily/2026-09-09_preopen_qc.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "all_ok=False",
+          "size": 6622
         },
         {
           "key": "status",
           "name": "Pre-open status JSON",
           "path": "01_daily/2026-09-09_preopen_status.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "all_ok=False missing=['news_parse', 'news_judge', 'general_predict']",
+          "size": 6960
         },
         {
           "key": "review",
           "name": "Grok review JSON",
           "path": "01_daily/2026-09-09_grok_review.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "ok=False The day fails because three required core artifacts are missing: the general market predict, the news judge, and the new",
+          "size": 1080
         },
         {
           "key": "sector_basic_materials",
           "name": "Sector predict \u2014 basic_materials",
           "path": "01_daily/sectors/2026-09-09/basic_materials_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 8240
         },
         {
           "key": "sector_communication_services",
           "name": "Sector predict \u2014 communication_services",
           "path": "01_daily/sectors/2026-09-09/communication_services_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 10021
         },
         {
           "key": "sector_consumer_cyclical",
           "name": "Sector predict \u2014 consumer_cyclical",
           "path": "01_daily/sectors/2026-09-09/consumer_cyclical_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 11302
         },
         {
           "key": "sector_consumer_defensive",
           "name": "Sector predict \u2014 consumer_defensive",
           "path": "01_daily/sectors/2026-09-09/consumer_defensive_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 16439
         },
         {
           "key": "sector_energy",
           "name": "Sector predict \u2014 energy",
           "path": "01_daily/sectors/2026-09-09/energy_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 8548
         },
         {
           "key": "sector_financial",
           "name": "Sector predict \u2014 financial",
           "path": "01_daily/sectors/2026-09-09/financial_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 13353
         },
         {
           "key": "sector_healthcare",
           "name": "Sector predict \u2014 healthcare",
           "path": "01_daily/sectors/2026-09-09/healthcare_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 12369
         },
         {
           "key": "sector_industrials",
           "name": "Sector predict \u2014 industrials",
           "path": "01_daily/sectors/2026-09-09/industrials_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 9397
         },
         {
           "key": "sector_real_estate",
@@ -321,18 +321,18 @@
           "name": "Sector predict \u2014 technology",
           "path": "01_daily/sectors/2026-09-09/technology_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 11096
         },
         {
           "key": "sector_utilities",
           "name": "Sector predict \u2014 utilities",
           "path": "01_daily/sectors/2026-09-09/utilities_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 11816
         }
       ],
       "said": "sectors 0 up / 0 down / 0 flat",
@@ -566,7 +566,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 76456
+          "size": 78710
         },
         {
           "key": "green",
@@ -707,11 +707,11 @@
       }
     ],
     "flatten": {
-      "said": "0 priced buys \u00b7 0 lots \u00b7 cash $108,616.66 \u00b7 morning S missing",
+      "said": "0 priced buys \u00b7 0 lots \u00b7 cash $107,448.18 \u00b7 morning S missing",
       "bullets": [
         "0 priced buys",
         "0 lots",
-        "cash $108,616.66",
+        "cash $107,448.18",
         "morning S missing"
       ]
     },
@@ -1352,6 +1352,24 @@
         }
       ],
       "preview": "11614 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11606 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T09:04:58.150367-04:00",
+      "files": [
+        {
+          "path": "data/universe/2026-09-09_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1113396,
+          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
     }
   ],
   "href": {
