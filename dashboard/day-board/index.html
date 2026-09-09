@@ -67,8 +67,8 @@
 <div id="procs"></div>
 <p class="note">OK = every required output exists and passes QC.
 PARTIAL = some required files are good. FAIL = missing / empty / timeout stub.
-Each process box shows <b>what the file said</b> (score, sector calls, news) when extractable.
-Bytes remain a stub detector only.</p>
+Lands are write → QC → push of that file only. A later commit race cannot
+erase a land that already reached <code>main</code>.</p>
 </div>
 <script>
 const RAW = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board";
@@ -89,9 +89,7 @@ function tickers(rows, cls){
   }).join("");
 }
 function render(board){
-  const gen = ((board.selections||{}).general)||{};
-  $("stamp").textContent = (board.generated_at||"") + "  ·  overall " + (board.overall||"?")
-    + (gen.said ? "  ·  general " + gen.said : "");
+  $("stamp").textContent = (board.generated_at||"") + " · overall " + (board.overall||"?");
   const c = board.counts||{};
   $("cards").innerHTML = [
     ["Overall", board.overall||"—", mark[board.overall]||"mut"],
@@ -106,19 +104,9 @@ function render(board){
   $("sels").innerHTML = (buys || sells)
     ? (buys + sells)
     : `<span class="mut">No 1d BUY/SELL on disk for ${board.date}.</span>`;
-  const fl = sel.flatten || {};
-  const flText = (typeof fl === "string") ? fl : [fl.said].concat(fl.bullets||[]).filter(Boolean).join("\n");
-  const packet = [];
-  if(sel.general && sel.general.said) packet.push("General: " + sel.general.said);
-  if(sel.sectors && sel.sectors.said) packet.push("Sectors: " + sel.sectors.said);
-  if(sel.news && sel.news.said) packet.push("News: " + sel.news.said);
-  if(sel.weather && sel.weather.said) packet.push("Weather: " + sel.weather.said);
-  if(sel.general && sel.general.bullets) packet.push(...sel.general.bullets.slice(0,5));
-  if(sel.sectors && sel.sectors.bullets) packet.push(...sel.sectors.bullets.slice(0,8));
-  const body = [flText, packet.join("\n")].filter(Boolean).join("\n\n");
-  if(body){
+  if(sel.flatten){
     $("flatten").hidden = false;
-    $("flatten").textContent = body;
+    $("flatten").textContent = sel.flatten;
   } else {
     $("flatten").hidden = true;
   }
@@ -126,10 +114,10 @@ function render(board){
   $("lands").innerHTML = lands.length ? lands.map(L => {
     const files = (L.files||[]).map(f =>
       `${f.ok?"✅":"❌"} ${f.path}${f.reason?" — "+f.reason:""}`).join("\n");
-    const preview = L.preview || files || "(no preview)";
+    const body = L.preview || files || "(no preview)";
     return `<div class="land"><div class="when">${L.at||""} · ${L.key||""} · pushed=${L.pushed?"yes":"no"}</div>
       <div><b>${L.title||L.key||""}</b></div>
-      <pre class="preview">${esc(preview)}</pre></div>`;
+      <pre class="preview">${esc(body)}</pre></div>`;
   }).join("") : `<p class="mut">Nothing landed incrementally yet for this date.</p>`;
   $("procs").innerHTML = (board.processes||[]).map(p => {
     const rows = (p.files||[]).map(f => `<tr>
@@ -138,16 +126,14 @@ function render(board){
       <td>${fileMark[f.status]||f.status} ${f.status}</td>
       <td>${esc(f.reason||"")}${f.size? " · "+f.size+"B":""}</td>
     </tr>`).join("");
-    const said = p.said ? `<div class="preview">${esc(p.said)}\n${esc((p.bullets||[]).join("\n"))}</div>` : "";
     return `<div class="proc"><h3><span>${esc(p.name)}</span>
       <span class="${mark[p.status]||"mut"}">${p.status} · req ${p.n_req_ok}/${p.n_req}</span></h3>
-      ${said}
       <table><thead><tr><th>File</th><th>Need</th><th>Status</th><th>Detail</th></tr></thead>
       <tbody>${rows}</tbody></table></div>`;
   }).join("");
 }
 function esc(s){
-  return String(s||"").replace(/[&<>]/g, ch => ({'&':'&','<':'<','>':'>'}[ch]));
+  return String(s||"").replace(/[&<>]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[ch]));
 }
 async function loadDate(date){
   const board = await fetchJson(`${RAW}/${date}.json`);
