@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T08:46:19.029521-04:00",
+  "generated_at": "2026-09-09T08:46:29.995117-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -84,31 +84,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "map_heat_research",
-      "title": "Map heat morning delta refresh",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T07:40:36.900437-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-09_research.json",
-          "ok": true,
-          "reason": "",
-          "size": 36697,
-          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-09_research.md",
-          "ok": true,
-          "reason": "",
-          "size": 36697,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-09\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-09\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
-    },
     {
       "key": "sector_predict",
       "title": "Per-sector predict (all 11)",
@@ -276,6 +251,45 @@
         }
       ],
       "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HRMY, CDNA, ONC, WAY, NU"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T08:46:29.171158-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-09_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1459101,
+          "preview": "1d BUY NVT, DINO, UGP \u00b7 SELL BGS, XHG, SMPL, METC, BRBR, BRO, GIS, CPB"
+        },
+        {
+          "path": "data/stock_book/2026-09-09_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-09_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2545,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "01_daily/2026-09-09_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 78137,
+          "preview": "# Stock book \u2014 2026-09-09\n_Generated 2026-09-09T08:46:26.604436-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY NVT, DINO, UGP \u00b7 SELL BGS, XHG, SMPL, METC, BRBR, BRO, GIS, CPB \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 # Stock book \u2014 2026-09-09\n_Generated 2026-09-09T08:46:26.604436-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
