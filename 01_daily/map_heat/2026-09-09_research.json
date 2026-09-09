@@ -3,7 +3,7 @@
   "phase": "morning_refresh",
   "passthrough": true,
   "source_baseline_generated_at": "2026-09-08T19:11:26.281885-04:00",
-  "generated_at": "2026-09-09T05:50:11.809515-04:00",
+  "generated_at": "2026-09-09T10:14:43.519515-04:00",
   "n_targets": 142,
   "n_cards": 142,
   "n_refreshed": 0,
@@ -8337,158 +8337,158 @@
     {
       "ticker": "ES",
       "label": "S&P 500",
-      "last": 7681.5,
-      "change": 0.02
+      "last": 7656.5,
+      "change": -0.32
     },
     {
       "ticker": "NQ",
       "label": "Nasdaq 100",
-      "last": 29559.75,
-      "change": 0.09
+      "last": 29417.75,
+      "change": -0.43
     },
     {
       "ticker": "ER2",
       "label": "Russell 2000",
-      "last": 2960.5,
-      "change": -0.1
+      "last": 2949.3,
+      "change": -0.49
     },
     {
       "ticker": "YM",
       "label": "DJIA",
-      "last": 52752.0,
-      "change": -0.15
+      "last": 52565.0,
+      "change": -0.5
     },
     {
       "ticker": "VX",
       "label": "VIX",
-      "last": 16.6,
-      "change": -0.17
+      "last": 16.85,
+      "change": 1.33
     },
     {
       "ticker": "CL",
       "label": "Crude Oil WTI",
-      "last": 94.96,
-      "change": 2.03
+      "last": 95.81,
+      "change": 2.96
     },
     {
       "ticker": "QA",
       "label": "Crude Oil Brent",
-      "last": 100.37,
-      "change": 2.48
+      "last": 100.77,
+      "change": 2.83
     },
     {
       "ticker": "NG",
       "label": "Natural Gas",
-      "last": 2.886,
-      "change": -1.03
+      "last": 2.848,
+      "change": -2.33
     },
     {
       "ticker": "HO",
       "label": "Heating Oil",
-      "last": 4.7096,
-      "change": 3.06
+      "last": 4.6987,
+      "change": 2.87
     },
     {
       "ticker": "RB",
       "label": "Gasoline RBOB",
-      "last": 3.2756,
-      "change": 0.66
+      "last": 3.2183,
+      "change": -1.23
     },
     {
       "ticker": "GC",
       "label": "Gold",
-      "last": 4444.4,
-      "change": 0.15
+      "last": 4462.2,
+      "change": 0.49
     },
     {
       "ticker": "SI",
       "label": "Silver",
-      "last": 67.25,
-      "change": 0.4
+      "last": 67.835,
+      "change": 1.13
     },
     {
       "ticker": "HG",
       "label": "Copper",
-      "last": 6.764,
-      "change": -0.82
+      "last": 6.824,
+      "change": 0.01
     },
     {
       "ticker": "PL",
       "label": "Platinum",
-      "last": 1858.7,
-      "change": 0.36
+      "last": 1909.2,
+      "change": 3.02
     },
     {
       "ticker": "PA",
       "label": "Palladium",
-      "last": 1369.5,
-      "change": 0.03
+      "last": 1374.5,
+      "change": 0.39
     },
     {
       "ticker": "DX",
       "label": "USD",
-      "last": 98.515,
-      "change": -0.02
+      "last": 98.395,
+      "change": -0.14
     },
     {
       "ticker": "6E",
       "label": "EUR",
-      "last": 1.1635,
-      "change": 0.03
+      "last": 1.1648,
+      "change": 0.15
     },
     {
       "ticker": "6J",
       "label": "JPY",
-      "last": 0.6511,
-      "change": 0.0
+      "last": 0.6525000000000001,
+      "change": 0.22
     },
     {
       "ticker": "6B",
       "label": "GBP",
-      "last": 1.3542,
-      "change": -0.03
+      "last": 1.355,
+      "change": 0.03
     },
     {
       "ticker": "6A",
       "label": "AUD",
-      "last": 0.7223,
-      "change": 0.02
+      "last": 0.7226,
+      "change": 0.05
     },
     {
       "ticker": "6C",
       "label": "CAD",
-      "last": 0.726,
-      "change": 0.01
+      "last": 0.7258,
+      "change": -0.01
     },
     {
       "ticker": "6S",
       "label": "CHF",
-      "last": 1.23585,
-      "change": -0.08
+      "last": 1.23895,
+      "change": 0.18
     },
     {
       "ticker": "6N",
       "label": "NZD",
-      "last": 0.58445,
-      "change": -0.25
+      "last": 0.5854,
+      "change": -0.09
     },
     {
       "ticker": "ZN",
       "label": "10 Year Note",
-      "last": 107.28125,
-      "change": -0.03
+      "last": 107.265625,
+      "change": -0.04
     },
     {
       "ticker": "ZF",
       "label": "5 Year Note",
-      "last": 105.390625,
-      "change": -0.04
+      "last": 105.3828125,
+      "change": -0.06
     },
     {
       "ticker": "ZT",
       "label": "2 Year Note",
-      "last": 102.50390625,
-      "change": -0.02
+      "last": 102.49609375,
+      "change": -0.03
     },
     {
       "ticker": "ZB",
@@ -8499,56 +8499,56 @@
     {
       "ticker": "NKD",
       "label": "Nikkei 225",
-      "last": 65140.0,
-      "change": 0.05
+      "last": 64530.0,
+      "change": -0.88
     },
     {
       "ticker": "DY",
       "label": "DAX",
-      "last": 25806.0,
-      "change": -0.78
+      "last": 25648.0,
+      "change": -1.37
     },
     {
       "ticker": "EX",
       "label": "Euro Stoxx 50",
-      "last": 6353.0,
-      "change": -0.94
+      "last": 6316.0,
+      "change": -1.51
     },
     {
       "ticker": "ZC",
       "label": "Corn",
-      "last": 533.25,
-      "change": -0.09
+      "last": 529.75,
+      "change": -0.7
     },
     {
       "ticker": "ZS",
       "label": "Soybeans",
-      "last": 1318.0,
-      "change": 0.15
+      "last": 1313.5,
+      "change": -0.21
     },
     {
       "ticker": "ZW",
       "label": "Wheat",
-      "last": 751.75,
-      "change": 0.64
+      "last": 746.5,
+      "change": -0.07
     },
     {
       "ticker": "ZL",
       "label": "Soybean oil",
-      "last": 70.36,
-      "change": 0.17
+      "last": 70.06,
+      "change": -0.23
     },
     {
       "ticker": "ZM",
       "label": "Soybean Meal",
-      "last": 344.5,
-      "change": 0.38
+      "last": 343.8,
+      "change": 0.15
     },
     {
       "ticker": "ZO",
       "label": "Oats",
-      "last": 377.5,
-      "change": 0.67
+      "last": 374.75,
+      "change": -0.07
     },
     {
       "ticker": "ZR",
@@ -8559,32 +8559,32 @@
     {
       "ticker": "KC",
       "label": "Coffee",
-      "last": 288.8,
-      "change": -0.84
+      "last": 297.5,
+      "change": 2.06
     },
     {
       "ticker": "SB",
       "label": "Sugar",
-      "last": 18.35,
-      "change": 1.22
+      "last": 18.37,
+      "change": 1.49
     },
     {
       "ticker": "CT",
       "label": "Cotton",
-      "last": 87.12,
-      "change": 0.9
+      "last": 87.46,
+      "change": 1.38
     },
     {
       "ticker": "CC",
       "label": "Cocoa",
-      "last": 5902.0,
-      "change": -0.41
+      "last": 5947.0,
+      "change": 0.47
     },
     {
       "ticker": "JO",
       "label": "Orange Juice",
-      "last": 148.5,
-      "change": -3.55
+      "last": 149.5,
+      "change": -0.6
     },
     {
       "ticker": "LB",
@@ -8613,20 +8613,20 @@
     {
       "ticker": "BTC",
       "label": "Bitcoin",
-      "last": 79850.0,
-      "change": 1.61
+      "last": 79760.0,
+      "change": 1.48
     },
     {
       "ticker": "SR3",
       "label": "3 Month SOFR",
-      "last": 96.135,
-      "change": 0.0
+      "last": 96.1325,
+      "change": -0.0
     },
     {
       "ticker": "ZQ",
       "label": "30 Day Fed Funds",
       "last": 96.3,
-      "change": 0.0
+      "change": -0.0
     },
     {
       "ticker": "ALI",
@@ -8637,8 +8637,8 @@
     {
       "ticker": "RS",
       "label": "Canola",
-      "last": 840.1,
-      "change": 0.07
+      "last": 836.4,
+      "change": -0.31
     },
     {
       "ticker": "NCF",
@@ -8655,8 +8655,8 @@
     {
       "ticker": "G",
       "label": "Gasoil",
-      "last": 1385.25,
-      "change": 2.44
+      "last": 1381.5,
+      "change": 2.16
     },
     {
       "ticker": "TIO",
@@ -8673,13 +8673,13 @@
     {
       "ticker": "TN",
       "label": "Ultra 10 Year Note",
-      "last": 109.046875,
-      "change": 0.01
+      "last": 109.015625,
+      "change": -0.03
     },
     {
       "ticker": "UB",
       "label": "Ultra Bond",
-      "last": 110.03125,
+      "last": 110.0625,
       "change": 0.17
     },
     {
@@ -8693,13 +8693,24 @@
     {
       "event": "MBA 30-Year Mortgage Rate",
       "datetime": "2026-09-09T07:00:00",
-      "actual": null,
+      "actual": "6.85%",
       "previous": "6.79%",
       "forecast": null,
       "surprise": null,
       "importance": 2,
       "category": "Mortgage Rate",
       "ticker": "UNITEDSTAMORRAT"
+    },
+    {
+      "event": "ADP Employment Change Weekly",
+      "datetime": "2026-09-09T08:15:00",
+      "actual": "12K",
+      "previous": "11.75K",
+      "forecast": null,
+      "surprise": null,
+      "importance": 2,
+      "category": "ADP Employment Change Weekly",
+      "ticker": "USAAECW"
     },
     {
       "event": "API Crude Oil Stock Change",
@@ -8750,7 +8761,7 @@
       "datetime": "2026-09-10T10:00:00",
       "actual": null,
       "previous": "4.06M",
-      "forecast": "3.99M",
+      "forecast": "3.98M",
       "surprise": null,
       "importance": 3,
       "category": "Existing Home Sales",
@@ -8914,7 +8925,7 @@
       "event": "MBA 30-Year Mortgage Rate",
       "datetime": "2026-09-16T07:00:00",
       "actual": null,
-      "previous": null,
+      "previous": "6.85%",
       "forecast": null,
       "surprise": null,
       "importance": 2,
@@ -8926,7 +8937,7 @@
       "datetime": "2026-09-16T08:30:00",
       "actual": null,
       "previous": "-0.6%",
-      "forecast": null,
+      "forecast": "0.3%",
       "surprise": null,
       "importance": 3,
       "category": "Retail Sales MoM",
@@ -8937,7 +8948,7 @@
       "datetime": "2026-09-16T08:30:00",
       "actual": null,
       "previous": "-1.3%",
-      "forecast": null,
+      "forecast": "-0.5%",
       "surprise": null,
       "importance": 2,
       "category": "Export Prices MoM",
@@ -8948,7 +8959,7 @@
       "datetime": "2026-09-16T08:30:00",
       "actual": null,
       "previous": "-0.4%",
-      "forecast": null,
+      "forecast": "-0.1%",
       "surprise": null,
       "importance": 2,
       "category": "Import Prices MoM",
@@ -8958,8 +8969,8 @@
       "event": "Retail Sales Control Group MoM",
       "datetime": "2026-09-16T08:30:00",
       "actual": null,
-      "previous": null,
-      "forecast": null,
+      "previous": "-0.4%",
+      "forecast": "-0.1%",
       "surprise": null,
       "importance": 2,
       "category": "Retail Sales Control Group",
@@ -8970,7 +8981,7 @@
       "datetime": "2026-09-16T08:30:00",
       "actual": null,
       "previous": "-0.3%",
-      "forecast": null,
+      "forecast": "0.1%",
       "surprise": null,
       "importance": 2,
       "category": "Retail Sales Ex Autos",
@@ -9069,7 +9080,7 @@
       "datetime": "2026-09-17T08:30:00",
       "actual": null,
       "previous": "1.433M",
-      "forecast": null,
+      "forecast": "1.41M",
       "surprise": null,
       "importance": 3,
       "category": "Building Permits",
@@ -9080,7 +9091,7 @@
       "datetime": "2026-09-17T08:30:00",
       "actual": null,
       "previous": "1.239M",
-      "forecast": null,
+      "forecast": "1.35M",
       "surprise": null,
       "importance": 3,
       "category": "Housing Starts",
@@ -9091,7 +9102,7 @@
       "datetime": "2026-09-17T08:30:00",
       "actual": null,
       "previous": "4.3%",
-      "forecast": null,
+      "forecast": "-1.6%",
       "surprise": null,
       "importance": 2,
       "category": "Building Permits MoM",
@@ -9102,7 +9113,7 @@
       "datetime": "2026-09-17T08:30:00",
       "actual": null,
       "previous": "-12.4%",
-      "forecast": null,
+      "forecast": "9.0%",
       "surprise": null,
       "importance": 2,
       "category": "Housing Starts MoM",
@@ -9118,17 +9129,6 @@
       "importance": 2,
       "category": "Initial Jobless Claims",
       "ticker": "IJCUSA"
-    },
-    {
-      "event": "Philadelphia Fed Manufacturing Index",
-      "datetime": "2026-09-17T08:30:00",
-      "actual": null,
-      "previous": "47.4",
-      "forecast": "47",
-      "surprise": null,
-      "importance": 2,
-      "category": "Philadelphia Fed Manufacturing Index",
-      "ticker": "UNITEDSTAPHIFEDMANIN"
     }
   ],
   "earnings": [
@@ -9137,7 +9137,7 @@
       "company": "Oracle Corp",
       "datetime": "2026-09-10T16:30:00",
       "session": "AMC",
-      "mcap": 472714.0882511318,
+      "mcap": 470092.8491441953,
       "eps_est": 1.7395
     },
     {
@@ -9145,7 +9145,7 @@
       "company": "Costco Wholesale Corp",
       "datetime": "2026-09-24T16:30:00",
       "session": "AMC",
-      "mcap": 403450.418236072,
+      "mcap": 403870.40220737265,
       "eps_est": 6.548
     },
     {
@@ -9153,7 +9153,7 @@
       "company": "Adobe Inc",
       "datetime": "2026-09-10T16:30:00",
       "session": "AMC",
-      "mcap": 102757.72498113857,
+      "mcap": 102968.39948791184,
       "eps_est": 6.0753
     },
     {
@@ -9161,7 +9161,7 @@
       "company": "Autozone Inc",
       "datetime": "2026-09-22T08:30:00",
       "session": "BMO",
-      "mcap": 47934.71099883496,
+      "mcap": 48323.04796671904,
       "eps_est": 54.5786
     },
     {
@@ -9169,7 +9169,7 @@
       "company": "Kroger Co",
       "datetime": "2026-09-11T08:30:00",
       "session": "BMO",
-      "mcap": 35049.555445386235,
+      "mcap": 35165.95994130301,
       "eps_est": 1.0548
     },
     {
@@ -9177,7 +9177,7 @@
       "company": "Copart Inc",
       "datetime": "2026-09-10T16:30:00",
       "session": "AMC",
-      "mcap": 30088.870273373388,
+      "mcap": 30311.06656164352,
       "eps_est": 0.3832
     },
     {
@@ -9185,7 +9185,7 @@
       "company": "Sunbelt Rentals Holdings Inc",
       "datetime": "2026-09-09T08:30:00",
       "session": "BMO",
-      "mcap": 28007.622364034825,
+      "mcap": 29585.920136970308,
       "eps_est": 1.0363
     },
     {
@@ -9193,7 +9193,7 @@
       "company": "Trip.com Group Ltd ADR",
       "datetime": "2026-09-15T16:30:00",
       "session": "AMC",
-      "mcap": 26288.503392944338,
+      "mcap": 26275.51149559021,
       "eps_est": 0.8855
     },
     {
@@ -9209,7 +9209,7 @@
       "company": "TD Synnex Corp",
       "datetime": "2026-09-24T08:30:00",
       "session": "BMO",
-      "mcap": 20677.33,
+      "mcap": 20987.570291840562,
       "eps_est": 4.6419
     },
     {
@@ -9217,7 +9217,7 @@
       "company": "General Mills Inc",
       "datetime": "2026-09-23T08:30:00",
       "session": "BMO",
-      "mcap": 20150.19,
+      "mcap": 20235.730659134973,
       "eps_est": 0.7167
     },
     {
@@ -9225,7 +9225,7 @@
       "company": "Lennar Corp",
       "datetime": "2026-09-16T16:30:00",
       "session": "AMC",
-      "mcap": 19405.03317846717,
+      "mcap": 19335.325793931173,
       "eps_est": 1.291
     },
     {
@@ -9233,7 +9233,7 @@
       "company": "Cooper Companies Inc",
       "datetime": "2026-09-09T16:30:00",
       "session": "AMC",
-      "mcap": 13593.630381508034,
+      "mcap": 13301.084521177458,
       "eps_est": 1.1237
     },
     {
@@ -9241,7 +9241,7 @@
       "company": "Abivax ADR",
       "datetime": "2026-09-21T16:30:00",
       "session": "AMC",
-      "mcap": 10265.835319519043,
+      "mcap": 10312.94973373413,
       "eps_est": -0.9585
     }
   ]

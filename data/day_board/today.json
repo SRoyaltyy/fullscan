@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T10:05:41.492675-04:00",
+  "generated_at": "2026-09-09T10:14:44.558000-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -88,31 +88,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "map_heat_baseline",
-      "title": "Map heat night baseline",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T09:36:55.301115-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-09_research_baseline.json",
-          "ok": true,
-          "reason": "",
-          "size": 22,
-          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-09_research_baseline.md",
-          "ok": true,
-          "reason": "",
-          "size": 36519,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-09\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-09\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-    },
     {
       "key": "universe",
       "title": "Universe labels",
@@ -273,6 +248,31 @@
         }
       ],
       "preview": "# News Judge \u2014 2026-09-09 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "map_heat_research",
+      "title": "Map heat passthrough after timeout",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T10:14:43.687788-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-09_research.json",
+          "ok": true,
+          "reason": "",
+          "size": 36697,
+          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-09_research.md",
+          "ok": true,
+          "reason": "",
+          "size": 36697,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-09\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-09\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
