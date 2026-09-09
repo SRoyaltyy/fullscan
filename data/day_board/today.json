@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T09:40:09.921524-04:00",
+  "generated_at": "2026-09-09T09:40:15.104055-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -88,45 +88,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T09:08:34.442812-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-09_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1466097,
-          "preview": "1d BUY MSTR, UGP, TER, VLO \u00b7 SELL METC, XHG, SMPL, ZBH, BKNG, NG, CPB, NN"
-        },
-        {
-          "path": "data/stock_book/2026-09-09_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-09-09_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2545,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "01_daily/2026-09-09_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 78732,
-          "preview": "# Stock book \u2014 2026-09-09\n_Generated 2026-09-09T09:08:32.029326-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY MSTR, UGP, TER, VLO \u00b7 SELL METC, XHG, SMPL, ZBH, BKNG, NG, CPB, NN \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 # Stock book \u2014 2026-09-09\n_Generated 2026-09-09T09:08:32.029326-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "flatten",
       "title": "Flatten live card",
@@ -287,6 +248,31 @@
         }
       ],
       "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HRMY, HALO, CDNA, GMAB, ONC"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T09:40:14.259712-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-09_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7658911,
+          "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AVO, RPRX, SKM, CFFN, HSBC"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-09_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8492786,
+          "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, SHEL, AMD, WDS, TECK"
+        }
+      ],
+      "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AVO, RPRX, SKM, CFFN, HSBC \u00b7 2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, SHEL, AMD, WDS, TECK"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
