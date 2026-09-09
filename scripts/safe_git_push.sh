@@ -73,6 +73,28 @@ if [ "$#" -lt 1 ]; then
   exit 0
 fi
 
+# 2026-09-09 poke: a prior land's failed stash-pop left
+# UU 01_daily/_channel1/<date>_predict.json. The next land staged join/
+# book cleanly, then `git commit` died ("unmerged files") and the book
+# commit step failed the job. Clear leftover UU before this commit.
+clear_leftover_unmerged() {
+  local unmerged
+  unmerged=$(git diff --name-only --diff-filter=U 2>/dev/null || true)
+  if [ -z "$unmerged" ]; then
+    return 0
+  fi
+  echo "[safe-push] leftover unmerged from prior land — taking HEAD"
+  while IFS= read -r f; do
+    [ -z "$f" ] && continue
+    git checkout HEAD -- "$f" 2>/dev/null \
+      || git checkout --ours -- "$f" 2>/dev/null \
+      || git rm -f -- "$f" 2>/dev/null || true
+    git add -- "$f" 2>/dev/null || true
+  done <<< "$unmerged"
+  git add -u 2>/dev/null || true
+}
+clear_leftover_unmerged
+
 # Add each path on its own. `git add a b missing` fails the whole
 # add when one pathspec is absent, so a listed note file can drop
 # dashboard/ + essays even when they were written on the runner.
@@ -134,7 +156,7 @@ resolve_day_board() {
 RANKER_PATHS=(
   data/stock_book data/join data/universe data/ab_checklist
   data/peers data/paper data/exports data/catalyst
-  01_daily/weather
+  01_daily/weather 01_daily/_channel1
 )
 
 # Sleeve-merge / Pages HTML is written by a different job. A conflict
@@ -217,8 +239,13 @@ restore_unstaged() {
   # to the work tree without adding them to this commit.
   # If pop conflicts, KEEP the stash — a later leftover sweep can
   # `stash pop` again. Dropping is how the 11MB CSV vanished.
-  git stash pop >/dev/null 2>&1 || \
-    echo "[safe-push] stash pop failed — keeping stash (do not drop export/membership)"
+  if git stash pop >/dev/null 2>&1; then
+    return 0
+  fi
+  echo "[safe-push] stash pop failed — keeping stash (do not drop export/membership)"
+  # Stash pop on a dirty index leaves UU (channel1 / day_board). The
+  # next land must not inherit that or `git commit` dies.
+  clear_leftover_unmerged
 }
 
 try_rebase() {

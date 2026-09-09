@@ -791,6 +791,9 @@ def test_safe_git_push_keeps_dated_ranker_on_conflict() -> None:
     assert "finviz_2026-09-09.csv" in text
     assert "git stash drop" not in text
     assert "keeping stash" in text
+    assert "leftover unmerged from prior land" in text
+    assert "01_daily/_channel1" in text
+    assert "clear_leftover_unmerged" in text
 
 
 def test_preopen_harden_halt_reverted() -> None:
