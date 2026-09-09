@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T11:14:23.795559-04:00",
+  "generated_at": "2026-09-09T11:25:37.315472-04:00",
   "inputs": [
     {
       "name": "finviz_export",
@@ -21,13 +21,13 @@
       "family": "join",
       "status": "ok",
       "n": 5902,
-      "detail": "std=0.987"
+      "detail": "std=0.949"
     },
     {
       "name": "news_actions",
       "family": "news",
-      "status": "ok",
-      "n": 69,
+      "status": "degraded",
+      "n": 4,
       "detail": ""
     },
     {
@@ -103,7 +103,7 @@
   ],
   "family_status": {
     "join": "ok",
-    "news": "ok",
+    "news": "degraded",
     "ab": "ok",
     "peer": "ok",
     "heat": "ok",
