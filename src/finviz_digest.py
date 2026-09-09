@@ -386,6 +386,35 @@ def save_report(report: dict) -> tuple[Path, Path]:
     return jp, mp
 
 
+def existing_digest_is_morning_ok(date_str: str, force: bool = False) -> bool:
+    """True when a quality-ok digest was written at/after 05:35 ET today.
+
+    A delayed Finviz ALL (21:10 ET cron firing after midnight) stamps
+    today's date at 01:xx and must not skip the 05:40 pre-open rewrite.
+    """
+    if force:
+        return False
+    jp = NEWS_DIR / f"{date_str}_finviz_digest.json"
+    existing = output_qc.qc_finviz_digest(
+        jp if jp.exists() else NEWS_DIR / f"{date_str}_finviz_digest.md")
+    if not existing.ok:
+        return False
+    payload: dict = {}
+    if jp.exists():
+        try:
+            loaded = json.loads(jp.read_text(encoding="utf-8"))
+            if isinstance(loaded, dict):
+                payload = loaded
+        except (OSError, json.JSONDecodeError):
+            payload = {}
+    from .skip_if_good import weather_stamped_before_open
+    if weather_stamped_before_open(payload, date_str):
+        print(f"[finviz_digest] {date_str}: pre-05:35 stamp "
+              f"{payload.get('generated_at')} — rewrite at morning scrape")
+        return False
+    return True
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=None)
@@ -397,7 +426,7 @@ def main() -> None:
     jp = NEWS_DIR / f"{date_str}_finviz_digest.json"
     existing = output_qc.qc_finviz_digest(
         jp if jp.exists() else NEWS_DIR / f"{date_str}_finviz_digest.md")
-    if existing.ok and not args.force:
+    if existing_digest_is_morning_ok(date_str, force=args.force):
         print(f"[finviz_digest] {date_str}: skip, quality-ok already on disk")
         return
     if preopen.past_predict_cutoff() and not args.force:

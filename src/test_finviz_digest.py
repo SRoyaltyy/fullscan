@@ -4,9 +4,15 @@ Run: python -m src.test_finviz_digest
 """
 from __future__ import annotations
 
+import json
+from pathlib import Path
 from unittest import mock
 
-from src.finviz_digest import _scrape_index_digest, _yf_index_digest
+from src.finviz_digest import (
+    _scrape_index_digest,
+    _yf_index_digest,
+    existing_digest_is_morning_ok,
+)
 
 
 class _FakeFast:
@@ -84,6 +90,30 @@ def test_parse_rejects_login_html() -> None:
     assert _parse_elite_quote_html(html, "SPY") is None
 
 
+def test_overnight_digest_does_not_skip_morning() -> None:
+    import src.finviz_digest as fd
+    date = "2026-09-09"
+    news_dir = Path("/tmp/fullscan-digest-clock-test")
+    news_dir.mkdir(parents=True, exist_ok=True)
+    jp = news_dir / f"{date}_finviz_digest.json"
+    jp.write_text(json.dumps({
+        "date": date,
+        "generated_at": "2026-09-09T01:58:24.719312-04:00",
+        "ticker_digest_count": 80,
+        "index_digests": [{"ticker": "SPY", "digest": "overnight"}],
+    }), encoding="utf-8")
+    with mock.patch.object(fd, "NEWS_DIR", news_dir):
+        assert existing_digest_is_morning_ok(date) is False
+        assert existing_digest_is_morning_ok(date, force=True) is False
+        jp.write_text(json.dumps({
+            "date": date,
+            "generated_at": "2026-09-09T05:41:00.000000-04:00",
+            "ticker_digest_count": 80,
+            "index_digests": [{"ticker": "SPY", "digest": "preopen"}],
+        }), encoding="utf-8")
+        assert existing_digest_is_morning_ok(date) is True
+
+
 def main() -> None:
     tests = [
         test_yf_index_digest,
@@ -92,6 +122,7 @@ def main() -> None:
         test_parse_elite_news_table,
         test_parse_rejects_login_html,
         test_session_is_elite_helper,
+        test_overnight_digest_does_not_skip_morning,
     ]
     failed = 0
     for fn in tests:
