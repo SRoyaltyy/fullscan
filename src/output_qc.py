@@ -147,7 +147,12 @@ def _fail(kind: str, path: str, reason: str, text: str = "",
 
 
 def _ok(kind: str, path: str, text: str) -> QCResult:
-    return QCResult(ok=True, kind=kind, path=str(path), size=len(text or ""))
+    # 2026-09-09: land printed ok=True (2B) because size=len("ok").
+    try:
+        n = int(Path(path).stat().st_size)
+    except OSError:
+        n = len(text or "")
+    return QCResult(ok=True, kind=kind, path=str(path), size=n)
 
 
 # ---------------------------------------------------------------------------
@@ -239,6 +244,10 @@ def qc_news_parse(path: str | Path) -> QCResult:
     if err:
         # 2026-09-08: DB statement_timeout used to look like empty_parse.
         return _fail("news_parse", p, err, empty=True)
+    from . import packet_gates
+    tiny = packet_gates.json_too_small(p)
+    if tiny:
+        return _fail("news_parse", p, tiny, empty=True)
     raw = int(data.get("raw_count") or 0)
     if raw <= 0 and not (data.get("usable_top") or data.get("all_items")):
         return _fail("news_parse", p, "empty_parse", empty=True)
@@ -353,6 +362,10 @@ def qc_news_actions(path: str | Path) -> QCResult:
     p = str(path)
     if not os.path.exists(p):
         return _fail("news_actions", p, "missing", empty=True)
+    from . import packet_gates
+    tiny = packet_gates.json_too_small(p)
+    if tiny:
+        return _fail("news_actions", p, tiny, empty=True)
     data = _read_json(p)
     if not isinstance(data, dict):
         return _fail("news_actions", p, "unparseable_json", empty=True)
@@ -367,6 +380,10 @@ def qc_finviz_digest(path: str | Path) -> QCResult:
         return _fail("finviz_digest", p, "missing", empty=True)
     # Prefer JSON; fall back to markdown existence+size.
     if p.endswith(".json"):
+        from . import packet_gates
+        tiny = packet_gates.json_too_small(p)
+        if tiny:
+            return _fail("finviz_digest", p, tiny, empty=True)
         data = _read_json(p)
         if not isinstance(data, dict):
             return _fail("finviz_digest", p, "unparseable_json", empty=True)

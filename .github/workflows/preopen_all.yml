@@ -14,17 +14,18 @@ name: Pre-Open ALL (predictive one-shot)
 #      ubuntu-HHMM). cancel-in-progress is true on that group so a late
 #      poke supersedes the prior ubuntu run. ECS stays on preopen-all-ecs
 #      with cancel-in-progress false (do not kill a 3h Grok call).
-#   #4 Push after 09:25 ET and before 12:00 ET passes --bypass-cutoff
-#      (essays may run; skip-if-good still honors quality-ok files).
+#   #4 Push after 09:25 ET passes --bypass-cutoff (essays may run;
+#      skip-if-good still honors quality-ok files). The 12:00 cap used
+#      to no-op a missing parse after lunch (2026-09-09).
 #      Explicit workflow_dispatch force=true is the only full rewrite.
 #      Morning / on-time runs do NOT pass --force.
 #   Cancel auth: Actions:write is on this workflow so GitHub concurrency
 #      can cancel the prior ubuntu run. Owner UI Force cancel is still
 #      required when the token is 403 or the hung job is in another group.
 #      `gh run cancel` from a cloud/integration token is often 403.
-# HARDEN 2026-09-09c: ubuntu group suffix ubuntu-h0909c so a hung
-#   run 51 (cancel 202 but runner ignores SIGTERM on LLM socket) cannot
-#   block the 09:30 heal. preopen job cap 90m; python step cap 55m.
+# HARDEN 2026-09-09d: restore stable `ubuntu` group (h0909c forks
+#   cannot cancel each other). Job 240m / python step 180m so general
+#   predict is not killed at 55m after AB + map-heat (run 55 exit 124).
 
 on:
   push:
@@ -75,7 +76,7 @@ permissions:
 concurrency:
   # Stable names only. ubuntu-HHMM forks cannot cancel each other
   # (2026-09-08: ubuntu-0945 vs ubuntu-0950 vs ubuntu-stop-1108 twins).
-  group: preopen-all-${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-h0909c' || 'ecs' }}
+  group: preopen-all-${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'ubuntu' || 'ecs' }}
   cancel-in-progress: ${{ github.event_name == 'push' || github.event.inputs.runner == 'ubuntu' }}
 
 jobs:
@@ -221,7 +222,7 @@ jobs:
     needs: [gate, scrape]
     if: ${{ needs.gate.outputs.go == 'yes' && always() }}
     runs-on: ${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('[\"self-hosted\",\"ecs\"]') }}
-    timeout-minutes: 90
+    timeout-minutes: 240
     env:
       OPENCLAW_TIMEOUT: "10800"
       FULLSCAN_PERSIST: "/home/gha/fullscan-persist"
@@ -288,7 +289,7 @@ jobs:
           fi
           # 09:25 is enforced in src.run_preopen_all (essays only).
           # Weather / join / AB / the book still run so BUY/SELL can land.
-          # Push 09:25–12:00 ET uses --bypass-cutoff (not --force).
+          # Push after 09:25 ET uses --bypass-cutoff (not --force).
 
       - uses: actions/setup-python@v5
         if: env.skip != 'yes' && env.skip_python != 'yes'
@@ -317,7 +318,7 @@ jobs:
           LLM_BACKEND: ${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'deepseek' || github.event.inputs.llm_backend || 'auto' }}
           FINVIZ_SKIP_LIVE: "1"
           PREOPEN_LLM_TIMEOUT: "900"
-        timeout-minutes: 55
+        timeout-minutes: 180
         run: |
           set -e
           export HOME="${HOME:-${FULLSCAN_HOME:-/home/gha}}"
@@ -343,9 +344,9 @@ jobs:
           if [ "$FORCE" = "true" ]; then
             ARGS+=(--force)
             echo "explicit --force (rewrite quality-ok + bypass 09:25)"
-          elif [ "${{ github.event_name }}" = "push" ] && [ "$ET_HM" -ge 925 ] && [ "$ET_HM" -lt 1200 ]; then
+          elif [ "${{ github.event_name }}" = "push" ] && [ "$ET_HM" -ge 925 ]; then
             ARGS+=(--bypass-cutoff)
-            echo "push late-heal --bypass-cutoff (09:25-12:00 ET; skip-if-good on)"
+            echo "push late-heal --bypass-cutoff (after 09:25 ET; skip-if-good on)"
           fi
           echo "CMD: python -m src.run_preopen_all ${ARGS[*]}"
           python -m src.run_preopen_all "${ARGS[@]}"

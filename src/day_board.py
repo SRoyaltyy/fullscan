@@ -189,6 +189,79 @@ def _latest_dates(extra: str) -> list[str]:
     return sorted(dates, reverse=True)[:40]
 
 
+def merge_boards(theirs: dict, ours: dict) -> dict:
+    """Union incremental lands when two jobs rewrote the same day JSON."""
+    if not theirs:
+        return dict(ours) if ours else {}
+    if not ours:
+        return dict(theirs)
+
+    def ts(d: dict) -> str:
+        return str(d.get("generated_at") or "")
+
+    newer, older = (ours, theirs) if ts(ours) >= ts(theirs) else (theirs, ours)
+    out = dict(newer)
+    seen: set[tuple[str, str]] = set()
+    lands: list[dict] = []
+    for row in list(older.get("lands") or []) + list(newer.get("lands") or []):
+        if not isinstance(row, dict):
+            continue
+        k = (str(row.get("key") or ""), str(row.get("at") or ""))
+        if k in seen:
+            continue
+        seen.add(k)
+        lands.append(row)
+    lands.sort(key=lambda r: str(r.get("at") or ""))
+    out["lands"] = lands[-MAX_LANDS:]
+    ns = newer.get("selections") if isinstance(newer.get("selections"), dict) else {}
+    osel = older.get("selections") if isinstance(older.get("selections"), dict) else {}
+    if not (ns.get("buy_1d") or ns.get("sell_1d")) and (
+            osel.get("buy_1d") or osel.get("sell_1d")):
+        out["selections"] = osel
+    if newer.get("ranker_ready") or older.get("ranker_ready"):
+        out["ranker_ready"] = True
+    return out
+
+
+def merge_ours_dir(ours_dir: str) -> None:
+    """Union OUR day_board snapshots into the copies currently on disk."""
+    src = Path(ours_dir)
+    if not src.is_dir():
+        print(f"[day-board] merge-ours missing {ours_dir}")
+        return
+    BOARD_DIR.mkdir(parents=True, exist_ok=True)
+    dates: set[str] = set()
+    for folder in (BOARD_DIR, src):
+        for p in folder.glob("20*.json"):
+            if p.stem.count("-") == 2:
+                dates.add(p.stem)
+    if not dates:
+        print("[day-board] merge-ours: no dated boards")
+        return
+    newest_date = ""
+    newest_ts = ""
+    for date in sorted(dates):
+        theirs = _load_json(BOARD_DIR / f"{date}.json")
+        ours = _load_json(src / f"{date}.json")
+        merged = merge_boards(theirs, ours)
+        if not merged:
+            continue
+        merged.setdefault("date", date)
+        (BOARD_DIR / f"{date}.json").write_text(
+            json.dumps(merged, indent=2), encoding="utf-8")
+        gat = str(merged.get("generated_at") or "")
+        if gat >= newest_ts:
+            newest_ts = gat
+            newest_date = date
+    if not newest_date:
+        newest_date = sorted(dates)[-1]
+    board = _load_json(BOARD_DIR / f"{newest_date}.json")
+    if board:
+        write_json(board)
+        n = len(board.get("lands") or [])
+        print(f"[day-board] merged {ours_dir} -> {newest_date} ({n} lands)")
+
+
 def write_json(board: dict) -> list[Path]:
     BOARD_DIR.mkdir(parents=True, exist_ok=True)
     date = str(board.get("date") or _today())
@@ -257,7 +330,12 @@ def main() -> None:
     ap.add_argument("--write", action="store_true")
     ap.add_argument("--html", action="store_true",
                     help="Touch dashboard/day-board/index.html path only")
+    ap.add_argument("--merge-ours", default="",
+                    help="Directory of OUR day_board JSON to union into disk")
     args = ap.parse_args()
+    if args.merge_ours:
+        merge_ours_dir(args.merge_ours)
+        return
     date = args.date or _today()
     board = build(date)
     print(

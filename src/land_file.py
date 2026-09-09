@@ -169,18 +169,19 @@ def _qc_one(path: Path, date: str) -> output_qc.QCResult:
         return output_qc.qc_general_predict(path)
     if "events" in rel and name.endswith(".json"):
         return output_qc.qc_events_path(path)
+    if name.endswith(".json"):
+        from . import packet_gates
+        tiny = packet_gates.json_too_small(path)
+        if tiny:
+            return output_qc._fail("file", rel, tiny, empty=True)
     if name.endswith("_weather.json"):
-        secs: dict = {}
-        try:
-            secs = ((json.loads(path.read_text(encoding="utf-8")).get("signals")
-                     or {}).get("sectors") or {})
-        except (OSError, json.JSONDecodeError, TypeError):
-            secs = {}
-        if len(secs) >= 5:
-            return output_qc._ok("weather", rel, f"sectors={len(secs)}")
-        return output_qc._fail("weather", rel, "thin_or_unreadable")
+        from . import packet_gates
+        ok, reason = packet_gates.weather_ok(path)
+        if ok:
+            return output_qc._ok("weather", rel, reason)
+        return output_qc._fail("weather", rel, reason)
     size = path.stat().st_size
-    if size < 40:
+    if size < 80:
         return output_qc._fail("file", rel, f"too_small({size})", empty=True)
     return output_qc.QCResult(ok=True, kind="file", path=rel, size=size)
 
@@ -341,8 +342,9 @@ def _land_body(date: str, key: str, title: str,
         checks.append(row)
         if qc.ok or (not require_qc and p.exists()):
             ok_paths.append(p)
+        nbytes = p.stat().st_size if p.is_file() else int(qc.size or 0)
         print(f"[land] {key} {rel} ok={qc.ok} {qc.reason or ''} "
-              f"({qc.size}B)")
+              f"({nbytes}B)")
 
     if require_qc and not ok_paths:
         print(f"[land] skip push {key} — no QC-ok files")

@@ -335,6 +335,15 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "weather missing/thin — retry --offline" in pre
     assert "timeout_s=1500" in pre
     assert "timeout_s=180" in pre
+    assert "timeout_s=50" in pre
+    assert "parse_t = 120" in pre
+    assert "retry --limit 80" in pre
+    assert "rebuild after essays" in pre
+    gen = pre.find('step("general_predict"')
+    heat = pre.find('step(\n                    "map_heat_research"')
+    if heat < 0:
+        heat = pre.find('"Map heat morning delta refresh"')
+    assert 0 <= gen < heat
     assert "_exists_gt" in pre
     assert "skip_extras" in book
     extras_gate = book.find("skip extras before book")
@@ -342,7 +351,8 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert 0 <= extras_gate < news_parse
     assert "TimeoutExpired" in book
     assert "ab_t = 1500" in book
-    assert "wx_t = 180" in book
+    assert "wx_t = 50" in book
+    assert "parse_t = 120" in book
     assert "PREOPEN_LLM_TIMEOUT" in book
     assert "hung Grok must not block the book" in book
     assert "--offline" in book
@@ -423,7 +433,9 @@ def test_ranker_inputs_before_llm_packet() -> None:
     fin = (ROOT / "collectors" / "finviz_financials.py").read_text(encoding="utf-8")
     assert "America/New_York" in fin
     ch1 = (ROOT / "src" / "fetch_channel1.py").read_text(encoding="utf-8")
-    assert "setdefaulttimeout(20)" in ch1
+    assert "setdefaulttimeout(min(20, _YF_TIMEOUT))" in ch1
+    assert "_YF_TIMEOUT = 20" in ch1
+    assert "skip remaining FRED" in ch1
     book_yml = (WF / "stock_book_all.yml").read_text(encoding="utf-8")
     assert "skip_extras:" in book_yml
     assert "past 09:25 ET — skip LLM + extras" in book_yml
@@ -771,6 +783,8 @@ def test_safe_git_push_keeps_dated_ranker_on_conflict() -> None:
     assert "keeping origin/main (sleeve-merge / Pages)" in text
     assert "x-access-token" in text
     assert "data/day_board" in text
+    assert "resolve_day_board" in text
+    assert "src.day_board --merge-ours" in text
     # Incremental land must not delete untracked export / membership.
     assert "restore_unstaged" in text
     assert "git stash pop" in text
@@ -796,6 +810,17 @@ def test_incremental_land_and_day_board() -> None:
     """Write A → QC A → push A. Day board is an .io page, not an Action."""
     pre = (ROOT / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
     assert "land_file.land" in pre
+    yml = (WF / "preopen_all.yml").read_text(encoding="utf-8")
+    assert "leftover sweep" in yml
+    assert "timeout-minutes: 180" in yml
+    assert "timeout-minutes: 240" in yml
+    assert "ubuntu-h0909c" not in yml
+    gates = (ROOT / "src" / "packet_gates.py").read_text(encoding="utf-8")
+    assert "MIN_JSON_BYTES = 80" in gates
+    assert "MIN_WEATHER_BYTES = 800" in gates
+    qc = (ROOT / "src" / "output_qc.py").read_text(encoding="utf-8")
+    assert "packet_gates.json_too_small" in qc
+    assert "Path(path).stat().st_size" in qc
     assert "leftover sweep" in (WF / "preopen_all.yml").read_text(encoding="utf-8")
     assert "leftover sweep" in (WF / "stock_book_all.yml").read_text(encoding="utf-8")
     pub = (ROOT / "scripts" / "publish_dashboard.sh").read_text(encoding="utf-8")

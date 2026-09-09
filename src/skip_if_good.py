@@ -258,7 +258,8 @@ def weather_stamped_before_open(payload: dict, date: str) -> bool:
 def check_label_weather(date: str) -> bool:
     """Weather JSON with enough sector stances to rank."""
     p = ROOT / "01_daily" / "weather" / f"{date}_weather.json"
-    if not _exists_gt(p, 200):
+    from . import packet_gates
+    if not _exists_gt(p, packet_gates.MIN_WEATHER_BYTES):
         return _log(False, "label_weather", date, "weather json missing/thin")
     try:
         payload = json.loads(p.read_text(encoding="utf-8"))
@@ -268,10 +269,8 @@ def check_label_weather(date: str) -> bool:
         return _log(False, "label_weather", date,
                     f"weather stamped {payload.get('generated_at')} "
                     "before 05:35 ET")
-    secs = (payload.get("signals") or {}).get("sectors") or {}
-    n = len(secs) if isinstance(secs, dict) else 0
-    ok = n >= 5
-    return _log(ok, "label_weather", date, f"weather_sectors={n}")
+    ok, reason = packet_gates.weather_ok(p, min_bytes=packet_gates.MIN_WEATHER_BYTES)
+    return _log(ok, "label_weather", date, reason)
 
 
 def book_files_are_degraded(js: Path, green: Path) -> bool:

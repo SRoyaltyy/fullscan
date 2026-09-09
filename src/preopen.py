@@ -25,7 +25,7 @@ from . import config
 # 09:25 ET — last moment a predictive write is allowed to start/land.
 PREDICT_CUTOFF_HM = 925
 PREDICT_WINDOW_START_HM = 600  # 06:00 ET
-# Push late-heal window in preopen_all.yml (09:25–12:00 ET).
+# Push late-heal in preopen_all.yml (after 09:25 ET; skip-if-good on).
 LATE_HEAL_END_HM = 1200
 
 

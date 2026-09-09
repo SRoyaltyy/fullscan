@@ -552,8 +552,9 @@ def run(date: str | None = None, force: bool = False,
         _run([py, "-m", "src.segments", "--date", date], timeout_s=180)
         snapshot_persist(date)
         _land(date, "universe", "Universe labels")
+    # 2026-09-09: live Channel 1 ate 180s (exit 124). Bound live, then offline.
     step("weather", "Weather / regime",
-         [py, "-m", "src.weather", "--date", date], timeout_s=180)
+         [py, "-m", "src.weather", "--date", date], timeout_s=50)
     from . import skip_if_good
     if not skip_if_good.check_label_weather(date):
         print("[preopen-all] weather missing/thin — retry --offline")
@@ -598,25 +599,43 @@ def run(date: str | None = None, force: bool = False,
               f"subprocess {llm_sub_t}s "
               "(hung Grok fails over; 10800s ate 2026-09-04)")
         try:
+            parse_t = 120
             step("news_parse", "News parse",
                  [py, "-m", "src.news_parse", "--hours", "48", "--limit", "400",
-                  "--date", date, *fa], timeout_s=llm_sub_t)
+                  "--date", date, *fa], timeout_s=parse_t)
+            parsed_p = _p("01_daily", "news", f"{date}_parsed.json")
+            if not output_qc.qc_news_parse(parsed_p).ok:
+                print("[preopen-all] parse thin — retry --limit 80 (file/DB)")
+                _run([py, "-m", "src.news_parse", "--hours", "48",
+                      "--limit", "80", "--date", date, *fa], timeout_s=90)
+                snapshot_persist(date)
+                if output_qc.qc_news_parse(parsed_p).ok:
+                    _land(date, "news_parse", "News parse (limit-80 retry)")
             step("events", "Event scanner (primary)",
                  [py, "-m", "src.run_events", "--date", date, *fa],
                  timeout_s=llm_sub_t)
             step("events_catcher", "Event catcher (gap hunt, no carry)",
                  [py, "-m", "src.run_events_catcher", "--date", date, *fa],
                  timeout_s=llm_sub_t)
-            # Deliberately NO events_fallback — carry is trash for pre-open.
+            # Actions before judge so the same-run fallback can stitch them.
+            step("news_actions", "News actions",
+                 [py, "-m", "src.news_actions", "--hours", "48", "--limit", "400",
+                  "--date", date, *fa], timeout_s=llm_sub_t)
             step("news_judge", "News judge",
                  [py, "-m", "src.run_news_judge", "--date", date, *fa],
                  timeout_s=llm_sub_t)
-            # Last night's 11-sector baseline is mandatory. One overnight delta
-            # refresh only; never 11 sector batches in the time-critical window.
+            # Required essays BEFORE optional map-heat (540s ate general
+            # on 2026-09-09 inside the 55m step).
+            step("general_predict", "General market predict",
+                 [py, "-m", "src.run_predict", "--date", date, *fa],
+                 timeout_s=llm_sub_t)
+            step("sector_predict", "Per-sector predict (all 11)",
+                 [py, "-m", "src.run_sector_predict", "--date", date, *fa],
+                 timeout_s=2400)
+            print("[preopen-all] → Sector board (rebuild after essays)")
+            _run([py, "-m", "src.sector_board", "--date", date], timeout_s=60)
+            _land(date, "sector_board", "Sector board")
             prev_timeout = os.environ.get("OPENCLAW_TIMEOUT")
-            # 2026-09-08: 1260s + internal retry blocked essays past 09:25
-            # (exit 124, research.md missing). One short attempt, then
-            # night-baseline passthrough so the packet continues.
             map_heat_http = os.environ.get("MAP_HEAT_REFRESH_TIMEOUT", "480")
             os.environ["OPENCLAW_TIMEOUT"] = map_heat_http
             try:
@@ -638,19 +657,6 @@ def run(date: str | None = None, force: bool = False,
                          timeout_s=60)
             finally:
                 os.environ["OPENCLAW_TIMEOUT"] = prev_timeout or morning_to
-            step("news_actions", "News actions",
-                 [py, "-m", "src.news_actions", "--hours", "48", "--limit", "400",
-                  "--date", date, *fa], timeout_s=llm_sub_t)
-            # Time-critical predicts first. Catalyst waits until after the book.
-            step("general_predict", "General market predict",
-                 [py, "-m", "src.run_predict", "--date", date, *fa],
-                 timeout_s=llm_sub_t)
-            step("sector_predict", "Per-sector predict (all 11)",
-                 [py, "-m", "src.run_sector_predict", "--date", date, *fa],
-                 timeout_s=2400)
-            step("sector_board", "Sector board",
-                 [py, "-m", "src.sector_board", "--date", date],
-                 timeout_s=60)
         finally:
             if prev_llm_to is None:
                 os.environ.pop("OPENCLAW_TIMEOUT", None)
@@ -663,7 +669,7 @@ def run(date: str | None = None, force: bool = False,
     # Book is next. Catalyst / Grok review wait until BUY/SELL is on disk —
     # 2026-09-02 eight dossiers ate the morning and the ranker never started.
     print("[preopen-all] → Weather / join refresh (before book)")
-    _run([py, "-m", "src.weather", "--date", date], timeout_s=180)
+    _run([py, "-m", "src.weather", "--date", date], timeout_s=50)
     if not skip_if_good.check_label_weather(date):
         print("[preopen-all] weather refresh thin — retry --offline")
         _run([py, "-m", "src.weather", "--date", date, "--offline"],
