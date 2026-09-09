@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-09T10:50:54.357582-04:00",
+  "generated": "2026-09-09T11:25:27.721261-04:00",
   "capital": 10000.0,
   "dates": [
     "2026-08-13",
@@ -231,7 +231,7 @@
       -0.39,
       -0.39,
       -0.44,
-      -0.28
+      -0.44
     ],
     "equity": [
       10046.0,
@@ -251,7 +251,7 @@
       9958.28,
       9919.44,
       9875.79,
-      9848.14
+      9832.34
     ]
   },
   "sleeves": {
@@ -5607,11 +5607,11 @@
           "date": "2026-09-09",
           "day_pnl": -99.251,
           "equity": 14.52,
-          "n_held": 8,
+          "n_held": 6,
           "n_buy": 0,
           "n_sell": 1,
-          "n_skip": 8,
-          "n_cand": 8,
+          "n_skip": 6,
+          "n_cand": 6,
           "hard_red": false,
           "bought": [],
           "sold": [
@@ -5653,10 +5653,10 @@
         "n_loss_days": 13,
         "p_loss_day": 0.7222,
         "p_win_day": 0.2222,
-        "mean_day": -9.88,
+        "mean_day": -9.025,
         "avg_win_day": 0.261,
-        "avg_loss_day": -13.761,
-        "cum_sum": -177.849
+        "avg_loss_day": -12.576,
+        "cum_sum": -162.445
       },
       "equity": [
         9955.38,
@@ -5676,9 +5676,9 @@
         1963.39,
         1963.39,
         1952.84,
-        740.8
+        1041.6
       ],
-      "final": 740.8,
+      "final": 1041.6,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -11699,35 +11699,27 @@
         },
         {
           "date": "2026-09-09",
-          "day_pnl": -62.066,
-          "equity": 740.8,
-          "n_held": 10,
+          "day_pnl": -46.662,
+          "equity": 1041.6,
+          "n_held": 9,
           "n_buy": 0,
-          "n_sell": 6,
-          "n_skip": 10,
-          "n_cand": 10,
+          "n_sell": 5,
+          "n_skip": 8,
+          "n_cand": 9,
           "hard_red": false,
           "bought": [],
           "sold": [
-            "ZIM",
             "ST",
             "ACMR",
             "ORA",
             "GRND",
             "TUYA"
           ],
-          "held": [],
+          "held": [
+            "ZIM"
+          ],
           "buys": [],
           "sells": [
-            {
-              "ticker": "ZIM",
-              "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
-              "buy_px": 30.079999923706055,
-              "buy_when": "16:00 ET close",
-              "buy_kind": "close"
-            },
             {
               "ticker": "ST",
               "side": "sell",
@@ -11775,7 +11767,7 @@
             }
           ],
           "cash": 740.8,
-          "invested": 0.0,
+          "invested": 300.8,
           "fees_cum": 674.13
         }
       ]
@@ -11797,10 +11789,10 @@
         "n_loss_days": 14,
         "p_loss_day": 0.7778,
         "p_win_day": 0.1667,
-        "mean_day": 25.659,
+        "mean_day": 25.862,
         "avg_win_day": 220.772,
-        "avg_loss_day": -14.318,
-        "cum_sum": 461.862
+        "avg_loss_day": -14.057,
+        "cum_sum": 465.519
       },
       "equity": [
         9880.7,
@@ -11820,9 +11812,9 @@
         8267.56,
         8267.56,
         8223.6,
-        3361.21
+        3662.01
       ],
-      "final": 3361.21,
+      "final": 3662.01,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -21824,17 +21816,16 @@
         },
         {
           "date": "2026-09-09",
-          "day_pnl": -59.127,
-          "equity": 3361.21,
-          "n_held": 24,
+          "day_pnl": -55.47,
+          "equity": 3662.01,
+          "n_held": 25,
           "n_buy": 0,
-          "n_sell": 24,
+          "n_sell": 23,
           "n_skip": 24,
-          "n_cand": 24,
+          "n_cand": 25,
           "hard_red": false,
           "bought": [],
           "sold": [
-            "ZIM",
             "ACMR",
             "ANET",
             "ARM",
@@ -21859,18 +21850,11 @@
             "F",
             "HNST"
           ],
-          "held": [],
+          "held": [
+            "ZIM"
+          ],
           "buys": [],
           "sells": [
-            {
-              "ticker": "ZIM",
-              "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
-              "buy_px": 30.079999923706055,
-              "buy_when": "16:00 ET close",
-              "buy_kind": "close"
-            },
             {
               "ticker": "ACMR",
               "side": "sell",
@@ -22080,7 +22064,7 @@
             }
           ],
           "cash": 3361.21,
-          "invested": 0.0,
+          "invested": 300.8,
           "fees_cum": 2122.02
         }
       ]
@@ -22102,10 +22086,10 @@
         "n_loss_days": 14,
         "p_loss_day": 0.7778,
         "p_win_day": 0.1667,
-        "mean_day": -9.476,
+        "mean_day": -8.611,
         "avg_win_day": 0.834,
-        "avg_loss_day": -12.362,
-        "cum_sum": -170.566
+        "avg_loss_day": -11.25,
+        "cum_sum": -154.995
       },
       "equity": [
         9918.74,
@@ -22125,9 +22109,9 @@
         2135.79,
         2135.79,
         2124.91,
-        809.86
+        1140.74
       ],
-      "final": 809.86,
+      "final": 1140.74,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -25908,35 +25892,27 @@
         },
         {
           "date": "2026-09-09",
-          "day_pnl": -61.887,
-          "equity": 809.86,
-          "n_held": 10,
+          "day_pnl": -46.316,
+          "equity": 1140.74,
+          "n_held": 9,
           "n_buy": 0,
-          "n_sell": 6,
-          "n_skip": 10,
-          "n_cand": 10,
+          "n_sell": 5,
+          "n_skip": 8,
+          "n_cand": 9,
           "hard_red": false,
           "bought": [],
           "sold": [
-            "ZIM",
             "ST",
             "ACMR",
             "ORA",
             "GRND",
             "TUYA"
           ],
-          "held": [],
+          "held": [
+            "ZIM"
+          ],
           "buys": [],
           "sells": [
-            {
-              "ticker": "ZIM",
-              "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
-              "buy_px": 30.079999923706055,
-              "buy_when": "16:00 ET close",
-              "buy_kind": "close"
-            },
             {
               "ticker": "ST",
               "side": "sell",
@@ -25984,7 +25960,7 @@
             }
           ],
           "cash": 809.86,
-          "invested": 0.0,
+          "invested": 330.88,
           "fees_cum": 572.41
         }
       ]
@@ -26006,10 +25982,10 @@
         "n_loss_days": 13,
         "p_loss_day": 0.7222,
         "p_win_day": 0.2222,
-        "mean_day": -9.945,
+        "mean_day": -9.047,
         "avg_win_day": 0.153,
-        "avg_loss_day": -13.818,
-        "cum_sum": -179.016
+        "avg_loss_day": -12.574,
+        "cum_sum": -162.853
       },
       "equity": [
         9955.38,
@@ -26029,9 +26005,9 @@
         1871.16,
         1871.16,
         1861.08,
-        727.81
+        1028.61
       ],
-      "final": 727.81,
+      "final": 1028.61,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -32516,35 +32492,27 @@
         },
         {
           "date": "2026-09-09",
-          "day_pnl": -60.893,
-          "equity": 727.81,
+          "day_pnl": -44.73,
+          "equity": 1028.61,
           "n_held": 14,
           "n_buy": 0,
-          "n_sell": 6,
-          "n_skip": 14,
+          "n_sell": 5,
+          "n_skip": 13,
           "n_cand": 14,
           "hard_red": false,
           "bought": [],
           "sold": [
-            "ZIM",
             "ST",
             "ACMR",
             "ORA",
             "GRND",
             "TUYA"
           ],
-          "held": [],
+          "held": [
+            "ZIM"
+          ],
           "buys": [],
           "sells": [
-            {
-              "ticker": "ZIM",
-              "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
-              "buy_px": 30.079999923706055,
-              "buy_when": "16:00 ET close",
-              "buy_kind": "close"
-            },
             {
               "ticker": "ST",
               "side": "sell",
@@ -32592,7 +32560,7 @@
             }
           ],
           "cash": 727.81,
-          "invested": 0.0,
+          "invested": 300.8,
           "fees_cum": 711.76
         }
       ]
@@ -37923,11 +37891,11 @@
           "date": "2026-09-09",
           "day_pnl": 0.0,
           "equity": 1822.63,
-          "n_held": 16,
+          "n_held": 14,
           "n_buy": 0,
           "n_sell": 0,
-          "n_skip": 10,
-          "n_cand": 10,
+          "n_skip": 8,
+          "n_cand": 9,
           "hard_red": false,
           "bought": [],
           "sold": [],
@@ -42355,11 +42323,11 @@
           "date": "2026-09-09",
           "day_pnl": 0.0,
           "equity": 5514.95,
-          "n_held": 16,
+          "n_held": 14,
           "n_buy": 0,
           "n_sell": 0,
-          "n_skip": 10,
-          "n_cand": 10,
+          "n_skip": 8,
+          "n_cand": 9,
           "hard_red": false,
           "bought": [],
           "sold": [],
@@ -45540,11 +45508,11 @@
           "date": "2026-09-09",
           "day_pnl": -23.472,
           "equity": 4825.97,
-          "n_held": 16,
+          "n_held": 14,
           "n_buy": 0,
           "n_sell": 2,
-          "n_skip": 10,
-          "n_cand": 10,
+          "n_skip": 8,
+          "n_cand": 9,
           "hard_red": false,
           "bought": [],
           "sold": [
@@ -49874,11 +49842,11 @@
           "date": "2026-09-09",
           "day_pnl": 0.0,
           "equity": 5711.8,
-          "n_held": 9,
+          "n_held": 7,
           "n_buy": 0,
           "n_sell": 0,
-          "n_skip": 8,
-          "n_cand": 8,
+          "n_skip": 6,
+          "n_cand": 6,
           "hard_red": false,
           "bought": [],
           "sold": [],
@@ -52017,8 +51985,8 @@
           "n_held": 10,
           "n_buy": 0,
           "n_sell": 0,
-          "n_skip": 10,
-          "n_cand": 10,
+          "n_skip": 8,
+          "n_cand": 9,
           "hard_red": false,
           "bought": [],
           "sold": [],
@@ -55896,11 +55864,11 @@
           "date": "2026-09-09",
           "day_pnl": -60.963,
           "equity": 500.17,
-          "n_held": 8,
+          "n_held": 2,
           "n_buy": 0,
           "n_sell": 5,
-          "n_skip": 8,
-          "n_cand": 8,
+          "n_skip": 2,
+          "n_cand": 2,
           "hard_red": false,
           "bought": [],
           "sold": [
@@ -55982,10 +55950,10 @@
         "n_loss_days": 13,
         "p_loss_day": 0.7222,
         "p_win_day": 0.2222,
-        "mean_day": -10.119,
+        "mean_day": -9.234,
         "avg_win_day": 0.385,
-        "avg_loss_day": -14.129,
-        "cum_sum": -182.138
+        "avg_loss_day": -12.904,
+        "cum_sum": -166.209
       },
       "equity": [
         9955.38,
@@ -56005,9 +55973,9 @@
         1709.25,
         1709.25,
         1699.49,
-        667.37
+        938.09
       ],
-      "final": 667.37,
+      "final": 938.09,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -61294,35 +61262,27 @@
         },
         {
           "date": "2026-09-09",
-          "day_pnl": -60.731,
-          "equity": 667.37,
-          "n_held": 9,
+          "day_pnl": -44.802,
+          "equity": 938.09,
+          "n_held": 8,
           "n_buy": 0,
-          "n_sell": 6,
-          "n_skip": 9,
-          "n_cand": 9,
+          "n_sell": 5,
+          "n_skip": 7,
+          "n_cand": 8,
           "hard_red": false,
           "bought": [],
           "sold": [
-            "ZIM",
             "ST",
             "ACMR",
             "ORA",
             "GRND",
             "TUYA"
           ],
-          "held": [],
+          "held": [
+            "ZIM"
+          ],
           "buys": [],
           "sells": [
-            {
-              "ticker": "ZIM",
-              "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
-              "buy_px": 30.079999923706055,
-              "buy_when": "16:00 ET close",
-              "buy_kind": "close"
-            },
             {
               "ticker": "ST",
               "side": "sell",
@@ -61370,7 +61330,7 @@
             }
           ],
           "cash": 667.37,
-          "invested": 0.0,
+          "invested": 270.72,
           "fees_cum": 605.13
         }
       ]
@@ -61392,10 +61352,10 @@
         "n_loss_days": 13,
         "p_loss_day": 0.7222,
         "p_win_day": 0.2222,
-        "mean_day": -10.07,
+        "mean_day": -9.175,
         "avg_win_day": 0.888,
-        "avg_loss_day": -14.216,
-        "cum_sum": -181.256
+        "avg_loss_day": -12.977,
+        "cum_sum": -165.144
       },
       "equity": [
         9918.74,
@@ -61415,9 +61375,9 @@
         1689.99,
         1689.99,
         1680.26,
-        650.0
+        920.72
       ],
-      "final": 650.0,
+      "final": 920.72,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -64713,35 +64673,27 @@
         },
         {
           "date": "2026-09-09",
-          "day_pnl": -61.316,
-          "equity": 650.0,
-          "n_held": 9,
+          "day_pnl": -45.204,
+          "equity": 920.72,
+          "n_held": 8,
           "n_buy": 0,
-          "n_sell": 6,
-          "n_skip": 9,
-          "n_cand": 9,
+          "n_sell": 5,
+          "n_skip": 7,
+          "n_cand": 8,
           "hard_red": false,
           "bought": [],
           "sold": [
-            "ZIM",
             "ST",
             "ACMR",
             "ORA",
             "GRND",
             "TUYA"
           ],
-          "held": [],
+          "held": [
+            "ZIM"
+          ],
           "buys": [],
           "sells": [
-            {
-              "ticker": "ZIM",
-              "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
-              "buy_px": 30.079999923706055,
-              "buy_when": "16:00 ET close",
-              "buy_kind": "close"
-            },
             {
               "ticker": "ST",
               "side": "sell",
@@ -64789,7 +64741,7 @@
             }
           ],
           "cash": 650.0,
-          "invested": 0.0,
+          "invested": 270.72,
           "fees_cum": 516.94
         }
       ]
@@ -67923,11 +67875,11 @@
           "date": "2026-09-09",
           "day_pnl": 0.0,
           "equity": 5568.63,
-          "n_held": 13,
+          "n_held": 7,
           "n_buy": 0,
           "n_sell": 0,
-          "n_skip": 8,
-          "n_cand": 8,
+          "n_skip": 2,
+          "n_cand": 2,
           "hard_red": false,
           "bought": [],
           "sold": [],
@@ -72960,11 +72912,11 @@
           "date": "2026-09-09",
           "day_pnl": 0.0,
           "equity": 2001.1,
-          "n_held": 10,
+          "n_held": 9,
           "n_buy": 0,
           "n_sell": 0,
-          "n_skip": 10,
-          "n_cand": 10,
+          "n_skip": 9,
+          "n_cand": 9,
           "hard_red": false,
           "bought": [],
           "sold": [],
@@ -72994,10 +72946,10 @@
         "n_loss_days": 13,
         "p_loss_day": 0.7222,
         "p_win_day": 0.2222,
-        "mean_day": -9.895,
+        "mean_day": -9.037,
         "avg_win_day": 0.261,
-        "avg_loss_day": -13.781,
-        "cum_sum": -178.108
+        "avg_loss_day": -12.593,
+        "cum_sum": -162.673
       },
       "equity": [
         9955.38,
@@ -73017,9 +72969,9 @@
         1959.38,
         1959.38,
         1948.83,
-        736.79
+        1037.59
       ],
-      "final": 736.79,
+      "final": 1037.59,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -79008,35 +78960,27 @@
         },
         {
           "date": "2026-09-09",
-          "day_pnl": -62.193,
-          "equity": 736.79,
-          "n_held": 10,
+          "day_pnl": -46.758,
+          "equity": 1037.59,
+          "n_held": 9,
           "n_buy": 0,
-          "n_sell": 6,
-          "n_skip": 10,
-          "n_cand": 10,
+          "n_sell": 5,
+          "n_skip": 8,
+          "n_cand": 9,
           "hard_red": false,
           "bought": [],
           "sold": [
-            "ZIM",
             "ST",
             "ACMR",
             "ORA",
             "GRND",
             "TUYA"
           ],
-          "held": [],
+          "held": [
+            "ZIM"
+          ],
           "buys": [],
           "sells": [
-            {
-              "ticker": "ZIM",
-              "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
-              "buy_px": 30.079999923706055,
-              "buy_when": "16:00 ET close",
-              "buy_kind": "close"
-            },
             {
               "ticker": "ST",
               "side": "sell",
@@ -79084,7 +79028,7 @@
             }
           ],
           "cash": 736.79,
-          "invested": 0.0,
+          "invested": 300.8,
           "fees_cum": 670.13
         }
       ]
@@ -84177,11 +84121,11 @@
           "date": "2026-09-09",
           "day_pnl": 0.0,
           "equity": 1979.73,
-          "n_held": 10,
+          "n_held": 9,
           "n_buy": 0,
           "n_sell": 0,
-          "n_skip": 10,
-          "n_cand": 10,
+          "n_skip": 9,
+          "n_cand": 9,
           "hard_red": false,
           "bought": [],
           "sold": [],
@@ -84211,10 +84155,10 @@
         "n_loss_days": 13,
         "p_loss_day": 0.7222,
         "p_win_day": 0.2222,
-        "mean_day": -9.917,
+        "mean_day": -9.023,
         "avg_win_day": 0.153,
-        "avg_loss_day": -13.778,
-        "cum_sum": -178.503
+        "avg_loss_day": -12.541,
+        "cum_sum": -162.419
       },
       "equity": [
         9955.38,
@@ -84234,9 +84178,9 @@
         1880.32,
         1880.32,
         1870.22,
-        735.09
+        1035.89
       ],
-      "final": 735.09,
+      "final": 1035.89,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -90721,35 +90665,27 @@
         },
         {
           "date": "2026-09-09",
-          "day_pnl": -60.695,
-          "equity": 735.09,
+          "day_pnl": -44.611,
+          "equity": 1035.89,
           "n_held": 14,
           "n_buy": 0,
-          "n_sell": 6,
-          "n_skip": 14,
+          "n_sell": 5,
+          "n_skip": 13,
           "n_cand": 14,
           "hard_red": false,
           "bought": [],
           "sold": [
-            "ZIM",
             "ST",
             "ACMR",
             "ORA",
             "GRND",
             "TUYA"
           ],
-          "held": [],
+          "held": [
+            "ZIM"
+          ],
           "buys": [],
           "sells": [
-            {
-              "ticker": "ZIM",
-              "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
-              "buy_px": 30.079999923706055,
-              "buy_when": "16:00 ET close",
-              "buy_kind": "close"
-            },
             {
               "ticker": "ST",
               "side": "sell",
@@ -90797,7 +90733,7 @@
             }
           ],
           "cash": 735.09,
-          "invested": 0.0,
+          "invested": 300.8,
           "fees_cum": 711.85
         }
       ]
