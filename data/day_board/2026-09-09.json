@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T13:18:53.681593-04:00",
+  "generated_at": "2026-09-09T13:24:02.242793-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -140,7 +140,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 46613
+          "size": 81440
         },
         {
           "key": "events",
@@ -158,7 +158,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 13459
+          "size": 12027
         },
         {
           "key": "research_json",
@@ -332,7 +332,7 @@
           "size": 11932
         }
       ],
-      "said": "general DOWN  -13.95 \u00b7 sectors 1 up / 6 down / 4 flat \u00b7 news 6 items",
+      "said": "general DOWN  -13.95 \u00b7 sectors 1 up / 6 down / 4 flat \u00b7 news 15 items",
       "bullets": [
         "bad: Iran-US tanker attacks biggest wave since war began",
         "bad: oil >$100 Brent",
@@ -372,8 +372,8 @@
           "path": "01_daily/weather/2026-09-09_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10538 vix=falling yields=flat",
-          "size": 10538
+          "reason": "sectors=11 bytes=10543 vix=falling yields=flat",
+          "size": 10543
         }
       ],
       "said": "favorable 2 \u00b7 hostile 5 \u00b7 neutral 4",
@@ -513,7 +513,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 13459
+          "size": 12027
         },
         {
           "key": "in_weather",
@@ -521,8 +521,8 @@
           "path": "01_daily/weather/2026-09-09_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10538 vix=falling yields=flat",
-          "size": 10538
+          "reason": "sectors=11 bytes=10543 vix=falling yields=flat",
+          "size": 10543
         },
         {
           "key": "in_ab",
@@ -736,11 +736,11 @@
       }
     ],
     "flatten": {
-      "said": "0 priced buys \u00b7 0 lots \u00b7 cash $108,616.66",
+      "said": "0 priced buys \u00b7 0 lots \u00b7 cash $107,448.18",
       "bullets": [
         "0 priced buys",
         "0 lots",
-        "cash $108,616.66"
+        "cash $107,448.18"
       ]
     },
     "general": {
@@ -772,14 +772,14 @@
       ]
     },
     "news": {
-      "said": "6 items",
+      "said": "15 items",
       "bullets": [
         "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
+        "August CPI (pre-FOMC inflation print)",
         "S&P 500, Dow End Lower As Middle East Tensions Spur Oil Rally Ahead Of Key Inflation Data  META, QCOM, BE, AMZN, AVGO In Focus",
         "Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comments boost September U.S. rate hike expectations",
         "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year",
-        "Abbott receives FDA approval for its TactiFlex Duo Ablation Catheter to treat people with abnormal heart rhythms",
-        "Abbott receives FDA approval for TactiFlex Duo dual-energy ablation catheter to treat complex atrial fibrillation, expanding its U.S. pulsed field ablation portfolio"
+        "Another rate hike, just for insurance: Five questions for the ECB"
       ]
     },
     "weather": {
@@ -791,31 +791,6 @@
     }
   },
   "lands": [
-    {
-      "key": "map_heat_baseline",
-      "title": "Map heat night baseline",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T07:32:21.432267-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-09_research_baseline.json",
-          "ok": true,
-          "reason": "",
-          "size": 22,
-          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-09_research_baseline.md",
-          "ok": true,
-          "reason": "",
-          "size": 36519,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-09\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-09\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-    },
     {
       "key": "news_judge",
       "title": "News judge",
@@ -2817,6 +2792,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-09-09\n_Generated 2026-09-09T17:18:52 \u2014 live `flatten_robust`._\n**S=-13.95; hard-red: no new buys; holds and due 1d exits stay**\n- Score **-13.95** (DOWN) \u00b7 route **hold** \u00b7 HARD-RED\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Open lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66** \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T13:24:01.452496-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-09_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 81440,
+          "preview": "raw=155 usable=15 single=30 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | August CPI (pre-FOMC inflation print) | S&P 500, Dow End Lower As Middle East Tensions Spur Oil Rally Ahead Of Key Infla | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027"
+        },
+        {
+          "path": "01_daily/news/2026-09-09_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 4400,
+          "preview": "# News Parse v2 \u2014 2026-09-09T13:24:01.439883-04:00\nWindow\u224824h | raw=155 | usable=15 | single_name=30 | noise_dropped=110\nusable polarity={'+': 3, '-': 3, 'mixed': 0, 'neutral': 9}"
+        }
+      ],
+      "preview": "raw=155 usable=15 single=30 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | August CPI (pre-FOMC inflation print) | S&P 500, Dow End Lower As Middle East Tensions Spur Oil Rally Ahead Of Key Infla | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 \u00b7 # News Parse v2 \u2014 2026-09-09T13:24:01.439883-04:00\nWindow\u224824h | raw=155 | usable=15 | single_name=30 | noise_dropped=110\nusable polarity={'+': 3, '-': 3, 'mixed': 0, 'neutral': 9}"
     }
   ],
   "href": {

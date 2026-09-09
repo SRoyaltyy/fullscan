@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-09-09T12:11:12.911780-04:00",
-  "hours": 48,
-  "raw_count": 80,
-  "parsed_count": 80,
-  "usable_count": 6,
-  "single_name_count": 13,
-  "noise_count": 61,
+  "generated_at": "2026-09-09T13:24:01.439883-04:00",
+  "hours": 24,
+  "raw_count": 155,
+  "parsed_count": 155,
+  "usable_count": 15,
+  "single_name_count": 30,
+  "noise_count": 110,
   "polarity_usable": {
-    "+": 2,
-    "-": 2,
+    "+": 3,
+    "-": 3,
     "mixed": 0,
-    "neutral": 2
+    "neutral": 9
   },
   "by_macro_usable": {
     "fed_path": {
       "+": 1,
-      "-": 2,
+      "-": 3,
       "mixed": 0,
-      "neutral": 0,
-      "n": 3,
+      "neutral": 3,
+      "n": 7,
       "top": [
         {
           "source": "finviz_export",
@@ -34,6 +34,22 @@
             "fed_path"
           ],
           "polarity": "+",
+          "source_weight": 0.4,
+          "rank_score": 1.1
+        },
+        {
+          "source": "events",
+          "title": "August CPI (pre-FOMC inflation print)",
+          "url": "",
+          "published_at": "",
+          "class": "macro_relevant",
+          "usable": true,
+          "sectors": [],
+          "macro_themes": [
+            "fed_path",
+            "inflation"
+          ],
+          "polarity": "neutral",
           "source_weight": 0.4,
           "rank_score": 1.1
         },
@@ -66,6 +82,51 @@
           "polarity": "-",
           "source_weight": 0.4,
           "rank_score": 1.0
+        },
+        {
+          "source": "finviz_export",
+          "title": "Another rate hike, just for insurance: Five questions for the ECB",
+          "url": "",
+          "published_at": "",
+          "class": "macro_relevant",
+          "usable": true,
+          "sectors": [],
+          "macro_themes": [
+            "fed_path"
+          ],
+          "polarity": "-",
+          "source_weight": 0.4,
+          "rank_score": 1.0
+        },
+        {
+          "source": "events",
+          "title": "FOMC decision, SEP/dot plot, Warsh press conference",
+          "url": "",
+          "published_at": "",
+          "class": "macro_relevant",
+          "usable": true,
+          "sectors": [],
+          "macro_themes": [
+            "fed_path"
+          ],
+          "polarity": "neutral",
+          "source_weight": 0.4,
+          "rank_score": 0.95
+        },
+        {
+          "source": "events",
+          "title": "FOMC September decision (first Warsh SEP/dots)",
+          "url": "",
+          "published_at": "",
+          "class": "macro_relevant",
+          "usable": true,
+          "sectors": [],
+          "macro_themes": [
+            "fed_path"
+          ],
+          "polarity": "neutral",
+          "source_weight": 0.4,
+          "rank_score": 0.95
         }
       ]
     },
@@ -73,9 +134,25 @@
       "+": 1,
       "-": 0,
       "mixed": 0,
-      "neutral": 0,
-      "n": 1,
+      "neutral": 3,
+      "n": 4,
       "top": [
+        {
+          "source": "events",
+          "title": "August CPI (pre-FOMC inflation print)",
+          "url": "",
+          "published_at": "",
+          "class": "macro_relevant",
+          "usable": true,
+          "sectors": [],
+          "macro_themes": [
+            "fed_path",
+            "inflation"
+          ],
+          "polarity": "neutral",
+          "source_weight": 0.4,
+          "rank_score": 1.1
+        },
         {
           "source": "finviz_elite_news",
           "title": "S&P 500, Dow End Lower As Middle East Tensions Spur Oil Rally Ahead Of Key Inflation Data  META, QCOM, BE, AMZN, AVGO In Focus",
@@ -90,17 +167,95 @@
           "polarity": "+",
           "source_weight": 0.4,
           "rank_score": 1.0
+        },
+        {
+          "source": "events",
+          "title": "US August CPI",
+          "url": "",
+          "published_at": "",
+          "class": "macro_relevant",
+          "usable": true,
+          "sectors": [],
+          "macro_themes": [
+            "inflation"
+          ],
+          "polarity": "neutral",
+          "source_weight": 0.4,
+          "rank_score": 0.95
+        },
+        {
+          "source": "events",
+          "title": "China August CPI/PPI — PPI +3.8% y/y, CPI +0.8% y/y",
+          "url": "",
+          "published_at": "",
+          "class": "macro_relevant",
+          "usable": true,
+          "sectors": [],
+          "macro_themes": [
+            "inflation"
+          ],
+          "polarity": "neutral",
+          "source_weight": 0.4,
+          "rank_score": 0.95
+        }
+      ]
+    },
+    "geopolitics": {
+      "+": 0,
+      "-": 0,
+      "mixed": 0,
+      "neutral": 1,
+      "n": 1,
+      "top": [
+        {
+          "source": "events",
+          "title": "US-Iran Strait of Hormuz conflict escalation",
+          "url": "",
+          "published_at": "",
+          "class": "macro_relevant",
+          "usable": true,
+          "sectors": [],
+          "macro_themes": [
+            "geopolitics"
+          ],
+          "polarity": "neutral",
+          "source_weight": 0.4,
+          "rank_score": 0.95
+        }
+      ]
+    },
+    "labor": {
+      "+": 0,
+      "-": 0,
+      "mixed": 0,
+      "neutral": 1,
+      "n": 1,
+      "top": [
+        {
+          "source": "events",
+          "title": "US August NFP — +162k blowout",
+          "url": "",
+          "published_at": "",
+          "class": "macro_relevant",
+          "usable": true,
+          "sectors": [],
+          "macro_themes": [
+            "labor"
+          ],
+          "polarity": "neutral",
+          "source_weight": 0.4,
+          "rank_score": 0.95
         }
       ]
     }
   },
   "by_sector_usable": {
     "Basic Materials": {
-      "+": 1,
+      "+": 2,
       "-": 0,
       "mixed": 0,
       "neutral": 0,
-      "n": 1,
+      "n": 2,
       "top": [
         {
           "source": "finviz_export",
@@ -118,6 +273,21 @@
           "polarity": "+",
           "source_weight": 0.4,
           "rank_score": 1.1
+        },
+        {
+          "source": "finviz_export",
+          "title": "Gold price surge drives Franco-Nevada 6.55% higher on Aug 19",
+          "url": "",
+          "published_at": "",
+          "class": "sector_relevant",
+          "usable": true,
+          "sectors": [
+            "Basic Materials"
+          ],
+          "macro_themes": [],
+          "polarity": "+",
+          "source_weight": 0.4,
+          "rank_score": 0.95
         }
       ]
     },
@@ -180,6 +350,22 @@
       "rank_score": 1.1
     },
     {
+      "source": "events",
+      "title": "August CPI (pre-FOMC inflation print)",
+      "url": "",
+      "published_at": "",
+      "class": "macro_relevant",
+      "usable": true,
+      "sectors": [],
+      "macro_themes": [
+        "fed_path",
+        "inflation"
+      ],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 1.1
+    },
+    {
       "source": "finviz_elite_news",
       "title": "S&P 500, Dow End Lower As Middle East Tensions Spur Oil Rally Ahead Of Key Inflation Data  META, QCOM, BE, AMZN, AVGO In Focus",
       "url": "",
@@ -223,6 +409,126 @@
       "polarity": "-",
       "source_weight": 0.4,
       "rank_score": 1.0
+    },
+    {
+      "source": "finviz_export",
+      "title": "Another rate hike, just for insurance: Five questions for the ECB",
+      "url": "",
+      "published_at": "",
+      "class": "macro_relevant",
+      "usable": true,
+      "sectors": [],
+      "macro_themes": [
+        "fed_path"
+      ],
+      "polarity": "-",
+      "source_weight": 0.4,
+      "rank_score": 1.0
+    },
+    {
+      "source": "finviz_export",
+      "title": "Gold price surge drives Franco-Nevada 6.55% higher on Aug 19",
+      "url": "",
+      "published_at": "",
+      "class": "sector_relevant",
+      "usable": true,
+      "sectors": [
+        "Basic Materials"
+      ],
+      "macro_themes": [],
+      "polarity": "+",
+      "source_weight": 0.4,
+      "rank_score": 0.95
+    },
+    {
+      "source": "events",
+      "title": "FOMC decision, SEP/dot plot, Warsh press conference",
+      "url": "",
+      "published_at": "",
+      "class": "macro_relevant",
+      "usable": true,
+      "sectors": [],
+      "macro_themes": [
+        "fed_path"
+      ],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.95
+    },
+    {
+      "source": "events",
+      "title": "FOMC September decision (first Warsh SEP/dots)",
+      "url": "",
+      "published_at": "",
+      "class": "macro_relevant",
+      "usable": true,
+      "sectors": [],
+      "macro_themes": [
+        "fed_path"
+      ],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.95
+    },
+    {
+      "source": "events",
+      "title": "US-Iran Strait of Hormuz conflict escalation",
+      "url": "",
+      "published_at": "",
+      "class": "macro_relevant",
+      "usable": true,
+      "sectors": [],
+      "macro_themes": [
+        "geopolitics"
+      ],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.95
+    },
+    {
+      "source": "events",
+      "title": "US August CPI",
+      "url": "",
+      "published_at": "",
+      "class": "macro_relevant",
+      "usable": true,
+      "sectors": [],
+      "macro_themes": [
+        "inflation"
+      ],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.95
+    },
+    {
+      "source": "events",
+      "title": "China August CPI/PPI — PPI +3.8% y/y, CPI +0.8% y/y",
+      "url": "",
+      "published_at": "",
+      "class": "macro_relevant",
+      "usable": true,
+      "sectors": [],
+      "macro_themes": [
+        "inflation"
+      ],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.95
+    },
+    {
+      "source": "events",
+      "title": "US August NFP — +162k blowout",
+      "url": "",
+      "published_at": "",
+      "class": "macro_relevant",
+      "usable": true,
+      "sectors": [],
+      "macro_themes": [
+        "labor"
+      ],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.95
     },
     {
       "source": "finviz_export",
@@ -310,6 +616,45 @@
     },
     {
       "source": "finviz_export",
+      "title": "Franco-Nevada Corp (FNV) (Q2 2026) Earnings Call Highlights: Record Revenue Surge of 57% and ...",
+      "url": "",
+      "published_at": "",
+      "class": "single_name",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "+",
+      "source_weight": 0.4,
+      "rank_score": 0.25
+    },
+    {
+      "source": "finviz_export",
+      "title": "Zacks efficiency screen and post-Q3 earnings momentum drive 5.25% JCI surge",
+      "url": "",
+      "published_at": "",
+      "class": "single_name",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "+",
+      "source_weight": 0.4,
+      "rank_score": 0.25
+    },
+    {
+      "source": "finviz_export",
+      "title": "Nvidia Hugging Face acquisition fuels AI rally, lifting KLA 7.47%",
+      "url": "",
+      "published_at": "",
+      "class": "single_name",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "+",
+      "source_weight": 0.4,
+      "rank_score": 0.25
+    },
+    {
+      "source": "finviz_export",
       "title": "Bank of America cuts Broadcom price target despite raising earnings estimates, cites rising exposure to Anthropic and OpenAI",
       "url": "",
       "published_at": "",
@@ -411,19 +756,6 @@
       "polarity": "neutral",
       "source_weight": 0.4,
       "rank_score": 0.2
-    },
-    {
-      "source": "finviz_export",
-      "title": "Snowflake's stronger-than-expected quarterly revenue and earnings support cloud and AI-focused enterprise software peers including Datadog",
-      "url": "",
-      "published_at": "",
-      "class": "single_name",
-      "usable": false,
-      "sectors": [],
-      "macro_themes": [],
-      "polarity": "neutral",
-      "source_weight": 0.4,
-      "rank_score": 0.2
     }
   ],
   "noise_sample": [
@@ -495,60 +827,60 @@
       "rank_score": -0.05
     },
     {
+      "source": "finviz_export",
+      "title": "Record copper prices at $14,694/ton surge Freeport-McMoRan 7.8%",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "+",
+      "source_weight": 0.4,
+      "rank_score": -0.05
+    },
+    {
+      "source": "finviz_export",
+      "title": "Zacks Strong Buy upgrade and AI data center backlog drive 11% FIX surge",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "+",
+      "source_weight": 0.4,
+      "rank_score": -0.05
+    },
+    {
+      "source": "finviz_export",
+      "title": "CrowdStrike strong earnings spark cybersecurity rally lifting Fortinet 5%",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "+",
+      "source_weight": 0.4,
+      "rank_score": -0.05
+    },
+    {
+      "source": "finviz_export",
+      "title": "Carrier Beat Estimates, Raised Its Outlook, And Fell Anyway",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "+",
+      "source_weight": 0.4,
+      "rank_score": -0.05
+    },
+    {
       "source": "finviz_elite_news",
       "title": "How to Profit From Sharp Stock Moves-Up or Down",
-      "url": "",
-      "published_at": "",
-      "class": "noise",
-      "usable": false,
-      "sectors": [],
-      "macro_themes": [],
-      "polarity": "neutral",
-      "source_weight": 0.4,
-      "rank_score": -0.1
-    },
-    {
-      "source": "finviz_elite_news",
-      "title": "Questcorp Defines Near-Surface Gold Discovery Corridor at Union Norte Expanding District-Scale Potential at La Union",
-      "url": "",
-      "published_at": "",
-      "class": "noise",
-      "usable": false,
-      "sectors": [],
-      "macro_themes": [],
-      "polarity": "neutral",
-      "source_weight": 0.4,
-      "rank_score": -0.1
-    },
-    {
-      "source": "finviz_elite_news",
-      "title": "What SCHD's Own History Suggests About Its Price Today",
-      "url": "",
-      "published_at": "",
-      "class": "noise",
-      "usable": false,
-      "sectors": [],
-      "macro_themes": [],
-      "polarity": "neutral",
-      "source_weight": 0.4,
-      "rank_score": -0.1
-    },
-    {
-      "source": "finviz_export",
-      "title": "Is AbbVie Stock Too Reliant On Skyrizi?",
-      "url": "",
-      "published_at": "",
-      "class": "noise",
-      "usable": false,
-      "sectors": [],
-      "macro_themes": [],
-      "polarity": "neutral",
-      "source_weight": 0.4,
-      "rank_score": -0.1
-    },
-    {
-      "source": "finviz_export",
-      "title": "AbbVie announces positive Phase 3 etentamig multiple myeloma data, closes $10.9B Apogee deal and reaffirms guidance",
       "url": "",
       "published_at": "",
       "class": "noise",
@@ -575,6 +907,22 @@
         "fed_path"
       ],
       "polarity": "+",
+      "source_weight": 0.4,
+      "rank_score": 1.1
+    },
+    {
+      "source": "events",
+      "title": "August CPI (pre-FOMC inflation print)",
+      "url": "",
+      "published_at": "",
+      "class": "macro_relevant",
+      "usable": true,
+      "sectors": [],
+      "macro_themes": [
+        "fed_path",
+        "inflation"
+      ],
+      "polarity": "neutral",
       "source_weight": 0.4,
       "rank_score": 1.1
     },
@@ -622,6 +970,126 @@
       "polarity": "-",
       "source_weight": 0.4,
       "rank_score": 1.0
+    },
+    {
+      "source": "finviz_export",
+      "title": "Another rate hike, just for insurance: Five questions for the ECB",
+      "url": "",
+      "published_at": "",
+      "class": "macro_relevant",
+      "usable": true,
+      "sectors": [],
+      "macro_themes": [
+        "fed_path"
+      ],
+      "polarity": "-",
+      "source_weight": 0.4,
+      "rank_score": 1.0
+    },
+    {
+      "source": "finviz_export",
+      "title": "Gold price surge drives Franco-Nevada 6.55% higher on Aug 19",
+      "url": "",
+      "published_at": "",
+      "class": "sector_relevant",
+      "usable": true,
+      "sectors": [
+        "Basic Materials"
+      ],
+      "macro_themes": [],
+      "polarity": "+",
+      "source_weight": 0.4,
+      "rank_score": 0.95
+    },
+    {
+      "source": "events",
+      "title": "FOMC decision, SEP/dot plot, Warsh press conference",
+      "url": "",
+      "published_at": "",
+      "class": "macro_relevant",
+      "usable": true,
+      "sectors": [],
+      "macro_themes": [
+        "fed_path"
+      ],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.95
+    },
+    {
+      "source": "events",
+      "title": "FOMC September decision (first Warsh SEP/dots)",
+      "url": "",
+      "published_at": "",
+      "class": "macro_relevant",
+      "usable": true,
+      "sectors": [],
+      "macro_themes": [
+        "fed_path"
+      ],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.95
+    },
+    {
+      "source": "events",
+      "title": "US-Iran Strait of Hormuz conflict escalation",
+      "url": "",
+      "published_at": "",
+      "class": "macro_relevant",
+      "usable": true,
+      "sectors": [],
+      "macro_themes": [
+        "geopolitics"
+      ],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.95
+    },
+    {
+      "source": "events",
+      "title": "US August CPI",
+      "url": "",
+      "published_at": "",
+      "class": "macro_relevant",
+      "usable": true,
+      "sectors": [],
+      "macro_themes": [
+        "inflation"
+      ],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.95
+    },
+    {
+      "source": "events",
+      "title": "China August CPI/PPI — PPI +3.8% y/y, CPI +0.8% y/y",
+      "url": "",
+      "published_at": "",
+      "class": "macro_relevant",
+      "usable": true,
+      "sectors": [],
+      "macro_themes": [
+        "inflation"
+      ],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.95
+    },
+    {
+      "source": "events",
+      "title": "US August NFP — +162k blowout",
+      "url": "",
+      "published_at": "",
+      "class": "macro_relevant",
+      "usable": true,
+      "sectors": [],
+      "macro_themes": [
+        "labor"
+      ],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.95
     },
     {
       "source": "finviz_export",
@@ -707,6 +1175,45 @@
     },
     {
       "source": "finviz_export",
+      "title": "Franco-Nevada Corp (FNV) (Q2 2026) Earnings Call Highlights: Record Revenue Surge of 57% and ...",
+      "url": "",
+      "published_at": "",
+      "class": "single_name",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "+",
+      "source_weight": 0.4,
+      "rank_score": 0.25
+    },
+    {
+      "source": "finviz_export",
+      "title": "Zacks efficiency screen and post-Q3 earnings momentum drive 5.25% JCI surge",
+      "url": "",
+      "published_at": "",
+      "class": "single_name",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "+",
+      "source_weight": 0.4,
+      "rank_score": 0.25
+    },
+    {
+      "source": "finviz_export",
+      "title": "Nvidia Hugging Face acquisition fuels AI rally, lifting KLA 7.47%",
+      "url": "",
+      "published_at": "",
+      "class": "single_name",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "+",
+      "source_weight": 0.4,
+      "rank_score": 0.25
+    },
+    {
+      "source": "finviz_export",
       "title": "Bank of America cuts Broadcom price target despite raising earnings estimates, cites rising exposure to Anthropic and OpenAI",
       "url": "",
       "published_at": "",
@@ -824,6 +1331,188 @@
     },
     {
       "source": "finviz_export",
+      "title": "Equinix Shares Rise 2% After Launch of AI Inference Program With Nvidia and Together AI",
+      "url": "",
+      "published_at": "",
+      "class": "single_name",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.2
+    },
+    {
+      "source": "finviz_export",
+      "title": "Fastenal beats Q2 estimates with EPS $0.33 (+14% YoY), revenue $2.4B (+15% YoY), notes gross margin pressure and lowers 2026 digital sales mix target",
+      "url": "",
+      "published_at": "",
+      "class": "single_name",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.2
+    },
+    {
+      "source": "finviz_export",
+      "title": "Walmart Gets $2.9 Billion Windfall, Makes Surprise Move",
+      "url": "",
+      "published_at": "",
+      "class": "single_name",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.2
+    },
+    {
+      "source": "finviz_export",
+      "title": "Home Depot announces the nationwide rollout of its Magic Apron AI-powered in-store assistant with localized, personalized shopping guidance now live in all U.S. stores.",
+      "url": "",
+      "published_at": "",
+      "class": "single_name",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.2
+    },
+    {
+      "source": "finviz_export",
+      "title": "GE's CPP Deal Isn't About EPS Accretion, Says Jefferies  It's 'An Impactful Move In The Blades & Vanes War Games'",
+      "url": "",
+      "published_at": "",
+      "class": "single_name",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.2
+    },
+    {
+      "source": "finviz_export",
+      "title": "ING Groep NV ADR reports fiscal Q2 2026 results with non-GAAP EPS $0.77 (+21% YoY) and revenue $7.2B (+10% YoY), beats EPS and revenue estimates",
+      "url": "",
+      "published_at": "",
+      "class": "single_name",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.2
+    },
+    {
+      "source": "finviz_export",
+      "title": "Keysight posts record Q3 with EPS $3.07 (+78% YoY), revenue $1.846B (+36% YoY), orders +56%, raises outlook amid supply constraints",
+      "url": "",
+      "published_at": "",
+      "class": "single_name",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.2
+    },
+    {
+      "source": "events",
+      "title": "Broadcom FQ3: AI beat, FY27 AI revenue double talk, Q4 guide a hair light",
+      "url": "",
+      "published_at": "",
+      "class": "single_name",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.2
+    },
+    {
+      "source": "events",
+      "title": "Oracle Q1 FY2027 earnings",
+      "url": "",
+      "published_at": "",
+      "class": "single_name",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.2
+    },
+    {
+      "source": "events",
+      "title": "Apple 'Surprise and Shine' event — foldable iPhone launch",
+      "url": "",
+      "published_at": "",
+      "class": "single_name",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.2
+    },
+    {
+      "source": "events",
+      "title": "Adobe Q3 FY2026 earnings + CEO succession",
+      "url": "",
+      "published_at": "",
+      "class": "single_name",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.2
+    },
+    {
+      "source": "events",
+      "title": "Kroger Q2 FY2026 earnings",
+      "url": "",
+      "published_at": "",
+      "class": "single_name",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.2
+    },
+    {
+      "source": "events",
+      "title": "Macy's Q2 FY2026 earnings",
+      "url": "",
+      "published_at": "",
+      "class": "single_name",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.2
+    },
+    {
+      "source": "events",
+      "title": "Google ad-tech antitrust ruling — no breakup",
+      "url": "",
+      "published_at": "",
+      "class": "single_name",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.2
+    },
+    {
+      "source": "finviz_export",
       "title": "Apples New Foldable iPhone Could Cost $2,000, Citi Says: TSMC, Amphenol Among Stocks To Watch",
       "url": "",
       "published_at": "",
@@ -879,6 +1568,58 @@
     {
       "source": "finviz_export",
       "title": "Analyst price target hikes on Fal.Con 2026 guidance drive CRWD 5.7% surge",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "+",
+      "source_weight": 0.4,
+      "rank_score": -0.05
+    },
+    {
+      "source": "finviz_export",
+      "title": "Record copper prices at $14,694/ton surge Freeport-McMoRan 7.8%",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "+",
+      "source_weight": 0.4,
+      "rank_score": -0.05
+    },
+    {
+      "source": "finviz_export",
+      "title": "Zacks Strong Buy upgrade and AI data center backlog drive 11% FIX surge",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "+",
+      "source_weight": 0.4,
+      "rank_score": -0.05
+    },
+    {
+      "source": "finviz_export",
+      "title": "CrowdStrike strong earnings spark cybersecurity rally lifting Fortinet 5%",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "+",
+      "source_weight": 0.4,
+      "rank_score": -0.05
+    },
+    {
+      "source": "finviz_export",
+      "title": "Carrier Beat Estimates, Raised Its Outlook, And Fell Anyway",
       "url": "",
       "published_at": "",
       "class": "noise",
@@ -1607,6 +2348,591 @@
     {
       "source": "finviz_export",
       "title": "Elevance Health CEO disclosed purchasing company shares after the stockâs recent post-earnings slide, signaling insider confidence in the insurer.",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "finviz_export",
+      "title": "EOG Resources to Present at Upcoming Conference",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "finviz_export",
+      "title": "EOG posts record EPS and free cash flow, reiterates 2026 guidance and highlights strong UAE unconventional exploration results",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "finviz_export",
+      "title": "Equinix, CPP Investments close US$4B atNorth acquisition with Equinix investing about US$895M for roughly 34% stake",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "finviz_export",
+      "title": "Eaton Shares Rise After UBS Upgrade to Buy",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "finviz_export",
+      "title": "Eaton shares rise after UBS upgrades the stock to Buy from Neutral and raises its price target to $515, citing strong sales growth and expected margin improvement.",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "finviz_export",
+      "title": "Ferguson Added to S&P 500 and the Plumbing Stock Pops. Where It Can Go Next.",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "finviz_export",
+      "title": "Canada tariffs put loonie, supply chains in focus as trade war deepens",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "finviz_export",
+      "title": "Top 10 S&P 500 Stocks of the Past Decade Share One Clear Theme",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "finviz_export",
+      "title": "Time to Buy the Dip on Defense Stocks?",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "finviz_export",
+      "title": "General Dynamics' GDIT wins $1.3B multi-year Enterprise Network Operations and Cybersecurity Support contract for Army National Guard, federal partners",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "finviz_export",
+      "title": "Summer Travel Season May Be Ending, but Marriott's Stock Is Worth Checking In For",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "finviz_export",
+      "title": "Deutsche Bank upgrades Hilton Worldwide to Buy from Hold, raises price target to $365",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "finviz_export",
+      "title": "HOOD Stock Ticks Up Overnight  Why This Analyst Sees Upside Of Over 19% From Here",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "finviz_export",
+      "title": "Jefferies raises Robinhood price target to $140 from $127, reiterates Buy after CFO meeting",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "finviz_export",
+      "title": "STX Stock: The Math Hidden In Its Price",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "finviz_export",
+      "title": "HPE posts record fiscal Q3 2026, raises FY26â27 outlook and expands Oracle AI data center networking collaboration with equity warrants",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "finviz_export",
+      "title": "GE Aerospace's $11.75B CPP acquisition pressures Howmet Aerospace shares",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "finviz_export",
+      "title": "Cleveland Clinic, RIKEN and IBM Team Advance to Finals for 2026 ACM Gordon Bell Prize",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "finviz_export",
+      "title": "IBM completes acquisition of HRL Laboratories to strengthen its quantum hardware, sensing and materials science capabilities.",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "finviz_export",
+      "title": "The New Miller Copilot Builder With Blue iQ Brings Adaptive Automation to Real-World Fabrication Environments",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "finviz_export",
+      "title": "Illinois Tool Works raises its annual dividend by 7% to $6.88 per share and wins board approval for a new $6 billion share repurchase authorization announced today.",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "finviz_export",
+      "title": "KLA Corp. stock outperforms competitors on strong trading day",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "IEEPA national emergency on U.S. bulk-power system equipment",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "U.S. Section 338 bans and tariff-scope reset vs Canada",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "House clears FY2027 CR through Dec. 11, shutdown risk off",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "OFAC sanctions remaining Iranian airlines (Operation Economic Outcast)",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "EO: Packers & Stockyards enforcement and interstate meat access",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "EO adjusting Defense Production Act energy delegations",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "August employment report: +162k, jobless rate 4.1%",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "U.S.–Iran tanker strikes; Hormuz supply shock, oil toward $100",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "China 360bn yuan recap of state banks and insurers",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "August PPI",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "ECB Governing Council decision (Berlin)",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "BoJ MPM: hike risk to ~1.25%",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "Treasury 9y11m / 29y11m reopenings",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "US August PPI",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "ECB rate decision (Berlin)",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "US-Canada trade war escalation — import bans and 50% tariffs",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "USMCA 4th round review talks (Washington)",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "Trump-Xi Washington summit (Sept 24) — Xi bringing CEO delegation",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "China August trade data — exports +25% y/y",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "Boeing SPEEA engineer contract negotiations",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "US government funding CR through Dec 11 — shutdown averted",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "US debt ceiling / X-date risk building",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "US midterm elections (Nov 3) — positioning builds",
       "url": "",
       "published_at": "",
       "class": "noise",
