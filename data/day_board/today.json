@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T11:40:51.438212-04:00",
+  "generated_at": "2026-09-09T11:40:57.418044-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -86,11 +86,11 @@
     }
   ],
   "flatten": {
-    "said": "0 priced buys \u00b7 0 lots \u00b7 cash $108,616.66",
+    "said": "0 priced buys \u00b7 0 lots \u00b7 cash $107,448.18",
     "bullets": [
       "0 priced buys",
       "0 lots",
-      "cash $108,616.66"
+      "cash $107,448.18"
     ]
   },
   "general": {
@@ -122,31 +122,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T11:39:21.473386-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-09_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 86399,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-09-09_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11427,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-09\n_Generated 2026-09-09T08:58:39.271762-04:00 \u00b7 export=data/exports/finviz_2026-09-09.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-09\n_Generated 2026-09-09T08:58:39.271762-04:00 \u00b7 export=data/exports/finviz_2026-09-09.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -299,6 +274,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.5, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': 0.9, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Consumer Cyclical={'score': -7.5, 'dir': 'down', 'conf': 0.6, 'source': 'llm'}, Consumer Defensive={'score': -2.925, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Energy={'score': 8.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Financial={'score': -6.075, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': -6.525, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Industrials={'score': -4.05, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T11:40:56.495935-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-09_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2249188,
+          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, ARGX, EXE, DVN, REGN"
+        }
+      ],
+      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, ARGX, EXE, DVN, REGN"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
