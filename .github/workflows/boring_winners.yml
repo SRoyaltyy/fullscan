@@ -23,20 +23,27 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
+      - name: Clock gate (no clone before 09:00)
+        if: github.event_name == 'workflow_run'
+        run: |
+          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          echo "ET_HM=$ET_HM"
+          if [ "$ET_HM" -lt 900 ]; then
+            echo "before 09:00 ET — gated Stock Book success is not a book (no checkout)"
+            echo "skip=yes" >> "$GITHUB_ENV"
+          fi
+
       - uses: actions/checkout@v4
+        if: env.skip != 'yes'
         with:
           fetch-depth: 1
 
-      - name: Skip until today's book exists
-        if: github.event_name == 'workflow_run'
+      - name: Skip if today's book is missing
+        if: env.skip != 'yes' && github.event_name == 'workflow_run'
         run: |
           DATE=$(TZ=America/New_York date +%F)
-          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
-          echo "DATE=$DATE ET_HM=$ET_HM"
-          if [ "$ET_HM" -lt 900 ]; then
-            echo "before 09:00 ET — gated Stock Book success is not a book"
-            echo "skip=yes" >> "$GITHUB_ENV"
-          elif [ ! -f "data/stock_book/${DATE}_stock_book.json" ]; then
+          echo "DATE=$DATE"
+          if [ ! -f "data/stock_book/${DATE}_stock_book.json" ]; then
             echo "no ${DATE} book — skip boring overlay"
             echo "skip=yes" >> "$GITHUB_ENV"
           fi
