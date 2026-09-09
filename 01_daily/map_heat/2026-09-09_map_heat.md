@@ -5,76 +5,77 @@ Export `finviz_2026-09-08.csv` · 11608 names · generated 2026-09-09T01:59:54.4
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7681.5 | +0.02% |
-| Nasdaq 100 (NQ) | 29559.75 | +0.09% |
-| Russell 2000 (ER2) | 2960.5 | -0.10% |
-| DJIA (YM) | 52752.0 | -0.15% |
-| VIX (VX) | 16.6 | -0.17% |
-| Crude Oil WTI (CL) | 94.96 | +2.03% |
-| Crude Oil Brent (QA) | 100.37 | +2.48% |
-| Natural Gas (NG) | 2.886 | -1.03% |
-| Heating Oil (HO) | 4.7096 | +3.06% |
-| Gasoline RBOB (RB) | 3.2756 | +0.66% |
-| Gold (GC) | 4444.4 | +0.15% |
-| Silver (SI) | 67.25 | +0.40% |
-| Copper (HG) | 6.764 | -0.82% |
-| Platinum (PL) | 1858.7 | +0.36% |
-| Palladium (PA) | 1369.5 | +0.03% |
-| USD (DX) | 98.515 | -0.02% |
-| EUR (6E) | 1.1635 | +0.03% |
-| JPY (6J) | 0.6511 | +0.00% |
-| GBP (6B) | 1.3542 | -0.03% |
-| AUD (6A) | 0.7223 | +0.02% |
-| CAD (6C) | 0.726 | +0.01% |
-| CHF (6S) | 1.23585 | -0.08% |
-| NZD (6N) | 0.58445 | -0.25% |
-| 10 Year Note (ZN) | 107.28125 | -0.03% |
-| 5 Year Note (ZF) | 105.390625 | -0.04% |
-| 2 Year Note (ZT) | 102.50390625 | -0.02% |
+| S&P 500 (ES) | 7655.25 | -0.34% |
+| Nasdaq 100 (NQ) | 29393.5 | -0.51% |
+| Russell 2000 (ER2) | 2947.2 | -0.56% |
+| DJIA (YM) | 52514.0 | -0.60% |
+| VIX (VX) | 16.95 | +1.93% |
+| Crude Oil WTI (CL) | 95.78 | +2.99% |
+| Crude Oil Brent (QA) | 100.74 | +2.88% |
+| Natural Gas (NG) | 2.849 | -2.30% |
+| Heating Oil (HO) | 4.7199 | +3.29% |
+| Gasoline RBOB (RB) | 3.2401 | -0.32% |
+| Gold (GC) | 4443.1 | +0.08% |
+| Silver (SI) | 66.9 | -0.15% |
+| Copper (HG) | 6.786 | -0.59% |
+| Platinum (PL) | 1865.9 | +0.68% |
+| Palladium (PA) | 1354.5 | -1.18% |
+| USD (DX) | 98.38 | -0.15% |
+| EUR (6E) | 1.1649 | +0.15% |
+| JPY (6J) | 0.6525000000000001 | +0.22% |
+| GBP (6B) | 1.3554 | +0.05% |
+| AUD (6A) | 0.7223 | +0.01% |
+| CAD (6C) | 0.7262 | +0.05% |
+| CHF (6S) | 1.23905 | +0.18% |
+| NZD (6N) | 0.58555 | -0.07% |
+| 10 Year Note (ZN) | 107.25 | -0.07% |
+| 5 Year Note (ZF) | 105.3671875 | -0.07% |
+| 2 Year Note (ZT) | 102.48828125 | -0.03% |
 | 30 Year Bond (ZB) | 108.5 | +0.12% |
-| Nikkei 225 (NKD) | 65140.0 | +0.05% |
-| DAX (DY) | 25806.0 | -0.78% |
-| Euro Stoxx 50 (EX) | 6353.0 | -0.94% |
-| Corn (ZC) | 533.25 | -0.09% |
-| Soybeans (ZS) | 1318.0 | +0.15% |
-| Wheat (ZW) | 751.75 | +0.64% |
-| Soybean oil (ZL) | 70.36 | +0.17% |
-| Soybean Meal (ZM) | 344.5 | +0.38% |
-| Oats (ZO) | 377.5 | +0.67% |
+| Nikkei 225 (NKD) | 64455.0 | -1.00% |
+| DAX (DY) | 25618.0 | -1.52% |
+| Euro Stoxx 50 (EX) | 6301.0 | -1.78% |
+| Corn (ZC) | 529.75 | -0.75% |
+| Soybeans (ZS) | 1313.5 | -0.25% |
+| Wheat (ZW) | 746.5 | -0.03% |
+| Soybean oil (ZL) | 70.06 | -0.23% |
+| Soybean Meal (ZM) | 343.8 | +0.15% |
+| Oats (ZO) | 374.75 | -0.07% |
 | Rough Rice (ZR) | 16.059 | +0.78% |
-| Coffee (KC) | 288.8 | -0.84% |
-| Sugar (SB) | 18.35 | +1.22% |
-| Cotton (CT) | 87.12 | +0.90% |
-| Cocoa (CC) | 5902.0 | -0.41% |
-| Orange Juice (JO) | 148.5 | -3.55% |
+| Coffee (KC) | 297.8 | +2.33% |
+| Sugar (SB) | 18.23 | +0.72% |
+| Cotton (CT) | 87.18 | +1.00% |
+| Cocoa (CC) | 5885.0 | -0.47% |
+| Orange Juice (JO) | 148.55 | -1.36% |
 | Lumber (LB) | 567.0 | +0.26% |
 | Live Cattle (LC) | 216.85 | +1.91% |
 | Lean Hogs (LH) | 84.275 | +2.37% |
 | Feeder Cattle (FC) | 325.5 | +1.66% |
-| Bitcoin (BTC) | 79850.0 | +1.61% |
-| 3 Month SOFR (SR3) | 96.135 | +0.00% |
-| 30 Day Fed Funds (ZQ) | 96.3 | +0.00% |
+| Bitcoin (BTC) | 79735.0 | +1.46% |
+| 3 Month SOFR (SR3) | 96.13 | -0.01% |
+| 30 Day Fed Funds (ZQ) | 96.3 | -0.00% |
 | Aluminum (ALI) | 3492.0 | +1.38% |
-| Canola (RS) | 840.1 | +0.07% |
+| Canola (RS) | 835.8 | -0.37% |
 | Coal Newcastle (NCF) | 147.5 | -0.10% |
 | Ethanol (ZK) | 2.06 | -0.96% |
-| Gasoil (G) | 1385.25 | +2.44% |
+| Gasoil (G) | 1385.25 | +2.48% |
 | Iron Ore (TIO) | 100.02 | +0.45% |
 | Steel HRC (HRC) | 1231.0 | +0.33% |
-| Ultra 10 Year Note (TN) | 109.046875 | +0.01% |
-| Ultra Bond (UB) | 110.03125 | +0.17% |
+| Ultra 10 Year Note (TN) | 109.0 | -0.04% |
+| Ultra Bond (UB) | 110.0625 | +0.17% |
 | Uranium (UX) | 89.8 | +0.17% |
 
 ## CALENDAR
 **SIZE GATE on** — high-impact print and/or mega-cap earnings today.
 
 Econ (importance ≥ 2):
-- 07:00 ET  MBA 30-Year Mortgage Rate  actual —  cons —  surprise —  prev 6.79%
+- 07:00 ET  MBA 30-Year Mortgage Rate  actual 6.85%  cons —  surprise —  prev 6.79%
+- 08:15 ET  ADP Employment Change Weekly  actual 12K  cons —  surprise —  prev 11.75K
 - 16:30 ET  API Crude Oil Stock Change  actual —  cons —  surprise —  prev -2.6M
 - 08:30 ET  PPI MoM  actual —  cons 0.4%  surprise —  prev 0%
 - 08:30 ET  Core PPI MoM  actual —  cons 0.3%  surprise —  prev 0.2%
 - 08:30 ET  Initial Jobless Claims  actual —  cons 205K  surprise —  prev 206K
-- 10:00 ET  Existing Home Sales  actual —  cons 3.99M  surprise —  prev 4.06M
+- 10:00 ET  Existing Home Sales  actual —  cons 3.98M  surprise —  prev 4.06M
 - 10:00 ET  Existing Home Sales MoM  actual —  cons -0.2%  surprise —  prev -1.7%
 - 12:00 ET  EIA Crude Oil Stocks Change  actual —  cons —  surprise —  prev -4.45M
 - 12:00 ET  EIA Gasoline Stocks Change  actual —  cons —  surprise —  prev -1.173M
@@ -89,12 +90,12 @@ Econ (importance ≥ 2):
 - 08:15 ET  ADP Employment Change Weekly  actual —  cons —  surprise —  prev —
 - 08:30 ET  NY Empire State Manufacturing Index  actual —  cons 14  surprise —  prev 20.60
 - 16:30 ET  API Crude Oil Stock Change  actual —  cons —  surprise —  prev —
-- 07:00 ET  MBA 30-Year Mortgage Rate  actual —  cons —  surprise —  prev —
-- 08:30 ET  Retail Sales MoM  actual —  cons —  surprise —  prev -0.6%
-- 08:30 ET  Export Prices MoM  actual —  cons —  surprise —  prev -1.3%
-- 08:30 ET  Import Prices MoM  actual —  cons —  surprise —  prev -0.4%
-- 08:30 ET  Retail Sales Control Group MoM  actual —  cons —  surprise —  prev —
-- 08:30 ET  Retail Sales Ex Autos MoM  actual —  cons —  surprise —  prev -0.3%
+- 07:00 ET  MBA 30-Year Mortgage Rate  actual —  cons —  surprise —  prev 6.85%
+- 08:30 ET  Retail Sales MoM  actual —  cons 0.3%  surprise —  prev -0.6%
+- 08:30 ET  Export Prices MoM  actual —  cons -0.5%  surprise —  prev -1.3%
+- 08:30 ET  Import Prices MoM  actual —  cons -0.1%  surprise —  prev -0.4%
+- 08:30 ET  Retail Sales Control Group MoM  actual —  cons -0.1%  surprise —  prev -0.4%
+- 08:30 ET  Retail Sales Ex Autos MoM  actual —  cons 0.1%  surprise —  prev -0.3%
 - 10:00 ET  Business Inventories MoM  actual —  cons 0.1%  surprise —  prev 0%
 - 10:00 ET  NAHB Housing Market Index  actual —  cons 34  surprise —  prev 35
 - 10:30 ET  EIA Crude Oil Stocks Change  actual —  cons —  surprise —  prev —
@@ -103,12 +104,11 @@ Econ (importance ≥ 2):
 - 14:00 ET  FOMC Economic Projections  actual —  cons —  surprise —  prev —
 - 14:30 ET  Fed Press Conference  actual —  cons —  surprise —  prev —
 - 16:00 ET  Net Long-term TIC Flows  actual —  cons —  surprise —  prev $172.7B
-- 08:30 ET  Building Permits Prel  actual —  cons —  surprise —  prev 1.433M
-- 08:30 ET  Housing Starts  actual —  cons —  surprise —  prev 1.239M
-- 08:30 ET  Building Permits MoM Prel  actual —  cons —  surprise —  prev 4.3%
-- 08:30 ET  Housing Starts MoM  actual —  cons —  surprise —  prev -12.4%
+- 08:30 ET  Building Permits Prel  actual —  cons 1.41M  surprise —  prev 1.433M
+- 08:30 ET  Housing Starts  actual —  cons 1.35M  surprise —  prev 1.239M
+- 08:30 ET  Building Permits MoM Prel  actual —  cons -1.6%  surprise —  prev 4.3%
+- 08:30 ET  Housing Starts MoM  actual —  cons 9.0%  surprise —  prev -12.4%
 - 08:30 ET  Initial Jobless Claims  actual —  cons —  surprise —  prev —
-- 08:30 ET  Philadelphia Fed Manufacturing Index  actual —  cons 47  surprise —  prev 47.4
 
 Mega-cap earnings:
 - AMC **ORCL**  EPS est 1.7395  (Oracle Corp)
@@ -127,14 +127,14 @@ Mega-cap earnings:
 - AMC **ABVX**  EPS est -0.9585  (Abivax ADR)
 
 Options event-vol flags (NOT direction):
-- **ORCL** exp 2026-09-11 ATM IV 0.0005 implied move 0.0% put/call OI —
-- **COST** exp 2026-09-11 ATM IV 0.0005 implied move 0.0% put/call OI —
-- **ADBE** exp 2026-09-11 ATM IV 0.002 implied move +0.0% put/call OI —
-- **AZO** exp 2026-09-18 ATM IV 0.0005 implied move +0.0% put/call OI —
-- **KR** exp 2026-09-11 ATM IV 0.0078 implied move +0.1% put/call OI —
-- **CPRT** exp 2026-09-18 ATM IV 0.0039 implied move +0.1% put/call OI —
-- **SUNB** exp 2026-09-18 ATM IV 0.0078 implied move +0.1% put/call OI —
-- **TCOM** exp 2026-09-18 ATM IV 0.0156 implied move +0.2% put/call OI —
+- **ORCL** exp 2026-09-11 ATM IV 0.0005 implied move 0.0% put/call OI 0.607
+- **COST** exp 2026-09-11 ATM IV 0.0005 implied move 0.0% put/call OI 9.382
+- **ADBE** exp 2026-09-11 ATM IV 0.002 implied move +0.0% put/call OI 2.165
+- **AZO** exp 2026-09-18 ATM IV 0.0005 implied move +0.0% put/call OI 4.143
+- **KR** exp 2026-09-11 ATM IV 0.0078 implied move +0.1% put/call OI 7.068
+- **CPRT** exp 2026-09-18 ATM IV 0.0039 implied move +0.1% put/call OI 1.258
+- **SUNB** exp 2026-09-18 ATM IV 0.0078 implied move +0.1% put/call OI 0.124
+- **TCOM** exp 2026-09-18 ATM IV 0.0156 implied move +0.2% put/call OI 11.047
 
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
@@ -254,31 +254,31 @@ COLD (1w):
 - **Innovation / Patent Based** 0.0% 1d -0.2% 1w · ARKK, XT, BULZ
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 2 min **MICC** Share Purchase - Long Term Incentive Plans (GlobeNewswire)
-- 5 min **PLTR** Palantir and Nebius form sovereign AI infrastructure partnership (Verdict)
-- 10 min **COO,AVAV,SAIL,SIG,AEO** Wednesday's Company Earnings Slate (MarketWatch)
-- 12 min **V** Visa and World Bank Group Announce New Risk-Sharing Initiative to Expand Digital Payments and Financial Inclusion in Emerging Markets (Business Wire)
-- 23 min **AAPL** AAPL Stock Has Mostly Struggled On iPhone Launch Days: Can John Ternus 'Fold' Apple Towards Better Days? (Stocktwits)
-- 25 min **META** META Stock Rises Premarket: Zuckerberg Says Threads Is Either Bigger Than X Or Close In Scale (Stocktwits)
-- 28 min **PKX** Posco expands production capacity for premium automotive steel (Just Auto)
-- 29 min **AAPL** A Foldable iPhone Will Be Apple's Biggest Test in Years (Barrons.com)
-- 33 min **RKLB,QCOM,ORCL,GME,TSLA** Nasdaq, Dow, S&P 500 Futures Mixed As Oil Hits $100 Again: QCOM, ORCL, AAPL, AMD, TSLA, RKLB, HOOD, GME In Focus (Stocktwits)
-- 34 min **ACN,GOOG,GOOGL** Accenture Dedicates 1,000 Engineers to Googles Agentic AI  And Exposes Where the Real Bottleneck Lives (Forkast News)
-- 36 min **UBS** Oil Price Hits $100 a Barrel, Sending Bond Yields Higher (Barrons.com)
-- 39 min **E** McDermott wins subsea contract for Cronos gas field off Cyprus (Offshore Technology)
-- 42 min **AGI,AEM** Regency Silver Corp Acquires Past Producing Jabali Gold Project in Sonora, Mexico - Adjacent to Alamos Gold's Mulatos Mine (TMX Newsfile)
-- 46 min **XYZ** Jack Dorsey's Block Applies for Bank Charter to Custody Bitcoin (decrypt)
-- 48 min **COIN** Coinbase CLARITY Act Optimistic as Cloture Vote Faces Ethics Fight (Cryptonews)
-- 52 min **MSCI** Garden Apartment Pricing Reflects Rising Supply Risk (CRE Daily)
-- 57 min **SNAP** SNAP Stock Rises Premarket: CEO Sets 2027 Target To Move Beyond Ads Into Commerce, Retail Still Bearish (Stocktwits)
-- 57 min **SNAP** Stock Rises Premarket: CEO Sets 2027 Target To Move Beyond Ads Into Commerce, Retail Still Bearish (Stocktwits)
-- 58 min **GDDY** UK Satellite Cities Outpace Larger Neighbours for Entrepreneurial Growth, GoDaddy Research Finds (PR Newswire)
-- 1 hour **QCOM,AMD,AMZN,NVDA** QCOM Stock Rises Premarket: CFO Touts Well-Priced Shares After Amazon Deal And  Port Once AI Stack For Rival Chips (Stocktwits)
-- 1 hour **AMZN,NWG** Amazon Is Selling Its First Sterling Bonds in Four-Part Deal (Bloomberg)
-- 1 hour **CBRE,CWK** Lower Manhattan Office Leasing Surges as Rents Rise (CRE Daily)
-- 1 hour **BBIO** Oral Infigratinib Shows Meaningful Benefits Beyond Growth Within 52 Weeks in Children with Achondroplasia in the Phase 3 PROPEL 3 Trial (GlobeNewswire)
-- 1 hour **SKHY** Samsung turns to Japan for packaging edge, narrows HBM gap with SK Hynix (DigiTimes)
-- 1 hour **AAPL** Apple's Annual Product Event: A Foldable iPhone Will Be the Tech Company's Biggest Test in Years (Barrons.com)
+- 1 min **CNM** Core & Main Q2 adjusted earnings beat estimates as revenue rises 2.5% (InvestorsHub)
+- 2 min **RXO** RXO reports August truckload gross profit per load increase of more than 10% (InvestorsHub)
+- 3 min **SUNB** Sunbelt Rentals shares rise 3% after Q1 results and higher fiscal 2027 guidance (InvestorsHub)
+- 3 min **UFG** Uni-Fuels Reports Record First-Half 2026 Financial Results and Raises Full-Year Revenue Guidance to US$340M-US$360M (GlobeNewswire)
+- 4 min **TV,ICE,ORCL,LH** Moonwalk Biosciences Announces $70 Million Series B: NYSE Content Update (PR Newswire)
+- 4 min **SCNX** SCIENTURE to Present at the H.C. Wainwright 28th Annual Global Investment Conference on September 14, 2026 (GlobeNewswire)
+- 4 min **WKEY** WISeKey and its Subsidiaries, SEALSQ and WISeSat, Present Commercial Quantum Spatial Orbital Cloud (QSOC) at the International Space Summit in Paris (GlobeNewswire)
+- 5 min **CHWY** Chewy Q2 earnings meet estimates as company raises full-year outlook (InvestorsHub)
+- 6 min **ODD** Oddity Tech shares rise 24% after Q2 earnings beat and updated outlook (InvestorsHub)
+- 7 min **LULU,NKE** Why Nike and Lululemon are struggling: 'A lot of surface area to defend' (Yahoo Finance)
+- 7 min **NVDA** Cantor Has Strong Message for Nvidia Stock Investors (GuruFocus.com)
+- 7 min **AGRZ** AGROZ INC. ENTERS INTO STRATEGIC SUPPLY AGREEMENT WITH HARVEST HIVE (PR Newswire)
+- 7 min **JILL** J.Jill shares rise 14.8% after Q2 earnings beat and higher annual outlook (InvestorsHub)
+- 8 min **STLA** Stellantis Pulls Back 201,976 Jeeps on a Software Fault (GuruFocus.com)
+- 9 min **KFY** Korn Ferry Q1 earnings beat estimates as Q2 EPS guidance falls below consensus (InvestorsHub)
+- 10 min **SIG** Signet shares rise 9% after Q2 earnings beat and higher annual guidance (InvestorsHub)
+- 11 min **CMPS** Compass Pathways reports 52-week Phase 3 COMP005 results for COMP360 (InvestorsHub)
+- 12 min **FTK** Flotek raises 2026 revenue guidance to $360 million-$370 million (InvestorsHub)
+- 13 min **ROKU** Roku and NFL expand NFL Zone to Canada, Mexico and Brazil (InvestorsHub)
+- 14 min **SYY** Sysco raises mid-term growth targets and outlines $500 million AI efficiency programme (InvestorsHub)
+- 14 min **AFL** Aflac commemorates National Childhood Cancer and Sickle Cell Disease Awareness Month (PR Newswire)
+- 15 min **JILL** Why Is JILL Stock Rising Today? (Stocktwits)
+- 16 min **BRZE** This Marketing Software  Stock's 11% Slump Shows Peril of Not Meeting the AI Hype (Barrons.com)
+- 16 min **META,GOOGL,GOOG,AMZN** Meta's stock jumps as new personal AI agent Muse addresses a major investor concern (MarketWatch)
+- 17 min **GOOGL,GOOG** Google to invest 13 billion in Finland AI data centers (Quartz)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.

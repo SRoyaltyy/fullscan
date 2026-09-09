@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T08:58:39.816452-04:00",
+  "generated_at": "2026-09-09T08:59:56.871395-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -84,45 +84,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T06:45:34.318832-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-09_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1446043,
-          "preview": "1d BUY NVT, DINO, UGP \u00b7 SELL BGS, SMPL, BRBR, GIS, CPB, FLO, INFY, HRL"
-        },
-        {
-          "path": "data/stock_book/2026-09-09_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-09-09_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2542,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "01_daily/2026-09-09_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 77556,
-          "preview": "# Stock book \u2014 2026-09-09\n_Generated 2026-09-09T06:45:33.035015-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY NVT, DINO, UGP \u00b7 SELL BGS, SMPL, BRBR, GIS, CPB, FLO, INFY, HRL \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 # Stock book \u2014 2026-09-09\n_Generated 2026-09-09T06:45:33.035015-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "flatten",
       "title": "Flatten live card",
@@ -304,6 +265,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-09\n_Generated 2026-09-09T08:58:39.271762-04:00 \u00b7 export=data/exports/finviz_2026-09-09.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11614 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11606 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T08:59:56.361648-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-09_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 27,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-09_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 17231,
+          "preview": "# MAP HEAT \u2014 2026-09-09\nExport `finviz_2026-09-08.csv` \u00b7 11608 names \u00b7 generated 2026-09-09T01:59:54.403331-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-09\nExport `finviz_2026-09-08.csv` \u00b7 11608 names \u00b7 generated 2026-09-09T01:59:54.403331-04:00"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
