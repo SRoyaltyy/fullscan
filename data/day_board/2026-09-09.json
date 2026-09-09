@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T09:41:55.319534-04:00",
+  "generated_at": "2026-09-09T09:42:06.511856-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -408,12 +408,12 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2660",
-          "size": 8492786
+          "size": 8482198
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "CFFN, SHEL, AMD, WDS, TECK"
+        "AVO, SHEL, CFFN, PBR, EC"
       ]
     },
     {
@@ -530,7 +530,7 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2660",
-          "size": 8492786
+          "size": 8482198
         },
         {
           "key": "join",
@@ -548,7 +548,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5118",
-          "size": 814838
+          "size": 816486
         },
         {
           "key": "book_json",
@@ -1588,6 +1588,31 @@
         }
       ],
       "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, HRMY, FTK, CDNA, GMAB"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T09:42:05.768895-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-09_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7658911,
+          "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AVO, RPRX, SKM, CFFN, HSBC"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-09_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8482198,
+          "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AVO, SHEL, CFFN, PBR, EC"
+        }
+      ],
+      "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AVO, RPRX, SKM, CFFN, HSBC \u00b7 2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AVO, SHEL, CFFN, PBR, EC"
     }
   ],
   "href": {
