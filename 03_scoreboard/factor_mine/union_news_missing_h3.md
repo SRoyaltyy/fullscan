@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ news_missing, no 🚨
 
-Cash book **+3.51%** ($10,351) · signal-only (no cash/fees) was +5.14%. Starts YES **1/18**. Fills 32 · skips 32 · realized $+351.32.
+Cash book **+3.51%** ($10,351) · signal-only (no cash/fees) was +5.14%. Starts YES **1/19**. Fills 32 · skips 32 · realized $+351.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -138,6 +138,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-03 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-04 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-07 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-08 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -159,8 +160,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-01 | -6.30 | $207.03 | CRK×91, MOS×52, SLI×499, GGB×292, MT×17, TX×23, ANET×6, DLO×82 | $10,374.55 | +86.78 | +0.00 | — | CRK, MOS, SLI, GGB, MT, TX, ANET, DLO | $10,351.31 | $10,351.31 | — |
 | 2026-09-02 | -3.83 | $10,351.31 | — | $10,351.31 | +0.00 | +0.00 | — | — | $10,351.31 | $10,351.31 | — |
 | 2026-09-03 | -0.90 | $10,351.31 | — | $10,351.31 | +0.00 | +0.00 | — | — | $10,351.31 | $10,351.31 | — |
-| 2026-09-04 | — | $10,351.31 | — | $10,351.31 | +0.00 | +0.00 | — | — | $10,351.31 | $10,351.31 | — |
+| 2026-09-04 | +2.25 | $10,351.31 | — | $10,351.31 | +0.00 | +0.00 | — | — | $10,351.31 | $10,351.31 | — |
 | 2026-09-07 | — | $10,351.31 | — | $10,351.31 | +0.00 | +0.00 | — | — | $10,351.31 | $10,351.31 | — |
+| 2026-09-08 | -11.47 | $10,351.31 | — | $10,351.31 | +0.00 | +0.00 | — | — | $10,351.31 | $10,351.31 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -206,9 +208,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-27 09:30 ET | **BUY** | `CRK` | 91 | $14.09 | $2.26 | — | $9,073.70 | — | union ∩ news_missing, no 🚨; gate news=missing; list flatten; ret5=+1.1; leftover $1294.77 | join🟢 sector🔴 gen🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `MOS` | 52 | $24.84 | $2.15 | — | $7,779.87 | — | union ∩ news_missing, no 🚨; gate news=missing; list flatten; ret5=+13.0; leftover $1294.77 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟢 |
 | 2026-08-27 09:30 ET | **BUY** | `SLI` | 499 | $2.59 | $6.44 | — | $6,481.02 | — | union ∩ news_missing, no 🚨; gate news=missing; list flatten; ret5=+4.2; leftover $1294.77 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `GGB` | 292 | $4.42 | $3.77 | — | $5,186.62 | — | union ∩ news_missing, no 🚨; gate news=missing; list mover_buy; ret5=-8.6; leftover $1294.77 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `MT` | 17 | $75.12 | $2.04 | — | $3,907.54 | — | union ∩ news_missing, no 🚨; gate news=missing; list mover_buy; ret5=-2.2; leftover $1294.77 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-27 09:30 ET | **BUY** | `TX` | 23 | $55.20 | $2.06 | — | $2,635.88 | — | union ∩ news_missing, no 🚨; gate news=missing; list mover_buy; ret5=+3.0; leftover $1294.77 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `GGB` | 292 | $4.42 | $3.77 | — | $5,186.62 | — | union ∩ news_missing, no 🚨; gate news=missing; list mover_buy; 🔵; ret5=-8.6; leftover $1294.77 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `MT` | 17 | $75.12 | $2.04 | — | $3,907.54 | — | union ∩ news_missing, no 🚨; gate news=missing; list mover_buy; 🔵; ret5=-2.2; leftover $1294.77 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 09:30 ET | **BUY** | `TX` | 23 | $55.20 | $2.06 | — | $2,635.88 | — | union ∩ news_missing, no 🚨; gate news=missing; list mover_buy; 🔵; ret5=+3.0; leftover $1294.77 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `ANET` | 6 | $190.90 | $2.01 | — | $1,488.47 | — | union ∩ news_missing, no 🚨; gate news=missing; list mover_buy; 🔵; ret5=-5.1; leftover $1294.77 | join🟢 sector🟢 gen🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 09:30 ET | **BUY** | `DLO` | 82 | $15.60 | $2.24 | — | $207.03 | — | union ∩ news_missing, no 🚨; gate news=missing; list mover_buy; 🔵; ret5=+7.1; leftover $1294.77 | join🟢 sector🟢 gen🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $207.03 | ▲ close $10,395.58 vs 09:30 $10,358.15 (session +60.39) | 16:00 close · cash $207.03 · equity $10,395.58 vs 09:30 $10,358.15 (+37.43; session marks +60.39) · 8 name(s) marked open→close (per-name table). CRK×91 09:30 $14.09 → close $14.50 +37.31; MOS×52 09:30 $24.84 → close $24.16 -35.36; SLI×499 09:30 $2.59 → close $2.61 +9.98; GGB×292 09:30 $4.42 → close $4.46 +11.68; MT×17 09:30 $75.12 → close $74.53 -10.03; TX×23 09:30 $55.20 → close $55.13 -1.61; ANET×6 09:30 $190.90 → close $202.25 +68.10; DLO×82 09:30 $15.60 → close $15.36 -19.68 | — |
@@ -234,6 +236,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,351.31 | ▲ close $10,351.31 vs 09:30 $10,351.31 (session +0.00) | 16:00 close · cash $10,351.31 · no lots left · equity $10,351.31. | — |
 | 2026-09-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,351.31 | ▲ 09:30 equity $10,351.31 vs yday $10,351.31 (+0.00) | 09:30 open · cash $10,351.31 · no holdings · equity $10,351.31 vs prior close $10,351.31 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,351.31 | ▲ close $10,351.31 vs 09:30 $10,351.31 (session +0.00) | 16:00 close · cash $10,351.31 · no lots left · equity $10,351.31. | — |
+| 2026-09-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,351.31 | ▲ 09:30 equity $10,351.31 vs yday $10,351.31 (+0.00) | 09:30 open · cash $10,351.31 · no holdings · equity $10,351.31 vs prior close $10,351.31 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,351.31 | ▲ close $10,351.31 vs 09:30 $10,351.31 (session +0.00) | 16:00 close · cash $10,351.31 · no lots left · equity $10,351.31. | — |
 
 ## Not taken
 

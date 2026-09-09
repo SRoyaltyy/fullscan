@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-12.04%** ($8,796) · signal-only (no cash/fees) was +1.52%. Starts YES **5/18**. Fills 34 · skips 9 · realized $-1204.15.
+Cash book **-12.04%** ($8,796) · signal-only (no cash/fees) was +0.81%. Starts YES **5/19**. Fills 34 · skips 11 · realized $-1204.15.
 
 ## How this sleeve decides (like you are 10)
 
@@ -111,6 +111,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 | `NIQ` | 235 | $18.35 | $18.66 | +72.85 | $18.82 | +37.60 | +110.45 | +14.10 | +51.70 |
 | 2026-09-07 | `INO` | 3320 | $1.36 | $1.35 | -33.20 | — | +0.00 | -33.20 | +199.20 | — |
 | 2026-09-07 | `NIQ` | 235 | $18.82 | $18.52 | -70.50 | — | +0.00 | -70.50 | -18.80 | — |
+| 2026-09-08 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -132,8 +133,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-01 | -6.30 | $1.43 | NIQ×230, INO×3320 | $8,402.43 | -331.00 | +199.20 | — | NIQ | $4,382.19 | $8,598.59 | INO×3320 |
 | 2026-09-02 | -3.83 | $4,382.19 | INO×3320 | $8,565.39 | -33.20 | +232.40 | — | — | $4,382.19 | $8,797.79 | INO×3320 |
 | 2026-09-03 | -0.90 | $4,382.19 | INO×3320 | $8,830.99 | +33.20 | +7.65 | NIQ | — | $8.16 | $8,835.61 | INO×3320, NIQ×235 |
-| 2026-09-04 | — | $8.16 | INO×3320, NIQ×235 | $8,941.66 | +106.05 | +4.40 | — | — | $8.16 | $8,946.06 | INO×3320, NIQ×235 |
+| 2026-09-04 | +2.25 | $8.16 | INO×3320, NIQ×235 | $8,941.66 | +106.05 | +4.40 | — | — | $8.16 | $8,946.06 | INO×3320, NIQ×235 |
 | 2026-09-07 | — | $8.16 | INO×3320, NIQ×235 | $8,842.36 | -103.70 | +0.00 | — | INO, NIQ | $8,795.84 | $8,795.84 | — |
+| 2026-09-08 | -11.47 | $8,795.84 | — | $8,795.84 | -0.00 | +0.00 | — | — | $8,795.84 | $8,795.84 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -209,6 +211,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-07 09:30 ET | **SELL** | `INO` | 3320 | $1.35 | $43.41 | $+112.96 | $4,446.74 | ▲ +112.96 after sell → book $8,798.94; vs 09:30 mark -43.42 | dropped from list after 6 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟡 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-07 09:30 ET | **SELL** | `NIQ` | 235 | $18.52 | $3.11 | $-24.94 | $8,795.84 | ▼ -24.94 after sell → book $8,795.84; vs 09:30 mark -3.10 | dropped from list after 2 sess (min 1) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-09-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,795.84 | ▲ close $8,795.84 vs 09:30 $8,842.36 (session +0.00) | 16:00 close · cash $8,795.84 · no lots left · equity $8,795.84. | — |
+| 2026-09-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,795.84 | ▲ 09:30 equity $8,795.84 vs yday $8,795.84 (-0.00) | 09:30 open · cash $8,795.84 · no holdings · equity $8,795.84 vs prior close $8,795.84 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,795.84 | ▲ close $8,795.84 vs 09:30 $8,795.84 (session +0.00) | 16:00 close · cash $8,795.84 · no lots left · equity $8,795.84. | — |
 
 ## Not taken
 
@@ -223,3 +227,5 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-19 | `AMTX` | hard_red | hard-red S=-7.20 sit; no new buys |
 | 2026-08-19 | `PSX` | hard_red | hard-red S=-7.20 sit; no new buys |
 | 2026-09-01 | `VFF` | hard_red | hard-red S=-6.30 sit; no new buys |
+| 2026-09-08 | `NIQ` | hard_red | hard-red S=-11.47 sit; no new buys |
+| 2026-09-08 | `INO` | hard_red | hard-red S=-11.47 sit; no new buys |

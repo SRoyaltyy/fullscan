@@ -2,11 +2,11 @@
 
 Leak-free 09:30 inputs only. Official factor-mine books and live `flatten_robust` are untouched. Inverse / leveraged products are dropped — they are not a stock that won.
 
-SPY close-to-close down days: **127** / 279 sessions. Liquid common-stock name-days: **1077928**.
+SPY close-to-close down days: **133** / 290 sessions. Liquid common-stock name-days: **1077928**.
 
 ## Verdict
 
-On SPY close-to-close down days, a liquid common stock's open→close is green 39.4% of the time (mean -0.48%, n=489521). That is the hurdle. Prior-tape cameras (NR7, last-green, washed, breakout, SMA side) do not clear it — a few raise the win-rate and still lose money. The cleanest tape signal is a bounce the *next* morning: after a red SPY day, names already down ≥3% print a next-session open→close win 53.3% of the time (lift +3.2pp, mean +0.24%). That is winning *after* the red day, not during it. On all 127 red days (sector ETFs, no Finviz): Energy/oil is the only long sleeve that actually makes money — XLE 55.9% / +0.14%, XOP 60.6% / +0.18%, USO 54.3% / +0.40%. XLV Healthcare is 47.2% / -0.10% — more often green than a random stock, still a negative mean. UUP (dollar) 66.9% / +0.08% (risk-off). Inverse SPY ETFs are the control and should win; they are not the answer. On the smaller Finviz-overlap slice, Healthcare *names* win 50.5% vs a tagged base of 42.2% (lift +8.3pp, mean +0.31%, n=1849, t=2.236). That is a date-cluster (exports exist), not the full 127-day ETF result. Knowable at 09:30 the morning *after* a red SPY day: tagged Healthcare names win 60.8% (lift +18.3pp, mean +0.98%, n=1824, t=7.069). Biotech / diagnostics are in the same pocket. That is the strongest name-level edge in this mine. Tagged-sector table leader: Energy 52.6% / +0.03% (n=663). 5 near-miss tape cameras lift the same-day win-rate ≥3pp but still have a negative mean — they win more often and still lose money.
+On SPY close-to-close down days, a liquid common stock's open→close is green 39.4% of the time (mean -0.48%, n=489521). That is the hurdle. Prior-tape cameras (NR7, last-green, washed, breakout, SMA side) do not clear it — a few raise the win-rate and still lose money. The cleanest tape signal is a bounce the *next* morning: after a red SPY day, names already down ≥3% print a next-session open→close win 53.3% of the time (lift +3.2pp, mean +0.24%). That is winning *after* the red day, not during it. On all 127 red days (sector ETFs, no Finviz): Energy/oil is the only long sleeve that actually makes money — XLE 55.9% / +0.14%, XOP 60.6% / +0.18%, USO 54.3% / +0.40%. XLV Healthcare is 47.2% / -0.10% — more often green than a random stock, still a negative mean. UUP (dollar) 66.9% / +0.08% (risk-off). Inverse SPY ETFs are the control and should win; they are not the answer. On the smaller Finviz-overlap slice, Healthcare *names* win 50.5% vs a tagged base of 42.2% (lift +8.3pp, mean +0.31%, n=1849, t=2.236). That is a date-cluster (exports exist), not the full 127-day ETF result. Knowable at 09:30 the morning *after* a red SPY day: tagged Healthcare names win 60.8% (lift +18.3pp, mean +0.98%, n=1824, t=7.069). Biotech / diagnostics are in the same pocket. That is the strongest name-level edge in this mine. Tagged-sector table leader: Energy 52.6% / +0.03% (n=663). 3 near-miss tape cameras lift the same-day win-rate ≥3pp but still have a negative mean — they win more often and still lose money.
 
 ## What counts as a down day
 
@@ -78,25 +78,12 @@ Two-day `s_red` overlays are not keepers. Camera rows need n≥80. **Strong** = 
 | `fv_short20` | spy_oc_down | 1384 | 48.4% | +4.0pp | +0.20% | 1.876 | short float ≥ 20% |
 | `fv_rsi30` | spy_oc_down | 343 | 47.5% | +3.1pp | +0.55% | 0.846 | Finviz RSI(14) ≤ 30 (prior export) |
 
-### Camera overlay (thin 17-session panel)
-
-| Feature | Regime | n | Win% | Lift | Mean oc | t | Why |
-|---|---|---:|---:|---:|---:|---:|---|
-| `cam_nneg_ge3` | spy_oc_down | 125 | 53.6% | +15.8pp | +0.24% | 0.547 | factor-mine −N ≥ 3 |
-| `cam_alarm` | spy_oc_down | 97 | 52.6% | +14.7pp | +0.90% | 1.718 | factor-mine 🚨 |
-| `cam_e_miss` | spy_oc_down | 175 | 50.3% | +12.4pp | +0.18% | 0.48 | E miss |
-| `cam_e_miss` | spy_cc_down | 124 | 50.8% | +11.4pp | +0.27% | 0.574 | E miss |
-| `cam_alarm` | prior_spy_red | 81 | 54.3% | +4.3pp | +0.99% | 1.779 | factor-mine 🚨 |
-| `cam_nneg_ge3` | prior_spy_red | 105 | 54.3% | +4.2pp | +0.12% | 0.239 | factor-mine −N ≥ 3 |
-
 ## Near-misses — higher win%, still red money
 
 | Feature | Regime | n | Win% | Lift | Mean oc | t | Why |
 |---|---|---:|---:|---:|---:|---:|---|
 | `fv_materials` | spy_cc_down | 704 | 49.4% | +7.2pp | -0.06% | -0.59 | Basic Materials |
-| `cam_nneg_le2` | spy_cc_down | 239 | 45.2% | +5.8pp | -0.44% | -1.508 | factor-mine −N ≤ 2 |
 | `fv_staples` | spy_cc_down | 490 | 45.3% | +3.1pp | -0.09% | -0.988 | Consumer staples |
-| `cam_last_green` | spy_cc_down | 245 | 42.4% | +3.1pp | -0.58% | -2.007 | factor-mine last bar green |
 | `ret5_ge_8` | spy_cc_down | 46685 | 42.4% | +3.1pp | -0.68% | -23.485 | prior 5-session ≥ +8% |
 
 ## Sector ETFs on every SPY-down day

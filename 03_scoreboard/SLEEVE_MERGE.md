@@ -1,6 +1,6 @@
 # Combined sleeve — .io × mover
 
-_Generated 2026-09-04T14:51:52 — 2026-08-13 → 2026-09-04_
+_Generated 2026-09-09T04:58:47 — 2026-08-13 → 2026-09-08_
 
 **Method:** one cash-accounted flatten-switch book.
 
@@ -19,56 +19,60 @@ Live book is **hard-red hold-only**: one Futubull cash account, flatten on a gre
 
 | Start | Final | Return | Max DD | Trades | Win | vs .io 2w_size | Gate |
 |---:|---:|---:|---:|---:|---:|---|---|
-| $100,000 | $116,477.72 | **+16.48%** | 3.64% | 39 | 48.7% | BEATS +12.85% | **FAIL** |
+| $100,000 | $115,409.94 | **+15.41%** | 3.47% | 61 | 50.8% | BEATS +7.57% | **FAIL** |
 
-Futubull fees paid **$1,600.80** (in $787.55 / out $813.25). Whole shares. A name that is already held ties up cash — later names that day only see leftover cash, so some tickets do not fill.
+Futubull fees paid **$1,902.30** (in $937.73 / out $964.57). Whole shares. A name that is already held ties up cash — later names that day only see leftover cash, so some tickets do not fill.
 
 | Side | Trades | Win | P&L |
 |---|---:|---:|---:|
-| BUY | 39 | 48.7% | $16,477.74 |
+| BUY | 61 | 50.8% | $15,409.90 |
 | SELL | 0 | 0.0% | $0.00 |
 
 ## 15% every 2 weeks
 
 Target **+15%** per calendar fortnight (14 days) and per 10 trading sessions.
-Fortnights: **FAIL** (min 10.46). 10-session blocks: **FAIL** (min 10.46). Rolling: **FAIL** (min 3.95).
+Fortnights: **FAIL** (min 10.73). 10-session blocks: **FAIL** (min 10.73). Rolling: **FAIL** (min 4.23).
 
 | Kind | Start | End | n | Return | Gate |
 |---|---|---|---:|---:|---|
-| fortnight | 2026-08-13 | 2026-08-26 | 10 | +10.46% | FAIL |
-| fortnight | 2026-08-27 | 2026-09-04 | 7 | +6.85% | partial |
-| block | 2026-08-13 | 2026-08-26 | 10 | +10.46% | FAIL |
-| block | 2026-08-27 | 2026-09-04 | 7 | +6.85% | partial |
-| roll | 2026-08-13 | 2026-08-26 | 10 | +10.46% | FAIL |
-| roll | 2026-08-14 | 2026-08-27 | 10 | +6.94% | FAIL |
-| roll | 2026-08-17 | 2026-08-28 | 10 | +3.95% | FAIL |
-| roll | 2026-08-18 | 2026-08-31 | 10 | +5.96% | FAIL |
-| roll | 2026-08-19 | 2026-09-01 | 10 | +8.86% | FAIL |
-| roll | 2026-08-20 | 2026-09-02 | 10 | +11.15% | FAIL |
-| roll | 2026-08-21 | 2026-09-03 | 10 | +5.20% | FAIL |
-| roll | 2026-08-24 | 2026-09-04 | 10 | +5.19% | FAIL |
+| fortnight | 2026-08-13 | 2026-08-26 | 10 | +10.73% | FAIL |
+| fortnight | 2026-08-27 | 2026-09-08 | 9 | +5.49% | partial |
+| block | 2026-08-13 | 2026-08-26 | 10 | +10.73% | FAIL |
+| block | 2026-08-27 | 2026-09-08 | 9 | +5.49% | partial |
+| roll | 2026-08-13 | 2026-08-26 | 10 | +10.73% | FAIL |
+| roll | 2026-08-14 | 2026-08-27 | 10 | +7.57% | FAIL |
+| roll | 2026-08-17 | 2026-08-28 | 10 | +4.68% | FAIL |
+| roll | 2026-08-18 | 2026-08-31 | 10 | +6.91% | FAIL |
+| roll | 2026-08-19 | 2026-09-01 | 10 | +9.35% | FAIL |
+| roll | 2026-08-20 | 2026-09-02 | 10 | +11.17% | FAIL |
+| roll | 2026-08-21 | 2026-09-03 | 10 | +5.00% | FAIL |
+| roll | 2026-08-24 | 2026-09-04 | 10 | +4.23% | FAIL |
+| roll | 2026-08-25 | 2026-09-07 | 10 | +4.33% | FAIL |
+| roll | 2026-08-26 | 2026-09-08 | 10 | +4.40% | FAIL |
 
 ## Day route
 
 | Date | Score | Route | Equity | Cash | core | tac.mv |
 |---|---:|---|---:|---:|---:|---:|
-| 2026-08-13 | +8.53 | io | $99,811.65 | $9.99 | 9 | 0 |
-| 2026-08-14 | +5.50 | io | $101,935.75 | $9.99 | 9 | 0 |
-| 2026-08-17 | +2.25 | io | $102,651.45 | $9.99 | 9 | 0 |
-| 2026-08-18 | -6.20 | hold | $102,916.72 | $102,916.72 | 0 | 0 |
-| 2026-08-19 | -7.20 | hold | $102,916.72 | $102,916.72 | 0 | 0 |
-| 2026-08-20 | +1.12 | mover | $104,792.81 | $203.54 | 0 | 10 |
-| 2026-08-21 | +3.25 | mover | $110,715.55 | $161.07 | 0 | 10 |
-| 2026-08-24 | -5.17 | hold | $110,735.60 | $110,735.60 | 0 | 0 |
-| 2026-08-25 | +1.80 | io | $110,622.58 | $366.65 | 6 | 0 |
-| 2026-08-26 | +2.02 | io | $110,249.65 | $366.65 | 6 | 0 |
-| 2026-08-27 | — | io | $109,009.20 | $41.58 | 9 | 0 |
-| 2026-08-28 | +0.75 | io | $106,702.82 | $23.07 | 4 | 0 |
-| 2026-08-31 | -5.85 | hold | $109,052.82 | $23.07 | 4 | 0 |
-| 2026-09-01 | -6.30 | hold | $112,030.53 | $347.07 | 1 | 0 |
-| 2026-09-02 | -3.83 | hold | $116,477.72 | $116,477.72 | 0 | 0 |
-| 2026-09-03 | -0.90 | io | $116,477.72 | $116,477.72 | 0 | 0 |
-| 2026-09-04 | — | io | $116,477.72 | $116,477.72 | 0 | 0 |
+| 2026-08-13 | +8.53 | io | $99,830.06 | $9,917.52 | 9 | 0 |
+| 2026-08-14 | +5.50 | io | $101,706.21 | $1,806.16 | 18 | 0 |
+| 2026-08-17 | +2.25 | io | $102,335.77 | $522.53 | 26 | 0 |
+| 2026-08-18 | -6.20 | hold | $102,172.12 | $93,230.19 | 17 | 0 |
+| 2026-08-19 | -7.20 | hold | $102,317.02 | $101,031.23 | 8 | 0 |
+| 2026-08-20 | +1.12 | mover | $103,922.34 | $43.38 | 0 | 10 |
+| 2026-08-21 | +3.25 | mover | $109,917.38 | $24.78 | 0 | 10 |
+| 2026-08-24 | -5.17 | hold | $110,984.65 | $110,984.65 | 0 | 0 |
+| 2026-08-25 | +1.80 | io | $110,882.53 | $11,423.40 | 6 | 0 |
+| 2026-08-26 | +2.02 | io | $110,545.82 | $11,423.40 | 6 | 0 |
+| 2026-08-27 | — | io | $109,407.76 | $1,139.12 | 9 | 0 |
+| 2026-08-28 | +0.75 | io | $107,129.12 | $9,684.84 | 4 | 0 |
+| 2026-08-31 | -5.85 | hold | $109,231.73 | $9,684.84 | 4 | 0 |
+| 2026-09-01 | -6.30 | hold | $111,880.34 | $20,119.99 | 1 | 0 |
+| 2026-09-02 | -3.83 | hold | $115,534.19 | $115,534.19 | 0 | 0 |
+| 2026-09-03 | -0.90 | io | $115,409.52 | $11,513.75 | 5 | 0 |
+| 2026-09-04 | — | io | $115,679.10 | $11,513.75 | 5 | 0 |
+| 2026-09-07 | — | io | $115,679.10 | $11,513.75 | 5 | 0 |
+| 2026-09-08 | — | io | $115,409.94 | $115,409.94 | 0 | 0 |
 
 ## Live method: 3d robust size book
 
@@ -76,90 +80,95 @@ Fortnights: **FAIL** (min 10.46). 10-session blocks: **FAIL** (min 10.46). Rolli
 
 | Book | Role | Return | Final | Max DD | min fortnight |
 |---|---|---:|---:|---:|---:|
-| `flatten_robust` | **LIVE** | +16.48% | $116,477.72 | 3.64% | 10.46 |
-| `flatten_hard_red` | previous 2w_size | +19.06% | $119,063.84 | 2.99% | 16.85 |
-| `flatten_switch_recycle` | ungated predecessor | +21.57% | $121,571.23 | 2.97% | 19.13 |
+| `flatten_robust` | **LIVE** | +15.41% | $115,409.94 | 3.47% | 10.73 |
+| `flatten_hard_red` | previous 2w_size | +17.99% | $117,987.36 | 3.00% | 17.98 |
+| `flatten_switch_recycle` | ungated predecessor | +20.45% | $120,451.57 | 2.96% | 20.29 |
 
 | Date | Score | Robust (live) | Hard-red 2w | Recycle |
 |---|---:|---|---|---|
-| 2026-08-13 | +8.53 | io $99,812 | io $99,801 | io $99,801 |
-| 2026-08-14 | +5.50 | io $101,936 | io $102,951 | io $102,951 |
-| 2026-08-17 | +2.25 | io $102,651 | io $103,841 | io $103,841 |
-| 2026-08-18 | -6.20 | hold $102,917 | hold $105,907 | io $105,907 |
-| 2026-08-19 | -7.20 | hold $102,917 | hold $110,260 | io $110,260 |
-| 2026-08-20 | +1.12 | mover $104,793 | mover $111,605 | mover $111,605 |
-| 2026-08-21 | +3.25 | mover $110,716 | mover $117,913 | mover $117,913 |
-| 2026-08-24 | -5.17 | hold $110,736 | hold $117,933 | io $117,848 |
-| 2026-08-25 | +1.80 | io $110,623 | io $117,849 | io $120,173 |
-| 2026-08-26 | +2.02 | io $110,250 | io $116,617 | io $118,894 |
-| 2026-08-27 | — | io $109,009 | io $116,191 | io $118,485 |
-| 2026-08-28 | +0.75 | io $106,703 | io $114,403 | io $116,609 |
-| 2026-08-31 | -5.85 | hold $109,053 | hold $114,767 | io $116,992 |
-| 2026-09-01 | -6.30 | hold $112,031 | hold $114,648 | io $116,857 |
-| 2026-09-02 | -3.83 | hold $116,478 | hold $117,014 | io $119,328 |
-| 2026-09-03 | -0.90 | io $116,478 | io $119,064 | io $121,571 |
-| 2026-09-04 | — | io $116,478 | io $119,064 | io $121,571 |
+| 2026-08-13 | +8.53 | io $99,830 | io $99,801 | io $99,801 |
+| 2026-08-14 | +5.50 | io $101,706 | io $102,951 | io $102,951 |
+| 2026-08-17 | +2.25 | io $102,336 | io $103,841 | io $103,841 |
+| 2026-08-18 | -6.20 | hold $102,172 | hold $105,907 | io $105,907 |
+| 2026-08-19 | -7.20 | hold $102,317 | hold $110,260 | io $110,260 |
+| 2026-08-20 | +1.12 | mover $103,922 | mover $111,504 | mover $111,504 |
+| 2026-08-21 | +3.25 | mover $109,917 | mover $117,928 | mover $117,928 |
+| 2026-08-24 | -5.17 | hold $110,985 | hold $119,081 | io $118,995 |
+| 2026-08-25 | +1.80 | io $110,883 | io $118,996 | io $121,340 |
+| 2026-08-26 | +2.02 | io $110,546 | io $117,749 | io $120,049 |
+| 2026-08-27 | — | io $109,408 | io $117,323 | io $119,637 |
+| 2026-08-28 | +0.75 | io $107,129 | io $115,511 | io $117,743 |
+| 2026-08-31 | -5.85 | hold $109,232 | hold $115,880 | io $118,131 |
+| 2026-09-01 | -6.30 | hold $111,880 | hold $115,760 | io $117,999 |
+| 2026-09-02 | -3.83 | hold $115,534 | hold $118,154 | io $120,499 |
+| 2026-09-03 | -0.90 | io $115,410 | io $120,242 | io $122,759 |
+| 2026-09-04 | — | io $115,679 | io $119,022 | io $121,500 |
+| 2026-09-07 | — | io $115,679 | io $119,022 | io $121,500 |
+| 2026-09-08 | — | io $115,410 | io $117,987 | io $120,452 |
 
 ## If you started any day
 
-Fresh $100,000 each session, policy `flatten_robust`, through 2026-09-04. Mean **+5.27%** across 17 starts (11 finished above start). Starts with ≥5 sessions left: mean **6.89%** (n=13, min -2.25). Held stock ties up cash. Weekend dates have no tape.
+Fresh $100,000 each session, policy `flatten_robust`, through 2026-09-08. Mean **+5.01%** across 19 starts (11 finished above start). Starts with ≥5 sessions left: mean **6.35%** (n=15, min -2.01). Held stock ties up cash. Weekend dates have no tape.
 
 | Start | First route | Would-buy if you are full of cash | Return | Sessions | Made money |
 |---|---|---|---:|---:|---|
-| 2026-08-13 | io | BTSG, IREN, TPG, TGTX, SLS, HIMS, INO, TNDM, VOR | +16.48% | 17 | YES |
-| 2026-08-14 | io | TLN, VST, NRG, DAVE, SLG, MARA, LDI, BTBT, BETR | +3.51% | 16 | YES |
-| 2026-08-17 | io | DVN, EOG, FANG, TMC, TGB, ELF, DNN, HNST, NB | +8.43% | 15 | YES |
-| 2026-08-18 | hold | OXY, APA, COP, MUR, MLYS, TRMD, OBE, CYPH, TBPH | +13.18% | 14 | YES |
-| 2026-08-19 | hold | OBE, STE, DHR, SYK, MUR, TRMD, MLYS, TBPH, INMD | +13.18% | 13 | YES |
-| 2026-08-20 | mover | AG, BHP, CDE, HDSN, IAG, KGC, NFGC, WPM, ABUS, AEM | +13.18% | 12 | YES |
-| 2026-08-21 | mover | AU, AUPH, AEM, ARCT, AUTL, CRDL, CRSP, CYPH, FUTU, GMAB | +7.86% | 11 | YES |
-| 2026-08-24 | hold | RZLT, MOS, OCUL, INSP, CRMD, HCA | +5.18% | 10 | YES |
-| 2026-08-25 | io | MOS, OCUL, INSP, CRMD, RZLT, HCA | +5.18% | 9 | YES |
-| 2026-08-26 | io | OCUL, CRMD, RZLT, MOS, INSP, HCA | -2.25% | 8 | no |
-| 2026-08-27 | io | RRC, CRK, MOS, SLI | +2.18% | 7 | YES |
-| 2026-08-28 | io | RRC, CRK, MOS, SLI | +3.40% | 6 | YES |
-| 2026-08-31 | hold | RES, PBF, NOV, WTTR | +0.00% | 5 | no |
-| 2026-09-01 | hold | DK, BTE, MTDR, RES, KOS, OIS, FTI, KMI, OKE | +0.00% | 4 | no |
-| 2026-09-02 | hold | PCRX, HRMY, PBH, VSTM, MGTX, PBR-A, PBR | +0.00% | 3 | no |
-| 2026-09-03 | io | ATRC, HRMY, CABA, VSTM, RVTY | +0.00% | 2 | no |
-| 2026-09-04 | io | ASND, OSCR, ATRC, NVAX, CABA, BVS | +0.00% | 1 | no |
+| 2026-08-13 | io | BTSG, IREN, TPG, TGTX, SLS, HIMS, INO, TNDM, VOR | +15.41% | 19 | YES |
+| 2026-08-14 | io | TLN, VST, NRG, DAVE, SLG, MARA, LDI, BTBT, BETR | +9.35% | 18 | YES |
+| 2026-08-17 | io | DVN, EOG, FANG, TMC, TGB, ELF, DNN, HNST, NB | +13.96% | 17 | YES |
+| 2026-08-18 | hold | OXY, APA, COP, MUR, MLYS, TRMD, OBE, CYPH, TBPH | +12.81% | 16 | YES |
+| 2026-08-19 | hold | OBE, STE, DHR, SYK, MUR, TRMD, MLYS, TBPH, INMD | +12.81% | 15 | YES |
+| 2026-08-20 | mover | AG, BHP, CDE, HDSN, IAG, KGC, NFGC, WPM, ABUS, AEM | +12.81% | 14 | YES |
+| 2026-08-21 | mover | AU, AUPH, AEM, ARCT, AUTL, CRDL, CRSP, CYPH, FUTU, GMAB | +7.64% | 13 | YES |
+| 2026-08-24 | hold | RZLT, MOS, OCUL, INSP, CRMD, HCA | +3.99% | 12 | YES |
+| 2026-08-25 | io | MOS, OCUL, INSP, CRMD, RZLT, HCA | +3.99% | 11 | YES |
+| 2026-08-26 | io | OCUL, CRMD, RZLT, MOS, INSP, HCA | -2.01% | 10 | no |
+| 2026-08-27 | io | RRC, CRK, MOS, SLI | +1.84% | 9 | YES |
+| 2026-08-28 | io | RRC, CRK, MOS, SLI | +2.94% | 8 | YES |
+| 2026-08-31 | hold | RES, PBF, NOV, WTTR | -0.11% | 7 | no |
+| 2026-09-01 | hold | DK, BTE, MTDR, RES, KOS, OIS, FTI, KMI, OKE | -0.11% | 6 | no |
+| 2026-09-02 | hold | PCRX, HRMY, PBH, VSTM, MGTX, PBR-A, PBR | -0.11% | 5 | no |
+| 2026-09-03 | io | ATRC, HRMY, CABA, VSTM, RVTY | -0.11% | 4 | no |
+| 2026-09-04 | io | ASND, OSCR, ATRC, NVAX, CABA, BVS | +0.00% | 3 | no |
+| 2026-09-07 | io | BSX, UGP, LPG, CABA, NVAX, ALT | +0.00% | 2 | no |
+| 2026-09-08 | io | SUZ, TX, GGB, SID | +0.00% | 1 | no |
 
 ## Sweep (same window, same fees)
 
 | Policy | Return | Max DD | min fortnight | min block | Pass |
 |---|---:|---:|---:|---:|---|
-| `flatten_switch_recycle` | +21.57% | 2.97% | 19.13 | 19.13 | YES |
-| `flatten_rotate` | +21.99% | 2.30% | 18.17 | 18.17 | YES |
-| `flatten_hard_red` | +19.06% | 2.99% | 16.85 | 16.85 | YES |
-| `flatten_carry_book` | +18.55% | 2.97% | 16.16 | 16.16 | YES |
-| `flatten_switch_full` | +18.95% | 2.30% | 15.22 | 15.22 | YES |
-| `flatten_skip_blank_io` | +17.56% | 0.20% | 15.22 | 15.22 | YES |
-| `flatten_cash_mover` | +18.38% | 2.76% | 14.67 | 14.67 | no |
-| `flatten_blank_cash` | +17.84% | 0.48% | 14.67 | 14.67 | no |
-| `flatten_switch_70` | +16.63% | 2.30% | 12.97 | 12.97 | no |
-| `flatten_rich` | +15.69% | 2.30% | 12.06 | 12.06 | no |
-| `flatten_overlap` | +15.09% | 2.30% | 11.49 | 11.49 | no |
-| `flatten_overlap_55` | +15.00% | 2.30% | 11.41 | 11.41 | no |
-| `flatten_switch_60` | +14.62% | 2.30% | 11.02 | 11.02 | no |
-| `flatten_switch` | +14.58% | 2.30% | 10.99 | 10.99 | no |
-| `flatten_robust` | +16.48% | 3.64% | 10.46 | 10.46 | no |
-| `io_3d_switch` | +10.44% | 1.62% | 10.14 | 10.14 | no |
-| `concentrated_switch` | +12.28% | 1.59% | 9.58 | 9.58 | no |
-| `core50_switch` | +12.48% | 1.69% | 9.18 | 9.18 | no |
-| `switch_70` | +11.31% | 1.68% | 8.82 | 8.82 | no |
-| `core_switch` | +11.45% | 1.68% | 8.73 | 8.73 | no |
-| `switch_80` | +11.05% | 1.60% | 8.67 | 8.67 | no |
-| `switch_no_short` | +9.86% | 1.99% | 8.67 | 8.67 | no |
-| `hard_red_shorts` | +8.87% | 2.57% | 7.83 | 7.83 | no |
-| `switch_80_overlap` | +8.37% | 1.99% | 7.6 | 7.6 | no |
-| `flatten_3d` | +10.97% | 2.30% | 7.49 | 7.49 | no |
-| `mover_heavy` | +9.52% | 1.56% | 7.29 | 7.29 | no |
-| `switch_90_overlap` | +7.23% | 1.96% | 6.89 | 6.89 | no |
+| `flatten_switch_recycle` | +20.45% | 2.96% | 20.29 | 20.29 | YES |
+| `flatten_rotate` | +22.83% | 2.30% | 19.32 | 19.32 | YES |
+| `flatten_hard_red` | +17.99% | 3.00% | 17.98 | 17.98 | YES |
+| `flatten_carry_book` | +16.21% | 2.97% | 16.06 | 16.06 | YES |
+| `flatten_skip_blank_io` | +18.92% | 0.20% | 15.12 | 15.12 | YES |
+| `flatten_switch_full` | +18.51% | 2.30% | 15.12 | 15.12 | YES |
+| `flatten_cash_mover` | +18.04% | 4.13% | 14.66 | 14.66 | no |
+| `flatten_blank_cash` | +17.65% | 2.62% | 14.66 | 14.66 | no |
+| `flatten_switch_70` | +16.17% | 2.30% | 12.84 | 12.84 | no |
+| `flatten_rich` | +15.29% | 2.30% | 11.98 | 11.98 | no |
+| `flatten_overlap` | +14.68% | 2.30% | 11.4 | 11.4 | no |
+| `flatten_overlap_55` | +14.56% | 2.30% | 11.27 | 11.27 | no |
+| `flatten_switch` | +14.12% | 2.30% | 10.86 | 10.86 | no |
+| `flatten_switch_60` | +14.10% | 2.30% | 10.84 | 10.84 | no |
+| `flatten_robust` | +15.41% | 3.47% | 10.73 | 10.73 | no |
+| `flatten_robust_ripper` | +15.41% | 3.47% | 10.73 | 10.73 | no |
+| `io_3d_switch` | +7.91% | 1.77% | 8.85 | 8.85 | no |
+| `core50_switch` | +11.08% | 1.58% | 7.77 | 7.77 | no |
+| `flatten_3d` | +10.51% | 2.37% | 7.33 | 7.33 | no |
+| `concentrated_switch` | +9.71% | 1.52% | 7.27 | 7.27 | no |
+| `core_switch` | +9.52% | 1.60% | 6.95 | 6.95 | no |
+| `switch_70` | +9.06% | 1.62% | 6.83 | 6.83 | no |
+| `switch_no_short` | +7.72% | 1.92% | 6.76 | 6.76 | no |
+| `switch_80` | +8.35% | 1.56% | 6.33 | 6.33 | no |
+| `hard_red_shorts` | +6.64% | 2.47% | 5.83 | 5.83 | no |
+| `switch_80_overlap` | +5.94% | 1.94% | 5.51 | 5.51 | no |
+| `mover_heavy` | +6.82% | 1.56% | 5.0 | 5.0 | no |
+| `switch_90_overlap` | +4.47% | 1.97% | 4.56 | 4.56 | no |
 
 ## Why this merge
 
 - **Mover** is the highest hit-rate sleeve on this tape (paper +9.3%, max DD 0.12%) because the S ≥ +1 gate deletes the fall days. It is *off* most sessions — that is the product, not a bug. The days it *is* on (08-20, 08-21) are the ones `.io` 2w_size lost or lagged.
-- **.io `2w_size`** is the current top published book (+12.85%) and the one that keeps winning on SPY-down / hard-red mornings (08-14 +3.2%, 08-18/19 +2.0/+4.1%). An earlier NAV stitch that flattened on every green morning *including* 08-13/14 (zero BUY calls) sat in cash and gave the edge back.
+- **.io `2w_size`** is the current top published book (+7.57%) and the one that keeps winning on SPY-down / hard-red mornings (08-14 +3.2%, 08-18/19 +2.0/+4.1%). An earlier NAV stitch that flattened on every green morning *including* 08-13/14 (zero BUY calls) sat in cash and gave the edge back.
 - **Flatten, don't average.** Averaging pick lists re-imports Excel's median-zero payoff. The combined book *is* `.io` until a green morning that actually has a priced mover BUY list and a prior book, then it *is* mover for one session.
 - **Open flatten is leak-free:** `.io` names were bought at a prior close; the 09:30 open is the first price you can get after the new morning predict. Today's book print is not known at 09:30 so the flatten uses yesterday / last print only. Tomorrow's score is never used at today's close.
 - **Rotate at the next green open** is the honest way to stay fully invested in mover (the paper book's same-day close→open recycle is a leak; we do not copy it). Sells run first so the new list is funded with cash, not with stock you still hold. **Carry last book** is the same 2w_size list the .io dashboard already follows on a quiet print day — not a third model.
