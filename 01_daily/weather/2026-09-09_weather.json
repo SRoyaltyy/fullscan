@@ -1,6 +1,6 @@
 {
  "date": "2026-09-09",
- "generated_at": "2026-09-09T01:41:38.755995-04:00",
+ "generated_at": "2026-09-09T05:17:17.760170-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -14,80 +14,77 @@
   "fed_score": null,
   "dollar_oil_score": null,
   "futures_score": null,
-  "yields": "flat",
-  "yields_source": "fred_dgs10",
-  "dgs10_delta_1d": 0.01,
-  "dgs10_current": 4.78,
-  "dollar": "flat",
-  "dollar_source": "dxy",
-  "dxy_pct_1d": -0.12,
-  "vix_ratio": 1.04,
-  "vix_spot": 15.72,
-  "vix_delta_1d": 0.42,
-  "vix_ratio_source": "vix/ma20",
-  "vix": "calm",
-  "oil_pct_1d": 0.99,
-  "oil": "flat",
-  "fear_greed": 58.2,
-  "fear_greed_label": "Greed",
-  "regime_corr": -0.975,
+  "yields": "unknown",
+  "yields_source": "llm_factor_fallback",
+  "dollar": "unknown",
+  "dollar_source": "missing_dxy",
+  "vix_ratio": null,
+  "vix_spot": null,
+  "vix_delta_1d": null,
+  "vix_ratio_source": null,
+  "vix": "unknown",
+  "oil_pct_1d": null,
+  "oil": "unknown",
+  "fear_greed": null,
+  "fear_greed_label": null,
+  "regime_corr": null,
   "sectors": {
    "Basic Materials": {
-    "score": -0.6,
+    "score": 0.74,
     "dir": "flat",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Communication Services": {
-    "score": -1.665,
-    "dir": "down",
+    "score": -1.3050000000000002,
+    "dir": "flat",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Consumer Cyclical": {
-    "score": -1.355,
+    "score": -0.73,
     "dir": "flat",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Consumer Defensive": {
-    "score": -2.365,
+    "score": -1.935,
     "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Energy": {
-    "score": 1.15,
+    "score": 1.0950000000000002,
     "dir": "flat",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Financial": {
-    "score": -0.08,
+    "score": 0.0,
     "dir": "flat",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Healthcare": {
-    "score": -0.85,
+    "score": -0.56,
     "dir": "flat",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Industrials": {
-    "score": -0.04,
+    "score": 0.6,
     "dir": "flat",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Real Estate": {
-    "score": -0.515,
+    "score": -0.335,
     "dir": "flat",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Technology": {
-    "score": -1.05,
+    "score": 0.14,
     "dir": "flat",
     "conf": 0.4,
     "source": "finviz_week"
@@ -100,16 +97,16 @@
    }
   },
   "sector_tape": {
-   "Basic Materials": -0.6,
-   "Communication Services": -1.665,
-   "Consumer Cyclical": -1.355,
-   "Consumer Defensive": -2.365,
-   "Energy": 1.15,
-   "Financial": -0.08,
-   "Healthcare": -0.85,
-   "Industrials": -0.04,
-   "Real Estate": -0.515,
-   "Technology": -1.05,
+   "Basic Materials": 0.74,
+   "Communication Services": -1.3050000000000002,
+   "Consumer Cyclical": -0.73,
+   "Consumer Defensive": -1.935,
+   "Energy": 1.0950000000000002,
+   "Financial": 0.0,
+   "Healthcare": -0.56,
+   "Industrials": 0.6,
+   "Real Estate": -0.335,
+   "Technology": 0.14,
    "Utilities": 1.32
   },
   "events_bull": 4,
@@ -121,27 +118,27 @@
    "Basic Materials": {
     "stance": "neutral",
     "confidence": "medium",
-    "why": "finviz sector median week -0.60% [tape]"
+    "why": "finviz sector median week +0.74% [tape]"
    },
    "Communication Services": {
-    "stance": "hostile",
+    "stance": "neutral",
     "confidence": "medium",
-    "why": "finviz sector median week -1.67% [tape]"
+    "why": "finviz sector median week -1.31% [tape]"
    },
    "Consumer Cyclical": {
     "stance": "neutral",
     "confidence": "medium",
-    "why": "finviz sector median week -1.35% [tape]"
+    "why": "finviz sector median week -0.73% [tape]"
    },
    "Consumer Defensive": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "finviz sector median week -2.37% [tape]"
+    "why": "finviz sector median week -1.94% [tape]"
    },
    "Energy": {
     "stance": "neutral",
     "confidence": "medium",
-    "why": "finviz sector median week +1.15% [tape]"
+    "why": "finviz sector median week +1.10% [tape]"
    },
    "Financial": {
     "stance": "favorable",
@@ -156,7 +153,7 @@
    "Industrials": {
     "stance": "neutral",
     "confidence": "medium",
-    "why": "finviz sector median week -0.04% [tape]"
+    "why": "finviz sector median week +0.60% [tape]"
    },
    "Real Estate": {
     "stance": "hostile",
@@ -166,7 +163,7 @@
    "Technology": {
     "stance": "neutral",
     "confidence": "medium",
-    "why": "finviz sector median week -1.05% [tape]"
+    "why": "finviz sector median week +0.14% [tape]"
    },
    "Utilities": {
     "stance": "neutral",
@@ -241,20 +238,20 @@
    }
   },
   "beta": {
-   "high": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "risk-unknown, VIX calm"
-   },
    "low": {
-    "stance": "neutral",
+    "stance": "unknown",
     "confidence": "low",
-    "why": "risk-unknown, VIX calm"
+    "why": "no risk/vol signals"
    },
    "mid": {
-    "stance": "neutral",
+    "stance": "unknown",
     "confidence": "low",
-    "why": "beta-neutral zone"
+    "why": "no risk/vol signals"
+   },
+   "high": {
+    "stance": "unknown",
+    "confidence": "low",
+    "why": "no risk/vol signals"
    }
   },
   "short": {
@@ -280,76 +277,76 @@
    }
   },
   "vol": {
-   "high": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "calm tape — vol regime not decisive [general + channel1]"
-   },
    "low": {
-    "stance": "neutral",
+    "stance": "unknown",
     "confidence": "low",
-    "why": "calm tape"
+    "why": "no signals"
    },
    "mid": {
-    "stance": "neutral",
+    "stance": "unknown",
     "confidence": "low",
-    "why": "—"
+    "why": "no signals"
+   },
+   "high": {
+    "stance": "unknown",
+    "confidence": "low",
+    "why": "no signals"
    }
   },
   "profit": {
    "no": {
-    "stance": "neutral",
+    "stance": "unknown",
     "confidence": "low",
-    "why": "risk-unknown, F&G Greed"
-   },
-   "yes": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "—"
+    "why": "no yields/risk signals"
    },
    "thin": {
-    "stance": "neutral",
+    "stance": "unknown",
     "confidence": "low",
-    "why": "—"
+    "why": "no yields/risk signals"
+   },
+   "yes": {
+    "stance": "unknown",
+    "confidence": "low",
+    "why": "no yields/risk signals"
    }
   },
   "lev": {
-   "high": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "—"
-   },
    "low": {
-    "stance": "neutral",
+    "stance": "unknown",
     "confidence": "low",
-    "why": "—"
+    "why": "no signals"
    },
    "mid": {
-    "stance": "neutral",
+    "stance": "unknown",
     "confidence": "low",
-    "why": "—"
+    "why": "no signals"
+   },
+   "high": {
+    "stance": "unknown",
+    "confidence": "low",
+    "why": "no signals"
    },
    "neg_equity": {
-    "stance": "hostile",
+    "stance": "unknown",
     "confidence": "low",
-    "why": "negative equity is distressed in any regime"
+    "why": "no signals"
    }
   },
   "style": {
    "growth": {
-    "stance": "neutral",
+    "stance": "unknown",
     "confidence": "low",
-    "why": "yields flat/unknown"
-   },
-   "value": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "yields flat/unknown"
+    "why": "no yields/risk signals"
    },
    "blend": {
-    "stance": "neutral",
+    "stance": "unknown",
     "confidence": "low",
-    "why": "—"
+    "why": "no yields/risk signals"
+   },
+   "value": {
+    "stance": "unknown",
+    "confidence": "low",
+    "why": "no yields/risk signals"
    }
   },
   "mom": {
@@ -437,6 +434,7 @@
  },
  "data_gaps": [
   "general predict run",
-  "general predict factor scoreboard"
+  "general predict factor scoreboard",
+  "channel 1 predict json"
  ]
 }
