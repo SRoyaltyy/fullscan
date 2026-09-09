@@ -5,63 +5,63 @@ Export `finviz_2026-09-08.csv` · 11608 names · generated 2026-09-09T01:59:54.4
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7655.25 | -0.34% |
-| Nasdaq 100 (NQ) | 29393.5 | -0.51% |
-| Russell 2000 (ER2) | 2947.2 | -0.56% |
-| DJIA (YM) | 52514.0 | -0.60% |
-| VIX (VX) | 16.95 | +1.93% |
-| Crude Oil WTI (CL) | 95.78 | +2.99% |
-| Crude Oil Brent (QA) | 100.74 | +2.88% |
-| Natural Gas (NG) | 2.849 | -2.30% |
-| Heating Oil (HO) | 4.7199 | +3.29% |
-| Gasoline RBOB (RB) | 3.2401 | -0.32% |
-| Gold (GC) | 4443.1 | +0.08% |
-| Silver (SI) | 66.9 | -0.15% |
-| Copper (HG) | 6.786 | -0.59% |
-| Platinum (PL) | 1865.9 | +0.68% |
-| Palladium (PA) | 1354.5 | -1.18% |
-| USD (DX) | 98.38 | -0.15% |
-| EUR (6E) | 1.1649 | +0.15% |
+| S&P 500 (ES) | 7656.5 | -0.32% |
+| Nasdaq 100 (NQ) | 29417.75 | -0.43% |
+| Russell 2000 (ER2) | 2949.3 | -0.49% |
+| DJIA (YM) | 52565.0 | -0.50% |
+| VIX (VX) | 16.85 | +1.33% |
+| Crude Oil WTI (CL) | 95.81 | +2.96% |
+| Crude Oil Brent (QA) | 100.77 | +2.83% |
+| Natural Gas (NG) | 2.848 | -2.33% |
+| Heating Oil (HO) | 4.6987 | +2.87% |
+| Gasoline RBOB (RB) | 3.2183 | -1.23% |
+| Gold (GC) | 4462.2 | +0.49% |
+| Silver (SI) | 67.835 | +1.13% |
+| Copper (HG) | 6.824 | +0.01% |
+| Platinum (PL) | 1909.2 | +3.02% |
+| Palladium (PA) | 1374.5 | +0.39% |
+| USD (DX) | 98.395 | -0.14% |
+| EUR (6E) | 1.1648 | +0.15% |
 | JPY (6J) | 0.6525000000000001 | +0.22% |
-| GBP (6B) | 1.3554 | +0.05% |
-| AUD (6A) | 0.7223 | +0.01% |
-| CAD (6C) | 0.7262 | +0.05% |
-| CHF (6S) | 1.23905 | +0.18% |
-| NZD (6N) | 0.58555 | -0.07% |
-| 10 Year Note (ZN) | 107.25 | -0.07% |
-| 5 Year Note (ZF) | 105.3671875 | -0.07% |
-| 2 Year Note (ZT) | 102.48828125 | -0.03% |
+| GBP (6B) | 1.355 | +0.03% |
+| AUD (6A) | 0.7226 | +0.05% |
+| CAD (6C) | 0.7258 | -0.01% |
+| CHF (6S) | 1.23895 | +0.18% |
+| NZD (6N) | 0.5854 | -0.09% |
+| 10 Year Note (ZN) | 107.265625 | -0.04% |
+| 5 Year Note (ZF) | 105.3828125 | -0.06% |
+| 2 Year Note (ZT) | 102.49609375 | -0.03% |
 | 30 Year Bond (ZB) | 108.5 | +0.12% |
-| Nikkei 225 (NKD) | 64455.0 | -1.00% |
-| DAX (DY) | 25618.0 | -1.52% |
-| Euro Stoxx 50 (EX) | 6301.0 | -1.78% |
-| Corn (ZC) | 529.75 | -0.75% |
-| Soybeans (ZS) | 1313.5 | -0.25% |
-| Wheat (ZW) | 746.5 | -0.03% |
+| Nikkei 225 (NKD) | 64530.0 | -0.88% |
+| DAX (DY) | 25648.0 | -1.37% |
+| Euro Stoxx 50 (EX) | 6316.0 | -1.51% |
+| Corn (ZC) | 529.75 | -0.70% |
+| Soybeans (ZS) | 1313.5 | -0.21% |
+| Wheat (ZW) | 746.5 | -0.07% |
 | Soybean oil (ZL) | 70.06 | -0.23% |
 | Soybean Meal (ZM) | 343.8 | +0.15% |
 | Oats (ZO) | 374.75 | -0.07% |
 | Rough Rice (ZR) | 16.059 | +0.78% |
-| Coffee (KC) | 297.8 | +2.33% |
-| Sugar (SB) | 18.23 | +0.72% |
-| Cotton (CT) | 87.18 | +1.00% |
-| Cocoa (CC) | 5885.0 | -0.47% |
-| Orange Juice (JO) | 148.55 | -1.36% |
+| Coffee (KC) | 297.5 | +2.06% |
+| Sugar (SB) | 18.37 | +1.49% |
+| Cotton (CT) | 87.46 | +1.38% |
+| Cocoa (CC) | 5947.0 | +0.47% |
+| Orange Juice (JO) | 149.5 | -0.60% |
 | Lumber (LB) | 567.0 | +0.26% |
 | Live Cattle (LC) | 216.85 | +1.91% |
 | Lean Hogs (LH) | 84.275 | +2.37% |
 | Feeder Cattle (FC) | 325.5 | +1.66% |
-| Bitcoin (BTC) | 79735.0 | +1.46% |
-| 3 Month SOFR (SR3) | 96.13 | -0.01% |
+| Bitcoin (BTC) | 79760.0 | +1.48% |
+| 3 Month SOFR (SR3) | 96.1325 | -0.00% |
 | 30 Day Fed Funds (ZQ) | 96.3 | -0.00% |
 | Aluminum (ALI) | 3492.0 | +1.38% |
-| Canola (RS) | 835.8 | -0.37% |
+| Canola (RS) | 836.4 | -0.31% |
 | Coal Newcastle (NCF) | 147.5 | -0.10% |
 | Ethanol (ZK) | 2.06 | -0.96% |
-| Gasoil (G) | 1385.25 | +2.48% |
+| Gasoil (G) | 1381.5 | +2.16% |
 | Iron Ore (TIO) | 100.02 | +0.45% |
 | Steel HRC (HRC) | 1231.0 | +0.33% |
-| Ultra 10 Year Note (TN) | 109.0 | -0.04% |
+| Ultra 10 Year Note (TN) | 109.015625 | -0.03% |
 | Ultra Bond (UB) | 110.0625 | +0.17% |
 | Uranium (UX) | 89.8 | +0.17% |
 
@@ -127,14 +127,14 @@ Mega-cap earnings:
 - AMC **ABVX**  EPS est -0.9585  (Abivax ADR)
 
 Options event-vol flags (NOT direction):
-- **ORCL** exp 2026-09-11 ATM IV 0.0005 implied move 0.0% put/call OI 0.607
-- **COST** exp 2026-09-11 ATM IV 0.0005 implied move 0.0% put/call OI 9.382
-- **ADBE** exp 2026-09-11 ATM IV 0.002 implied move +0.0% put/call OI 2.165
-- **AZO** exp 2026-09-18 ATM IV 0.0005 implied move +0.0% put/call OI 4.143
-- **KR** exp 2026-09-11 ATM IV 0.0078 implied move +0.1% put/call OI 7.068
-- **CPRT** exp 2026-09-18 ATM IV 0.0039 implied move +0.1% put/call OI 1.258
-- **SUNB** exp 2026-09-18 ATM IV 0.0078 implied move +0.1% put/call OI 0.124
-- **TCOM** exp 2026-09-18 ATM IV 0.0156 implied move +0.2% put/call OI 11.047
+- **ORCL** exp 2026-09-11 ATM IV 0.002 implied move +0.0% put/call OI 0.607
+- **COST** exp 2026-09-11 ATM IV 0.002 implied move +0.0% put/call OI 13.082
+- **ADBE** exp 2026-09-11 ATM IV 0.0005 implied move 0.0% put/call OI 2.165
+- **AZO** exp 2026-09-18 ATM IV 0.002 implied move +0.0% put/call OI 2.4
+- **KR** exp 2026-09-11 ATM IV 0.0039 implied move +0.0% put/call OI 7.068
+- **CPRT** exp 2026-09-18 ATM IV 0.0156 implied move +0.2% put/call OI 1.258
+- **SUNB** exp 2026-09-18 ATM IV 0.0156 implied move +0.2% put/call OI 0.007
+- **TCOM** exp 2026-09-18 ATM IV 0.0005 implied move +0.0% put/call OI 11.047
 
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
@@ -254,31 +254,31 @@ COLD (1w):
 - **Innovation / Patent Based** 0.0% 1d -0.2% 1w · ARKK, XT, BULZ
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 1 min **CNM** Core & Main Q2 adjusted earnings beat estimates as revenue rises 2.5% (InvestorsHub)
-- 2 min **RXO** RXO reports August truckload gross profit per load increase of more than 10% (InvestorsHub)
-- 3 min **SUNB** Sunbelt Rentals shares rise 3% after Q1 results and higher fiscal 2027 guidance (InvestorsHub)
-- 3 min **UFG** Uni-Fuels Reports Record First-Half 2026 Financial Results and Raises Full-Year Revenue Guidance to US$340M-US$360M (GlobeNewswire)
-- 4 min **TV,ICE,ORCL,LH** Moonwalk Biosciences Announces $70 Million Series B: NYSE Content Update (PR Newswire)
-- 4 min **SCNX** SCIENTURE to Present at the H.C. Wainwright 28th Annual Global Investment Conference on September 14, 2026 (GlobeNewswire)
-- 4 min **WKEY** WISeKey and its Subsidiaries, SEALSQ and WISeSat, Present Commercial Quantum Spatial Orbital Cloud (QSOC) at the International Space Summit in Paris (GlobeNewswire)
-- 5 min **CHWY** Chewy Q2 earnings meet estimates as company raises full-year outlook (InvestorsHub)
-- 6 min **ODD** Oddity Tech shares rise 24% after Q2 earnings beat and updated outlook (InvestorsHub)
-- 7 min **LULU,NKE** Why Nike and Lululemon are struggling: 'A lot of surface area to defend' (Yahoo Finance)
-- 7 min **NVDA** Cantor Has Strong Message for Nvidia Stock Investors (GuruFocus.com)
-- 7 min **AGRZ** AGROZ INC. ENTERS INTO STRATEGIC SUPPLY AGREEMENT WITH HARVEST HIVE (PR Newswire)
-- 7 min **JILL** J.Jill shares rise 14.8% after Q2 earnings beat and higher annual outlook (InvestorsHub)
-- 8 min **STLA** Stellantis Pulls Back 201,976 Jeeps on a Software Fault (GuruFocus.com)
-- 9 min **KFY** Korn Ferry Q1 earnings beat estimates as Q2 EPS guidance falls below consensus (InvestorsHub)
-- 10 min **SIG** Signet shares rise 9% after Q2 earnings beat and higher annual guidance (InvestorsHub)
-- 11 min **CMPS** Compass Pathways reports 52-week Phase 3 COMP005 results for COMP360 (InvestorsHub)
-- 12 min **FTK** Flotek raises 2026 revenue guidance to $360 million-$370 million (InvestorsHub)
-- 13 min **ROKU** Roku and NFL expand NFL Zone to Canada, Mexico and Brazil (InvestorsHub)
-- 14 min **SYY** Sysco raises mid-term growth targets and outlines $500 million AI efficiency programme (InvestorsHub)
-- 14 min **AFL** Aflac commemorates National Childhood Cancer and Sickle Cell Disease Awareness Month (PR Newswire)
-- 15 min **JILL** Why Is JILL Stock Rising Today? (Stocktwits)
-- 16 min **BRZE** This Marketing Software  Stock's 11% Slump Shows Peril of Not Meeting the AI Hype (Barrons.com)
-- 16 min **META,GOOGL,GOOG,AMZN** Meta's stock jumps as new personal AI agent Muse addresses a major investor concern (MarketWatch)
-- 17 min **GOOGL,GOOG** Google to invest 13 billion in Finland AI data centers (Quartz)
+- 3 min **CTSH** Cognizant Named in TIME World's Best Companies 2026 List (PR Newswire)
+- 3 min **KRMN,RKLB,FJET,KTOS,LHX** Hypersonic Technology Market Projected to Reach $15.73 Billion by 2030, and Flight Test Time Has Become the Bottleneck (PR Newswire)
+- 3 min **RCI** Rogers Xfinity Adds Exclusive Sportsnet+ Content to TV Packages at No Additional Cost (GlobeNewswire)
+- 3 min **WERN** Werner to Celebrate National Truck Driver Appreciation Week Across All Network Locations (Business Wire)
+- 5 min **OXBR** Oxbridge to Attend H.C. Wainwright's 28th Annual Global Investment Conference in New York (GlobeNewswire)
+- 10 min **UFPI** ProWood Brings Products and Expertise to Hispanic Contractors at AVANCE Global 2026 (PR Newswire)
+- 11 min **FTK** Shareholders who lost money in shares of Flotek Industries, Inc. (NYSE: FTK) should contact Wolf Haldenstein Immediately (PR Newswire)
+- 13 min **NUCL,LEU,SMR,UEC,UUUU** Global Uranium Market Projected to Reach $13.59 Billion by 2033 as Washington Becomes the Sector's Largest Counterparty (PR Newswire)
+- 13 min **NTRB** Nutriband CEO, Gareth Sheridan to Attend the Nasdaq Life Sciences Advisory Board (LaB) Biotech Summit (GlobeNewswire)
+- 13 min **MVIS** MicroVision Semiconductor Selected for Advanced Chip Design and Fabrication Project (ACCESSWIRE)
+- 14 min **NCLH** Oceania Cruises Announces Industry's First Entirely Gluten-Free Ocean Voyage (PR Newswire)
+- 16 min **DJIA** Stock Futures Slide as Oil Prices Extend Rally (Schaeffer's Research)
+- 16 min **VTIX** Virtuix to Highlight Accelerating Growth and Expanding Defense, Robotics and Healthcare Applications at H.C. Wainwright Conference (GlobeNewswire)
+- 17 min **FLWS** Earnings To Watch: 1-800-Flowers.com Inc (FLWS) Q4 2026 -- GF Value Sees 57% Upside (GuruFocus.com)
+- 17 min **LOVE** Earnings To Watch: The Lovesac Co (LOVE) Q2 2027 -- GF Value Sees 59% Upside (GuruFocus.com)
+- 17 min **AENT** Earnings To Watch: Alliance Entertainment Holding Corp (AENT) Q4 2026 -- GF Value Sees 43% Downside (GuruFocus.com)
+- 18 min **META** META Stock Pops After Unveiling AI Agent Muse (Schaeffer's Research)
+- 18 min **UTI** Heartland Dental awards $34,500 in scholarships to students at Concorde Career Colleges campuses nationwide (PR Newswire)
+- 18 min **PAYX** Paychex Schedules First Quarter Fiscal 2027 Earnings Conference Call on September 23, 2026 (GlobeNewswire)
+- 18 min **LFST** LifeStance Health Group Announces Pricing of Secondary Public Offering (GlobeNewswire)
+- 18 min **SILO** Silo Pharma to Highlight Patented Nose-to-Brain Drug Delivery Technology for PTSD at 2026 Nasal Innovation Forum (GlobeNewswire)
+- 18 min **KVYO** Klaviyo Goes Headless, Opening Its Platform to Agents and Marketers Wherever They Work (Business Wire)
+- 19 min **ASML,XNDU** XNDU Stock Rises On ASML Deal To Fix Photonic Quantum Chips' Optical Loss Problem (Stocktwits)
+- 21 min **BLK** Adani Airport Holdings Raises Rs98.25bn From Global Funds (Investment Monitor)
+- 21 min **TEM,ACHR,AMD** Cathie Wood Grows Robinhood Stake; Sheds More AMD, Palantir (Investor's Business Daily)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
