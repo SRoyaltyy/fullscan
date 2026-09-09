@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T06:46:12.958684-04:00",
+  "generated_at": "2026-09-09T07:32:15.619727-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1142,6 +1142,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-09-09\n_Generated 2026-09-09T10:46:11 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Open lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66** \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T07:32:14.783090-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-09_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 2,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-09_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11401,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-09\n_Generated 2026-09-09T05:11:24.316414-04:00 \u00b7 export=data/exports/finviz_2026-09-08.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-09\n_Generated 2026-09-09T05:11:24.316414-04:00 \u00b7 export=data/exports/finviz_2026-09-08.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
     }
   ],
   "href": {
