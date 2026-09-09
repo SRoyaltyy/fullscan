@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T10:00:40.629780-04:00",
+  "generated_at": "2026-09-09T10:05:12.064160-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -152,7 +152,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 36917
+          "size": 67253
         },
         {
           "key": "judge",
@@ -566,7 +566,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 77657
+          "size": 82635
         },
         {
           "key": "green",
@@ -707,11 +707,11 @@
       }
     ],
     "flatten": {
-      "said": "0 priced buys \u00b7 0 lots \u00b7 cash $107,448.18 \u00b7 morning S missing",
+      "said": "0 priced buys \u00b7 0 lots \u00b7 cash $108,616.66 \u00b7 morning S missing",
       "bullets": [
         "0 priced buys",
         "0 lots",
-        "cash $107,448.18",
+        "cash $108,616.66",
         "morning S missing"
       ]
     },
@@ -1688,6 +1688,31 @@
         }
       ],
       "preview": "37 events \u00b7 IEEPA national emergency on U.S. bulk-power system equipment | U.S. Section 338 bans and tariff-scope reset vs Canada | House clears FY2027 CR through Dec. 11, shutdown risk off | OFAC sanctions remaining Iranian airlines (Operation Economic Outcast) | EO: Packers & Stockyards enforcement and interstate meat access | EO adjusting Defense Production Act energy delegations \u00b7 # Event Scan \u2014 2026-09-09\n- events tracked: **37** (via repair, repaired) (merged with earlier same-day scan)\n- uncertainty: **elevated**\n- summary: The September 9, 2026 scan shows an environment dominated by escalating US-Iran conflict with oil near $99 and Saudi energy halts, alongside a hawkish Fed pivot ahead of the September FOMC. Key upcoming catalysts include US CPI/PPI, ECB and BOJ decisions, China inflation data, and the Trump-Xi summit. Trade tensions are intensifying with Canada's retaliatory tariffs and USMCA talks, while earnings from Oracle, Adobe, and Kroger will test AI and consumer narratives. The overall risk environment is elevated with high geopolitical and monetary policy uncertainty."
+    },
+    {
+      "key": "events_catcher",
+      "title": "Event catcher (gap hunt, no carry)",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T10:05:11.195533-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-09-09_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 67253,
+          "preview": "71 events \u00b7 IEEPA national emergency on U.S. bulk-power system equipment | U.S. Section 338 bans and tariff-scope reset vs Canada | House clears FY2027 CR through Dec. 11, shutdown risk off | OFAC sanctions remaining Iranian airlines (Operation Economic Outcast) | EO: Packers & Stockyards enforcement and interstate meat access | EO adjusting Defense Production Act energy delegations"
+        },
+        {
+          "path": "01_daily/events/2026-09-09_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 27356,
+          "preview": "# Event Scan \u2014 2026-09-09\n- events tracked: **37** (via repair, repaired) (merged with earlier same-day scan)\n- uncertainty: **elevated**\n- summary: The September 9, 2026 scan shows an environment dominated by escalating US-Iran conflict with oil near $99 and Saudi energy halts, alongside a hawkish Fed pivot ahead of the September FOMC. Key upcoming catalysts include US CPI/PPI, ECB and BOJ decisions, China inflation data, and the Trump-Xi summit. Trade tensions are intensifying with Canada's retaliatory tariffs and USMCA talks, while earnings from Oracle, Adobe, and Kroger will test AI and consumer narratives. The overall risk environment is elevated with high geopolitical and monetary policy uncertainty."
+        }
+      ],
+      "preview": "71 events \u00b7 IEEPA national emergency on U.S. bulk-power system equipment | U.S. Section 338 bans and tariff-scope reset vs Canada | House clears FY2027 CR through Dec. 11, shutdown risk off | OFAC sanctions remaining Iranian airlines (Operation Economic Outcast) | EO: Packers & Stockyards enforcement and interstate meat access | EO adjusting Defense Production Act energy delegations \u00b7 # Event Scan \u2014 2026-09-09\n- events tracked: **37** (via repair, repaired) (merged with earlier same-day scan)\n- uncertainty: **elevated**\n- summary: The September 9, 2026 scan shows an environment dominated by escalating US-Iran conflict with oil near $99 and Saudi energy halts, alongside a hawkish Fed pivot ahead of the September FOMC. Key upcoming catalysts include US CPI/PPI, ECB and BOJ decisions, China inflation data, and the Trump-Xi summit. Trade tensions are intensifying with Canada's retaliatory tariffs and USMCA talks, while earnings from Oracle, Adobe, and Kroger will test AI and consumer narratives. The overall risk environment is elevated with high geopolitical and monetary policy uncertainty."
     }
   ],
   "href": {
