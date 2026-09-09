@@ -5,64 +5,64 @@ Export `finviz_2026-09-08.csv` · 11608 names · generated 2026-09-09T01:59:54.4
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7687.0 | +0.08% |
-| Nasdaq 100 (NQ) | 29582.75 | +0.13% |
-| Russell 2000 (ER2) | 2962.1 | -0.05% |
-| DJIA (YM) | 52832.0 | -0.01% |
-| VIX (VX) | 16.65 | +0.13% |
-| Crude Oil WTI (CL) | 93.88 | +0.92% |
-| Crude Oil Brent (QA) | 98.95 | +1.04% |
-| Natural Gas (NG) | 2.884 | -1.13% |
-| Heating Oil (HO) | 4.6433 | +1.58% |
-| Gasoline RBOB (RB) | 3.2714 | +0.52% |
-| Gold (GC) | 4439.9 | +0.03% |
-| Silver (SI) | 67.18 | +0.16% |
-| Copper (HG) | 6.759 | -0.95% |
-| Platinum (PL) | 1844.6 | -0.52% |
-| Palladium (PA) | 1364.5 | -0.34% |
-| USD (DX) | 98.48 | -0.05% |
-| EUR (6E) | 1.16355 | +0.04% |
-| JPY (6J) | 0.6521 | +0.18% |
-| GBP (6B) | 1.3549 | +0.02% |
-| AUD (6A) | 0.7228 | +0.07% |
-| CAD (6C) | 0.7262 | +0.04% |
-| CHF (6S) | 1.2374 | +0.04% |
-| NZD (6N) | 0.5855 | -0.08% |
-| 10 Year Note (ZN) | 107.375 | +0.06% |
-| 5 Year Note (ZF) | 105.453125 | +0.01% |
-| 2 Year Note (ZT) | 102.5234375 | -0.00% |
-| 30 Year Bond (ZB) | 108.65625 | +0.26% |
-| Nikkei 225 (NKD) | 64980.0 | -0.19% |
-| DAX (DY) | 25878.0 | -0.50% |
-| Euro Stoxx 50 (EX) | 6386.0 | -0.45% |
-| Corn (ZC) | 529.75 | -0.70% |
-| Soybeans (ZS) | 1309.5 | -0.47% |
-| Wheat (ZW) | 746.5 | -0.03% |
-| Soybean oil (ZL) | 69.95 | -0.36% |
-| Soybean Meal (ZM) | 342.8 | -0.15% |
-| Oats (ZO) | 376.5 | +0.33% |
+| S&P 500 (ES) | 7681.5 | +0.02% |
+| Nasdaq 100 (NQ) | 29559.75 | +0.09% |
+| Russell 2000 (ER2) | 2960.5 | -0.10% |
+| DJIA (YM) | 52752.0 | -0.15% |
+| VIX (VX) | 16.6 | -0.17% |
+| Crude Oil WTI (CL) | 94.96 | +2.03% |
+| Crude Oil Brent (QA) | 100.37 | +2.48% |
+| Natural Gas (NG) | 2.886 | -1.03% |
+| Heating Oil (HO) | 4.7096 | +3.06% |
+| Gasoline RBOB (RB) | 3.2756 | +0.66% |
+| Gold (GC) | 4444.4 | +0.15% |
+| Silver (SI) | 67.25 | +0.40% |
+| Copper (HG) | 6.764 | -0.82% |
+| Platinum (PL) | 1858.7 | +0.36% |
+| Palladium (PA) | 1369.5 | +0.03% |
+| USD (DX) | 98.515 | -0.02% |
+| EUR (6E) | 1.1635 | +0.03% |
+| JPY (6J) | 0.6511 | +0.00% |
+| GBP (6B) | 1.3542 | -0.03% |
+| AUD (6A) | 0.7223 | +0.02% |
+| CAD (6C) | 0.726 | +0.01% |
+| CHF (6S) | 1.23585 | -0.08% |
+| NZD (6N) | 0.58445 | -0.25% |
+| 10 Year Note (ZN) | 107.28125 | -0.03% |
+| 5 Year Note (ZF) | 105.390625 | -0.04% |
+| 2 Year Note (ZT) | 102.50390625 | -0.02% |
+| 30 Year Bond (ZB) | 108.5 | +0.12% |
+| Nikkei 225 (NKD) | 65140.0 | +0.05% |
+| DAX (DY) | 25806.0 | -0.78% |
+| Euro Stoxx 50 (EX) | 6353.0 | -0.94% |
+| Corn (ZC) | 533.25 | -0.09% |
+| Soybeans (ZS) | 1318.0 | +0.15% |
+| Wheat (ZW) | 751.75 | +0.64% |
+| Soybean oil (ZL) | 70.36 | +0.17% |
+| Soybean Meal (ZM) | 344.5 | +0.38% |
+| Oats (ZO) | 377.5 | +0.67% |
 | Rough Rice (ZR) | 16.059 | +0.78% |
-| Coffee (KC) | 289.95 | -1.45% |
-| Sugar (SB) | 18.08 | +0.17% |
-| Cotton (CT) | 86.78 | +0.53% |
-| Cocoa (CC) | 5927.0 | -4.44% |
+| Coffee (KC) | 288.8 | -0.84% |
+| Sugar (SB) | 18.35 | +1.22% |
+| Cotton (CT) | 87.12 | +0.90% |
+| Cocoa (CC) | 5902.0 | -0.41% |
 | Orange Juice (JO) | 148.5 | -3.55% |
 | Lumber (LB) | 567.0 | +0.26% |
 | Live Cattle (LC) | 216.85 | +1.91% |
 | Lean Hogs (LH) | 84.275 | +2.37% |
 | Feeder Cattle (FC) | 325.5 | +1.66% |
-| Bitcoin (BTC) | 78985.0 | +0.53% |
+| Bitcoin (BTC) | 79850.0 | +1.61% |
 | 3 Month SOFR (SR3) | 96.135 | +0.00% |
-| 30 Day Fed Funds (ZQ) | 96.3025 | +0.00% |
+| 30 Day Fed Funds (ZQ) | 96.3 | +0.00% |
 | Aluminum (ALI) | 3492.0 | +1.38% |
-| Canola (RS) | 835.8 | -0.35% |
+| Canola (RS) | 840.1 | +0.07% |
 | Coal Newcastle (NCF) | 147.5 | -0.10% |
 | Ethanol (ZK) | 2.06 | -0.96% |
-| Gasoil (G) | 1363.75 | +0.89% |
+| Gasoil (G) | 1385.25 | +2.44% |
 | Iron Ore (TIO) | 100.02 | +0.45% |
 | Steel HRC (HRC) | 1231.0 | +0.33% |
-| Ultra 10 Year Note (TN) | 109.15625 | +0.11% |
-| Ultra Bond (UB) | 110.1875 | +0.31% |
+| Ultra 10 Year Note (TN) | 109.046875 | +0.01% |
+| Ultra Bond (UB) | 110.03125 | +0.17% |
 | Uranium (UX) | 89.8 | +0.17% |
 
 ## CALENDAR
@@ -125,7 +125,6 @@ Mega-cap earnings:
 - AMC **LEN**  EPS est 1.291  (Lennar Corp)
 - AMC **COO**  EPS est 1.1237  (Cooper Companies Inc)
 - AMC **ABVX**  EPS est -0.9585  (Abivax ADR)
-- BMO **SAIL**  EPS est 0.0791  (Sailpoint Inc)
 
 Options event-vol flags (NOT direction):
 - **ORCL** exp 2026-09-11 ATM IV 0.0005 implied move 0.0% put/call OI —
@@ -255,31 +254,31 @@ COLD (1w):
 - **Innovation / Patent Based** 0.0% 1d -0.2% 1w · ARKK, XT, BULZ
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 11 min **AAPL** Stock Market: Will S&P 500 Open Up or Down Today? (Benzinga Prediction Markets)
-- 13 min **YOUL** Youlife Group, Inc. Announces Participation in the Skyline Signature Series Webinar (PR Newswire)
-- 14 min **AMZN,MP,NVDA,ORCL,USAR** The U.S.-China Worry List: Here's What Could Rattle the Fragile Detente (Barrons.com)
-- 32 min **CRM,GOOG,GOOGL,INTC,MSFT** SpaceX, Nvidia Lead Schwab Buys As Software Rally Spurs Profit-Taking  Trading Gauge Posts First Dip Since April (Stocktwits)
-- 45 min **ENB** Enbridge Names Michele Harradence as CEO as Greg Ebel Retires (Oilprice.com)
-- 51 min **D,NEE** NEE Stock Rises Overnight: NextEra Energy Secures Up To $1.9B DOE Loan To Restart Iowa Nuclear Plant (Stocktwits)
-- 59 min **BRZE** Braze Inc (BRZE) (Q2 2027) Earnings Call Highlights: Record Revenue and AI Adoption Drive Growth (GuruFocus.com)
-- 59 min **TTAN** ServiceTitan Inc (TTAN) (Q2 2027) Earnings Call Highlights: Record Free Cash Flow and AI-Driven ... (GuruFocus.com)
-- 59 min **INNV** InnovAge Holding Corp (INNV) (Q4 2026) Earnings Call Highlights: Strong EBITDA Growth and ... (GuruFocus.com)
-- 59 min **DKNG,FLUT** This NFL Season Is 'Do or Die' for Prediction Markets (Barrons.com)
-- 1 hour **BMNR** Will Institutions Buy Crypto After Ethereum's Q3 Run? Tom Lee Thinks So (BeInCrypto)
-- 1 hour **ACLS** Axcelis to build new Korea manufacturing site in US$35 million expansion (DigiTimes)
-- 1 hour **AAPL,AMZN,GOOG,GOOGL,META** AI Is Splitting the Magnificent Seven Into Winners and Laggards, Says Lo Toney (BeInCrypto)
-- 1 hour **AAPL** Apple Might Be Planning to 'Surprise and Shine' at iPhone 18 Launch Event, but Crypto Bettors Are Already Betting on Foldables and More (Benzinga Prediction Markets)
-- 1 hour **AAPL** Apple yields to memory suppliers in historic strategy shift, with Kioxia tipped as NAND long-term agreement recipient (DigiTimes)
-- 1 hour **DVLT** DVLT Stock Rises As Traders Brace For Platform Launch  Retail Stays Bearish Amid Growing Buzz (Stocktwits)
-- 1 hour **MCD,NKE,STZ** Why Did NKE, MCD, STZ Stocks Slump To 52-Week Lows Today? (Stocktwits)
-- 1 hour **ELF** Naturium Expands North American Retail Presence, Launching Exclusively at Sephora Mexico and With Expansion Into Sephora Canada (Business Wire)
-- 1 hour **IBM** Cleveland Clinic, RIKEN and IBM Team Advance to Finals for 2026 ACM Gordon Bell Prize (PR Newswire)
-- Sep-08 **QCOM,NVDA,MRVL,AMZN** MRVL Stock Keeps Climbing As CEO Shrugs Off Qualcomm-Amazon Threat: 'We Are The Switzerland Of This Entire Market' (Stocktwits)
-- Sep-08 **INTC,AMD,TSM** INTC Stock Slips Overnight: AMD Reaffirms TSMC Ties Amid Intel Foundry Buzz  But Keeps Supplier Options Open (Stocktwits)
-- Sep-08 **INGM** Ingram Micro Holding Corporation Announces Pricing of Secondary Offering of Common Stock by its Principal Stockholder and a Concurrent Stock Repurchase (Business Wire)
-- Sep-08 **ROIV,SHEL,DELL** Why Did DELL, ROIV, SHEL Stocks Surge To 52-Week Highs Today? (Stocktwits)
-- Sep-08 **AMD,ORCL** Dow Futures Slip, S&P 500, Nasdaq Futures Climb As Oil Nears $100 A Barrel: RKLB, AMD, ORCL, SMR Stocks In Focus (Stocktwits)
-- Sep-08 **BABA** Cambricon takes a PyTorch Foundation board seat as China's chip challengers turn to software (DigiTimes)
+- 2 min **MICC** Share Purchase - Long Term Incentive Plans (GlobeNewswire)
+- 5 min **PLTR** Palantir and Nebius form sovereign AI infrastructure partnership (Verdict)
+- 10 min **COO,AVAV,SAIL,SIG,AEO** Wednesday's Company Earnings Slate (MarketWatch)
+- 12 min **V** Visa and World Bank Group Announce New Risk-Sharing Initiative to Expand Digital Payments and Financial Inclusion in Emerging Markets (Business Wire)
+- 23 min **AAPL** AAPL Stock Has Mostly Struggled On iPhone Launch Days: Can John Ternus 'Fold' Apple Towards Better Days? (Stocktwits)
+- 25 min **META** META Stock Rises Premarket: Zuckerberg Says Threads Is Either Bigger Than X Or Close In Scale (Stocktwits)
+- 28 min **PKX** Posco expands production capacity for premium automotive steel (Just Auto)
+- 29 min **AAPL** A Foldable iPhone Will Be Apple's Biggest Test in Years (Barrons.com)
+- 33 min **RKLB,QCOM,ORCL,GME,TSLA** Nasdaq, Dow, S&P 500 Futures Mixed As Oil Hits $100 Again: QCOM, ORCL, AAPL, AMD, TSLA, RKLB, HOOD, GME In Focus (Stocktwits)
+- 34 min **ACN,GOOG,GOOGL** Accenture Dedicates 1,000 Engineers to Googles Agentic AI  And Exposes Where the Real Bottleneck Lives (Forkast News)
+- 36 min **UBS** Oil Price Hits $100 a Barrel, Sending Bond Yields Higher (Barrons.com)
+- 39 min **E** McDermott wins subsea contract for Cronos gas field off Cyprus (Offshore Technology)
+- 42 min **AGI,AEM** Regency Silver Corp Acquires Past Producing Jabali Gold Project in Sonora, Mexico - Adjacent to Alamos Gold's Mulatos Mine (TMX Newsfile)
+- 46 min **XYZ** Jack Dorsey's Block Applies for Bank Charter to Custody Bitcoin (decrypt)
+- 48 min **COIN** Coinbase CLARITY Act Optimistic as Cloture Vote Faces Ethics Fight (Cryptonews)
+- 52 min **MSCI** Garden Apartment Pricing Reflects Rising Supply Risk (CRE Daily)
+- 57 min **SNAP** SNAP Stock Rises Premarket: CEO Sets 2027 Target To Move Beyond Ads Into Commerce, Retail Still Bearish (Stocktwits)
+- 57 min **SNAP** Stock Rises Premarket: CEO Sets 2027 Target To Move Beyond Ads Into Commerce, Retail Still Bearish (Stocktwits)
+- 58 min **GDDY** UK Satellite Cities Outpace Larger Neighbours for Entrepreneurial Growth, GoDaddy Research Finds (PR Newswire)
+- 1 hour **QCOM,AMD,AMZN,NVDA** QCOM Stock Rises Premarket: CFO Touts Well-Priced Shares After Amazon Deal And  Port Once AI Stack For Rival Chips (Stocktwits)
+- 1 hour **AMZN,NWG** Amazon Is Selling Its First Sterling Bonds in Four-Part Deal (Bloomberg)
+- 1 hour **CBRE,CWK** Lower Manhattan Office Leasing Surges as Rents Rise (CRE Daily)
+- 1 hour **BBIO** Oral Infigratinib Shows Meaningful Benefits Beyond Growth Within 52 Weeks in Children with Achondroplasia in the Phase 3 PROPEL 3 Trial (GlobeNewswire)
+- 1 hour **SKHY** Samsung turns to Japan for packaging edge, narrows HBM gap with SK Hynix (DigiTimes)
+- 1 hour **AAPL** Apple's Annual Product Event: A Foldable iPhone Will Be the Tech Company's Biggest Test in Years (Barrons.com)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
