@@ -100,6 +100,8 @@ def test_incremental_land_hooks() -> None:
     assert "from . import land_file" in pre
     assert "_land(date, key, title)" in pre
     assert "land_file.land" in book
+    assert '_land(date, "universe"' in book
+    assert '_land(date, "finviz"' in book
     assert "leftover sweep" in yml
     assert "FULLSCAN_LAND" in yml
     assert "before 05:35 ET" in yml

@@ -775,6 +775,8 @@ def test_safe_git_push_keeps_dated_ranker_on_conflict() -> None:
     assert "restore_unstaged" in text
     assert "git stash pop" in text
     assert "finviz_2026-09-09.csv" in text
+    assert "git stash drop" not in text
+    assert "keeping stash" in text
 
 
 def test_preopen_harden_halt_reverted() -> None:

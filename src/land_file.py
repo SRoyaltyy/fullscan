@@ -61,6 +61,10 @@ def step_paths(date: str, key: str) -> list[Path]:
             wx / f"{date}_weather.json",
             wx / f"{date}_weather.md",
         ],
+        "finviz": [
+            ROOT / "data" / "exports" / f"finviz_{date}.csv",
+            ROOT / "data" / "finviz" / "latest.csv",
+        ],
         "universe": [ROOT / "data" / "universe" / f"{date}_membership.csv"],
         "join": [ROOT / "data" / "join" / f"{date}_ranked.csv"],
         "ab": [
