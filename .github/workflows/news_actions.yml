@@ -15,6 +15,10 @@ on:
         description: "YYYY-MM-DD"
         required: false
         default: ""
+      force:
+        description: "Ignore 09:25 ET cutoff and skip-if-good"
+        required: false
+        default: "false"
   # NO schedule cron: Pre-Open ALL (06:00 ET) runs morning news actions.
   # Dispatch-only — orchestrator last-chance fallback after 08:00 ET.
 
@@ -29,8 +33,14 @@ jobs:
   actions:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    env:
+      FULLSCAN_LAND: "1"
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+          token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -72,8 +82,10 @@ jobs:
           HOURS="${{ github.event.inputs.hours }}"; HOURS=${HOURS:-48}
           LIMIT="${{ github.event.inputs.limit }}"; LIMIT=${LIMIT:-300}
           DATE="${{ github.event.inputs.run_date }}"
+          FORCE="${{ github.event.inputs.force }}"
           ARGS=(--hours "$HOURS" --limit "$LIMIT")
           [ -n "$DATE" ] && ARGS+=(--date "$DATE")
+          [ "$FORCE" = "true" ] && ARGS+=(--force)
           python -m src.news_actions "${ARGS[@]}"
       - name: Preview
         if: always()

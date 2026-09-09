@@ -128,6 +128,19 @@ def test_should_not_push_locally() -> None:
         os.environ.pop("FULLSCAN_LAND_NOPUSH", None)
 
 
+def test_land_never_raises() -> None:
+    os.environ["FULLSCAN_LAND_NOPUSH"] = "1"
+    try:
+        with mock.patch.object(
+                land_file, "step_paths", side_effect=RuntimeError("boom")):
+            rec = land_file.land("2026-09-09", "news_parse", title="News parse")
+        assert rec["ok"] is False
+        assert rec["pushed"] is False
+        assert "boom" in (rec.get("preview") or "")
+    finally:
+        os.environ.pop("FULLSCAN_LAND_NOPUSH", None)
+
+
 def test_qc_news_parse_still_loud() -> None:
     r = output_qc.qc_news_parse("/no/such/parsed.json")
     assert r.ok is False
@@ -143,6 +156,7 @@ def main() -> None:
         test_land_pushes_qc_ok_file,
         test_day_board_html_has_raw_poll,
         test_should_not_push_locally,
+        test_land_never_raises,
         test_qc_news_parse_still_loud,
     ]
     failed = 0

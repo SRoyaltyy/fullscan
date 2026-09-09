@@ -86,7 +86,28 @@ concurrency:
   cancel-in-progress: ${{ github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu' }}
 
 jobs:
+  gate:
+    name: Clock gate (merge poke is not a 01:00 book)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      go: ${{ steps.g.outputs.go }}
+    steps:
+      - id: g
+        run: |
+          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          FORCE="${{ github.event.inputs.force }}"
+          echo "ET_HM=$ET_HM event=${{ github.event_name }} force=$FORCE"
+          if [ "${{ github.event_name }}" = "push" ] && [ "$ET_HM" -lt 535 ] && [ "$FORCE" != "true" ]; then
+            echo "before 05:35 ET — merge/touch is not a book. 06:10 schedule + 05:40 scrape own the clock."
+            echo "go=no" >> "$GITHUB_OUTPUT"
+          else
+            echo "go=yes" >> "$GITHUB_OUTPUT"
+          fi
+
   all:
+    needs: gate
+    if: needs.gate.outputs.go == 'yes'
     runs-on: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
     timeout-minutes: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && 90 || 360 }}
     env:

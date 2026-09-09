@@ -96,15 +96,16 @@ def _disk_workflows(date: str) -> list[diag.WorkflowCheck]:
 def build(date: str, lands: list[dict] | None = None) -> dict:
     """Audit disk + merge prior land log. No GitHub API (no Action)."""
     workflows = _disk_workflows(date)
-    book = next(w for w in workflows if w.key == "stock_book")
-    book_json = next((f for f in book.files if f.key == "book_json"), None)
+    book = next((w for w in workflows if w.key == "stock_book"), None)
+    book_files = list(book.files) if book is not None else []
+    book_json = next((f for f in book_files if f.key == "book_json"), None)
     book_written = bool(book_json and book_json.status == "OK")
-    era_inputs_ok = all(f.status == "OK" for f in book.files if f.role == "input")
+    era_inputs_ok = all(f.status == "OK" for f in book_files if f.role == "input")
     from . import book_era
     historical = date < book_era.today_et()
     ranker_ready = era_inputs_ok or (historical and book_written)
     blockers = []
-    for f in book.files:
+    for f in book_files:
         if f.role != "input" or f.status == "OK":
             continue
         blockers.append(f"{f.status} {f.name} `{f.path}` — {f.reason or f.status}")

@@ -17,6 +17,10 @@ on:
         description: "YYYY-MM-DD label for output files"
         required: false
         default: ""
+      force:
+        description: "Ignore 09:25 ET cutoff and skip-if-good"
+        required: false
+        default: "false"
 
 permissions:
   contents: write
@@ -29,8 +33,14 @@ jobs:
   parse:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    env:
+      FULLSCAN_LAND: "1"
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+          token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -56,10 +66,12 @@ jobs:
           HOURS="${{ github.event.inputs.hours }}"
           LIMIT="${{ github.event.inputs.limit }}"
           DATE="${{ github.event.inputs.run_date }}"
+          FORCE="${{ github.event.inputs.force }}"
           HOURS=${HOURS:-24}
           LIMIT=${LIMIT:-200}
           ARGS=(--hours "$HOURS" --limit "$LIMIT")
           [ -n "$DATE" ] && ARGS+=(--date "$DATE")
+          [ "$FORCE" = "true" ] && ARGS+=(--force)
           python -m src.news_parse "${ARGS[@]}"
       - name: Show summary
         if: always()

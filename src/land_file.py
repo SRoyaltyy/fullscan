@@ -301,6 +301,21 @@ def land(date: str, key: str, title: str = "",
     Never raises. A failed push does not stop the next step.
     """
     title = title or key
+    try:
+        return _land_body(date, key, title, extra_paths, require_qc)
+    except Exception as e:  # noqa: BLE001 — packet must continue
+        print(f"[land] WARN: {key} crashed: {e}")
+        return {
+            "key": key, "title": title, "date": date,
+            "ok": False, "pushed": False,
+            "at": datetime.now(ET).isoformat(),
+            "files": [],
+            "preview": f"land crashed: {e}",
+        }
+
+
+def _land_body(date: str, key: str, title: str,
+               extra_paths: list[Path] | None, require_qc: bool) -> dict:
     paths = [p for p in (step_paths(date, key) + list(extra_paths or []))
              if p.exists()]
     checks: list[dict] = []
@@ -339,22 +354,26 @@ def land(date: str, key: str, title: str = "",
         _record_and_board(date, record)
         return record
 
-    board_paths = _write_board_payload(date, key, title, checks, pushed=False)
-    push_paths = list(ok_paths) + board_paths
-    pushed = _push(f"auto: land {key} [{date}]", push_paths)
+    preview = " · ".join(
+        (c["preview"] or c["path"]) for c in checks if c.get("preview")
+    )[:1200]
+    # Write the board as pushed=yes *before* git so the JSON that lands
+    # on main matches the files in the same commit (not a later leftover).
     record = {
         "key": key, "title": title, "date": date,
         "ok": bool(ok_paths) and all(c["ok"] for c in checks),
-        "pushed": pushed,
+        "pushed": True,
         "at": datetime.now(ET).isoformat(),
         "files": checks,
-        "preview": " · ".join(
-            (c["preview"] or c["path"]) for c in checks if c.get("preview")
-        )[:1200],
+        "preview": preview,
     }
-    # Refresh board with final pushed flag (second write, same files).
-    _write_board_payload(date, key, title, checks, pushed=pushed,
-                         preview=record["preview"], land=record)
+    board_paths = _write_board_payload(
+        date, key, title, checks, pushed=True, preview=preview, land=record)
+    pushed = _push(f"auto: land {key} [{date}]", list(ok_paths) + board_paths)
+    record["pushed"] = pushed
+    if not pushed:
+        _write_board_payload(
+            date, key, title, checks, pushed=False, preview=preview, land=record)
     return record
 
 

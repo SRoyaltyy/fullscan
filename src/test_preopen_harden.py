@@ -104,6 +104,16 @@ def test_incremental_land_hooks() -> None:
     assert "FULLSCAN_LAND" in yml
     assert "before 05:35 ET" in yml
     assert "go=no" in yml
+    book_yml = (ROOT / ".github" / "workflows" / "stock_book_all.yml").read_text(
+        encoding="utf-8")
+    assert "before 05:35 ET" in book_yml
+    assert "go=no" in book_yml
+    assert "needs: gate" in book_yml
+    orch = (ROOT / ".github" / "workflows" / "daily_orchestrator.yml").read_text(
+        encoding="utf-8")
+    assert "news_judge.yml" in orch
+    assert 'inputs[force]=true' in orch
+    assert "35 13" in orch
     dash = (ROOT / "src" / "day_board.py").read_text(encoding="utf-8")
     assert "raw.githubusercontent.com" in dash
     assert "dashboard/day-board" in dash

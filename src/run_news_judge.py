@@ -202,6 +202,11 @@ def main() -> None:
             except Exception as e:
                 print(f"[news_judge] structured parse failed: {e}")
             print(f"[news_judge] {date_str} -> {path}")
+            try:
+                from . import land_file
+                land_file.land(date_str, "news_judge", title="News judge")
+            except Exception as e:  # noqa: BLE001
+                print(f"[news_judge] WARN: land failed: {e}")
             return
         print(f"[news_judge] attempt {attempt + 1} QC FAIL ({last_qc.reason}) "
               "— throwing out")

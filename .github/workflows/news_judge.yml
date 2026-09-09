@@ -23,13 +23,23 @@ concurrency:
 
 jobs:
   judge:
-    runs-on: [self-hosted, ecs]
-    timeout-minutes: 240
+    # Dispatch-only last-chance heal. ubuntu/DeepSeek must actually start
+    # when ECS is offline (09-08 standalone judge sat in the ECS queue).
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      FULLSCAN_LAND: "1"
+      FULLSCAN_HOME: "/home/runner"
+      HOME: "/home/runner"
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+          token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
+          python-version: "3.12"
       - name: Install deps
         run: |
           pip install -r requirements.txt

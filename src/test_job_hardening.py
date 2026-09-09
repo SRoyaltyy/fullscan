@@ -798,6 +798,11 @@ def test_incremental_land_and_day_board() -> None:
     assert "day-board" in dep
     orch = (WF / "daily_orchestrator.yml").read_text(encoding="utf-8")
     assert "news_parse.yml" in orch
+    assert "news_judge.yml" in orch
+    assert 'inputs[force]=true' in orch
+    book = (WF / "stock_book_all.yml").read_text(encoding="utf-8")
+    assert "before 05:35 ET" in book
+    assert "needs: gate" in book
 
 
 def test_ubuntu_preopen_not_blocked_by_queued_ecs() -> None:
