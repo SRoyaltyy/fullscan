@@ -866,6 +866,11 @@ def main() -> None:
                 "[map_heat] overlay produced empty futures tape — "
                 "Elite scrape failed; not treating this as skip-if-good success"
             )
+        try:
+            from . import land_file
+            land_file.land(date, "map_heat", title="Map heat morning overlay")
+        except Exception as e:  # noqa: BLE001
+            print(f"[map_heat] WARN: land failed: {e}")
         return
     if already_good(date) and not args.force:
         print(f"[map_heat] skip-if-good {date}")

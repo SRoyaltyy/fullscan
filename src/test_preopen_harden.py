@@ -118,6 +118,17 @@ def test_incremental_land_hooks() -> None:
     dash = (ROOT / "src" / "day_board.py").read_text(encoding="utf-8")
     assert "raw.githubusercontent.com" in dash
     assert "dashboard/day-board" in dash
+    scrape = (ROOT / ".github" / "workflows" / "finviz_preopen_scrape.yml").read_text(
+        encoding="utf-8")
+    assert "FULLSCAN_LAND" in scrape
+    digest = (ROOT / "src" / "finviz_digest.py").read_text(encoding="utf-8")
+    assert "land_file.land" in digest
+    heat = (ROOT / "src" / "map_heat.py").read_text(encoding="utf-8")
+    assert "land_file.land" in heat
+    sleeve = (ROOT / ".github" / "workflows" / "sleeve_merge_live.yml").read_text(
+        encoding="utf-8")
+    assert "no ${DATE} book — skip hollow flatten card" in sleeve
+    assert "before 09:00 ET" in sleeve
 
 
 def test_holiday_overlay_uses_last_session() -> None:
