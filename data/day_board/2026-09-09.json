@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T06:19:30.170903-04:00",
+  "generated_at": "2026-09-09T06:25:38.974086-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -359,7 +359,7 @@
           "role": "required",
           "status": "OK",
           "reason": "sectors=11",
-          "size": 9304
+          "size": 9279
         }
       ]
     },
@@ -497,7 +497,7 @@
           "role": "input",
           "status": "OK",
           "reason": "sectors=11",
-          "size": 9304
+          "size": 9279
         },
         {
           "key": "in_ab",
@@ -515,7 +515,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5902",
-          "size": 2143242
+          "size": 2139841
         },
         {
           "key": "peers",
@@ -907,6 +907,31 @@
         }
       ],
       "preview": "keys: date, generated_at, sectors"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T06:25:37.899985-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-09_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.3050000000000002, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.73, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.935, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 1.0950000000000002, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.0, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.56, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 0.6, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-09_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5035,
+          "preview": "# Weather report \u2014 2026-09-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.3050000000000002, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.73, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.935, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 1.0950000000000002, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.0, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.56, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 0.6, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {

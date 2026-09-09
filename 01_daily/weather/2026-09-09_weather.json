@@ -1,6 +1,6 @@
 {
  "date": "2026-09-09",
- "generated_at": "2026-09-09T05:18:34.879676-04:00",
+ "generated_at": "2026-09-09T06:22:36.111346-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -109,9 +109,9 @@
    "Technology": 0.14,
    "Utilities": 1.32
   },
-  "events_bull": 4,
-  "events_bear": 8,
-  "china_event_dir": "bull"
+  "events_bull": 2,
+  "events_bear": 2,
+  "china_event_dir": null
  },
  "stances": {
   "sector": {
@@ -232,9 +232,9 @@
     "why": "mirrors general risk-unknown [general predict]"
    },
    "ADR-China": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "high-impact China event(s) lean bull [event scanner]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "no high-impact China event flagged"
    }
   },
   "beta": {
