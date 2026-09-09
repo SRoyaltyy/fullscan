@@ -19,38 +19,34 @@ Live `flatten_robust` is not changed.
 
 | Strategy | Size | Sell | Boost | Book % | Signal-only % | Starts YES | Fills | Skips | Audit | MD |
 |---|---|---|---|---:|---:|---:|---:|---:|---|---|
-| `union_e_green_h3` | leftover | list | none | +50.00 | +17.90 | 15/18 | 64 | 108 | PASS | [union_e_green_h3.md](factor_mine/union_e_green_h3.md) |
-| `union_e_fresh_h3` | leftover | list | none | +29.24 | -16.62 | 16/18 | 69 | 125 | PASS | [union_e_fresh_h3.md](factor_mine/union_e_fresh_h3.md) |
-| `union_earn_react_h3` | leftover | list | none | +24.06 | -30.11 | 15/18 | 74 | 127 | PASS | [union_earn_react_h3.md](factor_mine/union_earn_react_h3.md) |
-| `flatten_h5` | leftover | list | none | +23.15 | +67.10 | 17/18 | 77 | 201 | PASS | [flatten_h5.md](factor_mine/flatten_h5.md) |
-| `flatten_h5_cut` | leftover | cut_loser | none | +23.15 | +67.10 | 17/18 | 77 | 201 | PASS | [flatten_h5_cut.md](factor_mine/flatten_h5_cut.md) |
-| `flatten_h5_sizeup` | leftover | list | sizeup | +23.15 | +67.10 | 17/18 | 77 | 201 | PASS | [flatten_h5_sizeup.md](factor_mine/flatten_h5_sizeup.md) |
-| `flatten_h5_time` | leftover | time | none | +23.15 | +67.10 | 17/18 | 77 | 201 | PASS | [flatten_h5_time.md](factor_mine/flatten_h5_time.md) |
-| `flatten_h5_trail` | leftover | trail | none | +23.15 | +67.10 | 17/18 | 77 | 201 | PASS | [flatten_h5_trail.md](factor_mine/flatten_h5_trail.md) |
-| `flatten_h1` | leftover | list | none | +16.17 | +23.20 | 18/18 | 118 | 41 | PASS | [flatten_h1.md](factor_mine/flatten_h1.md) |
-| `flatten_h3_time` | leftover | time | none | +11.83 | +45.15 | 17/18 | 82 | 135 | PASS | [flatten_h3_time.md](factor_mine/flatten_h3_time.md) |
-| `flatten_h3_half` | half | list | none | +7.21 | +45.15 | 17/18 | 107 | 145 | PASS | [flatten_h3_half.md](factor_mine/flatten_h3_half.md) |
-| `flatten_h3` | leftover | list | none | +12.04 | +45.15 | 17/18 | 77 | 137 | PASS | [flatten_h3.md](factor_mine/flatten_h3.md) |
-| `flatten_h3_cut` | leftover | cut_loser | none | +12.04 | +45.15 | 17/18 | 77 | 137 | PASS | [flatten_h3_cut.md](factor_mine/flatten_h3_cut.md) |
-| `flatten_h3_sizeup` | leftover | list | sizeup | +12.04 | +45.15 | 17/18 | 77 | 137 | PASS | [flatten_h3_sizeup.md](factor_mine/flatten_h3_sizeup.md) |
-| `flatten_h3_trail` | leftover | trail | none | +12.04 | +45.15 | 17/18 | 77 | 137 | PASS | [flatten_h3_trail.md](factor_mine/flatten_h3_trail.md) |
-| `flatten_live_h1` | leftover | list | none | +9.78 | +4.99 | 7/18 | 32 | 0 | PASS | [flatten_live_h1.md](factor_mine/flatten_live_h1.md) |
-| `flatten_live_h3` | leftover | list | none | +4.92 | +9.59 | 7/18 | 26 | 34 | PASS | [flatten_live_h3.md](factor_mine/flatten_live_h3.md) |
-| `flatten_live_h5` | leftover | list | none | +5.85 | +8.02 | 7/18 | 26 | 55 | PASS | [flatten_live_h5.md](factor_mine/flatten_live_h5.md) |
-| `union_news_g_h5` | leftover | list | none | -12.83 | +144.33 | 5/18 | 83 | 202 | PASS | [union_news_g_h5.md](factor_mine/union_news_g_h5.md) |
-| `union_white_coil_h1` | leftover | list | none | +2.02 | +9.14 | 12/18 | 131 | 8 | PASS | [union_white_coil_h1.md](factor_mine/union_white_coil_h1.md) |
-| `flatten_h5_rankw` | rank_w | list | none | +17.23 | +67.10 | 18/18 | 74 | 195 | PASS | [flatten_h5_rankw.md](factor_mine/flatten_h5_rankw.md) |
-| `flatten_h5_sboost` | leftover | list | both | +22.48 | +67.10 | 17/18 | 81 | 209 | PASS | [flatten_h5_sboost.md](factor_mine/flatten_h5_sboost.md) |
-| `union_h5_sboost` | leftover | list | both | +22.19 | +70.08 | 16/18 | 112 | 271 | PASS | [union_h5_sboost.md](factor_mine/union_h5_sboost.md) |
-| `flatten_live_h1_sizeup` | leftover | list | sizeup | +9.78 | +4.99 | 7/18 | 32 | 0 | PASS | [flatten_live_h1_sizeup.md](factor_mine/flatten_live_h1_sizeup.md) |
-| `union_h3_cut` | leftover | cut_loser | none | +14.41 | +42.06 | 17/18 | 101 | 167 | PASS | [union_h3_cut.md](factor_mine/union_h3_cut.md) |
-| `union_h1_topheavy` | topheavy | list | none | +16.32 | +19.07 | 17/18 | 146 | 53 | PASS | [union_h1_topheavy.md](factor_mine/union_h1_topheavy.md) |
+| `union_e_green_h3` | leftover | list | none | +49.90 | +15.44 | 15/19 | 72 | 114 | PASS | [union_e_green_h3.md](factor_mine/union_e_green_h3.md) |
+| `union_e_fresh_h3` | leftover | list | none | +29.35 | -17.95 | 16/19 | 77 | 131 | PASS | [union_e_fresh_h3.md](factor_mine/union_e_fresh_h3.md) |
+| `flatten_h5` | leftover | list | none | +27.30 | +75.94 | 17/19 | 80 | 222 | PASS | [flatten_h5.md](factor_mine/flatten_h5.md) |
+| `flatten_h5_cut` | leftover | cut_loser | none | +27.30 | +75.94 | 17/19 | 80 | 222 | PASS | [flatten_h5_cut.md](factor_mine/flatten_h5_cut.md) |
+| `flatten_h5_sizeup` | leftover | list | sizeup | +27.30 | +75.94 | 17/19 | 80 | 222 | PASS | [flatten_h5_sizeup.md](factor_mine/flatten_h5_sizeup.md) |
+| `flatten_h5_time` | leftover | time | none | +27.30 | +75.94 | 17/19 | 80 | 222 | PASS | [flatten_h5_time.md](factor_mine/flatten_h5_time.md) |
+| `flatten_h5_trail` | leftover | trail | none | +27.30 | +75.94 | 17/19 | 80 | 222 | PASS | [flatten_h5_trail.md](factor_mine/flatten_h5_trail.md) |
+| `flatten_h5_sboost` | leftover | list | both | +26.59 | +75.94 | 17/19 | 84 | 230 | PASS | [flatten_h5_sboost.md](factor_mine/flatten_h5_sboost.md) |
+| `flatten_h3_time` | leftover | time | none | +12.64 | +46.49 | 17/19 | 89 | 150 | PASS | [flatten_h3_time.md](factor_mine/flatten_h3_time.md) |
+| `union_h3_time` | leftover | time | none | +16.34 | +42.44 | 17/19 | 110 | 191 | PASS | [union_h3_time.md](factor_mine/union_h3_time.md) |
+| `flatten_live_h1` | leftover | list | none | +4.52 | +1.27 | 6/19 | 48 | 0 | PASS | [flatten_live_h1.md](factor_mine/flatten_live_h1.md) |
+| `flatten_live_h3` | leftover | list | none | +2.49 | +7.46 | 7/19 | 34 | 50 | PASS | [flatten_live_h3.md](factor_mine/flatten_live_h3.md) |
+| `flatten_live_h5` | leftover | list | none | +3.40 | +5.92 | 7/19 | 34 | 71 | PASS | [flatten_live_h5.md](factor_mine/flatten_live_h5.md) |
+| `union_news_g_h5` | leftover | list | none | -10.37 | +141.13 | 8/19 | 87 | 218 | PASS | [union_news_g_h5.md](factor_mine/union_news_g_h5.md) |
+| `union_white_coil_h1` | leftover | list | none | +2.81 | +10.04 | 15/19 | 142 | 8 | PASS | [union_white_coil_h1.md](factor_mine/union_white_coil_h1.md) |
+| `flatten_h5_rankw` | rank_w | list | none | +21.76 | +75.94 | 17/19 | 74 | 215 | PASS | [flatten_h5_rankw.md](factor_mine/flatten_h5_rankw.md) |
+| `union_h5_sboost` | leftover | list | both | +24.47 | +78.01 | 15/19 | 109 | 298 | PASS | [union_h5_sboost.md](factor_mine/union_h5_sboost.md) |
+| `flatten_live_h1_sizeup` | leftover | list | sizeup | +4.52 | +1.27 | 6/19 | 48 | 0 | PASS | [flatten_live_h1_sizeup.md](factor_mine/flatten_live_h1_sizeup.md) |
+| `union_h3_cut` | leftover | cut_loser | none | +16.00 | +42.44 | 17/19 | 107 | 188 | PASS | [union_h3_cut.md](factor_mine/union_h3_cut.md) |
+| `union_h1_topheavy` | topheavy | list | none | +13.51 | +16.86 | 16/19 | 158 | 61 | PASS | [union_h1_topheavy.md](factor_mine/union_h1_topheavy.md) |
 
 ## All other blotters
 
 - [`union_h1`](factor_mine/union_h1.md)
 - [`union_h3`](factor_mine/union_h3.md)
 - [`union_h5`](factor_mine/union_h5.md)
+- [`flatten_h1`](factor_mine/flatten_h1.md)
+- [`flatten_h3`](factor_mine/flatten_h3.md)
 - [`probable_h1`](factor_mine/probable_h1.md)
 - [`probable_h3`](factor_mine/probable_h3.md)
 - [`probable_h5`](factor_mine/probable_h5.md)
@@ -91,6 +87,7 @@ Live `flatten_robust` is not changed.
 - [`union_coil_off_h1`](factor_mine/union_coil_off_h1.md)
 - [`union_coil_off_h3`](factor_mine/union_coil_off_h3.md)
 - [`union_earn_react_h1`](factor_mine/union_earn_react_h1.md)
+- [`union_earn_react_h3`](factor_mine/union_earn_react_h3.md)
 - [`union_e_fresh_h1`](factor_mine/union_e_fresh_h1.md)
 - [`union_r_up_h1`](factor_mine/union_r_up_h1.md)
 - [`union_r_up_h3`](factor_mine/union_r_up_h3.md)
@@ -154,7 +151,11 @@ Live `flatten_robust` is not changed.
 - [`flatten_h5_half`](factor_mine/flatten_h5_half.md)
 - [`flatten_h3_rankw`](factor_mine/flatten_h3_rankw.md)
 - [`flatten_h3_topheavy`](factor_mine/flatten_h3_topheavy.md)
+- [`flatten_h3_half`](factor_mine/flatten_h3_half.md)
+- [`flatten_h3_cut`](factor_mine/flatten_h3_cut.md)
+- [`flatten_h3_trail`](factor_mine/flatten_h3_trail.md)
 - [`flatten_h3_sboost`](factor_mine/flatten_h3_sboost.md)
+- [`flatten_h3_sizeup`](factor_mine/flatten_h3_sizeup.md)
 - [`flatten_live_h1_rankw`](factor_mine/flatten_live_h1_rankw.md)
 - [`flatten_live_h1_topheavy`](factor_mine/flatten_live_h1_topheavy.md)
 - [`flatten_live_h1_half`](factor_mine/flatten_live_h1_half.md)
@@ -172,7 +173,6 @@ Live `flatten_robust` is not changed.
 - [`union_h3_rankw`](factor_mine/union_h3_rankw.md)
 - [`union_h3_topheavy`](factor_mine/union_h3_topheavy.md)
 - [`union_h3_half`](factor_mine/union_h3_half.md)
-- [`union_h3_time`](factor_mine/union_h3_time.md)
 - [`union_h3_trail`](factor_mine/union_h3_trail.md)
 - [`union_h3_sboost`](factor_mine/union_h3_sboost.md)
 - [`union_h3_sizeup`](factor_mine/union_h3_sizeup.md)

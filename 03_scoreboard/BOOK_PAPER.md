@@ -1,6 +1,6 @@
 # Stock-book paper trading
 
-_Generated 2026-09-03T11:35:01 — calls 2026-08-13 → 2026-09-03_
+_Generated 2026-09-09T05:07:20 — calls 2026-08-13 → 2026-09-08_
 
 **Strategy:** LONG-only · top 10/day by book · entry close (16:00 ET) · hold 1w (exit 16:00 ET) · 10% of equity per trade · Futubull fees · cash-accounted (unfittable trades skipped and logged). Selection: `1d` stock-book buy list (prints ~13:00-15:45 ET, hence close entry).
 
@@ -10,16 +10,16 @@ _Generated 2026-09-03T11:35:01 — calls 2026-08-13 → 2026-09-03_
 
 | Start capital | Final equity | Return | Max DD | Trades | Skipped | Win rate |
 |---:|---:|---:|---:|---:|---:|---:|
-| $100,000 | $104,596.92 | **4.6%** | 4.06% | 29 | 216 | 55.2% |
+| $100,000 | $105,787.09 | **5.79%** | 4.06% | 29 | 255 | 58.6% |
 
 | Side | Trades | Win rate | P&L |
 |---:|---:|---:|---:|
-| BUY (long) | 29 | 55.2% | $4,554.34 |
+| BUY (long) | 29 | 58.6% | $5,787.11 |
 | SELL (short) | 0 | 0% | $0.00 |
 
 ## Day gate (per session)
 
-| Date | Predict | Score | SPY streak | Gate | Advisory |
+| Date | Predict | Score | SPY streak | Book | Advisory |
 |---|---|---:|---:|---|---|
 | 2026-08-13 | UP | 8.525 | 0 | **OPEN** — predict score +8.53 >= +1.00 | — |
 | 2026-08-14 | UP | 5.5 | 0 | **OPEN** — predict score +5.50 >= +1.00 | — |
@@ -33,6 +33,11 @@ _Generated 2026-09-03T11:35:01 — calls 2026-08-13 → 2026-09-03_
 | 2026-08-31 | DOWN | -5.85 | 0 | **CLOSED** — predict DOWN score -5.85 < +1.00 | — |
 | 2026-09-01 | DOWN | -6.3 | 1 | **CLOSED** — predict DOWN score -6.30 < +1.00 | — |
 | 2026-09-02 | DOWN | -3.825 | 2 | **CLOSED** — predict DOWN score -3.83 < +1.00 | news judge: hawkish/bearish top items |
+| 2026-09-03 | FLAT | -0.9 | 3 | **CLOSED** — predict FLAT score -0.90 < +1.00 | news judge: hawkish/bearish top items |
+| 2026-09-04 | UP | 2.25 | 0 | **OPEN** — predict score +2.25 >= +1.00 | — |
+| 2026-09-06 | — | — | 0 | **OPEN** — no predict on file — allowed | — |
+| 2026-09-07 | — | — | 0 | **OPEN** — no predict on file — allowed | — |
+| 2026-09-08 | DOWN | -11.475 | 1 | **CLOSED** — predict DOWN score -11.47 < +1.00 | — |
 
 ## Last 25 filled trades
 
@@ -53,16 +58,16 @@ _Generated 2026-09-03T11:35:01 — calls 2026-08-13 → 2026-09-03_
 | 2026-08-20 16:00 ET | `CELH` | BUY | 321 | $32.54 | 2026-08-27 16:00 ET | $35.23 | $855.07 | 8.19% | mid |
 | 2026-08-20 16:00 ET | `IRTC` | BUY | 81 | $127.98 | 2026-08-27 16:00 ET | $119.15 | $-719.78 | -6.94% | mid |
 | 2026-08-20 16:00 ET | `CALX` | BUY | 258 | $40.38 | 2026-08-27 16:00 ET | $38.36 | $-527.94 | -5.07% | mid |
-| 2026-08-27 16:00 ET | `RRC` | BUY | 249 | $41.55 | 2026-09-03 16:00 ET | $42.40 | $205.10 | 1.98% | mid |
-| 2026-08-27 16:00 ET | `CRK` | BUY | 714 | $14.50 | 2026-09-03 16:00 ET | $16.02 | $1,066.65 | 10.3% | mid |
-| 2026-08-27 16:00 ET | `ACMR` | BUY | 130 | $79.11 | 2026-09-03 16:00 ET | $70.04 | $-1,183.95 | -11.51% | mid |
-| 2026-08-27 16:00 ET | `MOS` | BUY | 428 | $24.16 | 2026-09-03 16:00 ET | $24.78 | $254.16 | 2.46% | mid |
-| 2026-08-27 16:00 ET | `ELF` | BUY | 96 | $106.97 | 2026-09-03 16:00 ET | $105.54 | $-141.93 | -1.38% | mid |
-| 2026-08-27 16:00 ET | `EPAM` | BUY | 94 | $109.36 | 2026-09-03 16:00 ET | $116.34 | $651.47 | 6.34% | mid |
-| 2026-08-27 16:00 ET | `CXT` | BUY | 204 | $50.64 | 2026-09-03 16:00 ET | $49.16 | $-307.30 | -2.97% | mid |
-| 2026-08-27 16:00 ET | `XP` | BUY | 581 | $17.81 | 2026-09-03 16:00 ET | $18.72 | $513.54 | 4.96% | mid |
-| 2026-08-27 16:00 ET | `MNDY` | BUY | 111 | $92.55 | 2026-09-03 16:00 ET | $96.51 | $434.81 | 4.23% | mid |
-| 2026-08-27 16:00 ET | `VNT` | BUY | 307 | $33.69 | 2026-09-03 16:00 ET | $31.84 | $-576.00 | -5.57% | mid |
+| 2026-08-27 16:00 ET | `RRC` | BUY | 249 | $41.55 | 2026-09-03 16:00 ET | $42.48 | $225.02 | 2.17% | mid |
+| 2026-08-27 16:00 ET | `CRK` | BUY | 714 | $14.50 | 2026-09-03 16:00 ET | $15.54 | $723.93 | 6.99% | mid |
+| 2026-08-27 16:00 ET | `ACMR` | BUY | 130 | $79.11 | 2026-09-03 16:00 ET | $69.90 | $-1,202.15 | -11.69% | mid |
+| 2026-08-27 16:00 ET | `MOS` | BUY | 428 | $24.16 | 2026-09-03 16:00 ET | $25.78 | $682.16 | 6.6% | mid |
+| 2026-08-27 16:00 ET | `ELF` | BUY | 96 | $106.97 | 2026-09-03 16:00 ET | $107.36 | $32.78 | 0.32% | mid |
+| 2026-08-27 16:00 ET | `EPAM` | BUY | 94 | $109.36 | 2026-09-03 16:00 ET | $117.20 | $732.31 | 7.12% | mid |
+| 2026-08-27 16:00 ET | `CXT` | BUY | 204 | $50.64 | 2026-09-03 16:00 ET | $50.07 | $-121.66 | -1.18% | mid |
+| 2026-08-27 16:00 ET | `XP` | BUY | 581 | $17.81 | 2026-09-03 16:00 ET | $19.99 | $1,251.41 | 12.09% | mid |
+| 2026-08-27 16:00 ET | `MNDY` | BUY | 111 | $92.55 | 2026-09-03 16:00 ET | $94.44 | $205.04 | 2.0% | mid |
+| 2026-08-27 16:00 ET | `VNT` | BUY | 307 | $33.69 | 2026-09-03 16:00 ET | $32.48 | $-379.52 | -3.67% | mid |
 
 Full records: `data/book_paper/trades.csv` (every fill with ET timestamps, prices, fees), `skipped.csv`, `equity_curve.csv`. Lever sweep: `BOOK_STRATEGY_SWEEP.md`. Dashboard: `dashboard/book-paper/index.html`.
 

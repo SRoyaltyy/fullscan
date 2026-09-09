@@ -178,12 +178,16 @@ def extend_spy(spy: pd.DataFrame) -> pd.DataFrame:
         return spy
     if hist is None or getattr(hist, "empty", True):
         return spy
+    hist = hist.reset_index()
     if isinstance(hist.columns, pd.MultiIndex):
         hist.columns = [str(c[0]).lower() for c in hist.columns]
     else:
         hist.columns = [str(c).lower() for c in hist.columns]
-    hist = hist.reset_index()
-    hist["date"] = pd.to_datetime(hist["date"]).dt.strftime("%Y-%m-%d")
+    date_col = "date" if "date" in hist.columns else next(
+        (c for c in hist.columns if str(c).lower() == "date"), None)
+    if date_col is None:
+        return spy
+    hist["date"] = pd.to_datetime(hist[date_col]).dt.strftime("%Y-%m-%d")
     hist["ticker"] = "SPY"
     keep = ["date", "ticker", "open", "high", "low", "close", "volume"]
     for c in keep:
@@ -581,24 +585,30 @@ def attach_panel(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def panel_masks(df: pd.DataFrame) -> list[tuple[str, pd.Series, str]]:
-    if "has_panel" not in df.columns:
+    if "has_panel" not in df.columns or not df["has_panel"].fillna(False).any():
         return []
     on = df["has_panel"].fillna(False)
+    false = pd.Series(False, index=df.index)
+
+    def col(name: str) -> pd.Series:
+        return df[name] if name in df.columns else false
+
+    nneg = pd.to_numeric(col("cam_nneg"), errors="coerce")
     return [
-        ("cam_white", on & df["cam_white"].fillna(False), "factor-mine ⚪ no red cameras"),
-        ("cam_nneg_le2", on & (df["cam_nneg"] <= 2), "factor-mine −N ≤ 2"),
-        ("cam_nneg_ge3", on & (df["cam_nneg"] >= 3), "factor-mine −N ≥ 3"),
-        ("cam_alarm", on & df["cam_alarm"].fillna(False), "factor-mine 🚨"),
-        ("cam_blue", on & df["cam_blue"].fillna(False), "factor-mine 🔵"),
-        ("cam_last_green", on & df["cam_last_green"].fillna(False),
+        ("cam_white", on & col("cam_white").fillna(False), "factor-mine ⚪ no red cameras"),
+        ("cam_nneg_le2", on & (nneg <= 2), "factor-mine −N ≤ 2"),
+        ("cam_nneg_ge3", on & (nneg >= 3), "factor-mine −N ≥ 3"),
+        ("cam_alarm", on & col("cam_alarm").fillna(False), "factor-mine 🚨"),
+        ("cam_blue", on & col("cam_blue").fillna(False), "factor-mine 🔵"),
+        ("cam_last_green", on & col("cam_last_green").fillna(False),
          "factor-mine last bar green"),
-        ("cam_earn", on & df["cam_earn"].fillna(False), "earnings-reaction window"),
-        ("cam_e_beat", on & (df["cam_e_pol"] == "good"),
+        ("cam_earn", on & col("cam_earn").fillna(False), "earnings-reaction window"),
+        ("cam_e_beat", on & (col("cam_e_pol") == "good"),
          "E beat (morning-export surprise, not date-only)"),
-        ("cam_e_miss", on & (df["cam_e_pol"] == "bad"), "E miss"),
-        ("cam_news_g", on & (df["cam_news"] == "good"), "news camera green"),
-        ("cam_news_b", on & (df["cam_news"] == "bad"), "news camera red"),
-        ("cam_join_g", on & (df["cam_join"] == "good"), "join camera green"),
+        ("cam_e_miss", on & (col("cam_e_pol") == "bad"), "E miss"),
+        ("cam_news_g", on & (col("cam_news") == "good"), "news camera green"),
+        ("cam_news_b", on & (col("cam_news") == "bad"), "news camera red"),
+        ("cam_join_g", on & (col("cam_join") == "good"), "join camera green"),
     ]
 
 
