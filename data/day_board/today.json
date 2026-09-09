@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T10:14:44.558000-04:00",
+  "generated_at": "2026-09-09T10:30:47.496194-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -88,24 +88,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T09:37:01.211024-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-09-09_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1113382,
-          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -273,6 +255,31 @@
         }
       ],
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-09\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T10:30:46.605837-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-09_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 2,
+          "preview": "keys: generated_at, hours, raw_headlines, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-09-09_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 11570,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-09-09T05:54:22.565188-04:00\nraw=400 unique_events=5 tickers=69"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-09T05:54:22.565188-04:00\nraw=400 unique_events=5 tickers=69"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
