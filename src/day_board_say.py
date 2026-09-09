@@ -143,7 +143,8 @@ def news_parse(date: str) -> dict | None:
     if isinstance(data, list):
         items = data
     elif isinstance(data, dict):
-        for k in ("items", "events", "headlines", "parsed"):
+        for k in ("usable_top", "all_items", "items", "events",
+                  "headlines", "parsed"):
             if isinstance(data.get(k), list):
                 items = data[k]
                 break
