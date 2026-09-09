@@ -205,12 +205,14 @@ def main() -> None:
               f"({existing.reason}) — throwing out")
         output_qc.reject(path, os.path.join(NEWS_DIR, f"{date_str}_judge.json"))
 
-    if preopen.past_predict_cutoff() and not args.force:
+    if (preopen.past_predict_cutoff() and not args.force
+            and not preopen.bypass_cutoff()):
         if existing.ok:
             print(f"[news_judge] {date_str}: past 09:25 ET, keeping quality-ok")
             return
         print(f"[news_judge] {date_str}: past 09:25 ET with no quality-ok "
-              "judge — not writing a late copy")
+              "judge — not writing a late copy "
+              "(set PREOPEN_BYPASS_CUTOFF=1 or --force)")
         return
 
     preopen.refuse_if_late("news_judge", force=args.force)

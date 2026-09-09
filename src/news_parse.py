@@ -491,12 +491,16 @@ def main() -> None:
     if existing.ok and not args.force:
         print(f"[news_parse] {date_str}: skip, quality-ok already on disk")
         return
-    if preopen.past_predict_cutoff() and not args.force:
-        if existing.ok:
-            print(f"[news_parse] {date_str}: past 09:25 ET, keeping quality-ok parse")
-            return
-        print(f"[news_parse] {date_str}: past 09:25 ET — not writing a late parse")
+    # Missing parse is a day-board required hole. --bypass-cutoff (late
+    # heal) must fill it; 09-09 poke called parse and this return ate it.
+    if (preopen.past_predict_cutoff() and not args.force
+            and not preopen.bypass_cutoff()):
+        print(f"[news_parse] {date_str}: past 09:25 ET — not writing a late "
+              "parse (set PREOPEN_BYPASS_CUTOFF=1 or --force)")
         return
+    if preopen.bypass_cutoff() and preopen.past_predict_cutoff():
+        print(f"[news_parse] {date_str}: --bypass-cutoff, writing missing parse "
+              f"after 09:25 ET")
     if not config.DATABASE_URL:
         print("[news_parse] DATABASE_URL not set — writing from files only")
     report = build_report(hours=args.hours, limit=args.limit, date_str=date_str)

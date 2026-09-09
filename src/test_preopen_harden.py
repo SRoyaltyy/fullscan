@@ -209,6 +209,18 @@ def test_deepseek_preflight_is_wired() -> None:
     assert "402" in ds
 
 
+def test_news_parse_honors_bypass_when_missing() -> None:
+    """09-09: orchestrator called parse after 09:25; module returned no file."""
+    parse_src = (ROOT / "src" / "news_parse.py").read_text(encoding="utf-8")
+    assert "preopen.bypass_cutoff()" in parse_src
+    assert "not writing a late" in parse_src
+    assert "PREOPEN_BYPASS_CUTOFF" in parse_src
+    actions = (ROOT / "src" / "news_actions.py").read_text(encoding="utf-8")
+    assert "preopen.bypass_cutoff()" in actions
+    judge = (ROOT / "src" / "run_news_judge.py").read_text(encoding="utf-8")
+    assert "preopen.bypass_cutoff()" in judge
+
+
 def test_parse_runs_when_credits_fail_or_past_cutoff() -> None:
     """09-09 hole: skip_writes ate parse on 402 / 09:25. Parse is file/DB."""
     pre = (ROOT / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
@@ -268,6 +280,7 @@ def main() -> None:
         test_weather_step_rejects_pre_0535_stamp,
         test_deepseek_preflight_is_wired,
         test_parse_runs_when_credits_fail_or_past_cutoff,
+        test_news_parse_honors_bypass_when_missing,
     ]
     failed = 0
     for fn in tests:
