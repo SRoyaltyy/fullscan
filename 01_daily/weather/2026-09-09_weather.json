@@ -1,6 +1,6 @@
 {
  "date": "2026-09-09",
- "generated_at": "2026-09-09T11:37:54.055730-04:00",
+ "generated_at": "2026-09-09T11:25:24.462442-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -23,17 +23,17 @@
   "dgs10_current": 4.78,
   "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.01,
-  "vix_ratio": 0.874,
-  "vix_spot": 16.51,
-  "vix_delta_1d": 0.79,
+  "dxy_pct_1d": 0.02,
+  "vix_ratio": 0.867,
+  "vix_spot": 16.28,
+  "vix_delta_1d": 0.56,
   "vix_ratio_source": "vix/vix3m",
   "vix": "falling",
-  "oil_pct_1d": 3.83,
+  "oil_pct_1d": 3.65,
   "oil": "rising",
-  "fear_greed": 58.2,
-  "fear_greed_label": "Greed",
-  "regime_corr": -0.937,
+  "fear_greed": null,
+  "fear_greed_label": null,
+  "regime_corr": -0.975,
   "sectors": {
    "Basic Materials": {
     "score": -4.5,
@@ -143,8 +143,8 @@
    },
    "Energy": {
     "stance": "favorable",
-    "confidence": "medium",
-    "why": "news_judge SECTOR Energy [bullish]"
+    "confidence": "high",
+    "why": "sector predict score +8.5 dir up conf 0.55 [sector board]"
    },
    "Financial": {
     "stance": "hostile",
@@ -152,9 +152,9 @@
     "why": "sector predict score -6.1 dir down conf 0.55 [sector board]"
    },
    "Healthcare": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "news_judge SECTOR Healthcare [bullish]"
+    "stance": "hostile",
+    "confidence": "high",
+    "why": "sector predict score -6.5 dir down conf 0.55 [sector board]"
    },
    "Industrials": {
     "stance": "hostile",

@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T11:38:47.223055-04:00",
+  "generated_at": "2026-09-09T11:39:22.447968-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -12,27 +12,27 @@
   "buy_1d": [
     {
       "ticker": "CIG",
-      "score": 0.7242815504164775
-    },
-    {
-      "ticker": "ATRO",
-      "score": 0.5210078151822785
+      "score": 0.7295940640445366
     },
     {
       "ticker": "EMBJ",
-      "score": 0.13038406873849306
+      "score": 0.15947751100763663
+    },
+    {
+      "ticker": "ATRO",
+      "score": 0.546294838227393
     },
     {
       "ticker": "MIR",
-      "score": 0.5956938762730717
+      "score": 0.5956986194371858
     },
     {
       "ticker": "NXE",
-      "score": 0.5135764674626018
+      "score": 0.5174102314598985
     },
     {
       "ticker": "BG",
-      "score": 0.38511479236914936
+      "score": 0.3907384184956642
     },
     {
       "ticker": "AR",
@@ -40,29 +40,33 @@
     },
     {
       "ticker": "ITT",
-      "score": 0.3667763704975007
-    },
-    {
-      "ticker": "XIFR",
-      "score": 0.5613846130666518
+      "score": 0.3940987951618214
     }
   ],
   "sell_1d": [
+    {
+      "ticker": "CLPT",
+      "score": -0.4386191971076979
+    },
     {
       "ticker": "METC",
       "score": -0.5485976282394803
     },
     {
       "ticker": "SLQT",
-      "score": -0.6107984629198537
+      "score": -0.6032524221274975
     },
     {
-      "ticker": "CPB",
-      "score": -0.33646948880033895
+      "ticker": "AORT",
+      "score": -0.46485344709091075
     },
     {
       "ticker": "COIN",
-      "score": -0.4791543714722759
+      "score": -0.4771223733068348
+    },
+    {
+      "ticker": "CPB",
+      "score": -0.3146502608807358
     },
     {
       "ticker": "SPIR",
@@ -70,23 +74,15 @@
     },
     {
       "ticker": "RZLV",
-      "score": -0.22462681350392838
+      "score": -0.21870658665417902
     },
     {
-      "ticker": "CLPT",
-      "score": -0.3293765034500459
-    },
-    {
-      "ticker": "BGS",
-      "score": -0.3820704157914411
+      "ticker": "QSI",
+      "score": -0.326437912635797
     },
     {
       "ticker": "APLD",
-      "score": -0.0979744695509498
-    },
-    {
-      "ticker": "STEP",
-      "score": -0.3890342596883298
+      "score": -0.09626475347201541
     }
   ],
   "flatten": {
@@ -126,31 +122,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "flatten",
-      "title": "Flatten live card",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T11:26:16.770706-04:00",
-      "files": [
-        {
-          "path": "01_daily/2026-09-09_flatten_card.md",
-          "ok": true,
-          "reason": "",
-          "size": 1796,
-          "preview": "# flatten_robust card \u2014 2026-09-09\n_Generated 2026-09-09T15:26:16 \u2014 live `flatten_robust`._\n**S=-13.95; hard-red: no new buys; holds and due 1d exits stay**\n- Score **-13.95** (DOWN) \u00b7 route **hold** \u00b7 HARD-RED\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Open lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66**"
-        },
-        {
-          "path": "data/sleeve_merge/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 4821,
-          "preview": "keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930"
-        }
-      ],
-      "preview": "# flatten_robust card \u2014 2026-09-09\n_Generated 2026-09-09T15:26:16 \u2014 live `flatten_robust`._\n**S=-13.95; hard-red: no new buys; holds and due 1d exits stay**\n- Score **-13.95** (DOWN) \u00b7 route **hold** \u00b7 HARD-RED\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Open lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66** \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -339,6 +310,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-09-09\n_Generated 2026-09-09T15:38:45 \u2014 live `flatten_robust`._\n**S=-13.95; hard-red: no new buys; holds and due 1d exits stay**\n- Score **-13.95** (DOWN) \u00b7 route **hold** \u00b7 HARD-RED\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Open lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66** \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-09T11:39:21.473386-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-09_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 86399,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-09_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11427,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-09\n_Generated 2026-09-09T08:58:39.271762-04:00 \u00b7 export=data/exports/finviz_2026-09-09.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-09\n_Generated 2026-09-09T08:58:39.271762-04:00 \u00b7 export=data/exports/finviz_2026-09-09.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
