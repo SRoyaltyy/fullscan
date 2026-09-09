@@ -2173,7 +2173,7 @@ GCL,Communication Services,Electronic Gaming & Multimedia,micro,none,ADR-Singapo
 GCMG,Financial,Asset Management,mid,rut,US,mid,low,low,quiet,mid,thin,high,value,mixed,neutral,high,past,inline,strong_buy,,0,mid,below,up,high,cheap,slow,good,high
 GCO,Consumer Cyclical,Apparel Retail,small,rut,US,high,mid,low,quiet,mid,thin,high,growth,mixed,neutral,mid,past,big_beat,hold,,0,mid,above,down,high,cheap,slow,thin,unknown
 GCT,Technology,Software - Infrastructure,small,rut,US,high,mid,mid,quiet,mid,yes,mid,growth,uptrend,neutral,top,past,big_beat,strong_buy,,0,mid,above,up,mid,unknown,fast,good,unknown
-GCTK,Healthcare,Medical Devices,micro,none,US,low,low,low,quiet,high,unknown,unknown,unknown,downtrend,washed,deep_low,unknown,unknown,unknown,,0,oversold,below,down,low,unknown,unknown,none,unknown
+GCTK,Healthcare,Medical Devices,micro,none,US,low,low,low,quiet,high,unknown,unknown,unknown,downtrend,washed,deep_low,unknown,unknown,unknown,theme:ai_capex,1,oversold,below,down,low,unknown,unknown,none,unknown
 GCTS,Technology,Semiconductors,micro,none,US,high,mid,low,quiet,high,no,unknown,growth,mixed,washed,low,past,big_miss,strong_buy,,0,mid,below,down,low,unknown,shrink,unknown,unknown
 GCV,Financial,Closed-End Fund - Equity,micro,none,US,low,low,low,quiet,low,unknown,unknown,unknown,mixed,neutral,high,unknown,unknown,unknown,,0,mid,below,flat,mid,unknown,unknown,unknown,high
 GD,Industrials,Aerospace & Defense,large,sp500,US,low,low,high,quiet,low,thin,mid,blend,mixed,washed,mid,past,beat,buy,theme:defense,1,oversold,below,flat,high,rich,slow,good,some
