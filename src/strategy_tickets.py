@@ -183,22 +183,72 @@ def recipe_strats(date: str) -> list[dict]:
     hard = s is not None and float(s) <= -3.0
     recs = list(fm.build_recipes())
     have = {r["name"] for r in recs}
+    specs = {}
+    try:
+        from . import factor_mine_combo as fmc
+        for spec in fmc.combo_specs():
+            specs[spec["name"]] = spec
+            if spec["name"] not in have:
+                recs.append(fmc.combo_recipe(spec))
+                have.add(spec["name"])
+    except Exception as e:  # noqa: BLE001
+        print(f"[strategy-tickets] WARN: combo specs: {e}", flush=True)
     if SCORE_FM.is_dir():
         for p in SCORE_FM.glob("*.md"):
             name = p.stem
             if name not in have:
                 recs.append(fm.make_recipe(name=name, note="scoreboard blotter"))
                 have.add(name)
+    rec_by = {r["name"]: r for r in recs}
     out = []
     stale = use_date != date
     for rec in recs:
         name = rec["name"]
-        if rec.get("universe") == "combo" or rec.get("members") or name.startswith("combo_"):
-            out.append(_entry(
-                name, "factor_mine", use_date or date, [], [],
-                status="combo_needs_mine",
-                note="combo pile needs the cash-book roll",
-            ))
+        is_combo = (rec.get("universe") == "combo" or rec.get("members")
+                    or name.startswith("combo_"))
+        if is_combo:
+            spec = specs.get(name) or {}
+            members = list(rec.get("members") or spec.get("members") or [])
+            if not members:
+                out.append(_entry(
+                    name, "factor_mine", use_date or date, [], [],
+                    status="combo_unknown_members",
+                    note="combo_* name not in combo_specs — cannot build a 09:30 list",
+                ))
+                continue
+            if not rows:
+                out.append(_entry(
+                    name, "factor_mine", date, [], [],
+                    status="no_panel_day",
+                    note=f"no panel rows for {date}",
+                ))
+                continue
+            try:
+                buys = _combo_would_buy(rows, rec_by, members, spec, fm)
+            except Exception as e:  # noqa: BLE001
+                out.append(_entry(
+                    name, "factor_mine", use_date or date, [], [],
+                    status="pick_fail", note=str(e)[:160],
+                ))
+                continue
+            note = ("combo shopping list = member 09:30 lists (union); "
+                    "fills still need the cash-book roll"
+                    + (f" · panel {use_date}" if stale else ""))
+            if hard:
+                out.append(_entry(
+                    name, "factor_mine", use_date or date, buys, [],
+                    sit=True, hard_red=True, s=s,
+                    status="sit",
+                    note="hard-red S≤−3 — no new lots; names are would-buy",
+                    why=f"S={s}",
+                ))
+            else:
+                out.append(_entry(
+                    name, "factor_mine", use_date or date, buys, [],
+                    s=s,
+                    status="stale_panel" if stale else "ok",
+                    note=note,
+                ))
             continue
         if not rows:
             out.append(_entry(
@@ -234,6 +284,46 @@ def recipe_strats(date: str) -> list[dict]:
                 status="stale_panel" if stale else "ok",
                 note=note,
             ))
+    return out
+
+
+def _combo_would_buy(rows, rec_by: dict, members: list[str],
+                     spec: dict, fm) -> list[dict]:
+    """09:30 shopping list: union of each kid's pick_day.
+
+    A combo does not invent a mashed gate. Shared/split only changes how
+    leftover cash is stacked at the open — the names each kid wants are
+    already on the panel. net=skip drops a name both a long kid and a
+    short kid want. Fills / leftover lots still need the cash-book roll.
+    """
+    net = (spec.get("net") or "priority")
+    longs: set[str] = set()
+    shorts: set[str] = set()
+    first: dict[str, dict] = {}
+    order: list[str] = []
+    for mn in members:
+        kid = rec_by.get(mn)
+        if not kid:
+            continue
+        side = str(kid.get("side") or "long")
+        for r in fm.pick_day(rows, kid):
+            t = str(r.get("ticker") or "").upper()
+            if not t:
+                continue
+            item = {"ticker": t, "src": mn,
+                    "kid_side": "short" if side == "short" else "long"}
+            if side == "short":
+                shorts.add(t)
+            else:
+                longs.add(t)
+            if t not in first:
+                first[t] = item
+                order.append(t)
+    out = []
+    for t in order:
+        if net == "skip" and t in longs and t in shorts:
+            continue
+        out.append(first[t])
     return out
 
 
