@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"MSFT Microsoft news September 10 2026"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"MSFT Microsoft news September 11 2026"* → got 6 results (via ddg)
 
-  - Microsoft declares $0.91 quarterly dividend | MSFT Stock News (https://www.stocktitan.net/news/MSFT/microsoft-announces-quarterly-gfuxz3fyqpmq.html)
+  - FY26 Q4 - Press Releases - Investor Relations - Microsoft (https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast)
 
-  - Microsoft [NASDAQ:MSFT] Stock Price September 10 2026: Down 0 ... (https://easternherald.com/market/microsoft-msft-stock-september-10-2026/)
+  - Levi & Korsinsky Reminds Microsoft Corporation Investors of ... (https://www.prnewswire.com/news-releases/levi--korsinsky-reminds-microsoft-corporation-investors-of-the-pending-class-action-lawsuit-with-a-lead-plaintiff-deadline-of-august-11-2026---msft-302802700.html)
 
-  - Microsoft announces quarterly dividend (https://news.microsoft.com/source/2026/06/10/microsoft-announces-quarterly-dividend-29/)
+  - Microsoft Investor Relations - Microsoft Stock Lookup (https://www.microsoft.com/en-us/investor/stock-lookup)
 
-**Step 2 — Research.** The model wanted to know: *"ORCL Oracle earnings September 10 2026 cloud OpenAI"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"ORCL Oracle earnings September 10 2026 results cloud OpenAI"* → got 6 results (via ddg)
+
+  - Oracle (ORCL) Q1 earnings report 2027 - CNBC (https://www.cnbc.com/2026/09/10/oracle-orcl-q1-earnings-report-2027.html)
 
   - Oracle - Investor Relations (https://investor.oracle.com/home/default.aspx)
 
-  - Oracle tops estimates as AI demand tempers cash-burn fears (https://www.reuters.com/technology/oracles-quarterly-revenue-beats-estimates-ai-boom-drives-cloud-demand-2026-09-10/)
-
-  - Oracle - Oracle Announces Q1 Results Driven by Triple Digit ... (https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx)
+  - ORCL Q1 2027 Earnings Report on 9/10/2026 - MarketBeat (https://www.marketbeat.com/earnings/reports/2026-9-10-oracle-co-stock/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

@@ -8,18 +8,18 @@
 
 **Step 1 — Research.** The model wanted to know: *"VEEV Veeva Systems news September 2026"* → got 6 results (via ddg)
 
-  - Veeva Systems Inc. - News (https://ir.veeva.com/news/)
+  - News - Veeva Systems Inc. (https://ir.veeva.com/news/default.aspx)
 
-  - Veeva Systems Inc. - Events (https://ir.veeva.com/events/default.aspx)
+  - Veeva Systems Inc. - Investor Relations (https://ir.veeva.com/overview/default.aspx)
 
-  - Veeva Systems Inc. (VEEV) Presents at Citi's 2026 Global TMT ... (https://seekingalpha.com/article/4945132-veeva-systems-inc-veev-presents-at-citis-2026-global-tmt-conference-transcript)
+  - Veeva Sys (VEEV) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/VEEV/)
 
 **Step 2 — Research.** The model wanted to know: *"BTSG BrightSpring Health Services news September 2026"* → got 6 results (via ddg)
 
   - BrightSpring Health Services, Inc. (BTSG) - Yahoo Finance (https://finance.yahoo.com/quote/BTSG/)
 
-  - Investor Relations | BrightSpring Health Services (https://ir.brightspringhealth.com/)
-
   - BrightSpring Health Services (BTSG) Stock News | StockTitan (https://www.stocktitan.net/news/BTSG/)
+
+  - Investor Relations | BrightSpring Health Services (https://ir.brightspringhealth.com/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

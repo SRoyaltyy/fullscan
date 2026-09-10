@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"NVDA Nvidia news September 10 2026"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"NVDA news September 10 2026 Nvidia stock"* → got 6 results (via ddg)
 
-  - Latest News | NVIDIA Newsroom (https://nvidianews.nvidia.com/news/latest)
+  - NVDA Stock Price Today (September 2026) — NVIDIA Corporation ... (https://tickzen.app/stocks/nvda/overview)
 
   - News Archive | NVIDIA Newsroom (https://nvidianews.nvidia.com/news)
 
-  - Key Insights for Nvidia Shareholders on September 10 (https://wallstreetwaves.com/key-insights-for-nvidia-shareholders-on-september-10/)
+  - Nvidia Just Gave Its Dividend a Massive Raise but Does It ... (https://247wallst.com/investing/2026/09/10/nvidia-just-gave-its-dividend-a-massive-raise-but-does-it-even-matter/)
 
 **Step 2 — Research.** The model wanted to know: *"AVGO Broadcom news September 2026"* → got 6 results (via ddg)
 
-  - Broadcom (AVGO) Q3 earnings report 2026 - CNBCAVGO Earnings September 2026: Report, Implied Move & ReactionBroadcom Inc. to Announce Third Quarter Fiscal Year 2026 ...Broadcom Inc (AVGO) (Q3 2026) Earnings Call Highlights ...Broadcom Inc. (AVGO) Q3 2026 Earnings Call TranscriptBroadcom Inc. Announces Third Quarter Fiscal Year 2026 ...Broadcom (AVGO) Q3 2026 Earnings Call Transcript (https://www.cnbc.com/2026/09/02/broadcom-avgo-q3-earnings-report-2026.html)
+  - Broadcom Inc. Announces Third Quarter Fiscal Year 2026 ... (https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-third-quarter-fiscal-year-2026-financial)
 
-  - AVGO Earnings September 2026: Report, Implied Move & Reaction (https://earnings-watcher.com/wiki/avgo-earnings-september-2026)
+  - Investor Center | Broadcom Inc. (https://investors.broadcom.com/)
 
-  - Broadcom Inc. to Announce Third Quarter Fiscal Year 2026 ... (https://www.broadcom.com/company/news/financial-releases/64621)
+  - Broadcom's (AVGO) third-quarter AI semiconductor revenue is ... (https://www.facebook.com/schwabnetwork/videos/broadcoms-avgo-third-quarter-ai-semiconductor-revenue-is-projected-to-surge-more/937676392713500/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

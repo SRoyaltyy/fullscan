@@ -8,18 +8,18 @@
 
 **Step 1 — Research.** The model wanted to know: *"VRTX Vertex Pharmaceuticals news September 2026"* → got 6 results (via ddg)
 
-  - Press Releases | Vertex Pharmaceuticals Newsroom (https://news.vrtx.com/press-releases)
-
-  - Vertex Pharmaceuticals | Investor Relations (https://investors.vrtx.com/investor-relations)
-
   - Newsroom | Vertex Pharmaceuticals Newsroom (https://news.vrtx.com/)
+
+  - Vertex Pharmaceuticals | Press releases - investors.vrtx.com (https://investors.vrtx.com/news-events/press-releases)
+
+  - Press releases - Vertex Pharmaceuticals Newsroom (https://news.vrtx.com/press-releases)
 
 **Step 2 — Research.** The model wanted to know: *"REGN Regeneron news September 2026"* → got 6 results (via ddg)
 
-  - SEPTEMBER 14, 2026 REGN INVESTOR DEADLINE: Regeneron ... (https://www.tmcnet.com/usubmit/2026/09/04/10440736.htm)
+  - Investor Relations | Regeneron Pharmaceuticals Inc. (https://investor.regeneron.com/)
 
-  - REGN Shareholder Alert: September 14, 2026 Lead Plaintiff ... (https://www.prnewswire.com/news-releases/regn-shareholder-alert-september-14-2026-lead-plaintiff-deadline-in-regeneron-pharmaceuticals-inc-securities-class-action---contact-the-gross-law-firm-302836264.html)
+  - Regeneron Pharmaceuticals (REGN) Stock News | StockTitan (https://www.stocktitan.net/news/REGN/)
 
-  - Regeneron Pharmaceuticals, Inc. (REGN) Investors: September ... (https://www.prnewswire.com/news-releases/regeneron-pharmaceuticals-inc-regn-investors-september-14-2026-lead-plaintiff-deadline-in-class-action-lawsuit-302856077.html)
+  - REGN 1-WEEK DEADLINE ALERT: Regeneron ... (https://www.morningstar.com/news/pr-newswire/20260907sf41915/regn-1-week-deadline-alert-regeneron-pharmaceuticals-inc-investors-alerted-to-september-14-2026-lead-plaintiff-deadline-in-class-action-lawsuit)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

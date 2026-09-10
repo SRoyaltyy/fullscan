@@ -8,11 +8,11 @@
 
 **Step 1 — Research.** The model wanted to know: *"DX Dynex Capital news September 2026"* → got 6 results (via ddg)
 
-  - Dynex Capital, Inc. Announces Second Quarter 2026 Results (https://www.dynexcapital.com/investors/news-events/press-releases/detail/424/dynex-capital-inc-announces-second-quarter-2026-results)
+  - Investors :: Dynex Capital, Inc. (DX) (https://www.dynexcapital.com/investors)
 
-  - Dynex Capital (DX) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/DX/)
+  - Press Releases :: Dynex Capital, Inc. (DX) (https://www.dynexcapital.com/investors/news-events/press-releases)
 
-  - Dynex Capital, Inc. (DX) Stock Price, News, Quote & History (https://finance.yahoo.com/quote/DX/)
+  - Dynex Capital (DX) Stock Price & OverviewDX - Dynex Capital Inc News | MorningstarDynex Capital (DX) Stock Price, News & AnalysisDX News Today | Why did Dynex Capital stock go down today?Dynex Capital, Inc. (DX) Latest Press Releases | Seeking Alpha (https://stockanalysis.com/stocks/dx/)
 
 **Step 2 — Research.** The model wanted to know: *"BXMT Blackstone Mortgage Trust news September 2026"* → got 6 results (via ddg)
 

@@ -8,18 +8,18 @@
 
 **Step 1 — Research.** The model wanted to know: *"TSLA Tesla news September 11 2026"* → got 6 results (via ddg)
 
-  - Tesla, Inc. (TSLA) Stock Historical Prices & Data - Yahoo Finance (https://finance.yahoo.com/quote/TSLA/history/)
+  - TSLA Looks 6.9% Overvalued on GF Value™ as of September 2026 (https://www.gurufocus.com/news/9062355/tsla-looks-69-overvalued-on-gf-value-as-of-september-2026)
 
-  - TSLA: Tesla Inc - Stock Price, Quote and News - CNBC (https://www.cnbc.com/quotes/TSLA)
+  - TSLA Stock Price Today (September 2026) — Tesla, Inc ... (https://tickzen.app/stocks/tsla/overview)
 
-  - Tesla's (TSLA) CapEx is surging past $25 billion this year as it ... (https://www.facebook.com/schwabnetwork/videos/teslas-tsla-capex-is-surging-past-25-billion-this-year-as-it-goes-all-in-on-ai-r/1324485889557483/)
+  - Will Tesla (TSLA) finish week of September 7 above___? (https://polymarket.com/event/tsla-above-on-september-11-2026)
 
-**Step 2 — Research.** The model wanted to know: *"GM General Motors news September 2026 EV battery energy storage"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"GM General Motors news September 2026 energy storage EV battery"* → got 6 results (via ddg)
 
   - GM Empower 2026: Scaling the future of electrification ... (https://news.gm.com/home.detail.html/Pages/news/us/en/2026/jun/0609-electrification-batteries-energy.html)
 
-  - General Motors launches V2G push, enters energy storage ... (https://www.evinfrastructurenews.com/ev-technology/general-motors-vehicle-to-grid-push-enters-energy-storage-market)
+  - GM Electric Vehicles, Charging & Technology | General Motors (https://www.gm.com/innovation/electric-vehicles)
 
-  - GM Energy | Home EV Charging, Energy Storage & V2H ... (https://gmenergy.gm.com/)
+  - General Motors launches V2G push, enters energy storage ... (https://www.evinfrastructurenews.com/ev-technology/general-motors-vehicle-to-grid-push-enters-energy-storage-market)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

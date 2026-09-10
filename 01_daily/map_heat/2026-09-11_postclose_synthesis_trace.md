@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"Century Aluminum CENX news September 2026"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"Marathon Petroleum MPC news September 2026 refining margins"* → got 6 results (via ddg)
 
-  - Century Aluminum Company - Investor Relations (https://investors.centuryaluminum.com/overview/default.aspx)
+  - Marathon Petroleum's profits surge on big refining margin ... (https://www.reuters.com/business/energy/marathon-petroleum-beats-quarterly-profit-estimates-refining-margin-boom-2026-08-04/)
 
-  - Century Aluminum Company - Century Aluminum Company Reports ... (https://investors.centuryaluminum.com/news-events/press-releases/press-release-details/2026/Century-Aluminum-Company-Reports-Second-Quarter-2026-Results/default.aspx)
+  - Marathon Petroleum Corp. Reports Second-Quarter 2026 Results (https://ir.marathonpetroleum.com/investor/news-releases/news-details/2026/Marathon-Petroleum-Corp--Reports-Second-Quarter-2026-Results/default.aspx)
 
-  - Century Aluminum Company Reports Second Quarter 2026 Results (https://centuryaluminum.com/insights/century-aluminum-company-reports-second-quarter-2026-results/)
+  - Marathon Petroleum Q2 2026 earnings: Refining margins drive ... (https://www.tradingkey.com/news/earnings/262075822-tradingkey)
 
-**Step 2 — Research.** The model wanted to know: *"Kohl's KSS Walmart executive hire September 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"Valero VLO news September 2026"* → got 6 results (via ddg)
 
-  - Kohl's Appoints Michael J. Bender as Chief Executive Officer (https://corporate.kohls.com/news/kohls-appoints-michael-j-bender-as-chief-executive-officer)
+  - Valero Energy Corporation (VLO) Stock Price, News, Quote ... (https://finance.yahoo.com/quote/VLO/)
 
-  - Kohl's Corporation (KSS) Management Team ... - KoalaGains (https://koalagains.com/stocks/NYSE/KSS/management-team)
+  - Valero Energy Reports Second Quarter 2026 Results (https://investorvalero.com/news/news-details/2026/Valero-Energy-Reports-Second-Quarter-2026-Results/default.aspx)
 
-  - KOHL'S CORPORATION - SEC.gov (https://www.sec.gov/Archives/edgar/data/885639/000110465926041769/kss-20260520xdef14a.htm)
+  - Valero Energy (VLO) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/VLO/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

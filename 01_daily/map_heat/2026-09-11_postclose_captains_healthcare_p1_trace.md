@@ -10,16 +10,16 @@
 
   - Notice of Data Breach - McKesson (https://www.mckesson.com/utility/cybersecurity/notice-of-data-breach/)
 
-  - McKesson Breach: ShinyHunters Claims 284m Patient Records ... (https://cybernews.com/news/mckesson-breached-shinyhunters-claims-284m-records/)
+  - McKesson Breach: ShinyHunters Claims 284m Patient Records - Cybernews (https://cybernews.com/news/mckesson-breached-shinyhunters-claims-284m-records/)
 
   - McKesson copes with fallout from data theft extortion attack (https://cyberscoop.com/mckesson-data-theft-extortion-attack-shinyhunters/)
 
-**Step 2 — Research.** The model wanted to know: *"Cencora COR stock news September 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"COR Cencora news September 2026"* → got 6 results (via ddg)
 
-  - What Cencora (COR)'s Cell and Gene Push and Higher 2026 ... (https://finance.yahoo.com/healthcare/articles/cencora-cor-cell-gene-push-224035014.html?fr=sycsrp_catchall)
+  - Cencora, Inc. (COR) Latest Stock News & Headlines (https://finance.yahoo.com/quote/COR/news/)
 
-  - Cencora (COR) Stock Price & OverviewCencora Raises 2026 EPS Outlook as Specialty Businesses ...Cencora, Inc. - Investor RelationsCencora Launches Cell and Gene Therapy Enablement for Health ...Newsroom: Press Releases, Company News and Insights | CencoraCencora, Inc. (COR) Stock Price, News, Quote & History ... (https://stockanalysis.com/stocks/cor/)
+  - Cencora Reports Fiscal 2026 Second Quarter Results (https://investor.cencora.com/news/news-details/2026/Cencora-Reports-Fiscal-2026-Second-Quarter-Results/default.aspx)
 
-  - Cencora Raises 2026 EPS Outlook as Specialty Businesses ... (https://www.zacks.com/stock/news/2984771/cencora-raises-2026-eps-outlook-as-specialty-businesses-strengthen)
+  - Cencora (COR) Stock Price, News & Analysis (https://www.stocktitan.net/overview/COR/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

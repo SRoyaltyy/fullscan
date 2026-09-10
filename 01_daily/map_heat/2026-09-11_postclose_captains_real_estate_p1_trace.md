@@ -8,17 +8,17 @@
 
 **Step 1 — Research.** The model wanted to know: *"EQIX Equinix news September 2026"* → got 6 results (via ddg)
 
-  - Equinix Accelerates AI Inference for Enterprises with NVIDIA ... (https://newsroom.equinix.com/2026-09-02-Equinix-Accelerates-AI-Inference-for-Enterprises-with-NVIDIA-and-Together-AI)
+  - Equinix, Inc. (EQIX) (https://investor.equinix.com/)
 
-  - News & Events :: Equinix, Inc. (EQIX) (https://investor.equinix.com/news-events)
+  - Equinix, Inc. (EQIX) Stock Price, News, Quote & History (https://finance.yahoo.com/quote/EQIX/)
 
-  - Data Center News, Press Releases & Company Updates | Equinix (https://newsroom.equinix.com/)
+  - Press Releases | Equinix (https://newsroom.equinix.com/press-releases-global)
 
 **Step 2 — Research.** The model wanted to know: *"AMT American Tower news September 2026"* → got 6 results (via ddg)
 
-  - American Tower Corporation (AMT) Stock Price, News, Quote ... (https://finance.yahoo.com/quote/AMT/)
-
   - Press Releases | American Tower (https://www.americantower.com/press-releases)
+
+  - American Tower Corporation (AMT) Stock Price, News, Quote ... (https://finance.yahoo.com/quote/AMT/)
 
   - American Tower Corp. AMT - Stocks - US News Money (https://money.usnews.com/investing/stocks/amt-american-tower-corp)
 

@@ -12,14 +12,14 @@
 
   - News - MetLife (https://www.metlife.com/about-us/newsroom/)
 
-  - MetLife, Inc. - MetLife CEO and CFO to Speak at the 2026 KBW ... (https://investor.metlife.com/news/news-details/2026/MetLife-CEO-and-CFO-to-Speak-at-the-2026-KBW-Insurance-Conference/default.aspx)
+  - MetLife, Inc. - News & Events - Conferences & Presentations (https://investor.metlife.com/news/events-and-presentations/)
 
 **Step 2 — Research.** The model wanted to know: *"Aflac AFL news September 2026"* → got 6 results (via ddg)
-
-  - Aflac Incorporated (AFL) Presents at KBW Insurance ... (https://seekingalpha.com/article/4945109-aflac-incorporated-afl-presents-at-kbw-insurance-conference-2026-transcript)
 
   - Aflac (AFL) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/AFL/)
 
   - Aflac Incorporated - Home (https://investors.aflac.com/home/default.aspx)
+
+  - Aflac: AFL Stock Price Quote & News - Robinhood (https://robinhood.com/us/en/stocks/AFL/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

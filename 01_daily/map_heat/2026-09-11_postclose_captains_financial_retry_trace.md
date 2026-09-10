@@ -2,24 +2,24 @@
 
 
 
-**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (5,721 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
+**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (6,367 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
 
 
 
-**Step 1 — Research.** The model wanted to know: *"Morgan Stanley MS news September 11 2026"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"Morgan Stanley MS news September 2026"* → got 6 results (via ddg)
 
-  - Morgan Stanley (MS) Latest Press Releases | Seeking Alpha (https://seekingalpha.com/symbol/MS/press-releases)
+  - Morgan Stanley (MS) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/MS/)
 
-  - Morgan Stanley (MS) Latest Press Releases & Corporate News ... (https://finance.yahoo.com/quote/MS/press-releases/?fr=sycsrp_catchall)
+  - News and Insights | Morgan Stanley (https://www.morganstanley.com/im/en-us/capital-seeker/about-us/news-and-insights.html)
 
-  - Newsroom | Morgan Stanley (https://www.morganstanley.com/about-us-newsroom)
+  - Morgan Stanley (MS) Stock Price, News, Quote & History (https://finance.yahoo.com/quote/MS/)
 
-**Step 2 — Research.** The model wanted to know: *"Goldman Sachs GS news September 11 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"Goldman Sachs GS news September 10 2026"* → got 6 results (via ddg)
 
-  - News and Media - Goldman Sachs Asset Management (https://am.gs.com/en-us/advisors/news)
+  - All News for GS : The Goldman Sachs Group - Zacks.com (https://www.zacks.com/stock/research/GS/all-news)
 
   - Pressroom - Goldman Sachs (https://www.goldmansachs.com/pressroom)
 
-  - The Goldman Sachs Group, Inc. (GS) Stock Historical Prices ... (https://finance.yahoo.com/quote/GS/history/)
+  - The Goldman Sachs Group (GS) News Today - MarketBeat (https://www.marketbeat.com/stocks/NYSE/GS/news/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

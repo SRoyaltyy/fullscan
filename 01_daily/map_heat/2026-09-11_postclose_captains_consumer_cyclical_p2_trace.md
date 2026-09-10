@@ -8,17 +8,17 @@
 
 **Step 1 — Research.** The model wanted to know: *"Polaris PII news September 2026"* → got 6 results (via ddg)
 
-  - Investor Relations - Polaris Investor Relations (https://ir.polaris.com/home/default.aspx)
+  - Polaris Investor Relations (https://ir.polaris.com/home/default.aspx)
 
-  - Polaris Inc. (PII) Latest Press Releases | Seeking Alpha (https://seekingalpha.com/symbol/PII/press-releases)
+  - Polaris Declares Regular Cash Dividend - Yahoo Finance (https://finance.yahoo.com/markets/stocks/articles/polaris-declares-regular-cash-dividend-202000236.html)
 
-  - News - Polaris Investor Relations (https://ir.polaris.com/news/default.aspx)
+  - Stock Information - Stock Quote - Polaris Investor Relations (https://ir.polaris.com/stock-information/stock-quote/default.aspx)
 
 **Step 2 — Research.** The model wanted to know: *"Harley-Davidson HOG news September 2026"* → got 6 results (via ddg)
 
-  - Harley-Davidson, Inc. Declares Dividend (https://investor.harley-davidson.com/news/news-details/2026/Harley-Davidson-Inc--Declares-Dividend-99fe530fa/default.aspx)
+  - Harley Davidson (HOG) Could Be 47% Overvalued Following Its ... (https://simplywall.st/stocks/us/automobiles/nyse-hog/harley-davidson/news/harley-davidson-hog-could-be-47-overvalued-following-its-fre)
 
-  - Harley-Davidson, Inc. Declares Dividend - PR Newswire (https://www.prnewswire.com/news-releases/harley-davidson-inc-declares-dividend-302869559.html)
+  - Harley-Davidson, Inc. (HOG) Latest Stock News | Seeking Alpha (https://seekingalpha.com/symbol/HOG/news)
 
   - Harley Davidson (HOG) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/HOG/)
 

@@ -10,9 +10,9 @@
 
   - URI - United Rentals Inc News | Morningstar (https://www.morningstar.com/stocks/xnys/uri/news)
 
-  - United Rentals, Inc. - United Rentals Announces Record Second ... (https://investors.unitedrentals.com/press-releases/press-releases-details/2026/United-Rentals-Announces-Record-Second-Quarter-Results-and-Raises-Full-Year-2026-Guidance/default.aspx)
-
   - United Rentals, Inc. - Press releases (https://investors.unitedrentals.com/press-releases/default.aspx)
+
+  - United Rentals, Inc. - United Rentals Announces Record Second ... (https://investors.unitedrentals.com/press-releases/press-releases-details/2026/United-Rentals-Announces-Record-Second-Quarter-Results-and-Raises-Full-Year-2026-Guidance/default.aspx)
 
 **Step 2 — Research.** The model wanted to know: *"GATX Corporation news September 2026"* → got 6 results (via ddg)
 

@@ -8,18 +8,18 @@
 
 **Step 1 — Research.** The model wanted to know: *"USAR USA Rare Earth stock news September 2026"* → got 6 results (via ddg)
 
-  - News Releases - USA Rare Earth - Investor Relations (https://investors.usare.com/news-events/news-releases)
-
   - USA Rare Earth: USAR Stock Price Quote & News - Robinhood (https://robinhood.com/us/en/stocks/USAR/)
 
-  - USA Rare Earth, Inc. Class A Common Stock (USAR) - Nasdaq (https://www.nasdaq.com/market-activity/stocks/usar)
+  - News Releases - USA Rare Earth - Investor Relations (https://investors.usare.com/news-events/news-releases)
+
+  - USA Rare Earth, Inc. (USAR) Stock Price, News, Quote & History (https://finance.yahoo.com/quote/USAR/)
 
 **Step 2 — Research.** The model wanted to know: *"MTRN Materion stock news September 2026"* → got 6 results (via ddg)
 
-  - Materion Corporation (MTRN) Stock Price, News, Quote & History (https://finance.yahoo.com/quote/MTRN/)
+  - Materion Corporation - Stock Info (https://investor.materion.com/stock-info/default.aspx)
 
-  - MTRN Stock Price Quote & News - Materion - Robinhood (https://robinhood.com/us/en/stocks/MTRN/)
+  - Materion (MTRN) Stock Price & Overview (https://stockanalysis.com/stocks/mtrn/)
 
-  - Materion Corporation (MTRN) - Stock - Nasdaq (https://www.nasdaq.com/market-activity/stocks/mtrn)
+  - Materion director awarded 31.14 shares to plan | MTRN Insider Trading (https://www.stocktitan.net/sec-filings/MTRN/form-4-materion-corp-insider-trading-activity-c5dbb07a9050.html)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

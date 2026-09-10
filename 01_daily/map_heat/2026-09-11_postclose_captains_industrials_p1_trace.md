@@ -8,18 +8,18 @@
 
 **Step 1 — Research.** The model wanted to know: *"PWR Quanta Services news September 2026"* → got 6 results (via ddg)
 
-  - Quanta Services, Inc. (PWR) (https://investors.quantaservices.com/)
+  - News & Events :: Quanta Services, Inc. (PWR) (https://investors.quantaservices.com/news-events)
 
-  - Quanta Services, Inc. (PWR) Stock Price, News, Quote & History (https://finance.yahoo.com/quote/PWR/)
+  - Press Releases :: Quanta Services, Inc. (PWR) (https://investors.quantaservices.com/news-events/press-releases)
 
-  - Quanta Services (PWR) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/PWR/)
+  - Quanta Services Announces Quarterly Cash Dividend - ADVFN (https://www.advfn.com/stock-market/NYSE/PWR/stock-news/99239832/quanta-services-announces-quarterly-cash-dividend)
 
 **Step 2 — Research.** The model wanted to know: *"FIX Comfort Systems news September 2026 backlog"* → got 6 results (via ddg)
 
   - Comfort Systems USA Reports Second Quarter 2026 Results (https://investors.comfortsystemsusa.com/news-releases/news-release-details/comfort-systems-usa-reports-second-quarter-2026-results)
 
-  - Is FIX Stock Still Attractive After Its 2026 Rally and Earnings ... (https://finance.yahoo.com/markets/stocks/articles/fix-stock-still-attractive-2026-162100780.html)
+  - Can Record Backlog Strengthen Comfort Systems' Revenue ... (https://finance.yahoo.com/markets/stocks/articles/record-backlog-strengthen-comfort-systems-152300572.html)
 
-  - Comfort Systems USA posts strong Q2 2026 results - Stock Titan (https://www.stocktitan.net/sec-filings/FIX/8-k-comfort-systems-usa-inc-reports-material-event-2385e831ed38.html)
+  - Comfort Systems Q2 Earnings & Revenues Beat Estimates ... (https://www.zacks.com/stock/news/2960334/comfort-systems-q2-earnings-revenues-beat-estimates-backlog-up-yy)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

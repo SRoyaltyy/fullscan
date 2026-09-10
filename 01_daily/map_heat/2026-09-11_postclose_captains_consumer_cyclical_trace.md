@@ -8,18 +8,18 @@
 
 **Step 1 — Research.** The model wanted to know: *"Ralph Lauren RL news September 2026"* → got 6 results (via ddg)
 
-  - NEWS RELEASES | Ralph Lauren Corporation (https://investor.ralphlauren.com/news-releases)
+  - RL Press Releases Ralph Lauren - MarketChameleon.com (https://marketchameleon.com/Overview/RL/PressReleases/)
 
-  - Ralph Lauren Corporation: COMPANY PROFILE (https://investor.ralphlauren.com/)
+  - NEWS RELEASES - Ralph Lauren Corporation (https://investor.ralphlauren.com/news-releases/)
 
-  - Is Wall Street Bullish or Bearish on Ralph Lauren's Stock? (https://finance.yahoo.com/markets/stocks/articles/wall-street-bullish-bearish-ralph-115620638.html)
+  - Newsroom - Ralph Lauren Corporation (https://corporate.ralphlauren.com/newsroom)
 
-**Step 2 — Research.** The model wanted to know: *"Zegna ZGN Ermenegildo Zegna H1 2026 earnings results"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"Ermenegildo Zegna ZGN news September 2026"* → got 6 results (via ddg)
 
-  - Ermenegildo Zegna Group - Financial Documents (https://ir.zegnagroup.com/financial-documents/presentations/default.aspx)
+  - Ermenegildo Zegna Group Sets September 3 Date for First-Half 2026 Results - The Globe and Mail (https://www.theglobeandmail.com/investing/markets/stocks/ZGN-N/pressreleases/4018362/ermenegildo-zegna-group-sets-september-3-date-for-first-half-2026-results/)
 
-  - ZGN H1 2026 Earnings Report on 9/3/2026 - MarketBeat (https://www.marketbeat.com/earnings/reports/2026-9-3-ermenegildo-zegna-nv-stock/)
+  - Ermenegildo Zegna (ZGN) Reported Mixed First Half 2026 Results, Is The Valuation Premium Justified? (https://ca.finance.yahoo.com/news/ermenegildo-zegna-zgn-reported-mixed-050557403.html)
 
-  - Ermenegildo Zegna Group - H1 2026 Financial Results (*) (https://ir.zegnagroup.com/financial-calendar/events/event-details/2026/H1-2026-Financial-Results/default.aspx)
+  - Ermenegildo Zegna Lifts H1 2026 Sales and Margins as Direct-to-Consumer Growth Offsets Profit Dip - The Globe and Mail (https://www.theglobeandmail.com/investing/markets/stocks/ZGN-N/pressreleases/4441773/ermenegildo-zegna-lifts-h1-2026-sales-and-margins-as-direct-to-consumer-growth-offsets-profit-dip/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

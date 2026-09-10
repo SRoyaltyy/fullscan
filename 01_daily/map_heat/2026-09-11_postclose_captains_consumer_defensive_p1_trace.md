@@ -10,15 +10,15 @@
 
   - The Kroger Co. News and Press Releases | PR Newswire (https://www.prnewswire.com/news/the-kroger-co./)
 
-  - The Kroger Co. - Kroger Announces Second Quarter Conference ... (https://ir.kroger.com/news/news-details/2026/Kroger-Announces-Second-Quarter-Conference-Call-with-Investors/default.aspx)
-
   - IR Feed Items Archive - krogerco (https://www.thekrogerco.com/ir-news)
 
-**Step 2 — Research.** The model wanted to know: *"Weis Markets WMK second quarter 2026 results"* → got 6 results (via ddg)
+  - Kroger (KR) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/KR/)
 
-  - WEIS MARKETS REPORTS SECOND QUARTER 2026 RESULTS - PR Newswire (https://www.prnewswire.com/news-releases/weis-markets-reports-second-quarter-2026-results-302842986.html)
+**Step 2 — Research.** The model wanted to know: *"Weis Markets WMK Q2 2026 results"* → got 6 results (via ddg)
 
   - WEIS MARKETS REPORTS SECOND QUARTER 2026 RESULTS (https://www.weismarkets.com/weis-markets-reports-second-quarter-2026-results)
+
+  - WEIS MARKETS REPORTS SECOND QUARTER 2026 RESULTS - PR Newswire (https://www.prnewswire.com/news-releases/weis-markets-reports-second-quarter-2026-results-302842986.html)
 
   - WEIS MARKETS REPORTS SECOND QUARTER 2026 RESULTS (https://www.marketscreener.com/news/weis-markets-reports-second-quarter-2026-results-ce7f50ded08eff21)
 

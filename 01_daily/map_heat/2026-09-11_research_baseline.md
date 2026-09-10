@@ -4,573 +4,570 @@
 
 ## CAPTAIN CARDS
 - **HEAT Agricultural Inputs** (Basic Materials) dir=up conv=medium
-  captains: CTVA SPX pos, CF SPX mixed, FMC RUT none, IPI RUT none
-  CTVA Globachem JV + Oct 1 seeds spin keep ag-inputs bid; CF mixed on fertilizer pullback.
-  do_not: Do not treat FMC/IPI momentum screens as news; do not average into a weak XLB.
+  captains: CTVA SPX pos, CF SPX pos, FMC RUT none, IPI RUT none
+  CTVA SpinCo investor day Sept 15 and CF blue-ammonia JV give the group a real bid; FMC/IPI are price-only.
+  do_not: Do not treat FMC's +12.8% week as news-driven; no dated catalyst found
 - **OVERRIDE Aluminum** (Basic Materials) dir=up conv=medium
-  captains: CENX RUT none, CSTM RUT pos
-  Aluminum is the flagged OVERRIDE: +2.85% d1 with no SPX captain, RUT CENX/CSTM carry the domestic-supply bid.
-  do_not: Do not bury aluminum in a flat XLB; do not use CENX d1=0.01 as the signal.
+  captains: CENX RUT none, CSTM RUT none
+  Aluminum OVERRIDE is a tape/breadth signal (d1 +2.85, breadth 0.5) with no dated captain catalyst — respect the move, don't over-claim.
+  do_not: Do not attribute the OVERRIDE to a CENX/CSTM headline; none exists today
 - **HEAT Building Materials** (Basic Materials) dir=down conv=medium
-  captains: CRH SPX neg, MLM SPX mixed, KNF RUT none, USLM RUT none
-  Building materials is the weak leg: CRH -2.13% d1, breadth 0.176, MLM bounce is analyst noise.
-  do_not: Do not read MLM +2.78% as an industry turn; do not pair with Lumber as one trade.
+  captains: CRH SPX neg, KNF RUT none, USLM RUT none
+  Building Materials is the weak leg: breadth 0.176, CRH -2.13% on Arcosa deal approval, MLM bounce is noise.
+  do_not: Do not read MLM's +2.78% d1 as a group turn; breadth is 0.176
 - **HEAT Chemicals** (Basic Materials) dir=flat conv=low
-  captains: DOW SPX none, HUN RUT pos, REX RUT pos
-  Chemicals split: HUN merger approval and REX record EPS are single-name, DOW is macro noise; breadth 0.188.
-  do_not: Do not treat HUN/REX as a sector-wide chemical re-rating.
+  captains: DOW SPX none, HUN RUT pos, REX RUT none
+  Chemicals is a merger story (HUN/OLIN vote) inside a flat tape; DOW is oil-macro noise, breadth 0.188.
+  do_not: Do not treat DOW's +0.99% as a chemical-demand signal; it is oil-macro
 - **HEAT Coking Coal** (Basic Materials) dir=down conv=medium
   captains: HCC RUT neg, AMR RUT neg
-  Coking coal is a clean short-side read: both captains -4.4% w1, breadth 0.0, Pabrai trimming AMR.
-  do_not: Do not read the 'pos' keyword stub as bullish — the underlying fact is a loss-making trim.
+  Coking Coal is the cleanest short in the batch: breadth 0.0, both captains -4%+ on the week, Pabrai trimming AMR.
+  do_not: Do not fade this with a value bid; breadth is literally zero
 - **HEAT Copper** (Basic Materials) dir=up conv=medium
   captains: FCX SPX pos, IE RUT pos
-  Copper is the broadest Basic Materials bid: breadth 0.875, d1 +5.09%, EXIM $1.1bn letter behind IE.
-  do_not: Do not let FCX's -2.39% w1 mask the one-day breadth thrust.
+  Copper is the best-confirmed long: breadth 0.875, d1 +5.09, FCX named in Barron's, IE gets a $1.1bn EXIM letter.
+  do_not: Do not average copper into a broad Basic Materials bid; it is the only breadth-0.875 group here
 - **HEAT Gold** (Basic Materials) dir=down conv=medium
-  captains: NEM SPX neg, SSRM RUT mixed, NG RUT none
-  Gold is the weakest breadth on the board (0.073): NEM -1.81% on hot jobs data, SSRM bounce is single-name.
-  do_not: Do not treat SSRM +1.35% as a gold turn; breadth says otherwise.
+  captains: NEM SPX neg, SSRM RUT none, NG RUT none
+  Gold is a rates casualty: strong jobs data hit miners, breadth 0.073, NEM -1.81% — SSRM/NG bounces are not news.
+  do_not: Do not buy the SSRM +1.35% as a gold turn; breadth is 0.073
 - **HEAT Lumber & Wood Production** (Basic Materials) dir=down conv=low
   captains: UFPI RUT none, BCC RUT none
-  Lumber has no news and no breadth (0.167); UFPI/BCC drift lower with building materials.
-  do_not: Do not trade lumber on the James Hardie peer read; no captain-specific catalyst exists.
-- **HEAT Other Industrial Metals & Mining** (Basic Materials) dir=up conv=medium
-  captains: USAR RUT pos, MTRN RUT pos
-  Rare-earth and critical-minerals captains carry fresh deal and initiation news while the industry residual is green.
-  do_not: Do not read this as a broad Basic Materials reflation; it is a rare-earth/critical-minerals pocket.
+  Lumber has no news and no breadth (0.167); UFPI/BCC are drifting with housing, not on catalysts.
+  do_not: Do not trade this on the James Hardie peer read; it is not a BCC catalyst
+- **HEAT Other Industrial Metals & Mining** (Basic Materials) dir=flat conv=low
+  captains: USAR RUT mixed, MTRN RUT none
+  USAR has a $1.55B gov-backed SPV but a Q2 miss; MTRN is insider-noise only. No clean sub-sector read.
+  do_not: Treat the SPV headline as a fresh catalyst — it is a week old and already faded
 - **HEAT Other Precious Metals & Mining** (Basic Materials) dir=up conv=medium
   captains: PPTA RUT pos, MUX RUT pos
-  Precious-metals juniors with project financing and construction news lead a +2.24% week versus the parent.
-  do_not: Do not lump this into a gold-price trade; the drivers here are single-asset project milestones.
+  PPTA construction update and MUX's $240M Los Azules loan both land positive; +2.24% w1 vs parent confirms the nested long.
+  do_not: Average this into a flat XLB — the w1 spread is +2.59%
 - **OVERRIDE Paper & Paper Products** (Basic Materials) dir=flat conv=low
   captains: SLVM RUT none
-  OVERRIDE flagged on a +4.77% week with zero breadth and no fresh dated news on the sole captain.
-  do_not: Do not chase the OVERRIDE on one illiquid name with 0.0 breadth and no current catalyst.
+  OVERRIDE flag is carried by breadth 0.0 and a single captain whose own w1 is -1.1%; the +4.77% industry print is not captain-confirmed.
+  do_not: Chase the +4.77% w1 as a real paper bid — the only liquid captain is red on the week
 - **HEAT Specialty Chemicals** (Basic Materials) dir=down conv=medium
-  captains: LIN SPX none, SHW SPX none, SXT RUT pos, BCPC RUT pos
-  Large-cap SPX chemical captains are red and newsless; only RUT specialty names show positive company-specific news.
-  do_not: Do not average the RUT specialty bid into the LIN/SHW large-cap chemical weakness.
+  captains: LIN SPX none, SHW SPX none
+  Both SPX captains are down ~2.9% on the week with no news; the RUT 'pos' stubs are a duplicated headline, not two signals.
+  do_not: Read the RUT pos stubs as breadth — SXT and BCPC share one identical headline
 - **HEAT Steel** (Basic Materials) dir=up conv=medium
-  captains: NUE SPX pos, STLD SPX none, WS RUT none, NWPX RUT none
-  Steel futures at a four-year high drive the +3.13% week; NUE confirms, RUT names are newsless.
-  do_not: Do not treat the RUT steel names' tender-offer and small-M&A headlines as demand confirmation.
-- **OVERRIDE Broadcasting** (Communication Services) dir=up conv=medium
-  captains: NMAX RUT pos, FUBO RUT pos
-  Broadcasting is flagged OVERRIDE: RUT captains NMAX and FUBO are green on the week while the industry tape is -4.61%.
-  do_not: Do not short Broadcasting off the -3.12% d1; the two liquid RUT names are the bid.
+  captains: NUE SPX pos, STLD SPX mixed
+  Four-year-high steel futures plus NUE +3.75% and STLD +3.15% w1 make this the cleanest nested long in Basic Materials.
+  do_not: Let the neg stub on STLD override the futures-price fact
 - **HEAT Electronic Gaming & Multimedia** (Communication Services) dir=flat conv=low
   captains: TTWO SPX none
-  Single liquid captain TTWO with a launch-PR headline only; d1 +1.07 but w1 -1.24, no directional edge.
-  do_not: Do not treat the NBA 2K27 launch PR as bullish sentiment; it is a scheduled product beat.
+  TTWO only liquid captain; NBA 2K27 launch is routine PR, d1 +1.07% but no news edge.
+  do_not: treat game-launch PR as a directional catalyst
 - **HEAT Internet Content & Information** (Communication Services) dir=up conv=medium
-  captains: GOOGL SPX pos, GOOG SPX pos, RUM RUT pos, CARG RUT none
-  Internet Content is the only green Communication Services sub-group on w1 (+1.46%); GOOGL/GOOG carry it on AI capex headlines.
-  do_not: Do not let the GOOGL/GOOG dual-class pair double-count as two independent confirmations.
+  captains: GOOGL SPX pos, GOOG SPX pos
+  GOOGL/GOOG AI-infra headlines (Finland $30.2B, Clay $7.1B) keep Internet Content the relative winner at +1.46% w1.
+  do_not: lump GOOGL into a broad 'Comm Services' short on NFLX/DIS weakness
 - **HEAT Telecom Services** (Communication Services) dir=up conv=medium
-  captains: VZ SPX none, TMUS SPX none, LUMN RUT pos, TDS RUT pos
-  Telecom is a RUT-led move: LUMN +11.42% and TDS +12.42% w1 while SPX VZ and TMUS are flat-to-lower.
-  do_not: Do not express Telecom via VZ/TMUS; the money is in the two RUT names, not the mega-cap pair.
-- **HEAT Advertising Agencies** (Communication Services) dir=down conv=medium
-  captains: APP SPX neg, OMC SPX neg
-  Ad-agency captains split: APP holds +2.2% w1 on AI-ad narrative while OMC bleeds -7.9%; residual -2.1 vs parent says the sub-sector is the drag.
-  do_not: Do not read this as a Communication Services call — the weakness is agency-specific, not XLC-wide.
-- **HEAT Entertainment** (Communication Services) dir=down conv=medium
-  captains: NFLX SPX none, DIS SPX none
-  Both SPX entertainment captains are news-quiet and tape-down; the only bid is RUT's SPHR (+4.5% w1) on Sphere's Wizard of Oz anniversary.
-  do_not: Do not average NFLX/DIS weakness into SPHR strength — the nested long is Sphere/experiential, not legacy studio streaming.
-- **HEAT Publishing** (Communication Services) dir=down conv=low
+  captains: VZ SPX none, TMUS SPX none
+  SPX captains flat, but RUT LUMN +11.4% w1 and TDS +12.4% w1 carry the nested long in small-cap telecom.
+  do_not: size the trade off VZ/TMUS; the move is in LUMN/TDS
+- **HEAT Advertising Agencies** (Communication Services) dir=down conv=low
+  captains: APP SPX none, OMC SPX neg, MGNI RUT none, STGW RUT none
+  Industry -1.39 w1 with OMC -7.92; APP/MGNI green but no fresh news to confirm a nested long.
+  do_not: Do not treat APP/MGNI green as an Advertising long while OMC and breadth 0.15 say down.
+- **HEAT Entertainment** (Communication Services) dir=down conv=low
+  captains: NFLX SPX none, DIS SPX none, SPHR RUT pos, CNK RUT none
+  Entertainment -3.41 w1; NFLX/DIS no fresh news, SPHR pos but CNK weak; nested down bias.
+  do_not: Do not read SPHR Sphere anniversary as an Entertainment long while NFLX/DIS and breadth 0.125 are down.
+- **OVERRIDE Broadcasting** (Communication Services) dir=flat conv=low
+  captains: NMAX RUT none, FUBO RUT none
+  honest none — captain close did not land a valid card
+- **HEAT Publishing** (Communication Services) dir=flat conv=low
   captains: WLY RUT none, TDAY RUT none
-  Publishing residual -3.18 vs parent; WLY weak on the week, TDAY flat, no fresh dated catalyst.
-  do_not: Do not treat WLY AI-call stub as today's sentiment; no current URL.
+  honest none — captain close did not land a valid card
 - **HEAT Apparel Manufacturing** (Consumer Cyclical) dir=down conv=medium
   captains: RL SPX mixed, ZGN RUT mixed, KTB RUT none
-  RL resilient but Harvey Nichols loss and ZGN profit dip keep apparel manufacturing soft; group w1 -2.99.
-  do_not: Treat RL's relative strength as a sector-wide bid
-- **HEAT Apparel Retail** (Consumer Cyclical) dir=flat conv=medium
+  RL stabilizing after 11% 30d drawdown; ZGN sales up but profit down; KTB silent — apparel manufacturing still soft.
+  do_not: Treat RL's +0.5% w1 as a turn; the 30d trend and ZGN profit dip say the sub-sector is still bleeding
+- **HEAT Apparel Retail** (Consumer Cyclical) dir=down conv=medium
   captains: TJX SPX none, ROST SPX pos, URBN RUT mixed, ANF RUT pos
-  Off-price (ROST, TJX) holding far better than group; ANF the lone RUT gainer — retail bifurcating, not collapsing.
-  do_not: Short the whole group on XLY weakness; off-price is the relative winner
+  Off-price (TJX/ROST) is the only defensible pocket; URBN mixed, ANF the lone green — retail broadly red.
+  do_not: Average ANF's +2.57% w1 into the whole group; breadth is 0.152 and d1 is -1.52%
 - **HEAT Auto & Truck Dealerships** (Consumer Cyclical) dir=flat conv=low
-  captains: CVNA SPX none, RUSHA RUT none, OPLN RUT neg
-  Dealerships are the one Consumer Cyclical pocket with positive w1 (+0.86, +2.68 vs parent) but no fresh catalyst.
-  do_not: Chase the relative-strength print without a dated driver
+  captains: CVNA SPX none, RUSHA RUT mixed, OPLN RUT neg
+  Dealerships are a w1 +0.86% / vs_parent +2.68% outlier but d1 -1.55% and OPLN's secondary cap the upside.
+  do_not: Chase the vs_parent +2.68% — CVNA has no catalyst and OPLN just printed dilution
 - **HEAT Auto Parts** (Consumer Cyclical) dir=flat conv=low
   captains: ORLY SPX none, AZO SPX none, GTX RUT pos, ATMU RUT pos
-  Aftermarket (ORLY/AZO) quiet; RUT parts names GTX and ATMU carry the positive w1 with dividend/conference news.
-  do_not: Read the -2.03 d1 as a parts-specific breakdown — it is broad tape
+  Aftermarket (ORLY/AZO) is catalyst-free; the only positives are RUT small-caps GTX and ATMU.
+  do_not: Treat GTX/ATMU as an aftermarket read — they are industrial-adjacent small caps, not retail parts demand
 - **OVERRIDE Department Stores** (Consumer Cyclical) dir=up conv=medium
   captains: KSS RUT pos
-  Department stores are the OVERRIDE: KSS +9.43 w1, +4.72 vs parent, with a fresh Walmart-exec hire as the catalyst.
-  do_not: Bury KSS in XLY DOWN — this is the nested long the sector ETF hides
+  KSS is the lone OVERRIDE: w1 +9.43%, vs_parent +4.72%, breadth 0.25 — a single-name move, not a sector read.
+  do_not: Extrapolate KSS strength to TJX/Macy's — this is a one-captain, low-breadth override
 - **HEAT Footwear & Accessories** (Consumer Cyclical) dir=down conv=medium
   captains: NKE SPX none, DECK SPX none, SHOO RUT pos, WWW RUT pos
-  Footwear is the weakest Consumer Cyclical pocket (w1 -3.3, breadth 0.077); only RUT names SHOO and WWW are green.
-  do_not: Buy NKE/DECK on the dip — no dated catalyst and breadth is near-zero
+  NKE and DECK are catalyst-free and red; only RUT small-caps SHOO and WWW show green — breadth 0.077 is near-zero.
+  do_not: Use SHOO/WWW to call a footwear turn — the two SPX captains carry the industry and both are silent
 - **HEAT Furnishings, Fixtures & Appliances** (Consumer Cyclical) dir=flat conv=low
   captains: ALH RUT pos, HNI RUT none
-  No SPX captain; RUT-only group with ALH upgraded and HNI +2.72 w1 — thin, low-conviction, no sector read-through.
-  do_not: Size this group — breadth 0.107 and no SPX anchor
-- **HEAT Auto Manufacturers** (Consumer Cyclical) dir=flat conv=low
-  captains: TSLA SPX neg, GM SPX pos, LCID RUT mixed
-  TSLA China-import headline risk vs GM storage pivot; LCID France entry is distribution, not demand.
-  do_not: Do not read the +2.13% d1 industry pop as a clean long — TSLA w1 is -4.12% and the driver is a policy headline, not volume.
+  No SPX captain; ALH's ratings upgrade and HNI's product item are the only signals — w1 -2.59% says housing-linked demand is soft.
+  do_not: Read ALH's upgrade as a housing turn — it is a balance-sheet event, not demand
 - **HEAT Gambling** (Consumer Cyclical) dir=up conv=medium
   captains: SGHC RUT pos, RSI RUT mixed
-  Online gaming captains post record revenue; RSI downgrade caps conviction despite +2.0 vs-parent w1.
-  do_not: Do not read the flat d1 as weakness; both names carry positive w1 and record Q2 prints.
+  Gambling captains bid on SGHC dividend cadence and RSI revenue growth; nested long vs weak Consumer Disc parent.
+  do_not: Do not fold gambling into a broad XLY short; SGHC/RSI are idiosyncratic positives.
 - **HEAT Home Improvement Retail** (Consumer Cyclical) dir=down conv=medium
   captains: HD SPX none, LOW SPX none
-  Both SPX captains red on the week with -1.87 vs-parent; no offsetting catalyst found.
-  do_not: Do not treat the Walmart windfall headline as an HD/LOW catalyst — it is not ticker-specific.
+  Both SPX home-improvement captains red on the week with no fresh catalyst; industry breadth 0.20 confirms broad weakness.
+  do_not: Do not treat this as a housing-cycle call; it is a two-name tape with no news.
 - **HEAT Lodging** (Consumer Cyclical) dir=down conv=medium
   captains: MAR SPX none, HLT SPX none
-  Lodging is the weakest Consumer Cyclical sub-group at -2.11 vs-parent with no offsetting catalyst.
-  do_not: Do not treat travel-season commentary as a catalyst for either captain.
+  Both lodging captains down ~2% on the week with breadth 0.18; no fresh catalyst, but the tape is uniformly soft.
+  do_not: Do not read this as a consumer-spending collapse; it is a two-name, no-news drift.
 - **HEAT Personal Services** (Consumer Cyclical) dir=up conv=medium
   captains: ROL SPX pos, FTDR RUT pos, CSV RUT none
-  Personal Services is the only sub-group where both primary captains carry positive, dated company facts.
-  do_not: Do not lump ROL/FTDR into the broad Consumer Cyclical -1.99 vs-parent weakness.
+  Personal Services is the one Consumer Cyclical pocket where captains are flat-to-green against a -3.81% industry week — defensive recurring revenue.
+  do_not: Do not short this industry with the rest of Consumer Cyclical; ROL/FTDR are subscription-like.
 - **HEAT Internet Retail** (Consumer Cyclical) dir=down conv=medium
   captains: AMZN SPX neg, DASH SPX neg
-  AMZN layoffs + DASH Walmart-delivery threat; both SPX captains negative, RUT PTRN/RVLV too small to offset.
-  do_not: average into XLY; DASH is a structural share-loss story, not a beta trade
-- **HEAT Luxury Goods** (Consumer Cyclical) dir=down conv=medium
-  captains: TPR SPX neg, SIG RUT none, CPRI RUT pos
-  TPR pressured by Shein valuation; CPRI S&P 500 inclusion is idiosyncratic. Breadth 0.091 — sector is broadly weak.
-  do_not: treat CPRI index-add as luxury-sector strength; breadth 0.091 says otherwise
+  AMZN layoffs + DASH Walmart-delivery threat; both SPX captains negative, RUT names flat-to-soft.
+  do_not: average into XLY strength; this is a competitive-share-loss story, not a consumer-spend story
+- **HEAT Luxury Goods** (Consumer Cyclical) dir=down conv=low
+  captains: TPR SPX none, SIG RUT none, CPRI RUT none
+  Luxury breadth 0.091 with no captain-specific news; sector-wide softness (Shein/H&M pricing pressure) is the only signal.
+  do_not: treat CPRI index-add as bullish fundamental sentiment
 - **HEAT Leisure** (Consumer Cyclical) dir=down conv=low
   captains: HAS SPX none, LTH RUT none, GOLF RUT none
-  Leisure tape red (w1 -3.39, breadth 0.33); HAS pop is price-only, LTH/GOLF no fresh catalyst.
-  do_not: chase HAS +8.69 as sentiment; no dated news supports it
+  Leisure HEAT with weak breadth; captains show no fresh catalyst, so treat as tape-driven fade.
+  do_not: Do not chase HAS +8.69 as news; it is price-only with sent=none.
 - **HEAT Packaging & Containers** (Consumer Cyclical) dir=down conv=low
   captains: SW SPX none, PKG SPX none, GEF RUT none, AMBP RUT none
-  Packaging tape weak (w1 -3.53, breadth 0.14); SW/PKG/GEF/AMBP all lack dated catalysts.
-  do_not: trade the containerboard headline without a timestamp; it is not current evidence
+  Packaging HEAT with very weak breadth; no captain has fresh news, so residual weakness is the signal.
+  do_not: Do not treat routine dividends or parent-level Ardagh headlines as AMBP sentiment.
 - **HEAT Recreational Vehicles** (Consumer Cyclical) dir=down conv=low
-  captains: PII RUT none, HOG RUT pos
-  RV tape red and breadth 0.06; HOG dividend is dated but PII has no live catalyst, so no nested long.
-  do_not: Treat the HOG dividend as a sector-wide RV bid
-- **HEAT Residential Construction** (Consumer Cyclical) dir=down conv=medium
-  captains: DHI SPX none, PHM SPX mixed, IBP RUT none, SKY RUT none
-  Flagged HEAT, w1 -4.41 vs parent -2.59, breadth 0.16; PHM pop is single-name, DHI/IBP/SKY have no live catalyst.
-  do_not: Read PHM +5.84 as a homebuilder turn — it is one analyst-call print
+  captains: PII RUT none, HOG RUT mixed
+  RV tape red (-3.5% d1, breadth 0.06); PII/HOG news is dividend housekeeping, not demand.
+  do_not: read the HOG dividend as a bullish catalyst
 - **HEAT Resorts & Casinos** (Consumer Cyclical) dir=flat conv=low
-  captains: LVS SPX neg, MGM SPX none, RRR RUT pos, VAC RUT pos
-  Industry w1 -0.46 vs parent +1.36 relative; LVS bear note vs RRR/VAC dividends — no clean direction.
-  do_not: Average LVS negative into RRR positive as a casino long
+  captains: LVS SPX neg, MGM SPX none, RRR RUT pos, VAC RUT none
+  Casinos +1.36% vs parent w1; LVS bearish note vs RRR positive call summary — no clean direction.
+  do_not: average LVS bearishness into a sector-wide short
 - **HEAT Restaurants** (Consumer Cyclical) dir=down conv=low
   captains: MCD SPX mixed, SBUX SPX none, EAT RUT none, CAKE RUT none
-  Restaurants w1 -2.99 vs parent -1.17, breadth 0.21; MCD mixed, SBUX/EAT/CAKE have no live catalyst.
-  do_not: Trade the MCD 24% target headline as a restaurant-sector bid
+  Restaurants -2.99% w1, breadth 0.21; MCD India noise plus no SBUX catalyst keeps the group soft.
+  do_not: short MCD on the India headline alone — Street targets are still higher
 - **HEAT Specialty Retail** (Consumer Cyclical) dir=up conv=low
   captains: CASY SPX none, WSM SPX none, RH RUT none, ASO RUT none
-  Specialty Retail w1 +1.32 vs parent -1.82, breadth 0.27 — the only positive relative in the batch, but no captain has live news.
-  do_not: Chase the relative-strength print without a dated catalyst
+  Specialty Retail +1.32% w1 vs parent -1.8%; ASO +4.07% w1 leads but RH's Sept-10 print is the unresolved swing factor.
+  do_not: size RH before the Q2 print is digested
 - **OVERRIDE Textile Manufacturing** (Consumer Cyclical) dir=up conv=low
   captains: AIN RUT pos
-  OVERRIDE: w1 +10.54 vs parent -1.82, breadth 0.0 — the move is AIN's aerospace contract, not textiles.
-  do_not: Label AIN as a textile-demand signal; it is an aerospace composite story
+  OVERRIDE: AIN's Boeing 787 contract extension drives +10.5% w1, +12.4% vs parent — aerospace, not consumer textile.
+  do_not: classify AIN as a consumer-discretionary textile name
 - **HEAT Travel Services** (Consumer Cyclical) dir=down conv=medium
   captains: BKNG SPX none, ABNB SPX neg, GBTG RUT none, LIND RUT pos
-  Flagged HEAT, w1 -6.01 vs parent -1.82, breadth 0.06; ABNB EU regulatory headline confirms the down tape.
-  do_not: Bury ABNB's EU rental-curb headline in a generic travel-services line
+  Flagged HEAT, -6.01% w1 vs parent -4.19%; ABNB faces EU short-term-rental curbs, BKNG has no offsetting catalyst.
+  do_not: buy the travel dip without a demand catalyst — the EU regulatory overhang is live
+- **HEAT Residential Construction** (Consumer Cyclical) dir=down conv=medium
+  captains: DHI SPX none, PHM SPX mixed, IBP RUT none, SKY RUT none
+  Builders are the weak leg: DHI/PHM/IBP/SKY all red on the week with no offsetting demand catalyst.
+  do_not: Do not read PHM's +5.84% d1 as a sector turn; it is a single-name bounce inside a -4.41% w1 industry.
+- **HEAT Auto Manufacturers** (Consumer Cyclical) dir=flat conv=low
+  captains: TSLA SPX none, GM SPX none, LCID RUT none
+  honest none — captain close did not land a valid card
 - **HEAT Beverages - Brewers** (Consumer Defensive) dir=down conv=medium
   captains: STZ SPX neg, TAP SPX neg
-  Brewers' +1.65 vs_parent is a residual artifact; both SPX captains carry negative fundamental news and negative tape.
-  do_not: read the positive vs_parent_w1 as a brewer bid — STZ/TAP news is negative
+  Brewers are the weak leg: TAP at a fresh 52-week low, STZ at a 52-week low on negative coverage.
+  do_not: Treat the +1.65 vs_parent_w1 residual as a long — both SPX captains are making lows.
 - **HEAT Beverages - Non-Alcoholic** (Consumer Defensive) dir=flat conv=low
   captains: KO SPX mixed, PEP SPX neg
-  Mega-cap soda is a two-sided tape: KO marginally preferred, PEP pressured by snack-impulse weakness; no directional edge.
-  do_not: treat KO-vs-PEP comparison pieces as a bullish catalyst
-- **HEAT Beverages - Wineries & Distilleries** (Consumer Defensive) dir=up conv=low
-  captains: BF-B SPX mixed
-  Single liquid captain; BF-B is the only green name in a -4.31 w1 industry, so the nested read is BF-B-specific, not a spirits bid.
-  do_not: extrapolate BF-B strength to the whole distilleries complex
-- **HEAT Confectioners** (Consumer Defensive) dir=down conv=low
-  captains: MDLZ SPX neg, HSY SPX none
-  Confectioners are flat-to-down on pricing scrutiny; MDLZ shrinkflation headline is the only live item, HSY has nothing.
-  do_not: trade the 0.6 breadth as a confectioner bid — it is a low-signal mix
+  KO/PEP are flat-to-soft on demand chatter; RUT names COCO and FIZZ are down hard on the week.
+  do_not: Read the -0.39 vs_parent_w1 as a rotation signal — breadth is only 0.158.
+- **HEAT Confectioners** (Consumer Defensive) dir=flat conv=low
+  captains: MDLZ SPX none, HSY SPX none
+  Confectioners have no fresh company news; MDLZ and HSY both drift lower on the week with breadth 0.6 but no catalyst.
+  do_not: Invent a cocoa-cost or shrinkflation thesis without a dated source.
 - **HEAT Discount Stores** (Consumer Defensive) dir=flat conv=low
   captains: WMT SPX mixed, COST SPX mixed
-  WMT/COST are split — WMT green on the week, COST -3.33 — so the 0.0 breadth industry has no clean nested direction.
-  do_not: average WMT and COST into a single 'discount retail up' trade
-- **HEAT Education & Training Services** (Consumer Defensive) dir=down conv=low
+  WMT and COST both slip on the day despite positive one-offs; breadth 0.0 with PSMT flat.
+  do_not: Chase the +0.6 vs_parent_w1 residual — zero breadth means no confirmation.
+- **HEAT Education & Training Services** (Consumer Defensive) dir=down conv=medium
   captains: LAUR RUT none, CVSA RUT none
-  Both RUT education captains are -5.26 and -3.18 on the week with no offsetting news; the industry is a clean laggard.
-  do_not: treat organizational press releases as bullish catalysts
+  Education is the cleanest down-leg in the batch: LAUR -5.26% w1, CVSA -3.18% w1, no offsetting news.
+  do_not: Treat the 'pos' keyword stubs as real sentiment — both are generic roundups.
 - **HEAT Farm Products** (Consumer Defensive) dir=up conv=medium
   captains: ADM SPX mixed, BG SPX mixed
-  Farm Products is the one Consumer Defensive industry with a real +3.48 vs_parent bid; ADM and BG both green on the week.
-  do_not: let the ADM governance headline mask the fact that both captains are bid
+  Farm Products is the batch's best residual (+3.48 vs parent) with ADM +3.37% and BG +2.94% w1 both confirming.
+  do_not: Let the ADM governance headline flip the industry short — the tape and BG both agree up.
 - **HEAT Food Distribution** (Consumer Defensive) dir=flat conv=low
-  captains: SYY SPX none, CHEF RUT none
-  Food Distribution is news-dead: SYY drifts -1.32, CHEF -0.56, UNFI +0.32 — no captain has a live catalyst.
-  do_not: manufacture a direction from a 0.364 breadth with no news
+  captains: SYY SPX none, CHEF RUT none, UNFI RUT none
+  Food Distribution has no live company news; SYY -1.32% w1 with UNFI the only green name at +0.32%.
+  do_not: Trade the CHEF tag — the headline is about Cheffelo AB, a different company.
+- **HEAT Beverages - Wineries & Distilleries** (Consumer Defensive) dir=down conv=low
+  captains: BF-B SPX mixed
+  BF-B is the only liquid captain and it is mixed: FY outlook reaffirmed but flat sales, soft demand, barrel revenue down.
+  do_not: treat the +2.1% d1 pop as a clean long — the news is a reaffirm-and-slow-recovery story, not an upside surprise
 - **HEAT Grocery Stores** (Consumer Defensive) dir=flat conv=low
-  captains: KR SPX none, WMK RUT pos
-  KR prints pre-open with DOJ probe overhang; WMK's +2.3% comps are the only clean bid in the group.
-  do_not: treat the -3.02% d1 as a read-through into WMK; the two have no shared catalyst
+  captains: KR SPX mixed, WMK RUT pos
+  KR prints today into an antitrust overhang; WMK is the only captain with a clean positive comp — grocery is a coin flip, not a trend.
+  do_not: Do not treat the -3.02% d1 as a signal — it is pre-earnings de-risking into the KR 08:00 ET print.
 - **HEAT Household & Personal Products** (Consumer Defensive) dir=down conv=medium
   captains: PG SPX neg, CL SPX none
-  PG and CL both red on the week; the only live catalyst is a negative read-through from Campbell's, not a household-specific event.
-  do_not: call this a PG story — the tape is being driven by packaged-food volume fear
-- **HEAT Packaged Foods** (Consumer Defensive) dir=down conv=high
+  PG and CL both red on the week; the staples pricing-power story is being repriced lower, and only PG has a dated negative read-through.
+  do_not: Do not average this into a Consumer Staples 'defensive bid' — the captains are the weak leg.
+- **HEAT Packaged Foods** (Consumer Defensive) dir=down conv=medium
   captains: KHC SPX neg, GIS SPX neg
-  Packaged Foods is the cleanest short in the batch: -4.25% w1, -3.31% vs parent, breadth 0.197, both SPX captains confirming.
-  do_not: average this into a flat Consumer Staples call — the -3.31% residual is the signal
+  Packaged Foods is the worst industry on the board at -4.25% w1 and -3.31% vs parent; both SPX captains confirm the down leg.
+  do_not: Do not buy the -7.35% GIS drawdown as 'washed out' — there is no dated positive catalyst, only a dated negative read-through.
 - **HEAT Tobacco** (Consumer Defensive) dir=flat conv=low
-  captains: PM SPX pos, MO SPX pos, TPB RUT neg, UVV RUT none
-  PM/MO smoke-free and dividend news positive, but TPB bear call and flat tape keep the sub-sector pinned.
-  do_not: do not read this as a Consumer Staples XLP UP signal; PM w1 -3.06% is the drag
-- **HEAT Oil & Gas Drilling** (Energy) dir=down conv=low
+  captains: PM SPX none, MO SPX none
+  Tobacco tape is flat-to-soft; PM and MO both lack a current catalyst, so the HEAT flag is residual noise, not a bid.
+  do_not: Do not treat the HEAT flag as a long — neither SPX captain has same-day evidence, and PM's w1 -3.06% contradicts the group.
+- **HEAT Oil & Gas Drilling** (Energy) dir=flat conv=low
   captains: NE RUT neg, RIG RUT pos
-  RIG contract wins offset NE's loss and probe; industry still lags parent by 2.05pp on weak breadth.
-  do_not: treat RIG's +1.18% d1 as an industry-wide drilling turn
+  RIG contract backlog bid vs NE earnings miss; industry w1 -0.45 and -2.05 vs parent, no clean direction.
+  do_not: treat RIG's ONGC award as an industry-wide drilling re-rate
 - **HEAT Oil & Gas E&P** (Energy) dir=up conv=medium
-  captains: COP SPX pos, EOG SPX none, SM RUT none, MGY RUT none
-  E&P is the cleanest Energy long: COP/EOG/SM/MGY all green d1, breadth 0.449, only 0.42pp behind parent.
-  do_not: confuse E&P strength with the weak drilling and services sub-sectors
-- **HEAT Oil & Gas Equipment & Services** (Energy) dir=down conv=low
+  captains: COP SPX none, EOG SPX none, SM RUT none, MGY RUT none
+  E&P is the cleanest Energy long: w1 +1.18, d1 +0.94, COP +2.83 and SM +2.03 leading, but all four captains lack fresh news.
+  do_not: upgrade conviction to high on price alone; no captain has current dated evidence
+- **HEAT Oil & Gas Equipment & Services** (Energy) dir=flat conv=low
   captains: SLB SPX neg, BKR SPX pos, KGS RUT none, AROC RUT neg
-  Breadth 0.26 and -2.1pp vs parent: SLB relative weakness and AROC bear call outweigh BKR's bp win.
-  do_not: buy the group on KGS's +8.53% w1 — that is price, not news
+  Breadth 0.26 and -2.10 vs parent; SLB -4.13 drags while BKR contract and KGS price diverge.
+  do_not: read KGS +8.53 as a services-wide bid; it is one name with no news
 - **HEAT Oil & Gas Integrated** (Energy) dir=up conv=medium
-  captains: XOM SPX pos, CVX SPX pos, DEC RUT none
-  Integrated is the only Energy sub-sector beating its parent (+0.37pp) with breadth 0.75; XOM/CVX both green.
-  do_not: treat DEC's thin digest mention as confirmation
-- **HEAT Oil & Gas Refining & Marketing** (Energy) dir=up conv=high
-  captains: MPC SPX pos, VLO SPX pos, PBF RUT pos, DK RUT pos
-  Flagged and +4.26pp vs parent: MPC/VLO/PBF/DK all green, crack spreads the cleanest Energy long.
-  do_not: dilute refining into XLE — this is the OVERRIDE leg
+  captains: XOM SPX none, CVX SPX pos, DEC RUT none
+  Integrated is the only Energy group beating its parent (w1 +1.97, breadth 0.75) on CVX Venezuela capital and XOM strength.
+  do_not: average this into a broad Energy long; the strength is concentrated in the two SPX majors
+- **OVERRIDE Oil & Gas Refining & Marketing** (Energy) dir=up conv=high
+  captains: MPC SPX none, VLO SPX none, PBF RUT pos, DK RUT pos
+  Flagged group: w1 +5.86 and +4.26 vs parent, breadth 0.474, both RUT captains pos — the cleanest nested long in Energy.
+  do_not: fold this into a generic Energy/XLE long; the refining spread is the signal
 - **HEAT Thermal Coal** (Energy) dir=down conv=low
   captains: CNR RUT neg, BTU RUT neg
-  Coal is the weakest Energy leg: -2.46pp vs parent, breadth 0.4, CNR -4.58% w1 and BTU under litigation.
-  do_not: read BTU's +1.4% d1 as a turn — the w1 is still red
-- **HEAT Uranium** (Energy) dir=up conv=low
+  Coal is the weakest Energy pocket: w1 -0.86, -2.46 vs parent, CNR -4.58 and a securities suit on BTU.
+  do_not: buy the d1 +0.80 bounce; it is a dead-cat inside a negative week
+- **OVERRIDE Uranium** (Energy) dir=up conv=medium
   captains: UEC RUT pos, UUUU RUT none
-  Uranium +2.41% w1 and +0.81pp vs parent, but breadth 0.231 and UEC -6.05% w1 — thin, not confirmed.
-  do_not: call uranium a high-conviction long on 0.231 breadth
+  Uranium w1 +2.41 and +0.81 vs parent with breadth 0.231 — a narrow, two-name bid that Energy ETF exposure dilutes.
+  do_not: read UEC's -6.05 week as uranium weakness; the industry residual is positive
 - **HEAT Oil & Gas Midstream** (Energy) dir=up conv=medium
-  captains: WMB SPX pos, KMI SPX pos, KNTK RUT pos, INSW RUT pos
-  Midstream captains bid on gas/LNG project growth and Momentum close; INSW tanker spike is a separate Hormuz trade.
-  do_not: Do not average INSW's Hormuz tanker spike into a gas-midstream thesis; they are different drivers.
+  captains: WMB SPX pos, KMI SPX none, KNTK RUT none, INSW RUT pos
+  Midstream captains mixed-to-firm; INSW is the live mover on Hormuz tanker-rate spike, WMB on closed Haynesville deal.
+  do_not: Do not average INSW's tanker-rate spike into a flat XLE midstream read; the shipping leg is a separate driver.
 - **HEAT Asset Management** (Financial) dir=down conv=medium
   captains: BLK SPX none, BX SPX neg, VCTR RUT none, STEP RUT none
-  Alt-manager complex is the weak leg: BCRED redemption cap is a live negative, BLK/BX both red on the week.
-  do_not: Do not read this as an XLF call; the drag is private-credit/alt-manager specific.
+  BLK/BX both red on the week; BX private-credit gating is a real negative, not just beta.
+  do_not: Treat this as a clean Financial-ETF short; BX is idiosyncratic private-credit stress
 - **HEAT Banks - Diversified** (Financial) dir=flat conv=low
   captains: JPM SPX none, BAC SPX neg, NTB RUT none
-  Money-center banks are flat-to-slightly-bid on the week but gave back ~1% today; no differentiated catalyst.
-  do_not: Do not promote this as a fresh long; breadth is 0.15 and today was red.
+  Money-center tape is flat-to-soft; BAC survey headline is sentiment noise, not a bank-fundamental change.
+  do_not: Read the BofA crash-survey headline as a BAC earnings signal
 - **HEAT Banks - Regional** (Financial) dir=up conv=medium
-  captains: USB SPX pos, PNC SPX none, UMBF RUT mixed, ONB RUT none
-  Regionals are the cleanest Financial long: +1.8% w1 vs parent, USB expanding footprint, RUT names green on the week.
-  do_not: Do not lump into Banks - Diversified; breadth is thin (0.074) so keep it to the leaders.
+  captains: USB SPX none, PNC SPX none, UMBF RUT none, ONB RUT none
+  Regional captains hold positive weekly residual (USB +2.0%, PNC +1.1%) with no negative catalyst — the cleanest Financial long.
+  do_not: Average regionals into the weak Asset Management / Credit Services tape
 - **HEAT Credit Services** (Financial) dir=down conv=medium
-  captains: V SPX none, MA SPX pos, FCFS RUT none, ENVA RUT pos
-  Card networks are the soft spot (-2.1% w1) while RUT consumer lenders hold up; the industry is not one trade.
-  do_not: Do not treat V/MA weakness as a consumer-credit signal — it is a multiple de-rate.
+  captains: V SPX none, MA SPX pos, FCFS RUT none, ENVA RUT none
+  V/MA both down ~2%+ on the week; MA's stablecoin-rail angle is the only positive, and it is structural not tactical.
+  do_not: Call Credit Services 'up' on the MA stablecoin headline while V and the tape are red
 - **HEAT Financial Conglomerates** (Financial) dir=flat conv=low
   captains: HTH RUT none
-  Single RUT captain, breadth 0.0, no SPX name — no tradeable signal in this industry today.
-  do_not: Do not size anything here; one illiquid captain is not an industry.
-- **HEAT Financial Data & Stock Exchanges** (Financial) dir=down conv=medium
-  captains: SPGI SPX pos, CME SPX pos
-  Both captains have positive company facts but the industry printed -2.46% today — a tape/positioning hit, not a fundamental one.
-  do_not: Do not chase the -2.46% d1 as a short; the news flow under it is constructive.
+  Single RUT captain, zero breadth, no SPX name — no tradeable sub-sector signal here.
+  do_not: Build a Financial Conglomerates position off one illiquid captain
 - **HEAT Insurance - Diversified** (Financial) dir=flat conv=low
   captains: BRK-B SPX none, AIG SPX none, PLGO RUT none
-  Insurance is the quiet corner: flat on the week, no catalysts, BRK-B/AIG both slightly red today.
-  do_not: Do not force a directional call; there is no evidence either way.
+  BRK-B and AIG both roughly flat on the week with no catalyst — insurance is the quiet corner of Financial.
+  do_not: Force a directional insurance trade out of a zero-breadth, zero-news industry
 - **HEAT Capital Markets** (Financial) dir=flat conv=low
   captains: MS SPX none, GS SPX none, HUT RUT none, SNEX RUT none
-  Capital Markets HEAT is a w1 residual artifact: MS/GS both red d1, RUT captains crypto/commodity-adjacent, no dated catalyst.
-  do_not: Do not treat HUT's +18.9% w1 as a capital-markets signal; it is a bitcoin-beta miner, not a broker/dealer.
+  MS/GS both red d1 with no dated catalyst; HUT's +18.9% w1 is a bitcoin proxy, not a capital-markets signal.
+  do_not: Do not read HUT's crypto beta as a Capital Markets breadth signal, and do not treat the IonQ stub as SNEX news.
+- **HEAT Financial Data & Stock Exchanges** (Financial) dir=down conv=medium
+  captains: SPGI SPX pos, CME SPX pos
+  Both captains carry positive company-specific news, yet the tape is -2.46% d1 with 0.0 breadth — news and price disagree.
+  do_not: Do not call this a clean long: 0.0 breadth and -3.15% w1 mean the two names are the only bid, not the industry.
 - **HEAT Insurance - Life** (Financial) dir=up conv=medium
-  captains: MET SPX pos, AFL SPX neg
-  Life insurance captains split: MET bid on KBW appearance, AFL pressured by Japan Post stake trim.
-  do_not: average AFL insider selling into the MET long
+  captains: MET SPX pos, AFL SPX mixed
+  Life captains bid into KBW conference week; JXN +4.9% w1 confirms RUT tailwind.
+  do_not: average into XLF weakness; life is a nested long vs Financial
 - **HEAT Insurance - Property & Casualty** (Financial) dir=down conv=medium
   captains: CB SPX none, PGR SPX none
-  P&C breadth is 0.045 — nearly every name red; CB and PGR have no offsetting catalyst.
-  do_not: treat the short-seller screen mention as bullish PGR news
+  P&C breadth 0.045, both SPX captains red d1; no offsetting news bid.
+  do_not: treat as defensive rotation; tape says distribution
 - **HEAT Insurance - Reinsurance** (Financial) dir=flat conv=low
   captains: EG SPX none, HG RUT none
-  Reinsurance breadth is 0.0 — no captain has a live catalyst; d1 -2.43 is tape, not news.
-  do_not: invent a reinsurance catalyst from the loss-triangle press release
+  Breadth 0.0, d1 -2.43; reinsurance is the weakest Financial sub with no news offset.
+  do_not: chase the w1 +0.86 EG print; d1 says sellers in control
 - **HEAT Insurance - Specialty** (Financial) dir=flat conv=low
   captains: ACT RUT none, ESNT RUT none
-  Specialty has no SPX captain and both RUT names are flat on stale dividend/analysis items.
-  do_not: read the Afrocentric JSE stub as Enact Holdings news
-- **HEAT Insurance Brokers** (Financial) dir=down conv=medium
-  captains: MRSH SPX none, AON SPX none
-  Brokers are the worst Financial sub-group: w1 -3.81, d1 -3.12, breadth 0.042, no offsetting news.
-  do_not: treat a conference speaking slot as bullish AON news
-- **HEAT Mortgage Finance** (Financial) dir=up conv=low
-  captains: PFSI RUT none, WD RUT none
-  Mortgage Finance is the only Financial sub-group with positive w1 (+2.45) but d1 -1.84 and no live catalyst.
-  do_not: chase the w1 residual without a news catalyst
+  No SPX captain; RUT pair flat w1 +0.41 with no news; specialty is a dead sub.
+  do_not: read the Finviz 'pos' stubs as real sentiment — both are ticker collisions or dividend boilerplate
+- **HEAT Insurance Brokers** (Financial) dir=down conv=high
+  captains: MRSH SPX neg, AON SPX neg
+  Brokers are the Financial blow-up: w1 -3.81, d1 -3.12, breadth 0.042, both SPX captains red.
+  do_not: buy the dip; this is the worst vs_parent_w1 in the batch at -3.9
+- **HEAT Mortgage Finance** (Financial) dir=up conv=medium
+  captains: PFSI RUT none, WD RUT pos
+  Mortgage finance is the only Financial sub with positive w1 (+2.45) and a real deal catalyst in WD.
+  do_not: lump into banks; this is a rate-sensitive nested long
 - **HEAT Shell Companies** (Financial) dir=flat conv=low
   captains: LION RUT none
-  Single RUT captain, no valid ticker-tagged news; d1 +0.01 and w1 -0.27 are noise.
-  do_not: read the Lionsgate Studios stub as this LION's news
+  Single RUT captain, w1 -2.12, no news; shell companies are noise, not a trade.
+  do_not: trade the Finviz 'pos' stub — it belongs to a different ticker
 - **HEAT Biotechnology** (Healthcare) dir=flat conv=low
-  captains: VRTX SPX pos, REGN SPX neg
-  VRTX deal-plus-guide is a real positive; REGN litigation overhang offsets it, so the pair nets flat.
-  do_not: read the +2.33 vs_parent_w1 as a clean biotech long
+  captains: VRTX SPX none, REGN SPX neg, KRYS RUT none, CYTK RUT none
+  Biotech captains split: REGN carries legal overhang, VRTX/KRYS/CYTK have only conference stubs; no clean nested signal.
+  do_not: Do not read the +2.33 vs_parent_w1 as a fresh catalyst; it is a residual, not news.
 - **HEAT Diagnostics & Research** (Healthcare) dir=down conv=medium
-  captains: TMO SPX none, DHR SPX none
-  Both SPX captains are news-dead and the tape is -2.53 w1 with 0.159 breadth; the weakness is real, the catalyst is not.
-  do_not: attribute the Merck KGaA upgrade to DHR
+  captains: TMO SPX none, DHR SPX none, RDNT RUT none, ADPT RUT none
+  Diagnostics is the weakest healthcare pocket: -2.53 w1, -0.77 vs parent, thin 0.159 breadth, and no captain has a live catalyst.
+  do_not: Do not treat the Merck KGaA upgrade stub as a DHR fact.
 - **HEAT Drug Manufacturers - General** (Healthcare) dir=down conv=medium
   captains: LLY SPX none, JNJ SPX none
-  Breadth 0.048 is the thinnest on the board and d1 -3.55 is the worst; no captain news to defend it.
-  do_not: treat JNJ's +2.27 w1 as sector leadership
+  Big pharma is the day's worst healthcare tape (-3.55 d1) with breadth at 0.048 — effectively a one-name industry, and no RUT captain exists.
+  do_not: Do not average this into a Healthcare 'HEAT' long; breadth 0.048 means the move is not broad.
 - **HEAT Drug Manufacturers - Specialty & Generic** (Healthcare) dir=flat conv=low
-  captains: ZTS SPX none, VTRS SPX pos
-  VTRS gets a broker reiteration off a partner deal, but ZTS is news-dead and breadth 0.247 is middling.
-  do_not: call the group a long on a single broker reiteration
+  captains: ZTS SPX none, VTRS SPX none, ALKS RUT none, LNTH RUT none
+  Specialty/generic is mildly better than parent (+0.61 vs_parent_w1) but every captain stub is conference or third-party noise.
+  do_not: Do not upgrade VTRS on a Shield Therapeutics rating note.
 - **HEAT Healthcare Plans** (Healthcare) dir=up conv=medium
-  captains: UNH SPX mixed, CVS SPX none
-  Best vs_parent_w1 on the board at +4.28 with OSCR +5.81 w1, but UNH's utilization headline is a real margin risk.
-  do_not: ignore the approval-barrier utilization signal under a strong w1
+  captains: UNH SPX neg, CVS SPX pos, OSCR RUT none, ALHC RUT neg
+  Plans are the best healthcare residual (+4.28 vs_parent_w1, +2.52 w1) but the captain evidence is mixed: CVS bid, UNH and ALHC carrying negative headlines.
+  do_not: Do not call this a clean long — UNH's approval-barrier headline and ALHC's investigation cut against the residual.
 - **HEAT Medical Care Facilities** (Healthcare) dir=flat conv=low
-  captains: HCA SPX none, DVA SPX neg
-  DVA's $15M breach settlement is small but negative; HCA is news-dead and PACS/LFST are conference noise.
-  do_not: size the group off DVA's +4.53 w1
+  captains: HCA SPX none, DVA SPX neg, PACS RUT none, LFST RUT none
+  Facilities is a mild positive residual (+1.0 vs_parent_w1) with no live catalyst; DVA's settlement is the only dated item and it is negative.
+  do_not: Do not promote this on the residual alone — every captain is a stub or a small legal cost.
 - **HEAT Medical Devices** (Healthcare) dir=down conv=medium
-  captains: ABT SPX none, MDT SPX none
-  Flagged, -5.0 w1 and -3.53 d1 with 0.175 breadth, and neither SPX captain has a dated catalyst to explain or defend it.
-  do_not: buy the dip on a flagged industry with no captain news
+  captains: ABT SPX none, MDT SPX none, GKOS RUT none, TXG RUT pos
+  The flagged industry is the worst in the group (-5.0 w1, -3.24 vs parent) and the SPX captains have no live catalyst — only RUT TXG has a dated win.
+  do_not: Do not treat the flag as a long signal; the flag marks weakness, and ABT/MDT stubs are mislabeled non-facts.
 - **HEAT Health Information Services** (Healthcare) dir=down conv=low
   captains: VEEV SPX none, BTSG RUT none, HQY RUT none
-  Health Info Services HEAT: SPX captain VEEV weak, RUT captains bid but no dated catalyst confirms direction.
-  do_not: Do not treat BTSG/HQY price strength as sentiment; no current evidence
-- **HEAT Medical Distribution** (Healthcare) dir=flat conv=low
-  captains: MCK SPX neg, COR SPX pos
-  MCK cyber overhang vs COR raised EPS; captains split, breadth 0.0, so no clean nested long.
-  do_not: treat the +2.59 vs_parent_w1 as a bid — breadth is zero and MCK news is negative
+  Health Info Services HEAT: SPX captain VEEV weak, RUT captains mixed; no current news confirms direction.
+  do_not: Do not treat BTSG strength as sector-wide Health Info Services bid without dated news.
+- **HEAT Medical Distribution** (Healthcare) dir=down conv=medium
+  captains: MCK SPX neg, COR SPX none
+  MCK breach headline is a real overhang; COR has no fresh catalyst, so distribution tape is soft not broken.
+  do_not: treat the -2.14% d1 as a sector-wide Healthcare signal; this is MCK-specific headline risk
 - **HEAT Medical Instruments & Supplies** (Healthcare) dir=down conv=medium
-  captains: ISRG SPX none, BDX SPX none, MMED RUT none, MMSI RUT none
-  Industry -4.24 w1 with breadth 0.077; SPX captains red, RUT MMED spike is unsupported by news.
-  do_not: chase MMED's +13.52 w1 — no dated catalyst, and the parent industry tape is down
-- **HEAT Aerospace & Defense** (Industrials) dir=flat conv=low
+  captains: ISRG SPX mixed, BDX SPX none, MMED RUT none, MMSI RUT none
+  ISRG/BDX drift lower on valuation not news; RUT names MMED/MMSI have no verifiable catalyst, so the -4.24% w1 is a de-rating not a break.
+  do_not: read MMED's +13.52% w1 as confirmed bullish sentiment without a dated source
+- **HEAT Aerospace & Defense** (Industrials) dir=up conv=medium
   captains: GE SPX pos, RTX SPX pos, MOG-A RUT none, VSEC RUT none
-  SPX primes carry real capex/casting news but both closed red; RUT captains are conference-PR only — flat, not a chase.
-  do_not: Do not treat the HEAT tag as a green light while GE and RTX both printed red d1
+  GE's $11.75B castings deal and RTX's Poland expansion confirm defense/aero demand even as both names closed red.
+  do_not: Do not read GE/RTX red d1 as sector weakness; the news flow is accretive and capacity-adding.
+- **HEAT Airlines** (Industrials) dir=flat conv=low
+  captains: DAL SPX none, UAL SPX none, SKYW RUT pos, ALGT RUT pos
+  SPX majors flat on opinion pieces; RUT regionals bid on oil-drop fuel relief and route expansion.
+  do_not: Do not treat DAL/UAL d1 red as a sector call — no hard catalyst either way.
 - **HEAT Airports & Air Services** (Industrials) dir=flat conv=low
   captains: JOBY RUT none
-  Single liquid captain, no dated news, w1 negative — the HEAT tag is breadth noise, not a signal.
-  do_not: Do not size a position off one eVTOL name with no news and no confirmation
+  Single liquid captain JOBY with no dated catalyst; eVTOL narrative flat into the close.
+  do_not: Do not extrapolate a one-name, no-news industry into an Industrials signal.
 - **HEAT Building Products & Equipment** (Industrials) dir=up conv=medium
-  captains: TT SPX none, JCI SPX pos, GFF RUT none, ARLO RUT none
-  HVAC/cooling complex is the live thread: Carrier beat-and-raise reads through to JCI and TT, both green on the week.
-  do_not: Do not lump this in with homebuilder-sensitive building products — this is commercial cooling
+  captains: TT SPX none, JCI SPX pos, GFF RUT none, ARLO RUT pos
+  JCI read-through from Carrier's beat-and-raise plus TT/JCI weekly strength keeps building products bid.
+  do_not: Do not treat GFF's notes offering as a demand signal.
 - **HEAT Business Equipment & Supplies** (Industrials) dir=flat conv=low
   captains: CXT RUT none, XRX RUT none
-  No dated news on either captain; the HEAT tag is a residual artifact, not a tradeable thread.
-  do_not: Do not build a theme on conference-schedule PR
+  Both captains carry only scheduling or yield-comparison coverage; no directional business-equipment signal.
+  do_not: Do not build a thesis on a dividend-yield comparison article.
 - **HEAT Conglomerates** (Industrials) dir=down conv=medium
   captains: MMM SPX none, HON SPX none, BBUC RUT none, GHC RUT none
-  Both SPX captains red on the week with no offsetting news; the RUT leg is capital-return mechanics, not demand.
-  do_not: Do not treat BBUC's +6.6% day as a conglomerate re-rating — it is a buyback headline
+  MMM and HON both down ~2.6% on the week with no offsetting news; conglomerate tape is the weakest Industrials pocket.
+  do_not: Do not let BBUC's +6.6% d1 buyback pop mask the SPX conglomerate downtrend.
 - **OVERRIDE Consulting Services** (Industrials) dir=down conv=medium
-  captains: VRSK SPX none, EFX SPX neg, HURN RUT none, ICFI RUT none
-  OVERRIDE is a data/analytics story, not consulting: the VantageScore directive hits EFX's moat while the group bleeds -7.5% w1.
-  do_not: Do not average this into a broad Industrials short — the driver is credit-bureau regulation, not consulting demand
+  captains: VRSK SPX none, EFX SPX neg, HURN RUT pos, ICFI RUT none
+  OVERRIDE: consulting is the worst Industrials pocket at -7.47% w1, with EFX hit by the VantageScore directive.
+  do_not: Do not average consulting into a flat Industrials read — this is a distinct negative leg.
 - **SPLIT Electrical Equipment & Parts** (Industrials) dir=up conv=medium
   captains: VRT SPX pos, HUBB SPX pos, ENS RUT none, ATKR RUT none
-  SPLIT is real: VRT/HUBB ride the data-center and grid capex bid (+13.6% w1) while the RUT leg is conference-PR dead weight.
-  do_not: Do not let ENS/ATKR flatness dilute the VRT/HUBB power-capex signal — the split is the point
-- **HEAT Airlines** (Industrials) dir=flat conv=low
-  captains: DAL SPX none, UAL SPX none, SKYW RUT none, ALGT RUT none
-  Airlines: SPX captains red on the day, RUT captains flat-to-green on the week; no dated catalyst, so direction stays flat.
-  do_not: Do not read the undated 'oil prices drop' or route stubs as today's sentiment, and do not average airlines into a broad Industrials call.
+  SPLIT: VRT +8.7% w1 on datacenter power/M&A focus while RUT captains ENS/ATKR sit flat with no news.
+  do_not: Do not treat the RUT electrical names as confirming the SPX datacenter-power leg — they are a different demand pool.
 - **HEAT Engineering & Construction** (Industrials) dir=up conv=medium
-  captains: PWR SPX pos, FIX SPX pos, FLR RUT pos, ACA RUT none
-  PWR/FIX backlogs confirm data-center & power construction bid; FLR adds RUT confirmation.
-  do_not: Do not treat this as a generic XLI industrial-cyclical long; the driver is power/grid capex.
-- **HEAT Farm & Heavy Construction Machinery** (Industrials) dir=up conv=low
-  captains: CAT SPX none, DE SPX none, FSS RUT none, TEX RUT none
-  DE w1 +5.64 and CAT +2.24 carry the group, but breadth 0.115 and zero dated news = low conviction.
-  do_not: Do not upgrade to high conviction on price alone; breadth is the weakest in the batch.
-- **HEAT Industrial Distribution** (Industrials) dir=down conv=low
+  captains: PWR SPX none, FIX SPX pos, FLR RUT pos, ACA RUT none
+  PWR/FIX/FLR all bid on w1 with FIX backlog +73% y/y; ACA is deal-pinned and carries no signal.
+  do_not: Do not read ACA's flat tape as construction weakness — it is merger-pinned.
+- **HEAT Farm & Heavy Construction Machinery** (Industrials) dir=up conv=medium
+  captains: CAT SPX none, DE SPX none, FSS RUT pos, TEX RUT neg
+  CAT/DE carry the group on w1 (+2.24%/+5.64%) with no fresh catalyst; TEX is the lagging peer, FSS the niche bid.
+  do_not: Do not treat DE's +5.64% week as news-driven — no dated catalyst exists.
+- **HEAT Industrial Distribution** (Industrials) dir=down conv=medium
   captains: GWW SPX none, FAST SPX none, XMTR RUT none, REZI RUT none
-  GWW d1 -1.6 drags; vs_parent_w1 -0.7 and breadth 0.167 say this HEAT tag is a mislabel.
-  do_not: Do not buy the Industrials HEAT tag here — this is the one sub-industry trading below parent.
+  GWW -1.6% and FAST flat drag the group; RUT pair XMTR/REZI are conference-calendar names, not demand stories.
+  do_not: Do not book FAST as positive — the headline belongs to Ferguson's index add.
 - **HEAT Integrated Freight & Logistics** (Industrials) dir=down conv=medium
   captains: UPS SPX none, FDX SPX none, PBI RUT none, HUBG RUT neg
-  UPS/FDX both red on the week with no offsetting catalyst; HUBG -7.4 confirms freight weakness.
-  do_not: Do not read the HEAT tag as bullish — vs_parent_w1 is -3.63, the worst relative print in the batch.
+  UPS/FDX both red on w1 with only holiday filler news; HUBG -7.4% and under investor-recovery solicitation.
+  do_not: Do not fade this into the broad Industrials HEAT — freight is the weakest nested leg.
 - **HEAT Marine Shipping** (Industrials) dir=up conv=medium
   captains: MATX RUT pos, CMRE RUT mixed
-  MATX frontloading commentary plus breadth 0.368 (best in batch) makes this the cleanest nested long.
-  do_not: Do not lump this into a broad Industrials trade; the driver is Transpacific container volume, not US capex.
+  MATX confirms China frontloading into Transpacific lanes; CMRE is a backward-looking earnings recap. Breadth 0.368 is the best here.
+  do_not: Do not average MATX's container-volume read into dry-bulk or tanker names.
 - **HEAT Metal Fabrication** (Industrials) dir=flat conv=low
   captains: CMC RUT none, GPGI RUT neg
-  Breadth 0.056 is the thinnest in the batch; CMC has no dated catalyst and GPGI carries a legal notice.
-  do_not: Do not treat w1 +3.92 on CMC as a signal — no news supports it and breadth is near zero.
+  Breadth 0.056 is the thinnest on the board; CMC is an award headline and GPGI carries a recovery solicitation.
+  do_not: Do not treat GPGI's stub 'pos' as positive — the underlying item is adverse legal solicitation.
+- **HEAT Pollution & Treatment Controls** (Industrials) dir=up conv=medium
+  captains: VLTO SPX none, ZWS RUT none, CECO RUT pos
+  CECO's record orders (+4.21% w1) carry the group while VLTO and ZWS are award/acquisition headlines with red weeks.
+  do_not: Do not let VLTO's -2.28% week veto the CECO order-cycle long.
 - **HEAT Railroads** (Industrials) dir=down conv=medium
   captains: UNP SPX neg, CSX SPX none, TRN RUT neg, GBX RUT none
-  UNP merger-review political risk plus CSX -3.94 and GBX -5.77; vs_parent_w1 -3.98 is the batch's worst.
-  do_not: Do not buy the Industrials HEAT tag here — rails are the clearest relative short inside the sector.
-- **HEAT Pollution & Treatment Controls** (Industrials) dir=flat conv=low
-  captains: VLTO SPX none, ZWS RUT none, CECO RUT none
-  Water/pollution captains split: VLTO soft on deal news, ZWS/CECO firm but no fresh dated catalyst.
-  do_not: Do not read the +4.21% CECO week as news-driven sentiment; it is price only.
+  UNP merger-review political pressure plus CSX -1.8% and GBX -5.77% make railroads the clearest nested short inside Industrials.
+  do_not: Do not read the Industrials HEAT as rail strength — every rail captain is red on w1.
 - **HEAT Rental & Leasing Services** (Industrials) dir=down conv=low
   captains: URI SPX none, GATX RUT none
-  URI and GATX both flat-to-lower on no news; rental/leasing is drifting with the weak Industrials tape, not leading it.
-  do_not: Do not treat URI's 'outperforms competitors' stub as positive sentiment — it is a relative-price artifact with zero news behind it.
+  URI and GATX both flat-to-lower on no fresh news; rental/leasing is drifting with the industrial tape, not leading it.
+  do_not: Do not read URI's 'outperforms competitors' headline as positive sentiment — it is a relative-price stub with no news behind it.
 - **HEAT Security & Protection Services** (Industrials) dir=flat conv=low
   captains: ALLE SPX none, BCO RUT mixed
-  ALLE has no news; BCO carries a UK regulatory probe overhang. Security services is a no-signal, no-trade industry today.
-  do_not: Do not read BCO's +0.15% d1 as approval of the NCR Atleos deal — the regulator probe is the live fact.
+  ALLE quiet, BCO carries a regulatory overhang on its own acquisition; security services is flat with no directional edge.
+  do_not: Do not treat the Brinks/Atleos probe as bullish for BCO — it is a deal-risk headline on the buyer.
 - **HEAT Specialty Business Services** (Industrials) dir=down conv=low
   captains: CTAS SPX none, CPRT SPX none
-  CTAS and CPRT have no company news; the industry's -2.53% w1 is a tape move, not a fundamental one.
-  do_not: Do not promote CPRT on the 'outperforms competitors' stub — that is price, not sentiment.
+  CTAS and CPRT both lack company-specific news; the group's -1.88% day is tape, not a fundamental repricing.
+  do_not: Do not upgrade CPRT on the 'outperforms competitors' stub — that is price, not sentiment.
 - **HEAT Specialty Industrial Machinery** (Industrials) dir=up conv=medium
   captains: GEV SPX pos, ETN SPX pos
-  GEV turbine order plus ETN electrification ramp: the only Industrials pocket with both captains bid and news agreeing with the +1.95% w1 residual.
-  do_not: Do not average this into a flat XLI read — the machinery/electrification sleeve is the nested long inside a soft Industrials tape.
+  GEV order news plus ETN's +3.2% factory-ramp bid make this the one Industrials pocket with a real up-nested signal.
+  do_not: Do not fold GEV/ETN into a generic 'Industrials HEAT' short — the electrification sub-theme is bid against a weak parent.
 - **OVERRIDE Staffing & Employment Services** (Industrials) dir=down conv=medium
   captains: KFY RUT none, TNET RUT mixed
-  Staffing is the flagged OVERRIDE: -8.08% w1 and -5.58% d1 with breadth 0.059 — a near-total washout, and neither captain has news to defend it.
-  do_not: Do not bottom-fish KFY/TNET on 'cheap' — there is no positive catalyst, and breadth of 0.059 says the whole industry is being sold.
+  Staffing is the flagged OVERRIDE: -8.08% w1 and -5.58% d1 with 0.059 breadth — a genuine sub-sector breakdown, not a parent-ETF artifact.
+  do_not: Do not average this into Industrials HEAT — the -9.14% vs-parent spread is the signal, and there is no captain news to fade it.
 - **HEAT Tools & Accessories** (Industrials) dir=down conv=low
   captains: SNA SPX none, SWK SPX mixed
-  SNA has only a dividend notice and SWK is selling assets; tools is a slow-bleed industry with no positive catalyst.
-  do_not: Do not read the SWK divestiture as a bullish catalyst — it is balance-sheet repair into a weak demand tape.
+  SNA is a dividend non-event and SWK's divestiture is two-sided; tools is drifting lower with no captain conviction.
+  do_not: Do not read SWK's Excel sale as a clean bullish catalyst — it is revenue-negative even if deleveraging-positive.
 - **HEAT Trucking** (Industrials) dir=down conv=low
   captains: ODFL SPX none, RXO RUT none
-  ODFL -7.61% w1 on an ESG filing and RXO on a terms-free partnership: trucking has no positive news to offset the -2.67% w1 residual.
-  do_not: Do not treat the RXO partnership as a catalyst — no terms were disclosed.
+  ODFL's -7.61% w1 with only an ESG release and RXO's undisclosed partnership leave trucking down with no offsetting catalyst.
+  do_not: Do not use ARCB's 'stellar Q2' retrospective as a live positive — it is a backward-looking recap against a -2.67% group week.
 - **HEAT Waste Management** (Industrials) dir=flat conv=low
   captains: WM SPX mixed, RSG SPX none
-  WM's CEO handoff and RSG's certification PR are both non-financial; waste is a defensive flat line with breadth 0.048.
-  do_not: Do not trade the WM CEO transition as a catalyst — no guidance change accompanied it.
+  WM's CEO handoff and RSG's culture award are both non-financial; waste is flat with 0.048 breadth and no directional signal.
+  do_not: Do not trade RSG's 'Great Place to Work' headline as positive sentiment — it carries zero earnings information.
 - **HEAT REIT - Diversified** (Real Estate) dir=flat conv=low
-  captains: VICI SPX pos, BNL RUT none, GNL RUT mixed
-  VICI dividend raise is the only hard catalyst; BNL silent, GNL mixed on closed Modiv deal. Net flat.
-  do_not: Do not read the VICI dividend as a sector-wide REIT re-rating.
+  captains: VICI SPX pos, GNL RUT pos
+  VICI dividend hike and GNL's accretive Modiv close are company-specific positives inside a flat, breadth-thin diversified REIT tape.
+  do_not: read the -0.71 w1 as a sector call; this is a two-name story, not a diversified-REIT trend
 - **HEAT REIT - Healthcare Facilities** (Real Estate) dir=up conv=medium
-  captains: WELL SPX pos, VTR SPX none, CTRE RUT pos, SBRA RUT none
-  Healthcare REITs are the only Real Estate pocket with positive w1 vs parent; CTRE record investment volume confirms.
-  do_not: Do not lump WELL/VTR into the broad REIT drawdown.
+  captains: WELL SPX pos, CTRE RUT pos
+  Healthcare REITs are the only Real Estate pocket with positive w1 vs parent; CTRE's record investment quarter and WELL's relative strength confirm.
+  do_not: average this into the weak Office/Hotel tape; the +0.7 vs_parent_w1 is the signal
 - **HEAT REIT - Hotel & Motel** (Real Estate) dir=down conv=medium
-  captains: HST SPX none, RHP RUT neg, APLE RUT none
-  Hotel REITs are the weakest Real Estate pocket; RHP's Orlando acquisition closed into a -4.5% week.
-  do_not: Do not treat the RHP acquisition as bullish while the tape is -4.5% w1.
+  captains: HST SPX none, RHP RUT neg
+  Hotel REITs are the worst Real Estate pocket at -2.21 w1 and -1.68 vs parent; RHP's Orlando deal is being sold, not bought.
+  do_not: treat the RHP acquisition as a positive catalyst; the tape is punishing the capital deployment
 - **HEAT REIT - Industrial** (Real Estate) dir=down conv=medium
-  captains: PLD SPX none, PSA SPX none, TRNO RUT none, LXP RUT none
-  Industrial REITs are drifting lower on no news; PLD and PSA both -2.7% to -3.7% w1 with no dated catalyst.
-  do_not: Do not read the PLD earnings-date notice as a positive catalyst.
-- **HEAT REIT - Office** (Real Estate) dir=down conv=medium
-  captains: BXP SPX neg, ARE SPX none, CDP RUT none, SLG RUT none
-  Office is the worst Real Estate pocket: -2.57% w1, zero breadth, BXP adding $700M of unsecured debt.
-  do_not: Do not read ARE's +2.09% w1 as an office-sector turn.
+  captains: PLD SPX none, TRNO RUT none
+  Industrial REITs are drifting lower on no news: PLD -2.66 w1 and TRNO -1.13 w1 with only scheduling and single-asset-sale headlines.
+  do_not: read the d1 +0.39 bounce as a turn; w1 vs parent is still -0.57 with zero positive catalysts
+- **HEAT REIT - Office** (Real Estate) dir=down conv=high
+  captains: BXP SPX neg, SLG RUT none
+  Office is the cleanest short in Real Estate: -2.57 w1, -2.04 vs parent, zero breadth, and BXP is issuing $700M of new unsecured debt.
+  do_not: let ARE's +2.09 w1 (a life-sciences headline, not office demand) mask the industry-wide breakdown
 - **HEAT REIT - Residential** (Real Estate) dir=flat conv=low
-  captains: VMRK SPX pos, UDR SPX none, IRT RUT none, UMH RUT none
-  Residential REITs are flat-to-lower with no real catalyst; VMRK's $1.5M donation is not a tradeable fact.
-  do_not: Do not trade the VMRK donation headline.
+  captains: VMRK SPX pos, UDR SPX none
+  Residential REITs are flat-to-soft with no real catalyst; VMRK's $1.5M donation and UDR's dividend recap are not tradeable news.
+  do_not: mistake the VMRK community headline for a fundamental positive; w1 is still -0.29 and breadth is 0.05
 - **HEAT REIT - Retail** (Real Estate) dir=up conv=medium
-  captains: SPG SPX none, O SPX none, MAC RUT pos, EPRT RUT pos
-  Retail REITs are the only Real Estate pocket with positive d1 (+0.43%) and positive vs-parent (+0.50); MAC and EPRT carry it.
-  do_not: Do not bury retail REITs in the broad Real Estate drawdown.
+  captains: O SPX pos, EPRT RUT pos
+  Retail REITs are the relative winner at +0.5 vs parent with d1 +0.43; O is the only SPX name green on the week and EPRT confirms net-lease demand.
+  do_not: short the whole Real Estate sector on the Office/Hotel weakness; retail and healthcare are the offsetting longs
 - **HEAT REIT - Mortgage** (Real Estate) dir=flat conv=low
-  captains: DX RUT pos, BXMT RUT neg
-  DX book-value growth vs BXMT office-loan loss; mortgage REITs split, parent Real Estate residual flat.
-  do_not: average DX strength and BXMT credit stress into one 'REIT UP' read
+  captains: DX RUT none, BXMT RUT none
+  Mortgage REITs are book-value/yield plays on rates, not on a 9/11 catalyst; both captains are news-silent.
+  do_not: Do not read the -0.7% d1 or the +3.42% BXMT w1 as sentiment; there is no dated catalyst behind either.
 - **HEAT REIT - Specialty** (Real Estate) dir=down conv=low
-  captains: EQIX SPX mixed, AMT SPX mixed, OUT RUT none, UNIT RUT none
-  Tower/data-center REITs: EQIX AI news is offset by -4.2% w1; AMT notes pricing is neutral. Tape says down.
-  do_not: Read EQIX's NVIDIA headline as a bid — the stock is red on the week
+  captains: EQIX SPX mixed, AMT SPX none
+  Data-center and tower captains have real AI/atNorth news but both tape red; specialty REIT is a fade, not a long.
+  do_not: buy EQIX on the Nvidia headline while d1 is -3.2%
 - **SPLIT Real Estate - Development** (Real Estate) dir=down conv=medium
   captains: CCS RUT none
-  Sole liquid captain CCS is -6.7% w1 with zero breadth; SPLIT flagged, no offsetting long.
-  do_not: Treat the Onyx grand-opening PR as a demand signal
+  Sole liquid captain is a single grand-opening PR against -6.72% w1 and zero breadth; development is the weakest RE sleeve.
+  do_not: treat the Onyx opening as a demand signal
 - **HEAT Real Estate - Diversified** (Real Estate) dir=down conv=low
   captains: JOE RUT none
-  Single captain JOE with no news and 0.0 breadth; diversified land name drifts with the parent.
-  do_not: Invent a second captain — none is liquid here
+  Single captain, zero breadth, -1.8% w1, and no news; diversified land is drifting with the parent, not leading it.
+  do_not: read the school PR as a catalyst
 - **HEAT Real Estate Services** (Real Estate) dir=up conv=medium
-  captains: CBRE SPX pos, CSGP SPX none, COMP RUT none, CWK RUT pos
-  Services is the one green Real Estate pocket: CBRE +3.5% w1 and CWK +2.5% w1 both ride data-center demand.
-  do_not: Average CBRE/CWK into the red Real Estate parent — this is a nested long
-- **HEAT Communication Equipment** (Technology) dir=flat conv=low
-  captains: CSCO SPX none, LITE SPX none, VSAT RUT pos, BDC RUT none
-  CSCO/LITE flat-to-down on no news; RUT satellite/edge names carry the +2.41 d1, so treat as RUT-led, not SPX-led.
-  do_not: Do not read the +2.41 d1 as a CSCO/LITE networking bid; the SPX captains are the laggards here.
+  captains: CBRE SPX pos, CSGP SPX none, CWK RUT pos, COMP RUT none
+  Services is the only RE sleeve with a coherent bid: CBRE +3.53% w1 and CWK +2.52% w1 both ride the data-center advisory pipeline.
+  do_not: average CBRE into a red Real Estate parent
 - **SPLIT Computer Hardware** (Technology) dir=up conv=medium
-  captains: DELL SPX pos, SNDK SPX pos, QBTS RUT none, RGTI RUT none
-  SPX hardware (DELL, SNDK) is the real +8.39 w1 engine on AI-server and memory pricing; RUT quantum names are dead weight.
-  do_not: Do not let QBTS/RGTI drag the read — the SPLIT is SPX AI-hardware vs RUT quantum, two different trades.
+  captains: DELL SPX pos, SNDK SPX pos
+  DELL and SNDK both bid on AI-server/memory demand; SPLIT vs parent is real, not a beta artifact.
+  do_not: Do not lump QBTS/RGTI quantum names into the hardware long — they are down on the week.
 - **HEAT Consumer Electronics** (Technology) dir=flat conv=low
-  captains: AAPL SPX mixed, SONO RUT none, GPRO RUT none
-  AAPL foldable launch landed with no bid (d1 -0.45); GPRO's +103% w1 is a squeeze, not a sector signal.
-  do_not: Do not treat GPRO's +103% w1 as Consumer Electronics strength — it is a low-float squeeze.
+  captains: AAPL SPX mixed, SONO RUT none
+  AAPL foldable launch is a headline, not a tape move; SONO is PR-only. Consumer Electronics stays flat.
+  do_not: Do not treat the iPhone Duo launch as a confirmed Consumer Electronics long while AAPL d1 is red.
 - **HEAT Electronic Components** (Technology) dir=up conv=medium
-  captains: APH SPX pos, GLW SPX none, PLXS RUT none, BELFB RUT none
-  APH is the foldable-iPhone content play carrying the +5.23 w1; breadth 0.273 says this is a narrow, single-theme move.
-  do_not: Do not broaden this into a components-wide bid — breadth is 0.273 and GLW has no catalyst.
+  captains: APH SPX pos, GLW SPX pos
+  APH and GLW both ride the foldable-iPhone component read-through; w1 +5.2% vs parent confirms the nested bid.
+  do_not: Do not average this into a broad XLK call — the driver is Apple's foldable BOM, not sector beta.
 - **HEAT Electronics & Computer Distribution** (Technology) dir=up conv=low
   captains: NSIT RUT pos, CNXN RUT pos
-  No SPX captain; both RUT distributors have real contract/partner news and positive w1 — a genuine small-cap IT-distribution bid.
-  do_not: Do not look for this in XLK — there is no SPX captain, so the sector ETF cannot express it.
+  Both RUT distributors have real contract/partner wins; w1 +3.15% vs parent, but no SPX captain to confirm.
+  do_not: Do not size this as a sector call — it is a two-name RUT micro-theme with no SPX anchor.
 - **OVERRIDE Information Technology Services** (Technology) dir=down conv=medium
-  captains: IBM SPX mixed, ACN SPX neg, CIFR RUT pos, PENG RUT pos
-  OVERRIDE is real: SPX IT-services (IBM, ACN) is AI-disrupted and red, while RUT AI-infra names (CIFR, PENG) are up double digits.
-  do_not: Do not average CIFR/PENG into IBM/ACN — this industry is two opposite trades under one label.
+  captains: IBM SPX mixed, ACN SPX neg
+  OVERRIDE down: IBM/ACN both weak, AI-IPO narrative pressures legacy IT services; RUT CIFR/PENG strength is a different theme.
+  do_not: Do not let CIFR's +13.7% w1 pull this card positive — CIFR is bitcoin-miner-to-AI-datacenter, not IT services.
 - **HEAT Scientific & Technical Instruments** (Technology) dir=flat conv=low
-  captains: KEYS SPX none, COHR SPX none, ESE RUT none, NOVT RUT none
-  All four captains have zero current catalysts; the +1.46 d1 is tape drift, not a scientific-instruments theme.
-  do_not: Do not build a thesis on this industry — no captain has dated evidence.
+  captains: KEYS SPX none, COHR SPX mixed
+  KEYS has no news; COHR is optics-adjacent but flat on the week. No nested signal here.
+  do_not: Do not import LITE's AI-optics rally into COHR — COHR w1 is +0.51% vs LITE's -4.02%.
 - **HEAT Semiconductor Equipment & Materials** (Technology) dir=up conv=high
-  captains: LRCX SPX pos, AMAT SPX pos, ACMR RUT pos, KLIC RUT pos
-  All four captains positive with breadth 0.828 and TSMC's +53% revenue confirming AI-driven WFE demand — the cleanest high-conviction long.
-  do_not: Do not fade this as an XLK beta move — breadth 0.828 and the TSMC print make it a genuine sub-sector bid.
+  captains: LRCX SPX pos, AMAT SPX pos
+  LRCX and AMAT both bid with 0.83 breadth and TSMC's +53% revenue confirming AI capex; cleanest nested long on the board.
+  do_not: Do not trade this as XLK beta — the driver is WFE/memory capex, and ACMR/KLIC confirm it in RUT.
+- **HEAT Communication Equipment** (Technology) dir=up conv=medium
+  captains: CSCO SPX none, LITE SPX pos, VSAT RUT pos, BDC RUT pos
+  SPX comm-equip captains flat-to-soft, but RUT VSAT/BDC are bid on satellite and edge-networking catalysts.
+  do_not: Do not read this as an XLK/SPX tech call; the bid is in RUT satellite and edge connectivity, not CSCO.
 - **HEAT Semiconductors** (Technology) dir=up conv=medium
-  captains: NVDA SPX mixed, AVGO SPX mixed, SLAB RUT none
-  NVDA/AVGO mixed on AI demand vs insider selling and soft guide; RUT MXL AI-optical bid confirms nested long.
-  do_not: Do not read XLK flat as semis flat — AI-optical RUT names are the live edge.
+  captains: NVDA SPX mixed, AVGO SPX pos, SLAB RUT none, MXL RUT pos
+  NVDA mixed on insider sale vs MediaTek read-through; AVGO AI guide >140% keeps semis bid.
+  do_not: Do not treat NVDA ex-dividend/insider sale as a sector-wide short signal
 - **OVERRIDE Software - Application** (Technology) dir=down conv=medium
-  captains: CRM SPX pos, FROG RUT none
-  App-software breadth 0.18 and w1 -6.96% vs XLK; CRM/UBER idiosyncratic positives don't rescue the group.
-  do_not: Do not average FROG -13.86% into a 'Software UP' read.
+  captains: CRM SPX pos, UBER SPX pos, FROG RUT none, IDCC RUT pos
+  App software breadth 0.18, w1 -6.96% vs XLK; CRM/UBER idiosyncratic positives don't lift the group.
+  do_not: Do not average FROG -13.86% into a CRM/UBER long
 - **HEAT Solar** (Technology) dir=up conv=medium
-  captains: RUN RUT none
-  Solar w1 +5.62%, d1 +3.65%, breadth 0.478; FSLR Barclays $3.6T call plus SHLS patent win confirm the nested long.
-  do_not: Do not bury solar in a flat XLK read — it is the cleanest Technology sub-sector bid.
+  captains: FSLR SPX pos, RUN RUT none, SHLS RUT pos
+  Solar w1 +5.62%, d1 +3.65%, breadth 0.478; FSLR Barclays $3.6T TAM plus SHLS patent win.
+  do_not: Do not lump solar into XLK semis beta; it is a standalone HEAT
 - **OVERRIDE Software - Infrastructure** (Technology) dir=up conv=medium
   captains: MSFT SPX none, ORCL SPX pos, ZETA RUT none, QLYS RUT none
-  ORCL's Q1 FY27 beat is the only live catalyst; MSFT/ZETA/QLYS are newsless, so the nested long is Oracle-specific, not XLK-wide.
-  do_not: Do not read this as an XLK UP call — MSFT is macro-pinned and the RUT captains have no current catalyst.
-- **HEAT Utilities - Diversified** (Utilities) dir=up conv=low
-  captains: SRE SPX mixed, AES SPX mixed
-  SRE bid on utility rotation but CA wildfire reform miss + PT cut; AES pinned near $15 deal price.
-  do_not: treat AES as a live directional signal — it is a merger-arb stub
+  ORCL's OCI triple-digit beat is the only live catalyst; MSFT/ZETA/QLYS are news-quiet, so the nested long is ORCL-led, not broad software.
+  do_not: Do not read this as an XLK/IGV broad UP; three of four captains have zero current catalyst.
+- **HEAT Utilities - Diversified** (Utilities) dir=up conv=medium
+  captains: SRE SPX none, AES SPX none
+  SRE leads on Texas transmission capex while AES is frozen by its pending take-private; diversified utility bid is real but newsless.
+  do_not: Do not treat AES's flat tape as a bearish signal — it is deal-pinned, not weak.
 - **SPLIT Utilities - Independent Power Producers** (Utilities) dir=up conv=high
-  captains: CEG SPX pos, VST SPX pos
-  IPP is the real Utilities long: CEG +9.4% and VST +10.4% w1 vs parent, breadth 0.44, both captains green.
-  do_not: average CEG/VST into XLU — the parent is regulated-utility weighted
+  captains: CEG SPX pos, VST SPX pos, HNRG RUT none
+  IPPs are the cleanest nested long in Utilities: CEG and VST both bid double digits on the week while the parent lags.
+  do_not: Do not average CEG/VST into a flat XLU read — the merchant/nuclear power bid is a separate trade.
 - **HEAT Utilities - Regulated Electric** (Utilities) dir=flat conv=low
-  captains: NEE SPX mixed, SO SPX none
-  Regulated electric lags parent (vs_parent -1.01); NEE M&A chatter only, SO no catalyst — flat.
-  do_not: read the HEAT tag as a directional long — breadth is 0.195
+  captains: NEE SPX none, SO SPX none, TXNM RUT neg, POR RUT none
+  Regulated electric is the laggard inside Utilities — NEE and SO both red on the day, and TXNM is diluted by a fresh equity raise.
+  do_not: Do not read the Utilities HEAT as a regulated-electric bid; the strength is in IPPs and water.
 - **HEAT Utilities - Regulated Gas** (Utilities) dir=flat conv=low
-  captains: ATO SPX none, NI SPX none
-  Regulated gas breadth is 0.0 and vs_parent -1.55; ATO and NI have no sentiment-bearing news.
-  do_not: chase the HEAT tag — zero breadth means no confirmation
-- **HEAT Utilities - Regulated Water** (Utilities) dir=flat conv=low
-  captains: AWK SPX none, AWR RUT none
-  Water w1 +3.08 but both captains flat-to-red and no news; breadth 0.167 — no directional edge.
-  do_not: treat water as a rate-sensitive bond proxy long without captain confirmation
+  captains: ATO SPX none, NI SPX none, SWX RUT none, BKH RUT none
+  Regulated gas has zero breadth — all four captains newsless, ATO red on the day; the HEAT tag is a residual artifact, not a bid.
+  do_not: Do not promote regulated gas on breadth 0.0 — there is no confirming captain.
+- **HEAT Utilities - Regulated Water** (Utilities) dir=up conv=medium
+  captains: AWK SPX pos, AWR RUT none, CWT RUT none
+  Water is a quiet, steady bid — AWK's Neosho close is the only hard catalyst, and the small-cap pair is drifting.
+  do_not: Do not size water as a momentum trade; the RUT captains are red on the week.
 - **HEAT Utilities - Renewable** (Utilities) dir=up conv=medium
   captains: ORA RUT mixed, FLNC RUT pos
-  Renewable w1 +4.15, d1 +1.89, vs_parent +1.43; FLNC tagged a storage winner, ORA riding the bid.
-  do_not: ignore that FLNC w1 is -4.26 — the catalyst is fresh, not a trend
+  Renewables/storage is the policy-torque leg — bulk-power emergency headlines favor FLNC even as its tape lags the group.
+  do_not: Do not short FLNC on the -4.26% week without acknowledging the storage policy tailwind.
 
 ## PARENT SPLITS
 _none_

@@ -8,18 +8,18 @@
 
 **Step 1 — Research.** The model wanted to know: *"SGHC Super Group earnings news September 2026"* → got 6 results (via ddg)
 
-  - Quarterly Results - Super Group (SGHC) Limited - Financials (https://investors.supergroup.com/financials/quarterly-results/default.aspx)
+  - Super Group (SGHC) Limited - Financials - Quarterly Results (https://investors.supergroup.com/financials/quarterly-results/default.aspx)
 
-  - Super Group (SGHC) (SGHC) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/SGHC/)
+  - Super Group (SGHC) (SGHC) Earnings Date and Reports 2026 (https://www.marketbeat.com/stocks/NYSE/SGHC/earnings/)
 
-  - Why Super Group (SGHC) Limited's (SGHC) Stock Is Down ... (https://www.aaii.com/investingideas/article/406274-why-super-group-sghc-limited8217s-sghc-stock-is-down-534)
+  - Super Group (SGHC) Limited (SGHC) Earnings Dates & Report ... (https://seekingalpha.com/symbol/SGHC/earnings)
 
 **Step 2 — Research.** The model wanted to know: *"Rush Street Interactive RSI news September 2026"* → got 6 results (via ddg)
 
-  - Rush Street Interactive, Inc. (RSI) Stock Price, News, Quote ... (https://finance.yahoo.com/quote/RSI/)
-
-  - Rush Street Interactive Announces First Quarter 2026 Results ... (https://ir.rushstreetinteractive.com/news/news-details/2026/Rush-Street-Interactive-Announces-First-Quarter-2026-Results-and-Raises-Full-Year-Guidance/default.aspx)
+  - Rush Street Interactive, Inc. (RSI) Latest Stock News & Headlines (https://finance.yahoo.com/quote/RSI/news/)
 
   - Rush Street Interactive, Inc. Stock Price - Perplexity (https://www.perplexity.ai/finance/RSI)
+
+  - Rush Street Interactive (https://www.rushstreetinteractive.com/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

@@ -14,12 +14,12 @@
 
   - Amazon Layoffs Continue: How to Play AMZN Stock Now in ... (https://www.barchart.com/story/news/4474414/amazon-layoffs-continue-how-to-play-amzn-stock-now-in-september-2026)
 
-**Step 2 — Research.** The model wanted to know: *"DASH DoorDash news September 2026 Walmart delivery"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"DASH DoorDash news September 2026 Walmart delivery competition"* → got 6 results (via ddg)
+
+  - Walmart wants a bite of DoorDash and Uber Eats (https://www.businessinsider.com/walmart-doordash-uber-delivery-dunkin-expansion-2026-9)
 
   - Why Walmart is moving in on DoorDash, Uber Eats delivery ... (https://www.cnbc.com/2026/09/05/walmart-dunkin-subway-delivery-uber-eats-doordash.html)
 
-  - Walmart Takes Direct Aim at DoorDash and Uber (https://finance.yahoo.com/media-advertising/articles/walmart-takes-direct-aim-doordash-182358546.html)
-
-  - Walmart wants a bite of DoorDash and Uber Eats (https://www.businessinsider.com/walmart-doordash-uber-delivery-dunkin-expansion-2026-9)
+  - Walmart Enters a Bigger Food Delivery Fight. Why DoorDash ... (https://www.tradingview.com/news/gurufocus:4d1e732b8094b:0-walmart-enters-a-bigger-food-delivery-fight-why-doordash-and-uber-eats-should-worry/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
