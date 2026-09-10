@@ -1393,15 +1393,19 @@ def run(from_date: str = START, to_date: str | None = None,
         bars: dict | None = None, combos: bool = True) -> dict:
     from . import factor_mine_book as fmb
     recipes = list(recipes or build_recipes())
+    panel = (panel if panel is not None
+             else load_or_build_panel(from_date, to_date, rebuild=rebuild_panel))
     if write or persist_panel or rebuild_panel:
         try:
             from . import price_store as ps
-            ps.ensure_through(to_date)
+            names = {str(r.get("ticker") or "").upper()
+                     for r in (panel.get("rows") or []) if r.get("ticker")}
+            names |= _held_tickers_from_disk()
+            ps.ensure_through(to_date or panel.get("to_date"),
+                              tickers=sorted(names) or None)
             tl.reset_price_caches()
         except Exception as e:
             print(f"[factor-mine] price ensure skipped: {e}", flush=True)
-    panel = (panel if panel is not None
-             else load_or_build_panel(from_date, to_date, rebuild=rebuild_panel))
     if persist_panel or write:
         PANEL_PATH.parent.mkdir(parents=True, exist_ok=True)
         slim = {k: v for k, v in panel.items() if k != "by_date"}
@@ -1514,6 +1518,30 @@ def run(from_date: str = START, to_date: str | None = None,
     if write:
         write_outputs(payload, stats, books=books)
     return payload
+
+
+def _held_tickers_from_disk() -> set[str]:
+    """Names still on a mined book — they need a mark even if today's list is empty."""
+    out: set[str] = set()
+    if not OUT_JSON.is_file():
+        return out
+    try:
+        doc = json.loads(OUT_JSON.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return out
+    for bk in (doc.get("books") or {}).values():
+        for t in (bk or {}).get("trades") or []:
+            if t.get("ticker"):
+                out.add(_tick(t["ticker"]))
+            for n in t.get("overnight") or t.get("open_held") or []:
+                name = n.get("ticker") if isinstance(n, dict) else str(n).split("×")[0]
+                if name:
+                    out.add(_tick(name))
+        for d in (bk or {}).get("daily") or []:
+            for m in (d.get("marks") or d.get("overnight") or []):
+                if isinstance(m, dict) and m.get("ticker"):
+                    out.add(_tick(m["ticker"]))
+    return {t for t in out if t}
 
 
 def _bought_tickers(books: dict | None, starts: dict | None = None) -> set[str]:

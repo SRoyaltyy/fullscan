@@ -280,12 +280,13 @@ def fill_range(start: str, end: str, tickers: list[str] | None = None) -> None:
         _save_store(pd.concat(frames, ignore_index=True))
 
 
-def ensure_through(end: str | None = None) -> None:
+def ensure_through(end: str | None = None,
+                   tickers: list[str] | None = None) -> None:
     """Fill official regular-session bars through the last closed session.
 
-    No-op when the store already covers `end` (or last close). Used by
-    factor-mine --write so 09:30 / 16:00 marks cannot fall back to a
-    stale parquet + same-day Finviz last-trade.
+    Prefer the names we actually mark. A full-universe yahoo walk dies on
+    junk tickers (``T00:00:00`` parse) and never lands the new session,
+    so leftover lots lose their overnight / session status.
     """
     from .skip_if_good import last_closed_session
 
@@ -294,20 +295,30 @@ def ensure_through(end: str | None = None) -> None:
     target_s = str(end or closed)[:10]
     if target_s > closed:
         target_s = closed
+    want = sorted({str(t).upper() for t in (tickers or []) if t})
     n_on = 0
+    have = set()
     if len(existing):
         last = existing["date"].max().date().isoformat()
         on = existing[existing["date"] == pd.Timestamp(target_s)]
         n_on = int(on["ticker"].nunique()) if len(on) else 0
-        # Max date can be a handful of seeded names. Need broad coverage
-        # before factor-mine marks every lot.
-        if last >= target_s and n_on >= 8000:
+        if len(on):
+            have = {str(t).upper() for t in on["ticker"].tolist()}
+        if want:
+            missing = [t for t in want if t not in have]
+            if not missing and last >= target_s:
+                print(f"[price_store] ensure_through {target_s} "
+                      f"have {len(want)} requested tickers")
+                return
+            want = missing or want
+        elif last >= target_s and n_on >= 8000:
             print(f"[price_store] ensure_through {target_s} have {n_on} tickers")
             return
-    print(f"[price_store] ensure_through → {target_s} (have {n_on} bars that day)")
+    print(f"[price_store] ensure_through → {target_s} "
+          f"(have {n_on} bars; fetch {len(want) if want else 'universe'})")
     start = (datetime.strptime(target_s, "%Y-%m-%d") - timedelta(days=21)).date().isoformat()
     stop = (datetime.strptime(target_s, "%Y-%m-%d") + timedelta(days=1)).isoformat()
-    fill_range(start, stop)
+    fill_range(start, stop, want or None)
 
 
 def candle_bias(ohlc: pd.DataFrame, lookback: int = 10) -> dict:
