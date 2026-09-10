@@ -18729,13 +18729,13 @@
         "S4_ETF_TAPE": 1.0
       },
       "leading_sum": 8.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 66.13999938964844,
+      "actual_close": 64.93000030517578,
+      "actual_pct_change": -0.5818362695191537,
+      "actual_direction": "down",
+      "actual_magnitude_band": "mild",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
@@ -18744,7 +18744,9 @@
       "horizon_calls": {},
       "sector": "Energy",
       "etf": "XLE",
-      "rubric": "00_grounding/sectors/energy.md"
+      "rubric": "00_grounding/sectors/energy.md",
+      "spy_pct_change": -0.5994238166152965,
+      "rel_pct_change": 0.017587547096142853
     },
     {
       "date": "2026-09-10",
