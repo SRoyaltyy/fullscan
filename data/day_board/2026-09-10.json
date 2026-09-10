@@ -1,18 +1,19 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T06:26:18.400091-04:00",
+  "generated_at": "2026-09-10T06:26:29.319923-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-10_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-10/_board.json` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-09-10_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-09-10_judge.md` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-09-10_judge.md` \u2014 missing",
+    "MISSING AB checklist enriched `data/ab_checklist/2026-09-10_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 6,
-    "partial": 0,
-    "fail": 2,
+    "ok": 4,
+    "partial": 1,
+    "fail": 3,
     "n": 8
   },
   "processes": [
@@ -52,7 +53,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 271871
+          "size": 273427
         },
         {
           "key": "heat_md",
@@ -61,7 +62,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 17269
+          "size": 17088
         }
       ],
       "said": "tables on disk",
@@ -85,7 +86,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 87698
+          "size": 87494
         },
         {
           "key": "digest_md",
@@ -94,7 +95,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 12007
+          "size": 12026
         }
       ],
       "said": "",
@@ -118,7 +119,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87698
+          "size": 87494
         },
         {
           "key": "in_baseline",
@@ -136,7 +137,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 271871
+          "size": 273427
         },
         {
           "key": "parsed",
@@ -358,7 +359,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87698
+          "size": 87494
         },
         {
           "key": "weather",
@@ -366,8 +367,8 @@
           "path": "01_daily/weather/2026-09-10_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9306 vix=calm yields=flat",
-          "size": 9306
+          "reason": "sectors=11 bytes=9301 vix=calm yields=flat",
+          "size": 9301
         }
       ],
       "said": "favorable 3 \u00b7 hostile 4 \u00b7 neutral 4",
@@ -380,11 +381,11 @@
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "OK",
+      "status": "FAIL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 0,
       "n_req": 1,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 1,
       "files": [
         {
@@ -392,24 +393,22 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-10_ab_checklist.csv",
           "role": "optional",
-          "status": "OK",
-          "reason": "rows=2660",
-          "size": 7648532
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-10_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=2660",
-          "size": 8486441
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         }
       ],
-      "said": "25 rows",
-      "bullets": [
-        "SHEL, CFFN, CVI, SKM, EC"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "catalyst",
@@ -438,7 +437,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87698
+          "size": 87494
         },
         {
           "key": "dossiers",
@@ -457,11 +456,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 4,
+      "n_req_ok": 1,
       "n_req": 4,
-      "n_opt_ok": 3,
+      "n_opt_ok": 2,
       "n_opt": 3,
       "files": [
         {
@@ -498,7 +497,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87698
+          "size": 87494
         },
         {
           "key": "in_judge",
@@ -515,17 +514,17 @@
           "path": "01_daily/weather/2026-09-10_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9306 vix=calm yields=flat",
-          "size": 9306
+          "reason": "sectors=11 bytes=9301 vix=calm yields=flat",
+          "size": 9301
         },
         {
           "key": "in_ab",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-10_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "OK",
-          "reason": "rows=2660",
-          "size": 8486441
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "join",
@@ -533,44 +532,44 @@
           "path": "data/join/2026-09-10_ranked.csv",
           "role": "required",
           "status": "OK",
-          "reason": "rows=5903",
-          "size": 2162091
+          "reason": "rows=5902",
+          "size": 2164671
         },
         {
           "key": "peers",
           "name": "Peer RS CSV",
           "path": "data/peers/2026-09-10_peer_rs.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=5116",
-          "size": 816328
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "book_json",
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-10_stock_book.json",
           "role": "required",
-          "status": "OK",
-          "reason": "horizons=5 names=215",
-          "size": 1478803
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "book_md",
           "name": "Stock book MD",
           "path": "01_daily/2026-09-10_stock_book.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 82814
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-10_green.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 585
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "paper",
@@ -593,7 +592,7 @@
       ],
       "said": "203 rows",
       "bullets": [
-        "HALO, HRMY, MU, FORM, APH"
+        "HALO, HRMY, APH, FTK, ASND"
       ]
     },
     {
@@ -601,7 +600,7 @@
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
       "status": "OK",
-      "inputs_ready": true,
+      "inputs_ready": false,
       "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
@@ -612,9 +611,9 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-10_stock_book.json",
           "role": "input",
-          "status": "OK",
-          "reason": "horizons=5 names=215",
-          "size": 1478803
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "dash_html",
@@ -649,70 +648,8 @@
     }
   ],
   "selections": {
-    "buy_1d": [
-      {
-        "ticker": "DK",
-        "score": 0.7676150933453574
-      },
-      {
-        "ticker": "CVI",
-        "score": 0.8598705207645321
-      },
-      {
-        "ticker": "NVT",
-        "score": 0.6602379889983204
-      },
-      {
-        "ticker": "NEOV",
-        "score": 0.5785701544406248
-      },
-      {
-        "ticker": "UGP",
-        "score": 0.7187933041687551
-      },
-      {
-        "ticker": "KN",
-        "score": 0.7952767982942439
-      },
-      {
-        "ticker": "DINO",
-        "score": 0.35726924159914264
-      }
-    ],
-    "sell_1d": [
-      {
-        "ticker": "GIS",
-        "score": -0.3341001658515066
-      },
-      {
-        "ticker": "TRIP",
-        "score": -0.16826568406580067
-      },
-      {
-        "ticker": "FLO",
-        "score": -0.1222907142973265
-      },
-      {
-        "ticker": "LUCD",
-        "score": -0.0880680462040191
-      },
-      {
-        "ticker": "ENHA",
-        "score": -0.16044577008982702
-      },
-      {
-        "ticker": "XPOF",
-        "score": -0.4191095195977543
-      },
-      {
-        "ticker": "CCL",
-        "score": -0.17231832075162723
-      },
-      {
-        "ticker": "BKNG",
-        "score": -0.16337878916174325
-      }
-    ],
+    "buy_1d": [],
+    "sell_1d": [],
     "flatten": {},
     "general": {},
     "sectors": {},
@@ -1334,6 +1271,24 @@
         }
       ],
       "preview": "2026-09-10 BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-10 BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI \u00b7 2026-09-10 BUY DK, CVI, NVT, NEOV, UGP, KN, DINO \u00b7 SELL GIS, TRIP, FLO, LUCD, ENHA, XPOF, CCL, BKNG"
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T06:26:29.195516-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-10_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2164671,
+          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, HRMY, APH, FTK, ASND"
+        }
+      ],
+      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, HRMY, APH, FTK, ASND"
     }
   ],
   "href": {
