@@ -60,6 +60,8 @@
 <div class="cards" id="cards"></div>
 <h2>Today's selections</h2>
 <div class="pills" id="sels"></div>
+<h2>Every strategy</h2>
+<div id="strats" class="mut">loading strategies…</div>
 <pre class="preview" id="flatten" hidden></pre>
 <h2>What was just pushed</h2>
 <div id="lands"></div>
@@ -116,6 +118,30 @@ function render(board){
         if(b || s) $("sels").innerHTML = b + s;
       }).catch(()=>{});
   }
+  fetch("https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today_strategies.json?t="+Date.now(), {cache:"no-store"})
+    .then(r => r.ok ? r.json() : null)
+    .then(d => {
+      const box = $("strats");
+      if(!box || !d || !d.strategies) { if(box) box.textContent = "No today_strategies.json on main."; return; }
+      if(d.date && board.date && d.date !== board.date) {
+        box.textContent = "strategies file is " + d.date + " (board is " + board.date + ")";
+      }
+      const names = (rows) => (rows||[]).map(x => typeof x === "string" ? x : ((x && (x.ticker || x.symbol)) || "")).filter(Boolean);
+      const keys = Object.keys(d.strategies);
+      box.innerHTML = `<div>${keys.length} strategies · ${d.n_ok||0} with tickets · ${d.date||""}</div>` +
+        keys.map(name => {
+          const s = d.strategies[name] || {};
+          const b = names(s.buy), sl = names(s.sell);
+          const tag = s.sit ? "SIT" : (s.status && s.status !== "ok" ? s.status : "");
+          let line = `<div style="margin:4px 0"><b>${name}</b> `;
+          if(tag) line += tag + " ";
+          line += b.length ? ("BUY " + b.join(" · ")) : "";
+          line += (b.length && sl.length) ? " · " : "";
+          line += sl.length ? ("SELL " + sl.join(" · ")) : "";
+          if(!b.length && !sl.length) line += (s.sit ? "sit" : "—");
+          return line + "</div>";
+        }).join("");
+    }).catch(() => { const box=$("strats"); if(box) box.textContent="today_strategies.json not on main yet."; });
   const fl = sel.flatten || {};
   const flText = (typeof fl === "string") ? fl : [fl.said].concat(fl.bullets||[]).filter(Boolean).join("\n");
   const packet = [];

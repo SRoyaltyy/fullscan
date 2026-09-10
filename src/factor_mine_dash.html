@@ -1260,15 +1260,43 @@ renderAll();
 window.addEventListener('resize', draw);
 (function(){
   var RAW='https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today.json';
+  var STRAT='https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today_strategies.json';
   var stamp=document.getElementById('liveDayStamp');
   var pills=document.getElementById('liveDayPills');
   if(!stamp||!pills) return;
-  fetch(RAW+'?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){
+  function names(rows){
+    return (rows||[]).map(function(x){
+      return typeof x==='string'?x:((x&&(x.ticker||x.symbol))||'');
+    }).filter(Boolean);
+  }
+  Promise.all([
+    fetch(RAW+'?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.json():{};}).catch(function(){return {};}),
+    fetch(STRAT+'?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.json():{};}).catch(function(){return {};})
+  ]).then(function(arr){
+    var d=arr[0]||{}, st=arr[1]||{};
     var c=d.counts||{};
-    stamp.textContent=(d.date||'')+' · '+(d.overall||'?')+' · ranker '+(d.ranker_ready?'READY':'BLOCKED')+' · processes ok '+(c.ok||0)+'/'+(c.n||'?');
+    stamp.textContent=(st.date||d.date||'')+' · '+(d.overall||'?')+' · ranker '+(d.ranker_ready?'READY':'BLOCKED')+' · processes ok '+(c.ok||0)+'/'+(c.n||'?')
+      +(st.n?(' · '+st.n+' strategies ('+(st.n_ok||0)+' with tickets)'):'');
     var html='';
     (d.buy_1d||[]).forEach(function(x){if(x.ticker) html+='<span class="pill on">BUY '+x.ticker+'</span>';});
     (d.sell_1d||[]).forEach(function(x){if(x.ticker) html+='<span class="pill">SELL '+x.ticker+'</span>';});
+    var strats=st.strategies||{};
+    var keys=Object.keys(strats);
+    if(keys.length){
+      html+='<div class="mut" style="margin-top:8px">every strategy — own BUY/SELL, not the 1d book</div>';
+      keys.forEach(function(name){
+        var s=strats[name]||{};
+        var b=names(s.buy), sl=names(s.sell);
+        var tag=s.sit?'SIT':(s.status&&s.status!=='ok'?s.status:'');
+        html+='<div class="mut" style="margin-top:3px"><b>'+name+'</b> ';
+        if(tag) html+=tag+' ';
+        html+=(b.length?'BUY '+b.join(' · '):'');
+        html+=(b.length&&sl.length?' · ':'');
+        html+=(sl.length?'SELL '+sl.join(' · '):'');
+        if(!b.length&&!sl.length) html+=(s.sit?'sit':'—');
+        html+='</div>';
+      });
+    }
     var last=(d.lands||[])[0];
     if(last&&last.preview) html+='<div class="mut" style="margin-top:6px">last land: '+String(last.key||'')+' — '+String(last.preview).slice(0,220)+'</div>';
     pills.innerHTML=html||'<span class="mut">No 1d names on disk yet.</span>';

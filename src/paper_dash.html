@@ -912,10 +912,9 @@ document.getElementById('fees').textContent=
 </script>
 <script id="live-book-poller">
 (function(){
-  var URLS = [
-    "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today.json",
-    "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/stock_book/latest_suggestions.json"
-  ];
+  var TODAY = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today.json";
+  var STRAT = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today_strategies.json";
+  var SUG = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/stock_book/latest_suggestions.json";
   function names(rows){
     if(!rows) return [];
     return rows.map(function(x){
@@ -928,24 +927,49 @@ document.getElementById('fees').textContent=
     if(!el || !d) return;
     var buys = names(d.buy_1d);
     var sells = names(d.sell_1d);
+    var extra = "";
+    var strats = d.strategies || {};
+    var keys = Object.keys(strats);
+    if(keys.length){
+      extra += '<div class="live-book-date">' + keys.length + ' strategies</div>';
+      keys.forEach(function(name){
+        var s = strats[name] || {};
+        var b = names(s.buy);
+        var sl = names(s.sell);
+        var tag = s.sit ? "SIT" : (s.status || "");
+        extra += '<div class="live-book-row' + (sl.length && !b.length ? " sell" : "") + '"><b>' + name + '</b> ';
+        if(tag && tag !== "ok") extra += tag + " ";
+        extra += (b.length ? "BUY " + b.join(" · ") : "");
+        extra += (b.length && sl.length ? " · " : "");
+        extra += (sl.length ? "SELL " + sl.join(" · ") : "");
+        if(!b.length && !sl.length) extra += (tag === "SIT" || s.sit ? "sit" : "—");
+        extra += "</div>";
+      });
+    }
     el.innerHTML =
-      '<div class="live-book-kicker">Today\'s book (live from main)</div>' +
+      '<div class="live-book-kicker">Today\'s tickets (every strategy)</div>' +
       '<div class="live-book-date">' + (d.date || "") + '</div>' +
       '<div class="live-book-row"><b>BUY 1d</b> ' + (buys.join(" · ") || "—") + '</div>' +
-      '<div class="live-book-row sell"><b>SELL 1d</b> ' + (sells.join(" · ") || "—") + '</div>';
+      '<div class="live-book-row sell"><b>SELL 1d</b> ' + (sells.join(" · ") || "—") + '</div>' + extra;
   }
-  function loadOne(i){
-    if(i >= URLS.length) return;
-    fetch(URLS[i] + "?t=" + Date.now(), {cache: "no-store"})
-      .then(function(r){ return r.ok ? r.json() : Promise.reject(); })
-      .then(function(d){
-        if((d.buy_1d && d.buy_1d.length) || (d.sell_1d && d.sell_1d.length)) paint(d);
-        else loadOne(i + 1);
-      })
-      .catch(function(){ loadOne(i + 1); });
+  function load(){
+    Promise.all([
+      fetch(TODAY + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; }),
+      fetch(STRAT + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; }),
+      fetch(SUG + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; })
+    ]).then(function(arr){
+      var today = arr[0] || {}, strat = arr[1] || {}, sug = arr[2] || {};
+      var d = Object.assign({}, sug, today);
+      if(strat && strat.strategies) d.strategies = strat.strategies;
+      if(strat && strat.date) d.date = strat.date;
+      if(strat && strat.n) d.n_strategies = strat.n;
+      if(!d.buy_1d && sug.buy_1d) d.buy_1d = sug.buy_1d;
+      if(!d.sell_1d && sug.sell_1d) d.sell_1d = sug.sell_1d;
+      paint(d);
+    });
   }
-  loadOne(0);
-  setInterval(function(){ loadOne(0); }, 60000);
+  load();
+  setInterval(load, 60000);
 })();
 </script>
 </body></html>
