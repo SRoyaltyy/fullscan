@@ -134,7 +134,10 @@ def flatten_strat(date: str) -> dict:
             sells = card.get(key)
             break
     sit = bool(card.get("hard_red")) or not bool(card.get("flatten_ok"))
-    why = card.get("said") or card.get("route")
+    why = card.get("said") or card.get("why") or card.get("route")
+    would = card.get("would_buy") or {}
+    if not buys and isinstance(would, dict) and would.get("rows"):
+        buys = would.get("rows")
     if sit and not buys:
         why = why or "flatten sit — no priced mover BUYs"
     return _entry(
@@ -214,12 +217,14 @@ def recipe_strats(date: str) -> list[dict]:
             continue
         buys = [{"ticker": r["ticker"], "src": ",".join(r.get("sources") or [])}
                 for r in picked if r.get("ticker")]
+        note = ("would-buy at 09:30; sells need cash-book lots"
+                + (f" · panel {use_date}" if stale else ""))
         if hard:
             out.append(_entry(
-                name, "factor_mine", use_date or date, [], [],
+                name, "factor_mine", use_date or date, buys, [],
                 sit=True, hard_red=True, s=s,
                 status="sit",
-                note="hard-red S\u2264\u22123 — no new lots",
+                note="hard-red S≤−3 — no new lots; names are would-buy",
                 why=f"S={s}",
             ))
         else:
@@ -227,8 +232,7 @@ def recipe_strats(date: str) -> list[dict]:
                 name, "factor_mine", use_date or date, buys, [],
                 s=s,
                 status="stale_panel" if stale else "ok",
-                note=("would-buy at 09:30; sells need cash-book lots"
-                      + (f" · panel {use_date}" if stale else "")),
+                note=note,
             ))
     return out
 

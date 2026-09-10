@@ -111,6 +111,17 @@ def publish(date: str, *, write: bool = True, extras: bool = True) -> dict:
 
     if write:
         try:
+            from . import strategy_tickets as st
+            payload_st = st.build(date)
+            paths = st.write(date, payload_st)
+            out["wrote"].extend(str(p.relative_to(ROOT)) for p in paths)
+            out["n_strategies"] = payload_st.get("n")
+            out["n_strategies_ok"] = payload_st.get("n_ok")
+        except Exception as e:  # noqa: BLE001
+            print(f"[live-boards] WARN: strategy tickets: {e}", flush=True)
+
+    if write:
+        try:
             from . import book_suggestions
             sug = book_suggestions.write(date=date)
             if sug is not None:
