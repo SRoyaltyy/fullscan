@@ -2,8 +2,8 @@
 
 
 
-**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (34,321 characters of input). Model: `deepseek-chat`. Web search is disabled for this stage; the model works only from the documents it was given.
+**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (34,407 characters of input). Model: `deepseek-chat`. Web search is disabled for this stage; the model works only from the documents it was given.
 
 
 
-**Step 1 — Done researching.** Sector essay landed with the tool call (4,412 characters); skipping further search so the child can write.
+**Step 1 — Done researching.** Sector essay landed with the tool call (5,546 characters); skipping further search so the child can write.
