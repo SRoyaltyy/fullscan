@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import os
 import tempfile
+import threading
 import time
 
 from . import config
@@ -31,8 +32,48 @@ def _statement_timeout_ms() -> int:
 
 
 def _is_timeout(err: BaseException) -> bool:
-    text = str(err).lower()
-    return "statement timeout" in text or "querycanceled" in text
+    text = f"{type(err).__name__} {err}".lower()
+    return ("statement timeout" in text or "querycanceled" in text
+            or "due to user request" in text)
+
+
+# 2026-09-09 17:13 News Actions: the Supabase transaction pooler ignores
+# the startup `options=-c statement_timeout=...`, so the "20s" queries ran
+# to the server default (~2.5 min each) and 4 of them ate 11 minutes before
+# the job went red. Enforce the budget from our side of the wire too:
+# SET LOCAL inside the query's own transaction (transaction pooling keeps
+# the backend for the transaction) plus a client-side cancel a few seconds
+# later in case even that is filtered.
+_CANCEL_GRACE_S = 5.0
+
+
+def _execute_bounded(conn, cur, sql: str, params=None) -> None:
+    timeout_ms = _statement_timeout_ms()
+    try:
+        cur.execute(f"SET LOCAL statement_timeout = {int(timeout_ms)}")
+    except Exception as e:  # noqa: BLE001
+        # Not fatal — the cancel timer below is the real backstop.
+        print(f"[db] SET LOCAL statement_timeout ignored: {str(e).splitlines()[0][:120]}")
+        try:
+            conn.rollback()
+        except Exception:  # noqa: BLE001
+            pass
+    cancel = getattr(conn, "cancel", None)
+    timer: threading.Timer | None = None
+    if callable(cancel):
+        def _fire() -> None:
+            try:
+                cancel()
+            except Exception:  # noqa: BLE001
+                pass
+        timer = threading.Timer(timeout_ms / 1000.0 + _CANCEL_GRACE_S, _fire)
+        timer.daemon = True
+        timer.start()
+    try:
+        cur.execute(sql, params)
+    finally:
+        if timer is not None:
+            timer.cancel()
 
 
 # 2026-09-09 17:17 Stock Book ALL: the Supabase pooler resolved to two
@@ -155,7 +196,7 @@ def _recent_news_once(hours: int, limit: int) -> list[dict]:
             while i < len(queries):
                 q, params = queries[i]
                 try:
-                    cur.execute(q, params)
+                    _execute_bounded(conn, cur, q, params)
                     rows = [{"source": s, "title": t, "url": u,
                              "published_at": str(p)}
                             for s, t, u, p in cur.fetchall()]
@@ -216,7 +257,8 @@ def macro_series(series_id: str, limit: int = 45) -> list[tuple[str, float]]:
         return []
     try:
         cur = conn.cursor()
-        cur.execute(
+        _execute_bounded(
+            conn, cur,
             """SELECT date, value FROM macro_indicators
                WHERE indicator = %s ORDER BY date DESC LIMIT %s""",
             (series_id, limit),
@@ -270,7 +312,7 @@ def news_between(
         try:
             for i, q in enumerate(queries):
                 try:
-                    cur.execute(q, (start, end, limit))
+                    _execute_bounded(conn, cur, q, (start, end, limit))
                     rows = [
                         {
                             "source": s,
