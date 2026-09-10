@@ -1,6 +1,6 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T06:34:44.071156-04:00",
+  "generated_at": "2026-09-10T06:34:55.293162-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -555,8 +555,8 @@
           "path": "data/stock_book/2026-09-10_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=215",
-          "size": 1478803
+          "reason": "horizons=5 names=210",
+          "size": 1446506
         },
         {
           "key": "book_md",
@@ -565,7 +565,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 82814
+          "size": 75732
         },
         {
           "key": "green",
@@ -617,8 +617,8 @@
           "path": "data/stock_book/2026-09-10_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=215",
-          "size": 1478803
+          "reason": "horizons=5 names=210",
+          "size": 1446506
         },
         {
           "key": "dash_html",
@@ -656,65 +656,45 @@
     "buy_1d": [
       {
         "ticker": "DK",
-        "score": 0.7676150933453574
-      },
-      {
-        "ticker": "CVI",
-        "score": 0.8598705207645321
+        "score": 0.7235371972123463
       },
       {
         "ticker": "NVT",
-        "score": 0.6602379889983204
-      },
-      {
-        "ticker": "NEOV",
-        "score": 0.5785701544406248
-      },
-      {
-        "ticker": "UGP",
-        "score": 0.7187933041687551
-      },
-      {
-        "ticker": "KN",
-        "score": 0.7952767982942439
-      },
-      {
-        "ticker": "DINO",
-        "score": 0.35726924159914264
+        "score": 0.6214520900438006
       }
     ],
     "sell_1d": [
       {
-        "ticker": "GIS",
-        "score": -0.3341001658515066
-      },
-      {
-        "ticker": "TRIP",
-        "score": -0.16826568406580067
-      },
-      {
         "ticker": "FLO",
-        "score": -0.1222907142973265
+        "score": -0.14687017791312862
       },
       {
         "ticker": "LUCD",
-        "score": -0.0880680462040191
-      },
-      {
-        "ticker": "ENHA",
-        "score": -0.16044577008982702
+        "score": -0.08765945279590572
       },
       {
         "ticker": "XPOF",
-        "score": -0.4191095195977543
+        "score": -0.3926929468603128
       },
       {
-        "ticker": "CCL",
-        "score": -0.17231832075162723
+        "ticker": "BRBR",
+        "score": -0.24595338360280944
       },
       {
-        "ticker": "BKNG",
-        "score": -0.16337878916174325
+        "ticker": "AMC",
+        "score": -0.1705054020502248
+      },
+      {
+        "ticker": "MMYT",
+        "score": -0.24340305674734802
+      },
+      {
+        "ticker": "KHC",
+        "score": -0.3773080966613924
+      },
+      {
+        "ticker": "GIS",
+        "score": -0.3341146164635364
       }
     ],
     "flatten": {
@@ -1669,6 +1649,59 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-10T06:34:43.613083-04:00\nraw=117 unique_events=3 tickers=35"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T06:34:54.871234-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-10_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1446506,
+          "preview": "1d BUY DK, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, AMC, MMYT, KHC, GIS"
+        },
+        {
+          "path": "data/stock_book/2026-09-10_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-10_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2548,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-10_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11843,
+          "preview": "2026-09-10 BUY DK, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, AMC, MMYT, KHC, GIS"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11843,
+          "preview": "2026-09-10 BUY DK, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, AMC, MMYT, KHC, GIS"
+        },
+        {
+          "path": "01_daily/2026-09-10_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 76832,
+          "preview": "# Stock book \u2014 2026-09-10\n_Generated 2026-09-10T06:34:51.948791-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY DK, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, AMC, MMYT, KHC, GIS \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-10 BUY DK, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, AMC, MMYT, KHC, GIS \u00b7 2026-09-10 BUY DK, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, AMC, MMYT, KHC, GIS \u00b7 # Stock book \u2014 2026-09-10\n_Generated 2026-09-10T06:34:51.948791-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
