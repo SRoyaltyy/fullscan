@@ -7,7 +7,7 @@ error_category: "C"
 falsifier: "If, on a future rates-led risk-off day where the long end is the CAUSE of the risk-off (supply/term-premium shock) and the 1d rel print is negative, XLU nonetheless delivers a positive relative return vs SPY, this correction's regime qualifier is wrong and 08-18's unqualified "relative beat" frame should be restored. Conversely, if a flagged same-day long-end auction is folded into the score and the sector's realized move is materially smaller than the scored weight implies, the "score the flagged catalyst" rule is over-weighting supply events."
 sector: "Utilities"
 date: "2026-09-10"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Utilities — 2026-09-10

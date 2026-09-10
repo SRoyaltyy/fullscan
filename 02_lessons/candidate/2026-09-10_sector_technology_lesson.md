@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "If on a future day with a live oil/yield risk-off shock, a crowded long-duration complex, and a red NQ, the sector ETF opens flat-to-up and closes up or flat (no gap-down, no relative underperformance), then premarket strength in the crowded complex was accumulation, not distribution, and this lesson is falsified."
 sector: "Technology"
 date: "2026-09-10"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Technology — 2026-09-10
