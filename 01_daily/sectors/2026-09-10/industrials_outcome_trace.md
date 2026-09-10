@@ -8,18 +8,18 @@
 
 **Step 1 — Research.** The model wanted to know: *"XLI industrials ETF September 10 2026 close"* → got 6 results (via ddg)
 
-  - XLI: State Street® Industrial Select Sector SPDR® ETF (https://www.ssga.com/us/en/intermediary/etfs/state-street-industrial-select-sector-spdr-etf-xli)
+  - XLI ETF Stock Price & Overview (https://stockanalysis.com/etf/xli/)
 
-  - State Street Industrial Select Sector SPDR ETF (XLI) (https://finance.yahoo.com/quote/XLI/)
+  - XLI ETF Research | State Street Industrial Select Sector SPDR ETF ... (https://etfexplorer.com/etf/XLI)
 
-  - State Street Industrial Select Sector SPDR ETF - XLI (https://www.marketwatch.com/investing/fund/xli)
+  - State Street® Industrial Select Sector SPDR® ETF (https://markets.businessinsider.com/etfs/state-street-industrial-select-sector-spdr-etf-us81369y7040?op=1)
 
-**Step 2 — Research.** The model wanted to know: *"stock market September 10 2026 close S&P 500 oil Brent Iran"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"stock market close September 10 2026 S&P 500 oil Brent Iran"* → got 6 results (via ddg)
 
-  - Stock Market Today (Sept. 10, 2026): S&P 500, Nasdaq decline ... (https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-10-2026)
+  - S&P 500 closes little changed as oil rises on Iran uncertainty, Intel leads chips lower (https://www.cnbc.com/2026/08/09/stock-market-today-live-updates.html)
 
-  - US Stock Market Today Sep 10, 2026 — S&P 500, Dow & Nasdaq Close (https://vittarthi.com/markets/us)
+  - Stock Market Today (Sept. 10, 2026): S&P 500, Nasdaq decline as Brent oil hits highest point since July - TheStreet (https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-10-2026)
 
-  - How major US stock indexes fared Thursday 9/10/2026 - WTOP (https://wtop.com/national/2026/09/how-major-us-stock-indexes-fared-thursday-9-10-2026/)
+  - Market Review: September 10, 2026 - Investrade (https://investrade.com/market-review-september-10-2026/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
