@@ -1,107 +1,20 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T06:30:00.381916-04:00",
+  "generated_at": "2026-09-10T06:30:04.047495-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 4,
+    "ok": 5,
     "partial": 3,
-    "fail": 1,
+    "fail": 0,
     "n": 8
   },
-  "buy_1d": [
-    {
-      "ticker": "DK",
-      "score": 0.7676150933453574
-    },
-    {
-      "ticker": "CVI",
-      "score": 0.8598705207645321
-    },
-    {
-      "ticker": "NVT",
-      "score": 0.6602379889983204
-    },
-    {
-      "ticker": "NEOV",
-      "score": 0.5785701544406248
-    },
-    {
-      "ticker": "UGP",
-      "score": 0.7187933041687551
-    },
-    {
-      "ticker": "KN",
-      "score": 0.7952767982942439
-    },
-    {
-      "ticker": "DINO",
-      "score": 0.35726924159914264
-    }
-  ],
-  "sell_1d": [
-    {
-      "ticker": "GIS",
-      "score": -0.3341001658515066
-    },
-    {
-      "ticker": "TRIP",
-      "score": -0.16826568406580067
-    },
-    {
-      "ticker": "FLO",
-      "score": -0.1222907142973265
-    },
-    {
-      "ticker": "LUCD",
-      "score": -0.0880680462040191
-    },
-    {
-      "ticker": "ENHA",
-      "score": -0.16044577008982702
-    },
-    {
-      "ticker": "XPOF",
-      "score": -0.4191095195977543
-    },
-    {
-      "ticker": "CCL",
-      "score": -0.17231832075162723
-    },
-    {
-      "ticker": "BKNG",
-      "score": -0.16337878916174325
-    }
-  ],
-  "flatten": {
-    "said": "0 priced buys \u00b7 cash $108,616.66 \u00b7 morning S missing",
-    "bullets": [
-      "0 priced buys",
-      "cash $108,616.66",
-      "morning S missing"
-    ]
-  },
+  "buy_1d": [],
+  "sell_1d": [],
+  "flatten": {},
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-09-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-10T06:26:29.195516-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-09-10_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2164671,
-          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, HRMY, APH, FTK, ASND"
-        }
-      ],
-      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, HRMY, APH, FTK, ASND"
-    },
     {
       "key": "flatten",
       "title": "Flatten live card",
@@ -304,6 +217,31 @@
         }
       ],
       "preview": "20 events \u00b7 August PPI (pipeline inflation print) | ECB rate decision \u2014 25bp hike to 2.50% deposit rate expected | Oracle FQ1 2027 earnings (after close) | Adobe FQ3 2026 earnings (after close) | Macy's fiscal Q2 2026 earnings (pre-open) | August CPI (last major print before FOMC) \u00b7 # Event Scan \u2014 2026-09-10\n- events tracked: **20** (via repair, repaired)\n- uncertainty: **elevated**\n- summary: The scan is dominated by a live September FOMC (Sept 16) with hike odds near 55\u201360% after a blowout August payrolls print, a hot PPI today and CPI tomorrow, and an oil shock from the US\u2013Iran tanker war keeping Brent above $100. Central bank decisions from the ECB (today), BOJ (Sept 16\u201317) and BoE (Sept 17) cluster around the Fed, while a heavy earnings slate (Oracle, Adobe, Macy's, FedEx) and the Sept 24 Trump\u2013Xi summit add idiosyncratic and geopolitical risk. North American trade tensions are escalating with Canada's counter-tariffs in force and US Section 338 import bans due Sept 29, and Sept 18 quadruple witching amplifies positioning risk around the FOMC."
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T06:30:03.733360-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-10_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 21435,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-09-10_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 7788,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-09-10T06:30:03.728763-04:00\nraw=138 unique_events=3 tickers=32"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-10T06:30:03.728763-04:00\nraw=138 unique_events=3 tickers=32"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
