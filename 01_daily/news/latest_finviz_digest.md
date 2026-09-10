@@ -1,6 +1,6 @@
-# Finviz Daily Digest — 2026-09-09
+# Finviz Daily Digest — 2026-09-10
 
-_Generated 2026-09-10T01:57:37.591520-04:00 · export=data/exports/finviz_2026-09-09.csv · ticker digests=400 · high-signal=400_
+_Generated 2026-09-10T06:21:49.449608-04:00 · export=data/exports/finviz_2026-09-09.csv · ticker digests=400 · high-signal=400_
 
 ## Major indices (live quote page)
 
