@@ -5,17 +5,56 @@ Run: python -m src.test_sleeve_merge
 from __future__ import annotations
 
 from src.sleeve_merge import (
+    OPEN_CLOCK,
     TARGET_2W_PCT,
     TWO_WEEK_SESSIONS,
     calendar_2w_returns,
     fortnight_returns,
     io_picks,
     next_session,
+    overnight_hold_marks,
     rank_calls,
     replay_ledger,
     rolling_window_returns,
+    session_hold_marks,
     stats,
 )
+
+
+def test_overnight_and_session_marks_split() -> None:
+    lots = [{
+        "ticker": "AAA", "sleeve": "io_core", "shares": 10,
+        "side": "BUY", "entry_px": 10.0, "last_px": 11.0,
+        "entry_date": "2026-08-13",
+    }]
+
+    def px_open(_t, _d):
+        return 12.0
+
+    def px_close(_t, _d):
+        return 13.0
+
+    ov = overnight_hold_marks(lots, "2026-08-14", px_open)
+    assert len(ov) == 1
+    assert ov[0]["overnight"] == 10.0
+    assert ov[0]["yday_px"] == 11.0
+    assert ov[0]["open_px"] == 12.0
+    through = session_hold_marks(ov, lots, "2026-08-14", px_open, px_close)
+    assert through[0]["held"] == "through"
+    assert through[0]["session"] == 10.0
+    assert through[0]["day"] == 20.0
+    sold_close = session_hold_marks(
+        ov, [], "2026-08-14", px_open, px_close,
+        [{"ticker": "AAA", "sleeve": "io_core", "clock": "16:00 ET",
+          "exit_px": 13.0, "shares": 10}])
+    assert sold_close[0]["held"] == "sold-close"
+    assert sold_close[0]["session"] == 10.0
+    sold_open = session_hold_marks(
+        ov, [], "2026-08-14", px_open, px_close,
+        [{"ticker": "AAA", "sleeve": "io_core", "clock": OPEN_CLOCK,
+          "exit_px": 12.0, "shares": 10}])
+    assert sold_open[0]["held"] == "sold-open"
+    assert sold_open[0]["session"] == 0.0
 
 
 def test_live_policy_is_robust() -> None:
@@ -273,6 +312,42 @@ def test_hard_red_no_new_skips_0824_io_keeps_holds() -> None:
     assert by["2026-08-20"]["route"] == "mover"
 
 
+def test_curve_splits_overnight_and_session() -> None:
+    """Close-to-close Day $ = overnight + session, including hold days."""
+    from pathlib import Path
+    from src.sleeve_merge import list_books, live_policy, load_payload, run_flatten_switch
+    payload_path = Path(__file__).resolve().parent.parent / "03_scoreboard" / "mover_lookback_action.json"
+    if not payload_path.is_file() or not list_books():
+        print("skip curve split (no payload/books)")
+        return
+    sim = run_flatten_switch(load_payload(), list_books(), live_policy(), 100_000)
+    assert sim["curve"], "expected daily curve"
+    first = sim["curve"][0]
+    assert first["open_held"] == 0
+    assert abs(first["overnight_delta"]) < 0.02
+    assert first.get("overnight") == []
+    for i, r in enumerate(sim["curve"]):
+        yday = sim["capital"] if i == 0 else sim["curve"][i - 1]["equity"]
+        assert abs(r["yday_equity"] - yday) < 0.02, r["date"]
+        assert abs(r["open_equity"] - (r["yday_equity"] + r["overnight_delta"])) < 0.02, r
+        assert abs(r["equity"] - (r["open_equity"] + r["session_delta"])) < 0.02, r
+        assert r["open_held"] == len(r.get("overnight") or [])
+        ov_sum = round(sum(float(n.get("overnight") or 0)
+                           for n in (r.get("overnight") or [])), 2)
+        assert abs(ov_sum - float(r["overnight_delta"])) < 0.16, (r["date"], ov_sum, r["overnight_delta"])
+    by = {r["date"]: r for r in sim["curve"]}
+    # 08-17 is fully invested .io; 08-18 hard-red keeps those names overnight.
+    d18 = by.get("2026-08-18")
+    if d18:
+        assert d18["open_held"] > 0, d18
+        assert d18.get("overnight_names")
+    # 08-21 mover 1d lots are still on the book at the 08-24 open.
+    d24 = by.get("2026-08-24")
+    if d24:
+        assert d24["open_held"] > 0, d24
+        assert d24.get("overnight")
+
+
 def test_flatten_needs_book_and_enough_buys() -> None:
     """Green + 1 BUY is not a flatten day; no-book days stay in .io."""
     from src.sleeve_merge import DEFAULT
@@ -432,7 +507,12 @@ def test_card_writes_today_json() -> None:
     assert card["date"] in html
     assert "today-card" in html
     assert "holdings disregarded" in html
+    assert "Overnight holds (into 09:30)" in html
+    assert "Session marks (09:30 → 16:00)" in html
+    assert card.get("overnight_delta") is not None
+    assert card.get("session_delta") is not None
     assert "Would have bought" in paths["daily"].read_text(encoding="utf-8")
+    assert "Overnight holds" in paths["daily"].read_text(encoding="utf-8")
     wrapped = inject_today_panel("<main><p>x</p>\n<div class=\"cards\">",
                                  today_panel_html(card))
     assert wrapped.count("TODAY_BEGIN") == 1

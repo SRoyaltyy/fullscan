@@ -165,6 +165,156 @@ def _num(v):
         return None
 
 
+def _signed_notional(shares, px, side: str = "BUY") -> float:
+    n = float(shares) * float(px)
+    return n if (side or "BUY") == "BUY" else -n
+
+
+def _pct_px(new_px, old_px, side: str = "BUY"):
+    old = float(old_px or 0)
+    if old == 0:
+        return None
+    pct = 100.0 * (float(new_px) / old - 1.0)
+    return round(pct if (side or "BUY") == "BUY" else -pct, 3)
+
+
+def overnight_hold_marks(lots: list[dict], date: str, px_open_fn) -> list[dict]:
+    """Prior-close → 09:30 mark for lots still held into this open."""
+    names = []
+    for p in lots:
+        yday_px = float(p.get("last_px") or p.get("close_px") or p["entry_px"])
+        opx = px_open_fn(p["ticker"], date) or yday_px
+        opx = float(opx)
+        side = p.get("side") or "BUY"
+        shares = int(p["shares"])
+        dlt = (_signed_notional(shares, opx, side)
+               - _signed_notional(shares, yday_px, side))
+        names.append({
+            "ticker": p["ticker"],
+            "sleeve": p.get("sleeve") or "",
+            "shares": shares,
+            "side": side,
+            "yday_px": round(yday_px, 4),
+            "open_px": round(opx, 4),
+            "entry_px": round(float(p.get("entry_px") or yday_px), 4),
+            "entry_date": p.get("entry_date"),
+            "overnight": round(dlt, 2),
+            "pct": _pct_px(opx, yday_px, side),
+        })
+    return names
+
+
+def session_hold_marks(overnight: list[dict], lots: list[dict], date: str,
+                       px_open_fn, px_close_fn,
+                       exits: list[dict] | None = None) -> list[dict]:
+    """Every lot this session: prior close → 09:30 → close.
+
+    Sold-at-open (flatten / rotate) keeps session $0 — the sale locks the
+    overnight mark. Sold-at-close (1d / .io recycle) marks open→exit.
+    """
+    by: dict[tuple[str, str], dict] = {}
+    for n in overnight or []:
+        key = (n["ticker"], n.get("sleeve") or "")
+        ov = float(n.get("overnight") or 0)
+        by[key] = {
+            "ticker": n["ticker"],
+            "sleeve": n.get("sleeve") or "",
+            "shares_open": int(n["shares"]),
+            "shares_close": 0,
+            "shares": int(n["shares"]),
+            "side": n.get("side") or "BUY",
+            "yday_px": n.get("yday_px"),
+            "open_px": n.get("open_px"),
+            "close_px": None,
+            "entry_px": n.get("entry_px"),
+            "entry_date": n.get("entry_date"),
+            "overnight": ov,
+            "session": 0.0,
+            "day": ov,
+            "pct_overnight": n.get("pct"),
+            "pct_session": None,
+            "held": "sold",
+        }
+    for p in lots:
+        t = p["ticker"]
+        sleeve = p.get("sleeve") or ""
+        key = (t, sleeve)
+        side = p.get("side") or "BUY"
+        shares = int(p["shares"])
+        if key in by and by[key].get("open_px") is not None:
+            opx = float(by[key]["open_px"])
+        else:
+            opx = float(px_open_fn(t, date) or p.get("last_px") or p["entry_px"])
+        cpx = float(px_close_fn(t, date) or p.get("last_px") or p["entry_px"])
+        sess = (_signed_notional(shares, cpx, side)
+                - _signed_notional(shares, opx, side))
+        if key in by:
+            by[key]["shares_close"] = shares
+            by[key]["shares"] = shares
+            by[key]["close_px"] = round(cpx, 4)
+            by[key]["session"] = round(sess, 2)
+            by[key]["day"] = round(by[key]["overnight"] + sess, 2)
+            by[key]["pct_session"] = _pct_px(cpx, opx, side)
+            by[key]["held"] = "through"
+        else:
+            by[key] = {
+                "ticker": t,
+                "sleeve": sleeve,
+                "shares_open": 0,
+                "shares_close": shares,
+                "shares": shares,
+                "side": side,
+                "yday_px": None,
+                "open_px": round(opx, 4),
+                "close_px": round(cpx, 4),
+                "entry_px": round(float(p.get("entry_px") or opx), 4),
+                "entry_date": p.get("entry_date"),
+                "overnight": 0.0,
+                "session": round(sess, 2),
+                "day": round(sess, 2),
+                "pct_overnight": None,
+                "pct_session": _pct_px(cpx, opx, side),
+                "held": "bought",
+            }
+    exit_map = {}
+    for t in exits or []:
+        exit_map[(t.get("ticker"), t.get("sleeve") or "")] = t
+    for key, row in by.items():
+        if row["held"] != "sold":
+            continue
+        ex = exit_map.get(key)
+        if not ex:
+            continue
+        clock = str(ex.get("clock") or ex.get("exit_dt") or "")
+        if OPEN_CLOCK in clock:
+            row["held"] = "sold-open"
+            row["close_px"] = row.get("open_px")
+            continue
+        cpx = _num(ex.get("exit_px") if ex.get("exit_px") is not None
+                   else ex.get("px"))
+        if not cpx:
+            continue
+        opx = float(row["open_px"] or cpx)
+        shares = int(row["shares_open"])
+        side = row.get("side") or "BUY"
+        sess = (_signed_notional(shares, cpx, side)
+                - _signed_notional(shares, opx, side))
+        row["held"] = "sold-close"
+        row["close_px"] = round(float(cpx), 4)
+        row["session"] = round(sess, 2)
+        row["day"] = round(row["overnight"] + sess, 2)
+        row["pct_session"] = _pct_px(cpx, opx, side)
+    return list(by.values())
+
+
+CURVE_CSV_FIELDS = [
+    "date", "equity", "cash", "core_n", "tac_io_n", "tac_n",
+    "core_mv", "tac_mv", "route", "score", "predict",
+    "open_held", "open_cash", "open_equity", "yday_equity",
+    "overnight_delta", "session_delta", "overnight_names",
+]
+
+
 def io_picks(book: dict, sleeve: str = "2w_size", top_n: int = 10) -> list[str]:
     from src.paper_trade import picks_from_book
     picks = picks_from_book(book, top_n)
@@ -1223,6 +1373,16 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
         # 09:30 size-up may only see a book that already printed.
         confirm = book_ticker_set(prior or last_print or {}) 
 
+        # Overnight snapshot — lots still held into 09:30, before flatten.
+        yday_eq = curve[-1]["equity"] if curve else float(capital)
+        open_cash = cash
+        start_lots = [dict(p) for p in list(io_pos.values()) + list(mv_pos)]
+        overnight = overnight_hold_marks(start_lots, date, px_open)
+        open_stock = sum(
+            _signed_notional(n["shares"], n["open_px"], n.get("side") or "BUY")
+            for n in overnight)
+        open_eq = open_cash + open_stock
+
         # 09:30 flatten .io → mover / deploy leftover cash
         if route_mover:
             if flatten_ok:
@@ -1316,6 +1476,10 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
                                         "reason": "cash tied in open lots / fees"})
 
         eq_end = mark(date, "close")
+        close_lots = list(io_pos.values()) + list(mv_pos)
+        today_exits = [t for t in trades if t.get("exit_date") == date]
+        marks = session_hold_marks(
+            overnight, close_lots, date, px_open, px_close, today_exits)
         curve.append({
             "date": date, "equity": round(eq_end, 2), "cash": round(cash, 2),
             "core_n": len(io_pos), "tac_io_n": 0, "tac_n": len(mv_pos),
@@ -1323,6 +1487,16 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
             "route": ("hold" if (hard_red_no_new and hard_red)
                       else "mover" if route_mover else "io"),
             "score": score, "predict": pdir,
+            "open_held": len(overnight),
+            "open_cash": round(open_cash, 2),
+            "open_equity": round(open_eq, 2),
+            "yday_equity": round(yday_eq, 2),
+            "overnight_delta": round(open_eq - yday_eq, 2),
+            "overnight": overnight,
+            "overnight_names": " ".join(
+                f"{n['ticker']}×{n['shares']}" for n in overnight),
+            "session_delta": round(eq_end - open_eq, 2),
+            "marks": marks,
         })
 
     last = cal[-1] if cal else None
@@ -1585,9 +1759,20 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float,
 
     if sim["curve"]:
         with (OUT_DIR / "equity_curve.csv").open("w", newline="", encoding="utf-8") as f:
-            w = csv.DictWriter(f, fieldnames=list(sim["curve"][0].keys()))
+            w = csv.DictWriter(f, fieldnames=CURVE_CSV_FIELDS,
+                               extrasaction="ignore")
             w.writeheader()
             w.writerows(sim["curve"])
+        (OUT_DIR / "daily_marks.json").write_text(
+            json.dumps([
+                {k: r.get(k) for k in (
+                    "date", "route", "score", "predict",
+                    "yday_equity", "open_cash", "open_held", "open_equity",
+                    "overnight_delta", "session_delta", "equity", "cash",
+                    "overnight_names", "overnight", "marks")}
+                for r in sim["curve"]
+            ], indent=2),
+            encoding="utf-8")
     if sim["trades"]:
         keys = sorted({k for t in sim["trades"] for k in t})
         with (OUT_DIR / "trades.csv").open("w", newline="", encoding="utf-8") as f:
@@ -1905,9 +2090,21 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float,
         sc = "—" if r.get("score") is None else f"{r['score']:+.2f}"
         rcls = ("good" if r["route"] == "mover"
                 else "hold" if r["route"] == "hold" else "")
+        ov = r.get("overnight_delta")
+        sess = r.get("session_delta")
+        oeq = r.get("open_equity")
+        ov_cls = ("good" if (ov or 0) > 0 else "bad" if (ov or 0) < 0 else "")
+        sess_cls = ("good" if (sess or 0) > 0 else "bad" if (sess or 0) < 0 else "")
+        held = _html.escape(r.get("overnight_names") or "—")
         day_rows.append(
             f"<tr><th>{r['date']}</th><td>{sc}</td>"
             f"<td class='{rcls}'>{r['route']}</td>"
+            f"<td class='why'>{held}</td>"
+            f"<td>{'—' if oeq is None else f'${oeq:,.0f}'}</td>"
+            f"<td class='{ov_cls}'>"
+            f"{'—' if ov is None else f'${ov:+,.2f}'}</td>"
+            f"<td class='{sess_cls}'>"
+            f"{'—' if sess is None else f'${sess:+,.2f}'}</td>"
             f"<td>${r['equity']:,.0f}</td><td>${r.get('cash', 0):,.0f}</td>"
             f"<td>{r['core_n']}</td><td>{r['tac_n']}</td>"
             f"<td class='{dcls}'>{dret}</td></tr>")
@@ -2009,9 +2206,14 @@ day_cap {pol.get('day_cap',1):.0%} · Futubull fees · <b>LIVE {LIVE_POLICY}</b>
 <!-- TODAY_END -->
 <div class="cards">{cards}</div>
 {svg}
-<h2>Daily book (cash left after fills)</h2>
+<h2>Daily book (overnight vs session)</h2>
+<p class="muted">Held@open is the overnight book into 09:30 (prior close → open).
+Overnight $ is 09:30 equity minus prior close (cash unchanged, no fees).
+Session $ is 16:00 equity minus 09:30 (includes same-day fills and fees).
+Close names are leftover after 16:00. Day % is still close-to-close.</p>
 <div class="sheet"><table>
-<thead><tr><th>Date</th><th>Score</th><th>Route</th><th>Equity</th>
+<thead><tr><th>Date</th><th>Score</th><th>Route</th><th>Held@open</th>
+<th>Open eq</th><th>Overnight</th><th>Session</th><th>Close eq</th>
 <th>Cash</th><th>.io names</th><th>mover</th><th>Day</th></tr></thead>
 <tbody>{''.join(day_rows)}</tbody></table></div>
 <h2>2-week gate</h2>
