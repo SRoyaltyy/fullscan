@@ -1,0 +1,25 @@
+# Reasoning trace — MAP POSTCLOSE captains_basic_materials 2026-09-11
+
+
+
+**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (10,610 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
+
+
+
+**Step 1 — Research.** The model wanted to know: *"Corteva CTVA news September 2026"* → got 6 results (via ddg)
+
+  - News Releases | Corteva Agriscience (https://investors.corteva.com/news-events/news-releases)
+
+  - Corteva (CTVA) Stock Price, News & Analysis (https://www.stocktitan.net/overview/CTVA/)
+
+  - Corteva, Globachem Enter into Definitive Agreement to Form a ... (https://www.corteva.com/resources/media-center/corteva-globachem-enter-definitive-agreement-to-form-jv.html)
+
+**Step 2 — Research.** The model wanted to know: *"CF Industries CF news September 2026"* → got 6 results (via ddg)
+
+  - CF Industries Holdings, Inc. (CF) Stock Price, News, Quote ... (https://finance.yahoo.com/quote/CF/)
+
+  - CF Industries Holdings, Inc. Reports First Quarter 2026 Net ... (https://ir.cfindustries.com/Investors/news/news-details/2026/CF-Industries-Holdings-Inc--Reports-First-Quarter-2026-Net-Earnings-of-615-Million-Adjusted-EBITDA-of-983-Million/default.aspx)
+
+  - CF Industries (CF) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/CF/)
+
+**Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
