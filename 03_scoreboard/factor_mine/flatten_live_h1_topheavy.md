@@ -6,7 +6,7 @@ New buys only when the live flatten gate fires (green S, ≥5 priced BUYs, prior
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `topheavy` · sell `list` · S-boost `none` · 40% to #1, rest split
 
-Cash book **+7.19%** ($10,719) · signal-only (no cash/fees) was +4.45%. Starts YES **7/18**. Fills 48 · skips 0 · realized $+718.61.
+Cash book **+7.19%** ($10,719) · signal-only (no cash/fees) was +4.45%. Starts YES **7/19**. Fills 48 · skips 0 · realized $+718.61.
 
 ## How this sleeve decides (like you are 10)
 
@@ -124,6 +124,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | `OPK` | 587 | $1.64 | $1.63 | -5.87 | — | +0.00 | -5.87 | +23.48 | — |
 | 2026-09-08 | `VIR` | 82 | $11.38 | $11.22 | -13.53 | — | +0.00 | -13.53 | -7.38 | — |
 | 2026-09-08 | `ATRC` | 17 | $51.52 | $54.31 | +47.43 | — | +0.00 | +47.43 | +38.76 | — |
+| 2026-09-09 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -147,6 +148,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-03 | -0.90 | $10,906.25 | — | $10,906.25 | -0.00 | +0.00 | — | — | $10,906.25 | $10,906.25 | — |
 | 2026-09-04 | +2.25 | $10,906.25 | — | $10,906.25 | -0.00 | -27.41 | CABA, ALEC, BHC, BMEA, OABI, OPK, VIR, ATRC | — | $25.19 | $10,834.63 | CABA×1260, ALEC×370, BHC×139, BMEA×492, OABI×195, OPK×587, VIR×82, ATRC×17 |
 | 2026-09-08 | -11.47 | $25.19 | CABA×1260, ALEC×370, BHC×139, BMEA×492, OABI×195, OPK×587, VIR×82, ATRC×17 | $10,763.44 | -71.19 | +0.00 | — | CABA, ALEC, BHC, BMEA, OABI, OPK, VIR, ATRC | $10,718.60 | $10,718.60 | — |
+| 2026-09-09 | -13.95 | $10,718.60 | — | $10,718.60 | +0.00 | +0.00 | — | — | $10,718.60 | $10,718.60 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -236,3 +238,5 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 09:30 ET | **SELL** | `VIR` | 82 | $11.22 | $2.26 | $-11.88 | $9,797.39 | ▼ -11.88 after sell → book $10,720.66; vs 09:30 mark -2.26 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-08 09:30 ET | **SELL** | `ATRC` | 17 | $54.31 | $2.06 | $+34.66 | $10,718.60 | ▲ +34.66 after sell → book $10,718.60; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,718.60 | ▲ close $10,718.60 vs 09:30 $10,763.44 (session +0.00) | 16:00 close · cash $10,718.60 · no lots left · equity $10,718.60. | — |
+| 2026-09-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,718.60 | ▲ 09:30 equity $10,718.60 vs yday $10,718.60 (+0.00) | 09:30 open · cash $10,718.60 · no holdings · equity $10,718.60 vs prior close $10,718.60 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,718.60 | ▲ close $10,718.60 vs 09:30 $10,718.60 (session +0.00) | 16:00 close · cash $10,718.60 · no lots left · equity $10,718.60. | — |

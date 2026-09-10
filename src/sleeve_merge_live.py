@@ -34,6 +34,7 @@ from src.sleeve_merge import (
     _conviction,
     _num,
     _prior_book,
+    _signed_notional,
     book_ticker_set,
     io_picks,
     io_select_picks,
@@ -42,10 +43,12 @@ from src.sleeve_merge import (
     load_book_map,
     load_payload,
     next_session,
+    overnight_hold_marks,
     rank_calls,
     ripper_overlay_names,
     run_flatten_switch,
     session_calendar,
+    session_hold_marks,
 )
 
 DAILY_DIR = ROOT / "01_daily"
@@ -385,6 +388,29 @@ def plan_today(date: str, capital: float = 100_000,
     tickets: list[dict] = []
     skipped: list[dict] = []
     cash_open = cash
+    start_lots = [dict(p) for p in list(io_pos.values()) + list(mv_pos)]
+
+    def px_open_fn(t, d):
+        px, _ = _px(t, d, "open", cache)
+        return px
+
+    def px_close_fn(t, d):
+        px, _ = _px(t, d, "close", cache)
+        return px
+
+    overnight = overnight_hold_marks(start_lots, date, px_open_fn)
+    if sim.get("curve"):
+        yday_eq = float(sim["curve"][-1]["equity"])
+    else:
+        yday_eq = cash_open + sum(
+            _signed_notional(
+                p["shares"], p.get("last_px") or p["entry_px"],
+                p.get("side") or "BUY")
+            for p in start_lots)
+    open_stock = sum(
+        _signed_notional(n["shares"], n["open_px"], n.get("side") or "BUY")
+        for n in overnight)
+    open_eq = cash_open + open_stock
 
     def skip(clock, ticker, side, reason, sleeve=""):
         skipped.append({
@@ -636,8 +662,13 @@ def plan_today(date: str, capital: float = 100_000,
                      "cash tied in open lots / fees", "io_core")
 
     cash_after_1600 = cash
+    close_lots = list(io_pos.values()) + mv_pos
     holds = [_lot_view(lot, _px(lot["ticker"], date, "close", cache)[0])
-             for lot in list(io_pos.values()) + mv_pos]
+             for lot in close_lots]
+    marks = session_hold_marks(
+        overnight, close_lots, date, px_open_fn, px_close_fn,
+        [t for t in tickets if t.get("side") == "SELL"])
+    close_eq = cash_after_1600 + sum(h.get("mv") or 0 for h in holds)
 
     why = []
     if score is None:
@@ -661,11 +692,27 @@ def plan_today(date: str, capital: float = 100_000,
 
     buy_cost = round(sum(t.get("cost") or 0 for t in tickets if t["side"] == "BUY"), 2)
     sell_proceeds = round(sum(t.get("proceeds") or 0 for t in tickets if t["side"] == "SELL"), 2)
-    holds_open = [
-        _lot_view(lot, lot.get("last_px"))
-        for lot in list((sim.get("open_io") or {}).values())
-        + list(sim.get("open_mover") or [])
-    ]
+    holds_open = []
+    for n in overnight:
+        holds_open.append({
+            "ticker": n["ticker"],
+            "sleeve": n.get("sleeve"),
+            "shares": n["shares"],
+            "entry_px": n.get("entry_px"),
+            "entry_date": n.get("entry_date"),
+            "last_px": n.get("yday_px"),
+            "yday_px": n.get("yday_px"),
+            "open_px": n.get("open_px"),
+            "overnight": n.get("overnight"),
+            "pct": n.get("pct"),
+            "mv": round(n["shares"] * float(n.get("open_px") or n.get("yday_px") or 0), 2),
+            "exit_date": next(
+                (p.get("exit_date") for p in start_lots
+                 if p["ticker"] == n["ticker"]
+                 and (p.get("sleeve") or "") == (n.get("sleeve") or "")),
+                None),
+            "reason": "",
+        })
     would = plan_would_buy(
         date=date, pol=pol, cache=cache, priced_buys=priced_buys,
         confirm=confirm, io_book=io_book, cash_open=cash_open,
@@ -692,8 +739,15 @@ def plan_today(date: str, capital: float = 100_000,
         "cash_after_1600": round(cash_after_1600, 2),
         "buy_cost": buy_cost,
         "sell_proceeds": sell_proceeds,
+        "yday_equity": round(yday_eq, 2),
+        "open_equity": round(open_eq, 2),
+        "close_equity": round(close_eq, 2),
+        "overnight_delta": round(open_eq - yday_eq, 2),
+        "session_delta": round(close_eq - open_eq, 2),
         "n_holds_open": len(holds_open),
         "holds_open": holds_open,
+        "overnight": overnight,
+        "marks": marks,
         "holds_after": holds,
         "would_buy": would,
         "tickets": tickets,
@@ -720,34 +774,77 @@ def today_panel_html(card: dict) -> str:
     sc = "—" if card.get("score") is None else f"{card['score']:+.2f}"
     rcls = ("good" if card["route"] == "mover"
             else "hold" if card["route"] == "hold" else "")
+
+    def _signed_card(label, v):
+        if v is None:
+            return f"<div class='card'>{label}<b>—</b></div>"
+        if abs(float(v)) < 0.5:
+            v = 0.0
+        cls = "good" if v > 0 else "bad" if v < 0 else ""
+        return f"<div class='card'>{label}<b class='{cls}'>${v:+,.0f}</b></div>"
+
+    ov = card.get("overnight_delta")
+    sess = card.get("session_delta")
     cards = (
         f"<div class='card'>Today<b>{_html.escape(card['date'])}</b></div>"
         f"<div class='card'>Score<b>{sc}</b></div>"
         f"<div class='card'>Route<b class='{rcls}'>{_html.escape(card['route'])}</b></div>"
+        f"<div class='card'>Prior close<b>${(card.get('yday_equity') or 0):,.0f}</b></div>"
+        f"<div class='card'>09:30 equity<b>${(card.get('open_equity') or 0):,.0f}</b></div>"
+        f"{_signed_card('Overnight $', ov)}"
+        f"{_signed_card('Session $', sess)}"
+        f"<div class='card'>16:00 equity<b>${(card.get('close_equity') or card.get('cash_after_1600') or 0):,.0f}</b></div>"
         f"<div class='card'>Cash leftover<b>${card['cash_open']:,.0f}</b></div>"
-        f"<div class='card'>Open lots<b>{card['n_holds_open']}</b></div>"
+        f"<div class='card'>Overnight lots<b>{card['n_holds_open']}</b></div>"
         f"<div class='card'>09:30 / 16:00 plans<b>"
         f"{sum(1 for t in card['tickets'] if t['clock']==OPEN_CLOCK)} / "
         f"{sum(1 for t in card['tickets'] if t['clock']==CLOSE_CLOCK)}</b></div>"
-        f"<div class='card'>Skipped<b>{len(card['skipped'])}</b></div>"
         f"<div class='card'>Would-buy (flat)<b>"
         f"{len((card.get('would_buy') or {}).get('rows') or [])}</b></div>"
-        f"<div class='card'>After 16:00 cash<b>${card['cash_after_1600']:,.0f}</b></div>"
     )
+
+    def _signed_td(v):
+        if v is None:
+            return "<td>—</td>"
+        cls = "good" if v > 0 else "bad" if v < 0 else ""
+        return f"<td class='{cls}'>${v:+,.2f}</td>"
 
     def rows_holds(holds):
         if not holds:
-            return "<tr><td colspan='7' class='why'>none — flat cash</td></tr>"
+            return ("<tr><td colspan='9' class='why'>"
+                    "none — flat cash overnight (no lots into 09:30)</td></tr>")
         out = []
         for h in holds:
+            yday = h.get("yday_px") if h.get("yday_px") is not None else h.get("last_px")
+            opx = h.get("open_px")
             out.append(
                 f"<tr><th>{_html.escape(str(h.get('ticker') or ''))}</th>"
                 f"<td>{_html.escape(str(h.get('sleeve') or ''))}</td>"
                 f"<td>{h.get('shares')}</td>"
+                f"<td>{'—' if yday is None else f'${float(yday):.2f}'}</td>"
+                f"<td>{'—' if opx is None else f'${float(opx):.2f}'}</td>"
+                f"{_signed_td(h.get('overnight'))}"
+                f"<td>{'—' if h.get('pct') is None else f'{h.get('pct'):+.2f}%'}</td>"
                 f"<td>${h.get('entry_px') or 0:.2f}</td>"
-                f"<td>{_html.escape(str(h.get('entry_date') or ''))}</td>"
-                f"<td>${h.get('last_px') or 0:.2f}</td>"
-                f"<td>${h.get('mv') or 0:,.0f}</td></tr>")
+                f"<td>{_html.escape(str(h.get('entry_date') or ''))}</td></tr>")
+        return "".join(out)
+
+    def rows_marks(marks):
+        if not marks:
+            return ("<tr><td colspan='9' class='why'>"
+                    "no session marks — cash only</td></tr>")
+        out = []
+        for m in marks:
+            out.append(
+                f"<tr><th>{_html.escape(str(m.get('ticker') or ''))}</th>"
+                f"<td>{_html.escape(str(m.get('sleeve') or ''))}</td>"
+                f"<td>{_html.escape(str(m.get('held') or ''))}</td>"
+                f"<td>{m.get('shares_open') or 0}→{m.get('shares_close') or 0}</td>"
+                f"<td>{'—' if m.get('open_px') is None else f'${float(m['open_px']):.2f}'}</td>"
+                f"<td>{'—' if m.get('close_px') is None else f'${float(m['close_px']):.2f}'}</td>"
+                f"{_signed_td(m.get('overnight'))}"
+                f"{_signed_td(m.get('session'))}"
+                f"{_signed_td(m.get('day'))}</tr>")
         return "".join(out)
 
     def rows_tix(clock):
@@ -818,16 +915,25 @@ def today_panel_html(card: dict) -> str:
 <section class="today" id="today-card">
 <h2>Today — {_html.escape(card['policy'])} · {_html.escape(card['date'])}</h2>
 <p class="muted">{_html.escape(card.get('why') or '')}.
+Overnight $ is 09:30 equity vs prior close (cash unchanged, no fees).
+Session $ is 16:00 equity vs 09:30 (fills and fees included).
 Sells settle first. Buys only from leftover cash after Futubull fees.
 Already-held names are not re-bought. Hard-red S≤−3 = no new risk.
 Would-buy is not sent to Futubull.</p>
 {futubull_strip()}
 <div class="cards">{cards}</div>
-<h3>Open holdings (cash is tied here)</h3>
+<h3>Overnight holds (into 09:30)</h3>
 <div class="sheet"><table>
 <thead><tr><th>Ticker</th><th>Sleeve</th><th>Shares</th>
-<th>Entry</th><th>Since</th><th>Mark</th><th>MV</th></tr></thead>
-<tbody>{rows_holds(card.get('holds_open') or [])}</tbody></table></div>
+<th>Yday</th><th>09:30</th><th>Overnight $</th><th>%</th>
+<th>Entry</th><th>Since</th></tr></thead>
+<tbody>{rows_holds(card.get('holds_open') or card.get('overnight') or [])}</tbody></table></div>
+<h3>Session marks (09:30 → 16:00)</h3>
+<div class="sheet"><table>
+<thead><tr><th>Ticker</th><th>Sleeve</th><th>Held</th><th>Shares</th>
+<th>09:30</th><th>Close</th><th>Overnight $</th><th>Session $</th>
+<th>Day $</th></tr></thead>
+<tbody>{rows_marks(card.get('marks') or [])}</tbody></table></div>
 <h3>09:30 tickets</h3>
 <div class="sheet"><table>
 <thead><tr><th>Side</th><th>Ticker</th><th>Sleeve</th><th>Shares</th>
@@ -890,24 +996,51 @@ def card_markdown(card: dict) -> str:
         f"- Cash leftover **${card['cash_open']:,.2f}** "
         f"(after 09:30 ${card['cash_after_0930']:,.2f} · "
         f"after 16:00 ${card['cash_after_1600']:,.2f})",
-        f"- Open lots **{card['n_holds_open']}** · "
+        f"- Prior close **${(card.get('yday_equity') or 0):,.2f}** · "
+        f"09:30 **${(card.get('open_equity') or 0):,.2f}** · "
+        f"overnight **${(card.get('overnight_delta') or 0):+,.2f}** · "
+        f"session **${(card.get('session_delta') or 0):+,.2f}** · "
+        f"16:00 **${(card.get('close_equity') or 0):,.2f}**",
+        f"- Overnight lots **{card['n_holds_open']}** · "
         f"priced mover BUYs **{card['n_priced_buys']}** · "
         f"prior book {'yes' if card.get('prior_book') else 'no'}",
         f"- Planned buy cost **${card['buy_cost']:,.2f}** ≤ leftover "
         f"after sells **${card['cash_open'] + card['sell_proceeds']:,.2f}**",
         "",
-        "## Open holdings",
+        "## Overnight holds (into 09:30)",
         "",
-        "| Ticker | Sleeve | Shares | Entry | Since | Mark | MV |",
-        "|---|---|---:|---:|---|---:|---:|",
+        "| Ticker | Sleeve | Shares | Yday | 09:30 | Overnight $ | % | Entry | Since |",
+        "|---|---|---:|---:|---:|---:|---:|---:|---|",
     ]
     if not card.get("holds_open"):
-        lines.append("| — | — | | | | | |")
+        lines.append("| — | — | | | | | | | |")
     for h in card.get("holds_open") or []:
+        yday = h.get("yday_px") if h.get("yday_px") is not None else h.get("last_px")
+        pct = h.get("pct")
+        pct_s = "—" if pct is None else f"{pct:+.2f}%"
         lines.append(
             f"| {h.get('ticker')} | {h.get('sleeve')} | {h.get('shares')} | "
-            f"${h.get('entry_px') or 0:.2f} | {h.get('entry_date') or ''} | "
-            f"${h.get('last_px') or 0:.2f} | ${h.get('mv') or 0:,.0f} |")
+            f"${float(yday or 0):.2f} | ${float(h.get('open_px') or 0):.2f} | "
+            f"${float(h.get('overnight') or 0):+,.2f} | {pct_s} | "
+            f"${h.get('entry_px') or 0:.2f} | {h.get('entry_date') or ''} |")
+    lines += [
+        "",
+        "## Session marks (09:30 → 16:00)",
+        "",
+        "| Ticker | Sleeve | Held | Shares | 09:30 | Close | Overnight $ | Session $ | Day $ |",
+        "|---|---|---|---:|---:|---:|---:|---:|---:|",
+    ]
+    if not card.get("marks"):
+        lines.append("| — | — | | | | | | | |")
+    for m in card.get("marks") or []:
+        lines.append(
+            f"| {m.get('ticker')} | {m.get('sleeve')} | {m.get('held')} | "
+            f"{m.get('shares_open') or 0}→{m.get('shares_close') or 0} | "
+            f"${float(m.get('open_px') or 0):.2f} | "
+            f"${float(m.get('close_px') or 0):.2f} | "
+            f"${float(m.get('overnight') or 0):+,.2f} | "
+            f"${float(m.get('session') or 0):+,.2f} | "
+            f"${float(m.get('day') or 0):+,.2f} |")
     lines += [
         "",
         "## Tickets",
@@ -996,7 +1129,9 @@ def run_card(date: str | None = None, capital: float = 100_000,
     print(f"[sleeve-merge-card] {card['date']} route={card['route']} "
           f"S={card.get('score')} cash=${card['cash_open']:,.2f} "
           f"holds={card['n_holds_open']} tickets={len(card['tickets'])} "
-          f"skipped={len(card['skipped'])}")
+          f"skipped={len(card['skipped'])} "
+          f"overnight=${card.get('overnight_delta') or 0:+.2f} "
+          f"session=${card.get('session_delta') or 0:+.2f}")
     print(f"[sleeve-merge-card] {card['why']}")
     for t in card["tickets"]:
         print(f"  {t['clock']} {t['side']:4s} {t['ticker']:6s} "

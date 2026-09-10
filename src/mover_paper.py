@@ -80,6 +80,20 @@ FEE_DRAG = 0.15  # % round-trip, sweep approximation
 TITLE = "Mover paper trading"
 
 
+def _nyse_session(date: str) -> bool:
+    try:
+        dt = datetime.strptime(date, "%Y-%m-%d")
+    except (TypeError, ValueError):
+        return False
+    if dt.weekday() >= 5:
+        return False
+    try:
+        from src.skip_if_good import is_nyse_holiday
+        return not is_nyse_holiday(dt.date())
+    except Exception:
+        return True
+
+
 # ------------------------------------------------------------ payload I/O --
 def load_payload(path: Path = PAYLOAD) -> dict:
     if not path.is_file():
@@ -115,6 +129,14 @@ HOLD_SESSIONS = {"1d": 1, "3d": 3, "1w": 5}
 
 
 def _session_calendar(payload: dict) -> list[str]:
+    """NYSE sessions on the live tape — not just the lookback payload window.
+
+    A day with no new BUY calls still has to mark leftover lots.
+    """
+    from src.sleeve_merge import list_books, session_calendar
+    cal = session_calendar(payload, list_books())
+    if cal:
+        return cal
     sd = sorted(payload.get("session_dates") or [])
     if sd:
         return sd
@@ -167,10 +189,14 @@ def book_calls(payload: dict, book_list: str, side: str) -> list[dict]:
 def gate_table(payload: dict, gate_score: float | None,
                dates: list[str] | None = None) -> list[dict]:
     """Per-session gate decision + advisory flags (news judge / events)."""
-    regime = payload.get("regime") or {}
+    from src.sleeve_merge import fill_regime_scores
     if dates is None:
-        dates = sorted(set([r.get("date")
-                            for r in payload.get("called_rows") or []]))
+        dates = _session_calendar(payload)
+        if not dates:
+            dates = sorted({r.get("date")
+                            for r in payload.get("called_rows") or []
+                            if r.get("date")})
+    regime = fill_regime_scores(payload.get("regime") or {}, dates)
     table = []
     for d in sorted(dates):
         g = regime.get(d) or {}
@@ -266,7 +292,9 @@ def run_sim(calls: list[dict], gates: list[dict], *, capital: float,
     trades, skipped, curve = [], [], []
     rank_key = RANKS[rank]
 
-    for date in sorted(by_day):
+    dates = set(by_day)
+    dates.update(g.get("date") for g in gates if g.get("date"))
+    for date in sorted(d for d in dates if d and _nyse_session(d)):
         def equity_now(px_date: str) -> float:
             eq = cash
             for p in open_pos:
@@ -501,13 +529,25 @@ def stitch_skip_io(raw: dict, payload: dict,
     """
     from src.sleeve_combine import route_empty_gap
 
-    regime = payload.get("regime") or {}
+    from src.sleeve_merge import fill_regime_scores, list_books, session_calendar
+    regime = fill_regime_scores(payload.get("regime") or {}, None)
     io_rets = paper_sleeve_daily() if io_rets is None else io_rets
     m_rets = _mover_day_rets(raw.get("curve") or [])
     score_by = {c["date"]: c.get("score") for c in raw.get("curve") or []}
     buys = _mover_buy_counts(raw, payload, n_buy)
     candidates = sorted(set(m_rets) | set(io_rets) | set(score_by) | set(regime))
-    candidates = [d for d in candidates if d >= "2026-08-13"]
+    # Live payload tape: keep walking past the last stitch input so a
+    # no-fill session still marks leftover holds. Synthetic unit
+    # payloads (no session_dates) stay isolated.
+    if payload.get("session_dates") or payload.get("called_rows"):
+        live = session_calendar(payload, list_books())
+        last = candidates[-1] if candidates else ""
+        for d in live:
+            if d > last:
+                candidates.append(d)
+        regime = fill_regime_scores(regime, candidates)
+    candidates = [d for d in sorted(set(candidates))
+                  if d >= "2026-08-13" and _nyse_session(d)]
 
     capital = float(raw.get("capital") or 100_000)
     eq = capital
@@ -516,6 +556,9 @@ def stitch_skip_io(raw: dict, payload: dict,
         score = score_by.get(d)
         if score is None:
             score = (regime.get(d) or {}).get("predict_score")
+        if score is None:
+            from src.sleeve_merge import predict_snapshot
+            _dir, score = predict_snapshot(d)
         n_calls = buys.get(d, 0)
         card = route_empty_gap(score, n_calls)
         # Don't invent a flat mover day from a .io print (e.g. Sunday 08-30).
@@ -1186,8 +1229,7 @@ def main() -> None:
     _set_out_paths(args.source)
     if args.source == "book":
         calls = book_calls(payload, args.book_list, args.side)
-        gates = gate_table(payload, gate_score,
-                           dates=sorted(set(r["date"] for r in calls)))
+        gates = gate_table(payload, gate_score)
         sweep_fn = lambda: run_book_sweep(calls, payload, gate_score)
         sim = run_sim(calls, gates, capital=args.capital, top_n=args.top_n,
                       pct=args.pct, side=args.side, entry=entry,

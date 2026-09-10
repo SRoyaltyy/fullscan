@@ -131,14 +131,10 @@ def _cond_net(row: dict) -> int:
 
 def load_calendar(payload: dict, from_date: str | None = None,
                   to_date: str | None = None) -> list[str]:
-    dates = set(payload.get("session_dates") or [])
-    dates.update(p.name[:10] for p in BOOK_DIR.glob("????-??-??_stock_book.json"))
-    dates.update((payload.get("regime") or {}).keys())
-    sweeps = ((payload.get("sweeps") or {}).get("featured") or {})
-    regime = ((sweeps.get("mover_days") or {}).get("params") or {}).get("_regime") or {}
-    dates.update(regime)
+    """NYSE sessions only. Payload/regime may still list Labor Day."""
+    from src.sleeve_merge import list_books, session_calendar
     start = from_date or WINDOW_START
-    out = sorted(d for d in dates if d >= start)
+    out = [d for d in session_calendar(payload, list_books()) if d >= start]
     if to_date:
         out = [d for d in out if d <= to_date]
     return out

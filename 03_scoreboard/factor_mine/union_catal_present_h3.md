@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ catal_present, no 🚨
 
-Cash book **-3.97%** ($9,603) · signal-only (no cash/fees) was -0.14%. Starts YES **0/18**. Fills 2 · skips 6 · realized $+0.00.
+Cash book **-2.46%** ($9,754) · signal-only (no cash/fees) was -0.14%. Starts YES **0/19**. Fills 4 · skips 6 · realized $-245.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $42.95.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,754.28.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -85,6 +85,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 | `CTVA` | 55 | $88.62 | $87.64 | -53.90 | $87.86 | +12.10 | -41.80 | -143.00 | -130.90 |
 | 2026-09-08 | `CF` | 36 | $133.35 | $134.06 | +25.56 | $134.33 | +9.72 | +35.28 | -163.44 | -153.72 |
 | 2026-09-08 | `CTVA` | 55 | $87.86 | $88.25 | +21.45 | $85.90 | -129.25 | -107.80 | -109.45 | -238.70 |
+| 2026-09-09 | `CF` | 36 | $134.33 | $137.88 | +127.80 | — | +0.00 | +127.80 | -25.92 | — |
+| 2026-09-09 | `CTVA` | 55 | $85.90 | $86.40 | +27.50 | — | +0.00 | +27.50 | -211.20 | — |
 
 ## Each session (cash + holdings state)
 
@@ -108,6 +110,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-03 | -0.90 | $10,000.00 | — | $10,000.00 | +0.00 | -117.54 | CF, CTVA | — | $42.95 | $9,878.21 | CF×36, CTVA×55 |
 | 2026-09-04 | +2.25 | $42.95 | CF×36, CTVA×55 | $9,738.63 | -139.58 | -62.78 | — | — | $42.95 | $9,675.85 | CF×36, CTVA×55 |
 | 2026-09-08 | -11.47 | $42.95 | CF×36, CTVA×55 | $9,722.86 | +47.01 | -119.53 | — | — | $42.95 | $9,603.33 | CF×36, CTVA×55 |
+| 2026-09-09 | -13.95 | $42.95 | CF×36, CTVA×55 | $9,758.63 | +155.30 | +0.00 | — | CF, CTVA | $9,754.28 | $9,754.28 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -151,6 +154,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $42.95 | ▼ close $9,675.85 vs 09:30 $9,738.63 (session -62.78) | 16:00 close · cash $42.95 · equity $9,675.85 vs 09:30 $9,738.63 (-62.78; session marks -62.78) · 2 name(s) marked open→close (per-name table). CF×36 09:30 $135.43 → close $133.35 -74.88; CTVA×55 09:30 $87.64 → close $87.86 +12.10 | — |
 | 2026-09-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $42.95 | ▲ 09:30 equity $9,722.86 vs yday $9,675.85 (+47.01) | 09:30 open · cash $42.95 (unchanged overnight, no fees) · equity $9,722.86 vs prior close $9,675.85 (+47.01) · 2 name(s) re-marked at the open (per-name table). CF×36 yday $133.35 → 09:30 $134.06 +25.56; CTVA×55 yday $87.86 → 09:30 $88.25 +21.45 | — |
 | 2026-09-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $42.95 | ▼ close $9,603.33 vs 09:30 $9,722.86 (session -119.53) | 16:00 close · cash $42.95 · equity $9,603.33 vs 09:30 $9,722.86 (-119.53; session marks -119.53) · 2 name(s) marked open→close (per-name table). CF×36 09:30 $134.06 → close $134.33 +9.72; CTVA×55 09:30 $88.25 → close $85.90 -129.25 | — |
+| 2026-09-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $42.95 | ▲ 09:30 equity $9,758.63 vs yday $9,603.33 (+155.30) | 09:30 open · cash $42.95 (unchanged overnight, no fees) · equity $9,758.63 vs prior close $9,603.33 (+155.30) · 2 name(s) re-marked at the open (per-name table). CF×36 yday $134.33 → 09:30 $137.88 +127.80; CTVA×55 yday $85.90 → 09:30 $86.40 +27.50 | — |
+| 2026-09-09 09:30 ET | **SELL** | `CF` | 36 | $137.88 | $2.15 | $-30.17 | $5,004.48 | ▼ -30.17 after sell → book $9,756.48; vs 09:30 mark -2.15 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-09 09:30 ET | **SELL** | `CTVA` | 55 | $86.40 | $2.20 | $-215.56 | $9,754.28 | ▼ -215.56 after sell → book $9,754.28; vs 09:30 mark -2.20 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,754.28 | ▲ close $9,754.28 vs 09:30 $9,758.63 (session +0.00) | 16:00 close · cash $9,754.28 · no lots left · equity $9,754.28. | — |
 
 ## Not taken
 
@@ -162,10 +169,3 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 | `CTVA` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-08 | `CF` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-08 | `CTVA` | min_hold | dropped but min-hold 2/3 sess — no sell |
-
-## Still open (marked at last close)
-
-| Ticker | Shares | Entry | Why |
-|---|---:|---|---|
-| `CF` | 36 | 2026-09-03 @ $138.60 | union ∩ catal_present, no 🚨; gate catal_present=True; list ohlc_hot; 🔵; ret5=+10.8; leftover $5000.00 |
-| `CTVA` | 55 | 2026-09-03 @ $90.24 | union ∩ catal_present, no 🚨; gate catal_present=True; list ohlc_hot; 🔵; ret5=+8.6; leftover $5000.00 |

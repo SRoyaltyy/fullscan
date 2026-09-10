@@ -122,7 +122,7 @@ date,ticker,side,conviction,reason
 2026-08-20,HLNE,BUY,0.938312747413788,outside top-N conviction cut
 2026-08-21,MOS,BUY,1.1456442068304926,"insufficient cash ($10,551 > $326)"
 2026-08-21,OCUL,BUY,1.1353498875359582,"insufficient cash ($10,560 > $326)"
-2026-08-21,GSHD,BUY,1.134137320578915,"insufficient cash ($10,554 > $326)"
+2026-08-21,GSHD,BUY,1.134137320578915,"insufficient cash ($10,518 > $326)"
 2026-08-21,DUOL,BUY,1.1333795863184117,"insufficient cash ($10,524 > $326)"
 2026-08-21,CRSP,BUY,1.1326498719558447,"insufficient cash ($10,534 > $326)"
 2026-08-21,XP,BUY,1.1237579800245125,"insufficient cash ($10,548 > $326)"
@@ -160,31 +160,6 @@ date,ticker,side,conviction,reason
 2026-08-27,OSK,BUY,1.0543328246347685,outside top-N conviction cut
 2026-08-27,GPK,BUY,1.0541401921525597,outside top-N conviction cut
 2026-08-27,DNN,BUY,1.0540149251030775,outside top-N conviction cut
-2026-08-30,NCNO,BUY,1.2214161874715574,no exit price (unsettleable)
-2026-08-30,KD,BUY,1.1949823619398825,no exit price (unsettleable)
-2026-08-30,MNDY,BUY,1.1875777383994737,no exit price (unsettleable)
-2026-08-30,DUOL,BUY,1.153446436634077,no exit price (unsettleable)
-2026-08-30,CRK,BUY,1.1428421589140454,no exit price (unsettleable)
-2026-08-30,WAY,BUY,1.1228176564748316,no exit price (unsettleable)
-2026-08-30,RRC,BUY,1.072238363674721,no exit price (unsettleable)
-2026-08-30,ZG,BUY,1.0657343161741744,no exit price (unsettleable)
-2026-08-30,COUR,BUY,1.0650357378136563,no exit price (unsettleable)
-2026-08-30,FIGR,BUY,1.0602383829341162,no exit price (unsettleable)
-2026-08-30,XP,BUY,1.0515397358882832,no exit price (unsettleable)
-2026-08-30,LW,BUY,1.0495844737405777,no exit price (unsettleable)
-2026-08-30,HLNE,BUY,1.0395209908795293,no exit price (unsettleable)
-2026-08-30,SEZL,BUY,1.0357051737742824,no exit price (unsettleable)
-2026-08-30,KT,BUY,1.033663947001945,no exit price (unsettleable)
-2026-08-30,ELF,BUY,1.0290308088239362,no exit price (unsettleable)
-2026-08-30,Z,BUY,1.0171409609604987,no exit price (unsettleable)
-2026-08-30,ATHM,BUY,1.0091290696346067,no exit price (unsettleable)
-2026-08-30,ALHC,BUY,1.0011080379068344,no exit price (unsettleable)
-2026-08-30,LEU,BUY,0.9904553197822152,no exit price (unsettleable)
-2026-08-30,CVI,BUY,0.9860083947226872,no exit price (unsettleable)
-2026-08-30,TFPM,BUY,0.9819362832159496,no exit price (unsettleable)
-2026-08-30,MH,BUY,0.9816075821637396,no exit price (unsettleable)
-2026-08-30,BFAM,BUY,0.9776763106040863,no exit price (unsettleable)
-2026-08-30,PBH,BUY,0.9747219730930157,no exit price (unsettleable)
 2026-08-31,CRM,BUY,0.33742661011988423,day gate CLOSED: predict DOWN score -5.85 < +1.00
 2026-08-31,AON,BUY,0.3424465320055805,day gate CLOSED: predict DOWN score -5.85 < +1.00
 2026-08-31,MPC,BUY,0.42706886384257203,day gate CLOSED: predict DOWN score -5.85 < +1.00
@@ -239,18 +214,13 @@ date,ticker,side,conviction,reason
 2026-09-04,NCNO,BUY,0.5210485759959811,no exit price (unsettleable)
 2026-09-04,UPWK,BUY,0.5047970440328411,no exit price (unsettleable)
 2026-09-04,ASND,BUY,0.41205508729761764,no exit price (unsettleable)
-2026-09-06,WWW,BUY,0.7172408880113452,no exit price (unsettleable)
-2026-09-06,VYX,BUY,0.6746734452640146,no exit price (unsettleable)
-2026-09-06,CMBT,BUY,0.665708400715499,no exit price (unsettleable)
-2026-09-06,MHK,BUY,0.6161399255963644,no exit price (unsettleable)
-2026-09-06,ORCL,BUY,0.49842625564521237,no exit price (unsettleable)
-2026-09-06,KNX,BUY,0.4602310197078293,no exit price (unsettleable)
-2026-09-06,WCC,BUY,0.34725635339814664,no exit price (unsettleable)
-2026-09-06,FIVE,BUY,0.29862270786473283,no exit price (unsettleable)
-2026-09-07,ALAB,BUY,0.6212365462968437,no exit price (unsettleable)
-2026-09-07,MOS,BUY,0.5359729136349469,no exit price (unsettleable)
-2026-09-07,JCI,BUY,0.4309811511409545,no exit price (unsettleable)
-2026-09-07,BKR,BUY,0.4251921615587142,no exit price (unsettleable)
-2026-09-07,HPE,BUY,0.23058907241802473,no exit price (unsettleable)
-2026-09-07,CRWD,BUY,0.1016909636276609,no exit price (unsettleable)
 2026-09-08,ZIM,BUY,0.5123631288948107,day gate CLOSED: predict DOWN score -11.47 < +1.00
+2026-09-09,CIG,BUY,0.7242815504164775,day gate CLOSED: predict DOWN score -13.95 < +1.00
+2026-09-09,ATRO,BUY,0.5210078151822785,day gate CLOSED: predict DOWN score -13.95 < +1.00
+2026-09-09,EMBJ,BUY,0.13038406873849306,day gate CLOSED: predict DOWN score -13.95 < +1.00
+2026-09-09,MIR,BUY,0.5956938762730717,day gate CLOSED: predict DOWN score -13.95 < +1.00
+2026-09-09,NXE,BUY,0.5135764674626018,day gate CLOSED: predict DOWN score -13.95 < +1.00
+2026-09-09,BG,BUY,0.38511479236914936,day gate CLOSED: predict DOWN score -13.95 < +1.00
+2026-09-09,AR,BUY,0.3875737710531883,day gate CLOSED: predict DOWN score -13.95 < +1.00
+2026-09-09,ITT,BUY,0.3667763704975007,day gate CLOSED: predict DOWN score -13.95 < +1.00
+2026-09-09,XIFR,BUY,0.5613846130666518,day gate CLOSED: predict DOWN score -13.95 < +1.00

@@ -121,6 +121,9 @@ def step_paths(date: str, key: str) -> list[Path]:
         "flatten": [
             ROOT / "01_daily" / f"{date}_flatten_card.md",
             ROOT / "data" / "sleeve_merge" / "today.json",
+            ROOT / "data" / "sleeve_merge" / "daily_marks.json",
+            ROOT / "data" / "sleeve_merge" / "equity_curve.csv",
+            ROOT / "dashboard" / "sleeve-merge" / "index.html",
         ],
         "status": [
             ROOT / "01_daily" / f"{date}_preopen_qc.json",

@@ -64,14 +64,25 @@ def morning_s(regime: dict | None, date: str):
     g = (regime or {}).get(date) or {}
     v = g.get("predict_score")
     try:
-        return None if v is None else float(v)
+        if v is not None:
+            return float(v)
     except (TypeError, ValueError):
+        pass
+    try:
+        _d, score = sm.predict_snapshot(date)
+        return score
+    except Exception:
         return None
 
 
 def load_regime() -> dict:
     try:
-        return (sm.load_payload() or {}).get("regime") or {}
+        payload = sm.load_payload() or {}
+        books = sm.list_books()
+        return sm.fill_regime_scores(
+            payload.get("regime") or {},
+            sm.session_calendar(payload, books),
+        )
     except Exception:
         return {}
 

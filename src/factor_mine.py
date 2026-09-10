@@ -1114,18 +1114,42 @@ def rehydrate_panel(raw: dict) -> dict:
     return raw
 
 
+def live_panel_end(from_date: str, to_date: str | None = None) -> str | None:
+    """Last NYSE session the live tape already has (book / predict / payload)."""
+    payload = sm.load_payload()
+    books = sm.list_books()
+    cal = [d for d in sm.session_calendar(payload, books)
+           if d >= from_date and (not to_date or d <= to_date)]
+    return to_date or (cal[-1] if cal else None)
+
+
+def panel_is_current(raw: dict, from_date: str,
+                     to_date: str | None = None) -> bool:
+    """Cached panel is stale once a later session exists — even with no fills."""
+    if not raw or raw.get("from_date") != from_date:
+        return False
+    if not raw.get("session_dates"):
+        return False
+    cached = raw.get("to_date")
+    want = live_panel_end(from_date, to_date)
+    if want and (not cached or str(cached) < str(want)):
+        return False
+    if to_date and cached and str(cached) < str(to_date):
+        return False
+    return True
+
+
 def load_or_build_panel(from_date: str = START, to_date: str | None = None,
                         rebuild: bool = False) -> dict:
     if not rebuild and PANEL_PATH.exists():
         raw = json.loads(PANEL_PATH.read_text(encoding="utf-8"))
-        if (raw.get("from_date") == from_date
-                and raw.get("session_dates")
-                and raw.get("rows")
-                and (not to_date or raw.get("to_date") == to_date
-                     or raw.get("to_date") >= to_date)):
+        if panel_is_current(raw, from_date, to_date):
             print(f"[factor-mine] loaded panel {PANEL_PATH} "
-                  f"rows={raw.get('n_rows')}", flush=True)
+                  f"rows={raw.get('n_rows')} → {raw.get('to_date')}", flush=True)
             return rehydrate_panel(raw)
+        print(f"[factor-mine] panel stale "
+              f"{raw.get('to_date')} < live {live_panel_end(from_date, to_date)} "
+              f"— rebuilding so leftover lots get a mark", flush=True)
     return build_panel(from_date, to_date)
 
 
@@ -1369,15 +1393,21 @@ def run(from_date: str = START, to_date: str | None = None,
         bars: dict | None = None, combos: bool = True) -> dict:
     from . import factor_mine_book as fmb
     recipes = list(recipes or build_recipes())
+    panel = (panel if panel is not None
+             else load_or_build_panel(from_date, to_date, rebuild=rebuild_panel))
     if write or persist_panel or rebuild_panel:
         try:
             from . import price_store as ps
-            ps.ensure_through(to_date)
+            held = _held_tickers_from_disk()
+            names = {str(r.get("ticker") or "").upper()
+                     for r in (panel.get("rows") or []) if r.get("ticker")}
+            end = to_date or panel.get("to_date")
+            # Leftover lots first. A full panel yahoo walk dies on junk
+            # tickers and leaves the new session with $0 overnight marks.
+            ps.ensure_through(end, tickers=sorted(held or names) or None)
             tl.reset_price_caches()
         except Exception as e:
             print(f"[factor-mine] price ensure skipped: {e}", flush=True)
-    panel = (panel if panel is not None
-             else load_or_build_panel(from_date, to_date, rebuild=rebuild_panel))
     if persist_panel or write:
         PANEL_PATH.parent.mkdir(parents=True, exist_ok=True)
         slim = {k: v for k, v in panel.items() if k != "by_date"}
@@ -1490,6 +1520,30 @@ def run(from_date: str = START, to_date: str | None = None,
     if write:
         write_outputs(payload, stats, books=books)
     return payload
+
+
+def _held_tickers_from_disk() -> set[str]:
+    """Names still on a mined book — they need a mark even if today's list is empty."""
+    out: set[str] = set()
+    if not OUT_JSON.is_file():
+        return out
+    try:
+        doc = json.loads(OUT_JSON.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return out
+    for bk in (doc.get("books") or {}).values():
+        for t in (bk or {}).get("trades") or []:
+            if t.get("ticker"):
+                out.add(_tick(t["ticker"]))
+            for n in t.get("overnight") or t.get("open_held") or []:
+                name = n.get("ticker") if isinstance(n, dict) else str(n).split("×")[0]
+                if name:
+                    out.add(_tick(name))
+        for d in (bk or {}).get("daily") or []:
+            for m in (d.get("marks") or d.get("overnight") or []):
+                if isinstance(m, dict) and m.get("ticker"):
+                    out.add(_tick(m["ticker"]))
+    return {t for t in out if t}
 
 
 def _bought_tickers(books: dict | None, starts: dict | None = None) -> set[str]:

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-17.79%** ($8,221) · signal-only (no cash/fees) was +17.46%. Starts YES **7/18**. Fills 65 · skips 97 · realized $-1992.81.
+Cash book **-18.43%** ($8,157) · signal-only (no cash/fees) was +21.61%. Starts YES **6/19**. Fills 68 · skips 99 · realized $-1842.55.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $13.17.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,157.43.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -200,6 +200,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | `ARCT` | 159 | $15.82 | $15.47 | -55.65 | $15.63 | +25.44 | -30.21 | -206.70 | -181.26 |
 | 2026-09-08 | `CRDL` | 1224 | $2.20 | $2.20 | +0.00 | $2.22 | +24.48 | +24.48 | +24.48 | +48.96 |
 | 2026-09-08 | `CLYM` | 189 | $15.52 | $15.62 | +18.90 | $15.90 | +52.92 | +71.82 | +313.74 | +366.66 |
+| 2026-09-09 | `ARCT` | 159 | $15.63 | $15.46 | -27.03 | — | +0.00 | -27.03 | -208.29 | — |
+| 2026-09-09 | `CRDL` | 1224 | $2.22 | $2.22 | +0.00 | — | +0.00 | +0.00 | +48.96 | — |
+| 2026-09-09 | `CLYM` | 189 | $15.90 | $15.82 | -15.12 | — | +0.00 | -15.12 | +351.54 | — |
 
 ## Each session (cash + holdings state)
 
@@ -223,6 +226,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-03 | -0.90 | $8,007.18 | — | $8,007.18 | -0.00 | -97.80 | ARCT, CRDL, CLYM | — | $13.17 | $7,888.56 | ARCT×159, CRDL×1224, CLYM×189 |
 | 2026-09-04 | +2.25 | $13.17 | ARCT×159, CRDL×1224, CLYM×189 | $7,877.61 | -10.95 | +277.02 | — | — | $13.17 | $8,154.63 | ARCT×159, CRDL×1224, CLYM×189 |
 | 2026-09-08 | -11.47 | $13.17 | ARCT×159, CRDL×1224, CLYM×189 | $8,117.88 | -36.75 | +102.84 | — | — | $13.17 | $8,220.72 | ARCT×159, CRDL×1224, CLYM×189 |
+| 2026-09-09 | -13.95 | $13.17 | ARCT×159, CRDL×1224, CLYM×189 | $8,178.57 | -42.15 | +0.00 | — | ARCT, CRDL, CLYM | $8,157.43 | $8,157.43 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -233,16 +237,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-08-14 09:30 ET | **BUY** | `ANGX` | 464 | $4.31 | $5.99 | — | $7,994.17 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+0.5; leftover $2000.00 | join🟢 sector🟢 gen🟢 news🟢 vol🟢 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `HYLN` | 478 | $4.18 | $6.17 | — | $5,989.97 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ⚪; ret5=+4.1; leftover $2000.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `WDC` | 3 | $503.50 | $2.00 | — | $4,477.47 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable; 🔵; ⚪; ret5=+7.9; leftover $2000.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `WDC` | 3 | $503.50 | $2.00 | — | $4,477.47 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable; 🔵; ⚪; ret5=+7.9; leftover $2000.00 | join🟢 sector🟢 gen🟢 news🟡 judge🟢 vol🟡 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `ADUR` | 121 | $16.50 | $2.35 | — | $2,478.62 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,ohlc_hot; 🔵; ⚪; ret5=+9.3; leftover $2000.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `ALGM` | 45 | $44.06 | $2.12 | — | $493.79 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable; 🔵; ret5=+3.9; leftover $2000.00 | join🟢 sector🟢 gen🟢 news🟡 vol🔴 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `ALGM` | 45 | $44.06 | $2.12 | — | $493.79 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable; 🔵; ret5=+3.9; leftover $2000.00 | join🟢 sector🟢 gen🟢 news🟡 judge🟢 vol🔴 buy🟡 |
 | 2026-08-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $493.79 | ▼ close $9,942.67 vs 09:30 $10,000.00 (session -38.70) | 16:00 close · cash $493.79 · equity $9,942.67 vs 09:30 $10,000.00 (-57.33; session marks -38.70) · 5 name(s) marked open→close (per-name table). ANGX×464 09:30 $4.31 → close $4.37 +27.84; HYLN×478 09:30 $4.18 → close $4.06 -57.36; WDC×3 09:30 $503.50 → close $508.80 +15.90; ADUR×121 09:30 $16.50 → close $16.17 -39.93; ALGM×45 09:30 $44.06 → close $44.39 +14.85 | — |
 | 2026-08-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $493.79 | ▲ 09:30 equity $10,107.31 vs yday $9,942.67 (+164.64) | 09:30 open · cash $493.79 (unchanged overnight, no fees) · equity $10,107.31 vs prior close $9,942.67 (+164.64) · 5 name(s) re-marked at the open (per-name table). ANGX×464 yday $4.37 → 09:30 $4.60 +106.72; HYLN×478 yday $4.06 → 09:30 $4.10 +19.12; WDC×3 yday $508.80 → 09:30 $525.53 +50.19; ADUR×121 yday $16.17 → 09:30 $15.73 -53.24; ALGM×45 yday $44.39 → 09:30 $45.32 +41.85 | — |
 | 2026-08-17 09:30 ET | **BUY** | `CDNL` | 2 | $39.85 | $0.80 | — | $413.29 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; ⚪; ret5=-38.4; leftover $82.30 | join🟡 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
-| 2026-08-17 09:30 ET | **BUY** | `ABX` | 9 | $9.12 | $0.85 | — | $330.36 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ⚪; ret5=-2.6; leftover $82.30 | join🟢 sector🟢 gen🟢 news🟡 judge🟢 vol🟢 buy🟡 |
+| 2026-08-17 09:30 ET | **BUY** | `ABX` | 9 | $9.12 | $0.85 | — | $330.36 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ⚪; ret5=-2.6; leftover $82.30 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
 | 2026-08-17 09:30 ET | **BUY** | `VERA` | 2 | $31.30 | $0.63 | — | $267.13 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; ret5=-3.8; leftover $82.30 | join🟡 sector🔴 gen🟢 news🟡 judge🟢 vol🟢 buy🟡 |
-| 2026-08-17 09:30 ET | **BUY** | `OCC` | 4 | $18.24 | $0.74 | — | $193.43 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,ohlc_hot; ⚪; ret5=+9.5; leftover $82.30 | join🟡 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
-| 2026-08-17 09:30 ET | **BUY** | `ALM` | 5 | $16.20 | $0.82 | — | $111.60 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,ohlc_hot; 🔵; ⚪; ret5=+6.4; leftover $82.30 | join🟢 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
+| 2026-08-17 09:30 ET | **BUY** | `OCC` | 4 | $18.24 | $0.74 | — | $193.43 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,ohlc_hot; ⚪; ret5=+9.5; leftover $82.30 | join🟡 sector🟢 gen🟢 news🟡 judge🟢 vol🟡 buy🟡 |
+| 2026-08-17 09:30 ET | **BUY** | `ALM` | 5 | $16.20 | $0.82 | — | $111.60 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,ohlc_hot; 🔵; ⚪; ret5=+6.4; leftover $82.30 | join🟢 sector🟢 gen🟢 news🟡 judge🟡 vol🟡 buy🟡 |
 | 2026-08-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $111.60 | ▲ close $10,143.27 vs 09:30 $10,107.31 (session +39.81) | 16:00 close · cash $111.60 · equity $10,143.27 vs 09:30 $10,107.31 (+35.96; session marks +39.81) · 10 name(s) marked open→close (per-name table). ANGX×464 09:30 $4.60 → close $4.71 +51.04; HYLN×478 09:30 $4.10 → close $4.09 -4.78; WDC×3 09:30 $525.53 → close $536.01 +31.44; ADUR×121 09:30 $15.73 → close $15.85 +14.52; ALGM×45 09:30 $45.32 → close $44.25 -48.15; CDNL×2 09:30 $39.85 → close $39.23 -1.24; ABX×9 09:30 $9.12 → close $9.12 +0.00; VERA×2 09:30 $31.30 → close $31.63 +0.66; OCC×4 09:30 $18.24 → close $17.12 -4.48; ALM×5 09:30 $16.20 → close $16.36 +0.80 | — |
 | 2026-08-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $111.60 | ▼ 09:30 equity $9,860.11 vs yday $10,143.27 (-283.16) | 09:30 open · cash $111.60 (unchanged overnight, no fees) · equity $9,860.11 vs prior close $10,143.27 (-283.16) · 10 name(s) re-marked at the open (per-name table). ANGX×464 yday $4.71 → 09:30 $4.79 +37.12; HYLN×478 yday $4.09 → 09:30 $3.95 -66.92; WDC×3 yday $536.01 → 09:30 $496.07 -119.82; ADUR×121 yday $15.85 → 09:30 $15.41 -53.24; ALGM×45 yday $44.25 → 09:30 $42.54 -76.95; CDNL×2 yday $39.23 → 09:30 $41.57 +4.68; ABX×9 yday $9.12 → 09:30 $9.03 -0.81; VERA×2 yday $31.63 → 09:30 $31.31 -0.64; OCC×4 yday $17.12 → 09:30 $16.20 -3.68; ALM×5 yday $16.36 → 09:30 $15.78 -2.90 | — |
 | 2026-08-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $111.60 | ▼ close $9,738.07 vs 09:30 $9,860.11 (session -122.04) | 16:00 close · cash $111.60 · equity $9,738.07 vs 09:30 $9,860.11 (-122.04; session marks -122.04) · 10 name(s) marked open→close (per-name table). ANGX×464 09:30 $4.79 → close $4.85 +27.84; HYLN×478 09:30 $3.95 → close $3.86 -43.02; WDC×3 09:30 $496.07 → close $496.16 +0.27; ADUR×121 09:30 $15.41 → close $15.63 +26.62; ALGM×45 09:30 $42.54 → close $39.39 -141.75; CDNL×2 09:30 $41.57 → close $45.14 +7.14; ABX×9 09:30 $9.03 → close $9.01 -0.18; VERA×2 09:30 $31.31 → close $32.28 +1.94; OCC×4 09:30 $16.20 → close $16.20 +0.00; ALM×5 09:30 $15.78 → close $15.60 -0.90 | — |
@@ -329,6 +333,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13.17 | ▲ close $8,154.63 vs 09:30 $7,877.61 (session +277.02) | 16:00 close · cash $13.17 · equity $8,154.63 vs 09:30 $7,877.61 (+277.02; session marks +277.02) · 3 name(s) marked open→close (per-name table). ARCT×159 09:30 $15.61 → close $15.82 +33.39; CRDL×1224 09:30 $2.16 → close $2.20 +48.96; CLYM×189 09:30 $14.49 → close $15.52 +194.67 | — |
 | 2026-09-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13.17 | ▼ 09:30 equity $8,117.88 vs yday $8,154.63 (-36.75) | 09:30 open · cash $13.17 (unchanged overnight, no fees) · equity $8,117.88 vs prior close $8,154.63 (-36.75) · 3 name(s) re-marked at the open (per-name table). ARCT×159 yday $15.82 → 09:30 $15.47 -55.65; CRDL×1224 yday $2.20 → 09:30 $2.20 +0.00; CLYM×189 yday $15.52 → 09:30 $15.62 +18.90 | — |
 | 2026-09-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13.17 | ▲ close $8,220.72 vs 09:30 $8,117.88 (session +102.84) | 16:00 close · cash $13.17 · equity $8,220.72 vs 09:30 $8,117.88 (+102.84; session marks +102.84) · 3 name(s) marked open→close (per-name table). ARCT×159 09:30 $15.47 → close $15.63 +25.44; CRDL×1224 09:30 $2.20 → close $2.22 +24.48; CLYM×189 09:30 $15.62 → close $15.90 +52.92 | — |
+| 2026-09-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13.17 | ▼ 09:30 equity $8,178.57 vs yday $8,220.72 (-42.15) | 09:30 open · cash $13.17 (unchanged overnight, no fees) · equity $8,178.57 vs prior close $8,220.72 (-42.15) · 3 name(s) re-marked at the open (per-name table). ARCT×159 yday $15.63 → 09:30 $15.46 -27.03; CRDL×1224 yday $2.22 → 09:30 $2.22 +0.00; CLYM×189 yday $15.90 → 09:30 $15.82 -15.12 | — |
+| 2026-09-09 09:30 ET | **SELL** | `ARCT` | 159 | $15.46 | $2.51 | $-213.27 | $2,468.80 | ▼ -213.27 after sell → book $8,176.06; vs 09:30 mark -2.51 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-09 09:30 ET | **SELL** | `CRDL` | 1224 | $2.22 | $16.01 | $+17.16 | $5,170.07 | ▲ +17.16 after sell → book $8,160.05; vs 09:30 mark -16.01 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-09 09:30 ET | **SELL** | `CLYM` | 189 | $15.82 | $2.61 | $+346.37 | $8,157.43 | ▲ +346.37 after sell → book $8,157.43; vs 09:30 mark -2.62 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,157.43 | ▲ close $8,157.43 vs 09:30 $8,178.57 (session +0.00) | 16:00 close · cash $8,157.43 · no lots left · equity $8,157.43. | — |
 
 ## Not taken
 
@@ -431,11 +440,5 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | `CLYM` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-08 | `MRLN` | hard_red | hard-red S=-11.47 sit; no new buys |
 | 2026-09-08 | `EVGO` | hard_red | hard-red S=-11.47 sit; no new buys |
-
-## Still open (marked at last close)
-
-| Ticker | Shares | Entry | Why |
-|---|---:|---|---|
-| `ARCT` | 159 | 2026-09-03 @ $16.77 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+5.7; leftover $2669.06 |
-| `CRDL` | 1224 | 2026-09-03 @ $2.18 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,mover_buy; 🔵; ⚪; ret5=+1.4; leftover $2669.06 |
-| `CLYM` | 189 | 2026-09-03 @ $13.96 | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ret5=-6.4; leftover $2669.06 |
+| 2026-09-09 | `UPB` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-09 | `LFMD` | hard_red | hard-red S=-13.95 sit; no new buys |
