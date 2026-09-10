@@ -1,16 +1,14 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T06:34:58.251494-04:00",
+  "generated_at": "2026-09-10T06:35:25.327650-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-09-10_predict.md` \u2014 missing",
-    "MISSING Sector board JSON `01_daily/sectors/2026-09-10/_board.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-09-10_judge.md` \u2014 missing"
+    "MISSING Sector board JSON `01_daily/sectors/2026-09-10/_board.json` \u2014 missing"
   ],
   "counts": {
-    "ok": 6,
-    "partial": 2,
+    "ok": 4,
+    "partial": 4,
     "fail": 0,
     "n": 8
   },
@@ -84,7 +82,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 87698
+          "size": 87494
         },
         {
           "key": "digest_md",
@@ -93,7 +91,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 12007
+          "size": 12026
         }
       ],
       "said": "",
@@ -105,7 +103,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 16,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 2,
@@ -117,7 +115,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87698
+          "size": 87494
         },
         {
           "key": "in_baseline",
@@ -151,18 +149,18 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-09-10_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 21938
         },
         {
           "key": "judge",
           "name": "News judge MD",
           "path": "01_daily/news/2026-09-10_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 14758
         },
         {
           "key": "research_json",
@@ -189,16 +187,16 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 21819
+          "size": 21435
         },
         {
           "key": "general",
           "name": "General predict MD",
           "path": "01_daily/general/2026-09-10_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 12471
         },
         {
           "key": "board",
@@ -214,9 +212,9 @@
           "name": "Pre-open QC JSON",
           "path": "01_daily/2026-09-10_preopen_qc.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "all_ok=True",
+          "size": 6622
         },
         {
           "key": "status",
@@ -241,103 +239,108 @@
           "name": "Sector predict \u2014 basic_materials",
           "path": "01_daily/sectors/2026-09-10/basic_materials_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 9276
         },
         {
           "key": "sector_communication_services",
           "name": "Sector predict \u2014 communication_services",
           "path": "01_daily/sectors/2026-09-10/communication_services_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 12092
         },
         {
           "key": "sector_consumer_cyclical",
           "name": "Sector predict \u2014 consumer_cyclical",
           "path": "01_daily/sectors/2026-09-10/consumer_cyclical_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 10840
         },
         {
           "key": "sector_consumer_defensive",
           "name": "Sector predict \u2014 consumer_defensive",
           "path": "01_daily/sectors/2026-09-10/consumer_defensive_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 12760
         },
         {
           "key": "sector_energy",
           "name": "Sector predict \u2014 energy",
           "path": "01_daily/sectors/2026-09-10/energy_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 9817
         },
         {
           "key": "sector_financial",
           "name": "Sector predict \u2014 financial",
           "path": "01_daily/sectors/2026-09-10/financial_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 8972
         },
         {
           "key": "sector_healthcare",
           "name": "Sector predict \u2014 healthcare",
           "path": "01_daily/sectors/2026-09-10/healthcare_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 10323
         },
         {
           "key": "sector_industrials",
           "name": "Sector predict \u2014 industrials",
           "path": "01_daily/sectors/2026-09-10/industrials_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 10335
         },
         {
           "key": "sector_real_estate",
           "name": "Sector predict \u2014 real_estate",
           "path": "01_daily/sectors/2026-09-10/real_estate_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 10697
         },
         {
           "key": "sector_technology",
           "name": "Sector predict \u2014 technology",
           "path": "01_daily/sectors/2026-09-10/technology_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 10304
         },
         {
           "key": "sector_utilities",
           "name": "Sector predict \u2014 utilities",
           "path": "01_daily/sectors/2026-09-10/utilities_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 9907
         }
       ],
-      "said": "news 8 items",
+      "said": "general DOWN  -13.275 \u00b7 news 8 items",
       "bullets": [
+        "bad: Iran attacks 10 ships / US sank 5 tankers (biggest wave)",
+        "bad: Brent >$102",
+        "bad: Warsh hawkish Sep hike ~55-60%",
+        "good: China exports +25% y/y",
+        "good: HY tight 2.67",
         "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
         "Gold prices slide more than 3% after Fed Chair Kevin Warsh\u2019s Jackson Hole comments boost September U.S. rate hike expectations",
         "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year",
@@ -362,7 +365,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87698
+          "size": 87494
         },
         {
           "key": "weather",
@@ -370,8 +373,8 @@
           "path": "01_daily/weather/2026-09-10_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9306 vix=calm yields=flat",
-          "size": 9306
+          "reason": "sectors=11 bytes=9301 vix=calm yields=flat",
+          "size": 9301
         }
       ],
       "said": "favorable 3 \u00b7 hostile 4 \u00b7 neutral 4",
@@ -388,7 +391,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 1,
       "files": [
         {
@@ -396,9 +399,9 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-10_ab_checklist.csv",
           "role": "optional",
-          "status": "OK",
-          "reason": "rows=2660",
-          "size": 7648530
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "ab_enriched",
@@ -433,7 +436,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 21819
+          "size": 21435
         },
         {
           "key": "in_digest",
@@ -442,7 +445,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87698
+          "size": 87494
         },
         {
           "key": "dossiers",
@@ -461,11 +464,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 4,
+      "n_req_ok": 1,
       "n_req": 4,
-      "n_opt_ok": 3,
+      "n_opt_ok": 1,
       "n_opt": 3,
       "files": [
         {
@@ -473,9 +476,9 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-09-10_predict.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 12471
         },
         {
           "key": "in_board",
@@ -493,7 +496,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 21819
+          "size": 21435
         },
         {
           "key": "in_digest",
@@ -502,16 +505,16 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87698
+          "size": 87494
         },
         {
           "key": "in_judge",
           "name": "News judge MD",
           "path": "01_daily/news/2026-09-10_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 14758
         },
         {
           "key": "in_weather",
@@ -519,8 +522,8 @@
           "path": "01_daily/weather/2026-09-10_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9306 vix=calm yields=flat",
-          "size": 9306
+          "reason": "sectors=11 bytes=9301 vix=calm yields=flat",
+          "size": 9301
         },
         {
           "key": "in_ab",
@@ -545,36 +548,36 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-09-10_peer_rs.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=5116",
-          "size": 816328
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "book_json",
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-10_stock_book.json",
           "role": "required",
-          "status": "OK",
-          "reason": "horizons=5 names=210",
-          "size": 1446506
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "book_md",
           "name": "Stock book MD",
           "path": "01_daily/2026-09-10_stock_book.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 75732
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-10_green.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 585
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "paper",
@@ -590,8 +593,8 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-10)",
+          "status": "FAIL",
+          "reason": "session 2026-09-10 not in dashboard dates (last=2026-09-09)",
           "size": 4539835
         }
       ],
@@ -604,9 +607,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "OK",
-      "inputs_ready": true,
-      "n_req_ok": 2,
+      "status": "PARTIAL",
+      "inputs_ready": false,
+      "n_req_ok": 1,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -616,17 +619,17 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-10_stock_book.json",
           "role": "input",
-          "status": "OK",
-          "reason": "horizons=5 names=210",
-          "size": 1446506
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "dash_html",
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-10)",
+          "status": "FAIL",
+          "reason": "session 2026-09-10 not in dashboard dates (last=2026-09-09)",
           "size": 4539835
         },
         {
@@ -1748,6 +1751,24 @@
         }
       ],
       "preview": "2026-09-10 BUY DK, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, AMC, MMYT, KHC, GIS \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-10 BUY DK, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, AMC, MMYT, KHC, GIS \u00b7 2026-09-10 BUY DK, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, AMC, MMYT, KHC, GIS"
+    },
+    {
+      "key": "sector_predict",
+      "title": "Per-sector predict (all 11)",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T06:35:24.977679-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-10",
+          "ok": true,
+          "reason": "",
+          "size": 4096,
+          "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
+        }
+      ],
+      "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
     }
   ],
   "href": {
