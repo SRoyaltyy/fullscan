@@ -1,14 +1,14 @@
 # flatten_robust card — 2026-09-10
 
-_Generated 2026-09-10T10:39:09 — live `flatten_robust`._
+_Generated 2026-09-10T14:26:32 — live `flatten_robust`._
 
-**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
+**S=-13.28; hard-red: no new buys; holds and due 1d exits stay**
 
-- Score **—** (—) · route **io**
-- Cash leftover **$108,616.66** (after 09:30 $108,616.66 · after 16:00 $108,616.66)
-- Prior close **$108,616.66** · 09:30 **$108,616.66** · overnight **$+0.00** · session **$+0.00** · 16:00 **$108,616.66**
+- Score **-13.28** (DOWN) · route **hold** · HARD-RED
+- Cash leftover **$107,448.18** (after 09:30 $107,448.18 · after 16:00 $107,448.18)
+- Prior close **$107,448.18** · 09:30 **$107,448.18** · overnight **$+0.00** · session **$+0.00** · 16:00 **$107,448.18**
 - Overnight lots **0** · priced mover BUYs **0** · prior book yes
-- Planned buy cost **$0.00** ≤ leftover after sells **$108,616.66**
+- Planned buy cost **$0.00** ≤ leftover after sells **$107,448.18**
 
 ## Overnight holds (into 09:30)
 
@@ -32,19 +32,20 @@ _Generated 2026-09-10T10:39:09 — live `flatten_robust`._
 
 | Clock | Ticker | Why |
 |---|---|---|
-| 16:00 ET | * | io 3d cannot settle |
+| 16:00 ET | UGP | hard-red: no new buys |
+| 16:00 ET | LBRT | hard-red: no new buys |
+| 16:00 ET | CLB | hard-red: no new buys |
+| 16:00 ET | OIS | hard-red: no new buys |
 
 ## Would have bought — holdings disregarded
 
-Sized from marked equity **$108,616.66** as if the book were flat. `io 3d_size (holdings disregarded)`. Not live tickets.
+Sized from marked equity **$107,448.18** as if the book were flat. `io 3d_size (holdings disregarded)`. Not live tickets.
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | LBRT | io_core | 820 | $22.06 | $18,089.20 | cash tied |
-| 16:00 ET | UROY | io_core | 3771 | $4.80 | $18,100.80 | cash tied |
-| 16:00 ET | GPRK | io_core | 1519 | $11.91 | $18,091.29 | cash tied |
-| 16:00 ET | MTSI | io_core | 63 | $286.12 | $18,025.56 | cash tied |
-| 16:00 ET | NVT | io_core | 114 | $158.54 | $18,073.56 | cash tied |
-| 16:00 ET | NU | io_core | 1206 | $15.00 | $18,090.00 | cash tied |
+| 16:00 ET | UGP | io_core | 0 | $0.00 | $0.00 | no price |
+| 16:00 ET | LBRT | io_core | 1277 | $21.02 | $26,842.54 | hard-red |
+| 16:00 ET | CLB | io_core | 2179 | $12.32 | $26,856.17 | hard-red |
+| 16:00 ET | OIS | io_core | 3147 | $8.54 | $26,859.64 | hard-red |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
