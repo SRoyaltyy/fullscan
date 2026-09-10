@@ -1,6 +1,6 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T06:26:10.363466-04:00",
+  "generated_at": "2026-09-10T06:26:18.400091-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -20,41 +20,57 @@
     },
     {
       "ticker": "NVT",
-      "score": 0.6602357357160353
+      "score": 0.6602379889983204
+    },
+    {
+      "ticker": "NEOV",
+      "score": 0.5785701544406248
+    },
+    {
+      "ticker": "UGP",
+      "score": 0.7187933041687551
+    },
+    {
+      "ticker": "KN",
+      "score": 0.7952767982942439
+    },
+    {
+      "ticker": "DINO",
+      "score": 0.35726924159914264
     }
   ],
   "sell_1d": [
     {
-      "ticker": "FLO",
-      "score": -0.1222907142973265
-    },
-    {
-      "ticker": "LUCD",
-      "score": -0.08808082976321548
-    },
-    {
-      "ticker": "XPOF",
-      "score": -0.4191095195977543
-    },
-    {
-      "ticker": "BRBR",
-      "score": -0.1399479724440884
-    },
-    {
       "ticker": "GIS",
       "score": -0.3341001658515066
-    },
-    {
-      "ticker": "SPIR",
-      "score": -0.278052836195227
     },
     {
       "ticker": "TRIP",
       "score": -0.16826568406580067
     },
     {
-      "ticker": "ACI",
-      "score": -0.21362513363107866
+      "ticker": "FLO",
+      "score": -0.1222907142973265
+    },
+    {
+      "ticker": "LUCD",
+      "score": -0.0880680462040191
+    },
+    {
+      "ticker": "ENHA",
+      "score": -0.16044577008982702
+    },
+    {
+      "ticker": "XPOF",
+      "score": -0.4191095195977543
+    },
+    {
+      "ticker": "CCL",
+      "score": -0.17231832075162723
+    },
+    {
+      "ticker": "BKNG",
+      "score": -0.16337878916174325
     }
   ],
   "flatten": {},
@@ -305,13 +321,13 @@
       "date": "2026-09-10",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-10T06:26:09.972922-04:00",
+      "at": "2026-09-10T06:26:17.719264-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 12159,
+          "size": 14616,
           "preview": "2026-09-10 BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI"
         },
         {
@@ -325,7 +341,7 @@
           "path": "data/day_board/2026-09-10.json",
           "ok": true,
           "reason": "",
-          "size": 43609,
+          "size": 48052,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
         },
         {
@@ -339,11 +355,11 @@
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 21588,
-          "preview": "2026-09-10 BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI"
+          "size": 20583,
+          "preview": "2026-09-10 BUY DK, CVI, NVT, NEOV, UGP, KN, DINO \u00b7 SELL GIS, TRIP, FLO, LUCD, ENHA, XPOF, CCL, BKNG"
         }
       ],
-      "preview": "2026-09-10 BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-10 BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI \u00b7 2026-09-10 BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI"
+      "preview": "2026-09-10 BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-10 BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI \u00b7 2026-09-10 BUY DK, CVI, NVT, NEOV, UGP, KN, DINO \u00b7 SELL GIS, TRIP, FLO, LUCD, ENHA, XPOF, CCL, BKNG"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
