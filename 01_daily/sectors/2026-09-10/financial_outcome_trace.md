@@ -8,18 +8,18 @@
 
 **Step 1 — Research.** The model wanted to know: *"XLF financials ETF September 10 2026 close"* → got 6 results (via ddg)
 
-  - XLF: State Street® Financial Select Sector SPDR® ETF (https://www.ssga.com/us/en/intermediary/etfs/state-street-financial-select-sector-spdr-etf-xlf)
+  - State Street Financial Select Sector SPDR ETF (XLF) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/XLF/)
 
-  - State Street Financial Select Sector SPDR ETF (XLF) (https://finance.yahoo.com/quote/XLF/)
+  - XLF ETF Stock Price History - Investing.com (https://www.investing.com/etfs/financial-select-sector-spdr-fund-historical-data)
 
-  - State Street® Financial Select Sector SPDR® ETF (XLF) (https://www.morningstar.com/etfs/arcx/xlf/quote)
+  - State Street Financial Se…: XLF Stock Price Quote & News | Robinhood (https://robinhood.com/us/en/stocks/XLF/)
 
-**Step 2 — Research.** The model wanted to know: *"stock market September 10 2026 close S&P 500 oil Brent"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"stock market September 10 2026 close S&P 500 financials sector"* → got 6 results (via ddg)
 
-  - S&P 500, Nasdaq decline as Brent oil hits highest point since July (https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-10-2026)
+  - MARKET RECAP What a day, the S&P 500 gained over $650 ... (https://www.facebook.com/einsteinofwallstreet/videos/market-recap-what-a-day-the-sp-500-gained-over-650-billion-in-market-cap-and-is-/2482261358950827/)
 
-  - These stocks were the S&P 500, Nasdaq and Dow's top market ... (https://www.facebook.com/cnbc/posts/these-stocks-were-the-sp-500-nasdaq-and-dows-top-market-movers-for-the-day-septe/1475091711158884/)
+  - S&P 500 Financials | S&P Dow Jones Indices - S&P Global (https://www.spglobal.com/spdji/en/indices/equity/sp-500-financials-sector/)
 
-  - S&P 500 ends down as oil tops $100 per barrel - Reuters (https://www.reuters.com/business/wall-st-futures-muted-oil-tops-100-first-time-since-july-2026-09-09/)
+  - Sector Views: Monthly Stock Sector Outlook - Charles Schwab (https://www.schwab.com/learn/story/stock-sector-outlook)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
