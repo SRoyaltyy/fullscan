@@ -12,14 +12,14 @@
 
   - XLK: State Street® Technology Select Sector SPDR® ETF (https://www.ssga.com/us/en/intermediary/etfs/state-street-technology-select-sector-spdr-etf-xlk)
 
-  - XLK Stock Price – Technology Select Sector SPDR® ETF (https://www.morningstar.com/etfs/arcx/xlk/quote)
+  - XLK ETF Stock Price & Overview (https://stockanalysis.com/etf/xlk/)
 
-**Step 2 — Research.** The model wanted to know: *"stock market September 10 2026 close Nasdaq semiconductors"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"stock market September 10 2026 close Nasdaq S&P 500"* → got 6 results (via ddg)
 
-  - These stocks were the S&P 500, Nasdaq and Dow's top market ... (https://www.facebook.com/cnbc/posts/these-stocks-were-the-sp-500-nasdaq-and-dows-top-market-movers-for-the-day-septe/1475091711158884/)
+  - Closing milestones of the S&P 500 - Wikipedia (https://en.wikipedia.org/wiki/Closing_milestones_of_the_S&P_500)
 
-  - Stock market today: Dow, S&P 500, Nasdaq fall as chip stocks ... (https://finance.yahoo.com/markets/live/stock-market-today-tuesday-august-18-dow-sp-500-nasdaq-080822735.html)
+  - Stock market news for Sept. 8, 2026 - CNBC (https://www.cnbc.com/2026/09/07/stock-market-tuesday-live-updates.html)
 
-  - S&P 500, Nasdaq decline as Brent oil hits highest point since July (https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-10-2026)
+  - S&P 500 (^GSPC) Historical Data - Yahoo Finance (https://finance.yahoo.com/quote/^GSPC/history/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
