@@ -619,21 +619,39 @@ def test_day_open_explains_overnight_mark() -> None:
 
 
 def test_panel_is_current_requires_latest_session() -> None:
-    """A 09-08 panel is stale once 09-09 exists — no-fill is not a skip."""
+    """A 09-08 panel is stale once 09-09 has closed — no-fill is not a skip.
+
+    Pin to_date so a pre-open 09-10 book file cannot make a 09-09 panel look
+    stale, and so this test does not depend on the wall clock.
+    """
     raw = {
         "from_date": "2026-08-13",
         "to_date": "2026-09-08",
         "session_dates": ["2026-08-13", "2026-09-08"],
         "rows": [{}],
     }
-    assert fm.panel_is_current(raw, "2026-08-13", None) is False
+    assert fm.panel_is_current(raw, "2026-08-13", "2026-09-09") is False
     fresh = {
         "from_date": "2026-08-13",
         "to_date": "2026-09-09",
         "session_dates": ["2026-08-13", "2026-09-08", "2026-09-09"],
         "rows": [{}],
     }
-    assert fm.panel_is_current(fresh, "2026-08-13", None) is True
+    assert fm.panel_is_current(fresh, "2026-08-13", "2026-09-09") is True
+
+
+def test_session_has_closed_uses_et_close_not_next_preopen() -> None:
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    et = ZoneInfo("America/New_York")
+    morning = datetime(2026, 9, 10, 8, 30, tzinfo=et)
+    after = datetime(2026, 9, 10, 16, 10, tzinfo=et)
+    assert fm.session_has_closed("2026-09-09", now=morning) is True
+    assert fm.session_has_closed("2026-09-10", now=morning) is False
+    assert fm.session_has_closed("2026-09-10", now=after) is True
+    assert fm.last_closed_session(
+        "2026-08-13", cal=["2026-09-09", "2026-09-10"]
+    ) in ("2026-09-09", "2026-09-10")
 
 
 def test_morning_s_falls_back_to_predict_file() -> None:
@@ -1501,6 +1519,7 @@ if __name__ == "__main__":
     test_dash_payload_ships_every_book_and_features_high_return()
     test_day_open_explains_overnight_mark()
     test_panel_is_current_requires_latest_session()
+    test_session_has_closed_uses_et_close_not_next_preopen()
     test_morning_s_falls_back_to_predict_file()
     test_session_calendar_includes_completed_predict_day()
     test_silent_monday_marks_every_name()

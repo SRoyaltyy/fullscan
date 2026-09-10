@@ -163,7 +163,7 @@
 </details>
 <details>
 <summary>Start-date sustainability (would it still make money?)</summary>
-<p class="mut">If the recipe starts on day X and runs to the end, is the book still green? More YES = less 8-13 pothole dependence.</p>
+<p class="mut">If the recipe starts at the <b>09:30 open of day X</b>, how did the $10k book do through the last <b>finished</b> close? A session that has already closed (e.g. 9/9 while 9/10 is still pre-open) prints a preliminary open\u2192close %. An unopened morning is pending — not 0%.</p>
 <div id="starts"></div>
 </details>
 <details class="how">
@@ -173,7 +173,7 @@
   <li><b>Time.</b> Buy at the 09:30 open. Hold H sessions (entry day counts). Optional early exit at a later 09:30 if 🚨, last-bar red, or news🔴 prints that morning.</li>
   <li><b>Win rate.</b> Share of picks with horizon return &gt; 0 (long or short).</li>
   <li><b>$ days / average win vs loss.</b> Share of sessions whose <em>cash book</em> made money (leftover split, fees, whole shares), plus average closed-trade win % vs loss %.</li>
-  <li><b>Sustainability.</b> For every start date X, replay the cash book from X to the end. Count how often that path is still green. Cash-start <code>&lt;&lt; &lt; &gt; &gt;&gt;</code> is that replay: $10k and no lots on morning X, same hard-red / leftover / min-hold rules. Marks and the blotter stay as detailed as 8-13. It is not “add on top of the 8-13 book.” The investigator date follows this morning.</li>
+  <li><b>Sustainability.</b> For every start date X, replay the cash book from X's 09:30 open through the last session that has a 16:00 close. Count how often that path is still green. A start on 9/9 while 9/10 has not opened is the 9/9 open\u2192close book, labelled prelim. An unopened start date is pending, not 0%. Cash-start <code>&lt;&lt; &lt; &gt; &gt;&gt;</code> is that replay: $10k and no lots on morning X, same hard-red / leftover / min-hold rules. It is not “add on top of the 8-13 book.”</li>
   <li><b>Stock investigator.</b> Dropdown = names that sleeve actually bought. Date buttons = 09:30 that morning. A big BUY / SIT / NO badge says whether this recipe would take the name, plus the gates that fired or failed. E / R dots are beat-miss / upgrade-downgrade from the session-morning Finviz EPS Surprise when the print is already public (yday AMC / today BMO). A date-only stamp with no surprise number stays unknown — not green. Today's AMC is not used. Horizon % is hold-H from the 09:30 open. Cameras / coaches / news are quoted from repo files — never same-day Change%.</li>
   <li><b>Morning board.</b> Every name this recipe looked at that 09:30, ranked by its own rank key, plus would-be horizon % if bought here. <b>E</b> is the leak-free morning-export EPS surprise (beat / miss / unknown) — same number as the investigator chip. −N is red-camera count. Hit-rate tally covers BUY / NO / SIT and the ≤2 vs ≥3 red-camera split. Marks chips, blotter BUY rows, and the session bought list also print that E so a beat like INO +67.7% is visible without opening the investigator.</li>
   <li><b>−N / burst / green-news sweep.</b> Research overlays on the current cash-book leaders. A new gate is kept only if it beats flatten_h5 on the $10k book. If none do, current methods stay. Live flatten_robust is never changed.</li>
@@ -431,6 +431,35 @@ function explainOf(name){
 }
 function listHtml(items){
   return '<ul>'+(items||[]).map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>';
+}
+function lastClosed(){
+  if(typeof FMSim!=='undefined' && D.sim) return FMSim.lastClosedDate(D.sim);
+  const ds=D.dates||[];
+  return ds.length?ds[ds.length-1]:null;
+}
+function liveStartRow(name, date){
+  const baked=((D.starts||{})[name]||[]).find(r=>r.start===date);
+  const closed=lastClosed();
+  if(closed && date>closed){
+    return Object.assign({}, baked||{}, {start:date, pending:true, prelim:false, return_pct:null, made_money:false});
+  }
+  let row=baked?Object.assign({},baked):{start:date};
+  if(typeof FMSim!=='undefined' && D.sim && name){
+    const rec=recipeOf(name);
+    if(rec && !isCombo(rec)){
+      const book=FMSim.simulateBook(D.sim, rec, date, D.mornings||{});
+      if(book && book.daily && book.daily.length){
+        row.return_pct=book.total_ret_pct;
+        row.made_money=(book.total_ret_pct||0)>0;
+        row.n_sessions=book.daily.length;
+        row.final_equity=book.final_equity;
+        row.pending=false;
+      }
+    }
+  }
+  row.prelim=!!(closed && date<=closed && (D.dates||[]).length && closed<(D.dates||[])[(D.dates||[]).length-1]);
+  if(closed && date<=closed && (row.n_sessions||0)<2) row.prelim=true;
+  return row;
 }
 function startRows(){
   return (D.starts||{})[pickedName()] || [];
@@ -1165,12 +1194,18 @@ function renderStarts(){
     const rows = D.starts[s.name]||[];
     const by = Object.fromEntries(rows.map(r=>[r.start,r]));
     const chips = dates.map(d=>{
-      const r=by[d];
-      if(!r) return `<span class="pill mut">${esc(String(d).slice(5))} —</span>`;
+      const r=liveStartRow(s.name, d);
+      if(r.pending || r.return_pct==null && !r.n_sessions){
+        return `<span class="pill mut" title="session not closed">${esc(String(d).slice(5))} pending</span>`;
+      }
       const on=sp&&sp.start===d?'on':'';
-      return `<span class="pill ${on} ${r.made_money?'pos':'neg'}" data-start="${esc(d)}" style="cursor:pointer">${esc(String(d).slice(5))} ${r.made_money?'YES':'no'} ${num(r.return_pct,1)}</span>`;
+      const tag=r.prelim?' prelim':'';
+      const label=r.made_money?'YES':'no';
+      return `<span class="pill ${on} ${r.made_money?'pos':'neg'}" data-start="${esc(d)}" style="cursor:pointer">${esc(String(d).slice(5))} ${label} ${num(r.return_pct,1)}${tag}</span>`;
     }).join('');
-    return `<div class="day-card"><h4>${esc(s.name)} · ${s.start_green||0}/${s.start_n||0} YES</h4><div class="pills">${chips}</div></div>`;
+    const scored=dates.map(d=>liveStartRow(s.name,d)).filter(r=>!r.pending && r.return_pct!=null);
+    const yes=scored.filter(r=>r.made_money).length;
+    return `<div class="day-card"><h4>${esc(s.name)} · ${yes}/${scored.length} YES (closed sessions)</h4><div class="pills">${chips}</div></div>`;
   }).join('');
   document.querySelectorAll('#starts [data-start]').forEach(el=>{
     el.onclick=()=>{

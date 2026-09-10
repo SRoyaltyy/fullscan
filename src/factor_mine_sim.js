@@ -33,6 +33,37 @@
     }
     return Math.round(total * 10000) / 10000;
   }
+  function sessionHasClosed(date, now) {
+    now = now || new Date();
+    const parts = new Intl.DateTimeFormat("en-US", {
+      timeZone: "America/New_York", year: "numeric", month: "2-digit",
+      day: "2-digit", hour: "2-digit", minute: "2-digit", hourCycle: "h23"
+    }).formatToParts(now);
+    const get = t => parts.find(p => p.type === t).value;
+    const today = get("year") + "-" + get("month") + "-" + get("day");
+    if (!date) return false;
+    if (date < today) return true;
+    if (date > today) return false;
+    const hm = Number(get("hour")) * 60 + Number(get("minute"));
+    return hm >= 16 * 60 + 2;
+  }
+  function dateHasClose(pack, date) {
+    const tape = pack.tape || {};
+    for (const t of Object.keys(tape)) {
+      const bar = tape[t] && tape[t][date];
+      if (bar && bar[1] != null && Number.isFinite(Number(bar[1])) && Number(bar[1]) > 0)
+        return true;
+    }
+    return false;
+  }
+  function lastClosedDate(pack) {
+    const dates = pack.dates || [];
+    for (let i = dates.length - 1; i >= 0; i--) {
+      const d = dates[i];
+      if (dateHasClose(pack, d) || sessionHasClosed(d)) return d;
+    }
+    return dates.length ? dates[dates.length - 1] : null;
+  }
   function px(pack, ticker, date, which) {
     const bar = ((pack.tape || {})[ticker] || {})[date];
     if (!bar) return null;
@@ -535,7 +566,9 @@
   function simulateBook(pack, rec, start, mornings) {
     const fees = pack.fees || {};
     const calAll = pack.dates || [];
-    const cal = calAll.filter(d => !start || d >= start);
+    const lastClosed = lastClosedDate(pack);
+    const cal = calAll.filter(d =>
+      (!start || d >= start) && (!lastClosed || d <= lastClosed));
     const rowsBy = byDate(pack);
     const ix = rowIndex(pack);
     const capital = Number(pack.capital || 10000);
@@ -770,5 +803,6 @@
   global.FMSim = {
     matches, pickDay, rankScore, lookDay, holdReturn, simulateBook, orderFees,
     matchWhy, decisionWhy, hitTally, packRets,
+    sessionHasClosed, dateHasClose, lastClosedDate,
   };
 })(typeof window !== "undefined" ? window : globalThis);
