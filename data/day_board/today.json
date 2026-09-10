@@ -1,11 +1,11 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T06:39:11.164287-04:00",
+  "generated_at": "2026-09-10T06:39:13.502746-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 6,
-    "partial": 2,
+    "ok": 4,
+    "partial": 4,
     "fail": 0,
     "n": 8
   },
@@ -64,24 +64,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "general_predict",
-      "title": "General market predict",
-      "date": "2026-09-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-10T06:32:12.438225-04:00",
-      "files": [
-        {
-          "path": "01_daily/general/2026-09-10_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 12471,
-          "preview": "# Premarket Prediction \u2014 2026-09-10\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 SEVERE** | total score -13.275 (uncertainty multiplier \u00d70.9) | confidence 0.65\n>\n> **Good news vs bad news:** good +0 pts vs bad -14.75 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - China exports +25% y/y\n> - HY tight 2.67\n> - dollar soft 1m -1.01%\n> - Macy's Q2 EPS beat\n> - Nikkei +0.2%\n>\n> **Bad news driving this:**\n> - Iran attacks 10 ships / US sank 5 tankers (biggest wave)\n> - Brent >$102\n> - Warsh hawkish Sep hike ~55-60%\n> - VIX backwardation 1.079\n> - PPI today / CPI tomorrow binary\n>\n> **market uncertainty: **elevated** | VIX 16.52 | policy-uncertainty index 263.53 (1d -202.84)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight news & catalysts: -3.0 \u00d7 "
-        }
-      ],
-      "preview": "# Premarket Prediction \u2014 2026-09-10\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 SEVERE** | total score -13.275 (uncertainty multiplier \u00d70.9) | confidence 0.65\n>\n> **Good news vs bad news:** good +0 pts vs bad -14.75 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - China exports +25% y/y\n> - HY tight 2.67\n> - dollar soft 1m -1.01%\n> - Macy's Q2 EPS beat\n> - Nikkei +0.2%\n>\n> **Bad news driving this:**\n> - Iran attacks 10 ships / US sank 5 tankers (biggest wave)\n> - Brent >$102\n> - Warsh hawkish Sep hike ~55-60%\n> - VIX backwardation 1.079\n> - PPI today / CPI tomorrow binary\n>\n> **market uncertainty: **elevated** | VIX 16.52 | policy-uncertainty index 263.53 (1d -202.84)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight news & catalysts: -3.0 \u00d7 "
-    },
     {
       "key": "news_actions",
       "title": "News actions",
@@ -312,6 +294,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-09-10\n_Generated 2026-09-10T10:39:09 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Prior close **$108,616.66** \u00b7 09:30 **$108,616.66** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$108,616.66**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66** \u00b7 2026-09-10 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_over"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T06:39:13.021730-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-10.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10934903,
+          "preview": "11609 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11414966,
+          "preview": "11614 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11609 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11614 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
