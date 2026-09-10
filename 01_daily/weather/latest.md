@@ -14,14 +14,14 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| sector:Basic Materials | ⛅ neutral | medium | finviz sector median week -0.15% [tape] |
+| sector:Basic Materials | ⛅ neutral | medium | finviz sector median week -0.12% [tape] |
 | sector:Communication Services | 🌧️ hostile | medium | finviz sector median week -2.24% [tape] |
-| sector:Consumer Cyclical | 🌧️ hostile | medium | finviz sector median week -2.01% [tape] |
+| sector:Consumer Cyclical | 🌧️ hostile | medium | finviz sector median week -2.02% [tape] |
 | sector:Consumer Defensive | 🌧️ hostile | medium | finviz sector median week -2.97% [tape] |
 | sector:Energy | 🌤️ favorable | medium | news_judge SECTOR Energy [bullish] |
 | sector:Financial | ⛅ neutral | medium | finviz sector median week +0.08% [tape] |
 | sector:Healthcare | 🌤️ favorable | medium | news_judge SECTOR Healthcare [bullish] |
-| sector:Industrials | ⛅ neutral | medium | finviz sector median week +0.15% [tape] |
+| sector:Industrials | ⛅ neutral | medium | finviz sector median week +0.17% [tape] |
 | sector:Real Estate | ⛅ neutral | medium | finviz sector median week -1.14% [tape] |
 | sector:Technology | 🌤️ favorable | medium | news_judge SECTOR Technology [bullish] |
 | sector:Utilities | 🌧️ hostile | medium | news_judge SECTOR Utilities [bearish] |

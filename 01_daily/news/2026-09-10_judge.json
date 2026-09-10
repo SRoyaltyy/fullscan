@@ -1,0 +1,22 @@
+{
+ "risk_tilt": "off",
+ "macros": [
+  "hawkish",
+  "hawkish"
+ ],
+ "sector_tilts": {
+  "Energy": "bullish",
+  "Healthcare": "bullish",
+  "Technology": "bullish",
+  "Basic Materials": "mixed",
+  "Utilities": "bearish"
+ },
+ "tickers": {
+  "XLE": 2.5,
+  "XLK": 5.5,
+  "XLU": -7.0,
+  "B": 1.5
+ },
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=3\nMACRO risk-off: [bearish] Oil rally on Middle East tensions ahead of key inflation data pressures equities (session/1d-1w)\nMACRO rates: [hawkish] Fed Chair Warsh comments boost September rate hike expectations, pressuring gold and rate-sensitive sectors (session/1d-1w)\nSECTOR Energy: [bullish] Oil rally on geopolitical supply risk is a direct tailwind for XLE (object: XLE)\nSECTOR Healthcare: [bullish] AbbVie positive Phase 3 data and M&A is a sector-level catalyst, lifting XLV and IBB (object: XLV, IBB)\nSECTOR Technology: [bullish] Nvidia AI deal and Dell backlog confirm AI demand, supporting XLK and SMH (object: XLK, SMH)\nSECTOR Basic Materials: [mixed] Gold price conflict (surge vs. slide) creates high volatility; Barrick's move is a positive for GDX but a hawkish Fed is a headwind (object: XLB, GDX)\nSECTOR Utilities: [bearish] Duke Energy rate cut filing is a negative regulatory signal for XLU (object: XLU)\nINTERACTION: Fed path + gold price conflict is a single high-volatility rates cluster; do not double-count.\nWATCH: Ranking is contested by conflicting Fed signals; treat gold and rate-sensitive sectors as high-volatility, not directional.",
+ "date": "2026-09-10"
+}
