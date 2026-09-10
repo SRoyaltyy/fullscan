@@ -100,11 +100,21 @@ def status() -> None:
         print(f"file: {STORE_PATH} ({STORE_PATH.stat().st_size/1e6:.1f} MB)")
 
 
+class PriceStoreUnavailable(RuntimeError):
+    """yfinance is not importable in this environment.
+
+    A plain ``Exception`` on purpose: factor-mine's ``price ensure`` is
+    best-effort and guards with ``except Exception``. A ``SystemExit`` here
+    slipped through that guard and killed the Factor strategy mine job
+    (2026-09-10 13:17Z) with no traceback.
+    """
+
+
 def _yf_download(tickers: list[str], start: str, end: str) -> pd.DataFrame:
     try:
         import yfinance as yf
     except ImportError as e:
-        raise SystemExit(f"[price_store] yfinance required: {e}") from e
+        raise PriceStoreUnavailable(f"[price_store] yfinance required: {e}") from e
     if not tickers:
         return pd.DataFrame()
     try:
@@ -271,6 +281,8 @@ def fill_range(start: str, end: str, tickers: list[str] | None = None) -> None:
             if not len(part):
                 time.sleep(6)
                 part = _yf_download(batch, start, end)
+        except PriceStoreUnavailable:
+            raise  # no yfinance — every chunk would fail; let the caller skip
         except Exception as e:
             print(f"[price_store] fill chunk failed: {e}")
             part = pd.DataFrame()
@@ -522,4 +534,7 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except PriceStoreUnavailable as e:
+        raise SystemExit(str(e)) from e

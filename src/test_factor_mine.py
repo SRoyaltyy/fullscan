@@ -654,6 +654,49 @@ def test_session_has_closed_uses_et_close_not_next_preopen() -> None:
     ) in ("2026-09-09", "2026-09-10")
 
 
+def test_price_ensure_cannot_kill_the_mine() -> None:
+    """Missing yfinance must be a caught failure, not a silent exit(1).
+
+    Factor strategy mine 13:17Z 2026-09-10: ``price_store`` raised
+    ``SystemExit`` from inside ``run()``'s ``except Exception`` guard and the
+    job died after 'fill chunk 1/5' with no traceback. The workflow also
+    never installed yfinance, so this fired on every mine.
+    """
+    import sys
+    from pathlib import Path
+    from unittest import mock
+    from src import price_store as ps
+
+    with mock.patch.dict(sys.modules, {"yfinance": None}):
+        try:
+            ps._yf_download(["AAPL"], "2026-09-01", "2026-09-10")
+        except Exception as e:  # noqa: BLE001 — the point is that it IS one
+            assert isinstance(e, ps.PriceStoreUnavailable), type(e)
+            assert "yfinance" in str(e)
+        else:
+            raise AssertionError("expected PriceStoreUnavailable")
+        assert issubclass(ps.PriceStoreUnavailable, Exception)
+        assert not issubclass(ps.PriceStoreUnavailable, SystemExit)
+        # fill_range gives up at once rather than sleeping through every chunk
+        with mock.patch.object(ps, "_load_store", return_value=ps.pd.DataFrame()):
+            try:
+                ps.fill_range("2026-09-01", "2026-09-10", ["AAPL", "MSFT"])
+            except ps.PriceStoreUnavailable:
+                pass
+            else:
+                raise AssertionError("fill_range should surface the missing dep")
+    # And the workflow that runs the mine installs the dependency.
+    wf = (Path(__file__).resolve().parents[1] / ".github" / "workflows"
+          / "factor_mine.yml").read_text(encoding="utf-8")
+    install = [ln for ln in wf.splitlines() if "pip install" in ln]
+    assert install and all("yfinance" in ln for ln in install), install
+    # run()'s guard is a plain ``except Exception`` — keep it that way and
+    # keep price_store raising Exceptions, not BaseExceptions.
+    src = Path(fm.__file__).read_text(encoding="utf-8")
+    assert "ps.ensure_through(" in src
+    assert 'print(f"[factor-mine] price ensure skipped: {e}"' in src
+
+
 def test_morning_s_falls_back_to_predict_file() -> None:
     from src.factor_mine_book import morning_s
     s = morning_s({}, "2026-09-09")
@@ -1520,6 +1563,7 @@ if __name__ == "__main__":
     test_day_open_explains_overnight_mark()
     test_panel_is_current_requires_latest_session()
     test_session_has_closed_uses_et_close_not_next_preopen()
+    test_price_ensure_cannot_kill_the_mine()
     test_morning_s_falls_back_to_predict_file()
     test_session_calendar_includes_completed_predict_day()
     test_silent_monday_marks_every_name()
@@ -1541,4 +1585,4 @@ if __name__ == "__main__":
     test_match_why_and_decision()
     test_hit_tally_buy_sit_and_nneg()
     test_js_sim_matches_python_later_start()
-    print("47 factor-mine tests passed")
+    print("48 factor-mine tests passed")
