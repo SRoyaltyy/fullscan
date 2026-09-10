@@ -825,6 +825,31 @@
       "preview": "5903 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
     },
     {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T06:25:34.242408-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-10_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7648532,
+          "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AVO, CFFN, HSBC, SKM, KMI"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-10_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8486441,
+          "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SHEL, CFFN, CVI, SKM, EC"
+        }
+      ],
+      "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AVO, CFFN, HSBC, SKM, KMI \u00b7 2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SHEL, CFFN, CVI, SKM, EC"
+    },
+    {
       "key": "weather",
       "title": "Weather / regime",
       "date": "2026-09-10",
