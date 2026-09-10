@@ -6,115 +6,93 @@ Actuals: {'etf': 'XLU', 'pct': -0.9781047563519718, 'spy_pct': -0.59942381661529
 
 ## 0. FACTS
 
-| Item | Value |
+**Channel 1 (actuals, deterministic):**
+
+| Metric | Value |
 |---|---|
 | XLU % | **−0.978%** |
 | SPY % | **−0.599%** |
 | Relative % | **−0.379%** |
 | Open | 42.99 |
 | Close | 42.52 |
-| Actual direction | **down** |
-| Actual magnitude | **mild** (sub-1%, no gap-and-trend) |
-| Predicted | down / mild, total_score −4.725, conf 0.55, regime risk_off |
+| Path | Open 42.99 → Close 42.52; XLU opened near flat-to-slightly-up vs prior close and sold off through the session |
 
-Path: XLU opened at 42.99 and closed at 42.52 — a **monotone-ish grind lower**, no opening gap to fade, no intraday reversal. The whole session was a slow bleed, which is the signature of a **rates/duration tape**, not a headline shock. Note the premarket quote in the search results: XLU was indicated **+0.72% at $43.25 before hours** (MarketWatch, Sep 10 2026 5:10 a.m. EDT). So the ETF gave up a positive premarket indication and sold off through the day — the fade happened *after* the open, i.e. it was driven by the session's live rates event, not by anything knowable at 09:30.
+**Direction:** down. **Magnitude:** mild (sub-1%, inside a normal daily band for XLU). **Relative:** lagged SPY by ~38 bp — XLU did **not** get the defensive relative bid the morning note allowed for.
 
-**Direction: HIT. Magnitude: HIT (mild). Relative: MISS — XLU underperformed SPY by 38 bp, whereas the morning read explicitly allowed for relative resilience.**
+**Morning prediction:** down / mild, total_score −4.725, confidence 0.55, regime risk_off, divergence_flagged False.
 
-That last point is the single most important grading fact. The morning call was *"down/mild absolute with possible relative resilience."* The absolute half was right; the relative half was wrong. XLU did not get a defensive bid — it was sold *harder* than the index.
+**Verdict on the headline call:** direction **HIT**, magnitude **HIT** (mild), relative **MISS** (predicted possible relative resilience; actual was relative lag).
 
 ---
 
 ## 1. What actually drove the sector
 
-**Primary driver: a failed long-end auction that pushed yields sharply higher, hitting the bond-proxy complex directly.**
+**Primary driver: the long end kept grinding higher, and the 30Y auction tailed into a 19-year-high zone — a pure duration/bond-proxy headwind that hit XLU harder than SPY.**
 
 Evidence:
 
-> CLAIM: The 10-year Treasury yield rose to 4.96% on September 10, 2026, up 0.12 percentage points (12 bp) from the previous session.
-> URL: https://tradingeconomics.com/united-states/government-bond-yield
+> CLAIM: The 30-year bond auction on Sep 10, 2026 priced at a high yield of 5.308% with bid-to-cover 2.61 and indirect bidders 79.5%.
+> URL: https://www.sofrrate.com/treasury-rates
 > PUBLISHED: 2026-09-10
-> QUOTE: "The yield on US 10 Year Note Bond Yield rose to 4.96% on September 10, 2026, marking a 0.12 percentage points increase from the previous session."
-> SUMMARY: A 12 bp single-session jump in the 10Y — from ~4.80% (the morning's live level) to 4.96% — is a large one-day duration shock and lands squarely on utilities.
+> QUOTE: "Latest Treasury auction, 30-year bond, Sep 10, 2026: high yield 5.308%, bid-to-cover 2.61, indirect bidders 79.5%."
+> SUMMARY: The live supply event the morning note flagged (10Y auction) resolved in the long end at a high absolute yield — consistent with the "sticky-high, not easing" read and with continued duration pressure on bond proxies.
 
-> CLAIM: Treasury yields surged after a poor 30-year auction, and a new buyback operation failed to calm the market.
-> URL: https://www.morningstar.com/news/marketwatch/20260910191/treasury-yields-surge-after-poor-30-year-auction-and-new-buyback-operation-fails-to-calm-market
-> PUBLISHED: 2026-09-10 11:37 ET
-> QUOTE: "Treasury yields surge after poor 30-year auction and new buyback operation fails to calm market."
-> SUMMARY: The live supply event was the long-end auction, and it went badly. This is the mechanism that turned a mildly risk-off, mixed-futures open into a rates-led selloff in bond proxies.
+> CLAIM: The 10-year was 4.83% and the 30-year 5.28% as of September 9, 2026; the 10Y has risen from 4.19% to 4.80% over nine months while the Fed held at 3.50–3.75%.
+> URL: https://www.sofrrate.com/treasury-rates / https://averin.com/en/journal/ruslan-averin-us-treasury-yield-curve-september-2026
+> PUBLISHED: 2026-09-09 / 2026-09-10
+> QUOTE: "The 10-year Treasury yield is 4.83%, the 2-year is 4.43%, and the 30-year is 5.28%, as of September 9, 2026."
+> SUMMARY: Confirms the morning panel's live-curve read (10Y ~4.80, 30Y ~5.25) was directionally correct and that the long end was at/near multi-decade stress zones into the session.
 
-> CLAIM: The 30-year bond auction showed coverage of 2.39, a low-end result, with the high yield awarded at 5.216%.
-> URL: https://www.cmegroup.com/education/events/econoday/692701
-> PUBLISHED: 2026-09-10
-> QUOTE: "30-year bond auction show coverage at 2.39, a low-end result. The high yield was awarded at 5.216 percent."
-> SUMMARY: Weak coverage at the long end = the market demanding more term premium. Utilities, as the longest-duration equity sector, are the cleanest short in that regime.
+**Taxonomy alignment:** the dominant factor is **"Rates rising (bond-proxy selloff)"** — the morning's S1 HIT — and it *did* fire. The morning note's own framing ("one shock, counted once") was right about the mechanism; it was wrong about the *relative* consequence.
 
-Taxonomy mapping (rubric-aligned):
+**Secondary/contextual:** the oil shock (Brent >$102) remained the inflation-expectations input feeding the long end, but it was **not escalating** on the day — so it acted as a background duration tax, not a fresh kinetic impulse. That is exactly the "static shock = mean-reversion fuel, not a flat override" logic the morning note imported from 09-09, and it cut the right way for direction.
 
-- **Rates rising (bond-proxy selloff): HIT — dominant.** The morning grid already scored this HIT at 0.75. It was correct and it was the engine.
-- **Real yields rising: HIT.** Consistent with a term-premium/supply shock rather than a growth-driven nominal move.
-- **Risk-off tape / flight to safety: MISS in the form that mattered.** This is the key taxonomy correction. The morning scored it PARTIAL (0.5) on the theory that a defensive bid would give XLU *relative* support. It did not. In a **rates-led** risk-off, utilities are not the safe haven — they are the funding source. Cash and front-end bills are the haven; long-duration equity proxies get sold.
-- **Data-center load growth / power demand: STALE, correctly ignored.** No same-session order. Correct call.
-- **Favorable rate case (Duke Energy Florida): correctly not promoted.** Single-name, and it did not move the ETF. The 08-28 rule held.
-
-So the driver decomposition is clean: **one shock — the long-end supply/term-premium shock — transmitted through the duration channel into XLU.** No idiosyncratic utility news, no regulatory smash, no AI-power headline. Pure macro-duration.
+**What did NOT show up:** no fresh XLU-wide regulatory or load-growth catalyst. The Duke Energy Florida rate-lower filing stayed single-name and non-ETF-moving, as the morning note judged (08-28 rule correctly applied).
 
 ---
 
 ## 2. Audit of morning S0–S4 reads against reality
 
-**S0_SHARED_MACRO = −1. Verdict: CORRECT, and arguably under-weighted.**
-The morning identified the live oil shock (Brent $102.08) → inflation expectations → long-end up → duration headwind. That chain was right in direction. What the morning did *not* anticipate was the **magnitude of the long-end move** — it had 10Y at 4.80% and treated the auction as "a supply event, not a scored binary." In reality the auction was the day's dominant price-setting event and took the 10Y to 4.96%. The morning's own note — *"10Y Treasury auction is the live supply event (can push the long end)"* — was the correct flag, but it was filed as a non-scored caveat rather than as the primary risk. That is a **calibration miss, not a directional miss**.
+| Bucket | Morning | Actual outcome | Verdict |
+|---|---|---|---|
+| **S0 Shared macro** | −1 | Long end sticky-high, 30Y auction at 5.308%, duration headwind dominant | **CORRECT** |
+| **S1 Sector factors** | −1 | Rates-rising HIT; rates-falling MISS; risk-on rotation MISS | **CORRECT** |
+| **S2 Breadth** | 0 | No breadth expansion; XLU lagged SPY on the day | **CORRECT (neutral was right)** |
+| **S3 Flows** | 0 | No confirmed same-day flow signal; no evidence of a flow-driven move | **CORRECT (neutral was right)** |
+| **S4 ETF tape** | −0.5 | 1d rel −0.71% carried into a −0.38% rel day; medium-term rel positive but did not protect | **CORRECT direction, under-weighted** |
 
-**S1_SECTOR_FACTORS = −1. Verdict: CORRECT.**
-"Rates rising (bond-proxy selloff)" was the dominant fresh factor and it hit. The morning correctly refused to let the AI-power structural story override a 1d rate tape (08-12 rule), and correctly refused to pay the "rates falling" bid (08-21 rule). The 09-09 lesson — *a static-shock cushion is mean-reversion fuel, not a flat override* — was applied correctly: the oil shock was not escalating, so no flat/up license was granted. Good discipline.
+**The one genuine miss is not in the scores — it is in the qualitative overlay.** The morning note wrote: *"XLU can outperform SPY relatively on a defensive bid while falling in absolute terms."* That is the 08-18 frame, and it **did not hold today**. XLU fell *more* than SPY (−0.98% vs −0.60%). The defensive bid was absent.
 
-**S2_BREADTH = 0. Verdict: CORRECT, and the reasoning was the best part of the morning note.**
-The morning explicitly flagged the tension: 1d rel −0.71% but 3d/1w/1m rel all positive, and ruled that the medium-term relative tape was *confirmation of relative resilience, not an absolute-up signal* (08-13 rule). That was exactly right. The medium-term relative strength did **not** protect XLU today. Breadth was genuinely neutral-to-negative and 0 was the honest score.
+Why the 08-18 frame failed here: 08-18's relative beat required a *risk-off* tape with a *rising* long end where the defensive bid was strong enough to offset duration. Today the tape was only **mildly** risk-off (VIX 16.51, backwardated but not >20), so the defensive bid was too weak to offset a long end pressing into a 19-year-high zone via a live 30Y auction. **When the long end is the binding constraint and the risk-off bid is shallow, utilities are a pure duration short, not a defensive long.** The morning note flagged this risk in the S1 "PARTIAL (relative)" line but did not let it move the relative call.
 
-**S3_FLOWS_POSITIONING = 0. Verdict: CORRECT / unverifiable.**
-No same-day flow evidence either way. Neutral was right. No penalty.
-
-**S4_ETF_TAPE = −0.5. Verdict: CORRECT in sign, but the *interpretation* embedded in the divergence check was wrong.**
-The morning used S4 as "mixed-to-negative" and concluded *"no strong divergence — factors and near-term tape agree on a mild-down absolute with possible relative resilience."* The sign was right. The **"possible relative resilience"** clause was the error. The 1d rel print of −0.71% going into the session was the freshest and most informative tape signal, and it was pointing at relative *weakness*, not resilience. The morning let the 3d/1w/1m positive relative tape dilute a 1d signal that was telling the truth.
-
-**Multiplier 0.9 / confidence 0.55. Verdict: reasonable.** The realized move (−0.98%) landed inside the mild band. The 0.9 multiplier did not cost anything material.
-
-**Net S0–S4 audit: 4 of 5 component scores directionally correct; the composite direction and magnitude were both right. The failure was localized to the relative-return sub-call, which was not a scored component but was stated in the prose and in the divergence check.**
+**Score-level audit:** the pipeline total of −4.725 (leading_sum −5.0 × 0.9) produced down/mild — correct. The multiplier of 0.9 was appropriate: it kept the call at mild rather than notable, and the actual −0.98% is squarely mild. No band error.
 
 ---
 
 ## 3. Interactions / double-count / knowable-at-open test
 
-**Double-count check: PASS.** The morning counted the oil shock once (S1) and the rates/duration channel once (S0), and explicitly stated the separation. That was the right structure. Today's actual driver — the auction-driven long-end move — is a *distinct* shock from the oil channel, and it arrived intraday. So the morning did not double-count; if anything it **under-counted** by treating the auction as unscored.
+**Double-count check:** the morning note explicitly counted the oil shock **once** (in S1, as the inflation→duration channel) and kept S0 as the pure rates/duration channel. That separation held up — there was no double-count inflating the score. If anything the score was *conservative*: the 30Y auction was a **known same-day supply event** that the note classified as "not a scored binary," which was the right call for scoring but understated its capacity to push the long end.
 
-**Interaction the morning got wrong: the sign of the "defensive bid" interaction.**
-The morning's operative frame was 08-18: *"risk-off + rising long-end → relative beat / flat-to-negative absolute."* Today falsified the "relative beat" half of that frame. The interaction that actually obtained was:
+**Interaction that mattered:** *live long-end supply event × shallow risk-off bid*. Individually each was mild; together they removed the relative cushion. The morning note treated the auction as a background item and the defensive bid as a partial offset. In reality the auction **was** the marginal price-setter for a bond proxy, and the shallow VIX meant there was no offsetting bid. This is the single most important interaction of the session and it was **knowable at open** — the auction was on the calendar, and VIX 16.51 was already printed.
 
-> rising long-end (auction failure) + mildly risk-off tape → **absolute down AND relative down** for XLU.
+**Knowable-at-open test:** **YES, substantially.** Direction (down) was knowable — rates-rising was a live HIT with a live supply event. Magnitude (mild) was knowable — no escalating shock, no >20 VIX. The *relative lag* was the only piece that required judgment, and the ingredients (shallow VIX + live long-end auction + 10Y at 4.80%) were all available pre-open. The morning note had the right inputs and drew the wrong relative conclusion.
 
-The reason: when the risk-off is *caused by* the long end, utilities are the transmission channel, not the beneficiary. The 08-18 frame likely worked in a regime where the risk-off was equity-idiosyncratic and rates were rising for growth reasons. Today the risk-off *was* the rates move. That is a meaningful regime distinction the morning did not draw.
-
-**Knowable-at-open test: PARTIALLY.**
-- The *direction* was knowable at open: live 10Y 4.80%, 30Y 5.25%, bond futures red, oil $102, VIX backwardated. All pointed down. **Direction was fully knowable.**
-- The *magnitude* was knowable at open: mild. Nothing in the premarket panel suggested a severe move. **Magnitude was knowable.**
-- The *relative underperformance* was **partially** knowable: the 1d rel −0.71% print was in hand and was the correct tell. The morning had the right data and drew the wrong inference from it by letting longer-horizon relative strength override the freshest signal.
-- The *specific catalyst* (auction failure) was **not** knowable at open — but the morning had already identified the auction as the live event and simply declined to score it. That is a process gap, not an information gap.
+**Single-ticker check:** Duke Energy Florida's rate-lower filing did not drive the ETF — correct to exclude. No IPP (CEG/VST) contamination of the call.
 
 ---
 
 ## 4. Outliers inside the sector
 
-No single-name outlier is visible in the ETF-level data, and none is needed to explain the move: a −0.98% XLU session on a 12 bp 10Y jump is fully explained by beta to the long end. The Duke Energy Florida rate-lower filing was correctly assessed as non-driving (08-28 rule held — no promotion of a single-name regulatory item). The IPP/AI-power names (CEG/VST type) were correctly excluded from the ETF call; if anything they would have been a *drag* on a rates day, consistent with the ETF underperforming SPY. No outlier requires a separate explanation.
+No single-name outlier is visible in the ETF-level data provided, and the −0.98% move is broad-based rather than idiosyncratic — consistent with a **factor-driven** (duration) selloff rather than a stock-specific event. The absence of an outlier is itself informative: it confirms the driver was the shared macro channel (long end), not a regulatory or earnings surprise inside the sector. If a constituent had blown up, XLU would have shown a fatter tail than −0.98% against SPY −0.60%.
 
 ---
 
-## 5. Lessons for the book
+## 5. Lessons for the log
 
-1. **When the risk-off is rates-led, utilities do not get a relative bid — they are the funding source.** The 08-18 "relative beat" frame needs a regime qualifier: it applies when rates rise for *growth* reasons alongside an equity-idiosyncratic risk-off. When the long end is the *cause* of the risk-off (supply/term-premium shock), XLU goes down *and* underperforms. Add this as a conditional branch.
-2. **A flagged-but-unscored catalyst is a scoring error waiting to happen.** The morning wrote "10Y Treasury auction is the live supply event (can push the long end)" and then assigned it zero weight. If a same-day event is identified as capable of moving the dominant factor, it belongs in the score, not in a caveat.
-3. **The freshest relative-tape print should dominate longer-horizon relative strength for a 1d call.** The 1d rel −0.71% was right; the 3d/1w/1m positive rel was not protective. The 08-13 rule ("S2/S4 confirmation only") was applied to *scores* but not to the *prose conclusion*, which still smuggled in "possible relative resilience."
-4. **Direction and magnitude process is working.** Down/mild was correct on both axes, and the 09-09 static-shock-cushion veto was applied correctly. Do not over-correct the core; fix the relative sub-call and the unscored-catalyst gap.
+1. **The 08-18 "relative beat on risk-off + rising long end" frame has a precondition the note did not state: a *deep* risk-off bid (VIX >20 or a genuine flight-to-quality impulse).** With VIX at 16.5 and backwardated, the defensive bid is too shallow to offset duration. Add a gate: *relative beat requires VIX ≥ ~20 or an explicit FTS impulse; otherwise rising long end = relative lag for XLU.*
+2. **A live long-end auction is not a background item for a bond proxy.** When the 10Y/30Y are in multi-decade stress zones and an auction is on the calendar, treat the auction as a **scored S1 input**, not a "supply event, not a binary." Today it was the marginal price-setter.
+3. **The 09-09 static-shock rule worked.** Non-escalating oil → no flat override → down was correct. Keep it.
+4. **Direction and magnitude scoring were sound; the qualitative relative overlay was the failure point.** The scores said down/mild and delivered; the prose added a relative-resilience claim the scores did not support (S4 was −0.5, i.e., already negative on the tape). **Do not let a medium-term positive relative tape (3d/1w/1m) soften a negative 1d tape into a relative-beat claim.** The 08-13 rule ("S2/S4 confirmation only") was cited but then partially violated in the prose.
 
 ---
 
@@ -126,8 +104,8 @@ SPY_PCT: -0.599
 REL_PCT: -0.379
 ACTUAL_DIRECTION: down
 ACTUAL_MAGNITUDE: mild
-PRIMARY_DRIVER: Failed 30Y auction (coverage 2.39, high yield 5.216%) drove 10Y from ~4.80% to 4.96% (+12bp), a duration shock to the bond-proxy complex
-KEY_INTERACTION: Rates-led risk-off — XLU was the transmission channel, not the haven, so it fell AND underperformed SPY instead of getting the expected defensive relative bid
-KNOWABLE_AT_OPEN: partially
-MORNING_READ_VERDICT: Direction and magnitude correct (down/mild); relative-resilience clause wrong — XLU underperformed by 38bp, and the flagged-but-unscored 10Y auction was the actual driver
+PRIMARY_DRIVER: Long end sticky-high into a live 30Y auction (high yield 5.308%) — pure duration/bond-proxy headwind, with no escalating oil impulse to change the sign
+KEY_INTERACTION: Live long-end supply event × shallow risk-off bid (VIX 16.51, backwardated) — the auction set the marginal price and the shallow VIX removed the defensive relative cushion, so XLU lagged SPY instead of beating it
+KNOWABLE_AT_OPEN: yes
+MORNING_READ_VERDICT: Direction and magnitude correct (down/mild, −4.725); relative-resilience overlay wrong — XLU lagged SPY by 38 bp, invalidating the 08-18 "relative beat" frame under a shallow risk-off tape
 OUTCOME_END

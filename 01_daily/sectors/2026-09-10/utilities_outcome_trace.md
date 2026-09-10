@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"XLU utilities ETF September 10 2026 performance"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"XLU utilities ETF September 10 2026 close"* → got 6 results (via ddg)
 
-  - XLU: State Street® Utilities Select Sector SPDR® ETF (https://www.ssga.com/us/en/intermediary/etfs/state-street-utilities-select-sector-spdr-etf-xlu)
+  - XLU ETF Stock Price & Overview (https://stockanalysis.com/etf/xlu/)
 
-  - State Street Utilities Select Sector SPDR ETF (XLU) (https://finance.yahoo.com/quote/XLU/)
+  - XLU ETF Research | State Street Utilities Select Sector SPDR ETF ... (https://etfexplorer.com/etf/XLU)
 
-  - State Street® Utilities Select Sector SPDR® ETF (XLU) (https://www.morningstar.com/etfs/arcx/xlu/quote)
+  - XLU Holdings List - State Street Utilities Select Sector SPDR ETF (https://stockanalysis.com/etf/xlu/holdings/)
 
-**Step 2 — Research.** The model wanted to know: *"Treasury yields September 10 2026 10-year 30-year auction"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"Treasury yields September 10 2026 10-year 30-year"* → got 6 results (via ddg)
 
-  - [PDF] Tentative Auction Schedule (PDF) (https://home.treasury.gov/system/files/221/Tentative-Auction-Schedule.pdf)
+  - US Treasury Yields & Curve | 10-Year, 2-Year & DV01 Calculator (https://www.sofrrate.com/treasury-rates)
 
-  - Treasury Auction Yield Hits Highest in 25 Years (https://www.crfb.org/blogs/treasury-auction-yield-hits-highest-25-years)
+  - Market Yield on U.S. Treasury Securities at 10-Year Constant ...Daily Treasury Rates | U.S. Department of the TreasuryUS Treasury Yield Curve September 2026: 10-Year at 4.80%, 30 ...Treasury Yield Curve Today: September 10, 2026 │ Rates ...Treasury Yields (Constant Maturity): Chart, Current Level ...US Treasury Auction Results: 10, 20 and 30-Year Bid-to-Cover (https://fred.stlouisfed.org/series/DGS10/)
 
-  - US 10 Year Treasury Note Yield - Quote - Chart - Historical Data (https://tradingeconomics.com/united-states/government-bond-yield)
+  - Daily Treasury Rates | U.S. Department of the Treasury (https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/TextView.aspx?data=yieldAll)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
