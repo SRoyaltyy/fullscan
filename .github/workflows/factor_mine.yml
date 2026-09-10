@@ -117,7 +117,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install
-        run: pip install pandas pyarrow openpyxl
+        run: pip install pandas pyarrow openpyxl yfinance requests
       - name: Unit tests
         run: python -m src.test_factor_mine
       - name: Mine recipes (cash book)
