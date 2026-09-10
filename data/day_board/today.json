@@ -1,94 +1,46 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T06:35:25.327650-04:00",
+  "generated_at": "2026-09-10T06:35:28.164206-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "counts": {
-    "ok": 4,
-    "partial": 4,
+    "ok": 5,
+    "partial": 3,
     "fail": 0,
     "n": 8
   },
-  "buy_1d": [
-    {
-      "ticker": "DK",
-      "score": 0.7235371972123463
-    },
-    {
-      "ticker": "NVT",
-      "score": 0.6214520900438006
-    }
-  ],
-  "sell_1d": [
-    {
-      "ticker": "FLO",
-      "score": -0.14687017791312862
-    },
-    {
-      "ticker": "LUCD",
-      "score": -0.08765945279590572
-    },
-    {
-      "ticker": "XPOF",
-      "score": -0.3926929468603128
-    },
-    {
-      "ticker": "BRBR",
-      "score": -0.24595338360280944
-    },
-    {
-      "ticker": "AMC",
-      "score": -0.1705054020502248
-    },
-    {
-      "ticker": "MMYT",
-      "score": -0.24340305674734802
-    },
-    {
-      "ticker": "KHC",
-      "score": -0.3773080966613924
-    },
-    {
-      "ticker": "GIS",
-      "score": -0.3341146164635364
-    }
-  ],
-  "flatten": {
-    "said": "0 priced buys \u00b7 cash $108,616.66 \u00b7 morning S missing",
+  "buy_1d": [],
+  "sell_1d": [],
+  "flatten": {},
+  "general": {
+    "said": "DOWN  -13.275",
     "bullets": [
-      "0 priced buys",
-      "cash $108,616.66",
-      "morning S missing"
+      "bad: Iran attacks 10 ships / US sank 5 tankers (biggest wave)",
+      "bad: Brent >$102",
+      "bad: Warsh hawkish Sep hike ~55-60%",
+      "good: China exports +25% y/y",
+      "good: HY tight 2.67"
+    ],
+    "score": "-13.275",
+    "direction": "down"
+  },
+  "sectors": {
+    "said": "1 up / 9 down / 1 flat",
+    "bullets": [
+      "XLB DOWN -9.0",
+      "XLC DOWN -3.6",
+      "XLY DOWN -7.5",
+      "XLP DOWN -2.9",
+      "XLE UP +8.5",
+      "XLF DOWN -6.1",
+      "XLV DOWN -6.5",
+      "XLI DOWN -4.0",
+      "XLRE DOWN -6.8",
+      "XLK FLAT -0.5",
+      "XLU DOWN -4.7"
     ]
   },
-  "general": {},
-  "sectors": {},
   "lands": [
-    {
-      "key": "events",
-      "title": "Event scanner (primary)",
-      "date": "2026-09-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-10T06:30:00.096673-04:00",
-      "files": [
-        {
-          "path": "01_daily/events/2026-09-10_events.json",
-          "ok": true,
-          "reason": "",
-          "size": 21938,
-          "preview": "20 events \u00b7 August PPI (pipeline inflation print) | ECB rate decision \u2014 25bp hike to 2.50% deposit rate expected | Oracle FQ1 2027 earnings (after close) | Adobe FQ3 2026 earnings (after close) | Macy's fiscal Q2 2026 earnings (pre-open) | August CPI (last major print before FOMC)"
-        },
-        {
-          "path": "01_daily/events/2026-09-10_events.md",
-          "ok": true,
-          "reason": "",
-          "size": 8161,
-          "preview": "# Event Scan \u2014 2026-09-10\n- events tracked: **20** (via repair, repaired)\n- uncertainty: **elevated**\n- summary: The scan is dominated by a live September FOMC (Sept 16) with hike odds near 55\u201360% after a blowout August payrolls print, a hot PPI today and CPI tomorrow, and an oil shock from the US\u2013Iran tanker war keeping Brent above $100. Central bank decisions from the ECB (today), BOJ (Sept 16\u201317) and BoE (Sept 17) cluster around the Fed, while a heavy earnings slate (Oracle, Adobe, Macy's, FedEx) and the Sept 24 Trump\u2013Xi summit add idiosyncratic and geopolitical risk. North American trade tensions are escalating with Canada's counter-tariffs in force and US Section 338 import bans due Sept 29, and Sept 18 quadruple witching amplifies positioning risk around the FOMC."
-        }
-      ],
-      "preview": "20 events \u00b7 August PPI (pipeline inflation print) | ECB rate decision \u2014 25bp hike to 2.50% deposit rate expected | Oracle FQ1 2027 earnings (after close) | Adobe FQ3 2026 earnings (after close) | Macy's fiscal Q2 2026 earnings (pre-open) | August CPI (last major print before FOMC) \u00b7 # Event Scan \u2014 2026-09-10\n- events tracked: **20** (via repair, repaired)\n- uncertainty: **elevated**\n- summary: The scan is dominated by a live September FOMC (Sept 16) with hike odds near 55\u201360% after a blowout August payrolls print, a hot PPI today and CPI tomorrow, and an oil shock from the US\u2013Iran tanker war keeping Brent above $100. Central bank decisions from the ECB (today), BOJ (Sept 16\u201317) and BoE (Sept 17) cluster around the Fed, while a heavy earnings slate (Oracle, Adobe, Macy's, FedEx) and the Sept 24 Trump\u2013Xi summit add idiosyncratic and geopolitical risk. North American trade tensions are escalating with Canada's counter-tariffs in force and US Section 338 import bans due Sept 29, and Sept 18 quadruple witching amplifies positioning risk around the FOMC."
-    },
     {
       "key": "news_actions",
       "title": "News actions",
@@ -298,6 +250,24 @@
         }
       ],
       "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T06:35:27.816009-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-10/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 7125,
+          "preview": "keys: date, generated_at, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, sectors"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

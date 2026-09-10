@@ -1,14 +1,12 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T06:35:25.327650-04:00",
+  "generated_at": "2026-09-10T06:35:28.164206-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
-  "blockers": [
-    "MISSING Sector board JSON `01_daily/sectors/2026-09-10/_board.json` \u2014 missing"
-  ],
+  "ranker_ready": true,
+  "blockers": [],
   "counts": {
-    "ok": 4,
-    "partial": 4,
+    "ok": 5,
+    "partial": 3,
     "fail": 0,
     "n": 8
   },
@@ -105,7 +103,7 @@
       "inputs_ready": true,
       "n_req_ok": 16,
       "n_req": 20,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 2,
       "files": [
         {
@@ -203,9 +201,9 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-09-10/_board.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 7125
         },
         {
           "key": "qc",
@@ -334,17 +332,18 @@
           "size": 9907
         }
       ],
-      "said": "general DOWN  -13.275 \u00b7 news 8 items",
+      "said": "general DOWN  -13.275 \u00b7 sectors 1 up / 9 down / 1 flat \u00b7 news 8 items",
       "bullets": [
         "bad: Iran attacks 10 ships / US sank 5 tankers (biggest wave)",
         "bad: Brent >$102",
         "bad: Warsh hawkish Sep hike ~55-60%",
         "good: China exports +25% y/y",
         "good: HY tight 2.67",
-        "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
-        "Gold prices slide more than 3% after Fed Chair Kevin Warsh\u2019s Jackson Hole comments boost September U.S. rate hike expectations",
-        "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year",
-        "Another rate hike, just for insurance: Five questions for the ECB"
+        "XLB DOWN -9.0",
+        "XLC DOWN -3.6",
+        "XLY DOWN -7.5",
+        "XLP DOWN -2.9",
+        "XLE UP +8.5"
       ]
     },
     {
@@ -465,10 +464,10 @@
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
       "status": "PARTIAL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 3,
       "files": [
         {
@@ -485,9 +484,9 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-09-10/_board.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 7125
         },
         {
           "key": "in_actions",
@@ -593,8 +592,8 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-09-10 not in dashboard dates (last=2026-09-09)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-10)",
           "size": 4539835
         }
       ],
@@ -607,9 +606,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -628,8 +627,8 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-09-10 not in dashboard dates (last=2026-09-09)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-10)",
           "size": 4539835
         },
         {
@@ -656,60 +655,37 @@
     }
   ],
   "selections": {
-    "buy_1d": [
-      {
-        "ticker": "DK",
-        "score": 0.7235371972123463
-      },
-      {
-        "ticker": "NVT",
-        "score": 0.6214520900438006
-      }
-    ],
-    "sell_1d": [
-      {
-        "ticker": "FLO",
-        "score": -0.14687017791312862
-      },
-      {
-        "ticker": "LUCD",
-        "score": -0.08765945279590572
-      },
-      {
-        "ticker": "XPOF",
-        "score": -0.3926929468603128
-      },
-      {
-        "ticker": "BRBR",
-        "score": -0.24595338360280944
-      },
-      {
-        "ticker": "AMC",
-        "score": -0.1705054020502248
-      },
-      {
-        "ticker": "MMYT",
-        "score": -0.24340305674734802
-      },
-      {
-        "ticker": "KHC",
-        "score": -0.3773080966613924
-      },
-      {
-        "ticker": "GIS",
-        "score": -0.3341146164635364
-      }
-    ],
-    "flatten": {
-      "said": "0 priced buys \u00b7 cash $108,616.66 \u00b7 morning S missing",
+    "buy_1d": [],
+    "sell_1d": [],
+    "flatten": {},
+    "general": {
+      "said": "DOWN  -13.275",
       "bullets": [
-        "0 priced buys",
-        "cash $108,616.66",
-        "morning S missing"
+        "bad: Iran attacks 10 ships / US sank 5 tankers (biggest wave)",
+        "bad: Brent >$102",
+        "bad: Warsh hawkish Sep hike ~55-60%",
+        "good: China exports +25% y/y",
+        "good: HY tight 2.67"
+      ],
+      "score": "-13.275",
+      "direction": "down"
+    },
+    "sectors": {
+      "said": "1 up / 9 down / 1 flat",
+      "bullets": [
+        "XLB DOWN -9.0",
+        "XLC DOWN -3.6",
+        "XLY DOWN -7.5",
+        "XLP DOWN -2.9",
+        "XLE UP +8.5",
+        "XLF DOWN -6.1",
+        "XLV DOWN -6.5",
+        "XLI DOWN -4.0",
+        "XLRE DOWN -6.8",
+        "XLK FLAT -0.5",
+        "XLU DOWN -4.7"
       ]
     },
-    "general": {},
-    "sectors": {},
     "news": {
       "said": "8 items",
       "bullets": [
@@ -1769,6 +1745,24 @@
         }
       ],
       "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T06:35:27.816009-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-10/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 7125,
+          "preview": "keys: date, generated_at, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, sectors"
     }
   ],
   "href": {
