@@ -126,11 +126,27 @@ declare -A UP=()       # path -> origin/main blob ("" when absent)
 declare -A TAKE=()     # path -> blob to land this attempt
 declare -a CAND=()
 
+# 2026-09-09: the stash-based land left `<<<<<<< Updated upstream` /
+# `>>>>>>> Stashed changes` inside 01_daily/_ecs_clock.md on main. A
+# conflict-marked file is never a valid artifact — refuse to land it.
+has_conflict_markers() {
+  case "$1" in
+    *.md|*.json|*.html|*.csv|*.txt|*.yml|*.yaml|*.py|*.sh|*.js) ;;
+    *) return 1 ;;
+  esac
+  grep -q -E '^<<<<<<< ' -- "$1" 2>/dev/null \
+    && grep -q -E '^>>>>>>> ' -- "$1" 2>/dev/null
+}
+
 add_candidate() {
   local f="$1"
   [ -z "$f" ] && return 0
   [ -f "$f" ] || return 0            # never land deletions / dirs / symlinks
   [ -L "$f" ] && return 0
+  if has_conflict_markers "$f"; then
+    echo "[safe-push] WARN: $f has git conflict markers — not landing it"
+    return 0
+  fi
   if [ -z "${OURS[$f]+x}" ]; then
     OURS["$f"]=""
     CAND+=("$f")

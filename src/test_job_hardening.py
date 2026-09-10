@@ -809,6 +809,39 @@ def test_safe_git_push_keeps_dated_ranker_on_conflict() -> None:
     assert "finviz_2026-09-09.csv" in text
 
 
+def test_safe_git_push_refuses_conflict_marked_files() -> None:
+    """01_daily/_ecs_clock.md reached main with `<<<<<<< Updated upstream`."""
+    import subprocess
+    import tempfile
+    text = (ROOT / "scripts" / "safe_git_push.sh").read_text(encoding="utf-8")
+    assert "has git conflict markers — not landing it" in text
+    start = text.index("has_conflict_markers() {")
+    fn = text[start: text.index("\n}\n", start) + 3]
+
+    def check(name: str, body: str) -> bool:
+        with tempfile.TemporaryDirectory() as td:
+            p = os.path.join(td, name)
+            with open(p, "w", encoding="utf-8") as fh:
+                fh.write(body)
+            r = subprocess.run(
+                ["bash", "-c", fn + '\nhas_conflict_markers "$1"', "_", p],
+                capture_output=True, text=True, timeout=20)
+            return r.returncode == 0
+
+    bad = ("# ECS clock status\n\n<<<<<<< Updated upstream\n- generated: a\n"
+           "=======\n- generated: b\n>>>>>>> Stashed changes\n")
+    assert check("_ecs_clock.md", bad)
+    assert check("day.json", '{"a": 1}\n<<<<<<< HEAD\n{"a": 2}\n>>>>>>> x\n')
+    # A markdown rule / setext heading is not a conflict.
+    assert not check("note.md", "# Title\n=======\nbody\n")
+    assert not check("essay.md", "quote: <<<<<<< not at col 0\n")
+    # Binary-ish artefacts are never scanned (no false positives on .csv.gz).
+    assert not check("dump.parquet", "<<<<<<< a\n>>>>>>> b\n")
+    # The clock file on the branch itself is clean.
+    clock = (ROOT / "01_daily" / "_ecs_clock.md").read_text(encoding="utf-8")
+    assert "<<<<<<<" not in clock and ">>>>>>>" not in clock
+
+
 def test_preopen_harden_halt_reverted() -> None:
     """2026-09-08 HALT must not stay on for tomorrow's unattended run."""
     orch = (WF / "daily_orchestrator.yml").read_text(encoding="utf-8")
@@ -978,6 +1011,7 @@ def main() -> None:
         test_ubuntu_postclose_skips_grok_and_keeps_runner_home,
         test_persist_dir_falls_back_when_gha_unwritable,
         test_safe_git_push_keeps_dated_ranker_on_conflict,
+        test_safe_git_push_refuses_conflict_marked_files,
         test_ubuntu_preopen_not_blocked_by_queued_ecs,
         test_preopen_harden_halt_reverted,
         test_incremental_land_and_day_board,
