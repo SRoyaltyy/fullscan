@@ -1,15 +1,16 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T13:24:02.242793-04:00",
+  "generated_at": "2026-09-10T01:57:38.627918-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 6,
-    "partial": 2,
+    "ok": 7,
+    "partial": 1,
     "fail": 0,
     "n": 8
   },
   "dates": [
+    "2026-09-09_tickets",
     "2026-09-09",
     "2026-09-08",
     "2026-09-04"

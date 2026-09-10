@@ -1,12 +1,12 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T13:24:02.242793-04:00",
+  "generated_at": "2026-09-10T01:57:38.627918-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 6,
-    "partial": 2,
+    "ok": 7,
+    "partial": 1,
     "fail": 0,
     "n": 8
   },
@@ -80,7 +80,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 86399
+          "size": 87494
         },
         {
           "key": "digest_md",
@@ -89,7 +89,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11379
+          "size": 12026
         }
       ],
       "said": "",
@@ -113,7 +113,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 86399
+          "size": 87494
         },
         {
           "key": "in_baseline",
@@ -158,7 +158,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 12027
+          "size": 13574
         },
         {
           "key": "research_json",
@@ -203,7 +203,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7106
+          "size": 7270
         },
         {
           "key": "qc",
@@ -364,7 +364,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 86399
+          "size": 87494
         },
         {
           "key": "weather",
@@ -444,7 +444,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 86399
+          "size": 87494
         },
         {
           "key": "dossiers",
@@ -467,7 +467,7 @@
       "inputs_ready": true,
       "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 2,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -486,7 +486,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 7106
+          "size": 7270
         },
         {
           "key": "in_actions",
@@ -504,7 +504,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 86399
+          "size": 87494
         },
         {
           "key": "in_judge",
@@ -513,7 +513,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 12027
+          "size": 13574
         },
         {
           "key": "in_weather",
@@ -585,16 +585,16 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 1795
+          "size": 1790
         },
         {
           "key": "dashboard",
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-09-09 not in dashboard dates (last=2026-09-08)",
-          "size": 3693862
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-09)",
+          "size": 4539835
         }
       ],
       "said": "215 rows",
@@ -606,9 +606,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -627,9 +627,9 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-09-09 not in dashboard dates (last=2026-09-08)",
-          "size": 3693862
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-09)",
+          "size": 4539835
         },
         {
           "key": "paper",
@@ -638,7 +638,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 1795
+          "size": 1790
         },
         {
           "key": "pages",
@@ -736,11 +736,11 @@
       }
     ],
     "flatten": {
-      "said": "0 priced buys \u00b7 0 lots \u00b7 cash $107,448.18",
+      "said": "0 priced buys \u00b7 0 lots \u00b7 cash $108,616.66",
       "bullets": [
         "0 priced buys",
         "0 lots",
-        "cash $107,448.18"
+        "cash $108,616.66"
       ]
     },
     "general": {
@@ -791,24 +791,6 @@
     }
   },
   "lands": [
-    {
-      "key": "news_judge",
-      "title": "News judge",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T07:40:25.863822-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-09_judge.json",
-          "ok": true,
-          "reason": "",
-          "size": 1252,
-          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
-        }
-      ],
-      "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
-    },
     {
       "key": "map_heat_research",
       "title": "Map heat morning delta refresh",
@@ -2817,6 +2799,45 @@
         }
       ],
       "preview": "raw=155 usable=15 single=30 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | August CPI (pre-FOMC inflation print) | S&P 500, Dow End Lower As Middle East Tensions Spur Oil Rally Ahead Of Key Infla | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 \u00b7 # News Parse v2 \u2014 2026-09-09T13:24:01.439883-04:00\nWindow\u224824h | raw=155 | usable=15 | single_name=30 | noise_dropped=110\nusable polarity={'+': 3, '-': 3, 'mixed': 0, 'neutral': 9}"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T01:57:37.707072-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-09_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 87494,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-09_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 12063,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-09\n_Generated 2026-09-10T01:57:37.591520-04:00 \u00b7 export=data/exports/finviz_2026-09-09.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-09.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11414966,
+          "preview": "11614 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11414966,
+          "preview": "11614 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-09\n_Generated 2026-09-10T01:57:37.591520-04:00 \u00b7 export=data/exports/finviz_2026-09-09.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11614 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11614 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
