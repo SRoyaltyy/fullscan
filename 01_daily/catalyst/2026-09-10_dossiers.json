@@ -1,0 +1,208 @@
+{
+  "date": "2026-09-10",
+  "generated_at": "2026-09-10T07:07:09.983288-04:00",
+  "max_n": 8,
+  "routing": "Grok \u2192 DeepSeek",
+  "grok": true,
+  "deepseek_fallback": true,
+  "gemini": false,
+  "n_targets": 8,
+  "n_ok": 1,
+  "targets": [
+    {
+      "ticker": "ORCL",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "CENX",
+      "role": "override_captain",
+      "why": "OVERRIDE card Aluminum"
+    },
+    {
+      "ticker": "CSTM",
+      "role": "override_captain",
+      "why": "OVERRIDE card Aluminum"
+    },
+    {
+      "ticker": "SLVM",
+      "role": "override_captain",
+      "why": "OVERRIDE card Paper & Paper Products"
+    },
+    {
+      "ticker": "NMAX",
+      "role": "override_captain",
+      "why": "OVERRIDE card Broadcasting"
+    },
+    {
+      "ticker": "FUBO",
+      "role": "override_captain",
+      "why": "OVERRIDE card Broadcasting"
+    },
+    {
+      "ticker": "KSS",
+      "role": "override_captain",
+      "why": "OVERRIDE card Department Stores"
+    },
+    {
+      "ticker": "AIN",
+      "role": "override_captain",
+      "why": "OVERRIDE card Textile Manufacturing"
+    }
+  ],
+  "dossiers": [
+    {
+      "ticker": "ORCL",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 4 parse failure"
+    },
+    {
+      "ticker": "CENX",
+      "role": "override_captain",
+      "why": "OVERRIDE card Aluminum",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "CSTM",
+      "role": "override_captain",
+      "why": "OVERRIDE card Aluminum",
+      "net_signal": "Neutral",
+      "conviction": 1,
+      "search_backend": "deepseek_fallback",
+      "catalyst_stack": "Constellium delivered a strong Q1 2026 earnings beat on 2026-04-29 with a 128% EPS surprise, followed by a Q2 2026 beat on 2026-07-29 that crushed estimates and raised full-year guidance on 31% revenue growth. UBS initiated coverage with a buy rating and $38 price target on 2026-05-05, reinforcing the bullish fundamental narrative. However, insider selling via Form 144 filings on 2026-05-11 and 2026-05-14 created an insider-earnings divergence, and shares fell despite the Q2 beat as the earnings call presentation on 2026-08-01 signaled technical weakness. Most recently, on 2026-09-10, a geopolitical article highlighting US aluminum supply risk and an aluminum price drop drove a 6% decline, pressuring the stock.",
+      "key_assumption": "The Q1/Q2 2026 earnings beats and guidance raise are genuine fundamental improvements, but their positive impact is largely offset by insider selling, technical weakness, and the September 2026 aluminum price/geopolitical headwind, leaving the stock in a neutral risk/reward position near $27.48.",
+      "n_pos": 3,
+      "n_neg": 4,
+      "top_hits": [
+        {
+          "type": "negative",
+          "taxonomy": "Geopolitical event that hurts sector (sanctions, conflict disrupting supply chain)",
+          "event_date": "2026-09-10",
+          "headline": "Pentagon War Game Exposed a Critical US Aluminum Risk Months Before Iran Attacks",
+          "weight": 10,
+          "confidence": 75
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+          "event_date": "2026-07-29",
+          "headline": "\"Constellium (CSTM) Crushes Q2 2026 Estimates, Raises Full-Year Guidance\"",
+          "weight": 9,
+          "confidence": 90
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings guidance raise",
+          "event_date": "2026-07-29",
+          "headline": "\"Constellium (CSTM) Crushes Q2 2026 Estimates, Raises Full-Year Guidance\"",
+          "weight": 8,
+          "confidence": 85
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Insider selling (especially by CEO/CFO, or clustered sales)",
+          "event_date": "2026-05-11",
+          "headline": "\"Constellium SE (NYSE: CSTM) Form 144 \u2014 26,661 shares via JPM\"",
+          "weight": 8,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Analyst upgrade/PT increase",
+          "event_date": "2026-05-05",
+          "headline": "\"5/5/2026 \u2013 Constellium is now covered by UBS Group AG. They set a 'buy' rating and a $38.00 price target\"",
+          "weight": 6,
+          "confidence": 85
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Technical breakdown (below support, 'death cross')",
+          "event_date": "2026-08-01",
+          "headline": "\"Constellium SE 2026 Q2 - Results - Earnings Call Presentation (NYSE:CSTM) 2026-08-01\"",
+          "weight": 6,
+          "confidence": 80
+        }
+      ],
+      "error": null
+    },
+    {
+      "ticker": "SLVM",
+      "role": "override_captain",
+      "why": "OVERRIDE card Paper & Paper Products",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 4 parse failure"
+    },
+    {
+      "ticker": "NMAX",
+      "role": "override_captain",
+      "why": "OVERRIDE card Broadcasting",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "FUBO",
+      "role": "override_captain",
+      "why": "OVERRIDE card Broadcasting",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 2 parse failure"
+    },
+    {
+      "ticker": "KSS",
+      "role": "override_captain",
+      "why": "OVERRIDE card Department Stores",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "AIN",
+      "role": "override_captain",
+      "why": "OVERRIDE card Textile Manufacturing",
+      "error": "skipped: step deadline"
+    }
+  ]
+}
