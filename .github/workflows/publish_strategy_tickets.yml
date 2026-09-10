@@ -1,0 +1,84 @@
+name: Publish strategy tickets
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_date:
+        description: "YYYY-MM-DD (empty = today ET)"
+        required: false
+        default: ""
+  workflow_run:
+    workflows:
+      - "Stock Book ALL (one-shot)"
+      - "Pre-Open ALL (predictive one-shot)"
+    types: [completed]
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: publish-strategy-tickets
+  cancel-in-progress: true
+
+jobs:
+  tickets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pandas pyarrow openpyxl
+      - name: Apply pending ticket patches if present
+        run: |
+          set +e
+          if [ -d patches/strategy_tickets ]; then
+            for p in patches/strategy_tickets/*.patch; do
+              echo apply "$p"
+              patch -p1 --forward < "$p" || true
+            done
+          fi
+          python3 -m py_compile src/strategy_tickets.py src/publish_live_boards.py
+      - name: Write tickets
+        run: |
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          python3 -m src.strategy_tickets --date "$DATE" --write
+          python3 -m src.publish_live_boards --date "$DATE" --write --no-extras || true
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("data/day_board/today_strategies.json")
+          d = json.loads(p.read_text()) if p.exists() else {}
+          print("date", d.get("date"), "n", d.get("n"), "ok", d.get("n_ok"))
+          st = d.get("strategies") or {}
+          for name in list(st)[:20]:
+              s = st[name]
+              print(f"  {name:28} {str(s.get('status')):12} buy={s.get('buy')} sell={s.get('sell')}")
+          print("total strategies", len(st))
+          PY
+          test -s data/day_board/today_strategies.json
+          test -s dashboard/factor-mine/strategy_tickets.json
+      - name: Push tickets
+        run: |
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/day_board/strategy_tickets.json \
+                  data/day_board/*_strategy_tickets.json \
+                  data/day_board/today_strategies.json \
+                  data/factor_mine/strategy_tickets.json \
+                  dashboard/factor-mine/strategy_tickets.json \
+                  dashboard/factor-mine/today_strategies.json \
+                  data/day_board/today.json \
+                  dashboard/factor-mine/today.json \
+                  src/strategy_tickets.py src/publish_live_boards.py \
+                  src/book_suggestions.py src/factor_mine_dash.html \
+                  .github/workflows/factor_mine.yml || true
+          git commit -m "auto: strategy tickets $(TZ=America/New_York date +%F)" || echo No changes
+          git pull --rebase origin main || true
+          git push origin main
