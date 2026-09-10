@@ -2117,6 +2117,10 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float,
         ov = r.get("overnight_delta")
         sess = r.get("session_delta")
         oeq = r.get("open_equity")
+        if ov is not None and abs(float(ov)) < 0.005:
+            ov = 0.0
+        if sess is not None and abs(float(sess)) < 0.005:
+            sess = 0.0
         ov_cls = ("good" if (ov or 0) > 0 else "bad" if (ov or 0) < 0 else "")
         sess_cls = ("good" if (sess or 0) > 0 else "bad" if (sess or 0) < 0 else "")
         held = _html.escape(r.get("overnight_names") or "—")
