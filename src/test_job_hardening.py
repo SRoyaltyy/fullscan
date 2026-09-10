@@ -974,8 +974,63 @@ def test_postclose_pushes_after_each_llm_layer() -> None:
     assert "last_assistant(str(path))" in heat
 
 
+def _py312_only_fstrings(path: Path) -> list[int]:
+    """Lines where an f-string reuses its own quote character inside ``{}``.
+
+    That is legal on Python 3.12+ (PEP 701) but a SyntaxError on the 3.10
+    interpreter the ubuntu Pre-Open ALL job runs.  On 3.12 the tokenizer
+    emits FSTRING_START/END tokens, so we can spot the offence without an
+    older interpreter; on <3.12 the file would not even import, so we just
+    compile it.
+    """
+    import io
+    import tokenize
+
+    src = path.read_text(encoding="utf-8", errors="replace")
+    fs_start = getattr(tokenize, "FSTRING_START", None)
+    if fs_start is None:
+        compile(src, str(path), "exec")
+        return []
+    fs_end = tokenize.FSTRING_END
+    bad: list[int] = []
+    quotes: list[str] = []
+    for tok in tokenize.generate_tokens(io.StringIO(src).readline):
+        if tok.type == fs_start:
+            q = tok.string.lstrip("rbfRBF")
+            q = q[:3] if q[:3] in ('"""', "'''") else q[:1]
+            if q in quotes and len(q) == 1:
+                bad.append(tok.start[0])
+            quotes.append(q)
+        elif tok.type == fs_end:
+            if quotes:
+                quotes.pop()
+        elif tok.type == tokenize.STRING and quotes:
+            q = tok.string.lstrip("rbuRBU")
+            q = q[:3] if q[:3] in ('"""', "'''") else q[:1]
+            if len(q) == 1 and q in quotes:
+                bad.append(tok.start[0])
+    return sorted(set(bad))
+
+
+def test_sources_parse_on_python_310() -> None:
+    """The ubuntu Pre-Open runs Python 3.10; 09-10's sleeve card died on 3.12-only f-strings."""
+    offenders: list[str] = []
+    for sub in ("src", "collectors", "scripts", "dashboard"):
+        d = ROOT / sub
+        if not d.is_dir():
+            continue
+        for p in sorted(d.rglob("*.py")):
+            lines = _py312_only_fstrings(p)
+            if lines:
+                offenders.append(f"{p.relative_to(ROOT)}:{','.join(map(str, lines))}")
+    assert not offenders, "3.12-only nested-quote f-strings: " + "; ".join(offenders)
+    live = (ROOT / "src" / "sleeve_merge_live.py").read_text(encoding="utf-8")
+    assert "f'{h.get('pct')" not in live
+
+
 def main() -> None:
     tests = [
+        test_sources_parse_on_python_310,
         test_grok_only_default_is_off,
         test_http_500_does_not_trip_breaker,
         test_401_does_trip_breaker_then_deepseek,

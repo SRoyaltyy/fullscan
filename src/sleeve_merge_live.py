@@ -817,6 +817,8 @@ def today_panel_html(card: dict) -> str:
         for h in holds:
             yday = h.get("yday_px") if h.get("yday_px") is not None else h.get("last_px")
             opx = h.get("open_px")
+            pct = h.get("pct")
+            pct_td = "—" if pct is None else f"{pct:+.2f}%"
             out.append(
                 f"<tr><th>{_html.escape(str(h.get('ticker') or ''))}</th>"
                 f"<td>{_html.escape(str(h.get('sleeve') or ''))}</td>"
@@ -824,7 +826,7 @@ def today_panel_html(card: dict) -> str:
                 f"<td>{'—' if yday is None else f'${float(yday):.2f}'}</td>"
                 f"<td>{'—' if opx is None else f'${float(opx):.2f}'}</td>"
                 f"{_signed_td(h.get('overnight'))}"
-                f"<td>{'—' if h.get('pct') is None else f'{h.get('pct'):+.2f}%'}</td>"
+                f"<td>{pct_td}</td>"
                 f"<td>${h.get('entry_px') or 0:.2f}</td>"
                 f"<td>{_html.escape(str(h.get('entry_date') or ''))}</td></tr>")
         return "".join(out)
@@ -835,13 +837,15 @@ def today_panel_html(card: dict) -> str:
                     "no session marks — cash only</td></tr>")
         out = []
         for m in marks:
+            opx_td = "—" if m.get("open_px") is None else f"${float(m['open_px']):.2f}"
+            cpx_td = "—" if m.get("close_px") is None else f"${float(m['close_px']):.2f}"
             out.append(
                 f"<tr><th>{_html.escape(str(m.get('ticker') or ''))}</th>"
                 f"<td>{_html.escape(str(m.get('sleeve') or ''))}</td>"
                 f"<td>{_html.escape(str(m.get('held') or ''))}</td>"
                 f"<td>{m.get('shares_open') or 0}→{m.get('shares_close') or 0}</td>"
-                f"<td>{'—' if m.get('open_px') is None else f'${float(m['open_px']):.2f}'}</td>"
-                f"<td>{'—' if m.get('close_px') is None else f'${float(m['close_px']):.2f}'}</td>"
+                f"<td>{opx_td}</td>"
+                f"<td>{cpx_td}</td>"
                 f"{_signed_td(m.get('overnight'))}"
                 f"{_signed_td(m.get('session'))}"
                 f"{_signed_td(m.get('day'))}</tr>")
