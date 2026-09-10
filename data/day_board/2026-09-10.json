@@ -1,6 +1,6 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T06:27:19.610571-04:00",
+  "generated_at": "2026-09-10T06:29:27.959621-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -10,8 +10,8 @@
     "MISSING News judge MD `01_daily/news/2026-09-10_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 5,
-    "partial": 2,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
@@ -85,7 +85,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 87494
+          "size": 87698
         },
         {
           "key": "digest_md",
@@ -94,7 +94,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 12026
+          "size": 12007
         }
       ],
       "said": "",
@@ -118,7 +118,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87494
+          "size": 87698
         },
         {
           "key": "in_baseline",
@@ -363,7 +363,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87494
+          "size": 87698
         },
         {
           "key": "weather",
@@ -371,8 +371,8 @@
           "path": "01_daily/weather/2026-09-10_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9301 vix=calm yields=flat",
-          "size": 9301
+          "reason": "sectors=11 bytes=9306 vix=calm yields=flat",
+          "size": 9306
         }
       ],
       "said": "favorable 3 \u00b7 hostile 4 \u00b7 neutral 4",
@@ -389,7 +389,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -397,9 +397,9 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-10_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=2660",
+          "size": 7648530
         },
         {
           "key": "ab_enriched",
@@ -443,7 +443,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87494
+          "size": 87698
         },
         {
           "key": "dossiers",
@@ -462,11 +462,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 2,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -503,7 +503,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87494
+          "size": 87698
         },
         {
           "key": "in_judge",
@@ -520,8 +520,8 @@
           "path": "01_daily/weather/2026-09-10_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9301 vix=calm yields=flat",
-          "size": 9301
+          "reason": "sectors=11 bytes=9306 vix=calm yields=flat",
+          "size": 9306
         },
         {
           "key": "in_ab",
@@ -546,36 +546,36 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-09-10_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=5116",
+          "size": 816328
         },
         {
           "key": "book_json",
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-10_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "horizons=5 names=215",
+          "size": 1478803
         },
         {
           "key": "book_md",
           "name": "Stock book MD",
           "path": "01_daily/2026-09-10_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 82814
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-10_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 585
         },
         {
           "key": "paper",
@@ -592,7 +592,7 @@
           "path": "dashboard/index.html",
           "role": "optional",
           "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-10)",
+          "reason": "live-book poller + 2026-09-10_suggestions.json (2026-09-10)",
           "size": 4539835
         }
       ],
@@ -606,7 +606,7 @@
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
       "status": "OK",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
@@ -617,9 +617,9 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-10_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "horizons=5 names=215",
+          "size": 1478803
         },
         {
           "key": "dash_html",
@@ -627,7 +627,7 @@
           "path": "dashboard/index.html",
           "role": "required",
           "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-10)",
+          "reason": "live-book poller + 2026-09-10_suggestions.json (2026-09-10)",
           "size": 4539835
         },
         {
@@ -654,9 +654,78 @@
     }
   ],
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
-    "flatten": {},
+    "buy_1d": [
+      {
+        "ticker": "DK",
+        "score": 0.7676150933453574
+      },
+      {
+        "ticker": "CVI",
+        "score": 0.8598705207645321
+      },
+      {
+        "ticker": "NVT",
+        "score": 0.6602379889983204
+      },
+      {
+        "ticker": "NEOV",
+        "score": 0.5785701544406248
+      },
+      {
+        "ticker": "UGP",
+        "score": 0.7187933041687551
+      },
+      {
+        "ticker": "KN",
+        "score": 0.7952767982942439
+      },
+      {
+        "ticker": "DINO",
+        "score": 0.35726924159914264
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "GIS",
+        "score": -0.3341001658515066
+      },
+      {
+        "ticker": "TRIP",
+        "score": -0.16826568406580067
+      },
+      {
+        "ticker": "FLO",
+        "score": -0.1222907142973265
+      },
+      {
+        "ticker": "LUCD",
+        "score": -0.0880680462040191
+      },
+      {
+        "ticker": "ENHA",
+        "score": -0.16044577008982702
+      },
+      {
+        "ticker": "XPOF",
+        "score": -0.4191095195977543
+      },
+      {
+        "ticker": "CCL",
+        "score": -0.17231832075162723
+      },
+      {
+        "ticker": "BKNG",
+        "score": -0.16337878916174325
+      }
+    ],
+    "flatten": {
+      "said": "0 priced buys \u00b7 cash $108,616.66 \u00b7 morning S missing",
+      "bullets": [
+        "0 priced buys",
+        "cash $108,616.66",
+        "morning S missing"
+      ]
+    },
     "general": {},
     "sectors": {},
     "news": {
@@ -1440,6 +1509,31 @@
         }
       ],
       "preview": "raw=118 usable=8 single=24 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u2019s Jackson Hole commen | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB | Gold price surge drives Franco-Nevada 6.55% higher on Aug 19 \u00b7 # News Parse v2 \u2014 2026-09-10T06:27:16.743109-04:00\nWindow\u224848h | raw=118 | usable=8 | single_name=24 | noise_dropped=86\nusable polarity={'+': 2, '-': 3, 'mixed': 0, 'neutral': 3}"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T06:29:27.471114-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-10_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9306,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -0.125, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.02, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 1.1099999999999999, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.08, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.52, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 0.17, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-10_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5029,
+          "preview": "# Weather report \u2014 2026-09-10\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -0.125, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.02, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 1.1099999999999999, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.08, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.52, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 0.17, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-10\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
