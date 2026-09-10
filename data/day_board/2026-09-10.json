@@ -1102,6 +1102,59 @@
       "date": "2026-09-10",
       "ok": true,
       "pushed": true,
+      "at": "2026-09-10T06:26:06.870494-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-10_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1478803,
+          "preview": "1d BUY DK, CVI, NVT, NEOV, UGP, KN, DINO \u00b7 SELL GIS, TRIP, FLO, LUCD, ENHA, XPOF, CCL, BKNG"
+        },
+        {
+          "path": "data/stock_book/2026-09-10_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-10_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2594,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-10_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12335,
+          "preview": "2026-09-10 BUY DK, CVI, NVT, NEOV, UGP, KN, DINO \u00b7 SELL GIS, TRIP, FLO, LUCD, ENHA, XPOF, CCL, BKNG"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12335,
+          "preview": "2026-09-10 BUY DK, CVI, NVT, NEOV, UGP, KN, DINO \u00b7 SELL GIS, TRIP, FLO, LUCD, ENHA, XPOF, CCL, BKNG"
+        },
+        {
+          "path": "01_daily/2026-09-10_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 83951,
+          "preview": "# Stock book \u2014 2026-09-10\n_Generated 2026-09-10T06:26:03.490521-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY DK, CVI, NVT, NEOV, UGP, KN, DINO \u00b7 SELL GIS, TRIP, FLO, LUCD, ENHA, XPOF, CCL, BKNG \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-10 BUY DK, CVI, NVT, NEOV, UGP, KN, DINO \u00b7 SELL GIS, TRIP, FLO, LUCD, ENHA, XPOF, CCL, BKNG \u00b7 2026-09-10 BUY DK, CVI, NVT, NEOV, UGP, KN, DINO \u00b7 SELL GIS, TRIP, FLO, LUCD, ENHA, XPOF, CCL, BKNG \u00b7 # Stock book \u2014 2026-09-10\n_Generated 2026-09-10T06:26:03.490521-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
       "at": "2026-09-10T06:26:07.154709-04:00",
       "files": [
         {

@@ -62,31 +62,6 @@
   "sectors": {},
   "lands": [
     {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-09-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-10T06:25:46.222338-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-10_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 87494,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-09-10_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 12063,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-10\n_Generated 2026-09-10T06:21:49.449608-04:00 \u00b7 export=data/exports/finviz_2026-09-09.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-10\n_Generated 2026-09-10T06:21:49.449608-04:00 \u00b7 export=data/exports/finviz_2026-09-09.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-    },
-    {
       "key": "map_heat",
       "title": "Map heat tables",
       "date": "2026-09-10",
@@ -217,6 +192,59 @@
         }
       ],
       "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AVO, CFFN, SKM, HSBC, KMI \u00b7 2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, SHEL, EC, SKM, CVI"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T06:26:06.870494-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-10_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1478803,
+          "preview": "1d BUY DK, CVI, NVT, NEOV, UGP, KN, DINO \u00b7 SELL GIS, TRIP, FLO, LUCD, ENHA, XPOF, CCL, BKNG"
+        },
+        {
+          "path": "data/stock_book/2026-09-10_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-10_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2594,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-10_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12335,
+          "preview": "2026-09-10 BUY DK, CVI, NVT, NEOV, UGP, KN, DINO \u00b7 SELL GIS, TRIP, FLO, LUCD, ENHA, XPOF, CCL, BKNG"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12335,
+          "preview": "2026-09-10 BUY DK, CVI, NVT, NEOV, UGP, KN, DINO \u00b7 SELL GIS, TRIP, FLO, LUCD, ENHA, XPOF, CCL, BKNG"
+        },
+        {
+          "path": "01_daily/2026-09-10_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 83951,
+          "preview": "# Stock book \u2014 2026-09-10\n_Generated 2026-09-10T06:26:03.490521-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY DK, CVI, NVT, NEOV, UGP, KN, DINO \u00b7 SELL GIS, TRIP, FLO, LUCD, ENHA, XPOF, CCL, BKNG \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-10 BUY DK, CVI, NVT, NEOV, UGP, KN, DINO \u00b7 SELL GIS, TRIP, FLO, LUCD, ENHA, XPOF, CCL, BKNG \u00b7 2026-09-10 BUY DK, CVI, NVT, NEOV, UGP, KN, DINO \u00b7 SELL GIS, TRIP, FLO, LUCD, ENHA, XPOF, CCL, BKNG \u00b7 # Stock book \u2014 2026-09-10\n_Generated 2026-09-10T06:26:03.490521-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     },
     {
       "key": "stock_book",
