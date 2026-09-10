@@ -1,6 +1,6 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T06:27:17.053934-04:00",
+  "generated_at": "2026-09-10T06:27:19.610571-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -654,81 +654,22 @@
     }
   ],
   "selections": {
-    "buy_1d": [
-      {
-        "ticker": "DK",
-        "score": 0.7676150933453574
-      },
-      {
-        "ticker": "CVI",
-        "score": 0.8598705207645321
-      },
-      {
-        "ticker": "NVT",
-        "score": 0.6602379889983204
-      },
-      {
-        "ticker": "NEOV",
-        "score": 0.5785701544406248
-      },
-      {
-        "ticker": "UGP",
-        "score": 0.7187933041687551
-      },
-      {
-        "ticker": "KN",
-        "score": 0.7952767982942439
-      },
-      {
-        "ticker": "DINO",
-        "score": 0.35726924159914264
-      }
-    ],
-    "sell_1d": [
-      {
-        "ticker": "GIS",
-        "score": -0.3341001658515066
-      },
-      {
-        "ticker": "TRIP",
-        "score": -0.16826568406580067
-      },
-      {
-        "ticker": "FLO",
-        "score": -0.1222907142973265
-      },
-      {
-        "ticker": "LUCD",
-        "score": -0.0880680462040191
-      },
-      {
-        "ticker": "ENHA",
-        "score": -0.16044577008982702
-      },
-      {
-        "ticker": "XPOF",
-        "score": -0.4191095195977543
-      },
-      {
-        "ticker": "CCL",
-        "score": -0.17231832075162723
-      },
-      {
-        "ticker": "BKNG",
-        "score": -0.16337878916174325
-      }
-    ],
-    "flatten": {
-      "said": "0 priced buys \u00b7 cash $108,616.66 \u00b7 morning S missing",
-      "bullets": [
-        "0 priced buys",
-        "cash $108,616.66",
-        "morning S missing"
-      ]
-    },
+    "buy_1d": [],
+    "sell_1d": [],
+    "flatten": {},
     "general": {},
     "sectors": {},
-    "news": {},
+    "news": {
+      "said": "8 items",
+      "bullets": [
+        "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
+        "Gold prices slide more than 3% after Fed Chair Kevin Warsh\u2019s Jackson Hole comments boost September U.S. rate hike expectations",
+        "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year",
+        "Another rate hike, just for insurance: Five questions for the ECB",
+        "Gold price surge drives Franco-Nevada 6.55% higher on Aug 19",
+        "UBS upgrades Lockheed Martin to Buy from Neutral and raises its price target to $674, citing stronger-than-expected long-term missile and defense program growth."
+      ]
+    },
     "weather": {
       "said": "favorable 3 \u00b7 hostile 4 \u00b7 neutral 4",
       "bullets": [
@@ -1481,7 +1422,7 @@
       "date": "2026-09-10",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-10T06:27:16.751306-04:00",
+      "at": "2026-09-10T06:27:19.335582-04:00",
       "files": [
         {
           "path": "01_daily/news/2026-09-10_parsed.json",
