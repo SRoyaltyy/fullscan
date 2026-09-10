@@ -209,10 +209,11 @@ def install(ca) -> None:
                 parsed = json.loads(match.group())
             except Exception:
                 return grid
-        if not isinstance(parsed, dict):
+        parsed = ca.as_object(parsed, "new_hits", "corrected_hits")
+        if not parsed:
             return grid
-        new_hits = parsed.get("new_hits") or []
-        corrected = parsed.get("corrected_hits") or []
+        new_hits = [h for h in (parsed.get("new_hits") or []) if isinstance(h, dict)]
+        corrected = [c for c in (parsed.get("corrected_hits") or []) if isinstance(c, dict)]
         for corr in corrected:
             tax = corr.get("taxonomy")
             for entry in grid:
@@ -279,7 +280,8 @@ def install(ca) -> None:
         print(f"  📋 Step 1 extracted {len(raw_events)} new raw events (after window)")
 
         try:
-            context_profile = ca.parse_json(step2_raw)
+            context_profile = ca.as_object(ca.parse_json(step2_raw),
+                                           "sensitivity_profile")
         except Exception as e:
             print(f"  ❌ Step 2 parse failed: {e}")
             return {"error": "Step 2 parse failure", "raw": step2_raw[:500]}
@@ -288,6 +290,8 @@ def install(ca) -> None:
         # swapping search so the original function is not invoked (it still
         # hits SearXNG). We finish synthesis here.
         sensitivity = context_profile.get("sensitivity_profile", {})
+        if not isinstance(sensitivity, dict):
+            sensitivity = {}
         weighted_taxonomy = {}
         for cat, prof in sensitivity.items():
             base = ca.CATALYST_WEIGHTS.get(cat, 5)
@@ -318,12 +322,16 @@ def install(ca) -> None:
                                    ca.json.dumps(snapshot, indent=2, default=str))
         final_raw = call_llm(prompt4, f"Finalize {full_name}.", 0.1, 25000, False, f"CATALYST STEP4 {ticker}")
         try:
-            final_result = ca.parse_json(final_raw)
+            final_result = ca.as_object(ca.parse_json(final_raw),
+                                        "catalyst_grid", "net_signal")
+            if not final_result:
+                raise ValueError("no object with catalyst_grid/net_signal")
         except Exception as e:
             print(f"  ❌ Step 4 parse failed: {e}")
             return {"error": "Step 4 parse failure", "raw": final_raw[:500]}
 
         grid = final_result.get("catalyst_grid", []) or []
+        grid = [g for g in grid if isinstance(g, dict)]
         grid = await run_catcher_pass(full_name, ticker, ca.CUTOFF_DATE, grid,
                                       weighted_taxonomy,
                                       final_result.get("net_signal", "?"),

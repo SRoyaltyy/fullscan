@@ -253,10 +253,40 @@ def test_news_actions_survives_db_timeout_with_local_headlines() -> None:
         news_parse.rows_from_local_files = orig_files  # type: ignore[assignment]
 
 
+def test_db_budget_shrinks_to_the_step_deadline() -> None:
+    """news_parse has a 120s ceiling; 4 x 25s queries must not eat it."""
+    import os
+
+    orig_env = os.environ.get(db.step_deadline.ENV)
+    orig_url = db.config.DATABASE_URL
+    orig_ms = os.environ.get("FULLSCAN_DB_STATEMENT_TIMEOUT_MS")
+    os.environ.pop("FULLSCAN_DB_STATEMENT_TIMEOUT_MS", None)
+    try:
+        os.environ.pop(db.step_deadline.ENV, None)
+        assert db._statement_timeout_ms() == 20_000
+        os.environ[db.step_deadline.ENV] = f"{db.time.time() + 42:.0f}"
+        # 42s left - 30s reserve -> ~12s budget (10-12 depending on clock)
+        assert 5_000 <= db._statement_timeout_ms() <= 12_000
+        os.environ[db.step_deadline.ENV] = f"{db.time.time() + 20:.0f}"
+        assert db._statement_timeout_ms() == 5_000        # floor
+        db.config.DATABASE_URL = "postgresql://x"
+        db._down_in_proc = ""
+        assert db._conn() is None                           # no dial <40s left
+    finally:
+        db.config.DATABASE_URL = orig_url
+        if orig_env is None:
+            os.environ.pop(db.step_deadline.ENV, None)
+        else:
+            os.environ[db.step_deadline.ENV] = orig_env
+        if orig_ms is not None:
+            os.environ["FULLSCAN_DB_STATEMENT_TIMEOUT_MS"] = orig_ms
+
+
 if __name__ == "__main__":
     test_recent_news_empty_first_variant_still_reads_second()
     test_recent_news_timeout_jumps_to_last_limit()
     test_unreachable_pooler_dials_once_then_is_remembered()
     test_query_budget_is_enforced_client_side()
     test_news_actions_survives_db_timeout_with_local_headlines()
-    print("5 tests passed")
+    test_db_budget_shrinks_to_the_step_deadline()
+    print("6 tests passed")

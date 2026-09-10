@@ -86,6 +86,34 @@ def test_verdict_prompt_live_uses_today_not_none() -> None:
         ca.TODAY, ca.LOOKBACK_START = orig
 
 
+def test_object_followed_by_prose_is_a_dict() -> None:
+    """09-02..09-04: 0/8 dossiers every morning — DeepSeek closed each
+    Step 2/4 object with a sentence, the salvage returned [obj] and the
+    caller's `.get` blew up on a list."""
+    raw = ('Here is the profile:\n'
+           '{"ticker": "NUE", "sensitivity_profile": '
+           '{"Contract win/expansion": {"multiplier": 1.2, "rationale": "x"}}}'
+           '\n\nNote: sources checked.')
+    parsed = ca.parse_json(raw)
+    assert isinstance(parsed, dict)
+    assert parsed["sensitivity_profile"]["Contract win/expansion"]["multiplier"] == 1.2
+    raw4 = ('{"ticker": "NUE", "catalyst_grid": [{"taxonomy": "Earnings beat", '
+            '"status": "HIT"}], "net_signal": "Bullish", "conviction": 7}\nDone.')
+    final = ca.parse_json(raw4)
+    assert isinstance(final, dict) and final["net_signal"] == "Bullish"
+    # Arrays stay arrays (events), truncated or not.
+    assert isinstance(ca.parse_json('[{"a": 1}, {"b": 2}]  trailing'), list)
+
+
+def test_as_object_picks_the_dict_a_step_expects() -> None:
+    assert ca.as_object({"x": 1}) == {"x": 1}
+    assert ca.as_object([{"noise": 1}, {"sensitivity_profile": {}}],
+                        "sensitivity_profile") == {"sensitivity_profile": {}}
+    assert ca.as_object([{"only": 1}], "catalyst_grid") == {"only": 1}
+    assert ca.as_object("text", "catalyst_grid") == {}
+    assert ca.as_object([1, 2], "catalyst_grid") == {}
+
+
 if __name__ == "__main__":
     test_parse_truncated_array()
     test_parse_fenced_complete()
@@ -93,4 +121,6 @@ if __name__ == "__main__":
     test_search_years_are_window_not_hardcoded_2025()
     test_step1_prompt_names_the_window()
     test_verdict_prompt_live_uses_today_not_none()
-    print("6 tests passed")
+    test_object_followed_by_prose_is_a_dict()
+    test_as_object_picks_the_dict_a_step_expects()
+    print("8 tests passed")

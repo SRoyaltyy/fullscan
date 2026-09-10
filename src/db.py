@@ -6,7 +6,7 @@ import tempfile
 import threading
 import time
 
-from . import config
+from . import config, step_deadline
 
 # 2026-09-08: variant-1 full-table CASE regex scan hit statement_timeout
 # (~5.5 min) and news_parse wrote empty → judge/actions cascade miss.
@@ -24,11 +24,26 @@ class NewsDbError(RuntimeError):
         super().__init__(detail or reason)
 
 
+# Keep this much of the step for parsing + writing + landing the file
+# after the last query returns (news_parse's ceiling is 120s).
+DB_STEP_RESERVE_S = 30
+
+
 def _statement_timeout_ms() -> int:
     raw = (os.environ.get("FULLSCAN_DB_STATEMENT_TIMEOUT_MS") or "").strip()
     if raw.isdigit():
-        return max(5_000, int(raw))
-    return _DEFAULT_STATEMENT_TIMEOUT_MS
+        ms = max(5_000, int(raw))
+    else:
+        ms = _DEFAULT_STATEMENT_TIMEOUT_MS
+    # Shrink to what the step can still afford; floor 5s so a query is
+    # still attempted (the caller decides whether to dial at all).
+    return step_deadline.bounded(ms // 1000, reserve=DB_STEP_RESERVE_S,
+                                 floor=5) * 1000
+
+
+def _step_can_afford(need_s: int) -> bool:
+    rem = step_deadline.remaining_s()
+    return rem is None or rem >= need_s
 
 
 def _is_timeout(err: BaseException) -> bool:
@@ -138,6 +153,9 @@ def _conn():
         print(f"[db] skipped — pooler unreachable earlier this run ({why}); "
               "continuing without Postgres")
         return None
+    if not _step_can_afford(DB_STEP_RESERVE_S + 10):
+        print("[db] skipped — step deadline too close to dial Postgres")
+        return None
     last = None
     timeout_ms = _statement_timeout_ms()
     for attempt in range(2):
@@ -243,6 +261,9 @@ def recent_news(hours: int = 24, limit: int = 30) -> list[dict]:
             last = e
             print(f"[db] recent_news {e.reason} (try {attempt + 1}/2): {e}")
             if attempt < 1:
+                if not _step_can_afford(DB_STEP_RESERVE_S + 2 * _statement_timeout_ms() // 1000):
+                    print("[db] recent_news: no retry — step deadline")
+                    break
                 time.sleep(2)
     if last is not None:
         raise last

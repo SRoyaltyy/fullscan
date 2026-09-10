@@ -85,16 +85,22 @@ for k in keys:
         continue
     existing[k] = incoming
     filled += 1
-os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
 lines = [f"{k}={existing[k]}" for k in keys if k in existing]
 # keep any extra keys already in the file
 for k, v in existing.items():
     if k not in keys:
         lines.append(f"{k}={v}")
-with open(path, "w", encoding="utf-8") as fh:
-    fh.write("\n".join(lines) + ("\n" if lines else ""))
-os.chmod(path, 0o600)
-print(f"[ecs-clock] env {path}: filled {filled} empty keys, kept {kept} existing")
+try:
+    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
+    with open(path, "w", encoding="utf-8") as fh:
+        fh.write("\n".join(lines) + ("\n" if lines else ""))
+    os.chmod(path, 0o600)
+except OSError as e:
+    # Runner user without /home/gha (GH-hosted heal) — the env file is a
+    # convenience for the systemd timer, never a reason to print a traceback.
+    print(f"[ecs-clock] WARN: cannot write {path}: {e.strerror} — skipped")
+else:
+    print(f"[ecs-clock] env {path}: filled {filled} empty keys, kept {kept} existing")
 PY
 if [ "$(id -u)" -eq 0 ]; then
   chown gha:gha "$ENVF" 2>/dev/null || true

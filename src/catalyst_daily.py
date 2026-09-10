@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from . import config
+from . import config, step_deadline
 
 ROOT = Path(__file__).resolve().parent.parent
 ET = ZoneInfo(config.TZ)
@@ -17,6 +17,13 @@ NEWS_DIR = ROOT / "01_daily" / "news"
 HEAT_DIR = ROOT / "01_daily" / "map_heat"
 DATA_CATALYST = ROOT / "data" / "catalyst"
 DEFAULT_MAX = 8
+# A dossier is 3 concurrent LLM calls + synthesis + catcher. Below this
+# many seconds left in the step, starting another one only risks the
+# parent's SIGKILL taking the whole file with it.
+MIN_TICKER_S = 240
+MAX_TICKER_S = 720
+# Keep this much of the step for the payload write + actions merge.
+TAIL_RESERVE_S = 45
 MEGA = {
     "AAPL", "MSFT", "NVDA", "AMZN", "GOOG", "GOOGL", "META", "TSLA",
     "AVGO", "CRM", "ORCL", "NFLX", "AMD",
@@ -380,7 +387,44 @@ def _summarize(ticker: str, role: str, why: str, result: dict) -> dict:
     }
 
 
-def run_dossiers(date: str, targets: list[dict], skip_gemini: bool) -> list[dict]:
+def _ticker_budget_s(n_left: int) -> float | None:
+    """Seconds this ticker may use; None = unbounded; <=0 = do not start."""
+    rem = step_deadline.remaining_s()
+    if rem is None:
+        return None
+    usable = rem - TAIL_RESERVE_S
+    if usable < MIN_TICKER_S:
+        return 0.0
+    return max(MIN_TICKER_S, min(MAX_TICKER_S, usable / max(1, n_left)))
+
+
+def _with_ticker_deadline(budget_s: float | None):
+    """Context manager: narrow FULLSCAN_STEP_DEADLINE for one ticker.
+
+    deepseek_client reads the env at call time, so every LLM read /
+    tool loop inside analyze_stock honours the per-ticker slice, and the
+    parent's ceiling is never the thing that ends the run.
+    """
+    import contextlib
+    import time as _time
+
+    @contextlib.contextmanager
+    def _cm():
+        prev = os.environ.get(step_deadline.ENV)
+        if budget_s is not None and budget_s > 0:
+            os.environ[step_deadline.ENV] = f"{_time.time() + budget_s:.0f}"
+        try:
+            yield
+        finally:
+            if prev is None:
+                os.environ.pop(step_deadline.ENV, None)
+            else:
+                os.environ[step_deadline.ENV] = prev
+    return _cm()
+
+
+def run_dossiers(date: str, targets: list[dict], skip_gemini: bool,
+                 on_progress=None) -> list[dict]:
     if not targets:
         return []
     config.require_llm()
@@ -403,20 +447,37 @@ def run_dossiers(date: str, targets: list[dict], skip_gemini: bool) -> list[dict
             print(f"[catalyst_daily] shared snapshot connect failed: {e}")
             conn = None
     try:
-        for spec in targets:
+        for i, spec in enumerate(targets):
             ticker = spec["ticker"]
             print(f"[catalyst_daily] → {ticker} ({spec['role']})", flush=True)
             reused = _reuse_saved(ticker, date)
             if reused:
                 print(f"[catalyst_daily] reuse data/catalyst/{ticker}_{date}.json")
                 out.append(_summarize(ticker, spec["role"], spec["why"], reused))
+                if on_progress:
+                    on_progress(out)
                 continue
+            budget = _ticker_budget_s(len(targets) - i)
+            if budget is not None and budget <= 0:
+                rem = step_deadline.remaining_s()
+                print(f"[catalyst_daily] stop — {rem:.0f}s left in step, "
+                      f"{len(targets) - i} targets not started")
+                for late in targets[i:]:
+                    out.append({"ticker": late["ticker"], "role": late["role"],
+                                "why": late["why"],
+                                "error": "skipped: step deadline"})
+                break
+            if budget is not None:
+                print(f"[catalyst_daily] {ticker} budget {budget:.0f}s")
             try:
-                result = ca.analyze_stock(ticker, _snapshot(ticker, conn), "")
+                with _with_ticker_deadline(budget):
+                    result = ca.analyze_stock(ticker, _snapshot(ticker, conn), "")
             except Exception as e:
                 print(f"[catalyst_daily] FAIL {ticker}: {e}")
                 out.append({"ticker": ticker, "role": spec["role"], "why": spec["why"],
                             "error": str(e)[:240]})
+                if on_progress:
+                    on_progress(out)
                 continue
             DATA_CATALYST.mkdir(parents=True, exist_ok=True)
             payload = dict(result)
@@ -425,6 +486,8 @@ def run_dossiers(date: str, targets: list[dict], skip_gemini: bool) -> list[dict
             (DATA_CATALYST / f"{ticker}_{date}.json").write_text(
                 json.dumps(payload, indent=2, default=str), encoding="utf-8")
             out.append(_summarize(ticker, spec["role"], spec["why"], result))
+            if on_progress:
+                on_progress(out)
     finally:
         if conn is not None:
             try:
@@ -469,15 +532,28 @@ def run(date: str | None = None, max_n: int = DEFAULT_MAX, force: bool = False,
         }
         write_payload(payload)
         return payload
-    dossiers = run_dossiers(date, targets, skip_gemini=skip_gemini)
+    def _payload(rows: list[dict]) -> dict:
+        return {
+            "date": date, "generated_at": datetime.now(ET).isoformat(),
+            "max_n": max_n, "routing": "Grok → DeepSeek",
+            "grok": True, "deepseek_fallback": not config.grok_only(),
+            "gemini": False, "n_targets": len(targets),
+            "n_ok": sum(1 for d in rows if usable_dossier(d)),
+            "targets": targets, "dossiers": list(rows),
+        }
+
+    # Land after every ticker: a parent ceiling mid-run then keeps the
+    # dossiers already finished instead of a missing file.
+    def _progress(rows: list[dict]) -> None:
+        try:
+            write_payload(_payload(rows))
+        except Exception as e:  # noqa: BLE001
+            print(f"[catalyst_daily] WARN: interim write failed: {e}")
+
+    dossiers = run_dossiers(date, targets, skip_gemini=skip_gemini,
+                            on_progress=_progress)
     n_ok = sum(1 for d in dossiers if usable_dossier(d))
-    payload = {
-        "date": date, "generated_at": datetime.now(ET).isoformat(),
-        "max_n": max_n, "routing": "Grok → DeepSeek",
-        "grok": True, "deepseek_fallback": not config.grok_only(),
-        "gemini": False, "n_targets": len(targets),
-        "n_ok": n_ok, "targets": targets, "dossiers": dossiers,
-    }
+    payload = _payload(dossiers)
     write_payload(payload)
     apply_to_actions(date, dossiers)
     if n_ok == 0 and targets:
