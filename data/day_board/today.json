@@ -1,11 +1,11 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T07:07:10.774787-04:00",
-  "overall": "PARTIAL",
+  "generated_at": "2026-09-10T07:07:24.680904-04:00",
+  "overall": "OK",
   "ranker_ready": true,
   "counts": {
-    "ok": 7,
-    "partial": 1,
+    "ok": 8,
+    "partial": 0,
     "fail": 0,
     "n": 8
   },
@@ -87,59 +87,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-10T06:39:39.222184-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-10_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1418800,
-          "preview": "1d BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND"
-        },
-        {
-          "path": "data/stock_book/2026-09-10_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-09-10_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2471,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-09-10_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 11955,
-          "preview": "2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 11955,
-          "preview": "2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND"
-        },
-        {
-          "path": "01_daily/2026-09-10_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 60430,
-          "preview": "# Stock book \u2014 2026-09-10\n_Generated 2026-09-10T06:39:36.736170-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND \u00b7 2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND \u00b7 # Stock book \u2014 2026-09-10\n_Generated 2026-09-10T06:39:36.736170-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -412,6 +359,38 @@
         }
       ],
       "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-09-10\n1/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+    },
+    {
+      "key": "status",
+      "title": "Pre-open status packet",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T07:07:24.165345-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-09-10_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 6619,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
+        },
+        {
+          "path": "01_daily/2026-09-10_preopen_status.json",
+          "ok": true,
+          "reason": "",
+          "size": 6934,
+          "preview": "keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc"
+        },
+        {
+          "path": "01_daily/2026-09-10_preopen_status.md",
+          "ok": true,
+          "reason": "",
+          "size": 560,
+          "preview": "# Pre-open ALL status \u2014 2026-09-10\nall_ok=False  qc_all_ok=True  book_ok=True  grok_ok=False  missing=none\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 0\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
+        }
+      ],
+      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc \u00b7 # Pre-open ALL status \u2014 2026-09-10\nall_ok=False  qc_all_ok=True  book_ok=True  grok_ok=False  missing=none\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 0\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
