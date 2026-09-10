@@ -1008,6 +1008,24 @@
       "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-10\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
     },
     {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T06:25:55.933002-04:00",
+      "files": [
+        {
+          "path": "data/universe/2026-09-10_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1116500,
+          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
       "key": "ab",
       "title": "AB checklist",
       "date": "2026-09-10",
