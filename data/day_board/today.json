@@ -78,70 +78,6 @@
   "sectors": {},
   "lands": [
     {
-      "key": "map_heat",
-      "title": "Map heat tables",
-      "date": "2026-09-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-10T06:25:48.786856-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-10_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 273427,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-10_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 17423,
-          "preview": "# MAP HEAT \u2014 2026-09-09\nExport `finviz_2026-09-08.csv` \u00b7 11608 names \u00b7 generated 2026-09-09T01:59:54.403331-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-09\nExport `finviz_2026-09-08.csv` \u00b7 11608 names \u00b7 generated 2026-09-09T01:59:54.403331-04:00"
-    },
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-09-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-10T06:25:49.167068-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-10_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 87698,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-09-10_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 12053,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-10\n_Generated 2026-09-10T06:25:49.099810-04:00 \u00b7 export=data/exports/finviz_2026-09-10.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-        },
-        {
-          "path": "data/exports/finviz_2026-09-10.csv",
-          "ok": true,
-          "reason": "",
-          "size": 10973212,
-          "preview": "11630 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11414966,
-          "preview": "11614 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-10\n_Generated 2026-09-10T06:25:49.099810-04:00 \u00b7 export=data/exports/finviz_2026-09-10.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11630 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11614 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-    },
-    {
       "key": "map_heat_baseline",
       "title": "Map heat night baseline",
       "date": "2026-09-10",
@@ -314,6 +250,77 @@
         }
       ],
       "preview": "1d BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-10 BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI \u00b7 2026-09-10 BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI \u00b7 # Stock book \u2014 2026-09-10\n_Generated 2026-09-10T06:26:05.402204-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T06:26:09.972922-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 12159,
+          "preview": "2026-09-10 BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 520,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-10.json",
+          "ok": true,
+          "reason": "",
+          "size": 43609,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-10_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 21588,
+          "preview": "2026-09-10 BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 21588,
+          "preview": "2026-09-10 BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI"
+        }
+      ],
+      "preview": "2026-09-10 BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-10 BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI \u00b7 2026-09-10 BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T06:26:10.536675-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-10_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9301,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 1.155, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.9249999999999998, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.7, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.01, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 0.925, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.1, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.02, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 0.17, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-10_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5029,
+          "preview": "# Weather report \u2014 2026-09-10\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 1.155, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.9249999999999998, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.7, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.01, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 0.925, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.1, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.02, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 0.17, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-10\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     },
     {
       "key": "live_boards",
