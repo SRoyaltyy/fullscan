@@ -1,0 +1,61 @@
+--- a/src/book_suggestions.py
++++ b/src/book_suggestions.py
+@@ -45,7 +45,8 @@
+   var URLS = [
+     "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today.json",
+-    "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/stock_book/latest_suggestions.json"
++    "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/stock_book/latest_suggestions.json",
++    "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today_strategies.json"
+   ];
+   function names(rows){
+     if(!rows) return [];
+@@ -53,20 +54,43 @@
+       return (x && (x.ticker || x.symbol)) || "";
+     }).filter(Boolean);
+   }
+   function paint(d){
+     var el = document.getElementById("liveBook");
+     if(!el || !d) return;
+     var buys = names(d.buy_1d);
+     var sells = names(d.sell_1d);
+-    el.innerHTML =
+-      '<div class="live-book-kicker">Today\'s book (live from main)</div>' +
+-      '<div class="live-book-date">' + (d.date || "") + '</div>' +
+-      '<div class="live-book-row"><b>BUY 1d</b> ' + (buys.join(" · ") || "—") + '</div>' +
+-      '<div class="live-book-row sell"><b>SELL 1d</b> ' + (sells.join(" · ") || "—") + '</div>';
++    var extra = "";
++    var strats = d.strategies || {};
++    var keys = Object.keys(strats);
++    if(keys.length){
++      extra += '<div class="live-book-date">' + keys.length + ' strategies</div>';
++      keys.forEach(function(name){
++        var s = strats[name] || {};
++        var b = names(s.buy);
++        var sl = names(s.sell);
++        var tag = s.sit ? "SIT" : (s.status || "");
++        extra += '<div class="live-book-row' + (sl.length && !b.length ? " sell" : "") + '"><b>' + name + '</b> ';
++        if(tag && tag !== "ok") extra += tag + " ";
++        extra += (b.length ? "BUY " + b.join(" · ") : "");
++        extra += (b.length && sl.length ? " · " : "");
++        extra += (sl.length ? "SELL " + sl.join(" · ") : "");
++        if(!b.length && !sl.length) extra += (tag === "SIT" || s.sit ? "sit" : "—");
++        extra += "</div>";
++      });
++    }
++    el.innerHTML =
++      '<div class="live-book-kicker">Today\'s tickets (every strategy)</div>' +
++      '<div class="live-book-date">' + (d.date || "") + '</div>' +
++      '<div class="live-book-row"><b>BUY 1d</b> ' + (buys.join(" · ") || "—") + '</div>' +
++      '<div class="live-book-row sell"><b>SELL 1d</b> ' + (sells.join(" · ") || "—") + '</div>' + extra;
+   }
+   function loadOne(i){
+     if(i >= URLS.length) return;
+     fetch(URLS[i] + "?t=" + Date.now(), {cache: "no-store"})
+       .then(function(r){ return r.ok ? r.json() : Promise.reject(); })
+       .then(function(d){
+-        if((d.buy_1d && d.buy_1d.length) || (d.sell_1d && d.sell_1d.length)) paint(d);
++        if((d.buy_1d && d.buy_1d.length) || (d.sell_1d && d.sell_1d.length) || (d.strategies && Object.keys(d.strategies).length)) paint(d);
+         else loadOne(i + 1);
+       })
+       .catch(function(){ loadOne(i + 1); });
+   }

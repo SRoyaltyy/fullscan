@@ -1,0 +1,37 @@
+--- a/src/factor_mine_dash.html
++++ b/src/factor_mine_dash.html
+@@ -1259,16 +1259,33 @@
+ renderAll();
+ window.addEventListener('resize', draw);
+ (function(){
+   var RAW='https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today.json';
++  var STRAT='https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today_strategies.json';
+   var stamp=document.getElementById('liveDayStamp');
+   var pills=document.getElementById('liveDayPills');
+   if(!stamp||!pills) return;
+-  fetch(RAW+'?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){
++  function paint(d, extra){
+     var c=d.counts||{};
+     stamp.textContent=(d.date||'')+' · '+(d.overall||'?')+' · ranker '+(d.ranker_ready?'READY':'BLOCKED')+' · processes ok '+(c.ok||0)+'/'+(c.n||'?');
+     var html='';
+     (d.buy_1d||[]).forEach(function(x){if(x.ticker) html+='<span class="pill on">BUY '+x.ticker+'</span>';});
+     (d.sell_1d||[]).forEach(function(x){if(x.ticker) html+='<span class="pill">SELL '+x.ticker+'</span>';});
++    var strats=(extra&&extra.strategies)||d.strategies||{};
++    Object.keys(strats).forEach(function(name){
++      var s=strats[name]||{};
++      var buys=(s.buy||[]).map(function(x){return typeof x==='string'?x:(x.ticker||'');}).filter(Boolean);
++      var sells=(s.sell||[]).map(function(x){return typeof x==='string'?x:(x.ticker||'');}).filter(Boolean);
++      if(!buys.length && !sells.length && !s.sit) return;
++      html+='<div class="mut" style="margin-top:6px"><b>'+name+'</b> '+(s.sit?'SIT ':'')+(buys.length?('BUY '+buys.join(' · ')):'')+(buys.length&&sells.length?' · ':'')+(sells.length?('SELL '+sells.join(' · ')):'')+'</div>';
++    });
+     var last=(d.lands||[])[0];
+     if(last&&last.preview) html+='<div class="mut" style="margin-top:6px">last land: '+String(last.key||'')+' — '+String(last.preview).slice(0,220)+'</div>';
+     pills.innerHTML=html||'<span class="mut">No 1d names on disk yet.</span>';
++  }
++  fetch(RAW+'?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){
++    fetch(STRAT+'?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.json():{}}).then(function(s){
++      paint(d,s);
++    }).catch(function(){ paint(d,{}); });
+   }).catch(function(){ stamp.textContent='day board JSON not on main yet'; });
+ })();
+ </script>
