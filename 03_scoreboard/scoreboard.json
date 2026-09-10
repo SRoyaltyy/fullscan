@@ -18392,18 +18392,113 @@
         "B7_OIL_DOLLAR": -1.0
       },
       "leading_sum": -11.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7594.74,
+      "actual_close": 7591.7,
+      "actual_pct_change": -0.58,
+      "actual_direction": "down",
+      "actual_magnitude_band": "mild",
+      "direction_hit": true,
+      "magnitude_hit": false,
       "divergence_flagged": true,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": -3.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": -1.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": -1.0,
+          "status": "hit"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-09102026-12114124",
+          "date_accessed": "2026-09-10",
+          "summary": "Confirms the direction and magnitude of the day's decline across all three major indices.",
+          "verification": "http_402"
+        },
+        {
+          "url": "https://www.reuters.com/business/energy/brent-holds-above-100-tanker-attacks-deepen-supply-fear-2026-09-10/",
+          "date_accessed": "2026-09-10",
+          "summary": "Establishes the oil shock as the dominant same-day driver.",
+          "verification": "http_401"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/10/ppi-inflation-report-august-2026.html",
+          "date_accessed": "2026-09-10",
+          "summary": "Confirms the PPI print was in line on the headline, a neutral-to-mildly-hawkish input.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.morningstar.com/news/marketwatch/20260910191/treasury-yields-surge-after-poor-30-year-auction-and-new-buyback-operation-fails-to-calm-market",
+          "date_accessed": "2026-09-10",
+          "summary": "Identifies the mid-session auction failure as a distinct intraday catalyst.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://investrade.com/market-review-september-10-2026/",
+          "date_accessed": "2026-09-10",
+          "summary": "Documents the volatility regime break that accompanied the selloff.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.schwab.com/learn/story/stock-market-update-open",
+          "date_accessed": "2026-09-10",
+          "summary": "Provides the setup-condition evidence of underlying market fragility.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.reuters.com/technology/oracles-quarterly-revenue-beats-estimates-ai-boom-drives-cloud-demand-2026-09-10/",
+          "date_accessed": "2026-09-10",
+          "summary": "Confirms the after-close positive catalyst that could offset tomorrow.",
+          "verification": "http_401"
+        },
+        {
+          "url": "https://tickeron.com/blogs/why-is-american-eagle-outfitters-aeo-stock-down-15-51-today-16532/",
+          "date_accessed": "2026-09-10",
+          "summary": "Documents the single-stock consumer-discretionary outlier.",
+          "verification": "http_403"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -18430,7 +18525,14 @@
           "confidence": 0.45
         }
       },
-      "news_judge_present": true
+      "news_judge_present": true,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "Iran/Hormuz oil shock — Brent +6.34% to $107.63, WTI >$100, on fresh tanker attacks",
+      "key_interaction": "Oil shock (F1) is the shared root that amplified through yields (F3) and Fed path (F4) into the VIX breakout (F5) — one cause with four symptoms — while the soft core PPI (F2) offset and capped the decline, making a potentially severe day close only mildly down",
+      "knowable_at_9am": "yes — the dominant driver (oil/Iran) was fully in the morning file; only the weak 30-year auction was a genuine intraday shock",
+      "attribution_contested": "yes — TheStreet/Yahoo lead with oil, Morningstar/MarketWatch with Treasury yields, Investopedia with PPI; same causal chain, contested emphasis",
+      "outlier_watch": "Gold fell -1.25% (with silver -2.43%, copper -2.89%) on a war-escalation risk-off day — a liquidation/liquidity unwind rather than a safe-haven bid, the day's biggest divergence"
     },
     {
       "date": "2026-09-10",
