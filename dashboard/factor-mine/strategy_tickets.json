@@ -1,0 +1,7513 @@
+{
+  "date": "2026-09-10",
+  "generated_at": "2026-09-10T10:41:44.211543-04:00",
+  "n": 246,
+  "n_ok": 172,
+  "families": [
+    "factor_mine",
+    "flatten",
+    "paper",
+    "stock_book"
+  ],
+  "strategies": {
+    "stock_book_1d": {
+      "name": "stock_book_1d",
+      "family": "stock_book",
+      "date": "2026-09-10",
+      "buy": [
+        {
+          "ticker": "AEHR",
+          "score": 0.6564095424170405
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "SPIR",
+          "score": -0.5073509796263888
+        },
+        {
+          "ticker": "SLQT",
+          "score": -0.4543662608073074
+        },
+        {
+          "ticker": "CPB",
+          "score": -0.42095482589678457
+        },
+        {
+          "ticker": "COIN",
+          "score": -0.33045515605576964
+        },
+        {
+          "ticker": "RHI",
+          "score": -0.3972408362754648
+        },
+        {
+          "ticker": "HUBG",
+          "score": -0.4580426247510716
+        },
+        {
+          "ticker": "METC",
+          "score": -0.4290384388382356
+        },
+        {
+          "ticker": "BYND",
+          "score": -0.4759522422609196
+        },
+        {
+          "ticker": "AORT",
+          "score": -0.32297335628241863
+        },
+        {
+          "ticker": "CAVA",
+          "score": -0.48775344514484764
+        }
+      ],
+      "buy_n": 1,
+      "sell_n": 10,
+      "sit": false,
+      "status": "ok",
+      "note": "weighted ranker horizon"
+    },
+    "1d_top": {
+      "name": "1d_top",
+      "family": "paper",
+      "date": "2026-09-10",
+      "buy": [
+        {
+          "ticker": "AEHR",
+          "score": 0.6564095424170405
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "SPIR",
+          "score": -0.5073509796263888
+        },
+        {
+          "ticker": "SLQT",
+          "score": -0.4543662608073074
+        },
+        {
+          "ticker": "CPB",
+          "score": -0.42095482589678457
+        },
+        {
+          "ticker": "COIN",
+          "score": -0.33045515605576964
+        },
+        {
+          "ticker": "RHI",
+          "score": -0.3972408362754648
+        },
+        {
+          "ticker": "HUBG",
+          "score": -0.4580426247510716
+        },
+        {
+          "ticker": "METC",
+          "score": -0.4290384388382356
+        },
+        {
+          "ticker": "BYND",
+          "score": -0.4759522422609196
+        },
+        {
+          "ticker": "AORT",
+          "score": -0.32297335628241863
+        },
+        {
+          "ticker": "CAVA",
+          "score": -0.48775344514484764
+        }
+      ],
+      "buy_n": 1,
+      "sell_n": 10,
+      "sit": false,
+      "status": "ok",
+      "note": "paper sleeve = same ranker list"
+    },
+    "stock_book_3d": {
+      "name": "stock_book_3d",
+      "family": "stock_book",
+      "date": "2026-09-10",
+      "buy": [
+        {
+          "ticker": "UGP",
+          "score": 0.7396299376100344
+        },
+        {
+          "ticker": "LBRT",
+          "score": 0.7128409566999792
+        },
+        {
+          "ticker": "AEHR",
+          "score": 0.697006319357289
+        },
+        {
+          "ticker": "CLB",
+          "score": 0.5860291287582896
+        },
+        {
+          "ticker": "CRSR",
+          "score": 0.5705644705834416
+        },
+        {
+          "ticker": "OIS",
+          "score": 0.5634918559143649
+        },
+        {
+          "ticker": "AMBQ",
+          "score": 0.47194148278613796
+        },
+        {
+          "ticker": "RAL",
+          "score": 0.4635442253203704
+        },
+        {
+          "ticker": "NU",
+          "score": 0.4296073068641311
+        },
+        {
+          "ticker": "SUZ",
+          "score": 0.2888100742338735
+        },
+        {
+          "ticker": "BG",
+          "score": 0.24368282991426946
+        },
+        {
+          "ticker": "MLYS",
+          "score": 0.23607692911439682
+        },
+        {
+          "ticker": "SLDP",
+          "score": 0.1826638482784148
+        },
+        {
+          "ticker": "IMMX",
+          "score": 0.1758274922429477
+        },
+        {
+          "ticker": "GALT",
+          "score": 0.16660688883979685
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "ZGN",
+          "score": -0.6266335048800099
+        },
+        {
+          "ticker": "XPOF",
+          "score": -0.6247761429097735
+        },
+        {
+          "ticker": "TROX",
+          "score": -0.6231781975361627
+        },
+        {
+          "ticker": "WHR",
+          "score": -0.6101432140151892
+        },
+        {
+          "ticker": "MBC",
+          "score": -0.5993868890530049
+        },
+        {
+          "ticker": "DFH",
+          "score": -0.5840129747419041
+        },
+        {
+          "ticker": "LODE",
+          "score": -0.5800145866758606
+        },
+        {
+          "ticker": "SPIR",
+          "score": -0.5683494517580754
+        },
+        {
+          "ticker": "CAVA",
+          "score": -0.558656644416407
+        },
+        {
+          "ticker": "LCID",
+          "score": -0.5579319883429451
+        },
+        {
+          "ticker": "PACK",
+          "score": -0.5567645130003716
+        },
+        {
+          "ticker": "COLD",
+          "score": -0.5558570625906905
+        },
+        {
+          "ticker": "AIIO",
+          "score": -0.5510213447388477
+        },
+        {
+          "ticker": "KBH",
+          "score": -0.5449589000490438
+        },
+        {
+          "ticker": "FIP",
+          "score": -0.538447903997368
+        }
+      ],
+      "buy_n": 15,
+      "sell_n": 15,
+      "sit": false,
+      "status": "ok",
+      "note": "weighted ranker horizon"
+    },
+    "3d_top": {
+      "name": "3d_top",
+      "family": "paper",
+      "date": "2026-09-10",
+      "buy": [
+        {
+          "ticker": "UGP",
+          "score": 0.7396299376100344
+        },
+        {
+          "ticker": "LBRT",
+          "score": 0.7128409566999792
+        },
+        {
+          "ticker": "AEHR",
+          "score": 0.697006319357289
+        },
+        {
+          "ticker": "CLB",
+          "score": 0.5860291287582896
+        },
+        {
+          "ticker": "CRSR",
+          "score": 0.5705644705834416
+        },
+        {
+          "ticker": "OIS",
+          "score": 0.5634918559143649
+        },
+        {
+          "ticker": "AMBQ",
+          "score": 0.47194148278613796
+        },
+        {
+          "ticker": "RAL",
+          "score": 0.4635442253203704
+        },
+        {
+          "ticker": "NU",
+          "score": 0.4296073068641311
+        },
+        {
+          "ticker": "SUZ",
+          "score": 0.2888100742338735
+        },
+        {
+          "ticker": "BG",
+          "score": 0.24368282991426946
+        },
+        {
+          "ticker": "MLYS",
+          "score": 0.23607692911439682
+        },
+        {
+          "ticker": "SLDP",
+          "score": 0.1826638482784148
+        },
+        {
+          "ticker": "IMMX",
+          "score": 0.1758274922429477
+        },
+        {
+          "ticker": "GALT",
+          "score": 0.16660688883979685
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "ZGN",
+          "score": -0.6266335048800099
+        },
+        {
+          "ticker": "XPOF",
+          "score": -0.6247761429097735
+        },
+        {
+          "ticker": "TROX",
+          "score": -0.6231781975361627
+        },
+        {
+          "ticker": "WHR",
+          "score": -0.6101432140151892
+        },
+        {
+          "ticker": "MBC",
+          "score": -0.5993868890530049
+        },
+        {
+          "ticker": "DFH",
+          "score": -0.5840129747419041
+        },
+        {
+          "ticker": "LODE",
+          "score": -0.5800145866758606
+        },
+        {
+          "ticker": "SPIR",
+          "score": -0.5683494517580754
+        },
+        {
+          "ticker": "CAVA",
+          "score": -0.558656644416407
+        },
+        {
+          "ticker": "LCID",
+          "score": -0.5579319883429451
+        },
+        {
+          "ticker": "PACK",
+          "score": -0.5567645130003716
+        },
+        {
+          "ticker": "COLD",
+          "score": -0.5558570625906905
+        },
+        {
+          "ticker": "AIIO",
+          "score": -0.5510213447388477
+        },
+        {
+          "ticker": "KBH",
+          "score": -0.5449589000490438
+        },
+        {
+          "ticker": "FIP",
+          "score": -0.538447903997368
+        }
+      ],
+      "buy_n": 15,
+      "sell_n": 15,
+      "sit": false,
+      "status": "ok",
+      "note": "paper sleeve = same ranker list"
+    },
+    "stock_book_1w": {
+      "name": "stock_book_1w",
+      "family": "stock_book",
+      "date": "2026-09-10",
+      "buy": [
+        {
+          "ticker": "UGP",
+          "score": 0.7849590086398932
+        },
+        {
+          "ticker": "LBRT",
+          "score": 0.7577056638635982
+        },
+        {
+          "ticker": "AEHR",
+          "score": 0.7311442238804399
+        },
+        {
+          "ticker": "CLB",
+          "score": 0.6249994784359207
+        },
+        {
+          "ticker": "CRSR",
+          "score": 0.6051799403412434
+        },
+        {
+          "ticker": "OIS",
+          "score": 0.6006368898432666
+        },
+        {
+          "ticker": "AMBQ",
+          "score": 0.4997348062295641
+        },
+        {
+          "ticker": "RAL",
+          "score": 0.4912947569560494
+        },
+        {
+          "ticker": "NU",
+          "score": 0.4361844520238716
+        },
+        {
+          "ticker": "SUZ",
+          "score": 0.2999477371789301
+        },
+        {
+          "ticker": "BG",
+          "score": 0.2617569968292679
+        },
+        {
+          "ticker": "MLYS",
+          "score": 0.24444643253872456
+        },
+        {
+          "ticker": "IMMX",
+          "score": 0.1792867283256242
+        },
+        {
+          "ticker": "SLDP",
+          "score": 0.17562619142361502
+        },
+        {
+          "ticker": "GALT",
+          "score": 0.16198186457122438
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "ZGN",
+          "score": -0.6722057377461189
+        },
+        {
+          "ticker": "XPOF",
+          "score": -0.6721883822821051
+        },
+        {
+          "ticker": "TROX",
+          "score": -0.669853462546937
+        },
+        {
+          "ticker": "WHR",
+          "score": -0.6597473830973332
+        },
+        {
+          "ticker": "MBC",
+          "score": -0.6485851964200691
+        },
+        {
+          "ticker": "DFH",
+          "score": -0.6288887233240071
+        },
+        {
+          "ticker": "LODE",
+          "score": -0.6208607181057515
+        },
+        {
+          "ticker": "LCID",
+          "score": -0.6084902957100095
+        },
+        {
+          "ticker": "SPIR",
+          "score": -0.6040804451828188
+        },
+        {
+          "ticker": "COLD",
+          "score": -0.601915527243037
+        },
+        {
+          "ticker": "PACK",
+          "score": -0.5995352618915837
+        },
+        {
+          "ticker": "CAVA",
+          "score": -0.599340001411087
+        },
+        {
+          "ticker": "AIIO",
+          "score": -0.5904659014543256
+        },
+        {
+          "ticker": "KBH",
+          "score": -0.5901360408154008
+        },
+        {
+          "ticker": "FIP",
+          "score": -0.5763743712343775
+        }
+      ],
+      "buy_n": 15,
+      "sell_n": 15,
+      "sit": false,
+      "status": "ok",
+      "note": "weighted ranker horizon"
+    },
+    "1w_top": {
+      "name": "1w_top",
+      "family": "paper",
+      "date": "2026-09-10",
+      "buy": [
+        {
+          "ticker": "UGP",
+          "score": 0.7849590086398932
+        },
+        {
+          "ticker": "LBRT",
+          "score": 0.7577056638635982
+        },
+        {
+          "ticker": "AEHR",
+          "score": 0.7311442238804399
+        },
+        {
+          "ticker": "CLB",
+          "score": 0.6249994784359207
+        },
+        {
+          "ticker": "CRSR",
+          "score": 0.6051799403412434
+        },
+        {
+          "ticker": "OIS",
+          "score": 0.6006368898432666
+        },
+        {
+          "ticker": "AMBQ",
+          "score": 0.4997348062295641
+        },
+        {
+          "ticker": "RAL",
+          "score": 0.4912947569560494
+        },
+        {
+          "ticker": "NU",
+          "score": 0.4361844520238716
+        },
+        {
+          "ticker": "SUZ",
+          "score": 0.2999477371789301
+        },
+        {
+          "ticker": "BG",
+          "score": 0.2617569968292679
+        },
+        {
+          "ticker": "MLYS",
+          "score": 0.24444643253872456
+        },
+        {
+          "ticker": "IMMX",
+          "score": 0.1792867283256242
+        },
+        {
+          "ticker": "SLDP",
+          "score": 0.17562619142361502
+        },
+        {
+          "ticker": "GALT",
+          "score": 0.16198186457122438
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "ZGN",
+          "score": -0.6722057377461189
+        },
+        {
+          "ticker": "XPOF",
+          "score": -0.6721883822821051
+        },
+        {
+          "ticker": "TROX",
+          "score": -0.669853462546937
+        },
+        {
+          "ticker": "WHR",
+          "score": -0.6597473830973332
+        },
+        {
+          "ticker": "MBC",
+          "score": -0.6485851964200691
+        },
+        {
+          "ticker": "DFH",
+          "score": -0.6288887233240071
+        },
+        {
+          "ticker": "LODE",
+          "score": -0.6208607181057515
+        },
+        {
+          "ticker": "LCID",
+          "score": -0.6084902957100095
+        },
+        {
+          "ticker": "SPIR",
+          "score": -0.6040804451828188
+        },
+        {
+          "ticker": "COLD",
+          "score": -0.601915527243037
+        },
+        {
+          "ticker": "PACK",
+          "score": -0.5995352618915837
+        },
+        {
+          "ticker": "CAVA",
+          "score": -0.599340001411087
+        },
+        {
+          "ticker": "AIIO",
+          "score": -0.5904659014543256
+        },
+        {
+          "ticker": "KBH",
+          "score": -0.5901360408154008
+        },
+        {
+          "ticker": "FIP",
+          "score": -0.5763743712343775
+        }
+      ],
+      "buy_n": 15,
+      "sell_n": 15,
+      "sit": false,
+      "status": "ok",
+      "note": "paper sleeve = same ranker list"
+    },
+    "stock_book_2w": {
+      "name": "stock_book_2w",
+      "family": "stock_book",
+      "date": "2026-09-10",
+      "buy": [
+        {
+          "ticker": "UGP",
+          "score": 0.8143060582657167
+        },
+        {
+          "ticker": "LBRT",
+          "score": 0.7865883496231818
+        },
+        {
+          "ticker": "AEHR",
+          "score": 0.7504561069995552
+        },
+        {
+          "ticker": "CLB",
+          "score": 0.6535578336665642
+        },
+        {
+          "ticker": "OIS",
+          "score": 0.6257589447244224
+        },
+        {
+          "ticker": "CRSR",
+          "score": 0.6249693886950098
+        },
+        {
+          "ticker": "AMBQ",
+          "score": 0.5161851506252446
+        },
+        {
+          "ticker": "RAL",
+          "score": 0.5093132941447408
+        },
+        {
+          "ticker": "NU",
+          "score": 0.47595362352913245
+        },
+        {
+          "ticker": "SUZ",
+          "score": 0.29858642107624095
+        },
+        {
+          "ticker": "BG",
+          "score": 0.2689431692972787
+        },
+        {
+          "ticker": "MLYS",
+          "score": 0.25301993596305233
+        },
+        {
+          "ticker": "IMMX",
+          "score": 0.1854370244437326
+        },
+        {
+          "ticker": "CNC",
+          "score": 0.16536170225404018
+        },
+        {
+          "ticker": "GALT",
+          "score": 0.16472798826966764
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "ZGN",
+          "score": -0.7043949915644823
+        },
+        {
+          "ticker": "XPOF",
+          "score": -0.7036887385353213
+        },
+        {
+          "ticker": "TROX",
+          "score": -0.7031457485099656
+        },
+        {
+          "ticker": "WHR",
+          "score": -0.6934396690603618
+        },
+        {
+          "ticker": "MBC",
+          "score": -0.6802374823830977
+        },
+        {
+          "ticker": "DFH",
+          "score": -0.6583263598273777
+        },
+        {
+          "ticker": "LODE",
+          "score": -0.6492548550886549
+        },
+        {
+          "ticker": "LCID",
+          "score": -0.6421825816730381
+        },
+        {
+          "ticker": "COLD",
+          "score": -0.6320621087762681
+        },
+        {
+          "ticker": "CAVA",
+          "score": -0.6294210152605668
+        },
+        {
+          "ticker": "SPIR",
+          "score": -0.6292090954623621
+        },
+        {
+          "ticker": "PACK",
+          "score": -0.6282430317350499
+        },
+        {
+          "ticker": "KBH",
+          "score": -0.6212502025340121
+        },
+        {
+          "ticker": "AIIO",
+          "score": -0.6174584637228161
+        },
+        {
+          "ticker": "FIP",
+          "score": -0.5988627263926547
+        }
+      ],
+      "buy_n": 15,
+      "sell_n": 15,
+      "sit": false,
+      "status": "ok",
+      "note": "weighted ranker horizon"
+    },
+    "2w_top": {
+      "name": "2w_top",
+      "family": "paper",
+      "date": "2026-09-10",
+      "buy": [
+        {
+          "ticker": "UGP",
+          "score": 0.8143060582657167
+        },
+        {
+          "ticker": "LBRT",
+          "score": 0.7865883496231818
+        },
+        {
+          "ticker": "AEHR",
+          "score": 0.7504561069995552
+        },
+        {
+          "ticker": "CLB",
+          "score": 0.6535578336665642
+        },
+        {
+          "ticker": "OIS",
+          "score": 0.6257589447244224
+        },
+        {
+          "ticker": "CRSR",
+          "score": 0.6249693886950098
+        },
+        {
+          "ticker": "AMBQ",
+          "score": 0.5161851506252446
+        },
+        {
+          "ticker": "RAL",
+          "score": 0.5093132941447408
+        },
+        {
+          "ticker": "NU",
+          "score": 0.47595362352913245
+        },
+        {
+          "ticker": "SUZ",
+          "score": 0.29858642107624095
+        },
+        {
+          "ticker": "BG",
+          "score": 0.2689431692972787
+        },
+        {
+          "ticker": "MLYS",
+          "score": 0.25301993596305233
+        },
+        {
+          "ticker": "IMMX",
+          "score": 0.1854370244437326
+        },
+        {
+          "ticker": "CNC",
+          "score": 0.16536170225404018
+        },
+        {
+          "ticker": "GALT",
+          "score": 0.16472798826966764
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "ZGN",
+          "score": -0.7043949915644823
+        },
+        {
+          "ticker": "XPOF",
+          "score": -0.7036887385353213
+        },
+        {
+          "ticker": "TROX",
+          "score": -0.7031457485099656
+        },
+        {
+          "ticker": "WHR",
+          "score": -0.6934396690603618
+        },
+        {
+          "ticker": "MBC",
+          "score": -0.6802374823830977
+        },
+        {
+          "ticker": "DFH",
+          "score": -0.6583263598273777
+        },
+        {
+          "ticker": "LODE",
+          "score": -0.6492548550886549
+        },
+        {
+          "ticker": "LCID",
+          "score": -0.6421825816730381
+        },
+        {
+          "ticker": "COLD",
+          "score": -0.6320621087762681
+        },
+        {
+          "ticker": "CAVA",
+          "score": -0.6294210152605668
+        },
+        {
+          "ticker": "SPIR",
+          "score": -0.6292090954623621
+        },
+        {
+          "ticker": "PACK",
+          "score": -0.6282430317350499
+        },
+        {
+          "ticker": "KBH",
+          "score": -0.6212502025340121
+        },
+        {
+          "ticker": "AIIO",
+          "score": -0.6174584637228161
+        },
+        {
+          "ticker": "FIP",
+          "score": -0.5988627263926547
+        }
+      ],
+      "buy_n": 15,
+      "sell_n": 15,
+      "sit": false,
+      "status": "ok",
+      "note": "paper sleeve = same ranker list"
+    },
+    "stock_book_1m": {
+      "name": "stock_book_1m",
+      "family": "stock_book",
+      "date": "2026-09-10",
+      "buy": [
+        {
+          "ticker": "UGP",
+          "score": 0.8645311292955755
+        },
+        {
+          "ticker": "LBRT",
+          "score": 0.8363490567868008
+        },
+        {
+          "ticker": "AEHR",
+          "score": 0.8172340115227061
+        },
+        {
+          "ticker": "CLB",
+          "score": 0.7088481833441951
+        },
+        {
+          "ticker": "CRSR",
+          "score": 0.6922248584528119
+        },
+        {
+          "ticker": "OIS",
+          "score": 0.6792239786533241
+        },
+        {
+          "ticker": "AMBQ",
+          "score": 0.5766184740686707
+        },
+        {
+          "ticker": "RAL",
+          "score": 0.5697038257804199
+        },
+        {
+          "ticker": "NU",
+          "score": 0.5008507686888729
+        },
+        {
+          "ticker": "SUZ",
+          "score": 0.3146200840212975
+        },
+        {
+          "ticker": "BG",
+          "score": 0.29191333621227705
+        },
+        {
+          "ticker": "MLYS",
+          "score": 0.2662854393873801
+        },
+        {
+          "ticker": "IMMX",
+          "score": 0.19379226052640908
+        },
+        {
+          "ticker": "CNC",
+          "score": 0.19131002673584868
+        },
+        {
+          "ticker": "SLDP",
+          "score": 0.18630853456881513
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "XPOF",
+          "score": -0.7347809779076528
+        },
+        {
+          "ticker": "ZGN",
+          "score": -0.7336472244305913
+        },
+        {
+          "ticker": "TROX",
+          "score": -0.7335010135207399
+        },
+        {
+          "ticker": "WHR",
+          "score": -0.7267238381425056
+        },
+        {
+          "ticker": "MBC",
+          "score": -0.6967957897501619
+        },
+        {
+          "ticker": "LCID",
+          "score": -0.6764208890401022
+        },
+        {
+          "ticker": "DFH",
+          "score": -0.6705621084094808
+        },
+        {
+          "ticker": "COLD",
+          "score": -0.6618005734286145
+        },
+        {
+          "ticker": "LODE",
+          "score": -0.6574609865185459
+        },
+        {
+          "ticker": "PACK",
+          "score": -0.6383737806262619
+        },
+        {
+          "ticker": "CAVA",
+          "score": -0.6374643722552468
+        },
+        {
+          "ticker": "KBH",
+          "score": -0.633787343300369
+        },
+        {
+          "ticker": "SPIR",
+          "score": -0.6323000888871055
+        },
+        {
+          "ticker": "AIIO",
+          "score": -0.6242630204382941
+        },
+        {
+          "ticker": "REYN",
+          "score": -0.6237198663402411
+        }
+      ],
+      "buy_n": 15,
+      "sell_n": 15,
+      "sit": false,
+      "status": "ok",
+      "note": "weighted ranker horizon"
+    },
+    "1m_top": {
+      "name": "1m_top",
+      "family": "paper",
+      "date": "2026-09-10",
+      "buy": [
+        {
+          "ticker": "UGP",
+          "score": 0.8645311292955755
+        },
+        {
+          "ticker": "LBRT",
+          "score": 0.8363490567868008
+        },
+        {
+          "ticker": "AEHR",
+          "score": 0.8172340115227061
+        },
+        {
+          "ticker": "CLB",
+          "score": 0.7088481833441951
+        },
+        {
+          "ticker": "CRSR",
+          "score": 0.6922248584528119
+        },
+        {
+          "ticker": "OIS",
+          "score": 0.6792239786533241
+        },
+        {
+          "ticker": "AMBQ",
+          "score": 0.5766184740686707
+        },
+        {
+          "ticker": "RAL",
+          "score": 0.5697038257804199
+        },
+        {
+          "ticker": "NU",
+          "score": 0.5008507686888729
+        },
+        {
+          "ticker": "SUZ",
+          "score": 0.3146200840212975
+        },
+        {
+          "ticker": "BG",
+          "score": 0.29191333621227705
+        },
+        {
+          "ticker": "MLYS",
+          "score": 0.2662854393873801
+        },
+        {
+          "ticker": "IMMX",
+          "score": 0.19379226052640908
+        },
+        {
+          "ticker": "CNC",
+          "score": 0.19131002673584868
+        },
+        {
+          "ticker": "SLDP",
+          "score": 0.18630853456881513
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "XPOF",
+          "score": -0.7347809779076528
+        },
+        {
+          "ticker": "ZGN",
+          "score": -0.7336472244305913
+        },
+        {
+          "ticker": "TROX",
+          "score": -0.7335010135207399
+        },
+        {
+          "ticker": "WHR",
+          "score": -0.7267238381425056
+        },
+        {
+          "ticker": "MBC",
+          "score": -0.6967957897501619
+        },
+        {
+          "ticker": "LCID",
+          "score": -0.6764208890401022
+        },
+        {
+          "ticker": "DFH",
+          "score": -0.6705621084094808
+        },
+        {
+          "ticker": "COLD",
+          "score": -0.6618005734286145
+        },
+        {
+          "ticker": "LODE",
+          "score": -0.6574609865185459
+        },
+        {
+          "ticker": "PACK",
+          "score": -0.6383737806262619
+        },
+        {
+          "ticker": "CAVA",
+          "score": -0.6374643722552468
+        },
+        {
+          "ticker": "KBH",
+          "score": -0.633787343300369
+        },
+        {
+          "ticker": "SPIR",
+          "score": -0.6323000888871055
+        },
+        {
+          "ticker": "AIIO",
+          "score": -0.6242630204382941
+        },
+        {
+          "ticker": "REYN",
+          "score": -0.6237198663402411
+        }
+      ],
+      "buy_n": 15,
+      "sell_n": 15,
+      "sit": false,
+      "status": "ok",
+      "note": "paper sleeve = same ranker list"
+    },
+    "flatten_robust": {
+      "name": "flatten_robust",
+      "family": "flatten",
+      "date": "2026-09-10",
+      "buy": [
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "LBRT"
+        },
+        {
+          "ticker": "CLB"
+        },
+        {
+          "ticker": "OIS"
+        }
+      ],
+      "sell": [],
+      "buy_n": 4,
+      "sell_n": 0,
+      "sit": true,
+      "status": "ok",
+      "why": "S=-13.28; hard-red: no new buys; holds and due 1d exits stay",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "live flatten_robust card"
+    },
+    "union_h1": {
+      "name": "union_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h3": {
+      "name": "union_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h5": {
+      "name": "union_h5",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_h1": {
+      "name": "flatten_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_h3": {
+      "name": "flatten_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_h5": {
+      "name": "flatten_h5",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "probable_h1": {
+      "name": "probable_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        },
+        {
+          "ticker": "UPB"
+        },
+        {
+          "ticker": "CNTB"
+        },
+        {
+          "ticker": "LFMD"
+        },
+        {
+          "ticker": "HAS"
+        },
+        {
+          "ticker": "BHC"
+        },
+        {
+          "ticker": "SARO"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "probable_h3": {
+      "name": "probable_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        },
+        {
+          "ticker": "UPB"
+        },
+        {
+          "ticker": "CNTB"
+        },
+        {
+          "ticker": "LFMD"
+        },
+        {
+          "ticker": "HAS"
+        },
+        {
+          "ticker": "BHC"
+        },
+        {
+          "ticker": "SARO"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "probable_h5": {
+      "name": "probable_h5",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        },
+        {
+          "ticker": "UPB"
+        },
+        {
+          "ticker": "CNTB"
+        },
+        {
+          "ticker": "LFMD"
+        },
+        {
+          "ticker": "HAS"
+        },
+        {
+          "ticker": "BHC"
+        },
+        {
+          "ticker": "SARO"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "yday_gainer_h1": {
+      "name": "yday_gainer_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        },
+        {
+          "ticker": "UPB"
+        },
+        {
+          "ticker": "CNTB"
+        },
+        {
+          "ticker": "LFMD"
+        },
+        {
+          "ticker": "HAS"
+        },
+        {
+          "ticker": "BHC"
+        },
+        {
+          "ticker": "SARO"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "yday_gainer_h3": {
+      "name": "yday_gainer_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        },
+        {
+          "ticker": "UPB"
+        },
+        {
+          "ticker": "CNTB"
+        },
+        {
+          "ticker": "LFMD"
+        },
+        {
+          "ticker": "HAS"
+        },
+        {
+          "ticker": "BHC"
+        },
+        {
+          "ticker": "SARO"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "yday_gainer_h5": {
+      "name": "yday_gainer_h5",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        },
+        {
+          "ticker": "UPB"
+        },
+        {
+          "ticker": "CNTB"
+        },
+        {
+          "ticker": "LFMD"
+        },
+        {
+          "ticker": "HAS"
+        },
+        {
+          "ticker": "BHC"
+        },
+        {
+          "ticker": "SARO"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "ohlc_hot_h1": {
+      "name": "ohlc_hot_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PAYP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "HYLN"
+        },
+        {
+          "ticker": "UROY"
+        },
+        {
+          "ticker": "SEDG"
+        },
+        {
+          "ticker": "DOCN"
+        },
+        {
+          "ticker": "SKHY"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "ohlc_hot_h3": {
+      "name": "ohlc_hot_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PAYP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "HYLN"
+        },
+        {
+          "ticker": "UROY"
+        },
+        {
+          "ticker": "SEDG"
+        },
+        {
+          "ticker": "DOCN"
+        },
+        {
+          "ticker": "SKHY"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "ohlc_hot_h5": {
+      "name": "ohlc_hot_h5",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PAYP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "HYLN"
+        },
+        {
+          "ticker": "UROY"
+        },
+        {
+          "ticker": "SEDG"
+        },
+        {
+          "ticker": "DOCN"
+        },
+        {
+          "ticker": "SKHY"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_vol_g_h1": {
+      "name": "union_vol_g_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ZIM"
+        },
+        {
+          "ticker": "SLDP"
+        },
+        {
+          "ticker": "BIDU"
+        }
+      ],
+      "sell": [],
+      "buy_n": 3,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_vol_g_h3": {
+      "name": "union_vol_g_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ZIM"
+        },
+        {
+          "ticker": "SLDP"
+        },
+        {
+          "ticker": "BIDU"
+        }
+      ],
+      "sell": [],
+      "buy_n": 3,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_vol_missing_h1": {
+      "name": "union_vol_missing_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_vol_missing_h3": {
+      "name": "union_vol_missing_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_ab_g_h1": {
+      "name": "union_ab_g_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "CNTB"
+        },
+        {
+          "ticker": "HAS"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_ab_g_h3": {
+      "name": "union_ab_g_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "CNTB"
+        },
+        {
+          "ticker": "HAS"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_join_g_h1": {
+      "name": "union_join_g_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "UPB"
+        },
+        {
+          "ticker": "CNTB"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_join_g_h3": {
+      "name": "union_join_g_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "UPB"
+        },
+        {
+          "ticker": "CNTB"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_join_present_h1": {
+      "name": "union_join_present_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "UPB"
+        },
+        {
+          "ticker": "CNTB"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_join_present_h3": {
+      "name": "union_join_present_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "UPB"
+        },
+        {
+          "ticker": "CNTB"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_news_g_h1": {
+      "name": "union_news_g_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "DFDV"
+        },
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "TH"
+        }
+      ],
+      "sell": [],
+      "buy_n": 3,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_news_g_h3": {
+      "name": "union_news_g_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "DFDV"
+        },
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "TH"
+        }
+      ],
+      "sell": [],
+      "buy_n": 3,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_news_present_h1": {
+      "name": "union_news_present_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "UPB"
+        },
+        {
+          "ticker": "CNTB"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_news_present_h3": {
+      "name": "union_news_present_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "UPB"
+        },
+        {
+          "ticker": "CNTB"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_news_missing_h1": {
+      "name": "union_news_missing_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_news_missing_h3": {
+      "name": "union_news_missing_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_catal_present_h1": {
+      "name": "union_catal_present_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_catal_present_h3": {
+      "name": "union_catal_present_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_blue_h1": {
+      "name": "union_blue_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "KEP"
+        },
+        {
+          "ticker": "OBE"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_blue_h3": {
+      "name": "union_blue_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "KEP"
+        },
+        {
+          "ticker": "OBE"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_white_h1": {
+      "name": "union_white_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_white_h3": {
+      "name": "union_white_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_last_green_h1": {
+      "name": "union_last_green_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UPB"
+        },
+        {
+          "ticker": "LFMD"
+        },
+        {
+          "ticker": "SSL"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "TGB"
+        },
+        {
+          "ticker": "WDS"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_last_green_h3": {
+      "name": "union_last_green_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UPB"
+        },
+        {
+          "ticker": "LFMD"
+        },
+        {
+          "ticker": "SSL"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "TGB"
+        },
+        {
+          "ticker": "WDS"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_last_red_h1": {
+      "name": "union_last_red_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "CNTB"
+        },
+        {
+          "ticker": "HAS"
+        },
+        {
+          "ticker": "BHC"
+        },
+        {
+          "ticker": "SARO"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_last_red_h3": {
+      "name": "union_last_red_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "CNTB"
+        },
+        {
+          "ticker": "HAS"
+        },
+        {
+          "ticker": "BHC"
+        },
+        {
+          "ticker": "SARO"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_candle_h1": {
+      "name": "union_candle_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "SSL"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "ZIM"
+        },
+        {
+          "ticker": "EYPT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_candle_h3": {
+      "name": "union_candle_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "SSL"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "ZIM"
+        },
+        {
+          "ticker": "EYPT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_coil_off_h1": {
+      "name": "union_coil_off_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "LFMD"
+        },
+        {
+          "ticker": "KEP"
+        },
+        {
+          "ticker": "ZIM"
+        },
+        {
+          "ticker": "OBE"
+        },
+        {
+          "ticker": "WDS"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_coil_off_h3": {
+      "name": "union_coil_off_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "LFMD"
+        },
+        {
+          "ticker": "KEP"
+        },
+        {
+          "ticker": "ZIM"
+        },
+        {
+          "ticker": "OBE"
+        },
+        {
+          "ticker": "WDS"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_earn_react_h1": {
+      "name": "union_earn_react_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
+      "sell": [],
+      "buy_n": 5,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_earn_react_h3": {
+      "name": "union_earn_react_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
+      "sell": [],
+      "buy_n": 5,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_e_fresh_h1": {
+      "name": "union_e_fresh_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_e_fresh_h3": {
+      "name": "union_e_fresh_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_r_up_h1": {
+      "name": "union_r_up_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_r_up_h3": {
+      "name": "union_r_up_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_break10_h1": {
+      "name": "union_break10_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "SSL"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "KEP"
+        },
+        {
+          "ticker": "ZIM"
+        },
+        {
+          "ticker": "SLDP"
+        },
+        {
+          "ticker": "CRWV"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_break10_h3": {
+      "name": "union_break10_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "SSL"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "KEP"
+        },
+        {
+          "ticker": "ZIM"
+        },
+        {
+          "ticker": "SLDP"
+        },
+        {
+          "ticker": "CRWV"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_vol_g_h5": {
+      "name": "union_vol_g_h5",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ZIM"
+        },
+        {
+          "ticker": "SLDP"
+        },
+        {
+          "ticker": "BIDU"
+        }
+      ],
+      "sell": [],
+      "buy_n": 3,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_coil_off_h5": {
+      "name": "union_coil_off_h5",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "LFMD"
+        },
+        {
+          "ticker": "KEP"
+        },
+        {
+          "ticker": "ZIM"
+        },
+        {
+          "ticker": "OBE"
+        },
+        {
+          "ticker": "WDS"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_last_green_h5": {
+      "name": "union_last_green_h5",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UPB"
+        },
+        {
+          "ticker": "LFMD"
+        },
+        {
+          "ticker": "SSL"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "TGB"
+        },
+        {
+          "ticker": "WDS"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_news_g_h5": {
+      "name": "union_news_g_h5",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "DFDV"
+        },
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "TH"
+        }
+      ],
+      "sell": [],
+      "buy_n": 3,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_white_h5": {
+      "name": "union_white_h5",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_vol_ab_h1": {
+      "name": "union_vol_ab_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ZIM"
+        }
+      ],
+      "sell": [],
+      "buy_n": 1,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_vol_ab_h3": {
+      "name": "union_vol_ab_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ZIM"
+        }
+      ],
+      "sell": [],
+      "buy_n": 1,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_blue_vol_h1": {
+      "name": "union_blue_vol_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_blue_vol_h3": {
+      "name": "union_blue_vol_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_news_vol_h1": {
+      "name": "union_news_vol_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_news_vol_h3": {
+      "name": "union_news_vol_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_e_green_h1": {
+      "name": "union_e_green_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "AVO"
+        }
+      ],
+      "sell": [],
+      "buy_n": 1,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_e_green_h3": {
+      "name": "union_e_green_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "AVO"
+        }
+      ],
+      "sell": [],
+      "buy_n": 1,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "probable_probable_ok_h1": {
+      "name": "probable_probable_ok_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "UPB"
+        },
+        {
+          "ticker": "LFMD"
+        }
+      ],
+      "sell": [],
+      "buy_n": 2,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "probable_probable_ok_h3": {
+      "name": "probable_probable_ok_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "UPB"
+        },
+        {
+          "ticker": "LFMD"
+        }
+      ],
+      "sell": [],
+      "buy_n": 2,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_vol_green_h1": {
+      "name": "union_vol_green_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "BIDU"
+        }
+      ],
+      "sell": [],
+      "buy_n": 1,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_vol_green_h3": {
+      "name": "union_vol_green_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "BIDU"
+        }
+      ],
+      "sell": [],
+      "buy_n": 1,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_coil_green_h1": {
+      "name": "union_coil_green_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "LFMD"
+        },
+        {
+          "ticker": "WDS"
+        },
+        {
+          "ticker": "HELP"
+        },
+        {
+          "ticker": "AVXL"
+        },
+        {
+          "ticker": "FATE"
+        },
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "STX"
+        },
+        {
+          "ticker": "TH"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_coil_green_h3": {
+      "name": "union_coil_green_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "LFMD"
+        },
+        {
+          "ticker": "WDS"
+        },
+        {
+          "ticker": "HELP"
+        },
+        {
+          "ticker": "AVXL"
+        },
+        {
+          "ticker": "FATE"
+        },
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "STX"
+        },
+        {
+          "ticker": "TH"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_blue_coil_h1": {
+      "name": "union_blue_coil_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "KEP"
+        },
+        {
+          "ticker": "OBE"
+        },
+        {
+          "ticker": "TGB"
+        },
+        {
+          "ticker": "WDS"
+        },
+        {
+          "ticker": "KOS"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_blue_coil_h3": {
+      "name": "union_blue_coil_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "KEP"
+        },
+        {
+          "ticker": "OBE"
+        },
+        {
+          "ticker": "TGB"
+        },
+        {
+          "ticker": "WDS"
+        },
+        {
+          "ticker": "KOS"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_join_vol_green_h1": {
+      "name": "union_join_vol_green_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_join_vol_green_h3": {
+      "name": "union_join_vol_green_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_white_coil_h1": {
+      "name": "union_white_coil_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_white_coil_h3": {
+      "name": "union_white_coil_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_vol_g_h3": {
+      "name": "flatten_vol_g_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_live_h1": {
+      "name": "flatten_live_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_live_h3": {
+      "name": "flatten_live_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_live_h5": {
+      "name": "flatten_live_h5",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "ohlc_hot_coil_h1": {
+      "name": "ohlc_hot_coil_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "STX"
+        },
+        {
+          "ticker": "TH"
+        },
+        {
+          "ticker": "CDZI"
+        }
+      ],
+      "sell": [],
+      "buy_n": 4,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_hot_score_h1": {
+      "name": "union_hot_score_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        },
+        {
+          "ticker": "SEDG"
+        },
+        {
+          "ticker": "DOCN"
+        },
+        {
+          "ticker": "SKHY"
+        },
+        {
+          "ticker": "CHA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_hot_score_h3": {
+      "name": "union_hot_score_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        },
+        {
+          "ticker": "SEDG"
+        },
+        {
+          "ticker": "DOCN"
+        },
+        {
+          "ticker": "SKHY"
+        },
+        {
+          "ticker": "CHA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_candle_score_h1": {
+      "name": "union_candle_score_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "DFDV"
+        },
+        {
+          "ticker": "GLW"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "TH"
+        },
+        {
+          "ticker": "SWKS"
+        },
+        {
+          "ticker": "UROY"
+        },
+        {
+          "ticker": "SKHY"
+        },
+        {
+          "ticker": "SSL"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_candle_score_h3": {
+      "name": "union_candle_score_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "DFDV"
+        },
+        {
+          "ticker": "GLW"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "TH"
+        },
+        {
+          "ticker": "SWKS"
+        },
+        {
+          "ticker": "UROY"
+        },
+        {
+          "ticker": "SKHY"
+        },
+        {
+          "ticker": "SSL"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_ret_5_h1": {
+      "name": "union_ret_5_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "RIOT"
+        },
+        {
+          "ticker": "BTDR"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "AUR"
+        },
+        {
+          "ticker": "VSAT"
+        },
+        {
+          "ticker": "ANGX"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_ret_5_h3": {
+      "name": "union_ret_5_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "RIOT"
+        },
+        {
+          "ticker": "BTDR"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "AUR"
+        },
+        {
+          "ticker": "VSAT"
+        },
+        {
+          "ticker": "ANGX"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_cond_h1": {
+      "name": "union_cond_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "GLW"
+        },
+        {
+          "ticker": "SWKS"
+        },
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "OBE"
+        },
+        {
+          "ticker": "SKHY"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_cond_h3": {
+      "name": "union_cond_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "GLW"
+        },
+        {
+          "ticker": "SWKS"
+        },
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "OBE"
+        },
+        {
+          "ticker": "SKHY"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_w_hot_cond_h1": {
+      "name": "union_w_hot_cond_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "GLW"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "SWKS"
+        },
+        {
+          "ticker": "SKHY"
+        },
+        {
+          "ticker": "UROY"
+        },
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "DOCN"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_w_hot_cond_h3": {
+      "name": "union_w_hot_cond_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "GLW"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "SWKS"
+        },
+        {
+          "ticker": "SKHY"
+        },
+        {
+          "ticker": "UROY"
+        },
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "DOCN"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_w_hot_candle_h1": {
+      "name": "union_w_hot_candle_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        },
+        {
+          "ticker": "DFDV"
+        },
+        {
+          "ticker": "GLW"
+        },
+        {
+          "ticker": "SKHY"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "SWKS"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_w_hot_candle_h3": {
+      "name": "union_w_hot_candle_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        },
+        {
+          "ticker": "DFDV"
+        },
+        {
+          "ticker": "GLW"
+        },
+        {
+          "ticker": "SKHY"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "SWKS"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_hot_n4_h1": {
+      "name": "union_hot_n4_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        }
+      ],
+      "sell": [],
+      "buy_n": 4,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_hot_n12_h1": {
+      "name": "union_hot_n12_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        },
+        {
+          "ticker": "SEDG"
+        },
+        {
+          "ticker": "DOCN"
+        },
+        {
+          "ticker": "SKHY"
+        },
+        {
+          "ticker": "CHA"
+        },
+        {
+          "ticker": "BTDR"
+        },
+        {
+          "ticker": "SAFX"
+        },
+        {
+          "ticker": "ANGX"
+        },
+        {
+          "ticker": "DFDV"
+        }
+      ],
+      "sell": [],
+      "buy_n": 12,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_cond_n4_h3": {
+      "name": "union_cond_n4_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "GLW"
+        },
+        {
+          "ticker": "SWKS"
+        },
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "OCC"
+        }
+      ],
+      "sell": [],
+      "buy_n": 4,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h3_exit_alarm": {
+      "name": "union_h3_exit_alarm",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "UPB"
+        },
+        {
+          "ticker": "CNTB"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h5_exit_alarm": {
+      "name": "union_h5_exit_alarm",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "UPB"
+        },
+        {
+          "ticker": "CNTB"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h3_exit_red": {
+      "name": "union_h3_exit_red",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UPB"
+        },
+        {
+          "ticker": "LFMD"
+        },
+        {
+          "ticker": "SSL"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "TGB"
+        },
+        {
+          "ticker": "WDS"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h3_exit_news_r": {
+      "name": "union_h3_exit_news_r",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "UPB"
+        },
+        {
+          "ticker": "CNTB"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "coil_h3_exit_alarm": {
+      "name": "coil_h3_exit_alarm",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "LFMD"
+        },
+        {
+          "ticker": "BHC"
+        },
+        {
+          "ticker": "KEP"
+        },
+        {
+          "ticker": "ZIM"
+        },
+        {
+          "ticker": "EYPT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "short_alarm_h1": {
+      "name": "short_alarm_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        },
+        {
+          "ticker": "ORBS"
+        },
+        {
+          "ticker": "SWIM"
+        },
+        {
+          "ticker": "DRTS"
+        },
+        {
+          "ticker": "BE"
+        },
+        {
+          "ticker": "TRBG"
+        },
+        {
+          "ticker": "AMP"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "short_alarm_h3": {
+      "name": "short_alarm_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        },
+        {
+          "ticker": "ORBS"
+        },
+        {
+          "ticker": "SWIM"
+        },
+        {
+          "ticker": "DRTS"
+        },
+        {
+          "ticker": "BE"
+        },
+        {
+          "ticker": "TRBG"
+        },
+        {
+          "ticker": "AMP"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "short_news_r_h1": {
+      "name": "short_news_r_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "short_news_r_h3": {
+      "name": "short_news_r_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "short_r_down_h1": {
+      "name": "short_r_down_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "short_r_down_h3": {
+      "name": "short_r_down_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "short_extended_h1": {
+      "name": "short_extended_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ORBS"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "BE"
+        },
+        {
+          "ticker": "PAYP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "HYLN"
+        },
+        {
+          "ticker": "LIFE"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "short_extended_h3": {
+      "name": "short_extended_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ORBS"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "BE"
+        },
+        {
+          "ticker": "PAYP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "HYLN"
+        },
+        {
+          "ticker": "LIFE"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "short_last_red_h1": {
+      "name": "short_last_red_h1",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        },
+        {
+          "ticker": "CNTB"
+        },
+        {
+          "ticker": "HAS"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "short_last_red_h3": {
+      "name": "short_last_red_h3",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        },
+        {
+          "ticker": "CNTB"
+        },
+        {
+          "ticker": "HAS"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_h5_rankw": {
+      "name": "flatten_h5_rankw",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_h5_topheavy": {
+      "name": "flatten_h5_topheavy",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_h5_half": {
+      "name": "flatten_h5_half",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_h5_time": {
+      "name": "flatten_h5_time",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_h5_cut": {
+      "name": "flatten_h5_cut",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_h5_trail": {
+      "name": "flatten_h5_trail",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_h5_sboost": {
+      "name": "flatten_h5_sboost",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_h5_sizeup": {
+      "name": "flatten_h5_sizeup",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_h3_rankw": {
+      "name": "flatten_h3_rankw",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_h3_topheavy": {
+      "name": "flatten_h3_topheavy",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_h3_half": {
+      "name": "flatten_h3_half",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_h3_time": {
+      "name": "flatten_h3_time",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_h3_cut": {
+      "name": "flatten_h3_cut",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_h3_trail": {
+      "name": "flatten_h3_trail",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_h3_sboost": {
+      "name": "flatten_h3_sboost",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_h3_sizeup": {
+      "name": "flatten_h3_sizeup",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_live_h1_rankw": {
+      "name": "flatten_live_h1_rankw",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_live_h1_topheavy": {
+      "name": "flatten_live_h1_topheavy",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_live_h1_half": {
+      "name": "flatten_live_h1_half",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_live_h1_time": {
+      "name": "flatten_live_h1_time",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_live_h1_cut": {
+      "name": "flatten_live_h1_cut",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_live_h1_trail": {
+      "name": "flatten_live_h1_trail",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_live_h1_sboost": {
+      "name": "flatten_live_h1_sboost",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "flatten_live_h1_sizeup": {
+      "name": "flatten_live_h1_sizeup",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h5_rankw": {
+      "name": "union_h5_rankw",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h5_topheavy": {
+      "name": "union_h5_topheavy",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h5_half": {
+      "name": "union_h5_half",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h5_time": {
+      "name": "union_h5_time",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h5_cut": {
+      "name": "union_h5_cut",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h5_trail": {
+      "name": "union_h5_trail",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h5_sboost": {
+      "name": "union_h5_sboost",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h5_sizeup": {
+      "name": "union_h5_sizeup",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h3_rankw": {
+      "name": "union_h3_rankw",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h3_topheavy": {
+      "name": "union_h3_topheavy",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h3_half": {
+      "name": "union_h3_half",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h3_time": {
+      "name": "union_h3_time",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h3_cut": {
+      "name": "union_h3_cut",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h3_trail": {
+      "name": "union_h3_trail",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h3_sboost": {
+      "name": "union_h3_sboost",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h3_sizeup": {
+      "name": "union_h3_sizeup",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h1_rankw": {
+      "name": "union_h1_rankw",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h1_topheavy": {
+      "name": "union_h1_topheavy",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h1_half": {
+      "name": "union_h1_half",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h1_time": {
+      "name": "union_h1_time",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h1_cut": {
+      "name": "union_h1_cut",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h1_trail": {
+      "name": "union_h1_trail",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h1_sboost": {
+      "name": "union_h1_sboost",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "union_h1_sizeup": {
+      "name": "union_h1_sizeup",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "VENU"
+        },
+        {
+          "ticker": "CABA"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": true,
+      "status": "sit",
+      "why": "S=-13.275",
+      "hard_red": true,
+      "s": -13.275,
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+    },
+    "combo_en_3070_shared": {
+      "name": "combo_en_3070_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_ehs_601525_shared": {
+      "name": "combo_ehs_601525_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_sh_7030_shared": {
+      "name": "combo_sh_7030_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_se_5050_weather": {
+      "name": "combo_se_5050_weather",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_eh_3070_shared": {
+      "name": "combo_eh_3070_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_ser_5050_shared": {
+      "name": "combo_ser_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_sn_3070_shared": {
+      "name": "combo_sn_3070_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_fse_333_shared": {
+      "name": "combo_fse_333_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_ers_7030_shared": {
+      "name": "combo_ers_7030_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_seh_502525_shared": {
+      "name": "combo_seh_502525_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_he1_5050_shared": {
+      "name": "combo_he1_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_se_5050_skip": {
+      "name": "combo_se_5050_skip",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_seh_403525_shared": {
+      "name": "combo_seh_403525_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_en_7030_shared": {
+      "name": "combo_en_7030_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_e1er_5050_shared": {
+      "name": "combo_e1er_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_ehs_702010_shared": {
+      "name": "combo_ehs_702010_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_ej_5050_shared": {
+      "name": "combo_ej_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_se_3070_shared": {
+      "name": "combo_se_3070_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_nf_5050_shared": {
+      "name": "combo_nf_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_jf_5050_shared": {
+      "name": "combo_jf_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_hj_5050_shared": {
+      "name": "combo_hj_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_ee1_3070_shared": {
+      "name": "combo_ee1_3070_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_ee1_7030_shared": {
+      "name": "combo_ee1_7030_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_ee1_5050_shared": {
+      "name": "combo_ee1_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_snj_333_shared": {
+      "name": "combo_snj_333_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_eh_5050_shared": {
+      "name": "combo_eh_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_seh_333_weather": {
+      "name": "combo_seh_333_weather",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_sf_7030_shared": {
+      "name": "combo_sf_7030_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_sj_3070_shared": {
+      "name": "combo_sj_3070_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_je1_5050_shared": {
+      "name": "combo_je1_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_sf_5050_shared": {
+      "name": "combo_sf_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_seh_404020_shared": {
+      "name": "combo_seh_404020_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_sj_5050_shared": {
+      "name": "combo_sj_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_sn_5050_shared": {
+      "name": "combo_sn_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_seh_601525_shared": {
+      "name": "combo_seh_601525_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_fe_5050_shared": {
+      "name": "combo_fe_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_nj_5050_shared": {
+      "name": "combo_nj_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_jer_5050_shared": {
+      "name": "combo_jer_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_her_5050_shared": {
+      "name": "combo_her_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_ne1_5050_shared": {
+      "name": "combo_ne1_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_fh_7030_shared": {
+      "name": "combo_fh_7030_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_eer_5050_shared": {
+      "name": "combo_eer_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_sn_7030_shared": {
+      "name": "combo_sn_7030_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_fer_5050_shared": {
+      "name": "combo_fer_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_hn_7030_shared": {
+      "name": "combo_hn_7030_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_se1_5050_shared": {
+      "name": "combo_se1_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_jse_333_shared": {
+      "name": "combo_jse_333_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_ef_5050_shared": {
+      "name": "combo_ef_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_sf_3070_shared": {
+      "name": "combo_sf_3070_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_hn_3070_shared": {
+      "name": "combo_hn_3070_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_seh_333_skip": {
+      "name": "combo_seh_333_skip",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_fes_403030_shared": {
+      "name": "combo_fes_403030_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_seh_451540_shared": {
+      "name": "combo_seh_451540_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_eh_7030_shared": {
+      "name": "combo_eh_7030_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_es_8020_shared": {
+      "name": "combo_es_8020_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_es_9010_shared": {
+      "name": "combo_es_9010_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_sh_5050_shared": {
+      "name": "combo_sh_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_seh_502525_split": {
+      "name": "combo_seh_502525_split",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_hf_5050_shared": {
+      "name": "combo_hf_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_en_5050_shared": {
+      "name": "combo_en_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_ner_5050_shared": {
+      "name": "combo_ner_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_hn_5050_shared": {
+      "name": "combo_hn_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_fe1_5050_shared": {
+      "name": "combo_fe1_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_se_7030_shared": {
+      "name": "combo_se_7030_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_sj_7030_shared": {
+      "name": "combo_sj_7030_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_sh_3070_shared": {
+      "name": "combo_sh_3070_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_nse_333_shared": {
+      "name": "combo_nse_333_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_e1s_7030_shared": {
+      "name": "combo_e1s_7030_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_ef_7030_shared": {
+      "name": "combo_ef_7030_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_ef_3070_shared": {
+      "name": "combo_ef_3070_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_seh_333_shared": {
+      "name": "combo_seh_333_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_se_5050_split": {
+      "name": "combo_se_5050_split",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_seh_333_split": {
+      "name": "combo_seh_333_split",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    },
+    "combo_se_5050_shared": {
+      "name": "combo_se_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [],
+      "sell": [],
+      "buy_n": 0,
+      "sell_n": 0,
+      "sit": false,
+      "status": "combo_needs_mine",
+      "note": "combo pile needs the cash-book roll"
+    }
+  },
+  "order": [
+    "stock_book_1d",
+    "1d_top",
+    "stock_book_3d",
+    "3d_top",
+    "stock_book_1w",
+    "1w_top",
+    "stock_book_2w",
+    "2w_top",
+    "stock_book_1m",
+    "1m_top",
+    "flatten_robust",
+    "union_h1",
+    "union_h3",
+    "union_h5",
+    "flatten_h1",
+    "flatten_h3",
+    "flatten_h5",
+    "probable_h1",
+    "probable_h3",
+    "probable_h5",
+    "yday_gainer_h1",
+    "yday_gainer_h3",
+    "yday_gainer_h5",
+    "ohlc_hot_h1",
+    "ohlc_hot_h3",
+    "ohlc_hot_h5",
+    "union_vol_g_h1",
+    "union_vol_g_h3",
+    "union_vol_missing_h1",
+    "union_vol_missing_h3",
+    "union_ab_g_h1",
+    "union_ab_g_h3",
+    "union_join_g_h1",
+    "union_join_g_h3",
+    "union_join_present_h1",
+    "union_join_present_h3",
+    "union_news_g_h1",
+    "union_news_g_h3",
+    "union_news_present_h1",
+    "union_news_present_h3",
+    "union_news_missing_h1",
+    "union_news_missing_h3",
+    "union_catal_present_h1",
+    "union_catal_present_h3",
+    "union_blue_h1",
+    "union_blue_h3",
+    "union_white_h1",
+    "union_white_h3",
+    "union_last_green_h1",
+    "union_last_green_h3",
+    "union_last_red_h1",
+    "union_last_red_h3",
+    "union_candle_h1",
+    "union_candle_h3",
+    "union_coil_off_h1",
+    "union_coil_off_h3",
+    "union_earn_react_h1",
+    "union_earn_react_h3",
+    "union_e_fresh_h1",
+    "union_e_fresh_h3",
+    "union_r_up_h1",
+    "union_r_up_h3",
+    "union_break10_h1",
+    "union_break10_h3",
+    "union_vol_g_h5",
+    "union_coil_off_h5",
+    "union_last_green_h5",
+    "union_news_g_h5",
+    "union_white_h5",
+    "union_vol_ab_h1",
+    "union_vol_ab_h3",
+    "union_blue_vol_h1",
+    "union_blue_vol_h3",
+    "union_news_vol_h1",
+    "union_news_vol_h3",
+    "union_e_green_h1",
+    "union_e_green_h3",
+    "probable_probable_ok_h1",
+    "probable_probable_ok_h3",
+    "union_vol_green_h1",
+    "union_vol_green_h3",
+    "union_coil_green_h1",
+    "union_coil_green_h3",
+    "union_blue_coil_h1",
+    "union_blue_coil_h3",
+    "union_join_vol_green_h1",
+    "union_join_vol_green_h3",
+    "union_white_coil_h1",
+    "union_white_coil_h3",
+    "flatten_vol_g_h3",
+    "flatten_live_h1",
+    "flatten_live_h3",
+    "flatten_live_h5",
+    "ohlc_hot_coil_h1",
+    "union_hot_score_h1",
+    "union_hot_score_h3",
+    "union_candle_score_h1",
+    "union_candle_score_h3",
+    "union_ret_5_h1",
+    "union_ret_5_h3",
+    "union_cond_h1",
+    "union_cond_h3",
+    "union_w_hot_cond_h1",
+    "union_w_hot_cond_h3",
+    "union_w_hot_candle_h1",
+    "union_w_hot_candle_h3",
+    "union_hot_n4_h1",
+    "union_hot_n12_h1",
+    "union_cond_n4_h3",
+    "union_h3_exit_alarm",
+    "union_h5_exit_alarm",
+    "union_h3_exit_red",
+    "union_h3_exit_news_r",
+    "coil_h3_exit_alarm",
+    "short_alarm_h1",
+    "short_alarm_h3",
+    "short_news_r_h1",
+    "short_news_r_h3",
+    "short_r_down_h1",
+    "short_r_down_h3",
+    "short_extended_h1",
+    "short_extended_h3",
+    "short_last_red_h1",
+    "short_last_red_h3",
+    "flatten_h5_rankw",
+    "flatten_h5_topheavy",
+    "flatten_h5_half",
+    "flatten_h5_time",
+    "flatten_h5_cut",
+    "flatten_h5_trail",
+    "flatten_h5_sboost",
+    "flatten_h5_sizeup",
+    "flatten_h3_rankw",
+    "flatten_h3_topheavy",
+    "flatten_h3_half",
+    "flatten_h3_time",
+    "flatten_h3_cut",
+    "flatten_h3_trail",
+    "flatten_h3_sboost",
+    "flatten_h3_sizeup",
+    "flatten_live_h1_rankw",
+    "flatten_live_h1_topheavy",
+    "flatten_live_h1_half",
+    "flatten_live_h1_time",
+    "flatten_live_h1_cut",
+    "flatten_live_h1_trail",
+    "flatten_live_h1_sboost",
+    "flatten_live_h1_sizeup",
+    "union_h5_rankw",
+    "union_h5_topheavy",
+    "union_h5_half",
+    "union_h5_time",
+    "union_h5_cut",
+    "union_h5_trail",
+    "union_h5_sboost",
+    "union_h5_sizeup",
+    "union_h3_rankw",
+    "union_h3_topheavy",
+    "union_h3_half",
+    "union_h3_time",
+    "union_h3_cut",
+    "union_h3_trail",
+    "union_h3_sboost",
+    "union_h3_sizeup",
+    "union_h1_rankw",
+    "union_h1_topheavy",
+    "union_h1_half",
+    "union_h1_time",
+    "union_h1_cut",
+    "union_h1_trail",
+    "union_h1_sboost",
+    "union_h1_sizeup",
+    "combo_en_3070_shared",
+    "combo_ehs_601525_shared",
+    "combo_sh_7030_shared",
+    "combo_se_5050_weather",
+    "combo_eh_3070_shared",
+    "combo_ser_5050_shared",
+    "combo_sn_3070_shared",
+    "combo_fse_333_shared",
+    "combo_ers_7030_shared",
+    "combo_seh_502525_shared",
+    "combo_he1_5050_shared",
+    "combo_se_5050_skip",
+    "combo_seh_403525_shared",
+    "combo_en_7030_shared",
+    "combo_e1er_5050_shared",
+    "combo_ehs_702010_shared",
+    "combo_ej_5050_shared",
+    "combo_se_3070_shared",
+    "combo_nf_5050_shared",
+    "combo_jf_5050_shared",
+    "combo_hj_5050_shared",
+    "combo_ee1_3070_shared",
+    "combo_ee1_7030_shared",
+    "combo_ee1_5050_shared",
+    "combo_snj_333_shared",
+    "combo_eh_5050_shared",
+    "combo_seh_333_weather",
+    "combo_sf_7030_shared",
+    "combo_sj_3070_shared",
+    "combo_je1_5050_shared",
+    "combo_sf_5050_shared",
+    "combo_seh_404020_shared",
+    "combo_sj_5050_shared",
+    "combo_sn_5050_shared",
+    "combo_seh_601525_shared",
+    "combo_fe_5050_shared",
+    "combo_nj_5050_shared",
+    "combo_jer_5050_shared",
+    "combo_her_5050_shared",
+    "combo_ne1_5050_shared",
+    "combo_fh_7030_shared",
+    "combo_eer_5050_shared",
+    "combo_sn_7030_shared",
+    "combo_fer_5050_shared",
+    "combo_hn_7030_shared",
+    "combo_se1_5050_shared",
+    "combo_jse_333_shared",
+    "combo_ef_5050_shared",
+    "combo_sf_3070_shared",
+    "combo_hn_3070_shared",
+    "combo_seh_333_skip",
+    "combo_fes_403030_shared",
+    "combo_seh_451540_shared",
+    "combo_eh_7030_shared",
+    "combo_es_8020_shared",
+    "combo_es_9010_shared",
+    "combo_sh_5050_shared",
+    "combo_seh_502525_split",
+    "combo_hf_5050_shared",
+    "combo_en_5050_shared",
+    "combo_ner_5050_shared",
+    "combo_hn_5050_shared",
+    "combo_fe1_5050_shared",
+    "combo_se_7030_shared",
+    "combo_sj_7030_shared",
+    "combo_sh_3070_shared",
+    "combo_nse_333_shared",
+    "combo_e1s_7030_shared",
+    "combo_ef_7030_shared",
+    "combo_ef_3070_shared",
+    "combo_seh_333_shared",
+    "combo_se_5050_split",
+    "combo_seh_333_split",
+    "combo_se_5050_shared"
+  ],
+  "errors": [],
+  "source": "strategy_tickets"
+}
