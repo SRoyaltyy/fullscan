@@ -4,6 +4,69 @@
   "overall": "PARTIAL",
   "ranker_ready": true,
   "source": "publish_live_boards",
-  "buy_1d": [{"ticker": "CIG"}, {"ticker": "ATRO"}, {"ticker": "EMBJ"}, {"ticker": "MIR"}, {"ticker": "NXE"}, {"ticker": "BG"}, {"ticker": "AR"}, {"ticker": "ITT"}, {"ticker": "XIFR"}, {"ticker": "ETN"}],
-  "sell_1d": [{"ticker": "METC"}, {"ticker": "SLQT"}, {"ticker": "CPB"}, {"ticker": "COIN"}, {"ticker": "SPIR"}, {"ticker": "RZLV"}, {"ticker": "CLPT"}, {"ticker": "BGS"}, {"ticker": "APLD"}, {"ticker": "STEP"}]
+  "buy_1d": [
+    {
+      "ticker": "CIG"
+    },
+    {
+      "ticker": "ATRO"
+    },
+    {
+      "ticker": "EMBJ"
+    },
+    {
+      "ticker": "MIR"
+    },
+    {
+      "ticker": "NXE"
+    },
+    {
+      "ticker": "BG"
+    },
+    {
+      "ticker": "AR"
+    },
+    {
+      "ticker": "ITT"
+    },
+    {
+      "ticker": "XIFR"
+    },
+    {
+      "ticker": "ETN"
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "METC"
+    },
+    {
+      "ticker": "SLQT"
+    },
+    {
+      "ticker": "CPB"
+    },
+    {
+      "ticker": "COIN"
+    },
+    {
+      "ticker": "SPIR"
+    },
+    {
+      "ticker": "RZLV"
+    },
+    {
+      "ticker": "CLPT"
+    },
+    {
+      "ticker": "BGS"
+    },
+    {
+      "ticker": "APLD"
+    },
+    {
+      "ticker": "STEP"
+    }
+  ],
+  "lands": []
 }

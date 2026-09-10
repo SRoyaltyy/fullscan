@@ -1,20 +1,21 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T06:23:00.942372-04:00",
+  "generated_at": "2026-09-10T06:24:34.018248-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-10_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-10/_board.json` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-09-10_actions.json` \u2014 missing",
+    "MISSING Finviz digest JSON `01_daily/news/2026-09-10_finviz_digest.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-09-10_judge.md` \u2014 missing",
     "MISSING Weather JSON `01_daily/weather/2026-09-10_weather.json` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-09-10_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 2,
+    "ok": 1,
     "partial": 1,
-    "fail": 5,
+    "fail": 6,
     "n": 8
   },
   "processes": [
@@ -54,7 +55,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 273427
+          "size": 271871
         },
         {
           "key": "heat_md",
@@ -63,7 +64,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 17088
+          "size": 17269
         }
       ],
       "said": "tables on disk",
@@ -73,11 +74,11 @@
       "key": "finviz",
       "name": "Finviz scrape",
       "yaml": "finviz_preopen_scrape.yml",
-      "status": "OK",
+      "status": "FAIL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 0,
       "n_req": 1,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 1,
       "files": [
         {
@@ -85,18 +86,18 @@
           "name": "Finviz digest JSON",
           "path": "01_daily/news/2026-09-10_finviz_digest.json",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 87494
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "digest_md",
           "name": "Finviz digest MD",
           "path": "01_daily/news/2026-09-10_finviz_digest.md",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 12026
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         }
       ],
       "said": "",
@@ -107,7 +108,7 @@
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
       "status": "FAIL",
-      "inputs_ready": true,
+      "inputs_ready": false,
       "n_req_ok": 0,
       "n_req": 20,
       "n_opt_ok": 0,
@@ -118,9 +119,9 @@
           "name": "Finviz digest JSON",
           "path": "01_daily/news/2026-09-10_finviz_digest.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 87494
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "in_baseline",
@@ -138,7 +139,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 273427
+          "size": 271871
         },
         {
           "key": "parsed",
@@ -347,7 +348,7 @@
       "name": "Label + weather",
       "yaml": "label_weather.yml",
       "status": "FAIL",
-      "inputs_ready": true,
+      "inputs_ready": false,
       "n_req_ok": 0,
       "n_req": 1,
       "n_opt_ok": 0,
@@ -358,9 +359,9 @@
           "name": "Finviz digest JSON",
           "path": "01_daily/news/2026-09-10_finviz_digest.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 87494
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "weather",
@@ -433,9 +434,9 @@
           "name": "Finviz digest JSON",
           "path": "01_daily/news/2026-09-10_finviz_digest.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 87494
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "dossiers",
@@ -493,9 +494,9 @@
           "name": "Finviz digest JSON",
           "path": "01_daily/news/2026-09-10_finviz_digest.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 87494
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "in_judge",
@@ -709,6 +710,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-09\nExport `finviz_2026-09-08.csv` \u00b7 11608 names \u00b7 generated 2026-09-09T01:59:54.403331-04:00"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T06:24:33.862641-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-10.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10973212,
+          "preview": "11630 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11414966,
+          "preview": "11614 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11630 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11614 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
