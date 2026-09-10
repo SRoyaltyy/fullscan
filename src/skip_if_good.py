@@ -409,6 +409,33 @@ def book_1d_breaks_all_green(js: Path) -> bool:
     return False
 
 
+def green_pile_fallback_is_legit(green: Path) -> bool:
+    """True when green.json records a deliberate thin-pile fallback.
+
+    The ranker graded the pile, found fewer than `min` liquid all-green
+    names with every core pillar fired, and walked the weighted book
+    instead. That is a market fact (HARD_RED day), not a broken rank.
+    """
+    try:
+        g = json.loads(green.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError, TypeError):
+        return False
+    if not isinstance(g, dict) or g.get("degraded"):
+        return False
+    if g.get("used") is not False:
+        return False
+    if str(g.get("buy_mode") or "") != "weighted_fallback":
+        return False
+    if g.get("missing_core"):
+        return False
+    try:
+        n_pile = int(g.get("n_pile_liquid", g.get("n_pile", 0)) or 0)
+        need = int(g.get("min") or 8)
+    except (TypeError, ValueError):
+        return False
+    return n_pile < need
+
+
 def check_stock_book_all(date: str) -> bool:
     """Book + green pile + the ranker inputs BUY/SELL need."""
     js = ROOT / "data" / "stock_book" / f"{date}_stock_book.json"
@@ -427,8 +454,18 @@ def check_stock_book_all(date: str) -> bool:
         return _log(False, "stock_book_all", date,
                     "1d BUY has printed dead relvol — re-rank required")
     if js.is_file() and book_1d_breaks_all_green(js):
-        return _log(False, "stock_book_all", date,
-                    "1d BUY is not all-green — re-rank required")
+        # 2026-09-09 HARD_RED: pile 0 < 8, stock_book fell back to the
+        # weighted walk on purpose. Re-ranking is deterministic and cannot
+        # grow the pile, so every pass said "re-rank required" and the day
+        # board stayed PARTIAL. The all-green contract binds only when the
+        # pile was used.
+        if green_pile_fallback_is_legit(green):
+            print("[skip_if_good] 1d BUY not all-green but green.json says "
+                  "pile fallback (thin pile, core fired) — accepted",
+                  flush=True)
+        else:
+            return _log(False, "stock_book_all", date,
+                        "1d BUY is not all-green — re-rank required")
     if not check_label_weather(date):
         return _log(False, "stock_book_all", date, "weather incomplete")
     if not check_ab_checklist(date):

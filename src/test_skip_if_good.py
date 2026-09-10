@@ -29,9 +29,9 @@ def test_missing_date_is_run() -> None:
 
 
 def test_learn_requires_dated_file_not_stale_board() -> None:
-    # 2026-09-04 is still the live session — no dated learnings yet.
-    # 03_scoreboard/LEARNINGS.md is always large — that used to skip learn.
-    assert skip_if_good.check_learn_cycle("2026-09-04") is False
+    # A session with no dated learnings yet must run even though
+    # 03_scoreboard/LEARNINGS.md is always large (that used to skip learn).
+    assert skip_if_good.check_learn_cycle("2099-01-02") is False
     assert skip_if_good.check_learn_cycle("2026-09-03") is True
     assert skip_if_good.check_learn_cycle("2026-09-01") is True
 
@@ -168,13 +168,13 @@ def test_next_session_skips_labor_day_2026() -> None:
 
 
 def test_postclose_all_needs_learn_not_just_outcome() -> None:
-    # 09-03 dated learnings + full sector pack must SKIP. 09-04 is still
-    # the live session and must not skip on a stale board.
+    # 09-03 dated learnings + full sector pack must SKIP. A session with
+    # nothing landed yet must not skip on a stale board.
     assert skip_if_good.check_daily_pipeline_outcome("2026-09-03") is True
     assert skip_if_good.check_learn_cycle("2026-09-03") is True
     assert skip_if_good.check_postclose_all("2026-09-03") is True
-    assert skip_if_good.check_learn_cycle("2026-09-04") is False
-    assert skip_if_good.check_postclose_all("2026-09-04") is False
+    assert skip_if_good.check_learn_cycle("2099-01-02") is False
+    assert skip_if_good.check_postclose_all("2099-01-02") is False
 
 
 def test_postclose_all_needs_reflect_and_sector_outcomes() -> None:
@@ -300,8 +300,8 @@ def test_postclose_all_cli_yields_to_sidecar_only_for_all_workflow() -> None:
                 "Post-Close last-closed (ubuntu/DeepSeek sidecar)",
         }, clear=False):
             assert skip_if_good.postclose_all_should_yield_to_sidecar() is False
-        # Pack-complete predicate must stay disk-only (09-04 still missing).
-        assert skip_if_good.check_postclose_all("2026-09-04") is False
+        # Pack-complete predicate must stay disk-only (nothing landed yet).
+        assert skip_if_good.check_postclose_all("2099-01-02") is False
 
 
 def test_degraded_book_is_not_good() -> None:
@@ -333,7 +333,37 @@ def test_degraded_book_is_not_good() -> None:
         assert skip_if_good.book_files_are_degraded(js, green) is True
 
 
+def test_thin_pile_fallback_is_legit_only_when_graded_and_core_fired() -> None:
+    """2026-09-09 HARD_RED: pile 0 < 8 must not read as 're-rank required'."""
+    with tempfile.TemporaryDirectory() as tmp:
+        green = Path(tmp) / "green.json"
+        live = {
+            "n_pile": 0, "n_pile_raw": 0, "n_pile_liquid": 0,
+            "n_universe": 2065, "used": False, "min": 8,
+            "core_fired": {"join": True, "AB": True, "peer": True},
+            "missing_core": [], "buy_mode": "weighted_fallback",
+            "sell_mode": "core_weights",
+            "reason": "pile 0 < 8 liquid all-green names. Fallback weighted walk",
+            "tickers": [],
+        }
+        green.write_text(json.dumps(live), encoding="utf-8")
+        assert skip_if_good.green_pile_fallback_is_legit(green) is True
+        # Pile was used → the all-green contract binds.
+        green.write_text(json.dumps({**live, "used": True, "n_pile": 12,
+                                     "buy_mode": "green_pile"}), encoding="utf-8")
+        assert skip_if_good.green_pile_fallback_is_legit(green) is False
+        # A core pillar missing is a broken rank, not a market fact.
+        green.write_text(json.dumps({**live, "missing_core": ["AB"]}), encoding="utf-8")
+        assert skip_if_good.green_pile_fallback_is_legit(green) is False
+        # Crash stub.
+        green.write_text(json.dumps({**live, "degraded": True}), encoding="utf-8")
+        assert skip_if_good.green_pile_fallback_is_legit(green) is False
+        green.write_text("{", encoding="utf-8")
+        assert skip_if_good.green_pile_fallback_is_legit(green) is False
+
+
 if __name__ == "__main__":
+    test_thin_pile_fallback_is_legit_only_when_graded_and_core_fired()
     test_skip_constants_match_pile_and_avoid_pandas()
     test_missing_date_is_run()
     test_learn_requires_dated_file_not_stale_board()
