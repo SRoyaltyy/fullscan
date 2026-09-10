@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **+2.59%** ($10,259) · signal-only (no cash/fees) was -1.19%. Starts YES **12/18**. Fills 58 · skips 110 · realized $+258.86.
+Cash book **+2.59%** ($10,259) · signal-only (no cash/fees) was +4.17%. Starts YES **12/19**. Fills 58 · skips 118 · realized $+258.86.
 
 ## How this sleeve decides (like you are 10)
 
@@ -183,6 +183,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-03 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-04 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-08 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-09 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -206,6 +207,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-03 | -0.90 | $10,258.87 | — | $10,258.87 | +0.00 | +0.00 | — | — | $10,258.87 | $10,258.87 | — |
 | 2026-09-04 | +2.25 | $10,258.87 | — | $10,258.87 | +0.00 | +0.00 | — | — | $10,258.87 | $10,258.87 | — |
 | 2026-09-08 | -11.47 | $10,258.87 | — | $10,258.87 | +0.00 | +0.00 | — | — | $10,258.87 | $10,258.87 | — |
+| 2026-09-09 | -13.95 | $10,258.87 | — | $10,258.87 | +0.00 | +0.00 | — | — | $10,258.87 | $10,258.87 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -229,7 +231,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-17 09:30 ET | **SHORT** | `BW` | 60 | $10.35 | $2.21 | — | $16,814.53 | — | alarm; gate alarm=True; list probable; ⚪; ret5=+9.8; leftover $629.32 | join🟡 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
 | 2026-08-17 09:30 ET | **SHORT** | `INO` | 588 | $1.07 | $7.71 | — | $17,435.98 | — | alarm; gate alarm=True; list yday_gainer,yday_mover; ret5=+62.7; leftover $629.32 | join🟡 sector🔴 gen🟢 news🟡 judge🟢 vol🟢 buy🟡 |
 | 2026-08-17 09:30 ET | **SHORT** | `BYND` | 49 | $12.83 | $2.17 | — | $18,062.47 | — | alarm; gate alarm=True; list yday_gainer,yday_mover; ⚪; ret5=-34.1; leftover $629.32 | join🟡 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
-| 2026-08-17 09:30 ET | **SHORT** | `AEHR` | 4 | $132.79 | $2.04 | — | $18,591.59 | — | alarm; gate alarm=True; list yday_gainer; ⚪; ret5=+30.1; leftover $629.32 | join🟡 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
+| 2026-08-17 09:30 ET | **SHORT** | `AEHR` | 4 | $132.79 | $2.04 | — | $18,591.59 | — | alarm; gate alarm=True; list yday_gainer; ⚪; ret5=+30.1; leftover $629.32 | join🟡 sector🟢 gen🟢 news🟡 judge🟢 vol🟢 buy🟡 |
 | 2026-08-17 09:30 ET | **SHORT** | `LUNR` | 31 | $20.25 | $2.12 | — | $19,217.22 | — | alarm; gate alarm=True; list yday_gainer,ohlc_hot; ⚪; ret5=+15.9; leftover $629.32 | join🟡 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
 | 2026-08-17 09:30 ET | **SHORT** | `IOVA` | 92 | $6.84 | $2.31 | — | $19,844.20 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+10.1; leftover $629.32 | join🟡 sector🔴 gen🟢 news🟢 judge🟢 vol🟡 buy🟡 |
 | 2026-08-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19,844.20 | ▲ close $10,058.29 vs 09:30 $10,069.07 (session +12.32) | 16:00 close · cash $19,844.20 · equity $10,058.29 vs 09:30 $10,069.07 (-10.78; session marks +12.32) · 16 name(s) marked open→close (per-name table). WWW×30 09:30 $20.98 → close $19.83 +34.50; FOSL×110 09:30 $5.50 → close $5.74 -26.40; AIRS×185 09:30 $3.40 → close $3.08 +57.35; OMER×36 09:30 $17.17 → close $17.36 -6.84; MXCT×449 09:30 $1.32 → close $1.32 -0.00; AVAH×52 09:30 $12.21 → close $12.69 -24.96; CRMD×77 09:30 $7.55 → close $7.67 -9.24; LVWR×500 09:30 $1.18 → close $1.15 +15.00; HNST×130 09:30 $4.81 → close $4.70 +14.30; FCEL×28 09:30 $22.37 → close $22.36 +0.28; BW×60 09:30 $10.35 → close $9.92 +25.80; INO×588 09:30 $1.07 → close $1.15 -47.04; BYND×49 09:30 $12.83 → close $11.63 +58.80; AEHR×4 09:30 $132.79 → close $145.61 -51.28; LUNR×31 09:30 $20.25 → close $20.38 -4.03; IOVA×92 09:30 $6.84 → close $7.10 -23.92 | — |
@@ -305,6 +307,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,258.87 | ▲ close $10,258.87 vs 09:30 $10,258.87 (session +0.00) | 16:00 close · cash $10,258.87 · no lots left · equity $10,258.87. | — |
 | 2026-09-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,258.87 | ▲ 09:30 equity $10,258.87 vs yday $10,258.87 (+0.00) | 09:30 open · cash $10,258.87 · no holdings · equity $10,258.87 vs prior close $10,258.87 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,258.87 | ▲ close $10,258.87 vs 09:30 $10,258.87 (session +0.00) | 16:00 close · cash $10,258.87 · no lots left · equity $10,258.87. | — |
+| 2026-09-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,258.87 | ▲ 09:30 equity $10,258.87 vs yday $10,258.87 (+0.00) | 09:30 open · cash $10,258.87 · no holdings · equity $10,258.87 vs prior close $10,258.87 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,258.87 | ▲ close $10,258.87 vs 09:30 $10,258.87 (session +0.00) | 16:00 close · cash $10,258.87 · no lots left · equity $10,258.87. | — |
 
 ## Not taken
 
@@ -420,3 +424,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | `DPRO` | hard_red | hard-red S=-11.47 sit; no new buys |
 | 2026-09-08 | `ADBT` | hard_red | hard-red S=-11.47 sit; no new buys |
 | 2026-09-08 | `RARE` | hard_red | hard-red S=-11.47 sit; no new buys |
+| 2026-09-09 | `VENU` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-09 | `CABA` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-09 | `ORBS` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-09 | `SWIM` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-09 | `DRTS` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-09 | `BE` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-09 | `TRBG` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-09 | `AMP` | hard_red | hard-red S=-13.95 sit; no new buys |

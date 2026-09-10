@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ ab_g, no 🚨
 
-Cash book **+3.21%** ($10,321) · signal-only (no cash/fees) was -1.89%. Starts YES **6/18**. Fills 102 · skips 40 · realized $+321.01.
+Cash book **+3.21%** ($10,321) · signal-only (no cash/fees) was -1.89%. Starts YES **6/19**. Fills 102 · skips 48 · realized $+321.01.
 
 ## How this sleeve decides (like you are 10)
 
@@ -186,6 +186,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | `OABI` | 275 | $4.33 | $4.30 | -8.25 | — | +0.00 | -8.25 | -132.00 | — |
 | 2026-09-08 | `OPK` | 829 | $1.64 | $1.63 | -8.29 | — | +0.00 | -8.29 | +33.16 | — |
 | 2026-09-08 | `VIR` | 114 | $11.38 | $11.22 | -18.81 | — | +0.00 | -18.81 | -10.26 | — |
+| 2026-09-09 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -209,6 +210,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-03 | -0.90 | $10,761.37 | — | $10,761.37 | -0.00 | -239.69 | ATRC, HRMY, CABA, VSTM, RVTY, CRK, MRNA, ARCT | — | $80.74 | $10,501.74 | ATRC×25, HRMY×31, CABA×370, VSTM×167, RVTY×10, CRK×87, MRNA×9, ARCT×80 |
 | 2026-09-04 | +2.25 | $80.74 | ATRC×25, HRMY×31, CABA×370, VSTM×167, RVTY×10, CRK×87, MRNA×9, ARCT×80 | $10,505.84 | +4.10 | -53.36 | ALEC, BHC, BMEA, OABI, OPK, VIR | HRMY, VSTM, RVTY, CRK, MRNA, ARCT | $3.13 | $10,404.39 | ATRC×25, CABA×370, ALEC×523, BHC×196, BMEA×694, OABI×275, OPK×829, VIR×114 |
 | 2026-09-08 | -11.47 | $3.13 | ATRC×25, CABA×370, ALEC×523, BHC×196, BMEA×694, OABI×275, OPK×829, VIR×114 | $10,363.29 | -41.10 | +0.00 | — | ATRC, CABA, ALEC, BHC, BMEA, OABI, OPK, VIR | $10,321.01 | $10,321.01 | — |
+| 2026-09-09 | -13.95 | $10,321.01 | — | $10,321.01 | +0.00 | +0.00 | — | — | $10,321.01 | $10,321.01 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -352,6 +354,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 09:30 ET | **SELL** | `OPK` | 829 | $1.63 | $10.84 | $+11.62 | $9,044.29 | ▲ +11.62 after sell → book $10,323.37; vs 09:30 mark -10.84 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-08 09:30 ET | **SELL** | `VIR` | 114 | $11.22 | $2.36 | $-14.95 | $10,321.01 | ▼ -14.95 after sell → book $10,321.01; vs 09:30 mark -2.36 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,321.01 | ▲ close $10,321.01 vs 09:30 $10,363.29 (session +0.00) | 16:00 close · cash $10,321.01 · no lots left · equity $10,321.01. | — |
+| 2026-09-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,321.01 | ▲ 09:30 equity $10,321.01 vs yday $10,321.01 (+0.00) | 09:30 open · cash $10,321.01 · no holdings · equity $10,321.01 vs prior close $10,321.01 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,321.01 | ▲ close $10,321.01 vs 09:30 $10,321.01 (session +0.00) | 16:00 close · cash $10,321.01 · no lots left · equity $10,321.01. | — |
 
 ## Not taken
 
@@ -397,3 +401,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | `BMNR` | hard_red | hard-red S=-11.47 sit; no new buys |
 | 2026-09-08 | `CHPT` | hard_red | hard-red S=-11.47 sit; no new buys |
 | 2026-09-08 | `CYPH` | hard_red | hard-red S=-11.47 sit; no new buys |
+| 2026-09-09 | `PCG` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-09 | `AR` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-09 | `CIG` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-09 | `UGP` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-09 | `VET` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-09 | `GRNT` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-09 | `CNTB` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-09 | `HAS` | hard_red | hard-red S=-13.95 sit; no new buys |

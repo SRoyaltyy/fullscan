@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `ret_5` · size `leftover` · sell `list` · S-boost `none` · rank by ret_5
 
-Cash book **+10.90%** ($11,090) · signal-only (no cash/fees) was +34.29%. Starts YES **8/18**. Fills 112 · skips 188 · realized $+1343.39.
+Cash book **+10.52%** ($11,052) · signal-only (no cash/fees) was +30.70%. Starts YES **8/19**. Fills 120 · skips 200 · realized $+1050.51.
 
 ## How this sleeve decides (like you are 10)
 
@@ -53,7 +53,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $21.70.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $11,033.75.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -297,6 +297,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | `IRD` | 1 | $4.67 | $4.53 | -0.14 | $4.34 | -0.19 | -0.33 | +0.00 | -0.19 |
 | 2026-09-08 | `SLBT` | 1 | $2.88 | $2.88 | +0.00 | $2.62 | -0.26 | -0.26 | -0.27 | -0.53 |
 | 2026-09-08 | `BAK` | 2 | $1.89 | $1.94 | +0.10 | $1.92 | -0.04 | +0.06 | +0.00 | -0.04 |
+| 2026-09-09 | `GPRO` | 796 | $1.46 | $1.45 | -3.98 | — | +0.00 | -3.98 | -262.68 | — |
+| 2026-09-09 | `MMED` | 59 | $23.32 | $23.22 | -5.90 | — | +0.00 | -5.90 | -38.94 | — |
+| 2026-09-09 | `SION` | 193 | $7.30 | $7.27 | -5.79 | — | +0.00 | -5.79 | -7.72 | — |
+| 2026-09-09 | `CNH` | 103 | $13.60 | $13.64 | +4.12 | — | +0.00 | +4.12 | -7.21 | — |
+| 2026-09-09 | `PBR` | 66 | $20.83 | $21.11 | +18.48 | — | +0.00 | +18.48 | -4.62 | — |
+| 2026-09-09 | `PBR-A` | 74 | $18.86 | $19.10 | +17.76 | — | +0.00 | +17.76 | -4.44 | — |
+| 2026-09-09 | `TARS` | 17 | $87.22 | $86.31 | -15.47 | — | +0.00 | -15.47 | +60.35 | — |
+| 2026-09-09 | `FRVO` | 77 | $18.90 | $18.60 | -23.10 | — | +0.00 | -23.10 | +24.64 | — |
+| 2026-09-09 | `BRR` | 2 | $2.73 | $2.75 | +0.04 | $2.86 | +0.22 | +0.26 | +0.48 | +0.70 |
+| 2026-09-09 | `IRD` | 1 | $4.34 | $5.31 | +0.97 | $5.73 | +0.42 | +1.39 | +0.78 | +1.20 |
+| 2026-09-09 | `SLBT` | 1 | $2.62 | $2.62 | +0.00 | $2.61 | -0.01 | -0.01 | -0.53 | -0.54 |
+| 2026-09-09 | `BAK` | 2 | $1.92 | $2.02 | +0.19 | $1.97 | -0.09 | +0.10 | +0.15 | +0.06 |
 
 ## Each session (cash + holdings state)
 
@@ -320,6 +332,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-03 | -0.90 | $11,343.39 | — | $11,343.39 | +0.00 | -573.31 | GPRO, MMED, SION, CNH, PBR, PBR-A, TARS, FRVO | — | $38.47 | $10,744.12 | GPRO×796, MMED×59, SION×193, CNH×103, PBR×66, PBR-A×74, TARS×17, FRVO×77 |
 | 2026-09-04 | +2.25 | $38.47 | GPRO×796, MMED×59, SION×193, CNH×103, PBR×66, PBR-A×74, TARS×17, FRVO×77 | $10,773.85 | +29.73 | +480.94 | BRR, IRD, SLBT, BAK | — | $21.70 | $11,254.60 | GPRO×796, MMED×59, SION×193, CNH×103, PBR×66, PBR-A×74, TARS×17, FRVO×77, BRR×2, IRD×1, SLBT×1, BAK×2 |
 | 2026-09-08 | -11.47 | $21.70 | GPRO×796, MMED×59, SION×193, CNH×103, PBR×66, PBR-A×74, TARS×17, FRVO×77, BRR×2, IRD×1, SLBT×1, BAK×2 | $11,211.92 | -42.68 | -121.74 | — | — | $21.70 | $11,090.18 | GPRO×796, MMED×59, SION×193, CNH×103, PBR×66, PBR-A×74, TARS×17, FRVO×77, BRR×2, IRD×1, SLBT×1, BAK×2 |
+| 2026-09-09 | -13.95 | $21.70 | GPRO×796, MMED×59, SION×193, CNH×103, PBR×66, PBR-A×74, TARS×17, FRVO×77, BRR×2, IRD×1, SLBT×1, BAK×2 | $11,077.50 | -12.68 | +0.54 | — | GPRO, MMED, SION, CNH, PBR, PBR-A, TARS, FRVO | $11,033.75 | $11,051.75 | BRR×2, IRD×1, SLBT×1, BAK×2 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -328,22 +341,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-08-13 09:30 ET | **BUY** | `TNDM` | 53 | $23.33 | $2.15 | — | $8,761.36 | — | rank by ret_5; rank ret_5; list flatten; ⚪; ret5=+19.7; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟢 |
 | 2026-08-13 09:30 ET | **BUY** | `INO` | 1543 | $0.81 | $17.13 | — | $7,494.40 | — | rank by ret_5; rank ret_5; list flatten; ⚪; ret5=+13.2; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟢 |
-| 2026-08-13 09:30 ET | **BUY** | `IREN` | 27 | $45.98 | $2.07 | — | $6,250.87 | — | rank by ret_5; rank ret_5; list flatten; ⚪; ret5=+12.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟢 |
-| 2026-08-13 09:30 ET | **BUY** | `TPG` | 24 | $50.62 | $2.06 | — | $5,033.85 | — | rank by ret_5; rank ret_5; list flatten; ⚪; ret5=+6.2; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟢 |
+| 2026-08-13 09:30 ET | **BUY** | `IREN` | 27 | $45.98 | $2.07 | — | $6,250.87 | — | rank by ret_5; rank ret_5; list flatten; ⚪; ret5=+12.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 |
+| 2026-08-13 09:30 ET | **BUY** | `TPG` | 24 | $50.62 | $2.06 | — | $5,033.85 | — | rank by ret_5; rank ret_5; list flatten; ⚪; ret5=+6.2; leftover $1250.00 | join🟢 sector🟢 gen🟢 |
 | 2026-08-13 09:30 ET | **BUY** | `VOR` | 56 | $22.01 | $2.16 | — | $3,799.14 | — | rank by ret_5; rank ret_5; list flatten; ⚪; ret5=+0.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟢 |
 | 2026-08-13 09:30 ET | **BUY** | `SLS` | 106 | $11.70 | $2.31 | — | $2,556.63 | — | rank by ret_5; rank ret_5; list flatten; ⚪; ret5=-0.8; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟢 |
 | 2026-08-13 09:30 ET | **BUY** | `TGTX` | 25 | $49.70 | $2.06 | — | $1,312.06 | — | rank by ret_5; rank ret_5; list flatten; ⚪; ret5=-0.8; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟢 |
 | 2026-08-13 09:30 ET | **BUY** | `BTSG` | 20 | $59.80 | $2.05 | — | $114.01 | — | rank by ret_5; rank ret_5; list flatten; ⚪; ret5=-5.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟢 |
 | 2026-08-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $114.01 | ▲ close $10,265.50 vs 09:30 $10,000.00 (session +297.49) | 16:00 close · cash $114.01 · equity $10,265.50 vs 09:30 $10,000.00 (+265.50; session marks +297.49) · 8 name(s) marked open→close (per-name table). TNDM×53 09:30 $23.33 → close $23.13 -10.60; INO×1543 09:30 $0.81 → close $0.90 +138.87; IREN×27 09:30 $45.98 → close $44.76 -32.94; TPG×24 09:30 $50.62 → close $54.62 +95.92; VOR×56 09:30 $22.01 → close $23.29 +71.68; SLS×106 09:30 $11.70 → close $12.36 +69.96; TGTX×25 09:30 $49.70 → close $47.94 -44.00; BTSG×20 09:30 $59.80 → close $60.23 +8.60 | — |
 | 2026-08-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $114.01 | ▲ 09:30 equity $10,276.78 vs yday $10,265.50 (+11.28) | 09:30 open · cash $114.01 (unchanged overnight, no fees) · equity $10,276.78 vs prior close $10,265.50 (+11.28) · 8 name(s) re-marked at the open (per-name table). TNDM×53 yday $23.13 → 09:30 $22.92 -11.13; INO×1543 yday $0.90 → 09:30 $0.93 +46.29; IREN×27 yday $44.76 → 09:30 $44.09 -18.09; TPG×24 yday $54.62 → 09:30 $55.29 +16.08; VOR×56 yday $23.29 → 09:30 $23.33 +2.24; SLS×106 yday $12.36 → 09:30 $12.40 +4.24; TGTX×25 yday $47.94 → 09:30 $47.27 -16.75; BTSG×20 yday $60.23 → 09:30 $59.65 -11.60 | — |
-| 2026-08-14 09:30 ET | **BUY** | `ZENA` | 6 | $2.20 | $0.15 | — | $100.66 | — | rank by ret_5; rank ret_5; list yday_gainer; 🔵; ⚪; ret5=+54.3; leftover $14.25 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `ZENA` | 6 | $2.20 | $0.15 | — | $100.66 | — | rank by ret_5; rank ret_5; list yday_gainer; 🔵; ⚪; ret5=+54.3; leftover $14.25 | join🟢 sector🟢 gen🟢 news🟡 judge🟢 vol🟢 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `AIRO` | 1 | $11.12 | $0.11 | — | $89.43 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+36.3; leftover $14.25 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `BCAR` | 2 | $6.09 | $0.13 | — | $77.12 | — | rank by ret_5; rank ret_5; list yday_gainer; 🔵; ⚪; ret5=+27.6; leftover $14.25 | join🟢 sector🟢 gen🟢 news🟡 judge🟢 vol🟡 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `BCAR` | 2 | $6.09 | $0.13 | — | $77.12 | — | rank by ret_5; rank ret_5; list yday_gainer; 🔵; ⚪; ret5=+27.6; leftover $14.25 | join🟢 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
 | 2026-08-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $77.12 | ▲ close $10,556.62 vs 09:30 $10,276.78 (session +280.23) | 16:00 close · cash $77.12 · equity $10,556.62 vs 09:30 $10,276.78 (+279.84; session marks +280.23) · 11 name(s) marked open→close (per-name table). TNDM×53 09:30 $22.92 → close $22.72 -10.60; INO×1543 09:30 $0.93 → close $1.09 +246.88; IREN×27 09:30 $44.09 → close $44.06 -0.81; TPG×24 09:30 $55.29 → close $53.03 -54.24; VOR×56 09:30 $23.33 → close $23.03 -16.80; SLS×106 09:30 $12.40 → close $12.78 +40.28; TGTX×25 09:30 $47.27 → close $48.74 +36.75; BTSG×20 09:30 $59.65 → close $61.71 +41.20; ZENA×6 09:30 $2.20 → close $2.14 -0.36; AIRO×1 09:30 $11.12 → close $9.57 -1.55; BCAR×2 09:30 $6.09 → close $5.83 -0.52 | — |
 | 2026-08-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $77.12 | ▼ 09:30 equity $10,529.92 vs yday $10,556.62 (-26.70) | 09:30 open · cash $77.12 (unchanged overnight, no fees) · equity $10,529.92 vs prior close $10,556.62 (-26.70) · 11 name(s) re-marked at the open (per-name table). TNDM×53 yday $22.72 → 09:30 $22.50 -11.66; INO×1543 yday $1.09 → 09:30 $1.07 -30.86; IREN×27 yday $44.06 → 09:30 $45.23 +31.59; TPG×24 yday $53.03 → 09:30 $52.67 -8.64; VOR×56 yday $23.03 → 09:30 $22.91 -6.72; SLS×106 yday $12.78 → 09:30 $12.78 +0.00; TGTX×25 yday $48.74 → 09:30 $48.74 +0.00; BTSG×20 yday $61.71 → 09:30 $61.69 -0.40; ZENA×6 yday $2.14 → 09:30 $2.08 -0.33; AIRO×1 yday $9.57 → 09:30 $9.57 +0.00; BCAR×2 yday $5.83 → 09:30 $5.99 +0.32 | — |
-| 2026-08-17 09:30 ET | **BUY** | `XHG` | 2 | $4.19 | $0.09 | — | $68.65 | — | rank by ret_5; rank ret_5; list yday_mover; ⚪; ret5=+291.8; leftover $9.64 | join🟢 sector🟢 gen🟢 news🟡 judge🟢 vol🟢 buy🟡 |
+| 2026-08-17 09:30 ET | **BUY** | `XHG` | 2 | $4.19 | $0.09 | — | $68.65 | — | rank by ret_5; rank ret_5; list yday_mover; ⚪; ret5=+291.8; leftover $9.64 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
 | 2026-08-17 09:30 ET | **BUY** | `CAPR` | 1 | $6.87 | $0.07 | — | $61.71 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; ret5=+62.6; leftover $9.64 | join🟡 sector🔴 gen🟢 news🟡 judge🟢 vol🟢 buy🟡 |
-| 2026-08-17 09:30 ET | **BUY** | `KOPN` | 1 | $5.43 | $0.06 | — | $56.22 | — | rank by ret_5; rank ret_5; list yday_gainer; ⚪; ret5=+28.8; leftover $9.64 | join🟡 sector🟢 gen🟢 news🟡 vol🟡 buy🟢 |
+| 2026-08-17 09:30 ET | **BUY** | `KOPN` | 1 | $5.43 | $0.06 | — | $56.22 | — | rank by ret_5; rank ret_5; list yday_gainer; ⚪; ret5=+28.8; leftover $9.64 | join🟡 sector🟢 gen🟢 news🟡 judge🟢 vol🟡 buy🟢 |
 | 2026-08-17 09:30 ET | **BUY** | `NPWR` | 5 | $1.92 | $0.11 | — | $46.51 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; ⚪; ret5=+28.3; leftover $9.64 | join🟡 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
 | 2026-08-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $46.51 | ▲ close $10,624.01 vs 09:30 $10,529.92 (session +94.41) | 16:00 close · cash $46.51 · equity $10,624.01 vs 09:30 $10,529.92 (+94.09; session marks +94.41) · 15 name(s) marked open→close (per-name table). TNDM×53 09:30 $22.50 → close $22.25 -12.99; INO×1543 09:30 $1.07 → close $1.15 +123.44; IREN×27 09:30 $45.23 → close $44.90 -8.91; TPG×24 09:30 $52.67 → close $51.77 -21.60; VOR×56 09:30 $22.91 → close $23.01 +5.60; SLS×106 09:30 $12.78 → close $13.00 +23.32; TGTX×25 09:30 $48.74 → close $49.28 +13.50; BTSG×20 09:30 $61.69 → close $60.38 -26.20; ZENA×6 09:30 $2.08 → close $2.05 -0.21; AIRO×1 09:30 $9.57 → close $9.41 -0.16; BCAR×2 09:30 $5.99 → close $5.82 -0.34; XHG×2 09:30 $4.19 → close $3.91 -0.56; CAPR×1 09:30 $6.87 → close $7.45 +0.58; KOPN×1 09:30 $5.43 → close $5.32 -0.11; NPWR×5 09:30 $1.92 → close $1.73 -0.95 | — |
 | 2026-08-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $46.51 | ▼ 09:30 equity $10,511.12 vs yday $10,624.01 (-112.89) | 09:30 open · cash $46.51 (unchanged overnight, no fees) · equity $10,511.12 vs prior close $10,624.01 (-112.89) · 15 name(s) re-marked at the open (per-name table). TNDM×53 yday $22.25 → 09:30 $22.16 -5.03; INO×1543 yday $1.15 → 09:30 $1.14 -15.43; IREN×27 yday $44.90 → 09:30 $43.56 -36.18; TPG×24 yday $51.77 → 09:30 $51.77 +0.00; VOR×56 yday $23.01 → 09:30 $22.82 -10.64; SLS×106 yday $13.00 → 09:30 $12.66 -36.04; TGTX×25 yday $49.28 → 09:30 $49.28 +0.00; BTSG×20 yday $60.38 → 09:30 $60.00 -7.60; ZENA×6 yday $2.05 → 09:30 $1.95 -0.63; AIRO×1 yday $9.41 → 09:30 $9.01 -0.40; BCAR×2 yday $5.82 → 09:30 $5.52 -0.60; XHG×2 yday $3.91 → 09:30 $3.94 +0.06; CAPR×1 yday $7.45 → 09:30 $7.50 +0.05; KOPN×1 yday $5.32 → 09:30 $5.03 -0.29; NPWR×5 yday $1.73 → 09:30 $1.70 -0.15 | — |
@@ -473,6 +486,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $21.70 | ▲ close $11,254.60 vs 09:30 $10,773.85 (session +480.94) | 16:00 close · cash $21.70 · equity $11,254.60 vs 09:30 $10,773.85 (+480.75; session marks +480.94) · 12 name(s) marked open→close (per-name table). GPRO×796 09:30 $1.48 → close $1.70 +175.12; MMED×59 09:30 $23.84 → close $23.29 -32.45; SION×193 09:30 $6.68 → close $7.18 +96.50; CNH×103 09:30 $13.89 → close $14.40 +52.53; PBR×66 09:30 $20.25 → close $20.12 -8.58; PBR-A×74 09:30 $18.36 → close $18.25 -8.14; TARS×17 09:30 $82.70 → close $90.78 +137.36; FRVO×77 09:30 $17.27 → close $18.16 +68.53; BRR×2 09:30 $2.51 → close $2.66 +0.30; IRD×1 09:30 $4.53 → close $4.67 +0.14; SLBT×1 09:30 $3.15 → close $2.88 -0.27; BAK×2 09:30 $1.94 → close $1.89 -0.10 | — |
 | 2026-09-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $21.70 | ▼ 09:30 equity $11,211.92 vs yday $11,254.60 (-42.68) | 09:30 open · cash $21.70 (unchanged overnight, no fees) · equity $11,211.92 vs prior close $11,254.60 (-42.68) · 12 name(s) re-marked at the open (per-name table). GPRO×796 yday $1.70 → 09:30 $1.56 -107.46; MMED×59 yday $23.29 → 09:30 $23.16 -7.67; SION×193 yday $7.18 → 09:30 $7.13 -9.65; CNH×103 yday $14.40 → 09:30 $14.31 -9.27; PBR×66 yday $20.12 → 09:30 $20.66 +35.64; PBR-A×74 yday $18.25 → 09:30 $18.78 +39.22; TARS×17 yday $90.78 → 09:30 $89.67 -18.87; FRVO×77 yday $18.16 → 09:30 $18.62 +35.42; BRR×2 yday $2.66 → 09:30 $2.66 +0.00; IRD×1 yday $4.67 → 09:30 $4.53 -0.14; SLBT×1 yday $2.88 → 09:30 $2.88 +0.00; BAK×2 yday $1.89 → 09:30 $1.94 +0.10 | — |
 | 2026-09-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $21.70 | ▼ close $11,090.18 vs 09:30 $11,211.92 (session -121.74) | 16:00 close · cash $21.70 · equity $11,090.18 vs 09:30 $11,211.92 (-121.74; session marks -121.74) · 12 name(s) marked open→close (per-name table). GPRO×796 09:30 $1.56 → close $1.46 -87.56; MMED×59 09:30 $23.16 → close $23.32 +9.44; SION×193 09:30 $7.13 → close $7.30 +32.81; CNH×103 09:30 $14.31 → close $13.60 -73.13; PBR×66 09:30 $20.66 → close $20.83 +11.22; PBR-A×74 09:30 $18.78 → close $18.86 +5.92; TARS×17 09:30 $89.67 → close $87.22 -41.65; FRVO×77 09:30 $18.62 → close $18.90 +21.56; BRR×2 09:30 $2.66 → close $2.73 +0.14; IRD×1 09:30 $4.53 → close $4.34 -0.19; SLBT×1 09:30 $2.88 → close $2.62 -0.26; BAK×2 09:30 $1.94 → close $1.92 -0.04 | — |
+| 2026-09-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $21.70 | ▼ 09:30 equity $11,077.50 vs yday $11,090.18 (-12.68) | 09:30 open · cash $21.70 (unchanged overnight, no fees) · equity $11,077.50 vs prior close $11,090.18 (-12.68) · 12 name(s) re-marked at the open (per-name table). GPRO×796 yday $1.46 → 09:30 $1.45 -3.98; MMED×59 yday $23.32 → 09:30 $23.22 -5.90; SION×193 yday $7.30 → 09:30 $7.27 -5.79; CNH×103 yday $13.60 → 09:30 $13.64 +4.12; PBR×66 yday $20.83 → 09:30 $21.11 +18.48; PBR-A×74 yday $18.86 → 09:30 $19.10 +17.76; TARS×17 yday $87.22 → 09:30 $86.31 -15.47; FRVO×77 yday $18.90 → 09:30 $18.60 -23.10; BRR×2 yday $2.73 → 09:30 $2.75 +0.04; IRD×1 yday $4.34 → 09:30 $5.31 +0.97; SLBT×1 yday $2.62 → 09:30 $2.62 +0.00; BAK×2 yday $1.92 → 09:30 $2.02 +0.19 | — |
+| 2026-09-09 09:30 ET | **SELL** | `GPRO` | 796 | $1.45 | $10.41 | $-283.36 | $1,165.49 | ▼ -283.36 after sell → book $11,067.09; vs 09:30 mark -10.41 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-09 09:30 ET | **SELL** | `MMED` | 59 | $23.22 | $2.19 | $-43.29 | $2,533.28 | ▼ -43.29 after sell → book $11,064.90; vs 09:30 mark -2.19 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-09 09:30 ET | **SELL** | `SION` | 193 | $7.27 | $2.61 | $-12.90 | $3,933.78 | ▼ -12.90 after sell → book $11,062.29; vs 09:30 mark -2.61 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-09 09:30 ET | **SELL** | `CNH` | 103 | $13.64 | $2.33 | $-11.84 | $5,336.37 | ▼ -11.84 after sell → book $11,059.96; vs 09:30 mark -2.33 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-09 09:30 ET | **SELL** | `PBR` | 66 | $21.11 | $2.21 | $-9.02 | $6,727.42 | ▼ -9.02 after sell → book $11,057.75; vs 09:30 mark -2.21 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-09 09:30 ET | **SELL** | `PBR-A` | 74 | $19.10 | $2.24 | $-8.89 | $8,138.59 | ▼ -8.89 after sell → book $11,055.52; vs 09:30 mark -2.23 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-09 09:30 ET | **SELL** | `TARS` | 17 | $86.31 | $2.06 | $+56.25 | $9,603.80 | ▲ +56.25 after sell → book $11,053.46; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-09 09:30 ET | **SELL** | `FRVO` | 77 | $18.60 | $2.25 | $+20.17 | $11,033.75 | ▲ +20.17 after sell → book $11,051.21; vs 09:30 mark -2.25 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,033.75 | ▲ close $11,051.75 vs 09:30 $11,077.50 (session +0.54) | 16:00 close · cash $11,033.75 · equity $11,051.75 vs 09:30 $11,077.50 (-25.75; session marks +0.54) · 4 name(s) marked open→close (per-name table). BRR×2 09:30 $2.75 → close $2.86 +0.22; IRD×1 09:30 $5.31 → close $5.73 +0.42; SLBT×1 09:30 $2.62 → close $2.61 -0.01; BAK×2 09:30 $2.02 → close $1.97 -0.09 | — |
 
 ## Not taken
 
@@ -666,19 +689,23 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | `SECZ` | hard_red | hard-red S=-11.47 sit; no new buys |
 | 2026-09-08 | `AGCO` | hard_red | hard-red S=-11.47 sit; no new buys |
 | 2026-09-08 | `USDE` | hard_red | hard-red S=-11.47 sit; no new buys |
+| 2026-09-09 | `BRR` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-09 | `IRD` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-09 | `SLBT` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-09 | `BAK` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-09 | `INDP` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-09 | `CRWV` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-09 | `RIOT` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-09 | `BTDR` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-09 | `INTC` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-09 | `AUR` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-09 | `VSAT` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-09 | `ANGX` | hard_red | hard-red S=-13.95 sit; no new buys |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `GPRO` | 796 | 2026-09-03 @ $1.78 | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; ret5=+183.1; leftover $1417.92 |
-| `MMED` | 59 | 2026-09-03 @ $23.88 | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+21.9; leftover $1417.92 |
-| `SION` | 193 | 2026-09-03 @ $7.31 | rank by ret_5; rank ret_5; list yday_gainer; 🔵; ret5=+18.5; leftover $1417.92 |
-| `CNH` | 103 | 2026-09-03 @ $13.71 | rank by ret_5; rank ret_5; list ohlc_hot; 🔵; ret5=+17.5; leftover $1417.92 |
-| `PBR` | 66 | 2026-09-03 @ $21.18 | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+17.5; leftover $1417.92 |
-| `PBR-A` | 74 | 2026-09-03 @ $19.16 | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+17.4; leftover $1417.92 |
-| `TARS` | 17 | 2026-09-03 @ $82.76 | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+17.1; leftover $1417.92 |
-| `FRVO` | 77 | 2026-09-03 @ $18.28 | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; ret5=+16.5; leftover $1417.92 |
 | `BRR` | 2 | 2026-09-04 @ $2.51 | rank by ret_5; rank ret_5; list yday_gainer; 🔵; ⚪; ret5=+21.8; leftover $5.50 |
 | `IRD` | 1 | 2026-09-04 @ $4.53 | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+19.5; leftover $5.50 |
 | `SLBT` | 1 | 2026-09-04 @ $3.15 | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; 🔵; ret5=+19.3; leftover $5.50 |
