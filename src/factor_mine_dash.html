@@ -191,7 +191,14 @@
 </div>
 <script>
 __SIM_JS__
-const D = __DATA__;
+</script>
+<!-- The payload is embedded as base64(gzip(JSON)) and inflated in the
+     browser (DecompressionStream). Plain JSON hit 76MB on 2026-09-10 and
+     was days from GitHub's 100MB file cap. The main script sits in an
+     inert block until the payload is ready, then runs in global scope so
+     the inline onclick handlers keep working. -->
+<script type="text/x-fullscan-main" id="fm-main">
+const D = window.__FM_D;
 const COLORS = ["#60a5fa","#34d399","#fbbf24","#f472b6","#a78bfa","#f87171","#22d3ee","#fb923c","#4ade80","#e879f9","#94a3b8","#38bdf8","#c084fc","#facc15"];
 const hidden = new Set();
 let sleeveFilter = "all";
@@ -1231,5 +1238,28 @@ window.addEventListener('resize', draw);
     if(last&&last.preview) html+='<div class="mut" style="margin-top:6px">last land: '+String(last.key||'')+' — '+String(last.preview).slice(0,220)+'</div>';
     pills.innerHTML=html||'<span class="mut">No 1d names on disk yet.</span>';
   }).catch(function(){ stamp.textContent='day board JSON not on main yet'; });
+})();
+</script>
+<script>
+(async function(){
+  const el = document.getElementById('fm-main');
+  const B64 = "__DATA__";
+  function runMain(){
+    const s = document.createElement('script');
+    s.textContent = el.textContent;
+    document.body.appendChild(s);
+  }
+  try{
+    const bin = atob(B64);
+    const bytes = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    const stream = new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'));
+    window.__FM_D = JSON.parse(await new Response(stream).text());
+    runMain();
+  }catch(e){
+    document.body.insertAdjacentHTML('afterbegin',
+      '<p class="note">This page inflates its data in the browser and needs DecompressionStream '
+      + '(Chrome 80+, Edge 80+, Safari 16.4+, Firefox 113+). ' + String(e) + '</p>');
+  }
 })();
 </script></body></html>

@@ -27,6 +27,8 @@ CLI: python -m src.factor_mine --write
 from __future__ import annotations
 
 import argparse
+import base64
+import gzip
 import json
 import math
 from datetime import datetime
@@ -1799,13 +1801,29 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
         html = TEMPLATE.read_text(encoding="utf-8")
         if SIM_JS.is_file() and "__SIM_JS__" in html:
             html = html.replace("__SIM_JS__", SIM_JS.read_text(encoding="utf-8"))
-        html = html.replace("__DATA__", json.dumps(payload, separators=(",", ":")))
+        html = html.replace("__DATA__", encode_payload(payload))
         (DASH_DIR / "index.html").write_text(html, encoding="utf-8")
     if books:
         from . import factor_mine_book as fmb
         featured = payload.get("featured") or [
             s["name"] for s in (stats or []) if s.get("reliable")][:8]
         fmb.write_action_mds(payload, stats or [], books, featured)
+
+
+def encode_payload(payload: dict) -> str:
+    """base64(gzip(compact JSON)) for the dashboard template's __DATA__.
+
+    2026-09-10: plain JSON was 76MB inside index.html (GitHub rejects files
+    over 100MB and the .io page took a minute to parse). Gzip lands ~8.5MB
+    (~11.5MB as base64) and the browser inflates it with DecompressionStream.
+    """
+    raw = json.dumps(payload, separators=(",", ":")).encode("utf-8")
+    return base64.b64encode(gzip.compress(raw, compresslevel=9)).decode("ascii")
+
+
+def decode_payload(b64: str) -> dict:
+    """Inverse of encode_payload (tests, offline readers)."""
+    return json.loads(gzip.decompress(base64.b64decode(b64)).decode("utf-8"))
 
 
 def _pct(v) -> str:
