@@ -1,45 +1,66 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T06:25:58.417410-04:00",
+  "generated_at": "2026-09-10T06:26:07.545239-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 4,
-    "partial": 2,
+    "ok": 6,
+    "partial": 0,
     "fail": 2,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "DK",
+      "score": 0.7676150933453574
+    },
+    {
+      "ticker": "CVI",
+      "score": 0.8598705207645321
+    },
+    {
+      "ticker": "NVT",
+      "score": 0.6602357357160353
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "FLO",
+      "score": -0.1222907142973265
+    },
+    {
+      "ticker": "LUCD",
+      "score": -0.08808082976321548
+    },
+    {
+      "ticker": "XPOF",
+      "score": -0.4191095195977543
+    },
+    {
+      "ticker": "BRBR",
+      "score": -0.1399479724440884
+    },
+    {
+      "ticker": "GIS",
+      "score": -0.3341001658515066
+    },
+    {
+      "ticker": "SPIR",
+      "score": -0.278052836195227
+    },
+    {
+      "ticker": "TRIP",
+      "score": -0.16826568406580067
+    },
+    {
+      "ticker": "ACI",
+      "score": -0.21362513363107866
+    }
+  ],
   "flatten": {},
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-09-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-10T06:25:35.139042-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-09-10_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9334,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -0.155, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.0149999999999997, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 1.1099999999999999, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.08, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.52, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 0.15, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-09-10_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5029,
-          "preview": "# Weather report \u2014 2026-09-10\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -0.155, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.0149999999999997, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 1.1099999999999999, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.08, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.52, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 0.15, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-10\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -214,6 +235,59 @@
         }
       ],
       "preview": "2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AVO, CFFN, SKM, HSBC, KMI \u00b7 2660 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, SHEL, EC, SKM, CVI"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T06:26:07.154709-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-10_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1448966,
+          "preview": "1d BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI"
+        },
+        {
+          "path": "data/stock_book/2026-09-10_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-10_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2594,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-10_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11940,
+          "preview": "2026-09-10 BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11940,
+          "preview": "2026-09-10 BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI"
+        },
+        {
+          "path": "01_daily/2026-09-10_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 79096,
+          "preview": "# Stock book \u2014 2026-09-10\n_Generated 2026-09-10T06:26:05.402204-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-10 BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI \u00b7 2026-09-10 BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI \u00b7 # Stock book \u2014 2026-09-10\n_Generated 2026-09-10T06:26:05.402204-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
