@@ -41,7 +41,7 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from . import config, grok_review, output_qc, preopen
+from . import config, grok_review, output_qc, preopen, step_deadline
 
 ROOT = Path(__file__).resolve().parent.parent
 ET = ZoneInfo(config.TZ)
@@ -105,7 +105,8 @@ def _run(cmd: list[str], timeout_s: int | None = None) -> int:
     print(f"\n>>> {' '.join(cmd)}", flush=True)
     try:
         r = subprocess.run(
-            cmd, cwd=str(ROOT), env=os.environ.copy(), timeout=timeout_s)
+            cmd, cwd=str(ROOT), env=step_deadline.child_env(timeout_s),
+            timeout=timeout_s)
     except subprocess.TimeoutExpired:
         print(f"[preopen-all] WARN: timed out after {timeout_s}s: "
               f"{' '.join(cmd)}", flush=True)

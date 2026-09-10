@@ -28,7 +28,7 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from . import config, skip_if_good
+from . import config, skip_if_good, step_deadline
 from .map_heat_postclose import next_weekday
 from .skip_if_good import night_pack_dates
 
@@ -40,7 +40,8 @@ def _run(cmd: list[str], timeout_s: int | None = None) -> int:
     print(f"\n>>> {' '.join(cmd)}", flush=True)
     try:
         r = subprocess.run(
-            cmd, cwd=str(ROOT), env=os.environ.copy(), timeout=timeout_s)
+            cmd, cwd=str(ROOT), env=step_deadline.child_env(timeout_s),
+            timeout=timeout_s)
     except subprocess.TimeoutExpired:
         print(f"[postclose-all] WARN: timed out after {timeout_s}s: "
               f"{' '.join(cmd)}", flush=True)

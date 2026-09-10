@@ -660,8 +660,84 @@ def test_pick_openclaw_token_prefers_live_48() -> None:
     assert pick(secret64, "") == secret64
 
 
+def test_step_deadline_shrinks_grok_read_and_skips_when_tight() -> None:
+    """09-09: Grok hung 900s inside a 960s child; DeepSeek had 60s → SIGKILL.
+
+    With FULLSCAN_STEP_DEADLINE the OpenClaw read timeout leaves the
+    fallback its reserve, and when even that will not fit OpenClaw is
+    skipped so DeepSeek can still write the essay.
+    """
+    import time
+
+    from src import step_deadline
+
+    _reset(openclaw_url="http://gw:18789", deepseek_key="ds-key")
+    timeouts: list[tuple] = []
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        timeouts.append((url, timeout))
+        if "gw:18789" in url:
+            raise dc.requests.ReadTimeout("hung")
+        return _fake_response(200, "DEEPSEEK ANSWER")
+
+    saved = os.environ.get(step_deadline.ENV)
+    try:
+        # 400s left: Grok gets 400 - 240 = 160s, DeepSeek keeps 120s.
+        os.environ[step_deadline.ENV] = f"{time.time() + 400:.0f}"
+        with mock.patch.object(dc.requests, "post", side_effect=fake_post), \
+                mock.patch.object(dc.time, "sleep"):
+            text = dc.chat([{"role": "user", "content": "hi"}],
+                           model="deepseek-chat", tools=False)
+        assert text == "DEEPSEEK ANSWER"
+        assert "gw:18789" in timeouts[0][0]
+        assert 150 <= timeouts[0][1][1] <= 160, timeouts[0]
+        assert timeouts[-1][1] == (15, 120), timeouts[-1]
+
+        # 120s left: not enough for Grok + fallback → skip Grok entirely,
+        # DeepSeek read shrinks to ~110s.
+        timeouts.clear()
+        _reset(openclaw_url="http://gw:18789", deepseek_key="ds-key")
+        os.environ[step_deadline.ENV] = f"{time.time() + 120:.0f}"
+        with mock.patch.object(dc.requests, "post", side_effect=fake_post), \
+                mock.patch.object(dc.time, "sleep"):
+            text = dc.chat([{"role": "user", "content": "hi"}],
+                           model="deepseek-chat", tools=False)
+        assert text == "DEEPSEEK ANSWER"
+        assert all("gw:18789" not in u for u, _ in timeouts), timeouts
+        assert 100 <= timeouts[0][1][1] <= 110, timeouts[0]
+        assert dc._OPENCLAW_STATE["down"] is False  # deadline is not a fault
+
+        # 10s left: nobody dials; chat returns '' for the caller's QC.
+        timeouts.clear()
+        os.environ[step_deadline.ENV] = f"{time.time() + 10:.0f}"
+        with mock.patch.object(dc.requests, "post", side_effect=fake_post), \
+                mock.patch.object(dc.time, "sleep"):
+            text = dc.chat([{"role": "user", "content": "hi"}],
+                           model="deepseek-chat", tools=False)
+        assert text == ""
+        assert timeouts == []
+
+        # No deadline → untouched defaults.
+        os.environ.pop(step_deadline.ENV, None)
+        _reset(openclaw_url="http://gw:18789", deepseek_key="ds-key")
+        with mock.patch.object(dc.requests, "post", side_effect=fake_post), \
+                mock.patch.object(dc.time, "sleep"):
+            dc.chat([{"role": "user", "content": "hi"}],
+                    model="deepseek-chat", tools=False)
+        assert timeouts[0][1] == (15, config.OPENCLAW_TIMEOUT)
+        env = step_deadline.child_env(300)
+        assert float(env[step_deadline.ENV]) > time.time() + 200
+        assert step_deadline.ENV not in step_deadline.child_env(None)
+    finally:
+        if saved is None:
+            os.environ.pop(step_deadline.ENV, None)
+        else:
+            os.environ[step_deadline.ENV] = saved
+
+
 def main() -> None:
     tests = [
+        test_step_deadline_shrinks_grok_read_and_skips_when_tight,
         test_gates,
         test_openclaw_primary_wins,
         test_native_search_note_only_when_tools,

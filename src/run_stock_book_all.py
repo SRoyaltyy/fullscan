@@ -18,7 +18,7 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from . import config
+from . import config, step_deadline
 
 ROOT = Path(__file__).resolve().parent.parent
 ET = ZoneInfo(config.TZ)
@@ -36,7 +36,8 @@ def _run(cmd: list[str], check: bool = True, timeout_s: int | None = None) -> in
     print(f"\n>>> {' '.join(cmd)}", flush=True)
     try:
         r = subprocess.run(
-            cmd, cwd=str(ROOT), env=os.environ.copy(), timeout=timeout_s)
+            cmd, cwd=str(ROOT), env=step_deadline.child_env(timeout_s),
+            timeout=timeout_s)
     except subprocess.TimeoutExpired:
         print(f"[all] WARN: timed out after {timeout_s}s: {' '.join(cmd)}",
               flush=True)
