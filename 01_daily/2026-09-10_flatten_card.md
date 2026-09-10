@@ -1,6 +1,6 @@
 # flatten_robust card — 2026-09-10
 
-_Generated 2026-09-10T10:27:09 — live `flatten_robust`._
+_Generated 2026-09-10T10:39:09 — live `flatten_robust`._
 
 **morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
 
@@ -40,9 +40,11 @@ Sized from marked equity **$108,616.66** as if the book were flat. `io 3d_size (
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | LBRT | io_core | 1230 | $22.06 | $27,133.80 | cash tied |
-| 16:00 ET | CVI | io_core | 568 | $47.73 | $27,110.64 | cash tied |
-| 16:00 ET | UROY | io_core | 5657 | $4.80 | $27,153.60 | cash tied |
-| 16:00 ET | OMER | io_core | 1397 | $19.39 | $27,087.83 | cash tied |
+| 16:00 ET | LBRT | io_core | 820 | $22.06 | $18,089.20 | cash tied |
+| 16:00 ET | UROY | io_core | 3771 | $4.80 | $18,100.80 | cash tied |
+| 16:00 ET | GPRK | io_core | 1519 | $11.91 | $18,091.29 | cash tied |
+| 16:00 ET | MTSI | io_core | 63 | $286.12 | $18,025.56 | cash tied |
+| 16:00 ET | NVT | io_core | 114 | $158.54 | $18,073.56 | cash tied |
+| 16:00 ET | NU | io_core | 1206 | $15.00 | $18,090.00 | cash tied |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
