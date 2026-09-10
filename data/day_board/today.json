@@ -1,6 +1,6 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T06:39:47.676013-04:00",
+  "generated_at": "2026-09-10T06:39:50.840610-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -87,31 +87,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "finviz",
-      "title": "Finviz universe export",
-      "date": "2026-09-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-10T06:39:13.021730-04:00",
-      "files": [
-        {
-          "path": "data/exports/finviz_2026-09-10.csv",
-          "ok": true,
-          "reason": "",
-          "size": 10934903,
-          "preview": "11609 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11414966,
-          "preview": "11614 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        }
-      ],
-      "preview": "11609 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11614 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-    },
     {
       "key": "paper",
       "title": "Paper dashboard",
@@ -370,6 +345,52 @@
         }
       ],
       "preview": "1d BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND \u00b7 2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND \u00b7 # Stock book \u2014 2026-09-10\n_Generated 2026-09-10T06:39:36.736170-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T06:39:50.325343-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 20799,
+          "preview": "2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 519,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-10.json",
+          "ok": true,
+          "reason": "",
+          "size": 110113,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-10_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 90388,
+          "preview": "2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 90388,
+          "preview": "2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND"
+        }
+      ],
+      "preview": "2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND \u00b7 2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
