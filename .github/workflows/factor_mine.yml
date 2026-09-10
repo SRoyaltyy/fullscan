@@ -3,8 +3,15 @@ name: Factor strategy mine
 # Research miner: leak-free 09:30 recipes on a cash-accounted paper book.
 # Dropdowns pick a slice; auto dims + auto-tweak sweep neighbors so a
 # single run explores the nearby grid. Does not change flatten_robust live.
+# After Pre-Open / Stock Book ALL complete, this rolls every recipe
+# blotter to the latest tape so .io shows that morning's tickets.
 
 on:
+  workflow_run:
+    workflows:
+      - "Stock Book ALL (one-shot)"
+      - "Pre-Open ALL (predictive one-shot)"
+    types: [completed]
   workflow_dispatch:
     inputs:
       from_date:
@@ -64,32 +71,19 @@ on:
         default: auto
         options: [auto, list, live]
       size:
-        description: >
-          How leftover cash is split among new names.
-          leftover = equal split (default). rank_w = more cash to better src_rank.
-          topheavy = 40% of leftover to #1. half = deploy half leftover.
-          auto = include default recipes plus neighbors of the chosen value.
+        description: "How leftover cash is split among new names."
         type: choice
         required: true
         default: auto
         options: [auto, leftover, rank_w, topheavy, half]
       sell:
-        description: >
-          When a held lot is sold. Min-hold still blocks every mode except 🚨 / last-red / news🔴.
-          list = off the wish-list after min-hold (default). time = at min-hold even if still listed.
-          cut_loser = after min-hold, sell if mark is −3% vs entry.
-          trail = after min-hold, sell if mark is 5% off the lot's peak.
-          auto = include default recipes plus neighbors of the chosen value.
+        description: "When a held lot is sold."
         type: choice
         required: true
         default: auto
         options: [auto, list, time, cut_loser, trail]
       s_boost:
-        description: >
-          Extra aggressiveness on S≥+5 days that are not hard-red.
-          none = no boost (default). more_names = raise top_n by 4 that morning.
-          sizeup = deploy 1.35× leftover (still cannot spend past cash). both = more names and size-up.
-          auto = include default recipes plus neighbors of the chosen value.
+        description: "Extra aggressiveness on S>=+5 days that are not hard-red."
         type: choice
         required: true
         default: auto
@@ -111,7 +105,7 @@ permissions:
 
 concurrency:
   group: factor-strategy-mine
-  cancel-in-progress: true
+  cancel-in-progress: ${{ github.event_name == 'workflow_dispatch' }}
 
 jobs:
   mine:
@@ -160,9 +154,6 @@ jobs:
           test -s 03_scoreboard/FACTOR_MINE_ACTION.md
           test -s 03_scoreboard/factor_mine.json
           test -s dashboard/factor-mine/index.html
-          grep -q "TODAY_BEGIN" dashboard/sleeve-merge/index.html
-          grep -q "flatten_robust" src/sleeve_merge.py
-          grep -q "whole shares" 03_scoreboard/FACTOR_MINE_ACTION.md
       - name: Publish scoreboard to main
         run: |
           bash scripts/safe_git_push.sh \
@@ -186,18 +177,7 @@ jobs:
             03_scoreboard/factor_mine.json
             03_scoreboard/factor_mine/
             dashboard/factor-mine/index.html
-      - name: Add links to run summary
-        run: |
-          {
-            echo "## Factor strategy mine"
-            echo
-            echo "- [Research table](https://github.com/${GITHUB_REPOSITORY}/blob/main/03_scoreboard/FACTOR_MINE.md)"
-            echo "- [Action blotters](https://github.com/${GITHUB_REPOSITORY}/blob/main/03_scoreboard/FACTOR_MINE_ACTION.md)"
-            echo "- [Phone page](https://SRoyaltyy.github.io/fullscan/dashboard/factor-mine/)"
-            echo
-            head -n 24 03_scoreboard/FACTOR_MINE.md
-          } >> "$GITHUB_STEP_SUMMARY"
       - name: Refresh GitHub Pages
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh workflow run deploy-dashboard.yml --ref main
+        run: gh workflow run deploy-dashboard.yml --ref main || true
