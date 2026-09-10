@@ -1,12 +1,12 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T06:39:13.502746-04:00",
+  "generated_at": "2026-09-10T06:39:20.886071-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 4,
-    "partial": 4,
+    "ok": 5,
+    "partial": 3,
     "fail": 0,
     "n": 8
   },
@@ -372,8 +372,8 @@
           "path": "01_daily/weather/2026-09-10_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10516 vix=calm yields=flat",
-          "size": 10516
+          "reason": "sectors=11 bytes=10520 vix=calm yields=flat",
+          "size": 10520
         }
       ],
       "said": "favorable 3 \u00b7 hostile 7 \u00b7 neutral 1",
@@ -467,7 +467,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 3,
       "files": [
         {
@@ -521,8 +521,8 @@
           "path": "01_daily/weather/2026-09-10_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10516 vix=calm yields=flat",
-          "size": 10516
+          "reason": "sectors=11 bytes=10520 vix=calm yields=flat",
+          "size": 10520
         },
         {
           "key": "in_ab",
@@ -592,8 +592,8 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-09-10 not in dashboard dates (last=2026-09-09)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-10)",
           "size": 4539835
         }
       ],
@@ -606,9 +606,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -627,8 +627,8 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-09-10 not in dashboard dates (last=2026-09-09)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-10)",
           "size": 4539835
         },
         {
@@ -655,60 +655,37 @@
     }
   ],
   "selections": {
-    "buy_1d": [
-      {
-        "ticker": "DK",
-        "score": 0.7235371972123463
-      },
-      {
-        "ticker": "NVT",
-        "score": 0.6214520900438006
-      }
-    ],
-    "sell_1d": [
-      {
-        "ticker": "FLO",
-        "score": -0.14687017791312862
-      },
-      {
-        "ticker": "LUCD",
-        "score": -0.08765945279590572
-      },
-      {
-        "ticker": "XPOF",
-        "score": -0.3926929468603128
-      },
-      {
-        "ticker": "BRBR",
-        "score": -0.24595338360280944
-      },
-      {
-        "ticker": "AMC",
-        "score": -0.1705054020502248
-      },
-      {
-        "ticker": "MMYT",
-        "score": -0.24340305674734802
-      },
-      {
-        "ticker": "KHC",
-        "score": -0.3773080966613924
-      },
-      {
-        "ticker": "GIS",
-        "score": -0.3341146164635364
-      }
-    ],
-    "flatten": {
-      "said": "0 priced buys \u00b7 cash $108,616.66 \u00b7 morning S missing",
+    "buy_1d": [],
+    "sell_1d": [],
+    "flatten": {},
+    "general": {
+      "said": "DOWN  -13.275",
       "bullets": [
-        "0 priced buys",
-        "cash $108,616.66",
-        "morning S missing"
+        "bad: Iran attacks 10 ships / US sank 5 tankers (biggest wave)",
+        "bad: Brent >$102",
+        "bad: Warsh hawkish Sep hike ~55-60%",
+        "good: China exports +25% y/y",
+        "good: HY tight 2.67"
+      ],
+      "score": "-13.275",
+      "direction": "down"
+    },
+    "sectors": {
+      "said": "1 up / 9 down / 1 flat",
+      "bullets": [
+        "XLB DOWN -9.0",
+        "XLC DOWN -3.6",
+        "XLY DOWN -7.5",
+        "XLP DOWN -2.9",
+        "XLE UP +8.5",
+        "XLF DOWN -6.1",
+        "XLV DOWN -6.5",
+        "XLI DOWN -4.0",
+        "XLRE DOWN -6.8",
+        "XLK FLAT -0.5",
+        "XLU DOWN -4.7"
       ]
     },
-    "general": {},
-    "sectors": {},
     "news": {
       "said": "8 items",
       "bullets": [
@@ -721,10 +698,10 @@
       ]
     },
     "weather": {
-      "said": "favorable 3 \u00b7 hostile 4 \u00b7 neutral 4",
+      "said": "favorable 3 \u00b7 hostile 7 \u00b7 neutral 1",
       "bullets": [
-        "hostile: Communication Services, Consumer Cyclical, Consumer Defensive, Utilities",
-        "events bull 3 / bear 8"
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Financial, Industrials, Real Estate, Utilities",
+        "events bull 0 / bear 6"
       ]
     }
   },
@@ -1882,6 +1859,31 @@
         }
       ],
       "preview": "11609 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11614 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T06:39:20.404270-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-10_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10520,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -9.0, 'dir': 'down', 'conf': 0.58, 'source': 'llm'}, Communication Services={'score': -3.6, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -7.5, 'dir': 'down', 'conf': 0.6, 'source': 'llm'}, Consumer Defensive={'score': -2.925, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Energy={'score': 8.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Financial={'score': -6.075, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': -6.525, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Industrials={'score': -4.05, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-10_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 6032,
+          "preview": "# Weather report \u2014 2026-09-10\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -9.0, 'dir': 'down', 'conf': 0.58, 'source': 'llm'}, Communication Services={'score': -3.6, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -7.5, 'dir': 'down', 'conf': 0.6, 'source': 'llm'}, Consumer Defensive={'score': -2.925, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Energy={'score': 8.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Financial={'score': -6.075, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': -6.525, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Industrials={'score': -4.05, 'dir': 'down', 'conf': 0.55, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-10\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
