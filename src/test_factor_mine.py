@@ -685,6 +685,17 @@ def test_price_ensure_cannot_kill_the_mine() -> None:
                 pass
             else:
                 raise AssertionError("fill_range should surface the missing dep")
+    # ensure_through must hand yfinance date-only bounds: the datetime
+    # isoformat end ("…T00:00:00") failed every ticker with
+    # ValueError('unconverted data remains: T00:00:00').
+    seen: list[tuple] = []
+    with mock.patch.object(ps, "_load_store", return_value=ps.pd.DataFrame()), \
+         mock.patch.object(ps, "fill_range",
+                           side_effect=lambda s, e, t=None: seen.append((s, e, t))):
+        ps.ensure_through("2026-09-09", tickers=["ORCL"])
+    assert seen and seen[0][1] == "2026-09-10", seen
+    assert "T" not in seen[0][0] and "T" not in seen[0][1], seen
+    assert seen[0][2] == ["ORCL"]
     # And the workflow that runs the mine installs the dependency.
     wf = (Path(__file__).resolve().parents[1] / ".github" / "workflows"
           / "factor_mine.yml").read_text(encoding="utf-8")

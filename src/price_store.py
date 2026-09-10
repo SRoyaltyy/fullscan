@@ -300,9 +300,9 @@ def ensure_through(end: str | None = None,
                    tickers: list[str] | None = None) -> None:
     """Fill official regular-session bars through the last closed session.
 
-    Prefer the names we actually mark. A full-universe yahoo walk dies on
-    junk tickers (``T00:00:00`` parse) and never lands the new session,
-    so leftover lots lose their overnight / session status.
+    Prefer the names we actually mark: a full-universe yahoo walk is slow
+    and rate-limited, and leftover lots are what lose their overnight /
+    session status when the new session never lands.
     """
     from .skip_if_good import last_closed_session
 
@@ -333,7 +333,10 @@ def ensure_through(end: str | None = None,
     print(f"[price_store] ensure_through → {target_s} "
           f"(have {n_on} bars; fetch {len(want) if want else 'universe'})")
     start = (datetime.strptime(target_s, "%Y-%m-%d") - timedelta(days=21)).date().isoformat()
-    stop = (datetime.strptime(target_s, "%Y-%m-%d") + timedelta(days=1)).isoformat()
+    # Date-only: yfinance parses "YYYY-MM-DD" and rejects a datetime
+    # isoformat ("T00:00:00" → ValueError on every ticker, so the new
+    # session never landed and leftover lots kept $0 marks).
+    stop = (datetime.strptime(target_s, "%Y-%m-%d") + timedelta(days=1)).date().isoformat()
     fill_range(start, stop, want or None)
 
 
