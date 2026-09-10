@@ -55,17 +55,32 @@ def test_paper_template_polls_raw_main() -> None:
     assert book_suggestions.POLLER_MARK in html
     assert book_suggestions.TODAY_URL in html
     assert book_suggestions.SUG_URL in html
+    assert book_suggestions.STRAT_URL in html
+    assert "every strategy" in html
     assert "id=\"liveBook\"" in html
     baked = (root / "dashboard" / "index.html").read_text(encoding="utf-8")
     assert book_suggestions.POLLER_MARK in baked
     assert book_suggestions.TODAY_URL in baked
     assert book_suggestions.SUG_URL in baked
+    assert book_suggestions.STRAT_URL in baked
+    assert "every strategy" in baked
+
+
+def test_factor_mine_template_paints_every_strategy() -> None:
+    html = (Path(__file__).resolve().parent.parent
+            / "src" / "factor_mine_dash.html").read_text(encoding="utf-8")
+    assert "today_strategies.json" in html
+    assert "every strategy" in html
+    assert "liveStartRow" in html
+    assert "pending — not 0%" in html
 
 
 def test_day_board_falls_back_to_suggestions() -> None:
     html = (Path(__file__).resolve().parent.parent
             / "dashboard" / "day-board" / "index.html").read_text(encoding="utf-8")
     assert "data/stock_book/latest_suggestions.json" in html
+    assert "today_strategies.json" in html
+    assert "Every strategy" in html
 
 
 def test_preopen_and_book_publish_strip_without_paper() -> None:
@@ -126,16 +141,37 @@ def test_ensure_poller_is_idempotent() -> None:
         assert book_suggestions.ensure_dashboard_poller(html) is False
 
 
+def test_ensure_poller_refreshes_old_uniform_strip() -> None:
+    """A baked 'BUY 1d / SELL 1d only' poller must be replaced."""
+    with tempfile.TemporaryDirectory() as d:
+        html = Path(d) / "index.html"
+        html.write_text(
+            '<html><head><style>body{}</style></head><body>'
+            '<script id="live-book-poller">\n'
+            '(function(){ var URLS=["https://example/today.json"]; '
+            'function paint(d){ el.innerHTML = "BUY 1d " + d.buy_1d; }'
+            '})();\n</script></body></html>',
+            encoding="utf-8",
+        )
+        assert book_suggestions.ensure_dashboard_poller(html) is True
+        text = html.read_text(encoding="utf-8")
+        assert book_suggestions.STRAT_URL in text
+        assert "every strategy" in text
+        assert "https://example/today.json" not in text
+
+
 def main() -> None:
     test_suggestions_from_book_lists_1d_names()
     test_write_skips_degraded_book()
     test_land_stock_book_includes_suggestions()
     test_preview_suggestions_lists_names()
     test_paper_template_polls_raw_main()
+    test_factor_mine_template_paints_every_strategy()
     test_day_board_falls_back_to_suggestions()
     test_preopen_and_book_publish_strip_without_paper()
     test_inspect_html_ok_when_poller_and_sidecar()
     test_ensure_poller_is_idempotent()
+    test_ensure_poller_refreshes_old_uniform_strip()
     print("ok")
 
 

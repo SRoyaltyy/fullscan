@@ -25,6 +25,10 @@ SUG_URL = (
     "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main"
     "/data/stock_book/latest_suggestions.json"
 )
+STRAT_URL = (
+    "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main"
+    "/data/day_board/today_strategies.json"
+)
 
 _POLLER_HTML = """
 <div id="liveBook" class="live-book" data-live-book="1">
