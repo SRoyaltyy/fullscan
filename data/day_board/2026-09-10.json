@@ -1,10 +1,9 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T06:30:34.262053-04:00",
+  "generated_at": "2026-09-10T06:32:12.747139-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-09-10_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-10/_board.json` \u2014 missing"
   ],
   "counts": {
@@ -104,7 +103,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 3,
+      "n_req_ok": 4,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 2,
@@ -195,9 +194,9 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-09-10_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 12471
         },
         {
           "key": "board",
@@ -335,8 +334,13 @@
           "size": 0
         }
       ],
-      "said": "news 8 items",
+      "said": "general DOWN  -13.275 \u00b7 news 8 items",
       "bullets": [
+        "bad: Iran attacks 10 ships / US sank 5 tankers (biggest wave)",
+        "bad: Brent >$102",
+        "bad: Warsh hawkish Sep hike ~55-60%",
+        "good: China exports +25% y/y",
+        "good: HY tight 2.67",
         "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
         "Gold prices slide more than 3% after Fed Chair Kevin Warsh\u2019s Jackson Hole comments boost September U.S. rate hike expectations",
         "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year",
@@ -472,9 +476,9 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-09-10_predict.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 12471
         },
         {
           "key": "in_board",
@@ -655,7 +659,18 @@
     "buy_1d": [],
     "sell_1d": [],
     "flatten": {},
-    "general": {},
+    "general": {
+      "said": "DOWN  -13.275",
+      "bullets": [
+        "bad: Iran attacks 10 ships / US sank 5 tankers (biggest wave)",
+        "bad: Brent >$102",
+        "bad: Warsh hawkish Sep hike ~55-60%",
+        "good: China exports +25% y/y",
+        "good: HY tight 2.67"
+      ],
+      "score": "-13.275",
+      "direction": "down"
+    },
     "sectors": {},
     "news": {
       "said": "8 items",
@@ -1556,6 +1571,24 @@
         }
       ],
       "preview": "# News Judge \u2014 2026-09-10 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T06:32:12.438225-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-09-10_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 12471,
+          "preview": "# Premarket Prediction \u2014 2026-09-10\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 SEVERE** | total score -13.275 (uncertainty multiplier \u00d70.9) | confidence 0.65\n>\n> **Good news vs bad news:** good +0 pts vs bad -14.75 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - China exports +25% y/y\n> - HY tight 2.67\n> - dollar soft 1m -1.01%\n> - Macy's Q2 EPS beat\n> - Nikkei +0.2%\n>\n> **Bad news driving this:**\n> - Iran attacks 10 ships / US sank 5 tankers (biggest wave)\n> - Brent >$102\n> - Warsh hawkish Sep hike ~55-60%\n> - VIX backwardation 1.079\n> - PPI today / CPI tomorrow binary\n>\n> **market uncertainty: **elevated** | VIX 16.52 | policy-uncertainty index 263.53 (1d -202.84)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight news & catalysts: -3.0 \u00d7 "
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-09-10\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 SEVERE** | total score -13.275 (uncertainty multiplier \u00d70.9) | confidence 0.65\n>\n> **Good news vs bad news:** good +0 pts vs bad -14.75 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - China exports +25% y/y\n> - HY tight 2.67\n> - dollar soft 1m -1.01%\n> - Macy's Q2 EPS beat\n> - Nikkei +0.2%\n>\n> **Bad news driving this:**\n> - Iran attacks 10 ships / US sank 5 tankers (biggest wave)\n> - Brent >$102\n> - Warsh hawkish Sep hike ~55-60%\n> - VIX backwardation 1.079\n> - PPI today / CPI tomorrow binary\n>\n> **market uncertainty: **elevated** | VIX 16.52 | policy-uncertainty index 263.53 (1d -202.84)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight news & catalysts: -3.0 \u00d7 "
     }
   ],
   "href": {
