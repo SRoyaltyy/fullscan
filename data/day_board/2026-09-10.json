@@ -1,6 +1,6 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T06:29:31.344180-04:00",
+  "generated_at": "2026-09-10T06:30:00.381916-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -10,8 +10,8 @@
     "MISSING News judge MD `01_daily/news/2026-09-10_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 6,
-    "partial": 1,
+    "ok": 4,
+    "partial": 3,
     "fail": 1,
     "n": 8
   },
@@ -85,7 +85,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 87698
+          "size": 87494
         },
         {
           "key": "digest_md",
@@ -94,7 +94,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 12007
+          "size": 12026
         }
       ],
       "said": "",
@@ -106,7 +106,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 20,
       "n_opt_ok": 0,
       "n_opt": 2,
@@ -118,7 +118,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87698
+          "size": 87494
         },
         {
           "key": "in_baseline",
@@ -152,9 +152,9 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-09-10_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 21938
         },
         {
           "key": "judge",
@@ -363,7 +363,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87698
+          "size": 87494
         },
         {
           "key": "weather",
@@ -371,8 +371,8 @@
           "path": "01_daily/weather/2026-09-10_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9306 vix=calm yields=flat",
-          "size": 9306
+          "reason": "sectors=11 bytes=9301 vix=calm yields=flat",
+          "size": 9301
         }
       ],
       "said": "favorable 3 \u00b7 hostile 4 \u00b7 neutral 4",
@@ -389,7 +389,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 1,
       "files": [
         {
@@ -397,9 +397,9 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-10_ab_checklist.csv",
           "role": "optional",
-          "status": "OK",
-          "reason": "rows=2660",
-          "size": 7648530
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "ab_enriched",
@@ -443,7 +443,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87698
+          "size": 87494
         },
         {
           "key": "dossiers",
@@ -462,11 +462,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 4,
+      "n_req_ok": 1,
       "n_req": 4,
-      "n_opt_ok": 3,
+      "n_opt_ok": 1,
       "n_opt": 3,
       "files": [
         {
@@ -503,7 +503,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87698
+          "size": 87494
         },
         {
           "key": "in_judge",
@@ -520,8 +520,8 @@
           "path": "01_daily/weather/2026-09-10_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9306 vix=calm yields=flat",
-          "size": 9306
+          "reason": "sectors=11 bytes=9301 vix=calm yields=flat",
+          "size": 9301
         },
         {
           "key": "in_ab",
@@ -546,36 +546,36 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-09-10_peer_rs.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=5116",
-          "size": 816328
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "book_json",
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-10_stock_book.json",
           "role": "required",
-          "status": "OK",
-          "reason": "horizons=5 names=215",
-          "size": 1478803
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "book_md",
           "name": "Stock book MD",
           "path": "01_daily/2026-09-10_stock_book.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 82814
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-10_green.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 585
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "paper",
@@ -591,8 +591,8 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-10)",
+          "status": "FAIL",
+          "reason": "session 2026-09-10 not in dashboard dates (last=2026-09-09)",
           "size": 4539835
         }
       ],
@@ -605,9 +605,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "OK",
-      "inputs_ready": true,
-      "n_req_ok": 2,
+      "status": "PARTIAL",
+      "inputs_ready": false,
+      "n_req_ok": 1,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -617,17 +617,17 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-10_stock_book.json",
           "role": "input",
-          "status": "OK",
-          "reason": "horizons=5 names=215",
-          "size": 1478803
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "dash_html",
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-10)",
+          "status": "FAIL",
+          "reason": "session 2026-09-10 not in dashboard dates (last=2026-09-09)",
           "size": 4539835
         },
         {
@@ -1552,6 +1552,31 @@
         }
       ],
       "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, HRMY, APH, FTK, ASND"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T06:30:00.096673-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-09-10_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 21938,
+          "preview": "20 events \u00b7 August PPI (pipeline inflation print) | ECB rate decision \u2014 25bp hike to 2.50% deposit rate expected | Oracle FQ1 2027 earnings (after close) | Adobe FQ3 2026 earnings (after close) | Macy's fiscal Q2 2026 earnings (pre-open) | August CPI (last major print before FOMC)"
+        },
+        {
+          "path": "01_daily/events/2026-09-10_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 8161,
+          "preview": "# Event Scan \u2014 2026-09-10\n- events tracked: **20** (via repair, repaired)\n- uncertainty: **elevated**\n- summary: The scan is dominated by a live September FOMC (Sept 16) with hike odds near 55\u201360% after a blowout August payrolls print, a hot PPI today and CPI tomorrow, and an oil shock from the US\u2013Iran tanker war keeping Brent above $100. Central bank decisions from the ECB (today), BOJ (Sept 16\u201317) and BoE (Sept 17) cluster around the Fed, while a heavy earnings slate (Oracle, Adobe, Macy's, FedEx) and the Sept 24 Trump\u2013Xi summit add idiosyncratic and geopolitical risk. North American trade tensions are escalating with Canada's counter-tariffs in force and US Section 338 import bans due Sept 29, and Sept 18 quadruple witching amplifies positioning risk around the FOMC."
+        }
+      ],
+      "preview": "20 events \u00b7 August PPI (pipeline inflation print) | ECB rate decision \u2014 25bp hike to 2.50% deposit rate expected | Oracle FQ1 2027 earnings (after close) | Adobe FQ3 2026 earnings (after close) | Macy's fiscal Q2 2026 earnings (pre-open) | August CPI (last major print before FOMC) \u00b7 # Event Scan \u2014 2026-09-10\n- events tracked: **20** (via repair, repaired)\n- uncertainty: **elevated**\n- summary: The scan is dominated by a live September FOMC (Sept 16) with hike odds near 55\u201360% after a blowout August payrolls print, a hot PPI today and CPI tomorrow, and an oil shock from the US\u2013Iran tanker war keeping Brent above $100. Central bank decisions from the ECB (today), BOJ (Sept 16\u201317) and BoE (Sept 17) cluster around the Fed, while a heavy earnings slate (Oracle, Adobe, Macy's, FedEx) and the Sept 24 Trump\u2013Xi summit add idiosyncratic and geopolitical risk. North American trade tensions are escalating with Canada's counter-tariffs in force and US Section 338 import bans due Sept 29, and Sept 18 quadruple witching amplifies positioning risk around the FOMC."
     }
   ],
   "href": {
