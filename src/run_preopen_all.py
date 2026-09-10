@@ -740,9 +740,12 @@ def run(date: str | None = None, force: bool = False,
         print("[preopen-all] --no-book: leaving stock book to a later click")
 
     if not skip_writes and not skip_essays:
+        from . import catalyst_daily
+        # 8 dossiers x MIN_TICKER_S (360s) + tail reserve; 1800s left
+        # Step 4 with a 30s budget on 09-10 (1/8 usable).
         step("catalyst", "Catalyst dossiers (after book)",
              [py, "-m", "src.catalyst_daily", "--date", date, *fa],
-             timeout_s=1800)
+             timeout_s=catalyst_daily.CATALYST_STEP_S)
 
     qc_path = output_qc.write_preopen_report(date)
     report = output_qc.preopen_report(date)

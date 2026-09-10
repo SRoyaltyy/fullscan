@@ -618,9 +618,10 @@ def run(
     if skip_llm:
         print("[all] skip Catalyst daily (--skip-llm)")
     elif config.has_llm():
+        from . import catalyst_daily
         print("[all] → Catalyst daily (after book; skip-if-good + merge)")
         _run([sys.executable, "-m", "src.catalyst_daily", "--date", date],
-             check=False, timeout_s=1800)
+             check=False, timeout_s=catalyst_daily.CATALYST_STEP_S)
         if not _exists("01_daily", "catalyst", f"{date}_dossiers.json"):
             print("[all] WARN: catalyst dossiers missing for", date)
     else:

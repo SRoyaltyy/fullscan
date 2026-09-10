@@ -4,6 +4,7 @@ Run: PYTHONPATH=. python3 -m src.test_job_hardening
 """
 from __future__ import annotations
 
+import copy
 import os
 import time
 from pathlib import Path
@@ -1028,9 +1029,91 @@ def test_sources_parse_on_python_310() -> None:
     assert "f'{h.get('pct')" not in live
 
 
+def test_catalyst_close_asks_for_json_and_backoff_fits_deadline() -> None:
+    """09-10 CENX/KSS: Step 1's forced close asked for a 'post-session essay'
+    and then substituted a markdown review — neither parses as the events
+    list, and 20/40/60s retry sleeps ran the ticker slice out."""
+    assert "JSON" in dc._close_instruction("CATALYST STEP1 CENX")
+    assert "essay" not in dc._close_instruction("CATALYST STEP1 CENX")
+    assert "essay" in dc._close_instruction("SECTOR OUTCOME Energy 2026-09-10")
+    assert dc._is_structured_stage("CATALYST VERDICT X")
+    assert not dc._is_structured_stage("GENERAL OUTCOME 2026-09-10")
+
+    _reset(openclaw_url="", deepseek_key="ds-key", grok_only=False)
+    from src import step_deadline
+
+    # Forced close on a catalyst stage: the close user turn asks for the
+    # JSON, and when every close comes back empty chat() returns "" instead
+    # of a '## Post-session review' the caller cannot parse.
+    seen_payloads: list[dict] = []
+
+    def fake_post(payload, retries=4):
+        seen_payloads.append(copy.deepcopy(payload))
+        return {"choices": [{"message": {"content": ""}}]}
+
+    with mock.patch.object(dc, "_post", side_effect=fake_post), \
+            mock.patch.object(dc.time, "sleep"):
+        out = dc.chat([{"role": "system", "content": "Return JSON events."},
+                       {"role": "user", "content": "Extract events for CENX."}],
+                      model="deepseek-chat", tools=True, max_rounds=1,
+                      stage_label="CATALYST STEP1 CENX")
+    assert out == ""
+    closes = [p for p in seen_payloads if "tools" not in p]
+    assert closes, "no forced close was attempted"
+    assert all("JSON" in p["messages"][-1]["content"] for p in closes)
+    assert all("post-session essay" not in p["messages"][-1]["content"] for p in closes)
+
+    # Retry backoff never sleeps past the step deadline: 70s left → 20s
+    # sleep fits, 40s fits, 60s does not → give up after 3 dials.
+    sleeps: list[float] = []
+    posts = {"n": 0}
+
+    def fake_requests_post(url, headers=None, json=None, timeout=None):
+        posts["n"] += 1
+        return _fake_response(429)
+
+    with mock.patch.dict(os.environ, {step_deadline.ENV: f"{time.time() + 70:.0f}"}), \
+            mock.patch.object(dc.requests, "post", side_effect=fake_requests_post), \
+            mock.patch.object(dc.time, "sleep", side_effect=sleeps.append):
+        try:
+            dc._post({"model": "deepseek-chat", "messages": []})
+            raise AssertionError("429 forever must raise")
+        except RuntimeError as e:
+            assert "HTTP 429" in str(e)
+    assert posts["n"] == 3
+    assert sleeps == [20, 40]
+
+
+def test_catalyst_runtime_splits_ticker_slice_by_phase() -> None:
+    """Research (verdict+Step1+Step2) gets PHASE_A_FRAC of the slice; Step 4
+    + catcher keep the rest. 09-10: Step 4 started with a 30s tool budget."""
+    from collectors import catalyst_grok_runtime as rt
+    from src import step_deadline
+
+    assert 0.5 <= rt.PHASE_A_FRAC <= 0.7
+    src_txt = (ROOT / "collectors" / "catalyst_grok_runtime.py").read_text(encoding="utf-8")
+    assert "with step_deadline.narrowed(phase_a_s):" in src_txt
+    assert "verdict_task," in src_txt.split("await asyncio.gather(")[1]
+    assert "ca.salvage_step4(final_raw)" in src_txt
+    legacy = (ROOT / "collectors" / "catalyst_analysis.py").read_text(encoding="utf-8")
+    assert "final_result = salvage_step4(final_raw)" in legacy
+    # A 360s slice leaves the synthesis phase >= 130s after research.
+    from src import catalyst_daily as cd
+    assert cd.MIN_TICKER_S * (1 - rt.PHASE_A_FRAC) >= 130
+    assert cd.MIN_TICKER_S * rt.PHASE_A_FRAC >= dc.CLOSE_RESERVE_S + 60
+    with mock.patch.dict(os.environ, {step_deadline.ENV: f"{time.time() + 360:.0f}"}):
+        rem = step_deadline.remaining_s()
+        with step_deadline.narrowed(rem * rt.PHASE_A_FRAC):
+            inner = step_deadline.remaining_s()
+            assert 200 <= inner <= 225
+        assert step_deadline.remaining_s() > 350
+
+
 def main() -> None:
     tests = [
         test_sources_parse_on_python_310,
+        test_catalyst_close_asks_for_json_and_backoff_fits_deadline,
+        test_catalyst_runtime_splits_ticker_slice_by_phase,
         test_grok_only_default_is_off,
         test_http_500_does_not_trip_breaker,
         test_401_does_trip_breaker_then_deepseek,

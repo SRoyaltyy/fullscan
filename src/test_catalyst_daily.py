@@ -2,7 +2,9 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
+from unittest import mock
 
 from src import catalyst_daily as cd
 
@@ -181,19 +183,21 @@ def test_dossier_loop_honours_step_deadline_and_lands_interim(tmp_path, monkeypa
     assert progress == [1, 2, 3, 4]
     assert step_deadline.ENV not in os.environ
 
-    # 300s left: one ticker fits (300 - 45 reserve = 255 >= 240); after it
-    # burns 100s the rest are skipped rather than started into SIGKILL.
+    # One slice + reserve + 60s left: one ticker fits; after it burns 100s
+    # the rest are skipped rather than started into SIGKILL.
+    wall = cd.MIN_TICKER_S + cd.TAIL_RESERVE_S + 60
     seen_budgets.clear()
-    clock["rem"] = 300
-    monkeypatch.setenv(step_deadline.ENV, f"{time.time() + 300:.0f}")
+    clock["rem"] = wall
+    monkeypatch.setenv(step_deadline.ENV, f"{time.time() + wall:.0f}")
     out = cd.run_dossiers("2026-09-10", [dict(t, ticker=t["ticker"] + "2")
                                          for t in targets], skip_gemini=False)
     assert len(seen_budgets) == 1
-    assert 200 <= seen_budgets[0] <= 255            # narrowed per-ticker slice
+    # narrowed per-ticker slice: min(usable, MAX) and never below the floor
+    assert cd.MIN_TICKER_S - 5 <= seen_budgets[0] <= wall - cd.TAIL_RESERVE_S
     assert out[0]["net_signal"] == "Bullish"
     assert [r.get("error") for r in out[1:]] == ["skipped: step deadline"] * 3
     assert os.environ[step_deadline.ENV]           # parent's deadline restored
-    assert abs(float(os.environ[step_deadline.ENV]) - (time.time() + 300)) < 5
+    assert abs(float(os.environ[step_deadline.ENV]) - (time.time() + wall)) < 5
 
     # Plenty left: slices are bounded by MAX_TICKER_S, all run.
     seen_budgets.clear()
@@ -203,3 +207,27 @@ def test_dossier_loop_honours_step_deadline_and_lands_interim(tmp_path, monkeypa
                                          for t in targets], skip_gemini=False)
     assert len(out) == 4 and all(not r.get("error") for r in out)
     assert all(b <= cd.MAX_TICKER_S + 1 for b in seen_budgets)
+
+
+def test_step_ceiling_fits_every_default_target():
+    """1800s / 8 targets clamped every slice to the floor and starved Step 4
+    (09-10: 1/8 usable). The parents' wall must hold DEFAULT_MAX full slices,
+    and share() must hand every one of them at least the floor."""
+    import time
+
+    from src import step_deadline
+
+    assert cd.CATALYST_STEP_S >= cd.DEFAULT_MAX * cd.MIN_TICKER_S + cd.TAIL_RESERVE_S
+    now = time.time()
+    clock = {"t": now}
+    with mock.patch.object(step_deadline.time, "time", side_effect=lambda: clock["t"]), \
+            mock.patch.dict(os.environ, {step_deadline.ENV: f"{now + cd.CATALYST_STEP_S:.0f}"}):
+        for n_left in range(cd.DEFAULT_MAX, 0, -1):
+            slice_s = cd._ticker_budget_s(n_left)
+            assert slice_s is not None and slice_s >= cd.MIN_TICKER_S, n_left
+            clock["t"] += slice_s                  # ticker burns its whole slice
+    pre = (cd.ROOT / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
+    book = (cd.ROOT / "src" / "run_stock_book_all.py").read_text(encoding="utf-8")
+    assert "timeout_s=catalyst_daily.CATALYST_STEP_S" in pre
+    assert "timeout_s=catalyst_daily.CATALYST_STEP_S" in book
+    assert "timeout_s=1800" not in pre.split("Catalyst dossiers (after book)")[1][:300]
