@@ -80,6 +80,20 @@ FEE_DRAG = 0.15  # % round-trip, sweep approximation
 TITLE = "Mover paper trading"
 
 
+def _nyse_session(date: str) -> bool:
+    try:
+        dt = datetime.strptime(date, "%Y-%m-%d")
+    except (TypeError, ValueError):
+        return False
+    if dt.weekday() >= 5:
+        return False
+    try:
+        from src.skip_if_good import is_nyse_holiday
+        return not is_nyse_holiday(dt.date())
+    except Exception:
+        return True
+
+
 # ------------------------------------------------------------ payload I/O --
 def load_payload(path: Path = PAYLOAD) -> dict:
     if not path.is_file():
@@ -280,7 +294,7 @@ def run_sim(calls: list[dict], gates: list[dict], *, capital: float,
 
     dates = set(by_day)
     dates.update(g.get("date") for g in gates if g.get("date"))
-    for date in sorted(d for d in dates if d):
+    for date in sorted(d for d in dates if d and _nyse_session(d)):
         def equity_now(px_date: str) -> float:
             eq = cash
             for p in open_pos:
@@ -532,7 +546,8 @@ def stitch_skip_io(raw: dict, payload: dict,
             if d > last:
                 candidates.append(d)
         regime = fill_regime_scores(regime, candidates)
-    candidates = [d for d in sorted(set(candidates)) if d >= "2026-08-13"]
+    candidates = [d for d in sorted(set(candidates))
+                  if d >= "2026-08-13" and _nyse_session(d)]
 
     capital = float(raw.get("capital") or 100_000)
     eq = capital

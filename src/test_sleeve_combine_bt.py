@@ -481,10 +481,12 @@ def test_dashboard_lists_every_session_fill() -> None:
 def test_calendar_includes_completed_no_fill_session() -> None:
     """09-09 book / predict exists even when the lookback payload stopped 09-08."""
     cal = load_calendar(
-        {"session_dates": ["2026-08-13", "2026-09-08"],
-         "regime": {"2026-09-08": {"predict_score": 1.5}}},
+        {"session_dates": ["2026-08-13", "2026-09-07", "2026-09-08"],
+         "regime": {"2026-09-07": {"predict_score": 0.0},
+                    "2026-09-08": {"predict_score": 1.5}}},
         from_date="2026-08-13",
     )
+    assert "2026-09-07" not in cal  # Labor Day is not a hold session
     assert "2026-09-08" in cal
     assert "2026-09-09" in cal
     assert cal[-1] >= "2026-09-09"
