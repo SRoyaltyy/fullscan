@@ -26,10 +26,18 @@ permissions:
   pages: write
   id-token: write
 
+# 2026-09-10: two deploys force-pushing gh-pages in the same second →
+# `cannot lock ref 'refs/heads/gh-pages'`. Serialize this workflow with
+# itself; the in-job publish script retries against the other writers.
+concurrency:
+  group: gh-pages-deploy
+  cancel-in-progress: false
+
 jobs:
   deploy:
     if: ${{ github.event_name == 'workflow_dispatch' || github.event_name == 'push' || github.event.workflow_run.conclusion == 'success' || github.event.workflow_run.conclusion == 'failure' }}
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:
@@ -146,13 +154,13 @@ jobs:
           ls -la pages_out pages_out/dashboard
           ls -la pages_out/dashboard/boring-winners 2>/dev/null || echo "WARN: boring-winners still missing"
 
-      - name: Publish to GitHub Pages (gh-pages)
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./pages_out
-          force_orphan: true
-          enable_jekyll: false
+      - name: Publish to GitHub Pages (gh-pages, retried)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PAGES_OUT_DIR: pages_out
+        run: |
+          chmod +x scripts/publish_dashboard.sh || true
+          bash scripts/publish_dashboard.sh
 
       - name: Show Pages URL
         run: |

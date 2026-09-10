@@ -2,9 +2,11 @@
 from __future__ import annotations
 
 import os
+import tempfile
+import threading
 import time
 
-from . import config
+from . import config, step_deadline
 
 # 2026-09-08: variant-1 full-table CASE regex scan hit statement_timeout
 # (~5.5 min) and news_parse wrote empty → judge/actions cascade miss.
@@ -22,20 +24,137 @@ class NewsDbError(RuntimeError):
         super().__init__(detail or reason)
 
 
+# Keep this much of the step for parsing + writing + landing the file
+# after the last query returns (news_parse's ceiling is 120s).
+DB_STEP_RESERVE_S = 30
+
+
 def _statement_timeout_ms() -> int:
     raw = (os.environ.get("FULLSCAN_DB_STATEMENT_TIMEOUT_MS") or "").strip()
     if raw.isdigit():
-        return max(5_000, int(raw))
-    return _DEFAULT_STATEMENT_TIMEOUT_MS
+        ms = max(5_000, int(raw))
+    else:
+        ms = _DEFAULT_STATEMENT_TIMEOUT_MS
+    # Shrink to what the step can still afford; floor 5s so a query is
+    # still attempted (the caller decides whether to dial at all).
+    return step_deadline.bounded(ms // 1000, reserve=DB_STEP_RESERVE_S,
+                                 floor=5) * 1000
+
+
+def _step_can_afford(need_s: int) -> bool:
+    rem = step_deadline.remaining_s()
+    return rem is None or rem >= need_s
 
 
 def _is_timeout(err: BaseException) -> bool:
+    text = f"{type(err).__name__} {err}".lower()
+    return ("statement timeout" in text or "querycanceled" in text
+            or "due to user request" in text)
+
+
+# 2026-09-09 17:13 News Actions: the Supabase transaction pooler ignores
+# the startup `options=-c statement_timeout=...`, so the "20s" queries ran
+# to the server default (~2.5 min each) and 4 of them ate 11 minutes before
+# the job went red. Enforce the budget from our side of the wire too:
+# SET LOCAL inside the query's own transaction (transaction pooling keeps
+# the backend for the transaction) plus a client-side cancel a few seconds
+# later in case even that is filtered.
+_CANCEL_GRACE_S = 5.0
+
+
+def _execute_bounded(conn, cur, sql: str, params=None) -> None:
+    timeout_ms = _statement_timeout_ms()
+    try:
+        cur.execute(f"SET LOCAL statement_timeout = {int(timeout_ms)}")
+    except Exception as e:  # noqa: BLE001
+        # Not fatal — the cancel timer below is the real backstop.
+        print(f"[db] SET LOCAL statement_timeout ignored: {str(e).splitlines()[0][:120]}")
+        try:
+            conn.rollback()
+        except Exception:  # noqa: BLE001
+            pass
+    cancel = getattr(conn, "cancel", None)
+    timer: threading.Timer | None = None
+    if callable(cancel):
+        def _fire() -> None:
+            try:
+                cancel()
+            except Exception:  # noqa: BLE001
+                pass
+        timer = threading.Timer(timeout_ms / 1000.0 + _CANCEL_GRACE_S, _fire)
+        timer.daemon = True
+        timer.start()
+    try:
+        cur.execute(sql, params)
+    finally:
+        if timer is not None:
+            timer.cancel()
+
+
+# 2026-09-09 17:17 Stock Book ALL: the Supabase pooler resolved to two
+# addresses and each connect_timeout expired on both → 2 tries × 2 hosts
+# × 8s + sleep ≈ 44s inside a 50s weather budget, paid again by every
+# subprocess of the run. Once the pooler is unreachable, remember it for
+# the rest of this process AND (via a marker file) the rest of the run.
+_DOWN_MARK = os.path.join(tempfile.gettempdir(), "fullscan_db_unreachable")
+_down_in_proc: str = ""
+
+
+def _down_ttl_s() -> int:
+    raw = (os.environ.get("FULLSCAN_DB_DOWN_TTL_S") or "").strip()
+    if raw.isdigit():
+        return int(raw)
+    return 600
+
+
+def _is_unreachable(err: BaseException) -> bool:
     text = str(err).lower()
-    return "statement timeout" in text or "querycanceled" in text
+    return any(tok in text for tok in (
+        "timeout expired", "could not connect", "connection refused",
+        "could not translate host name", "network is unreachable",
+        "no route to host", "name or service not known",
+    ))
+
+
+def _marked_down() -> str:
+    """Reason string when the DB was recently unreachable, else ''."""
+    if _down_in_proc:
+        return _down_in_proc
+    ttl = _down_ttl_s()
+    if ttl <= 0:
+        return ""
+    try:
+        st = os.stat(_DOWN_MARK)
+        age = time.time() - st.st_mtime
+        if 0 <= age < ttl:
+            return f"marker {int(age)}s old"
+    except OSError:
+        pass
+    return ""
+
+
+def _mark_down(reason: str) -> None:
+    global _down_in_proc
+    _down_in_proc = reason or "unreachable"
+    if _down_ttl_s() <= 0:
+        return
+    try:
+        with open(_DOWN_MARK, "w", encoding="utf-8") as fh:
+            fh.write(f"{time.time():.0f} {reason}\n")
+    except OSError:
+        pass
 
 
 def _conn():
     if not config.DATABASE_URL:
+        return None
+    why = _marked_down()
+    if why:
+        print(f"[db] skipped — pooler unreachable earlier this run ({why}); "
+              "continuing without Postgres")
+        return None
+    if not _step_can_afford(DB_STEP_RESERVE_S + 10):
+        print("[db] skipped — step deadline too close to dial Postgres")
         return None
     last = None
     timeout_ms = _statement_timeout_ms()
@@ -44,13 +163,17 @@ def _conn():
             import psycopg2
             conn = psycopg2.connect(
                 config.DATABASE_URL,
-                connect_timeout=8,
+                connect_timeout=6,
                 options=f"-c statement_timeout={timeout_ms}",
             )
             return conn
         except Exception as e:  # noqa: BLE001
             last = e
             print(f"[db] connect failed (try {attempt + 1}/2): {e}")
+            if _is_unreachable(e):
+                # A second dial into a dead pooler is another 12s for nothing.
+                _mark_down(str(e).splitlines()[0][:160])
+                break
             if attempt < 1:
                 time.sleep(2)
     print(f"[db] giving up — morning/collectors continue without Postgres ({last})")
@@ -91,7 +214,7 @@ def _recent_news_once(hours: int, limit: int) -> list[dict]:
             while i < len(queries):
                 q, params = queries[i]
                 try:
-                    cur.execute(q, params)
+                    _execute_bounded(conn, cur, q, params)
                     rows = [{"source": s, "title": t, "url": u,
                              "published_at": str(p)}
                             for s, t, u, p in cur.fetchall()]
@@ -138,6 +261,9 @@ def recent_news(hours: int = 24, limit: int = 30) -> list[dict]:
             last = e
             print(f"[db] recent_news {e.reason} (try {attempt + 1}/2): {e}")
             if attempt < 1:
+                if not _step_can_afford(DB_STEP_RESERVE_S + 2 * _statement_timeout_ms() // 1000):
+                    print("[db] recent_news: no retry — step deadline")
+                    break
                 time.sleep(2)
     if last is not None:
         raise last
@@ -152,7 +278,8 @@ def macro_series(series_id: str, limit: int = 45) -> list[tuple[str, float]]:
         return []
     try:
         cur = conn.cursor()
-        cur.execute(
+        _execute_bounded(
+            conn, cur,
             """SELECT date, value FROM macro_indicators
                WHERE indicator = %s ORDER BY date DESC LIMIT %s""",
             (series_id, limit),
@@ -206,7 +333,7 @@ def news_between(
         try:
             for i, q in enumerate(queries):
                 try:
-                    cur.execute(q, (start, end, limit))
+                    _execute_bounded(conn, cur, q, (start, end, limit))
                     rows = [
                         {
                             "source": s,

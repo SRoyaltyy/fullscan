@@ -36,9 +36,18 @@ import uuid
 
 import requests
 
-from . import config
+from . import config, step_deadline
 from .skip_if_good import is_tool_dump
 from .websearch import search_results
+
+# DeepSeek read timeout per call. 2026-09-04: 90s × 3 variants × retries
+# ate a parse slot; 120s is the 09-09 setting and the deadline can shrink it.
+DEEPSEEK_READ_TIMEOUT_S = 120
+# Seconds an OpenClaw call must leave for the DeepSeek fallback (one read
+# plus the forced no-tool close) when FULLSCAN_STEP_DEADLINE is set.
+FALLBACK_RESERVE_S = 240
+# Seconds the DeepSeek tool loop keeps for its forced no-tool close.
+CLOSE_RESERVE_S = 150
 
 SEARCH_TOOL = {
     "type": "function",
@@ -112,9 +121,15 @@ def _post(payload: dict, retries: int = 4) -> dict:
                "Content-Type": "application/json"}
     last = None
     for attempt in range(retries):
+        rem = step_deadline.remaining_s()
+        if rem is not None and rem < 25:
+            last = f"step deadline: {rem:.0f}s left"
+            print(f"[llm] DeepSeek {last} — not dialing")
+            break
         try:
             r = requests.post(url, headers=headers, json=payload,
-                              timeout=(15, 120))
+                              timeout=(15, step_deadline.bounded(
+                                  DEEPSEEK_READ_TIMEOUT_S, reserve=10)))
             if r.status_code == 402:
                 raise RuntimeError(
                     f"DeepSeek 402 Payment Required: {r.text[:200]}")
@@ -255,12 +270,27 @@ def _post_openclaw(messages: list[dict], max_tokens: int,
                "max_tokens": max_tokens, "temperature": temperature}
     last = None
     realigned = False
+    # Step deadline (FULLSCAN_STEP_DEADLINE): a hung Grok call must leave
+    # the DeepSeek fallback room to write, or the parent SIGKILLs both.
+    fallback_reserve = (
+        FALLBACK_RESERVE_S
+        if (config.DEEPSEEK_API_KEY and not config.grok_only()) else 30)
     for attempt in range(retries):
+        rem = step_deadline.remaining_s()
+        if rem is not None and rem < fallback_reserve + 30:
+            last = (f"step deadline: {rem:.0f}s left — skipping OpenClaw "
+                    "so the fallback can still write")
+            print(f"[openclaw] {last}")
+            break
+        read_to = step_deadline.bounded(config.OPENCLAW_TIMEOUT,
+                                        reserve=fallback_reserve, floor=30)
         if config.OPENCLAW_TOKEN:
             headers["Authorization"] = f"Bearer {config.OPENCLAW_TOKEN}"
         try:
             r = requests.post(url, headers=headers, json=payload,
-                              timeout=(15, config.OPENCLAW_TIMEOUT))
+                              timeout=(15, config.OPENCLAW_TIMEOUT)
+                              if read_to >= config.OPENCLAW_TIMEOUT
+                              else (15, read_to))
             if r.status_code in (401, 404) and not realigned:
                 last = f"HTTP {r.status_code}: {r.text[:200]}"
                 print(f"[openclaw] {r.status_code} — realign token and retry once")
@@ -278,8 +308,8 @@ def _post_openclaw(messages: list[dict], max_tokens: int,
             print(f"[openclaw] {last} — gateway unreachable, not retrying")
             break
         except requests.Timeout as e:
-            last = f"timeout after {config.OPENCLAW_TIMEOUT}s: {e}"
-            print(f"[openclaw] {last} — not retrying a hung {config.OPENCLAW_TIMEOUT}s call")
+            last = f"timeout after {read_to}s: {e}"
+            print(f"[openclaw] {last} — not retrying a hung {read_to}s call")
             break
         except requests.RequestException as e:
             last = str(e)
@@ -617,6 +647,14 @@ def chat(messages: list[dict], model: str, tools: bool = False,
                   if capped else 10 ** 9)
     budget_s = (int(getattr(config, "SECTOR_CHAT_BUDGET_S", 420) or 420)
                 if capped else 10 ** 9)
+    # Step deadline: stop searching while one forced close still fits.
+    rem0 = step_deadline.remaining_s()
+    if rem0 is not None:
+        deadline_budget = max(30, int(rem0 - CLOSE_RESERVE_S))
+        if deadline_budget < budget_s:
+            print(f"[llm] step deadline {rem0:.0f}s left — tool-loop budget "
+                  f"{deadline_budget}s ({stage_label or 'llm run'})", flush=True)
+            budget_s = deadline_budget
     t0 = time.monotonic()
     searches_done = 0
     step = 0

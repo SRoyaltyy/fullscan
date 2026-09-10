@@ -209,7 +209,7 @@ jobs:
           [ "$FORCE" = "true" ] && ARGS+=(--force)
           echo "CMD: python -m src.run_stock_book_all ${ARGS[*]}"
           python -m src.run_stock_book_all "${ARGS[@]}"
-      - name: Commit book layer
+      - name: Commit book layer (leftover sweep — each step already landed)
         if: always() && env.skip != 'yes'
         run: |
           DATE="${{ github.event.inputs.run_date }}"
@@ -217,8 +217,9 @@ jobs:
           bash scripts/safe_git_push.sh \
             "auto: stock book layer (ubuntu land) [${DATE}]" \
             data/stock_book/ data/join/ data/universe/ data/ab_checklist/ \
-            data/peers/ data/exports/ 01_daily/weather/ \
-            "01_daily/${DATE}_stock_book.md"
+            data/peers/ data/exports/ 01_daily/weather/ data/day_board/ \
+            "01_daily/${DATE}_stock_book.md" \
+            || echo "[warn] book sweep push failed — incremental lands already on main; see day board"
 
   preopen:
     needs: [gate, scrape]
@@ -238,8 +239,8 @@ jobs:
         run: |
           echo "waited_for_lock=no" >> "$GITHUB_ENV"
           LOCK="${PREOPEN_LOCK:-/home/gha/fullscan-persist/locks/preopen.lock}"
-          if mkdir -p "$(dirname \"$LOCK\")" 2>/dev/null; then
-            exec 9>\"$LOCK\"
+          if mkdir -p "$(dirname "$LOCK")" 2>/dev/null; then
+            exec 9>"$LOCK"
             if flock -n 9; then
               echo "lock is free"
               flock -u 9 || true
@@ -263,7 +264,7 @@ jobs:
         run: |
           DATE="${{ github.event.inputs.run_date }}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
-          if python3 -m src.skip_if_good --job preopen_full --date \"$DATE\"; then
+          if python3 -m src.skip_if_good --job preopen_full --date "$DATE"; then
             echo "Packet + stock book already on disk — no Grok/DeepSeek"
             echo "skip_python=yes" >> "$GITHUB_ENV"
           fi
@@ -325,8 +326,8 @@ jobs:
           set -e
           export HOME="${HOME:-${FULLSCAN_HOME:-/home/gha}}"
           LOCK="${PREOPEN_LOCK:-/home/gha/fullscan-persist/locks/preopen.lock}"
-          if mkdir -p "$(dirname \"$LOCK\")" 2>/dev/null; then
-            exec 9>\"$LOCK\"
+          if mkdir -p "$(dirname "$LOCK")" 2>/dev/null; then
+            exec 9>"$LOCK"
             if ! flock -n 9; then
               echo "ECS systemd job grabbed the lock — backing off"
               exit 0

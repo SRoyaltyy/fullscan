@@ -816,8 +816,34 @@ def parse_json(raw):
         raise ValueError(f"Failed to parse JSON. Start: {text[:200]}")
     objs = _extract_complete_objects(text)
     if objs:
+        # 2026-09-02..04: DeepSeek closed every Step 2/4 object with a
+        # sentence ("Note: sources checked."). The relaxed load failed on
+        # the trailing prose, the salvage returned [obj], and the caller's
+        # `.get` on a list killed all 8 dossiers three mornings running.
+        # A response that starts with `{` is ONE object — hand it back as
+        # such; only `[` arrays are lists.
+        if text[0] == "{":
+            return objs[0]
         return objs
     raise ValueError(f"Failed to parse JSON. Start: {text[:200]}")
+
+
+def as_object(parsed, *want_keys):
+    """Coerce a model reply into the single dict a step expects.
+
+    Lists (array-wrapped or salvaged) yield the first dict carrying one
+    of `want_keys`, else the first dict. Anything else -> {}.
+    """
+    if isinstance(parsed, dict):
+        return parsed
+    if isinstance(parsed, list):
+        dicts = [x for x in parsed if isinstance(x, dict)]
+        for d in dicts:
+            if any(k in d for k in want_keys):
+                return d
+        if dicts:
+            return dicts[0]
+    return {}
 
 
 def filter_events_to_window(events, lookback_start=None, cutoff=None):
@@ -1349,16 +1375,18 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
     print(f"  📋 Step 1 extracted {len(raw_events)} new raw events (after window)")
 
     try:
-        context_profile = parse_json(step2_raw)
+        context_profile = as_object(parse_json(step2_raw), "sensitivity_profile")
     except Exception as e:
         print(f"  ❌ Step 2 parse failed: {e}")
         return {"error": "Step 2 parse failure", "raw": step2_raw[:500]}
 
     sensitivity = context_profile.get("sensitivity_profile", {})
+    if not isinstance(sensitivity, dict):
+        sensitivity = {}
     weighted_taxonomy = {}
     for cat, prof in sensitivity.items():
         base = CATALYST_WEIGHTS.get(cat, 5)
-        mult = prof.get("multiplier", 1.0)
+        mult = prof.get("multiplier", 1.0) if isinstance(prof, dict) else 1.0
         adj = round(base * mult)
         weighted_taxonomy[cat] = {"base_weight": base, "multiplier": mult,
                                   "adjusted_weight": max(0, min(10, adj)),
@@ -1383,12 +1411,14 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
                             json.dumps(snapshot, indent=2, default=str))
     final_raw = call_llm(prompt=prompt4, user_msg=f"Finalize {full_name}.", temperature=0.1, max_tokens=25000)
     try:
-        final_result = parse_json(final_raw)
+        final_result = as_object(parse_json(final_raw), "catalyst_grid", "net_signal")
+        if not final_result:
+            raise ValueError("no object with catalyst_grid/net_signal")
     except Exception as e:
         print(f"  ❌ Step 4 parse failed: {e}")
         return {"error": "Step 4 parse failure", "raw": final_raw[:500]}
 
-    grid = final_result.get("catalyst_grid", [])
+    grid = [g for g in (final_result.get("catalyst_grid", []) or []) if isinstance(g, dict)]
     events_by_id = {e["id"]: e for e in merged_events}
 
     for entry in grid:

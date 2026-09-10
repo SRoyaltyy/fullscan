@@ -767,33 +767,79 @@ def test_persist_dir_falls_back_when_gha_unwritable() -> None:
 def test_safe_git_push_keeps_dated_ranker_on_conflict() -> None:
     """Land-book vs stock-book race must not abort the essay/book persist."""
     text = (ROOT / "scripts" / "safe_git_push.sh").read_text(encoding="utf-8")
-    assert "restore_ours_ranker" in text
-    assert "data/stock_book" in text
-    assert "01_daily/weather" in text
-    assert "keeping our 01_daily + dated ranker" in text
+    # 2026-09-10: plumbing land. The work tree, HEAD and the real index
+    # are never rebased/stashed/reset under the python writer.
+    code = "\n".join(
+        ln for ln in text.splitlines() if not ln.lstrip().startswith("#"))
+    for banned in ("git stash", "git rebase", "git merge ", "git reset --hard",
+                   "git pull", "git checkout origin/main --",
+                   'git checkout "$LOCAL"', "git commit -m"):
+        assert banned not in code, banned
+    assert "git write-tree" in text
+    assert "git commit-tree" in text
+    assert 'git push -q origin "$new:refs/heads/main"' in text
+    assert "git update-index -z --add --index-info" in text
+    assert "GIT_INDEX_FILE=\"$TMP_INDEX\"" in text
+    # Three-way on blobs: skip if already on main, ours if only we changed.
+    assert '[ "$o" = "$u" ]' in text
+    assert '[ "$u" = "$b" ]' in text
+    # Conflict policy: dashboard → main (sleeve-merge / Pages), day-board and
+    # dated packet/ranker → ours, scoreboard + day_board → union.
+    assert "keeping origin/main (sleeve-merge / Pages)" in text
+    assert "dashboard/day-board/*)        echo ours" in text
+    assert "03_scoreboard/scoreboard.json) echo union_sb" in text
+    assert "data/day_board/*)             echo union_db" in text
+    assert "src.scoreboard --merge-ours" in text
+    assert "src.day_board --merge-ours" in text
     # 2026-09-08 finish-holes: one missing note pathspec made
     # `git add a b missing` stage nothing, so dashboard never reached main.
     assert "skip missing" in text
-    assert 'git add -- "$p"' in text
     assert 'git add "$@"' not in text
-    # Fix #2: sleeve-merge / dashboard HTML must not drop the LLM packet.
-    assert "take_main_dashboard" in text
-    assert "resolve_unmerged" in text
-    assert "clean_to_local" in text
-    assert "keeping origin/main (sleeve-merge / Pages)" in text
-    assert "x-access-token" in text
-    assert "data/day_board" in text
-    assert "resolve_day_board" in text
-    assert "src.day_board --merge-ours" in text
-    # Incremental land must not delete untracked export / membership.
-    assert "restore_unstaged" in text
-    assert "git stash pop" in text
-    assert "finviz_2026-09-09.csv" in text
-    assert "git stash drop" not in text
-    assert "keeping stash" in text
+    # Never delete on main; never push ignored files; retry on rejection.
+    assert 'never land deletions' in text
+    assert "--others --exclude-standard" in text
+    assert "push rejected (main moved)" in text
+    assert 'ATTEMPTS="${SAFE_PUSH_ATTEMPTS:-6}"' in text
+    # 2026-09-09: leftover UU must be resolved in the index only.
     assert "leftover unmerged from prior land" in text
-    assert "01_daily/_channel1" in text
     assert "clear_leftover_unmerged" in text
+    assert 'git reset -q -- "$f"' in text
+    assert "x-access-token" in text
+    # 11MB Elite export (finviz_2026-09-09.csv) vanished with stash drop.
+    assert "finviz_2026-09-09.csv" in text
+
+
+def test_safe_git_push_refuses_conflict_marked_files() -> None:
+    """01_daily/_ecs_clock.md reached main with `<<<<<<< Updated upstream`."""
+    import subprocess
+    import tempfile
+    text = (ROOT / "scripts" / "safe_git_push.sh").read_text(encoding="utf-8")
+    assert "has git conflict markers — not landing it" in text
+    start = text.index("has_conflict_markers() {")
+    fn = text[start: text.index("\n}\n", start) + 3]
+
+    def check(name: str, body: str) -> bool:
+        with tempfile.TemporaryDirectory() as td:
+            p = os.path.join(td, name)
+            with open(p, "w", encoding="utf-8") as fh:
+                fh.write(body)
+            r = subprocess.run(
+                ["bash", "-c", fn + '\nhas_conflict_markers "$1"', "_", p],
+                capture_output=True, text=True, timeout=20)
+            return r.returncode == 0
+
+    bad = ("# ECS clock status\n\n<<<<<<< Updated upstream\n- generated: a\n"
+           "=======\n- generated: b\n>>>>>>> Stashed changes\n")
+    assert check("_ecs_clock.md", bad)
+    assert check("day.json", '{"a": 1}\n<<<<<<< HEAD\n{"a": 2}\n>>>>>>> x\n')
+    # A markdown rule / setext heading is not a conflict.
+    assert not check("note.md", "# Title\n=======\nbody\n")
+    assert not check("essay.md", "quote: <<<<<<< not at col 0\n")
+    # Binary-ish artefacts are never scanned (no false positives on .csv.gz).
+    assert not check("dump.parquet", "<<<<<<< a\n>>>>>>> b\n")
+    # The clock file on the branch itself is clean.
+    clock = (ROOT / "01_daily" / "_ecs_clock.md").read_text(encoding="utf-8")
+    assert "<<<<<<<" not in clock and ">>>>>>>" not in clock
 
 
 def test_preopen_harden_halt_reverted() -> None:
@@ -965,6 +1011,7 @@ def main() -> None:
         test_ubuntu_postclose_skips_grok_and_keeps_runner_home,
         test_persist_dir_falls_back_when_gha_unwritable,
         test_safe_git_push_keeps_dated_ranker_on_conflict,
+        test_safe_git_push_refuses_conflict_marked_files,
         test_ubuntu_preopen_not_blocked_by_queued_ecs,
         test_preopen_harden_halt_reverted,
         test_incremental_land_and_day_board,
