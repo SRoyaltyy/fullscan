@@ -1,0 +1,49 @@
+--- a/src/factor_mine_book.py
++++ b/src/factor_mine_book.py
+@@ -760,7 +760,13 @@
+     rules = {**BOOK_RULES, **(rules or {})}
+     fees = fees if fees is not None else pt.load_fees()
+     cal_all = list(panel.get("session_dates") or [])
+-    cal = [d for d in cal_all if not start or d >= start]
++    last_closed = fm.last_closed_session(
++        start or (cal_all[0] if cal_all else ""),
++        cal=cal_all,
++    )
++    cal = [d for d in cal_all
++           if (not start or d >= start)
++           and (not last_closed or d <= last_closed)]
+     by_date = panel.get("by_date") or {}
+     row_index = {(r["date"], r["ticker"]): r for r in (panel.get("rows") or [])}
+     cash = float(rules["capital"])
+@@ -1095,7 +1101,11 @@
+ 
+ 
+ def slim_start_path(book: dict, start: str, cal: list[str]) -> dict:
+-    """Cash-start path: $10k, no lots, same rules, from ``start`` to the end."""
++    """Cash-start path: $10k, no lots, from ``start`` through last closed session.
++
++    A start on day X grades open\u2192close of every *finished* session from X
++    onward. The next unopened morning is not a 0% day.
++    """
+     daily = book.get("daily") or []
+     d0 = next((d for d in daily if d.get("date") == start),
+               daily[0] if daily else {})
+@@ -1135,10 +1145,18 @@
+             "made_money": d.get("made_money"),
+         })
+     ret = book.get("total_ret_pct")
++    last_closed = fm.last_closed_session(start or "", cal=cal)
++    prelim = bool(last_closed and cal and last_closed < cal[-1])
++    pending = bool(last_closed and start and start > last_closed)
++    if pending:
++        ret = None
+     return {
+         "start": start,
+         "return_pct": ret,
+         "made_money": (ret or 0) > 0,
++        "prelim": prelim and not pending,
++        "pending": pending,
++        "last_closed": last_closed,
+         "n_sessions": len(daily),
+         "final_equity": book.get("final_equity"),
+         "s": d0.get("s"),

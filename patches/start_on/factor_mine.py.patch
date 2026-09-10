@@ -1,0 +1,53 @@
+--- a/src/factor_mine.py
++++ b/src/factor_mine.py
+@@ -1116,13 +1116,44 @@
+     return raw
+ 
+ 
++def session_has_closed(date: str, now=None) -> bool:
++    """True after that session's 16:00 ET print is knowable.
++
++    A 09:10 ET pre-open file for *today* does not close yesterday's
++    start-path, and it does not give today a 0% mark. Yesterday already
++    has a full open\u2192close; grade that. Today waits until the close.
++    """
++    from zoneinfo import ZoneInfo
++    now = now or datetime.now(ZoneInfo("America/New_York"))
++    today = now.strftime("%Y-%m-%d")
++    if not date:
++        return False
++    if date < today:
++        return True
++    if date > today:
++        return False
++    close = now.replace(hour=16, minute=2, second=0, microsecond=0)
++    return now >= close
++
++
++def last_closed_session(from_date: str, to_date: str | None = None,
++                        cal: list[str] | None = None) -> str | None:
++    """Last calendar date whose regular session has actually finished."""
++    if cal is None:
++        payload = sm.load_payload()
++        books = sm.list_books()
++        cal = list(sm.session_calendar(payload, books))
++    dates = [d for d in cal
++             if d >= from_date and (not to_date or d <= to_date)
++             and session_has_closed(d)]
++    return dates[-1] if dates else None
++
++
+ def live_panel_end(from_date: str, to_date: str | None = None) -> str | None:
+-    """Last NYSE session the live tape already has (book / predict / payload)."""
+-    payload = sm.load_payload()
+-    books = sm.list_books()
+-    cal = [d for d in sm.session_calendar(payload, books)
+-           if d >= from_date and (not to_date or d <= to_date)]
+-    return to_date or (cal[-1] if cal else None)
++    """Last NYSE session we can mark — not a pre-open stub for tomorrow."""
++    if to_date and session_has_closed(to_date):
++        return to_date
++    return last_closed_session(from_date, to_date)
+ 
+ 
+ def panel_is_current(raw: dict, from_date: str,

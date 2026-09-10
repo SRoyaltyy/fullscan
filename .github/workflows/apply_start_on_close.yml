@@ -1,0 +1,44 @@
+name: Apply start-on last-close fix
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Restore factor_mine.py if stubbed, then patch
+        run: |
+          set -euo pipefail
+          if ! grep -q "def live_panel_end" src/factor_mine.py; then
+            echo "src/factor_mine.py is stubbed — restoring 4f0cb97"
+            git show 4f0cb97f8f55fac5715eaa2198037d89d977c741:src/factor_mine.py > src/factor_mine.py
+          fi
+          for p in patches/start_on/*.patch; do
+            echo "apply $p"
+            patch -p1 --forward --reject-file=- < "$p" || {
+              echo "patch $p failed; showing file heads"
+              head -5 "${p#patches/start_on/}"
+              exit 1
+            }
+          done
+          python3 -m py_compile src/factor_mine.py src/factor_mine_book.py src/test_factor_mine.py
+          grep -n "def session_has_closed" src/factor_mine.py
+          grep -n "lastClosedDate" src/factor_mine_sim.js
+          grep -n "function liveStartRow" src/factor_mine_dash.html
+      - name: Commit restored + patched sources
+        run: |
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add src/factor_mine.py src/factor_mine_book.py src/factor_mine_sim.js src/factor_mine_dash.html src/test_factor_mine.py
+          git status
+          git diff --cached --stat
+          git commit -m "fix: Start On grades through last closed session, not 0% on next pre-open" || echo No changes
+          git pull --rebase origin main || true
+          git push origin main
