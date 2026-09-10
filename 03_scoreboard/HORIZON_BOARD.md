@@ -1,15 +1,15 @@
 # Horizon board — multi-timeframe prediction grades
 
-Updated: 2026-09-09. Calls are graded at T+h trading days using the scoreboard's own close history. Magnitude bands scale by √h (a 'mild' month ≈ ±1.4%, a 'severe' month ≈ ±9.2%).
+Updated: 2026-09-10. Calls are graded at T+h trading days using the scoreboard's own close history. Magnitude bands scale by √h (a 'mild' month ≈ ±1.4%, a 'severe' month ≈ ±9.2%).
 
 ## Hit rates by topic × horizon
 
 | Topic | Horizon | Graded | Dir hit | Mag hit | Avg actual % |
 |---|---|---|---|---|---|
-| general | 3d | 12 | 8% (1/12) | 42% (5/12) | -0.25% |
-| general | 1w | 10 | 30% (3/10) | 50% (5/10) | -0.10% |
+| general | 3d | 13 | 8% (1/13) | 46% (6/13) | -0.36% |
+| general | 1w | 11 | 36% (4/11) | 55% (6/11) | -0.18% |
 | general | 2w | 8 | 38% (3/8) | 38% (3/8) | -0.30% |
-| general | 1m | 1 | 0% (0/1) | 100% (1/1) | -2.09% |
+| general | 1m | 2 | 0% (0/2) | 50% (1/2) | -2.29% |
 | sector:Basic Materials | 3d | 9 | 33% (3/9) | 22% (2/9) | -0.18% |
 | sector:Basic Materials | 1w | 7 | 14% (1/7) | 43% (3/7) | +0.11% |
 | sector:Basic Materials | 2w | 3 | 33% (1/3) | 67% (2/3) | -0.84% |
@@ -47,6 +47,9 @@ Updated: 2026-09-09. Calls are graded at T+h trading days using the scoreboard's
 
 | Date | Topic | Horizon | Call | Actual | Dir | Mag |
 |---|---|---|---|---|---|---|
+| 2026-09-04 | general | 3d | flat/mild | -1.64% (down/mild) | ❌ | ✅ |
+| 2026-09-02 | general | 1w | down/mild | -0.98% (down/mild) | ✅ | ✅ |
+| 2026-08-14 | general | 1m | up/notable | -2.49% (down/mild) | ❌ | ❌ |
 | 2026-09-03 | sector:Real Estate | 3d | down/mild | -1.90% (down/notable) | ✅ | ❌ |
 | 2026-09-03 | sector:Industrials | 3d | down/mild | -1.59% (down/mild) | ✅ | ✅ |
 | 2026-09-03 | sector:Healthcare | 3d | flat/mild | -3.86% (down/severe) | ❌ | ❌ |
@@ -69,9 +72,6 @@ Updated: 2026-09-09. Calls are graded at T+h trading days using the scoreboard's
 | 2026-08-27 | sector:Communication Services | 1w | up/mild | -0.52% (down/flat) | ❌ | ❌ |
 | 2026-08-27 | sector:Basic Materials | 1w | flat/mild | -3.46% (down/notable) | ❌ | ❌ |
 | 2026-08-26 | sector:Utilities | 1w | down/mild | -1.31% (down/mild) | ✅ | ✅ |
-| 2026-08-26 | sector:Technology | 1w | up/mild | +2.75% (up/notable) | ✅ | ❌ |
-| 2026-08-21 | sector:Healthcare | 1w | up/mild | -4.60% (down/severe) | ❌ | ❌ |
-| 2026-08-17 | sector:Real Estate | 2w | flat/mild | -3.17% (down/notable) | ❌ | ❌ |
 
-*485 calls still maturing (T+h close not recorded yet).*
+*490 calls still maturing (T+h close not recorded yet).*
 

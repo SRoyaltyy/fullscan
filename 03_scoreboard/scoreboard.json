@@ -4021,6 +4021,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "notable",
           "confidence": 0.45
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-09-10",
+          "actual_pct": -2.49,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "notable",
+          "confidence": 0.4
         }
       },
       "lesson_schema_ok": true
@@ -14644,6 +14656,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.52
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-10",
+          "actual_pct": -0.98,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": true,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       },
       "lesson_schema_ok": true
@@ -16308,7 +16332,20 @@
       "knowable_at_9am": "no — the 162k print (3x consensus) hit at 8:30 AM ET and was genuinely unknowable premarket; however the premarket tape (ES -0.44% in second snapshot) was already signaling weakness the morning read underweighted",
       "attribution_contested": "no — CNBC, Reuters, WSJ, Bloomberg, Investopedia all lead with the hot jobs report raising hike odds as the day's driver",
       "outlier_watch": "Nasdaq fell least (-0.29%) despite 2Y yield at multi-year high — AI/chip rebound cushioned rate-sensitive tech; VIX barely moved (14.4) despite a 3x NFP shock; Russell 2000 relatively resilient",
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-10",
+          "actual_pct": -1.64,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -18400,7 +18437,7 @@
       "direction_hit": true,
       "magnitude_hit": false,
       "divergence_flagged": true,
-      "divergence_verdict": null,
+      "divergence_verdict": "leading_right (direction correct; flat futures correctly signaled a contained move — divergence confirms direction, not magnitude).",
       "per_factor_breakdown": [
         {
           "factor": "B0_ASIA",
@@ -18448,7 +18485,7 @@
           "status": "hit"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-09-10_lesson.md",
       "sources_used": [
         {
           "url": "https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-09102026-12114124",
@@ -18532,7 +18569,9 @@
       "key_interaction": "Oil shock (F1) is the shared root that amplified through yields (F3) and Fed path (F4) into the VIX breakout (F5) — one cause with four symptoms — while the soft core PPI (F2) offset and capped the decline, making a potentially severe day close only mildly down",
       "knowable_at_9am": "yes — the dominant driver (oil/Iran) was fully in the morning file; only the weak 30-year auction was a genuine intraday shock",
       "attribution_contested": "yes — TheStreet/Yahoo lead with oil, Morningstar/MarketWatch with Treasury yields, Investopedia with PPI; same causal chain, contested emphasis",
-      "outlier_watch": "Gold fell -1.25% (with silver -2.43%, copper -2.89%) on a war-escalation risk-off day — a liquidation/liquidity unwind rather than a safe-haven bid, the day's biggest divergence"
+      "outlier_watch": "Gold fell -1.25% (with silver -2.43%, copper -2.89%) on a war-escalation risk-off day — a liquidation/liquidity unwind rather than a safe-haven bid, the day's biggest divergence",
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-09-10",
