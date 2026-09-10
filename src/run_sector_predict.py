@@ -16,7 +16,7 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 from . import (compute_scores, compute_sector_scores, config, deepseek_client,
-               fetch_channel1, output_qc, preopen, scoreboard)
+               fetch_channel1, output_qc, preopen, scoreboard, step_deadline)
 from .sector_engine import etf_relative_snapshot, search_query_bundle
 from .sector_memory import prediction_context, topic_for
 from .sector_taxonomy import FINVIZ_SECTORS, SECTOR_ETFS, amp_damp_table, taxonomy_list, validate
@@ -36,6 +36,17 @@ except Exception:
         return ""
     def map_heat_decision_gate(_date, decision, **_kwargs):
         return decision
+
+
+# 2026-09-09 dispatch: 11 sectors vs one 2400s wall. Channel 1 ate 24 min
+# of statement_timeouts, sectors 1-9 took what they liked, and the parent
+# SIGKILLed the child with Real Estate / Technology / Utilities unwritten.
+# Each sector now gets an even share of what is left (deepseek_client
+# shrinks its tool loop + reads to fit): a chat needs ~150s to close, so
+# below MIN_SECTOR_S we stop instead of starting a doomed call.
+MIN_SECTOR_S = 180
+MAX_SECTOR_S = 600
+TAIL_RESERVE_S = 30
 
 
 def _slug(sector: str) -> str:
@@ -239,10 +250,22 @@ def main() -> None:
             "(unavailable this run — do not invent precise levels)\n"
         )
     n_ok = n_skip = n_fail = 0
-    for sector in sectors:
+    for i, sector in enumerate(sectors):
         print(f"\n======== SECTOR PREDICT: {sector} ========\n")
-        result = run_one(sector, date_str, ch1_md,
-                         retries=args.retries, force=args.force)
+        budget = step_deadline.share(len(sectors) - i, MIN_SECTOR_S,
+                                     MAX_SECTOR_S, reserve_s=TAIL_RESERVE_S)
+        if budget is not None and budget <= 0:
+            rem = step_deadline.remaining_s() or 0.0
+            print(f"[sector-predict] stop — {rem:.0f}s left in step, "
+                  f"{len(sectors) - i} sectors not started (no stubs)")
+            n_fail += len(sectors) - i
+            break
+        if budget is not None:
+            print(f"[sector-predict] {sector}: budget {budget:.0f}s "
+                  f"({len(sectors) - i} left)", flush=True)
+        with step_deadline.narrowed(budget):
+            result = run_one(sector, date_str, ch1_md,
+                             retries=args.retries, force=args.force)
         if result.get("quality") == "ok" or (
                 result.get("skipped") and result.get("quality") == "ok"):
             n_skip += 1

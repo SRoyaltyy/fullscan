@@ -389,38 +389,13 @@ def _summarize(ticker: str, role: str, why: str, result: dict) -> dict:
 
 def _ticker_budget_s(n_left: int) -> float | None:
     """Seconds this ticker may use; None = unbounded; <=0 = do not start."""
-    rem = step_deadline.remaining_s()
-    if rem is None:
-        return None
-    usable = rem - TAIL_RESERVE_S
-    if usable < MIN_TICKER_S:
-        return 0.0
-    return max(MIN_TICKER_S, min(MAX_TICKER_S, usable / max(1, n_left)))
+    return step_deadline.share(n_left, MIN_TICKER_S, MAX_TICKER_S,
+                               reserve_s=TAIL_RESERVE_S)
 
 
 def _with_ticker_deadline(budget_s: float | None):
-    """Context manager: narrow FULLSCAN_STEP_DEADLINE for one ticker.
-
-    deepseek_client reads the env at call time, so every LLM read /
-    tool loop inside analyze_stock honours the per-ticker slice, and the
-    parent's ceiling is never the thing that ends the run.
-    """
-    import contextlib
-    import time as _time
-
-    @contextlib.contextmanager
-    def _cm():
-        prev = os.environ.get(step_deadline.ENV)
-        if budget_s is not None and budget_s > 0:
-            os.environ[step_deadline.ENV] = f"{_time.time() + budget_s:.0f}"
-        try:
-            yield
-        finally:
-            if prev is None:
-                os.environ.pop(step_deadline.ENV, None)
-            else:
-                os.environ[step_deadline.ENV] = prev
-    return _cm()
+    """Narrow FULLSCAN_STEP_DEADLINE for one ticker (see step_deadline)."""
+    return step_deadline.narrowed(budget_s)
 
 
 def run_dossiers(date: str, targets: list[dict], skip_gemini: bool,

@@ -13,6 +13,7 @@ write the essay before the parent's timeout fires.
 """
 from __future__ import annotations
 
+import contextlib
 import os
 import time
 
@@ -48,3 +49,48 @@ def bounded(default: int, reserve: int = 0, floor: int = 20) -> int:
     if rem is None:
         return default
     return max(floor, min(default, int(rem - reserve)))
+
+
+def share(n_left: int, floor_s: float, ceiling_s: float,
+          reserve_s: float = 0) -> float | None:
+    """Seconds one of `n_left` remaining items may use.
+
+    None = unbounded step. 0.0 = not even `floor_s` is left, do not start.
+    Otherwise an even split of what remains (after `reserve_s` for the
+    parent's own tail work), clamped to [floor_s, ceiling_s]. The 09-09
+    dispatch ran 11 sector predicts against one 2400s wall: sectors 1-9
+    each took what they liked and the parent SIGKILLed the last two.
+    """
+    rem = remaining_s()
+    if rem is None:
+        return None
+    usable = rem - reserve_s
+    if usable < floor_s:
+        return 0.0
+    return max(floor_s, min(ceiling_s, usable / max(1, n_left)))
+
+
+@contextlib.contextmanager
+def narrowed(budget_s: float | None):
+    """Narrow this process's deadline to `budget_s` from now, then restore.
+
+    LLM / DB clients read the env at call time, so every read timeout and
+    tool loop inside the block honours the slice instead of the parent's
+    whole-step ceiling. None / <= 0 leaves the deadline untouched.
+    """
+    prev = os.environ.get(ENV)
+    if budget_s is not None and budget_s > 0:
+        new = time.time() + budget_s
+        if prev:
+            try:
+                new = min(new, float(prev))
+            except ValueError:
+                pass
+        os.environ[ENV] = f"{new:.0f}"
+    try:
+        yield
+    finally:
+        if prev is None:
+            os.environ.pop(ENV, None)
+        else:
+            os.environ[ENV] = prev
