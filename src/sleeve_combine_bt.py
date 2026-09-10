@@ -131,8 +131,9 @@ def _cond_net(row: dict) -> int:
 
 def load_calendar(payload: dict, from_date: str | None = None,
                   to_date: str | None = None) -> list[str]:
-    dates = set(payload.get("session_dates") or [])
-    dates.update(p.name[:10] for p in BOOK_DIR.glob("????-??-??_stock_book.json"))
+    from src.sleeve_merge import list_books, session_calendar
+    dates = set(session_calendar(payload, list_books()))
+    dates.update(payload.get("session_dates") or [])
     dates.update((payload.get("regime") or {}).keys())
     sweeps = ((payload.get("sweeps") or {}).get("featured") or {})
     regime = ((sweeps.get("mover_days") or {}).get("params") or {}).get("_regime") or {}

@@ -478,6 +478,18 @@ def test_dashboard_lists_every_session_fill() -> None:
     assert '"side": "BUY"' in text
 
 
+def test_calendar_includes_completed_no_fill_session() -> None:
+    """09-09 book / predict exists even when the lookback payload stopped 09-08."""
+    cal = load_calendar(
+        {"session_dates": ["2026-08-13", "2026-09-08"],
+         "regime": {"2026-09-08": {"predict_score": 1.5}}},
+        from_date="2026-08-13",
+    )
+    assert "2026-09-08" in cal
+    assert "2026-09-09" in cal
+    assert cal[-1] >= "2026-09-09"
+
+
 def test_calendar_from_to_clips() -> None:
     cal = load_calendar(
         {"session_dates": ["2026-08-13", "2026-08-14", "2026-08-17",
@@ -523,5 +535,6 @@ if __name__ == "__main__":
     test_fills_are_buy_then_sell()
     test_dashboard_lists_every_session_fill()
     test_calendar_from_to_clips()
+    test_calendar_includes_completed_no_fill_session()
     test_run_bt_rejects_dual_inline()
     print("ok")

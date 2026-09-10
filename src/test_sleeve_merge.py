@@ -566,6 +566,19 @@ def test_start_date_mean_clears_five_pct() -> None:
     assert min(r["return_pct"] for r in long_enough) > -3.0
 
 
+def test_fill_regime_scores_reads_predict_file() -> None:
+    from src.sleeve_merge import fill_regime_scores
+    got = fill_regime_scores({}, ["2026-09-09"])
+    assert got["2026-09-09"]["predict_score"] is not None
+    assert float(got["2026-09-09"]["predict_score"]) <= -3.0
+    assert got["2026-09-09"].get("predict_dir") == "DOWN"
+    kept = fill_regime_scores(
+        {"2026-09-09": {"predict_score": -1.0, "predict_dir": "DOWN"}},
+        ["2026-09-09"],
+    )
+    assert kept["2026-09-09"]["predict_score"] == -1.0
+
+
 def test_fortnight_is_14_calendar_days() -> None:
     # Aug 13 → Aug 26 is one complete fortnight (10 sessions).
     dates = [
@@ -613,7 +626,8 @@ def main() -> None:
     test_card_cost_fits_leftover_cash()
     test_card_would_buy_ignores_holdings()
     test_card_writes_today_json()
-    print("test_sleeve_merge: 26 ok")
+    test_fill_regime_scores_reads_predict_file()
+    print("test_sleeve_merge: 27 ok")
 
 
 if __name__ == "__main__":

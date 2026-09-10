@@ -205,7 +205,10 @@ def load_regime(payload: dict | None = None) -> dict[str, dict]:
     sweeps = ((payload.get("sweeps") or {}).get("featured") or {})
     params = ((sweeps.get("mover_days") or {}).get("params") or {})
     regime = params.get("_regime") or payload.get("regime") or {}
-    return {d: dict(g) for d, g in regime.items()}
+    regime = {d: dict(g) for d, g in regime.items()}
+    from src.sleeve_merge import fill_regime_scores, list_books, session_calendar
+    cal = session_calendar(payload, list_books())
+    return fill_regime_scores(regime, cal)
 
 
 def load_paper_daily() -> dict[str, dict[str, float]]:
@@ -353,7 +356,9 @@ def analyze() -> dict:
     mover_tr = load_mover_trades()
     ungated = ungated_mover_days(payload)
 
-    dates = sorted(set(regime) | set(paper) | set(mover_eq) | set(book_eq))
+    from src.sleeve_merge import list_books, session_calendar
+    dates = sorted(set(regime) | set(paper) | set(mover_eq) | set(book_eq)
+                   | set(session_calendar(payload, list_books())))
     dates = [d for d in dates if d >= WINDOW_START]
 
     paper_rets: dict[str, dict[str, float]] = defaultdict(dict)

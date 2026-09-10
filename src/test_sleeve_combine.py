@@ -83,6 +83,45 @@ def test_route_empty_gap_only_when_list_empty_and_nonneg() -> None:
     assert route_empty_gap(None, 0)["primary"] == BUCKET_MOVER
 
 
+def test_gate_table_marks_predict_day_without_calls() -> None:
+    from src.mover_paper import gate_table
+    gates = gate_table({
+        "session_dates": ["2026-09-08"],
+        "regime": {"2026-09-08": {"predict_score": 1.5, "predict_dir": "UP"}},
+        "called_rows": [{"date": "2026-09-08", "action_call": "BUY"}],
+    }, 1.0)
+    by = {g["date"]: g for g in gates}
+    assert "2026-09-09" in by
+    assert by["2026-09-09"]["predict_score"] is not None
+    assert float(by["2026-09-09"]["predict_score"]) <= -3.0
+    assert by["2026-09-09"]["decision"] == "CLOSED"
+
+
+def test_run_sim_prints_status_when_no_buys() -> None:
+    from src.mover_paper import run_sim
+    sim = run_sim(
+        [],
+        [{"date": "2026-09-08", "decision": "CLOSED", "why": "x"},
+         {"date": "2026-09-09", "decision": "CLOSED", "why": "hard-red"}],
+        capital=100_000, top_n=10, pct=0.1, side="long",
+        entry="open", hold="1d", rank="cond",
+    )
+    assert [c["date"] for c in sim["curve"]] == ["2026-09-08", "2026-09-09"]
+    assert sim["curve"][-1]["equity"] == 100_000
+
+
+def test_load_regime_fills_lagged_predict_day() -> None:
+    from src.sleeve_combine import load_regime
+    got = load_regime({"regime": {"2026-09-08": {"predict_score": 1.5}}})
+    assert got["2026-09-08"]["predict_score"] == 1.5
+    assert "2026-09-09" in got
+    assert got["2026-09-09"]["predict_score"] is not None
+    assert float(got["2026-09-09"]["predict_score"]) <= -3.0
+    from src.sleeve_combine import route
+    card = route(got["2026-09-09"]["predict_score"])
+    assert card["primary"] == BUCKET_CASH
+
+
 def test_stitch_skip_io_uses_live_2w_on_skip_days() -> None:
     from src.mover_paper import stitch_skip_io
     raw = {
@@ -198,4 +237,7 @@ if __name__ == "__main__":
     test_excel_ret_is_a_fraction()
     test_daily_returns_and_dd()
     test_render_has_the_three_jobs()
+    test_load_regime_fills_lagged_predict_day()
+    test_gate_table_marks_predict_day_without_calls()
+    test_run_sim_prints_status_when_no_buys()
     print("ok")

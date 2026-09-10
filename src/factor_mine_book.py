@@ -77,7 +77,12 @@ def morning_s(regime: dict | None, date: str):
 
 def load_regime() -> dict:
     try:
-        return (sm.load_payload() or {}).get("regime") or {}
+        payload = sm.load_payload() or {}
+        books = sm.list_books()
+        return sm.fill_regime_scores(
+            payload.get("regime") or {},
+            sm.session_calendar(payload, books),
+        )
     except Exception:
         return {}
 

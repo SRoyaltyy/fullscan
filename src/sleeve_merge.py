@@ -202,6 +202,35 @@ def predict_snapshot(date: str):
     return m.group(1), float(m.group(2))
 
 
+def fill_regime_scores(regime: dict | None,
+                       dates: list[str] | None = None) -> dict:
+    """Attach morning S from *_predict.md when the lookback payload lagged.
+
+    A hard-red HOLD day still needs its score so leftover lots get a
+    status mark. Missing S used to look like a blank/io session.
+    """
+    out = {d: dict(g) for d, g in (regime or {}).items()}
+    walk = list(dates) if dates is not None else list(out)
+    for d in walk:
+        if not d:
+            continue
+        g = dict(out.get(d) or {})
+        if g.get("predict_score") is not None:
+            out[d] = g
+            continue
+        direction, score = predict_snapshot(d)
+        if direction is None and score is None:
+            if g:
+                out[d] = g
+            continue
+        if score is not None:
+            g["predict_score"] = score
+        if direction and not g.get("predict_dir"):
+            g["predict_dir"] = direction
+        out[d] = g
+    return out
+
+
 def _num(v):
     if v is None or v == "":
         return None
