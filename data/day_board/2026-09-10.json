@@ -1,6 +1,6 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T06:39:45.157708-04:00",
+  "generated_at": "2026-09-10T06:39:47.676013-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -2111,6 +2111,59 @@
         }
       ],
       "preview": "2026-09-09 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\" \u00b7 19 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19 \u00b7 <!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" co"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T06:39:47.149614-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-10_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1418800,
+          "preview": "1d BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND"
+        },
+        {
+          "path": "data/stock_book/2026-09-10_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-10_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2471,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-10_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11955,
+          "preview": "2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11955,
+          "preview": "2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND"
+        },
+        {
+          "path": "01_daily/2026-09-10_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 60430,
+          "preview": "# Stock book \u2014 2026-09-10\n_Generated 2026-09-10T06:39:36.736170-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND \u00b7 2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND \u00b7 # Stock book \u2014 2026-09-10\n_Generated 2026-09-10T06:39:36.736170-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
