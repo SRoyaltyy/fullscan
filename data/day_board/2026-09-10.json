@@ -1,6 +1,6 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T06:24:55.984362-04:00",
+  "generated_at": "2026-09-10T06:24:59.951565-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -13,8 +13,8 @@
   ],
   "counts": {
     "ok": 2,
-    "partial": 1,
-    "fail": 5,
+    "partial": 2,
+    "fail": 4,
     "n": 8
   },
   "processes": [
@@ -457,9 +457,9 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -532,9 +532,9 @@
           "name": "Join ranked CSV",
           "path": "data/join/2026-09-10_ranked.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=5903",
+          "size": 2162091
         },
         {
           "key": "peers",
@@ -591,8 +591,10 @@
           "size": 4539835
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "203 rows",
+      "bullets": [
+        "HALO, HRMY, MU, FORM, APH"
+      ]
     },
     {
       "key": "publish",
@@ -786,6 +788,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -0.125, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.02, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 1.1099999999999999, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.08, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.52, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 0.17, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-10\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T06:24:59.830669-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-10_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2162091,
+          "preview": "5903 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, HRMY, MU, FORM, APH"
+        }
+      ],
+      "preview": "5903 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, HRMY, MU, FORM, APH"
     }
   ],
   "href": {
