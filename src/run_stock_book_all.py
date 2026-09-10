@@ -22,6 +22,10 @@ from . import config
 
 ROOT = Path(__file__).resolve().parent.parent
 ET = ZoneInfo(config.TZ)
+# sleeve_merge --card dials yfinance per ticket (35-50s live). Bound it:
+# an unbounded child is how a job eats its timeout-minutes with nothing
+# on main. Every post-book extra has a ceiling for the same reason.
+CARD_T = 420
 
 
 def _today() -> str:
@@ -573,7 +577,8 @@ def run(
                     os.environ["OPENCLAW_TIMEOUT"] = prev_llm_to
 
     print("[all] → Input health preflight")
-    _run([sys.executable, "-m", "src.input_health", "--date", date], check=False)
+    _run([sys.executable, "-m", "src.input_health", "--date", date],
+         check=False, timeout_s=120)
 
     print("[all] → Stock book (1d / 3d / 1w / 2w / 1m)")
     _run([sys.executable, "-m", "src.stock_book", "--date", date, "--top", str(top)],
@@ -598,7 +603,7 @@ def run(
         _run(
             [sys.executable, "-m", "src.sleeve_merge", "--card",
              "--date", date, "--write-card"],
-            check=False,
+            check=False, timeout_s=CARD_T,
         )
         _land(date, "flatten", "Flatten live card")
         print("\n[all] FINAL STATUS after run:")
@@ -623,26 +628,26 @@ def run(
     print("[all] → Stock book backtest")
     _run(
         [sys.executable, "-m", "src.stock_book_backtest", "--top", str(top), "--max-books", "30"],
-        check=False,
+        check=False, timeout_s=1200,
     )
 
     print("[all] → Paper trading (Futubull-fee simulation + dashboard)")
     _run(
         [sys.executable, "-m", "src.paper_trade", "--date", date, "--top", "10"],
-        check=False,
+        check=False, timeout_s=900,
     )
 
     print("[all] → Sleeve combine (dual wallets, all days, buy/sell dashboard)")
     _run(
         [sys.executable, "-m", "src.sleeve_combine_bt", "--mode", "io_boost", "--hold", "3d"],
-        check=False,
+        check=False, timeout_s=1200,
     )
 
     print("[all] → Sleeve merge live card (today's tickets, no sweep)")
     _run(
         [sys.executable, "-m", "src.sleeve_merge", "--card",
          "--date", date, "--write-card"],
-        check=False,
+        check=False, timeout_s=CARD_T,
     )
     _land(date, "flatten", "Flatten live card")
     _land(date, "paper", "Paper dashboard")
@@ -650,26 +655,26 @@ def run(
     print("[all] → Sleeve merge (.io × mover dashboard, live=hard-red)")
     _run(
         [sys.executable, "-m", "src.sleeve_merge", "--write"],
-        check=False,
+        check=False, timeout_s=600,
     )
 
     print("[all] → Strategy board (every shipped book)")
     _run(
         [sys.executable, "-m", "src.strategy_board", "--write"],
-        check=False,
+        check=False, timeout_s=600,
     )
 
     print("[all] → Book learn (weight tuner from realized forward returns)")
     _run(
         [sys.executable, "-m", "src.book_learn", "--date", date, "--update-prices"],
-        check=False,
+        check=False, timeout_s=900,
     )
 
     print("[all] → Book reflect (gap scan + missing-input hypotheses)")
     reflect_cmd = [sys.executable, "-m", "src.book_reflect", "--date", date]
     if skip_llm:
         reflect_cmd.append("--skip-llm")
-    _run(reflect_cmd, check=False)
+    _run(reflect_cmd, check=False, timeout_s=900)
 
     print("\n[all] FINAL STATUS after run:")
     _print_status(date, _status_for_day(date))

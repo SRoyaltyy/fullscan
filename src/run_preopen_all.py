@@ -721,17 +721,18 @@ def run(date: str | None = None, force: bool = False,
             # paper_trade must not gate the live BUY/SELL strip.
             print("[preopen-all] → live 1d BUY/SELL strip (dashboards poll main)")
             _run([py, "-m", "src.publish_live_boards",
-                  "--date", date, "--write", "--no-extras"])
+                  "--date", date, "--write", "--no-extras"], timeout_s=180)
             _land(date, "live_boards", "Live 1d BUY/SELL strip")
             if force or not preopen.past_predict_cutoff():
                 print("[preopen-all] → paper / sleeve (after book is on main)")
-                _run([py, "-m", "src.paper_trade", "--date", date, "--top", "10"])
+                _run([py, "-m", "src.paper_trade", "--date", date, "--top", "10"],
+                     timeout_s=900)
                 _land(date, "paper", "Paper dashboard")
                 _run([py, "-m", "src.sleeve_combine_bt",
-                      "--mode", "io_boost", "--hold", "3d"])
+                      "--mode", "io_boost", "--hold", "3d"], timeout_s=1200)
                 print("[preopen-all] → flatten_hard_red live card (after book)")
                 _run([py, "-m", "src.sleeve_merge", "--card",
-                      "--date", date, "--write-card"])
+                      "--date", date, "--write-card"], timeout_s=420)
                 snapshot_persist(date)
                 _land(date, "flatten", "Flatten live card")
     else:
