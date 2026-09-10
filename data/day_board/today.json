@@ -1,6 +1,6 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T06:34:55.293162-04:00",
+  "generated_at": "2026-09-10T06:34:58.251494-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -64,31 +64,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-09-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-10T06:29:27.471114-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-09-10_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9306,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -0.125, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.02, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 1.1099999999999999, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.08, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.52, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 0.17, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-09-10_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5029,
-          "preview": "# Weather report \u2014 2026-09-10\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -0.125, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.02, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 1.1099999999999999, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.08, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.52, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 0.17, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-10\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -277,6 +252,52 @@
         }
       ],
       "preview": "1d BUY DK, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, AMC, MMYT, KHC, GIS \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-10 BUY DK, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, AMC, MMYT, KHC, GIS \u00b7 2026-09-10 BUY DK, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, AMC, MMYT, KHC, GIS \u00b7 # Stock book \u2014 2026-09-10\n_Generated 2026-09-10T06:34:51.948791-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T06:34:57.829020-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 15013,
+          "preview": "2026-09-10 BUY DK, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, AMC, MMYT, KHC, GIS"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 520,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-10.json",
+          "ok": true,
+          "reason": "",
+          "size": 81371,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-10_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 58954,
+          "preview": "2026-09-10 BUY DK, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, AMC, MMYT, KHC, GIS"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 58954,
+          "preview": "2026-09-10 BUY DK, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, AMC, MMYT, KHC, GIS"
+        }
+      ],
+      "preview": "2026-09-10 BUY DK, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, AMC, MMYT, KHC, GIS \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-10 BUY DK, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, AMC, MMYT, KHC, GIS \u00b7 2026-09-10 BUY DK, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, AMC, MMYT, KHC, GIS"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
