@@ -1,12 +1,12 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T06:27:10.728088-04:00",
+  "generated_at": "2026-09-10T06:27:17.053934-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 6,
-    "partial": 0,
-    "fail": 2,
+    "ok": 5,
+    "partial": 2,
+    "fail": 1,
     "n": 8
   },
   "buy_1d": [
@@ -84,59 +84,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-10T06:26:07.154709-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-10_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1448966,
-          "preview": "1d BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI"
-        },
-        {
-          "path": "data/stock_book/2026-09-10_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-09-10_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2594,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-09-10_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 11940,
-          "preview": "2026-09-10 BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 11940,
-          "preview": "2026-09-10 BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI"
-        },
-        {
-          "path": "01_daily/2026-09-10_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 79096,
-          "preview": "# Stock book \u2014 2026-09-10\n_Generated 2026-09-10T06:26:05.402204-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-10 BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI \u00b7 2026-09-10 BUY DK, CVI, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, GIS, SPIR, TRIP, ACI \u00b7 # Stock book \u2014 2026-09-10\n_Generated 2026-09-10T06:26:05.402204-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -381,6 +328,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-09-10\n_Generated 2026-09-10T10:27:09 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Prior close **$108,616.66** \u00b7 09:30 **$108,616.66** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$108,616.66**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66** \u00b7 2026-09-10 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_over"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T06:27:16.751306-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-10_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 63142,
+          "preview": "raw=118 usable=8 single=24 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u2019s Jackson Hole commen | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB | Gold price surge drives Franco-Nevada 6.55% higher on Aug 19"
+        },
+        {
+          "path": "01_daily/news/2026-09-10_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 3849,
+          "preview": "# News Parse v2 \u2014 2026-09-10T06:27:16.743109-04:00\nWindow\u224848h | raw=118 | usable=8 | single_name=24 | noise_dropped=86\nusable polarity={'+': 2, '-': 3, 'mixed': 0, 'neutral': 3}"
+        }
+      ],
+      "preview": "raw=118 usable=8 single=24 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u2019s Jackson Hole commen | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB | Gold price surge drives Franco-Nevada 6.55% higher on Aug 19 \u00b7 # News Parse v2 \u2014 2026-09-10T06:27:16.743109-04:00\nWindow\u224848h | raw=118 | usable=8 | single_name=24 | noise_dropped=86\nusable polarity={'+': 2, '-': 3, 'mixed': 0, 'neutral': 3}"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
