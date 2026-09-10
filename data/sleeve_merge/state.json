@@ -30,7 +30,7 @@
   },
   "stats": {
     "n_trades": 72,
-    "n_skipped": 4,
+    "n_skipped": 5,
     "hit": 0.458,
     "total_pnl": 8616.68,
     "total_ret_pct": 8.62,
@@ -48,15 +48,15 @@
         "pnl": 0
       }
     },
-    "n_days": 19,
+    "n_days": 20,
     "min_rolling_2w": -3.38,
-    "min_block_2w": 12.24,
+    "min_block_2w": -2.0,
     "min_fortnight": -2.0,
     "hit_every_rolling_2w": false,
     "hit_every_block_2w": false,
     "hit_every_fortnight": false,
     "beat_io_top": false,
-    "io_top_pct": 10.26,
+    "io_top_pct": 10.64,
     "passed": false,
     "fees_in": 1294.73,
     "fees_out": 1327.49,
@@ -142,6 +142,14 @@
       "start_eq": 112045.44,
       "end_eq": 108616.66,
       "ret_pct": -3.06
+    },
+    {
+      "start": "2026-08-27",
+      "end": "2026-09-10",
+      "n": 10,
+      "start_eq": 110835.16,
+      "end_eq": 108616.66,
+      "ret_pct": -2.0
     }
   ],
   "blocks_2w": [
@@ -155,12 +163,11 @@
     },
     {
       "start": "2026-08-27",
-      "end": "2026-09-09",
-      "n": 9,
+      "end": "2026-09-10",
+      "n": 10,
       "start_eq": 110835.16,
       "end_eq": 108616.66,
-      "ret_pct": -2.0,
-      "partial": true
+      "ret_pct": -2.0
     }
   ],
   "fortnights": [
@@ -183,7 +190,18 @@
       "start_eq": 110835.16,
       "end_eq": 108616.66,
       "ret_pct": -2.0
+    },
+    {
+      "start": "2026-09-10",
+      "end": "2026-09-10",
+      "n": 1,
+      "cal_start": "2026-09-10",
+      "cal_end": "2026-09-23",
+      "start_eq": 108616.66,
+      "end_eq": 108616.66,
+      "ret_pct": 0.0,
+      "partial": true
     }
   ],
-  "generated": "2026-09-10T05:35:16"
+  "generated": "2026-09-10T10:44:28"
 }

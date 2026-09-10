@@ -5652,5 +5652,22 @@
     "overnight_names": "",
     "overnight": [],
     "marks": []
+  },
+  {
+    "date": "2026-09-10",
+    "route": "io",
+    "score": null,
+    "predict": null,
+    "yday_equity": 108616.66,
+    "open_cash": 108616.66,
+    "open_held": 0,
+    "open_equity": 108616.66,
+    "overnight_delta": -0.0,
+    "session_delta": 0.0,
+    "equity": 108616.66,
+    "cash": 108616.66,
+    "overnight_names": "",
+    "overnight": [],
+    "marks": []
   }
 ]

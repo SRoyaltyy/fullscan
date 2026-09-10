@@ -1,0 +1,410 @@
+{
+  "signal_date": "2026-09-01",
+  "horizon": "1w",
+  "generated_at": "2026-09-10T06:58:35.949902-04:00",
+  "missed_movers": [
+    {
+      "ticker": "IGR",
+      "fwd_pct": 186.92,
+      "class": "outweighed",
+      "sector": "Financial",
+      "size": "small",
+      "signals": {
+        "s_join": -0.15,
+        "s_sector": -0.46,
+        "s_general": -0.468,
+        "s_news": 0.0,
+        "s_ab": 0.245,
+        "s_peer": 0.0,
+        "s_opp": 0.0
+      }
+    },
+    {
+      "ticker": "INDP",
+      "fwd_pct": 84.07,
+      "class": "gated_out",
+      "sector": "Healthcare",
+      "size": "micro",
+      "signals": {
+        "s_join": 0.312,
+        "s_sector": -0.52,
+        "s_general": -0.234,
+        "s_news": 0.0,
+        "s_ab": 0.124,
+        "s_peer": 0.333,
+        "s_opp": 0.0
+      }
+    },
+    {
+      "ticker": "CHPT",
+      "fwd_pct": 68.87,
+      "class": "gated_out",
+      "sector": "Consumer Cyclical",
+      "size": "micro",
+      "signals": {
+        "s_join": -0.858,
+        "s_sector": -0.76,
+        "s_general": -0.468,
+        "s_news": 0.0,
+        "s_ab": -0.124,
+        "s_peer": -0.082,
+        "s_opp": 0.0
+      }
+    },
+    {
+      "ticker": "IRD",
+      "fwd_pct": 49.61,
+      "class": "gated_out",
+      "sector": "Healthcare",
+      "size": "small",
+      "signals": {
+        "s_join": 0.589,
+        "s_sector": -0.52,
+        "s_general": -0.07,
+        "s_news": 0.0,
+        "s_ab": -0.809,
+        "s_peer": 0.0,
+        "s_opp": 0.0
+      }
+    },
+    {
+      "ticker": "CYPH",
+      "fwd_pct": 43.27,
+      "class": "gated_out",
+      "sector": "Healthcare",
+      "size": "micro",
+      "signals": {
+        "s_join": 0.146,
+        "s_sector": -0.52,
+        "s_general": -0.07,
+        "s_news": 0.0,
+        "s_ab": -0.358,
+        "s_peer": 0.832,
+        "s_opp": 0.0
+      }
+    },
+    {
+      "ticker": "BRR",
+      "fwd_pct": 37.5,
+      "class": "gated_out",
+      "sector": "Financial",
+      "size": "micro",
+      "signals": {
+        "s_join": -0.125,
+        "s_sector": -0.46,
+        "s_general": -0.468,
+        "s_news": 0.0,
+        "s_ab": 0.0,
+        "s_peer": 0.0,
+        "s_opp": 0.0
+      }
+    },
+    {
+      "ticker": "ORBS",
+      "fwd_pct": 36.66,
+      "class": "gated_out",
+      "sector": "Consumer Cyclical",
+      "size": "small",
+      "signals": {
+        "s_join": -0.97,
+        "s_sector": -0.76,
+        "s_general": -0.468,
+        "s_news": 0.0,
+        "s_ab": -0.358,
+        "s_peer": -0.583,
+        "s_opp": 0.0
+      }
+    },
+    {
+      "ticker": "EOSE",
+      "fwd_pct": 36.51,
+      "class": "outweighed",
+      "sector": "Industrials",
+      "size": "small",
+      "signals": {
+        "s_join": -0.987,
+        "s_sector": -0.48,
+        "s_general": -0.468,
+        "s_news": 0.0,
+        "s_ab": -0.905,
+        "s_peer": -0.672,
+        "s_opp": 0.0
+      }
+    },
+    {
+      "ticker": "SEI",
+      "fwd_pct": 36.32,
+      "class": "outweighed",
+      "sector": "Energy",
+      "size": "mid",
+      "signals": {
+        "s_join": 0.247,
+        "s_sector": 0.276,
+        "s_general": -0.234,
+        "s_news": 0.0,
+        "s_ab": 0.555,
+        "s_peer": -0.949,
+        "s_opp": 0.2
+      }
+    },
+    {
+      "ticker": "SECZ",
+      "fwd_pct": 34.88,
+      "class": "outweighed",
+      "sector": "Technology",
+      "size": "small",
+      "signals": {
+        "s_join": -0.84,
+        "s_sector": -0.08,
+        "s_general": -0.468,
+        "s_news": 0.0,
+        "s_ab": -0.704,
+        "s_peer": 0.0,
+        "s_opp": 0.2
+      }
+    },
+    {
+      "ticker": "NUAI",
+      "fwd_pct": 33.61,
+      "class": "outweighed",
+      "sector": "Technology",
+      "size": "small",
+      "signals": {
+        "s_join": -0.98,
+        "s_sector": -0.08,
+        "s_general": -0.234,
+        "s_news": 0.0,
+        "s_ab": -0.762,
+        "s_peer": 0.0,
+        "s_opp": 0.2
+      }
+    },
+    {
+      "ticker": "NRGV",
+      "fwd_pct": 31.19,
+      "class": "outweighed",
+      "sector": "Utilities",
+      "size": "small",
+      "signals": {
+        "s_join": -0.984,
+        "s_sector": -0.26,
+        "s_general": -0.234,
+        "s_news": 0.0,
+        "s_ab": -0.809,
+        "s_peer": -0.883,
+        "s_opp": 0.0
+      }
+    },
+    {
+      "ticker": "AIB",
+      "fwd_pct": 29.25,
+      "class": "gated_out",
+      "sector": "Technology",
+      "size": "micro",
+      "signals": {
+        "s_join": -0.854,
+        "s_sector": -0.08,
+        "s_general": -0.468,
+        "s_news": 0.0,
+        "s_ab": -0.809,
+        "s_peer": 0.0,
+        "s_opp": 0.16
+      }
+    },
+    {
+      "ticker": "COHU",
+      "fwd_pct": 28.35,
+      "class": "outweighed",
+      "sector": "Technology",
+      "size": "mid",
+      "signals": {
+        "s_join": -0.15,
+        "s_sector": -0.08,
+        "s_general": -0.468,
+        "s_news": 0.0,
+        "s_ab": -0.635,
+        "s_peer": -0.543,
+        "s_opp": 0.2
+      }
+    },
+    {
+      "ticker": "SIG",
+      "fwd_pct": 26.11,
+      "class": "outweighed",
+      "sector": "Consumer Cyclical",
+      "size": "mid",
+      "signals": {
+        "s_join": -0.15,
+        "s_sector": -0.76,
+        "s_general": -0.234,
+        "s_news": 0.0,
+        "s_ab": -0.124,
+        "s_peer": 0.187,
+        "s_opp": 0.0
+      }
+    }
+  ],
+  "n_blind": 0,
+  "worst_buys": [
+    {
+      "ticker": "DOCS",
+      "fwd_pct": -8.2,
+      "sector": "Healthcare",
+      "size": "mid",
+      "signals": {
+        "s_join": 0.927,
+        "s_sector": -0.52,
+        "s_general": -0.234,
+        "s_news": 0.0,
+        "s_ab": 0.848,
+        "s_peer": 0.829,
+        "s_opp": 0.0
+      }
+    },
+    {
+      "ticker": "LNG",
+      "fwd_pct": -6.19,
+      "sector": "Energy",
+      "size": "large",
+      "signals": {
+        "s_join": 0.986,
+        "s_sector": 0.276,
+        "s_general": -0.07,
+        "s_news": 0.0,
+        "s_ab": 0.88,
+        "s_peer": 0.37,
+        "s_opp": -0.17
+      }
+    },
+    {
+      "ticker": "CRM",
+      "fwd_pct": -5.4,
+      "sector": "Technology",
+      "size": "mega",
+      "signals": {
+        "s_join": -0.183,
+        "s_sector": -0.08,
+        "s_general": -0.234,
+        "s_news": 0.459,
+        "s_ab": 0.954,
+        "s_peer": 0.993,
+        "s_opp": -0.34
+      }
+    },
+    {
+      "ticker": "KMI",
+      "fwd_pct": -2.15,
+      "sector": "Energy",
+      "size": "large",
+      "signals": {
+        "s_join": 0.987,
+        "s_sector": 0.276,
+        "s_general": -0.07,
+        "s_news": 0.0,
+        "s_ab": 0.954,
+        "s_peer": 0.368,
+        "s_opp": -0.05
+      }
+    },
+    {
+      "ticker": "CNR",
+      "fwd_pct": -1.85,
+      "sector": "Energy",
+      "size": "mid",
+      "signals": {
+        "s_join": 0.987,
+        "s_sector": 0.276,
+        "s_general": -0.07,
+        "s_news": 0.0,
+        "s_ab": 0.925,
+        "s_peer": 0.224,
+        "s_opp": 0.2
+      }
+    },
+    {
+      "ticker": "INVX",
+      "fwd_pct": -1.36,
+      "sector": "Energy",
+      "size": "mid",
+      "signals": {
+        "s_join": 0.961,
+        "s_sector": 0.276,
+        "s_general": -0.234,
+        "s_news": 0.0,
+        "s_ab": 0.905,
+        "s_peer": 0.092,
+        "s_opp": 0.2
+      }
+    },
+    {
+      "ticker": "FTI",
+      "fwd_pct": -0.64,
+      "sector": "Energy",
+      "size": "large",
+      "signals": {
+        "s_join": 0.987,
+        "s_sector": 0.276,
+        "s_general": -0.07,
+        "s_news": 0.0,
+        "s_ab": 0.964,
+        "s_peer": 0.202,
+        "s_opp": -0.17
+      }
+    },
+    {
+      "ticker": "BTE",
+      "fwd_pct": -0.2,
+      "sector": "Energy",
+      "size": "mid",
+      "signals": {
+        "s_join": 0.98,
+        "s_sector": 0.276,
+        "s_general": -0.07,
+        "s_news": 0.0,
+        "s_ab": 0.941,
+        "s_peer": 0.39,
+        "s_opp": 0.2
+      }
+    },
+    {
+      "ticker": "OXY",
+      "fwd_pct": 0.57,
+      "sector": "Energy",
+      "size": "large",
+      "signals": {
+        "s_join": 0.987,
+        "s_sector": 0.276,
+        "s_general": -0.07,
+        "s_news": 0.834,
+        "s_ab": 0.941,
+        "s_peer": 0.291,
+        "s_opp": -0.05
+      }
+    },
+    {
+      "ticker": "MTDR",
+      "fwd_pct": 2.48,
+      "sector": "Energy",
+      "size": "mid",
+      "signals": {
+        "s_join": 0.987,
+        "s_sector": 0.276,
+        "s_general": -0.07,
+        "s_news": 0.0,
+        "s_ab": 0.954,
+        "s_peer": 0.354,
+        "s_opp": 0.2
+      }
+    }
+  ],
+  "input_silence_on_movers": {
+    "s_join": 0.017,
+    "s_sector": 0.017,
+    "s_general": 0.0,
+    "s_news": 0.983,
+    "s_ab": 0.067,
+    "s_peer": 0.3
+  },
+  "absent_inputs": [],
+  "universe_median_fwd_pct": -0.51
+}
