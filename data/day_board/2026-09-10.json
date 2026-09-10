@@ -1,14 +1,16 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T06:32:12.747139-04:00",
+  "generated_at": "2026-09-10T06:34:44.071156-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING Sector board JSON `01_daily/sectors/2026-09-10/_board.json` \u2014 missing"
+    "MISSING General predict MD `01_daily/general/2026-09-10_predict.md` \u2014 missing",
+    "MISSING Sector board JSON `01_daily/sectors/2026-09-10/_board.json` \u2014 missing",
+    "MISSING News judge MD `01_daily/news/2026-09-10_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
-    "partial": 4,
+    "ok": 6,
+    "partial": 2,
     "fail": 0,
     "n": 8
   },
@@ -82,7 +84,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 87494
+          "size": 87698
         },
         {
           "key": "digest_md",
@@ -91,7 +93,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 12026
+          "size": 12007
         }
       ],
       "said": "",
@@ -103,7 +105,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 4,
+      "n_req_ok": 1,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 2,
@@ -115,7 +117,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87494
+          "size": 87698
         },
         {
           "key": "in_baseline",
@@ -149,18 +151,18 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-09-10_events.json",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 21938
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "judge",
           "name": "News judge MD",
           "path": "01_daily/news/2026-09-10_judge.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 14758
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "research_json",
@@ -187,16 +189,16 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 21435
+          "size": 21819
         },
         {
           "key": "general",
           "name": "General predict MD",
           "path": "01_daily/general/2026-09-10_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 12471
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "board",
@@ -334,13 +336,8 @@
           "size": 0
         }
       ],
-      "said": "general DOWN  -13.275 \u00b7 news 8 items",
+      "said": "news 8 items",
       "bullets": [
-        "bad: Iran attacks 10 ships / US sank 5 tankers (biggest wave)",
-        "bad: Brent >$102",
-        "bad: Warsh hawkish Sep hike ~55-60%",
-        "good: China exports +25% y/y",
-        "good: HY tight 2.67",
         "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
         "Gold prices slide more than 3% after Fed Chair Kevin Warsh\u2019s Jackson Hole comments boost September U.S. rate hike expectations",
         "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year",
@@ -365,7 +362,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87494
+          "size": 87698
         },
         {
           "key": "weather",
@@ -373,8 +370,8 @@
           "path": "01_daily/weather/2026-09-10_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9301 vix=calm yields=flat",
-          "size": 9301
+          "reason": "sectors=11 bytes=9306 vix=calm yields=flat",
+          "size": 9306
         }
       ],
       "said": "favorable 3 \u00b7 hostile 4 \u00b7 neutral 4",
@@ -391,7 +388,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -399,9 +396,9 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-10_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=2660",
+          "size": 7648530
         },
         {
           "key": "ab_enriched",
@@ -436,7 +433,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 21435
+          "size": 21819
         },
         {
           "key": "in_digest",
@@ -445,7 +442,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87494
+          "size": 87698
         },
         {
           "key": "dossiers",
@@ -464,11 +461,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -476,9 +473,9 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-09-10_predict.md",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 12471
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "in_board",
@@ -496,7 +493,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 21435
+          "size": 21819
         },
         {
           "key": "in_digest",
@@ -505,16 +502,16 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87494
+          "size": 87698
         },
         {
           "key": "in_judge",
           "name": "News judge MD",
           "path": "01_daily/news/2026-09-10_judge.md",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 14758
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "in_weather",
@@ -522,8 +519,8 @@
           "path": "01_daily/weather/2026-09-10_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9301 vix=calm yields=flat",
-          "size": 9301
+          "reason": "sectors=11 bytes=9306 vix=calm yields=flat",
+          "size": 9306
         },
         {
           "key": "in_ab",
@@ -548,36 +545,36 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-09-10_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=5116",
+          "size": 816328
         },
         {
           "key": "book_json",
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-10_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "horizons=5 names=215",
+          "size": 1478803
         },
         {
           "key": "book_md",
           "name": "Stock book MD",
           "path": "01_daily/2026-09-10_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 82814
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-10_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 585
         },
         {
           "key": "paper",
@@ -593,8 +590,8 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-09-10 not in dashboard dates (last=2026-09-09)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-10)",
           "size": 4539835
         }
       ],
@@ -607,9 +604,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -619,17 +616,17 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-10_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "horizons=5 names=215",
+          "size": 1478803
         },
         {
           "key": "dash_html",
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-09-10 not in dashboard dates (last=2026-09-09)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-10)",
           "size": 4539835
         },
         {
@@ -656,21 +653,79 @@
     }
   ],
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
-    "flatten": {},
-    "general": {
-      "said": "DOWN  -13.275",
+    "buy_1d": [
+      {
+        "ticker": "DK",
+        "score": 0.7676150933453574
+      },
+      {
+        "ticker": "CVI",
+        "score": 0.8598705207645321
+      },
+      {
+        "ticker": "NVT",
+        "score": 0.6602379889983204
+      },
+      {
+        "ticker": "NEOV",
+        "score": 0.5785701544406248
+      },
+      {
+        "ticker": "UGP",
+        "score": 0.7187933041687551
+      },
+      {
+        "ticker": "KN",
+        "score": 0.7952767982942439
+      },
+      {
+        "ticker": "DINO",
+        "score": 0.35726924159914264
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "GIS",
+        "score": -0.3341001658515066
+      },
+      {
+        "ticker": "TRIP",
+        "score": -0.16826568406580067
+      },
+      {
+        "ticker": "FLO",
+        "score": -0.1222907142973265
+      },
+      {
+        "ticker": "LUCD",
+        "score": -0.0880680462040191
+      },
+      {
+        "ticker": "ENHA",
+        "score": -0.16044577008982702
+      },
+      {
+        "ticker": "XPOF",
+        "score": -0.4191095195977543
+      },
+      {
+        "ticker": "CCL",
+        "score": -0.17231832075162723
+      },
+      {
+        "ticker": "BKNG",
+        "score": -0.16337878916174325
+      }
+    ],
+    "flatten": {
+      "said": "0 priced buys \u00b7 cash $108,616.66 \u00b7 morning S missing",
       "bullets": [
-        "bad: Iran attacks 10 ships / US sank 5 tankers (biggest wave)",
-        "bad: Brent >$102",
-        "bad: Warsh hawkish Sep hike ~55-60%",
-        "good: China exports +25% y/y",
-        "good: HY tight 2.67"
-      ],
-      "score": "-13.275",
-      "direction": "down"
+        "0 priced buys",
+        "cash $108,616.66",
+        "morning S missing"
+      ]
     },
+    "general": {},
     "sectors": {},
     "news": {
       "said": "8 items",
@@ -1589,6 +1644,31 @@
         }
       ],
       "preview": "# Premarket Prediction \u2014 2026-09-10\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 SEVERE** | total score -13.275 (uncertainty multiplier \u00d70.9) | confidence 0.65\n>\n> **Good news vs bad news:** good +0 pts vs bad -14.75 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - China exports +25% y/y\n> - HY tight 2.67\n> - dollar soft 1m -1.01%\n> - Macy's Q2 EPS beat\n> - Nikkei +0.2%\n>\n> **Bad news driving this:**\n> - Iran attacks 10 ships / US sank 5 tankers (biggest wave)\n> - Brent >$102\n> - Warsh hawkish Sep hike ~55-60%\n> - VIX backwardation 1.079\n> - PPI today / CPI tomorrow binary\n>\n> **market uncertainty: **elevated** | VIX 16.52 | policy-uncertainty index 263.53 (1d -202.84)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight news & catalysts: -3.0 \u00d7 "
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T06:34:43.617918-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-10_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 21819,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-09-10_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 7945,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-09-10T06:34:43.613083-04:00\nraw=117 unique_events=3 tickers=35"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-10T06:34:43.613083-04:00\nraw=117 unique_events=3 tickers=35"
     }
   ],
   "href": {
