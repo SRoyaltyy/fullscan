@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import os
+import tempfile
 import time
 
 from . import config
@@ -34,8 +35,67 @@ def _is_timeout(err: BaseException) -> bool:
     return "statement timeout" in text or "querycanceled" in text
 
 
+# 2026-09-09 17:17 Stock Book ALL: the Supabase pooler resolved to two
+# addresses and each connect_timeout expired on both → 2 tries × 2 hosts
+# × 8s + sleep ≈ 44s inside a 50s weather budget, paid again by every
+# subprocess of the run. Once the pooler is unreachable, remember it for
+# the rest of this process AND (via a marker file) the rest of the run.
+_DOWN_MARK = os.path.join(tempfile.gettempdir(), "fullscan_db_unreachable")
+_down_in_proc: str = ""
+
+
+def _down_ttl_s() -> int:
+    raw = (os.environ.get("FULLSCAN_DB_DOWN_TTL_S") or "").strip()
+    if raw.isdigit():
+        return int(raw)
+    return 600
+
+
+def _is_unreachable(err: BaseException) -> bool:
+    text = str(err).lower()
+    return any(tok in text for tok in (
+        "timeout expired", "could not connect", "connection refused",
+        "could not translate host name", "network is unreachable",
+        "no route to host", "name or service not known",
+    ))
+
+
+def _marked_down() -> str:
+    """Reason string when the DB was recently unreachable, else ''."""
+    if _down_in_proc:
+        return _down_in_proc
+    ttl = _down_ttl_s()
+    if ttl <= 0:
+        return ""
+    try:
+        st = os.stat(_DOWN_MARK)
+        age = time.time() - st.st_mtime
+        if 0 <= age < ttl:
+            return f"marker {int(age)}s old"
+    except OSError:
+        pass
+    return ""
+
+
+def _mark_down(reason: str) -> None:
+    global _down_in_proc
+    _down_in_proc = reason or "unreachable"
+    if _down_ttl_s() <= 0:
+        return
+    try:
+        with open(_DOWN_MARK, "w", encoding="utf-8") as fh:
+            fh.write(f"{time.time():.0f} {reason}\n")
+    except OSError:
+        pass
+
+
 def _conn():
     if not config.DATABASE_URL:
+        return None
+    why = _marked_down()
+    if why:
+        print(f"[db] skipped — pooler unreachable earlier this run ({why}); "
+              "continuing without Postgres")
         return None
     last = None
     timeout_ms = _statement_timeout_ms()
@@ -44,13 +104,17 @@ def _conn():
             import psycopg2
             conn = psycopg2.connect(
                 config.DATABASE_URL,
-                connect_timeout=8,
+                connect_timeout=6,
                 options=f"-c statement_timeout={timeout_ms}",
             )
             return conn
         except Exception as e:  # noqa: BLE001
             last = e
             print(f"[db] connect failed (try {attempt + 1}/2): {e}")
+            if _is_unreachable(e):
+                # A second dial into a dead pooler is another 12s for nothing.
+                _mark_down(str(e).splitlines()[0][:160])
+                break
             if attempt < 1:
                 time.sleep(2)
     print(f"[db] giving up — morning/collectors continue without Postgres ({last})")
