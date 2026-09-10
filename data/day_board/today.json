@@ -1,341 +1,41 @@
 {
-  "date": "2026-09-09",
-  "generated_at": "2026-09-10T01:57:38.627918-04:00",
+  "date": "2026-09-10",
+  "generated_at": "2026-09-10T06:21:49.656462-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": true,
+  "ranker_ready": false,
   "counts": {
-    "ok": 7,
+    "ok": 2,
     "partial": 1,
-    "fail": 0,
+    "fail": 5,
     "n": 8
   },
-  "buy_1d": [
-    {
-      "ticker": "CIG",
-      "score": 0.7242815504164775
-    },
-    {
-      "ticker": "ATRO",
-      "score": 0.5210078151822785
-    },
-    {
-      "ticker": "EMBJ",
-      "score": 0.13038406873849306
-    },
-    {
-      "ticker": "MIR",
-      "score": 0.5956938762730717
-    },
-    {
-      "ticker": "NXE",
-      "score": 0.5135764674626018
-    },
-    {
-      "ticker": "BG",
-      "score": 0.38511479236914936
-    },
-    {
-      "ticker": "AR",
-      "score": 0.3875737710531883
-    },
-    {
-      "ticker": "ITT",
-      "score": 0.3667763704975007
-    },
-    {
-      "ticker": "XIFR",
-      "score": 0.5613846130666518
-    }
-  ],
-  "sell_1d": [
-    {
-      "ticker": "METC",
-      "score": -0.5485976282394803
-    },
-    {
-      "ticker": "SLQT",
-      "score": -0.6107984629198537
-    },
-    {
-      "ticker": "CPB",
-      "score": -0.33646948880033895
-    },
-    {
-      "ticker": "COIN",
-      "score": -0.4791543714722759
-    },
-    {
-      "ticker": "SPIR",
-      "score": -0.36678877196274356
-    },
-    {
-      "ticker": "RZLV",
-      "score": -0.22462681350392838
-    },
-    {
-      "ticker": "CLPT",
-      "score": -0.3293765034500459
-    },
-    {
-      "ticker": "BGS",
-      "score": -0.3820704157914411
-    },
-    {
-      "ticker": "APLD",
-      "score": -0.0979744695509498
-    },
-    {
-      "ticker": "STEP",
-      "score": -0.3890342596883298
-    }
-  ],
-  "flatten": {
-    "said": "0 priced buys \u00b7 0 lots \u00b7 cash $108,616.66",
-    "bullets": [
-      "0 priced buys",
-      "0 lots",
-      "cash $108,616.66"
-    ]
-  },
-  "general": {
-    "said": "DOWN  -13.95",
-    "bullets": [
-      "bad: Iran-US tanker attacks biggest wave since war began",
-      "bad: oil >$100 Brent",
-      "bad: Warsh hawkish ~60% hike odds",
-      "good: China exports +25% y/y",
-      "good: HY tight 2.68"
-    ],
-    "score": "-13.95",
-    "direction": "down"
-  },
-  "sectors": {
-    "said": "1 up / 6 down / 4 flat",
-    "bullets": [
-      "XLB DOWN -4.5",
-      "XLC FLAT +0.9",
-      "XLY DOWN -7.5",
-      "XLP DOWN -2.9",
-      "XLE UP +8.5",
-      "XLF DOWN -6.1",
-      "XLV DOWN -6.5",
-      "XLI FLAT -4.0",
-      "XLRE DOWN -6.8",
-      "XLK FLAT +0.0",
-      "XLU FLAT +0.5"
-    ]
-  },
+  "buy_1d": [],
+  "sell_1d": [],
+  "flatten": {},
+  "general": {},
+  "sectors": {},
   "lands": [
-    {
-      "key": "news_judge",
-      "title": "News judge",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T13:14:51.510416-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-09_judge.md",
-          "ok": true,
-          "reason": "",
-          "size": 13459,
-          "preview": "# News Judge \u2014 2026-09-09"
-        },
-        {
-          "path": "01_daily/news/2026-09-09_judge.json",
-          "ok": true,
-          "reason": "",
-          "size": 1284,
-          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
-        }
-      ],
-      "preview": "# News Judge \u2014 2026-09-09 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
-    },
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T13:18:08.784535-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-09-09_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 10538,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.5, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': 0.9, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Consumer Cyclical={'score': -7.5, 'dir': 'down', 'conf': 0.6, 'source': 'llm'}, Consumer Defensive={'score': -2.925, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Energy={'score': 8.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Financial={'score': -6.075, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': -6.525, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Industrials={'score': -4.05, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}"
-        },
-        {
-          "path": "01_daily/weather/2026-09-09_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 6060,
-          "preview": "# Weather report \u2014 2026-09-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.5, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': 0.9, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Consumer Cyclical={'score': -7.5, 'dir': 'down', 'conf': 0.6, 'source': 'llm'}, Consumer Defensive={'score': -2.925, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Energy={'score': 8.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Financial={'score': -6.075, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': -6.525, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Industrials={'score': -4.05, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T13:18:12.180407-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-09-09_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2249188,
-          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, ARGX, EXE, DVN, PR"
-        }
-      ],
-      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, ARGX, EXE, DVN, PR"
-    },
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T13:18:19.268796-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-09_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1545868,
-          "preview": "1d BUY CIG, ATRO, EMBJ, MIR, NXE, BG, AR, ITT \u00b7 SELL METC, SLQT, CPB, COIN, SPIR, RZLV, CLPT, BGS"
-        },
-        {
-          "path": "data/stock_book/2026-09-09_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-09-09_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2454,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "01_daily/2026-09-09_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 81671,
-          "preview": "# Stock book \u2014 2026-09-09\n_Generated 2026-09-09T13:18:18.041623-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY CIG, ATRO, EMBJ, MIR, NXE, BG, AR, ITT \u00b7 SELL METC, SLQT, CPB, COIN, SPIR, RZLV, CLPT, BGS \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 # Stock book \u2014 2026-09-09\n_Generated 2026-09-09T13:18:18.041623-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
-    {
-      "key": "news_judge",
-      "title": "News judge",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T13:18:22.137615-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-09_judge.md",
-          "ok": true,
-          "reason": "",
-          "size": 13574,
-          "preview": "# News Judge \u2014 2026-09-09"
-        },
-        {
-          "path": "01_daily/news/2026-09-09_judge.json",
-          "ok": true,
-          "reason": "",
-          "size": 1530,
-          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
-        }
-      ],
-      "preview": "# News Judge \u2014 2026-09-09 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
-    },
-    {
-      "key": "flatten",
-      "title": "Flatten live card",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T13:18:53.062666-04:00",
-      "files": [
-        {
-          "path": "01_daily/2026-09-09_flatten_card.md",
-          "ok": true,
-          "reason": "",
-          "size": 1796,
-          "preview": "# flatten_robust card \u2014 2026-09-09\n_Generated 2026-09-09T17:18:52 \u2014 live `flatten_robust`._\n**S=-13.95; hard-red: no new buys; holds and due 1d exits stay**\n- Score **-13.95** (DOWN) \u00b7 route **hold** \u00b7 HARD-RED\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Open lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66**"
-        },
-        {
-          "path": "data/sleeve_merge/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 4821,
-          "preview": "keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930"
-        }
-      ],
-      "preview": "# flatten_robust card \u2014 2026-09-09\n_Generated 2026-09-09T17:18:52 \u2014 live `flatten_robust`._\n**S=-13.95; hard-red: no new buys; holds and due 1d exits stay**\n- Score **-13.95** (DOWN) \u00b7 route **hold** \u00b7 HARD-RED\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Open lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66** \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930"
-    },
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T13:24:01.452496-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-09_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 81440,
-          "preview": "raw=155 usable=15 single=30 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | August CPI (pre-FOMC inflation print) | S&P 500, Dow End Lower As Middle East Tensions Spur Oil Rally Ahead Of Key Infla | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027"
-        },
-        {
-          "path": "01_daily/news/2026-09-09_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 4400,
-          "preview": "# News Parse v2 \u2014 2026-09-09T13:24:01.439883-04:00\nWindow\u224824h | raw=155 | usable=15 | single_name=30 | noise_dropped=110\nusable polarity={'+': 3, '-': 3, 'mixed': 0, 'neutral': 9}"
-        }
-      ],
-      "preview": "raw=155 usable=15 single=30 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | August CPI (pre-FOMC inflation print) | S&P 500, Dow End Lower As Middle East Tensions Spur Oil Rally Ahead Of Key Infla | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 \u00b7 # News Parse v2 \u2014 2026-09-09T13:24:01.439883-04:00\nWindow\u224824h | raw=155 | usable=15 | single_name=30 | noise_dropped=110\nusable polarity={'+': 3, '-': 3, 'mixed': 0, 'neutral': 9}"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
-      "date": "2026-09-09",
+      "date": "2026-09-10",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-10T01:57:37.707072-04:00",
+      "at": "2026-09-10T06:21:49.513442-04:00",
       "files": [
         {
-          "path": "01_daily/news/2026-09-09_finviz_digest.json",
+          "path": "01_daily/news/2026-09-10_finviz_digest.json",
           "ok": true,
           "reason": "",
           "size": 87494,
           "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
         },
         {
-          "path": "01_daily/news/2026-09-09_finviz_digest.md",
+          "path": "01_daily/news/2026-09-10_finviz_digest.md",
           "ok": true,
           "reason": "",
           "size": 12063,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-09\n_Generated 2026-09-10T01:57:37.591520-04:00 \u00b7 export=data/exports/finviz_2026-09-09.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-        },
-        {
-          "path": "data/exports/finviz_2026-09-09.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11414966,
-          "preview": "11614 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+          "preview": "# Finviz Daily Digest \u2014 2026-09-10\n_Generated 2026-09-10T06:21:49.449608-04:00 \u00b7 export=data/exports/finviz_2026-09-09.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
         },
         {
           "path": "data/finviz/latest.csv",
@@ -345,7 +45,7 @@
           "preview": "11614 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
         }
       ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-09\n_Generated 2026-09-10T01:57:37.591520-04:00 \u00b7 export=data/exports/finviz_2026-09-09.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11614 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11614 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-10\n_Generated 2026-09-10T06:21:49.449608-04:00 \u00b7 export=data/exports/finviz_2026-09-09.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11614 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
