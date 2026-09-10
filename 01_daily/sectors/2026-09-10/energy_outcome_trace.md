@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"XLE energy sector ETF September 10 2026 close"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"XLE energy ETF September 10 2026 close oil prices WTI Brent"* → got 6 results (via ddg)
 
-  - State Street Energy Select Sector SPDR ETF (XLE) (https://finance.yahoo.com/quote/XLE/)
+  - State Street Energy Select Sector SPDR ETF Stock Price (https://www.perplexity.ai/finance/XLE)
 
-  - XLE: State Street® Energy Select Sector SPDR® ETF (https://www.ssga.com/us/en/intermediary/etfs/state-street-energy-select-sector-spdr-etf-xle)
+  - Stocks are under pressure as oil prices climb back toward $100 ... (https://www.facebook.com/schwabnetwork/posts/stocks-are-under-pressure-as-oil-prices-climb-back-toward-100-a-barrelrick-ducat/1672405201553502/)
 
-  - State Street Energy Select Sector SPDR ETF - XLE - MarketWatch (https://www.marketwatch.com/investing/fund/xle)
+  - Energy sector heads for another record high as oil prices rally (https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-oil-prices-war-in-iran-escalates-steady-start/card/energy-sector-heads-for-another-record-high-as-oil-prices-rally-SKSudmEDh1MJmfaDoLs0)
 
-**Step 2 — Research.** The model wanted to know: *"oil prices WTI Brent September 10 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"oil prices September 10 2026 WTI Brent crude Iran Hormuz"* → got 6 results (via ddg)
 
-  - Current price of oil as of Sept. 10, 2026 - Fortune (https://fortune.com/article/price-of-oil-09-10-2026/)
+  - Brent oil - Price - Chart - Historical Data - News (https://tradingeconomics.com/commodity/brent-crude-oil)
 
-  - Crude Oil - Price - Chart - Historical Data - News (https://tradingeconomics.com/commodity/crude-oil)
+  - Oil prices today: WTI, Brent, U.S.-Iran (https://www.cnbc.com/2026/09/09/oil-prices-today-wti-brent-us-iran-hormuz-attacks.html)
 
-  - U.S. crude oil prices topped $100 a barrel and Treasury yields ... (https://www.facebook.com/schwabnetwork/posts/september-10-2026-us-crude-oil-prices-topped-100-a-barrel-and-treasury-yields-cl/1674643277996361/)
+  - Oil rises to $99 on report Iran launched second undisclosed attack on U.S. Navy ships (https://www.cnbc.com/2026/09/08/oil-prices-today-brent-wti-hormuz-iran-war.html)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

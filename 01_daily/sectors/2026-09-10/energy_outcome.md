@@ -6,97 +6,118 @@ Actuals: {'etf': 'XLE', 'pct': -0.5818362695191537, 'spy_pct': -0.59942381661529
 
 ## 0. FACTS
 
-**Tape (deterministic actuals):**
-- XLE: **−0.58%** (open 66.14 → close 64.93)
-- SPY: **−0.60%**
-- Relative: **+0.02%** (essentially flat vs SPY)
-- Actual direction: **down**; actual magnitude: **mild** (sub-1%, no gap-and-trend)
+| Item | Value |
+|---|---|
+| XLE % | **−0.58%** |
+| SPY % | **−0.60%** |
+| Relative % | **+0.02%** |
+| Open / Close | 66.14 / 64.93 |
+| Actual direction | **down** |
+| Actual magnitude | **mild** (sub-1%, but a full intraday reversal from a green open) |
+| Predicted direction | up |
+| Predicted magnitude | mild (morning text) / **notable** (pipeline JSON) |
 
-**Path:** XLE opened **up** at 66.14 (vs prior close 65.31, ~+1.3% gap) and sold off all day to close 64.93 — a **full round-trip fade**, closing near the low. This is the single most important fact of the session: the morning's "oil is bid, tape is confirming" thesis was **right at the open and wrong at the close**.
+Path: XLE opened at 66.14 — *above* the prior close and above the Sept 2 record close of $65.10 — then sold off ~1.8% from the open to close at 64.93. This is a **fade-from-the-open**, not a gap-down. The morning call was directionally wrong on a day when the sector's own object (crude) was still green.
 
-**Cross-check on the crude spine:**
-- CLAIM: WTI settled ~$97.26 on 2026-09-09 (prior session reference).
-  URL: https://fred.stlouisfed.org/series/DCOILWTICO
-  PUBLISHED: 2026-09-10
-  QUOTE: "2026-09-09: 97.26 | Dollars per Barrel"
-  SUMMARY: The morning's WTI $97.44 reference was the prior-session level; the barrel was NOT materially higher intraday.
-
-- CLAIM: Intraday crude prints on 09-10 were mixed/conflicting across sources (one showing Brent ~$105.20 at 8am ET, another showing crude "up 6.90% to $102.68," another showing a Brent pullback to $77.69).
-  URL: https://fortune.com/article/price-of-oil-09-10-2026/ ; https://tradingeconomics.com/commodity/crude-oil
-  PUBLISHED: 2026-09-10
-  QUOTE: "By 8 a.m. Eastern Time today, oil had reached $105.20 per barrel, measured using the Brent benchmark."
-  SUMMARY: The crude tape was **not a clean continuation higher** — the morning's "still bid" read did not extend into a decisive up-day for the barrel, and XLE's fade is consistent with crude giving back the overnight premium.
-
-**Key structural fact:** XLE gapped up ~+1.3% on the open, then bled ~1.9% from open to close. The **gap was the entire move** — and it was given back. This is a classic "buy the rumor / sell the continuation" day-3 pattern.
+**The single most important fact:** XLE closed *down* on a day when Brent rose to ~$101.25–101.84 (+0.04% to +0.62%) and WTI was still bid. The sector's own shock was intact and the ETF still could not hold its open. That is the whole story.
 
 ---
 
 ## 1. What drove the sector today
 
-**Primary driver: the day-3 geopolitical/oil premium was sold, not extended.** The morning thesis was "day-3 continuation of the US-Iran kinetic escalation, crude still bid." Reality: the market treated day-3 as **exhaustion, not continuation**. XLE opened at the high (66.14) and closed at the low (64.93) — the exact signature of a premium being distributed into strength rather than accumulated.
+**Primary driver: the oil bid stopped transmitting to equities — a decoupling/fade, not an oil reversal.**
 
-Taxonomy-aligned factors:
-- **Crude oil price surge (WTI/Brent):** the morning HIT grid scored this 0.85. The barrel did **not** deliver a decisive up-day; the overnight premium faded. This is the load-bearing miss.
-- **Geopolitical supply risk premium:** live, but **day-3 = priced**. The morning itself flagged "no fresh step-change headline beyond the ongoing escalation." That caveat was the tell — and it was under-weighted.
-- **Risk-off tape / flight to safety:** SPY −0.60%, and XLE could not decouple. The morning's "sector_shock, SPY red / XLE green on its own object" regime **failed** — XLE tracked SPY down almost tick-for-tick (rel +0.02%).
-- **Real yields / duration:** 10Y 4.80 sticky; not an XLE spine, correctly de-weighted.
+Evidence:
 
-**The honest one-liner:** the sector's own shock (oil/geo) stopped producing incremental upside on day 3, and with SPY red, XLE had nothing to hold it up — so it round-tripped its gap.
+- CLAIM: Brent rose to $101.25 on Sept 10, up 0.04% d/d, +13.88% over the past month.
+  URL: https://tradingeconomics.com/commodity/brent-crude-oil
+  PUBLISHED: 2026-09-10
+  QUOTE: "Brent rose to 101.25 USD/Bbl on September 10, 2026, up 0.04% from the previous day."
+  SUMMARY: Crude was flat-to-up on the session. The sector's fundamental object did not break.
+
+- CLAIM: Oil extended gains Thursday on Middle East supply-disruption worries; Brent Nov delivery +0.62% to $101.84.
+  URL: https://www.cnbc.com/2026/09/10/iran-us-oil-hormuz-supply-trump-military-brent-wti.html
+  PUBLISHED: 2026-09-10
+  QUOTE: "Oil extended gains on Thursday, amid worries that escalating tensions in the Middle East could further exacerbate supply disruptions."
+  SUMMARY: The geopolitical premium was still being *added to*, not unwound, on the day XLE fell.
+
+- CLAIM: Goldman said intensifying shipping attacks raise the probability of Brent exceeding $120.
+  URL: https://www.cnbc.com/2026/09/09/oil-prices-today-wti-brent-us-iran-hormuz-attacks.html
+  PUBLISHED: 2026-09-09
+  SUMMARY: Sell-side was escalating bullish oil targets into the session — i.e., the news flow was *supportive*, and XLE still faded.
+
+So the taxonomy-aligned factor that "should" have driven XLE (crude surge + geopolitical supply risk premium) was **present and green**, and the ETF still closed red. The driver of the *loss* was therefore **not** a factor reversal — it was a **positioning/flow event inside an extended sector**: XLE opened at a record-adjacent level (above the Sept 2 record close of $65.10, per MarketWatch: "on track for its 12th record close since the end of July") and was sold into strength.
+
+- CLAIM: XLE was trading above its Sept 2 record close of $65.10, on track for its 12th record close since end-July.
+  URL: https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-oil-prices-war-in-iran-escalates-steady-start/card/energy-sector-heads-for-another-record-high-as-oil-prices-rally-SKSudmEDh1MJmfaDoLs0
+  PUBLISHED: 2026-09-10 (session)
+  SUMMARY: XLE was at/near record highs on the open. The fade is a **crowded-long unwind into strength**, the exact mechanism the morning note dismissed.
+
+Secondary: broad risk-off (SPY −0.60%) meant no beta cushion; XLE's relative outperformance (+0.02%) is essentially a rounding error — it fell *with* the tape, not against it.
 
 ---
 
-## 2. Audit of morning S0–S4 reads against reality
+## 2. Audit of morning S0–S4 reads
 
-**S0_SHARED_MACRO = 0 (muted).** *Verdict: correct in level, wrong in implication.* The morning said risk-off equities were "a cyclical overlay, not a veto when oil is the sector's own shock." Reality: with the oil shock no longer producing incremental upside, the risk-off overlay **became** the dominant force. S0=0 was defensible as a score, but the *reasoning* ("not a veto") was the error — on day-3 of a priced shock, shared macro is not an overlay, it's the spine. **Read: MISS on implication.**
+**S0_SHARED_MACRO = 0 — VERDICT: correct, and correctly muted.**
+The morning read said risk-off equities + flat USD/real yields were "a cyclical overlay, not a veto when oil is the sector's own shock." SPY −0.60% confirmed the risk-off overlay. S0=0 was the right call — it neither added nor subtracted. No error.
 
-**S1_SECTOR_FACTORS = +2.** *Verdict: MISS.* The morning netted the oil/Hormuz cluster at +2, explicitly refusing +3 because "day-3 continuation, no fresh step-change." That instinct was right — but +2 was still too high. A day-3 continuation with **no fresh increment** and a **sub-1.5% crude print** should have been **+1 or 0**, not +2. The morning even wrote "this is a modest continuation, not 09-08's +3.18% surge" — and then scored it +2 anyway. **The score contradicted its own prose.** This is the core error.
+**S1_SECTOR_FACTORS = +2 — VERDICT: WRONG SIGN, and the error is structural.**
+The morning scored the oil/Hormuz cluster as a live positive spine. Crude *was* green (Brent ~$101.25–101.84, WTI bid). So the *factor* was correctly identified as present. But the morning made the fatal inference: **"oil green → XLE up."** Today proved the transmission was broken. The morning even had the evidence in hand and misread it:
 
-**S2_BREADTH = +1.** *Verdict: MISS.* The morning read 1d rel +1.30% as "the oil bid is transmitting" and large-caps participating. Reality: the 1d rel was **stale** (prior session's close), and on the day XLE's rel was +0.02% — zero transmission. The morning used **trailing** breadth to justify a **forward** breadth score. **Read: MISS — trailing tape misused as live confirmation.**
+- The morning noted 1m rel **+9.90%** and called it "leftover leadership."
+- The morning noted XLE was at record-adjacent levels (implicitly, via the 1m run) and explicitly *dismissed* the crowded-long trigger: "1w rel is only +0.75% — NOT the 08-21 RSI>70 / 1w rel >+5% crowded-long unwind trigger."
 
-**S3_FLOWS_POSITIONING = 0.** *Verdict: correct, and under-credited.* The morning noted 1m rel +9.90% "leftover leadership" but declined to fire the crowded-long unwind trigger because 1w rel was only +0.75%. Reality: the +9.90% 1m run **was** the vulnerability — day-3 of a shock after a +9.9% month is exactly when late longs distribute. The morning had the right data and the wrong conclusion. **Read: score correct, reasoning incomplete.**
+That dismissal was the error. The 08-21 trigger was calibrated on **1w rel >+5%**. But XLE was making **record closes** (12th since end-July) with **1m rel +9.90%**. A sector at all-time highs on a multi-week run does not need 1w rel >+5% to be crowded — the record-close sequence *is* the crowding signal. The morning used a stale threshold to wave off a live condition. **S1 should have been netted toward 0 or +1, not +2**, because the marginal buyer was exhausted even as the barrel was bid.
 
-**S4_ETF_TAPE = +1.** *Verdict: MISS.* The morning scored Channel 1 confirmation (+1.30% 1d rel) as a live up-signal. But Channel 1 was **through 2026-09-09** — it was the *prior* session's tape, not a forward signal. Scoring stale tape as +1 confirmation is a **knowability error**: at 9:30 ET on 09-10, that +1.30% was already in the price (it was the gap). **Read: MISS — stale tape double-counted as forward confirmation.**
+**S2_BREADTH = +1 — VERDICT: partially wrong.**
+The morning read 1d rel +1.30% as "the oil bid is transmitting" and "large-caps are participating." That was true *as of the prior close* (the Channel 1 tape was through 09-09). It was **not** true intraday on 09-10: XLE opened green and closed red, rel +0.02%. The breadth read was a **lagging confirmation** of yesterday's move, not a leading signal for today. This is the classic Channel-1-through-prior-close trap: the tape you're reading is the tape that already happened.
 
-**Net audit:** S1 and S4 were the two errors that mattered. Both involved treating **already-printed** information (prior-session crude, prior-session rel tape) as **forward** signal. The morning's own caveats ("day-3," "no fresh step-change," "modest continuation") were correct and were then overridden by the scoring.
+**S3_FLOWS_POSITIONING = 0 — VERDICT: wrong; this was the actual driver and it was scored zero.**
+The morning explicitly wrote: "do not treat trailing outflows as a 1-day lid against a live oil bid." Today, the **positioning** (record-high sector, 1m rel +9.90%, 12 record closes) *was* the lid. The morning had the outflow hangover (~$4B over ~65 days) and the record-run in hand and netted them to zero. The correct read was that a sector at record highs with a multi-week run and a flow hangover is **fragile to any excuse to take profit** — and "oil only +0.04% today" was that excuse. S3 should have been **negative** (crowded-long unwind risk), not zero.
+
+**S4_ETF_TAPE = +1 — VERDICT: wrong, and it's the same lagging-tape error as S2.**
+S4 was scored on Channel 1 (1d rel +1.30%, 3d +2.46%, 1w +0.75%, 1m +9.90%) — all **through 09-09**. It confirmed yesterday. It said nothing about today. Scoring S4 positive on stale tape double-counted S2 (both were reading the same prior-close Channel 1 numbers) — a **double-count of the same lagging evidence**.
+
+**Net audit:** S1 overstated by ~2, S2 overstated by ~1, S3 understated by ~1–2, S4 double-counted with S2. The morning's leading sum of 8.0 was inflated by **lagging tape scored as if it were leading**, and by a **crowded-long condition misclassified as benign**.
 
 ---
 
 ## 3. Interactions / double-count / knowable-at-open test
 
-**Double-count check:** The morning explicitly claimed it counted oil + Hormuz **once** in S1. That's true *within* S1. But the real double-count was **across channels**: the +1.30% 1d rel (S4) and the "oil bid transmitting" (S2) are the **same fact** — the prior session's oil-driven XLE outperformance. The morning scored it in S2 (+1) *and* S4 (+1), i.e., **+2 for one stale observation**. That inflated the leading sum to 8.0 and pushed the pipeline to **notable** (8.5) even though the narrative text said "cap at mild."
+**Double-count identified:** S2 (breadth) and S4 (ETF tape) were both scored off the *same* Channel 1 series (1d/3d/1w/1m rel). The morning even wrote "S4 is Channel 1 confirmation only" — but then scored it +1 *on top of* S2's +1, which was itself derived from Channel 1. That's the same evidence counted twice, both times lagging. This alone inflated the leading sum by ~1.
 
-**Knowable-at-open test:** At 9:30 ET on 09-10, what was knowable?
-- Prior-session crude ($97.26 WTI) — **known, already priced**.
-- Prior-session XLE rel (+1.30%) — **known, already priced** (it was the gap).
-- Day-3 status of the shock — **known**.
-- No fresh kinetic headline — **known**.
-- SPY risk-off, VIX backwardation — **known**.
+**Same-shock check:** The morning correctly netted oil + Hormuz once in S1 (good discipline). But it then *failed* to net the **record-high positioning** against the oil bid. The correct interaction was: *oil bid (positive) × record-high crowded sector (negative) = net transmission failure.* The morning treated the two as independent and additive-positive. They were **offsetting**.
 
-Everything the morning cited as bullish was **knowable and already in the open**. There was **no forward catalyst** in the bullish column. The only genuinely forward item was the **10:30 ET EIA WPSR** — which the morning correctly flagged as "two-sided, not a scored HIT." So the honest knowable-at-open read was: **a gapped-up sector with no fresh catalyst, in a risk-off tape, after a +9.9% month.** That is a **fade setup**, not a continuation setup. **KNOWABLE_AT_OPEN: yes — the fade was inferable.**
+**Knowable-at-open test:** **YES — partially, and the key piece was knowable.**
+- Knowable at open: XLE was at/near record highs (12th record close since end-July, above the Sept 2 record of $65.10). This was public and in the morning's own context.
+- Knowable at open: 1m rel +9.90%, multi-week run, flow hangover.
+- Knowable at open: oil's *incremental* move was sub-1.5% (WTI +1.44%, Brent +0.85% per the morning's own live check) — i.e., the marginal oil increment was **small**, so the marginal *equity* upside was small while the *downside* from profit-taking at records was large. **Asymmetric.**
+- Not knowable at open: the exact intraday fade timing.
 
-**The pipeline vs. narrative divergence:** The narrative text said **mild**; the pipeline JSON emitted **notable** (total_score 8.5). The morning's own magnitude-discipline lesson (09-08/09-09, "cap at mild") was **overridden by the pipeline's arithmetic**. This is a process failure: the discipline rule was written, then not enforced at the scoring layer.
+The morning had every input needed to conclude "extended sector + small marginal oil increment + risk-off tape = fade risk dominates." It instead concluded "oil green → up." **The error was knowable at the open.**
 
 ---
 
 ## 4. Outliers inside the sector
 
-- **XLE itself is the outlier:** a +1.3% gap fully round-tripped to −0.58% while SPY was −0.60%. The **rel +0.02%** is the tell — XLE did not lead, did not lag, it simply **tracked SPY down** after giving back its oil premium. The "sector_shock decoupling" regime did not hold.
-- **Refiner sleeve:** the morning flagged HO −0.75% / RBOB +1.14% as "products mixed, not a clean refiner squeeze" and correctly dampened VLO/MPC. That call held — no refiner outlier drove the ETF.
-- **Nat gas $2.793 (−0.99%):** correctly N/A; no outlier.
-- **Metals split (gold −0.56%, silver −2.43%, copper −2.89%):** the morning correctly refused to import a commodity-bid cushion. That refusal was right — and it should have been a **warning**, not a neutral: a broad commodity complex that is *not* bid is inconsistent with an "oil still bid" continuation thesis.
+Without intraday single-name tape in the inputs, the structural outlier is **XLE itself**: it is the outlier *against its own factor*. On a day when Brent held >$100 and Goldman floated $120, the energy ETF closed red and *underperformed nothing* (rel +0.02%) — meaning the entire sector moved as one bloc with the tape, and **no sub-sleeve (E&P, refiners, services) provided the offset** the morning hoped for. The morning's "refiner sleeve only — dampen for whole XLE" caution was directionally right (don't let VLO/MPC drive the call) but the conclusion drawn — that the *rest* of XLE would carry — was wrong. The whole complex faded together. That is a **breadth-negative** outcome the morning's S2=+1 explicitly denied.
 
 ---
 
 ## 5. Verdict and lessons
 
-**The morning got the direction wrong (predicted up/notable, actual down/mild) and the magnitude band wrong (notable vs mild).** The narrative text was *closer to right* than the pipeline output — it said mild, it flagged day-3 exhaustion, it flagged no fresh catalyst. The scoring layer then overrode all of that.
+**The morning was wrong on direction, and wrong for an identifiable, correctable reason:** it scored **lagging tape as leading**, and it **dismissed a live crowded-long condition using a stale threshold** (1w rel >+5%) when the actual crowding signal — **record closes** — was flashing. It then let a *small* marginal oil increment (+0.04% to +0.85%) carry a *notable/mild up* call into a risk-off tape against a sector at all-time highs.
 
-**Three concrete lessons:**
-1. **Stale tape is not confirmation.** Channel 1 through the prior close is *already in the open*. Scoring it as S4 +1 (and again in S2) double-counts one stale fact and inflates the leading sum. On a gap-up open, prior-session rel should score **0**, not +1.
-2. **Day-3 of a shock with no fresh increment is a fade candidate, not a continuation.** The morning wrote the correct caveat and then scored +2 on S1 anyway. When the prose says "modest continuation, no fresh step-change," S1 should be **+1 max**.
-3. **Enforce the magnitude-discipline rule at the pipeline layer.** The narrative said mild; the pipeline emitted notable. A written discipline rule that the arithmetic can silently override is not a discipline rule.
+**The pipeline JSON is worse than the morning text.** The morning text capped magnitude at **mild** (correctly applying the 09-08/09-09 magnitude-discipline lesson). The pipeline JSON emitted **notable** with total_score 8.5. The deterministic layer **overrode the human magnitude discipline** and re-inflated the band. That is a pipeline bug: the magnitude-cap lesson was applied in prose but not in the scored output. Direction was wrong either way, but the JSON made the miss larger.
 
-**What would have caught it:** the knowable-at-open test. A gapped-up sector, no forward catalyst, risk-off tape, +9.9% 1m run, and a commodity complex that is *not* bid → the base case was a **gap fade**, i.e., **down/mild**. That was inferable before the bell.
+**Lessons to carry:**
+1. **Record-high + multi-week-run sectors are crowded regardless of 1w rel.** Replace/augment the 08-21 "1w rel >+5%" trigger with a **record-close-sequence** trigger. A 12th record close since end-July is a crowding signal on its own.
+2. **Do not score S2 and S4 off the same Channel 1 series.** If S4 is "Channel 1 confirmation," it cannot also be an independent +1 alongside S2 derived from Channel 1. Cap the combined breadth+tape contribution.
+3. **Marginal-increment asymmetry test:** when the sector's own factor moves *small* (oil +0.04% to +0.85%) while the sector sits at records, the risk/reward is asymmetric *down*. Small factor increment + extended positioning = fade risk, not continuation.
+4. **Pipeline must honor the prose magnitude cap.** The JSON emitting "notable" against a prose "mild" is a scoring-integrity failure.
+
+---
 
 OUTCOME_BEGIN
 SECTOR: Energy
@@ -106,8 +127,8 @@ SPY_PCT: -0.60
 REL_PCT: +0.02
 ACTUAL_DIRECTION: down
 ACTUAL_MAGNITUDE: mild
-PRIMARY_DRIVER: Day-3 oil/geopolitical premium distributed into a gap-up open; with no fresh catalyst and SPY risk-off, XLE round-tripped its +1.3% gap to close near the low.
-KEY_INTERACTION: Prior-session rel tape (+1.30%) was double-counted as live confirmation in both S2 and S4, inflating the leading sum and pushing the pipeline to "notable" against the narrative's own "mild" cap.
+PRIMARY_DRIVER: Crowded-long unwind into record-high XLE despite a still-green crude/geopolitical bid — oil-to-equity transmission broke; sector faded from a green open to close red with the tape.
+KEY_INTERACTION: Oil/Hormuz bid (positive) was offset by record-high positioning + multi-week run + flow hangover (negative); morning treated them as additive-positive instead of offsetting, and double-counted lagging Channel 1 tape across S2 and S4.
 KNOWABLE_AT_OPEN: yes
-MORNING_READ_VERDICT: Direction and magnitude both MISS — narrative text correctly flagged day-3 exhaustion and capped at mild, but the scoring layer (S1 +2, S2 +1, S4 +1 on stale tape) overrode it and emitted up/notable.
+MORNING_READ_VERDICT: Wrong direction; scored lagging prior-close tape as leading, dismissed a live crowded-long condition with a stale 1w-rel threshold, and the pipeline JSON re-inflated magnitude to "notable" against the prose "mild" cap.
 OUTCOME_END
