@@ -717,6 +717,12 @@ def run(date: str | None = None, force: bool = False,
             # paper/sleeve/catalyst hang after this.
             print("[preopen-all] → push book + green.json + ranker inputs")
             _land(date, "stock_book", "Stock book + green")
+            # Names on .io come from raw JSON. Do this even after 09:25 —
+            # paper_trade must not gate the live BUY/SELL strip.
+            print("[preopen-all] → live 1d BUY/SELL strip (dashboards poll main)")
+            _run([py, "-m", "src.publish_live_boards",
+                  "--date", date, "--write", "--no-extras"])
+            _land(date, "live_boards", "Live 1d BUY/SELL strip")
             if force or not preopen.past_predict_cutoff():
                 print("[preopen-all] → paper / sleeve (after book is on main)")
                 _run([py, "-m", "src.paper_trade", "--date", date, "--top", "10"])

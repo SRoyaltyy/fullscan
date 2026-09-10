@@ -686,6 +686,30 @@ def dashboard_meta(text: str) -> dict:
     return {"generated": gen, "dates": dates}
 
 
+def _live_strip_for_date(date: str) -> tuple[bool, str]:
+    """True when today's 1d names are on disk for dashboards to poll."""
+    for path in (
+        ROOT / "data" / "day_board" / "today.json",
+        ROOT / "data" / "stock_book" / f"{date}_suggestions.json",
+        ROOT / "data" / "stock_book" / "latest_suggestions.json",
+    ):
+        if not path.exists():
+            continue
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError, json.JSONDecodeError):
+            continue
+        if not isinstance(data, dict):
+            continue
+        if str(data.get("date") or "") != date:
+            continue
+        buys = data.get("buy_1d") or []
+        sells = data.get("sell_1d") or []
+        if buys or sells:
+            return True, path.name
+    return False, ""
+
+
 def inspect_dashboard_html(path: Path, date: str) -> tuple[str, str, int]:
     if not path.exists():
         return "MISSING", "missing", 0
@@ -696,6 +720,9 @@ def inspect_dashboard_html(path: Path, date: str) -> tuple[str, str, int]:
     if "const D =" not in text and "__DATA__" in text:
         return "FAIL", "template not injected (__DATA__ still present)", size
     meta = dashboard_meta(text)
+    live_ok, live_src = _live_strip_for_date(date)
+    if "live-book-poller" in text and live_ok:
+        return "OK", f"live-book poller + {live_src} ({date})", size
     if date not in (meta.get("dates") or []):
         last = (meta.get("dates") or ["?"])[-1]
         return "FAIL", f"session {date} not in dashboard dates (last={last})", size
@@ -715,9 +742,15 @@ def inspect_pages_live(date: str) -> tuple[str, str, int]:
         return "FAIL", f"unreachable: {e}"[:160], 0
     if code != 200:
         return "FAIL", f"HTTP {code}", 0
-    if "const D =" not in body:
+    if "const D =" not in body and "live-book-poller" not in body:
         return "FAIL", "live page has no injected book data", len(body)
     meta = dashboard_meta(body)
+    live_ok, live_src = _live_strip_for_date(date)
+    if "live-book-poller" in body and live_ok:
+        return "OK", (
+            f"live poller + {live_src} ({date}) — names from main, "
+            f"not baked paper dates"
+        ), len(body)
     if date not in (meta.get("dates") or []):
         last = (meta.get("dates") or ["?"])[-1]
         return "FAIL", (
@@ -1206,9 +1239,11 @@ def render_pages_markdown(pages: dict) -> list[str]:
         "",
         f"Fixed Chrome link: {PAGES_URL}",
         "",
-        "Stock Book ALL writes `dashboard/index.html` via `src.paper_trade`, "
-        "then force-pushes the `gh-pages` branch. `deploy-dashboard.yml` is "
-        "the backup publish.",
+        "Stock Book ALL / Pre-Open ALL write today's 1d BUY/SELL to "
+        "`data/day_board/today.json` and `data/stock_book/*_suggestions.json`. "
+        "The paper dashboard polls those files from raw `main` — names appear "
+        "when the book lands, without waiting for a `paper_trade` HTML rebuild. "
+        "`publish_dashboard.sh` / `deploy-dashboard.yml` still refresh Pages.",
         "",
     ]
     local = pages.get("local") or {}

@@ -813,6 +813,7 @@ def test_incremental_land_and_day_board() -> None:
     """Write A → QC A → push A. Day board is an .io page, not an Action."""
     pre = (ROOT / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
     assert "land_file.land" in pre
+    assert "src.publish_live_boards" in pre
     yml = (WF / "preopen_all.yml").read_text(encoding="utf-8")
     assert "leftover sweep" in yml
     assert "timeout-minutes: 180" in yml
@@ -827,6 +828,8 @@ def test_incremental_land_and_day_board() -> None:
     land = (ROOT / "src" / "land_file.py").read_text(encoding="utf-8")
     assert land.index('endswith("_weather.json")') < land.index("json_too_small")
     assert "MIN_WEATHER_BYTES" in land
+    assert '"live_boards"' in land
+    assert "latest_suggestions.json" in land
     qc = (ROOT / "src" / "output_qc.py").read_text(encoding="utf-8")
     assert "packet_gates.json_too_small" in qc
     assert "Path(path).stat().st_size" in qc

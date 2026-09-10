@@ -107,7 +107,16 @@ def step_paths(date: str, key: str) -> list[Path]:
             book / f"{date}_stock_book.json",
             book / f"{date}_green.json",
             book / f"{date}_input_health.json",
+            book / f"{date}_suggestions.json",
+            book / "latest_suggestions.json",
             ROOT / "01_daily" / f"{date}_stock_book.md",
+        ],
+        "live_boards": [
+            ROOT / "data" / "day_board" / "today.json",
+            ROOT / "data" / "day_board" / "latest.json",
+            ROOT / "data" / "day_board" / f"{date}.json",
+            ROOT / "data" / "day_board" / f"{date}_tickets.json",
+            ROOT / "dashboard" / "factor-mine" / "today.json",
         ],
         "flatten": [
             ROOT / "01_daily" / f"{date}_flatten_card.md",
@@ -244,6 +253,16 @@ def _preview_json(data: object, name: str) -> str:
             if isinstance(e, dict):
                 bits.append(str(e.get("title") or e.get("event") or e.get("name") or "")[:70])
         return f"{len(evs)} events · " + " | ".join(bits)
+    if "buy_1d" in data or name.endswith("_suggestions.json") or name == "today.json":
+        buys = data.get("buy_1d") or []
+        sells = data.get("sell_1d") or []
+        def _t(row: object) -> str:
+            if isinstance(row, dict):
+                return str(row.get("ticker") or "")
+            return str(row)
+        buy_s = ", ".join(x for x in (_t(r) for r in buys[:8]) if x)
+        sell_s = ", ".join(x for x in (_t(r) for r in sells[:8]) if x)
+        return f"{data.get('date') or ''} BUY {buy_s or '—'} · SELL {sell_s or '—'}"
     books = data.get("books") if isinstance(data.get("books"), dict) else None
     if books:
         one = books.get("1d") or {}

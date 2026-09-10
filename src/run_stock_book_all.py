@@ -327,7 +327,15 @@ def run(
     from . import skip_if_good
     if (not force) and (not refresh_ranker) and skip_if_good.check_stock_book_all(date):
         print(f"[all] {date}: book + green + weather + join + AB already "
-              "on disk — skip")
+              "on disk — skip ranker")
+        print("[all] → Live 1d BUY/SELL strip (dashboards poll main)")
+        _run(
+            [sys.executable, "-m", "src.publish_live_boards",
+             "--date", date, "--write", "--no-extras"],
+            check=False, timeout_s=90,
+        )
+        _land(date, "stock_book", "Stock book + green")
+        _land(date, "live_boards", "Live 1d BUY/SELL strip")
         return
 
     print(f"[all] plan force={force} skip_llm={skip_llm} "
@@ -574,11 +582,18 @@ def run(
             or _exists("01_daily", f"{date}_stock_book.md")):
         print(f"[all] WARN: stock book files missing for {date}")
     else:
+        print("[all] → Live 1d BUY/SELL strip (dashboards poll main, no paper rebuild)")
+        _run(
+            [sys.executable, "-m", "src.publish_live_boards",
+             "--date", date, "--write", "--no-extras"],
+            check=False, timeout_s=90,
+        )
         _land(date, "stock_book", "Stock book + green")
+        _land(date, "live_boards", "Live 1d BUY/SELL strip")
 
     if skip_extras:
         print("[all] skip extras (catalyst/backtest/paper/sleeve) — "
-              "book + green.json already written")
+              "book + live strip already written")
         print("[all] → Sleeve merge live card (after book; no sweep)")
         _run(
             [sys.executable, "-m", "src.sleeve_merge", "--card",

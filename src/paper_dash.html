@@ -108,7 +108,17 @@
    .pair-legs{grid-template-columns:1fr}
    .leg + .leg{border-left:0;border-top:1px solid var(--line2)}
  }
+.live-book{background:#16161e;border:1px solid #2a2a3a;border-radius:10px;padding:12px 16px;margin:0 0 16px}
+.live-book-kicker{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#7a7a90;margin-bottom:8px}
+.live-book-date{font-size:12px;color:#9a9ab0;margin-bottom:6px}
+.live-book-row{font-size:14px;line-height:1.45;margin:4px 0}
+.live-book-row b{color:#7aa2f7;margin-right:8px}
+.live-book-row.sell b{color:#f7768e}
 </style></head><body><div class="wrap">
+<div id="liveBook" class="live-book" data-live-book="1">
+  <div class="live-book-kicker">Today's book (live from main)</div>
+  <div class="live-book-body">Loading book…</div>
+</div>
 <h1>Paper Trading — Stock Book Simulation</h1>
 <div class="sub" id="gen"></div>
 <div class="sub">Books:
@@ -899,4 +909,43 @@ renderAll();
 const F=D.fees||{};
 document.getElementById('fees').textContent=
  `Fee model (Futubull US stocks): commission $${F.commission_per_share}/sh (min $${F.commission_min_per_order}, cap 0.5%) + platform $${F.platform_per_share}/sh (min $${F.platform_min_per_order}, cap 0.5%) + settlement $${F.settlement_per_share}/sh; sells add regulatory ${(F.regulatory_pct_of_amount_sell_only||0)*100}% of amount + TAF $${F.taf_per_share_sell_only}/sh (max $${F.taf_max_per_order}).`;
-</script></body></html>
+</script>
+<script id="live-book-poller">
+(function(){
+  var URLS = [
+    "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today.json",
+    "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/stock_book/latest_suggestions.json"
+  ];
+  function names(rows){
+    if(!rows) return [];
+    return rows.map(function(x){
+      if(typeof x === "string") return x;
+      return (x && (x.ticker || x.symbol)) || "";
+    }).filter(Boolean);
+  }
+  function paint(d){
+    var el = document.getElementById("liveBook");
+    if(!el || !d) return;
+    var buys = names(d.buy_1d);
+    var sells = names(d.sell_1d);
+    el.innerHTML =
+      '<div class="live-book-kicker">Today\'s book (live from main)</div>' +
+      '<div class="live-book-date">' + (d.date || "") + '</div>' +
+      '<div class="live-book-row"><b>BUY 1d</b> ' + (buys.join(" · ") || "—") + '</div>' +
+      '<div class="live-book-row sell"><b>SELL 1d</b> ' + (sells.join(" · ") || "—") + '</div>';
+  }
+  function loadOne(i){
+    if(i >= URLS.length) return;
+    fetch(URLS[i] + "?t=" + Date.now(), {cache: "no-store"})
+      .then(function(r){ return r.ok ? r.json() : Promise.reject(); })
+      .then(function(d){
+        if((d.buy_1d && d.buy_1d.length) || (d.sell_1d && d.sell_1d.length)) paint(d);
+        else loadOne(i + 1);
+      })
+      .catch(function(){ loadOne(i + 1); });
+  }
+  loadOne(0);
+  setInterval(function(){ loadOne(0); }, 60000);
+})();
+</script>
+</body></html>

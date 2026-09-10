@@ -3,10 +3,13 @@
 Cheap path (this module):
   * rewrite data/day_board/*.json so factor-mine + day-board strips
     poll today's 1d BUY/SELL from main
+  * write data/stock_book/*_suggestions.json for the paper dashboard
   * copy the same strip to dashboard/factor-mine/today.json (Pages
     same-origin fallback)
-  * rebuild day-board HTML, flatten live card, paper + sleeve-merge
-    + strategy-board when those modules are importable
+  * inject the paper-dash live poller if the baked HTML is missing it
+
+Paper / sleeve / strategy-board HTML rebuilds are extras. Names must
+already be on the dashboards from the JSON strip after the book lands.
 
 The 90-minute factor-mine recipe grid is NOT run here. Stock Book ALL
 and Pre-Open ALL kick `.github/workflows/factor_mine.yml` after the
@@ -105,6 +108,16 @@ def publish(date: str, *, write: bool = True, extras: bool = True) -> dict:
     except Exception as e:  # noqa: BLE001
         print(f"[live-boards] WARN: day-board rebuild failed: {e}", flush=True)
         out["error"] = str(e)
+
+    if write:
+        try:
+            from . import book_suggestions
+            sug = book_suggestions.write(date=date)
+            if sug is not None:
+                out["wrote"].append(str(sug.relative_to(ROOT)))
+            out["poller_injected"] = book_suggestions.ensure_dashboard_poller()
+        except Exception as e:  # noqa: BLE001
+            print(f"[live-boards] WARN: suggestions sidecar: {e}", flush=True)
 
     if extras and write:
         py = sys.executable
