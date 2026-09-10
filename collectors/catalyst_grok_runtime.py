@@ -8,7 +8,6 @@ from __future__ import annotations
 import asyncio
 import json
 import re
-from datetime import datetime
 from pathlib import Path
 
 
@@ -24,59 +23,89 @@ def _native_search_brief(queries):
     return "\n".join(lines)
 
 
+def parse_quote_news_html(html: str, ticker: str, ca) -> list[dict]:
+    """Parse Elite/public quote-page news tables into catalyst events.
+
+    Handles both `tr.news_table-row` (Elite) and `table.fullview-news-outer`
+    (classic). Dates use parse_finviz_news_date so `Sep-03-26 04:32PM` and
+    same-day time-only cells keep the real calendar day.
+    """
+    from bs4 import BeautifulSoup
+
+    if not html:
+        return []
+    soup = BeautifulSoup(html, "html.parser")
+    rows = []
+    last_date = None
+    for tr in soup.select("tr.news_table-row, table.fullview-news-outer tr"):
+        cells = tr.find_all("td")
+        link = (
+            tr.select_one("a.nn-tab-link")
+            or tr.select_one("a.tab-link-news")
+            or tr.select_one("a[href^='http']")
+        )
+        if not cells or link is None:
+            continue
+        date_td = tr.select_one("td.news_date-cell")
+        if date_td is None or date_td.select_one("a"):
+            date_td = cells[0]
+            if date_td.select_one("a"):
+                date_td = None
+        raw_date = date_td.get_text(" ", strip=True) if date_td is not None else ""
+        date_str = ca.parse_finviz_news_date(
+            raw_date, last_date=last_date, today=getattr(ca, "TODAY", None)
+        )
+        if date_str:
+            last_date = date_str
+        date_str = date_str or getattr(ca, "TODAY", None)
+        if not date_str:
+            continue
+        lookback = getattr(ca, "LOOKBACK_START", None)
+        cutoff = getattr(ca, "CUTOFF_DATE", None)
+        if lookback and date_str < lookback:
+            continue
+        if cutoff and date_str > cutoff:
+            continue
+        title = re.sub(r"\s+", " ", link.get_text(" ", strip=True)).strip()
+        if not title:
+            continue
+        url = (link.get("href") or "").strip()
+        source_nodes = [
+            n for n in tr.select("span.news_date-cell, span")
+            if n.get_text(strip=True) and n != link
+        ]
+        source = source_nodes[-1].get_text(" ", strip=True).strip("()") if source_nodes else ""
+        rows.append({
+            "event_date": date_str,
+            "headline": title,
+            "description": f"{title} (via {source})" if source else title,
+            "evidence_excerpt": title[:150],
+            "source_urls": [url] if url.startswith("http") else [
+                f"https://finviz.com/quote.ashx?t={ticker}"
+            ],
+            "confidence": 85,
+            "source": "finviz_elite",
+            "finviz_source": source,
+        })
+    return rows[:80]
+
+
 def _elite_or_export_news(ca, ticker: str) -> list[dict]:
     """Ticker news from authenticated Elite HTML, then Elite CSV.
 
     Never calls public finviz.com and never uses SearXNG.
     """
-    rows = []
     try:
-        from bs4 import BeautifulSoup
         from src import finviz_session
         sess = finviz_session.session()
         if finviz_session.authed(sess):
             resp = finviz_session.get(sess, f"/quote.ashx?t={ticker}", timeout=30)
             if resp is not None:
-                soup = BeautifulSoup(resp.text, "html.parser")
-                year = datetime.now().year
-                last_date = None
-                for tr in soup.select("tr.news_table-row, table.fullview-news-outer tr"):
-                    cells = tr.find_all("td")
-                    link = tr.select_one("a.nn-tab-link") or tr.select_one("a[href^='http']")
-                    if not cells or link is None:
-                        continue
-                    raw_date = cells[0].get_text(" ", strip=True)
-                    if re.search(r"\d{2}-\d{2}-\d{2}", raw_date):
-                        try:
-                            last_date = datetime.strptime(
-                                raw_date.split()[0], "%b-%d-%y").date().isoformat()
-                        except ValueError:
-                            pass
-                    elif re.search(r"[A-Z][a-z]{2}-\d{2}", raw_date):
-                        try:
-                            last_date = datetime.strptime(
-                                f"{raw_date.split()[0]}-{year}", "%b-%d-%Y"
-                            ).date().isoformat()
-                        except ValueError:
-                            pass
-                    date_str = last_date or ca.TODAY
-                    if ca.CUTOFF_DATE and date_str > ca.CUTOFF_DATE:
-                        continue
-                    title = link.get_text(" ", strip=True)
-                    url = link.get("href") or ""
-                    rows.append({
-                        "event_date": date_str,
-                        "headline": title,
-                        "description": title,
-                        "evidence_excerpt": title[:150],
-                        "source_urls": [url] if url.startswith("http") else [],
-                        "confidence": 85,
-                        "source": "finviz_elite",
-                    })
+                rows = parse_quote_news_html(resp.text, ticker, ca)
+                if rows:
+                    return rows
     except Exception as e:
         print(f"  ⚠️  Elite ticker news skipped: {str(e)[:120]}")
-    if rows:
-        return rows[:80]
 
     # Same paid export, no HTML dependency.
     try:
@@ -90,9 +119,19 @@ def _elite_or_export_news(ca, ticker: str) -> list[dict]:
                 title = str(r.get("News Title") or "").strip()
                 url = str(r.get("News URL") or "").strip()
                 digest = str(r.get("Daily Digest") or "").strip()
-                if title and title not in ("nan", "-"):
+                news_time = str(r.get("News Time") or "").strip()
+                date_str = ca.parse_finviz_news_date(
+                    news_time, today=getattr(ca, "TODAY", None)
+                ) or getattr(ca, "TODAY", None)
+                lookback = getattr(ca, "LOOKBACK_START", None)
+                cutoff = getattr(ca, "CUTOFF_DATE", None)
+                if lookback and date_str and date_str < lookback:
+                    date_str = None
+                if cutoff and date_str and date_str > cutoff:
+                    date_str = None
+                if title and title not in ("nan", "-") and date_str:
                     return [{
-                        "event_date": ca.TODAY,
+                        "event_date": date_str,
                         "headline": title,
                         "description": digest if digest not in ("nan", "-") else title,
                         "evidence_excerpt": title[:150],
@@ -279,7 +318,7 @@ def install(ca) -> None:
         print(f"  📋 Step 1 extracted {len(raw_events)} new raw events (after window)")
 
         try:
-            context_profile = ca.parse_json(step2_raw)
+            context_profile = ca.coerce_context_profile(ca.parse_json(step2_raw))
         except Exception as e:
             print(f"  ❌ Step 2 parse failed: {e}")
             return {"error": "Step 2 parse failure", "raw": step2_raw[:500]}
@@ -287,7 +326,7 @@ def install(ca) -> None:
         # Reuse the rest of the original pipeline from here by temporarily
         # swapping search so the original function is not invoked (it still
         # hits SearXNG). We finish synthesis here.
-        sensitivity = context_profile.get("sensitivity_profile", {})
+        sensitivity = context_profile.get("sensitivity_profile", {}) if isinstance(context_profile, dict) else {}
         weighted_taxonomy = {}
         for cat, prof in sensitivity.items():
             base = ca.CATALYST_WEIGHTS.get(cat, 5)
@@ -318,7 +357,7 @@ def install(ca) -> None:
                                    ca.json.dumps(snapshot, indent=2, default=str))
         final_raw = call_llm(prompt4, f"Finalize {full_name}.", 0.1, 25000, False, f"CATALYST STEP4 {ticker}")
         try:
-            final_result = ca.parse_json(final_raw)
+            final_result = ca.coerce_final_result(ca.parse_json(final_raw))
         except Exception as e:
             print(f"  ❌ Step 4 parse failed: {e}")
             return {"error": "Step 4 parse failure", "raw": final_raw[:500]}

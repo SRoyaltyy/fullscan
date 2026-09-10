@@ -307,6 +307,41 @@ def test_insider_sale_is_not_bullish_record_language() -> None:
     assert _digest_tone(text) == "bad"
 
 
+def test_company_finviz_news_grades_the_news_box() -> None:
+    """No RSS ticker_action — Finviz company headline still colors news."""
+    ctx = _context("yellow")
+    ctx["digest"]["ABBV"] = {
+        "tone": "good",
+        "news_tone": "good",
+        "text": "AbbVie announces positive Phase 3 etentamig data",
+        "materiality": "high",
+        "direct": True,
+        "event_risk": False,
+        "event_date": "2099-01-01",
+    }
+    frame = _frame("ABBV")
+    frame["news_time"] = "2099-01-01 08:00:00"
+    decided = attach_domains(frame, ctx).iloc[0]
+    assert decided["src_news_tone"] == "good"
+    assert decided["src_digest_tone"] == "good"
+    assert decided["src_news_tone"] != "missing"
+
+
+def test_neutral_company_headline_is_yellow_not_blank() -> None:
+    ctx = _context("yellow")
+    ctx["digest"]["AAPL"] = {
+        "tone": "neutral",
+        "news_tone": "neutral",
+        "text": "My Impressions Watching Baseball in Apple Immersive",
+        "materiality": "normal",
+        "direct": True,
+        "event_risk": False,
+    }
+    decided = attach_domains(_frame("AAPL"), ctx).iloc[0]
+    assert decided["src_news_tone"] == "neutral"
+    assert decided["src_news_tone"] != "missing"
+
+
 def test_judge_company_names_survive_prose_parser() -> None:
     from src.judge_apply import parse_judge_md
 
@@ -329,6 +364,8 @@ def main() -> None:
         test_company_news_survives_red_group_on_hard_red,
         test_alarm_still_blocks_probable,
         test_insider_sale_is_not_bullish_record_language,
+        test_company_finviz_news_grades_the_news_box,
+        test_neutral_company_headline_is_yellow_not_blank,
         test_judge_company_names_survive_prose_parser,
     ]
     for test in tests:
