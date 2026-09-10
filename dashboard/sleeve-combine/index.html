@@ -48,16 +48,16 @@
 </div>
 <h2>Sweep (this window)</h2>
 <div class="sheet"><table id="sweep"></table></div>
-<h2 id="dayTitle">Buys and sells — pick a day</h2>
-<p class="mut" style="margin:0 0 8px">Every session in the window. Sells first (cash freed), then buys. AM = mover 09:30. PM = .io 16:00.</p>
+<h2 id="dayTitle">Long buys and long sells — pick a day</h2>
+<p class="mut" style="margin:0 0 8px">Long-only combine. LONG BUY opens a long; LONG SELL closes it. Sells first (cash freed), then buys. AM = mover 09:30. PM = .io 16:00.</p>
 <div class="day-nav">
  <button type="button" id="dayPrev">← Prev</button>
  <select id="dayPick"></select>
  <button type="button" id="dayNext">Next →</button>
  <select id="daySide">
-  <option value="all">Buys + sells</option>
-  <option value="BUY">Buys only</option>
-  <option value="SELL">Sells only</option>
+  <option value="all">Long buys + long sells</option>
+  <option value="BUY">Long buys only</option>
+  <option value="SELL">Long sells only</option>
  </select>
  <select id="daySrc">
   <option value="all">Both wallets</option>
@@ -127,7 +127,7 @@ function renderDay(){
   let fills = (d.fills||[]).slice();
   if (side!=="all") fills = fills.filter(f => f.side===side);
   if (src!=="all") fills = fills.filter(f => f.source===src);
-  $("dayTitle").textContent = "Buys and sells — " + d.date;
+  $("dayTitle").textContent = "Long buys and long sells — " + d.date;
   const s = d.score==null ? "—" : Number(d.score).toFixed(2);
   $("dayMeta").textContent = `S ${s} · ${d.route||""} · AM buys ${d.filled_am||0} · PM buys ${d.filled_pm||0} · sells ${d.exits||0} · open ${d.open||0} · equity ${money(d.equity)}` + (d.gap?` · ${d.gap}`:"");
   if (!fills.length){
@@ -136,8 +136,9 @@ function renderDay(){
   }
   $("dayFills").innerHTML = fills.map(f => {
     const pnl = f.side==="SELL" ? `<span class="${cls(f.pnl)}">${money(f.pnl)}</span>` : "";
+    const stamp = f.side==="BUY" ? "LONG BUY" : f.side==="SELL" ? "LONG SELL" : f.side;
     return `<div class="fill">
-      <div class="side ${f.side==="BUY"?"buy":"sell"}">${f.side}</div>
+      <div class="side ${f.side==="BUY"?"buy":"sell"}">${stamp}</div>
       <div><b>${f.ticker}</b> <span class="src">${f.source||""} · ${f.clock||""}</span></div>
       <div>${f.shares} @ $${Number(f.price).toFixed(2)}</div>
       <div>${pnl}</div>
@@ -154,7 +155,7 @@ renderDay();
 const all = (D.fills||[]);
 $("allFills").innerHTML = `<thead><tr><th>When</th><th>Side</th><th>Src</th><th>Ticker</th><th>Shares</th><th>Px</th><th>Fees</th><th>P&L</th></tr></thead><tbody>` +
   all.map(f => `<tr>
-    <td>${f.dt}</td><td class="${f.side==="BUY"?"pos":"neg"}">${f.side}</td>
+    <td>${f.dt}</td><td class="${f.side==="BUY"?"pos":"neg"}">${f.side==="BUY"?"LONG BUY":f.side==="SELL"?"LONG SELL":f.side}</td>
     <td>${f.source||""}</td><td>${f.ticker}</td><td>${f.shares}</td>
     <td>$${Number(f.price).toFixed(2)}</td><td>$${Number(f.fees||0).toFixed(2)}</td>
     <td class="${cls(f.pnl)}">${f.side==="SELL"?money(f.pnl):"—"}</td>

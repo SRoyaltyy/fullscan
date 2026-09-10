@@ -156,8 +156,8 @@
 </details>
 </div>
 <details open>
-<summary>Blotter — 09:30 snapshot, buys / sells, 16:00 close</summary>
-<p class="mut" id="blotHint">Pick a sleeve. OPEN is the overnight mark. CLOSE is open→close. SELL is green only if that sale locked a gain.</p>
+<summary>Blotter — 09:30 snapshot, long/short fills, 16:00 close</summary>
+<p class="mut" id="blotHint">Pick a sleeve. OPEN is the overnight mark. CLOSE is open→close. LONG BUY / LONG SELL vs SHORT SELL / SHORT COVER. A cover is buying back a short, not selling a long.</p>
 <div id="blot"></div>
 <div id="skips"></div>
 </details>
@@ -180,7 +180,7 @@
   <li><b>Top-25 gainer capture.</b> Buy 8-17 hold=3 → did a pick land in the liquid top-25 gainers on 8-17, 8-18, or 8-19?</li>
   <li><b>Loser capture.</b> Same window: names that printed Change% &lt; −1.5% (outcome only — never a 09:30 gate).</li>
   <li><b>AvgW vs AvgL.</b> Closed-trade mean % on the cash book (fees in).</li>
-  <li><b>09:30 open audit.</b> Each session starts with cash (yesterday leftover, no overnight fees) and lots still held, re-marked at the open. vs yday close is the sum of those per-name overnight moves. Every held name also prints its 09:30 open, prior close, overnight $, close, and open→close $ — including days with zero fills. BUY does not label equity (cash↔stock). SELL/COVER labels the change after that sale: green if the sale locked in a gain, red if a loss.</li>
+  <li><b>09:30 open audit.</b> Each session starts with cash (yesterday leftover, no overnight fees) and lots still held, re-marked at the open. vs yday close is the sum of those per-name overnight moves. Every held name also prints its 09:30 open, prior close, overnight $, close, and open→close $, plus <b>long</b> or <b>short</b>. BUY/SELL/COVER chips now say the book: <code>LONG BUY</code> opens a long, <code>LONG SELL</code> closes it, <code>SHORT SELL</code> opens a short (that name was shorted), <code>SHORT COVER</code> buys it back. SELL/COVER is green if that exit locked a gain, red if a loss. BUY/SHORT SELL does not label equity (cash↔stock).</li>
   <li><b>Butterfly state.</b> Morning leftover cash + lots actually held are the only inputs. Size = leftover / rank_w / topheavy / half. Sell = list / time / cut_loser / trail. S≥+5 can size-up or add names, still cash-capped. Hard-red S≤−3 sits.</li>
   <li><b>Entry.</b> <code>flatten_h*</code> buys the wish-list on io/HOLD mornings — live Action those days is HOLD. <code>flatten_live_*</code> only buys when the flatten gate fires (mover).</li>
   <li><b>Combinations.</b> A <code>combo_*</code> row is the same $10k cash book as every other recipe — leftover split, whole shares, Futubull fees, sell first, 09:30 open, hard-red S≤−3 sit. Same table columns, same leftover · list · none line, same three-column explain. It is <em>not</em> a mashed shopping list and not a blend of daily return series. At 09:30 each member still runs its own leak-free <code>pick_day</code> (same cameras / prior news / prior tape; never today’s Change%). Shared pile: one leftover-cash stack; unused cash spills in claim order (fresh-E, then heat, then other longs, then shorts); weights cap each kid’s slice of whatever cash is left. That spill is why a shared mix can beat both kids — it is not the average of their Book%. A short fill adds cash (borrow) that can later fund a long, still capped by equity ≥ 2× notional. Split pile: each member is a normal book at its weight × $10k, then the books are added (two accounts; the same name can sit in both). One ticker, one side on a shared pile. Each lot keeps the owner’s min-hold and list-drop — a hold-3 fresh-E lot is not dumped by a hold-1 heat card. Lots already held are not sold just because S is red. <b>WIN</b> (next to the name, same place as <em>thin</em>) means this cash Book% is higher than every member, or it stays within 2pp of the richest member with a smaller drawdown than every member, the best start-rate, both halves green, and a no-worse worst day. Signal% / Eff do not award WIN. Eighteen sessions rank this tape. Live <code>flatten_robust</code> is unchanged.</li>
@@ -206,6 +206,40 @@ function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','
 function pct(v){return v==null?'—':(100*Number(v)).toFixed(0)+'%';}
 function num(v,d){if(v==null||v==='')return '—'; const x=Number(v); return (x>=0?'+':'')+x.toFixed(d==null?2:d);}
 function cls(v){return v==null?'mut':(Number(v)>=0?'pos':'neg');}
+function fillStamp(kind){
+  if(kind==='BUY') return 'LONG BUY';
+  if(kind==='SELL') return 'LONG SELL';
+  if(kind==='SHORT') return 'SHORT SELL';
+  if(kind==='COVER') return 'SHORT COVER';
+  return kind;
+}
+function fillCls(kind){
+  if(kind==='BUY') return 'pos';
+  if(kind==='SHORT') return 'gold';
+  if(kind==='SELL'||kind==='COVER') return 'neg';
+  return 'mut';
+}
+function bookSideOf(ticker, asOf){
+  const book=activeBook();
+  const fills=(book.trades||[]).filter(t=>t.ticker===ticker && (t.side==='BUY'||t.side==='SHORT') && (!asOf || String(t.date)<=String(asOf)));
+  if(fills.length) return fills[fills.length-1].side==='SHORT' ? 'short' : 'long';
+  const s=(D.stats||[]).find(x=>x.name===pickedName());
+  if(s && s.side==='short') return 'short';
+  if(s && s.side==='long' && !isCombo(s)) return 'long';
+  return '';
+}
+function sideTag(ticker, asOf){
+  const side=bookSideOf(ticker, asOf);
+  return side ? ` <span class="mut">${side}</span>` : '';
+}
+function heldList(tokens, asOf){
+  if(!tokens||!tokens.length) return '—';
+  return tokens.map(tok=>{
+    const t=String(tok).split('×')[0];
+    const side=bookSideOf(t, asOf);
+    return side ? `${tok} ${side}` : tok;
+  }).join(' ');
+}
 
 function isCombo(s){
   if(!s) return false;
@@ -1040,7 +1074,7 @@ function renderMarks(){
       const sh=m.shares_close||m.shares_open||m.shares;
       const tag=m.held==='bought'?' new':m.held==='sold'?' sold':'';
       const earn=earnFor(d.date, m.ticker);
-      return `<span class="pill"><b>${esc(m.ticker)}</b>${tag} ×${sh??'—'}
+      return `<span class="pill"><b>${esc(m.ticker)}</b>${sideTag(m.ticker, d.date)}${tag} ×${sh??'—'}`
         ${earn?('· '+earn+' '):''}
         · prior close ${money(m.yday_px)} → 09:30 ${money(m.open_px)}
         <span class="${cls(m.overnight)}">${signed(m.overnight)} overnight</span>
@@ -1058,14 +1092,14 @@ function nestMarks(rows, mode, date){
   if(mode==='open'){
     return '<div class="pills">'+rows.map(n=>{
       const earn=earnOf(n);
-      return `<span class="pill"><b>${esc(n.ticker)}</b>${earn?(' · '+earn):''} ×${n.shares} · prior close ${money(n.yday_px)} → 09:30 ${money(n.open_px)} <span class="${cls(n.overnight!=null?n.overnight:n.delta)}">${signed(n.overnight!=null?n.overnight:n.delta)}</span></span>`;
+      return `<span class="pill"><b>${esc(n.ticker)}</b>${sideTag(n.ticker, date)}${earn?(' · '+earn):''} ×${n.shares} · prior close ${money(n.yday_px)} → 09:30 ${money(n.open_px)} <span class="${cls(n.overnight!=null?n.overnight:n.delta)}">${signed(n.overnight!=null?n.overnight:n.delta)}</span></span>`;
     }).join('')+'</div>';
   }
   const held=rows.filter(n=>n.shares_close||n.close_px!=null);
   if(!held.length) return '<span class="mut">no lots at close</span>';
   return '<div class="pills">'+held.map(n=>{
     const earn=earnOf(n);
-    return `<span class="pill"><b>${esc(n.ticker)}</b>${earn?(' · '+earn):''} ×${n.shares_close||n.shares} · 09:30 ${money(n.open_px)} → close ${money(n.close_px)} <span class="${cls(n.session)}">${signed(n.session)} Intraday</span></span>`;
+    return `<span class="pill"><b>${esc(n.ticker)}</b>${sideTag(n.ticker, date)}${earn?(' · '+earn):''} ×${n.shares_close||n.shares} · 09:30 ${money(n.open_px)} → close ${money(n.close_px)} <span class="${cls(n.session)}">${signed(n.session)} Intraday</span></span>`;
   }).join('')+'</div>';
 }
 function renderBlotter(){
@@ -1078,7 +1112,7 @@ function renderBlotter(){
     ? 'Pick a sleeve to see its 09:30 snapshots and fills only.'
     : (!isCanon() && sp)
       ? (name+' — cash-start '+sp.start+' with $10k and no lots. Same hard-red / leftover / min-hold rules. OPEN / CLOSE marks match the 8-13 ledger.')
-      : (name+' — 09:30 OPEN is the per-name overnight mark (cash unchanged, no fees). CLOSE is each remaining lot open→close. BUY has no equity label. SELL/COVER is green if the sale locked in a gain, red if a loss.');
+      : (name+' — 09:30 OPEN is the per-name overnight mark (cash unchanged, no fees). CLOSE is each remaining lot open→close. LONG BUY / SHORT SELL open a position. LONG SELL closes a long. SHORT COVER buys back a short. Exit chips are green if that close locked a gain.');
   if(!name){
     document.getElementById('blot').innerHTML='<div class="mut">No sleeve selected.</div>';
     document.getElementById('skips').innerHTML='';
@@ -1096,7 +1130,7 @@ function renderBlotter(){
         const gap=t.equity_delta;
         return `<div class="fill-card open">
           <div class="fill-top"><span class="gold">OPEN</span> <b>${esc(t.date)} 09:30</b>
-            · held ${esc((t.open_held||[]).join(' ')||'—')} · leftover ${money(t.cash_after)}
+            · held ${esc(heldList(t.open_held, t.date))} · leftover ${money(t.cash_after)}
             · book <span class="${cls(gap)}">${money(t.equity_after)}</span>
             <span class="mut">vs yday ${money(t.yday_equity)} ${gap==null?'':signed(gap)}</span>
           </div>
@@ -1107,7 +1141,7 @@ function renderBlotter(){
         const gap=t.session_delta;
         return `<div class="fill-card close">
           <div class="fill-top"><span class="mut">CLOSE</span> <b>${esc(t.date)} 16:00</b>
-            · held ${esc((t.close_held||[]).join(' ')||'—')} · leftover ${money(t.cash_after)}
+            · held ${esc(heldList(t.close_held, t.date))} · leftover ${money(t.cash_after)}
             · book <span class="${cls(gap)}">${money(t.equity_after)}</span>
             <span class="mut">vs 09:30 ${money(t.open_equity)} ${gap==null?'':signed(gap)}</span>
           </div>
@@ -1120,12 +1154,12 @@ function renderBlotter(){
       const row=isSell?(chg==null?'':(up?'fill-up':'fill-dn')):'';
       const markFee=isSell && t.sell_eq_chg!=null ? Number(t.sell_eq_chg) : null;
       const eqCell=isSell
-        ? `<span class="${chg==null?'mut':(up?'pos':'neg')}">${chg==null?'—':((chg>=0?'+':'')+Number(chg).toFixed(2)+' after sell')}</span> <span class="mut">→ ${money(t.equity_after)}${markFee==null?'':' · vs 09:30 mark '+(markFee>=0?'+':'')+markFee.toFixed(2)}</span>`
+        ? `<span class="${chg==null?'mut':(up?'pos':'neg')}">${chg==null?'—':((chg>=0?'+':'')+Number(chg).toFixed(2)+(kind==='COVER'?' after short cover':' after long sell'))}</span> <span class="mut">→ ${money(t.equity_after)}${markFee==null?'':' · vs 09:30 mark '+(markFee>=0?'+':'')+markFee.toFixed(2)}</span>`
         : '—';
       return `<div class="fill-card ${row}">
         <div class="fill-top">
-          <span class="${kind==='BUY'||kind==='SHORT'?'pos':'neg'}">${esc(kind)}</span>
-          <b>${esc(t.ticker)}</b>${t.owner?` <span class="mut">${esc(t.owner)}</span>`:''}
+          <span class="${fillCls(kind)}">${esc(fillStamp(kind))}</span>
+          <b>${esc(t.ticker)}</b>${sideTag(t.ticker, t.date)}${t.owner?` <span class="mut">${esc(t.owner)}</span>`:''}
           ${((kind==='BUY'||kind==='SHORT') && earnFor(t.date, t.ticker)) ? (' '+earnFor(t.date, t.ticker)) : ''}
           ${esc(t.date)} · ${t.shares} sh @ ${t.price==null?'—':('$'+(+t.price).toFixed(2))}
           · fee ${t.fees==null?'—':('$'+(+t.fees).toFixed(2))}

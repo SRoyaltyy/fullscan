@@ -48,6 +48,18 @@ BORROW_ANNUAL = 0.01
 GOOD_S = 5.0
 CUT_LOS = 0.03
 TRAIL_OFF = 0.05
+
+FILL_STAMP = {
+    "BUY": "LONG BUY",
+    "SELL": "LONG SELL",
+    "SHORT": "SHORT SELL",
+    "COVER": "SHORT COVER",
+}
+
+
+def fill_stamp(kind: str) -> str:
+    """Blotter label: BUY/SELL alone hides whether the lot is a short."""
+    return FILL_STAMP.get(kind, kind)
 SIZEUP = 1.35
 MORE_NAMES = 4
 BOOK_RULES = {
@@ -1398,7 +1410,7 @@ def render_recipe_md(rec: dict, stats: dict, book: dict) -> str:
         )
     lines += [
         "",
-        "## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)",
+        "## Fills (09:30 open snapshot, then long/short fills, then 16:00 close)",
         "",
         "| Date | Side | Ticker | Shares | Px | Fees | P/L | Cash after | Equity change (sells only) | Why | Cameras |",
         "|---|---|---|---:|---:|---:|---:|---:|---:|---|---|",
@@ -1443,8 +1455,9 @@ def render_recipe_md(rec: dict, stats: dict, book: dict) -> str:
                     f"; vs 09:30 mark {fee_vs_mark:+,.2f}"
                     if fee_vs_mark is not None else ""
                 )
+                verb = "after short cover" if kind == "COVER" else "after long sell"
                 eq_s = (
-                    f"{mark} {chg:+,.2f} after sell → book "
+                    f"{mark} {chg:+,.2f} {verb} → book "
                     f"${t.get('equity_after'):,.2f}{extra}"
                 )
             px_s = f"${t['price']:.2f}"
@@ -1462,7 +1475,7 @@ def render_recipe_md(rec: dict, stats: dict, book: dict) -> str:
             else f"{t['date']} 09:30 ET"
         )
         lines.append(
-            f"| {stamp} | **{kind}** | {tick} | "
+            f"| {stamp} | **{fill_stamp(kind)}** | {tick} | "
             f"{share_s} | {px_s} | {fee_s} | "
             f"{'—' if pnl is None else f'${pnl:+.2f}'} | "
             f"${t['cash_after']:,.2f} | {eq_s} | "

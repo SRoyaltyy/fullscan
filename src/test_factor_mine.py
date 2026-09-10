@@ -434,7 +434,8 @@ def test_template_has_data_slot() -> None:
     assert "Blotter" in text
     assert "09:30" in text
     assert "vs yday" in text
-    assert "after sell" in text
+    assert "after long sell" in text
+    assert "after short cover" in text
     assert "Prior close" in text
     assert "Intraday" in text
     assert "renderMarks" in text
@@ -478,6 +479,20 @@ def test_template_has_data_slot() -> None:
     assert "outperform" in text.lower()
     assert "kindPick" in text
     assert "This is not a new shopping list" in text or "not a mashed shopping list" in text.lower() or "Combinations." in text
+    assert "fillStamp" in text
+    assert "bookSideOf" in text
+    assert "LONG BUY" in text
+    assert "SHORT COVER" in text
+    assert "SHORT SELL" in text
+
+
+def test_fill_stamp_names_the_book() -> None:
+    from src.factor_mine_book import fill_stamp
+    assert fill_stamp("BUY") == "LONG BUY"
+    assert fill_stamp("SELL") == "LONG SELL"
+    assert fill_stamp("SHORT") == "SHORT SELL"
+    assert fill_stamp("COVER") == "SHORT COVER"
+    assert fill_stamp("OPEN") == "OPEN"
 
 
 def test_write_outputs_injects_payload(tmp_path=None) -> None:
@@ -1460,6 +1475,7 @@ if __name__ == "__main__":
     test_short_book_marks_liability_and_cover()
     test_recipes_cover_holds_shorts_and_exits()
     test_template_has_data_slot()
+    test_fill_stamp_names_the_book()
     test_write_outputs_injects_payload()
     test_butterfly_day2_opens_at_day1_leftover()
     test_audit_fails_on_unheld_sell_and_overspend()
