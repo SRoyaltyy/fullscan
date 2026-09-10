@@ -34,6 +34,19 @@ EXCEL_SUG = ROOT / "excel_bot" / "suggestions" / "suggestions.csv"
 
 WINDOW = ("2026-08-13", "2026-09-03")
 
+
+def live_window() -> tuple[str, str]:
+    """Board window ends on the latest NYSE session on disk, not a frozen date."""
+    try:
+        from src.sleeve_merge import list_books, load_payload, session_calendar
+        cal = [d for d in session_calendar(load_payload(), list_books())
+               if d >= WINDOW[0]]
+        if cal:
+            return (WINDOW[0], cal[-1])
+    except Exception:
+        pass
+    return WINDOW
+
 # PR-shipped books that are not the current file on disk (superseded
 # stitches / rejected fallbacks). Numbers are the published headlines.
 SHIPPED = [
@@ -421,6 +434,7 @@ def _esc(s) -> str:
 
 
 def render(rows: list[dict]) -> str:
+    win = live_window()
     live = next((r for r in rows if r.get("live")
                  and r.get("family") == "sleeve merge"), None)
     live_ret = f"{live['ret_pct']:+.2f}%" if live and live.get("ret_pct") is not None else "—"
@@ -516,7 +530,7 @@ svg text{{fill:var(--muted)}}
 <a href="../book-paper/">book paper</a> ·
 <a href="../factor-mine/">factor mine</a>
 </p>
-<p class="muted">Window {WINDOW[0]} → {WINDOW[1]}. Live production book is
+<p class="muted">Window {win[0]} → {win[1]}. Live production book is
 <b>flatten_robust</b> (3d size book + flatten clock; S ≤ −3: no new buys). Returns are
 not interchangeable: <b>fill</b> is one Futubull cash account,
 <b>stitch</b> is a daily-mark overlay, <b>follow_book</b> is the $10k .io
@@ -597,13 +611,14 @@ machine data/strategy_board/catalog.json · write-up 03_scoreboard/STRATEGY_BOAR
 
 
 def write_md(rows: list[dict]) -> str:
+    win = live_window()
     live = next((r for r in rows if r.get("live")
                  and r.get("family") == "sleeve merge"), None)
     lines = [
         "# Strategy board — every shipped book",
         "",
         f"_Generated {datetime.now().isoformat(timespec='seconds')} — "
-        f"{WINDOW[0]} → {WINDOW[1]}_",
+        f"{win[0]} → {win[1]}_",
         "",
         "Live production method is **`flatten_robust`**: 3d size-book "
         "selection (not raw 2w_size), 3-session recycle, same flatten-switch "
@@ -643,7 +658,7 @@ def write(rows: list[dict]) -> None:
     slim = [{k: v for k, v in r.items() if k != "curve"} for r in rows]
     (OUT_DIR / "catalog.json").write_text(
         json.dumps({"generated": datetime.now().isoformat(timespec="seconds"),
-                    "live": "flatten_hard_red", "window": list(WINDOW),
+                    "live": "flatten_hard_red", "window": list(live_window()),
                     "n": len(slim), "rows": slim}, indent=2),
         encoding="utf-8")
     (DASH_DIR / "index.html").write_text(render(rows), encoding="utf-8")

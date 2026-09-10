@@ -1114,18 +1114,42 @@ def rehydrate_panel(raw: dict) -> dict:
     return raw
 
 
+def live_panel_end(from_date: str, to_date: str | None = None) -> str | None:
+    """Last NYSE session the live tape already has (book / predict / payload)."""
+    payload = sm.load_payload()
+    books = sm.list_books()
+    cal = [d for d in sm.session_calendar(payload, books)
+           if d >= from_date and (not to_date or d <= to_date)]
+    return to_date or (cal[-1] if cal else None)
+
+
+def panel_is_current(raw: dict, from_date: str,
+                     to_date: str | None = None) -> bool:
+    """Cached panel is stale once a later session exists — even with no fills."""
+    if not raw or raw.get("from_date") != from_date:
+        return False
+    if not raw.get("session_dates"):
+        return False
+    cached = raw.get("to_date")
+    want = live_panel_end(from_date, to_date)
+    if want and (not cached or str(cached) < str(want)):
+        return False
+    if to_date and cached and str(cached) < str(to_date):
+        return False
+    return True
+
+
 def load_or_build_panel(from_date: str = START, to_date: str | None = None,
                         rebuild: bool = False) -> dict:
     if not rebuild and PANEL_PATH.exists():
         raw = json.loads(PANEL_PATH.read_text(encoding="utf-8"))
-        if (raw.get("from_date") == from_date
-                and raw.get("session_dates")
-                and raw.get("rows")
-                and (not to_date or raw.get("to_date") == to_date
-                     or raw.get("to_date") >= to_date)):
+        if panel_is_current(raw, from_date, to_date):
             print(f"[factor-mine] loaded panel {PANEL_PATH} "
-                  f"rows={raw.get('n_rows')}", flush=True)
+                  f"rows={raw.get('n_rows')} → {raw.get('to_date')}", flush=True)
             return rehydrate_panel(raw)
+        print(f"[factor-mine] panel stale "
+              f"{raw.get('to_date')} < live {live_panel_end(from_date, to_date)} "
+              f"— rebuilding so leftover lots get a mark", flush=True)
     return build_panel(from_date, to_date)
 
 

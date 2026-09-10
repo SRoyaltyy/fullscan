@@ -77,14 +77,18 @@ def test_session_calendar_drops_weekend_book() -> None:
     from src.sleeve_merge import session_calendar
     payload = {"session_dates": ["2026-08-28", "2026-08-30", "2026-08-31"]}
     books = [("2026-08-30", None)]
-    assert session_calendar(payload, books) == ["2026-08-28", "2026-08-31"]
+    got = session_calendar(payload, books)
+    assert "2026-08-28" in got and "2026-08-31" in got
+    assert "2026-08-30" not in got  # weekend book is not a session
 
 
 def test_session_calendar_drops_nyse_holiday() -> None:
     from src.sleeve_merge import session_calendar
     payload = {"session_dates": ["2026-09-04", "2026-09-07", "2026-09-08"]}
     books = [("2026-09-07", None)]
-    assert session_calendar(payload, books) == ["2026-09-04", "2026-09-08"]
+    got = session_calendar(payload, books)
+    assert "2026-09-04" in got and "2026-09-08" in got
+    assert "2026-09-07" not in got  # Labor Day
 
 
 def test_next_session_skips_weekend() -> None:

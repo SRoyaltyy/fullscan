@@ -599,6 +599,37 @@ def test_day_open_explains_overnight_mark() -> None:
     assert buy.get("vs_yday") is None
 
 
+def test_panel_is_current_requires_latest_session() -> None:
+    """A 09-08 panel is stale once 09-09 exists — no-fill is not a skip."""
+    raw = {
+        "from_date": "2026-08-13",
+        "to_date": "2026-09-08",
+        "session_dates": ["2026-08-13", "2026-09-08"],
+        "rows": [{}],
+    }
+    assert fm.panel_is_current(raw, "2026-08-13", None) is False
+    fresh = {
+        "from_date": "2026-08-13",
+        "to_date": "2026-09-09",
+        "session_dates": ["2026-08-13", "2026-09-08", "2026-09-09"],
+        "rows": [{}],
+    }
+    assert fm.panel_is_current(fresh, "2026-08-13", None) is True
+
+
+def test_morning_s_falls_back_to_predict_file() -> None:
+    from src.factor_mine_book import morning_s
+    s = morning_s({}, "2026-09-09")
+    assert s is not None
+    assert float(s) <= -3.0
+
+
+def test_session_calendar_includes_completed_predict_day() -> None:
+    from src.sleeve_merge import session_calendar
+    got = session_calendar({"session_dates": []}, [])
+    assert "2026-09-09" in got
+
+
 def test_silent_monday_marks_every_name() -> None:
     """No-fill Monday still prints each lot's 09:30 open and open→close $."""
     from src import factor_mine_book as fmb
@@ -1438,6 +1469,9 @@ if __name__ == "__main__":
     test_action_filters_size_sell_boost()
     test_dash_payload_ships_every_book_and_features_high_return()
     test_day_open_explains_overnight_mark()
+    test_panel_is_current_requires_latest_session()
+    test_morning_s_falls_back_to_predict_file()
+    test_session_calendar_includes_completed_predict_day()
     test_silent_monday_marks_every_name()
     test_missing_bar_day_carries_mark_no_phantom_session()
     test_marks_explain_fill_gap_across_no_fill_day()

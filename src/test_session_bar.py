@@ -27,7 +27,9 @@ def test_labor_day_is_not_a_session() -> None:
 def test_session_calendar_drops_labor_day() -> None:
     payload = {"session_dates": ["2026-09-04", "2026-09-07", "2026-09-08"]}
     books = [("2026-09-07", None)]
-    assert sm.session_calendar(payload, books) == ["2026-09-04", "2026-09-08"]
+    got = sm.session_calendar(payload, books)
+    assert "2026-09-04" in got and "2026-09-08" in got
+    assert "2026-09-07" not in got
 
 
 def test_same_day_finviz_last_trade_is_not_the_close() -> None:

@@ -124,6 +124,37 @@ def session_calendar(payload: dict, books: list[tuple[str, Path]]) -> list[str]:
     sd = list(payload.get("session_dates") or [])
     sd += [d for d, _ in books]
     sd += [r.get("date") for r in (payload.get("called_rows") or []) if r.get("date")]
+    # A completed session exists once a predict or day-board printed, even
+    # if the lookback payload has not rolled yet. Otherwise leftover holds
+    # lose their next-day overnight / session mark (09-09 after a 09-08
+    # payload). Do not add *today* until a book printed — that session
+    # is still live.
+    try:
+        from zoneinfo import ZoneInfo
+        today = datetime.now(ZoneInfo("America/New_York")).strftime("%Y-%m-%d")
+    except Exception:
+        today = datetime.now().strftime("%Y-%m-%d")
+    book_dates = {d for d, _ in books if d}
+    extras: list[str] = []
+    gen = ROOT / "01_daily" / "general"
+    if gen.is_dir():
+        extras += [p.name[:10] for p in gen.glob("*_predict.md")]
+    board = ROOT / "data" / "day_board"
+    if board.is_dir():
+        extras += [p.stem for p in board.glob("20??-??-??.json")]
+    # Only extend FORWARD past the payload/book window. Older predict
+    # files must not pull July sessions into an Aug–Sep book.
+    core_last = None
+    for d in sd:
+        if d and len(d) == 10 and (core_last is None or d > core_last):
+            core_last = d
+    for d in extras:
+        if not d or len(d) != 10:
+            continue
+        if core_last and d <= core_last:
+            continue
+        if d < today or d in book_dates:
+            sd.append(d)
     out = []
     for d in sorted({x for x in sd if x and len(x) == 10}):
         try:
