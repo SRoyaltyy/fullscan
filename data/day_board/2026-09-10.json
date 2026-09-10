@@ -1,6 +1,6 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T06:30:04.047495-04:00",
+  "generated_at": "2026-09-10T06:30:06.614532-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -9,8 +9,8 @@
     "MISSING News judge MD `01_daily/news/2026-09-10_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 5,
-    "partial": 3,
+    "ok": 4,
+    "partial": 4,
     "fail": 0,
     "n": 8
   },
@@ -465,7 +465,7 @@
       "inputs_ready": false,
       "n_req_ok": 1,
       "n_req": 4,
-      "n_opt_ok": 2,
+      "n_opt_ok": 1,
       "n_opt": 3,
       "files": [
         {
@@ -590,8 +590,8 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-10)",
+          "status": "FAIL",
+          "reason": "session 2026-09-10 not in dashboard dates (last=2026-09-09)",
           "size": 4539835
         }
       ],
@@ -604,9 +604,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 1,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -625,8 +625,8 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-10)",
+          "status": "FAIL",
+          "reason": "session 2026-09-10 not in dashboard dates (last=2026-09-09)",
           "size": 4539835
         },
         {
@@ -1514,7 +1514,7 @@
       "date": "2026-09-10",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-10T06:30:03.733360-04:00",
+      "at": "2026-09-10T06:30:06.327246-04:00",
       "files": [
         {
           "path": "01_daily/news/2026-09-10_actions.json",
