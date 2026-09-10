@@ -1,0 +1,19 @@
+{
+  "date": "2026-09-10",
+  "generated_at": "2026-09-10T07:07:19.837648-04:00",
+  "ok": false,
+  "fails": [
+    {
+      "path": "01_daily/map_heat/2026-09-10_map_heat.md",
+      "reason": "Wrong date / carry-forward: header reads 'MAP HEAT \u2014 2026-09-09' and export is finviz_2026-09-08.csv generated 2026-09-09T01:59 \u2014 this is yesterday's map-heat table, not a same-day 2026-09-10 artifact."
+    },
+    {
+      "path": "01_daily/map_heat/2026-09-10_research.md",
+      "reason": "Research claims phase=morning_refresh (size_gate=True set by pre-open refresh) but its own SYNTHESIS admits 'Morning delta refresh failed captain-evidence QC (coverage:15/26<required:21). Using last night's post-close captain cards... Overnight tape/news was not re-scored' \u2014 a failed-refresh fallback, not a valid same-day refresh."
+    }
+  ],
+  "notes": "Core general predict, events JSON (real 2026-09-10 scan), news judge, news parse, finviz digest and all 11 sector essays are same-day, complete and direction-taking, so the day is nearly clean. Two map-heat artifacts fail: the map_heat table is a verbatim carry of the 2026-09-09 file (wrong date, stale 09-08 export), and the research file self-declares a failed morning refresh that fell back to last night's cards. The baseline file is a duplicate of that same failed-refresh content. Everything else passes.",
+  "prompt_chars": 235486,
+  "reply_chars": 1217,
+  "reviewer": "grok-4.6-text"
+}

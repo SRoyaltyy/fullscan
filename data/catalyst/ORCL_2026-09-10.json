@@ -1,0 +1,8 @@
+{
+  "error": "Step 4 parse failure",
+  "raw": "```json\n{\n  \"ticker\": \"ORCL\",\n  \"analysis_date\": \"2026-09-10\",\n  \"current_price\": \"162.52\",\n  \"catalyst_grid\": [\n    {\n      \"taxonomy\": \"Contract win/expansion\",\n      \"type\": \"positive\",\n      \"category\": \"internal\",\n      \"status\": \"HIT\",\n      \"base_weight\": 8,\n      \"adjusted_weight\": 10,\n      \"event_ids\": [12, 16],\n      \"event_date\": \"2026-08-21\",\n      \"evidence_excerpt\": \"The VA boosted the maximum on Oracle Healths electronic health record contract by roughly $17 billion to approximat",
+  "ticker": "ORCL",
+  "generated_at": "2026-09-10",
+  "cutoff_date": null,
+  "role": "earnings"
+}

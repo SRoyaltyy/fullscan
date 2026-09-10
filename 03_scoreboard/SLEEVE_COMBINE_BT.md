@@ -1,6 +1,6 @@
 # Sleeve combine backtest (matched hold, shared cash)
 
-_Generated 2026-09-10T06:38:20-04:00 — 2026-08-13 → 2026-09-10 · $100,000 · 10 names · 10% equity / fill · Futubull fees_
+_Generated 2026-09-10T06:40:12-04:00 — 2026-08-13 → 2026-09-10 · $100,000 · 10 names · 10% equity / fill · Futubull fees_
 
 This is the integrity backtest. Both sleeves use the **same hold** (1d / 3d / 1w). Mover still enters at 09:30, .io still enters at 16:00 — those clocks are data constraints, not a style choice. Open buys cannot spend the same day's close-sale cash. Missing mover calls and missing books are logged as gaps, not as a gate.
 
@@ -10,7 +10,7 @@ Sessions in window: 20 · days with mover BUY calls: 16 · days with a stock boo
 
 ## Finding (this window)
 
-The 1d **switch** is **+2.95%**. That is worse than mover-only 1d (+2.03%) and worse than .io-only 1d size (+5.13%). Copying .io green-pile / join-good / sector-not-red onto mover names also fails on down days. Fifty-fifty dual is a blend, not an upgrade — it cannot beat the stronger sleeve. 1d dual (two wallets) is **+3.45%** / 3.60% DD. Best book this window: **1w overlay_boost +13.50%**. Overlay / boost **beats** raw .io size (+3.76%) by keeping the size book at full capital and using mover only as idle-cash + close-print size-up.
+The 1d **switch** is **+2.95%**. That is worse than mover-only 1d (+2.03%) and worse than .io-only 1d size (+5.13%). Copying .io green-pile / join-good / sector-not-red onto mover names also fails on down days. Fifty-fifty dual is a blend, not an upgrade — it cannot beat the stronger sleeve. 1d dual (two wallets) is **+3.45%** / 3.60% DD. Best book this window: **1w overlay_boost +13.50%**. Overlay / boost **beats** raw .io size (+4.60%) by keeping the size book at full capital and using mover only as idle-cash + close-print size-up.
 
 ## Sweep (size-sleeve .io picks)
 
@@ -23,11 +23,11 @@ The 1d **switch** is **+2.95%**. That is worse than mover-only 1d (+2.03%) and w
 | 1d | overlay | +6.07% | 4.48% | 44.2% | 104 | $714 | $5,358 | 7 |
 | 1d | overlay_boost | +6.23% | 5.80% | 46.0% | 100 | $-266 | $6,498 | 7 |
 | 1d | io_boost | +4.29% | 5.83% | 45.4% | 97 | $0 | $4,285 | 5 |
-| 3d | combine | +0.32% | 6.40% | 51.7% | 29 | $5,349 | $-5,028 | 12 |
-| 3d | mover_only | -5.53% | 12.24% | 43.3% | 30 | $-5,525 | $0 | 13 |
-| 3d | io_only | +3.76% | 7.60% | 47.3% | 55 | $0 | $3,761 | 7 |
-| 3d | dual | -1.23% | 9.81% | 44.3% | 88 | $-2,790 | $1,557 | 9 |
-| 3d | overlay | +2.96% | 8.25% | 45.6% | 57 | $-1,034 | $3,991 | 9 |
+| 3d | combine | +1.11% | 5.66% | 51.7% | 29 | $5,349 | $-4,240 | 12 |
+| 3d | mover_only | -4.76% | 11.53% | 43.3% | 30 | $-4,757 | $0 | 13 |
+| 3d | io_only | +4.60% | 6.86% | 47.3% | 55 | $0 | $4,598 | 7 |
+| 3d | dual | -0.43% | 9.08% | 44.3% | 88 | $-2,406 | $1,973 | 9 |
+| 3d | overlay | +3.78% | 7.51% | 45.6% | 57 | $-1,034 | $4,816 | 9 |
 | 3d | overlay_boost | +4.38% | 6.98% | 47.8% | 46 | $-1,034 | $5,412 | 9 |
 | **3d** | **io_boost** | +5.05% | 6.45% | 48.9% | 45 | $0 | $5,054 | 7 |
 | 1w | combine | +6.08% | 3.48% | 68.4% | 19 | $4,381 | $1,696 | 14 |
@@ -150,7 +150,7 @@ The size book itself was *better* on S < +1 than on green mornings. Extra gates 
 | 2026-09-04 | 2.25 | io | 0 | 5 | 5 | 5 | $107,936 | — |
 | 2026-09-08 | -11.475 | io | 0 | 0 | 0 | 5 | $105,588 | 3d cannot settle (end of calendar) |
 | 2026-09-09 | -13.95 | io | 0 | 0 | 0 | 5 | $105,087 | 3d cannot settle (end of calendar) |
-| 2026-09-10 | — | io | 0 | 0 | 5 | 0 | $105,054 | 3d cannot settle (end of calendar) |
+| 2026-09-10 | -13.275 | io | 0 | 0 | 5 | 0 | $105,054 | 3d cannot settle (end of calendar) |
 
 ### Last 20 round-trips
 
@@ -177,7 +177,7 @@ Every BUY and SELL is on the dashboard day picker ([sleeve-combine](https://sroy
 | 2026-09-04 16:00 ET | io | `XP` | 1079 | $20.00 | 2026-09-10 16:00 ET | $19.00 | $-1,107.18 |
 | 2026-09-04 16:00 ET | io | `ASND` | 79 | $271.12 | 2026-09-10 16:00 ET | $271.00 | $-14.12 |
 | 2026-09-04 16:00 ET | io | `OSCR` | 669 | $32.24 | 2026-09-10 16:00 ET | $31.70 | $-378.80 |
-| 2026-09-04 16:00 ET | io | `ATRC` | 411 | $52.46 | 2026-09-10 16:00 ET | $53.03 | $223.42 |
+| 2026-09-04 16:00 ET | io | `ATRC` | 411 | $52.46 | 2026-09-10 16:00 ET | $53.03 | $223.43 |
 
 ## Integrity checklist
 

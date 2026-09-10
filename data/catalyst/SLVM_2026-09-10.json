@@ -1,0 +1,8 @@
+{
+  "error": "Step 4 parse failure",
+  "raw": "{\n  \"ticker\": \"SLVM\",\n  \"analysis_date\": \"2026-09-10\",\n  \"current_price\": \"35.39\",\n  \"catalyst_grid\": [\n    {\n      \"taxonomy\": \"Contract win/expansion\",\n      \"type\": \"positive\",\n      \"category\": \"internal\",\n      \"status\": \"N/A\",\n      \"base_weight\": 8,\n      \"adjusted_weight\": 10,\n      \"event_ids\": [],\n      \"event_date\": null,\n      \"evidence_excerpt\": null,\n      \"source_urls\": [],\n      \"confidence\": null\n    },\n    {\n      \"taxonomy\": \"Strategic partnership/alliance\",\n      \"type\": \"pos",
+  "ticker": "SLVM",
+  "generated_at": "2026-09-10",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

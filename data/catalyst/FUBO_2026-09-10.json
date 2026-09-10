@@ -1,0 +1,8 @@
+{
+  "error": "Step 2 parse failure",
+  "raw": "## Post-session review \u2014 CATALYST STEP2 FUBO\n\nDeepSeek returned tool-call dumps on the no-tool close, so this essay is assembled from the deterministic actuals and the search results already gathered in this thread. The night pack must not stay on a leaked tool-call stub.\n\n### Actuals and morning packet\n(no DATE/ACTUALS user turn in this thread)\n\n### Research gathered\n- query: fuboTV Inc FUBO revenue breakdown by segment subscription advertising (gnews_rss)\n  - Document - SEC.gov (https://news.g",
+  "ticker": "FUBO",
+  "generated_at": "2026-09-10",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

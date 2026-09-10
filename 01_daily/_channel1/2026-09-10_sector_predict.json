@@ -1,6 +1,6 @@
 {
   "stage": "predict",
-  "fetched_at": "2026-09-10T06:39:20.237627-04:00",
+  "fetched_at": "2026-09-10T06:32:18.822155-04:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -89,41 +89,41 @@
     "CL=F": {
       "available": true,
       "date": "2026-09-10",
-      "last": 97.4,
-      "pct_1d": 1.41
+      "last": 97.38,
+      "pct_1d": 1.38
     },
     "BZ=F": {
       "available": true,
       "date": "2026-09-10",
-      "last": 101.93,
-      "pct_1d": 0.71
+      "last": 101.98,
+      "pct_1d": 0.76
     },
     "GC=F": {
       "available": true,
       "date": "2026-09-10",
-      "last": 4437.4,
-      "pct_1d": 0.48
+      "last": 4441.6,
+      "pct_1d": 0.58
     },
     "DXY": {
       "available": true,
       "date": "2026-09-10",
       "source": "DX-Y.NYB",
-      "pct_1d": 0.07,
-      "pct_1m": -0.98
+      "pct_1d": 0.04,
+      "pct_1m": -1.01
     }
   },
   "futures": {
     "ES=F": {
       "available": true,
       "date": "2026-09-10",
-      "last": 7651.25,
-      "pct_1d": 0.1
+      "last": 7652.0,
+      "pct_1d": 0.11
     },
     "NQ=F": {
       "available": true,
       "date": "2026-09-10",
-      "last": 29391.75,
-      "pct_1d": -0.19
+      "last": 29399.75,
+      "pct_1d": -0.17
     }
   },
   "finviz_futures_tape": {
@@ -527,29 +527,29 @@
         "FTSE": {
           "available": true,
           "date": "2026-09-10",
-          "last": 10631.85,
-          "pct_1d": -0.36
+          "last": 10633.89,
+          "pct_1d": -0.34
         },
         "DAX": {
           "available": true,
           "date": "2026-09-10",
-          "last": 25566.56,
+          "last": 25566.95,
           "pct_1d": -0.04
         },
         "CAC": {
           "available": true,
           "date": "2026-09-10",
-          "last": 8171.07,
-          "pct_1d": 0.18
+          "last": 8172.17,
+          "pct_1d": 0.19
         },
         "EuroStoxx50": {
           "available": true,
           "date": "2026-09-10",
-          "last": 6308.04,
+          "last": 6307.7,
           "pct_1d": -0.06
         }
       },
-      "composite_avg": -0.07
+      "composite_avg": -0.06
     }
   },
   "yield_spx_corr": {
