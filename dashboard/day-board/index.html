@@ -101,11 +101,21 @@ function render(board){
     ["Fail / missing", c.fail??"—", "fail"],
   ].map(([k,v,cls]) => `<div class="card">${k}<b class="${cls}">${v}</b></div>`).join("");
   const sel = board.selections||{};
-  const buys = tickers(sel.buy_1d, "buy");
-  const sells = tickers(sel.sell_1d, "sell");
+  let buys = tickers(sel.buy_1d, "buy");
+  let sells = tickers(sel.sell_1d, "sell");
   $("sels").innerHTML = (buys || sells)
     ? (buys + sells)
     : `<span class="mut">No 1d BUY/SELL on disk for ${board.date}.</span>`;
+  if(!buys && !sells){
+    fetch("https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/stock_book/latest_suggestions.json?t="+Date.now(), {cache:"no-store"})
+      .then(r => r.ok ? r.json() : null)
+      .then(d => {
+        if(!d || d.date !== board.date) return;
+        const b = (d.buy_1d||[]).map(t => `<span class="pill buy">${t}</span>`).join("");
+        const s = (d.sell_1d||[]).map(t => `<span class="pill sell">${t}</span>`).join("");
+        if(b || s) $("sels").innerHTML = b + s;
+      }).catch(()=>{});
+  }
   const fl = sel.flatten || {};
   const flText = (typeof fl === "string") ? fl : [fl.said].concat(fl.bullets||[]).filter(Boolean).join("\n");
   const packet = [];

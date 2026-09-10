@@ -2162,6 +2162,13 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
     except Exception as e:  # noqa: BLE001 — book json already landed
         print(f"[stock-book] WARN: green.json write failed: {e}")
 
+    try:
+        from . import book_suggestions
+        book_suggestions.write({"date": date, "meta": meta, "books": books})
+        book_suggestions.ensure_dashboard_poller()
+    except Exception as e:  # noqa: BLE001 — book json already landed
+        print(f"[stock-book] WARN: suggestions sidecar failed: {e}")
+
     wr = meta.get("weather_risk")
     L = [
         f"# Stock book — {date}",

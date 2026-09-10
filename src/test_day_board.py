@@ -145,6 +145,7 @@ def test_day_board_html_has_raw_poll() -> None:
     html = (Path(__file__).resolve().parent.parent
             / "dashboard" / "day-board" / "index.html").read_text(encoding="utf-8")
     assert "raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board" in html
+    assert "data/stock_book/latest_suggestions.json" in html
     assert "Stock Book readiness" in html
     assert "What was just pushed" in html
     assert "factor-mine" in html
