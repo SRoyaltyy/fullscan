@@ -1,11 +1,11 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T06:39:20.886071-04:00",
+  "generated_at": "2026-09-10T06:39:23.945133-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 5,
-    "partial": 3,
+    "ok": 4,
+    "partial": 4,
     "fail": 0,
     "n": 8
   },
@@ -41,59 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-10T06:34:54.871234-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-10_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1446506,
-          "preview": "1d BUY DK, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, AMC, MMYT, KHC, GIS"
-        },
-        {
-          "path": "data/stock_book/2026-09-10_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-09-10_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2548,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-09-10_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 11843,
-          "preview": "2026-09-10 BUY DK, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, AMC, MMYT, KHC, GIS"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 11843,
-          "preview": "2026-09-10 BUY DK, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, AMC, MMYT, KHC, GIS"
-        },
-        {
-          "path": "01_daily/2026-09-10_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 76832,
-          "preview": "# Stock book \u2014 2026-09-10\n_Generated 2026-09-10T06:34:51.948791-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY DK, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, AMC, MMYT, KHC, GIS \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-10 BUY DK, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, AMC, MMYT, KHC, GIS \u00b7 2026-09-10 BUY DK, NVT \u00b7 SELL FLO, LUCD, XPOF, BRBR, AMC, MMYT, KHC, GIS \u00b7 # Stock book \u2014 2026-09-10\n_Generated 2026-09-10T06:34:51.948791-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -296,6 +243,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -9.0, 'dir': 'down', 'conf': 0.58, 'source': 'llm'}, Communication Services={'score': -3.6, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -7.5, 'dir': 'down', 'conf': 0.6, 'source': 'llm'}, Consumer Defensive={'score': -2.925, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Energy={'score': 8.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Financial={'score': -6.075, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': -6.525, 'dir': 'down', 'conf': 0.55, 'source': 'llm'}, Industrials={'score': -4.05, 'dir': 'down', 'conf': 0.55, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-10\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-10T06:39:23.479228-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-10_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2261351,
+          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ASND, ONC, ARGX, EXE, DVN"
+        }
+      ],
+      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ASND, ONC, ARGX, EXE, DVN"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
