@@ -43,6 +43,7 @@ import argparse
 import csv
 import json
 import math
+import re
 from collections import defaultdict
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -151,6 +152,23 @@ def _bar(ticker: str, date: str) -> dict:
         return tl.session_bar(ticker, date) or {}
     except Exception:
         return {}
+
+
+def predict_snapshot(date: str):
+    """Premarket general predict from the dated md — same regex as the live card."""
+    p = ROOT / "01_daily" / "general" / f"{date}_predict.md"
+    if not p.is_file():
+        return None, None
+    try:
+        txt = p.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return None, None
+    m = re.search(r"Prediction:\s*(UP|DOWN|FLAT).*?total score\s*(-?[\d.]+)",
+                  txt)
+    if not m:
+        m2 = re.search(r"Prediction:\s*(UP|DOWN|FLAT)", txt)
+        return (m2.group(1), None) if m2 else (None, None)
+    return m.group(1), float(m.group(2))
 
 
 def _num(v):
@@ -1335,6 +1353,12 @@ def run_flatten_switch(payload: dict, books: list[tuple[str, Path]],
         g = regime.get(date) or {}
         score = g.get("predict_score")
         pdir = g.get("predict_dir")
+        if score is None or pdir is None:
+            snap_dir, snap_score = predict_snapshot(date)
+            if pdir is None:
+                pdir = snap_dir
+            if score is None:
+                score = snap_score
         buys = [r for r in calls_by_day.get(date) or []
                 if r.get("action_call") == "BUY"]
         min_buys = int(pol.get("min_buys", 5))

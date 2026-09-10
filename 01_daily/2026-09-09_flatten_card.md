@@ -1,19 +1,26 @@
 # flatten_robust card — 2026-09-09
 
-_Generated 2026-09-09T17:18:52 — live `flatten_robust`._
+_Generated 2026-09-10T05:35:16 — live `flatten_robust`._
 
 **S=-13.95; hard-red: no new buys; holds and due 1d exits stay**
 
 - Score **-13.95** (DOWN) · route **hold** · HARD-RED
 - Cash leftover **$108,616.66** (after 09:30 $108,616.66 · after 16:00 $108,616.66)
-- Open lots **0** · priced mover BUYs **0** · prior book yes
+- Prior close **$108,616.66** · 09:30 **$108,616.66** · overnight **$+0.00** · session **$+0.00** · 16:00 **$108,616.66**
+- Overnight lots **0** · priced mover BUYs **0** · prior book yes
 - Planned buy cost **$0.00** ≤ leftover after sells **$108,616.66**
 
-## Open holdings
+## Overnight holds (into 09:30)
 
-| Ticker | Sleeve | Shares | Entry | Since | Mark | MV |
-|---|---|---:|---:|---|---:|---:|
-| — | — | | | | | |
+| Ticker | Sleeve | Shares | Yday | 09:30 | Overnight $ | % | Entry | Since |
+|---|---|---:|---:|---:|---:|---:|---:|---|
+| — | — | | | | | | | |
+
+## Session marks (09:30 → 16:00)
+
+| Ticker | Sleeve | Held | Shares | 09:30 | Close | Overnight $ | Session $ | Day $ |
+|---|---|---|---:|---:|---:|---:|---:|---:|
+| — | — | | | | | | | |
 
 ## Tickets
 

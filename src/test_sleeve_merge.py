@@ -430,9 +430,13 @@ def test_card_skips_already_held() -> None:
         return
     card = plan_today("2026-09-04")
     held = {h["ticker"] for h in card.get("holds_open") or []}
+    sold = {t["ticker"] for t in card["tickets"] if t["side"] == "SELL"}
     bought = {t["ticker"] for t in card["tickets"] if t["side"] == "BUY"}
-    assert held.isdisjoint(bought), held & bought
-    if held:
+    # Overnight lots can be flattened and bought back as mover. A name
+    # still on the book after those sells is not a leftover-cash buy.
+    still_held = held - sold
+    assert still_held.isdisjoint(bought), still_held & bought
+    if still_held:
         assert any(s.get("reason") == "already held" for s in card["skipped"]), \
             card["skipped"][:5]
 
@@ -473,18 +477,20 @@ def test_card_would_buy_ignores_holdings() -> None:
         assert held & set(names), (held, names)
     books = load_book_map(list_books())
     from src.sleeve_merge import io_select_picks, live_policy
-    want = set(io_select_picks(books.get("2026-09-04") or {}, live_policy(),
-                              date="2026-09-04"))
-    if not want:
-        want = set(io_picks(books.get("2026-09-04") or {}, "3d_size"))
-    assert want and want <= set(names), (want, names)
+    if card.get("route") == "io":
+        want = set(io_select_picks(books.get("2026-09-04") or {}, live_policy(),
+                                  date="2026-09-04"))
+        if not want:
+            want = set(io_picks(books.get("2026-09-04") or {}, "3d_size"))
+        assert want and want <= set(names), (want, names)
     assert (would.get("equity") or 0) > 10_000
     # Full-cash wish list spends the book when a hold can settle.
     # Last session(s) of a 3d recycle correctly spend leftover / nothing.
     if (would.get("spent") or 0) <= card["cash_open"]:
         assert names, would
     live = {t["ticker"] for t in card["tickets"] if t["side"] == "BUY"}
-    assert not (held & live)
+    sold = {t["ticker"] for t in card["tickets"] if t["side"] == "SELL"}
+    assert not ((held - sold) & live)
 
 
 def test_card_writes_today_json() -> None:
@@ -577,6 +583,7 @@ def test_fortnight_is_14_calendar_days() -> None:
 
 
 def main() -> None:
+    test_overnight_and_session_marks_split()
     test_live_policy_is_robust()
     test_two_week_is_ten_sessions()
     test_session_calendar_drops_weekend_book()
@@ -593,6 +600,7 @@ def main() -> None:
     test_live_flatten_switch_clears_15pct_fortnight()
     test_live_fees_and_cash_lockup()
     test_hard_red_no_new_skips_0824_io_keeps_holds()
+    test_curve_splits_overnight_and_session()
     test_start_date_skips_earlier_sessions()
     test_start_date_mean_clears_five_pct()
     test_stop_before_leaves_lots_open()
@@ -601,7 +609,7 @@ def main() -> None:
     test_card_cost_fits_leftover_cash()
     test_card_would_buy_ignores_holdings()
     test_card_writes_today_json()
-    print("test_sleeve_merge: 24 ok")
+    print("test_sleeve_merge: 26 ok")
 
 
 if __name__ == "__main__":

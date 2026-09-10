@@ -29,18 +29,18 @@
     "live": true
   },
   "stats": {
-    "n_trades": 61,
+    "n_trades": 72,
     "n_skipped": 4,
-    "hit": 0.508,
-    "total_pnl": 15409.9,
-    "total_ret_pct": 15.41,
-    "final_equity": 115409.94,
-    "max_dd_pct": 3.47,
+    "hit": 0.458,
+    "total_pnl": 8616.68,
+    "total_ret_pct": 8.62,
+    "final_equity": 108616.66,
+    "max_dd_pct": 7.12,
     "by_side": {
       "BUY": {
-        "n": 61,
-        "hit": 0.508,
-        "pnl": 15409.9
+        "n": 72,
+        "hit": 0.458,
+        "pnl": 8616.68
       },
       "SELL": {
         "n": 0,
@@ -49,18 +49,18 @@
       }
     },
     "n_days": 19,
-    "min_rolling_2w": 4.23,
-    "min_block_2w": 10.73,
-    "min_fortnight": 10.73,
+    "min_rolling_2w": -3.38,
+    "min_block_2w": 12.24,
+    "min_fortnight": -2.0,
     "hit_every_rolling_2w": false,
     "hit_every_block_2w": false,
     "hit_every_fortnight": false,
-    "beat_io_top": true,
-    "io_top_pct": 7.57,
+    "beat_io_top": false,
+    "io_top_pct": 10.26,
     "passed": false,
-    "fees_in": 937.73,
-    "fees_out": 964.57,
-    "fees_total": 1902.3
+    "fees_in": 1294.73,
+    "fees_out": 1327.49,
+    "fees_total": 2622.22
   },
   "rolling_2w": [
     {
@@ -68,80 +68,80 @@
       "end": "2026-08-26",
       "n": 10,
       "start_eq": 99830.06,
-      "end_eq": 110545.82,
-      "ret_pct": 10.73
+      "end_eq": 112045.44,
+      "ret_pct": 12.24
     },
     {
       "start": "2026-08-14",
       "end": "2026-08-27",
       "n": 10,
-      "start_eq": 101706.21,
-      "end_eq": 109407.76,
-      "ret_pct": 7.57
+      "start_eq": 101850.19,
+      "end_eq": 110835.16,
+      "ret_pct": 8.82
     },
     {
       "start": "2026-08-17",
       "end": "2026-08-28",
       "n": 10,
-      "start_eq": 102335.77,
-      "end_eq": 107129.12,
-      "ret_pct": 4.68
+      "start_eq": 103218.85,
+      "end_eq": 108477.87,
+      "ret_pct": 5.1
     },
     {
       "start": "2026-08-18",
       "end": "2026-08-31",
       "n": 10,
-      "start_eq": 102172.12,
-      "end_eq": 109231.73,
-      "ret_pct": 6.91
+      "start_eq": 103416.36,
+      "end_eq": 110611.29,
+      "ret_pct": 6.96
     },
     {
       "start": "2026-08-19",
       "end": "2026-09-01",
       "n": 10,
-      "start_eq": 102317.02,
-      "end_eq": 111880.34,
-      "ret_pct": 9.35
+      "start_eq": 103598.34,
+      "end_eq": 113268.79,
+      "ret_pct": 9.33
     },
     {
       "start": "2026-08-20",
       "end": "2026-09-02",
       "n": 10,
-      "start_eq": 103922.34,
-      "end_eq": 115534.19,
-      "ret_pct": 11.17
+      "start_eq": 105475.82,
+      "end_eq": 116939.41,
+      "ret_pct": 10.87
     },
     {
       "start": "2026-08-21",
       "end": "2026-09-03",
       "n": 10,
-      "start_eq": 109917.38,
-      "end_eq": 115409.52,
-      "ret_pct": 5.0
+      "start_eq": 111436.33,
+      "end_eq": 116813.25,
+      "ret_pct": 4.83
     },
     {
       "start": "2026-08-24",
       "end": "2026-09-04",
       "n": 10,
-      "start_eq": 110984.65,
-      "end_eq": 115679.1,
-      "ret_pct": 4.23
+      "start_eq": 112522.35,
+      "end_eq": 111127.73,
+      "ret_pct": -1.24
     },
     {
       "start": "2026-08-25",
-      "end": "2026-09-07",
+      "end": "2026-09-08",
       "n": 10,
-      "start_eq": 110882.53,
-      "end_eq": 115679.1,
-      "ret_pct": 4.33
+      "start_eq": 112418.83,
+      "end_eq": 108616.66,
+      "ret_pct": -3.38
     },
     {
       "start": "2026-08-26",
-      "end": "2026-09-08",
+      "end": "2026-09-09",
       "n": 10,
-      "start_eq": 110545.82,
-      "end_eq": 115409.94,
-      "ret_pct": 4.4
+      "start_eq": 112045.44,
+      "end_eq": 108616.66,
+      "ret_pct": -3.06
     }
   ],
   "blocks_2w": [
@@ -150,16 +150,16 @@
       "end": "2026-08-26",
       "n": 10,
       "start_eq": 99830.06,
-      "end_eq": 110545.82,
-      "ret_pct": 10.73
+      "end_eq": 112045.44,
+      "ret_pct": 12.24
     },
     {
       "start": "2026-08-27",
-      "end": "2026-09-08",
+      "end": "2026-09-09",
       "n": 9,
-      "start_eq": 109407.76,
-      "end_eq": 115409.94,
-      "ret_pct": 5.49,
+      "start_eq": 110835.16,
+      "end_eq": 108616.66,
+      "ret_pct": -2.0,
       "partial": true
     }
   ],
@@ -171,20 +171,19 @@
       "cal_start": "2026-08-13",
       "cal_end": "2026-08-26",
       "start_eq": 99830.06,
-      "end_eq": 110545.82,
-      "ret_pct": 10.73
+      "end_eq": 112045.44,
+      "ret_pct": 12.24
     },
     {
       "start": "2026-08-27",
-      "end": "2026-09-08",
+      "end": "2026-09-09",
       "n": 9,
       "cal_start": "2026-08-27",
       "cal_end": "2026-09-09",
-      "start_eq": 109407.76,
-      "end_eq": 115409.94,
-      "ret_pct": 5.49,
-      "partial": true
+      "start_eq": 110835.16,
+      "end_eq": 108616.66,
+      "ret_pct": -2.0
     }
   ],
-  "generated": "2026-09-09T04:58:47"
+  "generated": "2026-09-10T05:35:16"
 }

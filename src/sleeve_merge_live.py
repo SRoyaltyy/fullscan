@@ -778,6 +778,8 @@ def today_panel_html(card: dict) -> str:
     def _signed_card(label, v):
         if v is None:
             return f"<div class='card'>{label}<b>—</b></div>"
+        if abs(float(v)) < 0.5:
+            v = 0.0
         cls = "good" if v > 0 else "bad" if v < 0 else ""
         return f"<div class='card'>{label}<b class='{cls}'>${v:+,.0f}</b></div>"
 
