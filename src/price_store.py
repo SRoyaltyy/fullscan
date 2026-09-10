@@ -266,10 +266,14 @@ def fill_range(start: str, end: str, tickers: list[str] | None = None) -> None:
     for i in range(0, len(names), CHUNK):
         batch = names[i : i + CHUNK]
         print(f"[price_store] fill chunk {i//CHUNK+1}/{n_chunks} ({batch[0]}…{batch[-1]})")
-        part = _yf_download(batch, start, end)
-        if not len(part):
-            time.sleep(6)
+        try:
             part = _yf_download(batch, start, end)
+            if not len(part):
+                time.sleep(6)
+                part = _yf_download(batch, start, end)
+        except Exception as e:
+            print(f"[price_store] fill chunk failed: {e}")
+            part = pd.DataFrame()
         if len(part):
             frames.append(part)
             if (i // CHUNK) % 8 == 7:

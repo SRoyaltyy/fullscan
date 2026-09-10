@@ -1398,11 +1398,13 @@ def run(from_date: str = START, to_date: str | None = None,
     if write or persist_panel or rebuild_panel:
         try:
             from . import price_store as ps
+            held = _held_tickers_from_disk()
             names = {str(r.get("ticker") or "").upper()
                      for r in (panel.get("rows") or []) if r.get("ticker")}
-            names |= _held_tickers_from_disk()
-            ps.ensure_through(to_date or panel.get("to_date"),
-                              tickers=sorted(names) or None)
+            end = to_date or panel.get("to_date")
+            # Leftover lots first. A full panel yahoo walk dies on junk
+            # tickers and leaves the new session with $0 overnight marks.
+            ps.ensure_through(end, tickers=sorted(held or names) or None)
             tl.reset_price_caches()
         except Exception as e:
             print(f"[factor-mine] price ensure skipped: {e}", flush=True)
