@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "This lesson is falsified if a future session presents the same configuration (live oil supply shock >$100, 10Y ≥ 4.75, 5-day yield–equity correlation ≤ −0.9, VIX/VIX3M > 1.0 backwardation, sector 1m rel ≥ +2% crowded-long) and the sector ETF closes flat or up on the session. In that case the trailing relative strength genuinely functioned as a shield and the corrected behavior (down/mild) would be wrong."
 sector: "Technology"
 date: "2026-09-10"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Technology — 2026-09-10

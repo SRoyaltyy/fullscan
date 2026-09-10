@@ -1,0 +1,29 @@
+---
+trigger_pattern: "A live macro shock (oil >$100 / long-end yield stress) is scored as a negative in BOTH S0 (shared macro beta) AND S1 (sector-specific transmission channel) when the sector's 1d relative tape is flat (|1d rel| < ~0.15%), credit spreads are still tight, and index futures are mixed/flat (±0.5%). The S1 channel is asserted from the macro narrative rather than confirmed by the sector's own relative tape, producing a relative-underperformance stack on a day that resolves as relative outperformance."
+corrected_behavior: "When the sector's 1d relative tape is flat (|1d rel| < ~0.15%) and credit is tight and futures are mixed, do NOT score S1 as an independent negative on the strength of the macro narrative alone — the sector-specific transmission channel must be confirmed by the sector's own relative tape (a negative 1d rel, or a widening sector-specific spread) before it earns a separate negative score. Cap S1 at 0 in that configuration and let S0 carry the absolute-down call alone. The oil/yields shock is an index-level (S0) event until the sector's relative tape shows it transmitting sector-specifically. This preserves the absolute direction call (which was correct) while removing the over-bearish relative lean (which was wrong)."
+falsifier: "If on a future day with flat 1d rel (|rel| < 0.15%), tight credit, and mixed futures, the sector nonetheless underperforms SPY by ≥0.4% on an oil >$100 / long-end stress day, then the S1 channel DID fire without relative-tape confirmation and capping S1 at 0 would be wrong. Conversely, if a day with a negative 1d rel (≤ −0.4%) and oil >$100 resolves as relative outperformance, then the relative-tape confirmation rule is insufficient and the channel is not reliably readable from the tape at all."
+current_behavior: "On 2026-09-10 the morning scored S0=−2 (oil >$100 day-3, long-end stress) and S1=−0.5 (oil→inflation→long-end yield→rate-sensitive financials channel, per the 09-08 lesson), plus S2=−0.5 (3d rel −1.17% red) and S4=−0.5, for a leading_sum of −6.5 and total −6.075 → down/mild. The morning's own self-audit acknowledged 'Oil/yields counted once in S0, once in S1' and justified it as a legitimate two-channel count. Actual: XLF −0.33% vs SPY −0.60%, rel +0.27% — absolute direction and mild magnitude both HIT, but the score stack implied relative underperformance while the sector was a relative safe harbor. The S1 channel was live in the data but did not fire in the tape."
+evidence_cited: "2026-09-10 outcome: XLF −0.33% / SPY −0.60% / rel +0.27%. Morning S1=−0.5 rationale ('bear/long-end steepener = actively negative for rate-sensitive financials per 09-08') did not show in relative terms. Morning's own evidence argued against the stack: 1d rel +0.05% (flat, not red), 1m rel +0.08% (flat), HY OAS 2.67 (tight), futures mixed/flat (ES +0.11%, DJIA +0.19%, NQ −0.17%). The morning's 08-18 rule (two-sided long-end rotation fires only when 1d rel ≥ +0.4%) was correctly marked off, but the inverse implication — flat 1d rel + mixed futures → neutral-to-positive relative base case — was not drawn. The 08-21 magnitude temper (rolling mag 0.4 → mild) was correctly applied and hit; that was the best-calibrated piece."
+error_category: "C"
+scope: "general"
+date: "2026-09-10"
+status: "active"
+occurrences: "1"
+promoted_on: "2026-09-10"
+sources: "['2026-09-10_sector_financial_lesson.md']"
+schema_ok: "true"
+---
+
+## RULE
+When the sector's 1d relative tape is flat (|1d rel| < ~0.15%) and credit is tight and futures are mixed, do NOT score S1 as an independent negative on the strength of the macro narrative alone — the sector-specific transmission channel must be confirmed by the sector's own relative tape (a negative 1d rel, or a widening sector-specific spread) before it earns a separate negative score. Cap S1 at 0 in that configuration and let S0 carry the absolute-down call alone. The oil/yields shock is an index-level (S0) event until the sector's relative tape shows it transmitting sector-specifically. This preserves the absolute direction call (which was correct) while removing the over-bearish relative lean (which was wrong).
+
+## WHEN IT FIRES
+A live macro shock (oil >$100 / long-end yield stress) is scored as a negative in BOTH S0 (shared macro beta) AND S1 (sector-specific transmission channel) when the sector's 1d relative tape is flat (|1d rel| < ~0.15%), credit spreads are still tight, and index futures are mixed/flat (±0.5%). The S1 channel is asserted from the macro narrative rather than confirmed by the sector's own relative tape, producing a relative-underperformance stack on a day that resolves as relative outperformance.
+
+## WRONG IF
+If on a future day with flat 1d rel (|rel| < 0.15%), tight credit, and mixed futures, the sector nonetheless underperforms SPY by ≥0.4% on an oil >$100 / long-end stress day, then the S1 channel DID fire without relative-tape confirmation and capping S1 at 0 would be wrong. Conversely, if a day with a negative 1d rel (≤ −0.4%) and oil >$100 resolves as relative outperformance, then the relative-tape confirmation rule is insufficient and the channel is not reliably readable from the tape at all.
+
+## EVIDENCE
+2026-09-10 outcome: XLF −0.33% / SPY −0.60% / rel +0.27%. Morning S1=−0.5 rationale ("bear/long-end steepener = actively negative for rate-sensitive financials per 09-08") did not show in relative terms. Morning's own evidence argued against the stack: 1d rel +0.05% (flat, not red), 1m rel +0.08% (flat), HY OAS 2.67 (tight), futures mixed/flat (ES +0.11%, DJIA +0.19%, NQ −0.17%). The morning's 08-18 rule (two-sided long-end rotation fires only when 1d rel ≥ +0.4%) was correctly marked off, but the inverse implication — flat 1d rel + mixed futures → neutral-to-positive relative base case — was not drawn. The 08-21 magnitude temper (rolling mag 0.4 → mild) was correctly applied and hit; that was the best-calibrated piece.
+
+(learn_cycle promote)

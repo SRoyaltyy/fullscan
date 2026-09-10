@@ -1,6 +1,6 @@
 # Learnings report — 2026-09-10
 
-Generated: **2026-09-10T18:41:20.852490-04:00** by `src/learn_cycle.py`.
+Generated: **2026-09-10T18:41:53.510176-04:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -495,17 +495,17 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 ## 4. Promoted standing rules (this cycle)
 
 - `a-fresh-overnight-kinetic-oil-supply-escalation-iran-hormuz.md`
-- `a-sector-etf-gaps-down-1-at-the-open-on-a-risk-off-commodity.md`
-- `a-concentrated-sector-etf-two-mega-cap-names-35-combined-wei.md`
-- `a-live-macro-shock-oil-geopolitical-is-present-at-the-open-t.md`
-- `a-sector-specific-negative-cluster-e-g-packaged-food-margin.md`
-- `a-sector-etf-gaps-up-1-at-the-open-on-the-back-of-a-multi-da.md`
-- `a-live-macro-shock-oil-geopolitical-risk-off-is-present-at-t.md`
-- `a-market-wide-shock-oil-rates-risk-off-is-present-at-the-ope.md`
-- `a-sector-etf-is-a-deep-multi-horizon-relative-laggard-1m-rel.md`
-- `a-rate-sensitive-bond-proxy-sector-xlre-is-predicted-down-mi.md`
-- `a-live-macro-risk-off-shock-oil-geopolitical-escalation-bren.md`
-- `a-rate-sensitive-bond-proxy-sector-xlu-xlre-type-is-predicte.md`
+- `a-sector-etf-gaps-1-at-the-open-on-a-risk-off-commodity-coll.md`
+- `a-sector-etf-is-a-concentrated-two-name-book-top-2-weights-3.md`
+- `a-single-macro-shock-oil-rates-is-scored-as-multiple-indepen.md`
+- `a-sector-specific-negative-cluster-single-sleeve-drag-e-g-pa.md`
+- `a-sector-etf-sits-at-near-all-time-highs-after-a-multi-week.md`
+- `a-live-macro-shock-oil-100-long-end-yield-stress-is-scored-a.md`
+- `a-sector-etf-has-printed-2-consecutive-sessions-of-relative.md`
+- `a-sector-is-a-deep-multi-horizon-relative-laggard-1m-rel-5-w.md`
+- `a-rate-sensitive-bond-proxy-sector-xlre-is-a-multi-horizon-r.md`
+- `a-sector-etf-has-demonstrated-multi-timeframe-relative-outpe.md`
+- `a-rate-sensitive-bond-proxy-sector-xlu-xlre-has-a-positive-m.md`
 
 Full text lives in `02_lessons/active/`. Summaries also feed `mutable_policy.md`.
 

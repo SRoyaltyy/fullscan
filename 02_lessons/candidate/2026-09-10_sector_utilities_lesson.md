@@ -7,7 +7,7 @@ error_category: "C"
 falsifier: "If on a future session with VIX <20 and backwardated, a rising long end, and a live long-end auction, XLU (or XLRE) beats SPY on the day, this gate is wrong and the 08-18 frame does not require a deep-risk-off precondition. Conversely, if XLU lags SPY on such a session even with VIX ≥20, the gate is insufficient and the binding constraint is the auction/long-end level alone, not the VIX depth."
 sector: "Utilities"
 date: "2026-09-10"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Utilities — 2026-09-10
