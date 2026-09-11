@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"APP AppLovin stock news September 2026"* → got 6 results (via gnews_rss)
+**Step 1 — Research.** The model wanted to know: *"APP AppLovin stock news September 2026"* → got 6 results (via ddg)
 
-  - Why Is AppLovin Stock Trading Near Its Low While Revenue Keeps Growing? - Trefis (https://news.google.com/rss/articles/CBMiygFBVV95cUxNZFFBRmxmT1VKQkVPakhOd3ctYmR6anRjcFAyRW1lZGNyQWlBM2U3dS1QLUpsV05VdU1MdzVXbTdYOHRzUUxqQzBSM20tY0M0XzhWYXhjcFlYZHlwU0FWWnRRQWQ3b2hhRkxjbG5FLWlPMlNmZ2NWOEdCSk1QVHdkdUZnZGJ6UDZkZzlJMjNhVjhtb2kwSC1LenM0R1BCSFExLU42Q1FEVllKckNhQThNeXJuZXNUcU1VQk1fVkF4UU1uQ1pEY01TamlB?oc=5)
+  - AppLovin (APP) Stock Forecast & Analyst Price Targets (https://stockanalysis.com/stocks/app/forecast/)
 
-  - AppLovin vs. The Trade Desk: Analyzing Diverging Revenue Trends for These Advertising Giants - The Motley Fool (https://news.google.com/rss/articles/CBMi1gFBVV95cUxNQjNJMWJrRnF6RkJSTVIwUEgxbGRjbEtHWXVwUFo2THhUWnRtZUxGTXNPb1dzeUE3WEo4cEJjQWxHN2w0cDlwUFBNLXlSaTRZTU9qVGNwZFdOTGpqUVdyM19FS3NMeUNBS3kwQllRb0pQT0NRRVRWeFhISl9nRmtLVnN5Z0Q3aTI0RVNzdUIyRExqdUpxUGQ4U2k5YksxVXF5UWhGeUxkbFpxWkpyR3NocHJzNmhFNlJ3THQyYVpOVVFGZG9WWEZiLWw3cGJPd2U2VFdvMVFB?oc=5)
+  - AppLovin Corp - Investor Relations (https://investors.applovin.com/)
 
-  - Is AppLovin (APP) Stock A Bargain Or Fully Priced Now? - simplywall.st (https://news.google.com/rss/articles/CBMitAFBVV95cUxOZVRyR01aUm9UcVNWd2I5OUp1c1FKWkVWT2RiODFQYi1RRHV2Qml3b1E3cHdqdTJTN0V2ODdLNlhlVm9kR2p5TGxEYnlJb0g1Umxub0llVW5Cc0VJbzN0Z25aaDhkR3c1blVsODN6UGlEWkJWbnVJZTAxTThRcDQ5WVpfNzNhU21pS3IzdHpSN09INklLaGt1MmE2bXZZWkZmQmlYVTI4M3hPOFVuZW1MRmUxQ07SAboBQVVfeXFMTzRlX3d6LVVtbngzaVpwaEw1SFB1TjZFU3YtRlpOOGxmSnQ1TWJOVHZzdktleGFFdVFidnBfaFZCdmdyQ0lyd2J1NXJFMWR5d2hfeDFLSEtHNHNtWnN1cE8tRGFwa3lYcWxWZ0YyemlTNy05clNCYTNHWHlsVFNDUllqWUswNVRaRkZURUNwSGZ1ZDdiS3hVcDVGSE5KRjlQZWFDbTdNam01a3dDSjcwcXpYdmR3bjJvbUdn?oc=5)
+  - AppLovin Corp - Stock InformationAPP - AppLovin Corporation (NASDAQGS) - Share Price and NewsAPP - AppLovin Corporation | Stock Quote, Technical Analysis ...AppLovin (APP) Stock Forecast and Price Target 2026 - MarketBeatAPP Stock Forecast 2026-2027 - AppLovin Corp. Price Targets ... (https://investors.applovin.com/stock-information/stock-quote/default.aspx)
 
-**Step 2 — Research.** The model wanted to know: *"OMC Omnicom stock news September 2026 Communacopia"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"OMC Omnicom stock news September 2026 Communacopia"* → got 6 results (via gnews_rss)
 
-  - Experts weigh in on Omnicom - OMC is the stock you need (https://www.bing.com/aclick?ld=e8xLyOpnpZckw7665VtDEhbTVUCUzUMfbSBZq9Qci3EdwguHDcTCPjVLuL51DrjbeutwWr9yqPpPjLcqGRHKWnJDjzXNfqA0Zvr0lO8cJD-cjHYaTipuyLF0lpBaGoVbtVW2vwGLufFRALsAp1J39msZYEm1xMSbRdQUqS9TIsHQXkA1lMVZsNjRpTW_Z4ecd3x0Cmk5iDAGcb-AOZRZgHaWEZNbU&u=aHR0cHMlM2ElMmYlMmZ3d3cuemFja3MuY29tJTJmcmVnaXN0cmF0aW9uJTJmcGZwJTJmJTNmYWxlcnQlM2RUQ0tfQTEyNDclMjZ0JTNkT01DJTI2YWRpZCUzZEFCX0JJTkdfU0VBUkNIX0Jyb2FkX1RJQ0tFUl9FeHBhbnNpb25fT21uaWNvbUdyb3VwX0ExMjQ3JTI2Y2lkJTNkcHMtY3BjLUJJTkctU0VBUkNILVRJQ0tFUi1FeHBhbnNpb24tT21uaWNvbUdyb3VwLUExMjQ3JTI2b2ZmZXIlM2R0aWNrZXIlMjZwYXJ0bmVyJTNkYmluZyUyNmNoYW5uZWwlM2RzZWFyY2glMjZjYW1wYWlnbmlkJTNkJTI1NUJTZWFyY2glMjU1RCUyNTIwVGlja2VyJTI1MjBFeHBhbnNpb24lMjUyMDMlMjUyMChCcm9hZCklMjZhZGdyb3VwaWQlM2RPbW5pY29tJTI1MjBHcm91cCUyNTIwKEJyb2FkKSUyNmxvY19waHlzaWNhbF9tcyUzZDY3MTEzJTI2bWF0Y2h0eXBlJTNkcCUyNmRldmljZSUzZGMlMjZrZXl3b3JkJTNkT21uaWNvbSUyNTIwc3RvY2slMjUyMGFuYWx5c2lzJTI2bXNjbGtpZCUzZGQxNGZjODczMTM2NzEyMjc1ZTZiYTJkNzk3NzJkNzBhJTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkJTI1NUJTZWFyY2glMjU1RCUyNTIwVGlja2VyJTI1MjBFeHBhbnNpb24lMjUyMDMlMjUyMChCcm9hZCklMjZ1dG1fdGVybSUzZE9tbmljb20lMjUyMHN0b2NrJTI1MjBhbmFseXNpcyUyNnV0bV9jb250ZW50JTNkT21uaWNvbSUyNTIwR3JvdXAlMjUyMChCcm9hZCk&rlid=d14fc873136712275e6ba2d79772d70a)
+  - Omnicom at Goldman Sachs Communacopia + Technology Conference 2026: integration gains By Investing.com - Investing.com Australia (https://news.google.com/rss/articles/CBMi7AFBVV95cUxQcVZvMEVyU0pfUFRZczdGNmZVVjdtTUJLb2ZQa3loT0JXaFRBZUxyQVUyWnliWFk1SHNHSEdLRk5iWkMxcW93T3FwZ0pDcnozd1YwbkZDeHA0Y0ZvVm9YZkFpNkRwdEcwa3UzNkVTVmFOeHoxLUFZTEw3QWp0UzRKSUdQSlM2OVZ4c1FnUXJUaG1qT2FSb21NUHZfZzNRZ1JnUmdQLXJvd0xjdFZsdGhwaXNpdFhLb2UzLVl3Vml2T0thM0RVdzhhVDVUU2Vsd05OLVFCX3dJcy1yQU1sT0R3NURHV05HN052MWU0Wg?oc=5)
 
-  - Omnicom Group (OMC) Transcript: Goldman Sachs Communacopia ... (https://stockanalysis.com/stocks/omc/transcripts/746062-goldman-sachs-communacopia-technology-conference-2026/)
+  - Omnicom Group stock heads into the open after a 1.5% gain - ad-hoc-news.de (https://news.google.com/rss/articles/CBMixgFBVV95cUxNSjdsbkk2NHRJRDFJS0RTWmRtNEpuX05fMVpLUjIwXzRJRTRfal9hUXF4UHh5OHZrVDBWR2F0V3RWdGhHTjloZmxpUVFLeXJYOVZ3M05GcW1FeUdhOW9qQ0hzOVRzTFJ2R3B1eDRGQ2t2Z1Nndm5lUnU1d1RMcmg3YllLRDlGN0stY0pGUE5CZFltVnQwLWhwbVNYRmxSNzFzaWt0UTliWTh5WllUZTlQR05Mek50eEhXQ3AwSzhGTjdsVEQ0bnc?oc=5)
 
-  - Omnicom Group Inc. (OMC) Presents at Goldman Sachs ... (https://seekingalpha.com/article/4945142-omnicom-group-inc-omc-presents-at-goldman-sachs-communacopia-technology-conference-2026)
+  - Omnicom (NYSE: OMC) Co-COO uses stock to cover taxes - Stock Titan (https://news.google.com/rss/articles/CBMirwFBVV95cUxNUXdLU0FzdVJNNExXbmNUS1phSkhNM3RWR2RwaF9IZ2FjcnFvcmttQXNhenMxaDhXMkRXazR3d1M0VG83Q2Q5TlBaSU1RRDR1QVB2M0FKQmJEZ2NQLUFBMm5QSHZpOXhJYVFHYjB4ajBvTTFCOF9XLWJuRHpPSEM5dUlueUF2MmRfZndDODg3ekNjbTMxSE9WdU1ndzFNdHJvODI1dDBhMEZjVkEzTklV?oc=5)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

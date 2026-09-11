@@ -6,13 +6,13 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"CTVA Corteva news September 2026"* → got 6 results (via gnews_rss)
+**Step 1 — Research.** The model wanted to know: *"CTVA Corteva news September 2026"* → got 6 results (via ddg)
 
-  - New products to protect crops are expected in the early 2030s as Corteva and Globachem plan a joint venture. - stocktitan.net (https://news.google.com/rss/articles/CBMivAFBVV95cUxQbjNFZjJpRlFwQ1ZXbnZBN3RsbjRfNUxlaldfVkxyUjNqc2RLck5mOGh2QWJ0SFl5aGtCY256aGJoRmFodkNpNzJHaDhtb1JSWlpIRVNoelJPN1IzZVpJbzdBUnlRNjF3V1ppT2pRV2FKMVJucC14VG51enZ6MWJnV0R4TzVpWTdqaGpJSWh0X1ZjSFFkYlJKcGZRWWUwSzh1anBzM041VVBydkJlamJMaGZfQVJzX3BodTEwcg?oc=5)
+  - News Releases - Corteva Agriscience (https://investors.corteva.com/news-events/news-releases)
 
-  - Corteva (CTVA) Stock Could Be 23% Undervalued On Vylor Spin Off Plans - simplywall.st (https://news.google.com/rss/articles/CBMiwwFBVV95cUxPTXRfbFNVeWlFUmFUR2RrQ1dYeTBqRk5WMDNuMHBNdDdua1lLZkdCZFRGejZBcEpoZWZHcXhCc2NBM05pVnI2RW8wTWdhZHo5OWw0TGRyWmRtdERuMjM4MTk0a2ZXSkpzemVBY0ZPTWx0ZGhnOEk1Z1d6REo2NEQ0ZkVoVjIwNm04cGJZWnlQNlVPQi1Rd01KNEpmTXBMbk1keDdUSWV4eXVIVFJqWkJwSTF2dWVYcW9PajRpMUpEd3ZXRkk?oc=5)
+  - Corteva to Split into Two Public Firms — CTVA (https://www.portrak.com/news/ctva-corteva-split-seed-crop-protection-vylor-2026)
 
-  - CTVA Looks 28.3% Overvalued on GF Value™ - GuruFocus (https://news.google.com/rss/articles/CBMiggFBVV95cUxQT3FNNUdvQklYQ0tHNV9mOVEyS0xpZXBTUXpFbUZaNzdRemRfaXBIVUgxVWY5b2tQQnJXOGp1Sk1paWFvM1NZX0JaSEcyRUlOX3lxd3VpVWNvMTlfUlprWmw5NTVCX1dUcnl0Q3hyODViSTY1NG5pNjIwRjB5bFJlTkh3?oc=5)
+  - CTVA Press Releases Corteva Common - marketchameleon.com (https://marketchameleon.com/Overview/CTVA/PressReleases/)
 
 **Step 2 — Research.** The model wanted to know: *"CF Industries news September 2026"* → got 6 results (via gnews_rss)
 

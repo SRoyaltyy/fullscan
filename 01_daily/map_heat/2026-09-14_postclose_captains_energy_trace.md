@@ -8,18 +8,18 @@
 
 **Step 1 — Research.** The model wanted to know: *"Transocean RIG news September 2026"* → got 6 results (via ddg)
 
-  - Press Releases - Transocean Ltd. (https://investor.deepwater.com/press-releases)
-
   - News & Events | Transocean (https://www.deepwater.com/news/)
 
-  - Transocean RIG Jumps As ONGC Deal Extends Backlog Boom (https://www.timothysykes.com/news/transocean-ltd-switzerland-rig-news-2026_09_02-2/)
+  - Press Releases - Transocean Ltd. (https://investor.deepwater.com/press-releases)
 
-**Step 2 — Research.** The model wanted to know: *"Noble Corporation NE news September 2026"* → got 6 results (via gnews_rss)
+  - RIG - Transocean Ltd. (NYSE) - Share Price and News - FintelTransocean Ltd. (RIG) Latest Press Releases | Seeking AlphaAll News for RIG : Transocean - Zacks.comTransocean RIG Jumps As ONGC Deal Extends Backlog BoomPresentations | Transocean Ltd. (https://fintel.io/s/us/rig)
 
-  - Noble Corp (NE) CEO donates shares, still holds 1.17M - stocktitan.net (https://news.google.com/rss/articles/CBMiqgFBVV95cUxQMWp2ajNoU3p4bGJMUmdjeU9IWmFHZk9lVE9SZm5PS19NNmxSQldvNUpweDdkTnpsdGhCSGw0YnBWOGRMdG1LR1ZlaDVpZjdHU3hlMUw1SWc4WXBpNURkaVBzdzhKdVZGRTUzWjVvbmp3RjdLNDdJV3dEWHJoTlZoNHB6RHhWM1NRZTdvczRZOUZaTVdCNnBaMU8tQ2UycDJKV1Z3ZUgwWFRZQQ?oc=5)
+**Step 2 — Research.** The model wanted to know: *"Noble Corporation NE news September 2026"* → got 6 results (via ddg)
 
-  - Blue Water secures logistics contract in Suriname with Noble - Heavy Lift & Project Forwarding International (https://news.google.com/rss/articles/CBMirwFBVV95cUxPUkVielpfalV4TjVJUGEzRDVzT2FlbVhHcjYxR1Q4YXoxMEFPTnFqZ2VpYkVUdjBUVGxWYVlCRE9nYm90ek5id0lvSDRjVmZhek1pRHNkT0QtMG4tV3dnd0ItMU1uT2hmWFBhdDF3NlktWUNoZ0djcFE4X0Y4LUNzbHB1UW05UXZmZ0FLOVI4amhSMUxOWW5nY2FCY3NZaEotTWFuSDVpR3JCeVJDUmQ4?oc=5)
+  - Experts weigh in on Noble - Is Noble a Top Pick? (https://www.bing.com/aclick?ld=e8aZ-JDnzK1LHCtLhwWaCUlTVUCUwFt903hC1oAoaEFaw9usMdVRzm0moCW5KWvUymtqQ6StXO_bsLujqS9PkYnVHNoYF7n-CUMVJta69eoq1HYVeb88JHsBpvbAl1kzEJFHlUEqKaCROF2IbIr-W5zG2AknMK74hfCMfSxHHP5-4h4BCLMSPrt2Mj_59qOcXHikjfe_TVMcq1tZJjx2AffH0x-BE&u=aHR0cHMlM2ElMmYlMmZ3d3cuemFja3MuY29tJTJmcmVnaXN0cmF0aW9uJTJmcGZwJTJmJTNmYWxlcnQlM2RUQ0tfQTEyNDclMjZ0JTNkTkUlMjZhZGlkJTNkQUJfQklOR19TRUFSQ0hfQnJvYWRfVElDS0VSX0V4cGFuc2lvbl9Ob2JsZV9BMTI0NyUyNmNpZCUzZHBzLWNwYy1CSU5HLVNFQVJDSC1USUNLRVItRXhwYW5zaW9uLU5vYmxlLUExMjQ3JTI2b2ZmZXIlM2R0aWNrZXIlMjZwYXJ0bmVyJTNkYmluZyUyNmNoYW5uZWwlM2RzZWFyY2glMjZjYW1wYWlnbmlkJTNkJTI1NUJTZWFyY2glMjU1RCUyNTIwVGlja2VyJTI1MjBFeHBhbnNpb24lMjUyMDMlMjUyMChCcm9hZCklMjZhZGdyb3VwaWQlM2ROb2JsZSUyNTIwKEJyb2FkKSUyNmxvY19waHlzaWNhbF9tcyUzZDQ2MzEzJTI2bWF0Y2h0eXBlJTNkcCUyNmRldmljZSUzZGMlMjZrZXl3b3JkJTNkTkUlMjUyMHN0b2NrJTI2bXNjbGtpZCUzZDg3Njc4Nzg2YzViMTFiOWEzNDhhZWQyMjQwZTE5ZWI0JTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkJTI1NUJTZWFyY2glMjU1RCUyNTIwVGlja2VyJTI1MjBFeHBhbnNpb24lMjUyMDMlMjUyMChCcm9hZCklMjZ1dG1fdGVybSUzZE5FJTI1MjBzdG9jayUyNnV0bV9jb250ZW50JTNkTm9ibGUlMjUyMChCcm9hZCk&rlid=87678786c5b11b9a348aed2240e19eb4)
 
-  - 3 Energy Stocks With Rising Oil Exposure After Brent Moved Above $100 - simplywall.st (https://news.google.com/rss/articles/CBMivwFBVV95cUxQYmxfUUFkRDQyQTM2bGxMQTBjUk1hWGUtOU85eU16cnpfMTV6eEtVNUx1ZFFqZlVSM1hlc1JKWU9Lc09pSlA5bFplMS1RM3ExUE13MFhPMW9jYkthbENtS1FadDdFR1JWRG5jdmU3eUJXeUdZbFZTY1pNaW9RUXlBMlRWZFJYWllWZjBNc0tYaDR3X1NKOW43Nl9GbFlPNWZuUXN5X2VidW94cGotZ3RZYWZVUW5OZVExVUthNXZ3TdIBvwFBVV95cUxQYmxfUUFkRDQyQTM2bGxMQTBjUk1hWGUtOU85eU16cnpfMTV6eEtVNUx1ZFFqZlVSM1hlc1JKWU9Lc09pSlA5bFplMS1RM3ExUE13MFhPMW9jYkthbENtS1FadDdFR1JWRG5jdmU3eUJXeUdZbFZTY1pNaW9RUXlBMlRWZFJYWllWZjBNc0tYaDR3X1NKOW43Nl9GbFlPNWZuUXN5X2VidW94cGotZ3RZYWZVUW5OZVExVUthNXZ3TQ?oc=5)
+  - Noble Corporation (NE) Stock Price & Overview (https://stockanalysis.com/stocks/ne/)
+
+  - What Noble (NE)'s Earnings Miss, Lowered Outlook and Payouts ... (https://simplywall.st/stocks/us/energy/nyse-ne/noble/news/what-noble-nes-earnings-miss-lowered-outlook-and-payouts-mea)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

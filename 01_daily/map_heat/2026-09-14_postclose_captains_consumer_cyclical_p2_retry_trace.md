@@ -2,24 +2,24 @@
 
 
 
-**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (5,772 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
+**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (6,796 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
 
 
 
-**Step 1 — Research.** The model wanted to know: *"CASY Casey's General Stores stock news September 2026"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"LVS Las Vegas Sands news September 2026"* → got 6 results (via ddg)
 
-  - Casey's General Stores (CASY) Stock Price & Overview (https://stockanalysis.com/stocks/casy/)
+  - Las Vegas Sands (LVS) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/LVS/)
 
-  - All News for CASY : Casey's General Stores - Zacks.com (https://www.zacks.com/stock/research/CASY/all-news)
+  - LVS - Las Vegas Sands Corp News | Morningstar (https://www.morningstar.com/stocks/xnys/lvs/news)
 
-  - Press Releases - Casey’s (https://investor.caseys.com/press-releases)
+  - News | Las Vegas Sands (https://www.sands.com/news/)
 
-**Step 2 — Research.** The model wanted to know: *"WSM Williams-Sonoma stock news September 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"MGM Resorts news September 2026"* → got 6 results (via ddg)
 
-  - Experts weigh in on WSM - WSM is the stock you need (https://www.bing.com/aclick?ld=e8i_4TsKjqXDK8JeNM0mlr8DVUCUwHzBuHwE1MOhcFepGDi3bMBenpzwcEPiC6rxsYxjjZZvFWmY9opwF3AMwd_k1_PpNHRH0K8BKaRmQlxfo7WplwXBtTvLs0yUbzzKkiEDSMa_9fDmlbgF5Q8HRMgqjpMT8wIKyGXuvPE1mkSUR6yIol9wPqpxA4ocN_iOGAuY13mw&u=aHR0cHMlM2ElMmYlMmZ3d3cuemFja3MuY29tJTJmcmVnaXN0cmF0aW9uJTJmcGZwJTJmJTNmYWxlcnQlM2RUQ0tfQTEyNDclMjZ0JTNkV1NNJTI2YWRpZCUzZEFCX0JJTkdfU0VBUkNIX0Jyb2FkX1RJQ0tFUl9FeHBhbnNpb25fV2lsbGlhbXNTb25vbWFfQTEyNDclMjZjaWQlM2Rwcy1jcGMtQklORy1TRUFSQ0gtVElDS0VSLUV4cGFuc2lvbi1XaWxsaWFtc1Nvbm9tYS1BMTI0NyUyNm9mZmVyJTNkdGlja2VyJTI2cGFydG5lciUzZGJpbmclMjZjaGFubmVsJTNkc2VhcmNoJTI2Y2FtcGFpZ25pZCUzZCUyNTVCU2VhcmNoJTI1NUQlMjUyMFRpY2tlciUyNTIwRXhwYW5zaW9uJTI1MjAzJTI1MjAoQnJvYWQpJTI2YWRncm91cGlkJTNkV2lsbGlhbXMtU29ub21hJTI1MjAoQnJvYWQpJTI2bG9jX3BoeXNpY2FsX21zJTNkNjcxMTMlMjZtYXRjaHR5cGUlM2RwJTI2ZGV2aWNlJTNkYyUyNmtleXdvcmQlM2RXU00lMjUyMHN0b2NrJTI2bXNjbGtpZCUzZDM5NmIwZTU3NTkxNjFlYWJiNjkwNjRmM2RkZDUxYzg5JTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkJTI1NUJTZWFyY2glMjU1RCUyNTIwVGlja2VyJTI1MjBFeHBhbnNpb24lMjUyMDMlMjUyMChCcm9hZCklMjZ1dG1fdGVybSUzZFdTTSUyNTIwc3RvY2slMjZ1dG1fY29udGVudCUzZFdpbGxpYW1zLVNvbm9tYSUyNTIwKEJyb2FkKQ&rlid=396b0e5759161eabb69064f3ddd51c89)
+  - MGM Resorts Newsroom - Press Releases (https://newsroom.mgmresorts.com/press-releases?l=100)
 
-  - Is Williams-Sonoma (WSM) Fully Priced On Raised 2026 Guidance ... (https://simplywall.st/stocks/us/retail/nyse-wsm/williams-sonoma/news/is-williams-sonoma-wsm-fully-priced-on-raised-2026-guidance)
+  - MGM Resorts Investor Relations - News Releases (https://investors.mgmresorts.com/news-releases/)
 
-  - WSM Stock Draws Wave Of Target Hikes After Powerful Q2 (https://stockstotrade.com/news/williams-sonoma-inc-de-wsm-news-2026_09_10/)
+  - MGM Resorts International (MGM) Latest Press Releases ... (https://seekingalpha.com/symbol/MGM/press-releases)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

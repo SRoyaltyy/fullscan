@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"MCK McKesson news September 2026 cyberattack data theft"* → got 6 results (via gnews_rss)
+**Step 1 — Research.** The model wanted to know: *"MCK McKesson news September 2026 cyberattack data theft"* → got 6 results (via ddg)
 
-  - Hackers claim millions of patient records stolen during data breach at healthcare giant McKesson - TechCrunch (https://news.google.com/rss/articles/CBMiywFBVV95cUxQamJrNGdlbjJ4bk9QSXl5c1NDNHFQR2c3OWpid2xtaXVfSkNubHBZNWE2QXVxTFFyeGQwWWplbzlubXJuRmU3MklNTVZsdENKMUhFWmdzdWZGdjZMRUlJQUJOQ2JyTWp1UFJDcDgtMnRtX085U2pZdTdZU2hYZ0JuUzJvbHVZWFBEdzA1WUR0azNHZ080eVVyQ0NTSU95aC1fSWc2ZGF3bnVaNkhOWUlmV0daTzc1SDFZSmpxSElEYnJtektxdFE5Qi1FMA?oc=5)
+  - McKesson discloses breach after ShinyHunters claims patient ... (https://www.bleepingcomputer.com/news/security/mckesson-discloses-breach-after-shinyhunters-claims-patient-data-theft/)
 
-  - McKesson confirms data theft in cyberattack involving third-party apps - Yahoo Finance (https://news.google.com/rss/articles/CBMiowFBVV95cUxQUFNPbkowVGt6T0lOQnpyUVJrVV93SGhLZGRZT1N6SjRzQTNSVHQ2V3JLZjlVTnRFV2I4bTRTb0pUNnR2aEpRX2xuWHNIaUhYMVFBb1JKZnpadVhadVk0NkdFcHhad3NpczNkLW5LS0ZPZUI1a2lWb19nMHR3aHlld0RDR3JlNWRtTUd5aGYwVUZpVVB0Zy1FM1E1akszN085OHFr?oc=5)
+  - McKesson confirms data theft in cyberattack involving third ... (https://finance.yahoo.com/healthcare/articles/mckesson-confirms-data-theft-cyberattack-105116261.html)
 
-  - McKesson (MCK) Stock Still Looks Reasonable Following Third Party Cyberattack - simplywall.st (https://news.google.com/rss/articles/CBMixAFBVV95cUxQcFJzQXdrLXVsMXJybmJWa2l5bEJKVXlWQll6SEFjTmkwUW5vc2tfXzliSk5manJmVGpOVmg3eXBWVzY0ZVdGbUF1YWJOLXZGTXVleWdLOWU3a3hZVzBBdWZiWnVNRVNiNkphRlV4MG95U25DaEFWR05GVEZ3aHlUTlNFRV8yTHBNcnpqNFdqS3E4TjRtcDVLUE9tSVRUZmE3S1EzRTk2M0MxZ3p6VFFwNWN3R0NFSzF5Q1MwOE16RVFCRnla0gHKAUFVX3lxTFBqeVNtN2VxSmdleVppQWdoME5Ha051T3BkdWtudk9hVjIwcUltSmg1RFFpZERLb0FDbGl0aHlzUGtQLVRTcl9RQloyLUZhQndzOTYyczlmV3ZxSjFYNm9YNEItVXlobV95VkstOTBzRVliM2R0akFvQ1RWZjZLcVZ6bjBLVExOdjJBYnB2MXY3bUszbS1pSmNkYWRHeWw5dUNkLWNUa2tHU21vY1lzNDMxR1hpRnROdmxBajY1QmY4UWlKWWxmOGdKTnc?oc=5)
+  - Hackers claim millions of patient records stolen during data ... (https://techcrunch.com/2026/08/31/hackers-claim-millions-of-patient-records-stolen-during-data-breach-at-healthcare-giant-mckesson/)
 
-**Step 2 — Research.** The model wanted to know: *"COR Cencora news September 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"COR Cencora news September 2026"* → got 6 results (via gnews_rss)
 
-  - Newsroom: Press Releases, Company News and Insights | Cencora (https://www.cencora.com/newsroom)
+  - Cencora (COR) ex-officer lines up new stock sale - Stock Titan (https://news.google.com/rss/articles/CBMikAFBVV95cUxPNkZxdF91cURFX1hYRVc5R0ZjWjNNUUR1LVAzbmxDTjl2MWdQUU51eFJYc1FGMUpYNTVubDlEWk9xNS1yWEhMZWRqY1VQUkpwVnZfZWpDeUtvemhoQXNSclNmaVJ3bDFGOFdoQ0FGcHFWNERsbEhQU3BDZnVvRGZwOW1yWXA1RDNFLWJQdzVLQW0?oc=5)
 
-  - What Cencora (COR)'s Cell and Gene Push and Higher 2026 ... (https://finance.yahoo.com/healthcare/articles/cencora-cor-cell-gene-push-224035014.html?fr=sycsrp_catchall)
+  - COR: Specialty and oncology growth, stable guidance, and innovation drive strong performance - TradingView (https://news.google.com/rss/articles/CBMihwJBVV95cUxNaGpKdEhiRzBWbjNjaFBrU3ZKZk1vLVhlMTVOYVJfQ0RTc3E1bzFGYmhwMnJUNWRFYmdUM0xuUXVYeFFxdkQ5SnBhTTdWR01kZXg0cGlfMTYwR3B5M2E1U1hZN2tOQU1MSVpfaWs3LTEzb1B3UTBNSzY2c2haZDBCcURzREQzMU9pNkV5V0d6SjVOQ3dTT3hRbGt2dWlRckljWTFYanQtOS1yV2g0NXNPMUk2YmwwQ2g3NHVUVXZMVlhZbkNBYVlSWWp4eEowZE5vNXptNnVVWHp3OVQ0a21jdFo4WWVRdmJmSS1WSDIzeC1PSWNWcGRuY1dySEdRb3hyZXJ5SmpfVQ?oc=5)
 
-  - Cencora, Inc. - Investor Relations (https://investor.cencora.com/overview/default.aspx)
+  - Cencora (COR) Unveils Cell And Gene Therapy Enablement Service - simplywall.st (https://news.google.com/rss/articles/CBMiwwFBVV95cUxNOVVBVWprU3JDZE9GbkhfR0ZKZDNxU1lsT2FCYzJfYWZITVh3ZzZEU0k2ZUkzY3hqbzcyX1U3WlR5bS1KTC1WSVBkVzktalNCM1BiZ2w2c0ZjUmhsbk9Hd21IZmR6YWQyVzdWWENHbUVfNHBTcTZueFBnckVQRlNGdUs4RFFFcGNfZDBtSkhEWmRQZmRzZTdpWW05QjRYWGVHeV9jR1N2U2N2b1ZfTFd0eGJQWjB1T2RyOC1OVGotWVNCaXfSAcgBQVVfeXFMUFlFaEV2NUphUEd5V19fRDFWSklmQ2RpcWc5SG80R0g1b0d4eTBlS1ZQR1JVR3dhV2lNTG5XeHdvbGRENlpOQW5USzlJOWFjSlVOTEMwaVFtNDVkdTJjRERoQmJfM1V1c2hDZU1ieXZHcXQ3Zmd0cVVOcnlOQWo5SXF3R1B4cDFzZjJ3QVIwbUpTLXpuY2t5bG41LVlNNnNQQks1Uk1ZNDZfT2N0Y2dfbFVqRlFuRkMwcm1PRHFYejBYeDh1WjVXVHk?oc=5)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

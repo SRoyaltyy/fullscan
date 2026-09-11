@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"SRE Sempra Energy news September 2026"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"SRE Sempra Energy news September 2026"* → got 6 results (via gnews_rss)
 
-  - Experts weigh in on Sempra - Experts bought SRE, Are you? (https://www.bing.com/aclick?ld=e8yakIbWIK_5SU5ACHgjtlfTVUCUy3D0gjKA9GfpkAURkHcNCKzcQ_PmpcmbA_bcNIvJKV0zXhZ3T71SHV_775BfPChrGu28Y0M0tklYAZmbFnA4FDlQ3JqxDQ6t1hTZWr6OZRQMzBRbhExSvgxE-YPTjR6H82-uUgh-yZWbAHrdR7u26MXghd5EHWupnOhu2kckISSwrurdpohzKHFNO-ZAJ5mwo&u=aHR0cHMlM2ElMmYlMmZ3d3cuemFja3MuY29tJTJmcmVnaXN0cmF0aW9uJTJmcGZwJTJmJTNmYWxlcnQlM2RUQ0tfQTEyNDclMjZ0JTNkU1JFJTI2YWRpZCUzZEFCX0JJTkdfU0VBUkNIX0Jyb2FkX1RJQ0tFUl9FeHBhbnNpb25fU2VtcHJhX0ExMjQ3JTI2Y2lkJTNkcHMtY3BjLUJJTkctU0VBUkNILVRJQ0tFUi1FeHBhbnNpb24tU2VtcHJhLUExMjQ3JTI2b2ZmZXIlM2R0aWNrZXIlMjZwYXJ0bmVyJTNkYmluZyUyNmNoYW5uZWwlM2RzZWFyY2glMjZjYW1wYWlnbmlkJTNkJTI1NUJTZWFyY2glMjU1RCUyNTIwVGlja2VyJTI1MjBFeHBhbnNpb24lMjUyMDMlMjUyMChCcm9hZCklMjZhZGdyb3VwaWQlM2RTZW1wcmElMjUyMChCcm9hZCklMjZsb2NfcGh5c2ljYWxfbXMlM2Q2NzExMyUyNm1hdGNodHlwZSUzZHAlMjZkZXZpY2UlM2RjJTI2a2V5d29yZCUzZFNSRSUyNTIwc3RvY2slMjZtc2Nsa2lkJTNkNWMxNGY4MjVlY2ZlMTQxMGUzZDE5MjgxNmExMDdkMWElMjZ1dG1fc291cmNlX3BsYXRmb3JtJTNkTWljcm9zb2Z0X0FkdmVydGlzaW5nJTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkJTI1NUJTZWFyY2glMjU1RCUyNTIwVGlja2VyJTI1MjBFeHBhbnNpb24lMjUyMDMlMjUyMChCcm9hZCklMjZ1dG1fdGVybSUzZFNSRSUyNTIwc3RvY2slMjZ1dG1fY29udGVudCUzZFNlbXByYSUyNTIwKEJyb2FkKQ&rlid=5c14f825ecfe1410e3d192816a107d1a)
+  - A $65 billion plan backs U.S. energy upgrades. Sempra is behind it. - Stock Titan (https://news.google.com/rss/articles/CBMisgFBVV95cUxQYmdJSGlzRFQ5Tk54V2lHSmR5NGtzb3ZzNWtEZ3M0UzN4em9STnFDbnRCMkVjNU5NdHlod09VZUg2WmtzUWQyYkZPRTV3ZHRzZElDaWdjWG9wWXYyeWNIZUUxYTcxMU9pd2V4eTFQb0hfWUVUSlREU1l6Mzh5ZjZJdVpuMTlzdHFhNHQxcm5nQ0taVXV2MWEyVXVxZVpiX2tYWjN6eGJZU2dZMUljSG9zS0N3?oc=5)
 
-  - Press Releases | Sempra (https://www.sempra.com/press-releases)
+  - Sempra Energy $SRE Shares Acquired by National Pension Service - MarketBeat (https://news.google.com/rss/articles/CBMivwFBVV95cUxOM1JzUmlKNV8xS21XVkdXQko0TDBqb255eWNaanlWY1J5ekpVc2h5OEtnMEZTVDBjMlo3Y3l3SGQzYlNSWEZnTGxucHBkMzJwUE5qbUtYcHFET01lR2pNMjlrZVZJekFtQ3p6cVhfVmtVYmgxRW9xSkdFTVYwaTRpNFV3NG13aEoxckd0cGthYmk4X2E5aFBYNjJKdXpzSUczQnBXdzJFR2xJT2Q0dVhlY0Izb3RJUWVTeXYwQzJ0bw?oc=5)
 
-  - SRE News Today | Why did Sempra Energy stock go down today? (https://www.marketbeat.com/stocks/NYSE/SRE/news/)
+  - Sempra stock heads into the open after a 1.9 percent drop - ad-hoc-news.de (https://news.google.com/rss/articles/CBMivAFBVV95cUxPcW51eGR6eDdXeU9RVUJERkFia2FuRVB0NlBxbUJqMkNjakdhNk1QSEFOVW1jbjluZXA4dFR6YmFRMWdWLTNBeGQyc1N3VDVtU1V5eDIxbEJJakN3NEFtTnBMOW9ubnJpalUzMXRvTFF0WHg1WGZFTjloMmUxWVl2UVh4MUoxMmJRQVUwYmRhLXNLNTR5bzlyN2N0dkZoU2h1ZWR6WlIwMmp2ZlZHY0dCVHNyam16dHhESGhBTg?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"AES Corp news September 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"AES Corp news September 2026"* → got 6 results (via gnews_rss)
 
-  - AES Investors: Resources, Reports, News, Filings & Events (https://www.aes.com/investors/investor-resources)
+  - Perigus, Synera and Clearway Energy top this week's wind industry moves - Recharge News (https://news.google.com/rss/articles/CBMiuAFBVV95cUxQaFdicGtkTGpjd2I2V2NUMm01aWU5Z3FHeFdIdGFVb1pfT1VmT2o1dTE4OGZDZ0lLLThRTk5EbjZqaEY1R2pDSFJPa3A4MGNTLW9ndWJpOVhKUkxBVkVPandtUEpDc0NNZTJMMVFjNS13RkF2UHd4STZReHVNMW1XZ2RCQ0FkUnd0dUc2M3pnVmV2VXBBd0IzRmxQaU9hYlJBWEduVHZEMV9kTkN0aGlVcm9wX1lhLWtN?oc=5)
 
-  - AES Corporation News - AES Corporation News from EIN News (https://companies.einnews.com/news/aes-corporation-news)
+  - AES Corp. stock holds near analyst target amid utility sector risks - ad-hoc-news.de (https://news.google.com/rss/articles/CBMiyAFBVV95cUxNRWhiT0lreC1kNEMwQ3U1WWFxcVJjQzdwSXREVjhETVZrdUhmY2tid2pkdXBRTmVhVzllZmJ5dHBGM1pVM3l1ck84RTdIVGlCMVVEUC1VVUp1SHRsVUxoSVEwckc0d0RHV2lkOTBvT0VWT2o3UUtpWkpGX0RtUERpVldDa2FLa2RRVW5uMFAtdEo0MG5fRTNqbHp0NmV0LWxCLXYwRjdGWmltRXlHUWxiV2V3QkdLM3N2RzNnZ1g4TkhuVENvVjh5Xw?oc=5)
 
-  - AES Investors: Resources, Reports, News, Filings & Events (https://www.aes.com/investors)
+  - AES Indiana customers' rate hike will face new scrutiny from state regulators - WFYI (https://news.google.com/rss/articles/CBMiugFBVV95cUxOdEt4ZGVwbWF4Z0ktSUpJN2o2bC1yeFhoei1GSzlUTWhwWDJiRGp4WHVzUFhNTWt1SGlWU3cxRlVzc0Y5aUk2X256c1E5bXFDdEhES2lQSEotTWtTU2xMMXZaTUs4MWk5akFYVDJTdXIyYnc3SmtQWXlkUFQ0a0xMbjZFczQwUlZUVm85VWtxSjlMS3BaSkdERTAySEI0UDV1T3R4VE5uZ2dvak9xQWgtWEtFa2VUNlA5TkE?oc=5)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
