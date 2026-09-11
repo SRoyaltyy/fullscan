@@ -1,0 +1,151 @@
+{
+  "date": "2026-09-11",
+  "generated_at": "2026-09-11T05:55:50.503402-04:00",
+  "max_n": 8,
+  "routing": "Grok \u2192 DeepSeek",
+  "grok": true,
+  "deepseek_fallback": true,
+  "gemini": false,
+  "n_targets": 8,
+  "n_ok": 0,
+  "targets": [
+    {
+      "ticker": "CENX",
+      "role": "override_captain",
+      "why": "OVERRIDE card Aluminum"
+    },
+    {
+      "ticker": "CSTM",
+      "role": "override_captain",
+      "why": "OVERRIDE card Aluminum"
+    },
+    {
+      "ticker": "SLVM",
+      "role": "override_captain",
+      "why": "OVERRIDE card Paper & Paper Products"
+    },
+    {
+      "ticker": "NMAX",
+      "role": "override_captain",
+      "why": "OVERRIDE card Broadcasting"
+    },
+    {
+      "ticker": "FUBO",
+      "role": "override_captain",
+      "why": "OVERRIDE card Broadcasting"
+    },
+    {
+      "ticker": "KSS",
+      "role": "override_captain",
+      "why": "OVERRIDE card Department Stores"
+    },
+    {
+      "ticker": "AIN",
+      "role": "override_captain",
+      "why": "OVERRIDE card Textile Manufacturing"
+    },
+    {
+      "ticker": "MPC",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Refining & Marketing"
+    }
+  ],
+  "dossiers": [
+    {
+      "ticker": "CENX",
+      "role": "override_captain",
+      "why": "OVERRIDE card Aluminum",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "CSTM",
+      "role": "override_captain",
+      "why": "OVERRIDE card Aluminum",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "SLVM",
+      "role": "override_captain",
+      "why": "OVERRIDE card Paper & Paper Products",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "NMAX",
+      "role": "override_captain",
+      "why": "OVERRIDE card Broadcasting",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "FUBO",
+      "role": "override_captain",
+      "why": "OVERRIDE card Broadcasting",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "KSS",
+      "role": "override_captain",
+      "why": "OVERRIDE card Department Stores",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 1 parse failure"
+    },
+    {
+      "ticker": "AIN",
+      "role": "override_captain",
+      "why": "OVERRIDE card Textile Manufacturing",
+      "error": "skipped: step deadline"
+    },
+    {
+      "ticker": "MPC",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Refining & Marketing",
+      "error": "skipped: step deadline"
+    }
+  ]
+}
