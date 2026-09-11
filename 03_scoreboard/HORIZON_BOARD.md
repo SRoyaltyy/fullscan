@@ -10,15 +10,15 @@ Updated: 2026-09-11. Calls are graded at T+h trading days using the scoreboard's
 | general | 1w | 12 | 42% (5/12) | 58% (7/12) | -0.26% |
 | general | 2w | 9 | 44% (4/9) | 33% (3/9) | -0.34% |
 | general | 1m | 2 | 0% (0/2) | 50% (1/2) | -2.29% |
-| sector:Basic Materials | 3d | 10 | 40% (4/10) | 20% (2/10) | -0.48% |
-| sector:Basic Materials | 1w | 8 | 12% (1/8) | 38% (3/8) | -0.48% |
-| sector:Basic Materials | 2w | 4 | 25% (1/4) | 75% (3/4) | -1.12% |
-| sector:Communication Services | 3d | 10 | 50% (5/10) | 40% (4/10) | -0.19% |
-| sector:Communication Services | 1w | 8 | 12% (1/8) | 38% (3/8) | +0.26% |
-| sector:Communication Services | 2w | 4 | 25% (1/4) | 25% (1/4) | -0.20% |
-| sector:Consumer Cyclical | 3d | 10 | 40% (4/10) | 30% (3/10) | -1.22% |
-| sector:Consumer Cyclical | 1w | 8 | 38% (3/8) | 50% (4/8) | -1.60% |
-| sector:Consumer Cyclical | 2w | 4 | 0% (0/4) | 25% (1/4) | -3.50% |
+| sector:Basic Materials | 3d | 11 | 36% (4/11) | 18% (2/11) | -0.61% |
+| sector:Basic Materials | 1w | 9 | 22% (2/9) | 33% (3/9) | -0.78% |
+| sector:Basic Materials | 2w | 5 | 20% (1/5) | 60% (3/5) | -1.87% |
+| sector:Communication Services | 3d | 11 | 45% (5/11) | 45% (5/11) | -0.08% |
+| sector:Communication Services | 1w | 9 | 22% (2/9) | 44% (4/9) | +0.15% |
+| sector:Communication Services | 2w | 5 | 20% (1/5) | 40% (2/5) | +0.06% |
+| sector:Consumer Cyclical | 3d | 11 | 45% (5/11) | 36% (4/11) | -1.19% |
+| sector:Consumer Cyclical | 1w | 9 | 44% (4/9) | 44% (4/9) | -1.75% |
+| sector:Consumer Cyclical | 2w | 5 | 0% (0/5) | 20% (1/5) | -3.66% |
 | sector:Consumer Defensive | 3d | 10 | 30% (3/10) | 50% (5/10) | -0.65% |
 | sector:Consumer Defensive | 1w | 8 | 38% (3/8) | 12% (1/8) | -0.93% |
 | sector:Consumer Defensive | 2w | 4 | 0% (0/4) | 100% (4/4) | -2.22% |
@@ -48,9 +48,18 @@ Updated: 2026-09-11. Calls are graded at T+h trading days using the scoreboard's
 
 | Date | Topic | Horizon | Call | Actual | Dir | Mag |
 |---|---|---|---|---|---|---|
+| 2026-09-08 | sector:Consumer Cyclical | 3d | down/mild | -0.90% (down/mild) | ✅ | ✅ |
+| 2026-09-08 | sector:Communication Services | 3d | down/mild | +0.97% (up/mild) | ❌ | ✅ |
+| 2026-09-08 | sector:Basic Materials | 3d | flat/mild | -1.91% (down/notable) | ❌ | ❌ |
 | 2026-09-08 | general | 3d | down/mild | -0.22% (flat/flat) | ❌ | ❌ |
+| 2026-09-03 | sector:Consumer Cyclical | 1w | down/mild | -3.01% (down/notable) | ✅ | ❌ |
+| 2026-09-03 | sector:Communication Services | 1w | down/mild | -0.69% (down/mild) | ✅ | ✅ |
+| 2026-09-03 | sector:Basic Materials | 1w | down/mild | -3.17% (down/notable) | ✅ | ❌ |
 | 2026-09-03 | general | 1w | down/mild | -1.17% (down/mild) | ✅ | ✅ |
 | 2026-08-28 | general | 2w | down/mild | -0.71% (down/flat) | ✅ | ❌ |
+| 2026-08-21 | sector:Consumer Cyclical | 2w | flat/mild | -4.29% (down/notable) | ❌ | ❌ |
+| 2026-08-21 | sector:Communication Services | 2w | flat/mild | +1.08% (up/mild) | ❌ | ✅ |
+| 2026-08-21 | sector:Basic Materials | 2w | up/mild | -4.84% (down/notable) | ❌ | ❌ |
 | 2026-09-04 | sector:Real Estate | 3d | flat/mild | -2.00% (down/notable) | ❌ | ❌ |
 | 2026-09-04 | sector:Industrials | 3d | down/mild | -2.69% (down/notable) | ✅ | ❌ |
 | 2026-09-04 | sector:Healthcare | 3d | flat/mild | -3.38% (down/notable) | ❌ | ❌ |
@@ -64,15 +73,6 @@ Updated: 2026-09-11. Calls are graded at T+h trading days using the scoreboard's
 | 2026-09-03 | sector:Utilities | 3d | down/mild | -1.19% (down/mild) | ✅ | ✅ |
 | 2026-09-03 | sector:Technology | 3d | down/mild | -0.40% (down/flat) | ✅ | ❌ |
 | 2026-09-02 | general | 1w | down/mild | -0.98% (down/mild) | ✅ | ✅ |
-| 2026-08-28 | sector:Real Estate | 1w | down/mild | -3.21% (down/notable) | ✅ | ❌ |
-| 2026-08-28 | sector:Industrials | 1w | flat/mild | -3.72% (down/notable) | ❌ | ❌ |
-| 2026-08-28 | sector:Healthcare | 1w | flat/mild | -3.21% (down/notable) | ❌ | ❌ |
-| 2026-08-28 | sector:Financial | 1w | down/mild | -2.12% (down/mild) | ✅ | ✅ |
-| 2026-08-28 | sector:Energy | 1w | down/mild | +3.59% (up/notable) | ❌ | ❌ |
-| 2026-08-28 | sector:Consumer Defensive | 1w | down/mild | -2.76% (down/notable) | ✅ | ❌ |
-| 2026-08-28 | sector:Consumer Cyclical | 1w | down/mild | -4.48% (down/severe) | ✅ | ❌ |
-| 2026-08-28 | sector:Communication Services | 1w | flat/mild | -1.32% (down/mild) | ❌ | ✅ |
-| 2026-08-28 | sector:Basic Materials | 1w | flat/mild | -4.55% (down/severe) | ❌ | ❌ |
 
-*462 calls still maturing (T+h close not recorded yet).*
+*453 calls still maturing (T+h close not recorded yet).*
 
