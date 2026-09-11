@@ -1,19 +1,18 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11T05:07:23.012841-04:00",
+  "generated_at": "2026-09-11T05:07:51.644525-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-11_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-11/_board.json` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-09-11_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-09-11_judge.md` \u2014 missing",
-    "MISSING AB checklist enriched `data/ab_checklist/2026-09-11_ab_checklist_enriched.csv` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-09-11_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 2,
-    "fail": 3,
+    "fail": 2,
     "n": 8
   },
   "processes": [
@@ -381,9 +380,9 @@
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -402,13 +401,15 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-11_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=11630",
+          "size": 3363278
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "218 rows",
+      "bullets": [
+        "NVGS, PARR, CMBT, KRP, DK"
+      ]
     },
     {
       "key": "catalyst",
@@ -522,9 +523,9 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-11_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=11630",
+          "size": 3363278
         },
         {
           "key": "join",
@@ -873,6 +874,24 @@
         }
       ],
       "preview": "5904 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, EXEL, ARGX, NUTX, ASND"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-11T05:07:51.346664-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-11_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 3363278,
+          "preview": "11630 rows \u00b7 Ticker,score,score_source,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month, \u00b7 NVGS, PARR, CMBT, KRP, DK"
+        }
+      ],
+      "preview": "11630 rows \u00b7 Ticker,score,score_source,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month, \u00b7 NVGS, PARR, CMBT, KRP, DK"
     }
   ],
   "href": {
