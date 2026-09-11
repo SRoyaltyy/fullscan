@@ -6,135 +6,142 @@ Actuals: {'etf': 'XLI', 'pct': 1.067131065882987, 'spy_pct': 0.8524287494320992,
 
 ## 0. FACTS
 
-**Channel 1 (deterministic actuals):**
+**Tape (deterministic actuals):**
+- XLI: **+1.067%** (open 172.45 → close 172.37; note the open was marginally above the close — the gain was made *before* the bell, i.e., the gap, not the intraday drift)
+- SPY: **+0.852%**
+- Relative: **+0.215%** — XLI *outperformed* SPY
+- Actual direction: **up**; actual magnitude: **mild** (a ~1% ETF move on a CPI day is a normal-range session, not a notable one)
 
-| Metric | Value |
-|---|---|
-| XLI % change | **+1.067%** |
-| SPY % change | **+0.852%** |
-| Relative (XLI − SPY) | **+0.215%** |
-| Open | 172.45 |
-| Close | 172.37 |
+**Cross-check against the tape:**
+- CLAIM: XLI closed $172.37, +1.07% on 09/11/2026.
+  URL: https://markets.businessinsider.com/etfs/state-street-industrial-select-sector-spdr-etf-us81369y7040
+  PUBLISHED: 2026-09-11
+  QUOTE: "XLI 172.37 +1.82 +1.07% 09/11/2026"
+  SUMMARY: Confirms the deterministic actuals exactly.
 
-**Path note (important):** XLI opened at **172.45** and closed at **172.37** — the close is *below* the open by ~0.05%. Yet the reported session change is **+1.067%**. That means the entire gain was **gapped in at the open** (prior close ≈ 170.55), and the intraday session itself was **flat-to-marginally-negative**. This is a critical distinction for the audit: XLI did not *trend* up today; it *opened* up and then went nowhere. The +1.07% is an **overnight/gap capture**, not an intraday demand story.
+- CLAIM: S&P 500 +0.86% to 7,656; Dow +0.98%; Nasdaq +0.96%; Russell 2000 +0.45%; stocks opened higher and stayed there, snapping a 4-day losing streak.
+  URL: https://investrade.com/market-review-september-11-2026/
+  PUBLISHED: 2026-09-11
+  QUOTE: "U.S. stocks opened higher and stayed there throughout the trading day, snapping the 4 day losing streak"
+  SUMMARY: Confirms a broad risk-on session, with the Dow (most industrial-heavy of the majors) leading — consistent with XLI's relative outperformance.
 
-**Direction:** up. **Magnitude:** mild-to-notable (just over 1%, but the ETF's own intraday range was ~zero).
+- CLAIM: August CPI +0.4% m/m, +3.4% y/y, both in line with consensus; core +0.3% vs +0.2% expected.
+  URL: https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-11-2026
+  PUBLISHED: 2026-09-11
+  QUOTE: "The consumer price index rose a seasonally adjusted 0.4% in August, putting the 12-month increase at 3.4%... Both readings were in line with the Dow Jones consensus."
+  SUMMARY: Headline in line; core ran hot by a tenth. The market took the headline as the binding read.
 
-**Context — what actually happened in the tape:**
+- CLAIM: Oil pulled back; the session was framed as "stocks up on oil prices" / "Wall Street finds its footing as oil retreats."
+  URL: https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-09112026-12115543
+  PUBLISHED: 2026-09-11
+  QUOTE: "Indexes Jump Friday as Oil Prices Pull Back; CPI Inflation Matches Expectations"
+  SUMMARY: Confirms the morning's central premise — the oil slide was the live driver, and it persisted through the close.
 
-- CPI printed **in line** — August CPI **+0.4% m/m**, headline inflation **3.4%** (Benzinga, 2026-09-11; Upstox, 2026-09-11). This was the pending binary the morning note correctly refused to pre-score.
-- The S&P **snapped a 4-day decline** as **oil cooled** (TradingView, 2026-09-11: *"S&P 500 Snaps 4-Day Decline as Oil Cools, Dell Jumps 11%"*).
-- Benzinga ran a **"Leading And Lagging Sectors For September 11, 2026"** piece (2026-09-11), confirming a sector-dispersion session.
-- Industrials-adjacent single names were in focus: **Deere and Caterpillar both up >40% YTD** (24/7 Wall St., 2026-09-11) — a reminder that the *large-cap machinery complex* inside XLI has been a leadership pocket even while the ETF lagged.
-
----
-
-## 1. What drove the sector today
-
-**Primary driver: the CPI-in-line + oil-cooling risk-on bounce, transmitted to Industrials through the fuel-cost-relief channel — exactly the mechanism the morning note identified.**
-
-The morning note's central thesis was: *"Oil is DOWN hard, not up… For XLI, a −2.5% to −3.4% crude move is a direct cost relief for transports, airlines, trucking, and manufacturers."* The TradingView headline independently confirms the session's organizing narrative was **"oil cools"** driving the S&P's snap-back. This is the **08-13 regime** the note explicitly invoked (demand/risk-driven oil slide = cost relief), not the 08-11/08-12 supply-shock regime. **The regime call was correct.**
-
-Taxonomy-aligned factors that fired:
-
-| Factor | Verdict | Evidence |
-|---|---|---|
-| Risk-on tape / equity beta expansion | **HIT** | SPY +0.85%, XLI +1.07% |
-| Real yields falling | **HIT** | risk-on + oil down |
-| High-beta leadership inside sector | **HIT** | XLI beat SPY by +0.21% |
-| Freight / trucking / rail volume recovery | **HIT** | oil cost relief |
-| Grid / electrical equipment backlog (AI power) | **HIT** | BE PT raise carried |
-| ISM manufacturing expansion | **HIT** | 54.6 carried |
-| Construction slowdown | **HIT** | carried drag |
-| Crowded long | **MISS** | 1m rel −6.51% pre-session |
-
-**Secondary driver: the gap structure.** Because XLI closed *below* its open, the honest read is that the sector **repriced overnight on the CPI print and the oil move**, then **held** — it did not attract incremental intraday buying. A +1.07% close with a flat-to-down intraday path is a *relief-hold*, not an *accumulation*.
+**Path:** The open (172.45) was essentially the high-water mark; the close (172.37) was a hair below. So the entire +1.07% was a **gap-and-hold**, with a flat-to-slightly-fading intraday drift. This matters for the audit: the morning call was a *pre-open* call, and the pre-open setup (futures +0.5–0.65%, oil −2.5–3.4%) is precisely what the gap priced. The morning read was not "wrong about the day" — it was right about the *gap*, and the day itself added nothing.
 
 ---
 
-## 2. Audit of morning S0–S4 reads against reality
+## 1. What drove the sector
 
-### S0 = +1 (shared macro) — **HIT, well-calibrated**
+**Primary driver: oil's slide → cost relief for the transport/manufacturer complex, inside a broad CPI-day risk-on bounce.**
 
-The note called a **CPI-day risk-on bounce after a 4-day slide with oil reversing**, and scored +1 (not +2) because CPI was pending, VIX was backwardated, and EPU was elevated. Reality: CPI came in line, the S&P snapped its 4-day decline, oil cooled. The **+1 (not +2) calibration was vindicated** — XLI delivered +1.07%, a mild-to-notable move, not a +2% melt-up. The refusal to pre-score the CPI binary (09-03 lesson) was correct: the print was in line, so the *setup* (futures +0.5–0.65%, oil down) did the work, not a surprise beat.
+The taxonomy-aligned decomposition:
 
-**One nuance the note got right by accident:** it flagged VIX backwardation and elevated EPU as magnitude dampeners. The result — a gap-and-hold with zero intraday follow-through — is *exactly* what a dampened, backwardated-VIX risk-on session looks like. The dampener logic was sound.
+1. **Shared macro (S0) — the dominant factor.** CPI matched headline expectations (+0.4% / 3.4%), removing the binary tail risk that had been capping the tape for four sessions. Futures were already +0.5–0.65% pre-open; the print confirmed rather than surprised, and the market gapped and held. This is a *relief* rally, not a *growth* rally — the Dow led (+0.98%) and Russell lagged (+0.45%), which is the signature of a de-risking unwind rather than an aggressive risk-appetite expansion.
 
-### S1 = +1 (sector factors, capped) — **HIT, correctly capped**
+2. **Oil as a sector-specific transmission channel.** WTI −2.5%, Brent −2.9% pre-open, and the retreat persisted (Investopedia headline: "as Oil Prices Pull Back"). For XLI this is a **direct input-cost relief** for airlines, trucking, rail, and air freight — the highest-oil-beta sleeves inside the ETF. This is the cleanest *sector-specific* reason XLI beat SPY by 21bp. The morning correctly identified this as the 08-13 regime (demand/risk-driven oil slide) rather than the 08-11/08-12 supply-shock regime, and correctly declined to fire the supply-shock cap.
 
-The note capped S1 at +1 (not +2) per 08-18, citing: no fresh same-morning industrials print, ISM slowing, and the rule against using GEV/BE as a cushion. Reality: XLI's +1.07% is consistent with a **+1 factor score**, not a +2. The cap was correct. The **oil-driven freight cost relief** was the broadest same-session positive and it fired. The **BE PT raise** was correctly scored as a sleeve positive, not the ETF thesis — and indeed XLI's move was broad (beta-driven), not BE-driven.
+3. **AI-power / electrical equipment.** The BE (Bloom Energy) PT raise to $330 on expected S&P 500 inclusion was a live, dated catalyst inside the electrical-equipment sleeve. It is a single-name catalyst, not an ETF thesis — but it contributed to the sleeve's bid.
 
-**Minor miss:** the note listed **aerospace & defense as MIXED** and declined to treat the Iran/Houthi escalation as a fresh defense-order HIT. With no evidence of defense leadership driving XLI today, this abstention was correct — but it was a *lucky* abstention rather than a tested one, since the note had no same-morning defense print.
+4. **What did *not* drive it:** No fresh ISM print. No durable-goods print. No flow data. The construction slowdown (carried HIT) and the mixed defense picture were drags that the oil/macro impulse simply overwhelmed.
 
-### S2 = 0 (breadth) — **HIT, and the 09-10 correction paid off**
-
-This is the most important audit item. The note applied the **09-10 healthcare lesson**: a deep-oversold laggard (1m rel ≤ −5%) with **≥2 consecutive 1d rel stabilizations** should have its leading sum **decayed toward zero**, so S2 = 0, not −1. Reality: XLI **outperformed** SPY by +0.21%. Had the note scored S2 = −1 (the naive laggard read), it would have under-called the session. **The 09-10 correction was directly responsible for a better call.** This is a validated lesson.
-
-### S3 = 0 (flows) — **NEUTRAL, no data**
-
-No flow data returned. The note correctly declined to invent a signal. XLI's +0.21% relative outperformance is *mildly* consistent with some rotation back into the laggard, but there is no evidence to grade this either way. **Unfalsifiable — leave at NEUTRAL.**
-
-### S4 = 0 (ETF tape) — **HIT, and the 09-04/09-10 double-count avoidance was correct**
-
-The note set S4 = 0, refusing to (a) re-score the laggard already counted in S2 (09-04 lesson) and (b) treat the prior-day 1d rel as a level signal for a deep-oversold name (09-10 lesson). Reality: the prior-day 1d rel (−0.12%) was indeed a **decaying signal** — XLI flipped to +0.21% relative. **S4 = 0 was correct.** Had the note scored S4 = −1 on the stale tape, it would have double-penalized and under-called.
-
-### Multiplier 0.9 — **appropriate**
-
-The 0.9 multiplier reflected the mild divergence (leading factors up, tape flat, 1m lag −6.51%). Given XLI delivered a mild-to-notable +1.07% (not a severe move), the 0.9 haircut was well-sized. A 1.0 multiplier would have implied more conviction than the gap-and-hold outcome justified.
+**Net:** This was a **macro-beta session with an oil-cost-relief kicker**, not a sector-fundamentals session. XLI's +21bp relative outperformance is almost entirely attributable to the oil channel plus the Dow-heavy composition of a relief rally.
 
 ---
 
-## 3. Interactions / double-count / knowable-at-open test
+## 2. Audit of morning S0–S4 reads
+
+### S0 = +1 — **HIT, and arguably under-scored**
+
+The morning read: CPI-day risk-on bounce, oil reversing, futures +0.5–0.65% across all four indices, Europe green, 08-21 reversal gate ON. It explicitly declined +2 on the grounds of pending CPI, VIX backwardation, elevated EPU, and the −6.51% 1m lag.
+
+**Verdict: directionally correct, magnitude-conservative.** The session delivered exactly the risk-on bounce described. The refusal to go +2 was defensible *ex ante* (CPI was genuinely pending), but the reasoning contained a subtle error: it treated "CPI pending" as a reason to *cap* the score, when the correct treatment of a pending binary with futures already +0.6% is to recognize that the *market had already priced a benign outcome* — the futures tape was itself the information. The morning's own 09-03 lesson said "do not pre-score a miss or a beat," which is right, but it then used the pending print as a *dampener* rather than as a *neutral*. That is a half-application of the lesson.
+
+The VIX backwardation and EPU flags were real but were **level** signals, not **change** signals — and on a day when the change (oil −3%, futures +0.6%) was unambiguously positive, the level flags should not have capped the score. This is the same class of error as the 09-09 flattening: letting a *state* variable override a *flow* variable.
+
+### S1 = +1 (capped) — **HIT**
+
+The morning scored: carried ISM expansion (slowing) + live AI-power catalyst (BE) + oil-driven freight cost relief, against construction drag and mixed defense. Capped at +1 per the 08-18 rule (no +2 without same-morning confirmation).
+
+**Verdict: correct, and the cap was appropriate.** There was no same-morning industrials print, so +2 was correctly forbidden. The oil-driven freight relief was correctly identified as "the cleanest same-session positive transmission for XLI today" — and that is exactly what the relative outperformance reflects. The BE catalyst was correctly scored once and correctly *not* treated as the ETF thesis. The 08-18 discipline (don't use GEV/ETN as a cushion) was respected.
+
+One note: the morning said "do not treat geo as a fresh defense-order HIT." Correct — defense was mixed and did not drive the session.
+
+### S2 = 0 — **HIT**
+
+The morning applied the 09-04 rule (score the laggard once) and the 09-10 rule (deep-oversold laggard's prior-day rel is a decaying signal), and set breadth to 0 rather than −1. It noted the 1d rel had stabilized for a second consecutive session (−0.12% after −1.04%).
+
+**Verdict: correct.** Breadth neither expanded nor failed in a way that warranted a non-zero score. The stabilization call was vindicated — XLI went from flat-relative to *positive*-relative. The 09-10 healthcare lesson (≥2 consecutive 1d rel stabilizations → decay the leading sum toward zero) was applied correctly and paid off.
+
+### S3 = 0 — **HIT (null)**
+
+No flow data returned. Not a crowded long (1m rel −6.51%). Correctly scored 0. Nothing in the session contradicted this.
+
+### S4 = 0 — **HIT**
+
+The morning declined to weight the prior-day 1d rel as a level signal (09-10 rule) and declined to double-count the laggard already scored in S2 (09-04 rule). Set S4 = 0.
+
+**Verdict: correct.** The prior-day flat rel was indeed a decaying signal; the session delivered a positive rel. Had S4 been scored −1 (the naive read of a laggard tape), the total would have been +1.8 → +0.9, still "up/mild" but with less conviction — and the *reasoning* would have been wrong even if the direction survived.
+
+### Total: Σ = +2.0 × 0.9 = **+1.8 → up/mild**
+
+**Actual: up, +1.07%, mild.** **Direction HIT. Magnitude HIT.** This is the second consecutive dir+mag hit (09-10 was the first).
+
+---
+
+## 3. Interactions / double-count / knowable-at-open
 
 **Double-count audit:**
+- **Oil:** counted once in S0 (as cost relief), explicitly *not* re-counted in S1. The morning flagged this in the self-audit ("oil counted once in S0... not re-counted in S1"). **Clean.** This is the correct handling and it is the single most important discipline in this book — oil is the recurring double-count trap.
+- **Laggard:** scored once in S2, explicitly *not* re-scored in S4. **Clean.** The 09-04 correction held.
+- **Warsh hawkish / September hike odds:** counted once and marked "already paid." **Clean.**
+- **BE / GEV:** scored as a sleeve positive, explicitly *not* as the ETF thesis. **Clean.**
 
-- **Oil** — counted **once** in S0 as cost relief, explicitly *not* re-counted in S1. ✅ Correct. The note flagged this in its self-audit and honored it.
-- **Laggard fact** — scored **once** (S2 = 0), explicitly *not* re-scored in S4. ✅ Correct per 09-04.
-- **Warsh hawkish / September hike odds** — counted **once** and marked "already paid." ✅ Correct; no evidence it re-fired today.
-- **BE/GEV** — scored as a sleeve positive, explicitly *not* allowed to drive the ETF call. ✅ Correct; XLI's move was broad beta, not BE-specific.
+**Knowable-at-open test:** **YES.** Every element of the winning thesis was visible before the bell:
+- Futures +0.5–0.65% across ES/NQ/RTY/DJIA — visible.
+- Oil −2.5% to −3.4% — visible.
+- Europe green — visible.
+- 08-21 reversal gate ON — visible.
+- CPI pending but futures already pricing benign — visible.
 
-**Knowable-at-open test:**
+The session's outcome was **fully knowable at the open**. There was no intraday information that changed the picture. The gap-and-hold path confirms this: the market priced the entire move pre-open and added nothing.
 
-The decisive question: **was the +1.07% knowable at the open?**
-
-**Answer: PARTIALLY — and the note captured the knowable part.**
-
-- The **gap** was knowable: futures were +0.53% to +0.65% across ES/NQ/RTY/DJIA, oil was down 2.5–3.4%, Europe was green, and CPI was pending. A gap-up open was the base case. ✅ The note called **up**.
-- The **intraday follow-through was NOT knowable** — and in fact did not happen (close < open). The note's **mild** band correctly implied "don't expect a trend day." ✅
-- The **CPI outcome was NOT knowable** at the open (it printed in line). The note correctly refused to pre-score it. ✅
-
-**Verdict: the directional call was knowable and was made; the magnitude was knowable and was correctly banded mild; the CPI binary was correctly left unscored.** This is a clean knowable-at-open execution.
-
-**The one thing the note could not have known:** that XLI would *outperform* SPY by +0.21%. The note's divergence flag (tape flat, 1m lag −6.51%) leaned toward *underperformance risk*, but the 09-10 correction (deep-oversold laggard = mean-reversion setup) correctly neutralized that lean. The relative outperformance was a **coin-flip that the note's corrections positioned it to win.**
+**The one interaction the morning under-weighted:** the *interaction between "CPI pending" and "futures +0.6%."* The morning treated these as offsetting (pending binary = dampener; futures = support). In reality they were *reinforcing*: futures +0.6% on the morning of a CPI print means the market has already decided the print is not a threat. The correct read was that the pending binary had been *de-risked by the tape itself*, which should have pushed S0 toward +2 rather than capping it at +1. This is the residual conservatism in the call.
 
 ---
 
 ## 4. Outliers inside the sector
 
-- **Deere (DE) and Caterpillar (CAT)** — both flagged as **up >40% YTD** (24/7 Wall St., 2026-09-11). These are the large-cap machinery leadership pocket inside XLI. Their YTD strength is a reminder that XLI's *1m* lag (−6.51%) was driven by the **transports/electrical-equipment** sleeves, not the machinery complex. This is a **breadth-divergence inside the sector** worth noting: the ETF lagged while its largest machinery names led YTD.
-- **Ferguson (FERG)** — Yahoo Finance (2026-09-11) asked *"Is FERG Underperforming the Industrial Sector?"* — a single-name laggard question, consistent with the note's **construction-slowdown HIT** (FERG is a building-products distributor). This is the carried drag the note identified.
-- **BE (Bloom Energy)** — the PT raise to $330 on expected S&P inclusion was the note's flagged AI-power catalyst. No evidence it was the *ETF* driver today, consistent with the note's "sleeve positive, not ETF thesis" framing.
+Without intraday constituent data in hand, the identifiable outliers from the morning context:
 
-**No single-name outlier appears to have driven the ETF.** XLI's +1.07% was a **broad, beta-driven gap**, which is exactly what a +1 S0 / +1 S1 / 0 / 0 / 0 scorecard should produce.
+- **BE (Bloom Energy)** — the PT raise to $330 on expected S&P 500 inclusion (Clear Street), UBS to $325. This was the single freshest dated catalyst inside XLI. It sits in the electrical-equipment / AI-power sleeve, which is the structural growth leg of the sector. On a risk-on day with the Nasdaq +0.96%, this sleeve likely led.
+- **Transports / airlines / trucking** — the oil −2.5–3.4% move is the highest-beta transmission channel in XLI. These names are the most likely source of the +21bp relative outperformance.
+- **Defense** — mixed; the Iran/Houthi escalation narrative did not produce a clean order-driven bid, consistent with the morning's "do not treat geo as a fresh defense-order HIT."
+- **Construction-linked names** — the carried construction-slowdown HIT was a drag, but was overwhelmed by the macro impulse.
+
+**Caveat:** I do not have constituent-level % moves in this thread, so the outlier attribution above is inferred from the morning's sleeve map plus the sector-level relative outperformance. The *direction* of the inference (oil-sensitive transports + AI-power electrical equipment leading) is well-supported; the *magnitude* per name is not verifiable here.
 
 ---
 
-## 5. Scorecard
+## 5. Verdict on the morning read
 
-| Component | Morning | Reality | Verdict |
-|---|---|---|---|
-| S0 shared macro | +1 | CPI in line, oil cooled, risk-on bounce | **HIT** |
-| S1 sector factors | +1 (capped) | broad beta, no single-name driver | **HIT** |
-| S2 breadth | 0 | XLI outperformed +0.21% | **HIT** (09-10 correction paid) |
-| S3 flows | 0 | no data | **NEUTRAL** |
-| S4 ETF tape | 0 | stale tape decayed as predicted | **HIT** (09-04/09-10 correct) |
-| Multiplier | 0.9 | mild-to-notable move | **appropriate** |
-| **Direction** | **up** | **up (+1.07%)** | **HIT** |
-| **Magnitude** | **mild** | **+1.07% (mild-notable)** | **HIT** |
+**The morning got the direction and magnitude right, and got the *reasoning* mostly right — but was systematically one notch too conservative.**
 
-**Direction: HIT. Magnitude: HIT.** This is a clean two-for-two, and — critically — it is the **first session in the recent log where the pipeline's corrections (09-09 emit-directional, 09-10 decay-laggard, 09-04 score-once) all fired in the same direction and all helped.** The 09-09 correction ("when the tape confirms the negative score, emit the directional call") was *not* binding today because the tape did *not* confirm a negative lean — and the note correctly recognized that and emitted **up** rather than flattening.
+The pipeline's own corrections (09-09: don't flatten a confirmed directional call; 09-10: decay the oversold laggard's prior-day rel; 09-04: score the laggard once) were all applied correctly and all contributed to the hit. The 08-27 forbid-up rule was correctly identified as non-binding (the impulse was broad risk-on + oil relief, not a foreign AHR with NQ leading ES). The 08-21 reversal gate was correctly read as ON.
 
-**The one honest caveat:** the +1.07% was a **gap-and-hold**, not a trend. The note's **mild** band was right, but a reader who interpreted "up/mild" as "modest intraday grind higher" would have been surprised by a flat-to-down intraday path. The **path** was less constructive than the **close** suggests. This is a magnitude-band *labeling* nuance, not a directional error.
+The residual error is the **"CPI pending → cap the score"** reflex. On a morning where futures are +0.6% across all four indices and oil is down 3%, the pending binary has already been de-risked by the tape. Treating it as a dampener is the same *class* of error as the 09-09 flattening — letting a state variable (pending event, elevated EPU, backwardated VIX) override a flow variable (futures, oil, Europe). The score should have been S0 = +2, total +2.7 × 0.9 = +2.43, still "up/mild" but with the correct conviction.
+
+**This is a "right answer, slightly wrong confidence" session** — the third consecutive session where the pipeline's *corrections* saved the call, and the second consecutive dir+mag hit. The correction stack is working. The next refinement is to stop treating pending binaries as automatic dampeners when the tape has already priced them.
 
 ---
 
@@ -146,8 +153,8 @@ SPY_PCT: 0.852
 REL_PCT: 0.215
 ACTUAL_DIRECTION: up
 ACTUAL_MAGNITUDE: mild
-PRIMARY_DRIVER: CPI-in-line + oil-cooling risk-on bounce, transmitted to Industrials via fuel-cost relief for transports/manufacturers (08-13 regime, not 08-11/08-12 supply shock); gain was gapped in at the open, intraday path flat-to-down.
-KEY_INTERACTION: Oil counted once in S0 as cost relief and correctly not re-counted in S1; laggard scored once in S2 and correctly not re-scored in S4; BE/GEV held as sleeve positives, not ETF thesis — all three double-count guards held.
-KNOWABLE_AT_OPEN: partially
-MORNING_READ_VERDICT: Direction HIT, magnitude HIT — the 09-09 (emit-directional), 09-10 (decay deep-oversold laggard), and 09-04 (score laggard once) corrections all fired together and all helped; the only nuance is that the +1.07% was a gap-and-hold with a flat-to-down intraday path, so "mild" understated the gap but correctly implied no trend day.
+PRIMARY_DRIVER: CPI matched headline expectations, removing the binary tail risk and triggering a broad risk-on gap-and-hold; oil's −2.5–3.4% slide delivered direct cost relief to XLI's transport/manufacturer sleeves, producing +21bp relative outperformance.
+KEY_INTERACTION: "CPI pending" and "futures +0.6%" were reinforcing, not offsetting — the tape had already de-risked the binary, so the pending print should not have capped S0 at +1.
+KNOWABLE_AT_OPEN: yes
+MORNING_READ_VERDICT: Direction HIT, magnitude HIT; reasoning sound but systematically one notch too conservative — the pending-CPI dampener was a state variable overriding a flow variable, the same class of error as the 09-09 flattening.
 OUTCOME_END
