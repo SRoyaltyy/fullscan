@@ -19649,13 +19649,13 @@
         "S4_ETF_TAPE": 1.0
       },
       "leading_sum": 2.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 112.33999633789062,
+      "actual_close": 112.5999984741211,
+      "actual_pct_change": 0.9865457167005376,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": true,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
@@ -19664,7 +19664,9 @@
       "horizon_calls": {},
       "sector": "Communication Services",
       "etf": "XLC",
-      "rubric": "00_grounding/sectors/communication_services.md"
+      "rubric": "00_grounding/sectors/communication_services.md",
+      "spy_pct_change": 0.8524287494320992,
+      "rel_pct_change": 0.13411696726843836
     },
     {
       "date": "2026-09-11",
