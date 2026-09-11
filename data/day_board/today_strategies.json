@@ -1,6 +1,6 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11T05:58:47.274334-04:00",
+  "generated_at": "2026-09-11T06:02:29.279439-04:00",
   "n": 246,
   "n_ok": 246,
   "buy_1d": [
@@ -383,16 +383,18 @@
     },
     "flatten_robust": {
       "buy": [
-        "UGP",
-        "LBRT",
-        "CLB",
-        "OIS"
+        "OMER",
+        "CLYM",
+        "MTSI",
+        "NVT",
+        "STRL",
+        "KN"
       ],
       "sell": [],
       "sit": true,
       "status": "ok",
       "family": "flatten",
-      "date": "2026-09-10"
+      "date": "2026-09-11"
     },
     "union_h1": {
       "buy": [

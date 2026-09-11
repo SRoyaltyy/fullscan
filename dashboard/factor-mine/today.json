@@ -1,6 +1,6 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11T05:58:37.881383-04:00",
+  "generated_at": "2026-09-11T06:02:15.381942-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -57,7 +57,13 @@
       "score": -0.41391267917428054
     }
   ],
-  "flatten": {},
+  "flatten": {
+    "said": "0 priced buys \u00b7 cash $108,616.66",
+    "bullets": [
+      "0 priced buys",
+      "cash $108,616.66"
+    ]
+  },
   "general": {
     "said": "FLAT  0.5",
     "bullets": [
@@ -658,6 +664,151 @@
         }
       ],
       "preview": "5904 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, EXEL, SBLK, ARGX, NUTX"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-11T05:58:48.254761-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-11_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1458118,
+          "preview": "1d BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP"
+        },
+        {
+          "path": "data/stock_book/2026-09-11_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-11_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2472,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-11_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11920,
+          "preview": "2026-09-11 BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11920,
+          "preview": "2026-09-11 BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP"
+        },
+        {
+          "path": "01_daily/2026-09-11_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 79746,
+          "preview": "# Stock book \u2014 2026-09-11\n_Generated 2026-09-11T05:58:36.122963-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-11 BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP \u00b7 2026-09-11 BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP \u00b7 # Stock book \u2014 2026-09-11\n_Generated 2026-09-11T05:58:36.122963-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-09-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-11T05:58:50.757107-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 13476,
+          "preview": "2026-09-11 BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 633,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-11.json",
+          "ok": true,
+          "reason": "",
+          "size": 57087,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-11_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 34963,
+          "preview": "2026-09-11 BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 34963,
+          "preview": "2026-09-11 BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP"
+        }
+      ],
+      "preview": "2026-09-11 BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-11 BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP \u00b7 2026-09-11 BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP"
+    },
+    {
+      "key": "flatten",
+      "title": "Flatten live card",
+      "date": "2026-09-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-11T05:59:26.322178-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-09-11_flatten_card.md",
+          "ok": true,
+          "reason": "",
+          "size": 2011,
+          "preview": "# flatten_robust card \u2014 2026-09-11\n_Generated 2026-09-11T09:59:25 \u2014 live `flatten_robust`._\n**S=+0.50; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+0.50** (FLAT) \u00b7 route **io**\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Prior close **$108,616.66** \u00b7 09:30 **$108,616.66** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$108,616.66**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66**"
+        },
+        {
+          "path": "data/sleeve_merge/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 4071,
+          "preview": "2026-09-11 BUY \u2014 \u00b7 SELL \u2014"
+        },
+        {
+          "path": "data/sleeve_merge/daily_marks.json",
+          "ok": true,
+          "reason": "",
+          "size": 140480,
+          "preview": "[{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\""
+        },
+        {
+          "path": "data/sleeve_merge/equity_curve.csv",
+          "ok": true,
+          "reason": "",
+          "size": 3329,
+          "preview": "20 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19"
+        },
+        {
+          "path": "dashboard/sleeve-merge/index.html",
+          "ok": true,
+          "reason": "",
+          "size": 36951,
+          "preview": "<!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Combined sleeve \u2014 .io \u00d7 mover</title>\n<style>\n:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}\n*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}\nmain{max-width:1240px;margin:auto;padding:16px}h1,h2{margin:.4em 0}\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0}\n.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}\n.card b{display:block;font-size:22px;margin-top:4px}\n.muted{color:var(--muted)}a{color:#93c5fd}\n.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}\ntable{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}\nth,td{padding:7px 8"
+        }
+      ],
+      "preview": "# flatten_robust card \u2014 2026-09-11\n_Generated 2026-09-11T09:59:25 \u2014 live `flatten_robust`._\n**S=+0.50; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+0.50** (FLAT) \u00b7 route **io**\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Prior close **$108,616.66** \u00b7 09:30 **$108,616.66** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$108,616.66**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66** \u00b7 2026-09-11 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnig"
     }
   ],
   "source": "publish_live_boards"
