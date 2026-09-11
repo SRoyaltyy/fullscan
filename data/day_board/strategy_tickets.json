@@ -1,8 +1,8 @@
 {
-  "date": "2026-09-10",
-  "generated_at": "2026-09-10T13:05:21.750037-04:00",
+  "date": "2026-09-11",
+  "generated_at": "2026-09-11T05:59:02.291207-04:00",
   "n": 246,
-  "n_ok": 172,
+  "n_ok": 246,
   "families": [
     "factor_mine",
     "flatten",
@@ -13,7 +13,7 @@
     "stock_book_1d": {
       "name": "stock_book_1d",
       "family": "stock_book",
-      "date": "2026-09-10",
+      "date": "2026-09-11",
       "buy": [
         {
           "ticker": "AEHR",
@@ -71,7 +71,7 @@
     "1d_top": {
       "name": "1d_top",
       "family": "paper",
-      "date": "2026-09-10",
+      "date": "2026-09-11",
       "buy": [
         {
           "ticker": "AEHR",
@@ -129,7 +129,7 @@
     "stock_book_3d": {
       "name": "stock_book_3d",
       "family": "stock_book",
-      "date": "2026-09-10",
+      "date": "2026-09-11",
       "buy": [
         {
           "ticker": "UGP",
@@ -263,7 +263,7 @@
     "3d_top": {
       "name": "3d_top",
       "family": "paper",
-      "date": "2026-09-10",
+      "date": "2026-09-11",
       "buy": [
         {
           "ticker": "UGP",
@@ -397,7 +397,7 @@
     "stock_book_1w": {
       "name": "stock_book_1w",
       "family": "stock_book",
-      "date": "2026-09-10",
+      "date": "2026-09-11",
       "buy": [
         {
           "ticker": "UGP",
@@ -531,7 +531,7 @@
     "1w_top": {
       "name": "1w_top",
       "family": "paper",
-      "date": "2026-09-10",
+      "date": "2026-09-11",
       "buy": [
         {
           "ticker": "UGP",
@@ -665,7 +665,7 @@
     "stock_book_2w": {
       "name": "stock_book_2w",
       "family": "stock_book",
-      "date": "2026-09-10",
+      "date": "2026-09-11",
       "buy": [
         {
           "ticker": "UGP",
@@ -799,7 +799,7 @@
     "2w_top": {
       "name": "2w_top",
       "family": "paper",
-      "date": "2026-09-10",
+      "date": "2026-09-11",
       "buy": [
         {
           "ticker": "UGP",
@@ -933,7 +933,7 @@
     "stock_book_1m": {
       "name": "stock_book_1m",
       "family": "stock_book",
-      "date": "2026-09-10",
+      "date": "2026-09-11",
       "buy": [
         {
           "ticker": "UGP",
@@ -1067,7 +1067,7 @@
     "1m_top": {
       "name": "1m_top",
       "family": "paper",
-      "date": "2026-09-10",
+      "date": "2026-09-11",
       "buy": [
         {
           "ticker": "UGP",
@@ -1259,12 +1259,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h3": {
       "name": "union_h3",
@@ -1299,12 +1297,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h5": {
       "name": "union_h5",
@@ -1339,12 +1335,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_h1": {
       "name": "flatten_h1",
@@ -1373,12 +1367,10 @@
       "sell": [],
       "buy_n": 6,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_h3": {
       "name": "flatten_h3",
@@ -1407,12 +1399,10 @@
       "sell": [],
       "buy_n": 6,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_h5": {
       "name": "flatten_h5",
@@ -1441,12 +1431,10 @@
       "sell": [],
       "buy_n": 6,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "probable_h1": {
       "name": "probable_h1",
@@ -1481,12 +1469,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "probable_h3": {
       "name": "probable_h3",
@@ -1521,12 +1507,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "probable_h5": {
       "name": "probable_h5",
@@ -1561,12 +1545,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "yday_gainer_h1": {
       "name": "yday_gainer_h1",
@@ -1601,12 +1583,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "yday_gainer_h3": {
       "name": "yday_gainer_h3",
@@ -1641,12 +1621,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "yday_gainer_h5": {
       "name": "yday_gainer_h5",
@@ -1681,12 +1659,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "ohlc_hot_h1": {
       "name": "ohlc_hot_h1",
@@ -1721,12 +1697,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "ohlc_hot_h3": {
       "name": "ohlc_hot_h3",
@@ -1761,12 +1735,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "ohlc_hot_h5": {
       "name": "ohlc_hot_h5",
@@ -1801,12 +1773,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_vol_g_h1": {
       "name": "union_vol_g_h1",
@@ -1826,12 +1796,10 @@
       "sell": [],
       "buy_n": 3,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_vol_g_h3": {
       "name": "union_vol_g_h3",
@@ -1851,12 +1819,10 @@
       "sell": [],
       "buy_n": 3,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_vol_missing_h1": {
       "name": "union_vol_missing_h1",
@@ -1866,12 +1832,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_vol_missing_h3": {
       "name": "union_vol_missing_h3",
@@ -1881,12 +1845,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_ab_g_h1": {
       "name": "union_ab_g_h1",
@@ -1921,12 +1883,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_ab_g_h3": {
       "name": "union_ab_g_h3",
@@ -1961,12 +1921,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_join_g_h1": {
       "name": "union_join_g_h1",
@@ -2001,12 +1959,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_join_g_h3": {
       "name": "union_join_g_h3",
@@ -2041,12 +1997,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_join_present_h1": {
       "name": "union_join_present_h1",
@@ -2081,12 +2035,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_join_present_h3": {
       "name": "union_join_present_h3",
@@ -2121,12 +2073,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_news_g_h1": {
       "name": "union_news_g_h1",
@@ -2146,12 +2096,10 @@
       "sell": [],
       "buy_n": 3,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_news_g_h3": {
       "name": "union_news_g_h3",
@@ -2171,12 +2119,10 @@
       "sell": [],
       "buy_n": 3,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_news_present_h1": {
       "name": "union_news_present_h1",
@@ -2211,12 +2157,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_news_present_h3": {
       "name": "union_news_present_h3",
@@ -2251,12 +2195,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_news_missing_h1": {
       "name": "union_news_missing_h1",
@@ -2266,12 +2208,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_news_missing_h3": {
       "name": "union_news_missing_h3",
@@ -2281,12 +2221,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_catal_present_h1": {
       "name": "union_catal_present_h1",
@@ -2296,12 +2234,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_catal_present_h3": {
       "name": "union_catal_present_h3",
@@ -2311,12 +2247,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_blue_h1": {
       "name": "union_blue_h1",
@@ -2351,12 +2285,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_blue_h3": {
       "name": "union_blue_h3",
@@ -2391,12 +2323,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_white_h1": {
       "name": "union_white_h1",
@@ -2406,12 +2336,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_white_h3": {
       "name": "union_white_h3",
@@ -2421,12 +2349,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_last_green_h1": {
       "name": "union_last_green_h1",
@@ -2461,12 +2387,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_last_green_h3": {
       "name": "union_last_green_h3",
@@ -2501,12 +2425,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_last_red_h1": {
       "name": "union_last_red_h1",
@@ -2541,12 +2463,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_last_red_h3": {
       "name": "union_last_red_h3",
@@ -2581,12 +2501,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_candle_h1": {
       "name": "union_candle_h1",
@@ -2621,12 +2539,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_candle_h3": {
       "name": "union_candle_h3",
@@ -2661,12 +2577,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_coil_off_h1": {
       "name": "union_coil_off_h1",
@@ -2701,12 +2615,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_coil_off_h3": {
       "name": "union_coil_off_h3",
@@ -2741,12 +2653,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_earn_react_h1": {
       "name": "union_earn_react_h1",
@@ -2772,12 +2682,10 @@
       "sell": [],
       "buy_n": 5,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_earn_react_h3": {
       "name": "union_earn_react_h3",
@@ -2803,12 +2711,10 @@
       "sell": [],
       "buy_n": 5,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_e_fresh_h1": {
       "name": "union_e_fresh_h1",
@@ -2837,12 +2743,10 @@
       "sell": [],
       "buy_n": 6,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_e_fresh_h3": {
       "name": "union_e_fresh_h3",
@@ -2871,12 +2775,10 @@
       "sell": [],
       "buy_n": 6,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_r_up_h1": {
       "name": "union_r_up_h1",
@@ -2886,12 +2788,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_r_up_h3": {
       "name": "union_r_up_h3",
@@ -2901,12 +2801,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_break10_h1": {
       "name": "union_break10_h1",
@@ -2941,12 +2839,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_break10_h3": {
       "name": "union_break10_h3",
@@ -2981,12 +2877,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_vol_g_h5": {
       "name": "union_vol_g_h5",
@@ -3006,12 +2900,10 @@
       "sell": [],
       "buy_n": 3,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_coil_off_h5": {
       "name": "union_coil_off_h5",
@@ -3046,12 +2938,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_last_green_h5": {
       "name": "union_last_green_h5",
@@ -3086,12 +2976,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_news_g_h5": {
       "name": "union_news_g_h5",
@@ -3111,12 +2999,10 @@
       "sell": [],
       "buy_n": 3,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_white_h5": {
       "name": "union_white_h5",
@@ -3126,12 +3012,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_vol_ab_h1": {
       "name": "union_vol_ab_h1",
@@ -3145,12 +3029,10 @@
       "sell": [],
       "buy_n": 1,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_vol_ab_h3": {
       "name": "union_vol_ab_h3",
@@ -3164,12 +3046,10 @@
       "sell": [],
       "buy_n": 1,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_blue_vol_h1": {
       "name": "union_blue_vol_h1",
@@ -3179,12 +3059,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_blue_vol_h3": {
       "name": "union_blue_vol_h3",
@@ -3194,12 +3072,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_news_vol_h1": {
       "name": "union_news_vol_h1",
@@ -3209,12 +3085,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_news_vol_h3": {
       "name": "union_news_vol_h3",
@@ -3224,12 +3098,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_e_green_h1": {
       "name": "union_e_green_h1",
@@ -3243,12 +3115,10 @@
       "sell": [],
       "buy_n": 1,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_e_green_h3": {
       "name": "union_e_green_h3",
@@ -3262,12 +3132,10 @@
       "sell": [],
       "buy_n": 1,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "probable_probable_ok_h1": {
       "name": "probable_probable_ok_h1",
@@ -3284,12 +3152,10 @@
       "sell": [],
       "buy_n": 2,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "probable_probable_ok_h3": {
       "name": "probable_probable_ok_h3",
@@ -3306,12 +3172,10 @@
       "sell": [],
       "buy_n": 2,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_vol_green_h1": {
       "name": "union_vol_green_h1",
@@ -3325,12 +3189,10 @@
       "sell": [],
       "buy_n": 1,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_vol_green_h3": {
       "name": "union_vol_green_h3",
@@ -3344,12 +3206,10 @@
       "sell": [],
       "buy_n": 1,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_coil_green_h1": {
       "name": "union_coil_green_h1",
@@ -3384,12 +3244,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_coil_green_h3": {
       "name": "union_coil_green_h3",
@@ -3424,12 +3282,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_blue_coil_h1": {
       "name": "union_blue_coil_h1",
@@ -3464,12 +3320,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_blue_coil_h3": {
       "name": "union_blue_coil_h3",
@@ -3504,12 +3358,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_join_vol_green_h1": {
       "name": "union_join_vol_green_h1",
@@ -3519,12 +3371,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_join_vol_green_h3": {
       "name": "union_join_vol_green_h3",
@@ -3534,12 +3384,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_white_coil_h1": {
       "name": "union_white_coil_h1",
@@ -3549,12 +3397,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_white_coil_h3": {
       "name": "union_white_coil_h3",
@@ -3564,12 +3410,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_vol_g_h3": {
       "name": "flatten_vol_g_h3",
@@ -3579,12 +3423,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_live_h1": {
       "name": "flatten_live_h1",
@@ -3594,12 +3436,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_live_h3": {
       "name": "flatten_live_h3",
@@ -3609,12 +3449,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_live_h5": {
       "name": "flatten_live_h5",
@@ -3624,12 +3462,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "ohlc_hot_coil_h1": {
       "name": "ohlc_hot_coil_h1",
@@ -3652,12 +3488,10 @@
       "sell": [],
       "buy_n": 4,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_hot_score_h1": {
       "name": "union_hot_score_h1",
@@ -3692,12 +3526,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_hot_score_h3": {
       "name": "union_hot_score_h3",
@@ -3732,12 +3564,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_candle_score_h1": {
       "name": "union_candle_score_h1",
@@ -3772,12 +3602,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_candle_score_h3": {
       "name": "union_candle_score_h3",
@@ -3812,12 +3640,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_ret_5_h1": {
       "name": "union_ret_5_h1",
@@ -3852,12 +3678,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_ret_5_h3": {
       "name": "union_ret_5_h3",
@@ -3892,12 +3716,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_cond_h1": {
       "name": "union_cond_h1",
@@ -3932,12 +3754,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_cond_h3": {
       "name": "union_cond_h3",
@@ -3972,12 +3792,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_w_hot_cond_h1": {
       "name": "union_w_hot_cond_h1",
@@ -4012,12 +3830,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_w_hot_cond_h3": {
       "name": "union_w_hot_cond_h3",
@@ -4052,12 +3868,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_w_hot_candle_h1": {
       "name": "union_w_hot_candle_h1",
@@ -4092,12 +3906,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_w_hot_candle_h3": {
       "name": "union_w_hot_candle_h3",
@@ -4132,12 +3944,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_hot_n4_h1": {
       "name": "union_hot_n4_h1",
@@ -4160,12 +3970,10 @@
       "sell": [],
       "buy_n": 4,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_hot_n12_h1": {
       "name": "union_hot_n12_h1",
@@ -4212,12 +4020,10 @@
       "sell": [],
       "buy_n": 12,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_cond_n4_h3": {
       "name": "union_cond_n4_h3",
@@ -4240,12 +4046,10 @@
       "sell": [],
       "buy_n": 4,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h3_exit_alarm": {
       "name": "union_h3_exit_alarm",
@@ -4280,12 +4084,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h5_exit_alarm": {
       "name": "union_h5_exit_alarm",
@@ -4320,12 +4122,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h3_exit_red": {
       "name": "union_h3_exit_red",
@@ -4360,12 +4160,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h3_exit_news_r": {
       "name": "union_h3_exit_news_r",
@@ -4400,12 +4198,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "coil_h3_exit_alarm": {
       "name": "coil_h3_exit_alarm",
@@ -4440,12 +4236,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "short_alarm_h1": {
       "name": "short_alarm_h1",
@@ -4480,12 +4274,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "short_alarm_h3": {
       "name": "short_alarm_h3",
@@ -4520,12 +4312,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "short_news_r_h1": {
       "name": "short_news_r_h1",
@@ -4535,12 +4325,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "short_news_r_h3": {
       "name": "short_news_r_h3",
@@ -4550,12 +4338,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "short_r_down_h1": {
       "name": "short_r_down_h1",
@@ -4565,12 +4351,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "short_r_down_h3": {
       "name": "short_r_down_h3",
@@ -4580,12 +4364,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "short_extended_h1": {
       "name": "short_extended_h1",
@@ -4620,12 +4402,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "short_extended_h3": {
       "name": "short_extended_h3",
@@ -4660,12 +4440,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "short_last_red_h1": {
       "name": "short_last_red_h1",
@@ -4700,12 +4478,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "short_last_red_h3": {
       "name": "short_last_red_h3",
@@ -4740,12 +4516,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_h5_rankw": {
       "name": "flatten_h5_rankw",
@@ -4774,12 +4548,10 @@
       "sell": [],
       "buy_n": 6,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_h5_topheavy": {
       "name": "flatten_h5_topheavy",
@@ -4808,12 +4580,10 @@
       "sell": [],
       "buy_n": 6,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_h5_half": {
       "name": "flatten_h5_half",
@@ -4842,12 +4612,10 @@
       "sell": [],
       "buy_n": 6,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_h5_time": {
       "name": "flatten_h5_time",
@@ -4876,12 +4644,10 @@
       "sell": [],
       "buy_n": 6,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_h5_cut": {
       "name": "flatten_h5_cut",
@@ -4910,12 +4676,10 @@
       "sell": [],
       "buy_n": 6,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_h5_trail": {
       "name": "flatten_h5_trail",
@@ -4944,12 +4708,10 @@
       "sell": [],
       "buy_n": 6,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_h5_sboost": {
       "name": "flatten_h5_sboost",
@@ -4978,12 +4740,10 @@
       "sell": [],
       "buy_n": 6,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_h5_sizeup": {
       "name": "flatten_h5_sizeup",
@@ -5012,12 +4772,10 @@
       "sell": [],
       "buy_n": 6,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_h3_rankw": {
       "name": "flatten_h3_rankw",
@@ -5046,12 +4804,10 @@
       "sell": [],
       "buy_n": 6,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_h3_topheavy": {
       "name": "flatten_h3_topheavy",
@@ -5080,12 +4836,10 @@
       "sell": [],
       "buy_n": 6,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_h3_half": {
       "name": "flatten_h3_half",
@@ -5114,12 +4868,10 @@
       "sell": [],
       "buy_n": 6,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_h3_time": {
       "name": "flatten_h3_time",
@@ -5148,12 +4900,10 @@
       "sell": [],
       "buy_n": 6,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_h3_cut": {
       "name": "flatten_h3_cut",
@@ -5182,12 +4932,10 @@
       "sell": [],
       "buy_n": 6,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_h3_trail": {
       "name": "flatten_h3_trail",
@@ -5216,12 +4964,10 @@
       "sell": [],
       "buy_n": 6,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_h3_sboost": {
       "name": "flatten_h3_sboost",
@@ -5250,12 +4996,10 @@
       "sell": [],
       "buy_n": 6,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_h3_sizeup": {
       "name": "flatten_h3_sizeup",
@@ -5284,12 +5028,10 @@
       "sell": [],
       "buy_n": 6,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_live_h1_rankw": {
       "name": "flatten_live_h1_rankw",
@@ -5299,12 +5041,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_live_h1_topheavy": {
       "name": "flatten_live_h1_topheavy",
@@ -5314,12 +5054,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_live_h1_half": {
       "name": "flatten_live_h1_half",
@@ -5329,12 +5067,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_live_h1_time": {
       "name": "flatten_live_h1_time",
@@ -5344,12 +5080,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_live_h1_cut": {
       "name": "flatten_live_h1_cut",
@@ -5359,12 +5093,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_live_h1_trail": {
       "name": "flatten_live_h1_trail",
@@ -5374,12 +5106,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_live_h1_sboost": {
       "name": "flatten_live_h1_sboost",
@@ -5389,12 +5119,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "flatten_live_h1_sizeup": {
       "name": "flatten_live_h1_sizeup",
@@ -5404,12 +5132,10 @@
       "sell": [],
       "buy_n": 0,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h5_rankw": {
       "name": "union_h5_rankw",
@@ -5444,12 +5170,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h5_topheavy": {
       "name": "union_h5_topheavy",
@@ -5484,12 +5208,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h5_half": {
       "name": "union_h5_half",
@@ -5524,12 +5246,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h5_time": {
       "name": "union_h5_time",
@@ -5564,12 +5284,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h5_cut": {
       "name": "union_h5_cut",
@@ -5604,12 +5322,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h5_trail": {
       "name": "union_h5_trail",
@@ -5644,12 +5360,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h5_sboost": {
       "name": "union_h5_sboost",
@@ -5684,12 +5398,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h5_sizeup": {
       "name": "union_h5_sizeup",
@@ -5724,12 +5436,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h3_rankw": {
       "name": "union_h3_rankw",
@@ -5764,12 +5474,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h3_topheavy": {
       "name": "union_h3_topheavy",
@@ -5804,12 +5512,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h3_half": {
       "name": "union_h3_half",
@@ -5844,12 +5550,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h3_time": {
       "name": "union_h3_time",
@@ -5884,12 +5588,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h3_cut": {
       "name": "union_h3_cut",
@@ -5924,12 +5626,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h3_trail": {
       "name": "union_h3_trail",
@@ -5964,12 +5664,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h3_sboost": {
       "name": "union_h3_sboost",
@@ -6004,12 +5702,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h3_sizeup": {
       "name": "union_h3_sizeup",
@@ -6044,12 +5740,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h1_rankw": {
       "name": "union_h1_rankw",
@@ -6084,12 +5778,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h1_topheavy": {
       "name": "union_h1_topheavy",
@@ -6124,12 +5816,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h1_half": {
       "name": "union_h1_half",
@@ -6164,12 +5854,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h1_time": {
       "name": "union_h1_time",
@@ -6204,12 +5892,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h1_cut": {
       "name": "union_h1_cut",
@@ -6244,12 +5930,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h1_trail": {
       "name": "union_h1_trail",
@@ -6284,12 +5968,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h1_sboost": {
       "name": "union_h1_sboost",
@@ -6324,12 +6006,10 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
     "union_h1_sizeup": {
       "name": "union_h1_sizeup",
@@ -6364,396 +6044,855 @@
       "sell": [],
       "buy_n": 8,
       "sell_n": 0,
-      "sit": true,
-      "status": "sit",
-      "why": "S=-13.275",
-      "hard_red": true,
-      "s": -13.275,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "would-buy at 09:30; sells need cash-book lots \u00b7 panel 2026-09-09"
     },
-    "combo_en_3070_shared": {
-      "name": "combo_en_3070_shared",
+    "combo_seh_333_shared": {
+      "name": "combo_seh_333_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 10,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
-    "combo_ehs_601525_shared": {
-      "name": "combo_ehs_601525_shared",
+    "combo_seh_333_split": {
+      "name": "combo_seh_333_split",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 10,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_sh_7030_shared": {
-      "name": "combo_sh_7030_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_se_5050_weather": {
-      "name": "combo_se_5050_weather",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_eh_3070_shared": {
-      "name": "combo_eh_3070_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_ser_5050_shared": {
-      "name": "combo_ser_5050_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_sn_3070_shared": {
-      "name": "combo_sn_3070_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_fse_333_shared": {
-      "name": "combo_fse_333_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_ers_7030_shared": {
-      "name": "combo_ers_7030_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
     "combo_seh_502525_shared": {
       "name": "combo_seh_502525_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 10,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
-    "combo_he1_5050_shared": {
-      "name": "combo_he1_5050_shared",
+    "combo_seh_502525_split": {
+      "name": "combo_seh_502525_split",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 10,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_se_5050_skip": {
-      "name": "combo_se_5050_skip",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_seh_403525_shared": {
-      "name": "combo_seh_403525_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_en_7030_shared": {
-      "name": "combo_en_7030_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_e1er_5050_shared": {
-      "name": "combo_e1er_5050_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_ehs_702010_shared": {
-      "name": "combo_ehs_702010_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_ej_5050_shared": {
-      "name": "combo_ej_5050_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_se_3070_shared": {
-      "name": "combo_se_3070_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_nf_5050_shared": {
-      "name": "combo_nf_5050_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_jf_5050_shared": {
-      "name": "combo_jf_5050_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_hj_5050_shared": {
-      "name": "combo_hj_5050_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_ee1_3070_shared": {
-      "name": "combo_ee1_3070_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_ee1_7030_shared": {
-      "name": "combo_ee1_7030_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_ee1_5050_shared": {
-      "name": "combo_ee1_5050_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_snj_333_shared": {
-      "name": "combo_snj_333_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_eh_5050_shared": {
-      "name": "combo_eh_5050_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_seh_333_weather": {
-      "name": "combo_seh_333_weather",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_sf_7030_shared": {
-      "name": "combo_sf_7030_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_sj_3070_shared": {
-      "name": "combo_sj_3070_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_je1_5050_shared": {
-      "name": "combo_je1_5050_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_sf_5050_shared": {
-      "name": "combo_sf_5050_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
     "combo_seh_404020_shared": {
       "name": "combo_seh_404020_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 10,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_seh_403525_shared": {
+      "name": "combo_seh_403525_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        }
+      ],
+      "sell": [],
+      "buy_n": 10,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_seh_451540_shared": {
+      "name": "combo_seh_451540_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        }
+      ],
+      "sell": [],
+      "buy_n": 10,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_seh_601525_shared": {
+      "name": "combo_seh_601525_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        }
+      ],
+      "sell": [],
+      "buy_n": 10,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_se_5050_shared": {
+      "name": "combo_se_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_se_7030_shared": {
+      "name": "combo_se_7030_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_eh_5050_shared": {
+      "name": "combo_eh_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        }
+      ],
+      "sell": [],
+      "buy_n": 10,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_sh_5050_shared": {
+      "name": "combo_sh_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        }
+      ],
+      "sell": [],
+      "buy_n": 4,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_se_5050_skip": {
+      "name": "combo_se_5050_skip",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_seh_333_skip": {
+      "name": "combo_seh_333_skip",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        }
+      ],
+      "sell": [],
+      "buy_n": 10,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_seh_333_weather": {
+      "name": "combo_seh_333_weather",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        }
+      ],
+      "sell": [],
+      "buy_n": 10,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_se_5050_weather": {
+      "name": "combo_se_5050_weather",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_se_5050_split": {
+      "name": "combo_se_5050_split",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_es_8020_shared": {
+      "name": "combo_es_8020_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_es_9010_shared": {
+      "name": "combo_es_9010_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_ehs_702010_shared": {
+      "name": "combo_ehs_702010_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        }
+      ],
+      "sell": [],
+      "buy_n": 10,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_ehs_601525_shared": {
+      "name": "combo_ehs_601525_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        }
+      ],
+      "sell": [],
+      "buy_n": 10,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_sn_5050_shared": {
+      "name": "combo_sn_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "DFDV"
+        },
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "TH"
+        }
+      ],
+      "sell": [],
+      "buy_n": 3,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
     "combo_sj_5050_shared": {
       "name": "combo_sj_5050_shared",
@@ -6764,380 +6903,1413 @@
       "buy_n": 0,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
-    "combo_sn_5050_shared": {
-      "name": "combo_sn_5050_shared",
+    "combo_sf_5050_shared": {
+      "name": "combo_sf_5050_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 6,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
-    "combo_seh_601525_shared": {
-      "name": "combo_seh_601525_shared",
+    "combo_snj_333_shared": {
+      "name": "combo_snj_333_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "DFDV"
+        },
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "TH"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 3,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
-    "combo_fe_5050_shared": {
-      "name": "combo_fe_5050_shared",
+    "combo_nse_333_shared": {
+      "name": "combo_nse_333_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "DFDV"
+        },
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "TH"
+        },
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 9,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_nj_5050_shared": {
-      "name": "combo_nj_5050_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_jer_5050_shared": {
-      "name": "combo_jer_5050_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_her_5050_shared": {
-      "name": "combo_her_5050_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_ne1_5050_shared": {
-      "name": "combo_ne1_5050_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_fh_7030_shared": {
-      "name": "combo_fh_7030_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_eer_5050_shared": {
-      "name": "combo_eer_5050_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_sn_7030_shared": {
-      "name": "combo_sn_7030_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_fer_5050_shared": {
-      "name": "combo_fer_5050_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_hn_7030_shared": {
-      "name": "combo_hn_7030_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_se1_5050_shared": {
-      "name": "combo_se1_5050_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
     "combo_jse_333_shared": {
       "name": "combo_jse_333_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 6,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
-    "combo_ef_5050_shared": {
-      "name": "combo_ef_5050_shared",
+    "combo_fse_333_shared": {
+      "name": "combo_fse_333_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 12,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
-    "combo_sf_3070_shared": {
-      "name": "combo_sf_3070_shared",
+    "combo_e1s_7030_shared": {
+      "name": "combo_e1s_7030_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 6,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
-    "combo_hn_3070_shared": {
-      "name": "combo_hn_3070_shared",
+    "combo_ers_7030_shared": {
+      "name": "combo_ers_7030_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 5,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_seh_333_skip": {
-      "name": "combo_seh_333_skip",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_fes_403030_shared": {
-      "name": "combo_fes_403030_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
-    },
-    "combo_seh_451540_shared": {
-      "name": "combo_seh_451540_shared",
-      "family": "factor_mine",
-      "date": "2026-09-09",
-      "buy": [],
-      "sell": [],
-      "buy_n": 0,
-      "sell_n": 0,
-      "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
     "combo_eh_7030_shared": {
       "name": "combo_eh_7030_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 10,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
-    "combo_es_8020_shared": {
-      "name": "combo_es_8020_shared",
+    "combo_fh_7030_shared": {
+      "name": "combo_fh_7030_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 10,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
-    "combo_es_9010_shared": {
-      "name": "combo_es_9010_shared",
+    "combo_fe_5050_shared": {
+      "name": "combo_fe_5050_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 12,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
-    "combo_sh_5050_shared": {
-      "name": "combo_sh_5050_shared",
+    "combo_fes_403030_shared": {
+      "name": "combo_fes_403030_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 12,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
-    "combo_seh_502525_split": {
-      "name": "combo_seh_502525_split",
+    "combo_se1_5050_shared": {
+      "name": "combo_se1_5050_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 6,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
-    "combo_hf_5050_shared": {
-      "name": "combo_hf_5050_shared",
+    "combo_ser_5050_shared": {
+      "name": "combo_ser_5050_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 5,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
     "combo_en_5050_shared": {
       "name": "combo_en_5050_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        },
+        {
+          "ticker": "DFDV"
+        },
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "TH"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 9,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
-    "combo_ner_5050_shared": {
-      "name": "combo_ner_5050_shared",
+    "combo_ej_5050_shared": {
+      "name": "combo_ej_5050_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 6,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_ef_5050_shared": {
+      "name": "combo_ef_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        },
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 12,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_ee1_5050_shared": {
+      "name": "combo_ee1_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_eer_5050_shared": {
+      "name": "combo_eer_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
     "combo_hn_5050_shared": {
       "name": "combo_hn_5050_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        },
+        {
+          "ticker": "DFDV"
+        },
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "TH"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 7,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_hj_5050_shared": {
+      "name": "combo_hj_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        }
+      ],
+      "sell": [],
+      "buy_n": 4,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_hf_5050_shared": {
+      "name": "combo_hf_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        },
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 10,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_he1_5050_shared": {
+      "name": "combo_he1_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        },
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
+      "sell": [],
+      "buy_n": 10,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_her_5050_shared": {
+      "name": "combo_her_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
+      "sell": [],
+      "buy_n": 9,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_nj_5050_shared": {
+      "name": "combo_nj_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "DFDV"
+        },
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "TH"
+        }
+      ],
+      "sell": [],
+      "buy_n": 3,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_nf_5050_shared": {
+      "name": "combo_nf_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "DFDV"
+        },
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "TH"
+        },
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 9,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_ne1_5050_shared": {
+      "name": "combo_ne1_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "DFDV"
+        },
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "TH"
+        },
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
+      "sell": [],
+      "buy_n": 9,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_ner_5050_shared": {
+      "name": "combo_ner_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "DFDV"
+        },
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "TH"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
+      "sell": [],
+      "buy_n": 8,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_jf_5050_shared": {
+      "name": "combo_jf_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_je1_5050_shared": {
+      "name": "combo_je1_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_jer_5050_shared": {
+      "name": "combo_jer_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
+      "sell": [],
+      "buy_n": 5,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
     "combo_fe1_5050_shared": {
       "name": "combo_fe1_5050_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 12,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
-    "combo_se_7030_shared": {
-      "name": "combo_se_7030_shared",
+    "combo_fer_5050_shared": {
+      "name": "combo_fer_5050_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 11,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_e1er_5050_shared": {
+      "name": "combo_e1er_5050_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_se_3070_shared": {
+      "name": "combo_se_3070_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
+      "sell": [],
+      "buy_n": 6,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_sh_7030_shared": {
+      "name": "combo_sh_7030_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        }
+      ],
+      "sell": [],
+      "buy_n": 4,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_sh_3070_shared": {
+      "name": "combo_sh_3070_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        }
+      ],
+      "sell": [],
+      "buy_n": 4,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_eh_3070_shared": {
+      "name": "combo_eh_3070_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        },
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        }
+      ],
+      "sell": [],
+      "buy_n": 10,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_sn_7030_shared": {
+      "name": "combo_sn_7030_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "DFDV"
+        },
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "TH"
+        }
+      ],
+      "sell": [],
+      "buy_n": 3,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_sn_3070_shared": {
+      "name": "combo_sn_3070_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "DFDV"
+        },
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "TH"
+        }
+      ],
+      "sell": [],
+      "buy_n": 3,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
     "combo_sj_7030_shared": {
       "name": "combo_sj_7030_shared",
@@ -7148,11 +8320,12 @@
       "buy_n": 0,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
-    "combo_sh_3070_shared": {
-      "name": "combo_sh_3070_shared",
+    "combo_sj_3070_shared": {
+      "name": "combo_sj_3070_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
       "buy": [],
@@ -7160,104 +8333,389 @@
       "buy_n": 0,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
-    "combo_nse_333_shared": {
-      "name": "combo_nse_333_shared",
+    "combo_sf_7030_shared": {
+      "name": "combo_sf_7030_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 6,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
-    "combo_e1s_7030_shared": {
-      "name": "combo_e1s_7030_shared",
+    "combo_sf_3070_shared": {
+      "name": "combo_sf_3070_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 6,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_en_7030_shared": {
+      "name": "combo_en_7030_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        },
+        {
+          "ticker": "DFDV"
+        },
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "TH"
+        }
+      ],
+      "sell": [],
+      "buy_n": 9,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
+    },
+    "combo_en_3070_shared": {
+      "name": "combo_en_3070_shared",
+      "family": "factor_mine",
+      "date": "2026-09-09",
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        },
+        {
+          "ticker": "DFDV"
+        },
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "TH"
+        }
+      ],
+      "sell": [],
+      "buy_n": 9,
+      "sell_n": 0,
+      "sit": false,
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
     "combo_ef_7030_shared": {
       "name": "combo_ef_7030_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        },
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 12,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
     "combo_ef_3070_shared": {
       "name": "combo_ef_3070_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        },
+        {
+          "ticker": "PCG"
+        },
+        {
+          "ticker": "AR"
+        },
+        {
+          "ticker": "CIG"
+        },
+        {
+          "ticker": "UGP"
+        },
+        {
+          "ticker": "VET"
+        },
+        {
+          "ticker": "GRNT"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 12,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
-    "combo_seh_333_shared": {
-      "name": "combo_seh_333_shared",
+    "combo_hn_7030_shared": {
+      "name": "combo_hn_7030_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        },
+        {
+          "ticker": "DFDV"
+        },
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "TH"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 7,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
-    "combo_se_5050_split": {
-      "name": "combo_se_5050_split",
+    "combo_hn_3070_shared": {
+      "name": "combo_hn_3070_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "INDP"
+        },
+        {
+          "ticker": "CRWV"
+        },
+        {
+          "ticker": "INTC"
+        },
+        {
+          "ticker": "UROY"
+        },
+        {
+          "ticker": "DFDV"
+        },
+        {
+          "ticker": "LITE"
+        },
+        {
+          "ticker": "TH"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 7,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
-    "combo_seh_333_split": {
-      "name": "combo_seh_333_split",
+    "combo_ee1_7030_shared": {
+      "name": "combo_ee1_7030_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 6,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     },
-    "combo_se_5050_shared": {
-      "name": "combo_se_5050_shared",
+    "combo_ee1_3070_shared": {
+      "name": "combo_ee1_3070_shared",
       "family": "factor_mine",
       "date": "2026-09-09",
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "ABM"
+        },
+        {
+          "ticker": "ASO"
+        },
+        {
+          "ticker": "AVO"
+        },
+        {
+          "ticker": "OCC"
+        },
+        {
+          "ticker": "SAIL"
+        },
+        {
+          "ticker": "TTAN"
+        }
+      ],
       "sell": [],
-      "buy_n": 0,
+      "buy_n": 6,
       "sell_n": 0,
       "sit": false,
-      "status": "combo_needs_mine",
-      "note": "combo pile needs the cash-book roll"
+      "status": "stale_panel",
+      "s": 0.5,
+      "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 panel 2026-09-09"
     }
   },
   "order": [
@@ -7433,80 +8891,80 @@
     "union_h1_trail",
     "union_h1_sboost",
     "union_h1_sizeup",
-    "combo_en_3070_shared",
-    "combo_ehs_601525_shared",
-    "combo_sh_7030_shared",
-    "combo_se_5050_weather",
-    "combo_eh_3070_shared",
-    "combo_ser_5050_shared",
-    "combo_sn_3070_shared",
-    "combo_fse_333_shared",
-    "combo_ers_7030_shared",
+    "combo_seh_333_shared",
+    "combo_seh_333_split",
     "combo_seh_502525_shared",
-    "combo_he1_5050_shared",
-    "combo_se_5050_skip",
-    "combo_seh_403525_shared",
-    "combo_en_7030_shared",
-    "combo_e1er_5050_shared",
-    "combo_ehs_702010_shared",
-    "combo_ej_5050_shared",
-    "combo_se_3070_shared",
-    "combo_nf_5050_shared",
-    "combo_jf_5050_shared",
-    "combo_hj_5050_shared",
-    "combo_ee1_3070_shared",
-    "combo_ee1_7030_shared",
-    "combo_ee1_5050_shared",
-    "combo_snj_333_shared",
-    "combo_eh_5050_shared",
-    "combo_seh_333_weather",
-    "combo_sf_7030_shared",
-    "combo_sj_3070_shared",
-    "combo_je1_5050_shared",
-    "combo_sf_5050_shared",
+    "combo_seh_502525_split",
     "combo_seh_404020_shared",
-    "combo_sj_5050_shared",
-    "combo_sn_5050_shared",
-    "combo_seh_601525_shared",
-    "combo_fe_5050_shared",
-    "combo_nj_5050_shared",
-    "combo_jer_5050_shared",
-    "combo_her_5050_shared",
-    "combo_ne1_5050_shared",
-    "combo_fh_7030_shared",
-    "combo_eer_5050_shared",
-    "combo_sn_7030_shared",
-    "combo_fer_5050_shared",
-    "combo_hn_7030_shared",
-    "combo_se1_5050_shared",
-    "combo_jse_333_shared",
-    "combo_ef_5050_shared",
-    "combo_sf_3070_shared",
-    "combo_hn_3070_shared",
-    "combo_seh_333_skip",
-    "combo_fes_403030_shared",
+    "combo_seh_403525_shared",
     "combo_seh_451540_shared",
-    "combo_eh_7030_shared",
+    "combo_seh_601525_shared",
+    "combo_se_5050_shared",
+    "combo_se_7030_shared",
+    "combo_eh_5050_shared",
+    "combo_sh_5050_shared",
+    "combo_se_5050_skip",
+    "combo_seh_333_skip",
+    "combo_seh_333_weather",
+    "combo_se_5050_weather",
+    "combo_se_5050_split",
     "combo_es_8020_shared",
     "combo_es_9010_shared",
-    "combo_sh_5050_shared",
-    "combo_seh_502525_split",
-    "combo_hf_5050_shared",
-    "combo_en_5050_shared",
-    "combo_ner_5050_shared",
-    "combo_hn_5050_shared",
-    "combo_fe1_5050_shared",
-    "combo_se_7030_shared",
-    "combo_sj_7030_shared",
-    "combo_sh_3070_shared",
+    "combo_ehs_702010_shared",
+    "combo_ehs_601525_shared",
+    "combo_sn_5050_shared",
+    "combo_sj_5050_shared",
+    "combo_sf_5050_shared",
+    "combo_snj_333_shared",
     "combo_nse_333_shared",
+    "combo_jse_333_shared",
+    "combo_fse_333_shared",
     "combo_e1s_7030_shared",
+    "combo_ers_7030_shared",
+    "combo_eh_7030_shared",
+    "combo_fh_7030_shared",
+    "combo_fe_5050_shared",
+    "combo_fes_403030_shared",
+    "combo_se1_5050_shared",
+    "combo_ser_5050_shared",
+    "combo_en_5050_shared",
+    "combo_ej_5050_shared",
+    "combo_ef_5050_shared",
+    "combo_ee1_5050_shared",
+    "combo_eer_5050_shared",
+    "combo_hn_5050_shared",
+    "combo_hj_5050_shared",
+    "combo_hf_5050_shared",
+    "combo_he1_5050_shared",
+    "combo_her_5050_shared",
+    "combo_nj_5050_shared",
+    "combo_nf_5050_shared",
+    "combo_ne1_5050_shared",
+    "combo_ner_5050_shared",
+    "combo_jf_5050_shared",
+    "combo_je1_5050_shared",
+    "combo_jer_5050_shared",
+    "combo_fe1_5050_shared",
+    "combo_fer_5050_shared",
+    "combo_e1er_5050_shared",
+    "combo_se_3070_shared",
+    "combo_sh_7030_shared",
+    "combo_sh_3070_shared",
+    "combo_eh_3070_shared",
+    "combo_sn_7030_shared",
+    "combo_sn_3070_shared",
+    "combo_sj_7030_shared",
+    "combo_sj_3070_shared",
+    "combo_sf_7030_shared",
+    "combo_sf_3070_shared",
+    "combo_en_7030_shared",
+    "combo_en_3070_shared",
     "combo_ef_7030_shared",
     "combo_ef_3070_shared",
-    "combo_seh_333_shared",
-    "combo_se_5050_split",
-    "combo_seh_333_split",
-    "combo_se_5050_shared"
+    "combo_hn_7030_shared",
+    "combo_hn_3070_shared",
+    "combo_ee1_7030_shared",
+    "combo_ee1_3070_shared"
   ],
   "errors": [],
   "source": "strategy_tickets"

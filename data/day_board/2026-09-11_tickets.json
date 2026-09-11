@@ -1,62 +1,16 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11T05:58:37.881383-04:00",
+  "generated_at": "2026-09-11T05:58:48.278888-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 7,
-    "partial": 0,
+    "ok": 5,
+    "partial": 2,
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [
-    {
-      "ticker": "NVT",
-      "score": 0.47466039853962005
-    },
-    {
-      "ticker": "NEOV",
-      "score": 0.4253060519337339
-    },
-    {
-      "ticker": "KN",
-      "score": 0.6696168023430558
-    }
-  ],
-  "sell_1d": [
-    {
-      "ticker": "LUCD",
-      "score": -0.10900530284749078
-    },
-    {
-      "ticker": "XPOF",
-      "score": -0.5119916169543962
-    },
-    {
-      "ticker": "RXST",
-      "score": -0.08463330887530396
-    },
-    {
-      "ticker": "TDTH",
-      "score": -0.12017878665346331
-    },
-    {
-      "ticker": "AMC",
-      "score": -0.12754011352346484
-    },
-    {
-      "ticker": "AHCO",
-      "score": -0.16865552850521703
-    },
-    {
-      "ticker": "APLD",
-      "score": 0.0006086392362707332
-    },
-    {
-      "ticker": "TRIP",
-      "score": -0.41391267917428054
-    }
-  ],
+  "buy_1d": [],
+  "sell_1d": [],
   "flatten": {},
   "general": {
     "said": "FLAT  0.5",
@@ -615,49 +569,6 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc \u00b7 # Pre-open ALL status \u2014 2026-09-11\nall_ok=False  qc_all_ok=True  book_ok=False  grok_ok=False  missing=none\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 0\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
-    },
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-09-11",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-11T05:58:23.603306-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-09-11_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9889,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 0.0, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Communication Services={'score': 2.25, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -2.25, 'dir': 'down', 'conf': 0.5, 'source': 'llm'}, Consumer Defensive={'score': 1.35, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Energy={'score': -3.375, 'dir': 'down', 'conf': 0.52, 'source': 'llm'}, Financial={'score': 0.225, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Healthcare={'score': 0.9, 'dir': 'flat', 'conf': 0.52, 'source': 'llm'}, Industrials={'score': 4.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}"
-        },
-        {
-          "path": "01_daily/weather/2026-09-11_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5538,
-          "preview": "# Weather report \u2014 2026-09-11\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 0.0, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Communication Services={'score': 2.25, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -2.25, 'dir': 'down', 'conf': 0.5, 'source': 'llm'}, Consumer Defensive={'score': 1.35, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Energy={'score': -3.375, 'dir': 'down', 'conf': 0.52, 'source': 'llm'}, Financial={'score': 0.225, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Healthcare={'score': 0.9, 'dir': 'flat', 'conf': 0.52, 'source': 'llm'}, Industrials={'score': 4.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-11\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-09-11",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-11T05:58:26.375647-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-09-11_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2252720,
-          "preview": "5904 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, EXEL, SBLK, ARGX, NUTX"
-        }
-      ],
-      "preview": "5904 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, EXEL, SBLK, ARGX, NUTX"
     }
   ],
   "source": "publish_live_boards"

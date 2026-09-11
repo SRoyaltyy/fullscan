@@ -1,8 +1,8 @@
 {
-  "date": "2026-09-10",
-  "generated_at": "2026-09-10T13:05:21.750037-04:00",
+  "date": "2026-09-11",
+  "generated_at": "2026-09-11T05:59:02.291207-04:00",
   "n": 246,
-  "n_ok": 172,
+  "n_ok": 246,
   "buy_1d": [
     "AEHR"
   ],
@@ -38,7 +38,7 @@
       "sit": false,
       "status": "ok",
       "family": "stock_book",
-      "date": "2026-09-10"
+      "date": "2026-09-11"
     },
     "1d_top": {
       "buy": [
@@ -59,7 +59,7 @@
       "sit": false,
       "status": "ok",
       "family": "paper",
-      "date": "2026-09-10"
+      "date": "2026-09-11"
     },
     "stock_book_3d": {
       "buy": [
@@ -99,7 +99,7 @@
       "sit": false,
       "status": "ok",
       "family": "stock_book",
-      "date": "2026-09-10"
+      "date": "2026-09-11"
     },
     "3d_top": {
       "buy": [
@@ -139,7 +139,7 @@
       "sit": false,
       "status": "ok",
       "family": "paper",
-      "date": "2026-09-10"
+      "date": "2026-09-11"
     },
     "stock_book_1w": {
       "buy": [
@@ -179,7 +179,7 @@
       "sit": false,
       "status": "ok",
       "family": "stock_book",
-      "date": "2026-09-10"
+      "date": "2026-09-11"
     },
     "1w_top": {
       "buy": [
@@ -219,7 +219,7 @@
       "sit": false,
       "status": "ok",
       "family": "paper",
-      "date": "2026-09-10"
+      "date": "2026-09-11"
     },
     "stock_book_2w": {
       "buy": [
@@ -259,7 +259,7 @@
       "sit": false,
       "status": "ok",
       "family": "stock_book",
-      "date": "2026-09-10"
+      "date": "2026-09-11"
     },
     "2w_top": {
       "buy": [
@@ -299,7 +299,7 @@
       "sit": false,
       "status": "ok",
       "family": "paper",
-      "date": "2026-09-10"
+      "date": "2026-09-11"
     },
     "stock_book_1m": {
       "buy": [
@@ -339,7 +339,7 @@
       "sit": false,
       "status": "ok",
       "family": "stock_book",
-      "date": "2026-09-10"
+      "date": "2026-09-11"
     },
     "1m_top": {
       "buy": [
@@ -379,7 +379,7 @@
       "sit": false,
       "status": "ok",
       "family": "paper",
-      "date": "2026-09-10"
+      "date": "2026-09-11"
     },
     "flatten_robust": {
       "buy": [
@@ -406,8 +406,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -423,8 +423,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -440,8 +440,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -455,8 +455,8 @@
         "GRNT"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -470,8 +470,8 @@
         "GRNT"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -485,8 +485,8 @@
         "GRNT"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -502,8 +502,8 @@
         "SARO"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -519,8 +519,8 @@
         "SARO"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -536,8 +536,8 @@
         "SARO"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -553,8 +553,8 @@
         "SARO"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -570,8 +570,8 @@
         "SARO"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -587,8 +587,8 @@
         "SARO"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -604,8 +604,8 @@
         "SKHY"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -621,8 +621,8 @@
         "SKHY"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -638,8 +638,8 @@
         "SKHY"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -650,8 +650,8 @@
         "BIDU"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -662,24 +662,24 @@
         "BIDU"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "union_vol_missing_h1": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "union_vol_missing_h3": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -695,8 +695,8 @@
         "HAS"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -712,8 +712,8 @@
         "HAS"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -729,8 +729,8 @@
         "CNTB"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -746,8 +746,8 @@
         "CNTB"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -763,8 +763,8 @@
         "CNTB"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -780,8 +780,8 @@
         "CNTB"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -792,8 +792,8 @@
         "TH"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -804,8 +804,8 @@
         "TH"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -821,8 +821,8 @@
         "CNTB"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -838,40 +838,40 @@
         "CNTB"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "union_news_missing_h1": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "union_news_missing_h3": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "union_catal_present_h1": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "union_catal_present_h3": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -887,8 +887,8 @@
         "OBE"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -904,24 +904,24 @@
         "OBE"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "union_white_h1": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "union_white_h3": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -937,8 +937,8 @@
         "WDS"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -954,8 +954,8 @@
         "WDS"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -971,8 +971,8 @@
         "SARO"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -988,8 +988,8 @@
         "SARO"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1005,8 +1005,8 @@
         "EYPT"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1022,8 +1022,8 @@
         "EYPT"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1039,8 +1039,8 @@
         "WDS"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1056,8 +1056,8 @@
         "WDS"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1070,8 +1070,8 @@
         "TTAN"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1084,8 +1084,8 @@
         "TTAN"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1099,8 +1099,8 @@
         "TTAN"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1114,24 +1114,24 @@
         "TTAN"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "union_r_up_h1": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "union_r_up_h3": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1147,8 +1147,8 @@
         "CRWV"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1164,8 +1164,8 @@
         "CRWV"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1176,8 +1176,8 @@
         "BIDU"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1193,8 +1193,8 @@
         "WDS"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1210,8 +1210,8 @@
         "WDS"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1222,16 +1222,16 @@
         "TH"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "union_white_h5": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1240,8 +1240,8 @@
         "ZIM"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1250,40 +1250,40 @@
         "ZIM"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "union_blue_vol_h1": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "union_blue_vol_h3": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "union_news_vol_h1": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "union_news_vol_h3": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1292,8 +1292,8 @@
         "AVO"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1302,8 +1302,8 @@
         "AVO"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1313,8 +1313,8 @@
         "LFMD"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1324,8 +1324,8 @@
         "LFMD"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1334,8 +1334,8 @@
         "BIDU"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1344,8 +1344,8 @@
         "BIDU"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1361,8 +1361,8 @@
         "TH"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1378,8 +1378,8 @@
         "TH"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1395,8 +1395,8 @@
         "KOS"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1412,72 +1412,72 @@
         "KOS"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "union_join_vol_green_h1": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "union_join_vol_green_h3": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "union_white_coil_h1": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "union_white_coil_h3": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "flatten_vol_g_h3": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "flatten_live_h1": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "flatten_live_h3": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "flatten_live_h5": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1489,8 +1489,8 @@
         "CDZI"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1506,8 +1506,8 @@
         "CHA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1523,8 +1523,8 @@
         "CHA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1540,8 +1540,8 @@
         "SSL"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1557,8 +1557,8 @@
         "SSL"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1574,8 +1574,8 @@
         "ANGX"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1591,8 +1591,8 @@
         "ANGX"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1608,8 +1608,8 @@
         "SKHY"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1625,8 +1625,8 @@
         "SKHY"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1642,8 +1642,8 @@
         "DOCN"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1659,8 +1659,8 @@
         "DOCN"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1676,8 +1676,8 @@
         "SWKS"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1693,8 +1693,8 @@
         "SWKS"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1706,8 +1706,8 @@
         "UROY"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1727,8 +1727,8 @@
         "DFDV"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1740,8 +1740,8 @@
         "OCC"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1757,8 +1757,8 @@
         "CNTB"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1774,8 +1774,8 @@
         "CNTB"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1791,8 +1791,8 @@
         "WDS"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1808,8 +1808,8 @@
         "CNTB"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1825,8 +1825,8 @@
         "EYPT"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1842,8 +1842,8 @@
         "AMP"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1859,40 +1859,40 @@
         "AMP"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "short_news_r_h1": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "short_news_r_h3": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "short_r_down_h1": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "short_r_down_h3": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1908,8 +1908,8 @@
         "LIFE"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1925,8 +1925,8 @@
         "LIFE"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1942,8 +1942,8 @@
         "HAS"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1959,8 +1959,8 @@
         "HAS"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1974,8 +1974,8 @@
         "GRNT"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -1989,8 +1989,8 @@
         "GRNT"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2004,8 +2004,8 @@
         "GRNT"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2019,8 +2019,8 @@
         "GRNT"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2034,8 +2034,8 @@
         "GRNT"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2049,8 +2049,8 @@
         "GRNT"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2064,8 +2064,8 @@
         "GRNT"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2079,8 +2079,8 @@
         "GRNT"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2094,8 +2094,8 @@
         "GRNT"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2109,8 +2109,8 @@
         "GRNT"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2124,8 +2124,8 @@
         "GRNT"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2139,8 +2139,8 @@
         "GRNT"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2154,8 +2154,8 @@
         "GRNT"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2169,8 +2169,8 @@
         "GRNT"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2184,8 +2184,8 @@
         "GRNT"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2199,72 +2199,72 @@
         "GRNT"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "flatten_live_h1_rankw": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "flatten_live_h1_topheavy": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "flatten_live_h1_half": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "flatten_live_h1_time": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "flatten_live_h1_cut": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "flatten_live_h1_trail": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "flatten_live_h1_sboost": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "flatten_live_h1_sizeup": {
       "buy": [],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2280,8 +2280,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2297,8 +2297,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2314,8 +2314,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2331,8 +2331,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2348,8 +2348,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2365,8 +2365,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2382,8 +2382,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2399,8 +2399,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2416,8 +2416,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2433,8 +2433,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2450,8 +2450,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2467,8 +2467,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2484,8 +2484,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2501,8 +2501,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2518,8 +2518,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2535,8 +2535,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2552,8 +2552,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2569,8 +2569,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2586,8 +2586,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2603,8 +2603,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2620,8 +2620,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2637,8 +2637,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2654,8 +2654,8 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2671,264 +2671,385 @@
         "CABA"
       ],
       "sell": [],
-      "sit": true,
-      "status": "sit",
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
-    "combo_en_3070_shared": {
-      "buy": [],
+    "combo_seh_333_shared": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN",
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
-    "combo_ehs_601525_shared": {
-      "buy": [],
+    "combo_seh_333_split": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN",
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_sh_7030_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_se_5050_weather": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_eh_3070_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_ser_5050_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_sn_3070_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_fse_333_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_ers_7030_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "combo_seh_502525_shared": {
-      "buy": [],
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN",
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
-    "combo_he1_5050_shared": {
-      "buy": [],
+    "combo_seh_502525_split": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN",
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_se_5050_skip": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_seh_403525_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_en_7030_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_e1er_5050_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_ehs_702010_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_ej_5050_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_se_3070_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_nf_5050_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_jf_5050_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_hj_5050_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_ee1_3070_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_ee1_7030_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_ee1_5050_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_snj_333_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_eh_5050_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_seh_333_weather": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_sf_7030_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_sj_3070_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_je1_5050_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_sf_5050_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "combo_seh_404020_shared": {
-      "buy": [],
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN",
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_seh_403525_shared": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN",
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_seh_451540_shared": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN",
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_seh_601525_shared": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN",
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_se_5050_shared": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_se_7030_shared": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_eh_5050_shared": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN",
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_sh_5050_shared": {
+      "buy": [
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_se_5050_skip": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_seh_333_skip": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN",
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_seh_333_weather": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN",
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_se_5050_weather": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_se_5050_split": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_es_8020_shared": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_es_9010_shared": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_ehs_702010_shared": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN",
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_ehs_601525_shared": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN",
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_sn_5050_shared": {
+      "buy": [
+        "DFDV",
+        "LITE",
+        "TH"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -2936,255 +3057,644 @@
       "buy": [],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
-    "combo_sn_5050_shared": {
-      "buy": [],
+    "combo_sf_5050_shared": {
+      "buy": [
+        "PCG",
+        "AR",
+        "CIG",
+        "UGP",
+        "VET",
+        "GRNT"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
-    "combo_seh_601525_shared": {
-      "buy": [],
+    "combo_snj_333_shared": {
+      "buy": [
+        "DFDV",
+        "LITE",
+        "TH"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
-    "combo_fe_5050_shared": {
-      "buy": [],
+    "combo_nse_333_shared": {
+      "buy": [
+        "DFDV",
+        "LITE",
+        "TH",
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_nj_5050_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_jer_5050_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_her_5050_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_ne1_5050_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_fh_7030_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_eer_5050_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_sn_7030_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_fer_5050_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_hn_7030_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_se1_5050_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "combo_jse_333_shared": {
-      "buy": [],
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
-    "combo_ef_5050_shared": {
-      "buy": [],
+    "combo_fse_333_shared": {
+      "buy": [
+        "PCG",
+        "AR",
+        "CIG",
+        "UGP",
+        "VET",
+        "GRNT",
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
-    "combo_sf_3070_shared": {
-      "buy": [],
+    "combo_e1s_7030_shared": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
-    "combo_hn_3070_shared": {
-      "buy": [],
+    "combo_ers_7030_shared": {
+      "buy": [
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_seh_333_skip": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_fes_403030_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
-      "family": "factor_mine",
-      "date": "2026-09-09"
-    },
-    "combo_seh_451540_shared": {
-      "buy": [],
-      "sell": [],
-      "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "combo_eh_7030_shared": {
-      "buy": [],
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN",
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
-    "combo_es_8020_shared": {
-      "buy": [],
+    "combo_fh_7030_shared": {
+      "buy": [
+        "PCG",
+        "AR",
+        "CIG",
+        "UGP",
+        "VET",
+        "GRNT",
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
-    "combo_es_9010_shared": {
-      "buy": [],
+    "combo_fe_5050_shared": {
+      "buy": [
+        "PCG",
+        "AR",
+        "CIG",
+        "UGP",
+        "VET",
+        "GRNT",
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
-    "combo_sh_5050_shared": {
-      "buy": [],
+    "combo_fes_403030_shared": {
+      "buy": [
+        "PCG",
+        "AR",
+        "CIG",
+        "UGP",
+        "VET",
+        "GRNT",
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
-    "combo_seh_502525_split": {
-      "buy": [],
+    "combo_se1_5050_shared": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
-    "combo_hf_5050_shared": {
-      "buy": [],
+    "combo_ser_5050_shared": {
+      "buy": [
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "combo_en_5050_shared": {
-      "buy": [],
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN",
+        "DFDV",
+        "LITE",
+        "TH"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
-    "combo_ner_5050_shared": {
-      "buy": [],
+    "combo_ej_5050_shared": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_ef_5050_shared": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN",
+        "PCG",
+        "AR",
+        "CIG",
+        "UGP",
+        "VET",
+        "GRNT"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_ee1_5050_shared": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_eer_5050_shared": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "combo_hn_5050_shared": {
-      "buy": [],
+      "buy": [
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY",
+        "DFDV",
+        "LITE",
+        "TH"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_hj_5050_shared": {
+      "buy": [
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_hf_5050_shared": {
+      "buy": [
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY",
+        "PCG",
+        "AR",
+        "CIG",
+        "UGP",
+        "VET",
+        "GRNT"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_he1_5050_shared": {
+      "buy": [
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY",
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_her_5050_shared": {
+      "buy": [
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_nj_5050_shared": {
+      "buy": [
+        "DFDV",
+        "LITE",
+        "TH"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_nf_5050_shared": {
+      "buy": [
+        "DFDV",
+        "LITE",
+        "TH",
+        "PCG",
+        "AR",
+        "CIG",
+        "UGP",
+        "VET",
+        "GRNT"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_ne1_5050_shared": {
+      "buy": [
+        "DFDV",
+        "LITE",
+        "TH",
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_ner_5050_shared": {
+      "buy": [
+        "DFDV",
+        "LITE",
+        "TH",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_jf_5050_shared": {
+      "buy": [
+        "PCG",
+        "AR",
+        "CIG",
+        "UGP",
+        "VET",
+        "GRNT"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_je1_5050_shared": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_jer_5050_shared": {
+      "buy": [
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "combo_fe1_5050_shared": {
-      "buy": [],
+      "buy": [
+        "PCG",
+        "AR",
+        "CIG",
+        "UGP",
+        "VET",
+        "GRNT",
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
-    "combo_se_7030_shared": {
-      "buy": [],
+    "combo_fer_5050_shared": {
+      "buy": [
+        "PCG",
+        "AR",
+        "CIG",
+        "UGP",
+        "VET",
+        "GRNT",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_e1er_5050_shared": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_se_3070_shared": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_sh_7030_shared": {
+      "buy": [
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_sh_3070_shared": {
+      "buy": [
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_eh_3070_shared": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN",
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_sn_7030_shared": {
+      "buy": [
+        "DFDV",
+        "LITE",
+        "TH"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_sn_3070_shared": {
+      "buy": [
+        "DFDV",
+        "LITE",
+        "TH"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
@@ -3192,79 +3702,185 @@
       "buy": [],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
-    "combo_sh_3070_shared": {
+    "combo_sj_3070_shared": {
       "buy": [],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
-    "combo_nse_333_shared": {
-      "buy": [],
+    "combo_sf_7030_shared": {
+      "buy": [
+        "PCG",
+        "AR",
+        "CIG",
+        "UGP",
+        "VET",
+        "GRNT"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
-    "combo_e1s_7030_shared": {
-      "buy": [],
+    "combo_sf_3070_shared": {
+      "buy": [
+        "PCG",
+        "AR",
+        "CIG",
+        "UGP",
+        "VET",
+        "GRNT"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_en_7030_shared": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN",
+        "DFDV",
+        "LITE",
+        "TH"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-09"
+    },
+    "combo_en_3070_shared": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN",
+        "DFDV",
+        "LITE",
+        "TH"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "combo_ef_7030_shared": {
-      "buy": [],
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN",
+        "PCG",
+        "AR",
+        "CIG",
+        "UGP",
+        "VET",
+        "GRNT"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
     "combo_ef_3070_shared": {
-      "buy": [],
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN",
+        "PCG",
+        "AR",
+        "CIG",
+        "UGP",
+        "VET",
+        "GRNT"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
-    "combo_seh_333_shared": {
-      "buy": [],
+    "combo_hn_7030_shared": {
+      "buy": [
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY",
+        "DFDV",
+        "LITE",
+        "TH"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
-    "combo_se_5050_split": {
-      "buy": [],
+    "combo_hn_3070_shared": {
+      "buy": [
+        "INDP",
+        "CRWV",
+        "INTC",
+        "UROY",
+        "DFDV",
+        "LITE",
+        "TH"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
-    "combo_seh_333_split": {
-      "buy": [],
+    "combo_ee1_7030_shared": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     },
-    "combo_se_5050_shared": {
-      "buy": [],
+    "combo_ee1_3070_shared": {
+      "buy": [
+        "ABM",
+        "ASO",
+        "AVO",
+        "OCC",
+        "SAIL",
+        "TTAN"
+      ],
       "sell": [],
       "sit": false,
-      "status": "combo_needs_mine",
+      "status": "stale_panel",
       "family": "factor_mine",
       "date": "2026-09-09"
     }
