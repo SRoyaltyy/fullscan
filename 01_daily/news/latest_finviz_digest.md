@@ -1,11 +1,11 @@
-# Finviz Daily Digest — 2026-09-10
+# Finviz Daily Digest — 2026-09-11
 
-_Generated 2026-09-11T01:57:18.662509-04:00 · export=data/exports/finviz_2026-09-10.csv · ticker digests=400 · high-signal=400_
+_Generated 2026-09-11T05:02:31.396922-04:00 · export=data/exports/finviz_2026-09-10.csv · ticker digests=400 · high-signal=400_
 
 ## Major indices (live quote page)
 
-- **S&P 500 (SPY)**: Stock Market: Will S&P 500 Open Up or Down Today?
-- **Nasdaq-100 (QQQ)**: S&P 500, Dow, Nasdaq End Lower As Surging Oil Raises Odds For A September Rate Hike  ORCL, ADBE, M, NVDA, UBER In Focus
+- **S&P 500 (SPY)**: Nasdaq, Dow, S&P 500 Futures Rise After 4-Day Market Slide As CPI Looms Large: ORCL, ADBE, MU, TSLA, RKLB, IBRX, HOOD, GME In Focus
+- **Nasdaq-100 (QQQ)**: Nasdaq, Dow, S&P 500 Futures Rise After 4-Day Market Slide As CPI Looms Large: ORCL, ADBE, MU, TSLA, RKLB, IBRX, HOOD, GME In Focus
 - **Dow Jones (DIA)**: S&P 500, Dow, Nasdaq End Lower As Surging Oil Raises Odds For A September Rate Hike  ORCL, ADBE, M, NVDA, UBER In Focus
 - **Russell 2000 (IWM)**: Investors worried about rising bond yields are keeping a close eye on this corner of the market
 
