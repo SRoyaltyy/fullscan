@@ -39,8 +39,6 @@ from src.sleeve_merge import OUT_DIR
 from src.sleeve_merge_live import (
     TODAY_JSON,
     inject_today_from_disk,
-    plan_today,
-    replay_open,
 )
 
 LAST_JSON = OUT_DIR / "webull_last.json"
@@ -49,7 +47,10 @@ LIVE_HOST = "api.webull.com"
 
 
 def _env(name: str, default: str = "") -> str:
-    return (os.environ.get(name) or default).strip()
+    raw = (os.environ.get(name) or default).strip()
+    if len(raw) >= 2 and raw[0] == raw[-1] and raw[0] in ("\"", "'"):
+        raw = raw[1:-1].strip()
+    return raw
 
 
 def refuse_real(env: str, submit: bool, live_flag: bool) -> str | None:
@@ -211,7 +212,17 @@ class PaperAPI:
             client.add_endpoint(region, self.host)
             self.trade = TradeClient(client)
         except Exception as e:  # noqa: BLE001 — keys / host miss is a soft fail
-            self.err = f"Webull client init failed: {e}"
+            msg = str(e)
+            if "UNAUTHORIZED" in msg or "Invalid credentials" in msg:
+                self.err = (
+                    "sandbox 401 — keys were sent to api.sandbox.webull.com "
+                    "and rejected. Regenerate under Open API → Using OpenAPI "
+                    "service in Paper Trading (not the live Trading API). "
+                    "Paste App Key / App Secret into GitHub secrets with no "
+                    "quotes."
+                )
+            else:
+                self.err = f"Webull client init failed: {e}"
             return False
         return True
 
@@ -313,12 +324,17 @@ def run(date: str | None, *, env: str = "paper", submit: bool = False,
         print("[webull] Paper Trading API key lives in GitHub secrets "
               "WEBULL_APP_KEY / WEBULL_APP_SECRET. This job will not "
               "log into the Webull app for you.")
-        replay = replay_open(date)
-        card = plan_today(date, sim=replay)
+        n_tickets = 0
+        if TODAY_JSON.is_file():
+            try:
+                card = json.loads(TODAY_JSON.read_text(encoding="utf-8"))
+                n_tickets = len(tickets_to_send(card))
+            except (OSError, json.JSONDecodeError, TypeError):
+                n_tickets = 0
         last = {
             "date": date, "env": env, "submit": False,
             "connected": False, "error": snap.error, "host": api.host,
-            "n_tickets": len(tickets_to_send(card)),
+            "n_tickets": n_tickets,
             "sent": [],
             "generated": datetime.now().isoformat(timespec="seconds"),
         }

@@ -100,6 +100,48 @@ def test_submit_uses_paper_place() -> None:
     assert last["sent"][0]["order_id"] == "oid-1"
 
 
+def test_env_strips_quoted_secrets() -> None:
+    import os
+    from src.webull_exec import _env
+    os.environ["WEBULL_APP_KEY"] = '  "abc123"  '
+    try:
+        assert _env("WEBULL_APP_KEY") == "abc123"
+    finally:
+        os.environ.pop("WEBULL_APP_KEY", None)
+
+
+def test_not_connected_writes_last_without_replay(tmp_path=None) -> None:
+    import json
+    from unittest import mock
+    from src import webull_exec as we
+
+    class Dead:
+        env = "paper"
+        host = "api.sandbox.webull.com"
+        err = "sandbox 401"
+
+        def connect(self) -> bool:
+            return False
+
+    today = {
+        "date": "2026-09-11",
+        "tickets": [],
+        "would_buy": {"rows": [{"ticker": "ORCL"}]},
+    }
+    with mock.patch.object(we, "PaperAPI", return_value=Dead()), \
+            mock.patch.object(we, "TODAY_JSON") as today_p, \
+            mock.patch.object(we, "write_last") as wl, \
+            mock.patch.object(we, "inject_today_from_disk"):
+        today_p.is_file.return_value = True
+        today_p.read_text.return_value = json.dumps(today)
+        rc = we.run("2026-09-11", submit=True, write=True)
+    assert rc == 0
+    last = wl.call_args[0][0]
+    assert last["connected"] is False
+    assert last["n_tickets"] == 0
+    assert "401" in (last.get("error") or "")
+
+
 def test_yml_poke_on_main_submits() -> None:
     """Cloud agent cannot workflow_dispatch; a main poke must submit paper."""
     yml = Path(__file__).resolve().parent.parent.joinpath(
@@ -117,8 +159,10 @@ def main() -> None:
     test_parse_account_and_book()
     test_dry_run_does_not_place()
     test_submit_uses_paper_place()
+    test_env_strips_quoted_secrets()
+    test_not_connected_writes_last_without_replay()
     test_yml_poke_on_main_submits()
-    print("test_webull_exec: 7 ok")
+    print("test_webull_exec: 9 ok")
 
 
 if __name__ == "__main__":
