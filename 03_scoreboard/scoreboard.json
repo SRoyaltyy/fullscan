@@ -19151,18 +19151,119 @@
         "B7_OIL_DOLLAR": 1.0
       },
       "leading_sum": 1.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7636.75,
+      "actual_close": 7656.98,
+      "actual_pct_change": 0.86,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": -1.0,
+          "status": "miss"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 1.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 1.0,
+          "status": "hit"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://apnews.com/article/wall-street-stocks-dow-nasdaq-67a463295d9ea178d7802ca4338a6eb5",
+          "date_accessed": "2026-09-11",
+          "summary": "AP confirms the broad-based Friday rally that broke the four-day losing streak, while noting the week still ended lower.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/11/cpi-inflation-report-august-2026.html",
+          "date_accessed": "2026-09-11",
+          "summary": "CNBC documents the split CPI print — in-line headline, hot core — that defined the day's two-sided reaction.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.bloomberg.com/news/articles/2026-09-11/treasuries-fall-as-higher-than-expected-cpi-boosts-fed-hike-odds",
+          "date_accessed": "2026-09-11",
+          "summary": "Bloomberg shows the hawkish rate-path repricing that was the day's main offsetting headwind.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-11-2026",
+          "date_accessed": "2026-09-11",
+          "summary": "TheStreet quantifies the bond-market reaction that equities largely ignored.",
+          "verification": "http_404"
+        },
+        {
+          "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-midday-sept-11-165319326.html",
+          "date_accessed": "2026-09-11",
+          "summary": "Yahoo attributes the risk-on tone to the intraday oil retreat.",
+          "verification": "verified"
+        },
+        {
+          "url": "https://ua.news/en/energetika/nafta-deshevshaie-pislia-stribka-cherez-riziki-dlia-postachannia",
+          "date_accessed": "2026-09-11",
+          "summary": "Confirms the oil retreat was a pullback within a larger weekly surge, not a resolution of the supply risk.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://investrade.com/market-review-september-11-2026/",
+          "date_accessed": "2026-09-11",
+          "summary": "Investrade confirms the gap-up-and-hold intraday structure consistent with the Channel 1 \"choppy/range-bound\" PATH.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://sigmanomics.com/index-markets/vix",
+          "date_accessed": "2026-09-11",
+          "summary": "Documents the volatility collapse that flipped VIX/VIX3M from backwardation into contango.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.stl.news/sp-500-winners-and-losers-this-week-sept-11-2026/",
+          "date_accessed": "2026-09-11",
+          "summary": "Confirms broad sector participation, with the rally led by tech (Oracle/AI) and industrials.",
+          "verification": "quote_not_found"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -19189,7 +19290,14 @@
           "confidence": 0.4
         }
       },
-      "news_judge_present": true
+      "news_judge_present": true,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "Oil retreat / Middle East de-escalation providing stagflation relief, letting equities look past a hot core CPI",
+      "key_interaction": "Offsetting/masking — the hawkish CPI-driven rate shock (2Y +15bp, hike odds to ~70–90%) was roughly cancelled by oil relief + AI beats + oversold bounce, producing a \"calm\" +0.86% that masked a genuine collision and explains the choppy/range-bound PATH",
+      "knowable_at_9am": "partially — the release was scheduled and the oil/AI catalysts were known, but the CPI content (in-line headline, hot core) and the magnitude of the hawkish repricing were genuine intraday information",
+      "attribution_contested": "yes — AP/Investopedia/Yahoo/Schwab lead with oil; Reuters leads with the CPI report; Bloomberg/TheStreet lead with the Fed rate-hike repricing",
+      "outlier_watch": "Equities rose on a hot core CPI that pushed 2Y yields to a 2-year high and hike odds to ~70–90% — bonds priced a hawkish Fed while equities ignored it; also Seagate −3.4% (worst S&P performer) fell while tech rallied, and the week still closed lower despite Friday's bounce"
     },
     {
       "date": "2026-09-11",
