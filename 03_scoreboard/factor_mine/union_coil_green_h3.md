@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-5.53%** ($9,447) · signal-only (no cash/fees) was -9.21%. Starts YES **0/19**. Fills 79 · skips 172 · realized $-552.96.
+Cash book **-5.53%** ($9,447) · signal-only (no cash/fees) was -9.82%. Starts YES **0/20**. Fills 80 · skips 177 · realized $-553.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -59,7 +59,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,443.04.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,446.67.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -228,6 +228,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `SDGR` | 58 | $20.03 | $19.88 | -8.70 | — | +0.00 | -8.70 | -66.70 | — |
 | 2026-09-09 | `NEOV` | 325 | $3.92 | $3.84 | -26.00 | — | +0.00 | -26.00 | +22.75 | — |
 | 2026-09-09 | `GORO` | 1 | $3.84 | $3.91 | +0.07 | $3.62 | -0.29 | -0.22 | -0.04 | -0.33 |
+| 2026-09-10 | `GORO` | 1 | $3.62 | $3.69 | +0.07 | — | +0.00 | +0.07 | -0.26 | — |
 
 ## Each session (cash + holdings state)
 
@@ -252,6 +253,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 | +2.25 | $60.17 | ATRC×23, HRMY×28, CABA×337, RVTY×9, ARCT×73, CRDL×562, SDGR×58, NEOV×325 | $9,546.99 | -32.75 | +33.69 | GORO | — | $56.18 | $9,580.64 | ATRC×23, HRMY×28, CABA×337, RVTY×9, ARCT×73, CRDL×562, SDGR×58, NEOV×325, GORO×1 |
 | 2026-09-08 | -11.47 | $56.18 | ATRC×23, HRMY×28, CABA×337, RVTY×9, ARCT×73, CRDL×562, SDGR×58, NEOV×325, GORO×1 | $9,576.12 | -4.52 | -32.27 | — | — | $56.18 | $9,543.85 | ATRC×23, HRMY×28, CABA×337, RVTY×9, ARCT×73, CRDL×562, SDGR×58, NEOV×325, GORO×1 |
 | 2026-09-09 | -13.95 | $56.18 | ATRC×23, HRMY×28, CABA×337, RVTY×9, ARCT×73, CRDL×562, SDGR×58, NEOV×325, GORO×1 | $9,473.60 | -70.25 | -0.29 | — | ATRC, HRMY, CABA, RVTY, ARCT, CRDL, SDGR, NEOV | $9,443.04 | $9,446.66 | GORO×1 |
+| 2026-09-10 | -13.28 | $9,443.04 | GORO×1 | $9,446.73 | +0.07 | +0.00 | — | GORO | $9,446.67 | $9,446.67 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -354,7 +356,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-03 09:30 ET | **BUY** | `HRMY` | 28 | $42.93 | $2.07 | — | $7,392.07 | — | combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list flatten,mover_buy; 🔵; ⚪; ret5=+8.1; leftover $1226.81 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
 | 2026-09-03 09:30 ET | **BUY** | `CABA` | 337 | $3.63 | $4.35 | — | $6,164.41 | — | combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list flatten,ohlc_hot; 🔵; ⚪; ret5=+9.8; leftover $1226.81 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `RVTY` | 9 | $132.45 | $2.02 | — | $4,970.34 | — | combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list flatten,mover_buy; 🔵; ⚪; ret5=+3.6; leftover $1226.81 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `ARCT` | 73 | $16.77 | $2.21 | — | $3,743.92 | — | combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+5.7; leftover $1226.81 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `ARCT` | 73 | $16.77 | $2.21 | — | $3,743.92 | — | combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer,yday_mover,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+5.7; leftover $1226.81 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `CRDL` | 562 | $2.18 | $7.25 | — | $2,511.51 | — | combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list probable,yday_gainer,mover_buy; 🔵; ⚪; ret5=+1.4; leftover $1226.81 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `SDGR` | 58 | $21.03 | $2.16 | — | $1,289.61 | — | combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list yday_gainer; 🔵; ⚪; ret5=+7.2; leftover $1226.81 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `NEOV` | 325 | $3.77 | $4.19 | — | $60.17 | — | combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list yday_mover; 🔵; ⚪; ret5=+8.6; leftover $1226.81 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🟡 buy🟡 |
@@ -365,15 +367,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $56.18 | ▼ 09:30 equity $9,576.12 vs yday $9,580.64 (-4.52) | 09:30 open · cash $56.18 (unchanged overnight, no fees) · equity $9,576.12 vs prior close $9,580.64 (-4.52) · 9 name(s) re-marked at the open (per-name table). ATRC×23 yday $51.52 → 09:30 $54.31 +64.17; HRMY×28 yday $42.25 → 09:30 $42.20 -1.40; CABA×337 yday $3.47 → 09:30 $3.43 -13.48; RVTY×9 yday $130.22 → 09:30 $128.50 -15.48; ARCT×73 yday $15.82 → 09:30 $15.47 -25.55; CRDL×562 yday $2.20 → 09:30 $2.20 +0.00; SDGR×58 yday $20.09 → 09:30 $19.87 -12.76; NEOV×325 yday $3.86 → 09:30 $3.86 +0.00; GORO×1 yday $4.15 → 09:30 $4.13 -0.02 | — |
 | 2026-09-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $56.18 | ▼ close $9,543.85 vs 09:30 $9,576.12 (session -32.27) | 16:00 close · cash $56.18 · equity $9,543.85 vs 09:30 $9,576.12 (-32.27; session marks -32.27) · 9 name(s) marked open→close (per-name table). ATRC×23 09:30 $54.31 → close $53.73 -13.34; HRMY×28 09:30 $42.20 → close $42.07 -3.64; CABA×337 09:30 $3.43 → close $3.27 -53.92; RVTY×9 09:30 $128.50 → close $127.08 -12.78; ARCT×73 09:30 $15.47 → close $15.63 +11.68; CRDL×562 09:30 $2.20 → close $2.22 +11.24; SDGR×58 09:30 $19.87 → close $20.03 +9.28; NEOV×325 09:30 $3.86 → close $3.92 +19.50; GORO×1 09:30 $4.13 → close $3.84 -0.29 | — |
 | 2026-09-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $56.18 | ▼ 09:30 equity $9,473.60 vs yday $9,543.85 (-70.25) | 09:30 open · cash $56.18 (unchanged overnight, no fees) · equity $9,473.60 vs prior close $9,543.85 (-70.25) · 9 name(s) re-marked at the open (per-name table). ATRC×23 yday $53.73 → 09:30 $53.16 -13.11; HRMY×28 yday $42.07 → 09:30 $42.01 -1.68; CABA×337 yday $3.27 → 09:30 $3.28 +3.37; RVTY×9 yday $127.08 → 09:30 $125.77 -11.79; ARCT×73 yday $15.63 → 09:30 $15.46 -12.41; CRDL×562 yday $2.22 → 09:30 $2.22 +0.00; SDGR×58 yday $20.03 → 09:30 $19.88 -8.70; NEOV×325 yday $3.92 → 09:30 $3.84 -26.00; GORO×1 yday $3.84 → 09:30 $3.91 +0.07 | — |
-| 2026-09-09 09:30 ET | **SELL** | `ATRC` | 23 | $53.16 | $2.08 | $+2.30 | $1,276.78 | ▲ +2.30 after sell → book $9,471.52; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-09 09:30 ET | **SELL** | `ATRC` | 23 | $53.16 | $2.08 | $+2.30 | $1,276.78 | ▲ +2.30 after sell → book $9,471.52; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🔴 news🟡 digest🟡 judge🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-09-09 09:30 ET | **SELL** | `HRMY` | 28 | $42.01 | $2.09 | $-29.93 | $2,450.96 | ▼ -29.93 after sell → book $9,469.42; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-09 09:30 ET | **SELL** | `CABA` | 337 | $3.28 | $4.41 | $-126.71 | $3,551.91 | ▼ -126.71 after sell → book $9,465.01; vs 09:30 mark -4.41 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-09 09:30 ET | **SELL** | `CABA` | 337 | $3.28 | $4.41 | $-126.71 | $3,551.91 | ▼ -126.71 after sell → book $9,465.01; vs 09:30 mark -4.41 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🔴 news🟡 digest🟡 judge🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-09-09 09:30 ET | **SELL** | `RVTY` | 9 | $125.77 | $2.04 | $-64.17 | $4,681.80 | ▼ -64.17 after sell → book $9,462.97; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-09 09:30 ET | **SELL** | `ARCT` | 73 | $15.46 | $2.23 | $-100.07 | $5,808.15 | ▼ -100.07 after sell → book $9,460.74; vs 09:30 mark -2.23 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-09 09:30 ET | **SELL** | `CRDL` | 562 | $2.22 | $7.35 | $+7.88 | $7,048.44 | ▲ +7.88 after sell → book $9,453.39; vs 09:30 mark -7.35 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-09 09:30 ET | **SELL** | `SDGR` | 58 | $19.88 | $2.18 | $-71.05 | $8,199.29 | ▼ -71.05 after sell → book $9,451.20; vs 09:30 mark -2.19 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-09 09:30 ET | **SELL** | `NEOV` | 325 | $3.84 | $4.26 | $+14.30 | $9,443.04 | ▲ +14.30 after sell → book $9,446.95; vs 09:30 mark -4.25 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,443.04 | ▼ close $9,446.66 vs 09:30 $9,473.60 (session -0.29) | 16:00 close · cash $9,443.04 · equity $9,446.66 vs 09:30 $9,473.60 (-26.94; session marks -0.29) · 1 name(s) marked open→close (per-name table). GORO×1 09:30 $3.91 → close $3.62 -0.29 | — |
+| 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,443.04 | ▲ 09:30 equity $9,446.73 vs yday $9,446.66 (+0.07) | 09:30 open · cash $9,443.04 (unchanged overnight, no fees) · equity $9,446.73 vs prior close $9,446.66 (+0.07) · 1 name(s) re-marked at the open (per-name table). GORO×1 yday $3.62 → 09:30 $3.69 +0.07 | — |
+| 2026-09-10 09:30 ET | **SELL** | `GORO` | 1 | $3.69 | $0.06 | $-0.36 | $9,446.67 | ▼ -0.36 after sell → book $9,446.67; vs 09:30 mark -0.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,446.67 | ▲ close $9,446.67 vs 09:30 $9,446.73 (session +0.00) | 16:00 close · cash $9,446.67 · no lots left · equity $9,446.67. | — |
 
 ## Not taken
 
@@ -551,9 +556,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `LITE` | hard_red | hard-red S=-13.95 sit; no new buys |
 | 2026-09-09 | `STX` | hard_red | hard-red S=-13.95 sit; no new buys |
 | 2026-09-09 | `TH` | hard_red | hard-red S=-13.95 sit; no new buys |
-
-## Still open (marked at last close)
-
-| Ticker | Shares | Entry | Why |
-|---|---:|---|---|
-| `GORO` | 1 | 2026-09-04 @ $3.95 | combo gate; gate last_green=True,ret_5_min=0.0,ret_5_max=10.0,rvol_min=0.7,rvol_max=2.2; list ohlc_hot; ret5=+6.9; leftover $7.52 |
+| 2026-09-10 | `HELP` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `CMPS` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `AMBQ` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `TJGC` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `AVAV` | hard_red | hard-red S=-13.28 sit; no new buys |

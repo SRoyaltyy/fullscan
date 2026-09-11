@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-2.40%** ($9,760) · signal-only (no cash/fees) was +93.15%. Starts YES **0/19**. Fills 102 · skips 160 · realized $-240.07.
+Cash book **-2.40%** ($9,760) · signal-only (no cash/fees) was +91.51%. Starts YES **0/20**. Fills 102 · skips 168 · realized $-240.07.
 
 ## How this sleeve decides (like you are 10)
 
@@ -268,6 +268,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `BMEA` | 648 | $1.93 | $1.94 | +6.48 | — | +0.00 | +6.48 | +6.48 | — |
 | 2026-09-09 | `REAX` | 68 | $20.70 | $20.70 | +0.34 | — | +0.00 | +0.34 | +156.40 | — |
 | 2026-09-09 | `CNH` | 90 | $13.60 | $13.64 | +3.60 | — | +0.00 | +3.60 | -6.30 | — |
+| 2026-09-10 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -292,6 +293,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 | +2.25 | $10.31 | CABA×344, VSTM×155, ARCT×74, SID×920, NVAX×120, BMEA×648, REAX×68, CNH×90 | $9,688.84 | -41.41 | +186.63 | — | — | $10.31 | $9,875.47 | CABA×344, VSTM×155, ARCT×74, SID×920, NVAX×120, BMEA×648, REAX×68, CNH×90 |
 | 2026-09-08 | -11.47 | $10.31 | CABA×344, VSTM×155, ARCT×74, SID×920, NVAX×120, BMEA×648, REAX×68, CNH×90 | $9,871.51 | -3.96 | -81.80 | — | — | $10.31 | $9,789.71 | CABA×344, VSTM×155, ARCT×74, SID×920, NVAX×120, BMEA×648, REAX×68, CNH×90 |
 | 2026-09-09 | -13.95 | $10.31 | CABA×344, VSTM×155, ARCT×74, SID×920, NVAX×120, BMEA×648, REAX×68, CNH×90 | $9,796.54 | +6.83 | +0.00 | — | CABA, VSTM, ARCT, SID, NVAX, BMEA, REAX, CNH | $9,759.92 | $9,759.92 | — |
+| 2026-09-10 | -13.28 | $9,759.92 | — | $9,759.92 | +0.00 | +0.00 | — | — | $9,759.92 | $9,759.92 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -300,21 +302,21 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-08-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,000.00 | ▲ close $10,000.00 vs 09:30 $10,000.00 (session +0.00) | 16:00 close · cash $10,000.00 · no lots left · equity $10,000.00. | — |
 | 2026-08-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-08-14 09:30 ET | **BUY** | `ADUR` | 75 | $16.50 | $2.21 | — | $8,760.28 | — | baseline list, no extra gate; list probable,ohlc_hot; 🔵; ⚪; ret5=+9.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `ADUR` | 75 | $16.50 | $2.21 | — | $8,760.28 | — | baseline list, no extra gate; list probable,ohlc_hot; 🔵; ⚪; ret5=+9.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 judge🟡 vol🟢 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `ANRO` | 39 | $31.77 | $2.11 | — | $7,519.15 | — | baseline list, no extra gate; list yday_gainer,ohlc_hot; ret5=+13.5; leftover $1250.00 | join🟢 sector🔴 gen🟢 news🟡 judge🟢 vol🟡 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `LIFE` | 35 | $35.04 | $2.10 | — | $6,290.65 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ⚪; ret5=+16.7; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `VOYG` | 28 | $44.49 | $2.07 | — | $5,042.86 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+15.6; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 vol🔴 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `LUNR` | 65 | $19.17 | $2.19 | — | $3,794.62 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ⚪; ret5=+17.6; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🔴 vol🟢 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `BETA` | 49 | $25.21 | $2.14 | — | $2,557.20 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ⚪; ret5=+15.5; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `VOYG` | 28 | $44.49 | $2.07 | — | $5,042.86 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+15.6; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 judge🟡 vol🔴 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `LUNR` | 65 | $19.17 | $2.19 | — | $3,794.62 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ⚪; ret5=+17.6; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🔴 judge🟡 vol🟢 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `BETA` | 49 | $25.21 | $2.14 | — | $2,557.20 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ⚪; ret5=+15.5; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 judge🟡 vol🟡 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `FORM` | 9 | $129.48 | $2.02 | — | $1,389.86 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+14.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 judge🟢 vol🔴 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `ENTG` | 7 | $162.45 | $2.01 | — | $250.70 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+14.8; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 judge🟢 vol🔴 buy🟡 |
 | 2026-08-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $250.70 | ▼ close $9,881.56 vs 09:30 $10,000.00 (session -101.60) | 16:00 close · cash $250.70 · equity $9,881.56 vs 09:30 $10,000.00 (-118.44; session marks -101.60) · 8 name(s) marked open→close (per-name table). ADUR×75 09:30 $16.50 → close $16.17 -24.75; ANRO×39 09:30 $31.77 → close $32.14 +14.43; LIFE×35 09:30 $35.04 → close $34.02 -35.70; VOYG×28 09:30 $44.49 → close $42.98 -42.28; LUNR×65 09:30 $19.17 → close $19.01 -10.40; BETA×49 09:30 $25.21 → close $24.86 -17.15; FORM×9 09:30 $129.48 → close $131.60 +19.08; ENTG×7 09:30 $162.45 → close $161.76 -4.83 | — |
 | 2026-08-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $250.70 | ▲ 09:30 equity $9,917.58 vs yday $9,881.56 (+36.02) | 09:30 open · cash $250.70 (unchanged overnight, no fees) · equity $9,917.58 vs prior close $9,881.56 (+36.02) · 8 name(s) re-marked at the open (per-name table). ADUR×75 yday $16.17 → 09:30 $15.73 -33.00; ANRO×39 yday $32.14 → 09:30 $32.15 +0.39; LIFE×35 yday $34.02 → 09:30 $34.03 +0.35; VOYG×28 yday $42.98 → 09:30 $42.12 -24.08; LUNR×65 yday $19.01 → 09:30 $20.25 +80.60; BETA×49 yday $24.86 → 09:30 $24.61 -12.25; FORM×9 yday $131.60 → 09:30 $134.05 +22.05; ENTG×7 yday $161.76 → 09:30 $162.04 +1.96 | — |
 | 2026-08-17 09:30 ET | **BUY** | `OCC` | 1 | $18.24 | $0.19 | — | $232.27 | — | baseline list, no extra gate; list probable,ohlc_hot; ⚪; ret5=+9.5; leftover $35.81 | join🟡 sector🟢 gen🟢 news🟡 judge🟢 vol🟡 buy🟡 |
-| 2026-08-17 09:30 ET | **BUY** | `ALM` | 2 | $16.20 | $0.33 | — | $199.54 | — | baseline list, no extra gate; list probable,ohlc_hot; 🔵; ⚪; ret5=+6.4; leftover $35.81 | join🟢 sector🟢 gen🟢 news🟡 judge🟡 vol🟡 buy🟡 |
+| 2026-08-17 09:30 ET | **BUY** | `ALM` | 2 | $16.20 | $0.33 | — | $199.54 | — | baseline list, no extra gate; list probable,ohlc_hot; 🔵; ⚪; ret5=+6.4; leftover $35.81 | join🟢 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
 | 2026-08-17 09:30 ET | **BUY** | `LPTH` | 2 | $14.94 | $0.30 | — | $169.36 | — | baseline list, no extra gate; list yday_gainer,yday_mover,ohlc_hot; ⚪; ret5=+16.2; leftover $35.81 | join🟡 sector🟢 gen🟢 news🟡 judge🟢 vol🟢 buy🟢 |
 | 2026-08-17 09:30 ET | **BUY** | `CLYM` | 2 | $16.25 | $0.33 | — | $136.53 | — | baseline list, no extra gate; list yday_gainer,ohlc_hot; ret5=+16.6; leftover $35.81 | join🟡 sector🔴 gen🟢 news🟡 judge🟢 vol🟢 buy🟡 |
-| 2026-08-17 09:30 ET | **BUY** | `BORR` | 7 | $4.59 | $0.34 | — | $104.06 | — | baseline list, no extra gate; list yday_gainer,ohlc_hot; ⚪; ret5=+14.8; leftover $35.81 | join🟢 sector🟢 gen🟢 news🟡 judge🟢 vol🟢 buy🟡 |
+| 2026-08-17 09:30 ET | **BUY** | `BORR` | 7 | $4.59 | $0.34 | — | $104.06 | — | baseline list, no extra gate; list yday_gainer,ohlc_hot; ⚪; ret5=+14.8; leftover $35.81 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
 | 2026-08-17 09:30 ET | **BUY** | `IOVA` | 5 | $6.84 | $0.36 | — | $69.50 | — | baseline list, no extra gate; list ohlc_hot; ret5=+10.1; leftover $35.81 | join🟡 sector🔴 gen🟢 news🟢 judge🟢 vol🟡 buy🟡 |
 | 2026-08-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $69.50 | ▲ close $10,176.53 vs 09:30 $9,917.58 (session +260.80) | 16:00 close · cash $69.50 · equity $10,176.53 vs 09:30 $9,917.58 (+258.95; session marks +260.80) · 14 name(s) marked open→close (per-name table). ADUR×75 09:30 $15.73 → close $15.85 +9.00; ANRO×39 09:30 $32.15 → close $33.60 +56.55; LIFE×35 09:30 $34.03 → close $35.17 +39.90; VOYG×28 09:30 $42.12 → close $43.98 +52.08; LUNR×65 09:30 $20.25 → close $20.38 +8.45; BETA×49 09:30 $24.61 → close $25.60 +48.51; FORM×9 09:30 $134.05 → close $138.16 +36.99; ENTG×7 09:30 $162.04 → close $163.09 +7.35; OCC×1 09:30 $18.24 → close $17.12 -1.12; ALM×2 09:30 $16.20 → close $16.36 +0.32; LPTH×2 09:30 $14.94 → close $14.80 -0.28; CLYM×2 09:30 $16.25 → close $17.44 +2.38; BORR×7 09:30 $4.59 → close $4.50 -0.63; IOVA×5 09:30 $6.84 → close $7.10 +1.30 | — |
 | 2026-08-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $69.50 | ▼ 09:30 equity $9,776.58 vs yday $10,176.53 (-399.95) | 09:30 open · cash $69.50 (unchanged overnight, no fees) · equity $9,776.58 vs prior close $10,176.53 (-399.95) · 14 name(s) re-marked at the open (per-name table). ADUR×75 yday $15.85 → 09:30 $15.41 -33.00; ANRO×39 yday $33.60 → 09:30 $33.18 -16.38; LIFE×35 yday $35.17 → 09:30 $34.06 -38.85; VOYG×28 yday $43.98 → 09:30 $41.83 -60.20; LUNR×65 yday $20.38 → 09:30 $19.31 -69.55; BETA×49 yday $25.60 → 09:30 $24.99 -29.89; FORM×9 yday $138.16 → 09:30 $129.28 -79.92; ENTG×7 yday $163.09 → 09:30 $153.47 -67.34; OCC×1 yday $17.12 → 09:30 $16.20 -0.92; ALM×2 yday $16.36 → 09:30 $15.78 -1.16; LPTH×2 yday $14.80 → 09:30 $14.01 -1.58; CLYM×2 yday $17.44 → 09:30 $16.90 -1.08; BORR×7 yday $4.50 → 09:30 $4.56 +0.42; IOVA×5 yday $7.10 → 09:30 $7.00 -0.50 | — |
@@ -416,7 +418,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-03 09:30 ET | **SELL** | `MRNA` | 10 | $145.94 | $2.04 | $+83.49 | $10,018.14 | ▲ +83.49 after sell → book $10,018.14; vs 09:30 mark -2.04 | dropped from list after 4 sess (min 3) | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `CABA` | 344 | $3.63 | $4.44 | — | $8,764.98 | — | baseline list, no extra gate; list flatten,ohlc_hot; 🔵; ⚪; ret5=+9.8; leftover $1252.27 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `VSTM` | 155 | $8.03 | $2.46 | — | $7,517.87 | — | baseline list, no extra gate; list flatten,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+8.5; leftover $1252.27 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
-| 2026-09-03 09:30 ET | **BUY** | `ARCT` | 74 | $16.77 | $2.21 | — | $6,274.68 | — | baseline list, no extra gate; list probable,yday_gainer,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+5.7; leftover $1252.27 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `ARCT` | 74 | $16.77 | $2.21 | — | $6,274.68 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+5.7; leftover $1252.27 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `SID` | 920 | $1.36 | $11.87 | — | $5,011.61 | — | baseline list, no extra gate; list yday_gainer,ohlc_hot; 🔵; ret5=+13.6; leftover $1252.27 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `NVAX` | 120 | $10.42 | $2.35 | — | $3,758.86 | — | baseline list, no extra gate; list yday_gainer,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+12.1; leftover $1252.27 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `BMEA` | 648 | $1.93 | $8.36 | — | $2,499.86 | — | baseline list, no extra gate; list yday_gainer,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+13.2; leftover $1252.27 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
@@ -428,7 +430,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10.31 | ▼ 09:30 equity $9,871.51 vs yday $9,875.47 (-3.96) | 09:30 open · cash $10.31 (unchanged overnight, no fees) · equity $9,871.51 vs prior close $9,875.47 (-3.96) · 8 name(s) re-marked at the open (per-name table). CABA×344 yday $3.47 → 09:30 $3.43 -13.76; VSTM×155 yday $8.20 → 09:30 $8.20 +0.00; ARCT×74 yday $15.82 → 09:30 $15.47 -25.90; SID×920 yday $1.22 → 09:30 $1.28 +55.20; NVAX×120 yday $10.22 → 09:30 $10.10 -14.40; BMEA×648 yday $2.03 → 09:30 $2.00 -19.44; REAX×68 yday $18.67 → 09:30 $19.00 +22.44; CNH×90 yday $14.40 → 09:30 $14.31 -8.10 | — |
 | 2026-09-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10.31 | ▼ close $9,789.71 vs 09:30 $9,871.51 (session -81.80) | 16:00 close · cash $10.31 · equity $9,789.71 vs 09:30 $9,871.51 (-81.80; session marks -81.80) · 8 name(s) marked open→close (per-name table). CABA×344 09:30 $3.43 → close $3.27 -55.04; VSTM×155 09:30 $8.20 → close $8.08 -18.60; ARCT×74 09:30 $15.47 → close $15.63 +11.84; SID×920 09:30 $1.28 → close $1.24 -36.80; NVAX×120 09:30 $10.10 → close $10.19 +10.80; BMEA×648 09:30 $2.00 → close $1.93 -45.36; REAX×68 09:30 $19.00 → close $20.70 +115.26; CNH×90 09:30 $14.31 → close $13.60 -63.90 | — |
 | 2026-09-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10.31 | ▲ 09:30 equity $9,796.54 vs yday $9,789.71 (+6.83) | 09:30 open · cash $10.31 (unchanged overnight, no fees) · equity $9,796.54 vs prior close $9,789.71 (+6.83) · 8 name(s) re-marked at the open (per-name table). CABA×344 yday $3.27 → 09:30 $3.28 +3.44; VSTM×155 yday $8.08 → 09:30 $8.01 -10.85; ARCT×74 yday $15.63 → 09:30 $15.46 -12.58; SID×920 yday $1.24 → 09:30 $1.28 +36.80; NVAX×120 yday $10.19 → 09:30 $10.02 -20.40; BMEA×648 yday $1.93 → 09:30 $1.94 +6.48; REAX×68 yday $20.70 → 09:30 $20.70 +0.34; CNH×90 yday $13.60 → 09:30 $13.64 +3.60 | — |
-| 2026-09-09 09:30 ET | **SELL** | `CABA` | 344 | $3.28 | $4.50 | $-129.34 | $1,134.13 | ▼ -129.34 after sell → book $9,792.04; vs 09:30 mark -4.50 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-09 09:30 ET | **SELL** | `CABA` | 344 | $3.28 | $4.50 | $-129.34 | $1,134.13 | ▼ -129.34 after sell → book $9,792.04; vs 09:30 mark -4.50 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🔴 news🟡 digest🟡 judge🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-09-09 09:30 ET | **SELL** | `VSTM` | 155 | $8.01 | $2.49 | $-8.05 | $2,373.18 | ▼ -8.05 after sell → book $9,789.54; vs 09:30 mark -2.50 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-09 09:30 ET | **SELL** | `ARCT` | 74 | $15.46 | $2.23 | $-101.39 | $3,514.99 | ▼ -101.39 after sell → book $9,787.31; vs 09:30 mark -2.23 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-09 09:30 ET | **SELL** | `SID` | 920 | $1.28 | $12.03 | $-97.50 | $4,680.56 | ▼ -97.50 after sell → book $9,775.28; vs 09:30 mark -12.03 | dropped from list after 3 sess (min 3) | — |
@@ -437,6 +439,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 09:30 ET | **SELL** | `REAX` | 68 | $20.70 | $2.22 | $+151.99 | $8,534.61 | ▲ +151.99 after sell → book $9,762.21; vs 09:30 mark -2.21 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-09 09:30 ET | **SELL** | `CNH` | 90 | $13.64 | $2.28 | $-10.84 | $9,759.92 | ▼ -10.84 after sell → book $9,759.92; vs 09:30 mark -2.29 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,759.92 | ▲ close $9,759.92 vs 09:30 $9,796.54 (session +0.00) | 16:00 close · cash $9,759.92 · no lots left · equity $9,759.92. | — |
+| 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,759.92 | ▲ 09:30 equity $9,759.92 vs yday $9,759.92 (+0.00) | 09:30 open · cash $9,759.92 · no holdings · equity $9,759.92 vs prior close $9,759.92 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,759.92 | ▲ close $9,759.92 vs 09:30 $9,759.92 (session +0.00) | 16:00 close · cash $9,759.92 · no lots left · equity $9,759.92. | — |
 
 ## Not taken
 
@@ -602,3 +606,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `SEDG` | hard_red | hard-red S=-13.95 sit; no new buys |
 | 2026-09-09 | `DOCN` | hard_red | hard-red S=-13.95 sit; no new buys |
 | 2026-09-09 | `SKHY` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-10 | `SKHY` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `GPRO` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `PAYP` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `CRWV` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `INTC` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `HYLN` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `UROY` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `IOND` | hard_red | hard-red S=-13.28 sit; no new buys |

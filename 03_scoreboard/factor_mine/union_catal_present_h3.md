@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ catal_present, no 🚨
 
-Cash book **-2.46%** ($9,754) · signal-only (no cash/fees) was -0.14%. Starts YES **0/19**. Fills 4 · skips 6 · realized $-245.73.
+Cash book **-2.46%** ($9,754) · signal-only (no cash/fees) was -0.14%. Starts YES **0/20**. Fills 4 · skips 6 · realized $-245.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -87,6 +87,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | `CTVA` | 55 | $87.86 | $88.25 | +21.45 | $85.90 | -129.25 | -107.80 | -109.45 | -238.70 |
 | 2026-09-09 | `CF` | 36 | $134.33 | $137.88 | +127.80 | — | +0.00 | +127.80 | -25.92 | — |
 | 2026-09-09 | `CTVA` | 55 | $85.90 | $86.40 | +27.50 | — | +0.00 | +27.50 | -211.20 | — |
+| 2026-09-10 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -111,6 +112,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 | +2.25 | $42.95 | CF×36, CTVA×55 | $9,738.63 | -139.58 | -62.78 | — | — | $42.95 | $9,675.85 | CF×36, CTVA×55 |
 | 2026-09-08 | -11.47 | $42.95 | CF×36, CTVA×55 | $9,722.86 | +47.01 | -119.53 | — | — | $42.95 | $9,603.33 | CF×36, CTVA×55 |
 | 2026-09-09 | -13.95 | $42.95 | CF×36, CTVA×55 | $9,758.63 | +155.30 | +0.00 | — | CF, CTVA | $9,754.28 | $9,754.28 | — |
+| 2026-09-10 | -13.28 | $9,754.28 | — | $9,754.28 | -0.00 | +0.00 | — | — | $9,754.28 | $9,754.28 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -158,6 +160,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 09:30 ET | **SELL** | `CF` | 36 | $137.88 | $2.15 | $-30.17 | $5,004.48 | ▼ -30.17 after sell → book $9,756.48; vs 09:30 mark -2.15 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-09 09:30 ET | **SELL** | `CTVA` | 55 | $86.40 | $2.20 | $-215.56 | $9,754.28 | ▼ -215.56 after sell → book $9,754.28; vs 09:30 mark -2.20 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,754.28 | ▲ close $9,754.28 vs 09:30 $9,758.63 (session +0.00) | 16:00 close · cash $9,754.28 · no lots left · equity $9,754.28. | — |
+| 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,754.28 | ▲ 09:30 equity $9,754.28 vs yday $9,754.28 (-0.00) | 09:30 open · cash $9,754.28 · no holdings · equity $9,754.28 vs prior close $9,754.28 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,754.28 | ▲ close $9,754.28 vs 09:30 $9,754.28 (session +0.00) | 16:00 close · cash $9,754.28 · no lots left · equity $9,754.28. | — |
 
 ## Not taken
 

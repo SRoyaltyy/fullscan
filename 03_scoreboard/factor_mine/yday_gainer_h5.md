@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `yday_gainer` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-1.78%** ($9,822) · signal-only (no cash/fees) was +65.78%. Starts YES **7/19**. Fills 79 · skips 252 · realized $-92.34.
+Cash book **-1.84%** ($9,815) · signal-only (no cash/fees) was +64.26%. Starts YES **7/20**. Fills 79 · skips 275 · realized $-92.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -305,6 +305,21 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `DELL` | 2 | $533.88 | $538.47 | +9.18 | $535.25 | -6.44 | +2.74 | +49.38 | +42.94 |
 | 2026-09-09 | `MLYS` | 41 | $31.12 | $30.87 | -10.25 | $30.50 | -15.17 | -25.42 | +117.67 | +102.50 |
 | 2026-09-09 | `CCOI` | 116 | $9.64 | $9.66 | +2.32 | $9.33 | -38.28 | -35.96 | -41.76 | -80.04 |
+| 2026-09-10 | `CRK` | 5 | $14.90 | $15.11 | +1.05 | $14.93 | -0.90 | +0.15 | -1.70 | -2.60 |
+| 2026-09-10 | `ARCT` | 5 | $14.74 | $14.07 | -3.35 | $14.37 | +1.50 | -1.85 | -13.50 | -12.00 |
+| 2026-09-10 | `SLN` | 5 | $13.55 | $13.55 | +0.00 | $13.55 | +0.00 | +0.00 | -6.50 | -6.50 |
+| 2026-09-10 | `EIX` | 1 | $57.44 | $58.00 | +0.56 | $57.83 | -0.17 | +0.39 | +2.58 | +2.41 |
+| 2026-09-10 | `CRDL` | 40 | $2.29 | $2.23 | -2.20 | $2.23 | +0.00 | -2.20 | +2.00 | +2.00 |
+| 2026-09-10 | `CLYM` | 6 | $15.05 | $15.05 | +0.00 | $15.05 | +0.00 | +0.00 | +6.54 | +6.54 |
+| 2026-09-10 | `SAFX` | 233 | $0.42 | $0.43 | +1.40 | $0.40 | -6.99 | -5.59 | +12.35 | +5.36 |
+| 2026-09-10 | `ALEC` | 463 | $2.27 | $2.27 | +0.00 | $2.27 | +0.00 | +0.00 | -115.75 | -115.75 |
+| 2026-09-10 | `OABI` | 244 | $4.01 | $4.01 | -1.22 | $4.01 | +0.00 | -1.22 | -187.88 | -187.88 |
+| 2026-09-10 | `OPK` | 735 | $1.54 | $1.54 | +0.00 | $1.53 | -7.35 | -7.35 | -36.75 | -44.10 |
+| 2026-09-10 | `HQ` | 73 | $16.07 | $16.07 | +0.00 | $16.07 | +0.00 | +0.00 | +12.41 | +12.41 |
+| 2026-09-10 | `EOSE` | 332 | $4.15 | $4.17 | +6.64 | $4.14 | -9.96 | -3.32 | +215.80 | +205.84 |
+| 2026-09-10 | `DELL` | 2 | $535.25 | $535.20 | -0.10 | $532.82 | -4.76 | -4.86 | +42.84 | +38.08 |
+| 2026-09-10 | `MLYS` | 41 | $30.50 | $30.50 | +0.00 | $30.55 | +2.05 | +2.05 | +102.50 | +104.55 |
+| 2026-09-10 | `CCOI` | 116 | $9.33 | $9.48 | +17.40 | $9.48 | +0.00 | +17.40 | -62.64 | -62.64 |
 
 ## Each session (cash + holdings state)
 
@@ -329,6 +344,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 | +2.25 | $149.75 | SEDG×42, GRRR×89, URBN×17, PYXS×423, SIMO×5, OPTX×163, XPOF×261, CRK×5, ARCT×5, SLN×5, EIX×1, CRDL×40, CLYM×6, SAFX×233 | $9,915.09 | -28.35 | +41.09 | ALEC, OABI, OPK, HQ, EOSE, DELL, MLYS, CCOI | SEDG, GRRR, URBN, PYXS, SIMO, OPTX, XPOF | $151.21 | $9,904.65 | CRK×5, ARCT×5, SLN×5, EIX×1, CRDL×40, CLYM×6, SAFX×233, ALEC×463, OABI×244, OPK×735, HQ×73, EOSE×332, DELL×2, MLYS×41, CCOI×116 |
 | 2026-09-08 | -11.47 | $151.21 | CRK×5, ARCT×5, SLN×5, EIX×1, CRDL×40, CLYM×6, SAFX×233, ALEC×463, OABI×244, OPK×735, HQ×73, EOSE×332, DELL×2, MLYS×41, CCOI×116 | $9,855.99 | -48.66 | +271.24 | — | — | $151.21 | $10,127.23 | CRK×5, ARCT×5, SLN×5, EIX×1, CRDL×40, CLYM×6, SAFX×233, ALEC×463, OABI×244, OPK×735, HQ×73, EOSE×332, DELL×2, MLYS×41, CCOI×116 |
 | 2026-09-09 | -13.95 | $151.21 | CRK×5, ARCT×5, SLN×5, EIX×1, CRDL×40, CLYM×6, SAFX×233, ALEC×463, OABI×244, OPK×735, HQ×73, EOSE×332, DELL×2, MLYS×41, CCOI×116 | $10,039.36 | -87.87 | -217.51 | — | — | $151.21 | $9,821.85 | CRK×5, ARCT×5, SLN×5, EIX×1, CRDL×40, CLYM×6, SAFX×233, ALEC×463, OABI×244, OPK×735, HQ×73, EOSE×332, DELL×2, MLYS×41, CCOI×116 |
+| 2026-09-10 | -13.28 | $151.21 | CRK×5, ARCT×5, SLN×5, EIX×1, CRDL×40, CLYM×6, SAFX×233, ALEC×463, OABI×244, OPK×735, HQ×73, EOSE×332, DELL×2, MLYS×41, CCOI×116 | $9,842.03 | +20.18 | -26.58 | — | — | $151.21 | $9,815.45 | CRK×5, ARCT×5, SLN×5, EIX×1, CRDL×40, CLYM×6, SAFX×233, ALEC×463, OABI×244, OPK×735, HQ×73, EOSE×332, DELL×2, MLYS×41, CCOI×116 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -339,10 +355,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-08-14 09:30 ET | **BUY** | `ANGX` | 290 | $4.31 | $3.74 | — | $8,746.36 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+0.5; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟢 vol🟢 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `WWW` | 60 | $20.60 | $2.17 | — | $7,508.19 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=+4.4; leftover $1250.00 | join🟢 sector🔴 gen🟢 news🟢 vol🟡 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `HYLN` | 299 | $4.18 | $3.86 | — | $6,254.51 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ⚪; ret5=+4.1; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `HYLN` | 299 | $4.18 | $3.86 | — | $6,254.51 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ⚪; ret5=+4.1; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 judge🟡 vol🟢 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `ARX` | 63 | $19.57 | $2.18 | — | $5,019.42 | — | baseline list, no extra gate; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+58.7; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟢 vol🟢 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `OMER` | 72 | $17.35 | $2.21 | — | $3,768.02 | — | baseline list, no extra gate; list yday_gainer,yday_mover; 🔵; ret5=+31.9; leftover $1250.00 | join🟢 sector🔴 gen🟢 news🟡 judge🟢 vol🟢 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `AIRO` | 112 | $11.12 | $2.33 | — | $2,520.25 | — | baseline list, no extra gate; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+36.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `AIRO` | 112 | $11.12 | $2.33 | — | $2,520.25 | — | baseline list, no extra gate; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+36.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 judge🟡 vol🟢 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `NCMI` | 464 | $2.69 | $5.99 | — | $1,266.11 | — | baseline list, no extra gate; list yday_gainer,yday_mover; 🔵; ⚪; ret5=-33.5; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `MXCT` | 899 | $1.39 | $11.60 | — | $4.90 | — | baseline list, no extra gate; list yday_gainer,yday_mover; 🔵; ret5=+25.2; leftover $1250.00 | join🟢 sector🔴 gen🟢 news🟡 judge🟢 vol🟢 buy🟡 |
 | 2026-08-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.90 | ▼ close $9,804.72 vs 09:30 $10,000.00 (session -161.22) | 16:00 close · cash $4.90 · equity $9,804.72 vs 09:30 $10,000.00 (-195.28; session marks -161.22) · 8 name(s) marked open→close (per-name table). ANGX×290 09:30 $4.31 → close $4.37 +17.40; WWW×60 09:30 $20.60 → close $21.03 +25.80; HYLN×299 09:30 $4.18 → close $4.06 -35.88; ARX×63 09:30 $19.57 → close $19.58 +0.63; OMER×72 09:30 $17.35 → close $17.19 -11.52; AIRO×112 09:30 $11.12 → close $9.57 -173.60; NCMI×464 09:30 $2.69 → close $2.86 +78.88; MXCT×899 09:30 $1.39 → close $1.32 -62.93 | — |
@@ -423,7 +439,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $705.70 | ▲ close $10,042.15 vs 09:30 $9,779.05 (session +263.17) | 16:00 close · cash $705.70 · equity $10,042.15 vs 09:30 $9,779.05 (+263.10; session marks +263.17) · 7 name(s) marked open→close (per-name table). SEDG×42 09:30 $32.42 → close $33.98 +65.52; GRRR×89 09:30 $13.92 → close $13.72 -17.80; URBN×17 09:30 $78.84 → close $78.75 -1.53; PYXS×423 09:30 $3.45 → close $3.75 +126.90; SIMO×5 09:30 $235.71 → close $242.51 +34.00; OPTX×163 09:30 $7.25 → close $7.53 +45.64; XPOF×261 09:30 $5.03 → close $5.07 +10.44 | — |
 | 2026-09-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $705.70 | ▲ 09:30 equity $10,049.04 vs yday $10,042.15 (+6.89) | 09:30 open · cash $705.70 (unchanged overnight, no fees) · equity $10,049.04 vs prior close $10,042.15 (+6.89) · 7 name(s) re-marked at the open (per-name table). SEDG×42 yday $33.98 → 09:30 $33.69 -12.39; GRRR×89 yday $13.72 → 09:30 $13.78 +5.34; URBN×17 yday $78.75 → 09:30 $79.93 +20.06; PYXS×423 yday $3.75 → 09:30 $3.71 -16.92; SIMO×5 yday $242.51 → 09:30 $239.06 -17.25; OPTX×163 yday $7.53 → 09:30 $7.59 +9.78; XPOF×261 yday $5.07 → 09:30 $5.14 +18.27 | — |
 | 2026-09-03 09:30 ET | **BUY** | `CRK` | 5 | $15.45 | $0.79 | — | $627.67 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover,mover_buy; 🔵; ret5=+7.2; leftover $88.21 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
-| 2026-09-03 09:30 ET | **BUY** | `ARCT` | 5 | $16.77 | $0.85 | — | $542.96 | — | baseline list, no extra gate; list probable,yday_gainer,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+5.7; leftover $88.21 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `ARCT` | 5 | $16.77 | $0.85 | — | $542.96 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+5.7; leftover $88.21 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `SLN` | 5 | $14.85 | $0.76 | — | $467.96 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ⚪; ret5=+9.3; leftover $88.21 | join🟢 sector🟡 gen🟡 news🔴 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `EIX` | 1 | $55.42 | $0.56 | — | $411.98 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-25.9; leftover $88.21 | join🟡 sector🟡 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `CRDL` | 40 | $2.18 | $0.99 | — | $323.79 | — | baseline list, no extra gate; list probable,yday_gainer,mover_buy; 🔵; ⚪; ret5=+1.4; leftover $88.21 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
@@ -451,6 +467,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $151.21 | ▲ close $10,127.23 vs 09:30 $9,855.99 (session +271.24) | 16:00 close · cash $151.21 · equity $10,127.23 vs 09:30 $9,855.99 (+271.24; session marks +271.24) · 15 name(s) marked open→close (per-name table). CRK×5 09:30 $15.50 → close $15.16 -1.70; ARCT×5 09:30 $15.47 → close $15.63 +0.80; SLN×5 09:30 $14.24 → close $13.69 -2.75; EIX×1 09:30 $56.53 → close $59.33 +2.80; CRDL×40 09:30 $2.20 → close $2.22 +0.80; CLYM×6 09:30 $15.62 → close $15.90 +1.68; SAFX×233 09:30 $0.40 → close $0.41 +2.33; ALEC×463 09:30 $2.38 → close $2.47 +41.67; OABI×244 09:30 $4.30 → close $4.24 -14.64; OPK×735 09:30 $1.63 → close $1.59 -29.40; HQ×73 09:30 $15.40 → close $16.14 +54.02; EOSE×332 09:30 $3.99 → close $4.30 +102.92; DELL×2 09:30 $521.15 → close $533.88 +25.46; MLYS×41 09:30 $28.03 → close $31.12 +126.69; CCOI×116 09:30 $9.98 → close $9.64 -39.44 | — |
 | 2026-09-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $151.21 | ▼ 09:30 equity $10,039.36 vs yday $10,127.23 (-87.87) | 09:30 open · cash $151.21 (unchanged overnight, no fees) · equity $10,039.36 vs prior close $10,127.23 (-87.87) · 15 name(s) re-marked at the open (per-name table). CRK×5 yday $15.16 → 09:30 $15.16 +0.00; ARCT×5 yday $15.63 → 09:30 $15.46 -0.85; SLN×5 yday $13.69 → 09:30 $13.60 -0.45; EIX×1 yday $59.33 → 09:30 $59.49 +0.16; CRDL×40 yday $2.22 → 09:30 $2.22 +0.00; CLYM×6 yday $15.90 → 09:30 $15.82 -0.48; SAFX×233 yday $0.41 → 09:30 $0.40 -2.33; ALEC×463 yday $2.47 → 09:30 $2.47 +0.00; OABI×244 yday $4.24 → 09:30 $4.21 -7.32; OPK×735 yday $1.59 → 09:30 $1.58 -7.35; HQ×73 yday $16.14 → 09:30 $15.72 -30.66; EOSE×332 yday $4.30 → 09:30 $4.18 -39.84; DELL×2 yday $533.88 → 09:30 $538.47 +9.18; MLYS×41 yday $31.12 → 09:30 $30.87 -10.25; CCOI×116 yday $9.64 → 09:30 $9.66 +2.32 | — |
 | 2026-09-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $151.21 | ▼ close $9,821.85 vs 09:30 $10,039.36 (session -217.51) | 16:00 close · cash $151.21 · equity $9,821.85 vs 09:30 $10,039.36 (-217.51; session marks -217.51) · 15 name(s) marked open→close (per-name table). CRK×5 09:30 $15.16 → close $14.90 -1.30; ARCT×5 09:30 $15.46 → close $14.74 -3.60; SLN×5 09:30 $13.60 → close $13.55 -0.25; EIX×1 09:30 $59.49 → close $57.44 -2.05; CRDL×40 09:30 $2.22 → close $2.29 +2.60; CLYM×6 09:30 $15.82 → close $15.05 -4.62; SAFX×233 09:30 $0.40 → close $0.42 +5.59; ALEC×463 09:30 $2.47 → close $2.27 -92.60; OABI×244 09:30 $4.21 → close $4.01 -47.58; OPK×735 09:30 $1.58 → close $1.54 -29.40; HQ×73 09:30 $15.72 → close $16.07 +25.55; EOSE×332 09:30 $4.18 → close $4.15 -9.96; DELL×2 09:30 $538.47 → close $535.25 -6.44; MLYS×41 09:30 $30.87 → close $30.50 -15.17; CCOI×116 09:30 $9.66 → close $9.33 -38.28 | — |
+| 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $151.21 | ▲ 09:30 equity $9,842.03 vs yday $9,821.85 (+20.18) | 09:30 open · cash $151.21 (unchanged overnight, no fees) · equity $9,842.03 vs prior close $9,821.85 (+20.18) · 15 name(s) re-marked at the open (per-name table). CRK×5 yday $14.90 → 09:30 $15.11 +1.05; ARCT×5 yday $14.74 → 09:30 $14.07 -3.35; SLN×5 yday $13.55 → 09:30 $13.55 +0.00; EIX×1 yday $57.44 → 09:30 $58.00 +0.56; CRDL×40 yday $2.29 → 09:30 $2.23 -2.20; CLYM×6 yday $15.05 → 09:30 $15.05 +0.00; SAFX×233 yday $0.42 → 09:30 $0.43 +1.40; ALEC×463 yday $2.27 → 09:30 $2.27 +0.00; OABI×244 yday $4.01 → 09:30 $4.01 -1.22; OPK×735 yday $1.54 → 09:30 $1.54 +0.00; HQ×73 yday $16.07 → 09:30 $16.07 +0.00; EOSE×332 yday $4.15 → 09:30 $4.17 +6.64; DELL×2 yday $535.25 → 09:30 $535.20 -0.10; MLYS×41 yday $30.50 → 09:30 $30.50 +0.00; CCOI×116 yday $9.33 → 09:30 $9.48 +17.40 | — |
+| 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $151.21 | ▼ close $9,815.45 vs 09:30 $9,842.03 (session -26.58) | 16:00 close · cash $151.21 · equity $9,815.45 vs 09:30 $9,842.03 (-26.58; session marks -26.58) · 15 name(s) marked open→close (per-name table). CRK×5 09:30 $15.11 → close $14.93 -0.90; ARCT×5 09:30 $14.07 → close $14.37 +1.50; SLN×5 09:30 $13.55 → close $13.55 +0.00; EIX×1 09:30 $58.00 → close $57.83 -0.17; CRDL×40 09:30 $2.23 → close $2.23 +0.00; CLYM×6 09:30 $15.05 → close $15.05 +0.00; SAFX×233 09:30 $0.43 → close $0.40 -6.99; ALEC×463 09:30 $2.27 → close $2.27 +0.00; OABI×244 09:30 $4.01 → close $4.01 +0.00; OPK×735 09:30 $1.54 → close $1.53 -7.35; HQ×73 09:30 $16.07 → close $16.07 +0.00; EOSE×332 09:30 $4.17 → close $4.14 -9.96; DELL×2 09:30 $535.20 → close $532.82 -4.76; MLYS×41 09:30 $30.50 → close $30.55 +2.05; CCOI×116 09:30 $9.48 → close $9.48 +0.00 | — |
 
 ## Not taken
 
@@ -708,13 +726,36 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `HAS` | hard_red | hard-red S=-13.95 sit; no new buys |
 | 2026-09-09 | `BHC` | hard_red | hard-red S=-13.95 sit; no new buys |
 | 2026-09-09 | `SARO` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-10 | `CRK` | min_hold | dropped but min-hold 4/5 sess — no sell |
+| 2026-09-10 | `ARCT` | min_hold | dropped but min-hold 4/5 sess — no sell |
+| 2026-09-10 | `SLN` | min_hold | dropped but min-hold 4/5 sess — no sell |
+| 2026-09-10 | `EIX` | min_hold | dropped but min-hold 4/5 sess — no sell |
+| 2026-09-10 | `CRDL` | min_hold | dropped but min-hold 4/5 sess — no sell |
+| 2026-09-10 | `CLYM` | min_hold | dropped but min-hold 4/5 sess — no sell |
+| 2026-09-10 | `SAFX` | min_hold | dropped but min-hold 4/5 sess — no sell |
+| 2026-09-10 | `ALEC` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-10 | `OABI` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-10 | `OPK` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-10 | `HQ` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-10 | `EOSE` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-10 | `DELL` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-10 | `MLYS` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-10 | `CCOI` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-10 | `ODD` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `SIG` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `NAUT` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `ASO` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `XHLD` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `BAND` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `NET` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `HELP` | hard_red | hard-red S=-13.28 sit; no new buys |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
 | `CRK` | 5 | 2026-09-03 @ $15.45 | baseline list, no extra gate; list probable,yday_gainer,yday_mover,mover_buy; 🔵; ret5=+7.2; leftover $88.21 |
-| `ARCT` | 5 | 2026-09-03 @ $16.77 | baseline list, no extra gate; list probable,yday_gainer,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+5.7; leftover $88.21 |
+| `ARCT` | 5 | 2026-09-03 @ $16.77 | baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+5.7; leftover $88.21 |
 | `SLN` | 5 | 2026-09-03 @ $14.85 | baseline list, no extra gate; list probable,yday_gainer; 🔵; ⚪; ret5=+9.3; leftover $88.21 |
 | `EIX` | 1 | 2026-09-03 @ $55.42 | baseline list, no extra gate; list probable,yday_gainer; ret5=-25.9; leftover $88.21 |
 | `CRDL` | 40 | 2026-09-03 @ $2.18 | baseline list, no extra gate; list probable,yday_gainer,mover_buy; 🔵; ⚪; ret5=+1.4; leftover $88.21 |

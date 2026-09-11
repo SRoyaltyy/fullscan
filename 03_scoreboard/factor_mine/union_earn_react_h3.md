@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ earn_react, no 🚨
 
-Cash book **+18.62%** ($11,862) · signal-only (no cash/fees) was -31.37%. Starts YES **8/19**. Fills 85 · skips 141 · realized $+1868.30.
+Cash book **+18.60%** ($11,860) · signal-only (no cash/fees) was -31.37%. Starts YES **8/20**. Fills 90 · skips 150 · realized $+1859.76.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $11,568.08.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $11,859.74.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -239,6 +239,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `DOMO` | 18 | $3.83 | $3.86 | +0.54 | $3.78 | -1.44 | -0.90 | +4.41 | +2.97 |
 | 2026-09-09 | `IOT` | 1 | $40.15 | $39.60 | -0.55 | $38.65 | -0.95 | -1.50 | -5.30 | -6.25 |
 | 2026-09-09 | `MAMA` | 4 | $15.50 | $15.31 | -0.76 | $15.23 | -0.30 | -1.06 | -1.56 | -1.86 |
+| 2026-09-10 | `AMBA` | 1 | $68.80 | $68.80 | +0.00 | — | +0.00 | +0.00 | +5.62 | — |
+| 2026-09-10 | `ASAN` | 7 | $8.25 | $8.33 | +0.56 | — | +0.00 | +0.56 | -2.87 | — |
+| 2026-09-10 | `DOMO` | 18 | $3.78 | $3.78 | +0.00 | — | +0.00 | +0.00 | +2.97 | — |
+| 2026-09-10 | `IOT` | 1 | $38.65 | $38.73 | +0.08 | — | +0.00 | +0.08 | -6.17 | — |
+| 2026-09-10 | `MAMA` | 4 | $15.23 | $15.23 | -0.02 | — | +0.00 | -0.02 | -1.88 | — |
 
 ## Each session (cash + holdings state)
 
@@ -263,6 +268,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 | +2.25 | $534.85 | AI×131, AVGO×4, CHPT×204, CIEN×3, CPB×63, FIVE×5, HPE×29, MEI×93 | $11,835.96 | +42.36 | +54.53 | AMBA, ASAN, DOMO, IOT, MAMA | — | $234.66 | $11,887.43 | AI×131, AVGO×4, CHPT×204, CIEN×3, CPB×63, FIVE×5, HPE×29, MEI×93, AMBA×1, ASAN×7, DOMO×18, IOT×1, MAMA×4 |
 | 2026-09-08 | -11.47 | $234.66 | AI×131, AVGO×4, CHPT×204, CIEN×3, CPB×63, FIVE×5, HPE×29, MEI×93, AMBA×1, ASAN×7, DOMO×18, IOT×1, MAMA×4 | $11,907.71 | +20.28 | -16.87 | — | — | $234.66 | $11,890.84 | AI×131, AVGO×4, CHPT×204, CIEN×3, CPB×63, FIVE×5, HPE×29, MEI×93, AMBA×1, ASAN×7, DOMO×18, IOT×1, MAMA×4 |
 | 2026-09-09 | -13.95 | $234.66 | AI×131, AVGO×4, CHPT×204, CIEN×3, CPB×63, FIVE×5, HPE×29, MEI×93, AMBA×1, ASAN×7, DOMO×18, IOT×1, MAMA×4 | $11,879.71 | -11.13 | +0.31 | — | AI, AVGO, CHPT, CIEN, CPB, FIVE, HPE, MEI | $11,568.08 | $11,862.26 | AMBA×1, ASAN×7, DOMO×18, IOT×1, MAMA×4 |
+| 2026-09-10 | -13.28 | $11,568.08 | AMBA×1, ASAN×7, DOMO×18, IOT×1, MAMA×4 | $11,862.88 | +0.62 | +0.00 | — | AMBA, ASAN, DOMO, IOT, MAMA | $11,859.74 | $11,859.74 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -391,6 +397,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 09:30 ET | **SELL** | `HPE` | 29 | $56.94 | $2.10 | $+266.68 | $10,283.25 | ▲ +266.68 after sell → book $11,864.24; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-09 09:30 ET | **SELL** | `MEI` | 93 | $13.84 | $2.29 | $-120.81 | $11,568.08 | ▼ -120.81 after sell → book $11,861.95; vs 09:30 mark -2.29 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,568.08 | ▲ close $11,862.26 vs 09:30 $11,879.71 (session +0.31) | 16:00 close · cash $11,568.08 · equity $11,862.26 vs 09:30 $11,879.71 (-17.45; session marks +0.31) · 5 name(s) marked open→close (per-name table). AMBA×1 09:30 $63.07 → close $68.80 +5.73; ASAN×7 09:30 $8.64 → close $8.25 -2.73; DOMO×18 09:30 $3.86 → close $3.78 -1.44; IOT×1 09:30 $39.60 → close $38.65 -0.95; MAMA×4 09:30 $15.31 → close $15.23 -0.30 | — |
+| 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,568.08 | ▲ 09:30 equity $11,862.88 vs yday $11,862.26 (+0.62) | 09:30 open · cash $11,568.08 (unchanged overnight, no fees) · equity $11,862.88 vs prior close $11,862.26 (+0.62) · 5 name(s) re-marked at the open (per-name table). AMBA×1 yday $68.80 → 09:30 $68.80 +0.00; ASAN×7 yday $8.25 → 09:30 $8.33 +0.56; DOMO×18 yday $3.78 → 09:30 $3.78 +0.00; IOT×1 yday $38.65 → 09:30 $38.73 +0.08; MAMA×4 yday $15.23 → 09:30 $15.23 -0.02 | — |
+| 2026-09-10 09:30 ET | **SELL** | `AMBA` | 1 | $68.80 | $0.71 | $+4.27 | $11,636.17 | ▲ +4.27 after sell → book $11,862.17; vs 09:30 mark -0.71 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-10 09:30 ET | **SELL** | `ASAN` | 7 | $8.33 | $0.62 | $-4.13 | $11,693.85 | ▼ -4.13 after sell → book $11,861.54; vs 09:30 mark -0.63 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-10 09:30 ET | **SELL** | `DOMO` | 18 | $3.78 | $0.75 | $+1.51 | $11,761.14 | ▲ +1.51 after sell → book $11,860.79; vs 09:30 mark -0.75 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-10 09:30 ET | **SELL** | `IOT` | 1 | $38.73 | $0.41 | $-7.03 | $11,799.46 | ▼ -7.03 after sell → book $11,860.38; vs 09:30 mark -0.41 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-10 09:30 ET | **SELL** | `MAMA` | 4 | $15.23 | $0.64 | $-3.16 | $11,859.74 | ▼ -3.16 after sell → book $11,859.74; vs 09:30 mark -0.64 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,859.74 | ▲ close $11,859.74 vs 09:30 $11,862.88 (session +0.00) | 16:00 close · cash $11,859.74 · no lots left · equity $11,859.74. | — |
 
 ## Not taken
 
@@ -534,16 +547,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `MAMA` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-09 | `ASO` | hard_red | hard-red S=-13.95 sit; no new buys |
 | 2026-09-09 | `AVO` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-09 | `JMKE` | hard_red | hard-red S=-13.95 sit; no new buys |
 | 2026-09-09 | `OCC` | hard_red | hard-red S=-13.95 sit; no new buys |
 | 2026-09-09 | `SAIL` | hard_red | hard-red S=-13.95 sit; no new buys |
 | 2026-09-09 | `TTAN` | hard_red | hard-red S=-13.95 sit; no new buys |
-
-## Still open (marked at last close)
-
-| Ticker | Shares | Entry | Why |
-|---|---:|---|---|
-| `AMBA` | 1 | 2026-09-04 @ $63.18 | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-10.9; leftover $66.86 |
-| `ASAN` | 7 | 2026-09-04 @ $8.74 | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-0.8; leftover $66.86 |
-| `DOMO` | 18 | 2026-09-04 @ $3.62 | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-3.1; leftover $66.86 |
-| `IOT` | 1 | 2026-09-04 @ $44.90 | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-7.5; leftover $66.86 |
-| `MAMA` | 4 | 2026-09-04 @ $15.70 | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-0.4; leftover $66.86 |
+| 2026-09-10 | `AEO` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `AVAV` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `COO` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `DBI` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `M` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `NAVN` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `NB` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `SHOE` | hard_red | hard-red S=-13.28 sit; no new buys |
