@@ -4,6 +4,8 @@ Run: python -m src.test_webull_exec
 """
 from __future__ import annotations
 
+from pathlib import Path
+
 from src.futubull_exec import BrokerSnap, send_card
 from src.webull_exec import (
     client_order_id,
@@ -98,6 +100,16 @@ def test_submit_uses_paper_place() -> None:
     assert last["sent"][0]["order_id"] == "oid-1"
 
 
+def test_yml_poke_on_main_submits() -> None:
+    """Cloud agent cannot workflow_dispatch; a main poke must submit paper."""
+    yml = Path(__file__).resolve().parent.parent.joinpath(
+        ".github", "workflows", "webull_paper.yml"
+    ).read_text(encoding="utf-8")
+    assert "branches: [main]" in yml
+    assert '".github/workflows/webull_paper.yml"' in yml
+    assert "github.event_name == 'push'" in yml
+
+
 def main() -> None:
     test_refuse_real_without_flags()
     test_paper_never_uses_live_host()
@@ -105,7 +117,8 @@ def main() -> None:
     test_parse_account_and_book()
     test_dry_run_does_not_place()
     test_submit_uses_paper_place()
-    print("test_webull_exec: 6 ok")
+    test_yml_poke_on_main_submits()
+    print("test_webull_exec: 7 ok")
 
 
 if __name__ == "__main__":
