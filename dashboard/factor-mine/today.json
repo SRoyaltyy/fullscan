@@ -1,6 +1,6 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11T06:06:18.865695-04:00",
+  "generated_at": "2026-09-11T07:26:00.100577-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -11,50 +11,46 @@
   },
   "buy_1d": [
     {
+      "ticker": "ORCL",
+      "score": 0.5408410335575866
+    },
+    {
       "ticker": "NVT",
-      "score": 0.47466039853962005
-    },
-    {
-      "ticker": "NEOV",
-      "score": 0.4253060519337339
-    },
-    {
-      "ticker": "KN",
-      "score": 0.6696168023430558
+      "score": 0.46848116683036684
     }
   ],
   "sell_1d": [
     {
-      "ticker": "LUCD",
-      "score": -0.10900530284749078
-    },
-    {
-      "ticker": "XPOF",
-      "score": -0.5119916169543962
-    },
-    {
-      "ticker": "RXST",
-      "score": -0.08463330887530396
-    },
-    {
-      "ticker": "TDTH",
-      "score": -0.12017878665346331
-    },
-    {
-      "ticker": "AMC",
-      "score": -0.12754011352346484
+      "ticker": "QTRX",
+      "score": -0.11567861360567036
     },
     {
       "ticker": "AHCO",
-      "score": -0.16865552850521703
+      "score": -0.268269331715882
     },
     {
-      "ticker": "APLD",
-      "score": 0.0006086392362707332
+      "ticker": "TDTH",
+      "score": -0.0547976694524414
     },
     {
-      "ticker": "TRIP",
-      "score": -0.41391267917428054
+      "ticker": "SSP",
+      "score": -0.1504443224784211
+    },
+    {
+      "ticker": "LUCD",
+      "score": -0.039968565394201336
+    },
+    {
+      "ticker": "PACK",
+      "score": -0.3960561877399017
+    },
+    {
+      "ticker": "RWT",
+      "score": -0.4783648125910178
+    },
+    {
+      "ticker": "AMCX",
+      "score": -0.18390463220785724
     }
   ],
   "flatten": {
@@ -809,6 +805,156 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-09-11\n_Generated 2026-09-11T09:59:25 \u2014 live `flatten_robust`._\n**S=+0.50; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+0.50** (FLAT) \u00b7 route **io**\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Prior close **$108,616.66** \u00b7 09:30 **$108,616.66** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$108,616.66**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66** \u00b7 2026-09-11 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnig"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-11T07:23:02.622946-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-11.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10991913,
+          "preview": "11633 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11437971,
+          "preview": "11630 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11633 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11630 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-09-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-11T07:23:13.091004-04:00",
+      "files": [
+        {
+          "path": "data/universe/2026-09-11_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1116692,
+          "preview": "5904 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5904 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-11T07:23:21.545801-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-11_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9903,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 0.0, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Communication Services={'score': 2.25, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -2.25, 'dir': 'down', 'conf': 0.5, 'source': 'llm'}, Consumer Defensive={'score': 1.35, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Energy={'score': -3.375, 'dir': 'down', 'conf': 0.52, 'source': 'llm'}, Financial={'score': 0.225, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Healthcare={'score': 0.9, 'dir': 'flat', 'conf': 0.52, 'source': 'llm'}, Industrials={'score': 4.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-11_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5538,
+          "preview": "# Weather report \u2014 2026-09-11\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 0.0, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Communication Services={'score': 2.25, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -2.25, 'dir': 'down', 'conf': 0.5, 'source': 'llm'}, Consumer Defensive={'score': 1.35, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Energy={'score': -3.375, 'dir': 'down', 'conf': 0.52, 'source': 'llm'}, Financial={'score': 0.225, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Healthcare={'score': 0.9, 'dir': 'flat', 'conf': 0.52, 'source': 'llm'}, Industrials={'score': 4.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-11\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-11T07:23:25.537456-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-11_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2249817,
+          "preview": "5904 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, EXEL, SBLK, KRYS, NUTX"
+        }
+      ],
+      "preview": "5904 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, EXEL, SBLK, KRYS, NUTX"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-11T07:24:00.817859-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-11_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7631006,
+          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AVO, CFFN, HSBC, SKM, KMI"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-11_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8469184,
+          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, NWBI, AVO, ASML, TER"
+        }
+      ],
+      "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AVO, CFFN, HSBC, SKM, KMI \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, NWBI, AVO, ASML, TER"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-11T07:25:47.353535-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-11_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 88820,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-11_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 12154,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-11\n_Generated 2026-09-11T07:25:47.287961-04:00 \u00b7 export=data/exports/finviz_2026-09-11.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-11.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10991913,
+          "preview": "11633 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11437971,
+          "preview": "11630 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-11\n_Generated 2026-09-11T07:25:47.287961-04:00 \u00b7 export=data/exports/finviz_2026-09-11.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11633 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11630 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "source": "publish_live_boards"
