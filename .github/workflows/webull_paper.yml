@@ -6,6 +6,7 @@ name: Webull paper (OpenAPI sandbox)
 # Optional: WEBULL_ACCOUNT_ID.
 # CLOCK: a main push that touches this file starts the job (same poke
 # as Pre-Open ALL). workflow_dispatch is 403 from the cloud agent.
+# POKE 2026-09-11: re-fire after sandbox 401 + missing numpy.
 
 on:
   push:
@@ -49,7 +50,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install
-        run: pip install webull-openapi-python-sdk
+        run: pip install webull-openapi-python-sdk pandas numpy yfinance
 
       - name: Send live tickets to Webull paper
         env:
