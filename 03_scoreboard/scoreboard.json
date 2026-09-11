@@ -19993,13 +19993,13 @@
         "S4_ETF_TAPE": 0.0
       },
       "leading_sum": 4.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 187.35000610351562,
+      "actual_close": 187.6699981689453,
+      "actual_pct_change": 1.3227496663942073,
+      "actual_direction": "up",
+      "actual_magnitude_band": "notable",
+      "direction_hit": true,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
@@ -20008,7 +20008,9 @@
       "horizon_calls": {},
       "sector": "Technology",
       "etf": "XLK",
-      "rubric": "00_grounding/sectors/technology.md"
+      "rubric": "00_grounding/sectors/technology.md",
+      "spy_pct_change": 0.8524287494320992,
+      "rel_pct_change": 0.4703209169621081
     },
     {
       "date": "2026-09-11",
