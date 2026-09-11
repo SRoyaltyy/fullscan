@@ -1,6 +1,6 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11T05:56:03.224435-04:00",
+  "generated_at": "2026-09-11T05:58:23.984692-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -41,24 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "general_predict",
-      "title": "General market predict",
-      "date": "2026-09-11",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-11T05:12:02.559159-04:00",
-      "files": [
-        {
-          "path": "01_daily/general/2026-09-11_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 11461,
-          "preview": "# Premarket Prediction \u2014 2026-09-11\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: FLAT \u2796 \u2014 FLAT** | total score 0.5 (uncertainty multiplier \u00d71.0) | confidence 0.55\n>\n> **Good news vs bad news:** good +5.25 pts vs bad -4.75 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - oil de-escalation (Brent -2.9%, WTI -2.5%)\n> - Oracle beat +4% AHR (cloud +121%)\n> - Adobe beat + raised FY guide\n> - futures confirming up (ES +0.63%, NQ +0.66%)\n> - Europe green\n>\n> **Bad news driving this:**\n> - Asia composite -1.27% (Kospi -1.76%, Nikkei -1.93%)\n> - VIX backwardation 1.115\n> - hot PPI \u2192 61% Sep hike odds\n> - CPI binary pending 8:30 ET\n> - Houthis took more Red Sea coast\n>\n> **market uncertainty: **elevated** | VIX 17.3 | policy-uncertainty index 275.99 (1d +26.8)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -1.0 \u00d7 2.0 = -2.0\n> - \ud83d\udfe2 Eu"
-        }
-      ],
-      "preview": "# Premarket Prediction \u2014 2026-09-11\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: FLAT \u2796 \u2014 FLAT** | total score 0.5 (uncertainty multiplier \u00d71.0) | confidence 0.55\n>\n> **Good news vs bad news:** good +5.25 pts vs bad -4.75 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - oil de-escalation (Brent -2.9%, WTI -2.5%)\n> - Oracle beat +4% AHR (cloud +121%)\n> - Adobe beat + raised FY guide\n> - futures confirming up (ES +0.63%, NQ +0.66%)\n> - Europe green\n>\n> **Bad news driving this:**\n> - Asia composite -1.27% (Kospi -1.76%, Nikkei -1.93%)\n> - VIX backwardation 1.115\n> - hot PPI \u2192 61% Sep hike odds\n> - CPI binary pending 8:30 ET\n> - Houthis took more Red Sea coast\n>\n> **market uncertainty: **elevated** | VIX 17.3 | policy-uncertainty index 275.99 (1d +26.8)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -1.0 \u00d7 2.0 = -2.0\n> - \ud83d\udfe2 Eu"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -240,6 +222,31 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc \u00b7 # Pre-open ALL status \u2014 2026-09-11\nall_ok=False  qc_all_ok=True  book_ok=False  grok_ok=False  missing=none\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 0\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-11T05:58:23.603306-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-11_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9889,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 0.0, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Communication Services={'score': 2.25, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -2.25, 'dir': 'down', 'conf': 0.5, 'source': 'llm'}, Consumer Defensive={'score': 1.35, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Energy={'score': -3.375, 'dir': 'down', 'conf': 0.52, 'source': 'llm'}, Financial={'score': 0.225, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Healthcare={'score': 0.9, 'dir': 'flat', 'conf': 0.52, 'source': 'llm'}, Industrials={'score': 4.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-11_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5538,
+          "preview": "# Weather report \u2014 2026-09-11\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 0.0, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Communication Services={'score': 2.25, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -2.25, 'dir': 'down', 'conf': 0.5, 'source': 'llm'}, Consumer Defensive={'score': 1.35, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Energy={'score': -3.375, 'dir': 'down', 'conf': 0.52, 'source': 'llm'}, Financial={'score': 0.225, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Healthcare={'score': 0.9, 'dir': 'flat', 'conf': 0.52, 'source': 'llm'}, Industrials={'score': 4.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-11\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

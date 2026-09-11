@@ -1,6 +1,6 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11T05:56:03.224435-04:00",
+  "generated_at": "2026-09-11T05:58:23.984692-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -80,7 +80,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 89113
+          "size": 88908
         },
         {
           "key": "digest_md",
@@ -89,7 +89,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 12066
+          "size": 12098
         }
       ],
       "said": "",
@@ -113,7 +113,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 89113
+          "size": 88908
         },
         {
           "key": "in_baseline",
@@ -364,7 +364,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 89113
+          "size": 88908
         },
         {
           "key": "weather",
@@ -372,8 +372,8 @@
           "path": "01_daily/weather/2026-09-11_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9890 vix=spiking yields=rising",
-          "size": 9890
+          "reason": "sectors=11 bytes=9889 vix=spiking yields=rising",
+          "size": 9889
         }
       ],
       "said": "favorable 3 \u00b7 hostile 1 \u00b7 neutral 7",
@@ -444,7 +444,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 89113
+          "size": 88908
         },
         {
           "key": "dossiers",
@@ -504,7 +504,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 89113
+          "size": 88908
         },
         {
           "key": "in_judge",
@@ -521,8 +521,8 @@
           "path": "01_daily/weather/2026-09-11_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9890 vix=spiking yields=rising",
-          "size": 9890
+          "reason": "sectors=11 bytes=9889 vix=spiking yields=rising",
+          "size": 9889
         },
         {
           "key": "in_ab",
@@ -1234,6 +1234,31 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc \u00b7 # Pre-open ALL status \u2014 2026-09-11\nall_ok=False  qc_all_ok=True  book_ok=False  grok_ok=False  missing=none\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 0\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-11T05:58:23.603306-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-11_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9889,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 0.0, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Communication Services={'score': 2.25, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -2.25, 'dir': 'down', 'conf': 0.5, 'source': 'llm'}, Consumer Defensive={'score': 1.35, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Energy={'score': -3.375, 'dir': 'down', 'conf': 0.52, 'source': 'llm'}, Financial={'score': 0.225, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Healthcare={'score': 0.9, 'dir': 'flat', 'conf': 0.52, 'source': 'llm'}, Industrials={'score': 4.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-11_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5538,
+          "preview": "# Weather report \u2014 2026-09-11\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 0.0, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Communication Services={'score': 2.25, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -2.25, 'dir': 'down', 'conf': 0.5, 'source': 'llm'}, Consumer Defensive={'score': 1.35, 'dir': 'up', 'conf': 0.55, 'source': 'llm'}, Energy={'score': -3.375, 'dir': 'down', 'conf': 0.52, 'source': 'llm'}, Financial={'score': 0.225, 'dir': 'flat', 'conf': 0.5, 'source': 'llm'}, Healthcare={'score': 0.9, 'dir': 'flat', 'conf': 0.52, 'source': 'llm'}, Industrials={'score': 4.5, 'dir': 'up', 'conf': 0.55, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-11\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
