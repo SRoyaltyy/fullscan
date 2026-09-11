@@ -1,11 +1,9 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11T05:16:38.169061-04:00",
+  "generated_at": "2026-09-11T05:16:41.544038-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
-  "blockers": [
-    "MISSING Sector board JSON `01_daily/sectors/2026-09-11/_board.json` \u2014 missing"
-  ],
+  "ranker_ready": true,
+  "blockers": [],
   "counts": {
     "ok": 4,
     "partial": 4,
@@ -105,7 +103,7 @@
       "inputs_ready": true,
       "n_req_ok": 16,
       "n_req": 20,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 2,
       "files": [
         {
@@ -203,9 +201,9 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-09-11/_board.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 7083
         },
         {
           "key": "qc",
@@ -334,17 +332,18 @@
           "size": 10052
         }
       ],
-      "said": "general FLAT  0.5 \u00b7 news 11 items",
+      "said": "general FLAT  0.5 \u00b7 sectors 4 up / 4 down / 3 flat \u00b7 news 11 items",
       "bullets": [
         "bad: Asia composite -1.27% (Kospi -1.76%, Nikkei -1.93%)",
         "bad: VIX backwardation 1.115",
         "bad: hot PPI \u2192 61% Sep hike odds",
         "good: oil de-escalation (Brent -2.9%, WTI -2.5%)",
         "good: Oracle beat +4% AHR (cloud +121%)",
-        "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
-        "S&P 500, Dow, Nasdaq End Lower As Surging Oil Raises Odds For A September Rate Hike  ORCL, ADBE, M, NVDA, UBER In Focus",
-        "S&P 500, Nasdaq, Dow Futures Mixed Ahead Of CPI As Hot PPI, Oil Surge Keep Fed In Focus: Why Traders Are Eyeing GME, ORCL, USO, ADBE Stocks",
-        "Gold prices slide more than 3% after Fed Chair Kevin Warsh\u2019s Jackson Hole comments boost September U.S. rate hike expectations"
+        "XLB FLAT +0.0",
+        "XLC UP +2.2",
+        "XLY DOWN -2.2",
+        "XLP UP +1.4",
+        "XLE DOWN -3.4"
       ]
     },
     {
@@ -465,7 +464,7 @@
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
       "status": "PARTIAL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 4,
       "n_opt_ok": 1,
@@ -485,9 +484,9 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-09-11/_board.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 7083
         },
         {
           "key": "in_actions",
@@ -671,7 +670,22 @@
       "score": "0.5",
       "direction": "flat"
     },
-    "sectors": {},
+    "sectors": {
+      "said": "4 up / 4 down / 3 flat",
+      "bullets": [
+        "XLB FLAT +0.0",
+        "XLC UP +2.2",
+        "XLY DOWN -2.2",
+        "XLP UP +1.4",
+        "XLE DOWN -3.4",
+        "XLF FLAT +0.2",
+        "XLV FLAT +0.9",
+        "XLI UP +4.5",
+        "XLRE DOWN -1.1",
+        "XLK UP +2.9",
+        "XLU DOWN -2.9"
+      ]
+    },
     "news": {
       "said": "11 items",
       "bullets": [
@@ -1095,6 +1109,24 @@
         }
       ],
       "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-09-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-11T05:16:41.160016-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-11/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 7083,
+          "preview": "keys: date, generated_at, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, sectors"
     }
   ],
   "href": {
