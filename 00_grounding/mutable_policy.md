@@ -9,7 +9,7 @@ see_also: 03_scoreboard/LEARNINGS.md
 
 # Mutable policy (all workflows)
 
-Last learn_cycle: **2026-09-11**. Promoted: 11. Human digest: `03_scoreboard/LEARNINGS.md`.
+Last learn_cycle: **2026-09-11**. Promoted: 12. Human digest: `03_scoreboard/LEARNINGS.md`.
 
 ## Accuracy by topic (graded window)
 
@@ -39,6 +39,11 @@ current_behavior: "Eligibility treats weak AB/peer (and micro size) as hard excl
 ---
 trigger_pattern: "A Basic Materials/XLB call builds a severe-up score from strong structural supply/monetary-metal factors (record copper, DRC/Congo export ban, gold/silver surge, ultra-low inventories), but the current 1d XLB relative return is modest (<0.5%), a China-demand/PMI contraction is explicitly present as an offset, an active geopolitics/oil headline can flip the broad equity tape risk-off, and the analysis text says “temper.” The deterministic output still emits severe because component scores and multiplier are not adjusted to match the tempered conclusion."
 corrected_behavior: "When the text concludes “temper” and the 1d XLB relative return is <0.5% with an active geopolitics/oil risk-off headline and an explicit China/PMI offset, score S0 as 0 or negative for the equity 
+
+### a-binding-sector-lesson-crowded-long-fuel-unwind-fuel-fires.md
+---
+trigger_pattern: "A binding sector lesson (crowded-long-fuel / unwind-fuel) fires on a *pattern match* (trailing multi-timeframe relative outperformance + VIX backwardation + negative yield-equity correlation) while its *causal precondition* (an escalating macro overlay — oil spiking, yields backing up) is explicitly identified in the same memo as absent or inverted (oil falling 2.5–3.4%, futures green). The model recognizes the inversion in prose ('the crowded-long fuel argues against an up call, not for a down call') but still applies the lesson's negative component score (S3 = −0.5), damping the up call and capping the band."
+corrected_behavior: "When a binding lesson's causal precondition is explicitly identified as absent or inverted, ZERO the lesson's component contribution — do 
 
 ### a-bond-proxy-defensive-sector-utilities-xlu-is-scored-absolu.md
 ---
@@ -96,11 +101,6 @@ corrected_behavior: "Before emitting the final SECTOR_SCORES, reconcile to one u
 trigger_pattern: "A cyclical sector ETF that remains a 1w/1m relative laggard has just posted a strong one-day relative bounce (>~1% vs SPY); the next session a mega-cap AI/tech earnings print is already public from the prior after-hours with NQ leading ES, and S1 is being filled with stale surveys plus already-traded awards (IDIQ ceilings, closed M&A)."
 corrected_behavior: "Score that 1d bounce once — not in S2, S4, and HIT_GRID. When the live catalyst is a non-holdings mega-cap AHR already public and NQ leads ES, do not default follow-through up for a 1w/1m laggard cyclical; prefer flat or down:mild. Cap S1 at 0/+1 unless a fresh same-morning sector print confirms; verify award economics (ceiling vs obligated) and whether the name already traded the news. Confirm the economic calenda
 
-### a-deep-multi-horizon-relative-laggard-sector-1m-rel-5-with-a.md
----
-trigger_pattern: "A deep multi-horizon relative laggard sector (1m rel ≤ −5%) with a stabilizing 1d relative tape (≥2 consecutive sessions of 1d rel near zero after a multi-day slide) heading into a scheduled high-impact macro binary (CPI/NFP/FOMC) that is still pending at the open, with US index futures independently confirming a directional move of ≥ +0.5% across all four indices and a live sector-relevant input (oil) having flipped sign to relief — the model emits the directional call (up/mild) rather than flattening, applies the 09-10 decay-laggard correction (S2 = 0, not −1) and the 09-04 score-once correction (S4 = 0, not −1), and the call resolves as a direction HIT and magnitude HIT."
-corrected_behavior: "No correction required — this is a validated positive pattern. The three 
-
 ### a-defensive-bond-proxy-sector-is-predicted-down-flat-because.md
 ---
 trigger_pattern: "A defensive/bond-proxy sector is predicted down/flat because (1) a top-holding bellwether dropped sharply in the prior session, (2) a prior-day hawkish Fed-minutes headline is still being treated as a live negative, and (3) positive futures are assumed to mean defensives will lag. Meanwhile the same-morning reversal checklist is positive — futures ≥ +0.3%, real yields easing, oil not spiking — and the prior session’s tape already absorbed the top-holding drop without the sector falling. The stale negative is over-weighted, causing a missed defensive flight-to-safety up day."
@@ -115,11 +115,6 @@ corrected_behavior: "When a bond-proxy sector has both a risk-off defensive bid 
 ---
 trigger_pattern: "A defensive/relative-strength Healthcare call is already correctly read as a reversal—negative 1d/3d relative tape plus a growth/tech-led tape unwinding the prior defensive bid—but S1 is left at 0 because the policy category was checked too superficially as “nothing material,” while a same-day drug-pricing/policy overhang is actually live in sector media. The result is a directionally correct but magnitude-understated down/flat call where the actual is down/mild."
 corrected_behavior: "When a reversal call is already confirmed by S2/S4 tape, run a same-day audit of policy/regulatory headlines before scoring S1=0. If a live negative policy/pricing narrative targets mega-cap pharma/insurers (drug-cost executive orders, record price-drop claims, combination-shot cost warn
-
-### a-defensive-sector-healthcare-staples-utilities-is-a-multi-d.md
----
-trigger_pattern: "A defensive sector (healthcare/staples/utilities) is a multi-day relative laggard (3d/1w rel negative) heading into a scheduled risk-on macro catalyst (benign CPI/NFP, green futures), and the model scores the shared-macro component POSITIVE (S0 > 0) on the reasoning that 'risk-on + duration relief = sector tailwind' — treating the sector as a beneficiary of the risk-on bid rather than as the funding source that capital rotates OUT of."
-corrected_behavior: "When a defensive sector carries a multi-day relative lag (3d/1w rel negative) into a risk-on macro catalyst, score S0 at 0 to −0.3, not positive. Risk-on is a ROTATION signal: capital flows into high-beta/cyclical and OUT of defensives, so a defensive sector is a funding source, not a destination. Additionally: (a) 
 
 ### a-defensive-sector-relative-call-is-built-on-a-carried-rotat.md
 ---
@@ -294,6 +289,11 @@ corrected_behavior: "Keep the current treatment. When (a) the sector is a rate-s
 trigger_pattern: "A rate-sensitive bond-proxy sector (XLRE) is predicted down/mild on a live rates-backup + oil-shock + risk-off day, with the S2 (breadth) and S4 (ETF tape) components both set to −1 primarily off a single prior-day relative print (1d rel −0.65%) rather than a live same-morning relative signal; the realized relative underperformance comes in materially shallower (−0.23%) than the prior-day anchor implied."
 corrected_behavior: "When S2 and S4 are both set to −1 primarily off a single prior-day relative print (not a live, same-morning relative signal), cap the combined S2+S4 contribution at −1.5 rather than −2.0. Direction is unchanged; the relative-extent risk is properly discounted. Today this would have yielded ≈ −5.4 × 0.9 ≈ −4.9, still down/mild, with better-calibra
 
+### a-rate-sensitive-bond-proxy-sector-xlre-xlu-xlp-enters-a-ses.md
+---
+trigger_pattern: "A rate-sensitive bond-proxy sector (XLRE/XLU/XLP) enters a session with a genuinely mixed S0 (live curve flat-to-easing, futures green, oil offered) but a stale multi-horizon relative lag (1w/1m rel negative) and a stale hawkish macro backdrop already priced (T+2). The model scores the stale lag into BOTH S2 (breadth) and S4 (tape) as negative, producing a net negative score and a down call, while the live, knowable-at-open tape is positive."
+corrected_behavior: "When S0 is genuinely 0 (mixed macro) and the live, knowable-at-open tape is positive (green futures ≥ +0.5%, oil offered, live curve flat-to-easing), a down call requires a LIVE negative input. A stale multi-horizon relative lag (1w/1m) is a structural descriptor, not a same-day tape signal — it must not be s
+
 ### a-rate-sensitive-bond-proxy-sector-xlu-xlre-has-a-positive-m.md
 ---
 trigger_pattern: "A rate-sensitive bond-proxy sector (XLU/XLRE) has a positive medium-term relative tape (3d/1w/1m rel all positive) and the model cites the 08-18 'risk-off + rising long end → relative beat' frame to allow relative resilience, while VIX is shallow (<20, backwardated) and a live long-end Treasury auction sits on the calendar — the sector then lags SPY on the day."
@@ -347,18 +347,13 @@ falsifier: "If future logs show Waller’s appearance was actual
 
 ### a-scheduled-high-impact-macro-binary-cpi-nfp-fomc-is-pending.md
 ---
-trigger_pattern: "A scheduled high-impact macro binary (CPI/NFP/FOMC) is pending at the open and the sector has a KNOWN ASYMMETRIC beta to the two branches (e.g., a bond-proxy/duration sector whose downside beta to a hot print is materially larger than its upside beta to a soft print). The model correctly identifies the asymmetry in prose ('mixed-to-mildly-negative for a bond proxy') but then scores the shared-macro component at exactly 0, citing 'do not pre-score either branch."
-corrected_behavior: "Do not pre-score either branch' means do not commit to an outcome; it does NOT mean score the expected value at zero. When a live binary has asymmetric sector beta, score the asymmetry: S0 takes the sign of the larger-beta branch even at ~50/50 odds. Separately, a factor with a same-day ca
+trigger_pattern: "A scheduled high-impact macro binary (CPI/NFP/FOMC) is pending at the open and the sector is a low-beta defensive bond-proxy (XLU/XLRE/XLP); the pre-binary tape is risk-on-leaning (green ES/NQ futures, oil offering hard, VIX <20 and backwardated); the model identifies the binary as 'two-sided / unresolved' and therefore treats it as symmetric, scoring S0=0 and capping confidence/multiplier — when in fact BOTH branches of the binary are negative-to-neutral for a defensive bond-proxy (in-line → risk-on rotation away from defensives; hot → rates up, bond proxy down), so the binary is asymmetric-negative and the correct call is down/mild with a relative-lag clause."
+corrected_behavior: "When the dominant binary is a scheduled macro release and the sector is a defensive bo
 
 ### a-scheduled-high-impact-macro-data-release-nfp-cpi-fomc-with.md
 ---
 trigger_pattern: "A scheduled high-impact macro data release (NFP/CPI/FOMC) with a soft/expected-easing narrative is the flagged dominant event-risk of the day, while a separate geopolitical de-escalation story is generating positive overnight momentum; the market's actual driver becomes the macro print's repricing of the Fed path, and the geopolitical/oil catalyst fades or flips as attention shifts."
 corrected_behavior: "When a scheduled high-impact macro release is flagged as the day's dominant event risk, set the macro-linked components (Fed path B3, bonds B2) from the expected-print conditional under the regime lens — a soft-print-expected day under bad-news-good cannot carry a negative B3. Independently cap/discount geopolitical-oil components (B1/B7) to at most ±0.5 unless US fut
-
-### a-scheduled-high-impact-macro-release-cpi-nfp-fomc-is-pendin.md
----
-trigger_pattern: "A scheduled high-impact macro release (CPI/NFP/FOMC) is pending at the open, US index futures are independently confirming a directional move of ≥+0.5% across all four indices, and the model collapses the entire leading sum to zero ('don't pre-score the binary') — emitting flat/flat on a session that resolves as a directional (up) day. The binary is treated as unknowable, but the pre-binary futures tape is knowable and is discarded along with it."
-corrected_behavior: "Separate the *binary* (unknowable at the snapshot — do not pre-score) from the *pre-binary tape* (knowable — must be scored). When all four index futures confirm ≥ +0.5% in the same direction AND the sector's own cost driver is easing (oil offered for a chemicals-heavy book), score a modest S0 lean in th
 
 ### a-scheduled-high-impact-macro-release-cpi-nfp-fomc-is-the-do.md
 ---
@@ -369,11 +364,6 @@ corrected_behavior: "Add a hard direction gate at emit time: if a scheduled high
 ---
 trigger_pattern: "A scheduled high-impact macro release (NFP/CPI/FOMC) is the dominant two-sided driver, the regime lens (BN=GN) is applied correctly (no pre-scored hawkish), but the model leans directionally UP into the binary based on constructive signals (green Asia, NQ-leading futures from an earlier snapshot, sub-15 VIX) while the most recent premarket tape is weakening (ES turning negative in the second snapshot) and the 1-week real-yield backup + EPU spike point the other way."
 corrected_behavior: "When a scheduled high-impact macro release is the dominant driver and the most recent premarket tape is weakening (ES/NQ turning negative in the latest snapshot, even if an earlier snapshot was positive), do not lean directionally into the binary. Default to FLAT/no-sign with magnitud
-
-### a-sector-analysis-names-a-factor-as-a-relative-headwind-drag.md
----
-trigger_pattern: "A sector analysis names a factor as a 'relative headwind' / 'drag' / 'rotation away from' in the prose of a component section, but assigns that component a NON-NEGATIVE score (0 or positive) because the same section also contains a scored positive factor (e.g., input-cost relief). The named negative is left unscored while the named positive is quantified, producing an upward-biased leading sum and a relative-direction miss on a day the absolute direction is correct."
-corrected_behavior: "If a factor is named in the prose as a 'headwind,' 'drag,' 'rotation away from,' or 'relative negative,' it MUST receive a negative score in the corresponding component — or the prose must be deleted. No unscored named factors. Concretely for a defensive sector on a green-futures / oi
 
 ### a-sector-call-correctly-identifies-a-dominant-risk-off-macro.md
 ---
@@ -434,6 +424,11 @@ corrected_behavior: "(1) Never map NQ/ES divergence onto XLC. XLC's core is META
 ---
 trigger_pattern: "A sector ETF is a deep multi-horizon relative laggard (1m rel ≤ −5%) and the prior-session 1d relative tape is negative, on a day with a live macro shock (oil/rates risk-off) — the model scores the laggard condition in S2 (breadth) AND re-scores the same relative-underperformance signal in S4 (ETF tape confirmation), citing a prior 'tape confirms → don't flatten' correction as license to add the confirmation point."
 corrected_behavior: "(1) Treat S2 and S4 as the SAME signal (relative underperformance) measured over different windows — score it ONCE. If the lag is scored in S2, S4 must be 0 unless there is an independent, same-session tape fact (e.g., a fresh gap, a volume spike, an intraday reversal) not already captured by the lag. (2) The 09-09 correction is a NON-
+
+### a-sector-etf-s-trailing-1d-relative-print-from-the-prior-clo.md
+---
+trigger_pattern: "A sector ETF's trailing 1d relative print (from the prior close) is used to justify TWO separate positive component scores (e.g., S2 breadth/leadership AND S4 ETF tape) on the same session, when no fresh same-day sector-internal breadth data (constituent-level tape, flow print) is available to independently confirm the leadership claim. The single stale rel print is treated as both a breadth signal and a tape signal."
+corrected_behavior: "When no fresh same-day constituent/breadth data exists, a single trailing 1d rel print may anchor AT MOST ONE component score. If it is used for S4 (tape), S2 must be scored 0 absent independent breadth evidence (constituent-level moves, flow print, or a multi-day rel pattern that is itself the breadth signal). Do not let one stale r
 
 ### a-sector-etf-sits-at-near-all-time-highs-after-a-multi-week.md
 ---

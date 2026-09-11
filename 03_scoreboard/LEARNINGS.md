@@ -1,6 +1,6 @@
 # Learnings report — 2026-09-11
 
-Generated: **2026-09-11T18:42:32.520704-04:00** by `src/learn_cycle.py`.
+Generated: **2026-09-11T18:43:22.255870-04:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -15,8 +15,8 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 | Graded runs mined | 180 |
 | Hypotheses written | 181 (wins=80, losses=101) |
 | News hypotheses | 1 |
-| Lessons promoted to active | 11 |
-| Active lesson files now | 198 |
+| Lessons promoted to active | 12 |
+| Active lesson files now | 197 |
 
 ## 2. Accuracy by topic (evidence this cycle learned from)
 
@@ -495,15 +495,16 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 ## 4. Promoted standing rules (this cycle)
 
 - `a-scheduled-high-impact-macro-release-cpi-nfp-fomc-is-the-do.md`
-- `a-scheduled-high-impact-macro-release-cpi-nfp-fomc-is-pendin.md`
 - `a-scheduled-high-impact-macro-binary-cpi-nfp-fomc-is-pending.md`
-- `a-sector-analysis-names-a-factor-as-a-relative-headwind-drag.md`
-- `a-scheduled-high-impact-macro-binary-cpi-nfp-fomc-is-pending.md`
-- `a-scheduled-high-impact-macro-binary-cpi-nfp-fomc-is-pending.md`
-- `a-defensive-sector-healthcare-staples-utilities-is-a-multi-d.md`
-- `a-deep-multi-horizon-relative-laggard-sector-1m-rel-5-with-a.md`
+- `a-sector-etf-s-trailing-1d-relative-print-from-the-prior-clo.md`
 - `a-scheduled-high-impact-macro-binary-cpi-nfp-fomc-is-pending.md`
 - `a-scheduled-high-impact-macro-binary-cpi-nfp-fomc-is-pending.md`
+- `a-scheduled-high-impact-macro-binary-cpi-nfp-fomc-is-pending.md`
+- `a-scheduled-high-impact-macro-binary-cpi-nfp-fomc-is-pending.md`
+- `a-scheduled-high-impact-macro-binary-cpi-nfp-fomc-is-pending.md`
+- `a-scheduled-high-impact-macro-binary-cpi-nfp-fomc-is-pending.md`
+- `a-rate-sensitive-bond-proxy-sector-xlre-xlu-xlp-enters-a-ses.md`
+- `a-binding-sector-lesson-crowded-long-fuel-unwind-fuel-fires.md`
 - `a-scheduled-high-impact-macro-binary-cpi-nfp-fomc-is-pending.md`
 
 Full text lives in `02_lessons/active/`. Summaries also feed `mutable_policy.md`.

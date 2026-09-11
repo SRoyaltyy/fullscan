@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "The lesson is falsified if, on a future session with (a) a pending high-impact macro binary, (b) a low-beta defensive bond-proxy sector, (c) risk-on-leaning pre-binary tape (green futures, oil offering, VIX <20 backwardated), and (d) sticky-high long end, the sector ETF closes UP or flat-to-positive on a relative basis (rel ≥ 0) — i.e., the defensive does NOT lag. Specifically: if XLU/XLRE/XLP closes with rel ≥ 0 on such a setup, the "asymmetric-negative binary for bond proxies" claim is wrong and the symmetric treatment was correct."
 sector: "Utilities"
 date: "2026-09-11"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Utilities — 2026-09-11

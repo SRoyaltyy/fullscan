@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "If on a future session a binding lesson's causal precondition is explicitly identified as inverted (e.g., oil falling instead of spiking) AND the sector still underperforms / falls, then zeroing the lesson's negative weight would be wrong and this correction should be retired. Concretely: a session with green futures ≥ +0.5%, oil offered ≥ 2%, a fresh positive sector catalyst, and a prior-day negative rel print, where XLK nonetheless closes down or lags SPY — that would falsify the "inverted precondition → zero the lesson → reflex bounce" rule."
 sector: "Technology"
 date: "2026-09-11"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Technology — 2026-09-11

@@ -7,7 +7,7 @@ error_category: "C"
 falsifier: "If on a future session a single trailing 1d rel print is used for both S2 and S4, and the sector subsequently delivers a rel print of the same sign and comparable magnitude (i.e., the leadership persists), then the double-count was not harmful and this lesson should be downgraded. Specifically: if XLC's next-session rel is ≥ +0.5% (persisting the prior +1.20%), the "weak evidence" claim is falsified for that instance."
 sector: "Communication Services"
 date: "2026-09-11"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Communication Services — 2026-09-11
