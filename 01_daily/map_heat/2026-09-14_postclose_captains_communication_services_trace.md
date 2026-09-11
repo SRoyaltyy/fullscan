@@ -1,0 +1,25 @@
+# Reasoning trace — MAP POSTCLOSE captains_communication_services 2026-09-14
+
+
+
+**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (11,670 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
+
+
+
+**Step 1 — Research.** The model wanted to know: *"APP AppLovin stock news September 2026"* → got 6 results (via gnews_rss)
+
+  - Why Is AppLovin Stock Trading Near Its Low While Revenue Keeps Growing? - Trefis (https://news.google.com/rss/articles/CBMiygFBVV95cUxNZFFBRmxmT1VKQkVPakhOd3ctYmR6anRjcFAyRW1lZGNyQWlBM2U3dS1QLUpsV05VdU1MdzVXbTdYOHRzUUxqQzBSM20tY0M0XzhWYXhjcFlYZHlwU0FWWnRRQWQ3b2hhRkxjbG5FLWlPMlNmZ2NWOEdCSk1QVHdkdUZnZGJ6UDZkZzlJMjNhVjhtb2kwSC1LenM0R1BCSFExLU42Q1FEVllKckNhQThNeXJuZXNUcU1VQk1fVkF4UU1uQ1pEY01TamlB?oc=5)
+
+  - AppLovin vs. The Trade Desk: Analyzing Diverging Revenue Trends for These Advertising Giants - The Motley Fool (https://news.google.com/rss/articles/CBMi1gFBVV95cUxNQjNJMWJrRnF6RkJSTVIwUEgxbGRjbEtHWXVwUFo2THhUWnRtZUxGTXNPb1dzeUE3WEo4cEJjQWxHN2w0cDlwUFBNLXlSaTRZTU9qVGNwZFdOTGpqUVdyM19FS3NMeUNBS3kwQllRb0pQT0NRRVRWeFhISl9nRmtLVnN5Z0Q3aTI0RVNzdUIyRExqdUpxUGQ4U2k5YksxVXF5UWhGeUxkbFpxWkpyR3NocHJzNmhFNlJ3THQyYVpOVVFGZG9WWEZiLWw3cGJPd2U2VFdvMVFB?oc=5)
+
+  - Is AppLovin (APP) Stock A Bargain Or Fully Priced Now? - simplywall.st (https://news.google.com/rss/articles/CBMitAFBVV95cUxOZVRyR01aUm9UcVNWd2I5OUp1c1FKWkVWT2RiODFQYi1RRHV2Qml3b1E3cHdqdTJTN0V2ODdLNlhlVm9kR2p5TGxEYnlJb0g1Umxub0llVW5Cc0VJbzN0Z25aaDhkR3c1blVsODN6UGlEWkJWbnVJZTAxTThRcDQ5WVpfNzNhU21pS3IzdHpSN09INklLaGt1MmE2bXZZWkZmQmlYVTI4M3hPOFVuZW1MRmUxQ07SAboBQVVfeXFMTzRlX3d6LVVtbngzaVpwaEw1SFB1TjZFU3YtRlpOOGxmSnQ1TWJOVHZzdktleGFFdVFidnBfaFZCdmdyQ0lyd2J1NXJFMWR5d2hfeDFLSEtHNHNtWnN1cE8tRGFwa3lYcWxWZ0YyemlTNy05clNCYTNHWHlsVFNDUllqWUswNVRaRkZURUNwSGZ1ZDdiS3hVcDVGSE5KRjlQZWFDbTdNam01a3dDSjcwcXpYdmR3bjJvbUdn?oc=5)
+
+**Step 2 — Research.** The model wanted to know: *"OMC Omnicom stock news September 2026 Communacopia"* → got 6 results (via ddg)
+
+  - Experts weigh in on Omnicom - OMC is the stock you need (https://www.bing.com/aclick?ld=e8xLyOpnpZckw7665VtDEhbTVUCUzUMfbSBZq9Qci3EdwguHDcTCPjVLuL51DrjbeutwWr9yqPpPjLcqGRHKWnJDjzXNfqA0Zvr0lO8cJD-cjHYaTipuyLF0lpBaGoVbtVW2vwGLufFRALsAp1J39msZYEm1xMSbRdQUqS9TIsHQXkA1lMVZsNjRpTW_Z4ecd3x0Cmk5iDAGcb-AOZRZgHaWEZNbU&u=aHR0cHMlM2ElMmYlMmZ3d3cuemFja3MuY29tJTJmcmVnaXN0cmF0aW9uJTJmcGZwJTJmJTNmYWxlcnQlM2RUQ0tfQTEyNDclMjZ0JTNkT01DJTI2YWRpZCUzZEFCX0JJTkdfU0VBUkNIX0Jyb2FkX1RJQ0tFUl9FeHBhbnNpb25fT21uaWNvbUdyb3VwX0ExMjQ3JTI2Y2lkJTNkcHMtY3BjLUJJTkctU0VBUkNILVRJQ0tFUi1FeHBhbnNpb24tT21uaWNvbUdyb3VwLUExMjQ3JTI2b2ZmZXIlM2R0aWNrZXIlMjZwYXJ0bmVyJTNkYmluZyUyNmNoYW5uZWwlM2RzZWFyY2glMjZjYW1wYWlnbmlkJTNkJTI1NUJTZWFyY2glMjU1RCUyNTIwVGlja2VyJTI1MjBFeHBhbnNpb24lMjUyMDMlMjUyMChCcm9hZCklMjZhZGdyb3VwaWQlM2RPbW5pY29tJTI1MjBHcm91cCUyNTIwKEJyb2FkKSUyNmxvY19waHlzaWNhbF9tcyUzZDY3MTEzJTI2bWF0Y2h0eXBlJTNkcCUyNmRldmljZSUzZGMlMjZrZXl3b3JkJTNkT21uaWNvbSUyNTIwc3RvY2slMjUyMGFuYWx5c2lzJTI2bXNjbGtpZCUzZGQxNGZjODczMTM2NzEyMjc1ZTZiYTJkNzk3NzJkNzBhJTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkJTI1NUJTZWFyY2glMjU1RCUyNTIwVGlja2VyJTI1MjBFeHBhbnNpb24lMjUyMDMlMjUyMChCcm9hZCklMjZ1dG1fdGVybSUzZE9tbmljb20lMjUyMHN0b2NrJTI1MjBhbmFseXNpcyUyNnV0bV9jb250ZW50JTNkT21uaWNvbSUyNTIwR3JvdXAlMjUyMChCcm9hZCk&rlid=d14fc873136712275e6ba2d79772d70a)
+
+  - Omnicom Group (OMC) Transcript: Goldman Sachs Communacopia ... (https://stockanalysis.com/stocks/omc/transcripts/746062-goldman-sachs-communacopia-technology-conference-2026/)
+
+  - Omnicom Group Inc. (OMC) Presents at Goldman Sachs ... (https://seekingalpha.com/article/4945142-omnicom-group-inc-omc-presents-at-goldman-sachs-communacopia-technology-conference-2026)
+
+**Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
