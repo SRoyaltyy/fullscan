@@ -28,6 +28,7 @@ name: Pre-Open ALL (predictive one-shot)
 #   predict is not killed at 55m after AB + map-heat (run 55 exit 124).
 # HARDEN 2026-09-09e: poke so #181 writes missing 2026-09-09_parsed.json.
 #   news_parse now honors PREOPEN_BYPASS_CUTOFF (late heal after 09:25).
+# POKE 2026-09-11 ASAP War room — agent push start ubuntu Pre-Open
 
 on:
   push:
@@ -94,8 +95,8 @@ jobs:
           ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
           FORCE="${{ github.event.inputs.force }}"
           echo "ET_HM=$ET_HM event=${{ github.event_name }} force=$FORCE"
-          if [ "${{ github.event_name }}" = "push" ] && [ "$ET_HM" -lt 535 ] && [ "$FORCE" != "true" ]; then
-            echo "before 05:35 ET — merge/touch is not a packet. ECS 05:55 + 05:40 scrape own the clock."
+          if [ "${{ github.event_name }}" = "push" ] && [ "$ET_HM" -lt 355 ] && [ "$FORCE" != "true" ]; then
+            echo "before 03:55 ET — overnight merge/touch is not a packet. 04:00 standing poke + ECS 05:55 + 05:40 scrape own the clock."
             echo "go=no" >> "$GITHUB_OUTPUT"
           else
             echo "go=yes" >> "$GITHUB_OUTPUT"

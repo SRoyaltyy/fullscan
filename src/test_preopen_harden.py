@@ -143,7 +143,7 @@ def test_incremental_land_hooks() -> None:
     assert '_land(date, "finviz"' in book
     assert "leftover sweep" in yml
     assert "FULLSCAN_LAND" in yml
-    assert "before 05:35 ET" in yml
+    assert "before 03:55 ET" in yml
     assert "go=no" in yml
     book_yml = (ROOT / ".github" / "workflows" / "stock_book_all.yml").read_text(
         encoding="utf-8")
