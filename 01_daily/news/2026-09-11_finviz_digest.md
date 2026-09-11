@@ -1,6 +1,6 @@
 # Finviz Daily Digest — 2026-09-11
 
-_Generated 2026-09-11T05:16:26.897437-04:00 · export=data/exports/finviz_2026-09-11.csv · ticker digests=400 · high-signal=400_
+_Generated 2026-09-11T07:25:47.287961-04:00 · export=data/exports/finviz_2026-09-11.csv · ticker digests=400 · high-signal=400_
 
 ## Major indices (live quote page)
 
@@ -13,7 +13,7 @@ _Generated 2026-09-11T05:16:26.897437-04:00 · export=data/exports/finviz_2026-0
 
 - **AAPL** [Technology]: Bank of America cuts Apple price target to $370 from $380, reiterates Buy on lower iPhone 18 pricing, margin pressure risk
 - **ABT** [Healthcare]: Abbott receives FDA approval for TactiFlex Duo dual-energy ablation catheter to treat complex atrial fibrillation, expanding its U.S. pulsed field ablation portfolio
-- **ADBE** [Technology]: Adobe raises FY26 revenue and EPS guidance as AI ARR accelerates and CEO transition to Anil Chakravarthy announced
+- **ADBE** [Technology]: Jefferies and Citi cut Adobe price targets on slowing growth concerns after Q3 results as Wells Fargo raises target
 - **AME** [Industrials]: AMETEK completes $5.0 billion all-cash acquisition of Indicor Instrumentation
 - **AMGN** [Healthcare]: HSBC downgraded Amgen to Hold from Buy and cut its price target to $425 in a new biopharma catalyst review published today.
 - **AMX** [Communication Serv]: JPMorgan upgrades America Movil to Overweight from Neutral and raises its price target to $32 from $30.
@@ -56,7 +56,7 @@ _Generated 2026-09-11T05:16:26.897437-04:00 · export=data/exports/finviz_2026-0
 
 ### Technology (n=8)
 - AAPL: Bank of America cuts Apple price target to $370 from $380, reiterates Buy on lower iPhone 18 pricing, margin pressure risk
-- ADBE: Adobe raises FY26 revenue and EPS guidance as AI ARR accelerates and CEO transition to Anil Chakravarthy announced
+- ADBE: Jefferies and Citi cut Adobe price targets on slowing growth concerns after Q3 results as Wells Fargo raises target
 - APH: Fabrinet earnings weakness and rising yields spark 6.5% APH drop
 - ASML: Morgan Stanley keeps Overweight on ASML, cuts price target to â¬1,700 from â¬1,930 on China, capacity and margin overhangs
 - CDNS: Cadence beats Q2 2026 estimates with EPS $2.11, revenue $1.6B, signs major Intel deal underpinning raised 2026 AI-driven outlook

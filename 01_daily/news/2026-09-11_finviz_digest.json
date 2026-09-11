@@ -1,6 +1,6 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11T05:16:26.897437-04:00",
+  "generated_at": "2026-09-11T07:25:47.287961-04:00",
   "export_used": "data/exports/finviz_2026-09-11.csv",
   "ticker_digest_count": 400,
   "signal_count": 400,
@@ -9,28 +9,28 @@
       "ticker": "SPY",
       "index": "S&P 500",
       "digest": "Nasdaq, Dow, S&P 500 Futures Rise After 4-Day Market Slide As CPI Looms Large: ORCL, ADBE, MU, TSLA, RKLB, IBRX, HOOD, GME In Focus",
-      "source": "finviz_elite_news",
+      "source": "finviz_export",
       "error": null
     },
     {
       "ticker": "QQQ",
       "index": "Nasdaq-100",
       "digest": "Nasdaq, Dow, S&P 500 Futures Rise After 4-Day Market Slide As CPI Looms Large: ORCL, ADBE, MU, TSLA, RKLB, IBRX, HOOD, GME In Focus",
-      "source": "finviz_elite_news",
+      "source": "finviz_export",
       "error": null
     },
     {
       "ticker": "DIA",
       "index": "Dow Jones",
       "digest": "S&P 500, Dow, Nasdaq End Lower As Surging Oil Raises Odds For A September Rate Hike  ORCL, ADBE, M, NVDA, UBER In Focus",
-      "source": "finviz_elite_news",
+      "source": "finviz_export",
       "error": null
     },
     {
       "ticker": "IWM",
       "index": "Russell 2000",
       "digest": "Investors worried about rising bond yields are keeping a close eye on this corner of the market",
-      "source": "finviz_elite_news",
+      "source": "finviz_export",
       "error": null
     }
   ],
@@ -38,7 +38,7 @@
     {
       "ticker": "AAPL",
       "digest": "Bank of America cuts Apple price target to $370 from $380, reiterates Buy on lower iPhone 18 pricing, margin pressure risk",
-      "news_title": "PLTR Stock Wins Whether Were In An AI Bubble Or Not? Wall Street Analyst Explains Why",
+      "news_title": "Kalshi Eyes 24/7 Leveraged Bets on TSLA, NVDA and AAPL With New Perpetual Futures Push: Report",
       "sector": "Technology",
       "industry": "Consumer Electronics",
       "is_dividend": false,
@@ -59,8 +59,8 @@
     },
     {
       "ticker": "ADBE",
-      "digest": "Adobe raises FY26 revenue and EPS guidance as AI ARR accelerates and CEO transition to Anil Chakravarthy announced",
-      "news_title": "Adobe Inc (ADBE) (Q3 2026) Earnings Call Highlights: Record Revenue, 1 Billion MAU, and ...",
+      "digest": "Jefferies and Citi cut Adobe price targets on slowing growth concerns after Q3 results as Wells Fargo raises target",
+      "news_title": "Oracle, Adobe, Copart, RH, Chevron, and More Stocks That Explain Today's Market",
       "sector": "Technology",
       "industry": "Software - Application",
       "is_dividend": false,
@@ -357,7 +357,7 @@
     {
       "ticker": "CNQ",
       "digest": "Canadian Natural Resources posts record Q2 2026 results with EPS $1.58, raises 2026 production guidance and returns about $4B to shareholders",
-      "news_title": "Brent Is Back Above $100 and Could Keep Rising. How to Play It.",
+      "news_title": "Canadian Natural Resources Ltd's Dividend Analysis",
       "sector": "Energy",
       "industry": "Oil & Gas E&P",
       "is_dividend": false,
@@ -701,7 +701,7 @@
       {
         "ticker": "AAPL",
         "digest": "Bank of America cuts Apple price target to $370 from $380, reiterates Buy on lower iPhone 18 pricing, margin pressure risk",
-        "news_title": "PLTR Stock Wins Whether Were In An AI Bubble Or Not? Wall Street Analyst Explains Why",
+        "news_title": "Kalshi Eyes 24/7 Leveraged Bets on TSLA, NVDA and AAPL With New Perpetual Futures Push: Report",
         "sector": "Technology",
         "industry": "Consumer Electronics",
         "is_dividend": false,
@@ -711,8 +711,8 @@
       },
       {
         "ticker": "ADBE",
-        "digest": "Adobe raises FY26 revenue and EPS guidance as AI ARR accelerates and CEO transition to Anil Chakravarthy announced",
-        "news_title": "Adobe Inc (ADBE) (Q3 2026) Earnings Call Highlights: Record Revenue, 1 Billion MAU, and ...",
+        "digest": "Jefferies and Citi cut Adobe price targets on slowing growth concerns after Q3 results as Wells Fargo raises target",
+        "news_title": "Oracle, Adobe, Copart, RH, Chevron, and More Stocks That Explain Today's Market",
         "sector": "Technology",
         "industry": "Software - Application",
         "is_dividend": false,
@@ -1061,7 +1061,7 @@
       {
         "ticker": "CNQ",
         "digest": "Canadian Natural Resources posts record Q2 2026 results with EPS $1.58, raises 2026 production guidance and returns about $4B to shareholders",
-        "news_title": "Brent Is Back Above $100 and Could Keep Rising. How to Play It.",
+        "news_title": "Canadian Natural Resources Ltd's Dividend Analysis",
         "sector": "Energy",
         "industry": "Oil & Gas E&P",
         "is_dividend": false,
@@ -1307,7 +1307,7 @@
     {
       "ticker": "AAPL",
       "digest": "Bank of America cuts Apple price target to $370 from $380, reiterates Buy on lower iPhone 18 pricing, margin pressure risk",
-      "news_title": "PLTR Stock Wins Whether Were In An AI Bubble Or Not? Wall Street Analyst Explains Why",
+      "news_title": "Kalshi Eyes 24/7 Leveraged Bets on TSLA, NVDA and AAPL With New Perpetual Futures Push: Report",
       "sector": "Technology",
       "industry": "Consumer Electronics",
       "is_dividend": false,
@@ -1328,8 +1328,8 @@
     },
     {
       "ticker": "ADBE",
-      "digest": "Adobe raises FY26 revenue and EPS guidance as AI ARR accelerates and CEO transition to Anil Chakravarthy announced",
-      "news_title": "Adobe Inc (ADBE) (Q3 2026) Earnings Call Highlights: Record Revenue, 1 Billion MAU, and ...",
+      "digest": "Jefferies and Citi cut Adobe price targets on slowing growth concerns after Q3 results as Wells Fargo raises target",
+      "news_title": "Oracle, Adobe, Copart, RH, Chevron, and More Stocks That Explain Today's Market",
       "sector": "Technology",
       "industry": "Software - Application",
       "is_dividend": false,
@@ -1626,7 +1626,7 @@
     {
       "ticker": "CNQ",
       "digest": "Canadian Natural Resources posts record Q2 2026 results with EPS $1.58, raises 2026 production guidance and returns about $4B to shareholders",
-      "news_title": "Brent Is Back Above $100 and Could Keep Rising. How to Play It.",
+      "news_title": "Canadian Natural Resources Ltd's Dividend Analysis",
       "sector": "Energy",
       "industry": "Oil & Gas E&P",
       "is_dividend": false,
@@ -2000,7 +2000,7 @@
     {
       "ticker": "META",
       "digest": "JPMorgan upgrades Meta to Overweight from Neutral, raises price target to $820 on frontier AI and Muse upside",
-      "news_title": "PLTR Stock Wins Whether Were In An AI Bubble Or Not? Wall Street Analyst Explains Why",
+      "news_title": "Scoop: TikTok rejects Meta ads amid settlement pressure campaign",
       "sector": "Communication Services",
       "industry": "Internet Content & Information",
       "is_dividend": false,
@@ -2143,7 +2143,7 @@
     {
       "ticker": "ORCL",
       "digest": "Oracle Q1 revenue up 30%, cloud infrastructure up 121%, raises FY27 guidance to at least $90B revenue, $8.10 EPS",
-      "news_title": "Oracle Corp (ORCL) (Q1 2027) Earnings Call Highlights: Record Revenue, 121% Cloud ...",
+      "news_title": "Oracle, Adobe, Copart, RH, Chevron, and More Stocks That Explain Today's Market",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
       "is_dividend": false,

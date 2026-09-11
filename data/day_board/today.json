@@ -1,6 +1,6 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11T07:24:01.688638-04:00",
+  "generated_at": "2026-09-11T07:25:48.240717-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -93,59 +93,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-11",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-11T05:58:48.254761-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-11_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1458118,
-          "preview": "1d BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP"
-        },
-        {
-          "path": "data/stock_book/2026-09-11_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-09-11_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2472,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-09-11_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 11920,
-          "preview": "2026-09-11 BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 11920,
-          "preview": "2026-09-11 BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP"
-        },
-        {
-          "path": "01_daily/2026-09-11_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 79746,
-          "preview": "# Stock book \u2014 2026-09-11\n_Generated 2026-09-11T05:58:36.122963-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-11 BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP \u00b7 2026-09-11 BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP \u00b7 # Stock book \u2014 2026-09-11\n_Generated 2026-09-11T05:58:36.122963-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -348,6 +295,45 @@
         }
       ],
       "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AVO, CFFN, HSBC, SKM, KMI \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, NWBI, AVO, ASML, TER"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-11T07:25:47.353535-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-11_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 88820,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-11_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 12154,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-11\n_Generated 2026-09-11T07:25:47.287961-04:00 \u00b7 export=data/exports/finviz_2026-09-11.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-11.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10991913,
+          "preview": "11633 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11437971,
+          "preview": "11630 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-11\n_Generated 2026-09-11T07:25:47.287961-04:00 \u00b7 export=data/exports/finviz_2026-09-11.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11633 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11630 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
