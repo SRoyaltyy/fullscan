@@ -1,6 +1,6 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11T05:16:41.544038-04:00",
+  "generated_at": "2026-09-11T05:25:05.686039-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -41,31 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-09-11",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-11T05:08:10.025599-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-11_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 67815,
-          "preview": "raw=122 usable=11 single=21 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | S&P 500, Dow, Nasdaq End Lower As Surging Oil Raises Odds For A September Rate H | S&P 500, Nasdaq, Dow Futures Mixed Ahead Of CPI As Hot PPI, Oil Surge Keep Fed I | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u2019s Jackson Hole commen | Duke Energy's Florida subsidiary files to lower customer rates from January 2027"
-        },
-        {
-          "path": "01_daily/news/2026-09-11_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 4442,
-          "preview": "# News Parse v2 \u2014 2026-09-11T05:08:07.445736-04:00\nWindow\u224848h | raw=122 | usable=11 | single_name=21 | noise_dropped=90\nusable polarity={'+': 3, '-': 4, 'mixed': 0, 'neutral': 4}"
-        }
-      ],
-      "preview": "raw=122 usable=11 single=21 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | S&P 500, Dow, Nasdaq End Lower As Surging Oil Raises Odds For A September Rate H | S&P 500, Nasdaq, Dow Futures Mixed Ahead Of CPI As Hot PPI, Oil Surge Keep Fed I | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u2019s Jackson Hole commen | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 \u00b7 # News Parse v2 \u2014 2026-09-11T05:08:07.445736-04:00\nWindow\u224848h | raw=122 | usable=11 | single_name=21 | noise_dropped=90\nusable polarity={'+': 3, '-': 4, 'mixed': 0, 'neutral': 4}"
-    },
     {
       "key": "events",
       "title": "Event scanner (primary)",
@@ -233,6 +208,31 @@
         }
       ],
       "preview": "keys: date, generated_at, sectors"
+    },
+    {
+      "key": "map_heat_research",
+      "title": "Map heat morning delta refresh",
+      "date": "2026-09-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-11T05:25:05.153540-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-11_research.json",
+          "ok": true,
+          "reason": "",
+          "size": 45955,
+          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-11_research.md",
+          "ok": true,
+          "reason": "",
+          "size": 45955,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-11\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-11\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
