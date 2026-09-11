@@ -1,0 +1,89 @@
+name: Webull paper (OpenAPI sandbox)
+
+# Places today's flatten_hard_red live tickets into the Webull *paper*
+# account (api.sandbox.webull.com). Never talks to the live host.
+# Needs repo secrets WEBULL_APP_KEY + WEBULL_APP_SECRET.
+# Optional: WEBULL_ACCOUNT_ID.
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_date:
+        description: "YYYY-MM-DD (empty = today ET)"
+        required: false
+        default: ""
+      submit:
+        description: "Place paper orders (unchecked = dry-run)"
+        type: boolean
+        default: true
+  workflow_run:
+    workflows:
+      - "Sleeve merge live card"
+    types: [completed]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: webull-paper
+  cancel-in-progress: false
+
+jobs:
+  paper:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install webull-openapi-python-sdk
+
+      - name: Send live tickets to Webull paper
+        env:
+          WEBULL_APP_KEY: ${{ secrets.WEBULL_APP_KEY }}
+          WEBULL_APP_SECRET: ${{ secrets.WEBULL_APP_SECRET }}
+          WEBULL_ACCOUNT_ID: ${{ secrets.WEBULL_ACCOUNT_ID }}
+          RUN_DATE: ${{ github.event.inputs.run_date }}
+          WANT_SUBMIT: ${{ github.event_name == 'workflow_run' && 'true' || inputs.submit }}
+        run: |
+          set -euo pipefail
+          DATE="${RUN_DATE:-}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          ARGS=(--date "$DATE")
+          if [ -n "${WEBULL_APP_KEY:-}" ] && [ -n "${WEBULL_APP_SECRET:-}" ] \
+             && [ "${WANT_SUBMIT}" = "true" ]; then
+            ARGS+=(--submit)
+            echo "paper submit on $DATE"
+          else
+            echo "dry-run on $DATE (no keys or submit unchecked)"
+          fi
+          python -m src.webull_exec "${ARGS[@]}"
+          test -s data/sleeve_merge/webull_last.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          last = json.loads(Path("data/sleeve_merge/webull_last.json").read_text())
+          print("connected", last.get("connected"), "submit", last.get("submit"),
+                "tickets", last.get("n_tickets"), "error", last.get("error"))
+          for s in last.get("sent") or []:
+              print(" ", s.get("status"), s.get("side"), s.get("ticker"),
+                    s.get("shares"), s.get("order_id") or s.get("error") or "")
+          PY
+
+      - name: Land last snapshot
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          bash scripts/safe_git_push.sh \
+            "auto: webull paper ${DATE}" \
+            data/sleeve_merge/webull_last.json \
+            dashboard/sleeve-merge/ || true
