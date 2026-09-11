@@ -1,12 +1,12 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11T05:58:33.958314-04:00",
+  "generated_at": "2026-09-11T07:25:52.870315-04:00",
   "inputs": [
     {
       "name": "finviz_export",
       "family": "join",
       "status": "ok",
-      "n": 11630,
+      "n": 11633,
       "detail": "finviz_2026-09-11.csv"
     },
     {
@@ -48,22 +48,22 @@
       "name": "ab_checklist",
       "family": "ab",
       "status": "ok",
-      "n": 11630,
-      "detail": "2026-09-11_ab_checklist_enriched.csv \u00b7 1 duplicate tickers"
+      "n": 2653,
+      "detail": "2026-09-11_ab_checklist_enriched.csv"
     },
     {
       "name": "peer_rs",
       "family": "peer",
       "status": "ok",
-      "n": 5116,
+      "n": 5115,
       "detail": ""
     },
     {
       "name": "ticker_checklist",
       "family": "addon",
-      "status": "stale",
-      "n": null,
-      "detail": "no dated file \u2014 rebound flags use latest/history (can be stale)"
+      "status": "ok",
+      "n": 11704,
+      "detail": ""
     },
     {
       "name": "events",
@@ -120,5 +120,5 @@
     "sector": true
   },
   "learn_grade": true,
-  "worst": "stale"
+  "worst": "ok"
 }

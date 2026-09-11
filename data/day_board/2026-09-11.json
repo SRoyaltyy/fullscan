@@ -1,6 +1,6 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11T07:25:48.240717-04:00",
+  "generated_at": "2026-09-11T07:26:16.266031-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -557,8 +557,8 @@
           "path": "data/stock_book/2026-09-11_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=211",
-          "size": 1458118
+          "reason": "horizons=5 names=210",
+          "size": 1449488
         },
         {
           "key": "book_md",
@@ -567,7 +567,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 78671
+          "size": 78019
         },
         {
           "key": "green",
@@ -619,8 +619,8 @@
           "path": "data/stock_book/2026-09-11_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=211",
-          "size": 1458118
+          "reason": "horizons=5 names=210",
+          "size": 1449488
         },
         {
           "key": "dash_html",
@@ -657,50 +657,46 @@
   "selections": {
     "buy_1d": [
       {
+        "ticker": "ORCL",
+        "score": 0.5408410335575866
+      },
+      {
         "ticker": "NVT",
-        "score": 0.47466039853962005
-      },
-      {
-        "ticker": "NEOV",
-        "score": 0.4253060519337339
-      },
-      {
-        "ticker": "KN",
-        "score": 0.6696168023430558
+        "score": 0.46848116683036684
       }
     ],
     "sell_1d": [
       {
-        "ticker": "LUCD",
-        "score": -0.10900530284749078
-      },
-      {
-        "ticker": "XPOF",
-        "score": -0.5119916169543962
-      },
-      {
-        "ticker": "RXST",
-        "score": -0.08463330887530396
-      },
-      {
-        "ticker": "TDTH",
-        "score": -0.12017878665346331
-      },
-      {
-        "ticker": "AMC",
-        "score": -0.12754011352346484
+        "ticker": "QTRX",
+        "score": -0.11567861360567036
       },
       {
         "ticker": "AHCO",
-        "score": -0.16865552850521703
+        "score": -0.268269331715882
       },
       {
-        "ticker": "APLD",
-        "score": 0.0006086392362707332
+        "ticker": "TDTH",
+        "score": -0.0547976694524414
       },
       {
-        "ticker": "TRIP",
-        "score": -0.41391267917428054
+        "ticker": "SSP",
+        "score": -0.1504443224784211
+      },
+      {
+        "ticker": "LUCD",
+        "score": -0.039968565394201336
+      },
+      {
+        "ticker": "PACK",
+        "score": -0.3960561877399017
+      },
+      {
+        "ticker": "RWT",
+        "score": -0.4783648125910178
+      },
+      {
+        "ticker": "AMCX",
+        "score": -0.18390463220785724
       }
     ],
     "flatten": {
@@ -1624,6 +1620,59 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-11\n_Generated 2026-09-11T07:25:47.287961-04:00 \u00b7 export=data/exports/finviz_2026-09-11.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11633 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11630 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-11T07:26:15.394081-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-11_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1449488,
+          "preview": "1d BUY ORCL, NVT \u00b7 SELL QTRX, AHCO, TDTH, SSP, LUCD, PACK, RWT, AMCX"
+        },
+        {
+          "path": "data/stock_book/2026-09-11_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-11_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2371,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-11_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11829,
+          "preview": "2026-09-11 BUY ORCL, NVT \u00b7 SELL QTRX, AHCO, TDTH, SSP, LUCD, PACK, RWT, AMCX"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11829,
+          "preview": "2026-09-11 BUY ORCL, NVT \u00b7 SELL QTRX, AHCO, TDTH, SSP, LUCD, PACK, RWT, AMCX"
+        },
+        {
+          "path": "01_daily/2026-09-11_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 79084,
+          "preview": "# Stock book \u2014 2026-09-11\n_Generated 2026-09-11T07:25:56.773019-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY ORCL, NVT \u00b7 SELL QTRX, AHCO, TDTH, SSP, LUCD, PACK, RWT, AMCX \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-11 BUY ORCL, NVT \u00b7 SELL QTRX, AHCO, TDTH, SSP, LUCD, PACK, RWT, AMCX \u00b7 2026-09-11 BUY ORCL, NVT \u00b7 SELL QTRX, AHCO, TDTH, SSP, LUCD, PACK, RWT, AMCX \u00b7 # Stock book \u2014 2026-09-11\n_Generated 2026-09-11T07:25:56.773019-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
