@@ -1,6 +1,6 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11T05:08:10.325380-04:00",
+  "generated_at": "2026-09-11T05:10:16.867436-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -106,7 +106,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 20,
       "n_opt_ok": 0,
       "n_opt": 2,
@@ -152,9 +152,9 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-09-11_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 32044
         },
         {
           "key": "judge",
@@ -932,6 +932,31 @@
         }
       ],
       "preview": "raw=122 usable=11 single=21 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | S&P 500, Dow, Nasdaq End Lower As Surging Oil Raises Odds For A September Rate H | S&P 500, Nasdaq, Dow Futures Mixed Ahead Of CPI As Hot PPI, Oil Surge Keep Fed I | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u2019s Jackson Hole commen | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 \u00b7 # News Parse v2 \u2014 2026-09-11T05:08:07.445736-04:00\nWindow\u224848h | raw=122 | usable=11 | single_name=21 | noise_dropped=90\nusable polarity={'+': 3, '-': 4, 'mixed': 0, 'neutral': 4}"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-09-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-11T05:10:16.553073-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-09-11_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 32044,
+          "preview": "32 events \u00b7 August CPI (last major print before FOMC) | FOMC decision, SEP/dot plot, Warsh press conference | August advance retail sales | Bank of Japan decision \u2014 hike to 1.25% priced | Bank of England decision \u2014 hold at 3.75% expected | ECB rate decision \u2014 25bp hike to 2.50% deposit rate delivered"
+        },
+        {
+          "path": "01_daily/events/2026-09-11_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 12507,
+          "preview": "# Event Scan \u2014 2026-09-11\n- events tracked: **32** (via openclaw)\n- uncertainty: **elevated**\n- summary: The scan is dominated by a live September FOMC (Sept 16) with hike odds near 55-70% after a blowout August payrolls print, a hot PPI and today's CPI, and an oil shock from the US-Iran tanker war keeping Brent above $108. Central bank decisions from the BOJ (Sept 16-17) and BoE (Sept 17) cluster around the Fed after the ECB hiked 25bp on Sept 10, while a heavy earnings slate (Oracle beat, Adobe, FedEx, Micron) and the Sept 24 Trump-Xi summit add idiosyncratic and geopolitical risk. North American trade tensions escalated with Canada's counter-tariffs in force and US Section 338 import bans due Sept 29, and Sept 18 quadruple witching amplifies positioning risk around the FOMC."
+        }
+      ],
+      "preview": "32 events \u00b7 August CPI (last major print before FOMC) | FOMC decision, SEP/dot plot, Warsh press conference | August advance retail sales | Bank of Japan decision \u2014 hike to 1.25% priced | Bank of England decision \u2014 hold at 3.75% expected | ECB rate decision \u2014 25bp hike to 2.50% deposit rate delivered \u00b7 # Event Scan \u2014 2026-09-11\n- events tracked: **32** (via openclaw)\n- uncertainty: **elevated**\n- summary: The scan is dominated by a live September FOMC (Sept 16) with hike odds near 55-70% after a blowout August payrolls print, a hot PPI and today's CPI, and an oil shock from the US-Iran tanker war keeping Brent above $108. Central bank decisions from the BOJ (Sept 16-17) and BoE (Sept 17) cluster around the Fed after the ECB hiked 25bp on Sept 10, while a heavy earnings slate (Oracle beat, Adobe, FedEx, Micron) and the Sept 24 Trump-Xi summit add idiosyncratic and geopolitical risk. North American trade tensions escalated with Canada's counter-tariffs in force and US Section 338 import bans due Sept 29, and Sept 18 quadruple witching amplifies positioning risk around the FOMC."
     }
   ],
   "href": {
