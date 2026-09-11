@@ -1,6 +1,6 @@
 # flatten_robust card — 2026-09-11
 
-_Generated 2026-09-11T17:04:27 — live `flatten_robust`._
+_Generated 2026-09-11T17:06:05 — live `flatten_robust`._
 
 **S=+0.50; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
 
@@ -40,11 +40,11 @@ Sized from marked equity **$107,448.18** as if the book were flat. `io 3d_size (
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | AUPH | io_core | 1113 | $16.09 | $17,902.60 | cash tied |
-| 16:00 ET | OVID | io_core | 6757 | $2.65 | $17,906.05 | cash tied |
+| 16:00 ET | AUPH | io_core | 1112 | $16.10 | $17,903.20 | cash tied |
+| 16:00 ET | OVID | io_core | 6770 | $2.65 | $17,906.65 | cash tied |
 | 16:00 ET | SANM | io_core | 82 | $217.48 | $17,833.36 | cash tied |
-| 16:00 ET | ORCL | io_core | 117 | $152.18 | $17,805.03 | cash tied |
-| 16:00 ET | NVT | io_core | 111 | $160.78 | $17,846.58 | cash tied |
+| 16:00 ET | ORCL | io_core | 117 | $152.44 | $17,834.89 | cash tied |
+| 16:00 ET | NVT | io_core | 111 | $160.73 | $17,841.03 | cash tied |
 | 16:00 ET | COHU | io_core | 310 | $57.63 | $17,866.85 | cash tied |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
