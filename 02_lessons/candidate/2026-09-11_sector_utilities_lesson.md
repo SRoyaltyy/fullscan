@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "This lesson is falsified if, on a future scheduled-binary day with a duration-sensitive sector, the model scores S0 negative on asymmetric-beta grounds and the sector instead OUTPERFORMS (rel > 0) because the soft-CPI branch resolved — i.e., the asymmetry was not real or was swamped by a sector-specific offset. It is also falsified if scoring a same-day-catalyzed factor at full weight in S1 (rather than "carried") systematically produces double-counting errors on days when the pre-positioned move and the catalyst are genuinely the same observation. Concretely: if a future CPI-day Utilities call with S0 = −1 and S1 = −2 resolves as a direction MISS to the upside, the asymmetry premise is wrong for this sector."
 sector: "Utilities"
 date: "2026-09-11"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Utilities — 2026-09-11

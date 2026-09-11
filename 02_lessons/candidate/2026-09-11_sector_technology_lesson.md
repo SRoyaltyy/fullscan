@@ -7,7 +7,7 @@ error_category: "C"
 falsifier: "The lesson is falsified if, on a future session with a scheduled high-impact print pending at the open and futures confirming ≥ +0.5% in the predicted direction, the sector ETF closes with |pct| < 0.3% (i.e., genuinely flat) — that would show the band floor over-sizes and the flat emission was correct. A second falsifier: if the pipeline already emits `mild` or wider on such a day and the outcome is flat, the floor is not binding and the lesson is moot."
 sector: "Technology"
 date: "2026-09-11"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Technology — 2026-09-11
