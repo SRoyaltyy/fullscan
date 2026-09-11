@@ -1,7 +1,7 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11T05:02:31.396922-04:00",
-  "export_used": "data/exports/finviz_2026-09-10.csv",
+  "generated_at": "2026-09-11T05:16:26.897437-04:00",
+  "export_used": "data/exports/finviz_2026-09-11.csv",
   "ticker_digest_count": 400,
   "signal_count": 400,
   "index_digests": [
@@ -38,7 +38,7 @@
     {
       "ticker": "AAPL",
       "digest": "Bank of America cuts Apple price target to $370 from $380, reiterates Buy on lower iPhone 18 pricing, margin pressure risk",
-      "news_title": "Crypto Billionaire Finds iPhone Duo Pretty 'Good' For Gawking at  Financial Charts  Crypto Prediction Market is Already Betting on The Next Big Apple Gadget",
+      "news_title": "PLTR Stock Wins Whether Were In An AI Bubble Or Not? Wall Street Analyst Explains Why",
       "sector": "Technology",
       "industry": "Consumer Electronics",
       "is_dividend": false,
@@ -60,7 +60,7 @@
     {
       "ticker": "ADBE",
       "digest": "Adobe raises FY26 revenue and EPS guidance as AI ARR accelerates and CEO transition to Anil Chakravarthy announced",
-      "news_title": "S&P 500, Nasdaq, Dow Futures Mixed Ahead Of CPI As Hot PPI, Oil Surge Keep Fed In Focus: Why Traders Are Eyeing GME, ORCL, USO, ADBE Stocks",
+      "news_title": "Adobe Inc (ADBE) (Q3 2026) Earnings Call Highlights: Record Revenue, 1 Billion MAU, and ...",
       "sector": "Technology",
       "industry": "Software - Application",
       "is_dividend": false,
@@ -147,7 +147,7 @@
     },
     {
       "ticker": "ASML",
-      "digest": "Morgan Stanley keeps Overweight on ASML, cuts price target to €1,700 from €1,930 on China, capacity and margin overhangs",
+      "digest": "Morgan Stanley keeps Overweight on ASML, cuts price target to â¬1,700 from â¬1,930 on China, capacity and margin overhangs",
       "news_title": "What is ASML? The company that makes chip-printing machines",
       "sector": "Technology",
       "industry": "Semiconductor Equipment & Materials",
@@ -158,7 +158,7 @@
     },
     {
       "ticker": "AU",
-      "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warsh’s Jackson Hole comments boost September U.S. rate hike expectations",
+      "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warshâs Jackson Hole comments boost September U.S. rate hike expectations",
       "news_title": "Kavango appoints Jasper Musadaidzwa as CEO and executive director",
       "sector": "Basic Materials",
       "industry": "Gold",
@@ -180,7 +180,7 @@
     },
     {
       "ticker": "BBVA",
-      "digest": "BBVA posts record Q2 2026 net profit, upgrades Mexico and South America guidance, announces extraordinary €2 billion share buyback program",
+      "digest": "BBVA posts record Q2 2026 net profit, upgrades Mexico and South America guidance, announces extraordinary â¬2 billion share buyback program",
       "news_title": "Grenergy finalises $475m sale of Gabriela energy project to CVC DIF",
       "sector": "Financial",
       "industry": "Banks - Diversified",
@@ -191,7 +191,7 @@
     },
     {
       "ticker": "BCS",
-      "digest": "Strong H1 profits, guidance upgrade and £1bn buyback drive BCS 6.48% surge",
+      "digest": "Strong H1 profits, guidance upgrade and Â£1bn buyback drive BCS 6.48% surge",
       "news_title": "Barclays Hikes S&P 500 Target to 7,950 on Strong Earnings",
       "sector": "Financial",
       "industry": "Banks - Diversified",
@@ -268,7 +268,7 @@
     },
     {
       "ticker": "CAH",
-      "digest": "Barron’s reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
+      "digest": "Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
       "news_title": "Cardinal Health CEO Sells $29 Million in Stock After Earnings Send Shares to Record",
       "sector": "Healthcare",
       "industry": "Medical Distribution",
@@ -345,7 +345,7 @@
     },
     {
       "ticker": "CNI",
-      "digest": "Canadian National Railway outlines conditions to U.S. regulators for proposed Union Pacific–Norfolk Southern merger",
+      "digest": "Canadian National Railway outlines conditions to U.S. regulators for proposed Union PacificâNorfolk Southern merger",
       "news_title": "CN Files Description of Anticipated Requested Conditions to Preserve Rail Competition and Expand Customer Options in the Midwest",
       "sector": "Industrials",
       "industry": "Railroads",
@@ -444,8 +444,8 @@
     },
     {
       "ticker": "E",
-      "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to €3.4B on stronger Q2 results",
-      "news_title": "McDermott wins subsea contract for Cronos gas field off Cyprus",
+      "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results",
+      "news_title": "Saipem, Jan De Nul sign LoI for Mozambique Rovuma LNG project",
       "sector": "Energy",
       "industry": "Oil & Gas Integrated",
       "is_dividend": false,
@@ -598,7 +598,7 @@
     },
     {
       "ticker": "HPE",
-      "digest": "HPE posts record fiscal Q3 2026, raises FY26–27 outlook and expands Oracle AI data center networking collaboration with equity warrants",
+      "digest": "HPE posts record fiscal Q3 2026, raises FY26â27 outlook and expands Oracle AI data center networking collaboration with equity warrants",
       "news_title": "Hewlett Packard Enterprise Co. stock underperforms Thursday when compared to competitors",
       "sector": "Technology",
       "industry": "Communication Equipment",
@@ -664,7 +664,7 @@
     },
     {
       "ticker": "KO",
-      "digest": "Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the company’s Q2 earnings beat.",
+      "digest": "Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.",
       "news_title": "Coca-Colas bet to relaunch Mr Pibb is paying off",
       "sector": "Consumer Defensive",
       "industry": "Beverages - Non-Alcoholic",
@@ -701,7 +701,7 @@
       {
         "ticker": "AAPL",
         "digest": "Bank of America cuts Apple price target to $370 from $380, reiterates Buy on lower iPhone 18 pricing, margin pressure risk",
-        "news_title": "Crypto Billionaire Finds iPhone Duo Pretty 'Good' For Gawking at  Financial Charts  Crypto Prediction Market is Already Betting on The Next Big Apple Gadget",
+        "news_title": "PLTR Stock Wins Whether Were In An AI Bubble Or Not? Wall Street Analyst Explains Why",
         "sector": "Technology",
         "industry": "Consumer Electronics",
         "is_dividend": false,
@@ -712,7 +712,7 @@
       {
         "ticker": "ADBE",
         "digest": "Adobe raises FY26 revenue and EPS guidance as AI ARR accelerates and CEO transition to Anil Chakravarthy announced",
-        "news_title": "S&P 500, Nasdaq, Dow Futures Mixed Ahead Of CPI As Hot PPI, Oil Surge Keep Fed In Focus: Why Traders Are Eyeing GME, ORCL, USO, ADBE Stocks",
+        "news_title": "Adobe Inc (ADBE) (Q3 2026) Earnings Call Highlights: Record Revenue, 1 Billion MAU, and ...",
         "sector": "Technology",
         "industry": "Software - Application",
         "is_dividend": false,
@@ -733,7 +733,7 @@
       },
       {
         "ticker": "ASML",
-        "digest": "Morgan Stanley keeps Overweight on ASML, cuts price target to €1,700 from €1,930 on China, capacity and margin overhangs",
+        "digest": "Morgan Stanley keeps Overweight on ASML, cuts price target to â¬1,700 from â¬1,930 on China, capacity and margin overhangs",
         "news_title": "What is ASML? The company that makes chip-printing machines",
         "sector": "Technology",
         "industry": "Semiconductor Equipment & Materials",
@@ -777,7 +777,7 @@
       },
       {
         "ticker": "HPE",
-        "digest": "HPE posts record fiscal Q3 2026, raises FY26–27 outlook and expands Oracle AI data center networking collaboration with equity warrants",
+        "digest": "HPE posts record fiscal Q3 2026, raises FY26â27 outlook and expands Oracle AI data center networking collaboration with equity warrants",
         "news_title": "Hewlett Packard Enterprise Co. stock underperforms Thursday when compared to competitors",
         "sector": "Technology",
         "industry": "Communication Equipment",
@@ -834,7 +834,7 @@
       },
       {
         "ticker": "CNI",
-        "digest": "Canadian National Railway outlines conditions to U.S. regulators for proposed Union Pacific–Norfolk Southern merger",
+        "digest": "Canadian National Railway outlines conditions to U.S. regulators for proposed Union PacificâNorfolk Southern merger",
         "news_title": "CN Files Description of Anticipated Requested Conditions to Preserve Rail Competition and Expand Customer Options in the Midwest",
         "sector": "Industrials",
         "industry": "Railroads",
@@ -924,7 +924,7 @@
       },
       {
         "ticker": "CAH",
-        "digest": "Barron’s reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
+        "digest": "Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
         "news_title": "Cardinal Health CEO Sells $29 Million in Stock After Earnings Send Shares to Record",
         "sector": "Healthcare",
         "industry": "Medical Distribution",
@@ -981,7 +981,7 @@
       },
       {
         "ticker": "AU",
-        "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warsh’s Jackson Hole comments boost September U.S. rate hike expectations",
+        "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warshâs Jackson Hole comments boost September U.S. rate hike expectations",
         "news_title": "Kavango appoints Jasper Musadaidzwa as CEO and executive director",
         "sector": "Basic Materials",
         "industry": "Gold",
@@ -1082,8 +1082,8 @@
       },
       {
         "ticker": "E",
-        "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to €3.4B on stronger Q2 results",
-        "news_title": "McDermott wins subsea contract for Cronos gas field off Cyprus",
+        "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results",
+        "news_title": "Saipem, Jan De Nul sign LoI for Mozambique Rovuma LNG project",
         "sector": "Energy",
         "industry": "Oil & Gas Integrated",
         "is_dividend": false,
@@ -1128,7 +1128,7 @@
     "Financial": [
       {
         "ticker": "BBVA",
-        "digest": "BBVA posts record Q2 2026 net profit, upgrades Mexico and South America guidance, announces extraordinary €2 billion share buyback program",
+        "digest": "BBVA posts record Q2 2026 net profit, upgrades Mexico and South America guidance, announces extraordinary â¬2 billion share buyback program",
         "news_title": "Grenergy finalises $475m sale of Gabriela energy project to CVC DIF",
         "sector": "Financial",
         "industry": "Banks - Diversified",
@@ -1139,7 +1139,7 @@
       },
       {
         "ticker": "BCS",
-        "digest": "Strong H1 profits, guidance upgrade and £1bn buyback drive BCS 6.48% surge",
+        "digest": "Strong H1 profits, guidance upgrade and Â£1bn buyback drive BCS 6.48% surge",
         "news_title": "Barclays Hikes S&P 500 Target to 7,950 on Strong Earnings",
         "sector": "Financial",
         "industry": "Banks - Diversified",
@@ -1255,7 +1255,7 @@
       },
       {
         "ticker": "KO",
-        "digest": "Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the company’s Q2 earnings beat.",
+        "digest": "Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.",
         "news_title": "Coca-Colas bet to relaunch Mr Pibb is paying off",
         "sector": "Consumer Defensive",
         "industry": "Beverages - Non-Alcoholic",
@@ -1307,7 +1307,7 @@
     {
       "ticker": "AAPL",
       "digest": "Bank of America cuts Apple price target to $370 from $380, reiterates Buy on lower iPhone 18 pricing, margin pressure risk",
-      "news_title": "Crypto Billionaire Finds iPhone Duo Pretty 'Good' For Gawking at  Financial Charts  Crypto Prediction Market is Already Betting on The Next Big Apple Gadget",
+      "news_title": "PLTR Stock Wins Whether Were In An AI Bubble Or Not? Wall Street Analyst Explains Why",
       "sector": "Technology",
       "industry": "Consumer Electronics",
       "is_dividend": false,
@@ -1329,7 +1329,7 @@
     {
       "ticker": "ADBE",
       "digest": "Adobe raises FY26 revenue and EPS guidance as AI ARR accelerates and CEO transition to Anil Chakravarthy announced",
-      "news_title": "S&P 500, Nasdaq, Dow Futures Mixed Ahead Of CPI As Hot PPI, Oil Surge Keep Fed In Focus: Why Traders Are Eyeing GME, ORCL, USO, ADBE Stocks",
+      "news_title": "Adobe Inc (ADBE) (Q3 2026) Earnings Call Highlights: Record Revenue, 1 Billion MAU, and ...",
       "sector": "Technology",
       "industry": "Software - Application",
       "is_dividend": false,
@@ -1416,7 +1416,7 @@
     },
     {
       "ticker": "ASML",
-      "digest": "Morgan Stanley keeps Overweight on ASML, cuts price target to €1,700 from €1,930 on China, capacity and margin overhangs",
+      "digest": "Morgan Stanley keeps Overweight on ASML, cuts price target to â¬1,700 from â¬1,930 on China, capacity and margin overhangs",
       "news_title": "What is ASML? The company that makes chip-printing machines",
       "sector": "Technology",
       "industry": "Semiconductor Equipment & Materials",
@@ -1427,7 +1427,7 @@
     },
     {
       "ticker": "AU",
-      "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warsh’s Jackson Hole comments boost September U.S. rate hike expectations",
+      "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warshâs Jackson Hole comments boost September U.S. rate hike expectations",
       "news_title": "Kavango appoints Jasper Musadaidzwa as CEO and executive director",
       "sector": "Basic Materials",
       "industry": "Gold",
@@ -1449,7 +1449,7 @@
     },
     {
       "ticker": "BBVA",
-      "digest": "BBVA posts record Q2 2026 net profit, upgrades Mexico and South America guidance, announces extraordinary €2 billion share buyback program",
+      "digest": "BBVA posts record Q2 2026 net profit, upgrades Mexico and South America guidance, announces extraordinary â¬2 billion share buyback program",
       "news_title": "Grenergy finalises $475m sale of Gabriela energy project to CVC DIF",
       "sector": "Financial",
       "industry": "Banks - Diversified",
@@ -1460,7 +1460,7 @@
     },
     {
       "ticker": "BCS",
-      "digest": "Strong H1 profits, guidance upgrade and £1bn buyback drive BCS 6.48% surge",
+      "digest": "Strong H1 profits, guidance upgrade and Â£1bn buyback drive BCS 6.48% surge",
       "news_title": "Barclays Hikes S&P 500 Target to 7,950 on Strong Earnings",
       "sector": "Financial",
       "industry": "Banks - Diversified",
@@ -1537,7 +1537,7 @@
     },
     {
       "ticker": "CAH",
-      "digest": "Barron’s reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
+      "digest": "Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
       "news_title": "Cardinal Health CEO Sells $29 Million in Stock After Earnings Send Shares to Record",
       "sector": "Healthcare",
       "industry": "Medical Distribution",
@@ -1614,7 +1614,7 @@
     },
     {
       "ticker": "CNI",
-      "digest": "Canadian National Railway outlines conditions to U.S. regulators for proposed Union Pacific–Norfolk Southern merger",
+      "digest": "Canadian National Railway outlines conditions to U.S. regulators for proposed Union PacificâNorfolk Southern merger",
       "news_title": "CN Files Description of Anticipated Requested Conditions to Preserve Rail Competition and Expand Customer Options in the Midwest",
       "sector": "Industrials",
       "industry": "Railroads",
@@ -1713,8 +1713,8 @@
     },
     {
       "ticker": "E",
-      "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to €3.4B on stronger Q2 results",
-      "news_title": "McDermott wins subsea contract for Cronos gas field off Cyprus",
+      "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results",
+      "news_title": "Saipem, Jan De Nul sign LoI for Mozambique Rovuma LNG project",
       "sector": "Energy",
       "industry": "Oil & Gas Integrated",
       "is_dividend": false,
@@ -1867,7 +1867,7 @@
     },
     {
       "ticker": "HPE",
-      "digest": "HPE posts record fiscal Q3 2026, raises FY26–27 outlook and expands Oracle AI data center networking collaboration with equity warrants",
+      "digest": "HPE posts record fiscal Q3 2026, raises FY26â27 outlook and expands Oracle AI data center networking collaboration with equity warrants",
       "news_title": "Hewlett Packard Enterprise Co. stock underperforms Thursday when compared to competitors",
       "sector": "Technology",
       "industry": "Communication Equipment",
@@ -1933,7 +1933,7 @@
     },
     {
       "ticker": "KO",
-      "digest": "Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the company’s Q2 earnings beat.",
+      "digest": "Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.",
       "news_title": "Coca-Colas bet to relaunch Mr Pibb is paying off",
       "sector": "Consumer Defensive",
       "industry": "Beverages - Non-Alcoholic",
@@ -1966,7 +1966,7 @@
     },
     {
       "ticker": "LOW",
-      "digest": "Bernstein cuts Lowe’s price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery",
+      "digest": "Bernstein cuts Loweâs price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery",
       "news_title": "What Happens To Home Depot Stock If Shoppers Keep Visiting Less?",
       "sector": "Consumer Cyclical",
       "industry": "Home Improvement Retail",
@@ -2000,7 +2000,7 @@
     {
       "ticker": "META",
       "digest": "JPMorgan upgrades Meta to Overweight from Neutral, raises price target to $820 on frontier AI and Muse upside",
-      "news_title": "Should You Buy AppLovin Stock For Its Widening Margin?",
+      "news_title": "PLTR Stock Wins Whether Were In An AI Bubble Or Not? Wall Street Analyst Explains Why",
       "sector": "Communication Services",
       "industry": "Internet Content & Information",
       "is_dividend": false,
@@ -2043,7 +2043,7 @@
     },
     {
       "ticker": "MSI",
-      "digest": "Motorola Solutions announced that its board has increased the company’s share repurchase program authorization.",
+      "digest": "Motorola Solutions announced that its board has increased the companyâs share repurchase program authorization.",
       "news_title": "Mahesh Saptharishi, Executive Vice President and CTO, Motorola Solutions, to Participate in the Piper Sandler Growth Frontiers Conference",
       "sector": "Technology",
       "industry": "Communication Equipment",
@@ -2055,7 +2055,7 @@
     {
       "ticker": "MU",
       "digest": "Barron's reports that Micron Technology shares fall as an Intel-backed start-up targeting the memory-chip market raises fresh competitive concerns for the company.",
-      "news_title": "The New Chip Rally Comes With a Warning Attached",
+      "news_title": "Nasdaq, Dow, S&P 500 Futures Rise After 4-Day Market Slide As CPI Looms Large: ORCL, ADBE, MU, TSLA, RKLB, IBRX, HOOD, GME In Focus",
       "sector": "Technology",
       "industry": "Semiconductors",
       "is_dividend": false,
@@ -2087,7 +2087,7 @@
     },
     {
       "ticker": "NSC",
-      "digest": "Norfolk Southern and Union Pacific file STB response defending proposed merger, say it meets public‑interest review threshold",
+      "digest": "Norfolk Southern and Union Pacific file STB response defending proposed merger, say it meets publicâinterest review threshold",
       "news_title": "Norfolk Southern to present at Morgan Stanely 14th Annual Laguna Conference",
       "sector": "Industrials",
       "industry": "Railroads",
@@ -2121,7 +2121,7 @@
     {
       "ticker": "NVS",
       "digest": "HSBC upgrades Novartis to Hold from Reduce, raises price target to CHF 110 from CHF 95",
-      "news_title": "Novartis Rebounds as $30 Billion Wipeout Draws Board Challenge",
+      "news_title": "Novartis investors turn spotlight on M&A after trial setbacks",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
@@ -2143,7 +2143,7 @@
     {
       "ticker": "ORCL",
       "digest": "Oracle Q1 revenue up 30%, cloud infrastructure up 121%, raises FY27 guidance to at least $90B revenue, $8.10 EPS",
-      "news_title": "S&P 500, Nasdaq, Dow Futures Mixed Ahead Of CPI As Hot PPI, Oil Surge Keep Fed In Focus: Why Traders Are Eyeing GME, ORCL, USO, ADBE Stocks",
+      "news_title": "Oracle Corp (ORCL) (Q1 2027) Earnings Call Highlights: Record Revenue, 121% Cloud ...",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
       "is_dividend": false,

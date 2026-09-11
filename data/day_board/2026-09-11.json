@@ -1,6 +1,6 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11T05:12:02.893272-04:00",
+  "generated_at": "2026-09-11T05:16:27.359425-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -82,7 +82,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 89113
+          "size": 88908
         },
         {
           "key": "digest_md",
@@ -91,7 +91,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 12066
+          "size": 12098
         }
       ],
       "said": "",
@@ -115,7 +115,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 89113
+          "size": 88908
         },
         {
           "key": "in_baseline",
@@ -365,7 +365,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 89113
+          "size": 88908
         },
         {
           "key": "weather",
@@ -445,7 +445,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 89113
+          "size": 88908
         },
         {
           "key": "dossiers",
@@ -505,7 +505,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 89113
+          "size": 88908
         },
         {
           "key": "in_judge",
@@ -1038,6 +1038,45 @@
         }
       ],
       "preview": "# Premarket Prediction \u2014 2026-09-11\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: FLAT \u2796 \u2014 FLAT** | total score 0.5 (uncertainty multiplier \u00d71.0) | confidence 0.55\n>\n> **Good news vs bad news:** good +5.25 pts vs bad -4.75 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - oil de-escalation (Brent -2.9%, WTI -2.5%)\n> - Oracle beat +4% AHR (cloud +121%)\n> - Adobe beat + raised FY guide\n> - futures confirming up (ES +0.63%, NQ +0.66%)\n> - Europe green\n>\n> **Bad news driving this:**\n> - Asia composite -1.27% (Kospi -1.76%, Nikkei -1.93%)\n> - VIX backwardation 1.115\n> - hot PPI \u2192 61% Sep hike odds\n> - CPI binary pending 8:30 ET\n> - Houthis took more Red Sea coast\n>\n> **market uncertainty: **elevated** | VIX 17.3 | policy-uncertainty index 275.99 (1d +26.8)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -1.0 \u00d7 2.0 = -2.0\n> - \ud83d\udfe2 Eu"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-11T05:16:26.981167-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-11_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 88908,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-11_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 12152,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-11\n_Generated 2026-09-11T05:16:26.897437-04:00 \u00b7 export=data/exports/finviz_2026-09-11.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-11.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10986705,
+          "preview": "11633 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11437971,
+          "preview": "11630 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-11\n_Generated 2026-09-11T05:16:26.897437-04:00 \u00b7 export=data/exports/finviz_2026-09-11.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11633 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11630 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
