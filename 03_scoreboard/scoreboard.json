@@ -19719,13 +19719,13 @@
         "S4_ETF_TAPE": 0.0
       },
       "leading_sum": 1.5,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 83.51000213623047,
+      "actual_close": 83.37999725341797,
+      "actual_pct_change": 0.34902025310969975,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": true,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
@@ -19734,7 +19734,9 @@
       "horizon_calls": {},
       "sector": "Consumer Defensive",
       "etf": "XLP",
-      "rubric": "00_grounding/sectors/consumer_defensive.md"
+      "rubric": "00_grounding/sectors/consumer_defensive.md",
+      "spy_pct_change": 0.8524287494320992,
+      "rel_pct_change": -0.5034084963223995
     },
     {
       "date": "2026-09-11",
