@@ -1,96 +1,92 @@
-# News Judge — 2026-09-10
+# News Judge — 2026-09-11
 
 ### IMPORTANT NEWS (my ranking)
 
-1. **Oil crosses $101 / Iran war escalation; SPX, Dow, Nasdaq close lower; yields pop** — the single dominant cross-asset driver today: it sets the risk-off tape, the inflation/Fed-path repricing, and the sector winners/losers (Energy up, cyclicals/duration down). Outranks everything else.
-2. **Bessent's expanded Treasury buyback plan → yields pop** — a Treasury operations/policy item the mechanical filter buried in noise; it is the rates channel that explains why the buyback did NOT cap yields, and it drives the Russell 2000 worry headline.
-3. **Fed Chair Warsh's Jackson Hole hawkish comments → September hike odds up; gold slides >3%** — regime-level rates/hawkish repricing; the mechanical set has this as a gold headline but its real force is the Fed path, which is what is pressuring gold, REITs, utilities and small caps.
-4. **Nvidia AI deal + Dell server backlog spark semis rally (AMAT +5%, LITE +10%, FIX +11%, ALAB +12% on S&P 500 inclusion speculation)** — the AI-infrastructure capex spine is the one live bullish sector force; it is the counterweight to the macro risk-off and the reason tech/semis can diverge from the tape.
-5. **Gold down >3% on hike odds (Barrick, Franco-Nevada, record copper $14,694/t Freeport +7.8%)** — the metals complex is splitting: monetary metals down on real yields, industrial metals up on supply. This is a sector_fundamental split, not a single-name story, and it directly contradicts the mechanical set's two bullish gold items.
-6. **AbbVie positive Phase 3 etentamig multiple myeloma data + $10.9B Apogee close; Abbott FDA approval for TactiFlex Duo** — the only fresh, broad healthcare sector_fundamental catalyst in the set; late-stage oncology readouts plus a device approval can lift the XLV/XBI complex, not just the names.
-7. **CrowdStrike strong earnings spark cybersecurity rally (Fortinet +5%); Fabrinet weakness + rising yields drag APH −6.5%** — a genuine software/security-vs-hardware divergence inside tech; matters for IGV/CIBR baskets and for not treating "tech" as one trade.
-8. **Duke Energy Florida files to LOWER customer rates, avoiding a 2% base-rate hike (~$50M savings)** — a utility-specific regulatory/rate-case item with sector read-through for Florida-regulated utilities and for the "affordability politics" theme; the mechanical filter tagged it but it is more than noise.
+1. **CPI-day risk-on setup: futures rise after 4-day slide, CPI looms large (ORCL/ADBE/MU/TSLA in focus)** — the single dominant session driver; a scheduled high-impact binary that sets SPX beta and the whole rate path. (channel: rates)
+2. **Surging oil / Brent back above $100 raises odds of a September rate hike; S&P/Dow/Nasdaq ended lower** — the live stagflation spine: oil → inflation → hawkish Fed → long-end yields, the regime object behind every sector call. (channel: rates)
+3. **Gold slides >3% on Fed Chair Warsh's Jackson Hole hawkish comments boosting September hike expectations** — a regime-level repricing of the front end and real yields; directly contradicts the mechanical set's bullish gold items. (channel: rates)
+4. **Adobe raises FY26 revenue and EPS guidance as AI ARR accelerates; CEO transition to Anil Chakravarthy** — the freshest index-relevant software/AI-monetization catalyst; carries IGV/software-basket force, not just single-name color. (channel: sector_fundamental)
+5. **Apple PT cut to $370 from $380 (BofA, Buy maintained) on lower iPhone 18 pricing / margin pressure** — top-weight mega-cap with margin read-through to hardware and the iPhone supply chain. (channel: sector_fundamental)
+6. **Abbott FDA approval of TactiFlex Duo dual-energy AFib ablation catheter, expanding US pulsed-field ablation portfolio** — fresh, dated regulatory catalyst in a large-cap medtech; the kind of item the filter wrongly parks as neutral. (channel: sector_fundamental)
+7. **AMETEK completes $5.0B all-cash acquisition of Indicor Instrumentation** — large-cap industrial M&A that re-rates the instrumentation/electrical-equipment sub-complex. (channel: sector_fundamental)
+8. **Investors worried about rising bond yields keep a close eye on small caps (IWM)** — the breadth/small-cap transmission of the yield backup; the cleanest read on whether risk appetite is broadening or narrowing. (channel: risk)
 
-*(Set is thin on true macro breadth — most of the 118 raw items are single-name color. I am ranking 8 and flagging that items 2 and 3 are rescued from the noise sample.)*
+*(Input set is thin on genuine macro policy items — no Treasury buyback/auction operation, no Phase-3 readout, no Fed/Treasury policy shift in the usable or noise sample. Ranking is therefore CPI + oil/yields heavy.)*
 
 ---
 
 ### STEP 1 — FRAMEWORK SCORE
 
-**1. Oil >$101 / Iran escalation; indices lower; yields pop**
-- keep | us_relevance: high — sets SPX beta, inflation path, Fed odds | channel: risk | geography: global_priced | severity: regime | horizon: 1d-1w | action_object: spx | detail: SPX beta, XLE long / XLY, XLU, XLRE, IWM short | polarity: bearish | polarity_why: oil supply shock = stagflation impulse, hits multiples and cyclicals | confidence: 0.85
+**1. CPI-day risk-on setup / futures rise after 4-day slide**
+- keep | us_relevance: high — dominant scheduled binary for SPX beta | channel: rates | geography: us_domestic | severity: regime | horizon: 1d | action_object: spx | detail: SPX beta, rate-sensitive baskets | polarity: mixed | polarity_why: two-sided print; futures green but 4-day slide and oil spike skew downside asymmetry | confidence: 0.7
 
-**2. Bessent expanded Treasury buyback plan → yields pop**
-- keep | us_relevance: high — Treasury operations directly move the long end | channel: rates | geography: us_domestic | severity: session | horizon: 1d-1w | action_object: spx | detail: long-end yields, TLT, rate-sensitive baskets | polarity: mixed | polarity_why: buybacks are normally supportive but the tape read them as insufficient vs supply/inflation — yields popped | confidence: 0.7
+**2. Surging oil / Brent >$100 raises September hike odds; indices lower**
+- keep | us_relevance: high — stagflation spine transmits to every sector | channel: rates | geography: global_priced | severity: regime | horizon: 1d-1w | action_object: spx | detail: SPX beta, XLE vs XLY/XLU spread | polarity: bearish | polarity_why: oil→inflation→hawkish Fed→long-end backup compresses multiples | confidence: 0.75
 
-**3. Warsh hawkish Jackson Hole → Sept hike odds up; gold −3%**
-- keep | us_relevance: high — Fed path is the discount rate for everything | channel: rates | geography: us_domestic | severity: regime | horizon: 1w-1m | action_object: spx | detail: SPX beta, gold miners, XLRE/XLU, IWM | polarity: hawkish | polarity_why: higher hike odds lift real yields, compress duration and non-yielding assets | confidence: 0.8
+**3. Gold −3% on Warsh hawkish Jackson Hole comments**
+- keep | us_relevance: high — real-yield repricing is the live regime object | channel: rates | geography: global_priced | severity: regime | horizon: 1d-1w | action_object: basket | detail: gold miners (NEM/FCX), XLB metals sleeve, real-yield proxies | polarity: hawkish | polarity_why: hike-odds repricing lifts real yields, pressures duration and metals | confidence: 0.7
 
-**4. Nvidia AI deal + Dell backlog → semis rally (AMAT, LITE, FIX, ALAB)**
-- keep | us_relevance: high — AI capex is the largest single earnings driver in the index | channel: sector_fundamental | geography: us_supply_chain | severity: session | horizon: 1d-1w | action_object: sector_etf | detail: SMH/SOXX, IGV, AI-power basket | polarity: bullish | polarity_why: confirmed order backlog and deal flow, not sentiment | confidence: 0.75
+**4. Adobe raises FY26 guidance, AI ARR accelerates, CEO transition**
+- keep | us_relevance: medium-high — index-relevant software catalyst with basket force | channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1d-1w | action_object: sector_etf | detail: IGV, software basket | polarity: bullish | polarity_why: guidance raise + AI ARR is a fresh positive for the software complex | confidence: 0.65
 
-**5. Gold −3% on hike odds vs record copper $14,694/t (FCX +7.8%)**
-- keep | us_relevance: medium — metals split is a real sector signal but not an index driver | channel: sector_fundamental | geography: global_priced | severity: session | horizon: 1d-1w | action_object: sector_etf | detail: XLB (FCX long vs NEM/GOLD short), GDX | polarity: mixed | polarity_why: monetary metals down on real yields, industrial metals up on supply squeeze | confidence: 0.7
+**5. Apple PT cut to $370 (BofA, Buy maintained) on iPhone 18 pricing/margin**
+- conditional | us_relevance: medium — top-weight mega-cap, margin read-through | channel: sector_fundamental | geography: us_supply_chain | severity: session | horizon: 1d-1w | action_object: single_name | detail: AAPL, iPhone supply chain | polarity: bearish | polarity_why: PT cut on margin pressure, though rating held Buy | confidence: 0.55
 
-**6. AbbVie Phase 3 etentamig data + Apogee close; Abbott TactiFlex Duo FDA approval**
-- conditional | us_relevance: medium — large-cap biotech readout plus device approval can lift XLV/XBI breadth | channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1d-1w | action_object: sector_etf | detail: XLV, XBI, large-cap pharma basket | polarity: bullish | polarity_why: positive late-stage oncology data and a device approval are fresh, name-anchored catalysts | confidence: 0.6
+**6. Abbott FDA approval TactiFlex Duo AFib catheter**
+- keep | us_relevance: medium — fresh dated regulatory catalyst in large-cap medtech | channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1d-1w | action_object: sector_etf | detail: XLV, medtech/EP-ablation sub-complex | polarity: bullish | polarity_why: portfolio expansion in a growing PFA market | confidence: 0.6
 
-**7. CrowdStrike beat → cybersecurity rally (FTNT +5%); Fabrinet weakness + yields drag APH −6.5%**
-- conditional | us_relevance: medium — software/security strength vs hardware/optics weakness is a real intra-tech dispersion signal | channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1d-1w | action_object: basket | detail: IGV/CIBR long vs APH/Fabrinet-linked optics short | polarity: mixed | polarity_why: earnings-driven dispersion, not a sector-wide move | confidence: 0.6
+**7. AMETEK completes $5.0B Indicor acquisition**
+- conditional | us_relevance: medium — large-cap industrial M&A re-rates a sub-complex | channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1d-1w | action_object: sector_etf | detail: XLI, instrumentation/electrical-equipment | polarity: mixed | polarity_why: strategic scale vs all-cash leverage/margin drag | confidence: 0.5
 
-**8. Duke Energy Florida files to lower customer rates, avoiding 2% base-rate hike**
-- conditional | us_relevance: low-medium — single-state regulatory outcome, but it is the affordability-politics template | channel: sector_policy | geography: us_domestic | severity: noise | horizon: 1w-1m | action_object: single_name | detail: DUK / Florida-regulated utilities | polarity: mixed | polarity_why: customer savings = political relief but forgone revenue for the utility | confidence: 0.5
+**8. Rising bond yields / small-cap (IWM) watch**
+- keep | us_relevance: high — breadth transmission of the yield backup | channel: risk | geography: us_domestic | severity: session | horizon: 1d-1w | action_object: basket | detail: IWM, small-cap/regional-bank basket | polarity: bearish | polarity_why: yield backup hits the most rate-sensitive, least cash-generative cohort | confidence: 0.6
 
 ---
 
 ### STEP 2 — INTERACTIONS
 
-- **Fed path + oil shock → treat as ONE stagflation cluster.** Warsh hawkish + oil >$101 both push real yields up; do not count them as two independent bearish inputs into SPX beta, but DO let them compound for rate-sensitive sectors (XLRE, XLU, IWM, unprofitable growth).
-- **Yields up (buyback insufficient / hawkish Fed) + cyclicals/small-caps → risk-off breadth.** The Russell 2000 "worried about rising bond yields" headline is the same rates cluster, not a separate story. Do not read the buyback as a small-cap rescue.
-- **AI chip demand + semis rally → do NOT double-count with the macro risk-off.** Semis are the one place where a fresh fundamental (NVDA deal, Dell backlog) is beating the tape. Semis mixed-to-up while SPX is down is a legitimate divergence, not a contradiction.
-- **Gold down on real yields + copper at record on supply → do not trade XLB as one commodity.** Monetary and industrial metals are on opposite sides today; a single "materials bullish/bearish" call is wrong.
-- **Single-name biotech Phase 3 success (ABBV) + device approval (ABT) → Healthcare basket, not only the names.** Per standing lesson, a large-cap late-stage readout with partner/peer co-movement is a sector factor.
-- **Oil shock + utilities/REITs → duration-over-defensive-bid.** Per standing lessons, a bond-proxy with rising long-end yields defaults to relative outperformance / flat-to-negative absolute, not absolute up.
+- **Fed path + weak labor / hot inflation → treat as ONE rates cluster.** The Warsh-hawkish gold slide (item 3), the oil-driven hike-odds story (item 2), and the CPI binary (item 1) are three expressions of the same rate-path object. Do not score them as three independent negatives; the effective drag is one cluster.
+- **Yields up (hawkish repricing) + cyclicals/small-caps → risk-off breadth, not risk-on breadth.** The IWM/yield item (8) is the tell: this is the *inverse* of the "yields down + cyclicals → breadth support" pattern. Do not buy small caps or rate-sensitive cyclicals on the CPI-hope leg.
+- **AI/software catalyst (ADBE) + hawkish rates → do not buy software on dovish-rates hope.** ADBE's guidance raise is a genuine sector_fundamental positive, but with the rate cluster hawkish, treat it as a relative-strength/quality signal inside software, not a license for broad IGV beta.
+- **Oil >$100 + gold −3% → commodity complex is NOT a hedge today.** Per the standing Basic Materials lesson, on an oil-driven risk-off day metals co-move with equities. Do not use the gold/miners sleeve as a floor for XLB, and do not read the mechanical set's "gold surge lifts Barrick/Franco-Nevada" items as live — they are contradicted by the Warsh headline.
+- **Fresh medtech regulatory catalyst (ABT) + sector sympathy → XLV/medtech basket, not only the name.** Per the standing lesson on large positive trial/regulatory catalysts, audit for spillover breadth before applying the single-ticker rule.
 
 ---
 
 ### STEP 3 — RECLASSIFY AUDIT
 
-**DROPPED FROM USABLE (mechanical said usable, I drop or demote):**
-- *"Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%"* — **DROP.** Directly contradicted by the same-day gold −3% / hike-odds headline. This is a stale prior-session print being carried as if live; the mechanical filter's polarity tag (+) is wrong for today.
-- *"Gold price surge drives Franco-Nevada 6.55% higher on Aug 19"* — **DROP.** Explicitly dated Aug 19; three weeks stale, and the sign is inverted vs today's gold tape.
-- *"Another rate hike, just for insurance: Five questions for the ECB"* — **DROP.** ECB, not US; no US equity risk-appetite transmission today.
-- *"Can Data Center Power Fuel CAT Stock To New Highs?"* — **DROP.** Rhetorical headline, no catalyst; the AI-power theme is better expressed via the NVDA/Dell item.
-- *"UBS upgrades Lockheed Martin to Buy, PT $674"* — **DROP to single_name.** Analyst action, no sector or macro force.
-- *"Duke Energy Florida files to lower customer rates"* — **DEMOTE to conditional/single_name** (kept at rank 8 only for the affordability-politics read-through).
+**DROPPED from mechanical usable:**
+- *"Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%"* — stale/contradicted. The live gold tape is −3% on Warsh hawkish comments; this item is the inverse of today's regime and would mislead a metals call.
+- *"Gold price surge drives Franco-Nevada 6.55% higher on Aug 19"* — explicitly dated Aug 19; three weeks stale, no session force.
+- *"Duke Energy Florida files to lower customer rates from Jan 2027"* — 2027-dated rate case, ~$50M savings, no session or regime force for XLU.
+- *"Another rate hike, just for insurance: Five questions for the ECB"* — foreign central bank commentary with no direct US equity transmission.
+- *"Enbridge to buy Tallgrass crude oil transport business for $2.5bn"* — mid-cap pipeline M&A, no sector-ETF or SPX beta force.
+- *"S&P 500, Nasdaq, Dow Futures Mixed Ahead Of CPI As Hot PPI, Oil Surge Keep Fed In Focus"* — retained in spirit but folded into item 1; the "hot PPI" reference is stale (PPI already printed) and would double-count the rate cluster.
 
-**RESCUED FROM NOISE (mechanical dropped, I promote):**
-- *"S&P 500, Dow, Nasdaq End Lower As Oil Crosses $101, Yields Pop Following Bessent's Expanded Buyback Plan"* — **RESCUE → keep.** This is the day's actual tape summary and contains two regime items (oil, Treasury buyback) the mechanical filter discarded.
-- *"Stocks fall on Wall Street as oil prices jump back above $100 a barrel after Iran war escalates"* — **RESCUE → keep.** The cleanest statement of the dominant risk driver.
-- *"Record copper prices at $14,694/ton surge Freeport-McMoRan 7.8%"* — **RESCUE → keep.** Industrial-metals supply squeeze is a genuine XLB/FCX sector signal.
-- *"CrowdStrike strong earnings spark cybersecurity rally lifting Fortinet 5%"* — **RESCUE → conditional.** Real earnings-driven software breadth.
-- *"S&P 500 inclusion speculation fuels Astera Labs 12% intraday surge"* — **RESCUE → conditional.** Index-inclusion flow is a mechanical, non-sentiment catalyst.
-- *"Zacks Strong Buy upgrade and AI data center backlog drive 11% FIX surge"* — **RESCUE → conditional.** Backlog is fundamental, not just an upgrade.
-- *"Bullish 1.6T leadership note and AI optics momentum drive LITE 10% surge"* — **RESCUE → conditional.** Same AI-optics cluster as the NVDA/Dell item.
-- *"Strong H1 profits, guidance upgrade and £1bn buyback drive BCS 6.48% surge"* — **RESCUE → single_name.** Foreign bank, no US transmission.
+**RESCUED from noise:**
+- *"CrowdStrike strong earnings spark cybersecurity rally lifting Fortinet 5%"* — genuine sector_fundamental breadth signal for the cybersecurity sub-complex; the mechanical filter dropped it as single-name color, but it carries basket force alongside the ADBE software catalyst.
+- *"Bullish 1.6T leadership note and AI optics momentum drive LITE 10% surge"* — AI-optics/infra demand signal with read-through to the AI-infrastructure complex; relevant to the ADBE AI-ARR theme.
+- *"Zacks Strong Buy upgrade and AI data center backlog drive 11% FIX surge"* — AI data-center backlog is a live demand theme; carries the same AI-capex read-through.
+- *"U.S.-Listed Copper Mining Stocks Fall as Copper Retreats From Record High"* — this is the *correct* sign for today's metals tape (co-move with equities on oil risk-off) and should be kept as the live copper read, replacing the stale gold-surge items.
+- *"Investors worried about rising bond yields are keeping a close eye on this corner of the market"* — rescued into item 8; it is the cleanest breadth/risk-appetite transmission of the yield backup.
 
-**RULES_APPLIED:** a-large-positive-trial-regulatory-catalyst-originates-in-one (ABBV Phase 3 → sector factor, not single-ticker); a-defensive-bond-proxy-sector-utilities-faces-a-risk-off-tape (rising 10Y + risk-off → relative, not absolute up); a-financials-prediction-treats-any-2s10s-steepening-as-an-unconditional (long-end-driven steepening = headwind, not NIM tailwind); a-sector-call-correctly-identifies-a-dominant-risk-off-macro (do not use a commodity bid as a floor on an oil-driven risk-off day); a-fresh-overnight-kinetic-oil-supply-increment (fresh kinetic escalation scored at full weight, not softened by bad-news-good).
+**Kept as-is (no reclassification needed):** ABT FDA approval, AMETEK/Indicor, Brent >$100 piece, CPI/futures piece.
 
 ---
 
 ### STEP 4 — B1 / SECTOR INJECT
 
 ```
-NEWS_JUDGE: n=8 rescued=8
-MACRO rates: [hawkish] Warsh JH lifts Sept hike odds; Bessent buyback failed to cap yields — long end popped (regime/1w-1m)
-MACRO risk: [bearish] Oil >$101 on Iran escalation; SPX/Dow/Nasdaq lower, IWM pressured by yields (regime/1d-1w)
-SECTOR technology: [bullish] NVDA AI deal + Dell backlog → AMAT +5%, LITE +10%, FIX +11%, ALAB +12% (SMH/SOXX, IGV)
-SECTOR basic_materials: [mixed] Gold −3% on real yields vs record copper $14,694/t, FCX +7.8% — monetary and industrial metals split (XLB, GDX)
-SECTOR healthcare: [bullish] ABBV Phase 3 etentamig MM data + $10.9B Apogee close; ABT TactiFlex Duo FDA approval (XLV, XBI)
-SECTOR technology_dispersion: [mixed] CrowdStrike beat lifts FTNT +5%; Fabrinet weakness + yields drag APH −6.5% (IGV/CIBR vs optics)
-SECTOR utilities: [mixed] DUK Florida files to cut rates, forgoing 2% hike; rising long end caps bond-proxies (DUK, XLU)
-INTERACTION: Fed path + oil shock = ONE stagflation cluster — do not double-count into SPX beta, but DO compound for XLRE/XLU/IWM; semis are the one live bullish divergence
-WATCH: mechanical set carried two stale BULLISH gold items (Barrick, Franco-Nevada) that are sign-inverted vs today's gold −3% tape — do not trade them long
+NEWS_JUDGE: n=8 rescued=5
+MACRO rates: [hawkish] CPI binary + oil >$100 + Warsh-hawkish gold −3% = ONE rate cluster; hike odds repricing lifts real/long-end yields (regime/1d-1w)
+MACRO risk: [bearish] yield backup transmits to small caps/IWM and rate-sensitive cyclicals — breadth narrowing, not broadening (session/1d-1w)
+SECTOR technology: [bullish] ADBE FY26 raise + AI ARR acceleration; cybersecurity (CRWD/FTNT) and AI-optics (LITE) confirm breadth (IGV, software basket)
+SECTOR healthcare: [bullish] ABT FDA approval TactiFlex Duo expands US PFA portfolio — audit medtech spillover before single-ticker rule (XLV)
+SECTOR industrials: [mixed] AMETEK closes $5.0B Indicor — scale vs all-cash leverage/margin drag (XLI, instrumentation)
+SECTOR basic_materials: [bearish] copper retreats from record, gold −3% on hawkish repricing — metals co-move with equities, NOT a floor (XLB)
+INTERACTION: hawkish rate cluster + AI/software catalyst → do not buy software on dovish-rates hope; treat ADBE as relative-strength, not broad IGV beta
+INTERACTION: oil >$100 + gold −3% → commodity complex is not a hedge today; do not use gold/miners sleeve as XLB floor
+WATCH: CPI is the load-bearing binary — if it prints hot, the rate cluster dominates and breadth narrows further; if cool, the ADBE/AI-software leg leads. Do not pre-score the print.
 ```
 
 ---
@@ -98,13 +94,24 @@ WATCH: mechanical set carried two stale BULLISH gold items (Barrick, Franco-Neva
 NEWS_PARSE_BEGIN
 IMPORTANT_COUNT: 8
 TOP_ITEMS:
-- Oil crosses $101 on Iran escalation; SPX/Dow/Nasdaq lower, yields pop | keep=keep | channel=risk | severity=regime | horizon=1d-1w | object=spx:SPX beta, XLE long / XLY, XLU, XLRE, IWM short | pol=bearish | conf=0.85
-- Bessent expanded Treasury buyback plan; yields pop despite it | keep=keep | channel=rates | severity=session | horizon=1d-1w | object=spx:long-end yields, TLT, rate-sensitive baskets | pol=mixed | conf=0.7
-- Warsh hawkish Jackson Hole lifts Sept hike odds; gold slides >3% | keep=keep | channel=rates | severity=regime | horizon=1w-1m | object=spx:SPX beta, gold miners, XLRE/XLU, IWM | pol=hawkish | conf=0.8
-- Nvidia AI deal + Dell server backlog spark semis rally (AMAT +5%, LITE +10%, FIX +11%, ALAB +12%) | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:SMH/SOXX, IGV, AI-power basket | pol=bullish | conf=0.75
-- Gold −3% on hike odds vs record copper $14,694/t (FCX +7.8%) | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XLB, GDX | pol=mixed | conf=0.7
-- AbbVie Phase 3 etentamig MM data + $10.9B Apogee close; Abbott TactiFlex Duo FDA approval | keep=conditional | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XLV, XBI | pol=bullish | conf=0.6
-- CrowdStrike beat sparks cybersecurity rally (FTNT +5%); Fabrinet weakness + yields drag APH −6.5% | keep=conditional | channel=sector_fundamental | severity=session | horizon=1d-1w | object=basket:IGV/CIBR long vs optics short | pol=mixed | conf=0.6
-- Duke Energy Florida files to lower customer rates, avoiding 2% base-rate hike | keep=conditional | channel=sector_policy | severity=noise | horizon=1w-1m | object=single_name:DUK / Florida-regulated utilities | pol=mixed | conf=0.5
-INTERACTIONS: Fed path + oil shock = ONE stagflation cluster (compound for XLRE/XLU/IWM, do not double-count into SPX beta); yields-up + cyclicals/small-caps = risk-off breadth, buyback is not a small-cap rescue; AI chip demand + semis rally is a legitimate bullish divergence from the macro tape; gold-down-on-real-yields vs copper-at-record = do not trade XLB as one commodity; ABBV Phase 3 + ABT approval = Healthcare basket not single names; oil shock + bond-proxies = duration-over-defensive-bid
-RESCUED_FROM_NOISE
+- CPI-day risk-on setup: futures rise after 4-day slide, CPI looms large | keep=keep | channel=rates | severity=regime | horizon=1d | object=spx:SPX beta, rate-sensitive baskets | pol=mixed | conf=0.7
+- Surging oil / Brent back above $100 raises September rate hike odds; indices lower | keep=keep | channel=rates | severity=regime | horizon=1d-1w | object=spx:SPX beta, XLE vs XLY/XLU spread | pol=bearish | conf=0.75
+- Gold slides >3% on Warsh hawkish Jackson Hole comments boosting September hike odds | keep=keep | channel=rates | severity=regime | horizon=1d-1w | object=basket:gold miners (NEM/FCX), XLB metals sleeve, real-yield proxies | pol=hawkish | conf=0.7
+- Adobe raises FY26 revenue and EPS guidance as AI ARR accelerates; CEO transition | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:IGV, software basket | pol=bullish | conf=0.65
+- Apple PT cut to $370 from $380 (BofA, Buy maintained) on iPhone 18 pricing/margin | keep=conditional | channel=sector_fundamental | severity=session | horizon=1d-1w | object=single_name:AAPL, iPhone supply chain | pol=bearish | conf=0.55
+- Abbott FDA approval TactiFlex Duo dual-energy AFib ablation catheter | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XLV, medtech/EP-ablation sub-complex | pol=bullish | conf=0.6
+- AMETEK completes $5.0B all-cash acquisition of Indicor Instrumentation | keep=conditional | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XLI, instrumentation/electrical-equipment | pol=mixed | conf=0.5
+- Rising bond yields keep small caps (IWM) in focus | keep=keep | channel=risk | severity=session | horizon=1d-1w | object=basket:IWM, small-cap/regional-bank basket | pol=bearish | conf=0.6
+INTERACTIONS: Fed path + oil-driven hike odds + Warsh-hawkish gold slide = ONE rates cluster, do not score as three independent negatives; yields up + cyclicals/small-caps = risk-off breadth, not risk-on; AI/software catalyst (ADBE) + hawkish rates = do not buy software on dovish-rates hope; oil >$100 + gold −3% = commodity complex is not a hedge today, do not use gold/miners as XLB floor; fresh medtech regulatory catalyst (ABT) + sector sympathy = audit XLV/medtech spillover before single-ticker rule
+RESCUED_FROM_NOISE: CrowdStrike strong earnings spark cybersecurity rally lifting Fortinet 5%; Bullish 1.6T leadership note and AI optics momentum drive LITE 10% surge; Zacks Strong Buy upgrade and AI data center backlog drive 11% FIX surge; U.S.-Listed Copper Mining Stocks Fall as Copper Retreats From Record High; Investors worried about rising bond yields are keeping a close eye on this corner of the market
+DROPPED_FROM_USABLE: Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%; Gold price surge drives Franco-Nevada 6.55% higher on Aug 19; Duke Energy's Florida subsidiary files to lower customer rates from January 2027; Another rate hike, just for insurance: Five questions for the ECB; Enbridge to buy Tallgrass crude oil transport business for $2.5bn; S&P 500, Nasdaq, Dow Futures Mixed Ahead Of CPI As Hot PPI, Oil Surge Keep Fed In Focus
+B1_INJECT:
+NEWS_JUDGE: n=8 rescued=5
+MACRO rates: [hawkish] CPI binary + oil >$100 + Warsh-hawkish gold −3% = ONE rate cluster; hike odds repricing lifts real/long-end yields (regime/1d-1w)
+MACRO risk: [bearish] yield backup transmits to small caps/IWM and rate-sensitive cyclicals — breadth narrowing, not broadening (session/1d-1w)
+SECTOR technology: [bullish] ADBE FY26 raise + AI ARR acceleration; cybersecurity (CRWD/FTNT) and AI-optics (LITE) confirm breadth (IGV, software basket)
+SECTOR healthcare: [bullish] ABT FDA approval TactiFlex Duo expands US PFA portfolio — audit medtech spillover before single-ticker rule (XLV)
+SECTOR industrials: [mixed] AMETEK closes $5.0B Indicor — scale vs all-cash leverage/margin drag (XLI, instrumentation)
+SECTOR basic_materials: [bearish] copper retreats from record, gold −3% on hawkish repricing — metals co-move with equities, NOT a floor (XLB)
+INTERACTION: hawkish rate cluster + AI/software catalyst → do not buy software on dovish-rates hope; treat ADBE as relative-strength, not broad IGV beta
+INTER
