@@ -873,23 +873,35 @@ def today_panel_html(card: dict) -> str:
                 f"<td class='why'>{_html.escape(s.get('reason') or '')}</td></tr>")
         return "".join(out)
 
-    def futubull_strip() -> str:
-        last_p = OUT_DIR / "futubull_last.json"
+    def _broker_strip(name: str, filename: str, offline: str, how: str) -> str:
+        last_p = OUT_DIR / filename
         if not last_p.is_file():
-            return ("<p class='muted'>Futubull: not wired from this host. "
-                    "Run <code>python -m src.futubull_exec</code> on a box "
-                    "with OpenD (paper first).</p>")
+            return (f"<p class='muted'>{name}: not wired from this host. "
+                    f"{how}</p>")
         try:
             last = json.loads(last_p.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError):
             return ""
         if last.get("connected"):
-            st = (f"Futubull {last.get('env')} cash ${last.get('cash') or 0:,.0f} · "
+            st = (f"{name} {last.get('env')} cash ${last.get('cash') or 0:,.0f} · "
                   f"{last.get('n_tickets') or 0} live tickets · "
                   f"{'submitted' if last.get('submit') else 'dry-run'}")
         else:
-            st = f"Futubull offline — {_html.escape(str(last.get('error') or 'OpenD not running'))}"
+            st = (f"{name} offline — "
+                  f"{_html.escape(str(last.get('error') or offline))}")
         return f"<p class='muted'>{st}</p>"
+
+    def futubull_strip() -> str:
+        return _broker_strip(
+            "Futubull", "futubull_last.json", "OpenD not running",
+            "Run <code>python -m src.futubull_exec</code> on a box "
+            "with OpenD (paper first).")
+
+    def webull_strip() -> str:
+        return _broker_strip(
+            "Webull paper", "webull_last.json", "no API key",
+            "Set <code>WEBULL_APP_KEY</code> / <code>WEBULL_APP_SECRET</code> "
+            "and run <code>python -m src.webull_exec --submit</code>.")
 
     def rows_would(would):
         chunk = would.get("rows") or []
@@ -919,8 +931,9 @@ Overnight $ is 09:30 equity vs prior close (cash unchanged, no fees).
 Session $ is 16:00 equity vs 09:30 (fills and fees included).
 Sells settle first. Buys only from leftover cash after Futubull fees.
 Already-held names are not re-bought. Hard-red S≤−3 = no new risk.
-Would-buy is not sent to Futubull.</p>
+Would-buy is not sent to Futubull or Webull paper.</p>
 {futubull_strip()}
+{webull_strip()}
 <div class="cards">{cards}</div>
 <h3>Overnight holds (into 09:30)</h3>
 <div class="sheet"><table>

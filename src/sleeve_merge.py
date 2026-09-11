@@ -2350,6 +2350,10 @@ def main(argv: list[str] | None = None) -> int:
                     help="dry-run live tickets against OpenD (see futubull_exec)")
     ap.add_argument("--submit-futubull", action="store_true",
                     help="place live tickets in Futubull paper (SIMULATE)")
+    ap.add_argument("--send-webull", action="store_true",
+                    help="dry-run live tickets against Webull paper OpenAPI")
+    ap.add_argument("--submit-webull", action="store_true",
+                    help="place live tickets in the Webull paper account")
     ap.add_argument("--starts", action="store_true",
                     help="fresh $100k start-date sweep (no full policy sweep)")
     args = ap.parse_args(argv)
@@ -2359,6 +2363,12 @@ def main(argv: list[str] | None = None) -> int:
         return futu_run(args.date or None, env="simulate",
                         submit=bool(args.submit_futubull), live=False,
                         write=True)
+
+    if args.send_webull or args.submit_webull:
+        from src.webull_exec import run as webull_run
+        return webull_run(args.date or None, env="paper",
+                          submit=bool(args.submit_webull), live=False,
+                          write=True)
 
     if args.card or args.write_card:
         from src.sleeve_merge_live import run_card
