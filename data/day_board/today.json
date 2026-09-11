@@ -1,12 +1,12 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11T05:07:51.644525-04:00",
+  "generated_at": "2026-09-11T05:08:07.775580-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 4,
-    "partial": 2,
-    "fail": 2,
+    "partial": 3,
+    "fail": 1,
     "n": 8
   },
   "buy_1d": [],
@@ -15,24 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-09-11",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-11T05:05:27.082302-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-09-11_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1116911,
-          "preview": "5904 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5904 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -186,6 +168,31 @@
         }
       ],
       "preview": "11630 rows \u00b7 Ticker,score,score_source,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month, \u00b7 NVGS, PARR, CMBT, KRP, DK"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-11T05:08:07.454738-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-11_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 67815,
+          "preview": "raw=122 usable=11 single=21 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | S&P 500, Dow, Nasdaq End Lower As Surging Oil Raises Odds For A September Rate H | S&P 500, Nasdaq, Dow Futures Mixed Ahead Of CPI As Hot PPI, Oil Surge Keep Fed I | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u2019s Jackson Hole commen | Duke Energy's Florida subsidiary files to lower customer rates from January 2027"
+        },
+        {
+          "path": "01_daily/news/2026-09-11_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 4442,
+          "preview": "# News Parse v2 \u2014 2026-09-11T05:08:07.445736-04:00\nWindow\u224848h | raw=122 | usable=11 | single_name=21 | noise_dropped=90\nusable polarity={'+': 3, '-': 4, 'mixed': 0, 'neutral': 4}"
+        }
+      ],
+      "preview": "raw=122 usable=11 single=21 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | S&P 500, Dow, Nasdaq End Lower As Surging Oil Raises Odds For A September Rate H | S&P 500, Nasdaq, Dow Futures Mixed Ahead Of CPI As Hot PPI, Oil Surge Keep Fed I | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u2019s Jackson Hole commen | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 \u00b7 # News Parse v2 \u2014 2026-09-11T05:08:07.445736-04:00\nWindow\u224848h | raw=122 | usable=11 | single_name=21 | noise_dropped=90\nusable polarity={'+': 3, '-': 4, 'mixed': 0, 'neutral': 4}"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
