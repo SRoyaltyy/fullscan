@@ -1,385 +1,41 @@
 {
-  "date": "2026-09-10",
-  "generated_at": "2026-09-11T01:57:19.452552-04:00",
-  "overall": "OK",
-  "ranker_ready": true,
+  "date": "2026-09-11",
+  "generated_at": "2026-09-11T05:02:31.614716-04:00",
+  "overall": "PARTIAL",
+  "ranker_ready": false,
   "counts": {
-    "ok": 8,
-    "partial": 0,
-    "fail": 0,
+    "ok": 2,
+    "partial": 1,
+    "fail": 5,
     "n": 8
   },
-  "buy_1d": [
-    {
-      "ticker": "AEHR",
-      "score": 0.6564095424170405
-    }
-  ],
-  "sell_1d": [
-    {
-      "ticker": "SPIR",
-      "score": -0.5073509796263888
-    },
-    {
-      "ticker": "SLQT",
-      "score": -0.4543662608073074
-    },
-    {
-      "ticker": "CPB",
-      "score": -0.42095482589678457
-    },
-    {
-      "ticker": "COIN",
-      "score": -0.33045515605576964
-    },
-    {
-      "ticker": "RHI",
-      "score": -0.3972408362754648
-    },
-    {
-      "ticker": "HUBG",
-      "score": -0.4580426247510716
-    },
-    {
-      "ticker": "METC",
-      "score": -0.4290384388382356
-    },
-    {
-      "ticker": "BYND",
-      "score": -0.4759522422609196
-    },
-    {
-      "ticker": "AORT",
-      "score": -0.32297335628241863
-    },
-    {
-      "ticker": "CAVA",
-      "score": -0.48775344514484764
-    }
-  ],
-  "flatten": {
-    "said": "0 priced buys \u00b7 cash $107,448.18",
-    "bullets": [
-      "0 priced buys",
-      "cash $107,448.18"
-    ]
-  },
-  "general": {
-    "said": "DOWN  -13.275",
-    "bullets": [
-      "bad: Iran attacks 10 ships / US sank 5 tankers (biggest wave)",
-      "bad: Brent >$102",
-      "bad: Warsh hawkish Sep hike ~55-60%",
-      "good: China exports +25% y/y",
-      "good: HY tight 2.67"
-    ],
-    "score": "-13.275",
-    "direction": "down"
-  },
-  "sectors": {
-    "said": "1 up / 9 down / 1 flat",
-    "bullets": [
-      "XLB DOWN -9.0",
-      "XLC DOWN -3.6",
-      "XLY DOWN -7.5",
-      "XLP DOWN -2.9",
-      "XLE UP +8.5",
-      "XLF DOWN -6.1",
-      "XLV DOWN -6.5",
-      "XLI DOWN -4.0",
-      "XLRE DOWN -6.8",
-      "XLK FLAT -0.5",
-      "XLU DOWN -4.7"
-    ]
-  },
+  "buy_1d": [],
+  "sell_1d": [],
+  "flatten": {},
+  "general": {},
+  "sectors": {},
   "lands": [
-    {
-      "key": "flatten",
-      "title": "Flatten live card",
-      "date": "2026-09-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-10T06:39:44.637505-04:00",
-      "files": [
-        {
-          "path": "data/sleeve_merge/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 4991,
-          "preview": "2026-09-09 BUY \u2014 \u00b7 SELL \u2014"
-        },
-        {
-          "path": "data/sleeve_merge/daily_marks.json",
-          "ok": true,
-          "reason": "",
-          "size": 140111,
-          "preview": "[{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\""
-        },
-        {
-          "path": "data/sleeve_merge/equity_curve.csv",
-          "ok": true,
-          "reason": "",
-          "size": 3240,
-          "preview": "19 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19"
-        },
-        {
-          "path": "dashboard/sleeve-merge/index.html",
-          "ok": true,
-          "reason": "",
-          "size": 33762,
-          "preview": "<!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Combined sleeve \u2014 .io \u00d7 mover</title>\n<style>\n:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}\n*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}\nmain{max-width:1240px;margin:auto;padding:16px}h1,h2{margin:.4em 0}\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0}\n.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}\n.card b{display:block;font-size:22px;margin-top:4px}\n.muted{color:var(--muted)}a{color:#93c5fd}\n.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}\ntable{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}\nth,td{padding:7px 8"
-        }
-      ],
-      "preview": "2026-09-09 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\" \u00b7 19 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19 \u00b7 <!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" co"
-    },
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-10T06:39:47.149614-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-10_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1418800,
-          "preview": "1d BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND"
-        },
-        {
-          "path": "data/stock_book/2026-09-10_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-09-10_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2471,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-09-10_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 11955,
-          "preview": "2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 11955,
-          "preview": "2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND"
-        },
-        {
-          "path": "01_daily/2026-09-10_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 60430,
-          "preview": "# Stock book \u2014 2026-09-10\n_Generated 2026-09-10T06:39:36.736170-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND \u00b7 2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND \u00b7 # Stock book \u2014 2026-09-10\n_Generated 2026-09-10T06:39:36.736170-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-09-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-10T06:39:50.325343-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 20799,
-          "preview": "2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 519,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-09-10.json",
-          "ok": true,
-          "reason": "",
-          "size": 110113,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-09-10_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 90388,
-          "preview": "2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 90388,
-          "preview": "2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND"
-        }
-      ],
-      "preview": "2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND \u00b7 2026-09-10 BUY AEHR \u00b7 SELL SPIR, SLQT, CPB, COIN, RHI, HUBG, METC, BYND"
-    },
-    {
-      "key": "paper",
-      "title": "Paper dashboard",
-      "date": "2026-09-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-10T06:40:04.727090-04:00",
-      "files": [
-        {
-          "path": "03_scoreboard/PAPER_TRADING.md",
-          "ok": true,
-          "reason": "",
-          "size": 1798,
-          "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-09-10** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-09-10** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $9,807.28 | -1.93% | $4,904.24 | 1 | 237 | $514.92 | $-190.24 | $-2.48 | 35.6% | 0.0% |\n| 1d_size | $10,241.52 | +2.42% | $5,127.92 | 1 | 221 | $571"
-        },
-        {
-          "path": "dashboard/index.html",
-          "ok": true,
-          "reason": "",
-          "size": 4674577,
-          "preview": "<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;\n--chip:#2a3450; --day:#121826; --gold:#fbbf24;\n}\n*{box-sizing:border-box}\nhtml,body{overflow-x:hidden}\nbody{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}\n.wrap{max-width:1180px;margin:0 auto;padding:16px 16px 48px;width:100%}\nh1{font-size:20px;margin:0 0 4px}\n.sub{color:var(--mut);font-size:12px;margin:0 0 12px}\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:8px;margin:0 0 14px}\n.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px"
-        }
-      ],
-      "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-09-10** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-09-10** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $9,807.28 | -1.93% | $4,904.24 | 1 | 237 | $514.92 | $-190.24 | $-2.48 | 35.6% | 0.0% |\n| 1d_size | $10,241.52 | +2.42% | $5,127.92 | 1 | 221 | $571 \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
-    },
-    {
-      "key": "flatten",
-      "title": "Flatten live card",
-      "date": "2026-09-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-10T06:40:13.832213-04:00",
-      "files": [
-        {
-          "path": "data/sleeve_merge/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 4991,
-          "preview": "2026-09-09 BUY \u2014 \u00b7 SELL \u2014"
-        },
-        {
-          "path": "data/sleeve_merge/daily_marks.json",
-          "ok": true,
-          "reason": "",
-          "size": 140111,
-          "preview": "[{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\""
-        },
-        {
-          "path": "data/sleeve_merge/equity_curve.csv",
-          "ok": true,
-          "reason": "",
-          "size": 3240,
-          "preview": "19 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19"
-        },
-        {
-          "path": "dashboard/sleeve-merge/index.html",
-          "ok": true,
-          "reason": "",
-          "size": 33762,
-          "preview": "<!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Combined sleeve \u2014 .io \u00d7 mover</title>\n<style>\n:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}\n*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}\nmain{max-width:1240px;margin:auto;padding:16px}h1,h2{margin:.4em 0}\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0}\n.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}\n.card b{display:block;font-size:22px;margin-top:4px}\n.muted{color:var(--muted)}a{color:#93c5fd}\n.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}\ntable{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}\nth,td{padding:7px 8"
-        }
-      ],
-      "preview": "2026-09-09 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\" \u00b7 19 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19 \u00b7 <!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" co"
-    },
-    {
-      "key": "catalyst",
-      "title": "Catalyst dossiers (after book)",
-      "date": "2026-09-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-10T07:07:10.256799-04:00",
-      "files": [
-        {
-          "path": "01_daily/catalyst/2026-09-10_dossiers.json",
-          "ok": true,
-          "reason": "",
-          "size": 6688,
-          "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, targets, dossiers"
-        },
-        {
-          "path": "01_daily/catalyst/2026-09-10_dossiers.md",
-          "ok": true,
-          "reason": "",
-          "size": 2240,
-          "preview": "# CATALYST DAILY \u2014 2026-09-10\n1/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
-        }
-      ],
-      "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-09-10\n1/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
-    },
-    {
-      "key": "status",
-      "title": "Pre-open status packet",
-      "date": "2026-09-10",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-10T07:07:24.165345-04:00",
-      "files": [
-        {
-          "path": "01_daily/2026-09-10_preopen_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 6619,
-          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
-        },
-        {
-          "path": "01_daily/2026-09-10_preopen_status.json",
-          "ok": true,
-          "reason": "",
-          "size": 6934,
-          "preview": "keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc"
-        },
-        {
-          "path": "01_daily/2026-09-10_preopen_status.md",
-          "ok": true,
-          "reason": "",
-          "size": 560,
-          "preview": "# Pre-open ALL status \u2014 2026-09-10\nall_ok=False  qc_all_ok=True  book_ok=True  grok_ok=False  missing=none\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 0\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
-        }
-      ],
-      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc \u00b7 # Pre-open ALL status \u2014 2026-09-10\nall_ok=False  qc_all_ok=True  book_ok=True  grok_ok=False  missing=none\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 0\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
-      "date": "2026-09-10",
+      "date": "2026-09-11",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-11T01:57:18.786085-04:00",
+      "at": "2026-09-11T05:02:31.461852-04:00",
       "files": [
         {
-          "path": "01_daily/news/2026-09-10_finviz_digest.json",
+          "path": "01_daily/news/2026-09-11_finviz_digest.json",
           "ok": true,
           "reason": "",
-          "size": 89019,
+          "size": 89113,
           "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
         },
         {
-          "path": "01_daily/news/2026-09-10_finviz_digest.md",
+          "path": "01_daily/news/2026-09-11_finviz_digest.md",
           "ok": true,
           "reason": "",
-          "size": 12009,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-10\n_Generated 2026-09-11T01:57:18.662509-04:00 \u00b7 export=data/exports/finviz_2026-09-10.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-        },
-        {
-          "path": "data/exports/finviz_2026-09-10.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11437971,
-          "preview": "11630 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+          "size": 12103,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-11\n_Generated 2026-09-11T05:02:31.396922-04:00 \u00b7 export=data/exports/finviz_2026-09-10.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
         },
         {
           "path": "data/finviz/latest.csv",
@@ -389,7 +45,7 @@
           "preview": "11630 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
         }
       ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-10\n_Generated 2026-09-11T01:57:18.662509-04:00 \u00b7 export=data/exports/finviz_2026-09-10.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11630 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11630 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-11\n_Generated 2026-09-11T05:02:31.396922-04:00 \u00b7 export=data/exports/finviz_2026-09-10.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11630 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
