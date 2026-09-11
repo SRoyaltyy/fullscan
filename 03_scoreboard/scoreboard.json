@@ -8125,18 +8125,6 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
-        },
-        "HORIZON_2W": {
-          "label": "2w",
-          "target_date": "2026-09-11",
-          "actual_pct": -4.84,
-          "actual_direction": "down",
-          "actual_magnitude_band": "notable",
-          "direction_hit": false,
-          "magnitude_hit": false,
-          "predicted_direction": "up",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.5
         }
       }
     },
@@ -8223,18 +8211,6 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
-        },
-        "HORIZON_2W": {
-          "label": "2w",
-          "target_date": "2026-09-11",
-          "actual_pct": 1.08,
-          "actual_direction": "up",
-          "actual_magnitude_band": "mild",
-          "direction_hit": false,
-          "magnitude_hit": true,
-          "predicted_direction": "flat",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.5
         }
       }
     },
@@ -8319,18 +8295,6 @@
           "direction_hit": true,
           "magnitude_hit": true,
           "predicted_direction": "down",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.5
-        },
-        "HORIZON_2W": {
-          "label": "2w",
-          "target_date": "2026-09-11",
-          "actual_pct": -4.29,
-          "actual_direction": "down",
-          "actual_magnitude_band": "notable",
-          "direction_hit": false,
-          "magnitude_hit": false,
-          "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
         }
@@ -15766,18 +15730,6 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.52
-        },
-        "HORIZON_1W": {
-          "label": "1w",
-          "target_date": "2026-09-11",
-          "actual_pct": -3.17,
-          "actual_direction": "down",
-          "actual_magnitude_band": "notable",
-          "direction_hit": true,
-          "magnitude_hit": false,
-          "predicted_direction": "down",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.52
         }
       }
     },
@@ -15852,18 +15804,6 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
-        },
-        "HORIZON_1W": {
-          "label": "1w",
-          "target_date": "2026-09-11",
-          "actual_pct": -0.69,
-          "actual_direction": "down",
-          "actual_magnitude_band": "mild",
-          "direction_hit": true,
-          "magnitude_hit": true,
-          "predicted_direction": "down",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.42
         }
       }
     },
@@ -15938,18 +15878,6 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
-        },
-        "HORIZON_1W": {
-          "label": "1w",
-          "target_date": "2026-09-11",
-          "actual_pct": -3.01,
-          "actual_direction": "down",
-          "actual_magnitude_band": "notable",
-          "direction_hit": true,
-          "magnitude_hit": false,
-          "predicted_direction": "down",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.5
         }
       }
     },
@@ -19960,13 +19888,13 @@
         "S4_ETF_TAPE": 0.0
       },
       "leading_sum": 1.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 166.8300018310547,
+      "actual_close": 165.36000061035156,
+      "actual_pct_change": -0.18109564476994633,
+      "actual_direction": "down",
+      "actual_magnitude_band": "flat",
+      "direction_hit": false,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
@@ -19975,7 +19903,9 @@
       "horizon_calls": {},
       "sector": "Healthcare",
       "etf": "XLV",
-      "rubric": "00_grounding/sectors/healthcare.md"
+      "rubric": "00_grounding/sectors/healthcare.md",
+      "spy_pct_change": 0.8524287494320992,
+      "rel_pct_change": -1.0335243942020456
     },
     {
       "date": "2026-09-11",
