@@ -1,6 +1,6 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11T07:26:14.466878-04:00",
+  "generated_at": "2026-09-11T07:52:25.763653-04:00",
   "n": 246,
   "n_ok": 246,
   "families": [
@@ -1196,22 +1196,22 @@
       "date": "2026-09-11",
       "buy": [
         {
-          "ticker": "OMER"
+          "ticker": "AUPH"
         },
         {
-          "ticker": "CLYM"
+          "ticker": "OVID"
         },
         {
-          "ticker": "MTSI"
+          "ticker": "SANM"
+        },
+        {
+          "ticker": "ORCL"
         },
         {
           "ticker": "NVT"
         },
         {
-          "ticker": "STRL"
-        },
-        {
-          "ticker": "KN"
+          "ticker": "COHU"
         }
       ],
       "sell": [],

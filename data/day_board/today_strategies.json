@@ -1,6 +1,6 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11T07:26:14.466878-04:00",
+  "generated_at": "2026-09-11T07:52:25.763653-04:00",
   "n": 246,
   "n_ok": 246,
   "buy_1d": [
@@ -380,12 +380,12 @@
     },
     "flatten_robust": {
       "buy": [
-        "OMER",
-        "CLYM",
-        "MTSI",
+        "AUPH",
+        "OVID",
+        "SANM",
+        "ORCL",
         "NVT",
-        "STRL",
-        "KN"
+        "COHU"
       ],
       "sell": [],
       "sit": true,
