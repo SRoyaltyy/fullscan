@@ -19828,13 +19828,13 @@
         "S4_ETF_TAPE": 0.5
       },
       "leading_sum": 0.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 57.439998626708984,
+      "actual_close": 57.25,
+      "actual_pct_change": 0.6681925008832357,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
@@ -19868,7 +19868,9 @@
       },
       "sector": "Financial",
       "etf": "XLF",
-      "rubric": "00_grounding/sectors/financial.md"
+      "rubric": "00_grounding/sectors/financial.md",
+      "spy_pct_change": 0.8524287494320992,
+      "rel_pct_change": -0.18423624854886356
     },
     {
       "date": "2026-09-11",
