@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"XLU utilities ETF September 11 2026 close"* → got 6 results (via gnews_rss)
+**Step 1 — Research.** The model wanted to know: *"XLU utilities ETF September 11 2026 performance"* → got 6 results (via ddg)
 
-  - Leading And Lagging Sectors For September 11, 2026 - Benzinga (https://news.google.com/rss/articles/CBMipAFBVV95cUxONnB4RWF1N2p4X0daZ192TlNVSU5wa2RaVWxoYnVCVXAweC11TGdWd2dKOFVhTFN6SFNvd3lqX1AyWDUyNnBFc2hrVG1GUmRNQlRuZXpEOUh4NWJ2VUtJaERLd1ZMbWJ2S2dKUG9NaVlhQjBxM214TGZZNHdoZTZYQWUzUGxvMGRKMlFrZ1k5emdOa3BPT0tiMngzVHVIOVpmY1BPbw?oc=5)
+  - Utilities Select (XLU) ETF Forecast & Price Target (2026) (https://clearank.com/etf/utilities-xlu/)
 
-  - XLU Looks 2.3% Undervalued on GF Value™ as Dividend Sustainabili - GuruFocus (https://news.google.com/rss/articles/CBMitAFBVV95cUxOSTlreVdRS09uN2xTTG5JZUpLVHc3SDhyRFRpNVV1alRla1hvOVdHaHlqdTNDQl9JLW04NFdFOTNKSEdublgxZWJDZ2JQZDBNVXNiVlMwYXpmRVE1OFRET2dXajdHSzhnWE1LdjlFUlNSWXRrcVh0cEpkaDJPS0lfOERzeG1uVTREa0pIYkU1TmVidVBhVlJuenN0ZVZCMXVnVFNQaTVEbjBjeVJJTFZubzROaEo?oc=5)
+  - XLU ETF Research | State Street Utilities Select Sector SPDR ... (https://etfexplorer.com/etf/XLU)
 
-  - (09/11/26) AVA: A Cheap Utility Stock with an Attractive Yield - moneyshow.com (https://news.google.com/rss/articles/CBMipAFBVV95cUxNaExVMzAxNC1iaVM3c2todHNadXJ3djJvcnVnUzdOWmQ0TlZjVGhVbEFXSEdIeE0tSWY2a29naGhXdEQ2WklneTB3LTJlWGRmRlBHdDJmUnJpMjBVRnpQWXdMRUljenRtTHpma2E4LTVJSXM5Slh3UVdtM2pQTWg3SURDMGt5eEM3N1dWRnQ4b01OQ0lqLWszdGhUbzhBTHV1cUkwTw?oc=5)
+  - XLU: Utilities Select Sector SPDR Fund - Report - Zacks.com (https://www.zacks.com/funds/etf/XLU/report)
 
-**Step 2 — Research.** The model wanted to know: *"CPI report September 11 2026 inflation"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"CPI report September 11 2026 inflation stocks reaction"* → got 6 results (via ddg)
 
-  - Stephens Consumer Price Index Update: September 11, 2026 (https://www.stephens.com/perspectives/consumer-price-index-update-september-11-2026)
+  - Markets News, Sept. 11, 2026: Stocks Finish Week Lower; Indexes Jump ... (https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-09112026-12115543)
 
-  - Elevated Inflation Keeps Pressure on Fed to Raise Interest ... (https://www.nytimes.com/live/2026/09/11/business/inflation-cpi-report)
+  - Consumer Price Index Update | September 11, 2026 - Stephens (https://www.stephens.com/perspectives/consumer-price-index-update-september-11-2026)
 
-  - US CPI Report August 2026: Key Takeaways on Inflation ... (https://www.bloomberg.com/news/articles/2026-09-11/us-cpi-report-august-2026-key-takeaways-on-inflation-consumer-price-index)
+  - Stock Market Recap — September 11, 2026 - Alain Guillot (https://www.alainguillot.com/stock-market-recap-september-11-2026/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

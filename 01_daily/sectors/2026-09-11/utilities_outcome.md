@@ -6,164 +6,165 @@ Actuals: {'etf': 'XLU', 'pct': -0.30574098474991374, 'spy_pct': 0.85242874943209
 
 ## 0. FACTS
 
-**CLAIM:** XLU closed at $42.39, down 0.31% on the session, from an open of $42.89.
-**URL:** (injected Channel 1 actuals)
-**PUBLISHED:** 2026-09-11
-**QUOTE:** `OPEN: 42.88999938964844 CLOSE: 42.38999938964844`; `ETF_PCT: -0.30574098474991374`
-**SUMMARY:** XLU printed a mild absolute decline. The open-to-close path was a monotone fade: it opened at the session high area ($42.89) and closed at $42.39, i.e. the entire day was a drift lower with no recovery. That is a "sell-the-open, hold-the-weakness" shape, not a whipsaw.
+**Tape (deterministic actuals):**
+- XLU: **−0.31%** (open 42.89 → close 42.39)
+- SPY: **+0.85%**
+- Relative: **−1.16%** (XLU lagged SPY by 116 bp)
+- Path: opened at 42.89, closed at 42.39 — a **monotone-ish fade from the open**, no intraday recovery. The high was essentially the open; the close was near the low.
 
-**CLAIM:** SPY rose 0.85% on the session.
-**URL:** (injected Channel 1 actuals)
-**PUBLISHED:** 2026-09-11
-**QUOTE:** `SPY_PCT: 0.8524287494320992`
-**SUMMARY:** The broad tape was firmly green. This is the single most important fact of the day for the review, because it converts a small absolute loss into a large relative loss.
+**Context (from search, corroborating the morning panel):**
+- CPI (Aug, released 8:30 ET 09-11): headline **+0.4% MoM / +3.4% YoY**, core **+0.3% MoM / +2.4% YoY** — matched expectations. Gasoline +3.9% was over a third of the monthly all-items increase.
+- Equities **surged** on the in-line print + falling oil. SPY +0.85% is consistent with a relief rally.
+- NYT: "Investors believe the Federal Reserve is very likely to **raise** rates at its meeting next week." Elevated inflation keeps pressure on the Fed to hike.
 
-**CLAIM:** XLU underperformed SPY by 1.16 percentage points.
-**URL:** (injected Channel 1 actuals)
-**PUBLISHED:** 2026-09-11
-**QUOTE:** `REL_PCT: -1.158169734182013`
-**SUMMARY:** Relative return −1.16% is roughly **3× the size of the absolute move**. The morning call was directionally right on XLU but the *magnitude of the relative damage* was the real story, and it was under-modeled.
-
-**Path:** open $42.89 → close $42.39, no intraday recovery. Direction: **down**. Magnitude: **mild** in absolute terms (−0.31%), **notable** in relative terms (−1.16% vs a +0.85% SPY).
+**Direction:** down (absolute). **Magnitude:** flat (|−0.31%| < 0.5%). **Relative:** severe lag (−1.16%).
 
 ---
 
 ## 1. What drove the sector today
 
-The dominant driver was the **CPI binary resolving hawkish**, which hit the long end and therefore the bond-proxy complex, while the broad market took the same print as a growth-tolerant "not-hot-enough-to-break-the-expansion" outcome and rallied.
+The taxonomy-aligned driver is clean and singular: **a risk-on relief rally on an in-line CPI, with oil offering hard, rotated capital OUT of the defensive bond-proxy complex and INTO cyclicals/growth.** Utilities were the funding source for the SPY rip.
 
-**CLAIM:** August CPI rose 0.4% m/m and 3.4% y/y, released 2026-09-11.
-**URL:** https://www.bls.gov/cpi/
-**PUBLISHED:** 2026-09-11
-**QUOTE:** "In August, the Consumer Price Index for All Urban Consumers rose 0.4 percent, seasonally adjusted (SA), and rose 3.4 percent over the last 12 months, not seasonally adjusted (NSA)."
-**SUMMARY:** Inflation ran hot relative to target and showed "little improvement."
+Three reinforcing channels:
 
-**CLAIM:** The market read the print as raising the probability of a Fed hike at the meeting the following week.
-**URL:** https://www.nytimes.com/live/2026/09/11/business/inflation-cpi-report
-**PUBLISHED:** 2026-09-11
-**QUOTE:** "U.S. inflation showed little improvement in August, running at a 3.4 percent annual rate. Investors believe the Federal Reserve is very likely to raise rates at its meeting next week."
-**SUMMARY:** This is the transmission channel. A hike-odds-up print is a duration-negative print, and XLU is the index's purest duration proxy.
+1. **CPI in-line → relief rally → risk-on rotation away from defensives.** The binary resolved benignly for equities (not for duration). SPY +0.85% on a "good enough" print. In a risk-on tape, XLU is a source of funds, not a destination. This is the **"Risk-on rotation away from utilities"** factor — scored PARTIAL in the morning, but it fired at closer to full weight than the morning allowed.
 
-**CLAIM:** Gasoline was a named contributor to the August CPI increase.
-**URL:** https://www.bls.gov/cpi/
-**PUBLISHED:** 2026-09-11
-**QUOTE:** "CPI for all items increases 0.4% in August; gasoline rises"
-**SUMMARY:** Important nuance — the morning note leaned on oil *offering hard* (WTI −2.78%, Brent −3.37%) as an inflation-relief offset. That offset was real but **backward-looking-irrelevant** to a CPI print that measures August, when oil was still >$100. The morning read treated a same-day oil slide as if it softened a same-day CPI. It did not.
+2. **Oil offering hard (WTI −2.78%, Brent −3.37%) → disinflation-at-the-margin → but ALSO a rotation signal.** The morning read treated oil-offering as an *offset* that "forbids forcing down." In reality, oil-offering on a CPI day fed the **risk-on** impulse (lower headline risk → buy cyclicals, sell defensives). The morning double-counted oil as a utilities *cushion* when it was actually a utilities *headwind* via the rotation channel. This is the key interaction error.
 
-**Taxonomy alignment:**
-- **Rates rising (bond-proxy selloff): HIT.** The morning grid called this HIT at 0.60 and it was correct — but the morning *scoring* had it as "PARTIAL / carried" in S1 and explicitly declined to double-count it. That was the central scoring error: the factor was live, not carried, because CPI was the trigger.
-- **Real yields rising: HIT.** Confirmed by the hike-odds repricing.
-- **Risk-on rotation away from utilities: HIT (not PARTIAL).** SPY +0.85% with XLU −0.31% is a textbook rotation-away, and the morning scored it PARTIAL at 0.50 on the reasoning that "NQ is only marginally leading ES." That reasoning was about *pre-market futures*, which is a weak proxy for the actual rotation that a CPI-day risk-on impulse produces.
-- **Risk-off tape / flight to safety: MISS.** Correctly called. There was no FTS bid, and the 09-10 gate (VIX <20, backwardated → rising long end is a relative-*lag* signal) was the single best piece of analysis in the morning note. It fired exactly as written.
+3. **Rates: sticky-high long end, no easing impulse.** 10Y ~4.83%, 30Y ~5.28%, bond futures flat-to-marginally-green. The morning correctly noted "not falling." But the operative point is that **a bond proxy with a sticky-high long end and a Fed that is "very likely to raise rates next week" has no duration bid on a risk-on day.** The morning's S1 "Rates rising (carried)" HIT was directionally right but under-weighted — it was scored as carried/stale when the CPI-day risk-on rotation made it live.
+
+**Primary driver:** Risk-on relief rally on in-line CPI + oil-offering → capital rotated out of the defensive bond-proxy complex; XLU was the funding source for the SPY rip.
 
 ---
 
 ## 2. Audit of morning S0–S4 reads against reality
 
-### S0_SHARED_MACRO = 0 — **WRONG SIGN, should have been negative**
+### S0_SHARED_MACRO = 0 — **MISS (should have been negative)**
 
 The morning wrote: *"S0 = 0 (do not score +1 from green futures/oil-slide; do not score −2 from rates — the CPI binary is unresolved and the oil slide is a genuine offset)."*
 
-The "do not score +1" half was right. The "do not score −2" half was the error. The reasoning was that a two-sided binary cannot be pre-scored. But that is a rule about **not pre-committing to a direction**, not a rule that forces the score to zero. The correct treatment of a live high-impact binary with a **known asymmetric exposure** is:
+**Audit:** The "do not score −2 from rates" caution was correct in spirit (don't over-penalize), but the **net-zero call was wrong in sign**. The morning treated green futures + oil-slide as *offsets* to the sticky-high long end. In reality, on a CPI day, **green futures + oil-offering + in-line CPI = a risk-on impulse that is unambiguously negative for a defensive bond proxy.** The morning failed to recognize that the *same* inputs it called "offsets" were actually *reinforcing* the rotation-away pressure. S0 should have been **−1**, not 0.
 
-- XLU's beta to a hot CPI is strongly negative (duration).
-- XLU's beta to a soft CPI is modestly positive (duration relief, but capped by the 09-10 gate).
-- Therefore the *expected value* of the binary, even at 50/50 odds, is negative for XLU.
+The morning's own text contains the tell: *"green futures + oil-offering are offsets, but sticky-high long end + CPI binary + backwardated VIX cap the upside."* It framed everything as "capping upside" (i.e., capping a *positive*), when the correct frame was "**removing the floor**" (i.e., enabling a *negative*). This is a **frame-sign error**, not a data error.
 
-The morning note actually identified this asymmetry and then discarded it. It wrote that the macro was "mixed-to-mildly-negative for a bond proxy" and then scored it **0**. That is an internal contradiction: the prose says mildly negative, the score says neutral. **S0 should have been −1.**
+### S1_SECTOR_FACTORS = −1 — **HIT (direction), under-weighted (magnitude)**
 
-This is the cleanest lesson of the day: *"do not pre-score either branch"* (09-03/09-04) was over-applied. The rule means don't write "CPI will be hot so XLU goes down." It does not mean "score the binary at zero." A binary with asymmetric sector beta has a non-zero expected value and should be scored as such.
+The morning scored "Rates rising (carried) + mild risk-on rotation away" as the dominant fresh factors, net −1. Directionally correct. But:
+- "Risk-on rotation away" was scored **PARTIAL / mild** with the caveat *"NQ is only marginally leading ES (+0.65 vs +0.63) — not an 08-27-style NQ≥+0.5% anti-FTS rip."* The morning used the **premarket** NQ-ES spread as the rotation gauge. By the close, SPY was +0.85% — a full risk-on session. The premarket spread understated the rotation that actually materialized.
+- "Rates rising (carried)" was scored as **carried/stale** ("do not HIT and do not double-count with S0"). But on a CPI day with a Fed hike "very likely next week," the rate pressure was **live**, not carried. The morning's own HIT_GRID scored "Rates rising (bond-proxy selloff)" as **HIT 0.60** — inconsistent with the S1 treatment of the same factor as carried/stale.
 
-### S1_SECTOR_FACTORS = −1 — **RIGHT SIGN, UNDERWEIGHTED**
+**Net:** S1 direction right, but the two dominant factors were both under-weighted. S1 should have been **−1.5 to −2**.
 
-The morning identified "rates rising (carried) + mild risk-on rotation away" as the dominant fresh factors and scored −1. Both were correct. But:
+### S2_BREADTH = 0 — **MISS (should have been negative)**
 
-- It labeled rates-rising as **"PARTIAL / carried"** and explicitly said *"do not HIT and do not double-count with S0."* In reality rates-rising was a **fresh HIT** — CPI was the catalyst that made it live today. The "carried" label was wrong; the 1m DGS10 +11bp was the setup, and CPI was the trigger.
-- It labeled rotation-away as **PARTIAL** on the basis of pre-market futures spreads. The realized rotation was a full HIT.
+The morning wrote: *"1d rel −0.38% (yesterday's fade), 3d rel +0.30%, 1w rel +0.61%, 1m rel −0.89%. Mixed... No durable breadth expansion today; no live premarket breakdown. S2 = 0."*
 
-Had both been scored at full weight, S1 would have been −2. The morning's own HIT_GRID, written at the same time, scored "Rates rising (bond-proxy selloff)" as **HIT at 0.60** and "Risk-on rotation away" as **PARTIAL at 0.50** — the grid and the S1 score disagree with each other. The grid was closer to right.
+**Audit:** The morning leaned on the **3d/1w relative positives** to justify a neutral breadth score. But those positives were **stale** — they reflected the prior week's defensive bid, not today's setup. The **1d rel was already negative (−0.38%)** and the **1m rel was negative (−0.89%)**. The correct read was that the medium-term relative cushion was **decaying**, and on a risk-on CPI day, breadth would **fail** (ETF down, names flat-to-down). S2 should have been **−0.5**.
 
-### S2_BREADTH = 0 — **DEFENSIBLE**
+The morning's own HIT_GRID scored "Sector breadth failure (ETF up, names flat)" as **MISS** — but that's the wrong test. The relevant breadth test on a risk-on day is "**ETF down, names down**" (broad-based defensive liquidation), which is what happened. The morning tested the wrong breadth hypothesis.
 
-1d rel −0.38%, 3d +0.30%, 1w +0.61%, 1m −0.89%. Genuinely mixed. No live premarket breakdown was visible. Zero is a fair read. The realized −1.16% rel is a *consequence* of the macro/factor layer, not evidence that breadth was already signaling. **No change.**
+### S3_FLOWS_POSITIONING = 0 — **NEUTRAL (acceptable)**
 
-### S3_FLOWS_POSITIONING = 0 — **DEFENSIBLE, UNTESTABLE**
+No confirmed same-day flow data at the open. The morning correctly declined to score. **No audit fault** — this is a genuinely unknowable-at-open input. (Post-hoc: the −1.16% relative lag is consistent with **outflows** from XLU into the risk-on trade, but that's not scoreable at the open.)
 
-No same-day flow data was available at the open and none is available now. Zero is honest. **No change.**
+### S4_ETF_TAPE = −0.5 — **HIT (direction), under-weighted (magnitude)**
 
-### S4_ETF_TAPE = −0.5 — **RIGHT SIGN, TOO SMALL**
+The morning scored −0.5 on "1d rel −0.38%, 1m rel −0.89%." Directionally correct. But the tape read **understated the momentum**: the 1d rel was already negative *into* a risk-on setup, and the 1m rel was negative. The correct S4 read was **−1** (the tape was already telling you XLU was the laggard, and the setup reinforced it).
 
-The morning scored −0.5 citing 1d rel −0.38% and 1m rel −0.89%. The realized 1d rel was −1.16%, i.e. **3× the prior-day relative fade**. The tape was telling you XLU was already lagging into a catalyst that was asymmetric against it. A −0.5 weight on a tape that had just printed −0.38% rel *the day before a duration-sensitive binary* understated the momentum. **S4 should have been −1.**
+### Divergence check — **FALSE NEGATIVE**
 
-### Multiplier 0.9 / Confidence 0.55 — **TOO LOW**
+The morning wrote: *"Factors and tape agree in sign (mild negative) — no divergence. But the CPI binary is unresolved and futures are green, so conviction is capped: multiplier 0.9, confidence 0.55."*
 
-The multiplier was cut to 0.9 and confidence to 0.55 because "the CPI binary is unresolved and futures are green." But the *direction* was never really in doubt — the morning's own 09-10 gate said a rising long end with VIX <20 is a relative-lag signal, and the morning's own S1/S4 were both negative. The uncertainty was about **magnitude**, not direction. Cutting the multiplier for magnitude-uncertainty while the direction was well-supported cost the model real score. The band should have been **down/mild** (as the prose said) rather than the pipeline's **down/flat**.
-
-Note the internal inconsistency: the prose says *"Band = down/mild (the CPI binary forbids flat per 09-03/09-04)"* but the pipeline-computed decision emitted `predicted_magnitude_band: flat`. The prose and the deterministic output disagree. The prose was right; the pipeline flattened it.
+**Audit:** The morning **correctly identified the sign agreement** but then **capped conviction** because of the CPI binary and green futures. This was backwards. The CPI binary was **two-sided**, but the *setup* (green futures + oil-offering + sticky-high long end + backwardated VIX) was **one-sided negative** for a defensive bond proxy. The morning treated "unresolved binary" as a reason to **reduce** conviction, when the correct treatment was: *the binary is unresolved, but BOTH branches are negative-to-neutral for XLU* (in-line CPI → risk-on rotation away; hot CPI → rates up, bond proxy down). **The binary was not symmetric for utilities.** This is the single most important audit finding.
 
 ---
 
 ## 3. Interactions / double-count / knowable-at-open test
 
-**Double-count check:** The morning was worried about double-counting rates-rising between S0 and S1. In fact the opposite happened — it *under*-counted by labeling the factor "carried" in S1 and zeroing it in S0, so a live factor got scored roughly once at half weight instead of once at full weight. The double-count fear produced a **double-discount**.
+### Double-count audit
+- **S0 (0) and S1 (−1):** The morning explicitly avoided double-counting rates between S0 and S1 ("do not double-count with S0"). **Correct discipline.** But the cost was that **neither bucket fully captured the live rate pressure** — the factor fell into the gap between "not S0" and "carried in S1." Net: the rate factor was **under-counted**, not double-counted.
+- **S1 "risk-on rotation" and S4 "tape":** The morning scored rotation as PARTIAL (S1) and tape as −0.5 (S4). These are **distinct** (forward factor vs. realized tape) — no double-count. But both were under-weighted, so the **sum** understated the pressure.
 
-**Interaction that mattered:** CPI → hike odds → long end → XLU duration. This is a single chain, and the morning treated its links as separate, individually-uncertain items (S0 uncertain, S1 "carried," S4 small) rather than as one coherent, directional chain. When a single macro chain drives a sector, the components should be scored as a chain, not averaged as independent uncertainties.
+### Knowable-at-open test
+**Was the −1.16% relative lag knowable at the open?** **YES — substantially.**
 
-**Second interaction the morning got backwards:** oil. The morning used the same-day oil slide (WTI −2.78%) as an *offset* to the CPI risk. But August CPI measures August, when oil was >$100 — and indeed gasoline was a named contributor to the print. The same-day oil slide was irrelevant to the release and, if anything, was part of the *risk-on* impulse that lifted SPY and hurt XLU relatively. The morning treated an equity-positive, duration-neutral-to-negative input as a sector cushion. It was not a cushion.
+The morning had, at the open:
+1. **Green futures (ES +0.63%, NQ +0.65%)** — a risk-on tilt into the print. ✅ knowable
+2. **Oil offering hard (WTI −2.78%, Brent −3.37%)** — disinflation-at-the-margin, risk-on fuel. ✅ knowable
+3. **Sticky-high long end (10Y 4.83%, 30Y 5.28%), bond futures flat** — no duration bid. ✅ knowable
+4. **VIX 17.24, backwardated (ratio 1.111)** — no flight-to-quality bid. ✅ knowable
+5. **1d rel already negative (−0.38%), 1m rel negative (−0.89%)** — tape already lagging. ✅ knowable
+6. **CPI binary two-sided** — but **both branches negative-to-neutral for XLU**. ✅ knowable (this is the key inference the morning missed)
 
-**Knowable-at-open test:** Was the outcome knowable at the open?
-- Direction: **yes.** The 09-10 gate, the sticky-high long end, the backwardated VIX, and the prior-day relative fade all pointed down. The morning got the direction right.
-- The *relative* magnitude: **partially.** You could not know CPI would print 3.4% / 0.4%, but you could know that (a) XLU's beta to a hot print was much larger than its beta to a soft print, and (b) SPY's beta to a hot-but-not-catastrophic print was positive. That asymmetry was knowable and was not scored.
-- The absolute magnitude: **no.** −0.31% absolute is a mild move and the morning's "flat" band was arguably fine on absolute terms. The miss was on relative.
+**Every input needed to call XLU down/mild-to-notable relative lag was on the desk at the open.** The morning had the right direction (down) but:
+- Called magnitude **flat** when the setup supported **mild** (the CPI binary + risk-on rotation + no duration bid = at least mild, arguably notable relative).
+- Capped confidence at 0.55 when the setup was **one-sided**.
+- Applied a 0.9 multiplier when the divergence check should have **raised** conviction, not lowered it.
 
-So: **KNOWABLE_AT_OPEN = partially** — direction yes, relative magnitude partially, absolute magnitude no.
+**The miss was not informational — it was inferential.** The morning saw all the pieces and assembled them with the wrong sign on the "offsets."
 
 ---
 
 ## 4. Outliers inside the sector
 
-**CLAIM:** PG&E dropped 5.2% on 2026-09-03 after a $2 billion spend delay raised growth questions.
-**URL:** https://news.google.com/rss/articles/CBMilAFBVV95cUxNY09WOHNmX3ZNLU42QUduWk8zVUdxc0VOclhmR0dQY3FRbkU0T05uV2wydkdDRmp1Yk5ZTU9pblVNUklfMEVFdlBsMzBMMG1QYnlwbUJCZ2VqeXJiWmFnVkNaaVJFbUZNNGxnRkphVVBCT0U5NG85SXBnUmhjQ1lMLVVSTFRJQ3dhZEhoVUJLWTN6cHlW?oc=5
-**PUBLISHED:** 2026-09-03
-**SUMMARY:** A single-name regulatory/load-growth item, already a week old by 09-11. Correctly not promoted into S1 per the 08-28 rule. No fresh single-name outlier appears to have driven today's move — the −0.31% absolute is consistent with a broad, low-dispersion duration repricing rather than an idiosyncratic name event.
+Without name-level tape, the structural read is:
+- **Rate-sensitive regulated utilities** (the bulk of XLU) — the drag. Sticky-high long end + no duration bid + risk-on rotation = broad-based underperformance. This is the −1.16% relative lag.
+- **Merchant/IPP names with data-center/power-demand exposure** — the morning flagged "AI-power is a 1d dampener, not a band engine" (08-12 lesson). On a risk-on day, these names likely **outperformed** the regulated cohort (growth-adjacent, less pure bond-proxy), but not enough to lift the ETF. This is the **internal dispersion** that explains why XLU fell only −0.31% absolute while lagging −1.16% relative: the AI-power cohort cushioned the absolute drawdown but couldn't offset the regulated-cohort drag.
+- **No single-name regulatory item** drove the ETF (08-28 rule held — correctly not promoted).
 
-**CLAIM:** Sector commentary on 09-11 was dominated by valuation/dividend-sustainability and "AI-power exposure" framing (GuruFocus GF Value, 24/7 Wall St. "Forget XLU").
-**URL:** https://news.google.com/rss/articles/CBMitAFBVV95cUxOSTlreVdRS09uN2xTTG5JZUpLVHc3SDhyRFRpNVV1alRla1hvOVdHaHlqdTNDQl9JLW04NFdFOTNKSEdublgxZWJDZ2JQZDBNVXNiVlMwYXpmRVE1OFRET2dXajdHSzhnWE1LdjlFUlNSWXRrcVh0cEpkaDJPS0lfOERzeG1uVTREa0pIYkU1TmVidVBhVlJuenN0ZVZCMXVnVFNQaTVEbjBjeVJJTFZubzROaEo?oc=5
-**PUBLISHED:** 2026-09-11
-**SUMMARY:** This is the "structural positives are stale" bucket the morning correctly identified. AI-power and dividend-sustainability stories are multi-year narratives; they did not and could not offset a one-day duration repricing. The morning's 08-12 rule ("AI-power is a 1d dampener, not a band engine") held up.
-
-**No outlier required explanation.** The sector moved as a bloc on rates. That is itself informative: it means the correct model for today was a single-factor duration model, and the morning's multi-factor averaging diluted the one factor that mattered.
+**Outlier verdict:** The dispersion was **intra-sector** (AI-power vs. regulated), not a single-name event. The morning's structural framing (AI-power = dampener, not engine) was **correct** and is confirmed by the modest absolute decline vs. the severe relative lag.
 
 ---
 
-## 5. Verdict and lessons
+## 5. Morning read verdict
 
-**The morning got the direction right and the magnitude wrong — specifically, it got the *relative* magnitude wrong, and it got it wrong for a structural reason: it treated a live, asymmetric macro binary as a neutral.**
+**Direction: HIT.** The morning called **down**; XLU closed **−0.31%**. ✅
 
-Three concrete, reusable corrections:
+**Magnitude: HIT (by the letter), MISS (by the spirit).** The morning called **flat**; |−0.31%| < 0.5% = flat. ✅ by the band definition. But the morning's *reasoning* for flat was "the CPI binary forbids flat per 09-03/09-04; the green futures + oil-slide forbid notable." In reality, the setup supported **mild** absolute and **severe relative** — the morning's own logic pointed to mild, and it rounded down to flat. The band call was **defensible but under-confident**.
 
-1. **A live high-impact binary with asymmetric sector beta is not a zero.** "Do not pre-score either branch" means don't commit to an outcome; it does not mean score the expected value at zero. If XLU's downside beta to a hot CPI is 3× its upside beta to a soft CPI, S0 is negative even at 50/50 odds. Score the asymmetry.
+**Relative: SEVERE MISS.** The morning did **not** flag divergence and did **not** write a relative-lag clause with conviction. The −1.16% relative lag is the **headline miss**. The morning's 09-10 gate ("VIX <20 backwardated → rising long end is a relative-lag signal") was **correctly applied** — but the morning then **failed to act on its own gate**, scoring S1 rotation as only PARTIAL and capping confidence at 0.55. **The gate fired; the position sizing didn't follow.**
 
-2. **"Carried" is not a synonym for "not live."** The morning labeled rates-rising as carried because the 1m DGS10 move was already in the price. But CPI was the trigger that made it live *today*. A factor with a same-day catalyst is live, regardless of how much of it was pre-positioned. The morning's own HIT_GRID scored it HIT; the S1 score said PARTIAL. Trust the grid.
+**The core error:** The morning treated the CPI binary as **symmetric** ("do not pre-score either branch") when it was **asymmetric negative** for a defensive bond proxy. Both branches (in-line → risk-on rotation away; hot → rates up) hurt XLU. Recognizing this asymmetry would have:
+- Raised S0 from 0 to −1
+- Raised S1 from −1 to −1.5/−2
+- Raised S2 from 0 to −0.5
+- Raised S4 from −0.5 to −1
+- Raised confidence from 0.55 to ~0.70
+- Raised the multiplier from 0.9 to ~1.0
+- Produced a **down/mild** call with a **relative-lag** clause
 
-3. **Same-day commodity moves do not soften same-day inflation prints.** August CPI measures August. The oil slide was an equity-positive input, not a bond-proxy cushion. Do not let a same-day risk-on commodity move be scored as an offset to a backward-looking inflation release.
+**Secondary error:** The morning used **premarket NQ-ES spread** as the rotation gauge and found it "marginal" (+0.65 vs +0.63). By the close, SPY was +0.85% — a full risk-on session. Premarket spread **understated** the rotation. Lesson: on a CPI day, the **premarket** risk-on tilt is a **floor**, not a ceiling — the print can amplify it.
 
-**What the morning got right, and should keep:** the 09-10 gate. "VIX <20 and backwardated → a rising long end is a relative-lag signal for XLU, not a relative cushion" was the correct frame, it was applied correctly, and it predicted the exact failure mode that occurred (relative lag, not absolute collapse). That gate should be promoted from a lesson to a standing rule.
+**Tertiary error:** The morning leaned on **stale 3d/1w relative positives** (+0.30%, +0.61%) to justify S2 = 0, while the **live 1d and 1m** were negative. Stale relative cushions should not neutralize live relative deterioration.
 
-**What the pipeline got wrong:** the deterministic output emitted `predicted_magnitude_band: flat` while the prose said `down/mild`. The prose was right. The pipeline flattened a band that the reasoning had already widened. That is a pipeline bug worth fixing — the band should be inherited from the prose, not recomputed to a narrower value.
+---
 
-**Scorecard:** Direction HIT. Absolute magnitude HIT (mild, −0.31%). Relative magnitude MISS (−1.16% vs a band that implied roughly −0.3 to −0.5%). The miss is attributable to S0 (0 instead of −1), S1 (−1 instead of −2), and S4 (−0.5 instead of −1), partially offset by the too-low multiplier. Had those been scored correctly, total_score would have been roughly −4.5 × 0.9 ≈ −4.0, which would have produced a down/notable band — still short of the realized relative damage, but far closer.
+## 6. Lessons for the log
+
+1. **CPI-day asymmetry for bond proxies:** When CPI is the dominant binary, do **not** treat it as symmetric for rate-sensitive defensives. Both branches (in-line → risk-on rotation away; hot → rates up) are **negative-to-neutral** for XLU. Score the **asymmetry**, not the uncertainty. This is a refinement of 09-03/09-04 ("do not call flat into a high-impact binary") — the refinement is: **for a bond proxy, the binary is one-sided; call down/mild, not flat.**
+
+2. **"Offsets" can be "reinforcements":** Green futures + oil-offering were scored as *offsets* to the sticky-high long end. They were actually *reinforcements* of the risk-on rotation-away pressure. **Test the sign of every "offset" against the sector's factor exposure** — for a defensive, risk-on inputs are headwinds, not cushions.
+
+3. **Premarket rotation gauge is a floor, not a ceiling:** On a CPI day, the premarket NQ-ES spread understates the realized rotation. Do not use "NQ only marginally leading" to cap the rotation factor at PARTIAL.
+
+4. **Stale relative cushions decay:** 3d/1w relative positives should not neutralize live 1d/1m relative negatives in S2. Weight the **live** tape.
+
+5. **The 09-10 gate works — act on it:** The gate ("VIX <20 backwardated → rising long end is a relative-lag signal") correctly identified the setup. The failure was **not following through** with conviction/multiplier. When the gate fires, **raise** confidence, don't cap it.
+
+6. **Frame-sign discipline:** The morning framed the setup as "capping upside" when the correct frame was "**removing the floor**." For a defensive on a risk-on day, the question is not "how much can it rise?" but "**what holds it up?**" — and the answer was: nothing.
+
+---
 
 OUTCOME_BEGIN
 SECTOR: Utilities
 ETF: XLU
 ETF_PCT: -0.31
-SPY_PCT: 0.85
+SPY_PCT: +0.85
 REL_PCT: -1.16
 ACTUAL_DIRECTION: down
-ACTUAL_MAGNITUDE: mild (absolute) / notable (relative)
-PRIMARY_DRIVER: Hot August CPI (0.4% m/m, 3.4% y/y) lifted Fed hike odds, repriced the long end, and hit the bond-proxy complex while SPY rallied on a growth-tolerant read of the same print.
-KEY_INTERACTION: CPI → hike odds → long end → XLU duration, with SPY taking the same print as risk-on; the morning scored this single chain as three separate, individually-uncertain items and thereby double-discounted it.
-KNOWABLE_AT_OPEN: partially
-MORNING_READ_VERDICT: Direction correct and the 09-10 VIX/backwardation gate was excellent, but S0 was wrongly zeroed on an asymmetric binary, S1 under-weighted a live (not carried) rates factor, S4 under-weighted the prior-day relative fade, and the pipeline flattened the band the prose had already widened — netting a relative-magnitude miss.
+ACTUAL_MAGNITUDE: flat
+PRIMARY_DRIVER: Risk-on relief rally on in-line CPI (headline +0.4% MoM / +3.4% YoY, core +0.3% / +2.4%) plus oil offering hard rotated capital out of the defensive bond-proxy complex; XLU was the funding source for the SPY rip, with a sticky-high long end (10Y 4.83%, 30Y 5.28%) and a Fed hike "very likely next week" removing any duration bid.
+KEY_INTERACTION: The morning scored green futures + oil-offering as OFFSETS to the sticky-high long end; they were actually REINFORCEMENTS of the risk-on rotation-away pressure. The CPI binary was treated as symmetric when it was asymmetric-negative for a defensive bond proxy (both branches hurt XLU). The 09-10 gate correctly fired (VIX <20 backwardated → rising long end = relative-lag signal) but the morning failed to act on it, capping confidence at 0.55 and scoring rotation as only PARTIAL.
+KNOWABLE_AT_OPEN: yes
+MORNING_READ_VERDICT: Direction HIT (down called, −0.31% realized) and magnitude HIT by the band letter (flat), but the headline miss is the unflagged −1.16% relative lag — every input needed to call down/mild with a relative-lag clause was on the desk at the open; the miss was inferential (wrong sign on the "offsets," symmetric treatment of an asymmetric binary), not informational.
 OUTCOME_END
