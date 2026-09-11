@@ -1,6 +1,6 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11T05:25:05.686039-04:00",
+  "generated_at": "2026-09-11T05:28:14.457858-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -372,14 +372,14 @@
           "path": "01_daily/weather/2026-09-11_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9632 vix=spiking yields=rising",
-          "size": 9632
+          "reason": "sectors=11 bytes=9895 vix=spiking yields=rising",
+          "size": 9895
         }
       ],
-      "said": "favorable 2 \u00b7 hostile 5 \u00b7 neutral 4",
+      "said": "favorable 3 \u00b7 hostile 1 \u00b7 neutral 7",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Real Estate",
-        "events bull 0 / bear 6"
+        "hostile: Energy",
+        "events bull 5 / bear 6"
       ]
     },
     {
@@ -521,8 +521,8 @@
           "path": "01_daily/weather/2026-09-11_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9632 vix=spiking yields=rising",
-          "size": 9632
+          "reason": "sectors=11 bytes=9895 vix=spiking yields=rising",
+          "size": 9895
         },
         {
           "key": "in_ab",
@@ -540,7 +540,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5904",
-          "size": 2262970
+          "size": 2252720
         },
         {
           "key": "peers",
@@ -597,9 +597,9 @@
           "size": 4738104
         }
       ],
-      "said": "208 rows",
+      "said": "207 rows",
       "bullets": [
-        "REGN, EXEL, ARGX, NUTX, ASND"
+        "REGN, EXEL, SBLK, ARGX, NUTX"
       ]
     },
     {
@@ -698,10 +698,10 @@
       ]
     },
     "weather": {
-      "said": "favorable 2 \u00b7 hostile 5 \u00b7 neutral 4",
+      "said": "favorable 3 \u00b7 hostile 1 \u00b7 neutral 7",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Real Estate",
-        "events bull 0 / bear 6"
+        "hostile: Energy",
+        "events bull 5 / bear 6"
       ]
     }
   },
@@ -1152,6 +1152,31 @@
         }
       ],
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-11\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-11T05:28:13.944139-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-11.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10973212,
+          "preview": "11630 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11437971,
+          "preview": "11630 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11630 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11630 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
