@@ -8125,18 +8125,6 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
-        },
-        "HORIZON_2W": {
-          "label": "2w",
-          "target_date": "2026-09-11",
-          "actual_pct": -4.84,
-          "actual_direction": "down",
-          "actual_magnitude_band": "notable",
-          "direction_hit": false,
-          "magnitude_hit": false,
-          "predicted_direction": "up",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.5
         }
       }
     },
@@ -8223,18 +8211,6 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
-        },
-        "HORIZON_2W": {
-          "label": "2w",
-          "target_date": "2026-09-11",
-          "actual_pct": 1.08,
-          "actual_direction": "up",
-          "actual_magnitude_band": "mild",
-          "direction_hit": false,
-          "magnitude_hit": true,
-          "predicted_direction": "flat",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.5
         }
       }
     },
@@ -8319,18 +8295,6 @@
           "direction_hit": true,
           "magnitude_hit": true,
           "predicted_direction": "down",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.5
-        },
-        "HORIZON_2W": {
-          "label": "2w",
-          "target_date": "2026-09-11",
-          "actual_pct": -4.29,
-          "actual_direction": "down",
-          "actual_magnitude_band": "notable",
-          "direction_hit": false,
-          "magnitude_hit": false,
-          "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
         }
@@ -15766,18 +15730,6 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.52
-        },
-        "HORIZON_1W": {
-          "label": "1w",
-          "target_date": "2026-09-11",
-          "actual_pct": -3.17,
-          "actual_direction": "down",
-          "actual_magnitude_band": "notable",
-          "direction_hit": true,
-          "magnitude_hit": false,
-          "predicted_direction": "down",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.52
         }
       }
     },
@@ -15852,18 +15804,6 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
-        },
-        "HORIZON_1W": {
-          "label": "1w",
-          "target_date": "2026-09-11",
-          "actual_pct": -0.69,
-          "actual_direction": "down",
-          "actual_magnitude_band": "mild",
-          "direction_hit": true,
-          "magnitude_hit": true,
-          "predicted_direction": "down",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.42
         }
       }
     },
@@ -15938,18 +15878,6 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
-        },
-        "HORIZON_1W": {
-          "label": "1w",
-          "target_date": "2026-09-11",
-          "actual_pct": -3.01,
-          "actual_direction": "down",
-          "actual_magnitude_band": "notable",
-          "direction_hit": true,
-          "magnitude_hit": false,
-          "predicted_direction": "down",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.5
         }
       }
     },
@@ -20005,7 +19933,7 @@
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-09-11_sector_industrials_lesson.md",
       "sources_used": [],
       "horizon_calls": {},
       "sector": "Industrials",
