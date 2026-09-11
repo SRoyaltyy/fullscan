@@ -1,6 +1,6 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T07:07:24.680904-04:00",
+  "generated_at": "2026-09-11T01:57:19.452552-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -80,7 +80,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 87494
+          "size": 89019
         },
         {
           "key": "digest_md",
@@ -89,7 +89,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 12026
+          "size": 11972
         }
       ],
       "said": "",
@@ -113,7 +113,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87494
+          "size": 89019
         },
         {
           "key": "in_baseline",
@@ -203,7 +203,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7125
+          "size": 7306
         },
         {
           "key": "qc",
@@ -364,7 +364,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87494
+          "size": 89019
         },
         {
           "key": "weather",
@@ -390,7 +390,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -398,9 +398,9 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-10_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=2660",
+          "size": 7648530
         },
         {
           "key": "ab_enriched",
@@ -444,7 +444,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87494
+          "size": 89019
         },
         {
           "key": "dossiers",
@@ -486,7 +486,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 7125
+          "size": 7306
         },
         {
           "key": "in_actions",
@@ -504,7 +504,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87494
+          "size": 89019
         },
         {
           "key": "in_judge",
@@ -594,7 +594,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-09-10)",
-          "size": 4674412
+          "size": 4738104
         }
       ],
       "said": "214 rows",
@@ -629,7 +629,7 @@
           "role": "required",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-09-10)",
-          "size": 4674412
+          "size": 4738104
         },
         {
           "key": "paper",
@@ -703,7 +703,13 @@
         "score": -0.48775344514484764
       }
     ],
-    "flatten": {},
+    "flatten": {
+      "said": "0 priced buys \u00b7 cash $107,448.18",
+      "bullets": [
+        "0 priced buys",
+        "cash $107,448.18"
+      ]
+    },
     "general": {
       "said": "DOWN  -13.275",
       "bullets": [
@@ -2331,6 +2337,45 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc \u00b7 # Pre-open ALL status \u2014 2026-09-10\nall_ok=False  qc_all_ok=True  book_ok=True  grok_ok=False  missing=none\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 0\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-10",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-11T01:57:18.786085-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-10_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 89019,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-10_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 12009,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-10\n_Generated 2026-09-11T01:57:18.662509-04:00 \u00b7 export=data/exports/finviz_2026-09-10.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-10.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11437971,
+          "preview": "11630 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11437971,
+          "preview": "11630 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-10\n_Generated 2026-09-11T01:57:18.662509-04:00 \u00b7 export=data/exports/finviz_2026-09-10.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11630 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11630 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
