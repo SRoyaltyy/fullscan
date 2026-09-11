@@ -1,0 +1,124 @@
+{
+  "date": "2026-09-11",
+  "generated_at": "2026-09-11T05:58:33.958314-04:00",
+  "inputs": [
+    {
+      "name": "finviz_export",
+      "family": "join",
+      "status": "ok",
+      "n": 11630,
+      "detail": "finviz_2026-09-11.csv"
+    },
+    {
+      "name": "membership",
+      "family": "join",
+      "status": "ok",
+      "n": 5904,
+      "detail": ""
+    },
+    {
+      "name": "join_ranked",
+      "family": "join",
+      "status": "ok",
+      "n": 5904,
+      "detail": "std=0.980"
+    },
+    {
+      "name": "news_actions",
+      "family": "news",
+      "status": "ok",
+      "n": 103,
+      "detail": ""
+    },
+    {
+      "name": "news_judge",
+      "family": "news",
+      "status": "ok",
+      "n": null,
+      "detail": ""
+    },
+    {
+      "name": "finviz_digest",
+      "family": "news",
+      "status": "ok",
+      "n": null,
+      "detail": ""
+    },
+    {
+      "name": "ab_checklist",
+      "family": "ab",
+      "status": "ok",
+      "n": 11630,
+      "detail": "2026-09-11_ab_checklist_enriched.csv \u00b7 1 duplicate tickers"
+    },
+    {
+      "name": "peer_rs",
+      "family": "peer",
+      "status": "ok",
+      "n": 5116,
+      "detail": ""
+    },
+    {
+      "name": "ticker_checklist",
+      "family": "addon",
+      "status": "stale",
+      "n": null,
+      "detail": "no dated file \u2014 rebound flags use latest/history (can be stale)"
+    },
+    {
+      "name": "events",
+      "family": "addon",
+      "status": "ok",
+      "n": null,
+      "detail": "32 events, scan_date=2026-09-11"
+    },
+    {
+      "name": "map_heat",
+      "family": "heat",
+      "status": "ok",
+      "n": null,
+      "detail": "post-close baseline + morning evidence refresh"
+    },
+    {
+      "name": "general_predict",
+      "family": "general",
+      "status": "ok",
+      "n": null,
+      "detail": ""
+    },
+    {
+      "name": "sector_predicts",
+      "family": "sector",
+      "status": "ok",
+      "n": 11,
+      "detail": "11/11 quality"
+    },
+    {
+      "name": "price_store",
+      "family": "learn",
+      "status": "ok",
+      "n": null,
+      "detail": "last_date=2026-09-09"
+    }
+  ],
+  "family_status": {
+    "join": "ok",
+    "news": "ok",
+    "ab": "ok",
+    "peer": "ok",
+    "heat": "ok",
+    "general": "ok",
+    "sector": "ok"
+  },
+  "families_present": {
+    "join": true,
+    "news": true,
+    "ab": true,
+    "peer": true,
+    "heat": true,
+    "general": true,
+    "sector": true
+  },
+  "learn_grade": true,
+  "worst": "stale"
+}

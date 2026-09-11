@@ -1,12 +1,12 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11T05:58:26.715885-04:00",
+  "generated_at": "2026-09-11T05:58:48.627025-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 5,
-    "partial": 2,
+    "ok": 7,
+    "partial": 0,
     "fail": 1,
     "n": 8
   },
@@ -463,11 +463,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -547,36 +547,36 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-09-11_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=5116",
+          "size": 816328
         },
         {
           "key": "book_json",
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-11_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "horizons=5 names=211",
+          "size": 1458118
         },
         {
           "key": "book_md",
           "name": "Stock book MD",
           "path": "01_daily/2026-09-11_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 78671
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-11_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 585
         },
         {
           "key": "paper",
@@ -592,8 +592,8 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-09-11 not in dashboard dates (last=2026-09-10)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-11)",
           "size": 4738104
         }
       ],
@@ -606,9 +606,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -618,17 +618,17 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-11_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "horizons=5 names=211",
+          "size": 1458118
         },
         {
           "key": "dash_html",
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-09-11 not in dashboard dates (last=2026-09-10)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-11)",
           "size": 4738104
         },
         {
@@ -655,8 +655,54 @@
     }
   ],
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "NVT",
+        "score": 0.47466039853962005
+      },
+      {
+        "ticker": "NEOV",
+        "score": 0.4253060519337339
+      },
+      {
+        "ticker": "KN",
+        "score": 0.6696168023430558
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "LUCD",
+        "score": -0.10900530284749078
+      },
+      {
+        "ticker": "XPOF",
+        "score": -0.5119916169543962
+      },
+      {
+        "ticker": "RXST",
+        "score": -0.08463330887530396
+      },
+      {
+        "ticker": "TDTH",
+        "score": -0.12017878665346331
+      },
+      {
+        "ticker": "AMC",
+        "score": -0.12754011352346484
+      },
+      {
+        "ticker": "AHCO",
+        "score": -0.16865552850521703
+      },
+      {
+        "ticker": "APLD",
+        "score": 0.0006086392362707332
+      },
+      {
+        "ticker": "TRIP",
+        "score": -0.41391267917428054
+      }
+    ],
     "flatten": {},
     "general": {
       "said": "FLAT  0.5",
@@ -1277,6 +1323,59 @@
         }
       ],
       "preview": "5904 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, EXEL, SBLK, ARGX, NUTX"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-11T05:58:48.254761-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-11_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1458118,
+          "preview": "1d BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP"
+        },
+        {
+          "path": "data/stock_book/2026-09-11_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-11_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2472,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-11_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11920,
+          "preview": "2026-09-11 BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11920,
+          "preview": "2026-09-11 BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP"
+        },
+        {
+          "path": "01_daily/2026-09-11_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 79746,
+          "preview": "# Stock book \u2014 2026-09-11\n_Generated 2026-09-11T05:58:36.122963-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-11 BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP \u00b7 2026-09-11 BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP \u00b7 # Stock book \u2014 2026-09-11\n_Generated 2026-09-11T05:58:36.122963-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {

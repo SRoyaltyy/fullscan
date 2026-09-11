@@ -1,16 +1,62 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11T05:58:26.715885-04:00",
+  "generated_at": "2026-09-11T05:58:48.627025-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 5,
-    "partial": 2,
+    "ok": 7,
+    "partial": 0,
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "NVT",
+      "score": 0.47466039853962005
+    },
+    {
+      "ticker": "NEOV",
+      "score": 0.4253060519337339
+    },
+    {
+      "ticker": "KN",
+      "score": 0.6696168023430558
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "LUCD",
+      "score": -0.10900530284749078
+    },
+    {
+      "ticker": "XPOF",
+      "score": -0.5119916169543962
+    },
+    {
+      "ticker": "RXST",
+      "score": -0.08463330887530396
+    },
+    {
+      "ticker": "TDTH",
+      "score": -0.12017878665346331
+    },
+    {
+      "ticker": "AMC",
+      "score": -0.12754011352346484
+    },
+    {
+      "ticker": "AHCO",
+      "score": -0.16865552850521703
+    },
+    {
+      "ticker": "APLD",
+      "score": 0.0006086392362707332
+    },
+    {
+      "ticker": "TRIP",
+      "score": -0.41391267917428054
+    }
+  ],
   "flatten": {},
   "general": {
     "said": "FLAT  0.5",
@@ -41,24 +87,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "sector_predict",
-      "title": "Per-sector predict (all 11)",
-      "date": "2026-09-11",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-11T05:16:37.787642-04:00",
-      "files": [
-        {
-          "path": "01_daily/sectors/2026-09-11",
-          "ok": true,
-          "reason": "",
-          "size": 4096,
-          "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
-        }
-      ],
-      "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
-    },
     {
       "key": "sector_board",
       "title": "Sector board",
@@ -226,6 +254,59 @@
         }
       ],
       "preview": "5904 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, EXEL, SBLK, ARGX, NUTX"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-11T05:58:48.254761-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-11_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1458118,
+          "preview": "1d BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP"
+        },
+        {
+          "path": "data/stock_book/2026-09-11_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-11_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2472,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-11_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11920,
+          "preview": "2026-09-11 BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11920,
+          "preview": "2026-09-11 BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP"
+        },
+        {
+          "path": "01_daily/2026-09-11_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 79746,
+          "preview": "# Stock book \u2014 2026-09-11\n_Generated 2026-09-11T05:58:36.122963-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-11 BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP \u00b7 2026-09-11 BUY NVT, NEOV, KN \u00b7 SELL LUCD, XPOF, RXST, TDTH, AMC, AHCO, APLD, TRIP \u00b7 # Stock book \u2014 2026-09-11\n_Generated 2026-09-11T05:58:36.122963-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
