@@ -30,6 +30,10 @@ name: Pre-Open ALL (predictive one-shot)
 #   news_parse now honors PREOPEN_BYPASS_CUTOFF (late heal after 09:25).
 
 on:
+  schedule:
+    # ~05:55 ET Mon–Fri while EDT (UTC−4). GitHub cron is often 5–30m late;
+    # Daily Orchestrator + Stock Book 09:15 remain the last-chance backups.
+    - cron: "55 9 * * 1-5"
   push:
     branches: [main]
     paths:
