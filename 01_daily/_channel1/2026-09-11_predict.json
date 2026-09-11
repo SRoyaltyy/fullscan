@@ -1,6 +1,6 @@
 {
   "stage": "predict",
-  "fetched_at": "2026-09-11T05:58:23.317704-04:00",
+  "fetched_at": "2026-09-11T07:23:21.309100-04:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -89,41 +89,41 @@
     "CL=F": {
       "available": true,
       "date": "2026-09-11",
-      "last": 99.94,
-      "pct_1d": -2.48
+      "last": 99.18,
+      "pct_1d": -3.22
     },
     "BZ=F": {
       "available": true,
       "date": "2026-09-11",
-      "last": 104.33,
-      "pct_1d": -3.07
+      "last": 103.76,
+      "pct_1d": -3.6
     },
     "GC=F": {
       "available": true,
       "date": "2026-09-11",
-      "last": 4384.5,
-      "pct_1d": 0.46
+      "last": 4378.7,
+      "pct_1d": 0.33
     },
     "DXY": {
       "available": true,
       "date": "2026-09-11",
       "source": "DX-Y.NYB",
-      "pct_1d": 0.06,
-      "pct_1m": -0.86
+      "pct_1d": 0.07,
+      "pct_1m": -0.85
     }
   },
   "futures": {
     "ES=F": {
       "available": true,
       "date": "2026-09-11",
-      "last": 7639.5,
-      "pct_1d": 0.54
+      "last": 7636.75,
+      "pct_1d": 0.5
     },
     "NQ=F": {
       "available": true,
       "date": "2026-09-11",
-      "last": 29310.25,
-      "pct_1d": 0.6
+      "last": 29298.25,
+      "pct_1d": 0.56
     }
   },
   "finviz_futures_tape": {
@@ -503,9 +503,9 @@
         },
         "Shanghai": {
           "available": true,
-          "date": "2026-09-11",
-          "last": 3888.11,
-          "pct_1d": -1.18
+          "date": "2026-09-10",
+          "last": 3934.4,
+          "pct_1d": -0.43
         },
         "Kospi": {
           "available": true,
@@ -520,36 +520,36 @@
           "pct_1d": -0.89
         }
       },
-      "composite_avg": -1.27
+      "composite_avg": -1.12
     },
     "europe": {
       "per_index": {
         "FTSE": {
           "available": true,
           "date": "2026-09-11",
-          "last": 10653.7,
-          "pct_1d": 0.42
+          "last": 10671.25,
+          "pct_1d": 0.59
         },
         "DAX": {
           "available": true,
           "date": "2026-09-11",
-          "last": 25513.16,
-          "pct_1d": 0.6
+          "last": 25528.5,
+          "pct_1d": 0.66
         },
         "CAC": {
           "available": true,
           "date": "2026-09-11",
-          "last": 8161.08,
-          "pct_1d": 0.55
+          "last": 8167.79,
+          "pct_1d": 0.63
         },
         "EuroStoxx50": {
           "available": true,
           "date": "2026-09-11",
-          "last": 6309.87,
-          "pct_1d": 0.65
+          "last": 6313.31,
+          "pct_1d": 0.71
         }
       },
-      "composite_avg": 0.56
+      "composite_avg": 0.65
     }
   },
   "yield_spx_corr": {
