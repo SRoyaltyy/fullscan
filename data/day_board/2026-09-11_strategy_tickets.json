@@ -1,6 +1,6 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11T05:58:47.274334-04:00",
+  "generated_at": "2026-09-11T06:02:29.279439-04:00",
   "n": 246,
   "n_ok": 246,
   "families": [
@@ -1201,29 +1201,35 @@
     "flatten_robust": {
       "name": "flatten_robust",
       "family": "flatten",
-      "date": "2026-09-10",
+      "date": "2026-09-11",
       "buy": [
         {
-          "ticker": "UGP"
+          "ticker": "OMER"
         },
         {
-          "ticker": "LBRT"
+          "ticker": "CLYM"
         },
         {
-          "ticker": "CLB"
+          "ticker": "MTSI"
         },
         {
-          "ticker": "OIS"
+          "ticker": "NVT"
+        },
+        {
+          "ticker": "STRL"
+        },
+        {
+          "ticker": "KN"
         }
       ],
       "sell": [],
-      "buy_n": 4,
+      "buy_n": 6,
       "sell_n": 0,
       "sit": true,
       "status": "ok",
-      "why": "S=-13.28; hard-red: no new buys; holds and due 1d exits stay",
-      "hard_red": true,
-      "s": -13.275,
+      "why": "S=+0.50; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held",
+      "hard_red": false,
+      "s": 0.5,
       "note": "live flatten_robust card"
     },
     "union_h1": {
@@ -8967,6 +8973,5 @@
     "combo_ee1_3070_shared"
   ],
   "errors": [],
-  "source": "strategy_tickets",
-  "lands": []
+  "source": "strategy_tickets"
 }
