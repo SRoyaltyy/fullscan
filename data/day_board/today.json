@@ -1,12 +1,12 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11T05:10:16.867436-04:00",
+  "generated_at": "2026-09-11T05:10:20.147635-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "partial": 4,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat tables",
-      "date": "2026-09-11",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-11T05:07:00.505454-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-11_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 272718,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-11_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 17616,
-          "preview": "# MAP HEAT \u2014 2026-09-09\nExport `finviz_2026-09-08.csv` \u00b7 11608 names \u00b7 generated 2026-09-09T01:59:54.403331-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-09\nExport `finviz_2026-09-08.csv` \u00b7 11608 names \u00b7 generated 2026-09-09T01:59:54.403331-04:00"
-    },
     {
       "key": "map_heat_baseline",
       "title": "Map heat night baseline",
@@ -193,6 +168,31 @@
         }
       ],
       "preview": "32 events \u00b7 August CPI (last major print before FOMC) | FOMC decision, SEP/dot plot, Warsh press conference | August advance retail sales | Bank of Japan decision \u2014 hike to 1.25% priced | Bank of England decision \u2014 hold at 3.75% expected | ECB rate decision \u2014 25bp hike to 2.50% deposit rate delivered \u00b7 # Event Scan \u2014 2026-09-11\n- events tracked: **32** (via openclaw)\n- uncertainty: **elevated**\n- summary: The scan is dominated by a live September FOMC (Sept 16) with hike odds near 55-70% after a blowout August payrolls print, a hot PPI and today's CPI, and an oil shock from the US-Iran tanker war keeping Brent above $108. Central bank decisions from the BOJ (Sept 16-17) and BoE (Sept 17) cluster around the Fed after the ECB hiked 25bp on Sept 10, while a heavy earnings slate (Oracle beat, Adobe, FedEx, Micron) and the Sept 24 Trump-Xi summit add idiosyncratic and geopolitical risk. North American trade tensions escalated with Canada's counter-tariffs in force and US Section 338 import bans due Sept 29, and Sept 18 quadruple witching amplifies positioning risk around the FOMC."
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-09-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-11T05:10:19.801672-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-11_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 54329,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-09-11_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 13397,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-09-11T05:10:19.794349-04:00\nraw=154 unique_events=6 tickers=103"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-11T05:10:19.794349-04:00\nraw=154 unique_events=6 tickers=103"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
