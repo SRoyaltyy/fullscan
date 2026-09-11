@@ -1,11 +1,15 @@
 {
   "date": "2026-09-11",
   "env": "paper",
-  "submit": false,
-  "connected": false,
-  "error": "sandbox 401 \u2014 keys were sent to api.sandbox.webull.com and rejected. Regenerate under Open API \u2192 Using OpenAPI service in Paper Trading (not the live Trading API). Paste App Key / App Secret into GitHub secrets with no quotes.",
-  "host": "api.sandbox.webull.com",
+  "submit": true,
+  "connected": true,
+  "error": null,
+  "cash": 0.0,
+  "n_positions": 0,
   "n_tickets": 0,
+  "n_would": 0,
   "sent": [],
-  "generated": "2026-09-11T15:43:49"
+  "generated": "2026-09-11T16:18:12",
+  "host": "api.sandbox.webull.com",
+  "account_id": "83GO0SKCO4C521H2KQ8FS57MNA"
 }
