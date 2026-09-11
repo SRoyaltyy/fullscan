@@ -1,6 +1,6 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11T05:59:02.291207-04:00",
+  "generated_at": "2026-09-11T05:58:47.274334-04:00",
   "n": 246,
   "n_ok": 246,
   "families": [
@@ -16,54 +16,54 @@
       "date": "2026-09-11",
       "buy": [
         {
-          "ticker": "AEHR",
-          "score": 0.6564095424170405
+          "ticker": "NVT",
+          "score": 0.47466039853962005
+        },
+        {
+          "ticker": "NEOV",
+          "score": 0.4253060519337339
+        },
+        {
+          "ticker": "KN",
+          "score": 0.6696168023430558
         }
       ],
       "sell": [
         {
-          "ticker": "SPIR",
-          "score": -0.5073509796263888
+          "ticker": "LUCD",
+          "score": -0.10900530284749078
         },
         {
-          "ticker": "SLQT",
-          "score": -0.4543662608073074
+          "ticker": "XPOF",
+          "score": -0.5119916169543962
         },
         {
-          "ticker": "CPB",
-          "score": -0.42095482589678457
+          "ticker": "RXST",
+          "score": -0.08463330887530396
         },
         {
-          "ticker": "COIN",
-          "score": -0.33045515605576964
+          "ticker": "TDTH",
+          "score": -0.12017878665346331
         },
         {
-          "ticker": "RHI",
-          "score": -0.3972408362754648
+          "ticker": "AMC",
+          "score": -0.12754011352346484
         },
         {
-          "ticker": "HUBG",
-          "score": -0.4580426247510716
+          "ticker": "AHCO",
+          "score": -0.16865552850521703
         },
         {
-          "ticker": "METC",
-          "score": -0.4290384388382356
+          "ticker": "APLD",
+          "score": 0.0006086392362707332
         },
         {
-          "ticker": "BYND",
-          "score": -0.4759522422609196
-        },
-        {
-          "ticker": "AORT",
-          "score": -0.32297335628241863
-        },
-        {
-          "ticker": "CAVA",
-          "score": -0.48775344514484764
+          "ticker": "TRIP",
+          "score": -0.41391267917428054
         }
       ],
-      "buy_n": 1,
-      "sell_n": 10,
+      "buy_n": 3,
+      "sell_n": 8,
       "sit": false,
       "status": "ok",
       "note": "weighted ranker horizon"
@@ -74,54 +74,54 @@
       "date": "2026-09-11",
       "buy": [
         {
-          "ticker": "AEHR",
-          "score": 0.6564095424170405
+          "ticker": "NVT",
+          "score": 0.47466039853962005
+        },
+        {
+          "ticker": "NEOV",
+          "score": 0.4253060519337339
+        },
+        {
+          "ticker": "KN",
+          "score": 0.6696168023430558
         }
       ],
       "sell": [
         {
-          "ticker": "SPIR",
-          "score": -0.5073509796263888
+          "ticker": "LUCD",
+          "score": -0.10900530284749078
         },
         {
-          "ticker": "SLQT",
-          "score": -0.4543662608073074
+          "ticker": "XPOF",
+          "score": -0.5119916169543962
         },
         {
-          "ticker": "CPB",
-          "score": -0.42095482589678457
+          "ticker": "RXST",
+          "score": -0.08463330887530396
         },
         {
-          "ticker": "COIN",
-          "score": -0.33045515605576964
+          "ticker": "TDTH",
+          "score": -0.12017878665346331
         },
         {
-          "ticker": "RHI",
-          "score": -0.3972408362754648
+          "ticker": "AMC",
+          "score": -0.12754011352346484
         },
         {
-          "ticker": "HUBG",
-          "score": -0.4580426247510716
+          "ticker": "AHCO",
+          "score": -0.16865552850521703
         },
         {
-          "ticker": "METC",
-          "score": -0.4290384388382356
+          "ticker": "APLD",
+          "score": 0.0006086392362707332
         },
         {
-          "ticker": "BYND",
-          "score": -0.4759522422609196
-        },
-        {
-          "ticker": "AORT",
-          "score": -0.32297335628241863
-        },
-        {
-          "ticker": "CAVA",
-          "score": -0.48775344514484764
+          "ticker": "TRIP",
+          "score": -0.41391267917428054
         }
       ],
-      "buy_n": 1,
-      "sell_n": 10,
+      "buy_n": 3,
+      "sell_n": 8,
       "sit": false,
       "status": "ok",
       "note": "paper sleeve = same ranker list"
@@ -132,126 +132,126 @@
       "date": "2026-09-11",
       "buy": [
         {
-          "ticker": "UGP",
-          "score": 0.7396299376100344
+          "ticker": "KN",
+          "score": 0.76153166208126
         },
         {
-          "ticker": "LBRT",
-          "score": 0.7128409566999792
+          "ticker": "CECO",
+          "score": 0.7498625979582131
         },
         {
-          "ticker": "AEHR",
-          "score": 0.697006319357289
-        },
-        {
-          "ticker": "CLB",
-          "score": 0.5860291287582896
+          "ticker": "TDS",
+          "score": 0.747333602590301
         },
         {
           "ticker": "CRSR",
-          "score": 0.5705644705834416
+          "score": 0.7434640470623981
         },
         {
-          "ticker": "OIS",
-          "score": 0.5634918559143649
+          "ticker": "QRVO",
+          "score": 0.742729575055664
         },
         {
-          "ticker": "AMBQ",
-          "score": 0.47194148278613796
+          "ticker": "OMER",
+          "score": 0.7210616489615576
         },
         {
-          "ticker": "RAL",
-          "score": 0.4635442253203704
+          "ticker": "AVT",
+          "score": 0.7065083434749398
         },
         {
-          "ticker": "NU",
-          "score": 0.4296073068641311
+          "ticker": "GEO",
+          "score": 0.6866859706150299
         },
         {
-          "ticker": "SUZ",
-          "score": 0.2888100742338735
+          "ticker": "TPC",
+          "score": 0.6756803905033912
         },
         {
-          "ticker": "BG",
-          "score": 0.24368282991426946
+          "ticker": "AUPH",
+          "score": 0.6672872432319099
         },
         {
-          "ticker": "MLYS",
-          "score": 0.23607692911439682
+          "ticker": "GTES",
+          "score": 0.6661458157299716
         },
         {
-          "ticker": "SLDP",
-          "score": 0.1826638482784148
+          "ticker": "CLYM",
+          "score": 0.6537806669515884
         },
         {
-          "ticker": "IMMX",
-          "score": 0.1758274922429477
+          "ticker": "MRX",
+          "score": 0.6333143382828212
         },
         {
-          "ticker": "GALT",
-          "score": 0.16660688883979685
+          "ticker": "MTCH",
+          "score": 0.6076748958384279
+        },
+        {
+          "ticker": "CLOV",
+          "score": 0.5966718495410517
         }
       ],
       "sell": [
         {
-          "ticker": "ZGN",
-          "score": -0.6266335048800099
-        },
-        {
           "ticker": "XPOF",
-          "score": -0.6247761429097735
-        },
-        {
-          "ticker": "TROX",
-          "score": -0.6231781975361627
-        },
-        {
-          "ticker": "WHR",
-          "score": -0.6101432140151892
-        },
-        {
-          "ticker": "MBC",
-          "score": -0.5993868890530049
-        },
-        {
-          "ticker": "DFH",
-          "score": -0.5840129747419041
-        },
-        {
-          "ticker": "LODE",
-          "score": -0.5800145866758606
-        },
-        {
-          "ticker": "SPIR",
-          "score": -0.5683494517580754
-        },
-        {
-          "ticker": "CAVA",
-          "score": -0.558656644416407
+          "score": -0.5655127446690759
         },
         {
           "ticker": "LCID",
-          "score": -0.5579319883429451
+          "score": -0.5255404050132475
         },
         {
-          "ticker": "PACK",
-          "score": -0.5567645130003716
+          "ticker": "ARKO",
+          "score": -0.5081462010049236
+        },
+        {
+          "ticker": "XPEV",
+          "score": -0.5010846085393739
+        },
+        {
+          "ticker": "WHR",
+          "score": -0.4900087672028968
+        },
+        {
+          "ticker": "GT",
+          "score": -0.4849245379626888
+        },
+        {
+          "ticker": "OI",
+          "score": -0.4763198432631399
+        },
+        {
+          "ticker": "TRIP",
+          "score": -0.46955562982727095
+        },
+        {
+          "ticker": "HE",
+          "score": -0.46938371664302875
+        },
+        {
+          "ticker": "FUN",
+          "score": -0.4679016362318676
         },
         {
           "ticker": "COLD",
-          "score": -0.5558570625906905
+          "score": -0.4634398178298306
         },
         {
-          "ticker": "AIIO",
-          "score": -0.5510213447388477
+          "ticker": "ZGN",
+          "score": -0.45859076420589967
         },
         {
-          "ticker": "KBH",
-          "score": -0.5449589000490438
+          "ticker": "BORR",
+          "score": -0.45858020713856384
         },
         {
-          "ticker": "FIP",
-          "score": -0.538447903997368
+          "ticker": "MAT",
+          "score": -0.4514999633579278
+        },
+        {
+          "ticker": "HPP",
+          "score": -0.4306099224631724
         }
       ],
       "buy_n": 15,
@@ -266,126 +266,126 @@
       "date": "2026-09-11",
       "buy": [
         {
-          "ticker": "UGP",
-          "score": 0.7396299376100344
+          "ticker": "KN",
+          "score": 0.76153166208126
         },
         {
-          "ticker": "LBRT",
-          "score": 0.7128409566999792
+          "ticker": "CECO",
+          "score": 0.7498625979582131
         },
         {
-          "ticker": "AEHR",
-          "score": 0.697006319357289
-        },
-        {
-          "ticker": "CLB",
-          "score": 0.5860291287582896
+          "ticker": "TDS",
+          "score": 0.747333602590301
         },
         {
           "ticker": "CRSR",
-          "score": 0.5705644705834416
+          "score": 0.7434640470623981
         },
         {
-          "ticker": "OIS",
-          "score": 0.5634918559143649
+          "ticker": "QRVO",
+          "score": 0.742729575055664
         },
         {
-          "ticker": "AMBQ",
-          "score": 0.47194148278613796
+          "ticker": "OMER",
+          "score": 0.7210616489615576
         },
         {
-          "ticker": "RAL",
-          "score": 0.4635442253203704
+          "ticker": "AVT",
+          "score": 0.7065083434749398
         },
         {
-          "ticker": "NU",
-          "score": 0.4296073068641311
+          "ticker": "GEO",
+          "score": 0.6866859706150299
         },
         {
-          "ticker": "SUZ",
-          "score": 0.2888100742338735
+          "ticker": "TPC",
+          "score": 0.6756803905033912
         },
         {
-          "ticker": "BG",
-          "score": 0.24368282991426946
+          "ticker": "AUPH",
+          "score": 0.6672872432319099
         },
         {
-          "ticker": "MLYS",
-          "score": 0.23607692911439682
+          "ticker": "GTES",
+          "score": 0.6661458157299716
         },
         {
-          "ticker": "SLDP",
-          "score": 0.1826638482784148
+          "ticker": "CLYM",
+          "score": 0.6537806669515884
         },
         {
-          "ticker": "IMMX",
-          "score": 0.1758274922429477
+          "ticker": "MRX",
+          "score": 0.6333143382828212
         },
         {
-          "ticker": "GALT",
-          "score": 0.16660688883979685
+          "ticker": "MTCH",
+          "score": 0.6076748958384279
+        },
+        {
+          "ticker": "CLOV",
+          "score": 0.5966718495410517
         }
       ],
       "sell": [
         {
-          "ticker": "ZGN",
-          "score": -0.6266335048800099
-        },
-        {
           "ticker": "XPOF",
-          "score": -0.6247761429097735
-        },
-        {
-          "ticker": "TROX",
-          "score": -0.6231781975361627
-        },
-        {
-          "ticker": "WHR",
-          "score": -0.6101432140151892
-        },
-        {
-          "ticker": "MBC",
-          "score": -0.5993868890530049
-        },
-        {
-          "ticker": "DFH",
-          "score": -0.5840129747419041
-        },
-        {
-          "ticker": "LODE",
-          "score": -0.5800145866758606
-        },
-        {
-          "ticker": "SPIR",
-          "score": -0.5683494517580754
-        },
-        {
-          "ticker": "CAVA",
-          "score": -0.558656644416407
+          "score": -0.5655127446690759
         },
         {
           "ticker": "LCID",
-          "score": -0.5579319883429451
+          "score": -0.5255404050132475
         },
         {
-          "ticker": "PACK",
-          "score": -0.5567645130003716
+          "ticker": "ARKO",
+          "score": -0.5081462010049236
+        },
+        {
+          "ticker": "XPEV",
+          "score": -0.5010846085393739
+        },
+        {
+          "ticker": "WHR",
+          "score": -0.4900087672028968
+        },
+        {
+          "ticker": "GT",
+          "score": -0.4849245379626888
+        },
+        {
+          "ticker": "OI",
+          "score": -0.4763198432631399
+        },
+        {
+          "ticker": "TRIP",
+          "score": -0.46955562982727095
+        },
+        {
+          "ticker": "HE",
+          "score": -0.46938371664302875
+        },
+        {
+          "ticker": "FUN",
+          "score": -0.4679016362318676
         },
         {
           "ticker": "COLD",
-          "score": -0.5558570625906905
+          "score": -0.4634398178298306
         },
         {
-          "ticker": "AIIO",
-          "score": -0.5510213447388477
+          "ticker": "ZGN",
+          "score": -0.45859076420589967
         },
         {
-          "ticker": "KBH",
-          "score": -0.5449589000490438
+          "ticker": "BORR",
+          "score": -0.45858020713856384
         },
         {
-          "ticker": "FIP",
-          "score": -0.538447903997368
+          "ticker": "MAT",
+          "score": -0.4514999633579278
+        },
+        {
+          "ticker": "HPP",
+          "score": -0.4306099224631724
         }
       ],
       "buy_n": 15,
@@ -400,126 +400,126 @@
       "date": "2026-09-11",
       "buy": [
         {
-          "ticker": "UGP",
-          "score": 0.7849590086398932
+          "ticker": "QRVO",
+          "score": 0.7763593451959394
         },
         {
-          "ticker": "LBRT",
-          "score": 0.7577056638635982
+          "ticker": "TDS",
+          "score": 0.7758122161904479
         },
         {
-          "ticker": "AEHR",
-          "score": 0.7311442238804399
-        },
-        {
-          "ticker": "CLB",
-          "score": 0.6249994784359207
+          "ticker": "KN",
+          "score": 0.7660163262361714
         },
         {
           "ticker": "CRSR",
-          "score": 0.6051799403412434
+          "score": 0.7496889914887404
         },
         {
-          "ticker": "OIS",
-          "score": 0.6006368898432666
+          "ticker": "CECO",
+          "score": 0.742138160141322
         },
         {
-          "ticker": "AMBQ",
-          "score": 0.4997348062295641
+          "ticker": "AVT",
+          "score": 0.7334615639811439
         },
         {
-          "ticker": "RAL",
-          "score": 0.4912947569560494
+          "ticker": "OMER",
+          "score": 0.7170079401267762
         },
         {
-          "ticker": "NU",
-          "score": 0.4361844520238716
+          "ticker": "GEO",
+          "score": 0.7155050243307475
         },
         {
-          "ticker": "SUZ",
-          "score": 0.2999477371789301
+          "ticker": "GTES",
+          "score": 0.6793063266690524
         },
         {
-          "ticker": "BG",
-          "score": 0.2617569968292679
+          "ticker": "CLYM",
+          "score": 0.6755346360631644
         },
         {
-          "ticker": "MLYS",
-          "score": 0.24444643253872456
+          "ticker": "TPC",
+          "score": 0.6710786664186527
         },
         {
-          "ticker": "IMMX",
-          "score": 0.1792867283256242
+          "ticker": "AUPH",
+          "score": 0.6616434834566948
         },
         {
-          "ticker": "SLDP",
-          "score": 0.17562619142361502
+          "ticker": "MRX",
+          "score": 0.6548741354687193
         },
         {
-          "ticker": "GALT",
-          "score": 0.16198186457122438
+          "ticker": "MTCH",
+          "score": 0.6004882310977662
+        },
+        {
+          "ticker": "CLOV",
+          "score": 0.5903879978178461
         }
       ],
       "sell": [
         {
-          "ticker": "ZGN",
-          "score": -0.6722057377461189
-        },
-        {
           "ticker": "XPOF",
-          "score": -0.6721883822821051
-        },
-        {
-          "ticker": "TROX",
-          "score": -0.669853462546937
-        },
-        {
-          "ticker": "WHR",
-          "score": -0.6597473830973332
-        },
-        {
-          "ticker": "MBC",
-          "score": -0.6485851964200691
-        },
-        {
-          "ticker": "DFH",
-          "score": -0.6288887233240071
-        },
-        {
-          "ticker": "LODE",
-          "score": -0.6208607181057515
+          "score": -0.629197220865752
         },
         {
           "ticker": "LCID",
-          "score": -0.6084902957100095
+          "score": -0.5910686340920167
         },
         {
-          "ticker": "SPIR",
-          "score": -0.6040804451828188
+          "ticker": "ARKO",
+          "score": -0.5660668777064435
+        },
+        {
+          "ticker": "XPEV",
+          "score": -0.564866644929045
+        },
+        {
+          "ticker": "WHR",
+          "score": -0.5559580188400572
+        },
+        {
+          "ticker": "GT",
+          "score": -0.5480291746103613
+        },
+        {
+          "ticker": "TRIP",
+          "score": -0.5324043394395754
+        },
+        {
+          "ticker": "OI",
+          "score": -0.5298764173515597
         },
         {
           "ticker": "COLD",
-          "score": -0.601915527243037
+          "score": -0.5266130216803584
         },
         {
-          "ticker": "PACK",
-          "score": -0.5995352618915837
+          "ticker": "ZGN",
+          "score": -0.5201458517093306
         },
         {
-          "ticker": "CAVA",
-          "score": -0.599340001411087
+          "ticker": "FUN",
+          "score": -0.5200098456613965
         },
         {
-          "ticker": "AIIO",
-          "score": -0.5904659014543256
+          "ticker": "HE",
+          "score": -0.5164644444697498
         },
         {
-          "ticker": "KBH",
-          "score": -0.5901360408154008
+          "ticker": "BORR",
+          "score": -0.5133948362467926
         },
         {
-          "ticker": "FIP",
-          "score": -0.5763743712343775
+          "ticker": "HPP",
+          "score": -0.5093515030458766
+        },
+        {
+          "ticker": "MAT",
+          "score": -0.5012741136363792
         }
       ],
       "buy_n": 15,
@@ -534,126 +534,126 @@
       "date": "2026-09-11",
       "buy": [
         {
-          "ticker": "UGP",
-          "score": 0.7849590086398932
+          "ticker": "QRVO",
+          "score": 0.7763593451959394
         },
         {
-          "ticker": "LBRT",
-          "score": 0.7577056638635982
+          "ticker": "TDS",
+          "score": 0.7758122161904479
         },
         {
-          "ticker": "AEHR",
-          "score": 0.7311442238804399
-        },
-        {
-          "ticker": "CLB",
-          "score": 0.6249994784359207
+          "ticker": "KN",
+          "score": 0.7660163262361714
         },
         {
           "ticker": "CRSR",
-          "score": 0.6051799403412434
+          "score": 0.7496889914887404
         },
         {
-          "ticker": "OIS",
-          "score": 0.6006368898432666
+          "ticker": "CECO",
+          "score": 0.742138160141322
         },
         {
-          "ticker": "AMBQ",
-          "score": 0.4997348062295641
+          "ticker": "AVT",
+          "score": 0.7334615639811439
         },
         {
-          "ticker": "RAL",
-          "score": 0.4912947569560494
+          "ticker": "OMER",
+          "score": 0.7170079401267762
         },
         {
-          "ticker": "NU",
-          "score": 0.4361844520238716
+          "ticker": "GEO",
+          "score": 0.7155050243307475
         },
         {
-          "ticker": "SUZ",
-          "score": 0.2999477371789301
+          "ticker": "GTES",
+          "score": 0.6793063266690524
         },
         {
-          "ticker": "BG",
-          "score": 0.2617569968292679
+          "ticker": "CLYM",
+          "score": 0.6755346360631644
         },
         {
-          "ticker": "MLYS",
-          "score": 0.24444643253872456
+          "ticker": "TPC",
+          "score": 0.6710786664186527
         },
         {
-          "ticker": "IMMX",
-          "score": 0.1792867283256242
+          "ticker": "AUPH",
+          "score": 0.6616434834566948
         },
         {
-          "ticker": "SLDP",
-          "score": 0.17562619142361502
+          "ticker": "MRX",
+          "score": 0.6548741354687193
         },
         {
-          "ticker": "GALT",
-          "score": 0.16198186457122438
+          "ticker": "MTCH",
+          "score": 0.6004882310977662
+        },
+        {
+          "ticker": "CLOV",
+          "score": 0.5903879978178461
         }
       ],
       "sell": [
         {
-          "ticker": "ZGN",
-          "score": -0.6722057377461189
-        },
-        {
           "ticker": "XPOF",
-          "score": -0.6721883822821051
-        },
-        {
-          "ticker": "TROX",
-          "score": -0.669853462546937
-        },
-        {
-          "ticker": "WHR",
-          "score": -0.6597473830973332
-        },
-        {
-          "ticker": "MBC",
-          "score": -0.6485851964200691
-        },
-        {
-          "ticker": "DFH",
-          "score": -0.6288887233240071
-        },
-        {
-          "ticker": "LODE",
-          "score": -0.6208607181057515
+          "score": -0.629197220865752
         },
         {
           "ticker": "LCID",
-          "score": -0.6084902957100095
+          "score": -0.5910686340920167
         },
         {
-          "ticker": "SPIR",
-          "score": -0.6040804451828188
+          "ticker": "ARKO",
+          "score": -0.5660668777064435
+        },
+        {
+          "ticker": "XPEV",
+          "score": -0.564866644929045
+        },
+        {
+          "ticker": "WHR",
+          "score": -0.5559580188400572
+        },
+        {
+          "ticker": "GT",
+          "score": -0.5480291746103613
+        },
+        {
+          "ticker": "TRIP",
+          "score": -0.5324043394395754
+        },
+        {
+          "ticker": "OI",
+          "score": -0.5298764173515597
         },
         {
           "ticker": "COLD",
-          "score": -0.601915527243037
+          "score": -0.5266130216803584
         },
         {
-          "ticker": "PACK",
-          "score": -0.5995352618915837
+          "ticker": "ZGN",
+          "score": -0.5201458517093306
         },
         {
-          "ticker": "CAVA",
-          "score": -0.599340001411087
+          "ticker": "FUN",
+          "score": -0.5200098456613965
         },
         {
-          "ticker": "AIIO",
-          "score": -0.5904659014543256
+          "ticker": "HE",
+          "score": -0.5164644444697498
         },
         {
-          "ticker": "KBH",
-          "score": -0.5901360408154008
+          "ticker": "BORR",
+          "score": -0.5133948362467926
         },
         {
-          "ticker": "FIP",
-          "score": -0.5763743712343775
+          "ticker": "HPP",
+          "score": -0.5093515030458766
+        },
+        {
+          "ticker": "MAT",
+          "score": -0.5012741136363792
         }
       ],
       "buy_n": 15,
@@ -668,126 +668,126 @@
       "date": "2026-09-11",
       "buy": [
         {
-          "ticker": "UGP",
-          "score": 0.8143060582657167
+          "ticker": "TDS",
+          "score": 0.7960684866453946
         },
         {
-          "ticker": "LBRT",
-          "score": 0.7865883496231818
+          "ticker": "QRVO",
+          "score": 0.7950018076348242
         },
         {
-          "ticker": "AEHR",
-          "score": 0.7504561069995552
-        },
-        {
-          "ticker": "CLB",
-          "score": 0.6535578336665642
-        },
-        {
-          "ticker": "OIS",
-          "score": 0.6257589447244224
+          "ticker": "KN",
+          "score": 0.764598011343337
         },
         {
           "ticker": "CRSR",
-          "score": 0.6249693886950098
+          "score": 0.750010956867337
         },
         {
-          "ticker": "AMBQ",
-          "score": 0.5161851506252446
+          "ticker": "AVT",
+          "score": 0.7485829013682328
         },
         {
-          "ticker": "RAL",
-          "score": 0.5093132941447408
+          "ticker": "GEO",
+          "score": 0.7326410989987193
         },
         {
-          "ticker": "NU",
-          "score": 0.47595362352913245
+          "ticker": "CECO",
+          "score": 0.7319713791792306
         },
         {
-          "ticker": "SUZ",
-          "score": 0.29858642107624095
+          "ticker": "OMER",
+          "score": 0.7086622368450071
         },
         {
-          "ticker": "BG",
-          "score": 0.2689431692972787
+          "ticker": "CLYM",
+          "score": 0.691141457207725
         },
         {
-          "ticker": "MLYS",
-          "score": 0.25301993596305233
+          "ticker": "GTES",
+          "score": 0.686624494462933
         },
         {
-          "ticker": "IMMX",
-          "score": 0.1854370244437326
+          "ticker": "CXW",
+          "score": 0.678797009953683
         },
         {
-          "ticker": "CNC",
-          "score": 0.16536170225404018
+          "ticker": "MRX",
+          "score": 0.6633758205758851
         },
         {
-          "ticker": "GALT",
-          "score": 0.16472798826966764
+          "ticker": "AUPH",
+          "score": 0.6535573805362795
+        },
+        {
+          "ticker": "MTCH",
+          "score": 0.5929344183900886
+        },
+        {
+          "ticker": "CLOV",
+          "score": 0.5816618029494405
         }
       ],
       "sell": [
         {
-          "ticker": "ZGN",
-          "score": -0.7043949915644823
-        },
-        {
           "ticker": "XPOF",
-          "score": -0.7036887385353213
-        },
-        {
-          "ticker": "TROX",
-          "score": -0.7031457485099656
-        },
-        {
-          "ticker": "WHR",
-          "score": -0.6934396690603618
-        },
-        {
-          "ticker": "MBC",
-          "score": -0.6802374823830977
-        },
-        {
-          "ticker": "DFH",
-          "score": -0.6583263598273777
-        },
-        {
-          "ticker": "LODE",
-          "score": -0.6492548550886549
+          "score": -0.6742498139433131
         },
         {
           "ticker": "LCID",
-          "score": -0.6421825816730381
+          "score": -0.6379649800516706
+        },
+        {
+          "ticker": "ARKO",
+          "score": -0.6113452112627631
+        },
+        {
+          "ticker": "XPEV",
+          "score": -0.6111705692399838
+        },
+        {
+          "ticker": "WHR",
+          "score": -0.6032753873581023
+        },
+        {
+          "ticker": "GT",
+          "score": -0.595030832210288
+        },
+        {
+          "ticker": "TRIP",
+          "score": -0.5791500700041343
         },
         {
           "ticker": "COLD",
-          "score": -0.6320621087762681
+          "score": -0.5723081134521537
         },
         {
-          "ticker": "CAVA",
-          "score": -0.6294210152605668
+          "ticker": "HPP",
+          "score": -0.5672149715498485
         },
         {
-          "ticker": "SPIR",
-          "score": -0.6292090954623621
+          "ticker": "OI",
+          "score": -0.5671811083208641
         },
         {
-          "ticker": "PACK",
-          "score": -0.6282430317350499
+          "ticker": "ZGN",
+          "score": -0.565597960165016
         },
         {
-          "ticker": "KBH",
-          "score": -0.6212502025340121
+          "ticker": "MBC",
+          "score": -0.5584911903059474
         },
         {
-          "ticker": "AIIO",
-          "score": -0.6174584637228161
+          "ticker": "FUN",
+          "score": -0.557019943012193
         },
         {
-          "ticker": "FIP",
-          "score": -0.5988627263926547
+          "ticker": "BORR",
+          "score": -0.5555671222098212
+        },
+        {
+          "ticker": "HE",
+          "score": -0.5472932891773556
         }
       ],
       "buy_n": 15,
@@ -802,126 +802,126 @@
       "date": "2026-09-11",
       "buy": [
         {
-          "ticker": "UGP",
-          "score": 0.8143060582657167
+          "ticker": "TDS",
+          "score": 0.7960684866453946
         },
         {
-          "ticker": "LBRT",
-          "score": 0.7865883496231818
+          "ticker": "QRVO",
+          "score": 0.7950018076348242
         },
         {
-          "ticker": "AEHR",
-          "score": 0.7504561069995552
-        },
-        {
-          "ticker": "CLB",
-          "score": 0.6535578336665642
-        },
-        {
-          "ticker": "OIS",
-          "score": 0.6257589447244224
+          "ticker": "KN",
+          "score": 0.764598011343337
         },
         {
           "ticker": "CRSR",
-          "score": 0.6249693886950098
+          "score": 0.750010956867337
         },
         {
-          "ticker": "AMBQ",
-          "score": 0.5161851506252446
+          "ticker": "AVT",
+          "score": 0.7485829013682328
         },
         {
-          "ticker": "RAL",
-          "score": 0.5093132941447408
+          "ticker": "GEO",
+          "score": 0.7326410989987193
         },
         {
-          "ticker": "NU",
-          "score": 0.47595362352913245
+          "ticker": "CECO",
+          "score": 0.7319713791792306
         },
         {
-          "ticker": "SUZ",
-          "score": 0.29858642107624095
+          "ticker": "OMER",
+          "score": 0.7086622368450071
         },
         {
-          "ticker": "BG",
-          "score": 0.2689431692972787
+          "ticker": "CLYM",
+          "score": 0.691141457207725
         },
         {
-          "ticker": "MLYS",
-          "score": 0.25301993596305233
+          "ticker": "GTES",
+          "score": 0.686624494462933
         },
         {
-          "ticker": "IMMX",
-          "score": 0.1854370244437326
+          "ticker": "CXW",
+          "score": 0.678797009953683
         },
         {
-          "ticker": "CNC",
-          "score": 0.16536170225404018
+          "ticker": "MRX",
+          "score": 0.6633758205758851
         },
         {
-          "ticker": "GALT",
-          "score": 0.16472798826966764
+          "ticker": "AUPH",
+          "score": 0.6535573805362795
+        },
+        {
+          "ticker": "MTCH",
+          "score": 0.5929344183900886
+        },
+        {
+          "ticker": "CLOV",
+          "score": 0.5816618029494405
         }
       ],
       "sell": [
         {
-          "ticker": "ZGN",
-          "score": -0.7043949915644823
-        },
-        {
           "ticker": "XPOF",
-          "score": -0.7036887385353213
-        },
-        {
-          "ticker": "TROX",
-          "score": -0.7031457485099656
-        },
-        {
-          "ticker": "WHR",
-          "score": -0.6934396690603618
-        },
-        {
-          "ticker": "MBC",
-          "score": -0.6802374823830977
-        },
-        {
-          "ticker": "DFH",
-          "score": -0.6583263598273777
-        },
-        {
-          "ticker": "LODE",
-          "score": -0.6492548550886549
+          "score": -0.6742498139433131
         },
         {
           "ticker": "LCID",
-          "score": -0.6421825816730381
+          "score": -0.6379649800516706
+        },
+        {
+          "ticker": "ARKO",
+          "score": -0.6113452112627631
+        },
+        {
+          "ticker": "XPEV",
+          "score": -0.6111705692399838
+        },
+        {
+          "ticker": "WHR",
+          "score": -0.6032753873581023
+        },
+        {
+          "ticker": "GT",
+          "score": -0.595030832210288
+        },
+        {
+          "ticker": "TRIP",
+          "score": -0.5791500700041343
         },
         {
           "ticker": "COLD",
-          "score": -0.6320621087762681
+          "score": -0.5723081134521537
         },
         {
-          "ticker": "CAVA",
-          "score": -0.6294210152605668
+          "ticker": "HPP",
+          "score": -0.5672149715498485
         },
         {
-          "ticker": "SPIR",
-          "score": -0.6292090954623621
+          "ticker": "OI",
+          "score": -0.5671811083208641
         },
         {
-          "ticker": "PACK",
-          "score": -0.6282430317350499
+          "ticker": "ZGN",
+          "score": -0.565597960165016
         },
         {
-          "ticker": "KBH",
-          "score": -0.6212502025340121
+          "ticker": "MBC",
+          "score": -0.5584911903059474
         },
         {
-          "ticker": "AIIO",
-          "score": -0.6174584637228161
+          "ticker": "FUN",
+          "score": -0.557019943012193
         },
         {
-          "ticker": "FIP",
-          "score": -0.5988627263926547
+          "ticker": "BORR",
+          "score": -0.5555671222098212
+        },
+        {
+          "ticker": "HE",
+          "score": -0.5472932891773556
         }
       ],
       "buy_n": 15,
@@ -936,126 +936,126 @@
       "date": "2026-09-11",
       "buy": [
         {
-          "ticker": "UGP",
-          "score": 0.8645311292955755
+          "ticker": "QRVO",
+          "score": 0.8626315777750997
         },
         {
-          "ticker": "LBRT",
-          "score": 0.8363490567868008
+          "ticker": "TDS",
+          "score": 0.8296471002455414
         },
         {
-          "ticker": "AEHR",
-          "score": 0.8172340115227061
+          "ticker": "KN",
+          "score": 0.8030826754982485
         },
         {
-          "ticker": "CLB",
-          "score": 0.7088481833441951
+          "ticker": "AVT",
+          "score": 0.7925361218744369
         },
         {
           "ticker": "CRSR",
-          "score": 0.6922248584528119
+          "score": 0.7902359012936793
         },
         {
-          "ticker": "OIS",
-          "score": 0.6792239786533241
+          "ticker": "GEO",
+          "score": 0.7665601527144368
         },
         {
-          "ticker": "AMBQ",
-          "score": 0.5766184740686707
+          "ticker": "CECO",
+          "score": 0.7582469413623396
         },
         {
-          "ticker": "RAL",
-          "score": 0.5697038257804199
+          "ticker": "OMER",
+          "score": 0.7386085280102255
         },
         {
-          "ticker": "NU",
-          "score": 0.5008507686888729
+          "ticker": "CLYM",
+          "score": 0.7179954263193011
         },
         {
-          "ticker": "SUZ",
-          "score": 0.3146200840212975
+          "ticker": "GTES",
+          "score": 0.7167850054020137
         },
         {
-          "ticker": "BG",
-          "score": 0.29191333621227705
+          "ticker": "ASC",
+          "score": 0.7135250069041875
         },
         {
-          "ticker": "MLYS",
-          "score": 0.2662854393873801
+          "ticker": "MRX",
+          "score": 0.6900356177617831
         },
         {
-          "ticker": "IMMX",
-          "score": 0.19379226052640908
+          "ticker": "AUPH",
+          "score": 0.6819136207610643
         },
         {
-          "ticker": "CNC",
-          "score": 0.19131002673584868
+          "ticker": "MTCH",
+          "score": 0.6197477536494269
         },
         {
-          "ticker": "SLDP",
-          "score": 0.18630853456881513
+          "ticker": "CLOV",
+          "score": 0.609377951226235
         }
       ],
       "sell": [
         {
           "ticker": "XPOF",
-          "score": -0.7347809779076528
-        },
-        {
-          "ticker": "ZGN",
-          "score": -0.7336472244305913
-        },
-        {
-          "ticker": "TROX",
-          "score": -0.7335010135207399
-        },
-        {
-          "ticker": "WHR",
-          "score": -0.7267238381425056
-        },
-        {
-          "ticker": "MBC",
-          "score": -0.6967957897501619
+          "score": -0.7209342901399893
         },
         {
           "ticker": "LCID",
-          "score": -0.6764208890401022
+          "score": -0.6864932091304398
         },
         {
-          "ticker": "DFH",
-          "score": -0.6705621084094808
+          "ticker": "XPEV",
+          "score": -0.6579526056296549
+        },
+        {
+          "ticker": "ARKO",
+          "score": -0.6522658879642831
+        },
+        {
+          "ticker": "WHR",
+          "score": -0.6522246389952628
+        },
+        {
+          "ticker": "GT",
+          "score": -0.6411354688579605
+        },
+        {
+          "ticker": "TRIP",
+          "score": -0.6249987796164387
         },
         {
           "ticker": "COLD",
-          "score": -0.6618005734286145
+          "score": -0.6184813173026814
         },
         {
-          "ticker": "LODE",
-          "score": -0.6574609865185459
+          "ticker": "OI",
+          "score": -0.6156376824092837
         },
         {
-          "ticker": "PACK",
-          "score": -0.6383737806262619
+          "ticker": "HPP",
+          "score": -0.6119565521325527
         },
         {
-          "ticker": "CAVA",
-          "score": -0.6374643722552468
+          "ticker": "ZGN",
+          "score": -0.6101530476684469
         },
         {
-          "ticker": "KBH",
-          "score": -0.633787343300369
+          "ticker": "MBC",
+          "score": -0.6084094976730116
         },
         {
-          "ticker": "SPIR",
-          "score": -0.6323000888871055
+          "ticker": "FUN",
+          "score": -0.6040281524417219
         },
         {
-          "ticker": "AIIO",
-          "score": -0.6242630204382941
+          "ticker": "BORR",
+          "score": -0.59338175131805
         },
         {
-          "ticker": "REYN",
-          "score": -0.6237198663402411
+          "ticker": "HE",
+          "score": -0.5892740170040767
         }
       ],
       "buy_n": 15,
@@ -1070,126 +1070,126 @@
       "date": "2026-09-11",
       "buy": [
         {
-          "ticker": "UGP",
-          "score": 0.8645311292955755
+          "ticker": "QRVO",
+          "score": 0.8626315777750997
         },
         {
-          "ticker": "LBRT",
-          "score": 0.8363490567868008
+          "ticker": "TDS",
+          "score": 0.8296471002455414
         },
         {
-          "ticker": "AEHR",
-          "score": 0.8172340115227061
+          "ticker": "KN",
+          "score": 0.8030826754982485
         },
         {
-          "ticker": "CLB",
-          "score": 0.7088481833441951
+          "ticker": "AVT",
+          "score": 0.7925361218744369
         },
         {
           "ticker": "CRSR",
-          "score": 0.6922248584528119
+          "score": 0.7902359012936793
         },
         {
-          "ticker": "OIS",
-          "score": 0.6792239786533241
+          "ticker": "GEO",
+          "score": 0.7665601527144368
         },
         {
-          "ticker": "AMBQ",
-          "score": 0.5766184740686707
+          "ticker": "CECO",
+          "score": 0.7582469413623396
         },
         {
-          "ticker": "RAL",
-          "score": 0.5697038257804199
+          "ticker": "OMER",
+          "score": 0.7386085280102255
         },
         {
-          "ticker": "NU",
-          "score": 0.5008507686888729
+          "ticker": "CLYM",
+          "score": 0.7179954263193011
         },
         {
-          "ticker": "SUZ",
-          "score": 0.3146200840212975
+          "ticker": "GTES",
+          "score": 0.7167850054020137
         },
         {
-          "ticker": "BG",
-          "score": 0.29191333621227705
+          "ticker": "ASC",
+          "score": 0.7135250069041875
         },
         {
-          "ticker": "MLYS",
-          "score": 0.2662854393873801
+          "ticker": "MRX",
+          "score": 0.6900356177617831
         },
         {
-          "ticker": "IMMX",
-          "score": 0.19379226052640908
+          "ticker": "AUPH",
+          "score": 0.6819136207610643
         },
         {
-          "ticker": "CNC",
-          "score": 0.19131002673584868
+          "ticker": "MTCH",
+          "score": 0.6197477536494269
         },
         {
-          "ticker": "SLDP",
-          "score": 0.18630853456881513
+          "ticker": "CLOV",
+          "score": 0.609377951226235
         }
       ],
       "sell": [
         {
           "ticker": "XPOF",
-          "score": -0.7347809779076528
-        },
-        {
-          "ticker": "ZGN",
-          "score": -0.7336472244305913
-        },
-        {
-          "ticker": "TROX",
-          "score": -0.7335010135207399
-        },
-        {
-          "ticker": "WHR",
-          "score": -0.7267238381425056
-        },
-        {
-          "ticker": "MBC",
-          "score": -0.6967957897501619
+          "score": -0.7209342901399893
         },
         {
           "ticker": "LCID",
-          "score": -0.6764208890401022
+          "score": -0.6864932091304398
         },
         {
-          "ticker": "DFH",
-          "score": -0.6705621084094808
+          "ticker": "XPEV",
+          "score": -0.6579526056296549
+        },
+        {
+          "ticker": "ARKO",
+          "score": -0.6522658879642831
+        },
+        {
+          "ticker": "WHR",
+          "score": -0.6522246389952628
+        },
+        {
+          "ticker": "GT",
+          "score": -0.6411354688579605
+        },
+        {
+          "ticker": "TRIP",
+          "score": -0.6249987796164387
         },
         {
           "ticker": "COLD",
-          "score": -0.6618005734286145
+          "score": -0.6184813173026814
         },
         {
-          "ticker": "LODE",
-          "score": -0.6574609865185459
+          "ticker": "OI",
+          "score": -0.6156376824092837
         },
         {
-          "ticker": "PACK",
-          "score": -0.6383737806262619
+          "ticker": "HPP",
+          "score": -0.6119565521325527
         },
         {
-          "ticker": "CAVA",
-          "score": -0.6374643722552468
+          "ticker": "ZGN",
+          "score": -0.6101530476684469
         },
         {
-          "ticker": "KBH",
-          "score": -0.633787343300369
+          "ticker": "MBC",
+          "score": -0.6084094976730116
         },
         {
-          "ticker": "SPIR",
-          "score": -0.6323000888871055
+          "ticker": "FUN",
+          "score": -0.6040281524417219
         },
         {
-          "ticker": "AIIO",
-          "score": -0.6242630204382941
+          "ticker": "BORR",
+          "score": -0.59338175131805
         },
         {
-          "ticker": "REYN",
-          "score": -0.6237198663402411
+          "ticker": "HE",
+          "score": -0.5892740170040767
         }
       ],
       "buy_n": 15,
