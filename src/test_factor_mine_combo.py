@@ -198,6 +198,31 @@ def test_missing_open_is_not_replaced_by_close() -> None:
     assert day1 and abs(float(day1[0]["price"]) - 10.0) < 1e-9
 
 
+def test_split_survives_unclosed_panel_session() -> None:
+    """Pre-Open adds today to the panel; member books stop at last close.
+
+    Factor strategy mine 34587345171 died here on 2026-09-11:
+    ``simulate_split`` indexed ``daily[i]`` against the raw panel
+    calendar (including the still-open session) and IndexError'd.
+    """
+    open_day = "2099-01-15"
+    dates = DATES + [open_day]
+    rows = [_row(d, "WIN") for d in dates]
+    bars = {("WIN", d): {"open": 10.0, "close": 11.0} for d in dates}
+    panel = _panel(rows, dates)
+    rec = fm.make_recipe("union_h1", universe="union", hold=1, top_n=1)
+    rec["name"] = "union_h1"
+    book = fmc.simulate_split(
+        panel, [rec, rec], [1, 1], bars=bars, fees=ZERO_FEES, regime={},
+        name="t_open")
+    assert {d["date"] for d in book["daily"]} == set(DATES)
+    assert open_day not in {d["date"] for d in book["daily"]}
+    shared = fmc.simulate_shared(
+        panel, [rec], [1], bars=bars, fees=ZERO_FEES, regime={},
+        name="t_open_shared")
+    assert {d["date"] for d in shared["daily"]} == set(DATES)
+
+
 def test_split_scales_capital_and_keeps_member_audits() -> None:
     dates = DATES[:3]
     rows = [_row(d, "WIN") for d in dates]
@@ -294,9 +319,10 @@ if __name__ == "__main__":
     test_shared_hard_red_sits_new_buys()
     test_shared_owner_min_hold()
     test_missing_open_is_not_replaced_by_close()
+    test_split_survives_unclosed_panel_session()
     test_split_scales_capital_and_keeps_member_audits()
     test_scorecard_beats_all_book()
     test_scorecard_best_of_both_and_rejects_eff_only()
     test_explain_recipe_combo_does_not_int_mix()
     test_run_skips_combos_when_members_absent()
-    print("12 factor-mine combo tests passed")
+    print("13 factor-mine combo tests passed")
