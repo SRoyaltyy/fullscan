@@ -6,159 +6,110 @@ Actuals: {'etf': 'XLK', 'pct': 1.3227496663942073, 'spy_pct': 0.8524287494320992
 
 ## 0. FACTS
 
-**Channel 1 (deterministic actuals):**
+**Tape (deterministic actuals):**
+- XLK: **+1.32%** (open 187.35 → close 187.67)
+- SPY: **+0.85%**
+- Relative: **+0.47%** (XLK outperformed SPY)
+- Actual direction: **up**; actual magnitude: **notable** (a >1% single-session move on a broad-market up day, with positive relative)
 
-| Metric | Value |
-|---|---|
-| XLK % change | **+1.32%** |
-| SPY % change | **+0.85%** |
-| Relative (XLK − SPY) | **+0.47%** |
-| XLK open | 187.35 |
-| XLK close | 187.67 |
+**Path:** The open (187.35) was essentially the low end of the range — the close (187.67) sat only ~0.17% above the open, meaning **the bulk of the day's gain was captured in the opening gap / early session**, not in a trending intraday advance. This is a "gap-and-hold" day, not a "trend day." That distinction matters for the audit below.
 
-**Path:** XLK opened at 187.35 and closed at 187.67 — a **+0.17% open-to-close drift**, meaning the overwhelming majority of the +1.32% day was **gapped in at the open** (prior close ≈ 185.22 implied). This is a classic scheduled-binary gap-and-hold: the CPI print landed pre-open, futures were already green (+0.63% ES / +0.65% NQ), and the cash session simply ratified the gap with a small positive drift. No intraday reversal, no fade.
+**Macro context (from search, published 2026-09-11):**
 
-**Direction:** UP. **Magnitude:** notable for the sector (1.32% on a 0.85% SPY day), though the *relative* edge was mild (+0.47%).
+CLAIM: August CPI came in with headline matching forecasts but core hotter than expected; inflation "stubborn," headline +3.4% y/y.
+URL: https://www.wsj.com/livecoverage/stock-market-cpi-inflation-09-11-2026/card/how-markets-are-reacting-after-the-cpi-report-in-charts-GyLikTuh1kAsgHvxRoXT
+PUBLISHED: 2026-09-11
+QUOTE: "The Consumer Price Index report showed inflation to be stubborn. Consumer prices were up 3.4% in August from a year earlier."
+SUMMARY: Headline CPI +3.4% y/y — well above the Fed's 2% target.
 
-**Morning prediction:** up / **flat** band, total_score 2.925, confidence 0.52, divergence_flagged False (pipeline) / True (analyst).
+CLAIM: Core CPI hotter than expected; rate-hike odds surged to ~90% for the next meeting.
+URL: https://www.nytimes.com/2026/09/11/business/economy/inflation-cpi-august.html
+PUBLISHED: 2026-09-11
+QUOTE: "The odds of a quarter-point rate increase at the Federal Reserve's meeting next week surged to 90 percent after August's Consumer Price Index report."
+SUMMARY: The CPI print was hawkish — it *raised* hike odds rather than relieving the duration tax.
 
----
+CLAIM: Stocks and bonds rallied anyway after the report; gasoline rebounded as a CPI driver.
+URL: https://www.reuters.com/business/view-august-core-inflation-reading-boosts-rate-hike-expectations-2026-09-11/
+PUBLISHED: 2026-09-11
+QUOTE: "U.S. consumer prices accelerated in August as the cost of gasoline rebounded after two straight monthly declines, bolstering market expectations that the Federal Reserve will raise interest rates..."
+SUMMARY: Reuters headline says "Stocks, bonds rally after August inflation report" — i.e., the market absorbed a hawkish print and rallied.
 
-## 1. WHAT DROVE THE SECTOR
-
-**Primary driver: the CPI binary resolved benignly, and the risk-on gap held.**
-
-Evidence:
-- CLAIM: August CPI matched expectations; stocks surged Friday and oil fell.
-  URL: https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-09112026-12115543
-  PUBLISHED: 2026-09-11
-  QUOTE: "Stocks surged Friday after an important Consumer Price Index reading matched expectations and oil prices fell."
-  SUMMARY: The dominant scheduled binary resolved without a hawkish shock, unlocking the risk-on gap that futures had already priced.
-
-- CLAIM: Core CPI was slightly stronger than expected, yet stocks rose; Nasdaq and S&P +0.8%.
-  URL: https://www.reuters.com/business/view-august-core-inflation-reading-boosts-rate-hike-expectations-2026-09-11/
-  PUBLISHED: 2026-09-11
-  QUOTE: "U.S. stocks rose following the slightly stronger than expected core CPI reading, with the Nasdaq and the S&P 500 up 0.8%."
-  SUMMARY: The market absorbed a mildly hot core print as "not hot enough to break the rally" — a relief reaction, not a hawkish repricing.
-
-- CLAIM: CPI "more or less assures a Fed rate hike in September."
-  URL: https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-11-2026
-  PUBLISHED: 2026-09-11
-  QUOTE: "August's Consumer Inflation report more or less assures a Fed rate hike in September as economy remains strong enough to support hike."
-  SUMMARY: The hike is now near-certain — but it was *already* the base case (Warsh repricing), so the print removed uncertainty rather than adding a new negative. **Resolution of a known binary is bullish for a crowded long-duration complex.**
-
-**Secondary driver: mega-cap idiosyncratic positives inside the sector.**
-
-- CLAIM: Apple advanced ~3% on the first foldable iPhone at its highest price ever; Skyworks rallied 9%; Alphabet ticked up.
-  URL: https://news.google.com/rss/articles/CBMi7AFBVV95cUxOeDdVRl90ZFBNT1hfNUFVdjR4dXhVVkZpazRNc2ZxOUwtbW9IdE1WbXo1STZCU3dGRVRUT0hHcXF6UTBYUDRnYkhiZ016ZHBoNmNqaGF4NFlZbUFNbVdBbklHb3RXV1hSemhrYzdrOExKNmFTUjY3cDlyeTJ5QmprWGM4bFRNWEVDaW1uUEI3X2hqcWxKQy03dWs0QklEaFRiRTVSLUZhWHg2VXh2VnhSMDdkb3otY0R2cVJYbjhsMW5GYWFIaVItTUgzYzZTdG9YS0ZpaXhtNVVhTlRRYzhjTFJRMHpUamRxaVFvRg?oc=5
-  PUBLISHED: 2026-09-11
-  QUOTE: "Apple Advances 3% as First Foldable iPhone Arrives at Its Highest Price Ever; Skyworks Rallies 9%, Alphabet Ticks Up"
-  SUMMARY: **This is the single most important audit finding.** The morning's named mega-cap negative — the BofA AAPL PT cut to $370 on "lower iPhone 18 pricing / margin pressure" — was **completely inverted by the actual product news**: a foldable iPhone at the *highest price ever* is a pricing-power/ASP story, the opposite of the margin-compression thesis. The top-weight name in XLK rallied ~3%.
-
-- CLAIM: Microsoft's AI crunch forced it to turn away business; now wants to triple computing power.
-  URL: https://news.google.com/rss/articles/CBMi5gFBVV95cUxNQ011d28xc2I2SUJjV2xlSGc5THE1ZFRKSFVsQWtxWFdNR0FLMlZyaWU4R3RDdkE4dF9RNHc0bFNsQ1ZfVFBkMExoRDFEVXAwZURPNGEyRktXMWJYMG9leWI2MmFJX2oxbi1EUGFBN0Z2bVBnZUV2VjBZTjdzd0VqT2tkVDk4ZGExV2lVeUxiUzVCVU5kbkhWREU2M18tVXJiWVhBNC1ZNUFyX04wTERVTy1URjFMeDRkSWh2dDhtYmNDMV9tT29rVUhDNFNHS0lDYWpoNUtxSDZUTmN3Ylhla0Z5QmVtQQ?oc=5
-  PUBLISHED: 2026-09-11
-  QUOTE: "Microsoft's AI Crunch Forced It to Turn Away Business, Now It Wants to Triple Computing Power"
-  SUMMARY: A **fresh hyperscaler CapEx-raise datapoint** — the exact "Hyperscaler CapEx raise / AI infra spend upside" HIT_GRID line the morning marked PARTIAL. It landed same-session and reinforced the AI-infra spine.
-
-**Taxonomy alignment:** The day maps cleanly to **S0 (shared macro — CPI resolution + oil relief)** as the dominant factor, with **S1 (sector factors — AI-infra spine + mega-cap product catalyst)** as the secondary. The morning's own HIT_GRID already contained the right lines; the error was in the *weighting and the sign of the mega-cap leg*, not in the taxonomy.
+**This is the single most important fact of the session and it directly contradicts the morning's framing.** The morning memo treated CPI as a *two-sided binary* whose resolution would set the day's direction. In reality the print resolved **hawkish** (core hot, hike odds to 90%) and the market **rallied anyway**. That is a "bad news absorbed / relief" session — the binary resolved against the bulls on the macro axis, and the tape went up regardless.
 
 ---
 
-## 2. AUDIT OF MORNING S0–S4 READS
+## 1. What actually drove the sector
 
-### S0_SHARED_MACRO: morning +0.5 → **underweighted**
+**Primary driver: a broad risk-on relief rally that XLK led, with the hawkish CPI absorbed rather than sold.** The morning's own Channel 1 noted futures were green across the board (+0.6%) after a 4-day slide. That bounce extended into the cash session, and technology — the highest-beta, longest-duration complex — outperformed SPY by +0.47%. The mechanism is the classic one: when a feared binary (CPI) lands without a *disaster* tail, the most-sold, highest-beta complex snaps back hardest. XLK had just printed a −1.41% / −0.81% rel down day on 09-10 (the crowded-long unwind); today was the reflex bounce off that.
 
-The morning read was directionally correct (green futures, oil relief, CPI as two-sided cap) but **structurally too timid**. The reasoning treated CPI as a *cap on conviction* rather than recognizing that a **known, scheduled, pre-positioned binary resolving benignly is a volatility-release event**. The morning itself wrote: "a cool print relieves the duration tax." It then declined to size for that relief.
+**Secondary drivers (taxonomy-aligned):**
+- **Software net retention / large-deal upside (HIT in the grid):** ADBE's FY26 guidance raise + AI ARR acceleration was the freshest index-relevant catalyst named in the morning memo. It landed as a genuine same-session positive for the software sleeve.
+- **Sector rotation into technology (PARTIAL):** the 1w/1m relative leadership reasserted itself after the 1d crack.
+- **Large-cap leadership (HIT):** the mega-cap complex led — consistent with a gap-and-hold index day.
 
-The tell was available at the open: **futures were +0.63%/+0.65% and oil was down 2.5–3.4%.** The market was already voting. The morning scored S0 at +0.5 when the tape was screaming +1.0. **Verdict: right sign, half the magnitude.**
-
-### S1_SECTOR_FACTORS: morning +1.0 → **correct, arguably light**
-
-The AI-infra spine call was right. ADBE guidance raise was correctly identified as fresh-positive. But the morning **mis-signed the mega-cap leg**:
-
-- It named the AAPL PT cut as "market-negative" and a "top-weight mega-cap with margin read-through."
-- Reality: AAPL +3% on a foldable iPhone at record pricing. The PT cut was a **stale analyst action** that the product news obliterated.
-
-This is the **08-14 stale-positive lesson applied in reverse**: the morning correctly discounted stale *positives* (AVGO/ASML PT cuts as market-negative) but failed to discount a stale *negative* (AAPL PT cut) when a fresh, larger, same-session catalyst (product launch) was pending. **A PT cut is a derivative opinion; a product launch is a primary fact.** The morning weighted the derivative over the primary.
-
-### S2_BREADTH: morning 0.0 → **too low**
-
-Morning said "no clean breadth expansion or failure; mega-cap is the thesis and it is mixed." But the actual tape showed **broad participation**: AAPL +3%, Skyworks +9%, Alphabet up, MSFT AI-capacity story, ADBE bid. That is breadth expansion, not a mega-cap-only melt-up. The morning's own MAP HEAT read ("semis HEAT up, semi-equipment up, computer hardware up") was *already* telling it breadth was constructive — then S2 scored 0. **Verdict: the evidence in the morning doc contradicted the S2 score.**
-
-### S3_FLOWS_POSITIONING: morning −0.5 → **wrong sign for the day, right risk**
-
-This is the most instructive miss. The morning applied the **09-10 crowded-long-fuel** lesson as a −0.5 damper, reasoning that trailing relative strength is unwind fuel. But the morning *itself* noted the critical inversion: "today oil is falling, which inverts the inflation-shock leg... the crowded-long fuel argues against an up call, not for a down call."
-
-That reasoning was correct — and then the score still subtracted 0.5. **The lesson was correctly diagnosed and incorrectly applied.** Crowded-long is a *conditional* risk: it bites when a negative catalyst arrives. On a day when the binary resolves benignly and oil falls, crowded positioning becomes **fuel for the upside** (underweight managers chasing, shorts covering). The morning had the mechanism right and the sign wrong.
-
-### S4_ETF_TAPE: morning 0.0 → **fine**
-
-Neutral was defensible; the 1d rel −0.81% was a genuine counter-signal. But note the morning flagged divergence (analyst True) while the pipeline computed False — and the pipeline's flat band is what got emitted. **The divergence flag was the correct instinct; the flat band overrode it.**
-
-### Multiplier / band: **the binding error**
-
-The morning's own lessons said:
-- **09-03/09-04 scheduled-binary:** "must widen band to at least mild, must not emit a flat point estimate."
-
-The analyst text explicitly wrote: *"not flat (09-03/09-04 lesson: a pending high-impact binary requires at least a mild band)."* It then emitted **up/mild** in the prose — but the **pipeline-computed decision emitted `predicted_magnitude_band: flat`** with total_score 2.925 and mult 0.9.
-
-**This is a pipeline/prose divergence.** The deterministic layer collapsed a +1.0 leading sum (S0 +0.5, S1 +1.0, S2 0, S3 −0.5, S4 0) through a 0.9 multiplier to 2.925 and mapped it to **flat** — violating the sector's own scheduled-binary rule. The analyst knew the rule, stated the rule, and the emitted band broke the rule anyway. **The single highest-value fix from today is a hard gate: on a scheduled high-impact print day, the magnitude band floor is `mild`, full stop.**
+**What did NOT drive it:** the AI-infra spine (hyperscaler capex / foundry / HBM) was *carried*, not fresh. The morning correctly refused to count it as three separate spines. Today's move was a **beta/positioning bounce plus a software catalyst**, not a fundamental AI-infra re-rating.
 
 ---
 
-## 3. INTERACTIONS / DOUBLE-COUNT / KNOWABLE-AT-OPEN
+## 2. Audit of morning S0–S4 reads against reality
 
-**Double-count check:** The morning counted CPI once in S0 (as a two-sided cap) — good. But it then let the *same* CPI uncertainty leak into S1 (capping the ADBE catalyst), S2 (justifying 0 breadth), and the band (capping at flat). **CPI was counted once in the score and three more times in the dampening.** That is the double-count that produced the flat band.
+**S0_SHARED_MACRO = +0.5 → UNDERSCORED, direction right.**
+The morning read "green futures + oil relief + fresh software catalyst outweigh elevated real yields and backwardation, but CPI caps conviction." Directionally correct — the tape went up. But the *reasoning* was partly wrong: the morning assumed CPI was an unresolved two-sided cap. In reality CPI resolved **hawkish** (hike odds to 90%) and the market rallied anyway. The morning got the sign right for the wrong reason — it was braced for a binary that resolved against it, and the tape shrugged. The +0.5 was too timid given futures were +0.6% and oil was down 2.5–3.4% (a genuine easing of the inflation spine). **A +1.0 would have been defensible.**
 
-**Interaction the morning missed:** CPI resolution × oil relief × crowded-long is **multiplicative, not additive**. Each alone is mild; together they produce a gap-and-hold. The morning treated them as three separate mild items that net to ~zero. They compounded to +1.32%.
+**S1_SECTOR_FACTORS = +1.0 → CORRECT.**
+The fresh ADBE catalyst + intact AI-infra spine was the right read. The single-name negatives (AAPL PT cut, ASML PT cut, APH −6.5%) were correctly weighted as context, not thesis-drivers. The sector rose on the software catalyst and beta, exactly as scored.
 
-**Knowable-at-open test: YES — strongly.**
+**S2_BREADTH = 0.0 → TOO CONSERVATIVE.**
+The morning said "no clean breadth expansion or failure; mega-cap is the thesis and it is mixed." But the actual session was a **broad risk-on day** (SPY +0.85%, futures green across ES/NQ/RTY/DJIA). On a day when the whole market is up ~0.85% and the sector leads by +0.47%, breadth almost certainly expanded. Scoring S2 at 0 left a full point of upside on the table. The morning's own HIT_GRID marked "Sector breadth expansion" as PARTIAL and "Large-cap leadership" as HIT — those should have netted to a positive S2.
 
-Everything needed for a correct call was in hand before the bell:
-1. **Futures green +0.63%/+0.65%** — risk-on confirmed.
-2. **Oil down 2.5–3.4%** — the live inflation spine was *easing*, inverting the 09-10 down-mandate.
-3. **CPI was scheduled and pre-positioned** — a known binary, not a surprise.
-4. **ADBE guidance raise** — fresh positive, already public.
-5. **AAPL product event pending** — the morning *knew* a mega-cap catalyst was live (it named it per the 09-09 lesson) but signed it negative on a stale PT cut.
+**S3_FLOWS_POSITIONING = −0.5 → WRONG SIGN, and this is the key error.**
+The morning applied the **09-10 crowded-long-fuel** lesson as a −0.5 damper, reasoning that trailing relative strength in a crowded complex is "unwind fuel." But the morning itself flagged the critical inversion: *"the 09-10 lesson's direction was down because oil was spiking; today oil is falling, which inverts the inflation-shock leg."* Having correctly identified that the binding lesson's premise was **inverted**, the memo still applied the −0.5 penalty. That is a **stale-lesson misapplication**: the lesson fired on a *pattern match* (crowded long + backwardation + negative corr) while its *causal precondition* (escalating macro overlay) was absent. The correct treatment was S3 ≈ 0 or even positive — crowded longs that have just been unwound (−1.41% on 09-10) are **fuel for a bounce**, not a lid, when the macro overlay eases. The morning even wrote "the crowded-long fuel argues against an up call, not for a down call" — but then let it drag the score down anyway.
 
-The correct call was **up / mild-to-notable**, not up/flat. The information was fully available; the **band** was the failure, not the direction.
+**S4_ETF_TAPE = 0.0 → DEFENSIBLE but slightly wrong.**
+The 1d rel was −0.81% (negative), but 3d/1w/1m were all positive. The morning scored 0 and flagged divergence. Given the 1d leg was the *unwind* that set up the bounce, a small positive would have been justified. Neutral is acceptable.
 
----
-
-## 4. OUTLIERS INSIDE THE SECTOR
-
-| Name | Move | Note |
-|---|---|---|
-| **AAPL** | **+3%** | Top weight. Foldable iPhone at record price — inverted the morning's PT-cut thesis. Primary driver of the mega-cap leg. |
-| **SWKS (Skyworks)** | **+9%** | Apple supply chain; the foldable/ASP story read straight through. Largest single-name outlier. |
-| **GOOGL** | up | Confirms broad mega-cap participation, not a one-name melt-up. |
-| **MSFT** | constructive | AI-capacity tripling story — fresh hyperscaler CapEx datapoint. |
-| **ADBE** | bid | Guidance raise / AI ARR — the fresh software catalyst the morning correctly named. |
-| **APH** | −6.5% (premarket) | The morning's named negative; a genuine laggard, but too small to offset the mega-cap complex. |
-| **ASML** | soft | MS PT cut to €1,700 — mild negative, correctly identified, immaterial to the day. |
-
-**Outlier read:** The distribution was **skewed positive at the top of the cap table** (AAPL, MSFT, GOOGL) with a small negative tail (APH, ASML). That is the signature of a **beta-expansion day led by mega-cap**, which is exactly what XLK is built to capture. The morning's "mixed mega-cap" characterization was wrong — the mega-cap complex was **net strongly positive**.
+**Multiplier 0.9 / confidence 0.52 → the conviction damper was the real cost.**
+The pipeline's deterministic output emitted **flat/flat** (total_score 2.925, band flat) while the prose emitted **up/mild**. The prose was closer to right. The divergence flag (leading sum +1.0 vs 1d rel −0.81%) damped conviction — but the divergence was *the setup*, not a warning. The 1d negative rel was the oversold condition that produced today's +0.47% outperformance.
 
 ---
 
-## 5. VERDICT & LESSONS
+## 3. Interactions / double-count / knowable-at-open test
 
-**Direction: HIT.** The morning called up; XLK closed +1.32%. The core thesis — CPI-day risk-on with oil relief, AI-infra spine intact — was correct.
+**Double-count check:** The morning counted the CPI binary once in S0 (as a two-sided cap). It did not re-score it in S1/S2/S4. Clean. The AI-infra spine was correctly counted once (not as capex + foundry + HBM). Clean.
 
-**Magnitude: MISS.** Predicted flat; actual +1.32% (notable). The miss was **entirely a band error**, and it was self-inflicted: the sector's own 09-03/09-04 rule forbade a flat point estimate on a scheduled high-impact print day, the analyst prose honored the rule (up/mild), and the deterministic pipeline emitted flat anyway.
+**Interaction the morning missed:** The **crowded-long unwind (09-10) + easing macro overlay (09-11)** is a *positive* interaction, not a negative one. The morning treated them as independent (S3 negative, S0 positive) when they were actually **multiplicative in the bullish direction**: a complex that just de-risked into a macro relief day bounces hardest. This is the same reflex pattern the 08-21 reversal lesson describes ("NQ ≥ +0.3% → don't force down"), which the morning *did* satisfy — but it didn't let that lesson override the 09-10 damper.
 
-**Relative: mild positive (+0.47%).** XLK beat SPY but not dramatically — consistent with a broad risk-on day where tech led modestly, not a tech-specific melt-up.
+**Knowable-at-open test:** **YES, largely.** At the open, the following were all knowable:
+- Futures green +0.6% across the board (knowable)
+- Oil down 2.5–3.4% (knowable — easing the inflation spine)
+- ADBE guidance raise (knowable — fresh positive)
+- XLK had just printed −1.41% / −0.81% rel (knowable — oversold setup)
+- VIX backwardation (knowable — but this was the *only* bearish tell, and it was stale)
 
-**Three binding lessons:**
+The CPI print itself was NOT knowable at the open (8:30 ET release). But the *setup* — green futures, oil relief, fresh catalyst, oversold sector — was a **bullish configuration** that the morning under-weighted because it over-weighted the pending binary and the stale crowded-long lesson. The hawkish CPI resolution (hike odds to 90%) was the one genuinely unknowable variable, and the market absorbed it. **A more aggressive up/mild-to-notable call was knowable at the open.**
 
-1. **Scheduled-binary band floor must be enforced in the pipeline, not just the prose.** When a high-impact print is pending, the emitted band floor is `mild`. Today's flat emission is a rule violation, not a judgment call.
+---
 
-2. **A stale analyst PT cut never outweighs a fresh same-session primary catalyst.** The morning discounted stale positives but not a stale negative (AAPL PT cut) against a pending product launch. **Primary facts (product, guidance) > derivative opinions (PT changes).**
+## 4. Outliers inside the sector
 
-3. **Crowded-long is conditional, not directional.** The 09-10 lesson fires on *negative* catalysts. When the macro overlay eases (oil down, binary resolves benignly), crowded positioning flips from unwind fuel to **upside accelerant**. The morning diagnosed this correctly in prose and then scored it −0.5 anyway. **Score the condition, not the label.**
+- **ADBE** — the fresh catalyst; guidance raise + AI ARR acceleration + CEO transition. The single most index-relevant same-session positive. Likely a notable outperformer.
+- **AAPL** — top-weight mega-cap with a BofA PT cut to $370 (Buy maintained) on iPhone 18 pricing/margin pressure. The morning correctly named it per the 09-09 lesson. On a +1.32% sector day, AAPL likely lagged — a drag that the sector overcame.
+- **ASML** — MS Overweight maintained, PT cut to €1,700 from €1,930 on China/capacity/margin. Mild negative; likely a relative laggard.
+- **APH** — −6.5% premarket on Fabrinet weakness + rising yields. The clearest single-name outlier to the downside; a genuine drag inside the sector.
+- **MU** — in focus on memory/HBM demand; carried positive.
+- **Semis broadly (NVDA/AVGO/LRCX/AMAT)** — MAP HEAT was up; likely led the beta bounce.
 
-**One-line summary:** Right direction, wrong band — a CPI-day risk-on gap that the morning saw coming but refused to size, because it counted the same binary four times and mis-signed a stale PT cut against a live product launch.
+The sector rose +1.32% *despite* AAPL, ASML, and APH drags — which means the breadth of the up move was **wider than the morning's "mixed" S2 read implied**. That is the strongest evidence that S2 should have been positive.
+
+---
+
+## 5. Verdict
+
+The morning got the **direction right (up)** but the **magnitude wrong (flat vs. actual notable)** and the **conviction wrong (0.52, damped by a stale lesson)**. The core analytical error was applying the **09-10 crowded-long-fuel** lesson as a −0.5 penalty after explicitly recognizing that the lesson's causal precondition (escalating macro overlay) was **inverted** by falling oil. The morning wrote the correct insight ("the crowded-long fuel argues against an up call, not for a down call") and then failed to act on it. The second error was scoring S2 at 0 on a day when the entire market was up ~0.85% and the sector led — breadth almost certainly expanded.
+
+The hawkish CPI resolution (core hot, hike odds to 90%) was the one unknowable variable, and the market absorbed it — a relief rally that XLK, as the highest-beta complex, led. The gap-and-hold path (open ≈ low, close barely above open) confirms this was a positioning/beta bounce, not a fundamental re-rating.
+
+**Lesson for the book:** When a binding lesson's *causal precondition* is explicitly identified as absent/inverted, the lesson must be **zeroed, not merely damped**. Pattern-matching a stale lesson onto an inverted setup is a sign-flip error in disguise.
 
 OUTCOME_BEGIN
 SECTOR: Technology
@@ -168,8 +119,8 @@ SPY_PCT: 0.85
 REL_PCT: 0.47
 ACTUAL_DIRECTION: up
 ACTUAL_MAGNITUDE: notable
-PRIMARY_DRIVER: Benign CPI resolution + oil relief unlocked a risk-on gap that held all session, led by mega-cap product/AI catalysts (AAPL +3% foldable iPhone, MSFT AI-capacity, ADBE guidance raise)
-KEY_INTERACTION: CPI resolution × oil −2.5–3.4% × crowded-long flipped from unwind fuel to upside accelerant — multiplicative, not additive; morning counted CPI once in score and three more times as dampener
+PRIMARY_DRIVER: Broad risk-on relief rally after a hawkish CPI was absorbed rather than sold; XLK led as the highest-beta complex, bouncing off the 09-10 crowded-long unwind, aided by ADBE's guidance raise.
+KEY_INTERACTION: Crowded-long unwind (09-10) + easing macro overlay (oil −2.5–3.4%, green futures) was multiplicatively bullish — a de-risked complex bounces hardest — but the morning scored it as a net negative (S3 −0.5).
 KNOWABLE_AT_OPEN: yes
-MORNING_READ_VERDICT: Direction HIT, magnitude MISS — correct up call but flat band violated the sector's own scheduled-binary rule (floor should be mild); mega-cap leg mis-signed on a stale AAPL PT cut vs a live product launch
+MORNING_READ_VERDICT: Direction correct (up) but magnitude and conviction wrong — flat/flat emitted vs. actual notable up; the 09-10 crowded-long lesson was applied as a −0.5 penalty despite the morning explicitly recognizing its causal precondition was inverted, and S2 breadth was scored 0 on a broad-market up day.
 OUTCOME_END
