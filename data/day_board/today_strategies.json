@@ -1,6 +1,6 @@
 {
   "date": "2026-09-12",
-  "generated_at": "2026-09-12T09:58:04.602823-04:00",
+  "generated_at": "2026-09-12T10:01:58.272396-04:00",
   "n": 246,
   "n_ok": 246,
   "buy_1d": [
@@ -389,18 +389,18 @@
     },
     "flatten_robust": {
       "buy": [
-        "AUPH",
-        "OVID",
-        "SANM",
-        "ORCL",
-        "NVT",
-        "COHU"
+        "ISRG",
+        "PACS",
+        "CLS",
+        "COHR",
+        "AVT",
+        "SIMO"
       ],
       "sell": [],
       "sit": true,
       "status": "ok",
       "family": "flatten",
-      "date": "2026-09-11"
+      "date": "2026-09-12"
     },
     "union_h1": {
       "buy": [
