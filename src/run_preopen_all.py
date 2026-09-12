@@ -286,6 +286,9 @@ def _pull_scrape_artifacts(date: str) -> None:
         f"01_daily/news/{date}_finviz_digest.json",
         f"01_daily/news/{date}_finviz_digest.md",
         "01_daily/news/latest_finviz_digest.md",
+        f"01_daily/news/{date}_finviz_market_digest.json",
+        f"01_daily/news/{date}_finviz_market_digest.md",
+        "01_daily/news/latest_finviz_market_digest.md",
         f"01_daily/map_heat/{date}_map_heat.json",
         f"01_daily/map_heat/{date}_map_heat.md",
     ], "scrape")

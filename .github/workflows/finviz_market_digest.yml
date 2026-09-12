@@ -1,0 +1,120 @@
+name: Finviz homepage market digest
+
+# Capture-only homepage market-day prose (NOT quote-page ticker blurbs).
+# Primary weekday path is finviz_preopen_scrape.yml (cron 09:40 UTC = 05:40 ET).
+# This file is a last-chance weekday slot (~08:00 ET) plus dispatch / backfill.
+# Do not run live HTML on ECS (403). Not wired into tape_anchor / predict.
+
+on:
+  schedule:
+    # 12:00 UTC = 08:00 EDT. Last chance in the 05:40–08:00 ET window.
+    # After the fall EST change this is 07:00 ET — still pre-09:30.
+    - cron: "0 12 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      run_date:
+        description: "YYYY-MM-DD live capture (empty = today ET)"
+        required: false
+        default: ""
+      force:
+        description: "true = rewrite even if morning-ok file exists"
+        required: false
+        default: "false"
+      backfill_from:
+        description: "Optional CDX/archive.ph backfill start YYYY-MM-DD"
+        required: false
+        default: ""
+      backfill_to:
+        description: "Optional backfill end YYYY-MM-DD (empty = today ET)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: finviz-market-digest
+  cancel-in-progress: false
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      FULLSCAN_LAND: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: |
+          pip install -r requirements.txt
+          pip install beautifulsoup4 lxml requests || true
+
+      - name: Skip weekend / past 09:25 ET (live only)
+        if: github.event.inputs.backfill_from == '' && github.event.inputs.force != 'true'
+        run: |
+          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          DOW=$(TZ=America/New_York date +%u)
+          echo "ET_HM=$ET_HM DOW=$DOW"
+          if [ "$DOW" -ge 6 ]; then
+            echo "Weekend — skip live market digest"
+            echo "skip=yes" >> "$GITHUB_ENV"
+          elif [ "$ET_HM" -ge 925 ]; then
+            echo "past 09:25 ET — skip live rewrite"
+            echo "skip=yes" >> "$GITHUB_ENV"
+          fi
+
+      - name: Live homepage market digest
+        if: env.skip != 'yes' && github.event.inputs.backfill_from == ''
+        env:
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+        run: |
+          set -euo pipefail
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          ARGS=(--date "$DATE")
+          [ "${{ github.event.inputs.force }}" = "true" ] && ARGS+=(--force)
+          echo "CMD: python -m src.finviz_market_digest ${ARGS[*]}"
+          python -m src.finviz_market_digest "${ARGS[@]}"
+
+      - name: Wayback / archive.ph backfill
+        if: github.event.inputs.backfill_from != ''
+        run: |
+          set -euo pipefail
+          FROM="${{ github.event.inputs.backfill_from }}"
+          TO="${{ github.event.inputs.backfill_to }}"
+          TO="${TO:-$(TZ=America/New_York date +%F)}"
+          ARGS=(--backfill --from "$FROM" --to "$TO")
+          [ "${{ github.event.inputs.force }}" = "true" ] && ARGS+=(--force)
+          echo "CMD: python -m src.finviz_market_digest ${ARGS[*]}"
+          python -m src.finviz_market_digest "${ARGS[@]}"
+
+      - name: Preview
+        if: always()
+        run: |
+          D="${{ github.event.inputs.run_date }}"
+          D="${D:-$(TZ=America/New_York date +%F)}"
+          echo "======== market digest $D ========"
+          ls -la 01_daily/news/*finviz_market_digest* 2>/dev/null || true
+          head -60 "01_daily/news/${D}_finviz_market_digest.md" 2>/dev/null || true
+
+      - name: Leftover sweep
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          bash scripts/safe_git_push.sh \
+            "auto: finviz homepage market digest [$(date -u +%F_%H%M)]" \
+            01_daily/news/ data/day_board/ \
+            || echo "[market_digest] leftover sweep failed — lands already on main"

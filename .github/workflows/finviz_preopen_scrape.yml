@@ -1,6 +1,7 @@
 name: Finviz pre-open scrape (GH-hosted Elite)
 
-# Live Finviz HTML (digest + morning overlay) from ubuntu-latest.
+# Live Finviz HTML (quote digest + homepage market-day prose + morning
+# overlay) from ubuntu-latest.
 # Aliyun ECS 403s public finviz.com. GitHub-hosted + Elite login works
 # (same path as collect-finviz.yml).
 #
@@ -85,6 +86,8 @@ jobs:
           FULLSCAN_DB_OPTIONAL=1 python -m collectors.finviz_financials || echo "[warn] elite export soft-failed"
           echo "CMD: python -m src.finviz_digest --date $DATE --force"
           python -m src.finviz_digest --date "$DATE" --force
+          echo "CMD: python -m src.finviz_market_digest --date $DATE --force"
+          python -m src.finviz_market_digest --date "$DATE" --force
 
       - name: Map heat morning overlay (Elite tape/calendar)
         if: env.skip != 'yes'
@@ -112,6 +115,9 @@ jobs:
           echo "======== digest $D ========"
           ls -la 01_daily/news/${D}_finviz_digest.* 2>/dev/null || true
           head -40 "01_daily/news/${D}_finviz_digest.md" 2>/dev/null || true
+          echo "======== homepage market digest $D ========"
+          ls -la 01_daily/news/${D}_finviz_market_digest.* 2>/dev/null || true
+          head -50 "01_daily/news/${D}_finviz_market_digest.md" 2>/dev/null || true
           echo "======== overlay $D ========"
           python3 -c "
           import json,sys

@@ -1,0 +1,246 @@
+"""Parser + clock tests for the Finviz homepage market-day digest.
+
+Fixtures: Cyrus's Friday narrative (plain text) and the live homepage
+`why-stock-moving-init-data` HTML (Weekend Brief about that Friday).
+
+Run: python -m src.test_finviz_market_digest
+"""
+from __future__ import annotations
+
+import gzip
+import json
+from datetime import datetime
+from pathlib import Path
+from unittest import mock
+from zoneinfo import ZoneInfo
+
+from src.finviz_market_digest import (
+    ET,
+    backfill_range,
+    build_report,
+    clock_legal_at,
+    decode_html_bytes,
+    existing_morning_ok,
+    parse_homepage_html,
+    parse_market_digest_text,
+    pick_capture_for_date,
+    report_has_narrative,
+    save_report,
+    to_markdown,
+    wayback_ts_to_dt,
+)
+
+HERE = Path(__file__).resolve().parent
+HTML_FIXTURE = HERE / "testdata" / "finviz_homepage_market_digest.html"
+TEXT_FIXTURE = HERE / "testdata" / "cyrus_friday_finviz_market_digest.txt"
+
+
+def _assert_friday_structure(parsed: dict) -> None:
+    moves = {m["code"]: m["change_pct"] for m in parsed.get("index_moves") or []}
+    assert abs(moves.get("SPX", 0) - 0.86) < 0.001
+    assert abs(moves.get("COMP", 0) - 0.96) < 0.001
+    assert abs(moves.get("DJI", 0) - 0.98) < 0.001
+    oil = parsed.get("oil") or {}
+    assert oil.get("price") == 104.60
+    assert "brent" in str(oil.get("name") or "").lower()
+    fed = parsed.get("fed_odds") or {}
+    assert fed.get("pct") == 90
+    assert fed.get("action") == "hike"
+    tickers = parsed.get("named_tickers") or []
+    for t in ("DELL", "HPE", "HPQ", "ORCL"):
+        assert t in tickers, tickers
+    cal = " ".join(parsed.get("calendar") or []).lower()
+    assert "monday" in cal and "light" in cal
+    raw = (parsed.get("raw_text") or "").lower()
+    assert "s&p 500" in raw and "0.86" in raw
+    assert "brent" in raw
+
+
+def test_parse_cyrus_friday_text() -> None:
+    text = TEXT_FIXTURE.read_text(encoding="utf-8")
+    parsed = parse_market_digest_text(text)
+    _assert_friday_structure(parsed)
+
+
+def test_parse_homepage_html_fixture() -> None:
+    html = HTML_FIXTURE.read_text(encoding="utf-8")
+    parsed = parse_homepage_html(html)
+    assert parsed is not None
+    assert "Weekend Brief" in (parsed.get("headline") or "")
+    _assert_friday_structure(parsed)
+    assert parsed.get("finviz_source") == "market_summary"
+    assert str(parsed.get("finviz_published_at") or "").startswith("2026-09-12")
+
+
+def test_gzip_wayback_body_decodes() -> None:
+    html = HTML_FIXTURE.read_bytes()
+    blob = gzip.compress(html)
+    assert blob[:2] == b"\x1f\x8b"
+    parsed = parse_homepage_html(blob)
+    assert parsed is not None
+    assert "0.86" in (parsed.get("raw_text") or "")
+    assert decode_html_bytes(blob).startswith("<!DOCTYPE")
+
+
+def test_rejects_login_and_empty() -> None:
+    login = "<html><title>Login</title><form action=login_submit.ashx><input name=password></form></html>"
+    assert parse_homepage_html(login) is None
+    assert parse_homepage_html("<html><body>screener only</body></html>") is None
+
+
+def test_clock_legal_uses_archive_snapshot_not_generated() -> None:
+    # Friday 2026-09-11 09:30 ET = 13:30 UTC. 06:06 UTC is 02:06 ET → legal.
+    assert clock_legal_at(wayback_ts_to_dt("20260910060618"), "2026-09-10") is True
+    # 02:10 UTC Sep 12 = 22:10 ET Sep 11 → after Friday open.
+    assert clock_legal_at(wayback_ts_to_dt("20260912021039"), "2026-09-11") is False
+    late = datetime(2026, 9, 11, 16, 5, tzinfo=ET)
+    assert clock_legal_at(late, "2026-09-11") is False
+    early = datetime(2026, 9, 11, 5, 40, tzinfo=ET)
+    assert clock_legal_at(early, "2026-09-11") is True
+
+
+def test_wayback_report_stamps_source_and_clock() -> None:
+    html = HTML_FIXTURE.read_text(encoding="utf-8")
+    report = build_report(
+        asof="2026-09-10",
+        html=html,
+        source="wayback",
+        source_url="https://web.archive.org/web/20260910060618id_/https://finviz.com/",
+        archive_ts="20260910060618",
+        archive_url="https://web.archive.org/web/20260910060618id_/https://finviz.com/",
+    )
+    assert report["source"] == "wayback"
+    assert report["archive_snapshot_ts"] == "20260910060618"
+    assert report["clock_legal"] is True
+    assert report["timezone"] == "America/New_York"
+    md = to_markdown(report)
+    assert "source=wayback" in md.replace(" ", "").replace("`", "") or "**Source:** `wayback`" in md
+    assert "20260910060618" in md
+    assert "clock_legal" in md
+    assert "not" in md.lower() and "finviz_digest.md" in md
+    assert "09:30" in md
+
+
+def test_late_archive_is_honest_not_legal() -> None:
+    html = HTML_FIXTURE.read_text(encoding="utf-8")
+    report = build_report(
+        asof="2026-09-11",
+        html=html,
+        source="wayback",
+        archive_ts="20260912021039",
+    )
+    assert report["clock_legal"] is False
+    assert "clock_legal:** `false`" in to_markdown(report)
+
+
+def test_does_not_invent_from_quote_digest() -> None:
+    # Quote-page digest HTML has ticker Daily Digest cells, not the homepage widget.
+    quote = """
+    <table><tr>
+      <td class="snapshot-td2">Daily Digest</td>
+      <td>Bank of America cuts Apple price target</td>
+    </tr></table>
+    """
+    assert parse_homepage_html(quote) is None
+    report = build_report(asof="2026-08-21", html=quote, source="wayback",
+                          archive_ts="20260821052017")
+    assert report_has_narrative(report) is False
+
+
+def test_pick_capture_prefers_preopen() -> None:
+    rows = [
+        {"et_date": "2026-09-10", "et": "2026-09-10T02:06:18-04:00",
+         "timestamp": "20260910060618", "original": "https://finviz.com/"},
+        {"et_date": "2026-09-10", "et": "2026-09-10T20:03:11-04:00",
+         "timestamp": "20260911000311", "original": "https://finviz.com/"},
+    ]
+    pick = pick_capture_for_date(rows, "2026-09-10")
+    assert pick is not None
+    assert pick["timestamp"] == "20260910060618"
+    assert pick_capture_for_date(rows, "2026-09-12") is None
+
+
+def test_save_and_morning_ok(tmp_path: Path | None = None) -> None:
+    import src.finviz_market_digest as md
+    news = Path("/tmp/fullscan-market-digest-test")
+    news.mkdir(parents=True, exist_ok=True)
+    html = HTML_FIXTURE.read_text(encoding="utf-8")
+    report = build_report(asof="2026-09-10", html=html, source="wayback",
+                          archive_ts="20260910060618")
+    with mock.patch.object(md, "NEWS_DIR", news):
+        jp, mp = save_report(report)
+        assert jp.exists() and mp.exists()
+        payload = json.loads(jp.read_text(encoding="utf-8"))
+        assert payload["source"] == "wayback"
+        assert payload["clock_legal"] is True
+        # Stamp generated_at as a morning write so skip-if-good holds.
+        payload["generated_at"] = "2026-09-10T05:41:00-04:00"
+        jp.write_text(json.dumps(payload), encoding="utf-8")
+        assert existing_morning_ok("2026-09-10") is True
+        assert existing_morning_ok("2026-09-10", force=True) is False
+        payload["generated_at"] = "2026-09-10T01:10:00-04:00"
+        jp.write_text(json.dumps(payload), encoding="utf-8")
+        assert existing_morning_ok("2026-09-10") is False
+
+
+def test_backfill_writes_wayback_and_leaves_gaps() -> None:
+    import src.finviz_market_digest as md
+    html = HTML_FIXTURE.read_text(encoding="utf-8")
+    news = Path("/tmp/fullscan-market-digest-backfill")
+    news.mkdir(parents=True, exist_ok=True)
+    for p in news.glob("*finviz_market_digest*"):
+        p.unlink()
+    rows = [
+        {"timestamp": "20260910060618", "original": "https://finviz.com/",
+         "et": "2026-09-10T02:06:18-04:00", "et_date": "2026-09-10",
+         "utc": "2026-09-10T06:06:18+00:00"},
+    ]
+    with mock.patch.object(md, "NEWS_DIR", news), \
+         mock.patch.object(md, "collect_cdx", return_value=rows), \
+         mock.patch.object(md, "fetch_wayback_html",
+                           return_value=(html, "https://web.archive.org/x")), \
+         mock.patch.object(md, "fetch_archive_ph_newest",
+                           return_value=(None, None, None)):
+        summary = backfill_range("2026-09-10", "2026-09-11", force=True,
+                                 try_archive_ph=True)
+    assert "2026-09-10" in summary["wrote"]
+    assert "2026-09-11" in summary["gaps"]
+    jp = news / "2026-09-10_finviz_market_digest.json"
+    payload = json.loads(jp.read_text(encoding="utf-8"))
+    assert payload["source"] == "wayback"
+    assert payload["archive_snapshot_ts"] == "20260910060618"
+    assert payload["clock_legal"] is True
+    assert not (news / "2026-09-11_finviz_market_digest.json").exists()
+
+
+def main() -> None:
+    tests = [
+        test_parse_cyrus_friday_text,
+        test_parse_homepage_html_fixture,
+        test_gzip_wayback_body_decodes,
+        test_rejects_login_and_empty,
+        test_clock_legal_uses_archive_snapshot_not_generated,
+        test_wayback_report_stamps_source_and_clock,
+        test_late_archive_is_honest_not_legal,
+        test_does_not_invent_from_quote_digest,
+        test_pick_capture_prefers_preopen,
+        test_save_and_morning_ok,
+        test_backfill_writes_wayback_and_leaves_gaps,
+    ]
+    failed = 0
+    for fn in tests:
+        try:
+            fn()
+            print(f"ok  {fn.__name__}")
+        except Exception as e:  # noqa: BLE001
+            failed += 1
+            print(f"FAIL {fn.__name__}: {e}")
+            import traceback
+            traceback.print_exc()
+    if failed:
+        raise SystemExit(f"{failed} test(s) failed")
+    print(f"{len(tests)} tests passed")
+
+
+if __name__ == "__main__":
+    main()

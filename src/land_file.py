@@ -49,6 +49,10 @@ def step_paths(date: str, key: str) -> list[Path]:
             news / f"{date}_finviz_digest.json",
             news / f"{date}_finviz_digest.md",
         ],
+        "finviz_market_digest": [
+            news / f"{date}_finviz_market_digest.json",
+            news / f"{date}_finviz_market_digest.md",
+        ],
         "map_heat": [
             heat / f"{date}_map_heat.json",
             heat / f"{date}_map_heat.md",
@@ -166,6 +170,9 @@ def _qc_one(path: Path, date: str) -> output_qc.QCResult:
         return output_qc.qc_news_judge(path)
     if name.endswith("_actions.json"):
         return output_qc.qc_news_actions(path)
+    if name.endswith("_finviz_market_digest.json") or name.endswith(
+            "_finviz_market_digest.md"):
+        return output_qc.qc_finviz_market_digest(path)
     if name.endswith("_finviz_digest.json") or name.endswith("_finviz_digest.md"):
         return output_qc.qc_finviz_digest(path)
     if name.endswith("_map_heat.json"):

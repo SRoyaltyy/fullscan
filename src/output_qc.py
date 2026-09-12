@@ -374,6 +374,31 @@ def qc_news_actions(path: str | Path) -> QCResult:
     return _ok("news_actions", p, "ok")
 
 
+def qc_finviz_market_digest(path: str | Path) -> QCResult:
+    """Homepage market-day prose. Optional — not in preopen all_ok."""
+    p = str(path)
+    if not os.path.exists(p):
+        return _fail("finviz_market_digest", p, "missing", empty=True)
+    if p.endswith(".json"):
+        data = _read_json(p)
+        if not isinstance(data, dict):
+            return _fail("finviz_market_digest", p, "unparseable_json", empty=True)
+        raw = str(data.get("raw_text") or "")
+        headline = str(data.get("headline") or "")
+        if len(raw) < 40 and len(headline) < 20:
+            return _fail("finviz_market_digest", p, "empty_narrative", empty=True)
+        if not data.get("generated_at"):
+            return _fail("finviz_market_digest", p, "missing_generated_at")
+        return _ok("finviz_market_digest", p, "ok")
+    text = _read(p)
+    if len(text) < 200:
+        return _fail("finviz_market_digest", p, f"too_small({len(text)})", text,
+                     empty=True)
+    if "clock_legal" not in text or "Generated" not in text:
+        return _fail("finviz_market_digest", p, "missing_clock_header")
+    return _ok("finviz_market_digest", p, text)
+
+
 def qc_finviz_digest(path: str | Path) -> QCResult:
     p = str(path)
     if not os.path.exists(p):
@@ -597,6 +622,7 @@ def main() -> None:
             "parse": qc_news_parse,
             "actions": qc_news_actions,
             "digest": qc_finviz_digest,
+            "market_digest": qc_finviz_market_digest,
             "heat": qc_map_heat,
             "heat_baseline": qc_map_heat_baseline,
             "heat_research": qc_map_heat_research,
