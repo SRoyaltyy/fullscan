@@ -92,8 +92,7 @@ def parse_horizon_calls(scores: dict) -> dict:
     return out
 
 
-def compute(scores: dict) -> dict:
-    """Deterministic final scoring. Returns full decision record."""
+def _clamp_components(scores: dict) -> tuple[dict, float]:
     comps = {}
     for k, (lo, hi) in BOUNDS.items():
         v = scores.get(k, 0.0)
@@ -102,12 +101,26 @@ def compute(scores: dict) -> dict:
         except (TypeError, ValueError):
             v = 0.0
         comps[k] = max(lo, min(hi, v))
-
     try:
         mult = float(scores.get("MULTIPLIER", 1.0))
     except (TypeError, ValueError):
         mult = 1.0
-    mult = max(MULT_MIN, min(MULT_MAX, mult))
+    return comps, max(MULT_MIN, min(MULT_MAX, mult))
+
+
+def _llm_confidence(scores: dict) -> float:
+    try:
+        conf = float(scores.get("CONFIDENCE", 0.5))
+    except (TypeError, ValueError):
+        conf = 0.5
+    return max(0.0, min(1.0, conf))
+
+
+def compute_legacy(scores: dict) -> dict:
+    """The pre-2026-09-12 rule: LLM components only, futures weight 0.5,
+    divergence cap, ±1.0 flat zone, 3/7/12 bands. Kept for the replay
+    harness and for re-grading old runs; the live path uses compute()."""
+    comps, mult = _clamp_components(scores)
 
     leading = (comps["B1_CATALYSTS"] * WEIGHTS["B1_CATALYSTS"]
                + comps["B2_BONDS"] * WEIGHTS["B2_BONDS"]
@@ -128,16 +141,97 @@ def compute(scores: dict) -> dict:
                 magnitude = band
                 break
 
-    try:
-        conf = float(scores.get("CONFIDENCE", 0.5))
-    except (TypeError, ValueError):
-        conf = 0.5
-
     return {"components": comps, "multiplier": mult, "leading_sum": leading,
             "divergence_flagged": divergence, "total_score": round(total, 3),
             "predicted_direction": direction,
             "predicted_magnitude_band": magnitude,
-            "confidence_score": max(0.0, min(1.0, conf))}
+            "confidence_score": _llm_confidence(scores),
+            "engine": "legacy"}
+
+
+# ---- v2 rule (2026-09-12) -------------------------------------------------
+# Diagnosis behind it lives in docs/ENGINE_DIAGNOSIS.md and is reproducible
+# with `python -m src.replay_harness`. Short version: the call is graded on
+# close-vs-prior-close, so the overnight gap that futures/Europe already show
+# is part of the answer; the old rule weighted it 0.5 and let LLM components
+# with 33–48% sign accuracy (bonds, sentiment, Asia) dominate, and predicted
+# "flat" (a 4%-of-days outcome) 15% of the time.
+FLAT_EPS = 0.25              # |total| below this -> flat (was 1.0)
+OVERLAY_CAP = 6.0            # the LLM's net say, in score units (1% of tape)
+# Magnitude is read off the *tape anchor* when there is one: over 290
+# sessions the actual band is "mild" in every |gap| bucket until the gap
+# itself reaches ~1% (score 6), where "notable" becomes the mode. Reading it
+# off the LLM-inflated total predicted "notable" far too often (39% hit vs
+# 64% for always-mild). Without an anchor the total is used with wider bands.
+V2_MAGNITUDE_BANDS = [(12.0, "severe"), (6.0, "notable"), (0.0, "mild")]
+V2_MAGNITUDE_BANDS_NO_ANCHOR = [(15.0, "severe"), (9.0, "notable"), (0.0, "mild")]
+
+
+def _band_v2(score: float, anchored: bool = True) -> str:
+    bands = V2_MAGNITUDE_BANDS if anchored else V2_MAGNITUDE_BANDS_NO_ANCHOR
+    for thresh, band in bands:
+        if abs(score) >= thresh:
+            return band
+    return "mild"
+
+
+def compute(scores: dict, ch1: dict | None = None,
+            policy: dict | None = None) -> dict:
+    """Deterministic final scoring, v2.
+
+    total = tape anchor (Python, from Channel 1) + LLM overlay, where the
+    overlay is Σ skill_mult × weight × component × multiplier, clipped to
+    ±OVERLAY_CAP. When the anchor is available the components that merely
+    restate the tape (Asia, Europe, futures) are dropped from the overlay.
+    Without Channel 1 (or with an empty tape) the overlay stands alone.
+    """
+    from . import engine_policy, tape_anchor
+
+    comps, mult = _clamp_components(scores)
+    anchor = tape_anchor.general_anchor(ch1)
+    mults = engine_policy.general_multipliers(policy)
+
+    overlay_parts = {}
+    for k, w in WEIGHTS.items():
+        if anchor["available"] and k in engine_policy.GENERAL_TAPE_DUPLICATES:
+            continue
+        overlay_parts[k] = comps[k] * w * mults.get(k, 1.0)
+    overlay_raw = sum(overlay_parts.values()) * mult
+    overlay = max(-OVERLAY_CAP, min(OVERLAY_CAP, overlay_raw)) if anchor["available"] else overlay_raw
+
+    total = anchor["score"] + overlay
+
+    leading = (comps["B1_CATALYSTS"] * WEIGHTS["B1_CATALYSTS"]
+               + comps["B2_BONDS"] * WEIGHTS["B2_BONDS"]
+               + (comps["B0_ASIA"] + comps["B0_EUROPE"]) * WEIGHTS["B0_ASIA"])
+    # informational only in v2: the tape is now the anchor, not the suspect
+    disagree = anchor["available"] and overlay != 0.0 and (
+        (anchor["score"] > 0) != (overlay > 0))
+
+    if abs(total) < FLAT_EPS:
+        direction, magnitude = "flat", "flat"
+    else:
+        direction = "up" if total > 0 else "down"
+        magnitude = (_band_v2(anchor["score"], anchored=True) if anchor["available"]
+                     else _band_v2(total, anchored=False))
+
+    conf = 0.5 + min(0.35, abs(total) / 25.0)
+    if disagree:
+        conf -= 0.1
+    conf = max(0.35, min(0.9, conf))
+
+    return {"components": comps, "multiplier": mult, "leading_sum": leading,
+            "divergence_flagged": bool(disagree),
+            "total_score": round(total, 3),
+            "predicted_direction": direction,
+            "predicted_magnitude_band": magnitude,
+            "confidence_score": round(conf, 3),
+            "engine": "v2",
+            "anchor": anchor,
+            "overlay_score": round(overlay, 3),
+            "overlay_raw": round(overlay_raw, 3),
+            "skill_multipliers": mults,
+            "llm_confidence": _llm_confidence(scores)}
 
 
 def actual_band(pct_change: float) -> tuple[str, str]:

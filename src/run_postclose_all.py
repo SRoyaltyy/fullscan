@@ -7,7 +7,8 @@ AND the 22:00 ET ECS timer — the second run spends no LLM if files exist.
   → sector outcomes + sector reflect + sector board
   → news-actions grader (no LLM)
   → HIT board (no LLM)
-  → learn cycle
+  → learn cycle (promote/retire lessons, refresh engine_policy.json)
+  → improvement tracker (rolling accuracy vs baselines, no LLM)
   → map-heat captain research for the NEXT session
 
 Does NOT scrape Finviz (ECS 403). Clones today's heat onto the next
@@ -70,6 +71,7 @@ def _push_pack(date: str) -> None:
         f"01_daily/{date}_learnings.md",
         "02_lessons/", "03_scoreboard/",
         "00_grounding/mutable_policy.md",
+        "00_grounding/engine_policy.json",
         "00_grounding/book_policy.json",
         "00_grounding/weather_rules_proposals.json",
     ]
@@ -195,6 +197,11 @@ def _run_one(date: str, force: bool = False) -> None:
     step("Learn cycle",
          [py, "-m", "src.learn_cycle", "--date", date],
          False, timeout_s=180)
+    # learn_cycle already refreshes it; rerun standalone so a learn_cycle
+    # crash cannot hide tonight's rolling-accuracy row.
+    step("Improvement tracker",
+         [py, "-m", "src.improvement_tracker"],
+         False, timeout_s=60)
     # Captains can burn 2h. Dated learnings must already be on main.
     _push_pack(date)
 
