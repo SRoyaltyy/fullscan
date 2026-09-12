@@ -44,6 +44,16 @@ def _write(path: str, date_str: str, text: str, decision: dict, scores: dict,
                  f"(multiplier {decision['multiplier']})\n")
         fh.write(f"- leading_sum: {decision['leading_sum']}\n")
         fh.write(f"- divergence_flagged: **{decision['divergence_flagged']}**\n")
+        if decision.get("engine") == "v2":
+            a = decision.get("anchor") or {}
+            legs = ", ".join(f"{l['leg']} {l['pct']:+.2f}%" for l in a.get("legs", []))
+            fh.write(f"- engine: v2 · tape_anchor: **{a.get('score', 0.0)}** "
+                     f"({legs or 'unavailable'}) · llm_overlay: "
+                     f"**{decision.get('overlay_score')}** "
+                     f"(raw {decision.get('overlay_raw')}, cap ±{compute_scores.OVERLAY_CAP})\n")
+            muted = [k for k, v in (decision.get("skill_multipliers") or {}).items() if v < 1.0]
+            if muted:
+                fh.write(f"- skill-muted components: {', '.join(muted)}\n")
         fh.write(f"- predicted_direction: **{decision['predicted_direction']}**\n")
         fh.write(f"- predicted_magnitude_band: "
                  f"**{decision['predicted_magnitude_band']}**\n")
@@ -71,6 +81,9 @@ def _update_scoreboard(date_str: str, decision: dict, horizon_calls: dict,
         "divergence_flagged": decision["divergence_flagged"],
         "horizon_calls": horizon_calls,
         "news_judge_present": bool(nj),
+        "engine": decision.get("engine", "legacy"),
+        "anchor_score": (decision.get("anchor") or {}).get("score"),
+        "overlay_score": decision.get("overlay_score"),
     })
     scoreboard.save(board)
 
@@ -173,7 +186,7 @@ def main() -> None:
             continue
 
         scores = compute_scores.parse_scores(text)
-        decision = compute_scores.compute(scores)
+        decision = compute_scores.compute(scores, ch1=ch1)
         decision = map_heat_decision_gate(date_str, decision)
         horizon_calls = compute_scores.parse_horizon_calls(scores)
         _write(path, date_str, text, decision, scores, ch1, horizon_calls)

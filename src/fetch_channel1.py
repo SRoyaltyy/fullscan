@@ -209,6 +209,56 @@ def fetch_futures() -> dict:
     return {"ES=F": _pct_block("ES=F"), "NQ=F": _pct_block("NQ=F")}
 
 
+def _premarket_pct(symbol: str, today: str) -> dict:
+    """Latest pre-market print (04:00–09:30 ET, today) vs the prior regular
+    close, from yfinance 5-minute bars with prepost=True."""
+    try:
+        import socket
+
+        import yfinance as yf
+        prev = socket.getdefaulttimeout()
+        socket.setdefaulttimeout(min(20, _YF_TIMEOUT))
+        try:
+            bars = yf.Ticker(symbol).history(period="5d", interval="5m", prepost=True)
+        finally:
+            socket.setdefaulttimeout(prev)
+    except Exception as e:  # noqa: BLE001
+        print(f"[ch1] premarket {symbol} failed: {e}")
+        return {"available": False}
+    if bars is None or len(bars) == 0:
+        return {"available": False}
+    tz = ZoneInfo(config.TZ)
+    prev_close, last_pm, last_ts = None, None, None
+    for idx, row in bars.iterrows():
+        c = float(row["Close"])
+        if c != c:
+            continue
+        ts = idx.tz_convert(tz) if getattr(idx, "tzinfo", None) else idx.tz_localize("UTC").tz_convert(tz)
+        d, hm = ts.date().isoformat(), ts.strftime("%H:%M")
+        if d < today and "09:30" <= hm < "16:00":
+            prev_close = c                      # last regular-session bar before today
+        elif d == today and hm < "09:30":
+            last_pm, last_ts = c, ts.isoformat()
+    if prev_close is None or last_pm is None:
+        return {"available": False, "prev_close": prev_close}
+    return {"available": True, "prev_close": round(prev_close, 2),
+            "last": round(last_pm, 2), "as_of": last_ts,
+            "pct_vs_prev_close": _pct(last_pm, prev_close)}
+
+
+def fetch_etf_premarket(date_str: str | None = None) -> dict:
+    """Own-ETF pre-market gap for the 11 sector ETFs — the sector engine's
+    most direct anchor (tape_anchor.ETF_PREMARKET_SHARE)."""
+    from .sector_taxonomy import SECTOR_ETFS
+    today = date_str or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
+    out = {}
+    for etf in sorted(set(SECTOR_ETFS.values())):
+        out[etf] = _premarket_pct(etf, today)
+    n = sum(1 for v in out.values() if v.get("available"))
+    print(f"[ch1] etf_premarket: {n}/{len(out)} ETFs had pre-market prints")
+    return out
+
+
 ASIA = {"^N225": "Nikkei", "^HSI": "Hang Seng", "000001.SS": "Shanghai",
         "^KS11": "Kospi", "^AXJO": "ASX200"}
 EUROPE = {"^FTSE": "FTSE", "^GDAXI": "DAX", "^FCHI": "CAC",
@@ -420,6 +470,10 @@ def build(stage: str, date_str: str | None = None,
         fg = take("fear_greed", fetch_fear_greed, {"available": False})
         corr = take("yield_spx_corr", fetch_yield_spx_corr, {"available": False})
         glob = take("global_sessions", fetch_global_sessions, {})
+        etf_pm = {}
+        if stage != "outcome":
+            etf_pm = take("etf_premarket",
+                          lambda: fetch_etf_premarket(date_str), {})
         if skip_news or not budget.ok():
             news = {"available": False, "count": 0, "items": [],
                     "skipped": "weather" if skip_news else "budget"}
@@ -435,6 +489,7 @@ def build(stage: str, date_str: str | None = None,
             "futures": futures,
             "finviz_futures_tape": tape,
             "global_sessions": glob,
+            "etf_premarket": etf_pm,
             "yield_spx_corr": corr,
             "fear_greed": fg,
             "fedwatch": {"available": False,
@@ -507,6 +562,13 @@ def to_markdown(data: dict) -> str:
         b = data["futures"].get(sym, {})
         lines.append(f"[{sym} premarket: {b.get('pct_1d')}% vs prev close]"
                      if b.get("available") else f"[{sym}: UNAVAILABLE]")
+    pm = data.get("etf_premarket") or {}
+    pm_have = {k: v for k, v in pm.items() if v.get("available")}
+    if pm_have:
+        det = ", ".join(f"{k} {v.get('pct_vs_prev_close'):+.2f}%"
+                        for k, v in sorted(pm_have.items())
+                        if v.get("pct_vs_prev_close") is not None)
+        lines.append(f"[SECTOR ETF premarket vs prev close: {det}]")
     gs = data["global_sessions"]
     for region in ("asia", "europe"):
         r = gs[region]

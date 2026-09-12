@@ -83,7 +83,16 @@ def _write_essay(path: str, sector: str, date_str: str, slug: str,
         fh.write(f"- total_score: **{decision['total_score']}** "
                  f"(mult {decision['multiplier']})\n")
         fh.write(f"- regime: {decision.get('regime')}\n")
-        fh.write(f"- divergence_flagged: **{decision['divergence_flagged']}**\n\n")
+        fh.write(f"- divergence_flagged: **{decision['divergence_flagged']}**\n")
+        if decision.get("engine") == "v2":
+            a = decision.get("anchor") or {}
+            legs = ", ".join(f"{l['leg']} {l['pct']:+.2f}%" for l in a.get("legs", []))
+            fh.write(f"- engine: v2 · tape_anchor **{a.get('score', 0.0)}** "
+                     f"({legs or 'unavailable'}) · index_carry "
+                     f"**{decision.get('index_carry')}** (general {decision.get('general_total')}) "
+                     f"· llm_overlay **{decision.get('overlay_score')}** "
+                     f"(raw {decision.get('overlay_raw')})\n")
+        fh.write("\n")
         fh.write("## Channel 1 sector ETF tape\n\n```\n"
                  + (etf_ctx or "") + "\n```\n\n")
         fh.write(text)
@@ -109,8 +118,30 @@ def _update_scoreboard(sector: str, date_str: str, slug: str,
         "sector": sector,
         "etf": SECTOR_ETFS.get(sector),
         "rubric": f"00_grounding/sectors/{slug}.md",
+        "engine": decision.get("engine", "legacy"),
+        "anchor_score": (decision.get("anchor") or {}).get("score"),
+        "overlay_score": decision.get("overlay_score"),
+        "index_carry": decision.get("index_carry"),
     })
     scoreboard.save(board)
+
+
+# Channel 1 dict for the v2 tape anchor; set once per process in main().
+_CTX: dict = {"ch1": None}
+
+
+def _general_total_today(date_str: str) -> float | None:
+    """Today's general v2 total from the scoreboard (the general predict runs
+    before the sector predicts). None when the general call is missing."""
+    try:
+        board = scoreboard.load()
+    except Exception:  # noqa: BLE001
+        return None
+    for r in board.get("runs", []):
+        if r.get("date") == date_str and r.get("topic", "general") == "general" \
+                and not r.get("sector"):
+            return r.get("total_score")
+    return None
 
 
 def run_one(sector: str, date_str: str, ch1_md: str,
@@ -187,7 +218,9 @@ def run_one(sector: str, date_str: str, ch1_md: str,
             )
             continue
         scores = compute_sector_scores.parse_scores(text)
-        decision = compute_sector_scores.compute(scores)
+        decision = compute_sector_scores.compute(
+            scores, sector=sector, etf=SECTOR_ETFS.get(sector),
+            ch1=_CTX.get("ch1"), general_total=_general_total_today(date_str))
         decision = map_heat_decision_gate(date_str, decision, sector=sector)
         horizon_calls = compute_scores.parse_horizon_calls(scores)
         _write_essay(path, sector, date_str, slug, etf_ctx or "", text, decision)
@@ -233,6 +266,7 @@ def main() -> None:
             "predict", date_str, budget_s=45, skip_news=True)
         fetch_channel1.save(ch1, date_str, "sector_predict")
         ch1_md = fetch_channel1.to_markdown(ch1)
+        _CTX["ch1"] = ch1
     except Exception as e:  # noqa: BLE001
         err = str(e)
         print(f"[sector-predict] Channel 1 build failed ({err})")
