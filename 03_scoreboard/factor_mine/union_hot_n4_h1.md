@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · top 4 by hot
 
-Cash book **+15.98%** ($11,598) · signal-only (no cash/fees) was +41.77%. Starts YES **10/21**. Fills 84 · skips 34 · realized $+1740.08.
+Cash book **+15.70%** ($11,570) · signal-only (no cash/fees) was +60.77%. Starts YES **10/21**. Fills 83 · skips 35 · realized $+1740.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -53,7 +53,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $0.48.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $2,902.09.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -153,9 +153,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-10 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-11 | `INDP` | 1087 | — | $2.70 | +0.00 | $2.77 | +76.09 | +76.09 | +0.00 | +76.09 |
-| 2026-09-11 | `BNC` | 597 | — | $4.91 | +0.00 | $4.80 | -65.67 | -65.67 | +0.00 | -65.67 |
 | 2026-09-11 | `IRD` | 476 | — | $6.16 | +0.00 | $6.04 | -57.12 | -57.12 | +0.00 | -57.12 |
-| 2026-09-11 | `GPRO` | 2062 | — | $1.40 | +0.00 | $1.38 | -41.24 | -41.24 | +0.00 | -41.24 |
+| 2026-09-11 | `CYPH` | 1228 | — | $2.39 | +0.00 | $2.27 | -153.50 | -153.50 | +0.00 | -153.50 |
 
 ## Each session (cash + holdings state)
 
@@ -181,7 +180,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | -11.47 | $3.90 | GPRO×1696, ASST×119, USDE×381, DFDV×519 | $11,776.45 | -408.17 | +0.00 | — | GPRO, ASST, USDE, DFDV | $11,740.07 | $11,740.07 | — |
 | 2026-09-09 | -13.95 | $11,740.07 | — | $11,740.07 | +0.00 | +0.00 | — | — | $11,740.07 | $11,740.07 | — |
 | 2026-09-10 | -13.28 | $11,740.07 | — | $11,740.07 | +0.00 | +0.00 | — | — | $11,740.07 | $11,740.07 | — |
-| 2026-09-11 | +0.50 | $11,740.07 | — | $11,740.07 | +0.00 | -87.94 | INDP, BNC, IRD, GPRO | — | $0.48 | $11,597.67 | INDP×1087, BNC×597, IRD×476, GPRO×2062 |
+| 2026-09-11 | +0.50 | $11,740.07 | — | $11,740.07 | +0.00 | -134.53 | INDP, IRD, CYPH | — | $2,902.09 | $11,569.54 | INDP×1087, IRD×476, CYPH×1228 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -308,11 +307,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,740.07 | ▲ 09:30 equity $11,740.07 vs yday $11,740.07 (+0.00) | 09:30 open · cash $11,740.07 · no holdings · equity $11,740.07 vs prior close $11,740.07 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,740.07 | ▲ close $11,740.07 vs 09:30 $11,740.07 (session +0.00) | 16:00 close · cash $11,740.07 · no lots left · equity $11,740.07. | — |
 | 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,740.07 | ▲ 09:30 equity $11,740.07 vs yday $11,740.07 (+0.00) | 09:30 open · cash $11,740.07 · no holdings · equity $11,740.07 vs prior close $11,740.07 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-11 09:30 ET | **BUY** | `INDP` | 1087 | $2.70 | $14.02 | — | $8,791.15 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+118.8; leftover $2935.02 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `BNC` | 597 | $4.91 | $7.70 | — | $5,852.18 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+69.9; leftover $2935.02 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `IRD` | 476 | $6.16 | $6.14 | — | $2,913.88 | — | top 4 by hot; rank hot_score; list yday_gainer; 🔵; ret5=+36.4; leftover $2935.02 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `GPRO` | 2062 | $1.40 | $26.60 | — | $0.48 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=-17.2; leftover $2935.02 | join🔴 sector🟢 gen🟡 news🟡 digest🟡 judge🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
-| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.48 | ▼ close $11,597.67 vs 09:30 $11,740.07 (session -87.94) | 16:00 close · cash $0.48 · equity $11,597.67 vs 09:30 $11,740.07 (-142.40; session marks -87.94) · 4 name(s) marked open→close (per-name table). INDP×1087 09:30 $2.70 → close $2.77 +76.09; BNC×597 09:30 $4.91 → close $4.80 -65.67; IRD×476 09:30 $6.16 → close $6.04 -57.12; GPRO×2062 09:30 $1.40 → close $1.38 -41.24 | — |
+| 2026-09-11 09:30 ET | **BUY** | `INDP` | 1087 | $2.70 | $14.02 | — | $8,791.15 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+61.6; leftover $2935.02 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `IRD` | 476 | $6.16 | $6.14 | — | $5,852.85 | — | top 4 by hot; rank hot_score; list yday_gainer; 🔵; ret5=+49.6; leftover $2935.02 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `CYPH` | 1228 | $2.39 | $15.84 | — | $2,902.09 | — | top 4 by hot; rank hot_score; list yday_mover; 🔵; ret5=+44.1; leftover $2935.02 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,902.09 | ▼ close $11,569.54 vs 09:30 $11,740.07 (session -134.53) | 16:00 close · cash $2,902.09 · equity $11,569.54 vs 09:30 $11,740.07 (-170.53; session marks -134.53) · 3 name(s) marked open→close (per-name table). INDP×1087 09:30 $2.70 → close $2.77 +76.09; IRD×476 09:30 $6.16 → close $6.04 -57.12; CYPH×1228 09:30 $2.39 → close $2.27 -153.50 | — |
 
 ## Not taken
 
@@ -350,14 +348,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `UROY` | hard_red | hard-red S=-13.95 sit; no new buys |
 | 2026-09-10 | `INDP` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `IRD` | hard_red | hard-red S=-13.28 sit; no new buys |
-| 2026-09-10 | `EQ` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `PAYP` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `CRWV` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-11 | `BNC` | no_price | no 09:30 open |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `INDP` | 1087 | 2026-09-11 @ $2.70 | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+118.8; leftover $2935.02 |
-| `BNC` | 597 | 2026-09-11 @ $4.91 | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+69.9; leftover $2935.02 |
-| `IRD` | 476 | 2026-09-11 @ $6.16 | top 4 by hot; rank hot_score; list yday_gainer; 🔵; ret5=+36.4; leftover $2935.02 |
-| `GPRO` | 2062 | 2026-09-11 @ $1.40 | top 4 by hot; rank hot_score; list ohlc_hot; ret5=-17.2; leftover $2935.02 |
+| `INDP` | 1087 | 2026-09-11 @ $2.70 | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+61.6; leftover $2935.02 |
+| `IRD` | 476 | 2026-09-11 @ $6.16 | top 4 by hot; rank hot_score; list yday_gainer; 🔵; ret5=+49.6; leftover $2935.02 |
+| `CYPH` | 1228 | 2026-09-11 @ $2.39 | top 4 by hot; rank hot_score; list yday_mover; 🔵; ret5=+44.1; leftover $2935.02 |

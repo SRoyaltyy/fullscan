@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · buy last-green, sell next 09:30 if last bar flipped red
 
-Cash book **+2.42%** ($10,242) · signal-only (no cash/fees) was +31.98%. Starts YES **6/21**. Fills 110 · skips 198 · realized $-3.17.
+Cash book **-0.19%** ($9,981) · signal-only (no cash/fees) was +98.28%. Starts YES **0/21**. Fills 103 · skips 205 · realized $-3.17.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $148.77.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,757.35.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -258,14 +258,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | `FCEL` | 43 | $16.57 | $16.07 | -21.50 | — | +0.00 | -21.50 | +66.65 | — |
 | 2026-09-10 | `MDB` | 1 | $358.38 | $360.42 | +2.04 | — | +0.00 | +2.04 | -17.92 | — |
 | 2026-09-10 | `ASST` | 25 | $26.69 | $26.06 | -15.75 | — | +0.00 | -15.75 | +22.00 | — |
-| 2026-09-11 | `SANM` | 6 | — | $206.84 | +0.00 | $216.00 | +54.96 | +54.96 | +0.00 | +54.96 |
-| 2026-09-11 | `NVT` | 7 | — | $157.78 | +0.00 | $162.38 | +32.20 | +32.20 | +0.00 | +32.20 |
-| 2026-09-11 | `COHU` | 22 | — | $56.09 | +0.00 | $57.08 | +21.78 | +21.78 | +0.00 | +21.78 |
-| 2026-09-11 | `CMRC` | 399 | — | $3.13 | +0.00 | $3.50 | +149.62 | +149.62 | +0.00 | +149.62 |
-| 2026-09-11 | `AMTX` | 612 | — | $2.04 | +0.00 | $2.01 | -18.36 | -18.36 | +0.00 | -18.36 |
-| 2026-09-11 | `CLOV` | 263 | — | $4.75 | +0.00 | $4.82 | +18.41 | +18.41 | +0.00 | +18.41 |
-| 2026-09-11 | `BAK` | 589 | — | $2.12 | +0.00 | $2.08 | -23.56 | -23.56 | +0.00 | -23.56 |
-| 2026-09-11 | `QRVO` | 11 | — | $112.83 | +0.00 | $116.65 | +41.97 | +41.97 | +0.00 | +41.97 |
+| 2026-09-11 | `AUPH` | 76 | — | $16.28 | +0.00 | $16.10 | -13.68 | -13.68 | +0.00 | -13.68 |
 
 ## Each session (cash + holdings state)
 
@@ -291,7 +284,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | -11.47 | $515.46 | VSTM×162, ARCT×77, SLN×87, CRDL×596, CRM×2, DELL×1, SLBT×200, TARS×7, BRR×251, FCEL×43, MDB×1, ASST×25 | $10,159.56 | -94.78 | +33.09 | — | — | $515.46 | $10,192.65 | VSTM×162, ARCT×77, SLN×87, CRDL×596, CRM×2, DELL×1, SLBT×200, TARS×7, BRR×251, FCEL×43, MDB×1, ASST×25 |
 | 2026-09-09 | -13.95 | $515.46 | VSTM×162, ARCT×77, SLN×87, CRDL×596, CRM×2, DELL×1, SLBT×200, TARS×7, BRR×251, FCEL×43, MDB×1, ASST×25 | $10,195.94 | +3.29 | -105.16 | — | VSTM, ARCT, SLN, CRDL | $5,494.99 | $10,075.95 | CRM×2, DELL×1, SLBT×200, TARS×7, BRR×251, FCEL×43, MDB×1, ASST×25 |
 | 2026-09-10 | -13.28 | $5,494.99 | CRM×2, DELL×1, SLBT×200, TARS×7, BRR×251, FCEL×43, MDB×1, ASST×25 | $10,015.07 | -60.88 | +0.00 | — | CRM, DELL, SLBT, TARS, BRR, FCEL, MDB, ASST | $9,996.85 | $9,996.85 | — |
-| 2026-09-11 | +0.50 | $9,996.85 | — | $9,996.85 | -0.00 | +277.02 | SANM, NVT, COHU, CMRC, AMTX, CLOV, BAK, QRVO | — | $148.77 | $10,241.74 | SANM×6, NVT×7, COHU×22, CMRC×399, AMTX×612, CLOV×263, BAK×589, QRVO×11 |
+| 2026-09-11 | +0.50 | $9,996.85 | — | $9,996.85 | -0.00 | -13.68 | AUPH | — | $8,757.35 | $9,980.95 | AUPH×76 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -403,7 +396,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-03 09:30 ET | **BUY** | `CABA` | 358 | $3.63 | $4.62 | — | $6,545.40 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten,ohlc_hot; 🔵; ⚪; ret5=+9.8; leftover $1301.34 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `VSTM` | 162 | $8.03 | $2.48 | — | $5,242.06 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+8.5; leftover $1301.34 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
 | 2026-09-03 09:30 ET | **BUY** | `RVTY` | 9 | $132.45 | $2.02 | — | $4,047.99 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten,mover_buy; 🔵; ⚪; ret5=+3.6; leftover $1301.34 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `ARCT` | 77 | $16.77 | $2.22 | — | $2,754.48 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+5.7; leftover $1301.34 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `ARCT` | 77 | $16.77 | $2.22 | — | $2,754.48 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer,yday_mover,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+5.7; leftover $1301.34 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `SLN` | 87 | $14.85 | $2.25 | — | $1,460.28 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer; 🔵; ⚪; ret5=+9.3; leftover $1301.34 | join🟢 sector🟡 gen🟡 news🔴 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `CRDL` | 596 | $2.18 | $7.69 | — | $153.31 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer,mover_buy; 🔵; ⚪; ret5=+1.4; leftover $1301.34 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $153.31 | ▼ close $10,154.63 vs 09:30 $10,410.72 (session -230.67) | 16:00 close · cash $153.31 · equity $10,154.63 vs 09:30 $10,410.72 (-256.09; session marks -230.67) · 8 name(s) marked open→close (per-name table). ATRC×24 09:30 $52.88 → close $52.46 -10.08; HRMY×30 09:30 $42.93 → close $41.86 -32.10; CABA×358 09:30 $3.63 → close $3.48 -53.70; VSTM×162 09:30 $8.03 → close $7.98 -8.10; RVTY×9 09:30 $132.45 → close $130.63 -16.38; ARCT×77 09:30 $16.77 → close $15.56 -93.17; SLN×87 09:30 $14.85 → close $14.79 -5.22; CRDL×596 09:30 $2.18 → close $2.16 -11.92 | — |
@@ -440,15 +433,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 09:30 ET | **SELL** | `ASST` | 25 | $26.06 | $2.08 | $+17.85 | $9,996.85 | ▲ +17.85 after sell → book $9,996.85; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,996.85 | ▲ close $9,996.85 vs 09:30 $10,015.07 (session +0.00) | 16:00 close · cash $9,996.85 · no lots left · equity $9,996.85. | — |
 | 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,996.85 | ▲ 09:30 equity $9,996.85 vs yday $9,996.85 (-0.00) | 09:30 open · cash $9,996.85 · no holdings · equity $9,996.85 vs prior close $9,996.85 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-11 09:30 ET | **BUY** | `SANM` | 6 | $206.84 | $2.01 | — | $8,753.80 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten; ret5=+4.4; leftover $1249.61 | join🟢 sector🟢 gen🟡 news🟡 digest🟡 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `NVT` | 7 | $157.78 | $2.01 | — | $7,647.33 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten; 🔵; ret5=+7.8; leftover $1249.61 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `COHU` | 22 | $56.09 | $2.06 | — | $6,411.29 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten; 🔵; ⚪; ret5=+15.3; leftover $1249.61 | join🟢 sector🟢 gen🟡 news🟡 digest🟡 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `CMRC` | 399 | $3.13 | $5.15 | — | $5,157.27 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer,yday_mover; ret5=+6.2; leftover $1249.61 | join🔴 sector🟢 gen🟡 news🟡 digest🟡 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `AMTX` | 612 | $2.04 | $7.89 | — | $3,900.90 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+6.8; leftover $1249.61 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `CLOV` | 263 | $4.75 | $3.39 | — | $2,648.26 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer; 🔵; ret5=+3.4; leftover $1249.61 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `BAK` | 589 | $2.12 | $7.60 | — | $1,391.98 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer,ohlc_hot; 🔵; ret5=+7.1; leftover $1249.61 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `QRVO` | 11 | $112.83 | $2.02 | — | $148.77 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer; 🔵; ret5=+8.3; leftover $1249.61 | join🟢 sector🟢 gen🟡 news🔴 digest🟡 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $148.77 | ▲ close $10,241.74 vs 09:30 $9,996.85 (session +277.02) | 16:00 close · cash $148.77 · equity $10,241.74 vs 09:30 $9,996.85 (+244.89; session marks +277.02) · 8 name(s) marked open→close (per-name table). SANM×6 09:30 $206.84 → close $216.00 +54.96; NVT×7 09:30 $157.78 → close $162.38 +32.20; COHU×22 09:30 $56.09 → close $57.08 +21.78; CMRC×399 09:30 $3.13 → close $3.50 +149.62; AMTX×612 09:30 $2.04 → close $2.01 -18.36; CLOV×263 09:30 $4.75 → close $4.82 +18.41; BAK×589 09:30 $2.12 → close $2.08 -23.56; QRVO×11 09:30 $112.83 → close $116.65 +41.97 | — |
+| 2026-09-11 09:30 ET | **BUY** | `AUPH` | 76 | $16.28 | $2.22 | — | $8,757.35 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten; 🔵; ret5=-0.2; leftover $1249.61 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,757.35 | ▼ close $9,980.95 vs 09:30 $9,996.85 (session -13.68) | 16:00 close · cash $8,757.35 · equity $9,980.95 vs 09:30 $9,996.85 (-15.90; session marks -13.68) · 1 name(s) marked open→close (per-name table). AUPH×76 09:30 $16.28 → close $16.10 -13.68 | — |
 
 ## Not taken
 
@@ -652,16 +638,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | `HELP` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `IRD` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `INDP` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-11 | `SANM` | no_price | no 09:30 open |
+| 2026-09-11 | `NVT` | no_price | no 09:30 open |
+| 2026-09-11 | `COHU` | no_price | no 09:30 open |
+| 2026-09-11 | `CMRC` | no_price | no 09:30 open |
+| 2026-09-11 | `CLOV` | no_price | no 09:30 open |
+| 2026-09-11 | `QRVO` | no_price | no 09:30 open |
+| 2026-09-11 | `APPS` | no_price | no 09:30 open |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `SANM` | 6 | 2026-09-11 @ $206.84 | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten; ret5=+4.4; leftover $1249.61 |
-| `NVT` | 7 | 2026-09-11 @ $157.78 | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten; 🔵; ret5=+7.8; leftover $1249.61 |
-| `COHU` | 22 | 2026-09-11 @ $56.09 | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten; 🔵; ⚪; ret5=+15.3; leftover $1249.61 |
-| `CMRC` | 399 | 2026-09-11 @ $3.13 | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer,yday_mover; ret5=+6.2; leftover $1249.61 |
-| `AMTX` | 612 | 2026-09-11 @ $2.04 | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+6.8; leftover $1249.61 |
-| `CLOV` | 263 | 2026-09-11 @ $4.75 | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer; 🔵; ret5=+3.4; leftover $1249.61 |
-| `BAK` | 589 | 2026-09-11 @ $2.12 | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer,ohlc_hot; 🔵; ret5=+7.1; leftover $1249.61 |
-| `QRVO` | 11 | 2026-09-11 @ $112.83 | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer; 🔵; ret5=+8.3; leftover $1249.61 |
+| `AUPH` | 76 | 2026-09-11 @ $16.28 | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten; 🔵; ret5=-0.2; leftover $1249.61 |

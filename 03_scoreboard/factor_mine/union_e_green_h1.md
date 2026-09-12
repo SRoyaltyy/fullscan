@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-26.62%** ($7,338) · signal-only (no cash/fees) was -22.19%. Starts YES **0/21**. Fills 96 · skips 13 · realized $-2662.20.
+Cash book **-28.05%** ($7,195) · signal-only (no cash/fees) was -26.14%. Starts YES **0/21**. Fills 97 · skips 13 · realized $-2662.20.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $7,337.81.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $0.38.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -168,7 +168,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | `MAMA` | 95 | $15.16 | $15.20 | +3.80 | — | +0.00 | +3.80 | -47.50 | — |
 | 2026-09-09 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-10 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-11 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-11 | `LPTH` | 782 | — | $9.37 | +0.00 | $9.20 | -132.94 | -132.94 | +0.00 | -132.94 |
 
 ## Each session (cash + holdings state)
 
@@ -194,7 +194,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | -11.47 | $215.81 | DOMO×415, GWRE×8, IOT×33, LULU×15, MAMA×95 | $7,351.75 | -49.57 | +0.00 | — | DOMO, GWRE, IOT, LULU, MAMA | $7,337.81 | $7,337.81 | — |
 | 2026-09-09 | -13.95 | $7,337.81 | — | $7,337.81 | -0.00 | +0.00 | — | — | $7,337.81 | $7,337.81 | — |
 | 2026-09-10 | -13.28 | $7,337.81 | — | $7,337.81 | -0.00 | +0.00 | — | — | $7,337.81 | $7,337.81 | — |
-| 2026-09-11 | +0.50 | $7,337.81 | — | $7,337.81 | -0.00 | +0.00 | — | — | $7,337.81 | $7,337.81 | — |
+| 2026-09-11 | +0.50 | $7,337.81 | — | $7,337.81 | -0.00 | -132.94 | LPTH | — | $0.38 | $7,194.78 | LPTH×782 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -337,7 +337,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,337.81 | ▲ 09:30 equity $7,337.81 vs yday $7,337.81 (-0.00) | 09:30 open · cash $7,337.81 · no holdings · equity $7,337.81 vs prior close $7,337.81 (-0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,337.81 | ▲ close $7,337.81 vs 09:30 $7,337.81 (session +0.00) | 16:00 close · cash $7,337.81 · no lots left · equity $7,337.81. | — |
 | 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,337.81 | ▲ 09:30 equity $7,337.81 vs yday $7,337.81 (-0.00) | 09:30 open · cash $7,337.81 · no holdings · equity $7,337.81 vs prior close $7,337.81 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,337.81 | ▲ close $7,337.81 vs 09:30 $7,337.81 (session +0.00) | 16:00 close · cash $7,337.81 · no lots left · equity $7,337.81. | — |
+| 2026-09-11 09:30 ET | **BUY** | `LPTH` | 782 | $9.37 | $10.09 | — | $0.38 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+6.9; leftover $7337.81 | join🔴 sector🟢 gen🟡 news🟡 digest🟡 judge🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.38 | ▼ close $7,194.78 vs 09:30 $7,337.81 (session -132.94) | 16:00 close · cash $0.38 · equity $7,194.78 vs 09:30 $7,337.81 (-143.03; session marks -132.94) · 1 name(s) marked open→close (per-name table). LPTH×782 09:30 $9.37 → close $9.20 -132.94 | — |
 
 ## Not taken
 
@@ -356,3 +357,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | `UNFI` | hard_red | hard-red S=-11.47 sit; no new buys |
 | 2026-09-09 | `AVO` | hard_red | hard-red S=-13.95 sit; no new buys |
 | 2026-09-10 | `AVAV` | hard_red | hard-red S=-13.28 sit; no new buys |
+
+## Still open (marked at last close)
+
+| Ticker | Shares | Entry | Why |
+|---|---:|---|---|
+| `LPTH` | 782 | 2026-09-11 @ $9.37 | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+6.9; leftover $7337.81 |

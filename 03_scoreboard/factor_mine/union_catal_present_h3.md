@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ catal_present, no 🚨
 
-Cash book **-2.73%** ($9,727) · signal-only (no cash/fees) was -0.32%. Starts YES **0/21**. Fills 5 · skips 6 · realized $-245.73.
+Cash book **-2.46%** ($9,754) · signal-only (no cash/fees) was -0.14%. Starts YES **0/21**. Fills 4 · skips 7 · realized $-245.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $6.75.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,754.28.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -88,7 +88,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `CF` | 36 | $134.33 | $137.88 | +127.80 | — | +0.00 | +127.80 | -25.92 | — |
 | 2026-09-09 | `CTVA` | 55 | $85.90 | $86.40 | +27.50 | — | +0.00 | +27.50 | -211.20 | — |
 | 2026-09-10 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-11 | `FUBO` | 843 | — | $11.55 | +0.00 | $11.53 | -16.86 | -16.86 | +0.00 | -16.86 |
+| 2026-09-11 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -114,7 +114,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | -11.47 | $42.95 | CF×36, CTVA×55 | $9,722.86 | +47.01 | -119.53 | — | — | $42.95 | $9,603.33 | CF×36, CTVA×55 |
 | 2026-09-09 | -13.95 | $42.95 | CF×36, CTVA×55 | $9,758.63 | +155.30 | +0.00 | — | CF, CTVA | $9,754.28 | $9,754.28 | — |
 | 2026-09-10 | -13.28 | $9,754.28 | — | $9,754.28 | -0.00 | +0.00 | — | — | $9,754.28 | $9,754.28 | — |
-| 2026-09-11 | +0.50 | $9,754.28 | — | $9,754.28 | -0.00 | -16.86 | FUBO | — | $6.75 | $9,726.54 | FUBO×843 |
+| 2026-09-11 | +0.50 | $9,754.28 | — | $9,754.28 | -0.00 | +0.00 | — | — | $9,754.28 | $9,754.28 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -165,8 +165,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,754.28 | ▲ 09:30 equity $9,754.28 vs yday $9,754.28 (-0.00) | 09:30 open · cash $9,754.28 · no holdings · equity $9,754.28 vs prior close $9,754.28 (-0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,754.28 | ▲ close $9,754.28 vs 09:30 $9,754.28 (session +0.00) | 16:00 close · cash $9,754.28 · no lots left · equity $9,754.28. | — |
 | 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,754.28 | ▲ 09:30 equity $9,754.28 vs yday $9,754.28 (-0.00) | 09:30 open · cash $9,754.28 · no holdings · equity $9,754.28 vs prior close $9,754.28 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-11 09:30 ET | **BUY** | `FUBO` | 843 | $11.55 | $10.87 | — | $6.75 | — | union ∩ catal_present, no 🚨; gate catal_present=True; list yday_gainer; ret5=+6.6; leftover $9754.28 | join🔴 sector🟢 gen🟡 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 catal🟡 buy🟡 |
-| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.75 | ▼ close $9,726.54 vs 09:30 $9,754.28 (session -16.86) | 16:00 close · cash $6.75 · equity $9,726.54 vs 09:30 $9,754.28 (-27.74; session marks -16.86) · 1 name(s) marked open→close (per-name table). FUBO×843 09:30 $11.55 → close $11.53 -16.86 | — |
+| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,754.28 | ▲ close $9,754.28 vs 09:30 $9,754.28 (session +0.00) | 16:00 close · cash $9,754.28 · no lots left · equity $9,754.28. | — |
 
 ## Not taken
 
@@ -178,9 +177,4 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 | `CTVA` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-08 | `CF` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-08 | `CTVA` | min_hold | dropped but min-hold 2/3 sess — no sell |
-
-## Still open (marked at last close)
-
-| Ticker | Shares | Entry | Why |
-|---|---:|---|---|
-| `FUBO` | 843 | 2026-09-11 @ $11.55 | union ∩ catal_present, no 🚨; gate catal_present=True; list yday_gainer; ret5=+6.6; leftover $9754.28 |
+| 2026-09-11 | `FUBO` | no_price | no 09:30 open |

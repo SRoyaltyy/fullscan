@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_join_vol_green_h1 w=0.3,0.7 net=priority
 
-Cash book **+23.68%** ($12,368) · signal-only (no cash/fees) was —. Starts YES **21/21**. Fills 193 · skips 104 · realized $+2359.07.
+Cash book **+22.38%** ($12,238) · signal-only (no cash/fees) was —. Starts YES **17/21**. Fills 187 · skips 108 · realized $+2359.07.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $7,821.95.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,469.68.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -316,16 +316,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | `GSM` | 555 | $4.49 | $4.36 | +72.15 | — | +0.00 | +72.15 | +172.05 | — |
 | 2026-09-10 | `PIPR` | 33 | $76.96 | $76.79 | +5.61 | — | +0.00 | +5.61 | -7.92 | — |
 | 2026-09-11 | `INDP` | 457 | — | $2.70 | +0.00 | $2.77 | +31.99 | +31.99 | +0.00 | +31.99 |
-| 2026-09-11 | `SWKS` | 14 | — | $84.27 | +0.00 | $88.35 | +57.12 | +57.12 | +0.00 | +57.12 |
 | 2026-09-11 | `IRD` | 200 | — | $6.16 | +0.00 | $6.04 | -24.00 | -24.00 | +0.00 | -24.00 |
-| 2026-09-11 | `NAUT` | 1235 | — | $1.00 | +0.00 | $1.02 | +24.70 | +24.70 | +0.00 | +24.70 |
-| 2026-09-11 | `VRT` | 4 | — | $252.50 | +0.00 | $257.06 | +18.24 | +18.24 | +0.00 | +18.24 |
-| 2026-09-11 | `HAFN` | 132 | — | $9.32 | +0.00 | $9.38 | +7.92 | +7.92 | +0.00 | +7.92 |
-| 2026-09-11 | `CIG` | 554 | — | $2.23 | +0.00 | $2.20 | -16.62 | -16.62 | +0.00 | -16.62 |
-| 2026-09-11 | `QRVO` | 8 | — | $112.83 | +0.00 | $116.65 | -30.52 | -30.52 | -0.00 | -30.52 |
-| 2026-09-11 | `MYGN` | 294 | — | $3.37 | +0.00 | $3.42 | -14.70 | -14.70 | -0.00 | -14.70 |
-| 2026-09-11 | `RWT` | 281 | — | $3.52 | +0.00 | $3.55 | -8.43 | -8.43 | -0.00 | -8.43 |
-| 2026-09-11 | `CRDL` | 488 | — | $2.03 | +0.00 | $2.00 | +17.08 | +17.08 | -0.00 | +17.08 |
+| 2026-09-11 | `CYPH` | 517 | — | $2.39 | +0.00 | $2.27 | -64.62 | -64.62 | +0.00 | -64.62 |
+| 2026-09-11 | `SEDG` | 33 | — | $36.78 | +0.00 | $34.68 | -69.30 | -69.30 | +0.00 | -69.30 |
+| 2026-09-11 | `CRDL` | 1013 | — | $2.03 | +0.00 | $2.00 | +35.45 | +35.45 | -0.00 | +35.45 |
 
 ## Each session (cash + holdings state)
 
@@ -351,7 +345,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | -11.47 | $10,300.55 | SLN×125, OPK×1089, DELL×2, TARS×16, BRR×537, MDB×3, ASST×53, DFDV×233, TDS×36, AHCO×213, GSM×555, PIPR×33 | $12,062.09 | -80.36 | +216.86 | — | DELL, TARS, BRR, MDB, ASST, DFDV, TDS, AHCO | $20,759.27 | $12,255.69 | SLN×125, OPK×1089, GSM×555, PIPR×33 |
 | 2026-09-09 | -13.95 | $20,759.27 | SLN×125, OPK×1089, GSM×555, PIPR×33 | $12,281.13 | +25.44 | +25.89 | — | SLN, OPK | $17,322.23 | $12,290.60 | GSM×555, PIPR×33 |
 | 2026-09-10 | -13.28 | $17,322.23 | GSM×555, PIPR×33 | $12,368.36 | +77.76 | +0.00 | — | GSM, PIPR | $12,359.12 | $12,359.12 | — |
-| 2026-09-11 | +0.50 | $12,359.12 | — | $12,359.12 | -0.00 | +62.78 | INDP, SWKS, IRD, NAUT, VRT, HAFN, CIG, QRVO, MYGN, RWT, CRDL | — | $7,821.95 | $12,367.85 | INDP×457, SWKS×14, IRD×200, NAUT×1235, VRT×4, HAFN×132, CIG×554, QRVO×8, MYGN×294, RWT×281, CRDL×488 |
+| 2026-09-11 | +0.50 | $12,359.12 | — | $12,359.12 | -0.00 | -90.48 | INDP, IRD, CYPH, SEDG, CRDL | — | $9,469.68 | $12,238.08 | INDP×457, IRD×200, CYPH×517, SEDG×33, CRDL×1013 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -531,7 +525,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,823.65 | ▲ close $11,823.65 vs 09:30 $11,827.89 (session +0.00) | 16:00 close · cash $11,823.65 · no lots left · equity $11,823.65. | — |
 | 2026-09-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,823.65 | ▲ 09:30 equity $11,823.65 vs yday $11,823.65 (+0.00) | 09:30 open · cash $11,823.65 (unchanged overnight, no fees) · equity $11,823.65 vs prior close $11,823.65 (+0.00) | — |
 | 2026-09-03 09:30 ET | **BUY** | `RVTY` | 7 | $132.45 | $2.01 | — | $10,894.49 | — | combo gate; gate join=good,vol=good,last_green=True; list flatten,mover_buy; 🔵; ⚪; ret5=+3.6; combo leftover $1034.57; owner union_join_vol_green_h1 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `ARCT` | 61 | $16.77 | $2.17 | — | $9,869.35 | — | combo gate; gate join=good,vol=good,last_green=True; list probable,yday_gainer,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+5.7; combo leftover $1034.57; owner union_join_vol_green_h1 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `ARCT` | 61 | $16.77 | $2.17 | — | $9,869.35 | — | combo gate; gate join=good,vol=good,last_green=True; list probable,yday_gainer,yday_mover,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+5.7; combo leftover $1034.57; owner union_join_vol_green_h1 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `CRDL` | 474 | $2.18 | $6.11 | — | $8,829.91 | — | combo gate; gate join=good,vol=good,last_green=True; list probable,yday_gainer,mover_buy; 🔵; ⚪; ret5=+1.4; combo leftover $1034.57; owner union_join_vol_green_h1 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `MMED` | 43 | $23.88 | $2.12 | — | $7,800.95 | — | combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+21.9; combo leftover $1034.57; owner union_join_vol_green_h1 | join🟢 sector🟡 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `NVAX` | 99 | $10.42 | $2.29 | — | $6,767.09 | — | combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+12.1; combo leftover $1034.57; owner union_join_vol_green_h1 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
@@ -580,18 +574,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 09:30 ET | **COVER** | `PIPR` | 33 | $76.79 | $2.09 | $-12.20 | $12,359.12 | ▼ -12.20 after sell → book $12,359.12; vs 09:30 mark -2.08 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
 | 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,359.12 | ▲ close $12,359.12 vs 09:30 $12,368.36 (session +0.00) | 16:00 close · cash $12,359.12 · no lots left · equity $12,359.12. | — |
 | 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,359.12 | ▲ 09:30 equity $12,359.12 vs yday $12,359.12 (-0.00) | 09:30 open · cash $12,359.12 (unchanged overnight, no fees) · equity $12,359.12 vs prior close $12,359.12 (-0.00) | — |
-| 2026-09-11 09:30 ET | **BUY** | `INDP` | 457 | $2.70 | $5.90 | — | $11,119.32 | — | combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ret5=+118.8; combo leftover $1235.91; owner union_join_vol_green_h1 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `SWKS` | 14 | $84.27 | $2.03 | — | $9,937.51 | — | combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,ohlc_hot; ⚪; ret5=+12.5; combo leftover $1235.91; owner union_join_vol_green_h1 | join🟢 sector🟢 gen🟡 news🟡 digest🟡 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `IRD` | 200 | $6.16 | $2.59 | — | $8,702.92 | — | combo gate; gate join=good,vol=good,last_green=True; list yday_gainer; 🔵; ret5=+36.4; combo leftover $1235.91; owner union_join_vol_green_h1 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `NAUT` | 1235 | $1.00 | $15.93 | — | $7,451.99 | — | combo gate; gate join=good,vol=good,last_green=True; list yday_mover; 🔵; ret5=-4.5; combo leftover $1235.91; owner union_join_vol_green_h1 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `VRT` | 4 | $252.50 | $2.00 | — | $6,439.99 | — | combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; ret5=+12.4; combo leftover $1235.91; owner union_join_vol_green_h1 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `HAFN` | 132 | $9.32 | $2.39 | — | $5,207.36 | — | combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; ret5=+5.4; combo leftover $1235.91; owner union_join_vol_green_h1 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `CIG` | 554 | $2.23 | $7.15 | — | $3,964.79 | — | combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; ret5=+10.9; combo leftover $1235.91; owner union_join_vol_green_h1 | join🟢 sector🔴 gen🟡 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-11 09:30 ET | **SHORT** | `QRVO` | 8 | $112.83 | $2.06 | — | $4,865.41 | — | news🔴; gate news=bad; list probable,yday_gainer; 🔵; ret5=+8.3; combo leftover $991.20; owner short_news_r_h3 | join🟢 sector🟢 gen🟡 news🔴 digest🟡 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-11 09:30 ET | **SHORT** | `MYGN` | 294 | $3.37 | $3.88 | — | $5,852.32 | — | news🔴; gate news=bad; list yday_gainer; 🔵; ret5=-1.2; combo leftover $991.20; owner short_news_r_h3 | join🔴 sector🟡 gen🟡 news🔴 digest🔴 judge🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-11 09:30 ET | **SHORT** | `RWT` | 281 | $3.52 | $3.71 | — | $6,837.73 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-4.5; combo leftover $991.20; owner short_news_r_h3 | join🔴 sector🔴 gen🟡 news🔴 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
-| 2026-09-11 09:30 ET | **SHORT** | `CRDL` | 488 | $2.03 | $6.41 | — | $7,821.95 | — | news🔴; gate news=bad; list yday_mover; ret5=-8.8; combo leftover $991.20; owner short_news_r_h3 | join🟢 sector🟡 gen🟡 news🔴 digest🔴 judge🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
-| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,821.95 | ▲ close $12,367.85 vs 09:30 $12,359.12 (session +62.78) | 16:00 close · cash $7,821.95 · equity $12,367.85 vs 09:30 $12,359.12 (+8.73; session marks +62.78) · 11 name(s) marked open→close (per-name table). INDP×457 09:30 $2.70 → close $2.77 +31.99; SWKS×14 09:30 $84.27 → close $88.35 +57.12; IRD×200 09:30 $6.16 → close $6.04 -24.00; NAUT×1235 09:30 $1.00 → close $1.02 +24.70; VRT×4 09:30 $252.50 → close $257.06 +18.24; HAFN×132 09:30 $9.32 → close $9.38 +7.92; CIG×554 09:30 $2.23 → close $2.20 -16.62; QRVO×8 09:30 $112.83 → close $116.65 -30.52; MYGN×294 09:30 $3.37 → close $3.42 -14.70; RWT×281 09:30 $3.52 → close $3.55 -8.43; CRDL×488 09:30 $2.03 → close $2.00 +17.08 | — |
+| 2026-09-11 09:30 ET | **BUY** | `INDP` | 457 | $2.70 | $5.90 | — | $11,119.32 | — | combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ret5=+61.6; combo leftover $1235.91; owner union_join_vol_green_h1 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `IRD` | 200 | $6.16 | $2.59 | — | $9,884.73 | — | combo gate; gate join=good,vol=good,last_green=True; list yday_gainer; 🔵; ret5=+49.6; combo leftover $1235.91; owner union_join_vol_green_h1 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `CYPH` | 517 | $2.39 | $6.67 | — | $8,642.43 | — | combo gate; gate join=good,vol=good,last_green=True; list yday_mover; 🔵; ret5=+44.1; combo leftover $1235.91; owner union_join_vol_green_h1 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `SEDG` | 33 | $36.78 | $2.09 | — | $7,426.60 | — | combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; 🔵; ⚪; ret5=+13.1; combo leftover $1235.91; owner union_join_vol_green_h1 | join🟢 sector🟢 gen🟡 news🟡 digest🟡 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **SHORT** | `CRDL` | 1013 | $2.03 | $13.31 | — | $9,469.68 | — | news🔴; gate news=bad; list yday_mover; ret5=+6.3; combo leftover $2056.98; owner short_news_r_h3 | join🟢 sector🟡 gen🟡 news🔴 digest🔴 judge🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,469.68 | ▼ close $12,238.08 vs 09:30 $12,359.12 (session -90.48) | 16:00 close · cash $9,469.68 · equity $12,238.08 vs 09:30 $12,359.12 (-121.04; session marks -90.48) · 5 name(s) marked open→close (per-name table). INDP×457 09:30 $2.70 → close $2.77 +31.99; IRD×200 09:30 $6.16 → close $6.04 -24.00; CYPH×517 09:30 $2.39 → close $2.27 -64.62; SEDG×33 09:30 $36.78 → close $34.68 -69.30; CRDL×1013 09:30 $2.03 → close $2.00 +35.45 | — |
 
 ## Not taken
 
@@ -699,21 +687,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | `AMBA` | hard_red | hard-red S=-13.28 sit; no new union_join_vol_green_h1 |
 | 2026-09-10 | `CMPS` | hard_red | hard-red S=-13.28 sit; no new union_join_vol_green_h1 |
 | 2026-09-10 | `AMBQ` | hard_red | hard-red S=-13.28 sit; no new union_join_vol_green_h1 |
-| 2026-09-10 | `EQ` | hard_red | hard-red S=-13.28 sit; no new union_join_vol_green_h1 |
 | 2026-09-10 | `UROY` | hard_red | hard-red S=-13.28 sit; no new union_join_vol_green_h1 |
+| 2026-09-11 | `SWKS` | no_price | no 09:30 open |
+| 2026-09-11 | `NAUT` | no_price | no 09:30 open |
+| 2026-09-11 | `VRT` | no_price | no 09:30 open |
+| 2026-09-11 | `QRVO` | no_price | no 09:30 open |
+| 2026-09-11 | `RWT` | no_price | no 09:30 open |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `INDP` | 457 | 2026-09-11 @ $2.70 | combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ret5=+118.8; combo leftover $1235.91; owner union_join_vol_green_h1 |
-| `SWKS` | 14 | 2026-09-11 @ $84.27 | combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,ohlc_hot; ⚪; ret5=+12.5; combo leftover $1235.91; owner union_join_vol_green_h1 |
-| `IRD` | 200 | 2026-09-11 @ $6.16 | combo gate; gate join=good,vol=good,last_green=True; list yday_gainer; 🔵; ret5=+36.4; combo leftover $1235.91; owner union_join_vol_green_h1 |
-| `NAUT` | 1235 | 2026-09-11 @ $1.00 | combo gate; gate join=good,vol=good,last_green=True; list yday_mover; 🔵; ret5=-4.5; combo leftover $1235.91; owner union_join_vol_green_h1 |
-| `VRT` | 4 | 2026-09-11 @ $252.50 | combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; ret5=+12.4; combo leftover $1235.91; owner union_join_vol_green_h1 |
-| `HAFN` | 132 | 2026-09-11 @ $9.32 | combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; ret5=+5.4; combo leftover $1235.91; owner union_join_vol_green_h1 |
-| `CIG` | 554 | 2026-09-11 @ $2.23 | combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; ret5=+10.9; combo leftover $1235.91; owner union_join_vol_green_h1 |
-| `QRVO` | 8 | 2026-09-11 @ $112.83 | news🔴; gate news=bad; list probable,yday_gainer; 🔵; ret5=+8.3; combo leftover $991.20; owner short_news_r_h3 |
-| `MYGN` | 294 | 2026-09-11 @ $3.37 | news🔴; gate news=bad; list yday_gainer; 🔵; ret5=-1.2; combo leftover $991.20; owner short_news_r_h3 |
-| `RWT` | 281 | 2026-09-11 @ $3.52 | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-4.5; combo leftover $991.20; owner short_news_r_h3 |
-| `CRDL` | 488 | 2026-09-11 @ $2.03 | news🔴; gate news=bad; list yday_mover; ret5=-8.8; combo leftover $991.20; owner short_news_r_h3 |
+| `INDP` | 457 | 2026-09-11 @ $2.70 | combo gate; gate join=good,vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ret5=+61.6; combo leftover $1235.91; owner union_join_vol_green_h1 |
+| `IRD` | 200 | 2026-09-11 @ $6.16 | combo gate; gate join=good,vol=good,last_green=True; list yday_gainer; 🔵; ret5=+49.6; combo leftover $1235.91; owner union_join_vol_green_h1 |
+| `CYPH` | 517 | 2026-09-11 @ $2.39 | combo gate; gate join=good,vol=good,last_green=True; list yday_mover; 🔵; ret5=+44.1; combo leftover $1235.91; owner union_join_vol_green_h1 |
+| `SEDG` | 33 | 2026-09-11 @ $36.78 | combo gate; gate join=good,vol=good,last_green=True; list ohlc_hot; 🔵; ⚪; ret5=+13.1; combo leftover $1235.91; owner union_join_vol_green_h1 |
+| `CRDL` | 1013 | 2026-09-11 @ $2.03 | news🔴; gate news=bad; list yday_mover; ret5=+6.3; combo leftover $2056.98; owner short_news_r_h3 |

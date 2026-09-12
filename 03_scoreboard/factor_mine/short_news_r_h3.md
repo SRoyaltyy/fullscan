@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · news🔴
 
-Cash book **+15.06%** ($11,506) · signal-only (no cash/fees) was +22.45%. Starts YES **17/21**. Fills 72 · skips 80 · realized $+1583.28.
+Cash book **+16.04%** ($11,604) · signal-only (no cash/fees) was +18.42%. Starts YES **21/21**. Fills 69 · skips 82 · realized $+1583.28.
 
 ## How this sleeve decides (like you are 10)
 
@@ -52,7 +52,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $17,254.59.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $13,501.29.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -200,10 +200,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `PIPR` | 36 | $77.34 | $77.24 | +3.60 | $76.96 | +10.08 | +13.68 | -24.84 | -14.76 |
 | 2026-09-10 | `GSM` | 601 | $4.49 | $4.36 | +78.13 | — | +0.00 | +78.13 | +186.31 | — |
 | 2026-09-10 | `PIPR` | 36 | $76.96 | $76.79 | +6.12 | — | +0.00 | +6.12 | -8.64 | — |
-| 2026-09-11 | `QRVO` | 12 | — | $112.83 | +0.00 | $116.65 | -45.78 | -45.78 | -0.00 | -45.78 |
-| 2026-09-11 | `MYGN` | 429 | — | $3.37 | +0.00 | $3.42 | -21.45 | -21.45 | -0.00 | -21.45 |
-| 2026-09-11 | `RWT` | 411 | — | $3.52 | +0.00 | $3.55 | -12.33 | -12.33 | -0.00 | -12.33 |
-| 2026-09-11 | `CRDL` | 713 | — | $2.03 | +0.00 | $2.00 | +24.95 | +24.95 | -0.00 | +24.95 |
+| 2026-09-11 | `CRDL` | 951 | — | $2.03 | +0.00 | $2.00 | +33.28 | +33.28 | -0.00 | +33.28 |
 
 ## Each session (cash + holdings state)
 
@@ -229,7 +226,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | -11.47 | $22,064.21 | SLN×185, OPK×1612, GSM×601, PIPR×36 | $11,188.46 | +47.19 | +279.26 | — | — | $22,064.21 | $11,467.72 | SLN×185, OPK×1612, GSM×601, PIPR×36 |
 | 2026-09-09 | -13.95 | $22,064.21 | SLN×185, OPK×1612, GSM×601, PIPR×36 | $11,504.09 | +36.37 | +28.11 | — | SLN, OPK | $16,977.91 | $11,508.86 | GSM×601, PIPR×36 |
 | 2026-09-10 | -13.28 | $16,977.91 | GSM×601, PIPR×36 | $11,593.11 | +84.25 | +0.00 | — | GSM, PIPR | $11,583.26 | $11,583.26 | — |
-| 2026-09-11 | +0.50 | $11,583.26 | — | $11,583.26 | -0.00 | -54.61 | QRVO, MYGN, RWT, CRDL | — | $17,254.59 | $11,506.12 | QRVO×12, MYGN×429, RWT×411, CRDL×713 |
+| 2026-09-11 | +0.50 | $11,583.26 | — | $11,583.26 | -0.00 | +33.28 | CRDL | — | $13,501.29 | $11,604.05 | CRDL×951 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -344,11 +341,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 09:30 ET | **COVER** | `PIPR` | 36 | $76.79 | $2.10 | $-12.94 | $11,583.26 | ▼ -12.94 after sell → book $11,583.26; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,583.26 | ▲ close $11,583.26 vs 09:30 $11,593.11 (session +0.00) | 16:00 close · cash $11,583.26 · no lots left · equity $11,583.26. | — |
 | 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,583.26 | ▲ 09:30 equity $11,583.26 vs yday $11,583.26 (-0.00) | 09:30 open · cash $11,583.26 · no holdings · equity $11,583.26 vs prior close $11,583.26 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-11 09:30 ET | **SHORT** | `QRVO` | 12 | $112.83 | $2.08 | — | $12,935.19 | — | news🔴; gate news=bad; list probable,yday_gainer; 🔵; ret5=+8.3; leftover $1447.91 | join🟢 sector🟢 gen🟡 news🔴 digest🟡 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-11 09:30 ET | **SHORT** | `MYGN` | 429 | $3.37 | $5.66 | — | $14,375.27 | — | news🔴; gate news=bad; list yday_gainer; 🔵; ret5=-1.2; leftover $1447.91 | join🔴 sector🟡 gen🟡 news🔴 digest🔴 judge🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-11 09:30 ET | **SHORT** | `RWT` | 411 | $3.52 | $5.42 | — | $15,816.57 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-4.5; leftover $1447.91 | join🔴 sector🔴 gen🟡 news🔴 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
-| 2026-09-11 09:30 ET | **SHORT** | `CRDL` | 713 | $2.03 | $9.37 | — | $17,254.59 | — | news🔴; gate news=bad; list yday_mover; ret5=-8.8; leftover $1447.91 | join🟢 sector🟡 gen🟡 news🔴 digest🔴 judge🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
-| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17,254.59 | ▼ close $11,506.12 vs 09:30 $11,583.26 (session -54.61) | 16:00 close · cash $17,254.59 · equity $11,506.12 vs 09:30 $11,583.26 (-77.14; session marks -54.61) · 4 name(s) marked open→close (per-name table). QRVO×12 09:30 $112.83 → close $116.65 -45.78; MYGN×429 09:30 $3.37 → close $3.42 -21.45; RWT×411 09:30 $3.52 → close $3.55 -12.33; CRDL×713 09:30 $2.03 → close $2.00 +24.95 | — |
+| 2026-09-11 09:30 ET | **SHORT** | `CRDL` | 951 | $2.03 | $12.49 | — | $13,501.29 | — | news🔴; gate news=bad; list yday_mover; ret5=+6.3; leftover $1930.54 | join🟢 sector🟡 gen🟡 news🔴 digest🔴 judge🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,501.29 | ▲ close $11,604.05 vs 09:30 $11,583.26 (session +33.28) | 16:00 close · cash $13,501.29 · equity $11,604.05 vs 09:30 $11,583.26 (+20.79; session marks +33.28) · 1 name(s) marked open→close (per-name table). CRDL×951 09:30 $2.03 → close $2.00 +33.28 | — |
 
 ## Not taken
 
@@ -434,12 +428,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `PIPR` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-09 | `NVS` | hard_red | hard-red S=-13.95 sit; no new buys |
 | 2026-09-10 | `LBRT` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-11 | `QRVO` | no_price | no 09:30 open |
+| 2026-09-11 | `RWT` | no_price | no 09:30 open |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `QRVO` | 12 | 2026-09-11 @ $112.83 | news🔴; gate news=bad; list probable,yday_gainer; 🔵; ret5=+8.3; leftover $1447.91 |
-| `MYGN` | 429 | 2026-09-11 @ $3.37 | news🔴; gate news=bad; list yday_gainer; 🔵; ret5=-1.2; leftover $1447.91 |
-| `RWT` | 411 | 2026-09-11 @ $3.52 | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-4.5; leftover $1447.91 |
-| `CRDL` | 713 | 2026-09-11 @ $2.03 | news🔴; gate news=bad; list yday_mover; ret5=-8.8; leftover $1447.91 |
+| `CRDL` | 951 | 2026-09-11 @ $2.03 | news🔴; gate news=bad; list yday_mover; ret5=+6.3; leftover $1930.54 |
