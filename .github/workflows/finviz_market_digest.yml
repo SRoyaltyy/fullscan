@@ -1,17 +1,30 @@
 name: Finviz homepage market digest
 
-# Capture-only homepage market-day prose (NOT quote-page ticker blurbs).
-# Theme Radar: write only when Generated is before 09:30 ET. Miss morning
-# → leave missing. Do not land an afternoon scrape.
-# Primary weekday path is finviz_preopen_scrape.yml (cron 09:40 UTC = 05:40 ET).
-# This file is a last-chance weekday slot (~08:00 ET) plus dispatch / backfill.
-# Do not run live HTML on ECS (403). Not wired into tape_anchor / predict / #210.
+# Capture-only homepage $MARKET prose (NOT quote-page ticker blurbs).
+#
+# Two files per NYSE session — they coexist; close never clobbers morning:
+#   (1) Pre-09:30 same_morning warm-up
+#       01_daily/news/<date>_finviz_market_digest.{md,json}
+#       Primary: finviz_preopen_scrape.yml (cron 09:40 UTC = 05:40 ET)
+#       Last chance: this workflow ~08:00 ET
+#   (2) ~16:05 ET post-close answer-key (clock_use=next_open only)
+#       01_daily/news/<date>_finviz_market_digest_close.{md,json}
+#       clock_legal_for = next NYSE session. Never same_morning.
+#
+# GH Actions cron is UTC by default. Close uses on.schedule.timezone
+# (America/New_York) — the IANA equivalent of CRON_TZ — so 16:05 stays
+# 16:05 across EDT/EST. Morning last-chance cron is unchanged UTC.
+# ubuntu-latest only (Finviz 403 on ECS). Capture only — not wired into
+# tape_anchor / predict / #210 / Pre-Open selection.
 
 on:
   schedule:
     # 12:00 UTC = 08:00 EDT. Last chance in the 05:40–08:00 ET window.
     # After the fall EST change this is 07:00 ET — still pre-09:30.
     - cron: "0 12 * * 1-5"
+    # Post-close answer-key. timezone field (Mar 2026+) follows ET DST.
+    - cron: "5 16 * * 1-5"
+      timezone: "America/New_York"
   workflow_dispatch:
     inputs:
       run_date:
@@ -19,7 +32,11 @@ on:
         required: false
         default: ""
       force:
-        description: "true = rewrite even if morning-ok file exists"
+        description: "true = rewrite even if morning-ok / close-ok file exists"
+        required: false
+        default: "false"
+      close:
+        description: "true = post-close answer-key (*_close, clock_use=next_open)"
         required: false
         default: "false"
       backfill_from:
@@ -60,22 +77,36 @@ jobs:
           pip install -r requirements.txt
           pip install beautifulsoup4 lxml requests || true
 
-      - name: Skip weekend / past 09:25 ET (live only)
-        if: github.event.inputs.backfill_from == '' && github.event.inputs.force != 'true'
+      - name: Pick capture slot (morning last-chance vs close)
+        if: github.event.inputs.backfill_from == ''
         run: |
+          set -euo pipefail
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
           ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
           DOW=$(TZ=America/New_York date +%u)
-          echo "ET_HM=$ET_HM DOW=$DOW"
-          if [ "$DOW" -ge 6 ]; then
-            echo "Weekend — skip live market digest"
-            echo "skip=yes" >> "$GITHUB_ENV"
-          elif [ "$ET_HM" -ge 925 ]; then
-            echo "past 09:25 ET — skip live rewrite"
-            echo "skip=yes" >> "$GITHUB_ENV"
+          CLOSE_IN="${{ github.event.inputs.close }}"
+          FORCE="${{ github.event.inputs.force }}"
+          echo "DATE=$DATE ET_HM=$ET_HM DOW=$DOW close_in=$CLOSE_IN"
+          echo "DATE=$DATE" >> "$GITHUB_ENV"
+          HOLIDAY=$(python3 -c "from datetime import date; from src.skip_if_good import is_nyse_holiday; d=date.fromisoformat('$DATE'); print('yes' if is_nyse_holiday(d) else 'no')")
+          echo "HOLIDAY=$HOLIDAY"
+          if [ "$DOW" -ge 6 ] || [ "$HOLIDAY" = "yes" ]; then
+            echo "Weekend/holiday — skip live market digest"
+            echo "slot=skip" >> "$GITHUB_ENV"
+          elif [ "$CLOSE_IN" = "true" ] || [ "$ET_HM" -ge 1600 ]; then
+            echo "slot=close (post-close answer-key, next_open)"
+            echo "slot=close" >> "$GITHUB_ENV"
+          elif [ "$ET_HM" -ge 925 ] && [ "$FORCE" != "true" ]; then
+            echo "midday — not morning last-chance, not close"
+            echo "slot=skip" >> "$GITHUB_ENV"
+          else
+            echo "slot=morning (pre-09:30 last-chance warm-up)"
+            echo "slot=morning" >> "$GITHUB_ENV"
           fi
 
-      - name: Live homepage market digest
-        if: env.skip != 'yes' && github.event.inputs.backfill_from == ''
+      - name: Live homepage market digest (morning warm-up)
+        if: env.slot == 'morning' && github.event.inputs.backfill_from == ''
         env:
           FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
           FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
@@ -83,9 +114,23 @@ jobs:
           AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
         run: |
           set -euo pipefail
-          DATE="${{ github.event.inputs.run_date }}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
           ARGS=(--date "$DATE")
+          [ "${{ github.event.inputs.force }}" = "true" ] && ARGS+=(--force)
+          echo "CMD: python -m src.finviz_market_digest ${ARGS[*]}"
+          python -m src.finviz_market_digest "${ARGS[@]}"
+
+      - name: Live homepage market digest (close answer-key)
+        if: env.slot == 'close' && github.event.inputs.backfill_from == ''
+        env:
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+        run: |
+          set -euo pipefail
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          ARGS=(--date "$DATE" --close)
           [ "${{ github.event.inputs.force }}" = "true" ] && ARGS+=(--force)
           echo "CMD: python -m src.finviz_market_digest ${ARGS[*]}"
           python -m src.finviz_market_digest "${ARGS[@]}"
@@ -106,10 +151,13 @@ jobs:
         if: always()
         run: |
           D="${{ github.event.inputs.run_date }}"
-          D="${D:-$(TZ=America/New_York date +%F)}"
-          echo "======== market digest $D ========"
-          ls -la 01_daily/news/*finviz_market_digest* 2>/dev/null || true
+          D="${D:-${DATE:-$(TZ=America/New_York date +%F)}}"
+          echo "======== market digest $D (morning) ========"
+          ls -la 01_daily/news/${D}_finviz_market_digest.* 2>/dev/null || true
           head -60 "01_daily/news/${D}_finviz_market_digest.md" 2>/dev/null || true
+          echo "======== market digest $D (close) ========"
+          ls -la 01_daily/news/${D}_finviz_market_digest_close.* 2>/dev/null || true
+          head -60 "01_daily/news/${D}_finviz_market_digest_close.md" 2>/dev/null || true
 
       - name: Leftover sweep
         if: always()

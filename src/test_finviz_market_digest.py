@@ -23,7 +23,10 @@ from src.finviz_market_digest import (
     classify_clock,
     clock_legal_at,
     decode_html_bytes,
+    digest_paths,
+    existing_close_ok,
     existing_morning_ok,
+    is_session_date,
     next_session_date,
     parse_homepage_html,
     parse_market_digest_text,
@@ -373,6 +376,176 @@ def test_backfill_writes_wayback_and_leaves_gaps() -> None:
     assert not (news / "2026-09-12_finviz_market_digest.json").exists()
 
 
+def test_close_mode_stamps_next_open() -> None:
+    html = HTML_FIXTURE.read_text(encoding="utf-8")
+    report = build_report(
+        asof="2026-09-11", html=html, source="live", close=True)
+    report["generated_at"] = "2026-09-11T16:05:00-04:00"
+    apply_clock(report)
+    assert report["clock_use"] == "next_open"
+    assert report["clock_legal"] is True
+    assert report["clock_same_morning"] is False
+    assert report["clock_legal_for"] == "2026-09-14"
+    assert report["capture_slot"] == "close"
+    assert report["kind"] == "finviz_homepage_market_digest_close"
+    md = to_markdown(report)
+    assert "market digest (close)" in md
+    assert "**Clock legal for:** 2026-09-14" in md
+    assert "NEXT session" in md
+    assert "NOT" in md and "same morning" in md
+    # Close stays next_open even if Generated is before 09:30.
+    early = classify_clock(
+        datetime(2026, 9, 11, 5, 40, tzinfo=ET), "2026-09-11", "live",
+        close=True)
+    assert early["clock_use"] == "next_open"
+    assert early["clock_legal_for"] == "2026-09-14"
+    assert early["clock_same_morning"] is False
+    # Friday before Labor Day → Tuesday.
+    labor = classify_clock(
+        datetime(2026, 9, 4, 16, 5, tzinfo=ET), "2026-09-04", "live",
+        close=True)
+    assert labor["clock_legal_for"] == "2026-09-08"
+    news = Path("/tmp/fullscan-market-digest-close-qc")
+    news.mkdir(parents=True, exist_ok=True)
+    jp = news / "2026-09-11_finviz_market_digest_close.json"
+    bad = dict(report)
+    bad["clock_use"] = "same_morning"
+    bad["clock_same_morning"] = True
+    bad["clock_legal_for"] = "2026-09-11"
+    jp.write_text(json.dumps(bad), encoding="utf-8")
+    qc_bad = qc_finviz_market_digest(jp)
+    assert not qc_bad.ok
+    assert "close_not_next_open" in (qc_bad.reason or "")
+
+
+def test_close_does_not_clobber_morning_file() -> None:
+    import src.finviz_market_digest as digest
+    html = HTML_FIXTURE.read_text(encoding="utf-8")
+    news = Path("/tmp/fullscan-market-digest-close-noclobber")
+    news.mkdir(parents=True, exist_ok=True)
+    for p in news.glob("*"):
+        p.unlink()
+    morning = build_report(
+        asof="2026-09-11", html=html, source="wayback",
+        archive_ts="20260911054000")
+    # Force a legal same_morning stamp on this date.
+    morning["generated_at"] = "2026-09-11T05:40:00-04:00"
+    morning["archive_snapshot_ts"] = "20260911094000"
+    apply_clock(morning)
+    assert morning["clock_use"] == "same_morning"
+    close = build_report(
+        asof="2026-09-11", html=html, source="live", close=True)
+    close["generated_at"] = "2026-09-11T16:05:00-04:00"
+    apply_clock(close)
+    with mock.patch.object(digest, "NEWS_DIR", news):
+        m_saved = save_report(morning)
+        assert m_saved is not None
+        m_jp, m_mp = m_saved
+        morning_json = m_jp.read_text(encoding="utf-8")
+        morning_md = m_mp.read_text(encoding="utf-8")
+        assert m_jp.name == "2026-09-11_finviz_market_digest.json"
+        c_saved = save_report(close)
+        assert c_saved is not None
+        c_jp, c_mp = c_saved
+        assert c_jp.name == "2026-09-11_finviz_market_digest_close.json"
+        assert c_mp.name == "2026-09-11_finviz_market_digest_close.md"
+        assert c_jp != m_jp and c_mp != m_mp
+        assert m_jp.read_text(encoding="utf-8") == morning_json
+        assert m_mp.read_text(encoding="utf-8") == morning_md
+        payload = json.loads(c_jp.read_text(encoding="utf-8"))
+        assert payload["clock_use"] == "next_open"
+        assert payload["clock_legal_for"] == "2026-09-14"
+        assert payload["capture_slot"] == "close"
+        qc = qc_finviz_market_digest(c_jp)
+        assert qc.ok, qc.reason
+        assert qc_finviz_market_digest(c_mp).ok
+        assert existing_morning_ok("2026-09-11") is True
+        assert existing_close_ok("2026-09-11") is True
+        latest = news / "latest_finviz_market_digest.md"
+        latest_close = news / "latest_finviz_market_digest_close.md"
+        assert latest.exists()
+        assert "same morning" in latest.read_text(encoding="utf-8").lower() or (
+            "before 09:30 ET" in latest.read_text(encoding="utf-8"))
+        assert latest_close.exists()
+        assert "NEXT session" in latest_close.read_text(encoding="utf-8")
+        jp_m, mp_m = digest_paths("2026-09-11", close=False)
+        jp_c, mp_c = digest_paths("2026-09-11", close=True)
+        assert jp_m.name.endswith("_finviz_market_digest.json")
+        assert jp_c.name.endswith("_finviz_market_digest_close.json")
+        assert mp_m != mp_c
+
+
+def test_close_skips_weekend_and_holiday() -> None:
+    assert is_session_date("2026-09-11") is True
+    assert is_session_date("2026-09-12") is False  # Saturday
+    assert is_session_date("2026-09-13") is False  # Sunday
+    assert is_session_date("2026-09-07") is False  # Labor Day
+    assert is_session_date("2026-09-04") is True
+    import src.finviz_market_digest as digest
+    news = Path("/tmp/fullscan-market-digest-close-holiday")
+    news.mkdir(parents=True, exist_ok=True)
+    for p in news.glob("*"):
+        p.unlink()
+    with mock.patch.object(digest, "NEWS_DIR", news), \
+         mock.patch.object(digest, "_land"), \
+         mock.patch.object(digest, "et_now",
+                           return_value=datetime(2026, 9, 7, 16, 5, tzinfo=ET)), \
+         mock.patch("sys.argv", [
+             "finviz_market_digest", "--close", "--date", "2026-09-07",
+             "--html", str(HTML_FIXTURE),
+         ]):
+        digest.main()
+    assert list(news.glob("*finviz_market_digest_close*")) == []
+    # Forced close on a session after 16:00 writes the _close pair.
+    with mock.patch.object(digest, "NEWS_DIR", news), \
+         mock.patch.object(digest, "_land"), \
+         mock.patch.object(digest, "et_now",
+                           return_value=datetime(2026, 9, 11, 16, 5, tzinfo=ET)), \
+         mock.patch("sys.argv", [
+             "finviz_market_digest", "--close", "--date", "2026-09-11",
+             "--html", str(HTML_FIXTURE),
+         ]):
+        digest.main()
+    assert (news / "2026-09-11_finviz_market_digest_close.json").exists()
+    assert not (news / "2026-09-11_finviz_market_digest.json").exists()
+    payload = json.loads(
+        (news / "2026-09-11_finviz_market_digest_close.json").read_text(
+            encoding="utf-8"))
+    assert payload["clock_use"] == "next_open"
+    assert payload["clock_legal_for"] == "2026-09-14"
+    # Default (no --close) afternoon live still does not write the morning file.
+    with mock.patch.object(digest, "NEWS_DIR", news), \
+         mock.patch.object(digest, "_land"), \
+         mock.patch.object(digest, "et_now",
+                           return_value=datetime(2026, 9, 11, 16, 5, tzinfo=ET)), \
+         mock.patch("sys.argv", [
+             "finviz_market_digest", "--date", "2026-09-11",
+             "--html", str(HTML_FIXTURE), "--force",
+         ]):
+        digest.main()
+    assert not (news / "2026-09-11_finviz_market_digest.json").exists()
+
+
+def test_workflow_has_close_cron_and_keeps_morning() -> None:
+    root = Path(__file__).resolve().parent.parent
+    yml = (root / ".github" / "workflows" / "finviz_market_digest.yml").read_text(
+        encoding="utf-8")
+    assert "Do not land an afternoon scrape" not in yml
+    assert 'cron: "5 16 * * 1-5"' in yml
+    assert 'timezone: "America/New_York"' in yml
+    assert "--close" in yml
+    assert "ubuntu-latest" in yml
+    assert "self-hosted" not in yml
+    assert 'cron: "0 12 * * 1-5"' in yml
+    assert "finviz_preopen_scrape.yml" in yml
+    assert "_finviz_market_digest_close" in yml
+    assert "tape_anchor" in yml and "#210" in yml
+    scrape = (root / ".github" / "workflows" / "finviz_preopen_scrape.yml").read_text(
+        encoding="utf-8")
+    assert "src.finviz_market_digest --date $DATE --force" in scrape
+    assert "--close" not in scrape
+
+
 def test_qc_rejects_afternoon_and_missing_radar() -> None:
     html = HTML_FIXTURE.read_text(encoding="utf-8")
     live = build_report(asof="2026-09-11", html=html, source="live")
@@ -423,6 +596,10 @@ def main() -> None:
         test_save_and_morning_ok,
         test_backfill_writes_wayback_and_leaves_gaps,
         test_qc_rejects_afternoon_and_missing_radar,
+        test_close_mode_stamps_next_open,
+        test_close_does_not_clobber_morning_file,
+        test_close_skips_weekend_and_holiday,
+        test_workflow_has_close_cron_and_keeps_morning,
     ]
     failed = 0
     for fn in tests:

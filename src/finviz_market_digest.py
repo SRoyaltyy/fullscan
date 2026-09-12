@@ -5,17 +5,31 @@ The live Finviz homepage embeds a `$MARKET` / `market_summary` widget
 rose 0.86%… Brent retreated… hotter CPI… DELL/HPE/HPQ… Monday calendar
 light…". That is a different artifact from
 `01_daily/news/YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ~400
-ticker blurbs).
+ticker blurbs). Same `$MARKET` parser for both daily slots.
 
-Outputs:
-  01_daily/news/<date>_finviz_market_digest.md
-  01_daily/news/<date>_finviz_market_digest.json
-  01_daily/news/latest_finviz_market_digest.md
+Two files per NYSE session (they coexist; close never clobbers morning):
+
+  (1) Pre-09:30 warm-up — `clock_use=same_morning`, legal for that date
+      01_daily/news/<date>_finviz_market_digest.md
+      01_daily/news/<date>_finviz_market_digest.json
+      01_daily/news/latest_finviz_market_digest.md
+      Primary cron: finviz_preopen_scrape.yml (05:40 ET).
+      Last chance: finviz_market_digest.yml ~08:00 ET.
+
+  (2) ~16:05 ET post-close answer-key — `clock_use=next_open` only
+      01_daily/news/<date>_finviz_market_digest_close.md
+      01_daily/news/<date>_finviz_market_digest_close.json
+      01_daily/news/latest_finviz_market_digest_close.md
+      `clock_legal_for` = next NYSE session. Never `same_morning`.
+      CLI: python -m src.finviz_market_digest --close
 
 Clock (Theme Radar / War room):
   Generated is the scrape time in America/New_York ISO.
-  Live: write only when Generated is before 09:30 ET on that date;
-        otherwise leave the file missing (no afternoon live backfill).
+  Live morning: write the warm-up file only when Generated is before
+        09:30 ET on that date; otherwise leave that path missing.
+  Live close (`--close` / capture_slot=close): always stamp
+        `clock_use=next_open` and write the `*_close` paths. Skip
+        weekends / NYSE holidays. Do not touch the morning files.
   Wayback / archive.ph: stamp the real capture time + source=wayback.
         Capture before 09:30 ET that day → legal for that morning's
         Pre-Open (`clock_legal_for` = that date, `clock_use` =
@@ -23,10 +37,11 @@ Clock (Theme Radar / War room):
         NYSE session open only, as a prior-day close recap
         (`clock_legal_for` = next session, `clock_use` = next_open) —
         NOT the same morning. Gaps stay gaps.
-  Not wired into tape_anchor / predict / #210.
+  Not wired into tape_anchor / predict / #210 / Pre-Open selection.
 
 CLI:
   python -m src.finviz_market_digest [--date YYYY-MM-DD] [--html PATH]
+  python -m src.finviz_market_digest --close [--date YYYY-MM-DD]
   python -m src.finviz_market_digest --backfill --from 2026-08-20 --to 2026-09-12
 """
 from __future__ import annotations
@@ -49,6 +64,9 @@ NEWS_DIR = ROOT / "01_daily" / "news"
 ET = ZoneInfo(config.TZ)
 UTC = ZoneInfo("UTC")
 OPEN_HM = 930
+CLOSE_HM = 1600
+MORNING_STEM = "_finviz_market_digest"
+CLOSE_STEM = "_finviz_market_digest_close"
 
 HOME_PATHS = ("/", "/index.ashx")
 CDX_URL = "https://web.archive.org/cdx/search/cdx"
@@ -239,9 +257,50 @@ def next_session_date(date_str: str) -> str:
     return _next_weekday(date_str)
 
 
+def is_session_date(date_str: str) -> bool:
+    """True for a NYSE cash session (weekdays minus full-day holidays)."""
+    from .skip_if_good import is_nyse_holiday
+    try:
+        d = datetime.fromisoformat(date_str).date()
+    except ValueError:
+        return False
+    return d.weekday() < 5 and not is_nyse_holiday(d)
+
+
+def is_close_report(report: dict | None) -> bool:
+    """True when this payload is the post-close answer-key slot."""
+    if not isinstance(report, dict):
+        return False
+    if report.get("capture_slot") == "close" or report.get("close") is True:
+        return True
+    kind = str(report.get("kind") or "")
+    return kind.endswith("_close") or "market_digest_close" in kind
+
+
+def digest_paths(date_str: str, *, close: bool = False) -> tuple[Path, Path]:
+    """Morning warm-up vs close answer-key paths. Never the quote-page digest."""
+    stem = f"{date_str}{CLOSE_STEM if close else MORNING_STEM}"
+    return NEWS_DIR / f"{stem}.json", NEWS_DIR / f"{stem}.md"
+
+
 def classify_clock(generated: datetime | None, session_date: str,
-                   source: str) -> dict[str, Any]:
-    """War-room clock: live same-morning only; Wayback afternoon → next open."""
+                   source: str, close: bool = False) -> dict[str, Any]:
+    """War-room clock: live same-morning, live close next_open, Wayback afternoon."""
+    if close:
+        nxt = next_session_date(session_date) if session_date else None
+        return {
+            "clock_legal": True,
+            "clock_same_morning": False,
+            "clock_use": "next_open",
+            "clock_legal_for": nxt,
+            "capture_slot": "close",
+            "clock_rule": (
+                "Live post-close answer-key (~16:05 ET). Always next_open "
+                f"for the NEXT session ({nxt}) — never same_morning. "
+                "Writes *_finviz_market_digest_close.* only. "
+                "Capture only — not tape_anchor / predict / #210."
+            ),
+        }
     archive = source in ("wayback", "archive.ph")
     same_morning = clock_legal_at(generated, session_date)
     if same_morning:
@@ -290,7 +349,8 @@ def apply_clock(report: dict) -> dict:
     generated = parse_et_iso(str(report.get("generated_at") or ""))
     date_str = str(report.get("date") or "")
     source = str(report.get("source") or "live")
-    report.update(classify_clock(generated, date_str, source))
+    report.update(classify_clock(
+        generated, date_str, source, close=is_close_report(report)))
     return report
 
 
@@ -643,6 +703,7 @@ def build_report(
     archive_ts: str | None = None,
     archive_url: str | None = None,
     error: str | None = None,
+    close: bool = False,
 ) -> dict:
     asof = asof or et_now().date().isoformat()
     archive_dt = wayback_ts_to_dt(archive_ts) if archive_ts else None
@@ -652,8 +713,24 @@ def build_report(
         generated = archive_dt.astimezone(ET)
     else:
         generated = et_now()
-    clock = classify_clock(generated, asof, source)
+    clock = classify_clock(generated, asof, source, close=close)
     parsed = parse_homepage_html(html) if html else None
+    if close:
+        represents = (
+            "Finviz homepage post-close answer-key. clock_use is always "
+            "next_open; clock_legal_for is the next NYSE session. "
+            "Lives at *_finviz_market_digest_close.*. Does not replace the "
+            "same_morning warm-up file. Not quote-page ticker blurbs."
+        )
+        kind = "finviz_homepage_market_digest_close"
+    else:
+        represents = (
+            "Finviz homepage market-day prose. Same-morning Pre-Open when "
+            "Generated is before 09:30 ET; afternoon Wayback is a prior-day "
+            "close recap legal for the next session only. "
+            "Not quote-page ticker blurbs."
+        )
+        kind = "finviz_homepage_market_digest"
     report = {
         "date": asof,
         "generated_at": generated.isoformat(),
@@ -666,13 +743,8 @@ def build_report(
         ),
         "archive_url": archive_url,
         **clock,
-        "kind": "finviz_homepage_market_digest",
-        "represents": (
-            "Finviz homepage market-day prose. Same-morning Pre-Open when "
-            "Generated is before 09:30 ET; afternoon Wayback is a prior-day "
-            "close recap legal for the next session only. "
-            "Not quote-page ticker blurbs."
-        ),
+        "kind": kind,
+        "represents": represents,
         "error": error,
         "headline": None,
         "raw_text": None,
@@ -795,8 +867,13 @@ def to_markdown(report: dict) -> str:
         f"retail {_flag(bool(nxt.get('retail')))} · "
         f"Fed {_flag(bool(nxt.get('fed')))}"
     )
+    heading = (
+        f"# Finviz homepage market digest (close) — {report.get('date')}"
+        if is_close_report(report)
+        else f"# Finviz homepage market digest — {report.get('date')}"
+    )
     lines = [
-        f"# Finviz homepage market digest — {report.get('date')}",
+        heading,
         "",
         f"**Generated:** {gen} (America/New_York)",
         f"**Source:** `{src}`",
@@ -822,12 +899,21 @@ def to_markdown(report: dict) -> str:
     lines.append(f"**Clock legal for:** {legal_for}")
     lines.append(f"**Clock use:** `{use or '—'}`")
     if use == "next_open":
-        clock_body = (
-            "Wayback midday/afternoon capture. **Legal for the NEXT session "
-            f"open only** (`clock_legal_for` = {legal_for}) as a prior-day "
-            "close recap — **NOT** the same morning. Generated is the real "
-            "archive capture time."
-        )
+        if is_close_report(report):
+            clock_body = (
+                "Live post-close answer-key (~16:05 ET). **Legal for the NEXT "
+                f"session open only** (`clock_legal_for` = {legal_for}) — "
+                "**NOT** the same morning. `clock_use` is always `next_open`. "
+                "File is `*_finviz_market_digest_close.*`; the same_morning "
+                "warm-up file is left untouched."
+            )
+        else:
+            clock_body = (
+                "Wayback midday/afternoon capture. **Legal for the NEXT session "
+                f"open only** (`clock_legal_for` = {legal_for}) as a prior-day "
+                "close recap — **NOT** the same morning. Generated is the real "
+                "archive capture time."
+            )
     elif use == "same_morning":
         clock_body = (
             "Capture is **before 09:30 ET on this date**, so it is legal "
@@ -880,28 +966,43 @@ def to_markdown(report: dict) -> str:
 
 
 def save_report(report: dict) -> tuple[Path, Path] | None:
-    """Write same-morning files, or Wayback afternoon as next-open only.
+    """Write morning warm-up, Wayback next-open, or live close answer-key.
 
-    Live after 09:30 ET → leave missing. Paths are always
-    `*_finviz_market_digest.*`. Never overwrite or rename the quote-page
-    `*_finviz_digest.md` / `.json`.
+    Live morning after 09:30 ET → leave the warm-up path missing.
+    Live close (`capture_slot=close`) → `*_finviz_market_digest_close.*`
+    with clock_use=next_open. Never overwrites a legal same_morning file.
+    Never overwrite or rename the quote-page `*_finviz_digest.md` / `.json`.
     """
     apply_clock(report)
     date_str = report["date"]
-    if report.get("clock_use") not in ("same_morning", "next_open"):
+    close = is_close_report(report)
+    if close:
+        if report.get("clock_use") != "next_open":
+            print(f"[market_digest] {date_str}: close must be next_open — leave missing")
+            return None
+    elif report.get("clock_use") not in ("same_morning", "next_open"):
         print(f"[market_digest] {date_str}: live after 09:30 ET — leave missing")
         return None
     attach_theme_radar(report)
     NEWS_DIR.mkdir(parents=True, exist_ok=True)
-    jp = NEWS_DIR / f"{date_str}_finviz_market_digest.json"
-    mp = NEWS_DIR / f"{date_str}_finviz_market_digest.md"
+    jp, mp = digest_paths(date_str, close=close)
+    if close:
+        morning_jp, morning_mp = digest_paths(date_str, close=False)
+        if jp == morning_jp or mp == morning_mp:
+            raise RuntimeError("close capture refused to write morning path")
+        if CLOSE_STEM not in jp.name or CLOSE_STEM not in mp.name:
+            raise RuntimeError("close capture must use *_finviz_market_digest_close.*")
     if jp.name.endswith("_finviz_digest.json") or mp.name.endswith("_finviz_digest.md"):
         raise RuntimeError("refusing to write quote-page finviz_digest path")
     jp.write_text(json.dumps(report, indent=2, ensure_ascii=False, default=str),
                   encoding="utf-8")
     mp.write_text(to_markdown(report), encoding="utf-8")
-    latest = NEWS_DIR / "latest_finviz_market_digest.md"
-    latest.write_text(mp.read_text(encoding="utf-8"), encoding="utf-8")
+    if close:
+        latest = NEWS_DIR / "latest_finviz_market_digest_close.md"
+        latest.write_text(mp.read_text(encoding="utf-8"), encoding="utf-8")
+    else:
+        latest = NEWS_DIR / "latest_finviz_market_digest.md"
+        latest.write_text(mp.read_text(encoding="utf-8"), encoding="utf-8")
     return jp, mp
 
 
@@ -916,7 +1017,7 @@ def report_has_narrative(report: dict | None) -> bool:
 def existing_morning_ok(date_str: str, force: bool = False) -> bool:
     if force:
         return False
-    jp = NEWS_DIR / f"{date_str}_finviz_market_digest.json"
+    jp, _ = digest_paths(date_str, close=False)
     if not jp.exists():
         return False
     try:
@@ -934,7 +1035,7 @@ def existing_morning_ok(date_str: str, force: bool = False) -> bool:
 def existing_next_open_ok(date_str: str, force: bool = False) -> bool:
     if force:
         return False
-    jp = NEWS_DIR / f"{date_str}_finviz_market_digest.json"
+    jp, _ = digest_paths(date_str, close=False)
     if not jp.exists():
         return False
     try:
@@ -944,6 +1045,27 @@ def existing_next_open_ok(date_str: str, force: bool = False) -> bool:
     if not report_has_narrative(payload):
         return False
     return payload.get("clock_use") == "next_open" and bool(payload.get("clock_legal_for"))
+
+
+def existing_close_ok(date_str: str, force: bool = False) -> bool:
+    """Quality-ok post-close answer-key already on the `_close` path."""
+    if force:
+        return False
+    jp, _ = digest_paths(date_str, close=True)
+    if not jp.exists():
+        return False
+    try:
+        payload = json.loads(jp.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return False
+    if not report_has_narrative(payload):
+        return False
+    if payload.get("clock_use") != "next_open":
+        return False
+    legal_for = payload.get("clock_legal_for")
+    if not legal_for or legal_for == date_str:
+        return False
+    return True
 
 
 # ---------------------------------------------------------------------------
@@ -1218,10 +1340,23 @@ def refresh_latest() -> Path | None:
     files = sorted(
         p for p in NEWS_DIR.glob("*_finviz_market_digest.md")
         if p.name != "latest_finviz_market_digest.md"
+        and CLOSE_STEM not in p.name
     )
     if not files:
         return None
     latest = NEWS_DIR / "latest_finviz_market_digest.md"
+    latest.write_text(files[-1].read_text(encoding="utf-8"), encoding="utf-8")
+    return latest
+
+
+def refresh_latest_close() -> Path | None:
+    files = sorted(
+        p for p in NEWS_DIR.glob("*_finviz_market_digest_close.md")
+        if p.name != "latest_finviz_market_digest_close.md"
+    )
+    if not files:
+        return None
+    latest = NEWS_DIR / "latest_finviz_market_digest_close.md"
     latest.write_text(files[-1].read_text(encoding="utf-8"), encoding="utf-8")
     return latest
 
@@ -1259,10 +1394,27 @@ def window_inventory(start: str, end: str) -> dict[str, Any]:
             next_open.append(date_str)
         else:
             gaps.append(date_str)
+    close_answer_key: list[str] = []
+    day = start_d
+    while day <= end_d:
+        date_str = day.isoformat()
+        day += timedelta(days=1)
+        cjp, _ = digest_paths(date_str, close=True)
+        if not cjp.exists():
+            continue
+        try:
+            payload = json.loads(cjp.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        if (report_has_narrative(payload)
+                and payload.get("clock_use") == "next_open"
+                and payload.get("clock_legal_for")):
+            close_answer_key.append(date_str)
     return {
         "from": start,
         "to": end,
         "path": "01_daily/news/{date}_finviz_market_digest.md",
+        "close_path": "01_daily/news/{date}_finviz_market_digest_close.md",
         "same_morning_wayback": [
             d for d in same_morning
             if _file_source(d) in ("wayback", "archive.ph")
@@ -1275,6 +1427,8 @@ def window_inventory(start: str, end: str) -> dict[str, Any]:
         ),
         "n_next_open_only": len(next_open),
         "n_gaps": len(gaps),
+        "close_answer_key": close_answer_key,
+        "n_close_answer_key": len(close_answer_key),
     }
 
 
@@ -1286,13 +1440,15 @@ def _file_source(date_str: str) -> str:
         return ""
 
 
-def _land(date_str: str) -> None:
+def _land(date_str: str, *, close: bool = False) -> None:
     try:
         from . import land_file
-        land_file.land(
-            date_str, "finviz_market_digest",
-            title="Finviz homepage market digest",
+        key = "finviz_market_digest_close" if close else "finviz_market_digest"
+        title = (
+            "Finviz homepage market digest (close)"
+            if close else "Finviz homepage market digest"
         )
+        land_file.land(date_str, key, title=title)
     except Exception as e:  # noqa: BLE001
         print(f"[market_digest] WARN: land failed: {e}")
 
@@ -1305,6 +1461,11 @@ def main() -> None:
     ap.add_argument("--text", default=None,
                     help="Parse this prose/markdown file (no scrape)")
     ap.add_argument("--force", action="store_true")
+    ap.add_argument(
+        "--close", action="store_true",
+        help="Post-close answer-key (~16:05 ET). Writes "
+             "*_finviz_market_digest_close.* with clock_use=next_open.",
+    )
     ap.add_argument("--backfill", action="store_true")
     ap.add_argument("--from", dest="date_from", default="2026-08-20")
     ap.add_argument("--to", dest="date_to", default=None)
@@ -1323,7 +1484,19 @@ def main() -> None:
         return
 
     date_str = args.date or et_now().date().isoformat()
-    if existing_morning_ok(date_str, force=args.force):
+    close = bool(args.close)
+    if close:
+        if not args.force and not is_session_date(date_str):
+            print(f"[market_digest] {date_str}: weekend/holiday — skip close capture")
+            return
+        if existing_close_ok(date_str, force=args.force):
+            print(f"[market_digest] {date_str}: skip, close answer-key already on disk")
+            return
+        now = et_now()
+        if not args.force and (now.hour * 100 + now.minute) < CLOSE_HM:
+            print(f"[market_digest] {date_str}: before 16:00 ET — skip close capture")
+            return
+    elif existing_morning_ok(date_str, force=args.force):
         print(f"[market_digest] {date_str}: skip, quality-ok already on disk")
         return
     html = None
@@ -1333,7 +1506,7 @@ def main() -> None:
     if args.text:
         raw = Path(args.text).read_text(encoding="utf-8")
         parsed = parse_market_digest_text(raw)
-        report = build_report(asof=date_str, html=None, source="text")
+        report = build_report(asof=date_str, html=None, source="text", close=close)
         report.update(parsed)
         report["error"] = None
         apply_clock(report)
@@ -1341,7 +1514,7 @@ def main() -> None:
         if not saved:
             return
         print(f"[market_digest] {date_str}: text → {saved[1]}")
-        _land(date_str)
+        _land(date_str, close=close)
         return
     if args.html:
         html = decode_html_bytes(Path(args.html).read_bytes())
@@ -1352,7 +1525,7 @@ def main() -> None:
         source = "live"
     report = build_report(
         asof=date_str, html=html, source=source,
-        source_url=source_url, error=err,
+        source_url=source_url, error=err, close=close,
     )
     if not report_has_narrative(report):
         print(f"[market_digest] {date_str}: no narrative ({err or 'empty'})")
@@ -1365,12 +1538,13 @@ def main() -> None:
     print(
         f"[market_digest] {report['date']}: source={report['source']} "
         f"Generated={report['generated_at']} "
+        f"use={report.get('clock_use')} legal_for={report.get('clock_legal_for')} "
         f"tickers={report.get('named_tickers')} "
         f"moves={len(report.get('index_moves') or [])}"
     )
     print(f"[market_digest] {jp}")
     print(f"[market_digest] {mp}")
-    _land(date_str)
+    _land(date_str, close=close)
 
 
 if __name__ == "__main__":

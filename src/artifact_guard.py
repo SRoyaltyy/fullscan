@@ -72,6 +72,7 @@ PATH_KIND_HINTS: list[tuple[str, str]] = [
     ("_research", "map_heat_research"),
     ("captain", "map_heat_research"),
     ("map_heat", "map_heat"),
+    ("finviz_market_digest_close", "finviz_market_digest_close"),
     ("finviz_market_digest", "finviz_market_digest"),
     ("finviz_digest", "finviz_digest"),
     ("_parsed", "news_parse"),
