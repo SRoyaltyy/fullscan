@@ -1124,6 +1124,36 @@ def test_catalyst_runtime_splits_ticker_slice_by_phase() -> None:
         assert step_deadline.remaining_s() > 350
 
 
+def test_no_job_commits_workflow_files_from_actions() -> None:
+    """GITHUB_TOKEN may not create or update `.github/workflows/*`.
+
+    2026-09-10 14:31Z: Publish strategy tickets `git add`-ed a patched
+    factor_mine.yml and the push to main was rejected, so the job — wired
+    to every Pre-Open ALL / Stock Book ALL completion — went red each
+    cycle. Workflow edits belong in a PR; jobs land data with the pusher.
+    """
+    import re
+    offenders = []
+    for wf in sorted(WF.glob("*.yml")):
+        text = wf.read_text(encoding="utf-8")
+        for m in re.finditer(r"git add\b[^\n]*(?:\\\n[^\n]*)*", text):
+            if ".github/workflows" in m.group(0):
+                offenders.append(wf.name)
+                break
+        for m in re.finditer(r"safe_git_push\.sh[^\n]*(?:\\\n[^\n]*)*", text):
+            if ".github/workflows" in m.group(0):
+                offenders.append(wf.name)
+                break
+    assert not offenders, offenders
+    text = (WF / "publish_strategy_tickets.yml").read_text(encoding="utf-8")
+    assert "scripts/safe_git_push.sh" in text
+    assert "git pull --rebase origin main" not in text
+    assert "git push origin main" not in text
+    # It follows the two core jobs, so a red here paints every session red.
+    assert "Stock Book ALL (one-shot)" in text
+    assert "Pre-Open ALL (predictive one-shot)" in text
+
+
 def main() -> None:
     tests = [
         test_sources_parse_on_python_310,
@@ -1171,6 +1201,7 @@ def main() -> None:
         test_factor_mine_lands_closed_after_postclose,
         test_last_closed_sidecar_does_not_share_ubuntu_concurrency,
         test_search_and_sector_rounds_are_bounded,
+        test_no_job_commits_workflow_files_from_actions,
     ]
     failed = 0
     for fn in tests:
