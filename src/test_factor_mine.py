@@ -645,6 +645,29 @@ def test_panel_is_current_requires_latest_session() -> None:
         "rows": [{}],
     }
     assert fm.panel_is_current(ahead, "2026-08-13", "2026-09-09") is False
+    # Live calendar (to_date=None) is what the workflow gate exercises.
+    # Pin the tape's last closed session on both sides of a roll so the
+    # gate cannot go red the morning a new session lands (2026-09-10 did).
+    from unittest import mock
+    with mock.patch.object(fm, "live_panel_end", return_value="2026-09-09"):
+        assert fm.panel_is_current(raw, "2026-08-13", None) is False
+        assert fm.panel_is_current(fresh, "2026-08-13", None) is True
+    with mock.patch.object(fm, "live_panel_end", return_value="2026-09-10"):
+        assert fm.panel_is_current(fresh, "2026-08-13", None) is False
+    # Pre-open of the next day: 09-10 has not closed, so a 09-09 panel is
+    # still current even though a 09-10 book file already exists.
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    preopen = datetime(2026, 9, 10, 8, 30, tzinfo=ZoneInfo("America/New_York"))
+    real_closed = fm.session_has_closed
+    cal = ["2026-08-13", "2026-09-08", "2026-09-09", "2026-09-10"]
+    with mock.patch.object(fm, "session_has_closed",
+                           side_effect=lambda d, now=None: real_closed(d, now=preopen)):
+        assert fm.last_closed_session("2026-08-13", cal=cal) == "2026-09-09"
+        with mock.patch.object(fm, "last_closed_session",
+                               return_value="2026-09-09"):
+            assert fm.panel_is_current(fresh, "2026-08-13", None) is True
+            assert fm.panel_is_current(raw, "2026-08-13", None) is False
 
 
 def test_session_has_closed_uses_et_close_not_next_preopen() -> None:
