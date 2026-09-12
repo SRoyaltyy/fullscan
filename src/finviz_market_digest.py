@@ -122,6 +122,43 @@ CAL_HINT_RE = re.compile(
     r"next week|calendar|earnings slate|auction|retail sales|fomc|"
     r"housing data|ppi|cpi)\b"
 )
+HOUSING_RE = re.compile(
+    r"(?i)\b(housing|home sales|building permits|housing starts)\b"
+)
+RETAIL_RE = re.compile(r"(?i)\bretail sales\b")
+FED_CAL_RE = re.compile(
+    r"(?i)\b(fomc|federal reserve|the fed|fed(?:eral)?(?:\s+rate)?|"
+    r"rate hike|rate cut)\b"
+)
+NEXT_SESSION_RE = re.compile(
+    r"(?i)\b(monday|tuesday|wednesday|thursday|tomorrow|next week|"
+    r"calendar|housing|retail sales|fomc|federal reserve|auction)\b"
+)
+EARNINGS_SLATE_RE = re.compile(
+    r"(?i)\bearnings slate\b|"
+    r"\b(?:monday|tuesday|wednesday|thursday|friday|today|tomorrow)'s earnings\b|"
+    r"\bearnings (?:from|include|due|before|after|this)\b"
+)
+GEO_RE = re.compile(
+    r"(?i)\b(middle east|iran|hormuz|geopolit|israel|gaza|ukraine|"
+    r"houthi|tanker|strait of)\b"
+)
+GRAIN_RE = re.compile(r"(?i)\b(grain|wheat|corn export|russian grain)\b")
+OIL_DOWN = frozenset({
+    "retreated", "fell", "dropped", "slid", "lost", "slipped", "declined",
+})
+OIL_UP = frozenset({
+    "rose", "gained", "jumped", "climbed", "advanced", "rallied", "added",
+})
+THEME_RADAR_KEYS = (
+    "prior_close",
+    "oil",
+    "cpi_fed",
+    "named_leaders",
+    "next_session_calendar",
+    "earnings_slate",
+    "geo_grain",
+)
 WHY_SCRIPT_RE = re.compile(
     r'<script[^>]+id=["\']why-stock-moving-init-data["\'][^>]*>\s*(.*?)\s*</script>',
     re.I | re.S,
@@ -240,7 +277,13 @@ def parse_oil(text: str) -> dict[str, Any] | None:
         if re.search(rf"(?i)\b{word}\b", window):
             verb = word
             break
-    return {"name": name, "price": price, "verb": verb}
+    if verb in OIL_DOWN:
+        direction = "down"
+    elif verb in OIL_UP:
+        direction = "up"
+    else:
+        direction = None
+    return {"name": name, "price": price, "verb": verb, "direction": direction}
 
 
 def parse_cpi(text: str) -> dict[str, Any] | None:
@@ -283,15 +326,118 @@ def parse_named_tickers(text: str) -> list[str]:
     return found
 
 
-def parse_calendar_bullets(text: str) -> list[str]:
-    bullets: list[str] = []
+def _iter_lines(text: str) -> list[str]:
+    out: list[str] = []
     for raw in re.split(r"\n+|•", text or ""):
         line = strip_markup(raw).lstrip("-").strip()
+        if line:
+            out.append(line)
+    return out
+
+
+def parse_calendar_bullets(text: str) -> list[str]:
+    bullets: list[str] = []
+    for line in _iter_lines(text):
         if len(line) < 20:
             continue
         if CAL_HINT_RE.search(line):
             bullets.append(line)
     return bullets
+
+
+def parse_next_session_calendar(text: str) -> dict[str, Any]:
+    """Housing / retail / Fed mentions on the next-session calendar."""
+    bullets: list[str] = []
+    blob = strip_markup(text or "")
+    for line in _iter_lines(text):
+        if EARNINGS_SLATE_RE.search(line) and not (
+            HOUSING_RE.search(line) or RETAIL_RE.search(line) or FED_CAL_RE.search(line)
+        ):
+            continue
+        if NEXT_SESSION_RE.search(line) or HOUSING_RE.search(line) or RETAIL_RE.search(line):
+            if len(line) >= 16:
+                bullets.append(line)
+    return {
+        "housing": bool(HOUSING_RE.search(blob)),
+        "retail": bool(RETAIL_RE.search(blob)),
+        "fed": bool(FED_CAL_RE.search(blob)),
+        "bullets": bullets,
+        "text": " ".join(bullets).strip(),
+    }
+
+
+def parse_earnings_slate(text: str) -> dict[str, Any]:
+    lines = [ln for ln in _iter_lines(text) if EARNINGS_SLATE_RE.search(ln)]
+    tickers: list[str] = []
+    for ln in lines:
+        for t in parse_named_tickers(ln):
+            if t not in tickers:
+                tickers.append(t)
+    return {
+        "tickers": tickers,
+        "text": " ".join(lines).strip(),
+    }
+
+
+def parse_geo_grain(text: str) -> dict[str, Any]:
+    blob = strip_markup(text or "")
+    flags: list[str] = []
+    for rx, label in ((GEO_RE, "geo"), (GRAIN_RE, "grain")):
+        if rx.search(blob) and label not in flags:
+            flags.append(label)
+    lines = [
+        ln for ln in _iter_lines(text)
+        if GEO_RE.search(ln) or GRAIN_RE.search(ln)
+    ]
+    return {
+        "geo": "geo" in flags,
+        "grain": "grain" in flags,
+        "flags": flags,
+        "text": " ".join(lines).strip(),
+    }
+
+
+def prior_close_from_moves(moves: list[dict] | None) -> dict[str, float | None]:
+    return {
+        "spx": _move_pct(moves or [], "SPX", "SPY"),
+        "nasdaq": _move_pct(moves or [], "COMP", "NDX", "QQQ"),
+        "dow": _move_pct(moves or [], "DJI", "DIA"),
+    }
+
+
+def theme_radar_fields(parsed: dict) -> dict[str, Any]:
+    """First-class Theme Radar contract keys."""
+    moves = parsed.get("index_moves") or []
+    oil = parsed.get("oil")
+    if isinstance(oil, dict) and "direction" not in oil:
+        verb = str(oil.get("verb") or "")
+        if verb in OIL_DOWN:
+            oil = {**oil, "direction": "down"}
+        elif verb in OIL_UP:
+            oil = {**oil, "direction": "up"}
+    leaders = list(parsed.get("named_leaders") or parsed.get("named_tickers") or [])
+    raw = str(parsed.get("raw_text") or parsed.get("raw_summary_md") or "")
+    nxt = parsed.get("next_session_calendar")
+    if not isinstance(nxt, dict):
+        nxt = parse_next_session_calendar(raw)
+    earn = parsed.get("earnings_slate")
+    if not isinstance(earn, dict):
+        earn = parse_earnings_slate(raw)
+    geo = parsed.get("geo_grain")
+    if not isinstance(geo, dict):
+        geo = parse_geo_grain(raw)
+    return {
+        "prior_close": parsed.get("prior_close") or prior_close_from_moves(moves),
+        "oil": oil,
+        "cpi_fed": {
+            "cpi": parsed.get("cpi"),
+            "fed_odds": parsed.get("fed_odds"),
+        },
+        "named_leaders": leaders,
+        "next_session_calendar": nxt,
+        "earnings_slate": earn,
+        "geo_grain": geo,
+    }
 
 
 def _why_moving_from_obj(data: Any) -> dict | None:
@@ -345,14 +491,28 @@ def extract_why_moving(html: str) -> dict | None:
 
 def structured_from_text(text: str) -> dict[str, Any]:
     plain = strip_markup(text or "")
-    return {
-        "index_moves": parse_index_moves(plain),
-        "oil": parse_oil(plain),
-        "cpi": parse_cpi(plain),
-        "fed_odds": parse_fed_odds(plain),
-        "named_tickers": parse_named_tickers(text or ""),
+    index_moves = parse_index_moves(plain)
+    oil = parse_oil(plain)
+    cpi = parse_cpi(plain)
+    fed_odds = parse_fed_odds(plain)
+    named = parse_named_tickers(text or "")
+    bits = {
+        "index_moves": index_moves,
+        "oil": oil,
+        "cpi": cpi,
+        "fed_odds": fed_odds,
+        "named_tickers": named,
+        "named_leaders": list(named),
         "calendar": parse_calendar_bullets(plain),
+        "raw_text": plain,
+        "prior_close": prior_close_from_moves(index_moves),
+        "cpi_fed": {"cpi": cpi, "fed_odds": fed_odds},
+        "next_session_calendar": parse_next_session_calendar(plain),
+        "earnings_slate": parse_earnings_slate(text or ""),
+        "geo_grain": parse_geo_grain(plain),
     }
+    bits.update(theme_radar_fields(bits))
+    return bits
 
 
 def parse_market_digest_text(text: str, headline: str = "") -> dict[str, Any]:
@@ -458,17 +618,45 @@ def build_report(
         "cpi": None,
         "fed_odds": None,
         "named_tickers": [],
+        "named_leaders": [],
         "calendar": [],
+        "prior_close": {"spx": None, "nasdaq": None, "dow": None},
+        "cpi_fed": {"cpi": None, "fed_odds": None},
+        "next_session_calendar": {
+            "housing": False, "retail": False, "fed": False,
+            "bullets": [], "text": "",
+        },
+        "earnings_slate": {"tickers": [], "text": ""},
+        "geo_grain": {"geo": False, "grain": False, "flags": [], "text": ""},
     }
     if parsed:
         for k in (
             "headline", "raw_text", "raw_summary_md", "index_moves", "oil",
-            "cpi", "fed_odds", "named_tickers", "calendar", "finviz_id",
-            "finviz_ticker", "finviz_published_at", "finviz_source",
-            "finviz_sentiment",
+            "cpi", "fed_odds", "named_tickers", "named_leaders", "calendar",
+            "prior_close", "cpi_fed", "next_session_calendar",
+            "earnings_slate", "geo_grain", "finviz_id", "finviz_ticker",
+            "finviz_published_at", "finviz_source", "finviz_sentiment",
         ):
             if k in parsed:
                 report[k] = parsed[k]
+    attach_theme_radar(report)
+    return report
+
+
+def attach_theme_radar(report: dict) -> dict:
+    """Stamp first-class Theme Radar keys from narrative text. Clock unchanged."""
+    raw = str(report.get("raw_summary_md") or report.get("raw_text") or "")
+    if raw:
+        bits = structured_from_text(raw)
+        for k in (
+            "index_moves", "oil", "cpi", "fed_odds", "named_tickers",
+            "calendar", "prior_close", "cpi_fed", "named_leaders",
+            "next_session_calendar", "earnings_slate", "geo_grain",
+        ):
+            if k in bits:
+                report[k] = bits[k]
+    else:
+        report.update(theme_radar_fields(report))
     return report
 
 
@@ -486,39 +674,77 @@ def _fmt_pct(pct: float | None) -> str:
     return f"{pct:+.2f}%"
 
 
+def _flag(ok: bool) -> str:
+    return "yes" if ok else "no"
+
+
+def _oil_stamp(oil: dict | None) -> str:
+    if not oil or oil.get("price") is None:
+        return "—"
+    direction = oil.get("direction") or ""
+    verb = oil.get("verb") or ""
+    extra = " ".join(x for x in (direction, f"({verb})" if verb else "") if x)
+    extra = f" {extra}" if extra else ""
+    return f"{oil.get('name')} ${oil.get('price')}{extra}"
+
+
+def _cpi_fed_stamp(report: dict) -> str:
+    block = report.get("cpi_fed") if isinstance(report.get("cpi_fed"), dict) else {}
+    cpi = (block or {}).get("cpi") or report.get("cpi") or {}
+    fed = (block or {}).get("fed_odds") or report.get("fed_odds") or {}
+    bits = []
+    if isinstance(cpi, dict) and cpi.get("text"):
+        bits.append(str(cpi["text"]))
+    if isinstance(fed, dict) and fed.get("pct") is not None:
+        bits.append(
+            f"{fed.get('pct')}% {fed.get('action') or ''} "
+            f"({fed.get('text') or ''})".strip()
+        )
+    return "; ".join(x for x in bits if x) or "—"
+
+
 def to_markdown(report: dict) -> str:
     src = report.get("source") or "live"
     gen = report.get("generated_at") or ""
     headline = str(report.get("headline") or "").strip()
-    moves = report.get("index_moves") or []
-    spx = _fmt_pct(_move_pct(moves, "SPX", "SPY"))
-    nasdaq = _fmt_pct(_move_pct(moves, "COMP", "NDX", "QQQ"))
-    dow = _fmt_pct(_move_pct(moves, "DJI", "DIA"))
-    oil = report.get("oil") or {}
-    oil_s = "—"
-    if oil.get("price") is not None:
-        verb = f" ({oil['verb']})" if oil.get("verb") else ""
-        oil_s = f"{oil.get('name')} ${oil.get('price')}{verb}"
-    cpi = report.get("cpi") or {}
-    fed = report.get("fed_odds") or {}
-    cpi_fed = []
-    if cpi.get("text"):
-        cpi_fed.append(str(cpi["text"]))
-    if fed.get("pct") is not None:
-        cpi_fed.append(f"{fed.get('pct')}% {fed.get('action') or ''} "
-                       f"({fed.get('text') or ''})".strip())
-    cpi_fed_s = "; ".join(x for x in cpi_fed if x) or "—"
-    leaders = ", ".join(report.get("named_tickers") or []) or "—"
+    prior = report.get("prior_close") if isinstance(report.get("prior_close"), dict) else {}
+    if not prior:
+        moves = report.get("index_moves") or []
+        prior = prior_close_from_moves(moves)
+    spx = _fmt_pct(prior.get("spx"))
+    nasdaq = _fmt_pct(prior.get("nasdaq"))
+    dow = _fmt_pct(prior.get("dow"))
+    oil_s = _oil_stamp(report.get("oil") if isinstance(report.get("oil"), dict) else None)
+    cpi_fed_s = _cpi_fed_stamp(report)
+    leaders = ", ".join(
+        report.get("named_leaders") or report.get("named_tickers") or []
+    ) or "—"
+    nxt = report.get("next_session_calendar") if isinstance(
+        report.get("next_session_calendar"), dict) else {}
+    earn = report.get("earnings_slate") if isinstance(
+        report.get("earnings_slate"), dict) else {}
+    geo = report.get("geo_grain") if isinstance(report.get("geo_grain"), dict) else {}
+    earn_s = ", ".join(earn.get("tickers") or []) or (earn.get("text") or "—")
+    geo_flags = ", ".join(geo.get("flags") or []) or "—"
+    nxt_s = (
+        f"housing {_flag(bool(nxt.get('housing')))} · "
+        f"retail {_flag(bool(nxt.get('retail')))} · "
+        f"Fed {_flag(bool(nxt.get('fed')))}"
+    )
     lines = [
         f"# Finviz homepage market digest — {report.get('date')}",
         "",
         f"**Generated:** {gen} (America/New_York)",
         f"**Source:** `{src}`",
         f"**Banner:** {headline or '—'}",
+        f"**Prior close:** SPX {spx}  Nasdaq {nasdaq}  Dow {dow}",
         f"**SPX:** {spx}  **Nasdaq:** {nasdaq}  **Dow:** {dow}",
         f"**Oil:** {oil_s}",
         f"**CPI/Fed:** {cpi_fed_s}",
         f"**Leaders:** {leaders}",
+        f"**Next session:** {nxt_s}",
+        f"**Earnings slate:** {earn_s}",
+        f"**Geo/grain:** {geo_flags}",
     ]
     if report.get("archive_snapshot_ts") or report.get("archive_snapshot_at"):
         lines.append(
@@ -539,6 +765,20 @@ def to_markdown(report: dict) -> str:
         "(quote-page headlines + ticker blurbs). Capture only. Not wired "
         "into tape_anchor / predict / #210.",
         "",
+        "## Theme Radar",
+        "",
+        f"- **Prior close:** SPX {spx} · Nasdaq {nasdaq} · Dow {dow}",
+        f"- **Oil:** {oil_s}",
+        f"- **CPI / Fed-odds:** {cpi_fed_s}",
+        f"- **Named leaders:** {leaders}",
+        f"- **Next-session calendar:** {nxt_s}",
+    ]
+    for bullet in nxt.get("bullets") or []:
+        lines.append(f"  - {bullet}")
+    lines += [
+        f"- **Earnings slate:** {earn_s}",
+        f"- **Geo / grain:** {geo_flags}",
+        "",
         "## Narrative",
         "",
     ]
@@ -557,14 +797,21 @@ def to_markdown(report: dict) -> str:
 
 
 def save_report(report: dict) -> tuple[Path, Path] | None:
-    """Write only when Generated is before 09:30 ET on that date."""
+    """Write only when Generated is before 09:30 ET on that date.
+
+    Paths are always `*_finviz_market_digest.*`. Never overwrite or rename
+    the quote-page `*_finviz_digest.md` / `.json`.
+    """
     date_str = report["date"]
     if not report.get("clock_legal"):
         print(f"[market_digest] {date_str}: after 09:30 ET — leave missing")
         return None
+    attach_theme_radar(report)
     NEWS_DIR.mkdir(parents=True, exist_ok=True)
     jp = NEWS_DIR / f"{date_str}_finviz_market_digest.json"
     mp = NEWS_DIR / f"{date_str}_finviz_market_digest.md"
+    if jp.name.endswith("_finviz_digest.json") or mp.name.endswith("_finviz_digest.md"):
+        raise RuntimeError("refusing to write quote-page finviz_digest path")
     jp.write_text(json.dumps(report, indent=2, ensure_ascii=False, default=str),
                   encoding="utf-8")
     mp.write_text(to_markdown(report), encoding="utf-8")

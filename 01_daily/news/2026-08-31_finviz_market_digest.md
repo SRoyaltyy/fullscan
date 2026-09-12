@@ -3,10 +3,14 @@
 **Generated:** 2026-08-31T09:20:05-04:00 (America/New_York)
 **Source:** `wayback`
 **Banner:** US equity futures point lower as Brent holds above $90 on US–Iran tensions and rising yields ahead of a jobs-heavy week
+**Prior close:** SPX —  Nasdaq —  Dow —
 **SPX:** —  **Nasdaq:** —  **Dow:** —
 **Oil:** Brent crude $91.0
 **CPI/Fed:** —
 **Leaders:** VLO, PSX, CVX, PYPL, SAIC, BLRX
+**Next session:** housing no · retail no · Fed yes
+**Earnings slate:** SAIC, BLRX
+**Geo/grain:** geo
 **Archive snapshot:** `20260831132005` (2026-08-31T09:20:05-04:00)
 **Archive URL:** https://web.archive.org/web/20260831132005id_/https://finviz.com/
 
@@ -15,6 +19,17 @@
 This file exists only because **Generated is before 09:30 ET on this date**. Miss the morning → leave the file missing. Do not write an afternoon scrape as if it were pre-open.
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
+
+## Theme Radar
+
+- **Prior close:** SPX — · Nasdaq — · Dow —
+- **Oil:** Brent crude $91.0
+- **CPI / Fed-odds:** —
+- **Named leaders:** VLO, PSX, CVX, PYPL, SAIC, BLRX
+- **Next-session calendar:** housing no · retail no · Fed yes
+  - A light U.S. macro calendar today features the Dallas Fed Manufacturing Index at 9:30 AM ET and Treasury bill auctions at 10:30 AM ET
+- **Earnings slate:** SAIC, BLRX
+- **Geo / grain:** geo
 
 ## Narrative
 

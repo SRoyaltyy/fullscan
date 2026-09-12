@@ -3,10 +3,14 @@
 **Generated:** 2026-07-30T08:14:27-04:00 (America/New_York)
 **Source:** `wayback`
 **Banner:** US stocks set to open higher as Microsoft earnings ease AI spending concerns ahead of GDP and jobs data amid rising long-term yields
+**Prior close:** SPX —  Nasdaq —  Dow —
 **SPX:** —  **Nasdaq:** —  **Dow:** —
 **Oil:** —
 **CPI/Fed:** —
 **Leaders:** MSFT, MU, SBUX, QCOM, NUWE, DFNS
+**Next session:** housing no · retail no · Fed yes
+**Earnings slate:** —
+**Geo/grain:** geo
 **Archive snapshot:** `20260730121427` (2026-07-30T08:14:27-04:00)
 **Archive URL:** https://web.archive.org/web/20260730121427id_/https://finviz.com/
 
@@ -15,6 +19,16 @@
 This file exists only because **Generated is before 09:30 ET on this date**. Miss the morning → leave the file missing. Do not write an afternoon scrape as if it were pre-open.
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
+
+## Theme Radar
+
+- **Prior close:** SPX — · Nasdaq — · Dow —
+- **Oil:** —
+- **CPI / Fed-odds:** —
+- **Named leaders:** MSFT, MU, SBUX, QCOM, NUWE, DFNS
+- **Next-session calendar:** housing no · retail no · Fed yes
+- **Earnings slate:** —
+- **Geo / grain:** geo
 
 ## Narrative
 

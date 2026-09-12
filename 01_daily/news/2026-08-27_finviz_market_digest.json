@@ -51,5 +51,47 @@
   "finviz_published_at": "2026-08-26T20:36:41.2",
   "finviz_source": "market_summary",
   "finviz_sentiment": "good",
-  "cpi": null
+  "cpi": null,
+  "prior_close": {
+    "spx": -0.21,
+    "nasdaq": -0.08,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": {
+      "pct": 4.3,
+      "action": "hold",
+      "text": "about 4.3% as Truist downgraded the stock to Hold"
+    }
+  },
+  "named_leaders": [
+    "XLK",
+    "AMD",
+    "CHRW",
+    "ANF",
+    "DKS",
+    "NVDA",
+    "CRWD",
+    "CRM"
+  ],
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [
+      "CRM"
+    ],
+    "text": "Investors now look to Nvidia’s full commentary, upcoming earnings from companies such as Salesforce (CRM), and any additional Fed messaging from the Jackson Hole conference for further direction."
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  }
 }

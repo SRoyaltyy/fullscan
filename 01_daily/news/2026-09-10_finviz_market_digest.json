@@ -38,7 +38,8 @@
   "oil": {
     "name": "Brent crude",
     "price": 101.0,
-    "verb": "rose"
+    "verb": "rose",
+    "direction": "up"
   },
   "fed_odds": null,
   "named_tickers": [
@@ -62,5 +63,48 @@
   "finviz_published_at": "2026-09-09T20:36:08.773",
   "finviz_source": "market_summary",
   "finviz_sentiment": "neutral",
-  "cpi": null
+  "cpi": null,
+  "prior_close": {
+    "spx": -0.48,
+    "nasdaq": -0.64,
+    "dow": -0.77
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "named_leaders": [
+    "XOM",
+    "CVX",
+    "APA",
+    "VRT",
+    "META",
+    "NET",
+    "OAIW",
+    "CASY",
+    "AAPL",
+    "COO",
+    "AEO"
+  ],
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [
+      "Traders looked ahead to Thursday’s US producer price index data, OPEC’s monthly report and an upcoming ECB policy decision."
+    ],
+    "text": "Traders looked ahead to Thursday’s US producer price index data, OPEC’s monthly report and an upcoming ECB policy decision."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Brent crude (@QA) rose more than 3% to settle above $101 per barrel after escalated US-Iran tensions disrupted Strait of Hormuz shipping and included the US disabling 10 Iranian tankers."
+  }
 }

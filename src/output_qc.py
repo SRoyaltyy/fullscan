@@ -374,6 +374,18 @@ def qc_news_actions(path: str | Path) -> QCResult:
     return _ok("news_actions", p, "ok")
 
 
+# Theme Radar first-class keys on the homepage market digest (md + json).
+THEME_RADAR_KEYS = (
+    "prior_close",
+    "oil",
+    "cpi_fed",
+    "named_leaders",
+    "next_session_calendar",
+    "earnings_slate",
+    "geo_grain",
+)
+
+
 def qc_finviz_market_digest(path: str | Path) -> QCResult:
     """Homepage market-day prose. Optional — not in preopen all_ok."""
     p = str(path)
@@ -401,6 +413,21 @@ def qc_finviz_market_digest(path: str | Path) -> QCResult:
             return _fail("finviz_market_digest", p, "generated_after_0930")
         if data.get("clock_legal") is False:
             return _fail("finviz_market_digest", p, "not_clock_legal")
+        for key in THEME_RADAR_KEYS:
+            if key not in data:
+                return _fail("finviz_market_digest", p, f"missing_{key}")
+        prior = data.get("prior_close")
+        if not isinstance(prior, dict) or not {"spx", "nasdaq", "dow"} <= set(prior):
+            return _fail("finviz_market_digest", p, "prior_close_incomplete")
+        nxt = data.get("next_session_calendar")
+        if not isinstance(nxt, dict) or not {"housing", "retail", "fed"} <= set(nxt):
+            return _fail("finviz_market_digest", p, "next_session_incomplete")
+        earn = data.get("earnings_slate")
+        if not isinstance(earn, dict) or "tickers" not in earn:
+            return _fail("finviz_market_digest", p, "earnings_slate_incomplete")
+        geo = data.get("geo_grain")
+        if not isinstance(geo, dict) or not {"geo", "grain"} <= set(geo):
+            return _fail("finviz_market_digest", p, "geo_grain_incomplete")
         return _ok("finviz_market_digest", p, "ok")
     text = _read(p)
     if len(text) < 200:
@@ -410,6 +437,15 @@ def qc_finviz_market_digest(path: str | Path) -> QCResult:
         return _fail("finviz_market_digest", p, "missing_stamp_header")
     if "before 09:30 ET" not in text:
         return _fail("finviz_market_digest", p, "missing_clock_header")
+    for marker in (
+        "## Theme Radar",
+        "**Prior close:**",
+        "**Next session:**",
+        "**Earnings slate:**",
+        "**Geo/grain:**",
+    ):
+        if marker not in text:
+            return _fail("finviz_market_digest", p, f"missing_{marker.strip('#*: ')}")
     return _ok("finviz_market_digest", p, text)
 
 

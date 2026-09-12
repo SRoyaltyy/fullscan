@@ -3,10 +3,14 @@
 **Generated:** 2026-08-27T00:01:17-04:00 (America/New_York)
 **Source:** `wayback`
 **Banner:** US stocks ended little changed as hotter July PCE lifted Treasury yields ahead of Fed’s Jackson Hole meeting while Nvidia jumped after-hours on strong AI-driven earnings
+**Prior close:** SPX -0.21%  Nasdaq -0.08%  Dow —
 **SPX:** -0.21%  **Nasdaq:** -0.08%  **Dow:** —
 **Oil:** —
 **CPI/Fed:** 4.3% hold (about 4.3% as Truist downgraded the stock to Hold)
 **Leaders:** XLK, AMD, CHRW, ANF, DKS, NVDA, CRWD, CRM
+**Next session:** housing no · retail no · Fed yes
+**Earnings slate:** CRM
+**Geo/grain:** —
 **Archive snapshot:** `20260827040117` (2026-08-27T00:01:17-04:00)
 **Archive URL:** https://web.archive.org/web/20260827040117id_/https://finviz.com/
 
@@ -15,6 +19,16 @@
 This file exists only because **Generated is before 09:30 ET on this date**. Miss the morning → leave the file missing. Do not write an afternoon scrape as if it were pre-open.
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
+
+## Theme Radar
+
+- **Prior close:** SPX -0.21% · Nasdaq -0.08% · Dow —
+- **Oil:** —
+- **CPI / Fed-odds:** 4.3% hold (about 4.3% as Truist downgraded the stock to Hold)
+- **Named leaders:** XLK, AMD, CHRW, ANF, DKS, NVDA, CRWD, CRM
+- **Next-session calendar:** housing no · retail no · Fed yes
+- **Earnings slate:** CRM
+- **Geo / grain:** —
 
 ## Narrative
 

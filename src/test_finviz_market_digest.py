@@ -16,6 +16,7 @@ from zoneinfo import ZoneInfo
 
 from src.finviz_market_digest import (
     ET,
+    THEME_RADAR_KEYS,
     backfill_range,
     build_report,
     clock_legal_at,
@@ -26,9 +27,11 @@ from src.finviz_market_digest import (
     pick_capture_for_date,
     report_has_narrative,
     save_report,
+    theme_radar_fields,
     to_markdown,
     wayback_ts_to_dt,
 )
+from src.output_qc import qc_finviz_market_digest
 
 HERE = Path(__file__).resolve().parent
 HTML_FIXTURE = HERE / "testdata" / "finviz_homepage_market_digest.html"
@@ -56,6 +59,45 @@ def _assert_friday_structure(parsed: dict) -> None:
     raw = (parsed.get("raw_text") or "").lower()
     assert "s&p 500" in raw and "0.86" in raw
     assert "brent" in raw
+    _assert_friday_theme_radar(parsed)
+
+
+def _assert_friday_theme_radar(parsed: dict) -> None:
+    radar = theme_radar_fields(parsed) if "prior_close" not in parsed else parsed
+    for key in THEME_RADAR_KEYS:
+        assert key in radar, key
+    prior = radar["prior_close"]
+    assert abs((prior.get("spx") or 0) - 0.86) < 0.001
+    assert abs((prior.get("nasdaq") or 0) - 0.96) < 0.001
+    assert abs((prior.get("dow") or 0) - 0.98) < 0.001
+    oil = radar.get("oil") or {}
+    assert oil.get("price") == 104.60
+    assert oil.get("direction") == "down"
+    cpi_fed = radar.get("cpi_fed") or {}
+    cpi = cpi_fed.get("cpi") or radar.get("cpi") or {}
+    fed = cpi_fed.get("fed_odds") or radar.get("fed_odds") or {}
+    assert "hotter" in str(cpi.get("text") or "").lower()
+    assert fed.get("pct") == 90
+    assert fed.get("action") == "hike"
+    leaders = radar.get("named_leaders") or []
+    for t in ("DELL", "HPE", "HPQ", "ORCL"):
+        assert t in leaders, leaders
+    nxt = radar.get("next_session_calendar") or {}
+    assert nxt.get("housing") is True
+    assert nxt.get("retail") is True
+    assert nxt.get("fed") is True
+    nxt_blob = " ".join([nxt.get("text") or ""] + list(nxt.get("bullets") or [])).lower()
+    assert "housing" in nxt_blob
+    assert "retail" in nxt_blob
+    earn = radar.get("earnings_slate") or {}
+    for t in ("HAIN", "RFIL", "CODA", "PLAY"):
+        assert t in (earn.get("tickers") or []), earn
+    geo = radar.get("geo_grain") or {}
+    assert geo.get("geo") is True
+    assert geo.get("grain") is True
+    geo_text = str(geo.get("text") or "").lower()
+    assert "middle east" in geo_text
+    assert "grain" in geo_text
 
 
 def test_parse_cyrus_friday_text() -> None:
@@ -122,11 +164,19 @@ def test_wayback_report_stamps_source_and_clock() -> None:
     assert "**SPX:** +0.86%" in md
     assert "**Nasdaq:** +0.96%" in md
     assert "**Dow:** +0.98%" in md
-    assert "**Oil:**" in md and "104.6" in md
+    assert "**Prior close:**" in md and "SPX +0.86%" in md
+    assert "**Oil:**" in md and "104.6" in md and "down" in md
     assert "**CPI/Fed:**" in md and "90" in md
     assert "**Leaders:**" in md and "DELL" in md
+    assert "**Next session:**" in md and "housing yes" in md and "retail yes" in md
+    assert "**Earnings slate:**" in md and "HAIN" in md
+    assert "**Geo/grain:**" in md and "geo" in md and "grain" in md
+    assert "## Theme Radar" in md
     assert "before 09:30 ET" in md
     assert "finviz_digest.md" in md
+    for key in THEME_RADAR_KEYS:
+        assert key in report, key
+    _assert_friday_theme_radar(report)
 
 
 def test_late_capture_is_not_written() -> None:
@@ -185,19 +235,39 @@ def test_save_and_morning_ok(tmp_path: Path | None = None) -> None:
     html = HTML_FIXTURE.read_text(encoding="utf-8")
     report = build_report(asof="2026-09-10", html=html, source="wayback",
                           archive_ts="20260910060618")
+    legacy_md = news / "2026-09-10_finviz_digest.md"
+    legacy_json = news / "2026-09-10_finviz_digest.json"
+    legacy_md.write_text("quote-page digest — do not touch\n", encoding="utf-8")
+    legacy_json.write_text("{}", encoding="utf-8")
     with mock.patch.object(md, "NEWS_DIR", news):
         jp, mp = save_report(report)
         assert jp.exists() and mp.exists()
+        assert jp.name.endswith("_finviz_market_digest.json")
+        assert mp.name.endswith("_finviz_market_digest.md")
+        assert not jp.name.endswith("_finviz_digest.json")
+        assert list(news.glob("*_finviz_digest.md")) == [legacy_md]
+        assert list(news.glob("*_finviz_digest.json")) == [legacy_json]
+        assert legacy_md.read_text(encoding="utf-8") == "quote-page digest — do not touch\n"
         payload = json.loads(jp.read_text(encoding="utf-8"))
         assert payload["source"] == "wayback"
         assert payload["clock_legal"] is True
         assert payload["generated_at"].startswith("2026-09-10T02:06:18")
+        for key in THEME_RADAR_KEYS:
+            assert key in payload, key
+        _assert_friday_theme_radar(payload)
+        qc_j = qc_finviz_market_digest(jp)
+        qc_m = qc_finviz_market_digest(mp)
+        assert qc_j.ok, qc_j.reason
+        assert qc_m.ok, qc_m.reason
         assert existing_morning_ok("2026-09-10") is True
         assert existing_morning_ok("2026-09-10", force=True) is False
         payload["generated_at"] = "2026-09-10T16:05:00-04:00"
         payload["clock_legal"] = False
         jp.write_text(json.dumps(payload), encoding="utf-8")
         assert existing_morning_ok("2026-09-10") is False
+        late_qc = qc_finviz_market_digest(jp)
+        assert not late_qc.ok
+        assert "generated_after_0930" in (late_qc.reason or "")
 
 
 def test_backfill_writes_wayback_and_leaves_gaps() -> None:
@@ -230,6 +300,29 @@ def test_backfill_writes_wayback_and_leaves_gaps() -> None:
     assert not (news / "2026-09-11_finviz_market_digest.json").exists()
 
 
+def test_qc_rejects_afternoon_and_missing_radar() -> None:
+    html = HTML_FIXTURE.read_text(encoding="utf-8")
+    report = build_report(
+        asof="2026-09-11", html=html, source="wayback",
+        archive_ts="20260912021039",
+    )
+    assert report["clock_legal"] is False
+    news = Path("/tmp/fullscan-market-digest-qc")
+    news.mkdir(parents=True, exist_ok=True)
+    jp = news / "2026-09-11_finviz_market_digest.json"
+    jp.write_text(json.dumps(report), encoding="utf-8")
+    qc = qc_finviz_market_digest(jp)
+    assert not qc.ok
+    assert "generated_after_0930" in (qc.reason or "") or "not_clock_legal" in (qc.reason or "")
+    report["generated_at"] = "2026-09-11T05:40:00-04:00"
+    report["clock_legal"] = True
+    del report["prior_close"]
+    jp.write_text(json.dumps(report), encoding="utf-8")
+    qc2 = qc_finviz_market_digest(jp)
+    assert not qc2.ok
+    assert "missing_prior_close" in (qc2.reason or "")
+
+
 def main() -> None:
     tests = [
         test_parse_cyrus_friday_text,
@@ -243,6 +336,7 @@ def main() -> None:
         test_pick_capture_prefers_preopen,
         test_save_and_morning_ok,
         test_backfill_writes_wayback_and_leaves_gaps,
+        test_qc_rejects_afternoon_and_missing_radar,
     ]
     failed = 0
     for fn in tests:

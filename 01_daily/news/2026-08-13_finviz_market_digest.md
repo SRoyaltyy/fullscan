@@ -3,10 +3,14 @@
 **Generated:** 2026-08-13T06:34:18-04:00 (America/New_York)
 **Source:** `wayback`
 **Banner:** US stocks set to open higher as AI earnings momentum underpins futures ahead of PPI and jobless claims with oil prices mixed amid Iran-related energy tensions
+**Prior close:** SPX —  Nasdaq —  Dow —
 **SPX:** —  **Nasdaq:** —  **Dow:** —
 **Oil:** —
 **CPI/Fed:** —
 **Leaders:** SMCI, CRWV, NBIS, DELL, AEHR, ATRO, CSCO, CBRS, COHR
+**Next session:** housing no · retail no · Fed no
+**Earnings slate:** —
+**Geo/grain:** geo
 **Archive snapshot:** `20260813103418` (2026-08-13T06:34:18-04:00)
 **Archive URL:** https://web.archive.org/web/20260813103418id_/https://finviz.com/
 
@@ -15,6 +19,16 @@
 This file exists only because **Generated is before 09:30 ET on this date**. Miss the morning → leave the file missing. Do not write an afternoon scrape as if it were pre-open.
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
+
+## Theme Radar
+
+- **Prior close:** SPX — · Nasdaq — · Dow —
+- **Oil:** —
+- **CPI / Fed-odds:** —
+- **Named leaders:** SMCI, CRWV, NBIS, DELL, AEHR, ATRO, CSCO, CBRS, COHR
+- **Next-session calendar:** housing no · retail no · Fed no
+- **Earnings slate:** —
+- **Geo / grain:** geo
 
 ## Narrative
 

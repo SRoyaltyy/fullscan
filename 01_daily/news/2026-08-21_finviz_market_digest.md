@@ -3,10 +3,14 @@
 **Generated:** 2026-08-21T01:20:17-04:00 (America/New_York)
 **Source:** `wayback`
 **Banner:** US stocks fell as Treasury yields rebounded and Walmart results pressured defensives despite supportive Treasury buyback signals
+**Prior close:** SPX —  Nasdaq —  Dow —
 **SPX:** —  **Nasdaq:** —  **Dow:** —
 **Oil:** —
 **CPI/Fed:** —
 **Leaders:** WMT, MRNA, MARA
+**Next session:** housing no · retail no · Fed yes
+**Earnings slate:** —
+**Geo/grain:** geo
 **Archive snapshot:** `20260821052017` (2026-08-21T01:20:17-04:00)
 **Archive URL:** https://web.archive.org/web/20260821052017id_/https://finviz.com/
 
@@ -15,6 +19,17 @@
 This file exists only because **Generated is before 09:30 ET on this date**. Miss the morning → leave the file missing. Do not write an afternoon scrape as if it were pre-open.
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
+
+## Theme Radar
+
+- **Prior close:** SPX — · Nasdaq — · Dow —
+- **Oil:** —
+- **CPI / Fed-odds:** —
+- **Named leaders:** WMT, MRNA, MARA
+- **Next-session calendar:** housing no · retail no · Fed yes
+  - Moderna (MRNA) fell more than 20% on profit-taking after Wednesday’s large gain on positive cancer vaccine data
+- **Earnings slate:** —
+- **Geo / grain:** geo
 
 ## Narrative
 

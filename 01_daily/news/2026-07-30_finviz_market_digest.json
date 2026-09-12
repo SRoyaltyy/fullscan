@@ -32,5 +32,41 @@
   "finviz_published_at": "2026-07-30T08:06:20.067",
   "finviz_source": "market_summary",
   "finviz_sentiment": "good",
-  "cpi": null
+  "cpi": null,
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "named_leaders": [
+    "MSFT",
+    "MU",
+    "SBUX",
+    "QCOM",
+    "NUWE",
+    "DFNS"
+  ],
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Oil (@CL) prices remain volatile on lingering Middle East tensions as investors gauge whether the rebound in risk assets can persist"
+  }
 }

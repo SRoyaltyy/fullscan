@@ -39,5 +39,46 @@
   "finviz_published_at": "2026-08-07T09:06:21.977",
   "finviz_source": "market_summary",
   "finviz_sentiment": "good",
-  "cpi": null
+  "cpi": null,
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": {
+      "pct": 4.1,
+      "action": "hike",
+      "text": "near 4.1%, easing immediate rate-hike"
+    }
+  },
+  "named_leaders": [
+    "NET",
+    "ABNB",
+    "MCHP",
+    "AKAM",
+    "EQIX",
+    "RMD",
+    "SG"
+  ],
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "With July payrolls now out and no other major US data on today’s calendar, traders focus on key S&P 500 (@ES) technical levels and potential intraday volatility in AI, software, and other rate-sensitive sectors."
+    ],
+    "text": "With July payrolls now out and no other major US data on today’s calendar, traders focus on key S&P 500 (@ES) technical levels and potential intraday volatility in AI, software, and other rate-sensitive sectors."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  }
 }

@@ -31,5 +31,40 @@
   "finviz_published_at": "2026-08-20T20:36:13.217",
   "finviz_source": "market_summary",
   "finviz_sentiment": "neutral",
-  "cpi": null
+  "cpi": null,
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "named_leaders": [
+    "WMT",
+    "MRNA",
+    "MARA"
+  ],
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "Moderna (MRNA) fell more than 20% on profit-taking after Wednesday’s large gain on positive cancer vaccine data"
+    ],
+    "text": "Moderna (MRNA) fell more than 20% on profit-taking after Wednesday’s large gain on positive cancer vaccine data"
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Energy edged higher as oil (@CL) prices moved amid Trump’s economic pressure campaign toward Iran"
+  }
 }

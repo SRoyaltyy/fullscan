@@ -19,7 +19,8 @@
   "oil": {
     "name": "Brent crude",
     "price": 91.0,
-    "verb": null
+    "verb": null,
+    "direction": null
   },
   "fed_odds": null,
   "named_tickers": [
@@ -39,5 +40,46 @@
   "finviz_published_at": "2026-08-31T09:06:31.48",
   "finviz_source": "market_summary",
   "finviz_sentiment": "bad",
-  "cpi": null
+  "cpi": null,
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "named_leaders": [
+    "VLO",
+    "PSX",
+    "CVX",
+    "PYPL",
+    "SAIC",
+    "BLRX"
+  ],
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "A light U.S. macro calendar today features the Dallas Fed Manufacturing Index at 9:30 AM ET and Treasury bill auctions at 10:30 AM ET"
+    ],
+    "text": "A light U.S. macro calendar today features the Dallas Fed Manufacturing Index at 9:30 AM ET and Treasury bill auctions at 10:30 AM ET"
+  },
+  "earnings_slate": {
+    "tickers": [
+      "SAIC",
+      "BLRX"
+    ],
+    "text": "SAIC (SAIC) and BLRX (BLRX) report earnings before the bell, with SAIC (SAIC)’s Q2 results due and a conference call scheduled for 10 AM ET"
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Brent crude (@QA) trades around $91 per barrel, up over 3% overnight, after renewed U.S.-Iran military strikes in the Strait of Hormuz spark inflation and supply-disruption fears"
+  }
 }

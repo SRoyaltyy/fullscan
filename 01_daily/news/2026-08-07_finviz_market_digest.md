@@ -3,10 +3,14 @@
 **Generated:** 2026-08-07T09:14:49-04:00 (America/New_York)
 **Source:** `wayback`
 **Banner:** US stocks set to open higher as weak July payrolls ease Fed hike worries and refocus trading on tech and rate-sensitive sectors
+**Prior close:** SPX —  Nasdaq —  Dow —
 **SPX:** —  **Nasdaq:** —  **Dow:** —
 **Oil:** —
 **CPI/Fed:** 4.1% hike (near 4.1%, easing immediate rate-hike)
 **Leaders:** NET, ABNB, MCHP, AKAM, EQIX, RMD, SG
+**Next session:** housing no · retail no · Fed yes
+**Earnings slate:** —
+**Geo/grain:** —
 **Archive snapshot:** `20260807131449` (2026-08-07T09:14:49-04:00)
 **Archive URL:** https://web.archive.org/web/20260807131449id_/https://finviz.com/
 
@@ -15,6 +19,17 @@
 This file exists only because **Generated is before 09:30 ET on this date**. Miss the morning → leave the file missing. Do not write an afternoon scrape as if it were pre-open.
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
+
+## Theme Radar
+
+- **Prior close:** SPX — · Nasdaq — · Dow —
+- **Oil:** —
+- **CPI / Fed-odds:** 4.1% hike (near 4.1%, easing immediate rate-hike)
+- **Named leaders:** NET, ABNB, MCHP, AKAM, EQIX, RMD, SG
+- **Next-session calendar:** housing no · retail no · Fed yes
+  - With July payrolls now out and no other major US data on today’s calendar, traders focus on key S&P 500 (@ES) technical levels and potential intraday volatility in AI, software, and other rate-sensitive sectors.
+- **Earnings slate:** —
+- **Geo / grain:** —
 
 ## Narrative
 

@@ -3,10 +3,14 @@
 **Generated:** 2026-08-04T06:12:00-04:00 (America/New_York)
 **Source:** `wayback`
 **Banner:** US stocks set to open modestly higher near record levels as earnings momentum continues and oil firms on Iran-linked geopolitical tensions
+**Prior close:** SPX —  Nasdaq —  Dow —
 **SPX:** —  **Nasdaq:** —  **Dow:** —
 **Oil:** —
 **CPI/Fed:** —
 **Leaders:** RAIN, ENSC, ELPW, PLTR, DXST, INTC, FSLR, AON, ZBH, MU, BP, SPCX
+**Next session:** housing no · retail no · Fed no
+**Earnings slate:** —
+**Geo/grain:** geo
 **Archive snapshot:** `20260804101200` (2026-08-04T06:12:00-04:00)
 **Archive URL:** https://web.archive.org/web/20260804101200id_/https://finviz.com/
 
@@ -15,6 +19,16 @@
 This file exists only because **Generated is before 09:30 ET on this date**. Miss the morning → leave the file missing. Do not write an afternoon scrape as if it were pre-open.
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
+
+## Theme Radar
+
+- **Prior close:** SPX — · Nasdaq — · Dow —
+- **Oil:** —
+- **CPI / Fed-odds:** —
+- **Named leaders:** RAIN, ENSC, ELPW, PLTR, DXST, INTC, FSLR, AON, ZBH, MU, BP, SPCX
+- **Next-session calendar:** housing no · retail no · Fed no
+- **Earnings slate:** —
+- **Geo / grain:** geo
 
 ## Narrative
 

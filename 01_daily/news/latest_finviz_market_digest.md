@@ -3,10 +3,14 @@
 **Generated:** 2026-09-10T02:06:18-04:00 (America/New_York)
 **Source:** `wayback`
 **Banner:** US stocks extended three-day slide as oil topped $101 and Treasury yields hit 2023 highs on US-Iran tensions and Treasury buyback disappointment ahead of PPI, OPEC report and ECB decision
+**Prior close:** SPX -0.48%  Nasdaq -0.64%  Dow -0.77%
 **SPX:** -0.48%  **Nasdaq:** -0.64%  **Dow:** -0.77%
-**Oil:** Brent crude $101.0 (rose)
+**Oil:** Brent crude $101.0 up (rose)
 **CPI/Fed:** —
 **Leaders:** XOM, CVX, APA, VRT, META, NET, OAIW, CASY, AAPL, COO, AEO
+**Next session:** housing no · retail no · Fed no
+**Earnings slate:** —
+**Geo/grain:** geo
 **Archive snapshot:** `20260910060618` (2026-09-10T02:06:18-04:00)
 **Archive URL:** https://web.archive.org/web/20260910060618id_/https://finviz.com/
 
@@ -15,6 +19,17 @@
 This file exists only because **Generated is before 09:30 ET on this date**. Miss the morning → leave the file missing. Do not write an afternoon scrape as if it were pre-open.
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
+
+## Theme Radar
+
+- **Prior close:** SPX -0.48% · Nasdaq -0.64% · Dow -0.77%
+- **Oil:** Brent crude $101.0 up (rose)
+- **CPI / Fed-odds:** —
+- **Named leaders:** XOM, CVX, APA, VRT, META, NET, OAIW, CASY, AAPL, COO, AEO
+- **Next-session calendar:** housing no · retail no · Fed no
+  - Traders looked ahead to Thursday’s US producer price index data, OPEC’s monthly report and an upcoming ECB policy decision.
+- **Earnings slate:** —
+- **Geo / grain:** geo
 
 ## Narrative
 

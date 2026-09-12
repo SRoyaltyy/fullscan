@@ -37,5 +37,44 @@
   "finviz_published_at": "2026-08-13T06:06:29.32",
   "finviz_source": "market_summary",
   "finviz_sentiment": "good",
-  "cpi": null
+  "cpi": null,
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "named_leaders": [
+    "SMCI",
+    "CRWV",
+    "NBIS",
+    "DELL",
+    "AEHR",
+    "ATRO",
+    "CSCO",
+    "CBRS",
+    "COHR"
+  ],
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Asian markets advance with the Nikkei (@NKD) and Kospi higher on chip strength, while European equities edge up and crude oil (@CL) weakens amid ongoing energy and Iran-related geopolitical tensions"
+  }
 }

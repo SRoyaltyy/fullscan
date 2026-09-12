@@ -40,5 +40,47 @@
   "finviz_published_at": "2026-08-04T06:07:14.713",
   "finviz_source": "market_summary",
   "finviz_sentiment": "good",
-  "cpi": null
+  "cpi": null,
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "named_leaders": [
+    "RAIN",
+    "ENSC",
+    "ELPW",
+    "PLTR",
+    "DXST",
+    "INTC",
+    "FSLR",
+    "AON",
+    "ZBH",
+    "MU",
+    "BP",
+    "SPCX"
+  ],
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "BP (BP) reports Q2 profits at their highest level in four years, supported by elevated oil prices partly linked to developments involving Iran"
+  }
 }
