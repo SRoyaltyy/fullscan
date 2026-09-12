@@ -1,0 +1,124 @@
+{
+  "date": "2026-09-12",
+  "generated_at": "2026-09-12T09:57:42.948955-04:00",
+  "inputs": [
+    {
+      "name": "finviz_export",
+      "family": "join",
+      "status": "ok",
+      "n": 11633,
+      "detail": "finviz_2026-09-12.csv"
+    },
+    {
+      "name": "membership",
+      "family": "join",
+      "status": "ok",
+      "n": 5904,
+      "detail": ""
+    },
+    {
+      "name": "join_ranked",
+      "family": "join",
+      "status": "ok",
+      "n": 5904,
+      "detail": "std=0.997"
+    },
+    {
+      "name": "news_actions",
+      "family": "news",
+      "status": "missing",
+      "n": 0,
+      "detail": ""
+    },
+    {
+      "name": "news_judge",
+      "family": "news",
+      "status": "missing",
+      "n": null,
+      "detail": "LLM ticker tilts absent"
+    },
+    {
+      "name": "finviz_digest",
+      "family": "news",
+      "status": "ok",
+      "n": null,
+      "detail": ""
+    },
+    {
+      "name": "ab_checklist",
+      "family": "ab",
+      "status": "ok",
+      "n": 2653,
+      "detail": "2026-09-12_ab_checklist_enriched.csv"
+    },
+    {
+      "name": "peer_rs",
+      "family": "peer",
+      "status": "ok",
+      "n": 5115,
+      "detail": ""
+    },
+    {
+      "name": "ticker_checklist",
+      "family": "addon",
+      "status": "stale",
+      "n": null,
+      "detail": "no dated file \u2014 rebound flags use latest/history (can be stale)"
+    },
+    {
+      "name": "events",
+      "family": "addon",
+      "status": "ok",
+      "n": null,
+      "detail": "32 events, scan_date=2026-09-11"
+    },
+    {
+      "name": "map_heat",
+      "family": "heat",
+      "status": "degraded",
+      "n": 15,
+      "detail": "morning research missing; Finviz industry residuals applied (15 OVERRIDE/SPLIT rows)"
+    },
+    {
+      "name": "general_predict",
+      "family": "general",
+      "status": "missing",
+      "n": null,
+      "detail": "s_general=0 \u2014 weight renormalized away"
+    },
+    {
+      "name": "sector_predicts",
+      "family": "sector",
+      "status": "missing",
+      "n": 0,
+      "detail": "0/11 quality"
+    },
+    {
+      "name": "price_store",
+      "family": "learn",
+      "status": "ok",
+      "n": null,
+      "detail": "last_date=2026-09-11"
+    }
+  ],
+  "family_status": {
+    "join": "ok",
+    "news": "missing",
+    "ab": "ok",
+    "peer": "ok",
+    "heat": "degraded",
+    "general": "missing",
+    "sector": "missing"
+  },
+  "families_present": {
+    "join": true,
+    "news": false,
+    "ab": true,
+    "peer": true,
+    "heat": true,
+    "general": false,
+    "sector": false
+  },
+  "learn_grade": true,
+  "worst": "missing"
+}

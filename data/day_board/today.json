@@ -1,14 +1,213 @@
 {
   "date": "2026-09-12",
-  "generated_at": "2026-09-12T09:57:55.502704-04:00",
-  "overall": null,
-  "ranker_ready": null,
-  "counts": {},
-  "buy_1d": [],
-  "sell_1d": [],
+  "generated_at": "2026-09-12T09:58:06.241182-04:00",
+  "overall": "PARTIAL",
+  "ranker_ready": false,
+  "counts": {
+    "ok": 5,
+    "partial": 1,
+    "fail": 2,
+    "n": 8
+  },
+  "buy_1d": [
+    {
+      "ticker": "DELL",
+      "score": 0.43676553044006766
+    },
+    {
+      "ticker": "HPQ",
+      "score": 0.528598006405009
+    },
+    {
+      "ticker": "AVT",
+      "score": 0.879035750869753
+    },
+    {
+      "ticker": "ARW",
+      "score": 0.41440516636040015
+    },
+    {
+      "ticker": "VICR",
+      "score": 0.8070185773904419
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "BORR",
+      "score": -0.34346989205912665
+    },
+    {
+      "ticker": "EU",
+      "score": -0.3245228478652499
+    },
+    {
+      "ticker": "LUCD",
+      "score": -0.013877974465299744
+    },
+    {
+      "ticker": "SGML",
+      "score": -0.46795508234779043
+    },
+    {
+      "ticker": "AG",
+      "score": -0.220822694577552
+    },
+    {
+      "ticker": "QDEL",
+      "score": -0.04479286056507631
+    },
+    {
+      "ticker": "SLQT",
+      "score": -0.3246371945956714
+    },
+    {
+      "ticker": "TNDM",
+      "score": -0.08280656080926263
+    }
+  ],
   "flatten": {},
   "general": {},
   "sectors": {},
-  "lands": [],
+  "lands": [
+    {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-09-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-12T04:45:00.602738-04:00",
+      "files": [
+        {
+          "path": "data/universe/2026-09-12_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1118366,
+          "preview": "5904 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5904 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-12T09:57:00.713829-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-12_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9497,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.45, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.05, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.385, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.98, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -4.67, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.52, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-12_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5248,
+          "preview": "# Weather report \u2014 2026-09-12\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.45, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.05, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.385, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.98, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -4.67, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.52, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-12\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-12T09:57:03.523959-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-12_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2251574,
+          "preview": "5904 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, HRMY, EXEL, NUTX, CDNA"
+        }
+      ],
+      "preview": "5904 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, HRMY, EXEL, NUTX, CDNA"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-12T09:57:37.539162-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-12_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7624280,
+          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, HSBC, SKM"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-12_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8463617,
+          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, AVT, SFL, LFST, CXW"
+        }
+      ],
+      "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, HSBC, SKM \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, AVT, SFL, LFST, CXW"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-12T09:58:05.571839-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-12_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1459637,
+          "preview": "1d BUY DELL, HPQ, AVT, ARW, VICR \u00b7 SELL BORR, EU, LUCD, SGML, AG, QDEL, SLQT, TNDM"
+        },
+        {
+          "path": "data/stock_book/2026-09-12_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-12_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2594,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-12_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12134,
+          "preview": "2026-09-12 BUY DELL, HPQ, AVT, ARW, VICR \u00b7 SELL BORR, EU, LUCD, SGML, AG, QDEL, SLQT, TNDM"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12134,
+          "preview": "2026-09-12 BUY DELL, HPQ, AVT, ARW, VICR \u00b7 SELL BORR, EU, LUCD, SGML, AG, QDEL, SLQT, TNDM"
+        },
+        {
+          "path": "01_daily/2026-09-12_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 81682,
+          "preview": "# Stock book \u2014 2026-09-12\n_Generated 2026-09-12T09:57:46.952900-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY DELL, HPQ, AVT, ARW, VICR \u00b7 SELL BORR, EU, LUCD, SGML, AG, QDEL, SLQT, TNDM \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-12 BUY DELL, HPQ, AVT, ARW, VICR \u00b7 SELL BORR, EU, LUCD, SGML, AG, QDEL, SLQT, TNDM \u00b7 2026-09-12 BUY DELL, HPQ, AVT, ARW, VICR \u00b7 SELL BORR, EU, LUCD, SGML, AG, QDEL, SLQT, TNDM \u00b7 # Stock book \u2014 2026-09-12\n_Generated 2026-09-12T09:57:46.952900-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    }
+  ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
 }
