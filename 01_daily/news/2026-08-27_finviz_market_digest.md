@@ -1,18 +1,20 @@
 # Finviz homepage market digest — 2026-08-27
 
-**Generated:** 2026-09-12T09:44:53.976262-04:00 (America/New_York)
+**Generated:** 2026-08-27T00:01:17-04:00 (America/New_York)
 **Source:** `wayback`
+**Banner:** US stocks ended little changed as hotter July PCE lifted Treasury yields ahead of Fed’s Jackson Hole meeting while Nvidia jumped after-hours on strong AI-driven earnings
+**SPX:** -0.21%  **Nasdaq:** -0.08%  **Dow:** —
+**Oil:** —
+**CPI/Fed:** 4.3% hold (about 4.3% as Truist downgraded the stock to Hold)
+**Leaders:** XLK, AMD, CHRW, ANF, DKS, NVDA, CRWD, CRM
 **Archive snapshot:** `20260827040117` (2026-08-27T00:01:17-04:00)
 **Archive URL:** https://web.archive.org/web/20260827040117id_/https://finviz.com/
-**clock_legal:** `true`
 
 ## Clock
 
-This is the live Finviz homepage market-day prose (Weekend Brief / session recap) — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ~400 ticker blurbs).
+This file exists only because **Generated is before 09:30 ET on this date**. Miss the morning → leave the file missing. Do not write an afternoon scrape as if it were pre-open.
 
-What it represents: often the **prior cash close plus overnight / weekend news**. A weekday pre-open capture is last session + overnight wires. A Saturday Weekend Brief is Friday's close + Monday setup.
-
-Same-morning Pre-Open may use this file **only if `clock_legal` is true** (Generated, or the archive snapshot timestamp, is before that session's 09:30 ET open). Theme Radar KEEP/KILL later. Capture + store only — not wired into tape_anchor / predict.
+Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
 ## Narrative
 
@@ -27,11 +29,3 @@ Same-morning Pre-Open may use this file **only if `clock_legal` is true** (Gener
 - Nvidia (NVDA) fell about 1.6% during the regular session but rose around 4.7% after-hours after beating Q2 expectations with revenue of $96.22 billion (up about 106% year-over-year), adjusted EPS of $2.22 versus $2.10 expected, strong data center sales of $89 billion, and raised guidance including a forecast for its first $100 billion revenue quarter and continued employment growth.
 - CrowdStrike (CRWD) rallied in extended trading after reporting record results, with revenue of $1.47 billion (up 26% year-over-year) beating estimates, accelerating annual recurring revenue, and management calling it its “best quarter in history” on strong AI-driven momentum.
 - Investors now look to Nvidia’s full commentary, upcoming earnings from companies such as Salesforce (CRM), and any additional Fed messaging from the Jackson Hole conference for further direction.
-
-## Structured
-
-- **Index moves:** S&P 500 -0.21%; Nasdaq Composite -0.08%
-- **Fed odds:** 4.3% hold (about 4.3% as Truist downgraded the stock to Hold)
-- **Named tickers:** XLK, AMD, CHRW, ANF, DKS, NVDA, CRWD, CRM
-- **Finviz widget stamp:** 2026-08-26T20:36:41.2
-- **Finviz sentiment:** good

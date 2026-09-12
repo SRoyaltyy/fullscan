@@ -12,13 +12,12 @@ Outputs:
   01_daily/news/<date>_finviz_market_digest.json
   01_daily/news/latest_finviz_market_digest.md
 
-Clock:
-  Generated is always America/New_York ISO. Same-morning Pre-Open may
-  use the file only when clock_legal is true:
-    live    → Generated < that session's 09:30 ET
-    wayback / archive.ph → archive snapshot timestamp < 09:30 ET
-  After-open captures are still stored (history) with clock_legal=false.
-  Theme Radar KEEP/KILL later. Not wired into tape_anchor / predict.
+Clock (Theme Radar contract):
+  Generated is the scrape time in America/New_York ISO — live fetch now,
+  or the archive snapshot time for Wayback / archive.ph. The file is
+  written only when Generated is before 09:30 ET on that date. Miss the
+  morning → leave the file missing. Do not write an afternoon scrape.
+  Not wired into tape_anchor / predict / #210.
 
 CLI:
   python -m src.finviz_market_digest [--date YYYY-MM-DD] [--html PATH]
@@ -44,7 +43,6 @@ NEWS_DIR = ROOT / "01_daily" / "news"
 ET = ZoneInfo(config.TZ)
 UTC = ZoneInfo("UTC")
 OPEN_HM = 930
-MORNING_REWRITE_HM = 535
 
 HOME_PATHS = ("/", "/index.ashx")
 CDX_URL = "https://web.archive.org/cdx/search/cdx"
@@ -114,6 +112,10 @@ FED_ODDS_RE = re.compile(
     r"\b(hike|cut|hold|pause)\b[^\n.]{0,80}?"
     r"(\d+(?:\.\d+)?)\s*%",
     re.I,
+)
+CPI_RE = re.compile(
+    r"(?i)\b((?:hotter|cooler|softer|hot)-than-expected\s+)?"
+    r"(?:[A-Za-z]+\s+)?CPI\b[^\n.]{0,140}"
 )
 CAL_HINT_RE = re.compile(
     r"(?i)\b(monday|tuesday|wednesday|thursday|friday|tomorrow|today|"
@@ -241,6 +243,15 @@ def parse_oil(text: str) -> dict[str, Any] | None:
     return {"name": name, "price": price, "verb": verb}
 
 
+def parse_cpi(text: str) -> dict[str, Any] | None:
+    m = CPI_RE.search(text or "")
+    if not m:
+        return None
+    snippet = re.sub(r"\s+", " ", m.group(0)).strip()
+    hotter = bool(re.search(r"(?i)hotter|\bhot\b", snippet))
+    return {"text": snippet, "hotter": hotter}
+
+
 def parse_fed_odds(text: str) -> dict[str, Any] | None:
     m = FED_ODDS_RE.search(text or "")
     if not m:
@@ -337,6 +348,7 @@ def structured_from_text(text: str) -> dict[str, Any]:
     return {
         "index_moves": parse_index_moves(plain),
         "oil": parse_oil(plain),
+        "cpi": parse_cpi(plain),
         "fed_odds": parse_fed_odds(plain),
         "named_tickers": parse_named_tickers(text or ""),
         "calendar": parse_calendar_bullets(plain),
@@ -406,14 +418,15 @@ def build_report(
     error: str | None = None,
 ) -> dict:
     asof = asof or et_now().date().isoformat()
-    generated = et_now()
-    parsed = parse_homepage_html(html) if html else None
     archive_dt = wayback_ts_to_dt(archive_ts) if archive_ts else None
-    if source in ("wayback", "archive.ph"):
-        legal_dt = archive_dt.astimezone(ET) if archive_dt else None
+    # Generated = scrape time. Wayback/archive.ph use the snapshot clock,
+    # not the reconstruction clock, so Theme Radar can trust < 09:30 ET.
+    if source in ("wayback", "archive.ph") and archive_dt is not None:
+        generated = archive_dt.astimezone(ET)
     else:
-        legal_dt = generated
-    clock_legal = clock_legal_at(legal_dt, asof)
+        generated = et_now()
+    clock_legal = clock_legal_at(generated, asof)
+    parsed = parse_homepage_html(html) if html else None
     report = {
         "date": asof,
         "generated_at": generated.isoformat(),
@@ -427,15 +440,14 @@ def build_report(
         "archive_url": archive_url,
         "clock_legal": clock_legal,
         "clock_rule": (
-            "Pre-Open may use this file only if clock_legal is true: "
-            "live Generated, or archive snapshot, is before this session's "
-            "09:30 ET open. After-open / weekend captures stay on disk "
-            "with clock_legal=false. Not wired into tape_anchor / predict."
+            "Theme Radar: file exists only when Generated is before 09:30 ET "
+            "on this date. Miss the morning → leave missing. Do not write an "
+            "afternoon scrape. Capture only — not tape_anchor / predict / #210."
         ),
         "kind": "finviz_homepage_market_digest",
         "represents": (
-            "Live Finviz homepage market-day prose (prior cash close + "
-            "overnight / weekend news). Not quote-page ticker blurbs."
+            "Finviz homepage market-day prose captured before 09:30 ET. "
+            "Not quote-page ticker blurbs."
         ),
         "error": error,
         "headline": None,
@@ -443,6 +455,7 @@ def build_report(
         "raw_summary_md": None,
         "index_moves": [],
         "oil": None,
+        "cpi": None,
         "fed_odds": None,
         "named_tickers": [],
         "calendar": [],
@@ -450,7 +463,7 @@ def build_report(
     if parsed:
         for k in (
             "headline", "raw_text", "raw_summary_md", "index_moves", "oil",
-            "fed_odds", "named_tickers", "calendar", "finviz_id",
+            "cpi", "fed_odds", "named_tickers", "calendar", "finviz_id",
             "finviz_ticker", "finviz_published_at", "finviz_source",
             "finviz_sentiment",
         ):
@@ -459,15 +472,53 @@ def build_report(
     return report
 
 
+def _move_pct(moves: list, *codes: str) -> float | None:
+    by = {str(m.get("code") or ""): m for m in (moves or []) if isinstance(m, dict)}
+    for code in codes:
+        if code in by and by[code].get("change_pct") is not None:
+            return float(by[code]["change_pct"])
+    return None
+
+
+def _fmt_pct(pct: float | None) -> str:
+    if pct is None:
+        return "—"
+    return f"{pct:+.2f}%"
+
+
 def to_markdown(report: dict) -> str:
     src = report.get("source") or "live"
     gen = report.get("generated_at") or ""
-    legal = "true" if report.get("clock_legal") else "false"
+    headline = str(report.get("headline") or "").strip()
+    moves = report.get("index_moves") or []
+    spx = _fmt_pct(_move_pct(moves, "SPX", "SPY"))
+    nasdaq = _fmt_pct(_move_pct(moves, "COMP", "NDX", "QQQ"))
+    dow = _fmt_pct(_move_pct(moves, "DJI", "DIA"))
+    oil = report.get("oil") or {}
+    oil_s = "—"
+    if oil.get("price") is not None:
+        verb = f" ({oil['verb']})" if oil.get("verb") else ""
+        oil_s = f"{oil.get('name')} ${oil.get('price')}{verb}"
+    cpi = report.get("cpi") or {}
+    fed = report.get("fed_odds") or {}
+    cpi_fed = []
+    if cpi.get("text"):
+        cpi_fed.append(str(cpi["text"]))
+    if fed.get("pct") is not None:
+        cpi_fed.append(f"{fed.get('pct')}% {fed.get('action') or ''} "
+                       f"({fed.get('text') or ''})".strip())
+    cpi_fed_s = "; ".join(x for x in cpi_fed if x) or "—"
+    leaders = ", ".join(report.get("named_tickers") or []) or "—"
     lines = [
         f"# Finviz homepage market digest — {report.get('date')}",
         "",
         f"**Generated:** {gen} (America/New_York)",
         f"**Source:** `{src}`",
+        f"**Banner:** {headline or '—'}",
+        f"**SPX:** {spx}  **Nasdaq:** {nasdaq}  **Dow:** {dow}",
+        f"**Oil:** {oil_s}",
+        f"**CPI/Fed:** {cpi_fed_s}",
+        f"**Leaders:** {leaders}",
     ]
     if report.get("archive_snapshot_ts") or report.get("archive_snapshot_at"):
         lines.append(
@@ -477,27 +528,20 @@ def to_markdown(report: dict) -> str:
         if report.get("archive_url"):
             lines.append(f"**Archive URL:** {report['archive_url']}")
     lines += [
-        f"**clock_legal:** `{legal}`",
         "",
         "## Clock",
         "",
-        "This is the live Finviz homepage market-day prose (Weekend Brief / "
-        "session recap) — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page "
-        "headlines + ~400 ticker blurbs).",
+        "This file exists only because **Generated is before 09:30 ET on "
+        "this date**. Miss the morning → leave the file missing. Do not "
+        "write an afternoon scrape as if it were pre-open.",
         "",
-        "What it represents: often the **prior cash close plus overnight / "
-        "weekend news**. A weekday pre-open capture is last session + overnight "
-        "wires. A Saturday Weekend Brief is Friday's close + Monday setup.",
-        "",
-        "Same-morning Pre-Open may use this file **only if `clock_legal` is "
-        "true** (Generated, or the archive snapshot timestamp, is before that "
-        "session's 09:30 ET open). Theme Radar KEEP/KILL later. Capture + "
-        "store only — not wired into tape_anchor / predict.",
+        "Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` "
+        "(quote-page headlines + ticker blurbs). Capture only. Not wired "
+        "into tape_anchor / predict / #210.",
         "",
         "## Narrative",
         "",
     ]
-    headline = report.get("headline")
     if headline:
         lines.append(f"**{headline}**")
         lines.append("")
@@ -509,40 +553,16 @@ def to_markdown(report: dict) -> str:
         err = report.get("error") or "no homepage market narrative in this snapshot"
         lines.append(f"_unavailable: {err}_")
         lines.append("")
-    lines += ["## Structured", ""]
-    moves = report.get("index_moves") or []
-    if moves:
-        bits = [f"{m.get('name')} {m.get('change_pct'):+.2f}%" for m in moves]
-        lines.append("- **Index moves:** " + "; ".join(bits))
-    oil = report.get("oil")
-    if oil:
-        verb = f" ({oil['verb']})" if oil.get("verb") else ""
-        lines.append(f"- **Oil:** {oil.get('name')} ${oil.get('price')}{verb}")
-    fed = report.get("fed_odds")
-    if fed:
-        lines.append(
-            f"- **Fed odds:** {fed.get('pct')}% {fed.get('action')} "
-            f"({fed.get('text')})"
-        )
-    tickers = report.get("named_tickers") or []
-    if tickers:
-        lines.append("- **Named tickers:** " + ", ".join(tickers))
-    cal = report.get("calendar") or []
-    if cal:
-        lines.append("- **Forward calendar:**")
-        for c in cal:
-            lines.append(f"  - {c}")
-    if report.get("finviz_published_at"):
-        lines.append(f"- **Finviz widget stamp:** {report['finviz_published_at']}")
-    if report.get("finviz_sentiment"):
-        lines.append(f"- **Finviz sentiment:** {report['finviz_sentiment']}")
-    lines.append("")
     return "\n".join(lines).rstrip() + "\n"
 
 
-def save_report(report: dict) -> tuple[Path, Path]:
-    NEWS_DIR.mkdir(parents=True, exist_ok=True)
+def save_report(report: dict) -> tuple[Path, Path] | None:
+    """Write only when Generated is before 09:30 ET on that date."""
     date_str = report["date"]
+    if not report.get("clock_legal"):
+        print(f"[market_digest] {date_str}: after 09:30 ET — leave missing")
+        return None
+    NEWS_DIR.mkdir(parents=True, exist_ok=True)
     jp = NEWS_DIR / f"{date_str}_finviz_market_digest.json"
     mp = NEWS_DIR / f"{date_str}_finviz_market_digest.md"
     jp.write_text(json.dumps(report, indent=2, ensure_ascii=False, default=str),
@@ -573,16 +593,10 @@ def existing_morning_ok(date_str: str, force: bool = False) -> bool:
         return False
     if not report_has_narrative(payload):
         return False
-    gen = str(payload.get("generated_at") or "")
-    if not gen.startswith(date_str) or len(gen) < 16:
+    if not payload.get("clock_legal"):
         return False
-    try:
-        hm = int(gen[11:13]) * 100 + int(gen[14:16])
-    except ValueError:
-        return False
-    if hm < MORNING_REWRITE_HM:
-        return False
-    return True
+    dt = parse_et_iso(str(payload.get("generated_at") or ""))
+    return clock_legal_at(dt, date_str)
 
 
 # ---------------------------------------------------------------------------
@@ -660,17 +674,13 @@ def collect_cdx(start: str, end: str,
 
 
 def pick_capture_for_date(rows: list[dict], date_str: str) -> dict | None:
-    """Best homepage snapshot for ET calendar date `date_str`.
+    """Latest homepage snapshot on ET date `date_str` before 09:30 ET.
 
-    Prefer the latest capture that day before 09:30 ET (clock_legal).
-    Else the latest same-ET-day capture (clock_legal=false).
+    Afternoon / evening captures are ignored (Theme Radar: leave missing).
     """
     day = [r for r in rows if r.get("et_date") == date_str]
-    if not day:
-        return None
     pre = [r for r in day if clock_legal_at(parse_et_iso(r.get("et")), date_str)]
-    pool = pre or day
-    return pool[-1]
+    return pre[-1] if pre else None
 
 
 def fetch_wayback_html(ts: str, original: str,
@@ -818,11 +828,19 @@ def backfill_range(start: str, end: str, force: bool = False,
             gaps.append(date_str)
             print(f"[market_digest] {date_str}: gap (parsed empty)")
             continue
-        jp, mp = save_report(report)
+        if not report.get("clock_legal"):
+            gaps.append(date_str)
+            print(f"[market_digest] {date_str}: after 09:30 ET — leave missing")
+            continue
+        saved = save_report(report)
+        if not saved:
+            gaps.append(date_str)
+            continue
+        jp, mp = saved
         wrote.append(date_str)
         print(
             f"[market_digest] {date_str}: {report['source']} "
-            f"clock_legal={report['clock_legal']} "
+            f"Generated={report['generated_at']} "
             f"snap={report.get('archive_snapshot_ts')} → {mp.name}"
         )
     return {
@@ -882,9 +900,12 @@ def main() -> None:
         report = build_report(asof=date_str, html=None, source="text")
         report.update(parsed)
         report["error"] = None
-        # text path still needs clock from Generated
-        jp, mp = save_report(report)
-        print(f"[market_digest] {date_str}: text → {mp}")
+        report["clock_legal"] = clock_legal_at(
+            parse_et_iso(str(report.get("generated_at") or "")), date_str)
+        saved = save_report(report)
+        if not saved:
+            return
+        print(f"[market_digest] {date_str}: text → {saved[1]}")
         _land(date_str)
         return
     if args.html:
@@ -902,10 +923,13 @@ def main() -> None:
         print(f"[market_digest] {date_str}: no narrative ({err or 'empty'})")
         # Do not write a stub that Theme Radar could mistake for a digest.
         raise SystemExit("finviz market digest: no homepage narrative")
-    jp, mp = save_report(report)
+    saved = save_report(report)
+    if not saved:
+        return
+    jp, mp = saved
     print(
         f"[market_digest] {report['date']}: source={report['source']} "
-        f"clock_legal={report['clock_legal']} "
+        f"Generated={report['generated_at']} "
         f"tickers={report.get('named_tickers')} "
         f"moves={len(report.get('index_moves') or [])}"
     )

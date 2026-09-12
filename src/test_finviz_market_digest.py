@@ -46,6 +46,8 @@ def _assert_friday_structure(parsed: dict) -> None:
     fed = parsed.get("fed_odds") or {}
     assert fed.get("pct") == 90
     assert fed.get("action") == "hike"
+    cpi = parsed.get("cpi") or {}
+    assert "cpi" in str(cpi.get("text") or "").lower()
     tickers = parsed.get("named_tickers") or []
     for t in ("DELL", "HPE", "HPQ", "ORCL"):
         assert t in tickers, tickers
@@ -111,17 +113,23 @@ def test_wayback_report_stamps_source_and_clock() -> None:
     )
     assert report["source"] == "wayback"
     assert report["archive_snapshot_ts"] == "20260910060618"
+    assert report["generated_at"].startswith("2026-09-10T02:06:18")
     assert report["clock_legal"] is True
     assert report["timezone"] == "America/New_York"
     md = to_markdown(report)
-    assert "source=wayback" in md.replace(" ", "").replace("`", "") or "**Source:** `wayback`" in md
-    assert "20260910060618" in md
-    assert "clock_legal" in md
-    assert "not" in md.lower() and "finviz_digest.md" in md
-    assert "09:30" in md
+    assert "**Source:** `wayback`" in md
+    assert "**Banner:**" in md and "Weekend Brief" in md
+    assert "**SPX:** +0.86%" in md
+    assert "**Nasdaq:** +0.96%" in md
+    assert "**Dow:** +0.98%" in md
+    assert "**Oil:**" in md and "104.6" in md
+    assert "**CPI/Fed:**" in md and "90" in md
+    assert "**Leaders:**" in md and "DELL" in md
+    assert "before 09:30 ET" in md
+    assert "finviz_digest.md" in md
 
 
-def test_late_archive_is_honest_not_legal() -> None:
+def test_late_capture_is_not_written() -> None:
     html = HTML_FIXTURE.read_text(encoding="utf-8")
     report = build_report(
         asof="2026-09-11",
@@ -130,7 +138,14 @@ def test_late_archive_is_honest_not_legal() -> None:
         archive_ts="20260912021039",
     )
     assert report["clock_legal"] is False
-    assert "clock_legal:** `false`" in to_markdown(report)
+    import src.finviz_market_digest as md
+    news = Path("/tmp/fullscan-market-digest-late")
+    news.mkdir(parents=True, exist_ok=True)
+    for p in news.glob("*"):
+        p.unlink()
+    with mock.patch.object(md, "NEWS_DIR", news):
+        assert save_report(report) is None
+        assert list(news.glob("*finviz_market_digest*")) == []
 
 
 def test_does_not_invent_from_quote_digest() -> None:
@@ -158,6 +173,9 @@ def test_pick_capture_prefers_preopen() -> None:
     assert pick is not None
     assert pick["timestamp"] == "20260910060618"
     assert pick_capture_for_date(rows, "2026-09-12") is None
+    afternoon_only = [rows[1] | {"et_date": "2026-09-11",
+                                 "et": "2026-09-11T20:03:11-04:00"}]
+    assert pick_capture_for_date(afternoon_only, "2026-09-11") is None
 
 
 def test_save_and_morning_ok(tmp_path: Path | None = None) -> None:
@@ -173,12 +191,11 @@ def test_save_and_morning_ok(tmp_path: Path | None = None) -> None:
         payload = json.loads(jp.read_text(encoding="utf-8"))
         assert payload["source"] == "wayback"
         assert payload["clock_legal"] is True
-        # Stamp generated_at as a morning write so skip-if-good holds.
-        payload["generated_at"] = "2026-09-10T05:41:00-04:00"
-        jp.write_text(json.dumps(payload), encoding="utf-8")
+        assert payload["generated_at"].startswith("2026-09-10T02:06:18")
         assert existing_morning_ok("2026-09-10") is True
         assert existing_morning_ok("2026-09-10", force=True) is False
-        payload["generated_at"] = "2026-09-10T01:10:00-04:00"
+        payload["generated_at"] = "2026-09-10T16:05:00-04:00"
+        payload["clock_legal"] = False
         jp.write_text(json.dumps(payload), encoding="utf-8")
         assert existing_morning_ok("2026-09-10") is False
 
@@ -221,7 +238,7 @@ def main() -> None:
         test_rejects_login_and_empty,
         test_clock_legal_uses_archive_snapshot_not_generated,
         test_wayback_report_stamps_source_and_clock,
-        test_late_archive_is_honest_not_legal,
+        test_late_capture_is_not_written,
         test_does_not_invent_from_quote_digest,
         test_pick_capture_prefers_preopen,
         test_save_and_morning_ok,

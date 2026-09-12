@@ -389,12 +389,26 @@ def qc_finviz_market_digest(path: str | Path) -> QCResult:
             return _fail("finviz_market_digest", p, "empty_narrative", empty=True)
         if not data.get("generated_at"):
             return _fail("finviz_market_digest", p, "missing_generated_at")
+        gen = str(data.get("generated_at") or "")
+        date = str(data.get("date") or "")
+        if not date or not gen.startswith(date) or len(gen) < 16:
+            return _fail("finviz_market_digest", p, "generated_not_on_date")
+        try:
+            hm = int(gen[11:13]) * 100 + int(gen[14:16])
+        except ValueError:
+            return _fail("finviz_market_digest", p, "generated_unparseable")
+        if hm >= 930:
+            return _fail("finviz_market_digest", p, "generated_after_0930")
+        if data.get("clock_legal") is False:
+            return _fail("finviz_market_digest", p, "not_clock_legal")
         return _ok("finviz_market_digest", p, "ok")
     text = _read(p)
     if len(text) < 200:
         return _fail("finviz_market_digest", p, f"too_small({len(text)})", text,
                      empty=True)
-    if "clock_legal" not in text or "Generated" not in text:
+    if "**Generated:**" not in text or "**Banner:**" not in text:
+        return _fail("finviz_market_digest", p, "missing_stamp_header")
+    if "before 09:30 ET" not in text:
         return _fail("finviz_market_digest", p, "missing_clock_header")
     return _ok("finviz_market_digest", p, text)
 

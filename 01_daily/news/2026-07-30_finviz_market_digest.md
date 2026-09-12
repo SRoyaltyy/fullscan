@@ -1,18 +1,20 @@
 # Finviz homepage market digest — 2026-07-30
 
-**Generated:** 2026-09-12T09:44:33.302163-04:00 (America/New_York)
+**Generated:** 2026-07-30T08:14:27-04:00 (America/New_York)
 **Source:** `wayback`
+**Banner:** US stocks set to open higher as Microsoft earnings ease AI spending concerns ahead of GDP and jobs data amid rising long-term yields
+**SPX:** —  **Nasdaq:** —  **Dow:** —
+**Oil:** —
+**CPI/Fed:** —
+**Leaders:** MSFT, MU, SBUX, QCOM, NUWE, DFNS
 **Archive snapshot:** `20260730121427` (2026-07-30T08:14:27-04:00)
 **Archive URL:** https://web.archive.org/web/20260730121427id_/https://finviz.com/
-**clock_legal:** `true`
 
 ## Clock
 
-This is the live Finviz homepage market-day prose (Weekend Brief / session recap) — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ~400 ticker blurbs).
+This file exists only because **Generated is before 09:30 ET on this date**. Miss the morning → leave the file missing. Do not write an afternoon scrape as if it were pre-open.
 
-What it represents: often the **prior cash close plus overnight / weekend news**. A weekday pre-open capture is last session + overnight wires. A Saturday Weekend Brief is Friday's close + Monday setup.
-
-Same-morning Pre-Open may use this file **only if `clock_legal` is true** (Generated, or the archive snapshot timestamp, is before that session's 09:30 ET open). Theme Radar KEEP/KILL later. Capture + store only — not wired into tape_anchor / predict.
+Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
 ## Narrative
 
@@ -28,9 +30,3 @@ Same-morning Pre-Open may use this file **only if `clock_legal` is true** (Gener
 - The 30-year US Treasury yield trades back near 2007 highs amid an ongoing bond-market selloff and questions over Fed credibility
 - European equities edge higher with London’s FTSE 100 at record levels, while Asian markets finish the session mixed
 - Oil (@CL) prices remain volatile on lingering Middle East tensions as investors gauge whether the rebound in risk assets can persist
-
-## Structured
-
-- **Named tickers:** MSFT, MU, SBUX, QCOM, NUWE, DFNS
-- **Finviz widget stamp:** 2026-07-30T08:06:20.067
-- **Finviz sentiment:** good

@@ -1,9 +1,11 @@
 name: Finviz homepage market digest
 
 # Capture-only homepage market-day prose (NOT quote-page ticker blurbs).
+# Theme Radar: write only when Generated is before 09:30 ET. Miss morning
+# → leave missing. Do not land an afternoon scrape.
 # Primary weekday path is finviz_preopen_scrape.yml (cron 09:40 UTC = 05:40 ET).
 # This file is a last-chance weekday slot (~08:00 ET) plus dispatch / backfill.
-# Do not run live HTML on ECS (403). Not wired into tape_anchor / predict.
+# Do not run live HTML on ECS (403). Not wired into tape_anchor / predict / #210.
 
 on:
   schedule:

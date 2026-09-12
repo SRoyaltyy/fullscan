@@ -1,18 +1,20 @@
 # Finviz homepage market digest — 2026-09-10
 
-**Generated:** 2026-09-12T09:45:03.159647-04:00 (America/New_York)
+**Generated:** 2026-09-10T02:06:18-04:00 (America/New_York)
 **Source:** `wayback`
+**Banner:** US stocks extended three-day slide as oil topped $101 and Treasury yields hit 2023 highs on US-Iran tensions and Treasury buyback disappointment ahead of PPI, OPEC report and ECB decision
+**SPX:** -0.48%  **Nasdaq:** -0.64%  **Dow:** -0.77%
+**Oil:** Brent crude $101.0 (rose)
+**CPI/Fed:** —
+**Leaders:** XOM, CVX, APA, VRT, META, NET, OAIW, CASY, AAPL, COO, AEO
 **Archive snapshot:** `20260910060618` (2026-09-10T02:06:18-04:00)
 **Archive URL:** https://web.archive.org/web/20260910060618id_/https://finviz.com/
-**clock_legal:** `true`
 
 ## Clock
 
-This is the live Finviz homepage market-day prose (Weekend Brief / session recap) — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ~400 ticker blurbs).
+This file exists only because **Generated is before 09:30 ET on this date**. Miss the morning → leave the file missing. Do not write an afternoon scrape as if it were pre-open.
 
-What it represents: often the **prior cash close plus overnight / weekend news**. A weekday pre-open capture is last session + overnight wires. A Saturday Weekend Brief is Friday's close + Monday setup.
-
-Same-morning Pre-Open may use this file **only if `clock_legal` is true** (Generated, or the archive snapshot timestamp, is before that session's 09:30 ET open). Theme Radar KEEP/KILL later. Capture + store only — not wired into tape_anchor / predict.
+Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
 ## Narrative
 
@@ -28,13 +30,3 @@ Same-morning Pre-Open may use this file **only if `clock_legal` is true** (Gener
 - Casey’s General Stores (CASY) fell nearly 15% despite an earnings beat, while Apple (AAPL) slipped 0.3% after new CEO John Ternus launched the first foldable iPhone Duo.
 - In after-hours trading, Cooper Companies (COO) dropped about 16% on a revenue miss and American Eagle Outfitters (AEO) fell more than 10% after cutting its outlook.
 - Traders looked ahead to Thursday’s US producer price index data, OPEC’s monthly report and an upcoming ECB policy decision.
-
-## Structured
-
-- **Index moves:** S&P 500 -0.48%; Dow -0.77%; Nasdaq -0.64%
-- **Oil:** Brent crude $101.0 (rose)
-- **Named tickers:** XOM, CVX, APA, VRT, META, NET, OAIW, CASY, AAPL, COO, AEO
-- **Forward calendar:**
-  - Traders looked ahead to Thursday’s US producer price index data, OPEC’s monthly report and an upcoming ECB policy decision.
-- **Finviz widget stamp:** 2026-09-09T20:36:08.773
-- **Finviz sentiment:** neutral

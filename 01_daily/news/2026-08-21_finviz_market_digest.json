@@ -1,6 +1,6 @@
 {
   "date": "2026-08-21",
-  "generated_at": "2026-09-12T09:44:50.975211-04:00",
+  "generated_at": "2026-08-21T01:20:17-04:00",
   "timezone": "America/New_York",
   "source": "wayback",
   "source_url": "https://web.archive.org/web/20260821052017id_/https://finviz.com/",
@@ -8,7 +8,7 @@
   "archive_snapshot_at": "2026-08-21T01:20:17-04:00",
   "archive_url": "https://web.archive.org/web/20260821052017id_/https://finviz.com/",
   "clock_legal": true,
-  "clock_rule": "Pre-Open may use this file only if clock_legal is true: live Generated, or archive snapshot, is before this session's 09:30 ET open. After-open / weekend captures stay on disk with clock_legal=false. Not wired into tape_anchor / predict.",
+  "clock_rule": "Theme Radar: file exists only when Generated is before 09:30 ET on this date. Miss the morning → leave missing. Do not write an afternoon scrape. Capture only — not tape_anchor / predict / #210.",
   "kind": "finviz_homepage_market_digest",
   "represents": "Live Finviz homepage market-day prose (prior cash close + overnight / weekend news). Not quote-page ticker blurbs.",
   "error": null,
@@ -30,5 +30,6 @@
   "finviz_ticker": "$MARKET",
   "finviz_published_at": "2026-08-20T20:36:13.217",
   "finviz_source": "market_summary",
-  "finviz_sentiment": "neutral"
+  "finviz_sentiment": "neutral",
+  "cpi": null
 }

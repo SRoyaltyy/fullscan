@@ -1,18 +1,20 @@
 # Finviz homepage market digest — 2026-08-31
 
-**Generated:** 2026-09-12T09:44:56.242670-04:00 (America/New_York)
+**Generated:** 2026-08-31T09:20:05-04:00 (America/New_York)
 **Source:** `wayback`
+**Banner:** US equity futures point lower as Brent holds above $90 on US–Iran tensions and rising yields ahead of a jobs-heavy week
+**SPX:** —  **Nasdaq:** —  **Dow:** —
+**Oil:** Brent crude $91.0
+**CPI/Fed:** —
+**Leaders:** VLO, PSX, CVX, PYPL, SAIC, BLRX
 **Archive snapshot:** `20260831132005` (2026-08-31T09:20:05-04:00)
 **Archive URL:** https://web.archive.org/web/20260831132005id_/https://finviz.com/
-**clock_legal:** `true`
 
 ## Clock
 
-This is the live Finviz homepage market-day prose (Weekend Brief / session recap) — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ~400 ticker blurbs).
+This file exists only because **Generated is before 09:30 ET on this date**. Miss the morning → leave the file missing. Do not write an afternoon scrape as if it were pre-open.
 
-What it represents: often the **prior cash close plus overnight / weekend news**. A weekday pre-open capture is last session + overnight wires. A Saturday Weekend Brief is Friday's close + Monday setup.
-
-Same-morning Pre-Open may use this file **only if `clock_legal` is true** (Generated, or the archive snapshot timestamp, is before that session's 09:30 ET open). Theme Radar KEEP/KILL later. Capture + store only — not wired into tape_anchor / predict.
+Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
 ## Narrative
 
@@ -27,13 +29,3 @@ Same-morning Pre-Open may use this file **only if `clock_legal` is true** (Gener
 - A light U.S. macro calendar today features the Dallas Fed Manufacturing Index at 9:30 AM ET and Treasury bill auctions at 10:30 AM ET
 - Asian markets trade mixed to lower, with Japan’s Nikkei (@NKD) off 0.1% to 0.4% and Hong Kong’s Hang Seng down 0.4%, while European bourses trade cautiously to softer amid thin UK holiday volumes and rising yields
 - Higher bond yields and increased odds of delayed Fed rate cuts set the backdrop for a week that includes the Fed’s Beige Book and key U.S. jobs data
-
-## Structured
-
-- **Oil:** Brent crude $91.0
-- **Named tickers:** VLO, PSX, CVX, PYPL, SAIC, BLRX
-- **Forward calendar:**
-  - PayPal (PYPL) falls roughly 1% pre-market after disappointing results reported on Friday
-  - A light U.S. macro calendar today features the Dallas Fed Manufacturing Index at 9:30 AM ET and Treasury bill auctions at 10:30 AM ET
-- **Finviz widget stamp:** 2026-08-31T09:06:31.48
-- **Finviz sentiment:** bad

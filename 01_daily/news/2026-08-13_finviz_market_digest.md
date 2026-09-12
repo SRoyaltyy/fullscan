@@ -1,18 +1,20 @@
 # Finviz homepage market digest — 2026-08-13
 
-**Generated:** 2026-09-12T09:44:41.890310-04:00 (America/New_York)
+**Generated:** 2026-08-13T06:34:18-04:00 (America/New_York)
 **Source:** `wayback`
+**Banner:** US stocks set to open higher as AI earnings momentum underpins futures ahead of PPI and jobless claims with oil prices mixed amid Iran-related energy tensions
+**SPX:** —  **Nasdaq:** —  **Dow:** —
+**Oil:** —
+**CPI/Fed:** —
+**Leaders:** SMCI, CRWV, NBIS, DELL, AEHR, ATRO, CSCO, CBRS, COHR
 **Archive snapshot:** `20260813103418` (2026-08-13T06:34:18-04:00)
 **Archive URL:** https://web.archive.org/web/20260813103418id_/https://finviz.com/
-**clock_legal:** `true`
 
 ## Clock
 
-This is the live Finviz homepage market-day prose (Weekend Brief / session recap) — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ~400 ticker blurbs).
+This file exists only because **Generated is before 09:30 ET on this date**. Miss the morning → leave the file missing. Do not write an afternoon scrape as if it were pre-open.
 
-What it represents: often the **prior cash close plus overnight / weekend news**. A weekday pre-open capture is last session + overnight wires. A Saturday Weekend Brief is Friday's close + Monday setup.
-
-Same-morning Pre-Open may use this file **only if `clock_legal` is true** (Generated, or the archive snapshot timestamp, is before that session's 09:30 ET open). Theme Radar KEEP/KILL later. Capture + store only — not wired into tape_anchor / predict.
+Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
 ## Narrative
 
@@ -28,11 +30,3 @@ Same-morning Pre-Open may use this file **only if `clock_legal` is true** (Gener
 - Coherent (COHR) declines roughly 5% pre-market following its latest update
 - At 8:30 AM ET, the US reports PPI, expected around 4.9% year over year, alongside weekly initial jobless claims
 - Asian markets advance with the Nikkei (@NKD) and Kospi higher on chip strength, while European equities edge up and crude oil (@CL) weakens amid ongoing energy and Iran-related geopolitical tensions
-
-## Structured
-
-- **Named tickers:** SMCI, CRWV, NBIS, DELL, AEHR, ATRO, CSCO, CBRS, COHR
-- **Forward calendar:**
-  - At 8:30 AM ET, the US reports PPI, expected around 4.9% year over year, alongside weekly initial jobless claims
-- **Finviz widget stamp:** 2026-08-13T06:06:29.32
-- **Finviz sentiment:** good
