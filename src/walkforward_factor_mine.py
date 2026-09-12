@@ -535,9 +535,13 @@ def decide_verdict(combo: dict, random_c: dict, process: dict) -> dict:
     elif keep_combo:
         label = "KEEP"
         why = (
-            "Frozen combo_sh_5050_shared stayed +EV after fees on hidden "
-            "windows, beat the matched random L/S control, and was green "
-            "on a majority of folds."
+            "KEEP the 50/50 sleeve as +EV-vs-random on this thin tape "
+            f"({n_green}/{n} hidden windows green, mean Book% "
+            f"{c_mean:+.2f}% vs random {r_mean:+.2f}%). "
+            "KILL the +35.9% full-sample print as a forecast — that "
+            "number is the in-sample butterfly after the cutoff has "
+            "already seen almost every session. Walk-forward OOS is "
+            "a few percent per 3–4 session window, not +35%."
         )
     elif plus and not beats_rand:
         label = "KILL"
@@ -562,6 +566,7 @@ def decide_verdict(combo: dict, random_c: dict, process: dict) -> dict:
     return {
         "label": label,
         "keep_combo": keep_combo,
+        "kill_35pct_print": True,
         "process_plus_ev": process_plus,
         "why": why,
         "combo": combo,
@@ -598,23 +603,26 @@ def render_md(payload: dict) -> str:
     lines = [
         "# Walk-forward factor-mine discovery",
         "",
-        f"**{v.get('label') or 'THIN'}** the published "
-        f"`combo_sh_5050_shared` +35.9% discovery.",
+        f"**{v.get('label') or 'THIN'}** the 50/50 sleeve as +EV vs a "
+        f"matched random control. **KILL** the published "
+        f"`combo_sh_5050_shared` **+35.9%** as a live number.",
         "",
         str(v.get("why") or ""),
         "",
         f"IS discovery process (re-pick best long + best short each "
         f"cutoff, freeze a 50/50) OOS mean Book% "
         f"{_n(proc.get('mean_book_pct'))}% — "
-        + ("still +EV OOS." if v.get("process_plus_ev")
+        + ("barely +EV OOS; chasing the IS winner is weaker than "
+           "freezing the a-priori 50/50."
+           if v.get("process_plus_ev")
            else "does **not** find +EV OOS."),
         "",
         "## Method",
         "",
         "The published [FACTOR_MINE.md](../FACTOR_MINE.md) board searched "
-        f"**{payload.get('n_recipes')}** leak-free 09:30 recipes plus "
-        "combination books on the **same** sessions it then ranked. "
-        "That is multiple-testing contaminated.",
+        f"**{payload.get('n_recipes')}** leak-free 09:30 single recipes "
+        "(~235 once the combo books are counted) on the **same** "
+        "sessions it then ranked. That is multiple-testing contaminated.",
         "",
         "This board:",
         "",
@@ -739,7 +747,14 @@ def render_md(payload: dict) -> str:
     lines += [
         "## KEEP / KILL",
         "",
-        f"**{v.get('label')}** — {v.get('why')}",
+        f"**{v.get('label')}** the sleeve. **KILL** the +35.9% print.",
+        "",
+        str(v.get("why") or ""),
+        "",
+        "Read the IS combo Book% column: it climbs toward +35% only as "
+        "the cutoff eats the sample (the contamination the published "
+        "board reported as a win). The hidden windows after each "
+        "cutoff are the number that matters, and they are small.",
         "",
         "This is a research scoreboard. It does not wire anything into "
         "`flatten_robust` and it does not change the live cash book.",

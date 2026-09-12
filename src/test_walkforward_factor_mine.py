@@ -228,6 +228,8 @@ def test_verdict_kills_when_oos_not_plus_or_not_above_random() -> None:
         {"mean_book_pct": 1.0},
     )
     assert keep["label"] == "KEEP"
+    assert keep["kill_35pct_print"] is True
+    assert "35.9" in keep["why"]
     assert keep["process_plus_ev"] is True
 
 

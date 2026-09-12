@@ -1,0 +1,2531 @@
+{
+  "generated_at": "2026-09-12T03:19:19.273694-04:00",
+  "live_untouched": "flatten_robust",
+  "fill": "09:30 open, whole shares, Futubull fees, leftover split, sell first, hard-red sit, fresh $10k per window",
+  "from_date": "2026-08-13",
+  "to_date": "2026-09-11",
+  "n_sessions": 21,
+  "n_recipes": 161,
+  "n_folds": 4,
+  "first_cutoff": "2026-08-20",
+  "step": 4,
+  "forward": 4,
+  "capital": 10000.0,
+  "controls": [
+    "union_hot_n4_h1",
+    "short_news_r_h3",
+    "combo_sh_5050_shared",
+    "random_ls_matched"
+  ],
+  "folds": [
+    {
+      "cutoff": "2026-08-20",
+      "is_dates": [
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20"
+      ],
+      "oos_dates": [
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26"
+      ],
+      "n_is": 6,
+      "n_oos": 4,
+      "selection": {
+        "top": "union_e_green_h3",
+        "best_long": "union_e_green_h3",
+        "best_short": "short_news_r_h3",
+        "top_book_pct": 38.014,
+        "best_long_book_pct": 38.014,
+        "best_short_book_pct": 3.859,
+        "n_scored": 161,
+        "n_usable": 161
+      },
+      "is_combo_sh": {
+        "name": "combo_sh_5050_shared",
+        "side": "mix",
+        "hold": "mix",
+        "role": "is_control_combo_sh",
+        "selected": false,
+        "members": [
+          "short_news_r_h3",
+          "union_hot_n4_h1"
+        ],
+        "n_sessions": 6,
+        "n_hit": 3,
+        "hit_rate": 0.5,
+        "win_rate": 0.5263,
+        "n_trades": 49,
+        "n_closed": 19,
+        "total_ret_pct": 3.27,
+        "realized": 355.97,
+        "final_equity": 10327.03,
+        "max_dd_pct": 2.18,
+        "audit_ok": true,
+        "daily": [
+          {
+            "date": "2026-08-13",
+            "mean": 3.4537,
+            "equity": 10345.37,
+            "stock": 10344.83,
+            "made_money": true
+          },
+          {
+            "date": "2026-08-14",
+            "mean": -1.1807,
+            "equity": 10223.22,
+            "stock": -109.04,
+            "made_money": false
+          },
+          {
+            "date": "2026-08-17",
+            "mean": -1.0103,
+            "equity": 10119.93,
+            "stock": -2464.5,
+            "made_money": false
+          },
+          {
+            "date": "2026-08-18",
+            "mean": 3.2563,
+            "equity": 10449.47,
+            "stock": -7672.27,
+            "made_money": true
+          },
+          {
+            "date": "2026-08-19",
+            "mean": 0.1173,
+            "equity": 10461.73,
+            "stock": -6476.17,
+            "made_money": true
+          },
+          {
+            "date": "2026-08-20",
+            "mean": -1.2875,
+            "equity": 10327.03,
+            "stock": 247.52,
+            "made_money": false
+          }
+        ]
+      },
+      "oos": [
+        {
+          "name": "union_e_green_h3",
+          "side": "long",
+          "hold": 3,
+          "role": "discovered_top",
+          "selected": true,
+          "members": [],
+          "n_sessions": 4,
+          "n_hit": 3,
+          "hit_rate": 0.75,
+          "win_rate": 1.0,
+          "n_trades": 15,
+          "n_closed": 3,
+          "total_ret_pct": 2.169,
+          "realized": 148.66,
+          "final_equity": 10216.9,
+          "max_dd_pct": 1.58,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-08-21",
+              "mean": 1.6207,
+              "equity": 10162.07,
+              "stock": 10124.24,
+              "made_money": true
+            },
+            {
+              "date": "2026-08-24",
+              "mean": 1.025,
+              "equity": 10266.23,
+              "stock": 10228.4,
+              "made_money": true
+            },
+            {
+              "date": "2026-08-25",
+              "mean": -1.5827,
+              "equity": 10103.75,
+              "stock": 10102.67,
+              "made_money": false
+            },
+            {
+              "date": "2026-08-26",
+              "mean": 1.1199,
+              "equity": 10216.9,
+              "stock": 10075.4,
+              "made_money": true
+            }
+          ]
+        },
+        {
+          "name": "short_news_r_h3",
+          "side": "short",
+          "hold": 3,
+          "role": "discovered_short",
+          "selected": true,
+          "members": [],
+          "n_sessions": 4,
+          "n_hit": 1,
+          "hit_rate": 0.25,
+          "win_rate": 0.6667,
+          "n_trades": 19,
+          "n_closed": 6,
+          "total_ret_pct": -0.672,
+          "realized": -26.37,
+          "final_equity": 9932.75,
+          "max_dd_pct": 1.2,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-08-21",
+              "mean": -0.3293,
+              "equity": 9967.07,
+              "stock": -4881.36,
+              "made_money": false
+            },
+            {
+              "date": "2026-08-24",
+              "mean": 0.8678,
+              "equity": 10053.56,
+              "stock": -4794.87,
+              "made_money": true
+            },
+            {
+              "date": "2026-08-25",
+              "mean": -0.9888,
+              "equity": 9954.15,
+              "stock": -9773.88,
+              "made_money": false
+            },
+            {
+              "date": "2026-08-26",
+              "mean": -0.215,
+              "equity": 9932.75,
+              "stock": -9670.33,
+              "made_money": false
+            }
+          ]
+        },
+        {
+          "name": "discovered_5050_short_news_r_h3+union_e_green_h3",
+          "side": "mix",
+          "hold": "mix",
+          "role": "discovered_5050",
+          "selected": true,
+          "members": [
+            "short_news_r_h3",
+            "union_e_green_h3"
+          ],
+          "n_sessions": 4,
+          "n_hit": 3,
+          "hit_rate": 0.75,
+          "win_rate": 0.7778,
+          "n_trades": 31,
+          "n_closed": 9,
+          "total_ret_pct": 2.077,
+          "realized": 197.81,
+          "final_equity": 10207.68,
+          "max_dd_pct": 3.87,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-08-21",
+              "mean": 2.0948,
+              "equity": 10209.48,
+              "stock": 10138.65,
+              "made_money": true
+            },
+            {
+              "date": "2026-08-24",
+              "mean": 2.3607,
+              "equity": 10450.5,
+              "stock": 10379.67,
+              "made_money": true
+            },
+            {
+              "date": "2026-08-25",
+              "mean": -3.8671,
+              "equity": 10046.37,
+              "stock": 10044.44,
+              "made_money": false
+            },
+            {
+              "date": "2026-08-26",
+              "mean": 1.6057,
+              "equity": 10207.68,
+              "stock": 10045.47,
+              "made_money": true
+            }
+          ]
+        },
+        {
+          "name": "union_hot_n4_h1",
+          "side": "long",
+          "hold": 1,
+          "role": "control_hot4",
+          "selected": false,
+          "members": [],
+          "n_sessions": 4,
+          "n_hit": 3,
+          "hit_rate": 0.75,
+          "win_rate": 0.8571,
+          "n_trades": 18,
+          "n_closed": 7,
+          "total_ret_pct": 20.788,
+          "realized": 1973.59,
+          "final_equity": 12078.82,
+          "max_dd_pct": 2.16,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-08-21",
+              "mean": 1.3197,
+              "equity": 10131.97,
+              "stock": 10060.79,
+              "made_money": true
+            },
+            {
+              "date": "2026-08-24",
+              "mean": 12.6529,
+              "equity": 11413.96,
+              "stock": 0.0,
+              "made_money": true
+            },
+            {
+              "date": "2026-08-25",
+              "mean": 8.1604,
+              "equity": 12345.38,
+              "stock": 12338.04,
+              "made_money": true
+            },
+            {
+              "date": "2026-08-26",
+              "mean": -2.1592,
+              "equity": 12078.82,
+              "stock": 12071.05,
+              "made_money": false
+            }
+          ]
+        },
+        {
+          "name": "short_news_r_h3",
+          "side": "short",
+          "hold": 3,
+          "role": "control_news_red",
+          "selected": false,
+          "members": [],
+          "n_sessions": 4,
+          "n_hit": 1,
+          "hit_rate": 0.25,
+          "win_rate": 0.6667,
+          "n_trades": 19,
+          "n_closed": 6,
+          "total_ret_pct": -0.672,
+          "realized": -26.37,
+          "final_equity": 9932.75,
+          "max_dd_pct": 1.2,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-08-21",
+              "mean": -0.3293,
+              "equity": 9967.07,
+              "stock": -4881.36,
+              "made_money": false
+            },
+            {
+              "date": "2026-08-24",
+              "mean": 0.8678,
+              "equity": 10053.56,
+              "stock": -4794.87,
+              "made_money": true
+            },
+            {
+              "date": "2026-08-25",
+              "mean": -0.9888,
+              "equity": 9954.15,
+              "stock": -9773.88,
+              "made_money": false
+            },
+            {
+              "date": "2026-08-26",
+              "mean": -0.215,
+              "equity": 9932.75,
+              "stock": -9670.33,
+              "made_money": false
+            }
+          ]
+        },
+        {
+          "name": "combo_sh_5050_shared",
+          "side": "mix",
+          "hold": "mix",
+          "role": "control_combo_sh",
+          "selected": false,
+          "members": [
+            "short_news_r_h3",
+            "union_hot_n4_h1"
+          ],
+          "n_sessions": 4,
+          "n_hit": 3,
+          "hit_rate": 0.75,
+          "win_rate": 0.8333,
+          "n_trades": 35,
+          "n_closed": 12,
+          "total_ret_pct": 12.511,
+          "realized": 1211.97,
+          "final_equity": 11251.15,
+          "max_dd_pct": 1.88,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-08-21",
+              "mean": 1.1634,
+              "equity": 10116.34,
+              "stock": 200.97,
+              "made_money": true
+            },
+            {
+              "date": "2026-08-24",
+              "mean": 6.8968,
+              "equity": 10814.04,
+              "stock": -4766.63,
+              "made_money": true
+            },
+            {
+              "date": "2026-08-25",
+              "mean": 6.0366,
+              "equity": 11466.84,
+              "stock": -1664.52,
+              "made_money": true
+            },
+            {
+              "date": "2026-08-26",
+              "mean": -1.881,
+              "equity": 11251.15,
+              "stock": -1423.81,
+              "made_money": false
+            }
+          ]
+        },
+        {
+          "name": "random_ls_matched",
+          "side": "mix",
+          "hold": "mix",
+          "role": "control_random",
+          "selected": false,
+          "members": [
+            "random_short_matched",
+            "random_long_matched"
+          ],
+          "n_sessions": 4,
+          "n_hit": 2,
+          "hit_rate": 0.5,
+          "win_rate": 0.3571,
+          "n_trades": 40,
+          "n_closed": 14,
+          "total_ret_pct": 2.851,
+          "realized": -192.05,
+          "final_equity": 10285.1,
+          "max_dd_pct": 1.91,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-08-21",
+              "mean": -1.9118,
+              "equity": 9808.82,
+              "stock": 9213.53,
+              "made_money": false
+            },
+            {
+              "date": "2026-08-24",
+              "mean": 1.6223,
+              "equity": 9967.95,
+              "stock": -4824.17,
+              "made_money": true
+            },
+            {
+              "date": "2026-08-25",
+              "mean": 4.0275,
+              "equity": 10369.41,
+              "stock": 10307.56,
+              "made_money": true
+            },
+            {
+              "date": "2026-08-26",
+              "mean": -0.8131,
+              "equity": 10285.1,
+              "stock": 9942.5,
+              "made_money": false
+            }
+          ]
+        },
+        {
+          "name": "discovered_5050_short_news_r_h3+union_e_green_h3_mktneut",
+          "side": "mix",
+          "hold": "mix",
+          "role": "neutralized",
+          "selected": false,
+          "members": [
+            "short_news_r_h3",
+            "union_e_green_h3"
+          ],
+          "n_sessions": 4,
+          "n_hit": 3,
+          "hit_rate": 0.75,
+          "win_rate": 0.7778,
+          "n_trades": 31,
+          "n_closed": 9,
+          "total_ret_pct": 1.921,
+          "realized": 197.81,
+          "final_equity": 10192.07,
+          "max_dd_pct": 3.87,
+          "audit_ok": true,
+          "daily": []
+        },
+        {
+          "name": "union_hot_n4_h1_mktneut",
+          "side": "long",
+          "hold": 1,
+          "role": "neutralized",
+          "selected": false,
+          "members": [],
+          "n_sessions": 4,
+          "n_hit": 3,
+          "hit_rate": 0.75,
+          "win_rate": 0.8571,
+          "n_trades": 18,
+          "n_closed": 7,
+          "total_ret_pct": 19.597,
+          "realized": 1973.59,
+          "final_equity": 11959.73,
+          "max_dd_pct": 2.16,
+          "audit_ok": true,
+          "daily": []
+        },
+        {
+          "name": "short_news_r_h3_mktneut",
+          "side": "short",
+          "hold": 3,
+          "role": "neutralized",
+          "selected": false,
+          "members": [],
+          "n_sessions": 4,
+          "n_hit": 2,
+          "hit_rate": 0.5,
+          "win_rate": 0.6667,
+          "n_trades": 19,
+          "n_closed": 6,
+          "total_ret_pct": -0.098,
+          "realized": -26.37,
+          "final_equity": 9990.16,
+          "max_dd_pct": 1.2,
+          "audit_ok": true,
+          "daily": []
+        },
+        {
+          "name": "combo_sh_5050_shared_mktneut",
+          "side": "mix",
+          "hold": "mix",
+          "role": "neutralized",
+          "selected": false,
+          "members": [
+            "short_news_r_h3",
+            "union_hot_n4_h1"
+          ],
+          "n_sessions": 4,
+          "n_hit": 3,
+          "hit_rate": 0.75,
+          "win_rate": 0.8333,
+          "n_trades": 35,
+          "n_closed": 12,
+          "total_ret_pct": 12.199,
+          "realized": 1211.97,
+          "final_equity": 11219.91,
+          "max_dd_pct": 1.88,
+          "audit_ok": true,
+          "daily": []
+        }
+      ],
+      "market": {
+        "2026-08-21": 0.0096,
+        "2026-08-24": -1.0317,
+        "2026-08-25": 1.2632,
+        "2026-08-26": -0.1888
+      }
+    },
+    {
+      "cutoff": "2026-08-26",
+      "is_dates": [
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26"
+      ],
+      "oos_dates": [
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-31",
+        "2026-09-01"
+      ],
+      "n_is": 10,
+      "n_oos": 4,
+      "selection": {
+        "top": "union_e_fresh_h3",
+        "best_long": "union_e_fresh_h3",
+        "best_short": "short_news_r_h3",
+        "top_book_pct": 24.328,
+        "best_long_book_pct": 24.328,
+        "best_short_book_pct": 3.013,
+        "n_scored": 161,
+        "n_usable": 161
+      },
+      "is_combo_sh": {
+        "name": "combo_sh_5050_shared",
+        "side": "mix",
+        "hold": "mix",
+        "role": "is_control_combo_sh",
+        "selected": false,
+        "members": [
+          "short_news_r_h3",
+          "union_hot_n4_h1"
+        ],
+        "n_sessions": 10,
+        "n_hit": 6,
+        "hit_rate": 0.6,
+        "win_rate": 0.6,
+        "n_trades": 91,
+        "n_closed": 40,
+        "total_ret_pct": 20.652,
+        "realized": 2019.42,
+        "final_equity": 12065.23,
+        "max_dd_pct": 2.18,
+        "audit_ok": true,
+        "daily": [
+          {
+            "date": "2026-08-13",
+            "mean": 3.4537,
+            "equity": 10345.37,
+            "stock": 10344.83,
+            "made_money": true
+          },
+          {
+            "date": "2026-08-14",
+            "mean": -1.1807,
+            "equity": 10223.22,
+            "stock": -109.04,
+            "made_money": false
+          },
+          {
+            "date": "2026-08-17",
+            "mean": -1.0103,
+            "equity": 10119.93,
+            "stock": -2464.5,
+            "made_money": false
+          },
+          {
+            "date": "2026-08-18",
+            "mean": 3.2563,
+            "equity": 10449.47,
+            "stock": -7672.27,
+            "made_money": true
+          },
+          {
+            "date": "2026-08-19",
+            "mean": 0.1173,
+            "equity": 10461.73,
+            "stock": -6476.17,
+            "made_money": true
+          },
+          {
+            "date": "2026-08-20",
+            "mean": -1.2875,
+            "equity": 10327.03,
+            "stock": 247.52,
+            "made_money": false
+          },
+          {
+            "date": "2026-08-21",
+            "mean": 0.3222,
+            "equity": 10360.3,
+            "stock": -1073.68,
+            "made_money": true
+          },
+          {
+            "date": "2026-08-24",
+            "mean": 11.8779,
+            "equity": 11590.89,
+            "stock": -9807.53,
+            "made_money": true
+          },
+          {
+            "date": "2026-08-25",
+            "mean": 6.0465,
+            "equity": 12291.73,
+            "stock": -1766.05,
+            "made_money": true
+          },
+          {
+            "date": "2026-08-26",
+            "mean": -1.8427,
+            "equity": 12065.23,
+            "stock": -1501.19,
+            "made_money": false
+          }
+        ]
+      },
+      "oos": [
+        {
+          "name": "union_e_fresh_h3",
+          "side": "long",
+          "hold": 3,
+          "role": "discovered_top",
+          "selected": true,
+          "members": [],
+          "n_sessions": 4,
+          "n_hit": 2,
+          "hit_rate": 0.5,
+          "win_rate": 0.0,
+          "n_trades": 5,
+          "n_closed": 1,
+          "total_ret_pct": -2.765,
+          "realized": -273.17,
+          "final_equity": 9723.47,
+          "max_dd_pct": 4.89,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-08-27",
+              "mean": 2.2316,
+              "equity": 10223.16,
+              "stock": 10031.12,
+              "made_money": true
+            },
+            {
+              "date": "2026-08-28",
+              "mean": -4.5258,
+              "equity": 9760.48,
+              "stock": 9624.01,
+              "made_money": false
+            },
+            {
+              "date": "2026-08-31",
+              "mean": 1.4789,
+              "equity": 9904.83,
+              "stock": 9768.36,
+              "made_money": true
+            },
+            {
+              "date": "2026-09-01",
+              "mean": -1.831,
+              "equity": 9723.47,
+              "stock": 52.21,
+              "made_money": false
+            }
+          ]
+        },
+        {
+          "name": "short_news_r_h3",
+          "side": "short",
+          "hold": 3,
+          "role": "discovered_short",
+          "selected": true,
+          "members": [],
+          "n_sessions": 4,
+          "n_hit": 3,
+          "hit_rate": 0.75,
+          "win_rate": null,
+          "n_trades": 2,
+          "n_closed": 0,
+          "total_ret_pct": 3.739,
+          "realized": 0,
+          "final_equity": 10373.93,
+          "max_dd_pct": 0.0,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-08-27",
+              "mean": 0.0,
+              "equity": 10000.0,
+              "stock": 0.0,
+              "made_money": false
+            },
+            {
+              "date": "2026-08-28",
+              "mean": 1.6495,
+              "equity": 10164.95,
+              "stock": -4575.53,
+              "made_money": true
+            },
+            {
+              "date": "2026-08-31",
+              "mean": 0.9817,
+              "equity": 10264.74,
+              "stock": -4475.74,
+              "made_money": true
+            },
+            {
+              "date": "2026-09-01",
+              "mean": 1.0637,
+              "equity": 10373.93,
+              "stock": -4366.55,
+              "made_money": true
+            }
+          ]
+        },
+        {
+          "name": "discovered_5050_short_news_r_h3+union_e_fresh_h3",
+          "side": "mix",
+          "hold": "mix",
+          "role": "discovered_5050",
+          "selected": true,
+          "members": [
+            "short_news_r_h3",
+            "union_e_fresh_h3"
+          ],
+          "n_sessions": 4,
+          "n_hit": 2,
+          "hit_rate": 0.5,
+          "win_rate": 0.0,
+          "n_trades": 5,
+          "n_closed": 1,
+          "total_ret_pct": -2.695,
+          "realized": -273.17,
+          "final_equity": 9730.51,
+          "max_dd_pct": 4.82,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-08-27",
+              "mean": 2.2316,
+              "equity": 10223.16,
+              "stock": 10031.12,
+              "made_money": true
+            },
+            {
+              "date": "2026-08-28",
+              "mean": -4.4836,
+              "equity": 9764.79,
+              "stock": 9533.23,
+              "made_money": false
+            },
+            {
+              "date": "2026-08-31",
+              "mean": 1.4907,
+              "equity": 9910.35,
+              "stock": 9678.79,
+              "made_money": true
+            },
+            {
+              "date": "2026-09-01",
+              "mean": -1.8147,
+              "equity": 9730.51,
+              "stock": -35.85,
+              "made_money": false
+            }
+          ]
+        },
+        {
+          "name": "union_hot_n4_h1",
+          "side": "long",
+          "hold": 1,
+          "role": "control_hot4",
+          "selected": false,
+          "members": [],
+          "n_sessions": 4,
+          "n_hit": 2,
+          "hit_rate": 0.5,
+          "win_rate": 0.625,
+          "n_trades": 16,
+          "n_closed": 8,
+          "total_ret_pct": -1.524,
+          "realized": -152.36,
+          "final_equity": 9847.64,
+          "max_dd_pct": 2.55,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-08-27",
+              "mean": 1.0162,
+              "equity": 10101.62,
+              "stock": 10100.04,
+              "made_money": true
+            },
+            {
+              "date": "2026-08-28",
+              "mean": 0.0377,
+              "equity": 10105.43,
+              "stock": 9995.16,
+              "made_money": true
+            },
+            {
+              "date": "2026-08-31",
+              "mean": -2.0624,
+              "equity": 9897.02,
+              "stock": 2394.0,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-01",
+              "mean": -0.4989,
+              "equity": 9847.64,
+              "stock": 0.0,
+              "made_money": false
+            }
+          ]
+        },
+        {
+          "name": "short_news_r_h3",
+          "side": "short",
+          "hold": 3,
+          "role": "control_news_red",
+          "selected": false,
+          "members": [],
+          "n_sessions": 4,
+          "n_hit": 3,
+          "hit_rate": 0.75,
+          "win_rate": null,
+          "n_trades": 2,
+          "n_closed": 0,
+          "total_ret_pct": 3.739,
+          "realized": 0,
+          "final_equity": 10373.93,
+          "max_dd_pct": 0.0,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-08-27",
+              "mean": 0.0,
+              "equity": 10000.0,
+              "stock": 0.0,
+              "made_money": false
+            },
+            {
+              "date": "2026-08-28",
+              "mean": 1.6495,
+              "equity": 10164.95,
+              "stock": -4575.53,
+              "made_money": true
+            },
+            {
+              "date": "2026-08-31",
+              "mean": 0.9817,
+              "equity": 10264.74,
+              "stock": -4475.74,
+              "made_money": true
+            },
+            {
+              "date": "2026-09-01",
+              "mean": 1.0637,
+              "equity": 10373.93,
+              "stock": -4366.55,
+              "made_money": true
+            }
+          ]
+        },
+        {
+          "name": "combo_sh_5050_shared",
+          "side": "mix",
+          "hold": "mix",
+          "role": "control_combo_sh",
+          "selected": false,
+          "members": [
+            "short_news_r_h3",
+            "union_hot_n4_h1"
+          ],
+          "n_sessions": 4,
+          "n_hit": 3,
+          "hit_rate": 0.75,
+          "win_rate": 0.625,
+          "n_trades": 18,
+          "n_closed": 8,
+          "total_ret_pct": 3.686,
+          "realized": -23.21,
+          "final_equity": 10368.56,
+          "max_dd_pct": 0.06,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-08-27",
+              "mean": 1.0162,
+              "equity": 10101.62,
+              "stock": 10100.04,
+              "made_money": true
+            },
+            {
+              "date": "2026-08-28",
+              "mean": 1.7847,
+              "equity": 10281.9,
+              "stock": 73.21,
+              "made_money": true
+            },
+            {
+              "date": "2026-08-31",
+              "mean": -0.0645,
+              "equity": 10275.27,
+              "stock": -3553.07,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-01",
+              "mean": 0.9079,
+              "equity": 10368.56,
+              "stock": -4631.1,
+              "made_money": true
+            }
+          ]
+        },
+        {
+          "name": "random_ls_matched",
+          "side": "mix",
+          "hold": "mix",
+          "role": "control_random",
+          "selected": false,
+          "members": [
+            "random_short_matched",
+            "random_long_matched"
+          ],
+          "n_sessions": 4,
+          "n_hit": 1,
+          "hit_rate": 0.25,
+          "win_rate": 0.125,
+          "n_trades": 18,
+          "n_closed": 8,
+          "total_ret_pct": -5.917,
+          "realized": -783.96,
+          "final_equity": 9408.27,
+          "max_dd_pct": 7.15,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-08-27",
+              "mean": -0.24,
+              "equity": 9976.0,
+              "stock": 8909.65,
+              "made_money": false
+            },
+            {
+              "date": "2026-08-28",
+              "mean": -6.3381,
+              "equity": 9343.71,
+              "stock": 9206.23,
+              "made_money": false
+            },
+            {
+              "date": "2026-08-31",
+              "mean": -0.6297,
+              "equity": 9284.87,
+              "stock": -4865.52,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-01",
+              "mean": 1.329,
+              "equity": 9408.27,
+              "stock": -4742.12,
+              "made_money": true
+            }
+          ]
+        },
+        {
+          "name": "discovered_5050_short_news_r_h3+union_e_fresh_h3_mktneut",
+          "side": "mix",
+          "hold": "mix",
+          "role": "neutralized",
+          "selected": false,
+          "members": [
+            "short_news_r_h3",
+            "union_e_fresh_h3"
+          ],
+          "n_sessions": 4,
+          "n_hit": 2,
+          "hit_rate": 0.5,
+          "win_rate": 0.0,
+          "n_trades": 5,
+          "n_closed": 1,
+          "total_ret_pct": -0.585,
+          "realized": -273.17,
+          "final_equity": 9941.5,
+          "max_dd_pct": 4.82,
+          "audit_ok": true,
+          "daily": []
+        },
+        {
+          "name": "union_hot_n4_h1_mktneut",
+          "side": "long",
+          "hold": 1,
+          "role": "neutralized",
+          "selected": false,
+          "members": [],
+          "n_sessions": 4,
+          "n_hit": 2,
+          "hit_rate": 0.5,
+          "win_rate": 0.625,
+          "n_trades": 16,
+          "n_closed": 8,
+          "total_ret_pct": 0.888,
+          "realized": -152.36,
+          "final_equity": 10088.77,
+          "max_dd_pct": 2.55,
+          "audit_ok": true,
+          "daily": []
+        },
+        {
+          "name": "short_news_r_h3_mktneut",
+          "side": "short",
+          "hold": 3,
+          "role": "neutralized",
+          "selected": false,
+          "members": [],
+          "n_sessions": 4,
+          "n_hit": 3,
+          "hit_rate": 0.75,
+          "win_rate": null,
+          "n_trades": 2,
+          "n_closed": 0,
+          "total_ret_pct": 2.577,
+          "realized": 0,
+          "final_equity": 10257.66,
+          "max_dd_pct": 0.0,
+          "audit_ok": true,
+          "daily": []
+        },
+        {
+          "name": "combo_sh_5050_shared_mktneut",
+          "side": "mix",
+          "hold": "mix",
+          "role": "neutralized",
+          "selected": false,
+          "members": [
+            "short_news_r_h3",
+            "union_hot_n4_h1"
+          ],
+          "n_sessions": 4,
+          "n_hit": 4,
+          "hit_rate": 1.0,
+          "win_rate": 0.625,
+          "n_trades": 18,
+          "n_closed": 8,
+          "total_ret_pct": 3.607,
+          "realized": -23.21,
+          "final_equity": 10360.75,
+          "max_dd_pct": 0.06,
+          "audit_ok": true,
+          "daily": []
+        }
+      ],
+      "market": {
+        "2026-08-27": 0.1468,
+        "2026-08-28": -2.7586,
+        "2026-08-31": 0.5115,
+        "2026-09-01": -0.2847
+      }
+    },
+    {
+      "cutoff": "2026-09-01",
+      "is_dates": [
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-31",
+        "2026-09-01"
+      ],
+      "oos_dates": [
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-08"
+      ],
+      "n_is": 14,
+      "n_oos": 4,
+      "selection": {
+        "top": "union_hot_n4_h1",
+        "best_long": "union_hot_n4_h1",
+        "best_short": "short_news_r_h3",
+        "top_book_pct": 20.805,
+        "best_long_book_pct": 20.805,
+        "best_short_book_pct": 9.841,
+        "n_scored": 161,
+        "n_usable": 161
+      },
+      "is_combo_sh": {
+        "name": "combo_sh_5050_shared",
+        "side": "mix",
+        "hold": "mix",
+        "role": "is_control_combo_sh",
+        "selected": false,
+        "members": [
+          "short_news_r_h3",
+          "union_hot_n4_h1"
+        ],
+        "n_sessions": 14,
+        "n_hit": 9,
+        "hit_rate": 0.6429,
+        "win_rate": 0.6271,
+        "n_trades": 120,
+        "n_closed": 59,
+        "total_ret_pct": 31.239,
+        "realized": 2639.94,
+        "final_equity": 13123.94,
+        "max_dd_pct": 2.18,
+        "audit_ok": true,
+        "daily": [
+          {
+            "date": "2026-08-13",
+            "mean": 3.4537,
+            "equity": 10345.37,
+            "stock": 10344.83,
+            "made_money": true
+          },
+          {
+            "date": "2026-08-14",
+            "mean": -1.1807,
+            "equity": 10223.22,
+            "stock": -109.04,
+            "made_money": false
+          },
+          {
+            "date": "2026-08-17",
+            "mean": -1.0103,
+            "equity": 10119.93,
+            "stock": -2464.5,
+            "made_money": false
+          },
+          {
+            "date": "2026-08-18",
+            "mean": 3.2563,
+            "equity": 10449.47,
+            "stock": -7672.27,
+            "made_money": true
+          },
+          {
+            "date": "2026-08-19",
+            "mean": 0.1173,
+            "equity": 10461.73,
+            "stock": -6476.17,
+            "made_money": true
+          },
+          {
+            "date": "2026-08-20",
+            "mean": -1.2875,
+            "equity": 10327.03,
+            "stock": 247.52,
+            "made_money": false
+          },
+          {
+            "date": "2026-08-21",
+            "mean": 0.3222,
+            "equity": 10360.3,
+            "stock": -1073.68,
+            "made_money": true
+          },
+          {
+            "date": "2026-08-24",
+            "mean": 11.8779,
+            "equity": 11590.89,
+            "stock": -9807.53,
+            "made_money": true
+          },
+          {
+            "date": "2026-08-25",
+            "mean": 6.0465,
+            "equity": 12291.73,
+            "stock": -1766.05,
+            "made_money": true
+          },
+          {
+            "date": "2026-08-26",
+            "mean": -1.8427,
+            "equity": 12065.23,
+            "stock": -1501.19,
+            "made_money": false
+          },
+          {
+            "date": "2026-08-27",
+            "mean": 4.0739,
+            "equity": 12556.76,
+            "stock": 12550.2,
+            "made_money": true
+          },
+          {
+            "date": "2026-08-28",
+            "mean": 3.8157,
+            "equity": 13035.89,
+            "stock": -2527.99,
+            "made_money": true
+          },
+          {
+            "date": "2026-08-31",
+            "mean": -0.0851,
+            "equity": 13024.8,
+            "stock": -3653.14,
+            "made_money": false
+          },
+          {
+            "date": "2026-09-01",
+            "mean": 0.7612,
+            "equity": 13123.94,
+            "stock": -5677.0,
+            "made_money": true
+          }
+        ]
+      },
+      "oos": [
+        {
+          "name": "union_hot_n4_h1",
+          "side": "long",
+          "hold": 1,
+          "role": "discovered_top",
+          "selected": true,
+          "members": [],
+          "n_sessions": 4,
+          "n_hit": 1,
+          "hit_rate": 0.25,
+          "win_rate": 0.2857,
+          "n_trades": 14,
+          "n_closed": 7,
+          "total_ret_pct": -2.848,
+          "realized": -284.75,
+          "final_equity": 9715.23,
+          "max_dd_pct": 5.53,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-09-02",
+              "mean": 0.0,
+              "equity": 10000.0,
+              "stock": 0.0,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-03",
+              "mean": -5.534,
+              "equity": 9446.6,
+              "stock": 9433.8,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-04",
+              "mean": 6.7399,
+              "equity": 10083.29,
+              "stock": 10070.63,
+              "made_money": true
+            },
+            {
+              "date": "2026-09-08",
+              "mean": -3.6502,
+              "equity": 9715.23,
+              "stock": 0.0,
+              "made_money": false
+            }
+          ]
+        },
+        {
+          "name": "short_news_r_h3",
+          "side": "short",
+          "hold": 3,
+          "role": "discovered_short",
+          "selected": true,
+          "members": [],
+          "n_sessions": 4,
+          "n_hit": 2,
+          "hit_rate": 0.5,
+          "win_rate": null,
+          "n_trades": 4,
+          "n_closed": 0,
+          "total_ret_pct": 3.947,
+          "realized": 0,
+          "final_equity": 10394.69,
+          "max_dd_pct": 0.35,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-09-02",
+              "mean": 0.0,
+              "equity": 10000.0,
+              "stock": 0.0,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-03",
+              "mean": 1.3439,
+              "equity": 10134.39,
+              "stock": -4836.93,
+              "made_money": true
+            },
+            {
+              "date": "2026-09-04",
+              "mean": -0.3533,
+              "equity": 10098.59,
+              "stock": -9934.63,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-08",
+              "mean": 2.9321,
+              "equity": 10394.69,
+              "stock": -9638.53,
+              "made_money": true
+            }
+          ]
+        },
+        {
+          "name": "discovered_5050_short_news_r_h3+union_hot_n4_h1",
+          "side": "mix",
+          "hold": "mix",
+          "role": "discovered_5050",
+          "selected": true,
+          "members": [
+            "short_news_r_h3",
+            "union_hot_n4_h1"
+          ],
+          "n_sessions": 4,
+          "n_hit": 2,
+          "hit_rate": 0.5,
+          "win_rate": 0.2857,
+          "n_trades": 18,
+          "n_closed": 7,
+          "total_ret_pct": 2.758,
+          "realized": -117.71,
+          "final_equity": 10275.78,
+          "max_dd_pct": 1.45,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-09-02",
+              "mean": 0.0,
+              "equity": 10000.0,
+              "stock": 0.0,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-03",
+              "mean": -1.4547,
+              "equity": 9854.53,
+              "stock": -126.01,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-04",
+              "mean": 3.8345,
+              "equity": 10232.4,
+              "stock": -1553.05,
+              "made_money": true
+            },
+            {
+              "date": "2026-09-08",
+              "mean": 0.4239,
+              "equity": 10275.78,
+              "stock": -9499.25,
+              "made_money": true
+            }
+          ]
+        },
+        {
+          "name": "union_hot_n4_h1",
+          "side": "long",
+          "hold": 1,
+          "role": "control_hot4",
+          "selected": false,
+          "members": [],
+          "n_sessions": 4,
+          "n_hit": 1,
+          "hit_rate": 0.25,
+          "win_rate": 0.2857,
+          "n_trades": 14,
+          "n_closed": 7,
+          "total_ret_pct": -2.848,
+          "realized": -284.75,
+          "final_equity": 9715.23,
+          "max_dd_pct": 5.53,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-09-02",
+              "mean": 0.0,
+              "equity": 10000.0,
+              "stock": 0.0,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-03",
+              "mean": -5.534,
+              "equity": 9446.6,
+              "stock": 9433.8,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-04",
+              "mean": 6.7399,
+              "equity": 10083.29,
+              "stock": 10070.63,
+              "made_money": true
+            },
+            {
+              "date": "2026-09-08",
+              "mean": -3.6502,
+              "equity": 9715.23,
+              "stock": 0.0,
+              "made_money": false
+            }
+          ]
+        },
+        {
+          "name": "short_news_r_h3",
+          "side": "short",
+          "hold": 3,
+          "role": "control_news_red",
+          "selected": false,
+          "members": [],
+          "n_sessions": 4,
+          "n_hit": 2,
+          "hit_rate": 0.5,
+          "win_rate": null,
+          "n_trades": 4,
+          "n_closed": 0,
+          "total_ret_pct": 3.947,
+          "realized": 0,
+          "final_equity": 10394.69,
+          "max_dd_pct": 0.35,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-09-02",
+              "mean": 0.0,
+              "equity": 10000.0,
+              "stock": 0.0,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-03",
+              "mean": 1.3439,
+              "equity": 10134.39,
+              "stock": -4836.93,
+              "made_money": true
+            },
+            {
+              "date": "2026-09-04",
+              "mean": -0.3533,
+              "equity": 10098.59,
+              "stock": -9934.63,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-08",
+              "mean": 2.9321,
+              "equity": 10394.69,
+              "stock": -9638.53,
+              "made_money": true
+            }
+          ]
+        },
+        {
+          "name": "combo_sh_5050_shared",
+          "side": "mix",
+          "hold": "mix",
+          "role": "control_combo_sh",
+          "selected": false,
+          "members": [
+            "short_news_r_h3",
+            "union_hot_n4_h1"
+          ],
+          "n_sessions": 4,
+          "n_hit": 2,
+          "hit_rate": 0.5,
+          "win_rate": 0.2857,
+          "n_trades": 18,
+          "n_closed": 7,
+          "total_ret_pct": 2.758,
+          "realized": -117.71,
+          "final_equity": 10275.78,
+          "max_dd_pct": 1.45,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-09-02",
+              "mean": 0.0,
+              "equity": 10000.0,
+              "stock": 0.0,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-03",
+              "mean": -1.4547,
+              "equity": 9854.53,
+              "stock": -126.01,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-04",
+              "mean": 3.8345,
+              "equity": 10232.4,
+              "stock": -1553.05,
+              "made_money": true
+            },
+            {
+              "date": "2026-09-08",
+              "mean": 0.4239,
+              "equity": 10275.78,
+              "stock": -9499.25,
+              "made_money": true
+            }
+          ]
+        },
+        {
+          "name": "random_ls_matched",
+          "side": "mix",
+          "hold": "mix",
+          "role": "control_random",
+          "selected": false,
+          "members": [
+            "random_short_matched",
+            "random_long_matched"
+          ],
+          "n_sessions": 4,
+          "n_hit": 1,
+          "hit_rate": 0.25,
+          "win_rate": 0.5714,
+          "n_trades": 20,
+          "n_closed": 7,
+          "total_ret_pct": -6.094,
+          "realized": -355.38,
+          "final_equity": 9390.64,
+          "max_dd_pct": 6.25,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-09-02",
+              "mean": 0.0,
+              "equity": 10000.0,
+              "stock": 0.0,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-03",
+              "mean": -5.6203,
+              "equity": 9437.97,
+              "stock": 9436.5,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-04",
+              "mean": -0.665,
+              "equity": 9375.21,
+              "stock": 9260.23,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-08",
+              "mean": 0.1646,
+              "equity": 9390.64,
+              "stock": -5189.63,
+              "made_money": true
+            }
+          ]
+        },
+        {
+          "name": "discovered_5050_short_news_r_h3+union_hot_n4_h1_mktneut",
+          "side": "mix",
+          "hold": "mix",
+          "role": "neutralized",
+          "selected": false,
+          "members": [
+            "short_news_r_h3",
+            "union_hot_n4_h1"
+          ],
+          "n_sessions": 4,
+          "n_hit": 1,
+          "hit_rate": 0.25,
+          "win_rate": 0.2857,
+          "n_trades": 18,
+          "n_closed": 7,
+          "total_ret_pct": 1.83,
+          "realized": -117.71,
+          "final_equity": 10183.0,
+          "max_dd_pct": 1.45,
+          "audit_ok": true,
+          "daily": []
+        },
+        {
+          "name": "union_hot_n4_h1_mktneut",
+          "side": "long",
+          "hold": 1,
+          "role": "neutralized",
+          "selected": false,
+          "members": [],
+          "n_sessions": 4,
+          "n_hit": 1,
+          "hit_rate": 0.25,
+          "win_rate": 0.2857,
+          "n_trades": 14,
+          "n_closed": 7,
+          "total_ret_pct": -2.69,
+          "realized": -284.75,
+          "final_equity": 9730.96,
+          "max_dd_pct": 5.53,
+          "audit_ok": true,
+          "daily": []
+        },
+        {
+          "name": "short_news_r_h3_mktneut",
+          "side": "short",
+          "hold": 3,
+          "role": "neutralized",
+          "selected": false,
+          "members": [],
+          "n_sessions": 4,
+          "n_hit": 3,
+          "hit_rate": 0.75,
+          "win_rate": null,
+          "n_trades": 4,
+          "n_closed": 0,
+          "total_ret_pct": 3.303,
+          "realized": 0,
+          "final_equity": 10330.3,
+          "max_dd_pct": 0.35,
+          "audit_ok": true,
+          "daily": []
+        },
+        {
+          "name": "combo_sh_5050_shared_mktneut",
+          "side": "mix",
+          "hold": "mix",
+          "role": "neutralized",
+          "selected": false,
+          "members": [
+            "short_news_r_h3",
+            "union_hot_n4_h1"
+          ],
+          "n_sessions": 4,
+          "n_hit": 1,
+          "hit_rate": 0.25,
+          "win_rate": 0.2857,
+          "n_trades": 18,
+          "n_closed": 7,
+          "total_ret_pct": 1.83,
+          "realized": -117.71,
+          "final_equity": 10183.0,
+          "max_dd_pct": 1.45,
+          "audit_ok": true,
+          "daily": []
+        }
+      ],
+      "market": {
+        "2026-09-02": 0.8624,
+        "2026-09-03": -0.8513,
+        "2026-09-04": 0.7817,
+        "2026-09-08": -1.0918
+      }
+    },
+    {
+      "cutoff": "2026-09-08",
+      "is_dates": [
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-08"
+      ],
+      "oos_dates": [
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11"
+      ],
+      "n_is": 18,
+      "n_oos": 3,
+      "selection": {
+        "top": "union_e_fresh_h3",
+        "best_long": "union_e_fresh_h3",
+        "best_short": "short_news_r_h3",
+        "top_book_pct": 22.78,
+        "best_long_book_pct": 22.78,
+        "best_short_book_pct": 14.677,
+        "n_scored": 161,
+        "n_usable": 161
+      },
+      "is_combo_sh": {
+        "name": "combo_sh_5050_shared",
+        "side": "mix",
+        "hold": "mix",
+        "role": "is_control_combo_sh",
+        "selected": false,
+        "members": [
+          "short_news_r_h3",
+          "union_hot_n4_h1"
+        ],
+        "n_sessions": 18,
+        "n_hit": 12,
+        "hit_rate": 0.6667,
+        "win_rate": 0.6029,
+        "n_trades": 140,
+        "n_closed": 68,
+        "total_ret_pct": 35.526,
+        "realized": 3033.11,
+        "final_equity": 13552.65,
+        "max_dd_pct": 2.18,
+        "audit_ok": true,
+        "daily": [
+          {
+            "date": "2026-08-13",
+            "mean": 3.4537,
+            "equity": 10345.37,
+            "stock": 10344.83,
+            "made_money": true
+          },
+          {
+            "date": "2026-08-14",
+            "mean": -1.1807,
+            "equity": 10223.22,
+            "stock": -109.04,
+            "made_money": false
+          },
+          {
+            "date": "2026-08-17",
+            "mean": -1.0103,
+            "equity": 10119.93,
+            "stock": -2464.5,
+            "made_money": false
+          },
+          {
+            "date": "2026-08-18",
+            "mean": 3.2563,
+            "equity": 10449.47,
+            "stock": -7672.27,
+            "made_money": true
+          },
+          {
+            "date": "2026-08-19",
+            "mean": 0.1173,
+            "equity": 10461.73,
+            "stock": -6476.17,
+            "made_money": true
+          },
+          {
+            "date": "2026-08-20",
+            "mean": -1.2875,
+            "equity": 10327.03,
+            "stock": 247.52,
+            "made_money": false
+          },
+          {
+            "date": "2026-08-21",
+            "mean": 0.3222,
+            "equity": 10360.3,
+            "stock": -1073.68,
+            "made_money": true
+          },
+          {
+            "date": "2026-08-24",
+            "mean": 11.8779,
+            "equity": 11590.89,
+            "stock": -9807.53,
+            "made_money": true
+          },
+          {
+            "date": "2026-08-25",
+            "mean": 6.0465,
+            "equity": 12291.73,
+            "stock": -1766.05,
+            "made_money": true
+          },
+          {
+            "date": "2026-08-26",
+            "mean": -1.8427,
+            "equity": 12065.23,
+            "stock": -1501.19,
+            "made_money": false
+          },
+          {
+            "date": "2026-08-27",
+            "mean": 4.0739,
+            "equity": 12556.76,
+            "stock": 12550.2,
+            "made_money": true
+          },
+          {
+            "date": "2026-08-28",
+            "mean": 3.8157,
+            "equity": 13035.89,
+            "stock": -2527.99,
+            "made_money": true
+          },
+          {
+            "date": "2026-08-31",
+            "mean": -0.0851,
+            "equity": 13024.8,
+            "stock": -3653.14,
+            "made_money": false
+          },
+          {
+            "date": "2026-09-01",
+            "mean": 0.7612,
+            "equity": 13123.94,
+            "stock": -5677.0,
+            "made_money": true
+          },
+          {
+            "date": "2026-09-02",
+            "mean": 0.4498,
+            "equity": 13182.97,
+            "stock": 0.0,
+            "made_money": true
+          },
+          {
+            "date": "2026-09-03",
+            "mean": -1.4356,
+            "equity": 12993.72,
+            "stock": -137.12,
+            "made_money": false
+          },
+          {
+            "date": "2026-09-04",
+            "mean": 3.8611,
+            "equity": 13495.42,
+            "stock": -2015.82,
+            "made_money": true
+          },
+          {
+            "date": "2026-09-08",
+            "mean": 0.4241,
+            "equity": 13552.65,
+            "stock": -12505.97,
+            "made_money": true
+          }
+        ]
+      },
+      "oos": [
+        {
+          "name": "union_e_fresh_h3",
+          "side": "long",
+          "hold": 3,
+          "role": "discovered_top",
+          "selected": true,
+          "members": [],
+          "n_sessions": 3,
+          "n_hit": 1,
+          "hit_rate": 0.3333,
+          "win_rate": null,
+          "n_trades": 8,
+          "n_closed": 0,
+          "total_ret_pct": 0.407,
+          "realized": 0,
+          "final_equity": 10040.66,
+          "max_dd_pct": 0.0,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-09-09",
+              "mean": 0.0,
+              "equity": 10000.0,
+              "stock": 0.0,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-10",
+              "mean": 0.0,
+              "equity": 10000.0,
+              "stock": 0.0,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-11",
+              "mean": 0.4066,
+              "equity": 10040.66,
+              "stock": 9857.75,
+              "made_money": true
+            }
+          ]
+        },
+        {
+          "name": "short_news_r_h3",
+          "side": "short",
+          "hold": 3,
+          "role": "discovered_short",
+          "selected": true,
+          "members": [],
+          "n_sessions": 3,
+          "n_hit": 0,
+          "hit_rate": 0.0,
+          "win_rate": null,
+          "n_trades": 4,
+          "n_closed": 0,
+          "total_ret_pct": -0.693,
+          "realized": 0,
+          "final_equity": 9930.69,
+          "max_dd_pct": 0.69,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-09-09",
+              "mean": 0.0,
+              "equity": 10000.0,
+              "stock": 0.0,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-10",
+              "mean": 0.0,
+              "equity": 10000.0,
+              "stock": 0.0,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-11",
+              "mean": -0.6931,
+              "equity": 9930.69,
+              "stock": -5035.73,
+              "made_money": false
+            }
+          ]
+        },
+        {
+          "name": "discovered_5050_short_news_r_h3+union_e_fresh_h3",
+          "side": "mix",
+          "hold": "mix",
+          "role": "discovered_5050",
+          "selected": true,
+          "members": [
+            "short_news_r_h3",
+            "union_e_fresh_h3"
+          ],
+          "n_sessions": 3,
+          "n_hit": 0,
+          "hit_rate": 0.0,
+          "win_rate": null,
+          "n_trades": 12,
+          "n_closed": 0,
+          "total_ret_pct": -0.563,
+          "realized": 0,
+          "final_equity": 9943.69,
+          "max_dd_pct": 0.56,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-09-09",
+              "mean": 0.0,
+              "equity": 10000.0,
+              "stock": 0.0,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-10",
+              "mean": 0.0,
+              "equity": 10000.0,
+              "stock": 0.0,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-11",
+              "mean": -0.5631,
+              "equity": 9943.69,
+              "stock": -370.11,
+              "made_money": false
+            }
+          ]
+        },
+        {
+          "name": "union_hot_n4_h1",
+          "side": "long",
+          "hold": 1,
+          "role": "control_hot4",
+          "selected": false,
+          "members": [],
+          "n_sessions": 3,
+          "n_hit": 0,
+          "hit_rate": 0.0,
+          "win_rate": null,
+          "n_trades": 4,
+          "n_closed": 0,
+          "total_ret_pct": -1.214,
+          "realized": 0,
+          "final_equity": 9878.6,
+          "max_dd_pct": 1.21,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-09-09",
+              "mean": 0.0,
+              "equity": 10000.0,
+              "stock": 0.0,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-10",
+              "mean": 0.0,
+              "equity": 10000.0,
+              "stock": 0.0,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-11",
+              "mean": -1.214,
+              "equity": 9878.6,
+              "stock": 9877.69,
+              "made_money": false
+            }
+          ]
+        },
+        {
+          "name": "short_news_r_h3",
+          "side": "short",
+          "hold": 3,
+          "role": "control_news_red",
+          "selected": false,
+          "members": [],
+          "n_sessions": 3,
+          "n_hit": 0,
+          "hit_rate": 0.0,
+          "win_rate": null,
+          "n_trades": 4,
+          "n_closed": 0,
+          "total_ret_pct": -0.693,
+          "realized": 0,
+          "final_equity": 9930.69,
+          "max_dd_pct": 0.69,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-09-09",
+              "mean": 0.0,
+              "equity": 10000.0,
+              "stock": 0.0,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-10",
+              "mean": 0.0,
+              "equity": 10000.0,
+              "stock": 0.0,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-11",
+              "mean": -0.6931,
+              "equity": 9930.69,
+              "stock": -5035.73,
+              "made_money": false
+            }
+          ]
+        },
+        {
+          "name": "combo_sh_5050_shared",
+          "side": "mix",
+          "hold": "mix",
+          "role": "control_combo_sh",
+          "selected": false,
+          "members": [
+            "short_news_r_h3",
+            "union_hot_n4_h1"
+          ],
+          "n_sessions": 3,
+          "n_hit": 0,
+          "hit_rate": 0.0,
+          "win_rate": null,
+          "n_trades": 8,
+          "n_closed": 0,
+          "total_ret_pct": -1.303,
+          "realized": 0,
+          "final_equity": 9869.68,
+          "max_dd_pct": 1.3,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-09-09",
+              "mean": 0.0,
+              "equity": 10000.0,
+              "stock": 0.0,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-10",
+              "mean": 0.0,
+              "equity": 10000.0,
+              "stock": 0.0,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-11",
+              "mean": -1.3032,
+              "equity": 9869.68,
+              "stock": -80.2,
+              "made_money": false
+            }
+          ]
+        },
+        {
+          "name": "random_ls_matched",
+          "side": "mix",
+          "hold": "mix",
+          "role": "control_random",
+          "selected": false,
+          "members": [
+            "random_short_matched",
+            "random_long_matched"
+          ],
+          "n_sessions": 3,
+          "n_hit": 0,
+          "hit_rate": 0.0,
+          "win_rate": null,
+          "n_trades": 8,
+          "n_closed": 0,
+          "total_ret_pct": -3.687,
+          "realized": 0,
+          "final_equity": 9631.28,
+          "max_dd_pct": 3.69,
+          "audit_ok": true,
+          "daily": [
+            {
+              "date": "2026-09-09",
+              "mean": 0.0,
+              "equity": 10000.0,
+              "stock": 0.0,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-10",
+              "mean": 0.0,
+              "equity": 10000.0,
+              "stock": 0.0,
+              "made_money": false
+            },
+            {
+              "date": "2026-09-11",
+              "mean": -3.6872,
+              "equity": 9631.28,
+              "stock": 9628.01,
+              "made_money": false
+            }
+          ]
+        },
+        {
+          "name": "discovered_5050_short_news_r_h3+union_e_fresh_h3_mktneut",
+          "side": "mix",
+          "hold": "mix",
+          "role": "neutralized",
+          "selected": false,
+          "members": [
+            "short_news_r_h3",
+            "union_e_fresh_h3"
+          ],
+          "n_sessions": 3,
+          "n_hit": 0,
+          "hit_rate": 0.0,
+          "win_rate": null,
+          "n_trades": 12,
+          "n_closed": 0,
+          "total_ret_pct": -0.563,
+          "realized": 0,
+          "final_equity": 9943.69,
+          "max_dd_pct": 0.56,
+          "audit_ok": true,
+          "daily": []
+        },
+        {
+          "name": "union_hot_n4_h1_mktneut",
+          "side": "long",
+          "hold": 1,
+          "role": "neutralized",
+          "selected": false,
+          "members": [],
+          "n_sessions": 3,
+          "n_hit": 0,
+          "hit_rate": 0.0,
+          "win_rate": null,
+          "n_trades": 4,
+          "n_closed": 0,
+          "total_ret_pct": -1.213,
+          "realized": 0,
+          "final_equity": 9878.71,
+          "max_dd_pct": 1.21,
+          "audit_ok": true,
+          "daily": []
+        },
+        {
+          "name": "short_news_r_h3_mktneut",
+          "side": "short",
+          "hold": 3,
+          "role": "neutralized",
+          "selected": false,
+          "members": [],
+          "n_sessions": 3,
+          "n_hit": 0,
+          "hit_rate": 0.0,
+          "win_rate": null,
+          "n_trades": 4,
+          "n_closed": 0,
+          "total_ret_pct": -0.694,
+          "realized": 0,
+          "final_equity": 9930.63,
+          "max_dd_pct": 0.69,
+          "audit_ok": true,
+          "daily": []
+        },
+        {
+          "name": "combo_sh_5050_shared_mktneut",
+          "side": "mix",
+          "hold": "mix",
+          "role": "neutralized",
+          "selected": false,
+          "members": [
+            "short_news_r_h3",
+            "union_hot_n4_h1"
+          ],
+          "n_sessions": 3,
+          "n_hit": 0,
+          "hit_rate": 0.0,
+          "win_rate": null,
+          "n_trades": 8,
+          "n_closed": 0,
+          "total_ret_pct": -1.303,
+          "realized": 0,
+          "final_equity": 9869.68,
+          "max_dd_pct": 1.3,
+          "audit_ok": true,
+          "daily": []
+        }
+      ],
+      "market": {
+        "2026-09-09": -1.0593,
+        "2026-09-10": -0.5618,
+        "2026-09-11": -0.0011
+      }
+    }
+  ],
+  "pools": {
+    "control_combo_sh": {
+      "n_folds": 4,
+      "n_green_folds": 3,
+      "mean_book_pct": 4.413,
+      "n_sessions": 15,
+      "n_hit": 8,
+      "hit_rate": 0.5333,
+      "pnl": 1765.17,
+      "fold_book_pct": [
+        12.511,
+        3.686,
+        2.758,
+        -1.303
+      ]
+    },
+    "control_hot4": {
+      "n_folds": 4,
+      "n_green_folds": 1,
+      "mean_book_pct": 3.8,
+      "n_sessions": 15,
+      "n_hit": 6,
+      "hit_rate": 0.4,
+      "pnl": 1520.29,
+      "fold_book_pct": [
+        20.788,
+        -1.524,
+        -2.848,
+        -1.214
+      ]
+    },
+    "control_news_red": {
+      "n_folds": 4,
+      "n_green_folds": 2,
+      "mean_book_pct": 1.58,
+      "n_sessions": 15,
+      "n_hit": 6,
+      "hit_rate": 0.4,
+      "pnl": 632.06,
+      "fold_book_pct": [
+        -0.672,
+        3.739,
+        3.947,
+        -0.693
+      ]
+    },
+    "control_random": {
+      "n_folds": 4,
+      "n_green_folds": 1,
+      "mean_book_pct": -3.212,
+      "n_sessions": 15,
+      "n_hit": 4,
+      "hit_rate": 0.2667,
+      "pnl": -1284.71,
+      "fold_book_pct": [
+        2.851,
+        -5.917,
+        -6.094,
+        -3.687
+      ]
+    },
+    "discovered_5050": {
+      "n_folds": 4,
+      "n_green_folds": 2,
+      "mean_book_pct": 0.394,
+      "n_sessions": 15,
+      "n_hit": 7,
+      "hit_rate": 0.4667,
+      "pnl": 157.66,
+      "fold_book_pct": [
+        2.077,
+        -2.695,
+        2.758,
+        -0.563
+      ]
+    },
+    "discovered_top": {
+      "n_folds": 4,
+      "n_green_folds": 2,
+      "mean_book_pct": -0.759,
+      "n_sessions": 15,
+      "n_hit": 7,
+      "hit_rate": 0.4667,
+      "pnl": -303.74,
+      "fold_book_pct": [
+        2.169,
+        -2.765,
+        -2.848,
+        0.407
+      ]
+    },
+    "discovered_5050_mktneut": {
+      "n_folds": 4,
+      "n_green_folds": 2,
+      "mean_book_pct": 0.651,
+      "n_sessions": 15,
+      "n_hit": 6,
+      "hit_rate": 0.4,
+      "pnl": 260.26,
+      "fold_book_pct": [
+        1.921,
+        -0.585,
+        1.83,
+        -0.563
+      ]
+    },
+    "control_hot4_mktneut": {
+      "n_folds": 4,
+      "n_green_folds": 2,
+      "mean_book_pct": 4.146,
+      "n_sessions": 15,
+      "n_hit": 6,
+      "hit_rate": 0.4,
+      "pnl": 1658.17,
+      "fold_book_pct": [
+        19.597,
+        0.888,
+        -2.69,
+        -1.213
+      ]
+    },
+    "control_news_red_mktneut": {
+      "n_folds": 4,
+      "n_green_folds": 2,
+      "mean_book_pct": 1.272,
+      "n_sessions": 15,
+      "n_hit": 8,
+      "hit_rate": 0.5333,
+      "pnl": 508.75,
+      "fold_book_pct": [
+        -0.098,
+        2.577,
+        3.303,
+        -0.694
+      ]
+    },
+    "control_combo_sh_mktneut": {
+      "n_folds": 4,
+      "n_green_folds": 3,
+      "mean_book_pct": 4.083,
+      "n_sessions": 15,
+      "n_hit": 8,
+      "hit_rate": 0.5333,
+      "pnl": 1633.34,
+      "fold_book_pct": [
+        12.199,
+        3.607,
+        1.83,
+        -1.303
+      ]
+    }
+  },
+  "verdict": {
+    "label": "KEEP",
+    "keep_combo": true,
+    "kill_35pct_print": true,
+    "process_plus_ev": true,
+    "why": "KEEP the 50/50 sleeve as +EV-vs-random on this thin tape (3/4 hidden windows green, mean Book% +4.41% vs random -3.21%). KILL the +35.9% full-sample print as a forecast \u2014 that number is the in-sample butterfly after the cutoff has already seen almost every session. Walk-forward OOS is a few percent per 3\u20134 session window, not +35%.",
+    "combo": {
+      "n_folds": 4,
+      "n_green_folds": 3,
+      "mean_book_pct": 4.413,
+      "n_sessions": 15,
+      "n_hit": 8,
+      "hit_rate": 0.5333,
+      "pnl": 1765.17,
+      "fold_book_pct": [
+        12.511,
+        3.686,
+        2.758,
+        -1.303
+      ]
+    },
+    "random": {
+      "n_folds": 4,
+      "n_green_folds": 1,
+      "mean_book_pct": -3.212,
+      "n_sessions": 15,
+      "n_hit": 4,
+      "hit_rate": 0.2667,
+      "pnl": -1284.71,
+      "fold_book_pct": [
+        2.851,
+        -5.917,
+        -6.094,
+        -3.687
+      ]
+    },
+    "process": {
+      "n_folds": 4,
+      "n_green_folds": 2,
+      "mean_book_pct": 0.394,
+      "n_sessions": 15,
+      "n_hit": 7,
+      "hit_rate": 0.4667,
+      "pnl": 157.66,
+      "fold_book_pct": [
+        2.077,
+        -2.695,
+        2.758,
+        -0.563
+      ]
+    }
+  }
+}
