@@ -786,8 +786,10 @@ def test_simulate_split_indexes_daily_by_date() -> None:
             name="t_split_gap")
     finally:
         fmb.simulate_book = orig
-    assert [d["date"] for d in book["daily"]] == dates
-    assert book["daily"][-1]["equity"] == 0.0
+    # #204 aligns on dates every member book actually simulated.
+    # Do not pad the still-open / missing day with a fake $0 wipeout.
+    assert [d["date"] for d in book["daily"]] == dates[:-1]
+    assert book["daily"][-1]["equity"] == 10000.0
 
 
 def test_factor_mine_workflow_lands_after_close() -> None:
