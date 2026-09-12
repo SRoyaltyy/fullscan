@@ -1,14 +1,14 @@
 # flatten_robust card — 2026-09-12
 
-_Generated 2026-09-12T13:58:59 — live `flatten_robust`._
+_Generated 2026-09-12T14:01:00 — live `flatten_robust`._
 
 **morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
 
 - Score **—** (—) · route **io**
-- Cash leftover **$108,616.66** (after 09:30 $108,616.66 · after 16:00 $108,616.66)
-- Prior close **$108,616.66** · 09:30 **$108,616.66** · overnight **$+0.00** · session **$+0.00** · 16:00 **$108,616.66**
+- Cash leftover **$107,448.18** (after 09:30 $107,448.18 · after 16:00 $107,448.18)
+- Prior close **$107,448.18** · 09:30 **$107,448.18** · overnight **$+0.00** · session **$+0.00** · 16:00 **$107,448.18**
 - Overnight lots **0** · priced mover BUYs **0** · prior book yes
-- Planned buy cost **$0.00** ≤ leftover after sells **$108,616.66**
+- Planned buy cost **$0.00** ≤ leftover after sells **$107,448.18**
 
 ## Overnight holds (into 09:30)
 
@@ -36,15 +36,15 @@ _Generated 2026-09-12T13:58:59 — live `flatten_robust`._
 
 ## Would have bought — holdings disregarded
 
-Sized from marked equity **$108,616.66** as if the book were flat. `io 3d_size (holdings disregarded)`. Not live tickets.
+Sized from marked equity **$107,448.18** as if the book were flat. `io 3d_size (holdings disregarded)`. Not live tickets.
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | ISRG | io_core | 49 | $369.15 | $18,088.35 | cash tied |
-| 16:00 ET | PACS | io_core | 404 | $44.76 | $18,083.04 | cash tied |
-| 16:00 ET | CLS | io_core | 52 | $346.55 | $18,020.60 | cash tied |
-| 16:00 ET | COHR | io_core | 59 | $305.37 | $18,016.83 | cash tied |
-| 16:00 ET | AVT | io_core | 181 | $99.63 | $18,033.03 | cash tied |
-| 16:00 ET | SIMO | io_core | 63 | $284.48 | $17,922.24 | cash tied |
+| 16:00 ET | ISRG | io_core | 48 | $369.15 | $17,719.20 | cash tied |
+| 16:00 ET | PACS | io_core | 400 | $44.76 | $17,904.00 | cash tied |
+| 16:00 ET | CLS | io_core | 51 | $346.55 | $17,674.05 | cash tied |
+| 16:00 ET | COHR | io_core | 58 | $305.37 | $17,711.46 | cash tied |
+| 16:00 ET | AVT | io_core | 179 | $99.63 | $17,833.77 | cash tied |
+| 16:00 ET | SIMO | io_core | 62 | $284.48 | $17,637.76 | cash tied |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
