@@ -1,106 +1,14 @@
 {
   "date": "2026-09-12",
-  "generated_at": "2026-09-12T09:57:38.170703-04:00",
-  "overall": "PARTIAL",
-  "ranker_ready": false,
-  "counts": {
-    "ok": 3,
-    "partial": 3,
-    "fail": 2,
-    "n": 8
-  },
+  "generated_at": "2026-09-12T09:57:55.502704-04:00",
+  "overall": null,
+  "ranker_ready": null,
+  "counts": {},
   "buy_1d": [],
   "sell_1d": [],
   "flatten": {},
   "general": {},
   "sectors": {},
-  "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-09-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-12T04:45:00.602738-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-09-12_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1118366,
-          "preview": "5904 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5904 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-09-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-12T09:57:00.713829-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-09-12_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9497,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.45, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.05, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.385, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.98, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -4.67, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.52, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-09-12_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5248,
-          "preview": "# Weather report \u2014 2026-09-12\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.45, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.05, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.385, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.98, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -4.67, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.52, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-12\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-09-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-12T09:57:03.523959-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-09-12_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2251574,
-          "preview": "5904 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, HRMY, EXEL, NUTX, CDNA"
-        }
-      ],
-      "preview": "5904 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, HRMY, EXEL, NUTX, CDNA"
-    },
-    {
-      "key": "ab",
-      "title": "AB checklist",
-      "date": "2026-09-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-12T09:57:37.539162-04:00",
-      "files": [
-        {
-          "path": "data/ab_checklist/2026-09-12_ab_checklist.csv",
-          "ok": true,
-          "reason": "",
-          "size": 7624280,
-          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, HSBC, SKM"
-        },
-        {
-          "path": "data/ab_checklist/2026-09-12_ab_checklist_enriched.csv",
-          "ok": true,
-          "reason": "",
-          "size": 8463617,
-          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, AVT, SFL, LFST, CXW"
-        }
-      ],
-      "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, HSBC, SKM \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, AVT, SFL, LFST, CXW"
-    }
-  ],
+  "lands": [],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
 }
