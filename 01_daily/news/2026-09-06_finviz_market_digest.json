@@ -1,0 +1,89 @@
+{
+  "date": "2026-09-06",
+  "generated_at": "2026-09-06T20:03:49-04:00",
+  "timezone": "America/New_York",
+  "source": "wayback",
+  "source_url": "https://web.archive.org/web/20260907000349id_/https://finviz.com/",
+  "archive_snapshot_ts": "20260907000349",
+  "archive_snapshot_at": "2026-09-06T20:03:49-04:00",
+  "archive_url": "https://web.archive.org/web/20260907000349id_/https://finviz.com/",
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-09-08",
+  "clock_rule": "Wayback midday/afternoon capture. Legal for the NEXT session open only (2026-09-08) as a prior-day close recap — NOT the same morning. Generated is the real archive capture time. Gaps stay gaps.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "Weekend Brief: Markets looked to oil and upcoming US inflation data as US–Iran tensions lifted crude into a holiday‑shortened week",
+  "raw_text": "- US equity futures were little changed after Friday’s mixed close, with US cash markets shut Monday for Labor Day ahead of Tuesday’s reopen\n- August US nonfarm payrolls rose 162K versus roughly 55K expected, increasing odds of a possible September Fed rate hike and fueling bond‑market volatility that pressured rate‑sensitive sectors\n- Escalating US–Iran tensions and Strait of Hormuz disruptions over the weekend pushed oil (@CL) prices higher, while OPEC+ kept October production quotas unchanged, a setup that could support energy names such as XLE (XLE)\n- Higher crude prices and Middle East risk raised fresh inflation concerns that could weigh on energy‑sensitive sectors and keep upward pressure on bond yields\n- Asian markets were set to open firmer Monday, with Hong Kong up about 1.7% and South Korea and Japan modestly higher on a tech rebound tempered by geopolitical and yield worries\n- Traders planned to monitor global commodity moves and any further Strait of Hormuz developments during Monday’s US market closure\n- Key US inflation releases are due later in the week, with PPI scheduled for Thursday and CPI for Friday, providing crucial input on the Fed rate path\n- Earnings catalysts for the week include reports from Casey’s General Stores (CASY) early in the week and Oracle (ORCL) and Adobe (ADBE) on Thursday",
+  "raw_summary_md": "- **US equity futures were little changed** after Friday’s mixed close, with **US cash markets shut Monday for Labor Day** ahead of Tuesday’s reopen\n- **August US nonfarm payrolls rose 162K versus roughly 55K expected**, increasing odds of a **possible September Fed rate hike** and fueling bond‑market volatility that pressured rate‑sensitive sectors\n- **Escalating US–Iran tensions and Strait of Hormuz disruptions over the weekend pushed oil ([@CL](https://finviz.com/futures_charts?t=CL)) prices higher**, while **OPEC+ kept October production quotas unchanged**, a setup that could support energy names such as XLE ([XLE](https://finviz.com/quote?t=XLE))\n- **Higher crude prices and Middle East risk raised fresh inflation concerns** that could weigh on energy‑sensitive sectors and **keep upward pressure on bond yields**\n- Asian markets were set to open firmer Monday, with **Hong Kong up about 1.7%** and South Korea and Japan modestly higher on a **tech rebound** tempered by geopolitical and yield worries\n- Traders planned to **monitor global commodity moves** and any further **Strait of Hormuz developments** during Monday’s US market closure\n- **Key US inflation releases are due later in the week**, with **PPI scheduled for Thursday and CPI for Friday**, providing crucial input on the Fed rate path\n- **Earnings catalysts for the week include reports from Casey’s General Stores** ([CASY](https://finviz.com/quote?t=CASY)) early in the week and **Oracle** ([ORCL](https://finviz.com/quote?t=ORCL)) and **Adobe** ([ADBE](https://finviz.com/quote?t=ADBE)) on Thursday",
+  "index_moves": [],
+  "oil": null,
+  "cpi": {
+    "text": "and CPI for Friday, providing crucial input on the Fed rate path",
+    "hotter": false
+  },
+  "fed_odds": null,
+  "named_tickers": [
+    "XLE",
+    "CASY",
+    "ORCL",
+    "ADBE"
+  ],
+  "named_leaders": [
+    "XLE",
+    "CASY",
+    "ORCL",
+    "ADBE"
+  ],
+  "calendar": [
+    "US equity futures were little changed after Friday’s mixed close, with US cash markets shut Monday for Labor Day ahead of Tuesday’s reopen",
+    "Asian markets were set to open firmer Monday, with Hong Kong up about 1.7% and South Korea and Japan modestly higher on a tech rebound tempered by geopolitical and yield worries",
+    "Traders planned to monitor global commodity moves and any further Strait of Hormuz developments during Monday’s US market closure",
+    "Key US inflation releases are due later in the week, with PPI scheduled for Thursday and CPI for Friday, providing crucial input on the Fed rate path",
+    "Earnings catalysts for the week include reports from Casey’s General Stores (CASY) early in the week and Oracle (ORCL) and Adobe (ADBE) on Thursday"
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": {
+      "text": "and CPI for Friday, providing crucial input on the Fed rate path",
+      "hotter": false
+    },
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "US equity futures were little changed after Friday’s mixed close, with US cash markets shut Monday for Labor Day ahead of Tuesday’s reopen",
+      "Asian markets were set to open firmer Monday, with Hong Kong up about 1.7% and South Korea and Japan modestly higher on a tech rebound tempered by geopolitical and yield worries",
+      "Traders planned to monitor global commodity moves and any further Strait of Hormuz developments during Monday’s US market closure",
+      "Key US inflation releases are due later in the week, with PPI scheduled for Thursday and CPI for Friday, providing crucial input on the Fed rate path",
+      "Earnings catalysts for the week include reports from Casey’s General Stores (CASY) early in the week and Oracle (ORCL) and Adobe (ADBE) on Thursday"
+    ],
+    "text": "US equity futures were little changed after Friday’s mixed close, with US cash markets shut Monday for Labor Day ahead of Tuesday’s reopen Asian markets were set to open firmer Monday, with Hong Kong up about 1.7% and South Korea and Japan modestly higher on a tech rebound tempered by geopolitical and yield worries Traders planned to monitor global commodity moves and any further Strait of Hormuz developments during Monday’s US market closure Key US inflation releases are due later in the week, with PPI scheduled for Thursday and CPI for Friday, providing crucial input on the Fed rate path Earnings catalysts for the week include reports from Casey’s General Stores (CASY) early in the week and Oracle (ORCL) and Adobe (ADBE) on Thursday"
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Escalating US–Iran tensions and Strait of Hormuz disruptions over the weekend pushed oil (@CL) prices higher, while OPEC+ kept October production quotas unchanged, a setup that could support energy names such as XLE (XLE) Higher crude prices and Middle East risk raised fresh inflation concerns that could weigh on energy‑sensitive sectors and keep upward pressure on bond yields Traders planned to monitor global commodity moves and any further Strait of Hormuz developments during Monday’s US market closure"
+  },
+  "finviz_id": 280116,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-06T19:06:03.427",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "neutral"
+}
