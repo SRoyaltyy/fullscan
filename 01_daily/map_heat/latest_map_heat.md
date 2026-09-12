@@ -66,17 +66,9 @@ Export `finviz_2026-09-11.csv` · 11632 names · generated 2026-09-12T01:47:24.1
 | Uranium (UX) | 90.0 | -0.06% |
 
 ## CALENDAR
-**SIZE GATE on** — high-impact print and/or mega-cap earnings today.
+No high-impact print / mega-cap earnings flagged.
 
 Econ (importance ≥ 2):
-- 08:30 ET  Core Inflation Rate MoM  actual 0.3%  cons 0.2%  surprise 0.1  prev 0.2%
-- 08:30 ET  Core Inflation Rate YoY  actual 2.4%  cons 2.4%  surprise 0.0  prev 2.5%
-- 08:30 ET  Inflation Rate MoM  actual 0.4%  cons 0.4%  surprise 0.0  prev 0.1%
-- 08:30 ET  Inflation Rate YoY  actual 3.4%  cons 3.4%  surprise 0.0  prev 3.4%
-- 08:30 ET  CPI  actual 334.98  cons 334.85  surprise 0.13  prev 333.92
-- 08:30 ET  CPI s.a  actual 334.131  cons 334.14  surprise -0.009  prev 332.81
-- 10:00 ET  Michigan Consumer Sentiment Prel  actual 47.8  cons 51  surprise -3.2  prev 51.7
-- 14:00 ET  Monthly Budget Statement  actual -167.0B  cons $-404B  surprise —  prev -432.0B
 - 08:15 ET  ADP Employment Change Weekly  actual —  cons —  surprise —  prev 12K
 - 08:30 ET  NY Empire State Manufacturing Index  actual —  cons 14  surprise —  prev 20.60
 - 16:30 ET  API Crude Oil Stock Change  actual —  cons —  surprise —  prev -0.3M
@@ -109,13 +101,20 @@ Econ (importance ≥ 2):
 - 16:30 ET  API Crude Oil Stock Change  actual —  cons —  surprise —  prev —
 - 07:00 ET  MBA 30-Year Mortgage Rate  actual —  cons —  surprise —  prev —
 - 10:30 ET  EIA Crude Oil Stocks Change  actual —  cons —  surprise —  prev —
+- 10:30 ET  EIA Gasoline Stocks Change  actual —  cons —  surprise —  prev —
+- 08:30 ET  Current Account  actual —  cons -$ 315.0B  surprise —  prev -$226.8B
+- 08:30 ET  Initial Jobless Claims  actual —  cons —  surprise —  prev —
+- 10:00 ET  New Home Sales  actual —  cons 0.615M  surprise —  prev 0.607M
+- 10:00 ET  New Home Sales MoM  actual —  cons —  surprise —  prev -10.5%
+- 08:30 ET  Durable Goods Orders MoM  actual —  cons —  surprise —  prev 1.1%
+- 08:30 ET  Durable Goods Orders Ex Transp MoM  actual —  cons —  surprise —  prev 0.4%
+- 10:00 ET  Michigan Consumer Sentiment Final  actual —  cons —  surprise —  prev 51.7
 
 Mega-cap earnings:
 - AMC **COST**  EPS est 6.548  (Costco Wholesale Corp)
 - BMO **CTAS**  EPS est 1.3481  (Cintas Corp)
 - BMO **AZO**  EPS est 54.4694  (Autozone Inc)
 - BMO **PAYX**  EPS est 1.3211  (Paychex Inc)
-- BMO **KR**  EPS est 1.0551  (Kroger Co)
 - AMC **TCOM**  EPS est 0.8855  (Trip.com Group Ltd ADR)
 - BMO **DRI**  EPS est 2.0518  (Darden Restaurants Inc)
 - BMO **SNX**  EPS est 4.6419  (TD Synnex Corp)
@@ -128,10 +127,10 @@ Options event-vol flags (NOT direction):
 - **CTAS** exp 2026-09-18 ATM IV 0.2823 implied move +3.6% put/call OI 1.667
 - **AZO** exp 2026-09-18 ATM IV 0.3845 implied move +4.9% put/call OI 8.364
 - **PAYX** exp 2026-09-18 ATM IV 0.3652 implied move +4.7% put/call OI 0.543
-- **KR** exp 2026-09-18 ATM IV 0.3396 implied move +4.3% put/call OI 1.833
 - **TCOM** exp 2026-09-18 ATM IV 0.6035 implied move +7.7% put/call OI 9.539
 - **DRI** exp 2026-09-18 ATM IV 0.3578 implied move +4.6% put/call OI 0.801
 - **SNX** exp 2026-09-18 ATM IV 0.5469 implied move +7.0% put/call OI 0.052
+- **GIS** exp 2026-09-18 ATM IV 0.3687 implied move +4.7% put/call OI 3.4
 
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
@@ -251,8 +250,13 @@ COLD (1w):
 - **Faith & Religion** +0.9% 1d -1.1% 1w · SPUS, CATH, HLAL
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 41 min **CL** Saudi Arabia shuts key oil pipeline after Houthis drone attack - Reuters (Investing.com)
-- 46 min **BLK** Onward Medical NV (ONWRF) (Q2 2026) Earnings Call Highlights: Revenue Surges 250% as ARC-EX ... (GuruFocus.com)
+- 1 hour **CL** Houthis seize Red Sea coast as Saudi pipeline shutdown deepens oil risks (Investing.com)
+- 2 hours **BCS,BP,HSBC** Burnham faces UK economic test as budget day approaches (Investing.com)
+- 2 hours **VFS** PHAM NHAT VUONG AND PHAM THU HUONG TRANSITION LEADERSHIP ROLES AT VINFAST AND GSM (PR Newswire)
+- 2 hours **EWC** Canadian Stocks Are Ignoring Escalating Trade War With U.S.-for Now (Barrons.com)
+- 2 hours **KODK,NRXS** Is Kodak having a "Kodak moment?" 2 watchlist stocks. (Zacks)
+- 3 hours **CL** Saudi Arabia shuts key oil pipeline after Houthis drone attack - Reuters (Investing.com)
+- 3 hours **BLK** Onward Medical NV (ONWRF) (Q2 2026) Earnings Call Highlights: Revenue Surges 250% as ARC-EX ... (GuruFocus.com)
 - Sep-11 **LHX,LMT,RTX** U.S. links Chinese satellite imagery to deadly Iranian strike - WSJ (Investing.com)
 - Sep-11 **F** Trump says hes open to Chinese automakers building cars in the U.S. (Investing.com)
 - Sep-11 **WMT** Greystone Logistics Inc (GLGI) (Q4 2026) Earnings Call Highlights: Navigating the Loss of a ... (GuruFocus.com)
@@ -270,12 +274,7 @@ COLD (1w):
 - Sep-11 **SWKS** Skyworks Announces Extension of Expiration Date of Exchange Offers for Qorvo's Senior Notes due 2029 and 2031 (GlobeNewswire)
 - Sep-11 **BKR** US rig count up three as prices soar (Odessa American, Texas)
 - Sep-11 **MSFT** The Woman Fixing a Microsoft Mess With Brutal Honesty (The Wall Street Journal)
-- Sep-11 **APO,JNJ** JNJ Stock Edges Up After-Hours On Apollos $20B Orthopedics Talks (Stocktwits)
-- Sep-11 **RBLX** Roblox to launch wallet to pay creators faster and will allow off-platform gaming (AFP)
-- Sep-11 **AGPU** Axe Compute Announces Inducement Grant Under Nasdaq Listing Rule 5635(c)(4) (GlobeNewswire)
-- Sep-11 **FCPT** FCPT Declares Fourth Quarter 2026 Monthly Dividends (Business Wire)
-- Sep-11 **ORCL** Oracle Reportedly Expands Restructuring Plan by $700M As AI Data Center Costs Mount (Stocktwits)
-- Sep-11 **SRRK** Second Times The Charm: FDA Clears Scholar Rocks SMA Drug Ahead Of Deadline, SRRK Soars 15% After-Hours (Stocktwits)
+- Sep-11 **APO** JNJ Stock Edges Up After-Hours On Apollos $20B Orthopedics Talks (Stocktwits)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
