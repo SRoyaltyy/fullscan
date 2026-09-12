@@ -155,6 +155,7 @@ jobs:
           DATE="${{ github.event.inputs.run_date }}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
           python -m src.finviz_digest --date "$DATE"
+          python -m src.finviz_market_digest --date "$DATE"
           ARGS=(--date "$DATE" --overlay)
           [ "${{ github.event.inputs.force }}" = "true" ] && ARGS+=(--force)
           python -m src.map_heat "${ARGS[@]}"

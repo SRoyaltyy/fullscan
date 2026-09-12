@@ -41,8 +41,12 @@ KIND_PATTERNS: dict[str, list[str]] = {
     "finviz_digest": [
         "01_daily/news/{date}_finviz_digest.json",
         "01_daily/news/{date}_finviz_digest.md",
-        "01_daily/news/{date}*finviz*.json",
-        "01_daily/news/{date}*finviz*.md",
+        "01_daily/news/{date}*finviz_digest*.json",
+        "01_daily/news/{date}*finviz_digest*.md",
+    ],
+    "finviz_market_digest": [
+        "01_daily/news/{date}_finviz_market_digest.json",
+        "01_daily/news/{date}_finviz_market_digest.md",
     ],
     "map_heat": [
         "01_daily/map_heat/{date}_map_heat.json",
@@ -68,6 +72,7 @@ PATH_KIND_HINTS: list[tuple[str, str]] = [
     ("_research", "map_heat_research"),
     ("captain", "map_heat_research"),
     ("map_heat", "map_heat"),
+    ("finviz_market_digest", "finviz_market_digest"),
     ("finviz_digest", "finviz_digest"),
     ("_parsed", "news_parse"),
     ("_judge", "news_judge"),

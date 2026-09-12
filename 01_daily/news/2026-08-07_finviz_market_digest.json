@@ -1,0 +1,84 @@
+{
+  "date": "2026-08-07",
+  "generated_at": "2026-08-07T09:14:49-04:00",
+  "timezone": "America/New_York",
+  "source": "wayback",
+  "source_url": "https://web.archive.org/web/20260807131449id_/https://finviz.com/",
+  "archive_snapshot_ts": "20260807131449",
+  "archive_snapshot_at": "2026-08-07T09:14:49-04:00",
+  "archive_url": "https://web.archive.org/web/20260807131449id_/https://finviz.com/",
+  "clock_legal": true,
+  "clock_rule": "Theme Radar: file exists only when Generated is before 09:30 ET on this date. Miss the morning → leave missing. Do not write an afternoon scrape. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Live Finviz homepage market-day prose (prior cash close + overnight / weekend news). Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks set to open higher as weak July payrolls ease Fed hike worries and refocus trading on tech and rate-sensitive sectors",
+  "raw_text": "- S&P 500 (@ES), Nasdaq 100 (@NQ), Dow (@YM), and Russell 2000 (@ER2) futures trade higher pre-market, with Nasdaq futures outperforming after softer July employment data.\n- July nonfarm payrolls unexpectedly decline by 23K versus expectations for an 80K-plus increase, while unemployment holds near 4.1%, easing immediate rate-hike concerns and reinforcing a more dovish Fed path.\n- Cloudflare (NET) climbs in pre-market trade after beating Q2 expectations and raising 2026 guidance, citing strong AI-related demand.\n- Airbnb (ABNB) advances pre-market after raising its 2026 outlook to at least mid-teens revenue growth.\n- Microchip Technology (MCHP), Akamai (AKAM), and Equinix (EQIX) trade notably higher pre-market on company-specific catalysts amid broad strength in technology and data-center names.\n- ResMed (RMD) falls after issuing a softer FY27 outlook, while Sweetgreen (SG) declines after cutting its 2026 outlook amid cyclosporiasis concerns.\n- Overnight earnings reactions in Airbnb (ABNB) and Cloudflare (NET) help lift related travel, software, and AI-exposed names.\n- Asian equity markets are mixed with modest losses in Japan’s Nikkei, while European indices trade slightly higher.\n- With July payrolls now out and no other major US data on today’s calendar, traders focus on key S&P 500 (@ES) technical levels and potential intraday volatility in AI, software, and other rate-sensitive sectors.",
+  "raw_summary_md": "- S&P 500 ([@ES](https://finviz.com/futures_charts?t=ES)), Nasdaq 100 ([@NQ](https://finviz.com/futures_charts?t=NQ)), Dow ([@YM](https://finviz.com/futures_charts?t=YM)), and Russell 2000 ([@ER2](https://finviz.com/futures_charts?t=ER2)) futures trade **higher pre-market**, with **Nasdaq futures outperforming** after **softer July employment data**.\n- July **nonfarm payrolls unexpectedly decline by 23K** versus expectations for an **80K-plus increase**, while unemployment holds near **4.1%**, easing immediate **rate-hike concerns** and reinforcing a more **dovish Fed path**.\n- Cloudflare ([**NET**](https://finviz.com/quote?t=NET)) climbs in **pre-market** trade after **beating Q2 expectations** and **raising 2026 guidance**, citing strong **AI-related demand**.\n- Airbnb ([**ABNB**](https://finviz.com/quote?t=ABNB)) advances **pre-market** after **raising its 2026 outlook** to at least **mid-teens revenue growth**.\n- Microchip Technology ([**MCHP**](https://finviz.com/quote?t=MCHP)), Akamai ([**AKAM**](https://finviz.com/quote?t=AKAM)), and Equinix ([**EQIX**](https://finviz.com/quote?t=EQIX)) trade **notably higher pre-market** on **company-specific catalysts** amid broad strength in **technology and data-center names**.\n- ResMed ([**RMD**](https://finviz.com/quote?t=RMD)) **falls** after issuing a **softer FY27 outlook**, while Sweetgreen ([**SG**](https://finviz.com/quote?t=SG)) **declines** after **cutting its 2026 outlook** amid **cyclosporiasis concerns**.\n- Overnight **earnings reactions** in Airbnb ([**ABNB**](https://finviz.com/quote?t=ABNB)) and Cloudflare ([**NET**](https://finviz.com/quote?t=NET)) help **lift related travel, software, and AI-exposed names**.\n- Asian equity markets are **mixed** with **modest losses in Japan’s Nikkei**, while **European indices trade slightly higher**.\n- With **July payrolls now out** and **no other major US data** on today’s calendar, traders focus on key **S&P 500 ([@ES](https://finviz.com/futures_charts?t=ES)) technical levels** and potential **intraday volatility** in **AI, software, and other rate-sensitive sectors**.",
+  "index_moves": [],
+  "oil": null,
+  "fed_odds": {
+    "pct": 4.1,
+    "action": "hike",
+    "text": "near 4.1%, easing immediate rate-hike"
+  },
+  "named_tickers": [
+    "NET",
+    "ABNB",
+    "MCHP",
+    "AKAM",
+    "EQIX",
+    "RMD",
+    "SG"
+  ],
+  "calendar": [
+    "With July payrolls now out and no other major US data on today’s calendar, traders focus on key S&P 500 (@ES) technical levels and potential intraday volatility in AI, software, and other rate-sensitive sectors."
+  ],
+  "finviz_id": 257238,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-08-07T09:06:21.977",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good",
+  "cpi": null,
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": {
+      "pct": 4.1,
+      "action": "hike",
+      "text": "near 4.1%, easing immediate rate-hike"
+    }
+  },
+  "named_leaders": [
+    "NET",
+    "ABNB",
+    "MCHP",
+    "AKAM",
+    "EQIX",
+    "RMD",
+    "SG"
+  ],
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "With July payrolls now out and no other major US data on today’s calendar, traders focus on key S&P 500 (@ES) technical levels and potential intraday volatility in AI, software, and other rate-sensitive sectors."
+    ],
+    "text": "With July payrolls now out and no other major US data on today’s calendar, traders focus on key S&P 500 (@ES) technical levels and potential intraday volatility in AI, software, and other rate-sensitive sectors."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  }
+}

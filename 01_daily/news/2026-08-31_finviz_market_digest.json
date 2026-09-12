@@ -1,0 +1,85 @@
+{
+  "date": "2026-08-31",
+  "generated_at": "2026-08-31T09:20:05-04:00",
+  "timezone": "America/New_York",
+  "source": "wayback",
+  "source_url": "https://web.archive.org/web/20260831132005id_/https://finviz.com/",
+  "archive_snapshot_ts": "20260831132005",
+  "archive_snapshot_at": "2026-08-31T09:20:05-04:00",
+  "archive_url": "https://web.archive.org/web/20260831132005id_/https://finviz.com/",
+  "clock_legal": true,
+  "clock_rule": "Theme Radar: file exists only when Generated is before 09:30 ET on this date. Miss the morning → leave missing. Do not write an afternoon scrape. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Live Finviz homepage market-day prose (prior cash close + overnight / weekend news). Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US equity futures point lower as Brent holds above $90 on US–Iran tensions and rising yields ahead of a jobs-heavy week",
+  "raw_text": "- S&P 500 (@ES), Dow Jones (@YM), Nasdaq 100 (@NQ) and Russell 2000 (@ER2) futures are set to open lower by about 0.37–0.40% as of 9:05 AM ET amid higher oil prices and bond yields\n- Brent crude (@QA) trades around $91 per barrel, up over 3% overnight, after renewed U.S.-Iran military strikes in the Strait of Hormuz spark inflation and supply-disruption fears\n- Valero Energy (VLO) rises 2.23%, Phillips 66 (PSX) gains 2.16% and Chevron (CVX) trades higher pre-market as energy names lead on the oil spike\n- PayPal (PYPL) falls roughly 1% pre-market after disappointing results reported on Friday\n- Shein shares drop at least 10% in Hong Kong pre-debut gray-market trading ahead of its downsized Hong Kong IPO listing\n- SAIC (SAIC) and BLRX (BLRX) report earnings before the bell, with SAIC (SAIC)’s Q2 results due and a conference call scheduled for 10 AM ET\n- A light U.S. macro calendar today features the Dallas Fed Manufacturing Index at 9:30 AM ET and Treasury bill auctions at 10:30 AM ET\n- Asian markets trade mixed to lower, with Japan’s Nikkei (@NKD) off 0.1% to 0.4% and Hong Kong’s Hang Seng down 0.4%, while European bourses trade cautiously to softer amid thin UK holiday volumes and rising yields\n- Higher bond yields and increased odds of delayed Fed rate cuts set the backdrop for a week that includes the Fed’s Beige Book and key U.S. jobs data",
+  "raw_summary_md": "- **S&P 500** ([@ES](https://finviz.com/futures_charts?t=ES)), **Dow Jones** ([@YM](https://finviz.com/futures_charts?t=YM)), **Nasdaq 100** ([@NQ](https://finviz.com/futures_charts?t=NQ)) and **Russell 2000** ([@ER2](https://finviz.com/futures_charts?t=ER2)) futures are set to **open lower by about 0.37–0.40% as of 9:05 AM ET** amid higher oil prices and bond yields\n- Brent crude ([@QA](https://finviz.com/futures_charts?t=QA)) trades around **$91 per barrel, up over 3% overnight**, after **renewed U.S.-Iran military strikes in the Strait of Hormuz** spark inflation and supply-disruption fears\n- **Valero Energy** ([VLO](https://finviz.com/quote?t=VLO)) rises **2.23%**, **Phillips 66** ([PSX](https://finviz.com/quote?t=PSX)) gains **2.16%** and **Chevron** ([CVX](https://finviz.com/quote?t=CVX)) trades higher pre-market as **energy names lead on the oil spike**\n- **PayPal** ([PYPL](https://finviz.com/quote?t=PYPL)) falls **roughly 1% pre-market** after **disappointing results** reported on Friday\n- **Shein shares drop at least 10%** in Hong Kong pre-debut gray-market trading ahead of its **downsized Hong Kong IPO listing**\n- **SAIC** ([SAIC](https://finviz.com/quote?t=SAIC)) and **BLRX** ([BLRX](https://finviz.com/quote?t=BLRX)) **report earnings before the bell**, with SAIC ([SAIC](https://finviz.com/quote?t=SAIC))’s **Q2 results due** and a conference call scheduled for **10 AM ET**\n- A **light U.S. macro calendar** today features the **Dallas Fed Manufacturing Index at 9:30 AM ET** and **Treasury bill auctions at 10:30 AM ET**\n- **Asian markets trade mixed to lower**, with Japan’s **Nikkei** ([@NKD](https://finviz.com/futures_charts?t=NKD)) off **0.1% to 0.4%** and Hong Kong’s **Hang Seng down 0.4%**, while **European bourses** trade cautiously to softer amid **thin UK holiday volumes** and **rising yields**\n- **Higher bond yields** and increased odds of **delayed Fed rate cuts** set the backdrop for a week that includes the **Fed’s Beige Book** and **key U.S. jobs data**",
+  "index_moves": [],
+  "oil": {
+    "name": "Brent crude",
+    "price": 91.0,
+    "verb": null,
+    "direction": null
+  },
+  "fed_odds": null,
+  "named_tickers": [
+    "VLO",
+    "PSX",
+    "CVX",
+    "PYPL",
+    "SAIC",
+    "BLRX"
+  ],
+  "calendar": [
+    "PayPal (PYPL) falls roughly 1% pre-market after disappointing results reported on Friday",
+    "A light U.S. macro calendar today features the Dallas Fed Manufacturing Index at 9:30 AM ET and Treasury bill auctions at 10:30 AM ET"
+  ],
+  "finviz_id": 275610,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-08-31T09:06:31.48",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad",
+  "cpi": null,
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "named_leaders": [
+    "VLO",
+    "PSX",
+    "CVX",
+    "PYPL",
+    "SAIC",
+    "BLRX"
+  ],
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "A light U.S. macro calendar today features the Dallas Fed Manufacturing Index at 9:30 AM ET and Treasury bill auctions at 10:30 AM ET"
+    ],
+    "text": "A light U.S. macro calendar today features the Dallas Fed Manufacturing Index at 9:30 AM ET and Treasury bill auctions at 10:30 AM ET"
+  },
+  "earnings_slate": {
+    "tickers": [
+      "SAIC",
+      "BLRX"
+    ],
+    "text": "SAIC (SAIC) and BLRX (BLRX) report earnings before the bell, with SAIC (SAIC)’s Q2 results due and a conference call scheduled for 10 AM ET"
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Brent crude (@QA) trades around $91 per barrel, up over 3% overnight, after renewed U.S.-Iran military strikes in the Strait of Hormuz spark inflation and supply-disruption fears"
+  }
+}

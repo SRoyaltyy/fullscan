@@ -374,6 +374,81 @@ def qc_news_actions(path: str | Path) -> QCResult:
     return _ok("news_actions", p, "ok")
 
 
+# Theme Radar first-class keys on the homepage market digest (md + json).
+THEME_RADAR_KEYS = (
+    "prior_close",
+    "oil",
+    "cpi_fed",
+    "named_leaders",
+    "next_session_calendar",
+    "earnings_slate",
+    "geo_grain",
+)
+
+
+def qc_finviz_market_digest(path: str | Path) -> QCResult:
+    """Homepage market-day prose. Optional — not in preopen all_ok."""
+    p = str(path)
+    if not os.path.exists(p):
+        return _fail("finviz_market_digest", p, "missing", empty=True)
+    if p.endswith(".json"):
+        data = _read_json(p)
+        if not isinstance(data, dict):
+            return _fail("finviz_market_digest", p, "unparseable_json", empty=True)
+        raw = str(data.get("raw_text") or "")
+        headline = str(data.get("headline") or "")
+        if len(raw) < 40 and len(headline) < 20:
+            return _fail("finviz_market_digest", p, "empty_narrative", empty=True)
+        if not data.get("generated_at"):
+            return _fail("finviz_market_digest", p, "missing_generated_at")
+        gen = str(data.get("generated_at") or "")
+        date = str(data.get("date") or "")
+        if not date or not gen.startswith(date) or len(gen) < 16:
+            return _fail("finviz_market_digest", p, "generated_not_on_date")
+        try:
+            hm = int(gen[11:13]) * 100 + int(gen[14:16])
+        except ValueError:
+            return _fail("finviz_market_digest", p, "generated_unparseable")
+        if hm >= 930:
+            return _fail("finviz_market_digest", p, "generated_after_0930")
+        if data.get("clock_legal") is False:
+            return _fail("finviz_market_digest", p, "not_clock_legal")
+        for key in THEME_RADAR_KEYS:
+            if key not in data:
+                return _fail("finviz_market_digest", p, f"missing_{key}")
+        prior = data.get("prior_close")
+        if not isinstance(prior, dict) or not {"spx", "nasdaq", "dow"} <= set(prior):
+            return _fail("finviz_market_digest", p, "prior_close_incomplete")
+        nxt = data.get("next_session_calendar")
+        if not isinstance(nxt, dict) or not {"housing", "retail", "fed"} <= set(nxt):
+            return _fail("finviz_market_digest", p, "next_session_incomplete")
+        earn = data.get("earnings_slate")
+        if not isinstance(earn, dict) or "tickers" not in earn:
+            return _fail("finviz_market_digest", p, "earnings_slate_incomplete")
+        geo = data.get("geo_grain")
+        if not isinstance(geo, dict) or not {"geo", "grain"} <= set(geo):
+            return _fail("finviz_market_digest", p, "geo_grain_incomplete")
+        return _ok("finviz_market_digest", p, "ok")
+    text = _read(p)
+    if len(text) < 200:
+        return _fail("finviz_market_digest", p, f"too_small({len(text)})", text,
+                     empty=True)
+    if "**Generated:**" not in text or "**Banner:**" not in text:
+        return _fail("finviz_market_digest", p, "missing_stamp_header")
+    if "before 09:30 ET" not in text:
+        return _fail("finviz_market_digest", p, "missing_clock_header")
+    for marker in (
+        "## Theme Radar",
+        "**Prior close:**",
+        "**Next session:**",
+        "**Earnings slate:**",
+        "**Geo/grain:**",
+    ):
+        if marker not in text:
+            return _fail("finviz_market_digest", p, f"missing_{marker.strip('#*: ')}")
+    return _ok("finviz_market_digest", p, text)
+
+
 def qc_finviz_digest(path: str | Path) -> QCResult:
     p = str(path)
     if not os.path.exists(p):
@@ -597,6 +672,7 @@ def main() -> None:
             "parse": qc_news_parse,
             "actions": qc_news_actions,
             "digest": qc_finviz_digest,
+            "market_digest": qc_finviz_market_digest,
             "heat": qc_map_heat,
             "heat_baseline": qc_map_heat_baseline,
             "heat_research": qc_map_heat_research,
