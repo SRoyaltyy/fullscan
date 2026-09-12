@@ -671,6 +671,14 @@ def simulate_shared(panel: dict, recs: list[dict], weights: list[float],
     return out
 
 
+def _daily_on(book: dict, date: str) -> dict | None:
+    """Safe day row by date. Empty / shorter books must not IndexError."""
+    for row in book.get("daily") or []:
+        if row.get("date") == date:
+            return row
+    return None
+
+
 def simulate_split(panel: dict, recs: list[dict], weights: list[float],
                    *, bars=None, fees=None, regime=None, start=None,
                    name: str = "combo") -> dict:
@@ -685,48 +693,66 @@ def simulate_split(panel: dict, recs: list[dict], weights: list[float],
             rules=rules, start=start))
     cal = [d for d in (panel.get("session_dates") or [])
            if not start or d >= start]
+    # Member books clip to last_closed (and can be empty). Indexing every
+    # book at cal[i] IndexErrors when daily lengths differ. Align on the
+    # dates every live book actually simulated; skip empty sleeves.
+    live = [b for b in books if b.get("daily")]
+    if live:
+        have = [{row.get("date") for row in (b.get("daily") or [])} for b in live]
+        common = have[0].intersection(*have[1:]) if len(have) > 1 else have[0]
+        cal = [d for d in cal if d in common]
+    else:
+        cal = []
     daily = []
     yday = CAPITAL
-    for i, date in enumerate(cal):
-        cash = sum(float(b["daily"][i]["cash"]) for b in books)
-        stock = sum(float(b["daily"][i]["stock"]) for b in books)
-        equity = sum(float(b["daily"][i]["equity"]) for b in books)
+    for date in cal:
+        rows = [row for b in live if (row := _daily_on(b, date)) is not None]
+        if not rows:
+            continue
+        cash = sum(float(r["cash"]) for r in rows)
+        stock = sum(float(r["stock"]) for r in rows)
+        equity = sum(float(r["equity"]) for r in rows)
         bought, sold, held = [], [], []
-        for b in books:
-            bought += b["daily"][i].get("bought") or []
-            sold += b["daily"][i].get("sold") or []
-            held += b["daily"][i].get("held") or []
-        open_eq = sum(float(b["daily"][i]["open_equity"]) for b in books)
+        for r in rows:
+            bought += r.get("bought") or []
+            sold += r.get("sold") or []
+            held += r.get("held") or []
+        open_eq = sum(float(r["open_equity"]) for r in rows)
         mean = None if yday <= 0 else round(100.0 * (equity / yday - 1.0), 4)
-        def cat(key):
+        def cat(key, _rows=rows):
             out = []
-            for b in books:
-                out += b["daily"][i].get(key) or []
+            for r in _rows:
+                out += r.get(key) or []
             return out
+
+        why_bits = []
+        for rec, b in zip(recs, books):
+            row = _daily_on(b, date)
+            if row is not None:
+                why_bits.append(f"{rec['name']} ${row['equity']:.0f}")
 
         daily.append({
             "date": date,
-            "s": books[0]["daily"][i].get("s"),
-            "hard_red": any(b["daily"][i].get("hard_red") for b in books),
-            "n": sum(int(b["daily"][i].get("n") or 0) for b in books),
-            "open_cash": round(sum(float(b["daily"][i]["open_cash"]) for b in books), 2),
+            "s": rows[0].get("s"),
+            "hard_red": any(r.get("hard_red") for r in rows),
+            "n": sum(int(r.get("n") or 0) for r in rows),
+            "open_cash": round(sum(float(r["open_cash"]) for r in rows), 2),
             "open_held": cat("open_held"),
             "open_equity": round(open_eq, 2),
-            "open_stock": round(sum(float(b["daily"][i]["open_stock"]) for b in books), 2),
+            "open_stock": round(sum(float(r["open_stock"]) for r in rows), 2),
             "yday_equity": round(yday, 2),
-            "overnight_delta": round(sum(float(b["daily"][i]["overnight_delta"]) for b in books), 2),
+            "overnight_delta": round(sum(float(r["overnight_delta"]) for r in rows), 2),
             "overnight": cat("overnight"),
             "marks": cat("marks"),
             "intraday": cat("intraday"),
-            "session_delta": round(sum(float(b["daily"][i].get("session_delta") or 0) for b in books), 2),
+            "session_delta": round(sum(float(r.get("session_delta") or 0) for r in rows), 2),
             "cash": round(cash, 2),
             "stock": round(stock, 2),
             "equity": round(equity, 2),
             "bought": bought, "sold": sold, "held": held,
             "lots": cat("lots"),
             "skipped": cat("skipped"),
-            "why": " + ".join(f"{r['name']} ${b['daily'][i]['equity']:.0f}"
-                              for r, b in zip(recs, books)),
+            "why": " + ".join(why_bits),
             "mean": mean,
             "made_money": bool(mean is not None and mean > 0),
         })
