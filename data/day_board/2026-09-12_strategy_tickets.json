@@ -1,6 +1,6 @@
 {
   "date": "2026-09-12",
-  "generated_at": "2026-09-12T09:58:04.602823-04:00",
+  "generated_at": "2026-09-12T10:01:58.272396-04:00",
   "n": 246,
   "n_ok": 246,
   "families": [
@@ -1217,25 +1217,25 @@
     "flatten_robust": {
       "name": "flatten_robust",
       "family": "flatten",
-      "date": "2026-09-11",
+      "date": "2026-09-12",
       "buy": [
         {
-          "ticker": "AUPH"
+          "ticker": "ISRG"
         },
         {
-          "ticker": "OVID"
+          "ticker": "PACS"
         },
         {
-          "ticker": "SANM"
+          "ticker": "CLS"
         },
         {
-          "ticker": "ORCL"
+          "ticker": "COHR"
         },
         {
-          "ticker": "NVT"
+          "ticker": "AVT"
         },
         {
-          "ticker": "COHU"
+          "ticker": "SIMO"
         }
       ],
       "sell": [],
@@ -1243,9 +1243,8 @@
       "sell_n": 0,
       "sit": true,
       "status": "ok",
-      "why": "S=+0.50; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held",
+      "why": "morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held",
       "hard_red": false,
-      "s": 0.5,
       "note": "live flatten_robust card"
     },
     "union_h1": {
@@ -10344,6 +10343,5 @@
     "combo_ee1_3070_shared"
   ],
   "errors": [],
-  "source": "strategy_tickets",
-  "lands": []
+  "source": "strategy_tickets"
 }
