@@ -1,0 +1,25 @@
+{
+ "risk_tilt": "off",
+ "macros": [
+  "hawkish",
+  "bearish",
+  "hawkish",
+  "bearish"
+ ],
+ "sector_tilts": {
+  "Technology": "bullish",
+  "Healthcare": "bullish",
+  "Industrials": "mixed"
+ },
+ "tickers": {
+  "LITE": 4.0,
+  "ADBE": 5.5,
+  "XLV": 4.0,
+  "XLE": -1.5,
+  "XLU": -1.5,
+  "AAPL": -1.5,
+  "IWM": -1.5
+ },
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=5\nMACRO rates: [hawkish] CPI binary + oil >$100 + Warsh-hawkish gold \u22123% = ONE rate cluster; hike odds repricing lifts real/long-end yields (regime/1d-1w)\nMACRO risk: [bearish] yield backup transmits to small caps/IWM and rate-sensitive cyclicals \u2014 breadth narrowing, not broadening (session/1d-1w)\nSECTOR technology: [bullish] ADBE FY26 raise + AI ARR acceleration; cybersecurity (CRWD/FTNT) and AI-optics (LITE) confirm breadth (IGV, software basket)\nSECTOR healthcare: [bullish] ABT FDA approval TactiFlex Duo expands US PFA portfolio \u2014 audit medtech spillover before single-ticker rule (XLV)\nSECTOR industrials: [mixed] AMETEK closes $5.0B Indicor \u2014 scale vs all-cash leverage/margin drag (XLI, instrumentation)\nSECTOR basic_materials: [bearish] copper retreats from record, gold \u22123% on hawkish repricing \u2014 metals co-move with equities, NOT a floor (XLB)\nINTERACTION: hawkish rate cluster + AI/software catalyst \u2192 do not buy software on dovish-rates hope; treat ADBE as relative-strength, not broad IGV beta\nINTER",
+ "date": "2026-09-12"
+}
