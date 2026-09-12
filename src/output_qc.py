@@ -409,8 +409,24 @@ def qc_finviz_market_digest(path: str | Path) -> QCResult:
             hm = int(gen[11:13]) * 100 + int(gen[14:16])
         except ValueError:
             return _fail("finviz_market_digest", p, "generated_unparseable")
-        if hm >= 930:
+        src = str(data.get("source") or "")
+        use = data.get("clock_use")
+        legal_for = data.get("clock_legal_for")
+        archive = src in ("wayback", "archive.ph")
+        if "clock_legal_for" not in data:
+            return _fail("finviz_market_digest", p, "missing_clock_legal_for")
+        if archive and hm >= 930:
+            if use != "next_open":
+                return _fail("finviz_market_digest", p, "afternoon_not_next_open")
+            if not legal_for or legal_for == date:
+                return _fail("finviz_market_digest", p, "clock_legal_for_not_next")
+            if data.get("clock_same_morning") is True:
+                return _fail("finviz_market_digest", p, "afternoon_marked_same_morning")
+        elif hm >= 930:
             return _fail("finviz_market_digest", p, "generated_after_0930")
+        else:
+            if use != "same_morning" or legal_for != date:
+                return _fail("finviz_market_digest", p, "morning_clock_mismatch")
         if data.get("clock_legal") is False:
             return _fail("finviz_market_digest", p, "not_clock_legal")
         for key in THEME_RADAR_KEYS:
@@ -435,7 +451,11 @@ def qc_finviz_market_digest(path: str | Path) -> QCResult:
                      empty=True)
     if "**Generated:**" not in text or "**Banner:**" not in text:
         return _fail("finviz_market_digest", p, "missing_stamp_header")
-    if "before 09:30 ET" not in text:
+    if "**Clock legal for:**" not in text:
+        return _fail("finviz_market_digest", p, "missing_clock_legal_for")
+    next_open = "NEXT session" in text or "next-open" in text.lower()
+    same_morning = "before 09:30 ET" in text or "same-morning" in text.lower()
+    if not next_open and not same_morning:
         return _fail("finviz_market_digest", p, "missing_clock_header")
     for marker in (
         "## Theme Radar",
