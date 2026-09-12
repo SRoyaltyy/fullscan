@@ -1,0 +1,7357 @@
+{
+ "generated": "2026-09-07",
+ "spec": "color\u2192forward-gain + PIT joins; futubull; open fills only",
+ "grids": 3598,
+ "n_keep": 9,
+ "n_thin": 0,
+ "n_kill": 113,
+ "open_letters": "ABCGJKLMO",
+ "close_letters_never_open": "DEFHIN",
+ "join_coverage": {
+  "ab": {
+   "n_dates": 14,
+   "first": "2026-08-19",
+   "last": "2026-09-06"
+  },
+  "book": {
+   "n_dates": 15,
+   "first": "2026-08-13",
+   "last": "2026-09-06"
+  },
+  "wx": {
+   "n_dates": 20,
+   "first": "2026-08-12",
+   "last": "2026-09-06"
+  }
+ },
+ "cost_model": "futubull",
+ "live_untouched": "flatten_robust",
+ "cells": [
+  {
+   "def": "hyst_open_core_e5_x2__O_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and morning cell O is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3226,
+   "n_dates": 160,
+   "discovery": {
+    "n": 7072,
+    "avg_net": 0.021137556493278132,
+    "t": 17.296736545385944,
+    "win": 0.6419683257918553
+   },
+   "holdout": {
+    "n": 4812,
+    "avg_net": 0.019776031893860475,
+    "t": 24.779218632636915,
+    "win": 0.6394430590191189
+   },
+   "early": {
+    "n": 5140,
+    "avg_net": 0.021278421755732156,
+    "t": 26.03968725592362,
+    "win": 0.6645914396887159
+   },
+   "late": {
+    "n": 6744,
+    "avg_net": 0.020058715475868367,
+    "t": 15.964695016415233,
+    "win": 0.6229240806642942
+   },
+   "spy_up": {
+    "n": 6622,
+    "avg_net": 0.02377823283808224,
+    "t": 18.975414369515786,
+    "win": 0.6732105104198127
+   },
+   "spy_dn": {
+    "n": 5262,
+    "avg_net": 0.016569290600520523,
+    "t": 19.287226798673213,
+    "win": 0.6003420752565565
+   },
+   "lottery_day_frac": 0.04986250760499565,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.017369944486330578,
+    "t": 34.41951893526876,
+    "win": 0.6529137315890586
+   },
+   "verdict": "KEEP",
+   "fail_reasons": [],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__A_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and morning cell A is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3577,
+   "n_dates": 160,
+   "discovery": {
+    "n": 15881,
+    "avg_net": 0.016832743965093083,
+    "t": 18.434661144842366,
+    "win": 0.5812606259051697
+   },
+   "holdout": {
+    "n": 10931,
+    "avg_net": 0.016188191001334246,
+    "t": 20.099762311041147,
+    "win": 0.5841185618882079
+   },
+   "early": {
+    "n": 11306,
+    "avg_net": 0.017555739853954703,
+    "t": 24.271921911787498,
+    "win": 0.5926941447019282
+   },
+   "late": {
+    "n": 15506,
+    "avg_net": 0.015851201338605445,
+    "t": 16.53744934658233,
+    "win": 0.5749387333935251
+   },
+   "spy_up": {
+    "n": 14857,
+    "avg_net": 0.018779639969544452,
+    "t": 19.366452006170285,
+    "win": 0.6002557716901123
+   },
+   "spy_dn": {
+    "n": 11955,
+    "avg_net": 0.013823907295500287,
+    "t": 18.46929446077507,
+    "win": 0.5602676704307821
+   },
+   "lottery_day_frac": 0.03747929931183365,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.016188191001334246,
+    "t": 20.099762311041147,
+    "win": 0.5841185618882079
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__B_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and morning cell B is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3576,
+   "n_dates": 160,
+   "discovery": {
+    "n": 15313,
+    "avg_net": 0.017109887478149604,
+    "t": 18.165149178756323,
+    "win": 0.581923855547574
+   },
+   "holdout": {
+    "n": 10518,
+    "avg_net": 0.016329490477388704,
+    "t": 19.625867326724038,
+    "win": 0.5833808708880015
+   },
+   "early": {
+    "n": 10851,
+    "avg_net": 0.017960133943165528,
+    "t": 24.041164538402082,
+    "win": 0.5928485853838356
+   },
+   "late": {
+    "n": 14980,
+    "avg_net": 0.015946053029158223,
+    "t": 16.14560682936301,
+    "win": 0.5750333778371162
+   },
+   "spy_up": {
+    "n": 14291,
+    "avg_net": 0.019121992584342433,
+    "t": 19.067274119901853,
+    "win": 0.6014274718354209
+   },
+   "spy_dn": {
+    "n": 11540,
+    "avg_net": 0.013906836375324225,
+    "t": 18.05070718189872,
+    "win": 0.5590987868284228
+   },
+   "lottery_day_frac": 0.038254219257177334,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.016188191001334246,
+    "t": 20.099762311041147,
+    "win": 0.5841185618882079
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__G_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and morning cell G is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3479,
+   "n_dates": 160,
+   "discovery": {
+    "n": 13218,
+    "avg_net": 0.01828063550573792,
+    "t": 16.923792621345676,
+    "win": 0.580496292933878
+   },
+   "holdout": {
+    "n": 9073,
+    "avg_net": 0.01764253579810209,
+    "t": 18.658753773114853,
+    "win": 0.585914251074617
+   },
+   "early": {
+    "n": 8971,
+    "avg_net": 0.019875177391059304,
+    "t": 22.655002966177747,
+    "win": 0.600713409876268
+   },
+   "late": {
+    "n": 13320,
+    "avg_net": 0.016772068396083417,
+    "t": 15.219750664846522,
+    "win": 0.5705705705705706
+   },
+   "spy_up": {
+    "n": 12294,
+    "avg_net": 0.020665358568994742,
+    "t": 17.92410593003555,
+    "win": 0.6018382951033024
+   },
+   "spy_dn": {
+    "n": 9997,
+    "avg_net": 0.014768855573052192,
+    "t": 16.896719732157322,
+    "win": 0.5591677503250976
+   },
+   "lottery_day_frac": 0.041320302627435815,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.016188191001334246,
+    "t": 20.099762311041147,
+    "win": 0.5841185618882079
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__J_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and morning cell J is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3570,
+   "n_dates": 160,
+   "discovery": {
+    "n": 12815,
+    "avg_net": 0.01695898294978623,
+    "t": 15.552871746823508,
+    "win": 0.5793991416309013
+   },
+   "holdout": {
+    "n": 8900,
+    "avg_net": 0.015959140822567892,
+    "t": 17.231065504380297,
+    "win": 0.5831460674157304
+   },
+   "early": {
+    "n": 9522,
+    "avg_net": 0.017323356959460048,
+    "t": 21.51757959660892,
+    "win": 0.5898970804452845
+   },
+   "late": {
+    "n": 12193,
+    "avg_net": 0.01594461698141443,
+    "t": 13.597060184302471,
+    "win": 0.5739358648404822
+   },
+   "spy_up": {
+    "n": 12064,
+    "avg_net": 0.019128774230493428,
+    "t": 16.468543018592097,
+    "win": 0.5998010610079576
+   },
+   "spy_dn": {
+    "n": 9651,
+    "avg_net": 0.013324649000693406,
+    "t": 15.748577315526619,
+    "win": 0.5573515697855145
+   },
+   "lottery_day_frac": 0.04506426076781081,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.016188191001334246,
+    "t": 20.099762311041147,
+    "win": 0.5841185618882079
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__L_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and morning cell L is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3453,
+   "n_dates": 160,
+   "discovery": {
+    "n": 9682,
+    "avg_net": 0.017442983947678334,
+    "t": 18.81110432669101,
+    "win": 0.5763272051229085
+   },
+   "holdout": {
+    "n": 6667,
+    "avg_net": 0.016553239047231907,
+    "t": 16.44104528250159,
+    "win": 0.5756712164391781
+   },
+   "early": {
+    "n": 7451,
+    "avg_net": 0.019256050569354255,
+    "t": 20.29320762172661,
+    "win": 0.5957589585290565
+   },
+   "late": {
+    "n": 8898,
+    "avg_net": 0.015258100979664891,
+    "t": 15.613613513598272,
+    "win": 0.5595639469543717
+   },
+   "spy_up": {
+    "n": 8981,
+    "avg_net": 0.019549386575175205,
+    "t": 20.195825575152014,
+    "win": 0.5978176149649259
+   },
+   "spy_dn": {
+    "n": 7368,
+    "avg_net": 0.014070354842245964,
+    "t": 14.666581428464934,
+    "win": 0.5495385450597177
+   },
+   "lottery_day_frac": 0.03329081199524531,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.016188191001334246,
+    "t": 20.099762311041147,
+    "win": 0.5841185618882079
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__K_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and morning cell K is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3096,
+   "n_dates": 160,
+   "discovery": {
+    "n": 8962,
+    "avg_net": 0.0153942544810336,
+    "t": 10.916323776308538,
+    "win": 0.576768578442312
+   },
+   "holdout": {
+    "n": 6099,
+    "avg_net": 0.014451225906990339,
+    "t": 15.832328959225304,
+    "win": 0.5848499754058042
+   },
+   "early": {
+    "n": 6142,
+    "avg_net": 0.015563866066979687,
+    "t": 18.343756822879893,
+    "win": 0.5958971019211983
+   },
+   "late": {
+    "n": 8919,
+    "avg_net": 0.014632589985689871,
+    "t": 10.204672271844794,
+    "win": 0.5691220988900101
+   },
+   "spy_up": {
+    "n": 8186,
+    "avg_net": 0.017566105117212738,
+    "t": 11.440550646105407,
+    "win": 0.6004153432689958
+   },
+   "spy_dn": {
+    "n": 6875,
+    "avg_net": 0.011971665305636902,
+    "t": 14.40968575277389,
+    "win": 0.5557818181818182
+   },
+   "lottery_day_frac": 0.0692911050826306,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.016188191001334246,
+    "t": 20.099762311041147,
+    "win": 0.5841185618882079
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__A_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and morning cell A is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3585,
+   "n_dates": 160,
+   "discovery": {
+    "n": 16027,
+    "avg_net": 0.012370644883418252,
+    "t": 13.521652704990592,
+    "win": 0.5472639920134773
+   },
+   "holdout": {
+    "n": 11120,
+    "avg_net": 0.012103086737034878,
+    "t": 14.552153021580777,
+    "win": 0.5502697841726619
+   },
+   "early": {
+    "n": 11603,
+    "avg_net": 0.013412034035703839,
+    "t": 18.367802357933805,
+    "win": 0.5625269326898216
+   },
+   "late": {
+    "n": 15544,
+    "avg_net": 0.01140187977007852,
+    "t": 11.71883873843884,
+    "win": 0.5380211013896037
+   },
+   "spy_up": {
+    "n": 14980,
+    "avg_net": 0.014577864460610428,
+    "t": 15.137426351036815,
+    "win": 0.5675567423230975
+   },
+   "spy_dn": {
+    "n": 12167,
+    "avg_net": 0.009408583910777344,
+    "t": 11.919497215503345,
+    "win": 0.5250267115969426
+   },
+   "lottery_day_frac": 0.04415383864260248,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012103086737034878,
+    "t": 14.552153021580777,
+    "win": 0.5502697841726619
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__O_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and morning cell O is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3226,
+   "n_dates": 160,
+   "discovery": {
+    "n": 7072,
+    "avg_net": 0.020032552114036966,
+    "t": 10.812874622386069,
+    "win": 0.5790441176470589
+   },
+   "holdout": {
+    "n": 4812,
+    "avg_net": 0.018844723088215706,
+    "t": 14.46623021527917,
+    "win": 0.5835411471321695
+   },
+   "early": {
+    "n": 5140,
+    "avg_net": 0.020855598989666213,
+    "t": 17.739237742668287,
+    "win": 0.6054474708171206
+   },
+   "late": {
+    "n": 6744,
+    "avg_net": 0.018557716080082897,
+    "t": 9.476214664532844,
+    "win": 0.5621293001186239
+   },
+   "spy_up": {
+    "n": 6622,
+    "avg_net": 0.022616225600113112,
+    "t": 11.635157444117334,
+    "win": 0.6099365750528541
+   },
+   "spy_dn": {
+    "n": 5262,
+    "avg_net": 0.015694863194035423,
+    "t": 12.292296417971489,
+    "win": 0.5442797415431395
+   },
+   "lottery_day_frac": 0.06927441663045801,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.016188191001334246,
+    "t": 20.099762311041147,
+    "win": 0.5841185618882079
+   },
+   "verdict": "KEEP",
+   "fail_reasons": [],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__B_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and morning cell B is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3585,
+   "n_dates": 160,
+   "discovery": {
+    "n": 15611,
+    "avg_net": 0.012621759257523906,
+    "t": 13.517601354819597,
+    "win": 0.5485234770354237
+   },
+   "holdout": {
+    "n": 10834,
+    "avg_net": 0.012095187130420825,
+    "t": 14.215341317109292,
+    "win": 0.5489200664574487
+   },
+   "early": {
+    "n": 11287,
+    "avg_net": 0.01365066735562734,
+    "t": 18.2939326835059,
+    "win": 0.5617967573314433
+   },
+   "late": {
+    "n": 15158,
+    "avg_net": 0.011479249155377961,
+    "t": 11.562091838080068,
+    "win": 0.5389233408101333
+   },
+   "spy_up": {
+    "n": 14591,
+    "avg_net": 0.014768471411392177,
+    "t": 15.005243626993705,
+    "win": 0.5678157768487424
+   },
+   "spy_dn": {
+    "n": 11854,
+    "avg_net": 0.009498125086600445,
+    "t": 11.800420692954802,
+    "win": 0.5251391935211743
+   },
+   "lottery_day_frac": 0.04456074866923541,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012103086737034878,
+    "t": 14.552153021580777,
+    "win": 0.5502697841726619
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__G_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and morning cell G is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3499,
+   "n_dates": 160,
+   "discovery": {
+    "n": 12894,
+    "avg_net": 0.013749331791641601,
+    "t": 12.322126564020305,
+    "win": 0.5476966030711959
+   },
+   "holdout": {
+    "n": 8940,
+    "avg_net": 0.013282919583503363,
+    "t": 13.131349317594404,
+    "win": 0.5521252796420582
+   },
+   "early": {
+    "n": 8924,
+    "avg_net": 0.015551637518893878,
+    "t": 17.042633615945338,
+    "win": 0.5692514567458539
+   },
+   "late": {
+    "n": 12910,
+    "avg_net": 0.012180509061141587,
+    "t": 10.544327174579548,
+    "win": 0.5358636715724244
+   },
+   "spy_up": {
+    "n": 11918,
+    "avg_net": 0.01643188745059868,
+    "t": 13.832633955520658,
+    "win": 0.5711528779996644
+   },
+   "spy_dn": {
+    "n": 9916,
+    "avg_net": 0.010104674320463067,
+    "t": 10.673345499864187,
+    "win": 0.52349737797499
+   },
+   "lottery_day_frac": 0.04892704420478292,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012103086737034878,
+    "t": 14.552153021580777,
+    "win": 0.5502697841726619
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__G_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and morning cell G is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3466,
+   "n_dates": 160,
+   "discovery": {
+    "n": 11936,
+    "avg_net": 0.013964441831506103,
+    "t": 11.810892332118561,
+    "win": 0.5520274798927614
+   },
+   "holdout": {
+    "n": 8239,
+    "avg_net": 0.012189482001319958,
+    "t": 12.80436601562562,
+    "win": 0.5548003398470688
+   },
+   "early": {
+    "n": 8058,
+    "avg_net": 0.015329800960745469,
+    "t": 16.900634740559344,
+    "win": 0.5757011665425664
+   },
+   "late": {
+    "n": 12117,
+    "avg_net": 0.011849565384834943,
+    "t": 9.974498723957266,
+    "win": 0.5381695139060824
+   },
+   "spy_up": {
+    "n": 10945,
+    "avg_net": 0.01581476121974008,
+    "t": 12.606415645889252,
+    "win": 0.5754225673823664
+   },
+   "spy_dn": {
+    "n": 9230,
+    "avg_net": 0.010185932650019155,
+    "t": 11.079335443833342,
+    "win": 0.5267605633802817
+   },
+   "lottery_day_frac": 0.05523968563960869,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.015447603710431435,
+    "t": 4.589945224871935,
+    "win": 0.5613146750138096
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__J_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and morning cell J is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3580,
+   "n_dates": 160,
+   "discovery": {
+    "n": 13194,
+    "avg_net": 0.012402835725567978,
+    "t": 11.5343730088713,
+    "win": 0.5442625435804154
+   },
+   "holdout": {
+    "n": 9186,
+    "avg_net": 0.012031704966069447,
+    "t": 12.735372471678293,
+    "win": 0.5496407576747224
+   },
+   "early": {
+    "n": 9927,
+    "avg_net": 0.013263643836699764,
+    "t": 16.442583523790745,
+    "win": 0.5596857056512542
+   },
+   "late": {
+    "n": 12453,
+    "avg_net": 0.01144287031354206,
+    "t": 9.776282445147341,
+    "win": 0.5359351160362965
+   },
+   "spy_up": {
+    "n": 12381,
+    "avg_net": 0.01482280877471072,
+    "t": 13.056877444536333,
+    "win": 0.5655439786770051
+   },
+   "spy_dn": {
+    "n": 9999,
+    "avg_net": 0.009065412635439987,
+    "t": 10.207511331041818,
+    "win": 0.5228522852285229
+   },
+   "lottery_day_frac": 0.053182219330561414,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012103086737034878,
+    "t": 14.552153021580777,
+    "win": 0.5502697841726619
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__L_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and morning cell L is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3495,
+   "n_dates": 160,
+   "discovery": {
+    "n": 10322,
+    "avg_net": 0.01525727410563443,
+    "t": 12.679381295484882,
+    "win": 0.5581282697151715
+   },
+   "holdout": {
+    "n": 7184,
+    "avg_net": 0.011788428069439657,
+    "t": 12.08846222804108,
+    "win": 0.5485801781737194
+   },
+   "early": {
+    "n": 8493,
+    "avg_net": 0.015884622608144053,
+    "t": 17.83520729082433,
+    "win": 0.5762392558577653
+   },
+   "late": {
+    "n": 9013,
+    "avg_net": 0.011901203900837192,
+    "t": 8.873786026165762,
+    "win": 0.5334516809053589
+   },
+   "spy_up": {
+    "n": 9613,
+    "avg_net": 0.01671015670330359,
+    "t": 13.301213746048,
+    "win": 0.579423697076875
+   },
+   "spy_dn": {
+    "n": 7893,
+    "avg_net": 0.01033053518058478,
+    "t": 10.764292694235959,
+    "win": 0.5235018370708222
+   },
+   "lottery_day_frac": 0.044744125047456465,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.015447603710431435,
+    "t": 4.589945224871935,
+    "win": 0.5613146750138096
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__K_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and morning cell K is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3094,
+   "n_dates": 160,
+   "discovery": {
+    "n": 8435,
+    "avg_net": 0.011364638432903805,
+    "t": 7.579697036333478,
+    "win": 0.5427385892116182
+   },
+   "holdout": {
+    "n": 5714,
+    "avg_net": 0.011160932159998008,
+    "t": 11.607551900162804,
+    "win": 0.5514525726286315
+   },
+   "early": {
+    "n": 5857,
+    "avg_net": 0.011845429283269652,
+    "t": 13.283654373720031,
+    "win": 0.5651357350179272
+   },
+   "late": {
+    "n": 8292,
+    "avg_net": 0.010884661388285317,
+    "t": 7.0725773730359895,
+    "win": 0.5329232995658466
+   },
+   "spy_up": {
+    "n": 7615,
+    "avg_net": 0.014236044548403957,
+    "t": 8.62400128049813,
+    "win": 0.5659881812212738
+   },
+   "spy_dn": {
+    "n": 6534,
+    "avg_net": 0.007840038614581582,
+    "t": 9.05924976702968,
+    "win": 0.5232629323538415
+   },
+   "lottery_day_frac": 0.08503360096439609,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012103086737034878,
+    "t": 14.552153021580777,
+    "win": 0.5502697841726619
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__L_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and morning cell L is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3430,
+   "n_dates": 160,
+   "discovery": {
+    "n": 9203,
+    "avg_net": 0.013306938516624966,
+    "t": 13.83524089251809,
+    "win": 0.5497120504183418
+   },
+   "holdout": {
+    "n": 6403,
+    "avg_net": 0.012558375297142196,
+    "t": 11.010789087277121,
+    "win": 0.5442761205684835
+   },
+   "early": {
+    "n": 7291,
+    "avg_net": 0.015463094101490167,
+    "t": 15.04775318082243,
+    "win": 0.5687834316280346
+   },
+   "late": {
+    "n": 8315,
+    "avg_net": 0.01083988131114086,
+    "t": 10.37534855365868,
+    "win": 0.5288033674082983
+   },
+   "spy_up": {
+    "n": 8461,
+    "avg_net": 0.015493474033966347,
+    "t": 15.141614512592643,
+    "win": 0.5719182129771895
+   },
+   "spy_dn": {
+    "n": 7145,
+    "avg_net": 0.01004685072004364,
+    "t": 9.540275713122766,
+    "win": 0.5185444366689993
+   },
+   "lottery_day_frac": 0.03589877999751432,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012103086737034878,
+    "t": 14.552153021580777,
+    "win": 0.5502697841726619
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__O_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and morning cell O is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3249,
+   "n_dates": 160,
+   "discovery": {
+    "n": 7090,
+    "avg_net": 0.01508997865306541,
+    "t": 8.052135203735666,
+    "win": 0.5507757404795487
+   },
+   "holdout": {
+    "n": 4903,
+    "avg_net": 0.013829156064886168,
+    "t": 10.468961941045304,
+    "win": 0.551906995716908
+   },
+   "early": {
+    "n": 5253,
+    "avg_net": 0.015972744200800443,
+    "t": 13.648151833338963,
+    "win": 0.5739577384351799
+   },
+   "late": {
+    "n": 6740,
+    "avg_net": 0.013484788657205623,
+    "t": 6.761553513839029,
+    "win": 0.5335311572700296
+   },
+   "spy_up": {
+    "n": 6618,
+    "avg_net": 0.018447821173006588,
+    "t": 9.371407891917714,
+    "win": 0.5818978543366576
+   },
+   "spy_dn": {
+    "n": 5375,
+    "avg_net": 0.009805510755983819,
+    "t": 7.5637786304045935,
+    "win": 0.5134883720930232
+   },
+   "lottery_day_frac": 0.07876866686837772,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012103086737034878,
+    "t": 14.552153021580777,
+    "win": 0.5502697841726619
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__K_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and morning cell K is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3132,
+   "n_dates": 160,
+   "discovery": {
+    "n": 9207,
+    "avg_net": 0.0114069842797179,
+    "t": 8.18722707089462,
+    "win": 0.5492560008689041
+   },
+   "holdout": {
+    "n": 6244,
+    "avg_net": 0.009456990224078466,
+    "t": 10.30331957563472,
+    "win": 0.5531710442024343
+   },
+   "early": {
+    "n": 6115,
+    "avg_net": 0.01148997251285787,
+    "t": 13.67220509091263,
+    "win": 0.5713818479149632
+   },
+   "late": {
+    "n": 9336,
+    "avg_net": 0.010048454295885044,
+    "t": 7.174118142594386,
+    "win": 0.537382176520994
+   },
+   "spy_up": {
+    "n": 8311,
+    "avg_net": 0.013028017392927782,
+    "t": 8.591600514256468,
+    "win": 0.5722536397545421
+   },
+   "spy_dn": {
+    "n": 7140,
+    "avg_net": 0.00781480373527813,
+    "t": 8.994299765826558,
+    "win": 0.5259103641456583
+   },
+   "lottery_day_frac": 0.08234331975735534,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.015447603710431435,
+    "t": 4.589945224871935,
+    "win": 0.5613146750138096
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__M_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and morning cell M is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 2941,
+   "n_dates": 85,
+   "discovery": {
+    "n": 3667,
+    "avg_net": 0.017026601052229053,
+    "t": 12.383887507109181,
+    "win": 0.5704935914916826
+   },
+   "holdout": {
+    "n": 2485,
+    "avg_net": 0.013872998849191851,
+    "t": 9.665533421462941,
+    "win": 0.5653923541247485
+   },
+   "early": {
+    "n": 4877,
+    "avg_net": 0.017061126963643973,
+    "t": 15.187206393862718,
+    "win": 0.5860159934385893
+   },
+   "late": {
+    "n": 1275,
+    "avg_net": 0.010748103527116883,
+    "t": 4.815343911463569,
+    "win": 0.5011764705882353
+   },
+   "spy_up": {
+    "n": 2904,
+    "avg_net": 0.022088078175064814,
+    "t": 15.629920169639602,
+    "win": 0.6329201101928374
+   },
+   "spy_dn": {
+    "n": 3248,
+    "avg_net": 0.01008841415590439,
+    "t": 7.13459437661289,
+    "win": 0.5107758620689655
+   },
+   "lottery_day_frac": 0.10577435458824398,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.016188191001334246,
+    "t": 20.099762311041147,
+    "win": 0.5841185618882079
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__M_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and morning cell M is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3234,
+   "n_dates": 93,
+   "discovery": {
+    "n": 4754,
+    "avg_net": 0.014508936066121823,
+    "t": 11.902177260911058,
+    "win": 0.5534286916281026
+   },
+   "holdout": {
+    "n": 3267,
+    "avg_net": 0.011313750345814845,
+    "t": 9.05904815695676,
+    "win": 0.55188246097337
+   },
+   "early": {
+    "n": 6417,
+    "avg_net": 0.013869096853784282,
+    "t": 14.298864859552848,
+    "win": 0.5678666043322425
+   },
+   "late": {
+    "n": 1604,
+    "avg_net": 0.010560791725303302,
+    "t": 4.995471678769226,
+    "win": 0.4925187032418953
+   },
+   "spy_up": {
+    "n": 3972,
+    "avg_net": 0.018706605646077196,
+    "t": 14.661649706883882,
+    "win": 0.6117824773413897
+   },
+   "spy_dn": {
+    "n": 4049,
+    "avg_net": 0.007813007362781331,
+    "t": 6.413360685700695,
+    "win": 0.49493702148678687
+   },
+   "lottery_day_frac": 0.08345538016806756,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.015447603710431435,
+    "t": 4.589945224871935,
+    "win": 0.5613146750138096
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__M_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and morning cell M is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 2969,
+   "n_dates": 89,
+   "discovery": {
+    "n": 3666,
+    "avg_net": 0.012852220741326347,
+    "t": 9.51305517534038,
+    "win": 0.5379159847244953
+   },
+   "holdout": {
+    "n": 2513,
+    "avg_net": 0.012168169810204282,
+    "t": 6.746251975783908,
+    "win": 0.5403899721448467
+   },
+   "early": {
+    "n": 4920,
+    "avg_net": 0.01377736236721481,
+    "t": 11.198714767693547,
+    "win": 0.556910569105691
+   },
+   "late": {
+    "n": 1259,
+    "avg_net": 0.007871508438482031,
+    "t": 3.418767638253883,
+    "win": 0.4686258935663225
+   },
+   "spy_up": {
+    "n": 2883,
+    "avg_net": 0.018743809920703517,
+    "t": 13.0144421986839,
+    "win": 0.6024973985431842
+   },
+   "spy_dn": {
+    "n": 3296,
+    "avg_net": 0.007177320379052641,
+    "t": 4.500547594168496,
+    "win": 0.4833131067961165
+   },
+   "lottery_day_frac": 0.11091759149367839,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012103086737034878,
+    "t": 14.552153021580777,
+    "win": 0.5502697841726619
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__A_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and morning cell A is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3552,
+   "n_dates": 160,
+   "discovery": {
+    "n": 15774,
+    "avg_net": 0.013988673912391383,
+    "t": 13.111130774656333,
+    "win": 0.5607962469887157
+   },
+   "holdout": {
+    "n": 10861,
+    "avg_net": 0.015447042634272037,
+    "t": 4.589356002961463,
+    "win": 0.5612742841358991
+   },
+   "early": {
+    "n": 12225,
+    "avg_net": 0.014483993654977918,
+    "t": 20.827575073718606,
+    "win": 0.5779141104294478
+   },
+   "late": {
+    "n": 14410,
+    "avg_net": 0.01466765093079703,
+    "t": 5.373216774281967,
+    "win": 0.5466342817487856
+   },
+   "spy_up": {
+    "n": 14633,
+    "avg_net": 0.016107882036489992,
+    "t": 14.313551168936314,
+    "win": 0.5841590924622428
+   },
+   "spy_dn": {
+    "n": 12002,
+    "avg_net": 0.012724632103393784,
+    "t": 4.1590591738246,
+    "win": 0.5327445425762373
+   },
+   "lottery_day_frac": 0.07562055657104402,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.015447603710431435,
+    "t": 4.589945224871935,
+    "win": 0.5613146750138096
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__B_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and morning cell B is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3549,
+   "n_dates": 160,
+   "discovery": {
+    "n": 14380,
+    "avg_net": 0.014052899791270045,
+    "t": 12.12425218756939,
+    "win": 0.5585535465924896
+   },
+   "holdout": {
+    "n": 9887,
+    "avg_net": 0.015769611409531904,
+    "t": 4.269499870254166,
+    "win": 0.5597248912713665
+   },
+   "early": {
+    "n": 11138,
+    "avg_net": 0.014298296596155148,
+    "t": 19.21027959425104,
+    "win": 0.5736218351589154
+   },
+   "late": {
+    "n": 13129,
+    "avg_net": 0.015137513863700902,
+    "t": 5.060046218096601,
+    "win": 0.5466524487775154
+   },
+   "spy_up": {
+    "n": 13289,
+    "avg_net": 0.016331311594628476,
+    "t": 13.296963501215483,
+    "win": 0.5831138535630973
+   },
+   "spy_dn": {
+    "n": 10978,
+    "avg_net": 0.01284095893819342,
+    "t": 3.8439053648735255,
+    "win": 0.529877937693569
+   },
+   "lottery_day_frac": 0.08023450667161276,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.015447603710431435,
+    "t": 4.589945224871935,
+    "win": 0.5613146750138096
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__J_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and morning cell J is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3536,
+   "n_dates": 160,
+   "discovery": {
+    "n": 12911,
+    "avg_net": 0.014603158857840989,
+    "t": 11.546852588978961,
+    "win": 0.5618464874912865
+   },
+   "holdout": {
+    "n": 8827,
+    "avg_net": 0.01597512504156705,
+    "t": 3.873662282139445,
+    "win": 0.560552849212643
+   },
+   "early": {
+    "n": 9957,
+    "avg_net": 0.014875184056367207,
+    "t": 18.75875323936238,
+    "win": 0.5771818820929999
+   },
+   "late": {
+    "n": 11781,
+    "avg_net": 0.015401205764047967,
+    "t": 4.63952830686382,
+    "win": 0.5479161361514303
+   },
+   "spy_up": {
+    "n": 11985,
+    "avg_net": 0.016655310275519298,
+    "t": 12.431186643319764,
+    "win": 0.5834793491864831
+   },
+   "spy_dn": {
+    "n": 9753,
+    "avg_net": 0.013323071783389581,
+    "t": 3.557823237050471,
+    "win": 0.5340920742335692
+   },
+   "lottery_day_frac": 0.08758228206740773,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.015447603710431435,
+    "t": 4.589945224871935,
+    "win": 0.5613146750138096
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__O_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and morning cell O is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3302,
+   "n_dates": 160,
+   "discovery": {
+    "n": 7679,
+    "avg_net": 0.015327738286047485,
+    "t": 7.512770346989253,
+    "win": 0.5496809480401094
+   },
+   "holdout": {
+    "n": 5264,
+    "avg_net": 0.019940290826712965,
+    "t": 2.8992267465683503,
+    "win": 0.5530015197568389
+   },
+   "early": {
+    "n": 5840,
+    "avg_net": 0.014732146032064719,
+    "t": 13.222107381841434,
+    "win": 0.5724315068493151
+   },
+   "late": {
+    "n": 7103,
+    "avg_net": 0.01923576803929575,
+    "t": 3.5116588837375375,
+    "win": 0.5334365760946079
+   },
+   "spy_up": {
+    "n": 7187,
+    "avg_net": 0.018635118313834395,
+    "t": 8.764192861138945,
+    "win": 0.5850841797690274
+   },
+   "spy_dn": {
+    "n": 5756,
+    "avg_net": 0.015416399911196647,
+    "t": 2.4398862068571194,
+    "win": 0.5085128561501042
+   },
+   "lottery_day_frac": 0.12994968374841923,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.015447603710431435,
+    "t": 4.589945224871935,
+    "win": 0.5613146750138096
+   },
+   "verdict": "KEEP",
+   "fail_reasons": [],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__fz_volM",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and Finviz snapshot cohort volM (not a historical as-of).",
+   "cost_model": "futubull",
+   "n_tickers": 1815,
+   "n_dates": 160,
+   "discovery": {
+    "n": 7645,
+    "avg_net": 0.023196278978526625,
+    "t": 19.352542154049274,
+    "win": 0.6605624591236102
+   },
+   "holdout": {
+    "n": 5287,
+    "avg_net": 0.022214984213972933,
+    "t": 24.739447382303197,
+    "win": 0.6621902780404766
+   },
+   "early": {
+    "n": 5522,
+    "avg_net": 0.02277262308477609,
+    "t": 25.24768179841967,
+    "win": 0.664070988772184
+   },
+   "late": {
+    "n": 7410,
+    "avg_net": 0.022811842058836355,
+    "t": 18.70073681060682,
+    "win": 0.6591093117408907
+   },
+   "spy_up": {
+    "n": 7129,
+    "avg_net": 0.026073781264428535,
+    "t": 20.46852255517546,
+    "win": 0.687052882592229
+   },
+   "spy_dn": {
+    "n": 5803,
+    "avg_net": 0.01876722172945027,
+    "t": 22.29059956139109,
+    "win": 0.6295019817335861
+   },
+   "lottery_day_frac": 0.043242381045028026,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.017369944486330578,
+    "t": 34.41951893526876,
+    "win": 0.6529137315890586
+   },
+   "verdict": "KEEP",
+   "fail_reasons": [],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__fz_opt",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and Finviz snapshot cohort opt (not a historical as-of).",
+   "cost_model": "futubull",
+   "n_tickers": 2387,
+   "n_dates": 160,
+   "discovery": {
+    "n": 11620,
+    "avg_net": 0.01244614857286299,
+    "t": 24.345200584369525,
+    "win": 0.5847676419965576
+   },
+   "holdout": {
+    "n": 7990,
+    "avg_net": 0.011943035679088339,
+    "t": 19.88270808351405,
+    "win": 0.5863579474342928
+   },
+   "early": {
+    "n": 8138,
+    "avg_net": 0.013046592496179607,
+    "t": 22.828669828524824,
+    "win": 0.5997788154337675
+   },
+   "late": {
+    "n": 11472,
+    "avg_net": 0.011669798793468803,
+    "t": 22.103065087292084,
+    "win": 0.5752266387726639
+   },
+   "spy_up": {
+    "n": 10911,
+    "avg_net": 0.01448671144579949,
+    "t": 26.59550993140688,
+    "win": 0.6084685180093483
+   },
+   "spy_dn": {
+    "n": 8699,
+    "avg_net": 0.009424599713468849,
+    "t": 17.140109432927552,
+    "win": 0.5565007472123232
+   },
+   "lottery_day_frac": 0.03176067686604431,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.016188191001334246,
+    "t": 20.099762311041147,
+    "win": 0.5841185618882079
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__fz_volM",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and Finviz snapshot cohort volM (not a historical as-of).",
+   "cost_model": "futubull",
+   "n_tickers": 1820,
+   "n_dates": 160,
+   "discovery": {
+    "n": 8011,
+    "avg_net": 0.01622681958244544,
+    "t": 21.525206564335253,
+    "win": 0.5856946698289851
+   },
+   "holdout": {
+    "n": 5553,
+    "avg_net": 0.016102401888960387,
+    "t": 19.515868459844526,
+    "win": 0.5903115433099225
+   },
+   "early": {
+    "n": 5811,
+    "avg_net": 0.01723252184057681,
+    "t": 21.096395663718603,
+    "win": 0.6029943211151265
+   },
+   "late": {
+    "n": 7753,
+    "avg_net": 0.015383916541825823,
+    "t": 20.18341504215303,
+    "win": 0.5760350831936025
+   },
+   "spy_up": {
+    "n": 7474,
+    "avg_net": 0.018659366597762395,
+    "t": 24.905387088675393,
+    "win": 0.6138613861386139
+   },
+   "spy_dn": {
+    "n": 6090,
+    "avg_net": 0.013128010412592985,
+    "t": 15.67783321822005,
+    "win": 0.5553366174055829
+   },
+   "lottery_day_frac": 0.029353056617527656,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012847560306348378,
+    "t": 26.381936149422234,
+    "win": 0.5863309352517986
+   },
+   "verdict": "KEEP",
+   "fail_reasons": [],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__fz_volM",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and Finviz snapshot cohort volM (not a historical as-of).",
+   "cost_model": "futubull",
+   "n_tickers": 1797,
+   "n_dates": 160,
+   "discovery": {
+    "n": 7612,
+    "avg_net": 0.017448765143588285,
+    "t": 20.769075103358745,
+    "win": 0.6292695743562795
+   },
+   "holdout": {
+    "n": 5238,
+    "avg_net": 0.016494751654697697,
+    "t": 19.32498471416927,
+    "win": 0.6277205040091638
+   },
+   "early": {
+    "n": 5883,
+    "avg_net": 0.0201975575654916,
+    "t": 23.333970886642934,
+    "win": 0.6676865544790073
+   },
+   "late": {
+    "n": 6967,
+    "avg_net": 0.014410403083466842,
+    "t": 17.00645417973383,
+    "win": 0.5956652791732453
+   },
+   "spy_up": {
+    "n": 6996,
+    "avg_net": 0.019748079418165053,
+    "t": 24.223476860831223,
+    "win": 0.6573756432246999
+   },
+   "spy_dn": {
+    "n": 5854,
+    "avg_net": 0.013847274655076505,
+    "t": 15.251735165007043,
+    "win": 0.5942944994875299
+   },
+   "lottery_day_frac": 0.026306784580845427,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.013273188917929632,
+    "t": 27.557150198609722,
+    "win": 0.6238261830233843
+   },
+   "verdict": "KEEP",
+   "fail_reasons": [],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__fz_opt",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and Finviz snapshot cohort opt (not a historical as-of).",
+   "cost_model": "futubull",
+   "n_tickers": 2388,
+   "n_dates": 160,
+   "discovery": {
+    "n": 11298,
+    "avg_net": 0.00944760383149645,
+    "t": 18.001680490837174,
+    "win": 0.5558505930253143
+   },
+   "holdout": {
+    "n": 7763,
+    "avg_net": 0.00940946028262755,
+    "t": 15.254176726613911,
+    "win": 0.5584181373180471
+   },
+   "early": {
+    "n": 7999,
+    "avg_net": 0.010496904955887188,
+    "t": 17.939652203234377,
+    "win": 0.575696962120265
+   },
+   "late": {
+    "n": 11062,
+    "avg_net": 0.008662079689038416,
+    "t": 15.933241110437573,
+    "win": 0.5433013921533176
+   },
+   "spy_up": {
+    "n": 10547,
+    "avg_net": 0.012029848834806097,
+    "t": 21.643509712802594,
+    "win": 0.5838627097752915
+   },
+   "spy_dn": {
+    "n": 8514,
+    "avg_net": 0.006213983157339052,
+    "t": 10.89900558133417,
+    "win": 0.5234907211651397
+   },
+   "lottery_day_frac": 0.033968738645085005,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012103086737034878,
+    "t": 14.552153021580777,
+    "win": 0.5502697841726619
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__fz_opt",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and Finviz snapshot cohort opt (not a historical as-of).",
+   "cost_model": "futubull",
+   "n_tickers": 2388,
+   "n_dates": 160,
+   "discovery": {
+    "n": 11686,
+    "avg_net": 0.009640730966702456,
+    "t": 18.747277358290667,
+    "win": 0.5610131781619031
+   },
+   "holdout": {
+    "n": 8014,
+    "avg_net": 0.009157113699182791,
+    "t": 15.222851144560876,
+    "win": 0.564512103818318
+   },
+   "early": {
+    "n": 9000,
+    "avg_net": 0.010708049863993423,
+    "t": 19.004738075576753,
+    "win": 0.5795555555555556
+   },
+   "late": {
+    "n": 10700,
+    "avg_net": 0.008380770325812612,
+    "t": 15.467231585891504,
+    "win": 0.5480373831775701
+   },
+   "spy_up": {
+    "n": 10881,
+    "avg_net": 0.011903083794977986,
+    "t": 21.992428388201972,
+    "win": 0.5906626229206874
+   },
+   "spy_dn": {
+    "n": 8819,
+    "avg_net": 0.006409937236532524,
+    "t": 11.414821863407049,
+    "win": 0.5276108402313188
+   },
+   "lottery_day_frac": 0.03639150116326854,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.015447603710431435,
+    "t": 4.589945224871935,
+    "win": 0.5613146750138096
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__fz_volM",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and Finviz snapshot cohort volM (not a historical as-of).",
+   "cost_model": "futubull",
+   "n_tickers": 1815,
+   "n_dates": 160,
+   "discovery": {
+    "n": 7645,
+    "avg_net": 0.021088925979328838,
+    "t": 11.900475325125253,
+    "win": 0.5790712884238064
+   },
+   "holdout": {
+    "n": 5287,
+    "avg_net": 0.020202639956111566,
+    "t": 13.888787118569251,
+    "win": 0.5835067145829392
+   },
+   "early": {
+    "n": 5522,
+    "avg_net": 0.021211156431739413,
+    "t": 16.822630156140377,
+    "win": 0.588917059036581
+   },
+   "late": {
+    "n": 7410,
+    "avg_net": 0.020365477833180268,
+    "t": 10.828758302962418,
+    "win": 0.5748987854251012
+   },
+   "spy_up": {
+    "n": 7129,
+    "avg_net": 0.02316786676857796,
+    "t": 12.243841561056943,
+    "win": 0.5988217141254033
+   },
+   "spy_dn": {
+    "n": 5803,
+    "avg_net": 0.017727464133506555,
+    "t": 13.211999562470552,
+    "win": 0.5588488712734793
+   },
+   "lottery_day_frac": 0.060315356010985435,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.016188191001334246,
+    "t": 20.099762311041147,
+    "win": 0.5841185618882079
+   },
+   "verdict": "KEEP",
+   "fail_reasons": [],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__fz_mid(1-10B)",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and Finviz snapshot cohort mid(1-10B) (not a historical as-of).",
+   "cost_model": "futubull",
+   "n_tickers": 1085,
+   "n_dates": 160,
+   "discovery": {
+    "n": 5405,
+    "avg_net": 0.011895963092201783,
+    "t": 16.351326603035822,
+    "win": 0.5925994449583719
+   },
+   "holdout": {
+    "n": 3664,
+    "avg_net": 0.010498704776547298,
+    "t": 13.520772139839229,
+    "win": 0.5892467248908297
+   },
+   "early": {
+    "n": 3791,
+    "avg_net": 0.012291925446846031,
+    "t": 15.164131237427249,
+    "win": 0.606700079134793
+   },
+   "late": {
+    "n": 5278,
+    "avg_net": 0.0106415773864393,
+    "t": 14.951228715722083,
+    "win": 0.5801439939370974
+   },
+   "spy_up": {
+    "n": 4996,
+    "avg_net": 0.013140406104175134,
+    "t": 17.88759549457171,
+    "win": 0.6152922337870296
+   },
+   "spy_dn": {
+    "n": 4073,
+    "avg_net": 0.009112562219042712,
+    "t": 11.704671637331014,
+    "win": 0.5617480972256322
+   },
+   "lottery_day_frac": 0.039539363426231475,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.016188191001334246,
+    "t": 20.099762311041147,
+    "win": 0.5841185618882079
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__fz_mid(1-10B)",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and Finviz snapshot cohort mid(1-10B) (not a historical as-of).",
+   "cost_model": "futubull",
+   "n_tickers": 1085,
+   "n_dates": 160,
+   "discovery": {
+    "n": 5202,
+    "avg_net": 0.008953664700625691,
+    "t": 12.031996022465304,
+    "win": 0.5626682045367166
+   },
+   "holdout": {
+    "n": 3496,
+    "avg_net": 0.008579635821556929,
+    "t": 10.471139013427138,
+    "win": 0.5655034324942791
+   },
+   "early": {
+    "n": 3703,
+    "avg_net": 0.01023985074608757,
+    "t": 12.585845002514834,
+    "win": 0.5860113421550095
+   },
+   "late": {
+    "n": 4995,
+    "avg_net": 0.007738379037448569,
+    "t": 10.293471967376888,
+    "win": 0.5473473473473474
+   },
+   "spy_up": {
+    "n": 4776,
+    "avg_net": 0.010826878985429257,
+    "t": 14.44397712888988,
+    "win": 0.5889865996649917
+   },
+   "spy_dn": {
+    "n": 3922,
+    "avg_net": 0.006339162817544043,
+    "t": 7.735006856414111,
+    "win": 0.5331463539010709
+   },
+   "lottery_day_frac": 0.04923930940848221,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012103086737034878,
+    "t": 14.552153021580777,
+    "win": 0.5502697841726619
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__fz_volM",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and Finviz snapshot cohort volM (not a historical as-of).",
+   "cost_model": "futubull",
+   "n_tickers": 1820,
+   "n_dates": 160,
+   "discovery": {
+    "n": 8011,
+    "avg_net": 0.014793424962466056,
+    "t": 8.621845201997163,
+    "win": 0.5385095493696168
+   },
+   "holdout": {
+    "n": 5553,
+    "avg_net": 0.014476640424624062,
+    "t": 10.351314113001589,
+    "win": 0.5443904195930128
+   },
+   "early": {
+    "n": 5811,
+    "avg_net": 0.014891851503505337,
+    "t": 12.641529492078725,
+    "win": 0.5529168817759422
+   },
+   "late": {
+    "n": 7753,
+    "avg_net": 0.01449275926291545,
+    "t": 7.8982569208074915,
+    "win": 0.5319231265316652
+   },
+   "spy_up": {
+    "n": 7474,
+    "avg_net": 0.01714910435107166,
+    "t": 9.481036412497541,
+    "win": 0.5583355632860584
+   },
+   "spy_dn": {
+    "n": 6090,
+    "avg_net": 0.011613547739301053,
+    "t": 8.68051006679421,
+    "win": 0.5195402298850574
+   },
+   "lottery_day_frac": 0.07359951584483732,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012103086737034878,
+    "t": 14.552153021580777,
+    "win": 0.5502697841726619
+   },
+   "verdict": "KEEP",
+   "fail_reasons": [],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__fz_mid(1-10B)",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and Finviz snapshot cohort mid(1-10B) (not a historical as-of).",
+   "cost_model": "futubull",
+   "n_tickers": 1085,
+   "n_dates": 160,
+   "discovery": {
+    "n": 5370,
+    "avg_net": 0.00878125081700478,
+    "t": 11.903193644755069,
+    "win": 0.5642458100558659
+   },
+   "holdout": {
+    "n": 3680,
+    "avg_net": 0.008066139187383694,
+    "t": 10.217914381330818,
+    "win": 0.5616847826086957
+   },
+   "early": {
+    "n": 4145,
+    "avg_net": 0.009870059524761693,
+    "t": 12.345708936916234,
+    "win": 0.5821471652593486
+   },
+   "late": {
+    "n": 4905,
+    "avg_net": 0.007324630451936891,
+    "t": 9.911764623229356,
+    "win": 0.5471967380224261
+   },
+   "spy_up": {
+    "n": 4964,
+    "avg_net": 0.010689915051642324,
+    "t": 14.594141524413773,
+    "win": 0.588436744560838
+   },
+   "spy_dn": {
+    "n": 4086,
+    "avg_net": 0.005818397156273905,
+    "t": 7.213988343106785,
+    "win": 0.5325501713166911
+   },
+   "lottery_day_frac": 0.038932413103942146,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.015447603710431435,
+    "t": 4.589945224871935,
+    "win": 0.5613146750138096
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__fz_mcap",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and Finviz snapshot cohort mcap (not a historical as-of).",
+   "cost_model": "futubull",
+   "n_tickers": 565,
+   "n_dates": 157,
+   "discovery": {
+    "n": 2724,
+    "avg_net": 0.006957226461355253,
+    "t": 9.427320956290613,
+    "win": 0.5682819383259912
+   },
+   "holdout": {
+    "n": 1911,
+    "avg_net": 0.006578883589953483,
+    "t": 7.645396615292332,
+    "win": 0.5850340136054422
+   },
+   "early": {
+    "n": 1951,
+    "avg_net": 0.007996742346276637,
+    "t": 9.426357331485296,
+    "win": 0.593029215786776
+   },
+   "late": {
+    "n": 2684,
+    "avg_net": 0.005932223212946013,
+    "t": 7.959778055704552,
+    "win": 0.562220566318927
+   },
+   "spy_up": {
+    "n": 2513,
+    "avg_net": 0.008680729293904095,
+    "t": 10.756826193137783,
+    "win": 0.5953044170314366
+   },
+   "spy_dn": {
+    "n": 2122,
+    "avg_net": 0.004575428230703029,
+    "t": 6.005920367837735,
+    "win": 0.5513666352497644
+   },
+   "lottery_day_frac": 0.04453699820985072,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.016188191001334246,
+    "t": 20.099762311041147,
+    "win": 0.5841185618882079
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__fz_volM",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and Finviz snapshot cohort volM (not a historical as-of).",
+   "cost_model": "futubull",
+   "n_tickers": 1797,
+   "n_dates": 160,
+   "discovery": {
+    "n": 7612,
+    "avg_net": 0.01766056996765939,
+    "t": 8.39381106353127,
+    "win": 0.5550446663163426
+   },
+   "holdout": {
+    "n": 5238,
+    "avg_net": 0.021884648422684633,
+    "t": 3.155798110464787,
+    "win": 0.5603283696067202
+   },
+   "early": {
+    "n": 5883,
+    "avg_net": 0.016987994866316723,
+    "t": 13.708251486583325,
+    "win": 0.5714771375148734
+   },
+   "late": {
+    "n": 6967,
+    "avg_net": 0.021404287818760463,
+    "t": 3.8215107465843805,
+    "win": 0.5451413807951773
+   },
+   "spy_up": {
+    "n": 6996,
+    "avg_net": 0.02002063175976776,
+    "t": 8.900897506709233,
+    "win": 0.5791881074899943
+   },
+   "spy_dn": {
+    "n": 5854,
+    "avg_net": 0.018619697171252163,
+    "t": 2.9906719641475727,
+    "win": 0.5309190297232661
+   },
+   "lottery_day_frac": 0.121128418165454,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.015447603710431435,
+    "t": 4.589945224871935,
+    "win": 0.5613146750138096
+   },
+   "verdict": "KEEP",
+   "fail_reasons": [],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__A_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and morning cell A is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3577,
+   "n_dates": 160,
+   "discovery": {
+    "n": 15881,
+    "avg_net": 0.018354432605685866,
+    "t": 30.10362145039707,
+    "win": 0.658774636357912
+   },
+   "holdout": {
+    "n": 10931,
+    "avg_net": 0.017369944486330578,
+    "t": 34.41951893526876,
+    "win": 0.6529137315890586
+   },
+   "early": {
+    "n": 11306,
+    "avg_net": 0.018645193313306198,
+    "t": 37.03710363551352,
+    "win": 0.6643375199009376
+   },
+   "late": {
+    "n": 15506,
+    "avg_net": 0.0174484104082766,
+    "t": 28.23977552277356,
+    "win": 0.6505868695988649
+   },
+   "spy_up": {
+    "n": 14857,
+    "avg_net": 0.020262458485632268,
+    "t": 31.531327687849817,
+    "win": 0.6812277041125395
+   },
+   "spy_dn": {
+    "n": 11955,
+    "avg_net": 0.015083083368459914,
+    "t": 31.454151400484125,
+    "win": 0.6255123379339189
+   },
+   "lottery_day_frac": 0.026923637766392016,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.017369944486330578,
+    "t": 34.41951893526876,
+    "win": 0.6529137315890586
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__B_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and morning cell B is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3576,
+   "n_dates": 160,
+   "discovery": {
+    "n": 15313,
+    "avg_net": 0.01858966038973657,
+    "t": 29.59363939478801,
+    "win": 0.6586560438842813
+   },
+   "holdout": {
+    "n": 10518,
+    "avg_net": 0.017624562189504107,
+    "t": 33.841096578699364,
+    "win": 0.6535463015782468
+   },
+   "early": {
+    "n": 10851,
+    "avg_net": 0.019048827005670805,
+    "t": 36.56647135322308,
+    "win": 0.665192148189107
+   },
+   "late": {
+    "n": 14980,
+    "avg_net": 0.017579425421809507,
+    "t": 27.670585041800038,
+    "win": 0.6503337783711616
+   },
+   "spy_up": {
+    "n": 14291,
+    "avg_net": 0.020571971656846072,
+    "t": 30.96201507713241,
+    "win": 0.6812679308655797
+   },
+   "spy_dn": {
+    "n": 11540,
+    "avg_net": 0.015255161846555726,
+    "t": 31.024939011366584,
+    "win": 0.6259965337954939
+   },
+   "lottery_day_frac": 0.027077190706028386,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.017369944486330578,
+    "t": 34.41951893526876,
+    "win": 0.6529137315890586
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__G_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and morning cell G is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3479,
+   "n_dates": 160,
+   "discovery": {
+    "n": 13218,
+    "avg_net": 0.020019050461061564,
+    "t": 27.67450255405396,
+    "win": 0.6601603873505826
+   },
+   "holdout": {
+    "n": 9073,
+    "avg_net": 0.018971524681030135,
+    "t": 32.128291725048626,
+    "win": 0.6536977846357324
+   },
+   "early": {
+    "n": 8971,
+    "avg_net": 0.021252650159859488,
+    "t": 34.51964773586578,
+    "win": 0.6771820309887415
+   },
+   "late": {
+    "n": 13320,
+    "avg_net": 0.018474694282372275,
+    "t": 25.99925113431248,
+    "win": 0.6442942942942943
+   },
+   "spy_up": {
+    "n": 12294,
+    "avg_net": 0.02237508068850718,
+    "t": 29.163963536670703,
+    "win": 0.6870831299821051
+   },
+   "spy_dn": {
+    "n": 9997,
+    "avg_net": 0.016170972335779816,
+    "t": 29.056217185278257,
+    "win": 0.6211863559067721
+   },
+   "lottery_day_frac": 0.029477351661443274,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.017369944486330578,
+    "t": 34.41951893526876,
+    "win": 0.6529137315890586
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__J_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and morning cell J is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3570,
+   "n_dates": 160,
+   "discovery": {
+    "n": 12815,
+    "avg_net": 0.018643467268324977,
+    "t": 25.528952469866645,
+    "win": 0.6564962934061647
+   },
+   "holdout": {
+    "n": 8900,
+    "avg_net": 0.01755864564210017,
+    "t": 30.06852571280506,
+    "win": 0.6512359550561798
+   },
+   "early": {
+    "n": 9522,
+    "avg_net": 0.018662252476362284,
+    "t": 32.70292985931259,
+    "win": 0.6598403696702373
+   },
+   "late": {
+    "n": 12193,
+    "avg_net": 0.017836956547064253,
+    "t": 23.57981171595893,
+    "win": 0.6500451078487657
+   },
+   "spy_up": {
+    "n": 12064,
+    "avg_net": 0.020581355226409272,
+    "t": 26.69129121090344,
+    "win": 0.6786306366047745
+   },
+   "spy_dn": {
+    "n": 9651,
+    "avg_net": 0.015220651725922145,
+    "t": 27.804102300128783,
+    "win": 0.6239767899699513
+   },
+   "lottery_day_frac": 0.03182524081931986,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.017369944486330578,
+    "t": 34.41951893526876,
+    "win": 0.6529137315890586
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__L_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and morning cell L is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3453,
+   "n_dates": 160,
+   "discovery": {
+    "n": 9682,
+    "avg_net": 0.020309750630910783,
+    "t": 22.017059947623466,
+    "win": 0.6459409212972527
+   },
+   "holdout": {
+    "n": 6667,
+    "avg_net": 0.0191725005404703,
+    "t": 29.30808502590872,
+    "win": 0.6446677666116695
+   },
+   "early": {
+    "n": 7451,
+    "avg_net": 0.020616358264213704,
+    "t": 32.127255443968686,
+    "win": 0.6689035028855187
+   },
+   "late": {
+    "n": 8898,
+    "avg_net": 0.0192008969751784,
+    "t": 19.607608935060128,
+    "win": 0.6257585974376264
+   },
+   "spy_up": {
+    "n": 8981,
+    "avg_net": 0.022999649145632232,
+    "t": 23.270910250878654,
+    "win": 0.6792116690791671
+   },
+   "spy_dn": {
+    "n": 7368,
+    "avg_net": 0.016001929659998724,
+    "t": 26.492306999172957,
+    "win": 0.6042345276872965
+   },
+   "lottery_day_frac": 0.03837099695090718,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.017369944486330578,
+    "t": 34.41951893526876,
+    "win": 0.6529137315890586
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__A_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and morning cell A is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3552,
+   "n_dates": 160,
+   "discovery": {
+    "n": 15774,
+    "avg_net": 0.014425130771451451,
+    "t": 31.81472873810364,
+    "win": 0.6307214403448713
+   },
+   "holdout": {
+    "n": 10861,
+    "avg_net": 0.013266204612617186,
+    "t": 27.54300971880105,
+    "win": 0.6237915477396189
+   },
+   "early": {
+    "n": 12225,
+    "avg_net": 0.016605350236992302,
+    "t": 34.877060913122,
+    "win": 0.6638854805725971
+   },
+   "late": {
+    "n": 14410,
+    "avg_net": 0.011702002389956943,
+    "t": 25.2808048707796,
+    "win": 0.5973629424011103
+   },
+   "spy_up": {
+    "n": 14633,
+    "avg_net": 0.016282685625459255,
+    "t": 37.41211375611433,
+    "win": 0.6604934053167498
+   },
+   "spy_dn": {
+    "n": 12002,
+    "avg_net": 0.011111624923276553,
+    "t": 21.693801244806412,
+    "win": 0.5881519746708882
+   },
+   "lottery_day_frac": 0.022499701452409857,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.013273188917929632,
+    "t": 27.557150198609722,
+    "win": 0.6238261830233843
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__K_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and morning cell K is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3096,
+   "n_dates": 160,
+   "discovery": {
+    "n": 8962,
+    "avg_net": 0.016461641692063888,
+    "t": 18.038925901978164,
+    "win": 0.6543182325373801
+   },
+   "holdout": {
+    "n": 6099,
+    "avg_net": 0.01566556193346481,
+    "t": 26.841412849446485,
+    "win": 0.6491228070175439
+   },
+   "early": {
+    "n": 6142,
+    "avg_net": 0.01667274186539596,
+    "t": 30.101451217855665,
+    "win": 0.6678606317160534
+   },
+   "late": {
+    "n": 8919,
+    "avg_net": 0.015771893097793078,
+    "t": 17.060873920711654,
+    "win": 0.641439623276152
+   },
+   "spy_up": {
+    "n": 8186,
+    "avg_net": 0.01906108957826372,
+    "t": 19.670942722993356,
+    "win": 0.6834839970681652
+   },
+   "spy_dn": {
+    "n": 6875,
+    "avg_net": 0.012660278660190786,
+    "t": 21.436495721892804,
+    "win": 0.6149818181818182
+   },
+   "lottery_day_frac": 0.049490699285723694,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.017369944486330578,
+    "t": 34.41951893526876,
+    "win": 0.6529137315890586
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__A_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and morning cell A is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3585,
+   "n_dates": 160,
+   "discovery": {
+    "n": 16027,
+    "avg_net": 0.013543082224688203,
+    "t": 31.885975410263242,
+    "win": 0.5933112872028452
+   },
+   "holdout": {
+    "n": 11120,
+    "avg_net": 0.012847560306348378,
+    "t": 26.381936149422234,
+    "win": 0.5863309352517986
+   },
+   "early": {
+    "n": 11603,
+    "avg_net": 0.014594404091771868,
+    "t": 30.679767467668356,
+    "win": 0.6080324054123933
+   },
+   "late": {
+    "n": 15544,
+    "avg_net": 0.012260742327897763,
+    "t": 28.358285215670357,
+    "win": 0.5773288728769943
+   },
+   "spy_up": {
+    "n": 14980,
+    "avg_net": 0.015446448994768472,
+    "t": 36.523752984791834,
+    "win": 0.6184245660881175
+   },
+   "spy_dn": {
+    "n": 12167,
+    "avg_net": 0.010563988121972555,
+    "t": 21.61169610212599,
+    "win": 0.5560121640503
+   },
+   "lottery_day_frac": 0.022436569676796813,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012847560306348378,
+    "t": 26.381936149422234,
+    "win": 0.5863309352517986
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__B_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and morning cell B is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3585,
+   "n_dates": 160,
+   "discovery": {
+    "n": 15611,
+    "avg_net": 0.013721689744287125,
+    "t": 31.944002335923596,
+    "win": 0.5949650887194927
+   },
+   "holdout": {
+    "n": 10834,
+    "avg_net": 0.01295472668076902,
+    "t": 26.054481422514744,
+    "win": 0.5863946834040982
+   },
+   "early": {
+    "n": 11287,
+    "avg_net": 0.014859496684462273,
+    "t": 30.554308107163543,
+    "win": 0.609905200673341
+   },
+   "late": {
+    "n": 15158,
+    "avg_net": 0.012326274467607347,
+    "t": 28.226419744464906,
+    "win": 0.5777147380920966
+   },
+   "spy_up": {
+    "n": 14591,
+    "avg_net": 0.015606354478335539,
+    "t": 36.35423461649687,
+    "win": 0.6193543965458159
+   },
+   "spy_dn": {
+    "n": 11854,
+    "avg_net": 0.010700901743219504,
+    "t": 21.565535932772526,
+    "win": 0.5571115235363591
+   },
+   "lottery_day_frac": 0.022750046965529146,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012847560306348378,
+    "t": 26.381936149422234,
+    "win": 0.5863309352517986
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__B_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and morning cell B is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3549,
+   "n_dates": 160,
+   "discovery": {
+    "n": 14380,
+    "avg_net": 0.014637897664042944,
+    "t": 30.112182384270593,
+    "win": 0.6296940194714882
+   },
+   "holdout": {
+    "n": 9887,
+    "avg_net": 0.013470347407376963,
+    "t": 26.02480034832849,
+    "win": 0.6247597855770203
+   },
+   "early": {
+    "n": 11138,
+    "avg_net": 0.016967175402715595,
+    "t": 33.15192761968163,
+    "win": 0.6647513018495241
+   },
+   "late": {
+    "n": 13129,
+    "avg_net": 0.01178261052557143,
+    "t": 23.75582724007288,
+    "win": 0.5962373371924746
+   },
+   "spy_up": {
+    "n": 13289,
+    "avg_net": 0.01644752063642991,
+    "t": 35.164062642291626,
+    "win": 0.6587403115358568
+   },
+   "spy_dn": {
+    "n": 10978,
+    "avg_net": 0.011395809026066359,
+    "t": 20.772228963724444,
+    "win": 0.5900892694479869
+   },
+   "lottery_day_frac": 0.02322254299888194,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.013273188917929632,
+    "t": 27.557150198609722,
+    "win": 0.6238261830233843
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__J_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and morning cell J is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3536,
+   "n_dates": 160,
+   "discovery": {
+    "n": 12911,
+    "avg_net": 0.014605357748973143,
+    "t": 28.40135462504528,
+    "win": 0.632329021764387
+   },
+   "holdout": {
+    "n": 8827,
+    "avg_net": 0.013363939391325777,
+    "t": 24.56302787460808,
+    "win": 0.6237679845927269
+   },
+   "early": {
+    "n": 9957,
+    "avg_net": 0.017226311226694106,
+    "t": 31.22209353992847,
+    "win": 0.664758461383951
+   },
+   "late": {
+    "n": 11781,
+    "avg_net": 0.011460053138106415,
+    "t": 22.257332734093616,
+    "win": 0.5985060690943044
+   },
+   "spy_up": {
+    "n": 11985,
+    "avg_net": 0.016525539290665386,
+    "t": 33.1824694552692,
+    "win": 0.6613266583229036
+   },
+   "spy_dn": {
+    "n": 9753,
+    "avg_net": 0.011122185840828486,
+    "t": 19.366981739830837,
+    "win": 0.5889469906695376
+   },
+   "lottery_day_frac": 0.024683871289129206,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.013273188917929632,
+    "t": 27.557150198609722,
+    "win": 0.6238261830233843
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__G_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and morning cell G is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3499,
+   "n_dates": 160,
+   "discovery": {
+    "n": 12894,
+    "avg_net": 0.015089875821167232,
+    "t": 29.385148229915256,
+    "win": 0.5988832014890647
+   },
+   "holdout": {
+    "n": 8940,
+    "avg_net": 0.014274564546648645,
+    "t": 24.324949150600688,
+    "win": 0.5893736017897092
+   },
+   "early": {
+    "n": 8924,
+    "avg_net": 0.017055763001139493,
+    "t": 28.535321157235167,
+    "win": 0.6197893321380546
+   },
+   "late": {
+    "n": 12910,
+    "avg_net": 0.013166370012625899,
+    "t": 25.97035978710683,
+    "win": 0.5778466305189776
+   },
+   "spy_up": {
+    "n": 11918,
+    "avg_net": 0.01751448751970037,
+    "t": 33.937115268674006,
+    "win": 0.6286289645913744
+   },
+   "spy_dn": {
+    "n": 9916,
+    "avg_net": 0.011440682092111762,
+    "t": 19.648111595225885,
+    "win": 0.5545582896329165
+   },
+   "lottery_day_frac": 0.024418620341070212,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012847560306348378,
+    "t": 26.381936149422234,
+    "win": 0.5863309352517986
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__J_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and morning cell J is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3580,
+   "n_dates": 160,
+   "discovery": {
+    "n": 13194,
+    "avg_net": 0.013616713233130202,
+    "t": 28.23116893076274,
+    "win": 0.5910262240412308
+   },
+   "holdout": {
+    "n": 9186,
+    "avg_net": 0.012999096773388105,
+    "t": 23.497070286858047,
+    "win": 0.5874156324842151
+   },
+   "early": {
+    "n": 9927,
+    "avg_net": 0.014599460533831255,
+    "t": 27.60900002186644,
+    "win": 0.6043114737584366
+   },
+   "late": {
+    "n": 12453,
+    "avg_net": 0.012377722046006595,
+    "t": 24.763663607514296,
+    "win": 0.577772424315426
+   },
+   "spy_up": {
+    "n": 12381,
+    "avg_net": 0.015462656705064774,
+    "t": 32.03060501946125,
+    "win": 0.616428398352314
+   },
+   "spy_dn": {
+    "n": 9999,
+    "avg_net": 0.010763622831568762,
+    "t": 19.493938173555648,
+    "win": 0.5562556255625563
+   },
+   "lottery_day_frac": 0.023999610225051052,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012847560306348378,
+    "t": 26.381936149422234,
+    "win": 0.5863309352517986
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__G_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and morning cell G is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3466,
+   "n_dates": 160,
+   "discovery": {
+    "n": 11936,
+    "avg_net": 0.014373558981489978,
+    "t": 26.30402710032104,
+    "win": 0.6122654155495979
+   },
+   "holdout": {
+    "n": 8239,
+    "avg_net": 0.013212758759197593,
+    "t": 22.303314357813218,
+    "win": 0.6020148076222842
+   },
+   "early": {
+    "n": 8058,
+    "avg_net": 0.01692697109792667,
+    "t": 27.409583743349938,
+    "win": 0.6413502109704642
+   },
+   "late": {
+    "n": 12117,
+    "avg_net": 0.011886208328216578,
+    "t": 22.36140433198332,
+    "win": 0.5859536188825617
+   },
+   "spy_up": {
+    "n": 10945,
+    "avg_net": 0.016525986072789243,
+    "t": 30.457666003122508,
+    "win": 0.6414801279122887
+   },
+   "spy_dn": {
+    "n": 9230,
+    "avg_net": 0.010785027286393833,
+    "t": 17.896933442397334,
+    "win": 0.5684723726977248
+   },
+   "lottery_day_frac": 0.025156282360285456,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.013273188917929632,
+    "t": 27.557150198609722,
+    "win": 0.6238261830233843
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__L_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and morning cell L is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3495,
+   "n_dates": 160,
+   "discovery": {
+    "n": 10322,
+    "avg_net": 0.015763245284828864,
+    "t": 26.110208477470326,
+    "win": 0.6207130401085061
+   },
+   "holdout": {
+    "n": 7184,
+    "avg_net": 0.014175485541718194,
+    "t": 21.949388985118265,
+    "win": 0.611358574610245
+   },
+   "early": {
+    "n": 8493,
+    "avg_net": 0.018125163728737004,
+    "t": 28.905691824988782,
+    "win": 0.6616036736135641
+   },
+   "late": {
+    "n": 9013,
+    "avg_net": 0.01227203932248349,
+    "t": 19.596144811719277,
+    "win": 0.5747253966492843
+   },
+   "spy_up": {
+    "n": 9613,
+    "avg_net": 0.017752736320851406,
+    "t": 29.04238457229772,
+    "win": 0.6552585041090191
+   },
+   "spy_dn": {
+    "n": 7893,
+    "avg_net": 0.011895078133708667,
+    "t": 18.52302241566825,
+    "win": 0.5701254275940707
+   },
+   "lottery_day_frac": 0.023806025415828817,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.013273188917929632,
+    "t": 27.557150198609722,
+    "win": 0.6238261830233843
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__L_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and morning cell L is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3430,
+   "n_dates": 160,
+   "discovery": {
+    "n": 9203,
+    "avg_net": 0.015088782099212475,
+    "t": 24.875833928950367,
+    "win": 0.5905682929479518
+   },
+   "holdout": {
+    "n": 6403,
+    "avg_net": 0.014621290534974938,
+    "t": 20.47755601847915,
+    "win": 0.5839450257691707
+   },
+   "early": {
+    "n": 7291,
+    "avg_net": 0.016664875766748802,
+    "t": 24.638753166373494,
+    "win": 0.6136332464682486
+   },
+   "late": {
+    "n": 8315,
+    "avg_net": 0.013346792031164333,
+    "t": 21.085443685997223,
+    "win": 0.5652435357787132
+   },
+   "spy_up": {
+    "n": 8461,
+    "avg_net": 0.01785776708062329,
+    "t": 27.134456021147166,
+    "win": 0.625221605011228
+   },
+   "spy_dn": {
+    "n": 7145,
+    "avg_net": 0.011390849221181706,
+    "t": 17.80487396934241,
+    "win": 0.5435969209237229
+   },
+   "lottery_day_frac": 0.02135029091299689,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012847560306348378,
+    "t": 26.381936149422234,
+    "win": 0.5863309352517986
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__K_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and morning cell K is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3094,
+   "n_dates": 160,
+   "discovery": {
+    "n": 8435,
+    "avg_net": 0.011571506195508842,
+    "t": 20.668191489404673,
+    "win": 0.5877889745109662
+   },
+   "holdout": {
+    "n": 5714,
+    "avg_net": 0.011681490533739123,
+    "t": 18.414254929638837,
+    "win": 0.5868043402170109
+   },
+   "early": {
+    "n": 5857,
+    "avg_net": 0.013057830237881624,
+    "t": 21.997081425713812,
+    "win": 0.6073074953047636
+   },
+   "late": {
+    "n": 8292,
+    "avg_net": 0.010597440902753228,
+    "t": 18.192071853644585,
+    "win": 0.5733236854799807
+   },
+   "spy_up": {
+    "n": 7615,
+    "avg_net": 0.014610792336838596,
+    "t": 25.989009205421503,
+    "win": 0.6208798424162837
+   },
+   "spy_dn": {
+    "n": 6534,
+    "avg_net": 0.008125575149047526,
+    "t": 12.8898132709863,
+    "win": 0.5483624119987757
+   },
+   "lottery_day_frac": 0.02965319736041859,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012847560306348378,
+    "t": 26.381936149422234,
+    "win": 0.5863309352517986
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__M_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and morning cell M is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 2941,
+   "n_dates": 85,
+   "discovery": {
+    "n": 3667,
+    "avg_net": 0.018822622644881035,
+    "t": 20.00312133209285,
+    "win": 0.6569402781565312
+   },
+   "holdout": {
+    "n": 2485,
+    "avg_net": 0.01682560812105109,
+    "t": 17.758093110246172,
+    "win": 0.6482897384305835
+   },
+   "early": {
+    "n": 4877,
+    "avg_net": 0.019386631432170655,
+    "t": 25.352861843737323,
+    "win": 0.6756202583555464
+   },
+   "late": {
+    "n": 1275,
+    "avg_net": 0.012773013274427017,
+    "t": 8.6995717857632,
+    "win": 0.5686274509803921
+   },
+   "spy_up": {
+    "n": 2904,
+    "avg_net": 0.020883528811189905,
+    "t": 20.077051109059337,
+    "win": 0.7011019283746557
+   },
+   "spy_dn": {
+    "n": 3248,
+    "avg_net": 0.015452101524598288,
+    "t": 17.434472104672903,
+    "win": 0.6108374384236454
+   },
+   "lottery_day_frac": 0.05817491936648429,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.017369944486330578,
+    "t": 34.41951893526876,
+    "win": 0.6529137315890586
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__O_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and morning cell O is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3249,
+   "n_dates": 160,
+   "discovery": {
+    "n": 7090,
+    "avg_net": 0.015506033534902553,
+    "t": 19.629890587499126,
+    "win": 0.5935119887165021
+   },
+   "holdout": {
+    "n": 4903,
+    "avg_net": 0.01454411317776993,
+    "t": 17.561469729051982,
+    "win": 0.5853559045482358
+   },
+   "early": {
+    "n": 5253,
+    "avg_net": 0.016843164320393345,
+    "t": 20.470783370578285,
+    "win": 0.6175518751189796
+   },
+   "late": {
+    "n": 6740,
+    "avg_net": 0.01376415764065858,
+    "t": 17.183144040708303,
+    "win": 0.5688427299703264
+   },
+   "spy_up": {
+    "n": 6618,
+    "avg_net": 0.01824887677098395,
+    "t": 23.858092633439647,
+    "win": 0.6246600181323663
+   },
+   "spy_dn": {
+    "n": 5375,
+    "avg_net": 0.011251441526082474,
+    "t": 12.868079183524832,
+    "win": 0.5477209302325582
+   },
+   "lottery_day_frac": 0.028170791537634833,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012847560306348378,
+    "t": 26.381936149422234,
+    "win": 0.5863309352517986
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__O_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and morning cell O is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3302,
+   "n_dates": 160,
+   "discovery": {
+    "n": 7679,
+    "avg_net": 0.014458830480815475,
+    "t": 19.897890499726685,
+    "win": 0.601640838650866
+   },
+   "holdout": {
+    "n": 5264,
+    "avg_net": 0.013703875768983414,
+    "t": 17.471697868986904,
+    "win": 0.5894756838905775
+   },
+   "early": {
+    "n": 5840,
+    "avg_net": 0.01707045117584529,
+    "t": 22.499592315181005,
+    "win": 0.6330479452054795
+   },
+   "late": {
+    "n": 7103,
+    "avg_net": 0.011752094388733524,
+    "t": 15.646745098526395,
+    "win": 0.5668027593974377
+   },
+   "spy_up": {
+    "n": 7187,
+    "avg_net": 0.017108036358884082,
+    "t": 25.531048114849053,
+    "win": 0.6351746208431891
+   },
+   "spy_dn": {
+    "n": 5756,
+    "avg_net": 0.010460580958792704,
+    "t": 12.078353161088716,
+    "win": 0.54864489228631
+   },
+   "lottery_day_frac": 0.02885933145640269,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.013273188917929632,
+    "t": 27.557150198609722,
+    "win": 0.6238261830233843
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__K_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and morning cell K is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3132,
+   "n_dates": 160,
+   "discovery": {
+    "n": 9207,
+    "avg_net": 0.010845974610293687,
+    "t": 20.612469749396524,
+    "win": 0.6029108287172803
+   },
+   "holdout": {
+    "n": 6244,
+    "avg_net": 0.0098986917149316,
+    "t": 17.13717833806108,
+    "win": 0.5992953235105701
+   },
+   "early": {
+    "n": 6115,
+    "avg_net": 0.012442308412068668,
+    "t": 22.359118147165713,
+    "win": 0.6317252657399837
+   },
+   "late": {
+    "n": 9336,
+    "avg_net": 0.009166838406727398,
+    "t": 17.163751370756632,
+    "win": 0.5816195372750642
+   },
+   "spy_up": {
+    "n": 8311,
+    "avg_net": 0.013171983221904295,
+    "t": 26.310026400319053,
+    "win": 0.6369871254963302
+   },
+   "spy_dn": {
+    "n": 7140,
+    "avg_net": 0.007310079376437015,
+    "t": 11.962629473100604,
+    "win": 0.5600840336134454
+   },
+   "lottery_day_frac": 0.023725054415365286,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.013273188917929632,
+    "t": 27.557150198609722,
+    "win": 0.6238261830233843
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__M_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and morning cell M is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 3234,
+   "n_dates": 93,
+   "discovery": {
+    "n": 4754,
+    "avg_net": 0.016199206075107983,
+    "t": 19.222333820993,
+    "win": 0.6472444257467396
+   },
+   "holdout": {
+    "n": 3267,
+    "avg_net": 0.014850105772772012,
+    "t": 16.601400030703953,
+    "win": 0.6495255586164677
+   },
+   "early": {
+    "n": 6417,
+    "avg_net": 0.017427709375319383,
+    "t": 24.844190787147685,
+    "win": 0.6744584696898862
+   },
+   "late": {
+    "n": 1604,
+    "avg_net": 0.008536602356162734,
+    "t": 6.657483051871477,
+    "win": 0.5430174563591023
+   },
+   "spy_up": {
+    "n": 3972,
+    "avg_net": 0.018497396240710947,
+    "t": 21.68109089154187,
+    "win": 0.709718026183283
+   },
+   "spy_dn": {
+    "n": 4049,
+    "avg_net": 0.012856177666733916,
+    "t": 14.41126106063504,
+    "win": 0.5877994566559644
+   },
+   "lottery_day_frac": 0.06555939323036923,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.013273188917929632,
+    "t": 27.557150198609722,
+    "win": 0.6238261830233843
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__M_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "hyst_color",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and morning cell M is also green.",
+   "cost_model": "futubull",
+   "n_tickers": 2969,
+   "n_dates": 89,
+   "discovery": {
+    "n": 3666,
+    "avg_net": 0.01463788999653876,
+    "t": 15.461280851049018,
+    "win": 0.5870158210583742
+   },
+   "holdout": {
+    "n": 2513,
+    "avg_net": 0.01326269246376118,
+    "t": 13.017844770816604,
+    "win": 0.5893354556307202
+   },
+   "early": {
+    "n": 4920,
+    "avg_net": 0.01551395393676713,
+    "t": 19.71444570514142,
+    "win": 0.6095528455284552
+   },
+   "late": {
+    "n": 1259,
+    "avg_net": 0.00846941820480434,
+    "t": 5.648135006327736,
+    "win": 0.5035742652899127
+   },
+   "spy_up": {
+    "n": 2883,
+    "avg_net": 0.017128818551842086,
+    "t": 16.058524539438704,
+    "win": 0.6458550121401319
+   },
+   "spy_dn": {
+    "n": 3296,
+    "avg_net": 0.011410578581244602,
+    "t": 12.469190401072183,
+    "win": 0.5373179611650486
+   },
+   "lottery_day_frac": 0.0538650079255915,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012847560306348378,
+    "t": 26.381936149422234,
+    "win": 0.5863309352517986
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__fz_opt",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and Finviz snapshot cohort opt (not a historical as-of).",
+   "cost_model": "futubull",
+   "n_tickers": 2387,
+   "n_dates": 160,
+   "discovery": {
+    "n": 11620,
+    "avg_net": 0.01258179414676289,
+    "t": 41.16626278356234,
+    "win": 0.6496557659208262
+   },
+   "holdout": {
+    "n": 7990,
+    "avg_net": 0.012251798196056261,
+    "t": 33.21799953268642,
+    "win": 0.6458072590738423
+   },
+   "early": {
+    "n": 8138,
+    "avg_net": 0.013071904376728965,
+    "t": 36.6839346928878,
+    "win": 0.6625706561808798
+   },
+   "late": {
+    "n": 11472,
+    "avg_net": 0.012004285020402197,
+    "t": 38.367561579534446,
+    "win": 0.6378138075313807
+   },
+   "spy_up": {
+    "n": 10911,
+    "avg_net": 0.014865651423110957,
+    "t": 45.242700154340405,
+    "win": 0.6764732838419943
+   },
+   "spy_dn": {
+    "n": 8699,
+    "avg_net": 0.009414092757134231,
+    "t": 28.423520961196598,
+    "win": 0.6124841935854696
+   },
+   "lottery_day_frac": 0.027127068711386773,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.017369944486330578,
+    "t": 34.41951893526876,
+    "win": 0.6529137315890586
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__fz_opt",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and Finviz snapshot cohort opt (not a historical as-of).",
+   "cost_model": "futubull",
+   "n_tickers": 2388,
+   "n_dates": 160,
+   "discovery": {
+    "n": 11686,
+    "avg_net": 0.009941284381748444,
+    "t": 32.353026900991274,
+    "win": 0.6211706315249016
+   },
+   "holdout": {
+    "n": 8014,
+    "avg_net": 0.009272326963755092,
+    "t": 25.925192763425926,
+    "win": 0.6140504117793861
+   },
+   "early": {
+    "n": 9000,
+    "avg_net": 0.011616729161695996,
+    "t": 34.29424468162073,
+    "win": 0.6533333333333333
+   },
+   "late": {
+    "n": 10700,
+    "avg_net": 0.008031001412839406,
+    "t": 25.06399546228518,
+    "win": 0.5887850467289719
+   },
+   "spy_up": {
+    "n": 10881,
+    "avg_net": 0.012356864868694103,
+    "t": 38.78563734960371,
+    "win": 0.6532487822810403
+   },
+   "spy_dn": {
+    "n": 8819,
+    "avg_net": 0.00635301405333769,
+    "t": 18.760856366012124,
+    "win": 0.5751218959065654
+   },
+   "lottery_day_frac": 0.0279707541740133,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.013273188917929632,
+    "t": 27.557150198609722,
+    "win": 0.6238261830233843
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__fz_opt",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and Finviz snapshot cohort opt (not a historical as-of).",
+   "cost_model": "futubull",
+   "n_tickers": 2388,
+   "n_dates": 160,
+   "discovery": {
+    "n": 11298,
+    "avg_net": 0.009484376148236145,
+    "t": 29.837851578278805,
+    "win": 0.5884227296866702
+   },
+   "holdout": {
+    "n": 7763,
+    "avg_net": 0.009148777252496703,
+    "t": 24.226003736233647,
+    "win": 0.5850830864356563
+   },
+   "early": {
+    "n": 7999,
+    "avg_net": 0.010400718966220465,
+    "t": 28.254957103471828,
+    "win": 0.6109513689211151
+   },
+   "late": {
+    "n": 11062,
+    "avg_net": 0.00858624918849271,
+    "t": 26.540907789922333,
+    "win": 0.569788465015368
+   },
+   "spy_up": {
+    "n": 10547,
+    "avg_net": 0.012127830929185445,
+    "t": 35.785582410193705,
+    "win": 0.6199867260832465
+   },
+   "spy_dn": {
+    "n": 8514,
+    "avg_net": 0.005903712323676882,
+    "t": 17.207087145950833,
+    "win": 0.5462767206953254
+   },
+   "lottery_day_frac": 0.03244429376700924,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012847560306348378,
+    "t": 26.381936149422234,
+    "win": 0.5863309352517986
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__fz_mid(1-10B)",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and Finviz snapshot cohort mid(1-10B) (not a historical as-of).",
+   "cost_model": "futubull",
+   "n_tickers": 1085,
+   "n_dates": 160,
+   "discovery": {
+    "n": 5405,
+    "avg_net": 0.011221882287178039,
+    "t": 27.682985841076142,
+    "win": 0.6527289546716004
+   },
+   "holdout": {
+    "n": 3664,
+    "avg_net": 0.010311749340081625,
+    "t": 21.647473329625058,
+    "win": 0.6364628820960698
+   },
+   "early": {
+    "n": 3791,
+    "avg_net": 0.011740612879428567,
+    "t": 23.661120567175026,
+    "win": 0.6618306515431285
+   },
+   "late": {
+    "n": 5278,
+    "avg_net": 0.010217480090629533,
+    "t": 25.99103235103016,
+    "win": 0.6348995831754453
+   },
+   "spy_up": {
+    "n": 4996,
+    "avg_net": 0.012708200929548738,
+    "t": 29.83101730769886,
+    "win": 0.6785428342674139
+   },
+   "spy_dn": {
+    "n": 4073,
+    "avg_net": 0.008580002823528329,
+    "t": 19.294068515428474,
+    "win": 0.6064326049594894
+   },
+   "lottery_day_frac": 0.033181710120637364,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.017369944486330578,
+    "t": 34.41951893526876,
+    "win": 0.6529137315890586
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__fz_mid(1-10B)",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and Finviz snapshot cohort mid(1-10B) (not a historical as-of).",
+   "cost_model": "futubull",
+   "n_tickers": 1085,
+   "n_dates": 160,
+   "discovery": {
+    "n": 5370,
+    "avg_net": 0.00895688051398742,
+    "t": 20.37094757562471,
+    "win": 0.6242085661080075
+   },
+   "holdout": {
+    "n": 3680,
+    "avg_net": 0.008590564978435291,
+    "t": 17.937723621979913,
+    "win": 0.6122282608695652
+   },
+   "early": {
+    "n": 4145,
+    "avg_net": 0.0103965052177532,
+    "t": 20.406635900397685,
+    "win": 0.6523522316043426
+   },
+   "late": {
+    "n": 4905,
+    "avg_net": 0.007465486922154395,
+    "t": 17.862433753060103,
+    "win": 0.5914373088685015
+   },
+   "spy_up": {
+    "n": 4964,
+    "avg_net": 0.011064627509212914,
+    "t": 26.521988130573018,
+    "win": 0.6597502014504432
+   },
+   "spy_dn": {
+    "n": 4086,
+    "avg_net": 0.006066303603774211,
+    "t": 11.902757339425241,
+    "win": 0.5702398433675967
+   },
+   "lottery_day_frac": 0.037302807723374416,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.013273188917929632,
+    "t": 27.557150198609722,
+    "win": 0.6238261830233843
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__fz_mid(1-10B)",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and Finviz snapshot cohort mid(1-10B) (not a historical as-of).",
+   "cost_model": "futubull",
+   "n_tickers": 1085,
+   "n_dates": 160,
+   "discovery": {
+    "n": 5202,
+    "avg_net": 0.00826215172911694,
+    "t": 19.553799416926232,
+    "win": 0.592079969242599
+   },
+   "holdout": {
+    "n": 3496,
+    "avg_net": 0.007835675886132853,
+    "t": 15.798490716338941,
+    "win": 0.5835240274599542
+   },
+   "early": {
+    "n": 3703,
+    "avg_net": 0.009391868071307258,
+    "t": 18.515512475377697,
+    "win": 0.6130164731298947
+   },
+   "late": {
+    "n": 4995,
+    "avg_net": 0.007126155900848047,
+    "t": 17.167046623057043,
+    "win": 0.5705705705705706
+   },
+   "spy_up": {
+    "n": 4776,
+    "avg_net": 0.010288380641097473,
+    "t": 23.238044807081835,
+    "win": 0.6241624790619765
+   },
+   "spy_dn": {
+    "n": 3922,
+    "avg_net": 0.005414566611653552,
+    "t": 11.66201285666032,
+    "win": 0.5453850076491585
+   },
+   "lottery_day_frac": 0.043500556927955285,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012847560306348378,
+    "t": 26.381936149422234,
+    "win": 0.5863309352517986
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__fz_mcap",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and Finviz snapshot cohort mcap (not a historical as-of).",
+   "cost_model": "futubull",
+   "n_tickers": 565,
+   "n_dates": 157,
+   "discovery": {
+    "n": 2724,
+    "avg_net": 0.007270808911965275,
+    "t": 17.34561910359655,
+    "win": 0.6273861967694567
+   },
+   "holdout": {
+    "n": 1911,
+    "avg_net": 0.006778203477235875,
+    "t": 14.448515721910647,
+    "win": 0.6357927786499215
+   },
+   "early": {
+    "n": 1951,
+    "avg_net": 0.0076941570431132205,
+    "t": 15.919329531163765,
+    "win": 0.645822655048693
+   },
+   "late": {
+    "n": 2684,
+    "avg_net": 0.006612343491086913,
+    "t": 16.085854981542827,
+    "win": 0.6199701937406855
+   },
+   "spy_up": {
+    "n": 2513,
+    "avg_net": 0.008853690991402135,
+    "t": 19.123962102115993,
+    "win": 0.6502188619180262
+   },
+   "spy_dn": {
+    "n": 2122,
+    "avg_net": 0.0049526413099894445,
+    "t": 12.244589901017576,
+    "win": 0.6079170593779454
+   },
+   "lottery_day_frac": 0.04749750585332064,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.017369944486330578,
+    "t": 34.41951893526876,
+    "win": 0.6529137315890586
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__fz_mcap",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and Finviz snapshot cohort mcap (not a historical as-of).",
+   "cost_model": "futubull",
+   "n_tickers": 565,
+   "n_dates": 158,
+   "discovery": {
+    "n": 2572,
+    "avg_net": 0.005433498892469515,
+    "t": 12.324377949514103,
+    "win": 0.5695956454121306
+   },
+   "holdout": {
+    "n": 1778,
+    "avg_net": 0.0052284035504054065,
+    "t": 10.457819581302576,
+    "win": 0.5793025871766029
+   },
+   "early": {
+    "n": 1806,
+    "avg_net": 0.006431400472138416,
+    "t": 12.259943631830325,
+    "win": 0.6074197120708749
+   },
+   "late": {
+    "n": 2544,
+    "avg_net": 0.00458174190698523,
+    "t": 10.753740944798066,
+    "win": 0.5495283018867925
+   },
+   "spy_up": {
+    "n": 2374,
+    "avg_net": 0.007391665179492382,
+    "t": 15.397153192554356,
+    "win": 0.5968828980623421
+   },
+   "spy_dn": {
+    "n": 1976,
+    "avg_net": 0.0028963803279035893,
+    "t": 6.585278108757082,
+    "win": 0.5455465587044535
+   },
+   "lottery_day_frac": 0.06434880769419606,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012847560306348378,
+    "t": 26.381936149422234,
+    "win": 0.5863309352517986
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__fz_mcap",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and Finviz snapshot cohort mcap (not a historical as-of).",
+   "cost_model": "futubull",
+   "n_tickers": 565,
+   "n_dates": 160,
+   "discovery": {
+    "n": 2789,
+    "avg_net": 0.006126510005921478,
+    "t": 14.46835231670321,
+    "win": 0.6070276084618142
+   },
+   "holdout": {
+    "n": 1885,
+    "avg_net": 0.0049911809107860295,
+    "t": 10.333423538728372,
+    "win": 0.6021220159151194
+   },
+   "early": {
+    "n": 2119,
+    "avg_net": 0.006990761259959742,
+    "t": 14.995438488680094,
+    "win": 0.6370929683813119
+   },
+   "late": {
+    "n": 2555,
+    "avg_net": 0.004572128889820733,
+    "t": 10.48000764962139,
+    "win": 0.5784735812133073
+   },
+   "spy_up": {
+    "n": 2548,
+    "avg_net": 0.007586265531671587,
+    "t": 17.090144051217504,
+    "win": 0.630690737833595
+   },
+   "spy_dn": {
+    "n": 2126,
+    "avg_net": 0.0033703705779150814,
+    "t": 7.449180858941322,
+    "win": 0.5743179680150517
+   },
+   "lottery_day_frac": 0.03864176202203738,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.013273188917929632,
+    "t": 27.557150198609722,
+    "win": 0.6238261830233843
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__wx_risk_off",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and prior weather was risk-off.",
+   "cost_model": "futubull",
+   "n_tickers": 1008,
+   "n_dates": 9,
+   "discovery": {
+    "n": 695,
+    "avg_net": 0.01794260322060882,
+    "t": 10.61731584505042,
+    "win": 0.6834532374100719
+   },
+   "holdout": {
+    "n": 496,
+    "avg_net": 0.020746996155130225,
+    "t": 6.667431769782595,
+    "win": 0.6774193548387096
+   },
+   "early": null,
+   "late": {
+    "n": 1191,
+    "avg_net": 0.0191105116131551,
+    "t": 11.737590605325806,
+    "win": 0.6809403862300588
+   },
+   "spy_up": {
+    "n": 706,
+    "avg_net": 0.020516836197132488,
+    "t": 11.393501868420064,
+    "win": 0.71671388101983
+   },
+   "spy_dn": {
+    "n": 485,
+    "avg_net": 0.017063366961014816,
+    "t": 5.6518406983329665,
+    "win": 0.6288659793814433
+   },
+   "lottery_day_frac": 0.23186636141907574,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.017369944486330578,
+    "t": 34.41951893526876,
+    "win": 0.6529137315890586
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "date_bar",
+    "tape_split"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__ab_good",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and yesterday's AB tape already liked the name.",
+   "cost_model": "futubull",
+   "n_tickers": 449,
+   "n_dates": 11,
+   "discovery": {
+    "n": 304,
+    "avg_net": 0.004772325273462179,
+    "t": 4.262518300382358,
+    "win": 0.5986842105263158
+   },
+   "holdout": {
+    "n": 251,
+    "avg_net": 0.010370184614786889,
+    "t": 6.10758078061805,
+    "win": 0.6095617529880478
+   },
+   "early": null,
+   "late": {
+    "n": 555,
+    "avg_net": 0.007303969768367588,
+    "t": 7.386034136691092,
+    "win": 0.6036036036036037
+   },
+   "spy_up": {
+    "n": 251,
+    "avg_net": 0.007725913601874444,
+    "t": 4.802181619992713,
+    "win": 0.5976095617529881
+   },
+   "spy_dn": {
+    "n": 304,
+    "avg_net": 0.006955588511097124,
+    "t": 5.6790674465740505,
+    "win": 0.6085526315789473
+   },
+   "lottery_day_frac": 0.2257007470182246,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.017369944486330578,
+    "t": 34.41951893526876,
+    "win": 0.6529137315890586
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "date_bar",
+    "tape_split",
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__fz_mcap",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and Finviz snapshot cohort mcap (not a historical as-of).",
+   "cost_model": "futubull",
+   "n_tickers": 565,
+   "n_dates": 158,
+   "discovery": {
+    "n": 2572,
+    "avg_net": 0.004869589777146249,
+    "t": 6.504973158293214,
+    "win": 0.5419906687402799
+   },
+   "holdout": {
+    "n": 1778,
+    "avg_net": 0.005131455846362855,
+    "t": 5.648191588295302,
+    "win": 0.562429696287964
+   },
+   "early": {
+    "n": 1806,
+    "avg_net": 0.006728392195166795,
+    "t": 7.627383335122544,
+    "win": 0.5841638981173864
+   },
+   "late": {
+    "n": 2544,
+    "avg_net": 0.003733033450150187,
+    "t": 4.891829202384194,
+    "win": 0.5263364779874213
+   },
+   "spy_up": {
+    "n": 2374,
+    "avg_net": 0.0070523623883509915,
+    "t": 8.615032758062124,
+    "win": 0.573715248525695
+   },
+   "spy_dn": {
+    "n": 1976,
+    "avg_net": 0.002482796099042536,
+    "t": 3.0922139916606364,
+    "win": 0.5222672064777328
+   },
+   "lottery_day_frac": 0.05280636012793621,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012103086737034878,
+    "t": 14.552153021580777,
+    "win": 0.5502697841726619
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_uncond",
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__fz_mcap",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and Finviz snapshot cohort mcap (not a historical as-of).",
+   "cost_model": "futubull",
+   "n_tickers": 565,
+   "n_dates": 160,
+   "discovery": {
+    "n": 2789,
+    "avg_net": 0.005501317570651814,
+    "t": 7.640203215545088,
+    "win": 0.547508067407673
+   },
+   "holdout": {
+    "n": 1885,
+    "avg_net": 0.004577092445810952,
+    "t": 5.381609206259487,
+    "win": 0.5718832891246685
+   },
+   "early": {
+    "n": 2119,
+    "avg_net": 0.006417355918178239,
+    "t": 8.07464390530811,
+    "win": 0.5771590372817367
+   },
+   "late": {
+    "n": 2555,
+    "avg_net": 0.004059732592673921,
+    "t": 5.348145890681124,
+    "win": 0.5409001956947163
+   },
+   "spy_up": {
+    "n": 2548,
+    "avg_net": 0.006904793802546308,
+    "t": 9.078458177551907,
+    "win": 0.5828100470957613
+   },
+   "spy_dn": {
+    "n": 2126,
+    "avg_net": 0.0029998021429979128,
+    "t": 3.7904711016106982,
+    "win": 0.5268109125117592
+   },
+   "lottery_day_frac": 0.03381303461416009,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.015447603710431435,
+    "t": 4.589945224871935,
+    "win": 0.5613146750138096
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "no_edge_vs_uncond",
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__ab_good",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and yesterday's AB tape already liked the name.",
+   "cost_model": "futubull",
+   "n_tickers": 449,
+   "n_dates": 11,
+   "discovery": {
+    "n": 304,
+    "avg_net": 0.0064080135529677494,
+    "t": 3.273203146759423,
+    "win": 0.5427631578947368
+   },
+   "holdout": {
+    "n": 251,
+    "avg_net": 0.012660299145826209,
+    "t": 5.09673880678358,
+    "win": 0.5936254980079682
+   },
+   "early": null,
+   "late": {
+    "n": 555,
+    "avg_net": 0.009235623794062297,
+    "t": 5.930848767808534,
+    "win": 0.5657657657657658
+   },
+   "spy_up": {
+    "n": 251,
+    "avg_net": 0.003730059355348293,
+    "t": 1.7589548914644253,
+    "win": 0.5298804780876494
+   },
+   "spy_dn": {
+    "n": 304,
+    "avg_net": 0.013781336537868923,
+    "t": 6.238449491997247,
+    "win": 0.5953947368421053
+   },
+   "lottery_day_frac": 0.4099732893843429,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.016188191001334246,
+    "t": 20.099762311041147,
+    "win": 0.5841185618882079
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "date_bar",
+    "lottery_day",
+    "tape_split",
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__wx_risk_on",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and prior weather was risk-on.",
+   "cost_model": "futubull",
+   "n_tickers": 368,
+   "n_dates": 2,
+   "discovery": {
+    "n": 211,
+    "avg_net": 0.019548634994800883,
+    "t": 5.73211009722137,
+    "win": 0.7203791469194313
+   },
+   "holdout": {
+    "n": 157,
+    "avg_net": 0.014614348027276847,
+    "t": 4.83345286829075,
+    "win": 0.6624203821656051
+   },
+   "early": null,
+   "late": {
+    "n": 368,
+    "avg_net": 0.017443518000503942,
+    "t": 7.444734964502835,
+    "win": 0.6956521739130435
+   },
+   "spy_up": null,
+   "spy_dn": {
+    "n": 368,
+    "avg_net": 0.017443518000503942,
+    "t": 7.444734964502835,
+    "win": 0.6956521739130435
+   },
+   "lottery_day_frac": 0.7588513727614766,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.017369944486330578,
+    "t": 34.41951893526876,
+    "win": 0.6529137315890586
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "thin_disc",
+    "date_bar",
+    "lottery_day",
+    "tape_split",
+    "spy_regime",
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__wx_risk_off",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and prior weather was risk-off.",
+   "cost_model": "futubull",
+   "n_tickers": 1023,
+   "n_dates": 9,
+   "discovery": {
+    "n": 683,
+    "avg_net": 0.011781336953375979,
+    "t": 6.711511483796455,
+    "win": 0.5812591508052709
+   },
+   "holdout": {
+    "n": 505,
+    "avg_net": 0.015055398629986923,
+    "t": 4.743631778786369,
+    "win": 0.5900990099009901
+   },
+   "early": null,
+   "late": {
+    "n": 1188,
+    "avg_net": 0.013173088760352855,
+    "t": 7.819321676051734,
+    "win": 0.585016835016835
+   },
+   "spy_up": {
+    "n": 711,
+    "avg_net": 0.01323746911740734,
+    "t": 7.112911811845113,
+    "win": 0.6061884669479606
+   },
+   "spy_dn": {
+    "n": 477,
+    "avg_net": 0.013077125586630125,
+    "t": 4.150629847609256,
+    "win": 0.5534591194968553
+   },
+   "lottery_day_frac": 0.2623519853885652,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012847560306348378,
+    "t": 26.381936149422234,
+    "win": 0.5863309352517986
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "date_bar",
+    "lottery_day",
+    "tape_split"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__wx_risk_off",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and prior weather was risk-off.",
+   "cost_model": "futubull",
+   "n_tickers": 944,
+   "n_dates": 9,
+   "discovery": {
+    "n": 607,
+    "avg_net": 0.009012156277634145,
+    "t": 4.842284172122162,
+    "win": 0.5914332784184514
+   },
+   "holdout": {
+    "n": 457,
+    "avg_net": 0.015446235644739433,
+    "t": 4.482723909641084,
+    "win": 0.6192560175054704
+   },
+   "early": null,
+   "late": {
+    "n": 1064,
+    "avg_net": 0.01177566593061076,
+    "t": 6.459165569669176,
+    "win": 0.6033834586466166
+   },
+   "spy_up": {
+    "n": 653,
+    "avg_net": 0.010524642921986146,
+    "t": 5.7936923961169855,
+    "win": 0.6263399693721287
+   },
+   "spy_dn": {
+    "n": 411,
+    "avg_net": 0.013763301027038672,
+    "t": 3.6843119220693366,
+    "win": 0.5669099756690997
+   },
+   "lottery_day_frac": 0.27532446513147385,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.013273188917929632,
+    "t": 27.557150198609722,
+    "win": 0.6238261830233843
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "date_bar",
+    "lottery_day",
+    "tape_split"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__ab_good",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and yesterday's AB tape already liked the name.",
+   "cost_model": "futubull",
+   "n_tickers": 433,
+   "n_dates": 11,
+   "discovery": {
+    "n": 273,
+    "avg_net": 0.00355335614178806,
+    "t": 2.7752773851767736,
+    "win": 0.5531135531135531
+   },
+   "holdout": {
+    "n": 220,
+    "avg_net": 0.007954130756504462,
+    "t": 4.4115266273713285,
+    "win": 0.5636363636363636
+   },
+   "early": null,
+   "late": {
+    "n": 493,
+    "avg_net": 0.005517190655454609,
+    "t": 5.128475128430194,
+    "win": 0.5578093306288032
+   },
+   "spy_up": {
+    "n": 252,
+    "avg_net": 0.006526846592410335,
+    "t": 4.075588741187514,
+    "win": 0.5714285714285714
+   },
+   "spy_dn": {
+    "n": 241,
+    "avg_net": 0.004461450837558994,
+    "t": 3.1238892439088026,
+    "win": 0.5435684647302904
+   },
+   "lottery_day_frac": 0.2242832783542177,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.013273188917929632,
+    "t": 27.557150198609722,
+    "win": 0.6238261830233843
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "thin_disc",
+    "disc_t",
+    "date_bar",
+    "tape_split",
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__ab_good",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and yesterday's AB tape already liked the name.",
+   "cost_model": "futubull",
+   "n_tickers": 434,
+   "n_dates": 11,
+   "discovery": {
+    "n": 280,
+    "avg_net": 0.0017738765215740383,
+    "t": 1.4982076639565716,
+    "win": 0.5142857142857142
+   },
+   "holdout": {
+    "n": 237,
+    "avg_net": 0.006336893903529255,
+    "t": 3.6851779737660935,
+    "win": 0.5232067510548524
+   },
+   "early": null,
+   "late": {
+    "n": 517,
+    "avg_net": 0.003865627236319466,
+    "t": 3.789688527344228,
+    "win": 0.5183752417794971
+   },
+   "spy_up": {
+    "n": 250,
+    "avg_net": 0.0029994949335015613,
+    "t": 1.9300803786179488,
+    "win": 0.496
+   },
+   "spy_dn": {
+    "n": 267,
+    "avg_net": 0.004676612538583423,
+    "t": 3.4991226585394624,
+    "win": 0.5393258426966292
+   },
+   "lottery_day_frac": 0.3043923084032898,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012847560306348378,
+    "t": 26.381936149422234,
+    "win": 0.5863309352517986
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "thin_disc",
+    "disc_t",
+    "date_bar",
+    "lottery_day",
+    "tape_split",
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__ab_good",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and yesterday's AB tape already liked the name.",
+   "cost_model": "futubull",
+   "n_tickers": 434,
+   "n_dates": 11,
+   "discovery": {
+    "n": 280,
+    "avg_net": 0.004717460008953433,
+    "t": 2.220185452574184,
+    "win": 0.5428571428571428
+   },
+   "holdout": {
+    "n": 237,
+    "avg_net": 0.008885942920363946,
+    "t": 3.651512996350353,
+    "win": 0.5611814345991561
+   },
+   "early": null,
+   "late": {
+    "n": 517,
+    "avg_net": 0.006628350627917247,
+    "t": 4.133006329684221,
+    "win": 0.5512572533849129
+   },
+   "spy_up": {
+    "n": 250,
+    "avg_net": 0.0003350290914116816,
+    "t": 0.16399875330600908,
+    "win": 0.512
+   },
+   "spy_dn": {
+    "n": 267,
+    "avg_net": 0.012520973789439312,
+    "t": 5.229228718037224,
+    "win": 0.5880149812734082
+   },
+   "lottery_day_frac": 0.40665053077362784,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012103086737034878,
+    "t": 14.552153021580777,
+    "win": 0.5502697841726619
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "thin_disc",
+    "disc_t",
+    "date_bar",
+    "lottery_day",
+    "tape_split",
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__wx_risk_off",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and prior weather was risk-off.",
+   "cost_model": "futubull",
+   "n_tickers": 1008,
+   "n_dates": 9,
+   "discovery": {
+    "n": 695,
+    "avg_net": 0.017207531060713484,
+    "t": 6.560047282195375,
+    "win": 0.5913669064748202
+   },
+   "holdout": {
+    "n": 496,
+    "avg_net": 0.022136261366349268,
+    "t": 3.44413307057163,
+    "win": 0.6028225806451613
+   },
+   "early": null,
+   "late": {
+    "n": 1191,
+    "avg_net": 0.019260134109911932,
+    "t": 6.247942268034919,
+    "win": 0.5961376994122586
+   },
+   "spy_up": {
+    "n": 706,
+    "avg_net": 0.010811149929324006,
+    "t": 4.043546277331859,
+    "win": 0.5424929178470255
+   },
+   "spy_dn": {
+    "n": 485,
+    "avg_net": 0.03155906778309765,
+    "t": 4.887771557604834,
+    "win": 0.6742268041237114
+   },
+   "lottery_day_frac": 0.2691081992476205,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.016188191001334246,
+    "t": 20.099762311041147,
+    "win": 0.5841185618882079
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "date_bar",
+    "lottery_day",
+    "tape_split"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__ab_good",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and yesterday's AB tape already liked the name.",
+   "cost_model": "futubull",
+   "n_tickers": 433,
+   "n_dates": 11,
+   "discovery": {
+    "n": 273,
+    "avg_net": 0.0035143328014316647,
+    "t": 1.690497807123066,
+    "win": 0.5494505494505495
+   },
+   "holdout": {
+    "n": 220,
+    "avg_net": 0.00791723029070794,
+    "t": 3.3175267691551427,
+    "win": 0.5772727272727273
+   },
+   "early": null,
+   "late": {
+    "n": 493,
+    "avg_net": 0.005479114642488014,
+    "t": 3.4904681802784894,
+    "win": 0.5618661257606491
+   },
+   "spy_up": {
+    "n": 252,
+    "avg_net": 0.0004162709199936084,
+    "t": 0.2011818227380613,
+    "win": 0.5357142857142857
+   },
+   "spy_dn": {
+    "n": 241,
+    "avg_net": 0.010773042518291294,
+    "t": 4.626171563063138,
+    "win": 0.5892116182572614
+   },
+   "lottery_day_frac": 0.30400111963976983,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.015447603710431435,
+    "t": 4.589945224871935,
+    "win": 0.5613146750138096
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "thin_disc",
+    "disc_t",
+    "date_bar",
+    "lottery_day",
+    "tape_split",
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__wx_risk_off",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and prior weather was risk-off.",
+   "cost_model": "futubull",
+   "n_tickers": 1023,
+   "n_dates": 9,
+   "discovery": {
+    "n": 683,
+    "avg_net": 0.01093143827808592,
+    "t": 3.9934091990539144,
+    "win": 0.5607613469985359
+   },
+   "holdout": {
+    "n": 505,
+    "avg_net": 0.017068456342876476,
+    "t": 2.6727671087380305,
+    "win": 0.5524752475247525
+   },
+   "early": null,
+   "late": {
+    "n": 1188,
+    "avg_net": 0.013540187539634096,
+    "t": 4.315652553963205,
+    "win": 0.5572390572390572
+   },
+   "spy_up": {
+    "n": 711,
+    "avg_net": 0.0036525871007276156,
+    "t": 1.3381188684376188,
+    "win": 0.5021097046413502
+   },
+   "spy_dn": {
+    "n": 477,
+    "avg_net": 0.02827830894857017,
+    "t": 4.272455954598291,
+    "win": 0.639412997903564
+   },
+   "lottery_day_frac": 0.3490539220625926,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012103086737034878,
+    "t": 14.552153021580777,
+    "win": 0.5502697841726619
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "date_bar",
+    "lottery_day",
+    "tape_split"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__wx_risk_on",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and prior weather was risk-on.",
+   "cost_model": "futubull",
+   "n_tickers": 382,
+   "n_dates": 2,
+   "discovery": {
+    "n": 221,
+    "avg_net": 0.011057273156340435,
+    "t": 4.448483322041584,
+    "win": 0.6018099547511312
+   },
+   "holdout": {
+    "n": 161,
+    "avg_net": 0.007402498987087836,
+    "t": 2.457088490093573,
+    "win": 0.5590062111801242
+   },
+   "early": null,
+   "late": {
+    "n": 382,
+    "avg_net": 0.009516910221131878,
+    "t": 4.9617291359503515,
+    "win": 0.5837696335078534
+   },
+   "spy_up": null,
+   "spy_dn": {
+    "n": 382,
+    "avg_net": 0.009516910221131878,
+    "t": 4.9617291359503515,
+    "win": 0.5837696335078534
+   },
+   "lottery_day_frac": 0.6809223173518039,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012847560306348378,
+    "t": 26.381936149422234,
+    "win": 0.5863309352517986
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "thin_disc",
+    "date_bar",
+    "lottery_day",
+    "tape_split",
+    "spy_regime",
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__wx_risk_off",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and prior weather was risk-off.",
+   "cost_model": "futubull",
+   "n_tickers": 944,
+   "n_dates": 9,
+   "discovery": {
+    "n": 607,
+    "avg_net": 0.007299281327052469,
+    "t": 2.6802566132046537,
+    "win": 0.556836902800659
+   },
+   "holdout": {
+    "n": 457,
+    "avg_net": 0.016501096142387612,
+    "t": 2.3975925049552025,
+    "win": 0.5689277899343544
+   },
+   "early": null,
+   "late": {
+    "n": 1064,
+    "avg_net": 0.011251564570105253,
+    "t": 3.3682289352338497,
+    "win": 0.5620300751879699
+   },
+   "spy_up": {
+    "n": 653,
+    "avg_net": -0.0012320770345397726,
+    "t": -0.49518767665247876,
+    "win": 0.5038284839203675
+   },
+   "spy_dn": {
+    "n": 411,
+    "avg_net": 0.031085671547801605,
+    "t": 4.092571544100186,
+    "win": 0.6545012165450121
+   },
+   "lottery_day_frac": 0.30890332559989087,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.015447603710431435,
+    "t": 4.589945224871935,
+    "win": 0.5613146750138096
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "date_bar",
+    "lottery_day",
+    "tape_split",
+    "spy_regime",
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__book_1d_buy",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and the overnight 1-day book had it as a buy.",
+   "cost_model": "futubull",
+   "n_tickers": 12,
+   "n_dates": 10,
+   "discovery": {
+    "n": 5,
+    "avg_net": 0.013832888952937286,
+    "t": 1.1016007289640084,
+    "win": 0.8
+   },
+   "holdout": {
+    "n": 7,
+    "avg_net": 0.016856805703064828,
+    "t": 1.2397456322497555,
+    "win": 0.42857142857142855
+   },
+   "early": null,
+   "late": {
+    "n": 12,
+    "avg_net": 0.015596840390511686,
+    "t": 1.7128236402115569,
+    "win": 0.5833333333333334
+   },
+   "spy_up": {
+    "n": 5,
+    "avg_net": 0.014281729887070391,
+    "t": 0.9729791380018199,
+    "win": 0.6
+   },
+   "spy_dn": {
+    "n": 7,
+    "avg_net": 0.016536205035826895,
+    "t": 1.317014350321729,
+    "win": 0.5714285714285714
+   },
+   "lottery_day_frac": 0.7466525331162787,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.016188191001334246,
+    "t": 20.099762311041147,
+    "win": 0.5841185618882079
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "thin_disc",
+    "thin_hold",
+    "disc_t",
+    "hold_t",
+    "ticker_bar",
+    "date_bar",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split",
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__wx_risk_on",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and prior weather was risk-on.",
+   "cost_model": "futubull",
+   "n_tickers": 319,
+   "n_dates": 2,
+   "discovery": {
+    "n": 175,
+    "avg_net": 0.009247756638646075,
+    "t": 2.7180526664359066,
+    "win": 0.6
+   },
+   "holdout": {
+    "n": 144,
+    "avg_net": 0.003013582854149954,
+    "t": 1.0430425537157673,
+    "win": 0.5555555555555556
+   },
+   "early": null,
+   "late": {
+    "n": 319,
+    "avg_net": 0.00643358414658513,
+    "t": 2.8214367693556297,
+    "win": 0.5799373040752351
+   },
+   "spy_up": null,
+   "spy_dn": {
+    "n": 319,
+    "avg_net": 0.00643358414658513,
+    "t": 2.8214367693556297,
+    "win": 0.5799373040752351
+   },
+   "lottery_day_frac": 0.6659206949805525,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.013273188917929632,
+    "t": 27.557150198609722,
+    "win": 0.6238261830233843
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "thin_disc",
+    "disc_t",
+    "hold_t",
+    "date_bar",
+    "lottery_day",
+    "tape_split",
+    "spy_regime",
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__book_1d_buy",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and the overnight 1-day book had it as a buy.",
+   "cost_model": "futubull",
+   "n_tickers": 12,
+   "n_dates": 10,
+   "discovery": {
+    "n": 5,
+    "avg_net": 0.0031108692881283836,
+    "t": 0.7360260043882613,
+    "win": 0.8
+   },
+   "holdout": {
+    "n": 7,
+    "avg_net": 0.014385533450855052,
+    "t": 0.9955448913980541,
+    "win": 0.42857142857142855
+   },
+   "early": null,
+   "late": {
+    "n": 12,
+    "avg_net": 0.009687756716385608,
+    "t": 1.1420955987952375,
+    "win": 0.5833333333333334
+   },
+   "spy_up": {
+    "n": 6,
+    "avg_net": 0.008223414634119663,
+    "t": 0.6123604508188529,
+    "win": 0.5
+   },
+   "spy_dn": {
+    "n": 6,
+    "avg_net": 0.011152098798651552,
+    "t": 0.9584331834282541,
+    "win": 0.6666666666666666
+   },
+   "lottery_day_frac": 0.3558965037218575,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012103086737034878,
+    "t": 14.552153021580777,
+    "win": 0.5502697841726619
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "thin_disc",
+    "thin_hold",
+    "disc_t",
+    "hold_t",
+    "ticker_bar",
+    "date_bar",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__book_1d_buy",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and the overnight 1-day book had it as a buy.",
+   "cost_model": "futubull",
+   "n_tickers": 12,
+   "n_dates": 10,
+   "discovery": {
+    "n": 5,
+    "avg_net": 0.011183302340724998,
+    "t": 2.2730391842099507,
+    "win": 0.8
+   },
+   "holdout": {
+    "n": 7,
+    "avg_net": 0.016832197978910102,
+    "t": 0.9327994314340771,
+    "win": 0.5714285714285714
+   },
+   "early": null,
+   "late": {
+    "n": 12,
+    "avg_net": 0.014478491462999642,
+    "t": 1.3933378080188878,
+    "win": 0.6666666666666666
+   },
+   "spy_up": {
+    "n": 6,
+    "avg_net": 0.024006864023249173,
+    "t": 1.1840390922103532,
+    "win": 0.6666666666666666
+   },
+   "spy_dn": {
+    "n": 6,
+    "avg_net": 0.00495011890275011,
+    "t": 0.9406412622595315,
+    "win": 0.6666666666666666
+   },
+   "lottery_day_frac": 0.44248438529592304,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012847560306348378,
+    "t": 26.381936149422234,
+    "win": 0.5863309352517986
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "thin_disc",
+    "thin_hold",
+    "disc_t",
+    "hold_t",
+    "ticker_bar",
+    "date_bar",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__book_1d_buy",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and the overnight 1-day book had it as a buy.",
+   "cost_model": "futubull",
+   "n_tickers": 12,
+   "n_dates": 10,
+   "discovery": {
+    "n": 5,
+    "avg_net": 0.013477493349548383,
+    "t": 3.494828223881808,
+    "win": 1.0
+   },
+   "holdout": {
+    "n": 7,
+    "avg_net": 0.016540564082782313,
+    "t": 0.9137480612431729,
+    "win": 0.5714285714285714
+   },
+   "early": null,
+   "late": {
+    "n": 12,
+    "avg_net": 0.01526428461060151,
+    "t": 1.4775754112520896,
+    "win": 0.75
+   },
+   "spy_up": {
+    "n": 5,
+    "avg_net": 0.029510718442615796,
+    "t": 1.2347699450660432,
+    "win": 0.8
+   },
+   "spy_dn": {
+    "n": 7,
+    "avg_net": 0.005088260444877016,
+    "t": 1.0850279951934536,
+    "win": 0.7142857142857143
+   },
+   "lottery_day_frac": 0.3772907637700295,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.017369944486330578,
+    "t": 34.41951893526876,
+    "win": 0.6529137315890586
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "thin_disc",
+    "thin_hold",
+    "hold_t",
+    "ticker_bar",
+    "date_bar",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split",
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2__wx_risk_on",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x2`, and prior weather was risk-on.",
+   "cost_model": "futubull",
+   "n_tickers": 368,
+   "n_dates": 2,
+   "discovery": {
+    "n": 211,
+    "avg_net": 0.0034894106723532543,
+    "t": 0.7826636021837383,
+    "win": 0.4312796208530806
+   },
+   "holdout": {
+    "n": 157,
+    "avg_net": -0.0027444250069340453,
+    "t": -0.6833576593430525,
+    "win": 0.4585987261146497
+   },
+   "early": null,
+   "late": {
+    "n": 368,
+    "avg_net": 0.0008298666461355749,
+    "t": 0.2696383129086521,
+    "win": 0.4429347826086957
+   },
+   "spy_up": null,
+   "spy_dn": {
+    "n": 368,
+    "avg_net": 0.0008298666461355749,
+    "t": 0.2696383129086521,
+    "win": 0.4429347826086957
+   },
+   "lottery_day_frac": 1.0,
+   "parent": {
+    "n": 10931,
+    "avg_net": 0.016188191001334246,
+    "t": 20.099762311041147,
+    "win": 0.5841185618882079
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "thin_disc",
+    "disc_t",
+    "hold_t",
+    "hold_sign",
+    "date_bar",
+    "lottery_day",
+    "tape_split",
+    "spy_regime",
+    "no_edge_vs_uncond",
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__book_1d_buy",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and the overnight 1-day book had it as a buy.",
+   "cost_model": "futubull",
+   "n_tickers": 13,
+   "n_dates": 10,
+   "discovery": {
+    "n": 5,
+    "avg_net": 0.013483178659379383,
+    "t": 0.6411350341753805,
+    "win": 0.6
+   },
+   "holdout": {
+    "n": 8,
+    "avg_net": -0.010822225748257622,
+    "t": -1.6782766726173493,
+    "win": 0.25
+   },
+   "early": null,
+   "late": {
+    "n": 13,
+    "avg_net": -0.0014739932837818505,
+    "t": -0.16151971098083567,
+    "win": 0.38461538461538464
+   },
+   "spy_up": {
+    "n": 8,
+    "avg_net": -0.009698625545965178,
+    "t": -0.8228158986329764,
+    "win": 0.25
+   },
+   "spy_dn": {
+    "n": 5,
+    "avg_net": 0.011685418335711475,
+    "t": 0.8472779480680996,
+    "win": 0.6
+   },
+   "lottery_day_frac": 0.49098412893438387,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.015447603710431435,
+    "t": 4.589945224871935,
+    "win": 0.5613146750138096
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "thin_disc",
+    "thin_hold",
+    "disc_t",
+    "hold_t",
+    "hold_sign",
+    "ticker_bar",
+    "date_bar",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split",
+    "no_edge_vs_uncond",
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__book_1d_buy",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and the overnight 1-day book had it as a buy.",
+   "cost_model": "futubull",
+   "n_tickers": 13,
+   "n_dates": 10,
+   "discovery": {
+    "n": 5,
+    "avg_net": 0.006889309867732919,
+    "t": 0.628618594744816,
+    "win": 0.8
+   },
+   "holdout": {
+    "n": 8,
+    "avg_net": -0.007668740412264275,
+    "t": -1.7383078791437623,
+    "win": 0.375
+   },
+   "early": null,
+   "late": {
+    "n": 13,
+    "avg_net": -0.0020694903045730467,
+    "t": -0.4015187163372178,
+    "win": 0.5384615384615384
+   },
+   "spy_up": {
+    "n": 8,
+    "avg_net": -0.00472996321534559,
+    "t": -0.5881495224970191,
+    "win": 0.375
+   },
+   "spy_dn": {
+    "n": 5,
+    "avg_net": 0.0021872663526630214,
+    "t": 0.5050355492702076,
+    "win": 0.8
+   },
+   "lottery_day_frac": 0.6294661339529198,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.013273188917929632,
+    "t": 27.557150198609722,
+    "win": 0.6238261830233843
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "thin_disc",
+    "thin_hold",
+    "disc_t",
+    "hold_t",
+    "hold_sign",
+    "ticker_bar",
+    "date_bar",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split",
+    "no_edge_vs_uncond",
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0__wx_risk_on",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_core_e5_x0`, and prior weather was risk-on.",
+   "cost_model": "futubull",
+   "n_tickers": 382,
+   "n_dates": 2,
+   "discovery": {
+    "n": 221,
+    "avg_net": -0.0047575030591731305,
+    "t": -1.1479986940446782,
+    "win": 0.34841628959276016
+   },
+   "holdout": {
+    "n": 161,
+    "avg_net": -0.007289956598156915,
+    "t": -1.7655080230271942,
+    "win": 0.4161490683229814
+   },
+   "early": null,
+   "late": {
+    "n": 382,
+    "avg_net": -0.005824846042880956,
+    "t": -1.9681482720932622,
+    "win": 0.3769633507853403
+   },
+   "spy_up": null,
+   "spy_dn": {
+    "n": 382,
+    "avg_net": -0.005824846042880956,
+    "t": -1.9681482720932622,
+    "win": 0.3769633507853403
+   },
+   "lottery_day_frac": 1.0,
+   "parent": {
+    "n": 11120,
+    "avg_net": 0.012103086737034878,
+    "t": 14.552153021580777,
+    "win": 0.5502697841726619
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "thin_disc",
+    "disc_t",
+    "hold_t",
+    "disc_sign",
+    "hold_sign",
+    "date_bar",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split",
+    "spy_regime",
+    "no_edge_vs_uncond",
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2__wx_risk_on",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "join",
+   "plain": "Same morning light as `hyst_open_score_e5_x2`, and prior weather was risk-on.",
+   "cost_model": "futubull",
+   "n_tickers": 319,
+   "n_dates": 2,
+   "discovery": {
+    "n": 175,
+    "avg_net": -0.005597390411054227,
+    "t": -1.122985864223468,
+    "win": 0.35428571428571426
+   },
+   "holdout": {
+    "n": 144,
+    "avg_net": -0.010857394354361678,
+    "t": -2.3773174080674697,
+    "win": 0.3680555555555556
+   },
+   "early": null,
+   "late": {
+    "n": 319,
+    "avg_net": -0.007971812253801164,
+    "t": -2.329277782286242,
+    "win": 0.3605015673981191
+   },
+   "spy_up": null,
+   "spy_dn": {
+    "n": 319,
+    "avg_net": -0.007971812253801164,
+    "t": -2.329277782286242,
+    "win": 0.3605015673981191
+   },
+   "lottery_day_frac": 1.0,
+   "parent": {
+    "n": 10862,
+    "avg_net": 0.015447603710431435,
+    "t": 4.589945224871935,
+    "win": 0.5613146750138096
+   },
+   "verdict": "KILL",
+   "fail_reasons": [
+    "thin_disc",
+    "disc_t",
+    "hold_t",
+    "disc_sign",
+    "hold_sign",
+    "date_bar",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split",
+    "spy_regime",
+    "no_edge_vs_uncond",
+    "no_edge_vs_parent"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_L_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "color",
+   "plain": "Morning cell L is highlighted green (known at 9:30). Buy at that open and sell at the next day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3598,
+   "n_dates": 163,
+   "discovery": {
+    "n": 99197,
+    "avg_net": 7.724361359425178e-05,
+    "t": 0.10232197330001987,
+    "win": 0.4610421686139702
+   },
+   "holdout": {
+    "n": 67329,
+    "avg_net": 0.010605265110109192,
+    "t": 1.9920422178283437,
+    "win": 0.4612722600959468
+   },
+   "early": {
+    "n": 79261,
+    "avg_net": 0.0021441824544837494,
+    "t": 0.7789026435445207,
+    "win": 0.473309698338401
+   },
+   "late": {
+    "n": 87265,
+    "avg_net": 0.006322743182391729,
+    "t": 1.8761525569516315,
+    "win": 0.4500773505987509
+   },
+   "spy_up": {
+    "n": 88981,
+    "avg_net": 0.008814396655644674,
+    "t": 2.3352211139026737,
+    "win": 0.4906777851451433
+   },
+   "spy_dn": {
+    "n": 77545,
+    "avg_net": -0.0008073969885829916,
+    "t": -0.42911020213997764,
+    "win": 0.4272357985685731
+   },
+   "lottery_day_frac": 0.11219264948452817,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t",
+    "lottery_trade",
+    "lottery_day",
+    "spy_regime"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_A_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "color",
+   "plain": "Morning cell A is highlighted green (known at 9:30). Buy at that open and sell at the next day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3598,
+   "n_dates": 163,
+   "discovery": {
+    "n": 222570,
+    "avg_net": 0.0005184520698954578,
+    "t": 0.7385081259890044,
+    "win": 0.45599137350047175
+   },
+   "holdout": {
+    "n": 152822,
+    "avg_net": 0.0041417116284445405,
+    "t": 1.955875792522541,
+    "win": 0.45664891180589184
+   },
+   "early": {
+    "n": 174580,
+    "avg_net": 0.0010892257675332786,
+    "t": 0.6548988749097908,
+    "win": 0.4618226600985222
+   },
+   "late": {
+    "n": 200812,
+    "avg_net": 0.0027796122601379592,
+    "t": 2.6362652796307997,
+    "win": 0.4514222257634006
+   },
+   "spy_up": {
+    "n": 198717,
+    "avg_net": 0.0033117458075160775,
+    "t": 2.9279784362962187,
+    "win": 0.4877640060991259
+   },
+   "spy_dn": {
+    "n": 176675,
+    "avg_net": 0.000510747644242883,
+    "t": 0.3218197472892389,
+    "win": 0.4208235460591482
+   },
+   "lottery_day_frac": 0.09546593626498606,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t",
+    "lottery_day",
+    "no_edge_vs_uncond"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_B_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "color",
+   "plain": "Morning cell B is highlighted green (known at 9:30). Buy at that open and sell at the next day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3589,
+   "n_dates": 162,
+   "discovery": {
+    "n": 132807,
+    "avg_net": 0.0011910212919894888,
+    "t": 1.0451318741694164,
+    "win": 0.45390679708147913
+   },
+   "holdout": {
+    "n": 91063,
+    "avg_net": 0.004417894630433618,
+    "t": 1.5547897410871625,
+    "win": 0.45456442243282125
+   },
+   "early": {
+    "n": 103443,
+    "avg_net": 0.00025633928411214555,
+    "t": 0.12150227477712075,
+    "win": 0.4578270158444747
+   },
+   "late": {
+    "n": 120427,
+    "avg_net": 0.004433940884436313,
+    "t": 2.5983838980042133,
+    "win": 0.45103672764413294
+   },
+   "spy_up": {
+    "n": 116164,
+    "avg_net": 0.004053221722853342,
+    "t": 2.137009003183465,
+    "win": 0.4875090389449399
+   },
+   "spy_dn": {
+    "n": 107706,
+    "avg_net": 0.0008323051198901545,
+    "t": 0.441030403638186,
+    "win": 0.4182218260821124
+   },
+   "lottery_day_frac": 0.12669816814740534,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t",
+    "no_edge_vs_uncond"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_O_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "color",
+   "plain": "Morning cell O is highlighted green (known at 9:30). Buy at that open and sell at the next day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3484,
+   "n_dates": 161,
+   "discovery": {
+    "n": 53454,
+    "avg_net": 0.0018956909535357992,
+    "t": 1.3445728294130082,
+    "win": 0.46303363639765033
+   },
+   "holdout": {
+    "n": 35984,
+    "avg_net": 0.009638257294210313,
+    "t": 1.466973656709621,
+    "win": 0.4625389061805247
+   },
+   "early": {
+    "n": 40310,
+    "avg_net": 0.003733471418216232,
+    "t": 0.6911250580383295,
+    "win": 0.47211610022326966
+   },
+   "late": {
+    "n": 49128,
+    "avg_net": 0.006058847944896397,
+    "t": 2.5015973879960707,
+    "win": 0.4552190197036313
+   },
+   "spy_up": {
+    "n": 47778,
+    "avg_net": 0.0077678203383603865,
+    "t": 1.6923777115312715,
+    "win": 0.4957511825526393
+   },
+   "spy_dn": {
+    "n": 41660,
+    "avg_net": 0.0018488812909021601,
+    "t": 0.6633102070303127,
+    "win": 0.42508401344215074
+   },
+   "lottery_day_frac": 0.13483241355343806,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_J_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "color",
+   "plain": "Morning cell J is highlighted green (known at 9:30). Buy at that open and sell at the next day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3598,
+   "n_dates": 162,
+   "discovery": {
+    "n": 103184,
+    "avg_net": 0.0034171194831253775,
+    "t": 1.9851431248411497,
+    "win": 0.4574934098309815
+   },
+   "holdout": {
+    "n": 70544,
+    "avg_net": 0.004848007384686242,
+    "t": 1.4474051319145782,
+    "win": 0.4578702653662962
+   },
+   "early": {
+    "n": 96161,
+    "avg_net": 0.0016592075973209347,
+    "t": 0.7274066971348159,
+    "win": 0.4645958340699452
+   },
+   "late": {
+    "n": 77567,
+    "avg_net": 0.006897763584077466,
+    "t": 2.700121074610761,
+    "win": 0.44903116015831473
+   },
+   "spy_up": {
+    "n": 96412,
+    "avg_net": 0.006877909446946966,
+    "t": 2.7233437303733283,
+    "win": 0.4922520018254989
+   },
+   "spy_dn": {
+    "n": 77316,
+    "avg_net": 0.0004071199246348019,
+    "t": 0.1878194463046265,
+    "win": 0.4144937658440685
+   },
+   "lottery_day_frac": 0.12325775189194879,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t",
+    "no_edge_vs_uncond"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_G_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "color",
+   "plain": "Morning cell G is highlighted green (known at 9:30). Buy at that open and sell at the next day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3563,
+   "n_dates": 162,
+   "discovery": {
+    "n": 90916,
+    "avg_net": 0.0009563621438875647,
+    "t": 0.9713680537464873,
+    "win": 0.4627458313168199
+   },
+   "holdout": {
+    "n": 61404,
+    "avg_net": 0.005083742185627142,
+    "t": 1.3369725600222861,
+    "win": 0.4631131522376392
+   },
+   "early": {
+    "n": 59896,
+    "avg_net": 0.003924944008062543,
+    "t": 1.0678343116209825,
+    "win": 0.4760418057967143
+   },
+   "late": {
+    "n": 92424,
+    "avg_net": 0.0017746719416278974,
+    "t": 1.38329495174244,
+    "win": 0.45437332294642085
+   },
+   "spy_up": {
+    "n": 79648,
+    "avg_net": 0.005795650073194888,
+    "t": 2.0412906214507456,
+    "win": 0.49136199276818
+   },
+   "spy_dn": {
+    "n": 72672,
+    "avg_net": -0.0008600452882801563,
+    "t": -0.5856879257415006,
+    "win": 0.4316930867459269
+   },
+   "lottery_day_frac": 0.1062275705638319,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t",
+    "spy_regime",
+    "no_edge_vs_uncond"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_O_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "color",
+   "plain": "Morning cell O is highlighted green (known at 9:30). Buy at that open and sell at the same day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3485,
+   "n_dates": 162,
+   "discovery": {
+    "n": 53677,
+    "avg_net": -0.0012333029116231267,
+    "t": -3.991564976430321,
+    "win": 0.4622277698082978
+   },
+   "holdout": {
+    "n": 36139,
+    "avg_net": 0.004114370304439847,
+    "t": 0.7459861053045903,
+    "win": 0.46229834804504827
+   },
+   "early": {
+    "n": 40310,
+    "avg_net": 0.003810751798110965,
+    "t": 0.7704448610561231,
+    "win": 0.4708509054825105
+   },
+   "late": {
+    "n": 49506,
+    "avg_net": -0.0014366375174099297,
+    "t": -4.492863511536892,
+    "win": 0.45525794853149115
+   },
+   "spy_up": {
+    "n": 47779,
+    "avg_net": 0.0076442892525995475,
+    "t": 1.8295872688214248,
+    "win": 0.5119613219196718
+   },
+   "spy_dn": {
+    "n": 42037,
+    "avg_net": -0.006726152393248725,
+    "t": -23.272451576620917,
+    "win": 0.4057615909793753
+   },
+   "lottery_day_frac": 0.06072211962362707,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t",
+    "disc_sign",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split",
+    "spy_regime"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_A_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "color",
+   "plain": "Morning cell A is highlighted green (known at 9:30). Buy at that open and sell at the same day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3598,
+   "n_dates": 164,
+   "discovery": {
+    "n": 222595,
+    "avg_net": -0.0013627470906133626,
+    "t": -13.312847289336885,
+    "win": 0.4447943574653519
+   },
+   "holdout": {
+    "n": 152838,
+    "avg_net": 0.0011923869315369102,
+    "t": 0.7251239743724016,
+    "win": 0.4437836140226907
+   },
+   "early": {
+    "n": 174580,
+    "avg_net": 0.0010166687395239537,
+    "t": 0.7058553595681392,
+    "win": 0.4521422843395578
+   },
+   "late": {
+    "n": 200853,
+    "avg_net": -0.0014866030546665224,
+    "t": -14.00511115542497,
+    "win": 0.43763847191727284
+   },
+   "spy_up": {
+    "n": 198729,
+    "avg_net": 0.0033090156313374053,
+    "t": 3.2862422720735776,
+    "win": 0.49669147431929916
+   },
+   "spy_dn": {
+    "n": 176704,
+    "avg_net": -0.00440678208865048,
+    "t": -5.065009820154152,
+    "win": 0.3855543734154292
+   },
+   "lottery_day_frac": 0.050271332112429463,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t",
+    "disc_sign",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split",
+    "spy_regime",
+    "no_edge_vs_uncond"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_L_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "color",
+   "plain": "Morning cell L is highlighted green (known at 9:30). Buy at that open and sell at the same day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3598,
+   "n_dates": 164,
+   "discovery": {
+    "n": 99501,
+    "avg_net": -0.001325415860098983,
+    "t": -6.688244274589799,
+    "win": 0.4582768012381785
+   },
+   "holdout": {
+    "n": 67560,
+    "avg_net": 0.0020551623851061355,
+    "t": 0.6859525959169415,
+    "win": 0.4578152753108348
+   },
+   "early": {
+    "n": 79261,
+    "avg_net": 0.0016780469793115226,
+    "t": 0.6665021143905169,
+    "win": 0.46905792255964474
+   },
+   "late": {
+    "n": 87800,
+    "avg_net": -0.0014355024417442939,
+    "t": -3.213492092455919,
+    "win": 0.44818906605922554
+   },
+   "spy_up": {
+    "n": 88988,
+    "avg_net": 0.005765037829264254,
+    "t": 2.530109268079693,
+    "win": 0.5112711826313661
+   },
+   "spy_dn": {
+    "n": 78073,
+    "avg_net": -0.006481787802550252,
+    "t": -32.622939710529316,
+    "win": 0.39747415880009734
+   },
+   "lottery_day_frac": 0.05258193765542952,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t",
+    "disc_sign",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split",
+    "spy_regime"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_G_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "color",
+   "plain": "Morning cell G is highlighted green (known at 9:30). Buy at that open and sell at the same day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3563,
+   "n_dates": 163,
+   "discovery": {
+    "n": 91346,
+    "avg_net": -0.0012182906666970764,
+    "t": -6.332040037558821,
+    "win": 0.4580058240098089
+   },
+   "holdout": {
+    "n": 61695,
+    "avg_net": 0.0020268658077722385,
+    "t": 0.6271096006957386,
+    "win": 0.45692519653132346
+   },
+   "early": {
+    "n": 59896,
+    "avg_net": 0.0025416975627987797,
+    "t": 0.7632481108841978,
+    "win": 0.4689127821557366
+   },
+   "late": {
+    "n": 93145,
+    "avg_net": -0.0014866714311127657,
+    "t": -8.189604962751321,
+    "win": 0.4502764506951527
+   },
+   "spy_up": {
+    "n": 79655,
+    "avg_net": 0.005687978311396295,
+    "t": 2.268955073019197,
+    "win": 0.5080785889146946
+   },
+   "spy_dn": {
+    "n": 73386,
+    "avg_net": -0.0059863516968342015,
+    "t": -31.75337993222357,
+    "win": 0.40274711797890606
+   },
+   "lottery_day_frac": 0.058339944429061014,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t",
+    "disc_sign",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split",
+    "spy_regime"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_J_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "color",
+   "plain": "Morning cell J is highlighted green (known at 9:30). Buy at that open and sell at the same day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3598,
+   "n_dates": 163,
+   "discovery": {
+    "n": 103616,
+    "avg_net": -0.0010508085880168866,
+    "t": -5.993580800381611,
+    "win": 0.4519379246448425
+   },
+   "holdout": {
+    "n": 70849,
+    "avg_net": 0.0017032806604663985,
+    "t": 0.605132405623474,
+    "win": 0.4515518920521108
+   },
+   "early": {
+    "n": 96161,
+    "avg_net": 0.0011130275760751443,
+    "t": 0.536372015390188,
+    "win": 0.45696280196753364
+   },
+   "late": {
+    "n": 78304,
+    "avg_net": -0.0012162175097764581,
+    "t": -5.685204246234791,
+    "win": 0.44541785860237026
+   },
+   "spy_up": {
+    "n": 96415,
+    "avg_net": 0.004700208031280187,
+    "t": 2.269066396313896,
+    "win": 0.49977700565264743
+   },
+   "spy_dn": {
+    "n": 78050,
+    "avg_net": -0.005655034061222973,
+    "t": -30.658161410934465,
+    "win": 0.3924919923126201
+   },
+   "lottery_day_frac": 0.07019871798452117,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t",
+    "disc_sign",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split",
+    "spy_regime"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_B_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "color",
+   "plain": "Morning cell B is highlighted green (known at 9:30). Buy at that open and sell at the same day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3589,
+   "n_dates": 163,
+   "discovery": {
+    "n": 132820,
+    "avg_net": -0.0013001117132051718,
+    "t": -8.95649411853691,
+    "win": 0.4461376298750188
+   },
+   "holdout": {
+    "n": 91076,
+    "avg_net": 0.0007945323297696229,
+    "t": 0.3627649378220552,
+    "win": 0.44548508937590586
+   },
+   "early": {
+    "n": 103443,
+    "avg_net": 0.0009064478661373827,
+    "t": 0.469880200016551,
+    "win": 0.45353479694131066
+   },
+   "late": {
+    "n": 120453,
+    "avg_net": -0.0016112815612617537,
+    "t": -10.510010764591184,
+    "win": 0.4392916739309108
+   },
+   "spy_up": {
+    "n": 116170,
+    "avg_net": 0.003911008111352825,
+    "t": 2.2743643200130284,
+    "win": 0.492640096410433
+   },
+   "spy_dn": {
+    "n": 107726,
+    "avg_net": -0.0051488018080841245,
+    "t": -34.99513924606579,
+    "win": 0.39543842712065796
+   },
+   "lottery_day_frac": 0.061450629352356574,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t",
+    "disc_sign",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split",
+    "spy_regime",
+    "no_edge_vs_uncond"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_M_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "color",
+   "plain": "Morning cell M is highlighted green (known at 9:30). Buy at that open and sell at the same day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3587,
+   "n_dates": 145,
+   "discovery": {
+    "n": 41319,
+    "avg_net": 0.0005172590063476445,
+    "t": 2.1494811969504894,
+    "win": 0.462547496309204
+   },
+   "holdout": {
+    "n": 28328,
+    "avg_net": 8.668253136182919e-05,
+    "t": 0.3177412207485532,
+    "win": 0.46554645580344534
+   },
+   "early": {
+    "n": 55157,
+    "avg_net": 0.001350562771262519,
+    "t": 6.602750967543491,
+    "win": 0.48175208949000126
+   },
+   "late": {
+    "n": 14490,
+    "avg_net": -0.0034965371389117,
+    "t": -9.094164665562365,
+    "win": 0.39530710835058663
+   },
+   "spy_up": {
+    "n": 31654,
+    "avg_net": 0.005735532394511932,
+    "t": 20.803796238149356,
+    "win": 0.5426802299867315
+   },
+   "spy_dn": {
+    "n": 37993,
+    "avg_net": -0.004151406174405402,
+    "t": -17.552394395860617,
+    "win": 0.39802068802147766
+   },
+   "lottery_day_frac": 0.09271314837856837,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t",
+    "tape_split",
+    "spy_regime",
+    "no_edge_vs_uncond"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_M_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "color",
+   "plain": "Morning cell M is highlighted green (known at 9:30). Buy at that open and sell at the next day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3587,
+   "n_dates": 145,
+   "discovery": {
+    "n": 41319,
+    "avg_net": -0.00033310053458767303,
+    "t": -0.6934263568253864,
+    "win": 0.4463563977831022
+   },
+   "holdout": {
+    "n": 28327,
+    "avg_net": -0.00027824895131532874,
+    "t": -0.3125677438789187,
+    "win": 0.4485473223426413
+   },
+   "early": {
+    "n": 55157,
+    "avg_net": -0.00022531961979536426,
+    "t": -0.6953609797728222,
+    "win": 0.4597965806697246
+   },
+   "late": {
+    "n": 14489,
+    "avg_net": -0.0006361643152380753,
+    "t": -0.3458167489357274,
+    "win": 0.3994754641452136
+   },
+   "spy_up": {
+    "n": 31653,
+    "avg_net": 0.007205135874818405,
+    "t": 14.463064960017425,
+    "win": 0.5163491612169463
+   },
+   "spy_dn": {
+    "n": 37993,
+    "avg_net": -0.0065725134861201896,
+    "t": -8.953034621147065,
+    "win": 0.3896770457715895
+   },
+   "lottery_day_frac": 0.13275126055038633,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t",
+    "disc_sign",
+    "hold_sign",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split",
+    "spy_regime",
+    "no_edge_vs_uncond"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_K_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "color",
+   "plain": "Morning cell K is highlighted green (known at 9:30). Buy at that open and sell at the next day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3364,
+   "n_dates": 160,
+   "discovery": {
+    "n": 68159,
+    "avg_net": -0.0006069876495450009,
+    "t": -1.2698103390740045,
+    "win": 0.4684927889200252
+   },
+   "holdout": {
+    "n": 45745,
+    "avg_net": -0.0005062761244860061,
+    "t": -0.4264659664218535,
+    "win": 0.4676795278172478
+   },
+   "early": {
+    "n": 45513,
+    "avg_net": -0.0005075305712011334,
+    "t": -1.532222623610563,
+    "win": 0.4821479577263639
+   },
+   "late": {
+    "n": 68391,
+    "avg_net": -0.000605811197860433,
+    "t": -0.6735934481359841,
+    "win": 0.45886154610986823
+   },
+   "spy_up": {
+    "n": 59258,
+    "avg_net": 0.0016562875265145062,
+    "t": 4.566048536832766,
+    "win": 0.49740119477538897
+   },
+   "spy_dn": {
+    "n": 54646,
+    "avg_net": -0.0029769710274520854,
+    "t": -2.7311284303661805,
+    "win": 0.436463785089485
+   },
+   "lottery_day_frac": 0.04756543536049792,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t",
+    "disc_sign",
+    "hold_sign",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split",
+    "spy_regime",
+    "no_edge_vs_uncond"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_L_red",
+   "clock": "open",
+   "side": "short",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "color",
+   "plain": "Morning cell L is highlighted red (known at 9:30). Short at that open and sell at the same day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3583,
+   "n_dates": 162,
+   "discovery": {
+    "n": 70954,
+    "avg_net": -0.0013152786453852284,
+    "t": -5.93191861747295,
+    "win": 0.47236237562364347
+   },
+   "holdout": {
+    "n": 47817,
+    "avg_net": -0.005889276360564253,
+    "t": -1.8384809592398679,
+    "win": 0.4714013844448627
+   },
+   "early": {
+    "n": 46451,
+    "avg_net": -0.005569393485973678,
+    "t": -1.6897477410307484,
+    "win": 0.46868743407031066
+   },
+   "late": {
+    "n": 72320,
+    "avg_net": -0.001607133737842935,
+    "t": -7.077132479209638,
+    "win": 0.47408738938053097
+   },
+   "spy_up": {
+    "n": 64589,
+    "avg_net": -0.006971124949813871,
+    "t": -28.135520686062044,
+    "win": 0.40988403598135903
+   },
+   "spy_dn": {
+    "n": 54182,
+    "avg_net": 0.0013902436352619643,
+    "t": 0.4918745998168412,
+    "win": 0.5459931342512273
+   },
+   "lottery_day_frac": 0.057966954907037946,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t",
+    "disc_sign",
+    "hold_sign",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split",
+    "spy_regime",
+    "no_edge_vs_uncond"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_J_red",
+   "clock": "open",
+   "side": "short",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "color",
+   "plain": "Morning cell J is highlighted red (known at 9:30). Short at that open and sell at the same day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3598,
+   "n_dates": 163,
+   "discovery": {
+    "n": 201000,
+    "avg_net": -0.0013697780161192104,
+    "t": -11.542059720355812,
+    "win": 0.46073134328358206
+   },
+   "holdout": {
+    "n": 137776,
+    "avg_net": -0.003462037563434106,
+    "t": -3.0222650991770155,
+    "win": 0.45862849843223785
+   },
+   "early": {
+    "n": 139736,
+    "avg_net": -0.0029386895556384645,
+    "t": -2.6668765090839313,
+    "win": 0.45674700864487316
+   },
+   "late": {
+    "n": 199040,
+    "avg_net": -0.001716591362705799,
+    "t": -8.124969642160686,
+    "win": 0.4620729501607717
+   },
+   "spy_up": {
+    "n": 175679,
+    "avg_net": -0.006405084626566207,
+    "t": -27.40905180318912,
+    "win": 0.397548938689314
+   },
+   "spy_dn": {
+    "n": 163097,
+    "avg_net": 0.002286539872167275,
+    "t": 2.418045679562909,
+    "win": 0.5270115330140959
+   },
+   "lottery_day_frac": 0.06416084426247427,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t",
+    "disc_sign",
+    "hold_sign",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split",
+    "spy_regime",
+    "no_edge_vs_uncond"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_L_red",
+   "clock": "open",
+   "side": "short",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "color",
+   "plain": "Morning cell L is highlighted red (known at 9:30). Short at that open and sell at the next day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3582,
+   "n_dates": 161,
+   "discovery": {
+    "n": 70166,
+    "avg_net": -0.01178833087566055,
+    "t": -4.312741323105298,
+    "win": 0.4822848673146538
+   },
+   "holdout": {
+    "n": 47301,
+    "avg_net": -0.013313688309696562,
+    "t": -3.074657502111612,
+    "win": 0.4778757320141223
+   },
+   "early": {
+    "n": 46451,
+    "avg_net": -0.007202773867847647,
+    "t": -1.756329878559026,
+    "win": 0.48207788852769584
+   },
+   "late": {
+    "n": 71016,
+    "avg_net": -0.01580368854938555,
+    "t": -5.447664578699756,
+    "win": 0.47948349667680523
+   },
+   "spy_up": {
+    "n": 64583,
+    "avg_net": -0.015289640616366697,
+    "t": -6.373986447332346,
+    "win": 0.43878420017651704
+   },
+   "spy_dn": {
+    "n": 52884,
+    "avg_net": -0.008876785701379338,
+    "t": -2.0065657238183308,
+    "win": 0.5314650934119961
+   },
+   "lottery_day_frac": 0.06421568305551047,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t",
+    "disc_sign",
+    "hold_sign",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split",
+    "spy_regime",
+    "no_edge_vs_uncond"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_B_red",
+   "clock": "open",
+   "side": "short",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "color",
+   "plain": "Morning cell B is highlighted red (known at 9:30). Short at that open and sell at the next day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3594,
+   "n_dates": 163,
+   "discovery": {
+    "n": 119753,
+    "avg_net": -0.00909543477923163,
+    "t": -5.142294118094244,
+    "win": 0.4885055071689227
+   },
+   "holdout": {
+    "n": 81279,
+    "avg_net": -0.012767136224755494,
+    "t": -3.106121744975619,
+    "win": 0.48301529300311274
+   },
+   "early": {
+    "n": 86917,
+    "avg_net": -0.002183012936671646,
+    "t": -5.744972081155509,
+    "win": 0.4834037069848246
+   },
+   "late": {
+    "n": 114115,
+    "avg_net": -0.01697554862123768,
+    "t": -4.914471011649463,
+    "win": 0.4884809183718179
+   },
+   "spy_up": {
+    "n": 107609,
+    "avg_net": -0.01576282231262306,
+    "t": -5.48342493550425,
+    "win": 0.45020397922106886
+   },
+   "spy_dn": {
+    "n": 93423,
+    "avg_net": -0.004610043780334313,
+    "t": -1.7469259590506965,
+    "win": 0.5278464617920641
+   },
+   "lottery_day_frac": 0.06983985382387642,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t",
+    "disc_sign",
+    "hold_sign",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split",
+    "spy_regime",
+    "no_edge_vs_uncond"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_A_red",
+   "clock": "open",
+   "side": "short",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "color",
+   "plain": "Morning cell A is highlighted red (known at 9:30). Short at that open and sell at the next day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3594,
+   "n_dates": 162,
+   "discovery": {
+    "n": 115774,
+    "avg_net": -0.009905673284054834,
+    "t": -5.382856366259129,
+    "win": 0.4870523606336483
+   },
+   "holdout": {
+    "n": 78511,
+    "avg_net": -0.013587230733219552,
+    "t": -3.192688371200635,
+    "win": 0.48158856720714294
+   },
+   "early": {
+    "n": 83046,
+    "avg_net": -0.0023399488202541473,
+    "t": -7.804106465287987,
+    "win": 0.48070948630879273
+   },
+   "late": {
+    "n": 111239,
+    "avg_net": -0.018152294619307424,
+    "t": -5.105937423541203,
+    "win": 0.4879313909689947
+   },
+   "spy_up": {
+    "n": 104365,
+    "avg_net": -0.01660469348833554,
+    "t": -5.603352239373692,
+    "win": 0.4467589709193695
+   },
+   "spy_dn": {
+    "n": 89920,
+    "avg_net": -0.005344947230580804,
+    "t": -1.9400220027006627,
+    "win": 0.5290480427046264
+   },
+   "lottery_day_frac": 0.06338721728074921,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t",
+    "disc_sign",
+    "hold_sign",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split",
+    "spy_regime",
+    "no_edge_vs_uncond"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_O_red",
+   "clock": "open",
+   "side": "short",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "color",
+   "plain": "Morning cell O is highlighted red (known at 9:30). Short at that open and sell at the same day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3598,
+   "n_dates": 165,
+   "discovery": {
+    "n": 265051,
+    "avg_net": -0.001694070147065805,
+    "t": -17.924091308121138,
+    "win": 0.45527464525695055
+   },
+   "holdout": {
+    "n": 181969,
+    "avg_net": -0.0031299656729456746,
+    "t": -3.6091412979412505,
+    "win": 0.4535937439893608
+   },
+   "early": {
+    "n": 200116,
+    "avg_net": -0.002822075244964182,
+    "t": -3.6629929513560224,
+    "win": 0.44976413680065563
+   },
+   "late": {
+    "n": 246904,
+    "avg_net": -0.0018380799839975775,
+    "t": -10.813083280006293,
+    "win": 0.45850208988108737
+   },
+   "spy_up": {
+    "n": 236300,
+    "avg_net": -0.006087093099124765,
+    "t": -35.12150956069424,
+    "win": 0.3949640287769784
+   },
+   "spy_dn": {
+    "n": 210720,
+    "avg_net": 0.0019922569724420643,
+    "t": 2.7185277165141137,
+    "win": 0.5214550113895217
+   },
+   "lottery_day_frac": 0.052388769172054574,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t",
+    "disc_sign",
+    "hold_sign",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split",
+    "spy_regime",
+    "no_edge_vs_uncond"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_J_red",
+   "clock": "open",
+   "side": "short",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "color",
+   "plain": "Morning cell J is highlighted red (known at 9:30). Short at that open and sell at the next day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3598,
+   "n_dates": 162,
+   "discovery": {
+    "n": 199446,
+    "avg_net": -0.005987208894395245,
+    "t": -6.157027058090896,
+    "win": 0.47772830741152994
+   },
+   "holdout": {
+    "n": 136727,
+    "avg_net": -0.011589722939581623,
+    "t": -3.9561521450769264,
+    "win": 0.47196969142890577
+   },
+   "early": {
+    "n": 139736,
+    "avg_net": -0.0030047830451825053,
+    "t": -2.190886989495892,
+    "win": 0.47493129902101106
+   },
+   "late": {
+    "n": 196437,
+    "avg_net": -0.012008310806569578,
+    "t": -5.873007763437922,
+    "win": 0.4757097695444341
+   },
+   "spy_up": {
+    "n": 175668,
+    "avg_net": -0.01088608367389946,
+    "t": -6.4930286017626715,
+    "win": 0.44150898285402007
+   },
+   "spy_dn": {
+    "n": 160505,
+    "avg_net": -0.005398064650229963,
+    "t": -2.596924137312511,
+    "win": 0.5124637861748855
+   },
+   "lottery_day_frac": 0.0751151761679471,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t",
+    "disc_sign",
+    "hold_sign",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split",
+    "spy_regime",
+    "no_edge_vs_uncond"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_O_red",
+   "clock": "open",
+   "side": "short",
+   "exit": "hold2",
+   "hold": 2,
+   "family": "color",
+   "plain": "Morning cell O is highlighted red (known at 9:30). Short at that open and sell at the next day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3598,
+   "n_dates": 164,
+   "discovery": {
+    "n": 263240,
+    "avg_net": -0.005576942424839145,
+    "t": -6.243344793940305,
+    "win": 0.47376158638504784
+   },
+   "holdout": {
+    "n": 180728,
+    "avg_net": -0.00907424596709266,
+    "t": -4.111251872615396,
+    "win": 0.46994378292240274
+   },
+   "early": {
+    "n": 200116,
+    "avg_net": -0.0032494943290512566,
+    "t": -3.361900653424598,
+    "win": 0.47022726818445304
+   },
+   "late": {
+    "n": 243852,
+    "avg_net": -0.010078936575886018,
+    "t": -5.841997936543531,
+    "win": 0.4738324885586339
+   },
+   "spy_up": {
+    "n": 236286,
+    "avg_net": -0.009788985426457023,
+    "t": -7.519770509020917,
+    "win": 0.43779148997401457
+   },
+   "spy_dn": {
+    "n": 207682,
+    "avg_net": -0.0038281817325505076,
+    "t": -2.29703269595838,
+    "win": 0.5113635269305958
+   },
+   "lottery_day_frac": 0.06524049849463391,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t",
+    "disc_sign",
+    "hold_sign",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split",
+    "spy_regime",
+    "no_edge_vs_uncond"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_B_red",
+   "clock": "open",
+   "side": "short",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "color",
+   "plain": "Morning cell B is highlighted red (known at 9:30). Short at that open and sell at the same day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3594,
+   "n_dates": 164,
+   "discovery": {
+    "n": 119772,
+    "avg_net": -0.0009643812698681,
+    "t": -5.455182307609342,
+    "win": 0.47731523227465517
+   },
+   "holdout": {
+    "n": 81292,
+    "avg_net": -0.0026283100020325985,
+    "t": -4.1535963462468,
+    "win": 0.47496678639964574
+   },
+   "early": {
+    "n": 86917,
+    "avg_net": -0.0015770702824665474,
+    "t": -3.615768820832963,
+    "win": 0.47394640864272813
+   },
+   "late": {
+    "n": 114147,
+    "avg_net": -0.001682849592181408,
+    "t": -4.718505990069476,
+    "win": 0.47820792486880953
+   },
+   "spy_up": {
+    "n": 107613,
+    "avg_net": -0.007401658789786759,
+    "t": -19.966657806559603,
+    "win": 0.4079711559012387
+   },
+   "spy_dn": {
+    "n": 93451,
+    "avg_net": 0.005000997926244196,
+    "t": 12.085309586705211,
+    "win": 0.5551251457983328
+   },
+   "lottery_day_frac": 0.06530166277946475,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t",
+    "disc_sign",
+    "hold_sign",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split",
+    "spy_regime",
+    "no_edge_vs_uncond"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_A_red",
+   "clock": "open",
+   "side": "short",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "color",
+   "plain": "Morning cell A is highlighted red (known at 9:30). Short at that open and sell at the same day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3594,
+   "n_dates": 163,
+   "discovery": {
+    "n": 115791,
+    "avg_net": -0.0010790982076117684,
+    "t": -5.940217435596687,
+    "win": 0.4761078149424394
+   },
+   "holdout": {
+    "n": 78522,
+    "avg_net": -0.0021233275291699075,
+    "t": -4.2333159932808675,
+    "win": 0.4750515779017345
+   },
+   "early": {
+    "n": 83046,
+    "avg_net": -0.0014297038708411202,
+    "t": -6.4688703541134,
+    "win": 0.46958312260674806
+   },
+   "late": {
+    "n": 111267,
+    "avg_net": -0.0015543386371986493,
+    "t": -4.248935717104712,
+    "win": 0.48023223417545186
+   },
+   "spy_up": {
+    "n": 104369,
+    "avg_net": -0.007302240069174546,
+    "t": -19.15308382112239,
+    "win": 0.4078509902365645
+   },
+   "spy_dn": {
+    "n": 89944,
+    "avg_net": 0.005230473505477012,
+    "t": 23.443094758980077,
+    "win": 0.5543893978475496
+   },
+   "lottery_day_frac": 0.06282091425766642,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t",
+    "disc_sign",
+    "hold_sign",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split",
+    "spy_regime",
+    "no_edge_vs_uncond"
+   ],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "color_K_green",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "family": "color",
+   "plain": "Morning cell K is highlighted green (known at 9:30). Buy at that open and sell at the same day's close.",
+   "cost_model": "futubull",
+   "n_tickers": 3381,
+   "n_dates": 161,
+   "discovery": {
+    "n": 68618,
+    "avg_net": -0.0013538296173925789,
+    "t": -6.559958771617283,
+    "win": 0.46180302544521845
+   },
+   "holdout": {
+    "n": 46080,
+    "avg_net": -0.0015617024831675406,
+    "t": -7.574226327402228,
+    "win": 0.45818142361111114
+   },
+   "early": {
+    "n": 45513,
+    "avg_net": -0.0011542159184484704,
+    "t": -5.380865113020319,
+    "win": 0.4716454639333817
+   },
+   "late": {
+    "n": 69185,
+    "avg_net": -0.0016235961843500618,
+    "t": -8.033812587869425,
+    "win": 0.45291609452916093
+   },
+   "spy_up": {
+    "n": 59260,
+    "avg_net": 0.0027137896973678847,
+    "t": 12.29757330208629,
+    "win": 0.5104623692203848
+   },
+   "spy_dn": {
+    "n": 55438,
+    "avg_net": -0.005874661939042266,
+    "t": -30.021543986713578,
+    "win": 0.4067787438219272
+   },
+   "lottery_day_frac": 0.04930008184185256,
+   "parent": null,
+   "verdict": "KILL",
+   "fail_reasons": [
+    "disc_t",
+    "hold_t",
+    "disc_sign",
+    "hold_sign",
+    "lottery_trade",
+    "lottery_day",
+    "tape_split",
+    "spy_regime",
+    "no_edge_vs_uncond"
+   ],
+   "live_untouched": "flatten_robust"
+  }
+ ]
+}

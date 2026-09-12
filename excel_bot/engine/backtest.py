@@ -55,6 +55,13 @@ def stockhistory_from_rows(rows, start_d, end_d, interval):
 
 
 def seed_anchor(ev, ticker, rows, anchor):
+    """Seed IR:IW / AP:AU from Yahoo/rows through `anchor` only.
+
+    A–F alias that daily spill. Never pass Excel's cached STOCKHISTORY.
+    Rows with date > anchor are dropped — no future bars in this seed.
+    Callers that tile (rebuild_grids / build_ticker) set `anchor` to the
+    tile end, not each painted day; see audit_af_seed.py.
+    """
     start_d, start_w = anchor - timedelta(days=200), anchor - timedelta(days=600)
     daily = stockhistory_from_rows(rows, start_d, anchor, 0)
     weekly = stockhistory_from_rows(rows, start_w, anchor, 1)

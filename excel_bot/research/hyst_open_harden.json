@@ -1,0 +1,403 @@
+{
+ "generated": "2026-09-07",
+ "spec": "harden 6 open-hysteresis candidates; futubull; walk-forward + both-tape + top-day lottery",
+ "half_cut": "2026-05-01",
+ "grids": 3603,
+ "grids_rebuilt": 3603,
+ "n_keep": 6,
+ "n_kill": 0,
+ "cost_model": "futubull",
+ "live_untouched": "flatten_robust",
+ "candidates": [
+  {
+   "def": "hyst_open_core_e5_x2",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "cohort": "ALL",
+   "cost_model": "futubull",
+   "cost_bps": 15,
+   "plain": "the five morning cells that are already known at 9:30 (A, B, C, G, J) add up to a strong green (+5 or more). The light stays on until that sum falls to +2.",
+   "hold_plain": "buy at that open and sell at the same day's close (next 1 session)",
+   "n_tickers": 3577,
+   "n_dates": 160,
+   "discovery": {
+    "n": 15881,
+    "avg_net": 0.018354432605685866,
+    "t": 30.10362145039707,
+    "win": 0.658774636357912
+   },
+   "holdout": {
+    "n": 10931,
+    "avg_net": 0.017369944486330578,
+    "t": 34.41951893526876,
+    "win": 0.6529137315890586
+   },
+   "early": {
+    "n": 11306,
+    "avg_net": 0.018645193313306198,
+    "t": 37.03710363551352,
+    "win": 0.6643375199009376
+   },
+   "late": {
+    "n": 15506,
+    "avg_net": 0.0174484104082766,
+    "t": 28.23977552277356,
+    "win": 0.6505868695988649
+   },
+   "spy_up": {
+    "n": 14857,
+    "avg_net": 0.020262458485632268,
+    "t": 31.531327687849817,
+    "win": 0.6812277041125395
+   },
+   "spy_dn": {
+    "n": 11955,
+    "avg_net": 0.015083083368459914,
+    "t": 31.454151400484125,
+    "win": 0.6255123379339189
+   },
+   "baseline": {
+    "n": 602650,
+    "avg_net": -0.0007352720257932804,
+    "t": -1.7281376100058845,
+    "win": 0.4480345142288227
+   },
+   "lottery_trade_frac": 0.01835802036751437,
+   "trimmed_avg": 0.017932386723068076,
+   "lottery_day_frac": 0.026923637766392016,
+   "lottery_top_day": "2026-05-13",
+   "lottery_top_day_pnl": 7.882094328878757,
+   "lottery_n_days": 160,
+   "verdict": "KEEP",
+   "fail_reasons": [],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "cohort": "ALL",
+   "cost_model": "futubull",
+   "cost_bps": 15,
+   "plain": "all nine morning cells known at 9:30 (A, B, C, G, J, K, L, M, O) add up to a strong green (+5 or more). The light stays on until that sum falls to +2.",
+   "hold_plain": "buy at that open and sell at the same day's close (next 1 session)",
+   "n_tickers": 3552,
+   "n_dates": 160,
+   "discovery": {
+    "n": 15778,
+    "avg_net": 0.014427097194259487,
+    "t": 31.825407064952753,
+    "win": 0.6306883001647864
+   },
+   "holdout": {
+    "n": 10862,
+    "avg_net": 0.013273188917929632,
+    "t": 27.557150198609722,
+    "win": 0.6238261830233843
+   },
+   "early": {
+    "n": 12227,
+    "avg_net": 0.01660898395063248,
+    "t": 34.88728560490805,
+    "win": 0.6638586734276601
+   },
+   "late": {
+    "n": 14413,
+    "avg_net": 0.011706519863539482,
+    "t": 25.294347528819266,
+    "win": 0.597377367654201
+   },
+   "spy_up": {
+    "n": 14634,
+    "avg_net": 0.01628679871946645,
+    "t": 37.422450357748545,
+    "win": 0.6605166051660517
+   },
+   "spy_dn": {
+    "n": 12006,
+    "avg_net": 0.011116367241121593,
+    "t": 21.70810551958939,
+    "win": 0.5881226053639846
+   },
+   "baseline": {
+    "n": 602650,
+    "avg_net": -0.0007352720257932804,
+    "t": -1.7281376100058845,
+    "win": 0.4480345142288227
+   },
+   "lottery_trade_frac": 0.006415492552334938,
+   "trimmed_avg": 0.014294009838158126,
+   "lottery_day_frac": 0.022491104488086083,
+   "lottery_top_day": "2026-03-03",
+   "lottery_top_day_pnl": 5.222722484620506,
+   "lottery_n_days": 160,
+   "verdict": "KEEP",
+   "fail_reasons": [],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold1",
+   "hold": 1,
+   "cohort": "ALL",
+   "cost_model": "futubull",
+   "cost_bps": 15,
+   "plain": "the five morning cells (A, B, C, G, J) add up to a strong green (+5 or more). The light stays on until that sum falls to 0.",
+   "hold_plain": "buy at that open and sell at the same day's close (next 1 session)",
+   "n_tickers": 3585,
+   "n_dates": 160,
+   "discovery": {
+    "n": 16027,
+    "avg_net": 0.013543082224688203,
+    "t": 31.885975410263242,
+    "win": 0.5933112872028452
+   },
+   "holdout": {
+    "n": 11120,
+    "avg_net": 0.012847560306348378,
+    "t": 26.381936149422234,
+    "win": 0.5863309352517986
+   },
+   "early": {
+    "n": 11603,
+    "avg_net": 0.014594404091771868,
+    "t": 30.679767467668356,
+    "win": 0.6080324054123933
+   },
+   "late": {
+    "n": 15544,
+    "avg_net": 0.012260742327897763,
+    "t": 28.358285215670357,
+    "win": 0.5773288728769943
+   },
+   "spy_up": {
+    "n": 14980,
+    "avg_net": 0.015446448994768472,
+    "t": 36.523752984791834,
+    "win": 0.6184245660881175
+   },
+   "spy_dn": {
+    "n": 12167,
+    "avg_net": 0.010563988121972555,
+    "t": 21.61169610212599,
+    "win": 0.5560121640503
+   },
+   "baseline": {
+    "n": 602650,
+    "avg_net": -0.0007352720257932804,
+    "t": -1.7281376100058845,
+    "win": 0.4480345142288227
+   },
+   "lottery_trade_frac": 0.0065151684965826726,
+   "trimmed_avg": 0.01341200751907353,
+   "lottery_day_frac": 0.022436569676796813,
+   "lottery_top_day": "2026-08-04",
+   "lottery_top_day_pnl": 4.972102724441645,
+   "lottery_n_days": 160,
+   "verdict": "KEEP",
+   "fail_reasons": [],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x2",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "cohort": "ALL",
+   "cost_model": "futubull",
+   "cost_bps": 15,
+   "plain": "the five morning cells that are already known at 9:30 (A, B, C, G, J) add up to a strong green (+5 or more). The light stays on until that sum falls to +2.",
+   "hold_plain": "buy at that open and sell at the next day's close (next 2 sessions)",
+   "n_tickers": 3577,
+   "n_dates": 160,
+   "discovery": {
+    "n": 15881,
+    "avg_net": 0.016832743965093083,
+    "t": 18.434661144842366,
+    "win": 0.5812606259051697
+   },
+   "holdout": {
+    "n": 10931,
+    "avg_net": 0.016188191001334246,
+    "t": 20.099762311041147,
+    "win": 0.5841185618882079
+   },
+   "early": {
+    "n": 11306,
+    "avg_net": 0.017555739853954703,
+    "t": 24.271921911787498,
+    "win": 0.5926941447019282
+   },
+   "late": {
+    "n": 15506,
+    "avg_net": 0.015851201338605445,
+    "t": 16.53744934658233,
+    "win": 0.5749387333935251
+   },
+   "spy_up": {
+    "n": 14857,
+    "avg_net": 0.018779639969544452,
+    "t": 19.366452006170285,
+    "win": 0.6002557716901123
+   },
+   "spy_dn": {
+    "n": 11955,
+    "avg_net": 0.013823907295500287,
+    "t": 18.46929446077507,
+    "win": 0.5602676704307821
+   },
+   "baseline": {
+    "n": 599052,
+    "avg_net": 0.004100100783330845,
+    "t": 4.589566429649284,
+    "win": 0.4626059173494121
+   },
+   "lottery_trade_frac": 0.021794886568758744,
+   "trimmed_avg": 0.01618064739747321,
+   "lottery_day_frac": 0.03747929931183365,
+   "lottery_top_day": "2026-07-30",
+   "lottery_top_day_pnl": 10.59866126636114,
+   "lottery_n_days": 160,
+   "verdict": "KEEP",
+   "fail_reasons": [],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_core_e5_x0",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "cohort": "ALL",
+   "cost_model": "futubull",
+   "cost_bps": 15,
+   "plain": "the five morning cells (A, B, C, G, J) add up to a strong green (+5 or more). The light stays on until that sum falls to 0.",
+   "hold_plain": "buy at that open and sell at the next day's close (next 2 sessions)",
+   "n_tickers": 3585,
+   "n_dates": 160,
+   "discovery": {
+    "n": 16027,
+    "avg_net": 0.012370644883418252,
+    "t": 13.521652704990592,
+    "win": 0.5472639920134773
+   },
+   "holdout": {
+    "n": 11120,
+    "avg_net": 0.012103086737034878,
+    "t": 14.552153021580777,
+    "win": 0.5502697841726619
+   },
+   "early": {
+    "n": 11603,
+    "avg_net": 0.013412034035703839,
+    "t": 18.367802357933805,
+    "win": 0.5625269326898216
+   },
+   "late": {
+    "n": 15544,
+    "avg_net": 0.01140187977007852,
+    "t": 11.71883873843884,
+    "win": 0.5380211013896037
+   },
+   "spy_up": {
+    "n": 14980,
+    "avg_net": 0.014577864460610428,
+    "t": 15.137426351036815,
+    "win": 0.5675567423230975
+   },
+   "spy_dn": {
+    "n": 12167,
+    "avg_net": 0.009408583910777344,
+    "t": 11.919497215503345,
+    "win": 0.5250267115969426
+   },
+   "baseline": {
+    "n": 599052,
+    "avg_net": 0.004100100783330845,
+    "t": 4.589566429649284,
+    "win": 0.4626059173494121
+   },
+   "lottery_trade_frac": 0.023163778283286238,
+   "trimmed_avg": 0.011724210614549835,
+   "lottery_day_frac": 0.04415383864260248,
+   "lottery_top_day": "2026-07-30",
+   "lottery_top_day_pnl": 10.141272524958694,
+   "lottery_n_days": 160,
+   "verdict": "KEEP",
+   "fail_reasons": [],
+   "live_untouched": "flatten_robust"
+  },
+  {
+   "def": "hyst_open_score_e5_x2",
+   "clock": "open",
+   "side": "long",
+   "exit": "hold2",
+   "hold": 2,
+   "cohort": "ALL",
+   "cost_model": "futubull",
+   "cost_bps": 15,
+   "plain": "all nine morning cells known at 9:30 (A, B, C, G, J, K, L, M, O) add up to a strong green (+5 or more). The light stays on until that sum falls to +2.",
+   "hold_plain": "buy at that open and sell at the next day's close (next 2 sessions)",
+   "n_tickers": 3552,
+   "n_dates": 160,
+   "discovery": {
+    "n": 15778,
+    "avg_net": 0.014004233142547548,
+    "t": 13.128462080028616,
+    "win": 0.5609075928508049
+   },
+   "holdout": {
+    "n": 10862,
+    "avg_net": 0.015447603710431435,
+    "t": 4.589945224871935,
+    "win": 0.5613146750138096
+   },
+   "early": {
+    "n": 12227,
+    "avg_net": 0.01449163126870815,
+    "t": 20.840885462207172,
+    "win": 0.5779831520405659
+   },
+   "late": {
+    "n": 14413,
+    "avg_net": 0.014678518455791779,
+    "t": 5.37828734197944,
+    "win": 0.5467286477485603
+   },
+   "spy_up": {
+    "n": 14634,
+    "avg_net": 0.016116420108716775,
+    "t": 14.321704622361327,
+    "win": 0.584187508541752
+   },
+   "spy_dn": {
+    "n": 12006,
+    "avg_net": 0.012735546406368498,
+    "t": 4.163999560859899,
+    "win": 0.5329002165583875
+   },
+   "baseline": {
+    "n": 599052,
+    "avg_net": 0.004100100783330845,
+    "t": 4.589566429649284,
+    "win": 0.4626059173494121
+   },
+   "lottery_trade_frac": 0.02244282309186735,
+   "trimmed_avg": 0.013347700087807984,
+   "lottery_day_frac": 0.07556216551729156,
+   "lottery_top_day": "2026-07-30",
+   "lottery_top_day_pnl": 18.75202267450206,
+   "lottery_n_days": 160,
+   "verdict": "KEEP",
+   "fail_reasons": [],
+   "live_untouched": "flatten_robust"
+  }
+ ]
+}

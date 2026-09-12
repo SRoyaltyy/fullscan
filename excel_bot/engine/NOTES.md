@@ -186,3 +186,16 @@ protocol unchanged.
 - Recovery: fallback file suggestions_fallback_2026-07-29.csv holds the full
   correct dataset (489 rows = 229 + 260 new for 7/28, all first_open filled).
   Pending: user closes Excel -> rerun --signals-only -> delete fallback + .tmp.
+
+## Clock-aware research mine (2026-09-07)
+
+- Stored daily grids are A–O fills only. `--all-cols` (A–JL) is opt-in and
+  not persisted. Inventory: `research/GRID_INVENTORY.md`.
+- `engine/clock.py` + `engine/patterns.py` + `engine/mine_clock.py`:
+  open entry only when the feature reads no close-knowable fill; sleeve
+  holds 1/2/3/5/8; costs labeled `mcap_bps` or `futubull`; ship bar in
+  `clock.SHIP`. Does not emit live cards. Does not touch flatten_robust.
+- Cycle notes: `research/MINE_CYCLE.md` and `03_scoreboard/EXCEL_BOT_MINE.md`.
+- Timed `--all-cols` sample (2026-09-07): 25 discovery + 10 holdout,
+  1.22 s/ticker lean A–JL capture, **PASS 0 / FAIL 0 / THIN 90**.
+  Table: `research/ALL_COLS_MINE.md`. Live flatten_robust untouched.

@@ -1,0 +1,682 @@
+{
+  "generated": "2026-09-07",
+  "spec": "light+O vs light+O \u2227 AH\u22651 / FR\u22651; open only; no close letters",
+  "live_untouched": "flatten_robust",
+  "excel_cache_used": false,
+  "seed": "yahoo_rows_cache",
+  "grids": 3603,
+  "n_overlap": 3603,
+  "q3_cut": "2026-07-01",
+  "half_cut": "2026-05-01",
+  "standing_ao_keeps": "light+green O unchanged",
+  "finviz": "BLOCKED",
+  "cost_model": "futubull",
+  "n_keep": 4,
+  "n_kill": 2,
+  "n_thin": 0,
+  "rows": [
+    {
+      "def": "hyst_open_core_e5_x2__O_green",
+      "hold": 1,
+      "exit": "hold1",
+      "clock": "open",
+      "cost_model": "futubull",
+      "verdict": "KEEP",
+      "fail_reasons": [],
+      "n_tickers": 3157,
+      "n_dates": 141,
+      "discovery": {
+        "n": 6392,
+        "avg_net": 0.020549327793337787,
+        "t": 15.746097480122877,
+        "win": 0.6367334167709637
+      },
+      "holdout": {
+        "n": 4345,
+        "avg_net": 0.018600944406940684,
+        "t": 23.249324729869524,
+        "win": 0.6299194476409666
+      },
+      "early": {
+        "n": 3993,
+        "avg_net": 0.019257808548438803,
+        "t": 24.465189006379887,
+        "win": 0.6526421237165039
+      },
+      "late": {
+        "n": 6744,
+        "avg_net": 0.020058715475868367,
+        "t": 15.964695016415233,
+        "win": 0.6229240806642942
+      },
+      "q12": {
+        "n": 7689,
+        "avg_net": 0.020535880591762527,
+        "t": 18.9997405056751,
+        "win": 0.6414358174014826
+      },
+      "q3": {
+        "n": 3048,
+        "avg_net": 0.017805781113225165,
+        "t": 15.291475349791746,
+        "win": 0.6151574803149606
+      },
+      "spy_up": {
+        "n": 6125,
+        "avg_net": 0.022220796771394668,
+        "t": 17.24755876470443,
+        "win": 0.6649795918367347
+      },
+      "spy_dn": {
+        "n": 4612,
+        "avg_net": 0.016493934622372086,
+        "t": 17.304167202126344,
+        "win": 0.5928013876843018
+      },
+      "parent": null,
+      "lottery_day_frac": 0.056676491705197,
+      "lottery_top_day": "2026-05-13",
+      "live_untouched": "flatten_robust",
+      "layer": "light+O",
+      "letter": "O",
+      "plain": "the five morning cells that are already known at 9:30 (A, B, C, G, J) add up to a strong green (+5 or more). The light stays on until that sum falls to +2. Plus morning cell O is also green."
+    },
+    {
+      "def": "hyst_open_core_e5_x2__O_green__AH_ge1",
+      "hold": 1,
+      "exit": "hold1",
+      "clock": "open",
+      "cost_model": "futubull",
+      "verdict": "KEEP",
+      "fail_reasons": [],
+      "n_tickers": 1521,
+      "n_dates": 134,
+      "discovery": {
+        "n": 1959,
+        "avg_net": 0.034909438659381745,
+        "t": 9.028967208876882,
+        "win": 0.6875957120980092
+      },
+      "holdout": {
+        "n": 1317,
+        "avg_net": 0.031863618329087476,
+        "t": 16.37671003590132,
+        "win": 0.7031131359149583
+      },
+      "early": {
+        "n": 1123,
+        "avg_net": 0.03134899673488206,
+        "t": 14.713649604703972,
+        "win": 0.6936776491540516
+      },
+      "late": {
+        "n": 2153,
+        "avg_net": 0.0349034149279445,
+        "t": 9.849794840345185,
+        "win": 0.6939154667905248
+      },
+      "q12": {
+        "n": 2349,
+        "avg_net": 0.03506124772012527,
+        "t": 10.691832985162817,
+        "win": 0.6939123031077054
+      },
+      "q3": {
+        "n": 927,
+        "avg_net": 0.030197524032969585,
+        "t": 13.070279203898782,
+        "win": 0.6936353829557713
+      },
+      "spy_up": {
+        "n": 1915,
+        "avg_net": 0.0371151292072268,
+        "t": 9.57210438775298,
+        "win": 0.7201044386422977
+      },
+      "spy_dn": {
+        "n": 1361,
+        "avg_net": 0.02885856226399539,
+        "t": 13.274364073149199,
+        "win": 0.65686994856723
+      },
+      "parent": {
+        "n": 4345,
+        "avg_net": 0.018600944406940684,
+        "t": 23.249324729869524,
+        "win": 0.6299194476409666
+      },
+      "lottery_day_frac": 0.1054239098112951,
+      "lottery_top_day": "2026-05-13",
+      "live_untouched": "flatten_robust",
+      "layer": "light+O \u2227 AH\u22651",
+      "letter": "AH",
+      "plain": "the five morning cells that are already known at 9:30 (A, B, C, G, J) add up to a strong green (+5 or more). The light stays on until that sum falls to +2. Plus morning cell O is also green. Plus count of recent same-day drops of 5% or more is at least 1 (open-knowable).",
+      "vs_parent_pp": 1.3262673922146793,
+      "word": "stronger"
+    },
+    {
+      "def": "hyst_open_core_e5_x2__O_green__FR_ge1",
+      "hold": 1,
+      "exit": "hold1",
+      "clock": "open",
+      "cost_model": "futubull",
+      "verdict": "KEEP",
+      "fail_reasons": [],
+      "n_tickers": 2248,
+      "n_dates": 134,
+      "discovery": {
+        "n": 3237,
+        "avg_net": 0.025138840561602167,
+        "t": 10.129813270257527,
+        "win": 0.6382452888476985
+      },
+      "holdout": {
+        "n": 2282,
+        "avg_net": 0.022104934714469813,
+        "t": 16.805960431456114,
+        "win": 0.6327782646801051
+      },
+      "early": {
+        "n": 1784,
+        "avg_net": 0.021973115047323858,
+        "t": 15.345948632236771,
+        "win": 0.6451793721973094
+      },
+      "late": {
+        "n": 3735,
+        "avg_net": 0.024797282643079135,
+        "t": 11.313707692178046,
+        "win": 0.6315930388219545
+      },
+      "q12": {
+        "n": 3843,
+        "avg_net": 0.025232239691917766,
+        "t": 12.195839994431372,
+        "win": 0.643767889669529
+      },
+      "q3": {
+        "n": 1676,
+        "avg_net": 0.02079378924838088,
+        "t": 10.852350443467268,
+        "win": 0.6181384248210023
+      },
+      "spy_up": {
+        "n": 3192,
+        "avg_net": 0.026299358329570102,
+        "t": 11.095160191199058,
+        "win": 0.6732456140350878
+      },
+      "spy_dn": {
+        "n": 2327,
+        "avg_net": 0.020571695800747133,
+        "t": 11.870228163756487,
+        "win": 0.5848732273313278
+      },
+      "parent": {
+        "n": 4345,
+        "avg_net": 0.018600944406940684,
+        "t": 23.249324729869524,
+        "win": 0.6299194476409666
+      },
+      "lottery_day_frac": 0.08565863940335136,
+      "lottery_top_day": "2026-05-13",
+      "live_untouched": "flatten_robust",
+      "layer": "light+O \u2227 FR\u22651",
+      "letter": "FR",
+      "plain": "the five morning cells that are already known at 9:30 (A, B, C, G, J) add up to a strong green (+5 or more). The light stays on until that sum falls to +2. Plus morning cell O is also green. Plus recent volume over 1M and/or G \u2265 3 is at least 1 (open-knowable).",
+      "vs_parent_pp": 0.3503990307529129,
+      "word": "stronger"
+    },
+    {
+      "def": "hyst_open_core_e5_x2__O_green",
+      "hold": 2,
+      "exit": "hold2",
+      "clock": "open",
+      "cost_model": "futubull",
+      "verdict": "KEEP",
+      "fail_reasons": [],
+      "n_tickers": 3157,
+      "n_dates": 141,
+      "discovery": {
+        "n": 6392,
+        "avg_net": 0.01976607020624404,
+        "t": 9.81128492277995,
+        "win": 0.5758760951188986
+      },
+      "holdout": {
+        "n": 4345,
+        "avg_net": 0.01813193078864985,
+        "t": 13.123298722603131,
+        "win": 0.5765247410817032
+      },
+      "early": {
+        "n": 3993,
+        "avg_net": 0.020028730976938754,
+        "t": 15.266637636881507,
+        "win": 0.5997996493864263
+      },
+      "late": {
+        "n": 6744,
+        "avg_net": 0.018557716080082897,
+        "t": 9.476214664532844,
+        "win": 0.5621293001186239
+      },
+      "q12": {
+        "n": 7689,
+        "avg_net": 0.019861331570645915,
+        "t": 18.650012315501755,
+        "win": 0.5882429444661205
+      },
+      "q3": {
+        "n": 3048,
+        "avg_net": 0.017196253801935384,
+        "t": 4.513942645590795,
+        "win": 0.5456036745406824
+      },
+      "spy_up": {
+        "n": 6125,
+        "avg_net": 0.02133734443116616,
+        "t": 10.337864968954056,
+        "win": 0.6055510204081632
+      },
+      "spy_dn": {
+        "n": 4612,
+        "avg_net": 0.01613979301693469,
+        "t": 11.487717777993344,
+        "win": 0.5370771899392888
+      },
+      "parent": null,
+      "lottery_day_frac": 0.07750152697832684,
+      "lottery_top_day": "2026-07-30",
+      "live_untouched": "flatten_robust",
+      "layer": "light+O",
+      "letter": "O",
+      "plain": "the five morning cells that are already known at 9:30 (A, B, C, G, J) add up to a strong green (+5 or more). The light stays on until that sum falls to +2. Plus morning cell O is also green."
+    },
+    {
+      "def": "hyst_open_core_e5_x2__O_green__AH_ge1",
+      "hold": 2,
+      "exit": "hold2",
+      "clock": "open",
+      "cost_model": "futubull",
+      "verdict": "KEEP",
+      "fail_reasons": [],
+      "n_tickers": 1521,
+      "n_dates": 134,
+      "discovery": {
+        "n": 1959,
+        "avg_net": 0.03361647871979609,
+        "t": 5.489498618756613,
+        "win": 0.5962225625319041
+      },
+      "holdout": {
+        "n": 1317,
+        "avg_net": 0.029770785218705794,
+        "t": 8.068350822822087,
+        "win": 0.5884586180713743
+      },
+      "early": {
+        "n": 1123,
+        "avg_net": 0.03028622969211029,
+        "t": 8.9100692535487,
+        "win": 0.6055209260908282
+      },
+      "late": {
+        "n": 2153,
+        "avg_net": 0.033001100790002895,
+        "t": 5.744947265937119,
+        "win": 0.5866233163028333
+      },
+      "q12": {
+        "n": 2349,
+        "avg_net": 0.03092377587274388,
+        "t": 11.3745656116706,
+        "win": 0.598978288633461
+      },
+      "q3": {
+        "n": 927,
+        "avg_net": 0.034976112642978105,
+        "t": 2.8792108002844814,
+        "win": 0.5782092772384034
+      },
+      "spy_up": {
+        "n": 1915,
+        "avg_net": 0.0356875884535668,
+        "t": 5.7220066865911905,
+        "win": 0.612532637075718
+      },
+      "spy_dn": {
+        "n": 1361,
+        "avg_net": 0.026980950813031337,
+        "t": 7.3690346831985245,
+        "win": 0.5657604702424688
+      },
+      "parent": {
+        "n": 4345,
+        "avg_net": 0.01813193078864985,
+        "t": 13.123298722603131,
+        "win": 0.5765247410817032
+      },
+      "lottery_day_frac": 0.14194126753940564,
+      "lottery_top_day": "2026-07-30",
+      "live_untouched": "flatten_robust",
+      "layer": "light+O \u2227 AH\u22651",
+      "letter": "AH",
+      "plain": "the five morning cells that are already known at 9:30 (A, B, C, G, J) add up to a strong green (+5 or more). The light stays on until that sum falls to +2. Plus morning cell O is also green. Plus count of recent same-day drops of 5% or more is at least 1 (open-knowable).",
+      "vs_parent_pp": 1.1638854430055943,
+      "word": "stronger"
+    },
+    {
+      "def": "hyst_open_core_e5_x2__O_green__FR_ge1",
+      "hold": 2,
+      "exit": "hold2",
+      "clock": "open",
+      "cost_model": "futubull",
+      "verdict": "KEEP",
+      "fail_reasons": [],
+      "n_tickers": 2248,
+      "n_dates": 134,
+      "discovery": {
+        "n": 3237,
+        "avg_net": 0.024544811036633772,
+        "t": 6.481094438179003,
+        "win": 0.5755329008341057
+      },
+      "holdout": {
+        "n": 2282,
+        "avg_net": 0.02163363689519912,
+        "t": 9.494317998012301,
+        "win": 0.5810692375109553
+      },
+      "early": {
+        "n": 1784,
+        "avg_net": 0.023559298261545254,
+        "t": 10.105625382270716,
+        "win": 0.6059417040358744
+      },
+      "late": {
+        "n": 3735,
+        "avg_net": 0.023236874062069923,
+        "t": 6.860741606915933,
+        "win": 0.5643908969210174
+      },
+      "q12": {
+        "n": 3843,
+        "avg_net": 0.02386868811397286,
+        "t": 13.230601964957584,
+        "win": 0.5888628675513922
+      },
+      "q3": {
+        "n": 1676,
+        "avg_net": 0.02213135101338317,
+        "t": 3.2620815070407803,
+        "win": 0.5525059665871122
+      },
+      "spy_up": {
+        "n": 3192,
+        "avg_net": 0.025409197204504234,
+        "t": 6.72876709214053,
+        "win": 0.6011904761904762
+      },
+      "spy_dn": {
+        "n": 2327,
+        "avg_net": 0.02050423517131517,
+        "t": 8.433383427790119,
+        "win": 0.5457670820799312
+      },
+      "parent": {
+        "n": 4345,
+        "avg_net": 0.01813193078864985,
+        "t": 13.123298722603131,
+        "win": 0.5765247410817032
+      },
+      "lottery_day_frac": 0.11661717973847943,
+      "lottery_top_day": "2026-07-30",
+      "live_untouched": "flatten_robust",
+      "layer": "light+O \u2227 FR\u22651",
+      "letter": "FR",
+      "plain": "the five morning cells that are already known at 9:30 (A, B, C, G, J) add up to a strong green (+5 or more). The light stays on until that sum falls to +2. Plus morning cell O is also green. Plus recent volume over 1M and/or G \u2265 3 is at least 1 (open-knowable).",
+      "vs_parent_pp": 0.35017061065492694,
+      "word": "stronger"
+    },
+    {
+      "def": "hyst_open_score_e5_x2__O_green",
+      "hold": 2,
+      "exit": "hold2",
+      "clock": "open",
+      "cost_model": "futubull",
+      "verdict": "KEEP",
+      "fail_reasons": [],
+      "n_tickers": 3222,
+      "n_dates": 143,
+      "discovery": {
+        "n": 6553,
+        "avg_net": 0.016191418728270932,
+        "t": 6.900220658268445,
+        "win": 0.5516557301999084
+      },
+      "holdout": {
+        "n": 4500,
+        "avg_net": 0.020911786188722963,
+        "t": 2.605115621239584,
+        "win": 0.5515555555555556
+      },
+      "early": {
+        "n": 3950,
+        "avg_net": 0.016094618833543045,
+        "t": 12.152917387018478,
+        "win": 0.5843037974683545
+      },
+      "late": {
+        "n": 7103,
+        "avg_net": 0.01923576803929575,
+        "t": 3.5116588837375375,
+        "win": 0.5334365760946079
+      },
+      "q12": {
+        "n": 7746,
+        "avg_net": 0.015742547344389183,
+        "t": 14.187985904920733,
+        "win": 0.569455202685257
+      },
+      "q3": {
+        "n": 3307,
+        "avg_net": 0.02366605172239919,
+        "t": 2.043052690544102,
+        "win": 0.509827638342909
+      },
+      "spy_up": {
+        "n": 6178,
+        "avg_net": 0.017923722399202573,
+        "t": 7.399881457126234,
+        "win": 0.5857882809970865
+      },
+      "spy_dn": {
+        "n": 4875,
+        "avg_net": 0.01835336364991574,
+        "t": 2.4650973668009586,
+        "win": 0.5083076923076923
+      },
+      "parent": null,
+      "lottery_day_frac": 0.146243434194578,
+      "lottery_top_day": "2026-07-30",
+      "live_untouched": "flatten_robust",
+      "layer": "light+O",
+      "letter": "O",
+      "plain": "all nine morning cells known at 9:30 (A, B, C, G, J, K, L, M, O) add up to a strong green (+5 or more). The light stays on until that sum falls to +2. Plus morning cell O is also green."
+    },
+    {
+      "def": "hyst_open_score_e5_x2__O_green__AH_ge1",
+      "hold": 2,
+      "exit": "hold2",
+      "clock": "open",
+      "cost_model": "futubull",
+      "verdict": "KILL",
+      "fail_reasons": [
+        "hold_t",
+        "lottery_day"
+      ],
+      "n_tickers": 1547,
+      "n_dates": 137,
+      "discovery": {
+        "n": 2019,
+        "avg_net": 0.028815508767533613,
+        "t": 4.012048877674129,
+        "win": 0.5502724120851907
+      },
+      "holdout": {
+        "n": 1373,
+        "avg_net": 0.04608999474687805,
+        "t": 1.7609148821559417,
+        "win": 0.5418790968681719
+      },
+      "early": {
+        "n": 1138,
+        "avg_net": 0.02428892014296705,
+        "t": 7.253205325008071,
+        "win": 0.5746924428822495
+      },
+      "late": {
+        "n": 2254,
+        "avg_net": 0.04162346222999885,
+        "t": 2.43309242844041,
+        "win": 0.5328305235137534
+      },
+      "q12": {
+        "n": 2405,
+        "avg_net": 0.023464944955954206,
+        "t": 8.538817882321114,
+        "win": 0.5567567567567567
+      },
+      "q3": {
+        "n": 987,
+        "avg_net": 0.06588336612973056,
+        "t": 1.7032999280706083,
+        "win": 0.5227963525835866
+      },
+      "spy_up": {
+        "n": 1903,
+        "avg_net": 0.0317714970159818,
+        "t": 4.215229934808713,
+        "win": 0.5685759327377824
+      },
+      "spy_dn": {
+        "n": 1489,
+        "avg_net": 0.04096636411531267,
+        "t": 1.6943498226686968,
+        "win": 0.519140362659503
+      },
+      "parent": {
+        "n": 4500,
+        "avg_net": 0.020911786188722963,
+        "t": 2.605115621239584,
+        "win": 0.5515555555555556
+      },
+      "lottery_day_frac": 0.25244836006708815,
+      "lottery_top_day": "2026-07-30",
+      "live_untouched": "flatten_robust",
+      "layer": "light+O \u2227 AH\u22651",
+      "letter": "AH",
+      "plain": "all nine morning cells known at 9:30 (A, B, C, G, J, K, L, M, O) add up to a strong green (+5 or more). The light stays on until that sum falls to +2. Plus morning cell O is also green. Plus count of recent same-day drops of 5% or more is at least 1 (open-knowable).",
+      "vs_parent_pp": 2.5178208558155086,
+      "word": "stronger"
+    },
+    {
+      "def": "hyst_open_score_e5_x2__O_green__FR_ge1",
+      "hold": 2,
+      "exit": "hold2",
+      "clock": "open",
+      "cost_model": "futubull",
+      "verdict": "KILL",
+      "fail_reasons": [
+        "hold_t"
+      ],
+      "n_tickers": 2298,
+      "n_dates": 135,
+      "discovery": {
+        "n": 3296,
+        "avg_net": 0.020788006811190966,
+        "t": 4.607910703606014,
+        "win": 0.5449029126213593
+      },
+      "holdout": {
+        "n": 2356,
+        "avg_net": 0.029339196887996175,
+        "t": 1.9203986480673703,
+        "win": 0.5420203735144312
+      },
+      "early": {
+        "n": 1742,
+        "avg_net": 0.01730084168494727,
+        "t": 7.160138914185108,
+        "win": 0.5780711825487945
+      },
+      "late": {
+        "n": 3910,
+        "avg_net": 0.0274942076988814,
+        "t": 2.7768871152513075,
+        "win": 0.528388746803069
+      },
+      "q12": {
+        "n": 3838,
+        "avg_net": 0.01809017498979674,
+        "t": 9.341118893204149,
+        "win": 0.5586242834809797
+      },
+      "q3": {
+        "n": 1814,
+        "avg_net": 0.03760216466756589,
+        "t": 1.7843696197799426,
+        "win": 0.5121278941565601
+      },
+      "spy_up": {
+        "n": 3209,
+        "avg_net": 0.02214880160554097,
+        "t": 4.902864250687972,
+        "win": 0.5761919601121844
+      },
+      "spy_dn": {
+        "n": 2443,
+        "avg_net": 0.027247201786992813,
+        "t": 1.8415280586027252,
+        "win": 0.5010233319688907
+      },
+      "parent": {
+        "n": 4500,
+        "avg_net": 0.020911786188722963,
+        "t": 2.605115621239584,
+        "win": 0.5515555555555556
+      },
+      "lottery_day_frac": 0.2218195397343446,
+      "lottery_top_day": "2026-07-30",
+      "live_untouched": "flatten_robust",
+      "layer": "light+O \u2227 FR\u22651",
+      "letter": "FR",
+      "plain": "all nine morning cells known at 9:30 (A, B, C, G, J, K, L, M, O) add up to a strong green (+5 or more). The light stays on until that sum falls to +2. Plus morning cell O is also green. Plus recent volume over 1M and/or G \u2265 3 is at least 1 (open-knowable).",
+      "vs_parent_pp": 0.8427410699273212,
+      "word": "stronger"
+    }
+  ],
+  "alone": {
+    "AH": {
+      "def": "valopen_AH_ge1",
+      "holdout": {
+        "n": 51855,
+        "avg_net": 0.022159537114123738,
+        "t": 2.944690715247697,
+        "win": 0.45471024973483753
+      },
+      "keep": "KEEP"
+    },
+    "FR": {
+      "def": "valopen_FR_ge1",
+      "holdout": {
+        "n": 85081,
+        "avg_net": 0.009391557854624463,
+        "t": 3.0356168445159715,
+        "win": 0.46546232413817423
+      },
+      "keep": "KEEP"
+    }
+  }
+}

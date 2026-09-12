@@ -1,0 +1,76 @@
+{
+  "generated": "2026-09-07",
+  "live_untouched": "flatten_robust",
+  "a_f_role": "STOCKHISTORY aliases of IR:IW",
+  "harden_seed": "backtest.seed_anchor from data/rows (Yahoo cache)",
+  "excel_cache_paths": [
+    "run.py --from-cache",
+    "validate.build_seeds (cached IR1:IW137 / AP1:AU87)"
+  ],
+  "excel_cache_used_by_harden": false,
+  "grids_source": "rows_cache",
+  "tile_today_is_anchor": true,
+  "future_bars_in_seed_through_anchor": true,
+  "corrupt_future_open_fills_changed": false,
+  "corrupt_future_note": "AAPL 2026-06-26 A\u2013O fills identical after later daily bars were stripped (TODAY still the later tile end).",
+  "asof_vs_tile_open_misses": [
+    {
+      "ticker": "AAPL",
+      "date": "2026-07-27",
+      "letter": "M",
+      "asof": "95CA82",
+      "tile": null,
+      "why": "TODAY/window alignment, not Excel cache"
+    },
+    {
+      "ticker": "AAPL",
+      "date": "2026-03-31",
+      "letter": "J",
+      "asof": "FF0000",
+      "tile": "95CA82",
+      "why": "TODAY/window alignment, not Excel cache"
+    }
+  ],
+  "model": {
+    "ir1": "=_xlfn.STOCKHISTORY(O1, P1-200, P1-0, 0, 1, 0, 1, 2, 3, 4, 5)",
+    "ir1_ref": "IR1:IW137",
+    "ap1": "=_xlfn.STOCKHISTORY(O1, P1-600, P1, 1, 1, 0, 1, 2, 3, 4, 5)",
+    "aliases": {
+      "A": {
+        "row1": "=IR1",
+        "row2": "=IR2"
+      },
+      "B": {
+        "row1": "=IS1",
+        "row2": "=IS2"
+      },
+      "C": {
+        "row1": "=IT1",
+        "row2": "=IT2"
+      },
+      "D": {
+        "row1": "=IU1",
+        "row2": "=IU2"
+      },
+      "E": {
+        "row1": "=IV1",
+        "row2": "=IV2"
+      },
+      "F": {
+        "row1": "=IW1",
+        "row2": "=IW2"
+      }
+    },
+    "a_f_are_formulas": true,
+    "ir1_is_stockhistory": true,
+    "stockhistory_end_is_today": true
+  },
+  "sources": {
+    "n_grids": 3603,
+    "n_rows_cache": 3603,
+    "n_other": 0,
+    "n_missing_source": 0,
+    "other_examples": []
+  },
+  "loader_excel_cache_hits": []
+}
