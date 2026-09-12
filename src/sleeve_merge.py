@@ -202,12 +202,37 @@ def predict_snapshot(date: str):
     return m.group(1), float(m.group(2))
 
 
+def weather_score(date: str):
+    """Live flatten S from that morning's weather card.
+
+    Mover lookback ``regime`` and flatten lookback daily stop when those
+    jobs are dispatch-only. Weather still lands every session and matches
+    the flatten card ``S=``.
+    """
+    p = ROOT / "01_daily" / "weather" / f"{date}_weather.json"
+    if not p.is_file():
+        return None
+    try:
+        raw = json.loads(p.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+    v = (raw.get("signals") or {}).get("general_score")
+    try:
+        if v is not None:
+            return float(v)
+    except (TypeError, ValueError):
+        return None
+    return None
+
+
 def fill_regime_scores(regime: dict | None,
                        dates: list[str] | None = None) -> dict:
     """Attach morning S from *_predict.md when the lookback payload lagged.
 
     A hard-red HOLD day still needs its score so leftover lots get a
     status mark. Missing S used to look like a blank/io session.
+    Weather ``general_score`` is the same number as the flatten card
+    when the predict md is missing.
     """
     out = {d: dict(g) for d, g in (regime or {}).items()}
     walk = list(dates) if dates is not None else list(out)
@@ -219,6 +244,8 @@ def fill_regime_scores(regime: dict | None,
             out[d] = g
             continue
         direction, score = predict_snapshot(d)
+        if score is None:
+            score = weather_score(d)
         if direction is None and score is None:
             if g:
                 out[d] = g

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-5.86%** ($9,414) · signal-only (no cash/fees) was -2.64%. Starts YES **0/20**. Fills 128 · skips 0 · realized $-585.77.
+Cash book **-6.38%** ($9,362) · signal-only (no cash/fees) was -3.19%. Starts YES **0/21**. Fills 132 · skips 0 · realized $-585.77.
 
 ## How this sleeve decides (like you are 10)
 
@@ -57,7 +57,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,414.22.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $554.14.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -205,6 +205,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | `CRM` | 4 | $259.23 | $253.72 | -22.04 | — | +0.00 | -22.04 | -38.56 | — |
 | 2026-09-09 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-10 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-11 | `ORCL` | 14 | — | $164.43 | +0.00 | $150.28 | -198.10 | -198.10 | +0.00 | -198.10 |
+| 2026-09-11 | `BAND` | 44 | — | $52.55 | +0.00 | $56.87 | +190.08 | +190.08 | +0.00 | +190.08 |
+| 2026-09-11 | `PAGS` | 232 | — | $10.11 | +0.00 | $10.12 | +2.32 | +2.32 | +0.00 | +2.32 |
+| 2026-09-11 | `LITE` | 2 | — | $945.60 | +0.00 | $927.03 | -37.13 | -37.13 | +0.00 | -37.13 |
 
 ## Each session (cash + holdings state)
 
@@ -230,6 +234,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | -11.47 | $150.45 | ATRC×23, HRMY×29, CABA×343, VIR×108, ALEC×480, BHC×180, OABI×253, CRM×4 | $9,439.41 | -35.06 | +0.00 | — | ATRC, HRMY, CABA, VIR, ALEC, BHC, OABI, CRM | $9,414.22 | $9,414.22 | — |
 | 2026-09-09 | -13.95 | $9,414.22 | — | $9,414.22 | -0.00 | +0.00 | — | — | $9,414.22 | $9,414.22 | — |
 | 2026-09-10 | -13.28 | $9,414.22 | — | $9,414.22 | -0.00 | +0.00 | — | — | $9,414.22 | $9,414.22 | — |
+| 2026-09-11 | +0.50 | $9,414.22 | — | $9,414.22 | -0.00 | -42.83 | ORCL, BAND, PAGS, LITE | — | $554.14 | $9,362.24 | ORCL×14, BAND×44, PAGS×232, LITE×2 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -374,7 +379,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-03 09:30 ET | **BUY** | `HRMY` | 29 | $42.93 | $2.08 | — | $7,516.10 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten,mover_buy; 🔵; ⚪; ret5=+8.1; leftover $1247.68 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
 | 2026-09-03 09:30 ET | **BUY** | `CABA` | 343 | $3.63 | $4.42 | — | $6,266.58 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten,ohlc_hot; 🔵; ⚪; ret5=+9.8; leftover $1247.68 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `RVTY` | 9 | $132.45 | $2.02 | — | $5,072.52 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten,mover_buy; 🔵; ⚪; ret5=+3.6; leftover $1247.68 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `ARCT` | 74 | $16.77 | $2.21 | — | $3,829.32 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer,yday_mover,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+5.7; leftover $1247.68 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `ARCT` | 74 | $16.77 | $2.21 | — | $3,829.32 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+5.7; leftover $1247.68 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `CRDL` | 572 | $2.18 | $7.38 | — | $2,574.99 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list probable,yday_gainer,mover_buy; 🔵; ⚪; ret5=+1.4; leftover $1247.68 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `SDGR` | 59 | $21.03 | $2.17 | — | $1,332.05 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list yday_gainer; 🔵; ⚪; ret5=+7.2; leftover $1247.68 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `VIR` | 108 | $11.54 | $2.31 | — | $83.41 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list yday_gainer; 🔵; ⚪; ret5=+3.8; leftover $1247.68 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
@@ -403,3 +408,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,414.22 | ▲ close $9,414.22 vs 09:30 $9,414.22 (session +0.00) | 16:00 close · cash $9,414.22 · no lots left · equity $9,414.22. | — |
 | 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,414.22 | ▲ 09:30 equity $9,414.22 vs yday $9,414.22 (-0.00) | 09:30 open · cash $9,414.22 · no holdings · equity $9,414.22 vs prior close $9,414.22 (-0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,414.22 | ▲ close $9,414.22 vs 09:30 $9,414.22 (session +0.00) | 16:00 close · cash $9,414.22 · no lots left · equity $9,414.22. | — |
+| 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,414.22 | ▲ 09:30 equity $9,414.22 vs yday $9,414.22 (-0.00) | 09:30 open · cash $9,414.22 · no holdings · equity $9,414.22 vs prior close $9,414.22 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-11 09:30 ET | **BUY** | `ORCL` | 14 | $164.43 | $2.03 | — | $7,110.16 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten,earn_react; 🔵; ⚪; ret5=+9.0; leftover $2353.55 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `BAND` | 44 | $52.55 | $2.12 | — | $4,795.84 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list yday_gainer; 🔵; ⚪; ret5=-9.9; leftover $2353.55 | join🟢 sector🟢 gen🟡 news🟡 digest🟡 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `PAGS` | 232 | $10.11 | $2.99 | — | $2,447.33 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list yday_gainer; ⚪; ret5=+2.9; leftover $2353.55 | join🟢 sector🟢 gen🟡 news🟡 digest🟡 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `LITE` | 2 | $945.60 | $2.00 | — | $554.14 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; 🔵; ⚪; ret5=+7.0; leftover $2353.55 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $554.14 | ▼ close $9,362.24 vs 09:30 $9,414.22 (session -42.83) | 16:00 close · cash $554.14 · equity $9,362.24 vs 09:30 $9,414.22 (-51.98; session marks -42.83) · 4 name(s) marked open→close (per-name table). ORCL×14 09:30 $164.43 → close $150.28 -198.10; BAND×44 09:30 $52.55 → close $56.87 +190.08; PAGS×232 09:30 $10.11 → close $10.12 +2.32; LITE×2 09:30 $945.60 → close $927.03 -37.13 | — |
+
+## Still open (marked at last close)
+
+| Ticker | Shares | Entry | Why |
+|---|---:|---|---|
+| `ORCL` | 14 | 2026-09-11 @ $164.43 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten,earn_react; 🔵; ⚪; ret5=+9.0; leftover $2353.55 |
+| `BAND` | 44 | 2026-09-11 @ $52.55 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list yday_gainer; 🔵; ⚪; ret5=-9.9; leftover $2353.55 |
+| `PAGS` | 232 | 2026-09-11 @ $10.11 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list yday_gainer; ⚪; ret5=+2.9; leftover $2353.55 |
+| `LITE` | 2 | 2026-09-11 @ $945.60 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; 🔵; ⚪; ret5=+7.0; leftover $2353.55 |

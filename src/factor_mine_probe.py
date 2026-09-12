@@ -16,7 +16,9 @@ import math
 from pathlib import Path
 
 from . import factor_mine as fm
+from . import factor_mine_book as fmb
 from . import gainer_asof as ga
+from . import sleeve_merge as sm
 from . import ticker_lookback as tl
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -522,9 +524,67 @@ def _flat_only_card(flat: dict, news: dict) -> dict:
     }
 
 
+def _morning_from_live_s(date: str) -> dict | None:
+    """S / hard-red from weather or predict when flatten lookback lagged."""
+    score = sm.weather_score(date)
+    src = f"01_daily/weather/{date}_weather.json" if score is not None else ""
+    if score is None:
+        _direction, score = sm.predict_snapshot(date)
+        if score is not None:
+            src = f"01_daily/general/{date}_predict.md"
+    if score is None:
+        return None
+    s = float(score)
+    return {
+        "s": s,
+        "hard_red": bool(s <= fmb.HARD_RED),
+        "flatten_ok": None,
+        "route": None,
+        "why": "weather / predict S after flatten lookback",
+        "file": src,
+    }
+
+
+def _session_morning_dates(existing: dict) -> list[str]:
+    dates = set(existing)
+    weather_dir = ROOT / "01_daily" / "weather"
+    if weather_dir.is_dir():
+        for p in weather_dir.glob("*_weather.json"):
+            day = p.name[:10]
+            if len(day) == 10 and day[4] == "-":
+                dates.add(day)
+    pred_dir = ROOT / "01_daily" / "general"
+    if pred_dir.is_dir():
+        for p in pred_dir.glob("*_predict.md"):
+            day = p.name[:10]
+            if len(day) == 10 and day[4] == "-":
+                dates.add(day)
+    try:
+        dates.update(sm.session_calendar(sm.load_payload(), sm.list_books()))
+    except Exception:
+        pass
+    return sorted(d for d in dates if d)
+
+
 def build_mornings() -> dict:
+    """Per-session S for cash-start / investigator, including days after
+    flatten lookback stopped (that JSON is workflow_dispatch only)."""
     _, mornings = _load_flatten()
-    return mornings
+    out = {}
+    for date in _session_morning_dates(mornings):
+        row = dict(mornings.get(date) or {})
+        if row.get("s") is None:
+            extra = _morning_from_live_s(date)
+            if extra:
+                row = {**extra, **{k: v for k, v in row.items() if v is not None}}
+        elif row.get("hard_red") is None:
+            try:
+                row["hard_red"] = bool(float(row["s"]) <= fmb.HARD_RED)
+            except (TypeError, ValueError):
+                pass
+        if row.get("s") is not None or row.get("file"):
+            out[date] = row
+    return out
 
 
 def build_probe(panel: dict) -> dict:

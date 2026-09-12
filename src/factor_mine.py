@@ -1047,13 +1047,19 @@ def _attach_row(date: str, ticker: str, sources: list[str], src_rank: int,
 
 
 def build_panel(from_date: str = START, to_date: str | None = None) -> dict:
-    """Leak-free candidate rows for every session in the window."""
+    """Leak-free candidate rows for every *closed* session in the window.
+
+    An empty ``to_date`` used to walk the whole stock-book calendar,
+    including today's pre-open stub. Member books then stopped at
+    ``last_closed`` and combo split crashed on the extra day.
+    """
     _SCAN_CACHE.clear()
     payload = sm.load_payload()
     books = sm.list_books()
+    end = live_panel_end(from_date, to_date)
     cal = [d for d in sm.session_calendar(payload, books)
-           if d >= from_date and (not to_date or d <= to_date)]
-    end = to_date or (cal[-1] if cal else from_date)
+           if d >= from_date and (not end or d <= end)]
+    end = end or (cal[-1] if cal else from_date)
     sess_map, _all_sessions = _session_map(from_date, end)
     movers = (fla.collect_mover_buys(payload, cal[0], cal[-1], top_n=15)
               if cal else {"by_date": {}})
@@ -1101,6 +1107,29 @@ def build_panel(from_date: str = START, to_date: str | None = None) -> dict:
         "rows": rows,
         "by_date": by_date,
     }
+
+
+def refresh_panel_marks(panel: dict) -> dict:
+    """Fill row open/close from the official tape after a late price fetch.
+
+    ``build_panel`` used to run *before* ``ensure_through``, so a new
+    session's 09:30 / 16:00 stayed blank on investigator cards even
+    after Yahoo landed the bars.
+    """
+    panel = rehydrate_panel(panel)
+    for r in panel.get("rows") or []:
+        if r.get("open") is not None and r.get("close") is not None:
+            continue
+        t = _tick(r.get("ticker"))
+        d = r.get("date")
+        if not t or not d:
+            continue
+        bar = tl.session_bar(t, d) or {}
+        if r.get("open") is None and _finite(bar.get("open")) is not None:
+            r["open"] = round(float(bar["open"]), 4)
+        if r.get("close") is None and _finite(bar.get("close")) is not None:
+            r["close"] = round(float(bar["close"]), 4)
+    return panel
 
 
 def rehydrate_panel(raw: dict) -> dict:
@@ -1158,16 +1187,22 @@ def live_panel_end(from_date: str, to_date: str | None = None) -> str | None:
 
 def panel_is_current(raw: dict, from_date: str,
                      to_date: str | None = None) -> bool:
-    """Cached panel is stale once a later session exists — even with no fills."""
+    """Cached panel is stale once a later session exists — even with no fills.
+
+    A panel that already includes an *open* session (pre-open stub / midday
+    stock book) is also stale — that day is not markable yet.
+    """
     if not raw or raw.get("from_date") != from_date:
         return False
     if not raw.get("session_dates"):
         return False
     cached = raw.get("to_date")
     want = live_panel_end(from_date, to_date)
-    if want and (not cached or str(cached) < str(want)):
+    if want and str(cached or "") != str(want):
         return False
-    if to_date and cached and str(cached) < str(to_date):
+    if want and want not in (raw.get("session_dates") or []):
+        return False
+    if to_date and cached and str(cached) < str(to_date) and session_has_closed(to_date):
         return False
     return True
 
@@ -1181,7 +1216,7 @@ def load_or_build_panel(from_date: str = START, to_date: str | None = None,
                   f"rows={raw.get('n_rows')} → {raw.get('to_date')}", flush=True)
             return rehydrate_panel(raw)
         print(f"[factor-mine] panel stale "
-              f"{raw.get('to_date')} < live {live_panel_end(from_date, to_date)} "
+              f"{raw.get('to_date')} != live {live_panel_end(from_date, to_date)} "
               f"— rebuilding so leftover lots get a mark", flush=True)
     return build_panel(from_date, to_date)
 
@@ -1426,19 +1461,31 @@ def run(from_date: str = START, to_date: str | None = None,
         bars: dict | None = None, combos: bool = True) -> dict:
     from . import factor_mine_book as fmb
     recipes = list(recipes or build_recipes())
+    end = to_date or live_panel_end(from_date, to_date)
+    if write or persist_panel or rebuild_panel:
+        try:
+            from . import price_store as ps
+            held = _held_tickers_from_disk()
+            # Official bars *before* the panel walk so 09:30 / 16:00
+            # exist on the new session. Held lots first — a full-universe
+            # yahoo walk used to die on junk tickers.
+            ps.ensure_through(end, tickers=sorted(held) or None)
+            tl.reset_price_caches()
+        except Exception as e:
+            print(f"[factor-mine] price ensure skipped: {e}", flush=True)
     panel = (panel if panel is not None
              else load_or_build_panel(from_date, to_date, rebuild=rebuild_panel))
     if write or persist_panel or rebuild_panel:
         try:
             from . import price_store as ps
-            held = _held_tickers_from_disk()
             names = {str(r.get("ticker") or "").upper()
                      for r in (panel.get("rows") or []) if r.get("ticker")}
-            end = to_date or panel.get("to_date")
-            # Leftover lots first. A full panel yahoo walk dies on junk
-            # tickers and leaves the new session with $0 overnight marks.
-            ps.ensure_through(end, tickers=sorted(held or names) or None)
-            tl.reset_price_caches()
+            held = _held_tickers_from_disk()
+            need = sorted(names | held)
+            if need:
+                ps.ensure_through(end or panel.get("to_date"), tickers=need)
+                tl.reset_price_caches()
+            panel = refresh_panel_marks(panel)
         except Exception as e:
             print(f"[factor-mine] price ensure skipped: {e}", flush=True)
     if persist_panel or write:
@@ -1865,6 +1912,80 @@ def _n(v) -> str:
     return "—" if v is None else f"{float(v):+.2f}"
 
 
+def existing_single_recipes(payload: dict | None = None) -> list[dict]:
+    """Recipes already on the published board — no combo rows, no remine grid."""
+    doc = payload
+    if doc is None and OUT_JSON.is_file():
+        try:
+            doc = json.loads(OUT_JSON.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            doc = {}
+    recs = []
+    for rec in (doc or {}).get("recipes") or []:
+        if rec.get("universe") == "combo" or rec.get("members"):
+            continue
+        if rec.get("name"):
+            recs.append(rec)
+    return recs
+
+
+def payload_covers_session(payload: dict | None, date: str) -> bool:
+    """True when cash-start / books / mornings already include ``date``."""
+    if not payload or not date:
+        return False
+    if date not in (payload.get("dates") or []):
+        return False
+    if str(payload.get("to_date") or "") < date:
+        return False
+    daily = payload.get("daily") or {}
+    has_day = any(
+        any(row.get("date") == date for row in (days or []))
+        for days in daily.values()
+    )
+    if not has_day:
+        return False
+    mornings = payload.get("mornings") or {}
+    sim_s = ((payload.get("sim") or {}).get("s") or {})
+    if date not in mornings and date not in sim_s:
+        return False
+    return True
+
+
+def land_closed(from_date: str = START, write: bool = False,
+                rebuild_panel: bool = False) -> dict:
+    """Roll the existing recipe set through the last closed session.
+
+    Does not rediscover the cartesian grid. Morning Pre-Open / Stock Book
+    triggers become a no-op once yesterday is already on the board;
+    post-close / 16:25 ET schedule lands today.
+    """
+    closed = last_closed_session(from_date)
+    if not closed:
+        print("[factor-mine] land-closed: no closed session yet", flush=True)
+        return {}
+    payload = {}
+    if OUT_JSON.is_file():
+        try:
+            payload = json.loads(OUT_JSON.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            payload = {}
+    if not rebuild_panel and payload_covers_session(payload, closed):
+        print(f"[factor-mine] land-closed: {closed} already on the board — skip",
+              flush=True)
+        return payload
+    recs = existing_single_recipes(payload)
+    if not recs:
+        from . import factor_mine_book as fmb
+        recs = fmb.recipes_from_action(auto_tweak=False)
+    print(f"[factor-mine] land-closed → {closed} recipes={len(recs)}",
+          flush=True)
+    return run(
+        from_date, closed, write=write, recipes=recs,
+        rebuild_panel=rebuild_panel, persist_panel=write,
+        book=True, combos=True,
+    )
+
+
 def main(argv=None) -> int:
     from . import factor_mine_book as fmb
     ap = argparse.ArgumentParser()
@@ -1872,6 +1993,8 @@ def main(argv=None) -> int:
     ap.add_argument("--to-date", default="")
     ap.add_argument("--write", action="store_true")
     ap.add_argument("--rebuild-panel", action="store_true")
+    ap.add_argument("--land-closed", action="store_true",
+                    help="reuse existing recipes; mine through last closed session")
     ap.add_argument("--universe", default="auto", choices=fmb.UNIVERSES)
     ap.add_argument("--hold", default="auto", choices=fmb.HOLDS)
     ap.add_argument("--gate", default="auto", choices=fmb.GATES)
@@ -1892,20 +2015,27 @@ def main(argv=None) -> int:
     ap.add_argument("--no-combo", action="store_true",
                     help="skip combination books (single-recipe mine only)")
     args = ap.parse_args(argv)
-    recipes = fmb.recipes_from_action(
-        universe=args.universe, hold=args.hold, gate=args.gate,
-        rank=args.rank, side=args.side, top_n=args.top_n, exit=args.exit,
-        entry=args.entry, size=args.size, sell=args.sell,
-        s_boost=args.s_boost, auto_tweak=args.auto_tweak,
-    )
-    payload = run(
-        args.from_date, args.to_date or None, write=args.write,
-        recipes=recipes, rebuild_panel=args.rebuild_panel,
-        persist_panel=args.write, book=not args.no_book,
-        combos=not args.no_combo,
-    )
-    print(f"[factor-mine] recipes={payload['n_recipes']} "
-          f"rows={payload['n_rows']} sessions={payload['n_sessions']}")
+    if args.land_closed:
+        payload = land_closed(
+            args.from_date, write=args.write,
+            rebuild_panel=args.rebuild_panel,
+        )
+    else:
+        recipes = fmb.recipes_from_action(
+            universe=args.universe, hold=args.hold, gate=args.gate,
+            rank=args.rank, side=args.side, top_n=args.top_n, exit=args.exit,
+            entry=args.entry, size=args.size, sell=args.sell,
+            s_boost=args.s_boost, auto_tweak=args.auto_tweak,
+        )
+        payload = run(
+            args.from_date, args.to_date or None, write=args.write,
+            recipes=recipes, rebuild_panel=args.rebuild_panel,
+            persist_panel=args.write, book=not args.no_book,
+            combos=not args.no_combo,
+        )
+    print(f"[factor-mine] recipes={payload.get('n_recipes')} "
+          f"rows={payload.get('n_rows')} sessions={payload.get('n_sessions')} "
+          f"to={payload.get('to_date')}")
     for s in (payload.get("stats") or [])[:8]:
         print(f"  {s['name']:32s}  win={_pct(s.get('win_rate'))}  "
               f"starts={s.get('start_green')}/{s.get('start_n')}  "

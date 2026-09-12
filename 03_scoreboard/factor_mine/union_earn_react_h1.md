@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ earn_react, no 🚨
 
-Cash book **+1.77%** ($10,177) · signal-only (no cash/fees) was +7.63%. Starts YES **7/20**. Fills 128 · skips 41 · realized $+176.81.
+Cash book **+2.11%** ($10,211) · signal-only (no cash/fees) was +4.30%. Starts YES **11/21**. Fills 136 · skips 41 · realized $+176.81.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $10,176.81.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $341.09.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -198,6 +198,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | `MAMA` | 82 | $15.16 | $15.20 | +3.28 | — | +0.00 | +3.28 | -41.00 | — |
 | 2026-09-09 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-10 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-11 | `ORCL` | 7 | — | $164.43 | +0.00 | $150.28 | -99.05 | -99.05 | +0.00 | -99.05 |
+| 2026-09-11 | `ADBE` | 5 | — | $242.17 | +0.00 | $252.23 | +50.30 | +50.30 | +0.00 | +50.30 |
+| 2026-09-11 | `CPRT` | 39 | — | $32.01 | +0.00 | $29.95 | -80.34 | -80.34 | +0.00 | -80.34 |
+| 2026-09-11 | `DSGX` | 17 | — | $71.71 | +0.00 | $76.04 | +73.61 | +73.61 | +0.00 | +73.61 |
+| 2026-09-11 | `KR` | 22 | — | $56.02 | +0.00 | $58.49 | +54.34 | +54.34 | +0.00 | +54.34 |
+| 2026-09-11 | `LPTH` | 135 | — | $9.37 | +0.00 | $9.20 | -22.95 | -22.95 | +0.00 | -22.95 |
+| 2026-09-11 | `REF` | 97 | — | $13.10 | +0.00 | $14.03 | +90.21 | +90.21 | +0.00 | +90.21 |
+| 2026-09-11 | `RH` | 9 | — | $135.71 | +0.00 | $134.07 | -14.76 | -14.76 | +0.00 | -14.76 |
 
 ## Each session (cash + holdings state)
 
@@ -223,6 +231,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | -11.47 | $261.01 | AMBA×20, ASAN×148, DOCU×18, DOMO×358, GWRE×7, IOT×28, LULU×13, MAMA×82 | $10,196.53 | -60.17 | +0.00 | — | AMBA, ASAN, DOCU, DOMO, GWRE, IOT, LULU, MAMA | $10,176.81 | $10,176.81 | — |
 | 2026-09-09 | -13.95 | $10,176.81 | — | $10,176.81 | -0.00 | +0.00 | — | — | $10,176.81 | $10,176.81 | — |
 | 2026-09-10 | -13.28 | $10,176.81 | — | $10,176.81 | -0.00 | +0.00 | — | — | $10,176.81 | $10,176.81 | — |
+| 2026-09-11 | +0.50 | $10,176.81 | — | $10,176.81 | -0.00 | +51.36 | ORCL, ADBE, CPRT, DSGX, KR, LPTH, REF, RH | — | $341.09 | $10,211.25 | ORCL×7, ADBE×5, CPRT×39, DSGX×17, KR×22, LPTH×135, REF×97, RH×9 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -396,6 +405,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,176.81 | ▲ close $10,176.81 vs 09:30 $10,176.81 (session +0.00) | 16:00 close · cash $10,176.81 · no lots left · equity $10,176.81. | — |
 | 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,176.81 | ▲ 09:30 equity $10,176.81 vs yday $10,176.81 (-0.00) | 09:30 open · cash $10,176.81 · no holdings · equity $10,176.81 vs prior close $10,176.81 (-0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,176.81 | ▲ close $10,176.81 vs 09:30 $10,176.81 (session +0.00) | 16:00 close · cash $10,176.81 · no lots left · equity $10,176.81. | — |
+| 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,176.81 | ▲ 09:30 equity $10,176.81 vs yday $10,176.81 (-0.00) | 09:30 open · cash $10,176.81 · no holdings · equity $10,176.81 vs prior close $10,176.81 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-11 09:30 ET | **BUY** | `ORCL` | 7 | $164.43 | $2.01 | — | $9,023.78 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list flatten,earn_react; 🔵; ⚪; ret5=+9.0; leftover $1272.10 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `ADBE` | 5 | $242.17 | $2.00 | — | $7,810.93 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-12.1; leftover $1272.10 | join🟢 sector🟢 gen🟡 news🟢 digest🟡 judge🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `CPRT` | 39 | $32.01 | $2.11 | — | $6,560.43 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-4.4; leftover $1272.10 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `DSGX` | 17 | $71.71 | $2.04 | — | $5,339.32 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-6.3; leftover $1272.10 | join🟢 sector🟢 gen🟡 news🟡 digest🟡 judge🟢 ab🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `KR` | 22 | $56.02 | $2.06 | — | $4,104.83 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-0.6; leftover $1272.10 | join🔴 sector🟡 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `LPTH` | 135 | $9.37 | $2.40 | — | $2,837.48 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=+1.5; leftover $1272.10 | join🔴 sector🟢 gen🟡 news🟡 digest🟡 judge🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `REF` | 97 | $13.10 | $2.28 | — | $1,564.50 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-5.2; leftover $1272.10 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `RH` | 9 | $135.71 | $2.02 | — | $341.09 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-4.5; leftover $1272.10 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $341.09 | ▲ close $10,211.25 vs 09:30 $10,176.81 (session +51.36) | 16:00 close · cash $341.09 · equity $10,211.25 vs 09:30 $10,176.81 (+34.44; session marks +51.36) · 8 name(s) marked open→close (per-name table). ORCL×7 09:30 $164.43 → close $150.28 -99.05; ADBE×5 09:30 $242.17 → close $252.23 +50.30; CPRT×39 09:30 $32.01 → close $29.95 -80.34; DSGX×17 09:30 $71.71 → close $76.04 +73.61; KR×22 09:30 $56.02 → close $58.49 +54.34; LPTH×135 09:30 $9.37 → close $9.20 -22.95; REF×97 09:30 $13.10 → close $14.03 +90.21; RH×9 09:30 $135.71 → close $134.07 -14.76 | — |
 
 ## Not taken
 
@@ -442,3 +461,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | `NAVN` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `NB` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `SHOE` | hard_red | hard-red S=-13.28 sit; no new buys |
+
+## Still open (marked at last close)
+
+| Ticker | Shares | Entry | Why |
+|---|---:|---|---|
+| `ORCL` | 7 | 2026-09-11 @ $164.43 | union ∩ earn_react, no 🚨; gate earn_react=True; list flatten,earn_react; 🔵; ⚪; ret5=+9.0; leftover $1272.10 |
+| `ADBE` | 5 | 2026-09-11 @ $242.17 | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-12.1; leftover $1272.10 |
+| `CPRT` | 39 | 2026-09-11 @ $32.01 | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-4.4; leftover $1272.10 |
+| `DSGX` | 17 | 2026-09-11 @ $71.71 | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-6.3; leftover $1272.10 |
+| `KR` | 22 | 2026-09-11 @ $56.02 | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-0.6; leftover $1272.10 |
+| `LPTH` | 135 | 2026-09-11 @ $9.37 | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=+1.5; leftover $1272.10 |
+| `REF` | 97 | 2026-09-11 @ $13.10 | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-5.2; leftover $1272.10 |
+| `RH` | 9 | 2026-09-11 @ $135.71 | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-4.5; leftover $1272.10 |

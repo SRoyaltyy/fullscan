@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ news_g hold 5, no 🚨
 
-Cash book **-10.08%** ($8,992) · signal-only (no cash/fees) was +134.58%. Starts YES **1/20**. Fills 81 · skips 239 · realized $-991.24.
+Cash book **-9.32%** ($9,068) · signal-only (no cash/fees) was +133.78%. Starts YES **0/21**. Fills 89 · skips 245 · realized $-1028.60.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $314.16.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $524.72.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -312,15 +312,28 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `MSTR` | 11 | $136.52 | $141.82 | +58.30 | $132.70 | -100.32 | -42.02 | +49.17 | -51.15 |
 | 2026-09-09 | `BE` | 6 | $277.22 | $272.99 | -25.38 | $269.28 | -22.26 | -47.64 | +217.02 | +194.76 |
 | 2026-09-09 | `MRX` | 21 | $76.71 | $76.60 | -2.31 | $75.72 | -18.48 | -20.79 | +19.95 | +1.47 |
-| 2026-09-10 | `MMED` | 10 | $22.76 | $22.76 | +0.00 | $22.76 | +0.00 | +0.00 | -11.20 | -11.20 |
-| 2026-09-10 | `CNXC` | 7 | $27.07 | $27.07 | +0.00 | $27.07 | +0.00 | +0.00 | -40.67 | -40.67 |
-| 2026-09-10 | `FRNM` | 16 | $15.75 | $15.75 | +0.00 | $15.75 | +0.00 | +0.00 | -1.92 | -1.92 |
-| 2026-09-10 | `HPE` | 5 | $58.90 | $58.84 | -0.30 | $58.05 | -3.95 | -4.25 | +56.20 | +52.25 |
-| 2026-09-10 | `CRM` | 6 | $244.16 | $245.44 | +7.68 | $244.35 | -6.54 | +1.14 | -107.52 | -114.06 |
-| 2026-09-10 | `BAK` | 828 | $1.97 | $1.97 | +0.00 | $1.97 | +0.00 | +0.00 | +24.84 | +24.84 |
-| 2026-09-10 | `MSTR` | 11 | $132.70 | $133.55 | +9.35 | $131.50 | -22.55 | -13.20 | -41.80 | -64.35 |
-| 2026-09-10 | `BE` | 6 | $269.28 | $263.33 | -35.70 | $264.10 | +4.62 | -31.08 | +159.06 | +163.68 |
-| 2026-09-10 | `MRX` | 21 | $75.72 | $75.72 | +0.00 | $75.72 | +0.00 | +0.00 | +1.47 | +1.47 |
+| 2026-09-10 | `MMED` | 10 | $22.76 | $22.54 | -2.20 | $22.44 | -1.00 | -3.20 | -13.40 | -14.40 |
+| 2026-09-10 | `CNXC` | 7 | $27.07 | $27.05 | -0.17 | $27.00 | -0.32 | -0.49 | -40.85 | -41.16 |
+| 2026-09-10 | `FRNM` | 16 | $15.75 | $15.64 | -1.76 | $14.79 | -13.60 | -15.36 | -3.68 | -17.28 |
+| 2026-09-10 | `HPE` | 5 | $58.90 | $57.80 | -5.50 | $55.22 | -12.90 | -18.40 | +51.00 | +38.10 |
+| 2026-09-10 | `CRM` | 6 | $244.16 | $245.35 | +7.14 | $243.00 | -14.10 | -6.96 | -108.06 | -122.16 |
+| 2026-09-10 | `BAK` | 828 | $1.97 | $1.97 | +0.00 | $2.11 | +115.92 | +115.92 | +24.84 | +140.76 |
+| 2026-09-10 | `MSTR` | 11 | $132.70 | $128.44 | -46.86 | $128.56 | +1.32 | -45.54 | -98.01 | -96.69 |
+| 2026-09-10 | `BE` | 6 | $269.28 | $260.71 | -51.43 | $258.49 | -13.31 | -64.74 | +143.33 | +130.02 |
+| 2026-09-10 | `MRX` | 21 | $75.72 | $75.00 | -15.12 | $74.09 | -19.11 | -34.23 | -13.65 | -32.76 |
+| 2026-09-11 | `MMED` | 10 | $22.44 | $23.03 | +5.90 | — | +0.00 | +5.90 | -8.50 | — |
+| 2026-09-11 | `CNXC` | 7 | $27.00 | $27.13 | +0.91 | — | +0.00 | +0.91 | -40.25 | — |
+| 2026-09-11 | `FRNM` | 16 | $14.79 | $14.85 | +0.96 | — | +0.00 | +0.96 | -16.32 | — |
+| 2026-09-11 | `HPE` | 5 | $55.22 | $56.37 | +5.75 | — | +0.00 | +5.75 | +43.85 | — |
+| 2026-09-11 | `CRM` | 6 | $243.00 | $242.02 | -5.88 | $247.72 | +34.20 | +28.32 | -128.04 | -93.84 |
+| 2026-09-11 | `BAK` | 828 | $2.11 | $2.12 | +8.28 | $2.08 | -33.12 | -24.84 | +149.04 | +115.92 |
+| 2026-09-11 | `MSTR` | 11 | $128.56 | $130.67 | +23.21 | $130.97 | +3.30 | +26.51 | -73.48 | -70.18 |
+| 2026-09-11 | `BE` | 6 | $258.49 | $268.51 | +60.15 | $275.75 | +43.41 | +103.56 | +190.17 | +233.58 |
+| 2026-09-11 | `MRX` | 21 | $74.09 | $75.09 | +21.00 | $73.00 | -43.89 | -22.89 | -11.76 | -55.65 |
+| 2026-09-11 | `ORCL` | 1 | — | $164.43 | +0.00 | $150.28 | -14.15 | -14.15 | +0.00 | -14.15 |
+| 2026-09-11 | `AMTX` | 101 | — | $2.04 | +0.00 | $2.01 | -3.03 | -3.03 | +0.00 | -3.03 |
+| 2026-09-11 | `CLSK` | 16 | — | $12.97 | +0.00 | $13.67 | +11.20 | +11.20 | +0.00 | +11.20 |
+| 2026-09-11 | `RH` | 1 | — | $135.71 | +0.00 | $134.07 | -1.64 | -1.64 | +0.00 | -1.64 |
 
 ## Each session (cash + holdings state)
 
@@ -345,7 +358,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 | +2.25 | $862.33 | RRC×26, SEDG×33, OPTX×126, CAPR×111, SMTC×7, ERAS×56, BBWI×58, MMED×10, CNXC×7, FRNM×16, HPE×5 | $9,052.59 | -4.17 | +126.66 | CRM, BAK, MSTR, BE, MRX | RRC, SEDG, OPTX, CAPR, SMTC, ERAS, BBWI | $314.16 | $9,145.13 | MMED×10, CNXC×7, FRNM×16, HPE×5, CRM×6, BAK×828, MSTR×11, BE×6, MRX×21 |
 | 2026-09-08 | -11.47 | $314.16 | MMED×10, CNXC×7, FRNM×16, HPE×5, CRM×6, BAK×828, MSTR×11, BE×6, MRX×21 | $9,202.10 | +56.97 | -60.43 | — | — | $314.16 | $9,141.67 | MMED×10, CNXC×7, FRNM×16, HPE×5, CRM×6, BAK×828, MSTR×11, BE×6, MRX×21 |
 | 2026-09-09 | -13.95 | $314.16 | MMED×10, CNXC×7, FRNM×16, HPE×5, CRM×6, BAK×828, MSTR×11, BE×6, MRX×21 | $9,256.99 | +115.32 | -217.62 | — | — | $314.16 | $9,039.37 | MMED×10, CNXC×7, FRNM×16, HPE×5, CRM×6, BAK×828, MSTR×11, BE×6, MRX×21 |
-| 2026-09-10 | -13.28 | $314.16 | MMED×10, CNXC×7, FRNM×16, HPE×5, CRM×6, BAK×828, MSTR×11, BE×6, MRX×21 | $9,020.40 | -18.97 | -28.42 | — | — | $314.16 | $8,991.98 | MMED×10, CNXC×7, FRNM×16, HPE×5, CRM×6, BAK×828, MSTR×11, BE×6, MRX×21 |
+| 2026-09-10 | -13.28 | $314.16 | MMED×10, CNXC×7, FRNM×16, HPE×5, CRM×6, BAK×828, MSTR×11, BE×6, MRX×21 | $8,923.47 | -115.90 | +42.90 | — | — | $314.16 | $8,966.37 | MMED×10, CNXC×7, FRNM×16, HPE×5, CRM×6, BAK×828, MSTR×11, BE×6, MRX×21 |
+| 2026-09-11 | +0.50 | $314.16 | MMED×10, CNXC×7, FRNM×16, HPE×5, CRM×6, BAK×828, MSTR×11, BE×6, MRX×21 | $9,086.65 | +120.28 | -3.72 | ORCL, AMTX, CLSK, RH | MMED, CNXC, FRNM, HPE | $524.72 | $9,067.53 | CRM×6, BAK×828, MSTR×11, BE×6, MRX×21, ORCL×1, AMTX×101, CLSK×16, RH×1 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -470,8 +484,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $314.16 | ▼ close $9,141.67 vs 09:30 $9,202.10 (session -60.43) | 16:00 close · cash $314.16 · equity $9,141.67 vs 09:30 $9,202.10 (-60.43; session marks -60.43) · 9 name(s) marked open→close (per-name table). MMED×10 09:30 $23.16 → close $23.32 +1.60; CNXC×7 09:30 $31.77 → close $28.27 -24.50; FRNM×16 09:30 $16.74 → close $15.99 -12.00; HPE×5 09:30 $52.29 → close $56.03 +18.70; CRM×6 09:30 $253.72 → close $249.12 -27.60; BAK×828 09:30 $1.94 → close $1.92 -16.56; MSTR×11 09:30 $137.62 → close $136.52 -12.10; BE×6 09:30 $267.76 → close $277.22 +56.76; MRX×21 09:30 $78.84 → close $76.71 -44.73 | — |
 | 2026-09-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $314.16 | ▲ 09:30 equity $9,256.99 vs yday $9,141.67 (+115.32) | 09:30 open · cash $314.16 (unchanged overnight, no fees) · equity $9,256.99 vs prior close $9,141.67 (+115.32) · 9 name(s) re-marked at the open (per-name table). MMED×10 yday $23.32 → 09:30 $23.22 -1.00; CNXC×7 yday $28.27 → 09:30 $28.13 -0.98; FRNM×16 yday $15.99 → 09:30 $15.96 -0.48; HPE×5 yday $56.03 → 09:30 $56.94 +4.55; CRM×6 yday $249.12 → 09:30 $249.78 +3.96; BAK×828 yday $1.92 → 09:30 $2.02 +78.66; MSTR×11 yday $136.52 → 09:30 $141.82 +58.30; BE×6 yday $277.22 → 09:30 $272.99 -25.38; MRX×21 yday $76.71 → 09:30 $76.60 -2.31 | — |
 | 2026-09-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $314.16 | ▼ close $9,039.37 vs 09:30 $9,256.99 (session -217.62) | 16:00 close · cash $314.16 · equity $9,039.37 vs 09:30 $9,256.99 (-217.62; session marks -217.62) · 9 name(s) marked open→close (per-name table). MMED×10 09:30 $23.22 → close $22.76 -4.60; CNXC×7 09:30 $28.13 → close $27.07 -7.42; FRNM×16 09:30 $15.96 → close $15.75 -3.36; HPE×5 09:30 $56.94 → close $58.90 +9.80; CRM×6 09:30 $249.78 → close $244.16 -33.72; BAK×828 09:30 $2.02 → close $1.97 -37.26; MSTR×11 09:30 $141.82 → close $132.70 -100.32; BE×6 09:30 $272.99 → close $269.28 -22.26; MRX×21 09:30 $76.60 → close $75.72 -18.48 | — |
-| 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $314.16 | ▼ 09:30 equity $9,020.40 vs yday $9,039.37 (-18.97) | 09:30 open · cash $314.16 (unchanged overnight, no fees) · equity $9,020.40 vs prior close $9,039.37 (-18.97) · 9 name(s) re-marked at the open (per-name table). MMED×10 yday $22.76 → 09:30 $22.76 +0.00; CNXC×7 yday $27.07 → 09:30 $27.07 +0.00; FRNM×16 yday $15.75 → 09:30 $15.75 +0.00; HPE×5 yday $58.90 → 09:30 $58.84 -0.30; CRM×6 yday $244.16 → 09:30 $245.44 +7.68; BAK×828 yday $1.97 → 09:30 $1.97 +0.00; MSTR×11 yday $132.70 → 09:30 $133.55 +9.35; BE×6 yday $269.28 → 09:30 $263.33 -35.70; MRX×21 yday $75.72 → 09:30 $75.72 +0.00 | — |
-| 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $314.16 | ▼ close $8,991.98 vs 09:30 $9,020.40 (session -28.42) | 16:00 close · cash $314.16 · equity $8,991.98 vs 09:30 $9,020.40 (-28.42; session marks -28.42) · 9 name(s) marked open→close (per-name table). MMED×10 09:30 $22.76 → close $22.76 +0.00; CNXC×7 09:30 $27.07 → close $27.07 +0.00; FRNM×16 09:30 $15.75 → close $15.75 +0.00; HPE×5 09:30 $58.84 → close $58.05 -3.95; CRM×6 09:30 $245.44 → close $244.35 -6.54; BAK×828 09:30 $1.97 → close $1.97 +0.00; MSTR×11 09:30 $133.55 → close $131.50 -22.55; BE×6 09:30 $263.33 → close $264.10 +4.62; MRX×21 09:30 $75.72 → close $75.72 +0.00 | — |
+| 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $314.16 | ▼ 09:30 equity $8,923.47 vs yday $9,039.37 (-115.90) | 09:30 open · cash $314.16 (unchanged overnight, no fees) · equity $8,923.47 vs prior close $9,039.37 (-115.90) · 9 name(s) re-marked at the open (per-name table). MMED×10 yday $22.76 → 09:30 $22.54 -2.20; CNXC×7 yday $27.07 → 09:30 $27.05 -0.17; FRNM×16 yday $15.75 → 09:30 $15.64 -1.76; HPE×5 yday $58.90 → 09:30 $57.80 -5.50; CRM×6 yday $244.16 → 09:30 $245.35 +7.14; BAK×828 yday $1.97 → 09:30 $1.97 +0.00; MSTR×11 yday $132.70 → 09:30 $128.44 -46.86; BE×6 yday $269.28 → 09:30 $260.71 -51.43; MRX×21 yday $75.72 → 09:30 $75.00 -15.12 | — |
+| 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $314.16 | ▲ close $8,966.37 vs 09:30 $8,923.47 (session +42.90) | 16:00 close · cash $314.16 · equity $8,966.37 vs 09:30 $8,923.47 (+42.90; session marks +42.90) · 9 name(s) marked open→close (per-name table). MMED×10 09:30 $22.54 → close $22.44 -1.00; CNXC×7 09:30 $27.05 → close $27.00 -0.32; FRNM×16 09:30 $15.64 → close $14.79 -13.60; HPE×5 09:30 $57.80 → close $55.22 -12.90; CRM×6 09:30 $245.35 → close $243.00 -14.10; BAK×828 09:30 $1.97 → close $2.11 +115.92; MSTR×11 09:30 $128.44 → close $128.56 +1.32; BE×6 09:30 $260.71 → close $258.49 -13.31; MRX×21 09:30 $75.00 → close $74.09 -19.11 | — |
+| 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $314.16 | ▲ 09:30 equity $9,086.65 vs yday $8,966.37 (+120.28) | 09:30 open · cash $314.16 (unchanged overnight, no fees) · equity $9,086.65 vs prior close $8,966.37 (+120.28) · 9 name(s) re-marked at the open (per-name table). MMED×10 yday $22.44 → 09:30 $23.03 +5.90; CNXC×7 yday $27.00 → 09:30 $27.13 +0.91; FRNM×16 yday $14.79 → 09:30 $14.85 +0.96; HPE×5 yday $55.22 → 09:30 $56.37 +5.75; CRM×6 yday $243.00 → 09:30 $242.02 -5.88; BAK×828 yday $2.11 → 09:30 $2.12 +8.28; MSTR×11 yday $128.56 → 09:30 $130.67 +23.21; BE×6 yday $258.49 → 09:30 $268.51 +60.15; MRX×21 yday $74.09 → 09:30 $75.09 +21.00 | — |
+| 2026-09-11 09:30 ET | **SELL** | `MMED` | 10 | $23.03 | $2.04 | $-12.56 | $542.42 | ▼ -12.56 after sell → book $9,084.61; vs 09:30 mark -2.04 | dropped from list after 5 sess (min 5) | — |
+| 2026-09-11 09:30 ET | **SELL** | `CNXC` | 7 | $27.13 | $1.94 | $-44.20 | $730.39 | ▼ -44.20 after sell → book $9,082.67; vs 09:30 mark -1.94 | dropped from list after 5 sess (min 5) | — |
+| 2026-09-11 09:30 ET | **SELL** | `FRNM` | 16 | $14.85 | $2.06 | $-20.42 | $965.93 | ▼ -20.42 after sell → book $9,080.61; vs 09:30 mark -2.06 | dropped from list after 5 sess (min 5) | — |
+| 2026-09-11 09:30 ET | **SELL** | `HPE` | 5 | $56.37 | $2.02 | $+39.82 | $1,245.76 | ▲ +39.82 after sell → book $9,078.59; vs 09:30 mark -2.02 | dropped from list after 5 sess (min 5) | — |
+| 2026-09-11 09:30 ET | **BUY** | `ORCL` | 1 | $164.43 | $1.65 | — | $1,079.68 | — | union ∩ news_g hold 5, no 🚨; gate news=good; list flatten,earn_react; 🔵; ⚪; ret5=+9.0; leftover $207.63 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `AMTX` | 101 | $2.04 | $2.29 | — | $871.35 | — | union ∩ news_g hold 5, no 🚨; gate news=good; list probable,yday_gainer,yday_mover; 🔵; ret5=+6.8; leftover $207.63 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `CLSK` | 16 | $12.97 | $2.04 | — | $661.79 | — | union ∩ news_g hold 5, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+16.0; leftover $207.63 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `RH` | 1 | $135.71 | $1.36 | — | $524.72 | — | union ∩ news_g hold 5, no 🚨; gate news=good; list earn_react; ret5=-4.5; leftover $207.63 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $524.72 | ▼ close $9,067.53 vs 09:30 $9,086.65 (session -3.72) | 16:00 close · cash $524.72 · equity $9,067.53 vs 09:30 $9,086.65 (-19.12; session marks -3.72) · 9 name(s) marked open→close (per-name table). CRM×6 09:30 $242.02 → close $247.72 +34.20; BAK×828 09:30 $2.12 → close $2.08 -33.12; MSTR×11 09:30 $130.67 → close $130.97 +3.30; BE×6 09:30 $268.51 → close $275.75 +43.41; MRX×21 09:30 $75.09 → close $73.00 -43.89; ORCL×1 09:30 $164.43 → close $150.28 -14.15; AMTX×101 09:30 $2.04 → close $2.01 -3.03; CLSK×16 09:30 $12.97 → close $13.67 +11.20; RH×1 09:30 $135.71 → close $134.07 -1.64 | — |
 
 ## Not taken
 
@@ -716,17 +740,23 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | `META` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `OCGN` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `CLSK` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-11 | `CRM` | min_hold | dropped but min-hold 4/5 sess — no sell |
+| 2026-09-11 | `MSTR` | min_hold | dropped but min-hold 4/5 sess — no sell |
+| 2026-09-11 | `BE` | min_hold | dropped but min-hold 4/5 sess — no sell |
+| 2026-09-11 | `MRX` | min_hold | dropped but min-hold 4/5 sess — no sell |
+| 2026-09-11 | `LITE` | cash | leftover split 207.63 < 1 share @ 945.60 |
+| 2026-09-11 | `ADBE` | cash | leftover split 207.63 < 1 share @ 242.17 |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `MMED` | 10 | 2026-09-03 @ $23.88 | union ∩ news_g hold 5, no 🚨; gate news=good; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+21.9; leftover $261.61 |
-| `CNXC` | 7 | 2026-09-03 @ $32.88 | union ∩ news_g hold 5, no 🚨; gate news=good; list yday_gainer; 🔵; ret5=+16.2; leftover $261.61 |
-| `FRNM` | 16 | 2026-09-03 @ $15.87 | union ∩ news_g hold 5, no 🚨; gate news=good; list ohlc_hot,mover_buy; 🔵; ⚪; ret5=+13.2; leftover $261.61 |
-| `HPE` | 5 | 2026-09-03 @ $47.60 | union ∩ news_g hold 5, no 🚨; gate news=good; list earn_react; 🔵; ret5=-6.2; leftover $261.61 |
 | `CRM` | 6 | 2026-09-04 @ $263.36 | union ∩ news_g hold 5, no 🚨; gate news=good; list flatten,mover_buy; 🔵; ⚪; ret5=+4.9; leftover $1607.97 |
 | `BAK` | 828 | 2026-09-04 @ $1.94 | union ∩ news_g hold 5, no 🚨; gate news=good; list yday_gainer,yday_mover; ret5=+18.3; leftover $1607.97 |
 | `MSTR` | 11 | 2026-09-04 @ $137.35 | union ∩ news_g hold 5, no 🚨; gate news=good; list ohlc_hot; ret5=+5.4; leftover $1607.97 |
 | `BE` | 6 | 2026-09-04 @ $236.82 | union ∩ news_g hold 5, no 🚨; gate news=good; list ohlc_hot; ret5=+8.1; leftover $1607.97 |
 | `MRX` | 21 | 2026-09-04 @ $75.65 | union ∩ news_g hold 5, no 🚨; gate news=good; list ohlc_hot; 🔵; ⚪; ret5=+6.0; leftover $1607.97 |
+| `ORCL` | 1 | 2026-09-11 @ $164.43 | union ∩ news_g hold 5, no 🚨; gate news=good; list flatten,earn_react; 🔵; ⚪; ret5=+9.0; leftover $207.63 |
+| `AMTX` | 101 | 2026-09-11 @ $2.04 | union ∩ news_g hold 5, no 🚨; gate news=good; list probable,yday_gainer,yday_mover; 🔵; ret5=+6.8; leftover $207.63 |
+| `CLSK` | 16 | 2026-09-11 @ $12.97 | union ∩ news_g hold 5, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+16.0; leftover $207.63 |
+| `RH` | 1 | 2026-09-11 @ $135.71 | union ∩ news_g hold 5, no 🚨; gate news=good; list earn_react; ret5=-4.5; leftover $207.63 |

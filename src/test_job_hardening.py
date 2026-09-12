@@ -923,6 +923,21 @@ def test_ubuntu_preopen_not_blocked_by_queued_ecs() -> None:
     assert "01_daily/general/" in commit
 
 
+def test_factor_mine_lands_closed_after_postclose() -> None:
+    """Dashboard must remine after the close, not only after the morning book."""
+    yml = (WF / "factor_mine.yml").read_text(encoding="utf-8")
+    assert "Post-Close ALL (grade + learn + next captains)" in yml
+    assert "--land-closed" in yml
+    assert 'cron: "25 20 * * 1-5"' in yml
+    assert 'cron: "0 12 * * 6"' in yml
+    assert "data/factor_mine/panel.json" in yml
+    assert "Stock Book ALL (one-shot)" in yml
+    assert "Pre-Open ALL (predictive one-shot)" in yml
+    src = (ROOT / "src" / "factor_mine.py").read_text(encoding="utf-8")
+    assert "def land_closed(" in src
+    assert "def payload_covers_session(" in src
+
+
 def test_last_closed_sidecar_does_not_share_ubuntu_concurrency() -> None:
     """A hung postclose-all-ubuntu push must not block yesterday's grade."""
     yml = (WF / "postclose_last_closed.yml").read_text(encoding="utf-8")
@@ -1015,6 +1030,7 @@ def main() -> None:
         test_ubuntu_preopen_not_blocked_by_queued_ecs,
         test_preopen_harden_halt_reverted,
         test_incremental_land_and_day_board,
+        test_factor_mine_lands_closed_after_postclose,
         test_last_closed_sidecar_does_not_share_ubuntu_concurrency,
         test_search_and_sector_rounds_are_bounded,
     ]

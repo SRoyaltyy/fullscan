@@ -3,14 +3,23 @@ name: Factor strategy mine
 # Research miner: leak-free 09:30 recipes on a cash-accounted paper book.
 # Dropdowns pick a slice; auto dims + auto-tweak sweep neighbors so a
 # single run explores the nearby grid. Does not change flatten_robust live.
-# After Pre-Open / Stock Book ALL complete, this rolls every recipe
-# blotter to the latest tape so .io shows that morning's tickets.
+#
+# After the regular close, --land-closed reuses the published recipe set
+# and rolls cash-start / investigator / books to last_closed_session so
+# .io advances without a manual remine. Morning Pre-Open / Stock Book
+# triggers become a no-op once yesterday is already on the board.
 
 on:
+  schedule:
+    # 16:25 ET while EDT (20:25 UTC). Saturday noon UTC catches a Friday
+    # close if the evening job died.
+    - cron: "25 20 * * 1-5"
+    - cron: "0 12 * * 6"
   workflow_run:
     workflows:
       - "Stock Book ALL (one-shot)"
       - "Pre-Open ALL (predictive one-shot)"
+      - "Post-Close ALL (grade + learn + next captains)"
     types: [completed]
   workflow_dispatch:
     inputs:
@@ -98,6 +107,11 @@ on:
         required: false
         default: false
         type: boolean
+      land_closed:
+        description: "Reuse existing recipes; only land the last closed session"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -109,6 +123,7 @@ concurrency:
 
 jobs:
   mine:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
@@ -137,19 +152,28 @@ jobs:
           S_BOOST: ${{ inputs.s_boost }}
           AUTO: ${{ inputs.auto_tweak }}
           REBUILD: ${{ inputs.rebuild_panel }}
+          LAND_CLOSED: ${{ inputs.land_closed }}
         run: |
           set -euo pipefail
-          ARGS=(--from-date "${FROM_DATE:-2026-08-13}" --write
-                --universe "${UNIVERSE:-auto}" --hold "${HOLD:-auto}"
-                --gate "${GATE:-auto}" --rank "${RANK:-auto}"
-                --side "${SIDE:-auto}" --top-n "${TOP_N:-auto}"
-                --exit "${EXIT:-auto}" --entry "${ENTRY:-auto}"
-                --size "${SIZE:-auto}" --sell "${SELL:-auto}"
-                --s-boost "${S_BOOST:-auto}")
-          [ -n "${TO_DATE:-}" ] && ARGS+=(--to-date "$TO_DATE")
-          [ "${REBUILD:-false}" = "true" ] && ARGS+=(--rebuild-panel)
-          [ "${AUTO:-true}" = "false" ] && ARGS+=(--no-auto-tweak)
-          python -m src.factor_mine "${ARGS[@]}"
+          if [ "${GITHUB_EVENT_NAME}" = "schedule" ] \
+             || [ "${GITHUB_EVENT_NAME}" = "workflow_run" ] \
+             || [ "${LAND_CLOSED:-false}" = "true" ]; then
+            ARGS=(--from-date "${FROM_DATE:-2026-08-13}" --write --land-closed)
+            [ "${REBUILD:-false}" = "true" ] && ARGS+=(--rebuild-panel)
+            python -m src.factor_mine "${ARGS[@]}"
+          else
+            ARGS=(--from-date "${FROM_DATE:-2026-08-13}" --write
+                  --universe "${UNIVERSE:-auto}" --hold "${HOLD:-auto}"
+                  --gate "${GATE:-auto}" --rank "${RANK:-auto}"
+                  --side "${SIDE:-auto}" --top-n "${TOP_N:-auto}"
+                  --exit "${EXIT:-auto}" --entry "${ENTRY:-auto}"
+                  --size "${SIZE:-auto}" --sell "${SELL:-auto}"
+                  --s-boost "${S_BOOST:-auto}")
+            [ -n "${TO_DATE:-}" ] && ARGS+=(--to-date "$TO_DATE")
+            [ "${REBUILD:-false}" = "true" ] && ARGS+=(--rebuild-panel)
+            [ "${AUTO:-true}" = "false" ] && ARGS+=(--no-auto-tweak)
+            python -m src.factor_mine "${ARGS[@]}"
+          fi
           test -s 03_scoreboard/FACTOR_MINE.md
           test -s 03_scoreboard/FACTOR_MINE_ACTION.md
           test -s 03_scoreboard/factor_mine.json
@@ -161,9 +185,11 @@ jobs:
             03_scoreboard/FACTOR_MINE.md \
             03_scoreboard/FACTOR_MINE_ACTION.md \
             03_scoreboard/factor_mine.json \
+            03_scoreboard/factor_mine_combos.json \
             03_scoreboard/factor_mine/ \
             01_daily/factor_mine_action.md \
             data/factor_mine/start_dates.json \
+            data/factor_mine/panel.json \
             dashboard/factor-mine/
         env:
           FROM_DATE: ${{ inputs.from_date }}

@@ -638,6 +638,13 @@ def test_panel_is_current_requires_latest_session() -> None:
         "rows": [{}],
     }
     assert fm.panel_is_current(fresh, "2026-08-13", "2026-09-09") is True
+    ahead = {
+        "from_date": "2026-08-13",
+        "to_date": "2026-09-10",
+        "session_dates": ["2026-08-13", "2026-09-09", "2026-09-10"],
+        "rows": [{}],
+    }
+    assert fm.panel_is_current(ahead, "2026-08-13", "2026-09-09") is False
 
 
 def test_session_has_closed_uses_et_close_not_next_preopen() -> None:
@@ -659,6 +666,118 @@ def test_morning_s_falls_back_to_predict_file() -> None:
     s = morning_s({}, "2026-09-09")
     assert s is not None
     assert float(s) <= -3.0
+
+
+def test_morning_s_falls_back_to_weather_when_predict_missing() -> None:
+    from src import sleeve_merge as sm
+    from src.factor_mine_book import morning_s
+    orig = sm.predict_snapshot
+    sm.predict_snapshot = lambda _d: (None, None)
+    try:
+        s = morning_s({}, "2026-09-11")
+    finally:
+        sm.predict_snapshot = orig
+    assert s is not None
+    assert abs(float(s) - 0.5) < 1e-6
+
+
+def test_build_mornings_covers_closed_session_past_lookback() -> None:
+    from src import factor_mine_probe as fmp
+    morn = fmp.build_mornings()
+    assert "2026-09-11" in morn
+    assert abs(float(morn["2026-09-11"]["s"]) - 0.5) < 1e-6
+    assert morn["2026-09-11"]["hard_red"] is False
+
+
+def test_payload_covers_session_and_land_closed_skips() -> None:
+    payload = {
+        "from_date": "2026-08-13",
+        "to_date": "2026-09-11",
+        "dates": ["2026-09-10", "2026-09-11"],
+        "daily": {"demo": [{"date": "2026-09-10"}, {"date": "2026-09-11"}]},
+        "mornings": {"2026-09-11": {"s": 0.5}},
+        "recipes": [
+            {"name": "union_h1", "universe": "union", "hold": 1},
+            {"name": "combo_x", "universe": "combo", "members": ["union_h1"]},
+        ],
+    }
+    assert fm.payload_covers_session(payload, "2026-09-11") is True
+    assert fm.payload_covers_session(payload, "2026-09-12") is False
+    stale = dict(payload)
+    stale["to_date"] = "2026-09-10"
+    stale["dates"] = ["2026-09-10"]
+    assert fm.payload_covers_session(stale, "2026-09-11") is False
+    recs = fm.existing_single_recipes(payload)
+    assert [r["name"] for r in recs] == ["union_h1"]
+
+
+def test_yahoo_day_strips_iso_time() -> None:
+    from src.price_store import yahoo_day
+    assert yahoo_day("2026-09-12T00:00:00") == "2026-09-12"
+    assert yahoo_day("2026-09-11") == "2026-09-11"
+    target = "2026-09-11"
+    from datetime import datetime, timedelta
+    stop = (datetime.strptime(target, "%Y-%m-%d") + timedelta(days=1)).date().isoformat()
+    assert stop == "2026-09-12"
+    assert "T" not in stop
+
+
+def test_simulate_split_indexes_daily_by_date() -> None:
+    """Member books stop at last-closed; panel calendar may still list today."""
+    from src import factor_mine_book as fmb
+    from src import factor_mine_combo as fmc
+
+    dates = ["2026-08-13", "2026-08-14", "2026-08-17"]
+    rec = fm.make_recipe("union_h1", universe="union", hold=1, top_n=1)
+    rec["name"] = "union_h1"
+    panel = {
+        "session_dates": dates,
+        "from_date": dates[0],
+        "to_date": dates[-1],
+        "rows": [],
+        "by_date": {d: [] for d in dates},
+    }
+
+    def fake_book(_panel, _rec, **_kw):
+        daily = []
+        eq = 5000.0
+        for d in dates[:-1]:
+            daily.append({
+                "date": d, "cash": eq, "stock": 0, "equity": eq,
+                "open_cash": eq, "open_equity": eq, "open_stock": 0,
+                "overnight_delta": 0, "session_delta": 0, "n": 0,
+                "bought": [], "sold": [], "held": [],
+            })
+        return {
+            "daily": daily, "trades": [], "skips": [],
+            "total_ret_pct": 0.0, "final_equity": eq,
+            "n_open": 0, "open": [], "n_trades": 0, "n_skips": 0,
+            "audit": {"ok": True},
+        }
+
+    orig = fmb.simulate_book
+    fmb.simulate_book = fake_book
+    try:
+        book = fmc.simulate_split(
+            panel, [rec, rec], [1, 1], bars={}, fees={}, regime={},
+            name="t_split_gap")
+    finally:
+        fmb.simulate_book = orig
+    assert [d["date"] for d in book["daily"]] == dates
+    assert book["daily"][-1]["equity"] == 0.0
+
+
+def test_factor_mine_workflow_lands_after_close() -> None:
+    from pathlib import Path
+    yml = (Path(__file__).resolve().parent.parent
+           / ".github" / "workflows" / "factor_mine.yml").read_text(
+               encoding="utf-8")
+    assert "Post-Close ALL (grade + learn + next captains)" in yml
+    assert "--land-closed" in yml
+    assert 'cron: "25 20 * * 1-5"' in yml
+    assert 'cron: "0 12 * * 6"' in yml
+    assert "data/factor_mine/panel.json" in yml
+    assert "Stock Book ALL (one-shot)" in yml
 
 
 def test_session_calendar_includes_completed_predict_day() -> None:
@@ -1521,6 +1640,12 @@ if __name__ == "__main__":
     test_panel_is_current_requires_latest_session()
     test_session_has_closed_uses_et_close_not_next_preopen()
     test_morning_s_falls_back_to_predict_file()
+    test_morning_s_falls_back_to_weather_when_predict_missing()
+    test_build_mornings_covers_closed_session_past_lookback()
+    test_payload_covers_session_and_land_closed_skips()
+    test_yahoo_day_strips_iso_time()
+    test_simulate_split_indexes_daily_by_date()
+    test_factor_mine_workflow_lands_after_close()
     test_session_calendar_includes_completed_predict_day()
     test_silent_monday_marks_every_name()
     test_missing_bar_day_carries_mark_no_phantom_session()
@@ -1541,4 +1666,4 @@ if __name__ == "__main__":
     test_match_why_and_decision()
     test_hit_tally_buy_sit_and_nneg()
     test_js_sim_matches_python_later_start()
-    print("47 factor-mine tests passed")
+    print("53 factor-mine tests passed")
