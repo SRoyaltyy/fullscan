@@ -120,6 +120,31 @@ def test_bypass_cutoff_skips_refuse() -> None:
         os.environ.pop("PREOPEN_BYPASS_CUTOFF", None)
 
 
+def test_ubuntu_late_heal_after_0925() -> None:
+    """#199 clock + orch dispatch must late-heal; ECS must not."""
+    assert preopen.ubuntu_late_heal("push", hm=925) is True
+    assert preopen.ubuntu_late_heal("schedule", hm=930) is True
+    assert preopen.ubuntu_late_heal("workflow_dispatch", "ubuntu", hm=935) is True
+    assert preopen.ubuntu_late_heal("workflow_dispatch", "ecs", hm=935) is False
+    assert preopen.ubuntu_late_heal("schedule", hm=924) is False
+    assert preopen.ubuntu_late_heal("push", hm=554) is False
+    yml = (ROOT / ".github" / "workflows" / "preopen_all.yml").read_text(
+        encoding="utf-8")
+    assert "ubuntu late-heal --bypass-cutoff" in yml
+    assert '[ "$EVENT" = "schedule" ]' in yml
+    assert '[ "$RUNNER" = "ubuntu" ]' in yml
+    assert 'event_name }}" = "push" ] && [ "$ET_HM" -ge 925 ]' not in yml
+    assert "weekend push poke swallowed" in yml
+    orch = (ROOT / ".github" / "workflows" / "daily_orchestrator.yml").read_text(
+        encoding="utf-8")
+    assert "ubuntu Pre-Open late heal (--bypass-cutoff)" in orch
+    assert "maybe preopen_all.yml" in orch
+    # Midday late heal must not rewrite quality-ok files.
+    late = orch.split("past 09:25 ET — ubuntu Pre-Open late heal")[1]
+    assert "maybe preopen_all.yml" in late.split("MISSING news parse")[0]
+    assert "inputs[force]=true" not in late.split("MISSING news parse")[0]
+
+
 def test_run_preopen_cli_has_bypass_not_permanent_force() -> None:
     src = (ROOT / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
     assert "--bypass-cutoff" in src
@@ -144,6 +169,7 @@ def test_incremental_land_hooks() -> None:
     assert "leftover sweep" in yml
     assert "FULLSCAN_LAND" in yml
     assert "before 03:55 ET" in yml
+    assert "weekend push poke swallowed" in yml
     assert "go=no" in yml
     book_yml = (ROOT / ".github" / "workflows" / "stock_book_all.yml").read_text(
         encoding="utf-8")
@@ -288,6 +314,7 @@ def main() -> None:
         test_qc_news_parse_db_timeout_is_actionable,
         test_recent_news_raises_after_timeout_retries,
         test_bypass_cutoff_skips_refuse,
+        test_ubuntu_late_heal_after_0925,
         test_run_preopen_cli_has_bypass_not_permanent_force,
         test_map_heat_passthrough_flag_skips_llm,
         test_incremental_land_hooks,

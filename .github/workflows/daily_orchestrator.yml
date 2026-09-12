@@ -190,6 +190,13 @@ jobs:
           elif [ "$ET_HM" -lt 1600 ]; then
             echo "past 09:00 ET — heal ranker on ubuntu (ECS may still be in Grok)"
             maybe stock_book_all.yml
+            # 09:35 cron (and any midday pass after 09:25): ubuntu Pre-Open
+            # late heal. preopen_all.yml adds --bypass-cutoff; skip-if-good
+            # stays on. Do not pass force=true (that rewrites quality-ok).
+            if [ "$ET_HM" -ge 925 ]; then
+              echo "past 09:25 ET — ubuntu Pre-Open late heal (--bypass-cutoff)"
+              maybe preopen_all.yml
+            fi
             # 09-08: Pre-Open skipped essays after 09:25 and standalone
             # news/judge/actions never ran. Dispatch ubuntu writers.
             if [ "$FORCE" = "true" ] || ! python3 -m src.skip_if_good --job preopen_full --date "$TODAY"; then

@@ -10,7 +10,8 @@ gated here.
 
 Late salvage (fix #4): --bypass-cutoff / PREOPEN_BYPASS_CUTOFF=1 ignores
 the 09:25 gate but still honors skip-if-good. --force ignores both.
-Do not leave --force on every main push.
+Ubuntu writers after 09:25 (cron / orch dispatch / yml poke) pass
+--bypass-cutoff. Do not leave --force on every main push.
 
 CLI: python -m src.preopen   # prints now + whether we are inside the window
 """
@@ -25,8 +26,24 @@ from . import config
 # 09:25 ET — last moment a predictive write is allowed to start/land.
 PREDICT_CUTOFF_HM = 925
 PREDICT_WINDOW_START_HM = 600  # 06:00 ET
-# Push late-heal in preopen_all.yml (after 09:25 ET; skip-if-good on).
+# Ubuntu late-heal in preopen_all.yml (after 09:25 ET; skip-if-good on).
+# Weekday cron / orch ubuntu dispatch / yml poke. ECS stays gated.
 LATE_HEAL_END_HM = 1200
+
+
+def ubuntu_late_heal(event_name: str, runner: str = "",
+                     hm: int | None = None) -> bool:
+    """True when an ubuntu Pre-Open writer should pass --bypass-cutoff.
+
+    Matches preopen_all.yml: after 09:25 ET, push / schedule / runner=ubuntu
+    get late heal. ECS dispatch does not (needs explicit --force).
+    """
+    if (et_hm() if hm is None else int(hm)) < PREDICT_CUTOFF_HM:
+        return False
+    ev = (event_name or "").strip().lower()
+    if ev in ("push", "schedule"):
+        return True
+    return (runner or "").strip().lower() == "ubuntu"
 
 
 def et_now() -> datetime:
