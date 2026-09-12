@@ -1,0 +1,72 @@
+{
+  "date": "2026-08-23",
+  "generated_at": "2026-08-23T21:40:40-04:00",
+  "timezone": "America/New_York",
+  "source": "wayback",
+  "source_url": "https://web.archive.org/web/20260824014040id_/https://finviz.com/",
+  "archive_snapshot_ts": "20260824014040",
+  "archive_snapshot_at": "2026-08-23T21:40:40-04:00",
+  "archive_url": "https://web.archive.org/web/20260824014040id_/https://finviz.com/",
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-08-24",
+  "clock_rule": "Wayback midday/afternoon capture. Legal for the NEXT session open only (2026-08-24) as a prior-day close recap — NOT the same morning. Generated is the real archive capture time. Gaps stay gaps.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "Weekend Brief: US equity futures slipped as US-Canada trade tensions escalated and bond-yield worries persisted ahead PCE data, Nvidia earnings, and Jackson Hole",
+  "raw_text": "- US stock futures edged lower Sunday evening after the Dow (DIA)’s back-to-back weekly declines and persistent concern over elevated bond yields.\n- The US imposed new 50% tariffs on roughly $20B of Canadian imports, including autos, dairy, alcohol, steel, consumer goods, and other industrial and agricultural products, after weekend trade talks collapsed.\n- Canada vowed dollar-for-dollar retaliatory tariffs starting September 8, heightening cost pressures for US-exposed companies and weighing on cross-border supply-chain plays, industrials, autos, agriculture, materials, and retail.\n- Oil prices dipped about 1% on looming additional US sanctions on Iran and threats to the Strait of Hormuz, pressuring energy names while potentially easing broader inflation concerns if prices stabilize.\n- Crypto-related stocks could see upside from Bitcoin (@BTC)’s weekend rally.\n- Shein’s launch of an up-to-$1.8B Hong Kong IPO is drawing attention to fast-fashion and other tariff-impacted consumer names tied to global supply chains with US exposure.\n- Monday’s US data calendar is light, featuring the Chicago Fed National Activity Index at 8:30 a.m. ET and Treasury bill auctions.\n- Attention is shifting to mid-week PCE inflation data for a read on price pressures and the policy backdrop.\n- Nvidia (NVDA) is scheduled to report pivotal Q2 earnings after the close on Wednesday, with markets focused on AI spending trends.\n- The Jackson Hole symposium later in the week is in focus for signals on interest-rate policy, broader monetary strategy, and the economic outlook.",
+  "raw_summary_md": "- US stock futures edged lower Sunday evening after the **Dow ([DIA](https://finviz.com/quote?t=DIA))’s back-to-back weekly declines** and persistent concern over elevated **bond yields**.\n- The US imposed new **50% tariffs** on roughly **$20B** of Canadian imports, including autos, dairy, alcohol, steel, consumer goods, and other industrial and agricultural products, after weekend trade talks collapsed.\n- Canada vowed **dollar-for-dollar retaliatory tariffs starting September 8**, heightening cost pressures for US-exposed companies and weighing on cross-border supply-chain plays, industrials, autos, agriculture, materials, and retail.\n- **Oil prices dipped about 1%** on looming additional US sanctions on **Iran** and threats to the **Strait of Hormuz**, pressuring energy names while potentially easing broader inflation concerns if prices stabilize.\n- **Crypto-related stocks** could see upside from **Bitcoin ([@BTC](https://finviz.com/futures_charts?t=BTC))’s weekend rally**.\n- **Shein’s launch of an up-to-$1.8B Hong Kong IPO** is drawing attention to fast-fashion and other tariff-impacted consumer names tied to global supply chains with US exposure.\n- Monday’s US data calendar is light, featuring the **Chicago Fed National Activity Index at 8:30 a.m. ET** and Treasury bill auctions.\n- Attention is shifting to **mid-week PCE inflation data** for a read on price pressures and the policy backdrop.\n- **Nvidia ([NVDA](https://finviz.com/quote?t=NVDA))** is scheduled to report **pivotal Q2 earnings after the close on Wednesday**, with markets focused on AI spending trends.\n- The **Jackson Hole symposium** later in the week is in focus for signals on **interest-rate policy**, broader monetary strategy, and the economic outlook.",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "NVDA"
+  ],
+  "named_leaders": [
+    "NVDA"
+  ],
+  "calendar": [
+    "Monday’s US data calendar is light, featuring the Chicago Fed National Activity Index at 8:30 a.m. ET and Treasury bill auctions.",
+    "Nvidia (NVDA) is scheduled to report pivotal Q2 earnings after the close on Wednesday, with markets focused on AI spending trends."
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "Monday’s US data calendar is light, featuring the Chicago Fed National Activity Index at 8:30 a.m. ET and Treasury bill auctions."
+    ],
+    "text": "Monday’s US data calendar is light, featuring the Chicago Fed National Activity Index at 8:30 a.m. ET and Treasury bill auctions."
+  },
+  "earnings_slate": {
+    "tickers": [
+      "NVDA"
+    ],
+    "text": "Nvidia (NVDA) is scheduled to report pivotal Q2 earnings after the close on Wednesday, with markets focused on AI spending trends."
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Oil prices dipped about 1% on looming additional US sanctions on Iran and threats to the Strait of Hormuz, pressuring energy names while potentially easing broader inflation concerns if prices stabilize."
+  },
+  "finviz_id": 271088,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-08-23T20:05:51.853",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "neutral"
+}

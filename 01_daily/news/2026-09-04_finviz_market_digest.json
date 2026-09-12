@@ -1,0 +1,123 @@
+{
+  "date": "2026-09-04",
+  "generated_at": "2026-09-04T21:03:26-04:00",
+  "timezone": "America/New_York",
+  "source": "wayback",
+  "source_url": "https://web.archive.org/web/20260905010326id_/https://finviz.com/",
+  "archive_snapshot_ts": "20260905010326",
+  "archive_snapshot_at": "2026-09-04T21:03:26-04:00",
+  "archive_url": "https://web.archive.org/web/20260905010326id_/https://finviz.com/",
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-09-08",
+  "clock_rule": "Wayback midday/afternoon capture. Legal for the NEXT session open only (2026-09-08) as a prior-day close recap — NOT the same morning. Generated is the real archive capture time. Gaps stay gaps.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed lower as strong August jobs data boosted Fed hike odds and lifted short‑term yields ahead of next week’s CPI and PPI releases",
+  "raw_text": "- The S&P 500 (SPX) fell 0.4% to 7,718.60, the Dow Jones Industrial Average (DJI) lost 0.5% to 53,414.25, the Nasdaq Composite (COMP) slipped 0.3% to 26,506.99, while the Russell 2000 (IWM) rose 0.2% to 2,975.65 and the S&P 500 (SPX) finished the week essentially flat.\n- U.S. nonfarm payrolls increased by 162,000 in August versus roughly 56,000 expected, with the unemployment rate steady at 4.1%, leading traders to price in over a 50% chance of a September Federal Reserve rate hike.\n- The 2‑year Treasury yield rose to 4.37% following the stronger‑than‑expected jobs report, reflecting higher near‑term rate expectations.\n- Industrials led the S&P 500 (SPX) with a 0.41% gain, supported by strength in Eaton (ETN) and J.B. Hunt (JBHT).\n- Consumer discretionary stocks underperformed, falling about 1.3%, as Lululemon Athletica (LULU) dropped 17.4% after Q2 revenue of $2.42 billion and a 9% same‑store sales decline missed estimates and the company cut full‑year revenue and EPS guidance.\n- Tech and memory names outperformed, with SanDisk (SNDK) up 11.9%, Micron Technology (MU) gaining 6.1% on AI memory demand, and Nvidia (NVDA) up 0.8% amid rising AI equity investments.\n- In extended trading, Bloom Energy (BE) jumps 6.2% after S&P Dow Jones Indices said it will be added to the S&P 500 (SPX) effective September 21 alongside Illumina (ILMN) and Everpure (P).\n- Investors now look to next week’s CPI and PPI reports for further signals on Federal Reserve policy, with U.S. markets closed Monday for the Labor Day holiday.",
+  "raw_summary_md": "- The **S&P 500** ([SPX](https://finviz.com/index/SPX?p=d)) fell **0.4%** to **7,718.60**, the **Dow Jones Industrial Average** ([DJI](https://finviz.com/index/DJI?p=d)) lost **0.5%** to **53,414.25**, the **Nasdaq Composite** ([COMP](https://finviz.com/index/COMP?p=d)) slipped **0.3%** to **26,506.99**, while the **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) rose **0.2%** to **2,975.65** and the S&P 500 ([SPX](https://finviz.com/index/SPX?p=d)) **finished the week essentially flat**.\n- U.S. nonfarm payrolls increased by **162,000** in August versus roughly **56,000 expected**, with the unemployment rate steady at **4.1%**, leading traders to price in **over a 50% chance** of a **September Federal Reserve rate hike**.\n- The **2‑year Treasury yield** rose to **4.37%** following the **stronger‑than‑expected jobs report**, reflecting **higher near‑term rate expectations**.\n- **Industrials** led the S&P 500 ([SPX](https://finviz.com/index/SPX?p=d)) with a **0.41% gain**, supported by strength in **Eaton** ([ETN](https://finviz.com/quote?t=ETN)) and **J.B. Hunt** ([JBHT](https://finviz.com/quote?t=JBHT)).\n- **Consumer discretionary stocks underperformed, falling about 1.3%**, as **Lululemon Athletica** ([LULU](https://finviz.com/quote?t=LULU)) dropped **17.4%** after **Q2 revenue of $2.42 billion** and a **9% same‑store sales decline** missed estimates and the company **cut full‑year revenue and EPS guidance**.\n- **Tech and memory names outperformed**, with **SanDisk** ([SNDK](https://finviz.com/quote?t=SNDK)) up **11.9%**, **Micron Technology** ([MU](https://finviz.com/quote?t=MU)) gaining **6.1%** on **AI memory demand**, and **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) up **0.8%** amid **rising AI equity investments**.\n- In **extended trading**, **Bloom Energy** ([BE](https://finviz.com/quote?t=BE)) jumps **6.2%** after S&P Dow Jones Indices said it will be **added to the S&P 500** ([SPX](https://finviz.com/index/SPX?p=d)) **effective September 21** alongside **Illumina** ([ILMN](https://finviz.com/quote?t=ILMN)) and **Everpure** ([P](https://finviz.com/quote?t=P)).\n- **Investors now look to next week’s CPI and PPI reports** for further signals on **Federal Reserve policy**, with **U.S. markets closed Monday for the Labor Day holiday**.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -0.4,
+      "verb": "fell"
+    },
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": -0.5,
+      "verb": "lost"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": -0.3,
+      "verb": "slipped"
+    },
+    {
+      "name": "Russell 2000",
+      "code": "RUT",
+      "change_pct": 0.2,
+      "verb": "rose"
+    }
+  ],
+  "oil": null,
+  "cpi": {
+    "text": "s CPI and PPI reports for further signals on Federal Reserve policy, with U",
+    "hotter": false
+  },
+  "fed_odds": {
+    "pct": 50.0,
+    "action": "hike",
+    "text": "50% chance of a September Federal Reserve rate hike"
+  },
+  "named_tickers": [
+    "ETN",
+    "JBHT",
+    "LULU",
+    "SNDK",
+    "MU",
+    "NVDA",
+    "BE",
+    "ILMN",
+    "P"
+  ],
+  "named_leaders": [
+    "ETN",
+    "JBHT",
+    "LULU",
+    "SNDK",
+    "MU",
+    "NVDA",
+    "BE",
+    "ILMN",
+    "P"
+  ],
+  "calendar": [
+    "Investors now look to next week’s CPI and PPI reports for further signals on Federal Reserve policy, with U.S. markets closed Monday for the Labor Day holiday."
+  ],
+  "prior_close": {
+    "spx": -0.4,
+    "nasdaq": -0.3,
+    "dow": -0.5
+  },
+  "cpi_fed": {
+    "cpi": {
+      "text": "s CPI and PPI reports for further signals on Federal Reserve policy, with U",
+      "hotter": false
+    },
+    "fed_odds": {
+      "pct": 50.0,
+      "action": "hike",
+      "text": "50% chance of a September Federal Reserve rate hike"
+    }
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "U.S. nonfarm payrolls increased by 162,000 in August versus roughly 56,000 expected, with the unemployment rate steady at 4.1%, leading traders to price in over a 50% chance of a September Federal Reserve rate hike.",
+      "Investors now look to next week’s CPI and PPI reports for further signals on Federal Reserve policy, with U.S. markets closed Monday for the Labor Day holiday."
+    ],
+    "text": "U.S. nonfarm payrolls increased by 162,000 in August versus roughly 56,000 expected, with the unemployment rate steady at 4.1%, leading traders to price in over a 50% chance of a September Federal Reserve rate hike. Investors now look to next week’s CPI and PPI reports for further signals on Federal Reserve policy, with U.S. markets closed Monday for the Labor Day holiday."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 279921,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-04T20:36:22.447",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}
