@@ -16,9 +16,10 @@ name: Pre-Open ALL (predictive one-shot)
 #      ubuntu-HHMM). cancel-in-progress is true on that group so a late
 #      poke supersedes the prior ubuntu run. ECS stays on preopen-all-ecs
 #      with cancel-in-progress false (do not kill a 3h Grok call).
-#   #4 Push after 09:25 ET passes --bypass-cutoff (essays may run;
-#      skip-if-good still honors quality-ok files). The 12:00 cap used
-#      to no-op a missing parse after lunch (2026-09-09).
+#   #4 Ubuntu late heal after 09:25 ET passes --bypass-cutoff (essays
+#      may run; skip-if-good still honors quality-ok files). Covers
+#      weekday cron, orch ubuntu dispatch, and a yml poke — not ECS.
+#      The 12:00 cap used to no-op a missing parse after lunch (09-09).
 #      Explicit workflow_dispatch force=true is the only full rewrite.
 #      Morning / on-time runs do NOT pass --force.
 #   Cancel auth: Actions:write is on this workflow so GitHub concurrency
@@ -100,11 +101,19 @@ jobs:
       - id: g
         run: |
           ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          DOW=$(TZ=America/New_York date +%u)
           FORCE="${{ github.event.inputs.force }}"
-          echo "ET_HM=$ET_HM event=${{ github.event_name }} force=$FORCE"
-          if [ "${{ github.event_name }}" = "push" ] && [ "$ET_HM" -lt 355 ] && [ "$FORCE" != "true" ]; then
-            echo "before 03:55 ET — overnight merge/touch is not a packet. 04:00 standing poke + ECS 05:55 + 05:40 scrape own the clock."
-            echo "go=no" >> "$GITHUB_OUTPUT"
+          echo "ET_HM=$ET_HM DOW=$DOW event=${{ github.event_name }} force=$FORCE"
+          if [ "${{ github.event_name }}" = "push" ] && [ "$FORCE" != "true" ]; then
+            if [ "$ET_HM" -lt 355 ]; then
+              echo "before 03:55 ET — overnight merge/touch is not a packet. Weekday cron 05:55 + 05:40 scrape own the clock."
+              echo "go=no" >> "$GITHUB_OUTPUT"
+            elif [ "$DOW" -ge 6 ]; then
+              echo "weekend push poke swallowed — weekday cron owns the clock"
+              echo "go=no" >> "$GITHUB_OUTPUT"
+            else
+              echo "go=yes" >> "$GITHUB_OUTPUT"
+            fi
           else
             echo "go=yes" >> "$GITHUB_OUTPUT"
           fi
@@ -300,7 +309,7 @@ jobs:
           fi
           # 09:25 is enforced in src.run_preopen_all (essays only).
           # Weather / join / AB / the book still run so BUY/SELL can land.
-          # Push after 09:25 ET uses --bypass-cutoff (not --force).
+          # Ubuntu writers after 09:25 ET use --bypass-cutoff (not --force).
 
       - uses: actions/setup-python@v5
         if: env.skip != 'yes' && env.skip_python != 'yes'
@@ -349,15 +358,17 @@ jobs:
           BACKEND="${LLM_BACKEND:-auto}"
           FORCE="${{ github.event.inputs.force }}"
           ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          EVENT="${{ github.event_name }}"
+          RUNNER="${{ github.event.inputs.runner }}"
           ARGS=(--llm-backend "$BACKEND")
           [ -n "$DATE" ] && ARGS+=(--date "$DATE")
           [ "$BOOK" = "false" ] && ARGS+=(--no-book)
           if [ "$FORCE" = "true" ]; then
             ARGS+=(--force)
             echo "explicit --force (rewrite quality-ok + bypass 09:25)"
-          elif [ "${{ github.event_name }}" = "push" ] && [ "$ET_HM" -ge 925 ]; then
+          elif [ "$ET_HM" -ge 925 ] && { [ "$EVENT" = "push" ] || [ "$EVENT" = "schedule" ] || [ "$RUNNER" = "ubuntu" ]; }; then
             ARGS+=(--bypass-cutoff)
-            echo "push late-heal --bypass-cutoff (after 09:25 ET; skip-if-good on)"
+            echo "ubuntu late-heal --bypass-cutoff (after 09:25 ET; skip-if-good on)"
           fi
           echo "CMD: python -m src.run_preopen_all ${ARGS[*]}"
           python -m src.run_preopen_all "${ARGS[@]}"

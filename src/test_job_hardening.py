@@ -113,7 +113,7 @@ def test_cancel_in_progress_off_on_grok_jobs() -> None:
     group_line = next(ln for ln in pre.splitlines() if ln.strip().startswith("group: preopen-all-"))
     assert "ubuntu-0" not in group_line and "ubuntu-stop" not in group_line
     assert "&& 'ubuntu' || 'ecs'" in group_line
-    assert "cancel-in-progress: ${{ github.event_name == 'push' || github.event.inputs.runner == 'ubuntu' }}" in pre
+    assert "cancel-in-progress: ${{ github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu' }}" in pre
 
 
 def test_safe_git_push_used_by_failing_commit_jobs() -> None:

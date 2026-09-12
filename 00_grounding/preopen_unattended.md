@@ -1,7 +1,9 @@
 # Pre-Open ALL — unattended morning + incremental land
 
-Unattended clock is ECS systemd `fullscan-preopen.timer` at **05:55 ET**.
-GitHub `preopen_all.yml` is a poke / ubuntu heal, not the primary clock.
+Unattended clock is GitHub weekday cron `55 9 * * 1-5` (~05:55 ET EDT)
+on `ubuntu-latest` / DeepSeek. Orchestrator 07:50 / 09:20 / 09:35
+re-dispatches ubuntu if the pack is incomplete. ECS systemd 05:55 is
+an optional Grok extra, not the laptop-off clock.
 
 ## Incremental land (write A → QC A → push A)
 
@@ -29,8 +31,9 @@ https://sroyaltyy.github.io/fullscan/dashboard/factor-mine/
    `daily_orchestrator.yml` must not contain `if: false` / HALT.
 2. **One ubuntu writer.** Group `preopen-all-ubuntu` or `preopen-all-ecs`.
    Never `ubuntu-HHMM`. Ubuntu cancels twins. ECS does not.
-3. **On-time 09:25 gate stays.** Late push 09:25–12:00 ET uses
-   `--bypass-cutoff`. Only `force=true` rewrites quality-ok files.
+3. **On-time 09:25 gate stays.** Ubuntu writers that start after 09:25
+   ET (weekday cron, orch dispatch, yml poke) use `--bypass-cutoff`.
+   ECS does not. Only `force=true` rewrites quality-ok files.
 4. **DeepSeek preflight.** A 402 skips essays; weather / join / book
    still land. Top up the key before 05:55 if the preflight fails.
 5. **Holiday / missing night heat.** Overlay copies last session groups
