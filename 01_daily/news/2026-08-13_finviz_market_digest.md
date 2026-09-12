@@ -13,10 +13,12 @@
 **Geo/grain:** geo
 **Archive snapshot:** `20260813103418` (2026-08-13T06:34:18-04:00)
 **Archive URL:** https://web.archive.org/web/20260813103418id_/https://finviz.com/
+**Clock legal for:** 2026-08-13
+**Clock use:** `same_morning`
 
 ## Clock
 
-This file exists only because **Generated is before 09:30 ET on this date**. Miss the morning → leave the file missing. Do not write an afternoon scrape as if it were pre-open.
+Capture is **before 09:30 ET on this date**, so it is legal for that morning's Pre-Open (`clock_legal_for` = 2026-08-13).
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
