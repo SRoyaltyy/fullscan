@@ -413,9 +413,21 @@ def qc_finviz_market_digest(path: str | Path) -> QCResult:
         use = data.get("clock_use")
         legal_for = data.get("clock_legal_for")
         archive = src in ("wayback", "archive.ph")
+        close = (
+            "finviz_market_digest_close" in p
+            or data.get("capture_slot") == "close"
+            or str(data.get("kind") or "").endswith("_close")
+        )
         if "clock_legal_for" not in data:
             return _fail("finviz_market_digest", p, "missing_clock_legal_for")
-        if archive and hm >= 930:
+        if close:
+            if use != "next_open":
+                return _fail("finviz_market_digest", p, "close_not_next_open")
+            if not legal_for or legal_for == date:
+                return _fail("finviz_market_digest", p, "clock_legal_for_not_next")
+            if data.get("clock_same_morning") is True:
+                return _fail("finviz_market_digest", p, "close_marked_same_morning")
+        elif archive and hm >= 930:
             if use != "next_open":
                 return _fail("finviz_market_digest", p, "afternoon_not_next_open")
             if not legal_for or legal_for == date:
