@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_e_fresh_h3 w=0.7,0.3 net=priority
 
-Cash book **+24.22%** ($12,422) · signal-only (no cash/fees) was —. Starts YES **16/20**. Fills 146 · skips 208 · realized $+2421.96.
+Cash book **+24.23%** ($12,423) · signal-only (no cash/fees) was —. Starts YES **16/21**. Fills 158 · skips 208 · realized $+2502.86.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $12,421.97.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $15,316.32.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -346,16 +346,28 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `MAMA` | 35 | $15.50 | $15.31 | -6.65 | $15.23 | -2.63 | -9.28 | -13.65 | -16.27 |
 | 2026-09-09 | `GSM` | 660 | $4.52 | $4.52 | +0.00 | $4.49 | +19.80 | +19.80 | +99.00 | +118.80 |
 | 2026-09-09 | `PIPR` | 40 | $77.34 | $77.24 | +4.00 | $76.96 | +11.20 | +15.20 | -27.60 | -16.40 |
-| 2026-09-10 | `AMBA` | 8 | $68.80 | $68.80 | +0.00 | — | +0.00 | +0.00 | +44.96 | — |
-| 2026-09-10 | `ASAN` | 63 | $8.25 | $8.33 | +5.04 | — | +0.00 | +5.04 | -25.83 | — |
-| 2026-09-10 | `DOCU` | 8 | $64.45 | $64.45 | +0.00 | — | +0.00 | +0.00 | -32.56 | — |
-| 2026-09-10 | `DOMO` | 152 | $3.78 | $3.78 | +0.00 | — | +0.00 | +0.00 | +25.08 | — |
-| 2026-09-10 | `GWRE` | 3 | $142.24 | $142.00 | -0.72 | — | +0.00 | -0.72 | -76.65 | — |
-| 2026-09-10 | `IOT` | 12 | $38.65 | $38.73 | +0.96 | — | +0.00 | +0.96 | -74.04 | — |
-| 2026-09-10 | `LULU` | 5 | $99.72 | $96.88 | -14.20 | — | +0.00 | -14.20 | -6.35 | — |
-| 2026-09-10 | `MAMA` | 35 | $15.23 | $15.23 | -0.17 | — | +0.00 | -0.17 | -16.45 | — |
-| 2026-09-10 | `GSM` | 660 | $4.49 | $4.49 | +0.00 | — | +0.00 | +0.00 | +118.80 | — |
-| 2026-09-10 | `PIPR` | 40 | $76.96 | $76.96 | +0.00 | — | +0.00 | +0.00 | -16.40 | — |
+| 2026-09-10 | `AMBA` | 8 | $68.80 | $67.44 | -10.88 | — | +0.00 | -10.88 | +34.08 | — |
+| 2026-09-10 | `ASAN` | 63 | $8.25 | $8.26 | +0.63 | — | +0.00 | +0.63 | -30.24 | — |
+| 2026-09-10 | `DOCU` | 8 | $64.45 | $64.60 | +1.20 | — | +0.00 | +1.20 | -31.36 | — |
+| 2026-09-10 | `DOMO` | 152 | $3.78 | $3.76 | -3.04 | — | +0.00 | -3.04 | +22.04 | — |
+| 2026-09-10 | `GWRE` | 3 | $142.24 | $142.43 | +0.57 | — | +0.00 | +0.57 | -75.36 | — |
+| 2026-09-10 | `IOT` | 12 | $38.65 | $38.23 | -5.10 | — | +0.00 | -5.10 | -80.10 | — |
+| 2026-09-10 | `LULU` | 5 | $99.72 | $98.71 | -5.05 | — | +0.00 | -5.05 | +2.80 | — |
+| 2026-09-10 | `MAMA` | 35 | $15.23 | $15.26 | +0.88 | — | +0.00 | +0.88 | -15.40 | — |
+| 2026-09-10 | `GSM` | 660 | $4.49 | $4.36 | +85.80 | — | +0.00 | +85.80 | +204.60 | — |
+| 2026-09-10 | `PIPR` | 40 | $76.96 | $76.79 | +6.80 | — | +0.00 | +6.80 | -9.60 | — |
+| 2026-09-11 | `ORCL` | 2 | — | $164.43 | +0.00 | $150.28 | -28.30 | -28.30 | +0.00 | -28.30 |
+| 2026-09-11 | `DBI` | 79 | — | $5.91 | +0.00 | $5.88 | -2.37 | -2.37 | +0.00 | -2.37 |
+| 2026-09-11 | `ADBE` | 1 | — | $242.17 | +0.00 | $252.23 | +10.06 | +10.06 | +0.00 | +10.06 |
+| 2026-09-11 | `CPRT` | 14 | — | $32.01 | +0.00 | $29.95 | -28.84 | -28.84 | +0.00 | -28.84 |
+| 2026-09-11 | `DSGX` | 6 | — | $71.71 | +0.00 | $76.04 | +25.98 | +25.98 | +0.00 | +25.98 |
+| 2026-09-11 | `KR` | 8 | — | $56.02 | +0.00 | $58.49 | +19.76 | +19.76 | +0.00 | +19.76 |
+| 2026-09-11 | `LPTH` | 50 | — | $9.37 | +0.00 | $9.20 | -8.50 | -8.50 | +0.00 | -8.50 |
+| 2026-09-11 | `REF` | 35 | — | $13.10 | +0.00 | $14.03 | +32.55 | +32.55 | +0.00 | +32.55 |
+| 2026-09-11 | `QRVO` | 13 | — | $112.83 | +0.00 | $116.65 | -49.60 | -49.60 | -0.00 | -49.60 |
+| 2026-09-11 | `MYGN` | 463 | — | $3.37 | +0.00 | $3.42 | -23.15 | -23.15 | -0.00 | -23.15 |
+| 2026-09-11 | `RWT` | 443 | — | $3.52 | +0.00 | $3.55 | -13.29 | -13.29 | -0.00 | -13.29 |
+| 2026-09-11 | `CRDL` | 768 | — | $2.03 | +0.00 | $2.00 | +26.88 | +26.88 | -0.00 | +26.88 |
 
 ## Each session (cash + holdings state)
 
@@ -380,7 +392,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 | +2.25 | $14,730.56 | AI×41, AVGO×1, CHPT×64, CIEN×1, CPB×20, FIVE×1, HPE×9, MEI×29, SLN×201, OPK×1746 | $12,346.78 | +80.63 | -125.22 | AMBA, ASAN, DOCU, DOMO, GWRE, IOT, LULU, MAMA, GSM, PIPR | — | $16,611.62 | $12,193.82 | AI×41, AVGO×1, CHPT×64, CIEN×1, CPB×20, FIVE×1, HPE×9, MEI×29, SLN×201, OPK×1746, AMBA×8, ASAN×63, DOCU×8, DOMO×152, GWRE×3, IOT×12, LULU×5, MAMA×35, GSM×660, PIPR×40 |
 | 2026-09-08 | -11.47 | $16,611.62 | AI×41, AVGO×1, CHPT×64, CIEN×1, CPB×20, FIVE×1, HPE×9, MEI×29, SLN×201, OPK×1746, AMBA×8, ASAN×63, DOCU×8, DOMO×152, GWRE×3, IOT×12, LULU×5, MAMA×35, GSM×660, PIPR×40 | $12,224.26 | +30.44 | +278.24 | — | — | $16,611.62 | $12,502.50 | AI×41, AVGO×1, CHPT×64, CIEN×1, CPB×20, FIVE×1, HPE×9, MEI×29, SLN×201, OPK×1746, AMBA×8, ASAN×63, DOCU×8, DOMO×152, GWRE×3, IOT×12, LULU×5, MAMA×35, GSM×660, PIPR×40 |
 | 2026-09-09 | -13.95 | $16,611.62 | AI×41, AVGO×1, CHPT×64, CIEN×1, CPB×20, FIVE×1, HPE×9, MEI×29, SLN×201, OPK×1746, AMBA×8, ASAN×63, DOCU×8, DOMO×152, GWRE×3, IOT×12, LULU×5, MAMA×35, GSM×660, PIPR×40 | $12,503.50 | +1.00 | -3.17 | — | AI, AVGO, CHPT, CIEN, CPB, FIVE, HPE, MEI, SLN, OPK | $14,417.78 | $12,458.64 | AMBA×8, ASAN×63, DOCU×8, DOMO×152, GWRE×3, IOT×12, LULU×5, MAMA×35, GSM×660, PIPR×40 |
-| 2026-09-10 | -13.28 | $14,417.78 | AMBA×8, ASAN×63, DOCU×8, DOMO×152, GWRE×3, IOT×12, LULU×5, MAMA×35, GSM×660, PIPR×40 | $12,449.54 | -9.10 | +0.00 | — | AMBA, ASAN, DOCU, DOMO, GWRE, IOT, LULU, MAMA, GSM, PIPR | $12,421.97 | $12,421.97 | — |
+| 2026-09-10 | -13.28 | $14,417.78 | AMBA×8, ASAN×63, DOCU×8, DOMO×152, GWRE×3, IOT×12, LULU×5, MAMA×35, GSM×660, PIPR×40 | $12,530.44 | +71.80 | +0.00 | — | AMBA, ASAN, DOCU, DOMO, GWRE, IOT, LULU, MAMA, GSM, PIPR | $12,502.87 | $12,502.87 | — |
+| 2026-09-11 | +0.50 | $12,502.87 | — | $12,502.87 | -0.00 | -38.82 | ORCL, DBI, ADBE, CPRT, DSGX, KR, LPTH, REF, QRVO, MYGN, RWT, CRDL | — | $15,316.32 | $12,423.42 | ORCL×2, DBI×79, ADBE×1, CPRT×14, DSGX×6, KR×8, LPTH×50, REF×35, QRVO×13, MYGN×463, RWT×443, CRDL×768 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -560,18 +573,32 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 09:30 ET | **COVER** | `SLN` | 201 | $13.60 | $2.60 | $+245.92 | $17,198.99 | ▲ +245.92 after sell → book $12,484.33; vs 09:30 mark -2.59 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
 | 2026-09-09 09:30 ET | **COVER** | `OPK` | 1746 | $1.58 | $22.52 | $+181.54 | $14,417.78 | ▲ +181.54 after sell → book $12,461.80; vs 09:30 mark -22.53 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
 | 2026-09-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,417.78 | ▼ close $12,458.64 vs 09:30 $12,503.50 (session -3.17) | 16:00 close · cash $14,417.78 · equity $12,458.64 vs 09:30 $12,503.50 (-44.86; session marks -3.17) · 10 name(s) marked open→close (per-name table). AMBA×8 09:30 $63.07 → close $68.80 +45.84; ASAN×63 09:30 $8.64 → close $8.25 -24.57; DOCU×8 09:30 $64.64 → close $64.45 -1.52; DOMO×152 09:30 $3.86 → close $3.78 -12.16; GWRE×3 09:30 $147.85 → close $142.24 -16.83; IOT×12 09:30 $39.60 → close $38.65 -11.40; LULU×5 09:30 $101.90 → close $99.72 -10.90; MAMA×35 09:30 $15.31 → close $15.23 -2.63; GSM×660 09:30 $4.52 → close $4.49 +19.80; PIPR×40 09:30 $77.24 → close $76.96 +11.20 | — |
-| 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,417.78 | ▼ 09:30 equity $12,449.54 vs yday $12,458.64 (-9.10) | 09:30 open · cash $14,417.78 (unchanged overnight, no fees) · equity $12,449.54 vs prior close $12,458.64 (-9.10) | — |
-| 2026-09-10 09:30 ET | **SELL** | `AMBA` | 8 | $68.80 | $2.03 | $+40.91 | $14,966.15 | ▲ +40.91 after sell → book $12,447.51; vs 09:30 mark -2.03 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
-| 2026-09-10 09:30 ET | **SELL** | `ASAN` | 63 | $8.33 | $2.20 | $-30.21 | $15,488.74 | ▼ -30.21 after sell → book $12,445.31; vs 09:30 mark -2.20 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
-| 2026-09-10 09:30 ET | **SELL** | `DOCU` | 8 | $64.45 | $2.03 | $-36.61 | $16,002.31 | ▼ -36.61 after sell → book $12,443.28; vs 09:30 mark -2.03 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
-| 2026-09-10 09:30 ET | **SELL** | `DOMO` | 152 | $3.78 | $2.48 | $+20.15 | $16,574.38 | ▲ +20.15 after sell → book $12,440.79; vs 09:30 mark -2.49 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
-| 2026-09-10 09:30 ET | **SELL** | `GWRE` | 3 | $142.00 | $2.02 | $-80.67 | $16,998.37 | ▼ -80.67 after sell → book $12,438.78; vs 09:30 mark -2.01 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
-| 2026-09-10 09:30 ET | **SELL** | `IOT` | 12 | $38.73 | $2.05 | $-78.11 | $17,461.08 | ▼ -78.11 after sell → book $12,436.73; vs 09:30 mark -2.05 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
-| 2026-09-10 09:30 ET | **SELL** | `LULU` | 5 | $96.88 | $2.02 | $-10.38 | $17,943.45 | ▼ -10.38 after sell → book $12,434.70; vs 09:30 mark -2.03 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
-| 2026-09-10 09:30 ET | **SELL** | `MAMA` | 35 | $15.23 | $2.12 | $-20.66 | $18,474.39 | ▼ -20.66 after sell → book $12,432.59; vs 09:30 mark -2.11 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
-| 2026-09-10 09:30 ET | **COVER** | `GSM` | 660 | $4.49 | $8.51 | $+101.55 | $15,502.48 | ▲ +101.55 after sell → book $12,424.08; vs 09:30 mark -8.51 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
-| 2026-09-10 09:30 ET | **COVER** | `PIPR` | 40 | $76.96 | $2.11 | $-20.74 | $12,421.97 | ▼ -20.74 after sell → book $12,421.97; vs 09:30 mark -2.11 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
-| 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,421.97 | ▲ close $12,421.97 vs 09:30 $12,449.54 (session +0.00) | 16:00 close · cash $12,421.97 · no lots left · equity $12,421.97. | — |
+| 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,417.78 | ▲ 09:30 equity $12,530.44 vs yday $12,458.64 (+71.80) | 09:30 open · cash $14,417.78 (unchanged overnight, no fees) · equity $12,530.44 vs prior close $12,458.64 (+71.80) | — |
+| 2026-09-10 09:30 ET | **SELL** | `AMBA` | 8 | $67.44 | $2.03 | $+30.03 | $14,955.27 | ▲ +30.03 after sell → book $12,528.41; vs 09:30 mark -2.03 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-10 09:30 ET | **SELL** | `ASAN` | 63 | $8.26 | $2.20 | $-34.62 | $15,473.45 | ▼ -34.62 after sell → book $12,526.21; vs 09:30 mark -2.20 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-10 09:30 ET | **SELL** | `DOCU` | 8 | $64.60 | $2.03 | $-35.41 | $15,988.22 | ▼ -35.41 after sell → book $12,524.18; vs 09:30 mark -2.03 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-10 09:30 ET | **SELL** | `DOMO` | 152 | $3.76 | $2.48 | $+17.11 | $16,557.25 | ▲ +17.11 after sell → book $12,521.69; vs 09:30 mark -2.49 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-10 09:30 ET | **SELL** | `GWRE` | 3 | $142.43 | $2.02 | $-79.38 | $16,982.53 | ▼ -79.38 after sell → book $12,519.68; vs 09:30 mark -2.01 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-10 09:30 ET | **SELL** | `IOT` | 12 | $38.23 | $2.05 | $-84.17 | $17,439.18 | ▼ -84.17 after sell → book $12,517.63; vs 09:30 mark -2.05 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-10 09:30 ET | **SELL** | `LULU` | 5 | $98.71 | $2.02 | $-1.23 | $17,930.70 | ▼ -1.23 after sell → book $12,515.60; vs 09:30 mark -2.03 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-10 09:30 ET | **SELL** | `MAMA` | 35 | $15.26 | $2.12 | $-19.61 | $18,462.69 | ▼ -19.61 after sell → book $12,513.49; vs 09:30 mark -2.11 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-10 09:30 ET | **COVER** | `GSM` | 660 | $4.36 | $8.51 | $+187.35 | $15,576.58 | ▲ +187.35 after sell → book $12,504.98; vs 09:30 mark -8.51 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-10 09:30 ET | **COVER** | `PIPR` | 40 | $76.79 | $2.11 | $-13.94 | $12,502.87 | ▼ -13.94 after sell → book $12,502.87; vs 09:30 mark -2.11 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,502.87 | ▲ close $12,502.87 vs 09:30 $12,530.44 (session +0.00) | 16:00 close · cash $12,502.87 · no lots left · equity $12,502.87. | — |
+| 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,502.87 | ▲ 09:30 equity $12,502.87 vs yday $12,502.87 (-0.00) | 09:30 open · cash $12,502.87 (unchanged overnight, no fees) · equity $12,502.87 vs prior close $12,502.87 (-0.00) | — |
+| 2026-09-11 09:30 ET | **BUY** | `ORCL` | 2 | $164.43 | $2.00 | — | $12,172.01 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list flatten,earn_react; 🔵; ⚪; ret5=+9.0; combo leftover $468.86; owner union_e_fresh_h3 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `DBI` | 79 | $5.91 | $2.23 | — | $11,702.89 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list probable,yday_gainer,yday_mover; ret5=-4.9; combo leftover $468.86; owner union_e_fresh_h3 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `ADBE` | 1 | $242.17 | $1.99 | — | $11,458.73 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-12.1; combo leftover $468.86; owner union_e_fresh_h3 | join🟢 sector🟢 gen🟡 news🟢 digest🟡 judge🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `CPRT` | 14 | $32.01 | $2.03 | — | $11,008.56 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-4.4; combo leftover $468.86; owner union_e_fresh_h3 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `DSGX` | 6 | $71.71 | $2.01 | — | $10,576.29 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-6.3; combo leftover $468.86; owner union_e_fresh_h3 | join🟢 sector🟢 gen🟡 news🟡 digest🟡 judge🟢 ab🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `KR` | 8 | $56.02 | $2.01 | — | $10,126.12 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-0.6; combo leftover $468.86; owner union_e_fresh_h3 | join🔴 sector🟡 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `LPTH` | 50 | $9.37 | $2.14 | — | $9,655.48 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=+1.5; combo leftover $468.86; owner union_e_fresh_h3 | join🔴 sector🟢 gen🟡 news🟡 digest🟡 judge🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `REF` | 35 | $13.10 | $2.10 | — | $9,194.88 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-5.2; combo leftover $468.86; owner union_e_fresh_h3 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-11 09:30 ET | **SHORT** | `QRVO` | 13 | $112.83 | $2.09 | — | $10,659.64 | — | news🔴; gate news=bad; list probable,yday_gainer; 🔵; ret5=+8.3; combo leftover $1560.80; owner short_news_r_h3 | join🟢 sector🟢 gen🟡 news🔴 digest🟡 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **SHORT** | `MYGN` | 463 | $3.37 | $6.10 | — | $12,213.85 | — | news🔴; gate news=bad; list yday_gainer; 🔵; ret5=-1.2; combo leftover $1560.80; owner short_news_r_h3 | join🔴 sector🟡 gen🟡 news🔴 digest🔴 judge🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **SHORT** | `RWT` | 443 | $3.52 | $5.84 | — | $13,767.37 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-4.5; combo leftover $1560.80; owner short_news_r_h3 | join🔴 sector🔴 gen🟡 news🔴 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **SHORT** | `CRDL` | 768 | $2.03 | $10.09 | — | $15,316.32 | — | news🔴; gate news=bad; list yday_mover; ret5=-8.8; combo leftover $1560.80; owner short_news_r_h3 | join🟢 sector🟡 gen🟡 news🔴 digest🔴 judge🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,316.32 | ▼ close $12,423.42 vs 09:30 $12,502.87 (session -38.82) | 16:00 close · cash $15,316.32 · equity $12,423.42 vs 09:30 $12,502.87 (-79.45; session marks -38.82) · 12 name(s) marked open→close (per-name table). ORCL×2 09:30 $164.43 → close $150.28 -28.30; DBI×79 09:30 $5.91 → close $5.88 -2.37; ADBE×1 09:30 $242.17 → close $252.23 +10.06; CPRT×14 09:30 $32.01 → close $29.95 -28.84; DSGX×6 09:30 $71.71 → close $76.04 +25.98; KR×8 09:30 $56.02 → close $58.49 +19.76; LPTH×50 09:30 $9.37 → close $9.20 -8.50; REF×35 09:30 $13.10 → close $14.03 +32.55; QRVO×13 09:30 $112.83 → close $116.65 -49.60; MYGN×463 09:30 $3.37 → close $3.42 -23.15; RWT×443 09:30 $3.52 → close $3.55 -13.29; CRDL×768 09:30 $2.03 → close $2.00 +26.88 | — |
 
 ## Not taken
 
@@ -785,3 +812,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | `AVAV` | hard_red | hard-red S=-13.28 sit; no new union_e_fresh_h3 |
 | 2026-09-10 | `COO` | hard_red | hard-red S=-13.28 sit; no new union_e_fresh_h3 |
 | 2026-09-10 | `DBI` | hard_red | hard-red S=-13.28 sit; no new union_e_fresh_h3 |
+
+## Still open (marked at last close)
+
+| Ticker | Shares | Entry | Why |
+|---|---:|---|---|
+| `ORCL` | 2 | 2026-09-11 @ $164.43 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list flatten,earn_react; 🔵; ⚪; ret5=+9.0; combo leftover $468.86; owner union_e_fresh_h3 |
+| `DBI` | 79 | 2026-09-11 @ $5.91 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list probable,yday_gainer,yday_mover; ret5=-4.9; combo leftover $468.86; owner union_e_fresh_h3 |
+| `ADBE` | 1 | 2026-09-11 @ $242.17 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-12.1; combo leftover $468.86; owner union_e_fresh_h3 |
+| `CPRT` | 14 | 2026-09-11 @ $32.01 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-4.4; combo leftover $468.86; owner union_e_fresh_h3 |
+| `DSGX` | 6 | 2026-09-11 @ $71.71 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-6.3; combo leftover $468.86; owner union_e_fresh_h3 |
+| `KR` | 8 | 2026-09-11 @ $56.02 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-0.6; combo leftover $468.86; owner union_e_fresh_h3 |
+| `LPTH` | 50 | 2026-09-11 @ $9.37 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=+1.5; combo leftover $468.86; owner union_e_fresh_h3 |
+| `REF` | 35 | 2026-09-11 @ $13.10 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-5.2; combo leftover $468.86; owner union_e_fresh_h3 |
+| `QRVO` | 13 | 2026-09-11 @ $112.83 | news🔴; gate news=bad; list probable,yday_gainer; 🔵; ret5=+8.3; combo leftover $1560.80; owner short_news_r_h3 |
+| `MYGN` | 463 | 2026-09-11 @ $3.37 | news🔴; gate news=bad; list yday_gainer; 🔵; ret5=-1.2; combo leftover $1560.80; owner short_news_r_h3 |
+| `RWT` | 443 | 2026-09-11 @ $3.52 | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-4.5; combo leftover $1560.80; owner short_news_r_h3 |
+| `CRDL` | 768 | 2026-09-11 @ $2.03 | news🔴; gate news=bad; list yday_mover; ret5=-8.8; combo leftover $1560.80; owner short_news_r_h3 |

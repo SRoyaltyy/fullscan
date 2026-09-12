@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · buy last-green, sell next 09:30 if last bar flipped red
 
-Cash book **+0.48%** ($10,048) · signal-only (no cash/fees) was +14.07%. Starts YES **2/20**. Fills 102 · skips 198 · realized $+47.87.
+Cash book **+2.42%** ($10,242) · signal-only (no cash/fees) was +31.98%. Starts YES **6/21**. Fills 110 · skips 198 · realized $-3.17.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $10,047.88.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $148.77.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -250,14 +250,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `FCEL` | 43 | $17.76 | $17.90 | +6.02 | $16.57 | -57.19 | -51.17 | +145.34 | +88.15 |
 | 2026-09-09 | `MDB` | 1 | $356.00 | $359.97 | +3.97 | $358.38 | -1.59 | +2.38 | -18.37 | -19.96 |
 | 2026-09-09 | `ASST` | 25 | $27.16 | $28.00 | +21.00 | $26.69 | -32.75 | -11.75 | +70.50 | +37.75 |
-| 2026-09-10 | `CRM` | 2 | $244.16 | $245.44 | +2.56 | — | +0.00 | +2.56 | -35.84 | — |
-| 2026-09-10 | `DELL` | 1 | $535.25 | $535.20 | -0.05 | — | +0.00 | -0.05 | +21.42 | — |
-| 2026-09-10 | `SLBT` | 200 | $2.61 | $2.55 | -12.00 | — | +0.00 | -12.00 | -120.00 | — |
-| 2026-09-10 | `TARS` | 7 | $82.77 | $81.50 | -8.89 | — | +0.00 | -8.89 | -8.40 | — |
-| 2026-09-10 | `BRR` | 251 | $2.86 | $2.86 | +0.00 | — | +0.00 | +0.00 | +87.85 | — |
-| 2026-09-10 | `FCEL` | 43 | $16.57 | $16.66 | +3.87 | — | +0.00 | +3.87 | +92.02 | — |
-| 2026-09-10 | `MDB` | 1 | $358.38 | $359.79 | +1.41 | — | +0.00 | +1.41 | -18.55 | — |
-| 2026-09-10 | `ASST` | 25 | $26.69 | $26.82 | +3.25 | — | +0.00 | +3.25 | +41.00 | — |
+| 2026-09-10 | `CRM` | 2 | $244.16 | $245.35 | +2.38 | — | +0.00 | +2.38 | -36.02 | — |
+| 2026-09-10 | `DELL` | 1 | $535.25 | $523.83 | -11.42 | — | +0.00 | -11.42 | +10.05 | — |
+| 2026-09-10 | `SLBT` | 200 | $2.61 | $2.58 | -6.00 | — | +0.00 | -6.00 | -114.00 | — |
+| 2026-09-10 | `TARS` | 7 | $82.77 | $80.89 | -13.15 | — | +0.00 | -13.15 | -12.66 | — |
+| 2026-09-10 | `BRR` | 251 | $2.86 | $2.87 | +2.51 | — | +0.00 | +2.51 | +90.36 | — |
+| 2026-09-10 | `FCEL` | 43 | $16.57 | $16.07 | -21.50 | — | +0.00 | -21.50 | +66.65 | — |
+| 2026-09-10 | `MDB` | 1 | $358.38 | $360.42 | +2.04 | — | +0.00 | +2.04 | -17.92 | — |
+| 2026-09-10 | `ASST` | 25 | $26.69 | $26.06 | -15.75 | — | +0.00 | -15.75 | +22.00 | — |
+| 2026-09-11 | `SANM` | 6 | — | $206.84 | +0.00 | $216.00 | +54.96 | +54.96 | +0.00 | +54.96 |
+| 2026-09-11 | `NVT` | 7 | — | $157.78 | +0.00 | $162.38 | +32.20 | +32.20 | +0.00 | +32.20 |
+| 2026-09-11 | `COHU` | 22 | — | $56.09 | +0.00 | $57.08 | +21.78 | +21.78 | +0.00 | +21.78 |
+| 2026-09-11 | `CMRC` | 399 | — | $3.13 | +0.00 | $3.50 | +149.62 | +149.62 | +0.00 | +149.62 |
+| 2026-09-11 | `AMTX` | 612 | — | $2.04 | +0.00 | $2.01 | -18.36 | -18.36 | +0.00 | -18.36 |
+| 2026-09-11 | `CLOV` | 263 | — | $4.75 | +0.00 | $4.82 | +18.41 | +18.41 | +0.00 | +18.41 |
+| 2026-09-11 | `BAK` | 589 | — | $2.12 | +0.00 | $2.08 | -23.56 | -23.56 | +0.00 | -23.56 |
+| 2026-09-11 | `QRVO` | 11 | — | $112.83 | +0.00 | $116.65 | +41.97 | +41.97 | +0.00 | +41.97 |
 
 ## Each session (cash + holdings state)
 
@@ -282,7 +290,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 | +2.25 | $153.31 | ATRC×24, HRMY×30, CABA×358, VSTM×162, RVTY×9, ARCT×77, SLN×87, CRDL×596 | $10,099.54 | -55.09 | +183.71 | CRM, DELL, SLBT, TARS, BRR, FCEL, MDB, ASST | ATRC, HRMY, CABA, RVTY | $515.46 | $10,254.34 | VSTM×162, ARCT×77, SLN×87, CRDL×596, CRM×2, DELL×1, SLBT×200, TARS×7, BRR×251, FCEL×43, MDB×1, ASST×25 |
 | 2026-09-08 | -11.47 | $515.46 | VSTM×162, ARCT×77, SLN×87, CRDL×596, CRM×2, DELL×1, SLBT×200, TARS×7, BRR×251, FCEL×43, MDB×1, ASST×25 | $10,159.56 | -94.78 | +33.09 | — | — | $515.46 | $10,192.65 | VSTM×162, ARCT×77, SLN×87, CRDL×596, CRM×2, DELL×1, SLBT×200, TARS×7, BRR×251, FCEL×43, MDB×1, ASST×25 |
 | 2026-09-09 | -13.95 | $515.46 | VSTM×162, ARCT×77, SLN×87, CRDL×596, CRM×2, DELL×1, SLBT×200, TARS×7, BRR×251, FCEL×43, MDB×1, ASST×25 | $10,195.94 | +3.29 | -105.16 | — | VSTM, ARCT, SLN, CRDL | $5,494.99 | $10,075.95 | CRM×2, DELL×1, SLBT×200, TARS×7, BRR×251, FCEL×43, MDB×1, ASST×25 |
-| 2026-09-10 | -13.28 | $5,494.99 | CRM×2, DELL×1, SLBT×200, TARS×7, BRR×251, FCEL×43, MDB×1, ASST×25 | $10,066.10 | -9.85 | +0.00 | — | CRM, DELL, SLBT, TARS, BRR, FCEL, MDB, ASST | $10,047.88 | $10,047.88 | — |
+| 2026-09-10 | -13.28 | $5,494.99 | CRM×2, DELL×1, SLBT×200, TARS×7, BRR×251, FCEL×43, MDB×1, ASST×25 | $10,015.07 | -60.88 | +0.00 | — | CRM, DELL, SLBT, TARS, BRR, FCEL, MDB, ASST | $9,996.85 | $9,996.85 | — |
+| 2026-09-11 | +0.50 | $9,996.85 | — | $9,996.85 | -0.00 | +277.02 | SANM, NVT, COHU, CMRC, AMTX, CLOV, BAK, QRVO | — | $148.77 | $10,241.74 | SANM×6, NVT×7, COHU×22, CMRC×399, AMTX×612, CLOV×263, BAK×589, QRVO×11 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -394,7 +403,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-03 09:30 ET | **BUY** | `CABA` | 358 | $3.63 | $4.62 | — | $6,545.40 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten,ohlc_hot; 🔵; ⚪; ret5=+9.8; leftover $1301.34 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `VSTM` | 162 | $8.03 | $2.48 | — | $5,242.06 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+8.5; leftover $1301.34 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
 | 2026-09-03 09:30 ET | **BUY** | `RVTY` | 9 | $132.45 | $2.02 | — | $4,047.99 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten,mover_buy; 🔵; ⚪; ret5=+3.6; leftover $1301.34 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `ARCT` | 77 | $16.77 | $2.22 | — | $2,754.48 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer,yday_mover,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+5.7; leftover $1301.34 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `ARCT` | 77 | $16.77 | $2.22 | — | $2,754.48 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+5.7; leftover $1301.34 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `SLN` | 87 | $14.85 | $2.25 | — | $1,460.28 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer; 🔵; ⚪; ret5=+9.3; leftover $1301.34 | join🟢 sector🟡 gen🟡 news🔴 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `CRDL` | 596 | $2.18 | $7.69 | — | $153.31 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer,mover_buy; 🔵; ⚪; ret5=+1.4; leftover $1301.34 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $153.31 | ▼ close $10,154.63 vs 09:30 $10,410.72 (session -230.67) | 16:00 close · cash $153.31 · equity $10,154.63 vs 09:30 $10,410.72 (-256.09; session marks -230.67) · 8 name(s) marked open→close (per-name table). ATRC×24 09:30 $52.88 → close $52.46 -10.08; HRMY×30 09:30 $42.93 → close $41.86 -32.10; CABA×358 09:30 $3.63 → close $3.48 -53.70; VSTM×162 09:30 $8.03 → close $7.98 -8.10; RVTY×9 09:30 $132.45 → close $130.63 -16.38; ARCT×77 09:30 $16.77 → close $15.56 -93.17; SLN×87 09:30 $14.85 → close $14.79 -5.22; CRDL×596 09:30 $2.18 → close $2.16 -11.92 | — |
@@ -420,16 +429,26 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 09:30 ET | **SELL** | `SLN` | 87 | $13.60 | $2.28 | $-113.28 | $4,179.67 | ▼ -113.28 after sell → book $10,188.91; vs 09:30 mark -2.28 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-09 09:30 ET | **SELL** | `CRDL` | 596 | $2.22 | $7.80 | $+8.35 | $5,494.99 | ▲ +8.35 after sell → book $10,181.11; vs 09:30 mark -7.80 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,494.99 | ▼ close $10,075.95 vs 09:30 $10,195.94 (session -105.16) | 16:00 close · cash $5,494.99 · equity $10,075.95 vs 09:30 $10,195.94 (-119.99; session marks -105.16) · 8 name(s) marked open→close (per-name table). CRM×2 09:30 $249.78 → close $244.16 -11.24; DELL×1 09:30 $538.47 → close $535.25 -3.22; SLBT×200 09:30 $2.62 → close $2.61 -2.00; TARS×7 09:30 $86.31 → close $82.77 -24.78; BRR×251 09:30 $2.75 → close $2.86 +27.61; FCEL×43 09:30 $17.90 → close $16.57 -57.19; MDB×1 09:30 $359.97 → close $358.38 -1.59; ASST×25 09:30 $28.00 → close $26.69 -32.75 | — |
-| 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,494.99 | ▼ 09:30 equity $10,066.10 vs yday $10,075.95 (-9.85) | 09:30 open · cash $5,494.99 (unchanged overnight, no fees) · equity $10,066.10 vs prior close $10,075.95 (-9.85) · 8 name(s) re-marked at the open (per-name table). CRM×2 yday $244.16 → 09:30 $245.44 +2.56; DELL×1 yday $535.25 → 09:30 $535.20 -0.05; SLBT×200 yday $2.61 → 09:30 $2.55 -12.00; TARS×7 yday $82.77 → 09:30 $81.50 -8.89; BRR×251 yday $2.86 → 09:30 $2.86 +0.00; FCEL×43 yday $16.57 → 09:30 $16.66 +3.87; MDB×1 yday $358.38 → 09:30 $359.79 +1.41; ASST×25 yday $26.69 → 09:30 $26.82 +3.25 | — |
-| 2026-09-10 09:30 ET | **SELL** | `CRM` | 2 | $245.44 | $2.02 | $-39.85 | $5,983.86 | ▼ -39.85 after sell → book $10,064.09; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-10 09:30 ET | **SELL** | `DELL` | 1 | $535.20 | $2.01 | $+17.41 | $6,517.04 | ▲ +17.41 after sell → book $10,062.07; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-10 09:30 ET | **SELL** | `SLBT` | 200 | $2.55 | $2.63 | $-125.22 | $7,024.41 | ▼ -125.22 after sell → book $10,059.44; vs 09:30 mark -2.63 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-10 09:30 ET | **SELL** | `TARS` | 7 | $81.50 | $2.03 | $-12.44 | $7,592.88 | ▼ -12.44 after sell → book $10,057.41; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-10 09:30 ET | **SELL** | `BRR` | 251 | $2.86 | $3.29 | $+81.32 | $8,307.45 | ▲ +81.32 after sell → book $10,054.12; vs 09:30 mark -3.29 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-10 09:30 ET | **SELL** | `FCEL` | 43 | $16.66 | $2.14 | $+87.76 | $9,021.69 | ▲ +87.76 after sell → book $10,051.98; vs 09:30 mark -2.14 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-10 09:30 ET | **SELL** | `MDB` | 1 | $359.79 | $2.01 | $-22.56 | $9,379.47 | ▼ -22.56 after sell → book $10,049.97; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-10 09:30 ET | **SELL** | `ASST` | 25 | $26.82 | $2.08 | $+36.85 | $10,047.88 | ▲ +36.85 after sell → book $10,047.88; vs 09:30 mark -2.09 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,047.88 | ▲ close $10,047.88 vs 09:30 $10,066.10 (session +0.00) | 16:00 close · cash $10,047.88 · no lots left · equity $10,047.88. | — |
+| 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,494.99 | ▼ 09:30 equity $10,015.07 vs yday $10,075.95 (-60.88) | 09:30 open · cash $5,494.99 (unchanged overnight, no fees) · equity $10,015.07 vs prior close $10,075.95 (-60.88) · 8 name(s) re-marked at the open (per-name table). CRM×2 yday $244.16 → 09:30 $245.35 +2.38; DELL×1 yday $535.25 → 09:30 $523.83 -11.42; SLBT×200 yday $2.61 → 09:30 $2.58 -6.00; TARS×7 yday $82.77 → 09:30 $80.89 -13.15; BRR×251 yday $2.86 → 09:30 $2.87 +2.51; FCEL×43 yday $16.57 → 09:30 $16.07 -21.50; MDB×1 yday $358.38 → 09:30 $360.42 +2.04; ASST×25 yday $26.69 → 09:30 $26.06 -15.75 | — |
+| 2026-09-10 09:30 ET | **SELL** | `CRM` | 2 | $245.35 | $2.02 | $-40.03 | $5,983.68 | ▼ -40.03 after sell → book $10,013.05; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-10 09:30 ET | **SELL** | `DELL` | 1 | $523.83 | $2.01 | $+6.04 | $6,505.49 | ▲ +6.04 after sell → book $10,011.04; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-10 09:30 ET | **SELL** | `SLBT` | 200 | $2.58 | $2.63 | $-119.22 | $7,018.86 | ▼ -119.22 after sell → book $10,008.40; vs 09:30 mark -2.64 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-10 09:30 ET | **SELL** | `TARS` | 7 | $80.89 | $2.03 | $-16.70 | $7,583.07 | ▼ -16.70 after sell → book $10,006.37; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-10 09:30 ET | **SELL** | `BRR` | 251 | $2.87 | $3.29 | $+83.83 | $8,300.15 | ▲ +83.83 after sell → book $10,003.08; vs 09:30 mark -3.29 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-10 09:30 ET | **SELL** | `FCEL` | 43 | $16.07 | $2.14 | $+62.39 | $8,989.02 | ▲ +62.39 after sell → book $10,000.94; vs 09:30 mark -2.14 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-10 09:30 ET | **SELL** | `MDB` | 1 | $360.42 | $2.01 | $-21.93 | $9,347.43 | ▼ -21.93 after sell → book $9,998.93; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-10 09:30 ET | **SELL** | `ASST` | 25 | $26.06 | $2.08 | $+17.85 | $9,996.85 | ▲ +17.85 after sell → book $9,996.85; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,996.85 | ▲ close $9,996.85 vs 09:30 $10,015.07 (session +0.00) | 16:00 close · cash $9,996.85 · no lots left · equity $9,996.85. | — |
+| 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,996.85 | ▲ 09:30 equity $9,996.85 vs yday $9,996.85 (-0.00) | 09:30 open · cash $9,996.85 · no holdings · equity $9,996.85 vs prior close $9,996.85 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-11 09:30 ET | **BUY** | `SANM` | 6 | $206.84 | $2.01 | — | $8,753.80 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten; ret5=+4.4; leftover $1249.61 | join🟢 sector🟢 gen🟡 news🟡 digest🟡 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `NVT` | 7 | $157.78 | $2.01 | — | $7,647.33 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten; 🔵; ret5=+7.8; leftover $1249.61 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `COHU` | 22 | $56.09 | $2.06 | — | $6,411.29 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten; 🔵; ⚪; ret5=+15.3; leftover $1249.61 | join🟢 sector🟢 gen🟡 news🟡 digest🟡 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `CMRC` | 399 | $3.13 | $5.15 | — | $5,157.27 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer,yday_mover; ret5=+6.2; leftover $1249.61 | join🔴 sector🟢 gen🟡 news🟡 digest🟡 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `AMTX` | 612 | $2.04 | $7.89 | — | $3,900.90 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+6.8; leftover $1249.61 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `CLOV` | 263 | $4.75 | $3.39 | — | $2,648.26 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer; 🔵; ret5=+3.4; leftover $1249.61 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `BAK` | 589 | $2.12 | $7.60 | — | $1,391.98 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer,ohlc_hot; 🔵; ret5=+7.1; leftover $1249.61 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `QRVO` | 11 | $112.83 | $2.02 | — | $148.77 | — | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer; 🔵; ret5=+8.3; leftover $1249.61 | join🟢 sector🟢 gen🟡 news🔴 digest🟡 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $148.77 | ▲ close $10,241.74 vs 09:30 $9,996.85 (session +277.02) | 16:00 close · cash $148.77 · equity $10,241.74 vs 09:30 $9,996.85 (+244.89; session marks +277.02) · 8 name(s) marked open→close (per-name table). SANM×6 09:30 $206.84 → close $216.00 +54.96; NVT×7 09:30 $157.78 → close $162.38 +32.20; COHU×22 09:30 $56.09 → close $57.08 +21.78; CMRC×399 09:30 $3.13 → close $3.50 +149.62; AMTX×612 09:30 $2.04 → close $2.01 -18.36; CLOV×263 09:30 $4.75 → close $4.82 +18.41; BAK×589 09:30 $2.12 → close $2.08 -23.56; QRVO×11 09:30 $112.83 → close $116.65 +41.97 | — |
 
 ## Not taken
 
@@ -633,3 +652,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | `HELP` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `IRD` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `INDP` | hard_red | hard-red S=-13.28 sit; no new buys |
+
+## Still open (marked at last close)
+
+| Ticker | Shares | Entry | Why |
+|---|---:|---|---|
+| `SANM` | 6 | 2026-09-11 @ $206.84 | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten; ret5=+4.4; leftover $1249.61 |
+| `NVT` | 7 | 2026-09-11 @ $157.78 | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten; 🔵; ret5=+7.8; leftover $1249.61 |
+| `COHU` | 22 | 2026-09-11 @ $56.09 | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list flatten; 🔵; ⚪; ret5=+15.3; leftover $1249.61 |
+| `CMRC` | 399 | 2026-09-11 @ $3.13 | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer,yday_mover; ret5=+6.2; leftover $1249.61 |
+| `AMTX` | 612 | 2026-09-11 @ $2.04 | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+6.8; leftover $1249.61 |
+| `CLOV` | 263 | 2026-09-11 @ $4.75 | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer; 🔵; ret5=+3.4; leftover $1249.61 |
+| `BAK` | 589 | 2026-09-11 @ $2.12 | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer,ohlc_hot; 🔵; ret5=+7.1; leftover $1249.61 |
+| `QRVO` | 11 | 2026-09-11 @ $112.83 | buy last-green, sell next 09:30 if last bar flipped red; gate last_green=True; list probable,yday_gainer; 🔵; ret5=+8.3; leftover $1249.61 |

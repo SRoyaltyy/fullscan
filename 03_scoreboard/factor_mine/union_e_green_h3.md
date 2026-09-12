@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-10.28%** ($8,972) · signal-only (no cash/fees) was -36.94%. Starts YES **0/20**. Fills 64 · skips 93 · realized $-1028.22.
+Cash book **-10.28%** ($8,972) · signal-only (no cash/fees) was -35.44%. Starts YES **0/21**. Fills 64 · skips 93 · realized $-1028.28.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,971.74.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,971.68.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -194,7 +194,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `VSXY` | 20 | $78.47 | $77.16 | -26.20 | — | +0.00 | -26.20 | +6.00 | — |
 | 2026-09-09 | `WOOF` | 511 | $2.60 | $2.59 | -5.11 | — | +0.00 | -5.11 | -270.83 | — |
 | 2026-09-09 | `DOMO` | 3 | $3.83 | $3.86 | +0.09 | $3.78 | -0.24 | -0.15 | +0.73 | +0.49 |
-| 2026-09-10 | `DOMO` | 3 | $3.78 | $3.78 | +0.00 | — | +0.00 | +0.00 | +0.49 | — |
+| 2026-09-10 | `DOMO` | 3 | $3.78 | $3.76 | -0.06 | — | +0.00 | -0.06 | +0.43 | — |
+| 2026-09-11 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -219,7 +220,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 | +2.25 | $63.65 | AI×148, MOMO×290, PHR×144, TTC×16, VSXY×20, WOOF×511 | $8,991.00 | -1.69 | +138.36 | DOMO | — | $52.69 | $9,129.25 | AI×148, MOMO×290, PHR×144, TTC×16, VSXY×20, WOOF×511, DOMO×3 |
 | 2026-09-08 | -11.47 | $52.69 | AI×148, MOMO×290, PHR×144, TTC×16, VSXY×20, WOOF×511, DOMO×3 | $8,943.74 | -185.51 | +87.00 | — | — | $52.69 | $9,030.74 | AI×148, MOMO×290, PHR×144, TTC×16, VSXY×20, WOOF×511, DOMO×3 |
 | 2026-09-09 | -13.95 | $52.69 | AI×148, MOMO×290, PHR×144, TTC×16, VSXY×20, WOOF×511, DOMO×3 | $8,991.68 | -39.06 | -0.24 | — | AI, MOMO, PHR, TTC, VSXY, WOOF | $8,960.55 | $8,971.89 | DOMO×3 |
-| 2026-09-10 | -13.28 | $8,960.55 | DOMO×3 | $8,971.89 | -0.00 | +0.00 | — | DOMO | $8,971.74 | $8,971.74 | — |
+| 2026-09-10 | -13.28 | $8,960.55 | DOMO×3 | $8,971.83 | -0.06 | +0.00 | — | DOMO | $8,971.68 | $8,971.68 | — |
+| 2026-09-11 | +0.50 | $8,971.68 | — | $8,971.68 | +0.00 | +0.00 | — | — | $8,971.68 | $8,971.68 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -326,9 +328,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 09:30 ET | **SELL** | `VSXY` | 20 | $77.16 | $2.07 | $+1.88 | $7,643.74 | ▲ +1.88 after sell → book $8,978.81; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-09 09:30 ET | **SELL** | `WOOF` | 511 | $2.59 | $6.69 | $-284.11 | $8,960.55 | ▼ -284.11 after sell → book $8,972.13; vs 09:30 mark -6.68 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,960.55 | ▼ close $8,971.89 vs 09:30 $8,991.68 (session -0.24) | 16:00 close · cash $8,960.55 · equity $8,971.89 vs 09:30 $8,991.68 (-19.79; session marks -0.24) · 1 name(s) marked open→close (per-name table). DOMO×3 09:30 $3.86 → close $3.78 -0.24 | — |
-| 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,960.55 | ▲ 09:30 equity $8,971.89 vs yday $8,971.89 (-0.00) | 09:30 open · cash $8,960.55 (unchanged overnight, no fees) · equity $8,971.89 vs prior close $8,971.89 (-0.00) · 1 name(s) re-marked at the open (per-name table). DOMO×3 yday $3.78 → 09:30 $3.78 +0.00 | — |
-| 2026-09-10 09:30 ET | **SELL** | `DOMO` | 3 | $3.78 | $0.14 | $+0.24 | $8,971.74 | ▲ +0.24 after sell → book $8,971.74; vs 09:30 mark -0.15 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,971.74 | ▲ close $8,971.74 vs 09:30 $8,971.89 (session +0.00) | 16:00 close · cash $8,971.74 · no lots left · equity $8,971.74. | — |
+| 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,960.55 | ▼ 09:30 equity $8,971.83 vs yday $8,971.89 (-0.06) | 09:30 open · cash $8,960.55 (unchanged overnight, no fees) · equity $8,971.83 vs prior close $8,971.89 (-0.06) · 1 name(s) re-marked at the open (per-name table). DOMO×3 yday $3.78 → 09:30 $3.76 -0.06 | — |
+| 2026-09-10 09:30 ET | **SELL** | `DOMO` | 3 | $3.76 | $0.14 | $+0.18 | $8,971.68 | ▲ +0.18 after sell → book $8,971.68; vs 09:30 mark -0.15 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,971.68 | ▲ close $8,971.68 vs 09:30 $8,971.83 (session +0.00) | 16:00 close · cash $8,971.68 · no lots left · equity $8,971.68. | — |
+| 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,971.68 | ▲ 09:30 equity $8,971.68 vs yday $8,971.68 (+0.00) | 09:30 open · cash $8,971.68 · no holdings · equity $8,971.68 vs prior close $8,971.68 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,971.68 | ▲ close $8,971.68 vs 09:30 $8,971.68 (session +0.00) | 16:00 close · cash $8,971.68 · no lots left · equity $8,971.68. | — |
 
 ## Not taken
 

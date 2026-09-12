@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-26.62%** ($7,338) · signal-only (no cash/fees) was -24.78%. Starts YES **0/20**. Fills 96 · skips 13 · realized $-2662.20.
+Cash book **-26.62%** ($7,338) · signal-only (no cash/fees) was -22.19%. Starts YES **0/21**. Fills 96 · skips 13 · realized $-2662.20.
 
 ## How this sleeve decides (like you are 10)
 
@@ -168,6 +168,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | `MAMA` | 95 | $15.16 | $15.20 | +3.80 | — | +0.00 | +3.80 | -47.50 | — |
 | 2026-09-09 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-10 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-11 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -193,6 +194,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | -11.47 | $215.81 | DOMO×415, GWRE×8, IOT×33, LULU×15, MAMA×95 | $7,351.75 | -49.57 | +0.00 | — | DOMO, GWRE, IOT, LULU, MAMA | $7,337.81 | $7,337.81 | — |
 | 2026-09-09 | -13.95 | $7,337.81 | — | $7,337.81 | -0.00 | +0.00 | — | — | $7,337.81 | $7,337.81 | — |
 | 2026-09-10 | -13.28 | $7,337.81 | — | $7,337.81 | -0.00 | +0.00 | — | — | $7,337.81 | $7,337.81 | — |
+| 2026-09-11 | +0.50 | $7,337.81 | — | $7,337.81 | -0.00 | +0.00 | — | — | $7,337.81 | $7,337.81 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -334,6 +336,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,337.81 | ▲ close $7,337.81 vs 09:30 $7,337.81 (session +0.00) | 16:00 close · cash $7,337.81 · no lots left · equity $7,337.81. | — |
 | 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,337.81 | ▲ 09:30 equity $7,337.81 vs yday $7,337.81 (-0.00) | 09:30 open · cash $7,337.81 · no holdings · equity $7,337.81 vs prior close $7,337.81 (-0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,337.81 | ▲ close $7,337.81 vs 09:30 $7,337.81 (session +0.00) | 16:00 close · cash $7,337.81 · no lots left · equity $7,337.81. | — |
+| 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,337.81 | ▲ 09:30 equity $7,337.81 vs yday $7,337.81 (-0.00) | 09:30 open · cash $7,337.81 · no holdings · equity $7,337.81 vs prior close $7,337.81 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,337.81 | ▲ close $7,337.81 vs 09:30 $7,337.81 (session +0.00) | 16:00 close · cash $7,337.81 · no lots left · equity $7,337.81. | — |
 
 ## Not taken
 
