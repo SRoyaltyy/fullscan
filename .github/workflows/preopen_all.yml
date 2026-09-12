@@ -3,7 +3,9 @@ name: Pre-Open ALL (predictive one-shot)
 # One morning button: GH scrape (ubuntu) → book+green (ubuntu, no Grok)
 #   → packet (ECS). The ubuntu ranker does not wait on the ECS box —
 #   a 3h Grok hang must not leave BUY/SELL empty at 09:30.
-# CLOCK: ECS systemd 05:55 ET still owns the unattended start.
+# CLOCK: GitHub schedule 09:55 UTC (~05:55 ET EDT) owns the unattended
+# start on ubuntu/DeepSeek. ECS systemd 05:55 is optional Grok extra.
+# A dead laptop / offline ECS runner must not stall the 09:30 packet.
 # Skip-if-good: each file already quality-ok is not rewritten (no LLM).
 # This file is a poke: a main push that touches it starts the packet
 # (workflow_dispatch is 403 from the cloud agent). Push is ubuntu/DeepSeek
@@ -31,6 +33,11 @@ name: Pre-Open ALL (predictive one-shot)
 # POKE 2026-09-11 ASAP War room — agent push start ubuntu Pre-Open
 
 on:
+  schedule:
+    # ~05:55 ET while EDT (15 min after 05:40 scrape). After the fall
+    # EST change this is 04:55 ET — early, harmless. GH cron is often
+    # 5–30 min late; orchestrator 07:50 / 09:20 re-dispatch if needed.
+    - cron: "55 9 * * 1-5"
   push:
     branches: [main]
     paths:
@@ -79,8 +86,8 @@ permissions:
 concurrency:
   # Stable names only. ubuntu-HHMM forks cannot cancel each other
   # (2026-09-08: ubuntu-0945 vs ubuntu-0950 vs ubuntu-stop-1108 twins).
-  group: preopen-all-${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'ubuntu' || 'ecs' }}
-  cancel-in-progress: ${{ github.event_name == 'push' || github.event.inputs.runner == 'ubuntu' }}
+  group: preopen-all-${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && 'ubuntu' || 'ecs' }}
+  cancel-in-progress: ${{ github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu' }}
 
 jobs:
   gate:
@@ -225,13 +232,13 @@ jobs:
   preopen:
     needs: [gate, scrape]
     if: ${{ needs.gate.outputs.go == 'yes' && always() }}
-    runs-on: ${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('[\"self-hosted\",\"ecs\"]') }}
+    runs-on: ${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('[\"self-hosted\",\"ecs\"]') }}
     timeout-minutes: 240
     env:
       OPENCLAW_TIMEOUT: "10800"
       FULLSCAN_PERSIST: "/home/gha/fullscan-persist"
-      FULLSCAN_HOME: ${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
-      HOME: ${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
+      FULLSCAN_HOME: ${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
+      HOME: ${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
       FINVIZ_SKIP_LIVE: "1"
       PREOPEN_LOCK: "/home/gha/fullscan-persist/locks/preopen.lock"
       FULLSCAN_LAND: "1"
@@ -319,7 +326,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENCLAW_TIMEOUT: "10800"
           GROK_ONLY: "0"
-          LLM_BACKEND: ${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'deepseek' || github.event.inputs.llm_backend || 'auto' }}
+          LLM_BACKEND: ${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && 'deepseek' || github.event.inputs.llm_backend || 'auto' }}
           FINVIZ_SKIP_LIVE: "1"
           PREOPEN_LLM_TIMEOUT: "900"
         timeout-minutes: 180

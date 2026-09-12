@@ -185,6 +185,21 @@ def test_incremental_land_hooks() -> None:
     assert "overlay_at" in ecs
 
 
+def test_preopen_unattended_clock_is_ubuntu() -> None:
+    """Laptop off: weekday cron + orch heal must not queue on ECS."""
+    yml = (ROOT / ".github" / "workflows" / "preopen_all.yml").read_text(
+        encoding="utf-8")
+    orch = (ROOT / ".github" / "workflows" / "daily_orchestrator.yml").read_text(
+        encoding="utf-8")
+    assert 'cron: "55 9 * * 1-5"' in yml
+    assert "github.event_name == 'schedule'" in yml
+    assert "dispatch_preopen_ubuntu" in orch
+    assert "inputs[llm_backend]=deepseek" in orch
+    assert '-f "inputs[runner]=ubuntu"' in orch
+    # Bare dispatch would default runner=ecs and sit on an offline box.
+    assert "maybe preopen_all.yml" in orch
+
+
 def test_holiday_overlay_uses_last_session() -> None:
     text = (ROOT / "src" / "map_heat.py").read_text(encoding="utf-8")
     assert "last_closed_session" in text
@@ -276,6 +291,7 @@ def main() -> None:
         test_run_preopen_cli_has_bypass_not_permanent_force,
         test_map_heat_passthrough_flag_skips_llm,
         test_incremental_land_hooks,
+        test_preopen_unattended_clock_is_ubuntu,
         test_holiday_overlay_uses_last_session,
         test_weather_step_rejects_pre_0535_stamp,
         test_deepseek_preflight_is_wired,
