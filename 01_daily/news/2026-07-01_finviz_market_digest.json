@@ -1,0 +1,42 @@
+{
+  "date": "2026-07-01",
+  "generated_at": "2026-09-12T09:44:14.418110-04:00",
+  "timezone": "America/New_York",
+  "source": "wayback",
+  "source_url": "https://web.archive.org/web/20260702000216id_/https://finviz.com/",
+  "archive_snapshot_ts": "20260702000216",
+  "archive_snapshot_at": "2026-07-01T20:02:16-04:00",
+  "archive_url": "https://web.archive.org/web/20260702000216id_/https://finviz.com/",
+  "clock_legal": false,
+  "clock_rule": "Pre-Open may use this file only if clock_legal is true: live Generated, or archive snapshot, is before this session's 09:30 ET open. After-open / weekend captures stay on disk with clock_legal=false. Not wired into tape_anchor / predict.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Live Finviz homepage market-day prose (prior cash close + overnight / weekend news). Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks ended lower to start Q3 as semiconductor profit-taking and softer labor data offset ongoing manufacturing expansion and cautious Fed messaging",
+  "raw_text": "- Major US indices closed mixed with the Nasdaq leading declines on chip-stock weakness, while financials, banks and select consumer and communication-services names outperformed\n- ISM manufacturing PMI came in at 53.3 for June, marking a sixth straight month of expansion but missing expectations and indicating slower growth with easing input and price pressures\n- ADP (ADP) private payrolls added 98,000 jobs, below forecasts, keeping focus on Friday’s official June jobs report for confirmation of labor-market cooling\n- Fed Chair Kevin Warsh said inflation risks had faded compared with recent weeks but remained too high, reaffirming the 2% goal while avoiding direct guidance on a July rate move and reinforcing rotation away from overheated tech\n- Semiconductor names led losses, with Micron Technology (MU), Sandisk (SNDK) and Intel (INTC) down sharply and Nvidia (NVDA) and Broadcom (AVGO) also weaker on profit-taking after strong first-half gains\n- Caterpillar (CAT) fell nearly 7% amid reports that Michael Burry expanded AI-related short bets tied to the name\n- General Mills (GIS) gained roughly 8% after beating fiscal Q4 estimates and outlining a $3B cost-savings plan with a cautious 2027 outlook\n- Meta Platforms (META) jumped about 9% on reports it is building a cloud business to monetize excess AI computing capacity\n- New IPO Bending Spoons (BSP), owner of AOL and Vimeo, surged nearly 40% in its Nasdaq debut after pricing at $29 a share and closing around $40.50\n- After-hours trading saw muted earnings reactions, with FactSet (FDS) moving modestly higher after estimate beats and only select small-cap and penny IPO names showing notable follow-through",
+  "raw_summary_md": "- Major US indices closed mixed with the **Nasdaq leading declines on chip-stock weakness**, while **financials, banks and select consumer and communication-services names outperformed**\n- **ISM manufacturing PMI came in at 53.3 for June**, marking a **sixth straight month of expansion** but **missing expectations** and indicating slower growth with easing input and price pressures\n- **ADP ([ADP](https://finviz.com/quote?t=ADP)) private payrolls added 98,000 jobs**, below forecasts, keeping focus on **Friday’s official June jobs report** for confirmation of labor-market cooling\n- **Fed Chair Kevin Warsh** said inflation risks had faded compared with recent weeks but remained too high, reaffirming the **2% goal** while avoiding direct guidance on a **July rate move** and reinforcing rotation away from overheated tech\n- **Semiconductor names led losses**, with **Micron Technology ([MU](https://finviz.com/quote?t=MU)), Sandisk ([SNDK](https://finviz.com/quote?t=SNDK)) and Intel ([INTC](https://finviz.com/quote?t=INTC)) down sharply** and **Nvidia ([NVDA](https://finviz.com/quote?t=NVDA)) and Broadcom ([AVGO](https://finviz.com/quote?t=AVGO)) also weaker** on profit-taking after strong first-half gains\n- Caterpillar ([CAT](https://finviz.com/quote?t=CAT)) **fell nearly 7%** amid reports that **Michael Burry** expanded AI-related short bets tied to the name\n- General Mills ([GIS](https://finviz.com/quote?t=GIS)) **gained roughly 8%** after **beating fiscal Q4 estimates** and outlining a **$3B cost-savings plan** with a cautious 2027 outlook\n- Meta Platforms ([META](https://finviz.com/quote?t=META)) **jumped about 9%** on reports it is **building a cloud business** to monetize excess AI computing capacity\n- New IPO **Bending Spoons ([BSP](https://finviz.com/quote?t=BSP))**, owner of AOL and Vimeo, **surged nearly 40%** in its Nasdaq debut after pricing at **$29 a share** and closing around **$40.50**\n- After-hours trading saw **muted earnings reactions**, with **FactSet ([FDS](https://finviz.com/quote?t=FDS)) moving modestly higher after estimate beats** and only select small-cap and penny IPO names showing notable follow-through",
+  "index_moves": [],
+  "oil": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "ADP",
+    "MU",
+    "SNDK",
+    "INTC",
+    "NVDA",
+    "AVGO",
+    "CAT",
+    "GIS",
+    "META",
+    "BSP",
+    "FDS"
+  ],
+  "calendar": [
+    "ADP (ADP) private payrolls added 98,000 jobs, below forecasts, keeping focus on Friday’s official June jobs report for confirmation of labor-market cooling"
+  ],
+  "finviz_id": 220496,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-07-01T19:36:32.323",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "neutral"
+}

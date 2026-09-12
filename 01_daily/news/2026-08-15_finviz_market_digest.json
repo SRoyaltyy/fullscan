@@ -1,0 +1,32 @@
+{
+  "date": "2026-08-15",
+  "generated_at": "2026-09-12T09:44:43.151511-04:00",
+  "timezone": "America/New_York",
+  "source": "wayback",
+  "source_url": "https://web.archive.org/web/20260815232132id_/https://finviz.com/",
+  "archive_snapshot_ts": "20260815232132",
+  "archive_snapshot_at": "2026-08-15T19:21:32-04:00",
+  "archive_url": "https://web.archive.org/web/20260815232132id_/https://finviz.com/",
+  "clock_legal": false,
+  "clock_rule": "Pre-Open may use this file only if clock_legal is true: live Generated, or archive snapshot, is before this session's 09:30 ET open. After-open / weekend captures stay on disk with clock_legal=false. Not wired into tape_anchor / predict.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Live Finviz homepage market-day prose (prior cash close + overnight / weekend news). Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "Weekend Brief: US markets head into Monday with few fresh catalysts as technical warning signals meet strong earnings and AI-driven bond risks ahead of key manufacturing and housing data",
+  "raw_text": "- Weekend corporate news flow was subdued, with no major US earnings, M&A, analyst calls or geopolitical shocks reported to set a strong pre-Monday equity tone\n- The Hindenburg Omen technical signal remained active, but its mixed historical record is being weighed against resilient S&P 500 (SPY) earnings, broader market breadth and leadership from energy and cyclical sectors\n- Bond markets are focused on roughly $70B in shadow credit backstops supporting AI firms, highlighting growing financial exposure tied to AI-related financing structures\n- Investors are debating the risk that AI-driven investment and spending could contribute to higher bond yields and emerging \"AI inflation,\" potentially complicating the Federal Reserve’s policy path\n- Positive commentary on S&P 500 (SPY) earnings strength continues to underpin the bullish case for equities despite technical and macro crosscurrents\n- Asian and European markets offered limited new direction for Monday’s US open, largely mirroring last week’s rotation away from some tech names amid otherwise quiet or closed weekend trading\n- Monday’s key US data releases are the NY Empire State Manufacturing Index at 8:30 a.m. ET and the NAHB Housing Market Index at 10 a.m. ET, providing early reads on economic momentum\n- These reports may shape market reaction to elevated oil prices and evolving AI-related bond market dynamics at the start of the week",
+  "raw_summary_md": "- **Weekend corporate news flow was subdued**, with **no major US earnings**, M&A, analyst calls or geopolitical shocks reported to set a strong pre-Monday equity tone\n- The **Hindenburg Omen technical signal remained active**, but its mixed historical record is being weighed against **resilient S&P 500 ([SPY](https://finviz.com/quote?t=SPY)) earnings**, broader market breadth and leadership from energy and cyclical sectors\n- Bond markets are focused on roughly **$70B in shadow credit backstops supporting AI firms**, highlighting growing financial exposure tied to AI-related financing structures\n- Investors are debating the risk that AI-driven investment and spending could contribute to **higher bond yields** and **emerging \"AI inflation,\"** potentially complicating **the Federal Reserve’s policy path**\n- **Positive commentary on S&P 500 ([SPY](https://finviz.com/quote?t=SPY)) earnings strength** continues to underpin the **bullish case for equities** despite technical and macro crosscurrents\n- **Asian and European markets offered limited new direction for Monday’s US open**, largely mirroring last week’s **rotation away from some tech names** amid otherwise quiet or closed weekend trading\n- Monday’s key US data releases are the **NY Empire State Manufacturing Index at 8:30 a.m. ET** and the **NAHB Housing Market Index at 10 a.m. ET**, providing early reads on economic momentum\n- These reports may shape market reaction to **elevated oil prices** and evolving **AI-related bond market dynamics** at the start of the week",
+  "index_moves": [],
+  "oil": null,
+  "fed_odds": null,
+  "named_tickers": [],
+  "calendar": [
+    "Weekend corporate news flow was subdued, with no major US earnings, M&A, analyst calls or geopolitical shocks reported to set a strong pre-Monday equity tone",
+    "Asian and European markets offered limited new direction for Monday’s US open, largely mirroring last week’s rotation away from some tech names amid otherwise quiet or closed weekend trading",
+    "Monday’s key US data releases are the NY Empire State Manufacturing Index at 8:30 a.m. ET and the NAHB Housing Market Index at 10 a.m. ET, providing early reads on economic momentum"
+  ],
+  "finviz_id": 265635,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-08-15T19:05:44.627",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "neutral"
+}

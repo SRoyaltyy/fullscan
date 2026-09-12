@@ -1,0 +1,34 @@
+{
+  "date": "2026-07-10",
+  "generated_at": "2026-09-12T09:44:21.697871-04:00",
+  "timezone": "America/New_York",
+  "source": "wayback",
+  "source_url": "https://web.archive.org/web/20260710145044id_/https://finviz.com/",
+  "archive_snapshot_ts": "20260710145044",
+  "archive_snapshot_at": "2026-07-10T10:50:44-04:00",
+  "archive_url": "https://web.archive.org/web/20260710145044id_/https://finviz.com/",
+  "clock_legal": false,
+  "clock_rule": "Pre-Open may use this file only if clock_legal is true: live Generated, or archive snapshot, is before this session's 09:30 ET open. After-open / weekend captures stay on disk with clock_legal=false. Not wired into tape_anchor / predict.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Live Finviz homepage market-day prose (prior cash close + overnight / weekend news). Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks trade mixed to lower as record SK Hynix listing tests AI-chip sentiment amid sector rotation and lingering Middle East risk",
+  "raw_text": "- SK Hynix (SKHYV) begins Nasdaq trading after raising $26.5 billion in the largest-ever US share sale by a foreign company, with ADRs priced at $149 under tickers SKHYV and SKHY\n- Major US indices trade mixed to lower, with the Russell 2000 (IWM) underperforming and small caps lagging broader benchmarks\n- Chip-related sentiment is mixed as investors weigh SK Hynix (SKHYV)’s AI and high-bandwidth memory exposure following recent semiconductor pullbacks\n- Meta Platforms (META) shows pre-open strength while US chip stocks trade cautiously, even as AI-linked peers Hua Hong and SoftBank advance in Asia\n- Filings for single-stock ETFs tied to the AI and semiconductor theme increase, underscoring continued product demand around the trade\n- Delta Air Lines (DAL) falls roughly 2% despite beating earnings estimates, reinstating guidance, and signaling healthy travel demand, as investors focus on elevated fuel costs\n- Sector flows indicate rotation out of some high-flying tech names and broader caution outside technology in a session with no major economic data catalysts\n- Traders monitor SK Hynix (SKHYV)’s trading, next week’s bank earnings, and ongoing Middle East tensions, while major indices remain on track for a positive week",
+  "raw_summary_md": "- SK Hynix ([**SKHYV**](https://finviz.com/quote?t=SKHYV)) begins Nasdaq trading after raising **$26.5 billion** in the **largest-ever US share sale by a foreign company**, with ADRs priced at **$149** under tickers **SKHYV** and **SKHY**\n- Major US indices trade **mixed to lower**, with the **Russell 2000** ([**IWM**](https://finviz.com/quote?t=IWM)) **underperforming** and **small caps lagging** broader benchmarks\n- Chip-related sentiment is **mixed** as investors weigh **SK Hynix** ([**SKHYV**](https://finviz.com/quote?t=SKHYV))’s **AI and high-bandwidth memory exposure** following recent **semiconductor pullbacks**\n- **Meta Platforms** ([**META**](https://finviz.com/quote?t=META)) shows **pre-open strength** while **US chip stocks trade cautiously**, even as **AI-linked** peers **Hua Hong** and **SoftBank** advance in **Asia**\n- Filings for **single-stock ETFs** tied to the **AI and semiconductor** theme **increase**, underscoring continued **product demand** around the trade\n- **Delta Air Lines** ([**DAL**](https://finviz.com/quote?t=DAL)) falls roughly **2%** despite **beating earnings estimates**, **reinstating guidance**, and signaling **healthy travel demand**, as investors focus on **elevated fuel costs**\n- Sector flows indicate **rotation out of some high-flying tech names** and broader **caution outside technology** in a session with **no major economic data catalysts**\n- Traders monitor **SK Hynix** ([**SKHYV**](https://finviz.com/quote?t=SKHYV))’s trading, **next week’s bank earnings**, and ongoing **Middle East tensions**, while major indices remain **on track for a positive week**",
+  "index_moves": [],
+  "oil": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "SKHYV",
+    "META",
+    "DAL"
+  ],
+  "calendar": [
+    "Traders monitor SK Hynix (SKHYV)’s trading, next week’s bank earnings, and ongoing Middle East tensions, while major indices remain on track for a positive week"
+  ],
+  "finviz_id": 225287,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-07-10T10:35:53.853",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}

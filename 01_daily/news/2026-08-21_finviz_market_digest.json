@@ -1,0 +1,34 @@
+{
+  "date": "2026-08-21",
+  "generated_at": "2026-09-12T09:44:50.975211-04:00",
+  "timezone": "America/New_York",
+  "source": "wayback",
+  "source_url": "https://web.archive.org/web/20260821052017id_/https://finviz.com/",
+  "archive_snapshot_ts": "20260821052017",
+  "archive_snapshot_at": "2026-08-21T01:20:17-04:00",
+  "archive_url": "https://web.archive.org/web/20260821052017id_/https://finviz.com/",
+  "clock_legal": true,
+  "clock_rule": "Pre-Open may use this file only if clock_legal is true: live Generated, or archive snapshot, is before this session's 09:30 ET open. After-open / weekend captures stay on disk with clock_legal=false. Not wired into tape_anchor / predict.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Live Finviz homepage market-day prose (prior cash close + overnight / weekend news). Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks fell as Treasury yields rebounded and Walmart results pressured defensives despite supportive Treasury buyback signals",
+  "raw_text": "- Dow (DIA), S&P 500 (SPY), and Nasdaq (QQQ) all closed lower, reversing the prior session’s gains and putting major indexes on pace for weekly losses\n- Treasury yields rebounded, with the 10-year climbing above 4.7% and the 30-year near 5.24%, weighing on equities and rate-sensitive groups\n- Consumer staples and other defensive sectors lagged after Walmart (WMT) dropped sharply on its slowest U.S. comparable sales growth in years at 2.6% versus expectations near 3.7%\n- Walmart (WMT)’s U.S. comps miss and lower Q3 EPS guidance overshadowed other results\n- Moderna (MRNA) fell more than 20% on profit-taking after Wednesday’s large gain on positive cancer vaccine data\n- Crypto-related names outperformed as MARA Holdings (MARA) jumped alongside Bitcoin (@BTC) strength and sentiment improved on President Trump’s support and developments around the CLARITY Act\n- Energy edged higher as oil (@CL) prices moved amid Trump’s economic pressure campaign toward Iran\n- Most other sectors, including consumer discretionary, parts of tech, and small caps, declined in response to the bond-market reversal\n- After-hours trading was muted, with Walmart (WMT) edging higher and Moderna (MRNA) seeing limited further downside, and traders looking ahead to additional earnings, bond-market moves, Treasury buyback details, Fed commentary, and upcoming economic data",
+  "raw_summary_md": "- Dow ([**DIA**](https://finviz.com/quote?t=DIA)), S&P 500 ([**SPY**](https://finviz.com/quote?t=SPY)), and Nasdaq ([**QQQ**](https://finviz.com/quote?t=QQQ)) all **closed lower**, reversing the prior session’s gains and putting major indexes on pace for **weekly losses**\n- Treasury yields rebounded, with the **10-year** climbing above **4.7%** and the **30-year** near **5.24%**, weighing on equities and rate-sensitive groups\n- Consumer staples and other defensive sectors lagged after **Walmart ([WMT](https://finviz.com/quote?t=WMT))** dropped sharply on its slowest U.S. comparable sales growth in years at **2.6%** versus expectations near **3.7%**\n- **Walmart ([WMT](https://finviz.com/quote?t=WMT))**’s U.S. comps miss and **lower Q3 EPS guidance** overshadowed other results\n- **Moderna ([MRNA](https://finviz.com/quote?t=MRNA))** fell **more than 20%** on profit-taking after Wednesday’s large gain on positive cancer vaccine data\n- Crypto-related names outperformed as **MARA Holdings ([MARA](https://finviz.com/quote?t=MARA))** jumped alongside **Bitcoin ([@BTC](https://finviz.com/futures_charts?t=BTC))** strength and sentiment improved on **President Trump**’s support and developments around the **CLARITY Act**\n- **Energy edged higher** as **oil ([@CL](https://finviz.com/futures_charts?t=CL))** prices moved amid **Trump’s economic pressure campaign** toward Iran\n- Most other sectors, including consumer discretionary, parts of tech, and small caps, **declined** in response to the **bond-market reversal**\n- **After-hours trading was muted**, with **Walmart ([WMT](https://finviz.com/quote?t=WMT)) edging higher** and **Moderna ([MRNA](https://finviz.com/quote?t=MRNA))** seeing limited further downside, and traders looking ahead to additional earnings, bond-market moves, **Treasury buyback** details, **Fed commentary**, and upcoming economic data",
+  "index_moves": [],
+  "oil": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "WMT",
+    "MRNA",
+    "MARA"
+  ],
+  "calendar": [
+    "Moderna (MRNA) fell more than 20% on profit-taking after Wednesday’s large gain on positive cancer vaccine data"
+  ],
+  "finviz_id": 269712,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-08-20T20:36:13.217",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "neutral"
+}

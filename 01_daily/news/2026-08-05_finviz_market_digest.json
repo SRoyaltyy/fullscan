@@ -1,0 +1,38 @@
+{
+  "date": "2026-08-05",
+  "generated_at": "2026-09-12T09:44:35.528076-04:00",
+  "timezone": "America/New_York",
+  "source": "wayback",
+  "source_url": "https://web.archive.org/web/20260806000236id_/https://finviz.com/",
+  "archive_snapshot_ts": "20260806000236",
+  "archive_snapshot_at": "2026-08-05T20:02:36-04:00",
+  "archive_url": "https://web.archive.org/web/20260806000236id_/https://finviz.com/",
+  "clock_legal": false,
+  "clock_rule": "Pre-Open may use this file only if clock_legal is true: live Generated, or archive snapshot, is before this session's 09:30 ET open. After-open / weekend captures stay on disk with clock_legal=false. Not wired into tape_anchor / predict.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Live Finviz homepage market-day prose (prior cash close + overnight / weekend news). Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks ended mixed as rotation out of tech into defensives followed easing Strait of Hormuz tensions, softer payrolls data and vigilant Fed messaging",
+  "raw_text": "- Dow Jones (DIA) Industrial Average rose, marking a third straight record close, while the S&P 500 (SPY) slipped and Nasdaq (QQQ) fell as investors rotated from recent tech winners into blue-chip and defensive names\n- Progress on an Iran-Oman agreement over the Strait of Hormuz shipping route eased oil (@CL)-market and broader geopolitical tensions, supporting overall risk sentiment\n- Softer-than-expected private payrolls data and Fed officials’ continued emphasis on inflation vigilance shaped rate expectations and sector positioning\n- Materials and healthcare sectors led gains, while technology and communication services underperformed, and gold (@GC) prices jumped sharply\n- SpaceX fell sharply despite reporting nearly doubled revenue and a strong earnings beat, as investors focused on rising AI capital expenditures and an upcoming lock-up expiration for nearly a billion shares\n- AMD (AMD) declined as GF Securities and other firms raised price targets amid AI demand strength\n- Eli Lilly (LLY) climbed after lifting 2026 guidance on strong revenue growth and GLP-1 momentum while agreeing to acquire AtaiBeckley\n- Disney (DIS) advanced on solid theme park and entertainment results that supported consumer-related shares\n- MetLife (MET) and MercadoLibre (MELI) both beat expectations, with MercadoLibre (MELI)’s quarterly sales topping $10 billion\n- In after-hours trading, Motorola Solutions (MSI) rose after raising its outlook, while Western Digital (WDC) and Sandisk fell following their results, ahead of additional earnings and key economic data on Thursday",
+  "raw_summary_md": "- **Dow Jones ([DIA](https://finviz.com/quote?t=DIA)) Industrial Average rose, marking a third straight record close**, while the **S&P 500 ([SPY](https://finviz.com/quote?t=SPY)) slipped** and **Nasdaq ([QQQ](https://finviz.com/quote?t=QQQ)) fell** as investors rotated from recent tech winners into blue-chip and defensive names\n- **Progress on an Iran-Oman agreement over the Strait of Hormuz shipping route** eased **oil ([@CL](https://finviz.com/futures_charts?t=CL))-market** and broader geopolitical tensions, supporting overall **risk sentiment**\n- **Softer-than-expected private payrolls data** and **Fed officials’ continued emphasis on inflation vigilance** shaped **rate expectations** and sector positioning\n- **Materials and healthcare sectors led gains**, while **technology and communication services underperformed**, and **gold ([@GC](https://finviz.com/futures_charts?t=GC)) prices jumped sharply**\n- **SpaceX fell sharply** despite reporting **nearly doubled revenue and a strong earnings beat**, as investors focused on rising **AI capital expenditures** and an upcoming **lock-up expiration for nearly a billion shares**\n- **AMD ([AMD](https://finviz.com/quote?t=AMD)) declined** as **GF Securities and other firms raised price targets** amid **AI demand strength**\n- **Eli Lilly ([LLY](https://finviz.com/quote?t=LLY)) climbed** after **lifting 2026 guidance** on strong revenue growth and **GLP-1 momentum** while agreeing to **acquire AtaiBeckley**\n- **Disney ([DIS](https://finviz.com/quote?t=DIS)) advanced** on **solid theme park and entertainment results** that supported consumer-related shares\n- **MetLife ([MET](https://finviz.com/quote?t=MET)) and MercadoLibre ([MELI](https://finviz.com/quote?t=MELI)) both beat expectations**, with **MercadoLibre ([MELI](https://finviz.com/quote?t=MELI))’s quarterly sales topping $10 billion**\n- In **after-hours trading**, **Motorola Solutions ([MSI](https://finviz.com/quote?t=MSI)) rose after raising its outlook**, while **Western Digital ([WDC](https://finviz.com/quote?t=WDC)) and Sandisk fell** following their results, ahead of additional earnings and key economic data on **Thursday**",
+  "index_moves": [],
+  "oil": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "AMD",
+    "LLY",
+    "DIS",
+    "MET",
+    "MELI",
+    "MSI",
+    "WDC"
+  ],
+  "calendar": [
+    "In after-hours trading, Motorola Solutions (MSI) rose after raising its outlook, while Western Digital (WDC) and Sandisk fell following their results, ahead of additional earnings and key economic data on Thursday"
+  ],
+  "finviz_id": 253082,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-08-05T19:36:09.157",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "neutral"
+}

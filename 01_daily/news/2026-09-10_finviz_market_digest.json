@@ -1,0 +1,65 @@
+{
+  "date": "2026-09-10",
+  "generated_at": "2026-09-12T09:45:03.159647-04:00",
+  "timezone": "America/New_York",
+  "source": "wayback",
+  "source_url": "https://web.archive.org/web/20260910060618id_/https://finviz.com/",
+  "archive_snapshot_ts": "20260910060618",
+  "archive_snapshot_at": "2026-09-10T02:06:18-04:00",
+  "archive_url": "https://web.archive.org/web/20260910060618id_/https://finviz.com/",
+  "clock_legal": true,
+  "clock_rule": "Pre-Open may use this file only if clock_legal is true: live Generated, or archive snapshot, is before this session's 09:30 ET open. After-open / weekend captures stay on disk with clock_legal=false. Not wired into tape_anchor / predict.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Live Finviz homepage market-day prose (prior cash close + overnight / weekend news). Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks extended three-day slide as oil topped $101 and Treasury yields hit 2023 highs on US-Iran tensions and Treasury buyback disappointment ahead of PPI, OPEC report and ECB decision",
+  "raw_text": "- The S&P 500 (SPX) fell 0.48% to 7,636.36, the Dow (DJI) dropped 0.77% to 52,380.66, and the Nasdaq (COMP) slid 0.64% to 26,253.34, with the S&P posting its largest three-day point and percentage decline since July 20 and ending about 2% below its August 13 record high.\n- Brent crude (@QA) rose more than 3% to settle above $101 per barrel after escalated US-Iran tensions disrupted Strait of Hormuz shipping and included the US disabling 10 Iranian tankers.\n- A smaller-than-hoped $6 billion longer-term Treasury buyback from the US Treasury disappointed traders and pushed the 10-year yield to its highest level since 2023.\n- Energy was the only S&P 500 (SPX) sector to rise, gaining roughly 1.1% on strength in Exxon Mobil (XOM), Chevron (CVX) and APA (APA).\n- Industrials lagged with a decline of around 1.5%, while consumer discretionary weakness included Vertiv (VRT), which sank nearly 10%.\n- Meta Platforms (META) climbed about 6.5% after unveiling its autonomous AI agent Muse.\n- Cloudflare (NET) jumped more than 10% on a new security partnership with OpenAI (OAIW).\n- Casey’s General Stores (CASY) fell nearly 15% despite an earnings beat, while Apple (AAPL) slipped 0.3% after new CEO John Ternus launched the first foldable iPhone Duo.\n- In after-hours trading, Cooper Companies (COO) dropped about 16% on a revenue miss and American Eagle Outfitters (AEO) fell more than 10% after cutting its outlook.\n- Traders looked ahead to Thursday’s US producer price index data, OPEC’s monthly report and an upcoming ECB policy decision.",
+  "raw_summary_md": "- The **S&P 500** ([SPX](https://finviz.com/index/SPX?p=d)) **fell 0.48% to 7,636.36**, the **Dow** ([DJI](https://finviz.com/index/DJI?p=d)) **dropped 0.77% to 52,380.66**, and the **Nasdaq** ([COMP](https://finviz.com/index/COMP?p=d)) **slid 0.64% to 26,253.34**, with the S&P posting its **largest three-day point and percentage decline since July 20** and ending **about 2% below its August 13 record high**.\n- **Brent crude** ([@QA](https://finviz.com/futures_charts?t=QA)) **rose more than 3% to settle above $101 per barrel** after **escalated US-Iran tensions** disrupted Strait of Hormuz shipping and included the **US disabling 10 Iranian tankers**.\n- A **smaller-than-hoped $6 billion longer-term Treasury buyback** from the US Treasury disappointed traders and pushed the **10-year yield to its highest level since 2023**.\n- **Energy was the only S&P 500** ([SPX](https://finviz.com/index/SPX?p=d)) **sector to rise, gaining roughly 1.1%** on strength in **Exxon Mobil** ([XOM](https://finviz.com/quote?t=XOM)), **Chevron** ([CVX](https://finviz.com/quote?t=CVX)) and **APA** ([APA](https://finviz.com/quote?t=APA)).\n- **Industrials lagged with a decline of around 1.5%**, while consumer discretionary weakness included **Vertiv** ([VRT](https://finviz.com/quote?t=VRT)), which sank **nearly 10%**.\n- **Meta Platforms** ([META](https://finviz.com/quote?t=META)) **climbed about 6.5%** after unveiling its autonomous **AI agent Muse**.\n- **Cloudflare** ([NET](https://finviz.com/quote?t=NET)) **jumped more than 10%** on a new security partnership with **OpenAI** ([OAIW](https://finviz.com/quote?t=OAIW)).\n- **Casey’s General Stores** ([CASY](https://finviz.com/quote?t=CASY)) **fell nearly 15%** despite an earnings beat, while **Apple** ([AAPL](https://finviz.com/quote?t=AAPL)) slipped **0.3%** after new CEO **John Ternus** launched the **first foldable iPhone Duo**.\n- In after-hours trading, **Cooper Companies** ([COO](https://finviz.com/quote?t=COO)) **dropped about 16%** on a revenue miss and **American Eagle Outfitters** ([AEO](https://finviz.com/quote?t=AEO)) **fell more than 10%** after cutting its outlook.\n- Traders looked ahead to **Thursday’s US producer price index data**, **OPEC’s monthly report** and an upcoming **ECB policy decision**.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -0.48,
+      "verb": "fell"
+    },
+    {
+      "name": "Dow",
+      "code": "DJI",
+      "change_pct": -0.77,
+      "verb": "dropped"
+    },
+    {
+      "name": "Nasdaq",
+      "code": "COMP",
+      "change_pct": -0.64,
+      "verb": "slid"
+    }
+  ],
+  "oil": {
+    "name": "Brent crude",
+    "price": 101.0,
+    "verb": "rose"
+  },
+  "fed_odds": null,
+  "named_tickers": [
+    "XOM",
+    "CVX",
+    "APA",
+    "VRT",
+    "META",
+    "NET",
+    "OAIW",
+    "CASY",
+    "AAPL",
+    "COO",
+    "AEO"
+  ],
+  "calendar": [
+    "Traders looked ahead to Thursday’s US producer price index data, OPEC’s monthly report and an upcoming ECB policy decision."
+  ],
+  "finviz_id": 282327,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-09T20:36:08.773",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "neutral"
+}

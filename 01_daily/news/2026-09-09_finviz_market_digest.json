@@ -1,0 +1,50 @@
+{
+  "date": "2026-09-09",
+  "generated_at": "2026-09-12T09:45:01.644098-04:00",
+  "timezone": "America/New_York",
+  "source": "wayback",
+  "source_url": "https://web.archive.org/web/20260909140943id_/https://finviz.com/",
+  "archive_snapshot_ts": "20260909140943",
+  "archive_snapshot_at": "2026-09-09T10:09:43-04:00",
+  "archive_url": "https://web.archive.org/web/20260909140943id_/https://finviz.com/",
+  "clock_legal": false,
+  "clock_rule": "Pre-Open may use this file only if clock_legal is true: live Generated, or archive snapshot, is before this session's 09:30 ET open. After-open / weekend captures stay on disk with clock_legal=false. Not wired into tape_anchor / predict.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Live Finviz homepage market-day prose (prior cash close + overnight / weekend news). Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks trade lower as Brent crude tops $100 on US‑Iran tensions, lifting September Fed hike odds and pushing 10‑year yields toward 4.81%",
+  "raw_text": "- S&P 500 (SPX) falls 0.28%, Dow Jones (DJI) loses 0.72%, Nasdaq 100 (NDX) slips 0.05%, and Russell 2000 (IWM) declines 0.56% amid broad equity weakness\n- Brent crude (@QA) trades above $100 per barrel for the first time since July on escalating US‑Iran conflict and Strait of Hormuz supply risks, stoking inflation concerns\n- Fed rate‑hike expectations rise to roughly a 60% chance of a September move as higher oil weakens Treasuries and lifts the 10‑year yield near 4.81%\n- Energy outperforms as Exxon Mobil (XOM) rises about 2% with higher crude supporting the broader group\n- Roivant Sciences (ROIV) rises nearly 1% on positive clinical data, leading individual gainers\n- Intel (INTC) rises about 1% on optimism around AI infrastructure demand\n- Health care, consumer discretionary, and industrials lag, with notable decliners including Novartis (NVS) which trades higher after priority review for Duchenne drug and Deere (DE) which trades roughly flat post‑earnings\n- Additional underperformers include Howmet Aerospace (HWM) down 0.21%, Amgen (AMGN) up 0.24%, Dyne Therapeutics (DYN) down 1.67%, and Stryker (SYK) up 0.27%\n- Chewy (CHWY) declines about 6% after beating Q2 estimates with EPS of $0.36 and lifting full-year outlook, while ODDITY Tech (ODD) advances on its earnings release\n- Signet Jewelers (SIG) rises after a 26.6% EPS beat to $2.19, whereas Casey’s General Stores (CASY) falls over 18% despite an earnings beat driven by fuel margins as inside same‑store sales growth slows to 3.2%",
+  "raw_summary_md": "- **S&P 500** ([SPX](https://finviz.com/index/SPX?p=d)) falls **0.28%**, **Dow Jones** ([DJI](https://finviz.com/index/DJI?p=d)) loses **0.72%**, **Nasdaq 100** ([NDX](https://finviz.com/index/NDX?p=d)) slips 0.05%, and **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) declines 0.56% amid broad equity weakness\n- **Brent crude** ([@QA](https://finviz.com/futures_charts?t=QA)) trades above **$100 per barrel** for the first time since **July** on escalating **US‑Iran conflict** and **Strait of Hormuz** supply risks, stoking inflation concerns\n- **Fed rate‑hike expectations** rise to roughly a **60% chance** of a **September** move as higher oil weakens Treasuries and lifts the **10‑year yield near 4.81%**\n- **Energy outperforms** as **Exxon Mobil** ([XOM](https://finviz.com/quote?t=XOM)) rises about **2%** with higher crude supporting the broader group\n- **Roivant Sciences** ([ROIV](https://finviz.com/quote?t=ROIV)) rises nearly **1%** on **positive clinical data**, leading individual gainers\n- **Intel** ([INTC](https://finviz.com/quote?t=INTC)) rises about **1%** on optimism around **AI infrastructure demand**\n- **Health care, consumer discretionary, and industrials lag**, with notable decliners including **Novartis** ([NVS](https://finviz.com/quote?t=NVS)) which trades higher after **priority review for Duchenne drug** and **Deere** ([DE](https://finviz.com/quote?t=DE)) which trades roughly flat post‑earnings\n- Additional underperformers include **Howmet Aerospace** ([HWM](https://finviz.com/quote?t=HWM)) down 0.21%, **Amgen** ([AMGN](https://finviz.com/quote?t=AMGN)) up 0.24%, **Dyne Therapeutics** ([DYN](https://finviz.com/quote?t=DYN)) down **1.67%**, and **Stryker** ([SYK](https://finviz.com/quote?t=SYK)) up 0.27%\n- **Chewy** ([CHWY](https://finviz.com/quote?t=CHWY)) declines about **6%** after **beating Q2 estimates** with EPS of **$0.36** and lifting full-year outlook, while **ODDITY Tech** ([ODD](https://finviz.com/quote?t=ODD)) advances on its earnings release\n- **Signet Jewelers** ([SIG](https://finviz.com/quote?t=SIG)) rises after a **26.6% EPS beat** to **$2.19**, whereas **Casey’s General Stores** ([CASY](https://finviz.com/quote?t=CASY)) falls over **18%** despite an earnings beat driven by fuel margins as inside same‑store sales growth slows to **3.2%**",
+  "index_moves": [],
+  "oil": {
+    "name": "Brent crude",
+    "price": 100.0,
+    "verb": null
+  },
+  "fed_odds": {
+    "pct": 60.0,
+    "action": "hike",
+    "text": "hike expectations rise to roughly a 60%"
+  },
+  "named_tickers": [
+    "XOM",
+    "ROIV",
+    "INTC",
+    "NVS",
+    "DE",
+    "HWM",
+    "AMGN",
+    "DYN",
+    "SYK",
+    "CHWY",
+    "ODD",
+    "SIG",
+    "CASY"
+  ],
+  "calendar": [],
+  "finviz_id": 281769,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-09T09:56:36.277",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}

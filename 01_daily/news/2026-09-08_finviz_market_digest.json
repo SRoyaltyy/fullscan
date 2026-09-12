@@ -1,0 +1,77 @@
+{
+  "date": "2026-09-08",
+  "generated_at": "2026-09-12T09:45:00.994501-04:00",
+  "timezone": "America/New_York",
+  "source": "wayback",
+  "source_url": "https://web.archive.org/web/20260909010348id_/https://finviz.com/",
+  "archive_snapshot_ts": "20260909010348",
+  "archive_snapshot_at": "2026-09-08T21:03:48-04:00",
+  "archive_url": "https://web.archive.org/web/20260909010348id_/https://finviz.com/",
+  "clock_legal": false,
+  "clock_rule": "Pre-Open may use this file only if clock_legal is true: live Generated, or archive snapshot, is before this session's 09:30 ET open. After-open / weekend captures stay on disk with clock_legal=false. Not wired into tape_anchor / predict.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Live Finviz homepage market-day prose (prior cash close + overnight / weekend news). Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed lower as Brent crude neared $100 and the 10-year yield hit 4.805% ahead CPI and PPI amid escalating US-Iran and Middle East tensions",
+  "raw_text": "- The Dow Jones Industrial Average (DJI) fell 628.18 points (1.18%) to 52,786.07, the S&P 500 (SPX) dropped 45.08 points (0.58%) to 7,673.52, and the Nasdaq Composite (COMP) slipped 85.58 points (0.32%) to 26,421.41.\n- Brent crude (@QA) rose 0.9% to settle above $97.92 and approached $100 as escalating US-Iran tensions and Houthi attacks lifted oil, while the 10-year Treasury yield jumped to 4.805%, its highest level since 2023, reviving inflation and Fed rate-hike worries ahead this week’s CPI data.\n- Energy led the market higher, supported by gains in Texas Pacific Land (TPL), Valero Energy (VLO), Marathon Petroleum (MPC), ONEOK (OKE), and Williams Companies (WMB), while utilities also advanced and health care lagged with a roughly 2.55% decline.\n- Amgen (AMGN) tumbled 10.08% amid broader market pressures, and Stryker (SYK) hit a 52-week low after its CFO highlighted ongoing peripheral vascular supply issues.\n- Intel (INTC) jumped 9.05% on plans to raise processor prices by up to 10% and on news of a major Qualcomm (QCOM)–Amazon (AMZN) AI chip deal.\n- Corning (GLW) gained about 7.56% after announcing a Verizon (VZ) optical-fiber supply agreement.\n- Novartis (NVS) slid 13.93% following the setback in its Phase 3 del-desiran trial, while Salesforce (CRM) declined amid broader pressure on AI and software names.\n- After hours, Casey’s General Stores (CASY) dropped roughly 8% despite topping Q1 estimates with EPS of $7.37 vs. $6.78 expected on revenue of $5.68B vs. $5.56B, as investors focused on what they viewed as conservative guidance.\n- In after-hours small-cap and low-float action, ServiceTitan (TTAN) fell over 20% on mixed Q3 guidance and leadership changes despite an earnings beat, while Sphere 3D (ANY) gained more than 10%.\n- Upcoming catalysts include Cooper Companies (COO) earnings after the bell and Wednesday’s PPI release, alongside further Middle East headlines, oil’s approach to $100, and the looming CPI report.",
+  "raw_summary_md": "- The **Dow Jones Industrial Average** ([DJI](https://finviz.com/index/DJI?p=d)) fell **628.18 points (1.18%)** to **52,786.07**, the **S&P 500** ([SPX](https://finviz.com/index/SPX?p=d)) dropped **45.08 points (0.58%)** to **7,673.52**, and the **Nasdaq Composite** ([COMP](https://finviz.com/index/COMP?p=d)) slipped **85.58 points (0.32%)** to **26,421.41**.\n- **Brent crude** ([@QA](https://finviz.com/futures_charts?t=QA)) rose **0.9%** to settle above **$97.92** and approached **$100** as escalating US-Iran tensions and Houthi attacks lifted oil, while the **10-year Treasury yield** jumped to **4.805%**, its highest level since **2023**, reviving inflation and Fed rate-hike worries ahead this week’s **CPI** data.\n- **Energy** led the market higher, supported by gains in **Texas Pacific Land** ([TPL](https://finviz.com/quote?t=TPL)), **Valero Energy** ([VLO](https://finviz.com/quote?t=VLO)), **Marathon Petroleum** ([MPC](https://finviz.com/quote?t=MPC)), **ONEOK** ([OKE](https://finviz.com/quote?t=OKE)), and **Williams Companies** ([WMB](https://finviz.com/quote?t=WMB)), while **utilities** also advanced and **health care** lagged with a roughly **2.55% decline**.\n- **Amgen** ([AMGN](https://finviz.com/quote?t=AMGN)) tumbled **10.08%** amid broader market pressures, and **Stryker** ([SYK](https://finviz.com/quote?t=SYK)) hit a **52-week low** after its CFO highlighted ongoing peripheral vascular supply issues.\n- **Intel** ([INTC](https://finviz.com/quote?t=INTC)) jumped **9.05%** on plans to raise processor prices by up to **10%** and on news of a major **Qualcomm** ([QCOM](https://finviz.com/quote?t=QCOM))–**Amazon** ([AMZN](https://finviz.com/quote?t=AMZN)) AI chip deal.\n- **Corning** ([GLW](https://finviz.com/quote?t=GLW)) gained about **7.56%** after announcing a **Verizon** ([VZ](https://finviz.com/quote?t=VZ)) optical-fiber supply agreement.\n- **Novartis** ([NVS](https://finviz.com/quote?t=NVS)) slid **13.93%** following the setback in its **Phase 3 del-desiran trial**, while **Salesforce** ([CRM](https://finviz.com/quote?t=CRM)) declined amid broader pressure on **AI and software** names.\n- After hours, **Casey’s General Stores** ([CASY](https://finviz.com/quote?t=CASY)) dropped roughly **8%** despite topping Q1 estimates with **EPS of $7.37 vs. $6.78 expected** on **revenue of $5.68B vs. $5.56B**, as investors focused on what they viewed as conservative guidance.\n- In after-hours small-cap and low-float action, **ServiceTitan** ([TTAN](https://finviz.com/quote?t=TTAN)) fell **over 20%** on mixed Q3 guidance and leadership changes despite an earnings beat, while **Sphere 3D** ([ANY](https://finviz.com/quote?t=ANY)) gained **more than 10%**.\n- Upcoming catalysts include **Cooper Companies** ([COO](https://finviz.com/quote?t=COO)) earnings after the bell and **Wednesday’s PPI release**, alongside further **Middle East headlines**, oil’s approach to **$100**, and the looming **CPI report**.",
+  "index_moves": [
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": -1.18,
+      "verb": "fell"
+    },
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -0.58,
+      "verb": "dropped"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": -0.32,
+      "verb": "slipped"
+    }
+  ],
+  "oil": {
+    "name": "Brent crude",
+    "price": 97.92,
+    "verb": "rose"
+  },
+  "fed_odds": {
+    "pct": 4.805,
+    "action": "hike",
+    "text": "4.805%, its highest level since 2023, reviving inflation and Fed rate-hike"
+  },
+  "named_tickers": [
+    "TPL",
+    "VLO",
+    "MPC",
+    "OKE",
+    "WMB",
+    "AMGN",
+    "SYK",
+    "INTC",
+    "QCOM",
+    "AMZN",
+    "GLW",
+    "VZ",
+    "NVS",
+    "CRM",
+    "CASY",
+    "TTAN",
+    "ANY",
+    "COO"
+  ],
+  "calendar": [
+    "Brent crude (@QA) rose 0.9% to settle above $97.92 and approached $100 as escalating US-Iran tensions and Houthi attacks lifted oil, while the 10-year Treasury yield jumped to 4.805%, its highest level since 2023, reviving inflation and Fed rate-hike worries ahead this week’s CPI data.",
+    "Upcoming catalysts include Cooper Companies (COO) earnings after the bell and Wednesday’s PPI release, alongside further Middle East headlines, oil’s approach to $100, and the looming CPI report."
+  ],
+  "finviz_id": 281317,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-08T20:36:30.02",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "neutral"
+}

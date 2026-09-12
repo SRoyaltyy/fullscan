@@ -1,0 +1,46 @@
+{
+  "date": "2026-08-20",
+  "generated_at": "2026-09-12T09:44:49.765129-04:00",
+  "timezone": "America/New_York",
+  "source": "wayback",
+  "source_url": "https://web.archive.org/web/20260821000312id_/https://finviz.com/",
+  "archive_snapshot_ts": "20260821000312",
+  "archive_snapshot_at": "2026-08-20T20:03:12-04:00",
+  "archive_url": "https://web.archive.org/web/20260821000312id_/https://finviz.com/",
+  "clock_legal": false,
+  "clock_rule": "Pre-Open may use this file only if clock_legal is true: live Generated, or archive snapshot, is before this session's 09:30 ET open. After-open / weekend captures stay on disk with clock_legal=false. Not wired into tape_anchor / predict.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Live Finviz homepage market-day prose (prior cash close + overnight / weekend news). Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed lower as rebounding Treasury yields, higher oil on geopolitical tensions, and weak Walmart results pressured consumer and growth shares and erased part of Wednesday’s rebound",
+  "raw_text": "- The Dow Jones (DIA) Industrial Average fell about 1.3%, while the S&P 500 (SPY) and Nasdaq Composite (QQQ) each declined around 1%, leaving major indexes at roughly two‑week lows and on pace for sizable weekly losses.\n- A rebound in Treasury yields and firmer crude (@CL) prices tied to geopolitical tensions weighed on growth and rate‑sensitive segments, reversing some of the prior day’s relief from Treasury Secretary Scott Bessent’s expanded bond buyback plans.\n- Walmart (WMT) dropped sharply as U.S. comps missed forecasts and the company guided Q3 adjusted EPS below consensus, pressuring consumer defensive, staples, and retail peers.\n- Consumer defensive, retail, and industrials were among the weakest S&P 500 (SPY) sectors, while utilities, energy, and basic materials showed relative resilience against the backdrop of rising yields and higher oil prices.\n- Crypto‑related stocks outperformed, with MARA Holdings (MARA) advancing strongly on Bitcoin (@BTC) strength and positive developments around the CLARITY Act.\n- Speculative small‑cap and biotech names including BTC Digital (BTCT) and Jianzhi Education (JZ) posted outsized gains alongside other low‑float movers, though their volatility had little direct impact on the major indexes.\n- After‑hours trading was subdued, with no notable earnings reactions above typical thresholds and index futures fluctuations remaining under roughly 0.3% as investors looked ahead to further debt management signals, upcoming economic data, and additional earnings later in the week.",
+  "raw_summary_md": "- The **Dow Jones ([DIA](https://finviz.com/quote?t=DIA)) Industrial Average fell about 1.3%**, while the **S&P 500 ([SPY](https://finviz.com/quote?t=SPY))** and **Nasdaq Composite ([QQQ](https://finviz.com/quote?t=QQQ))** each declined around **1%**, leaving major indexes at roughly **two‑week lows** and on pace for sizable weekly losses.\n- A **rebound in Treasury yields** and **firmer crude ([@CL](https://finviz.com/futures_charts?t=CL)) prices tied to geopolitical tensions** weighed on growth and rate‑sensitive segments, reversing some of the prior day’s relief from **Treasury Secretary Scott Bessent’s expanded bond buyback plans**.\n- **Walmart ([WMT](https://finviz.com/quote?t=WMT)) dropped sharply** as **U.S. comps missed forecasts** and the company **guided Q3 adjusted EPS below consensus**, pressuring consumer defensive, staples, and retail peers.\n- **Consumer defensive, retail, and industrials were among the weakest S&P 500 ([SPY](https://finviz.com/quote?t=SPY)) sectors**, while **utilities, energy, and basic materials showed relative resilience** against the backdrop of **rising yields and higher oil prices**.\n- **Crypto‑related stocks outperformed**, with **MARA Holdings ([MARA](https://finviz.com/quote?t=MARA)) advancing strongly** on **Bitcoin ([@BTC](https://finviz.com/futures_charts?t=BTC)) strength** and positive developments around the **CLARITY Act**.\n- **Speculative small‑cap and biotech names** including **BTC Digital ([BTCT](https://finviz.com/quote?t=BTCT))** and **Jianzhi Education ([JZ](https://finviz.com/quote?t=JZ))** posted **outsized gains** alongside other low‑float movers, though their volatility had **little direct impact on the major indexes**.\n- **After‑hours trading was subdued**, with **no notable earnings reactions above typical thresholds** and **index futures fluctuations remaining under roughly 0.3%** as investors looked ahead to further debt management signals, upcoming economic data, and additional earnings later in the week.",
+  "index_moves": [
+    {
+      "name": "Dow Jones",
+      "code": "DJI",
+      "change_pct": -1.3,
+      "verb": "fell"
+    },
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -1.0,
+      "verb": "declined"
+    }
+  ],
+  "oil": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "WMT",
+    "MARA",
+    "BTCT",
+    "JZ"
+  ],
+  "calendar": [],
+  "finviz_id": 269669,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-08-20T19:35:55.537",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "neutral"
+}

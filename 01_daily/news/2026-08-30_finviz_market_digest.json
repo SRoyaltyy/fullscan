@@ -1,0 +1,42 @@
+{
+  "date": "2026-08-30",
+  "generated_at": "2026-09-12T09:44:54.731186-04:00",
+  "timezone": "America/New_York",
+  "source": "wayback",
+  "source_url": "https://web.archive.org/web/20260831033541id_/https://finviz.com/",
+  "archive_snapshot_ts": "20260831033541",
+  "archive_snapshot_at": "2026-08-30T23:35:41-04:00",
+  "archive_url": "https://web.archive.org/web/20260831033541id_/https://finviz.com/",
+  "clock_legal": false,
+  "clock_rule": "Pre-Open may use this file only if clock_legal is true: live Generated, or archive snapshot, is before this session's 09:30 ET open. After-open / weekend captures stay on disk with clock_legal=false. Not wired into tape_anchor / predict.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Live Finviz homepage market-day prose (prior cash close + overnight / weekend news). Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "Weekend Brief: US stock futures dipped as oil climbed on reported US strikes in Strait of Hormuz ahead of key manufacturing data and the August jobs report",
+  "raw_text": "- Reports of US strikes on Iranian rocket launchers in the Strait of Hormuz pushed WTI crude (@CL) about 2% higher near $85, pressuring US equity futures Sunday night\n- Wall Street closed out a strong August with the S&P 500 (SPX) up roughly 3% and the Nasdaq (COMP) up about 4%, led by tech gains including Nvidia (NVDA) up about 8% and Microsoft (MSFT) up roughly 11% amid an “epic” software rally\n- Hawkish comments from former Fed Governor Kevin Warsh at Jackson Hole increased perceived rate-hike odds and weighed on sentiment, leaving bond investors cautious\n- President Trump’s latest US–Canada trade war rhetoric, including an executive order renaming Lake Ontario to “Lake America” for US users, added to trade-policy uncertainty\n- Aon (AON) is reportedly nearing a roughly $17 billion acquisition of insurance brokerage USI from KKR (KKR), with a possible Monday announcement that could impact AON shares and the broader insurance and financials space\n- The previously announced roughly $4–4.6 billion Vanguard–Altruist transaction continued to generate buzz as a competitive challenge to Charles Schwab (SCHW) and Fidelity in the RIA custody market and a potential tailwind for ETF distribution\n- Monday’s US macro calendar features ISM Manufacturing PMI, JOLTs job openings, S&P Global Manufacturing PMI, the Dallas Fed Manufacturing Index at 10:30 a.m. ET, and Treasury bill auctions, setting the tone ahead of the August jobs report and further tech earnings\n- Investors are monitoring Apple (AAPL)’s “big handoff” developments as a potential additional catalyst for large-cap tech during the week",
+  "raw_summary_md": "- Reports of **US strikes on Iranian rocket launchers in the Strait of Hormuz** pushed **WTI crude** ([@CL](https://finviz.com/futures_charts?t=CL)) **about 2% higher near $85**, pressuring US equity futures Sunday night\n- **Wall Street closed out a strong August** with the **S&P 500** ([SPX](https://finviz.com/index/SPX?p=d)) **up roughly 3%** and the **Nasdaq** ([COMP](https://finviz.com/index/COMP?p=d)) **up about 4%**, led by tech gains including **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) **up about 8%** and **Microsoft** ([MSFT](https://finviz.com/quote?t=MSFT)) **up roughly 11%** amid an “epic” software rally\n- **Hawkish comments** from former Fed Governor **Kevin Warsh** at **Jackson Hole** **increased perceived rate-hike odds** and weighed on sentiment, leaving bond investors cautious\n- **President Trump’s latest US–Canada trade war rhetoric**, including an **executive order renaming Lake Ontario to “Lake America”** for US users, added to trade-policy uncertainty\n- **Aon** ([AON](https://finviz.com/quote?t=AON)) is reportedly nearing a roughly **$17 billion acquisition** of insurance brokerage **USI** from **KKR** ([KKR](https://finviz.com/quote?t=KKR)), with a **possible Monday announcement** that could impact AON shares and the broader insurance and financials space\n- The previously announced roughly **$4–4.6 billion Vanguard–Altruist transaction** continued to generate buzz as a **competitive challenge to Charles Schwab** ([SCHW](https://finviz.com/quote?t=SCHW)) **and Fidelity in the RIA custody market** and a potential tailwind for ETF distribution\n- **Monday’s US macro calendar** features **ISM Manufacturing PMI, JOLTs job openings, S&P Global Manufacturing PMI, the Dallas Fed Manufacturing Index at 10:30 a.m. ET, and Treasury bill auctions**, setting the tone ahead of the **August jobs report** and further **tech earnings**\n- Investors are monitoring **Apple** ([AAPL](https://finviz.com/quote?t=AAPL))’s **“big handoff” developments** as a potential additional catalyst for **large-cap tech** during the week",
+  "index_moves": [],
+  "oil": {
+    "name": "WTI crude",
+    "price": 85.0,
+    "verb": null
+  },
+  "fed_odds": null,
+  "named_tickers": [
+    "NVDA",
+    "MSFT",
+    "AON",
+    "KKR",
+    "SCHW",
+    "AAPL"
+  ],
+  "calendar": [
+    "Aon (AON) is reportedly nearing a roughly $17 billion acquisition of insurance brokerage USI from KKR (KKR), with a possible Monday announcement that could impact AON shares and the broader insurance and financials space",
+    "Monday’s US macro calendar features ISM Manufacturing PMI, JOLTs job openings, S&P Global Manufacturing PMI, the Dallas Fed Manufacturing Index at 10:30 a.m. ET, and Treasury bill auctions, setting the tone ahead of the August jobs report and further tech earnings"
+  ],
+  "finviz_id": 275294,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-08-30T20:06:12.613",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}

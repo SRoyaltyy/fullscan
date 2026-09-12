@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-05",
+  "generated_at": "2026-09-12T09:44:59.406625-04:00",
+  "timezone": "America/New_York",
+  "source": "wayback",
+  "source_url": "https://web.archive.org/web/20260906021810id_/https://finviz.com/",
+  "archive_snapshot_ts": "20260906021810",
+  "archive_snapshot_at": "2026-09-05T22:18:10-04:00",
+  "archive_url": "https://web.archive.org/web/20260906021810id_/https://finviz.com/",
+  "clock_legal": false,
+  "clock_rule": "Pre-Open may use this file only if clock_legal is true: live Generated, or archive snapshot, is before this session's 09:30 ET open. After-open / weekend captures stay on disk with clock_legal=false. Not wired into tape_anchor / predict.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Live Finviz homepage market-day prose (prior cash close + overnight / weekend news). Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "Weekend Brief: US markets stayed shut for Labor Day as AI supply-chain optimism, Trump trade threats and rising Fed hike odds framed the setup ahead of key inflation data and the September Fed decision",
+  "raw_text": "- US equity markets were closed Friday for the Labor Day weekend and will remain shut Monday, 7 September, leading to a quiet period with no major US M&A, earnings pre-announcements or notable analyst actions.\n- Foxconn, a key Nvidia (NVDA) server supplier and Apple (AAPL) partner, said Saturday it expects Q3 performance to outperform expectations on continued AI strength, a potential positive for AI hardware and semiconductor sentiment when US trading resumes.\n- A sharp move higher in Japan’s Nikkei (@NKD) last week following dovish comments from Waller underscored resilience in tech supply chains and AI-linked equities into the new week.\n- Supplemental weekend headlines highlighted humanoid robot development and data center insurance opportunities alongside President Trump’s comments, adding AI and infrastructure angles to the macro narrative.\n- President Trump threatened a trade embargo on countries with US trade deficits unless the Federal Reserve cuts rates, increasing policy uncertainty for trade-exposed and rate-sensitive names.\n- The strong August US jobs report pushed market-implied odds of a September Fed rate hike up to roughly 58–60%, and it is being interpreted as hawkish for the September FOMC meeting.\n- At Tuesday’s US reopen, early earnings are due from GameStop (GME), Braze (BRZE) and Casey’s General Stores (CASY), offering initial micro catalysts after the long weekend.\n- Tuesday’s US calendar features consumer credit data, followed next week by PPI on Wednesday and CPI on Friday, both seen as key inputs into the September Fed decision on the path of interest rates.",
+  "raw_summary_md": "- **US equity markets** were **closed Friday** for the Labor Day weekend and will **remain shut Monday, 7 September**, leading to a quiet period with **no major US M&A**, earnings pre-announcements or notable analyst actions.\n- **Foxconn**, a key Nvidia ([NVDA](https://finviz.com/quote?t=NVDA)) server supplier and Apple ([AAPL](https://finviz.com/quote?t=AAPL)) partner, said Saturday it **expects Q3 performance to outperform expectations** on **continued AI strength**, a potential positive for **AI hardware and semiconductor sentiment** when US trading resumes.\n- **A sharp move higher** in **Japan’s Nikkei ([@NKD](https://finviz.com/futures_charts?t=NKD))** last week following **dovish comments from Waller** underscored **resilience in tech supply chains and AI-linked equities** into the new week.\n- Supplemental weekend headlines highlighted **humanoid robot development** and **data center insurance opportunities** alongside **President Trump’s comments**, adding **AI and infrastructure angles** to the macro narrative.\n- **President Trump threatened a trade embargo** on countries with **US trade deficits** unless the **Federal Reserve cuts rates**, increasing **policy uncertainty** for **trade-exposed and rate-sensitive names**.\n- The **strong August US jobs report** pushed market-implied odds of a **September Fed rate hike** up to roughly **58–60%**, and it is being interpreted as **hawkish** for the **September FOMC meeting**.\n- At **Tuesday’s US reopen**, **early earnings** are due from **GameStop** ([GME](https://finviz.com/quote?t=GME)), **Braze** ([BRZE](https://finviz.com/quote?t=BRZE)) and **Casey’s General Stores** ([CASY](https://finviz.com/quote?t=CASY)), offering **initial micro catalysts** after the long weekend.\n- **Tuesday’s US calendar** features **consumer credit data**, followed next week by **PPI on Wednesday** and **CPI on Friday**, both seen as **key inputs** into the **September Fed decision** on the **path of interest rates**.",
+  "index_moves": [],
+  "oil": null,
+  "fed_odds": {
+    "pct": 60.0,
+    "action": "hike",
+    "text": "hike up to roughly 58–60%"
+  },
+  "named_tickers": [
+    "NVDA",
+    "AAPL",
+    "GME",
+    "BRZE",
+    "CASY"
+  ],
+  "calendar": [
+    "US equity markets were closed Friday for the Labor Day weekend and will remain shut Monday, 7 September, leading to a quiet period with no major US M&A, earnings pre-announcements or notable analyst actions.",
+    "The strong August US jobs report pushed market-implied odds of a September Fed rate hike up to roughly 58–60%, and it is being interpreted as hawkish for the September FOMC meeting.",
+    "At Tuesday’s US reopen, early earnings are due from GameStop (GME), Braze (BRZE) and Casey’s General Stores (CASY), offering initial micro catalysts after the long weekend.",
+    "Tuesday’s US calendar features consumer credit data, followed next week by PPI on Wednesday and CPI on Friday, both seen as key inputs into the September Fed decision on the path of interest rates."
+  ],
+  "finviz_id": 280014,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-05T20:06:15.093",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}

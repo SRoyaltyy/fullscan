@@ -1,0 +1,40 @@
+{
+  "date": "2026-08-13",
+  "generated_at": "2026-09-12T09:44:41.890310-04:00",
+  "timezone": "America/New_York",
+  "source": "wayback",
+  "source_url": "https://web.archive.org/web/20260813103418id_/https://finviz.com/",
+  "archive_snapshot_ts": "20260813103418",
+  "archive_snapshot_at": "2026-08-13T06:34:18-04:00",
+  "archive_url": "https://web.archive.org/web/20260813103418id_/https://finviz.com/",
+  "clock_legal": true,
+  "clock_rule": "Pre-Open may use this file only if clock_legal is true: live Generated, or archive snapshot, is before this session's 09:30 ET open. After-open / weekend captures stay on disk with clock_legal=false. Not wired into tape_anchor / predict.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Live Finviz homepage market-day prose (prior cash close + overnight / weekend news). Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks set to open higher as AI earnings momentum underpins futures ahead of PPI and jobless claims with oil prices mixed amid Iran-related energy tensions",
+  "raw_text": "- S&P 500 (@ES), Dow (@YM), Nasdaq 100 (@NQ) and Russell 2000 (@ER2) futures trade modestly higher, pointing to a positive open led by AI-related strength\n- Super Micro Computer (SMCI) gains roughly 1–2% pre-market after an EPS beat, strong AI server demand and a guidance raise in its August 12 results\n- CoreWeave (CRWV) trades lower pre-market after reporting a revenue beat with 112% revenue growth, narrower losses, upgraded guidance and a $104B backlog despite a net loss\n- NBIS (NBIS) declines around 4% pre-market after posting more than 450% Q2 revenue growth\n- Dell Technologies (DELL) trades higher pre-market while Aehr Test Systems (AEHR) and Astronics (ATRO) are mixed, benefiting from AI infrastructure momentum\n- Cisco Systems (CSCO) falls about 6% pre-market following its latest company update\n- Cerebras (CBRS) drops around 17% pre-market after its recent update\n- Coherent (COHR) declines roughly 5% pre-market following its latest update\n- At 8:30 AM ET, the US reports PPI, expected around 4.9% year over year, alongside weekly initial jobless claims\n- Asian markets advance with the Nikkei (@NKD) and Kospi higher on chip strength, while European equities edge up and crude oil (@CL) weakens amid ongoing energy and Iran-related geopolitical tensions",
+  "raw_summary_md": "- **S&P 500 ([@ES](https://finviz.com/futures_charts?t=ES))**, **Dow ([@YM](https://finviz.com/futures_charts?t=YM))**, **Nasdaq 100 ([@NQ](https://finviz.com/futures_charts?t=NQ))** and **Russell 2000 ([@ER2](https://finviz.com/futures_charts?t=ER2))** futures trade modestly higher, pointing to a positive open led by **AI-related strength**\n- **Super Micro Computer ([SMCI](https://finviz.com/quote?t=SMCI))** gains roughly **1–2% pre-market** after an **EPS beat**, strong AI server demand and a **guidance raise** in its **August 12** results\n- **CoreWeave ([CRWV](https://finviz.com/quote?t=CRWV))** trades lower pre-market after reporting a revenue beat with **112% revenue growth**, narrower losses, upgraded guidance and a **$104B backlog** despite a net loss\n- **NBIS ([NBIS](https://finviz.com/quote?t=NBIS))** declines around **4% pre-market** after posting more than **450% Q2 revenue growth**\n- **Dell Technologies ([DELL](https://finviz.com/quote?t=DELL))** trades higher pre-market while **Aehr Test Systems ([AEHR](https://finviz.com/quote?t=AEHR))** and **Astronics ([ATRO](https://finviz.com/quote?t=ATRO))** are mixed, benefiting from **AI infrastructure momentum**\n- **Cisco Systems ([CSCO](https://finviz.com/quote?t=CSCO))** falls about **6% pre-market** following its latest company update\n- **Cerebras ([CBRS](https://finviz.com/quote?t=CBRS))** drops around **17% pre-market** after its recent update\n- **Coherent ([COHR](https://finviz.com/quote?t=COHR))** declines roughly **5% pre-market** following its latest update\n- At **8:30 AM ET**, the US reports **PPI**, expected around **4.9% year over year**, alongside **weekly initial jobless claims**\n- **Asian markets advance** with the **Nikkei ([@NKD](https://finviz.com/futures_charts?t=NKD))** and **Kospi** higher on chip strength, while **European equities edge up** and **crude oil ([@CL](https://finviz.com/futures_charts?t=CL)) weakens** amid ongoing energy and **Iran-related geopolitical tensions**",
+  "index_moves": [],
+  "oil": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "SMCI",
+    "CRWV",
+    "NBIS",
+    "DELL",
+    "AEHR",
+    "ATRO",
+    "CSCO",
+    "CBRS",
+    "COHR"
+  ],
+  "calendar": [
+    "At 8:30 AM ET, the US reports PPI, expected around 4.9% year over year, alongside weekly initial jobless claims"
+  ],
+  "finviz_id": 263164,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-08-13T06:06:29.32",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}

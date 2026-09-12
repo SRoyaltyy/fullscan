@@ -1,0 +1,54 @@
+{
+  "date": "2026-08-26",
+  "generated_at": "2026-09-12T09:44:53.276278-04:00",
+  "timezone": "America/New_York",
+  "source": "wayback",
+  "source_url": "https://web.archive.org/web/20260827015555id_/https://finviz.com/",
+  "archive_snapshot_ts": "20260827015555",
+  "archive_snapshot_at": "2026-08-26T21:55:55-04:00",
+  "archive_url": "https://web.archive.org/web/20260827015555id_/https://finviz.com/",
+  "clock_legal": false,
+  "clock_rule": "Pre-Open may use this file only if clock_legal is true: live Generated, or archive snapshot, is before this session's 09:30 ET open. After-open / weekend captures stay on disk with clock_legal=false. Not wired into tape_anchor / predict.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Live Finviz homepage market-day prose (prior cash close + overnight / weekend news). Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks ended little changed as hotter July PCE lifted Treasury yields ahead of Fed’s Jackson Hole meeting while Nvidia jumped after-hours on strong AI-driven earnings",
+  "raw_text": "- The S&P 500 (SPX) closed at 7,675.70 (-0.02%), the Dow Jones Industrial Average (DJI) fell 113.52 points (-0.21%) to 53,463.88, and the Nasdaq Composite (COMP) slipped 0.08% to 26,130.20, snapping the Dow’s three-session winning streak.\n- The July PCE price index rose 3.7% year-over-year, above the 3.6% consensus and matching June’s reading, while core PCE held at 3.3% in line with estimates, a sticky inflation print that pushed Treasury yields higher ahead of the Fed’s Jackson Hole symposium.\n- Information technology and communication services led gains, with the Technology Select Sector SPDR (XLK) up about 0.6% on strength in AMD (AMD) (+0.4%), Micron (MU, +0.6%), Meta Platforms (META, +1.1%), and Netflix (NFLX, -0.9%).\n- Health care was the weakest S&P 500 (SPX) sector, down roughly 1%, while industrials outperformed earlier in the session as C.H. Robinson Worldwide (CHRW) climbed 5.62%, helping lift that group more than 1% intraday.\n- Abercrombie & Fitch (ANF) surged 35.67% to $147.75 after beating Q2 earnings expectations, raising full-year guidance, and posting strong quarterly results.\n- Dick’s Sporting Goods (DKS) rose about 4.3% as Truist downgraded the stock to Hold and trimmed its price target after the company cut its 2026 EPS outlook.\n- Nvidia (NVDA) fell about 1.6% during the regular session but rose around 4.7% after-hours after beating Q2 expectations with revenue of $96.22 billion (up about 106% year-over-year), adjusted EPS of $2.22 versus $2.10 expected, strong data center sales of $89 billion, and raised guidance including a forecast for its first $100 billion revenue quarter and continued employment growth.\n- CrowdStrike (CRWD) rallied in extended trading after reporting record results, with revenue of $1.47 billion (up 26% year-over-year) beating estimates, accelerating annual recurring revenue, and management calling it its “best quarter in history” on strong AI-driven momentum.\n- Investors now look to Nvidia’s full commentary, upcoming earnings from companies such as Salesforce (CRM), and any additional Fed messaging from the Jackson Hole conference for further direction.",
+  "raw_summary_md": "- The **S&P 500** ([SPX](https://finviz.com/index/SPX?p=d)) closed at **7,675.70 (-0.02%)**, the **Dow Jones Industrial Average** ([DJI](https://finviz.com/index/DJI?p=d)) fell **113.52 points (-0.21%) to 53,463.88**, and the **Nasdaq Composite** ([COMP](https://finviz.com/index/COMP?p=d)) slipped **0.08% to 26,130.20**, snapping the Dow’s **three-session winning streak**.\n- The **July PCE price index rose 3.7% year-over-year, above the 3.6% consensus and matching June’s reading**, while **core PCE held at 3.3% in line with estimates**, a **sticky inflation** print that pushed **Treasury yields higher** ahead of the Fed’s **Jackson Hole symposium**.\n- **Information technology and communication services led gains**, with the Technology Select Sector SPDR ([XLK](https://finviz.com/quote?t=XLK)) up about **0.6%** on strength in **AMD** ([AMD](https://finviz.com/quote?t=AMD)) (**+0.4%**), **Micron (MU, +0.6%)**, **Meta Platforms (META, +1.1%)**, and **Netflix (NFLX, -0.9%)**.\n- **Health care** was the weakest S&P 500 ([SPX](https://finviz.com/index/SPX?p=d)) sector, down roughly **1%**, while **industrials outperformed** earlier in the session as **C.H. Robinson Worldwide** ([CHRW](https://finviz.com/quote?t=CHRW)) climbed **5.62%**, helping lift that group **more than 1% intraday**.\n- **Abercrombie & Fitch** ([ANF](https://finviz.com/quote?t=ANF)) **surged 35.67% to $147.75** after beating Q2 earnings expectations, raising full-year guidance, and posting strong quarterly results.\n- **Dick’s Sporting Goods** ([DKS](https://finviz.com/quote?t=DKS)) **rose about 4.3%** as **Truist downgraded the stock to Hold and trimmed its price target** after the company cut its **2026 EPS outlook**.\n- **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) fell about **1.6%** during the regular session but **rose around 4.7% after-hours** after beating Q2 expectations with revenue of **$96.22 billion (up about 106% year-over-year)**, adjusted EPS of **$2.22 versus $2.10 expected**, strong data center sales of **$89 billion**, and **raised guidance** including a forecast for its first **$100 billion revenue quarter** and continued employment growth.\n- **CrowdStrike** ([CRWD](https://finviz.com/quote?t=CRWD)) **rallied in extended trading** after reporting record results, with revenue of **$1.47 billion (up 26% year-over-year) beating estimates**, accelerating **annual recurring revenue**, and management calling it its **“best quarter in history”** on strong **AI-driven momentum**.\n- **Investors now look to Nvidia’s full commentary**, upcoming earnings from companies such as **Salesforce** ([CRM](https://finviz.com/quote?t=CRM)), and any additional **Fed messaging from the Jackson Hole conference** for further direction.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -0.21,
+      "verb": "fell"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": -0.08,
+      "verb": "slipped"
+    }
+  ],
+  "oil": null,
+  "fed_odds": {
+    "pct": 4.3,
+    "action": "hold",
+    "text": "about 4.3% as Truist downgraded the stock to Hold"
+  },
+  "named_tickers": [
+    "XLK",
+    "AMD",
+    "CHRW",
+    "ANF",
+    "DKS",
+    "NVDA",
+    "CRWD",
+    "CRM"
+  ],
+  "calendar": [],
+  "finviz_id": 273466,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-08-26T20:36:41.2",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}

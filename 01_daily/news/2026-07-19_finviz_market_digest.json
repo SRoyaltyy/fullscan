@@ -1,0 +1,45 @@
+{
+  "date": "2026-07-19",
+  "generated_at": "2026-09-12T09:44:27.845767-04:00",
+  "timezone": "America/New_York",
+  "source": "wayback",
+  "source_url": "https://web.archive.org/web/20260720000225id_/https://finviz.com/",
+  "archive_snapshot_ts": "20260720000225",
+  "archive_snapshot_at": "2026-07-19T20:02:25-04:00",
+  "archive_url": "https://web.archive.org/web/20260720000225id_/https://finviz.com/",
+  "clock_legal": false,
+  "clock_rule": "Pre-Open may use this file only if clock_legal is true: live Generated, or archive snapshot, is before this session's 09:30 ET open. After-open / weekend captures stay on disk with clock_legal=false. Not wired into tape_anchor / predict.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Live Finviz homepage market-day prose (prior cash close + overnight / weekend news). Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "Weekend Brief: US equity futures steady as oil tops $90 on US-Iran tensions ahead of Leading Index data and key Big Tech earnings",
+  "raw_text": "- Escalation in the US-Iran conflict, including fresh strikes and disruptions to the Strait of Hormuz and Caspian Pipeline, pushed crude (@CL) above $90 a barrel and drove diesel prices higher, stoking inflation concerns\n- US stock futures traded little changed after Wall Street’s losing week despite rising energy costs and renewed inflation worries\n- Last week’s pullback in semiconductor and AI-linked names, including leveraged chip trades, related ETFs, and memory plays, intensified doubts about the durability of the AI rally and Magnificent Seven leadership\n- Alphabet (GOOGL) and Intel (INTC) earnings later this week are viewed as key tests for the AI trade and the ability of Big Tech to continue carrying the broader market\n- Energy producers stand to benefit from the oil price spike even as higher input costs and risk repricing threaten to weigh on broader US equity indices\n- Trading in Asian and European markets on Monday is expected to help set the tone for US tech and semiconductor futures\n- Monday’s US macro calendar is light, with the Conference Board Leading Economic Index due at 10:00 AM ET\n- Monday’s earnings slate includes reports from AGNC Investment (AGNC), Crown Holdings (CCK), Domino’s Pizza (DPZ), Steel Dynamics (STLD), and Zions Bancorporation (ZION)\n- A heavier Big Tech earnings calendar later in the week will test the ongoing rotation out of AI momentum names and interact with bond markets’ pricing of a prolonged inflation fight, heightening rate sensitivity across assets",
+  "raw_summary_md": "- **Escalation in the US-Iran conflict**, including fresh strikes and disruptions to the Strait of Hormuz and Caspian Pipeline, pushed crude ([@CL](https://finviz.com/futures_charts?t=CL)) above **$90 a barrel** and drove diesel prices higher, stoking inflation concerns\n- **US stock futures** traded little changed after **Wall Street’s losing week** despite rising energy costs and renewed inflation worries\n- Last week’s **pullback in semiconductor and AI-linked names**, including leveraged chip trades, related ETFs, and memory plays, intensified doubts about the durability of the **AI rally and Magnificent Seven leadership**\n- **Alphabet ([GOOGL](https://finviz.com/quote?t=GOOGL)) and Intel ([INTC](https://finviz.com/quote?t=INTC)) earnings** later this week are viewed as **key tests for the AI trade** and the ability of Big Tech to continue carrying the broader market\n- **Energy producers** stand to benefit from the **oil price spike** even as higher input costs and risk repricing threaten to weigh on broader US equity indices\n- Trading in **Asian and European markets on Monday** is expected to help set the tone for **US tech and semiconductor futures**\n- Monday’s US macro calendar is light, with the **Conference Board Leading Economic Index** due at **10:00 AM ET**\n- Monday’s earnings slate includes reports from **AGNC Investment ([AGNC](https://finviz.com/quote?t=AGNC))**, **Crown Holdings ([CCK](https://finviz.com/quote?t=CCK))**, **Domino’s Pizza ([DPZ](https://finviz.com/quote?t=DPZ))**, **Steel Dynamics ([STLD](https://finviz.com/quote?t=STLD))**, and **Zions Bancorporation ([ZION](https://finviz.com/quote?t=ZION))**\n- A **heavier Big Tech earnings calendar** later in the week will test the ongoing **rotation out of AI momentum names** and interact with bond markets’ pricing of a prolonged inflation fight, heightening rate sensitivity across assets",
+  "index_moves": [],
+  "oil": {
+    "name": "crude",
+    "price": 90.0,
+    "verb": null
+  },
+  "fed_odds": null,
+  "named_tickers": [
+    "GOOGL",
+    "INTC",
+    "AGNC",
+    "CCK",
+    "DPZ",
+    "STLD",
+    "ZION"
+  ],
+  "calendar": [
+    "Trading in Asian and European markets on Monday is expected to help set the tone for US tech and semiconductor futures",
+    "Monday’s US macro calendar is light, with the Conference Board Leading Economic Index due at 10:00 AM ET",
+    "Monday’s earnings slate includes reports from AGNC Investment (AGNC), Crown Holdings (CCK), Domino’s Pizza (DPZ), Steel Dynamics (STLD), and Zions Bancorporation (ZION)",
+    "A heavier Big Tech earnings calendar later in the week will test the ongoing rotation out of AI momentum names and interact with bond markets’ pricing of a prolonged inflation fight, heightening rate sensitivity across assets"
+  ],
+  "finviz_id": 230215,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-07-19T19:05:58.85",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "neutral"
+}
