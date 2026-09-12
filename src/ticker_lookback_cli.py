@@ -84,7 +84,7 @@ def _ab_factors(row):
 
 
 def _boxes(sig, fv_rel, in_buy, present, digest_tone=None, judge_tone=None,
-           heat_tone=None, catal_tone=None):
+           heat_tone=None, catal_tone=None, news_tone=None):
     """Color boxes from the 09:30-ET information set only.
 
     Tape boxes (vol/AB/peer) use the last completed tape dated before D
@@ -93,14 +93,21 @@ def _boxes(sig, fv_rel, in_buy, present, digest_tone=None, judge_tone=None,
     morning predict; otherwise the last prior join.
     Morning boxes use D's pre-open packet, or the last prior predict for
     sector/gen. Digest/judge may fall back to that day's sector print.
-    Missing means nothing knowable printed for that name — never a
-    silent yellow just because a sample file exists.
+    The news box is per-ticker company news (or RSS/actions). A sector
+    digest sample must not paint it. Missing means this name had no
+    headline — never a silent yellow just because a sample file exists.
     """
+    if news_tone in ("good", "bad", "neutral"):
+        news_box = news_tone
+    elif present.get("news"):
+        news_box = tl._polarity(sig.get("s_news"))
+    else:
+        news_box = "missing"
     out = {
         "join": tl._polarity(sig.get("s_join")) if present.get("join") else "missing",
         "sector": tl._polarity(sig.get("s_sector")) if present.get("sector") else "missing",
         "gen": tl._polarity(sig.get("s_general")) if present.get("gen") else "missing",
-        "news": tl._polarity(sig.get("s_news")) if present.get("news") else "missing",
+        "news": news_box,
         "digest": digest_tone or "missing",
         "judge": judge_tone or "missing",
         "ab": tl._polarity(sig.get("s_ab")) if present.get("ab") else "missing",
@@ -278,6 +285,7 @@ def _scan_session(sess, ticker):
     fv_rel = tl._fv_relvol(fv)
     buys = ((book_sess or {}).get("buys") or {}).get(t) or {}
     sells = ((book_sess or {}).get("sells") or {}).get(t) or {}
+    company_news_tone = (packet.get("company_news_tones") or {}).get(t)
     present = {
         "join": join is not None,
         "ab": ab is not None,
@@ -285,7 +293,10 @@ def _scan_session(sess, ticker):
         "finviz": fv is not None,
         "sector": sig.get("s_sector") is not None or packet.get("has_predict"),
         "gen": packet.get("has_predict"),
-        "news": news_rec is not None or packet.get("has_actions") or packet.get("has_judge"),
+        "news": (
+            news_rec is not None
+            or company_news_tone in ("good", "bad", "neutral")
+        ),
         "overnight_book": book_sess is not None,
     }
     judge_raw = (packet.get("judge") or {}).get(t)
@@ -301,6 +312,13 @@ def _scan_session(sess, ticker):
         digest_tone = (packet.get("digest_sector") or {}).get(sector)
     if digest_tone is None:
         digest_tone = "missing"
+    news_tone = None
+    if sig.get("s_news") is not None:
+        news_tone = tl._polarity(sig.get("s_news"))
+    if news_tone in (None, "missing") and company_news_tone in (
+        "good", "bad", "neutral"
+    ):
+        news_tone = company_news_tone
     heat_tone = tl._polarity(sig.get("s_heat")) if sig.get("s_heat") is not None else "missing"
     catal_tone = "missing"
     if catalyst:
@@ -311,7 +329,8 @@ def _scan_session(sess, ticker):
     boxes = _boxes(
         sig, fv_rel, bool(buys), present,
         digest_tone=digest_tone, judge_tone=judge_tone,
-        heat_tone=heat_tone, catal_tone=catal_tone)
+        heat_tone=heat_tone, catal_tone=catal_tone,
+        news_tone=news_tone)
     gate = _independent_green(sig, fv_rel)
     families = {}
     if join:
