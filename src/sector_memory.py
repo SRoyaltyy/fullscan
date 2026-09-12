@@ -6,7 +6,7 @@ import os
 import re
 from pathlib import Path
 
-from . import compute_sector_scores, config, scoreboard
+from . import compute_sector_scores, config, lesson_select, scoreboard
 from .sector_taxonomy import SECTOR_ETFS, amp_damp_table, taxonomy_list
 
 MUTABLE_POLICY = Path(config.GROUNDING) / "mutable_policy.md"
@@ -84,11 +84,24 @@ def recent_sector_logs(sector: str) -> str:
     return "\n\n".join(parts) or "(no prior sector logs — first run for this sector)"
 
 
-def active_lessons_block() -> str:
-    parts = []
-    for p in sorted(glob.glob(os.path.join(config.LESSONS_ACTIVE, "*.md"))):
-        parts.append(f"### {os.path.basename(p)}\n{_read(p).strip()}")
-    return "\n\n".join(parts) or "(no standing lessons yet)"
+def active_lessons_block(sector: str | None = None) -> str:
+    """This sector's lessons + ops rules only, efficacy-ranked and capped
+    (lesson_select). Passing no sector keeps the old every-file behaviour."""
+    if sector is None:
+        parts = []
+        for p in sorted(glob.glob(os.path.join(config.LESSONS_ACTIVE, "*.md"))):
+            parts.append(f"### {os.path.basename(p)}\n{_read(p).strip()}")
+        return "\n\n".join(parts) or "(no standing lessons yet)"
+    topic = topic_for(sector)
+    picked = lesson_select.select_active(topic)
+    _, total = lesson_select.count_active(topic)
+    body = "\n\n".join(f"### {name}\n{text}" for name, text in picked)
+    if not body:
+        return "(no standing lessons for this sector yet)"
+    if total > len(picked):
+        body += (f"\n\n({len(picked)} of {total} relevant active lessons shown; "
+                 "older/flat-efficacy ones omitted)")
+    return body
 
 
 def mutable_policy_block() -> str:
@@ -111,7 +124,7 @@ def prediction_context(sector: str) -> str:
     return (
         "=== MEMORY CONTEXT (THIS SECTOR ONLY) ===\n\n"
         f"[SCOREBOARD]\n{scoreboard_summary(sector)}\n\n"
-        f"[STANDING ACTIVE LESSONS]\n{active_lessons_block()}\n\n"
+        f"[STANDING ACTIVE LESSONS]\n{active_lessons_block(sector)}\n\n"
         f"{mutable_policy_block()}\n\n"
         f"[LAST {config.MEMORY_WINDOW_DAYS} SECTOR LOGS]\n{recent_sector_logs(sector)}\n\n"
         f"=== SECTOR FACTOR TAXONOMY (exact labels) ===\n{checklist}\n\n"

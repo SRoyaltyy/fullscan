@@ -26,7 +26,8 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from . import config, scoreboard
+from . import (config, engine_policy, improvement_tracker, lesson_efficacy,
+               lesson_retire, lesson_select, scoreboard)
 
 ROOT = Path(__file__).resolve().parent.parent
 MUTABLE = ROOT / "00_grounding" / "mutable_policy.md"
@@ -37,6 +38,14 @@ ACTIVE_DIR = Path(config.LESSONS_ACTIVE)
 NEWS_SB = ROOT / "03_scoreboard" / "news_actions_scoreboard.json"
 LEARNINGS = ROOT / "03_scoreboard" / "LEARNINGS.md"
 DAILY = ROOT / "01_daily"
+
+# Market lessons must recur before they become standing rules (same gate
+# promote_lessons.MIN_OCCURRENCES_MARKET was designed with).
+MIN_MARKET_RECURRENCE = 2
+# mutable_policy.md is injected into every predict; keep the active-lesson
+# excerpt to the newest few instead of all ~200 files x 800 chars.
+POLICY_ACTIVE_MAX = 15
+POLICY_ACTIVE_CHARS = 500
 
 
 def _read(p: Path | str) -> str:
@@ -273,7 +282,11 @@ def _write_hypotheses(hypos: list[dict]) -> list[Path]:
     return paths
 
 
-def _promote_complete_candidates(min_market: int = 1) -> list[str]:
+def _promote_complete_candidates(min_market: int = MIN_MARKET_RECURRENCE) -> list[str]:
+    """Promote clustered candidates to active. Market lessons (A/B/C) need
+    `min_market` complete candidates with matching WHEN (recurrence); ops
+    (D) promote on one. The old default of 1 turned every single-day
+    rationalisation into a standing rule."""
     from .promote_lessons import _parse_candidate, _write_active, _cluster
 
     paths = sorted(glob.glob(str(CAND_DIR / "*.md")))
@@ -314,12 +327,18 @@ def _workflow_impact_map() -> str:
     """How learnings touch each daily workflow."""
     return (
         "### General market predict (`run_predict` / daily pipeline)\n"
-        "- Loads `mutable_policy.md` + `02_lessons/active/*` via `memory.prediction_context()`.\n"
+        "- `compute_scores` applies `engine_policy.json` multipliers to B0–B7 and anchors on the "
+        "pre-open tape (ES/NQ/Europe/VIX) — numeric learning the LLM cannot skip.\n"
+        "- Loads `mutable_policy.md` + its own topic's efficacy-ranked lessons "
+        "(`lesson_select`) via `memory.prediction_context()`.\n"
         "- Must answer methodology checklist in MEMORY_CONFIRM.\n"
         "- Ops lessons (missing predict file) change grading, not B0–B7 math.\n"
         "- Macro / geo / regime lessons change how Channel-2 evidence is weighted in narrative.\n\n"
         "### Per-sector predict (`run_sector_predict` / sector daily)\n"
-        "- Loads the **same** `mutable_policy.md` via `sector_memory` (filter lines for this sector + general).\n"
+        "- `compute_sector_scores` applies per-sector S0–S4 multipliers, a beta-weighted futures "
+        "anchor and a carry from the general call.\n"
+        "- Loads the **same** `mutable_policy.md` via `sector_memory` plus only this sector's "
+        "active lessons (`lesson_select`).\n"
         "- Sector-specific active lessons (XLB temper, XLK geo, XLE Hormuz, staples/CPI) apply to S0–S4 scoring judgment.\n"
         "- Weak sectors in accuracy table → extra caution, milder bands, demand confirming tape.\n\n"
         "### Sector / general outcome + reflect\n"
@@ -345,8 +364,12 @@ def _write_learnings_report(
     promoted: list[str],
     news_n: int,
     date_str: str | None = None,
+    retired: list[dict] | None = None,
+    policy: dict | None = None,
 ) -> Path:
     today = date_str or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
+    retired = retired or []
+    policy = policy or {}
     now = datetime.now(ZoneInfo(config.TZ)).isoformat()
 
     by_scope: dict[str, list] = defaultdict(list)
@@ -377,7 +400,9 @@ def _write_learnings_report(
         f"| Hypotheses written | {len(hypos)} (wins={wins}, losses={losses}) |",
         f"| News hypotheses | {news_n} |",
         f"| Lessons promoted to active | {len(promoted)} |",
+        f"| Lessons retired (efficacy-gated) | {len(retired)} |",
         f"| Active lesson files now | {len(list(ACTIVE_DIR.glob('*.md')))} |",
+        f"| Engine policy version | {policy.get('version', '—')} |",
         "",
         "## 2. Accuracy by topic (evidence this cycle learned from)",
         "",
@@ -421,11 +446,32 @@ def _write_learnings_report(
         if len(promoted) > 40:
             L.append(f"- … and {len(promoted) - 40} more")
     else:
-        L.append("_No new promotions this cycle (candidates incomplete or already active)._")
+        L.append("_No new promotions this cycle (candidates incomplete, not yet recurring, "
+                 "or already active)._")
 
     L += [
         "",
         "Full text lives in `02_lessons/active/`. Summaries also feed `mutable_policy.md`.",
+        "",
+        "## 4b. Retired this cycle (topic got worse after the lesson went live)",
+        "",
+    ]
+    if retired:
+        for r in retired:
+            L.append(f"- `{r['lesson']}` ({r['topic']}): {r['before']['hit']:.0%} → "
+                     f"{r['after']['hit']:.0%} ({r['delta']:+.0%}) → `02_lessons/retired/`")
+    else:
+        L.append("_(none)_ — ledger: `03_scoreboard/LESSON_RETIREMENTS.md`")
+    L += [
+        "",
+        "## 4c. Numeric factor weights (engine_policy.json)",
+        "",
+        "These are applied by `compute_scores` / `compute_sector_scores` regardless of what "
+        "the LLM writes — the part of learning that cannot be ignored.",
+        "",
+        _skill_block(policy),
+        "",
+        "Progress vs baselines: `03_scoreboard/IMPROVEMENT_TRACKER.md`.",
         "",
         "## 5. How these learnings affect daily workflows",
         "",
@@ -462,19 +508,52 @@ def _write_learnings_report(
     return LEARNINGS
 
 
+def _promoted_on(text: str) -> str:
+    m = re.search(r'^promoted_on:\s*"?([0-9-]+)"?', text, re.M)
+    return m.group(1) if m else ""
+
+
+def _skill_block(policy: dict) -> str:
+    """Human-readable view of the numeric weights the engines will apply."""
+    if not policy:
+        return "_(no engine policy yet)_"
+    lines = ["General (B0–B7 LLM components; multiplier applied by compute_scores):"]
+    for k, s in (policy.get("general") or {}).items():
+        hit = f"{s['hit']:.2f}" if s.get("hit") is not None else "—"
+        lines.append(f"- {k}: n={s['n']} sign-hit={hit} → ×{s['mult']}")
+    lines.append("Sectors (pooled S0–S4; per-sector overrides in engine_policy.json):")
+    for k, s in (policy.get("sector_pooled") or {}).items():
+        hit = f"{s['hit']:.2f}" if s.get("hit") is not None else "—"
+        lines.append(f"- {k}: n={s['n']} sign-hit={hit} → ×{s['mult']}")
+    hist = (policy.get("history") or [])[-1:]
+    if hist:
+        lines.append("Last change: " + "; ".join(hist[0].get("changes", [])[:6]))
+    return "\n".join(lines)
+
+
 def _rebuild_mutable_policy(
     runs: list[dict], hypos: list[dict], promoted: list[str],
     date_str: str | None = None,
+    retired: list[dict] | None = None,
+    policy: dict | None = None,
 ) -> None:
     today = date_str or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
-    active_parts = []
+    active_files = []
     for p in sorted(ACTIVE_DIR.glob("*.md")):
         if p.name.startswith("."):
             continue
         text = _read(p).strip()
         if text:
-            # compress for prompt: keep front matter + first rule chunk only
-            active_parts.append(f"### {p.name}\n{text[:800]}")
+            active_files.append((_promoted_on(text), p.name, text))
+    n_active = len(active_files)
+    # newest first; the full set is still reachable via lesson_select per topic
+    active_files.sort(key=lambda t: t[0], reverse=True)
+    active_parts = [f"### {name}\n{lesson_select.compact(text, POLICY_ACTIVE_CHARS)}"
+                    for _, name, text in active_files[:POLICY_ACTIVE_MAX]]
+    if n_active > POLICY_ACTIVE_MAX:
+        active_parts.append(
+            f"_(+{n_active - POLICY_ACTIVE_MAX} older active lessons not excerpted; "
+            "each predict receives only its own topic's lessons via lesson_select)_")
 
     by_scope: dict[str, list] = defaultdict(list)
     for h in hypos:
@@ -502,6 +581,14 @@ def _rebuild_mutable_policy(
     scope_block = "\n\n".join(scope_blocks) if scope_blocks else "_(no hypotheses)_"
     exp_block = "\n".join(open_exp) if open_exp else "_(none)_"
     acc_block = "\n".join(acc_lines) if acc_lines else "_(no graded runs)_"
+    retired_lines = [
+        f"- {today}: `{r['lesson']}` ({r['topic']}) — topic hit "
+        f"{r['before']['hit']:.0%} → {r['after']['hit']:.0%} after activation; retired."
+        for r in (retired or [])
+    ]
+    retired_block = "\n".join(retired_lines) if retired_lines else (
+        "_(none this cycle — see 03_scoreboard/LESSON_RETIREMENTS.md for the ledger)_")
+    skill_block = _skill_block(policy or {})
 
     body = (
         f"---\n"
@@ -514,10 +601,13 @@ def _rebuild_mutable_policy(
         f"---\n\n"
         f"# Mutable policy (all workflows)\n\n"
         f"Last learn_cycle: **{today}**. Promoted: {len(promoted)}. "
+        f"Retired: {len(retired or [])}. Active lessons: {n_active}. "
         f"Human digest: `03_scoreboard/LEARNINGS.md`.\n\n"
         f"## Accuracy by topic (graded window)\n\n"
         f"{acc_block}\n\n"
-        f"## Active adjustments (promoted lessons, truncated)\n\n"
+        f"## Numeric factor weights in force (engine_policy.json — applied by code, not by you)\n\n"
+        f"{skill_block}\n\n"
+        f"## Active adjustments (newest promoted lessons, truncated)\n\n"
         f"{active_block}\n\n"
         f"## Per-scope DO-INSTEAD\n\n"
         f"{scope_block}\n\n"
@@ -529,8 +619,8 @@ def _rebuild_mutable_policy(
         f"3. Overweighting one bucket / double-counting one headline?\n"
         f"4. Sectors: S0 macro vs S1 sector factors — which failed?\n"
         f"5. News: event family still earning weight on 1d close?\n\n"
-        f"## Retired / falsified\n\n"
-        f"_(append when a falsifier triggers)_\n"
+        f"## Retired / falsified (efficacy-gated, automatic)\n\n"
+        f"{retired_block}\n"
     )
     MUTABLE.write_text(body, encoding="utf-8")
     print(f"[learn] wrote {MUTABLE}")
@@ -583,15 +673,44 @@ def run(lookback: int = 15, date: str | None = None) -> None:
     paths = _write_hypotheses(hypos)
     print(f"[learn] hypothesis files: {len(paths)}")
 
-    promoted = _promote_complete_candidates(min_market=1)
-    print(f"[learn] promoted: {len(promoted)}")
+    promoted = _promote_complete_candidates()
+    print(f"[learn] promoted: {len(promoted)} (market lessons need "
+          f">={MIN_MARKET_RECURRENCE} recurring candidates)")
     for p in promoted:
         print(f"  -> {p}")
 
-    _rebuild_mutable_policy(runs, hypos, promoted, date_str=date)
+    # Numeric learning: re-measure every LLM component's sign skill from the
+    # whole scoreboard and rewrite the multipliers the engines apply tomorrow.
+    policy: dict = {}
+    try:
+        policy = engine_policy.update_policy_file(scoreboard.load())
+        last = (policy.get("history") or [{}])[-1].get("changes", [])
+        print(f"[learn] engine_policy v{policy.get('version')}: "
+              f"{len([c for c in last if c != 'hold'])} multiplier change(s)")
+    except Exception as e:  # noqa: BLE001
+        print(f"[learn] WARN engine_policy skipped: {e}")
+
+    # Efficacy-gated retirement: lessons whose topic got worse after they
+    # went live leave active/ automatically (worst first, capped per night).
+    retired: list[dict] = []
+    try:
+        eff = lesson_efficacy.evaluate()
+        retired = lesson_retire.retire(eff)
+        s = eff.get("summary") or {}
+        print(f"[learn] efficacy: judged={s.get('n_judged')} improved={s.get('improved')} "
+              f"worse={s.get('worse')} -> retired {len(retired)}")
+    except Exception as e:  # noqa: BLE001
+        print(f"[learn] WARN efficacy/retire skipped: {e}")
+
+    _rebuild_mutable_policy(runs, hypos, promoted, date_str=date,
+                            retired=retired, policy=policy)
     _weather_proposals(runs)
     _write_learnings_report(runs, hypos, promoted, news_n=len(news_hypos),
-                            date_str=date)
+                            date_str=date, retired=retired, policy=policy)
+    try:
+        improvement_tracker.run()
+    except Exception as e:  # noqa: BLE001
+        print(f"[learn] WARN improvement tracker skipped: {e}")
     print("[learn] done — see 03_scoreboard/LEARNINGS.md")
 
 

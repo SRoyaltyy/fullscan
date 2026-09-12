@@ -13,7 +13,7 @@ import glob
 import os
 from pathlib import Path
 
-from . import compute_scores, config, lesson_schema, scoreboard
+from . import compute_scores, config, lesson_schema, lesson_select, scoreboard
 
 MUTABLE_POLICY = Path(config.GROUNDING) / "mutable_policy.md"
 
@@ -41,14 +41,16 @@ def active_lesson_count() -> int:
 
 
 def active_lessons() -> str:
-    parts = []
-    for p in sorted(glob.glob(os.path.join(config.LESSONS_ACTIVE, "*.md"))):
-        if os.path.basename(p).startswith("."):
-            continue
-        text = _read(p).strip()
-        if text:
-            parts.append(f"### {os.path.basename(p)}\n{text}")
-    return lesson_schema.standing_rules_block(parts)
+    """Only general-market + ops lessons, ranked by efficacy, capped
+    (lesson_select) — not the whole 02_lessons/active directory."""
+    picked = lesson_select.select_active("general")
+    parts = [f"### {name}\n{text}" for name, text in picked]
+    _, total = lesson_select.count_active("general")
+    block = lesson_schema.standing_rules_block(parts)
+    if total > len(picked):
+        block += (f"\n({len(picked)} of {total} relevant active lessons shown; "
+                  "the rest are older/flat-efficacy and live in 02_lessons/active)\n")
+    return block
 
 
 def mutable_policy() -> str:
