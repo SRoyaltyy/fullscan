@@ -1,12 +1,12 @@
 {
   "date": "2026-09-12",
-  "generated_at": "2026-09-12T04:43:34.951461-04:00",
-  "overall": "FAIL",
+  "generated_at": "2026-09-12T04:53:00.422238-04:00",
+  "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 0,
-    "partial": 1,
-    "fail": 7,
+    "ok": 2,
+    "partial": 2,
+    "fail": 4,
     "n": 8
   },
   "buy_1d": [],
@@ -14,6 +14,25 @@
   "flatten": {},
   "general": {},
   "sectors": {},
-  "lands": [],
+  "lands": [
+    {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-09-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-12T04:45:00.602738-04:00",
+      "files": [
+        {
+          "path": "data/universe/2026-09-12_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1118366,
+          "preview": "5904 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5904 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    }
+  ],
   "source": "publish_live_boards"
 }

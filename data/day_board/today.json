@@ -1,12 +1,12 @@
 {
   "date": "2026-09-12",
-  "generated_at": "2026-09-12T04:45:00.768390-04:00",
+  "generated_at": "2026-09-12T04:53:00.422238-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 1,
+    "ok": 2,
     "partial": 2,
-    "fail": 5,
+    "fail": 4,
     "n": 8
   },
   "buy_1d": [],
