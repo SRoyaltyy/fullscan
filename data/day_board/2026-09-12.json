@@ -1,6 +1,6 @@
 {
   "date": "2026-09-12",
-  "generated_at": "2026-09-12T04:41:42.463207-04:00",
+  "generated_at": "2026-09-12T04:43:01.923186-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -13,8 +13,8 @@
   ],
   "counts": {
     "ok": 1,
-    "partial": 1,
-    "fail": 6,
+    "partial": 2,
+    "fail": 5,
     "n": 8
   },
   "processes": [
@@ -22,11 +22,11 @@
       "key": "postclose",
       "name": "Post-close research",
       "yaml": "map_heat_postclose.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 2,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 2,
       "files": [
         {
@@ -52,21 +52,21 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-09-12_map_heat.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 269164
         },
         {
           "key": "heat_md",
           "name": "Map heat tables MD",
           "path": "01_daily/map_heat/2026-09-12_map_heat.md",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 16810
         }
       ],
-      "said": "",
+      "said": "tables on disk",
       "bullets": []
     },
     {
@@ -136,9 +136,9 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-09-12_map_heat.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 269164
         },
         {
           "key": "parsed",
@@ -684,6 +684,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-12\n_Generated 2026-09-12T04:41:42.302895-04:00 \u00b7 export=data/exports/finviz_2026-09-11.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11633 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-09-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-12T04:43:01.828289-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-12_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 269164,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-12_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 17152,
+          "preview": "# MAP HEAT \u2014 2026-09-11\nExport `finviz_2026-09-11.csv` \u00b7 11632 names \u00b7 generated 2026-09-12T01:47:24.157263-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-11\nExport `finviz_2026-09-11.csv` \u00b7 11632 names \u00b7 generated 2026-09-12T01:47:24.157263-04:00"
     }
   ],
   "href": {
