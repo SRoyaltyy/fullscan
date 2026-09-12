@@ -70,7 +70,12 @@ def morning_s(regime: dict | None, date: str):
         pass
     try:
         _d, score = sm.predict_snapshot(date)
-        return score
+        if score is not None:
+            return score
+    except Exception:
+        pass
+    try:
+        return sm.weather_score(date)
     except Exception:
         return None
 

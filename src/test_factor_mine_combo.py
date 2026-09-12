@@ -201,6 +201,41 @@ def test_missing_open_is_not_replaced_by_close() -> None:
     assert day1 and abs(float(day1[0]["price"]) - 10.0) < 1e-9
 
 
+def test_split_tolerates_unequal_member_dailies() -> None:
+    """A midday panel date must not IndexError the split sum."""
+    dates = DATES[:3]
+    rec = fm.make_recipe("union_h1", universe="union", hold=1, top_n=1)
+    rec["name"] = "union_h1"
+    panel = _panel([], dates)
+
+    def fake_book(_panel, _rec, **_kw):
+        daily = []
+        for d in dates[:-1]:
+            daily.append({
+                "date": d, "cash": 5000.0, "stock": 0, "equity": 5000.0,
+                "open_cash": 5000.0, "open_equity": 5000.0, "open_stock": 0,
+                "overnight_delta": 0, "session_delta": 0, "n": 0,
+                "bought": [], "sold": [], "held": [],
+            })
+        return {
+            "daily": daily, "trades": [], "skips": [],
+            "total_ret_pct": 0.0, "final_equity": 5000.0,
+            "n_open": 0, "open": [], "n_trades": 0, "n_skips": 0,
+            "audit": {"ok": True},
+        }
+
+    orig = fmb.simulate_book
+    fmb.simulate_book = fake_book
+    try:
+        book = fmc.simulate_split(
+            panel, [rec, rec], [1, 1], bars={}, fees=ZERO_FEES, regime={},
+            name="t_split_gap")
+    finally:
+        fmb.simulate_book = orig
+    assert [d["date"] for d in book["daily"]] == dates[:-1]
+    assert abs(book["daily"][-1]["equity"] - 10000.0) < 1e-6
+
+
 def test_split_scales_capital_and_keeps_member_audits() -> None:
     dates = DATES[:3]
     rows = [_row(d, "WIN") for d in dates]
@@ -363,6 +398,7 @@ if __name__ == "__main__":
     test_shared_hard_red_sits_new_buys()
     test_shared_owner_min_hold()
     test_missing_open_is_not_replaced_by_close()
+    test_split_tolerates_unequal_member_dailies()
     test_split_scales_capital_and_keeps_member_audits()
     test_split_unequal_or_empty_daily_does_not_indexerror()
     test_yf_bound_strips_iso_midnight()
@@ -370,4 +406,4 @@ if __name__ == "__main__":
     test_scorecard_best_of_both_and_rejects_eff_only()
     test_explain_recipe_combo_does_not_int_mix()
     test_run_skips_combos_when_members_absent()
-    print("14 factor-mine combo tests passed")
+    print("15 factor-mine combo tests passed")

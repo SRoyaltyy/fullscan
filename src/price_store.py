@@ -103,9 +103,14 @@ def status() -> None:
 def _yf_bound(raw) -> str:
     """yfinance start/end are YYYY-MM-DD. datetime.isoformat() leaves T00:00:00."""
     s = str(raw or "").strip()
+    if not s:
+        return ""
     if len(s) >= 10 and s[4:5] == "-" and s[7:8] == "-":
         return s[:10]
     return s
+
+
+yahoo_day = _yf_bound
 
 
 def _yf_download(tickers: list[str], start: str, end: str) -> pd.DataFrame:
@@ -269,6 +274,8 @@ def fill_range(start: str, end: str, tickers: list[str] | None = None) -> None:
     import time
     names = tickers or _universe_tickers()
     existing = _load_store()
+    start = yahoo_day(start)
+    end = yahoo_day(end)
     print(f"[price_store] fill_range {start} → {end} for {len(names)} tickers")
     frames = [existing] if len(existing) else []
     n_chunks = max(1, (len(names) - 1) // CHUNK + 1)

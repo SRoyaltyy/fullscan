@@ -693,6 +693,10 @@ def simulate_split(panel: dict, recs: list[dict], weights: list[float],
             rules=rules, start=start))
     cal = [d for d in (panel.get("session_dates") or [])
            if not start or d >= start]
+    last_closed = fm.last_closed_session(
+        start or (cal[0] if cal else ""), cal=cal)
+    if last_closed:
+        cal = [d for d in cal if d <= last_closed]
     # Member books clip to last_closed (and can be empty). Indexing every
     # book at cal[i] IndexErrors when daily lengths differ. Align on the
     # dates every live book actually simulated; skip empty sleeves.
