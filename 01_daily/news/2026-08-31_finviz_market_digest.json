@@ -8,7 +8,7 @@
   "archive_snapshot_at": "2026-08-31T09:20:05-04:00",
   "archive_url": "https://web.archive.org/web/20260831132005id_/https://finviz.com/",
   "clock_legal": true,
-  "clock_rule": "Theme Radar: file exists only when Generated is before 09:30 ET on this date. Miss the morning → leave missing. Do not write an afternoon scrape. Capture only — not tape_anchor / predict / #210.",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
   "kind": "finviz_homepage_market_digest",
   "represents": "Live Finviz homepage market-day prose (prior cash close + overnight / weekend news). Not quote-page ticker blurbs.",
   "error": null,
@@ -81,5 +81,8 @@
       "geo"
     ],
     "text": "Brent crude (@QA) trades around $91 per barrel, up over 3% overnight, after renewed U.S.-Iran military strikes in the Strait of Hormuz spark inflation and supply-disruption fears"
-  }
+  },
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-08-31"
 }

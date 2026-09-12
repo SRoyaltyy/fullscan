@@ -1,6 +1,6 @@
-# Finviz homepage market digest — 2026-08-27
+# Finviz homepage market digest — 2026-08-26
 
-**Generated:** 2026-08-27T00:01:17-04:00 (America/New_York)
+**Generated:** 2026-08-26T21:55:55-04:00 (America/New_York)
 **Source:** `wayback`
 **Banner:** US stocks ended little changed as hotter July PCE lifted Treasury yields ahead of Fed’s Jackson Hole meeting while Nvidia jumped after-hours on strong AI-driven earnings
 **Prior close:** SPX -0.21%  Nasdaq -0.08%  Dow —
@@ -11,14 +11,14 @@
 **Next session:** housing no · retail no · Fed yes
 **Earnings slate:** CRM
 **Geo/grain:** —
-**Archive snapshot:** `20260827040117` (2026-08-27T00:01:17-04:00)
-**Archive URL:** https://web.archive.org/web/20260827040117id_/https://finviz.com/
+**Archive snapshot:** `20260827015555` (2026-08-26T21:55:55-04:00)
+**Archive URL:** https://web.archive.org/web/20260827015555id_/https://finviz.com/
 **Clock legal for:** 2026-08-27
-**Clock use:** `same_morning`
+**Clock use:** `next_open`
 
 ## Clock
 
-Capture is **before 09:30 ET on this date**, so it is legal for that morning's Pre-Open (`clock_legal_for` = 2026-08-27).
+Wayback midday/afternoon capture. **Legal for the NEXT session open only** (`clock_legal_for` = 2026-08-27) as a prior-day close recap — **NOT** the same morning. Generated is the real archive capture time.
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 

@@ -12,11 +12,17 @@ Outputs:
   01_daily/news/<date>_finviz_market_digest.json
   01_daily/news/latest_finviz_market_digest.md
 
-Clock (Theme Radar contract):
-  Generated is the scrape time in America/New_York ISO — live fetch now,
-  or the archive snapshot time for Wayback / archive.ph. The file is
-  written only when Generated is before 09:30 ET on that date. Miss the
-  morning → leave the file missing. Do not write an afternoon scrape.
+Clock (Theme Radar / War room):
+  Generated is the scrape time in America/New_York ISO.
+  Live: write only when Generated is before 09:30 ET on that date;
+        otherwise leave the file missing (no afternoon live backfill).
+  Wayback / archive.ph: stamp the real capture time + source=wayback.
+        Capture before 09:30 ET that day → legal for that morning's
+        Pre-Open (`clock_legal_for` = that date, `clock_use` =
+        same_morning). Midday/afternoon capture → legal for the NEXT
+        NYSE session open only, as a prior-day close recap
+        (`clock_legal_for` = next session, `clock_use` = next_open) —
+        NOT the same morning. Gaps stay gaps.
   Not wired into tape_anchor / predict / #210.
 
 CLI:
@@ -225,6 +231,67 @@ def clock_legal_at(dt: datetime | None, session_date: str) -> bool:
     if dt.tzinfo is None:
         dt = dt.replace(tzinfo=ET)
     return dt.astimezone(ET) < session_open(session_date)
+
+
+def next_session_date(date_str: str) -> str:
+    """Next NYSE session after `date_str` (weekends + full-day holidays)."""
+    from .skip_if_good import _next_weekday
+    return _next_weekday(date_str)
+
+
+def classify_clock(generated: datetime | None, session_date: str,
+                   source: str) -> dict[str, Any]:
+    """War-room clock: live same-morning only; Wayback afternoon → next open."""
+    archive = source in ("wayback", "archive.ph")
+    same_morning = clock_legal_at(generated, session_date)
+    if same_morning:
+        return {
+            "clock_legal": True,
+            "clock_same_morning": True,
+            "clock_use": "same_morning",
+            "clock_legal_for": session_date,
+            "clock_rule": (
+                "Live: Generated must be before 09:30 ET on this date or "
+                "leave missing. Wayback: capture before 09:30 ET that day "
+                "is legal for that morning's Pre-Open. Afternoon Wayback is "
+                "legal for the NEXT session open only (prior-day close "
+                "recap), marked by clock_legal_for. Gaps stay gaps. "
+                "Capture only — not tape_anchor / predict / #210."
+            ),
+        }
+    if archive and generated is not None:
+        nxt = next_session_date(session_date)
+        return {
+            "clock_legal": True,
+            "clock_same_morning": False,
+            "clock_use": "next_open",
+            "clock_legal_for": nxt,
+            "clock_rule": (
+                "Wayback midday/afternoon capture. Legal for the NEXT "
+                f"session open only ({nxt}) as a prior-day close recap — "
+                "NOT the same morning. Generated is the real archive "
+                "capture time. Gaps stay gaps."
+            ),
+        }
+    return {
+        "clock_legal": False,
+        "clock_same_morning": False,
+        "clock_use": None,
+        "clock_legal_for": None,
+        "clock_rule": (
+            "Live scrape after 09:30 ET — leave missing. Do not write an "
+            "afternoon live file as if it were pre-open."
+        ),
+    }
+
+
+def apply_clock(report: dict) -> dict:
+    """Stamp clock_legal / clock_legal_for / clock_use from Generated + source."""
+    generated = parse_et_iso(str(report.get("generated_at") or ""))
+    date_str = str(report.get("date") or "")
+    source = str(report.get("source") or "live")
+    report.update(classify_clock(generated, date_str, source))
+    return report
 
 
 def strip_markup(text: str) -> str:
@@ -585,7 +652,7 @@ def build_report(
         generated = archive_dt.astimezone(ET)
     else:
         generated = et_now()
-    clock_legal = clock_legal_at(generated, asof)
+    clock = classify_clock(generated, asof, source)
     parsed = parse_homepage_html(html) if html else None
     report = {
         "date": asof,
@@ -598,15 +665,12 @@ def build_report(
             archive_dt.astimezone(ET).isoformat() if archive_dt else None
         ),
         "archive_url": archive_url,
-        "clock_legal": clock_legal,
-        "clock_rule": (
-            "Theme Radar: file exists only when Generated is before 09:30 ET "
-            "on this date. Miss the morning → leave missing. Do not write an "
-            "afternoon scrape. Capture only — not tape_anchor / predict / #210."
-        ),
+        **clock,
         "kind": "finviz_homepage_market_digest",
         "represents": (
-            "Finviz homepage market-day prose captured before 09:30 ET. "
+            "Finviz homepage market-day prose. Same-morning Pre-Open when "
+            "Generated is before 09:30 ET; afternoon Wayback is a prior-day "
+            "close recap legal for the next session only. "
             "Not quote-page ticker blurbs."
         ),
         "error": error,
@@ -753,13 +817,32 @@ def to_markdown(report: dict) -> str:
         )
         if report.get("archive_url"):
             lines.append(f"**Archive URL:** {report['archive_url']}")
+    use = report.get("clock_use") or ""
+    legal_for = report.get("clock_legal_for") or "—"
+    lines.append(f"**Clock legal for:** {legal_for}")
+    lines.append(f"**Clock use:** `{use or '—'}`")
+    if use == "next_open":
+        clock_body = (
+            "Wayback midday/afternoon capture. **Legal for the NEXT session "
+            f"open only** (`clock_legal_for` = {legal_for}) as a prior-day "
+            "close recap — **NOT** the same morning. Generated is the real "
+            "archive capture time."
+        )
+    elif use == "same_morning":
+        clock_body = (
+            "Capture is **before 09:30 ET on this date**, so it is legal "
+            f"for that morning's Pre-Open (`clock_legal_for` = {legal_for})."
+        )
+    else:
+        clock_body = (
+            "Live scrape after 09:30 ET — leave missing. Do not write an "
+            "afternoon live file as if it were pre-open."
+        )
     lines += [
         "",
         "## Clock",
         "",
-        "This file exists only because **Generated is before 09:30 ET on "
-        "this date**. Miss the morning → leave the file missing. Do not "
-        "write an afternoon scrape as if it were pre-open.",
+        clock_body,
         "",
         "Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` "
         "(quote-page headlines + ticker blurbs). Capture only. Not wired "
@@ -797,14 +880,16 @@ def to_markdown(report: dict) -> str:
 
 
 def save_report(report: dict) -> tuple[Path, Path] | None:
-    """Write only when Generated is before 09:30 ET on that date.
+    """Write same-morning files, or Wayback afternoon as next-open only.
 
-    Paths are always `*_finviz_market_digest.*`. Never overwrite or rename
-    the quote-page `*_finviz_digest.md` / `.json`.
+    Live after 09:30 ET → leave missing. Paths are always
+    `*_finviz_market_digest.*`. Never overwrite or rename the quote-page
+    `*_finviz_digest.md` / `.json`.
     """
+    apply_clock(report)
     date_str = report["date"]
-    if not report.get("clock_legal"):
-        print(f"[market_digest] {date_str}: after 09:30 ET — leave missing")
+    if report.get("clock_use") not in ("same_morning", "next_open"):
+        print(f"[market_digest] {date_str}: live after 09:30 ET — leave missing")
         return None
     attach_theme_radar(report)
     NEWS_DIR.mkdir(parents=True, exist_ok=True)
@@ -840,10 +925,25 @@ def existing_morning_ok(date_str: str, force: bool = False) -> bool:
         return False
     if not report_has_narrative(payload):
         return False
-    if not payload.get("clock_legal"):
+    if payload.get("clock_use") != "same_morning":
         return False
     dt = parse_et_iso(str(payload.get("generated_at") or ""))
     return clock_legal_at(dt, date_str)
+
+
+def existing_next_open_ok(date_str: str, force: bool = False) -> bool:
+    if force:
+        return False
+    jp = NEWS_DIR / f"{date_str}_finviz_market_digest.json"
+    if not jp.exists():
+        return False
+    try:
+        payload = json.loads(jp.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return False
+    if not report_has_narrative(payload):
+        return False
+    return payload.get("clock_use") == "next_open" and bool(payload.get("clock_legal_for"))
 
 
 # ---------------------------------------------------------------------------
@@ -921,13 +1021,18 @@ def collect_cdx(start: str, end: str,
 
 
 def pick_capture_for_date(rows: list[dict], date_str: str) -> dict | None:
-    """Latest homepage snapshot on ET date `date_str` before 09:30 ET.
+    """Best homepage snapshot on ET date `date_str`.
 
-    Afternoon / evening captures are ignored (Theme Radar: leave missing).
+    Prefer the latest capture before 09:30 ET (same-morning Pre-Open).
+    If none, take the latest midday/afternoon capture (next-open recap).
     """
     day = [r for r in rows if r.get("et_date") == date_str]
+    if not day:
+        return None
     pre = [r for r in day if clock_legal_at(parse_et_iso(r.get("et")), date_str)]
-    return pre[-1] if pre else None
+    if pre:
+        return pre[-1]
+    return day[-1]
 
 
 def fetch_wayback_html(ts: str, original: str,
@@ -1029,9 +1134,17 @@ def backfill_range(start: str, end: str, force: bool = False,
         day += timedelta(days=1)
         if existing_morning_ok(date_str, force=force) and not force:
             skipped.append(date_str)
-            print(f"[market_digest] {date_str}: keep existing")
+            print(f"[market_digest] {date_str}: keep existing same-morning")
             continue
         cap = pick_capture_for_date(rows, date_str)
+        cap_is_morning = bool(
+            cap and clock_legal_at(parse_et_iso(cap.get("et")), date_str)
+        )
+        if (existing_next_open_ok(date_str, force=force) and not force
+                and not cap_is_morning):
+            skipped.append(date_str)
+            print(f"[market_digest] {date_str}: keep existing next-open")
+            continue
         html = None
         source = None
         source_url = ""
@@ -1075,9 +1188,9 @@ def backfill_range(start: str, end: str, force: bool = False,
             gaps.append(date_str)
             print(f"[market_digest] {date_str}: gap (parsed empty)")
             continue
-        if not report.get("clock_legal"):
+        if report.get("clock_use") not in ("same_morning", "next_open"):
             gaps.append(date_str)
-            print(f"[market_digest] {date_str}: after 09:30 ET — leave missing")
+            print(f"[market_digest] {date_str}: live after 09:30 ET — leave missing")
             continue
         saved = save_report(report)
         if not saved:
@@ -1087,14 +1200,90 @@ def backfill_range(start: str, end: str, force: bool = False,
         wrote.append(date_str)
         print(
             f"[market_digest] {date_str}: {report['source']} "
+            f"use={report.get('clock_use')} "
+            f"legal_for={report.get('clock_legal_for')} "
             f"Generated={report['generated_at']} "
             f"snap={report.get('archive_snapshot_ts')} → {mp.name}"
         )
+    refresh_latest()
     return {
         "from": start, "to": end,
         "wrote": wrote, "skipped": skipped, "gaps": gaps,
         "cdx_n": len(rows),
+        "inventory": window_inventory(start, end),
     }
+
+
+def refresh_latest() -> Path | None:
+    files = sorted(
+        p for p in NEWS_DIR.glob("*_finviz_market_digest.md")
+        if p.name != "latest_finviz_market_digest.md"
+    )
+    if not files:
+        return None
+    latest = NEWS_DIR / "latest_finviz_market_digest.md"
+    latest.write_text(files[-1].read_text(encoding="utf-8"), encoding="utf-8")
+    return latest
+
+
+def window_inventory(start: str, end: str) -> dict[str, Any]:
+    """Classify each calendar day in [start, end] for the War-room report."""
+    start_d = datetime.fromisoformat(start).date()
+    end_d = datetime.fromisoformat(end).date()
+    same_morning: list[str] = []
+    next_open: list[str] = []
+    gaps: list[str] = []
+    day = start_d
+    while day <= end_d:
+        date_str = day.isoformat()
+        day += timedelta(days=1)
+        jp = NEWS_DIR / f"{date_str}_finviz_market_digest.json"
+        if not jp.exists():
+            gaps.append(date_str)
+            continue
+        try:
+            payload = json.loads(jp.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            gaps.append(date_str)
+            continue
+        if not report_has_narrative(payload):
+            gaps.append(date_str)
+            continue
+        use = payload.get("clock_use")
+        src = str(payload.get("source") or "")
+        if use == "same_morning" and src in ("wayback", "archive.ph"):
+            same_morning.append(date_str)
+        elif use == "same_morning":
+            same_morning.append(date_str)
+        elif use == "next_open":
+            next_open.append(date_str)
+        else:
+            gaps.append(date_str)
+    return {
+        "from": start,
+        "to": end,
+        "path": "01_daily/news/{date}_finviz_market_digest.md",
+        "same_morning_wayback": [
+            d for d in same_morning
+            if _file_source(d) in ("wayback", "archive.ph")
+        ],
+        "same_morning": same_morning,
+        "next_open_only": next_open,
+        "gaps": gaps,
+        "n_same_morning_wayback": sum(
+            1 for d in same_morning if _file_source(d) in ("wayback", "archive.ph")
+        ),
+        "n_next_open_only": len(next_open),
+        "n_gaps": len(gaps),
+    }
+
+
+def _file_source(date_str: str) -> str:
+    jp = NEWS_DIR / f"{date_str}_finviz_market_digest.json"
+    try:
+        return str(json.loads(jp.read_text(encoding="utf-8")).get("source") or "")
+    except (OSError, json.JSONDecodeError):
+        return ""
 
 
 def _land(date_str: str) -> None:
@@ -1147,8 +1336,7 @@ def main() -> None:
         report = build_report(asof=date_str, html=None, source="text")
         report.update(parsed)
         report["error"] = None
-        report["clock_legal"] = clock_legal_at(
-            parse_et_iso(str(report.get("generated_at") or "")), date_str)
+        apply_clock(report)
         saved = save_report(report)
         if not saved:
             return

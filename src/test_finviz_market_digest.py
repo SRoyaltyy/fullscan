@@ -17,11 +17,14 @@ from zoneinfo import ZoneInfo
 from src.finviz_market_digest import (
     ET,
     THEME_RADAR_KEYS,
+    apply_clock,
     backfill_range,
     build_report,
+    classify_clock,
     clock_legal_at,
     decode_html_bytes,
     existing_morning_ok,
+    next_session_date,
     parse_homepage_html,
     parse_market_digest_text,
     pick_capture_for_date,
@@ -157,8 +160,12 @@ def test_wayback_report_stamps_source_and_clock() -> None:
     assert report["archive_snapshot_ts"] == "20260910060618"
     assert report["generated_at"].startswith("2026-09-10T02:06:18")
     assert report["clock_legal"] is True
+    assert report["clock_use"] == "same_morning"
+    assert report["clock_legal_for"] == "2026-09-10"
+    assert report["clock_same_morning"] is True
     assert report["timezone"] == "America/New_York"
     md = to_markdown(report)
+    assert "**Clock legal for:** 2026-09-10" in md
     assert "**Source:** `wayback`" in md
     assert "**Banner:**" in md and "Weekend Brief" in md
     assert "**SPX:** +0.86%" in md
@@ -179,7 +186,7 @@ def test_wayback_report_stamps_source_and_clock() -> None:
     _assert_friday_theme_radar(report)
 
 
-def test_late_capture_is_not_written() -> None:
+def test_afternoon_wayback_is_next_open_only() -> None:
     html = HTML_FIXTURE.read_text(encoding="utf-8")
     report = build_report(
         asof="2026-09-11",
@@ -187,15 +194,59 @@ def test_late_capture_is_not_written() -> None:
         source="wayback",
         archive_ts="20260912021039",
     )
-    assert report["clock_legal"] is False
-    import src.finviz_market_digest as md
+    assert report["source"] == "wayback"
+    assert report["generated_at"].startswith("2026-09-11T22:10:39")
+    assert report["clock_same_morning"] is False
+    assert report["clock_use"] == "next_open"
+    assert report["clock_legal_for"] == "2026-09-14"
+    assert report["clock_legal"] is True
+    md = to_markdown(report)
+    assert "**Clock legal for:** 2026-09-14" in md
+    assert "NEXT session" in md
+    assert "NOT" in md and "same morning" in md
+    import src.finviz_market_digest as digest
     news = Path("/tmp/fullscan-market-digest-late")
     news.mkdir(parents=True, exist_ok=True)
     for p in news.glob("*"):
         p.unlink()
-    with mock.patch.object(md, "NEWS_DIR", news):
+    with mock.patch.object(digest, "NEWS_DIR", news):
+        saved = save_report(report)
+        assert saved is not None
+        jp, mp = saved
+        payload = json.loads(jp.read_text(encoding="utf-8"))
+        assert payload["clock_use"] == "next_open"
+        assert payload["clock_legal_for"] == "2026-09-14"
+        qc = qc_finviz_market_digest(jp)
+        assert qc.ok, qc.reason
+        assert qc_finviz_market_digest(mp).ok
+        assert existing_morning_ok("2026-09-11") is False
+
+
+def test_live_afternoon_is_not_written() -> None:
+    html = HTML_FIXTURE.read_text(encoding="utf-8")
+    report = build_report(asof="2026-09-11", html=html, source="live")
+    report["generated_at"] = "2026-09-11T16:05:00-04:00"
+    apply_clock(report)
+    assert report["clock_use"] is None
+    assert report["clock_legal"] is False
+    assert report["clock_legal_for"] is None
+    import src.finviz_market_digest as digest
+    news = Path("/tmp/fullscan-market-digest-live-late")
+    news.mkdir(parents=True, exist_ok=True)
+    for p in news.glob("*"):
+        p.unlink()
+    with mock.patch.object(digest, "NEWS_DIR", news):
         assert save_report(report) is None
         assert list(news.glob("*finviz_market_digest*")) == []
+
+
+def test_next_session_skips_weekend_and_labor_day() -> None:
+    assert next_session_date("2026-09-11") == "2026-09-14"
+    assert next_session_date("2026-09-04") == "2026-09-08"
+    clock = classify_clock(
+        datetime(2026, 9, 4, 16, 5, tzinfo=ET), "2026-09-04", "wayback")
+    assert clock["clock_use"] == "next_open"
+    assert clock["clock_legal_for"] == "2026-09-08"
 
 
 def test_does_not_invent_from_quote_digest() -> None:
@@ -225,7 +276,9 @@ def test_pick_capture_prefers_preopen() -> None:
     assert pick_capture_for_date(rows, "2026-09-12") is None
     afternoon_only = [rows[1] | {"et_date": "2026-09-11",
                                  "et": "2026-09-11T20:03:11-04:00"}]
-    assert pick_capture_for_date(afternoon_only, "2026-09-11") is None
+    aft = pick_capture_for_date(afternoon_only, "2026-09-11")
+    assert aft is not None
+    assert aft["timestamp"] == "20260911000311"
 
 
 def test_save_and_morning_ok(tmp_path: Path | None = None) -> None:
@@ -251,6 +304,8 @@ def test_save_and_morning_ok(tmp_path: Path | None = None) -> None:
         payload = json.loads(jp.read_text(encoding="utf-8"))
         assert payload["source"] == "wayback"
         assert payload["clock_legal"] is True
+        assert payload["clock_use"] == "same_morning"
+        assert payload["clock_legal_for"] == "2026-09-10"
         assert payload["generated_at"].startswith("2026-09-10T02:06:18")
         for key in THEME_RADAR_KEYS:
             assert key in payload, key
@@ -262,12 +317,20 @@ def test_save_and_morning_ok(tmp_path: Path | None = None) -> None:
         assert existing_morning_ok("2026-09-10") is True
         assert existing_morning_ok("2026-09-10", force=True) is False
         payload["generated_at"] = "2026-09-10T16:05:00-04:00"
-        payload["clock_legal"] = False
+        payload["clock_legal"] = True
+        payload["clock_use"] = "next_open"
+        payload["clock_same_morning"] = False
+        payload["clock_legal_for"] = "2026-09-11"
         jp.write_text(json.dumps(payload), encoding="utf-8")
         assert existing_morning_ok("2026-09-10") is False
         late_qc = qc_finviz_market_digest(jp)
-        assert not late_qc.ok
-        assert "generated_after_0930" in (late_qc.reason or "")
+        assert late_qc.ok, late_qc.reason
+        payload["clock_use"] = "same_morning"
+        payload["clock_legal_for"] = "2026-09-10"
+        jp.write_text(json.dumps(payload), encoding="utf-8")
+        bad = qc_finviz_market_digest(jp)
+        assert not bad.ok
+        assert "afternoon_not_next_open" in (bad.reason or "")
 
 
 def test_backfill_writes_wayback_and_leaves_gaps() -> None:
@@ -281,6 +344,9 @@ def test_backfill_writes_wayback_and_leaves_gaps() -> None:
         {"timestamp": "20260910060618", "original": "https://finviz.com/",
          "et": "2026-09-10T02:06:18-04:00", "et_date": "2026-09-10",
          "utc": "2026-09-10T06:06:18+00:00"},
+        {"timestamp": "20260912021039", "original": "https://finviz.com/",
+         "et": "2026-09-11T22:10:39-04:00", "et_date": "2026-09-11",
+         "utc": "2026-09-12T02:10:39+00:00"},
     ]
     with mock.patch.object(md, "NEWS_DIR", news), \
          mock.patch.object(md, "collect_cdx", return_value=rows), \
@@ -288,36 +354,54 @@ def test_backfill_writes_wayback_and_leaves_gaps() -> None:
                            return_value=(html, "https://web.archive.org/x")), \
          mock.patch.object(md, "fetch_archive_ph_newest",
                            return_value=(None, None, None)):
-        summary = backfill_range("2026-09-10", "2026-09-11", force=True,
+        summary = backfill_range("2026-09-10", "2026-09-12", force=True,
                                  try_archive_ph=True)
     assert "2026-09-10" in summary["wrote"]
-    assert "2026-09-11" in summary["gaps"]
+    assert "2026-09-11" in summary["wrote"]
+    assert "2026-09-12" in summary["gaps"]
     jp = news / "2026-09-10_finviz_market_digest.json"
     payload = json.loads(jp.read_text(encoding="utf-8"))
     assert payload["source"] == "wayback"
     assert payload["archive_snapshot_ts"] == "20260910060618"
     assert payload["clock_legal"] is True
-    assert not (news / "2026-09-11_finviz_market_digest.json").exists()
+    assert payload["clock_use"] == "same_morning"
+    assert payload["clock_legal_for"] == "2026-09-10"
+    late = json.loads((news / "2026-09-11_finviz_market_digest.json").read_text(
+        encoding="utf-8"))
+    assert late["clock_use"] == "next_open"
+    assert late["clock_legal_for"] == "2026-09-14"
+    assert not (news / "2026-09-12_finviz_market_digest.json").exists()
 
 
 def test_qc_rejects_afternoon_and_missing_radar() -> None:
     html = HTML_FIXTURE.read_text(encoding="utf-8")
-    report = build_report(
-        asof="2026-09-11", html=html, source="wayback",
-        archive_ts="20260912021039",
-    )
-    assert report["clock_legal"] is False
+    live = build_report(asof="2026-09-11", html=html, source="live")
+    live["generated_at"] = "2026-09-11T16:05:00-04:00"
+    apply_clock(live)
     news = Path("/tmp/fullscan-market-digest-qc")
     news.mkdir(parents=True, exist_ok=True)
     jp = news / "2026-09-11_finviz_market_digest.json"
-    jp.write_text(json.dumps(report), encoding="utf-8")
+    jp.write_text(json.dumps(live), encoding="utf-8")
     qc = qc_finviz_market_digest(jp)
     assert not qc.ok
-    assert "generated_after_0930" in (qc.reason or "") or "not_clock_legal" in (qc.reason or "")
-    report["generated_at"] = "2026-09-11T05:40:00-04:00"
-    report["clock_legal"] = True
-    del report["prior_close"]
-    jp.write_text(json.dumps(report), encoding="utf-8")
+    assert "generated_after_0930" in (qc.reason or "")
+    wayback = build_report(
+        asof="2026-09-11", html=html, source="wayback",
+        archive_ts="20260912021039",
+    )
+    jp.write_text(json.dumps(wayback), encoding="utf-8")
+    assert qc_finviz_market_digest(jp).ok
+    wayback["clock_legal_for"] = "2026-09-11"
+    jp.write_text(json.dumps(wayback), encoding="utf-8")
+    qc_same = qc_finviz_market_digest(jp)
+    assert not qc_same.ok
+    assert "clock_legal_for_not_next" in (qc_same.reason or "")
+    wayback["generated_at"] = "2026-09-11T05:40:00-04:00"
+    wayback["clock_use"] = "same_morning"
+    wayback["clock_legal"] = True
+    wayback["clock_legal_for"] = "2026-09-11"
+    del wayback["prior_close"]
+    jp.write_text(json.dumps(wayback), encoding="utf-8")
     qc2 = qc_finviz_market_digest(jp)
     assert not qc2.ok
     assert "missing_prior_close" in (qc2.reason or "")
@@ -331,7 +415,9 @@ def main() -> None:
         test_rejects_login_and_empty,
         test_clock_legal_uses_archive_snapshot_not_generated,
         test_wayback_report_stamps_source_and_clock,
-        test_late_capture_is_not_written,
+        test_afternoon_wayback_is_next_open_only,
+        test_live_afternoon_is_not_written,
+        test_next_session_skips_weekend_and_labor_day,
         test_does_not_invent_from_quote_digest,
         test_pick_capture_prefers_preopen,
         test_save_and_morning_ok,
