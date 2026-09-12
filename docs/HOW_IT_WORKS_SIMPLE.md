@@ -295,9 +295,26 @@ S1×3 + S0×2 + S2×2; if |leading| ≥ 6 and the ETF tape points the *other*
 way, the tape's contribution is removed.
 
 Each sector has its own grounding file (`00_grounding/sectors/energy.md`,
-`technology.md`, …) describing what normally moves it, and its own lesson
-files. The outcome is graded against the sector ETF's own daily move with the
-same 0.1% / 0.3% / 1% / 2% bands.
+`technology.md`, …) with a SPINE (the factors that dominate S1), SECONDARY
+factors, a MACRO MAP (how risk-on/off, dollar and real yields hit *this*
+sector), a search priority list and a DO-NOT list. The system prompt is
+`sector_method.md` + that file + the full taxonomy label list.
+
+After Python computes the total, two deterministic gates in
+`map_heat_research.decision_gate` can still overrule it:
+
+- **Sector RS veto:** if the call is "up" but the Finviz sector tape is red
+  on both the day and the week (or "down" with both green), force
+  flat/flat and cap confidence at 0.55.
+- **Calendar size gate:** on a high-impact macro day (or Technology on a
+  mega-cap earnings day), a "notable"/"severe" call is capped to "mild" with
+  confidence ≤ 0.65.
+
+The outcome (`run_sector_outcome.py`) is graded on the sector ETF's
+**absolute** close-vs-prior-close % move with the same 0.1% / 0.3% / 1% / 2%
+bands. The ETF's move *relative to SPY* is recorded, and the essays talk
+about it a lot, but `grade()` ignores it — Section 9.7 shows why that
+distinction decides hits and misses.
 
 Current scorecard from `03_scoreboard/scoreboard.json` (193 graded sector
 runs): **44.6% direction, 32.1% magnitude.** Best: Consumer Cyclical 61%
@@ -468,6 +485,47 @@ double counting), and a regex over the **Finviz daily digest** headline
 (words like beat/upgrade/raises → +1.6; miss/downgrade/cut → −1.6).
 `s_news = tanh(net / 5)`.
 
+Where those inputs come from, in order:
+
+1. **News parse** (`src/news_parse.py`) is *not* an LLM. It pulls the last
+   48 h of headlines from the Postgres `news` table (RSS, NewsAPI, Reddit
+   collectors) and uses regexes to class each one as noise / single-name /
+   sector-relevant / macro-relevant with a polarity (+, −, mixed, neutral),
+   then buckets them by sector and macro theme. Its output is a summary of
+   the news *landscape*, not a per-ticker score.
+2. **News judge** (`src/run_news_judge.py`, `src/judge_apply.py`) is the LLM
+   reading that landscape plus the Finviz digest. Its parsed output has a
+   `risk_tilt` (on/off/none), `sector_tilts` (bullish/bearish/mixed/
+   hawkish per sector), per-ticker scores (kept if ≥ 0.5), and a `B1_INJECT`
+   paragraph the general predictor is given. Example 2026-09-09: risk_tilt
+   off; Energy/Healthcare/Technology bullish, Utilities bearish; XLK +5.5,
+   XLU −7.0.
+3. **News actions** (`src/news_actions.py`) turn "event families" into
+   edges: each event → bucket, side, weight, list of tickers (industries
+   expanded to tickers through the Finviz universe), rolled into a per-ticker
+   `net` and side. These are graded by `src/news_grade.py`: entry at the
+   next open, window 14 trading days. Scoreboard: 1,053 suggestions, 1-day
+   close win rate **54.1%**, 5-day **61.1%**, but "ever profitable within the
+   window" 98.6% — a very loose measure the repo's own hypothesis file
+   (`news_global_1d_weak.md`) flags as "barely better than a coin at one
+   day."
+4. **Catalyst dossiers** (`src/catalyst_daily.py`, `collectors/
+   catalyst_analysis.py`) run for at most **8** tickers a day (mega-cap
+   earnings first, then captains with conflicts, then the biggest |net|
+   actions). Each is a multi-step LLM grid: every catalyst in a taxonomy is
+   marked HIT/MISS with a weight and confidence; `Net = Σ(weight ×
+   confidence/100)` for positives minus the same for negatives; Net ≥ 20
+   Strong Bullish, ≥ 8 Bullish, ≥ −8 Neutral, ≥ −20 Bearish, else Strong
+   Bearish; `conviction = min(100, 2×|Net|)`. A dossier feeds the actions
+   book at ±3 (strong) scaled by conviction, and gives the lattice its
+   strongest company evidence (0.80–1.0). In practice many dossiers fail to
+   parse and land as error stubs (see Section 9.4).
+5. **Events** (`src/run_events.py`, `run_events_catcher.py`) are the LLM's
+   calendar: each event has a category, timing (past/today/upcoming),
+   `expected_direction`, `impact` 1–5, regions and sectors. Weather counts
+   events with impact ≥ 3 (China ≥ 4); the stock book adds
+   ±0.08 × impact per named sector, clipped at ±0.20.
+
 **s_general** = (general predict direction as ±confidence, floored at 0.15)
 × an accuracy gate × the stock's **beta load** (high beta 1.0, mid 0.5,
 low 0.15, unknown 0.4). A high-beta stock feels the market call more.
@@ -485,7 +543,17 @@ literally gets less say in the stock book.
 
 **s_heat** — map-heat "captains" (from `src/map_heat_research.py`) and the
 industry's 1-week performance *residual* vs its parent sector. Scaled by a
-learned `heat_scale` (currently 0.25, `book_policy.json`).
+learned `heat_scale` (currently 0.25, `book_policy.json`). How the map is
+built (`src/map_heat.py`): the two largest stocks in every industry (S&P 500
+members, plus Russell 2000 names with ≥ $5M/day dollar volume) are its
+**captains**. Each industry's 1-day/1-week % is compared to its parent
+sector; a residual ≥ 3 pp with |week| ≥ 2% is an **OVERRIDE** (child moving
+against parent) or a **SPLIT**. Top/bottom 8 industries by week are
+hot/cold. The night before, Grok researches every industry's captains in
+chunks of 8; at 5:55 AM only hot/cold/override captains and earnings
+captains (≤ 28) are refreshed. If the morning refresh produced ≥ 20 cards,
+`s_heat` uses its per-ticker boosts; otherwise it falls back to ±0.20 tape
+boosts on OVERRIDE captains.
 
 ### 6.5 Mixing them: the weighted score
 
@@ -731,6 +799,24 @@ As described in 6.4, a predictor whose rolling hit rate falls under 45% has
 its influence on the stock book halved automatically. This is the only fully
 automatic "trust less" mechanism in the system.
 
+### 7.6 Did the lessons actually help? (`src/lesson_efficacy.py`)
+
+For every active lesson, take the 7 graded runs of its topic *before* it was
+promoted and the 7 *after* (need at least 4 on each side), and compare the
+direction hit rate. Δ > +5 pp = improved, Δ < −5 pp = worse, else flat. The
+last report (`03_scoreboard/LESSON_EFFICACY.md`, 2026-09-01):
+
+> Active lessons: 123 · judged: 47 · improved: **3** · flat: 2 · worse:
+> **42** · mean delta: **−0.269**
+
+The file is careful to say this is correlation, not proof (the market got
+harder in late August for every topic at once), but 42 of 47 judged lessons
+being followed by *worse* accuracy is the single most important number in
+the learning loop. "Worse" lessons are flagged as retirement candidates for
+the monthly distill — which, as noted in 7.2, is currently switched off.
+`distill_memory.py` is also where unpromoted candidates older than 60 days
+would be moved to `02_lessons/archive/`.
+
 ---
 
 ## 8. The side labs
@@ -797,6 +883,11 @@ predictive: `hot+ab+peer` (70.6% hit, +3.14 mean, n=51), `steady+blue`
 It keeps BUY names with a named stack, drops ones that printed `fade`, adds
 at most 5 extras that pass the liquidity floor, and shorts only
 `book SELL ∩ fade` (38.2% hit, −0.72 mean — i.e. those names really do fall).
+Result over 19 priced days: the overlay's long side lost **−4.40%
+cumulative** (mean −0.23/day) versus the plain stock-book BUY list's −2.94%
+and a mine-only 25-seat fill's −1.06%; the short overlay made **+9.63%** over
+7 days. The file's own verdict: the overlay "has not beaten the book on this
+window."
 
 **Sleeve merge / three-sleeve combine** (`SLEEVE_MERGE.md`,
 `THREE_SLEEVE_COMBINE.md`) route between the three live books by the morning
@@ -921,6 +1012,40 @@ hottest industries on the Finviz board (Electrical Equipment +13.6% 1w,
 Semiconductor Equipment, Computer Hardware, Electronic Components). Price
 data in the repo ends 2026-09-09, so this book is not yet graded here.
 
+One detail worth noticing: ORCL was picked for a **catalyst dossier** on
+09-09 and 09-10 (it is in the mega-cap earnings set), but both files in
+`data/catalyst/` are error stubs — `"Step 1 parse failure"` and `"Step 4
+parse failure"` — with no `net_signal` or conviction. So the "catalyst"
+lane here was earned entirely from the Finviz digest headline (strength
+0.72), not from the dossier engine that was designed to provide it. The
+digest path is the one that actually works day to day.
+
+### 9.7 A sector call that was right relative and wrong absolute — Energy, 2026-09-11
+
+`01_daily/sectors/2026-09-11/energy_predict.md`: S0 = 0, S1 = −1 (crude
+offered −2.5–3.4% after a record close and a crowded-long run), S2 = 0,
+S3 = −0.5, S4 = 0, multiplier 0.9.
+
+```
+total = 2(0) + 3(−1) + 2(0) + 1.5(−0.5) + 0.5(0) = −3.75
+       × 0.9 = −3.375  →  < −1 → DOWN;  |3.375| ≥ 3 → MILD
+leading = 3(−1) + 2(0) + 2(0) = −3.0  (not ≤ −6, so no divergence)
+```
+
+(The essay's prose summed the components without weights to −1.35 and
+claimed divergence was flagged; the Python footer is what counts, and it says
+−3.375 and no flag.)
+
+Outcome (`energy_outcome.md`): XLE **+0.32%** (64.89 → 65.14) while SPY rose
++0.85%, so XLE *lagged* by −0.53% — exactly the fade the essay expected. But
+grading is on the absolute move: +0.32% > +0.1% → actual UP, ≥ 0.3% → MILD.
+**Direction miss, magnitude hit.** The reflection filed it as Category A:
+the model treated green futures as a headwind for Energy instead of a beta
+tailwind, and the corrected behaviour is "score equity beta as an absolute
+tailwind, let the barrel set the *relative* call only." This is the sector
+engine's most common failure shape: relative reasoning graded on an absolute
+scale.
+
 ### 9.5 The learning tuner that refused to learn
 
 `book_policy.json` v3 (2026-08-27): "1d: hold — wins only 43% of dates
@@ -963,7 +1088,12 @@ Numbers pulled from `03_scoreboard/scoreboard.json` and the report card:
   while SELL climbs to 75%.
 - **Paper trading +4.12% in ~4 weeks with a 58.6% win rate on 29 trades**,
   but 225 skipped by the gate — a small sample dominated by a few winners.
+- **News actions: 54.1% win at the 1-day close (n=950)**, rising to ~61% at
+  3–5 days; the "98.6% ever profitable within 14 days" headline is a loose
+  measure.
 - **Book weight learner: 13 versions, 0 adoptions.**
+- **Lesson efficacy: of 47 judged lessons, 3 improved their topic, 42 were
+  followed by worse accuracy** (mean −27 pp; correlation, not proof).
 - **Lessons: 201 active, 220 candidates**, flagged as overfitting risk. The
   "must recur twice" promotion filter is not applied by the nightly learn
   cycle (Section 7.2), and the 09-10 case shows lessons being cited and not
