@@ -100,6 +100,14 @@ def status() -> None:
         print(f"file: {STORE_PATH} ({STORE_PATH.stat().st_size/1e6:.1f} MB)")
 
 
+def _yf_bound(raw) -> str:
+    """yfinance start/end are YYYY-MM-DD. datetime.isoformat() leaves T00:00:00."""
+    s = str(raw or "").strip()
+    if len(s) >= 10 and s[4:5] == "-" and s[7:8] == "-":
+        return s[:10]
+    return s
+
+
 def _yf_download(tickers: list[str], start: str, end: str) -> pd.DataFrame:
     try:
         import yfinance as yf
@@ -107,6 +115,7 @@ def _yf_download(tickers: list[str], start: str, end: str) -> pd.DataFrame:
         raise SystemExit(f"[price_store] yfinance required: {e}") from e
     if not tickers:
         return pd.DataFrame()
+    start, end = _yf_bound(start), _yf_bound(end)
     try:
         # Printed regular-session Open/High/Low/Close — not split-adjusted
         # history and not a live last-trade. Factor-mine 09:30 / 16:00
@@ -320,8 +329,8 @@ def ensure_through(end: str | None = None,
             return
     print(f"[price_store] ensure_through → {target_s} "
           f"(have {n_on} bars; fetch {len(want) if want else 'universe'})")
-    start = (datetime.strptime(target_s, "%Y-%m-%d") - timedelta(days=21)).date().isoformat()
-    stop = (datetime.strptime(target_s, "%Y-%m-%d") + timedelta(days=1)).isoformat()
+    start = (datetime.strptime(target_s, "%Y-%m-%d").date() - timedelta(days=21)).isoformat()
+    stop = (datetime.strptime(target_s, "%Y-%m-%d").date() + timedelta(days=1)).isoformat()
     fill_range(start, stop, want or None)
 
 

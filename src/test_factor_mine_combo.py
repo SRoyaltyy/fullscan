@@ -1,9 +1,12 @@
 """Leak-free factor-mine combination books — unit tests, no full remine."""
 from __future__ import annotations
 
+from unittest import mock
+
 from src import factor_mine as fm
 from src import factor_mine_book as fmb
 from src import factor_mine_combo as fmc
+from src.price_store import _yf_bound
 
 DATES = [
     "2026-08-13", "2026-08-14", "2026-08-17",
@@ -216,6 +219,72 @@ def test_split_scales_capital_and_keeps_member_audits() -> None:
     assert book["collisions"]["double_long"]
 
 
+def _stub_day(date: str, cash: float) -> dict:
+    return {
+        "date": date,
+        "s": 1.0,
+        "hard_red": False,
+        "n": 0,
+        "cash": cash,
+        "stock": 0.0,
+        "equity": cash,
+        "open_equity": cash,
+        "open_cash": cash,
+        "open_stock": 0.0,
+        "overnight_delta": 0.0,
+        "session_delta": 0.0,
+        "bought": [],
+        "sold": [],
+        "held": [],
+    }
+
+
+def _stub_book(daily: list[dict], *, ret: float = 0.0) -> dict:
+    return {
+        "daily": daily,
+        "trades": [],
+        "skips": [],
+        "total_ret_pct": ret,
+        "n_open": 0,
+        "open": [],
+        "n_trades": 0,
+        "n_skips": 0,
+        "audit": {"ok": True},
+    }
+
+
+def test_split_unequal_or_empty_daily_does_not_indexerror() -> None:
+    """Ubuntu mine: panel cal can outrun a member book (last_closed clip
+    or a failed sleeve). Indexing every book at cal[i] used to IndexError."""
+    dates = DATES
+    panel = _panel([], dates)
+    rec = fm.make_recipe("union_h1", universe="union", hold=1, top_n=1)
+    rec["name"] = "union_h1"
+    short = _stub_book(
+        [_stub_day(dates[0], 4000.0), _stub_day(dates[1], 4100.0)], ret=2.5)
+    empty = _stub_book([])
+    longer = _stub_book([_stub_day(d, 6000.0) for d in dates])
+    with mock.patch.object(fmb, "simulate_book", side_effect=[short, empty, longer]):
+        book = fmc.simulate_split(
+            panel, [rec, rec, rec], [1, 1, 1],
+            bars={}, fees=ZERO_FEES, regime={}, name="t_unequal")
+    assert len(book["daily"]) == 2
+    assert book["daily"][0]["date"] == dates[0]
+    assert book["daily"][1]["date"] == dates[1]
+    # Empty sleeve skipped; short + longer cash for the aligned prefix.
+    assert abs(book["daily"][0]["cash"] - 10000.0) < 1e-6
+    assert abs(book["daily"][1]["cash"] - 10100.0) < 1e-6
+    assert book["pool"] == "split"
+    assert book["parts"]
+
+
+def test_yf_bound_strips_iso_midnight() -> None:
+    """ensure_through used datetime.isoformat() → yfinance ValueError T00:00:00."""
+    assert _yf_bound("2026-09-12T00:00:00") == "2026-09-12"
+    assert _yf_bound("2026-09-12") == "2026-09-12"
+    assert _yf_bound("2026-09-12T00:00:00-04:00") == "2026-09-12"
+
+
 def test_scorecard_beats_all_book() -> None:
     combo = {
         "total_ret_pct": 20.0, "max_dd_pct": 3.0, "start_rate": 0.8,
@@ -295,8 +364,10 @@ if __name__ == "__main__":
     test_shared_owner_min_hold()
     test_missing_open_is_not_replaced_by_close()
     test_split_scales_capital_and_keeps_member_audits()
+    test_split_unequal_or_empty_daily_does_not_indexerror()
+    test_yf_bound_strips_iso_midnight()
     test_scorecard_beats_all_book()
     test_scorecard_best_of_both_and_rejects_eff_only()
     test_explain_recipe_combo_does_not_int_mix()
     test_run_skips_combos_when_members_absent()
-    print("12 factor-mine combo tests passed")
+    print("14 factor-mine combo tests passed")
