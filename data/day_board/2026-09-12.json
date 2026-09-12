@@ -1,6 +1,6 @@
 {
   "date": "2026-09-12",
-  "generated_at": "2026-09-12T04:45:00.768390-04:00",
+  "generated_at": "2026-09-12T09:57:00.879230-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -8,13 +8,12 @@
     "MISSING Sector board JSON `01_daily/sectors/2026-09-12/_board.json` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-09-12_actions.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-09-12_judge.md` \u2014 missing",
-    "MISSING Weather JSON `01_daily/weather/2026-09-12_weather.json` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-09-12_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 1,
+    "ok": 2,
     "partial": 2,
-    "fail": 5,
+    "fail": 4,
     "n": 8
   },
   "processes": [
@@ -346,9 +345,9 @@
       "key": "weather",
       "name": "Label + weather",
       "yaml": "label_weather.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
       "n_opt_ok": 0,
       "n_opt": 0,
@@ -367,13 +366,16 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-09-12_weather.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "sectors=11 bytes=9497 vix=falling yields=rising",
+          "size": 9497
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
+      "bullets": [
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Industrials, Real Estate, Utilities",
+        "events bull 5 / bear 6"
+      ]
     },
     {
       "key": "ab",
@@ -511,9 +513,9 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-09-12_weather.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "sectors=11 bytes=9497 vix=falling yields=rising",
+          "size": 9497
         },
         {
           "key": "in_ab",
@@ -585,7 +587,7 @@
           "role": "optional",
           "status": "FAIL",
           "reason": "session 2026-09-12 not in dashboard dates (last=2026-09-11)",
-          "size": 4874126
+          "size": 4874846
         }
       ],
       "said": "",
@@ -618,7 +620,7 @@
           "role": "required",
           "status": "FAIL",
           "reason": "session 2026-09-12 not in dashboard dates (last=2026-09-11)",
-          "size": 4874126
+          "size": 4874846
         },
         {
           "key": "paper",
@@ -650,7 +652,13 @@
     "general": {},
     "sectors": {},
     "news": {},
-    "weather": {}
+    "weather": {
+      "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
+      "bullets": [
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Industrials, Real Estate, Utilities",
+        "events bull 5 / bear 6"
+      ]
+    }
   },
   "lands": [
     {
@@ -670,6 +678,31 @@
         }
       ],
       "preview": "5904 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-12T09:57:00.713829-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-12_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9497,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.45, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.05, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.385, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.98, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -4.67, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.52, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-12_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5248,
+          "preview": "# Weather report \u2014 2026-09-12\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.45, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.05, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.385, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 0.74, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.98, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -4.67, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.52, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-12\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
