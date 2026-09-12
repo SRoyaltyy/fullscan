@@ -1109,6 +1109,29 @@ def build_panel(from_date: str = START, to_date: str | None = None) -> dict:
     }
 
 
+def refresh_panel_marks(panel: dict) -> dict:
+    """Fill row open/close from the official tape after a late price fetch.
+
+    ``build_panel`` used to run *before* ``ensure_through``, so a new
+    session's 09:30 / 16:00 stayed blank on investigator cards even
+    after Yahoo landed the bars.
+    """
+    panel = rehydrate_panel(panel)
+    for r in panel.get("rows") or []:
+        if r.get("open") is not None and r.get("close") is not None:
+            continue
+        t = _tick(r.get("ticker"))
+        d = r.get("date")
+        if not t or not d:
+            continue
+        bar = tl.session_bar(t, d) or {}
+        if r.get("open") is None and _finite(bar.get("open")) is not None:
+            r["open"] = round(float(bar["open"]), 4)
+        if r.get("close") is None and _finite(bar.get("close")) is not None:
+            r["close"] = round(float(bar["close"]), 4)
+    return panel
+
+
 def rehydrate_panel(raw: dict) -> dict:
     """Rebuild by_date from persisted rows if needed."""
     by_date = raw.get("by_date")
@@ -1438,19 +1461,31 @@ def run(from_date: str = START, to_date: str | None = None,
         bars: dict | None = None, combos: bool = True) -> dict:
     from . import factor_mine_book as fmb
     recipes = list(recipes or build_recipes())
+    end = to_date or live_panel_end(from_date, to_date)
+    if write or persist_panel or rebuild_panel:
+        try:
+            from . import price_store as ps
+            held = _held_tickers_from_disk()
+            # Official bars *before* the panel walk so 09:30 / 16:00
+            # exist on the new session. Held lots first — a full-universe
+            # yahoo walk used to die on junk tickers.
+            ps.ensure_through(end, tickers=sorted(held) or None)
+            tl.reset_price_caches()
+        except Exception as e:
+            print(f"[factor-mine] price ensure skipped: {e}", flush=True)
     panel = (panel if panel is not None
              else load_or_build_panel(from_date, to_date, rebuild=rebuild_panel))
     if write or persist_panel or rebuild_panel:
         try:
             from . import price_store as ps
-            held = _held_tickers_from_disk()
             names = {str(r.get("ticker") or "").upper()
                      for r in (panel.get("rows") or []) if r.get("ticker")}
-            end = to_date or panel.get("to_date")
-            # Leftover lots first. A full panel yahoo walk dies on junk
-            # tickers and leaves the new session with $0 overnight marks.
-            ps.ensure_through(end, tickers=sorted(held or names) or None)
-            tl.reset_price_caches()
+            held = _held_tickers_from_disk()
+            need = sorted(names | held)
+            if need:
+                ps.ensure_through(end or panel.get("to_date"), tickers=need)
+                tl.reset_price_caches()
+            panel = refresh_panel_marks(panel)
         except Exception as e:
             print(f"[factor-mine] price ensure skipped: {e}", flush=True)
     if persist_panel or write:
