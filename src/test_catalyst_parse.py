@@ -114,6 +114,83 @@ def test_as_object_picks_the_dict_a_step_expects() -> None:
     assert ca.as_object([1, 2], "catalyst_grid") == {}
 
 
+_TRUNCATED_STEP4 = """{
+  "ticker": "ORCL",
+  "analysis_date": "2026-09-10",
+  "current_price": "162.52",
+  "net_signal": "Bullish",
+  "conviction": 64,
+  "catalyst_stack": "OCI demand rose on 2026-08-07; a $30bn contract landed 2026-09-02.",
+  "key_assumption": "Cloud backlog converts \\"as guided\\".",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [0, 3],
+      "event_date": "2026-09-02",
+      "evidence_excerpt": "$30bn cloud contract",
+      "source_urls": ["https://x"],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Insider selling (cluster)",
+      "type": "negative",
+      "status": "HIT",
+      "adjusted_weight": 4,
+      "event_date": "2026-08-20",
+      "confidence": 70
+    },
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "category": "i"""
+
+
+def test_salvage_truncated_step4_keeps_complete_rows() -> None:
+    """09-10 ORCL/SLVM: DeepSeek's 8192-token cap cut the grid mid-string and
+    the whole ticker became 'Step 4 parse failure'. Complete rows + the
+    summary fields in front of the grid are a usable dossier."""
+    try:
+        ca.parse_json(_TRUNCATED_STEP4)
+        parsed_ok = True
+    except ValueError:
+        parsed_ok = False
+    got = ca.salvage_step4(_TRUNCATED_STEP4)
+    assert got and got["salvaged"] is True
+    assert [r["taxonomy"] for r in got["catalyst_grid"]] == [
+        "Contract win/expansion", "Insider selling (cluster)"]
+    assert got["net_signal"] == "Bullish" and got["conviction"] == 64
+    assert got["current_price"] == "162.52"
+    assert got["key_assumption"] == 'Cloud backlog converts "as guided".'
+    assert got["catalyst_stack"].startswith("OCI demand")
+    # Without summary fields the signal is recomputed from the HIT rows.
+    grid_only = '{"ticker": "X", "catalyst_grid": [' + \
+        _TRUNCATED_STEP4.split('"catalyst_grid": [', 1)[1]
+    got2 = ca.salvage_step4(grid_only)
+    assert got2 and got2["net_signal"] in {"Neutral", "Bullish"}
+    assert ca.as_object(got2, "catalyst_grid", "net_signal") is got2
+    # Nothing to salvage: prose, empty, or no complete row.
+    assert ca.salvage_step4("## Post-session review — CATALYST STEP4 ORCL") is None
+    assert ca.salvage_step4("") is None
+    assert ca.salvage_step4('{"ticker": "X", "catalyst_grid": [{"taxonomy": "cut') is None
+    assert parsed_ok in (True, False)
+
+
+def test_step4_prompt_is_compact_and_summary_first() -> None:
+    """The full 66-row grid with excerpts blew DeepSeek's 8192-token cap."""
+    prompt = ca._format_step4("Oracle (ORCL)", "ORCL", "2026-09-10", "[]", "{}", "{}")
+    assert "OUTPUT ONLY the HIT rows" in prompt
+    assert "at most 25 rows" in prompt
+    assert "under 200 characters" in prompt
+    assert prompt.index('"net_signal"') < prompt.index('"catalyst_grid"')
+    assert prompt.index('"catalyst_stack"') < prompt.index('"catalyst_grid"')
+    assert "Build the FULL catalyst grid (66 items). For each catalyst, set status" not in prompt
+
+
 if __name__ == "__main__":
     test_parse_truncated_array()
     test_parse_fenced_complete()
@@ -123,4 +200,6 @@ if __name__ == "__main__":
     test_verdict_prompt_live_uses_today_not_none()
     test_object_followed_by_prose_is_a_dict()
     test_as_object_picks_the_dict_a_step_expects()
-    print("8 tests passed")
+    test_salvage_truncated_step4_keeps_complete_rows()
+    test_step4_prompt_is_compact_and_summary_first()
+    print("10 tests passed")

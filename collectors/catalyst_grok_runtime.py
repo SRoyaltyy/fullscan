@@ -11,6 +11,13 @@ import re
 from datetime import datetime
 from pathlib import Path
 
+from src import step_deadline
+
+# Share of one ticker's step-deadline slice spent on the concurrent
+# research phase (verdict + Step 1 + Step 2). The rest is for Step 4
+# synthesis + catcher, which must close with parseable JSON.
+PHASE_A_FRAC = 0.62
+
 
 def _native_search_brief(queries):
     lines = [
@@ -245,26 +252,37 @@ def install(ca) -> None:
             official_name, aliases = ticker, []
         full_name = f"{official_name} ({ticker})" if official_name.lower() != ticker.lower() else ticker
 
-        verdict_task = asyncio.create_task(run_verdict_pass(full_name, ticker, ca.CUTOFF_DATE))
-        finviz_events = _elite_or_export_news(ca, ticker)
-        print(f"  📰 Finviz returned {len(finviz_events)} headlines (after cutoff)")
+        # Phase A (verdict + Step 1 + Step 2 search-and-extract, concurrent)
+        # gets a fixed share of the ticker slice so Step 4 + catcher always
+        # have room to close with JSON. 09-10: all three phase-A calls ran
+        # against the whole slice and Step 4 started with 30s of tool budget.
+        rem = step_deadline.remaining_s()
+        phase_a_s = None if rem is None else rem * PHASE_A_FRAC
+        if phase_a_s is not None:
+            print(f"  ⏱ ticker slice {rem:.0f}s → research {phase_a_s:.0f}s, "
+                  f"synthesis {rem - phase_a_s:.0f}s")
+        with step_deadline.narrowed(phase_a_s):
+            verdict_task = asyncio.create_task(run_verdict_pass(full_name, ticker, ca.CUTOFF_DATE))
+            finviz_events = _elite_or_export_news(ca, ticker)
+            print(f"  📰 Finviz returned {len(finviz_events)} headlines (after cutoff)")
 
-        catalyst_queries = ca._make_catalyst_templates(full_name)
-        context_queries = ca._make_context_templates(full_name)
-        print(f"  ⏳ {len(catalyst_queries)}+{len(context_queries)} queries "
-              "→ routed web search")
-        search_results_str = _native_search_brief(catalyst_queries)
-        context_str = _native_search_brief(context_queries)
-        finviz_json = ca.json.dumps(finviz_events, indent=2)
-        prompt1 = ca._format_step1(full_name, ticker, ca.TODAY, ca.LOOKBACK_START,
-                                   search_results_str, finviz_json)
-        prompt2 = ca._format_step2(full_name, ticker, snapshot, context_str,
-                                   "\n".join(ca.TAXONOMY_LIST))
+            catalyst_queries = ca._make_catalyst_templates(full_name)
+            context_queries = ca._make_context_templates(full_name)
+            print(f"  ⏳ {len(catalyst_queries)}+{len(context_queries)} queries "
+                  "→ routed web search")
+            search_results_str = _native_search_brief(catalyst_queries)
+            context_str = _native_search_brief(context_queries)
+            finviz_json = ca.json.dumps(finviz_events, indent=2)
+            prompt1 = ca._format_step1(full_name, ticker, ca.TODAY, ca.LOOKBACK_START,
+                                       search_results_str, finviz_json)
+            prompt2 = ca._format_step2(full_name, ticker, snapshot, context_str,
+                                       "\n".join(ca.TAXONOMY_LIST))
 
-        step1_raw, step2_raw = await asyncio.gather(
-            asyncio.to_thread(call_llm, prompt1, f"Extract events for {full_name}. Search first.", 0.3, 40000, True, f"CATALYST STEP1 {ticker}"),
-            asyncio.to_thread(call_llm, prompt2, f"Context for {full_name}. Search first.", 0.3, 40000, True, f"CATALYST STEP2 {ticker}"),
-        )
+            step1_raw, step2_raw, _verdict_done = await asyncio.gather(
+                asyncio.to_thread(call_llm, prompt1, f"Extract events for {full_name}. Search first.", 0.3, 40000, True, f"CATALYST STEP1 {ticker}"),
+                asyncio.to_thread(call_llm, prompt2, f"Context for {full_name}. Search first.", 0.3, 40000, True, f"CATALYST STEP2 {ticker}"),
+                verdict_task,
+            )
         print("  ✅ Step 1 + Step 2 LLM done.")
 
         try:
@@ -327,8 +345,12 @@ def install(ca) -> None:
             if not final_result:
                 raise ValueError("no object with catalyst_grid/net_signal")
         except Exception as e:
-            print(f"  ❌ Step 4 parse failed: {e}")
-            return {"error": "Step 4 parse failure", "raw": final_raw[:500]}
+            final_result = ca.salvage_step4(final_raw) if hasattr(ca, "salvage_step4") else None
+            if not final_result:
+                print(f"  ❌ Step 4 parse failed: {e}")
+                return {"error": "Step 4 parse failure", "raw": final_raw[:500]}
+            print(f"  ⚠️  Step 4 truncated — salvaged "
+                  f"{len(final_result['catalyst_grid'])} complete grid rows ({e})")
 
         grid = final_result.get("catalyst_grid", []) or []
         grid = [g for g in grid if isinstance(g, dict)]

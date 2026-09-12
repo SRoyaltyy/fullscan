@@ -120,6 +120,18 @@ def _post(payload: dict, retries: int = 4) -> dict:
     headers = {"Authorization": f"Bearer {config.DEEPSEEK_API_KEY}",
                "Content-Type": "application/json"}
     last = None
+
+    def _backoff(attempt: int) -> bool:
+        """Sleep before a retry unless that would eat the step deadline."""
+        pause = 20 * (attempt + 1)
+        rem = step_deadline.remaining_s()
+        if rem is not None and rem - pause < 25:
+            print(f"[llm] DeepSeek retry backoff {pause}s does not fit "
+                  f"{rem:.0f}s left — giving up", flush=True)
+            return False
+        time.sleep(pause)
+        return True
+
     for attempt in range(retries):
         rem = step_deadline.remaining_s()
         if rem is not None and rem < 25:
@@ -135,7 +147,8 @@ def _post(payload: dict, retries: int = 4) -> dict:
                     f"DeepSeek 402 Payment Required: {r.text[:200]}")
             if r.status_code in (429, 500, 502, 503):
                 last = f"HTTP {r.status_code}: {r.text[:200]}"
-                time.sleep(20 * (attempt + 1))
+                if not _backoff(attempt):
+                    break
                 continue
             r.raise_for_status()
             return r.json()
@@ -149,7 +162,8 @@ def _post(payload: dict, retries: int = 4) -> dict:
             break
         except requests.RequestException as e:
             last = str(e)
-            time.sleep(20 * (attempt + 1))
+            if not _backoff(attempt):
+                break
     raise RuntimeError(f"DeepSeek call failed after {retries} tries: {last}")
 
 
@@ -412,6 +426,29 @@ def _openclaw_chat(messages: list[dict], tools: bool, max_tokens: int,
 def _is_sector_stage(stage_label: str) -> bool:
     label = (stage_label or "").upper()
     return "SECTOR OUTCOME" in label or "SECTOR REFLECT" in label
+
+
+def _is_structured_stage(stage_label: str) -> bool:
+    """Stages whose system prompt demands JSON/structured output, not an essay.
+
+    09-10: the catalyst Step 1 forced close asked DeepSeek to 'write the full
+    post-session essay' and, when that failed, handed back a markdown
+    '## Post-session review' — neither parses as the events list the caller
+    needed, so the ticker died on 'Step 1 parse failure'.
+    """
+    return "CATALYST" in (stage_label or "").upper()
+
+
+def _close_instruction(stage_label: str) -> str:
+    if _is_structured_stage(stage_label):
+        return ("Answer now in EXACTLY the output format the system prompt "
+                "specified (if it asked for JSON, return only that JSON — no "
+                "prose before or after it). Do not emit tool calls or DSML. "
+                "Use the search results already in this thread; if a fact is "
+                "missing, leave that field empty rather than searching again.")
+    return ("Write the full post-session essay now. "
+            "Do not emit tool calls or DSML. "
+            "Use the actuals and any search results already in this thread.")
 
 
 def _is_capped_search_stage(stage_label: str) -> bool:
@@ -769,11 +806,7 @@ def chat(messages: list[dict], model: str, tools: bool = False,
             payload.pop("tool_choice", None)
             close_msgs = list(messages) + [{
                 "role": "user",
-                "content": (
-                    "Write the full post-session essay now. "
-                    "Do not emit tool calls or DSML. "
-                    "Use the actuals and any search results already in this thread."
-                ),
+                "content": _close_instruction(stage_label),
             }]
             final = ""
             for attempt in range(3):
@@ -793,7 +826,12 @@ def chat(messages: list[dict], model: str, tools: bool = False,
                     break
                 print(f"[llm] forced close thin on attempt {attempt + 1} "
                       f"({len(cand.strip())} chars) — retry", flush=True)
-            if len((final or "").strip()) < 200:
+            if len((final or "").strip()) < 200 and _is_structured_stage(stage_label):
+                # A markdown review can never parse as the JSON this stage
+                # wants; fail fast so the caller reports the real cause.
+                print(f"[llm] {stage_label}: no structured close — not "
+                      "substituting a markdown review", flush=True)
+            elif len((final or "").strip()) < 200:
                 assembled = _essay_from_thread(messages, stage_label)
                 if assembled:
                     print(f"[llm] assembled essay from thread "

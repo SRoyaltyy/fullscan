@@ -17,13 +17,20 @@ NEWS_DIR = ROOT / "01_daily" / "news"
 HEAT_DIR = ROOT / "01_daily" / "map_heat"
 DATA_CATALYST = ROOT / "data" / "catalyst"
 DEFAULT_MAX = 8
-# A dossier is 3 concurrent LLM calls + synthesis + catcher. Below this
-# many seconds left in the step, starting another one only risks the
-# parent's SIGKILL taking the whole file with it.
-MIN_TICKER_S = 240
+# A dossier is 3 concurrent search-and-extract LLM calls, then Step 4
+# synthesis + catcher. DeepSeek's tool loop keeps a 150s close reserve, so
+# the research phase (62% of the slice) needs ~220s before any search
+# happens and Step 4 needs ~60-120s to emit JSON: 09-10's 240s slices gave
+# Step 4 a 30s tool budget and 1/8 usable dossiers. Below this many seconds
+# left in the step, starting another one only produces a parse failure.
+MIN_TICKER_S = 360
 MAX_TICKER_S = 720
 # Keep this much of the step for the payload write + actions merge.
 TAIL_RESERVE_S = 45
+# Wall the parents (preopen ALL / stock book ALL) give the whole step:
+# DEFAULT_MAX full slices plus the tail, so no target is skipped for time
+# when the LLM is healthy.
+CATALYST_STEP_S = DEFAULT_MAX * MIN_TICKER_S + TAIL_RESERVE_S + 75
 MEGA = {
     "AAPL", "MSFT", "NVDA", "AMZN", "GOOG", "GOOGL", "META", "TSLA",
     "AVGO", "CRM", "ORCL", "NFLX", "AMD",

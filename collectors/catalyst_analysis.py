@@ -657,8 +657,10 @@ INPUTS:
 
 TASKS:
 A. Classify each event into one or more catalyst categories from the taxonomy. Use EXACT taxonomy label.
-B. Build the FULL catalyst grid (66 items). For each catalyst, set status: HIT / MISS / N/A.
+B. Evaluate the FULL catalyst taxonomy (66 items) but OUTPUT ONLY the HIT rows in catalyst_grid
+   (MISS / N/A rows are implied — do not list them; at most 25 rows).
    - For each HIT, copy event_date, evidence_excerpt, source_urls, confidence from the event.
+   - Keep evidence_excerpt under 200 characters and source_urls to at most 2 URLs.
    - Include the EVENT_ID numbers that contributed to this HIT (list of integers).
    - Use the adjusted_weight from the weighted taxonomy for that catalyst.
 C. Apply INTERACTION RULES:
@@ -677,11 +679,15 @@ H. A single event should NOT generate more than one catalyst of the same type
   (both "Geopolitical event" and "Technical breakdown" from the same headline
   is likely over‑counting).
 
-OUTPUT FORMAT: Return ONLY this JSON.
+OUTPUT FORMAT: Return ONLY this JSON, with the summary fields BEFORE the grid, in this order.
 {{
   "ticker": "{ticker}",
   "analysis_date": "{today}",
   "current_price": "...",
+  "net_signal": "Bullish",
+  "conviction": 78,
+  "catalyst_stack": "...",
+  "key_assumption": "...",
   "catalyst_grid": [
     {{
       "taxonomy": "Contract win/expansion",
@@ -696,12 +702,8 @@ OUTPUT FORMAT: Return ONLY this JSON.
       "source_urls": ["https://..."],
       "confidence": 90
     }},
-    ... every catalyst
-  ],
-  "catalyst_stack": "...",
-  "net_signal": "Bullish",
-  "conviction": 78,
-  "key_assumption": "..."
+    ... every HIT catalyst
+  ]
 }}
 """
 
@@ -844,6 +846,53 @@ def as_object(parsed, *want_keys):
         if dicts:
             return dicts[0]
     return {}
+
+
+_SALVAGE_STR_RE = {
+    k: re.compile(r'"%s"\s*:\s*"((?:[^"\\]|\\.)*)"' % k)
+    for k in ("net_signal", "catalyst_stack", "key_assumption", "current_price")
+}
+_SALVAGE_CONV_RE = re.compile(r'"conviction"\s*:\s*(\d+)')
+
+
+def salvage_step4(raw):
+    """Recover a Step 4 result from a reply that died mid-grid.
+
+    2026-09-10 (DeepSeek, 8192-token cap): ORCL and SLVM came back as a
+    top-level ``{`` with a dozen complete grid rows and then a cut string.
+    The signal is recomputed from HIT rows downstream anyway, so complete
+    rows + whatever summary fields survived are a usable dossier, not a
+    "Step 4 parse failure". Returns None when nothing usable is there.
+    """
+    text = _strip_json_fence(raw)
+    if not text or "catalyst_grid" not in text:
+        return None
+    start = text.find("{")
+    if start < 0:
+        return None
+    text = text[start:]
+    grid_at = text.find("[", text.find("catalyst_grid"))
+    if grid_at < 0:
+        return None
+    rows = [r for r in _extract_complete_objects(text[grid_at:])
+            if isinstance(r, dict) and r.get("taxonomy")]
+    hits = [r for r in rows if str(r.get("status") or "HIT").upper() == "HIT"]
+    if not rows:
+        return None
+    out = {"catalyst_grid": rows, "salvaged": True}
+    for k, rx in _SALVAGE_STR_RE.items():
+        m = rx.search(text)
+        if m:
+            try:
+                out[k] = json.loads('"%s"' % m.group(1))
+            except Exception:
+                out[k] = m.group(1)
+    m = _SALVAGE_CONV_RE.search(text)
+    if m:
+        out["conviction"] = int(m.group(1))
+    if not out.get("net_signal"):
+        out["net_signal"], out["conviction"] = recalculate_signal(hits)
+    return out
 
 
 def filter_events_to_window(events, lookback_start=None, cutoff=None):
@@ -1415,8 +1464,12 @@ async def analyze_stock_async(ticker, snapshot, searxng_url):
         if not final_result:
             raise ValueError("no object with catalyst_grid/net_signal")
     except Exception as e:
-        print(f"  ❌ Step 4 parse failed: {e}")
-        return {"error": "Step 4 parse failure", "raw": final_raw[:500]}
+        final_result = salvage_step4(final_raw)
+        if not final_result:
+            print(f"  ❌ Step 4 parse failed: {e}")
+            return {"error": "Step 4 parse failure", "raw": final_raw[:500]}
+        print(f"  ⚠️  Step 4 truncated — salvaged {len(final_result['catalyst_grid'])} "
+              f"complete grid rows ({e})")
 
     grid = [g for g in (final_result.get("catalyst_grid", []) or []) if isinstance(g, dict)]
     events_by_id = {e["id"]: e for e in merged_events}
