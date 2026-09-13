@@ -1728,6 +1728,29 @@ def test_js_look_day_cams_and_white_yday() -> None:
     assert out["picks"] == ["WHT"]
 
 
+def test_restamp_dash_rewrites_current_template(tmp_path, monkeypatch) -> None:
+    payload = {"to_date": "2026-09-11", "n_recipes": 1, "dates": ["2026-09-11"]}
+    (tmp_path / "factor_mine_dash.html").write_text(
+        'NEW Cams Yday\n__SIM_JS__\nconst B64 = "__DATA__";\n', encoding="utf-8")
+    (tmp_path / "factor_mine_sim.js").write_text("var FMSim={};", encoding="utf-8")
+    dest = tmp_path / "out"
+    dest.mkdir()
+    baked = dest / "index.html"
+    baked.write_text(
+        'OLD −N next to a name\nconst B64 = "'
+        + fm.encode_payload(payload) + '";\n',
+        encoding="utf-8")
+    monkeypatch.setattr(fm, "TEMPLATE", tmp_path / "factor_mine_dash.html")
+    monkeypatch.setattr(fm, "SIM_JS", tmp_path / "factor_mine_sim.js")
+    monkeypatch.setattr(fm, "DASH_DIR", dest)
+    out = fm.restamp_dash()
+    text = baked.read_text(encoding="utf-8")
+    assert out["to_date"] == "2026-09-11"
+    assert "NEW Cams Yday" in text
+    assert "var FMSim={}" in text
+    assert "OLD −N next to a name" not in text
+
+
 def test_action_filters_size_sell_boost() -> None:
     from src import factor_mine_book as fmb
     only = fmb.recipes_from_action(

@@ -1965,17 +1965,53 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
             f"{aud} | {s.get('effectiveness')} |"
         )
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    if TEMPLATE.is_file():
-        html = TEMPLATE.read_text(encoding="utf-8")
-        if SIM_JS.is_file() and "__SIM_JS__" in html:
-            html = html.replace("__SIM_JS__", SIM_JS.read_text(encoding="utf-8"))
-        html = html.replace("__DATA__", encode_payload(payload))
-        (DASH_DIR / "index.html").write_text(html, encoding="utf-8")
+    write_dash_html(payload)
     if books:
         from . import factor_mine_book as fmb
         featured = payload.get("featured") or [
             s["name"] for s in (stats or []) if s.get("reliable")][:8]
         fmb.write_action_mds(payload, stats or [], books, featured)
+
+
+def write_dash_html(payload: dict) -> Path:
+    """Bake the current template + sim.js + payload into Pages HTML."""
+    DASH_DIR.mkdir(parents=True, exist_ok=True)
+    dest = DASH_DIR / "index.html"
+    if not TEMPLATE.is_file():
+        return dest
+    html = TEMPLATE.read_text(encoding="utf-8")
+    if SIM_JS.is_file() and "__SIM_JS__" in html:
+        html = html.replace("__SIM_JS__", SIM_JS.read_text(encoding="utf-8"))
+    html = html.replace("__DATA__", encode_payload(payload))
+    dest.write_text(html, encoding="utf-8")
+    return dest
+
+
+def load_dash_payload() -> dict:
+    """Prefer the baked .io payload so a restamp does not remine."""
+    html_path = DASH_DIR / "index.html"
+    if html_path.is_file():
+        text = html_path.read_text(encoding="utf-8")
+        marker = 'const B64 = "'
+        start = text.find(marker)
+        if start >= 0:
+            start += len(marker)
+            end = text.find('"', start)
+            if end > start:
+                return decode_payload(text[start:end])
+    if OUT_JSON.is_file():
+        return json.loads(OUT_JSON.read_text(encoding="utf-8"))
+    raise FileNotFoundError("no baked factor-mine dashboard payload")
+
+
+def restamp_dash() -> dict:
+    """Rewrite Pages HTML from the current template; keep the last payload."""
+    payload = load_dash_payload()
+    dest = write_dash_html(payload)
+    print(f"[factor-mine] restamp-dash → {dest} "
+          f"to={payload.get('to_date')} recipes={payload.get('n_recipes')}",
+          flush=True)
+    return payload
 
 
 def encode_payload(payload: dict) -> str:
@@ -2082,6 +2118,8 @@ def main(argv=None) -> int:
     ap.add_argument("--from-date", default=START)
     ap.add_argument("--to-date", default="")
     ap.add_argument("--write", action="store_true")
+    ap.add_argument("--restamp-dash", action="store_true",
+                    help="rewrite dashboard HTML from the current template; no remine")
     ap.add_argument("--rebuild-panel", action="store_true")
     ap.add_argument("--land-closed", action="store_true",
                     help="reuse existing recipes; mine through last closed session")
@@ -2105,6 +2143,11 @@ def main(argv=None) -> int:
     ap.add_argument("--no-combo", action="store_true",
                     help="skip combination books (single-recipe mine only)")
     args = ap.parse_args(argv)
+    if args.restamp_dash:
+        payload = restamp_dash()
+        print(f"[factor-mine] recipes={payload.get('n_recipes')} "
+              f"to={payload.get('to_date')}")
+        return 0
     if args.land_closed:
         payload = land_closed(
             args.from_date, write=args.write,
