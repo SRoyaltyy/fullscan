@@ -1,6 +1,6 @@
 {
   "date": "2026-09-13",
-  "generated_at": "2026-09-13T14:57:22.455983-04:00",
+  "generated_at": "2026-09-13T14:58:07.128604-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -259,6 +259,173 @@
         }
       ],
       "preview": "2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, CFFN, BMRN, ANET, SLDE \u00b7 2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SFL, AVT, CFFN, LFST, AMD"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-13T14:57:21.528417-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-13_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9525,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.45, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.1900000000000004, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.05, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.385, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.98, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -4.68, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.52, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-13_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5248,
+          "preview": "# Weather report \u2014 2026-09-13\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.45, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.1900000000000004, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.05, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.385, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.98, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -4.68, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.52, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-13\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-13T14:57:25.445163-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-13_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2247810,
+          "preview": "5895 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, HRMY, EXEL, NUTX, CDNA"
+        }
+      ],
+      "preview": "5895 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, HRMY, EXEL, NUTX, CDNA"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-13T14:57:35.936408-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-13_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1458204,
+          "preview": "1d BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF"
+        },
+        {
+          "path": "data/stock_book/2026-09-13_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-13_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2573,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-13_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12430,
+          "preview": "2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12430,
+          "preview": "2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF"
+        },
+        {
+          "path": "01_daily/2026-09-13_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 79515,
+          "preview": "# Stock book \u2014 2026-09-13\n_Generated 2026-09-13T14:57:20.068554-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF \u00b7 2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF \u00b7 # Stock book \u2014 2026-09-13\n_Generated 2026-09-13T14:57:20.068554-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-09-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-13T14:57:39.519865-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 13711,
+          "preview": "2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 792,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-13.json",
+          "ok": true,
+          "reason": "",
+          "size": 36166,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-13_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 11213,
+          "preview": "2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 11213,
+          "preview": "2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF"
+        }
+      ],
+      "preview": "2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF \u00b7 2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-13T14:57:54.703721-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-13_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7620317,
+          "preview": "2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, CFFN, ANET, BMRN, SLDE"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-13_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8459317,
+          "preview": "2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, SFL, AVT, AMD, LFST"
+        }
+      ],
+      "preview": "2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, CFFN, ANET, BMRN, SLDE \u00b7 2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, SFL, AVT, AMD, LFST"
     }
   ],
   "source": "publish_live_boards"

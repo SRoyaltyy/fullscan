@@ -1,12 +1,11 @@
 {
   "date": "2026-09-13",
-  "generated_at": "2026-09-13T14:58:26.320819-04:00",
+  "generated_at": "2026-09-13T14:58:26.817441-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-13_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-13/_board.json` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-09-13_actions.json` \u2014 missing",
     "MISSING Finviz digest JSON `01_daily/news/2026-09-13_finviz_digest.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-09-13_judge.md` \u2014 missing"
   ],
@@ -109,7 +108,7 @@
       "inputs_ready": false,
       "n_req_ok": 0,
       "n_req": 20,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 2,
       "files": [
         {
@@ -189,9 +188,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-13_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 2388
         },
         {
           "key": "general",
@@ -409,7 +408,7 @@
       ],
       "said": "25 rows",
       "bullets": [
-        "SFL, AVT, CFFN, LFST, AMD"
+        "CFFN, SFL, AVT, AMD, LFST"
       ]
     },
     {
@@ -428,9 +427,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-13_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 2388
         },
         {
           "key": "in_digest",
@@ -488,9 +487,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-13_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 2388
         },
         {
           "key": "in_digest",
@@ -553,7 +552,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=216",
-          "size": 1458204
+          "size": 1458203
         },
         {
           "key": "book_md",
@@ -562,7 +561,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 78504
+          "size": 78486
         },
         {
           "key": "green",
@@ -615,7 +614,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=216",
-          "size": 1458204
+          "size": 1458203
         },
         {
           "key": "dash_html",
@@ -718,14 +717,7 @@
         "score": -0.38550226300087354
       }
     ],
-    "flatten": {
-      "said": "0 priced buys \u00b7 cash $108,616.66 \u00b7 morning S missing",
-      "bullets": [
-        "0 priced buys",
-        "cash $108,616.66",
-        "morning S missing"
-      ]
-    },
+    "flatten": {},
     "general": {},
     "sectors": {},
     "news": {},
@@ -1182,6 +1174,52 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-09-13\n_Generated 2026-09-13T18:58:24 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Prior close **$108,616.66** \u00b7 09:30 **$108,616.66** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$108,616.66**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66** \u00b7 2026-09-13 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_over"
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-09-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-13T14:58:26.154533-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 15240,
+          "preview": "2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 792,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-13.json",
+          "ok": true,
+          "reason": "",
+          "size": 42047,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-13_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 20338,
+          "preview": "2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 20338,
+          "preview": "2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF"
+        }
+      ],
+      "preview": "2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF \u00b7 2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF"
     }
   ],
   "href": {
