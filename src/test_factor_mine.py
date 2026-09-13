@@ -544,6 +544,21 @@ def test_payload_is_gzip_base64_and_round_trips() -> None:
     assert "window.__FM_D" in main
 
 
+def test_factor_mine_main_script_parses_and_replays_sell() -> None:
+    """A second `const sp` in renderTools blanked the live .io page (#223)."""
+    import subprocess
+    from pathlib import Path
+    text = fm.TEMPLATE.read_text(encoding="utf-8")
+    main = text.split('id="fm-main">', 1)[1].split("</script>", 1)[0]
+    assert "const sp=document.getElementById('stopPct')" not in main
+    assert "function ensureLiveBooks" in main
+    assert "function kickSellReplay" in main
+    assert 'id="fmSellOn"' in text
+    path = Path("/tmp/fm-main-check.js")
+    path.write_text(main, encoding="utf-8")
+    subprocess.check_call(["node", "--check", str(path)])
+
+
 def test_template_has_data_slot() -> None:
     text = fm.TEMPLATE.read_text(encoding="utf-8")
     assert "__DATA__" in text
