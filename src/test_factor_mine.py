@@ -1473,6 +1473,10 @@ def test_white_horizon_pool_then_score() -> None:
     names = {r["name"] for r in fm.build_recipes()}
     assert "union_white_any_h2" in names
     assert "union_white_any_h5" in names
+    assert "union_white_both_n4_h5" in names
+    both = next(r for r in fm.build_recipes() if r["name"] == "union_white_both_n4_h5")
+    assert both["top_n"] == 4
+    assert both["require"] == {"cam_bad_max": 0, "yday_and_catalyst": True}
 
     def row(ticker, **kw):
         base = {
@@ -1499,6 +1503,14 @@ def test_white_horizon_pool_then_score() -> None:
     assert fm.matches(red, rec) is False
     assert fm.matches(dn, rec) is False
     assert fm.major_catalyst(cat) is True
+    both_rec = fm.make_recipe(
+        "union_white_both_n4_h5", hold=5, top_n=4, rank="list",
+        require={"cam_bad_max": 0, "yday_and_catalyst": True},
+        forbid={"alarm": True})
+    assert fm.matches(wht, both_rec) is False  # yday up, no catalyst
+    assert fm.matches(cat, both_rec) is False  # catalyst, yday down
+    both_ok = row("BOTH", src_rank=8, cond_bad=0, ohlc_ret_1=1.4, e_pol="good")
+    assert fm.matches(both_ok, both_rec) is True
     why = fm.match_why(red, rec)
     assert why["ok"] is False
     assert any("red camera" in x for x in why["failed"])

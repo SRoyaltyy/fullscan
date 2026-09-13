@@ -379,6 +379,14 @@ def build_recipes() -> list[dict]:
             require={"cam_bad_max": 0, "yday_or_catalyst": True},
             forbid={"alarm": True},
             note="−0 red + (yday up or major catalyst), then Score")
+    # Same Score-after-pool, but the name must have yday-up AND a catalyst,
+    # then take only the top 4. That is the cash-book winner on 08-13→09-11.
+    for hold in (1, 2, 3, 5):
+        add(name=f"union_white_both_n4_h{hold}", universe="union", hold=hold,
+            top_n=4, rank="list",
+            require={"cam_bad_max": 0, "yday_and_catalyst": True},
+            forbid={"alarm": True},
+            note="−0 red + yday up AND catalyst, top 4 by Score")
 
     return recs
 
@@ -1765,6 +1773,8 @@ def run(from_date: str = START, to_date: str | None = None,
         "union_e_green_h3",
         "union_white_any_h1", "union_white_any_h2",
         "union_white_any_h3", "union_white_any_h5",
+        "union_white_both_n4_h1", "union_white_both_n4_h2",
+        "union_white_both_n4_h5",
         "flatten_h5", "flatten_h5_rankw", "flatten_h5_time", "flatten_h5_sboost",
         "union_h5_sboost", "flatten_live_h1_sizeup",
         "union_h3_cut", "union_h1_topheavy",
