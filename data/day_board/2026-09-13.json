@@ -1,6 +1,6 @@
 {
   "date": "2026-09-13",
-  "generated_at": "2026-09-13T14:57:36.535571-04:00",
+  "generated_at": "2026-09-13T14:57:40.114400-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1005,6 +1005,52 @@
         }
       ],
       "preview": "1d BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF \u00b7 2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF \u00b7 # Stock book \u2014 2026-09-13\n_Generated 2026-09-13T14:57:20.068554-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-09-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-13T14:57:39.519865-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 13711,
+          "preview": "2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 792,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-13.json",
+          "ok": true,
+          "reason": "",
+          "size": 36166,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-13_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 11213,
+          "preview": "2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 11213,
+          "preview": "2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF"
+        }
+      ],
+      "preview": "2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF \u00b7 2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF"
     }
   ],
   "href": {
