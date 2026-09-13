@@ -41,45 +41,35 @@ before a live scan.
 
 ## Column meanings used here
 
-These match the noodle headers in the screenshot, rebuilt from OHLCV
-when a grid has no cached H/I:
-
 - **I** = `close[T] / close[T−1] − 1` (Daily)
 - **H** = `(high[T] − low[T]) / open[T]` (Intraday range strength)
 - green I day = `I > 0`
 - red I day = `I < 0`
-- **streak** at T = consecutive signed I days on rows *above* T
-- **deep green** = streak ≥ 5 *or* streak ≥ 3 and run-sum I ≥ 8%
 
-Text columns **DF / DG / DH** (candle names) enter as lag-1 flags:
-Hammer, Engulfing, Morning/Evening Star, Doji, bullish/bearish net.
+## Deep sheet mine + GitHub Action
 
-## How to run (from `excel_bot/`)
+The I-streak pass is the narrow test. The full-sheet miner is
+`engine/excel_deep_corr_mine.py`. It walks every emulator column the
+clock allows:
+
+- same-row open fills A B C G J K L M O green/red
+- last 5 / 10 / 20 rows of every A–O letter: green-count, red-count, green>red
+- current A-region (already in a green or red paint run)
+- lag-1 DF / DG / DH candles
+- open-44 ratios (`C/B`, `J/C`, `FR/AH`, …) when the grid stored values
+- pairwise AND of the holdout-surviving singles
+
+Universe: Finviz market cap > $50M and average volume > 100k shares.
+Tape: `grids_deep/` (multi-year if those grids are). A rule is kept only
+when discovery and holdout both lift green density the same way.
 
 ```
-python engine/region_corr_mine.py --grids grids --min-n 80
-python engine/test_region_corr_mine.py
+python engine/excel_deep_corr_mine.py --grids grids_deep --min-disc 200
 ```
 
-Deep history if present:
-
-```
-python engine/region_corr_mine.py --grids grids_deep --min-n 200 \
-  --out-md research/REGION_CORR_MINE.md \
-  --out-csv research/region_corr_mine.csv
-```
-
-## How to read a row
-
-- `lift_green` > 1: the IF fires, then forward I is green more often than the
-  unconditional tape.
-- `lift_abs_I` / `lift_H` > 1: the moves are *bigger*, not just more often green.
-- `hold` / `lift_hold`: open-of-T → last close of that bucket.
-- `g_streak>=8` on `hold_green_region` is the screenshot claim in one line.
-- `r_streak>=5` on `h5` should raise `red_density` and shrink opposing greens
-  if the paint-regime idea is real.
-
-A rule that needs tiny `n` to look like 80% is a story. Keep `min-n` high.
+Action: `.github/workflows/excel_deep_corr_mine.yml` (`workflow_dispatch`
++ Saturday cron). Overlays `excel-state` grids when the checkout does
+not have them. Writes `03_scoreboard/EXCEL_DEEP_CORR_MINE.md`.
 
 ## What this is not
 

@@ -1,0 +1,142 @@
+name: Excel Deep Corr Mine
+
+# Full-sheet Excel-emulator correlation mine.
+# Universe: Finviz mcap > $50M and average volume > 100k shares.
+# Clock: rows above T + 09:30-knowable atoms. H/I are labels only.
+# Discovery/holdout must agree before a rule is called "surviving".
+
+on:
+  workflow_dispatch:
+    inputs:
+      grids:
+        description: "Grid folder (grids_deep or grids)"
+        required: false
+        default: "grids_deep"
+        type: string
+      limit:
+        description: "Cap tickers (0 = all that pass 50M/100k)"
+        required: false
+        default: "0"
+        type: string
+      min_disc:
+        description: "Min discovery events"
+        required: false
+        default: "200"
+        type: string
+      min_hold:
+        description: "Min holdout events"
+        required: false
+        default: "80"
+        type: string
+  schedule:
+    - cron: "20 11 * * 6"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: excel-deep-corr-mine
+  cancel-in-progress: true
+
+jobs:
+  mine:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Overlay emulator grids from excel-state if missing
+        run: |
+          set -euo pipefail
+          if [ -d grids_deep ] && ls grids_deep/*.json >/dev/null 2>&1; then
+            echo "grids_deep already present"
+            exit 0
+          fi
+          if [ -d grids ] && ls grids/*.json >/dev/null 2>&1; then
+            echo "grids already present"
+            exit 0
+          fi
+          echo "fetching origin/excel-state for grids"
+          git fetch origin excel-state --depth=1 || true
+          git checkout origin/excel-state -- grids_deep grids 2>/dev/null \
+            || echo "excel-state overlay skipped"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install pandas pyarrow
+
+      - name: Unit tests
+        run: |
+          python excel_bot/engine/test_excel_deep_corr_mine.py
+          python excel_bot/engine/test_region_corr_mine.py || true
+
+      - name: Mine
+        env:
+          GRIDS: ${{ inputs.grids || 'grids_deep' }}
+          LIMIT: ${{ inputs.limit || '0' }}
+          MIN_DISC: ${{ inputs.min_disc || '200' }}
+          MIN_HOLD: ${{ inputs.min_hold || '80' }}
+        run: |
+          set -euo pipefail
+          ARGS=(--min-disc "$MIN_DISC" --min-hold "$MIN_HOLD")
+          if [ -d "$GRIDS" ]; then
+            ARGS+=(--grids "$GRIDS")
+          elif [ -d grids_deep ]; then
+            ARGS+=(--grids grids_deep)
+          elif [ -d grids ]; then
+            ARGS+=(--grids grids)
+          else
+            echo "NO GRIDS — unit tests already ran; skip live mine"
+            exit 0
+          fi
+          if [ -n "$LIMIT" ] && [ "$LIMIT" != "0" ]; then
+            ARGS+=(--limit "$LIMIT")
+          fi
+          python excel_bot/engine/excel_deep_corr_mine.py "${ARGS[@]}"
+          test -s 03_scoreboard/EXCEL_DEEP_CORR_MINE.md
+          test -s 03_scoreboard/excel_deep_corr_mine.json
+
+      - name: Show board
+        if: always()
+        run: |
+          echo "======== EXCEL DEEP CORR MINE ========"
+          if [ -f 03_scoreboard/EXCEL_DEEP_CORR_MINE.md ]; then
+            head -n 80 03_scoreboard/EXCEL_DEEP_CORR_MINE.md
+          else
+            echo "NO BOARD"
+          fi
+
+      - name: Publish
+        if: hashFiles('03_scoreboard/EXCEL_DEEP_CORR_MINE.md') != ''
+        run: |
+          bash scripts/safe_git_push.sh \
+            "chore: excel deep corr mine" \
+            03_scoreboard/EXCEL_DEEP_CORR_MINE.md \
+            03_scoreboard/excel_deep_corr_mine.json \
+            03_scoreboard/excel_deep_corr_mine.csv
+
+      - name: Upload
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: excel-deep-corr-mine
+          path: |
+            03_scoreboard/EXCEL_DEEP_CORR_MINE.md
+            03_scoreboard/excel_deep_corr_mine.json
+            03_scoreboard/excel_deep_corr_mine.csv
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Excel deep corr mine"
+            echo
+            echo "mcap > \$50M and avg vol > 100k. Clock-clean. Holdout must agree."
+            echo
+            if [ -f 03_scoreboard/EXCEL_DEEP_CORR_MINE.md ]; then
+              sed -n '1,60p' 03_scoreboard/EXCEL_DEEP_CORR_MINE.md
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
