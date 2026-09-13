@@ -38,23 +38,23 @@ on:
         default: auto
         options: [auto, union, flatten, probable, yday_gainer, ohlc_hot]
       hold:
-        description: "Hold (sessions). auto = 1/3/5"
+        description: "Hold (sessions). auto = 1/2/3/5"
         type: choice
         required: true
         default: auto
-        options: [auto, "1", "3", "5"]
+        options: [auto, "1", "2", "3", "5"]
       gate:
         description: "09:30 gate"
         type: choice
         required: true
         default: auto
-        options: [auto, none, vol_g, news_g, white, coil_off, join_g, last_green, blue, news_present, join_present, ab_g]
+        options: [auto, none, vol_g, news_g, white, white_any, coil_off, join_g, last_green, blue, news_present, join_present, ab_g]
       rank:
         description: "Ranker"
         type: choice
         required: true
         default: auto
-        options: [auto, none, hot_score, cond, w_hot_cond, w_hot_candle, ret_5, candle_score]
+        options: [auto, none, list, hot_score, cond, w_hot_cond, w_hot_candle, ret_5, candle_score]
       side:
         description: "Side"
         type: choice

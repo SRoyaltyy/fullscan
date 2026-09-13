@@ -30,13 +30,13 @@ OUT_INDEX = ROOT / "03_scoreboard" / "FACTOR_MINE_ACTION.md"
 DAILY_MD = ROOT / "01_daily" / "factor_mine_action.md"
 HARD_RED = -3.0
 UNIVERSES = ("auto", "union", "flatten", "probable", "yday_gainer", "ohlc_hot")
-HOLDS = ("auto", "1", "3", "5")
+HOLDS = ("auto", "1", "2", "3", "5")
 GATES = (
-    "auto", "none", "vol_g", "news_g", "white", "coil_off", "join_g",
-    "last_green", "blue", "news_present", "join_present", "ab_g",
+    "auto", "none", "vol_g", "news_g", "white", "white_any", "coil_off",
+    "join_g", "last_green", "blue", "news_present", "join_present", "ab_g",
 )
-RANKS = ("auto", "none", "hot_score", "cond", "w_hot_cond", "w_hot_candle",
-         "ret_5", "candle_score")
+RANKS = ("auto", "none", "list", "hot_score", "cond", "w_hot_cond",
+         "w_hot_candle", "ret_5", "candle_score")
 SIDES = ("auto", "long", "short")
 TOP_NS = ("auto", "4", "8", "12")
 EXITS = ("auto", "none", "alarm", "last_red", "news_bad")
@@ -681,6 +681,8 @@ def recipes_from_action(*, universe="auto", hold="auto", gate="auto",
             return "news_g"
         if req.get("zero_red"):
             return "white"
+        if req.get("yday_or_catalyst") or "cam_bad_max" in req:
+            return "white_any"
         if "ret_5_max" in req and "rvol_max" in req and not req.get("last_green"):
             return "coil_off"
         if req.get("join") == "good" and len(req) == 1:
@@ -762,6 +764,7 @@ def recipes_from_action(*, universe="auto", hold="auto", gate="auto",
 def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                   regime=None, rules=None, start: str | None = None) -> dict:
     """Walk one recipe as a $10k paper sleeve. Sell first, then buy."""
+    panel = fm.ensure_sim_fields(panel, rec)
     rules = {**BOOK_RULES, **(rules or {})}
     fees = fees if fees is not None else pt.load_fees()
     cal_all = list(panel.get("session_dates") or [])

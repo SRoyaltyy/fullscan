@@ -1460,6 +1460,50 @@ def test_white_yday_overlay_picks_zero_red_yday_up() -> None:
     assert any("yesterday" in x for x in why["failed"])
 
 
+def test_white_horizon_pool_then_score() -> None:
+    rec = fm.make_recipe(
+        "union_white_any_h1", hold=1, rank="list",
+        require={"cam_bad_max": 0, "yday_or_catalyst": True},
+        forbid={"alarm": True})
+    ov = fm.white_horizon_overlay(fm.make_recipe(
+        "union_news_g_h3", hold=3, require={"news": "good"}))
+    assert ov["hold"] == 3
+    assert ov["rank"] == "list"
+    assert ov["require"] == {"cam_bad_max": 0, "yday_or_catalyst": True}
+    names = {r["name"] for r in fm.build_recipes()}
+    assert "union_white_any_h2" in names
+    assert "union_white_any_h5" in names
+
+    def row(ticker, **kw):
+        base = {
+            "date": "2026-08-19", "ticker": ticker, "sources": ["union"],
+            "boxes": {"join": "good", "vol": "good"},
+            "alarm": False, "zero_red": True, "last_green": True,
+            "cond_good": 2, "cond_bad": 0, "src_rank": 9, "e_pol": "",
+        }
+        base.update(kw)
+        return base
+
+    # Better Score (src_rank 0 → 100) but two red cameras — must not enter.
+    red = row("RED", src_rank=0, cond_good=6, cond_bad=2, ohlc_ret_1=9.0,
+              zero_red=False, boxes={"join": "good", "vol": "bad", "ab": "bad"})
+    # Yesterday down, no catalyst — out of the pool even with Score 99.
+    dn = row("DN", src_rank=1, cond_bad=0, ohlc_ret_1=-1.4, last_green=False)
+    # In the pool via yday-up; worse Score than RED/DN.
+    wht = row("WHT", src_rank=20, cond_bad=0, ohlc_ret_1=1.1)
+    # In the pool via EPS beat; yesterday down; worst Score of the keepers.
+    cat = row("CAT", src_rank=40, cond_bad=0, ohlc_ret_1=-2.2,
+              last_green=False, e_pol="good")
+    picks = fm.pick_day([red, dn, cat, wht], rec)
+    assert [p["ticker"] for p in picks] == ["WHT", "CAT"]
+    assert fm.matches(red, rec) is False
+    assert fm.matches(dn, rec) is False
+    assert fm.major_catalyst(cat) is True
+    why = fm.match_why(red, rec)
+    assert why["ok"] is False
+    assert any("red camera" in x for x in why["failed"])
+
+
 def test_look_day_shows_green_red_and_yday() -> None:
     from src import factor_mine_sim as fms
     cal = ["2026-08-17", "2026-08-18", "2026-08-19"]
@@ -1728,6 +1772,51 @@ def test_js_look_day_cams_and_white_yday() -> None:
     assert out["picks"] == ["WHT"]
 
 
+def test_js_white_horizon_pool_then_score() -> None:
+    import subprocess
+    from pathlib import Path
+    Path("/tmp/fm_hz_in.json").write_text(json.dumps({
+        "rows": [{
+            "date": "2026-08-19", "ticker": "RED", "sources": ["union"],
+            "boxes": {"join": "good", "vol": "bad"}, "alarm": False,
+            "zero_red": False, "cond_good": 6, "cond_bad": 2,
+            "ohlc_ret_1": 9.0, "src_rank": 0, "e_pol": "",
+        }, {
+            "date": "2026-08-19", "ticker": "WHT", "sources": ["union"],
+            "boxes": {"join": "good"}, "alarm": False,
+            "zero_red": True, "cond_good": 2, "cond_bad": 0,
+            "ohlc_ret_1": 1.1, "src_rank": 20, "e_pol": "",
+        }, {
+            "date": "2026-08-19", "ticker": "CAT", "sources": ["union"],
+            "boxes": {"join": "good"}, "alarm": False,
+            "last_green": False, "zero_red": True,
+            "cond_good": 1, "cond_bad": 0, "ohlc_ret_1": -2.2,
+            "src_rank": 40, "e_pol": "good",
+        }],
+        "rec": {"name": "union_news_g_h3", "universe": "union", "hold": 3,
+                "top_n": 8, "require": {"news": "good"}, "forbid": {"alarm": True}},
+    }), encoding="utf-8")
+    Path("/tmp/fm_hz_run.mjs").write_text(
+        """
+        import { readFileSync, writeFileSync } from 'node:fs';
+        import vm from 'node:vm';
+        vm.runInThisContext(readFileSync('src/factor_mine_sim.js','utf8'));
+        const inp = JSON.parse(readFileSync('/tmp/fm_hz_in.json','utf8'));
+        const ov = globalThis.FMSim.whiteHorizonOverlay(inp.rec);
+        const picks = globalThis.FMSim.pickDay(inp.rows, ov, {});
+        writeFileSync('/tmp/fm_hz_out.json', JSON.stringify({
+          hold: ov.hold, rank: ov.rank, picks: picks.map(p => p.ticker),
+        }));
+        """,
+        encoding="utf-8",
+    )
+    subprocess.check_call(["node", "/tmp/fm_hz_run.mjs"])
+    out = json.loads(Path("/tmp/fm_hz_out.json").read_text(encoding="utf-8"))
+    assert out["hold"] == 3
+    assert out["rank"] == "list"
+    assert out["picks"] == ["WHT", "CAT"]
+
+
 def test_restamp_dash_rewrites_current_template(tmp_path, monkeypatch) -> None:
     payload = {"to_date": "2026-09-11", "n_recipes": 1, "dates": ["2026-09-11"]}
     (tmp_path / "factor_mine_dash.html").write_text(
@@ -1816,6 +1905,7 @@ if __name__ == "__main__":
     test_look_day_ranks_and_horizon()
     test_look_day_copies_eps_surprise()
     test_white_yday_overlay_picks_zero_red_yday_up()
+    test_white_horizon_pool_then_score()
     test_look_day_shows_green_red_and_yday()
     test_erd_polarity_does_not_paint_date_only_green()
     test_morning_export_shows_ino_yday_amc_beat()
@@ -1823,4 +1913,5 @@ if __name__ == "__main__":
     test_hit_tally_buy_sit_and_nneg()
     test_js_sim_matches_python_later_start()
     test_js_look_day_cams_and_white_yday()
-    print("56 factor-mine tests passed")
+    test_js_white_horizon_pool_then_score()
+    print("58 factor-mine tests passed")

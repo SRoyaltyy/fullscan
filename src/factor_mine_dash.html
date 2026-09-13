@@ -425,9 +425,25 @@ function recipeOf(name){
   return (D.recipes||[]).find(r=>r.name===name) || (D.stats||[]).find(s=>s.name===name) || {};
 }
 let _whiteYday=false;
+let _whiteHorizon=false;
 function whiteYdayOn(){ return !!_whiteYday && !isCombo(pickedName()); }
+function whiteHorizonOn(){ return !!_whiteHorizon && !isCombo(pickedName()); }
+function overlayKind(){
+  if(whiteHorizonOn()) return 'horizon';
+  if(whiteYdayOn()) return 'yday';
+  return '';
+}
 function overlayRec(rec){
   rec=rec||recipeOf(pickedName());
+  if(whiteHorizonOn()){
+    if(typeof FMSim!=='undefined' && FMSim.whiteHorizonOverlay) return FMSim.whiteHorizonOverlay(rec);
+    const name=String((rec&&rec.name)||'looker');
+    return Object.assign({}, rec, {
+      name: name.endsWith('_white_any')?name:name+'_white_any',
+      require:{cam_bad_max:0, yday_or_catalyst:true}, forbid:{alarm:true}, rank:'list',
+      looker:name,
+    });
+  }
   if(typeof FMSim!=='undefined' && FMSim.whiteYdayOverlay) return FMSim.whiteYdayOverlay(rec);
   const name=String((rec&&rec.name)||'looker');
   return Object.assign({}, rec, {
@@ -436,9 +452,10 @@ function overlayRec(rec){
     looker:name,
   });
 }
+function overlayOn(){ return overlayKind()!==''; }
 function activeRec(){
   const rec=recipeOf(pickedName());
-  if(whiteYdayOn() && rec && rec.name && !isCombo(rec)) return overlayRec(rec);
+  if(overlayOn() && rec && rec.name && !isCombo(rec)) return overlayRec(rec);
   return rec;
 }
 function explainOf(name){
@@ -462,7 +479,7 @@ function liveStartRow(name, date){
   }
   let row=baked?Object.assign({},baked):{start:date};
   if(typeof FMSim!=='undefined' && D.sim && name){
-    const rec=whiteYdayOn()?overlayRec(recipeOf(name)):recipeOf(name);
+    const rec=overlayOn()?overlayRec(recipeOf(name)):recipeOf(name);
     if(rec && !isCombo(rec)){
       const book=FMSim.simulateBook(D.sim, rec, date, D.mornings||{});
       if(book && book.daily && book.daily.length){
@@ -496,9 +513,9 @@ function simBook(){
   const name=pickedName();
   const sp=startPath();
   if(!name || !sp || !D.sim || typeof FMSim==='undefined') return null;
-  const key=name+'|'+(whiteYdayOn()?'wy|':'')+sp.start;
+  const key=name+'|'+(overlayKind()?overlayKind()+'|':'')+sp.start;
   if(_simKey===key && _simBook) return _simBook;
-  const rec=whiteYdayOn()?overlayRec(recipeOf(name)):recipeOf(name);
+  const rec=overlayOn()?overlayRec(recipeOf(name)):recipeOf(name);
   _simBook=FMSim.simulateBook(D.sim, rec, sp.start, D.mornings||{});
   _simKey=key;
   return _simBook;
@@ -698,6 +715,16 @@ function cardPasses(rec, card){
       :(card.last_green || toneOf((card.boxes||{}).yday)==='good');
     if(!y) return false;
   }
+  const camBad=card.cond_bad!=null?Number(card.cond_bad)||0:Number(card.n_neg||0);
+  if(req.cam_bad_max!=null && camBad>Number(req.cam_bad_max)) return false;
+  const ydayUp=card.yday_ret!=null?Number(card.yday_ret)>0
+    :!!(card.last_green || toneOf((card.boxes||{}).yday)==='good');
+  const ep=toneOf(card.e_pol);
+  const major=(toneOf((card.boxes||{}).catal)==='good') || ep==='good'
+    || (!!card.earn_react && ep!=='bad');
+  if(req.major_catalyst && !major) return false;
+  if(req.yday_or_catalyst && !(ydayUp||major)) return false;
+  if(req.yday_and_catalyst && !(ydayUp&&major)) return false;
   if(req.burst && !card.burst){
     const ret=card.ret_5, rvol=card.rvol;
     const burst=ret!=null && ret>=12 && !!card.last_green && (!!card.break_10 || (rvol!=null && rvol>=2));
@@ -803,9 +830,13 @@ function renderTools(){
     <div class="tool">
       <h2>Morning board — who it looked at</h2>
       <p class="mut">${esc(probeDate)} 09:30. Rank is this recipe's own sort. E is the morning-export EPS surprise when it was already public. Cams is +green −red (not the rank score). Yday is yesterday's close-to-close %. Horizon % is hold-${esc((activeRec()||{}).hold||recipeOf(name).hold)} from the 09:30 open.</p>
-      <label class="mut" style="display:flex;gap:8px;align-items:center;margin:6px 0 8px">
+      <label class="mut" style="display:flex;gap:8px;align-items:center;margin:6px 0 4px">
         <input type="checkbox" id="whiteYday" ${whiteYdayOn()?'checked':''} ${isCombo(name)?'disabled':''}>
         BUY white + yday-up instead (same looker list; rank +G−R)
+      </label>
+      <label class="mut" style="display:flex;gap:8px;align-items:center;margin:0 0 8px">
+        <input type="checkbox" id="whiteHorizon" ${whiteHorizonOn()?'checked':''} ${isCombo(name)?'disabled':''}>
+        BUY −0 red + (yday↑ or catalyst), then Score (same looker; try a longer-hold looker)
       </label>
       <div id="overlayBanner"></div>
       <div id="lookOut"></div>
@@ -831,6 +862,14 @@ function renderTools(){
   const wy=document.getElementById('whiteYday');
   if(wy) wy.onchange=e=>{
     _whiteYday=!!e.target.checked;
+    if(_whiteYday) _whiteHorizon=false;
+    _simKey=''; _simBook=null;
+    renderAll();
+  };
+  const wh=document.getElementById('whiteHorizon');
+  if(wh) wh.onchange=e=>{
+    _whiteHorizon=!!e.target.checked;
+    if(_whiteHorizon) _whiteYday=false;
     _simKey=''; _simBook=null;
     renderAll();
   };
@@ -978,7 +1017,7 @@ function renderLooks(){
 function renderOverlayBanner(){
   const el=document.getElementById('overlayBanner');
   if(!el) return;
-  if(!whiteYdayOn() || !D.sim || typeof FMSim==='undefined'){ el.innerHTML=''; return; }
+  if(!overlayOn() || !D.sim || typeof FMSim==='undefined'){ el.innerHTML=''; return; }
   const base=recipeOf(pickedName());
   if(!base || !base.name || isCombo(base)){ el.innerHTML=''; return; }
   const ov=overlayRec(base);
@@ -987,8 +1026,11 @@ function renderOverlayBanner(){
   const b=FMSim.simulateBook(D.sim, ov, start, D.mornings||{});
   const looks=lookRows((D.dates||[])[probeIdx]||start);
   const nBuy=looks.filter(r=>r.buy).length;
+  const label=whiteHorizonOn()
+    ?'−0 red + (yday↑ or catalyst), then Score'
+    :'White + yday-up';
   el.innerHTML =
-    `<div class="pill">White + yday-up on <code>${esc(base.name)}</code> looker · this morning BUY ${nBuy}`
+    `<div class="pill">${label} on <code>${esc(base.name)}</code> looker · this morning BUY ${nBuy}`
     +` · overlay Book% <span class="${cls(b.total_ret_pct)}">${num(b.total_ret_pct)}</span>`
     +` vs looker <span class="${cls(a.total_ret_pct)}">${num(a.total_ret_pct)}</span>`
     +` (same $10k cash book, research only)</div>`;
