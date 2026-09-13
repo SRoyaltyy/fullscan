@@ -1422,6 +1422,64 @@ def test_look_day_copies_eps_surprise() -> None:
     assert looks[0]["earn_react"] is True
 
 
+def test_white_yday_overlay_picks_zero_red_yday_up() -> None:
+    news = fm.make_recipe(
+        "union_news_g_h1", hold=1, require={"news": "good"},
+        forbid={"alarm": True})
+    ov = fm.white_yday_overlay(news)
+    assert ov["universe"] == "union"
+    assert ov["hold"] == 1
+    assert ov["looker"] == "union_news_g_h1"
+    assert ov["require"] == {"zero_red": True, "yday_up": True}
+    assert ov["rank"] == "cond"
+    assert any(r["name"] == "union_white_yday_h1" for r in fm.build_recipes())
+
+    def row(ticker, **kw):
+        base = {
+            "date": "2026-08-19", "ticker": ticker, "sources": ["union"],
+            "boxes": {"join": "good", "vol": "good"},
+            "alarm": False, "zero_red": True, "last_green": True,
+            "cond_good": 2, "cond_bad": 0, "src_rank": 9,
+        }
+        base.update(kw)
+        return base
+
+    white = row("WHT", cond_good=5, cond_bad=0, ohlc_ret_1=2.4)
+    white2 = row("WHT2", cond_good=3, cond_bad=0, ohlc_ret_1=1.1)
+    red = row("RED", cond_good=4, cond_bad=2, ohlc_ret_1=3.0, zero_red=False,
+              boxes={"join": "good", "vol": "bad"})
+    down = row("DN", cond_good=4, cond_bad=0, ohlc_ret_1=-1.8, last_green=False)
+    picks = fm.pick_day([red, down, white2, white], ov)
+    assert [p["ticker"] for p in picks] == ["WHT", "WHT2"]
+    assert fm.matches(red, ov) is False
+    assert fm.matches(down, ov) is False
+    assert fm.n_pos(white) == 5
+    assert fm.cam_bad(red) == 2
+    why = fm.match_why(down, ov)
+    assert why["ok"] is False
+    assert any("yesterday" in x for x in why["failed"])
+
+
+def test_look_day_shows_green_red_and_yday() -> None:
+    from src import factor_mine_sim as fms
+    cal = ["2026-08-17", "2026-08-18", "2026-08-19"]
+    rows = [{
+        "date": "2026-08-19", "ticker": "AAA", "sources": ["union"],
+        "boxes": {"join": "good", "vol": "good", "ab": "bad"},
+        "alarm": False, "last_green": True, "src_rank": 0,
+        "cond_good": 2, "cond_bad": 1, "ohlc_ret_1": 2.4,
+        "open": 10, "close": 11,
+    }]
+    panel = {"session_dates": cal, "rows": rows, "by_date": {"2026-08-19": rows}}
+    bars = {("AAA", "2026-08-19"): {"open": 10, "close": 11}}
+    rec = fm.make_recipe("union_h1", hold=1, top_n=8)
+    looks = fms.look_day(panel, rec, "2026-08-19", bars=bars, regime={})
+    assert looks[0]["n_pos"] == 2
+    assert looks[0]["cond_bad"] == 1
+    assert looks[0]["yday_ret"] == 2.4
+    assert looks[0]["yday_up"] is True
+
+
 def test_erd_polarity_does_not_paint_date_only_green() -> None:
     from src import factor_mine_probe as fmp
     from src import finviz_events as fe
@@ -1620,6 +1678,56 @@ def test_js_sim_matches_python_later_start() -> None:
     assert js_eq == py_eq
 
 
+def test_js_look_day_cams_and_white_yday() -> None:
+    import subprocess
+    from pathlib import Path
+    Path("/tmp/fm_look_in.json").write_text(json.dumps({
+        "pack": {
+            "dates": ["2026-08-17", "2026-08-18", "2026-08-19"],
+            "rows": [{
+                "date": "2026-08-19", "ticker": "WHT", "sources": ["union"],
+                "boxes": {"join": "good", "vol": "good"}, "alarm": False,
+                "last_green": True, "zero_red": True,
+                "cond_good": 5, "cond_bad": 0, "ohlc_ret_1": 3.1, "src_rank": 0,
+            }, {
+                "date": "2026-08-19", "ticker": "DN", "sources": ["union"],
+                "boxes": {"join": "good"}, "alarm": False,
+                "last_green": False, "zero_red": True,
+                "cond_good": 4, "cond_bad": 0, "ohlc_ret_1": -2.0, "src_rank": 1,
+            }],
+            "tape": {"WHT": {"2026-08-19": [10, 12]}, "DN": {"2026-08-19": [10, 9]}},
+            "s": {"2026-08-19": 1.0}, "hard_red": -3, "capital": 10000,
+        },
+        "rec": {"name": "union_news_g_h1", "universe": "union", "hold": 1,
+                "top_n": 8, "require": {"news": "good"}, "forbid": {"alarm": True}},
+    }), encoding="utf-8")
+    Path("/tmp/fm_look_run.mjs").write_text(
+        """
+        import { readFileSync, writeFileSync } from 'node:fs';
+        import vm from 'node:vm';
+        vm.runInThisContext(readFileSync('src/factor_mine_sim.js','utf8'));
+        const inp = JSON.parse(readFileSync('/tmp/fm_look_in.json','utf8'));
+        const looks = globalThis.FMSim.lookDay(inp.pack, inp.rec, '2026-08-19', {});
+        const ov = globalThis.FMSim.whiteYdayOverlay(inp.rec);
+        const rows = inp.pack.rows.filter(r => r.date === '2026-08-19');
+        const picks = globalThis.FMSim.pickDay(rows, ov, {});
+        writeFileSync('/tmp/fm_look_out.json', JSON.stringify({
+          n_pos: looks.find(x => x.ticker === 'WHT').n_pos,
+          cond_bad: looks.find(x => x.ticker === 'WHT').cond_bad,
+          yday_ret: looks.find(x => x.ticker === 'WHT').yday_ret,
+          picks: picks.map(p => p.ticker),
+        }));
+        """,
+        encoding="utf-8",
+    )
+    subprocess.check_call(["node", "/tmp/fm_look_run.mjs"])
+    out = json.loads(Path("/tmp/fm_look_out.json").read_text(encoding="utf-8"))
+    assert out["n_pos"] == 5
+    assert out["cond_bad"] == 0
+    assert out["yday_ret"] == 3.1
+    assert out["picks"] == ["WHT"]
+
+
 def test_action_filters_size_sell_boost() -> None:
     from src import factor_mine_book as fmb
     only = fmb.recipes_from_action(
@@ -1684,9 +1792,12 @@ if __name__ == "__main__":
     test_stamp_starts_and_probe_on_mined_payload()
     test_look_day_ranks_and_horizon()
     test_look_day_copies_eps_surprise()
+    test_white_yday_overlay_picks_zero_red_yday_up()
+    test_look_day_shows_green_red_and_yday()
     test_erd_polarity_does_not_paint_date_only_green()
     test_morning_export_shows_ino_yday_amc_beat()
     test_match_why_and_decision()
     test_hit_tally_buy_sit_and_nneg()
     test_js_sim_matches_python_later_start()
-    print("53 factor-mine tests passed")
+    test_js_look_day_cams_and_white_yday()
+    print("56 factor-mine tests passed")

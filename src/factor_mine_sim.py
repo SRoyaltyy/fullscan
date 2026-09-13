@@ -22,7 +22,7 @@ ROW_KEEP = (
     "date", "ticker", "sources", "src_rank", "boxes",
     "blue", "alarm", "zero_red", "last_green", "last_red",
     "candle_capture", "candle_score",
-    "ohlc_ret_5", "ohlc_rvol", "ohlc_hot_score", "ohlc_nr7", "ohlc_break_10",
+    "ohlc_ret_1", "ohlc_ret_5", "ohlc_rvol", "ohlc_hot_score", "ohlc_nr7", "ohlc_break_10",
     "erd_earn_react", "erd_days_since_E", "erd_days_since_R",
     "erd_flag_E", "erd_flag_R",
     "e_pol", "e_label", "r_pol", "r_label",
@@ -97,6 +97,10 @@ def build_sim_pack(panel: dict) -> dict:
         tickers.add(t)
         slim = {k: r.get(k) for k in ROW_KEEP}
         slim["ticker"] = t
+        if slim.get("ohlc_ret_1") is None:
+            yr = fm.yday_ret(r, date=d, cal=cal)
+            if yr is not None:
+                slim["ohlc_ret_1"] = yr
         rows.append(slim)
     tape: dict[str, dict] = {}
     for t in tickers:
@@ -217,47 +221,46 @@ def look_day(panel: dict, rec: dict, date: str, *, bars=None,
     if (s is not None and float(s) >= fmb.GOOD_S and not hard
             and (rec.get("s_boost") or "none") in ("more_names", "both")):
         top_n += fmb.MORE_NAMES
+    cal = list(panel.get("session_dates") or [])
     out = []
     seen = set()
     for i, r in enumerate(passed, 1):
         seen.add(r["ticker"])
-        ret = horizon_pct(panel, rec, r["ticker"], date, bars=bars)
-        boxes = r.get("boxes") or {}
-        n_neg = sum(1 for v in boxes.values() if v == "bad")
-        if r.get("alarm"):
-            n_neg += 1
-        out.append({
-            "ticker": r["ticker"],
-            "rank": i,
-            "score": rank_score(r, rec),
-            "pass": True,
-            "buy": (not hard) and i <= top_n,
-            "ret": ret,
-            "n_neg": n_neg,
-            "src_rank": r.get("src_rank"),
-            "e_pol": r.get("e_pol") or "",
-            "e_label": r.get("e_label") or "",
-            "earn_react": bool(r.get("erd_earn_react")),
-        })
+        out.append(_look_row(
+            r, rec, rank=i, buy=(not hard) and i <= top_n,
+            panel=panel, date=date, bars=bars, cal=cal))
     rest = [r for r in looked if r["ticker"] not in seen]
     rest.sort(key=lambda r: fm.rank_key(r, rec))
     for r in rest:
-        ret = horizon_pct(panel, rec, r["ticker"], date, bars=bars)
-        boxes = r.get("boxes") or {}
-        n_neg = sum(1 for v in boxes.values() if v == "bad")
-        if r.get("alarm"):
-            n_neg += 1
-        out.append({
-            "ticker": r["ticker"],
-            "rank": None,
-            "score": rank_score(r, rec),
-            "pass": False,
-            "buy": False,
-            "ret": None if ret is None else round(float(ret), 3),
-            "n_neg": n_neg,
-            "src_rank": r.get("src_rank"),
-            "e_pol": r.get("e_pol") or "",
-            "e_label": r.get("e_label") or "",
-            "earn_react": bool(r.get("erd_earn_react")),
-        })
+        out.append(_look_row(
+            r, rec, rank=None, buy=False,
+            panel=panel, date=date, bars=bars, cal=cal, ret_round=True))
     return out
+
+
+def _look_row(r: dict, rec: dict, *, rank, buy, panel, date, bars, cal,
+              ret_round: bool = False) -> dict:
+    ret = horizon_pct(panel, rec, r["ticker"], date, bars=bars)
+    if ret_round and ret is not None:
+        ret = round(float(ret), 3)
+    n_good = fm.n_pos(r)
+    n_bad = fm.cam_bad(r)
+    yr = fm.yday_ret(r, date=date, bars=bars, cal=cal)
+    return {
+        "ticker": r["ticker"],
+        "rank": rank,
+        "score": rank_score(r, rec),
+        "pass": rank is not None,
+        "buy": buy,
+        "ret": ret,
+        "n_neg": fm.n_neg(r),
+        "n_pos": n_good,
+        "cond_good": n_good,
+        "cond_bad": n_bad,
+        "yday_ret": yr,
+        "yday_up": (yr > 0) if yr is not None else bool(r.get("last_green")),
+        "src_rank": r.get("src_rank"),
+        "e_pol": r.get("e_pol") or "",
+        "e_label": r.get("e_label") or "",
+        "earn_react": bool(r.get("erd_earn_react")),
+    }
