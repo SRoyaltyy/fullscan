@@ -84,6 +84,8 @@ def test_factor_mine_template_paints_every_strategy() -> None:
     assert "const sp=document.getElementById('stopPct')" not in html
     assert "stopEl" in html
     assert "sell% all strats" in html
+    assert "<th>Δ</th>" in html
+    assert "kindFilter='single'" in html
 
 
 def test_day_board_falls_back_to_suggestions() -> None:

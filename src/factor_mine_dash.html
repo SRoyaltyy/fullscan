@@ -378,8 +378,13 @@ function chipNames(){
   }
   const out=[];
   const add=n=>{ if(n && !out.includes(n)) out.push(n); };
-  ((D.combos&&D.combos.outperform)||[]).forEach(add);
-  (D.featured||[]).forEach(add);
+  if(bracketOn()){
+    list.slice().sort((a,b)=>Number(b.delta_ret_pct||-999)-Number(a.delta_ret_pct||-999))
+      .slice(0,12).forEach(s=>add(s.name));
+  } else {
+    ((D.combos&&D.combos.outperform)||[]).forEach(add);
+    (D.featured||[]).forEach(add);
+  }
   list.slice().sort((a,b)=>Number(b.total_ret_pct)-Number(a.total_ret_pct))
     .slice(0,12).forEach(s=>add(s.name));
   list.slice(0,8).forEach(s=>add(s.name));
@@ -537,6 +542,12 @@ function kickSellReplay(){
   if(take) take.disabled=!bracketOn();
   if(stop) stop.disabled=!bracketOn();
   if(status) status.textContent=bracketOn()?'replaying every single strat…':'';
+  if(bracketOn() && kindFilter!=='single'){
+    kindFilter='single';
+    sleeveFilter='all';
+    const kp=document.getElementById('kindPick');
+    if(kp) kp.value='single';
+  }
   if(!bracketOn()){ renderAll(); return; }
   setTimeout(renderAll, 0);
 }
@@ -1268,7 +1279,20 @@ function renderTable(){
   let list=statsList();
   if(q) list=list.filter(s=>s.name.toLowerCase().includes(q) || (s.note||'').toLowerCase().includes(q) || ((s.explain||{}).kid||'').toLowerCase().includes(q));
   if(sleeveFilter!=='all') list=list.filter(s=>s.name===sleeveFilter);
-  const head='<tr><th class="tick">Strategy</th><th>Side</th><th>H</th><th>Win%</th><th>$ days</th><th>Starts</th><th>Book%</th><th>Signal%</th><th>Audit</th></tr>';
+  if(bracketOn()){
+    list=list.slice().sort((a,b)=>{
+      const da=a.delta_ret_pct, db=b.delta_ret_pct;
+      if(da==null && db==null) return Number(b.total_ret_pct)-Number(a.total_ret_pct);
+      if(da==null) return 1;
+      if(db==null) return -1;
+      if(db!==da) return db-da;
+      return Number(b.total_ret_pct)-Number(a.total_ret_pct);
+    });
+  }
+  const showD=bracketOn();
+  const head='<tr><th class="tick">Strategy</th><th>Side</th><th>H</th><th>Win%</th><th>$ days</th><th>Starts</th><th>Book%</th>'
+    +(showD?'<th>Δ</th>':'')
+    +'<th>Signal%</th><th>Audit</th></tr>';
   const body=list.map(s=>`<tr data-sleeve="${esc(s.name)}" style="cursor:pointer">
     <td class="tick">${esc(s.name)}${s.reliable===false?' <span class="mut">thin</span>':''}${s.outperforms?' <span class="pos">WIN</span>':''}<div class="mut">${esc(s.size||'leftover')} · ${esc(s.sell||'list')} · ${esc(s.s_boost||'none')}</div></td>
     <td>${esc(s.side)}</td>
@@ -1277,6 +1301,7 @@ function renderTable(){
     <td class="num ${cls(s.profitable_day_rate)}">${pct(s.profitable_day_rate)}</td>
     <td class="num ${cls(s.start_rate)}">${s.start_green||0}/${s.start_n||0}</td>
     <td class="num ${cls(s.total_ret_pct)}">${num(s.total_ret_pct)}${bookDeltaHtml(s)}</td>
+    ${showD?`<td class="num ${s.delta_ret_pct==null?'mut':cls(s.delta_ret_pct)}">${s.delta_ret_pct==null?'—':num(s.delta_ret_pct)}</td>`:''}
     <td class="num mut">${num(s.signal_ret_pct)}</td>
     <td class="${s.audit_ok===false?'neg':'pos'}">${s.audit_ok===false?('FAIL×'+(s.audit_n_fail||'?')):'PASS'}</td>
   </tr>`).join('');
