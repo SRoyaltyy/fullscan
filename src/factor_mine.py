@@ -249,9 +249,9 @@ def build_recipes() -> list[dict]:
             require=req, forbid={"alarm": True},
             note=f"union ∩ {gname} hold 5, no 🚨")
 
-    # News packet / headline as first-class gates, plus camera-ratio size-up.
-    # +9 −1 with news🟢 is rare (~3 names / 21 sessions); +7 −≤1 is the
-    # usable conviction floor. Packet∧headline both green is thinner still.
+    # News packet / headline as first-class gates. Green is OR
+    # (packet🟢 or headline🟢). Camera filter is a positive-enough
+    # +G −R net — +9 −1 was only an example, not the gate.
     for hold in (1, 3):
         add(name=f"union_news_pack_h{hold}", universe="union", hold=hold,
             require={"news_box": "good"}, forbid={"alarm": True},
@@ -259,9 +259,12 @@ def build_recipes() -> list[dict]:
         add(name=f"union_news_head_h{hold}", universe="union", hold=hold,
             require={"headline": "good"}, forbid={"alarm": True},
             rank="cond", note="prior-export headline🟢 only")
+        add(name=f"union_news_or_h{hold}", universe="union", hold=hold,
+            require={"news_or_headline": True}, forbid={"alarm": True},
+            rank="cond", note="packet🟢 OR headline🟢")
         add(name=f"union_news_both_h{hold}", universe="union", hold=hold,
             require={"news_and_headline": True}, forbid={"alarm": True},
-            rank="cond", note="packet🟢 AND headline🟢")
+            rank="cond", note="packet🟢 AND headline🟢 (thin; kept as a KILL)")
         add(name=f"union_news_g_cond_h{hold}", universe="union", hold=hold,
             require={"news": "good"}, forbid={"alarm": True},
             rank="cond", note="merged news🟢, rank +G−R")
@@ -273,10 +276,27 @@ def build_recipes() -> list[dict]:
             require={"news": "good", "n_pos_min": 6, "cam_bad_max": 1},
             forbid={"alarm": True}, rank="cond",
             note="merged news🟢 and cameras +6 −≤1")
+        for net in (2, 3, 4, 5):
+            add(name=f"union_news_or_net{net}_h{hold}", universe="union",
+                hold=hold, require={"news_or_headline": True, "cam_net_min": net},
+                forbid={"alarm": True}, rank="cond",
+                note=f"packet🟢 OR headline🟢 and camera net ≥ {net}")
+        add(name=f"union_news_pack_net3_h{hold}", universe="union", hold=hold,
+            require={"news_box": "good", "cam_net_min": 3},
+            forbid={"alarm": True}, rank="cond",
+            note="packet🟢 and camera net ≥ 3")
+    add(name="union_news_or_net4_rw_h1", universe="union", hold=1, top_n=4,
+        require={"news_or_headline": True, "cam_net_min": 4},
+        forbid={"alarm": True}, rank="cond", size="rank_w",
+        note="OR news + net≥4; leftover weighted by camera rank")
+    add(name="union_news_or_net4_conv_h1", universe="union", hold=1, top_n=4,
+        require={"news_or_headline": True, "cam_net_min": 4},
+        forbid={"alarm": True}, rank="cond", size="conviction",
+        note="OR news + net≥4; 70% leftover if #1 net ≥ 5")
     add(name="union_news_g_cam91_n1_h1", universe="union", hold=1, top_n=1,
         require={"news": "good", "n_pos_min": 9, "cam_bad_max": 1},
         forbid={"alarm": True}, rank="cond",
-        note="all leftover on the rare news🟢 +9 −≤1 name")
+        note="all leftover on the rare news🟢 +9 −≤1 name (KILL example)")
     add(name="union_news_g_cam71_n2_h1", universe="union", hold=1, top_n=2,
         require={"news": "good", "n_pos_min": 7, "cam_bad_max": 1},
         forbid={"alarm": True}, rank="cond", size="topheavy",
@@ -284,19 +304,21 @@ def build_recipes() -> list[dict]:
     add(name="union_news_g_conv_h1", universe="union", hold=1, top_n=4,
         require={"news": "good"}, forbid={"alarm": True},
         rank="cond", size="conviction",
-        note="news🟢 rank cameras; 70% of leftover if +9 −≤1")
+        note="merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5")
     add(name="union_news_g_conv_h3", universe="union", hold=3, top_n=4,
         require={"news": "good"}, forbid={"alarm": True},
         rank="cond", size="conviction",
-        note="news🟢 rank cameras; 70% of leftover if +9 −≤1")
+        note="merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5")
     add(name="union_news_g_cam71_conv_h1", universe="union", hold=1, top_n=4,
         require={"news": "good", "n_pos_min": 7, "cam_bad_max": 1},
         forbid={"alarm": True}, rank="cond", size="conviction",
-        note="news🟢 +7 −≤1; 70% of leftover if that name is +9 −≤1")
+        note="news🟢 +7 −≤1; 70% leftover if #1 net ≥ 5")
     add(name="short_news_pack_h3", universe="union", hold=3, side="short",
         require={"news_box": "bad"}, note="short morning packet news🔴")
     add(name="short_news_head_h3", universe="union", hold=3, side="short",
         require={"headline": "bad"}, note="short prior-export headline🔴")
+    add(name="short_news_or_h3", universe="union", hold=3, side="short",
+        require={"news_or_red": True}, note="short packet🔴 OR headline🔴")
 
     combos = [
         ("vol_ab", {"vol": "good", "ab": "good"}),
@@ -546,6 +568,12 @@ def _gate_kid(key: str, val) -> str:
         return f"the prior-export headline is {tone}"
     if key == "news_and_headline":
         return "the morning news packet AND the prior-export headline are both green"
+    if key == "news_or_headline":
+        return "the morning news packet OR the prior-export headline is green"
+    if key == "news_or_red":
+        return "the morning news packet OR the prior-export headline is red"
+    if key == "cam_net_min":
+        return f"camera net (+G −R) is at least {int(val)}"
     if key == "burst":
         return "a parabolic / high-intensity prior tape (ret5≥12, last green, and a 10-session break or rvol≥2)"
     if key == "ret_5_min":
@@ -884,6 +912,12 @@ def matches(row: dict, rec: dict) -> bool:
             str(row.get("news_box") or "").lower() == "good"
             and str(row.get("news_prior") or "").lower() == "good"):
         return False
+    if req.get("news_or_headline") and not news_or_green(row):
+        return False
+    if req.get("news_or_red") and not news_or_red(row):
+        return False
+    if "cam_net_min" in req and cam_net(row) < int(req["cam_net_min"]):
+        return False
     if req.get("burst") and not is_burst(row):
         return False
     if req.get("yday_up") and not yday_up(row):
@@ -924,6 +958,27 @@ def cam_bad(row: dict) -> int:
         return int(row.get("cond_bad") or 0)
     boxes = row.get("boxes") or {}
     return sum(1 for k, v in boxes.items() if k != "yday" and v == "bad")
+
+
+def cam_net(row: dict) -> int:
+    """+G −R. Positive enough is the long filter; +9 −1 is not required."""
+    return n_pos(row) - cam_bad(row)
+
+
+def news_or_green(row: dict) -> bool:
+    """Packet green OR prior-export headline green. Not both."""
+    return (
+        str(row.get("news_box") or "").lower() == "good"
+        or str(row.get("news_prior") or "").lower() == "good"
+    )
+
+
+def news_or_red(row: dict) -> bool:
+    """Packet red OR prior-export headline red."""
+    return (
+        str(row.get("news_box") or "").lower() == "bad"
+        or str(row.get("news_prior") or "").lower() == "bad"
+    )
 
 
 def yday_ret(row: dict, *, date: str | None = None, bars=None,
@@ -1165,6 +1220,13 @@ def match_why(row: dict, rec: dict) -> dict:
         need(str(row.get("news_box") or "").lower() == "good"
              and str(row.get("news_prior") or "").lower() == "good",
              _gate_kid("news_and_headline", True))
+    if req.get("news_or_headline"):
+        need(news_or_green(row), _gate_kid("news_or_headline", True))
+    if req.get("news_or_red"):
+        need(news_or_red(row), _gate_kid("news_or_red", True))
+    if "cam_net_min" in req:
+        need(cam_net(row) >= int(req["cam_net_min"]),
+             _gate_kid("cam_net_min", req["cam_net_min"]))
     if req.get("burst"):
         need(is_burst(row), _gate_kid("burst", True))
     if req.get("yday_up"):
@@ -1885,7 +1947,10 @@ def run(from_date: str = START, to_date: str | None = None,
     extra = [n for n in (
         "flatten_live_h1", "flatten_live_h3", "flatten_live_h5",
         "union_e_fresh_h3", "union_news_g_h5", "union_white_coil_h1",
-        "union_news_pack_h1", "short_news_head_h3",
+        "union_news_pack_h1", "union_news_or_h1",
+        "union_news_or_net3_h1", "union_news_or_net4_h1",
+        "union_news_or_net4_rw_h1", "union_news_or_net4_conv_h1",
+        "short_news_head_h3",
         "combo_ps_5050_shared", "combo_ps_7030_shared",
         "union_news_g_cam91_n1_h1", "union_news_both_h1",
         "union_news_g_cam71_h1", "union_news_g_conv_h1",

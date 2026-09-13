@@ -109,20 +109,33 @@ def test_matches_news_packet_headline_and_cam_floor() -> None:
         "t", require={"news_and_headline": True}))
     assert fm.matches(row, fm.make_recipe("t", require={"news_box": "good"}))
     assert fm.matches(row, fm.make_recipe("t", require={"headline": "good"}))
+    head_only = dict(row, news_box="missing", news_prior="good", cond_good=5, cond_bad=1)
+    assert fm.matches(head_only, fm.make_recipe(
+        "t", require={"news_or_headline": True, "cam_net_min": 3}))
+    assert not fm.matches(head_only, fm.make_recipe(
+        "t", require={"news_and_headline": True}))
+    assert not fm.matches(dict(head_only, cond_good=3, cond_bad=2), fm.make_recipe(
+        "t", require={"news_or_headline": True, "cam_net_min": 3}))
     assert not fm.matches(dict(row, cond_good=6), fm.make_recipe(
         "t", require={"news": "good", "n_pos_min": 7, "cam_bad_max": 1}))
     pack = fm.make_recipe("t", require={"news_box": "good"})
     assert "morning news packet" in fm._gate_kid("news_box", "good")
+    assert "OR" in fm._gate_kid("news_or_headline", True)
     names = {r["name"] for r in fm.build_recipes()}
+    assert "union_news_or_net4_h1" in names
+    assert "union_news_or_h1" in names
     assert "union_news_g_conv_h1" in names
     assert "union_news_both_h1" in names
     from src import factor_mine_book as fmb
     hot = [{"cond_good": 9, "cond_bad": 0}, {"cond_good": 5, "cond_bad": 2}]
     bud = fmb.split_budgets(hot, 1000.0, "conviction")
     assert abs(bud[0] - 700.0) < 1e-9 and abs(sum(bud) - 1000.0) < 1e-9
-    mild = [{"cond_good": 6, "cond_bad": 1}, {"cond_good": 5, "cond_bad": 1}]
-    rank = fmb.split_budgets(mild, 1000.0, "rank_w")
-    conv = fmb.split_budgets(mild, 1000.0, "conviction")
+    net5 = [{"cond_good": 7, "cond_bad": 2}, {"cond_good": 5, "cond_bad": 1}]
+    bud5 = fmb.split_budgets(net5, 1000.0, "conviction")
+    assert abs(bud5[0] - 700.0) < 1e-9
+    weak = [{"cond_good": 4, "cond_bad": 2}, {"cond_good": 3, "cond_bad": 1}]
+    rank = fmb.split_budgets(weak, 1000.0, "rank_w")
+    conv = fmb.split_budgets(weak, 1000.0, "conviction")
     assert conv == rank
     from src import factor_mine_sim as fms
     assert "news_box" in fms.ROW_KEEP and "news_prior" in fms.ROW_KEEP

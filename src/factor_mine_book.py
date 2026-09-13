@@ -34,7 +34,7 @@ HOLDS = ("auto", "1", "2", "3", "5")
 GATES = (
     "auto", "none", "vol_g", "news_g", "white", "white_any", "coil_off",
     "join_g", "last_green", "blue", "news_present", "join_present", "ab_g",
-    "news_pack", "news_head", "news_both",
+    "news_pack", "news_head", "news_both", "news_or",
 )
 RANKS = ("auto", "none", "list", "hot_score", "cond", "w_hot_cond",
          "w_hot_candle", "ret_5", "candle_score")
@@ -45,6 +45,7 @@ ENTRIES = ("auto", "list", "live")
 SIZES = ("auto", "leftover", "rank_w", "topheavy", "half", "conviction")
 CONVICTION_POS = 9
 CONVICTION_BAD = 1
+CONVICTION_NET = 5
 CONVICTION_SHARE = 0.70
 SELLS = ("auto", "list", "time", "cut_loser", "trail")
 S_BOOSTS = ("auto", "none", "sizeup", "more_names", "both")
@@ -267,8 +268,8 @@ def split_budgets(new: list, room: float, mode: str) -> list[float]:
         return [room * w / tot for w in weights]
     if mode == "conviction":
         top = new[0] if new else {}
-        if (fm.n_pos(top) >= CONVICTION_POS
-                and fm.cam_bad(top) <= CONVICTION_BAD):
+        # +9 −1 was an example. Size-up when the camera net is clearly green.
+        if fm.cam_net(top) >= CONVICTION_NET:
             if n == 1:
                 return [room]
             first = room * CONVICTION_SHARE
@@ -730,6 +731,8 @@ def recipes_from_action(*, universe="auto", hold="auto", gate="auto",
             return "vol_g"
         if req.get("news") == "good" and len(req) == 1:
             return "news_g"
+        if req.get("news_or_headline") or req.get("news_or_red"):
+            return "news_or"
         if req.get("news_and_headline"):
             return "news_both"
         if req.get("news_box") == "good" and "headline" not in req:
