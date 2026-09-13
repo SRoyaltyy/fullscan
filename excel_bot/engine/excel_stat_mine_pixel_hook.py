@@ -9,7 +9,8 @@ from collections import defaultdict
 
 import excel_stat_mine as m
 import excel_stat_mine_ckpt as ckpt
-from excel_pixel_desc import ALL_LETTERS, pixel_features
+from excel_pixel_desc import ALL_LETTERS
+from excel_pixel_shade import features_with_shade
 
 
 def discovery_quantiles_5(ticker_days, split_map):
@@ -35,7 +36,7 @@ def discovery_quantiles_5(ticker_days, split_map):
 
 
 m.ALL_LETTERS = ALL_LETTERS
-m.features_at = pixel_features
+m.features_at = features_with_shade
 m.discovery_quantiles = discovery_quantiles_5
 ckpt.install()
 
