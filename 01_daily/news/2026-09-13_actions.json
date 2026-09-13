@@ -1,0 +1,127 @@
+{
+  "generated_at": "2026-09-13T14:55:24.224652-04:00",
+  "hours": 48,
+  "raw_headlines": 0,
+  "news_source": "empty",
+  "unique_events": 0,
+  "universe_rows": 11632,
+  "interactions": [],
+  "reasoned_events": [],
+  "edge_actions": [],
+  "ticker_actions": [
+    {
+      "ticker": "ADBE",
+      "buy_score": 5.5,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "news_judge",
+          "side": "buy",
+          "weight": 5.5,
+          "bucket": "judge"
+        }
+      ],
+      "net": 5.5,
+      "side": "buy"
+    },
+    {
+      "ticker": "LITE",
+      "buy_score": 4.0,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "news_judge",
+          "side": "buy",
+          "weight": 4.0,
+          "bucket": "judge"
+        }
+      ],
+      "net": 4.0,
+      "side": "buy"
+    },
+    {
+      "ticker": "XLV",
+      "buy_score": 4.0,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "news_judge",
+          "side": "buy",
+          "weight": 4.0,
+          "bucket": "judge"
+        }
+      ],
+      "net": 4.0,
+      "side": "buy"
+    },
+    {
+      "ticker": "XLE",
+      "buy_score": 0.0,
+      "sell_score": 1.5,
+      "events": [
+        {
+          "event": "news_judge",
+          "side": "sell",
+          "weight": 1.5,
+          "bucket": "judge"
+        }
+      ],
+      "net": -1.5,
+      "side": "sell"
+    },
+    {
+      "ticker": "XLU",
+      "buy_score": 0.0,
+      "sell_score": 1.5,
+      "events": [
+        {
+          "event": "news_judge",
+          "side": "sell",
+          "weight": 1.5,
+          "bucket": "judge"
+        }
+      ],
+      "net": -1.5,
+      "side": "sell"
+    },
+    {
+      "ticker": "AAPL",
+      "buy_score": 0.0,
+      "sell_score": 1.5,
+      "events": [
+        {
+          "event": "news_judge",
+          "side": "sell",
+          "weight": 1.5,
+          "bucket": "judge"
+        }
+      ],
+      "net": -1.5,
+      "side": "sell"
+    },
+    {
+      "ticker": "IWM",
+      "buy_score": 0.0,
+      "sell_score": 1.5,
+      "events": [
+        {
+          "event": "news_judge",
+          "side": "sell",
+          "weight": 1.5,
+          "bucket": "judge"
+        }
+      ],
+      "net": -1.5,
+      "side": "sell"
+    }
+  ],
+  "judge_tickers": {
+    "LITE": 4.0,
+    "ADBE": 5.5,
+    "XLV": 4.0,
+    "XLE": -1.5,
+    "XLU": -1.5,
+    "AAPL": -1.5,
+    "IWM": -1.5
+  }
+}
