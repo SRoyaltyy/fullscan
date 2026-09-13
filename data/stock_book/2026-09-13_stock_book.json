@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-09-13",
-    "generated_at": "2026-09-13T14:57:20.068554-04:00",
+    "generated_at": "2026-09-13T14:58:04.462241-04:00",
     "general_bias": 0.0,
     "sector_bias": {},
     "accuracy_gates": {
@@ -175,7 +175,7 @@
       },
       {
         "name": "News parse + actions",
-        "found": false,
+        "found": true,
         "used_as": "s_news"
       },
       {
@@ -584,10 +584,10 @@
           "region": "good"
         },
         {
-          "ticker": "BMRN",
+          "ticker": "PTGX",
           "sector": "Healthcare",
           "industry": "Biotechnology",
-          "size": "large",
+          "size": "mid",
           "lane": "standard",
           "eligible": true,
           "bull_rank": 14.7,
@@ -631,10 +631,10 @@
           "region": "good"
         },
         {
-          "ticker": "PTGX",
+          "ticker": "BMRN",
           "sector": "Healthcare",
           "industry": "Biotechnology",
-          "size": "mid",
+          "size": "large",
           "lane": "standard",
           "eligible": true,
           "bull_rank": 14.7,
