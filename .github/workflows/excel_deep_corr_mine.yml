@@ -5,9 +5,11 @@ name: Excel Deep Corr Mine
 # χ2 + mutual info + Benjamini-Hochberg FDR, then Apriori pairs.
 # Clock: rows above T + 09:30-knowable atoms. H/I are labels only.
 #
-# Grids: excel-deep-grids is gone (404). excel-state/state/rows.tar.gz is
-# OHLC only (no fills). Restore that price cache, then rebuild camera
-# grids through the Excel-replica engine (same path as daily_run).
+# Crash contract: excel_stat_mine streams per ticker, writes
+# 03_scoreboard/excel_stat_mine_ckpt.json + a PARTIAL board every 25
+# tickers (and on SIGTERM). Next dispatch restores that ckpt from main
+# and skips processed names. cancel-in-progress is OFF so a re-dispatch
+# does not throw away an in-flight checkpoint flush.
 
 on:
   workflow_dispatch:
@@ -32,6 +34,11 @@ on:
         required: false
         default: "80"
         type: string
+      reset:
+        description: "Ignore existing checkpoint and start fresh"
+        required: false
+        default: false
+        type: boolean
   schedule:
     - cron: "20 11 * * 6"
 
@@ -40,7 +47,7 @@ permissions:
 
 concurrency:
   group: excel-deep-corr-mine
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   mine:
@@ -48,6 +55,32 @@ jobs:
     timeout-minutes: 330
     steps:
       - uses: actions/checkout@v4
+
+      - name: Restore previous mine checkpoint from main
+        run: |
+          set -euo pipefail
+          git fetch origin main --depth=1 || true
+          mkdir -p 03_scoreboard
+          for f in \
+            03_scoreboard/excel_stat_mine_ckpt.json \
+            03_scoreboard/EXCEL_STAT_MINE.md \
+            03_scoreboard/excel_stat_mine.json
+          do
+            git checkout origin/main -- "$f" 2>/dev/null \
+              || echo "no prior $f on main"
+          done
+          if [ -f 03_scoreboard/excel_stat_mine_ckpt.json ]; then
+            python3 - <<'PY'
+          import json
+          p="03_scoreboard/excel_stat_mine_ckpt.json"
+          raw=json.load(open(p))
+          print(f"restored ckpt phase={raw.get('phase')} "
+                f"tickers={len(raw.get('processed') or [])} "
+                f"done={raw.get('done')} rules={len(raw.get('counts') or {})}")
+          PY
+          else
+            echo "no checkpoint — fresh walk"
+          fi
 
       - name: Restore price-cache state (excel-state branch)
         run: |
@@ -96,8 +129,10 @@ jobs:
           LIMIT: ${{ inputs.limit || '0' }}
           MIN_DISC: ${{ inputs.min_disc || '200' }}
           MIN_HOLD: ${{ inputs.min_hold || '80' }}
+          RESET: ${{ inputs.reset || false }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          set -euo pipefail
+          set -uo pipefail
           GDIR=""
           for cand in "$GRIDS" excel_bot/grids_deep grids_deep excel_bot/grids grids; do
             if [ -n "$cand" ] && ls "$cand"/*.json >/dev/null 2>&1; then
@@ -114,11 +149,20 @@ jobs:
           if [ -n "$LIMIT" ] && [ "$LIMIT" != "0" ]; then
             LARGS+=(--limit "$LIMIT")
           fi
-          python excel_bot/engine/excel_stat_mine_pixel_hook.py --grids "$GDIR" "${LARGS[@]}"
+          RARGS=()
+          if [ "$RESET" = "true" ]; then
+            RARGS+=(--reset)
+          fi
+          python excel_bot/engine/excel_stat_mine_pixel_hook.py --grids "$GDIR" "${LARGS[@]}" "${RARGS[@]}"
+          STAT_RC=$?
           python excel_bot/engine/excel_deep_corr_mine.py --grids "$GDIR" \
-            --min-disc "$MIN_DISC" --min-hold "$MIN_HOLD" "${LARGS[@]}"
-          test -s 03_scoreboard/EXCEL_STAT_MINE.md
-          test -s 03_scoreboard/excel_stat_mine.json
+            --min-disc "$MIN_DISC" --min-hold "$MIN_HOLD" "${LARGS[@]}" || true
+          if [ -s 03_scoreboard/EXCEL_STAT_MINE.md ]; then
+            echo "board present (stat rc=$STAT_RC)"
+            exit 0
+          fi
+          echo "NO BOARD after mine (stat rc=$STAT_RC)"
+          exit 1
 
       - name: Show board
         if: always()
@@ -132,13 +176,14 @@ jobs:
             echo "NO BOARD"
           fi
 
-      - name: Publish
-        if: hashFiles('03_scoreboard/EXCEL_STAT_MINE.md') != '' || hashFiles('03_scoreboard/EXCEL_DEEP_CORR_MINE.md') != ''
+      - name: Publish board + checkpoint
+        if: always()
         run: |
           bash scripts/safe_git_push.sh \
-            "chore: excel whole-sheet pixel stat mine" \
+            "chore: excel whole-sheet pixel stat mine (ckpt)" \
             03_scoreboard/EXCEL_STAT_MINE.md \
             03_scoreboard/excel_stat_mine.json \
+            03_scoreboard/excel_stat_mine_ckpt.json \
             03_scoreboard/EXCEL_DEEP_CORR_MINE.md \
             03_scoreboard/excel_deep_corr_mine.json \
             03_scoreboard/excel_deep_corr_mine.csv
@@ -148,9 +193,11 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: excel-deep-corr-mine
+          if-no-files-found: warn
           path: |
             03_scoreboard/EXCEL_STAT_MINE.md
             03_scoreboard/excel_stat_mine.json
+            03_scoreboard/excel_stat_mine_ckpt.json
             03_scoreboard/EXCEL_DEEP_CORR_MINE.md
             03_scoreboard/excel_deep_corr_mine.json
             03_scoreboard/excel_deep_corr_mine.csv
@@ -161,8 +208,8 @@ jobs:
           {
             echo "## Excel whole-sheet statistical mine (A..JO pixels)"
             echo
+            echo "Streamed + checkpointed. Crash leaves PARTIAL board + ckpt."
             echo "A..JO high-def pixels. chi2 + FDR + Apriori. mcap > \$50M and avg vol > 100k."
-            echo "Grids rebuilt from excel-state OHLC via the Excel-replica engine."
             echo
             if [ -f 03_scoreboard/EXCEL_STAT_MINE.md ]; then
               sed -n '1,60p' 03_scoreboard/EXCEL_STAT_MINE.md
