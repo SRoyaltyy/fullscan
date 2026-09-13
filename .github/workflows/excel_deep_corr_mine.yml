@@ -4,6 +4,10 @@ name: Excel Deep Corr Mine
 # Universe: Finviz mcap > $50M and average volume > 100k shares.
 # χ2 + mutual info + Benjamini-Hochberg FDR, then Apriori pairs.
 # Clock: rows above T + 09:30-knowable atoms. H/I are labels only.
+#
+# Grids: excel-deep-grids is gone (404). excel-state/state/rows.tar.gz is
+# OHLC only (no fills). Restore that price cache, then rebuild camera
+# grids through the Excel-replica engine (same path as daily_run).
 
 on:
   workflow_dispatch:
@@ -41,38 +45,49 @@ concurrency:
 jobs:
   mine:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 330
     steps:
       - uses: actions/checkout@v4
 
-      - name: Overlay emulator grids from excel-state if missing
+      - name: Restore price-cache state (excel-state branch)
         run: |
           set -euo pipefail
-          if [ -d grids_deep ] && ls grids_deep/*.json >/dev/null 2>&1; then
-            echo "grids_deep already present"
-            exit 0
-          fi
-          if [ -d grids ] && ls grids/*.json >/dev/null 2>&1; then
-            echo "grids already present"
-            exit 0
-          fi
-          echo "fetching origin/excel-state for grids"
-          git fetch origin excel-state --depth=1 || true
-          git checkout origin/excel-state -- grids_deep grids 2>/dev/null \
-            || echo "excel-state overlay skipped"
+          mkdir -p excel_bot/data/rows
+          curl -fsSL "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/excel-state/state/rows.tar.gz" -o /tmp/rows.tar.gz
+          tar -xzf /tmp/rows.tar.gz -C excel_bot/data/rows
+          echo "restored $(ls excel_bot/data/rows | wc -l) ticker caches"
 
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
       - name: Install
-        run: pip install pandas pyarrow
+        run: pip install openpyxl pandas pyarrow
 
       - name: Unit tests
         run: |
           python excel_bot/engine/test_excel_deep_corr_mine.py
           python excel_bot/engine/test_excel_stat_mine.py
           python excel_bot/engine/test_region_corr_mine.py || true
+
+      - name: Build emulator grids from price cache
+        env:
+          LIMIT: ${{ inputs.limit || '0' }}
+        run: |
+          set -euo pipefail
+          cd excel_bot
+          ARGS="--grids-only --from-cache --no-resume --workers 4"
+          if [ -n "${LIMIT:-}" ] && [ "${LIMIT}" != "0" ]; then
+            ARGS="$ARGS --limit $LIMIT"
+          fi
+          echo "CMD: python engine/backfill.py $ARGS"
+          python engine/backfill.py $ARGS
+          N=$(find grids_deep -name '*.json' ! -name '_*' 2>/dev/null | wc -l)
+          echo "grids_deep: $N files"
+          if [ "$N" -le 0 ]; then
+            echo "NO GRID JSON after cache build — refusing empty mine"
+            exit 1
+          fi
 
       - name: Mine
         env:
@@ -83,13 +98,17 @@ jobs:
         run: |
           set -euo pipefail
           GDIR=""
-          if [ -d "$GRIDS" ]; then GDIR="$GRIDS"
-          elif [ -d grids_deep ]; then GDIR=grids_deep
-          elif [ -d grids ]; then GDIR=grids
-          else
-            echo "NO GRIDS — unit tests already ran; skip live mine"
-            exit 0
+          for cand in "$GRIDS" excel_bot/grids_deep grids_deep excel_bot/grids grids; do
+            if [ -n "$cand" ] && ls "$cand"/*.json >/dev/null 2>&1; then
+              GDIR="$cand"
+              break
+            fi
+          done
+          if [ -z "$GDIR" ]; then
+            echo "NO GRIDS after build — find_grids would see nothing"
+            exit 1
           fi
+          echo "using grids dir: $GDIR ($(ls "$GDIR"/*.json | wc -l) json)"
           LARGS=()
           if [ -n "$LIMIT" ] && [ "$LIMIT" != "0" ]; then
             LARGS+=(--limit "$LIMIT")
@@ -142,6 +161,7 @@ jobs:
             echo "## Excel whole-sheet statistical mine"
             echo
             echo "A..JL. chi2 + FDR + Apriori. mcap > \$50M and avg vol > 100k."
+            echo "Grids rebuilt from excel-state OHLC via the Excel-replica engine."
             echo
             if [ -f 03_scoreboard/EXCEL_STAT_MINE.md ]; then
               sed -n '1,60p' 03_scoreboard/EXCEL_STAT_MINE.md
