@@ -2327,6 +2327,7 @@ NEWS_CAM_COMBOS = (
 NEWS_CAM_PIN = (
     "union_news_pack_h1",
     "combo_ps_5050_shared",
+    "combo_ps_7030_shared",
     "short_news_head_h3",
     "union_news_g_cam91_n1_h1",
     "union_news_both_h1",
