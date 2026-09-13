@@ -8,12 +8,16 @@ import unittest
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
+from datetime import date, timedelta  # noqa: E402
+
+from backfill import cache_grid_earliest  # noqa: E402
 from excel_deep_corr_mine import (  # noqa: E402
     AVGVOL_MIN,
     MCAP_MIN_M,
     _count_fam,
     _hi,
     descriptors_at,
+    find_grids,
     load_finviz_filter,
 )
 
@@ -56,6 +60,31 @@ class Descriptors(unittest.TestCase):
         self.assertIn("fill0_A_green", d)
         self.assertIn("A_last10_g>=6", d)
         self.assertNotIn("fill0_H_green", d)
+
+
+class CacheGridWindow(unittest.TestCase):
+    def test_short_excel_state_cache_uses_daily_span(self):
+        first = date(2026, 1, 5)
+        last = date(2026, 9, 11)
+        earliest = cache_grid_earliest(first, last)
+        self.assertEqual(earliest, last - timedelta(days=130))
+        self.assertGreaterEqual(earliest, first)
+        self.assertLess(earliest, last)
+
+    def test_long_cache_keeps_deep_warmup(self):
+        first = date(2020, 1, 1)
+        last = date(2026, 9, 11)
+        earliest = cache_grid_earliest(first, last)
+        self.assertEqual(earliest, first + timedelta(days=600))
+
+    def test_find_grids_explicit_dir(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as td:
+            open(os.path.join(td, "AAPL.json"), "w").write("{}")
+            open(os.path.join(td, "_skip.json"), "w").write("{}")
+            files = find_grids(td)
+            self.assertEqual([os.path.basename(f) for f in files], ["AAPL.json"])
+        self.assertEqual(find_grids("/no/such/grids"), [])
 
 
 if __name__ == "__main__":

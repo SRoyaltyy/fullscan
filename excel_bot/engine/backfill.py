@@ -38,13 +38,14 @@ from backtest import build_ticker, pick_anchors
 from sweep import days_features, detect_def
 from cohort_analysis import load_finviz, cohorts_of
 from cards import color_name, s2d
-from daily_run import DEFS, load_strategies, parse_date
+from daily_run import DEFS, SPAN_DAYS, load_strategies, parse_date
 
 BT_DIR = "backtest"
 TRADES_CSV = os.path.join(BT_DIR, "trades.csv")
 DONE_JSON = os.path.join(BT_DIR, "state", "done.json")
 DONE_GRIDS_JSON = os.path.join(BT_DIR, "state", "done_grids.json")
 GRIDS_DEEP_DIR = "grids_deep"
+DEEP_WARMUP_DAYS = 600  # weekly lookback; grid_for needs this much cache
 
 TRADE_FIELDS = [
     "ticker", "strategy", "side", "signal_date", "cluster_start",
@@ -175,12 +176,73 @@ def ticker_trades(ticker, rows, strategies, fz_rec):
 
 def grid_for(ticker, rows):
     """Full-span color grid for a ticker's deep rows."""
-    earliest = rows[0]["date"] + timedelta(days=600)   # weekly lookback warm-up
+    earliest = rows[0]["date"] + timedelta(days=DEEP_WARMUP_DAYS)
     anchors = pick_anchors(rows, earliest, rows[-1]["date"])
     if not anchors:
         return None
     days = build_ticker(ticker, rows, anchors)
     return days or None
+
+
+def load_cached_rows(ticker):
+    """OHLC rows from data/rows/<ticker>.json (excel-state cache). Dates as date."""
+    path = os.path.join("data/rows", f"{ticker}.json")
+    if not os.path.exists(path):
+        return None
+    raw = json.load(open(path))
+    if not isinstance(raw, list):
+        return None
+    out = []
+    for rec in raw:
+        d = rec.get("date")
+        if isinstance(d, str):
+            d = date.fromisoformat(d)
+        elif not isinstance(d, date):
+            continue
+        out.append({**rec, "date": d})
+    out.sort(key=lambda r: r["date"])
+    return out
+
+
+def cache_grid_earliest(first, last, warmup_days=DEEP_WARMUP_DAYS, span_days=SPAN_DAYS):
+    """Colored-window start for a cached tape.
+
+    excel-state rows are ~8 months of OHLC (no fills). The deep 600d warmup
+    used by grid_for() would start after the last bar and emit zero days.
+    Fall back to daily_run's SPAN_DAYS window so the engine still paints
+    cameras from the history we actually have.
+    """
+    if (last - first).days >= warmup_days:
+        return first + timedelta(days=warmup_days)
+    return max(last - timedelta(days=span_days), first)
+
+
+def grid_for_cached(ticker, rows):
+    """Excel-replica color grid from cached OHLC (fills/cameras, not prices)."""
+    if not rows:
+        return None
+    earliest = cache_grid_earliest(rows[0]["date"], rows[-1]["date"])
+    anchors = pick_anchors(rows, earliest, rows[-1]["date"])
+    if not anchors:
+        return None
+    return build_ticker(ticker, rows, anchors) or None
+
+
+def _work_grids_from_cache(ticker):
+    """Grids from excel-state price cache: no Yahoo fetch."""
+    try:
+        rows = load_cached_rows(ticker)
+        if not rows or len(rows) < 30:
+            return ticker, "insufficient cache"
+        days = grid_for_cached(ticker, rows)
+        if not days or len(days) < 30:
+            return ticker, "thin grid"
+        os.makedirs(GRIDS_DEEP_DIR, exist_ok=True)
+        json.dump({"ticker": ticker, "days": days},
+                  open(os.path.join(GRIDS_DEEP_DIR, f"{ticker}.json"), "w"))
+        return ticker, None
+    except Exception as e:  # noqa: BLE001
+        return ticker, f"{type(e).__name__}: {e}"[:150]
 
 
 def _work_grids(job):
@@ -205,6 +267,7 @@ def _work_grids(job):
 def main_grids_only(args):
     """Build + persist deep grids for the whole universe (resumable)."""
     t0 = time.time()
+    from_cache = bool(getattr(args, "from_cache", False))
     tickers = sorted({os.path.basename(p)[:-5]
                       for p in glob.glob("data/rows/*.json")}
                      | {os.path.basename(p)[:-5]
@@ -212,19 +275,26 @@ def main_grids_only(args):
                         if not os.path.basename(p).startswith("_")})
     if args.limit:
         tickers = tickers[:args.limit]
+    if from_cache:
+        n_rows = len(glob.glob("data/rows/*.json"))
+        print(f"[from-cache] {n_rows} row caches on disk", flush=True)
+        if n_rows == 0:
+            raise SystemExit("NO PRICE CACHE in data/rows — restore excel-state first")
     done = {} if args.no_resume else (
         json.load(open(DONE_GRIDS_JSON)) if os.path.exists(DONE_GRIDS_JSON)
         else {})
     todo = [t for t in tickers if t not in done]
-    print(f"[grids-only] {len(done)} done, {len(todo)} to go", flush=True)
+    print(f"[grids-only] {len(done)} done, {len(todo)} to go"
+          f"{' (from cache)' if from_cache else ''}", flush=True)
     if not todo:
         print("REMAINING=0", flush=True)
         return
     from multiprocessing import Pool
     budget_s = args.budget_min * 60
+    worker = _work_grids_from_cache if from_cache else _work_grids
+    jobs = todo if from_cache else [(t, args.years) for t in todo]
     with Pool(args.workers) as pool:
-        for tk, err in pool.imap_unordered(
-                _work_grids, [(t, args.years) for t in todo], chunksize=4):
+        for tk, err in pool.imap_unordered(worker, jobs, chunksize=4):
             done[tk] = f"ERR {err}" if err else "ok"
             if len(done) % 100 == 0:
                 os.makedirs(os.path.dirname(DONE_GRIDS_JSON), exist_ok=True)
@@ -238,9 +308,12 @@ def main_grids_only(args):
     os.makedirs(os.path.dirname(DONE_GRIDS_JSON), exist_ok=True)
     json.dump(done, open(DONE_GRIDS_JSON, "w"))
     remaining = len([t for t in tickers if t not in done])
-    print(f"[grids-only done] {remaining} remaining, "
+    n_ok = sum(1 for v in done.values() if v == "ok")
+    print(f"[grids-only done] {n_ok} grids, {remaining} remaining, "
           f"{(time.time()-t0)/60:.1f}m", flush=True)
     print(f"REMAINING={remaining}", flush=True)
+    if from_cache and n_ok == 0:
+        raise SystemExit("NO GRID JSON after cache build")
 
 
 
@@ -286,6 +359,8 @@ def main():
     ap.add_argument("--no-resume", action="store_true")
     ap.add_argument("--grids-only", action="store_true",
                     help="build+persist deep grids only, no trades")
+    ap.add_argument("--from-cache", action="store_true",
+                    help="build grids from data/rows (excel-state OHLC); no Yahoo fetch")
     args = ap.parse_args()
     if args.grids_only:
         main_grids_only(args)
