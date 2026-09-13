@@ -235,6 +235,16 @@
     const nNeg = Object.values(row.boxes || {}).filter(v => v === "bad").length + (row.alarm ? 1 : 0);
     if (req.n_neg_max != null && nNeg > Number(req.n_neg_max)) return false;
     if (req.n_neg_min != null && nNeg < Number(req.n_neg_min)) return false;
+    if (req.n_pos_min != null && camGood(row) < Number(req.n_pos_min)) return false;
+    if (req.news_box != null && !camOk(String(row.news_box || "missing").toLowerCase(), req.news_box)) return false;
+    if (req.headline != null && !camOk(String(row.news_prior || "missing").toLowerCase(), req.headline)) return false;
+    if (req.news_and_headline && !(String(row.news_box || "").toLowerCase() === "good"
+        && String(row.news_prior || "").toLowerCase() === "good")) return false;
+    if (req.news_or_headline && !(String(row.news_box || "").toLowerCase() === "good"
+        || String(row.news_prior || "").toLowerCase() === "good")) return false;
+    if (req.news_or_red && !(String(row.news_box || "").toLowerCase() === "bad"
+        || String(row.news_prior || "").toLowerCase() === "bad")) return false;
+    if (req.cam_net_min != null && (camGood(row) - camBad(row)) < Number(req.cam_net_min)) return false;
     if (req.yday_up && !ydayUp(row)) return false;
     if (req.cam_bad_max != null && camBad(row) > Number(req.cam_bad_max)) return false;
     if (req.major_catalyst && !majorCatalyst(row)) return false;
@@ -263,6 +273,13 @@
     if (key === "catal_present") return "the catalyst camera printed something";
     if (key === "yday_up") return "yesterday's session was up";
     if (key === "cam_bad_max") return "at most " + val + " red cameras (−R, no 🚨)";
+    if (key === "n_pos_min") return "at least " + val + " green cameras (+G)";
+    if (key === "news_box") return "the morning news packet is " + (val === "good" ? "green" : val);
+    if (key === "headline") return "the prior-export headline is " + (val === "good" ? "green" : val);
+    if (key === "news_and_headline") return "packet and headline are both green";
+    if (key === "news_or_headline") return "packet or headline is green";
+    if (key === "news_or_red") return "packet or headline is red";
+    if (key === "cam_net_min") return "camera net (+G −R) is at least " + val;
     if (key === "yday_or_catalyst") return "yesterday up or a major good catalyst";
     if (key === "yday_and_catalyst") return "yesterday up AND a major good catalyst";
     if (key === "major_catalyst") return "a major good catalyst";
@@ -321,6 +338,13 @@
     if (req.flag_R != null) need(Number(row.erd_flag_R || 0) === Number(req.flag_R), kidGate("flag_R", req.flag_R));
     if (req.yday_up) need(ydayUp(row), kidGate("yday_up", true));
     if (req.cam_bad_max != null) need(camBad(row) <= Number(req.cam_bad_max), kidGate("cam_bad_max", req.cam_bad_max));
+    if (req.n_pos_min != null) need(camGood(row) >= Number(req.n_pos_min), kidGate("n_pos_min", req.n_pos_min));
+    if (req.news_box) need(camOk(String(row.news_box || "missing").toLowerCase(), req.news_box), kidGate("news_box", req.news_box));
+    if (req.headline) need(camOk(String(row.news_prior || "missing").toLowerCase(), req.headline), kidGate("headline", req.headline));
+    if (req.news_and_headline) need(String(row.news_box || "").toLowerCase() === "good" && String(row.news_prior || "").toLowerCase() === "good", kidGate("news_and_headline", true));
+    if (req.news_or_headline) need(String(row.news_box || "").toLowerCase() === "good" || String(row.news_prior || "").toLowerCase() === "good", kidGate("news_or_headline", true));
+    if (req.news_or_red) need(String(row.news_box || "").toLowerCase() === "bad" || String(row.news_prior || "").toLowerCase() === "bad", kidGate("news_or_red", true));
+    if (req.cam_net_min != null) need((camGood(row) - camBad(row)) >= Number(req.cam_net_min), kidGate("cam_net_min", req.cam_net_min));
     if (req.major_catalyst) need(majorCatalyst(row), kidGate("major_catalyst", true));
     if (req.yday_or_catalyst) need(ydayUp(row) || majorCatalyst(row), kidGate("yday_or_catalyst", true));
     if (req.yday_and_catalyst) need(ydayUp(row) && majorCatalyst(row), kidGate("yday_and_catalyst", true));
@@ -499,12 +523,22 @@
       });
     return out;
   }
-  function splitBudgets(n, room, mode) {
+  function splitBudgets(n, room, mode, rows) {
     if (n < 1 || room <= 0) return Array(n).fill(0);
     mode = mode || "leftover";
     if (mode === "half") {
       room *= 0.5;
       return Array(n).fill(room / n);
+    }
+    if (mode === "conviction") {
+      const top = (rows && rows[0]) || {};
+      if ((camGood(top) - camBad(top)) >= 5) {
+        if (n === 1) return [room];
+        const first = room * 0.70;
+        const rest = (room - first) / (n - 1);
+        return [first].concat(Array(n - 1).fill(rest));
+      }
+      mode = "rank_w";
     }
     if (mode === "rank_w") {
       const w = [];
@@ -789,7 +823,7 @@
           room = Math.min(room * (pack.sizeup || SIZEUP), side === "long" ? cash : room * (pack.sizeup || SIZEUP));
           if (side === "long") room = Math.min(room, cash);
         }
-        const budgets = splitBudgets(neu.length, room, sizeMode);
+        const budgets = splitBudgets(neu.length, room, sizeMode, neu);
         neu.forEach((row, i) => {
           const t = row.ticker;
           const p = px(pack, t, date, "open");

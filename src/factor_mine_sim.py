@@ -27,6 +27,7 @@ ROW_KEEP = (
     "erd_flag_E", "erd_flag_R",
     "e_pol", "e_label", "r_pol", "r_label",
     "cond_good", "cond_bad",
+    "news_box", "news_prior",
 )
 
 

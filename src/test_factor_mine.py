@@ -91,6 +91,109 @@ def test_matches_ryg_presence_and_ignores_same_day_change() -> None:
     assert "RelVol" not in fm.INPUT_FIELDS
 
 
+def test_matches_news_packet_headline_and_cam_floor() -> None:
+    row = {
+        "ticker": "NEWS",
+        "sources": ["union"],
+        "boxes": {"news": "good", "vol": "good"},
+        "news_box": "good",
+        "news_prior": "good",
+        "cond_good": 9,
+        "cond_bad": 0,
+        "alarm": False,
+    }
+    assert fm.matches(row, fm.make_recipe(
+        "t", require={"news_and_headline": True, "n_pos_min": 9,
+                      "cam_bad_max": 1}))
+    assert not fm.matches(dict(row, news_prior="neutral"), fm.make_recipe(
+        "t", require={"news_and_headline": True}))
+    assert fm.matches(row, fm.make_recipe("t", require={"news_box": "good"}))
+    assert fm.matches(row, fm.make_recipe("t", require={"headline": "good"}))
+    head_only = dict(row, news_box="missing", news_prior="good", cond_good=5, cond_bad=1)
+    assert fm.matches(head_only, fm.make_recipe(
+        "t", require={"news_or_headline": True, "cam_net_min": 3}))
+    assert not fm.matches(head_only, fm.make_recipe(
+        "t", require={"news_and_headline": True}))
+    assert not fm.matches(dict(head_only, cond_good=3, cond_bad=2), fm.make_recipe(
+        "t", require={"news_or_headline": True, "cam_net_min": 3}))
+    assert not fm.matches(dict(row, cond_good=6), fm.make_recipe(
+        "t", require={"news": "good", "n_pos_min": 7, "cam_bad_max": 1}))
+    pack = fm.make_recipe("t", require={"news_box": "good"})
+    assert "morning news packet" in fm._gate_kid("news_box", "good")
+    assert "OR" in fm._gate_kid("news_or_headline", True)
+    names = {r["name"] for r in fm.build_recipes()}
+    assert "union_news_or_net4_h1" in names
+    assert "union_news_or_h1" in names
+    assert "union_news_pack_net2_h1" in names
+    assert "union_news_g_conv_h1" in names
+    assert "union_news_both_h1" in names
+    from src import factor_mine_book as fmb
+    hot = [{"cond_good": 9, "cond_bad": 0}, {"cond_good": 5, "cond_bad": 2}]
+    bud = fmb.split_budgets(hot, 1000.0, "conviction")
+    assert abs(bud[0] - 700.0) < 1e-9 and abs(sum(bud) - 1000.0) < 1e-9
+    net5 = [{"cond_good": 7, "cond_bad": 2}, {"cond_good": 5, "cond_bad": 1}]
+    bud5 = fmb.split_budgets(net5, 1000.0, "conviction")
+    assert abs(bud5[0] - 700.0) < 1e-9
+    weak = [{"cond_good": 4, "cond_bad": 2}, {"cond_good": 3, "cond_bad": 1}]
+    rank = fmb.split_budgets(weak, 1000.0, "rank_w")
+    conv = fmb.split_budgets(weak, 1000.0, "conviction")
+    assert conv == rank
+    from src import factor_mine_sim as fms
+    assert "news_box" in fms.ROW_KEEP and "news_prior" in fms.ROW_KEEP
+    from src import factor_mine_combo as fmc
+    specs = {s["name"]: s for s in fmc.combo_specs()}
+    assert specs["combo_ps_5050_shared"]["members"] == [
+        "union_news_pack_h1", "short_news_r_h3"]
+    assert "union_news_pack_h1" in fmc.CLAIM
+
+
+def test_merge_stats_into_payload_replaces_and_pins() -> None:
+    payload = {
+        "dates": ["2026-08-13", "2026-08-14"],
+        "stats": [
+            {"name": "old_keep", "total_ret_pct": 1.0},
+            {"name": "union_news_pack_h1", "total_ret_pct": 0.0},
+        ],
+        "recipes": [{"name": "old_keep"}, {"name": "union_news_pack_h1"}],
+        "series": {"old_keep": [10000, 10100], "union_news_pack_h1": [10000, 10000]},
+        "daily": {"old_keep": [], "union_news_pack_h1": []},
+        "starts": {"old_keep": [], "union_news_pack_h1": []},
+        "books": {"old_keep": {"trades": []}, "union_news_pack_h1": {"trades": []}},
+        "featured": ["old_keep"],
+    }
+    st = {
+        "name": "union_news_pack_h1",
+        "total_ret_pct": 12.49,
+        "equity": [10000, 11000, 11249],
+        "daily": [{"date": "2026-08-13", "equity": 11000, "mean": 10.0}],
+        "starts": [{"start": "2026-08-13", "made_money": True, "return_pct": 12.49}],
+        "universe": "union",
+        "hold": 1,
+        "side": "long",
+        "require": {"news_box": "good"},
+        "forbid": {"alarm": True},
+    }
+    rec = fm.make_recipe(
+        "union_news_pack_h1", require={"news_box": "good"},
+        forbid={"alarm": True})
+    fm.merge_stats_into_payload(
+        payload, [st],
+        books={"union_news_pack_h1": {"trades": [{"ticker": "AU"}], "n_trades": 1}},
+        recipes=[rec],
+        pin=("union_news_pack_h1", "missing_pin"),
+    )
+    names = [s["name"] for s in payload["stats"]]
+    assert names.count("union_news_pack_h1") == 1
+    assert "old_keep" in names
+    packed = next(s for s in payload["stats"] if s["name"] == "union_news_pack_h1")
+    assert packed["total_ret_pct"] == 12.49
+    assert "daily" not in packed
+    assert payload["featured"][0] == "union_news_pack_h1"
+    assert "missing_pin" not in payload["featured"]
+    assert payload["n_recipes"] == 2
+    assert payload["books"]["union_news_pack_h1"]["n_trades"] == 1
+
+
 def test_matches_coil_and_short_alarm() -> None:
     row = {
         "ticker": "BBB",
