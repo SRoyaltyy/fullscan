@@ -285,6 +285,10 @@ def build_recipes() -> list[dict]:
             require={"news_box": "good", "cam_net_min": 3},
             forbid={"alarm": True}, rank="cond",
             note="packet🟢 and camera net ≥ 3")
+        add(name=f"union_news_pack_net2_h{hold}", universe="union", hold=hold,
+            require={"news_box": "good", "cam_net_min": 2},
+            forbid={"alarm": True}, rank="cond",
+            note="packet🟢 and camera net ≥ 2")
     add(name="union_news_or_net4_rw_h1", universe="union", hold=1, top_n=4,
         require={"news_or_headline": True, "cam_net_min": 4},
         forbid={"alarm": True}, rank="cond", size="rank_w",
@@ -1947,11 +1951,13 @@ def run(from_date: str = START, to_date: str | None = None,
     extra = [n for n in (
         "flatten_live_h1", "flatten_live_h3", "flatten_live_h5",
         "union_e_fresh_h3", "union_news_g_h5", "union_white_coil_h1",
-        "union_news_pack_h1", "union_news_or_h1",
+        "union_news_pack_h1", "union_news_pack_net2_h1",
+        "union_news_or_h1",
         "union_news_or_net3_h1", "union_news_or_net4_h1",
         "union_news_or_net4_rw_h1", "union_news_or_net4_conv_h1",
         "short_news_head_h3",
         "combo_ps_5050_shared", "combo_ps_7030_shared",
+        "combo_p2s_5050_shared",
         "union_news_g_cam91_n1_h1", "union_news_both_h1",
         "union_news_g_cam71_h1", "union_news_g_conv_h1",
         "union_e_green_h3",
@@ -2362,15 +2368,15 @@ def _n(v) -> str:
 
 NEWS_CAM_SPLICE = (
     "union_news_pack_h1",
-    "union_news_pack_h3",
-    "union_news_head_h1",
-    "union_news_head_h3",
-    "union_news_both_h1",
-    "union_news_g_cond_h1",
-    "union_news_g_cam71_h1",
+    "union_news_pack_net2_h1",
+    "union_news_pack_net3_h1",
+    "union_news_or_h1",
+    "union_news_or_net2_h1",
+    "union_news_or_net4_h1",
+    "union_news_or_net4_conv_h1",
     "union_news_g_cam91_n1_h1",
-    "union_news_g_conv_h1",
-    "short_news_pack_h3",
+    "union_news_both_h1",
+    "short_news_or_h3",
     "short_news_head_h3",
 )
 NEWS_CAM_COMBOS = (
@@ -2388,15 +2394,23 @@ NEWS_CAM_COMBOS = (
         "net": "priority",
         "pool": "shared",
     },
+    {
+        "name": "combo_p2s_5050_shared",
+        "members": ["union_news_pack_net2_h1", "short_news_r_h3"],
+        "weights": [1.0, 1.0],
+        "net": "priority",
+        "pool": "shared",
+    },
 )
 NEWS_CAM_PIN = (
+    "union_news_pack_net2_h1",
+    "combo_p2s_5050_shared",
     "union_news_pack_h1",
     "combo_ps_5050_shared",
-    "combo_ps_7030_shared",
-    "short_news_head_h3",
+    "union_news_or_h1",
+    "union_news_or_net4_h1",
     "union_news_g_cam91_n1_h1",
-    "union_news_both_h1",
-    "union_news_g_cam71_h1",
+    "short_news_head_h3",
 )
 
 

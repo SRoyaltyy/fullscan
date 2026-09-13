@@ -124,6 +124,7 @@ def test_matches_news_packet_headline_and_cam_floor() -> None:
     names = {r["name"] for r in fm.build_recipes()}
     assert "union_news_or_net4_h1" in names
     assert "union_news_or_h1" in names
+    assert "union_news_pack_net2_h1" in names
     assert "union_news_g_conv_h1" in names
     assert "union_news_both_h1" in names
     from src import factor_mine_book as fmb
