@@ -1576,6 +1576,10 @@ def test_white_horizon_pool_then_score() -> None:
     both = next(r for r in fm.build_recipes() if r["name"] == "union_white_both_n4_h5")
     assert both["top_n"] == 4
     assert both["require"] == {"cam_bad_max": 0, "yday_and_catalyst": True}
+    s12 = next(r for r in fm.build_recipes() if r["name"] == "union_white_both_n4_h5_s12")
+    assert s12["stop_pct"] == 0.12
+    assert s12["take_pct"] is None
+    assert any(r["name"] == "flatten_h5_s8" for r in fm.build_recipes())
 
     def row(ticker, **kw):
         base = {

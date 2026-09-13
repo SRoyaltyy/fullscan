@@ -390,6 +390,15 @@ def build_recipes() -> list[dict]:
             require={"cam_bad_max": 0, "yday_and_catalyst": True},
             forbid={"alarm": True},
             note="−0 red + yday up AND catalyst, top 4 by Score")
+    # Stop-only brackets that beat the plain hold on 08-13→09-11.
+    # Take-profit cut the runners; do not register those.
+    add(name="union_white_both_n4_h5_s12", universe="union", hold=5,
+        top_n=4, rank="list", stop_pct=0.12,
+        require={"cam_bad_max": 0, "yday_and_catalyst": True},
+        forbid={"alarm": True},
+        note="both+top4 hold5, stop −12% at 09:30 even inside hold")
+    add(name="flatten_h5_s8", universe="flatten", hold=5, stop_pct=0.08,
+        note="flatten hold 5, stop −8% at 09:30 even inside hold")
 
     return recs
 
@@ -1796,7 +1805,8 @@ def run(from_date: str = START, to_date: str | None = None,
         "union_white_any_h1", "union_white_any_h2",
         "union_white_any_h3", "union_white_any_h5",
         "union_white_both_n4_h1", "union_white_both_n4_h2",
-        "union_white_both_n4_h5",
+        "union_white_both_n4_h5", "union_white_both_n4_h5_s12",
+        "flatten_h5_s8",
         "flatten_h5", "flatten_h5_rankw", "flatten_h5_time", "flatten_h5_sboost",
         "union_h5_sboost", "flatten_live_h1_sizeup",
         "union_h3_cut", "union_h1_topheavy",
