@@ -1,18 +1,17 @@
 {
   "date": "2026-09-13",
-  "generated_at": "2026-09-13T14:57:40.114400-04:00",
+  "generated_at": "2026-09-13T14:57:55.339185-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-13_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-13/_board.json` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-09-13_actions.json` \u2014 missing",
     "MISSING Finviz digest JSON `01_daily/news/2026-09-13_finviz_digest.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-09-13_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
-    "partial": 0,
+    "ok": 2,
+    "partial": 2,
     "fail": 4,
     "n": 8
   },
@@ -109,7 +108,7 @@
       "inputs_ready": false,
       "n_req_ok": 0,
       "n_req": 20,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 2,
       "files": [
         {
@@ -189,9 +188,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-13_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 2388
         },
         {
           "key": "general",
@@ -409,7 +408,7 @@
       ],
       "said": "25 rows",
       "bullets": [
-        "SFL, AVT, CFFN, LFST, AMD"
+        "CFFN, SFL, AVT, AMD, LFST"
       ]
     },
     {
@@ -428,9 +427,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-13_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 2388
         },
         {
           "key": "in_digest",
@@ -458,11 +457,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 4,
+      "n_req_ok": 2,
       "n_req": 4,
-      "n_opt_ok": 3,
+      "n_opt_ok": 1,
       "n_opt": 3,
       "files": [
         {
@@ -488,9 +487,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-13_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 2388
         },
         {
           "key": "in_digest",
@@ -551,27 +550,27 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-13_stock_book.json",
           "role": "required",
-          "status": "OK",
-          "reason": "horizons=5 names=216",
-          "size": 1458204
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "book_md",
           "name": "Stock book MD",
           "path": "01_daily/2026-09-13_stock_book.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 78504
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-13_green.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 585
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "paper",
@@ -587,8 +586,8 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-13)",
+          "status": "FAIL",
+          "reason": "session 2026-09-13 not in dashboard dates (last=2026-09-11)",
           "size": 4874846
         }
       ],
@@ -601,9 +600,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "OK",
-      "inputs_ready": true,
-      "n_req_ok": 2,
+      "status": "PARTIAL",
+      "inputs_ready": false,
+      "n_req_ok": 1,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -613,17 +612,17 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-13_stock_book.json",
           "role": "input",
-          "status": "OK",
-          "reason": "horizons=5 names=216",
-          "size": 1458204
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "dash_html",
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-13)",
+          "status": "FAIL",
+          "reason": "session 2026-09-13 not in dashboard dates (last=2026-09-11)",
           "size": 4874846
         },
         {
@@ -1051,6 +1050,31 @@
         }
       ],
       "preview": "2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF \u00b7 2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-13T14:57:54.703721-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-13_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7620317,
+          "preview": "2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, CFFN, ANET, BMRN, SLDE"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-13_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8459317,
+          "preview": "2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, SFL, AVT, AMD, LFST"
+        }
+      ],
+      "preview": "2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, CFFN, ANET, BMRN, SLDE \u00b7 2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, SFL, AVT, AMD, LFST"
     }
   ],
   "href": {
