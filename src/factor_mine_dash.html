@@ -168,7 +168,7 @@
   <li><b>$ days / average win vs loss.</b> Share of sessions whose <em>cash book</em> made money (leftover split, fees, whole shares), plus average closed-trade win % vs loss %.</li>
   <li><b>Sustainability.</b> For every start date X, replay the cash book from X's 09:30 open through the last session that has a 16:00 close. Count how often that path is still green. A start on 9/9 while 9/10 has not opened is the 9/9 open\u2192close book, labelled prelim. An unopened start date is pending, not 0%. Cash-start <code>&lt;&lt; &lt; &gt; &gt;&gt;</code> is that replay: $10k and no lots on morning X, same hard-red / leftover / min-hold rules. It is not “add on top of the 8-13 book.”</li>
   <li><b>Stock investigator.</b> Dropdown = names that sleeve actually bought. Date buttons = 09:30 that morning. A big BUY / SIT / NO badge says whether this recipe would take the name, plus the gates that fired or failed. E / R dots are beat-miss / upgrade-downgrade from the session-morning Finviz EPS Surprise when the print is already public (yday AMC / today BMO). A date-only stamp with no surprise number stays unknown — not green. Today's AMC is not used. Horizon % is hold-H from the 09:30 open. Cameras / coaches / news are quoted from repo files — never same-day Change%.</li>
-  <li><b>Morning board.</b> Every name this recipe looked at that 09:30, ranked by its own rank key, plus would-be horizon % if bought here. <b>E</b> is the leak-free morning-export EPS surprise (beat / miss / unknown) — same number as the investigator chip. <b>Cams</b> is +green −red camera counts (e.g. +5 −1). <b>Yday</b> is yesterday's close-to-close % — never today's tape. Hit-rate tally covers BUY / NO / SIT and the ≤2 vs ≥3 red-camera split. The white+yday toggle keeps this looker list but buys only 0-red names that were up yesterday, ranked by +G−R. The take/stop toggle sells at the next 09:30 if the open is a set % better or worse than our fill — even inside the minimum hold — and the banner shows Book% with vs without. Marks chips, blotter BUY rows, and the session bought list also print that E so a beat like INO +67.7% is visible without opening the investigator.</li>
+  <li><b>Morning board.</b> Every name this recipe looked at that 09:30, ranked by its own rank key, plus would-be horizon % if bought here. <b>E</b> is the leak-free morning-export EPS surprise (beat / miss / unknown) — same number as the investigator chip. <b>Cams</b> is +green −red camera counts (e.g. +5 −1). <b>Yday</b> is yesterday's close-to-close % — never today's tape. Hit-rate tally covers BUY / NO / SIT and the ≤2 vs ≥3 red-camera split. The white+yday toggle keeps this looker list but buys only 0-red names that were up yesterday, ranked by +G−R. <b>sell%</b> in the filter bar replays every single recipe with a 09:30 take and/or stop (open vs our fill, even inside min-hold). Cards, table Book%, and curves switch to the replay; each Book% shows was / Δ vs the baked hold. Combos stay on the baked shared-pile book. The morning-board take/stop box is the same control. Marks chips, blotter BUY rows, and the session bought list also print that E so a beat like INO +67.7% is visible without opening the investigator.</li>
   <li><b>−N / burst / green-news sweep.</b> Research overlays on the current cash-book leaders. A new gate is kept only if it beats flatten_h5 on the $10k book. If none do, current methods stay. Live flatten_robust is never changed.</li>
   <li><b>Top-25 gainer capture.</b> Buy 8-17 hold=3 → did a pick land in the liquid top-25 gainers on 8-17, 8-18, or 8-19?</li>
   <li><b>Loser capture.</b> Same window: names that printed Change% &lt; −1.5% (outcome only — never a 09:30 gate).</li>
@@ -228,7 +228,7 @@ function statsList(){
     if(sideFilter==='short' && s.side!=='short') return false;
     if(holdFilter!=='all' && String(s.hold)!==String(holdFilter)) return false;
     return true;
-  });
+  }).map(statsFor);
 }
 function names(){ return statsList().map(s=>s.name); }
 
@@ -297,9 +297,12 @@ function renderCards(){
     const on = name && sleeveFilter===name ? 'on' : '';
     const title = picked ? String(shown||'—') : (name||'—');
     const sub = picked && lab==='This sleeve' ? num(picked.total_ret_pct)+'%' : (picked ? '' : (shown||'—'));
+    const delta = (!picked && (lab==='Best sleeve'||lab==='Worst sleeve') && s) ? bookDeltaHtml(s)
+      : (picked && lab==='Book %' ? bookDeltaHtml(picked) : '');
     return `<div class="card ${on}" data-sleeve="${esc(name)}" title="Open ${esc(name||'')}">
       <span class="mut">${esc(lab)}</span><b>${esc(title)}</b>
       ${sub?`<span class="${c}">${esc(sub)}</span>`:''}
+      ${delta||''}
     </div>`;
   }).join('');
   document.querySelectorAll('#cards .card').forEach(el=>{
@@ -330,6 +333,26 @@ function renderFilters(){
       ${holds.map(h=>`<option value="${h}">Hold ${h}</option>`).join('')}
     </select>
     <input id="q" placeholder="Filter name (e.g. coil)" aria-label="Filter recipe">
+    <label class="mut" style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+      <input type="checkbox" id="fmSellOn" ${bracketOn()?'checked':''}>
+      sell% all strats
+      <select id="fmTakePct" aria-label="Take-profit percent" ${bracketOn()?'':'disabled'}>
+        <option value="" ${_takePct===''?'selected':''}>take off</option>
+        <option value="0.03" ${_takePct==='0.03'?'selected':''}>take +3%</option>
+        <option value="0.05" ${_takePct==='0.05'?'selected':''}>take +5%</option>
+        <option value="0.08" ${_takePct==='0.08'?'selected':''}>take +8%</option>
+        <option value="0.12" ${_takePct==='0.12'?'selected':''}>take +12%</option>
+        <option value="0.20" ${_takePct==='0.20'?'selected':''}>take +20%</option>
+      </select>
+      <select id="fmStopPct" aria-label="Stop-loss percent" ${bracketOn()?'':'disabled'}>
+        <option value="" ${_stopPct===''?'selected':''}>stop off</option>
+        <option value="0.03" ${_stopPct==='0.03'?'selected':''}>stop −3%</option>
+        <option value="0.05" ${_stopPct==='0.05'?'selected':''}>stop −5%</option>
+        <option value="0.08" ${_stopPct==='0.08'?'selected':''}>stop −8%</option>
+        <option value="0.12" ${_stopPct==='0.12'?'selected':''}>stop −12%</option>
+      </select>
+    </label>
+    <span class="mut" id="fmSellStatus"></span>
     <span class="mut">${(D.n_recipes||0)} recipes · ${((D.combos||{}).n||0)} combos · ${(D.n_rows||0)} candidate rows · ${(D.n_sessions||0)} sessions</span>`;
   document.getElementById('kindPick').value = kindFilter;
   document.getElementById('sidePick').value = sideFilter;
@@ -338,6 +361,12 @@ function renderFilters(){
   document.getElementById('sidePick').onchange = e=>{sideFilter=e.target.value; sleeveFilter='all'; renderAll();};
   document.getElementById('holdPick').onchange = e=>{holdFilter=e.target.value; sleeveFilter='all'; renderAll();};
   document.getElementById('q').oninput = ()=>{ renderChips(); renderTable(); };
+  const sellOn=document.getElementById('fmSellOn');
+  if(sellOn) sellOn.onchange=e=>{ _bracketOn=!!e.target.checked; kickSellReplay(); };
+  const fmTake=document.getElementById('fmTakePct');
+  if(fmTake) fmTake.onchange=e=>{ _takePct=e.target.value||''; kickSellReplay(); };
+  const fmStop=document.getElementById('fmStopPct');
+  if(fmStop) fmStop.onchange=e=>{ _stopPct=e.target.value||''; kickSellReplay(); };
 }
 
 function chipNames(){
@@ -375,7 +404,7 @@ function visibleKeys(){
   const prefer=[...(D.featured||[])];
   statsList().slice().sort((a,b)=>Number(b.total_ret_pct)-Number(a.total_ret_pct))
     .forEach(s=>{ if(!prefer.includes(s.name)) prefer.push(s.name); });
-  return prefer.filter(k=>!hidden.has(k) && (D.series||{})[k]).slice(0,8);
+  return prefer.filter(k=>!hidden.has(k) && (seriesOf(k)||[]).some(v=>v!=null)).slice(0,8);
 }
 
 function draw(){
@@ -436,13 +465,80 @@ function overlayKind(){
   if(whiteYdayOn()) return 'yday';
   return '';
 }
-function bracketOn(){ return !!_bracketOn && !isCombo(pickedName()); }
+function bracketOn(){ return !!_bracketOn; }
+function bracketKey(){ return pctLabel(_takePct)+'|'+pctLabel(_stopPct); }
 function bracketRec(rec){
   rec=rec||{};
   if(!bracketOn() || isCombo(rec)) return rec;
   const take=_takePct?Number(_takePct):null;
   const stop=_stopPct?Number(_stopPct):null;
   return Object.assign({}, rec, {take_pct:take, stop_pct:stop});
+}
+let _liveCache=null;
+function statsFor(s){
+  if(!s || !bracketOn() || !_liveCache || !_liveCache.stats) return s;
+  const live=_liveCache.stats[s.name];
+  if(!live) return s;
+  return Object.assign({}, s, {
+    total_ret_pct: live.total_ret_pct,
+    profitable_day_rate: live.profitable_day_rate,
+    raw_ret_pct: live.raw_ret_pct,
+    delta_ret_pct: live.delta_ret_pct,
+  });
+}
+function bookDeltaHtml(s){
+  if(!s || !bracketOn() || s.raw_ret_pct==null || isCombo(s)) return '';
+  return `<div class="mut">was ${num(s.raw_ret_pct)} Δ${num(s.delta_ret_pct)}</div>`;
+}
+function sellStatusText(){
+  if(!bracketOn()) return '';
+  const n=_liveCache?(_liveCache.n||0):0;
+  return 'take '+pctLabel(_takePct)+' / stop '+pctLabel(_stopPct)
+    +' · '+n+' singles replayed · combos unchanged';
+}
+function ensureLiveBooks(){
+  if(!bracketOn() || !D.sim || typeof FMSim==='undefined') return null;
+  const key=bracketKey();
+  if(_liveCache && _liveCache.key===key) return _liveCache;
+  const start=(D.dates||[])[0];
+  const series={}, stats={}, books={};
+  let n=0;
+  (D.stats||[]).forEach(s=>{
+    if(!s || !s.name || isCombo(s)) return;
+    const rec=recipeOf(s.name);
+    if(!rec || !rec.name) return;
+    let book;
+    try{
+      book=FMSim.simulateBook(D.sim, bracketRec(rec), start, D.mornings||{});
+    }catch(e){ return; }
+    if(!book) return;
+    n+=1;
+    series[s.name]=book.equity||[];
+    books[s.name]=book;
+    const days=book.daily||[];
+    const nUp=days.filter(d=>d.made_money).length;
+    const raw=s.total_ret_pct;
+    stats[s.name]={
+      total_ret_pct: book.total_ret_pct,
+      profitable_day_rate: days.length? nUp/days.length : s.profitable_day_rate,
+      raw_ret_pct: raw,
+      delta_ret_pct: (book.total_ret_pct==null||raw==null)?null:(book.total_ret_pct-raw),
+    };
+  });
+  _liveCache={key, series, stats, books, n};
+  return _liveCache;
+}
+function kickSellReplay(){
+  _liveCache=null;
+  _simKey=''; _simBook=null;
+  const status=document.getElementById('fmSellStatus');
+  const take=document.getElementById('fmTakePct');
+  const stop=document.getElementById('fmStopPct');
+  if(take) take.disabled=!bracketOn();
+  if(stop) stop.disabled=!bracketOn();
+  if(status) status.textContent=bracketOn()?'replaying every single strat…':'';
+  if(!bracketOn()){ renderAll(); return; }
+  setTimeout(renderAll, 0);
 }
 function pctLabel(v){
   if(v==null||v==='') return 'off';
@@ -497,7 +593,7 @@ function liveStartRow(name, date){
   }
   let row=baked?Object.assign({},baked):{start:date};
   if(typeof FMSim!=='undefined' && D.sim && name){
-    const rec=name===pickedName()?activeRec():recipeOf(name);
+    const rec=name===pickedName()?activeRec():bracketRec(recipeOf(name));
     if(rec && !isCombo(rec)){
       const book=FMSim.simulateBook(D.sim, rec, date, D.mornings||{});
       if(book && book.daily && book.daily.length){
@@ -549,6 +645,11 @@ function activeDaily(){
       if(b && (b.daily||[]).length) return b.daily;
     }
   }
+  if(name && bracketOn() && !isCombo(name)){
+    ensureLiveBooks();
+    const live=_liveCache && _liveCache.books && _liveCache.books[name];
+    if(live && (live.daily||[]).length) return live.daily;
+  }
   return (D.daily||{})[name] || (((D.books||{})[name]||{}).daily) || [];
 }
 function activeBook(){
@@ -556,6 +657,11 @@ function activeBook(){
   if(name && !isCanon() && !isCombo(name)){
     const b=simBook();
     if(b) return b;
+  }
+  if(name && bracketOn() && !isCombo(name)){
+    ensureLiveBooks();
+    const live=_liveCache && _liveCache.books && _liveCache.books[name];
+    if(live) return live;
   }
   return (D.books||{})[name] || null;
 }
@@ -599,6 +705,8 @@ function seriesOf(name){
     const sp=startPath();
     if(sp && sp.equity && sp.equity.some(v=>v!=null)) return sp.equity;
   }
+  if(bracketOn() && _liveCache && _liveCache.series && _liveCache.series[name])
+    return _liveCache.series[name];
   return (D.series||{})[name]||[];
 }
 function boughtTickers(name){
@@ -857,9 +965,9 @@ function renderTools(){
         BUY −0 red + (yday↑ or catalyst), then Score (same looker; try a longer-hold looker)
       </label>
       <label class="mut" style="display:flex;gap:8px;align-items:center;margin:0 0 4px;flex-wrap:wrap">
-        <input type="checkbox" id="bracketOn" ${bracketOn()?'checked':''} ${isCombo(name)?'disabled':''}>
-        09:30 take-profit / stop-loss (open vs our fill, even inside hold)
-        <select id="takePct" aria-label="Take-profit percent" ${(!bracketOn()||isCombo(name))?'disabled':''}>
+        <input type="checkbox" id="bracketOn" ${bracketOn()?'checked':''}>
+        09:30 take-profit / stop-loss on every single strat (open vs our fill, even inside hold)
+        <select id="takePct" aria-label="Take-profit percent" ${bracketOn()?'':'disabled'}>
           <option value="" ${_takePct===''?'selected':''}>take off</option>
           <option value="0.03" ${_takePct==='0.03'?'selected':''}>take +3%</option>
           <option value="0.05" ${_takePct==='0.05'?'selected':''}>take +5%</option>
@@ -867,7 +975,7 @@ function renderTools(){
           <option value="0.12" ${_takePct==='0.12'?'selected':''}>take +12%</option>
           <option value="0.20" ${_takePct==='0.20'?'selected':''}>take +20%</option>
         </select>
-        <select id="stopPct" aria-label="Stop-loss percent" ${(!bracketOn()||isCombo(name))?'disabled':''}>
+        <select id="stopPct" aria-label="Stop-loss percent" ${bracketOn()?'':'disabled'}>
           <option value="" ${_stopPct===''?'selected':''}>stop off</option>
           <option value="0.03" ${_stopPct==='0.03'?'selected':''}>stop −3%</option>
           <option value="0.05" ${_stopPct==='0.05'?'selected':''}>stop −5%</option>
@@ -913,20 +1021,23 @@ function renderTools(){
   const br=document.getElementById('bracketOn');
   if(br) br.onchange=e=>{
     _bracketOn=!!e.target.checked;
-    _simKey=''; _simBook=null;
-    renderAll();
+    const fm=document.getElementById('fmSellOn');
+    if(fm) fm.checked=_bracketOn;
+    kickSellReplay();
   };
   const tp=document.getElementById('takePct');
   if(tp) tp.onchange=e=>{
     _takePct=e.target.value||'';
-    _simKey=''; _simBook=null;
-    renderAll();
+    const fmTake=document.getElementById('fmTakePct');
+    if(fmTake) fmTake.value=_takePct;
+    kickSellReplay();
   };
-  const sp=document.getElementById('stopPct');
-  if(sp) sp.onchange=e=>{
+  const stopEl=document.getElementById('stopPct');
+  if(stopEl) stopEl.onchange=e=>{
     _stopPct=e.target.value||'';
-    _simKey=''; _simBook=null;
-    renderAll();
+    const fmStop=document.getElementById('fmStopPct');
+    if(fmStop) fmStop.value=_stopPct;
+    kickSellReplay();
   };
   renderCashStart();
   renderProbe();
@@ -1074,7 +1185,12 @@ function renderOverlayBanner(){
   if(!el) return;
   if((!overlayOn() && !bracketOn()) || !D.sim || typeof FMSim==='undefined'){ el.innerHTML=''; return; }
   const base=recipeOf(pickedName());
-  if(!base || !base.name || isCombo(base)){ el.innerHTML=''; return; }
+  if(!base || !base.name || isCombo(base)){
+    el.innerHTML=(bracketOn() && isCombo(base))
+      ? '<div class="pill mut">sell% is replaying every single recipe in the table / cards. This combo stays on the baked shared-pile book.</div>'
+      : '';
+    return;
+  }
   const start=(D.dates||[])[0];
   const looks=lookRows((D.dates||[])[probeIdx]||start);
   const nBuy=looks.filter(r=>r.buy).length;
@@ -1160,7 +1276,7 @@ function renderTable(){
     <td class="num ${cls(s.win_rate)}">${pct(s.win_rate)}</td>
     <td class="num ${cls(s.profitable_day_rate)}">${pct(s.profitable_day_rate)}</td>
     <td class="num ${cls(s.start_rate)}">${s.start_green||0}/${s.start_n||0}</td>
-    <td class="num ${cls(s.total_ret_pct)}">${num(s.total_ret_pct)}</td>
+    <td class="num ${cls(s.total_ret_pct)}">${num(s.total_ret_pct)}${bookDeltaHtml(s)}</td>
     <td class="num mut">${num(s.signal_ret_pct)}</td>
     <td class="${s.audit_ok===false?'neg':'pos'}">${s.audit_ok===false?('FAIL×'+(s.audit_n_fail||'?')):'PASS'}</td>
   </tr>`).join('');
@@ -1389,6 +1505,9 @@ function renderStarts(){
 }
 
 function renderAll(){
+  if(bracketOn()) ensureLiveBooks();
+  const sellEl=document.getElementById('fmSellStatus');
+  if(sellEl) sellEl.textContent=sellStatusText();
   document.getElementById('gen').textContent =
     "Generated "+String(D.generated_at||'').slice(0,16).replace('T',' ')+
     " · "+(D.n_sessions||0)+" sessions "+(D.from_date||'')+" → "+(D.to_date||'')+
@@ -1397,7 +1516,8 @@ function renderAll(){
     " · "+(D.leak||"leak-free 09:30")+
     (((D.combos||{}).n)
       ? (" · "+D.combos.n+" combo books"+(((D.combos.outperform||[]).length)?" · "+D.combos.outperform.length+" WIN":""))
-      : "");
+      : "")+
+    (bracketOn() ? (" · sell% "+sellStatusText()) : "");
   document.getElementById('fees').textContent =
     "Loser cut = Change% < "+(D.loser_cut)+" · live policy untouched: "+(D.live_untouched||"flatten_robust");
   const curve=document.getElementById('curveTitle');

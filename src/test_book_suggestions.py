@@ -79,6 +79,11 @@ def test_factor_mine_template_paints_every_strategy() -> None:
     assert 'id="bracketOn"' in html
     assert 'id="takePct"' in html
     assert 'id="stopPct"' in html
+    assert 'id="fmSellOn"' in html
+    assert "function ensureLiveBooks" in html
+    assert "const sp=document.getElementById('stopPct')" not in html
+    assert "stopEl" in html
+    assert "sell% all strats" in html
 
 
 def test_day_board_falls_back_to_suggestions() -> None:
