@@ -1,12 +1,12 @@
 {
   "date": "2026-09-13",
-  "generated_at": "2026-09-13T14:57:11.287304-04:00",
+  "generated_at": "2026-09-13T14:57:21.601487-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 2,
-    "partial": 2,
-    "fail": 4,
+    "ok": 1,
+    "partial": 1,
+    "fail": 6,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "news_actions",
-      "title": "News actions",
-      "date": "2026-09-13",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-13T14:55:24.235721-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-13_actions.json",
-          "ok": true,
-          "reason": "",
-          "size": 2388,
-          "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
-        },
-        {
-          "path": "01_daily/news/2026-09-13_actions.md",
-          "ok": true,
-          "reason": "",
-          "size": 502,
-          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-09-13T14:55:24.224652-04:00\nraw=0 unique_events=0 tickers=7"
-        }
-      ],
-      "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-13T14:55:24.224652-04:00\nraw=0 unique_events=0 tickers=7"
-    },
     {
       "key": "finviz",
       "title": "Finviz universe export",
@@ -193,6 +168,31 @@
         }
       ],
       "preview": "2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, CFFN, BMRN, ANET, SLDE \u00b7 2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SFL, AVT, CFFN, LFST, AMD"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-13T14:57:21.528417-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-13_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9525,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.45, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.1900000000000004, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.05, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.385, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.98, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -4.68, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.52, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-13_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5248,
+          "preview": "# Weather report \u2014 2026-09-13\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.45, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.1900000000000004, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.05, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.385, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.98, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -4.68, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.52, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-13\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

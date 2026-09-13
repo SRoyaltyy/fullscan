@@ -1,19 +1,19 @@
 {
   "date": "2026-09-13",
-  "generated_at": "2026-09-13T14:57:11.287304-04:00",
+  "generated_at": "2026-09-13T14:57:21.601487-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-13_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-13/_board.json` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-09-13_actions.json` \u2014 missing",
     "MISSING Finviz digest JSON `01_daily/news/2026-09-13_finviz_digest.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-09-13_judge.md` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-09-13_judge.md` \u2014 missing",
+    "MISSING AB checklist enriched `data/ab_checklist/2026-09-13_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 2,
-    "partial": 2,
-    "fail": 4,
+    "ok": 1,
+    "partial": 1,
+    "fail": 6,
     "n": 8
   },
   "processes": [
@@ -109,7 +109,7 @@
       "inputs_ready": false,
       "n_req_ok": 0,
       "n_req": 20,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 2,
       "files": [
         {
@@ -189,9 +189,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-13_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 2388
         },
         {
           "key": "general",
@@ -381,11 +381,11 @@
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "OK",
+      "status": "FAIL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 0,
       "n_req": 1,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 1,
       "files": [
         {
@@ -393,24 +393,22 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-13_ab_checklist.csv",
           "role": "optional",
-          "status": "OK",
-          "reason": "rows=2651",
-          "size": 7620317
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-13_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=2651",
-          "size": 8459317
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         }
       ],
-      "said": "25 rows",
-      "bullets": [
-        "SFL, AVT, CFFN, LFST, AMD"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "catalyst",
@@ -428,9 +426,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-13_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 2388
         },
         {
           "key": "in_digest",
@@ -458,9 +456,9 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "FAIL",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 0,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -488,9 +486,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-13_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 2388
         },
         {
           "key": "in_digest",
@@ -524,27 +522,27 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-13_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "OK",
-          "reason": "rows=2651",
-          "size": 8459317
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "join",
           "name": "Join ranked CSV",
           "path": "data/join/2026-09-13_ranked.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=5895",
-          "size": 2247810
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "peers",
           "name": "Peer RS CSV",
           "path": "data/peers/2026-09-13_peer_rs.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=5110",
-          "size": 824637
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "book_json",
@@ -592,10 +590,8 @@
           "size": 4874846
         }
       ],
-      "said": "204 rows",
-      "bullets": [
-        "REGN, HRMY, EXEL, NUTX, CDNA"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "publish",
@@ -843,6 +839,31 @@
         }
       ],
       "preview": "2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, CFFN, BMRN, ANET, SLDE \u00b7 2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SFL, AVT, CFFN, LFST, AMD"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-13T14:57:21.528417-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-13_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9525,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.45, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.1900000000000004, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.05, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.385, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.98, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -4.68, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.52, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-13_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5248,
+          "preview": "# Weather report \u2014 2026-09-13\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.45, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.1900000000000004, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.05, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.385, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.98, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -4.68, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.52, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-13\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
