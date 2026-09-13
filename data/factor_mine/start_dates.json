@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-13T09:39:06.071291-04:00",
+  "generated_at": "2026-09-13T10:11:09.040138-04:00",
   "rows": [
     {
       "name": "combo_sj_3070_shared",
@@ -1412,12 +1412,6 @@
       "start_rate": 0.0
     },
     {
-      "name": "union_news_pack_h1",
-      "start_green": 17,
-      "start_n": 21,
-      "start_rate": 0.8095
-    },
-    {
       "name": "union_news_pack_h3",
       "start_green": 8,
       "start_n": 21,
@@ -1436,12 +1430,6 @@
       "start_rate": 0.0
     },
     {
-      "name": "union_news_both_h1",
-      "start_green": 0,
-      "start_n": 21,
-      "start_rate": 0.0
-    },
-    {
       "name": "union_news_g_cond_h1",
       "start_green": 17,
       "start_n": 21,
@@ -1449,12 +1437,6 @@
     },
     {
       "name": "union_news_g_cam71_h1",
-      "start_green": 0,
-      "start_n": 21,
-      "start_rate": 0.0
-    },
-    {
-      "name": "union_news_g_cam91_n1_h1",
       "start_green": 0,
       "start_n": 21,
       "start_rate": 0.0
@@ -1472,7 +1454,73 @@
       "start_rate": 0.5714
     },
     {
+      "name": "union_news_pack_h1",
+      "start_green": 17,
+      "start_n": 21,
+      "start_rate": 0.8095
+    },
+    {
+      "name": "union_news_pack_net2_h1",
+      "start_green": 17,
+      "start_n": 21,
+      "start_rate": 0.8095
+    },
+    {
+      "name": "union_news_pack_net3_h1",
+      "start_green": 16,
+      "start_n": 21,
+      "start_rate": 0.7619
+    },
+    {
+      "name": "union_news_or_h1",
+      "start_green": 17,
+      "start_n": 21,
+      "start_rate": 0.8095
+    },
+    {
+      "name": "union_news_or_net2_h1",
+      "start_green": 4,
+      "start_n": 21,
+      "start_rate": 0.1905
+    },
+    {
+      "name": "union_news_or_net4_h1",
+      "start_green": 2,
+      "start_n": 21,
+      "start_rate": 0.0952
+    },
+    {
+      "name": "union_news_or_net4_conv_h1",
+      "start_green": 3,
+      "start_n": 21,
+      "start_rate": 0.1429
+    },
+    {
+      "name": "union_news_g_cam91_n1_h1",
+      "start_green": 0,
+      "start_n": 21,
+      "start_rate": 0.0
+    },
+    {
+      "name": "union_news_both_h1",
+      "start_green": 0,
+      "start_n": 21,
+      "start_rate": 0.0
+    },
+    {
+      "name": "short_news_or_h3",
+      "start_green": 17,
+      "start_n": 21,
+      "start_rate": 0.8095
+    },
+    {
       "name": "short_news_head_h3",
+      "start_green": 17,
+      "start_n": 21,
+      "start_rate": 0.8095
+    },
+    {
+      "name": "combo_p2s_5050_shared",
       "start_green": 17,
       "start_n": 21,
       "start_rate": 0.8095

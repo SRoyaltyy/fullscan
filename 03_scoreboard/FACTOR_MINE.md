@@ -1,6 +1,6 @@
 # Factor strategy mine — 2026-08-13 → 2026-09-11
 
-Leak-free 09:30 recipes: **248** · candidate rows **1650** · fill `09:30 open, whole shares, Futubull fees, leftover split, sell first, hard-red sit, cash+holdings audit`.
+Leak-free 09:30 recipes: **256** · candidate rows **1650** · fill `09:30 open, whole shares, Futubull fees, leftover split, sell first, hard-red sit, cash+holdings audit`.
 
 Cash book: $10k, whole shares, Futubull fees, leftover split, sell first, min-hold, 09:30 open, hard-red S≤−3 sit, shorts marked as a liability. Each session starts from leftover cash and lots actually held (butterfly). Cash-start buttons wake a sleeve on date X with $10k and no lots (same rules). Stock investigator quotes 09:30 cameras / coaches / news from repo files. Size / sell / S-boost tweaks sit on the same ledger. Signal-only % is the old equal-weight path (not a fill). `flatten_h*` = wish-list (io/HOLD mornings still buy). `flatten_live_*` = only when the live flatten gate fires. Research only — does not change live `flatten_robust`.
 
@@ -247,16 +247,24 @@ Action blotters: [FACTOR_MINE_ACTION.md](FACTOR_MINE_ACTION.md).
 | `short_r_down_h3` *(thin)* | short | 3 | leftover | list | none | — | 0% | 0/21 | +0.00 | 0 | 0 | — | — | +0.00 | +0.00 | PASS | -15.0 |
 | `union_r_up_h1` *(thin)* | long | 1 | leftover | list | none | — | 0% | 0/21 | +0.00 | 0 | 0 | — | — | +0.00 | +0.00 | PASS | -15.0 |
 | `union_r_up_h3` *(thin)* | long | 3 | leftover | list | none | — | 0% | 0/21 | +0.00 | 0 | 0 | — | — | +0.00 | +0.00 | PASS | -15.0 |
-| `union_news_pack_h1` | long | 1 | leftover | list | none | 56% | 43% | 17/21 | +4.57 | 2 | 10 | +3.57 | -3.37 | +12.49 | +14.94 | PASS | 65.063 |
 | `union_news_pack_h3` | long | 3 | leftover | list | none | 43% | 29% | 8/21 | -2.11 | 5 | 22 | +5.46 | -7.33 | -12.66 | -9.80 | PASS | 27.342 |
 | `union_news_head_h1` | long | 1 | leftover | list | none | 49% | 29% | 10/21 | -0.01 | 4 | 21 | +4.05 | -4.01 | -3.58 | +6.32 | PASS | 38.202 |
 | `union_news_head_h3` | long | 3 | leftover | list | none | 47% | 19% | 0/21 | -2.68 | 15 | 56 | +5.49 | -5.19 | -13.02 | +168.20 | PASS | 17.469 |
-| `union_news_both_h1` *(thin)* | long | 1 | leftover | list | none | 75% | 5% | 0/21 | -2.27 | 0 | 1 | +0.04 | -8.61 | -2.24 | -1.51 | PASS | 5.636 |
 | `union_news_g_cond_h1` | long | 1 | leftover | list | none | 50% | 38% | 17/21 | +2.68 | 4 | 27 | +4.09 | -3.94 | +4.12 | +11.94 | PASS | 60.131 |
 | `union_news_g_cam71_h1` | long | 1 | leftover | list | none | 36% | 33% | 0/21 | -3.37 | 1 | 3 | +2.93 | -3.18 | -1.28 | -0.62 | PASS | 23.762 |
-| `union_news_g_cam91_n1_h1` *(thin)* | long | 1 | leftover | list | none | 33% | 5% | 0/21 | -11.23 | 0 | 1 | +0.85 | -3.84 | -11.23 | -8.69 | PASS | -12.961 |
 | `union_news_g_conv_h1` | long | 1 | conviction | list | none | 52% | 43% | 2/21 | -4.65 | 1 | 12 | +3.81 | -3.14 | +3.37 | +7.49 | PASS | 35.435 |
 | `short_news_pack_h3` *(thin)* | short | 3 | leftover | list | none | 54% | 38% | 12/21 | +3.78 | 1 | 4 | +3.31 | -2.00 | +6.25 | +6.57 | PASS | 37.627 |
+| `union_news_pack_h1` | long | 1 | leftover | list | none | 56% | 43% | 17/21 | +4.57 | 2 | 10 | +3.57 | -3.37 | +12.49 | +14.94 | PASS | 65.063 |
+| `union_news_pack_net2_h1` | long | 1 | leftover | list | none | 56% | 43% | 17/21 | +8.81 | 1 | 7 | +3.77 | -2.68 | +16.53 | +15.61 | PASS | 68.214 |
+| `union_news_pack_net3_h1` | long | 1 | leftover | list | none | 55% | 43% | 16/21 | +5.39 | 1 | 7 | +3.77 | -2.68 | +12.87 | +11.48 | PASS | 65.558 |
+| `union_news_or_h1` | long | 1 | leftover | list | none | 51% | 43% | 17/21 | +3.45 | 4 | 26 | +4.09 | -3.60 | +4.98 | +12.54 | PASS | 62.15 |
+| `union_news_or_net2_h1` | long | 1 | leftover | list | none | 46% | 33% | 4/21 | -1.91 | 1 | 19 | +4.12 | -3.80 | -0.85 | +0.21 | PASS | 31.323 |
+| `union_news_or_net4_h1` | long | 1 | leftover | list | none | 44% | 38% | 2/21 | -3.33 | 1 | 16 | +3.96 | -3.66 | +0.69 | -2.09 | PASS | 29.222 |
+| `union_news_or_net4_conv_h1` | long | 1 | conviction | list | none | 49% | 43% | 3/21 | -6.12 | 1 | 8 | +3.50 | -3.18 | +4.66 | +0.87 | PASS | 35.451 |
+| `union_news_g_cam91_n1_h1` *(thin)* | long | 1 | leftover | list | none | 33% | 5% | 0/21 | -11.23 | 0 | 1 | +0.85 | -3.84 | -11.23 | -8.69 | PASS | -12.961 |
+| `union_news_both_h1` *(thin)* | long | 1 | leftover | list | none | 75% | 5% | 0/21 | -2.27 | 0 | 1 | +0.04 | -8.61 | -2.24 | -1.51 | PASS | 5.636 |
+| `short_news_or_h3` | short | 3 | leftover | list | none | 59% | 62% | 17/21 | +8.64 | 6 | 34 | +5.30 | -4.34 | +15.06 | +22.45 | PASS | 64.719 |
 | `short_news_head_h3` | short | 3 | leftover | list | none | 61% | 67% | 17/21 | +7.88 | 5 | 30 | +6.43 | -4.82 | +14.03 | +21.41 | PASS | 65.281 |
+| `combo_p2s_5050_shared` | mix | 5 | leftover | list | none | 67% | 71% | 17/21 | +11.71 | 0 | 0 | +4.69 | -3.42 | +23.87 | — | PASS | 75.714 |
 | `combo_ps_5050_shared` | mix | 5 | leftover | list | none | 68% | 71% | 17/21 | +10.82 | 0 | 0 | +4.56 | -3.78 | +23.20 | — | PASS | 74.932 |
 | `combo_ps_7030_shared` | mix | 5 | leftover | list | none | 66% | 71% | 17/21 | +9.07 | 0 | 0 | +4.62 | -3.72 | +21.88 | — | PASS | 73.862 |
