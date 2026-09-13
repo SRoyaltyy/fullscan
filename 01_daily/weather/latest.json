@@ -1,6 +1,6 @@
 {
- "date": "2026-09-12",
- "generated_at": "2026-09-12T09:57:00.597087-04:00",
+ "date": "2026-09-13",
+ "generated_at": "2026-09-13T14:56:40.815341-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -8,7 +8,7 @@
   "unknown"
  ],
  "signals": {
-  "date": "2026-09-12",
+  "date": "2026-09-13",
   "risk": "unknown",
   "yields_score": null,
   "fed_score": null,
@@ -39,7 +39,7 @@
     "source": "finviz_week"
    },
    "Communication Services": {
-    "score": -2.24,
+    "score": -2.1900000000000004,
     "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
@@ -57,7 +57,7 @@
     "source": "finviz_week"
    },
    "Energy": {
-    "score": 0.74,
+    "score": 0.77,
     "dir": "flat",
     "conf": 0.4,
     "source": "finviz_week"
@@ -69,7 +69,7 @@
     "source": "finviz_week"
    },
    "Healthcare": {
-    "score": -4.67,
+    "score": -4.68,
     "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
@@ -87,7 +87,7 @@
     "source": "finviz_week"
    },
    "Technology": {
-    "score": -1.93,
+    "score": -1.96,
     "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
@@ -101,15 +101,15 @@
   },
   "sector_tape": {
    "Basic Materials": -3.45,
-   "Communication Services": -2.24,
+   "Communication Services": -2.1900000000000004,
    "Consumer Cyclical": -3.05,
    "Consumer Defensive": -3.385,
-   "Energy": 0.74,
+   "Energy": 0.77,
    "Financial": -0.98,
-   "Healthcare": -4.67,
+   "Healthcare": -4.68,
    "Industrials": -1.52,
    "Real Estate": -2.77,
-   "Technology": -1.93,
+   "Technology": -1.96,
    "Utilities": -1.83
   },
   "events_bull": 5,
@@ -126,7 +126,7 @@
    "Communication Services": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "finviz sector median week -2.24% [tape]"
+    "why": "finviz sector median week -2.19% [tape]"
    },
    "Consumer Cyclical": {
     "stance": "hostile",
@@ -141,7 +141,7 @@
    "Energy": {
     "stance": "neutral",
     "confidence": "medium",
-    "why": "finviz sector median week +0.74% [tape]"
+    "why": "finviz sector median week +0.77% [tape]"
    },
    "Financial": {
     "stance": "neutral",

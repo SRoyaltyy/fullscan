@@ -1,4 +1,4 @@
-# Weather report — 2026-09-12
+# Weather report — 2026-09-13
 
 Is today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade.
 
@@ -15,10 +15,10 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
 | sector:Basic Materials | 🌧️ hostile | medium | finviz sector median week -3.45% [tape] |
-| sector:Communication Services | 🌧️ hostile | medium | finviz sector median week -2.24% [tape] |
+| sector:Communication Services | 🌧️ hostile | medium | finviz sector median week -2.19% [tape] |
 | sector:Consumer Cyclical | 🌧️ hostile | medium | finviz sector median week -3.05% [tape] |
 | sector:Consumer Defensive | 🌧️ hostile | medium | finviz sector median week -3.38% [tape] |
-| sector:Energy | ⛅ neutral | medium | finviz sector median week +0.74% [tape] |
+| sector:Energy | ⛅ neutral | medium | finviz sector median week +0.77% [tape] |
 | sector:Financial | ⛅ neutral | medium | finviz sector median week -0.98% [tape] |
 | sector:Healthcare | 🌤️ favorable | medium | news_judge SECTOR Healthcare [bullish] |
 | sector:Industrials | 🌧️ hostile | medium | finviz sector median week -1.52% [tape] |
