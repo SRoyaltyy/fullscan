@@ -470,6 +470,7 @@ def _card(row: dict, flat: dict | None, news: dict) -> dict:
         "news": news,
         "cond_good": int(row.get("cond_good") or 0),
         "cond_bad": int(row.get("cond_bad") or 0),
+        "yday_ret": _round(row.get("ohlc_ret_1"), 2),
         "n_neg": _n_neg(boxes, domains, alarm),
         "action": (flat or {}).get("action_call") or "",
         "action_why": (flat or {}).get("action_reason") or "",

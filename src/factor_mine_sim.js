@@ -8,6 +8,70 @@
     const n = Number(v);
     return Number.isFinite(n) ? n : null;
   }
+  function camGood(row) {
+    if (row.cond_good != null) return Number(row.cond_good) || 0;
+    return Object.entries(row.boxes || {}).filter(([k, v]) => k !== "yday" && v === "good").length;
+  }
+  function camBad(row) {
+    if (row.cond_bad != null) return Number(row.cond_bad) || 0;
+    return Object.entries(row.boxes || {}).filter(([k, v]) => k !== "yday" && v === "bad").length;
+  }
+  function ydayRet(pack, row, date) {
+    const stored = finite(row && row.ohlc_ret_1);
+    if (stored != null) return Math.round(stored * 100) / 100;
+    const cal = (pack && pack.dates) || [];
+    const d = date || (row && row.date);
+    const i = cal.indexOf(d);
+    if (i < 2 || !row) return null;
+    const c1 = px(pack, row.ticker, cal[i - 1], "close");
+    const c0 = px(pack, row.ticker, cal[i - 2], "close");
+    if (c1 == null || c0 == null || c0 === 0) return null;
+    return Math.round(10000 * (c1 / c0 - 1)) / 100;
+  }
+  function ydayUp(row, pack, date) {
+    const v = pack ? ydayRet(pack, row, date) : finite(row && row.ohlc_ret_1);
+    if (v != null) return v > 0;
+    return !!(row && row.last_green);
+  }
+  function whiteYdayOverlay(rec) {
+    rec = rec || {};
+    const name = String(rec.name || "looker");
+    return {
+      name: name.endsWith("_white_yday") ? name : name + "_white_yday",
+      universe: rec.universe || "union",
+      hold: Number(rec.hold || 1),
+      side: rec.side || "long",
+      top_n: Number(rec.top_n || 8),
+      require: {zero_red: true, yday_up: true},
+      forbid: {alarm: true},
+      rank: "cond",
+      size: rec.size || "leftover",
+      sell: rec.sell || "list",
+      s_boost: rec.s_boost || "none",
+      looker: name,
+    };
+  }
+  function lookStamp(pack, rec, r, date, extra) {
+    const nGood = camGood(r);
+    const nBad = camBad(r);
+    const nNeg = nBad + (r.alarm ? 1 : 0);
+    const yr = ydayRet(pack, r, date);
+    return Object.assign({
+      ticker: r.ticker,
+      score: rankScore(r, rec),
+      ret: holdReturn(pack, rec, r.ticker, date),
+      n_neg: nNeg,
+      n_pos: nGood,
+      cond_good: nGood,
+      cond_bad: nBad,
+      yday_ret: yr,
+      yday_up: yr != null ? yr > 0 : !!r.last_green,
+      src_rank: r.src_rank,
+      e_pol: r.e_pol || "",
+      e_label: r.e_label || "",
+      earn_react: !!r.erd_earn_react,
+    }, extra);
+  }
   function tone(boxes, key) {
     return String((boxes || {})[key] || "missing").toLowerCase();
   }
@@ -140,6 +204,7 @@
     const nNeg = Object.values(row.boxes || {}).filter(v => v === "bad").length + (row.alarm ? 1 : 0);
     if (req.n_neg_max != null && nNeg > Number(req.n_neg_max)) return false;
     if (req.n_neg_min != null && nNeg < Number(req.n_neg_min)) return false;
+    if (req.yday_up && !ydayUp(row)) return false;
     if (req.burst) {
       const ret = finite(row.ohlc_ret_5), rvol = finite(row.ohlc_rvol);
       const burst = ret != null && ret >= 12 && !!row.last_green
@@ -161,6 +226,7 @@
     if (key === "news_present") return "the news camera printed something";
     if (key === "join_present") return "the join camera printed something";
     if (key === "catal_present") return "the catalyst camera printed something";
+    if (key === "yday_up") return "yesterday's session was up";
     if (key === "ret_5_min") return "prior 5-session return is at least " + val + "%";
     if (key === "ret_5_max") return "prior 5-session return is at most " + val + "%";
     if (key === "rvol_min") return "prior relative volume is at least " + val;
@@ -214,6 +280,7 @@
     if (req.flag_E_min != null) need(row.erd_flag_E != null && Number(row.erd_flag_E) >= Number(req.flag_E_min), kidGate("flag_E_min", req.flag_E_min));
     if (req.days_since_R_max != null) need(row.erd_days_since_R != null && Number(row.erd_days_since_R) <= Number(req.days_since_R_max), kidGate("days_since_R_max", req.days_since_R_max));
     if (req.flag_R != null) need(Number(row.erd_flag_R || 0) === Number(req.flag_R), kidGate("flag_R", req.flag_R));
+    if (req.yday_up) need(ydayUp(row), kidGate("yday_up", true));
     return {ok: !failed.length, failed, passed};
   }
   function decisionWhy(pack, rec, date, ticker, mornings) {
@@ -379,27 +446,13 @@
     const seen = new Set();
     passed.forEach((r, i) => {
       seen.add(r.ticker);
-      const nNeg = Object.values(r.boxes || {}).filter(v => v === "bad").length + (r.alarm ? 1 : 0);
-      out.push({
-        ticker: r.ticker, rank: i + 1, score: rankScore(r, rec),
-        pass: true, buy: !hard && (i + 1) <= topN,
-        ret: holdReturn(pack, rec, r.ticker, date),
-        n_neg: nNeg, src_rank: r.src_rank,
-        e_pol: r.e_pol || "", e_label: r.e_label || "",
-        earn_react: !!r.erd_earn_react,
-      });
+      out.push(lookStamp(pack, rec, r, date, {
+        rank: i + 1, pass: true, buy: !hard && (i + 1) <= topN,
+      }));
     });
     looked.filter(r => !seen.has(r.ticker)).sort((a, b) => cmpKey(rankKey(a, rec), rankKey(b, rec)))
       .forEach(r => {
-        const nNeg = Object.values(r.boxes || {}).filter(v => v === "bad").length + (r.alarm ? 1 : 0);
-        out.push({
-          ticker: r.ticker, rank: null, score: rankScore(r, rec),
-          pass: false, buy: false,
-          ret: holdReturn(pack, rec, r.ticker, date),
-          n_neg: nNeg, src_rank: r.src_rank,
-          e_pol: r.e_pol || "", e_label: r.e_label || "",
-          earn_react: !!r.erd_earn_react,
-        });
+        out.push(lookStamp(pack, rec, r, date, {rank: null, pass: false, buy: false}));
       });
     return out;
   }
@@ -804,5 +857,6 @@
     matches, pickDay, rankScore, lookDay, holdReturn, simulateBook, orderFees,
     matchWhy, decisionWhy, hitTally, packRets,
     sessionHasClosed, dateHasClose, lastClosedDate,
+    ydayRet, ydayUp, whiteYdayOverlay, camGood, camBad,
   };
 })(typeof window !== "undefined" ? window : globalThis);

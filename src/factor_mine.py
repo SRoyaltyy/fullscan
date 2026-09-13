@@ -76,7 +76,7 @@ CAMERAS = [k for k, _ in tl.BOX_COLS]
 INPUT_FIELDS = frozenset({
     "sources", "src_rank", "boxes", "blue", "alarm", "zero_red",
     "cond_good", "cond_bad", "news_prior", "news_box", "news_export_date",
-    "ohlc_ret_5", "ohlc_ret_10", "ohlc_rvol", "ohlc_hot_score",
+    "ohlc_ret_1", "ohlc_ret_5", "ohlc_ret_10", "ohlc_rvol", "ohlc_hot_score",
     "ohlc_nr7", "ohlc_break_10", "last_green", "last_red",
     "candle_score", "candle_capture", "candle_body_rg",
     "erd_earn_react", "erd_days_since_E", "erd_days_since_R",
@@ -355,6 +355,21 @@ def build_recipes() -> list[dict]:
                 note=kw["note"])
             have.add(nm)
 
+    # Same looker list as the union / flatten books; pick is 0 red cameras
+    # plus yesterday's session up, ranked by green−red (aggregate score).
+    add(name="union_white_yday_h1", universe="union", hold=1, rank="cond",
+        require={"zero_red": True, "yday_up": True},
+        forbid={"alarm": True},
+        note="union looker: 0 red cameras + yesterday up, rank +G−R")
+    add(name="union_white_yday_h3", universe="union", hold=3, rank="cond",
+        require={"zero_red": True, "yday_up": True},
+        forbid={"alarm": True},
+        note="union looker hold 3: 0 red + yesterday up")
+    add(name="flatten_white_yday_h5", universe="flatten", hold=5, rank="cond",
+        require={"zero_red": True, "yday_up": True},
+        forbid={"alarm": True},
+        note="flatten looker: 0 red + yesterday up")
+
     return recs
 
 
@@ -417,6 +432,8 @@ def _gate_kid(key: str, val) -> str:
         return "the join camera printed something (any color, not blank)"
     if key == "catal_present":
         return "the catalyst camera printed something (any color, not blank)"
+    if key == "yday_up":
+        return "yesterday's session was up (prior close-to-close Change% > 0, or last finished bar green if the % is missing)"
     if key == "n_neg_max":
         return f"at most {int(val)} red cameras (the −N next to the name)"
     if key == "n_neg_min":
@@ -734,16 +751,86 @@ def matches(row: dict, rec: dict) -> bool:
         return False
     if req.get("burst") and not is_burst(row):
         return False
+    if req.get("yday_up") and not yday_up(row):
+        return False
     return True
+
+
+def n_pos(row: dict) -> int:
+    """Green-camera count — the +N on the morning board."""
+    if row.get("cond_good") is not None:
+        return int(row.get("cond_good") or 0)
+    boxes = row.get("boxes") or {}
+    return sum(1 for k, v in boxes.items() if k != "yday" and v == "good")
 
 
 def n_neg(row: dict) -> int:
     """Red-camera count plus 🚨 — the −N on the morning board."""
     boxes = row.get("boxes") or {}
-    n = sum(1 for v in boxes.values() if v == "bad")
+    n = sum(1 for k, v in boxes.items() if k != "yday" and v == "bad")
     if row.get("alarm"):
         n += 1
     return n
+
+
+def cam_bad(row: dict) -> int:
+    """Red cameras only (no 🚨). The −M half of +G −R."""
+    if row.get("cond_bad") is not None:
+        return int(row.get("cond_bad") or 0)
+    boxes = row.get("boxes") or {}
+    return sum(1 for k, v in boxes.items() if k != "yday" and v == "bad")
+
+
+def yday_ret(row: dict, *, date: str | None = None, bars=None,
+             cal: list | None = None) -> float | None:
+    """Prior-session close-to-close %. Leak-free at this 09:30."""
+    v = _finite(row.get("ohlc_ret_1"))
+    if v is not None:
+        return round(float(v), 2)
+    t = _tick(row.get("ticker"))
+    d = str(date or row.get("date") or "")[:10]
+    if not t or not d or not cal or d not in cal:
+        return None
+    i = list(cal).index(d)
+    if i < 2:
+        return None
+    c1 = _finite((_bar(t, cal[i - 1], bars) or {}).get("close"))
+    c0 = _finite((_bar(t, cal[i - 2], bars) or {}).get("close"))
+    if c1 is None or c0 is None or c0 == 0:
+        return None
+    return round(100.0 * (float(c1) / float(c0) - 1.0), 2)
+
+
+def yday_up(row: dict, *, date: str | None = None, bars=None,
+            cal: list | None = None) -> bool:
+    """Yesterday positive: prior close-to-close > 0, else last-green bar."""
+    v = yday_ret(row, date=date, bars=bars, cal=cal)
+    if v is not None:
+        return v > 0
+    return bool(row.get("last_green"))
+
+
+def white_yday_overlay(rec: dict) -> dict:
+    """Same 09:30 looker list; buy 0 red cameras + yesterday up; rank +G−R."""
+    base = rec or {}
+    name = str(base.get("name") or "looker")
+    tag = name if name.endswith("_white_yday") else f"{name}_white_yday"
+    out = make_recipe(
+        name=tag,
+        universe=base.get("universe") or "union",
+        hold=int(base.get("hold") or 1),
+        side=base.get("side") or "long",
+        top_n=int(base.get("top_n") or TOP_N_DEFAULT),
+        require={"zero_red": True, "yday_up": True},
+        forbid={"alarm": True},
+        rank="cond",
+        size=base.get("size") or "leftover",
+        sell=base.get("sell") or "list",
+        s_boost=base.get("s_boost") or "none",
+        note="same looker list; buy 0 red cameras + prior-session up; rank +G−R",
+    )
+    out["looker"] = name
+    return out
 
 
 def is_burst(row: dict) -> bool:
@@ -848,6 +935,8 @@ def match_why(row: dict, rec: dict) -> dict:
              _gate_kid("n_neg_min", req["n_neg_min"]))
     if req.get("burst"):
         need(is_burst(row), _gate_kid("burst", True))
+    if req.get("yday_up"):
+        need(yday_up(row), _gate_kid("yday_up", True))
     return {"ok": not failed, "failed": failed, "passed": passed}
 
 
@@ -1023,6 +1112,7 @@ def _attach_row(date: str, ticker: str, sources: list[str], src_rank: int,
         "news_prior": prior_tone,
         "news_box": news_box,
         "news_export_date": prior_date,
+        "ohlc_ret_1": oh.get("ret_1"),
         "ohlc_ret_5": oh.get("ret_5"),
         "ohlc_ret_10": oh.get("ret_10"),
         "ohlc_rvol": oh.get("rvol"),
