@@ -111,13 +111,6 @@
    h1{font-size:16px}
  }
 </style></head><body><div class="wrap">
-<div id="liveDay" class="audit" style="margin:0 0 10px">
-  <b>Today’s packet</b>
-  <div class="mut" id="liveDayStamp">loading day board…</div>
-  <div class="pills" id="liveDayPills"></div>
-  <div class="mut"><a href="../day-board/" style="color:#93c5fd">day board</a>
-   — which processes ran, plus what was just pushed.</div>
-</div>
 <h1>Factor strategy mine</h1>
 <div class="sub" id="gen"></div>
 <div class="sub">Books:
@@ -175,7 +168,7 @@
   <li><b>$ days / average win vs loss.</b> Share of sessions whose <em>cash book</em> made money (leftover split, fees, whole shares), plus average closed-trade win % vs loss %.</li>
   <li><b>Sustainability.</b> For every start date X, replay the cash book from X's 09:30 open through the last session that has a 16:00 close. Count how often that path is still green. A start on 9/9 while 9/10 has not opened is the 9/9 open\u2192close book, labelled prelim. An unopened start date is pending, not 0%. Cash-start <code>&lt;&lt; &lt; &gt; &gt;&gt;</code> is that replay: $10k and no lots on morning X, same hard-red / leftover / min-hold rules. It is not “add on top of the 8-13 book.”</li>
   <li><b>Stock investigator.</b> Dropdown = names that sleeve actually bought. Date buttons = 09:30 that morning. A big BUY / SIT / NO badge says whether this recipe would take the name, plus the gates that fired or failed. E / R dots are beat-miss / upgrade-downgrade from the session-morning Finviz EPS Surprise when the print is already public (yday AMC / today BMO). A date-only stamp with no surprise number stays unknown — not green. Today's AMC is not used. Horizon % is hold-H from the 09:30 open. Cameras / coaches / news are quoted from repo files — never same-day Change%.</li>
-  <li><b>Morning board.</b> Every name this recipe looked at that 09:30, ranked by its own rank key, plus would-be horizon % if bought here. <b>E</b> is the leak-free morning-export EPS surprise (beat / miss / unknown) — same number as the investigator chip. <b>Cams</b> is +green −red camera counts (e.g. +5 −1). <b>Yday</b> is yesterday's close-to-close % — never today's tape. Hit-rate tally covers BUY / NO / SIT and the ≤2 vs ≥3 red-camera split. The white+yday toggle keeps this looker list but buys only 0-red names that were up yesterday, ranked by +G−R. Marks chips, blotter BUY rows, and the session bought list also print that E so a beat like INO +67.7% is visible without opening the investigator.</li>
+  <li><b>Morning board.</b> Every name this recipe looked at that 09:30, ranked by its own rank key, plus would-be horizon % if bought here. <b>E</b> is the leak-free morning-export EPS surprise (beat / miss / unknown) — same number as the investigator chip. <b>Cams</b> is +green −red camera counts (e.g. +5 −1). <b>Yday</b> is yesterday's close-to-close % — never today's tape. Hit-rate tally covers BUY / NO / SIT and the ≤2 vs ≥3 red-camera split. The white+yday toggle keeps this looker list but buys only 0-red names that were up yesterday, ranked by +G−R. The take/stop toggle sells at the next 09:30 if the open is a set % better or worse than our fill — even inside the minimum hold — and the banner shows Book% with vs without. Marks chips, blotter BUY rows, and the session bought list also print that E so a beat like INO +67.7% is visible without opening the investigator.</li>
   <li><b>−N / burst / green-news sweep.</b> Research overlays on the current cash-book leaders. A new gate is kept only if it beats flatten_h5 on the $10k book. If none do, current methods stay. Live flatten_robust is never changed.</li>
   <li><b>Top-25 gainer capture.</b> Buy 8-17 hold=3 → did a pick land in the liquid top-25 gainers on 8-17, 8-18, or 8-19?</li>
   <li><b>Loser capture.</b> Same window: names that printed Change% &lt; −1.5% (outcome only — never a 09:30 gate).</li>
@@ -187,6 +180,13 @@
 </ol>
 <p class="note">Research miner only. Live <code>flatten_robust</code> is untouched.</p>
 </details>
+<div id="liveDay" class="audit" style="margin:16px 0 10px">
+  <b>Today’s packet</b>
+  <div class="mut" id="liveDayStamp">loading day board…</div>
+  <div class="pills" id="liveDayPills"></div>
+  <div class="mut"><a href="../day-board/" style="color:#93c5fd">day board</a>
+   — which processes ran, plus what was just pushed.</div>
+</div>
 <div class="note" id="fees"></div>
 </div>
 <script>
@@ -425,9 +425,40 @@ function recipeOf(name){
   return (D.recipes||[]).find(r=>r.name===name) || (D.stats||[]).find(s=>s.name===name) || {};
 }
 let _whiteYday=false;
+let _whiteHorizon=false;
+let _bracketOn=false;
+let _takePct='';
+let _stopPct='0.12';
 function whiteYdayOn(){ return !!_whiteYday && !isCombo(pickedName()); }
+function whiteHorizonOn(){ return !!_whiteHorizon && !isCombo(pickedName()); }
+function overlayKind(){
+  if(whiteHorizonOn()) return 'horizon';
+  if(whiteYdayOn()) return 'yday';
+  return '';
+}
+function bracketOn(){ return !!_bracketOn && !isCombo(pickedName()); }
+function bracketRec(rec){
+  rec=rec||{};
+  if(!bracketOn() || isCombo(rec)) return rec;
+  const take=_takePct?Number(_takePct):null;
+  const stop=_stopPct?Number(_stopPct):null;
+  return Object.assign({}, rec, {take_pct:take, stop_pct:stop});
+}
+function pctLabel(v){
+  if(v==null||v==='') return 'off';
+  return (Number(v)*100).toFixed(0)+'%';
+}
 function overlayRec(rec){
   rec=rec||recipeOf(pickedName());
+  if(whiteHorizonOn()){
+    if(typeof FMSim!=='undefined' && FMSim.whiteHorizonOverlay) return FMSim.whiteHorizonOverlay(rec);
+    const name=String((rec&&rec.name)||'looker');
+    return Object.assign({}, rec, {
+      name: name.endsWith('_white_any')?name:name+'_white_any',
+      require:{cam_bad_max:0, yday_or_catalyst:true}, forbid:{alarm:true}, rank:'list',
+      looker:name,
+    });
+  }
   if(typeof FMSim!=='undefined' && FMSim.whiteYdayOverlay) return FMSim.whiteYdayOverlay(rec);
   const name=String((rec&&rec.name)||'looker');
   return Object.assign({}, rec, {
@@ -436,10 +467,14 @@ function overlayRec(rec){
     looker:name,
   });
 }
-function activeRec(){
-  const rec=recipeOf(pickedName());
-  if(whiteYdayOn() && rec && rec.name && !isCombo(rec)) return overlayRec(rec);
+function overlayOn(){ return overlayKind()!==''; }
+function lookerRec(name){
+  const rec=recipeOf(name||pickedName());
+  if(overlayOn() && rec && rec.name && !isCombo(rec)) return overlayRec(rec);
   return rec;
+}
+function activeRec(){
+  return bracketRec(lookerRec(pickedName()));
 }
 function explainOf(name){
   const s=(D.stats||[]).find(x=>x.name===name);
@@ -462,7 +497,7 @@ function liveStartRow(name, date){
   }
   let row=baked?Object.assign({},baked):{start:date};
   if(typeof FMSim!=='undefined' && D.sim && name){
-    const rec=whiteYdayOn()?overlayRec(recipeOf(name)):recipeOf(name);
+    const rec=name===pickedName()?activeRec():recipeOf(name);
     if(rec && !isCombo(rec)){
       const book=FMSim.simulateBook(D.sim, rec, date, D.mornings||{});
       if(book && book.daily && book.daily.length){
@@ -496,9 +531,9 @@ function simBook(){
   const name=pickedName();
   const sp=startPath();
   if(!name || !sp || !D.sim || typeof FMSim==='undefined') return null;
-  const key=name+'|'+(whiteYdayOn()?'wy|':'')+sp.start;
+  const key=name+'|'+(overlayKind()?overlayKind()+'|':'')+(bracketOn()?('br'+pctLabel(_takePct)+pctLabel(_stopPct)+'|'):'')+sp.start;
   if(_simKey===key && _simBook) return _simBook;
-  const rec=whiteYdayOn()?overlayRec(recipeOf(name)):recipeOf(name);
+  const rec=activeRec();
   _simBook=FMSim.simulateBook(D.sim, rec, sp.start, D.mornings||{});
   _simKey=key;
   return _simBook;
@@ -698,6 +733,16 @@ function cardPasses(rec, card){
       :(card.last_green || toneOf((card.boxes||{}).yday)==='good');
     if(!y) return false;
   }
+  const camBad=card.cond_bad!=null?Number(card.cond_bad)||0:Number(card.n_neg||0);
+  if(req.cam_bad_max!=null && camBad>Number(req.cam_bad_max)) return false;
+  const ydayUp=card.yday_ret!=null?Number(card.yday_ret)>0
+    :!!(card.last_green || toneOf((card.boxes||{}).yday)==='good');
+  const ep=toneOf(card.e_pol);
+  const major=(toneOf((card.boxes||{}).catal)==='good') || ep==='good'
+    || (!!card.earn_react && ep!=='bad');
+  if(req.major_catalyst && !major) return false;
+  if(req.yday_or_catalyst && !(ydayUp||major)) return false;
+  if(req.yday_and_catalyst && !(ydayUp&&major)) return false;
   if(req.burst && !card.burst){
     const ret=card.ret_5, rvol=card.rvol;
     const burst=ret!=null && ret>=12 && !!card.last_green && (!!card.break_10 || (rvol!=null && rvol>=2));
@@ -803,9 +848,32 @@ function renderTools(){
     <div class="tool">
       <h2>Morning board — who it looked at</h2>
       <p class="mut">${esc(probeDate)} 09:30. Rank is this recipe's own sort. E is the morning-export EPS surprise when it was already public. Cams is +green −red (not the rank score). Yday is yesterday's close-to-close %. Horizon % is hold-${esc((activeRec()||{}).hold||recipeOf(name).hold)} from the 09:30 open.</p>
-      <label class="mut" style="display:flex;gap:8px;align-items:center;margin:6px 0 8px">
+      <label class="mut" style="display:flex;gap:8px;align-items:center;margin:6px 0 4px">
         <input type="checkbox" id="whiteYday" ${whiteYdayOn()?'checked':''} ${isCombo(name)?'disabled':''}>
         BUY white + yday-up instead (same looker list; rank +G−R)
+      </label>
+      <label class="mut" style="display:flex;gap:8px;align-items:center;margin:0 0 4px">
+        <input type="checkbox" id="whiteHorizon" ${whiteHorizonOn()?'checked':''} ${isCombo(name)?'disabled':''}>
+        BUY −0 red + (yday↑ or catalyst), then Score (same looker; try a longer-hold looker)
+      </label>
+      <label class="mut" style="display:flex;gap:8px;align-items:center;margin:0 0 4px;flex-wrap:wrap">
+        <input type="checkbox" id="bracketOn" ${bracketOn()?'checked':''} ${isCombo(name)?'disabled':''}>
+        09:30 take-profit / stop-loss (open vs our fill, even inside hold)
+        <select id="takePct" aria-label="Take-profit percent" ${(!bracketOn()||isCombo(name))?'disabled':''}>
+          <option value="" ${_takePct===''?'selected':''}>take off</option>
+          <option value="0.03" ${_takePct==='0.03'?'selected':''}>take +3%</option>
+          <option value="0.05" ${_takePct==='0.05'?'selected':''}>take +5%</option>
+          <option value="0.08" ${_takePct==='0.08'?'selected':''}>take +8%</option>
+          <option value="0.12" ${_takePct==='0.12'?'selected':''}>take +12%</option>
+          <option value="0.20" ${_takePct==='0.20'?'selected':''}>take +20%</option>
+        </select>
+        <select id="stopPct" aria-label="Stop-loss percent" ${(!bracketOn()||isCombo(name))?'disabled':''}>
+          <option value="" ${_stopPct===''?'selected':''}>stop off</option>
+          <option value="0.03" ${_stopPct==='0.03'?'selected':''}>stop −3%</option>
+          <option value="0.05" ${_stopPct==='0.05'?'selected':''}>stop −5%</option>
+          <option value="0.08" ${_stopPct==='0.08'?'selected':''}>stop −8%</option>
+          <option value="0.12" ${_stopPct==='0.12'?'selected':''}>stop −12%</option>
+        </select>
       </label>
       <div id="overlayBanner"></div>
       <div id="lookOut"></div>
@@ -831,6 +899,32 @@ function renderTools(){
   const wy=document.getElementById('whiteYday');
   if(wy) wy.onchange=e=>{
     _whiteYday=!!e.target.checked;
+    if(_whiteYday) _whiteHorizon=false;
+    _simKey=''; _simBook=null;
+    renderAll();
+  };
+  const wh=document.getElementById('whiteHorizon');
+  if(wh) wh.onchange=e=>{
+    _whiteHorizon=!!e.target.checked;
+    if(_whiteHorizon) _whiteYday=false;
+    _simKey=''; _simBook=null;
+    renderAll();
+  };
+  const br=document.getElementById('bracketOn');
+  if(br) br.onchange=e=>{
+    _bracketOn=!!e.target.checked;
+    _simKey=''; _simBook=null;
+    renderAll();
+  };
+  const tp=document.getElementById('takePct');
+  if(tp) tp.onchange=e=>{
+    _takePct=e.target.value||'';
+    _simKey=''; _simBook=null;
+    renderAll();
+  };
+  const sp=document.getElementById('stopPct');
+  if(sp) sp.onchange=e=>{
+    _stopPct=e.target.value||'';
     _simKey=''; _simBook=null;
     renderAll();
   };
@@ -978,20 +1072,38 @@ function renderLooks(){
 function renderOverlayBanner(){
   const el=document.getElementById('overlayBanner');
   if(!el) return;
-  if(!whiteYdayOn() || !D.sim || typeof FMSim==='undefined'){ el.innerHTML=''; return; }
+  if((!overlayOn() && !bracketOn()) || !D.sim || typeof FMSim==='undefined'){ el.innerHTML=''; return; }
   const base=recipeOf(pickedName());
   if(!base || !base.name || isCombo(base)){ el.innerHTML=''; return; }
-  const ov=overlayRec(base);
   const start=(D.dates||[])[0];
-  const a=FMSim.simulateBook(D.sim, base, start, D.mornings||{});
-  const b=FMSim.simulateBook(D.sim, ov, start, D.mornings||{});
   const looks=lookRows((D.dates||[])[probeIdx]||start);
   const nBuy=looks.filter(r=>r.buy).length;
-  el.innerHTML =
-    `<div class="pill">White + yday-up on <code>${esc(base.name)}</code> looker · this morning BUY ${nBuy}`
-    +` · overlay Book% <span class="${cls(b.total_ret_pct)}">${num(b.total_ret_pct)}</span>`
-    +` vs looker <span class="${cls(a.total_ret_pct)}">${num(a.total_ret_pct)}</span>`
-    +` (same $10k cash book, research only)</div>`;
+  let html='';
+  if(overlayOn()){
+    const ov=overlayRec(base);
+    const a=FMSim.simulateBook(D.sim, base, start, D.mornings||{});
+    const b=FMSim.simulateBook(D.sim, ov, start, D.mornings||{});
+    const label=whiteHorizonOn()
+      ?'−0 red + (yday↑ or catalyst), then Score'
+      :'White + yday-up';
+    html +=
+      `<div class="pill">${label} on <code>${esc(base.name)}</code> looker · this morning BUY ${nBuy}`
+      +` · overlay Book% <span class="${cls(b.total_ret_pct)}">${num(b.total_ret_pct)}</span>`
+      +` vs looker <span class="${cls(a.total_ret_pct)}">${num(a.total_ret_pct)}</span>`
+      +` (same $10k cash book, research only)</div>`;
+  }
+  if(bracketOn()){
+    const plain=lookerRec(base.name);
+    const br=bracketRec(plain);
+    const p=FMSim.simulateBook(D.sim, plain, start, D.mornings||{});
+    const q=FMSim.simulateBook(D.sim, br, start, D.mornings||{});
+    html +=
+      `<div class="pill">Take ${pctLabel(_takePct)} / stop ${pctLabel(_stopPct)} · this morning BUY ${nBuy}`
+      +` · with Book% <span class="${cls(q.total_ret_pct)}">${num(q.total_ret_pct)}</span>`
+      +` vs no take/stop <span class="${cls(p.total_ret_pct)}">${num(p.total_ret_pct)}</span>`
+      +` (09:30 open vs fill, research only)</div>`;
+  }
+  el.innerHTML=html;
 }
 function renderBurst(){
   const box=document.getElementById('burstBox');

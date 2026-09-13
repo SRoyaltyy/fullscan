@@ -317,6 +317,105 @@ def test_min_hold_blocks_sell_until_floor() -> None:
     assert any(k["kind"] == "min_hold" for k in book["skips"])
 
 
+def test_bracket_take_and_stop_fire_inside_min_hold() -> None:
+    from src import factor_mine_book as fmb
+    from src import paper_trade as pt
+    cal = ["2026-08-17", "2026-08-18", "2026-08-19"]
+
+    def panel_for(ticker):
+        rows = [{
+            "date": d, "ticker": ticker, "sources": ["union"],
+            "boxes": {}, "alarm": False, "src_rank": 0,
+        } for d in cal]
+        return {
+            "session_dates": cal, "rows": rows,
+            "by_date": {d: [r] for d, r in zip(cal, rows)},
+        }
+
+    rec = fm.make_recipe("union_h5", hold=5, top_n=1,
+                         take_pct=0.08, stop_pct=0.05)
+    take_bars = {("UP", d): {"open": 10, "close": 10} for d in cal}
+    take_bars[("UP", "2026-08-18")] = {"open": 11.2, "close": 11.0}
+    take_book = fmb.simulate_book(
+        panel_for("UP"), rec, bars=take_bars, fees=pt.load_fees(), regime={})
+    takes = [t for t in take_book["trades"]
+             if t["side"] == "SELL" and "take-profit" in (t.get("reason") or "")]
+    assert len(takes) == 1
+    assert takes[0]["date"] == "2026-08-18"
+    assert takes[0]["held"] == 1
+
+    stop_bars = {("DN", d): {"open": 10, "close": 10} for d in cal}
+    stop_bars[("DN", "2026-08-18")] = {"open": 9.4, "close": 9.3}
+    stop_book = fmb.simulate_book(
+        panel_for("DN"), rec, bars=stop_bars, fees=pt.load_fees(), regime={})
+    stops = [t for t in stop_book["trades"]
+             if t["side"] == "SELL" and "stop-loss" in (t.get("reason") or "")]
+    assert len(stops) == 1
+    assert stops[0]["date"] == "2026-08-18"
+
+    keep_bars = {("FLAT", d): {"open": 10.2, "close": 10.1} for d in cal}
+    keep_bars[("FLAT", "2026-08-17")] = {"open": 10, "close": 10.1}
+    keep_book = fmb.simulate_book(
+        panel_for("FLAT"), rec, bars=keep_bars, fees=pt.load_fees(), regime={})
+    assert [t for t in keep_book["trades"] if t["side"] == "SELL"] == []
+
+    lot = {"entry_px": 10.0}
+    assert fmb.lot_should_sell(
+        lot, held=1, min_hold=5, early=False, dropped=False,
+        sell_mode="list", px=11.0, side="long", take_pct=0.08, stop_pct=0.05
+    ) == (True, "take")
+    assert fmb.lot_should_sell(
+        lot, held=1, min_hold=5, early=False, dropped=False,
+        sell_mode="list", px=9.4, side="long", take_pct=0.08, stop_pct=0.05
+    ) == (True, "stop")
+    assert fmb.lot_should_sell(
+        lot, held=1, min_hold=5, early=False, dropped=True,
+        sell_mode="list", px=10.2, side="long", take_pct=0.08, stop_pct=0.05
+    ) == (False, "min_hold")
+    ex = fm.explain_recipe(rec)
+    assert any("Take-profit" in x for x in ex["sell"])
+    assert any("Stop-loss" in x for x in ex["sell"])
+
+
+def test_js_bracket_take_inside_min_hold() -> None:
+    import subprocess
+    from pathlib import Path
+    Path("/tmp/fm_br_run.mjs").write_text(
+        """
+        import { readFileSync, writeFileSync } from 'node:fs';
+        import vm from 'node:vm';
+        vm.runInThisContext(readFileSync('src/factor_mine_sim.js','utf8'));
+        const pack = {
+          dates: ['2026-08-17','2026-08-18','2026-08-19'],
+          rows: [
+            {date:'2026-08-17', ticker:'UP', sources:['union'], boxes:{}, alarm:false, src_rank:0},
+            {date:'2026-08-18', ticker:'UP', sources:['union'], boxes:{}, alarm:false, src_rank:0},
+            {date:'2026-08-19', ticker:'UP', sources:['union'], boxes:{}, alarm:false, src_rank:0},
+          ],
+          tape: {UP: {
+            '2026-08-17':[10,10], '2026-08-18':[11.2,11], '2026-08-19':[11,11]
+          }},
+          s: {'2026-08-17':1,'2026-08-18':1,'2026-08-19':1},
+          hard_red: -3, capital: 10000,
+        };
+        const rec = {name:'union_h5', universe:'union', hold:5, top_n:1,
+                     sell:'list', take_pct:0.08, stop_pct:0.05};
+        const book = globalThis.FMSim.simulateBook(pack, rec, '2026-08-17', {});
+        const sells = (book.trades||[]).filter(t => t.side==='SELL');
+        writeFileSync('/tmp/fm_br_out.json', JSON.stringify({
+          n: sells.length, date: sells[0] && sells[0].date,
+          reason: sells[0] && sells[0].reason,
+        }));
+        """,
+        encoding="utf-8",
+    )
+    subprocess.check_call(["node", "/tmp/fm_br_run.mjs"])
+    out = json.loads(Path("/tmp/fm_br_out.json").read_text(encoding="utf-8"))
+    assert out["n"] == 1
+    assert out["date"] == "2026-08-18"
+    assert "take-profit" in (out["reason"] or "")
+
+
 def test_action_dropdown_auto_tweaks_neighbors() -> None:
     from src import factor_mine_book as fmb
     only = fmb.recipes_from_action(
@@ -1460,6 +1559,66 @@ def test_white_yday_overlay_picks_zero_red_yday_up() -> None:
     assert any("yesterday" in x for x in why["failed"])
 
 
+def test_white_horizon_pool_then_score() -> None:
+    rec = fm.make_recipe(
+        "union_white_any_h1", hold=1, rank="list",
+        require={"cam_bad_max": 0, "yday_or_catalyst": True},
+        forbid={"alarm": True})
+    ov = fm.white_horizon_overlay(fm.make_recipe(
+        "union_news_g_h3", hold=3, require={"news": "good"}))
+    assert ov["hold"] == 3
+    assert ov["rank"] == "list"
+    assert ov["require"] == {"cam_bad_max": 0, "yday_or_catalyst": True}
+    names = {r["name"] for r in fm.build_recipes()}
+    assert "union_white_any_h2" in names
+    assert "union_white_any_h5" in names
+    assert "union_white_both_n4_h5" in names
+    both = next(r for r in fm.build_recipes() if r["name"] == "union_white_both_n4_h5")
+    assert both["top_n"] == 4
+    assert both["require"] == {"cam_bad_max": 0, "yday_and_catalyst": True}
+    s12 = next(r for r in fm.build_recipes() if r["name"] == "union_white_both_n4_h5_s12")
+    assert s12["stop_pct"] == 0.12
+    assert s12["take_pct"] is None
+    assert any(r["name"] == "flatten_h5_s8" for r in fm.build_recipes())
+
+    def row(ticker, **kw):
+        base = {
+            "date": "2026-08-19", "ticker": ticker, "sources": ["union"],
+            "boxes": {"join": "good", "vol": "good"},
+            "alarm": False, "zero_red": True, "last_green": True,
+            "cond_good": 2, "cond_bad": 0, "src_rank": 9, "e_pol": "",
+        }
+        base.update(kw)
+        return base
+
+    # Better Score (src_rank 0 → 100) but two red cameras — must not enter.
+    red = row("RED", src_rank=0, cond_good=6, cond_bad=2, ohlc_ret_1=9.0,
+              zero_red=False, boxes={"join": "good", "vol": "bad", "ab": "bad"})
+    # Yesterday down, no catalyst — out of the pool even with Score 99.
+    dn = row("DN", src_rank=1, cond_bad=0, ohlc_ret_1=-1.4, last_green=False)
+    # In the pool via yday-up; worse Score than RED/DN.
+    wht = row("WHT", src_rank=20, cond_bad=0, ohlc_ret_1=1.1)
+    # In the pool via EPS beat; yesterday down; worst Score of the keepers.
+    cat = row("CAT", src_rank=40, cond_bad=0, ohlc_ret_1=-2.2,
+              last_green=False, e_pol="good")
+    picks = fm.pick_day([red, dn, cat, wht], rec)
+    assert [p["ticker"] for p in picks] == ["WHT", "CAT"]
+    assert fm.matches(red, rec) is False
+    assert fm.matches(dn, rec) is False
+    assert fm.major_catalyst(cat) is True
+    both_rec = fm.make_recipe(
+        "union_white_both_n4_h5", hold=5, top_n=4, rank="list",
+        require={"cam_bad_max": 0, "yday_and_catalyst": True},
+        forbid={"alarm": True})
+    assert fm.matches(wht, both_rec) is False  # yday up, no catalyst
+    assert fm.matches(cat, both_rec) is False  # catalyst, yday down
+    both_ok = row("BOTH", src_rank=8, cond_bad=0, ohlc_ret_1=1.4, e_pol="good")
+    assert fm.matches(both_ok, both_rec) is True
+    why = fm.match_why(red, rec)
+    assert why["ok"] is False
+    assert any("red camera" in x for x in why["failed"])
+
+
 def test_look_day_shows_green_red_and_yday() -> None:
     from src import factor_mine_sim as fms
     cal = ["2026-08-17", "2026-08-18", "2026-08-19"]
@@ -1728,6 +1887,51 @@ def test_js_look_day_cams_and_white_yday() -> None:
     assert out["picks"] == ["WHT"]
 
 
+def test_js_white_horizon_pool_then_score() -> None:
+    import subprocess
+    from pathlib import Path
+    Path("/tmp/fm_hz_in.json").write_text(json.dumps({
+        "rows": [{
+            "date": "2026-08-19", "ticker": "RED", "sources": ["union"],
+            "boxes": {"join": "good", "vol": "bad"}, "alarm": False,
+            "zero_red": False, "cond_good": 6, "cond_bad": 2,
+            "ohlc_ret_1": 9.0, "src_rank": 0, "e_pol": "",
+        }, {
+            "date": "2026-08-19", "ticker": "WHT", "sources": ["union"],
+            "boxes": {"join": "good"}, "alarm": False,
+            "zero_red": True, "cond_good": 2, "cond_bad": 0,
+            "ohlc_ret_1": 1.1, "src_rank": 20, "e_pol": "",
+        }, {
+            "date": "2026-08-19", "ticker": "CAT", "sources": ["union"],
+            "boxes": {"join": "good"}, "alarm": False,
+            "last_green": False, "zero_red": True,
+            "cond_good": 1, "cond_bad": 0, "ohlc_ret_1": -2.2,
+            "src_rank": 40, "e_pol": "good",
+        }],
+        "rec": {"name": "union_news_g_h3", "universe": "union", "hold": 3,
+                "top_n": 8, "require": {"news": "good"}, "forbid": {"alarm": True}},
+    }), encoding="utf-8")
+    Path("/tmp/fm_hz_run.mjs").write_text(
+        """
+        import { readFileSync, writeFileSync } from 'node:fs';
+        import vm from 'node:vm';
+        vm.runInThisContext(readFileSync('src/factor_mine_sim.js','utf8'));
+        const inp = JSON.parse(readFileSync('/tmp/fm_hz_in.json','utf8'));
+        const ov = globalThis.FMSim.whiteHorizonOverlay(inp.rec);
+        const picks = globalThis.FMSim.pickDay(inp.rows, ov, {});
+        writeFileSync('/tmp/fm_hz_out.json', JSON.stringify({
+          hold: ov.hold, rank: ov.rank, picks: picks.map(p => p.ticker),
+        }));
+        """,
+        encoding="utf-8",
+    )
+    subprocess.check_call(["node", "/tmp/fm_hz_run.mjs"])
+    out = json.loads(Path("/tmp/fm_hz_out.json").read_text(encoding="utf-8"))
+    assert out["hold"] == 3
+    assert out["rank"] == "list"
+    assert out["picks"] == ["WHT", "CAT"]
+
+
 def test_restamp_dash_rewrites_current_template(tmp_path, monkeypatch) -> None:
     payload = {"to_date": "2026-09-11", "n_recipes": 1, "dates": ["2026-09-11"]}
     (tmp_path / "factor_mine_dash.html").write_text(
@@ -1775,6 +1979,7 @@ if __name__ == "__main__":
     test_pothole_and_thin_sample_are_downranked()
     test_cash_book_whole_shares_fees_and_hard_red()
     test_min_hold_blocks_sell_until_floor()
+    test_bracket_take_and_stop_fire_inside_min_hold()
     test_action_dropdown_auto_tweaks_neighbors()
     test_src_rank_zero_is_first_not_last()
     test_live_entry_skips_hold_mornings()
@@ -1816,6 +2021,7 @@ if __name__ == "__main__":
     test_look_day_ranks_and_horizon()
     test_look_day_copies_eps_surprise()
     test_white_yday_overlay_picks_zero_red_yday_up()
+    test_white_horizon_pool_then_score()
     test_look_day_shows_green_red_and_yday()
     test_erd_polarity_does_not_paint_date_only_green()
     test_morning_export_shows_ino_yday_amc_beat()
@@ -1823,4 +2029,6 @@ if __name__ == "__main__":
     test_hit_tally_buy_sit_and_nneg()
     test_js_sim_matches_python_later_start()
     test_js_look_day_cams_and_white_yday()
-    print("56 factor-mine tests passed")
+    test_js_white_horizon_pool_then_score()
+    test_js_bracket_take_inside_min_hold()
+    print("60 factor-mine tests passed")

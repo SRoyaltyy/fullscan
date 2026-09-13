@@ -33,6 +33,35 @@
     if (v != null) return v > 0;
     return !!(row && row.last_green);
   }
+  function majorCatalyst(row) {
+    const boxes = (row && row.boxes) || {};
+    if (String(boxes.catal || "").toLowerCase() === "good") return true;
+    if (String((row && row.catal) || "").toLowerCase() === "good") return true;
+    const ep = String((row && row.e_pol) || "").toLowerCase();
+    if (ep === "good") return true;
+    const earn = !!(row && (row.erd_earn_react || row.earn_react));
+    return earn && ep !== "bad";
+  }
+  function whiteHorizonOverlay(rec) {
+    rec = rec || {};
+    const name = String(rec.name || "looker");
+    return {
+      name: name.endsWith("_white_any") ? name : name + "_white_any",
+      universe: rec.universe || "union",
+      hold: Number(rec.hold || 1),
+      side: rec.side || "long",
+      top_n: Number(rec.top_n || 8),
+      require: {cam_bad_max: 0, yday_or_catalyst: true},
+      forbid: {alarm: true},
+      rank: "list",
+      size: rec.size || "leftover",
+      sell: rec.sell || "list",
+      s_boost: rec.s_boost || "none",
+      take_pct: rec.take_pct,
+      stop_pct: rec.stop_pct,
+      looker: name,
+    };
+  }
   function whiteYdayOverlay(rec) {
     rec = rec || {};
     const name = String(rec.name || "looker");
@@ -48,6 +77,8 @@
       size: rec.size || "leftover",
       sell: rec.sell || "list",
       s_boost: rec.s_boost || "none",
+      take_pct: rec.take_pct,
+      stop_pct: rec.stop_pct,
       looker: name,
     };
   }
@@ -205,6 +236,10 @@
     if (req.n_neg_max != null && nNeg > Number(req.n_neg_max)) return false;
     if (req.n_neg_min != null && nNeg < Number(req.n_neg_min)) return false;
     if (req.yday_up && !ydayUp(row)) return false;
+    if (req.cam_bad_max != null && camBad(row) > Number(req.cam_bad_max)) return false;
+    if (req.major_catalyst && !majorCatalyst(row)) return false;
+    if (req.yday_or_catalyst && !(ydayUp(row) || majorCatalyst(row))) return false;
+    if (req.yday_and_catalyst && !(ydayUp(row) && majorCatalyst(row))) return false;
     if (req.burst) {
       const ret = finite(row.ohlc_ret_5), rvol = finite(row.ohlc_rvol);
       const burst = ret != null && ret >= 12 && !!row.last_green
@@ -227,6 +262,10 @@
     if (key === "join_present") return "the join camera printed something";
     if (key === "catal_present") return "the catalyst camera printed something";
     if (key === "yday_up") return "yesterday's session was up";
+    if (key === "cam_bad_max") return "at most " + val + " red cameras (−R, no 🚨)";
+    if (key === "yday_or_catalyst") return "yesterday up or a major good catalyst";
+    if (key === "yday_and_catalyst") return "yesterday up AND a major good catalyst";
+    if (key === "major_catalyst") return "a major good catalyst";
     if (key === "ret_5_min") return "prior 5-session return is at least " + val + "%";
     if (key === "ret_5_max") return "prior 5-session return is at most " + val + "%";
     if (key === "rvol_min") return "prior relative volume is at least " + val;
@@ -281,6 +320,10 @@
     if (req.days_since_R_max != null) need(row.erd_days_since_R != null && Number(row.erd_days_since_R) <= Number(req.days_since_R_max), kidGate("days_since_R_max", req.days_since_R_max));
     if (req.flag_R != null) need(Number(row.erd_flag_R || 0) === Number(req.flag_R), kidGate("flag_R", req.flag_R));
     if (req.yday_up) need(ydayUp(row), kidGate("yday_up", true));
+    if (req.cam_bad_max != null) need(camBad(row) <= Number(req.cam_bad_max), kidGate("cam_bad_max", req.cam_bad_max));
+    if (req.major_catalyst) need(majorCatalyst(row), kidGate("major_catalyst", true));
+    if (req.yday_or_catalyst) need(ydayUp(row) || majorCatalyst(row), kidGate("yday_or_catalyst", true));
+    if (req.yday_and_catalyst) need(ydayUp(row) && majorCatalyst(row), kidGate("yday_and_catalyst", true));
     return {ok: !failed.length, failed, passed};
   }
   function decisionWhy(pack, rec, date, ticker, mornings) {
@@ -477,8 +520,20 @@
     }
     return Array(n).fill(room / n);
   }
-  function lotShouldSell(lot, held, minHold, early, dropped, sellMode, p, side) {
+  function lotOpenRet(lot, p, side) {
+    const entry = Number(lot && lot.entry_px || 0);
+    if (p == null || !entry) return null;
+    return side === "long" ? (p / entry - 1) : ((entry - p) / entry);
+  }
+  function lotShouldSell(lot, held, minHold, early, dropped, sellMode, p, side, takePct, stopPct) {
     if (early) return [true, "early"];
+    const take = takePct != null && Number(takePct) > 0 ? Number(takePct) : null;
+    const stop = stopPct != null && Number(stopPct) > 0 ? Number(stopPct) : null;
+    const ret = lotOpenRet(lot, p, side);
+    if (ret != null) {
+      if (take != null && ret >= take) return [true, "take"];
+      if (stop != null && ret <= -stop) return [true, "stop"];
+    }
     if (held < minHold) return [false, "min_hold"];
     const mode = sellMode || "list";
     const entry = Number(lot.entry_px || 0);
@@ -506,6 +561,8 @@
       if ((exitWhen || {}).news === "bad") return "exit news🔴 after " + held + " sess";
       return "condition exit after " + held + " sess";
     }
+    if (kind === "take") return "take-profit after " + held + " sess";
+    if (kind === "stop") return "stop-loss after " + held + " sess";
     if (kind === "time") return "time-stop after " + held + " sess (min " + minHold + ")";
     if (kind === "cut_loser") return "cut loser after " + held + " sess";
     if (kind === "trail") return "trail off peak after " + held + " sess";
@@ -677,7 +734,7 @@
           else lot.peak_px = Math.min(lot.peak_px || lot.entry_px, p);
           lot.last_px = p;
         }
-        const [doSell, kind] = lotShouldSell(lot, held, minHold, early, dropped, sellMode, p, side);
+        const [doSell, kind] = lotShouldSell(lot, held, minHold, early, dropped, sellMode, p, side, rec.take_pct, rec.stop_pct);
         if (!doSell) {
           if (dropped && held < minHold) {
             skips.push({ date, ticker: t, kind: "min_hold", reason: "dropped but min-hold " + held + "/" + minHold + " sess — no sell" });
@@ -857,6 +914,6 @@
     matches, pickDay, rankScore, lookDay, holdReturn, simulateBook, orderFees,
     matchWhy, decisionWhy, hitTally, packRets,
     sessionHasClosed, dateHasClose, lastClosedDate,
-    ydayRet, ydayUp, whiteYdayOverlay, camGood, camBad,
+    ydayRet, ydayUp, majorCatalyst, whiteHorizonOverlay, whiteYdayOverlay, camGood, camBad,
   };
 })(typeof window !== "undefined" ? window : globalThis);

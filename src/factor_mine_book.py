@@ -30,13 +30,13 @@ OUT_INDEX = ROOT / "03_scoreboard" / "FACTOR_MINE_ACTION.md"
 DAILY_MD = ROOT / "01_daily" / "factor_mine_action.md"
 HARD_RED = -3.0
 UNIVERSES = ("auto", "union", "flatten", "probable", "yday_gainer", "ohlc_hot")
-HOLDS = ("auto", "1", "3", "5")
+HOLDS = ("auto", "1", "2", "3", "5")
 GATES = (
-    "auto", "none", "vol_g", "news_g", "white", "coil_off", "join_g",
-    "last_green", "blue", "news_present", "join_present", "ab_g",
+    "auto", "none", "vol_g", "news_g", "white", "white_any", "coil_off",
+    "join_g", "last_green", "blue", "news_present", "join_present", "ab_g",
 )
-RANKS = ("auto", "none", "hot_score", "cond", "w_hot_cond", "w_hot_candle",
-         "ret_5", "candle_score")
+RANKS = ("auto", "none", "list", "hot_score", "cond", "w_hot_cond",
+         "w_hot_candle", "ret_5", "candle_score")
 SIDES = ("auto", "long", "short")
 TOP_NS = ("auto", "4", "8", "12")
 EXITS = ("auto", "none", "alarm", "last_red", "news_bad")
@@ -171,6 +171,10 @@ def why_sell(ticker: str, held: int, min_hold: int, early: bool,
         return f"condition exit after {held} sess"
     if kind == "time":
         return f"time-stop after {held} sess (min {min_hold})"
+    if kind == "take":
+        return f"take-profit after {held} sess"
+    if kind == "stop":
+        return f"stop-loss after {held} sess"
     if kind == "cut_loser":
         return f"cut loser after {held} sess (−{CUT_LOS:.0%} vs entry)"
     if kind == "trail":
@@ -180,12 +184,42 @@ def why_sell(ticker: str, held: int, min_hold: int, early: bool,
     return f"sold after {held} sess"
 
 
+def _frac(v) -> float | None:
+    if v is None:
+        return None
+    try:
+        x = float(v)
+    except (TypeError, ValueError):
+        return None
+    if x <= 0:
+        return None
+    return x
+
+
+def lot_open_ret(lot: dict, px: float | None, side: str) -> float | None:
+    """Signed open-vs-entry return. Leak-free: this morning's open vs our fill."""
+    entry = float(lot.get("entry_px") or 0) or 0.0
+    if px is None or entry <= 0:
+        return None
+    if side == "long":
+        return float(px) / entry - 1.0
+    return (entry - float(px)) / entry
+
+
 def lot_should_sell(lot: dict, *, held: int, min_hold: int, early: bool,
                     dropped: bool, sell_mode: str, px: float | None,
-                    side: str) -> tuple[bool, str]:
-    """Sell only lots we hold. Min-hold blocks everything except early exit."""
+                    side: str, take_pct=None, stop_pct=None) -> tuple[bool, str]:
+    """Sell only lots we hold. Min-hold blocks list-drop; take/stop may fire inside."""
     if early:
         return True, "early"
+    take = _frac(take_pct)
+    stop = _frac(stop_pct)
+    ret = lot_open_ret(lot, px, side)
+    if ret is not None:
+        if take is not None and ret >= take:
+            return True, "take"
+        if stop is not None and ret <= -stop:
+            return True, "stop"
     if held < min_hold:
         return False, "min_hold"
     mode = sell_mode or "list"
@@ -681,6 +715,8 @@ def recipes_from_action(*, universe="auto", hold="auto", gate="auto",
             return "news_g"
         if req.get("zero_red"):
             return "white"
+        if req.get("yday_or_catalyst") or "cam_bad_max" in req:
+            return "white_any"
         if "ret_5_max" in req and "rvol_max" in req and not req.get("last_green"):
             return "coil_off"
         if req.get("join") == "good" and len(req) == 1:
@@ -762,6 +798,7 @@ def recipes_from_action(*, universe="auto", hold="auto", gate="auto",
 def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                   regime=None, rules=None, start: str | None = None) -> dict:
     """Walk one recipe as a $10k paper sleeve. Sell first, then buy."""
+    panel = fm.ensure_sim_fields(panel, rec)
     rules = {**BOOK_RULES, **(rules or {})}
     fees = fees if fees is not None else pt.load_fees()
     cal_all = list(panel.get("session_dates") or [])
@@ -845,7 +882,8 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                 lot["last_px"] = px
             do_sell, kind = lot_should_sell(
                 lot, held=held, min_hold=min_hold, early=early,
-                dropped=dropped, sell_mode=sell_mode, px=px, side=side)
+                dropped=dropped, sell_mode=sell_mode, px=px, side=side,
+                take_pct=rec.get("take_pct"), stop_pct=rec.get("stop_pct"))
             if not do_sell:
                 if dropped and held < min_hold:
                     skips.append({
@@ -1060,6 +1098,8 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
         "rules": {k: rules[k] for k in BOOK_RULES},
         "size": size_mode,
         "sell": sell_mode,
+        "take_pct": rec.get("take_pct"),
+        "stop_pct": rec.get("stop_pct"),
         "s_boost": s_boost,
         "cash": round(cash, 2),
         "n_open": len(pos),

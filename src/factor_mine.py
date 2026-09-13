@@ -81,6 +81,7 @@ INPUT_FIELDS = frozenset({
     "candle_score", "candle_capture", "candle_body_rg",
     "erd_earn_react", "erd_days_since_E", "erd_days_since_R",
     "erd_days_since_D", "erd_flag_E", "erd_flag_R",
+    "e_pol", "e_label",
 })
 _SCAN_CACHE: dict[tuple[str, str], dict | None] = {}
 _OHLC_CACHE: dict[tuple[str, str], dict] = {}
@@ -178,6 +179,7 @@ def make_recipe(name: str, *, universe: str = "union", hold: int = 1,
                 rank: str | None = None, exit_when: dict | None = None,
                 size: str = "leftover", sell: str = "list",
                 s_boost: str = "none", day_cap: float = 1.0,
+                take_pct: float | None = None, stop_pct: float | None = None,
                 note: str = "") -> dict:
     return {
         "name": name,
@@ -193,6 +195,8 @@ def make_recipe(name: str, *, universe: str = "union", hold: int = 1,
         "sell": sell or "list",
         "s_boost": s_boost or "none",
         "day_cap": float(day_cap),
+        "take_pct": take_pct,
+        "stop_pct": stop_pct,
         "note": note,
     }
 
@@ -370,6 +374,32 @@ def build_recipes() -> list[dict]:
         forbid={"alarm": True},
         note="flatten looker: 0 red + yesterday up")
 
+    # Pool first: −0 red cameras + (yesterday up OR major catalyst).
+    # Rank by morning-board Score (100 − list rank) only after that pool.
+    for hold in (1, 2, 3, 5):
+        add(name=f"union_white_any_h{hold}", universe="union", hold=hold,
+            rank="list",
+            require={"cam_bad_max": 0, "yday_or_catalyst": True},
+            forbid={"alarm": True},
+            note="−0 red + (yday up or major catalyst), then Score")
+    # Same Score-after-pool, but the name must have yday-up AND a catalyst,
+    # then take only the top 4. That is the cash-book winner on 08-13→09-11.
+    for hold in (1, 2, 3, 5):
+        add(name=f"union_white_both_n4_h{hold}", universe="union", hold=hold,
+            top_n=4, rank="list",
+            require={"cam_bad_max": 0, "yday_and_catalyst": True},
+            forbid={"alarm": True},
+            note="−0 red + yday up AND catalyst, top 4 by Score")
+    # Stop-only brackets that beat the plain hold on 08-13→09-11.
+    # Take-profit cut the runners; do not register those.
+    add(name="union_white_both_n4_h5_s12", universe="union", hold=5,
+        top_n=4, rank="list", stop_pct=0.12,
+        require={"cam_bad_max": 0, "yday_and_catalyst": True},
+        forbid={"alarm": True},
+        note="both+top4 hold5, stop −12% at 09:30 even inside hold")
+    add(name="flatten_h5_s8", universe="flatten", hold=5, stop_pct=0.08,
+        note="flatten hold 5, stop −8% at 09:30 even inside hold")
+
     return recs
 
 
@@ -404,6 +434,8 @@ _RANK_KID = {
     "cond": "how many morning cameras are green vs red",
     "w_hot_cond": "a mix of tape-heat and green cameras",
     "w_hot_candle": "a mix of tape-heat and prior candles",
+    "list": "the morning-board Score (100 minus list rank) — only after the pool is chosen",
+    "score": "the morning-board Score (100 minus list rank) — only after the pool is chosen",
 }
 
 
@@ -434,6 +466,23 @@ def _gate_kid(key: str, val) -> str:
         return "the catalyst camera printed something (any color, not blank)"
     if key == "yday_up":
         return "yesterday's session was up (prior close-to-close Change% > 0, or last finished bar green if the % is missing)"
+    if key == "cam_bad_max":
+        return (
+            f"at most {int(val)} red cameras (the −R half of +G −R; "
+            "🚨 is not counted here)"
+        )
+    if key == "yday_or_catalyst":
+        return (
+            "yesterday's session was up, or a major good catalyst "
+            "(EPS beat / catal green / earnings-react that is not a miss)"
+        )
+    if key == "yday_and_catalyst":
+        return "yesterday's session was up AND a major good catalyst"
+    if key == "major_catalyst":
+        return (
+            "a major good catalyst (EPS beat, catal green, or "
+            "earnings-react that is not a miss)"
+        )
     if key == "n_neg_max":
         return f"at most {int(val)} red cameras (the −N next to the name)"
     if key == "n_neg_min":
@@ -570,8 +619,23 @@ def explain_recipe(rec: dict) -> dict:
         sell_bits.append("Early exit: sell at the next 09:30 if the last bar flipped red, even inside the floor.")
     if exit_when.get("news") == "bad":
         sell_bits.append("Early exit: sell at the next 09:30 if the news camera turns red, even inside the floor.")
-    if not exit_when:
+    take = _finite(rec.get("take_pct"))
+    stop = _finite(rec.get("stop_pct"))
+    if take and take > 0:
+        sell_bits.append(
+            f"Take-profit: sell at the next 09:30 if that open is {100 * take:g}% "
+            "better than our fill, even inside the minimum hold. "
+            "This is open vs our entry — not today's Change%."
+        )
+    if stop and stop > 0:
+        sell_bits.append(
+            f"Stop-loss: sell at the next 09:30 if that open is {100 * stop:g}% "
+            "worse than our fill, even inside the minimum hold."
+        )
+    if not exit_when and not (take and take > 0) and not (stop and stop > 0):
         sell_bits.append("No extra panic button — only the hold timer and the sell rule below.")
+    elif not exit_when:
+        sell_bits.append("The hold timer still applies if take-profit and stop-loss do not fire.")
     if sell_mode == "time":
         sell_bits.append(
             f"Time-stop: once {hold} session(s) are up, sell at 09:30 even if the name is still on the list."
@@ -753,6 +817,16 @@ def matches(row: dict, rec: dict) -> bool:
         return False
     if req.get("yday_up") and not yday_up(row):
         return False
+    if "cam_bad_max" in req and cam_bad(row) > int(req["cam_bad_max"]):
+        return False
+    if req.get("major_catalyst") and not major_catalyst(row):
+        return False
+    if req.get("yday_or_catalyst") and not (
+            yday_up(row) or major_catalyst(row)):
+        return False
+    if req.get("yday_and_catalyst") and not (
+            yday_up(row) and major_catalyst(row)):
+        return False
     return True
 
 
@@ -810,6 +884,78 @@ def yday_up(row: dict, *, date: str | None = None, bars=None,
     return bool(row.get("last_green"))
 
 
+def major_catalyst(row: dict) -> bool:
+    """Public good catalyst: catal green, last EPS beat, or react-not-miss.
+
+    Leak-free: ``e_pol`` is morning-export surprise already public at 09:30.
+    ``catal`` is the pre-open camera. Earnings-react without a miss still
+    counts — a date-only E is not painted green, but it is a known event.
+    """
+    boxes = row.get("boxes") or {}
+    if str(boxes.get("catal") or "").strip().lower() == "good":
+        return True
+    if str(row.get("catal") or "").strip().lower() == "good":
+        return True
+    ep = str(row.get("e_pol") or "").strip().lower()
+    if ep == "good":
+        return True
+    earn = bool(row.get("erd_earn_react") or row.get("earn_react"))
+    if earn and ep != "bad":
+        return True
+    return False
+
+
+def _recipe_needs_catalyst(rec: dict | None) -> bool:
+    req = (rec or {}).get("require") or {}
+    return bool(req.get("yday_or_catalyst") or req.get("yday_and_catalyst")
+                or req.get("major_catalyst"))
+
+
+def ensure_sim_fields(panel: dict, rec: dict | None = None) -> dict:
+    """Fill leak-free ``ohlc_ret_1`` and, when the recipe needs it, ``e_pol``."""
+    if not isinstance(panel, dict):
+        return panel
+    rows = panel.get("rows") or []
+    cal = list(panel.get("session_dates") or [])
+    if not panel.get("_ohlc_filled"):
+        for r in rows:
+            if r.get("ohlc_ret_1") is None:
+                yr = yday_ret(r, date=r.get("date"), cal=cal or None)
+                if yr is not None:
+                    r["ohlc_ret_1"] = yr
+        panel["_ohlc_filled"] = True
+    if rec is None or _recipe_needs_catalyst(rec):
+        if rows and "e_pol" not in rows[0]:
+            from . import factor_mine_probe as fmp
+            fmp.attach_erd_polarity(panel)
+    return panel
+
+
+def white_horizon_overlay(rec: dict) -> dict:
+    """Same looker list; −0 red + (yday up or catalyst); then Score."""
+    base = rec or {}
+    name = str(base.get("name") or "looker")
+    tag = name if name.endswith("_white_any") else f"{name}_white_any"
+    out = make_recipe(
+        name=tag,
+        universe=base.get("universe") or "union",
+        hold=int(base.get("hold") or 1),
+        side=base.get("side") or "long",
+        top_n=int(base.get("top_n") or TOP_N_DEFAULT),
+        require={"cam_bad_max": 0, "yday_or_catalyst": True},
+        forbid={"alarm": True},
+        rank="list",
+        size=base.get("size") or "leftover",
+        sell=base.get("sell") or "list",
+        s_boost=base.get("s_boost") or "none",
+        take_pct=base.get("take_pct"),
+        stop_pct=base.get("stop_pct"),
+        note="same looker list; −0 red + (yday up or major catalyst); then Score",
+    )
+    out["looker"] = name
+    return out
+
+
 def white_yday_overlay(rec: dict) -> dict:
     """Same 09:30 looker list; buy 0 red cameras + yesterday up; rank +G−R."""
     base = rec or {}
@@ -827,6 +973,8 @@ def white_yday_overlay(rec: dict) -> dict:
         size=base.get("size") or "leftover",
         sell=base.get("sell") or "list",
         s_boost=base.get("s_boost") or "none",
+        take_pct=base.get("take_pct"),
+        stop_pct=base.get("stop_pct"),
         note="same looker list; buy 0 red cameras + prior-session up; rank +G−R",
     )
     out["looker"] = name
@@ -937,6 +1085,17 @@ def match_why(row: dict, rec: dict) -> dict:
         need(is_burst(row), _gate_kid("burst", True))
     if req.get("yday_up"):
         need(yday_up(row), _gate_kid("yday_up", True))
+    if "cam_bad_max" in req:
+        need(cam_bad(row) <= int(req["cam_bad_max"]),
+             _gate_kid("cam_bad_max", req["cam_bad_max"]))
+    if req.get("major_catalyst"):
+        need(major_catalyst(row), _gate_kid("major_catalyst", True))
+    if req.get("yday_or_catalyst"):
+        need(yday_up(row) or major_catalyst(row),
+             _gate_kid("yday_or_catalyst", True))
+    if req.get("yday_and_catalyst"):
+        need(yday_up(row) and major_catalyst(row),
+             _gate_kid("yday_and_catalyst", True))
     return {"ok": not failed, "failed": failed, "passed": passed}
 
 
@@ -1009,6 +1168,10 @@ def rank_key(row: dict, rec: dict) -> tuple:
         return (-(0.6 * hot + 0.4 * max(cond, 0)), row["ticker"])
     if how == "w_hot_candle":
         return (-(0.6 * hot + 0.4 * candle), row["ticker"])
+    if how in ("list", "score", "src_rank"):
+        src = row.get("src_rank")
+        src_i = 99 if src is None else int(src)
+        return (src_i, row["ticker"])
     src = row.get("src_rank")
     src_i = 99 if src is None else int(src)
     return (src_i, row["ticker"])
@@ -1384,6 +1547,7 @@ def window_hits(ticker: str, date: str, hold: int, cal: list[str],
 
 def score_recipe(panel: dict, rec: dict, tapes: dict,
                  bars: dict | None = None) -> dict:
+    panel = ensure_sim_fields(panel, rec)
     cal = list(panel.get("session_dates") or [])
     by_date = panel.get("by_date") or {}
     row_index = {(r["date"], r["ticker"]): r for r in (panel.get("rows") or [])}
@@ -1638,6 +1802,11 @@ def run(from_date: str = START, to_date: str | None = None,
         "flatten_live_h1", "flatten_live_h3", "flatten_live_h5",
         "union_e_fresh_h3", "union_news_g_h5", "union_white_coil_h1",
         "union_e_green_h3",
+        "union_white_any_h1", "union_white_any_h2",
+        "union_white_any_h3", "union_white_any_h5",
+        "union_white_both_n4_h1", "union_white_both_n4_h2",
+        "union_white_both_n4_h5", "union_white_both_n4_h5_s12",
+        "flatten_h5_s8",
         "flatten_h5", "flatten_h5_rankw", "flatten_h5_time", "flatten_h5_sboost",
         "union_h5_sboost", "flatten_live_h1_sizeup",
         "union_h3_cut", "union_h1_topheavy",
@@ -2112,6 +2281,123 @@ def land_closed(from_date: str = START, write: bool = False,
     )
 
 
+def sweep_white_horizon(panel: dict, *, bars=None, fees=None,
+                        regime=None) -> list[dict]:
+    """Cash-book grid: pool first, then rank, across holds / top_n / ranks."""
+    from . import factor_mine_book as fmb
+    from . import paper_trade as pt
+    panel = ensure_sim_fields(rehydrate_panel(panel))
+    fees = fees if fees is not None else pt.load_fees()
+    pools = (
+        ("yday", {"cam_bad_max": 0, "yday_up": True}),
+        ("any", {"cam_bad_max": 0, "yday_or_catalyst": True}),
+        ("both", {"cam_bad_max": 0, "yday_and_catalyst": True}),
+        ("cat", {"cam_bad_max": 0, "major_catalyst": True}),
+    )
+    ranks = ("list", "cond", "hot_score")
+    holds = (1, 2, 3, 5)
+    tops = (4, 8, 12)
+    out: list[dict] = []
+    for pool, req in pools:
+        for hold in holds:
+            for top_n in tops:
+                for rank in ranks:
+                    rec = make_recipe(
+                        name=f"sweep_{pool}_h{hold}_n{top_n}_{rank}",
+                        universe="union", hold=hold, top_n=top_n,
+                        rank=rank, require=req, forbid={"alarm": True},
+                    )
+                    bk = fmb.simulate_book(
+                        panel, rec, bars=bars, fees=fees, regime=regime)
+                    fills = sum(1 for d in (bk.get("daily") or [])
+                                if d.get("bought"))
+                    days = len(bk.get("daily") or [])
+                    out.append({
+                        "name": rec["name"],
+                        "pool": pool,
+                        "hold": hold,
+                        "top_n": top_n,
+                        "rank": rank,
+                        "book_pct": bk.get("total_ret_pct"),
+                        "win_rate": bk.get("win_rate"),
+                        "n_trades": bk.get("n_trades"),
+                        "fill_mornings": fills,
+                        "n_days": days,
+                    })
+    out.sort(key=lambda r: (
+        -(r.get("book_pct") if r.get("book_pct") is not None else -999),
+        r["name"],
+    ))
+    return out
+
+
+def sweep_bracket(panel: dict, *, bars=None, fees=None,
+                  regime=None) -> list[dict]:
+    """Take-profit / stop-loss on top of hold, on a few proven bases."""
+    from . import factor_mine_book as fmb
+    from . import paper_trade as pt
+    panel = ensure_sim_fields(rehydrate_panel(panel))
+    fees = fees if fees is not None else pt.load_fees()
+    named = {r["name"]: r for r in build_recipes()}
+    bases = []
+    for name in (
+        "union_white_both_n4_h5",
+        "union_white_both_n4_h2",
+        "union_white_any_h5",
+        "union_e_fresh_h3",
+        "flatten_h5",
+    ):
+        if name in named:
+            bases.append(named[name])
+    takes = (None, 0.03, 0.05, 0.08, 0.12, 0.20)
+    stops = (None, 0.03, 0.05, 0.08, 0.12)
+    out: list[dict] = []
+    for base in bases:
+        for take in takes:
+            for stop in stops:
+                if take is None and stop is None:
+                    tag = f"{base['name']}_plain"
+                else:
+                    t = "x" if take is None else f"{int(round(100 * take))}"
+                    s = "x" if stop is None else f"{int(round(100 * stop))}"
+                    tag = f"{base['name']}_t{t}s{s}"
+                rec = dict(base)
+                rec["name"] = tag
+                rec["take_pct"] = take
+                rec["stop_pct"] = stop
+                bk = fmb.simulate_book(
+                    panel, rec, bars=bars, fees=fees, regime=regime)
+                fills = sum(1 for d in (bk.get("daily") or [])
+                            if d.get("bought"))
+                kinds = {}
+                for t in bk.get("trades") or []:
+                    reason = str(t.get("reason") or "")
+                    if t.get("side") not in ("SELL", "COVER"):
+                        continue
+                    if "take-profit" in reason:
+                        kinds["take"] = kinds.get("take", 0) + 1
+                    elif "stop-loss" in reason:
+                        kinds["stop"] = kinds.get("stop", 0) + 1
+                out.append({
+                    "name": tag,
+                    "base": base["name"],
+                    "take_pct": take,
+                    "stop_pct": stop,
+                    "book_pct": bk.get("total_ret_pct"),
+                    "win_rate": bk.get("win_rate"),
+                    "n_trades": bk.get("n_trades"),
+                    "fill_mornings": fills,
+                    "n_days": len(bk.get("daily") or []),
+                    "n_take": kinds.get("take", 0),
+                    "n_stop": kinds.get("stop", 0),
+                })
+    out.sort(key=lambda r: (
+        -(r.get("book_pct") if r.get("book_pct") is not None else -999),
+        r["name"],
+    ))
+    return out
+
+
 def main(argv=None) -> int:
     from . import factor_mine_book as fmb
     ap = argparse.ArgumentParser()
@@ -2120,6 +2406,10 @@ def main(argv=None) -> int:
     ap.add_argument("--write", action="store_true")
     ap.add_argument("--restamp-dash", action="store_true",
                     help="rewrite dashboard HTML from the current template; no remine")
+    ap.add_argument("--sweep-white", action="store_true",
+                    help="cash-book sweep: −0 red + (yday/catalyst) × hold × rank")
+    ap.add_argument("--sweep-bracket", action="store_true",
+                    help="cash-book sweep: take-profit / stop-loss on top of hold")
     ap.add_argument("--rebuild-panel", action="store_true")
     ap.add_argument("--land-closed", action="store_true",
                     help="reuse existing recipes; mine through last closed session")
@@ -2147,6 +2437,36 @@ def main(argv=None) -> int:
         payload = restamp_dash()
         print(f"[factor-mine] recipes={payload.get('n_recipes')} "
               f"to={payload.get('to_date')}")
+        return 0
+    if args.sweep_white:
+        panel = load_or_build_panel(
+            args.from_date, args.to_date or None,
+            rebuild=args.rebuild_panel)
+        rows = sweep_white_horizon(panel)
+        print(f"[factor-mine] white-horizon sweep n={len(rows)} "
+              f"to={panel.get('to_date')}", flush=True)
+        print(f"{'name':40s} {'book%':>8} {'win':>6} {'trd':>5} "
+              f"{'fill':>7} pool hold n rank")
+        for r in rows:
+            print(f"{r['name']:40s} {_n(r.get('book_pct')):>8} "
+                  f"{_pct(r.get('win_rate')):>6} {r.get('n_trades') or 0:>5} "
+                  f"{r.get('fill_mornings') or 0:>3}/{r.get('n_days') or 0:<3} "
+                  f"{r['pool']:4s} h{r['hold']} n{r['top_n']} {r['rank']}")
+        return 0
+    if args.sweep_bracket:
+        panel = load_or_build_panel(
+            args.from_date, args.to_date or None,
+            rebuild=args.rebuild_panel)
+        rows = sweep_bracket(panel)
+        print(f"[factor-mine] bracket sweep n={len(rows)} "
+              f"to={panel.get('to_date')}", flush=True)
+        print(f"{'name':42s} {'book%':>8} {'win':>6} {'trd':>5} "
+              f"{'take':>4} {'stop':>4} base")
+        for r in rows:
+            print(f"{r['name']:42s} {_n(r.get('book_pct')):>8} "
+                  f"{_pct(r.get('win_rate')):>6} {r.get('n_trades') or 0:>5} "
+                  f"{r.get('n_take') or 0:>4} {r.get('n_stop') or 0:>4} "
+                  f"{r['base']}")
         return 0
     if args.land_closed:
         payload = land_closed(

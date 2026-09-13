@@ -58,12 +58,14 @@ def test_paper_template_polls_raw_main() -> None:
     assert book_suggestions.STRAT_URL in html
     assert "every strategy" in html
     assert "id=\"liveBook\"" in html
+    assert html.index("<h1>Paper Trading") < html.index('id="liveBook"')
     baked = (root / "dashboard" / "index.html").read_text(encoding="utf-8")
     assert book_suggestions.POLLER_MARK in baked
     assert book_suggestions.TODAY_URL in baked
     assert book_suggestions.SUG_URL in baked
     assert book_suggestions.STRAT_URL in baked
     assert "every strategy" in baked
+    assert baked.index("<h1>Paper Trading") < baked.index('id="liveBook"')
 
 
 def test_factor_mine_template_paints_every_strategy() -> None:
@@ -73,6 +75,10 @@ def test_factor_mine_template_paints_every_strategy() -> None:
     assert "every strategy" in html
     assert "liveStartRow" in html
     assert "pending — not 0%" in html
+    assert html.index("<h1>Factor strategy mine") < html.index('id="liveDay"')
+    assert 'id="bracketOn"' in html
+    assert 'id="takePct"' in html
+    assert 'id="stopPct"' in html
 
 
 def test_day_board_falls_back_to_suggestions() -> None:

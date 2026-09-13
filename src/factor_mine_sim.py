@@ -204,7 +204,7 @@ def horizon_pct(panel: dict, rec: dict, ticker: str, date: str,
 def look_day(panel: dict, rec: dict, date: str, *, bars=None,
              regime=None) -> list[dict]:
     """Names this recipe looked at on ``date``, ranked, with horizon %."""
-    panel = fm.rehydrate_panel(panel)
+    panel = fm.ensure_sim_fields(fm.rehydrate_panel(panel), rec)
     by_date = panel.get("by_date") or {}
     uni = rec.get("universe") or "union"
     looked = []
