@@ -1,19 +1,19 @@
 {
   "date": "2026-09-13",
-  "generated_at": "2026-09-13T14:57:25.546462-04:00",
+  "generated_at": "2026-09-13T14:57:36.535571-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-13_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-13/_board.json` \u2014 missing",
+    "MISSING News actions JSON `01_daily/news/2026-09-13_actions.json` \u2014 missing",
     "MISSING Finviz digest JSON `01_daily/news/2026-09-13_finviz_digest.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-09-13_judge.md` \u2014 missing",
-    "MISSING AB checklist enriched `data/ab_checklist/2026-09-13_ab_checklist_enriched.csv` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-09-13_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 1,
-    "partial": 2,
-    "fail": 5,
+    "ok": 4,
+    "partial": 0,
+    "fail": 4,
     "n": 8
   },
   "processes": [
@@ -109,7 +109,7 @@
       "inputs_ready": false,
       "n_req_ok": 0,
       "n_req": 20,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 2,
       "files": [
         {
@@ -189,9 +189,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-13_actions.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 2388
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "general",
@@ -381,11 +381,11 @@
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -393,22 +393,24 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-13_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=2651",
+          "size": 7620317
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-13_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=2651",
+          "size": 8459317
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "25 rows",
+      "bullets": [
+        "SFL, AVT, CFFN, LFST, AMD"
+      ]
     },
     {
       "key": "catalyst",
@@ -426,9 +428,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-13_actions.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 2388
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "in_digest",
@@ -456,11 +458,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -486,9 +488,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-13_actions.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 2388
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "in_digest",
@@ -522,9 +524,9 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-13_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=2651",
+          "size": 8459317
         },
         {
           "key": "join",
@@ -540,36 +542,36 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-09-13_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=5110",
+          "size": 824637
         },
         {
           "key": "book_json",
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-13_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "horizons=5 names=216",
+          "size": 1458204
         },
         {
           "key": "book_md",
           "name": "Stock book MD",
           "path": "01_daily/2026-09-13_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 78504
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-13_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 585
         },
         {
           "key": "paper",
@@ -585,8 +587,8 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-09-13 not in dashboard dates (last=2026-09-11)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-13)",
           "size": 4874846
         }
       ],
@@ -599,9 +601,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -611,17 +613,17 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-13_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "horizons=5 names=216",
+          "size": 1458204
         },
         {
           "key": "dash_html",
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-09-13 not in dashboard dates (last=2026-09-11)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-13)",
           "size": 4874846
         },
         {
@@ -648,8 +650,74 @@
     }
   ],
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "INSP",
+        "score": 0.8804952236175179
+      },
+      {
+        "ticker": "ICLR",
+        "score": 0.5943497941943456
+      },
+      {
+        "ticker": "CYPH",
+        "score": 0.5547267276791935
+      },
+      {
+        "ticker": "PTGX",
+        "score": 0.8362202827313832
+      },
+      {
+        "ticker": "ATRC",
+        "score": 0.8565059081699098
+      },
+      {
+        "ticker": "BMRN",
+        "score": 0.586302566095823
+      },
+      {
+        "ticker": "CLOV",
+        "score": 0.8501239232707993
+      },
+      {
+        "ticker": "ACAD",
+        "score": 0.8253706323417378
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "SGML",
+        "score": -0.40406612692294186
+      },
+      {
+        "ticker": "RUM",
+        "score": -0.2890136260357073
+      },
+      {
+        "ticker": "FUN",
+        "score": -0.443375697628102
+      },
+      {
+        "ticker": "GT",
+        "score": -0.28179242911679786
+      },
+      {
+        "ticker": "AXON",
+        "score": -0.03741729772725687
+      },
+      {
+        "ticker": "SMR",
+        "score": -0.24890150132301042
+      },
+      {
+        "ticker": "CHGG",
+        "score": -0.36478119494895334
+      },
+      {
+        "ticker": "XPOF",
+        "score": -0.38550226300087354
+      }
+    ],
     "flatten": {},
     "general": {},
     "sectors": {},
@@ -884,6 +952,59 @@
         }
       ],
       "preview": "5895 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, HRMY, EXEL, NUTX, CDNA"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-13T14:57:35.936408-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-13_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1458204,
+          "preview": "1d BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF"
+        },
+        {
+          "path": "data/stock_book/2026-09-13_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-13_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2573,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-13_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12430,
+          "preview": "2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12430,
+          "preview": "2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF"
+        },
+        {
+          "path": "01_daily/2026-09-13_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 79515,
+          "preview": "# Stock book \u2014 2026-09-13\n_Generated 2026-09-13T14:57:20.068554-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF \u00b7 2026-09-13 BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR, CHGG, XPOF \u00b7 # Stock book \u2014 2026-09-13\n_Generated 2026-09-13T14:57:20.068554-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {

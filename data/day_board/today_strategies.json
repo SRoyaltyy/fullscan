@@ -1,102 +1,111 @@
 {
-  "date": "2026-09-12",
-  "generated_at": "2026-09-12T10:01:58.272396-04:00",
-  "n": 246,
-  "n_ok": 246,
+  "date": "2026-09-13",
+  "generated_at": "2026-09-13T14:57:35.095801-04:00",
+  "n": 298,
+  "n_ok": 298,
   "buy_1d": [
-    "DELL",
-    "HPQ",
-    "AVT",
-    "ARW",
-    "VICR"
+    "INSP",
+    "ICLR",
+    "CYPH",
+    "PTGX",
+    "ATRC",
+    "BMRN",
+    "CLOV",
+    "ACAD"
   ],
   "sell_1d": [
-    "BORR",
-    "EU",
-    "LUCD",
     "SGML",
-    "AG",
-    "QDEL",
-    "SLQT",
-    "TNDM"
+    "RUM",
+    "FUN",
+    "GT",
+    "AXON",
+    "SMR",
+    "CHGG",
+    "XPOF"
   ],
   "strategies": {
     "stock_book_1d": {
       "buy": [
-        "DELL",
-        "HPQ",
-        "AVT",
-        "ARW",
-        "VICR"
+        "INSP",
+        "ICLR",
+        "CYPH",
+        "PTGX",
+        "ATRC",
+        "BMRN",
+        "CLOV",
+        "ACAD"
       ],
       "sell": [
-        "BORR",
-        "EU",
-        "LUCD",
         "SGML",
-        "AG",
-        "QDEL",
-        "SLQT",
-        "TNDM"
+        "RUM",
+        "FUN",
+        "GT",
+        "AXON",
+        "SMR",
+        "CHGG",
+        "XPOF"
       ],
       "sit": false,
       "status": "ok",
       "family": "stock_book",
-      "date": "2026-09-12"
+      "date": "2026-09-13"
     },
     "1d_top": {
       "buy": [
-        "DELL",
-        "HPQ",
-        "AVT",
-        "ARW",
-        "VICR"
+        "INSP",
+        "ICLR",
+        "CYPH",
+        "PTGX",
+        "ATRC",
+        "BMRN",
+        "CLOV",
+        "ACAD"
       ],
       "sell": [
-        "BORR",
-        "EU",
-        "LUCD",
         "SGML",
-        "AG",
-        "QDEL",
-        "SLQT",
-        "TNDM"
+        "RUM",
+        "FUN",
+        "GT",
+        "AXON",
+        "SMR",
+        "CHGG",
+        "XPOF"
       ],
       "sit": false,
       "status": "ok",
       "family": "paper",
-      "date": "2026-09-12"
+      "date": "2026-09-13"
     },
     "stock_book_3d": {
       "buy": [
-        "PACS",
-        "BAND",
-        "AVT",
-        "SIMO",
+        "INSP",
         "ATRC",
-        "AEHR",
-        "AVAH",
-        "LFST",
+        "CLOV",
+        "PTGX",
         "OBE",
         "DHT",
         "WTTR",
         "BFH",
         "KNTK",
         "VCTR",
-        "ODD"
+        "ODD",
+        "ANF",
+        "SLDE",
+        "JXN",
+        "SSL"
       ],
       "sell": [
-        "SGML",
+        "FUN",
         "FOSL",
         "TU",
-        "CF",
         "TMC",
-        "FUN",
-        "METC",
+        "SGML",
         "AREC",
+        "CF",
+        "XPOF",
         "SSTK",
-        "LDI",
-        "LODE",
+        "OPEN",
+        "METC",
         "CHGG",
         "ZVIA",
         "BIDU",
@@ -105,38 +114,38 @@
       "sit": false,
       "status": "ok",
       "family": "stock_book",
-      "date": "2026-09-12"
+      "date": "2026-09-13"
     },
     "3d_top": {
       "buy": [
-        "PACS",
-        "BAND",
-        "AVT",
-        "SIMO",
+        "INSP",
         "ATRC",
-        "AEHR",
-        "AVAH",
-        "LFST",
+        "CLOV",
+        "PTGX",
         "OBE",
         "DHT",
         "WTTR",
         "BFH",
         "KNTK",
         "VCTR",
-        "ODD"
+        "ODD",
+        "ANF",
+        "SLDE",
+        "JXN",
+        "SSL"
       ],
       "sell": [
-        "SGML",
+        "FUN",
         "FOSL",
         "TU",
-        "CF",
         "TMC",
-        "FUN",
-        "METC",
+        "SGML",
         "AREC",
+        "CF",
+        "XPOF",
         "SSTK",
-        "LDI",
-        "LODE",
+        "OPEN",
+        "METC",
         "CHGG",
         "ZVIA",
         "BIDU",
@@ -145,247 +154,247 @@
       "sit": false,
       "status": "ok",
       "family": "paper",
-      "date": "2026-09-12"
+      "date": "2026-09-13"
     },
     "stock_book_1w": {
       "buy": [
-        "PACS",
-        "AVT",
-        "BAND",
-        "SIMO",
+        "INSP",
         "ATRC",
-        "AEHR",
-        "AVAH",
-        "LFST",
+        "CLOV",
+        "PTGX",
         "OBE",
         "DHT",
         "BFH",
         "WTTR",
         "MGY",
         "VCTR",
-        "ANF"
+        "ANF",
+        "SLDE",
+        "JXN",
+        "ODD",
+        "SSL"
       ],
       "sell": [
-        "SGML",
+        "FUN",
         "TU",
         "FOSL",
+        "SGML",
         "TMC",
-        "CF",
-        "FUN",
-        "METC",
         "AREC",
+        "XPOF",
         "SSTK",
-        "LODE",
-        "LDI",
-        "CWH",
-        "BIDU",
+        "OPEN",
+        "METC",
+        "CF",
         "ZVIA",
-        "JOBY"
+        "JOBY",
+        "BIDU",
+        "ANGI"
       ],
       "sit": false,
       "status": "ok",
       "family": "stock_book",
-      "date": "2026-09-12"
+      "date": "2026-09-13"
     },
     "1w_top": {
       "buy": [
-        "PACS",
-        "AVT",
-        "BAND",
-        "SIMO",
+        "INSP",
         "ATRC",
-        "AEHR",
-        "AVAH",
-        "LFST",
+        "CLOV",
+        "PTGX",
         "OBE",
         "DHT",
         "BFH",
         "WTTR",
         "MGY",
         "VCTR",
-        "ANF"
+        "ANF",
+        "SLDE",
+        "JXN",
+        "ODD",
+        "SSL"
       ],
       "sell": [
-        "SGML",
+        "FUN",
         "TU",
         "FOSL",
+        "SGML",
         "TMC",
-        "CF",
-        "FUN",
-        "METC",
         "AREC",
+        "XPOF",
         "SSTK",
-        "LODE",
-        "LDI",
-        "CWH",
-        "BIDU",
+        "OPEN",
+        "METC",
+        "CF",
         "ZVIA",
-        "JOBY"
+        "JOBY",
+        "BIDU",
+        "ANGI"
       ],
       "sit": false,
       "status": "ok",
       "family": "paper",
-      "date": "2026-09-12"
+      "date": "2026-09-13"
     },
     "stock_book_2w": {
       "buy": [
-        "PACS",
-        "AVT",
-        "BAND",
-        "SIMO",
+        "INSP",
         "ATRC",
-        "AEHR",
-        "AVAH",
-        "LFST",
+        "CLOV",
+        "PTGX",
         "OBE",
         "DHT",
         "BFH",
         "WTTR",
         "MGY",
         "VCTR",
-        "SLDE"
+        "SLDE",
+        "JXN",
+        "ANF",
+        "ODD",
+        "SSL"
       ],
       "sell": [
-        "SGML",
+        "FUN",
         "TU",
+        "SGML",
         "TMC",
         "FOSL",
-        "FUN",
-        "METC",
-        "CF",
         "AREC",
+        "METC",
+        "OPEN",
+        "XPOF",
         "SSTK",
-        "LODE",
-        "LDI",
-        "CWH",
+        "CF",
         "JOBY",
         "BIDU",
+        "ASPI",
         "ANGI"
       ],
       "sit": false,
       "status": "ok",
       "family": "stock_book",
-      "date": "2026-09-12"
+      "date": "2026-09-13"
     },
     "2w_top": {
       "buy": [
-        "PACS",
-        "AVT",
-        "BAND",
-        "SIMO",
+        "INSP",
         "ATRC",
-        "AEHR",
-        "AVAH",
-        "LFST",
+        "CLOV",
+        "PTGX",
         "OBE",
         "DHT",
         "BFH",
         "WTTR",
         "MGY",
         "VCTR",
-        "SLDE"
+        "SLDE",
+        "JXN",
+        "ANF",
+        "ODD",
+        "SSL"
       ],
       "sell": [
-        "SGML",
+        "FUN",
         "TU",
+        "SGML",
         "TMC",
         "FOSL",
-        "FUN",
-        "METC",
-        "CF",
         "AREC",
+        "METC",
+        "OPEN",
+        "XPOF",
         "SSTK",
-        "LODE",
-        "LDI",
-        "CWH",
+        "CF",
         "JOBY",
         "BIDU",
+        "ASPI",
         "ANGI"
       ],
       "sit": false,
       "status": "ok",
       "family": "paper",
-      "date": "2026-09-12"
+      "date": "2026-09-13"
     },
     "stock_book_1m": {
       "buy": [
-        "PACS",
-        "AVT",
-        "BAND",
-        "SIMO",
+        "INSP",
         "ATRC",
-        "AEHR",
-        "AVAH",
-        "LFST",
+        "CLOV",
+        "PTGX",
         "OBE",
         "DHT",
         "BFH",
         "MGY",
         "WTTR",
         "VCTR",
-        "SLDE"
+        "SLDE",
+        "JXN",
+        "ANF",
+        "ODD",
+        "SSL"
       ],
       "sell": [
-        "SGML",
-        "TU",
-        "TMC",
         "FUN",
-        "METC",
+        "TU",
+        "SGML",
+        "TMC",
         "FOSL",
         "AREC",
-        "CF",
+        "OPEN",
+        "METC",
+        "XPOF",
         "SSTK",
-        "CWH",
-        "LODE",
         "JOBY",
+        "ASPI",
         "BIDU",
-        "LDI",
-        "ANGI"
+        "ANGI",
+        "WHR"
       ],
       "sit": false,
       "status": "ok",
       "family": "stock_book",
-      "date": "2026-09-12"
+      "date": "2026-09-13"
     },
     "1m_top": {
       "buy": [
-        "PACS",
-        "AVT",
-        "BAND",
-        "SIMO",
+        "INSP",
         "ATRC",
-        "AEHR",
-        "AVAH",
-        "LFST",
+        "CLOV",
+        "PTGX",
         "OBE",
         "DHT",
         "BFH",
         "MGY",
         "WTTR",
         "VCTR",
-        "SLDE"
+        "SLDE",
+        "JXN",
+        "ANF",
+        "ODD",
+        "SSL"
       ],
       "sell": [
-        "SGML",
-        "TU",
-        "TMC",
         "FUN",
-        "METC",
+        "TU",
+        "SGML",
+        "TMC",
         "FOSL",
         "AREC",
-        "CF",
+        "OPEN",
+        "METC",
+        "XPOF",
         "SSTK",
-        "CWH",
-        "LODE",
         "JOBY",
+        "ASPI",
         "BIDU",
-        "LDI",
-        "ANGI"
+        "ANGI",
+        "WHR"
       ],
       "sit": false,
       "status": "ok",
       "family": "paper",
-      "date": "2026-09-12"
+      "date": "2026-09-13"
     },
     "flatten_robust": {
       "buy": [
@@ -1304,6 +1313,443 @@
         "PAYP",
         "CRWV",
         "INTC"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_pack_h1": {
+      "buy": [
+        "ORCL",
+        "LITE",
+        "ADBE"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_head_h1": {
+      "buy": [
+        "ORCL",
+        "ADBE",
+        "BAK",
+        "AMTX",
+        "CLSK",
+        "RH"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_or_h1": {
+      "buy": [
+        "ORCL",
+        "LITE",
+        "ADBE",
+        "BAK",
+        "AMTX",
+        "CLSK",
+        "RH"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_both_h1": {
+      "buy": [
+        "ORCL",
+        "ADBE"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_g_cond_h1": {
+      "buy": [
+        "ORCL",
+        "LITE",
+        "ADBE",
+        "BAK",
+        "AMTX",
+        "CLSK",
+        "RH"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_g_cam71_h1": {
+      "buy": [
+        "ORCL",
+        "LITE"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_g_cam61_h1": {
+      "buy": [
+        "ORCL",
+        "LITE"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_or_net2_h1": {
+      "buy": [
+        "ORCL",
+        "LITE",
+        "ADBE",
+        "BAK"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_or_net3_h1": {
+      "buy": [
+        "ORCL",
+        "LITE"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_or_net4_h1": {
+      "buy": [
+        "ORCL",
+        "LITE"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_or_net5_h1": {
+      "buy": [
+        "ORCL",
+        "LITE"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_pack_net3_h1": {
+      "buy": [
+        "ORCL",
+        "LITE"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_pack_net2_h1": {
+      "buy": [
+        "ORCL",
+        "LITE",
+        "ADBE"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_pack_h3": {
+      "buy": [
+        "ORCL",
+        "LITE",
+        "ADBE"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_head_h3": {
+      "buy": [
+        "ORCL",
+        "ADBE",
+        "BAK",
+        "AMTX",
+        "CLSK",
+        "RH"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_or_h3": {
+      "buy": [
+        "ORCL",
+        "LITE",
+        "ADBE",
+        "BAK",
+        "AMTX",
+        "CLSK",
+        "RH"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_both_h3": {
+      "buy": [
+        "ORCL",
+        "ADBE"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_g_cond_h3": {
+      "buy": [
+        "ORCL",
+        "LITE",
+        "ADBE",
+        "BAK",
+        "AMTX",
+        "CLSK",
+        "RH"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_g_cam71_h3": {
+      "buy": [
+        "ORCL",
+        "LITE"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_g_cam61_h3": {
+      "buy": [
+        "ORCL",
+        "LITE"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_or_net2_h3": {
+      "buy": [
+        "ORCL",
+        "LITE",
+        "ADBE",
+        "BAK"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_or_net3_h3": {
+      "buy": [
+        "ORCL",
+        "LITE"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_or_net4_h3": {
+      "buy": [
+        "ORCL",
+        "LITE"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_or_net5_h3": {
+      "buy": [
+        "ORCL",
+        "LITE"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_pack_net3_h3": {
+      "buy": [
+        "ORCL",
+        "LITE"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_pack_net2_h3": {
+      "buy": [
+        "ORCL",
+        "LITE",
+        "ADBE"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_or_net4_rw_h1": {
+      "buy": [
+        "ORCL",
+        "LITE"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_or_net4_conv_h1": {
+      "buy": [
+        "ORCL",
+        "LITE"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_g_cam91_n1_h1": {
+      "buy": [
+        "ORCL"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_g_cam71_n2_h1": {
+      "buy": [
+        "ORCL",
+        "LITE"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_g_conv_h1": {
+      "buy": [
+        "ORCL",
+        "LITE",
+        "ADBE",
+        "BAK"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_g_conv_h3": {
+      "buy": [
+        "ORCL",
+        "LITE",
+        "ADBE",
+        "BAK"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_news_g_cam71_conv_h1": {
+      "buy": [
+        "ORCL",
+        "LITE"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "short_news_pack_h3": {
+      "buy": [
+        "QRVO"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "short_news_head_h3": {
+      "buy": [
+        "MYGN",
+        "RWT",
+        "CRDL"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "short_news_or_h3": {
+      "buy": [
+        "QRVO",
+        "MYGN",
+        "RWT",
+        "CRDL"
       ],
       "sell": [],
       "sit": false,
@@ -2832,6 +3278,173 @@
       "family": "factor_mine",
       "date": "2026-09-11"
     },
+    "union_white_yday_h1": {
+      "buy": [
+        "LITE",
+        "SWKS",
+        "BAND",
+        "COHU",
+        "DOCN",
+        "INTC",
+        "PAGS",
+        "PAYP"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_white_yday_h3": {
+      "buy": [
+        "LITE",
+        "SWKS",
+        "BAND",
+        "COHU",
+        "DOCN",
+        "INTC",
+        "PAGS",
+        "PAYP"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "flatten_white_yday_h5": {
+      "buy": [
+        "COHU"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_white_any_h1": {
+      "buy": [
+        "ORCL",
+        "COHU",
+        "SWKS",
+        "BAND",
+        "PAGS",
+        "PAYP",
+        "CRWV",
+        "INTC"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_white_any_h2": {
+      "buy": [
+        "ORCL",
+        "COHU",
+        "SWKS",
+        "BAND",
+        "PAGS",
+        "PAYP",
+        "CRWV",
+        "INTC"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_white_any_h3": {
+      "buy": [
+        "ORCL",
+        "COHU",
+        "SWKS",
+        "BAND",
+        "PAGS",
+        "PAYP",
+        "CRWV",
+        "INTC"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_white_any_h5": {
+      "buy": [
+        "ORCL",
+        "COHU",
+        "SWKS",
+        "BAND",
+        "PAGS",
+        "PAYP",
+        "CRWV",
+        "INTC"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_white_both_n4_h1": {
+      "buy": [],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_white_both_n4_h2": {
+      "buy": [],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_white_both_n4_h3": {
+      "buy": [],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_white_both_n4_h5": {
+      "buy": [],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "union_white_both_n4_h5_s12": {
+      "buy": [],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "flatten_h5_s8": {
+      "buy": [
+        "AUPH",
+        "OVID",
+        "SANM",
+        "ORCL",
+        "NVT",
+        "COHU"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
     "combo_seh_333_shared": {
       "buy": [
         "QRVO",
@@ -3306,6 +3919,54 @@
         "BNC",
         "IRD",
         "GPRO",
+        "QRVO",
+        "MYGN",
+        "RWT",
+        "CRDL"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "combo_ps_5050_shared": {
+      "buy": [
+        "ORCL",
+        "LITE",
+        "ADBE",
+        "QRVO",
+        "MYGN",
+        "RWT",
+        "CRDL"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "combo_ps_7030_shared": {
+      "buy": [
+        "ORCL",
+        "LITE",
+        "ADBE",
+        "QRVO",
+        "MYGN",
+        "RWT",
+        "CRDL"
+      ],
+      "sell": [],
+      "sit": false,
+      "status": "stale_panel",
+      "family": "factor_mine",
+      "date": "2026-09-11"
+    },
+    "combo_p2s_5050_shared": {
+      "buy": [
+        "ORCL",
+        "LITE",
+        "ADBE",
         "QRVO",
         "MYGN",
         "RWT",
