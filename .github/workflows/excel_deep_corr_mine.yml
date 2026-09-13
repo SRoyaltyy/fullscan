@@ -1,6 +1,6 @@
 name: Excel Deep Corr Mine
 
-# Whole-sheet Excel-emulator statistical mine (A..JL).
+# Whole-sheet Excel-emulator statistical mine (A..JO pixels).
 # Universe: Finviz mcap > $50M and average volume > 100k shares.
 # χ2 + mutual info + Benjamini-Hochberg FDR, then Apriori pairs.
 # Clock: rows above T + 09:30-knowable atoms. H/I are labels only.
@@ -66,6 +66,7 @@ jobs:
 
       - name: Unit tests
         run: |
+          python excel_bot/engine/test_excel_pixel_desc.py
           python excel_bot/engine/test_excel_deep_corr_mine.py
           python excel_bot/engine/test_excel_stat_mine.py
           python excel_bot/engine/test_region_corr_mine.py || true
@@ -113,7 +114,7 @@ jobs:
           if [ -n "$LIMIT" ] && [ "$LIMIT" != "0" ]; then
             LARGS+=(--limit "$LIMIT")
           fi
-          python excel_bot/engine/excel_stat_mine.py --grids "$GDIR" "${LARGS[@]}"
+          python excel_bot/engine/excel_stat_mine_pixel_hook.py --grids "$GDIR" "${LARGS[@]}"
           python excel_bot/engine/excel_deep_corr_mine.py --grids "$GDIR" \
             --min-disc "$MIN_DISC" --min-hold "$MIN_HOLD" "${LARGS[@]}"
           test -s 03_scoreboard/EXCEL_STAT_MINE.md
@@ -135,7 +136,7 @@ jobs:
         if: hashFiles('03_scoreboard/EXCEL_STAT_MINE.md') != '' || hashFiles('03_scoreboard/EXCEL_DEEP_CORR_MINE.md') != ''
         run: |
           bash scripts/safe_git_push.sh \
-            "chore: excel whole-sheet stat mine" \
+            "chore: excel whole-sheet pixel stat mine" \
             03_scoreboard/EXCEL_STAT_MINE.md \
             03_scoreboard/excel_stat_mine.json \
             03_scoreboard/EXCEL_DEEP_CORR_MINE.md \
@@ -158,9 +159,9 @@ jobs:
         if: always()
         run: |
           {
-            echo "## Excel whole-sheet statistical mine"
+            echo "## Excel whole-sheet statistical mine (A..JO pixels)"
             echo
-            echo "A..JL. chi2 + FDR + Apriori. mcap > \$50M and avg vol > 100k."
+            echo "A..JO high-def pixels. chi2 + FDR + Apriori. mcap > \$50M and avg vol > 100k."
             echo "Grids rebuilt from excel-state OHLC via the Excel-replica engine."
             echo
             if [ -f 03_scoreboard/EXCEL_STAT_MINE.md ]; then
