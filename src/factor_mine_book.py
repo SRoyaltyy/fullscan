@@ -34,6 +34,7 @@ HOLDS = ("auto", "1", "2", "3", "5")
 GATES = (
     "auto", "none", "vol_g", "news_g", "white", "white_any", "coil_off",
     "join_g", "last_green", "blue", "news_present", "join_present", "ab_g",
+    "news_pack", "news_head", "news_both",
 )
 RANKS = ("auto", "none", "list", "hot_score", "cond", "w_hot_cond",
          "w_hot_candle", "ret_5", "candle_score")
@@ -41,7 +42,10 @@ SIDES = ("auto", "long", "short")
 TOP_NS = ("auto", "4", "8", "12")
 EXITS = ("auto", "none", "alarm", "last_red", "news_bad")
 ENTRIES = ("auto", "list", "live")
-SIZES = ("auto", "leftover", "rank_w", "topheavy", "half")
+SIZES = ("auto", "leftover", "rank_w", "topheavy", "half", "conviction")
+CONVICTION_POS = 9
+CONVICTION_BAD = 1
+CONVICTION_SHARE = 0.70
 SELLS = ("auto", "list", "time", "cut_loser", "trail")
 S_BOOSTS = ("auto", "none", "sizeup", "more_names", "both")
 BORROW_ANNUAL = 0.01
@@ -258,6 +262,19 @@ def split_budgets(new: list, room: float, mode: str) -> list[float]:
         room = room * 0.5
         return [room / n] * n
     if mode == "rank_w":
+        weights = list(range(n, 0, -1))
+        tot = float(sum(weights))
+        return [room * w / tot for w in weights]
+    if mode == "conviction":
+        top = new[0] if new else {}
+        if (fm.n_pos(top) >= CONVICTION_POS
+                and fm.cam_bad(top) <= CONVICTION_BAD):
+            if n == 1:
+                return [room]
+            first = room * CONVICTION_SHARE
+            rest = (room - first) / (n - 1)
+            return [first] + [rest] * (n - 1)
+        mode = "rank_w"
         weights = list(range(n, 0, -1))
         tot = float(sum(weights))
         return [room * w / tot for w in weights]
@@ -713,6 +730,12 @@ def recipes_from_action(*, universe="auto", hold="auto", gate="auto",
             return "vol_g"
         if req.get("news") == "good" and len(req) == 1:
             return "news_g"
+        if req.get("news_and_headline"):
+            return "news_both"
+        if req.get("news_box") == "good" and "headline" not in req:
+            return "news_pack"
+        if req.get("headline") == "good" and "news_box" not in req:
+            return "news_head"
         if req.get("zero_red"):
             return "white"
         if req.get("yday_or_catalyst") or "cam_bad_max" in req:

@@ -249,6 +249,55 @@ def build_recipes() -> list[dict]:
             require=req, forbid={"alarm": True},
             note=f"union ∩ {gname} hold 5, no 🚨")
 
+    # News packet / headline as first-class gates, plus camera-ratio size-up.
+    # +9 −1 with news🟢 is rare (~3 names / 21 sessions); +7 −≤1 is the
+    # usable conviction floor. Packet∧headline both green is thinner still.
+    for hold in (1, 3):
+        add(name=f"union_news_pack_h{hold}", universe="union", hold=hold,
+            require={"news_box": "good"}, forbid={"alarm": True},
+            rank="cond", note="morning packet news🟢 only (not the merged box)")
+        add(name=f"union_news_head_h{hold}", universe="union", hold=hold,
+            require={"headline": "good"}, forbid={"alarm": True},
+            rank="cond", note="prior-export headline🟢 only")
+        add(name=f"union_news_both_h{hold}", universe="union", hold=hold,
+            require={"news_and_headline": True}, forbid={"alarm": True},
+            rank="cond", note="packet🟢 AND headline🟢")
+        add(name=f"union_news_g_cond_h{hold}", universe="union", hold=hold,
+            require={"news": "good"}, forbid={"alarm": True},
+            rank="cond", note="merged news🟢, rank +G−R")
+        add(name=f"union_news_g_cam71_h{hold}", universe="union", hold=hold,
+            require={"news": "good", "n_pos_min": 7, "cam_bad_max": 1},
+            forbid={"alarm": True}, rank="cond",
+            note="merged news🟢 and cameras +7 −≤1")
+        add(name=f"union_news_g_cam61_h{hold}", universe="union", hold=hold,
+            require={"news": "good", "n_pos_min": 6, "cam_bad_max": 1},
+            forbid={"alarm": True}, rank="cond",
+            note="merged news🟢 and cameras +6 −≤1")
+    add(name="union_news_g_cam91_n1_h1", universe="union", hold=1, top_n=1,
+        require={"news": "good", "n_pos_min": 9, "cam_bad_max": 1},
+        forbid={"alarm": True}, rank="cond",
+        note="all leftover on the rare news🟢 +9 −≤1 name")
+    add(name="union_news_g_cam71_n2_h1", universe="union", hold=1, top_n=2,
+        require={"news": "good", "n_pos_min": 7, "cam_bad_max": 1},
+        forbid={"alarm": True}, rank="cond", size="topheavy",
+        note="topheavy leftover on news🟢 +7 −≤1")
+    add(name="union_news_g_conv_h1", universe="union", hold=1, top_n=4,
+        require={"news": "good"}, forbid={"alarm": True},
+        rank="cond", size="conviction",
+        note="news🟢 rank cameras; 70% of leftover if +9 −≤1")
+    add(name="union_news_g_conv_h3", universe="union", hold=3, top_n=4,
+        require={"news": "good"}, forbid={"alarm": True},
+        rank="cond", size="conviction",
+        note="news🟢 rank cameras; 70% of leftover if +9 −≤1")
+    add(name="union_news_g_cam71_conv_h1", universe="union", hold=1, top_n=4,
+        require={"news": "good", "n_pos_min": 7, "cam_bad_max": 1},
+        forbid={"alarm": True}, rank="cond", size="conviction",
+        note="news🟢 +7 −≤1; 70% of leftover if that name is +9 −≤1")
+    add(name="short_news_pack_h3", universe="union", hold=3, side="short",
+        require={"news_box": "bad"}, note="short morning packet news🔴")
+    add(name="short_news_head_h3", universe="union", hold=3, side="short",
+        require={"headline": "bad"}, note="short prior-export headline🔴")
+
     combos = [
         ("vol_ab", {"vol": "good", "ab": "good"}),
         ("blue_vol", {"vol": "good", "blue": True}),
@@ -487,6 +536,16 @@ def _gate_kid(key: str, val) -> str:
         return f"at most {int(val)} red cameras (the −N next to the name)"
     if key == "n_neg_min":
         return f"at least {int(val)} red cameras"
+    if key == "n_pos_min":
+        return f"at least {int(val)} green cameras (the +G half of +G −R)"
+    if key == "news_box":
+        tone = {"good": "green", "bad": "red"}.get(val, str(val))
+        return f"the morning news packet box is {tone}"
+    if key == "headline":
+        tone = {"good": "green", "bad": "red"}.get(val, str(val))
+        return f"the prior-export headline is {tone}"
+    if key == "news_and_headline":
+        return "the morning news packet AND the prior-export headline are both green"
     if key == "burst":
         return "a parabolic / high-intensity prior tape (ret5≥12, last green, and a 10-session break or rvol≥2)"
     if key == "ret_5_min":
@@ -813,6 +872,18 @@ def matches(row: dict, rec: dict) -> bool:
         return False
     if "n_neg_min" in req and n_neg(row) < int(req["n_neg_min"]):
         return False
+    if "n_pos_min" in req and n_pos(row) < int(req["n_pos_min"]):
+        return False
+    if req.get("news_box") and not _cam_ok(
+            str(row.get("news_box") or "missing").lower(), req["news_box"]):
+        return False
+    if req.get("headline") and not _cam_ok(
+            str(row.get("news_prior") or "missing").lower(), req["headline"]):
+        return False
+    if req.get("news_and_headline") and not (
+            str(row.get("news_box") or "").lower() == "good"
+            and str(row.get("news_prior") or "").lower() == "good"):
+        return False
     if req.get("burst") and not is_burst(row):
         return False
     if req.get("yday_up") and not yday_up(row):
@@ -1081,6 +1152,19 @@ def match_why(row: dict, rec: dict) -> dict:
     if "n_neg_min" in req:
         need(n_neg(row) >= int(req["n_neg_min"]),
              _gate_kid("n_neg_min", req["n_neg_min"]))
+    if "n_pos_min" in req:
+        need(n_pos(row) >= int(req["n_pos_min"]),
+             _gate_kid("n_pos_min", req["n_pos_min"]))
+    if req.get("news_box"):
+        need(_cam_ok(str(row.get("news_box") or "missing").lower(), req["news_box"]),
+             _gate_kid("news_box", req["news_box"]))
+    if req.get("headline"):
+        need(_cam_ok(str(row.get("news_prior") or "missing").lower(), req["headline"]),
+             _gate_kid("headline", req["headline"]))
+    if req.get("news_and_headline"):
+        need(str(row.get("news_box") or "").lower() == "good"
+             and str(row.get("news_prior") or "").lower() == "good",
+             _gate_kid("news_and_headline", True))
     if req.get("burst"):
         need(is_burst(row), _gate_kid("burst", True))
     if req.get("yday_up"):
@@ -1801,6 +1885,10 @@ def run(from_date: str = START, to_date: str | None = None,
     extra = [n for n in (
         "flatten_live_h1", "flatten_live_h3", "flatten_live_h5",
         "union_e_fresh_h3", "union_news_g_h5", "union_white_coil_h1",
+        "union_news_pack_h1", "short_news_head_h3",
+        "combo_ps_5050_shared", "combo_ps_7030_shared",
+        "union_news_g_cam91_n1_h1", "union_news_both_h1",
+        "union_news_g_cam71_h1", "union_news_g_conv_h1",
         "union_e_green_h3",
         "union_white_any_h1", "union_white_any_h2",
         "union_white_any_h3", "union_white_any_h5",
@@ -2207,6 +2295,162 @@ def _n(v) -> str:
     return "—" if v is None else f"{float(v):+.2f}"
 
 
+NEWS_CAM_SPLICE = (
+    "union_news_pack_h1",
+    "union_news_pack_h3",
+    "union_news_head_h1",
+    "union_news_head_h3",
+    "union_news_both_h1",
+    "union_news_g_cond_h1",
+    "union_news_g_cam71_h1",
+    "union_news_g_cam91_n1_h1",
+    "union_news_g_conv_h1",
+    "short_news_pack_h3",
+    "short_news_head_h3",
+)
+NEWS_CAM_COMBOS = (
+    {
+        "name": "combo_ps_5050_shared",
+        "members": ["union_news_pack_h1", "short_news_r_h3"],
+        "weights": [1.0, 1.0],
+        "net": "priority",
+        "pool": "shared",
+    },
+    {
+        "name": "combo_ps_7030_shared",
+        "members": ["union_news_pack_h1", "short_news_r_h3"],
+        "weights": [70.0, 30.0],
+        "net": "priority",
+        "pool": "shared",
+    },
+)
+NEWS_CAM_PIN = (
+    "union_news_pack_h1",
+    "combo_ps_5050_shared",
+    "short_news_head_h3",
+    "union_news_g_cam91_n1_h1",
+    "union_news_both_h1",
+    "union_news_g_cam71_h1",
+)
+
+
+def merge_stats_into_payload(
+    payload: dict,
+    stats: list[dict],
+    books: dict | None = None,
+    recipes: list[dict] | None = None,
+    *,
+    pin: list[str] | tuple[str, ...] | None = None,
+) -> dict:
+    """Insert or replace named recipe rows without remine."""
+    books = books or {}
+    names = {s["name"] for s in stats if s.get("name")}
+    dates = list(payload.get("dates") or [])
+
+    def keep(name: str) -> bool:
+        return name not in names
+
+    payload["stats"] = [
+        s for s in (payload.get("stats") or []) if keep(s.get("name"))]
+    if recipes:
+        payload["recipes"] = [
+            r for r in (payload.get("recipes") or []) if keep(r.get("name"))]
+        payload["recipes"].extend(recipes)
+    for key in ("series", "daily", "starts", "books"):
+        blob = payload.get(key) or {}
+        payload[key] = {k: v for k, v in blob.items() if keep(k)}
+
+    for s in stats:
+        name = s["name"]
+        slim = {k: v for k, v in s.items()
+                if k not in ("daily", "equity", "starts")}
+        payload["stats"].append(slim)
+        eq = s.get("equity") or []
+        payload["series"][name] = (
+            eq[1:] if dates and len(eq) == len(dates) + 1 else eq)
+        payload["daily"][name] = _slim_dash_daily(s.get("daily"))
+        payload["starts"][name] = s.get("starts")
+        if name in books:
+            payload["books"][name] = _slim_dash_book(books[name])
+    payload["n_recipes"] = len(payload["stats"])
+    if pin:
+        seen: set[str] = set()
+        feat: list[str] = []
+        have = {s.get("name") for s in payload["stats"]}
+        for n in list(pin) + list(payload.get("featured") or []):
+            if n and n not in seen and n in have:
+                feat.append(n)
+                seen.add(n)
+        payload["featured"] = feat
+    stamp_explains(payload)
+    from . import factor_mine_combo as fmc
+    for s in payload["stats"]:
+        if not str(s.get("name") or "").startswith("combo_"):
+            continue
+        spec = {
+            "name": s["name"],
+            "members": s.get("members") or [],
+            "weights": s.get("weights") or [1],
+            "net": s.get("net") or "priority",
+            "pool": s.get("pool") or "shared",
+        }
+        if spec["members"]:
+            s["explain"] = fmc.explain_combo(spec)
+    return payload
+
+
+def splice_news_cam(*, write: bool = True) -> dict:
+    """Cash-book the news-packet / headline / camera recipes onto the board."""
+    from . import factor_mine_book as fmb
+    from . import factor_mine_combo as fmc
+    from . import factor_mine_sim as fms
+
+    panel = load_or_build_panel(START, None, rebuild=False)
+    payload = load_dash_payload()
+    rec_by = {r["name"]: r for r in build_recipes()}
+    recipes = [rec_by[n] for n in NEWS_CAM_SPLICE if n in rec_by]
+    tapes = _tapes(list(panel.get("session_dates") or []))
+    regime = fmb.load_regime()
+    fees = pt_fees()
+    stats: list[dict] = []
+    books: dict = {}
+    for rec in recipes:
+        print(f"[splice] {rec['name']}", flush=True)
+        st = score_recipe(panel, rec, tapes)
+        bk = fmb.simulate_book(panel, rec, fees=fees, regime=regime)
+        starts = fmb.replay_starts(panel, rec, fees=fees, regime=regime)
+        st = fmb.attach_book(st, bk, starts)
+        stats.append(st)
+        books[rec["name"]] = bk
+    member_stat_by = {s["name"]: s for s in stats}
+    for s in payload.get("stats") or []:
+        if s.get("name") and s["name"] not in member_stat_by:
+            member_stat_by[s["name"]] = s
+    combo_stats, combo_books = fmc.run_combos(
+        panel, list(rec_by.values()), fees=fees, regime=regime,
+        specs=list(NEWS_CAM_COMBOS), member_stat_by=member_stat_by)
+    stats.extend(combo_stats)
+    books.update(combo_books)
+    recipes = recipes + [fmc.combo_recipe(sp) for sp in NEWS_CAM_COMBOS]
+    merge_stats_into_payload(
+        payload, stats, books, recipes, pin=NEWS_CAM_PIN)
+    payload["sim"] = fms.build_sim_pack(panel)
+    payload["generated_at"] = datetime.now(tl.ET).isoformat()
+    payload["n_recipes"] = len(payload["stats"])
+    if write:
+        write_outputs(payload, payload["stats"], books=None)
+    print("[splice] news-cam books", flush=True)
+    print(f"{'name':32s} {'book%':>8} {'starts':>8} {'fills':>5}", flush=True)
+    for s in stats:
+        print(
+            f"{s['name']:32s} {_n(s.get('total_ret_pct')):>8} "
+            f"{s.get('start_green') or 0:>2}/{s.get('start_n') or 0:<4} "
+            f"{s.get('book_n_trades') or 0:>5}",
+            flush=True,
+        )
+    return payload
+
+
 def existing_single_recipes(payload: dict | None = None) -> list[dict]:
     """Recipes already on the published board — no combo rows, no remine grid."""
     doc = payload
@@ -2406,6 +2650,8 @@ def main(argv=None) -> int:
     ap.add_argument("--write", action="store_true")
     ap.add_argument("--restamp-dash", action="store_true",
                     help="rewrite dashboard HTML from the current template; no remine")
+    ap.add_argument("--splice-news-cam", action="store_true",
+                    help="cash-book news packet / headline / camera recipes onto the last board")
     ap.add_argument("--sweep-white", action="store_true",
                     help="cash-book sweep: −0 red + (yday/catalyst) × hold × rank")
     ap.add_argument("--sweep-bracket", action="store_true",
@@ -2436,6 +2682,11 @@ def main(argv=None) -> int:
     if args.restamp_dash:
         payload = restamp_dash()
         print(f"[factor-mine] recipes={payload.get('n_recipes')} "
+              f"to={payload.get('to_date')}")
+        return 0
+    if args.splice_news_cam:
+        payload = splice_news_cam(write=args.write)
+        print(f"[factor-mine] splice-news-cam recipes={payload.get('n_recipes')} "
               f"to={payload.get('to_date')}")
         return 0
     if args.sweep_white:
