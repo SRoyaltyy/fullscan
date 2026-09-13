@@ -16,3 +16,7 @@ Phases: `disc_uni` → `hold_uni` → `pairs_disc` → `pairs_hold` → `done`.
 
 `--reset` (workflow input `reset=true`) starts a fresh walk.
 The `continue` job re-dispatches this workflow up to 8 generations when `done` is not set.
+
+Shade flags (`_pale` / `_mid` / `_deepg` / `_g_not_deep` and red twins)
+are first-class. Changing the pixel factory requires `--reset` so new
+keys are not mixed into an old 2x2 count table.

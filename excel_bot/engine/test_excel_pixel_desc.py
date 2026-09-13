@@ -8,13 +8,13 @@ import unittest
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
-from excel_pixel_desc import ALL_LETTERS, pixel_features  # noqa: E402
+from excel_pixel_desc import ALL_LETTERS, pixel_features, _shade  # noqa: E402
 
 
-def _day(fams, vals=None, texts=None):
+def _day(fams, vals=None, texts=None, fills=None):
     return {
         "o": 10.0, "h": 10.4, "l": 9.7, "c": 10.2, "H": 0.07, "I": 0.01,
-        "fams": fams, "vals": vals or {}, "fills": {}, "texts": texts or {},
+        "fams": fams, "vals": vals or {}, "fills": fills or {}, "texts": texts or {},
     }
 
 
@@ -54,6 +54,10 @@ class Pixels(unittest.TestCase):
         d = pixel_features(days, 15, {})
         self.assertTrue(d.get("A@L1_gstreak>=5") or d.get("A@L0_gstreak>=5"))
         self.assertTrue(d.get("Iregion_g>=5") or d.get("Iregion_deepg"))
+        # no hex on these days → intensity unknown → shade flags stay off
+        self.assertFalse(d.get("A@L1_pale"))
+        self.assertFalse(d.get("A@L1_mid"))
+        self.assertFalse(d.get("A@L1_deepg"))
 
     def test_candles_and_exists(self):
         days = []
@@ -68,6 +72,51 @@ class Pixels(unittest.TestCase):
         self.assertTrue(d.get("AH@L0==2") or d.get("AH@L1==2") or d.get("AH@L0_exists")
                         or d.get("AH@L0_missing") or d.get("AH@L1_pos"))
         self.assertNotIn("DF@L0=Bullish Hammer", d)
+
+
+class Shade(unittest.TestCase):
+    def test_shade_cuts(self):
+        self.assertEqual(_shade("green", 1.0), "pale")
+        self.assertEqual(_shade("green", 1.5), "mid")
+        self.assertEqual(_shade("green", 2.0), "deepg")
+        self.assertEqual(_shade("green", 0.0), "")
+        self.assertEqual(_shade("red", -1.0), "pink")
+        self.assertEqual(_shade("red", -1.5), "midr")
+        self.assertEqual(_shade("red", -2.0), "deepr")
+
+    def test_hex_pale_vs_mid_vs_deep(self):
+        letters = list("ABCDEFGHIJKLMNO")
+        days = []
+        for i in range(12):
+            fams = {let: "green" for let in letters}
+            if i < 4:
+                fills = {let: "DCEDD5" for let in letters}   # pale
+            elif i < 8:
+                fills = {let: "95CA82" for let in letters}   # mid
+            else:
+                fills = {let: "1B5E20" for let in letters}   # deep
+            days.append(_day(fams, {"J": 0.02, "I": 0.01, "H": 0.06}, fills=fills))
+        d = pixel_features(days, 11, {})
+        self.assertTrue(d.get("A@L1_g"))
+        self.assertTrue(d.get("A@L1_deepg"))
+        self.assertFalse(d.get("A@L1_pale"))
+        self.assertFalse(d.get("A@L1_mid"))
+        self.assertTrue(d.get("A@L1_g_not_deep") is not True)
+        self.assertTrue(d.get("A@L5_mid") or d.get("M@L5_mid"))
+        d3 = pixel_features(days, 3, {})
+        self.assertTrue(d3.get("A@L1_pale"))
+        self.assertFalse(d3.get("A@L1_deepg"))
+        self.assertTrue(d3.get("A@L1_g_not_deep"))
+        self.assertTrue(d3.get("Iregion_pale>=2") or d3.get("A@L1_palestreak>=2"))
+
+    def test_unknown_intensity_is_not_deep(self):
+        letters = list("ABCDEFGHIJKLMNO")
+        days = [_day({let: "green" for let in letters}, {"J": 0.02}) for _ in range(6)]
+        d = pixel_features(days, 5, {})
+        self.assertTrue(d.get("A@L1_g"))
+        self.assertFalse(d.get("A@L1_deepg"))
+        self.assertFalse(d.get("A@L1_pale"))
+        self.assertFalse(d.get("A@L1_mid"))
 
 
 if __name__ == "__main__":
