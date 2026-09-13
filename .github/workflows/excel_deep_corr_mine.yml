@@ -1,9 +1,9 @@
 name: Excel Deep Corr Mine
 
-# Full-sheet Excel-emulator correlation mine.
+# Whole-sheet Excel-emulator statistical mine (A..JL).
 # Universe: Finviz mcap > $50M and average volume > 100k shares.
+# χ2 + mutual info + Benjamini-Hochberg FDR, then Apriori pairs.
 # Clock: rows above T + 09:30-knowable atoms. H/I are labels only.
-# Discovery/holdout must agree before a rule is called "surviving".
 
 on:
   workflow_dispatch:
@@ -71,6 +71,7 @@ jobs:
       - name: Unit tests
         run: |
           python excel_bot/engine/test_excel_deep_corr_mine.py
+          python excel_bot/engine/test_excel_stat_mine.py
           python excel_bot/engine/test_region_corr_mine.py || true
 
       - name: Mine
@@ -81,39 +82,43 @@ jobs:
           MIN_HOLD: ${{ inputs.min_hold || '80' }}
         run: |
           set -euo pipefail
-          ARGS=(--min-disc "$MIN_DISC" --min-hold "$MIN_HOLD")
-          if [ -d "$GRIDS" ]; then
-            ARGS+=(--grids "$GRIDS")
-          elif [ -d grids_deep ]; then
-            ARGS+=(--grids grids_deep)
-          elif [ -d grids ]; then
-            ARGS+=(--grids grids)
+          GDIR=""
+          if [ -d "$GRIDS" ]; then GDIR="$GRIDS"
+          elif [ -d grids_deep ]; then GDIR=grids_deep
+          elif [ -d grids ]; then GDIR=grids
           else
             echo "NO GRIDS — unit tests already ran; skip live mine"
             exit 0
           fi
+          LARGS=()
           if [ -n "$LIMIT" ] && [ "$LIMIT" != "0" ]; then
-            ARGS+=(--limit "$LIMIT")
+            LARGS+=(--limit "$LIMIT")
           fi
-          python excel_bot/engine/excel_deep_corr_mine.py "${ARGS[@]}"
-          test -s 03_scoreboard/EXCEL_DEEP_CORR_MINE.md
-          test -s 03_scoreboard/excel_deep_corr_mine.json
+          python excel_bot/engine/excel_stat_mine.py --grids "$GDIR" "${LARGS[@]}"
+          python excel_bot/engine/excel_deep_corr_mine.py --grids "$GDIR" \
+            --min-disc "$MIN_DISC" --min-hold "$MIN_HOLD" "${LARGS[@]}"
+          test -s 03_scoreboard/EXCEL_STAT_MINE.md
+          test -s 03_scoreboard/excel_stat_mine.json
 
       - name: Show board
         if: always()
         run: |
-          echo "======== EXCEL DEEP CORR MINE ========"
-          if [ -f 03_scoreboard/EXCEL_DEEP_CORR_MINE.md ]; then
+          echo "======== EXCEL STAT MINE ========"
+          if [ -f 03_scoreboard/EXCEL_STAT_MINE.md ]; then
+            head -n 80 03_scoreboard/EXCEL_STAT_MINE.md
+          elif [ -f 03_scoreboard/EXCEL_DEEP_CORR_MINE.md ]; then
             head -n 80 03_scoreboard/EXCEL_DEEP_CORR_MINE.md
           else
             echo "NO BOARD"
           fi
 
       - name: Publish
-        if: hashFiles('03_scoreboard/EXCEL_DEEP_CORR_MINE.md') != ''
+        if: hashFiles('03_scoreboard/EXCEL_STAT_MINE.md') != '' || hashFiles('03_scoreboard/EXCEL_DEEP_CORR_MINE.md') != ''
         run: |
           bash scripts/safe_git_push.sh \
-            "chore: excel deep corr mine" \
+            "chore: excel whole-sheet stat mine" \
+            03_scoreboard/EXCEL_STAT_MINE.md \
+            03_scoreboard/excel_stat_mine.json \
             03_scoreboard/EXCEL_DEEP_CORR_MINE.md \
             03_scoreboard/excel_deep_corr_mine.json \
             03_scoreboard/excel_deep_corr_mine.csv
@@ -124,6 +129,8 @@ jobs:
         with:
           name: excel-deep-corr-mine
           path: |
+            03_scoreboard/EXCEL_STAT_MINE.md
+            03_scoreboard/excel_stat_mine.json
             03_scoreboard/EXCEL_DEEP_CORR_MINE.md
             03_scoreboard/excel_deep_corr_mine.json
             03_scoreboard/excel_deep_corr_mine.csv
@@ -132,11 +139,11 @@ jobs:
         if: always()
         run: |
           {
-            echo "## Excel deep corr mine"
+            echo "## Excel whole-sheet statistical mine"
             echo
-            echo "mcap > \$50M and avg vol > 100k. Clock-clean. Holdout must agree."
+            echo "A..JL. chi2 + FDR + Apriori. mcap > \$50M and avg vol > 100k."
             echo
-            if [ -f 03_scoreboard/EXCEL_DEEP_CORR_MINE.md ]; then
-              sed -n '1,60p' 03_scoreboard/EXCEL_DEEP_CORR_MINE.md
+            if [ -f 03_scoreboard/EXCEL_STAT_MINE.md ]; then
+              sed -n '1,60p' 03_scoreboard/EXCEL_STAT_MINE.md
             fi
           } >> "$GITHUB_STEP_SUMMARY"
