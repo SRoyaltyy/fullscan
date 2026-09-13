@@ -171,6 +171,10 @@ def why_sell(ticker: str, held: int, min_hold: int, early: bool,
         return f"condition exit after {held} sess"
     if kind == "time":
         return f"time-stop after {held} sess (min {min_hold})"
+    if kind == "take":
+        return f"take-profit after {held} sess"
+    if kind == "stop":
+        return f"stop-loss after {held} sess"
     if kind == "cut_loser":
         return f"cut loser after {held} sess (−{CUT_LOS:.0%} vs entry)"
     if kind == "trail":
@@ -180,12 +184,42 @@ def why_sell(ticker: str, held: int, min_hold: int, early: bool,
     return f"sold after {held} sess"
 
 
+def _frac(v) -> float | None:
+    if v is None:
+        return None
+    try:
+        x = float(v)
+    except (TypeError, ValueError):
+        return None
+    if x <= 0:
+        return None
+    return x
+
+
+def lot_open_ret(lot: dict, px: float | None, side: str) -> float | None:
+    """Signed open-vs-entry return. Leak-free: this morning's open vs our fill."""
+    entry = float(lot.get("entry_px") or 0) or 0.0
+    if px is None or entry <= 0:
+        return None
+    if side == "long":
+        return float(px) / entry - 1.0
+    return (entry - float(px)) / entry
+
+
 def lot_should_sell(lot: dict, *, held: int, min_hold: int, early: bool,
                     dropped: bool, sell_mode: str, px: float | None,
-                    side: str) -> tuple[bool, str]:
-    """Sell only lots we hold. Min-hold blocks everything except early exit."""
+                    side: str, take_pct=None, stop_pct=None) -> tuple[bool, str]:
+    """Sell only lots we hold. Min-hold blocks list-drop; take/stop may fire inside."""
     if early:
         return True, "early"
+    take = _frac(take_pct)
+    stop = _frac(stop_pct)
+    ret = lot_open_ret(lot, px, side)
+    if ret is not None:
+        if take is not None and ret >= take:
+            return True, "take"
+        if stop is not None and ret <= -stop:
+            return True, "stop"
     if held < min_hold:
         return False, "min_hold"
     mode = sell_mode or "list"
@@ -848,7 +882,8 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                 lot["last_px"] = px
             do_sell, kind = lot_should_sell(
                 lot, held=held, min_hold=min_hold, early=early,
-                dropped=dropped, sell_mode=sell_mode, px=px, side=side)
+                dropped=dropped, sell_mode=sell_mode, px=px, side=side,
+                take_pct=rec.get("take_pct"), stop_pct=rec.get("stop_pct"))
             if not do_sell:
                 if dropped and held < min_hold:
                     skips.append({
@@ -1063,6 +1098,8 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
         "rules": {k: rules[k] for k in BOOK_RULES},
         "size": size_mode,
         "sell": sell_mode,
+        "take_pct": rec.get("take_pct"),
+        "stop_pct": rec.get("stop_pct"),
         "s_boost": s_boost,
         "cash": round(cash, 2),
         "n_open": len(pos),

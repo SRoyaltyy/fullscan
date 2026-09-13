@@ -317,6 +317,105 @@ def test_min_hold_blocks_sell_until_floor() -> None:
     assert any(k["kind"] == "min_hold" for k in book["skips"])
 
 
+def test_bracket_take_and_stop_fire_inside_min_hold() -> None:
+    from src import factor_mine_book as fmb
+    from src import paper_trade as pt
+    cal = ["2026-08-17", "2026-08-18", "2026-08-19"]
+
+    def panel_for(ticker):
+        rows = [{
+            "date": d, "ticker": ticker, "sources": ["union"],
+            "boxes": {}, "alarm": False, "src_rank": 0,
+        } for d in cal]
+        return {
+            "session_dates": cal, "rows": rows,
+            "by_date": {d: [r] for d, r in zip(cal, rows)},
+        }
+
+    rec = fm.make_recipe("union_h5", hold=5, top_n=1,
+                         take_pct=0.08, stop_pct=0.05)
+    take_bars = {("UP", d): {"open": 10, "close": 10} for d in cal}
+    take_bars[("UP", "2026-08-18")] = {"open": 11.2, "close": 11.0}
+    take_book = fmb.simulate_book(
+        panel_for("UP"), rec, bars=take_bars, fees=pt.load_fees(), regime={})
+    takes = [t for t in take_book["trades"]
+             if t["side"] == "SELL" and "take-profit" in (t.get("reason") or "")]
+    assert len(takes) == 1
+    assert takes[0]["date"] == "2026-08-18"
+    assert takes[0]["held"] == 1
+
+    stop_bars = {("DN", d): {"open": 10, "close": 10} for d in cal}
+    stop_bars[("DN", "2026-08-18")] = {"open": 9.4, "close": 9.3}
+    stop_book = fmb.simulate_book(
+        panel_for("DN"), rec, bars=stop_bars, fees=pt.load_fees(), regime={})
+    stops = [t for t in stop_book["trades"]
+             if t["side"] == "SELL" and "stop-loss" in (t.get("reason") or "")]
+    assert len(stops) == 1
+    assert stops[0]["date"] == "2026-08-18"
+
+    keep_bars = {("FLAT", d): {"open": 10.2, "close": 10.1} for d in cal}
+    keep_bars[("FLAT", "2026-08-17")] = {"open": 10, "close": 10.1}
+    keep_book = fmb.simulate_book(
+        panel_for("FLAT"), rec, bars=keep_bars, fees=pt.load_fees(), regime={})
+    assert [t for t in keep_book["trades"] if t["side"] == "SELL"] == []
+
+    lot = {"entry_px": 10.0}
+    assert fmb.lot_should_sell(
+        lot, held=1, min_hold=5, early=False, dropped=False,
+        sell_mode="list", px=11.0, side="long", take_pct=0.08, stop_pct=0.05
+    ) == (True, "take")
+    assert fmb.lot_should_sell(
+        lot, held=1, min_hold=5, early=False, dropped=False,
+        sell_mode="list", px=9.4, side="long", take_pct=0.08, stop_pct=0.05
+    ) == (True, "stop")
+    assert fmb.lot_should_sell(
+        lot, held=1, min_hold=5, early=False, dropped=True,
+        sell_mode="list", px=10.2, side="long", take_pct=0.08, stop_pct=0.05
+    ) == (False, "min_hold")
+    ex = fm.explain_recipe(rec)
+    assert any("Take-profit" in x for x in ex["sell"])
+    assert any("Stop-loss" in x for x in ex["sell"])
+
+
+def test_js_bracket_take_inside_min_hold() -> None:
+    import subprocess
+    from pathlib import Path
+    Path("/tmp/fm_br_run.mjs").write_text(
+        """
+        import { readFileSync, writeFileSync } from 'node:fs';
+        import vm from 'node:vm';
+        vm.runInThisContext(readFileSync('src/factor_mine_sim.js','utf8'));
+        const pack = {
+          dates: ['2026-08-17','2026-08-18','2026-08-19'],
+          rows: [
+            {date:'2026-08-17', ticker:'UP', sources:['union'], boxes:{}, alarm:false, src_rank:0},
+            {date:'2026-08-18', ticker:'UP', sources:['union'], boxes:{}, alarm:false, src_rank:0},
+            {date:'2026-08-19', ticker:'UP', sources:['union'], boxes:{}, alarm:false, src_rank:0},
+          ],
+          tape: {UP: {
+            '2026-08-17':[10,10], '2026-08-18':[11.2,11], '2026-08-19':[11,11]
+          }},
+          s: {'2026-08-17':1,'2026-08-18':1,'2026-08-19':1},
+          hard_red: -3, capital: 10000,
+        };
+        const rec = {name:'union_h5', universe:'union', hold:5, top_n:1,
+                     sell:'list', take_pct:0.08, stop_pct:0.05};
+        const book = globalThis.FMSim.simulateBook(pack, rec, '2026-08-17', {});
+        const sells = (book.trades||[]).filter(t => t.side==='SELL');
+        writeFileSync('/tmp/fm_br_out.json', JSON.stringify({
+          n: sells.length, date: sells[0] && sells[0].date,
+          reason: sells[0] && sells[0].reason,
+        }));
+        """,
+        encoding="utf-8",
+    )
+    subprocess.check_call(["node", "/tmp/fm_br_run.mjs"])
+    out = json.loads(Path("/tmp/fm_br_out.json").read_text(encoding="utf-8"))
+    assert out["n"] == 1
+    assert out["date"] == "2026-08-18"
+    assert "take-profit" in (out["reason"] or "")
+
+
 def test_action_dropdown_auto_tweaks_neighbors() -> None:
     from src import factor_mine_book as fmb
     only = fmb.recipes_from_action(
@@ -1876,6 +1975,7 @@ if __name__ == "__main__":
     test_pothole_and_thin_sample_are_downranked()
     test_cash_book_whole_shares_fees_and_hard_red()
     test_min_hold_blocks_sell_until_floor()
+    test_bracket_take_and_stop_fire_inside_min_hold()
     test_action_dropdown_auto_tweaks_neighbors()
     test_src_rank_zero_is_first_not_last()
     test_live_entry_skips_hold_mornings()
@@ -1926,4 +2026,5 @@ if __name__ == "__main__":
     test_js_sim_matches_python_later_start()
     test_js_look_day_cams_and_white_yday()
     test_js_white_horizon_pool_then_score()
-    print("58 factor-mine tests passed")
+    test_js_bracket_take_inside_min_hold()
+    print("60 factor-mine tests passed")

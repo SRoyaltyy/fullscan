@@ -57,6 +57,8 @@
       size: rec.size || "leftover",
       sell: rec.sell || "list",
       s_boost: rec.s_boost || "none",
+      take_pct: rec.take_pct,
+      stop_pct: rec.stop_pct,
       looker: name,
     };
   }
@@ -75,6 +77,8 @@
       size: rec.size || "leftover",
       sell: rec.sell || "list",
       s_boost: rec.s_boost || "none",
+      take_pct: rec.take_pct,
+      stop_pct: rec.stop_pct,
       looker: name,
     };
   }
@@ -516,8 +520,20 @@
     }
     return Array(n).fill(room / n);
   }
-  function lotShouldSell(lot, held, minHold, early, dropped, sellMode, p, side) {
+  function lotOpenRet(lot, p, side) {
+    const entry = Number(lot && lot.entry_px || 0);
+    if (p == null || !entry) return null;
+    return side === "long" ? (p / entry - 1) : ((entry - p) / entry);
+  }
+  function lotShouldSell(lot, held, minHold, early, dropped, sellMode, p, side, takePct, stopPct) {
     if (early) return [true, "early"];
+    const take = takePct != null && Number(takePct) > 0 ? Number(takePct) : null;
+    const stop = stopPct != null && Number(stopPct) > 0 ? Number(stopPct) : null;
+    const ret = lotOpenRet(lot, p, side);
+    if (ret != null) {
+      if (take != null && ret >= take) return [true, "take"];
+      if (stop != null && ret <= -stop) return [true, "stop"];
+    }
     if (held < minHold) return [false, "min_hold"];
     const mode = sellMode || "list";
     const entry = Number(lot.entry_px || 0);
@@ -545,6 +561,8 @@
       if ((exitWhen || {}).news === "bad") return "exit news🔴 after " + held + " sess";
       return "condition exit after " + held + " sess";
     }
+    if (kind === "take") return "take-profit after " + held + " sess";
+    if (kind === "stop") return "stop-loss after " + held + " sess";
     if (kind === "time") return "time-stop after " + held + " sess (min " + minHold + ")";
     if (kind === "cut_loser") return "cut loser after " + held + " sess";
     if (kind === "trail") return "trail off peak after " + held + " sess";
@@ -716,7 +734,7 @@
           else lot.peak_px = Math.min(lot.peak_px || lot.entry_px, p);
           lot.last_px = p;
         }
-        const [doSell, kind] = lotShouldSell(lot, held, minHold, early, dropped, sellMode, p, side);
+        const [doSell, kind] = lotShouldSell(lot, held, minHold, early, dropped, sellMode, p, side, rec.take_pct, rec.stop_pct);
         if (!doSell) {
           if (dropped && held < minHold) {
             skips.push({ date, ticker: t, kind: "min_hold", reason: "dropped but min-hold " + held + "/" + minHold + " sess — no sell" });

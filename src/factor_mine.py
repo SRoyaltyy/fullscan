@@ -179,6 +179,7 @@ def make_recipe(name: str, *, universe: str = "union", hold: int = 1,
                 rank: str | None = None, exit_when: dict | None = None,
                 size: str = "leftover", sell: str = "list",
                 s_boost: str = "none", day_cap: float = 1.0,
+                take_pct: float | None = None, stop_pct: float | None = None,
                 note: str = "") -> dict:
     return {
         "name": name,
@@ -194,6 +195,8 @@ def make_recipe(name: str, *, universe: str = "union", hold: int = 1,
         "sell": sell or "list",
         "s_boost": s_boost or "none",
         "day_cap": float(day_cap),
+        "take_pct": take_pct,
+        "stop_pct": stop_pct,
         "note": note,
     }
 
@@ -607,8 +610,23 @@ def explain_recipe(rec: dict) -> dict:
         sell_bits.append("Early exit: sell at the next 09:30 if the last bar flipped red, even inside the floor.")
     if exit_when.get("news") == "bad":
         sell_bits.append("Early exit: sell at the next 09:30 if the news camera turns red, even inside the floor.")
-    if not exit_when:
+    take = _finite(rec.get("take_pct"))
+    stop = _finite(rec.get("stop_pct"))
+    if take and take > 0:
+        sell_bits.append(
+            f"Take-profit: sell at the next 09:30 if that open is {100 * take:g}% "
+            "better than our fill, even inside the minimum hold. "
+            "This is open vs our entry — not today's Change%."
+        )
+    if stop and stop > 0:
+        sell_bits.append(
+            f"Stop-loss: sell at the next 09:30 if that open is {100 * stop:g}% "
+            "worse than our fill, even inside the minimum hold."
+        )
+    if not exit_when and not (take and take > 0) and not (stop and stop > 0):
         sell_bits.append("No extra panic button — only the hold timer and the sell rule below.")
+    elif not exit_when:
+        sell_bits.append("The hold timer still applies if take-profit and stop-loss do not fire.")
     if sell_mode == "time":
         sell_bits.append(
             f"Time-stop: once {hold} session(s) are up, sell at 09:30 even if the name is still on the list."
@@ -921,6 +939,8 @@ def white_horizon_overlay(rec: dict) -> dict:
         size=base.get("size") or "leftover",
         sell=base.get("sell") or "list",
         s_boost=base.get("s_boost") or "none",
+        take_pct=base.get("take_pct"),
+        stop_pct=base.get("stop_pct"),
         note="same looker list; −0 red + (yday up or major catalyst); then Score",
     )
     out["looker"] = name
@@ -944,6 +964,8 @@ def white_yday_overlay(rec: dict) -> dict:
         size=base.get("size") or "leftover",
         sell=base.get("sell") or "list",
         s_boost=base.get("s_boost") or "none",
+        take_pct=base.get("take_pct"),
+        stop_pct=base.get("stop_pct"),
         note="same looker list; buy 0 red cameras + prior-session up; rank +G−R",
     )
     out["looker"] = name
@@ -2299,6 +2321,73 @@ def sweep_white_horizon(panel: dict, *, bars=None, fees=None,
     return out
 
 
+def sweep_bracket(panel: dict, *, bars=None, fees=None,
+                  regime=None) -> list[dict]:
+    """Take-profit / stop-loss on top of hold, on a few proven bases."""
+    from . import factor_mine_book as fmb
+    from . import paper_trade as pt
+    panel = ensure_sim_fields(rehydrate_panel(panel))
+    fees = fees if fees is not None else pt.load_fees()
+    named = {r["name"]: r for r in build_recipes()}
+    bases = []
+    for name in (
+        "union_white_both_n4_h5",
+        "union_white_both_n4_h2",
+        "union_white_any_h5",
+        "union_e_fresh_h3",
+        "flatten_h5",
+    ):
+        if name in named:
+            bases.append(named[name])
+    takes = (None, 0.03, 0.05, 0.08, 0.12, 0.20)
+    stops = (None, 0.03, 0.05, 0.08, 0.12)
+    out: list[dict] = []
+    for base in bases:
+        for take in takes:
+            for stop in stops:
+                if take is None and stop is None:
+                    tag = f"{base['name']}_plain"
+                else:
+                    t = "x" if take is None else f"{int(round(100 * take))}"
+                    s = "x" if stop is None else f"{int(round(100 * stop))}"
+                    tag = f"{base['name']}_t{t}s{s}"
+                rec = dict(base)
+                rec["name"] = tag
+                rec["take_pct"] = take
+                rec["stop_pct"] = stop
+                bk = fmb.simulate_book(
+                    panel, rec, bars=bars, fees=fees, regime=regime)
+                fills = sum(1 for d in (bk.get("daily") or [])
+                            if d.get("bought"))
+                kinds = {}
+                for t in bk.get("trades") or []:
+                    reason = str(t.get("reason") or "")
+                    if t.get("side") not in ("SELL", "COVER"):
+                        continue
+                    if "take-profit" in reason:
+                        kinds["take"] = kinds.get("take", 0) + 1
+                    elif "stop-loss" in reason:
+                        kinds["stop"] = kinds.get("stop", 0) + 1
+                out.append({
+                    "name": tag,
+                    "base": base["name"],
+                    "take_pct": take,
+                    "stop_pct": stop,
+                    "book_pct": bk.get("total_ret_pct"),
+                    "win_rate": bk.get("win_rate"),
+                    "n_trades": bk.get("n_trades"),
+                    "fill_mornings": fills,
+                    "n_days": len(bk.get("daily") or []),
+                    "n_take": kinds.get("take", 0),
+                    "n_stop": kinds.get("stop", 0),
+                })
+    out.sort(key=lambda r: (
+        -(r.get("book_pct") if r.get("book_pct") is not None else -999),
+        r["name"],
+    ))
+    return out
+
+
 def main(argv=None) -> int:
     from . import factor_mine_book as fmb
     ap = argparse.ArgumentParser()
@@ -2309,6 +2398,8 @@ def main(argv=None) -> int:
                     help="rewrite dashboard HTML from the current template; no remine")
     ap.add_argument("--sweep-white", action="store_true",
                     help="cash-book sweep: −0 red + (yday/catalyst) × hold × rank")
+    ap.add_argument("--sweep-bracket", action="store_true",
+                    help="cash-book sweep: take-profit / stop-loss on top of hold")
     ap.add_argument("--rebuild-panel", action="store_true")
     ap.add_argument("--land-closed", action="store_true",
                     help="reuse existing recipes; mine through last closed session")
@@ -2351,6 +2442,21 @@ def main(argv=None) -> int:
                   f"{_pct(r.get('win_rate')):>6} {r.get('n_trades') or 0:>5} "
                   f"{r.get('fill_mornings') or 0:>3}/{r.get('n_days') or 0:<3} "
                   f"{r['pool']:4s} h{r['hold']} n{r['top_n']} {r['rank']}")
+        return 0
+    if args.sweep_bracket:
+        panel = load_or_build_panel(
+            args.from_date, args.to_date or None,
+            rebuild=args.rebuild_panel)
+        rows = sweep_bracket(panel)
+        print(f"[factor-mine] bracket sweep n={len(rows)} "
+              f"to={panel.get('to_date')}", flush=True)
+        print(f"{'name':42s} {'book%':>8} {'win':>6} {'trd':>5} "
+              f"{'take':>4} {'stop':>4} base")
+        for r in rows:
+            print(f"{r['name']:42s} {_n(r.get('book_pct')):>8} "
+                  f"{_pct(r.get('win_rate')):>6} {r.get('n_trades') or 0:>5} "
+                  f"{r.get('n_take') or 0:>4} {r.get('n_stop') or 0:>4} "
+                  f"{r['base']}")
         return 0
     if args.land_closed:
         payload = land_closed(
