@@ -390,6 +390,71 @@ def test_run_skips_combos_when_members_absent() -> None:
     assert (payload.get("combos") or {}).get("n") == 0
 
 
+def test_leg_pnl_and_long_led_bar() -> None:
+    rec_by = {
+        "union_e_fresh_h3": {"name": "union_e_fresh_h3", "side": "long"},
+        "short_news_r_h3": {"name": "short_news_r_h3", "side": "short"},
+    }
+    book = {"trades": [
+        {"side": "SELL", "pnl": 2100.0, "owner": "union_e_fresh_h3"},
+        {"side": "COVER", "pnl": 500.0, "owner": "short_news_r_h3"},
+        {"side": "OPEN", "pnl": None},
+    ]}
+    legs = fmc.leg_pnl(book, rec_by)
+    assert legs["long_pnl"] == 2100.0
+    assert legs["short_pnl"] == 500.0
+    assert legs["long_share"] == 0.8077
+    st = {"total_ret_pct": 26.0, "start_green": 16, "start_n": 21,
+          **legs, "side": "mix"}
+    fmc.mark_long_led(st)
+    assert st["long_led"] is True
+    heat = {"total_ret_pct": 35.0, "start_green": 17, "start_n": 21,
+            "long_pnl": 1728.0, "short_pnl": 1961.0, "side": "mix"}
+    fmc.mark_long_led(heat)
+    assert heat["long_led"] is False
+    weak_starts = {"total_ret_pct": 22.0, "start_green": 10, "start_n": 21,
+                   "long_pnl": 2000.0, "short_pnl": 0.0, "side": "long"}
+    fmc.mark_long_led(weak_starts)
+    assert weak_starts["long_led"] is False
+    assert fmc.start_yes_floor(21) == 16
+
+
+def test_enrich_payload_legs_pins_long_led() -> None:
+    payload = {
+        "recipes": [
+            {"name": "union_e_fresh_h3", "side": "long"},
+            {"name": "short_news_r_h3", "side": "short"},
+        ],
+        "stats": [
+            {"name": "union_e_fresh_h3", "side": "long",
+             "total_ret_pct": 22.95, "start_green": 16, "start_n": 21},
+            {"name": "combo_sh_5050_shared", "side": "mix", "universe": "combo",
+             "total_ret_pct": 35.11, "start_green": 17, "start_n": 21},
+        ],
+        "books": {
+            "union_e_fresh_h3": {
+                "trades": [{"side": "SELL", "pnl": 2247.0}],
+                "realized": 2247.0,
+            },
+            "combo_sh_5050_shared": {"trades": [
+                {"side": "SELL", "pnl": 1728.0, "owner": "union_hot_n4_h1"},
+                {"side": "COVER", "pnl": 1961.0, "owner": "short_news_r_h3"},
+            ]},
+        },
+        "featured": ["combo_sh_5050_shared"],
+        "combos": {"n": 1},
+    }
+    out = fmc.enrich_payload_legs(payload)
+    e = next(s for s in out["stats"] if s["name"] == "union_e_fresh_h3")
+    sh = next(s for s in out["stats"] if s["name"] == "combo_sh_5050_shared")
+    assert e["long_led"] is True
+    assert e["long_share"] == 1.0
+    assert sh["long_led"] is False
+    assert sh["long_pnl"] == 1728.0
+    assert "union_e_fresh_h3" in out["combos"]["long_led"]
+    assert out["featured"][0] in fmc.LONG_LED_PIN
+
+
 if __name__ == "__main__":
     test_combo_specs_unique_and_members_known()
     test_choose_intents_priority_one_side()
@@ -406,4 +471,6 @@ if __name__ == "__main__":
     test_scorecard_best_of_both_and_rejects_eff_only()
     test_explain_recipe_combo_does_not_int_mix()
     test_run_skips_combos_when_members_absent()
-    print("15 factor-mine combo tests passed")
+    test_leg_pnl_and_long_led_bar()
+    test_enrich_payload_legs_pins_long_led()
+    print("17 factor-mine combo tests passed")

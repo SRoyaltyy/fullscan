@@ -2303,6 +2303,8 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
 
 def write_dash_html(payload: dict) -> Path:
     """Bake the current template + sim.js + payload into Pages HTML."""
+    from . import factor_mine_combo as fmc
+    payload = fmc.enrich_payload_legs(payload)
     DASH_DIR.mkdir(parents=True, exist_ok=True)
     dest = DASH_DIR / "index.html"
     if not TEMPLATE.is_file():
