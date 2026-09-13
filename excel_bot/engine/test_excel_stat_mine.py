@@ -1,7 +1,6 @@
 """Tests for whole-sheet statistical mine + crash-resume checkpoint."""
 from __future__ import annotations
 
-import json
 import os
 import sys
 import tempfile
@@ -10,10 +9,8 @@ import unittest
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
-from excel_stat_mine import (  # noqa: E402
-    ALL_LETTERS, _atomic_json, _chi2_p, _ranked_from_counts, bh_keep,
-    col_letters, load_ckpt,
-)
+from excel_stat_mine import ALL_LETTERS, _chi2_p, bh_keep, col_letters  # noqa: E402
+from excel_stat_mine_ckpt import _atomic_json, _ranked_from_counts, load_ckpt  # noqa: E402
 
 
 class Letters(unittest.TestCase):

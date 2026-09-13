@@ -1,4 +1,4 @@
-"""Run the statistical mine with A..JO pixel descriptors.
+"""Run the statistical mine with A..JO pixel descriptors + crash resume.
 
 python excel_bot/engine/excel_stat_mine_pixel_hook.py --grids grids_deep
 """
@@ -8,6 +8,7 @@ import math
 from collections import defaultdict
 
 import excel_stat_mine as m
+import excel_stat_mine_ckpt as ckpt
 from excel_pixel_desc import ALL_LETTERS, pixel_features
 
 
@@ -36,7 +37,8 @@ def discovery_quantiles_5(ticker_days, split_map):
 m.ALL_LETTERS = ALL_LETTERS
 m.features_at = pixel_features
 m.discovery_quantiles = discovery_quantiles_5
+ckpt.install()
 
 
 if __name__ == "__main__":
-    m.main()
+    ckpt.main()
