@@ -1,15 +1,9 @@
 name: Excel Deep Corr Mine
 
 # Whole-sheet Excel-emulator statistical mine (A..JO pixels).
-# Universe: Finviz mcap > $50M and average volume > 100k shares.
-# χ2 + mutual info + Benjamini-Hochberg FDR, then Apriori pairs.
-# Clock: rows above T + 09:30-knowable atoms. H/I are labels only.
-#
-# Crash contract: excel_stat_mine streams per ticker, writes
-# 03_scoreboard/excel_stat_mine_ckpt.json + a PARTIAL board every 25
-# tickers (and on SIGTERM). Next dispatch restores that ckpt from main
-# and skips processed names. cancel-in-progress is OFF so a re-dispatch
-# does not throw away an in-flight checkpoint flush.
+# Crash contract: stream + ckpt every 25 tickers. On timeout/fail the
+# continue job re-dispatches this same workflow with reset=false so the
+# next runner skips processed tickers and keeps walking.
 
 on:
   workflow_dispatch:
@@ -39,11 +33,17 @@ on:
         required: false
         default: false
         type: boolean
+      generation:
+        description: "Internal continue counter (do not set)"
+        required: false
+        default: "0"
+        type: string
   schedule:
     - cron: "20 11 * * 6"
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: excel-deep-corr-mine
@@ -209,9 +209,64 @@ jobs:
             echo "## Excel whole-sheet statistical mine (A..JO pixels)"
             echo
             echo "Streamed + checkpointed. Crash leaves PARTIAL board + ckpt."
-            echo "A..JO high-def pixels. chi2 + FDR + Apriori. mcap > \$50M and avg vol > 100k."
+            echo "A failed/timed-out run re-dispatches itself and resumes."
             echo
             if [ -f 03_scoreboard/EXCEL_STAT_MINE.md ]; then
               sed -n '1,60p' 03_scoreboard/EXCEL_STAT_MINE.md
             fi
           } >> "$GITHUB_STEP_SUMMARY"
+
+  continue:
+    needs: mine
+    if: always() && !cancelled()
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Redispatch if checkpoint is not done
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GEN: ${{ github.event.inputs.generation || '0' }}
+          GRIDS: ${{ github.event.inputs.grids || 'grids_deep' }}
+          LIMIT: ${{ github.event.inputs.limit || '0' }}
+          MIN_DISC: ${{ github.event.inputs.min_disc || '200' }}
+          MIN_HOLD: ${{ github.event.inputs.min_hold || '80' }}
+        run: |
+          set -uo pipefail
+          GEN="${GEN:-0}"
+          case "$GEN" in
+            ''|*[!0-9]*) GEN=0 ;;
+          esac
+          if [ "$GEN" -ge 8 ]; then
+            echo "generation=$GEN — stop auto-continue"
+            exit 0
+          fi
+          curl -fsSL "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/03_scoreboard/excel_stat_mine_ckpt.json" \
+            -o /tmp/ckpt.json || true
+          python3 - <<'PY'
+          import json, os, sys
+          p="/tmp/ckpt.json"
+          if not os.path.isfile(p) or os.path.getsize(p) < 8:
+              print("no ckpt on main — nothing to resume")
+              sys.exit(3)
+          raw=json.load(open(p))
+          print(f"ckpt phase={raw.get('phase')} done={raw.get('done')} "
+                f"tickers={len(raw.get('processed') or [])}")
+          if raw.get("done"):
+              print("mine finished — no redispatch")
+              sys.exit(2)
+          PY
+          RC=$?
+          if [ "$RC" = "2" ] || [ "$RC" = "3" ]; then
+            echo "no continue (rc=$RC)"
+            exit 0
+          fi
+          NEXT=$((GEN + 1))
+          echo "redispatch generation=$NEXT reset=false"
+          gh workflow run excel_deep_corr_mine.yml --ref main \
+            -f reset=false \
+            -f generation="$NEXT" \
+            -f grids="$GRIDS" \
+            -f limit="$LIMIT" \
+            -f min_disc="$MIN_DISC" \
+            -f min_hold="$MIN_HOLD"
+          echo "dispatched continue run $NEXT"
