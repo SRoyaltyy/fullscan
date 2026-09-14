@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-12",
+  "date": "2026-09-14",
   "env": "paper",
   "submit": true,
   "connected": true,
@@ -7,9 +7,14 @@
   "cash": 0.0,
   "n_positions": 0,
   "n_tickets": 0,
-  "n_would": 0,
+  "n_would": 4,
   "sent": [],
-  "generated": "2026-09-12T14:03:05",
+  "generated": "2026-09-14T09:06:28",
   "host": "api.sandbox.webull.com",
-  "account_id": "83GO0SKCO4C521H2KQ8FS57MNA"
+  "account_id": "83GO0SKCO4C521H2KQ8FS57MNA",
+  "source": "combo",
+  "combo": "combo_sh_macd_5050_shared",
+  "stale": false,
+  "policy": "combo_sh_macd_5050_shared",
+  "why": "combo_sh_macd_5050_shared shared 50/50 \u00b7 short=short_news_r_macd_h3 long=union_hot_n4_h1 \u00b7 rows via look \u00b7 hard-red S=-11.002 sit"
 }
