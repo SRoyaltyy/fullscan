@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T05:43:27.891687-04:00",
+  "generated_at": "2026-09-14T05:47:34.874293-04:00",
   "n": 322,
   "n_ok": 322,
   "families": [
@@ -1363,62 +1363,48 @@
     "flatten_robust": {
       "name": "flatten_robust",
       "family": "flatten",
-      "date": "2026-09-13",
+      "date": "2026-09-14",
       "side": "long",
       "buy": [
         {
-          "ticker": "SMMT",
+          "ticker": "DK",
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "ISRG",
+          "ticker": "TEL",
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "ICLR",
+          "ticker": "NVT",
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "INSP",
+          "ticker": "BG",
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "ATRC",
+          "ticker": "OLED",
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "CLOV",
-          "side": "long",
-          "predict": "UP"
-        },
-        {
-          "ticker": "LRMR",
-          "side": "long",
-          "predict": "UP"
-        },
-        {
-          "ticker": "OBE",
-          "side": "long",
-          "predict": "UP"
-        },
-        {
-          "ticker": "BLFS",
+          "ticker": "HYLN",
           "side": "long",
           "predict": "UP"
         }
       ],
       "sell": [],
-      "buy_n": 9,
+      "buy_n": 6,
       "sell_n": 0,
       "sit": true,
       "status": "ok",
-      "why": "morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held",
-      "hard_red": false,
+      "why": "S=-11.00; hard-red: no new buys; holds and due 1d exits stay",
+      "hard_red": true,
+      "s": -11.002,
       "note": "live flatten_robust card"
     },
     "union_h1": {

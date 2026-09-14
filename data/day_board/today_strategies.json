@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T05:43:27.891687-04:00",
+  "generated_at": "2026-09-14T05:47:34.874293-04:00",
   "n": 322,
   "n_ok": 322,
   "buy_1d": [
@@ -1552,73 +1552,52 @@
     },
     "flatten_robust": {
       "buy": [
-        "SMMT",
-        "ISRG",
-        "ICLR",
-        "INSP",
-        "ATRC",
-        "CLOV",
-        "LRMR",
-        "OBE",
-        "BLFS"
+        "DK",
+        "TEL",
+        "NVT",
+        "BG",
+        "OLED",
+        "HYLN"
       ],
       "sell": [],
       "sit": true,
       "status": "ok",
       "family": "flatten",
-      "date": "2026-09-13",
+      "date": "2026-09-14",
       "side": "long",
       "predict": [
         {
-          "ticker": "SMMT",
+          "ticker": "DK",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "ISRG",
+          "ticker": "TEL",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "ICLR",
+          "ticker": "NVT",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "INSP",
+          "ticker": "BG",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "ATRC",
+          "ticker": "OLED",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "CLOV",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "LRMR",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "OBE",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "BLFS",
+          "ticker": "HYLN",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
