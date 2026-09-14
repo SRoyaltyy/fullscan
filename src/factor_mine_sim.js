@@ -124,7 +124,8 @@
     const yr = ydayRet(pack, r, date);
     const extra2 = extra || {};
     const side = extra2.side || rec.side || "long";
-    const signed = holdReturn(pack, rec, r.ticker, date);
+    const fill = holdFill(pack, rec, r.ticker, date);
+    const signed = fill.ret;
     const pxRet = signed == null ? null
       : ((String(side).toLowerCase() === "short") ? -signed : signed);
     const stamp = Object.assign({
@@ -132,6 +133,9 @@
       score: rankScore(r, rec),
       ret: signed,
       px_ret: pxRet,
+      buy_px: fill.buy_px,
+      sell_px: fill.sell_px,
+      fill_reason: fill.reason,
       side,
       n_neg: nNeg,
       n_pos: nGood,
@@ -555,23 +559,37 @@
     if (i < 0) return [];
     return cal.slice(i, i + hold);
   }
-  function holdReturn(pack, rec, ticker, date) {
+  function holdFill(pack, rec, ticker, date) {
+    const empty = { buy_px: null, sell_px: null, ret: null, reason: null };
     const cal = pack.dates || [];
     const win = holdWindow(cal, date, Number(rec.hold || 1));
-    if (!win.length) return null;
+    if (!win.length) return empty;
     const entry = px(pack, ticker, date, "open") || px(pack, ticker, date, "close");
-    if (entry == null || entry === 0) return null;
+    if (entry == null || entry === 0) return empty;
+    const side = String(rec.side || "long").toLowerCase() === "short" ? "short" : "long";
+    const ix = rowIndex(pack);
+    const dateIx = Object.fromEntries(cal.map((d, i) => [d, i]));
+    const minHold = Number(rec.hold || 1);
+    const lot = { entry_px: entry, peak_px: entry };
     let exitDate = win[win.length - 1];
     let early = false;
-    const ix = rowIndex(pack);
-    if (rec.exit_when) {
-      for (const later of win.slice(1)) {
-        const nxt = ix[later + "|" + ticker];
-        if (nxt && shouldExit(nxt, rec.exit_when)) {
-          exitDate = later;
-          early = true;
-          break;
-        }
+    let reason = "horizon";
+    for (const later of win.slice(1)) {
+      const nxt = ix[later + "|" + ticker];
+      const cond = !!(rec.exit_when && shouldExit(nxt, rec.exit_when));
+      const p = px(pack, ticker, later, "open");
+      if (p == null) continue;
+      if (side === "long") lot.peak_px = Math.max(lot.peak_px || entry, p);
+      else lot.peak_px = Math.min(lot.peak_px || entry, p);
+      const held = (dateIx[later] != null ? dateIx[later] : dateIx[date]) - dateIx[date];
+      const [doSell, kind] = lotShouldSell(
+        lot, held, minHold, cond, false, rec.sell || "list", p, side,
+        rec.take_pct, rec.stop_pct);
+      if (doSell && (cond || kind === "take" || kind === "stop" || kind === "early")) {
+        exitDate = later;
+        early = true;
+        reason = cond || kind === "early" ? "early" : kind;
+        break;
       }
     }
     const exitBarWhich = early ? "open" : "close";
@@ -583,10 +601,24 @@
         if (outPx != null) break;
       }
     }
-    if (outPx == null || outPx === 0) return null;
+    if (outPx == null || outPx === 0) {
+      return { buy_px: roundPx(entry), sell_px: null, ret: null, reason: null };
+    }
     let ret = 100 * (outPx / entry - 1);
-    if ((rec.side || "long") === "short") ret = -ret;
-    return Math.round(ret * 1000) / 1000;
+    if (side === "short") ret = -ret;
+    return {
+      buy_px: roundPx(entry),
+      sell_px: roundPx(outPx),
+      ret: Math.round(ret * 1000) / 1000,
+      reason,
+    };
+  }
+  function roundPx(p) {
+    if (p == null || !Number.isFinite(Number(p))) return null;
+    return Math.round(Number(p) * 100) / 100;
+  }
+  function holdReturn(pack, rec, ticker, date) {
+    return holdFill(pack, rec, ticker, date).ret;
   }
   function lookDay(pack, rec, date, mornings) {
     const rows = byDate(pack)[date] || [];
@@ -1041,7 +1073,7 @@
   }
 
   global.FMSim = {
-    matches, pickDay, rankScore, lookDay, holdReturn, simulateBook, orderFees,
+    matches, pickDay, rankScore, lookDay, holdReturn, holdFill, simulateBook, orderFees,
     matchWhy, decisionWhy, hitTally, packRets, packPolarity,
     recipeSide, takeBucket, polarityPredict, polarityHit,
     sessionHasClosed, dateHasClose, lastClosedDate,

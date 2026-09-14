@@ -601,6 +601,54 @@ def test_js_bracket_take_inside_min_hold() -> None:
     assert "take-profit" in (out["reason"] or "")
 
 
+def test_js_hold_fill_buy_sell_respects_bracket() -> None:
+    import subprocess
+    from pathlib import Path
+    Path("/tmp/fm_fill_run.mjs").write_text(
+        """
+        import { readFileSync, writeFileSync } from 'node:fs';
+        import vm from 'node:vm';
+        vm.runInThisContext(readFileSync('src/factor_mine_sim.js','utf8'));
+        const pack = {
+          dates: ['2026-08-17','2026-08-18','2026-08-19'],
+          rows: [
+            {date:'2026-08-17', ticker:'UP', sources:['union'], boxes:{}, alarm:false, src_rank:0},
+            {date:'2026-08-18', ticker:'UP', sources:['union'], boxes:{}, alarm:false, src_rank:0},
+            {date:'2026-08-19', ticker:'UP', sources:['union'], boxes:{}, alarm:false, src_rank:0},
+            {date:'2026-08-17', ticker:'DN', sources:['union'], boxes:{}, alarm:false, src_rank:0},
+            {date:'2026-08-18', ticker:'DN', sources:['union'], boxes:{}, alarm:false, src_rank:0},
+            {date:'2026-08-19', ticker:'DN', sources:['union'], boxes:{}, alarm:false, src_rank:0},
+          ],
+          tape: {
+            UP: {'2026-08-17':[10,10.2], '2026-08-18':[11.2,11], '2026-08-19':[11,11]},
+            DN: {'2026-08-17':[10,9.8], '2026-08-18':[9.4,9.3], '2026-08-19':[9.2,9.1]},
+          },
+        };
+        const longTake = {universe:'union', hold:5, side:'long', take_pct:0.08, stop_pct:0.05};
+        const longHold = {universe:'union', hold:3, side:'long'};
+        const shortTake = {universe:'union', hold:5, side:'short', take_pct:0.08, stop_pct:0.05};
+        const a = globalThis.FMSim.holdFill(pack, longTake, 'UP', '2026-08-17');
+        const b = globalThis.FMSim.holdFill(pack, longHold, 'UP', '2026-08-17');
+        const c = globalThis.FMSim.holdFill(pack, shortTake, 'DN', '2026-08-17');
+        writeFileSync('/tmp/fm_fill_out.json', JSON.stringify({a,b,c}));
+        """,
+        encoding="utf-8",
+    )
+    subprocess.check_call(["node", "/tmp/fm_fill_run.mjs"])
+    out = json.loads(Path("/tmp/fm_fill_out.json").read_text(encoding="utf-8"))
+    assert out["a"]["buy_px"] == 10
+    assert out["a"]["sell_px"] == 11.2
+    assert out["a"]["reason"] == "take"
+    assert out["a"]["ret"] > 0
+    assert out["b"]["buy_px"] == 10
+    assert out["b"]["sell_px"] == 11
+    assert out["b"]["reason"] == "horizon"
+    assert out["c"]["buy_px"] == 10
+    assert out["c"]["sell_px"] == 9.2
+    assert out["c"]["reason"] == "take"
+    assert out["c"]["ret"] > 0
+
+
 def test_action_dropdown_auto_tweaks_neighbors() -> None:
     from src import factor_mine_book as fmb
     only = fmb.recipes_from_action(
@@ -778,6 +826,9 @@ def test_template_has_data_slot() -> None:
     assert "navbtns" in text
     assert "buy-banner" in text
     assert "Morning board" in text
+    assert ">Buy<" in text and ">Sell<" in text
+    assert ">Pred<" not in text
+    assert "fmtPx" in text
     assert "FMSim" in text or "__SIM_JS__" in text
     assert "syncProbeTickToBuys" in text
     assert "probeTickers" in text
