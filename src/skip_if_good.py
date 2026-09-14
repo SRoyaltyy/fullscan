@@ -503,6 +503,51 @@ def check_learn_cycle(date: str) -> bool:
     return _log(ok, "learn_cycle", date, f"daily_md={daily.exists()}")
 
 
+def check_strategy_tickets(date: str) -> bool:
+    """Open-pack tickets on disk are legal for this session.
+
+    Book / packet skip-if-good must not treat a Friday bake (or a
+    missing today_strategies.json) as today's every-sleeve board.
+    Does not change flatten_robust / Webull / hard-red sit.
+    """
+    paths = [
+        ROOT / "data" / "day_board" / "today_strategies.json",
+        ROOT / "data" / "day_board" / f"{date}_strategy_tickets.json",
+        ROOT / "dashboard" / "factor-mine" / "strategy_tickets.json",
+    ]
+    found = next((p for p in paths if p.is_file()), None)
+    if found is None:
+        return _log(False, "strategy_tickets", date, "tickets missing")
+    try:
+        data = json.loads(found.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return _log(False, "strategy_tickets", date, "tickets unreadable")
+    legal = str(
+        data.get("clock_legal_for")
+        or data.get("session_open")
+        or data.get("date")
+        or ""
+    )
+    if legal != date:
+        return _log(False, "strategy_tickets", date,
+                    f"clock_legal_for={legal!r} ≠ {date}")
+    strats = data.get("strategies") or {}
+    if not isinstance(strats, dict) or len(strats) < 10:
+        n = len(strats) if isinstance(strats, dict) else 0
+        return _log(False, "strategy_tickets", date, f"too few strategies ({n})")
+    families = {
+        str((v or {}).get("family") or "")
+        for v in strats.values() if isinstance(v, dict)
+    }
+    need = {"stock_book", "flatten", "factor_mine"}
+    missing = need - families
+    if missing:
+        return _log(False, "strategy_tickets", date,
+                    f"missing families {sorted(missing)}")
+    return _log(True, "strategy_tickets", date,
+                f"legal_for={legal} n={len(strats)} n_ok={data.get('n_ok')}")
+
+
 def check_preopen_full(date: str) -> bool:
     """Morning packet AND today's stock book — one-click pre-open done."""
     if not check_preopen_all(date):
@@ -661,6 +706,7 @@ JOBS = {
     "preopen_full": check_preopen_full,
     "map_heat_postclose": check_map_heat_postclose,
     "stock_book_all": check_stock_book_all,
+    "strategy_tickets": check_strategy_tickets,
     "label_weather": check_label_weather,
     "ab_checklist": check_ab_checklist,
     "daily_pipeline": check_daily_pipeline_outcome,

@@ -45,6 +45,12 @@ jobs:
           fi
           python3 -m py_compile src/strategy_tickets.py src/publish_live_boards.py
       - name: Write tickets
+        env:
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+          FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
         run: |
           DATE="${{ github.event.inputs.run_date }}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
@@ -76,7 +82,11 @@ jobs:
             data/factor_mine/strategy_tickets.json \
             dashboard/factor-mine/strategy_tickets.json \
             dashboard/factor-mine/today_strategies.json \
+            dashboard/today_strategies.json \
             dashboard/factor-mine/today.json \
+            dashboard/sleeve-merge/index.html \
+            dashboard/strategy-board/index.html \
+            dashboard/index.html \
             src/strategy_tickets.py \
             src/publish_live_boards.py \
             src/book_suggestions.py \
@@ -88,3 +98,9 @@ jobs:
               "auto: strategy tickets dated ${DATE}" \
               "data/day_board/${DATE}_strategy_tickets.json"
           fi
+          chmod +x scripts/publish_dashboard.sh || true
+          bash scripts/publish_dashboard.sh || true
+      - name: Restamp GitHub Pages
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy-dashboard.yml --ref main || true

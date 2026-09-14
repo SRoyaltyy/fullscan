@@ -10,7 +10,8 @@ Tickets stamp ``clock_legal_for`` / ``session_open`` so a Friday panel
 bake cannot read as Monday's open. Publish fails if bake ≠ session
 and there is no session-open look.
 
-Nothing here fetches prices. Soft-fail every source so
+Live Elite Overview Price is stamped on every buy/sell row after
+09:30 (`elite_live_px`). Soft-fail every source so
 publish_live_boards still writes a strip — except the clock assert.
 """
 from __future__ import annotations
@@ -61,7 +62,9 @@ def _tickers(rows) -> list[dict]:
                 item["score"] = row.get("score")
             elif row.get("total") is not None:
                 item["score"] = row.get("total")
-            for k in ("src", "kid_side", "side", "predict"):
+            for k in ("src", "kid_side", "side", "predict",
+                      "px", "px_src", "px_asof", "open_px", "open_src",
+                      "signal_date"):
                 if row.get(k) is not None:
                     item[k] = row.get(k)
             out.append(item)
@@ -74,6 +77,19 @@ def _tickers(rows) -> list[dict]:
 
 def _names(rows) -> list[str]:
     return [x["ticker"] for x in _tickers(rows) if x.get("ticker")]
+
+
+def _board_quote_rows(rows) -> list[dict]:
+    """Slim .io rows keep live/last Elite px — not ticker strings only."""
+    out = []
+    for row in _tickers(rows):
+        item = {"ticker": row["ticker"]}
+        for k in ("side", "predict", "px", "px_src", "px_asof", "open_px",
+                  "open_src"):
+            if row.get(k) is not None:
+                item[k] = row[k]
+        out.append(item)
+    return out
 
 
 def _tag_polarity(rows: list[dict], default_side: str) -> list[dict]:
@@ -124,7 +140,8 @@ def _entry(name: str, family: str, date: str, buy, sell, **extra) -> dict:
         "clock_legal_for": extra.get("clock_legal_for") or date,
         "session_open": extra.get("session_open") or date,
     }
-    for k in ("why", "hard_red", "s", "note", "panel_bake_date"):
+    for k in ("why", "hard_red", "s", "note", "panel_bake_date",
+              "research", "signal_date"):
         if extra.get(k) is not None:
             row[k] = extra[k]
     return row
@@ -280,6 +297,67 @@ def _session_look(date: str, panel: dict) -> dict:
         "want_date": date,
         "panel_bake_date": bake,
     }
+
+
+def excel_strats(date: str) -> list[dict]:
+    """Excel sleeves for this session open — never run_date as the clock.
+
+    ``signal_date`` is the confirm day. ``clock_legal_for`` is the session
+    you trade (``date``). A stale run_date (July bake) cannot read as
+    today's open.
+    """
+    path = ROOT / "excel_bot" / "suggestions" / "suggestions.csv"
+    if not path.is_file():
+        return [_entry("excel_all", "excel", date, [], [],
+                       status="missing", note="suggestions.csv missing",
+                       signal_date=None)]
+    import csv
+    by: dict[str, list[dict]] = {}
+    try:
+        with path.open(encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                strat = str(row.get("strategy") or "excel").strip() or "excel"
+                t = str(row.get("ticker") or "").strip().upper()
+                sig = str(row.get("signal_date") or "").strip()
+                if not t or not sig:
+                    continue
+                if sig != date:
+                    continue
+                side = str(row.get("side") or "LONG").strip().lower()
+                if side not in ("long", "short"):
+                    side = "long"
+                by.setdefault(strat, []).append({
+                    "ticker": t,
+                    "side": side,
+                    "signal_date": sig,
+                    "src": "excel",
+                })
+    except OSError as e:
+        return [_entry("excel_all", "excel", date, [], [],
+                       status="error", note=str(e)[:160])]
+    out = []
+    all_buys: list[dict] = []
+    for strat, rows in sorted(by.items()):
+        longs = [r for r in rows if r.get("side") == "long"]
+        shorts = [r for r in rows if r.get("side") == "short"]
+        all_buys.extend(rows)
+        out.append(_entry(
+            f"excel_{strat}", "excel", date, longs, shorts,
+            note="Excel confirm — clock_legal_for is session open, not run_date",
+            signal_date=date,
+            side="mixed" if longs and shorts else ("short" if shorts and not longs else "long"),
+        ))
+    out.insert(0, _entry(
+        "excel_all", "excel", date,
+        [r for r in all_buys if r.get("side") == "long"],
+        [r for r in all_buys if r.get("side") == "short"],
+        note="Excel all cards this session open (signal_date=date)",
+        signal_date=date,
+        status="ok" if all_buys else "no_session_signals",
+        side="mixed" if any(r.get("side") == "short" for r in all_buys)
+        and any(r.get("side") == "long" for r in all_buys) else "long",
+    ))
+    return out
 
 
 def stock_book_strats(date: str) -> list[dict]:
@@ -564,6 +642,116 @@ def _combo_would_buy(rows, rec_by: dict, members: list[str],
     return out
 
 
+def stamp_live_quotes(payload: dict, date: str) -> dict:
+    """Elite Price as-of-now on every buy/sell row. Not Theme Radar."""
+    from . import elite_live_px as elp
+    names: list[str] = []
+    for rec in (payload.get("strategies") or {}).values():
+        if not isinstance(rec, dict):
+            continue
+        for row in list(rec.get("buy") or []) + list(rec.get("sell") or []):
+            if isinstance(row, dict) and row.get("ticker"):
+                names.append(str(row["ticker"]))
+    book = elp.quote_book(date)
+    opens = elp.official_opens(sorted(set(names)), date)
+    payload["quote"] = {
+        "src": book.get("src"),
+        "at": book.get("at"),
+        "after_open": book.get("after_open"),
+        "n": book.get("n"),
+        "error": book.get("error"),
+        "clock_rule": book.get("clock_rule"),
+    }
+    for rec in (payload.get("strategies") or {}).values():
+        if not isinstance(rec, dict):
+            continue
+        rec["buy"] = elp.stamp_rows(rec.get("buy") or [], book, opens=opens)
+        rec["sell"] = elp.stamp_rows(rec.get("sell") or [], book, opens=opens)
+    return payload
+
+
+def attach_hard_red_research(payload: dict, date: str) -> dict:
+    """Per-sleeve short-only + dip-scoop RESEARCH. Live sit stays default.
+
+    Trigger is clock-clean: official open + session low (or Elite live
+    after 09:30). Close / last / Theme Radar never fill a scoop.
+    """
+    from . import factor_mine_combo as fmc
+    from . import hard_red_sit_research as hrs
+    grid = list(fmc.DIP_GRID)
+    quote = payload.get("quote") or {}
+    board = hrs.scoreboard_bars(date)
+    for rec in (payload.get("strategies") or {}).values():
+        if not isinstance(rec, dict):
+            continue
+        if not (rec.get("sit") or rec.get("hard_red")):
+            continue
+        looked = []
+        seen: set[tuple[str, str]] = set()
+        buy_n = len(rec.get("buy") or [])
+        for i, row in enumerate(list(rec.get("buy") or []) + list(rec.get("sell") or [])):
+            if not isinstance(row, dict) or not row.get("ticker"):
+                continue
+            t = str(row["ticker"]).upper()
+            default = "short" if i >= buy_n else (
+                rec.get("side") if rec.get("side") in ("long", "short") else "long"
+            )
+            side = str(row.get("kid_side") or row.get("side") or default or "long")
+            if side not in ("long", "short"):
+                side = "long"
+            if (t, side) in seen:
+                continue
+            seen.add((t, side))
+            bar = hrs.clock_bar(t, date)
+            pinned = board.get(t) or {}
+            o = bar.get("open")
+            if o is None:
+                o = row.get("open_px")
+            if o is None:
+                o = pinned.get("open")
+            live = row.get("px")
+            src = str(row.get("px_src") or quote.get("src") or "")
+            low = bar.get("low")
+            if low is None:
+                low = pinned.get("low")
+            mark = low
+            if mark is None and live is not None and src.startswith("elite_live"):
+                mark = float(live)
+            scoops = {}
+            for x in grid:
+                fill, kind = fmc.dip_limit_px(o, mark, x)
+                scoops[str(x)] = {
+                    "kind": kind,
+                    "x": x,
+                    "fill": None if fill is None else round(float(fill), 4),
+                }
+            looked.append({
+                "ticker": t,
+                "side": side,
+                "open": o,
+                "px": live,
+                "px_src": src or None,
+                "low": low,
+                "scoops": scoops,
+                "tag": "RESEARCH",
+            })
+        shorts = [x for x in looked if x.get("side") == "short"]
+        longs = [x for x in looked if x.get("side") != "short"]
+        rec["research"] = {
+            "tag": "RESEARCH",
+            "live_sit": True,
+            "keep_bar_unchanged": True,
+            "note": (
+                "Live policy sits. short_only / dip_scoop are paper "
+                "counterfactuals on looked names — not a wire. "
+                "KEEP bar unchanged. Close does not trigger a scoop."
+            ),
+            "short_only": shorts,
+            "dip_scoop": longs,
+        }
+    return payload
+
+
 def build(date: str) -> dict:
     strats: list[dict] = []
     errors: list[str] = []
@@ -571,6 +759,10 @@ def build(date: str) -> dict:
         strats.extend(stock_book_strats(date))
     except Exception as e:  # noqa: BLE001
         errors.append(f"stock_book:{e}")
+    try:
+        strats.extend(excel_strats(date))
+    except Exception as e:  # noqa: BLE001
+        errors.append(f"excel:{e}")
     try:
         strats.append(flatten_strat(date))
     except Exception as e:  # noqa: BLE001
@@ -607,6 +799,16 @@ def build(date: str) -> dict:
         ),
         "source": "strategy_tickets",
     }
+    try:
+        payload = stamp_live_quotes(payload, date)
+    except Exception as e:  # noqa: BLE001
+        errors.append(f"elite_px:{e}")
+        payload["errors"] = errors
+    try:
+        payload = attach_hard_red_research(payload, date)
+    except Exception as e:  # noqa: BLE001
+        errors.append(f"hard_red_research:{e}")
+        payload["errors"] = errors
     mismatch = session_look_mismatch(payload, date)
     if mismatch:
         warn = (
@@ -643,13 +845,15 @@ def write(date: str, payload: dict | None = None) -> list[Path]:
         "panel_bake_date": payload.get("panel_bake_date"),
         "n": payload.get("n"),
         "n_ok": payload.get("n_ok"),
-        "buy_1d": _names((payload.get("strategies") or {}).get("stock_book_1d", {}).get("buy")),
-        "sell_1d": _names((payload.get("strategies") or {}).get("stock_book_1d", {}).get("sell")),
+        "quote": payload.get("quote"),
+        "buy_1d": _board_quote_rows((payload.get("strategies") or {}).get("stock_book_1d", {}).get("buy")),
+        "sell_1d": _board_quote_rows((payload.get("strategies") or {}).get("stock_book_1d", {}).get("sell")),
         "strategies": {
             k: {
-                "buy": _names(v.get("buy")),
-                "sell": _names(v.get("sell")),
+                "buy": _board_quote_rows(v.get("buy")),
+                "sell": _board_quote_rows(v.get("sell")),
                 "sit": v.get("sit"),
+                "would_have": bool(v.get("sit") or v.get("hard_red")),
                 "status": v.get("status"),
                 "family": v.get("family"),
                 "date": v.get("date"),
@@ -662,6 +866,9 @@ def write(date: str, payload: dict | None = None) -> list[Path]:
                         "side": x.get("side") or v.get("side") or "long",
                         "predict": x.get("predict") or "UP",
                         "take": "BUY",
+                        "px": x.get("px"),
+                        "open_px": x.get("open_px"),
+                        "px_src": x.get("px_src"),
                     }
                     for x in (v.get("buy") or []) if isinstance(x, dict) and x.get("ticker")
                 ] + [
@@ -670,9 +877,13 @@ def write(date: str, payload: dict | None = None) -> list[Path]:
                         "side": "short",
                         "predict": x.get("predict") or "DOWN",
                         "take": "SELL",
+                        "px": x.get("px"),
+                        "open_px": x.get("open_px"),
+                        "px_src": x.get("px_src"),
                     }
                     for x in (v.get("sell") or []) if isinstance(x, dict) and x.get("ticker")
                 ],
+                "research": v.get("research"),
             }
             for k, v in (payload.get("strategies") or {}).items()
         },
@@ -680,6 +891,15 @@ def write(date: str, payload: dict | None = None) -> list[Path]:
     slim_path = DAY / "today_strategies.json"
     slim_path.write_text(json.dumps(slim, indent=2), encoding="utf-8")
     wrote.append(slim_path)
+    dash_slim = ROOT / "dashboard" / "today_strategies.json"
+    dash_slim.parent.mkdir(parents=True, exist_ok=True)
+    dash_slim.write_text(json.dumps(slim, indent=2), encoding="utf-8")
+    wrote.append(dash_slim)
+    try:
+        from . import hard_red_sit_research as hrs
+        hrs.write_per_sleeve(hrs.per_sleeve_from_tickets(payload), write=True)
+    except Exception as e:  # noqa: BLE001
+        print(f"[strategy-tickets] WARN: per-sleeve RESEARCH: {e}", flush=True)
     print(
         f"[strategy-tickets] {date} n={payload.get('n')} ok={payload.get('n_ok')} "
         f"errors={payload.get('errors') or []}",

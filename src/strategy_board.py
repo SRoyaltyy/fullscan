@@ -663,6 +663,11 @@ def write(rows: list[dict]) -> None:
         encoding="utf-8")
     (DASH_DIR / "index.html").write_text(render(rows), encoding="utf-8")
     (SCOREBOARD / "STRATEGY_BOARD.md").write_text(write_md(rows), encoding="utf-8")
+    try:
+        from src import book_suggestions
+        book_suggestions.ensure_dashboard_poller(DASH_DIR / "index.html")
+    except Exception as e:  # noqa: BLE001 — display poller must not block the catalog
+        print(f"[strategy-board] WARN: live poller: {e}", flush=True)
 
 
 def main(argv: list[str] | None = None) -> int:

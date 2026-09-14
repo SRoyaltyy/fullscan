@@ -150,6 +150,22 @@ jobs:
             echo "skip=yes" >> "$GITHUB_ENV"
           fi
 
+      - name: Open-pack tickets (even if book already good)
+        if: env.skip == 'yes'
+        env:
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+          FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
+          FINVIZ_SKIP_LIVE: ""
+        run: |
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          pip install pandas pyarrow openpyxl || pip install pandas || true
+          chmod +x scripts/publish_open_pack.sh
+          bash scripts/publish_open_pack.sh "$DATE"
+
       - name: Install
         if: env.skip != 'yes'
         run: |

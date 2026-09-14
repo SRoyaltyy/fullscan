@@ -8,6 +8,8 @@ name: Factor strategy mine
 # and rolls cash-start / investigator / books to last_closed_session so
 # .io advances without a manual remine. Morning Pre-Open / Stock Book
 # triggers become a no-op once yesterday is already on the board.
+# Every-sleeve BUY/SELL for the live open is strategy_tickets
+# (publish_strategy_tickets.yml / publish_open_pack.sh), not this remine.
 
 on:
   schedule:
