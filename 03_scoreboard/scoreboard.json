@@ -20436,18 +20436,119 @@
         "B7_OIL_DOLLAR": -1.0
       },
       "leading_sum": -8.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7611.44,
+      "actual_close": 7619.98,
+      "actual_pct_change": -0.48,
+      "actual_direction": "down",
+      "actual_magnitude_band": "mild",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": -2.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": -1.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": -1.0,
+          "status": "hit"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://tradingeconomics.com/united-states/stock-market",
+          "date_accessed": "2026-09-14",
+          "summary": "Confirms the direction and the semiconductor-led character of the decline.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnn.com/2026/09/14/investing/bond-yields-market-turmoil",
+          "date_accessed": "2026-09-14",
+          "summary": "Establishes the 5% yield milestone as a same-day intraday event.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://fortune.com/2026/09/14/ai-slowdown-stocks-nvidia-meta/",
+          "date_accessed": "2026-09-14",
+          "summary": "Directly documents the offsetting rotation that masked the index-level decline.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.bloomberg.com/news/articles/2026-09-13/us-stock-futures-fall-on-ai-warning-oil-gains-markets-wrap",
+          "date_accessed": "2026-09-14",
+          "summary": "Confirms both the AI-slowdown trigger and the oil backdrop in a single primary source.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.bloomberg.com/news/articles/2026-09-13/latest-oil-market-news-and-analysis-for-sept-14",
+          "date_accessed": "2026-09-14",
+          "summary": "Establishes the oil spike as a continuation of an existing war, not a new front.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.tbsnews.net/world/global-ai-stocks-fall-industry-chiefs-call-slowing-development-1542621",
+          "date_accessed": "2026-09-14",
+          "summary": "Dates the AI-slowdown shock to the weekend, making it fully knowable premarket.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.reuters.com/business/fed-hold-rates-steady-rest-2026-rising-number-analysts-see-least-one-hike-2026-09-09/",
+          "date_accessed": "2026-09-14",
+          "summary": "Documents the intraday hawkish repricing ahead of the Sep 16 FOMC.",
+          "verification": "http_401"
+        },
+        {
+          "url": "https://www.schwab.com/learn/story/stock-market-update-open",
+          "date_accessed": "2026-09-14",
+          "summary": "Confirms the mechanical software-vs-chips rotation that offset the semi selloff.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://bullionexchanges.com/blog/market-report-by-bullion-exchanges-sept-14-2026",
+          "date_accessed": "2026-09-14",
+          "summary": "Documents the safe-haven divergence — metals fell on a geopolitical-risk day.",
+          "verification": "quote_not_found"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -20477,7 +20578,14 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": -5.002,
-      "overlay_score": -6.0
+      "overlay_score": -6.0,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "AI-slowdown narrative shock (Amodei essay / Altman no-2026-IPO) crushing semiconductors (SOX -5.9%), offset by rotation into software, hyperscalers and defensives",
+      "key_interaction": "Offsetting/masking — a 5.9% semiconductor selloff was almost entirely cancelled by a rotation into software (CRM +3-4.7%, NOW +5%, IBM +2.4%, GOOGL +2.2%), hyperscalers (Meta, Microsoft green) and defensives (XLV +1.08%, XLP +1.03%, XLE +1.61%), producing a deceptively calm 0.73% SPX range",
+      "knowable_at_9am": "partially — direction and both catalysts were fully knowable premarket (AI shock published Sat, pipeline attack Sat, 10Y at 4.96% on 09-11, hike odds ~77%); the magnitude of the offsetting rotation and the absorption of the NQ -1.6% gap were NOT foreseeable",
+      "attribution_contested": "yes — Bloomberg/Schwab/Fortune lead with the AI-slowdown shock; TheStreet/CNN lead with the 10Y hitting 5%; Bloomberg/Al Jazeera/NYT lead with oil/Middle East; Trading Economics frames it as single-name drags (Caterpillar, Goldman, Nvidia)",
+      "outlier_watch": "Gold -1.26% and silver -2.17% FELL on a Middle East supply-shock day, and utilities (XLU) and REITs (XLRE) were GREEN despite the 10Y at 5% — both contradict a pure rates/geopolitical-risk story and point to equity-internal rotation as the true driver"
     },
     {
       "date": "2026-09-14",

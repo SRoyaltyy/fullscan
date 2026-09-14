@@ -1,6 +1,6 @@
 {
   "stage": "outcome",
-  "fetched_at": "2026-09-14T17:02:37.265689-04:00",
+  "fetched_at": "2026-09-14T18:06:31.111443-04:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -88,41 +88,41 @@
     "CL=F": {
       "available": true,
       "date": "2026-09-14",
-      "last": 101.94,
-      "pct_1d": 1.89
+      "last": 101.89,
+      "pct_1d": 1.84
     },
     "BZ=F": {
       "available": true,
       "date": "2026-09-14",
-      "last": 106.26,
-      "pct_1d": 1.58
+      "last": 106.15,
+      "pct_1d": 1.47
     },
     "GC=F": {
       "available": true,
       "date": "2026-09-14",
-      "last": 4337.7,
-      "pct_1d": -1.61
+      "last": 4340.0,
+      "pct_1d": -1.56
     },
     "DXY": {
       "available": true,
       "date": "2026-09-14",
       "source": "DX-Y.NYB",
-      "pct_1d": 0.36,
-      "pct_1m": -0.48
+      "pct_1d": 0.34,
+      "pct_1m": -0.5
     }
   },
   "futures": {
     "ES=F": {
       "available": true,
       "date": "2026-09-14",
-      "last": 7698.5,
-      "pct_1d": 0.51
+      "last": 7700.0,
+      "pct_1d": 0.53
     },
     "NQ=F": {
       "available": true,
       "date": "2026-09-14",
-      "last": 29488.0,
-      "pct_1d": 0.34
+      "last": 29489.75,
+      "pct_1d": 0.35
     }
   },
   "finviz_futures_tape": {
@@ -531,24 +531,24 @@
         },
         "DAX": {
           "available": true,
-          "date": "2026-09-14",
-          "last": 25440.81,
-          "pct_1d": -0.5
+          "date": "2026-09-11",
+          "last": 25568.56,
+          "pct_1d": 0.82
         },
         "CAC": {
           "available": true,
-          "date": "2026-09-14",
-          "last": 8117.78,
-          "pct_1d": -0.76
+          "date": "2026-09-11",
+          "last": 8179.77,
+          "pct_1d": 0.78
         },
         "EuroStoxx50": {
           "available": true,
-          "date": "2026-09-14",
-          "last": 6260.38,
-          "pct_1d": -1.02
+          "date": "2026-09-11",
+          "last": 6325.13,
+          "pct_1d": 0.9
         }
       },
-      "composite_avg": -0.46
+      "composite_avg": 0.73
     }
   },
   "etf_premarket": {},
