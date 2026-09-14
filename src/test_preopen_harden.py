@@ -262,6 +262,26 @@ def test_news_parse_honors_bypass_when_missing() -> None:
     assert "preopen.bypass_cutoff()" in judge
 
 
+def test_late_core_restamps_qc_and_grok() -> None:
+    """09-14: parse 124 then parsed.json landed; QC/Grok stayed 05:40 FAIL."""
+    pre = (ROOT / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
+    assert "Grok re-stamp (late core / prior FAIL)" in pre
+    assert "even past 09:25 ET" in pre
+    assert "review_stale" in pre
+    assert "PREOPEN_IN_PACKET" in pre
+    assert "past 09:25 ET — skipped; book already landed" not in pre
+    land = (ROOT / "src" / "land_file.py").read_text(encoding="utf-8")
+    assert "CORE_QC_RESTAMP" in land
+    assert '"news_parse"' in land
+    assert "_restamp_after_core_land" in land
+    grok = (ROOT / "src" / "grok_review.py").read_text(encoding="utf-8")
+    assert "def restamp(" in grok
+    assert "def review_stale(" in grok
+    assert "def qc_stamp_stale(" in grok
+    skip = (ROOT / "src" / "skip_if_good.py").read_text(encoding="utf-8")
+    assert "QC/Grok stamps missing or older than a late core artifact" in skip
+
+
 def test_parse_runs_when_credits_fail_or_past_cutoff() -> None:
     """09-09 hole: skip_writes ate parse on 402 / 09:25. Parse is file/DB."""
     pre = (ROOT / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
@@ -324,6 +344,7 @@ def main() -> None:
         test_deepseek_preflight_is_wired,
         test_parse_runs_when_credits_fail_or_past_cutoff,
         test_news_parse_honors_bypass_when_missing,
+        test_late_core_restamps_qc_and_grok,
     ]
     failed = 0
     for fn in tests:

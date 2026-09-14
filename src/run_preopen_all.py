@@ -485,6 +485,8 @@ def run(date: str | None = None, force: bool = False,
 
     skip_writes = False
     skip_essays = False
+    # Incremental land restamps QC only; finish owns the one Grok call.
+    os.environ["PREOPEN_IN_PACKET"] = "1"
     restore_persist(date)
     clock_late = preopen.past_predict_cutoff()
     late = (not force) and (not bypass_cutoff) and clock_late
@@ -750,21 +752,38 @@ def run(date: str | None = None, force: bool = False,
              [py, "-m", "src.catalyst_daily", "--date", date, *fa],
              timeout_s=catalyst_daily.CATALYST_STEP_S)
 
+    # Always rewrite QC from files on disk. A 05:40 FAIL must not outlive
+    # a late news_parse (or any other required core file) that landed after.
     qc_path = output_qc.write_preopen_report(date)
     report = output_qc.preopen_report(date)
     print("")
     print(output_qc.render(report))
     print(f"[preopen-all] wrote {qc_path}")
 
-    if (not force) and grok_review.prior_ok(date):
+    # Re-stamp Grok when the review file is missing or a core artifact is
+    # newer than the stamp (2026-09-14: parse 124, then parsed.json landed).
+    # A current honest FAIL (remaining hole) is not restamped — that would
+    # loop Grok on every late heal. Do not skip just because it is 09:25.
+    if (not force) and (not grok_review.review_stale(date)):
         grok = {"ok": True, "notes": "prior Grok text review still good — skipped",
                 "fails": []}
-        print("[preopen-all] skip Grok text review (prior_ok)")
-    elif (not force) and (not bypass_cutoff) and preopen.past_predict_cutoff():
-        grok = {"ok": True, "notes": "past 09:25 ET — skipped; book already landed",
-                "fails": []}
-        print("[preopen-all] skip Grok text review (past 09:25 ET)")
+        # Preserve the on-disk verdict (PASS or honest remaining FAIL).
+        try:
+            prev = json.loads(
+                _p("01_daily", f"{date}_grok_review.json").read_text(
+                    encoding="utf-8"))
+            grok = {
+                "ok": bool(prev.get("ok")) and not (prev.get("fails") or []),
+                "notes": prev.get("notes") or grok["notes"],
+                "fails": prev.get("fails") or [],
+            }
+        except (OSError, ValueError, json.JSONDecodeError):
+            pass
+        print("[preopen-all] skip Grok text review (stamps current)")
     else:
+        if grok_review.review_stale(date) and preopen.past_predict_cutoff():
+            print("[preopen-all] Grok re-stamp (late core / prior FAIL) "
+                  "even past 09:25 ET")
         grok = grok_review.review_preopen(date, mechanical_report=report)
         print("")
         print("-" * 72)
@@ -910,6 +929,7 @@ def run(date: str | None = None, force: bool = False,
         missing_required or not report.get("all_ok") or not grok.get("ok")
         or (with_book and not book_ok)
     )
+    os.environ.pop("PREOPEN_IN_PACKET", None)
     if degraded:
         print(
             f"[preopen-all] DEGRADED {date}: wrote whatever landed and will "

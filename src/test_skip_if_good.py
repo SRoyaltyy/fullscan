@@ -10,7 +10,7 @@ import tempfile
 from pathlib import Path
 from unittest import mock
 
-from src import green_pile, skip_if_good
+from src import green_pile, grok_review, skip_if_good
 
 
 def test_skip_constants_match_pile_and_avoid_pandas() -> None:
@@ -18,6 +18,45 @@ def test_skip_constants_match_pile_and_avoid_pandas() -> None:
     assert "from . import green_pile" not in src
     assert skip_if_good.EPS == green_pile.EPS
     assert skip_if_good.RELVOL_DEAD == green_pile.RELVOL_DEAD
+
+
+def test_preopen_full_requires_fresh_qc_grok_stamps() -> None:
+    """Packet files on disk + stale FAIL stamps must not skip the heal."""
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        daily = root / "01_daily"
+        daily.mkdir()
+        news = daily / "news"
+        news.mkdir()
+        parsed = news / "2026-09-14_parsed.json"
+        parsed.write_text('{"raw_count": 4}', encoding="utf-8")
+        qc_p = daily / "2026-09-14_preopen_qc.json"
+        gr_p = daily / "2026-09-14_grok_review.json"
+        qc_p.write_text(json.dumps({"all_ok": False}), encoding="utf-8")
+        gr_p.write_text(
+            json.dumps({"ok": False, "fails": [{"path": "parsed.json"}]}),
+            encoding="utf-8")
+        os.utime(qc_p, (1_000_000, 1_000_000))
+        os.utime(gr_p, (1_000_000, 1_000_000))
+        os.utime(parsed, (2_000_000, 2_000_000))
+        with mock.patch.object(skip_if_good, "ROOT", root), \
+                mock.patch.object(skip_if_good, "check_preopen_all",
+                                  return_value=True), \
+                mock.patch.object(skip_if_good, "check_stock_book_all",
+                                  return_value=True), \
+                mock.patch.object(grok_review, "ROOT", root):
+            assert skip_if_good.check_preopen_full("2026-09-14") is False
+        (daily / "2026-09-14_preopen_qc.json").write_text(
+            json.dumps({"all_ok": True}), encoding="utf-8")
+        (daily / "2026-09-14_grok_review.json").write_text(
+            json.dumps({"ok": True, "fails": []}), encoding="utf-8")
+        with mock.patch.object(skip_if_good, "ROOT", root), \
+                mock.patch.object(skip_if_good, "check_preopen_all",
+                                  return_value=True), \
+                mock.patch.object(skip_if_good, "check_stock_book_all",
+                                  return_value=True), \
+                mock.patch.object(grok_review, "ROOT", root):
+            assert skip_if_good.check_preopen_full("2026-09-14") is True
 
 
 def test_missing_date_is_run() -> None:
@@ -365,6 +404,7 @@ def test_thin_pile_fallback_is_legit_only_when_graded_and_core_fired() -> None:
 if __name__ == "__main__":
     test_thin_pile_fallback_is_legit_only_when_graded_and_core_fired()
     test_skip_constants_match_pile_and_avoid_pandas()
+    test_preopen_full_requires_fresh_qc_grok_stamps()
     test_missing_date_is_run()
     test_learn_requires_dated_file_not_stale_board()
     test_stock_book_requires_green_and_ranker_inputs()

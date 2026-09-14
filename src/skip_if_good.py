@@ -509,7 +509,12 @@ def check_preopen_full(date: str) -> bool:
         return _log(False, "preopen_full", date, "packet incomplete")
     if not check_stock_book_all(date):
         return _log(False, "preopen_full", date, "stock book / ranker inputs missing")
-    return _log(True, "preopen_full", date, "packet + book + green + ranker inputs")
+    # Files ✅ with a stale 05:40 FAIL stamp is not done (2026-09-14 parse).
+    from . import grok_review
+    if grok_review.qc_stamp_stale(date) or grok_review.review_stale(date):
+        return _log(False, "preopen_full", date,
+                    "QC/Grok stamps missing or older than a late core artifact")
+    return _log(True, "preopen_full", date, "packet + book + green + stamps")
 
 
 def check_general_reflect(date: str) -> bool:
