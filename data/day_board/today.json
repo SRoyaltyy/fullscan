@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T16:11:09.758351-04:00",
+  "generated_at": "2026-09-14T16:15:20.684974-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -498,13 +498,13 @@
       "date": "2026-09-14",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-14T16:11:09.016809-04:00",
+      "at": "2026-09-14T16:15:19.766232-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 21308,
+          "size": 31635,
           "preview": "2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR"
         },
         {
@@ -518,14 +518,14 @@
           "path": "data/day_board/2026-09-14.json",
           "ok": true,
           "reason": "",
-          "size": 47075,
+          "size": 61220,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
         },
         {
           "path": "data/day_board/2026-09-14_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 25587,
+          "size": 39732,
           "preview": "2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR"
         },
         {
@@ -560,7 +560,7 @@
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 25587,
+          "size": 39732,
           "preview": "2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR"
         },
         {
