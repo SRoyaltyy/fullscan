@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 2
 
-Cash book **-1.62%** ($9,838) · signal-only (no cash/fees) was -1.71%. Starts YES **4/22**. Fills 116 · skips 34 · realized $-162.33.
+Cash book **-1.62%** ($9,838) · signal-only (no cash/fees) was -1.69%. Starts YES **4/22**. Fills 116 · skips 34 · realized $-162.33.
 
 ## How this sleeve decides (like you are 10)
 

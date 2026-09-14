@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `yday_gainer` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-5.78%** ($9,422) · signal-only (no cash/fees) was +17.71%. Starts YES **1/22**. Fills 100 · skips 298 · realized $-611.09.
+Cash book **-5.78%** ($9,422) · signal-only (no cash/fees) was +17.66%. Starts YES **1/22**. Fills 100 · skips 298 · realized $-611.31.
 
 ## How this sleeve decides (like you are 10)
 
@@ -50,7 +50,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $7,822.91.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $7,822.69.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -343,17 +343,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | `VIST` | 1 | — | $77.33 | +0.00 | $76.27 | -1.06 | -1.06 | +0.00 | -1.06 |
 | 2026-09-11 | `BAND` | 1 | — | $52.55 | +0.00 | $56.87 | +4.32 | +4.32 | +0.00 | +4.32 |
 | 2026-09-14 | `ALEC` | 463 | $2.14 | $2.15 | +4.63 | — | +0.00 | +4.63 | -171.31 | — |
-| 2026-09-14 | `OABI` | 244 | $4.07 | $4.13 | +14.64 | — | +0.00 | +14.64 | -158.60 | — |
+| 2026-09-14 | `OABI` | 244 | $4.07 | $4.14 | +17.08 | — | +0.00 | +17.08 | -156.16 | — |
 | 2026-09-14 | `OPK` | 735 | $1.57 | $1.59 | +14.70 | — | +0.00 | +14.70 | +0.00 | — |
 | 2026-09-14 | `HQ` | 73 | $15.22 | $14.67 | -40.15 | — | +0.00 | -40.15 | -89.79 | — |
-| 2026-09-14 | `EOSE` | 332 | $3.95 | $3.77 | -59.76 | — | +0.00 | -59.76 | +83.00 | — |
-| 2026-09-14 | `DELL` | 2 | $567.29 | $538.57 | -57.44 | $534.08 | -8.98 | -66.42 | +49.58 | +40.60 |
+| 2026-09-14 | `EOSE` | 332 | $3.95 | $3.76 | -62.42 | — | +0.00 | -62.42 | +80.34 | — |
+| 2026-09-14 | `DELL` | 2 | $567.29 | $538.57 | -57.44 | $534.28 | -8.58 | -66.02 | +49.58 | +41.00 |
 | 2026-09-14 | `MLYS` | 41 | $28.20 | $28.14 | -2.46 | — | +0.00 | -2.46 | +5.74 | — |
 | 2026-09-14 | `CCOI` | 116 | $9.33 | $9.12 | -24.36 | — | +0.00 | -24.36 | -104.40 | — |
 | 2026-09-14 | `AMTX` | 41 | $2.01 | $2.01 | +0.00 | $1.95 | -2.46 | -2.46 | -1.23 | -3.69 |
 | 2026-09-14 | `CLOV` | 17 | $4.82 | $4.82 | +0.00 | $5.10 | +4.76 | +4.76 | +1.19 | +5.95 |
 | 2026-09-14 | `BAK` | 40 | $2.08 | $2.05 | -1.20 | $2.01 | -1.60 | -2.80 | -2.80 | -4.40 |
-| 2026-09-14 | `TYRA` | 3 | $22.03 | $23.20 | +3.51 | $25.07 | +5.61 | +9.12 | -1.29 | +4.32 |
+| 2026-09-14 | `TYRA` | 3 | $22.03 | $23.60 | +4.71 | $25.07 | +4.41 | +9.12 | -0.09 | +4.32 |
 | 2026-09-14 | `FUBO` | 7 | $11.53 | $11.56 | +0.21 | $11.87 | +2.17 | +2.38 | +0.07 | +2.24 |
 | 2026-09-14 | `VIST` | 1 | $76.27 | $77.10 | +0.83 | $76.41 | -0.69 | +0.14 | -0.23 | -0.92 |
 | 2026-09-14 | `BAND` | 1 | $56.87 | $56.90 | +0.03 | $48.97 | -7.93 | -7.90 | +4.35 | -3.58 |
@@ -383,7 +383,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | -13.95 | $151.21 | CRK×5, ARCT×5, SLN×5, EIX×1, CRDL×40, CLYM×6, SAFX×233, ALEC×463, OABI×244, OPK×735, HQ×73, EOSE×332, DELL×2, MLYS×41, CCOI×116 | $10,039.36 | -87.87 | -217.51 | — | — | $151.21 | $9,821.85 | CRK×5, ARCT×5, SLN×5, EIX×1, CRDL×40, CLYM×6, SAFX×233, ALEC×463, OABI×244, OPK×735, HQ×73, EOSE×332, DELL×2, MLYS×41, CCOI×116 |
 | 2026-09-10 | -13.28 | $151.21 | CRK×5, ARCT×5, SLN×5, EIX×1, CRDL×40, CLYM×6, SAFX×233, ALEC×463, OABI×244, OPK×735, HQ×73, EOSE×332, DELL×2, MLYS×41, CCOI×116 | $9,601.25 | -220.60 | -144.01 | — | — | $151.21 | $9,457.24 | CRK×5, ARCT×5, SLN×5, EIX×1, CRDL×40, CLYM×6, SAFX×233, ALEC×463, OABI×244, OPK×735, HQ×73, EOSE×332, DELL×2, MLYS×41, CCOI×116 |
 | 2026-09-11 | +0.50 | $151.21 | CRK×5, ARCT×5, SLN×5, EIX×1, CRDL×40, CLYM×6, SAFX×233, ALEC×463, OABI×244, OPK×735, HQ×73, EOSE×332, DELL×2, MLYS×41, CCOI×116 | $9,553.18 | +95.94 | +66.59 | AMTX, CLOV, BAK, TYRA, FUBO, VIST, BAND | CRK, ARCT, SLN, EIX, CRDL, CLYM, SAFX | $146.83 | $9,607.69 | ALEC×463, OABI×244, OPK×735, HQ×73, EOSE×332, DELL×2, MLYS×41, CCOI×116, AMTX×41, CLOV×17, BAK×40, TYRA×3, FUBO×7, VIST×1, BAND×1 |
-| 2026-09-14 | -11.00 | $146.83 | ALEC×463, OABI×244, OPK×735, HQ×73, EOSE×332, DELL×2, MLYS×41, CCOI×116, AMTX×41, CLOV×17, BAK×40, TYRA×3, FUBO×7, VIST×1, BAND×1 | $9,460.87 | -146.82 | -9.12 | — | ALEC, OABI, OPK, HQ, EOSE, MLYS, CCOI | $7,822.91 | $9,421.80 | DELL×2, AMTX×41, CLOV×17, BAK×40, TYRA×3, FUBO×7, VIST×1, BAND×1 |
+| 2026-09-14 | -11.00 | $146.83 | ALEC×463, OABI×244, OPK×735, HQ×73, EOSE×332, DELL×2, MLYS×41, CCOI×116, AMTX×41, CLOV×17, BAK×40, TYRA×3, FUBO×7, VIST×1, BAND×1 | $9,461.85 | -145.84 | -9.92 | — | ALEC, OABI, OPK, HQ, EOSE, MLYS, CCOI | $7,822.69 | $9,421.98 | DELL×2, AMTX×41, CLOV×17, BAK×40, TYRA×3, FUBO×7, VIST×1, BAND×1 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -524,15 +524,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 09:30 ET | **BUY** | `VIST` | 1 | $77.33 | $0.78 | — | $199.91 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=+2.5; leftover $85.41 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-11 09:30 ET | **BUY** | `BAND` | 1 | $52.55 | $0.53 | — | $146.83 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ⚪; ret5=+8.6; leftover $85.41 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $146.83 | ▲ close $9,607.69 vs 09:30 $9,553.18 (session +66.59) | 16:00 close · cash $146.83 · equity $9,607.69 vs 09:30 $9,553.18 (+54.51; session marks +66.59) · 15 name(s) marked open→close (per-name table). ALEC×463 09:30 $2.17 → close $2.14 -13.89; OABI×244 09:30 $3.97 → close $4.07 +24.40; OPK×735 09:30 $1.49 → close $1.57 +58.80; HQ×73 09:30 $15.45 → close $15.22 -16.79; EOSE×332 09:30 $4.05 → close $3.95 -33.20; DELL×2 09:30 $518.07 → close $567.29 +98.44; MLYS×41 09:30 $29.65 → close $28.20 -59.45; CCOI×116 09:30 $9.23 → close $9.33 +11.60; AMTX×41 09:30 $2.04 → close $2.01 -1.23; CLOV×17 09:30 $4.75 → close $4.82 +1.19; BAK×40 09:30 $2.12 → close $2.08 -1.60; TYRA×3 09:30 $23.63 → close $22.03 -4.80; FUBO×7 09:30 $11.55 → close $11.53 -0.14; VIST×1 09:30 $77.33 → close $76.27 -1.06; BAND×1 09:30 $52.55 → close $56.87 +4.32 | — |
-| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $146.83 | ▼ 09:30 equity $9,460.87 vs yday $9,607.69 (-146.82) | 09:30 open · cash $146.83 (unchanged overnight, no fees) · equity $9,460.87 vs prior close $9,607.69 (-146.82) · 15 name(s) re-marked at the open (per-name table). ALEC×463 yday $2.14 → 09:30 $2.15 +4.63; OABI×244 yday $4.07 → 09:30 $4.13 +14.64; OPK×735 yday $1.57 → 09:30 $1.59 +14.70; HQ×73 yday $15.22 → 09:30 $14.67 -40.15; EOSE×332 yday $3.95 → 09:30 $3.77 -59.76; DELL×2 yday $567.29 → 09:30 $538.57 -57.44; MLYS×41 yday $28.20 → 09:30 $28.14 -2.46; CCOI×116 yday $9.33 → 09:30 $9.12 -24.36; AMTX×41 yday $2.01 → 09:30 $2.01 +0.00; CLOV×17 yday $4.82 → 09:30 $4.82 +0.00; BAK×40 yday $2.08 → 09:30 $2.05 -1.20; TYRA×3 yday $22.03 → 09:30 $23.20 +3.51; FUBO×7 yday $11.53 → 09:30 $11.56 +0.21; VIST×1 yday $76.27 → 09:30 $77.10 +0.83; BAND×1 yday $56.87 → 09:30 $56.90 +0.03 | — |
-| 2026-09-14 09:30 ET | **SELL** | `ALEC` | 463 | $2.15 | $6.06 | $-183.34 | $1,136.22 | ▼ -183.34 after sell → book $9,454.81; vs 09:30 mark -6.06 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-14 09:30 ET | **SELL** | `OABI` | 244 | $4.13 | $3.20 | $-164.95 | $2,140.74 | ▼ -164.95 after sell → book $9,451.61; vs 09:30 mark -3.20 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-14 09:30 ET | **SELL** | `OPK` | 735 | $1.59 | $9.61 | $-19.10 | $3,299.78 | ▼ -19.10 after sell → book $9,442.00; vs 09:30 mark -9.61 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-14 09:30 ET | **SELL** | `HQ` | 73 | $14.67 | $2.23 | $-94.23 | $4,368.46 | ▼ -94.23 after sell → book $9,439.77; vs 09:30 mark -2.23 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-14 09:30 ET | **SELL** | `EOSE` | 332 | $3.77 | $4.35 | $+74.37 | $5,615.75 | ▲ +74.37 after sell → book $9,435.42; vs 09:30 mark -4.35 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-14 09:30 ET | **SELL** | `MLYS` | 41 | $28.14 | $2.13 | $+1.49 | $6,767.36 | ▲ +1.49 after sell → book $9,433.29; vs 09:30 mark -2.13 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-14 09:30 ET | **SELL** | `CCOI` | 116 | $9.12 | $2.37 | $-109.11 | $7,822.91 | ▼ -109.11 after sell → book $9,430.92; vs 09:30 mark -2.37 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,822.91 | ▼ close $9,421.80 vs 09:30 $9,460.87 (session -9.12) | 16:00 close · cash $7,822.91 · equity $9,421.80 vs 09:30 $9,460.87 (-39.07; session marks -9.12) · 8 name(s) marked open→close (per-name table). DELL×2 09:30 $538.57 → close $534.08 -8.98; AMTX×41 09:30 $2.01 → close $1.95 -2.46; CLOV×17 09:30 $4.82 → close $5.10 +4.76; BAK×40 09:30 $2.05 → close $2.01 -1.60; TYRA×3 09:30 $23.20 → close $25.07 +5.61; FUBO×7 09:30 $11.56 → close $11.87 +2.17; VIST×1 09:30 $77.10 → close $76.41 -0.69; BAND×1 09:30 $56.90 → close $48.97 -7.93 | — |
+| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $146.83 | ▼ 09:30 equity $9,461.85 vs yday $9,607.69 (-145.84) | 09:30 open · cash $146.83 (unchanged overnight, no fees) · equity $9,461.85 vs prior close $9,607.69 (-145.84) · 15 name(s) re-marked at the open (per-name table). ALEC×463 yday $2.14 → 09:30 $2.15 +4.63; OABI×244 yday $4.07 → 09:30 $4.14 +17.08; OPK×735 yday $1.57 → 09:30 $1.59 +14.70; HQ×73 yday $15.22 → 09:30 $14.67 -40.15; EOSE×332 yday $3.95 → 09:30 $3.76 -62.42; DELL×2 yday $567.29 → 09:30 $538.57 -57.44; MLYS×41 yday $28.20 → 09:30 $28.14 -2.46; CCOI×116 yday $9.33 → 09:30 $9.12 -24.36; AMTX×41 yday $2.01 → 09:30 $2.01 +0.00; CLOV×17 yday $4.82 → 09:30 $4.82 +0.00; BAK×40 yday $2.08 → 09:30 $2.05 -1.20; TYRA×3 yday $22.03 → 09:30 $23.60 +4.71; FUBO×7 yday $11.53 → 09:30 $11.56 +0.21; VIST×1 yday $76.27 → 09:30 $77.10 +0.83; BAND×1 yday $56.87 → 09:30 $56.90 +0.03 | — |
+| 2026-09-14 09:30 ET | **SELL** | `ALEC` | 463 | $2.15 | $6.06 | $-183.34 | $1,136.22 | ▼ -183.34 after sell → book $9,455.79; vs 09:30 mark -6.06 | dropped from list after 5 sess (min 5) | — |
+| 2026-09-14 09:30 ET | **SELL** | `OABI` | 244 | $4.14 | $3.20 | $-162.51 | $2,143.18 | ▼ -162.51 after sell → book $9,452.59; vs 09:30 mark -3.20 | dropped from list after 5 sess (min 5) | — |
+| 2026-09-14 09:30 ET | **SELL** | `OPK` | 735 | $1.59 | $9.61 | $-19.10 | $3,302.22 | ▼ -19.10 after sell → book $9,442.98; vs 09:30 mark -9.61 | dropped from list after 5 sess (min 5) | — |
+| 2026-09-14 09:30 ET | **SELL** | `HQ` | 73 | $14.67 | $2.23 | $-94.23 | $4,370.90 | ▼ -94.23 after sell → book $9,440.75; vs 09:30 mark -2.23 | dropped from list after 5 sess (min 5) | — |
+| 2026-09-14 09:30 ET | **SELL** | `EOSE` | 332 | $3.76 | $4.35 | $+71.71 | $5,615.53 | ▲ +71.71 after sell → book $9,436.40; vs 09:30 mark -4.35 | dropped from list after 5 sess (min 5) | — |
+| 2026-09-14 09:30 ET | **SELL** | `MLYS` | 41 | $28.14 | $2.13 | $+1.49 | $6,767.14 | ▲ +1.49 after sell → book $9,434.27; vs 09:30 mark -2.13 | dropped from list after 5 sess (min 5) | — |
+| 2026-09-14 09:30 ET | **SELL** | `CCOI` | 116 | $9.12 | $2.37 | $-109.11 | $7,822.69 | ▼ -109.11 after sell → book $9,431.90; vs 09:30 mark -2.37 | dropped from list after 5 sess (min 5) | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,822.69 | ▼ close $9,421.98 vs 09:30 $9,461.85 (session -9.92) | 16:00 close · cash $7,822.69 · equity $9,421.98 vs 09:30 $9,461.85 (-39.87; session marks -9.92) · 8 name(s) marked open→close (per-name table). DELL×2 09:30 $538.57 → close $534.28 -8.58; AMTX×41 09:30 $2.01 → close $1.95 -2.46; CLOV×17 09:30 $4.82 → close $5.10 +4.76; BAK×40 09:30 $2.05 → close $2.01 -1.60; TYRA×3 09:30 $23.60 → close $25.07 +4.41; FUBO×7 09:30 $11.56 → close $11.87 +2.17; VIST×1 09:30 $77.10 → close $76.41 -0.69; BAND×1 09:30 $56.90 → close $48.97 -7.93 | — |
 
 ## Not taken
 

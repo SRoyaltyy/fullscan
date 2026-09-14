@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `ret_5` · size `leftover` · sell `list` · S-boost `none` · rank by ret_5
 
-Cash book **+16.91%** ($11,691) · signal-only (no cash/fees) was +45.10%. Starts YES **20/22**. Fills 131 · skips 220 · realized $+1051.75.
+Cash book **+16.91%** ($11,691) · signal-only (no cash/fees) was +45.22%. Starts YES **20/22**. Fills 131 · skips 220 · realized $+1051.75.
 
 ## How this sleeve decides (like you are 10)
 
@@ -325,7 +325,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `INDP` | 584 | $2.77 | $2.80 | +17.52 | $3.14 | +198.56 | +216.08 | +58.40 | +256.96 |
 | 2026-09-14 | `BNC` | 321 | $4.80 | $4.96 | +51.36 | $5.27 | +99.51 | +150.87 | +16.05 | +115.56 |
 | 2026-09-14 | `CYPH` | 660 | $2.27 | $2.25 | -9.90 | $2.58 | +217.80 | +207.90 | -92.40 | +125.40 |
-| 2026-09-14 | `ASO` | 28 | $55.36 | $54.75 | -17.08 | $54.25 | -14.00 | -31.08 | -4.48 | -18.48 |
+| 2026-09-14 | `ASO` | 28 | $55.36 | $54.65 | -19.88 | $54.25 | -11.20 | -31.08 | -7.28 | -18.48 |
 | 2026-09-14 | `CMRC` | 504 | $3.50 | $3.51 | +2.52 | $3.64 | +65.52 | +68.04 | +191.52 | +257.04 |
 | 2026-09-14 | `WLTH` | 144 | $10.38 | $10.29 | -12.96 | $10.65 | +51.84 | +38.88 | -95.04 | -43.20 |
 | 2026-09-14 | `APPS` | 132 | $11.81 | $11.75 | -7.92 | $11.72 | -3.30 | -11.22 | -17.16 | -20.46 |
@@ -355,7 +355,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | -13.95 | $21.70 | GPRO×796, MMED×59, SION×193, CNH×103, PBR×66, PBR-A×74, TARS×17, FRVO×77, BRR×2, IRD×1, SLBT×1, BAK×2 | $11,077.50 | -12.68 | +0.54 | — | GPRO, MMED, SION, CNH, PBR, PBR-A, TARS, FRVO | $11,033.75 | $11,051.75 | BRR×2, IRD×1, SLBT×1, BAK×2 |
 | 2026-09-10 | -13.28 | $11,033.75 | BRR×2, IRD×1, SLBT×1, BAK×2 | $11,051.88 | +0.13 | +0.20 | — | BRR, SLBT, BAK | $11,045.81 | $11,051.88 | IRD×1 |
 | 2026-09-11 | +0.50 | $11,045.81 | IRD×1 | $11,051.97 | +0.09 | +33.23 | INDP, BNC, CYPH, ASO, CMRC, WLTH, APPS | — | $21.97 | $11,051.63 | IRD×1, INDP×584, BNC×321, CYPH×660, ASO×28, CMRC×504, WLTH×144, APPS×132 |
-| 2026-09-14 | -11.00 | $21.97 | IRD×1, INDP×584, BNC×321, CYPH×660, ASO×28, CMRC×504, WLTH×144, APPS×132 | $11,075.15 | +23.52 | +615.93 | — | IRD | $27.91 | $11,691.00 | INDP×584, BNC×321, CYPH×660, ASO×28, CMRC×504, WLTH×144, APPS×132 |
+| 2026-09-14 | -11.00 | $21.97 | IRD×1, INDP×584, BNC×321, CYPH×660, ASO×28, CMRC×504, WLTH×144, APPS×132 | $11,072.35 | +20.72 | +618.73 | — | IRD | $27.91 | $11,691.00 | INDP×584, BNC×321, CYPH×660, ASO×28, CMRC×504, WLTH×144, APPS×132 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -533,9 +533,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 09:30 ET | **BUY** | `WLTH` | 144 | $10.95 | $2.42 | — | $1,592.52 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; 🔵; ret5=+20.8; leftover $1577.97 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-11 09:30 ET | **BUY** | `APPS` | 132 | $11.88 | $2.39 | — | $21.97 | — | rank by ret_5; rank ret_5; list yday_gainer; 🔵; ret5=+20.7; leftover $1577.97 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $21.97 | ▲ close $11,051.63 vs 09:30 $11,051.97 (session +33.23) | 16:00 close · cash $21.97 · equity $11,051.63 vs 09:30 $11,051.97 (-0.34; session marks +33.23) · 8 name(s) marked open→close (per-name table). IRD×1 09:30 $6.16 → close $6.04 -0.12; INDP×584 09:30 $2.70 → close $2.77 +40.88; BNC×321 09:30 $4.91 → close $4.80 -35.31; CYPH×660 09:30 $2.39 → close $2.27 -82.50; ASO×28 09:30 $54.91 → close $55.36 +12.60; CMRC×504 09:30 $3.13 → close $3.50 +189.00; WLTH×144 09:30 $10.95 → close $10.38 -82.08; APPS×132 09:30 $11.88 → close $11.81 -9.24 | — |
-| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $21.97 | ▲ 09:30 equity $11,075.15 vs yday $11,051.63 (+23.52) | 09:30 open · cash $21.97 (unchanged overnight, no fees) · equity $11,075.15 vs prior close $11,051.63 (+23.52) · 8 name(s) re-marked at the open (per-name table). IRD×1 yday $6.04 → 09:30 $6.02 -0.02; INDP×584 yday $2.77 → 09:30 $2.80 +17.52; BNC×321 yday $4.80 → 09:30 $4.96 +51.36; CYPH×660 yday $2.27 → 09:30 $2.25 -9.90; ASO×28 yday $55.36 → 09:30 $54.75 -17.08; CMRC×504 yday $3.50 → 09:30 $3.51 +2.52; WLTH×144 yday $10.38 → 09:30 $10.29 -12.96; APPS×132 yday $11.81 → 09:30 $11.75 -7.92 | — |
-| 2026-09-14 09:30 ET | **SELL** | `IRD` | 1 | $6.02 | $0.08 | $+1.36 | $27.91 | ▲ +1.36 after sell → book $11,075.07; vs 09:30 mark -0.08 | dropped from list after 5 sess (min 3) | — |
-| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $27.91 | ▲ close $11,691.00 vs 09:30 $11,075.15 (session +615.93) | 16:00 close · cash $27.91 · equity $11,691.00 vs 09:30 $11,075.15 (+615.85; session marks +615.93) · 7 name(s) marked open→close (per-name table). INDP×584 09:30 $2.80 → close $3.14 +198.56; BNC×321 09:30 $4.96 → close $5.27 +99.51; CYPH×660 09:30 $2.25 → close $2.58 +217.80; ASO×28 09:30 $54.75 → close $54.25 -14.00; CMRC×504 09:30 $3.51 → close $3.64 +65.52; WLTH×144 09:30 $10.29 → close $10.65 +51.84; APPS×132 09:30 $11.75 → close $11.72 -3.30 | — |
+| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $21.97 | ▲ 09:30 equity $11,072.35 vs yday $11,051.63 (+20.72) | 09:30 open · cash $21.97 (unchanged overnight, no fees) · equity $11,072.35 vs prior close $11,051.63 (+20.72) · 8 name(s) re-marked at the open (per-name table). IRD×1 yday $6.04 → 09:30 $6.02 -0.02; INDP×584 yday $2.77 → 09:30 $2.80 +17.52; BNC×321 yday $4.80 → 09:30 $4.96 +51.36; CYPH×660 yday $2.27 → 09:30 $2.25 -9.90; ASO×28 yday $55.36 → 09:30 $54.65 -19.88; CMRC×504 yday $3.50 → 09:30 $3.51 +2.52; WLTH×144 yday $10.38 → 09:30 $10.29 -12.96; APPS×132 yday $11.81 → 09:30 $11.75 -7.92 | — |
+| 2026-09-14 09:30 ET | **SELL** | `IRD` | 1 | $6.02 | $0.08 | $+1.36 | $27.91 | ▲ +1.36 after sell → book $11,072.27; vs 09:30 mark -0.08 | dropped from list after 5 sess (min 3) | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $27.91 | ▲ close $11,691.00 vs 09:30 $11,072.35 (session +618.73) | 16:00 close · cash $27.91 · equity $11,691.00 vs 09:30 $11,072.35 (+618.65; session marks +618.73) · 7 name(s) marked open→close (per-name table). INDP×584 09:30 $2.80 → close $3.14 +198.56; BNC×321 09:30 $4.96 → close $5.27 +99.51; CYPH×660 09:30 $2.25 → close $2.58 +217.80; ASO×28 09:30 $54.65 → close $54.25 -11.20; CMRC×504 09:30 $3.51 → close $3.64 +65.52; WLTH×144 09:30 $10.29 → close $10.65 +51.84; APPS×132 09:30 $11.75 → close $11.72 -3.30 | — |
 
 ## Not taken
 

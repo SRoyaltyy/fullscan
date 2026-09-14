@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-14T16:45:30.649167-04:00",
+  "generated_at": "2026-09-14T17:23:07.891721-04:00",
   "rows": [
     {
       "name": "combo_p2s_5050_shared",
@@ -116,13 +116,13 @@
       "start_rate": 0.9545
     },
     {
-      "name": "combo_sn_5050_shared",
+      "name": "combo_sj_3070_shared",
       "start_green": 17,
       "start_n": 22,
       "start_rate": 0.7727
     },
     {
-      "name": "combo_sj_3070_shared",
+      "name": "combo_sn_5050_shared",
       "start_green": 17,
       "start_n": 22,
       "start_rate": 0.7727
@@ -326,6 +326,12 @@
       "start_rate": 0.9545
     },
     {
+      "name": "combo_hj_5050_shared",
+      "start_green": 19,
+      "start_n": 22,
+      "start_rate": 0.8636
+    },
+    {
       "name": "union_e_fresh_h3",
       "start_green": 20,
       "start_n": 22,
@@ -380,12 +386,6 @@
       "start_rate": 0.8636
     },
     {
-      "name": "combo_hj_5050_shared",
-      "start_green": 15,
-      "start_n": 22,
-      "start_rate": 0.6818
-    },
-    {
       "name": "union_news_or_h1",
       "start_green": 14,
       "start_n": 22,
@@ -417,6 +417,12 @@
     },
     {
       "name": "union_vol_green_h1",
+      "start_green": 15,
+      "start_n": 22,
+      "start_rate": 0.6818
+    },
+    {
+      "name": "union_join_vol_green_h1",
       "start_green": 15,
       "start_n": 22,
       "start_rate": 0.6818
@@ -470,7 +476,7 @@
       "start_rate": 0.6364
     },
     {
-      "name": "union_join_vol_green_h1",
+      "name": "yday_gainer_h1",
       "start_green": 11,
       "start_n": 22,
       "start_rate": 0.5
@@ -506,16 +512,16 @@
       "start_rate": 0.6364
     },
     {
-      "name": "combo_hn_3070_shared",
-      "start_green": 10,
-      "start_n": 22,
-      "start_rate": 0.4545
-    },
-    {
       "name": "short_alarm_h3",
       "start_green": 12,
       "start_n": 22,
       "start_rate": 0.5455
+    },
+    {
+      "name": "combo_hn_3070_shared",
+      "start_green": 10,
+      "start_n": 22,
+      "start_rate": 0.4545
     },
     {
       "name": "union_earn_react_h1",
@@ -536,6 +542,12 @@
       "start_rate": 0.3182
     },
     {
+      "name": "union_candle_score_h1",
+      "start_green": 10,
+      "start_n": 22,
+      "start_rate": 0.4545
+    },
+    {
       "name": "union_news_g_h1",
       "start_green": 9,
       "start_n": 22,
@@ -546,12 +558,6 @@
       "start_green": 6,
       "start_n": 22,
       "start_rate": 0.2727
-    },
-    {
-      "name": "union_candle_score_h1",
-      "start_green": 10,
-      "start_n": 22,
-      "start_rate": 0.4545
     },
     {
       "name": "combo_nj_5050_shared",
@@ -614,12 +620,6 @@
       "start_rate": 0.4545
     },
     {
-      "name": "yday_gainer_h1",
-      "start_green": 7,
-      "start_n": 22,
-      "start_rate": 0.3182
-    },
-    {
       "name": "union_w_hot_cond_h3",
       "start_green": 10,
       "start_n": 22,
@@ -650,6 +650,12 @@
       "start_rate": 0.4091
     },
     {
+      "name": "union_last_green_h1",
+      "start_green": 6,
+      "start_n": 22,
+      "start_rate": 0.2727
+    },
+    {
       "name": "union_h1_topheavy",
       "start_green": 6,
       "start_n": 22,
@@ -674,12 +680,6 @@
       "start_rate": 0.4545
     },
     {
-      "name": "union_last_green_h1",
-      "start_green": 5,
-      "start_n": 22,
-      "start_rate": 0.2273
-    },
-    {
       "name": "short_rsi_ob_h3",
       "start_green": 10,
       "start_n": 22,
@@ -693,6 +693,18 @@
     },
     {
       "name": "combo_ne1_5050_shared",
+      "start_green": 5,
+      "start_n": 22,
+      "start_rate": 0.2273
+    },
+    {
+      "name": "probable_h1",
+      "start_green": 7,
+      "start_n": 22,
+      "start_rate": 0.3182
+    },
+    {
+      "name": "probable_probable_ok_h1",
       "start_green": 5,
       "start_n": 22,
       "start_rate": 0.2273
@@ -722,30 +734,6 @@
       "start_rate": 0.1818
     },
     {
-      "name": "union_h1",
-      "start_green": 4,
-      "start_n": 22,
-      "start_rate": 0.1818
-    },
-    {
-      "name": "union_h1_sizeup",
-      "start_green": 4,
-      "start_n": 22,
-      "start_rate": 0.1818
-    },
-    {
-      "name": "union_h1_trail",
-      "start_green": 4,
-      "start_n": 22,
-      "start_rate": 0.1818
-    },
-    {
-      "name": "union_h1_sboost",
-      "start_green": 4,
-      "start_n": 22,
-      "start_rate": 0.1818
-    },
-    {
       "name": "union_join_present_h1",
       "start_green": 4,
       "start_n": 22,
@@ -762,6 +750,12 @@
       "start_green": 1,
       "start_n": 22,
       "start_rate": 0.0455
+    },
+    {
+      "name": "union_vol_g_h1",
+      "start_green": 5,
+      "start_n": 22,
+      "start_rate": 0.2273
     },
     {
       "name": "combo_jf_5050_shared",
@@ -800,7 +794,7 @@
       "start_rate": 0.2727
     },
     {
-      "name": "union_vol_g_h1",
+      "name": "union_candle_h1",
       "start_green": 4,
       "start_n": 22,
       "start_rate": 0.1818
@@ -810,12 +804,6 @@
       "start_green": 1,
       "start_n": 22,
       "start_rate": 0.0455
-    },
-    {
-      "name": "union_candle_h1",
-      "start_green": 4,
-      "start_n": 22,
-      "start_rate": 0.1818
     },
     {
       "name": "short_last_red_h1",
@@ -860,22 +848,10 @@
       "start_rate": 0.2727
     },
     {
-      "name": "union_h1_rankw",
-      "start_green": 1,
-      "start_n": 22,
-      "start_rate": 0.0455
-    },
-    {
       "name": "union_h3_sboost",
       "start_green": 0,
       "start_n": 22,
       "start_rate": 0.0
-    },
-    {
-      "name": "probable_h1",
-      "start_green": 3,
-      "start_n": 22,
-      "start_rate": 0.1364
     },
     {
       "name": "union_blue_h1",
@@ -902,12 +878,6 @@
       "start_rate": 0.0
     },
     {
-      "name": "probable_probable_ok_h1",
-      "start_green": 1,
-      "start_n": 22,
-      "start_rate": 0.0455
-    },
-    {
       "name": "flatten_h3",
       "start_green": 0,
       "start_n": 22,
@@ -932,16 +902,46 @@
       "start_rate": 0.0
     },
     {
+      "name": "union_h1",
+      "start_green": 1,
+      "start_n": 22,
+      "start_rate": 0.0455
+    },
+    {
+      "name": "union_h1_sizeup",
+      "start_green": 1,
+      "start_n": 22,
+      "start_rate": 0.0455
+    },
+    {
+      "name": "union_h1_trail",
+      "start_green": 1,
+      "start_n": 22,
+      "start_rate": 0.0455
+    },
+    {
       "name": "flatten_h3_half",
       "start_green": 0,
       "start_n": 22,
       "start_rate": 0.0
     },
     {
+      "name": "union_h1_sboost",
+      "start_green": 1,
+      "start_n": 22,
+      "start_rate": 0.0455
+    },
+    {
       "name": "short_extended_h3",
       "start_green": 2,
       "start_n": 22,
       "start_rate": 0.0909
+    },
+    {
+      "name": "union_h1_rankw",
+      "start_green": 0,
+      "start_n": 22,
+      "start_rate": 0.0
     },
     {
       "name": "union_macd_up_h1",
@@ -1016,12 +1016,6 @@
       "start_rate": 0.0909
     },
     {
-      "name": "yday_gainer_h3",
-      "start_green": 2,
-      "start_n": 22,
-      "start_rate": 0.0909
-    },
-    {
       "name": "union_e_green_h1",
       "start_green": 5,
       "start_n": 22,
@@ -1038,6 +1032,12 @@
       "start_green": 1,
       "start_n": 22,
       "start_rate": 0.0455
+    },
+    {
+      "name": "yday_gainer_h3",
+      "start_green": 2,
+      "start_n": 22,
+      "start_rate": 0.0909
     },
     {
       "name": "union_h5_time",
@@ -1220,16 +1220,16 @@
       "start_rate": 0.0
     },
     {
-      "name": "union_blue_coil_h3",
-      "start_green": 0,
-      "start_n": 22,
-      "start_rate": 0.0
-    },
-    {
       "name": "union_white_h5",
       "start_green": 1,
       "start_n": 22,
       "start_rate": 0.0455
+    },
+    {
+      "name": "union_blue_coil_h3",
+      "start_green": 0,
+      "start_n": 22,
+      "start_rate": 0.0
     },
     {
       "name": "union_join_vol_green_h3",
@@ -1280,16 +1280,16 @@
       "start_rate": 0.0
     },
     {
-      "name": "probable_h3",
-      "start_green": 3,
-      "start_n": 22,
-      "start_rate": 0.1364
-    },
-    {
       "name": "flatten_h5_half",
       "start_green": 0,
       "start_n": 22,
       "start_rate": 0.0
+    },
+    {
+      "name": "probable_h3",
+      "start_green": 3,
+      "start_n": 22,
+      "start_rate": 0.1364
     },
     {
       "name": "union_last_red_h1",
@@ -1352,16 +1352,16 @@
       "start_rate": 0.0
     },
     {
-      "name": "union_ab_g_h1",
-      "start_green": 0,
-      "start_n": 22,
-      "start_rate": 0.0
-    },
-    {
       "name": "short_macd_dn_h3",
       "start_green": 1,
       "start_n": 22,
       "start_rate": 0.0455
+    },
+    {
+      "name": "union_ab_g_h1",
+      "start_green": 0,
+      "start_n": 22,
+      "start_rate": 0.0
     },
     {
       "name": "union_blue_coil_h1",
@@ -1382,16 +1382,16 @@
       "start_rate": 0.0
     },
     {
-      "name": "yday_gainer_h5",
-      "start_green": 1,
-      "start_n": 22,
-      "start_rate": 0.0455
-    },
-    {
       "name": "union_blue_h3",
       "start_green": 0,
       "start_n": 22,
       "start_rate": 0.0
+    },
+    {
+      "name": "yday_gainer_h5",
+      "start_green": 1,
+      "start_n": 22,
+      "start_rate": 0.0455
     },
     {
       "name": "flatten_live_h3",

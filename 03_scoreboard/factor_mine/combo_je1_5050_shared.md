@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_join_vol_green_h1/union_e_fresh_h1 w=0.5,0.5 net=priority
 
-Cash book **+12.61%** ($11,261) · signal-only (no cash/fees) was —. Starts YES **14/22**. Fills 270 · skips 74 · realized $+1260.82.
+Cash book **+12.72%** ($11,272) · signal-only (no cash/fees) was —. Starts YES **14/22**. Fills 270 · skips 74 · realized $+1272.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $11,260.82.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $11,272.32.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -333,12 +333,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `KR` | 12 | $58.49 | $59.31 | +9.84 | — | +0.00 | +9.84 | +39.48 | — |
 | 2026-09-14 | `LPTH` | 75 | $9.20 | $8.85 | -26.25 | — | +0.00 | -26.25 | -39.00 | — |
 | 2026-09-14 | `REF` | 54 | $14.03 | $14.16 | +7.02 | — | +0.00 | +7.02 | +57.24 | — |
-| 2026-09-14 | `TYRA` | 32 | $22.03 | $23.20 | +37.44 | — | +0.00 | +37.44 | -13.76 | — |
+| 2026-09-14 | `TYRA` | 32 | $22.03 | $23.60 | +50.24 | — | +0.00 | +50.24 | -0.96 | — |
 | 2026-09-14 | `INDP` | 280 | $2.77 | $2.80 | +8.40 | — | +0.00 | +8.40 | +28.00 | — |
 | 2026-09-14 | `WLTH` | 69 | $10.38 | $10.29 | -6.21 | — | +0.00 | -6.21 | -45.54 | — |
 | 2026-09-14 | `BNC` | 154 | $4.80 | $4.96 | +24.64 | — | +0.00 | +24.64 | +7.70 | — |
 | 2026-09-14 | `SWKS` | 8 | $88.35 | $86.06 | -18.32 | — | +0.00 | -18.32 | +14.32 | — |
-| 2026-09-14 | `ASO` | 13 | $55.36 | $54.75 | -7.93 | — | +0.00 | -7.93 | -2.08 | — |
+| 2026-09-14 | `ASO` | 13 | $55.36 | $54.65 | -9.23 | — | +0.00 | -9.23 | -3.38 | — |
 | 2026-09-14 | `IRD` | 122 | $6.04 | $6.02 | -2.44 | — | +0.00 | -2.44 | -17.08 | — |
 | 2026-09-14 | `COO` | 13 | $53.91 | $54.64 | +9.50 | — | +0.00 | +9.50 | -0.25 | — |
 
@@ -367,7 +367,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | -13.95 | $11,344.88 | — | $11,344.88 | -0.00 | +0.00 | — | — | $11,344.88 | $11,344.88 | — |
 | 2026-09-10 | -13.28 | $11,344.88 | — | $11,344.88 | -0.00 | +0.00 | — | — | $11,344.88 | $11,344.88 | — |
 | 2026-09-11 | +0.50 | $11,344.88 | — | $11,344.88 | -0.00 | -53.06 | ORCL, DBI, ADBE, CPRT, DSGX, KR, LPTH, REF, TYRA, INDP, WLTH, BNC, SWKS, ASO, IRD, COO | — | $158.00 | $11,256.23 | ORCL×4, DBI×119, ADBE×2, CPRT×22, DSGX×9, KR×12, LPTH×75, REF×54, TYRA×32, INDP×280, WLTH×69, BNC×154, SWKS×8, ASO×13, IRD×122, COO×13 |
-| 2026-09-14 | -11.00 | $158.00 | ORCL×4, DBI×119, ADBE×2, CPRT×22, DSGX×9, KR×12, LPTH×75, REF×54, TYRA×32, INDP×280, WLTH×69, BNC×154, SWKS×8, ASO×13, IRD×122, COO×13 | $11,296.81 | +40.58 | +0.00 | — | ORCL, DBI, ADBE, CPRT, DSGX, KR, LPTH, REF, TYRA, INDP, WLTH, BNC, SWKS, ASO, IRD, COO | $11,260.82 | $11,260.82 | — |
+| 2026-09-14 | -11.00 | $158.00 | ORCL×4, DBI×119, ADBE×2, CPRT×22, DSGX×9, KR×12, LPTH×75, REF×54, TYRA×32, INDP×280, WLTH×69, BNC×154, SWKS×8, ASO×13, IRD×122, COO×13 | $11,308.31 | +52.08 | +0.00 | — | ORCL, DBI, ADBE, CPRT, DSGX, KR, LPTH, REF, TYRA, INDP, WLTH, BNC, SWKS, ASO, IRD, COO | $11,272.32 | $11,272.32 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -669,24 +669,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 09:30 ET | **BUY** | `IRD` | 122 | $6.16 | $2.36 | — | $870.61 | — | combo gate; gate join=good,vol=good,last_green=True; list yday_gainer; 🔵; ret5=+36.4; combo leftover $756.34; owner union_join_vol_green_h1 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-11 09:30 ET | **BUY** | `COO` | 13 | $54.66 | $2.03 | — | $158.00 | — | combo gate; gate join=good,vol=good,last_green=True; list yday_mover; ret5=-22.3; combo leftover $756.34; owner union_join_vol_green_h1 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $158.00 | ▼ close $11,256.23 vs 09:30 $11,344.88 (session -53.06) | 16:00 close · cash $158.00 · equity $11,256.23 vs 09:30 $11,344.88 (-88.65; session marks -53.06) · 16 name(s) marked open→close (per-name table). ORCL×4 09:30 $164.43 → close $150.28 -56.60; DBI×119 09:30 $5.91 → close $5.88 -3.57; ADBE×2 09:30 $242.17 → close $252.23 +20.12; CPRT×22 09:30 $32.01 → close $29.95 -45.32; DSGX×9 09:30 $71.71 → close $76.04 +38.97; KR×12 09:30 $56.02 → close $58.49 +29.64; LPTH×75 09:30 $9.37 → close $9.20 -12.75; REF×54 09:30 $13.10 → close $14.03 +50.22; TYRA×32 09:30 $23.63 → close $22.03 -51.20; INDP×280 09:30 $2.70 → close $2.77 +19.60; WLTH×69 09:30 $10.95 → close $10.38 -39.33; BNC×154 09:30 $4.91 → close $4.80 -16.94; SWKS×8 09:30 $84.27 → close $88.35 +32.64; ASO×13 09:30 $54.91 → close $55.36 +5.85; IRD×122 09:30 $6.16 → close $6.04 -14.64; COO×13 09:30 $54.66 → close $53.91 -9.75 | — |
-| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $158.00 | ▲ 09:30 equity $11,296.81 vs yday $11,256.23 (+40.58) | 09:30 open · cash $158.00 (unchanged overnight, no fees) · equity $11,296.81 vs prior close $11,256.23 (+40.58) | — |
-| 2026-09-14 09:30 ET | **SELL** | `ORCL` | 4 | $141.42 | $2.02 | $-96.06 | $721.66 | ▼ -96.06 after sell → book $11,294.78; vs 09:30 mark -2.03 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `DBI` | 119 | $5.86 | $2.38 | $-10.67 | $1,416.62 | ▼ -10.67 after sell → book $11,292.41; vs 09:30 mark -2.37 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `ADBE` | 2 | $261.51 | $2.02 | $+34.67 | $1,937.63 | ▲ +34.67 after sell → book $11,290.39; vs 09:30 mark -2.02 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `CPRT` | 22 | $30.63 | $2.08 | $-34.49 | $2,609.41 | ▼ -34.49 after sell → book $11,288.32; vs 09:30 mark -2.07 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `DSGX` | 9 | $77.06 | $2.04 | $+44.10 | $3,300.92 | ▲ +44.10 after sell → book $11,286.28; vs 09:30 mark -2.04 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `KR` | 12 | $59.31 | $2.05 | $+35.41 | $4,010.59 | ▲ +35.41 after sell → book $11,284.23; vs 09:30 mark -2.05 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `LPTH` | 75 | $8.85 | $2.24 | $-43.45 | $4,672.10 | ▼ -43.45 after sell → book $11,281.99; vs 09:30 mark -2.24 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `REF` | 54 | $14.16 | $2.17 | $+52.92 | $5,434.57 | ▲ +52.92 after sell → book $11,279.82; vs 09:30 mark -2.17 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `TYRA` | 32 | $23.20 | $2.11 | $-17.95 | $6,174.86 | ▼ -17.95 after sell → book $11,277.72; vs 09:30 mark -2.10 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `INDP` | 280 | $2.80 | $3.67 | $+20.72 | $6,955.20 | ▲ +20.72 after sell → book $11,274.05; vs 09:30 mark -3.67 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | join🟡 sector🔴 gen🔴 news🟡 digest🔴 judge🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-14 09:30 ET | **SELL** | `WLTH` | 69 | $10.29 | $2.22 | $-49.96 | $7,662.99 | ▼ -49.96 after sell → book $11,271.83; vs 09:30 mark -2.22 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `BNC` | 154 | $4.96 | $2.49 | $+2.76 | $8,424.34 | ▲ +2.76 after sell → book $11,269.34; vs 09:30 mark -2.49 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-09-14 09:30 ET | **SELL** | `SWKS` | 8 | $86.06 | $2.03 | $+10.27 | $9,110.79 | ▲ +10.27 after sell → book $11,267.31; vs 09:30 mark -2.03 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `ASO` | 13 | $54.75 | $2.05 | $-6.16 | $9,820.49 | ▼ -6.16 after sell → book $11,265.26; vs 09:30 mark -2.05 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `IRD` | 122 | $6.02 | $2.39 | $-21.82 | $10,552.54 | ▼ -21.82 after sell → book $11,262.87; vs 09:30 mark -2.39 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `COO` | 13 | $54.64 | $2.05 | $-4.32 | $11,260.82 | ▼ -4.32 after sell → book $11,260.82; vs 09:30 mark -2.05 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,260.82 | ▲ close $11,260.82 vs 09:30 $11,296.81 (session +0.00) | 16:00 close · cash $11,260.82 · no lots left · equity $11,260.82. | — |
+| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $158.00 | ▲ 09:30 equity $11,308.31 vs yday $11,256.23 (+52.08) | 09:30 open · cash $158.00 (unchanged overnight, no fees) · equity $11,308.31 vs prior close $11,256.23 (+52.08) | — |
+| 2026-09-14 09:30 ET | **SELL** | `ORCL` | 4 | $141.42 | $2.02 | $-96.06 | $721.66 | ▼ -96.06 after sell → book $11,306.28; vs 09:30 mark -2.03 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `DBI` | 119 | $5.86 | $2.38 | $-10.67 | $1,416.62 | ▼ -10.67 after sell → book $11,303.91; vs 09:30 mark -2.37 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `ADBE` | 2 | $261.51 | $2.02 | $+34.67 | $1,937.63 | ▲ +34.67 after sell → book $11,301.89; vs 09:30 mark -2.02 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `CPRT` | 22 | $30.63 | $2.08 | $-34.49 | $2,609.41 | ▼ -34.49 after sell → book $11,299.82; vs 09:30 mark -2.07 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `DSGX` | 9 | $77.06 | $2.04 | $+44.10 | $3,300.92 | ▲ +44.10 after sell → book $11,297.78; vs 09:30 mark -2.04 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `KR` | 12 | $59.31 | $2.05 | $+35.41 | $4,010.59 | ▲ +35.41 after sell → book $11,295.73; vs 09:30 mark -2.05 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `LPTH` | 75 | $8.85 | $2.24 | $-43.45 | $4,672.10 | ▼ -43.45 after sell → book $11,293.49; vs 09:30 mark -2.24 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `REF` | 54 | $14.16 | $2.17 | $+52.92 | $5,434.57 | ▲ +52.92 after sell → book $11,291.32; vs 09:30 mark -2.17 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `TYRA` | 32 | $23.60 | $2.11 | $-5.15 | $6,187.66 | ▼ -5.15 after sell → book $11,289.22; vs 09:30 mark -2.10 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `INDP` | 280 | $2.80 | $3.67 | $+20.72 | $6,968.00 | ▲ +20.72 after sell → book $11,285.55; vs 09:30 mark -3.67 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | join🟡 sector🔴 gen🔴 news🟡 digest🔴 judge🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-14 09:30 ET | **SELL** | `WLTH` | 69 | $10.29 | $2.22 | $-49.96 | $7,675.79 | ▼ -49.96 after sell → book $11,283.33; vs 09:30 mark -2.22 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `BNC` | 154 | $4.96 | $2.49 | $+2.76 | $8,437.14 | ▲ +2.76 after sell → book $11,280.84; vs 09:30 mark -2.49 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-14 09:30 ET | **SELL** | `SWKS` | 8 | $86.06 | $2.03 | $+10.27 | $9,123.59 | ▲ +10.27 after sell → book $11,278.81; vs 09:30 mark -2.03 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `ASO` | 13 | $54.65 | $2.05 | $-7.46 | $9,831.99 | ▼ -7.46 after sell → book $11,276.76; vs 09:30 mark -2.05 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `IRD` | 122 | $6.02 | $2.39 | $-21.82 | $10,564.04 | ▼ -21.82 after sell → book $11,274.37; vs 09:30 mark -2.39 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `COO` | 13 | $54.64 | $2.05 | $-4.32 | $11,272.32 | ▼ -4.32 after sell → book $11,272.32; vs 09:30 mark -2.05 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,272.32 | ▲ close $11,272.32 vs 09:30 $11,308.31 (session +0.00) | 16:00 close · cash $11,272.32 · no lots left · equity $11,272.32. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-10.71%** ($8,929) · signal-only (no cash/fees) was +54.35%. Starts YES **0/22**. Fills 116 · skips 292 · realized $-1103.20.
+Cash book **-10.71%** ($8,930) · signal-only (no cash/fees) was +54.19%. Starts YES **0/22**. Fills 116 · skips 292 · realized $-1103.20.
 
 ## How this sleeve decides (like you are 10)
 
@@ -390,7 +390,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | `SWKS` | 1 | — | $84.27 | +0.00 | $88.35 | +4.08 | +4.08 | +0.00 | +4.08 |
 | 2026-09-11 | `GPRO` | 70 | — | $1.40 | +0.00 | $1.38 | -1.40 | -1.40 | +0.00 | -1.40 |
 | 2026-09-11 | `PAYP` | 5 | — | $18.30 | +0.00 | $18.45 | +0.75 | +0.75 | +0.00 | +0.75 |
-| 2026-09-14 | `DELL` | 2 | $567.29 | $538.57 | -57.44 | $534.08 | -8.98 | -66.42 | +49.58 | +40.60 |
+| 2026-09-14 | `DELL` | 2 | $567.29 | $538.57 | -57.44 | $534.28 | -8.58 | -66.02 | +49.58 | +41.00 |
 | 2026-09-14 | `TARS` | 13 | $79.31 | $79.69 | +4.94 | — | +0.00 | +4.94 | -39.13 | — |
 | 2026-09-14 | `ASST` | 43 | $27.62 | $27.73 | +4.73 | — | +0.00 | +4.73 | +109.65 | — |
 | 2026-09-14 | `USDE` | 139 | $7.26 | $6.96 | -41.70 | — | +0.00 | -41.70 | -126.49 | — |
@@ -431,7 +431,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | -13.95 | $129.15 | CABA×26, VSTM×11, ARCT×5, SID×69, NVAX×9, BMEA×49, REAX×5, CNH×6, DELL×2, TARS×13, ASST×43, USDE×139, DFDV×190, HOOD×9, GORO×278, RSKD×160 | $9,653.61 | +140.93 | -504.66 | — | — | $129.15 | $9,148.94 | CABA×26, VSTM×11, ARCT×5, SID×69, NVAX×9, BMEA×49, REAX×5, CNH×6, DELL×2, TARS×13, ASST×43, USDE×139, DFDV×190, HOOD×9, GORO×278, RSKD×160 |
 | 2026-09-10 | -13.28 | $129.15 | CABA×26, VSTM×11, ARCT×5, SID×69, NVAX×9, BMEA×49, REAX×5, CNH×6, DELL×2, TARS×13, ASST×43, USDE×139, DFDV×190, HOOD×9, GORO×278, RSKD×160 | $8,908.84 | -240.10 | -18.70 | — | — | $129.15 | $8,890.15 | CABA×26, VSTM×11, ARCT×5, SID×69, NVAX×9, BMEA×49, REAX×5, CNH×6, DELL×2, TARS×13, ASST×43, USDE×139, DFDV×190, HOOD×9, GORO×278, RSKD×160 |
 | 2026-09-11 | +0.50 | $129.15 | CABA×26, VSTM×11, ARCT×5, SID×69, NVAX×9, BMEA×49, REAX×5, CNH×6, DELL×2, TARS×13, ASST×43, USDE×139, DFDV×190, HOOD×9, GORO×278, RSKD×160 | $9,038.74 | +148.59 | +70.24 | AMTX, CLOV, BAK, DBI, SWKS, GPRO, PAYP | CABA, VSTM, ARCT, SID, NVAX, BMEA, REAX, CNH | $118.66 | $9,094.44 | DELL×2, TARS×13, ASST×43, USDE×139, DFDV×190, HOOD×9, GORO×278, RSKD×160, AMTX×48, CLOV×20, BAK×46, DBI×16, SWKS×1, GPRO×70, PAYP×5 |
-| 2026-09-14 | -11.00 | $118.66 | DELL×2, TARS×13, ASST×43, USDE×139, DFDV×190, HOOD×9, GORO×278, RSKD×160, AMTX×48, CLOV×20, BAK×46, DBI×16, SWKS×1, GPRO×70, PAYP×5 | $8,950.10 | -144.34 | -3.58 | — | TARS, ASST, USDE, DFDV, HOOD, GORO, RSKD | $7,201.25 | $8,929.11 | DELL×2, AMTX×48, CLOV×20, BAK×46, DBI×16, SWKS×1, GPRO×70, PAYP×5 |
+| 2026-09-14 | -11.00 | $118.66 | DELL×2, TARS×13, ASST×43, USDE×139, DFDV×190, HOOD×9, GORO×278, RSKD×160, AMTX×48, CLOV×20, BAK×46, DBI×16, SWKS×1, GPRO×70, PAYP×5 | $8,950.10 | -144.34 | -3.18 | — | TARS, ASST, USDE, DFDV, HOOD, GORO, RSKD | $7,201.25 | $8,929.51 | DELL×2, AMTX×48, CLOV×20, BAK×46, DBI×16, SWKS×1, GPRO×70, PAYP×5 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -596,7 +596,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 09:30 ET | **SELL** | `HOOD` | 9 | $112.26 | $2.04 | $-77.99 | $5,246.44 | ▼ -77.99 after sell → book $8,938.84; vs 09:30 mark -2.03 | dropped from list after 5 sess (min 5) | — |
 | 2026-09-14 09:30 ET | **SELL** | `GORO` | 278 | $3.52 | $3.64 | $-126.77 | $6,221.35 | ▼ -126.77 after sell → book $8,935.19; vs 09:30 mark -3.65 | dropped from list after 5 sess (min 5) | — |
 | 2026-09-14 09:30 ET | **SELL** | `RSKD` | 160 | $6.14 | $2.51 | $-116.98 | $7,201.25 | ▼ -116.98 after sell → book $8,932.69; vs 09:30 mark -2.50 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,201.25 | ▼ close $8,929.11 vs 09:30 $8,950.10 (session -3.58) | 16:00 close · cash $7,201.25 · equity $8,929.11 vs 09:30 $8,950.10 (-20.99; session marks -3.58) · 8 name(s) marked open→close (per-name table). DELL×2 09:30 $538.57 → close $534.08 -8.98; AMTX×48 09:30 $2.01 → close $1.95 -2.88; CLOV×20 09:30 $4.82 → close $5.10 +5.60; BAK×46 09:30 $2.05 → close $2.01 -1.84; DBI×16 09:30 $5.86 → close $6.53 +10.72; SWKS×1 09:30 $86.06 → close $79.26 -6.80; GPRO×70 09:30 $1.37 → close $1.35 -1.40; PAYP×5 09:30 $18.28 → close $18.68 +2.00 | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,201.25 | ▼ close $8,929.51 vs 09:30 $8,950.10 (session -3.18) | 16:00 close · cash $7,201.25 · equity $8,929.51 vs 09:30 $8,950.10 (-20.59; session marks -3.18) · 8 name(s) marked open→close (per-name table). DELL×2 09:30 $538.57 → close $534.28 -8.58; AMTX×48 09:30 $2.01 → close $1.95 -2.88; CLOV×20 09:30 $4.82 → close $5.10 +5.60; BAK×46 09:30 $2.05 → close $2.01 -1.84; DBI×16 09:30 $5.86 → close $6.53 +10.72; SWKS×1 09:30 $86.06 → close $79.26 -6.80; GPRO×70 09:30 $1.37 → close $1.35 -1.40; PAYP×5 09:30 $18.28 → close $18.68 +2.00 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ vol_g, no 🚨
 
-Cash book **-2.70%** ($9,730) · signal-only (no cash/fees) was +24.05%. Starts YES **14/22**. Fills 114 · skips 184 · realized $-716.49.
+Cash book **-2.69%** ($9,731) · signal-only (no cash/fees) was +24.07%. Starts YES **14/22**. Fills 114 · skips 184 · realized $-716.49.
 
 ## How this sleeve decides (like you are 10)
 
@@ -287,8 +287,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | `WLTH` | 105 | — | $10.95 | +0.00 | $10.38 | -59.85 | -59.85 | +0.00 | -59.85 |
 | 2026-09-11 | `DBI` | 196 | — | $5.91 | +0.00 | $5.88 | -5.88 | -5.88 | +0.00 | -5.88 |
 | 2026-09-11 | `BNC` | 236 | — | $4.91 | +0.00 | $4.80 | -25.96 | -25.96 | +0.00 | -25.96 |
-| 2026-09-14 | `ORCL` | 7 | $150.28 | $141.42 | -62.02 | $144.72 | +23.10 | -38.92 | -161.07 | -137.97 |
-| 2026-09-14 | `TYRA` | 49 | $22.03 | $23.20 | +57.33 | $25.07 | +91.63 | +148.96 | -21.07 | +70.56 |
+| 2026-09-14 | `ORCL` | 7 | $150.28 | $141.42 | -62.02 | $144.79 | +23.59 | -38.43 | -161.07 | -137.48 |
+| 2026-09-14 | `TYRA` | 49 | $22.03 | $23.60 | +76.93 | $25.07 | +72.03 | +148.96 | -1.47 | +70.56 |
 | 2026-09-14 | `VIST` | 15 | $76.27 | $77.10 | +12.45 | $76.41 | -10.35 | +2.10 | -3.45 | -13.80 |
 | 2026-09-14 | `INDP` | 429 | $2.77 | $2.80 | +12.87 | $3.14 | +145.86 | +158.73 | +42.90 | +188.76 |
 | 2026-09-14 | `CMRC` | 370 | $3.50 | $3.51 | +1.85 | $3.64 | +48.10 | +49.95 | +140.60 | +188.70 |
@@ -321,7 +321,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | -13.95 | $20.82 | RVTY×9, CRK×78, MRNA×8, ARCT×72, EIX×21, CRDL×554, GPRO×678, FRVO×66, CABA×2, ALEC×3, BHC×1, BMEA×5, OABI×2, OPK×6, EOSE×2 | $9,316.89 | -44.48 | -2.72 | — | RVTY, CRK, MRNA, ARCT, EIX, CRDL, GPRO, FRVO | $9,231.63 | $9,285.22 | CABA×2, ALEC×3, BHC×1, BMEA×5, OABI×2, OPK×6, EOSE×2 |
 | 2026-09-10 | -13.28 | $9,231.63 | CABA×2, ALEC×3, BHC×1, BMEA×5, OABI×2, OPK×6, EOSE×2 | $9,284.20 | -1.02 | +0.00 | — | CABA, ALEC, BHC, BMEA, OABI, OPK, EOSE | $9,283.48 | $9,283.48 | — |
 | 2026-09-11 | +0.50 | $9,283.48 | — | $9,283.48 | -0.00 | -116.26 | ORCL, TYRA, VIST, INDP, CMRC, WLTH, DBI, BNC | — | $6.96 | $9,142.80 | ORCL×7, TYRA×49, VIST×15, INDP×429, CMRC×370, WLTH×105, DBI×196, BNC×236 |
-| 2026-09-14 | -11.00 | $6.96 | ORCL×7, TYRA×49, VIST×15, INDP×429, CMRC×370, WLTH×105, DBI×196, BNC×236 | $9,189.67 | +46.87 | +540.62 | — | — | $6.96 | $9,730.29 | ORCL×7, TYRA×49, VIST×15, INDP×429, CMRC×370, WLTH×105, DBI×196, BNC×236 |
+| 2026-09-14 | -11.00 | $6.96 | ORCL×7, TYRA×49, VIST×15, INDP×429, CMRC×370, WLTH×105, DBI×196, BNC×236 | $9,209.27 | +66.47 | +521.51 | — | — | $6.96 | $9,730.78 | ORCL×7, TYRA×49, VIST×15, INDP×429, CMRC×370, WLTH×105, DBI×196, BNC×236 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -483,8 +483,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 09:30 ET | **BUY** | `DBI` | 196 | $5.91 | $2.58 | — | $1,168.76 | — | union ∩ vol_g, no 🚨; gate vol=good; list yday_gainer,yday_mover,ohlc_hot; ret5=+14.1; leftover $1160.43 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-11 09:30 ET | **BUY** | `BNC` | 236 | $4.91 | $3.04 | — | $6.96 | — | union ∩ vol_g, no 🚨; gate vol=good; list yday_gainer,yday_mover; 🔵; ret5=+76.3; leftover $1160.43 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.96 | ▼ close $9,142.80 vs 09:30 $9,283.48 (session -116.26) | 16:00 close · cash $6.96 · equity $9,142.80 vs 09:30 $9,283.48 (-140.68; session marks -116.26) · 8 name(s) marked open→close (per-name table). ORCL×7 09:30 $164.43 → close $150.28 -99.05; TYRA×49 09:30 $23.63 → close $22.03 -78.40; VIST×15 09:30 $77.33 → close $76.27 -15.90; INDP×429 09:30 $2.70 → close $2.77 +30.03; CMRC×370 09:30 $3.13 → close $3.50 +138.75; WLTH×105 09:30 $10.95 → close $10.38 -59.85; DBI×196 09:30 $5.91 → close $5.88 -5.88; BNC×236 09:30 $4.91 → close $4.80 -25.96 | — |
-| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.96 | ▲ 09:30 equity $9,189.67 vs yday $9,142.80 (+46.87) | 09:30 open · cash $6.96 (unchanged overnight, no fees) · equity $9,189.67 vs prior close $9,142.80 (+46.87) · 8 name(s) re-marked at the open (per-name table). ORCL×7 yday $150.28 → 09:30 $141.42 -62.02; TYRA×49 yday $22.03 → 09:30 $23.20 +57.33; VIST×15 yday $76.27 → 09:30 $77.10 +12.45; INDP×429 yday $2.77 → 09:30 $2.80 +12.87; CMRC×370 yday $3.50 → 09:30 $3.51 +1.85; WLTH×105 yday $10.38 → 09:30 $10.29 -9.45; DBI×196 yday $5.88 → 09:30 $5.86 -3.92; BNC×236 yday $4.80 → 09:30 $4.96 +37.76 | — |
-| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.96 | ▲ close $9,730.29 vs 09:30 $9,189.67 (session +540.62) | 16:00 close · cash $6.96 · equity $9,730.29 vs 09:30 $9,189.67 (+540.62; session marks +540.62) · 8 name(s) marked open→close (per-name table). ORCL×7 09:30 $141.42 → close $144.72 +23.10; TYRA×49 09:30 $23.20 → close $25.07 +91.63; VIST×15 09:30 $77.10 → close $76.41 -10.35; INDP×429 09:30 $2.80 → close $3.14 +145.86; CMRC×370 09:30 $3.51 → close $3.64 +48.10; WLTH×105 09:30 $10.29 → close $10.65 +37.80; DBI×196 09:30 $5.86 → close $6.53 +131.32; BNC×236 09:30 $4.96 → close $5.27 +73.16 | — |
+| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.96 | ▲ 09:30 equity $9,209.27 vs yday $9,142.80 (+66.47) | 09:30 open · cash $6.96 (unchanged overnight, no fees) · equity $9,209.27 vs prior close $9,142.80 (+66.47) · 8 name(s) re-marked at the open (per-name table). ORCL×7 yday $150.28 → 09:30 $141.42 -62.02; TYRA×49 yday $22.03 → 09:30 $23.60 +76.93; VIST×15 yday $76.27 → 09:30 $77.10 +12.45; INDP×429 yday $2.77 → 09:30 $2.80 +12.87; CMRC×370 yday $3.50 → 09:30 $3.51 +1.85; WLTH×105 yday $10.38 → 09:30 $10.29 -9.45; DBI×196 yday $5.88 → 09:30 $5.86 -3.92; BNC×236 yday $4.80 → 09:30 $4.96 +37.76 | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.96 | ▲ close $9,730.78 vs 09:30 $9,209.27 (session +521.51) | 16:00 close · cash $6.96 · equity $9,730.78 vs 09:30 $9,209.27 (+521.51; session marks +521.51) · 8 name(s) marked open→close (per-name table). ORCL×7 09:30 $141.42 → close $144.79 +23.59; TYRA×49 09:30 $23.60 → close $25.07 +72.03; VIST×15 09:30 $77.10 → close $76.41 -10.35; INDP×429 09:30 $2.80 → close $3.14 +145.86; CMRC×370 09:30 $3.51 → close $3.64 +48.10; WLTH×105 09:30 $10.29 → close $10.65 +37.80; DBI×196 09:30 $5.86 → close $6.53 +131.32; BNC×236 09:30 $4.96 → close $5.27 +73.16 | — |
 
 ## Not taken
 

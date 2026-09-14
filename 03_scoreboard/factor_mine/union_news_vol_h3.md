@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-2.85%** ($9,715) · signal-only (no cash/fees) was +195.15%. Starts YES **4/22**. Fills 73 · skips 100 · realized $-171.77.
+Cash book **-2.83%** ($9,717) · signal-only (no cash/fees) was +195.24%. Starts YES **4/22**. Fills 73 · skips 100 · realized $-171.77.
 
 ## How this sleeve decides (like you are 10)
 
@@ -211,7 +211,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | `ORCL` | 19 | — | $164.43 | +0.00 | $150.28 | -268.85 | -268.85 | +0.00 | -268.85 |
 | 2026-09-11 | `ADBE` | 13 | — | $242.17 | +0.00 | $252.23 | +130.78 | +130.78 | +0.00 | +130.78 |
 | 2026-09-11 | `RH` | 24 | — | $135.71 | +0.00 | $134.07 | -39.36 | -39.36 | +0.00 | -39.36 |
-| 2026-09-14 | `ORCL` | 19 | $150.28 | $141.42 | -168.34 | $144.72 | +62.70 | -105.64 | -437.19 | -374.49 |
+| 2026-09-14 | `ORCL` | 19 | $150.28 | $141.42 | -168.34 | $144.79 | +64.03 | -104.31 | -437.19 | -373.16 |
 | 2026-09-14 | `ADBE` | 13 | $252.23 | $261.51 | +120.64 | $265.60 | +53.17 | +173.81 | +251.42 | +304.59 |
 | 2026-09-14 | `RH` | 24 | $134.07 | $131.40 | -64.08 | $134.17 | +66.48 | +2.40 | -103.44 | -36.96 |
 
@@ -240,7 +240,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | -13.95 | $0.04 | MMED×80, DE×2, FRNM×121, DELL×3, CXW×59, BAK×512 | $9,868.84 | +54.32 | -23.04 | — | MMED, DE, FRNM, DELL, CXW | $8,826.28 | $9,834.92 | BAK×512 |
 | 2026-09-10 | -13.28 | $8,826.28 | BAK×512 | $9,834.92 | +0.00 | +0.00 | — | BAK | $9,828.22 | $9,828.22 | — |
 | 2026-09-11 | +0.50 | $9,828.22 | — | $9,828.22 | +0.00 | -177.43 | ORCL, ADBE, RH | — | $292.67 | $9,644.66 | ORCL×19, ADBE×13, RH×24 |
-| 2026-09-14 | -11.00 | $292.67 | ORCL×19, ADBE×13, RH×24 | $9,532.88 | -111.78 | +182.35 | — | — | $292.67 | $9,715.23 | ORCL×19, ADBE×13, RH×24 |
+| 2026-09-14 | -11.00 | $292.67 | ORCL×19, ADBE×13, RH×24 | $9,532.88 | -111.78 | +183.68 | — | — | $292.67 | $9,716.56 | ORCL×19, ADBE×13, RH×24 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -362,7 +362,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 09:30 ET | **BUY** | `RH` | 24 | $135.71 | $2.06 | — | $292.67 | — | combo gate; gate news=good,vol=good; list earn_react; ret5=-9.2; leftover $3276.07 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $292.67 | ▼ close $9,644.66 vs 09:30 $9,828.22 (session -177.43) | 16:00 close · cash $292.67 · equity $9,644.66 vs 09:30 $9,828.22 (-183.56; session marks -177.43) · 3 name(s) marked open→close (per-name table). ORCL×19 09:30 $164.43 → close $150.28 -268.85; ADBE×13 09:30 $242.17 → close $252.23 +130.78; RH×24 09:30 $135.71 → close $134.07 -39.36 | — |
 | 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $292.67 | ▼ 09:30 equity $9,532.88 vs yday $9,644.66 (-111.78) | 09:30 open · cash $292.67 (unchanged overnight, no fees) · equity $9,532.88 vs prior close $9,644.66 (-111.78) · 3 name(s) re-marked at the open (per-name table). ORCL×19 yday $150.28 → 09:30 $141.42 -168.34; ADBE×13 yday $252.23 → 09:30 $261.51 +120.64; RH×24 yday $134.07 → 09:30 $131.40 -64.08 | — |
-| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $292.67 | ▲ close $9,715.23 vs 09:30 $9,532.88 (session +182.35) | 16:00 close · cash $292.67 · equity $9,715.23 vs 09:30 $9,532.88 (+182.35; session marks +182.35) · 3 name(s) marked open→close (per-name table). ORCL×19 09:30 $141.42 → close $144.72 +62.70; ADBE×13 09:30 $261.51 → close $265.60 +53.17; RH×24 09:30 $131.40 → close $134.17 +66.48 | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $292.67 | ▲ close $9,716.56 vs 09:30 $9,532.88 (session +183.68) | 16:00 close · cash $292.67 · equity $9,716.56 vs 09:30 $9,532.88 (+183.68; session marks +183.68) · 3 name(s) marked open→close (per-name table). ORCL×19 09:30 $141.42 → close $144.79 +64.03; ADBE×13 09:30 $261.51 → close $265.60 +53.17; RH×24 09:30 $131.40 → close $134.17 +66.48 | — |
 
 ## Not taken
 

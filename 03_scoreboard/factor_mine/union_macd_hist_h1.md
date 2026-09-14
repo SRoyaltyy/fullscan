@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-6.92%** ($9,308) · signal-only (no cash/fees) was -4.83%. Starts YES **0/22**. Fills 171 · skips 71 · realized $-563.87.
+Cash book **-6.94%** ($9,306) · signal-only (no cash/fees) was -4.75%. Starts YES **0/22**. Fills 171 · skips 71 · realized $-565.97.
 
 ## How this sleeve decides (like you are 10)
 
@@ -53,7 +53,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $6,293.20.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $6,291.10.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -251,7 +251,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `SANM` | 5 | $216.00 | $206.50 | -47.50 | — | +0.00 | -47.50 | -1.70 | — |
 | 2026-09-14 | `SWKS` | 14 | $88.35 | $86.06 | -32.06 | — | +0.00 | -32.06 | +25.06 | — |
 | 2026-09-14 | `QRVO` | 10 | $116.65 | $114.11 | -25.40 | $107.98 | -61.30 | -86.70 | +12.75 | -48.55 |
-| 2026-09-14 | `ASO` | 21 | $55.36 | $54.75 | -12.81 | — | +0.00 | -12.81 | -3.36 | — |
+| 2026-09-14 | `ASO` | 21 | $55.36 | $54.65 | -14.91 | — | +0.00 | -14.91 | -5.46 | — |
 | 2026-09-14 | `ORCL` | 7 | $150.28 | $141.42 | -62.02 | — | +0.00 | -62.02 | -161.07 | — |
 | 2026-09-14 | `CECO` | 15 | $78.34 | $74.34 | -60.00 | — | +0.00 | -60.00 | -47.55 | — |
 
@@ -280,7 +280,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | -13.95 | $6,242.89 | MSTR×8, HOOD×9, CRCL×12 | $9,651.24 | +105.97 | +0.00 | — | MSTR, HOOD, CRCL | $9,645.12 | $9,645.12 | — |
 | 2026-09-10 | -13.28 | $9,645.12 | — | $9,645.12 | +0.00 | +0.00 | — | — | $9,645.12 | $9,645.12 | — |
 | 2026-09-11 | +0.50 | $9,645.12 | — | $9,645.12 | +0.00 | +127.26 | AMD, CLS, SANM, SWKS, QRVO, ASO, ORCL, CECO | — | $811.30 | $9,756.23 | AMD×2, CLS×3, SANM×5, SWKS×14, QRVO×10, ASO×21, ORCL×7, CECO×15 |
-| 2026-09-14 | -11.00 | $811.30 | AMD×2, CLS×3, SANM×5, SWKS×14, QRVO×10, ASO×21, ORCL×7, CECO×15 | $9,386.54 | -369.69 | -68.25 | — | SANM, SWKS, ASO, ORCL, CECO | $6,293.20 | $9,308.06 | AMD×2, CLS×3, QRVO×10 |
+| 2026-09-14 | -11.00 | $811.30 | AMD×2, CLS×3, SANM×5, SWKS×14, QRVO×10, ASO×21, ORCL×7, CECO×15 | $9,384.44 | -371.79 | -68.25 | — | SANM, SWKS, ASO, ORCL, CECO | $6,291.10 | $9,305.96 | AMD×2, CLS×3, QRVO×10 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -494,13 +494,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 09:30 ET | **BUY** | `ORCL` | 7 | $164.43 | $2.01 | — | $1,975.99 | — | rank by macd_hist; rank macd_hist; list flatten,earn_react; ⚪; ret5=+4.9; leftover $1205.64 | join🟢 sector🟢 gen🟡 news🟢 digest🟡 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-11 09:30 ET | **BUY** | `CECO` | 15 | $77.51 | $2.04 | — | $811.30 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+11.1; leftover $1205.64 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $811.30 | ▲ close $9,756.23 vs 09:30 $9,645.12 (session +127.26) | 16:00 close · cash $811.30 · equity $9,756.23 vs 09:30 $9,645.12 (+111.11; session marks +127.26) · 8 name(s) marked open→close (per-name table). AMD×2 09:30 $510.71 → close $516.13 +10.84; CLS×3 09:30 $329.05 → close $346.55 +52.50; SANM×5 09:30 $206.84 → close $216.00 +45.80; SWKS×14 09:30 $84.27 → close $88.35 +57.12; QRVO×10 09:30 $112.83 → close $116.65 +38.15; ASO×21 09:30 $54.91 → close $55.36 +9.45; ORCL×7 09:30 $164.43 → close $150.28 -99.05; CECO×15 09:30 $77.51 → close $78.34 +12.45 | — |
-| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $811.30 | ▼ 09:30 equity $9,386.54 vs yday $9,756.23 (-369.69) | 09:30 open · cash $811.30 (unchanged overnight, no fees) · equity $9,386.54 vs prior close $9,756.23 (-369.69) · 8 name(s) re-marked at the open (per-name table). AMD×2 yday $516.13 → 09:30 $486.28 -59.70; CLS×3 yday $346.55 → 09:30 $323.15 -70.20; SANM×5 yday $216.00 → 09:30 $206.50 -47.50; SWKS×14 yday $88.35 → 09:30 $86.06 -32.06; QRVO×10 yday $116.65 → 09:30 $114.11 -25.40; ASO×21 yday $55.36 → 09:30 $54.75 -12.81; ORCL×7 yday $150.28 → 09:30 $141.42 -62.02; CECO×15 yday $78.34 → 09:30 $74.34 -60.00 | — |
-| 2026-09-14 09:30 ET | **SELL** | `SANM` | 5 | $206.50 | $2.02 | $-5.73 | $1,841.78 | ▼ -5.73 after sell → book $9,384.52; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `SWKS` | 14 | $86.06 | $2.05 | $+20.98 | $3,044.56 | ▲ +20.98 after sell → book $9,382.46; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `ASO` | 21 | $54.75 | $2.07 | $-7.49 | $4,192.24 | ▼ -7.49 after sell → book $9,380.39; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `ORCL` | 7 | $141.42 | $2.03 | $-165.11 | $5,180.15 | ▼ -165.11 after sell → book $9,378.36; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `CECO` | 15 | $74.34 | $2.06 | $-51.64 | $6,293.20 | ▼ -51.64 after sell → book $9,376.31; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,293.20 | ▼ close $9,308.06 vs 09:30 $9,386.54 (session -68.25) | 16:00 close · cash $6,293.20 · equity $9,308.06 vs 09:30 $9,386.54 (-78.48; session marks -68.25) · 3 name(s) marked open→close (per-name table). AMD×2 09:30 $486.28 → close $493.41 +14.26; CLS×3 09:30 $323.15 → close $316.08 -21.21; QRVO×10 09:30 $114.11 → close $107.98 -61.30 | — |
+| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $811.30 | ▼ 09:30 equity $9,384.44 vs yday $9,756.23 (-371.79) | 09:30 open · cash $811.30 (unchanged overnight, no fees) · equity $9,384.44 vs prior close $9,756.23 (-371.79) · 8 name(s) re-marked at the open (per-name table). AMD×2 yday $516.13 → 09:30 $486.28 -59.70; CLS×3 yday $346.55 → 09:30 $323.15 -70.20; SANM×5 yday $216.00 → 09:30 $206.50 -47.50; SWKS×14 yday $88.35 → 09:30 $86.06 -32.06; QRVO×10 yday $116.65 → 09:30 $114.11 -25.40; ASO×21 yday $55.36 → 09:30 $54.65 -14.91; ORCL×7 yday $150.28 → 09:30 $141.42 -62.02; CECO×15 yday $78.34 → 09:30 $74.34 -60.00 | — |
+| 2026-09-14 09:30 ET | **SELL** | `SANM` | 5 | $206.50 | $2.02 | $-5.73 | $1,841.78 | ▼ -5.73 after sell → book $9,382.42; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `SWKS` | 14 | $86.06 | $2.05 | $+20.98 | $3,044.56 | ▲ +20.98 after sell → book $9,380.36; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `ASO` | 21 | $54.65 | $2.07 | $-9.59 | $4,190.14 | ▼ -9.59 after sell → book $9,378.29; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `ORCL` | 7 | $141.42 | $2.03 | $-165.11 | $5,178.05 | ▼ -165.11 after sell → book $9,376.26; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `CECO` | 15 | $74.34 | $2.06 | $-51.64 | $6,291.10 | ▼ -51.64 after sell → book $9,374.21; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,291.10 | ▼ close $9,305.96 vs 09:30 $9,384.44 (session -68.25) | 16:00 close · cash $6,291.10 · equity $9,305.96 vs 09:30 $9,384.44 (-78.48; session marks -68.25) · 3 name(s) marked open→close (per-name table). AMD×2 09:30 $486.28 → close $493.41 +14.26; CLS×3 09:30 $323.15 → close $316.08 -21.21; QRVO×10 09:30 $114.11 → close $107.98 -61.30 | — |
 
 ## Not taken
 

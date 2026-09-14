@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · last bar red
 
-Cash book **-8.96%** ($9,104) · signal-only (no cash/fees) was -7.91%. Starts YES **7/22**. Fills 176 · skips 81 · realized $-895.67.
+Cash book **-8.92%** ($9,108) · signal-only (no cash/fees) was -7.95%. Starts YES **7/22**. Fills 176 · skips 81 · realized $-892.20.
 
 ## How this sleeve decides (like you are 10)
 
@@ -52,7 +52,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,104.38.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,107.85.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -238,8 +238,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | `SLBT` | 269 | — | $2.09 | +0.00 | $2.06 | +8.07 | +8.07 | -0.00 | +8.07 |
 | 2026-09-11 | `BHVN` | 43 | — | $13.03 | +0.00 | $12.71 | +13.76 | +13.76 | -0.00 | +13.76 |
 | 2026-09-11 | `AEO` | 38 | — | $14.71 | +0.00 | $15.02 | -11.78 | -11.78 | -0.00 | -11.78 |
-| 2026-09-14 | `AUPH` | 34 | $16.10 | $16.03 | +2.38 | — | +0.00 | +2.38 | +8.50 | — |
-| 2026-09-14 | `OVID` | 206 | $2.69 | $2.75 | -13.39 | — | +0.00 | -13.39 | -5.15 | — |
+| 2026-09-14 | `AUPH` | 34 | $16.10 | $16.14 | -1.36 | — | +0.00 | -1.36 | +4.76 | — |
+| 2026-09-14 | `OVID` | 206 | $2.69 | $2.72 | -6.18 | — | +0.00 | -6.18 | +2.06 | — |
 | 2026-09-14 | `ORCL` | 3 | $150.28 | $141.42 | +26.58 | — | +0.00 | +26.58 | +69.03 | — |
 | 2026-09-14 | `NVT` | 3 | $162.38 | $150.00 | +37.14 | — | +0.00 | +37.14 | +23.34 | — |
 | 2026-09-14 | `NAVN` | 27 | $21.02 | $21.10 | -2.16 | — | +0.00 | -2.16 | -13.23 | — |
@@ -272,7 +272,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | -13.95 | $9,023.81 | — | $9,023.81 | -0.00 | +0.00 | — | — | $9,023.81 | $9,023.81 | — |
 | 2026-09-10 | -13.28 | $9,023.81 | — | $9,023.81 | -0.00 | +0.00 | — | — | $9,023.81 | $9,023.81 | — |
 | 2026-09-11 | +0.50 | $9,023.81 | — | $9,023.81 | -0.00 | +41.99 | AUPH, OVID, ORCL, NVT, NAVN, SLBT, BHVN, AEO | — | $13,325.44 | $9,046.95 | AUPH×34, OVID×206, ORCL×3, NVT×3, NAVN×27, SLBT×269, BHVN×43, AEO×38 |
-| 2026-09-14 | -11.00 | $13,325.44 | AUPH×34, OVID×206, ORCL×3, NVT×3, NAVN×27, SLBT×269, BHVN×43, AEO×38 | $9,122.89 | +75.94 | +0.00 | — | AUPH, OVID, ORCL, NVT, NAVN, SLBT, BHVN, AEO | $9,104.38 | $9,104.38 | — |
+| 2026-09-14 | -11.00 | $13,325.44 | AUPH×34, OVID×206, ORCL×3, NVT×3, NAVN×27, SLBT×269, BHVN×43, AEO×38 | $9,126.36 | +79.41 | +0.00 | — | AUPH, OVID, ORCL, NVT, NAVN, SLBT, BHVN, AEO | $9,107.85 | $9,107.85 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -488,16 +488,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 09:30 ET | **SHORT** | `BHVN` | 43 | $13.03 | $2.15 | — | $12,768.60 | — | last bar red; gate last_red=True; list yday_mover; ret5=-18.5; leftover $563.99 | join🟡 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-11 09:30 ET | **SHORT** | `AEO` | 38 | $14.71 | $2.14 | — | $13,325.44 | — | last bar red; gate last_red=True; list yday_mover; ret5=-12.8; leftover $563.99 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,325.44 | ▲ close $9,046.95 vs 09:30 $9,023.81 (session +41.99) | 16:00 close · cash $13,325.44 · equity $9,046.95 vs 09:30 $9,023.81 (+23.14; session marks +41.99) · 8 name(s) marked open→close (per-name table). AUPH×34 09:30 $16.28 → close $16.10 +6.12; OVID×206 09:30 $2.73 → close $2.69 +8.24; ORCL×3 09:30 $164.43 → close $150.28 +42.45; NVT×3 09:30 $157.78 → close $162.38 -13.80; NAVN×27 09:30 $20.61 → close $21.02 -11.07; SLBT×269 09:30 $2.09 → close $2.06 +8.07; BHVN×43 09:30 $13.03 → close $12.71 +13.76; AEO×38 09:30 $14.71 → close $15.02 -11.78 | — |
-| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,325.44 | ▲ 09:30 equity $9,122.89 vs yday $9,046.95 (+75.94) | 09:30 open · cash $13,325.44 (unchanged overnight, no fees) · equity $9,122.89 vs prior close $9,046.95 (+75.94) · 8 name(s) re-marked at the open (per-name table). AUPH×34 yday $16.10 → 09:30 $16.03 +2.38; OVID×206 yday $2.69 → 09:30 $2.75 -13.39; ORCL×3 yday $150.28 → 09:30 $141.42 +26.58; NVT×3 yday $162.38 → 09:30 $150.00 +37.14; NAVN×27 yday $21.02 → 09:30 $21.10 -2.16; SLBT×269 yday $2.06 → 09:30 $2.02 +10.76; BHVN×43 yday $12.71 → 09:30 $12.52 +8.17; AEO×38 yday $15.02 → 09:30 $14.85 +6.46 | — |
-| 2026-09-14 09:30 ET | **COVER** | `AUPH` | 34 | $16.03 | $2.09 | $+4.28 | $12,778.33 | ▲ +4.28 after sell → book $9,120.80; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **COVER** | `OVID` | 206 | $2.75 | $2.66 | $-10.52 | $12,208.14 | ▼ -10.52 after sell → book $9,118.14; vs 09:30 mark -2.66 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **COVER** | `ORCL` | 3 | $141.42 | $2.00 | $+65.00 | $11,781.88 | ▲ +65.00 after sell → book $9,116.14; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **COVER** | `NVT` | 3 | $150.00 | $2.00 | $+19.31 | $11,329.88 | ▲ +19.31 after sell → book $9,114.14; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
-| 2026-09-14 09:30 ET | **COVER** | `NAVN` | 27 | $21.10 | $2.07 | $-17.41 | $10,758.11 | ▼ -17.41 after sell → book $9,112.07; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **COVER** | `SLBT` | 269 | $2.02 | $3.47 | $+11.82 | $10,211.26 | ▲ +11.82 after sell → book $9,108.60; vs 09:30 mark -3.47 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **COVER** | `BHVN` | 43 | $12.52 | $2.12 | $+17.66 | $9,670.78 | ▲ +17.66 after sell → book $9,106.48; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **COVER** | `AEO` | 38 | $14.85 | $2.10 | $-9.56 | $9,104.38 | ▼ -9.56 after sell → book $9,104.38; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,104.38 | ▲ close $9,104.38 vs 09:30 $9,122.89 (session +0.00) | 16:00 close · cash $9,104.38 · no lots left · equity $9,104.38. | — |
+| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,325.44 | ▲ 09:30 equity $9,126.36 vs yday $9,046.95 (+79.41) | 09:30 open · cash $13,325.44 (unchanged overnight, no fees) · equity $9,126.36 vs prior close $9,046.95 (+79.41) · 8 name(s) re-marked at the open (per-name table). AUPH×34 yday $16.10 → 09:30 $16.14 -1.36; OVID×206 yday $2.69 → 09:30 $2.72 -6.18; ORCL×3 yday $150.28 → 09:30 $141.42 +26.58; NVT×3 yday $162.38 → 09:30 $150.00 +37.14; NAVN×27 yday $21.02 → 09:30 $21.10 -2.16; SLBT×269 yday $2.06 → 09:30 $2.02 +10.76; BHVN×43 yday $12.71 → 09:30 $12.52 +8.17; AEO×38 yday $15.02 → 09:30 $14.85 +6.46 | — |
+| 2026-09-14 09:30 ET | **COVER** | `AUPH` | 34 | $16.14 | $2.09 | $+0.54 | $12,774.59 | ▲ +0.54 after sell → book $9,124.27; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **COVER** | `OVID` | 206 | $2.72 | $2.66 | $-3.31 | $12,211.61 | ▼ -3.31 after sell → book $9,121.61; vs 09:30 mark -2.66 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **COVER** | `ORCL` | 3 | $141.42 | $2.00 | $+65.00 | $11,785.35 | ▲ +65.00 after sell → book $9,119.61; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **COVER** | `NVT` | 3 | $150.00 | $2.00 | $+19.31 | $11,333.35 | ▲ +19.31 after sell → book $9,117.61; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-14 09:30 ET | **COVER** | `NAVN` | 27 | $21.10 | $2.07 | $-17.41 | $10,761.58 | ▼ -17.41 after sell → book $9,115.54; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **COVER** | `SLBT` | 269 | $2.02 | $3.47 | $+11.82 | $10,214.73 | ▲ +11.82 after sell → book $9,112.07; vs 09:30 mark -3.47 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **COVER** | `BHVN` | 43 | $12.52 | $2.12 | $+17.66 | $9,674.25 | ▲ +17.66 after sell → book $9,109.95; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **COVER** | `AEO` | 38 | $14.85 | $2.10 | $-9.56 | $9,107.85 | ▼ -9.56 after sell → book $9,107.85; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,107.85 | ▲ close $9,107.85 vs 09:30 $9,126.36 (session +0.00) | 16:00 close · cash $9,107.85 · no lots left · equity $9,107.85. | — |
 
 ## Not taken
 

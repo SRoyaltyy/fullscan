@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-1.65%** ($9,835) · signal-only (no cash/fees) was +8.99%. Starts YES **3/22**. Fills 160 · skips 80 · realized $-165.40.
+Cash book **-1.45%** ($9,855) · signal-only (no cash/fees) was +8.95%. Starts YES **7/22**. Fills 160 · skips 80 · realized $-144.60.
 
 ## How this sleeve decides (like you are 10)
 
@@ -50,7 +50,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,834.60.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,855.40.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -221,7 +221,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `AMTX` | 603 | $2.01 | $2.01 | +0.00 | — | +0.00 | +0.00 | -18.09 | — |
 | 2026-09-14 | `CLOV` | 258 | $4.82 | $4.82 | +0.00 | — | +0.00 | +0.00 | +18.06 | — |
 | 2026-09-14 | `BAK` | 580 | $2.08 | $2.05 | -17.40 | — | +0.00 | -17.40 | -40.60 | — |
-| 2026-09-14 | `TYRA` | 52 | $22.03 | $23.20 | +60.84 | — | +0.00 | +60.84 | -22.36 | — |
+| 2026-09-14 | `TYRA` | 52 | $22.03 | $23.60 | +81.64 | — | +0.00 | +81.64 | -1.56 | — |
 | 2026-09-14 | `FUBO` | 106 | $11.53 | $11.56 | +3.18 | — | +0.00 | +3.18 | +1.06 | — |
 | 2026-09-14 | `RDDT` | 7 | $157.77 | $160.00 | +15.61 | — | +0.00 | +15.61 | +17.15 | — |
 | 2026-09-14 | `VIST` | 15 | $76.27 | $77.10 | +12.45 | — | +0.00 | +12.45 | -3.45 | — |
@@ -252,7 +252,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | -13.95 | $9,841.45 | — | $9,841.45 | +0.00 | +0.00 | — | — | $9,841.45 | $9,841.45 | — |
 | 2026-09-10 | -13.28 | $9,841.45 | — | $9,841.45 | +0.00 | +0.00 | — | — | $9,841.45 | $9,841.45 | — |
 | 2026-09-11 | +0.50 | $9,841.45 | — | $9,841.45 | +0.00 | -23.55 | AMTX, CLOV, BAK, TYRA, FUBO, RDDT, VIST, BAND | — | $202.57 | $9,788.75 | AMTX×603, CLOV×258, BAK×580, TYRA×52, FUBO×106, RDDT×7, VIST×15, BAND×23 |
-| 2026-09-14 | -11.00 | $202.57 | AMTX×603, CLOV×258, BAK×580, TYRA×52, FUBO×106, RDDT×7, VIST×15, BAND×23 | $9,864.12 | +75.37 | +0.00 | — | AMTX, CLOV, BAK, TYRA, FUBO, RDDT, VIST, BAND | $9,834.60 | $9,834.60 | — |
+| 2026-09-14 | -11.00 | $202.57 | AMTX×603, CLOV×258, BAK×580, TYRA×52, FUBO×106, RDDT×7, VIST×15, BAND×23 | $9,884.92 | +96.17 | +0.00 | — | AMTX, CLOV, BAK, TYRA, FUBO, RDDT, VIST, BAND | $9,855.40 | $9,855.40 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -452,16 +452,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 09:30 ET | **BUY** | `VIST` | 15 | $77.33 | $2.04 | — | $1,413.28 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=+2.5; leftover $1230.18 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-11 09:30 ET | **BUY** | `BAND` | 23 | $52.55 | $2.06 | — | $202.57 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ⚪; ret5=+8.6; leftover $1230.18 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $202.57 | ▼ close $9,788.75 vs 09:30 $9,841.45 (session -23.55) | 16:00 close · cash $202.57 · equity $9,788.75 vs 09:30 $9,841.45 (-52.70; session marks -23.55) · 8 name(s) marked open→close (per-name table). AMTX×603 09:30 $2.04 → close $2.01 -18.09; CLOV×258 09:30 $4.75 → close $4.82 +18.06; BAK×580 09:30 $2.12 → close $2.08 -23.20; TYRA×52 09:30 $23.63 → close $22.03 -83.20; FUBO×106 09:30 $11.55 → close $11.53 -2.12; RDDT×7 09:30 $157.55 → close $157.77 +1.54; VIST×15 09:30 $77.33 → close $76.27 -15.90; BAND×23 09:30 $52.55 → close $56.87 +99.36 | — |
-| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $202.57 | ▲ 09:30 equity $9,864.12 vs yday $9,788.75 (+75.37) | 09:30 open · cash $202.57 (unchanged overnight, no fees) · equity $9,864.12 vs prior close $9,788.75 (+75.37) · 8 name(s) re-marked at the open (per-name table). AMTX×603 yday $2.01 → 09:30 $2.01 +0.00; CLOV×258 yday $4.82 → 09:30 $4.82 +0.00; BAK×580 yday $2.08 → 09:30 $2.05 -17.40; TYRA×52 yday $22.03 → 09:30 $23.20 +60.84; FUBO×106 yday $11.53 → 09:30 $11.56 +3.18; RDDT×7 yday $157.77 → 09:30 $160.00 +15.61; VIST×15 yday $76.27 → 09:30 $77.10 +12.45; BAND×23 yday $56.87 → 09:30 $56.90 +0.69 | — |
-| 2026-09-14 09:30 ET | **SELL** | `AMTX` | 603 | $2.01 | $7.89 | $-33.76 | $1,406.72 | ▼ -33.76 after sell → book $9,856.24; vs 09:30 mark -7.88 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `CLOV` | 258 | $4.82 | $3.38 | $+11.35 | $2,646.89 | ▲ +11.35 after sell → book $9,852.85; vs 09:30 mark -3.39 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-09-14 09:30 ET | **SELL** | `BAK` | 580 | $2.05 | $7.59 | $-55.67 | $3,828.31 | ▼ -55.67 after sell → book $9,845.27; vs 09:30 mark -7.58 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `TYRA` | 52 | $23.20 | $2.17 | $-26.67 | $5,032.54 | ▼ -26.67 after sell → book $9,843.10; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `FUBO` | 106 | $11.56 | $2.34 | $-3.58 | $6,255.56 | ▼ -3.58 after sell → book $9,840.76; vs 09:30 mark -2.34 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `RDDT` | 7 | $160.00 | $2.03 | $+13.11 | $7,373.53 | ▲ +13.11 after sell → book $9,838.73; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `VIST` | 15 | $77.10 | $2.06 | $-7.54 | $8,527.98 | ▼ -7.54 after sell → book $9,836.68; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `BAND` | 23 | $56.90 | $2.08 | $+95.91 | $9,834.60 | ▲ +95.91 after sell → book $9,834.60; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,834.60 | ▲ close $9,834.60 vs 09:30 $9,864.12 (session +0.00) | 16:00 close · cash $9,834.60 · no lots left · equity $9,834.60. | — |
+| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $202.57 | ▲ 09:30 equity $9,884.92 vs yday $9,788.75 (+96.17) | 09:30 open · cash $202.57 (unchanged overnight, no fees) · equity $9,884.92 vs prior close $9,788.75 (+96.17) · 8 name(s) re-marked at the open (per-name table). AMTX×603 yday $2.01 → 09:30 $2.01 +0.00; CLOV×258 yday $4.82 → 09:30 $4.82 +0.00; BAK×580 yday $2.08 → 09:30 $2.05 -17.40; TYRA×52 yday $22.03 → 09:30 $23.60 +81.64; FUBO×106 yday $11.53 → 09:30 $11.56 +3.18; RDDT×7 yday $157.77 → 09:30 $160.00 +15.61; VIST×15 yday $76.27 → 09:30 $77.10 +12.45; BAND×23 yday $56.87 → 09:30 $56.90 +0.69 | — |
+| 2026-09-14 09:30 ET | **SELL** | `AMTX` | 603 | $2.01 | $7.89 | $-33.76 | $1,406.72 | ▼ -33.76 after sell → book $9,877.04; vs 09:30 mark -7.88 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `CLOV` | 258 | $4.82 | $3.38 | $+11.35 | $2,646.89 | ▲ +11.35 after sell → book $9,873.65; vs 09:30 mark -3.39 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-14 09:30 ET | **SELL** | `BAK` | 580 | $2.05 | $7.59 | $-55.67 | $3,828.31 | ▼ -55.67 after sell → book $9,866.07; vs 09:30 mark -7.58 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `TYRA` | 52 | $23.60 | $2.17 | $-5.87 | $5,053.34 | ▼ -5.87 after sell → book $9,863.90; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `FUBO` | 106 | $11.56 | $2.34 | $-3.58 | $6,276.36 | ▼ -3.58 after sell → book $9,861.56; vs 09:30 mark -2.34 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `RDDT` | 7 | $160.00 | $2.03 | $+13.11 | $7,394.33 | ▲ +13.11 after sell → book $9,859.53; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `VIST` | 15 | $77.10 | $2.06 | $-7.54 | $8,548.78 | ▼ -7.54 after sell → book $9,857.48; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `BAND` | 23 | $56.90 | $2.08 | $+95.91 | $9,855.40 | ▲ +95.91 after sell → book $9,855.40; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,855.40 | ▲ close $9,855.40 vs 09:30 $9,884.92 (session +0.00) | 16:00 close · cash $9,855.40 · no lots left · equity $9,855.40. | — |
 
 ## Not taken
 

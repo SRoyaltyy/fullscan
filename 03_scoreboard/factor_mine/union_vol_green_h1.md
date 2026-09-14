@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+8.58%** ($10,858) · signal-only (no cash/fees) was -2.22%. Starts YES **15/22**. Fills 143 · skips 54 · realized $+645.26.
+Cash book **+8.80%** ($10,880) · signal-only (no cash/fees) was -2.21%. Starts YES **15/22**. Fills 143 · skips 54 · realized $+667.66.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,300.08.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,322.48.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -208,7 +208,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | `DBI` | 226 | — | $5.91 | +0.00 | $5.88 | -6.78 | -6.78 | +0.00 | -6.78 |
 | 2026-09-11 | `BNC` | 272 | — | $4.91 | +0.00 | $4.80 | -29.92 | -29.92 | +0.00 | -29.92 |
 | 2026-09-11 | `SWKS` | 15 | — | $84.27 | +0.00 | $88.35 | +61.20 | +61.20 | +0.00 | +61.20 |
-| 2026-09-14 | `TYRA` | 56 | $22.03 | $23.20 | +65.52 | — | +0.00 | +65.52 | -24.08 | — |
+| 2026-09-14 | `TYRA` | 56 | $22.03 | $23.60 | +87.92 | — | +0.00 | +87.92 | -1.68 | — |
 | 2026-09-14 | `VIST` | 17 | $76.27 | $77.10 | +14.11 | — | +0.00 | +14.11 | -3.91 | — |
 | 2026-09-14 | `INDP` | 496 | $2.77 | $2.80 | +14.88 | — | +0.00 | +14.88 | +49.60 | — |
 | 2026-09-14 | `CMRC` | 428 | $3.50 | $3.51 | +2.14 | $3.64 | +55.64 | +57.78 | +162.64 | +218.28 |
@@ -242,7 +242,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | -13.95 | $10,718.12 | — | $10,718.12 | -0.00 | +0.00 | — | — | $10,718.12 | $10,718.12 | — |
 | 2026-09-10 | -13.28 | $10,718.12 | — | $10,718.12 | -0.00 | +0.00 | — | — | $10,718.12 | $10,718.12 | — |
 | 2026-09-11 | +0.50 | $10,718.12 | — | $10,718.12 | -0.00 | +42.56 | TYRA, VIST, INDP, CMRC, WLTH, DBI, BNC, SWKS | — | $103.32 | $10,733.74 | TYRA×56, VIST×17, INDP×496, CMRC×428, WLTH×122, DBI×226, BNC×272, SWKS×15 |
-| 2026-09-14 | -11.00 | $103.32 | TYRA×56, VIST×17, INDP×496, CMRC×428, WLTH×122, DBI×226, BNC×272, SWKS×15 | $10,824.06 | +90.32 | +55.64 | — | TYRA, VIST, INDP, WLTH, DBI, BNC, SWKS | $9,300.08 | $10,858.00 | CMRC×428 |
+| 2026-09-14 | -11.00 | $103.32 | TYRA×56, VIST×17, INDP×496, CMRC×428, WLTH×122, DBI×226, BNC×272, SWKS×15 | $10,846.46 | +112.72 | +55.64 | — | TYRA, VIST, INDP, WLTH, DBI, BNC, SWKS | $9,322.48 | $10,880.40 | CMRC×428 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -426,15 +426,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 09:30 ET | **BUY** | `BNC` | 272 | $4.91 | $3.51 | — | $1,369.41 | — | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ret5=+76.3; leftover $1339.76 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-11 09:30 ET | **BUY** | `SWKS` | 15 | $84.27 | $2.04 | — | $103.32 | — | combo gate; gate vol=good,last_green=True; list yday_gainer,ohlc_hot; ret5=+17.2; leftover $1339.76 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $103.32 | ▲ close $10,733.74 vs 09:30 $10,718.12 (session +42.56) | 16:00 close · cash $103.32 · equity $10,733.74 vs 09:30 $10,718.12 (+15.62; session marks +42.56) · 8 name(s) marked open→close (per-name table). TYRA×56 09:30 $23.63 → close $22.03 -89.60; VIST×17 09:30 $77.33 → close $76.27 -18.02; INDP×496 09:30 $2.70 → close $2.77 +34.72; CMRC×428 09:30 $3.13 → close $3.50 +160.50; WLTH×122 09:30 $10.95 → close $10.38 -69.54; DBI×226 09:30 $5.91 → close $5.88 -6.78; BNC×272 09:30 $4.91 → close $4.80 -29.92; SWKS×15 09:30 $84.27 → close $88.35 +61.20 | — |
-| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $103.32 | ▲ 09:30 equity $10,824.06 vs yday $10,733.74 (+90.32) | 09:30 open · cash $103.32 (unchanged overnight, no fees) · equity $10,824.06 vs prior close $10,733.74 (+90.32) · 8 name(s) re-marked at the open (per-name table). TYRA×56 yday $22.03 → 09:30 $23.20 +65.52; VIST×17 yday $76.27 → 09:30 $77.10 +14.11; INDP×496 yday $2.77 → 09:30 $2.80 +14.88; CMRC×428 yday $3.50 → 09:30 $3.51 +2.14; WLTH×122 yday $10.38 → 09:30 $10.29 -10.98; DBI×226 yday $5.88 → 09:30 $5.86 -4.52; BNC×272 yday $4.80 → 09:30 $4.96 +43.52; SWKS×15 yday $88.35 → 09:30 $86.06 -34.35 | — |
-| 2026-09-14 09:30 ET | **SELL** | `TYRA` | 56 | $23.20 | $2.18 | $-28.42 | $1,400.34 | ▼ -28.42 after sell → book $10,821.88; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `VIST` | 17 | $77.10 | $2.06 | $-8.01 | $2,708.98 | ▼ -8.01 after sell → book $10,819.82; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `INDP` | 496 | $2.80 | $6.49 | $+36.71 | $4,091.29 | ▲ +36.71 after sell → book $10,813.33; vs 09:30 mark -6.49 | dropped from list after 1 sess (min 1) | join🟡 sector🔴 gen🔴 news🟡 digest🔴 judge🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-14 09:30 ET | **SELL** | `WLTH` | 122 | $10.29 | $2.39 | $-85.26 | $5,344.28 | ▼ -85.26 after sell → book $10,810.94; vs 09:30 mark -2.39 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `DBI` | 226 | $5.86 | $2.96 | $-17.18 | $6,665.68 | ▼ -17.18 after sell → book $10,807.98; vs 09:30 mark -2.96 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `BNC` | 272 | $4.96 | $3.56 | $+6.53 | $8,011.24 | ▲ +6.53 after sell → book $10,804.42; vs 09:30 mark -3.56 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-09-14 09:30 ET | **SELL** | `SWKS` | 15 | $86.06 | $2.06 | $+22.76 | $9,300.08 | ▲ +22.76 after sell → book $10,802.36; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,300.08 | ▲ close $10,858.00 vs 09:30 $10,824.06 (session +55.64) | 16:00 close · cash $9,300.08 · equity $10,858.00 vs 09:30 $10,824.06 (+33.94; session marks +55.64) · 1 name(s) marked open→close (per-name table). CMRC×428 09:30 $3.51 → close $3.64 +55.64 | — |
+| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $103.32 | ▲ 09:30 equity $10,846.46 vs yday $10,733.74 (+112.72) | 09:30 open · cash $103.32 (unchanged overnight, no fees) · equity $10,846.46 vs prior close $10,733.74 (+112.72) · 8 name(s) re-marked at the open (per-name table). TYRA×56 yday $22.03 → 09:30 $23.60 +87.92; VIST×17 yday $76.27 → 09:30 $77.10 +14.11; INDP×496 yday $2.77 → 09:30 $2.80 +14.88; CMRC×428 yday $3.50 → 09:30 $3.51 +2.14; WLTH×122 yday $10.38 → 09:30 $10.29 -10.98; DBI×226 yday $5.88 → 09:30 $5.86 -4.52; BNC×272 yday $4.80 → 09:30 $4.96 +43.52; SWKS×15 yday $88.35 → 09:30 $86.06 -34.35 | — |
+| 2026-09-14 09:30 ET | **SELL** | `TYRA` | 56 | $23.60 | $2.18 | $-6.02 | $1,422.74 | ▼ -6.02 after sell → book $10,844.28; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `VIST` | 17 | $77.10 | $2.06 | $-8.01 | $2,731.38 | ▼ -8.01 after sell → book $10,842.22; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `INDP` | 496 | $2.80 | $6.49 | $+36.71 | $4,113.69 | ▲ +36.71 after sell → book $10,835.73; vs 09:30 mark -6.49 | dropped from list after 1 sess (min 1) | join🟡 sector🔴 gen🔴 news🟡 digest🔴 judge🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-14 09:30 ET | **SELL** | `WLTH` | 122 | $10.29 | $2.39 | $-85.26 | $5,366.68 | ▼ -85.26 after sell → book $10,833.34; vs 09:30 mark -2.39 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `DBI` | 226 | $5.86 | $2.96 | $-17.18 | $6,688.08 | ▼ -17.18 after sell → book $10,830.38; vs 09:30 mark -2.96 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `BNC` | 272 | $4.96 | $3.56 | $+6.53 | $8,033.64 | ▲ +6.53 after sell → book $10,826.82; vs 09:30 mark -3.56 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-14 09:30 ET | **SELL** | `SWKS` | 15 | $86.06 | $2.06 | $+22.76 | $9,322.48 | ▲ +22.76 after sell → book $10,824.76; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,322.48 | ▲ close $10,880.40 vs 09:30 $10,846.46 (session +55.64) | 16:00 close · cash $9,322.48 · equity $10,880.40 vs 09:30 $10,846.46 (+33.94; session marks +55.64) · 1 name(s) marked open→close (per-name table). CMRC×428 09:30 $3.51 → close $3.64 +55.64 | — |
 
 ## Not taken
 

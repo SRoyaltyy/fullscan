@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `candle_score` · size `leftover` · sell `list` · S-boost `none` · rank by candle_score
 
-Cash book **+0.73%** ($10,073) · signal-only (no cash/fees) was +12.13%. Starts YES **10/22**. Fills 176 · skips 78 · realized $-68.17.
+Cash book **+0.94%** ($10,094) · signal-only (no cash/fees) was +12.13%. Starts YES **10/22**. Fills 176 · skips 78 · realized $-47.37.
 
 ## How this sleeve decides (like you are 10)
 
@@ -53,7 +53,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $7,444.02.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $7,464.82.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -251,7 +251,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `PAYP` | 67 | $18.45 | $18.28 | -11.39 | — | +0.00 | -11.39 | -1.34 | — |
 | 2026-09-14 | `QRVO` | 11 | $116.65 | $114.11 | -27.94 | $107.98 | -67.43 | -95.37 | +14.03 | -53.40 |
 | 2026-09-14 | `SWKS` | 14 | $88.35 | $86.06 | -32.06 | — | +0.00 | -32.06 | +25.06 | — |
-| 2026-09-14 | `TYRA` | 52 | $22.03 | $23.20 | +60.84 | — | +0.00 | +60.84 | -22.36 | — |
+| 2026-09-14 | `TYRA` | 52 | $22.03 | $23.60 | +81.64 | — | +0.00 | +81.64 | -1.56 | — |
 | 2026-09-14 | `IRD` | 201 | $6.04 | $6.02 | -4.02 | — | +0.00 | -4.02 | -28.14 | — |
 
 ## Each session (cash + holdings state)
@@ -279,7 +279,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | -13.95 | $9,939.74 | — | $9,939.74 | -0.00 | +0.00 | — | — | $9,939.74 | $9,939.74 | — |
 | 2026-09-10 | -13.28 | $9,939.74 | — | $9,939.74 | -0.00 | +0.00 | — | — | $9,939.74 | $9,939.74 | — |
 | 2026-09-11 | +0.50 | $9,939.74 | — | $9,939.74 | -0.00 | +174.40 | ANGX, CMRC, HAFN, PAYP, QRVO, SWKS, TYRA, IRD | — | $87.86 | $10,092.68 | ANGX×230, CMRC×396, HAFN×133, PAYP×67, QRVO×11, SWKS×14, TYRA×52, IRD×201 |
-| 2026-09-14 | -11.00 | $87.86 | ANGX×230, CMRC×396, HAFN×133, PAYP×67, QRVO×11, SWKS×14, TYRA×52, IRD×201 | $10,103.70 | +11.02 | -15.95 | — | ANGX, HAFN, PAYP, SWKS, TYRA, IRD | $7,444.02 | $10,073.24 | CMRC×396, QRVO×11 |
+| 2026-09-14 | -11.00 | $87.86 | ANGX×230, CMRC×396, HAFN×133, PAYP×67, QRVO×11, SWKS×14, TYRA×52, IRD×201 | $10,124.50 | +31.82 | -15.95 | — | ANGX, HAFN, PAYP, SWKS, TYRA, IRD | $7,464.82 | $10,094.04 | CMRC×396, QRVO×11 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -497,14 +497,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 09:30 ET | **BUY** | `TYRA` | 52 | $23.63 | $2.15 | — | $1,328.61 | — | rank by candle_score; rank candle_score; list probable,yday_gainer; ret5=-6.3; leftover $1242.47 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-11 09:30 ET | **BUY** | `IRD` | 201 | $6.16 | $2.60 | — | $87.86 | — | rank by candle_score; rank candle_score; list yday_gainer; 🔵; ret5=+36.4; leftover $1242.47 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $87.86 | ▲ close $10,092.68 vs 09:30 $9,939.74 (session +174.40) | 16:00 close · cash $87.86 · equity $10,092.68 vs 09:30 $9,939.74 (+152.94; session marks +174.40) · 8 name(s) marked open→close (per-name table). ANGX×230 09:30 $5.38 → close $5.45 +16.10; CMRC×396 09:30 $3.13 → close $3.50 +148.50; HAFN×133 09:30 $9.32 → close $9.38 +7.98; PAYP×67 09:30 $18.30 → close $18.45 +10.05; QRVO×11 09:30 $112.83 → close $116.65 +41.97; SWKS×14 09:30 $84.27 → close $88.35 +57.12; TYRA×52 09:30 $23.63 → close $22.03 -83.20; IRD×201 09:30 $6.16 → close $6.04 -24.12 | — |
-| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $87.86 | ▲ 09:30 equity $10,103.70 vs yday $10,092.68 (+11.02) | 09:30 open · cash $87.86 (unchanged overnight, no fees) · equity $10,103.70 vs prior close $10,092.68 (+11.02) · 8 name(s) re-marked at the open (per-name table). ANGX×230 yday $5.45 → 09:30 $5.57 +27.60; CMRC×396 yday $3.50 → 09:30 $3.51 +1.98; HAFN×133 yday $9.38 → 09:30 $9.35 -3.99; PAYP×67 yday $18.45 → 09:30 $18.28 -11.39; QRVO×11 yday $116.65 → 09:30 $114.11 -27.94; SWKS×14 yday $88.35 → 09:30 $86.06 -32.06; TYRA×52 yday $22.03 → 09:30 $23.20 +60.84; IRD×201 yday $6.04 → 09:30 $6.02 -4.02 | — |
-| 2026-09-14 09:30 ET | **SELL** | `ANGX` | 230 | $5.57 | $3.02 | $+37.72 | $1,365.94 | ▲ +37.72 after sell → book $10,100.68; vs 09:30 mark -3.02 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `HAFN` | 133 | $9.35 | $2.42 | $-0.82 | $2,607.07 | ▼ -0.82 after sell → book $10,098.26; vs 09:30 mark -2.42 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `PAYP` | 67 | $18.28 | $2.21 | $-5.74 | $3,829.62 | ▼ -5.74 after sell → book $10,096.05; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `SWKS` | 14 | $86.06 | $2.05 | $+20.98 | $5,032.41 | ▲ +20.98 after sell → book $10,094.00; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `TYRA` | 52 | $23.20 | $2.17 | $-26.67 | $6,236.64 | ▼ -26.67 after sell → book $10,091.83; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `IRD` | 201 | $6.02 | $2.64 | $-33.38 | $7,444.02 | ▼ -33.38 after sell → book $10,089.19; vs 09:30 mark -2.64 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,444.02 | ▼ close $10,073.24 vs 09:30 $10,103.70 (session -15.95) | 16:00 close · cash $7,444.02 · equity $10,073.24 vs 09:30 $10,103.70 (-30.46; session marks -15.95) · 2 name(s) marked open→close (per-name table). CMRC×396 09:30 $3.51 → close $3.64 +51.48; QRVO×11 09:30 $114.11 → close $107.98 -67.43 | — |
+| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $87.86 | ▲ 09:30 equity $10,124.50 vs yday $10,092.68 (+31.82) | 09:30 open · cash $87.86 (unchanged overnight, no fees) · equity $10,124.50 vs prior close $10,092.68 (+31.82) · 8 name(s) re-marked at the open (per-name table). ANGX×230 yday $5.45 → 09:30 $5.57 +27.60; CMRC×396 yday $3.50 → 09:30 $3.51 +1.98; HAFN×133 yday $9.38 → 09:30 $9.35 -3.99; PAYP×67 yday $18.45 → 09:30 $18.28 -11.39; QRVO×11 yday $116.65 → 09:30 $114.11 -27.94; SWKS×14 yday $88.35 → 09:30 $86.06 -32.06; TYRA×52 yday $22.03 → 09:30 $23.60 +81.64; IRD×201 yday $6.04 → 09:30 $6.02 -4.02 | — |
+| 2026-09-14 09:30 ET | **SELL** | `ANGX` | 230 | $5.57 | $3.02 | $+37.72 | $1,365.94 | ▲ +37.72 after sell → book $10,121.48; vs 09:30 mark -3.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `HAFN` | 133 | $9.35 | $2.42 | $-0.82 | $2,607.07 | ▼ -0.82 after sell → book $10,119.06; vs 09:30 mark -2.42 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `PAYP` | 67 | $18.28 | $2.21 | $-5.74 | $3,829.62 | ▼ -5.74 after sell → book $10,116.85; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `SWKS` | 14 | $86.06 | $2.05 | $+20.98 | $5,032.41 | ▲ +20.98 after sell → book $10,114.80; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `TYRA` | 52 | $23.60 | $2.17 | $-5.87 | $6,257.44 | ▼ -5.87 after sell → book $10,112.63; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `IRD` | 201 | $6.02 | $2.64 | $-33.38 | $7,464.82 | ▼ -33.38 after sell → book $10,109.99; vs 09:30 mark -2.64 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,464.82 | ▼ close $10,094.04 vs 09:30 $10,124.50 (session -15.95) | 16:00 close · cash $7,464.82 · equity $10,094.04 vs 09:30 $10,124.50 (-30.46; session marks -15.95) · 2 name(s) marked open→close (per-name table). CMRC×396 09:30 $3.51 → close $3.64 +51.48; QRVO×11 09:30 $114.11 → close $107.98 -67.43 | — |
 
 ## Not taken
 

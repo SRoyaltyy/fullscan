@@ -392,7 +392,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | `AMTX` | 640 | — | $2.04 | +0.00 | $2.01 | -19.20 | -19.20 | +0.00 | -19.20 |
 | 2026-09-11 | `BAK` | 615 | — | $2.12 | +0.00 | $2.08 | -24.60 | -24.60 | +0.00 | -24.60 |
 | 2026-09-11 | `RH` | 9 | — | $135.71 | +0.00 | $134.07 | -14.76 | -14.76 | +0.00 | -14.76 |
-| 2026-09-14 | `ORCL` | 6 | $150.28 | $141.42 | -53.16 | $144.72 | +19.80 | -33.36 | -138.06 | -118.26 |
+| 2026-09-14 | `ORCL` | 6 | $150.28 | $141.42 | -53.16 | $144.79 | +20.22 | -32.94 | -138.06 | -117.84 |
 | 2026-09-14 | `DBI` | 179 | $5.88 | $5.86 | -3.58 | $6.53 | +119.93 | +116.35 | -8.95 | +110.98 |
 | 2026-09-14 | `ADBE` | 4 | $252.23 | $261.51 | +37.12 | $265.60 | +16.36 | +53.48 | +77.36 | +93.72 |
 | 2026-09-14 | `CPRT` | 33 | $29.95 | $30.63 | +22.44 | $31.73 | +36.30 | +58.74 | -45.54 | -9.24 |
@@ -429,7 +429,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | -13.95 | $1,770.47 | AI×96, AVGO×2, CHPT×149, CIEN×2, CPB×46, FIVE×4, HPE×21, MEI×68, AMBA×4, ASAN×33, DOCU×4, DOMO×81, GWRE×1, IOT×6, LULU×3, MAMA×18, MSTR×1, MRX×3 | $12,187.13 | -18.45 | -16.39 | — | AI, AVGO, CHPT, CIEN, CPB, FIVE, HPE, MEI, MSTR, MRX | $10,091.05 | $12,150.01 | AMBA×4, ASAN×33, DOCU×4, DOMO×81, GWRE×1, IOT×6, LULU×3, MAMA×18 |
 | 2026-09-10 | -13.28 | $10,091.05 | AMBA×4, ASAN×33, DOCU×4, DOMO×81, GWRE×1, IOT×6, LULU×3, MAMA×18 | $12,138.94 | -11.07 | +0.00 | — | AMBA, ASAN, DOCU, DOMO, GWRE, IOT, LULU, MAMA | $12,122.97 | $12,122.97 | — |
 | 2026-09-11 | +0.50 | $12,122.97 | — | $12,122.97 | +0.00 | -16.30 | ORCL, DBI, ADBE, CPRT, DSGX, KR, LPTH, REF, AMTX, BAK, RH | — | $68.12 | $12,071.20 | ORCL×6, DBI×179, ADBE×4, CPRT×33, DSGX×14, KR×18, LPTH×113, REF×80, AMTX×640, BAK×615, RH×9 |
-| 2026-09-14 | -11.00 | $68.12 | ORCL×6, DBI×179, ADBE×4, CPRT×33, DSGX×14, KR×18, LPTH×113, REF×80, AMTX×640, BAK×615, RH×9 | $12,031.43 | -39.77 | +320.01 | — | AMTX, BAK, RH | $3,779.42 | $12,332.99 | ORCL×6, DBI×179, ADBE×4, CPRT×33, DSGX×14, KR×18, LPTH×113, REF×80 |
+| 2026-09-14 | -11.00 | $68.12 | ORCL×6, DBI×179, ADBE×4, CPRT×33, DSGX×14, KR×18, LPTH×113, REF×80, AMTX×640, BAK×615, RH×9 | $12,031.43 | -39.77 | +320.43 | — | AMTX, BAK, RH | $3,779.42 | $12,333.41 | ORCL×6, DBI×179, ADBE×4, CPRT×33, DSGX×14, KR×18, LPTH×113, REF×80 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -690,7 +690,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 09:30 ET | **SELL** | `AMTX` | 640 | $2.01 | $8.37 | $-35.83 | $1,346.15 | ▼ -35.83 after sell → book $12,023.06; vs 09:30 mark -8.37 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-09-14 09:30 ET | **SELL** | `BAK` | 615 | $2.05 | $8.05 | $-59.03 | $2,598.86 | ▼ -59.03 after sell → book $12,015.02; vs 09:30 mark -8.04 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-09-14 09:30 ET | **SELL** | `RH` | 9 | $131.40 | $2.04 | $-42.84 | $3,779.42 | ▼ -42.84 after sell → book $12,012.98; vs 09:30 mark -2.04 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,779.42 | ▲ close $12,332.99 vs 09:30 $12,031.43 (session +320.01) | 16:00 close · cash $3,779.42 · equity $12,332.99 vs 09:30 $12,031.43 (+301.56; session marks +320.01) · 8 name(s) marked open→close (per-name table). ORCL×6 09:30 $141.42 → close $144.72 +19.80; DBI×179 09:30 $5.86 → close $6.53 +119.93; ADBE×4 09:30 $261.51 → close $265.60 +16.36; CPRT×33 09:30 $30.63 → close $31.73 +36.30; DSGX×14 09:30 $77.06 → close $80.02 +41.44; KR×18 09:30 $59.31 → close $60.91 +28.80; LPTH×113 09:30 $8.85 → close $9.11 +29.38; REF×80 09:30 $14.16 → close $14.51 +28.00 | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,779.42 | ▲ close $12,333.41 vs 09:30 $12,031.43 (session +320.43) | 16:00 close · cash $3,779.42 · equity $12,333.41 vs 09:30 $12,031.43 (+301.98; session marks +320.43) · 8 name(s) marked open→close (per-name table). ORCL×6 09:30 $141.42 → close $144.79 +20.22; DBI×179 09:30 $5.86 → close $6.53 +119.93; ADBE×4 09:30 $261.51 → close $265.60 +16.36; CPRT×33 09:30 $30.63 → close $31.73 +36.30; DSGX×14 09:30 $77.06 → close $80.02 +41.44; KR×18 09:30 $59.31 → close $60.91 +28.80; LPTH×113 09:30 $8.85 → close $9.11 +29.38; REF×80 09:30 $14.16 → close $14.51 +28.00 | — |
 
 ## Not taken
 

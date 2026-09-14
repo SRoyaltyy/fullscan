@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 12 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · top 12 by hot
 
-Cash book **-4.14%** ($9,586) · signal-only (no cash/fees) was +16.70%. Starts YES **6/22**. Fills 262 · skips 114 · realized $-504.55.
+Cash book **-4.15%** ($9,585) · signal-only (no cash/fees) was +16.68%. Starts YES **6/22**. Fills 262 · skips 114 · realized $-505.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -53,7 +53,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $7,885.83.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $7,884.43.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -336,7 +336,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `CMRC` | 255 | $3.50 | $3.51 | +1.27 | $3.64 | +33.15 | +34.42 | +96.90 | +130.05 |
 | 2026-09-14 | `GPRO` | 572 | $1.38 | $1.37 | -5.72 | $1.35 | -11.44 | -17.16 | -17.16 | -28.60 |
 | 2026-09-14 | `WLTH` | 73 | $10.38 | $10.29 | -6.57 | — | +0.00 | -6.57 | -48.18 | — |
-| 2026-09-14 | `ASO` | 14 | $55.36 | $54.75 | -8.54 | — | +0.00 | -8.54 | -2.24 | — |
+| 2026-09-14 | `ASO` | 14 | $55.36 | $54.65 | -9.94 | — | +0.00 | -9.94 | -3.64 | — |
 | 2026-09-14 | `SWKS` | 9 | $88.35 | $86.06 | -20.61 | — | +0.00 | -20.61 | +16.11 | — |
 | 2026-09-14 | `ANGX` | 148 | $5.45 | $5.57 | +17.76 | — | +0.00 | +17.76 | +28.12 | — |
 | 2026-09-14 | `CYPH` | 335 | $2.27 | $2.25 | -5.03 | — | +0.00 | -5.03 | -46.90 | — |
@@ -368,7 +368,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | -13.95 | $9,613.97 | — | $9,613.97 | -0.00 | +0.00 | — | — | $9,613.97 | $9,613.97 | — |
 | 2026-09-10 | -13.28 | $9,613.97 | — | $9,613.97 | -0.00 | +0.00 | — | — | $9,613.97 | $9,613.97 | — |
 | 2026-09-11 | +0.50 | $9,613.97 | — | $9,613.97 | -0.00 | +32.63 | INDP, BNC, IRD, CMRC, GPRO, WLTH, ASO, SWKS, ANGX, CYPH, PAYP, BAK | — | $65.80 | $9,607.27 | INDP×296, BNC×163, IRD×130, CMRC×255, GPRO×572, WLTH×73, ASO×14, SWKS×9, ANGX×148, CYPH×335, PAYP×43, BAK×377 |
-| 2026-09-14 | -11.00 | $65.80 | INDP×296, BNC×163, IRD×130, CMRC×255, GPRO×572, WLTH×73, ASO×14, SWKS×9, ANGX×148, CYPH×335, PAYP×43, BAK×377 | $9,593.58 | -13.69 | +21.71 | — | INDP, BNC, IRD, WLTH, ASO, SWKS, ANGX, CYPH, PAYP, BAK | $7,885.83 | $9,586.23 | CMRC×255, GPRO×572 |
+| 2026-09-14 | -11.00 | $65.80 | INDP×296, BNC×163, IRD×130, CMRC×255, GPRO×572, WLTH×73, ASO×14, SWKS×9, ANGX×148, CYPH×335, PAYP×43, BAK×377 | $9,592.18 | -15.09 | +21.71 | — | INDP, BNC, IRD, WLTH, ASO, SWKS, ANGX, CYPH, PAYP, BAK | $7,884.43 | $9,584.83 | CMRC×255, GPRO×572 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -668,18 +668,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 09:30 ET | **BUY** | `PAYP` | 43 | $18.30 | $2.12 | — | $869.90 | — | top 12 by hot; rank hot_score; list ohlc_hot; 🔵; ⚪; ret5=+16.0; leftover $801.16 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-11 09:30 ET | **BUY** | `BAK` | 377 | $2.12 | $4.86 | — | $65.80 | — | top 12 by hot; rank hot_score; list probable,yday_gainer,ohlc_hot; 🔵; ret5=+7.1; leftover $801.16 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $65.80 | ▲ close $9,607.27 vs 09:30 $9,613.97 (session +32.63) | 16:00 close · cash $65.80 · equity $9,607.27 vs 09:30 $9,613.97 (-6.70; session marks +32.63) · 12 name(s) marked open→close (per-name table). INDP×296 09:30 $2.70 → close $2.77 +20.72; BNC×163 09:30 $4.91 → close $4.80 -17.93; IRD×130 09:30 $6.16 → close $6.04 -15.60; CMRC×255 09:30 $3.13 → close $3.50 +95.62; GPRO×572 09:30 $1.40 → close $1.38 -11.44; WLTH×73 09:30 $10.95 → close $10.38 -41.61; ASO×14 09:30 $54.91 → close $55.36 +6.30; SWKS×9 09:30 $84.27 → close $88.35 +36.72; ANGX×148 09:30 $5.38 → close $5.45 +10.36; CYPH×335 09:30 $2.39 → close $2.27 -41.88; PAYP×43 09:30 $18.30 → close $18.45 +6.45; BAK×377 09:30 $2.12 → close $2.08 -15.08 | — |
-| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $65.80 | ▼ 09:30 equity $9,593.58 vs yday $9,607.27 (-13.69) | 09:30 open · cash $65.80 (unchanged overnight, no fees) · equity $9,593.58 vs prior close $9,607.27 (-13.69) · 12 name(s) re-marked at the open (per-name table). INDP×296 yday $2.77 → 09:30 $2.80 +8.88; BNC×163 yday $4.80 → 09:30 $4.96 +26.08; IRD×130 yday $6.04 → 09:30 $6.02 -2.60; CMRC×255 yday $3.50 → 09:30 $3.51 +1.27; GPRO×572 yday $1.38 → 09:30 $1.37 -5.72; WLTH×73 yday $10.38 → 09:30 $10.29 -6.57; ASO×14 yday $55.36 → 09:30 $54.75 -8.54; SWKS×9 yday $88.35 → 09:30 $86.06 -20.61; ANGX×148 yday $5.45 → 09:30 $5.57 +17.76; CYPH×335 yday $2.27 → 09:30 $2.25 -5.03; PAYP×43 yday $18.45 → 09:30 $18.28 -7.31; BAK×377 yday $2.08 → 09:30 $2.05 -11.31 | — |
-| 2026-09-14 09:30 ET | **SELL** | `INDP` | 296 | $2.80 | $3.88 | $+21.90 | $890.72 | ▲ +21.90 after sell → book $9,589.70; vs 09:30 mark -3.88 | dropped from list after 1 sess (min 1) | join🟡 sector🔴 gen🔴 news🟡 digest🔴 judge🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-14 09:30 ET | **SELL** | `BNC` | 163 | $4.96 | $2.52 | $+3.15 | $1,696.68 | ▲ +3.15 after sell → book $9,587.18; vs 09:30 mark -2.52 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-09-14 09:30 ET | **SELL** | `IRD` | 130 | $6.02 | $2.41 | $-22.99 | $2,476.87 | ▼ -22.99 after sell → book $9,584.77; vs 09:30 mark -2.41 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `WLTH` | 73 | $10.29 | $2.23 | $-52.62 | $3,225.81 | ▼ -52.62 after sell → book $9,582.54; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `ASO` | 14 | $54.75 | $2.05 | $-6.32 | $3,990.26 | ▼ -6.32 after sell → book $9,580.49; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `SWKS` | 9 | $86.06 | $2.04 | $+12.06 | $4,762.76 | ▲ +12.06 after sell → book $9,578.45; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `ANGX` | 148 | $5.57 | $2.47 | $+23.22 | $5,584.65 | ▲ +23.22 after sell → book $9,575.98; vs 09:30 mark -2.47 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `CYPH` | 335 | $2.25 | $4.39 | $-55.61 | $6,334.01 | ▼ -55.61 after sell → book $9,571.59; vs 09:30 mark -4.39 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `PAYP` | 43 | $18.28 | $2.14 | $-5.12 | $7,117.92 | ▼ -5.12 after sell → book $9,569.46; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `BAK` | 377 | $2.05 | $4.94 | $-36.19 | $7,885.83 | ▼ -36.19 after sell → book $9,564.52; vs 09:30 mark -4.94 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,885.83 | ▲ close $9,586.23 vs 09:30 $9,593.58 (session +21.71) | 16:00 close · cash $7,885.83 · equity $9,586.23 vs 09:30 $9,593.58 (-7.35; session marks +21.71) · 2 name(s) marked open→close (per-name table). CMRC×255 09:30 $3.51 → close $3.64 +33.15; GPRO×572 09:30 $1.37 → close $1.35 -11.44 | — |
+| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $65.80 | ▼ 09:30 equity $9,592.18 vs yday $9,607.27 (-15.09) | 09:30 open · cash $65.80 (unchanged overnight, no fees) · equity $9,592.18 vs prior close $9,607.27 (-15.09) · 12 name(s) re-marked at the open (per-name table). INDP×296 yday $2.77 → 09:30 $2.80 +8.88; BNC×163 yday $4.80 → 09:30 $4.96 +26.08; IRD×130 yday $6.04 → 09:30 $6.02 -2.60; CMRC×255 yday $3.50 → 09:30 $3.51 +1.27; GPRO×572 yday $1.38 → 09:30 $1.37 -5.72; WLTH×73 yday $10.38 → 09:30 $10.29 -6.57; ASO×14 yday $55.36 → 09:30 $54.65 -9.94; SWKS×9 yday $88.35 → 09:30 $86.06 -20.61; ANGX×148 yday $5.45 → 09:30 $5.57 +17.76; CYPH×335 yday $2.27 → 09:30 $2.25 -5.03; PAYP×43 yday $18.45 → 09:30 $18.28 -7.31; BAK×377 yday $2.08 → 09:30 $2.05 -11.31 | — |
+| 2026-09-14 09:30 ET | **SELL** | `INDP` | 296 | $2.80 | $3.88 | $+21.90 | $890.72 | ▲ +21.90 after sell → book $9,588.30; vs 09:30 mark -3.88 | dropped from list after 1 sess (min 1) | join🟡 sector🔴 gen🔴 news🟡 digest🔴 judge🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-14 09:30 ET | **SELL** | `BNC` | 163 | $4.96 | $2.52 | $+3.15 | $1,696.68 | ▲ +3.15 after sell → book $9,585.78; vs 09:30 mark -2.52 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-14 09:30 ET | **SELL** | `IRD` | 130 | $6.02 | $2.41 | $-22.99 | $2,476.87 | ▼ -22.99 after sell → book $9,583.37; vs 09:30 mark -2.41 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `WLTH` | 73 | $10.29 | $2.23 | $-52.62 | $3,225.81 | ▼ -52.62 after sell → book $9,581.14; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `ASO` | 14 | $54.65 | $2.05 | $-7.72 | $3,988.86 | ▼ -7.72 after sell → book $9,579.09; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `SWKS` | 9 | $86.06 | $2.04 | $+12.06 | $4,761.36 | ▲ +12.06 after sell → book $9,577.05; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `ANGX` | 148 | $5.57 | $2.47 | $+23.22 | $5,583.25 | ▲ +23.22 after sell → book $9,574.58; vs 09:30 mark -2.47 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `CYPH` | 335 | $2.25 | $4.39 | $-55.61 | $6,332.61 | ▼ -55.61 after sell → book $9,570.19; vs 09:30 mark -4.39 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `PAYP` | 43 | $18.28 | $2.14 | $-5.12 | $7,116.52 | ▼ -5.12 after sell → book $9,568.06; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `BAK` | 377 | $2.05 | $4.94 | $-36.19 | $7,884.43 | ▼ -36.19 after sell → book $9,563.12; vs 09:30 mark -4.94 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,884.43 | ▲ close $9,584.83 vs 09:30 $9,592.18 (session +21.71) | 16:00 close · cash $7,884.43 · equity $9,584.83 vs 09:30 $9,592.18 (-7.35; session marks +21.71) · 2 name(s) marked open→close (per-name table). CMRC×255 09:30 $3.51 → close $3.64 +33.15; GPRO×572 09:30 $1.37 → close $1.35 -11.44 | — |
 
 ## Not taken
 

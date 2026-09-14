@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_hot_n4_h1/short_news_r_h3 w=0.6,0.15,0.25 net=priority
 
-Cash book **+27.66%** ($12,766) · signal-only (no cash/fees) was —. Starts YES **21/22**. Fills 272 · skips 281 · realized $+2379.89.
+Cash book **+27.67%** ($12,767) · signal-only (no cash/fees) was —. Starts YES **21/22**. Fills 272 · skips 281 · realized $+2379.89.
 
 ## How this sleeve decides (like you are 10)
 
@@ -519,7 +519,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | `CRDL` | 329 | — | $2.03 | +0.00 | $2.00 | +11.51 | +11.51 | -0.00 | +11.51 |
 | 2026-09-11 | `BKV` | 26 | — | $24.97 | +0.00 | $24.23 | +19.24 | +19.24 | -0.00 | +19.24 |
 | 2026-09-11 | `AMD` | 1 | — | $510.71 | +0.00 | $516.13 | -5.42 | -5.42 | -0.00 | -5.42 |
-| 2026-09-14 | `ORCL` | 5 | $150.28 | $141.42 | -44.30 | $144.72 | +16.50 | -27.80 | -115.05 | -98.55 |
+| 2026-09-14 | `ORCL` | 5 | $150.28 | $141.42 | -44.30 | $144.79 | +16.85 | -27.45 | -115.05 | -98.20 |
 | 2026-09-14 | `DBI` | 157 | $5.88 | $5.86 | -3.14 | $6.53 | +105.19 | +102.05 | -7.85 | +97.34 |
 | 2026-09-14 | `ADBE` | 3 | $252.23 | $261.51 | +27.84 | $265.60 | +12.27 | +40.11 | +58.02 | +70.29 |
 | 2026-09-14 | `CPRT` | 29 | $29.95 | $30.63 | +19.72 | $31.73 | +31.90 | +51.62 | -40.02 | -8.12 |
@@ -562,7 +562,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | -13.95 | $6,155.90 | AI×84, AVGO×2, CHPT×130, CIEN×2, CPB×40, FIVE×3, HPE×18, MEI×59, SLN×114, OPK×993, AMBA×9, ASAN×70, DOCU×9, DOMO×171, GWRE×3, IOT×13, LULU×6, MAMA×39, GSM×237, PIPR×14 | $12,451.89 | -23.80 | -25.28 | — | AI, AVGO, CHPT, CIEN, CPB, FIVE, HPE, MEI, SLN, OPK | $9,991.15 | $12,394.36 | AMBA×9, ASAN×70, DOCU×9, DOMO×171, GWRE×3, IOT×13, LULU×6, MAMA×39, GSM×237, PIPR×14 |
 | 2026-09-10 | -13.28 | $9,991.15 | AMBA×9, ASAN×70, DOCU×9, DOMO×171, GWRE×3, IOT×13, LULU×6, MAMA×39, GSM×237, PIPR×14 | $12,403.90 | +9.54 | +0.00 | — | AMBA, ASAN, DOCU, DOMO, GWRE, IOT, LULU, MAMA, GSM, PIPR | $12,381.76 | $12,381.76 | — |
 | 2026-09-11 | +0.50 | $12,381.76 | — | $12,381.76 | -0.00 | +87.36 | ORCL, DBI, ADBE, CPRT, DSGX, KR, LPTH, REF, INDP, BNC, IRD, CMRC, QRVO, RWT, CRDL, BKV, AMD | — | $6,393.70 | $12,429.37 | ORCL×5, DBI×157, ADBE×3, CPRT×29, DSGX×12, KR×16, LPTH×99, REF×70, INDP×186, BNC×102, IRD×81, CMRC×160, QRVO×5, RWT×190, CRDL×329, BKV×26, AMD×1 |
-| 2026-09-14 | -11.00 | $6,393.70 | ORCL×5, DBI×157, ADBE×3, CPRT×29, DSGX×12, KR×16, LPTH×99, REF×70, INDP×186, BNC×102, IRD×81, CMRC×160, QRVO×5, RWT×190, CRDL×329, BKV×26, AMD×1 | $12,507.46 | +78.09 | +266.11 | — | INDP, BNC, IRD | $7,900.87 | $12,766.40 | ORCL×5, DBI×157, ADBE×3, CPRT×29, DSGX×12, KR×16, LPTH×99, REF×70, CMRC×160, QRVO×5, RWT×190, CRDL×329, BKV×26, AMD×1 |
+| 2026-09-14 | -11.00 | $6,393.70 | ORCL×5, DBI×157, ADBE×3, CPRT×29, DSGX×12, KR×16, LPTH×99, REF×70, INDP×186, BNC×102, IRD×81, CMRC×160, QRVO×5, RWT×190, CRDL×329, BKV×26, AMD×1 | $12,507.46 | +78.09 | +266.46 | — | INDP, BNC, IRD | $7,900.87 | $12,766.75 | ORCL×5, DBI×157, ADBE×3, CPRT×29, DSGX×12, KR×16, LPTH×99, REF×70, CMRC×160, QRVO×5, RWT×190, CRDL×329, BKV×26, AMD×1 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -883,7 +883,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 09:30 ET | **SELL** | `INDP` | 186 | $2.80 | $2.59 | $+13.46 | $6,911.91 | ▲ +13.46 after sell → book $12,504.87; vs 09:30 mark -2.59 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🟡 sector🔴 gen🔴 news🟡 digest🔴 judge🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-14 09:30 ET | **SELL** | `BNC` | 102 | $4.96 | $2.32 | $+0.48 | $7,415.51 | ▲ +0.48 after sell → book $12,502.55; vs 09:30 mark -2.32 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-09-14 09:30 ET | **SELL** | `IRD` | 81 | $6.02 | $2.26 | $-15.83 | $7,900.87 | ▼ -15.83 after sell → book $12,500.29; vs 09:30 mark -2.26 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,900.87 | ▲ close $12,766.40 vs 09:30 $12,507.46 (session +266.11) | 16:00 close · cash $7,900.87 · equity $12,766.40 vs 09:30 $12,507.46 (+258.94; session marks +266.11) · 14 name(s) marked open→close (per-name table). ORCL×5 09:30 $141.42 → close $144.72 +16.50; DBI×157 09:30 $5.86 → close $6.53 +105.19; ADBE×3 09:30 $261.51 → close $265.60 +12.27; CPRT×29 09:30 $30.63 → close $31.73 +31.90; DSGX×12 09:30 $77.06 → close $80.02 +35.52; KR×16 09:30 $59.31 → close $60.91 +25.60; LPTH×99 09:30 $8.85 → close $9.11 +25.74; REF×70 09:30 $14.16 → close $14.51 +24.50; CMRC×160 09:30 $3.51 → close $3.64 +20.80; QRVO×5 09:30 $114.11 → close $107.98 +30.65; RWT×190 09:30 $3.53 → close $3.83 -57.00; CRDL×329 09:30 $1.96 → close $1.99 -9.87; BKV×26 09:30 $24.26 → close $23.82 +11.44; AMD×1 09:30 $486.28 → close $493.41 -7.13 | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,900.87 | ▲ close $12,766.75 vs 09:30 $12,507.46 (session +266.46) | 16:00 close · cash $7,900.87 · equity $12,766.75 vs 09:30 $12,507.46 (+259.29; session marks +266.46) · 14 name(s) marked open→close (per-name table). ORCL×5 09:30 $141.42 → close $144.79 +16.85; DBI×157 09:30 $5.86 → close $6.53 +105.19; ADBE×3 09:30 $261.51 → close $265.60 +12.27; CPRT×29 09:30 $30.63 → close $31.73 +31.90; DSGX×12 09:30 $77.06 → close $80.02 +35.52; KR×16 09:30 $59.31 → close $60.91 +25.60; LPTH×99 09:30 $8.85 → close $9.11 +25.74; REF×70 09:30 $14.16 → close $14.51 +24.50; CMRC×160 09:30 $3.51 → close $3.64 +20.80; QRVO×5 09:30 $114.11 → close $107.98 +30.65; RWT×190 09:30 $3.53 → close $3.83 -57.00; CRDL×329 09:30 $1.96 → close $1.99 -9.87; BKV×26 09:30 $24.26 → close $23.82 +11.44; AMD×1 09:30 $486.28 → close $493.41 -7.13 | — |
 
 ## Not taken
 

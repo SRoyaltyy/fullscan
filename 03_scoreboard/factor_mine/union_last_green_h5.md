@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_green hold 5, no 🚨
 
-Cash book **+2.23%** ($10,223) · signal-only (no cash/fees) was +34.42%. Starts YES **2/22**. Fills 108 · skips 316 · realized $+320.69.
+Cash book **+2.23%** ($10,223) · signal-only (no cash/fees) was +34.43%. Starts YES **2/22**. Fills 108 · skips 316 · realized $+320.69.
 
 ## How this sleeve decides (like you are 10)
 
@@ -378,9 +378,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `AMTX` | 599 | $2.01 | $2.01 | +0.00 | $1.95 | -35.94 | -35.94 | -17.97 | -53.91 |
 | 2026-09-14 | `CLOV` | 257 | $4.82 | $4.82 | +0.00 | $5.10 | +71.96 | +71.96 | +17.99 | +89.95 |
 | 2026-09-14 | `BAK` | 577 | $2.08 | $2.05 | -17.31 | $2.01 | -23.08 | -40.39 | -40.39 | -63.47 |
-| 2026-09-14 | `TYRA` | 51 | $22.03 | $23.20 | +59.67 | $25.07 | +95.37 | +155.04 | -21.93 | +73.44 |
+| 2026-09-14 | `TYRA` | 51 | $22.03 | $23.60 | +80.07 | $25.07 | +74.97 | +155.04 | -1.53 | +73.44 |
 | 2026-09-14 | `FUBO` | 105 | $11.53 | $11.56 | +3.15 | $11.87 | +32.55 | +35.70 | +1.05 | +33.60 |
-| 2026-09-14 | `RDDT` | 7 | $157.77 | $160.00 | +15.61 | $162.37 | +16.59 | +32.20 | +17.15 | +33.74 |
+| 2026-09-14 | `RDDT` | 7 | $157.77 | $160.00 | +15.61 | $162.38 | +16.66 | +32.27 | +17.15 | +33.81 |
 
 ## Each session (cash + holdings state)
 
@@ -407,7 +407,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | -13.95 | $436.51 | ATRC×24, HRMY×30, CABA×362, VSTM×163, RVTY×9, ARCT×78, SLN×88, CRDL×603, SLBT×39, TARS×1, BRR×49, FCEL×8, ASST×4 | $10,917.35 | -51.69 | -213.24 | — | — | $436.51 | $10,704.12 | ATRC×24, HRMY×30, CABA×362, VSTM×163, RVTY×9, ARCT×78, SLN×88, CRDL×603, SLBT×39, TARS×1, BRR×49, FCEL×8, ASST×4 |
 | 2026-09-10 | -13.28 | $436.51 | ATRC×24, HRMY×30, CABA×362, VSTM×163, RVTY×9, ARCT×78, SLN×88, CRDL×603, SLBT×39, TARS×1, BRR×49, FCEL×8, ASST×4 | $10,535.35 | -168.77 | -275.37 | — | — | $436.51 | $10,259.97 | ATRC×24, HRMY×30, CABA×362, VSTM×163, RVTY×9, ARCT×78, SLN×88, CRDL×603, SLBT×39, TARS×1, BRR×49, FCEL×8, ASST×4 |
 | 2026-09-11 | +0.50 | $436.51 | ATRC×24, HRMY×30, CABA×362, VSTM×163, RVTY×9, ARCT×78, SLN×88, CRDL×603, SLBT×39, TARS×1, BRR×49, FCEL×8, ASST×4 | $10,364.31 | +104.34 | -40.21 | SANM, COHU, AMTX, CLOV, BAK, TYRA, FUBO, RDDT | ATRC, HRMY, CABA, VSTM, RVTY, ARCT, SLN, CRDL | $358.94 | $10,269.21 | SLBT×39, TARS×1, BRR×49, FCEL×8, ASST×4, SANM×5, COHU×21, AMTX×599, CLOV×257, BAK×577, TYRA×51, FUBO×105, RDDT×7 |
-| 2026-09-14 | -11.00 | $358.94 | SLBT×39, TARS×1, BRR×49, FCEL×8, ASST×4, SANM×5, COHU×21, AMTX×599, CLOV×257, BAK×577, TYRA×51, FUBO×105, RDDT×7 | $10,170.69 | -98.52 | +57.65 | — | SLBT, TARS, BRR, FCEL, ASST | $892.94 | $10,222.54 | SANM×5, COHU×21, AMTX×599, CLOV×257, BAK×577, TYRA×51, FUBO×105, RDDT×7 |
+| 2026-09-14 | -11.00 | $358.94 | SLBT×39, TARS×1, BRR×49, FCEL×8, ASST×4, SANM×5, COHU×21, AMTX×599, CLOV×257, BAK×577, TYRA×51, FUBO×105, RDDT×7 | $10,191.09 | -78.12 | +37.32 | — | SLBT, TARS, BRR, FCEL, ASST | $892.94 | $10,222.61 | SANM×5, COHU×21, AMTX×599, CLOV×257, BAK×577, TYRA×51, FUBO×105, RDDT×7 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -558,13 +558,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 09:30 ET | **BUY** | `FUBO` | 105 | $11.55 | $2.31 | — | $1,463.80 | — | union ∩ last_green hold 5, no 🚨; gate last_green=True; list probable,yday_gainer; 🔵; ret5=+1.2; leftover $1223.34 | join🔴 sector🟢 gen🟡 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 catal🟡 buy🟡 |
 | 2026-09-11 09:30 ET | **BUY** | `RDDT` | 7 | $157.55 | $2.01 | — | $358.94 | — | union ∩ last_green hold 5, no 🚨; gate last_green=True; list probable,yday_gainer; 🔵; ret5=-1.7; leftover $1223.34 | join🔴 sector🟢 gen🟡 news🟡 digest🟡 ab🟢 peer🟡 heat🟢 vol🟡 buy🟡 |
 | 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $358.94 | ▼ close $10,269.21 vs 09:30 $10,364.31 (session -40.21) | 16:00 close · cash $358.94 · equity $10,269.21 vs 09:30 $10,364.31 (-95.10; session marks -40.21) · 13 name(s) marked open→close (per-name table). SLBT×39 09:30 $2.09 → close $2.06 -1.17; TARS×1 09:30 $82.27 → close $79.31 -2.96; BRR×49 09:30 $3.09 → close $3.12 +1.47; FCEL×8 09:30 $16.01 → close $15.89 -0.96; ASST×4 09:30 $27.11 → close $27.62 +2.04; SANM×5 09:30 $206.84 → close $216.00 +45.80; COHU×21 09:30 $56.09 → close $57.08 +20.79; AMTX×599 09:30 $2.04 → close $2.01 -17.97; CLOV×257 09:30 $4.75 → close $4.82 +17.99; BAK×577 09:30 $2.12 → close $2.08 -23.08; TYRA×51 09:30 $23.63 → close $22.03 -81.60; FUBO×105 09:30 $11.55 → close $11.53 -2.10; RDDT×7 09:30 $157.55 → close $157.77 +1.54 | — |
-| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $358.94 | ▼ 09:30 equity $10,170.69 vs yday $10,269.21 (-98.52) | 09:30 open · cash $358.94 (unchanged overnight, no fees) · equity $10,170.69 vs prior close $10,269.21 (-98.52) · 13 name(s) re-marked at the open (per-name table). SLBT×39 yday $2.06 → 09:30 $2.02 -1.56; TARS×1 yday $79.31 → 09:30 $79.69 +0.38; BRR×49 yday $3.12 → 09:30 $3.09 -1.47; FCEL×8 yday $15.89 → 09:30 $14.88 -8.12; ASST×4 yday $27.62 → 09:30 $27.73 +0.44; SANM×5 yday $216.00 → 09:30 $206.50 -47.50; COHU×21 yday $57.08 → 09:30 $52.23 -101.81; AMTX×599 yday $2.01 → 09:30 $2.01 +0.00; CLOV×257 yday $4.82 → 09:30 $4.82 +0.00; BAK×577 yday $2.08 → 09:30 $2.05 -17.31; TYRA×51 yday $22.03 → 09:30 $23.20 +59.67; FUBO×105 yday $11.53 → 09:30 $11.56 +3.15; RDDT×7 yday $157.77 → 09:30 $160.00 +15.61 | — |
-| 2026-09-14 09:30 ET | **SELL** | `SLBT` | 39 | $2.02 | $0.92 | $-46.34 | $436.80 | ▼ -46.34 after sell → book $10,169.77; vs 09:30 mark -0.92 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-14 09:30 ET | **SELL** | `TARS` | 1 | $79.69 | $0.82 | $-4.66 | $515.67 | ▼ -4.66 after sell → book $10,168.95; vs 09:30 mark -0.82 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-14 09:30 ET | **SELL** | `BRR` | 49 | $3.09 | $1.68 | $+25.36 | $665.40 | ▲ +25.36 after sell → book $10,167.27; vs 09:30 mark -1.68 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-14 09:30 ET | **SELL** | `FCEL` | 8 | $14.88 | $1.23 | $+0.42 | $783.16 | ▲ +0.42 after sell → book $10,166.03; vs 09:30 mark -1.24 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-14 09:30 ET | **SELL** | `ASST` | 4 | $27.73 | $1.14 | $+8.04 | $892.94 | ▲ +8.04 after sell → book $10,164.89; vs 09:30 mark -1.14 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $892.94 | ▲ close $10,222.54 vs 09:30 $10,170.69 (session +57.65) | 16:00 close · cash $892.94 · equity $10,222.54 vs 09:30 $10,170.69 (+51.85; session marks +57.65) · 8 name(s) marked open→close (per-name table). SANM×5 09:30 $206.50 → close $196.04 -52.30; COHU×21 09:30 $52.23 → close $49.97 -47.50; AMTX×599 09:30 $2.01 → close $1.95 -35.94; CLOV×257 09:30 $4.82 → close $5.10 +71.96; BAK×577 09:30 $2.05 → close $2.01 -23.08; TYRA×51 09:30 $23.20 → close $25.07 +95.37; FUBO×105 09:30 $11.56 → close $11.87 +32.55; RDDT×7 09:30 $160.00 → close $162.37 +16.59 | — |
+| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $358.94 | ▼ 09:30 equity $10,191.09 vs yday $10,269.21 (-78.12) | 09:30 open · cash $358.94 (unchanged overnight, no fees) · equity $10,191.09 vs prior close $10,269.21 (-78.12) · 13 name(s) re-marked at the open (per-name table). SLBT×39 yday $2.06 → 09:30 $2.02 -1.56; TARS×1 yday $79.31 → 09:30 $79.69 +0.38; BRR×49 yday $3.12 → 09:30 $3.09 -1.47; FCEL×8 yday $15.89 → 09:30 $14.88 -8.12; ASST×4 yday $27.62 → 09:30 $27.73 +0.44; SANM×5 yday $216.00 → 09:30 $206.50 -47.50; COHU×21 yday $57.08 → 09:30 $52.23 -101.81; AMTX×599 yday $2.01 → 09:30 $2.01 +0.00; CLOV×257 yday $4.82 → 09:30 $4.82 +0.00; BAK×577 yday $2.08 → 09:30 $2.05 -17.31; TYRA×51 yday $22.03 → 09:30 $23.60 +80.07; FUBO×105 yday $11.53 → 09:30 $11.56 +3.15; RDDT×7 yday $157.77 → 09:30 $160.00 +15.61 | — |
+| 2026-09-14 09:30 ET | **SELL** | `SLBT` | 39 | $2.02 | $0.92 | $-46.34 | $436.80 | ▼ -46.34 after sell → book $10,190.17; vs 09:30 mark -0.92 | dropped from list after 5 sess (min 5) | — |
+| 2026-09-14 09:30 ET | **SELL** | `TARS` | 1 | $79.69 | $0.82 | $-4.66 | $515.67 | ▼ -4.66 after sell → book $10,189.35; vs 09:30 mark -0.82 | dropped from list after 5 sess (min 5) | — |
+| 2026-09-14 09:30 ET | **SELL** | `BRR` | 49 | $3.09 | $1.68 | $+25.36 | $665.40 | ▲ +25.36 after sell → book $10,187.67; vs 09:30 mark -1.68 | dropped from list after 5 sess (min 5) | — |
+| 2026-09-14 09:30 ET | **SELL** | `FCEL` | 8 | $14.88 | $1.23 | $+0.42 | $783.16 | ▲ +0.42 after sell → book $10,186.43; vs 09:30 mark -1.24 | dropped from list after 5 sess (min 5) | — |
+| 2026-09-14 09:30 ET | **SELL** | `ASST` | 4 | $27.73 | $1.14 | $+8.04 | $892.94 | ▲ +8.04 after sell → book $10,185.29; vs 09:30 mark -1.14 | dropped from list after 5 sess (min 5) | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $892.94 | ▲ close $10,222.61 vs 09:30 $10,191.09 (session +37.32) | 16:00 close · cash $892.94 · equity $10,222.61 vs 09:30 $10,191.09 (+31.52; session marks +37.32) · 8 name(s) marked open→close (per-name table). SANM×5 09:30 $206.50 → close $196.04 -52.30; COHU×21 09:30 $52.23 → close $49.97 -47.50; AMTX×599 09:30 $2.01 → close $1.95 -35.94; CLOV×257 09:30 $4.82 → close $5.10 +71.96; BAK×577 09:30 $2.05 → close $2.01 -23.08; TYRA×51 09:30 $23.60 → close $25.07 +74.97; FUBO×105 09:30 $11.56 → close $11.87 +32.55; RDDT×7 09:30 $160.00 → close $162.38 +16.66 | — |
 
 ## Not taken
 

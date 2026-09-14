@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · rank by cond
 
-Cash book **-8.30%** ($9,170) · signal-only (no cash/fees) was -3.44%. Starts YES **0/22**. Fills 182 · skips 80 · realized $-830.51.
+Cash book **-8.33%** ($9,167) · signal-only (no cash/fees) was -3.44%. Starts YES **0/22**. Fills 182 · skips 80 · realized $-832.61.
 
 ## How this sleeve decides (like you are 10)
 
@@ -53,7 +53,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,169.51.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,167.41.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -254,7 +254,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `QRVO` | 10 | $116.65 | $114.11 | -25.40 | — | +0.00 | -25.40 | +12.75 | — |
 | 2026-09-14 | `PAYP` | 63 | $18.45 | $18.28 | -10.71 | — | +0.00 | -10.71 | -1.26 | — |
 | 2026-09-14 | `APPS` | 97 | $11.81 | $11.75 | -5.82 | — | +0.00 | -5.82 | -12.61 | — |
-| 2026-09-14 | `ASO` | 21 | $55.36 | $54.75 | -12.81 | — | +0.00 | -12.81 | -3.36 | — |
+| 2026-09-14 | `ASO` | 21 | $55.36 | $54.65 | -14.91 | — | +0.00 | -14.91 | -5.46 | — |
 
 ## Each session (cash + holdings state)
 
@@ -281,7 +281,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | -13.95 | $9,262.72 | — | $9,262.72 | +0.00 | +0.00 | — | — | $9,262.72 | $9,262.72 | — |
 | 2026-09-10 | -13.28 | $9,262.72 | — | $9,262.72 | +0.00 | +0.00 | — | — | $9,262.72 | $9,262.72 | — |
 | 2026-09-11 | +0.50 | $9,262.72 | — | $9,262.72 | +0.00 | +100.43 | BAND, ORCL, PAGS, SWKS, QRVO, PAYP, APPS, ASO | — | $103.88 | $9,346.19 | BAND×22, ORCL×7, PAGS×114, SWKS×13, QRVO×10, PAYP×63, APPS×97, ASO×21 |
-| 2026-09-14 | -11.00 | $103.88 | BAND×22, ORCL×7, PAGS×114, SWKS×13, QRVO×10, PAYP×63, APPS×97, ASO×21 | $9,186.64 | -159.55 | +0.00 | — | BAND, ORCL, PAGS, SWKS, QRVO, PAYP, APPS, ASO | $9,169.51 | $9,169.51 | — |
+| 2026-09-14 | -11.00 | $103.88 | BAND×22, ORCL×7, PAGS×114, SWKS×13, QRVO×10, PAYP×63, APPS×97, ASO×21 | $9,184.54 | -161.65 | +0.00 | — | BAND, ORCL, PAGS, SWKS, QRVO, PAYP, APPS, ASO | $9,167.41 | $9,167.41 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -503,16 +503,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 09:30 ET | **BUY** | `APPS` | 97 | $11.88 | $2.28 | — | $1,259.05 | — | rank by cond; rank cond; list yday_gainer; 🔵; ret5=+20.7; leftover $1157.84 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-09-11 09:30 ET | **BUY** | `ASO` | 21 | $54.91 | $2.05 | — | $103.88 | — | rank by cond; rank cond; list yday_gainer; 🔵; ret5=+24.3; leftover $1157.84 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $103.88 | ▲ close $9,346.19 vs 09:30 $9,262.72 (session +100.43) | 16:00 close · cash $103.88 · equity $9,346.19 vs 09:30 $9,262.72 (+83.47; session marks +100.43) · 8 name(s) marked open→close (per-name table). BAND×22 09:30 $52.55 → close $56.87 +95.04; ORCL×7 09:30 $164.43 → close $150.28 -99.05; PAGS×114 09:30 $10.11 → close $10.12 +1.14; SWKS×13 09:30 $84.27 → close $88.35 +53.04; QRVO×10 09:30 $112.83 → close $116.65 +38.15; PAYP×63 09:30 $18.30 → close $18.45 +9.45; APPS×97 09:30 $11.88 → close $11.81 -6.79; ASO×21 09:30 $54.91 → close $55.36 +9.45 | — |
-| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $103.88 | ▼ 09:30 equity $9,186.64 vs yday $9,346.19 (-159.55) | 09:30 open · cash $103.88 (unchanged overnight, no fees) · equity $9,186.64 vs prior close $9,346.19 (-159.55) · 8 name(s) re-marked at the open (per-name table). BAND×22 yday $56.87 → 09:30 $56.90 +0.66; ORCL×7 yday $150.28 → 09:30 $141.42 -62.02; PAGS×114 yday $10.12 → 09:30 $10.00 -13.68; SWKS×13 yday $88.35 → 09:30 $86.06 -29.77; QRVO×10 yday $116.65 → 09:30 $114.11 -25.40; PAYP×63 yday $18.45 → 09:30 $18.28 -10.71; APPS×97 yday $11.81 → 09:30 $11.75 -5.82; ASO×21 yday $55.36 → 09:30 $54.75 -12.81 | — |
-| 2026-09-14 09:30 ET | **SELL** | `BAND` | 22 | $56.90 | $2.08 | $+91.57 | $1,353.61 | ▲ +91.57 after sell → book $9,184.57; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-14 09:30 ET | **SELL** | `ORCL` | 7 | $141.42 | $2.03 | $-165.11 | $2,341.52 | ▼ -165.11 after sell → book $9,182.54; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `PAGS` | 114 | $10.00 | $2.36 | $-17.23 | $3,479.16 | ▼ -17.23 after sell → book $9,180.18; vs 09:30 mark -2.36 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `SWKS` | 13 | $86.06 | $2.05 | $+19.19 | $4,595.89 | ▲ +19.19 after sell → book $9,178.13; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `QRVO` | 10 | $114.11 | $2.04 | $+8.69 | $5,734.95 | ▲ +8.69 after sell → book $9,176.09; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | join🟡 sector🔴 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-14 09:30 ET | **SELL** | `PAYP` | 63 | $18.28 | $2.20 | $-5.64 | $6,884.39 | ▼ -5.64 after sell → book $9,173.89; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `APPS` | 97 | $11.75 | $2.31 | $-17.20 | $8,021.83 | ▼ -17.20 after sell → book $9,171.58; vs 09:30 mark -2.31 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `ASO` | 21 | $54.75 | $2.07 | $-7.49 | $9,169.51 | ▼ -7.49 after sell → book $9,169.51; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,169.51 | ▲ close $9,169.51 vs 09:30 $9,186.64 (session +0.00) | 16:00 close · cash $9,169.51 · no lots left · equity $9,169.51. | — |
+| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $103.88 | ▼ 09:30 equity $9,184.54 vs yday $9,346.19 (-161.65) | 09:30 open · cash $103.88 (unchanged overnight, no fees) · equity $9,184.54 vs prior close $9,346.19 (-161.65) · 8 name(s) re-marked at the open (per-name table). BAND×22 yday $56.87 → 09:30 $56.90 +0.66; ORCL×7 yday $150.28 → 09:30 $141.42 -62.02; PAGS×114 yday $10.12 → 09:30 $10.00 -13.68; SWKS×13 yday $88.35 → 09:30 $86.06 -29.77; QRVO×10 yday $116.65 → 09:30 $114.11 -25.40; PAYP×63 yday $18.45 → 09:30 $18.28 -10.71; APPS×97 yday $11.81 → 09:30 $11.75 -5.82; ASO×21 yday $55.36 → 09:30 $54.65 -14.91 | — |
+| 2026-09-14 09:30 ET | **SELL** | `BAND` | 22 | $56.90 | $2.08 | $+91.57 | $1,353.61 | ▲ +91.57 after sell → book $9,182.47; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-14 09:30 ET | **SELL** | `ORCL` | 7 | $141.42 | $2.03 | $-165.11 | $2,341.52 | ▼ -165.11 after sell → book $9,180.44; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `PAGS` | 114 | $10.00 | $2.36 | $-17.23 | $3,479.16 | ▼ -17.23 after sell → book $9,178.08; vs 09:30 mark -2.36 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `SWKS` | 13 | $86.06 | $2.05 | $+19.19 | $4,595.89 | ▲ +19.19 after sell → book $9,176.03; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `QRVO` | 10 | $114.11 | $2.04 | $+8.69 | $5,734.95 | ▲ +8.69 after sell → book $9,173.99; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | join🟡 sector🔴 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-14 09:30 ET | **SELL** | `PAYP` | 63 | $18.28 | $2.20 | $-5.64 | $6,884.39 | ▼ -5.64 after sell → book $9,171.79; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `APPS` | 97 | $11.75 | $2.31 | $-17.20 | $8,021.83 | ▼ -17.20 after sell → book $9,169.48; vs 09:30 mark -2.31 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `ASO` | 21 | $54.65 | $2.07 | $-9.59 | $9,167.41 | ▼ -9.59 after sell → book $9,167.41; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,167.41 | ▲ close $9,167.41 vs 09:30 $9,184.54 (session +0.00) | 16:00 close · cash $9,167.41 · no lots left · equity $9,167.41. | — |
 
 ## Not taken
 

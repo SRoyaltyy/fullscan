@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-11.20%** ($8,880) · signal-only (no cash/fees) was +16.52%. Starts YES **7/22**. Fills 102 · skips 170 · realized $-1588.03.
+Cash book **-11.20%** ($8,880) · signal-only (no cash/fees) was +16.53%. Starts YES **7/22**. Fills 102 · skips 170 · realized $-1588.03.
 
 ## How this sleeve decides (like you are 10)
 
@@ -263,7 +263,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | `DBI` | 177 | — | $5.91 | +0.00 | $5.88 | -5.31 | -5.31 | +0.00 | -5.31 |
 | 2026-09-11 | `BNC` | 214 | — | $4.91 | +0.00 | $4.80 | -23.54 | -23.54 | +0.00 | -23.54 |
 | 2026-09-11 | `SWKS` | 12 | — | $84.27 | +0.00 | $88.35 | +48.96 | +48.96 | +0.00 | +48.96 |
-| 2026-09-14 | `TYRA` | 44 | $22.03 | $23.20 | +51.48 | $25.07 | +82.28 | +133.76 | -18.92 | +63.36 |
+| 2026-09-14 | `TYRA` | 44 | $22.03 | $23.60 | +69.08 | $25.07 | +64.68 | +133.76 | -1.32 | +63.36 |
 | 2026-09-14 | `VIST` | 13 | $76.27 | $77.10 | +10.79 | $76.41 | -8.97 | +1.82 | -2.99 | -11.96 |
 | 2026-09-14 | `INDP` | 389 | $2.77 | $2.80 | +11.67 | $3.14 | +132.26 | +143.93 | +38.90 | +171.16 |
 | 2026-09-14 | `CMRC` | 335 | $3.50 | $3.51 | +1.67 | $3.64 | +43.55 | +45.22 | +127.30 | +170.85 |
@@ -297,7 +297,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | -13.95 | $122.29 | RVTY×8, ARCT×66, CRDL×514, GPRO×630, MMED×46, NVAX×107, BMEA×581, DUOL×6, BRR×11, ASST×1, DFDV×4, RSKD×4 | $8,451.12 | -45.63 | -3.26 | — | RVTY, ARCT, CRDL, GPRO, MMED, NVAX, BMEA, DUOL | $8,310.94 | $8,414.53 | BRR×11, ASST×1, DFDV×4, RSKD×4 |
 | 2026-09-10 | -13.28 | $8,310.94 | BRR×11, ASST×1, DFDV×4, RSKD×4 | $8,413.13 | -1.40 | +0.00 | — | BRR, ASST, DFDV, RSKD | $8,411.97 | $8,411.97 | — |
 | 2026-09-11 | +0.50 | $8,411.97 | — | $8,411.97 | +0.00 | +34.06 | TYRA, VIST, INDP, CMRC, WLTH, DBI, BNC, SWKS | — | $85.79 | $8,422.96 | TYRA×44, VIST×13, INDP×389, CMRC×335, WLTH×96, DBI×177, BNC×214, SWKS×12 |
-| 2026-09-14 | -11.00 | $85.79 | TYRA×44, VIST×13, INDP×389, CMRC×335, WLTH×96, DBI×177, BNC×214, SWKS×12 | $8,493.16 | +70.20 | +387.01 | — | — | $85.79 | $8,880.17 | TYRA×44, VIST×13, INDP×389, CMRC×335, WLTH×96, DBI×177, BNC×214, SWKS×12 |
+| 2026-09-14 | -11.00 | $85.79 | TYRA×44, VIST×13, INDP×389, CMRC×335, WLTH×96, DBI×177, BNC×214, SWKS×12 | $8,510.76 | +87.80 | +369.41 | — | — | $85.79 | $8,880.17 | TYRA×44, VIST×13, INDP×389, CMRC×335, WLTH×96, DBI×177, BNC×214, SWKS×12 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -447,8 +447,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 09:30 ET | **BUY** | `BNC` | 214 | $4.91 | $2.76 | — | $1,099.05 | — | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ret5=+76.3; leftover $1051.50 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-11 09:30 ET | **BUY** | `SWKS` | 12 | $84.27 | $2.03 | — | $85.79 | — | combo gate; gate vol=good,last_green=True; list yday_gainer,ohlc_hot; ret5=+17.2; leftover $1051.50 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $85.79 | ▲ close $8,422.96 vs 09:30 $8,411.97 (session +34.06) | 16:00 close · cash $85.79 · equity $8,422.96 vs 09:30 $8,411.97 (+10.99; session marks +34.06) · 8 name(s) marked open→close (per-name table). TYRA×44 09:30 $23.63 → close $22.03 -70.40; VIST×13 09:30 $77.33 → close $76.27 -13.78; INDP×389 09:30 $2.70 → close $2.77 +27.23; CMRC×335 09:30 $3.13 → close $3.50 +125.62; WLTH×96 09:30 $10.95 → close $10.38 -54.72; DBI×177 09:30 $5.91 → close $5.88 -5.31; BNC×214 09:30 $4.91 → close $4.80 -23.54; SWKS×12 09:30 $84.27 → close $88.35 +48.96 | — |
-| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $85.79 | ▲ 09:30 equity $8,493.16 vs yday $8,422.96 (+70.20) | 09:30 open · cash $85.79 (unchanged overnight, no fees) · equity $8,493.16 vs prior close $8,422.96 (+70.20) · 8 name(s) re-marked at the open (per-name table). TYRA×44 yday $22.03 → 09:30 $23.20 +51.48; VIST×13 yday $76.27 → 09:30 $77.10 +10.79; INDP×389 yday $2.77 → 09:30 $2.80 +11.67; CMRC×335 yday $3.50 → 09:30 $3.51 +1.67; WLTH×96 yday $10.38 → 09:30 $10.29 -8.64; DBI×177 yday $5.88 → 09:30 $5.86 -3.54; BNC×214 yday $4.80 → 09:30 $4.96 +34.24; SWKS×12 yday $88.35 → 09:30 $86.06 -27.48 | — |
-| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $85.79 | ▲ close $8,880.17 vs 09:30 $8,493.16 (session +387.01) | 16:00 close · cash $85.79 · equity $8,880.17 vs 09:30 $8,493.16 (+387.01; session marks +387.01) · 8 name(s) marked open→close (per-name table). TYRA×44 09:30 $23.20 → close $25.07 +82.28; VIST×13 09:30 $77.10 → close $76.41 -8.97; INDP×389 09:30 $2.80 → close $3.14 +132.26; CMRC×335 09:30 $3.51 → close $3.64 +43.55; WLTH×96 09:30 $10.29 → close $10.65 +34.56; DBI×177 09:30 $5.86 → close $6.53 +118.59; BNC×214 09:30 $4.96 → close $5.27 +66.34; SWKS×12 09:30 $86.06 → close $79.26 -81.60 | — |
+| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $85.79 | ▲ 09:30 equity $8,510.76 vs yday $8,422.96 (+87.80) | 09:30 open · cash $85.79 (unchanged overnight, no fees) · equity $8,510.76 vs prior close $8,422.96 (+87.80) · 8 name(s) re-marked at the open (per-name table). TYRA×44 yday $22.03 → 09:30 $23.60 +69.08; VIST×13 yday $76.27 → 09:30 $77.10 +10.79; INDP×389 yday $2.77 → 09:30 $2.80 +11.67; CMRC×335 yday $3.50 → 09:30 $3.51 +1.67; WLTH×96 yday $10.38 → 09:30 $10.29 -8.64; DBI×177 yday $5.88 → 09:30 $5.86 -3.54; BNC×214 yday $4.80 → 09:30 $4.96 +34.24; SWKS×12 yday $88.35 → 09:30 $86.06 -27.48 | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $85.79 | ▲ close $8,880.17 vs 09:30 $8,510.76 (session +369.41) | 16:00 close · cash $85.79 · equity $8,880.17 vs 09:30 $8,510.76 (+369.41; session marks +369.41) · 8 name(s) marked open→close (per-name table). TYRA×44 09:30 $23.60 → close $25.07 +64.68; VIST×13 09:30 $77.10 → close $76.41 -8.97; INDP×389 09:30 $2.80 → close $3.14 +132.26; CMRC×335 09:30 $3.51 → close $3.64 +43.55; WLTH×96 09:30 $10.29 → close $10.65 +34.56; DBI×177 09:30 $5.86 → close $6.53 +118.59; BNC×214 09:30 $4.96 → close $5.27 +66.34; SWKS×12 09:30 $86.06 → close $79.26 -81.60 | — |
 
 ## Not taken
 

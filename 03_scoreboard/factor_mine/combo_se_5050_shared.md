@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_e_fresh_h3 w=0.5,0.5 net=priority
 
-Cash book **+30.82%** ($13,081) · signal-only (no cash/fees) was —. Starts YES **21/22**. Fills 161 · skips 231 · realized $+2767.42.
+Cash book **+30.82%** ($13,082) · signal-only (no cash/fees) was —. Starts YES **21/22**. Fills 161 · skips 231 · realized $+2767.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -373,7 +373,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | `CRDL` | 628 | — | $2.03 | +0.00 | $2.00 | +21.98 | +21.98 | -0.00 | +21.98 |
 | 2026-09-11 | `BKV` | 51 | — | $24.97 | +0.00 | $24.23 | +37.74 | +37.74 | -0.00 | +37.74 |
 | 2026-09-11 | `AMD` | 2 | — | $510.71 | +0.00 | $516.13 | -10.84 | -10.84 | -0.00 | -10.84 |
-| 2026-09-14 | `ORCL` | 4 | $150.28 | $141.42 | -35.44 | $144.72 | +13.20 | -22.24 | -92.04 | -78.84 |
+| 2026-09-14 | `ORCL` | 4 | $150.28 | $141.42 | -35.44 | $144.79 | +13.48 | -21.96 | -92.04 | -78.56 |
 | 2026-09-14 | `DBI` | 135 | $5.88 | $5.86 | -2.70 | $6.53 | +90.45 | +87.75 | -6.75 | +83.70 |
 | 2026-09-14 | `ADBE` | 3 | $252.23 | $261.51 | +27.84 | $265.60 | +12.27 | +40.11 | +58.02 | +70.29 |
 | 2026-09-14 | `CPRT` | 24 | $29.95 | $30.63 | +16.32 | $31.73 | +26.40 | +42.72 | -33.12 | -6.72 |
@@ -412,7 +412,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | -13.95 | $12,810.64 | AI×70, AVGO×2, CHPT×110, CIEN×2, CPB×34, FIVE×2, HPE×15, MEI×50, SLN×204, OPK×1773, AMBA×12, ASAN×89, DOCU×11, DOMO×216, GWRE×4, IOT×17, LULU×7, MAMA×49, GSM×676, PIPR×41 | $12,784.81 | -15.52 | -11.09 | — | AI, AVGO, CHPT, CIEN, CPB, FIVE, HPE, MEI, SLN, OPK | $13,166.03 | $12,731.28 | AMBA×12, ASAN×89, DOCU×11, DOMO×216, GWRE×4, IOT×17, LULU×7, MAMA×49, GSM×676, PIPR×41 |
 | 2026-09-10 | -13.28 | $13,166.03 | AMBA×12, ASAN×89, DOCU×11, DOMO×216, GWRE×4, IOT×17, LULU×7, MAMA×49, GSM×676, PIPR×41 | $12,795.72 | +64.44 | +0.00 | — | AMBA, ASAN, DOCU, DOMO, GWRE, IOT, LULU, MAMA, GSM, PIPR | $12,767.41 | $12,767.41 | — |
 | 2026-09-11 | +0.50 | $12,767.41 | — | $12,767.41 | +0.00 | +39.70 | ORCL, DBI, ADBE, CPRT, DSGX, KR, LPTH, REF, QRVO, RWT, CRDL, BKV, AMD | — | $12,710.43 | $12,770.84 | ORCL×4, DBI×135, ADBE×3, CPRT×24, DSGX×11, KR×14, LPTH×85, REF×60, QRVO×11, RWT×362, CRDL×628, BKV×51, AMD×2 |
-| 2026-09-14 | -11.00 | $12,710.43 | ORCL×4, DBI×135, ADBE×3, CPRT×24, DSGX×11, KR×14, LPTH×85, REF×60, QRVO×11, RWT×362, CRDL×628, BKV×51, AMD×2 | $12,892.94 | +122.10 | +188.55 | — | — | $12,710.43 | $13,081.49 | ORCL×4, DBI×135, ADBE×3, CPRT×24, DSGX×11, KR×14, LPTH×85, REF×60, QRVO×11, RWT×362, CRDL×628, BKV×51, AMD×2 |
+| 2026-09-14 | -11.00 | $12,710.43 | ORCL×4, DBI×135, ADBE×3, CPRT×24, DSGX×11, KR×14, LPTH×85, REF×60, QRVO×11, RWT×362, CRDL×628, BKV×51, AMD×2 | $12,892.94 | +122.10 | +188.83 | — | — | $12,710.43 | $13,081.77 | ORCL×4, DBI×135, ADBE×3, CPRT×24, DSGX×11, KR×14, LPTH×85, REF×60, QRVO×11, RWT×362, CRDL×628, BKV×51, AMD×2 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -622,7 +622,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 09:30 ET | **SHORT** | `AMD` | 2 | $510.71 | $2.04 | — | $12,710.43 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+7.4; combo leftover $1275.05; owner short_news_r_h3 | join🟢 sector🟢 gen🟡 news🔴 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,710.43 | ▲ close $12,770.84 vs 09:30 $12,767.41 (session +39.70) | 16:00 close · cash $12,710.43 · equity $12,770.84 vs 09:30 $12,767.41 (+3.43; session marks +39.70) · 13 name(s) marked open→close (per-name table). ORCL×4 09:30 $164.43 → close $150.28 -56.60; DBI×135 09:30 $5.91 → close $5.88 -4.05; ADBE×3 09:30 $242.17 → close $252.23 +30.18; CPRT×24 09:30 $32.01 → close $29.95 -49.44; DSGX×11 09:30 $71.71 → close $76.04 +47.63; KR×14 09:30 $56.02 → close $58.49 +34.58; LPTH×85 09:30 $9.37 → close $9.20 -14.45; REF×60 09:30 $13.10 → close $14.03 +55.80; QRVO×11 09:30 $112.83 → close $116.65 -41.97; RWT×362 09:30 $3.52 → close $3.55 -10.86; CRDL×628 09:30 $2.03 → close $2.00 +21.98; BKV×51 09:30 $24.97 → close $24.23 +37.74; AMD×2 09:30 $510.71 → close $516.13 -10.84 | — |
 | 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,710.43 | ▲ 09:30 equity $12,892.94 vs yday $12,770.84 (+122.10) | 09:30 open · cash $12,710.43 (unchanged overnight, no fees) · equity $12,892.94 vs prior close $12,770.84 (+122.10) | — |
-| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,710.43 | ▲ close $13,081.49 vs 09:30 $12,892.94 (session +188.55) | 16:00 close · cash $12,710.43 · equity $13,081.49 vs 09:30 $12,892.94 (+188.55; session marks +188.55) · 13 name(s) marked open→close (per-name table). ORCL×4 09:30 $141.42 → close $144.72 +13.20; DBI×135 09:30 $5.86 → close $6.53 +90.45; ADBE×3 09:30 $261.51 → close $265.60 +12.27; CPRT×24 09:30 $30.63 → close $31.73 +26.40; DSGX×11 09:30 $77.06 → close $80.02 +32.56; KR×14 09:30 $59.31 → close $60.91 +22.40; LPTH×85 09:30 $8.85 → close $9.11 +22.10; REF×60 09:30 $14.16 → close $14.51 +21.00; QRVO×11 09:30 $114.11 → close $107.98 +67.43; RWT×362 09:30 $3.53 → close $3.83 -108.60; CRDL×628 09:30 $1.96 → close $1.99 -18.84; BKV×51 09:30 $24.26 → close $23.82 +22.44; AMD×2 09:30 $486.28 → close $493.41 -14.26 | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,710.43 | ▲ close $13,081.77 vs 09:30 $12,892.94 (session +188.83) | 16:00 close · cash $12,710.43 · equity $13,081.77 vs 09:30 $12,892.94 (+188.83; session marks +188.83) · 13 name(s) marked open→close (per-name table). ORCL×4 09:30 $141.42 → close $144.79 +13.48; DBI×135 09:30 $5.86 → close $6.53 +90.45; ADBE×3 09:30 $261.51 → close $265.60 +12.27; CPRT×24 09:30 $30.63 → close $31.73 +26.40; DSGX×11 09:30 $77.06 → close $80.02 +32.56; KR×14 09:30 $59.31 → close $60.91 +22.40; LPTH×85 09:30 $8.85 → close $9.11 +22.10; REF×60 09:30 $14.16 → close $14.51 +21.00; QRVO×11 09:30 $114.11 → close $107.98 +67.43; RWT×362 09:30 $3.53 → close $3.83 -108.60; CRDL×628 09:30 $1.96 → close $1.99 -18.84; BKV×51 09:30 $24.26 → close $23.82 +22.44; AMD×2 09:30 $486.28 → close $493.41 -14.26 | — |
 
 ## Not taken
 
