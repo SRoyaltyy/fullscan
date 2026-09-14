@@ -1,0 +1,94 @@
+{
+  "date": "2026-09-14",
+  "generated_at": "2026-09-14T04:11:22.265138-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-09-14",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US equity futures point to a lower open as tech-heavy Nasdaq lags amid Middle East-driven oil gains and AI growth concerns",
+  "raw_text": "- S&P 500 Futures (@ES) fall 0.70%, Dow Jones Futures (@YM) decline 0.23%, Nasdaq 100 Futures (@NQ) drop 1.61%, and Russell 2000 Futures (@ER2) edge lower 0.41%, signaling a gap-down open.\n- Pre-market small-cap movers include TNON (TNON) declining about 11%, ACVA (ACVA) trading roughly flat, AENT (AENT) falling around 10%, and FTFT (FTFT) down about 10%.\n- On the downside, GAUZ (GAUZ) trades flat pre-market, while ZUMZ (ZUMZ) trades flat and PMTS (PMTS) edges higher after recent earnings misses.\n- Overnight earnings reports from Hain Celestial (HAIN) and Coda Octopus (CODA) arrive before the bell with limited initial price reaction noted.\n- Asian markets trade mostly lower, with Japan’s Nikkei (@NKD) down around 0.8-1% and South Korea’s Kospi off 2.5-3.5% on AI slowdown concerns weighing on SoftBank and regional chip stocks.\n- European indices are mixed, with Euronext and Deutsche Boerse advancing on revived merger talks between the two exchanges.\n- Oil prices gain over 3%, with WTI (@CL) near $103 and Brent (@QA) around $107, as a Saudi pipeline closure and regional attacks heighten supply risks, while gold (@GC) prices slip.\n- Today’s economic calendar is light, with no major US data releases scheduled, while Canadian CPI data is due.",
+  "raw_summary_md": "- **S&P 500 Futures ([@ES](https://finviz.com/futures_charts?t=ES)) fall 0.70%**, **Dow Jones Futures ([@YM](https://finviz.com/futures_charts?t=YM)) decline 0.23%**, **Nasdaq 100 Futures ([@NQ](https://finviz.com/futures_charts?t=NQ)) drop 1.61%**, and **Russell 2000 Futures ([@ER2](https://finviz.com/futures_charts?t=ER2)) edge lower 0.41%**, signaling **a gap-down open**.\n- Pre-market **small-cap movers** include **TNON ([TNON](https://finviz.com/quote?t=TNON)) declining about 11%**, **ACVA ([ACVA](https://finviz.com/quote?t=ACVA)) trading roughly flat**, **AENT ([AENT](https://finviz.com/quote?t=AENT)) falling around 10%**, and **FTFT ([FTFT](https://finviz.com/quote?t=FTFT)) down about 10%**.\n- On the downside, **GAUZ ([GAUZ](https://finviz.com/quote?t=GAUZ)) trades flat pre-market**, while **ZUMZ ([ZUMZ](https://finviz.com/quote?t=ZUMZ)) trades flat** and **PMTS ([PMTS](https://finviz.com/quote?t=PMTS)) edges higher after recent earnings misses**.\n- Overnight **earnings reports** from **Hain Celestial ([HAIN](https://finviz.com/quote?t=HAIN))** and **Coda Octopus ([CODA](https://finviz.com/quote?t=CODA))** arrive before the bell with **limited initial price reaction** noted.\n- **Asian markets trade mostly lower**, with **Japan’s Nikkei ([@NKD](https://finviz.com/futures_charts?t=NKD)) down around 0.8-1%** and **South Korea’s Kospi off 2.5-3.5%** on **AI slowdown concerns** weighing on SoftBank and regional chip stocks.\n- **European indices are mixed**, with **Euronext** and **Deutsche Boerse** advancing on **revived merger talks** between the two exchanges.\n- **Oil prices gain over 3%**, with **WTI ([@CL](https://finviz.com/futures_charts?t=CL)) near $103** and **Brent ([@QA](https://finviz.com/futures_charts?t=QA)) around $107**, as a **Saudi pipeline closure** and **regional attacks** heighten supply risks, while **gold ([@GC](https://finviz.com/futures_charts?t=GC)) prices slip**.\n- Today’s **economic calendar is light**, with **no major US data releases scheduled**, while **Canadian CPI data is due**.",
+  "index_moves": [],
+  "oil": {
+    "name": "WTI",
+    "price": 103.0,
+    "verb": null,
+    "direction": null
+  },
+  "cpi": {
+    "text": "Canadian CPI data is due",
+    "hotter": false
+  },
+  "fed_odds": null,
+  "named_tickers": [
+    "TNON",
+    "ACVA",
+    "AENT",
+    "FTFT",
+    "GAUZ",
+    "ZUMZ",
+    "PMTS",
+    "HAIN",
+    "CODA"
+  ],
+  "named_leaders": [
+    "TNON",
+    "ACVA",
+    "AENT",
+    "FTFT",
+    "GAUZ",
+    "ZUMZ",
+    "PMTS",
+    "HAIN",
+    "CODA"
+  ],
+  "calendar": [
+    "Today’s economic calendar is light, with no major US data releases scheduled, while Canadian CPI data is due."
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": {
+      "text": "Canadian CPI data is due",
+      "hotter": false
+    },
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [
+      "Today’s economic calendar is light, with no major US data releases scheduled, while Canadian CPI data is due."
+    ],
+    "text": "Today’s economic calendar is light, with no major US data releases scheduled, while Canadian CPI data is due."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 284404,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-14T04:06:20.483",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}
