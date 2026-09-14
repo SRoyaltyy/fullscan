@@ -2172,6 +2172,8 @@ if __name__ == "__main__":
     test_burst_and_nneg_gates()
     test_input_news_prefers_morning_box_over_headline()
     test_matches_ryg_presence_and_ignores_same_day_change()
+    test_matches_rsi_macd_flow_and_finviz_rsi()
+    test_js_matches_tape_gates()
     test_matches_coil_and_short_alarm()
     test_ohlc_and_candles_are_strictly_prior()
     test_score_recipe_six_metrics_and_start_dates()
