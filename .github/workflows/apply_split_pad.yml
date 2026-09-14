@@ -16,6 +16,10 @@ jobs:
       - name: Apply pad patch
         run: |
           set -euo pipefail
+          if grep -q 'why": "unmarked session"' src/factor_mine_combo.py; then
+            echo "pad already in src/factor_mine_combo.py — skip"
+            exit 0
+          fi
           patch -p1 < patches/morning_polarity/simulate_split_pad.patch
           python3 -m py_compile src/factor_mine_combo.py src/test_factor_mine.py
           grep -n "unmarked session" src/factor_mine_combo.py
