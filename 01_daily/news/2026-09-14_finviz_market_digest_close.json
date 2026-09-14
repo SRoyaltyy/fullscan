@@ -1,0 +1,140 @@
+{
+  "date": "2026-09-14",
+  "generated_at": "2026-09-14T16:23:25.091239-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-09-15",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-09-15) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed lower as AI warnings hit semiconductors and Saudi pipeline shutdown pushed oil above $103 and briefly lifted 10-year yields past 5% ahead of Fed decision",
+  "raw_text": "- The S&P 500 ($SPX) closed at 7,625.60, down 0.41%, the Dow Jones Industrial Average ($DJI) finished at 52,427.93, down 0.28%, and the Nasdaq Composite ($COMP) ended at 26,225.07, down 0.41%, while the Nasdaq 100 ($NDX) fell about 0.73% and the Russell 2000 (IWM) slipped 0.26%.\n- AI slowdown warnings and \"kill switch\" safety concerns from OpenAI (OAIW)’s Sam Altman, Anthropic (ANTW)’s Dario Amodei, and Elon Musk triggered heavy selling in chipmakers and data-center plays, driving the PHLX Semiconductor Index down 5.62%.\n- Semiconductor and optics names including Teradyne (TER) (-13.30%), Coherent (COHR) (-12.73%), Corning (GLW) (-13.74%), and Micron Technology (MU) (down over 5% on AI infrastructure concerns) declined, while Nvidia (NVDA), AMD (AMD), Intel (INTC), and Broadcom (AVGO) fell sharply in the 3–6% range on AI-pause-driven demand fears and higher-rate pressure.\n- Communication Services and Health Care led the S&P 500 ($SPX) with roughly 1.3–2.8% gains, while Information Technology, Industrials, and Energy lagged despite strength in select software and energy names.\n- Cybersecurity and software stocks outperformed as Zscaler (ZS) rose 16.93%, CrowdStrike (CRWD) gained roughly 13–15%, Rubrik (RBRK) advanced about 15.05%, Palo Alto Networks (PANW) climbed over 13%, and Salesforce (CRM) added roughly 3–14% amid rotation into software and demand tied to AI-related cybersecurity risks.\n- A Saudi shutdown of a key pipeline bypassing the Strait of Hormuz amid Houthi and broader Middle East attacks pushed oil (@CL) above $103 a barrel, with Brent (@QA) above $108, and briefly sent the 10-year Treasury yield above 5% for the first time since 2007 before it pulled back.\n- Speculative action was elevated as Future FinTech Group (FTFT) gained more than 190% on heavy volume despite no specific catalyst, Elmet Group (ELMT) climbed 33% after announcing a $150–175 million tungsten supply chain investment, and Cellectis (CLLS) sank 40% after unveiling a strategic shift from CAR-T programs to in vivo gene editing.\n- Bank of America (BAC) shares declined after the bank projected a more than 10% drop in third-quarter investment banking fees, while Chevron (CVX) declined on the session even as higher yields weighed on the broader Energy sector and other rate-sensitive areas.\n- Intraday reports highlighted the AI warnings and oil (@CL)-driven yield spike as the dominant drivers of sentiment, with equities recovering from their worst levels in the final hour as investors positioned ahead of Wednesday’s Fed rate decision amid hotter inflation and stagflation worries flagged by economist Kevin Warsh.\n- After-hours earnings were light, with reports from Dave & Buster’s Entertainment (PLAY) and Radiant Logistics (RLGT) generating no notable stock moves above about 2% as investors looked ahead to Tuesday’s data and further pre-Fed positioning.",
+  "raw_summary_md": "- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) closed at **7,625.60, down 0.41%**, the **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) finished at **52,427.93, down 0.28%**, and the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) ended at **26,225.07, down 0.41%**, while the **Nasdaq 100** ([$NDX](https://finviz.com/index/NDX?p=d)) fell about **0.73%** and the **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) slipped **0.26%**.\n- **AI slowdown warnings and \"kill switch\" safety concerns** from OpenAI ([OAIW](https://finviz.com/quote?t=OAIW))’s Sam Altman, Anthropic ([ANTW](https://finviz.com/quote?t=ANTW))’s Dario Amodei, and Elon Musk triggered **heavy selling in chipmakers and data-center plays**, driving the **PHLX Semiconductor Index down 5.62%**.\n- **Semiconductor and optics names** including **Teradyne** ([TER](https://finviz.com/quote?t=TER)) (**-13.30%**), **Coherent** ([COHR](https://finviz.com/quote?t=COHR)) (**-12.73%**), **Corning** ([GLW](https://finviz.com/quote?t=GLW)) (**-13.74%**), and **Micron Technology** ([MU](https://finviz.com/quote?t=MU)) (**down over 5% on AI infrastructure concerns**) declined, while **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)), **AMD** ([AMD](https://finviz.com/quote?t=AMD)), **Intel** ([INTC](https://finviz.com/quote?t=INTC)), and **Broadcom** ([AVGO](https://finviz.com/quote?t=AVGO)) fell sharply in the **3–6% range** on **AI-pause-driven demand fears and higher-rate pressure**.\n- **Communication Services and Health Care led** the S&P 500 ([$SPX](https://finviz.com/index/SPX?p=d)) with roughly **1.3–2.8% gains**, while **Information Technology, Industrials, and Energy lagged** despite strength in select software and energy names.\n- **Cybersecurity and software stocks outperformed** as **Zscaler** ([ZS](https://finviz.com/quote?t=ZS)) rose **16.93%**, **CrowdStrike** ([CRWD](https://finviz.com/quote?t=CRWD)) gained roughly **13–15%**, **Rubrik** ([RBRK](https://finviz.com/quote?t=RBRK)) advanced about **15.05%**, **Palo Alto Networks** ([PANW](https://finviz.com/quote?t=PANW)) climbed over **13%**, and **Salesforce** ([CRM](https://finviz.com/quote?t=CRM)) added roughly **3–14%** amid rotation into software and demand tied to AI-related cybersecurity risks.\n- A **Saudi shutdown of a key pipeline bypassing the Strait of Hormuz** amid **Houthi and broader Middle East attacks** pushed **oil ([@CL](https://finviz.com/futures_charts?t=CL)) above $103 a barrel**, with **Brent ([@QA](https://finviz.com/futures_charts?t=QA)) above $108**, and briefly sent the **10-year Treasury yield above 5% for the first time since 2007** before it pulled back.\n- **Speculative action was elevated** as **Future FinTech Group** ([FTFT](https://finviz.com/quote?t=FTFT)) gained **more than 190%** on heavy volume despite no specific catalyst, **Elmet Group** ([ELMT](https://finviz.com/quote?t=ELMT)) climbed **33%** after announcing a $150–175 million tungsten supply chain investment, and **Cellectis** ([CLLS](https://finviz.com/quote?t=CLLS)) sank **40%** after unveiling a strategic shift from CAR-T programs to in vivo gene editing.\n- **Bank of America** ([BAC](https://finviz.com/quote?t=BAC)) shares declined after the bank projected a **more than 10% drop in third-quarter investment banking fees**, while **Chevron** ([CVX](https://finviz.com/quote?t=CVX)) declined on the session even as **higher yields weighed on the broader Energy sector and other rate-sensitive areas**.\n- Intraday reports highlighted the **AI warnings and oil ([@CL](https://finviz.com/futures_charts?t=CL))-driven yield spike as the dominant drivers of sentiment**, with **equities recovering from their worst levels in the final hour** as investors positioned ahead of **Wednesday’s Fed rate decision** amid **hotter inflation and stagflation worries flagged by economist Kevin Warsh**.\n- **After-hours earnings were light**, with reports from **Dave & Buster’s Entertainment** ([PLAY](https://finviz.com/quote?t=PLAY)) and **Radiant Logistics** ([RLGT](https://finviz.com/quote?t=RLGT)) generating **no notable stock moves above about 2%** as investors looked ahead to **Tuesday’s data** and further **pre-Fed positioning**.",
+  "index_moves": [
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": -0.73,
+      "verb": "fell"
+    },
+    {
+      "name": "Russell 2000",
+      "code": "RUT",
+      "change_pct": -0.26,
+      "verb": "slipped"
+    }
+  ],
+  "oil": {
+    "name": "Brent",
+    "price": 108.0,
+    "verb": null,
+    "direction": null
+  },
+  "cpi": null,
+  "fed_odds": {
+    "pct": 6.0,
+    "action": "pause",
+    "text": "6% range on AI-pause"
+  },
+  "named_tickers": [
+    "OAIW",
+    "ANTW",
+    "TER",
+    "COHR",
+    "GLW",
+    "MU",
+    "NVDA",
+    "AMD",
+    "INTC",
+    "AVGO",
+    "ZS",
+    "CRWD",
+    "RBRK",
+    "PANW",
+    "CRM",
+    "FTFT",
+    "ELMT",
+    "CLLS",
+    "BAC",
+    "CVX",
+    "PLAY",
+    "RLGT"
+  ],
+  "named_leaders": [
+    "OAIW",
+    "ANTW",
+    "TER",
+    "COHR",
+    "GLW",
+    "MU",
+    "NVDA",
+    "AMD",
+    "INTC",
+    "AVGO",
+    "ZS",
+    "CRWD",
+    "RBRK",
+    "PANW",
+    "CRM",
+    "FTFT",
+    "ELMT",
+    "CLLS",
+    "BAC",
+    "CVX",
+    "PLAY",
+    "RLGT"
+  ],
+  "calendar": [
+    "Intraday reports highlighted the AI warnings and oil (@CL)-driven yield spike as the dominant drivers of sentiment, with equities recovering from their worst levels in the final hour as investors positioned ahead of Wednesday’s Fed rate decision amid hotter inflation and stagflation worries flagged by economist Kevin Warsh.",
+    "After-hours earnings were light, with reports from Dave & Buster’s Entertainment (PLAY) and Radiant Logistics (RLGT) generating no notable stock moves above about 2% as investors looked ahead to Tuesday’s data and further pre-Fed positioning."
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": -0.73,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": {
+      "pct": 6.0,
+      "action": "pause",
+      "text": "6% range on AI-pause"
+    }
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "Intraday reports highlighted the AI warnings and oil (@CL)-driven yield spike as the dominant drivers of sentiment, with equities recovering from their worst levels in the final hour as investors positioned ahead of Wednesday’s Fed rate decision amid hotter inflation and stagflation worries flagged by economist Kevin Warsh.",
+      "After-hours earnings were light, with reports from Dave & Buster’s Entertainment (PLAY) and Radiant Logistics (RLGT) generating no notable stock moves above about 2% as investors looked ahead to Tuesday’s data and further pre-Fed positioning."
+    ],
+    "text": "Intraday reports highlighted the AI warnings and oil (@CL)-driven yield spike as the dominant drivers of sentiment, with equities recovering from their worst levels in the final hour as investors positioned ahead of Wednesday’s Fed rate decision amid hotter inflation and stagflation worries flagged by economist Kevin Warsh. After-hours earnings were light, with reports from Dave & Buster’s Entertainment (PLAY) and Radiant Logistics (RLGT) generating no notable stock moves above about 2% as investors looked ahead to Tuesday’s data and further pre-Fed positioning."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "A Saudi shutdown of a key pipeline bypassing the Strait of Hormuz amid Houthi and broader Middle East attacks pushed oil (@CL) above $103 a barrel, with Brent (@QA) above $108, and briefly sent the 10-year Treasury yield above 5% for the first time since 2007 before it pulled back."
+  },
+  "finviz_id": 285181,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-14T16:07:04.99",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}

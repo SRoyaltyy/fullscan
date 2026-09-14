@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T16:19:34.360544-04:00",
+  "generated_at": "2026-09-14T16:23:25.708781-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -93,45 +93,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T05:55:15.741116-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-14_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 89013,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-09-14_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11985,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-14\n_Generated 2026-09-14T05:55:15.686201-04:00 \u00b7 export=data/exports/finviz_2026-09-14.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-        },
-        {
-          "path": "data/exports/finviz_2026-09-14.csv",
-          "ok": true,
-          "reason": "",
-          "size": 10966675,
-          "preview": "11617 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11414104,
-          "preview": "11633 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-14\n_Generated 2026-09-14T05:55:15.686201-04:00 \u00b7 export=data/exports/finviz_2026-09-14.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11617 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11633 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -586,6 +547,31 @@
         }
       ],
       "preview": "2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-09-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-14T16:23:25.120993-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-14_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 12140,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-14_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 5306,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-09-14\n**Generated:** 2026-09-14T16:23:25.091239-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as AI warnings hit semiconductors and Saudi pipeline shutdown pushed oil above $103 and briefly lifted 10-year yields past 5% ahead of Fed decision\n**Prior close:** SPX \u2014  Nasdaq -0.73%  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** -0.73%  **Dow:** \u2014\n**Oil:** Brent $108.0\n**CPI/Fed:** 6.0% pause (6% range on AI-pause)\n**Leaders:** OAIW, ANTW, TER, COHR, GLW, MU, NVDA, AMD, INTC, AVGO, ZS, CRWD, RBRK, PANW, CRM, FTFT, ELMT, CLLS, BAC, CVX, PLAY, RLGT\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-15\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-14\n**Generated:** 2026-09-14T16:23:25.091239-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as AI warnings hit semiconductors and Saudi pipeline shutdown pushed oil above $103 and briefly lifted 10-year yields past 5% ahead of Fed decision\n**Prior close:** SPX \u2014  Nasdaq -0.73%  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** -0.73%  **Dow:** \u2014\n**Oil:** Brent $108.0\n**CPI/Fed:** 6.0% pause (6% range on AI-pause)\n**Leaders:** OAIW, ANTW, TER, COHR, GLW, MU, NVDA, AMD, INTC, AVGO, ZS, CRWD, RBRK, PANW, CRM, FTFT, ELMT, CLLS, BAC, CVX, PLAY, RLGT\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-15\n**Clock use:** `next_open`"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
