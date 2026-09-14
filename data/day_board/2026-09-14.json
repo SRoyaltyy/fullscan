@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T05:53:10.161295-04:00",
+  "generated_at": "2026-09-14T05:53:23.491266-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -372,8 +372,8 @@
           "path": "01_daily/weather/2026-09-14_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10687 vix=spiking yields=rising",
-          "size": 10687
+          "reason": "sectors=11 bytes=10660 vix=spiking yields=rising",
+          "size": 10660
         }
       ],
       "said": "hostile 9 \u00b7 neutral 2",
@@ -521,8 +521,8 @@
           "path": "01_daily/weather/2026-09-14_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10687 vix=spiking yields=rising",
-          "size": 10687
+          "reason": "sectors=11 bytes=10660 vix=spiking yields=rising",
+          "size": 10660
         },
         {
           "key": "in_ab",
@@ -794,6 +794,31 @@
         }
       ],
       "preview": "5895 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-14T05:53:23.081086-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-14_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10660,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -15.213, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Consumer Cyclical={'score': -13.101, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Consumer Defensive={'score': 0.826, 'dir': 'up', 'conf': 0.533, 'source': 'llm'}, Energy={'score': 11.129, 'dir': 'up', 'conf': 0.85, 'source': 'llm'}, Financial={'score': -3.345, 'dir': 'down', 'conf': 0.534, 'source': 'llm'}, Healthcare={'score': -8.839, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Industrials={'score': -11.954, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Real Estate={'score': -0.491, 'dir': 'down', 'conf': 0.52, 'source': 'llm'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-14_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 6161,
+          "preview": "# Weather report \u2014 2026-09-14\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -15.213, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Consumer Cyclical={'score': -13.101, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Consumer Defensive={'score': 0.826, 'dir': 'up', 'conf': 0.533, 'source': 'llm'}, Energy={'score': 11.129, 'dir': 'up', 'conf': 0.85, 'source': 'llm'}, Financial={'score': -3.345, 'dir': 'down', 'conf': 0.534, 'source': 'llm'}, Healthcare={'score': -8.839, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Industrials={'score': -11.954, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Real Estate={'score': -0.491, 'dir': 'down', 'conf': 0.52, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-14\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
