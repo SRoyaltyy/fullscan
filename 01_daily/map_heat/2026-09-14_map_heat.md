@@ -5,64 +5,64 @@ Export `finviz_2026-09-08.csv` · 11608 names · generated 2026-09-09T01:59:54.4
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7675.5 | -0.66% |
-| Nasdaq 100 (NQ) | 29208.75 | -1.63% |
-| Russell 2000 (ER2) | 2917.3 | -0.29% |
-| DJIA (YM) | 52924.0 | -0.15% |
+| S&P 500 (ES) | 7678.5 | -0.67% |
+| Nasdaq 100 (NQ) | 29217.25 | -1.60% |
+| Russell 2000 (ER2) | 2919.2 | -0.27% |
+| DJIA (YM) | 52945.0 | -0.15% |
 | VIX (VX) | 17.55 | +5.69% |
-| Crude Oil WTI (CL) | 102.56 | +2.57% |
-| Crude Oil Brent (QA) | 107.57 | +2.84% |
-| Natural Gas (NG) | 2.902 | +2.61% |
+| Crude Oil WTI (CL) | 102.29 | +2.44% |
+| Crude Oil Brent (QA) | 107.33 | +2.80% |
+| Natural Gas (NG) | 2.903 | +2.54% |
 | Heating Oil (HO) | 5.0917 | +2.67% |
-| Gasoline RBOB (RB) | 3.4 | +2.83% |
-| Gold (GC) | 4353.1 | -1.26% |
-| Silver (SI) | 63.775 | -2.13% |
-| Copper (HG) | 6.453 | -1.44% |
-| Platinum (PL) | 1783.0 | -0.80% |
-| Palladium (PA) | 1302.0 | -1.65% |
-| USD (DX) | 99.25 | +0.42% |
-| EUR (6E) | 1.15835 | -0.47% |
-| JPY (6J) | 0.6524 | -0.45% |
-| GBP (6B) | 1.3492 | -0.27% |
-| AUD (6A) | 0.7127 | -0.52% |
-| CAD (6C) | 0.72355 | -0.12% |
-| CHF (6S) | 1.23405 | -0.28% |
-| NZD (6N) | 0.5792 | -0.63% |
-| 10 Year Note (ZN) | 106.203125 | +0.09% |
-| 5 Year Note (ZF) | 104.578125 | +0.07% |
-| 2 Year Note (ZT) | 102.109375 | +0.04% |
-| 30 Year Bond (ZB) | 106.78125 | +0.03% |
-| Nikkei 225 (NKD) | 63220.0 | -2.12% |
-| DAX (DY) | 25429.0 | -0.59% |
-| Euro Stoxx 50 (EX) | 6277.0 | -0.82% |
-| Corn (ZC) | 529.5 | -0.14% |
+| Gasoline RBOB (RB) | 3.3957 | +2.73% |
+| Gold (GC) | 4354.1 | -1.26% |
+| Silver (SI) | 63.76 | -2.17% |
+| Copper (HG) | 6.4545 | -1.44% |
+| Platinum (PL) | 1781.0 | -0.87% |
+| Palladium (PA) | 1299.0 | -1.84% |
+| USD (DX) | 99.245 | +0.41% |
+| EUR (6E) | 1.15855 | -0.46% |
+| JPY (6J) | 0.65225 | -0.46% |
+| GBP (6B) | 1.3491 | -0.27% |
+| AUD (6A) | 0.7127 | -0.51% |
+| CAD (6C) | 0.7235 | -0.13% |
+| CHF (6S) | 1.23435 | -0.27% |
+| NZD (6N) | 0.57925 | -0.63% |
+| 10 Year Note (ZN) | 106.234375 | +0.12% |
+| 5 Year Note (ZF) | 104.5859375 | +0.07% |
+| 2 Year Note (ZT) | 102.11328125 | +0.04% |
+| 30 Year Bond (ZB) | 106.8125 | +0.06% |
+| Nikkei 225 (NKD) | 63280.0 | -2.12% |
+| DAX (DY) | 25445.0 | -0.53% |
+| Euro Stoxx 50 (EX) | 6281.0 | -0.73% |
+| Corn (ZC) | 529.5 | -0.09% |
 | Soybeans (ZS) | 1297.75 | +0.12% |
-| Wheat (ZW) | 725.25 | -0.07% |
-| Soybean oil (ZL) | 69.65 | +0.71% |
-| Soybean Meal (ZM) | 345.4 | -0.40% |
+| Wheat (ZW) | 725.25 | +0.00% |
+| Soybean oil (ZL) | 69.66 | +0.66% |
+| Soybean Meal (ZM) | 345.5 | -0.40% |
 | Oats (ZO) | 383.0 | +1.06% |
 | Rough Rice (ZR) | 16.059 | +0.21% |
 | Coffee (KC) | 284.25 | -0.85% |
-| Sugar (SB) | 18.22 | +0.39% |
-| Cotton (CT) | 84.85 | -1.45% |
+| Sugar (SB) | 18.2 | +0.28% |
+| Cotton (CT) | 84.85 | -1.42% |
 | Cocoa (CC) | 5913.0 | -0.02% |
 | Orange Juice (JO) | 144.8 | +1.04% |
 | Lumber (LB) | 566.0 | -0.18% |
 | Live Cattle (LC) | 219.625 | +0.85% |
 | Lean Hogs (LH) | 81.625 | -1.95% |
 | Feeder Cattle (FC) | 332.5 | +1.51% |
-| Bitcoin (BTC) | 77865.0 | +0.59% |
+| Bitcoin (BTC) | 77830.0 | +0.56% |
 | 3 Month SOFR (SR3) | 96.0375 | +0.01% |
 | 30 Day Fed Funds (ZQ) | 96.27 | +0.00% |
 | Aluminum (ALI) | 3420.0 | -1.91% |
-| Canola (RS) | 824.5 | +0.93% |
+| Canola (RS) | 824.4 | +0.88% |
 | Coal Newcastle (NCF) | 147.0 | -0.84% |
 | Ethanol (ZK) | 2.055 | -0.48% |
-| Gasoil (G) | 1514.25 | +2.40% |
+| Gasoil (G) | 1514.5 | +2.35% |
 | Iron Ore (TIO) | 98.02 | -0.67% |
 | Steel HRC (HRC) | 1234.0 | +0.00% |
-| Ultra 10 Year Note (TN) | 107.71875 | +0.09% |
-| Ultra Bond (UB) | 108.25 | -0.03% |
+| Ultra 10 Year Note (TN) | 107.75 | +0.10% |
+| Ultra Bond (UB) | 108.28125 | +0.03% |
 | Uranium (UX) | 90.0 | -0.06% |
 
 ## CALENDAR
@@ -252,17 +252,17 @@ COLD (1w):
 - **Innovation / Patent Based** 0.0% 1d -0.2% 1w · ARKK, XT, BULZ
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 7 min **SKHY,NVDA** Stock market today: Dow, S&P 500, Nasdaq futures fall as Anthropic's AI warning spooks tech traders, oil prices jump (Yahoo Finance)
-- 13 min **STI** Solidion Technology Announces Stock Buyback Program (PR Newswire)
-- 13 min **BNTX** BioNTech and OncoC4 Present Updated Data Showing Gotistobart Nearly Doubled Median Overall Survival versus Standard-of-Care Chemotherapy in Previously Treated Squamous Non-Small Cell Lung Cancer Patients (GlobeNewswire)
-- 13 min **TTGT** Omdia: Global Semiconductor Revenue Surges 31% to Record $425bn in 2Q26 (Business Wire)
-- 13 min **MSCI** Active ETFs set for further growth as advisers sharpen focus on value and fit (PR Newswire)
-- 14 min **LLY,BMY,PFE** Big Pharma Is Pouring Billions Into China's Biotechs (Barrons.com)
-- 42 min **SPCX** Stock Market Today: Dow, S&P 500 and Nasdaq set to decline on proposed AI development pause as oil prices rise after Saudi Arabia closes pipeline (MarketWatch)
-- 44 min **NVDA** Anthropic wants AI to slow down. Its $517 billion spending plan says otherwise (Investing.com)
-- 44 min **SPCX** Nasdaq set to fall on AI safety concerns (MarketWatch)
-- 53 min **AMZN,WMT** US manufacturers raise concerns about AI shopping chatbots (Just Style)
-- 54 min **CRML,USAR,UUUU,MP** USAR, MP, UUUU, CRML Stocks Drop Overnight: Why China's Threat To Scrap Trump-Xi Summit Matters (Stocktwits)
+- 9 min **SKHY,NVDA** Stock market today: Dow, S&P 500, Nasdaq futures fall as Anthropic's AI warning spooks tech traders, oil prices jump (Yahoo Finance)
+- 15 min **STI** Solidion Technology Announces Stock Buyback Program (PR Newswire)
+- 15 min **BNTX** BioNTech and OncoC4 Present Updated Data Showing Gotistobart Nearly Doubled Median Overall Survival versus Standard-of-Care Chemotherapy in Previously Treated Squamous Non-Small Cell Lung Cancer Patients (GlobeNewswire)
+- 15 min **TTGT** Omdia: Global Semiconductor Revenue Surges 31% to Record $425bn in 2Q26 (Business Wire)
+- 15 min **MSCI** Active ETFs set for further growth as advisers sharpen focus on value and fit (PR Newswire)
+- 16 min **LLY,BMY,PFE** Big Pharma Is Pouring Billions Into China's Biotechs (Barrons.com)
+- 44 min **SPCX** Stock Market Today: Dow, S&P 500 and Nasdaq set to decline on proposed AI development pause as oil prices rise after Saudi Arabia closes pipeline (MarketWatch)
+- 45 min **NVDA** Anthropic wants AI to slow down. Its $517 billion spending plan says otherwise (Investing.com)
+- 45 min **SPCX** Nasdaq set to fall on AI safety concerns (MarketWatch)
+- 55 min **AMZN,WMT** US manufacturers raise concerns about AI shopping chatbots (Just Style)
+- 56 min **CRML,USAR,UUUU,MP** USAR, MP, UUUU, CRML Stocks Drop Overnight: Why China's Threat To Scrap Trump-Xi Summit Matters (Stocktwits)
 - 1 hour **ORCL** Anthropic IPO: Claude Maker Reportedly Targets Second Straight Quarter Of Adjusted Profit As CEOs AI Slowdown Call Sparks Debate (Stocktwits)
 - 1 hour **TH,LAC,MS** Morgan Stanley raises Target Hospitality PT on accretive contract win (Investing.com)
 - 1 hour **NMRK** Newmark Advises Schroder Real Estate Investment Trust on Acquisition of Picton Property Income (PR Newswire)

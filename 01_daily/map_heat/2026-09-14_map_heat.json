@@ -8673,25 +8673,25 @@
     {
       "ticker": "ES",
       "label": "S&P 500",
-      "last": 7675.5,
-      "change": -0.66
+      "last": 7678.5,
+      "change": -0.67
     },
     {
       "ticker": "NQ",
       "label": "Nasdaq 100",
-      "last": 29208.75,
-      "change": -1.63
+      "last": 29217.25,
+      "change": -1.6
     },
     {
       "ticker": "ER2",
       "label": "Russell 2000",
-      "last": 2917.3,
-      "change": -0.29
+      "last": 2919.2,
+      "change": -0.27
     },
     {
       "ticker": "YM",
       "label": "DJIA",
-      "last": 52924.0,
+      "last": 52945.0,
       "change": -0.15
     },
     {
@@ -8703,20 +8703,20 @@
     {
       "ticker": "CL",
       "label": "Crude Oil WTI",
-      "last": 102.56,
-      "change": 2.57
+      "last": 102.29,
+      "change": 2.44
     },
     {
       "ticker": "QA",
       "label": "Crude Oil Brent",
-      "last": 107.57,
-      "change": 2.84
+      "last": 107.33,
+      "change": 2.8
     },
     {
       "ticker": "NG",
       "label": "Natural Gas",
-      "last": 2.902,
-      "change": 2.61
+      "last": 2.903,
+      "change": 2.54
     },
     {
       "ticker": "HO",
@@ -8727,134 +8727,134 @@
     {
       "ticker": "RB",
       "label": "Gasoline RBOB",
-      "last": 3.4,
-      "change": 2.83
+      "last": 3.3957,
+      "change": 2.73
     },
     {
       "ticker": "GC",
       "label": "Gold",
-      "last": 4353.1,
+      "last": 4354.1,
       "change": -1.26
     },
     {
       "ticker": "SI",
       "label": "Silver",
-      "last": 63.775,
-      "change": -2.13
+      "last": 63.76,
+      "change": -2.17
     },
     {
       "ticker": "HG",
       "label": "Copper",
-      "last": 6.453,
+      "last": 6.4545,
       "change": -1.44
     },
     {
       "ticker": "PL",
       "label": "Platinum",
-      "last": 1783.0,
-      "change": -0.8
+      "last": 1781.0,
+      "change": -0.87
     },
     {
       "ticker": "PA",
       "label": "Palladium",
-      "last": 1302.0,
-      "change": -1.65
+      "last": 1299.0,
+      "change": -1.84
     },
     {
       "ticker": "DX",
       "label": "USD",
-      "last": 99.25,
-      "change": 0.42
+      "last": 99.245,
+      "change": 0.41
     },
     {
       "ticker": "6E",
       "label": "EUR",
-      "last": 1.15835,
-      "change": -0.47
+      "last": 1.15855,
+      "change": -0.46
     },
     {
       "ticker": "6J",
       "label": "JPY",
-      "last": 0.6524,
-      "change": -0.45
+      "last": 0.65225,
+      "change": -0.46
     },
     {
       "ticker": "6B",
       "label": "GBP",
-      "last": 1.3492,
+      "last": 1.3491,
       "change": -0.27
     },
     {
       "ticker": "6A",
       "label": "AUD",
       "last": 0.7127,
-      "change": -0.52
+      "change": -0.51
     },
     {
       "ticker": "6C",
       "label": "CAD",
-      "last": 0.72355,
-      "change": -0.12
+      "last": 0.7235,
+      "change": -0.13
     },
     {
       "ticker": "6S",
       "label": "CHF",
-      "last": 1.23405,
-      "change": -0.28
+      "last": 1.23435,
+      "change": -0.27
     },
     {
       "ticker": "6N",
       "label": "NZD",
-      "last": 0.5792,
+      "last": 0.57925,
       "change": -0.63
     },
     {
       "ticker": "ZN",
       "label": "10 Year Note",
-      "last": 106.203125,
-      "change": 0.09
+      "last": 106.234375,
+      "change": 0.12
     },
     {
       "ticker": "ZF",
       "label": "5 Year Note",
-      "last": 104.578125,
+      "last": 104.5859375,
       "change": 0.07
     },
     {
       "ticker": "ZT",
       "label": "2 Year Note",
-      "last": 102.109375,
+      "last": 102.11328125,
       "change": 0.04
     },
     {
       "ticker": "ZB",
       "label": "30 Year Bond",
-      "last": 106.78125,
-      "change": 0.03
+      "last": 106.8125,
+      "change": 0.06
     },
     {
       "ticker": "NKD",
       "label": "Nikkei 225",
-      "last": 63220.0,
+      "last": 63280.0,
       "change": -2.12
     },
     {
       "ticker": "DY",
       "label": "DAX",
-      "last": 25429.0,
-      "change": -0.59
+      "last": 25445.0,
+      "change": -0.53
     },
     {
       "ticker": "EX",
       "label": "Euro Stoxx 50",
-      "last": 6277.0,
-      "change": -0.82
+      "last": 6281.0,
+      "change": -0.73
     },
     {
       "ticker": "ZC",
       "label": "Corn",
       "last": 529.5,
-      "change": -0.14
+      "change": -0.09
     },
     {
       "ticker": "ZS",
@@ -8866,18 +8866,18 @@
       "ticker": "ZW",
       "label": "Wheat",
       "last": 725.25,
-      "change": -0.07
+      "change": 0.0
     },
     {
       "ticker": "ZL",
       "label": "Soybean oil",
-      "last": 69.65,
-      "change": 0.71
+      "last": 69.66,
+      "change": 0.66
     },
     {
       "ticker": "ZM",
       "label": "Soybean Meal",
-      "last": 345.4,
+      "last": 345.5,
       "change": -0.4
     },
     {
@@ -8901,14 +8901,14 @@
     {
       "ticker": "SB",
       "label": "Sugar",
-      "last": 18.22,
-      "change": 0.39
+      "last": 18.2,
+      "change": 0.28
     },
     {
       "ticker": "CT",
       "label": "Cotton",
       "last": 84.85,
-      "change": -1.45
+      "change": -1.42
     },
     {
       "ticker": "CC",
@@ -8949,8 +8949,8 @@
     {
       "ticker": "BTC",
       "label": "Bitcoin",
-      "last": 77865.0,
-      "change": 0.59
+      "last": 77830.0,
+      "change": 0.56
     },
     {
       "ticker": "SR3",
@@ -8973,8 +8973,8 @@
     {
       "ticker": "RS",
       "label": "Canola",
-      "last": 824.5,
-      "change": 0.93
+      "last": 824.4,
+      "change": 0.88
     },
     {
       "ticker": "NCF",
@@ -8991,8 +8991,8 @@
     {
       "ticker": "G",
       "label": "Gasoil",
-      "last": 1514.25,
-      "change": 2.4
+      "last": 1514.5,
+      "change": 2.35
     },
     {
       "ticker": "TIO",
@@ -9009,14 +9009,14 @@
     {
       "ticker": "TN",
       "label": "Ultra 10 Year Note",
-      "last": 107.71875,
-      "change": 0.09
+      "last": 107.75,
+      "change": 0.1
     },
     {
       "ticker": "UB",
       "label": "Ultra Bond",
-      "last": 108.25,
-      "change": -0.03
+      "last": 108.28125,
+      "change": 0.03
     },
     {
       "ticker": "UX",
@@ -9027,7 +9027,7 @@
   ],
   "ticker_news": [
     {
-      "time": "7 min",
+      "time": "9 min",
       "title": "Stock market today: Dow, S&P 500, Nasdaq futures fall as Anthropic's AI warning spooks tech traders, oil prices jump",
       "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-september-14-dow-sp-500-nasdaq-080559558.html",
       "source": "Yahoo Finance",
@@ -9037,7 +9037,7 @@
       ]
     },
     {
-      "time": "13 min",
+      "time": "15 min",
       "title": "Solidion Technology Announces Stock Buyback Program",
       "url": "/news/391359/solidion-technology-announces-stock-buyback-program",
       "source": "PR Newswire",
@@ -9046,7 +9046,7 @@
       ]
     },
     {
-      "time": "13 min",
+      "time": "15 min",
       "title": "BioNTech and OncoC4 Present Updated Data Showing Gotistobart Nearly Doubled Median Overall Survival versus Standard-of-Care Chemotherapy in Previously Treated Squamous Non-Small Cell Lung Cancer Patients",
       "url": "/news/391360/biontech-and-oncoc4-present-updated-data-showing-gotistobart-nearly-doubled-median-overall-survival-versus-standard-of-care-chemotherapy-in-previously-treated-squamous-non-small-cell-lung-cancer-patients",
       "source": "GlobeNewswire",
@@ -9055,7 +9055,7 @@
       ]
     },
     {
-      "time": "13 min",
+      "time": "15 min",
       "title": "Omdia: Global Semiconductor Revenue Surges 31% to Record $425bn in 2Q26",
       "url": "/news/391361/omdia-global-semiconductor-revenue-surges-31-to-record-425bn-in-2q26",
       "source": "Business Wire",
@@ -9064,7 +9064,7 @@
       ]
     },
     {
-      "time": "13 min",
+      "time": "15 min",
       "title": "Active ETFs set for further growth as advisers sharpen focus on value and fit",
       "url": "/news/391362/active-etfs-set-for-further-growth-as-advisers-sharpen-focus-on-value-and-fit",
       "source": "PR Newswire",
@@ -9073,7 +9073,7 @@
       ]
     },
     {
-      "time": "14 min",
+      "time": "16 min",
       "title": "Big Pharma Is Pouring Billions Into China's Biotechs",
       "url": "https://www.barrons.com/articles/pharma-china-biotech-britol-meyers-eli-lilly-67c4828f?mod=bar_FV",
       "source": "Barrons.com",
@@ -9084,7 +9084,7 @@
       ]
     },
     {
-      "time": "42 min",
+      "time": "44 min",
       "title": "Stock Market Today: Dow, S&P 500 and Nasdaq set to decline on proposed AI development pause as oil prices rise after Saudi Arabia closes pipeline",
       "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-ai-safety-concerns-grow-oil-prices-tension-middle-east?mod=mw_FV",
       "source": "MarketWatch",
@@ -9093,7 +9093,7 @@
       ]
     },
     {
-      "time": "44 min",
+      "time": "45 min",
       "title": "Anthropic wants AI to slow down. Its $517 billion spending plan says otherwise",
       "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-wants-ai-slow-down-072927342.html",
       "source": "Investing.com",
@@ -9102,7 +9102,7 @@
       ]
     },
     {
-      "time": "44 min",
+      "time": "45 min",
       "title": "Nasdaq set to fall on AI safety concerns",
       "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-ai-safety-concerns-grow-oil-prices-tension-middle-east/card/nasdaq-set-to-fall-on-ai-safety-concerns-8nZUndIUqBYybqiO1W1x?mod=mw_FV",
       "source": "MarketWatch",
@@ -9111,7 +9111,7 @@
       ]
     },
     {
-      "time": "53 min",
+      "time": "55 min",
       "title": "US manufacturers raise concerns about AI shopping chatbots",
       "url": "https://finance.yahoo.com/m/95f48941-64df-3314-bd3a-4d95cc5aeb0c/us-manufacturers-raise.html",
       "source": "Just Style",
@@ -9121,7 +9121,7 @@
       ]
     },
     {
-      "time": "54 min",
+      "time": "56 min",
       "title": "USAR, MP, UUUU, CRML Stocks Drop Overnight: Why China's Threat To Scrap Trump-Xi Summit Matters",
       "url": "https://finance.yahoo.com/m/cf73afa3-e869-38e0-9ed9-2fb8861e9649/usar%2C-mp%2C-uuuu%2C-crml-stocks.html",
       "source": "Stocktwits",
@@ -9306,8 +9306,8 @@
       "url": "https://finance.yahoo.com/m/71d2fcbc-8563-3e1f-80a5-2f94876b5183/why-did-hpq%2C-dell%2C-vlo-stocks.html",
       "source": "Stocktwits",
       "tickers": [
-        "ORCL",
         "DELL",
+        "ORCL",
         "HPQ",
         "NVDA",
         "VLO"
@@ -10564,5 +10564,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 197,
   "earnings_window_count": 48,
-  "overlay_at": "2026-09-14T04:13:45.845714-04:00"
+  "overlay_at": "2026-09-14T04:15:16.809073-04:00"
 }
