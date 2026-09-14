@@ -1,6 +1,10 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T13:15:32.204204-04:00",
+  "generated_at": "2026-09-14T13:22:29.564473-04:00",
+  "clock_use": "session_open",
+  "clock_legal_for": "2026-09-14",
+  "session_open": "2026-09-14",
+  "panel_bake_date": "2026-09-11",
   "n": 322,
   "n_ok": 322,
   "buy_1d": [
@@ -39,6 +43,8 @@
       "status": "ok",
       "family": "stock_book",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -129,6 +135,8 @@
       "status": "ok",
       "family": "paper",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -228,6 +236,8 @@
       "status": "ok",
       "family": "stock_book",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -381,6 +391,8 @@
       "status": "ok",
       "family": "paper",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -534,6 +546,8 @@
       "status": "ok",
       "family": "stock_book",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -687,6 +701,8 @@
       "status": "ok",
       "family": "paper",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -840,6 +856,8 @@
       "status": "ok",
       "family": "stock_book",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -993,6 +1011,8 @@
       "status": "ok",
       "family": "paper",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -1146,6 +1166,8 @@
       "status": "ok",
       "family": "stock_book",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -1299,6 +1321,8 @@
       "status": "ok",
       "family": "paper",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -1435,6 +1459,8 @@
       "status": "ok",
       "family": "flatten",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -1479,6 +1505,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -1547,6 +1575,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -1615,6 +1645,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -1679,6 +1711,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -1719,6 +1753,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -1759,6 +1795,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -1803,6 +1841,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -1871,6 +1911,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -1939,6 +1981,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -2007,6 +2051,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -2075,6 +2121,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -2143,6 +2191,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -2211,6 +2261,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -2279,6 +2331,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -2347,6 +2401,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -2415,6 +2471,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -2483,6 +2541,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -2542,6 +2602,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -2552,6 +2614,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -2571,6 +2635,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -2639,6 +2705,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -2707,6 +2775,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -2775,6 +2845,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -2843,6 +2915,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -2911,6 +2985,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -2974,6 +3050,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -3007,6 +3085,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -3045,6 +3125,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -3113,6 +3195,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -3172,6 +3256,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -3182,6 +3268,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -3192,6 +3280,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -3202,6 +3292,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -3220,6 +3312,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -3281,6 +3375,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -3334,6 +3430,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -3344,6 +3442,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -3363,6 +3463,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -3431,6 +3533,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -3499,6 +3603,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -3567,6 +3673,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -3635,6 +3743,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -3703,6 +3813,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -3771,6 +3883,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -3839,6 +3953,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -3898,6 +4014,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -3908,6 +4026,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -3918,6 +4038,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -3928,6 +4050,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -3938,6 +4062,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -3948,6 +4074,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -3967,6 +4095,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -4035,6 +4165,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -4094,6 +4226,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -4104,6 +4238,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -4123,6 +4259,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -4191,6 +4329,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -4253,6 +4393,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -4279,6 +4421,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -4302,6 +4446,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -4312,6 +4458,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -4331,6 +4479,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -4399,6 +4549,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -4467,6 +4619,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -4530,6 +4684,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -4559,6 +4715,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -4569,6 +4727,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -4579,6 +4739,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -4592,6 +4754,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -4617,6 +4781,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -4638,6 +4804,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -4667,6 +4835,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -4681,6 +4851,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -4710,6 +4882,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -4720,6 +4894,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -4733,6 +4909,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -4759,6 +4937,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -4784,6 +4964,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -4801,6 +4983,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -4814,6 +4998,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -4840,6 +5026,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -4866,6 +5054,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -4891,6 +5081,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -4912,6 +5104,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -4941,6 +5135,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -4955,6 +5151,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -4984,6 +5182,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -4994,6 +5194,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -5007,6 +5209,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -5033,6 +5237,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -5058,6 +5264,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -5075,6 +5283,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -5088,6 +5298,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -5114,6 +5326,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -5139,6 +5353,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -5158,6 +5374,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -5175,6 +5393,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -5185,6 +5405,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -5199,6 +5421,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -5232,6 +5456,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -5261,6 +5487,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -5273,6 +5501,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "short",
       "predict": [
         {
@@ -5292,6 +5522,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "short",
       "predict": [
         {
@@ -5312,6 +5544,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "short",
       "predict": [
         {
@@ -5344,6 +5578,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -5412,6 +5648,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -5474,6 +5712,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -5500,6 +5740,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -5526,6 +5768,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -5552,6 +5796,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -5575,6 +5821,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -5585,6 +5833,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -5600,6 +5850,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -5640,6 +5892,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -5684,6 +5938,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -5752,6 +6008,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -5820,6 +6078,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -5888,6 +6148,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -5954,6 +6216,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -6008,6 +6272,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -6063,6 +6329,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -6124,6 +6392,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -6177,6 +6447,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -6187,6 +6459,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -6197,6 +6471,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -6207,6 +6483,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -6217,6 +6495,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -6227,6 +6507,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -6239,6 +6521,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -6256,6 +6540,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -6266,6 +6552,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -6276,6 +6564,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -6295,6 +6585,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -6363,6 +6655,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -6431,6 +6725,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -6499,6 +6795,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -6567,6 +6865,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -6635,6 +6935,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -6703,6 +7005,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -6771,6 +7075,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -6839,6 +7145,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -6907,6 +7215,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -6975,6 +7285,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -7043,6 +7355,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -7111,6 +7425,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -7179,6 +7495,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -7247,6 +7565,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -7315,6 +7635,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -7383,6 +7705,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -7447,6 +7771,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -7495,6 +7821,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -7583,6 +7911,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -7627,6 +7957,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -7695,6 +8027,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -7763,6 +8097,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -7831,6 +8167,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -7899,6 +8237,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -7967,6 +8307,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "short",
       "predict": [
         {
@@ -8035,6 +8377,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "short",
       "predict": [
         {
@@ -8097,6 +8441,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "short",
       "predict": [
         {
@@ -8123,6 +8469,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "short",
       "predict": [
         {
@@ -8146,6 +8494,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "short",
       "predict": []
     },
@@ -8156,6 +8506,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "short",
       "predict": []
     },
@@ -8175,6 +8527,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "short",
       "predict": [
         {
@@ -8243,6 +8597,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "short",
       "predict": [
         {
@@ -8311,6 +8667,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "short",
       "predict": [
         {
@@ -8379,6 +8737,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "short",
       "predict": [
         {
@@ -8447,6 +8807,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "short",
       "predict": [
         {
@@ -8515,6 +8877,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "short",
       "predict": [
         {
@@ -8583,6 +8947,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "short",
       "predict": [
         {
@@ -8651,6 +9017,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "short",
       "predict": [
         {
@@ -8713,6 +9081,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "short",
       "predict": [
         {
@@ -8741,6 +9111,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -8781,6 +9153,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -8821,6 +9195,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -8861,6 +9237,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -8901,6 +9279,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -8941,6 +9321,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -8981,6 +9363,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -9021,6 +9405,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -9061,6 +9447,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -9101,6 +9489,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -9141,6 +9531,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -9181,6 +9573,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -9221,6 +9615,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -9261,6 +9657,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -9301,6 +9699,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -9341,6 +9741,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -9376,6 +9778,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -9386,6 +9790,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -9396,6 +9802,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -9406,6 +9814,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -9416,6 +9826,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -9426,6 +9838,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -9436,6 +9850,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -9446,6 +9862,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -9465,6 +9883,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -9533,6 +9953,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -9601,6 +10023,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -9669,6 +10093,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -9737,6 +10163,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -9805,6 +10233,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -9873,6 +10303,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -9941,6 +10373,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -10009,6 +10443,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -10077,6 +10513,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -10145,6 +10583,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -10213,6 +10653,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -10281,6 +10723,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -10349,6 +10793,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -10417,6 +10863,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -10485,6 +10933,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -10553,6 +11003,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -10621,6 +11073,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -10689,6 +11143,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -10757,6 +11213,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -10825,6 +11283,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -10893,6 +11353,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -10961,6 +11423,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -11029,6 +11493,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -11088,6 +11554,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -11098,6 +11566,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -11108,6 +11578,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -11118,6 +11590,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -11128,6 +11602,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -11138,6 +11614,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -11148,6 +11626,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -11158,6 +11638,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -11168,6 +11650,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -11178,6 +11662,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -11188,6 +11674,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -11198,6 +11686,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -11213,6 +11703,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -11255,6 +11747,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -11309,6 +11803,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -11363,6 +11859,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -11417,6 +11915,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -11471,6 +11971,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -11525,6 +12027,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -11579,6 +12083,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -11633,6 +12139,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -11683,6 +12191,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -11709,6 +12219,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -11737,6 +12249,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -11779,6 +12293,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -11826,13 +12342,16 @@
         "CMRC",
         "GPRO",
         "VERI",
-        "HUT"
+        "HUT",
+        "INDP"
       ],
       "sell": [],
       "sit": true,
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -11870,6 +12389,12 @@
           "side": "long",
           "predict": "UP",
           "take": "BUY"
+        },
+        {
+          "ticker": "INDP",
+          "side": "long",
+          "predict": "UP",
+          "take": "BUY"
         }
       ]
     },
@@ -11883,6 +12408,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -11913,6 +12440,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -11967,6 +12496,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -12017,6 +12548,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -12043,6 +12576,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -12069,6 +12604,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -12095,6 +12632,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -12125,6 +12664,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -12179,6 +12720,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -12231,6 +12774,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -12271,6 +12816,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -12311,6 +12858,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -12352,6 +12901,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -12403,6 +12954,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -12475,6 +13028,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -12534,6 +13089,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -12617,6 +13174,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -12668,6 +13227,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -12740,6 +13301,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -12790,6 +13353,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -12816,6 +13381,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -12844,6 +13411,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -12888,6 +13457,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -12952,6 +13523,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -12994,6 +13567,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -13044,6 +13619,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -13070,6 +13647,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -13097,6 +13676,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -13134,6 +13715,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -13192,6 +13775,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -13227,6 +13812,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -13237,6 +13824,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -13255,6 +13844,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -13320,6 +13911,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -13406,6 +13999,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -13470,6 +14065,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -13510,6 +14107,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -13555,6 +14154,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -13627,6 +14228,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -13678,6 +14281,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -13711,6 +14316,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -13752,6 +14359,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -13837,6 +14446,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -13898,6 +14509,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -13956,6 +14569,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -13996,6 +14611,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -14031,6 +14648,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -14044,6 +14663,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -14074,6 +14695,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -14128,6 +14751,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -14180,6 +14805,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -14221,6 +14848,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -14268,6 +14897,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -14319,6 +14950,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -14394,6 +15027,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -14466,6 +15101,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -14520,6 +15157,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "mixed",
       "predict": [
         {
@@ -14571,6 +15210,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -14604,6 +15245,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -14638,6 +15281,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -14678,6 +15323,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -14721,6 +15368,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -14782,6 +15431,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": [
         {
@@ -14835,6 +15486,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     },
@@ -14845,6 +15498,8 @@
       "status": "sit",
       "family": "factor_mine",
       "date": "2026-09-14",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "side": "long",
       "predict": []
     }

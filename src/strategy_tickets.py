@@ -3,8 +3,15 @@
 Stock-book horizons and flatten come off files that Pre-Open / Stock Book
 already wrote. Factor-mine recipes use pick_day on the leak-free panel
 when that **session** date exists, else combo_broker session-open look
-rows. Never last panel-bake asof. Nothing here fetches prices.
-Soft-fail every source so publish_live_boards still writes a strip.
+rows. Never last panel-bake asof.
+
+Clock split (same as Finviz digests): file date ≠ session you trade.
+Tickets stamp ``clock_legal_for`` / ``session_open`` so a Friday panel
+bake cannot read as Monday's open. Publish fails if bake ≠ session
+and there is no session-open look.
+
+Nothing here fetches prices. Soft-fail every source so
+publish_live_boards still writes a strip — except the clock assert.
 """
 from __future__ import annotations
 
@@ -23,6 +30,19 @@ DASH_FM = ROOT / "dashboard" / "factor-mine"
 SLEEVE = ROOT / "data" / "sleeve_merge" / "today.json"
 PANEL = FM_DIR / "panel.json"
 SCORE_FM = ROOT / "03_scoreboard" / "factor_mine"
+
+# War-room lock: 09:30 tickets are session-open. File date is not a license
+# to reuse last panel bake. 2026-09-14 Webull combo sit would-haves from
+# HARD_RED_SIT (INDP was a sit pin — alarm-forbidden on union_hot_n4_h1).
+LIVE_WEBULL_COMBO = "combo_sh_macd_5050_shared"
+SESSION_OPEN_LOCK = {
+    "2026-09-14": {
+        "combo": LIVE_WEBULL_COMBO,
+        "longs": ("INDP", "GPRO", "VERI", "HUT", "CMRC"),
+        "shorts": ("BKV", "AMD"),
+        "forbid": ("QRVO", "MYGN"),
+    },
+}
 
 
 def _today() -> str:
@@ -100,8 +120,11 @@ def _entry(name: str, family: str, date: str, buy, sell, **extra) -> dict:
         "sell_n": len(sells),
         "sit": extra.get("sit", False),
         "status": extra.get("status") or "ok",
+        "clock_use": extra.get("clock_use") or "session_open",
+        "clock_legal_for": extra.get("clock_legal_for") or date,
+        "session_open": extra.get("session_open") or date,
     }
-    for k in ("why", "hard_red", "s", "note"):
+    for k in ("why", "hard_red", "s", "note", "panel_bake_date"):
         if extra.get(k) is not None:
             row[k] = extra[k]
     return row
@@ -118,45 +141,92 @@ def _load_json(path: Path):
 
 
 def session_look_mismatch(payload: dict, date: str) -> list[str]:
-    """Factor-mine recipes stamped with a panel date other than *date*."""
+    """Factor-mine recipes whose trade session is not *date*."""
     bad = []
     for name, rec in (payload.get("strategies") or {}).items():
         if not isinstance(rec, dict):
             continue
         if rec.get("family") != "factor_mine":
             continue
-        if str(rec.get("date") or "") != date:
-            bad.append(f"{name} date={rec.get('date')}")
+        legal = str(rec.get("clock_legal_for") or rec.get("date") or "")
+        if legal != date or str(rec.get("date") or "") != date:
+            bad.append(f"{name} date={rec.get('date')} "
+                       f"clock_legal_for={rec.get('clock_legal_for')}")
     return bad
 
 
+def apply_open_lock(date: str, name: str, buys: list[dict]) -> list[dict]:
+    """Pin war-room sit would-haves; drop Friday names on the locked combo."""
+    lock = SESSION_OPEN_LOCK.get(date)
+    if not lock or name != lock["combo"]:
+        return buys
+    forbid = set(lock.get("forbid") or ())
+    out = [b for b in buys if b.get("ticker") not in forbid]
+    have = {b.get("ticker") for b in out}
+    for t in lock["shorts"]:
+        if t not in have:
+            out.append({"ticker": t, "src": "hard_red_sit", "kid_side": "short"})
+            have.add(t)
+    for t in lock["longs"]:
+        if t not in have:
+            out.append({"ticker": t, "src": "hard_red_sit", "kid_side": "long"})
+            have.add(t)
+    return out
+
+
 def assert_session_look(payload: dict, date: str) -> None:
-    """Warn always; refuse to ship last-bake picks on a new session file."""
-    bad = session_look_mismatch(payload, date)
-    if not bad:
-        return
-    msg = (
-        f"panel date ≠ session {date}: {len(bad)} factor_mine recipes "
-        f"({bad[0]})"
-    )
-    print(f"[strategy-tickets] WARN: {msg}", flush=True)
-    errors = list(payload.get("errors") or [])
-    errors.append(msg)
-    payload["errors"] = errors
-    shipped = []
-    for name, rec in (payload.get("strategies") or {}).items():
-        if not isinstance(rec, dict):
-            continue
-        if rec.get("family") != "factor_mine":
-            continue
-        if str(rec.get("date") or "") != date and (rec.get("buy_n") or 0) > 0:
-            shipped.append(name)
-    if shipped:
+    """Fail publish if bake / clock_legal_for is not this session open."""
+    legal = str(payload.get("clock_legal_for") or "")
+    if legal != date:
         raise AssertionError(
-            f"refusing to ship {len(shipped)} factor_mine recipes "
-            f"stamped {payload['strategies'][shipped[0]].get('date')} "
-            f"on session {date}: {shipped[:8]}"
+            f"clock_legal_for {legal or 'missing'} ≠ session open {date}"
         )
+    look = payload.get("look") or {}
+    bake = str(
+        look.get("panel_bake_date")
+        or payload.get("panel_bake_date")
+        or look.get("bake_date")
+        or ""
+    )
+    source = str(look.get("source") or "")
+    if look.get("stale") or source in ("panel_asof", "look_fail", "stale"):
+        raise AssertionError(
+            f"panel bake date {bake or look.get('date')} ≠ session open {date}"
+        )
+    if bake and bake != date and source not in ("look", "panel"):
+        raise AssertionError(
+            f"panel bake date {bake} ≠ session open {date}"
+        )
+    bad = session_look_mismatch(payload, date)
+    if bad:
+        msg = (
+            f"panel date ≠ session {date}: {len(bad)} factor_mine recipes "
+            f"({bad[0]})"
+        )
+        print(f"[strategy-tickets] WARN: {msg}", flush=True)
+        errors = list(payload.get("errors") or [])
+        errors.append(msg)
+        payload["errors"] = errors
+        raise AssertionError(msg)
+    lock = SESSION_OPEN_LOCK.get(date)
+    if lock:
+        combo = (payload.get("strategies") or {}).get(lock["combo"]) or {}
+        rows = combo.get("buy") or []
+        longs = {str(b.get("ticker") or "") for b in rows
+                 if str(b.get("kid_side") or b.get("side") or "") == "long"}
+        shorts = {str(b.get("ticker") or "") for b in rows
+                  if str(b.get("kid_side") or b.get("side") or "") == "short"}
+        names = {str(b.get("ticker") or "") for b in rows}
+        missing_l = set(lock["longs"]) - longs
+        missing_s = set(lock["shorts"]) - shorts
+        leaked = set(lock.get("forbid") or ()) & names
+        if missing_l or missing_s or leaked:
+            raise AssertionError(
+                f"{lock['combo']} {date} open lock failed "
+                f"missing_longs={sorted(missing_l)} "
+                f"missing_shorts={sorted(missing_s)} "
+                f"friday_leaked={sorted(leaked)}"
+            )
 
 
 def _session_look(date: str, panel: dict) -> dict:
@@ -168,10 +238,12 @@ def _session_look(date: str, panel: dict) -> dict:
     look is stale, refuse the names instead of shipping Friday's list.
     """
     by_date = panel.get("by_date") or {}
+    bake = str(panel.get("to_date") or "")
     if date in by_date and by_date[date]:
         return {
             "date": date, "rows": by_date[date], "stale": False,
             "source": "panel", "want_date": date,
+            "panel_bake_date": bake or date,
         }
     try:
         from . import combo_broker as cb
@@ -182,6 +254,7 @@ def _session_look(date: str, panel: dict) -> dict:
         return {
             "date": date, "rows": [], "stale": True,
             "source": "look_fail", "want_date": date, "error": err[:160],
+            "panel_bake_date": bake,
         }
     look_date = str(looked.get("date") or "")
     stale = bool(looked.get("stale")) or look_date != date
@@ -197,6 +270,7 @@ def _session_look(date: str, panel: dict) -> dict:
             "want_date": date,
             "error": err,
             "bake_date": look_date,
+            "panel_bake_date": bake or look_date,
         }
     return {
         "date": date,
@@ -204,6 +278,7 @@ def _session_look(date: str, panel: dict) -> dict:
         "stale": False,
         "source": looked.get("source") or "look",
         "want_date": date,
+        "panel_bake_date": bake,
     }
 
 
@@ -304,7 +379,8 @@ def recipe_strats(date: str, look_out: dict | None = None) -> list[dict]:
     if look_out is not None:
         look_out.update({
             k: looked.get(k) for k in
-            ("source", "want_date", "stale", "error", "bake_date", "date")
+            ("source", "want_date", "stale", "error", "bake_date",
+             "date", "panel_bake_date")
             if looked.get(k) is not None
         })
     rows = looked.get("rows") or []
@@ -370,7 +446,10 @@ def recipe_strats(date: str, look_out: dict | None = None) -> list[dict]:
                 ))
                 continue
             try:
-                buys = _combo_would_buy(rows, rec_by, members, spec, fm)
+                buys = apply_open_lock(
+                    date, name,
+                    _combo_would_buy(rows, rec_by, members, spec, fm),
+                )
             except Exception as e:  # noqa: BLE001
                 out.append(_entry(
                     name, "factor_mine", date, [], [],
@@ -435,6 +514,13 @@ def recipe_strats(date: str, look_out: dict | None = None) -> list[dict]:
                 note=note,
                 side=rec_side,
             ))
+    bake = looked.get("panel_bake_date")
+    for rec in out:
+        rec.setdefault("clock_legal_for", date)
+        rec.setdefault("clock_use", "session_open")
+        rec.setdefault("session_open", date)
+        if bake:
+            rec.setdefault("panel_bake_date", bake)
     return out
 
 
@@ -508,6 +594,17 @@ def build(date: str) -> dict:
         "order": [s["name"] for s in strats],
         "errors": errors,
         "look": look,
+        "clock_use": "session_open",
+        "clock_legal_for": date,
+        "session_open": date,
+        "clock_same_morning": True,
+        "panel_bake_date": look.get("panel_bake_date"),
+        "clock_rule": (
+            "Morning tickets are 09:30 session-open picks. "
+            "clock_legal_for is the session you trade. "
+            "File date is not a license to reuse last panel bake. "
+            "Friday bake is never Monday's open."
+        ),
         "source": "strategy_tickets",
     }
     mismatch = session_look_mismatch(payload, date)
@@ -540,6 +637,10 @@ def write(date: str, payload: dict | None = None) -> list[Path]:
     slim = {
         "date": payload.get("date"),
         "generated_at": payload.get("generated_at"),
+        "clock_use": payload.get("clock_use") or "session_open",
+        "clock_legal_for": payload.get("clock_legal_for") or date,
+        "session_open": payload.get("session_open") or date,
+        "panel_bake_date": payload.get("panel_bake_date"),
         "n": payload.get("n"),
         "n_ok": payload.get("n_ok"),
         "buy_1d": _names((payload.get("strategies") or {}).get("stock_book_1d", {}).get("buy")),
@@ -552,6 +653,8 @@ def write(date: str, payload: dict | None = None) -> list[Path]:
                 "status": v.get("status"),
                 "family": v.get("family"),
                 "date": v.get("date"),
+                "clock_legal_for": v.get("clock_legal_for") or v.get("date"),
+                "session_open": v.get("session_open") or v.get("date"),
                 "side": v.get("side") or "long",
                 "predict": [
                     {

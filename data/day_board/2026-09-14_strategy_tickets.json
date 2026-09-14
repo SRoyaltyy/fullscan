@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T13:15:32.204204-04:00",
+  "generated_at": "2026-09-14T13:22:29.564473-04:00",
   "n": 322,
   "n_ok": 322,
   "families": [
@@ -89,6 +89,9 @@
       "sell_n": 10,
       "sit": false,
       "status": "ok",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "note": "weighted ranker horizon"
     },
     "1d_top": {
@@ -170,6 +173,9 @@
       "sell_n": 10,
       "sit": false,
       "status": "ok",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "note": "paper sleeve = same ranker list"
     },
     "stock_book_3d": {
@@ -305,6 +311,9 @@
       "sell_n": 15,
       "sit": false,
       "status": "ok",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "note": "weighted ranker horizon"
     },
     "3d_top": {
@@ -440,6 +449,9 @@
       "sell_n": 15,
       "sit": false,
       "status": "ok",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "note": "paper sleeve = same ranker list"
     },
     "stock_book_1w": {
@@ -575,6 +587,9 @@
       "sell_n": 15,
       "sit": false,
       "status": "ok",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "note": "weighted ranker horizon"
     },
     "1w_top": {
@@ -710,6 +725,9 @@
       "sell_n": 15,
       "sit": false,
       "status": "ok",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "note": "paper sleeve = same ranker list"
     },
     "stock_book_2w": {
@@ -845,6 +863,9 @@
       "sell_n": 15,
       "sit": false,
       "status": "ok",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "note": "weighted ranker horizon"
     },
     "2w_top": {
@@ -980,6 +1001,9 @@
       "sell_n": 15,
       "sit": false,
       "status": "ok",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "note": "paper sleeve = same ranker list"
     },
     "stock_book_1m": {
@@ -1115,6 +1139,9 @@
       "sell_n": 15,
       "sit": false,
       "status": "ok",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "note": "weighted ranker horizon"
     },
     "1m_top": {
@@ -1250,6 +1277,9 @@
       "sell_n": 15,
       "sit": false,
       "status": "ok",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "note": "paper sleeve = same ranker list"
     },
     "flatten_robust": {
@@ -1284,6 +1314,9 @@
       "sell_n": 0,
       "sit": true,
       "status": "ok",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.00; hard-red: no new buys; holds and due 1d exits stay",
       "hard_red": true,
       "s": -11.002,
@@ -1349,10 +1382,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h3": {
       "name": "union_h3",
@@ -1414,10 +1451,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h5": {
       "name": "union_h5",
@@ -1479,10 +1520,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_h1": {
       "name": "flatten_h1",
@@ -1520,10 +1565,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_h3": {
       "name": "flatten_h3",
@@ -1561,10 +1610,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_h5": {
       "name": "flatten_h5",
@@ -1602,10 +1655,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "probable_h1": {
       "name": "probable_h1",
@@ -1667,10 +1724,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "probable_h3": {
       "name": "probable_h3",
@@ -1732,10 +1793,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "probable_h5": {
       "name": "probable_h5",
@@ -1797,10 +1862,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "yday_gainer_h1": {
       "name": "yday_gainer_h1",
@@ -1862,10 +1931,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "yday_gainer_h3": {
       "name": "yday_gainer_h3",
@@ -1927,10 +2000,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "yday_gainer_h5": {
       "name": "yday_gainer_h5",
@@ -1992,10 +2069,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "ohlc_hot_h1": {
       "name": "ohlc_hot_h1",
@@ -2057,10 +2138,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "ohlc_hot_h3": {
       "name": "ohlc_hot_h3",
@@ -2122,10 +2207,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "ohlc_hot_h5": {
       "name": "ohlc_hot_h5",
@@ -2187,10 +2276,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_vol_g_h1": {
       "name": "union_vol_g_h1",
@@ -2252,10 +2345,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_vol_g_h3": {
       "name": "union_vol_g_h3",
@@ -2317,10 +2414,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_vol_missing_h1": {
       "name": "union_vol_missing_h1",
@@ -2333,10 +2434,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_vol_missing_h3": {
       "name": "union_vol_missing_h3",
@@ -2349,10 +2454,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_ab_g_h1": {
       "name": "union_ab_g_h1",
@@ -2414,10 +2523,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_ab_g_h3": {
       "name": "union_ab_g_h3",
@@ -2479,10 +2592,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_join_g_h1": {
       "name": "union_join_g_h1",
@@ -2544,10 +2661,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_join_g_h3": {
       "name": "union_join_g_h3",
@@ -2609,10 +2730,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_join_present_h1": {
       "name": "union_join_present_h1",
@@ -2674,10 +2799,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_join_present_h3": {
       "name": "union_join_present_h3",
@@ -2739,10 +2868,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_g_h1": {
       "name": "union_news_g_h1",
@@ -2774,10 +2907,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_g_h3": {
       "name": "union_news_g_h3",
@@ -2809,10 +2946,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_present_h1": {
       "name": "union_news_present_h1",
@@ -2874,10 +3015,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_present_h3": {
       "name": "union_news_present_h3",
@@ -2939,10 +3084,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_missing_h1": {
       "name": "union_news_missing_h1",
@@ -2955,10 +3104,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_missing_h3": {
       "name": "union_news_missing_h3",
@@ -2971,10 +3124,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_catal_present_h1": {
       "name": "union_catal_present_h1",
@@ -2987,10 +3144,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_catal_present_h3": {
       "name": "union_catal_present_h3",
@@ -3003,10 +3164,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_blue_h1": {
       "name": "union_blue_h1",
@@ -3062,10 +3227,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_blue_h3": {
       "name": "union_blue_h3",
@@ -3121,10 +3290,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_white_h1": {
       "name": "union_white_h1",
@@ -3137,10 +3310,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_white_h3": {
       "name": "union_white_h3",
@@ -3153,10 +3330,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_last_green_h1": {
       "name": "union_last_green_h1",
@@ -3218,10 +3399,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_last_green_h3": {
       "name": "union_last_green_h3",
@@ -3283,10 +3468,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_last_red_h1": {
       "name": "union_last_red_h1",
@@ -3348,10 +3537,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_last_red_h3": {
       "name": "union_last_red_h3",
@@ -3413,10 +3606,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_candle_h1": {
       "name": "union_candle_h1",
@@ -3478,10 +3675,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_candle_h3": {
       "name": "union_candle_h3",
@@ -3543,10 +3744,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_coil_off_h1": {
       "name": "union_coil_off_h1",
@@ -3608,10 +3813,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_coil_off_h3": {
       "name": "union_coil_off_h3",
@@ -3673,10 +3882,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_earn_react_h1": {
       "name": "union_earn_react_h1",
@@ -3689,10 +3902,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_earn_react_h3": {
       "name": "union_earn_react_h3",
@@ -3705,10 +3922,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_e_fresh_h1": {
       "name": "union_e_fresh_h1",
@@ -3721,10 +3942,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_e_fresh_h3": {
       "name": "union_e_fresh_h3",
@@ -3737,10 +3962,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_r_up_h1": {
       "name": "union_r_up_h1",
@@ -3753,10 +3982,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_r_up_h3": {
       "name": "union_r_up_h3",
@@ -3769,10 +4002,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_break10_h1": {
       "name": "union_break10_h1",
@@ -3834,10 +4071,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_break10_h3": {
       "name": "union_break10_h3",
@@ -3899,10 +4140,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_rsi_os_h1": {
       "name": "union_rsi_os_h1",
@@ -3915,10 +4160,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_rsi_os_h3": {
       "name": "union_rsi_os_h3",
@@ -3931,10 +4180,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_macd_up_h1": {
       "name": "union_macd_up_h1",
@@ -3996,10 +4249,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_macd_up_h3": {
       "name": "union_macd_up_h3",
@@ -4061,10 +4318,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_macd_xup_h1": {
       "name": "union_macd_xup_h1",
@@ -4090,10 +4351,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_macd_xup_h3": {
       "name": "union_macd_xup_h3",
@@ -4119,10 +4384,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_flow_in_h1": {
       "name": "union_flow_in_h1",
@@ -4135,10 +4404,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_flow_in_h3": {
       "name": "union_flow_in_h3",
@@ -4151,10 +4424,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_vol_g_h5": {
       "name": "union_vol_g_h5",
@@ -4216,10 +4493,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_coil_off_h5": {
       "name": "union_coil_off_h5",
@@ -4281,10 +4562,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_last_green_h5": {
       "name": "union_last_green_h5",
@@ -4346,10 +4631,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_g_h5": {
       "name": "union_news_g_h5",
@@ -4381,10 +4670,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_white_h5": {
       "name": "union_white_h5",
@@ -4397,10 +4690,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_rsi_os_h5": {
       "name": "union_rsi_os_h5",
@@ -4413,10 +4710,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_flow_in_h5": {
       "name": "union_flow_in_h5",
@@ -4429,10 +4730,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_pack_h1": {
       "name": "union_news_pack_h1",
@@ -4458,10 +4763,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_head_h1": {
       "name": "union_news_head_h1",
@@ -4481,10 +4790,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_or_h1": {
       "name": "union_news_or_h1",
@@ -4516,10 +4829,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_both_h1": {
       "name": "union_news_both_h1",
@@ -4532,10 +4849,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_g_cond_h1": {
       "name": "union_news_g_cond_h1",
@@ -4567,10 +4888,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_g_cam71_h1": {
       "name": "union_news_g_cam71_h1",
@@ -4583,10 +4908,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_g_cam61_h1": {
       "name": "union_news_g_cam61_h1",
@@ -4599,10 +4928,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_or_net2_h1": {
       "name": "union_news_or_net2_h1",
@@ -4628,10 +4961,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_or_net3_h1": {
       "name": "union_news_or_net3_h1",
@@ -4657,10 +4994,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_or_net4_h1": {
       "name": "union_news_or_net4_h1",
@@ -4680,10 +5021,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_or_net5_h1": {
       "name": "union_news_or_net5_h1",
@@ -4696,10 +5041,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_pack_net3_h1": {
       "name": "union_news_pack_net3_h1",
@@ -4725,10 +5074,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_pack_net2_h1": {
       "name": "union_news_pack_net2_h1",
@@ -4754,10 +5107,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_pack_h3": {
       "name": "union_news_pack_h3",
@@ -4783,10 +5140,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_head_h3": {
       "name": "union_news_head_h3",
@@ -4806,10 +5167,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_or_h3": {
       "name": "union_news_or_h3",
@@ -4841,10 +5206,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_both_h3": {
       "name": "union_news_both_h3",
@@ -4857,10 +5226,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_g_cond_h3": {
       "name": "union_news_g_cond_h3",
@@ -4892,10 +5265,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_g_cam71_h3": {
       "name": "union_news_g_cam71_h3",
@@ -4908,10 +5285,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_g_cam61_h3": {
       "name": "union_news_g_cam61_h3",
@@ -4924,10 +5305,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_or_net2_h3": {
       "name": "union_news_or_net2_h3",
@@ -4953,10 +5338,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_or_net3_h3": {
       "name": "union_news_or_net3_h3",
@@ -4982,10 +5371,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_or_net4_h3": {
       "name": "union_news_or_net4_h3",
@@ -5005,10 +5398,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_or_net5_h3": {
       "name": "union_news_or_net5_h3",
@@ -5021,10 +5418,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_pack_net3_h3": {
       "name": "union_news_pack_net3_h3",
@@ -5050,10 +5451,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_pack_net2_h3": {
       "name": "union_news_pack_net2_h3",
@@ -5079,10 +5484,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_or_net4_rw_h1": {
       "name": "union_news_or_net4_rw_h1",
@@ -5102,10 +5511,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_or_net4_conv_h1": {
       "name": "union_news_or_net4_conv_h1",
@@ -5125,10 +5538,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_g_cam91_n1_h1": {
       "name": "union_news_g_cam91_n1_h1",
@@ -5141,10 +5558,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_g_cam71_n2_h1": {
       "name": "union_news_g_cam71_n2_h1",
@@ -5157,10 +5578,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_g_conv_h1": {
       "name": "union_news_g_conv_h1",
@@ -5192,10 +5617,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_g_conv_h3": {
       "name": "union_news_g_conv_h3",
@@ -5227,10 +5656,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_g_cam71_conv_h1": {
       "name": "union_news_g_cam71_conv_h1",
@@ -5243,10 +5676,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "short_news_pack_h3": {
       "name": "short_news_pack_h3",
@@ -5266,10 +5703,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "short_news_head_h3": {
       "name": "short_news_head_h3",
@@ -5289,10 +5730,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "short_news_or_h3": {
       "name": "short_news_or_h3",
@@ -5318,10 +5763,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_vol_ab_h1": {
       "name": "union_vol_ab_h1",
@@ -5383,10 +5832,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_vol_ab_h3": {
       "name": "union_vol_ab_h3",
@@ -5448,10 +5901,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_blue_vol_h1": {
       "name": "union_blue_vol_h1",
@@ -5477,10 +5934,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_blue_vol_h3": {
       "name": "union_blue_vol_h3",
@@ -5506,10 +5967,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_vol_h1": {
       "name": "union_news_vol_h1",
@@ -5535,10 +6000,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_news_vol_h3": {
       "name": "union_news_vol_h3",
@@ -5564,10 +6033,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_e_green_h1": {
       "name": "union_e_green_h1",
@@ -5580,10 +6053,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_e_green_h3": {
       "name": "union_e_green_h3",
@@ -5596,10 +6073,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "probable_probable_ok_h1": {
       "name": "probable_probable_ok_h1",
@@ -5637,10 +6118,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "probable_probable_ok_h3": {
       "name": "probable_probable_ok_h3",
@@ -5678,10 +6163,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_vol_green_h1": {
       "name": "union_vol_green_h1",
@@ -5743,10 +6232,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_vol_green_h3": {
       "name": "union_vol_green_h3",
@@ -5808,10 +6301,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_coil_green_h1": {
       "name": "union_coil_green_h1",
@@ -5873,10 +6370,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_coil_green_h3": {
       "name": "union_coil_green_h3",
@@ -5938,10 +6439,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_blue_coil_h1": {
       "name": "union_blue_coil_h1",
@@ -5991,10 +6496,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_blue_coil_h3": {
       "name": "union_blue_coil_h3",
@@ -6044,10 +6553,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_join_vol_green_h1": {
       "name": "union_join_vol_green_h1",
@@ -6103,10 +6616,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_join_vol_green_h3": {
       "name": "union_join_vol_green_h3",
@@ -6162,10 +6679,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_white_coil_h1": {
       "name": "union_white_coil_h1",
@@ -6178,10 +6699,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_white_coil_h3": {
       "name": "union_white_coil_h3",
@@ -6194,10 +6719,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_rsi_os_macd_h1": {
       "name": "union_rsi_os_macd_h1",
@@ -6210,10 +6739,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_rsi_os_macd_h3": {
       "name": "union_rsi_os_macd_h3",
@@ -6226,10 +6759,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_flow_in_white_h1": {
       "name": "union_flow_in_white_h1",
@@ -6242,10 +6779,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_flow_in_white_h3": {
       "name": "union_flow_in_white_h3",
@@ -6258,10 +6799,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_vol_g_h3": {
       "name": "flatten_vol_g_h3",
@@ -6281,10 +6826,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_live_h1": {
       "name": "flatten_live_h1",
@@ -6297,10 +6846,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_live_h3": {
       "name": "flatten_live_h3",
@@ -6313,10 +6866,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_live_h5": {
       "name": "flatten_live_h5",
@@ -6329,10 +6886,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "ohlc_hot_coil_h1": {
       "name": "ohlc_hot_coil_h1",
@@ -6394,10 +6955,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_hot_score_h1": {
       "name": "union_hot_score_h1",
@@ -6459,10 +7024,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_hot_score_h3": {
       "name": "union_hot_score_h3",
@@ -6524,10 +7093,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_candle_score_h1": {
       "name": "union_candle_score_h1",
@@ -6589,10 +7162,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_candle_score_h3": {
       "name": "union_candle_score_h3",
@@ -6654,10 +7231,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_ret_5_h1": {
       "name": "union_ret_5_h1",
@@ -6719,10 +7300,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_ret_5_h3": {
       "name": "union_ret_5_h3",
@@ -6784,10 +7369,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_cond_h1": {
       "name": "union_cond_h1",
@@ -6849,10 +7438,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_cond_h3": {
       "name": "union_cond_h3",
@@ -6914,10 +7507,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_w_hot_cond_h1": {
       "name": "union_w_hot_cond_h1",
@@ -6979,10 +7576,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_w_hot_cond_h3": {
       "name": "union_w_hot_cond_h3",
@@ -7044,10 +7645,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_w_hot_candle_h1": {
       "name": "union_w_hot_candle_h1",
@@ -7109,10 +7714,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_w_hot_candle_h3": {
       "name": "union_w_hot_candle_h3",
@@ -7174,10 +7783,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_rsi_h1": {
       "name": "union_rsi_h1",
@@ -7239,10 +7852,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_rsi_h3": {
       "name": "union_rsi_h3",
@@ -7304,10 +7921,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_macd_hist_h1": {
       "name": "union_macd_hist_h1",
@@ -7369,10 +7990,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_macd_hist_h3": {
       "name": "union_macd_hist_h3",
@@ -7434,10 +8059,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_hot_n4_h1": {
       "name": "union_hot_n4_h1",
@@ -7475,10 +8104,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_hot_n12_h1": {
       "name": "union_hot_n12_h1",
@@ -7564,10 +8197,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_cond_n4_h3": {
       "name": "union_cond_n4_h3",
@@ -7605,10 +8242,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h3_exit_alarm": {
       "name": "union_h3_exit_alarm",
@@ -7670,10 +8311,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h5_exit_alarm": {
       "name": "union_h5_exit_alarm",
@@ -7735,10 +8380,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h3_exit_red": {
       "name": "union_h3_exit_red",
@@ -7800,10 +8449,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h3_exit_news_r": {
       "name": "union_h3_exit_news_r",
@@ -7865,10 +8518,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "coil_h3_exit_alarm": {
       "name": "coil_h3_exit_alarm",
@@ -7930,10 +8587,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "short_alarm_h1": {
       "name": "short_alarm_h1",
@@ -7995,10 +8656,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "short_alarm_h3": {
       "name": "short_alarm_h3",
@@ -8060,10 +8725,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "short_news_r_h1": {
       "name": "short_news_r_h1",
@@ -8089,10 +8758,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "short_news_r_h3": {
       "name": "short_news_r_h3",
@@ -8118,10 +8791,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "short_r_down_h1": {
       "name": "short_r_down_h1",
@@ -8134,10 +8811,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "short_r_down_h3": {
       "name": "short_r_down_h3",
@@ -8150,10 +8831,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "short_extended_h1": {
       "name": "short_extended_h1",
@@ -8215,10 +8900,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "short_extended_h3": {
       "name": "short_extended_h3",
@@ -8280,10 +8969,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "short_last_red_h1": {
       "name": "short_last_red_h1",
@@ -8345,10 +9038,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "short_last_red_h3": {
       "name": "short_last_red_h3",
@@ -8410,10 +9107,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "short_rsi_ob_h1": {
       "name": "short_rsi_ob_h1",
@@ -8475,10 +9176,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "short_rsi_ob_h3": {
       "name": "short_rsi_ob_h3",
@@ -8540,10 +9245,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "short_macd_dn_h1": {
       "name": "short_macd_dn_h1",
@@ -8605,10 +9314,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "short_macd_dn_h3": {
       "name": "short_macd_dn_h3",
@@ -8670,10 +9383,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "short_news_r_macd_h3": {
       "name": "short_news_r_macd_h3",
@@ -8699,10 +9416,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_h5_rankw": {
       "name": "flatten_h5_rankw",
@@ -8740,10 +9461,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_h5_topheavy": {
       "name": "flatten_h5_topheavy",
@@ -8781,10 +9506,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_h5_half": {
       "name": "flatten_h5_half",
@@ -8822,10 +9551,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_h5_time": {
       "name": "flatten_h5_time",
@@ -8863,10 +9596,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_h5_cut": {
       "name": "flatten_h5_cut",
@@ -8904,10 +9641,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_h5_trail": {
       "name": "flatten_h5_trail",
@@ -8945,10 +9686,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_h5_sboost": {
       "name": "flatten_h5_sboost",
@@ -8986,10 +9731,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_h5_sizeup": {
       "name": "flatten_h5_sizeup",
@@ -9027,10 +9776,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_h3_rankw": {
       "name": "flatten_h3_rankw",
@@ -9068,10 +9821,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_h3_topheavy": {
       "name": "flatten_h3_topheavy",
@@ -9109,10 +9866,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_h3_half": {
       "name": "flatten_h3_half",
@@ -9150,10 +9911,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_h3_time": {
       "name": "flatten_h3_time",
@@ -9191,10 +9956,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_h3_cut": {
       "name": "flatten_h3_cut",
@@ -9232,10 +10001,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_h3_trail": {
       "name": "flatten_h3_trail",
@@ -9273,10 +10046,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_h3_sboost": {
       "name": "flatten_h3_sboost",
@@ -9314,10 +10091,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_h3_sizeup": {
       "name": "flatten_h3_sizeup",
@@ -9355,10 +10136,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_live_h1_rankw": {
       "name": "flatten_live_h1_rankw",
@@ -9371,10 +10156,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_live_h1_topheavy": {
       "name": "flatten_live_h1_topheavy",
@@ -9387,10 +10176,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_live_h1_half": {
       "name": "flatten_live_h1_half",
@@ -9403,10 +10196,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_live_h1_time": {
       "name": "flatten_live_h1_time",
@@ -9419,10 +10216,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_live_h1_cut": {
       "name": "flatten_live_h1_cut",
@@ -9435,10 +10236,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_live_h1_trail": {
       "name": "flatten_live_h1_trail",
@@ -9451,10 +10256,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_live_h1_sboost": {
       "name": "flatten_live_h1_sboost",
@@ -9467,10 +10276,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_live_h1_sizeup": {
       "name": "flatten_live_h1_sizeup",
@@ -9483,10 +10296,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h5_rankw": {
       "name": "union_h5_rankw",
@@ -9548,10 +10365,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h5_topheavy": {
       "name": "union_h5_topheavy",
@@ -9613,10 +10434,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h5_half": {
       "name": "union_h5_half",
@@ -9678,10 +10503,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h5_time": {
       "name": "union_h5_time",
@@ -9743,10 +10572,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h5_cut": {
       "name": "union_h5_cut",
@@ -9808,10 +10641,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h5_trail": {
       "name": "union_h5_trail",
@@ -9873,10 +10710,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h5_sboost": {
       "name": "union_h5_sboost",
@@ -9938,10 +10779,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h5_sizeup": {
       "name": "union_h5_sizeup",
@@ -10003,10 +10848,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h3_rankw": {
       "name": "union_h3_rankw",
@@ -10068,10 +10917,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h3_topheavy": {
       "name": "union_h3_topheavy",
@@ -10133,10 +10986,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h3_half": {
       "name": "union_h3_half",
@@ -10198,10 +11055,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h3_time": {
       "name": "union_h3_time",
@@ -10263,10 +11124,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h3_cut": {
       "name": "union_h3_cut",
@@ -10328,10 +11193,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h3_trail": {
       "name": "union_h3_trail",
@@ -10393,10 +11262,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h3_sboost": {
       "name": "union_h3_sboost",
@@ -10458,10 +11331,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h3_sizeup": {
       "name": "union_h3_sizeup",
@@ -10523,10 +11400,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h1_rankw": {
       "name": "union_h1_rankw",
@@ -10588,10 +11469,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h1_topheavy": {
       "name": "union_h1_topheavy",
@@ -10653,10 +11538,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h1_half": {
       "name": "union_h1_half",
@@ -10718,10 +11607,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h1_time": {
       "name": "union_h1_time",
@@ -10783,10 +11676,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h1_cut": {
       "name": "union_h1_cut",
@@ -10848,10 +11745,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h1_trail": {
       "name": "union_h1_trail",
@@ -10913,10 +11814,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h1_sboost": {
       "name": "union_h1_sboost",
@@ -10978,10 +11883,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_h1_sizeup": {
       "name": "union_h1_sizeup",
@@ -11043,10 +11952,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_white_yday_h1": {
       "name": "union_white_yday_h1",
@@ -11059,10 +11972,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_white_yday_h3": {
       "name": "union_white_yday_h3",
@@ -11075,10 +11992,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_white_yday_h5": {
       "name": "flatten_white_yday_h5",
@@ -11091,10 +12012,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_white_any_h1": {
       "name": "union_white_any_h1",
@@ -11107,10 +12032,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_white_any_h2": {
       "name": "union_white_any_h2",
@@ -11123,10 +12052,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_white_any_h3": {
       "name": "union_white_any_h3",
@@ -11139,10 +12072,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_white_any_h5": {
       "name": "union_white_any_h5",
@@ -11155,10 +12092,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_white_both_n4_h1": {
       "name": "union_white_both_n4_h1",
@@ -11171,10 +12112,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_white_both_n4_h2": {
       "name": "union_white_both_n4_h2",
@@ -11187,10 +12132,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_white_both_n4_h3": {
       "name": "union_white_both_n4_h3",
@@ -11203,10 +12152,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_white_both_n4_h5": {
       "name": "union_white_both_n4_h5",
@@ -11219,10 +12172,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "union_white_both_n4_h5_s12": {
       "name": "union_white_both_n4_h5_s12",
@@ -11235,10 +12192,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "flatten_h5_s8": {
       "name": "flatten_h5_s8",
@@ -11276,10 +12237,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_seh_333_shared": {
       "name": "combo_seh_333_shared",
@@ -11335,10 +12300,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_seh_333_split": {
       "name": "combo_seh_333_split",
@@ -11394,10 +12363,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_seh_502525_shared": {
       "name": "combo_seh_502525_shared",
@@ -11453,10 +12426,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_seh_502525_split": {
       "name": "combo_seh_502525_split",
@@ -11512,10 +12489,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_seh_404020_shared": {
       "name": "combo_seh_404020_shared",
@@ -11571,10 +12552,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_seh_403525_shared": {
       "name": "combo_seh_403525_shared",
@@ -11630,10 +12615,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_seh_451540_shared": {
       "name": "combo_seh_451540_shared",
@@ -11689,10 +12678,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_seh_601525_shared": {
       "name": "combo_seh_601525_shared",
@@ -11748,10 +12741,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_se_5050_shared": {
       "name": "combo_se_5050_shared",
@@ -11779,10 +12776,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_se_7030_shared": {
       "name": "combo_se_7030_shared",
@@ -11810,10 +12811,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_eh_5050_shared": {
       "name": "combo_eh_5050_shared",
@@ -11855,10 +12860,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_sh_5050_shared": {
       "name": "combo_sh_5050_shared",
@@ -11914,10 +12923,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_sh_macd_5050_shared": {
       "name": "combo_sh_macd_5050_shared",
@@ -11966,17 +12979,28 @@
           "kid_side": "long",
           "side": "long",
           "predict": "UP"
+        },
+        {
+          "ticker": "INDP",
+          "src": "hard_red_sit",
+          "kid_side": "long",
+          "side": "long",
+          "predict": "UP"
         }
       ],
       "sell": [],
-      "buy_n": 6,
+      "buy_n": 7,
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_se_5050_skip": {
       "name": "combo_se_5050_skip",
@@ -12004,10 +13028,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_seh_333_skip": {
       "name": "combo_seh_333_skip",
@@ -12063,10 +13091,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_seh_333_weather": {
       "name": "combo_seh_333_weather",
@@ -12122,10 +13154,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_se_5050_weather": {
       "name": "combo_se_5050_weather",
@@ -12153,10 +13189,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_se_5050_split": {
       "name": "combo_se_5050_split",
@@ -12184,10 +13224,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_es_8020_shared": {
       "name": "combo_es_8020_shared",
@@ -12215,10 +13259,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_es_9010_shared": {
       "name": "combo_es_9010_shared",
@@ -12246,10 +13294,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_ehs_702010_shared": {
       "name": "combo_ehs_702010_shared",
@@ -12305,10 +13357,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_ehs_601525_shared": {
       "name": "combo_ehs_601525_shared",
@@ -12364,10 +13420,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_ps_5050_shared": {
       "name": "combo_ps_5050_shared",
@@ -12409,10 +13469,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_ps_7030_shared": {
       "name": "combo_ps_7030_shared",
@@ -12454,10 +13518,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_p2s_5050_shared": {
       "name": "combo_p2s_5050_shared",
@@ -12499,10 +13567,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_sn_5050_shared": {
       "name": "combo_sn_5050_shared",
@@ -12551,10 +13623,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_sj_5050_shared": {
       "name": "combo_sj_5050_shared",
@@ -12631,10 +13707,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_sf_5050_shared": {
       "name": "combo_sf_5050_shared",
@@ -12690,10 +13770,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_snj_333_shared": {
       "name": "combo_snj_333_shared",
@@ -12784,10 +13868,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_nse_333_shared": {
       "name": "combo_nse_333_shared",
@@ -12836,10 +13924,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_jse_333_shared": {
       "name": "combo_jse_333_shared",
@@ -12916,10 +14008,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_fse_333_shared": {
       "name": "combo_fse_333_shared",
@@ -12975,10 +14071,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_e1s_7030_shared": {
       "name": "combo_e1s_7030_shared",
@@ -13006,10 +14106,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_ers_7030_shared": {
       "name": "combo_ers_7030_shared",
@@ -13037,10 +14141,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_eh_7030_shared": {
       "name": "combo_eh_7030_shared",
@@ -13082,10 +14190,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_fh_7030_shared": {
       "name": "combo_fh_7030_shared",
@@ -13155,10 +14267,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_fe_5050_shared": {
       "name": "combo_fe_5050_shared",
@@ -13200,10 +14316,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_fes_403030_shared": {
       "name": "combo_fes_403030_shared",
@@ -13259,10 +14379,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_se1_5050_shared": {
       "name": "combo_se1_5050_shared",
@@ -13290,10 +14414,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_ser_5050_shared": {
       "name": "combo_ser_5050_shared",
@@ -13321,10 +14449,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_en_5050_shared": {
       "name": "combo_en_5050_shared",
@@ -13359,10 +14491,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_ej_5050_shared": {
       "name": "combo_ej_5050_shared",
@@ -13425,10 +14561,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_ef_5050_shared": {
       "name": "combo_ef_5050_shared",
@@ -13470,10 +14610,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_ee1_5050_shared": {
       "name": "combo_ee1_5050_shared",
@@ -13486,10 +14630,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_eer_5050_shared": {
       "name": "combo_eer_5050_shared",
@@ -13502,10 +14650,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_hn_5050_shared": {
       "name": "combo_hn_5050_shared",
@@ -13568,10 +14720,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_hj_5050_shared": {
       "name": "combo_hj_5050_shared",
@@ -13662,10 +14818,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_hf_5050_shared": {
       "name": "combo_hf_5050_shared",
@@ -13735,10 +14895,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_he1_5050_shared": {
       "name": "combo_he1_5050_shared",
@@ -13780,10 +14944,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_her_5050_shared": {
       "name": "combo_her_5050_shared",
@@ -13825,10 +14993,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_nj_5050_shared": {
       "name": "combo_nj_5050_shared",
@@ -13905,10 +15077,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_nf_5050_shared": {
       "name": "combo_nf_5050_shared",
@@ -13964,10 +15140,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_ne1_5050_shared": {
       "name": "combo_ne1_5050_shared",
@@ -14002,10 +15182,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_ner_5050_shared": {
       "name": "combo_ner_5050_shared",
@@ -14040,10 +15224,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_jf_5050_shared": {
       "name": "combo_jf_5050_shared",
@@ -14134,10 +15322,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_je1_5050_shared": {
       "name": "combo_je1_5050_shared",
@@ -14200,10 +15392,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_jer_5050_shared": {
       "name": "combo_jer_5050_shared",
@@ -14266,10 +15462,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_fe1_5050_shared": {
       "name": "combo_fe1_5050_shared",
@@ -14311,10 +15511,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_fer_5050_shared": {
       "name": "combo_fer_5050_shared",
@@ -14356,10 +15560,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_e1er_5050_shared": {
       "name": "combo_e1er_5050_shared",
@@ -14372,10 +15580,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_se_3070_shared": {
       "name": "combo_se_3070_shared",
@@ -14403,10 +15615,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_sh_7030_shared": {
       "name": "combo_sh_7030_shared",
@@ -14462,10 +15678,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_sh_3070_shared": {
       "name": "combo_sh_3070_shared",
@@ -14521,10 +15741,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_eh_3070_shared": {
       "name": "combo_eh_3070_shared",
@@ -14566,10 +15790,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_sn_7030_shared": {
       "name": "combo_sn_7030_shared",
@@ -14618,10 +15846,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_sn_3070_shared": {
       "name": "combo_sn_3070_shared",
@@ -14670,10 +15902,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_sj_7030_shared": {
       "name": "combo_sj_7030_shared",
@@ -14750,10 +15986,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_sj_3070_shared": {
       "name": "combo_sj_3070_shared",
@@ -14830,10 +16070,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_sf_7030_shared": {
       "name": "combo_sf_7030_shared",
@@ -14889,10 +16133,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_sf_3070_shared": {
       "name": "combo_sf_3070_shared",
@@ -14948,10 +16196,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_en_7030_shared": {
       "name": "combo_en_7030_shared",
@@ -14986,10 +16238,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_en_3070_shared": {
       "name": "combo_en_3070_shared",
@@ -15024,10 +16280,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_ef_7030_shared": {
       "name": "combo_ef_7030_shared",
@@ -15069,10 +16329,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_ef_3070_shared": {
       "name": "combo_ef_3070_shared",
@@ -15114,10 +16378,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_hn_7030_shared": {
       "name": "combo_hn_7030_shared",
@@ -15180,10 +16448,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_hn_3070_shared": {
       "name": "combo_hn_3070_shared",
@@ -15246,10 +16518,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_ee1_7030_shared": {
       "name": "combo_ee1_7030_shared",
@@ -15262,10 +16538,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     },
     "combo_ee1_3070_shared": {
       "name": "combo_ee1_3070_shared",
@@ -15278,10 +16558,14 @@
       "sell_n": 0,
       "sit": true,
       "status": "sit",
+      "clock_use": "session_open",
+      "clock_legal_for": "2026-09-14",
+      "session_open": "2026-09-14",
       "why": "S=-11.002",
       "hard_red": true,
       "s": -11.002,
-      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy"
+      "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
+      "panel_bake_date": "2026-09-11"
     }
   },
   "order": [
@@ -15613,7 +16897,14 @@
     "source": "look",
     "want_date": "2026-09-14",
     "stale": false,
-    "date": "2026-09-14"
+    "date": "2026-09-14",
+    "panel_bake_date": "2026-09-11"
   },
+  "clock_use": "session_open",
+  "clock_legal_for": "2026-09-14",
+  "session_open": "2026-09-14",
+  "clock_same_morning": true,
+  "panel_bake_date": "2026-09-11",
+  "clock_rule": "Morning tickets are 09:30 session-open picks. clock_legal_for is the session you trade. File date is not a license to reuse last panel bake. Friday bake is never Monday's open.",
   "source": "strategy_tickets"
 }

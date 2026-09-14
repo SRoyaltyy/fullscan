@@ -75,6 +75,8 @@ def test_source_uses_session_look_not_last_bake() -> None:
     assert "_session_look" in src
     assert "resolve_rows" in src
     assert "assert_session_look" in src
+    assert "clock_legal_for" in src
+    assert "SESSION_OPEN_LOCK" in src
 
 
 def test_session_look_uses_panel_when_session_present() -> None:
@@ -125,9 +127,12 @@ def test_session_look_refuses_last_bake() -> None:
 
 def test_assert_session_look_blocks_stale_ship() -> None:
     payload = {
+        "clock_legal_for": "2026-09-14",
+        "look": {"source": "look", "stale": False, "panel_bake_date": "2026-09-11"},
         "strategies": {
             "union_hot_n4_h1": {
                 "family": "factor_mine", "date": "2026-09-11",
+                "clock_legal_for": "2026-09-11",
                 "buy_n": 3, "buy": [{"ticker": "QRVO"}],
             },
             "stock_book_1d": {
@@ -144,16 +149,82 @@ def test_assert_session_look_blocks_stale_ship() -> None:
         assert "union_hot_n4_h1" in str(e)
     else:
         raise AssertionError("expected refuse-to-ship")
-    empty = {
+
+
+def test_assert_fails_when_bake_is_not_session_open() -> None:
+    payload = {
+        "clock_legal_for": "2026-09-14",
+        "look": {"source": "panel_asof", "stale": True,
+                 "panel_bake_date": "2026-09-11", "date": "2026-09-11"},
+        "strategies": {},
+        "errors": [],
+    }
+    try:
+        st.assert_session_look(payload, "2026-09-14")
+    except AssertionError as e:
+        assert "panel bake date" in str(e)
+        assert "2026-09-14" in str(e)
+    else:
+        raise AssertionError("expected bake ≠ session fail")
+    try:
+        st.assert_session_look(
+            {"look": {"source": "look", "stale": False}, "strategies": {}},
+            "2026-09-14",
+        )
+    except AssertionError as e:
+        assert "clock_legal_for" in str(e)
+    else:
+        raise AssertionError("expected missing clock_legal_for")
+
+
+def test_open_lock_pins_indp_and_drops_friday() -> None:
+    buys = [
+        {"ticker": "QRVO", "kid_side": "short", "src": "short_news_r_macd_h3"},
+        {"ticker": "CMRC", "kid_side": "long", "src": "union_hot_n4_h1"},
+        {"ticker": "GPRO", "kid_side": "long", "src": "union_hot_n4_h1"},
+        {"ticker": "BKV", "kid_side": "short", "src": "short_news_r_macd_h3"},
+    ]
+    out = st.apply_open_lock("2026-09-14", st.LIVE_WEBULL_COMBO, buys)
+    names = [b["ticker"] for b in out]
+    assert "QRVO" not in names and "MYGN" not in names
+    longs = {b["ticker"] for b in out if b.get("kid_side") == "long"}
+    shorts = {b["ticker"] for b in out if b.get("kid_side") == "short"}
+    assert longs == {"INDP", "GPRO", "VERI", "HUT", "CMRC"}
+    assert shorts == {"BKV", "AMD"}
+    assert next(b for b in out if b["ticker"] == "INDP")["src"] == "hard_red_sit"
+    # Other recipes / dates are untouched.
+    assert st.apply_open_lock("2026-09-14", "union_hot_n4_h1", buys) == buys
+    assert st.apply_open_lock("2026-09-11", st.LIVE_WEBULL_COMBO, buys) == buys
+
+
+def test_assert_open_lock_requires_webull_sit_names() -> None:
+    payload = {
+        "clock_legal_for": "2026-09-14",
+        "look": {"source": "look", "stale": False, "panel_bake_date": "2026-09-11"},
         "strategies": {
-            "union_hot_n4_h1": {
+            "combo_sh_macd_5050_shared": {
                 "family": "factor_mine", "date": "2026-09-14",
-                "buy_n": 0, "buy": [],
+                "clock_legal_for": "2026-09-14",
+                "buy": [
+                    {"ticker": "CMRC", "kid_side": "long"},
+                    {"ticker": "BKV", "kid_side": "short"},
+                ],
             },
         },
         "errors": [],
     }
-    st.assert_session_look(empty, "2026-09-14")
+    try:
+        st.assert_session_look(payload, "2026-09-14")
+    except AssertionError as e:
+        assert "INDP" in str(e) or "missing_longs" in str(e)
+    else:
+        raise AssertionError("expected lock fail without INDP")
+    locked = st.SESSION_OPEN_LOCK["2026-09-14"]
+    payload["strategies"]["combo_sh_macd_5050_shared"]["buy"] = (
+        [{"ticker": t, "kid_side": "long"} for t in locked["longs"]]
+        + [{"ticker": t, "kid_side": "short"} for t in locked["shorts"]]
+    )
+    st.assert_session_look(payload, "2026-09-14")
 
 
 def main() -> None:
@@ -165,6 +236,9 @@ def main() -> None:
     test_session_look_uses_open_rows_when_panel_stops_early()
     test_session_look_refuses_last_bake()
     test_assert_session_look_blocks_stale_ship()
+    test_assert_fails_when_bake_is_not_session_open()
+    test_open_lock_pins_indp_and_drops_friday()
+    test_assert_open_lock_requires_webull_sit_names()
     print("ok")
 
 
