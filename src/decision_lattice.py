@@ -342,16 +342,54 @@ def _digest_tone(text: str) -> str:
         value, re.I,
     ):
         return "bad"
-    pos = len(POSITIVE_RE.findall(value))
-    neg = len(NEGATIVE_RE.findall(value))
-    if pos > neg:
-        return "good"
-    if neg > pos:
-        return "bad"
-    return "neutral"
+    try:
+        from .finviz_news import headline_tone
+        tone = headline_tone(value)
+        return tone if tone != "missing" else "neutral"
+    except Exception:
+        pos = len(POSITIVE_RE.findall(value))
+        neg = len(NEGATIVE_RE.findall(value))
+        if pos > neg:
+            return "good"
+        if neg > pos:
+            return "bad"
+        return "neutral"
 
 
 def _digest_context(date: str) -> dict[str, dict]:
+    """Company Finviz news from the full Elite export, not the ranked sample.
+
+    The digest JSON only kept ~80 names, so the RYG news/digest boxes were
+    missing for almost every liquid ticker that actually had a headline.
+    """
+    out: dict[str, dict] = {}
+    try:
+        from .finviz_news import load_company_news
+        export_rows = load_company_news(date, today=date)
+    except Exception:
+        export_rows = {}
+    for ticker, rec in export_rows.items():
+        if rec.get("is_dividend"):
+            continue
+        text = str(rec.get("text") or "").strip()
+        if not text:
+            continue
+        event_risk = bool(EVENT_RISK_RE.search(text))
+        out[ticker] = {
+            "tone": rec.get("digest_tone") or rec.get("tone") or _digest_tone(text),
+            "news_tone": rec.get("news_tone") or rec.get("tone") or "neutral",
+            "digest_tone": rec.get("digest_tone") or rec.get("tone") or "missing",
+            "text": text[:240],
+            "materiality": rec.get("materiality") or "normal",
+            "direct": (not bool(SYMPATHY_RE.search(text))) and not event_risk,
+            "event_risk": event_risk,
+            "event_date": rec.get("event_date"),
+            "sector": rec.get("sector"),
+            "industry": rec.get("industry"),
+        }
+    if out:
+        return out
+
     data = _read_json(NEWS_DIR / f"{date}_finviz_digest.json")
     rows: list[dict] = []
     for key in ("top_signal", "all_ticker_digests",
@@ -359,7 +397,6 @@ def _digest_context(date: str) -> dict[str, dict]:
         rows.extend(r for r in data.get(key) or [] if isinstance(r, dict))
     for sec_rows in (data.get("by_sector") or {}).values():
         rows.extend(r for r in sec_rows or [] if isinstance(r, dict))
-    out: dict[str, dict] = {}
     for row in rows:
         ticker = _tick(row.get("ticker"))
         if not ticker or ticker in out or ticker in ETF_TICKERS:
@@ -373,6 +410,8 @@ def _digest_context(date: str) -> dict[str, dict]:
         event_risk = bool(EVENT_RISK_RE.search(text))
         out[ticker] = {
             "tone": tone,
+            "news_tone": tone,
+            "digest_tone": tone,
             "text": text[:240],
             "materiality": "high" if high else "normal",
             "direct": direct and not event_risk,
@@ -604,6 +643,18 @@ def _company_eval(row: pd.Series, context: dict) -> dict:
     action_net = _num(action.get("net"))
     action_tone = _tone(action_net, 0.50) if action else "missing"
     digest_tone = str(digest.get("tone") or "missing")
+    # RSS/macro baskets stay first. If they have nothing on this name,
+    # the Elite title/digest fills the news box. Neutral is yellow, not blank.
+    news_box_tone = action_tone
+    if news_box_tone == "missing" and digest:
+        news_box_tone = str(
+            digest.get("news_tone") or digest.get("tone") or "neutral"
+        )
+        if news_box_tone == "missing":
+            news_box_tone = "neutral"
+    digest_box_tone = str(
+        digest.get("digest_tone") or digest_tone or "missing"
+    )
     catalyst_tone = str(catalyst.get("tone") or "missing")
 
     tone = "neutral"
@@ -633,13 +684,20 @@ def _company_eval(row: pd.Series, context: dict) -> dict:
         tone = digest_tone
         direct = True
         materiality = str(digest.get("materiality") or "normal")
-        raw_time = str(row.get("news_time") or "")
+        raw_time = str(row.get("news_time") or digest.get("event_date") or "")
         try:
-            fresh = datetime.fromisoformat(
-                raw_time.replace("Z", "+00:00")
-            ).date().isoformat() == str(context.get("date") or "")
-        except ValueError:
-            fresh = False
+            from .finviz_news import parse_finviz_news_date
+            dated = parse_finviz_news_date(
+                raw_time, today=str(context.get("date") or ""),
+            )
+            fresh = bool(dated) and dated == str(context.get("date") or "")
+        except Exception:
+            try:
+                fresh = datetime.fromisoformat(
+                    raw_time.replace("Z", "+00:00")
+                ).date().isoformat() == str(context.get("date") or "")
+            except ValueError:
+                fresh = False
         strength = (
             0.72 if materiality == "high" and fresh
             else 0.48 if materiality == "high"
@@ -720,8 +778,8 @@ def _company_eval(row: pd.Series, context: dict) -> dict:
         "reasons": reasons,
         "summary": reasons[0] if reasons else "no company evidence",
         "source_tones": {
-            "news": action_tone,
-            "digest": digest_tone,
+            "news": news_box_tone,
+            "digest": digest_box_tone,
             "judge": judge_tone,
             "catal": catalyst_tone,
         },

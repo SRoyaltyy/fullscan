@@ -405,53 +405,31 @@ SIZE_BUCKETS = {
 
 
 def _digest_polarity(text: str) -> float:
-    t = (text or "").lower()
-    pos = len(re.findall(
-        r"\b(beat|beats|upgrade|upgrades|raises|surge|surges|record|climbs|guides? above|buyback)\b", t))
-    neg = len(re.findall(
-        r"\b(miss|misses|downgrade|downgrades|fall|falls|plunge|selloff|cut|cuts|lowers|bankruptcy)\b", t))
-    if pos == neg:
-        return 0.0
-    return 1.6 if pos > neg else -1.6
+    try:
+        from .finviz_news import headline_net
+        return float(headline_net(text))
+    except Exception:
+        t = (text or "").lower()
+        pos = len(re.findall(
+            r"\b(beat|beats|upgrade|upgrades|raises|surge|surges|record|climbs|guides? above|buyback)\b", t))
+        neg = len(re.findall(
+            r"\b(miss|misses|downgrade|downgrades|fall|falls|plunge|selloff|cut|cuts|lowers|bankruptcy)\b", t))
+        if pos == neg:
+            return 0.0
+        return 1.6 if pos > neg else -1.6
 
 
 def _load_finviz_digest(date: str) -> dict[str, dict]:
-    """Per-ticker Daily Digest from Elite export — company news the judge may have skipped."""
-    path = NEWS_DIR / f"{date}_finviz_digest.json"
-    if not path.exists():
-        return {}
+    """Per-ticker company news from the Elite export (full tape, not the sample)."""
     try:
-        data = json.loads(path.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError):
+        from .finviz_news import actions_from_company_news, load_company_news
+        out = actions_from_company_news(load_company_news(date, today=date))
+        if out:
+            print(f"[stock-book] finviz company news elevated {len(out)} tickers")
+        return out
+    except Exception as e:
+        print(f"[stock-book] finviz company news skipped: {e}")
         return {}
-    out: dict[str, dict] = {}
-    rows = []
-    for key in ("top_signal", "all_ticker_digests_sample"):
-        rows.extend(data.get(key) or [])
-    for sec_rows in (data.get("by_sector") or {}).values():
-        rows.extend(sec_rows or [])
-    seen = set()
-    for row in rows:
-        if not isinstance(row, dict):
-            continue
-        t = str(row.get("ticker") or "").strip().upper()
-        if not t or t in seen or t in ("SPY", "QQQ", "DIA", "IWM"):
-            continue
-        if row.get("is_dividend"):
-            continue
-        digest = row.get("digest") or row.get("news_title") or ""
-        pol = _digest_polarity(digest)
-        if not pol:
-            continue
-        seen.add(t)
-        out[t] = {
-            "net": pol,
-            "events": [{"event": "finviz_digest", "digest": str(digest)[:160]}],
-            "source": "digest",
-        }
-    if out:
-        print(f"[stock-book] finviz digest elevated {len(out)} tickers")
-    return out
 
 
 def _merge_news(*books: dict[str, dict]) -> dict[str, dict]:
