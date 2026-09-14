@@ -1,14 +1,14 @@
 # flatten_robust card — 2026-09-14
 
-_Generated 2026-09-14T10:00:17 — live `flatten_robust`._
+_Generated 2026-09-14T13:41:58 — live `flatten_robust`._
 
 **S=-11.00; hard-red: no new buys; holds and due 1d exits stay**
 
 - Score **-11.00** (DOWN) · route **hold** · HARD-RED
-- Cash leftover **$108,616.66** (after 09:30 $108,616.66 · after 16:00 $108,616.66)
-- Prior close **$108,616.66** · 09:30 **$108,616.66** · overnight **$+0.00** · session **$+0.00** · 16:00 **$108,616.66**
+- Cash leftover **$107,448.18** (after 09:30 $107,448.18 · after 16:00 $107,448.18)
+- Prior close **$107,448.18** · 09:30 **$107,448.18** · overnight **$+0.00** · session **$+0.00** · 16:00 **$107,448.18**
 - Overnight lots **0** · priced mover BUYs **0** · prior book yes
-- Planned buy cost **$0.00** ≤ leftover after sells **$108,616.66**
+- Planned buy cost **$0.00** ≤ leftover after sells **$107,448.18**
 
 ## Overnight holds (into 09:30)
 
@@ -39,13 +39,13 @@ _Generated 2026-09-14T10:00:17 — live `flatten_robust`._
 
 ## Would have bought — holdings disregarded
 
-Sized from marked equity **$108,616.66** as if the book were flat. `io 3d_size (holdings disregarded)`. Not live tickets.
+Sized from marked equity **$107,448.18** as if the book were flat. `io 3d_size (holdings disregarded)`. Not live tickets.
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | CVE | io_core | 820 | $33.11 | $27,150.20 | hard-red |
-| 16:00 ET | DK | io_core | 356 | $76.10 | $27,091.60 | hard-red |
-| 16:00 ET | BG | io_core | 221 | $122.41 | $27,052.61 | hard-red |
-| 16:00 ET | NVT | io_core | 167 | $162.38 | $27,117.46 | hard-red |
+| 16:00 ET | CVE | io_core | 801 | $33.53 | $26,857.53 | hard-red |
+| 16:00 ET | DK | io_core | 0 | $0.00 | $0.00 | no price |
+| 16:00 ET | BG | io_core | 215 | $124.75 | $26,821.25 | hard-red |
+| 16:00 ET | NVT | io_core | 183 | $146.58 | $26,824.14 | hard-red |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
