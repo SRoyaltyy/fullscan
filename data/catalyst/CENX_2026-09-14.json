@@ -1,0 +1,118 @@
+{
+  "ticker": "CENX",
+  "analysis_date": "2026-09-14",
+  "current_price": "N/A",
+  "net_signal": "Strong Bullish",
+  "conviction": 67,
+  "catalyst_stack": "On 2026-05-05, Centrus reported Q1 2026 net income of $10.0M ($0.45 diluted) with adjusted net income of $23.5M, while simultaneously raising full-year 2026 revenue guidance and disclosing a joint-venture exploration with Oklo for HALEU deconversion services. On 2026-08-05, Q2 2026 net income accelerated to $16.8M ($0.77 diluted), with management citing multiple commercial wins for its future enrichment business amid industry tailwinds. On 2026-09-14, a tentative U.S.-Canada trade deal that could cut tariffs on some Canadian steel and aluminum imports to 25% from 50% introduced a policy-driven swing factor for the domestic enrichment and materials complex. The cumulative stack of earnings growth, guidance raise, strategic partnership, and favorable policy headlines skews positive, though the tariff headline is a two-sided macro input rather than a company-specific catalyst.",
+  "key_assumption": "The Oklo HALEU deconversion JV and raised 2026 guidance translate into durable commercial contracts and revenue recognition, and the U.S.-Canada tariff easing does not materially undercut Centrus' domestic enrichment pricing power or policy support.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        1,
+        4
+      ],
+      "event_date": "2026-08-05",
+      "evidence_excerpt": "The Company reported net income of $16.8 million for the three months ended June 30, 2026, which is $0.85 (basic) and $0.77 (diluted) per common share.",
+      "source_urls": [
+        "https://www.centrusenergy.com/news/centrus-reports-second-quarter-2026-results/",
+        "https://investors.centrusenergy.com/news-releases/news-release-details/centrus-reports-second-quarter-2026-results"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Earnings guidance raise",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 8,
+      "event_ids": [
+        3
+      ],
+      "event_date": "2026-05-05",
+      "evidence_excerpt": "Raising full year 2026 revenue guidance based on commercial progress",
+      "source_urls": [
+        "https://investors.centrusenergy.com/news-releases/news-release-details/centrus-reports-first-quarter-2026-results",
+        "https://www.centrusenergy.com/news/centrus-reports-first-quarter-2026-results/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 7,
+      "event_ids": [
+        2
+      ],
+      "event_date": "2026-05-05",
+      "evidence_excerpt": "Exploring joint-venture with Oklo focused on deconversion services for high-assay, low-enriched uranium (HALEU)",
+      "source_urls": [
+        "https://investors.centrusenergy.com/news-releases/news-release-details/centrus-reports-first-quarter-2026-results",
+        "https://www.centrusenergy.com/news/centrus-reports-first-quarter-2026-results/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 9,
+      "event_ids": [
+        5
+      ],
+      "event_date": "2026-08-05",
+      "evidence_excerpt": "This was another strong quarter of financial and operational progress for Centrus that included a number of commercial wins for our future enrichment business",
+      "source_urls": [
+        "https://investors.centrusenergy.com/news-releases/news-release-details/centrus-reports-second-quarter-2026-results"
+      ],
+      "confidence": 85
+    },
+    {
+      "taxonomy": "Government policy (tariffs, subsidies, mandates)",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 10,
+      "event_ids": [
+        0
+      ],
+      "event_date": "2026-09-14",
+      "evidence_excerpt": "Bloomberg: tentative U.S.-Canada trade deal could cut tariffs on some Canadian steel, aluminum imports to 25% from 50%",
+      "source_urls": [
+        "https://finance.yahoo.com/m/40257f1d-1ac8-3ceb-bb44-9ac062ff82c4/u.s.-steel-and-materials.html"
+      ],
+      "confidence": 75
+    },
+    {
+      "taxonomy": "Dilutive offering / capital raise",
+      "type": "negative",
+      "event_date": "2026-09-09",
+      "evidence_excerpt": "On September 09, 2026, Centrus Energy Corp LEU ... announced plans to raise $500 million through an overnight stock sale. The offering price ... is set at $199.64 per share, which includes four tiers of warrants",
+      "source_urls": [
+        "https://www.gurufocus.com/news/9073966/centrus-energy-corp-leu-to-raise-500-million-through-stock-offering"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": null,
+  "search_backend": "deepseek_fallback",
+  "generated_at": "2026-09-14",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

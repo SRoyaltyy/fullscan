@@ -868,6 +868,26 @@
       "size": "large"
     },
     {
+      "ticker": "CENX",
+      "buy_score": 2.01,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "catalyst",
+          "side": "buy",
+          "weight": 2.01,
+          "bucket": "override_captain",
+          "net_signal": "Strong Bullish",
+          "conviction": 67
+        }
+      ],
+      "net": 2.01,
+      "side": "buy",
+      "catalyst_signal": "Strong Bullish",
+      "catalyst_conviction": 67,
+      "catalyst_stack": "On 2026-05-05, Centrus reported Q1 2026 net income of $10.0M ($0.45 diluted) with adjusted net income of $23.5M, while simultaneously raising full-year 2026 revenue guidance and disclosing a joint-venture exploration with Oklo for HALEU deconversion services. On 2026-08-05, Q2 20"
+    },
+    {
       "ticker": "XLE",
       "buy_score": 0.0,
       "sell_score": 1.5,
@@ -1288,5 +1308,7 @@
     "XLU": -1.5,
     "AAPL": -1.5,
     "IWM": -1.5
-  }
+  },
+  "catalyst_tickers": 1,
+  "catalyst_date": "2026-09-14"
 }

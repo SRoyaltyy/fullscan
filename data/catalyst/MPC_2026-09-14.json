@@ -1,0 +1,8 @@
+{
+  "error": "Step 2 parse failure",
+  "raw": "{\n  \"ticker\": \"MPC\",\n  \"extracted_context\": {\n    \"company_identity\": \"Marathon Petroleum Corporation (NYSE: MPC) \u2014 largest U.S. oil refiner; integrated downstream and midstream energy company. [source: ir.marathonpetroleum.com Investors page]\",\n    \"revenue_structure\": {\n      \"segments\": \"Three reportable segments: Refining & Marketing (~94-97% of revenue), Midstream (~3-4%), Renewable Diesel (~2%). [source: edgar.tools segments; bullfincher.io; alphainference.app]\",\n      \"customer_type\": \"Pr",
+  "ticker": "MPC",
+  "generated_at": "2026-09-14",
+  "cutoff_date": null,
+  "role": "override_captain"
+}
