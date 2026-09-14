@@ -295,6 +295,38 @@ def test_jobs_include_label_weather() -> None:
     assert "label_weather" in skip_if_good.JOBS
     assert "stock_book_all" in skip_if_good.JOBS
     assert "postclose_all" in skip_if_good.JOBS
+    assert "strategy_tickets" in skip_if_good.JOBS
+
+
+def test_strategy_tickets_require_session_open_look() -> None:
+    """Friday bake / missing families must not skip the 09:35 restamp."""
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        day = root / "data" / "day_board"
+        day.mkdir(parents=True)
+        path = day / "today_strategies.json"
+        with mock.patch.object(skip_if_good, "ROOT", root):
+            assert skip_if_good.check_strategy_tickets("2026-09-14") is False
+            path.write_text(json.dumps({
+                "date": "2026-09-11",
+                "clock_legal_for": "2026-09-11",
+                "n_ok": 20,
+                "strategies": {f"r{i}": {"family": "factor_mine"}
+                               for i in range(12)},
+            }), encoding="utf-8")
+            assert skip_if_good.check_strategy_tickets("2026-09-14") is False
+            path.write_text(json.dumps({
+                "date": "2026-09-14",
+                "clock_legal_for": "2026-09-14",
+                "session_open": "2026-09-14",
+                "n_ok": 20,
+                "strategies": {
+                    "stock_book_1d": {"family": "stock_book"},
+                    "flatten_robust": {"family": "flatten"},
+                    **{f"r{i}": {"family": "factor_mine"} for i in range(10)},
+                },
+            }), encoding="utf-8")
+            assert skip_if_good.check_strategy_tickets("2026-09-14") is True
 
 
 def test_postclose_all_workflow_name_matches_yml() -> None:
@@ -421,6 +453,7 @@ if __name__ == "__main__":
     test_is_tool_dump_detects_dsml_and_web_search()
     test_finviz_scrape_requires_elite_export()
     test_jobs_include_label_weather()
+    test_strategy_tickets_require_session_open_look()
     test_postclose_all_workflow_name_matches_yml()
     test_sidecar_running_false_without_github_env()
     test_postclose_all_cli_yields_to_sidecar_only_for_all_workflow()

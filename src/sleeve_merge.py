@@ -2360,6 +2360,11 @@ across {start_n} starts.
     (DASH_DIR / "index.html").write_text(html, encoding="utf-8")
     from src.sleeve_merge_live import inject_today_from_disk
     inject_today_from_disk()
+    try:
+        from src import book_suggestions
+        book_suggestions.ensure_dashboard_poller(DASH_DIR / "index.html")
+    except Exception as e:  # noqa: BLE001 — display poller must not block the card
+        print(f"[sleeve-merge] WARN: live poller: {e}", flush=True)
 
 
 def main(argv: list[str] | None = None) -> int:

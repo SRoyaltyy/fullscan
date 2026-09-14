@@ -186,6 +186,13 @@ def write(book: dict | None = None, date: str | None = None) -> Path | None:
     return dated
 
 
+LIVE_BOARD_HTML = (
+    ROOT / "dashboard" / "index.html",
+    ROOT / "dashboard" / "sleeve-merge" / "index.html",
+    ROOT / "dashboard" / "strategy-board" / "index.html",
+)
+
+
 def ensure_dashboard_poller(html_path: Path | None = None) -> bool:
     """Inject the live-book poller into baked paper HTML if missing.
 
@@ -215,6 +222,8 @@ def ensure_dashboard_poller(html_path: Path | None = None) -> bool:
             '<div class="wrap">' + _POLLER_HTML,
             1,
         )
+    elif "<main>" in text:
+        text = text.replace("<main>", "<main>" + _POLLER_HTML, 1)
     elif "<body>" in text:
         text = text.replace("<body>", "<body>" + _POLLER_HTML, 1)
     else:
@@ -228,3 +237,15 @@ def ensure_dashboard_poller(html_path: Path | None = None) -> bool:
     path.write_text(text, encoding="utf-8")
     print(f"  injected live-book poller → {path}", flush=True)
     return True
+
+
+def ensure_live_board_pollers() -> list[str]:
+    """Keep .io / sleeve-merge / strategy-board polling today_strategies."""
+    wrote = []
+    for path in LIVE_BOARD_HTML:
+        if ensure_dashboard_poller(path):
+            try:
+                wrote.append(str(path.relative_to(ROOT)))
+            except ValueError:
+                wrote.append(str(path))
+    return wrote

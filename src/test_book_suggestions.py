@@ -38,6 +38,13 @@ def test_land_stock_book_includes_suggestions() -> None:
     assert "latest_suggestions.json" in paths
     live = {p.name for p in land_file.step_paths("2026-09-09", "live_boards")}
     assert "today.json" in live
+    assert "today_strategies.json" in live
+    assert "strategy_tickets.json" in live
+    assert "2026-09-09_strategy_tickets.json" in live
+    live_rel = {str(p.relative_to(land_file.ROOT))
+                for p in land_file.step_paths("2026-09-09", "live_boards")}
+    assert "dashboard/factor-mine/strategy_tickets.json" in live_rel
+    assert "dashboard/factor-mine/today_strategies.json" in live_rel
 
 
 def test_preview_suggestions_lists_names() -> None:
@@ -66,6 +73,14 @@ def test_paper_template_polls_raw_main() -> None:
     assert book_suggestions.STRAT_URL in baked
     assert "every strategy" in baked
     assert baked.index("<h1>Paper Trading") < baked.index('id="liveBook"')
+    sleeve = (root / "dashboard" / "sleeve-merge" / "index.html").read_text(
+        encoding="utf-8")
+    strat = (root / "dashboard" / "strategy-board" / "index.html").read_text(
+        encoding="utf-8")
+    assert book_suggestions.POLLER_MARK in sleeve
+    assert book_suggestions.STRAT_URL in sleeve
+    assert book_suggestions.POLLER_MARK in strat
+    assert book_suggestions.STRAT_URL in strat
 
 
 def test_factor_mine_template_paints_every_strategy() -> None:
@@ -112,8 +127,35 @@ def test_preopen_and_book_publish_strip_without_paper() -> None:
     assert live_idx < paper_idx
     assert "src.publish_live_boards" in book
     assert "skip extras (catalyst/backtest/paper/sleeve)" in book
+    assert "timeout_s=180" in book
     assert "book_suggestions.write" in sb
     assert "ensure_dashboard_poller" in sb
+
+
+def test_open_pack_wired_when_skip_if_good() -> None:
+    """A quality-ok book must still restamp every-sleeve tickets after 09:30."""
+    root = Path(__file__).resolve().parent.parent
+    wf = root / ".github" / "workflows"
+    pre = (wf / "preopen_all.yml").read_text(encoding="utf-8")
+    book = (wf / "stock_book_all.yml").read_text(encoding="utf-8")
+    orch = (wf / "daily_orchestrator.yml").read_text(encoding="utf-8")
+    pub = (wf / "publish_strategy_tickets.yml").read_text(encoding="utf-8")
+    dep = (wf / "deploy-dashboard.yml").read_text(encoding="utf-8")
+    script = (root / "scripts" / "publish_open_pack.sh").read_text(encoding="utf-8")
+    assert "scripts/publish_open_pack.sh" in pre
+    assert "scripts/publish_open_pack.sh" in book
+    assert 'env.skip == \'yes\'' in book
+    assert "skip_python == 'yes'" in pre
+    assert "src.strategy_tickets" in script
+    assert "src.land_file" in script
+    assert "publish_dashboard.sh" in script
+    assert "src.sleeve_merge" not in script
+    assert "src.webull_exec" not in script
+    assert "publish_strategy_tickets.yml" in orch
+    assert "past 09:30 ET" in orch
+    assert "Publish strategy tickets" in dep
+    assert "gh workflow run deploy-dashboard.yml" in pub
+    assert "scripts/publish_dashboard.sh" in pub
 
 
 def test_inspect_html_ok_when_poller_and_sidecar() -> None:
@@ -157,6 +199,22 @@ def test_ensure_poller_is_idempotent() -> None:
         assert book_suggestions.ensure_dashboard_poller(html) is False
 
 
+def test_ensure_poller_injects_into_main_sleeve_page() -> None:
+    with tempfile.TemporaryDirectory() as d:
+        html = Path(d) / "index.html"
+        html.write_text(
+            "<html><head><style>body{}</style></head>"
+            "<body><main><h1>Combined sleeve</h1></main></body></html>",
+            encoding="utf-8",
+        )
+        assert book_suggestions.ensure_dashboard_poller(html) is True
+        text = html.read_text(encoding="utf-8")
+        assert book_suggestions.POLLER_MARK in text
+        assert book_suggestions.STRAT_URL in text
+        assert "<main>" in text
+        assert text.index("<main>") < text.index('id="liveBook"')
+
+
 def test_ensure_poller_refreshes_old_uniform_strip() -> None:
     """A baked 'BUY 1d / SELL 1d only' poller must be replaced."""
     with tempfile.TemporaryDirectory() as d:
@@ -185,8 +243,10 @@ def main() -> None:
     test_factor_mine_template_paints_every_strategy()
     test_day_board_falls_back_to_suggestions()
     test_preopen_and_book_publish_strip_without_paper()
+    test_open_pack_wired_when_skip_if_good()
     test_inspect_html_ok_when_poller_and_sidecar()
     test_ensure_poller_is_idempotent()
+    test_ensure_poller_injects_into_main_sleeve_page()
     test_ensure_poller_refreshes_old_uniform_strip()
     print("ok")
 

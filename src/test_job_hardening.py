@@ -137,6 +137,7 @@ def test_deploy_dashboard_follows_preopen_and_book() -> None:
     text = (WF / "deploy-dashboard.yml").read_text(encoding="utf-8")
     assert "Pre-Open ALL (predictive one-shot)" in text
     assert "Stock Book ALL (one-shot)" in text
+    assert "Publish strategy tickets" in text
     assert "dashboard/**" in text
     assert "github.event_name == 'push'" in text
     assert "Root copy pages_out/${sub}" in text
@@ -1163,6 +1164,8 @@ def test_no_job_commits_workflow_files_from_actions() -> None:
     # It follows the two core jobs, so a red here paints every session red.
     assert "Stock Book ALL (one-shot)" in text
     assert "Pre-Open ALL (predictive one-shot)" in text
+    assert "scripts/publish_dashboard.sh" in text
+    assert "gh workflow run deploy-dashboard.yml" in text
 
 
 def main() -> None:

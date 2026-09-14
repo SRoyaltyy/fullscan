@@ -11,9 +11,11 @@ Cheap path (this module):
 Paper / sleeve / strategy-board HTML rebuilds are extras. Names must
 already be on the dashboards from the JSON strip after the book lands.
 
-The 90-minute factor-mine recipe grid is NOT run here. Stock Book ALL
-and Pre-Open ALL kick `.github/workflows/factor_mine.yml` after the
-book exists so every recipe blotter rolls to this date.
+The 90-minute factor-mine recipe grid is NOT run here. Morning
+every-sleeve BUY/SELL is ``strategy_tickets`` (session-open look).
+Stock Book ALL and Pre-Open ALL still kick ``factor_mine.yml``
+``--land-closed`` after the close so the cash blotter rolls; that
+path is a no-op in the morning once yesterday is already on the board.
 
 CLI: python -m src.publish_live_boards --date YYYY-MM-DD --write
 """
@@ -127,6 +129,10 @@ def publish(date: str, *, write: bool = True, extras: bool = True) -> dict:
             if sug is not None:
                 out["wrote"].append(str(sug.relative_to(ROOT)))
             out["poller_injected"] = book_suggestions.ensure_dashboard_poller()
+            extra = book_suggestions.ensure_live_board_pollers()
+            if extra:
+                out["wrote"].extend(extra)
+                out["poller_injected"] = True
         except Exception as e:  # noqa: BLE001
             print(f"[live-boards] WARN: suggestions sidecar: {e}", flush=True)
 

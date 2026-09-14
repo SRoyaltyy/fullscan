@@ -182,6 +182,8 @@ def test_incremental_land_hooks() -> None:
     assert "news_judge.yml" in orch
     assert 'inputs[force]=true' in orch
     assert "35 13" in orch
+    assert "publish_strategy_tickets.yml" in orch
+    assert "past 09:30 ET" in orch
     dash = (ROOT / "src" / "day_board.py").read_text(encoding="utf-8")
     assert "raw.githubusercontent.com" in dash
     assert "dashboard/day-board" in dash
