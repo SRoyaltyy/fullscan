@@ -1,12 +1,12 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T05:43:03.009270-04:00",
+  "generated_at": "2026-09-14T05:43:29.299142-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 5,
-    "partial": 3,
+    "ok": 7,
+    "partial": 1,
     "fail": 0,
     "n": 8
   },
@@ -463,11 +463,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -547,36 +547,36 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-09-14_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=5111",
+          "size": 821834
         },
         {
           "key": "book_json",
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-14_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "horizons=5 names=140",
+          "size": 1153583
         },
         {
           "key": "book_md",
           "name": "Stock book MD",
           "path": "01_daily/2026-09-14_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 44291
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-14_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 585
         },
         {
           "key": "paper",
@@ -592,9 +592,9 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-09-14 not in dashboard dates (last=2026-09-11)",
-          "size": 4874846
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-14)",
+          "size": 4875256
         }
       ],
       "said": "219 rows",
@@ -606,9 +606,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -618,18 +618,18 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-14_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "horizons=5 names=140",
+          "size": 1153583
         },
         {
           "key": "dash_html",
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-09-14 not in dashboard dates (last=2026-09-11)",
-          "size": 4874846
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-14)",
+          "size": 4875256
         },
         {
           "key": "paper",
@@ -655,8 +655,58 @@
     }
   ],
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "CVE",
+        "score": 0.20688811957392966
+      },
+      {
+        "ticker": "DK",
+        "score": 0.5551099454740418
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "SERV",
+        "score": -0.517939121538224
+      },
+      {
+        "ticker": "AHCO",
+        "score": -0.49244166379812604
+      },
+      {
+        "ticker": "GRRR",
+        "score": -0.10175452749676267
+      },
+      {
+        "ticker": "CIFR",
+        "score": -0.2103819273667351
+      },
+      {
+        "ticker": "TDTH",
+        "score": -0.25106754321636665
+      },
+      {
+        "ticker": "MSTR",
+        "score": -0.3150226364207752
+      },
+      {
+        "ticker": "SPIR",
+        "score": -0.4482120448797816
+      },
+      {
+        "ticker": "SLQT",
+        "score": -0.4489276509586
+      },
+      {
+        "ticker": "OWL",
+        "score": -0.37378539118273224
+      },
+      {
+        "ticker": "MMYT",
+        "score": -0.5206500121818561
+      }
+    ],
     "flatten": {},
     "general": {
       "said": "DOWN  -11.002",
@@ -1342,6 +1392,59 @@
         }
       ],
       "preview": "5895 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ABEV, TAL, BUD, PM, BEKE"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-14T05:43:28.859535-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-14_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1153583,
+          "preview": "1d BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT"
+        },
+        {
+          "path": "data/stock_book/2026-09-14_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-14_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2483,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-14_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 9264,
+          "preview": "2026-09-14 BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 9264,
+          "preview": "2026-09-14 BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT"
+        },
+        {
+          "path": "01_daily/2026-09-14_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 45250,
+          "preview": "# Stock book \u2014 2026-09-14\n_Generated 2026-09-14T05:43:14.401526-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-14 BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT \u00b7 2026-09-14 BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT \u00b7 # Stock book \u2014 2026-09-14\n_Generated 2026-09-14T05:43:14.401526-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
