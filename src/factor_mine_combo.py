@@ -700,12 +700,12 @@ def simulate_split(panel: dict, recs: list[dict], weights: list[float],
         books.append(fmb.simulate_book(
             panel, rec, bars=bars, fees=fees, regime=regime,
             rules=rules, start=start))
-    cal = [d for d in (panel.get("session_dates") or [])
-           if not start or d >= start]
+    full_cal = [d for d in (panel.get("session_dates") or [])
+                if not start or d >= start]
     last_closed = fm.last_closed_session(
-        start or (cal[0] if cal else ""), cal=cal)
+        start or (full_cal[0] if full_cal else ""), cal=full_cal)
     if last_closed:
-        cal = [d for d in cal if d <= last_closed]
+        full_cal = [d for d in full_cal if d <= last_closed]
     # Member books clip to last_closed (and can be empty). Indexing every
     # book at cal[i] IndexErrors when daily lengths differ. Align on the
     # dates every live book actually simulated; skip empty sleeves.
@@ -713,9 +713,14 @@ def simulate_split(panel: dict, recs: list[dict], weights: list[float],
     if live:
         have = [{row.get("date") for row in (b.get("daily") or [])} for b in live]
         common = have[0].intersection(*have[1:]) if len(have) > 1 else have[0]
-        cal = [d for d in cal if d in common]
+        cal = [d for d in full_cal if d in common]
     else:
         cal = []
+    marked = set()
+    for b in live:
+        marked |= {row.get("date") for row in (b.get("daily") or [])
+                   if row.get("date")}
+    last_marked = max(marked) if marked else None
     daily = []
     yday = CAPITAL
     for date in cal:
@@ -770,6 +775,40 @@ def simulate_split(panel: dict, recs: list[dict], weights: list[float],
             "made_money": bool(mean is not None and mean > 0),
         })
         yday = equity
+    # Panel calendar can still list a session member books have not marked
+    # (today pre-open / last-closed clip). Keep the date; stub $0 so the
+    # dash does not drop the day. Do not invent marks for holes in the middle.
+    have_dates = {d.get("date") for d in daily}
+    for date in full_cal:
+        if date in have_dates:
+            continue
+        if last_marked and date <= last_marked:
+            continue
+        daily.append({
+            "date": date,
+            "s": None,
+            "hard_red": False,
+            "n": 0,
+            "open_cash": 0.0,
+            "open_held": [],
+            "open_equity": 0.0,
+            "open_stock": 0.0,
+            "yday_equity": 0.0,
+            "overnight_delta": 0.0,
+            "overnight": [],
+            "marks": [],
+            "intraday": [],
+            "session_delta": 0.0,
+            "cash": 0.0,
+            "stock": 0.0,
+            "equity": 0.0,
+            "bought": [], "sold": [], "held": [],
+            "lots": [],
+            "skipped": [],
+            "why": "unmarked session",
+            "mean": None,
+            "made_money": False,
+        })
     trades = []
     skips = []
     for rec, b in zip(recs, books):
