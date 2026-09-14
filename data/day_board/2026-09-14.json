@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T05:53:02.542599-04:00",
+  "generated_at": "2026-09-14T05:53:10.161295-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -593,7 +593,7 @@
           "path": "dashboard/index.html",
           "role": "optional",
           "status": "OK",
-          "reason": "live-book poller + 2026-09-14_suggestions.json (2026-09-14)",
+          "reason": "live-book poller + today.json (2026-09-14)",
           "size": 4875256
         }
       ],
@@ -628,7 +628,7 @@
           "path": "dashboard/index.html",
           "role": "required",
           "status": "OK",
-          "reason": "live-book poller + 2026-09-14_suggestions.json (2026-09-14)",
+          "reason": "live-book poller + today.json (2026-09-14)",
           "size": 4875256
         },
         {
@@ -776,6 +776,24 @@
         }
       ],
       "preview": "11617 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11633 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-09-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-14T05:53:09.748712-04:00",
+      "files": [
+        {
+          "path": "data/universe/2026-09-14_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1115803,
+          "preview": "5895 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5895 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
     }
   ],
   "href": {
