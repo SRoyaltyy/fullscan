@@ -1,49 +1,41 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T05:24:34.310912-04:00",
+  "generated_at": "2026-09-14T05:43:27.891687-04:00",
   "n": 322,
   "n_ok": 322,
   "buy_1d": [
-    "INSP",
-    "ICLR",
-    "CYPH",
-    "PTGX",
-    "ATRC",
-    "BMRN",
-    "CLOV",
-    "ACAD"
+    "CVE",
+    "DK"
   ],
   "sell_1d": [
-    "SGML",
-    "RUM",
-    "FUN",
-    "GT",
-    "AXON",
-    "SMR",
-    "CHGG",
-    "XPOF"
+    "SERV",
+    "AHCO",
+    "GRRR",
+    "CIFR",
+    "TDTH",
+    "MSTR",
+    "SPIR",
+    "SLQT",
+    "OWL",
+    "MMYT"
   ],
   "strategies": {
     "stock_book_1d": {
       "buy": [
-        "INSP",
-        "ICLR",
-        "CYPH",
-        "PTGX",
-        "ATRC",
-        "BMRN",
-        "CLOV",
-        "ACAD"
+        "CVE",
+        "DK"
       ],
       "sell": [
-        "SGML",
-        "RUM",
-        "FUN",
-        "GT",
-        "AXON",
-        "SMR",
-        "CHGG",
-        "XPOF"
+        "SERV",
+        "AHCO",
+        "GRRR",
+        "CIFR",
+        "TDTH",
+        "MSTR",
+        "SPIR",
+        "SLQT",
+        "OWL",
+        "MMYT"
       ],
       "sit": false,
       "status": "ok",
@@ -52,97 +44,73 @@
       "side": "mixed",
       "predict": [
         {
-          "ticker": "INSP",
+          "ticker": "CVE",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "ICLR",
+          "ticker": "DK",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "CYPH",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "PTGX",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "ATRC",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "BMRN",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "CLOV",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "ACAD",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "SGML",
+          "ticker": "SERV",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "RUM",
+          "ticker": "AHCO",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "FUN",
+          "ticker": "GRRR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "GT",
+          "ticker": "CIFR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "AXON",
+          "ticker": "TDTH",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "SMR",
+          "ticker": "MSTR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "CHGG",
+          "ticker": "SPIR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "XPOF",
+          "ticker": "SLQT",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "OWL",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "MMYT",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -151,24 +119,20 @@
     },
     "1d_top": {
       "buy": [
-        "INSP",
-        "ICLR",
-        "CYPH",
-        "PTGX",
-        "ATRC",
-        "BMRN",
-        "CLOV",
-        "ACAD"
+        "CVE",
+        "DK"
       ],
       "sell": [
-        "SGML",
-        "RUM",
-        "FUN",
-        "GT",
-        "AXON",
-        "SMR",
-        "CHGG",
-        "XPOF"
+        "SERV",
+        "AHCO",
+        "GRRR",
+        "CIFR",
+        "TDTH",
+        "MSTR",
+        "SPIR",
+        "SLQT",
+        "OWL",
+        "MMYT"
       ],
       "sit": false,
       "status": "ok",
@@ -177,67 +141,186 @@
       "side": "mixed",
       "predict": [
         {
-          "ticker": "INSP",
+          "ticker": "CVE",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "ICLR",
+          "ticker": "DK",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "CYPH",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "PTGX",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "ATRC",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "BMRN",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "CLOV",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "ACAD",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "SGML",
+          "ticker": "SERV",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "RUM",
+          "ticker": "AHCO",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "GRRR",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "CIFR",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "TDTH",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "MSTR",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "SPIR",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "SLQT",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "OWL",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "MMYT",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        }
+      ]
+    },
+    "stock_book_3d": {
+      "buy": [
+        "DK",
+        "TEL",
+        "OLED",
+        "NVT",
+        "BG",
+        "CVE",
+        "HYLN"
+      ],
+      "sell": [
+        "MBC",
+        "LCID",
+        "XPOF",
+        "ASPI",
+        "FUN",
+        "SGML",
+        "GT",
+        "WHR",
+        "ZGN",
+        "TMC",
+        "OPEN",
+        "TLRY",
+        "METC",
+        "DFH",
+        "BEAM"
+      ],
+      "sit": false,
+      "status": "ok",
+      "family": "stock_book",
+      "date": "2026-09-14",
+      "side": "mixed",
+      "predict": [
+        {
+          "ticker": "DK",
+          "side": "long",
+          "predict": "UP",
+          "take": "BUY"
+        },
+        {
+          "ticker": "TEL",
+          "side": "long",
+          "predict": "UP",
+          "take": "BUY"
+        },
+        {
+          "ticker": "OLED",
+          "side": "long",
+          "predict": "UP",
+          "take": "BUY"
+        },
+        {
+          "ticker": "NVT",
+          "side": "long",
+          "predict": "UP",
+          "take": "BUY"
+        },
+        {
+          "ticker": "BG",
+          "side": "long",
+          "predict": "UP",
+          "take": "BUY"
+        },
+        {
+          "ticker": "CVE",
+          "side": "long",
+          "predict": "UP",
+          "take": "BUY"
+        },
+        {
+          "ticker": "HYLN",
+          "side": "long",
+          "predict": "UP",
+          "take": "BUY"
+        },
+        {
+          "ticker": "MBC",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "LCID",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "XPOF",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "ASPI",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
           "ticker": "FUN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "SGML",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -249,176 +332,13 @@
           "take": "SELL"
         },
         {
-          "ticker": "AXON",
+          "ticker": "WHR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "SMR",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "CHGG",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "XPOF",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        }
-      ]
-    },
-    "stock_book_3d": {
-      "buy": [
-        "INSP",
-        "ATRC",
-        "CLOV",
-        "PTGX",
-        "OBE",
-        "DHT",
-        "WTTR",
-        "BFH",
-        "KNTK",
-        "VCTR",
-        "ODD",
-        "ANF",
-        "SLDE",
-        "JXN",
-        "SSL"
-      ],
-      "sell": [
-        "FUN",
-        "FOSL",
-        "TU",
-        "TMC",
-        "SGML",
-        "AREC",
-        "CF",
-        "XPOF",
-        "SSTK",
-        "OPEN",
-        "METC",
-        "CHGG",
-        "ZVIA",
-        "BIDU",
-        "ANGI"
-      ],
-      "sit": false,
-      "status": "ok",
-      "family": "stock_book",
-      "date": "2026-09-14",
-      "side": "mixed",
-      "predict": [
-        {
-          "ticker": "INSP",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "ATRC",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "CLOV",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "PTGX",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "OBE",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "DHT",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "WTTR",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "BFH",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "KNTK",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "VCTR",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "ODD",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "ANF",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "SLDE",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "JXN",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "SSL",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "FUN",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "FOSL",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "TU",
+          "ticker": "ZGN",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -430,37 +350,13 @@
           "take": "SELL"
         },
         {
-          "ticker": "SGML",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "AREC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "CF",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "XPOF",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "SSTK",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
           "ticker": "OPEN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "TLRY",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -472,25 +368,13 @@
           "take": "SELL"
         },
         {
-          "ticker": "CHGG",
+          "ticker": "DFH",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "ZVIA",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "BIDU",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "ANGI",
+          "ticker": "BEAM",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -499,38 +383,30 @@
     },
     "3d_top": {
       "buy": [
-        "INSP",
-        "ATRC",
-        "CLOV",
-        "PTGX",
-        "OBE",
-        "DHT",
-        "WTTR",
-        "BFH",
-        "KNTK",
-        "VCTR",
-        "ODD",
-        "ANF",
-        "SLDE",
-        "JXN",
-        "SSL"
+        "DK",
+        "TEL",
+        "OLED",
+        "NVT",
+        "BG",
+        "CVE",
+        "HYLN"
       ],
       "sell": [
-        "FUN",
-        "FOSL",
-        "TU",
-        "TMC",
-        "SGML",
-        "AREC",
-        "CF",
+        "MBC",
+        "LCID",
         "XPOF",
-        "SSTK",
+        "ASPI",
+        "FUN",
+        "SGML",
+        "GT",
+        "WHR",
+        "ZGN",
+        "TMC",
         "OPEN",
+        "TLRY",
         "METC",
-        "CHGG",
-        "ZVIA",
-        "BIDU",
-        "ANGI"
+        "DFH",
+        "BEAM"
       ],
       "sit": false,
       "status": "ok",
@@ -539,133 +415,55 @@
       "side": "mixed",
       "predict": [
         {
-          "ticker": "INSP",
+          "ticker": "DK",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "ATRC",
+          "ticker": "TEL",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "CLOV",
+          "ticker": "OLED",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "PTGX",
+          "ticker": "NVT",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "OBE",
+          "ticker": "BG",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "DHT",
+          "ticker": "CVE",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "WTTR",
+          "ticker": "HYLN",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "BFH",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "KNTK",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "VCTR",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "ODD",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "ANF",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "SLDE",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "JXN",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "SSL",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "FUN",
+          "ticker": "MBC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "FOSL",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "TU",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "TMC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "SGML",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "AREC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "CF",
+          "ticker": "LCID",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -677,7 +475,43 @@
           "take": "SELL"
         },
         {
-          "ticker": "SSTK",
+          "ticker": "ASPI",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "FUN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "SGML",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "GT",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "WHR",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "ZGN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "TMC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -689,31 +523,25 @@
           "take": "SELL"
         },
         {
+          "ticker": "TLRY",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
           "ticker": "METC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "CHGG",
+          "ticker": "DFH",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "ZVIA",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "BIDU",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "ANGI",
+          "ticker": "BEAM",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -722,38 +550,30 @@
     },
     "stock_book_1w": {
       "buy": [
-        "INSP",
-        "ATRC",
-        "CLOV",
-        "PTGX",
-        "OBE",
-        "DHT",
-        "BFH",
-        "WTTR",
-        "MGY",
-        "VCTR",
-        "ANF",
-        "SLDE",
-        "JXN",
-        "ODD",
-        "SSL"
+        "DK",
+        "TEL",
+        "OLED",
+        "NVT",
+        "BG",
+        "CVE",
+        "HYLN"
       ],
       "sell": [
-        "FUN",
-        "TU",
-        "FOSL",
-        "SGML",
-        "TMC",
-        "AREC",
+        "MBC",
+        "LCID",
         "XPOF",
-        "SSTK",
+        "ASPI",
+        "FUN",
+        "SGML",
+        "GT",
+        "WHR",
+        "ZGN",
+        "TMC",
         "OPEN",
+        "TLRY",
+        "DFH",
         "METC",
-        "CF",
-        "ZVIA",
-        "JOBY",
-        "BIDU",
-        "ANGI"
+        "PRKS"
       ],
       "sit": false,
       "status": "ok",
@@ -762,127 +582,55 @@
       "side": "mixed",
       "predict": [
         {
-          "ticker": "INSP",
+          "ticker": "DK",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "ATRC",
+          "ticker": "TEL",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "CLOV",
+          "ticker": "OLED",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "PTGX",
+          "ticker": "NVT",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "OBE",
+          "ticker": "BG",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "DHT",
+          "ticker": "CVE",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "BFH",
+          "ticker": "HYLN",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "WTTR",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "MGY",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "VCTR",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "ANF",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "SLDE",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "JXN",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "ODD",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "SSL",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "FUN",
+          "ticker": "MBC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "TU",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "FOSL",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "SGML",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "TMC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "AREC",
+          "ticker": "LCID",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -894,7 +642,43 @@
           "take": "SELL"
         },
         {
-          "ticker": "SSTK",
+          "ticker": "ASPI",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "FUN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "SGML",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "GT",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "WHR",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "ZGN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "TMC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -906,37 +690,25 @@
           "take": "SELL"
         },
         {
+          "ticker": "TLRY",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "DFH",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
           "ticker": "METC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "CF",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "ZVIA",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "JOBY",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "BIDU",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "ANGI",
+          "ticker": "PRKS",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -945,38 +717,30 @@
     },
     "1w_top": {
       "buy": [
-        "INSP",
-        "ATRC",
-        "CLOV",
-        "PTGX",
-        "OBE",
-        "DHT",
-        "BFH",
-        "WTTR",
-        "MGY",
-        "VCTR",
-        "ANF",
-        "SLDE",
-        "JXN",
-        "ODD",
-        "SSL"
+        "DK",
+        "TEL",
+        "OLED",
+        "NVT",
+        "BG",
+        "CVE",
+        "HYLN"
       ],
       "sell": [
-        "FUN",
-        "TU",
-        "FOSL",
-        "SGML",
-        "TMC",
-        "AREC",
+        "MBC",
+        "LCID",
         "XPOF",
-        "SSTK",
+        "ASPI",
+        "FUN",
+        "SGML",
+        "GT",
+        "WHR",
+        "ZGN",
+        "TMC",
         "OPEN",
+        "TLRY",
+        "DFH",
         "METC",
-        "CF",
-        "ZVIA",
-        "JOBY",
-        "BIDU",
-        "ANGI"
+        "PRKS"
       ],
       "sit": false,
       "status": "ok",
@@ -985,127 +749,55 @@
       "side": "mixed",
       "predict": [
         {
-          "ticker": "INSP",
+          "ticker": "DK",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "ATRC",
+          "ticker": "TEL",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "CLOV",
+          "ticker": "OLED",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "PTGX",
+          "ticker": "NVT",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "OBE",
+          "ticker": "BG",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "DHT",
+          "ticker": "CVE",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "BFH",
+          "ticker": "HYLN",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "WTTR",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "MGY",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "VCTR",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "ANF",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "SLDE",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "JXN",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "ODD",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "SSL",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "FUN",
+          "ticker": "MBC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "TU",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "FOSL",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "SGML",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "TMC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "AREC",
+          "ticker": "LCID",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -1117,7 +809,43 @@
           "take": "SELL"
         },
         {
-          "ticker": "SSTK",
+          "ticker": "ASPI",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "FUN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "SGML",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "GT",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "WHR",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "ZGN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "TMC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -1129,37 +857,25 @@
           "take": "SELL"
         },
         {
+          "ticker": "TLRY",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "DFH",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
           "ticker": "METC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "CF",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "ZVIA",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "JOBY",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "BIDU",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "ANGI",
+          "ticker": "PRKS",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -1168,38 +884,30 @@
     },
     "stock_book_2w": {
       "buy": [
-        "INSP",
-        "ATRC",
-        "CLOV",
-        "PTGX",
-        "OBE",
-        "DHT",
-        "BFH",
-        "WTTR",
-        "MGY",
-        "VCTR",
-        "SLDE",
-        "JXN",
-        "ANF",
-        "ODD",
-        "SSL"
+        "DK",
+        "TEL",
+        "OLED",
+        "NVT",
+        "BG",
+        "CVE",
+        "HYLN"
       ],
       "sell": [
+        "LCID",
         "FUN",
-        "TU",
-        "SGML",
-        "TMC",
-        "FOSL",
-        "AREC",
-        "METC",
-        "OPEN",
+        "MBC",
         "XPOF",
-        "SSTK",
-        "CF",
-        "JOBY",
-        "BIDU",
+        "SGML",
+        "GT",
         "ASPI",
-        "ANGI"
+        "WHR",
+        "ZGN",
+        "TMC",
+        "PRKS",
+        "OPEN",
+        "METC",
+        "TLRY",
+        "AVTX"
       ],
       "sit": false,
       "status": "ok",
@@ -1208,94 +916,52 @@
       "side": "mixed",
       "predict": [
         {
-          "ticker": "INSP",
+          "ticker": "DK",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "ATRC",
+          "ticker": "TEL",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "CLOV",
+          "ticker": "OLED",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "PTGX",
+          "ticker": "NVT",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "OBE",
+          "ticker": "BG",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "DHT",
+          "ticker": "CVE",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "BFH",
+          "ticker": "HYLN",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "WTTR",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "MGY",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "VCTR",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "SLDE",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "JXN",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "ANF",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "ODD",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "SSL",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
+          "ticker": "LCID",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
         },
         {
           "ticker": "FUN",
@@ -1304,43 +970,7 @@
           "take": "SELL"
         },
         {
-          "ticker": "TU",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "SGML",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "TMC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "FOSL",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "AREC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "METC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "OPEN",
+          "ticker": "MBC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -1352,25 +982,13 @@
           "take": "SELL"
         },
         {
-          "ticker": "SSTK",
+          "ticker": "SGML",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "CF",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "JOBY",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "BIDU",
+          "ticker": "GT",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -1382,7 +1000,49 @@
           "take": "SELL"
         },
         {
-          "ticker": "ANGI",
+          "ticker": "WHR",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "ZGN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "TMC",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "PRKS",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "OPEN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "METC",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "TLRY",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "AVTX",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -1391,38 +1051,30 @@
     },
     "2w_top": {
       "buy": [
-        "INSP",
-        "ATRC",
-        "CLOV",
-        "PTGX",
-        "OBE",
-        "DHT",
-        "BFH",
-        "WTTR",
-        "MGY",
-        "VCTR",
-        "SLDE",
-        "JXN",
-        "ANF",
-        "ODD",
-        "SSL"
+        "DK",
+        "TEL",
+        "OLED",
+        "NVT",
+        "BG",
+        "CVE",
+        "HYLN"
       ],
       "sell": [
+        "LCID",
         "FUN",
-        "TU",
-        "SGML",
-        "TMC",
-        "FOSL",
-        "AREC",
-        "METC",
-        "OPEN",
+        "MBC",
         "XPOF",
-        "SSTK",
-        "CF",
-        "JOBY",
-        "BIDU",
+        "SGML",
+        "GT",
         "ASPI",
-        "ANGI"
+        "WHR",
+        "ZGN",
+        "TMC",
+        "PRKS",
+        "OPEN",
+        "METC",
+        "TLRY",
+        "AVTX"
       ],
       "sit": false,
       "status": "ok",
@@ -1431,94 +1083,52 @@
       "side": "mixed",
       "predict": [
         {
-          "ticker": "INSP",
+          "ticker": "DK",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "ATRC",
+          "ticker": "TEL",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "CLOV",
+          "ticker": "OLED",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "PTGX",
+          "ticker": "NVT",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "OBE",
+          "ticker": "BG",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "DHT",
+          "ticker": "CVE",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "BFH",
+          "ticker": "HYLN",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "WTTR",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "MGY",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "VCTR",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "SLDE",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "JXN",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "ANF",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "ODD",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "SSL",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
+          "ticker": "LCID",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
         },
         {
           "ticker": "FUN",
@@ -1527,43 +1137,7 @@
           "take": "SELL"
         },
         {
-          "ticker": "TU",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "SGML",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "TMC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "FOSL",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "AREC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "METC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "OPEN",
+          "ticker": "MBC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -1575,25 +1149,13 @@
           "take": "SELL"
         },
         {
-          "ticker": "SSTK",
+          "ticker": "SGML",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "CF",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "JOBY",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "BIDU",
+          "ticker": "GT",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -1605,7 +1167,49 @@
           "take": "SELL"
         },
         {
-          "ticker": "ANGI",
+          "ticker": "WHR",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "ZGN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "TMC",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "PRKS",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "OPEN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "METC",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "TLRY",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "AVTX",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -1614,38 +1218,30 @@
     },
     "stock_book_1m": {
       "buy": [
-        "INSP",
-        "ATRC",
-        "CLOV",
-        "PTGX",
-        "OBE",
-        "DHT",
-        "BFH",
-        "MGY",
-        "WTTR",
-        "VCTR",
-        "SLDE",
-        "JXN",
-        "ANF",
-        "ODD",
-        "SSL"
+        "DK",
+        "TEL",
+        "NVT",
+        "OLED",
+        "BG",
+        "CVE",
+        "HYLN"
       ],
       "sell": [
+        "LCID",
         "FUN",
-        "TU",
-        "SGML",
-        "TMC",
-        "FOSL",
-        "AREC",
-        "OPEN",
-        "METC",
+        "MBC",
         "XPOF",
-        "SSTK",
-        "JOBY",
+        "SGML",
+        "GT",
         "ASPI",
-        "BIDU",
-        "ANGI",
-        "WHR"
+        "WHR",
+        "ZGN",
+        "TMC",
+        "PRKS",
+        "OPEN",
+        "OI",
+        "METC",
+        "TLRY"
       ],
       "sit": false,
       "status": "ok",
@@ -1654,94 +1250,52 @@
       "side": "mixed",
       "predict": [
         {
-          "ticker": "INSP",
+          "ticker": "DK",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "ATRC",
+          "ticker": "TEL",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "CLOV",
+          "ticker": "NVT",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "PTGX",
+          "ticker": "OLED",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "OBE",
+          "ticker": "BG",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "DHT",
+          "ticker": "CVE",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "BFH",
+          "ticker": "HYLN",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "MGY",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "WTTR",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "VCTR",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "SLDE",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "JXN",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "ANF",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "ODD",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "SSL",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
+          "ticker": "LCID",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
         },
         {
           "ticker": "FUN",
@@ -1750,43 +1304,7 @@
           "take": "SELL"
         },
         {
-          "ticker": "TU",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "SGML",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "TMC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "FOSL",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "AREC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "OPEN",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "METC",
+          "ticker": "MBC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -1798,13 +1316,13 @@
           "take": "SELL"
         },
         {
-          "ticker": "SSTK",
+          "ticker": "SGML",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "JOBY",
+          "ticker": "GT",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -1816,19 +1334,49 @@
           "take": "SELL"
         },
         {
-          "ticker": "BIDU",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "ANGI",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
           "ticker": "WHR",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "ZGN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "TMC",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "PRKS",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "OPEN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "OI",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "METC",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "TLRY",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -1837,38 +1385,30 @@
     },
     "1m_top": {
       "buy": [
-        "INSP",
-        "ATRC",
-        "CLOV",
-        "PTGX",
-        "OBE",
-        "DHT",
-        "BFH",
-        "MGY",
-        "WTTR",
-        "VCTR",
-        "SLDE",
-        "JXN",
-        "ANF",
-        "ODD",
-        "SSL"
+        "DK",
+        "TEL",
+        "NVT",
+        "OLED",
+        "BG",
+        "CVE",
+        "HYLN"
       ],
       "sell": [
+        "LCID",
         "FUN",
-        "TU",
-        "SGML",
-        "TMC",
-        "FOSL",
-        "AREC",
-        "OPEN",
-        "METC",
+        "MBC",
         "XPOF",
-        "SSTK",
-        "JOBY",
+        "SGML",
+        "GT",
         "ASPI",
-        "BIDU",
-        "ANGI",
-        "WHR"
+        "WHR",
+        "ZGN",
+        "TMC",
+        "PRKS",
+        "OPEN",
+        "OI",
+        "METC",
+        "TLRY"
       ],
       "sit": false,
       "status": "ok",
@@ -1877,94 +1417,52 @@
       "side": "mixed",
       "predict": [
         {
-          "ticker": "INSP",
+          "ticker": "DK",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "ATRC",
+          "ticker": "TEL",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "CLOV",
+          "ticker": "NVT",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "PTGX",
+          "ticker": "OLED",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "OBE",
+          "ticker": "BG",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "DHT",
+          "ticker": "CVE",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "BFH",
+          "ticker": "HYLN",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "MGY",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "WTTR",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "VCTR",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "SLDE",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "JXN",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "ANF",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "ODD",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "SSL",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
+          "ticker": "LCID",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
         },
         {
           "ticker": "FUN",
@@ -1973,43 +1471,7 @@
           "take": "SELL"
         },
         {
-          "ticker": "TU",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "SGML",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "TMC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "FOSL",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "AREC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "OPEN",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "METC",
+          "ticker": "MBC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -2021,13 +1483,13 @@
           "take": "SELL"
         },
         {
-          "ticker": "SSTK",
+          "ticker": "SGML",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "JOBY",
+          "ticker": "GT",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -2039,19 +1501,49 @@
           "take": "SELL"
         },
         {
-          "ticker": "BIDU",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "ANGI",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
           "ticker": "WHR",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "ZGN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "TMC",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "PRKS",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "OPEN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "OI",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "METC",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "TLRY",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
