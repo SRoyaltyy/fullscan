@@ -88,6 +88,8 @@ def test_factor_mine_template_paints_every_strategy() -> None:
             / "src" / "factor_mine_dash.html").read_text(encoding="utf-8")
     assert "today_strategies.json" in html
     assert "every strategy" in html
+    assert "open_px" in html
+    assert "RESEARCH" in html
     assert "liveStartRow" in html
     assert "pending — not 0%" in html
     assert html.index("<h1>Factor strategy mine") < html.index('id="liveDay"')
@@ -156,6 +158,9 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "Publish strategy tickets" in dep
     assert "gh workflow run deploy-dashboard.yml" in pub
     assert "scripts/publish_dashboard.sh" in pub
+    assert "FINVIZ_EMAIL" in pub
+    assert "open_px" in book_suggestions._POLLER_JS
+    assert "RESEARCH" in book_suggestions._POLLER_JS
 
 
 def test_inspect_html_ok_when_poller_and_sidecar() -> None:

@@ -1677,7 +1677,13 @@ window.addEventListener('resize', draw);
   if(!stamp||!pills) return;
   function names(rows){
     return (rows||[]).map(function(x){
-      return typeof x==='string'?x:((x&&(x.ticker||x.symbol))||'');
+      if(typeof x==='string') return x;
+      var t=(x&&(x.ticker||x.symbol))||'';
+      if(!t) return '';
+      var bit=t;
+      if(x&&x.px!=null) bit+=' '+x.px;
+      if(x&&x.open_px!=null&&x.open_px!==x.px) bit+=' (open '+x.open_px+')';
+      return bit;
     }).filter(Boolean);
   }
   Promise.all([
@@ -1705,6 +1711,14 @@ window.addEventListener('resize', draw);
         html+=(b.length&&sl.length?' · ':'');
         html+=(sl.length?'SELL '+sl.join(' · '):'');
         if(!b.length&&!sl.length) html+=(s.sit?'sit':'—');
+        if(s.research&&s.research.tag){
+          html+=' <span class="mut">RESEARCH';
+          var so=(s.research.short_only||[]).map(function(r){return r.ticker;}).filter(Boolean);
+          var dp=(s.research.dip_scoop||[]).map(function(r){return r.ticker;}).filter(Boolean);
+          if(so.length) html+=' short-only '+so.join(' · ');
+          if(dp.length) html+=' dip-scoop '+dp.join(' · ');
+          html+='</span>';
+        }
         html+='</div>';
       });
     }

@@ -134,7 +134,14 @@ machine data/strategy_board/catalog.json · write-up 03_scoreboard/STRATEGY_BOAR
     if(!rows) return [];
     return rows.map(function(x){
       if(typeof x === "string") return x;
-      return (x && (x.ticker || x.symbol)) || "";
+      var t = (x && (x.ticker || x.symbol)) || "";
+      if(!t) return "";
+      var px = (x && x.px != null) ? x.px : null;
+      var op = (x && x.open_px != null) ? x.open_px : null;
+      var bit = t;
+      if(px != null) bit += " " + px;
+      if(op != null && op !== px) bit += " (open " + op + ")";
+      return bit;
     }).filter(Boolean);
   }
   function paint(d){
@@ -160,6 +167,15 @@ machine data/strategy_board/catalog.json · write-up 03_scoreboard/STRATEGY_BOAR
         extra += (b.length && sl.length ? " · " : "");
         extra += (sl.length ? "SELL " + sl.join(" · ") : "");
         if(!b.length && !sl.length) extra += (tag === "SIT" || s.sit ? "sit" : "—");
+        var res = s.research;
+        if(res && res.tag){
+          extra += ' <span class="live-book-date">RESEARCH';
+          var so = (res.short_only || []).map(function(r){ return r.ticker; }).filter(Boolean);
+          var dp = (res.dip_scoop || []).map(function(r){ return r.ticker; }).filter(Boolean);
+          if(so.length) extra += " short-only " + so.join(" · ");
+          if(dp.length) extra += " dip-scoop " + dp.join(" · ");
+          extra += "</span>";
+        }
         var preds = s.predict || [];
         if(preds.length){
           extra += " · ";
