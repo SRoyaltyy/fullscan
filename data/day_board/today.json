@@ -1,11 +1,11 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T05:24:20.111120-04:00",
+  "generated_at": "2026-09-14T05:38:29.979957-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 4,
-    "partial": 4,
+    "ok": 5,
+    "partial": 3,
     "fail": 0,
     "n": 8
   },
@@ -41,31 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "events",
-      "title": "Event scanner (primary)",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:25:10.268857-04:00",
-      "files": [
-        {
-          "path": "01_daily/events/2026-09-14_events.json",
-          "ok": true,
-          "reason": "",
-          "size": 28795,
-          "preview": "29 events \u00b7 FOMC decision, SEP/dot plot, Warsh press conference | August CPI \u2014 inflation held at 3.4% y/y, locking in hike | August advance retail sales | Bank of Japan decision \u2014 hike to 1.25% widely expected | Bank of England decision \u2014 hold at 3.75% expected | ECB 25bp hike to 2.50% delivered; fourth move in question"
-        },
-        {
-          "path": "01_daily/events/2026-09-14_events.md",
-          "ok": true,
-          "reason": "",
-          "size": 10712,
-          "preview": "# Event Scan \u2014 2026-09-14\n- events tracked: **29** (via openclaw)\n- uncertainty: **?**\n- summary:"
-        }
-      ],
-      "preview": "29 events \u00b7 FOMC decision, SEP/dot plot, Warsh press conference | August CPI \u2014 inflation held at 3.4% y/y, locking in hike | August advance retail sales | Bank of Japan decision \u2014 hike to 1.25% widely expected | Bank of England decision \u2014 hold at 3.75% expected | ECB 25bp hike to 2.50% delivered; fourth move in question \u00b7 # Event Scan \u2014 2026-09-14\n- events tracked: **29** (via openclaw)\n- uncertainty: **?**\n- summary:"
-    },
     {
       "key": "news_actions",
       "title": "News actions",
@@ -219,6 +194,31 @@
         }
       ],
       "preview": "11615 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11633 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "catalyst",
+      "title": "Catalyst dossiers (after book)",
+      "date": "2026-09-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-14T05:38:29.468923-04:00",
+      "files": [
+        {
+          "path": "01_daily/catalyst/2026-09-14_dossiers.json",
+          "ok": true,
+          "reason": "",
+          "size": 6361,
+          "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, targets, dossiers"
+        },
+        {
+          "path": "01_daily/catalyst/2026-09-14_dossiers.md",
+          "ok": true,
+          "reason": "",
+          "size": 2695,
+          "preview": "# CATALYST DAILY \u2014 2026-09-14\n1/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+        }
+      ],
+      "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-09-14\n1/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

@@ -1,12 +1,12 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T04:55:33.681700-04:00",
+  "generated_at": "2026-09-14T05:38:29.979957-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 4,
-    "partial": 4,
+    "ok": 5,
+    "partial": 3,
     "fail": 0,
     "n": 8
   },
@@ -185,7 +185,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 32239
+          "size": 33045
         },
         {
           "key": "general",
@@ -372,8 +372,8 @@
           "path": "01_daily/weather/2026-09-14_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10687 vix=spiking yields=rising",
-          "size": 10687
+          "reason": "sectors=11 bytes=10688 vix=spiking yields=rising",
+          "size": 10688
         }
       ],
       "said": "hostile 9 \u00b7 neutral 2",
@@ -421,11 +421,11 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -435,7 +435,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 32239
+          "size": 33045
         },
         {
           "key": "in_digest",
@@ -451,9 +451,9 @@
           "name": "Catalyst dossiers JSON",
           "path": "01_daily/catalyst/2026-09-14_dossiers.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "usable=1/8",
+          "size": 6361
         }
       ],
       "said": "",
@@ -495,7 +495,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 32239
+          "size": 33045
         },
         {
           "key": "in_digest",
@@ -521,8 +521,8 @@
           "path": "01_daily/weather/2026-09-14_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10687 vix=spiking yields=rising",
-          "size": 10687
+          "reason": "sectors=11 bytes=10688 vix=spiking yields=rising",
+          "size": 10688
         },
         {
           "key": "in_ab",
@@ -1242,6 +1242,31 @@
         }
       ],
       "preview": "11615 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11633 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "catalyst",
+      "title": "Catalyst dossiers (after book)",
+      "date": "2026-09-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-14T05:38:29.468923-04:00",
+      "files": [
+        {
+          "path": "01_daily/catalyst/2026-09-14_dossiers.json",
+          "ok": true,
+          "reason": "",
+          "size": 6361,
+          "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, targets, dossiers"
+        },
+        {
+          "path": "01_daily/catalyst/2026-09-14_dossiers.md",
+          "ok": true,
+          "reason": "",
+          "size": 2695,
+          "preview": "# CATALYST DAILY \u2014 2026-09-14\n1/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+        }
+      ],
+      "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-09-14\n1/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
     }
   ],
   "href": {

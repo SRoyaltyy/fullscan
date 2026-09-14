@@ -1,0 +1,168 @@
+{
+  "date": "2026-09-14",
+  "generated_at": "2026-09-14T05:38:29.185440-04:00",
+  "max_n": 8,
+  "routing": "Grok \u2192 DeepSeek",
+  "grok": true,
+  "deepseek_fallback": true,
+  "gemini": false,
+  "n_targets": 8,
+  "n_ok": 1,
+  "targets": [
+    {
+      "ticker": "CENX",
+      "role": "override_captain",
+      "why": "OVERRIDE card Aluminum"
+    },
+    {
+      "ticker": "CSTM",
+      "role": "override_captain",
+      "why": "OVERRIDE card Aluminum"
+    },
+    {
+      "ticker": "SLVM",
+      "role": "override_captain",
+      "why": "OVERRIDE card Paper & Paper Products"
+    },
+    {
+      "ticker": "NMAX",
+      "role": "override_captain",
+      "why": "OVERRIDE card Broadcasting"
+    },
+    {
+      "ticker": "FUBO",
+      "role": "override_captain",
+      "why": "OVERRIDE card Broadcasting"
+    },
+    {
+      "ticker": "KSS",
+      "role": "override_captain",
+      "why": "OVERRIDE card Department Stores"
+    },
+    {
+      "ticker": "AIN",
+      "role": "override_captain",
+      "why": "OVERRIDE card Textile Manufacturing"
+    },
+    {
+      "ticker": "MPC",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Refining & Marketing"
+    }
+  ],
+  "dossiers": [
+    {
+      "ticker": "CENX",
+      "role": "override_captain",
+      "why": "OVERRIDE card Aluminum",
+      "net_signal": "Strong Bullish",
+      "conviction": 67,
+      "search_backend": "deepseek_fallback",
+      "catalyst_stack": "On 2026-05-05, Centrus reported Q1 2026 net income of $10.0M ($0.45 diluted) with adjusted net income of $23.5M, while simultaneously raising full-year 2026 revenue guidance and disclosing a joint-venture exploration with Oklo for HALEU deconversion services. On 2026-08-05, Q2 2026 net income accelerated to $16.8M ($0.77 diluted), with management citing multiple commercial wins for its future enrichment business amid industry tailwinds. On 2026-09-14, a tentative U.S.-Canada trade deal that could cut tariffs on some Canadian steel and aluminum imports to 25% from 50% introduced a policy-driven swing factor for the domestic enrichment and materials complex. The cumulative stack of earnings growth, guidance raise, strategic partnership, and favorable policy headlines skews positive, though the tariff headline is a two-sided macro input rather than a company-specific catalyst.",
+      "key_assumption": "The Oklo HALEU deconversion JV and raised 2026 guidance translate into durable commercial contracts and revenue recognition, and the U.S.-Canada tariff easing does not materially undercut Centrus' domestic enrichment pricing power or policy support.",
+      "n_pos": 5,
+      "n_neg": 1,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+          "event_date": "2026-08-05",
+          "headline": "The Company reported net income of $16.8 million for the three months ended June 30, 2026, which is $0.85 (basic) and $0.77 (diluted) per common share.",
+          "weight": 10,
+          "confidence": 90
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Government policy (tariffs, subsidies, mandates)",
+          "event_date": "2026-09-14",
+          "headline": "Bloomberg: tentative U.S.-Canada trade deal could cut tariffs on some Canadian steel, aluminum imports to 25% from 50%",
+          "weight": 10,
+          "confidence": 75
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-08-05",
+          "headline": "This was another strong quarter of financial and operational progress for Centrus that included a number of commercial wins for our future enrichment business",
+          "weight": 9,
+          "confidence": 85
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings guidance raise",
+          "event_date": "2026-05-05",
+          "headline": "Raising full year 2026 revenue guidance based on commercial progress",
+          "weight": 8,
+          "confidence": 90
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Strategic partnership/alliance",
+          "event_date": "2026-05-05",
+          "headline": "Exploring joint-venture with Oklo focused on deconversion services for high-assay, low-enriched uranium (HALEU)",
+          "weight": 7,
+          "confidence": 90
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Dilutive offering / capital raise",
+          "event_date": "2026-09-09",
+          "headline": "On September 09, 2026, Centrus Energy Corp LEU ... announced plans to raise $500 million through an overnight stock sale. The offering price ... is set at $199.",
+          "weight": 5,
+          "confidence": 80
+        }
+      ],
+      "error": null
+    },
+    {
+      "ticker": "CSTM",
+      "role": "override_captain",
+      "why": "OVERRIDE card Aluminum",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 CSTM"
+    },
+    {
+      "ticker": "SLVM",
+      "role": "override_captain",
+      "why": "OVERRIDE card Paper & Paper Products",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP2 SLVM"
+    },
+    {
+      "ticker": "NMAX",
+      "role": "override_captain",
+      "why": "OVERRIDE card Broadcasting",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP2 NMAX"
+    },
+    {
+      "ticker": "FUBO",
+      "role": "override_captain",
+      "why": "OVERRIDE card Broadcasting",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP2 FUBO"
+    },
+    {
+      "ticker": "KSS",
+      "role": "override_captain",
+      "why": "OVERRIDE card Department Stores",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP2 KSS"
+    },
+    {
+      "ticker": "AIN",
+      "role": "override_captain",
+      "why": "OVERRIDE card Textile Manufacturing",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 AIN"
+    },
+    {
+      "ticker": "MPC",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Refining & Marketing",
+      "net_signal": null,
+      "conviction": null,
+      "search_backend": null,
+      "catalyst_stack": "",
+      "key_assumption": "",
+      "n_pos": 0,
+      "n_neg": 0,
+      "top_hits": [],
+      "error": "Step 2 parse failure"
+    }
+  ]
+}
