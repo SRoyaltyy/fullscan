@@ -13,7 +13,6 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          ref: fm-morning-side-polarity
       - name: Apply polarity patches
         run: |
           set -euo pipefail
@@ -31,4 +30,4 @@ jobs:
           git config user.email "bot@users.noreply.github.com"
           git add src/factor_mine_sim.js src/factor_mine_dash.html src/strategy_tickets.py
           git commit -m "feat: morning board Side + polarity Pred tally" || echo No changes
-          git push origin fm-morning-side-polarity
+          git push origin HEAD
