@@ -94,6 +94,26 @@ def _combo_panel():
     return _panel(rows), bars, regime
 
 
+def test_yahoo_overlay_does_not_clobber_official_open() -> None:
+    # Parquet / injected official open wins; Yahoo is only a hole-filler.
+    from unittest import mock
+    fake = {("INDP", hrs.ASOF): {
+        "open": 9.0, "low": 8.0, "close": 8.5, "src": "yahoo_session"}}
+    bars = {("INDP", hrs.ASOF): {"open": 5.0, "low": 4.7, "close": None}}
+    with mock.patch.object(hrs, "yahoo_session_overlay", return_value=fake):
+        cf = hrs.counterfactual_0914(
+            panel={"by_date": {}, "session_dates": [hrs.ASOF]},
+            recs=_recs(), spec={"members": [], "weights": [1, 1]},
+            bars=bars, fees=ZERO_FEES,
+            regime={hrs.ASOF: {"predict_score": -11.0}},
+            flatten_days=[], look_rows=[
+                _row(hrs.ASOF, "INDP", sources=["ohlc_hot"]),
+            ])
+    indp = next(r for r in cf["webull_would"] if r["ticker"] == "INDP")
+    assert abs(float(indp["open"]) - 5.0) < 1e-9
+    assert indp.get("px_src") != "yahoo_session"
+
+
 def test_dip_limit_clock_clean() -> None:
     fill, kind = fmc.dip_limit_px(100.0, 98.0, 1.5)
     assert kind == "scoop" and abs(fill - 98.5) < 1e-9
@@ -331,6 +351,7 @@ def test_md_lists_the_gate() -> None:
 
 
 def main() -> None:
+    test_yahoo_overlay_does_not_clobber_official_open()
     test_dip_limit_clock_clean()
     test_hard_red_skip_modes()
     test_default_sit_still_blocks_long_and_short()
@@ -340,7 +361,7 @@ def main() -> None:
     test_after_fee_and_keep_kill()
     test_run_synthetic_board()
     test_md_lists_the_gate()
-    print("test_hard_red_sit_research: 9 ok")
+    print("test_hard_red_sit_research: 10 ok")
 
 
 if __name__ == "__main__":

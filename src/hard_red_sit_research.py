@@ -66,7 +66,52 @@ def clock_bar(ticker: str, date: str, bars=None) -> dict:
         "high": fm._finite(bar.get("high")),
         "low": fm._finite(bar.get("low")),
         "close": fm._finite(bar.get("close")),
+        "src": bar.get("src"),
     }
+
+
+def yahoo_session_overlay(tickers: list[str], date: str) -> dict:
+    """Regular-session Yahoo bar when parquet has not landed that date.
+
+    Open / high / low are the printed regular session. Close is the
+    last print Yahoo has — **not** a 16:00 mark if the session is still
+    open. Research overlay only; does not write ``ohlc.parquet``.
+    """
+    names = sorted({fm._tick(t) for t in tickers if fm._tick(t)})
+    if not names:
+        return {}
+    try:
+        from src.price_store import _yf_download
+    except Exception:
+        return {}
+    # yfinance end is exclusive; +1 calendar day is enough.
+    y, m, d = (int(x) for x in date.split("-"))
+    from datetime import date as _date, timedelta
+    end = (_date(y, m, d) + timedelta(days=2)).isoformat()
+    try:
+        df = _yf_download(names, date, end)
+    except Exception:
+        return {}
+    if df is None or getattr(df, "empty", True):
+        return {}
+    out = {}
+    try:
+        recs = df.to_dict(orient="records")
+    except Exception:
+        return {}
+    for rec in recs:
+        t = fm._tick(rec.get("ticker"))
+        d0 = str(rec.get("date") or "")[:10]
+        if not t or d0 != date:
+            continue
+        out[(t, date)] = {
+            "open": fm._finite(rec.get("open")),
+            "high": fm._finite(rec.get("high")),
+            "low": fm._finite(rec.get("low")),
+            "close": fm._finite(rec.get("close")),
+            "src": "yahoo_session",
+        }
+    return out
 
 
 def after_fee_pnl(shares: int, entry: float, exit_px: float, *,
@@ -507,26 +552,45 @@ def counterfactual_0914(*, panel: dict, recs: list[dict], spec: dict,
         except Exception:
             rows = (panel.get("by_date") or {}).get(ASOF) or []
     would = []
+    seen = set()
     for rec in recs:
         for r in fm.pick_day(rows or [], rec):
             t = fm._tick(r.get("ticker"))
-            if not t:
+            if not t or t in seen:
                 continue
+            seen.add(t)
             would.append({
                 "ticker": t,
                 "sleeve": rec["name"],
                 "kid_side": rec.get("side") or "long",
                 "clock": "09:30 ET",
+                "source": "look",
             })
-    if not would:
-        would = (_pin_would(ASOF, list(WEBULL_0914_LONGS), "long")
-                 + _pin_would(ASOF, list(WEBULL_0914_SHORTS), "short"))
+    pinned = (_pin_would(ASOF, list(WEBULL_0914_LONGS), "long")
+              + _pin_would(ASOF, list(WEBULL_0914_SHORTS), "short"))
+    for p in pinned:
+        t = p["ticker"]
+        if t in seen:
+            continue
+        seen.add(t)
+        would.append({**p, "source": "war_room_pin"})
     flat_names = []
     for d in flatten_days:
         if d.get("date") == ASOF:
             flat_names = list(d.get("tickers") or [])
     if not flat_names:
         flat_names = list(FLATTEN_0914)
+    for t in FLATTEN_0914:
+        if t not in flat_names:
+            flat_names.append(t)
+    need = [w["ticker"] for w in would] + list(flat_names)
+    overlay = yahoo_session_overlay(need, ASOF)
+    if overlay:
+        bars = dict(bars or {})
+        for k, v in overlay.items():
+            cur = bars.get(k) or {}
+            if fm._finite(cur.get("open")) is None:
+                bars[k] = v
 
     def _name_card(t: str, side: str, sleeve: str) -> dict:
         bar = clock_bar(t, ASOF, bars)
@@ -550,6 +614,8 @@ def counterfactual_0914(*, panel: dict, recs: list[dict], spec: dict,
         return {
             "ticker": t, "side": side, "sleeve": sleeve,
             "open": o, "low": low, "close": c,
+            "px_src": bar.get("src") or ("parquet" if o is not None else None),
+            "close_is_last": bar.get("src") == "yahoo_session",
             "dip_from_open_pct": (
                 None if o is None or low is None or o <= 0
                 else round(100.0 * (o - low) / o, 3)
@@ -575,11 +641,13 @@ def counterfactual_0914(*, panel: dict, recs: list[dict], spec: dict,
         "note": (
             "A sits all. B fires shorts at the clock-clean 09:30 open. "
             "C fires a long only if the session low reached open−X%; "
-            "fill is that limit. 09-14 close may still be unprinted — "
-            "same-day P&L is blank without a 16:00 mark. DK / any name "
-            "without an official 09:30 open is no-price, not a last-close "
-            "substitute."
+            "fill is that limit. 09-14 prices, when parquet has not "
+            "landed, use Yahoo's regular-session open/high/low; the "
+            "close column is the last print so far — not a 16:00 mark. "
+            "Flatten's live card used last-close for DK; that is not "
+            "the scoop reference. Scoop uses the official 09:30 open."
         ),
+        "yahoo_overlay_n": len(overlay),
     }
 
 
@@ -589,6 +657,15 @@ def _pct(v) -> str:
 
 def _n(v) -> str:
     return "—" if v is None else f"{float(v):+.2f}"
+
+
+def _pxs(v, n: int = 2) -> str:
+    if v is None:
+        return "—"
+    try:
+        return f"{float(v):.{n}f}"
+    except (TypeError, ValueError):
+        return "—"
 
 
 def _plain_0914(cf: dict) -> list[str]:
@@ -601,44 +678,51 @@ def _plain_0914(cf: dict) -> list[str]:
     web = cf.get("webull_would") or []
     longs = [r for r in web if r.get("side") == "long"]
     shorts = [r for r in web if r.get("side") == "short"]
+    def _long_bit(r: dict) -> str:
+        if r.get("no_price"):
+            return f"{r['ticker']} (no 09:30 open)"
+        dip = r.get("dip_from_open_pct")
+        hits = []
+        for x, sc in (r.get("scoops") or {}).items():
+            if (sc or {}).get("kind") == "scoop":
+                hits.append(f"{x}%")
+        hit = ("would scoop at " + ", ".join(hits)) if hits else "no X on the grid hit"
+        last = r.get("close")
+        last_s = "" if last is None else (
+            f", last {_pxs(last, 3)}"
+            + (" (not 16:00)" if r.get("close_is_last") else "")
+        )
+        return (
+            f"{r['ticker']} (open {_pxs(r.get('open'), 3)}, low −"
+            f"{'—' if dip is None else f'{dip:.2f}'}% — {hit}{last_s})"
+        )
+
     if longs:
-        bits = []
-        for r in longs:
-            dip = r.get("dip_from_open_pct")
-            bits.append(
-                f"{r['ticker']}"
-                + (" (no 09:30 open)" if r.get("no_price")
-                   else f" (open {r.get('open')}, low −"
-                        f"{'—' if dip is None else f'{dip:.2f}'}%)")
-            )
-        lines.append("Webull dry longs that sat: " + ", ".join(bits) + ".")
+        lines.append("Webull longs that sat: " + "; ".join(_long_bit(r) for r in longs) + ".")
     if shorts:
         bits = []
         for r in shorts:
+            if r.get("no_price"):
+                bits.append(f"{r['ticker']} (no 09:30 open)")
+                continue
+            last = r.get("close")
+            how = "last" if r.get("close_is_last") else "close"
+            pnl = _n(r.get("same_day_oc_pnl_short"))
             bits.append(
-                f"{r['ticker']}"
-                + (" (no 09:30 open)" if r.get("no_price")
-                   else f" (open {r.get('open')} → close {r.get('close')}; "
-                        f"short after-fee 1-share "
-                        f"{_n(r.get('same_day_oc_pnl_short'))})")
+                f"{r['ticker']} (short at open {_pxs(r.get('open'))} → "
+                f"{how} {_pxs(last)}; 1-share after-fee {pnl}, "
+                f"fee-dominated, not cash-book size)"
             )
         lines.append(
-            "Webull dry short that sat (the short kid): "
-            + ", ".join(bits) + "."
+            "Webull shorts that sat (the short kid): "
+            + "; ".join(bits) + "."
         )
     flat = cf.get("flatten_would") or []
     if flat:
-        bits = []
-        for r in flat:
-            dip = r.get("dip_from_open_pct")
-            bits.append(
-                f"{r['ticker']}"
-                + (" (no 09:30 open — not a last-close fill)"
-                   if r.get("no_price")
-                   else f" (open {r.get('open')}, low −"
-                        f"{'—' if dip is None else f'{dip:.2f}'}%)")
-            )
-        lines.append("Flatten/io would-haves that sat: " + ", ".join(bits) + ".")
+        lines.append(
+            "Flatten/io would-haves that sat: "
+            + "; ".join(_long_bit(r) for r in flat) + "."
+        )
     lines.append("")
     lines.append(str(cf.get("note") or ""))
     return lines
@@ -674,6 +758,12 @@ def render_md(payload: dict) -> str:
         f"(S≤{fmb.HARD_RED:g}): **{len(red)}** — "
         + (", ".join(f"`{r['date']}` S={r['s']}" for r in red) or "none")
         + ".",
+        "",
+        "Book% on the continuous $10k combo path is **not** the KEEP "
+        "bar. Scoop / short-only books look richer because those extra "
+        "lots stay held into later non-red days. KEEP only grades the "
+        "hard-red **fires** after Futubull fees. A fat Book% with a "
+        "coin-flip hard-red win rate is still KILL.",
         "",
         "## KEEP bar",
         "",
