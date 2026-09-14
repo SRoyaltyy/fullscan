@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T04:25:54.003073-04:00",
+  "generated_at": "2026-09-14T04:27:03.784761-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -12,34 +12,20 @@
   "buy_1d": [],
   "sell_1d": [],
   "flatten": {},
-  "general": {},
+  "general": {
+    "said": "DOWN  -11.002",
+    "bullets": [
+      "bad: AI-slowdown shock (Amodei/Altman, SoftBank -12%)",
+      "bad: fresh Saudi/Hormuz strikes, Brent $107",
+      "bad: Sep 16 FOMC hike ~56-77%",
+      "good: FTSE +0.58% on energy bid",
+      "good: HY tight 2.70"
+    ],
+    "score": "-11.002",
+    "direction": "down"
+  },
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat_baseline",
-      "title": "Map heat night baseline",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:18:38.418829-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-14_research_baseline.json",
-          "ok": true,
-          "reason": "",
-          "size": 366351,
-          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-14_research_baseline.md",
-          "ok": true,
-          "reason": "",
-          "size": 43435,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-14\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-14\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-    },
     {
       "key": "universe",
       "title": "Universe labels",
@@ -193,6 +179,24 @@
         }
       ],
       "preview": "# News Judge \u2014 2026-09-14 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-09-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-14T04:27:03.467890-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-09-14_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 12096,
+          "preview": "# Premarket Prediction \u2014 2026-09-14\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -11.002 (uncertainty multiplier \u00d71.1) | confidence 0.85\n>\n> **Good news vs bad news:** good +0 pts vs bad -12.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - FTSE +0.58% on energy bid\n> - HY tight 2.70\n> - Hang Seng +0.45%\n> - dollar 1m still -0.38%\n> - RRP build is plumbing not stress\n>\n> **Bad news driving this:**\n> - AI-slowdown shock (Amodei/Altman, SoftBank -12%)\n> - fresh Saudi/Hormuz strikes, Brent $107\n> - Sep 16 FOMC hike ~56-77%\n> - VIX backwardation 1.133\n> - NQ -1.58% leading down\n>\n> **market uncertainty: **elevated** | VIX 17.64 | policy-uncertainty index 725.88 (1d +451.17)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight ne"
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-09-14\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -11.002 (uncertainty multiplier \u00d71.1) | confidence 0.85\n>\n> **Good news vs bad news:** good +0 pts vs bad -12.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - FTSE +0.58% on energy bid\n> - HY tight 2.70\n> - Hang Seng +0.45%\n> - dollar 1m still -0.38%\n> - RRP build is plumbing not stress\n>\n> **Bad news driving this:**\n> - AI-slowdown shock (Amodei/Altman, SoftBank -12%)\n> - fresh Saudi/Hormuz strikes, Brent $107\n> - Sep 16 FOMC hike ~56-77%\n> - VIX backwardation 1.133\n> - NQ -1.58% leading down\n>\n> **market uncertainty: **elevated** | VIX 17.64 | policy-uncertainty index 725.88 (1d +451.17)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight ne"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
