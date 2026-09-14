@@ -1,0 +1,200 @@
+--- a/src/strategy_tickets.py
++++ b/src/strategy_tickets.py
+@@ -40,6 +40,9 @@
+                 item["score"] = row.get("score")
+             elif row.get("total") is not None:
+                 item["score"] = row.get("total")
++            for k in ("src", "kid_side", "side", "predict"):
++                if row.get(k) is not None:
++                    item[k] = row.get(k)
+             out.append(item)
+         else:
+             t = str(row).strip().upper()
+@@ -52,13 +55,44 @@
+     return [x["ticker"] for x in _tickers(rows) if x.get("ticker")]
+ 
+ 
++def _tag_polarity(rows: list[dict], default_side: str) -> list[dict]:
++    out = []
++    for row in rows:
++        item = dict(row)
++        side = str(item.get("kid_side") or item.get("side") or default_side or "long").lower()
++        if side not in ("long", "short"):
++            side = "long"
++        item["side"] = side
++        item["predict"] = "DOWN" if side == "short" else "UP"
++        out.append(item)
++    return out
++
++
+ def _entry(name: str, family: str, date: str, buy, sell, **extra) -> dict:
+     buys = _tickers(buy)
+     sells = _tickers(sell)
++    side = extra.get("side")
++    if not side:
++        if sells and not buys:
++            side = "short"
++        elif buys and sells:
++            side = "mixed"
++        else:
++            kid_sides = {str(x.get("kid_side") or x.get("side") or "").lower() for x in buys}
++            kid_sides.discard("")
++            if kid_sides == {"short"}:
++                side = "short"
++            elif "short" in kid_sides and "long" in kid_sides:
++                side = "mixed"
++            else:
++                side = "long"
++    buys = _tag_polarity(buys, "short" if side == "short" else "long")
++    sells = _tag_polarity(sells, "short")
+     row = {
+         "name": name,
+         "family": family,
+         "date": date,
++        "side": side,
+         "buy": buys,
+         "sell": sells,
+         "buy_n": len(buys),
+@@ -104,15 +138,21 @@
+         }
+     for h in ("1d", "3d", "1w", "2w", "1m"):
+         block = horizons.get(h) or {}
++        mixed = bool(block.get("buy")) and bool(block.get("sell"))
++        book_side = "mixed" if mixed else (
++            "short" if block.get("sell") and not block.get("buy") else "long"
++        )
+         out.append(_entry(
+             f"stock_book_{h}", "stock_book", date,
+             block.get("buy"), block.get("sell"),
+             note="weighted ranker horizon",
++            side=book_side,
+         ))
+         out.append(_entry(
+             f"{h}_top", "paper", date,
+             block.get("buy"), block.get("sell"),
+             note="paper sleeve = same ranker list",
++            side=book_side,
+         ))
+     return out
+ 
+@@ -150,6 +190,7 @@
+         why=why,
+         status="ok" if card else "missing",
+         note="live flatten_robust card",
++        side="long",
+     )
+ 
+ 
+@@ -204,16 +245,23 @@
+     stale = use_date != date
+     for rec in recs:
+         name = rec["name"]
++        rec_side = str(rec.get("side") or "long")
+         is_combo = (rec.get("universe") == "combo" or rec.get("members")
+                     or name.startswith("combo_"))
+         if is_combo:
+             spec = specs.get(name) or {}
+             members = list(rec.get("members") or spec.get("members") or [])
++            kid_sides = {str((rec_by.get(m) or {}).get("side") or "long") for m in members}
++            if len(kid_sides) > 1:
++                rec_side = "mixed"
++            elif kid_sides:
++                rec_side = next(iter(kid_sides))
+             if not members:
+                 out.append(_entry(
+                     name, "factor_mine", use_date or date, [], [],
+                     status="combo_unknown_members",
+                     note="combo_* name not in combo_specs — cannot build a 09:30 list",
++                    side=rec_side,
+                 ))
+                 continue
+             if not rows:
+@@ -221,6 +269,7 @@
+                     name, "factor_mine", date, [], [],
+                     status="no_panel_day",
+                     note=f"no panel rows for {date}",
++                    side=rec_side,
+                 ))
+                 continue
+             try:
+@@ -229,6 +278,7 @@
+                 out.append(_entry(
+                     name, "factor_mine", use_date or date, [], [],
+                     status="pick_fail", note=str(e)[:160],
++                    side=rec_side,
+                 ))
+                 continue
+             note = ("combo shopping list = member 09:30 lists (union); "
+@@ -241,6 +291,7 @@
+                     status="sit",
+                     note="hard-red S≤−3 — no new lots; names are would-buy",
+                     why=f"S={s}",
++                    side=rec_side,
+                 ))
+             else:
+                 out.append(_entry(
+@@ -248,6 +299,7 @@
+                     s=s,
+                     status="stale_panel" if stale else "ok",
+                     note=note,
++                    side=rec_side,
+                 ))
+             continue
+         if not rows:
+@@ -255,6 +307,7 @@
+                 name, "factor_mine", date, [], [],
+                 status="no_panel_day",
+                 note=f"no panel rows for {date}",
++                side=rec_side,
+             ))
+             continue
+         try:
+@@ -263,6 +316,7 @@
+             out.append(_entry(
+                 name, "factor_mine", use_date or date, [], [],
+                 status="pick_fail", note=str(e)[:160],
++                side=rec_side,
+             ))
+             continue
+         buys = [{"ticker": r["ticker"], "src": ",".join(r.get("sources") or [])}
+@@ -276,6 +330,7 @@
+                 status="sit",
+                 note="hard-red S≤−3 — no new lots; names are would-buy",
+                 why=f"S={s}",
++                side=rec_side,
+             ))
+         else:
+             out.append(_entry(
+@@ -283,6 +338,7 @@
+                 s=s,
+                 status="stale_panel" if stale else "ok",
+                 note=note,
++                side=rec_side,
+             ))
+     return out
+ 
+@@ -389,6 +445,24 @@
+                 "status": v.get("status"),
+                 "family": v.get("family"),
+                 "date": v.get("date"),
++                "side": v.get("side") or "long",
++                "predict": [
++                    {
++                        "ticker": x.get("ticker"),
++                        "side": x.get("side") or v.get("side") or "long",
++                        "predict": x.get("predict") or "UP",
++                        "take": "BUY",
++                    }
++                    for x in (v.get("buy") or []) if isinstance(x, dict) and x.get("ticker")
++                ] + [
++                    {
++                        "ticker": x.get("ticker"),
++                        "side": "short",
++                        "predict": x.get("predict") or "DOWN",
++                        "take": "SELL",
++                    }
++                    for x in (v.get("sell") or []) if isinstance(x, dict) and x.get("ticker")
++                ],
+             }
+             for k, v in (payload.get("strategies") or {}).items()
+         },
