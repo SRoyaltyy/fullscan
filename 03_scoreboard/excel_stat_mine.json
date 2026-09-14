@@ -1,9 +1,9 @@
 {
  "status": "PARTIAL",
  "phase": "hold_uni",
- "n_tickers_done": 385,
+ "n_tickers_done": 408,
  "n_disc_rows": 177846,
- "n_hold_rows": 46149,
+ "n_hold_rows": 48853,
  "n_rules": 8550,
  "top_singles": [
   {
