@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T05:47:23.764960-04:00",
+  "generated_at": "2026-09-14T05:55:25.105364-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -12,53 +12,49 @@
   "buy_1d": [
     {
       "ticker": "CVE",
-      "score": 0.20688811957392966
-    },
-    {
-      "ticker": "DK",
-      "score": 0.5551099454740418
+      "score": 0.3085269772347176
     }
   ],
   "sell_1d": [
     {
-      "ticker": "SERV",
-      "score": -0.517939121538224
+      "ticker": "TNDM",
+      "score": -0.6229225242376748
     },
     {
-      "ticker": "AHCO",
-      "score": -0.49244166379812604
+      "ticker": "SERV",
+      "score": -0.6047350997736668
     },
     {
       "ticker": "GRRR",
-      "score": -0.10175452749676267
+      "score": -0.2624946238250591
+    },
+    {
+      "ticker": "AHCO",
+      "score": -0.5932508531993708
+    },
+    {
+      "ticker": "ARQQ",
+      "score": -0.25465464549309963
     },
     {
       "ticker": "CIFR",
-      "score": -0.2103819273667351
+      "score": -0.37601845812994333
     },
     {
       "ticker": "TDTH",
-      "score": -0.25106754321636665
+      "score": -0.30076370246119516
     },
     {
-      "ticker": "MSTR",
-      "score": -0.3150226364207752
-    },
-    {
-      "ticker": "SPIR",
-      "score": -0.4482120448797816
+      "ticker": "BTDR",
+      "score": -0.28034071888691564
     },
     {
       "ticker": "SLQT",
-      "score": -0.4489276509586
+      "score": -0.571552573582658
     },
     {
       "ticker": "OWL",
-      "score": -0.37378539118273224
-    },
-    {
-      "ticker": "MMYT",
-      "score": -0.5206500121818561
+      "score": -0.19678404035162317
     }
   ],
   "flatten": {
@@ -98,57 +94,18 @@
   },
   "lands": [
     {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
+      "key": "finviz",
+      "title": "Finviz universe export",
       "date": "2026-09-14",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-14T04:11:22.284706-04:00",
+      "at": "2026-09-14T05:53:02.073470-04:00",
       "files": [
-        {
-          "path": "01_daily/news/2026-09-14_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 6027,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-09-14_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 2787,
-          "preview": "# Finviz homepage market digest \u2014 2026-09-14\n**Generated:** 2026-09-14T04:11:22.265138-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a lower open as tech-heavy Nasdaq lags amid Middle East-driven oil gains and AI growth concerns\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** WTI $103.0\n**CPI/Fed:** Canadian CPI data is due\n**Leaders:** TNON, ACVA, AENT, FTFT, GAUZ, ZUMZ, PMTS, HAIN, CODA\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-14\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-14\n**Generated:** 2026-09-14T04:11:22.265138-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a lower open as tech-heavy Nasdaq lags amid Middle East-driven oil gains and AI growth concerns\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** WTI $103.0\n**CPI/Fed:** Canadian CPI data is due\n**Leaders:** TNON, ACVA, AENT, FTFT, GAUZ, ZUMZ, PMTS, HAIN, CODA\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-14\n**Clock use:** `same_morning`"
-    },
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:12:30.512677-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-14_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 88197,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-09-14_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11845,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-14\n_Generated 2026-09-14T04:12:30.436839-04:00 \u00b7 export=data/exports/finviz_2026-09-14.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-        },
         {
           "path": "data/exports/finviz_2026-09-14.csv",
           "ok": true,
           "reason": "",
-          "size": 10959437,
+          "size": 10966675,
           "preview": "11617 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
         },
         {
@@ -159,139 +116,7 @@
           "preview": "11633 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
         }
       ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-14\n_Generated 2026-09-14T04:12:30.436839-04:00 \u00b7 export=data/exports/finviz_2026-09-14.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11617 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11633 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-    },
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:12:37.846739-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-14_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 6027,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-09-14_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 2787,
-          "preview": "# Finviz homepage market digest \u2014 2026-09-14\n**Generated:** 2026-09-14T04:12:37.831900-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a lower open as tech-heavy Nasdaq lags amid Middle East-driven oil gains and AI growth concerns\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** WTI $103.0\n**CPI/Fed:** Canadian CPI data is due\n**Leaders:** TNON, ACVA, AENT, FTFT, GAUZ, ZUMZ, PMTS, HAIN, CODA\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-14\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-14\n**Generated:** 2026-09-14T04:12:37.831900-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a lower open as tech-heavy Nasdaq lags amid Middle East-driven oil gains and AI growth concerns\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** WTI $103.0\n**CPI/Fed:** Canadian CPI data is due\n**Leaders:** TNON, ACVA, AENT, FTFT, GAUZ, ZUMZ, PMTS, HAIN, CODA\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-14\n**Clock use:** `same_morning`"
-    },
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:13:45.866912-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-14_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 271398,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-14_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 17566,
-          "preview": "# MAP HEAT \u2014 2026-09-09\nExport `finviz_2026-09-08.csv` \u00b7 11608 names \u00b7 generated 2026-09-09T01:59:54.403331-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-09\nExport `finviz_2026-09-08.csv` \u00b7 11608 names \u00b7 generated 2026-09-09T01:59:54.403331-04:00"
-    },
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:14:01.661282-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-14_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 88451,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-09-14_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11726,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-14\n_Generated 2026-09-14T04:14:01.601140-04:00 \u00b7 export=data/exports/finviz_2026-09-13.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11414104,
-          "preview": "11633 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-14\n_Generated 2026-09-14T04:14:01.601140-04:00 \u00b7 export=data/exports/finviz_2026-09-13.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11633 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-    },
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:14:06.804387-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-14_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 6027,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-09-14_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 2787,
-          "preview": "# Finviz homepage market digest \u2014 2026-09-14\n**Generated:** 2026-09-14T04:14:06.793963-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a lower open as tech-heavy Nasdaq lags amid Middle East-driven oil gains and AI growth concerns\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** WTI $103.0\n**CPI/Fed:** Canadian CPI data is due\n**Leaders:** TNON, ACVA, AENT, FTFT, GAUZ, ZUMZ, PMTS, HAIN, CODA\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-14\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-14\n**Generated:** 2026-09-14T04:14:06.793963-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a lower open as tech-heavy Nasdaq lags amid Middle East-driven oil gains and AI growth concerns\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** WTI $103.0\n**CPI/Fed:** Canadian CPI data is due\n**Leaders:** TNON, ACVA, AENT, FTFT, GAUZ, ZUMZ, PMTS, HAIN, CODA\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-14\n**Clock use:** `same_morning`"
-    },
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:15:16.823959-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-14_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 271399,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-14_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 17571,
-          "preview": "# MAP HEAT \u2014 2026-09-09\nExport `finviz_2026-09-08.csv` \u00b7 11608 names \u00b7 generated 2026-09-09T01:59:54.403331-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-09\nExport `finviz_2026-09-08.csv` \u00b7 11608 names \u00b7 generated 2026-09-09T01:59:54.403331-04:00"
+      "preview": "11617 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11633 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     },
     {
       "key": "universe",
@@ -299,407 +124,17 @@
       "date": "2026-09-14",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-14T04:17:09.680600-04:00",
+      "at": "2026-09-14T05:53:09.748712-04:00",
       "files": [
         {
           "path": "data/universe/2026-09-14_membership.csv",
           "ok": true,
           "reason": "",
-          "size": 1115725,
+          "size": 1115803,
           "preview": "5895 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
         }
       ],
       "preview": "5895 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:18:33.365515-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-14_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 88451,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-09-14_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11726,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-14\n_Generated 2026-09-14T04:14:01.601140-04:00 \u00b7 export=data/exports/finviz_2026-09-13.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-14\n_Generated 2026-09-14T04:14:01.601140-04:00 \u00b7 export=data/exports/finviz_2026-09-13.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-    },
-    {
-      "key": "map_heat",
-      "title": "Map heat tables",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:18:36.038088-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-14_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 271399,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-14_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 17571,
-          "preview": "# MAP HEAT \u2014 2026-09-09\nExport `finviz_2026-09-08.csv` \u00b7 11608 names \u00b7 generated 2026-09-09T01:59:54.403331-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-09\nExport `finviz_2026-09-08.csv` \u00b7 11608 names \u00b7 generated 2026-09-09T01:59:54.403331-04:00"
-    },
-    {
-      "key": "map_heat_baseline",
-      "title": "Map heat night baseline",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:18:38.418829-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-14_research_baseline.json",
-          "ok": true,
-          "reason": "",
-          "size": 366351,
-          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-14_research_baseline.md",
-          "ok": true,
-          "reason": "",
-          "size": 43435,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-14\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-14\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-    },
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:18:44.207647-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-09-14_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1116436,
-          "preview": "5895 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5895 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
-    {
-      "key": "weather",
-      "title": "Weather / regime (offline retry)",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:18:57.146162-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-09-14_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9626,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.45, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.1900000000000004, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.05, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.385, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.98, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -4.68, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.52, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-09-14_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5328,
-          "preview": "# Weather report \u2014 2026-09-14\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.45, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.1900000000000004, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.05, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.385, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.98, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -4.68, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.52, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-14\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:19:00.280428-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-09-14_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2269203,
-          "preview": "5895 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, EXEL, ARGX, NUTX, ONC"
-        }
-      ],
-      "preview": "5895 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, EXEL, ARGX, NUTX, ONC"
-    },
-    {
-      "key": "ab",
-      "title": "AB checklist",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:19:31.538624-04:00",
-      "files": [
-        {
-          "path": "data/ab_checklist/2026-09-14_ab_checklist_enriched.csv",
-          "ok": true,
-          "reason": "",
-          "size": 3316255,
-          "preview": "11615 rows \u00b7 Ticker,score,score_source,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month, \u00b7 KOPN, IESC, FORM, SIMO, KN"
-        }
-      ],
-      "preview": "11615 rows \u00b7 Ticker,score,score_source,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month, \u00b7 KOPN, IESC, FORM, SIMO, KN"
-    },
-    {
-      "key": "events",
-      "title": "Event scanner (primary)",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:25:10.268857-04:00",
-      "files": [
-        {
-          "path": "01_daily/events/2026-09-14_events.json",
-          "ok": true,
-          "reason": "",
-          "size": 28795,
-          "preview": "29 events \u00b7 FOMC decision, SEP/dot plot, Warsh press conference | August CPI \u2014 inflation held at 3.4% y/y, locking in hike | August advance retail sales | Bank of Japan decision \u2014 hike to 1.25% widely expected | Bank of England decision \u2014 hold at 3.75% expected | ECB 25bp hike to 2.50% delivered; fourth move in question"
-        },
-        {
-          "path": "01_daily/events/2026-09-14_events.md",
-          "ok": true,
-          "reason": "",
-          "size": 10712,
-          "preview": "# Event Scan \u2014 2026-09-14\n- events tracked: **29** (via openclaw)\n- uncertainty: **?**\n- summary:"
-        }
-      ],
-      "preview": "29 events \u00b7 FOMC decision, SEP/dot plot, Warsh press conference | August CPI \u2014 inflation held at 3.4% y/y, locking in hike | August advance retail sales | Bank of Japan decision \u2014 hike to 1.25% widely expected | Bank of England decision \u2014 hold at 3.75% expected | ECB 25bp hike to 2.50% delivered; fourth move in question \u00b7 # Event Scan \u2014 2026-09-14\n- events tracked: **29** (via openclaw)\n- uncertainty: **?**\n- summary:"
-    },
-    {
-      "key": "news_actions",
-      "title": "News actions",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:25:28.556242-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-14_actions.json",
-          "ok": true,
-          "reason": "",
-          "size": 32239,
-          "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
-        },
-        {
-          "path": "01_daily/news/2026-09-14_actions.md",
-          "ok": true,
-          "reason": "",
-          "size": 9743,
-          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-09-14T04:25:25.935585-04:00\nraw=149 unique_events=4 tickers=57"
-        }
-      ],
-      "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-14T04:25:25.935585-04:00\nraw=149 unique_events=4 tickers=57"
-    },
-    {
-      "key": "news_judge",
-      "title": "News judge",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:25:53.699037-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-14_judge.md",
-          "ok": true,
-          "reason": "",
-          "size": 13697,
-          "preview": "# News Judge \u2014 2026-09-14"
-        },
-        {
-          "path": "01_daily/news/2026-09-14_judge.json",
-          "ok": true,
-          "reason": "",
-          "size": 1623,
-          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
-        }
-      ],
-      "preview": "# News Judge \u2014 2026-09-14 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
-    },
-    {
-      "key": "general_predict",
-      "title": "General market predict",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:27:03.467890-04:00",
-      "files": [
-        {
-          "path": "01_daily/general/2026-09-14_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 12096,
-          "preview": "# Premarket Prediction \u2014 2026-09-14\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -11.002 (uncertainty multiplier \u00d71.1) | confidence 0.85\n>\n> **Good news vs bad news:** good +0 pts vs bad -12.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - FTSE +0.58% on energy bid\n> - HY tight 2.70\n> - Hang Seng +0.45%\n> - dollar 1m still -0.38%\n> - RRP build is plumbing not stress\n>\n> **Bad news driving this:**\n> - AI-slowdown shock (Amodei/Altman, SoftBank -12%)\n> - fresh Saudi/Hormuz strikes, Brent $107\n> - Sep 16 FOMC hike ~56-77%\n> - VIX backwardation 1.133\n> - NQ -1.58% leading down\n>\n> **market uncertainty: **elevated** | VIX 17.64 | policy-uncertainty index 725.88 (1d +451.17)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight ne"
-        }
-      ],
-      "preview": "# Premarket Prediction \u2014 2026-09-14\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -11.002 (uncertainty multiplier \u00d71.1) | confidence 0.85\n>\n> **Good news vs bad news:** good +0 pts vs bad -12.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - FTSE +0.58% on energy bid\n> - HY tight 2.70\n> - Hang Seng +0.45%\n> - dollar 1m still -0.38%\n> - RRP build is plumbing not stress\n>\n> **Bad news driving this:**\n> - AI-slowdown shock (Amodei/Altman, SoftBank -12%)\n> - fresh Saudi/Hormuz strikes, Brent $107\n> - Sep 16 FOMC hike ~56-77%\n> - VIX backwardation 1.133\n> - NQ -1.58% leading down\n>\n> **market uncertainty: **elevated** | VIX 17.64 | policy-uncertainty index 725.88 (1d +451.17)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight ne"
-    },
-    {
-      "key": "sector_predict",
-      "title": "Per-sector predict (all 11)",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:44:07.989152-04:00",
-      "files": [
-        {
-          "path": "01_daily/sectors/2026-09-14",
-          "ok": true,
-          "reason": "",
-          "size": 4096,
-          "preview": "10/10 sector predicts ok: basic_materials, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials, real_estate"
-        }
-      ],
-      "preview": "10/10 sector predicts ok: basic_materials, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials, real_estate"
-    },
-    {
-      "key": "sector_board",
-      "title": "Sector board",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:44:11.303224-04:00",
-      "files": [
-        {
-          "path": "01_daily/sectors/2026-09-14/_board.json",
-          "ok": true,
-          "reason": "",
-          "size": 6967,
-          "preview": "keys: date, generated_at, sectors"
-        }
-      ],
-      "preview": "keys: date, generated_at, sectors"
-    },
-    {
-      "key": "map_heat_research",
-      "title": "Map heat morning delta refresh",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:52:23.516882-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-14_research.json",
-          "ok": true,
-          "reason": "",
-          "size": 43638,
-          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-14_research.md",
-          "ok": true,
-          "reason": "",
-          "size": 43638,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-14\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-14\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-    },
-    {
-      "key": "finviz",
-      "title": "Finviz universe export",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:55:33.162259-04:00",
-      "files": [
-        {
-          "path": "data/exports/finviz_2026-09-14.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11206795,
-          "preview": "11615 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11414104,
-          "preview": "11633 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        }
-      ],
-      "preview": "11615 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11633 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-    },
-    {
-      "key": "catalyst",
-      "title": "Catalyst dossiers (after book)",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T05:38:29.468923-04:00",
-      "files": [
-        {
-          "path": "01_daily/catalyst/2026-09-14_dossiers.json",
-          "ok": true,
-          "reason": "",
-          "size": 6361,
-          "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, targets, dossiers"
-        },
-        {
-          "path": "01_daily/catalyst/2026-09-14_dossiers.md",
-          "ok": true,
-          "reason": "",
-          "size": 2695,
-          "preview": "# CATALYST DAILY \u2014 2026-09-14\n1/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
-        }
-      ],
-      "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-09-14\n1/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
-    },
-    {
-      "key": "status",
-      "title": "Pre-open status packet",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T05:40:30.891681-04:00",
-      "files": [
-        {
-          "path": "01_daily/2026-09-14_preopen_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 6638,
-          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
-        },
-        {
-          "path": "01_daily/2026-09-14_preopen_status.json",
-          "ok": true,
-          "reason": "",
-          "size": 6936,
-          "preview": "keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc"
-        },
-        {
-          "path": "01_daily/2026-09-14_preopen_status.md",
-          "ok": true,
-          "reason": "",
-          "size": 574,
-          "preview": "# Pre-open ALL status \u2014 2026-09-14\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  missing=['news_parse']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 124\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 0\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
-        }
-      ],
-      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc \u00b7 # Pre-open ALL status \u2014 2026-09-14\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  missing=['news_parse']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 124\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 0\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
     },
     {
       "key": "weather",
@@ -707,13 +142,13 @@
       "date": "2026-09-14",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-14T05:42:59.039316-04:00",
+      "at": "2026-09-14T05:53:23.081086-04:00",
       "files": [
         {
           "path": "01_daily/weather/2026-09-14_weather.json",
           "ok": true,
           "reason": "",
-          "size": 10687,
+          "size": 10660,
           "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -15.213, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Consumer Cyclical={'score': -13.101, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Consumer Defensive={'score': 0.826, 'dir': 'up', 'conf': 0.533, 'source': 'llm'}, Energy={'score': 11.129, 'dir': 'up', 'conf': 0.85, 'source': 'llm'}, Financial={'score': -3.345, 'dir': 'down', 'conf': 0.534, 'source': 'llm'}, Healthcare={'score': -8.839, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Industrials={'score': -11.954, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Real Estate={'score': -0.491, 'dir': 'down', 'conf': 0.52, 'source': 'llm'}"
         },
         {
@@ -732,162 +167,106 @@
       "date": "2026-09-14",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-14T05:43:02.600318-04:00",
+      "at": "2026-09-14T05:53:26.936741-04:00",
       "files": [
         {
           "path": "data/join/2026-09-14_ranked.csv",
           "ok": true,
           "reason": "",
-          "size": 2247439,
-          "preview": "5895 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ABEV, TAL, BUD, PM, BEKE"
+          "size": 2247172,
+          "preview": "5895 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TAL, ABEV, BUD, OHI, BEKE"
         }
       ],
-      "preview": "5895 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ABEV, TAL, BUD, PM, BEKE"
+      "preview": "5895 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TAL, ABEV, BUD, OHI, BEKE"
     },
     {
-      "key": "stock_book",
-      "title": "Stock book + green",
+      "key": "ab",
+      "title": "AB checklist",
       "date": "2026-09-14",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-14T05:43:28.859535-04:00",
+      "at": "2026-09-14T05:53:50.490592-04:00",
       "files": [
         {
-          "path": "data/stock_book/2026-09-14_stock_book.json",
+          "path": "data/ab_checklist/2026-09-14_ab_checklist.csv",
           "ok": true,
           "reason": "",
-          "size": 1153583,
-          "preview": "1d BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT"
+          "size": 7619545,
+          "preview": "2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, WDS, ANET, CFFN, CXW"
         },
         {
-          "path": "data/stock_book/2026-09-14_green.json",
+          "path": "data/ab_checklist/2026-09-14_ab_checklist_enriched.csv",
           "ok": true,
           "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-09-14_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2483,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-09-14_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 9264,
-          "preview": "2026-09-14 BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 9264,
-          "preview": "2026-09-14 BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT"
-        },
-        {
-          "path": "01_daily/2026-09-14_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 45250,
-          "preview": "# Stock book \u2014 2026-09-14\n_Generated 2026-09-14T05:43:14.401526-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          "size": 8465733,
+          "preview": "2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WDS, SM, PBR, UHS, MGY"
         }
       ],
-      "preview": "1d BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-14 BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT \u00b7 2026-09-14 BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT \u00b7 # Stock book \u2014 2026-09-14\n_Generated 2026-09-14T05:43:14.401526-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+      "preview": "2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, WDS, ANET, CFFN, CXW \u00b7 2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WDS, SM, PBR, UHS, MGY"
     },
     {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
+      "key": "news_parse",
+      "title": "News parse",
       "date": "2026-09-14",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-14T05:43:31.880482-04:00",
+      "at": "2026-09-14T05:55:10.527719-04:00",
       "files": [
         {
-          "path": "data/day_board/today.json",
+          "path": "01_daily/news/2026-09-14_parsed.json",
           "ok": true,
           "reason": "",
-          "size": 13539,
-          "preview": "2026-09-14 BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT"
+          "size": 80514,
+          "preview": "raw=149 usable=15 single=19 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | OPEC+ September output hike completed; next meeting watch | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB"
         },
         {
-          "path": "data/day_board/latest.json",
+          "path": "01_daily/news/2026-09-14_parsed.md",
           "ok": true,
           "reason": "",
-          "size": 870,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-09-14.json",
-          "ok": true,
-          "reason": "",
-          "size": 61474,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-09-14_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 40016,
-          "preview": "2026-09-14 BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 40016,
-          "preview": "2026-09-14 BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT"
+          "size": 4671,
+          "preview": "# News Parse v2 \u2014 2026-09-14T05:55:10.519970-04:00\nWindow\u224848h | raw=149 | usable=15 | single_name=19 | noise_dropped=115\nusable polarity={'+': 2, '-': 3, 'mixed': 0, 'neutral': 10}"
         }
       ],
-      "preview": "2026-09-14 BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-14 BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT \u00b7 2026-09-14 BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT"
+      "preview": "raw=149 usable=15 single=19 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | OPEC+ September output hike completed; next meeting watch | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB \u00b7 # News Parse v2 \u2014 2026-09-14T05:55:10.519970-04:00\nWindow\u224848h | raw=149 | usable=15 | single_name=19 | noise_dropped=115\nusable polarity={'+': 2, '-': 3, 'mixed': 0, 'neutral': 10}"
     },
     {
-      "key": "flatten",
-      "title": "Flatten live card",
+      "key": "finviz_digest",
+      "title": "Finviz digest",
       "date": "2026-09-14",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-14T05:44:12.646664-04:00",
+      "at": "2026-09-14T05:55:15.741116-04:00",
       "files": [
         {
-          "path": "01_daily/2026-09-14_flatten_card.md",
+          "path": "01_daily/news/2026-09-14_finviz_digest.json",
           "ok": true,
           "reason": "",
-          "size": 2172,
-          "preview": "# flatten_robust card \u2014 2026-09-14\n_Generated 2026-09-14T09:44:11 \u2014 live `flatten_robust`._\n**S=-11.00; hard-red: no new buys; holds and due 1d exits stay**\n- Score **-11.00** (DOWN) \u00b7 route **hold** \u00b7 HARD-RED\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Prior close **$108,616.66** \u00b7 09:30 **$108,616.66** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$108,616.66**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66**"
+          "size": 89013,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
         },
         {
-          "path": "data/sleeve_merge/today.json",
+          "path": "01_daily/news/2026-09-14_finviz_digest.md",
           "ok": true,
           "reason": "",
-          "size": 5035,
-          "preview": "2026-09-14 BUY \u2014 \u00b7 SELL \u2014"
+          "size": 11985,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-14\n_Generated 2026-09-14T05:55:15.686201-04:00 \u00b7 export=data/exports/finviz_2026-09-14.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
         },
         {
-          "path": "data/sleeve_merge/daily_marks.json",
+          "path": "data/exports/finviz_2026-09-14.csv",
           "ok": true,
           "reason": "",
-          "size": 140857,
-          "preview": "[{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\""
+          "size": 10966675,
+          "preview": "11617 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
         },
         {
-          "path": "data/sleeve_merge/equity_curve.csv",
+          "path": "data/finviz/latest.csv",
           "ok": true,
           "reason": "",
-          "size": 3438,
-          "preview": "21 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19"
-        },
-        {
-          "path": "dashboard/sleeve-merge/index.html",
-          "ok": true,
-          "reason": "",
-          "size": 38209,
-          "preview": "<!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Combined sleeve \u2014 .io \u00d7 mover</title>\n<style>\n:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}\n*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}\nmain{max-width:1240px;margin:auto;padding:16px}h1,h2{margin:.4em 0}\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0}\n.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}\n.card b{display:block;font-size:22px;margin-top:4px}\n.muted{color:var(--muted)}a{color:#93c5fd}\n.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}\ntable{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}\nth,td{padding:7px 8"
+          "size": 11414104,
+          "preview": "11633 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
         }
       ],
-      "preview": "# flatten_robust card \u2014 2026-09-14\n_Generated 2026-09-14T09:44:11 \u2014 live `flatten_robust`._\n**S=-11.00; hard-red: no new buys; holds and due 1d exits stay**\n- Score **-11.00** (DOWN) \u00b7 route **hold** \u00b7 HARD-RED\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Prior close **$108,616.66** \u00b7 09:30 **$108,616.66** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$108,616.66**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66** \u00b7 2026-09-14 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}"
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-14\n_Generated 2026-09-14T05:55:15.686201-04:00 \u00b7 export=data/exports/finviz_2026-09-14.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11617 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11633 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "source": "publish_live_boards"
