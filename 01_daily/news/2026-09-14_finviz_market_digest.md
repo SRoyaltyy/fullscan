@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-09-14
 
-**Generated:** 2026-09-14T04:12:37.831900-04:00 (America/New_York)
+**Generated:** 2026-09-14T04:14:06.793963-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US equity futures point to a lower open as tech-heavy Nasdaq lags amid Middle East-driven oil gains and AI growth concerns
 **Prior close:** SPX —  Nasdaq —  Dow —
