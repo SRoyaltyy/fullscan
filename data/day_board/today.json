@@ -1,12 +1,12 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T04:18:57.251586-04:00",
+  "generated_at": "2026-09-14T04:19:00.409802-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 3,
-    "partial": 1,
-    "fail": 4,
+    "partial": 2,
+    "fail": 3,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:14:06.804387-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-14_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 6027,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-09-14_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 2787,
-          "preview": "# Finviz homepage market digest \u2014 2026-09-14\n**Generated:** 2026-09-14T04:14:06.793963-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a lower open as tech-heavy Nasdaq lags amid Middle East-driven oil gains and AI growth concerns\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** WTI $103.0\n**CPI/Fed:** Canadian CPI data is due\n**Leaders:** TNON, ACVA, AENT, FTFT, GAUZ, ZUMZ, PMTS, HAIN, CODA\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-14\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-14\n**Generated:** 2026-09-14T04:14:06.793963-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a lower open as tech-heavy Nasdaq lags amid Middle East-driven oil gains and AI growth concerns\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** WTI $103.0\n**CPI/Fed:** Canadian CPI data is due\n**Leaders:** TNON, ACVA, AENT, FTFT, GAUZ, ZUMZ, PMTS, HAIN, CODA\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-14\n**Clock use:** `same_morning`"
-    },
     {
       "key": "map_heat",
       "title": "Map heat morning overlay",
@@ -200,6 +175,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -3.45, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.1900000000000004, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -3.05, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.385, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.98, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -4.68, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.52, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-14\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-14T04:19:00.280428-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-14_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2269203,
+          "preview": "5895 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, EXEL, ARGX, NUTX, ONC"
+        }
+      ],
+      "preview": "5895 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, EXEL, ARGX, NUTX, ONC"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
