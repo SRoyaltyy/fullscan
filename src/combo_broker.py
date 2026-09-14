@@ -160,10 +160,15 @@ def size_combo_tickets(rows: list[dict], recs: list[dict],
                        held: set[str] | None = None, date: str,
                        s=None, net: str = "priority",
                        cal: list[str] | None = None,
-                       combo: str = PAPER_COMBO) -> tuple[list[dict], list[dict]]:
+                       combo: str = PAPER_COMBO,
+                       hard_red_mode: str = fmc.HARD_RED_SIT,
+                       dip_pct: float | None = None,
+                       bars=None) -> tuple[list[dict], list[dict]]:
     """One shared leftover pile. Longs BUY, shorts SELL-to-open.
 
-    Skip names already held. Hard-red S≤−3 sits (no new lots).
+    Skip names already held. Hard-red S≤−3 sits (no new lots) unless a
+    research-only ``hard_red_mode`` is passed. Live Webull / flatten
+    callers leave the default sit.
     """
     held = {str(t).upper() for t in (held or set())}
     cash = max(float(cash or 0), 0.0)
@@ -173,18 +178,20 @@ def size_combo_tickets(rows: list[dict], recs: list[dict],
     hard_red = s is not None and float(s) <= float(fmb.HARD_RED)
     intents = []
     skips: list[dict] = []
-    if hard_red:
-        for rec in recs:
-            for r in fm.pick_day(rows, rec):
-                skips.append({
-                    "date": date, "ticker": r["ticker"], "kind": "hard_red",
-                    "reason": f"hard-red S={s} sit; no new {rec['name']}",
-                })
-        return [], skips
     for rec in recs:
+        rec_side = rec.get("side") or "long"
         for r in fm.pick_day(rows, rec):
             t = str(r.get("ticker") or "").upper()
             if not t:
+                continue
+            if hard_red and fmc.hard_red_skip_new(rec_side, hard_red_mode):
+                skips.append({
+                    "date": date, "ticker": t, "kind": "hard_red",
+                    "reason": (
+                        f"hard-red S={s} {hard_red_mode}; "
+                        f"no new {rec_side} {rec['name']}"
+                    ),
+                })
                 continue
             if t in held:
                 skips.append({
@@ -194,7 +201,7 @@ def size_combo_tickets(rows: list[dict], recs: list[dict],
                 continue
             intents.append({
                 "ticker": t, "row": r, "rec": rec,
-                "side": rec.get("side") or "long",
+                "side": rec_side,
                 "rank": fmc._claim_rank(rec["name"]),
             })
     chosen = fmc._choose_intents(intents, net=net, s=s)
@@ -230,6 +237,22 @@ def size_combo_tickets(rows: list[dict], recs: list[dict],
                 skips.append({"date": date, "ticker": t, "kind": "no_price",
                               "reason": "no 09:30 open or prior close"})
                 continue
+            if (hard_red and side == "long"
+                    and hard_red_mode in (fmc.HARD_RED_DIP_SCOOP,
+                                          fmc.HARD_RED_SHORT_AND_SCOOP)
+                    and dip_pct is not None):
+                low = fmb._px(t, date, "low", bars)
+                scooped, kind = fmc.dip_limit_px(px, low, dip_pct)
+                if scooped is None:
+                    skips.append({
+                        "date": date, "ticker": t, "kind": kind,
+                        "reason": (
+                            f"hard-red scoop {dip_pct:g}% below "
+                            f"open {px:.4f} — {kind}"
+                        ),
+                    })
+                    continue
+                px = scooped
             shares = int(per // px)
             if shares < 1:
                 skips.append({

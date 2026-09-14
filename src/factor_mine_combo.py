@@ -33,6 +33,18 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT_JSON = ROOT / "03_scoreboard" / "factor_mine_combos.json"
 CAPITAL = fm.CAPITAL
 HARD_RED = fmb.HARD_RED
+# Live / published books stay on full sit. Research modes are opt-in only.
+HARD_RED_SIT = "sit"
+HARD_RED_SHORT_ONLY = "short_only"
+HARD_RED_DIP_SCOOP = "dip_scoop"
+HARD_RED_SHORT_AND_SCOOP = "short_and_scoop"
+HARD_RED_MODES = (
+    HARD_RED_SIT,
+    HARD_RED_SHORT_ONLY,
+    HARD_RED_DIP_SCOOP,
+    HARD_RED_SHORT_AND_SCOOP,
+)
+DIP_GRID = (0.5, 1.0, 1.5, 2.0, 3.0)
 OUTPERFORM_RULE = (
     "A combo outperforms its members on the cash book when the audit passes "
     "and either (1) Book% is strictly higher than every member, or (2) Book% "
@@ -416,6 +428,59 @@ def _day_marks_mixed(overnight: list, pos: dict, date: str, bars) -> list:
     return list(by.values())
 
 
+def hard_red_skip_new(side: str | None, mode: str | None = HARD_RED_SIT) -> bool:
+    """True = do not open a new lot of this side on a hard-red morning.
+
+    Default ``sit`` matches live combo_broker / published cash books:
+    both longs and shorts sit. Research modes:
+
+      * ``short_only`` — shorts may fire; longs sit
+      * ``dip_scoop`` — longs may limit-buy after open−X%; shorts sit
+      * ``short_and_scoop`` — shorts fire and longs may scoop
+    """
+    mode = str(mode or HARD_RED_SIT)
+    side = str(side or "long")
+    if mode == HARD_RED_SIT:
+        return True
+    if mode == HARD_RED_SHORT_ONLY:
+        return side != "short"
+    if mode == HARD_RED_DIP_SCOOP:
+        return side == "short"
+    if mode == HARD_RED_SHORT_AND_SCOOP:
+        return False
+    return True
+
+
+def dip_limit_px(open_px, low_px, dip_pct):
+    """Clock-clean limit: fill at open×(1−X%) only if the session low hit it.
+
+    ``open_px`` must be the official 09:30 print (never Gap / last / close).
+    Returns ``(fill, kind)`` where kind is ``scoop`` / ``no_dip`` /
+    ``no_open`` / ``no_low``. Daily OHLC cannot prove the dip printed
+    after 09:30 — if low ≤ target we assume the limit filled.
+    """
+    try:
+        o = float(open_px)
+    except (TypeError, ValueError):
+        return None, "no_open"
+    if o <= 0:
+        return None, "no_open"
+    try:
+        x = float(dip_pct)
+    except (TypeError, ValueError):
+        return None, "no_dip"
+    if x <= 0:
+        return o, "scoop"
+    target = o * (1.0 - x / 100.0)
+    try:
+        low = float(low_px)
+    except (TypeError, ValueError):
+        return None, "no_low"
+    if low > target + 1e-9:
+        return None, "no_dip"
+    return target, "scoop"
+
+
 def _choose_intents(intents: list[dict], *, net: str, s) -> list[dict]:
     """One ticker, one side. ``intents`` already carry claim_rank."""
     by: dict[str, list[dict]] = {}
@@ -442,8 +507,14 @@ def _choose_intents(intents: list[dict], *, net: str, s) -> list[dict]:
 
 def simulate_shared(panel: dict, recs: list[dict], weights: list[float],
                     *, bars=None, fees=None, regime=None, start=None,
-                    net: str = "priority", name: str = "combo") -> dict:
-    """One cash pile. Lots remember the owner recipe's hold / sell / side."""
+                    net: str = "priority", name: str = "combo",
+                    hard_red_mode: str = HARD_RED_SIT,
+                    dip_pct: float | None = None) -> dict:
+    """One cash pile. Lots remember the owner recipe's hold / sell / side.
+
+    ``hard_red_mode`` defaults to live sit. Research-only overrides do
+    not change flatten_robust or Webull live policy.
+    """
     fees = fees if fees is not None else pt.load_fees()
     cal_all = list(panel.get("session_dates") or [])
     cal = [d for d in cal_all if not start or d >= start]
@@ -558,13 +629,17 @@ def simulate_shared(panel: dict, recs: list[dict], weights: list[float],
         for rec in recs:
             chosen = fm.pick_day(by_date.get(date) or [], rec)
             member_chosen[rec["name"]] = chosen
-            if hard_red:
+            rec_side = rec.get("side") or "long"
+            if hard_red and hard_red_skip_new(rec_side, hard_red_mode):
                 for r in chosen:
                     if r["ticker"] not in pos:
                         skips.append({
                             "date": date, "ticker": r["ticker"],
                             "kind": "hard_red",
-                            "reason": f"hard-red S={s:+.2f} sit; no new {rec['name']}",
+                            "reason": (
+                                f"hard-red S={s:+.2f} {hard_red_mode}; "
+                                f"no new {rec_side} {rec['name']}"
+                            ),
                         })
                 continue
             for r in chosen:
@@ -576,9 +651,10 @@ def simulate_shared(panel: dict, recs: list[dict], weights: list[float],
                     "side": rec.get("side") or "long",
                     "rank": _claim_rank(rec["name"]),
                 })
-        if hard_red and intents:
-            day_why.append(f"hard-red S={s:+.2f} sit; no new buys")
-            intents = []
+        if hard_red and not intents:
+            day_why.append(f"hard-red S={s:+.2f} {hard_red_mode}")
+        elif hard_red and intents:
+            day_why.append(f"hard-red S={s:+.2f} {hard_red_mode}")
         chosen_new = _choose_intents(intents, net=net, s=s)
         blocked = set()
         for it in intents:
@@ -632,6 +708,26 @@ def simulate_shared(panel: dict, recs: list[dict], weights: list[float],
                     skips.append({"date": date, "ticker": t, "kind": "no_price",
                                   "reason": "no 09:30 open"})
                     continue
+                if (hard_red and side == "long"
+                        and hard_red_mode in (HARD_RED_DIP_SCOOP,
+                                              HARD_RED_SHORT_AND_SCOOP)
+                        and dip_pct is not None):
+                    low = fmb._px(t, date, "low", bars)
+                    scooped, kind = dip_limit_px(px, low, dip_pct)
+                    if scooped is None:
+                        skips.append({
+                            "date": date, "ticker": t, "kind": kind,
+                            "reason": (
+                                f"hard-red scoop {dip_pct:g}% below "
+                                f"open {px:.4f} — {kind}"
+                            ),
+                        })
+                        continue
+                    reason += (
+                        f"; scoop {dip_pct:g}% below clock-clean open "
+                        f"{px:.4f} → {scooped:.4f}"
+                    )
+                    px = scooped
                 shares = int(per // px)
                 if shares < 1:
                     skips.append({
@@ -770,6 +866,8 @@ def simulate_shared(panel: dict, recs: list[dict], weights: list[float],
         "name": name,
         "pool": "shared",
         "net": net,
+        "hard_red_mode": hard_red_mode,
+        "dip_pct": dip_pct,
         "members": [r["name"] for r in recs],
         "weights": ws,
         "rules": dict(fmb.BOOK_RULES),
