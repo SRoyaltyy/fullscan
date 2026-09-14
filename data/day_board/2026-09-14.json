@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T04:19:31.819489-04:00",
+  "generated_at": "2026-09-14T04:25:10.568947-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -11,8 +11,8 @@
   ],
   "counts": {
     "ok": 4,
-    "partial": 2,
-    "fail": 2,
+    "partial": 3,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -104,9 +104,9 @@
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 20,
       "n_opt_ok": 0,
       "n_opt": 2,
@@ -152,9 +152,9 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-09-14_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 28795
         },
         {
           "key": "judge",
@@ -1031,6 +1031,31 @@
         }
       ],
       "preview": "11615 rows \u00b7 Ticker,score,score_source,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month, \u00b7 KOPN, IESC, FORM, SIMO, KN"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-09-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-14T04:25:10.268857-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-09-14_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 28795,
+          "preview": "29 events \u00b7 FOMC decision, SEP/dot plot, Warsh press conference | August CPI \u2014 inflation held at 3.4% y/y, locking in hike | August advance retail sales | Bank of Japan decision \u2014 hike to 1.25% widely expected | Bank of England decision \u2014 hold at 3.75% expected | ECB 25bp hike to 2.50% delivered; fourth move in question"
+        },
+        {
+          "path": "01_daily/events/2026-09-14_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 10712,
+          "preview": "# Event Scan \u2014 2026-09-14\n- events tracked: **29** (via openclaw)\n- uncertainty: **?**\n- summary:"
+        }
+      ],
+      "preview": "29 events \u00b7 FOMC decision, SEP/dot plot, Warsh press conference | August CPI \u2014 inflation held at 3.4% y/y, locking in hike | August advance retail sales | Bank of Japan decision \u2014 hike to 1.25% widely expected | Bank of England decision \u2014 hold at 3.75% expected | ECB 25bp hike to 2.50% delivered; fourth move in question \u00b7 # Event Scan \u2014 2026-09-14\n- events tracked: **29** (via openclaw)\n- uncertainty: **?**\n- summary:"
     }
   ],
   "href": {
