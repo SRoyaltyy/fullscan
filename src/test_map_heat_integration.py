@@ -87,6 +87,34 @@ def test_calendar_entry_scale_ignores_legacy_earnings_mix() -> None:
     research.OUT_DIR = orig
 
 
+def test_stamp_overlay_identity_sets_session_header() -> None:
+    payload = {
+        "date": "2026-09-09",
+        "generated_at": "2026-09-09T01:59:54.403331-04:00",
+        "overlay_at": "2026-09-14T04:15:16.809073-04:00",
+        "export": "finviz_2026-09-08.csv",
+        "n_tickers": 11608,
+        "tape": [{"ticker": "ES", "label": "S&P 500", "last": 1, "change": 0.1}],
+        "sectors": [],
+        "hot": [],
+        "cold": [],
+        "overrides": [],
+        "themes": [],
+        "theme_tape": [],
+        "ticker_news": [],
+    }
+    out = mh.stamp_overlay_identity(
+        payload, "2026-09-14", export_name="finviz_2026-09-14.csv")
+    assert out["date"] == "2026-09-14"
+    assert out["generated_at"] == "2026-09-14T04:15:16.809073-04:00"
+    assert out["export"] == "finviz_2026-09-14.csv"
+    text = mh.render(out)
+    assert text.startswith("# MAP HEAT — 2026-09-14")
+    assert "Export `finviz_2026-09-14.csv`" in text
+    assert "generated 2026-09-14T04:15:16.809073-04:00" in text
+    assert "MAP_HEAT_OK" in text
+
+
 def test_empty_tape_is_not_overlay_good() -> None:
     empty = {
         "date": "2099-01-01",
@@ -217,6 +245,7 @@ if __name__ == "__main__":
     test_macro_gate_halves_book_earnings_does_not()
     test_missing_research_is_visible_but_bootstrap_is_safe()
     test_calendar_entry_scale_ignores_legacy_earnings_mix()
+    test_stamp_overlay_identity_sets_session_header()
     test_empty_tape_is_not_overlay_good()
     test_tape_boosts_from_finviz_overrides()
     test_heat_scale_default_is_incubate()
@@ -224,4 +253,4 @@ if __name__ == "__main__":
     test_parse_econ_route_init_keeps_upcoming()
     test_parse_earnings_preview_window()
     test_tape_keeps_all_tiles_not_just_whitelist()
-    print("10 tests passed")
+    print("11 tests passed")

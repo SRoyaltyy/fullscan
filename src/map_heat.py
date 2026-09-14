@@ -414,7 +414,7 @@ def overlay_live(date: str, payload: dict) -> dict:
         out["major_news_tickers"] = major_news_tickers
     out["overlay_at"] = datetime.now(ET).isoformat()
     out["phase"] = "morning_overlay"
-    return out
+    return stamp_overlay_identity(out, date)
 
 
 def build(date: str) -> dict:
@@ -803,6 +803,49 @@ def already_good(date: str) -> bool:
             and bool(payload.get("tape") or []))
 
 
+def stamp_overlay_identity(
+    payload: dict, date: str, export_name: str | None = None,
+) -> dict:
+    """Same-day header fields after overlay (or a JSON→md rewrite).
+
+    Industry tables may still be last-session (holiday / weekend copy).
+    The markdown header must show TODAY so Grok does not treat the file
+    as a carry-forward. generated_at follows overlay_at when present.
+    """
+    out = dict(payload)
+    out["date"] = date
+    out["generated_at"] = str(
+        out.get("overlay_at") or datetime.now(ET).isoformat())
+    name = export_name
+    if name is None:
+        exp = _latest_export(date)
+        name = exp.name if exp is not None else None
+    if name:
+        out["export"] = name
+    return out
+
+
+def rewrite_md(date: str) -> tuple[Path, Path]:
+    """Re-render md from the existing JSON. No scrape, no Pre-Open."""
+    js = OUT_DIR / f"{date}_map_heat.json"
+    if not js.exists():
+        raise SystemExit(f"map heat json missing: {js}")
+    try:
+        payload = json.loads(js.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as e:
+        raise SystemExit(f"map heat json unreadable: {js}: {e}")
+    if not isinstance(payload, dict):
+        raise SystemExit(f"map heat json not an object: {js}")
+    if len(payload.get("industries") or []) < 50:
+        raise SystemExit(
+            f"map heat too thin ({len(payload.get('industries') or [])} "
+            f"industries) at {js}")
+    if not (payload.get("tape") or []):
+        raise SystemExit(f"map heat empty futures tape at {js}")
+    payload = stamp_overlay_identity(payload, date)
+    return write(date, payload)
+
+
 def overlay_is_good(payload: dict | None, date: str) -> bool:
     """True when this morning's overlay actually produced a futures tape."""
     if not isinstance(payload, dict):
@@ -821,8 +864,17 @@ def main() -> None:
         "--overlay", action="store_true",
         help="Morning only: refresh futures/calendar/news. Do not scrape groups.",
     )
+    ap.add_argument(
+        "--rewrite-md", action="store_true",
+        help="Re-render md from existing JSON; stamp session date/export/"
+             "generated. No scrape.",
+    )
     args = ap.parse_args()
     date = args.date or datetime.now(ET).date().isoformat()
+    if args.rewrite_md:
+        md_path, _js_path = rewrite_md(date)
+        print(md_path.read_text(encoding="utf-8"))
+        return
     preopen.refuse_if_late("map_heat", force=args.force)
     js = OUT_DIR / f"{date}_map_heat.json"
     if args.overlay:

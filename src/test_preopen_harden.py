@@ -201,6 +201,8 @@ def test_incremental_land_hooks() -> None:
     assert "delayed schedule before 05:35 ET" in fin_all
     heat = (ROOT / "src" / "map_heat.py").read_text(encoding="utf-8")
     assert "land_file.land" in heat
+    assert "stamp_overlay_identity" in heat
+    assert "rewrite_md" in heat
     sleeve = (ROOT / ".github" / "workflows" / "sleeve_merge_live.yml").read_text(
         encoding="utf-8")
     assert "no ${DATE} book — skip hollow flatten card" in sleeve
@@ -230,6 +232,7 @@ def test_holiday_overlay_uses_last_session() -> None:
     text = (ROOT / "src" / "map_heat.py").read_text(encoding="utf-8")
     assert "last_closed_session" in text
     assert "copied" in text and "last session" in text
+    assert "return stamp_overlay_identity(out, date)" in text
 
 
 def test_weather_step_rejects_pre_0535_stamp() -> None:
