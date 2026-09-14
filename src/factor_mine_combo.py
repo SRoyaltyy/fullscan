@@ -167,6 +167,7 @@ def enrich_payload_legs(payload: dict) -> dict:
 # Members we actually have a reason to mix (elite + the user's three).
 MEMBER_POOL = (
     "short_news_r_h3",
+    "short_news_r_macd_h3",
     "short_news_r_h1",
     "union_e_fresh_h3",
     "union_e_fresh_h1",
@@ -194,6 +195,7 @@ CLAIM = (
     "flatten_h5",
     "union_h5",
     "short_news_r_h3",
+    "short_news_r_macd_h3",
     "short_news_r_h1",
     "short_alarm_h3",
 )
@@ -238,6 +240,9 @@ def combo_specs() -> list[dict]:
     add("combo_se_7030_shared", [S, E], [70, 30])
     add("combo_eh_5050_shared", [E, H], [1, 1])
     add("combo_sh_5050_shared", [S, H], [1, 1])
+    # Same 50/50 shared pile as combo_sh_5050, but the short kid also
+    # needs prior MACD histogram > 0 (the overlay that lifted the book).
+    add("combo_sh_macd_5050_shared", ["short_news_r_macd_h3", H], [1, 1])
     add("combo_se_5050_skip", [S, E], [1, 1], net="skip")
     add("combo_seh_333_skip", [S, E, H], [1, 1, 1], net="skip")
     add("combo_seh_333_weather", [S, E, H], [1, 1, 1], net="weather")

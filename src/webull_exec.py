@@ -1,20 +1,25 @@
-"""Push flatten_hard_red live tickets into a Webull *paper* account.
+"""Push today's combo_sh 50/50 + MACD-short tickets into Webull *paper*.
+
+Default source is ``combo_sh_macd_5050_shared`` (short news🔴 ∩ MACD-up
++ union_hot_n4, shared leftover). Flatten live-card tickets stay
+available via ``--source flatten``.
 
 Official OpenAPI sandbox is the in-app Paper Trading book
 (webull.com → Open API → “Using OpenAPI service in Paper Trading”).
 App key + secret are auto-approved for sandbox in a few minutes.
 
-    python -m src.webull_exec --date 2026-09-11          # dry-run
-    python -m src.webull_exec --date 2026-09-11 --submit  # paper only
+    python -m src.webull_exec --date 2026-09-14          # dry-run combo
+    python -m src.webull_exec --date 2026-09-14 --submit  # paper only
+    python -m src.webull_exec --source flatten --submit   # old flatten path
 
 REAL is refused unless --env real AND --live AND WEBULL_LIVE=1.
 Paper never talks to api.webull.com.
 
-Rules (same as futubull_exec):
-  * only live card tickets (never the would-buy wish list)
-  * re-plan against the account's real cash + positions
+Rules:
+  * combo: size against the account's real cash + positions
   * skip a name already held; skip if leftover cash cannot size a share
-  * hard-red / flatten gates stay the ones on the card
+  * hard-red S≤−3 sits; stale Friday panel is dry-run unless --allow-stale
+  * flatten source: only live card tickets (never the would-buy wish list)
 
 Env: WEBULL_APP_KEY, WEBULL_APP_SECRET, WEBULL_ACCOUNT_ID (optional),
      WEBULL_REGION (default us).
@@ -29,6 +34,7 @@ import uuid
 from datetime import datetime
 from pathlib import Path
 
+from src.combo_broker import PAPER_COMBO, plan_combo_for_broker
 from src.futubull_exec import (
     BrokerSnap,
     plan_for_broker,
@@ -300,13 +306,28 @@ def write_last(doc: dict) -> Path:
     return LAST_JSON
 
 
+def _plan(date: str, snap: BrokerSnap, *, source: str, combo: str) -> dict:
+    if source == "flatten":
+        card = plan_for_broker(date, snap)
+        card.setdefault("policy", "flatten_hard_red")
+        card.setdefault("source", "flatten")
+        card.setdefault("stale", False)
+        card.setdefault("combo", "")
+        return card
+    return plan_combo_for_broker(date, snap, combo=combo)
+
+
 def run(date: str | None, *, env: str = "paper", submit: bool = False,
-        live: bool = False, write: bool = True) -> int:
+        live: bool = False, write: bool = True, source: str = "combo",
+        combo: str = PAPER_COMBO, allow_stale: bool = False) -> int:
     env = "real" if env == "real" else "paper"
+    source = "flatten" if source == "flatten" else "combo"
+    combo = combo or PAPER_COMBO
     blocked = refuse_real(env, submit, live)
     if blocked:
         print(f"[webull] {blocked}")
         write_last({"error": blocked, "env": env, "submit": submit,
+                    "source": source, "combo": combo,
                     "generated": datetime.now().isoformat(timespec="seconds")})
         return 2
 
@@ -324,17 +345,21 @@ def run(date: str | None, *, env: str = "paper", submit: bool = False,
         print("[webull] Paper Trading API key lives in GitHub secrets "
               "WEBULL_APP_KEY / WEBULL_APP_SECRET. This job will not "
               "log into the Webull app for you.")
-        n_tickets = 0
-        if TODAY_JSON.is_file():
-            try:
-                card = json.loads(TODAY_JSON.read_text(encoding="utf-8"))
-                n_tickets = len(tickets_to_send(card))
-            except (OSError, json.JSONDecodeError, TypeError):
-                n_tickets = 0
+        preview = BrokerSnap(env=env, cash=10_000, positions={},
+                             connected=False, error=snap.error)
+        try:
+            card = _plan(date, preview, source=source, combo=combo)
+            n_tickets = len(tickets_to_send(card))
+        except Exception:
+            n_tickets = 0
+            card = {}
         last = {
             "date": date, "env": env, "submit": False,
             "connected": False, "error": snap.error, "host": api.host,
             "n_tickets": n_tickets,
+            "source": source, "combo": combo if source == "combo" else "",
+            "stale": bool(card.get("stale")),
+            "policy": card.get("policy") or source,
             "sent": [],
             "generated": datetime.now().isoformat(timespec="seconds"),
         }
@@ -344,21 +369,32 @@ def run(date: str | None, *, env: str = "paper", submit: bool = False,
                 inject_today_from_disk()
         return 0
 
-    card = plan_for_broker(date, snap)
+    card = _plan(date, snap, source=source, combo=combo)
     for t in card.get("tickets") or []:
         t.setdefault("date", date)
+    if submit and card.get("stale") and not allow_stale:
+        print("[webull] stale look — dry-run only (pass --allow-stale "
+              "to send Friday's list as today's tickets)")
+        submit = False
     last = send_card(card, snap, submit=submit, opend=api, env=env)
     last["host"] = api.host
     last["account_id"] = snap.acc_id
-    print(f"[webull] {env} {api.host} cash=${snap.cash:,.2f} "
-          f"pos={len(snap.positions)} tickets={last['n_tickets']} "
-          f"submit={submit}")
+    last["source"] = source
+    last["combo"] = combo if source == "combo" else card.get("policy") or ""
+    last["stale"] = bool(card.get("stale"))
+    last["policy"] = card.get("policy") or source
+    last["why"] = card.get("why") or ""
+    print(f"[webull] {env} {api.host} {source} {last.get('combo') or ''} "
+          f"cash=${snap.cash:,.2f} pos={len(snap.positions)} "
+          f"tickets={last['n_tickets']} submit={submit} "
+          f"stale={last['stale']}")
     for s in last["sent"]:
         print(f"  {s.get('status')} {s['side']} {s['ticker']} "
               f"n={s['shares']} @ {s.get('px')} {s.get('error') or ''}")
     if write:
         from src.sleeve_merge_live import write_card
-        write_card(card)
+        if source == "flatten":
+            write_card(card)
         write_last(last)
         inject_today_from_disk()
     return 0
@@ -373,9 +409,16 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--live", action="store_true",
                     help="required together with --env real and WEBULL_LIVE=1")
     ap.add_argument("--write", action="store_true", default=True)
+    ap.add_argument("--source", choices=("combo", "flatten"), default="combo",
+                    help="combo_sh_macd_5050 (default) or flatten live card")
+    ap.add_argument("--combo", default=PAPER_COMBO,
+                    help="combo name when --source combo")
+    ap.add_argument("--allow-stale", action="store_true",
+                    help="submit even if the look is last-closed, not today")
     args = ap.parse_args(argv)
     return run(args.date or None, env=args.env, submit=args.submit,
-               live=args.live, write=args.write)
+               live=args.live, write=args.write, source=args.source,
+               combo=args.combo, allow_stale=args.allow_stale)
 
 
 if __name__ == "__main__":

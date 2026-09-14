@@ -1,13 +1,16 @@
 name: Webull paper (OpenAPI sandbox)
 
-# Places today's flatten_hard_red live tickets into the Webull *paper*
-# account (api.sandbox.webull.com). Never talks to the live host.
+# Places today's combo_sh_macd_5050_shared tickets (short news🔴 ∩
+# MACD-up + union_hot_n4, shared 50/50 leftover) into the Webull
+# *paper* account (api.sandbox.webull.com). Flatten live-card path is
+# still `--source flatten`. Never talks to the live host.
 # Needs repo secrets WEBULL_APP_KEY + WEBULL_APP_SECRET.
 # Optional: WEBULL_ACCOUNT_ID.
 # CLOCK: a main push that touches this file starts the job (same poke
 # as Pre-Open ALL). workflow_dispatch is 403 from the cloud agent.
 # POKE 2026-09-11: re-fire after sandbox 401 + missing numpy.
 # POKE 2026-09-11b: retry after owner rotated paper secrets.
+# POKE 2026-09-14: combo_sh 50/50 + MACD-short overlay for today's paper.
 
 on:
   push:
@@ -53,7 +56,7 @@ jobs:
       - name: Install
         run: pip install webull-openapi-python-sdk pandas numpy yfinance
 
-      - name: Send live tickets to Webull paper
+      - name: Send combo 5050+MACD tickets to Webull paper
         env:
           WEBULL_APP_KEY: ${{ secrets.WEBULL_APP_KEY }}
           WEBULL_APP_SECRET: ${{ secrets.WEBULL_APP_SECRET }}
@@ -64,13 +67,13 @@ jobs:
           set -euo pipefail
           DATE="${RUN_DATE:-}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
-          ARGS=(--date "$DATE")
+          ARGS=(--date "$DATE" --source combo --combo combo_sh_macd_5050_shared)
           if [ -n "${WEBULL_APP_KEY:-}" ] && [ -n "${WEBULL_APP_SECRET:-}" ] \
              && [ "${WANT_SUBMIT}" = "true" ]; then
             ARGS+=(--submit)
-            echo "paper submit on $DATE"
+            echo "paper submit combo_sh_macd_5050_shared on $DATE"
           else
-            echo "dry-run on $DATE (no keys or submit unchecked)"
+            echo "dry-run combo_sh_macd_5050_shared on $DATE (no keys or submit unchecked)"
           fi
           python -m src.webull_exec "${ARGS[@]}"
           test -s data/sleeve_merge/webull_last.json
@@ -79,6 +82,8 @@ jobs:
           from pathlib import Path
           last = json.loads(Path("data/sleeve_merge/webull_last.json").read_text())
           print("connected", last.get("connected"), "submit", last.get("submit"),
+                "source", last.get("source"), "combo", last.get("combo"),
+                "stale", last.get("stale"),
                 "tickets", last.get("n_tickets"), "error", last.get("error"))
           for s in last.get("sent") or []:
               print(" ", s.get("status"), s.get("side"), s.get("ticker"),

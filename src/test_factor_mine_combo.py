@@ -90,6 +90,16 @@ def test_combo_specs_unique_and_members_known() -> None:
             assert n in known, n
     assert any(s["name"] == "combo_seh_403525_shared" for s in specs)
     assert any(s["pool"] == "split" for s in specs)
+    macd = next(s for s in specs if s["name"] == "combo_sh_macd_5050_shared")
+    assert macd["members"] == ["short_news_r_macd_h3", "union_hot_n4_h1"]
+    assert macd["weights"] == [1.0, 1.0]
+    assert macd["pool"] == "shared"
+    recs = {r["name"]: r for r in fm.build_recipes()}
+    kid = recs["short_news_r_macd_h3"]
+    assert kid["side"] == "short"
+    assert kid["require"]["news"] == "bad"
+    assert kid["require"]["macd_up"] is True
+    assert "short_news_r_macd_h3" in fmc.CLAIM
 
 
 def test_choose_intents_priority_one_side() -> None:
