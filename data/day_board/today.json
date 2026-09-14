@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T16:09:10.152191-04:00",
+  "generated_at": "2026-09-14T16:09:51.009082-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -93,31 +93,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "ab",
-      "title": "AB checklist",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T05:53:50.490592-04:00",
-      "files": [
-        {
-          "path": "data/ab_checklist/2026-09-14_ab_checklist.csv",
-          "ok": true,
-          "reason": "",
-          "size": 7619545,
-          "preview": "2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, WDS, ANET, CFFN, CXW"
-        },
-        {
-          "path": "data/ab_checklist/2026-09-14_ab_checklist_enriched.csv",
-          "ok": true,
-          "reason": "",
-          "size": 8465733,
-          "preview": "2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WDS, SM, PBR, UHS, MGY"
-        }
-      ],
-      "preview": "2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, WDS, ANET, CFFN, CXW \u00b7 2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WDS, SM, PBR, UHS, MGY"
-    },
     {
       "key": "news_parse",
       "title": "News parse",
@@ -359,6 +334,101 @@
       "ok": true,
       "pushed": true,
       "at": "2026-09-14T16:09:09.407322-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 21308,
+          "preview": "2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 870,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-14.json",
+          "ok": true,
+          "reason": "",
+          "size": 47075,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-14_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 25587,
+          "preview": "2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2151066,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-14_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2151066,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2402486,
+          "preview": "2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2151066,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 25587,
+          "preview": "2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2151066,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2151066,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2402486,
+          "preview": "2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR"
+        }
+      ],
+      "preview": "2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR"
+    },
+    {
+      "key": "live_boards",
+      "title": "live_boards",
+      "date": "2026-09-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-14T16:09:50.269073-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
