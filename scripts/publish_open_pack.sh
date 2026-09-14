@@ -6,6 +6,13 @@
 set -u
 DATE="${1:-$(TZ=America/New_York date +%F)}"
 export FULLSCAN_LAND="${FULLSCAN_LAND:-1}"
+# Job-level FINVIZ_SKIP_LIVE=1 is for scrape/ranker 403s, not ticket quotes.
+# After the bell, drop it so GH-hosted ubuntu can pull Elite Overview Price.
+ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+if [ "$ET_HM" -ge 930 ]; then
+  unset FINVIZ_SKIP_LIVE
+  echo "[open-pack] after 09:30 — Elite Overview live px allowed (not Theme Radar)"
+fi
 echo "[open-pack] date=$DATE"
 python3 -m src.strategy_tickets --date "$DATE" --write
 python3 -m src.publish_live_boards --date "$DATE" --write --no-extras || true

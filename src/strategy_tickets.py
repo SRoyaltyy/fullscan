@@ -10,7 +10,8 @@ Tickets stamp ``clock_legal_for`` / ``session_open`` so a Friday panel
 bake cannot read as Monday's open. Publish fails if bake ≠ session
 and there is no session-open look.
 
-Nothing here fetches prices. Soft-fail every source so
+Live Elite Overview Price is stamped on every buy/sell row after
+09:30 (`elite_live_px`). Soft-fail every source so
 publish_live_boards still writes a strip — except the clock assert.
 """
 from __future__ import annotations
@@ -76,6 +77,19 @@ def _tickers(rows) -> list[dict]:
 
 def _names(rows) -> list[str]:
     return [x["ticker"] for x in _tickers(rows) if x.get("ticker")]
+
+
+def _board_quote_rows(rows) -> list[dict]:
+    """Slim .io rows keep live/last Elite px — not ticker strings only."""
+    out = []
+    for row in _tickers(rows):
+        item = {"ticker": row["ticker"]}
+        for k in ("side", "predict", "px", "px_src", "px_asof", "open_px",
+                  "open_src"):
+            if row.get(k) is not None:
+                item[k] = row[k]
+        out.append(item)
+    return out
 
 
 def _tag_polarity(rows: list[dict], default_side: str) -> list[dict]:
@@ -808,12 +822,12 @@ def write(date: str, payload: dict | None = None) -> list[Path]:
         "n": payload.get("n"),
         "n_ok": payload.get("n_ok"),
         "quote": payload.get("quote"),
-        "buy_1d": _names((payload.get("strategies") or {}).get("stock_book_1d", {}).get("buy")),
-        "sell_1d": _names((payload.get("strategies") or {}).get("stock_book_1d", {}).get("sell")),
+        "buy_1d": _board_quote_rows((payload.get("strategies") or {}).get("stock_book_1d", {}).get("buy")),
+        "sell_1d": _board_quote_rows((payload.get("strategies") or {}).get("stock_book_1d", {}).get("sell")),
         "strategies": {
             k: {
-                "buy": _names(v.get("buy")),
-                "sell": _names(v.get("sell")),
+                "buy": _board_quote_rows(v.get("buy")),
+                "sell": _board_quote_rows(v.get("sell")),
                 "sit": v.get("sit"),
                 "status": v.get("status"),
                 "family": v.get("family"),

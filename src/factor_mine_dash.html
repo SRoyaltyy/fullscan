@@ -1675,14 +1675,24 @@ window.addEventListener('resize', draw);
   var stamp=document.getElementById('liveDayStamp');
   var pills=document.getElementById('liveDayPills');
   if(!stamp||!pills) return;
-  function names(rows){
+  function names(rows, preds){
+    var by={};
+    (preds||[]).forEach(function(p){ if(p&&p.ticker) by[String(p.ticker).toUpperCase()]=p; });
     return (rows||[]).map(function(x){
-      if(typeof x==='string') return x;
-      var t=(x&&(x.ticker||x.symbol))||'';
+      var t, px, op;
+      if(typeof x==='string'){
+        t=x; var p=by[t.toUpperCase()]||{}; px=p.px; op=p.open_px;
+      } else {
+        t=(x&&(x.ticker||x.symbol))||'';
+        px=x&&x.px; op=x&&x.open_px;
+        var hit=t?by[String(t).toUpperCase()]:null;
+        if(px==null&&hit) px=hit.px;
+        if(op==null&&hit) op=hit.open_px;
+      }
       if(!t) return '';
       var bit=t;
-      if(x&&x.px!=null) bit+=' '+x.px;
-      if(x&&x.open_px!=null&&x.open_px!==x.px) bit+=' (open '+x.open_px+')';
+      if(px!=null) bit+=' '+px;
+      if(op!=null&&op!==px) bit+=' (open '+op+')';
       return bit;
     }).filter(Boolean);
   }
@@ -1693,17 +1703,18 @@ window.addEventListener('resize', draw);
     var d=arr[0]||{}, st=arr[1]||{};
     var c=d.counts||{};
     stamp.textContent=(st.date||d.date||'')+' · '+(d.overall||'?')+' · ranker '+(d.ranker_ready?'READY':'BLOCKED')+' · processes ok '+(c.ok||0)+'/'+(c.n||'?')
-      +(st.n?(' · '+st.n+' strategies ('+(st.n_ok||0)+' with tickets)'):'');
+      +(st.n?(' · '+st.n+' strategies ('+(st.n_ok||0)+' with tickets)'):'')
+      +(st.quote&&st.quote.src?(' · px '+st.quote.src+(st.quote.src==='elite_live'||st.quote.src==='elite_live_file'?' (now)':' (not live)')):'');
     var html='';
-    (d.buy_1d||[]).forEach(function(x){if(x.ticker) html+='<span class="pill on">BUY '+x.ticker+'</span>';});
-    (d.sell_1d||[]).forEach(function(x){if(x.ticker) html+='<span class="pill">SELL '+x.ticker+'</span>';});
+    (d.buy_1d||[]).forEach(function(x){if(x.ticker) html+='<span class="pill on">BUY '+x.ticker+(x.px!=null?(' '+x.px):'')+'</span>';});
+    (d.sell_1d||[]).forEach(function(x){if(x.ticker) html+='<span class="pill">SELL '+x.ticker+(x.px!=null?(' '+x.px):'')+'</span>';});
     var strats=st.strategies||{};
     var keys=Object.keys(strats);
     if(keys.length){
       html+='<div class="mut" style="margin-top:8px">every strategy — own BUY/SELL, not the 1d book</div>';
       keys.forEach(function(name){
         var s=strats[name]||{};
-        var b=names(s.buy), sl=names(s.sell);
+        var b=names(s.buy,s.predict), sl=names(s.sell,s.predict);
         var tag=s.sit?'SIT':(s.status&&s.status!=='ok'?s.status:'');
         html+='<div class="mut" style="margin-top:3px"><b>'+name+'</b> ';
         if(tag) html+=tag+' ';

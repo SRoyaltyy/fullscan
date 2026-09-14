@@ -89,6 +89,7 @@ def test_factor_mine_template_paints_every_strategy() -> None:
     assert "today_strategies.json" in html
     assert "every strategy" in html
     assert "open_px" in html
+    assert "elite_live" in html
     assert "RESEARCH" in html
     assert "liveStartRow" in html
     assert "pending — not 0%" in html
@@ -153,6 +154,12 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "publish_dashboard.sh" in script
     assert "src.sleeve_merge" not in script
     assert "src.webull_exec" not in script
+    assert "unset FINVIZ_SKIP_LIVE" in script
+    assert "FINVIZ_SKIP_LIVE: \"\"" in pre
+    assert "FINVIZ_SKIP_LIVE: \"\"" in book
+    assert "quoteLabel" in book_suggestions._POLLER_JS
+    assert "elite_live" in book_suggestions._POLLER_JS
+    assert "px_src" in book_suggestions._POLLER_JS or "open_px" in book_suggestions._POLLER_JS
     assert "publish_strategy_tickets.yml" in orch
     assert "past 09:30 ET" in orch
     assert "Publish strategy tickets" in dep

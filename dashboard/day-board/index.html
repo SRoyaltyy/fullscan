@@ -126,12 +126,34 @@ function render(board){
       if(d.date && board.date && d.date !== board.date) {
         box.textContent = "strategies file is " + d.date + " (board is " + board.date + ")";
       }
-      const names = (rows) => (rows||[]).map(x => typeof x === "string" ? x : ((x && (x.ticker || x.symbol)) || "")).filter(Boolean);
+      const names = (rows, preds) => {
+        const by = {};
+        (preds || []).forEach(p => { if (p && p.ticker) by[String(p.ticker).toUpperCase()] = p; });
+        return (rows || []).map(x => {
+          let t, px, op;
+          if (typeof x === "string") {
+            t = x; const p = by[t.toUpperCase()] || {}; px = p.px; op = p.open_px;
+          } else {
+            t = (x && (x.ticker || x.symbol)) || "";
+            px = x && x.px; op = x && x.open_px;
+            const hit = t ? by[String(t).toUpperCase()] : null;
+            if (px == null && hit) px = hit.px;
+            if (op == null && hit) op = hit.open_px;
+          }
+          if (!t) return "";
+          let bit = t;
+          if (px != null) bit += " " + px;
+          if (op != null && op !== px) bit += " (open " + op + ")";
+          return bit;
+        }).filter(Boolean);
+      };
       const keys = Object.keys(d.strategies);
-      box.innerHTML = `<div>${keys.length} strategies · ${d.n_ok||0} with tickets · ${d.date||""}</div>` +
+      const q = d.quote || {};
+      const qbit = q.src ? (` · px ${q.src}${(q.src === "elite_live" || q.src === "elite_live_file") ? " (now)" : " (not live)"}`) : "";
+      box.innerHTML = `<div>${keys.length} strategies · ${d.n_ok||0} with tickets · ${d.date||""}${qbit}</div>` +
         keys.map(name => {
           const s = d.strategies[name] || {};
-          const b = names(s.buy), sl = names(s.sell);
+          const b = names(s.buy, s.predict), sl = names(s.sell, s.predict);
           const tag = s.sit ? "SIT" : (s.status && s.status !== "ok" ? s.status : "");
           let line = `<div style="margin:4px 0"><b>${name}</b> `;
           if(tag) line += tag + " ";

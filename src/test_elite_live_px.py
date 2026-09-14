@@ -90,6 +90,19 @@ def test_excel_clock_is_session_open_not_run_date() -> None:
         assert by["excel_all"]["signal_date"] == "2026-09-14"
 
 
+def test_slim_board_keeps_live_px() -> None:
+    rows = st._board_quote_rows([
+        {"ticker": "CVE", "px": 16.2, "open_px": 16.0, "px_src": "elite_live",
+         "side": "long", "predict": "UP"},
+        "TNDM",
+    ])
+    assert rows[0]["ticker"] == "CVE"
+    assert rows[0]["px"] == 16.2
+    assert rows[0]["open_px"] == 16.0
+    assert rows[0]["px_src"] == "elite_live"
+    assert rows[1] == {"ticker": "TNDM"}
+
+
 def test_hard_red_research_is_tagged_not_a_wire() -> None:
     payload = {
         "quote": {"src": "elite_live"},
@@ -122,6 +135,7 @@ def main() -> None:
     test_stamp_rows_keeps_open_and_live()
     test_quote_book_offline_uses_fallback_not_theme_radar()
     test_excel_clock_is_session_open_not_run_date()
+    test_slim_board_keeps_live_px()
     test_hard_red_research_is_tagged_not_a_wire()
     print("ok")
 

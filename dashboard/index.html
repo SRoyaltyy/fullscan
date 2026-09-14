@@ -925,14 +925,34 @@ document.getElementById('fees').textContent=
   var TODAY = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today.json";
   var STRAT = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today_strategies.json";
   var SUG = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/stock_book/latest_suggestions.json";
-  function names(rows){
-    if(!rows) return [];
-    return rows.map(function(x){
-      if(typeof x === "string") return x;
-      var t = (x && (x.ticker || x.symbol)) || "";
+  function quoteLabel(q){
+    if(!q) return "";
+    var src = q.src || "";
+    if(!src && !q.at) return "";
+    var live = (src === "elite_live" || src === "elite_live_file");
+    var bit = " · px " + (src || "?") + (live ? " (now)" : " (not live)");
+    if(q.at) bit += " @ " + q.at;
+    return bit;
+  }
+  function names(rows, preds){
+    var by = {};
+    (preds || []).forEach(function(p){
+      if(p && p.ticker) by[String(p.ticker).toUpperCase()] = p;
+    });
+    return (rows || []).map(function(x){
+      var t, px, op;
+      if(typeof x === "string"){
+        t = x;
+        var p = by[t.toUpperCase()] || {};
+        px = p.px; op = p.open_px;
+      } else {
+        t = (x && (x.ticker || x.symbol)) || "";
+        px = x && x.px; op = x && x.open_px;
+        var hit = t ? by[String(t).toUpperCase()] : null;
+        if(px == null && hit) px = hit.px;
+        if(op == null && hit) op = hit.open_px;
+      }
       if(!t) return "";
-      var px = (x && x.px != null) ? x.px : null;
-      var op = (x && x.open_px != null) ? x.open_px : null;
       var bit = t;
       if(px != null) bit += " " + px;
       if(op != null && op !== px) bit += " (open " + op + ")";
@@ -951,8 +971,8 @@ document.getElementById('fees').textContent=
       extra += '<div class="live-book-date">' + keys.length + ' strategies</div>';
       keys.forEach(function(name){
         var s = strats[name] || {};
-        var b = names(s.buy);
-        var sl = names(s.sell);
+        var b = names(s.buy, s.predict);
+        var sl = names(s.sell, s.predict);
         var tag = s.sit ? "SIT" : (s.status || "");
         extra += '<div class="live-book-row' + (sl.length && !b.length ? " sell" : "") + '"><b>' + name + '</b> ';
         var side = String(s.side || "").toUpperCase();
@@ -985,7 +1005,9 @@ document.getElementById('fees').textContent=
     }
     el.innerHTML =
       '<div class="live-book-kicker">Today\'s tickets (every strategy)</div>' +
-      '<div class="live-book-date">' + (d.date || "") + '</div>' +
+      '<div class="live-book-date">' + (d.date || "") +
+        (d.clock_legal_for ? (" · open " + d.clock_legal_for) : "") +
+        quoteLabel(d.quote) + '</div>' +
       '<div class="live-book-row"><b>BUY 1d</b> ' + (buys.join(" · ") || "—") + '</div>' +
       '<div class="live-book-row sell"><b>SELL 1d</b> ' + (sells.join(" · ") || "—") + '</div>' + extra;
   }
@@ -1000,6 +1022,8 @@ document.getElementById('fees').textContent=
       if(strat && strat.strategies) d.strategies = strat.strategies;
       if(strat && strat.date) d.date = strat.date;
       if(strat && strat.n) d.n_strategies = strat.n;
+      if(strat && strat.quote) d.quote = strat.quote;
+      if(strat && strat.clock_legal_for) d.clock_legal_for = strat.clock_legal_for;
       if(!d.buy_1d && sug.buy_1d) d.buy_1d = sug.buy_1d;
       if(!d.sell_1d && sug.sell_1d) d.sell_1d = sug.sell_1d;
       paint(d);
