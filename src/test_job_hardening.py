@@ -342,6 +342,7 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "timeout_s=180" in pre
     assert "timeout_s=50" in pre
     assert "parse_t = 120" in pre
+    assert "retry once before QC" in pre
     assert "retry --limit 80" in pre
     assert "rebuild after essays" in pre
     gen = pre.find('step("general_predict"')
@@ -358,6 +359,7 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "ab_t = 1500" in book
     assert "wx_t = 50" in book
     assert "parse_t = 120" in book
+    assert "retry once before QC" in book
     assert "PREOPEN_LLM_TIMEOUT" in book
     assert "hung Grok must not block the book" in book
     assert "--offline" in book

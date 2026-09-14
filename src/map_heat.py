@@ -769,15 +769,42 @@ def render(p: dict) -> str:
     return "\n".join(lines) + "\n"
 
 
+def md_is_same_session(date: str, text: str) -> bool:
+    """True when the markdown header is this session, not a prior-day carry."""
+    return (text or "").lstrip().startswith(f"# MAP HEAT — {date}")
+
+
+def session_md_ok(date: str) -> bool:
+    p = OUT_DIR / f"{date}_map_heat.md"
+    if not p.exists():
+        return False
+    try:
+        return md_is_same_session(date, p.read_text(encoding="utf-8"))
+    except OSError:
+        return False
+
+
 def write(date: str, payload: dict) -> tuple[Path, Path]:
+    """Write json + md together. Morning overlay must not ship a stale md."""
+    if (str(payload.get("phase") or "") == "morning_overlay"
+            or payload.get("overlay_at")):
+        if (str(payload.get("date") or "") != date
+                or not str(payload.get("generated_at") or "").startswith(date)):
+            payload = stamp_overlay_identity(payload, date)
+    text = render(payload)
+    if ((str(payload.get("phase") or "") == "morning_overlay"
+         or payload.get("overlay_at"))
+            and not md_is_same_session(date, text)):
+        raise SystemExit(
+            f"[map_heat] refuse to ship stale md header for {date}")
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     md_path = OUT_DIR / f"{date}_map_heat.md"
     js_path = OUT_DIR / f"{date}_map_heat.json"
-    md_path.write_text(render(payload), encoding="utf-8")
+    md_path.write_text(text, encoding="utf-8")
     # industries list is large; keep full json for the bot, compact md for humans
     js_path.write_text(json.dumps(payload, indent=2, default=str), encoding="utf-8")
     latest = OUT_DIR / "latest_map_heat.md"
-    latest.write_text(md_path.read_text(encoding="utf-8"), encoding="utf-8")
+    latest.write_text(text, encoding="utf-8")
     print(f"[map_heat] wrote {md_path}")
     print(f"[map_heat] wrote {js_path}")
     return md_path, js_path
@@ -798,7 +825,8 @@ def already_good(date: str) -> bool:
     # close. It must NOT suppress the next morning's live futures/news refresh.
     # Empty tape is not "good" — overlay must retry (Aliyun 403 used to stamp
     # overlay_at and then skip-if-good treated the empty scrape as success).
-    return (generated_date == date and "MAP_HEAT_OK" in text
+    return (generated_date == date and md_is_same_session(date, text)
+            and "MAP_HEAT_OK" in text
             and "INDUSTRY_HEAT" in text and len(text) > 400
             and bool(payload.get("tape") or []))
 
@@ -904,8 +932,13 @@ def main() -> None:
                 f"industries) at {js}"
             )
         if not args.force and overlay_is_good(payload, date):
-            print(f"[map_heat] overlay already applied {date} "
-                  f"(tape={len(payload.get('tape') or [])})")
+            if session_md_ok(date):
+                print(f"[map_heat] overlay already applied {date} "
+                      f"(tape={len(payload.get('tape') or [])})")
+                return
+            print(f"[map_heat] overlay json is {date} but md header is "
+                  "stale — rewrite md (no scrape)")
+            rewrite_md(date)
             return
         if payload.get("overlay_at") and not (payload.get("tape") or []):
             print(f"[map_heat] prior overlay_at={payload.get('overlay_at')} "

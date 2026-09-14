@@ -115,6 +115,68 @@ def test_stamp_overlay_identity_sets_session_header() -> None:
     assert "MAP_HEAT_OK" in text
 
 
+def test_write_stamps_morning_json_and_md() -> None:
+    orig = mh.OUT_DIR
+    with tempfile.TemporaryDirectory() as d:
+        mh.OUT_DIR = Path(d)
+        payload = {
+            "date": "2026-09-09",
+            "generated_at": "2026-09-09T01:59:54.403331-04:00",
+            "overlay_at": "2026-09-14T04:15:16.809073-04:00",
+            "phase": "morning_overlay",
+            "export": "finviz_2026-09-08.csv",
+            "n_tickers": 11608,
+            "tape": [{"ticker": "ES", "label": "S&P 500", "last": 1,
+                      "change": 0.1}],
+            "sectors": [{"sector": f"S{i}", "d1": 0, "w1": 0, "rvol": 1}
+                        for i in range(11)],
+            "hot": [],
+            "cold": [],
+            "overrides": [],
+            "themes": [],
+            "theme_tape": [],
+            "ticker_news": [],
+        }
+        md_path, js_path = mh.write("2026-09-14", payload)
+        text = md_path.read_text(encoding="utf-8")
+        data = json.loads(js_path.read_text(encoding="utf-8"))
+        assert text.startswith("# MAP HEAT — 2026-09-14")
+        assert data["date"] == "2026-09-14"
+        assert str(data["generated_at"]).startswith("2026-09-14")
+        assert mh.md_is_same_session("2026-09-14", text)
+        assert mh.session_md_ok("2026-09-14")
+        stale = (mh.OUT_DIR / "2026-09-14_map_heat.md")
+        stale.write_text("# MAP HEAT — 2026-09-09\n\nINDUSTRY_HEAT\n"
+                         + "x" * 400 + "\nMAP_HEAT_OK\n", encoding="utf-8")
+        assert mh.already_good("2026-09-14") is False
+        assert mh.session_md_ok("2026-09-14") is False
+    mh.OUT_DIR = orig
+
+
+def test_qc_map_heat_rejects_stale_or_missing_md() -> None:
+    with tempfile.TemporaryDirectory() as d:
+        js = Path(d) / "2026-09-14_map_heat.json"
+        md = Path(d) / "2026-09-14_map_heat.md"
+        payload = {
+            "phase": "morning_overlay",
+            "overlay_at": "2026-09-14T04:15:00-04:00",
+            "industries": [{"spx_leaders": ["A"]}] * 60,
+            "sectors": list(range(11)),
+            "tape": [{"ticker": "ES"}],
+        }
+        js.write_text(json.dumps(payload), encoding="utf-8")
+        r = output_qc.qc_map_heat(js)
+        assert not r.ok and r.reason == "map_heat_md_missing"
+        md.write_text("# MAP HEAT — 2026-09-09\nMAP_HEAT_OK\n",
+                      encoding="utf-8")
+        r = output_qc.qc_map_heat(js)
+        assert not r.ok and r.reason == "stale_map_heat_md"
+        md.write_text("# MAP HEAT — 2026-09-14\nMAP_HEAT_OK\n",
+                      encoding="utf-8")
+        r = output_qc.qc_map_heat(js)
+        assert r.ok, r.reason
+
+
 def test_empty_tape_is_not_overlay_good() -> None:
     empty = {
         "date": "2099-01-01",
@@ -246,6 +308,8 @@ if __name__ == "__main__":
     test_missing_research_is_visible_but_bootstrap_is_safe()
     test_calendar_entry_scale_ignores_legacy_earnings_mix()
     test_stamp_overlay_identity_sets_session_header()
+    test_write_stamps_morning_json_and_md()
+    test_qc_map_heat_rejects_stale_or_missing_md()
     test_empty_tape_is_not_overlay_good()
     test_tape_boosts_from_finviz_overrides()
     test_heat_scale_default_is_incubate()
@@ -253,4 +317,4 @@ if __name__ == "__main__":
     test_parse_econ_route_init_keeps_upcoming()
     test_parse_earnings_preview_window()
     test_tape_keeps_all_tiles_not_just_whitelist()
-    print("11 tests passed")
+    print("13 tests passed")

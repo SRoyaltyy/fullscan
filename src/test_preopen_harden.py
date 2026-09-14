@@ -233,6 +233,8 @@ def test_holiday_overlay_uses_last_session() -> None:
     assert "last_closed_session" in text
     assert "copied" in text and "last session" in text
     assert "return stamp_overlay_identity(out, date)" in text
+    assert "stale — rewrite md (no scrape)" in text
+    assert "refuse to ship stale md header" in text
 
 
 def test_weather_step_rejects_pre_0535_stamp() -> None:
@@ -299,6 +301,7 @@ def test_parse_runs_when_credits_fail_or_past_cutoff() -> None:
     assert "parse still runs if missing" in pre
     assert credits_at < essays_at
     assert "timeout_s=45 if clock_late" in pre
+    assert "retry once before QC" in pre
 
 
 def test_map_heat_passthrough_flag_skips_llm(tmp_path: Path | None = None) -> None:
