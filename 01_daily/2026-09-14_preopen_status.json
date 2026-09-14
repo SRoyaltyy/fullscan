@@ -1,14 +1,14 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T09:37:02.861997-04:00",
+  "generated_at": "2026-09-14T09:45:53.154654-04:00",
   "all_ok": false,
   "qc_all_ok": true,
   "book_ok": true,
   "grok_ok": false,
   "grok_fails": [
     {
-      "path": "01_daily/map_heat/2026-09-14_map_heat.md",
-      "reason": "wrong date \u2014 header still reads 'MAP HEAT \u2014 2026-09-09' with export finviz_2026-09-08.csv and generated 2026-09-09T01:59 (09-09 carry). map_heat.json is same-day and regex-ok."
+      "path": "01_daily/map_heat/2026-09-14_research.md",
+      "reason": "phase=morning_refresh artifact that self-declares failure: 'Morning delta refresh failed captain-evidence QC (coverage:0/25<required:20). Using last night's post-close captain cards so the book still has heat. Overnight tape/news was not re-scored.' \u2014 a carried-forward, non-refreshed research file, not a same-day complete artifact."
     }
   ],
   "missing_required": [],
