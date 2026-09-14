@@ -1,7 +1,7 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T04:12:30.436839-04:00",
-  "export_used": "data/exports/finviz_2026-09-14.csv",
+  "generated_at": "2026-09-14T04:14:01.601140-04:00",
+  "export_used": "data/exports/finviz_2026-09-13.csv",
   "ticker_digest_count": 400,
   "signal_count": 400,
   "index_digests": [
@@ -38,7 +38,7 @@
     {
       "ticker": "AAPL",
       "digest": "Bank of America cuts Apple price target to $370 from $380, reiterates Buy on lower iPhone 18 pricing, margin pressure risk",
-      "news_title": "iPhone Duo's price opens room for Android rivals",
+      "news_title": "Apple's iPhone Duo event should put the bears to rest",
       "sector": "Technology",
       "industry": "Consumer Electronics",
       "is_dividend": false,
@@ -69,9 +69,9 @@
       "source": "finviz_export"
     },
     {
-      "ticker": "AMD",
-      "digest": "AI leaders' call to slow frontier development sparks AMD's 5% premarket plunge",
-      "news_title": "Viral AI Doomer Tweet: Engineered Panic?",
+      "ticker": "ALAB",
+      "digest": "S&P 500 inclusion speculation fuels Astera Labs 12% intraday surge",
+      "news_title": "ALAB Gains From Aries and Taurus Strength: Can It Beat MRVL & CRDO?",
       "sector": "Technology",
       "industry": "Semiconductors",
       "is_dividend": false,
@@ -225,7 +225,7 @@
     {
       "ticker": "BCS",
       "digest": "Strong H1 profits, guidance upgrade and Â£1bn buyback drive BCS 6.48% surge",
-      "news_title": "UAL, AAL, DAL Stocks Suffer Weekly Loss: Barclays Cuts Price Targets But Sees A Silver Lining",
+      "news_title": "Barclays Raises 2026 S&P 500 Target to 7,950 After Second-Quarter Earnings",
       "sector": "Financial",
       "industry": "Banks - Diversified",
       "is_dividend": false,
@@ -239,6 +239,17 @@
       "news_title": "U.S.-Listed Copper Mining Stocks Fall as Copper Retreats From Record High",
       "sector": "Basic Materials",
       "industry": "Other Industrial Metals & Mining",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "BKR",
+      "digest": "Chart acquisition near-term margin drags trigger Baker Hughes 6.5% drop",
+      "news_title": "US rig count up three as prices soar",
+      "sector": "Energy",
+      "industry": "Oil & Gas Equipment & Services",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -445,7 +456,7 @@
     {
       "ticker": "DELL",
       "digest": "RBC Outperform upgrade and strong $5B bond demand drive DELL's 10% rebound",
-      "news_title": "Why Did HPQ, DELL, VLO Stocks Surge To 52-Week Highs Last Week?",
+      "news_title": "Tim Cook warns of US crisis: Ive never seen anything like it and Musk agrees. Shockproof your hard cash today",
       "sector": "Technology",
       "industry": "Computer Hardware",
       "is_dividend": false,
@@ -547,6 +558,17 @@
       "news_title": "Top 10 S&P 500 Stocks of the Past Decade Share One Clear Theme",
       "sector": "Industrials",
       "industry": "Engineering & Construction",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "FNV",
+      "digest": "Gold price surge drives Franco-Nevada 6.55% higher on Aug 19",
+      "news_title": "The Cheapest Way to Own a Copper Mine Is to Let Someone Else Build It",
+      "sector": "Basic Materials",
+      "industry": "Gold",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -672,28 +694,6 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export"
-    },
-    {
-      "ticker": "LIN",
-      "digest": "Linde posts record Q2 EPS, raises 2026 EPS guidance floor as project backlog grows about $1B to $8.1B",
-      "news_title": "The Bloom Energy Stock Signal Hiding Behind The Demand Story",
-      "sector": "Basic Materials",
-      "industry": "Specialty Chemicals",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "LITE",
-      "digest": "Bullish 1.6T leadership note and AI optics momentum drive LITE 10% surge",
-      "news_title": "Funds Bet Billions As This AI Stock Lights Up A Buy Zone",
-      "sector": "Technology",
-      "industry": "Communication Equipment",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
     }
   ],
   "by_sector": {
@@ -701,7 +701,7 @@
       {
         "ticker": "AAPL",
         "digest": "Bank of America cuts Apple price target to $370 from $380, reiterates Buy on lower iPhone 18 pricing, margin pressure risk",
-        "news_title": "iPhone Duo's price opens room for Android rivals",
+        "news_title": "Apple's iPhone Duo event should put the bears to rest",
         "sector": "Technology",
         "industry": "Consumer Electronics",
         "is_dividend": false,
@@ -721,9 +721,9 @@
         "source": "finviz_export"
       },
       {
-        "ticker": "AMD",
-        "digest": "AI leaders' call to slow frontier development sparks AMD's 5% premarket plunge",
-        "news_title": "Viral AI Doomer Tweet: Engineered Panic?",
+        "ticker": "ALAB",
+        "digest": "S&P 500 inclusion speculation fuels Astera Labs 12% intraday surge",
+        "news_title": "ALAB Gains From Aries and Taurus Strength: Can It Beat MRVL & CRDO?",
         "sector": "Technology",
         "industry": "Semiconductors",
         "is_dividend": false,
@@ -778,7 +778,7 @@
       {
         "ticker": "DELL",
         "digest": "RBC Outperform upgrade and strong $5B bond demand drive DELL's 10% rebound",
-        "news_title": "Why Did HPQ, DELL, VLO Stocks Surge To 52-Week Highs Last Week?",
+        "news_title": "Tim Cook warns of US crisis: Ive never seen anything like it and Musk agrees. Shockproof your hard cash today",
         "sector": "Technology",
         "industry": "Computer Hardware",
         "is_dividend": false,
@@ -967,6 +967,85 @@
         "source": "finviz_export"
       }
     ],
+    "Energy": [
+      {
+        "ticker": "BKR",
+        "digest": "Chart acquisition near-term margin drags trigger Baker Hughes 6.5% drop",
+        "news_title": "US rig count up three as prices soar",
+        "sector": "Energy",
+        "industry": "Oil & Gas Equipment & Services",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "CNQ",
+        "digest": "Canadian Natural Resources posts record Q2 2026 results with EPS $1.58, raises 2026 production guidance and returns about $4B to shareholders",
+        "news_title": "Canadian Natural Resources Ltd's Dividend Analysis",
+        "sector": "Energy",
+        "industry": "Oil & Gas E&P",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "CVE",
+        "digest": "Cenovus Energy Q2 2026 non-GAAP EPS $1.08 misses estimates, revenue $14.7B beats, company raises full-year production guidance",
+        "news_title": "This International Manager Is Betting Big on Banks and Energy, but Not Tech",
+        "sector": "Energy",
+        "industry": "Oil & Gas Integrated",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "E",
+        "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results",
+        "news_title": "Saipem, Jan De Nul sign LoI for Mozambique Rovuma LNG project",
+        "sector": "Energy",
+        "industry": "Oil & Gas Integrated",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "ENB",
+        "digest": "Dilutive C$2.6B equity offering to fund Tallgrass acquisition drives ENB 3.85% lower",
+        "news_title": "At $100 Oil, the Deal Flow Moved to Pipelines and Producing Wells",
+        "sector": "Energy",
+        "industry": "Oil & Gas Midstream",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "EOG",
+        "digest": "EOG posts record EPS and free cash flow, reiterates 2026 guidance and highlights strong UAE unconventional exploration results",
+        "news_title": "EOG Resources to Present at Upcoming Conference",
+        "sector": "Energy",
+        "industry": "Oil & Gas E&P",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "KMI",
+        "digest": "KMI rebounds on pipeline project momentum and raised 2026 guidance",
+        "news_title": "Trump oil and gas holdings gained up to $4.4M during Iran war",
+        "sector": "Energy",
+        "industry": "Oil & Gas Midstream",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      }
+    ],
     "Financial": [
       {
         "ticker": "AON",
@@ -993,7 +1072,7 @@
       {
         "ticker": "BCS",
         "digest": "Strong H1 profits, guidance upgrade and Â£1bn buyback drive BCS 6.48% surge",
-        "news_title": "UAL, AAL, DAL Stocks Suffer Weekly Loss: Barclays Cuts Price Targets But Sees A Silver Lining",
+        "news_title": "Barclays Raises 2026 S&P 500 Target to 7,950 After Second-Quarter Earnings",
         "sector": "Financial",
         "industry": "Banks - Diversified",
         "is_dividend": false,
@@ -1092,79 +1171,11 @@
         "source": "finviz_export"
       },
       {
-        "ticker": "LIN",
-        "digest": "Linde posts record Q2 EPS, raises 2026 EPS guidance floor as project backlog grows about $1B to $8.1B",
-        "news_title": "The Bloom Energy Stock Signal Hiding Behind The Demand Story",
+        "ticker": "FNV",
+        "digest": "Gold price surge drives Franco-Nevada 6.55% higher on Aug 19",
+        "news_title": "The Cheapest Way to Own a Copper Mine Is to Let Someone Else Build It",
         "sector": "Basic Materials",
-        "industry": "Specialty Chemicals",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      }
-    ],
-    "Energy": [
-      {
-        "ticker": "CNQ",
-        "digest": "Canadian Natural Resources posts record Q2 2026 results with EPS $1.58, raises 2026 production guidance and returns about $4B to shareholders",
-        "news_title": "Canadian Natural Resources Ltd's Dividend Analysis",
-        "sector": "Energy",
-        "industry": "Oil & Gas E&P",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "CVE",
-        "digest": "Cenovus Energy Q2 2026 non-GAAP EPS $1.08 misses estimates, revenue $14.7B beats, company raises full-year production guidance",
-        "news_title": "This International Manager Is Betting Big on Banks and Energy, but Not Tech",
-        "sector": "Energy",
-        "industry": "Oil & Gas Integrated",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "E",
-        "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results",
-        "news_title": "Saipem, Jan De Nul sign LoI for Mozambique Rovuma LNG project",
-        "sector": "Energy",
-        "industry": "Oil & Gas Integrated",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "ENB",
-        "digest": "Dilutive C$2.6B equity offering to fund Tallgrass acquisition drives ENB 3.85% lower",
-        "news_title": "At $100 Oil, the Deal Flow Moved to Pipelines and Producing Wells",
-        "sector": "Energy",
-        "industry": "Oil & Gas Midstream",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "EOG",
-        "digest": "EOG posts record EPS and free cash flow, reiterates 2026 guidance and highlights strong UAE unconventional exploration results",
-        "news_title": "EOG Resources to Present at Upcoming Conference",
-        "sector": "Energy",
-        "industry": "Oil & Gas E&P",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "KMI",
-        "digest": "KMI rebounds on pipeline project momentum and raised 2026 guidance",
-        "news_title": "Trump oil and gas holdings gained up to $4.4M during Iran war",
-        "sector": "Energy",
-        "industry": "Oil & Gas Midstream",
+        "industry": "Gold",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
@@ -1296,7 +1307,7 @@
     {
       "ticker": "AAPL",
       "digest": "Bank of America cuts Apple price target to $370 from $380, reiterates Buy on lower iPhone 18 pricing, margin pressure risk",
-      "news_title": "iPhone Duo's price opens room for Android rivals",
+      "news_title": "Apple's iPhone Duo event should put the bears to rest",
       "sector": "Technology",
       "industry": "Consumer Electronics",
       "is_dividend": false,
@@ -1327,9 +1338,9 @@
       "source": "finviz_export"
     },
     {
-      "ticker": "AMD",
-      "digest": "AI leaders' call to slow frontier development sparks AMD's 5% premarket plunge",
-      "news_title": "Viral AI Doomer Tweet: Engineered Panic?",
+      "ticker": "ALAB",
+      "digest": "S&P 500 inclusion speculation fuels Astera Labs 12% intraday surge",
+      "news_title": "ALAB Gains From Aries and Taurus Strength: Can It Beat MRVL & CRDO?",
       "sector": "Technology",
       "industry": "Semiconductors",
       "is_dividend": false,
@@ -1483,7 +1494,7 @@
     {
       "ticker": "BCS",
       "digest": "Strong H1 profits, guidance upgrade and Â£1bn buyback drive BCS 6.48% surge",
-      "news_title": "UAL, AAL, DAL Stocks Suffer Weekly Loss: Barclays Cuts Price Targets But Sees A Silver Lining",
+      "news_title": "Barclays Raises 2026 S&P 500 Target to 7,950 After Second-Quarter Earnings",
       "sector": "Financial",
       "industry": "Banks - Diversified",
       "is_dividend": false,
@@ -1497,6 +1508,17 @@
       "news_title": "U.S.-Listed Copper Mining Stocks Fall as Copper Retreats From Record High",
       "sector": "Basic Materials",
       "industry": "Other Industrial Metals & Mining",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "BKR",
+      "digest": "Chart acquisition near-term margin drags trigger Baker Hughes 6.5% drop",
+      "news_title": "US rig count up three as prices soar",
+      "sector": "Energy",
+      "industry": "Oil & Gas Equipment & Services",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -1703,7 +1725,7 @@
     {
       "ticker": "DELL",
       "digest": "RBC Outperform upgrade and strong $5B bond demand drive DELL's 10% rebound",
-      "news_title": "Why Did HPQ, DELL, VLO Stocks Surge To 52-Week Highs Last Week?",
+      "news_title": "Tim Cook warns of US crisis: Ive never seen anything like it and Musk agrees. Shockproof your hard cash today",
       "sector": "Technology",
       "industry": "Computer Hardware",
       "is_dividend": false,
@@ -1805,6 +1827,17 @@
       "news_title": "Top 10 S&P 500 Stocks of the Past Decade Share One Clear Theme",
       "sector": "Industrials",
       "industry": "Engineering & Construction",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "FNV",
+      "digest": "Gold price surge drives Franco-Nevada 6.55% higher on Aug 19",
+      "news_title": "The Cheapest Way to Own a Copper Mine Is to Let Someone Else Build It",
+      "sector": "Basic Materials",
+      "industry": "Gold",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -1956,7 +1989,7 @@
     {
       "ticker": "LLY",
       "digest": "Eli Lilly completes acquisition of AtaiBeckley, adding its rapid-acting neuroplastogen pipeline including lead TRD candidate BPL-003 to Lillyâs neuroscience portfolio.",
-      "news_title": "Big Pharma Is Pouring Billions Into China's Biotechs",
+      "news_title": "Morgan Stanley Downgrades Novo Nordisk to Sell on Lilly Competition",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
@@ -2121,7 +2154,7 @@
     {
       "ticker": "ORCL",
       "digest": "Oracle posts Q1 revenue up 30%, OCI up 121%, raises FY27 guidance to at least $90B revenue",
-      "news_title": "Anthropic IPO: Claude Maker Reportedly Targets Second Straight Quarter Of Adjusted Profit As CEOs AI Slowdown Call Sparks Debate",
+      "news_title": "Oracles Ellison cancels plan to sell up to 50 mln shares",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
       "is_dividend": false,
@@ -2146,28 +2179,6 @@
       "news_title": "What Happens To CAT Stock If Data Center Demand Cools?",
       "sector": "Industrials",
       "industry": "Farm & Heavy Construction Machinery",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "PDD",
-      "digest": "PDD Q2 revenue growth slows to 8% as profit declines on heavy reinvestment despite EPS beat and revenue miss",
-      "news_title": "Shein Stock Waited Years to IPO Only to Flop. Blame Trump.",
-      "sector": "Consumer Cyclical",
-      "industry": "Internet Retail",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "PH",
-      "digest": "Parker-Hannifin prices $2.4B U.S. dollar and â¬2.025B euro senior notes to repay acquisition-related debt",
-      "news_title": "Why Is Eaton Priced Above Peers That Earn More Per Sale?",
-      "sector": "Industrials",
-      "industry": "Specialty Industrial Machinery",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
