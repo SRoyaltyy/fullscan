@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T16:09:51.009082-04:00",
+  "generated_at": "2026-09-14T16:11:09.758351-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -93,31 +93,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T05:55:10.527719-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-14_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 80514,
-          "preview": "raw=149 usable=15 single=19 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | OPEC+ September output hike completed; next meeting watch | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB"
-        },
-        {
-          "path": "01_daily/news/2026-09-14_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 4671,
-          "preview": "# News Parse v2 \u2014 2026-09-14T05:55:10.519970-04:00\nWindow\u224848h | raw=149 | usable=15 | single_name=19 | noise_dropped=115\nusable polarity={'+': 2, '-': 3, 'mixed': 0, 'neutral': 10}"
-        }
-      ],
-      "preview": "raw=149 usable=15 single=19 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | OPEC+ September output hike completed; next meeting watch | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB \u00b7 # News Parse v2 \u2014 2026-09-14T05:55:10.519970-04:00\nWindow\u224848h | raw=149 | usable=15 | single_name=19 | noise_dropped=115\nusable polarity={'+': 2, '-': 3, 'mixed': 0, 'neutral': 10}"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -429,6 +404,101 @@
       "ok": true,
       "pushed": true,
       "at": "2026-09-14T16:09:50.269073-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 21308,
+          "preview": "2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 870,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-14.json",
+          "ok": true,
+          "reason": "",
+          "size": 47075,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-14_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 25587,
+          "preview": "2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2151066,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-14_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2151066,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2402486,
+          "preview": "2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2151066,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 25587,
+          "preview": "2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2151066,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2151066,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2402486,
+          "preview": "2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR"
+        }
+      ],
+      "preview": "2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-14 BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR, TDTH, BTDR"
+    },
+    {
+      "key": "live_boards",
+      "title": "live_boards",
+      "date": "2026-09-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-14T16:11:09.016809-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
