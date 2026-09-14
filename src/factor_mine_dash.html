@@ -178,6 +178,7 @@
   <li><b>Butterfly state.</b> Morning leftover cash + lots actually held are the only inputs. Size = leftover / rank_w / topheavy / half. Sell = list / time / cut_loser / trail. S≥+5 can size-up or add names, still cash-capped. Hard-red S≤−3 sits.</li>
   <li><b>Entry.</b> <code>flatten_h*</code> buys the wish-list on io/HOLD mornings — live Action those days is HOLD. <code>flatten_live_*</code> only buys when the flatten gate fires (mover).</li>
   <li><b>Combinations.</b> A <code>combo_*</code> row is the same $10k cash book as every other recipe — leftover split, whole shares, Futubull fees, sell first, 09:30 open, hard-red S≤−3 sit. Same table columns, same leftover · list · none line, same three-column explain. It is <em>not</em> a mashed shopping list and not a blend of daily return series. At 09:30 each member still runs its own leak-free <code>pick_day</code> (same cameras / prior news / prior tape; never today’s Change%). Shared pile: one leftover-cash stack; unused cash spills in claim order (fresh-E, then heat, then other longs, then shorts); weights cap each kid’s slice of whatever cash is left. That spill is why a shared mix can beat both kids — it is not the average of their Book%. A short fill adds cash (borrow) that can later fund a long, still capped by equity ≥ 2× notional. Split pile: each member is a normal book at its weight × $10k, then the books are added (two accounts; the same name can sit in both). One ticker, one side on a shared pile. Each lot keeps the owner’s min-hold and list-drop — a hold-3 fresh-E lot is not dumped by a hold-1 heat card. Lots already held are not sold just because S is red. <b>WIN</b> (next to the name, same place as <em>thin</em>) means this cash Book% is higher than every member, or it stays within 2pp of the richest member with a smaller drawdown than every member, the best start-rate, both halves green, and a no-worse worst day. Signal% / Eff do not award WIN. Eighteen sessions rank this tape. Live <code>flatten_robust</code> is unchanged.</li>
+  <li><b>Long-led.</b> We do not only win via shorts. Closed-trade $ is stamped long vs short on every sleeve. <b>Long-led</b> means long $ ≥ short $, Book% ≥ 20, and start YES ≥ 75% (16/21). The +35 <code>combo_sh_5050</code> is ~47% long / 53% short — the long is <code>union_hot_n4_h1</code>, which made most of its money in one week (8/21–8/25) and is red if you start after that burst (10/21 starts). The short is the grind that keeps the combo’s start chips green. If you want longs to carry: <code>union_e_fresh_h3</code> (pure long +23, 16/21), <code>combo_ej_5050</code> (two longs, no short), <code>combo_jse_333</code> (~80% long $), <code>combo_es_9010</code> (90% fresh-E / 10% short). The Long-led filter is that bar.</li>
 </ol>
 <p class="note">Research miner only. Live <code>flatten_robust</code> is untouched.</p>
 </details>
@@ -224,6 +225,7 @@ function statsList(){
   return (D.stats||[]).filter(s=>{
     if(kindFilter==='combo' && !isCombo(s)) return false;
     if(kindFilter==='single' && isCombo(s)) return false;
+    if(kindFilter==='longled' && !s.long_led) return false;
     if(sideFilter==='combo' && !isCombo(s)) return false;
     if(sideFilter==='long' && s.side!=='long') return false;
     if(sideFilter==='short' && s.side!=='short') return false;
@@ -273,22 +275,26 @@ function renderCards(){
       ["Win rate", picked, pct(picked.win_rate), picked.win_rate],
       ["$ days", picked, pct(dayRate), dayRate],
       ["Starts YES", picked, (picked.start_green||0)+'/'+(picked.start_n||0), picked.start_rate],
-      ["Top-g / losers", picked, (picked.gainer_hits||0)+' / '+(picked.loser_hits||0), picked.gainer_rate],
+      picked.long_pnl!=null
+        ? ["Long vs short $", picked, 'L $'+Number(picked.long_pnl).toFixed(0)+' / S $'+Number(picked.short_pnl||0).toFixed(0), picked.long_share]
+        : ["Top-g / losers", picked, (picked.gainer_hits||0)+' / '+(picked.loser_hits||0), picked.gainer_rate],
       ["Book %", picked, num(bookPct)+'%', bookPct],
     ];
   } else {
     const best = pickBest(list,'total_ret_pct');
-    const worst = pickWorst(list,'total_ret_pct');
+    const longLed = pickBest(list.filter(s=>s.long_led),'total_ret_pct')
+      || pickBest((D.stats||[]).filter(s=>s.long_led),'total_ret_pct');
+    const bestShort = pickBest(list.filter(s=>s.side==='short'),'total_ret_pct')
+      || pickBest((D.stats||[]).filter(s=>s.side==='short'),'total_ret_pct');
     const sustain = pickBest(list,'start_rate', s=> (s.start_n||0)>=3);
     const gain = pickBest(list,'gainer_rate', s=>(s.n_picks||0)>=8);
-    const lose = pickWorst(list,'loser_rate');
     const win = pickBest(list,'win_rate', s=>(s.n_graded||0)>=8);
     cards = [
       ["Best sleeve", best, best && num(best.total_ret_pct)+'%', best && best.total_ret_pct],
-      ["Worst sleeve", worst, worst && num(worst.total_ret_pct)+'%', worst && worst.total_ret_pct],
+      ["Best long-led", longLed, longLed && num(longLed.total_ret_pct)+'%', longLed && longLed.total_ret_pct],
+      ["Best short", bestShort, bestShort && num(bestShort.total_ret_pct)+'%', bestShort && bestShort.total_ret_pct],
       ["Most sustainable", sustain, sustain && (sustain.start_green+'/'+sustain.start_n+' YES'), sustain && sustain.start_rate],
       ["Best gainer capture", gain, gain && (gain.gainer_hits+' hits · '+pct(gain.gainer_rate)), gain && gain.gainer_rate],
-      ["Lowest loser rate", lose, lose && (lose.loser_hits+' · '+pct(lose.loser_rate)), lose && (lose.loser_rate==null?null:-lose.loser_rate)],
       ["Best win rate", win, win && pct(win.win_rate), win && win.win_rate],
     ];
   }
@@ -298,8 +304,8 @@ function renderCards(){
     const on = name && sleeveFilter===name ? 'on' : '';
     const title = picked ? String(shown||'—') : (name||'—');
     const sub = picked && lab==='This sleeve' ? num(picked.total_ret_pct)+'%' : (picked ? '' : (shown||'—'));
-    const delta = (!picked && (lab==='Best sleeve'||lab==='Worst sleeve') && s) ? bookDeltaHtml(s)
-      : (picked && lab==='Book %' ? bookDeltaHtml(picked) : '');
+    const delta = (!picked && (lab==='Best sleeve'||lab==='Best long-led'||lab==='Best short') && s) ? (bookDeltaHtml(s)+legsLine(s))
+      : (picked && lab==='Book %' ? bookDeltaHtml(picked) : (picked && lab==='Long vs short $' ? legsLine(picked) : ''));
     return `<div class="card ${on}" data-sleeve="${esc(name)}" title="Open ${esc(name||'')}">
       <span class="mut">${esc(lab)}</span><b>${esc(title)}</b>
       ${sub?`<span class="${c}">${esc(sub)}</span>`:''}
@@ -320,6 +326,7 @@ function renderFilters(){
   document.getElementById('filterBar').innerHTML = `
     <select id="kindPick" aria-label="Kind">
       <option value="all">Singles + combos</option>
+      <option value="longled">Long-led (≥20% · 75% starts · long $ ≥ short $)</option>
       <option value="combo">Combos only</option>
       <option value="single">Single recipes</option>
     </select>
@@ -495,6 +502,13 @@ function statsFor(s){
 function bookDeltaHtml(s){
   if(!s || !bracketOn() || s.raw_ret_pct==null || isCombo(s)) return '';
   return `<div class="mut">was ${num(s.raw_ret_pct)} Δ${num(s.delta_ret_pct)}</div>`;
+}
+function legsLine(s){
+  if(!s || (s.long_pnl==null && s.short_pnl==null)) return '';
+  const lp=Number(s.long_pnl||0), sp=Number(s.short_pnl||0);
+  const share=s.long_share==null?'':((100*Number(s.long_share)).toFixed(0)+'% long');
+  const tag=s.long_led?' <span class="pos">long-led</span>':'';
+  return `<div class="mut">long $${lp.toFixed(0)} · short $${sp.toFixed(0)}${share?(' · '+share):''}${tag}</div>`;
 }
 function sellStatusText(){
   if(!bracketOn()) return '';
@@ -1344,7 +1358,7 @@ function renderTable(){
     +(showD?'<th>Δ</th>':'')
     +'<th>Signal%</th><th>Audit</th></tr>';
   const body=list.map(s=>`<tr data-sleeve="${esc(s.name)}" style="cursor:pointer">
-    <td class="tick">${esc(s.name)}${s.reliable===false?' <span class="mut">thin</span>':''}${s.outperforms?' <span class="pos">WIN</span>':''}<div class="mut">${esc(s.size||'leftover')} · ${esc(s.sell||'list')} · ${esc(s.s_boost||'none')}</div></td>
+    <td class="tick">${esc(s.name)}${s.reliable===false?' <span class="mut">thin</span>':''}${s.outperforms?' <span class="pos">WIN</span>':''}${s.long_led?' <span class="pos">long-led</span>':''}<div class="mut">${esc(s.size||'leftover')} · ${esc(s.sell||'list')} · ${esc(s.s_boost||'none')}</div>${legsLine(s)}</td>
     <td>${esc(s.side)}</td>
     <td class="num">${s.hold}</td>
     <td class="num ${cls(s.win_rate)}">${pct(s.win_rate)}</td>

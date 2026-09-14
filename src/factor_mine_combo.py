@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 from itertools import combinations
 from pathlib import Path
 
@@ -40,6 +41,128 @@ OUTPERFORM_RULE = (
     "both halves are green, and the worst session is no worse than the worst "
     "member session. Effectiveness / Signal% do not decide WIN."
 )
+
+# User bar: longs must earn as much as shorts, Book% ≥ 20, start YES ≥ 75%.
+LONG_LED_BOOK = 20.0
+LONG_LED_START_FRAC = 0.75
+LONG_LED_PIN = (
+    "combo_jse_333_shared",
+    "combo_ej_5050_shared",
+    "combo_es_9010_shared",
+    "combo_se_3070_shared",
+    "union_e_fresh_h3",
+)
+
+
+def _ceil_frac(n: int, frac: float) -> int:
+    if n <= 0:
+        return 0
+    return int(math.ceil(n * frac))
+
+
+def start_yes_floor(start_n: int | None) -> int:
+    """75% of start days, rounded up (21 → 16)."""
+    return _ceil_frac(int(start_n or 0), LONG_LED_START_FRAC)
+
+
+def leg_pnl(book: dict, rec_by: dict | None = None,
+            *, side: str | None = None) -> dict:
+    """Closed-trade $ split by owner side (SELL=long, COVER=short)."""
+    long_p = 0.0
+    short_p = 0.0
+    rec_by = rec_by or {}
+    for t in book.get("trades") or []:
+        if t.get("pnl") is None:
+            continue
+        owner = t.get("owner")
+        rec = rec_by.get(owner) if owner else None
+        lot_side = (rec or {}).get("side")
+        if not lot_side:
+            if t.get("side") == "COVER":
+                lot_side = "short"
+            elif t.get("side") == "SELL":
+                lot_side = "long"
+            elif side:
+                lot_side = side
+            else:
+                lot_side = "long"
+        if lot_side == "short":
+            short_p += float(t["pnl"])
+        else:
+            long_p += float(t["pnl"])
+    tot = long_p + short_p
+    return {
+        "long_pnl": round(long_p, 2),
+        "short_pnl": round(short_p, 2),
+        "long_share": None if tot == 0 else round(long_p / tot, 4),
+    }
+
+
+def mark_long_led(st: dict) -> dict:
+    """Long $ ≥ short $, Book% ≥ 20, start YES ≥ 75%. Not a short-only book."""
+    book = float(st.get("total_ret_pct") or 0)
+    starts = int(st.get("start_green") or 0)
+    need = start_yes_floor(st.get("start_n"))
+    long_p = float(st.get("long_pnl") or 0)
+    short_p = float(st.get("short_pnl") or 0)
+    st["long_led"] = bool(
+        book >= LONG_LED_BOOK
+        and need > 0 and starts >= need
+        and long_p + short_p != 0
+        and long_p >= short_p
+        and (st.get("side") != "short")
+    )
+    return st
+
+
+def enrich_payload_legs(payload: dict) -> dict:
+    """Stamp long/short $ and long_led on baked stats. No remine."""
+    rec_by = {r["name"]: r for r in (payload.get("recipes") or [])}
+    books = payload.get("books") or {}
+    long_led: list[str] = []
+    for st in payload.get("stats") or []:
+        name = st.get("name")
+        bk = books.get(name) or {}
+        side = st.get("side")
+        if side == "mix" or st.get("universe") == "combo" or (
+                str(name or "").startswith("combo_")):
+            st.update(leg_pnl(bk, rec_by))
+        elif side == "short":
+            legs = leg_pnl(bk, rec_by, side="short")
+            if legs["long_pnl"] == 0 and legs["short_pnl"] == 0:
+                realized = float(bk.get("realized") or 0)
+                legs = {"long_pnl": 0.0, "short_pnl": realized,
+                        "long_share": 0.0 if realized else None}
+            st.update(legs)
+        else:
+            legs = leg_pnl(bk, rec_by, side="long")
+            if legs["long_pnl"] == 0 and legs["short_pnl"] == 0:
+                realized = float(bk.get("realized") or 0)
+                legs = {"long_pnl": realized, "short_pnl": 0.0,
+                        "long_share": 1.0 if realized else None}
+            st.update(legs)
+        mark_long_led(st)
+        if st.get("long_led"):
+            long_led.append(name)
+    long_led.sort(key=lambda n: -(
+        next((s.get("total_ret_pct") or 0) for s in (payload.get("stats") or [])
+             if s.get("name") == n)))
+    combo_meta = dict(payload.get("combos") or {})
+    combo_meta["long_led"] = long_led
+    combo_meta["long_led_rule"] = (
+        "Long-led: closed-trade long $ ≥ short $, Book% ≥ 20, "
+        "start YES ≥ 75%. Heat+short can still win Book% while the long "
+        "is a one-week burst — that is not long-led."
+    )
+    payload["combos"] = combo_meta
+    featured: list[str] = []
+    seen: set[str] = set()
+    for n in list(LONG_LED_PIN) + long_led + list(payload.get("featured") or []):
+        if n and n not in seen:
+            seen.add(n)
+            featured.append(n)
+    payload["featured"] = featured
+    return payload
 
 # Members we actually have a reason to mix (elite + the user's three).
 MEMBER_POOL = (
@@ -1229,6 +1352,16 @@ def attach_combo(spec: dict, book: dict, starts: list[dict],
     st["scorecard"] = scorecard(st, member_stats)
     st["outperforms"] = st["scorecard"]["outperforms"]
     st["signal_ret_pct"] = None  # no equal-weight mash
+    rec_by = {}
+    for m in spec.get("members") or []:
+        rec_by[m] = next(
+            (x for x in (member_stats or []) if x.get("name") == m),
+            {"name": m, "side": "short" if str(m).startswith("short_") else "long"},
+        )
+        rec_by[m].setdefault(
+            "side", "short" if str(m).startswith("short_") else "long")
+    st.update(leg_pnl(book, rec_by))
+    mark_long_led(st)
     return st
 
 
