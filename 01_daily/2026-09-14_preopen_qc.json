@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T05:40:33.949695-04:00",
+  "generated_at": "2026-09-14T08:06:38.538163-04:00",
   "items": [
     {
       "ok": true,
@@ -36,14 +36,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "news_parse",
       "path": "01_daily/news/2026-09-14_parsed.json",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 80514,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -62,7 +62,7 @@
       "kind": "finviz_digest",
       "path": "01_daily/news/2026-09-14_finviz_digest.json",
       "reason": "",
-      "size": 88451,
+      "size": 89013,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -293,5 +293,5 @@
   ],
   "sector_n_ok": 10,
   "sector_n_total": 11,
-  "all_ok": false
+  "all_ok": true
 }

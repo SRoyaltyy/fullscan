@@ -110,6 +110,88 @@ def test_review_empty_reply_fail_closed(tmp_path: Path) -> None:
     assert not payload["ok"]
 
 
+def test_review_stale_on_fail_or_newer_core(tmp_path: Path) -> None:
+    date = "2026-09-14"
+    daily = tmp_path / "01_daily"
+    daily.mkdir()
+    news = daily / "news"
+    news.mkdir()
+    parsed = news / f"{date}_parsed.json"
+    parsed.write_text('{"raw_count": 10}', encoding="utf-8")
+    qc = daily / f"{date}_preopen_qc.json"
+    grok = daily / f"{date}_grok_review.json"
+
+    # Honest FAIL that is newer than core files is current, not stale.
+    qc.write_text(json.dumps({"all_ok": False}), encoding="utf-8")
+    grok.write_text(json.dumps({"ok": False, "fails": [{"path": "x"}]}),
+                    encoding="utf-8")
+    import os
+    import time
+    now = time.time()
+    os.utime(parsed, (now, now))
+    os.utime(qc, (now + 20, now + 20))
+    os.utime(grok, (now + 20, now + 20))
+    assert grok_review.qc_stamp_stale(date, root=tmp_path) is False
+    assert grok_review.review_stale(date, root=tmp_path) is False
+
+    qc.write_text(json.dumps({"all_ok": True}), encoding="utf-8")
+    grok.write_text(json.dumps({"ok": True, "fails": []}), encoding="utf-8")
+    now = time.time()
+    os.utime(qc, (now + 20, now + 20))
+    os.utime(grok, (now + 20, now + 20))
+    os.utime(parsed, (now, now))
+    assert grok_review.qc_stamp_stale(date, root=tmp_path) is False
+    assert grok_review.review_stale(date, root=tmp_path) is False
+
+    os.utime(parsed, (now + 40, now + 40))
+    assert grok_review.qc_stamp_stale(date, root=tmp_path) is True
+    assert grok_review.review_stale(date, root=tmp_path) is True
+
+
+def test_restamp_rewrites_qc_and_grok(tmp_path: Path) -> None:
+    date = "2026-09-14"
+    daily = tmp_path / "01_daily"
+    daily.mkdir()
+    news = daily / "news"
+    news.mkdir()
+    (news / f"{date}_parsed.json").write_text(json.dumps({
+        "raw_count": 12, "usable_count": 3,
+        "usable_top": [{"title": "Fed holds"}],
+        "all_items": [{"title": "x"}],
+    }), encoding="utf-8")
+    (daily / f"{date}_preopen_qc.json").write_text(
+        json.dumps({"all_ok": False, "items": []}), encoding="utf-8")
+    (daily / f"{date}_grok_review.json").write_text(
+        json.dumps({"ok": False, "fails": [{"path": "parsed.json",
+                                            "reason": "missing"}]}),
+        encoding="utf-8")
+    (daily / f"{date}_preopen_status.json").write_text(json.dumps({
+        "all_ok": False, "qc_all_ok": False, "book_ok": True,
+        "grok_ok": False, "missing_required": ["news_parse"],
+        "qc": {"items": []},
+    }), encoding="utf-8")
+    (daily / f"{date}_preopen_status.md").write_text(
+        f"# Pre-open ALL status — {date}\n\n"
+        "all_ok=False  qc_all_ok=False  book_ok=True  grok_ok=False  "
+        "missing=['news_parse']\n",
+        encoding="utf-8")
+
+    def chat(messages, **kwargs):
+        return json.dumps({
+            "ok": True, "fails": [],
+            "notes": "parsed.json present; comms sector missing is 8-of-11",
+        })
+
+    out = grok_review.restamp(date, root=tmp_path, chat_fn=chat, force_grok=True)
+    assert out["qc"]["date"] == date
+    saved = json.loads((daily / f"{date}_grok_review.json").read_text())
+    assert saved["ok"] is True
+    assert (daily / f"{date}_grok_review.md").exists()
+    status = json.loads((daily / f"{date}_preopen_status.json").read_text())
+    assert status["grok_ok"] is True
+    assert "news_parse" not in (status.get("missing_required") or [])
+
+
 def test_clip_keeps_head_and_tail() -> None:
     text = "A" * 9000 + "MID" + "B" * 4000
     out = grok_review._clip(text, 13000)
@@ -148,6 +230,8 @@ def main() -> None:
             test_bundle_includes_missing_and_present,
             test_review_pass_and_fail,
             test_review_empty_reply_fail_closed,
+            test_review_stale_on_fail_or_newer_core,
+            test_restamp_rewrites_qc_and_grok,
         ):
             try:
                 fn(p)

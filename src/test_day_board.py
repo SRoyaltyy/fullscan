@@ -81,6 +81,51 @@ def test_land_does_not_push_when_qc_fails() -> None:
     assert "db_timeout" in (rec.get("preview") or "")
 
 
+def test_land_news_parse_restamps_qc() -> None:
+    date = "2026-09-14"
+    with tempfile.TemporaryDirectory() as d:
+        tmp_path = Path(d)
+        news = tmp_path / "01_daily" / "news"
+        news.mkdir(parents=True)
+        good = news / f"{date}_parsed.json"
+        good.write_text(json.dumps({
+            "raw_count": 40, "usable_count": 8,
+            "usable_top": [{"title": "Payrolls beat"}],
+            "all_items": [{"title": "x"}],
+        }), encoding="utf-8")
+        (tmp_path / "01_daily" / f"{date}_preopen_qc.json").write_text(
+            json.dumps({"all_ok": False, "items": [
+                {"kind": "news_parse", "ok": False, "reason": "missing"},
+            ]}), encoding="utf-8")
+        pushed: list[list[str]] = []
+
+        def fake_push(msg, paths):
+            pushed.append([str(p) for p in paths])
+            return True
+
+        def fake_chat(messages, **kwargs):
+            return json.dumps({"ok": True, "fails": [], "notes": "parse landed"})
+
+        with mock.patch.object(land_file, "ROOT", tmp_path), \
+                mock.patch.object(land_file, "_push", side_effect=fake_push), \
+                mock.patch.object(land_file, "step_paths", return_value=[good]), \
+                mock.patch.object(day_board, "note_land",
+                                  return_value=[tmp_path / "data" / "day_board" / f"{date}.json"]), \
+                mock.patch("src.grok_review.review_preopen",
+                           side_effect=lambda *a, **k: {
+                               "ok": True, "fails": [], "notes": "parse landed",
+                           }):
+            os.environ.pop("PREOPEN_IN_PACKET", None)
+            rec = land_file.land(date, "news_parse", title="News parse")
+            assert rec["ok"] is True
+            qc = json.loads(
+                (tmp_path / "01_daily" / f"{date}_preopen_qc.json").read_text())
+            parse_rows = [i for i in qc.get("items") or []
+                          if i.get("kind") == "news_parse"]
+            assert parse_rows and parse_rows[0]["ok"] is True
+            assert pushed and any("preopen_qc.json" in x for x in pushed[0])
+
+
 def test_land_pushes_qc_ok_file() -> None:
     date = "2026-09-09"
     with tempfile.TemporaryDirectory() as d:
@@ -186,6 +231,7 @@ def main() -> None:
         test_preview_book_lists_1d_names,
         test_qc_rejects_db_timeout_parse,
         test_land_does_not_push_when_qc_fails,
+        test_land_news_parse_restamps_qc,
         test_land_pushes_qc_ok_file,
         test_merge_boards_unions_lands,
         test_qc_rejects_2b_digest,

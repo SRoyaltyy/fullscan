@@ -1,23 +1,17 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T05:40:30.832459-04:00",
+  "generated_at": "2026-09-14T08:06:38.591073-04:00",
   "all_ok": false,
-  "qc_all_ok": false,
-  "book_ok": false,
+  "qc_all_ok": true,
+  "book_ok": true,
   "grok_ok": false,
   "grok_fails": [
     {
-      "path": "01_daily/news/2026-09-14_parsed.json",
-      "reason": "missing \u2014 required core news_parse artifact absent (regex FAIL, no exception applies)"
-    },
-    {
       "path": "01_daily/map_heat/2026-09-14_map_heat.md",
-      "reason": "wrong date \u2014 header reads 'MAP HEAT \u2014 2026-09-09' with export finviz_2026-09-08.csv and generated 2026-09-09T01:59, i.e. a carry-forward of the 09-09 session, not today's 2026-09-14 tape"
+      "reason": "wrong date \u2014 header still reads 'MAP HEAT \u2014 2026-09-09' with export finviz_2026-09-08.csv and generated 2026-09-09T01:59 (09-09 carry). map_heat.json is same-day and regex-ok."
     }
   ],
-  "missing_required": [
-    "news_parse"
-  ],
+  "missing_required": [],
   "attempts": [
     {
       "key": "weather",
@@ -166,10 +160,10 @@
       },
       {
         "kind": "news_parse",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/news/2026-09-14_parsed.json",
-        "size": 0
+        "size": 80514
       },
       {
         "kind": "news_actions",
@@ -183,7 +177,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-14_finviz_digest.json",
-        "size": 88451
+        "size": 89013
       },
       {
         "kind": "map_heat",

@@ -23,6 +23,13 @@ from zoneinfo import ZoneInfo
 
 from . import config, output_qc
 
+# Late land of these keys used to flip the day board to ✅ while leaving
+# an early preopen_qc / grok_review FAIL stamp forever (2026-09-14 parse).
+CORE_QC_RESTAMP = {
+    "news_parse", "events", "events_catcher", "news_judge",
+    "finviz_digest", "map_heat", "general_predict", "sector_predict",
+}
+
 ROOT = Path(__file__).resolve().parent.parent
 ET = ZoneInfo(config.TZ)
 BOARD_DIR = ROOT / "data" / "day_board"
@@ -398,6 +405,10 @@ def _land_body(date: str, key: str, title: str,
     preview = " · ".join(
         (c["preview"] or c["path"]) for c in checks if c.get("preview")
     )[:1200]
+    if key in CORE_QC_RESTAMP and ok_paths:
+        for extra in _restamp_after_core_land(date):
+            if extra not in ok_paths:
+                ok_paths.append(extra)
     # Write the board as pushed=yes *before* git so the JSON that lands
     # on main matches the files in the same commit (not a later leftover).
     record = {
@@ -416,6 +427,35 @@ def _land_body(date: str, key: str, title: str,
         _write_board_payload(
             date, key, title, checks, pushed=False, preview=preview, land=record)
     return record
+
+
+def _restamp_after_core_land(date: str) -> list[Path]:
+    """Rewrite QC (always) and Grok (standalone land) after a late core file.
+
+    Inside run_preopen_all, PREOPEN_IN_PACKET=1 so land only restamps
+    mechanical QC — finish owns the single Grok call. A late heal that
+    lands news_parse on its own re-stamps both so the 05:40 FAIL cannot
+    outlive parsed.json.
+    """
+    try:
+        from . import grok_review
+        in_packet = (os.environ.get("PREOPEN_IN_PACKET") or "").strip() == "1"
+        grok_review.restamp(date, grok=not in_packet, root=ROOT)
+    except Exception as e:  # noqa: BLE001 — land must still push the file
+        print(f"[land] WARN: QC/Grok restamp after core land failed: {e}",
+              flush=True)
+        return []
+    out = [
+        ROOT / "01_daily" / f"{date}_preopen_qc.json",
+        ROOT / "01_daily" / f"{date}_preopen_status.json",
+        ROOT / "01_daily" / f"{date}_preopen_status.md",
+    ]
+    if (os.environ.get("PREOPEN_IN_PACKET") or "").strip() != "1":
+        out.extend([
+            ROOT / "01_daily" / f"{date}_grok_review.json",
+            ROOT / "01_daily" / f"{date}_grok_review.md",
+        ])
+    return [p for p in out if p.exists()]
 
 
 def _record_and_board(date: str, record: dict) -> None:

@@ -12,11 +12,13 @@ unparseable JSON, or any listed fail → the day is not quality-ok.
 
 CLI:
   python -m src.grok_review --date YYYY-MM-DD
+  python -m src.grok_review --date YYYY-MM-DD --restamp
 """
 from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 from datetime import datetime
 from pathlib import Path
@@ -219,6 +221,177 @@ def prior_ok(date: str, root: Path | None = None) -> bool:
     return bool(data.get("ok")) and not data.get("fails")
 
 
+def _core_artifact_paths(date: str, root: Path) -> list[Path]:
+    """Required-core files whose late arrival must invalidate QC/Grok stamps."""
+    rels = [
+        f"01_daily/general/{date}_predict.md",
+        f"01_daily/events/{date}_events.json",
+        f"01_daily/news/{date}_judge.md",
+        f"01_daily/news/{date}_parsed.json",
+        f"01_daily/news/{date}_actions.json",
+        f"01_daily/news/{date}_finviz_digest.json",
+        f"01_daily/map_heat/{date}_map_heat.json",
+        f"01_daily/map_heat/{date}_map_heat.md",
+        f"01_daily/map_heat/{date}_research.md",
+    ]
+    paths = [root / rel for rel in rels]
+    sec = root / "01_daily" / "sectors" / date
+    if sec.is_dir():
+        paths.extend(sorted(sec.glob("*_predict.md")))
+    return paths
+
+
+def _stamp_older_than_core(stamp: Path, date: str, root: Path) -> bool:
+    try:
+        stamp_m = stamp.stat().st_mtime
+    except OSError:
+        return True
+    for p in _core_artifact_paths(date, root):
+        try:
+            if p.is_file() and p.stat().st_mtime > stamp_m + 1.0:
+                return True
+        except OSError:
+            continue
+    return False
+
+
+def qc_stamp_stale(date: str, root: Path | None = None) -> bool:
+    """True when preopen_qc.json is missing, unreadable, or older than core.
+
+    all_ok=False is not enough: an honest FAIL that already matches the
+    files on disk must not look 'stale' or late heals loop forever.
+    """
+    root = root or ROOT
+    path = root / "01_daily" / f"{date}_preopen_qc.json"
+    if not path.exists():
+        return True
+    try:
+        json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError, json.JSONDecodeError):
+        return True
+    return _stamp_older_than_core(path, date, root)
+
+
+def review_stale(date: str, root: Path | None = None) -> bool:
+    """True when Grok must re-read: no stamp, or a core file landed later.
+
+    A current ok=False (remaining hole) is not stale — do not re-call Grok
+    on every orch tick. A 05:40 FAIL with parsed.json arriving at 06:xx is.
+    """
+    root = root or ROOT
+    path = root / "01_daily" / f"{date}_grok_review.json"
+    if not path.exists():
+        return True
+    try:
+        json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError, json.JSONDecodeError):
+        return True
+    return _stamp_older_than_core(path, date, root)
+
+
+def _refresh_status(date: str, report: dict, grok: dict | None,
+                    root: Path) -> None:
+    """Patch an existing status packet so it matches the restamped QC/Grok."""
+    path = root / "01_daily" / f"{date}_preopen_status.json"
+    if not path.exists():
+        return
+    try:
+        status = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError, json.JSONDecodeError):
+        return
+    if not isinstance(status, dict):
+        return
+    by_kind: dict[str, list] = {}
+    for item in report.get("items") or []:
+        by_kind.setdefault(item.get("kind"), []).append(item)
+    missing = list(status.get("missing_required") or [])
+    for kind in list(missing):
+        if kind == "sector_predict":
+            if int(report.get("sector_n_ok") or 0) >= 8:
+                missing.remove(kind)
+            continue
+        rows = by_kind.get(kind) or []
+        if rows and all(r.get("ok") for r in rows):
+            missing.remove(kind)
+    status["generated_at"] = datetime.now(ET).isoformat()
+    status["qc_all_ok"] = bool(report.get("all_ok"))
+    status["missing_required"] = missing
+    status["qc"] = {
+        "sector_n_ok": report.get("sector_n_ok"),
+        "sector_n_total": report.get("sector_n_total"),
+        "items": [
+            {"kind": i.get("kind"), "ok": i.get("ok"),
+             "reason": i.get("reason"), "path": i.get("path"),
+             "size": i.get("size")}
+            for i in (report.get("items") or [])
+        ],
+    }
+    if grok is not None:
+        status["grok_ok"] = bool(grok.get("ok"))
+        status["grok_fails"] = grok.get("fails") or []
+    try:
+        from . import skip_if_good
+        status["book_ok"] = bool(skip_if_good.check_stock_book_all(date))
+    except Exception:  # noqa: BLE001 — keep prior book_ok if the check dies
+        pass
+    status["all_ok"] = bool(
+        status.get("qc_all_ok") and not missing
+        and status.get("grok_ok") and status.get("book_ok", True)
+    )
+    path.write_text(json.dumps(status, indent=2), encoding="utf-8")
+    md_path = root / "01_daily" / f"{date}_preopen_status.md"
+    if md_path.exists():
+        lines = (md_path.read_text(encoding="utf-8") or "").splitlines()
+        header = (
+            f"all_ok={status['all_ok']}  qc_all_ok={status['qc_all_ok']}  "
+            f"book_ok={status.get('book_ok')}  grok_ok={status.get('grok_ok')}  "
+            f"missing={missing or 'none'}"
+        )
+        replaced = False
+        out: list[str] = []
+        for ln in lines:
+            if ln.startswith("all_ok=") and not replaced:
+                out.append(header)
+                replaced = True
+            else:
+                out.append(ln)
+        if not replaced and len(out) >= 3:
+            out.insert(2, header)
+        md_path.write_text("\n".join(out).rstrip() + "\n", encoding="utf-8")
+
+
+def restamp(date: str, *, grok: bool = True, force_grok: bool = False,
+            root: Path | None = None, chat_fn=None) -> dict:
+    """Rewrite preopen_qc.json; re-run Grok when the review stamp is stale.
+
+    Used by Pre-Open finish and by incremental land of a late core artifact
+    (news_parse after exit 124, etc.). Mechanical QC always rewrites.
+    Grok re-reads unless a passing review is still newer than every core file.
+    """
+    root = root or ROOT
+    cwd = os.getcwd()
+    try:
+        os.chdir(root)
+        qc_path = output_qc.write_preopen_report(date)
+        report = output_qc.preopen_report(date)
+    finally:
+        os.chdir(cwd)
+    grok_payload: dict | None = None
+    if grok and (force_grok or review_stale(date, root=root)):
+        grok_payload = review_preopen(
+            date, mechanical_report=report, root=root, chat_fn=chat_fn)
+    elif grok:
+        grok_payload = {
+            "ok": True,
+            "fails": [],
+            "notes": "prior Grok text review still good — skipped",
+        }
+        print(f"[grok-review] {date}: skip restamp (prior_ok, stamps current)",
+              flush=True)
+    _refresh_status(date, report, grok_payload, root)
+    return {"qc_path": str(qc_path), "qc": report, "grok": grok_payload}
+
+
 def review_preopen(date: str, mechanical_report: dict | None = None,
                    root: Path | None = None, chat_fn=None) -> dict:
     """One Grok call. Writes 01_daily/{date}_grok_review.{json,md}."""
@@ -293,8 +466,14 @@ def review_preopen(date: str, mechanical_report: dict | None = None,
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=None)
+    ap.add_argument("--restamp", action="store_true",
+                    help="Rewrite QC then Grok-review if stamps are stale/FAIL")
     args = ap.parse_args()
     date = args.date or datetime.now(ET).date().isoformat()
+    if args.restamp:
+        payload = restamp(date, force_grok=True)
+        grok = payload.get("grok") or {}
+        raise SystemExit(0 if grok.get("ok") else 1)
     report = output_qc.preopen_report(date)
     payload = review_preopen(date, mechanical_report=report)
     raise SystemExit(0 if payload.get("ok") else 1)
