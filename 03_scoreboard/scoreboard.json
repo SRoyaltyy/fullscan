@@ -6011,6 +6011,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-14",
+          "actual_pct": 0.42,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       }
     },
@@ -9031,6 +9043,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-14",
+          "actual_pct": 0.53,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       }
     },
@@ -9115,6 +9139,18 @@
           "direction_hit": false,
           "magnitude_hit": false,
           "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-14",
+          "actual_pct": -2.22,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
         }
@@ -16660,6 +16696,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-14",
+          "actual_pct": -0.91,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": true,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.52
         }
       }
     },
@@ -16734,6 +16782,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-14",
+          "actual_pct": -2.81,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.58
         }
       }
     },
@@ -16920,6 +16980,18 @@
           "direction_hit": false,
           "magnitude_hit": true,
           "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-14",
+          "actual_pct": -1.28,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
         }
@@ -17219,6 +17291,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-14",
+          "actual_pct": -0.19,
+          "actual_direction": "flat",
+          "actual_magnitude_band": "flat",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       }
     },
@@ -17293,6 +17377,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-14",
+          "actual_pct": 0.73,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.48
         }
       }
     },
@@ -17367,6 +17463,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-14",
+          "actual_pct": -1.84,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.48
         }
       }
     },
@@ -17441,6 +17549,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-14",
+          "actual_pct": -2.16,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.48
         }
       }
     },
@@ -17508,6 +17628,18 @@
           "label": "3d",
           "target_date": "2026-09-10",
           "actual_pct": -2.69,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-14",
+          "actual_pct": -3.05,
           "actual_direction": "down",
           "actual_magnitude_band": "notable",
           "direction_hit": true,
@@ -17587,6 +17719,18 @@
           "direction_hit": false,
           "magnitude_hit": false,
           "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-14",
+          "actual_pct": -1.84,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": true,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
         }
@@ -18829,7 +18973,20 @@
       "rubric": "00_grounding/sectors/financial.md",
       "spy_pct_change": -0.46477589645284034,
       "rel_pct_change": 0.04593145148763522,
-      "horizon_grades": {}
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-14",
+          "actual_pct": -0.05,
+          "actual_direction": "flat",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
+        }
+      }
     },
     {
       "date": "2026-09-09",
@@ -18890,7 +19047,20 @@
       "rubric": "00_grounding/sectors/healthcare.md",
       "spy_pct_change": -0.46477589645284034,
       "rel_pct_change": 0.13568893678724825,
-      "horizon_grades": {}
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-14",
+          "actual_pct": 0.7,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
+        }
+      }
     },
     {
       "date": "2026-09-09",
@@ -18986,7 +19156,20 @@
       "rubric": "00_grounding/sectors/technology.md",
       "spy_pct_change": -0.46477589645284034,
       "rel_pct_change": 0.46477589645284034,
-      "horizon_grades": {}
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-14",
+          "actual_pct": -1.91,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        }
+      }
     },
     {
       "date": "2026-09-09",
@@ -19047,7 +19230,20 @@
       "rubric": "00_grounding/sectors/utilities.md",
       "spy_pct_change": -0.46477589645284034,
       "rel_pct_change": -0.7089919453776128,
-      "horizon_grades": {}
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-14",
+          "actual_pct": -2.61,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        }
+      }
     },
     {
       "date": "2026-09-09",
@@ -19222,7 +19418,20 @@
       "knowable_at_9am": "yes — the dominant drivers (oil >$100, US-Iran escalation, yield backup, Fed odds) were all visible in premarket data",
       "attribution_contested": "no — major outlets consistently attribute the day to oil >$100 and multi-year high yields, though they differ on which to lead with",
       "outlier_watch": "Apple stock recovered from −1.4% to −0.28% despite sell-the-news expectations; technology sector relatively resilient (+0.29%) while industrials fell −1.01%; gold bid (+1.18%) despite rising yields; dollar soft despite higher rates",
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-14",
+          "actual_pct": -0.21,
+          "actual_direction": "flat",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.6
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -20492,7 +20701,7 @@
           "status": "hit"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-09-14_lesson.md",
       "sources_used": [
         {
           "url": "https://tradingeconomics.com/united-states/stock-market",
@@ -20585,7 +20794,9 @@
       "key_interaction": "Offsetting/masking — a 5.9% semiconductor selloff was almost entirely cancelled by a rotation into software (CRM +3-4.7%, NOW +5%, IBM +2.4%, GOOGL +2.2%), hyperscalers (Meta, Microsoft green) and defensives (XLV +1.08%, XLP +1.03%, XLE +1.61%), producing a deceptively calm 0.73% SPX range",
       "knowable_at_9am": "partially — direction and both catalysts were fully knowable premarket (AI shock published Sat, pipeline attack Sat, 10Y at 4.96% on 09-11, hike odds ~77%); the magnitude of the offsetting rotation and the absorption of the NQ -1.6% gap were NOT foreseeable",
       "attribution_contested": "yes — Bloomberg/Schwab/Fortune lead with the AI-slowdown shock; TheStreet/CNN lead with the 10Y hitting 5%; Bloomberg/Al Jazeera/NYT lead with oil/Middle East; Trading Economics frames it as single-name drags (Caterpillar, Goldman, Nvidia)",
-      "outlier_watch": "Gold -1.26% and silver -2.17% FELL on a Middle East supply-shock day, and utilities (XLU) and REITs (XLRE) were GREEN despite the 10Y at 5% — both contradict a pure rates/geopolitical-risk story and point to equity-internal rotation as the true driver"
+      "outlier_watch": "Gold -1.26% and silver -2.17% FELL on a Middle East supply-shock day, and utilities (XLU) and REITs (XLRE) were GREEN despite the 10Y at 5% — both contradict a pure rates/geopolitical-risk story and point to equity-internal rotation as the true driver",
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-09-14",
@@ -20801,7 +21012,8 @@
       "overlay_score": -0.9,
       "index_carry": -2.751,
       "spy_pct_change": -0.446162221482016,
-      "rel_pct_change": 0.06188061326695138
+      "rel_pct_change": 0.06188061326695138,
+      "horizon_grades": {}
     },
     {
       "date": "2026-09-14",
