@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T05:55:36.363429-04:00",
+  "generated_at": "2026-09-14T06:23:02.687425-04:00",
   "n": 322,
   "n_ok": 322,
   "families": [
@@ -1259,17 +1259,12 @@
       "side": "long",
       "buy": [
         {
+          "ticker": "CVE",
+          "side": "long",
+          "predict": "UP"
+        },
+        {
           "ticker": "DK",
-          "side": "long",
-          "predict": "UP"
-        },
-        {
-          "ticker": "TEL",
-          "side": "long",
-          "predict": "UP"
-        },
-        {
-          "ticker": "NVT",
           "side": "long",
           "predict": "UP"
         },
@@ -1279,18 +1274,13 @@
           "predict": "UP"
         },
         {
-          "ticker": "OLED",
-          "side": "long",
-          "predict": "UP"
-        },
-        {
-          "ticker": "HYLN",
+          "ticker": "NVT",
           "side": "long",
           "predict": "UP"
         }
       ],
       "sell": [],
-      "buy_n": 6,
+      "buy_n": 4,
       "sell_n": 0,
       "sit": true,
       "status": "ok",
