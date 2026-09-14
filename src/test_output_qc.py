@@ -177,6 +177,11 @@ def test_preopen_report_flags_08_24() -> None:
     assert not kinds["events"]["ok"]
     assert kinds["general_predict"]["ok"]
     assert kinds["news_judge"]["ok"]
+    paths = [i["path"] for i in report["items"]]
+    assert any(p.endswith("_finviz_digest.json") or p.endswith("_finviz_digest.md")
+               for p in paths)
+    assert any(p.endswith("_finviz_market_digest.json") for p in paths)
+    assert any(p.endswith("_finviz_market_digest_close.json") for p in paths)
 
 
 def main() -> None:

@@ -183,6 +183,8 @@ def inspect_kind(kind: str, path: Path, date: str) -> tuple[str, str, int]:
         return _from_qc(output_qc.qc_map_heat(path))
     if kind == "finviz_digest":
         return _from_qc(output_qc.qc_finviz_digest(path))
+    if kind in ("finviz_market_digest", "finviz_market_digest_close"):
+        return _from_qc(output_qc.qc_finviz_market_digest(path))
     if kind == "news_parse":
         return _from_qc(output_qc.qc_news_parse(path))
     if kind == "events":
@@ -555,10 +557,26 @@ def workflow_specs(date: str, as_of: bool = True) -> list[dict]:
             "name": "Finviz scrape",
             "yaml": "finviz_preopen_scrape.yml",
             "files": [
-                _file("digest_json", "Finviz digest JSON",
+                _file("digest_json", "Quote-page digest JSON (*_finviz_digest)",
                       f"{news}_finviz_digest.json", "required", "finviz_digest"),
-                _file("digest_md", "Finviz digest MD",
+                _file("digest_md", "Quote-page digest MD (*_finviz_digest)",
                       f"{news}_finviz_digest.md", "optional", "md"),
+                _file("market_digest_json",
+                      "Homepage warm-up JSON (*_finviz_market_digest)",
+                      f"{news}_finviz_market_digest.json", "optional",
+                      "finviz_market_digest"),
+                _file("market_digest_md",
+                      "Homepage warm-up MD (*_finviz_market_digest)",
+                      f"{news}_finviz_market_digest.md", "optional",
+                      "finviz_market_digest"),
+                _file("market_digest_close_json",
+                      "Close answer-key JSON (*_finviz_market_digest_close)",
+                      f"{news}_finviz_market_digest_close.json", "optional",
+                      "finviz_market_digest_close"),
+                _file("market_digest_close_md",
+                      "Close answer-key MD (*_finviz_market_digest_close)",
+                      f"{news}_finviz_market_digest_close.md", "optional",
+                      "finviz_market_digest_close"),
             ],
         },
         {
@@ -566,9 +584,13 @@ def workflow_specs(date: str, as_of: bool = True) -> list[dict]:
             "name": "Pre-Open ALL",
             "yaml": "preopen_all.yml",
             "files": [
-                _file("in_digest", "Finviz digest JSON",
+                _file("in_digest", "Quote-page digest JSON (*_finviz_digest)",
                       f"{news}_finviz_digest.json", "input", "finviz_digest",
                       "finviz"),
+                _file("in_market_digest",
+                      "Homepage warm-up JSON (*_finviz_market_digest)",
+                      f"{news}_finviz_market_digest.json", "optional",
+                      "finviz_market_digest", "finviz"),
                 _file("in_baseline", "Captain baseline JSON",
                       f"{heat}_research_baseline.json", "input",
                       "map_heat_baseline", "postclose"),
@@ -610,7 +632,7 @@ def workflow_specs(date: str, as_of: bool = True) -> list[dict]:
             "name": "Label + weather",
             "yaml": "label_weather.yml",
             "files": [
-                _file("in_digest", "Finviz digest JSON",
+                _file("in_digest", "Quote-page digest JSON (*_finviz_digest)",
                       f"{news}_finviz_digest.json", "input", "finviz_digest",
                       "finviz"),
                 _file("weather", "Weather JSON",
@@ -637,7 +659,7 @@ def workflow_specs(date: str, as_of: bool = True) -> list[dict]:
                 _file("in_actions", "News actions JSON",
                       f"{news}_actions.json", "input", "news_actions",
                       "preopen"),
-                _file("in_digest", "Finviz digest JSON",
+                _file("in_digest", "Quote-page digest JSON (*_finviz_digest)",
                       f"{news}_finviz_digest.json", "input", "finviz_digest",
                       "finviz"),
                 _file("dossiers", "Catalyst dossiers JSON",
@@ -658,7 +680,7 @@ def workflow_specs(date: str, as_of: bool = True) -> list[dict]:
                 _file("in_actions", "News actions JSON",
                       f"{news}_actions.json", "input", "news_actions",
                       "preopen"),
-                _file("in_digest", "Finviz digest JSON",
+                _file("in_digest", "Quote-page digest JSON (*_finviz_digest)",
                       f"{news}_finviz_digest.json", "input", "finviz_digest",
                       "finviz"),
                 _file("in_judge", "News judge MD",

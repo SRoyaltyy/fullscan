@@ -219,6 +219,23 @@ def test_land_never_raises() -> None:
         os.environ.pop("FULLSCAN_LAND_NOPUSH", None)
 
 
+def test_day_board_splits_finviz_digest_rows() -> None:
+    """Quote-page green must not be the homepage or close row."""
+    board = day_board.build("2026-09-14")
+    fin = next(p for p in board["processes"] if p["key"] == "finviz")
+    by = {f["key"]: f for f in fin["files"]}
+    assert "digest_json" in by
+    assert "market_digest_json" in by
+    assert "market_digest_close_json" in by
+    assert "Quote-page" in by["digest_json"]["name"]
+    assert "Homepage warm-up" in by["market_digest_json"]["name"]
+    assert "Close answer-key" in by["market_digest_close_json"]["name"]
+    assert by["digest_json"]["path"] != by["market_digest_json"]["path"]
+    assert by["digest_json"]["path"] != by["market_digest_close_json"]["path"]
+    assert by["digest_json"]["status"] == "OK"
+    assert by["market_digest_close_json"]["status"] != "OK"
+
+
 def test_qc_news_parse_still_loud() -> None:
     r = output_qc.qc_news_parse("/no/such/parsed.json")
     assert r.ok is False
@@ -236,6 +253,7 @@ def main() -> None:
         test_merge_boards_unions_lands,
         test_qc_rejects_2b_digest,
         test_day_board_html_has_raw_poll,
+        test_day_board_splits_finviz_digest_rows,
         test_should_not_push_locally,
         test_land_never_raises,
         test_qc_news_parse_still_loud,

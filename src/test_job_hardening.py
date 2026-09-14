@@ -424,6 +424,10 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "data/exports/" in scrape_yml
     assert "src.finviz_digest --date $DATE --force" in scrape_yml
     assert "src.finviz_market_digest --date $DATE --force" in scrape_yml
+    health = (ROOT / "src" / "pipeline_health.py").read_text(encoding="utf-8")
+    assert "Quote-page digest JSON (*_finviz_digest)" in health
+    assert "Homepage warm-up JSON (*_finviz_market_digest)" in health
+    assert "Close answer-key JSON (*_finviz_market_digest_close)" in health
     skip = (ROOT / "src" / "skip_if_good.py").read_text(encoding="utf-8")
     assert "elite export missing/thin" in skip
     assert "1d BUY has printed dead relvol" in skip

@@ -991,13 +991,34 @@ def check_scrape(report: Report, date: str) -> None:
     news = ROOT / "01_daily" / "news"
     heat = ROOT / "01_daily" / "map_heat"
     artifact(report, step="scrape.digest_json",
-             name="Finviz Elite digest JSON", group="scrape",
+             name="Quote-page digest JSON (*_finviz_digest)", group="scrape",
              path=news / f"{date}_finviz_digest.json", required=True,
              expected_date=date, qc=output_qc.qc_finviz_digest)
     artifact(report, step="scrape.digest_md",
-             name="Finviz Elite digest MD", group="scrape",
+             name="Quote-page digest MD (*_finviz_digest)", group="scrape",
              path=news / f"{date}_finviz_digest.md", required=False,
              expected_date=date)
+    artifact(report, step="scrape.market_digest_json",
+             name="Homepage warm-up JSON (*_finviz_market_digest)",
+             group="scrape",
+             path=news / f"{date}_finviz_market_digest.json", required=False,
+             expected_date=date, qc=output_qc.qc_finviz_market_digest)
+    artifact(report, step="scrape.market_digest_md",
+             name="Homepage warm-up MD (*_finviz_market_digest)",
+             group="scrape",
+             path=news / f"{date}_finviz_market_digest.md", required=False,
+             expected_date=date)
+    artifact(report, step="scrape.market_digest_close_json",
+             name="Close answer-key JSON (*_finviz_market_digest_close)",
+             group="scrape",
+             path=news / f"{date}_finviz_market_digest_close.json",
+             required=False, expected_date=date,
+             qc=output_qc.qc_finviz_market_digest)
+    artifact(report, step="scrape.market_digest_close_md",
+             name="Close answer-key MD (*_finviz_market_digest_close)",
+             group="scrape",
+             path=news / f"{date}_finviz_market_digest_close.md",
+             required=False, expected_date=date)
     mh = heat / f"{date}_map_heat.json"
     artifact(report, step="scrape.map_heat",
              name="Map heat JSON (groups + morning overlay)", group="scrape",
@@ -1089,9 +1110,15 @@ def check_preopen(report: Report, date: str) -> None:
     sec = ROOT / "01_daily" / "sectors" / date
 
     artifact(report, step="preopen.in_digest",
-             name="INPUT: Finviz digest from 05:40 scrape",
+             name="INPUT: Quote-page digest (*_finviz_digest)",
              group="preopen", path=news / f"{date}_finviz_digest.json",
              required=True, expected_date=date, qc=output_qc.qc_finviz_digest)
+    artifact(report, step="preopen.in_market_digest",
+             name="INPUT: Homepage warm-up (*_finviz_market_digest)",
+             group="preopen",
+             path=news / f"{date}_finviz_market_digest.json",
+             required=False, expected_date=date,
+             qc=output_qc.qc_finviz_market_digest)
     artifact(report, step="preopen.in_baseline",
              name="INPUT: last-night captain baseline",
              group="preopen", path=heat / f"{date}_research_baseline.json",

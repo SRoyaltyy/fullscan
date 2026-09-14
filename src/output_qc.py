@@ -644,6 +644,12 @@ def preopen_report(date_str: str) -> dict:
                              f"{date_str}_finviz_digest.md")
     items.append(qc_finviz_digest(
         digest_json if os.path.exists(digest_json) else digest_md))
+    items.append(qc_finviz_market_digest(
+        os.path.join("01_daily", "news",
+                     f"{date_str}_finviz_market_digest.json")))
+    items.append(qc_finviz_market_digest(
+        os.path.join("01_daily", "news",
+                     f"{date_str}_finviz_market_digest_close.json")))
     items.append(qc_map_heat(
         os.path.join("01_daily", "map_heat", f"{date_str}_map_heat.json")))
     items.append(qc_map_heat_baseline(
@@ -675,7 +681,8 @@ def preopen_report(date_str: str) -> dict:
         "all_ok": all(
             r.ok for r in items
             if r.kind not in (
-                "sector_predict", "map_heat_baseline", "map_heat_research")
+                "sector_predict", "map_heat_baseline", "map_heat_research",
+                "finviz_market_digest")
         )
                   and n_ok >= 8,
     }

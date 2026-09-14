@@ -230,6 +230,26 @@ def test_specs_match_user_contract():
     book_req = {f["key"] for f in specs["stock_book"]["files"] if f["role"] == "required"}
     assert book_req == {"join", "peers", "book_json", "book_md"}
 
+    fin = {f["key"]: f for f in specs["finviz"]["files"]}
+    assert fin["digest_json"]["role"] == "required"
+    assert fin["market_digest_json"]["role"] == "optional"
+    # Close answer-key first appears 2026-09-10; 08-31 is era-skip.
+    assert fin["market_digest_close_json"]["role"] == "era"
+    live = {s["key"]: s for s in diag.workflow_specs("2026-09-14")}
+    fin14 = {f["key"]: f for f in live["finviz"]["files"]}
+    assert fin14["digest_json"]["role"] == "required"
+    assert fin14["market_digest_json"]["role"] == "optional"
+    assert fin14["market_digest_close_json"]["role"] == "optional"
+    assert "Quote-page" in fin14["digest_json"]["name"]
+    assert "Homepage warm-up" in fin14["market_digest_json"]["name"]
+    assert "Close answer-key" in fin14["market_digest_close_json"]["name"]
+    assert fin14["digest_json"]["rel"].endswith("_finviz_digest.json")
+    assert fin14["market_digest_json"]["rel"].endswith(
+        "_finviz_market_digest.json")
+    assert fin14["market_digest_close_json"]["rel"].endswith(
+        "_finviz_market_digest_close.json")
+    assert fin14["digest_json"]["rel"] != fin14["market_digest_json"]["rel"]
+
 
 def test_audit_live_days():
     """Real packet days: 08-28 is a completed pre-open; 08-31 is scrape+baseline."""
