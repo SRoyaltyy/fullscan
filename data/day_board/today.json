@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T05:42:59.507158-04:00",
+  "generated_at": "2026-09-14T05:43:03.009270-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -41,24 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "general_predict",
-      "title": "General market predict",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:27:03.467890-04:00",
-      "files": [
-        {
-          "path": "01_daily/general/2026-09-14_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 12096,
-          "preview": "# Premarket Prediction \u2014 2026-09-14\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -11.002 (uncertainty multiplier \u00d71.1) | confidence 0.85\n>\n> **Good news vs bad news:** good +0 pts vs bad -12.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - FTSE +0.58% on energy bid\n> - HY tight 2.70\n> - Hang Seng +0.45%\n> - dollar 1m still -0.38%\n> - RRP build is plumbing not stress\n>\n> **Bad news driving this:**\n> - AI-slowdown shock (Amodei/Altman, SoftBank -12%)\n> - fresh Saudi/Hormuz strikes, Brent $107\n> - Sep 16 FOMC hike ~56-77%\n> - VIX backwardation 1.133\n> - NQ -1.58% leading down\n>\n> **market uncertainty: **elevated** | VIX 17.64 | policy-uncertainty index 725.88 (1d +451.17)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight ne"
-        }
-      ],
-      "preview": "# Premarket Prediction \u2014 2026-09-14\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -11.002 (uncertainty multiplier \u00d71.1) | confidence 0.85\n>\n> **Good news vs bad news:** good +0 pts vs bad -12.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - FTSE +0.58% on energy bid\n> - HY tight 2.70\n> - Hang Seng +0.45%\n> - dollar 1m still -0.38%\n> - RRP build is plumbing not stress\n>\n> **Bad news driving this:**\n> - AI-slowdown shock (Amodei/Altman, SoftBank -12%)\n> - fresh Saudi/Hormuz strikes, Brent $107\n> - Sep 16 FOMC hike ~56-77%\n> - VIX backwardation 1.133\n> - NQ -1.58% leading down\n>\n> **market uncertainty: **elevated** | VIX 17.64 | policy-uncertainty index 725.88 (1d +451.17)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight ne"
-    },
     {
       "key": "sector_predict",
       "title": "Per-sector predict (all 11)",
@@ -226,6 +208,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -15.213, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Consumer Cyclical={'score': -13.101, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Consumer Defensive={'score': 0.826, 'dir': 'up', 'conf': 0.533, 'source': 'llm'}, Energy={'score': 11.129, 'dir': 'up', 'conf': 0.85, 'source': 'llm'}, Financial={'score': -3.345, 'dir': 'down', 'conf': 0.534, 'source': 'llm'}, Healthcare={'score': -8.839, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Industrials={'score': -11.954, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Real Estate={'score': -0.491, 'dir': 'down', 'conf': 0.52, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-14\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-14T05:43:02.600318-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-14_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2247439,
+          "preview": "5895 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ABEV, TAL, BUD, PM, BEKE"
+        }
+      ],
+      "preview": "5895 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ABEV, TAL, BUD, PM, BEKE"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
