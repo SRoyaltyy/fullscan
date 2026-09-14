@@ -1,0 +1,28 @@
+name: Apply simulate_split pad
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Apply pad patch
+        run: |
+          set -euo pipefail
+          patch -p1 < patches/morning_polarity/simulate_split_pad.patch
+          python3 -m py_compile src/factor_mine_combo.py src/test_factor_mine.py
+          grep -n "unmarked session" src/factor_mine_combo.py
+      - name: Commit
+        run: |
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add src/factor_mine_combo.py
+          git commit -m "fix: pad trailing unmarked combo days on the panel calendar" || echo No changes
+          git push origin HEAD
