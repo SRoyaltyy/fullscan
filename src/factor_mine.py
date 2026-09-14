@@ -2668,10 +2668,10 @@ TAPE_FLOW_SPLICE = (
     "short_macd_dn_h3",
 )
 TAPE_FLOW_PIN = (
-    "union_rsi_os_h1",
+    "union_flow_in_white_h1",
     "union_flow_in_h1",
-    "union_macd_xup_h1",
-    "union_rsi_os_macd_h1",
+    "union_macd_up_h1",
+    "union_rsi_os_h1",
     "short_rsi_ob_h3",
 )
 
