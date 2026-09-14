@@ -1,6 +1,6 @@
 # Excel statistical mine — whole sheet A..JL
 
-status=PARTIAL phase=hold_uni tickers_done=180 sessions=177846 letters=275 univ=mcap>$50M & vol>100000
+status=PARTIAL phase=hold_uni tickers_done=203 sessions=177846 letters=275 univ=mcap>$50M & vol>100000
 
 Method: every letter as lag-1 fill / value / 10-row paint + same-row open-12 fills and open-44 numbers. chi2 + mutual info on discovery, Benjamini-Hochberg FDR q=0.1, holdout must keep lift>1. Pairs = Apriori AND of FDR survivors.
 
