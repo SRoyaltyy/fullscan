@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T04:52:24.016684-04:00",
+  "generated_at": "2026-09-14T04:55:33.681700-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -372,14 +372,14 @@
           "path": "01_daily/weather/2026-09-14_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9626 vix=spiking yields=rising",
-          "size": 9626
+          "reason": "sectors=11 bytes=10687 vix=spiking yields=rising",
+          "size": 10687
         }
       ],
-      "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
+      "said": "hostile 9 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Industrials, Real Estate, Utilities",
-        "events bull 5 / bear 6"
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Energy, Financial, Healthcare, Industrials, Technology, Utilities",
+        "events bull 2 / bear 8"
       ]
     },
     {
@@ -521,8 +521,8 @@
           "path": "01_daily/weather/2026-09-14_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9626 vix=spiking yields=rising",
-          "size": 9626
+          "reason": "sectors=11 bytes=10687 vix=spiking yields=rising",
+          "size": 10687
         },
         {
           "key": "in_ab",
@@ -540,7 +540,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5895",
-          "size": 2269203
+          "size": 2247439
         },
         {
           "key": "peers",
@@ -597,9 +597,9 @@
           "size": 4874846
         }
       ],
-      "said": "207 rows",
+      "said": "219 rows",
       "bullets": [
-        "REGN, EXEL, ARGX, NUTX, ONC"
+        "ABEV, TAL, BUD, PM, BEKE"
       ]
     },
     {
@@ -688,10 +688,10 @@
     },
     "news": {},
     "weather": {
-      "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
+      "said": "hostile 9 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Industrials, Real Estate, Utilities",
-        "events bull 5 / bear 6"
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Energy, Financial, Healthcare, Industrials, Technology, Utilities",
+        "events bull 2 / bear 8"
       ]
     }
   },
@@ -1217,6 +1217,31 @@
         }
       ],
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-14\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-14T04:55:33.162259-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-14.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11206795,
+          "preview": "11615 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11414104,
+          "preview": "11633 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11615 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11633 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
