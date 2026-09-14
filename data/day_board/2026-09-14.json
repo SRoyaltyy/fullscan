@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T05:53:27.349306-04:00",
+  "generated_at": "2026-09-14T05:53:51.194436-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -390,7 +390,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -398,9 +398,9 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-14_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=2651",
+          "size": 7619545
         },
         {
           "key": "ab_enriched",
@@ -408,13 +408,13 @@
           "path": "data/ab_checklist/2026-09-14_ab_checklist_enriched.csv",
           "role": "required",
           "status": "OK",
-          "reason": "rows=11615",
-          "size": 3316255
+          "reason": "rows=2651",
+          "size": 8465733
         }
       ],
-      "said": "214 rows",
+      "said": "25 rows",
       "bullets": [
-        "KOPN, IESC, FORM, SIMO, KN"
+        "WDS, SM, PBR, UHS, MGY"
       ]
     },
     {
@@ -530,8 +530,8 @@
           "path": "data/ab_checklist/2026-09-14_ab_checklist_enriched.csv",
           "role": "input",
           "status": "OK",
-          "reason": "rows=11615",
-          "size": 3316255
+          "reason": "rows=2651",
+          "size": 8465733
         },
         {
           "key": "join",
@@ -549,7 +549,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5111",
-          "size": 821834
+          "size": 818781
         },
         {
           "key": "book_json",
@@ -837,6 +837,31 @@
         }
       ],
       "preview": "5895 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TAL, ABEV, BUD, OHI, BEKE"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-14T05:53:50.490592-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-14_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7619545,
+          "preview": "2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, WDS, ANET, CFFN, CXW"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-14_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8465733,
+          "preview": "2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WDS, SM, PBR, UHS, MGY"
+        }
+      ],
+      "preview": "2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, WDS, ANET, CFFN, CXW \u00b7 2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WDS, SM, PBR, UHS, MGY"
     }
   ],
   "href": {
