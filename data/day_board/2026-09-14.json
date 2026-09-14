@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T05:43:29.299142-04:00",
+  "generated_at": "2026-09-14T05:43:32.345566-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -1445,6 +1445,52 @@
         }
       ],
       "preview": "1d BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-14 BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT \u00b7 2026-09-14 BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT \u00b7 # Stock book \u2014 2026-09-14\n_Generated 2026-09-14T05:43:14.401526-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-09-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-14T05:43:31.880482-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 13539,
+          "preview": "2026-09-14 BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 870,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-14.json",
+          "ok": true,
+          "reason": "",
+          "size": 61474,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-14_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 40016,
+          "preview": "2026-09-14 BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 40016,
+          "preview": "2026-09-14 BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT"
+        }
+      ],
+      "preview": "2026-09-14 BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-14 BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT \u00b7 2026-09-14 BUY CVE, DK \u00b7 SELL SERV, AHCO, GRRR, CIFR, TDTH, MSTR, SPIR, SLQT"
     }
   ],
   "href": {
