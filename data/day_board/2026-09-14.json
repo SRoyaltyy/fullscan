@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T05:53:23.491266-04:00",
+  "generated_at": "2026-09-14T05:53:27.349306-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -540,7 +540,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5895",
-          "size": 2247439
+          "size": 2247172
         },
         {
           "key": "peers",
@@ -597,9 +597,9 @@
           "size": 4875256
         }
       ],
-      "said": "219 rows",
+      "said": "220 rows",
       "bullets": [
-        "ABEV, TAL, BUD, PM, BEKE"
+        "TAL, ABEV, BUD, OHI, BEKE"
       ]
     },
     {
@@ -819,6 +819,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -15.213, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Consumer Cyclical={'score': -13.101, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Consumer Defensive={'score': 0.826, 'dir': 'up', 'conf': 0.533, 'source': 'llm'}, Energy={'score': 11.129, 'dir': 'up', 'conf': 0.85, 'source': 'llm'}, Financial={'score': -3.345, 'dir': 'down', 'conf': 0.534, 'source': 'llm'}, Healthcare={'score': -8.839, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Industrials={'score': -11.954, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Real Estate={'score': -0.491, 'dir': 'down', 'conf': 0.52, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-14\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-14T05:53:26.936741-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-14_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2247172,
+          "preview": "5895 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TAL, ABEV, BUD, OHI, BEKE"
+        }
+      ],
+      "preview": "5895 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TAL, ABEV, BUD, OHI, BEKE"
     }
   ],
   "href": {
