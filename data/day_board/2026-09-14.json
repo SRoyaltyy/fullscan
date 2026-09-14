@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T05:53:51.194436-04:00",
+  "generated_at": "2026-09-14T05:55:11.255988-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -101,7 +101,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 18,
+      "n_req_ok": 19,
       "n_req": 20,
       "n_opt_ok": 2,
       "n_opt": 2,
@@ -138,9 +138,9 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-09-14_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 80514
         },
         {
           "key": "events",
@@ -332,7 +332,7 @@
           "size": 12965
         }
       ],
-      "said": "general DOWN  -11.002 \u00b7 sectors 2 up / 8 down / 0 flat",
+      "said": "general DOWN  -11.002 \u00b7 sectors 2 up / 8 down / 0 flat \u00b7 news 15 items",
       "bullets": [
         "bad: AI-slowdown shock (Amodei/Altman, SoftBank -12%)",
         "bad: fresh Saudi/Hormuz strikes, Brent $107",
@@ -742,7 +742,17 @@
         "XLU DOWN -7.6"
       ]
     },
-    "news": {},
+    "news": {
+      "said": "15 items",
+      "bullets": [
+        "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
+        "OPEC+ September output hike completed; next meeting watch",
+        "Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comments boost September U.S. rate hike expectations",
+        "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year",
+        "Another rate hike, just for insurance: Five questions for the ECB",
+        "Gold price surge drives Franco-Nevada 6.55% higher on Aug 19"
+      ]
+    },
     "weather": {
       "said": "hostile 9 \u00b7 neutral 2",
       "bullets": [
@@ -862,6 +872,31 @@
         }
       ],
       "preview": "2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, WDS, ANET, CFFN, CXW \u00b7 2651 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WDS, SM, PBR, UHS, MGY"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-14T05:55:10.527719-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-14_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 80514,
+          "preview": "raw=149 usable=15 single=19 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | OPEC+ September output hike completed; next meeting watch | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB"
+        },
+        {
+          "path": "01_daily/news/2026-09-14_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 4671,
+          "preview": "# News Parse v2 \u2014 2026-09-14T05:55:10.519970-04:00\nWindow\u224848h | raw=149 | usable=15 | single_name=19 | noise_dropped=115\nusable polarity={'+': 2, '-': 3, 'mixed': 0, 'neutral': 10}"
+        }
+      ],
+      "preview": "raw=149 usable=15 single=19 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | OPEC+ September output hike completed; next meeting watch | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB \u00b7 # News Parse v2 \u2014 2026-09-14T05:55:10.519970-04:00\nWindow\u224848h | raw=149 | usable=15 | single_name=19 | noise_dropped=115\nusable polarity={'+': 2, '-': 3, 'mixed': 0, 'neutral': 10}"
     }
   ],
   "href": {
