@@ -101,7 +101,7 @@ def yahoo_session_overlay(tickers: list[str], date: str) -> dict:
     end = (_date(y, m, d) + timedelta(days=2)).isoformat()
     try:
         df = _yf_download(names, date, end)
-    except Exception:
+    except (Exception, SystemExit):
         return {}
     if df is None or getattr(df, "empty", True):
         return {}
@@ -863,6 +863,147 @@ def _pxs(v, n: int = 2) -> str:
         return "—"
 
 
+def scoreboard_bars(date: str) -> dict[str, dict]:
+    """Clock-clean 09:30 cards already on HARD_RED_SIT.json. Research only."""
+    if not OUT_JSON.is_file():
+        return {}
+    try:
+        data = json.loads(OUT_JSON.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    cf = data.get("counterfactual_0914") or {}
+    if str(cf.get("date") or "") != date:
+        return {}
+    out: dict[str, dict] = {}
+    for row in list(cf.get("webull_would") or []) + list(cf.get("flatten_would") or []):
+        t = str(row.get("ticker") or "").upper()
+        if t and t not in out:
+            out[t] = row
+    return out
+
+
+def per_sleeve_from_tickets(payload: dict) -> dict:
+    """Per-sleeve RESEARCH cards from open-pack tickets. Not a wire."""
+    date = str(payload.get("clock_legal_for") or payload.get("date") or "")
+    sleeves = []
+    n_sit = 0
+    n_named = 0
+    for name, rec in (payload.get("strategies") or {}).items():
+        if not isinstance(rec, dict):
+            continue
+        if not (rec.get("sit") or rec.get("hard_red")):
+            continue
+        n_sit += 1
+        res = rec.get("research") or {}
+        shorts = list(res.get("short_only") or [])
+        longs = list(res.get("dip_scoop") or [])
+        if shorts or longs:
+            n_named += 1
+        sleeves.append({
+            "name": name,
+            "family": rec.get("family"),
+            "sit": True,
+            "hard_red": bool(rec.get("hard_red")),
+            "side": rec.get("side") or "long",
+            "s": rec.get("s") or rec.get("why"),
+            "short_only": shorts,
+            "dip_scoop": longs,
+            "tag": "RESEARCH",
+            "live_sit": True,
+        })
+    return {
+        "tag": "RESEARCH",
+        "date": date,
+        "live_sit": True,
+        "keep_bar_unchanged": True,
+        "n_sit": n_sit,
+        "n_named": n_named,
+        "grid": list(DIP_GRID),
+        "note": (
+            "Per-sleeve paper counterfactuals on looked names. "
+            "Live sit stays default. KEEP bar unchanged. "
+            "(A) short-only fires the short kid at the 09:30 open. "
+            "(B) dip-scoop longs wait for open−X% (session low / Elite "
+            "live). Close does not trigger."
+        ),
+        "sleeves": sleeves,
+    }
+
+
+def render_per_sleeve_md(block: dict) -> list[str]:
+    """Markdown table: each sit sleeve's (A) shorts + (B) scoop grid."""
+    if not block:
+        return []
+    grid = list(block.get("grid") or DIP_GRID)
+    lines = [
+        "## RESEARCH per sleeve (paper, not a wire)",
+        "",
+        f"**{block.get('date') or ''}** — `{block.get('n_named') or 0}` "
+        f"sit sleeves with looked names / "
+        f"`{block.get('n_sit') or 0}` sit sleeves total. "
+        "Live policy sits. KEEP bar unchanged. "
+        "Label: **RESEARCH**.",
+        "",
+        str(block.get("note") or ""),
+        "",
+        "| Sleeve | Side | (A) short-only @ open | (B) dip-scoop X% |",
+        "|---|---|---|---|",
+    ]
+    for rec in block.get("sleeves") or []:
+        shorts = rec.get("short_only") or []
+        longs = rec.get("dip_scoop") or []
+        if not shorts and not longs:
+            continue
+        a_bits = []
+        for r in shorts:
+            a_bits.append(
+                f"{r.get('ticker')} @{_pxs(r.get('open'), 3)}"
+            )
+        b_bits = []
+        for r in longs:
+            hits = []
+            for x in grid:
+                sc = (r.get("scoops") or {}).get(str(x)) or {}
+                if sc.get("kind") == "scoop":
+                    hits.append(f"{x:g}")
+            hit = ("scoop " + ",".join(hits) + "%") if hits else "miss"
+            b_bits.append(f"{r.get('ticker')} {hit}")
+        lines.append(
+            f"| `{rec.get('name')}` | {rec.get('side') or ''} | "
+            f"{'; '.join(a_bits) or '—'} | "
+            f"{'; '.join(b_bits) or '—'} |"
+        )
+    lines += [
+        "",
+        "Scoop trigger = official open + session low (Elite live only "
+        "when the low has not printed). Close / last / Theme Radar "
+        "never trigger. #236 KILL of global short-only / dip-scoop "
+        "stands — this table is display/paper only.",
+        "",
+    ]
+    return lines
+
+
+def write_per_sleeve(block: dict, *, write: bool = True) -> dict:
+    """Merge per-sleeve RESEARCH into HARD_RED_SIT.md + JSON.
+
+    Does not re-run the 22-day KEEP/KILL experiment and does not
+    change flatten_robust / Webull live sit.
+    """
+    data: dict = {}
+    if OUT_JSON.is_file():
+        try:
+            data = json.loads(OUT_JSON.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            data = {}
+    data["per_sleeve"] = block
+    if write:
+        OUT_DIR.mkdir(parents=True, exist_ok=True)
+        OUT_JSON.write_text(json.dumps(data, indent=2), encoding="utf-8")
+        OUT_MD.write_text(render_md(data), encoding="utf-8")
+    return data
+
+
 def _plain_0914(cf: dict) -> list[str]:
     lines = [
         f"On **{cf.get('date')}** morning S was "
@@ -972,6 +1113,7 @@ def render_md(payload: dict) -> str:
         "",
         *_plain_0914(cf),
         "",
+        *render_per_sleeve_md(payload.get("per_sleeve") or {}),
         f"Window `{payload.get('from_date')} → {payload.get('to_date')}` "
         f"({payload.get('n_sessions')} sessions). Hard-red mornings "
         f"(S≤{fmb.HARD_RED:g}): **{len(red)}** — "

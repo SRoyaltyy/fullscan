@@ -671,44 +671,66 @@ def stamp_live_quotes(payload: dict, date: str) -> dict:
 
 
 def attach_hard_red_research(payload: dict, date: str) -> dict:
-    """Per-sleeve short-only + dip-scoop RESEARCH. Live sit stays default."""
+    """Per-sleeve short-only + dip-scoop RESEARCH. Live sit stays default.
+
+    Trigger is clock-clean: official open + session low (or Elite live
+    after 09:30). Close / last / Theme Radar never fill a scoop.
+    """
     from . import factor_mine_combo as fmc
     from . import hard_red_sit_research as hrs
     grid = list(fmc.DIP_GRID)
     quote = payload.get("quote") or {}
+    board = hrs.scoreboard_bars(date)
     for rec in (payload.get("strategies") or {}).values():
         if not isinstance(rec, dict):
             continue
         if not (rec.get("sit") or rec.get("hard_red")):
             continue
         looked = []
-        for row in rec.get("buy") or []:
+        seen: set[tuple[str, str]] = set()
+        buy_n = len(rec.get("buy") or [])
+        for i, row in enumerate(list(rec.get("buy") or []) + list(rec.get("sell") or [])):
             if not isinstance(row, dict) or not row.get("ticker"):
                 continue
             t = str(row["ticker"]).upper()
-            side = str(row.get("kid_side") or row.get("side") or "long")
+            default = "short" if i >= buy_n else (
+                rec.get("side") if rec.get("side") in ("long", "short") else "long"
+            )
+            side = str(row.get("kid_side") or row.get("side") or default or "long")
+            if side not in ("long", "short"):
+                side = "long"
+            if (t, side) in seen:
+                continue
+            seen.add((t, side))
             bar = hrs.clock_bar(t, date)
+            pinned = board.get(t) or {}
             o = bar.get("open")
             if o is None:
                 o = row.get("open_px")
+            if o is None:
+                o = pinned.get("open")
             live = row.get("px")
+            src = str(row.get("px_src") or quote.get("src") or "")
             low = bar.get("low")
+            if low is None:
+                low = pinned.get("low")
+            mark = low
+            if mark is None and live is not None and src.startswith("elite_live"):
+                mark = float(live)
             scoops = {}
-            if o and o > 0:
-                mark = low if low is not None else live
-                if mark is not None:
-                    dip = 100.0 * (float(o) - float(mark)) / float(o)
-                    for x in grid:
-                        scoops[str(x)] = {
-                            "kind": "scoop" if dip >= float(x) else "miss",
-                            "x": x,
-                        }
+            for x in grid:
+                fill, kind = fmc.dip_limit_px(o, mark, x)
+                scoops[str(x)] = {
+                    "kind": kind,
+                    "x": x,
+                    "fill": None if fill is None else round(float(fill), 4),
+                }
             looked.append({
                 "ticker": t,
                 "side": side,
                 "open": o,
                 "px": live,
-                "px_src": row.get("px_src") or quote.get("src"),
+                "px_src": src or None,
                 "low": low,
                 "scoops": scoops,
                 "tag": "RESEARCH",
@@ -718,9 +740,11 @@ def attach_hard_red_research(payload: dict, date: str) -> dict:
         rec["research"] = {
             "tag": "RESEARCH",
             "live_sit": True,
+            "keep_bar_unchanged": True,
             "note": (
                 "Live policy sits. short_only / dip_scoop are paper "
-                "counterfactuals on looked names — not a wire."
+                "counterfactuals on looked names — not a wire. "
+                "KEEP bar unchanged. Close does not trigger a scoop."
             ),
             "short_only": shorts,
             "dip_scoop": longs,
@@ -866,6 +890,11 @@ def write(date: str, payload: dict | None = None) -> list[Path]:
     slim_path = DAY / "today_strategies.json"
     slim_path.write_text(json.dumps(slim, indent=2), encoding="utf-8")
     wrote.append(slim_path)
+    try:
+        from . import hard_red_sit_research as hrs
+        hrs.write_per_sleeve(hrs.per_sleeve_from_tickets(payload), write=True)
+    except Exception as e:  # noqa: BLE001
+        print(f"[strategy-tickets] WARN: per-sleeve RESEARCH: {e}", flush=True)
     print(
         f"[strategy-tickets] {date} n={payload.get('n')} ok={payload.get('n_ok')} "
         f"errors={payload.get('errors') or []}",

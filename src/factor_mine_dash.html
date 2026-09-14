@@ -187,6 +187,7 @@
   <b>Today’s packet</b>
   <div class="mut" id="liveDayStamp">loading day board…</div>
   <div class="pills" id="liveDayPills"></div>
+  <div class="tbl-wrap" id="liveResearch" style="margin-top:8px"></div>
   <div class="mut"><a href="../day-board/" style="color:#93c5fd">day board</a>
    — which processes ran, plus what was just pushed.</div>
 </div>
@@ -1384,10 +1385,23 @@ function renderTable(){
     });
   }
   const showD=bracketOn();
+  const today=(typeof window!=='undefined' && window.__TODAY_STRATS && window.__TODAY_STRATS.strategies) || {};
+  const showR=Object.keys(today).some(n=>today[n]&&today[n].research&&today[n].research.tag);
   const head='<tr><th class="tick">Strategy</th><th>Side</th><th>H</th><th>Win%</th><th>$ days</th><th>Starts</th><th>Book%</th>'
     +(showD?'<th>Δ</th>':'')
+    +(showR?'<th>RESEARCH</th>':'')
     +'<th>Signal%</th><th>Audit</th></tr>';
-  const body=list.map(s=>`<tr data-sleeve="${esc(s.name)}" style="cursor:pointer">
+  const body=list.map(s=>{
+    const res=(today[s.name]||{}).research||{};
+    let rbit='';
+    if(showR){
+      if(res.tag){
+        const so=(res.short_only||[]).map(x=>x.ticker).filter(Boolean);
+        const dp=(res.dip_scoop||[]).map(x=>x.ticker).filter(Boolean);
+        rbit='<td class="mut">RESEARCH'+(so.length?(' (A) '+so.join(' · ')):'')+(dp.length?(' (B) '+dp.join(' · ')):'')+'</td>';
+      } else rbit='<td class="mut">—</td>';
+    }
+    return `<tr data-sleeve="${esc(s.name)}" style="cursor:pointer">
     <td class="tick">${esc(s.name)}${s.reliable===false?' <span class="mut">thin</span>':''}${s.outperforms?' <span class="pos">WIN</span>':''}${s.long_led?' <span class="pos">long-led</span>':''}<div class="mut">${esc(s.size||'leftover')} · ${esc(s.sell||'list')} · ${esc(s.s_boost||'none')}</div>${legsLine(s)}</td>
     <td>${esc(s.side)}</td>
     <td class="num">${s.hold}</td>
@@ -1396,9 +1410,11 @@ function renderTable(){
     <td class="num ${cls(s.start_rate)}">${s.start_green||0}/${s.start_n||0}</td>
     <td class="num ${cls(s.total_ret_pct)}">${num(s.total_ret_pct)}${bookDeltaHtml(s)}</td>
     ${showD?`<td class="num ${s.delta_ret_pct==null?'mut':cls(s.delta_ret_pct)}">${s.delta_ret_pct==null?'—':num(s.delta_ret_pct)}</td>`:''}
+    ${rbit}
     <td class="num mut">${num(s.signal_ret_pct)}</td>
     <td class="${s.audit_ok===false?'neg':'pos'}">${s.audit_ok===false?('FAIL×'+(s.audit_n_fail||'?')):'PASS'}</td>
-  </tr>`).join('');
+  </tr>`;
+  }).join('');
   document.getElementById('stats').innerHTML=head+body;
   document.querySelectorAll('#stats tr[data-sleeve]').forEach(tr=>{
     tr.onclick=()=>selectSleeve(tr.dataset.sleeve);
@@ -1701,6 +1717,7 @@ window.addEventListener('resize', draw);
     fetch(STRAT+'?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.json():{};}).catch(function(){return {};})
   ]).then(function(arr){
     var d=arr[0]||{}, st=arr[1]||{};
+    window.__TODAY_STRATS=st;
     var c=d.counts||{};
     stamp.textContent=(st.date||d.date||'')+' · '+(d.overall||'?')+' · ranker '+(d.ranker_ready?'READY':'BLOCKED')+' · processes ok '+(c.ok||0)+'/'+(c.n||'?')
       +(st.n?(' · '+st.n+' strategies ('+(st.n_ok||0)+' with tickets)'):'')
@@ -1724,11 +1741,15 @@ window.addEventListener('resize', draw);
         if(!b.length&&!sl.length) html+=(s.sit?'sit':'—');
         if(s.research&&s.research.tag){
           html+=' <span class="mut">RESEARCH';
-          var so=(s.research.short_only||[]).map(function(r){return r.ticker;}).filter(Boolean);
-          var dp=(s.research.dip_scoop||[]).map(function(r){return r.ticker;}).filter(Boolean);
-          if(so.length) html+=' short-only '+so.join(' · ');
-          if(dp.length) html+=' dip-scoop '+dp.join(' · ');
-          html+='</span>';
+          var so=s.research.short_only||[];
+          var dp=s.research.dip_scoop||[];
+          if(so.length) html+=' (A) short-only '+so.map(function(r){return (r.ticker||'')+(r.open!=null?(' @'+r.open):'');}).filter(Boolean).join(' · ');
+          if(dp.length) html+=' (B) dip-scoop '+dp.map(function(r){
+            var hits=[]; var sc=r.scoops||{};
+            Object.keys(sc).forEach(function(x){ if((sc[x]||{}).kind==='scoop') hits.push(x+'%'); });
+            return (r.ticker||'')+(hits.length?(' scoop '+hits.join(',')):' miss');
+          }).filter(Boolean).join(' · ');
+          html+=' — not a wire</span>';
         }
         html+='</div>';
       });
@@ -1736,6 +1757,28 @@ window.addEventListener('resize', draw);
     var last=(d.lands||[])[0];
     if(last&&last.preview) html+='<div class="mut" style="margin-top:6px">last land: '+String(last.key||'')+' — '+String(last.preview).slice(0,220)+'</div>';
     pills.innerHTML=html||'<span class="mut">No 1d names on disk yet.</span>';
+    var box=document.getElementById('liveResearch');
+    if(box){
+      var rows=[];
+      keys.forEach(function(name){
+        var s=strats[name]||{};
+        var res=s.research;
+        if(!res||!res.tag) return;
+        var so=(res.short_only||[]).map(function(r){return (r.ticker||'')+(r.open!=null?(' @'+r.open):'');}).filter(Boolean);
+        var dp=(res.dip_scoop||[]).map(function(r){
+          var hits=[]; var sc=r.scoops||{};
+          Object.keys(sc).forEach(function(x){ if((sc[x]||{}).kind==='scoop') hits.push(x+'%'); });
+          return (r.ticker||'')+(hits.length?(' scoop '+hits.join(',')):' miss');
+        }).filter(Boolean);
+        if(!so.length&&!dp.length) return;
+        rows.push('<tr><td>'+name+'</td><td>'+(s.side||'')+'</td><td>'+(so.join(' · ')||'—')+'</td><td>'+(dp.join(' · ')||'—')+'</td></tr>');
+      });
+      box.innerHTML=rows.length
+        ? '<div class="mut" style="margin:6px 0 4px">RESEARCH per sleeve — paper counterfactual, not a wire. Live sit stays default. KEEP bar unchanged.</div>'
+          +'<table><tr><th>Sleeve</th><th>Side</th><th>(A) short-only @ open</th><th>(B) dip-scoop X%</th></tr>'+rows.join('')+'</table>'
+        : '';
+    }
+    if(typeof renderTable==='function') try{ renderTable(); }catch(e){}
   }).catch(function(){ stamp.textContent='day board JSON not on main yet'; });
 })();
 </script>

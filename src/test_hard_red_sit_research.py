@@ -389,6 +389,62 @@ def test_md_lists_the_gate() -> None:
     assert "Do not merge a live policy change" in md
 
 
+def test_per_sleeve_research_section_is_tagged() -> None:
+    tickets = {
+        "date": "2026-09-14",
+        "clock_legal_for": "2026-09-14",
+        "strategies": {
+            "combo_sh_macd_5050_shared": {
+                "sit": True, "hard_red": True, "family": "factor_mine",
+                "side": "mixed",
+                "research": {
+                    "tag": "RESEARCH", "live_sit": True,
+                    "short_only": [{"ticker": "BKV", "open": 24.26}],
+                    "dip_scoop": [{"ticker": "INDP", "scoops": {
+                        "0.5": {"kind": "scoop"}, "1.0": {"kind": "no_dip"},
+                    }}],
+                },
+            },
+            "flatten_robust": {
+                "sit": True, "hard_red": True, "family": "flatten",
+                "side": "long",
+                "research": {
+                    "tag": "RESEARCH",
+                    "short_only": [],
+                    "dip_scoop": [{"ticker": "CVE", "scoops": {
+                        "0.5": {"kind": "scoop"},
+                    }}],
+                },
+            },
+        },
+    }
+    block = hrs.per_sleeve_from_tickets(tickets)
+    assert block["tag"] == "RESEARCH"
+    assert block["live_sit"] is True
+    assert block["keep_bar_unchanged"] is True
+    assert block["date"] == "2026-09-14"
+    assert block["n_named"] == 2
+    section = "\n".join(hrs.render_per_sleeve_md(block))
+    assert "RESEARCH per sleeve" in section
+    assert "not a wire" in section
+    assert "BKV" in section and "INDP" in section and "CVE" in section
+    existing = {
+        "verdict_short": {"label": "KILL", "why": "thin shorts"},
+        "verdict_x": {"label": "KILL", "why": "thin scoops"},
+        "from_date": "2026-08-13", "to_date": "2026-09-14",
+        "n_sessions": 22, "hard_red_days": [],
+        "webull_rows": [], "flatten_rows": [],
+        "walkforward": {"n_folds": 0, "folds": [], "oos_short": {}, "oos_x": {}},
+        "counterfactual_0914": {},
+    }
+    merged = dict(existing)
+    merged["per_sleeve"] = block
+    md = hrs.render_md(merged)
+    assert md.split("**A short-only")[1].startswith(" (pre-open): KILL")
+    assert "RESEARCH per sleeve" in md
+    assert "KEEP bar unchanged" in md
+
+
 def main() -> None:
     test_yahoo_overlay_does_not_clobber_official_open()
     test_excel_letters_are_open_knowable_only()
@@ -402,7 +458,8 @@ def main() -> None:
     test_after_fee_and_keep_kill()
     test_run_synthetic_board()
     test_md_lists_the_gate()
-    print("test_hard_red_sit_research: 12 ok")
+    test_per_sleeve_research_section_is_tagged()
+    print("test_hard_red_sit_research: 13 ok")
 
 
 if __name__ == "__main__":

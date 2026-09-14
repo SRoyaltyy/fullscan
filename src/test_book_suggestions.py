@@ -91,6 +91,10 @@ def test_factor_mine_template_paints_every_strategy() -> None:
     assert "open_px" in html
     assert "elite_live" in html
     assert "RESEARCH" in html
+    assert "liveResearch" in html
+    assert "(A) short-only" in html
+    assert "(B) dip-scoop" in html
+    assert "keep_bar" in html or "KEEP bar unchanged" in html
     assert "liveStartRow" in html
     assert "pending — not 0%" in html
     assert html.index("<h1>Factor strategy mine") < html.index('id="liveDay"')
@@ -154,6 +158,7 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "publish_dashboard.sh" in script
     assert "src.sleeve_merge" not in script
     assert "src.webull_exec" not in script
+    assert "write_per_sleeve" in (root / "src" / "strategy_tickets.py").read_text(encoding="utf-8")
     assert "unset FINVIZ_SKIP_LIVE" in script
     assert "FINVIZ_SKIP_LIVE: \"\"" in pre
     assert "FINVIZ_SKIP_LIVE: \"\"" in book
@@ -168,6 +173,9 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "FINVIZ_EMAIL" in pub
     assert "open_px" in book_suggestions._POLLER_JS
     assert "RESEARCH" in book_suggestions._POLLER_JS
+    assert "(A) short-only" in book_suggestions._POLLER_JS
+    assert "(B) dip-scoop" in book_suggestions._POLLER_JS
+    assert "not a wire" in book_suggestions._POLLER_JS
 
 
 def test_inspect_html_ok_when_poller_and_sidecar() -> None:

@@ -117,15 +117,70 @@ def test_hard_red_research_is_tagged_not_a_wire() -> None:
             }
         },
     }
-    with mock.patch.object(st, "attach_hard_red_research", wraps=st.attach_hard_red_research):
+    with mock.patch("src.hard_red_sit_research.clock_bar", side_effect=lambda t, d, bars=None: {
+        "INDP": {"open": 2.80, "low": 2.77, "close": 2.89},
+        "BKV": {"open": 24.26, "low": 24.08, "close": 24.31},
+    }.get(t, {})):
         out = st.attach_hard_red_research(payload, "2026-09-14")
     rec = out["strategies"]["combo_sh_macd_5050_shared"]
     res = rec["research"]
     assert res["tag"] == "RESEARCH"
     assert res["live_sit"] is True
+    assert res["keep_bar_unchanged"] is True
     assert any(x["ticker"] == "BKV" for x in res["short_only"])
     assert any(x["ticker"] == "INDP" for x in res["dip_scoop"])
     assert "not a wire" in res["note"]
+    indp = next(x for x in res["dip_scoop"] if x["ticker"] == "INDP")
+    assert (indp["scoops"]["0.5"]["kind"] == "scoop")
+    assert (indp["scoops"]["3.0"]["kind"] == "no_dip")
+
+
+def test_research_uses_scoreboard_open_when_parquet_missing() -> None:
+    payload = {
+        "quote": {"src": "session_export"},
+        "strategies": {
+            "combo_sh_macd_5050_shared": {
+                "sit": True, "hard_red": True,
+                "buy": [{"ticker": "INDP", "kid_side": "long", "px": 2.89}],
+                "sell": [],
+            }
+        },
+    }
+    with mock.patch("src.hard_red_sit_research.clock_bar", return_value={}), \
+            mock.patch("src.hard_red_sit_research.scoreboard_bars", return_value={
+                "INDP": {"open": 2.80, "low": 2.77},
+            }):
+        out = st.attach_hard_red_research(payload, "2026-09-14")
+    indp = out["strategies"]["combo_sh_macd_5050_shared"]["research"]["dip_scoop"][0]
+    assert indp["open"] == 2.80
+    assert indp["scoops"]["0.5"]["kind"] == "scoop"
+    assert indp["scoops"]["3.0"]["kind"] == "no_dip"
+
+
+def test_research_scoop_ignores_close_and_stale_last() -> None:
+    payload = {
+        "quote": {"src": "session_export"},
+        "strategies": {
+            "union_hot_n4_h1": {
+                "sit": True, "hard_red": True, "side": "long",
+                "buy": [{"ticker": "HOT1", "kid_side": "long",
+                         "px": 90.0, "open_px": 100.0,
+                         "px_src": "session_export"}],
+                "sell": [{"ticker": "SH1", "side": "short",
+                          "px": 8.0, "open_px": 8.0}],
+            }
+        },
+    }
+    with mock.patch("src.hard_red_sit_research.clock_bar", side_effect=lambda t, d, bars=None: {
+        "HOT1": {"open": 100.0, "low": 99.2, "close": 90.0},
+        "SH1": {"open": 8.0, "low": 7.9, "close": 7.5},
+    }.get(t, {})):
+        out = st.attach_hard_red_research(payload, "2026-09-14")
+    res = out["strategies"]["union_hot_n4_h1"]["research"]
+    hot = next(x for x in res["dip_scoop"] if x["ticker"] == "HOT1")
+    assert hot["scoops"]["0.5"]["kind"] == "scoop"
+    assert hot["scoops"]["1.0"]["kind"] == "no_dip"
+    assert any(x["ticker"] == "SH1" for x in res["short_only"])
 
 
 def main() -> None:
@@ -137,6 +192,8 @@ def main() -> None:
     test_excel_clock_is_session_open_not_run_date()
     test_slim_board_keeps_live_px()
     test_hard_red_research_is_tagged_not_a_wire()
+    test_research_uses_scoreboard_open_when_parquet_missing()
+    test_research_scoop_ignores_close_and_stale_last()
     print("ok")
 
 

@@ -197,11 +197,24 @@ across 22 starts.
         var res = s.research;
         if(res && res.tag){
           extra += ' <span class="live-book-date">RESEARCH';
-          var so = (res.short_only || []).map(function(r){ return r.ticker; }).filter(Boolean);
-          var dp = (res.dip_scoop || []).map(function(r){ return r.ticker; }).filter(Boolean);
-          if(so.length) extra += " short-only " + so.join(" · ");
-          if(dp.length) extra += " dip-scoop " + dp.join(" · ");
-          extra += "</span>";
+          var so = res.short_only || [];
+          var dp = res.dip_scoop || [];
+          if(so.length){
+            extra += " (A) short-only " + so.map(function(r){
+              return (r.ticker || "") + (r.open != null ? (" @" + r.open) : "");
+            }).filter(Boolean).join(" · ");
+          }
+          if(dp.length){
+            extra += " (B) dip-scoop " + dp.map(function(r){
+              var hits = [];
+              var sc = r.scoops || {};
+              Object.keys(sc).forEach(function(x){
+                if((sc[x] || {}).kind === "scoop") hits.push(x + "%");
+              });
+              return (r.ticker || "") + (hits.length ? (" scoop " + hits.join(",")) : " miss");
+            }).filter(Boolean).join(" · ");
+          }
+          extra += " — not a wire</span>";
         }
         var preds = s.predict || [];
         if(preds.length){
