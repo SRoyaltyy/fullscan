@@ -1,9 +1,9 @@
 # AB enriched — 2026-09-14
 
-- Base checklist: `stub/export`
+- Base checklist: `2026-09-14_ab_checklist.csv`
 - Peer map: `data/peers/correlations.csv` or `Correlations.xlsx` (5,511 names)
-- Peer RS: `2026-09-13_peer_rs.csv`
-- Export: `finviz_2026-09-13.csv`
+- Peer RS: `2026-09-14_peer_rs.csv`
+- Export: `finviz_2026-09-14.csv`
 
 ## Flag legend
 
@@ -18,28 +18,28 @@
 
 | Ticker | enr | base | ctx | rs_w | beat% | ind_med_w | sector | board | label |
 |--------|----:|-----:|----:|-----:|------:|----------:|--------|-------|-------|
-| KOPN | +12 | +8 | +4 | +5.3 | 80% | +2.7 | Technology | up | LEAD,peers↑,ind↑,sec↑ |
-| IESC | +12 | +8 | +4 | +8.7 | 100% | +0.5 | Industrials | up | LEAD,peers↑,ind↑,sec↑ |
-| FORM | +12 | +8 | +4 | +13.6 | 90% | +5.4 | Technology | up | LEAD,peers↑,ind↑,sec↑ |
-| SIMO | +11 | +7 | +4 | +15.8 | 100% | +4.2 | Technology | up | LEAD,peers↑,ind↑,sec↑ |
-| KN | +11 | +7 | +4 | +1.9 | 70% | +2.7 | Technology | up | LEAD,peers↑,ind↑,sec↑ |
-| PWR | +11 | +7 | +4 | +2.4 | 89% | +0.5 | Industrials | up | LEAD,peers↑,ind↑,sec↑ |
-| NUTX | +11 | +7 | +4 | +1.2 | 71% | +0.2 | Healthcare | flat | LEAD,peers↑,ind↑,sec↑ |
-| FIX | +11 | +7 | +4 | +3.2 | 90% | +0.5 | Industrials | up | LEAD,peers↑,ind↑,sec↑ |
-| ALNT | +11 | +7 | +4 | +7.9 | 100% | +2.7 | Technology | up | LEAD,peers↑,ind↑,sec↑ |
-| AXTI | +11 | +7 | +4 | +9.4 | 90% | +5.4 | Technology | up | LEAD,peers↑,ind↑,sec↑ |
-| TER | +11 | +7 | +4 | +7.6 | 70% | +5.4 | Technology | up | LEAD,peers↑,ind↑,sec↑ |
-| MRVL | +10 | +6 | +4 | +7.5 | 90% | +4.2 | Technology | up | LEAD,peers↑,ind↑,sec↑ |
-| AMD | +10 | +6 | +4 | +7.9 | 100% | +4.2 | Technology | up | LEAD,peers↑,ind↑,sec↑ |
-| NOK | +10 | +6 | +4 | +13.2 | 90% | +1.8 | Technology | up | LEAD,peers↑,ind↑,sec↑ |
-| FEIM | +10 | +6 | +4 | +41.8 | 100% | +1.8 | Technology | up | LEAD,peers↑,ind↑,sec↑ |
-| ADI | +10 | +6 | +4 | +3.8 | 88% | +4.2 | Technology | up | LEAD,peers↑,ind↑,sec↑ |
-| ENTG | +10 | +6 | +4 | +1.5 | 60% | +5.4 | Technology | up | LEAD,peers↑,ind↑,sec↑ |
-| SMTC | +10 | +6 | +4 | +18.0 | 90% | +4.2 | Technology | up | LEAD,peers↑,ind↑,sec↑ |
-| ARM | +10 | +6 | +4 | +3.1 | 70% | +4.2 | Technology | up | LEAD,peers↑,ind↑,sec↑ |
-| AEHR | +10 | +6 | +4 | +16.9 | 100% | +5.4 | Technology | up | LEAD,peers↑,ind↑,sec↑ |
-| DAC | +10 | +6 | +4 | +2.1 | 60% | +0.2 | Industrials | up | LEAD,peers↑,ind↑,sec↑ |
-| BELFB | +10 | +6 | +4 | +0.7 | 60% | +2.7 | Technology | up | LEAD,peers↑,ind↑,sec↑ |
-| SKHY | +10 | +8 | +2 | — | — | +4.2 | Technology | up | ind↑,sec↑ |
-| SFL | +10 | +6 | +4 | +0.2 | 50% | +0.2 | Industrials | up | LEAD,peers↑,ind↑,sec↑ |
-| SITM | +10 | +6 | +4 | +5.4 | 90% | +4.2 | Technology | up | LEAD,peers↑,ind↑,sec↑ |
+| WDS | +21 | +17 | +4 | +0.7 | 62% | +3.0 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
+| SM | +20 | +16 | +4 | +2.8 | 88% | +3.0 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
+| PBR | +19 | +15 | +4 | +2.0 | 75% | +4.4 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
+| UHS | +17 | +15 | +2 | +2.5 | 67% | +0.6 | Healthcare | down | LEAD,peers↑,ind↑,sec↓ |
+| MGY | +17 | +13 | +4 | +1.1 | 62% | +3.0 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
+| KNTK | +17 | +13 | +4 | +1.9 | 89% | +1.1 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
+| PAA | +17 | +13 | +4 | +1.6 | 90% | +1.1 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
+| AVT | +17 | +15 | +2 | +5.1 | 89% | +2.1 | Technology | down | LEAD,peers↑,ind↑,sec↓ |
+| EC | +17 | +15 | +2 | -0.1 | 33% | +4.4 | Energy | up | LAG,peers↑,ind↑,sec↑ |
+| SOBO | +16 | +14 | +2 | — | — | +1.1 | Energy | up | ind↑,sec↑ |
+| LFST | +16 | +14 | +2 | +0.9 | 50% | +0.6 | Healthcare | down | LEAD,peers↑,ind↑,sec↓ |
+| SHEL | +16 | +14 | +2 | -0.1 | 33% | +4.4 | Energy | up | LAG,peers↑,ind↑,sec↑ |
+| DVN | +16 | +12 | +4 | +2.3 | 83% | +3.0 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
+| CXW | +16 | +16 | +0 | +1.9 | 75% | -1.7 | Industrials | down | LEAD,peers↑,ind↓,sec↓ |
+| PBR-A | +15 | +11 | +4 | +0.7 | 62% | +4.4 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
+| BP | +15 | +11 | +4 | +1.2 | 67% | +4.4 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
+| PAGP | +15 | +13 | +2 | +1.7 | 80% | +1.1 | Energy | up | LEAD,peers↓,ind↑,sec↑ |
+| OXY | +15 | +11 | +4 | +0.1 | 56% | +3.0 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
+| SFL | +15 | +15 | +0 | -0.7 | 40% | +0.3 | Industrials | down | LAG,peers↑,ind↑,sec↓ |
+| EPD | +15 | +11 | +4 | +1.8 | 89% | +1.1 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
+| INSW | +15 | +13 | +2 | -2.4 | 30% | +1.1 | Energy | up | LAG,peers↑,ind↑,sec↑ |
+| SKM | +15 | +16 | -1 | -5.0 | 11% | -1.2 | Communication Serv | — | LAG,peers↑,ind↓ |
+| ET | +15 | +13 | +2 | +1.4 | 75% | +1.1 | Energy | up | LEAD,peers↓,ind↑,sec↑ |
+| CFFN | +15 | +17 | -2 | +0.3 | 56% | -0.5 | Financial | down | LEAD,peers↓,ind↓,sec↓ |
+| ANET | +15 | +17 | -2 | -7.2 | 0% | -4.2 | Technology | down | LAG,peers↑,ind↓,sec↓ |

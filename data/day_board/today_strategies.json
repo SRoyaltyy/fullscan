@@ -1,41 +1,39 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T05:47:34.874293-04:00",
+  "generated_at": "2026-09-14T05:55:36.363429-04:00",
   "n": 322,
   "n_ok": 322,
   "buy_1d": [
-    "CVE",
-    "DK"
+    "CVE"
   ],
   "sell_1d": [
+    "TNDM",
     "SERV",
-    "AHCO",
     "GRRR",
+    "AHCO",
+    "ARQQ",
     "CIFR",
     "TDTH",
-    "MSTR",
-    "SPIR",
+    "BTDR",
     "SLQT",
-    "OWL",
-    "MMYT"
+    "OWL"
   ],
   "strategies": {
     "stock_book_1d": {
       "buy": [
-        "CVE",
-        "DK"
+        "CVE"
       ],
       "sell": [
+        "TNDM",
         "SERV",
-        "AHCO",
         "GRRR",
+        "AHCO",
+        "ARQQ",
         "CIFR",
         "TDTH",
-        "MSTR",
-        "SPIR",
+        "BTDR",
         "SLQT",
-        "OWL",
-        "MMYT"
+        "OWL"
       ],
       "sit": false,
       "status": "ok",
@@ -50,13 +48,19 @@
           "take": "BUY"
         },
         {
-          "ticker": "DK",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
+          "ticker": "TNDM",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
         },
         {
           "ticker": "SERV",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "GRRR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -68,7 +72,7 @@
           "take": "SELL"
         },
         {
-          "ticker": "GRRR",
+          "ticker": "ARQQ",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -86,13 +90,7 @@
           "take": "SELL"
         },
         {
-          "ticker": "MSTR",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "SPIR",
+          "ticker": "BTDR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -108,31 +106,24 @@
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
-        },
-        {
-          "ticker": "MMYT",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
         }
       ]
     },
     "1d_top": {
       "buy": [
-        "CVE",
-        "DK"
+        "CVE"
       ],
       "sell": [
+        "TNDM",
         "SERV",
-        "AHCO",
         "GRRR",
+        "AHCO",
+        "ARQQ",
         "CIFR",
         "TDTH",
-        "MSTR",
-        "SPIR",
+        "BTDR",
         "SLQT",
-        "OWL",
-        "MMYT"
+        "OWL"
       ],
       "sit": false,
       "status": "ok",
@@ -147,13 +138,19 @@
           "take": "BUY"
         },
         {
-          "ticker": "DK",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
+          "ticker": "TNDM",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
         },
         {
           "ticker": "SERV",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "GRRR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -165,7 +162,7 @@
           "take": "SELL"
         },
         {
-          "ticker": "GRRR",
+          "ticker": "ARQQ",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -183,13 +180,7 @@
           "take": "SELL"
         },
         {
-          "ticker": "MSTR",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "SPIR",
+          "ticker": "BTDR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -202,12 +193,6 @@
         },
         {
           "ticker": "OWL",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "MMYT",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -217,29 +202,27 @@
     "stock_book_3d": {
       "buy": [
         "DK",
-        "TEL",
-        "OLED",
-        "NVT",
-        "BG",
         "CVE",
-        "HYLN"
+        "BG",
+        "NVT",
+        "AEIS"
       ],
       "sell": [
-        "MBC",
-        "LCID",
-        "XPOF",
+        "METC",
+        "SGML",
+        "BEAM",
+        "TMC",
+        "CWH",
         "ASPI",
         "FUN",
-        "SGML",
-        "GT",
-        "WHR",
-        "ZGN",
-        "TMC",
+        "ALMS",
+        "ACH",
+        "BHVN",
         "OPEN",
-        "TLRY",
-        "METC",
-        "DFH",
-        "BEAM"
+        "DYN",
+        "TNDM",
+        "OCGN",
+        "CTMX"
       ],
       "sit": false,
       "status": "ok",
@@ -254,19 +237,7 @@
           "take": "BUY"
         },
         {
-          "ticker": "TEL",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "OLED",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "NVT",
+          "ticker": "CVE",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
@@ -278,31 +249,43 @@
           "take": "BUY"
         },
         {
-          "ticker": "CVE",
+          "ticker": "NVT",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "HYLN",
+          "ticker": "AEIS",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "MBC",
+          "ticker": "METC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "LCID",
+          "ticker": "SGML",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "XPOF",
+          "ticker": "BEAM",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "TMC",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "CWH",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -320,31 +303,19 @@
           "take": "SELL"
         },
         {
-          "ticker": "SGML",
+          "ticker": "ALMS",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "GT",
+          "ticker": "ACH",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "WHR",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "ZGN",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "TMC",
+          "ticker": "BHVN",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -356,25 +327,25 @@
           "take": "SELL"
         },
         {
-          "ticker": "TLRY",
+          "ticker": "DYN",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "METC",
+          "ticker": "TNDM",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "DFH",
+          "ticker": "OCGN",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "BEAM",
+          "ticker": "CTMX",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -384,29 +355,27 @@
     "3d_top": {
       "buy": [
         "DK",
-        "TEL",
-        "OLED",
-        "NVT",
-        "BG",
         "CVE",
-        "HYLN"
+        "BG",
+        "NVT",
+        "AEIS"
       ],
       "sell": [
-        "MBC",
-        "LCID",
-        "XPOF",
+        "METC",
+        "SGML",
+        "BEAM",
+        "TMC",
+        "CWH",
         "ASPI",
         "FUN",
-        "SGML",
-        "GT",
-        "WHR",
-        "ZGN",
-        "TMC",
+        "ALMS",
+        "ACH",
+        "BHVN",
         "OPEN",
-        "TLRY",
-        "METC",
-        "DFH",
-        "BEAM"
+        "DYN",
+        "TNDM",
+        "OCGN",
+        "CTMX"
       ],
       "sit": false,
       "status": "ok",
@@ -421,19 +390,7 @@
           "take": "BUY"
         },
         {
-          "ticker": "TEL",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "OLED",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "NVT",
+          "ticker": "CVE",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
@@ -445,88 +402,16 @@
           "take": "BUY"
         },
         {
-          "ticker": "CVE",
+          "ticker": "NVT",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "HYLN",
+          "ticker": "AEIS",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
-        },
-        {
-          "ticker": "MBC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "LCID",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "XPOF",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "ASPI",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "FUN",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "SGML",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "GT",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "WHR",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "ZGN",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "TMC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "OPEN",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "TLRY",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
         },
         {
           "ticker": "METC",
@@ -535,7 +420,7 @@
           "take": "SELL"
         },
         {
-          "ticker": "DFH",
+          "ticker": "SGML",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -545,98 +430,15 @@
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
-        }
-      ]
-    },
-    "stock_book_1w": {
-      "buy": [
-        "DK",
-        "TEL",
-        "OLED",
-        "NVT",
-        "BG",
-        "CVE",
-        "HYLN"
-      ],
-      "sell": [
-        "MBC",
-        "LCID",
-        "XPOF",
-        "ASPI",
-        "FUN",
-        "SGML",
-        "GT",
-        "WHR",
-        "ZGN",
-        "TMC",
-        "OPEN",
-        "TLRY",
-        "DFH",
-        "METC",
-        "PRKS"
-      ],
-      "sit": false,
-      "status": "ok",
-      "family": "stock_book",
-      "date": "2026-09-14",
-      "side": "mixed",
-      "predict": [
-        {
-          "ticker": "DK",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
         },
         {
-          "ticker": "TEL",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "OLED",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "NVT",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "BG",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "CVE",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "HYLN",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "MBC",
+          "ticker": "TMC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "LCID",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "XPOF",
+          "ticker": "CWH",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -654,31 +456,19 @@
           "take": "SELL"
         },
         {
-          "ticker": "SGML",
+          "ticker": "ALMS",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "GT",
+          "ticker": "ACH",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "WHR",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "ZGN",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "TMC",
+          "ticker": "BHVN",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -690,16 +480,91 @@
           "take": "SELL"
         },
         {
-          "ticker": "TLRY",
+          "ticker": "DYN",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "DFH",
+          "ticker": "TNDM",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
+        },
+        {
+          "ticker": "OCGN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "CTMX",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        }
+      ]
+    },
+    "stock_book_1w": {
+      "buy": [
+        "DK",
+        "BG",
+        "CVE",
+        "NVT",
+        "AEIS"
+      ],
+      "sell": [
+        "METC",
+        "SGML",
+        "TMC",
+        "BEAM",
+        "CWH",
+        "ASPI",
+        "FUN",
+        "ALMS",
+        "ACH",
+        "BHVN",
+        "DYN",
+        "OPEN",
+        "LAR",
+        "CTMX",
+        "TNDM"
+      ],
+      "sit": false,
+      "status": "ok",
+      "family": "stock_book",
+      "date": "2026-09-14",
+      "side": "mixed",
+      "predict": [
+        {
+          "ticker": "DK",
+          "side": "long",
+          "predict": "UP",
+          "take": "BUY"
+        },
+        {
+          "ticker": "BG",
+          "side": "long",
+          "predict": "UP",
+          "take": "BUY"
+        },
+        {
+          "ticker": "CVE",
+          "side": "long",
+          "predict": "UP",
+          "take": "BUY"
+        },
+        {
+          "ticker": "NVT",
+          "side": "long",
+          "predict": "UP",
+          "take": "BUY"
+        },
+        {
+          "ticker": "AEIS",
+          "side": "long",
+          "predict": "UP",
+          "take": "BUY"
         },
         {
           "ticker": "METC",
@@ -708,7 +573,85 @@
           "take": "SELL"
         },
         {
-          "ticker": "PRKS",
+          "ticker": "SGML",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "TMC",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "BEAM",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "CWH",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "ASPI",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "FUN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "ALMS",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "ACH",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "BHVN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "DYN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "OPEN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "LAR",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "CTMX",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "TNDM",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -718,29 +661,27 @@
     "1w_top": {
       "buy": [
         "DK",
-        "TEL",
-        "OLED",
-        "NVT",
         "BG",
         "CVE",
-        "HYLN"
+        "NVT",
+        "AEIS"
       ],
       "sell": [
-        "MBC",
-        "LCID",
-        "XPOF",
+        "METC",
+        "SGML",
+        "TMC",
+        "BEAM",
+        "CWH",
         "ASPI",
         "FUN",
-        "SGML",
-        "GT",
-        "WHR",
-        "ZGN",
-        "TMC",
+        "ALMS",
+        "ACH",
+        "BHVN",
+        "DYN",
         "OPEN",
-        "TLRY",
-        "DFH",
-        "METC",
-        "PRKS"
+        "LAR",
+        "CTMX",
+        "TNDM"
       ],
       "sit": false,
       "status": "ok",
@@ -750,24 +691,6 @@
       "predict": [
         {
           "ticker": "DK",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "TEL",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "OLED",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "NVT",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
@@ -785,25 +708,43 @@
           "take": "BUY"
         },
         {
-          "ticker": "HYLN",
+          "ticker": "NVT",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "MBC",
+          "ticker": "AEIS",
+          "side": "long",
+          "predict": "UP",
+          "take": "BUY"
+        },
+        {
+          "ticker": "METC",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "LCID",
+          "ticker": "SGML",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "XPOF",
+          "ticker": "TMC",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "BEAM",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "CWH",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -821,31 +762,25 @@
           "take": "SELL"
         },
         {
-          "ticker": "SGML",
+          "ticker": "ALMS",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "GT",
+          "ticker": "ACH",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "WHR",
+          "ticker": "BHVN",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "ZGN",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "TMC",
+          "ticker": "DYN",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -857,25 +792,19 @@
           "take": "SELL"
         },
         {
-          "ticker": "TLRY",
+          "ticker": "LAR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "DFH",
+          "ticker": "CTMX",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "METC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "PRKS",
+          "ticker": "TNDM",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -885,29 +814,27 @@
     "stock_book_2w": {
       "buy": [
         "DK",
-        "TEL",
-        "OLED",
-        "NVT",
         "BG",
         "CVE",
-        "HYLN"
+        "NVT",
+        "AEIS"
       ],
       "sell": [
-        "LCID",
-        "FUN",
-        "MBC",
-        "XPOF",
         "SGML",
-        "GT",
-        "ASPI",
-        "WHR",
-        "ZGN",
-        "TMC",
-        "PRKS",
-        "OPEN",
         "METC",
-        "TLRY",
-        "AVTX"
+        "FUN",
+        "TMC",
+        "CWH",
+        "BEAM",
+        "ALMS",
+        "ASPI",
+        "DYN",
+        "ACH",
+        "BHVN",
+        "SNDX",
+        "LAR",
+        "CRML",
+        "WHR"
       ],
       "sit": false,
       "status": "ok",
@@ -917,24 +844,6 @@
       "predict": [
         {
           "ticker": "DK",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "TEL",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "OLED",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "NVT",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
@@ -952,79 +861,19 @@
           "take": "BUY"
         },
         {
-          "ticker": "HYLN",
+          "ticker": "NVT",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "LCID",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "FUN",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "MBC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "XPOF",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
+          "ticker": "AEIS",
+          "side": "long",
+          "predict": "UP",
+          "take": "BUY"
         },
         {
           "ticker": "SGML",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "GT",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "ASPI",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "WHR",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "ZGN",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "TMC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "PRKS",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "OPEN",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -1036,13 +885,79 @@
           "take": "SELL"
         },
         {
-          "ticker": "TLRY",
+          "ticker": "FUN",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "AVTX",
+          "ticker": "TMC",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "CWH",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "BEAM",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "ALMS",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "ASPI",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "DYN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "ACH",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "BHVN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "SNDX",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "LAR",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "CRML",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "WHR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -1052,29 +967,27 @@
     "2w_top": {
       "buy": [
         "DK",
-        "TEL",
-        "OLED",
-        "NVT",
         "BG",
         "CVE",
-        "HYLN"
+        "NVT",
+        "AEIS"
       ],
       "sell": [
-        "LCID",
-        "FUN",
-        "MBC",
-        "XPOF",
         "SGML",
-        "GT",
-        "ASPI",
-        "WHR",
-        "ZGN",
-        "TMC",
-        "PRKS",
-        "OPEN",
         "METC",
-        "TLRY",
-        "AVTX"
+        "FUN",
+        "TMC",
+        "CWH",
+        "BEAM",
+        "ALMS",
+        "ASPI",
+        "DYN",
+        "ACH",
+        "BHVN",
+        "SNDX",
+        "LAR",
+        "CRML",
+        "WHR"
       ],
       "sit": false,
       "status": "ok",
@@ -1084,24 +997,6 @@
       "predict": [
         {
           "ticker": "DK",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "TEL",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "OLED",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "NVT",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
@@ -1119,79 +1014,19 @@
           "take": "BUY"
         },
         {
-          "ticker": "HYLN",
+          "ticker": "NVT",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "LCID",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "FUN",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "MBC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "XPOF",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
+          "ticker": "AEIS",
+          "side": "long",
+          "predict": "UP",
+          "take": "BUY"
         },
         {
           "ticker": "SGML",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "GT",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "ASPI",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "WHR",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "ZGN",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "TMC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "PRKS",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "OPEN",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -1203,13 +1038,79 @@
           "take": "SELL"
         },
         {
-          "ticker": "TLRY",
+          "ticker": "FUN",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
         },
         {
-          "ticker": "AVTX",
+          "ticker": "TMC",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "CWH",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "BEAM",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "ALMS",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "ASPI",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "DYN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "ACH",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "BHVN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "SNDX",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "LAR",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "CRML",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "WHR",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -1219,29 +1120,27 @@
     "stock_book_1m": {
       "buy": [
         "DK",
-        "TEL",
-        "NVT",
-        "OLED",
         "BG",
         "CVE",
-        "HYLN"
+        "NVT",
+        "AEIS"
       ],
       "sell": [
-        "LCID",
-        "FUN",
-        "MBC",
-        "XPOF",
         "SGML",
-        "GT",
-        "ASPI",
-        "WHR",
-        "ZGN",
-        "TMC",
-        "PRKS",
-        "OPEN",
-        "OI",
         "METC",
-        "TLRY"
+        "FUN",
+        "TMC",
+        "CWH",
+        "BEAM",
+        "ALMS",
+        "ASPI",
+        "DYN",
+        "ACH",
+        "LAR",
+        "SNDX",
+        "BHVN",
+        "WHR",
+        "CRML"
       ],
       "sit": false,
       "status": "ok",
@@ -1256,24 +1155,6 @@
           "take": "BUY"
         },
         {
-          "ticker": "TEL",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "NVT",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "OLED",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
           "ticker": "BG",
           "side": "long",
           "predict": "UP",
@@ -1286,85 +1167,19 @@
           "take": "BUY"
         },
         {
-          "ticker": "HYLN",
+          "ticker": "NVT",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "LCID",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "FUN",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "MBC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "XPOF",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
+          "ticker": "AEIS",
+          "side": "long",
+          "predict": "UP",
+          "take": "BUY"
         },
         {
           "ticker": "SGML",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "GT",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "ASPI",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "WHR",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "ZGN",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "TMC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "PRKS",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "OPEN",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "OI",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -1376,7 +1191,79 @@
           "take": "SELL"
         },
         {
-          "ticker": "TLRY",
+          "ticker": "FUN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "TMC",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "CWH",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "BEAM",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "ALMS",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "ASPI",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "DYN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "ACH",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "LAR",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "SNDX",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "BHVN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "WHR",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "CRML",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -1386,29 +1273,27 @@
     "1m_top": {
       "buy": [
         "DK",
-        "TEL",
-        "NVT",
-        "OLED",
         "BG",
         "CVE",
-        "HYLN"
+        "NVT",
+        "AEIS"
       ],
       "sell": [
-        "LCID",
-        "FUN",
-        "MBC",
-        "XPOF",
         "SGML",
-        "GT",
-        "ASPI",
-        "WHR",
-        "ZGN",
-        "TMC",
-        "PRKS",
-        "OPEN",
-        "OI",
         "METC",
-        "TLRY"
+        "FUN",
+        "TMC",
+        "CWH",
+        "BEAM",
+        "ALMS",
+        "ASPI",
+        "DYN",
+        "ACH",
+        "LAR",
+        "SNDX",
+        "BHVN",
+        "WHR",
+        "CRML"
       ],
       "sit": false,
       "status": "ok",
@@ -1423,24 +1308,6 @@
           "take": "BUY"
         },
         {
-          "ticker": "TEL",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "NVT",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "OLED",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
           "ticker": "BG",
           "side": "long",
           "predict": "UP",
@@ -1453,85 +1320,19 @@
           "take": "BUY"
         },
         {
-          "ticker": "HYLN",
+          "ticker": "NVT",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
         },
         {
-          "ticker": "LCID",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "FUN",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "MBC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "XPOF",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
+          "ticker": "AEIS",
+          "side": "long",
+          "predict": "UP",
+          "take": "BUY"
         },
         {
           "ticker": "SGML",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "GT",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "ASPI",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "WHR",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "ZGN",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "TMC",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "PRKS",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "OPEN",
-          "side": "short",
-          "predict": "DOWN",
-          "take": "SELL"
-        },
-        {
-          "ticker": "OI",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"
@@ -1543,7 +1344,79 @@
           "take": "SELL"
         },
         {
-          "ticker": "TLRY",
+          "ticker": "FUN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "TMC",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "CWH",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "BEAM",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "ALMS",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "ASPI",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "DYN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "ACH",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "LAR",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "SNDX",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "BHVN",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "WHR",
+          "side": "short",
+          "predict": "DOWN",
+          "take": "SELL"
+        },
+        {
+          "ticker": "CRML",
           "side": "short",
           "predict": "DOWN",
           "take": "SELL"

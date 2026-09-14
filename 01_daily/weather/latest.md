@@ -5,7 +5,7 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** OFF (general predict down score -11.0, conf 0.85)
-- **Yields:** rising (fred_dgs10) | **Dollar:** strong (dxy) | **Oil:** rising | **VIX:** spiking (ratio 1.16 via vix/ma20) spot 18.13
+- **Yields:** rising (fred_dgs10) | **Dollar:** strong (dxy) | **Oil:** rising | **VIX:** spiking (ratio 1.16 via vix/ma20) spot 18.08
 - **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.25
 - **High-impact events:** 2 bullish vs 8 bearish
 
@@ -14,7 +14,7 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
 | sector:Basic Materials | 🌧️ hostile | high | sector predict score -15.2 dir down conf 0.85 [sector board] |
-| sector:Communication Services | 🌧️ hostile | medium | finviz sector median week -1.86% [tape] |
+| sector:Communication Services | 🌧️ hostile | medium | finviz sector median week -1.83% [tape] |
 | sector:Consumer Cyclical | 🌧️ hostile | high | sector predict score -13.1 dir down conf 0.85 [sector board] |
 | sector:Consumer Defensive | ⛅ neutral | high | sector predict score +0.8 dir up conf 0.533 [sector board] |
 | sector:Energy | 🌧️ hostile | medium | news_judge SECTOR Energy [bearish] |

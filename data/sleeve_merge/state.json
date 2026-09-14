@@ -48,7 +48,7 @@
         "pnl": 0
       }
     },
-    "n_days": 21,
+    "n_days": 22,
     "min_rolling_2w": -3.38,
     "min_block_2w": -2.0,
     "min_fortnight": -2.0,
@@ -56,7 +56,7 @@
     "hit_every_block_2w": false,
     "hit_every_fortnight": false,
     "beat_io_top": false,
-    "io_top_pct": 10.27,
+    "io_top_pct": 9.7,
     "passed": false,
     "fees_in": 1294.73,
     "fees_out": 1327.49,
@@ -158,6 +158,14 @@
       "start_eq": 108477.87,
       "end_eq": 108616.66,
       "ret_pct": 0.13
+    },
+    {
+      "start": "2026-08-31",
+      "end": "2026-09-14",
+      "n": 10,
+      "start_eq": 110611.29,
+      "end_eq": 108616.66,
+      "ret_pct": -1.8
     }
   ],
   "blocks_2w": [
@@ -176,6 +184,15 @@
       "start_eq": 110835.16,
       "end_eq": 108616.66,
       "ret_pct": -2.0
+    },
+    {
+      "start": "2026-09-11",
+      "end": "2026-09-14",
+      "n": 2,
+      "start_eq": 108616.66,
+      "end_eq": 108616.66,
+      "ret_pct": 0.0,
+      "partial": true
     }
   ],
   "fortnights": [
@@ -201,8 +218,8 @@
     },
     {
       "start": "2026-09-10",
-      "end": "2026-09-11",
-      "n": 2,
+      "end": "2026-09-14",
+      "n": 3,
       "cal_start": "2026-09-10",
       "cal_end": "2026-09-23",
       "start_eq": 108616.66,
@@ -211,5 +228,5 @@
       "partial": true
     }
   ],
-  "generated": "2026-09-11T11:35:39"
+  "generated": "2026-09-14T10:04:20"
 }
