@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T04:27:03.784761-04:00",
+  "generated_at": "2026-09-14T04:44:08.363066-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -103,7 +103,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 3,
+      "n_req_ok": 14,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 2,
@@ -212,9 +212,9 @@
           "name": "Pre-open QC JSON",
           "path": "01_daily/2026-09-14_preopen_qc.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "all_ok=False",
+          "size": 6641
         },
         {
           "key": "status",
@@ -239,9 +239,9 @@
           "name": "Sector predict \u2014 basic_materials",
           "path": "01_daily/sectors/2026-09-14/basic_materials_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 14968
         },
         {
           "key": "sector_communication_services",
@@ -257,81 +257,81 @@
           "name": "Sector predict \u2014 consumer_cyclical",
           "path": "01_daily/sectors/2026-09-14/consumer_cyclical_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 13706
         },
         {
           "key": "sector_consumer_defensive",
           "name": "Sector predict \u2014 consumer_defensive",
           "path": "01_daily/sectors/2026-09-14/consumer_defensive_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 18605
         },
         {
           "key": "sector_energy",
           "name": "Sector predict \u2014 energy",
           "path": "01_daily/sectors/2026-09-14/energy_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 11377
         },
         {
           "key": "sector_financial",
           "name": "Sector predict \u2014 financial",
           "path": "01_daily/sectors/2026-09-14/financial_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 12561
         },
         {
           "key": "sector_healthcare",
           "name": "Sector predict \u2014 healthcare",
           "path": "01_daily/sectors/2026-09-14/healthcare_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 13197
         },
         {
           "key": "sector_industrials",
           "name": "Sector predict \u2014 industrials",
           "path": "01_daily/sectors/2026-09-14/industrials_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 14974
         },
         {
           "key": "sector_real_estate",
           "name": "Sector predict \u2014 real_estate",
           "path": "01_daily/sectors/2026-09-14/real_estate_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 17602
         },
         {
           "key": "sector_technology",
           "name": "Sector predict \u2014 technology",
           "path": "01_daily/sectors/2026-09-14/technology_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 11537
         },
         {
           "key": "sector_utilities",
           "name": "Sector predict \u2014 utilities",
           "path": "01_daily/sectors/2026-09-14/utilities_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 12965
         }
       ],
       "said": "general DOWN  -11.002",
@@ -1138,6 +1138,24 @@
         }
       ],
       "preview": "# Premarket Prediction \u2014 2026-09-14\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -11.002 (uncertainty multiplier \u00d71.1) | confidence 0.85\n>\n> **Good news vs bad news:** good +0 pts vs bad -12.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - FTSE +0.58% on energy bid\n> - HY tight 2.70\n> - Hang Seng +0.45%\n> - dollar 1m still -0.38%\n> - RRP build is plumbing not stress\n>\n> **Bad news driving this:**\n> - AI-slowdown shock (Amodei/Altman, SoftBank -12%)\n> - fresh Saudi/Hormuz strikes, Brent $107\n> - Sep 16 FOMC hike ~56-77%\n> - VIX backwardation 1.133\n> - NQ -1.58% leading down\n>\n> **market uncertainty: **elevated** | VIX 17.64 | policy-uncertainty index 725.88 (1d +451.17)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight ne"
+    },
+    {
+      "key": "sector_predict",
+      "title": "Per-sector predict (all 11)",
+      "date": "2026-09-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-14T04:44:07.989152-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-14",
+          "ok": true,
+          "reason": "",
+          "size": 4096,
+          "preview": "10/10 sector predicts ok: basic_materials, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials, real_estate"
+        }
+      ],
+      "preview": "10/10 sector predicts ok: basic_materials, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials, real_estate"
     }
   ],
   "href": {

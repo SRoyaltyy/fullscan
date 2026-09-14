@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T04:27:03.784761-04:00",
+  "generated_at": "2026-09-14T04:44:08.363066-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -26,24 +26,6 @@
   },
   "sectors": {},
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-09-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-14T04:18:44.207647-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-09-14_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1116436,
-          "preview": "5895 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5895 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "weather",
       "title": "Weather / regime (offline retry)",
@@ -197,6 +179,24 @@
         }
       ],
       "preview": "# Premarket Prediction \u2014 2026-09-14\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -11.002 (uncertainty multiplier \u00d71.1) | confidence 0.85\n>\n> **Good news vs bad news:** good +0 pts vs bad -12.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - FTSE +0.58% on energy bid\n> - HY tight 2.70\n> - Hang Seng +0.45%\n> - dollar 1m still -0.38%\n> - RRP build is plumbing not stress\n>\n> **Bad news driving this:**\n> - AI-slowdown shock (Amodei/Altman, SoftBank -12%)\n> - fresh Saudi/Hormuz strikes, Brent $107\n> - Sep 16 FOMC hike ~56-77%\n> - VIX backwardation 1.133\n> - NQ -1.58% leading down\n>\n> **market uncertainty: **elevated** | VIX 17.64 | policy-uncertainty index 725.88 (1d +451.17)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight ne"
+    },
+    {
+      "key": "sector_predict",
+      "title": "Per-sector predict (all 11)",
+      "date": "2026-09-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-14T04:44:07.989152-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-14",
+          "ok": true,
+          "reason": "",
+          "size": 4096,
+          "preview": "10/10 sector predicts ok: basic_materials, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials, real_estate"
+        }
+      ],
+      "preview": "10/10 sector predicts ok: basic_materials, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials, real_estate"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
