@@ -1,6 +1,6 @@
 # flatten_robust card — 2026-09-14
 
-_Generated 2026-09-14T09:44:11 — live `flatten_robust`._
+_Generated 2026-09-14T10:00:17 — live `flatten_robust`._
 
 **S=-11.00; hard-red: no new buys; holds and due 1d exits stay**
 
@@ -32,12 +32,10 @@ _Generated 2026-09-14T09:44:11 — live `flatten_robust`._
 
 | Clock | Ticker | Why |
 |---|---|---|
+| 16:00 ET | CVE | hard-red: no new buys |
 | 16:00 ET | DK | hard-red: no new buys |
-| 16:00 ET | TEL | hard-red: no new buys |
-| 16:00 ET | NVT | hard-red: no new buys |
 | 16:00 ET | BG | hard-red: no new buys |
-| 16:00 ET | OLED | hard-red: no new buys |
-| 16:00 ET | HYLN | hard-red: no new buys |
+| 16:00 ET | NVT | hard-red: no new buys |
 
 ## Would have bought — holdings disregarded
 
@@ -45,11 +43,9 @@ Sized from marked equity **$108,616.66** as if the book were flat. `io 3d_size (
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | DK | io_core | 237 | $76.10 | $18,035.70 | hard-red |
-| 16:00 ET | TEL | io_core | 85 | $211.96 | $18,016.60 | hard-red |
-| 16:00 ET | NVT | io_core | 111 | $162.38 | $18,024.18 | hard-red |
-| 16:00 ET | BG | io_core | 147 | $122.41 | $17,994.27 | hard-red |
-| 16:00 ET | OLED | io_core | 216 | $83.56 | $18,048.96 | hard-red |
-| 16:00 ET | HYLN | io_core | 4641 | $3.90 | $18,099.90 | hard-red |
+| 16:00 ET | CVE | io_core | 820 | $33.11 | $27,150.20 | hard-red |
+| 16:00 ET | DK | io_core | 356 | $76.10 | $27,091.60 | hard-red |
+| 16:00 ET | BG | io_core | 221 | $122.41 | $27,052.61 | hard-red |
+| 16:00 ET | NVT | io_core | 167 | $162.38 | $27,117.46 | hard-red |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
