@@ -1,11 +1,9 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T04:44:08.363066-04:00",
+  "generated_at": "2026-09-14T04:44:11.667174-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
-  "blockers": [
-    "MISSING Sector board JSON `01_daily/sectors/2026-09-14/_board.json` \u2014 missing"
-  ],
+  "ranker_ready": true,
+  "blockers": [],
   "counts": {
     "ok": 4,
     "partial": 4,
@@ -105,7 +103,7 @@
       "inputs_ready": true,
       "n_req_ok": 14,
       "n_req": 20,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 2,
       "files": [
         {
@@ -203,9 +201,9 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-09-14/_board.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 6967
         },
         {
           "key": "qc",
@@ -334,13 +332,18 @@
           "size": 12965
         }
       ],
-      "said": "general DOWN  -11.002",
+      "said": "general DOWN  -11.002 \u00b7 sectors 2 up / 8 down / 0 flat",
       "bullets": [
         "bad: AI-slowdown shock (Amodei/Altman, SoftBank -12%)",
         "bad: fresh Saudi/Hormuz strikes, Brent $107",
         "bad: Sep 16 FOMC hike ~56-77%",
         "good: FTSE +0.58% on energy bid",
-        "good: HY tight 2.70"
+        "good: HY tight 2.70",
+        "XLB DOWN -15.2",
+        "XLC missing",
+        "XLY DOWN -13.1",
+        "XLP UP +0.8",
+        "XLE UP +11.1"
       ]
     },
     {
@@ -461,7 +464,7 @@
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
       "status": "PARTIAL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 4,
       "n_opt_ok": 1,
@@ -481,9 +484,9 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-09-14/_board.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 6967
         },
         {
           "key": "in_actions",
@@ -667,7 +670,22 @@
       "score": "-11.002",
       "direction": "down"
     },
-    "sectors": {},
+    "sectors": {
+      "said": "2 up / 8 down / 0 flat",
+      "bullets": [
+        "XLB DOWN -15.2",
+        "XLC missing",
+        "XLY DOWN -13.1",
+        "XLP UP +0.8",
+        "XLE UP +11.1",
+        "XLF DOWN -3.3",
+        "XLV DOWN -8.8",
+        "XLI DOWN -12.0",
+        "XLRE DOWN -0.5",
+        "XLK DOWN -19.6",
+        "XLU DOWN -7.6"
+      ]
+    },
     "news": {},
     "weather": {
       "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
@@ -1156,6 +1174,24 @@
         }
       ],
       "preview": "10/10 sector predicts ok: basic_materials, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials, real_estate"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-09-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-14T04:44:11.303224-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-14/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 6967,
+          "preview": "keys: date, generated_at, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, sectors"
     }
   ],
   "href": {
