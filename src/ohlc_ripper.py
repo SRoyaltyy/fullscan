@@ -23,9 +23,14 @@ from . import candle_factor as cf
 from . import gainer_asof as ga
 
 LOOKBACK = 20
+INDICATOR_LOOKBACK = 60   # RSI(14) + MACD(12/26/9) need more than the hot-20
 HOT_TOP_N = 80
 CONT_TOP_N = 8
 CONT_RET5_MAX = 10.0
+RSI_OS = 30.0
+RSI_OB = 70.0
+FLOW_RVOL = 1.5
+FLOW_RET_MAX = 1.2       # |prior 1d %| — volume arrived, price barely moved
 
 
 def _tick(v) -> str:
@@ -41,7 +46,7 @@ def prior_bars(ticker: str, asof: str, n: int = LOOKBACK) -> list[dict]:
 
 
 def features(ticker: str, asof: str, n: int = LOOKBACK) -> dict:
-    bars = prior_bars(ticker, asof, n=n)
+    bars = prior_bars(ticker, asof, n=max(int(n or LOOKBACK), INDICATOR_LOOKBACK))
     feat = from_bars(bars)
     feat["ticker"] = _tick(ticker)
     feat["asof"] = str(asof or "")[:10]
@@ -78,8 +83,66 @@ def from_bars(bars: list[dict]) -> dict:
     z["compression"] = float(ranges[-1] / avg_rng) if avg_rng > 0 else 1.0
     z["last_green"] = bool(c[-1] > o[-1])
     z["last_red"] = bool(c[-1] < o[-1])
+    rng = float(h[-1] - low[-1])
+    z["close_loc"] = float((c[-1] - low[-1]) / rng) if rng > 1e-12 else 0.5
+    z["rsi"] = _rsi(c)
+    macd, sig, hist, xup, xdn = _macd(c)
+    z["macd"] = macd
+    z["macd_sig"] = sig
+    z["macd_hist"] = hist
+    z["macd_cross_up"] = xup
+    z["macd_cross_down"] = xdn
+    z["rsi_os"] = bool(z["rsi"] is not None and z["rsi"] <= RSI_OS)
+    z["rsi_ob"] = bool(z["rsi"] is not None and z["rsi"] >= RSI_OB)
+    z["macd_up"] = bool(hist is not None and hist > 0)
+    z["macd_down"] = bool(hist is not None and hist < 0)
+    z["flow_in"] = bool(
+        float(z.get("rvol") or 0) >= FLOW_RVOL
+        and abs(float(z.get("ret_1") or 99)) <= FLOW_RET_MAX
+    )
     z["hot_score"] = hot_score(z)
     return z
+
+
+def _rsi(closes: np.ndarray, period: int = 14) -> float | None:
+    """Wilder RSI on prior closes. None until we have period+1 prints."""
+    if len(closes) < period + 1:
+        return None
+    d = np.diff(closes.astype(float))
+    gains = np.where(d > 0, d, 0.0)
+    losses = np.where(d < 0, -d, 0.0)
+    ag = float(gains[:period].mean())
+    al = float(losses[:period].mean())
+    for i in range(period, len(d)):
+        ag = (ag * (period - 1) + float(gains[i])) / period
+        al = (al * (period - 1) + float(losses[i])) / period
+    if al <= 1e-12:
+        return 100.0 if ag > 0 else 50.0
+    return round(100.0 - 100.0 / (1.0 + ag / al), 2)
+
+
+def _ema(x: np.ndarray, span: int) -> np.ndarray:
+    a = 2.0 / (span + 1.0)
+    out = np.empty(len(x), dtype=float)
+    out[0] = float(x[0])
+    for i in range(1, len(x)):
+        out[i] = a * float(x[i]) + (1.0 - a) * out[i - 1]
+    return out
+
+
+def _macd(closes: np.ndarray, fast: int = 12, slow: int = 26,
+          signal: int = 9) -> tuple:
+    """(macd, signal, hist, cross_up, cross_down) on the last prior bar."""
+    need = slow + signal
+    if len(closes) < need:
+        return None, None, None, False, False
+    line = _ema(closes.astype(float), fast) - _ema(closes.astype(float), slow)
+    sig = _ema(line, signal)
+    hist = line - sig
+    xup = bool(len(hist) >= 2 and hist[-2] <= 0 and hist[-1] > 0)
+    xdn = bool(len(hist) >= 2 and hist[-2] >= 0 and hist[-1] < 0)
+    return (round(float(line[-1]), 4), round(float(sig[-1]), 4),
+            round(float(hist[-1]), 4), xup, xdn)
 
 
 def hot_score(feat: dict) -> float:

@@ -48,13 +48,13 @@ on:
         type: choice
         required: true
         default: auto
-        options: [auto, none, vol_g, news_g, white, white_any, coil_off, join_g, last_green, blue, news_present, join_present, ab_g]
+        options: [auto, none, vol_g, news_g, white, white_any, coil_off, join_g, last_green, blue, news_present, join_present, ab_g, rsi_os, rsi_ob, macd_up, macd_xup, flow_in]
       rank:
         description: "Ranker"
         type: choice
         required: true
         default: auto
-        options: [auto, none, list, hot_score, cond, w_hot_cond, w_hot_candle, ret_5, candle_score]
+        options: [auto, none, list, hot_score, cond, w_hot_cond, w_hot_candle, ret_5, candle_score, rsi, macd_hist]
       side:
         description: "Side"
         type: choice

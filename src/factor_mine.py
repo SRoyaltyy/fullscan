@@ -10,6 +10,8 @@ Every *input* is knowable at 09:30 ET on session D:
   * cameras / 🔵 / 🚨 from the morning packet + last completed tape
   * news tone from the morning news box, else the **prior** Finviz export
   * 20-bar OHLC and 8-bar candles with date < D
+  * RSI / MACD / flow-in from prior bars (60-bar lookback) plus prior-export
+    Finviz RSI(14) / Rel Volume / SMA% / institutional transactions
   * E/R/D via finviz_events.asof_snapshot (same-day R off; same-day E
     only if stamped ≤ 09:30)
 
@@ -82,6 +84,10 @@ INPUT_FIELDS = frozenset({
     "erd_earn_react", "erd_days_since_E", "erd_days_since_R",
     "erd_days_since_D", "erd_flag_E", "erd_flag_R",
     "e_pol", "e_label",
+    "rsi", "fv_rsi", "macd", "macd_sig", "macd_hist",
+    "macd_cross_up", "macd_cross_down", "rsi_os", "rsi_ob",
+    "macd_up", "macd_down", "flow_in", "close_loc",
+    "fv_rvol", "fv_sma20", "fv_sma50", "fv_inst",
 })
 _SCAN_CACHE: dict[tuple[str, str], dict | None] = {}
 _OHLC_CACHE: dict[tuple[str, str], dict] = {}
@@ -173,6 +179,140 @@ def _news_title(df, ticker: str) -> str:
     return str(hit.iloc[0].get("News Title") or "")
 
 
+FV_RSI = "Relative Strength Index (14)"
+FV_RVOL = "Relative Volume"
+FV_SMA20 = "20-Day Simple Moving Average"
+FV_SMA50 = "50-Day Simple Moving Average"
+FV_INST = "Institutional Transactions"
+
+
+def _fv_num(v):
+    """Parse a Finviz number or percent string. Same rules as ticker_lookback."""
+    return tl._num(v)
+
+
+def _finviz_snap(df, ticker: str) -> dict:
+    """Prior-export tape snapshot. Empty dict fields stay None — never same-day."""
+    empty = {
+        "fv_rsi": None, "fv_rvol": None, "fv_sma20": None,
+        "fv_sma50": None, "fv_inst": None,
+    }
+    if df is None or getattr(df, "empty", True):
+        return empty
+    cols = getattr(df, "columns", [])
+    if "Ticker" not in cols:
+        return empty
+    hit = df.loc[df["Ticker"].astype(str).str.upper() == _tick(ticker)]
+    if hit.empty:
+        return empty
+    rec = hit.iloc[0]
+
+    def col(name: str):
+        return rec[name] if name in rec.index else None
+
+    return {
+        "fv_rsi": _fv_num(col(FV_RSI)),
+        "fv_rvol": _fv_num(col(FV_RVOL)),
+        "fv_sma20": _fv_num(col(FV_SMA20)),
+        "fv_sma50": _fv_num(col(FV_SMA50)),
+        "fv_inst": _fv_num(col(FV_INST)),
+    }
+
+
+def apply_tape_fields(row: dict, oh: dict | None = None,
+                      fv: dict | None = None) -> dict:
+    """Stamp leak-free RSI / MACD / flow onto a panel row. Mutates ``row``.
+
+    RSI prefers the prior Finviz Elite print when present, else Wilder
+    RSI on bars with date < D. MACD is computed (not in the export).
+    flow_in = prior rel-vol high while |1-day %| is small.
+    """
+    oh = oh or {}
+    fv = fv or {}
+    fv_rsi = _finite(fv.get("fv_rsi"))
+    rsi = fv_rsi if fv_rsi is not None else _finite(oh.get("rsi"))
+    if rsi is None:
+        rsi = _finite(row.get("rsi"))
+    macd = _finite(oh.get("macd"))
+    if macd is None:
+        macd = _finite(row.get("macd"))
+    macd_sig = _finite(oh.get("macd_sig"))
+    if macd_sig is None:
+        macd_sig = _finite(row.get("macd_sig"))
+    macd_hist = _finite(oh.get("macd_hist"))
+    if macd_hist is None:
+        macd_hist = _finite(row.get("macd_hist"))
+    rvol = _finite(oh.get("rvol"))
+    if rvol is None:
+        rvol = _finite(row.get("ohlc_rvol"))
+    if rvol is None:
+        rvol = _finite(fv.get("fv_rvol"))
+    ret1 = _finite(oh.get("ret_1"))
+    if ret1 is None:
+        ret1 = _finite(row.get("ohlc_ret_1"))
+    xup = oh.get("macd_cross_up")
+    if xup is None:
+        xup = row.get("macd_cross_up")
+    xdn = oh.get("macd_cross_down")
+    if xdn is None:
+        xdn = row.get("macd_cross_down")
+    row["rsi"] = None if rsi is None else round(float(rsi), 2)
+    row["fv_rsi"] = None if fv_rsi is None else round(float(fv_rsi), 2)
+    row["macd"] = macd
+    row["macd_sig"] = macd_sig
+    row["macd_hist"] = macd_hist
+    row["macd_cross_up"] = bool(xup)
+    row["macd_cross_down"] = bool(xdn)
+    row["rsi_os"] = bool(rsi is not None and rsi <= ohlc.RSI_OS)
+    row["rsi_ob"] = bool(rsi is not None and rsi >= ohlc.RSI_OB)
+    row["macd_up"] = bool(macd_hist is not None and macd_hist > 0)
+    row["macd_down"] = bool(macd_hist is not None and macd_hist < 0)
+    row["flow_in"] = bool(
+        rvol is not None and ret1 is not None
+        and float(rvol) >= ohlc.FLOW_RVOL
+        and abs(float(ret1)) <= ohlc.FLOW_RET_MAX
+    )
+    row["close_loc"] = _finite(oh.get("close_loc"))
+    if row["close_loc"] is None:
+        row["close_loc"] = _finite(row.get("close_loc"))
+    row["fv_rvol"] = _finite(fv.get("fv_rvol"))
+    row["fv_sma20"] = _finite(fv.get("fv_sma20"))
+    row["fv_sma50"] = _finite(fv.get("fv_sma50"))
+    row["fv_inst"] = _finite(fv.get("fv_inst"))
+    return row
+
+
+def attach_tape_flow(panel: dict) -> dict:
+    """Fill RSI / MACD / flow on an already-built panel. Prior tape only."""
+    if not isinstance(panel, dict):
+        return panel
+    panel = rehydrate_panel(panel)
+    rows = panel.get("rows") or []
+    cal = list(panel.get("session_dates") or [])
+    fv_by_date: dict[str, object] = {}
+    for r in rows:
+        if ("rsi" in r and "flow_in" in r and "macd_hist" in r
+                and r.get("rsi_os") is not None):
+            continue
+        t = _tick(r.get("ticker"))
+        d = str(r.get("date") or "")[:10]
+        if not t or not d:
+            continue
+        oh = _cached_ohlc(t, d)
+        prior = (r.get("prior_date") or r.get("news_export_date")
+                 or feature_export_date(cal, d))
+        if prior and prior not in fv_by_date:
+            fv_by_date[prior] = ga.load_finviz(prior)
+        fv = _finviz_snap(fv_by_date.get(prior) if prior else None, t)
+        apply_tape_fields(r, oh, fv)
+        if r.get("ohlc_ret_1") is None and _finite(oh.get("ret_1")) is not None:
+            r["ohlc_ret_1"] = oh.get("ret_1")
+        if r.get("ohlc_rvol") is None and _finite(oh.get("rvol")) is not None:
+            r["ohlc_rvol"] = oh.get("rvol")
+    panel["_tape_filled"] = True
+    return panel
+
+
 def make_recipe(name: str, *, universe: str = "union", hold: int = 1,
                 side: str = "long", top_n: int = TOP_N_DEFAULT,
                 require: dict | None = None, forbid: dict | None = None,
@@ -236,6 +376,10 @@ def build_recipes() -> list[dict]:
         ("e_fresh", {"days_since_E_max": 1, "flag_E_min": 0}),
         ("r_up", {"days_since_R_max": 5, "flag_R": 1}),
         ("break10", {"break_10": True}),
+        ("rsi_os", {"rsi_os": True}),
+        ("macd_up", {"macd_up": True}),
+        ("macd_xup", {"macd_cross_up": True}),
+        ("flow_in", {"flow_in": True}),
     ]
     for gname, req in gates:
         for hold in (1, 3):
@@ -243,7 +387,8 @@ def build_recipes() -> list[dict]:
                 hold=hold, require=req, forbid={"alarm": True},
                 note=f"union ∩ {gname}, no 🚨")
 
-    for gname in ("vol_g", "coil_off", "last_green", "news_g", "white"):
+    for gname in ("vol_g", "coil_off", "last_green", "news_g", "white",
+                  "rsi_os", "flow_in"):
         req = next(r for n, r in gates if n == gname)
         add(name=f"union_{gname}_h5", universe="union", hold=5,
             require=req, forbid={"alarm": True},
@@ -336,6 +481,8 @@ def build_recipes() -> list[dict]:
         ("blue_coil", {"blue": True, "ret_5_max": 10.0}),
         ("join_vol_green", {"join": "good", "vol": "good", "last_green": True}),
         ("white_coil", {"zero_red": True, "ret_5_max": 10.0, "rvol_max": 2.2}),
+        ("rsi_os_macd", {"rsi_os": True, "macd_up": True}),
+        ("flow_in_white", {"flow_in": True, "zero_red": True}),
     ]
     for gname, req in combos:
         uni = "probable" if gname.startswith("probable") else "union"
@@ -356,7 +503,7 @@ def build_recipes() -> list[dict]:
         forbid={"alarm": True}, note="hot list ∩ not exploded")
 
     for rank in ("hot_score", "candle_score", "ret_5", "cond",
-                 "w_hot_cond", "w_hot_candle"):
+                 "w_hot_cond", "w_hot_candle", "rsi", "macd_hist"):
         add(name=f"union_{rank}_h1", universe="union", hold=1, rank=rank,
             forbid={"alarm": True}, note=f"rank by {rank}")
         add(name=f"union_{rank}_h3", universe="union", hold=3, rank=rank,
@@ -394,6 +541,8 @@ def build_recipes() -> list[dict]:
         ("short_r_down", {"flag_R": -1, "days_since_R_max": 5}, "downgrade ≤5d"),
         ("short_extended", {"ret_5_min": 15.0}, "ret_5>15"),
         ("short_last_red", {"last_red": True}, "last bar red"),
+        ("short_rsi_ob", {"rsi_ob": True}, "RSI overbought"),
+        ("short_macd_dn", {"macd_down": True}, "MACD histogram < 0"),
     ]
     for name, req, note in shorts:
         for hold in (1, 3):
@@ -509,6 +658,8 @@ _RANK_KID = {
     "cond": "how many morning cameras are green vs red",
     "w_hot_cond": "a mix of tape-heat and green cameras",
     "w_hot_candle": "a mix of tape-heat and prior candles",
+    "rsi": "how oversold the prior RSI is (lower first)",
+    "macd_hist": "how positive the prior MACD histogram is",
     "list": "the morning-board Score (100 minus list rank) — only after the pool is chosen",
     "score": "the morning-board Score (100 minus list rank) — only after the pool is chosen",
 }
@@ -578,6 +729,22 @@ def _gate_kid(key: str, val) -> str:
         return "the morning news packet OR the prior-export headline is red"
     if key == "cam_net_min":
         return f"camera net (+G −R) is at least {int(val)}"
+    if key == "rsi_os":
+        return "prior RSI is oversold (≤30) — Finviz prior export, else computed on prior bars"
+    if key == "rsi_ob":
+        return "prior RSI is overbought (≥70)"
+    if key == "macd_up":
+        return "prior MACD histogram is above zero (momentum still up)"
+    if key == "macd_down":
+        return "prior MACD histogram is below zero (momentum still down)"
+    if key == "macd_cross_up":
+        return "MACD histogram just crossed from ≤0 to >0 on the last finished bar"
+    if key == "flow_in":
+        return "money came in (prior rel vol ≥ 1.5) but price barely moved (|1-day| ≤ 1.2%)"
+    if key == "rsi_min":
+        return f"prior RSI is at least {float(val):g}"
+    if key == "rsi_max":
+        return f"prior RSI is at most {float(val):g} (not already stretched)"
     if key == "burst":
         return "a parabolic / high-intensity prior tape (ret5≥12, last green, and a 10-session break or rvol≥2)"
     if key == "ret_5_min":
@@ -936,6 +1103,26 @@ def matches(row: dict, rec: dict) -> bool:
     if req.get("yday_and_catalyst") and not (
             yday_up(row) and major_catalyst(row)):
         return False
+    if req.get("rsi_os") and not row.get("rsi_os"):
+        return False
+    if req.get("rsi_ob") and not row.get("rsi_ob"):
+        return False
+    if req.get("macd_up") and not row.get("macd_up"):
+        return False
+    if req.get("macd_down") and not row.get("macd_down"):
+        return False
+    if req.get("macd_cross_up") and not row.get("macd_cross_up"):
+        return False
+    if req.get("flow_in") and not row.get("flow_in"):
+        return False
+    if "rsi_min" in req:
+        v = _finite(row.get("rsi"))
+        if v is None or v < float(req["rsi_min"]):
+            return False
+    if "rsi_max" in req:
+        v = _finite(row.get("rsi"))
+        if v is None or v > float(req["rsi_max"]):
+            return False
     return True
 
 
@@ -1058,6 +1245,11 @@ def ensure_sim_fields(panel: dict, rec: dict | None = None) -> dict:
         if rows and "e_pol" not in rows[0]:
             from . import factor_mine_probe as fmp
             fmp.attach_erd_polarity(panel)
+    if not panel.get("_tape_filled"):
+        if rows and "rsi" not in rows[0]:
+            attach_tape_flow(panel)
+        else:
+            panel["_tape_filled"] = True
     return panel
 
 
@@ -1246,6 +1438,26 @@ def match_why(row: dict, rec: dict) -> dict:
     if req.get("yday_and_catalyst"):
         need(yday_up(row) and major_catalyst(row),
              _gate_kid("yday_and_catalyst", True))
+    if req.get("rsi_os"):
+        need(bool(row.get("rsi_os")), _gate_kid("rsi_os", True))
+    if req.get("rsi_ob"):
+        need(bool(row.get("rsi_ob")), _gate_kid("rsi_ob", True))
+    if req.get("macd_up"):
+        need(bool(row.get("macd_up")), _gate_kid("macd_up", True))
+    if req.get("macd_down"):
+        need(bool(row.get("macd_down")), _gate_kid("macd_down", True))
+    if req.get("macd_cross_up"):
+        need(bool(row.get("macd_cross_up")), _gate_kid("macd_cross_up", True))
+    if req.get("flow_in"):
+        need(bool(row.get("flow_in")), _gate_kid("flow_in", True))
+    if "rsi_min" in req:
+        v = _finite(row.get("rsi"))
+        need(v is not None and v >= float(req["rsi_min"]),
+             _gate_kid("rsi_min", req["rsi_min"]))
+    if "rsi_max" in req:
+        v = _finite(row.get("rsi"))
+        need(v is not None and v <= float(req["rsi_max"]),
+             _gate_kid("rsi_max", req["rsi_max"]))
     return {"ok": not failed, "failed": failed, "passed": passed}
 
 
@@ -1318,6 +1530,11 @@ def rank_key(row: dict, rec: dict) -> tuple:
         return (-(0.6 * hot + 0.4 * max(cond, 0)), row["ticker"])
     if how == "w_hot_candle":
         return (-(0.6 * hot + 0.4 * candle), row["ticker"])
+    if how == "rsi":
+        v = _finite(row.get("rsi"))
+        return (999.0 if v is None else v, row["ticker"])
+    if how == "macd_hist":
+        return (-(_finite(row.get("macd_hist")) or 0.0), row["ticker"])
     if how in ("list", "score", "src_rank"):
         src = row.get("src_rank")
         src_i = 99 if src is None else int(src)
@@ -1411,7 +1628,7 @@ def _attach_row(date: str, ticker: str, sources: list[str], src_rank: int,
     news = input_news_tone(news_box, prior_title)
     boxes["news"] = news
     bar = tl.session_bar(ticker, date)
-    return {
+    rec = {
         "date": date,
         "ticker": ticker,
         "sources": sources,
@@ -1447,6 +1664,8 @@ def _attach_row(date: str, ticker: str, sources: list[str], src_rank: int,
         "close": (bar or {}).get("close"),
         "prior_date": prior_date,
     }
+    apply_tape_fields(rec, oh, _finviz_snap(prior_df, ticker))
+    return rec
 
 
 def build_panel(from_date: str = START, to_date: str | None = None) -> dict:
@@ -1879,6 +2098,7 @@ def run(from_date: str = START, to_date: str | None = None,
             print(f"[factor-mine] price ensure skipped: {e}", flush=True)
     panel = (panel if panel is not None
              else load_or_build_panel(from_date, to_date, rebuild=rebuild_panel))
+    attach_tape_flow(panel)
     if write or persist_panel or rebuild_panel:
         try:
             from . import price_store as ps
@@ -2335,8 +2555,25 @@ def load_dash_payload() -> dict:
 
 
 def restamp_dash() -> dict:
-    """Rewrite Pages HTML from the current template; keep the last payload."""
+    """Rewrite Pages HTML from the current template; keep the last payload.
+
+    Rebuilds the sim pack from the panel so new look-list columns
+    (RSI / MACD / Flow) land on already-mined sleeves without a remine.
+    """
     payload = load_dash_payload()
+    panel = load_or_build_panel(
+        payload.get("from_date") or START,
+        payload.get("to_date"),
+        rebuild=False,
+    )
+    attach_tape_flow(panel)
+    from . import factor_mine_probe as fmp
+    from . import factor_mine_sim as fms
+    fmp.attach_erd_polarity(panel)
+    bought = _bought_tickers(payload.get("books"), payload.get("starts"))
+    payload["probe"] = fmp.slim_probe(fmp.build_probe(panel), bought)
+    payload["sim"] = fms.build_sim_pack(panel)
+    payload["generated_at"] = datetime.now(tl.ET).isoformat()
     dest = write_dash_html(payload)
     print(f"[factor-mine] restamp-dash → {dest} "
           f"to={payload.get('to_date')} recipes={payload.get('n_recipes')}",
@@ -2413,6 +2650,29 @@ NEWS_CAM_PIN = (
     "union_news_or_net4_h1",
     "union_news_g_cam91_n1_h1",
     "short_news_head_h3",
+)
+TAPE_FLOW_SPLICE = (
+    "union_rsi_os_h1",
+    "union_rsi_os_h3",
+    "union_macd_up_h1",
+    "union_macd_up_h3",
+    "union_macd_xup_h1",
+    "union_flow_in_h1",
+    "union_flow_in_h3",
+    "union_rsi_os_macd_h1",
+    "union_flow_in_white_h1",
+    "union_rsi_h1",
+    "union_macd_hist_h1",
+    "short_rsi_ob_h1",
+    "short_rsi_ob_h3",
+    "short_macd_dn_h3",
+)
+TAPE_FLOW_PIN = (
+    "union_rsi_os_h1",
+    "union_flow_in_h1",
+    "union_macd_xup_h1",
+    "union_rsi_os_macd_h1",
+    "short_rsi_ob_h3",
 )
 
 
@@ -2522,6 +2782,56 @@ def splice_news_cam(*, write: bool = True) -> dict:
     if write:
         write_outputs(payload, payload["stats"], books=None)
     print("[splice] news-cam books", flush=True)
+    print(f"{'name':32s} {'book%':>8} {'starts':>8} {'fills':>5}", flush=True)
+    for s in stats:
+        print(
+            f"{s['name']:32s} {_n(s.get('total_ret_pct')):>8} "
+            f"{s.get('start_green') or 0:>2}/{s.get('start_n') or 0:<4} "
+            f"{s.get('book_n_trades') or 0:>5}",
+            flush=True,
+        )
+    return payload
+
+
+def _persist_panel(panel: dict) -> None:
+    PANEL_PATH.parent.mkdir(parents=True, exist_ok=True)
+    slim = {k: v for k, v in panel.items() if k != "by_date"}
+    slim["by_date"] = None
+    PANEL_PATH.write_text(json.dumps(slim, indent=2), encoding="utf-8")
+
+
+def splice_tape_flow(*, write: bool = True) -> dict:
+    """Cash-book RSI / MACD / flow-in recipes onto the last board."""
+    from . import factor_mine_book as fmb
+    from . import factor_mine_sim as fms
+
+    panel = load_or_build_panel(START, None, rebuild=False)
+    attach_tape_flow(panel)
+    payload = load_dash_payload()
+    rec_by = {r["name"]: r for r in build_recipes()}
+    recipes = [rec_by[n] for n in TAPE_FLOW_SPLICE if n in rec_by]
+    tapes = _tapes(list(panel.get("session_dates") or []))
+    regime = fmb.load_regime()
+    fees = pt_fees()
+    stats: list[dict] = []
+    books: dict = {}
+    for rec in recipes:
+        print(f"[splice] {rec['name']}", flush=True)
+        st = score_recipe(panel, rec, tapes)
+        bk = fmb.simulate_book(panel, rec, fees=fees, regime=regime)
+        starts = fmb.replay_starts(panel, rec, fees=fees, regime=regime)
+        st = fmb.attach_book(st, bk, starts)
+        stats.append(st)
+        books[rec["name"]] = bk
+    merge_stats_into_payload(
+        payload, stats, books, recipes, pin=TAPE_FLOW_PIN)
+    payload["sim"] = fms.build_sim_pack(panel)
+    payload["generated_at"] = datetime.now(tl.ET).isoformat()
+    payload["n_recipes"] = len(payload["stats"])
+    if write:
+        _persist_panel(panel)
+        write_outputs(payload, payload["stats"], books=None)
+    print("[splice] tape-flow books", flush=True)
     print(f"{'name':32s} {'book%':>8} {'starts':>8} {'fills':>5}", flush=True)
     for s in stats:
         print(
@@ -2734,6 +3044,8 @@ def main(argv=None) -> int:
                     help="rewrite dashboard HTML from the current template; no remine")
     ap.add_argument("--splice-news-cam", action="store_true",
                     help="cash-book news packet / headline / camera recipes onto the last board")
+    ap.add_argument("--splice-tape-flow", action="store_true",
+                    help="cash-book RSI / MACD / flow-in recipes onto the last board")
     ap.add_argument("--sweep-white", action="store_true",
                     help="cash-book sweep: −0 red + (yday/catalyst) × hold × rank")
     ap.add_argument("--sweep-bracket", action="store_true",
@@ -2769,6 +3081,11 @@ def main(argv=None) -> int:
     if args.splice_news_cam:
         payload = splice_news_cam(write=args.write)
         print(f"[factor-mine] splice-news-cam recipes={payload.get('n_recipes')} "
+              f"to={payload.get('to_date')}")
+        return 0
+    if args.splice_tape_flow:
+        payload = splice_tape_flow(write=args.write)
+        print(f"[factor-mine] splice-tape-flow recipes={payload.get('n_recipes')} "
               f"to={payload.get('to_date')}")
         return 0
     if args.sweep_white:

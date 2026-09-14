@@ -194,6 +194,88 @@ def test_merge_stats_into_payload_replaces_and_pins() -> None:
     assert payload["books"]["union_news_pack_h1"]["n_trades"] == 1
 
 
+def test_matches_rsi_macd_flow_and_finviz_rsi() -> None:
+    import pandas as pd
+    df = pd.DataFrame([{
+        "Ticker": "AAA",
+        "Relative Strength Index (14)": 28.4,
+        "Relative Volume": 1.8,
+        "20-Day Simple Moving Average": "-3.10%",
+        "50-Day Simple Moving Average": "2.50%",
+        "Institutional Transactions": "1.15%",
+    }])
+    snap = fm._finviz_snap(df, "aaa")
+    assert snap["fv_rsi"] == 28.4
+    assert abs(snap["fv_sma20"] + 3.10) < 1e-9
+    assert abs(snap["fv_inst"] - 1.15) < 1e-9
+    row = {
+        "ticker": "AAA", "sources": ["union"], "boxes": {},
+        "ohlc_ret_1": 0.4, "ohlc_rvol": 2.0,
+    }
+    oh = {"rsi": 55.0, "macd": 0.1, "macd_sig": 0.05, "macd_hist": 0.05,
+          "macd_cross_up": False, "rvol": 2.0, "ret_1": 0.4}
+    fm.apply_tape_fields(row, oh, snap)
+    assert row["rsi"] == 28.4
+    assert row["rsi_os"] is True
+    assert row["fv_rsi"] == 28.4
+    assert row["flow_in"] is True
+    rec_os = fm.make_recipe("t", require={"rsi_os": True})
+    assert fm.matches(row, rec_os) is True
+    rec_ob = fm.make_recipe("t", require={"rsi_ob": True})
+    assert fm.matches(row, rec_ob) is False
+    rec_flow = fm.make_recipe("t", require={"flow_in": True})
+    assert fm.matches(row, rec_flow) is True
+    rec_xup = fm.make_recipe("t", require={"macd_cross_up": True})
+    assert fm.matches(row, rec_xup) is False
+    rec_up = fm.make_recipe("t", require={"macd_up": True})
+    assert fm.matches(row, rec_up) is True
+    rec_band = fm.make_recipe("t", require={"rsi_max": 30})
+    assert fm.matches(row, rec_band) is True
+    why = fm.match_why(row, rec_os)
+    assert why["ok"] is True
+    assert "oversold" in fm._gate_kid("rsi_os", True)
+    names = {r["name"] for r in fm.build_recipes()}
+    for n in ("union_rsi_os_h1", "union_macd_up_h1", "union_macd_xup_h1",
+              "union_flow_in_h1", "union_rsi_os_macd_h1",
+              "union_flow_in_white_h1", "short_rsi_ob_h3",
+              "union_rsi_h1", "union_macd_hist_h1"):
+        assert n in names, n
+    from src import factor_mine_sim as fms
+    assert "rsi" in fms.ROW_KEEP and "flow_in" in fms.ROW_KEEP
+    from src import factor_mine_book as fmb
+    assert "rsi_os" in fmb.GATES and "rsi" in fmb.RANKS
+    html = fm.TEMPLATE.read_text(encoding="utf-8")
+    assert ">RSI<" in html and ">MACD<" in html and ">Flow<" in html
+    js = fm.SIM_JS.read_text(encoding="utf-8")
+    assert "req.rsi_os" in js and "req.flow_in" in js
+
+
+def test_js_matches_tape_gates() -> None:
+    import subprocess
+    from pathlib import Path
+    Path("/tmp/fm_tape_run.mjs").write_text(
+        """
+        import { readFileSync, writeFileSync } from 'node:fs';
+        import vm from 'node:vm';
+        vm.runInThisContext(readFileSync('src/factor_mine_sim.js','utf8'));
+        const row = {ticker:'AAA', sources:['union'], boxes:{},
+          rsi:28, rsi_os:true, rsi_ob:false, macd_hist:0.2, macd_up:true,
+          macd_cross_up:false, flow_in:true};
+        const rec = {universe:'union', require:{rsi_os:true, flow_in:true}};
+        const recX = {universe:'union', require:{macd_cross_up:true}};
+        writeFileSync('/tmp/fm_tape_out.json', JSON.stringify({
+          os: globalThis.FMSim.matches(row, rec, {}),
+          xup: globalThis.FMSim.matches(row, recX, {}),
+        }));
+        """,
+        encoding="utf-8",
+    )
+    subprocess.check_call(["node", "/tmp/fm_tape_run.mjs"])
+    out = json.loads(Path("/tmp/fm_tape_out.json").read_text(encoding="utf-8"))
+    assert out["os"] is True
+    assert out["xup"] is False
+
+
 def test_matches_coil_and_short_alarm() -> None:
     row = {
         "ticker": "BBB",
