@@ -13,10 +13,10 @@ Last learn_cycle: **2026-09-14**. Promoted: 0. Retired: 10. Active lessons: 191.
 
 ## Accuracy by topic (graded window)
 
-- **general**: 40% (6/15)
-- **sector:Basic Materials**: 47% (7/15)
+- **general**: 47% (7/15)
+- **sector:Basic Materials**: 53% (8/15)
 - **sector:Communication Services**: 33% (5/15)
-- **sector:Consumer Cyclical**: 67% (10/15)
+- **sector:Consumer Cyclical**: 60% (9/15)
 - **sector:Consumer Defensive**: 53% (8/15)
 - **sector:Energy**: 40% (6/15)
 - **sector:Financial**: 40% (6/15)
@@ -29,22 +29,22 @@ Last learn_cycle: **2026-09-14**. Promoted: 0. Retired: 10. Active lessons: 191.
 ## Numeric factor weights in force (engine_policy.json — applied by code, not by you)
 
 General (B0–B7 LLM components; multiplier applied by compute_scores):
-- B0_ASIA: n=13 sign-hit=0.39 → ×0.0
+- B0_ASIA: n=14 sign-hit=0.43 → ×0.0
 - B0_EUROPE: n=8 sign-hit=1.00 → ×1.25
-- B1_CATALYSTS: n=21 sign-hit=0.76 → ×1.25
-- B2_BONDS: n=24 sign-hit=0.33 → ×0.0
-- B3_FEDPATH: n=23 sign-hit=0.48 → ×0.5
-- B4_VIX: n=8 sign-hit=0.50 → ×0.5
+- B1_CATALYSTS: n=22 sign-hit=0.77 → ×1.25
+- B2_BONDS: n=25 sign-hit=0.36 → ×0.0
+- B3_FEDPATH: n=24 sign-hit=0.50 → ×0.5
+- B4_VIX: n=9 sign-hit=0.56 → ×1.0
 - B5_SENTIMENT: n=21 sign-hit=0.33 → ×0.0
-- B6_FUTURES: n=15 sign-hit=0.73 → ×1.25
-- B7_OIL_DOLLAR: n=21 sign-hit=0.67 → ×1.25
+- B6_FUTURES: n=16 sign-hit=0.75 → ×1.25
+- B7_OIL_DOLLAR: n=22 sign-hit=0.68 → ×1.25
 Sectors (pooled S0–S4; per-sector overrides in engine_policy.json):
-- S0_SHARED_MACRO: n=120 sign-hit=0.61 → ×1.0
-- S1_SECTOR_FACTORS: n=148 sign-hit=0.55 → ×0.5
-- S2_BREADTH: n=121 sign-hit=0.59 → ×1.0
-- S3_FLOWS_POSITIONING: n=89 sign-hit=0.48 → ×0.5
+- S0_SHARED_MACRO: n=122 sign-hit=0.61 → ×1.0
+- S1_SECTOR_FACTORS: n=150 sign-hit=0.55 → ×0.5
+- S2_BREADTH: n=122 sign-hit=0.59 → ×1.0
+- S3_FLOWS_POSITIONING: n=90 sign-hit=0.49 → ×0.5
 - S4_ETF_TAPE: n=126 sign-hit=0.63 → ×1.0
-Last change: Communication Services.S1_SECTOR_FACTORS: 1.0 -> 0.5 (n=148, hit=0.547); Consumer Defensive.S2_BREADTH: 1.0 -> 1.25 (n=9, hit=0.667); Consumer Defensive.S3_FLOWS_POSITIONING: 0.5 -> 1.0 (n=8, hit=0.625); Financial.S0_SHARED_MACRO: 0.5 -> 1.0 (n=14, hit=0.571); Technology.S4_ETF_TAPE: 1.0 -> 1.25 (n=9, hit=0.667); Utilities.S0_SHARED_MACRO: 1.0 -> 0.0 (n=8, hit=0.375)
+Last change: general.B4_VIX: 0.5 -> 1.0 (n=9, hit=0.556); Basic Materials.S3_FLOWS_POSITIONING: 1.0 -> 1.25 (n=9, hit=0.667)
 
 ## Active adjustments (newest promoted lessons, truncated)
 
@@ -112,28 +112,28 @@ _(+176 older active lessons not excerpted; each predict receives only its own to
 
 ## Per-scope DO-INSTEAD
 
-### scope `general` — wins=6 losses=9
-- **win 2026-09-09:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+### scope `general` — wins=7 losses=8
 - **win 2026-09-10:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 - **loss 2026-09-11:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **win 2026-09-14:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 
 ### scope `news` — wins=0 losses=1
 - **loss news:** [news] Only emit actions with |net| above a higher floor.
 
-### scope `sector_basic_materials` — wins=7 losses=8
-- **win 2026-09-09:** [sector_basic_materials] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+### scope `sector_basic_materials` — wins=8 losses=7
 - **win 2026-09-10:** [sector_basic_materials] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 - **loss 2026-09-11:** [sector_basic_materials] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **win 2026-09-14:** [sector_basic_materials] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 
 ### scope `sector_communication_services` — wins=5 losses=10
 - **loss 2026-09-09:** [sector_communication_services] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-09-10:** [sector_communication_services] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **win 2026-09-11:** [sector_communication_services] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 
-### scope `sector_consumer_cyclical` — wins=10 losses=5
-- **win 2026-09-09:** [sector_consumer_cyclical] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+### scope `sector_consumer_cyclical` — wins=9 losses=6
 - **win 2026-09-10:** [sector_consumer_cyclical] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 - **loss 2026-09-11:** [sector_consumer_cyclical] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **loss 2026-09-14:** [sector_consumer_cyclical] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 
 ### scope `sector_consumer_defensive` — wins=8 losses=7
 - **loss 2026-09-10:** [sector_consumer_defensive] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.

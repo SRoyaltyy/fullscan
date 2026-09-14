@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T17:42:55.591637-04:00",
+  "generated_at": "2026-09-14T18:09:23.012543-04:00",
   "sectors": [
     {
       "sector": "Basic Materials",
@@ -11,12 +11,12 @@
       "confidence_score": 0.85,
       "multiplier": 0.9,
       "divergence_flagged": false,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_pct_change": -0.9028441169470103,
+      "actual_direction": "down",
+      "direction_hit": true,
+      "magnitude_hit": false,
       "has_predict_md": true,
-      "has_outcome_md": false,
+      "has_outcome_md": true,
       "components": {
         "S0_SHARED_MACRO": -1.0,
         "S1_SECTOR_FACTORS": -2.0,
@@ -51,12 +51,12 @@
       "confidence_score": 0.85,
       "multiplier": 0.9,
       "divergence_flagged": false,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_pct_change": -0.09738014451408095,
+      "actual_direction": "flat",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "has_predict_md": true,
-      "has_outcome_md": false,
+      "has_outcome_md": true,
       "components": {
         "S0_SHARED_MACRO": -2.0,
         "S1_SECTOR_FACTORS": -1.0,

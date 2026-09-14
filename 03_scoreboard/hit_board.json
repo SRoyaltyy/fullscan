@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-14T17:43:24.246865-04:00",
+  "generated_at": "2026-09-14T18:09:47.402687-04:00",
   "dates": [
     "2026-07-31",
     "2026-08-02",
@@ -44,13 +44,13 @@
   ],
   "general": {
     "overall": {
-      "n_graded": 26,
+      "n_graded": 27,
       "n_predicts": 30,
-      "dir_hits": 14,
-      "dir_hit_pct": 53.84615384615385,
-      "mag_hits": 12,
-      "mag_n": 26,
-      "mag_hit_pct": 46.15384615384615,
+      "dir_hits": 15,
+      "dir_hit_pct": 55.55555555555556,
+      "mag_hits": 13,
+      "mag_n": 27,
+      "mag_hit_pct": 48.148148148148145,
       "n_pipeline_blank": 10,
       "pipeline_blank_dates": [
         "2026-08-02",
@@ -72,13 +72,13 @@
       ]
     },
     "legacy_all_graded": {
-      "n_graded": 29,
+      "n_graded": 30,
       "n_predicts": 30,
-      "dir_hits": 14,
-      "dir_hit_pct": 48.275862068965516,
-      "mag_hits": 12,
-      "mag_n": 29,
-      "mag_hit_pct": 41.37931034482759,
+      "dir_hits": 15,
+      "dir_hit_pct": 50.0,
+      "mag_hits": 13,
+      "mag_n": 30,
+      "mag_hit_pct": 43.333333333333336,
       "n_pipeline_blank": 10,
       "pipeline_blank_dates": [
         "2026-08-02",
@@ -535,22 +535,22 @@
         "predicted_direction": "down",
         "predicted_magnitude_band": "mild",
         "total_score": -11.002,
-        "actual_pct_change": null,
-        "actual_direction": null,
-        "direction_hit": null,
-        "magnitude_hit": null
+        "actual_pct_change": -0.48,
+        "actual_direction": "down",
+        "direction_hit": true,
+        "magnitude_hit": true
       }
     ]
   },
   "sectors": {
     "overall": {
-      "n_graded": 191,
+      "n_graded": 193,
       "n_predicts": 245,
-      "dir_hits": 90,
-      "dir_hit_pct": 47.12041884816754,
+      "dir_hits": 91,
+      "dir_hit_pct": 47.15025906735751,
       "mag_hits": 61,
-      "mag_n": 191,
-      "mag_hit_pct": 31.93717277486911,
+      "mag_n": 193,
+      "mag_hit_pct": 31.60621761658031,
       "n_pipeline_blank": 10,
       "pipeline_blank_dates": [
         "2026-08-25"
@@ -1152,13 +1152,13 @@
       },
       {
         "date": "2026-09-14",
-        "n_graded": 8,
+        "n_graded": 10,
         "n_predicts": 10,
-        "dir_hits": 6,
-        "dir_hit_pct": 75.0,
+        "dir_hits": 7,
+        "dir_hit_pct": 70.0,
         "mag_hits": 4,
-        "mag_n": 8,
-        "mag_hit_pct": 50.0,
+        "mag_n": 10,
+        "mag_hit_pct": 40.0,
         "n_pipeline_blank": 0,
         "pipeline_blank_dates": [],
         "n_auto_miss_no_predict": 0,
@@ -1170,13 +1170,13 @@
       {
         "sector": "Basic Materials",
         "etf": "XLB",
-        "n_graded": 17,
+        "n_graded": 18,
         "n_predicts": 23,
-        "dir_hits": 9,
-        "dir_hit_pct": 52.94117647058823,
+        "dir_hits": 10,
+        "dir_hit_pct": 55.55555555555556,
         "mag_hits": 8,
-        "mag_n": 17,
-        "mag_hit_pct": 47.05882352941177,
+        "mag_n": 18,
+        "mag_hit_pct": 44.44444444444444,
         "n_pipeline_blank": 1,
         "pipeline_blank_dates": [
           "2026-08-25"
@@ -1206,13 +1206,13 @@
       {
         "sector": "Consumer Cyclical",
         "etf": "XLY",
-        "n_graded": 17,
+        "n_graded": 18,
         "n_predicts": 23,
         "dir_hits": 11,
-        "dir_hit_pct": 64.70588235294117,
+        "dir_hit_pct": 61.111111111111114,
         "mag_hits": 4,
-        "mag_n": 17,
-        "mag_hit_pct": 23.529411764705884,
+        "mag_n": 18,
+        "mag_hit_pct": 22.22222222222222,
         "n_pipeline_blank": 1,
         "pipeline_blank_dates": [
           "2026-08-25"
@@ -4025,8 +4025,8 @@
       "2026-09-14": {
         "Basic Materials": {
           "dir": "down",
-          "hit": null,
-          "pct": null,
+          "hit": true,
+          "pct": -0.9028441169470103,
           "has_predict": true
         },
         "Communication Services": {
@@ -4037,8 +4037,8 @@
         },
         "Consumer Cyclical": {
           "dir": "down",
-          "hit": null,
-          "pct": null,
+          "hit": false,
+          "pct": -0.09738014451408095,
           "has_predict": true
         },
         "Consumer Defensive": {

@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-14T17:43:24-04:00",
+ "generated": "2026-09-14T18:09:47-04:00",
  "replay_reference": {
   "general": {
    "n": 28,
@@ -16,16 +16,16 @@
  },
  "scopes": {
   "general": {
-   "n_runs": 26,
-   "n_sessions": 26,
+   "n_runs": 27,
+   "n_sessions": 27,
    "all": {
-    "n": 26,
-    "dir": 0.538,
-    "mag": 0.462,
-    "always_up": 0.462,
-    "always_down": 0.5,
-    "same_as_yesterday": 0.48,
-    "edge_vs_best_baseline": 0.038
+    "n": 27,
+    "dir": 0.556,
+    "mag": 0.481,
+    "always_up": 0.444,
+    "always_down": 0.519,
+    "same_as_yesterday": 0.462,
+    "edge_vs_best_baseline": 0.037
    },
    "legacy_era": {
     "n": 26,
@@ -37,8 +37,24 @@
     "edge_vs_best_baseline": 0.038
    },
    "since_v2": {
-    "live": false,
-    "n": 0
+    "live": true,
+    "since": "2026-09-14",
+    "n": 1,
+    "dir": 1.0,
+    "mag": 1.0,
+    "always_up": 0.0,
+    "always_down": 1.0,
+    "same_as_yesterday": 0.0,
+    "edge_vs_best_baseline": 0.0,
+    "cumulative": [
+     {
+      "date": "2026-09-14",
+      "topic": "general",
+      "n": 1,
+      "cum_dir": 1.0,
+      "cum_mag": 1.0
+     }
+    ]
    },
    "curve": [
     {
@@ -638,22 +654,45 @@
       "same_as_yesterday": 0.45
      },
      "edge_20": -0.1
+    },
+    {
+     "date": "2026-09-14",
+     "n": 1,
+     "engine": "v2",
+     "session_dir": 1.0,
+     "session_mag": 1.0,
+     "dir_10": 0.5,
+     "mag_10": 0.6,
+     "base_10": {
+      "always_up": 0.3,
+      "always_down": 0.7,
+      "same_as_yesterday": 0.5
+     },
+     "edge_10": -0.2,
+     "dir_20": 0.5,
+     "mag_20": 0.45,
+     "base_20": {
+      "always_up": 0.4,
+      "always_down": 0.6,
+      "same_as_yesterday": 0.45
+     },
+     "edge_20": -0.1
     }
    ],
    "by_sector": {},
-   "verdict": "slipping; not beating best baseline by -20% (last 10 sessions)"
+   "verdict": "steady; not beating best baseline by -20% (last 10 sessions)"
   },
   "sectors": {
-   "n_runs": 191,
+   "n_runs": 193,
    "n_sessions": 18,
    "all": {
-    "n": 191,
-    "dir": 0.471,
-    "mag": 0.319,
-    "always_up": 0.419,
-    "always_down": 0.524,
-    "same_as_yesterday": 0.456,
-    "edge_vs_best_baseline": -0.053
+    "n": 193,
+    "dir": 0.472,
+    "mag": 0.316,
+    "always_up": 0.415,
+    "always_down": 0.523,
+    "same_as_yesterday": 0.451,
+    "edge_vs_best_baseline": -0.051
    },
    "legacy_era": {
     "n": 183,
@@ -667,69 +706,83 @@
    "since_v2": {
     "live": true,
     "since": "2026-09-14",
-    "n": 8,
-    "dir": 0.75,
-    "mag": 0.5,
-    "always_up": 0.25,
-    "always_down": 0.75,
-    "same_as_yesterday": 0.25,
+    "n": 10,
+    "dir": 0.7,
+    "mag": 0.4,
+    "always_up": 0.2,
+    "always_down": 0.7,
+    "same_as_yesterday": 0.2,
     "edge_vs_best_baseline": 0.0,
     "cumulative": [
      {
       "date": "2026-09-14",
-      "topic": "sector:Consumer Defensive",
+      "topic": "sector:Basic Materials",
       "n": 1,
       "cum_dir": 1.0,
       "cum_mag": 0.0
      },
      {
       "date": "2026-09-14",
-      "topic": "sector:Energy",
+      "topic": "sector:Consumer Cyclical",
       "n": 2,
       "cum_dir": 0.5,
-      "cum_mag": 0.5
+      "cum_mag": 0.0
+     },
+     {
+      "date": "2026-09-14",
+      "topic": "sector:Consumer Defensive",
+      "n": 3,
+      "cum_dir": 0.667,
+      "cum_mag": 0.0
+     },
+     {
+      "date": "2026-09-14",
+      "topic": "sector:Energy",
+      "n": 4,
+      "cum_dir": 0.5,
+      "cum_mag": 0.25
      },
      {
       "date": "2026-09-14",
       "topic": "sector:Financial",
-      "n": 3,
-      "cum_dir": 0.667,
-      "cum_mag": 0.667
+      "n": 5,
+      "cum_dir": 0.6,
+      "cum_mag": 0.4
      },
      {
       "date": "2026-09-14",
       "topic": "sector:Healthcare",
-      "n": 4,
+      "n": 6,
       "cum_dir": 0.5,
-      "cum_mag": 0.5
+      "cum_mag": 0.333
      },
      {
       "date": "2026-09-14",
       "topic": "sector:Industrials",
-      "n": 5,
-      "cum_dir": 0.6,
-      "cum_mag": 0.6
+      "n": 7,
+      "cum_dir": 0.571,
+      "cum_mag": 0.429
      },
      {
       "date": "2026-09-14",
       "topic": "sector:Real Estate",
-      "n": 6,
-      "cum_dir": 0.667,
-      "cum_mag": 0.667
+      "n": 8,
+      "cum_dir": 0.625,
+      "cum_mag": 0.5
      },
      {
       "date": "2026-09-14",
       "topic": "sector:Technology",
-      "n": 7,
-      "cum_dir": 0.714,
-      "cum_mag": 0.571
+      "n": 9,
+      "cum_dir": 0.667,
+      "cum_mag": 0.444
      },
      {
       "date": "2026-09-14",
       "topic": "sector:Utilities",
-      "n": 8,
-      "cum_dir": 0.75,
-      "cum_mag": 0.5
+      "n": 10,
+      "cum_dir": 0.7,
+      "cum_mag": 0.4
      }
     ]
    },
@@ -1127,37 +1180,37 @@
     },
     {
      "date": "2026-09-14",
-     "n": 8,
+     "n": 10,
      "engine": "v2",
-     "session_dir": 0.75,
-     "session_mag": 0.5,
-     "dir_10": 0.408,
-     "mag_10": 0.35,
+     "session_dir": 0.7,
+     "session_mag": 0.4,
+     "dir_10": 0.41,
+     "mag_10": 0.343,
      "base_10": {
-      "always_up": 0.35,
-      "always_down": 0.602,
-      "same_as_yesterday": 0.447
+      "always_up": 0.343,
+      "always_down": 0.6,
+      "same_as_yesterday": 0.438
      },
-     "edge_10": -0.194,
-     "dir_20": 0.471,
-     "mag_20": 0.319,
+     "edge_10": -0.19,
+     "dir_20": 0.472,
+     "mag_20": 0.316,
      "base_20": {
-      "always_up": 0.419,
-      "always_down": 0.524,
-      "same_as_yesterday": 0.456
+      "always_up": 0.415,
+      "always_down": 0.523,
+      "same_as_yesterday": 0.451
      },
-     "edge_20": -0.053
+     "edge_20": -0.051
     }
    ],
    "by_sector": {
     "Basic Materials": {
-     "n": 17,
-     "dir": 0.529,
-     "mag": 0.471,
-     "always_up": 0.353,
-     "always_down": 0.588,
-     "same_as_yesterday": 0.5,
-     "edge_vs_best_baseline": -0.059
+     "n": 18,
+     "dir": 0.556,
+     "mag": 0.444,
+     "always_up": 0.333,
+     "always_down": 0.611,
+     "same_as_yesterday": 0.471,
+     "edge_vs_best_baseline": -0.055
     },
     "Communication Services": {
      "n": 17,
@@ -1169,13 +1222,13 @@
      "edge_vs_best_baseline": -0.235
     },
     "Consumer Cyclical": {
-     "n": 17,
-     "dir": 0.647,
-     "mag": 0.235,
-     "always_up": 0.294,
-     "always_down": 0.706,
-     "same_as_yesterday": 0.562,
-     "edge_vs_best_baseline": -0.059
+     "n": 18,
+     "dir": 0.611,
+     "mag": 0.222,
+     "always_up": 0.278,
+     "always_down": 0.667,
+     "same_as_yesterday": 0.529,
+     "edge_vs_best_baseline": -0.056
     },
     "Consumer Defensive": {
      "n": 18,

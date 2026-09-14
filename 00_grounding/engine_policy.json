@@ -1,8 +1,8 @@
 {
   "general": {
     "B0_ASIA": {
-      "n": 13,
-      "hit": 0.385,
+      "n": 14,
+      "hit": 0.429,
       "mult": 0.0
     },
     "B0_EUROPE": {
@@ -11,24 +11,24 @@
       "mult": 1.25
     },
     "B1_CATALYSTS": {
-      "n": 21,
-      "hit": 0.762,
+      "n": 22,
+      "hit": 0.773,
       "mult": 1.25
     },
     "B2_BONDS": {
-      "n": 24,
-      "hit": 0.333,
+      "n": 25,
+      "hit": 0.36,
       "mult": 0.0
     },
     "B3_FEDPATH": {
-      "n": 23,
-      "hit": 0.478,
+      "n": 24,
+      "hit": 0.5,
       "mult": 0.5
     },
     "B4_VIX": {
-      "n": 8,
-      "hit": 0.5,
-      "mult": 0.5
+      "n": 9,
+      "hit": 0.556,
+      "mult": 1.0
     },
     "B5_SENTIMENT": {
       "n": 21,
@@ -36,35 +36,35 @@
       "mult": 0.0
     },
     "B6_FUTURES": {
-      "n": 15,
-      "hit": 0.733,
+      "n": 16,
+      "hit": 0.75,
       "mult": 1.25
     },
     "B7_OIL_DOLLAR": {
-      "n": 21,
-      "hit": 0.667,
+      "n": 22,
+      "hit": 0.682,
       "mult": 1.25
     }
   },
   "sector_pooled": {
     "S0_SHARED_MACRO": {
-      "n": 120,
-      "hit": 0.608,
+      "n": 122,
+      "hit": 0.607,
       "mult": 1.0
     },
     "S1_SECTOR_FACTORS": {
-      "n": 148,
+      "n": 150,
       "hit": 0.547,
       "mult": 0.5
     },
     "S2_BREADTH": {
-      "n": 121,
-      "hit": 0.587,
+      "n": 122,
+      "hit": 0.59,
       "mult": 1.0
     },
     "S3_FLOWS_POSITIONING": {
-      "n": 89,
-      "hit": 0.483,
+      "n": 90,
+      "hit": 0.489,
       "mult": 0.5
     },
     "S4_ETF_TAPE": {
@@ -76,24 +76,24 @@
   "sectors": {
     "Basic Materials": {
       "S0_SHARED_MACRO": {
-        "n": 12,
-        "hit": 0.75,
+        "n": 13,
+        "hit": 0.769,
         "mult": 1.25
       },
       "S1_SECTOR_FACTORS": {
-        "n": 14,
-        "hit": 0.5,
+        "n": 15,
+        "hit": 0.533,
         "mult": 0.5
       },
       "S2_BREADTH": {
-        "n": 9,
-        "hit": 0.556,
+        "n": 10,
+        "hit": 0.6,
         "mult": 1.0
       },
       "S3_FLOWS_POSITIONING": {
-        "n": 8,
-        "hit": 0.625,
-        "mult": 1.0
+        "n": 9,
+        "hit": 0.667,
+        "mult": 1.25
       },
       "S4_ETF_TAPE": {
         "n": 13,
@@ -108,7 +108,7 @@
         "mult": 0.5
       },
       "S1_SECTOR_FACTORS": {
-        "n": 148,
+        "n": 150,
         "hit": 0.547,
         "mult": 0.5,
         "pooled": true
@@ -119,8 +119,8 @@
         "mult": 0.5
       },
       "S3_FLOWS_POSITIONING": {
-        "n": 89,
-        "hit": 0.483,
+        "n": 90,
+        "hit": 0.489,
         "mult": 0.5,
         "pooled": true
       },
@@ -132,13 +132,13 @@
     },
     "Consumer Cyclical": {
       "S0_SHARED_MACRO": {
-        "n": 13,
-        "hit": 0.769,
+        "n": 14,
+        "hit": 0.714,
         "mult": 1.25
       },
       "S1_SECTOR_FACTORS": {
-        "n": 15,
-        "hit": 0.6,
+        "n": 16,
+        "hit": 0.562,
         "mult": 1.0
       },
       "S2_BREADTH": {
@@ -159,8 +159,8 @@
     },
     "Consumer Defensive": {
       "S0_SHARED_MACRO": {
-        "n": 120,
-        "hit": 0.608,
+        "n": 122,
+        "hit": 0.607,
         "mult": 1.0,
         "pooled": true
       },
@@ -283,8 +283,8 @@
         "mult": 0.0
       },
       "S3_FLOWS_POSITIONING": {
-        "n": 89,
-        "hit": 0.483,
+        "n": 90,
+        "hit": 0.489,
         "mult": 0.5,
         "pooled": true
       },
@@ -311,8 +311,8 @@
         "mult": 1.0
       },
       "S3_FLOWS_POSITIONING": {
-        "n": 89,
-        "hit": 0.483,
+        "n": 90,
+        "hit": 0.489,
         "mult": 0.5,
         "pooled": true
       },
@@ -366,8 +366,8 @@
         "mult": 1.0
       },
       "S3_FLOWS_POSITIONING": {
-        "n": 89,
-        "hit": 0.483,
+        "n": 90,
+        "hit": 0.489,
         "mult": 0.5,
         "pooled": true
       },
@@ -378,8 +378,8 @@
       }
     }
   },
-  "version": 2,
-  "updated": "2026-09-14T17:43:24-04:00",
+  "version": 3,
+  "updated": "2026-09-14T18:09:47-04:00",
   "rules": {
     "min_n": 8,
     "mute_below": 0.45,
@@ -447,6 +447,13 @@
         "Utilities.S0_SHARED_MACRO: 1.0 -> 0.0 (n=8, hit=0.375)",
         "Utilities.S1_SECTOR_FACTORS: 1.0 -> 1.25 (n=12, hit=0.667)",
         "Utilities.S4_ETF_TAPE: 1.0 -> 1.25 (n=12, hit=0.667)"
+      ]
+    },
+    {
+      "at": "2026-09-14T18:09:47-04:00",
+      "changes": [
+        "general.B4_VIX: 0.5 -> 1.0 (n=9, hit=0.556)",
+        "Basic Materials.S3_FLOWS_POSITIONING: 1.0 -> 1.25 (n=9, hit=0.667)"
       ]
     }
   ]

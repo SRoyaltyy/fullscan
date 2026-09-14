@@ -1,6 +1,6 @@
 # HIT Board — general + sectors (all dates)
 
-Generated: **2026-09-14T17:43:24.246865-04:00**
+Generated: **2026-09-14T18:09:47.402687-04:00**
 
 Source: `03_scoreboard/scoreboard.json`.
 
@@ -10,14 +10,14 @@ Source: `03_scoreboard/scoreboard.json`.
 
 | Book | Direction HIT% | hits / graded | Mag HIT% | n mag |
 |------|----------------|---------------|----------|-------|
-| **General (SPX-style)** | **53.8%** | 14/26 | 46.2% | 26 |
-| **All sector calls** | **47.1%** | 90/191 | 31.9% | 191 |
+| **General (SPX-style)** | **55.6%** | 15/27 | 48.1% | 27 |
+| **All sector calls** | **47.2%** | 91/193 | 31.6% | 193 |
 
 ### Pipeline blanks (general) — excluded from HIT%
 
 - No `predicted_direction`: **2026-08-02, 2026-08-08, 2026-08-09, 2026-08-15, 2026-08-16, 2026-08-22, 2026-08-25, 2026-08-27, 2026-08-29, 2026-08-30** (n=10)
 - Of those, legacy scoreboard still marked direction_hit=false: **2026-08-02, 2026-08-08, 2026-08-09** — ops failure, not model error
-- If blanks were counted as MISS (old method): **48.3%** (14/29)
+- If blanks were counted as MISS (old method): **50.0%** (15/30)
 
 ## General market — by date
 
@@ -62,7 +62,7 @@ Source: `03_scoreboard/scoreboard.json`.
 | 2026-09-09 | down | mild | -13.95 | -0.48 | down | HIT | HIT |
 | 2026-09-10 | down | severe | -13.275 | -0.58 | down | HIT | MISS |
 | 2026-09-11 | flat | flat | 0.5 | 0.86 | up | MISS | MISS |
-| 2026-09-14 | down | mild | -11.002 | — | — | — | — |
+| 2026-09-14 | down | mild | -11.002 | -0.48 | down | HIT | HIT |
 
 ## Sectors — HIT% by date (model calls only)
 
@@ -107,15 +107,15 @@ Source: `03_scoreboard/scoreboard.json`.
 | 2026-09-09 | 11 | **72.7%** | 8/11 | 36.4% |
 | 2026-09-10 | 11 | **63.6%** | 7/11 | 72.7% |
 | 2026-09-11 | 11 | **45.5%** | 5/11 | 18.2% |
-| 2026-09-14 | 10 | **75.0%** | 6/8 | 50.0% |
+| 2026-09-14 | 10 | **70.0%** | 7/10 | 40.0% |
 
 ## Sectors — HIT% by sector (across dates)
 
 | Sector | ETF | Dir HIT% | hits/graded | Mag HIT% |
 |--------|-----|----------|-------------|----------|
-| Basic Materials | XLB | **52.9%** | 9/17 | 47.1% |
+| Basic Materials | XLB | **55.6%** | 10/18 | 44.4% |
 | Communication Services | XLC | **29.4%** | 5/17 | 23.5% |
-| Consumer Cyclical | XLY | **64.7%** | 11/17 | 23.5% |
+| Consumer Cyclical | XLY | **61.1%** | 11/18 | 22.2% |
 | Consumer Defensive | XLP | **50.0%** | 9/18 | 38.9% |
 | Energy | XLE | **44.4%** | 8/18 | 38.9% |
 | Financial | XLF | **44.4%** | 8/18 | 27.8% |
@@ -131,9 +131,9 @@ HIT / MISS / NO_PRED / — . Actual % when graded.
 
 | Sector | 2026-08-31 | 2026-09-01 | 2026-09-02 | 2026-09-03 | 2026-09-04 | 2026-09-08 | 2026-09-09 | 2026-09-10 | 2026-09-11 | 2026-09-14 |
 |--------|------|------|------|------|------|------|------|------|------|------|
-| Basic Materials | down | down | flat | MISS (-0.6%) | HIT (-0.3%) | MISS (-1.0%) | HIT (-1.1%) | HIT (-1.2%) | MISS (+0.4%) | down |
+| Basic Materials | down | down | flat | MISS (-0.6%) | HIT (-0.3%) | MISS (-1.0%) | HIT (-1.1%) | HIT (-1.2%) | MISS (+0.4%) | HIT (-0.9%) |
 | Communication Services | NO_PRED | down | flat | MISS (+0.9%) | MISS (-1.2%) | HIT (-0.5%) | MISS (-0.6%) | MISS (+0.6%) | HIT (+1.0%) | NO_PRED |
-| Consumer Cyclical | down | down | down | MISS (+1.4%) | HIT (-1.3%) | HIT (-0.8%) | HIT (-1.3%) | HIT (-0.4%) | MISS (+0.9%) | down |
+| Consumer Cyclical | down | down | down | MISS (+1.4%) | HIT (-1.3%) | HIT (-0.8%) | HIT (-1.3%) | HIT (-0.4%) | MISS (+0.9%) | MISS (-0.1%) |
 | Consumer Defensive | up | flat | up | MISS (-0.3%) | HIT (-0.8%) | MISS (-0.7%) | HIT (-1.2%) | MISS (+0.0%) | HIT (+0.3%) | HIT (+1.2%) |
 | Energy | up | up | up | MISS (-0.7%) | MISS (-0.9%) | HIT (+1.1%) | HIT (+0.8%) | MISS (-0.6%) | MISS (+0.3%) | MISS (-0.9%) |
 | Financial | up | down | flat | MISS (+1.6%) | MISS (-0.8%) | HIT (-1.4%) | HIT (-0.4%) | HIT (-0.3%) | MISS (+0.7%) | HIT (-0.4%) |

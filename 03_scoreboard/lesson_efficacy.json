@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-09-14T17:43:24.520439-04:00",
+  "generated_at": "2026-09-14T18:09:47.693818-04:00",
   "window": 7,
   "summary": {
     "n_active": 201,
-    "n_judged": 117,
-    "improved": 42,
-    "flat": 11,
-    "worse": 64,
-    "mean_delta": -0.045
+    "n_judged": 120,
+    "improved": 43,
+    "flat": 18,
+    "worse": 59,
+    "mean_delta": -0.035
   },
   "lessons": [
     {
@@ -464,8 +464,8 @@
         "n": 7
       },
       "after": {
-        "hit": 0.0,
-        "n": 1
+        "hit": 0.5,
+        "n": 2
       },
       "verdict": "insufficient"
     },
@@ -558,11 +558,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.667,
-        "n": 6
+        "hit": 0.571,
+        "n": 7
       },
-      "delta": 0.096,
-      "verdict": "improved"
+      "delta": 0.0,
+      "verdict": "flat"
     },
     {
       "lesson": "a-high-beta-cyclical-sector-xly-is-predicted-down-after-a-sh.md",
@@ -652,7 +652,7 @@
       },
       "after": {
         "hit": 0.0,
-        "n": 1
+        "n": 2
       },
       "verdict": "insufficient"
     },
@@ -1031,8 +1031,8 @@
         "n": 7
       },
       "after": {
-        "hit": null,
-        "n": 0
+        "hit": 1.0,
+        "n": 1
       },
       "verdict": "insufficient"
     },
@@ -1046,8 +1046,8 @@
         "n": 7
       },
       "after": {
-        "hit": null,
-        "n": 0
+        "hit": 1.0,
+        "n": 1
       },
       "verdict": "insufficient"
     },
@@ -1061,10 +1061,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.75,
-        "n": 4
+        "hit": 0.8,
+        "n": 5
       },
-      "delta": 0.464,
+      "delta": 0.514,
       "verdict": "improved"
     },
     {
@@ -1172,8 +1172,8 @@
         "n": 7
       },
       "after": {
-        "hit": 0.0,
-        "n": 1
+        "hit": 0.5,
+        "n": 2
       },
       "verdict": "insufficient"
     },
@@ -1187,8 +1187,8 @@
         "n": 7
       },
       "after": {
-        "hit": 0.0,
-        "n": 1
+        "hit": 0.5,
+        "n": 2
       },
       "verdict": "insufficient"
     },
@@ -1386,11 +1386,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 4
+        "hit": 0.6,
+        "n": 5
       },
-      "delta": -0.071,
-      "verdict": "WORSE"
+      "delta": 0.029,
+      "verdict": "flat"
     },
     {
       "lesson": "a-sector-prediction-treats-a-live-two-sided-fed-narrative-hi.md",
@@ -1402,10 +1402,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.75,
-        "n": 4
+        "hit": 0.6,
+        "n": 5
       },
-      "delta": 0.464,
+      "delta": 0.314,
       "verdict": "improved"
     },
     {
@@ -1449,7 +1449,7 @@
       },
       "after": {
         "hit": 0.0,
-        "n": 1
+        "n": 2
       },
       "verdict": "insufficient"
     },
@@ -1559,10 +1559,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.75,
-        "n": 4
+        "hit": 0.8,
+        "n": 5
       },
-      "delta": 0.464,
+      "delta": 0.514,
       "verdict": "improved"
     },
     {
@@ -1700,11 +1700,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 6
+        "hit": 0.571,
+        "n": 7
       },
-      "delta": -0.071,
-      "verdict": "WORSE"
+      "delta": 0.0,
+      "verdict": "flat"
     },
     {
       "lesson": "basic-materials-xlb-is-predicted-up-from-a-a-broad-risk-on-t.md",
@@ -1897,8 +1897,8 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 2
+        "hit": 0.667,
+        "n": 3
       },
       "verdict": "insufficient"
     },
@@ -1912,10 +1912,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.667,
-        "n": 3
+        "hit": 0.75,
+        "n": 4
       },
-      "verdict": "insufficient"
+      "delta": 0.464,
+      "verdict": "improved"
     },
     {
       "lesson": "fresh-overnight-kinetic-oil-supply-increment-not-leftover-ta.md",
@@ -2022,11 +2023,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.667,
-        "n": 6
+        "hit": 0.571,
+        "n": 7
       },
-      "delta": 0.096,
-      "verdict": "improved"
+      "delta": 0.0,
+      "verdict": "flat"
     },
     {
       "lesson": "mega-cap-earnings-over-macro-drag.md",
@@ -2217,10 +2218,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.75,
-        "n": 4
+        "hit": 0.8,
+        "n": 5
       },
-      "delta": 0.464,
+      "delta": 0.514,
       "verdict": "improved"
     },
     {
@@ -2318,11 +2319,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 4
+        "hit": 0.6,
+        "n": 5
       },
-      "delta": -0.071,
-      "verdict": "WORSE"
+      "delta": 0.029,
+      "verdict": "flat"
     },
     {
       "lesson": "sector-etf-prediction-where-the-model-identifies-a-same-day.md",
@@ -2382,11 +2383,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 4
+        "hit": 0.6,
+        "n": 5
       },
-      "delta": -0.071,
-      "verdict": "WORSE"
+      "delta": 0.029,
+      "verdict": "flat"
     },
     {
       "lesson": "sector-has-just-recorded-a-strong-positive-relative-reversal.md",
@@ -2516,8 +2517,8 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 2
+        "hit": 0.667,
+        "n": 3
       },
       "verdict": "insufficient"
     },
@@ -2561,8 +2562,8 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 2
+        "hit": 0.333,
+        "n": 3
       },
       "verdict": "insufficient"
     },
@@ -2606,10 +2607,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.667,
-        "n": 3
+        "hit": 0.5,
+        "n": 4
       },
-      "verdict": "insufficient"
+      "delta": 0.214,
+      "verdict": "improved"
     },
     {
       "lesson": "when-a-live-oil-geopolitical-supply-shock-is-present-at-the.md",
@@ -2684,10 +2686,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.667,
-        "n": 3
+        "hit": 0.75,
+        "n": 4
       },
-      "verdict": "insufficient"
+      "delta": 0.179,
+      "verdict": "improved"
     },
     {
       "lesson": "when-a-sector-etf-has-a-large-pre-existing-1d-relative-cushi.md",
@@ -3024,11 +3027,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 6
+        "hit": 0.571,
+        "n": 7
       },
-      "delta": -0.071,
-      "verdict": "WORSE"
+      "delta": 0.0,
+      "verdict": "flat"
     },
     {
       "lesson": "xlf-pre-open-setup-is-genuinely-neutral-s0-s4-all-zero-actua.md",
@@ -3051,7 +3054,7 @@
     {
       "topic": "general",
       "last10": {
-        "hit": 0.4,
+        "hit": 0.5,
         "n": 10
       },
       "prev10": {
@@ -3066,8 +3069,8 @@
         "n": 10
       },
       "prev10": {
-        "hit": 0.625,
-        "n": 8
+        "hit": 0.667,
+        "n": 9
       }
     },
     {
@@ -3088,8 +3091,8 @@
         "n": 10
       },
       "prev10": {
-        "hit": 0.75,
-        "n": 8
+        "hit": 0.667,
+        "n": 9
       }
     },
     {
