@@ -1,21 +1,20 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T04:11:22.447560-04:00",
+  "generated_at": "2026-09-14T04:12:30.659448-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-14_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-14/_board.json` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-09-14_actions.json` \u2014 missing",
-    "MISSING Finviz digest JSON `01_daily/news/2026-09-14_finviz_digest.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-09-14_judge.md` \u2014 missing",
     "MISSING Weather JSON `01_daily/weather/2026-09-14_weather.json` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-09-14_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 1,
+    "ok": 2,
     "partial": 1,
-    "fail": 6,
+    "fail": 5,
     "n": 8
   },
   "processes": [
@@ -74,11 +73,11 @@
       "key": "finviz",
       "name": "Finviz scrape",
       "yaml": "finviz_preopen_scrape.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -86,18 +85,18 @@
           "name": "Finviz digest JSON",
           "path": "01_daily/news/2026-09-14_finviz_digest.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 88197
         },
         {
           "key": "digest_md",
           "name": "Finviz digest MD",
           "path": "01_daily/news/2026-09-14_finviz_digest.md",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 11794
         }
       ],
       "said": "",
@@ -108,7 +107,7 @@
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
       "status": "FAIL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 20,
       "n_opt_ok": 0,
@@ -119,9 +118,9 @@
           "name": "Finviz digest JSON",
           "path": "01_daily/news/2026-09-14_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 88197
         },
         {
           "key": "in_baseline",
@@ -348,7 +347,7 @@
       "name": "Label + weather",
       "yaml": "label_weather.yml",
       "status": "FAIL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 1,
       "n_opt_ok": 0,
@@ -359,9 +358,9 @@
           "name": "Finviz digest JSON",
           "path": "01_daily/news/2026-09-14_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 88197
         },
         {
           "key": "weather",
@@ -434,9 +433,9 @@
           "name": "Finviz digest JSON",
           "path": "01_daily/news/2026-09-14_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 88197
         },
         {
           "key": "dossiers",
@@ -494,9 +493,9 @@
           "name": "Finviz digest JSON",
           "path": "01_daily/news/2026-09-14_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 88197
         },
         {
           "key": "in_judge",
@@ -678,6 +677,45 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-14\n**Generated:** 2026-09-14T04:11:22.265138-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a lower open as tech-heavy Nasdaq lags amid Middle East-driven oil gains and AI growth concerns\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** WTI $103.0\n**CPI/Fed:** Canadian CPI data is due\n**Leaders:** TNON, ACVA, AENT, FTFT, GAUZ, ZUMZ, PMTS, HAIN, CODA\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-14\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-14T04:12:30.512677-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-14_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 88197,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-14_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11845,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-14\n_Generated 2026-09-14T04:12:30.436839-04:00 \u00b7 export=data/exports/finviz_2026-09-14.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-14.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10959437,
+          "preview": "11617 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11414104,
+          "preview": "11633 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-14\n_Generated 2026-09-14T04:12:30.436839-04:00 \u00b7 export=data/exports/finviz_2026-09-14.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11617 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11633 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
