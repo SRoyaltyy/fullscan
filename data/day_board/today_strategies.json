@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T13:22:29.564473-04:00",
+  "generated_at": "2026-09-14T14:46:33.755041-04:00",
   "clock_use": "session_open",
   "clock_legal_for": "2026-09-14",
   "session_open": "2026-09-14",
@@ -2628,7 +2628,7 @@
         "VICR",
         "HPE",
         "BW",
-        "FPS"
+        "BAND"
       ],
       "sell": [],
       "sit": true,
@@ -2682,7 +2682,7 @@
           "take": "BUY"
         },
         {
-          "ticker": "FPS",
+          "ticker": "BAND",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
@@ -2698,7 +2698,7 @@
         "VICR",
         "HPE",
         "BW",
-        "FPS"
+        "BAND"
       ],
       "sell": [],
       "sit": true,
@@ -2752,7 +2752,7 @@
           "take": "BUY"
         },
         {
-          "ticker": "FPS",
+          "ticker": "BAND",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
@@ -4085,10 +4085,10 @@
         "VERI",
         "CMRC",
         "HPE",
+        "BAND",
         "HUT",
         "NTAP",
-        "HPQ",
-        "SMR"
+        "HPQ"
       ],
       "sell": [],
       "sit": true,
@@ -4124,6 +4124,12 @@
           "take": "BUY"
         },
         {
+          "ticker": "BAND",
+          "side": "long",
+          "predict": "UP",
+          "take": "BUY"
+        },
+        {
           "ticker": "HUT",
           "side": "long",
           "predict": "UP",
@@ -4137,12 +4143,6 @@
         },
         {
           "ticker": "HPQ",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "SMR",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
@@ -4155,10 +4155,10 @@
         "VERI",
         "CMRC",
         "HPE",
+        "BAND",
         "HUT",
         "NTAP",
-        "HPQ",
-        "SMR"
+        "HPQ"
       ],
       "sell": [],
       "sit": true,
@@ -4194,6 +4194,12 @@
           "take": "BUY"
         },
         {
+          "ticker": "BAND",
+          "side": "long",
+          "predict": "UP",
+          "take": "BUY"
+        },
+        {
           "ticker": "HUT",
           "side": "long",
           "predict": "UP",
@@ -4207,12 +4213,6 @@
         },
         {
           "ticker": "HPQ",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "SMR",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
@@ -6924,11 +6924,11 @@
         "CMRC",
         "HUT",
         "VERI",
+        "BAND",
         "SMR",
         "INSP",
         "BE",
-        "QRVO",
-        "HPE"
+        "QRVO"
       ],
       "sell": [],
       "sit": true,
@@ -6958,6 +6958,12 @@
           "take": "BUY"
         },
         {
+          "ticker": "BAND",
+          "side": "long",
+          "predict": "UP",
+          "take": "BUY"
+        },
+        {
           "ticker": "SMR",
           "side": "long",
           "predict": "UP",
@@ -6977,12 +6983,6 @@
         },
         {
           "ticker": "QRVO",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "HPE",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
@@ -6994,11 +6994,11 @@
         "CMRC",
         "HUT",
         "VERI",
+        "BAND",
         "SMR",
         "INSP",
         "BE",
-        "QRVO",
-        "HPE"
+        "QRVO"
       ],
       "sell": [],
       "sit": true,
@@ -7028,6 +7028,12 @@
           "take": "BUY"
         },
         {
+          "ticker": "BAND",
+          "side": "long",
+          "predict": "UP",
+          "take": "BUY"
+        },
+        {
           "ticker": "SMR",
           "side": "long",
           "predict": "UP",
@@ -7047,12 +7053,6 @@
         },
         {
           "ticker": "QRVO",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "HPE",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
@@ -7628,7 +7628,7 @@
         "HUT",
         "QRVO",
         "SPCX",
-        "NVT"
+        "BAND"
       ],
       "sell": [],
       "sit": true,
@@ -7682,7 +7682,7 @@
           "take": "BUY"
         },
         {
-          "ticker": "NVT",
+          "ticker": "BAND",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
@@ -7698,7 +7698,7 @@
         "HUT",
         "QRVO",
         "SPCX",
-        "NVT"
+        "BAND"
       ],
       "sell": [],
       "sit": true,
@@ -7752,7 +7752,7 @@
           "take": "BUY"
         },
         {
-          "ticker": "NVT",
+          "ticker": "BAND",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
@@ -7811,10 +7811,10 @@
         "INSP",
         "TJGC",
         "QRVO",
+        "BAND",
         "HPQ",
         "HPE",
-        "DELL",
-        "GME"
+        "DELL"
       ],
       "sell": [],
       "sit": true,
@@ -7874,6 +7874,12 @@
           "take": "BUY"
         },
         {
+          "ticker": "BAND",
+          "side": "long",
+          "predict": "UP",
+          "take": "BUY"
+        },
+        {
           "ticker": "HPQ",
           "side": "long",
           "predict": "UP",
@@ -7887,12 +7893,6 @@
         },
         {
           "ticker": "DELL",
-          "side": "long",
-          "predict": "UP",
-          "take": "BUY"
-        },
-        {
-          "ticker": "GME",
           "side": "long",
           "predict": "UP",
           "take": "BUY"
@@ -8299,8 +8299,8 @@
         "HTFL",
         "XHLD",
         "ODD",
-        "BAND",
-        "REAX"
+        "REAX",
+        "INDP"
       ],
       "sell": [],
       "sit": true,
@@ -8348,13 +8348,13 @@
           "take": "BUY"
         },
         {
-          "ticker": "BAND",
+          "ticker": "REAX",
           "side": "short",
           "predict": "DOWN",
           "take": "BUY"
         },
         {
-          "ticker": "REAX",
+          "ticker": "INDP",
           "side": "short",
           "predict": "DOWN",
           "take": "BUY"
@@ -8369,8 +8369,8 @@
         "HTFL",
         "XHLD",
         "ODD",
-        "BAND",
-        "REAX"
+        "REAX",
+        "INDP"
       ],
       "sell": [],
       "sit": true,
@@ -8418,13 +8418,13 @@
           "take": "BUY"
         },
         {
-          "ticker": "BAND",
+          "ticker": "REAX",
           "side": "short",
           "predict": "DOWN",
           "take": "BUY"
         },
         {
-          "ticker": "REAX",
+          "ticker": "INDP",
           "side": "short",
           "predict": "DOWN",
           "take": "BUY"

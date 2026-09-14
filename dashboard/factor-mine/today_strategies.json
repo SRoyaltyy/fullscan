@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T13:22:29.564473-04:00",
+  "generated_at": "2026-09-14T14:46:33.755041-04:00",
   "n": 322,
   "n_ok": 322,
   "families": [
@@ -2512,8 +2512,8 @@
           "predict": "UP"
         },
         {
-          "ticker": "FPS",
-          "src": "yday_gainer",
+          "ticker": "BAND",
+          "src": "yday_gainer,yday_mover",
           "side": "long",
           "predict": "UP"
         }
@@ -2581,8 +2581,8 @@
           "predict": "UP"
         },
         {
-          "ticker": "FPS",
-          "src": "yday_gainer",
+          "ticker": "BAND",
+          "src": "yday_gainer,yday_mover",
           "side": "long",
           "predict": "UP"
         }
@@ -4042,6 +4042,12 @@
           "predict": "UP"
         },
         {
+          "ticker": "BAND",
+          "src": "yday_gainer,yday_mover",
+          "side": "long",
+          "predict": "UP"
+        },
+        {
           "ticker": "HUT",
           "src": "yday_gainer",
           "side": "long",
@@ -4056,12 +4062,6 @@
         {
           "ticker": "HPQ",
           "src": "yday_gainer,ohlc_hot",
-          "side": "long",
-          "predict": "UP"
-        },
-        {
-          "ticker": "SMR",
-          "src": "yday_mover",
           "side": "long",
           "predict": "UP"
         }
@@ -4111,6 +4111,12 @@
           "predict": "UP"
         },
         {
+          "ticker": "BAND",
+          "src": "yday_gainer,yday_mover",
+          "side": "long",
+          "predict": "UP"
+        },
+        {
           "ticker": "HUT",
           "src": "yday_gainer",
           "side": "long",
@@ -4125,12 +4131,6 @@
         {
           "ticker": "HPQ",
           "src": "yday_gainer,ohlc_hot",
-          "side": "long",
-          "predict": "UP"
-        },
-        {
-          "ticker": "SMR",
-          "src": "yday_mover",
           "side": "long",
           "predict": "UP"
         }
@@ -7265,6 +7265,12 @@
           "predict": "UP"
         },
         {
+          "ticker": "BAND",
+          "src": "yday_gainer,yday_mover",
+          "side": "long",
+          "predict": "UP"
+        },
+        {
           "ticker": "SMR",
           "src": "yday_mover",
           "side": "long",
@@ -7285,12 +7291,6 @@
         {
           "ticker": "QRVO",
           "src": "ohlc_hot",
-          "side": "long",
-          "predict": "UP"
-        },
-        {
-          "ticker": "HPE",
-          "src": "yday_gainer,yday_mover,ohlc_hot",
           "side": "long",
           "predict": "UP"
         }
@@ -7334,6 +7334,12 @@
           "predict": "UP"
         },
         {
+          "ticker": "BAND",
+          "src": "yday_gainer,yday_mover",
+          "side": "long",
+          "predict": "UP"
+        },
+        {
           "ticker": "SMR",
           "src": "yday_mover",
           "side": "long",
@@ -7354,12 +7360,6 @@
         {
           "ticker": "QRVO",
           "src": "ohlc_hot",
-          "side": "long",
-          "predict": "UP"
-        },
-        {
-          "ticker": "HPE",
-          "src": "yday_gainer,yday_mover,ohlc_hot",
           "side": "long",
           "predict": "UP"
         }
@@ -7979,8 +7979,8 @@
           "predict": "UP"
         },
         {
-          "ticker": "NVT",
-          "src": "flatten",
+          "ticker": "BAND",
+          "src": "yday_gainer,yday_mover",
           "side": "long",
           "predict": "UP"
         }
@@ -8048,8 +8048,8 @@
           "predict": "UP"
         },
         {
-          "ticker": "NVT",
-          "src": "flatten",
+          "ticker": "BAND",
+          "src": "yday_gainer,yday_mover",
           "side": "long",
           "predict": "UP"
         }
@@ -8168,6 +8168,12 @@
           "predict": "UP"
         },
         {
+          "ticker": "BAND",
+          "src": "yday_gainer,yday_mover",
+          "side": "long",
+          "predict": "UP"
+        },
+        {
           "ticker": "HPQ",
           "src": "yday_gainer,ohlc_hot",
           "side": "long",
@@ -8182,12 +8188,6 @@
         {
           "ticker": "DELL",
           "src": "probable,yday_gainer,yday_mover,ohlc_hot",
-          "side": "long",
-          "predict": "UP"
-        },
-        {
-          "ticker": "GME",
-          "src": "ohlc_hot",
           "side": "long",
           "predict": "UP"
         }
@@ -8639,14 +8639,14 @@
           "predict": "DOWN"
         },
         {
-          "ticker": "BAND",
+          "ticker": "REAX",
           "src": "yday_gainer,yday_mover",
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "REAX",
-          "src": "yday_gainer,yday_mover",
+          "ticker": "INDP",
+          "src": "yday_gainer",
           "side": "short",
           "predict": "DOWN"
         }
@@ -8708,14 +8708,14 @@
           "predict": "DOWN"
         },
         {
-          "ticker": "BAND",
+          "ticker": "REAX",
           "src": "yday_gainer,yday_mover",
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "REAX",
-          "src": "yday_gainer,yday_mover",
+          "ticker": "INDP",
+          "src": "yday_gainer",
           "side": "short",
           "predict": "DOWN"
         }
