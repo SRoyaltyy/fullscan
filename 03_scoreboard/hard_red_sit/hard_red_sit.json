@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-14T10:08:19.055602-04:00",
+  "generated_at": "2026-09-14T10:15:22.209995-04:00",
   "live_untouched": [
     "flatten_robust",
     "combo_sh_macd_5050_shared"
@@ -64,7 +64,7 @@
   ],
   "webull_rows": [
     {
-      "label": "(A) full sit",
+      "label": "live sit (control)",
       "mode": "sit",
       "dip_pct": null,
       "name": "combo_sh_macd_5050_shared:sit",
@@ -82,7 +82,7 @@
       "hard_red_n_wins": 0
     },
     {
-      "label": "(B) short-only",
+      "label": "(A) short-only \u00b7 pre-open",
       "mode": "short_only",
       "dip_pct": null,
       "name": "combo_sh_macd_5050_shared:short_only",
@@ -100,7 +100,25 @@
       "hard_red_n_wins": 5
     },
     {
-      "label": "(C) scoop 0.5%",
+      "label": "(A) short-only \u00b7 Excel letter pre-filter",
+      "mode": "short_only_excel",
+      "dip_pct": null,
+      "name": "combo_sh_macd_5050_shared:short_only",
+      "book_pct": 51.828,
+      "final_equity": 15182.76,
+      "n_trades": 155,
+      "n_closed": 74,
+      "book_win_rate": 0.6216,
+      "realized": 5111.2,
+      "audit_ok": true,
+      "hard_red_fires": 7,
+      "hard_red_win_rate": 0.5714,
+      "hard_red_pnl": -914.03,
+      "hard_red_n_graded": 7,
+      "hard_red_n_wins": 4
+    },
+    {
+      "label": "(B) scoop 0.5% \u00b7 after 09:30",
       "mode": "dip_scoop",
       "dip_pct": 0.5,
       "name": "combo_sh_macd_5050_shared:dip_scoop:x0.5",
@@ -118,7 +136,7 @@
       "hard_red_n_wins": 12
     },
     {
-      "label": "(C) scoop 1%",
+      "label": "(B) scoop 1% \u00b7 after 09:30",
       "mode": "dip_scoop",
       "dip_pct": 1.0,
       "name": "combo_sh_macd_5050_shared:dip_scoop:x1",
@@ -136,7 +154,7 @@
       "hard_red_n_wins": 13
     },
     {
-      "label": "(C) scoop 1.5%",
+      "label": "(B) scoop 1.5% \u00b7 after 09:30",
       "mode": "dip_scoop",
       "dip_pct": 1.5,
       "name": "combo_sh_macd_5050_shared:dip_scoop:x1.5",
@@ -154,7 +172,7 @@
       "hard_red_n_wins": 12
     },
     {
-      "label": "(C) scoop 2%",
+      "label": "(B) scoop 2% \u00b7 after 09:30",
       "mode": "dip_scoop",
       "dip_pct": 2.0,
       "name": "combo_sh_macd_5050_shared:dip_scoop:x2",
@@ -172,7 +190,7 @@
       "hard_red_n_wins": 10
     },
     {
-      "label": "(C) scoop 3%",
+      "label": "(B) scoop 3% \u00b7 after 09:30",
       "mode": "dip_scoop",
       "dip_pct": 3.0,
       "name": "combo_sh_macd_5050_shared:dip_scoop:x3",
@@ -192,7 +210,7 @@
   ],
   "flatten_rows": [
     {
-      "label": "(A) full sit",
+      "label": "live sit (control)",
       "mode": "sit",
       "n_fires": 0,
       "n_graded": 0,
@@ -201,7 +219,7 @@
       "pnl": 0
     },
     {
-      "label": "(B) short-only (N/A \u2014 long book)",
+      "label": "(A) short-only (N/A \u2014 flatten has no short kid)",
       "mode": "short_only",
       "n_fires": 0,
       "n_graded": 0,
@@ -210,7 +228,7 @@
       "pnl": 0
     },
     {
-      "label": "(C) scoop",
+      "label": "(B) scoop",
       "mode": "dip_scoop",
       "dip_pct": 0.5,
       "n_fires": 34,
@@ -220,7 +238,7 @@
       "pnl": -17.09
     },
     {
-      "label": "(C) scoop",
+      "label": "(B) scoop",
       "mode": "dip_scoop",
       "dip_pct": 1.0,
       "n_fires": 29,
@@ -230,7 +248,7 @@
       "pnl": -14.15
     },
     {
-      "label": "(C) scoop",
+      "label": "(B) scoop",
       "mode": "dip_scoop",
       "dip_pct": 1.5,
       "n_fires": 23,
@@ -240,7 +258,7 @@
       "pnl": -4.35
     },
     {
-      "label": "(C) scoop",
+      "label": "(B) scoop",
       "mode": "dip_scoop",
       "dip_pct": 2.0,
       "n_fires": 15,
@@ -250,7 +268,7 @@
       "pnl": -3.2
     },
     {
-      "label": "(C) scoop",
+      "label": "(B) scoop",
       "mode": "dip_scoop",
       "dip_pct": 3.0,
       "n_fires": 8,
@@ -427,7 +445,7 @@
     "hard_red_win_rate": 0.5417,
     "hard_red_pnl": 1387.9,
     "book_pct": 83.237,
-    "label": "(C) scoop 1%"
+    "label": "(B) scoop 1% \u00b7 after 09:30"
   },
   "best_x_flatten": {
     "dip_pct": 3.0,
@@ -2139,10 +2157,29 @@
       "3.0": false
     }
   },
+  "clock_split": {
+    "A": "short-only \u00b7 pre-open policy \u00b7 Excel letters may filter",
+    "B": "long dip-scoop \u00b7 after 09:30 \u00b7 open known, close grades",
+    "excel_owns_sit": false,
+    "deep_corr": "not waited",
+    "open_letters": [
+      "FQ",
+      "ER",
+      "EP",
+      "AH",
+      "FR",
+      "DF_lag1"
+    ],
+    "short_stretch": [
+      "FQ",
+      "ER",
+      "EP"
+    ]
+  },
   "verdict_short": {
     "label": "KILL",
     "keep": false,
-    "why": "KILL hard-red short-only: thin n=11 fires (bar \u226530). After-fee win 50.0%. webull n=11 win=50%; flatten n=0 win=\u2014. Do not change live sit on this sample.",
+    "why": "KILL A short-only (pre-open): thin n=11 fires (bar \u226530). After-fee win 50.0%. webull n=11 win=50%; flatten n=0 win=\u2014. Do not change live sit on this sample.",
     "n_fires": 11,
     "win_rate": 0.5,
     "thin": true,
@@ -2164,10 +2201,34 @@
       }
     }
   },
+  "verdict_short_excel": {
+    "label": "KILL",
+    "keep": false,
+    "why": "KILL A short-only \u00b7 Excel letter pre-filter: thin n=7 fires (bar \u226530). After-fee win 57.1%. webull n=7 win=57%. Do not change live sit on this sample.",
+    "n_fires": 7,
+    "win_rate": 0.5714,
+    "thin": true,
+    "both_tapes": false,
+    "wf_ok": null,
+    "tapes": {
+      "webull": {
+        "n_fires": 7,
+        "win_rate": 0.5714,
+        "pnl": -914.03
+      }
+    }
+  },
+  "excel_short": {
+    "n_fires": 7,
+    "n_graded": 7,
+    "n_wins": 4,
+    "win_rate": 0.5714,
+    "pnl": -914.03
+  },
   "verdict_x": {
     "label": "KILL",
     "keep": false,
-    "why": "KILL hard-red dip-scoop X=1.0: 55 fires but after-fee win 49.1% \u2264 55%. webull n=26 win=54%; flatten n=29 win=45%",
+    "why": "KILL B dip-scoop X=1.0% (intraday): 55 fires but after-fee win 49.1% \u2264 55%. webull n=26 win=54%; flatten n=29 win=45%",
     "n_fires": 55,
     "win_rate": 0.4906,
     "thin": false,
@@ -2198,16 +2259,16 @@
         "sleeve": "short_news_r_macd_h3",
         "open": 24.260000228881836,
         "low": 24.084999084472656,
-        "close": 24.249000549316406,
+        "close": 24.309999465942383,
         "px_src": "yahoo_session",
         "close_is_last": true,
         "dip_from_open_pct": 0.721,
-        "same_day_oc_pnl_short": -0.5001,
+        "same_day_oc_pnl_short": -0.5617,
         "scoops": {
           "0.5": {
             "kind": "scoop",
             "fill": 24.1387,
-            "same_day_pnl": -0.6202,
+            "same_day_pnl": -0.6818,
             "win": false
           },
           "1.0": {
@@ -2235,6 +2296,29 @@
             "win": null
           }
         },
+        "excel": {
+          "ok": false,
+          "status": "ineligible",
+          "hits": [],
+          "letters": {
+            "FQ": 0,
+            "ER": 0,
+            "EP": 0.005817345875711436,
+            "AH": 0,
+            "FR": 0,
+            "DF_lag1": "None"
+          },
+          "owns_sit": false
+        },
+        "letters": {
+          "FQ": 0,
+          "ER": 0,
+          "EP": 0.005817345875711436,
+          "AH": 0,
+          "FR": 0,
+          "DF_lag1": "None"
+        },
+        "letter_src": "open_features",
         "no_price": false
       },
       {
@@ -2243,22 +2327,22 @@
         "sleeve": "short_news_r_macd_h3",
         "open": 486.1300048828125,
         "low": 480.3299865722656,
-        "close": 487.7699890136719,
+        "close": 491.9049987792969,
         "px_src": "yahoo_session",
         "close_is_last": true,
         "dip_from_open_pct": 1.193,
-        "same_day_oc_pnl_short": -5.646,
+        "same_day_oc_pnl_short": -9.781,
         "scoops": {
           "0.5": {
             "kind": "scoop",
             "fill": 483.6994,
-            "same_day_pnl": -8.0766,
+            "same_day_pnl": -12.2116,
             "win": false
           },
           "1.0": {
             "kind": "scoop",
             "fill": 481.2687,
-            "same_day_pnl": -10.5073,
+            "same_day_pnl": -14.6423,
             "win": false
           },
           "1.5": {
@@ -2280,6 +2364,32 @@
             "win": null
           }
         },
+        "excel": {
+          "ok": true,
+          "status": "eligible",
+          "hits": [
+            "FQ",
+            "EP"
+          ],
+          "letters": {
+            "FQ": 1,
+            "ER": 0,
+            "EP": 0.03412191052038908,
+            "AH": 0,
+            "FR": 1,
+            "DF_lag1": "None"
+          },
+          "owns_sit": false
+        },
+        "letters": {
+          "FQ": 1,
+          "ER": 0,
+          "EP": 0.03412191052038908,
+          "AH": 0,
+          "FR": 1,
+          "DF_lag1": "None"
+        },
+        "letter_src": "open_features",
         "no_price": false
       },
       {
@@ -2287,24 +2397,24 @@
         "side": "long",
         "sleeve": "union_hot_n4_h1",
         "open": 3.509999990463257,
-        "low": 3.4800000190734863,
-        "close": 3.5350000858306885,
+        "low": 3.4700000286102295,
+        "close": 3.4700000286102295,
         "px_src": "yahoo_session",
         "close_is_last": true,
-        "dip_from_open_pct": 0.855,
+        "dip_from_open_pct": 1.14,
         "same_day_oc_pnl_short": null,
         "scoops": {
           "0.5": {
             "kind": "scoop",
             "fill": 3.4924,
-            "same_day_pnl": -0.0537,
+            "same_day_pnl": -0.118,
             "win": false
           },
           "1.0": {
-            "kind": "no_dip",
-            "fill": null,
-            "same_day_pnl": null,
-            "win": null
+            "kind": "scoop",
+            "fill": 3.4749,
+            "same_day_pnl": -0.1003,
+            "win": false
           },
           "1.5": {
             "kind": "no_dip",
@@ -2325,6 +2435,16 @@
             "win": null
           }
         },
+        "excel": null,
+        "letters": {
+          "FQ": 1,
+          "ER": 1,
+          "EP": 0.09671254311026065,
+          "AH": 0,
+          "FR": 1,
+          "DF_lag1": "Bullish Belt Hold"
+        },
+        "letter_src": "open_features",
         "no_price": false
       },
       {
@@ -2333,7 +2453,7 @@
         "sleeve": "union_hot_n4_h1",
         "open": 1.3700000047683716,
         "low": 1.309999942779541,
-        "close": 1.3415000438690186,
+        "close": 1.3600000143051147,
         "px_src": "yahoo_session",
         "close_is_last": true,
         "dip_from_open_pct": 4.38,
@@ -2342,34 +2462,44 @@
           "0.5": {
             "kind": "scoop",
             "fill": 1.3632,
-            "same_day_pnl": -0.0746,
+            "same_day_pnl": -0.0563,
             "win": false
           },
           "1.0": {
             "kind": "scoop",
             "fill": 1.3563,
-            "same_day_pnl": -0.0678,
+            "same_day_pnl": -0.0495,
             "win": false
           },
           "1.5": {
             "kind": "scoop",
             "fill": 1.3495,
-            "same_day_pnl": -0.0608,
+            "same_day_pnl": -0.0425,
             "win": false
           },
           "2.0": {
             "kind": "scoop",
             "fill": 1.3426,
-            "same_day_pnl": -0.0539,
+            "same_day_pnl": -0.0356,
             "win": false
           },
           "3.0": {
             "kind": "scoop",
             "fill": 1.3289,
-            "same_day_pnl": -0.0401,
+            "same_day_pnl": -0.0218,
             "win": false
           }
         },
+        "excel": null,
+        "letters": {
+          "FQ": 0,
+          "ER": 0,
+          "EP": 0.017330536246800615,
+          "AH": 2,
+          "FR": 1,
+          "DF_lag1": "Bearish Spinning Top"
+        },
+        "letter_src": "open_features",
         "no_price": false
       },
       {
@@ -2378,7 +2508,7 @@
         "sleeve": "union_hot_n4_h1",
         "open": 1.034999966621399,
         "low": 0.9800999760627747,
-        "close": 1.0499999523162842,
+        "close": 1.0750000476837158,
         "px_src": "yahoo_session",
         "close_is_last": true,
         "dip_from_open_pct": 5.304,
@@ -2387,34 +2517,44 @@
           "0.5": {
             "kind": "scoop",
             "fill": 1.0298,
-            "same_day_pnl": -0.0266,
+            "same_day_pnl": -0.0019,
             "win": false
           },
           "1.0": {
             "kind": "scoop",
             "fill": 1.0246,
-            "same_day_pnl": -0.0214,
-            "win": false
+            "same_day_pnl": 0.0034,
+            "win": true
           },
           "1.5": {
             "kind": "scoop",
             "fill": 1.0195,
-            "same_day_pnl": -0.0162,
-            "win": false
+            "same_day_pnl": 0.0085,
+            "win": true
           },
           "2.0": {
             "kind": "scoop",
             "fill": 1.0143,
-            "same_day_pnl": -0.0109,
-            "win": false
+            "same_day_pnl": 0.0138,
+            "win": true
           },
           "3.0": {
             "kind": "scoop",
             "fill": 1.0039,
-            "same_day_pnl": -0.0005,
-            "win": false
+            "same_day_pnl": 0.0243,
+            "win": true
           }
         },
+        "excel": null,
+        "letters": {
+          "FQ": 1,
+          "ER": 1,
+          "EP": 0.13218433566523127,
+          "AH": 1,
+          "FR": 2,
+          "DF_lag1": "Bullish Belt Hold"
+        },
+        "letter_src": "open_features",
         "no_price": false
       },
       {
@@ -2423,7 +2563,7 @@
         "sleeve": "union_hot_n4_h1",
         "open": 92.30000305175781,
         "low": 89.57820129394531,
-        "close": 91.58090209960938,
+        "close": 92.66999816894531,
         "px_src": "yahoo_session",
         "close_is_last": true,
         "dip_from_open_pct": 2.949,
@@ -2432,26 +2572,26 @@
           "0.5": {
             "kind": "scoop",
             "fill": 91.8385,
-            "same_day_pnl": -2.1178,
+            "same_day_pnl": -1.0396,
             "win": false
           },
           "1.0": {
             "kind": "scoop",
             "fill": 91.377,
-            "same_day_pnl": -1.6517,
+            "same_day_pnl": -0.5735,
             "win": false
           },
           "1.5": {
             "kind": "scoop",
             "fill": 90.9155,
-            "same_day_pnl": -1.1856,
+            "same_day_pnl": -0.1074,
             "win": false
           },
           "2.0": {
             "kind": "scoop",
             "fill": 90.454,
-            "same_day_pnl": -0.7194,
-            "win": false
+            "same_day_pnl": 0.3588,
+            "win": true
           },
           "3.0": {
             "kind": "no_dip",
@@ -2460,6 +2600,16 @@
             "win": null
           }
         },
+        "excel": null,
+        "letters": {
+          "FQ": 1,
+          "ER": 0,
+          "EP": 0.0792421558768916,
+          "AH": 0,
+          "FR": 1,
+          "DF_lag1": "None"
+        },
+        "letter_src": "open_features",
         "no_price": false
       },
       {
@@ -2468,7 +2618,7 @@
         "sleeve": "pinned_war_room",
         "open": 2.799999952316284,
         "low": 2.7699999809265137,
-        "close": 2.8399999141693115,
+        "close": 2.890000104904175,
         "px_src": "yahoo_session",
         "close_is_last": true,
         "dip_from_open_pct": 1.071,
@@ -2477,14 +2627,14 @@
           "0.5": {
             "kind": "scoop",
             "fill": 2.786,
-            "same_day_pnl": -0.0283,
-            "win": false
+            "same_day_pnl": 0.0212,
+            "win": true
           },
           "1.0": {
             "kind": "scoop",
             "fill": 2.772,
-            "same_day_pnl": -0.0141,
-            "win": false
+            "same_day_pnl": 0.0354,
+            "win": true
           },
           "1.5": {
             "kind": "no_dip",
@@ -2505,6 +2655,16 @@
             "win": null
           }
         },
+        "excel": null,
+        "letters": {
+          "FQ": 0,
+          "ER": 0,
+          "EP": 0.12755552900180922,
+          "AH": 0,
+          "FR": 1,
+          "DF_lag1": "Bullish Spinning Top"
+        },
+        "letter_src": "open_features",
         "no_price": false
       }
     ],
@@ -2515,7 +2675,7 @@
         "sleeve": "flatten_io",
         "open": 33.63999938964844,
         "low": 33.470001220703125,
-        "close": 33.790000915527344,
+        "close": 33.875,
         "px_src": "yahoo_session",
         "close_is_last": true,
         "dip_from_open_pct": 0.505,
@@ -2524,7 +2684,7 @@
           "0.5": {
             "kind": "scoop",
             "fill": 33.4718,
-            "same_day_pnl": -0.3804,
+            "same_day_pnl": -0.2963,
             "win": false
           },
           "1.0": {
@@ -2552,6 +2712,16 @@
             "win": null
           }
         },
+        "excel": null,
+        "letters": {
+          "FQ": 0,
+          "ER": 0,
+          "EP": 0.001953453489612908,
+          "AH": 0,
+          "FR": 1,
+          "DF_lag1": "Bullish Doji"
+        },
+        "letter_src": "open_features",
         "no_price": false
       },
       {
@@ -2560,7 +2730,7 @@
         "sleeve": "flatten_io",
         "open": 123.8499984741211,
         "low": 123.44000244140625,
-        "close": 124.61000061035156,
+        "close": 124.93000030517578,
         "px_src": "yahoo_session",
         "close_is_last": true,
         "dip_from_open_pct": 0.331,
@@ -2597,6 +2767,16 @@
             "win": null
           }
         },
+        "excel": null,
+        "letters": {
+          "FQ": 0,
+          "ER": 0,
+          "EP": 0.015601668948792552,
+          "AH": 0,
+          "FR": 1,
+          "DF_lag1": "None"
+        },
+        "letter_src": "open_features",
         "no_price": false
       },
       {
@@ -2605,7 +2785,7 @@
         "sleeve": "flatten_io",
         "open": 150.0,
         "low": 145.8000030517578,
-        "close": 147.8800048828125,
+        "close": 147.60000610351562,
         "px_src": "yahoo_session",
         "close_is_last": true,
         "dip_from_open_pct": 2.8,
@@ -2614,25 +2794,25 @@
           "0.5": {
             "kind": "scoop",
             "fill": 149.25,
-            "same_day_pnl": -4.3673,
+            "same_day_pnl": -4.6445,
             "win": false
           },
           "1.0": {
             "kind": "scoop",
             "fill": 148.5,
-            "same_day_pnl": -3.6098,
+            "same_day_pnl": -3.887,
             "win": false
           },
           "1.5": {
             "kind": "scoop",
             "fill": 147.75,
-            "same_day_pnl": -2.8523,
+            "same_day_pnl": -3.1295,
             "win": false
           },
           "2.0": {
             "kind": "scoop",
             "fill": 147.0,
-            "same_day_pnl": -2.0948,
+            "same_day_pnl": -2.372,
             "win": false
           },
           "3.0": {
@@ -2642,6 +2822,16 @@
             "win": null
           }
         },
+        "excel": null,
+        "letters": {
+          "FQ": 0,
+          "ER": 0,
+          "EP": 0.019442313482024316,
+          "AH": 0,
+          "FR": 1,
+          "DF_lag1": "Bullish Belt Hold"
+        },
+        "letter_src": "open_features",
         "no_price": false
       },
       {
@@ -2650,7 +2840,7 @@
         "sleeve": "flatten_io",
         "open": 77.76000213623047,
         "low": 75.37000274658203,
-        "close": 78.30500030517578,
+        "close": 78.29000091552734,
         "px_src": "yahoo_session",
         "close_is_last": true,
         "dip_from_open_pct": 3.074,
@@ -2659,38 +2849,48 @@
           "0.5": {
             "kind": "scoop",
             "fill": 77.3712,
-            "same_day_pnl": -0.649,
+            "same_day_pnl": -0.6638,
             "win": false
           },
           "1.0": {
             "kind": "scoop",
             "fill": 76.9824,
-            "same_day_pnl": -0.2563,
+            "same_day_pnl": -0.2711,
             "win": false
           },
           "1.5": {
             "kind": "scoop",
             "fill": 76.5936,
-            "same_day_pnl": 0.1364,
+            "same_day_pnl": 0.1216,
             "win": true
           },
           "2.0": {
             "kind": "scoop",
             "fill": 76.2048,
-            "same_day_pnl": 0.5291,
+            "same_day_pnl": 0.5143,
             "win": true
           },
           "3.0": {
             "kind": "scoop",
             "fill": 75.4272,
-            "same_day_pnl": 1.3144,
+            "same_day_pnl": 1.2996,
             "win": true
           }
         },
+        "excel": null,
+        "letters": {
+          "FQ": 0,
+          "ER": 0,
+          "EP": 0.028078107966272785,
+          "AH": 0,
+          "FR": 1,
+          "DF_lag1": "Bullish Belt Hold"
+        },
+        "letter_src": "open_features",
         "no_price": false
       }
     ],
-    "note": "A sits all. B fires shorts at the clock-clean 09:30 open. C fires a long only if the session low reached open\u2212X%; fill is that limit. 09-14 prices, when parquet has not landed, use Yahoo's regular-session open/high/low; the close column is the last print so far \u2014 not a 16:00 mark. Flatten's live card used last-close for DK; that is not the scoop reference. Scoop uses the official 09:30 open.",
+    "note": "Clock split: (A) short-only is a pre-open policy call \u2014 shorts fire at the clock-clean 09:30 open if S\u2264\u22123. Excel may pre-filter those names via open-knowable letters (FQ/ER/EP stretch); it does not own the sit. Deep-corr was not run. (B) long scoop is *intraday* after 09:30: trigger is first touch of open\u2212X% (session low as the daily proxy). Close / last grades the fire \u2014 it does not trigger it. 09-14 Yahoo close is last-so-far, not 16:00. Flatten's live card used last-close for DK; scoop uses the official 09:30 open.",
     "yahoo_overlay_n": 11
   },
   "sit_hard_red_fires": 0,

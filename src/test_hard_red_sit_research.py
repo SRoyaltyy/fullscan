@@ -114,6 +114,38 @@ def test_yahoo_overlay_does_not_clobber_official_open() -> None:
     assert indp.get("px_src") != "yahoo_session"
 
 
+def test_excel_letters_are_open_knowable_only() -> None:
+    letters = {
+        "FQ": "1", "ER": "0", "EP": "0.04",
+        "AH": "0", "FR": "1", "DF_lag1": "Bullish Hammer",
+    }
+    gate = hrs.short_letter_eligible(letters)
+    assert gate["owns_sit"] is False
+    assert gate["ok"] is True
+    assert "FQ" in gate["hits"] and "EP" in gate["hits"]
+    quiet = hrs.short_letter_eligible(
+        {"FQ": "0", "ER": "0", "EP": "0.01", "AH": "1", "FR": "0",
+         "DF_lag1": "None"})
+    assert quiet["status"] == "ineligible" and quiet["ok"] is False
+    unknown = hrs.short_letter_eligible({})
+    assert unknown["status"] == "unknown" and unknown["ok"] is True
+    row = hrs.excel_letters(
+        "2026-08-18", "FAKE",
+        index={("2026-08-18", "FAKE"): letters})
+    assert set(hrs.OPEN_LETTERS) <= set(row)
+    assert "close" not in row and "H" not in row and "I" not in row
+
+
+def test_scoop_trigger_ignores_close() -> None:
+    # 3% target 97; low 98 misses. A close of 90 must not fill.
+    fill, kind = fmc.dip_limit_px(100.0, 98.0, 3.0)
+    assert fill is None and kind == "no_dip"
+    # Signature has no close argument — close cannot leak into the trigger.
+    import inspect
+    names = inspect.signature(fmc.dip_limit_px).parameters
+    assert "close" not in names and "last" not in names
+
+
 def test_dip_limit_clock_clean() -> None:
     fill, kind = fmc.dip_limit_px(100.0, 98.0, 1.5)
     assert kind == "scoop" and abs(fill - 98.5) < 1e-9
@@ -295,16 +327,22 @@ def test_run_synthetic_board() -> None:
     ]
     bars[("INDP", hrs.ASOF)] = {"open": 5.0, "low": 4.7, "close": None}
     bars[("BKV", hrs.ASOF)] = {"open": 25.0, "low": 24.0, "close": None}
-    payload = hrs.run(
-        panel=panel, bars=bars, fees=ZERO_FEES, regime=regime,
-        flatten_days=flat, look_rows_0914=look, write=False,
-        skip_look=True)
+    from unittest import mock
+    with mock.patch.object(hrs, "load_letter_index", return_value={}), \
+            mock.patch.object(hrs, "_compute_letters", return_value=None):
+        payload = hrs.run(
+            panel=panel, bars=bars, fees=ZERO_FEES, regime=regime,
+            flatten_days=flat, look_rows_0914=look, write=False,
+            skip_look=True)
     assert payload["sit_hard_red_fires"] == 0
     assert payload["verdict_short"]["label"] in ("KEEP", "KILL")
     assert payload["verdict_x"]["label"] in ("KEEP", "KILL")
     md = hrs.render_md(payload)
-    assert "Short-only:" in md
+    assert "short-only" in md.lower()
+    assert "Clock split" in md
+    assert "intraday" in md.lower()
     assert "dip-scoop" in md.lower() or "scoop" in md.lower()
+    assert payload.get("clock_split", {}).get("excel_owns_sit") is False
     assert "2026-09-14" in md
     assert "flatten_robust" in md
     assert hrs.LIVE_COMBO in md
@@ -320,6 +358,7 @@ def test_md_lists_the_gate() -> None:
     payload = {
         "verdict_short": {"label": "KILL", "why": "thin shorts"},
         "verdict_x": {"label": "KILL", "why": "thin scoops"},
+        "clock_split": {"excel_owns_sit": False},
         "best_x": {"dip_pct": 1.5},
         "from_date": "2026-08-13", "to_date": "2026-09-14",
         "n_sessions": 22,
@@ -352,6 +391,8 @@ def test_md_lists_the_gate() -> None:
 
 def main() -> None:
     test_yahoo_overlay_does_not_clobber_official_open()
+    test_excel_letters_are_open_knowable_only()
+    test_scoop_trigger_ignores_close()
     test_dip_limit_clock_clean()
     test_hard_red_skip_modes()
     test_default_sit_still_blocks_long_and_short()
@@ -361,7 +402,7 @@ def main() -> None:
     test_after_fee_and_keep_kill()
     test_run_synthetic_board()
     test_md_lists_the_gate()
-    print("test_hard_red_sit_research: 10 ok")
+    print("test_hard_red_sit_research: 12 ok")
 
 
 if __name__ == "__main__":

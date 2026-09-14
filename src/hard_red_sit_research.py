@@ -1,15 +1,18 @@
 """Hard-red sit experiment — research only.
 
-Cyrus war-room 2026-09-14: HARD-RED (S≈−11) sat every new Webull lot,
-including the short kid, under live ``combo_sh_macd_5050_shared``. Flatten
-``.io`` would-haves sat too.
+Manager lock / clock split (do not invert):
 
-Question, before any live change:
+  **A short-only on hard-red** — pre-open policy, decided before 09:30.
+  Excel may pre-filter *which* shorts are eligible via open-knowable
+  CLEAR / letters only (FQ / ER / EP / AH / FR / DF_lag1). Excel does
+  **not** own the sit. Deep-corr is not waited on.
 
-  (A) current full sit on S≤−3
-  (B) hard-red **short-only** (shorts fire, longs sit)
-  (C) hard-red longs only after a clock-clean open−X% dip
-      (grid 0.5 / 1 / 1.5 / 2 / 3), mined walk-forward
+  **B long dip-scoop open−X%** — **intraday**, after 09:30. Open is
+  known. Trigger is first touch of open−X% on same-day OHLC (session
+  low as the daily first-hit proxy). Close is the *grade* only — never
+  the trigger.
+
+Live control remains full sit (S≤−3 blocks long and short).
 
 KEEP bar: ≥30 fires where possible, >55% after Futubull fees, both tapes
 (Webull combo + flatten/io) if data allows. Thin n is a KILL, not a wink.
@@ -55,6 +58,14 @@ FLATTEN_HOLD = 3  # flatten_robust io_hold = 3d
 WEBULL_0914_LONGS = ("INDP", "GPRO", "VERI", "HUT")
 WEBULL_0914_SHORTS = ("BKV",)
 FLATTEN_0914 = ("CVE", "BG", "NVT", "DK")
+
+# Clock-clean Excel letter panel. Open-knowable only — no same-row H/I.
+LETTER_CSV = ROOT / "excel_bot" / "research" / "excel_clear_letter_panel.csv"
+OPEN_LETTERS = ("FQ", "ER", "EP", "AH", "FR", "DF_lag1")
+# Stretch letters used as a short *eligibility* hint (confirmed as LONG
+# avoids on the Yahoo analog). Not a short CLEAR. Deep-corr not run.
+SHORT_STRETCH = ("FQ", "ER", "EP")
+_LETTER_INDEX: dict | None = None
 
 
 def clock_bar(ticker: str, date: str, bars=None) -> dict:
@@ -111,6 +122,182 @@ def yahoo_session_overlay(tickers: list[str], date: str) -> dict:
             "close": fm._finite(rec.get("close")),
             "src": "yahoo_session",
         }
+    return out
+
+
+def load_letter_index(path: Path | None = None) -> dict:
+    """Clock-clean CLEAR letter panel: date+ticker → FQ/ER/EP/AH/FR/DF_lag1."""
+    global _LETTER_INDEX
+    if _LETTER_INDEX is not None and path is None:
+        return _LETTER_INDEX
+    p = path or LETTER_CSV
+    out: dict = {}
+    if not p.is_file():
+        if path is None:
+            _LETTER_INDEX = out
+        return out
+    import csv
+    with p.open(encoding="utf-8", newline="") as fh:
+        for rec in csv.DictReader(fh):
+            d = str(rec.get("date") or "")[:10]
+            t = fm._tick(rec.get("ticker"))
+            if not d or not t:
+                continue
+            out[(d, t)] = {k: rec.get(k) for k in OPEN_LETTERS}
+    if path is None:
+        _LETTER_INDEX = out
+    return out
+
+
+def _prior_ohlc_bars(ticker: str, date: str, n: int = 20) -> list[dict]:
+    """Completed session bars strictly before ``date``. No same-row peek."""
+    t = fm._tick(ticker)
+    if not t:
+        return []
+    try:
+        df = tl._ohlc_bars()
+    except Exception:
+        return []
+    if df is None or getattr(df, "empty", True):
+        return []
+    try:
+        sub = df.xs(t, level=1)
+    except Exception:
+        return []
+    rows = []
+    try:
+        recs = sub.reset_index().to_dict(orient="records")
+    except Exception:
+        return []
+    for rec in recs:
+        d = str(rec.get("date") or "")[:10]
+        if not d or d >= date:
+            continue
+        o = fm._finite(rec.get("open"))
+        c = fm._finite(rec.get("close"))
+        if o is None or c is None:
+            continue
+        h = fm._finite(rec.get("high"))
+        low = fm._finite(rec.get("low"))
+        rows.append({
+            "date": d, "o": o,
+            "h": h if h is not None else c,
+            "l": low if low is not None else c,
+            "c": c,
+            "v": float(rec.get("volume") or rec.get("vol") or 0),
+        })
+    rows.sort(key=lambda r: r["date"])
+    return rows[-n:]
+
+
+def _compute_letters(ticker: str, date: str) -> dict | None:
+    """Open-knowable letters from prior bars + excel_open_features.
+
+    Passes ``today_open=None`` so J is blank — stretch letters FQ/ER/EP
+    do not need today's open. Never feeds today's H/L/C.
+    """
+    prior = _prior_ohlc_bars(ticker, date)
+    if len(prior) < 6:
+        return None
+    if any(b.get("date") >= date for b in prior):
+        raise ValueError(f"LEAK abort: same-row bar in prior {ticker} {date}")
+    try:
+        import sys
+        eng = str(ROOT / "excel_bot" / "engine")
+        if eng not in sys.path:
+            sys.path.insert(0, eng)
+        from excel_open_features import open_features
+    except Exception:
+        return None
+    xl = open_features(prior, None)
+    if xl.get("same_row_df") or xl.get("same_row_bb") or xl.get("same_row_bq"):
+        raise ValueError(f"LEAK abort: same-row DF/BB/BQ {ticker} {date}")
+    return {
+        "FQ": xl.get("FQ"),
+        "ER": xl.get("ER"),
+        "EP": xl.get("EP"),
+        "AH": xl.get("AH"),
+        "FR": xl.get("FR"),
+        "DF_lag1": xl.get("df") or "None",
+        "_src": "open_features",
+        "_prior_date": prior[-1].get("date"),
+    }
+
+
+def excel_letters(date: str, ticker: str, index: dict | None = None) -> dict:
+    """Open-knowable CLEAR letters for one name-day. No close-knowable fields."""
+    t = fm._tick(ticker)
+    idx = index if index is not None else load_letter_index()
+    rec = (idx or {}).get((date, t))
+    src = "panel"
+    if rec is None:
+        rec = _compute_letters(t, date) or {}
+        src = rec.get("_src") or "missing"
+    out = {"date": date, "ticker": t, "src": src}
+    for k in OPEN_LETTERS:
+        out[k] = rec.get(k)
+    banned = ("H", "I", "close", "core_score", "M")
+    for k in banned:
+        if k in out and k not in OPEN_LETTERS:
+            raise ValueError(f"LEAK abort: close-knowable {k} on letter row")
+    return out
+
+
+def _num_letter(v):
+    if v is None or v == "" or v == "None":
+        return None
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        return None
+
+
+def short_letter_eligible(letters: dict | None) -> dict:
+    """Pre-filter only. Excel does not own the sit.
+
+    Eligible if an open-knowable stretch letter is on (FQ=1 / ER=1 /
+    EP≥0.03). Those letters CLEAR as *long avoids* on the Yahoo analog
+    — here they only mark “yesterday already ran,” a fade hint for the
+    short kid. Missing letters → ``unknown`` (do not invent a sit).
+    Deep-corr is not run; this is not a short CLEAR.
+    """
+    letters = letters or {}
+    fq = _num_letter(letters.get("FQ"))
+    er = _num_letter(letters.get("ER"))
+    ep = _num_letter(letters.get("EP"))
+    have = any(v is not None for v in (fq, er, ep))
+    hits = []
+    if fq is not None and fq >= 1:
+        hits.append("FQ")
+    if er is not None and er >= 1:
+        hits.append("ER")
+    if ep is not None and ep >= 0.03:
+        hits.append("EP")
+    if not have:
+        status = "unknown"
+        ok = True  # pass-through — do not invent a block
+    else:
+        status = "eligible" if hits else "ineligible"
+        ok = bool(hits)
+    return {
+        "ok": ok,
+        "status": status,
+        "hits": hits,
+        "letters": {k: letters.get(k) for k in OPEN_LETTERS},
+        "owns_sit": False,
+    }
+
+
+def stamp_excel_shorts(fires: list[dict], index: dict | None = None) -> list[dict]:
+    out = []
+    for f in fires:
+        rec = dict(f)
+        letters = excel_letters(f.get("date") or "", f.get("ticker") or "",
+                                index=index)
+        gate = short_letter_eligible(letters)
+        rec["excel"] = gate
+        rec["excel_src"] = letters.get("src")
+        out.append(rec)
     return out
 
 
@@ -543,7 +730,7 @@ def _pin_would(date: str, tickers: list[str], side: str) -> list[dict]:
 def counterfactual_0914(*, panel: dict, recs: list[dict], spec: dict,
                         bars, fees, regime, flatten_days: list[dict],
                         look_rows: list[dict] | None = None) -> dict:
-    """What 2026-09-14 would have done under A / B / C. No live submit."""
+    """What 2026-09-14 would have done under A (pre-open short) / B (intraday scoop)."""
     s = fmb.morning_s(regime, ASOF)
     rows = look_rows
     if rows is None:
@@ -611,6 +798,8 @@ def counterfactual_0914(*, panel: dict, recs: list[dict], spec: dict,
         short_pnl = None
         if side == "short" and o is not None and c is not None:
             short_pnl = round(after_fee_pnl(1, o, c, side="short", fees=fees), 4)
+        letters = excel_letters(ASOF, t)
+        gate = short_letter_eligible(letters) if side == "short" else None
         return {
             "ticker": t, "side": side, "sleeve": sleeve,
             "open": o, "low": low, "close": c,
@@ -622,6 +811,9 @@ def counterfactual_0914(*, panel: dict, recs: list[dict], spec: dict,
             ),
             "same_day_oc_pnl_short": short_pnl,
             "scoops": scoops,
+            "excel": gate,
+            "letters": {k: letters.get(k) for k in OPEN_LETTERS},
+            "letter_src": letters.get("src"),
             "no_price": o is None,
         }
 
@@ -639,13 +831,16 @@ def counterfactual_0914(*, panel: dict, recs: list[dict], spec: dict,
         "webull_would": webull,
         "flatten_would": flatten,
         "note": (
-            "A sits all. B fires shorts at the clock-clean 09:30 open. "
-            "C fires a long only if the session low reached open−X%; "
-            "fill is that limit. 09-14 prices, when parquet has not "
-            "landed, use Yahoo's regular-session open/high/low; the "
-            "close column is the last print so far — not a 16:00 mark. "
-            "Flatten's live card used last-close for DK; that is not "
-            "the scoop reference. Scoop uses the official 09:30 open."
+            "Clock split: (A) short-only is a pre-open policy call — "
+            "shorts fire at the clock-clean 09:30 open if S≤−3. Excel "
+            "may pre-filter those names via open-knowable letters "
+            "(FQ/ER/EP stretch); it does not own the sit. Deep-corr "
+            "was not run. (B) long scoop is *intraday* after 09:30: "
+            "trigger is first touch of open−X% (session low as the "
+            "daily proxy). Close / last grades the fire — it does not "
+            "trigger it. 09-14 Yahoo close is last-so-far, not 16:00. "
+            "Flatten's live card used last-close for DK; scoop uses "
+            "the official 09:30 open."
         ),
         "yahoo_overlay_n": len(overlay),
     }
@@ -708,10 +903,15 @@ def _plain_0914(cf: dict) -> list[str]:
             last = r.get("close")
             how = "last" if r.get("close_is_last") else "close"
             pnl = _n(r.get("same_day_oc_pnl_short"))
+            xl = r.get("excel") or {}
+            xl_s = (
+                f", Excel {xl.get('status')}"
+                + (f" ({','.join(xl.get('hits') or [])})" if xl.get("hits") else "")
+            )
             bits.append(
                 f"{r['ticker']} (short at open {_pxs(r.get('open'))} → "
                 f"{how} {_pxs(last)}; 1-share after-fee {pnl}, "
-                f"fee-dominated, not cash-book size)"
+                f"fee-dominated, not cash-book size{xl_s})"
             )
         lines.append(
             "Webull shorts that sat (the short kid): "
@@ -730,6 +930,7 @@ def _plain_0914(cf: dict) -> list[str]:
 
 def render_md(payload: dict) -> str:
     v_s = payload.get("verdict_short") or {}
+    v_sx = payload.get("verdict_short_excel") or {}
     v_x = payload.get("verdict_x") or {}
     best = payload.get("best_x") or {}
     cf = payload.get("counterfactual_0914") or {}
@@ -737,13 +938,31 @@ def render_md(payload: dict) -> str:
     lines = [
         "# Hard-red sit experiment",
         "",
-        f"**Short-only: {v_s.get('label') or 'KILL'}.** "
-        f"**Best dip-scoop X={best.get('dip_pct') if best else '—'}%: "
-        f"{v_x.get('label') or 'KILL'}.**",
+        f"**A short-only (pre-open): {v_s.get('label') or 'KILL'}.** "
+        f"**B dip-scoop X={best.get('dip_pct') if best else '—'}% "
+        f"(intraday): {v_x.get('label') or 'KILL'}.**",
         "",
         "Research only. Live `flatten_robust` buys and Webull "
         f"`{LIVE_COMBO}` stay on full hard-red sit. This board does "
-        "not wire either idea.",
+        "not wire either idea. Excel does not own the sit. Deep-corr "
+        "was not waited on.",
+        "",
+        "## Clock split (Manager lock)",
+        "",
+        "**A short-only** is a **pre-open** policy decision, made "
+        "before 09:30 when morning S is already ≤−3. The short kid "
+        "may fire at the official open. Excel may pre-filter "
+        "short-eligible names via open-knowable CLEAR letters only "
+        "(`FQ` / `ER` / `EP` stretch = yesterday already ran). Those "
+        "letters CLEAR as *long avoids* on the Yahoo analog — they "
+        "are a fade hint here, **not** a short CLEAR. Missing letters "
+        "pass through. Excel does **not** own the sit.",
+        "",
+        "**B long dip-scoop** is **intraday**, after 09:30. Open is "
+        "known. The trigger is first touch of open−X% on same-day "
+        "OHLC (session low = daily first-hit proxy). Close / last / "
+        "Gap / Finviz Price never trigger. Close only grades after "
+        "fees.",
         "",
         "## Board — what would have happened",
         "",
@@ -774,20 +993,20 @@ def render_md(payload: dict) -> str:
         "full-sample winner that dies OOS is KILL. Thin n is KILL.",
         "",
         "After-fee caveat: every graded fire pays the Futubull US "
-        "round-trip. Dip fills assume that if the official session "
-        "**low** printed at or through open×(1−X%), the limit filled "
-        "at that target. Daily OHLC cannot prove the print happened "
-        "after 09:30, so scoop P&L is slightly optimistic. A missing "
-        "09:30 open is a skip — never Gap, last, or prior close. "
-        "09-14 may lack a 16:00 mark; those rows stay ungraded.",
+        "round-trip. Scoop **trigger** is open + session low only "
+        "(first touch of open−X%). Close is the grade, not the "
+        "trigger. Daily OHLC cannot prove the print happened after "
+        "09:30, so scoop P&L is slightly optimistic. A missing 09:30 "
+        "open is a skip — never Gap, last, or prior close. 09-14 may "
+        "lack a 16:00 mark; those rows stay ungraded.",
         "",
         "## Webull combo tape",
         "",
         f"Cash book is the audited `simulate_shared` ledger on "
         f"`{LIVE_COMBO}` (short news🔴 ∩ MACD-up + hot-4, shared "
-        f"50/50, $10k, whole shares, sell first). (A) sit is the "
-        f"live gate. (B) lets the short kid fire on hard-red. (C) "
-        f"lets longs limit-buy after a clock-clean open−X%.",
+        f"50/50, $10k, whole shares, sell first). Live sit is the "
+        f"control. (A) is pre-open short-only. (B) is the after-09:30 "
+        f"open−X% scoop (low touches the limit; close grades).",
         "",
         "| Variant | Mode | Book% | Hard-red fires | After-fee win | "
         "Hard-red $ | Book win | Audit |",
@@ -810,10 +1029,11 @@ def render_md(payload: dict) -> str:
         "",
         "## Flatten / .io tape",
         "",
-        "Long book only (`flatten_robust` has no short kid). (A) sit "
-        "and (B) short-only print **zero** new lots — same as live. "
-        "(C) scoops the hard-red would-have .io names after open−X%, "
-        f"1 share each, exit at the {FLATTEN_HOLD}d horizon close.",
+        "Long book only (`flatten_robust` has no short kid). Live sit "
+        "and (A) short-only print **zero** new lots — same as live. "
+        "(B) scoops the hard-red would-have .io names after open−X%, "
+        f"1 share each, exit at the {FLATTEN_HOLD}d horizon close. "
+        "Trigger still uses open+low only.",
         "",
         "| Variant | Hard-red fires | After-fee win | After-fee $ |",
         "|---|---:|---:|---:|",
@@ -893,10 +1113,13 @@ def render_md(payload: dict) -> str:
         "",
         "## KEEP / KILL",
         "",
-        f"**Short-only: {v_s.get('label')}.** {v_s.get('why')}",
+        f"**A short-only (pre-open): {v_s.get('label')}.** {v_s.get('why')}",
         "",
-        f"**Dip-scoop X={best.get('dip_pct') if best else '—'}: "
-        f"{v_x.get('label')}.** {v_x.get('why')}",
+        f"**A · Excel letter pre-filter: {v_sx.get('label') or 'KILL'}.** "
+        f"{v_sx.get('why') or ''}",
+        "",
+        f"**B dip-scoop X={best.get('dip_pct') if best else '—'}% "
+        f"(intraday): {v_x.get('label')}.** {v_x.get('why')}",
         "",
         "Do not merge a live policy change from this PR.",
         "",
@@ -948,17 +1171,29 @@ def run(*, from_date: str = WINDOW_START, to_date: str | None = ASOF,
         mode=fmc.HARD_RED_SIT)
     sit_f = fire_stats(hard_red_fires(sit, bars=bars, fees=fees))
     webull_rows.append(book_row(
-        sit, sit_f, label="(A) full sit", mode=fmc.HARD_RED_SIT))
+        sit, sit_f, label="live sit (control)", mode=fmc.HARD_RED_SIT))
     books["sit"] = sit
 
     short = simulate_combo(
         panel, recs, spec, bars=bars, fees=fees, regime=regime,
         mode=fmc.HARD_RED_SHORT_ONLY)
-    short_f = fire_stats(hard_red_fires(
-        short, bars=bars, fees=fees, side="short"))
+    short_raw = hard_red_fires(short, bars=bars, fees=fees, side="short")
+    letter_idx = load_letter_index()
+    short_stamped = stamp_excel_shorts(short_raw, index=letter_idx)
+    short_f = fire_stats(short_stamped)
+    short_xl = fire_stats([
+        f for f in short_stamped
+        if (f.get("excel") or {}).get("ok")
+        and (f.get("excel") or {}).get("status") != "ineligible"
+    ])
+    # unknown letters pass through; ineligible drop.
     webull_rows.append(book_row(
-        short, short_f, label="(B) short-only",
+        short, short_f, label="(A) short-only · pre-open",
         mode=fmc.HARD_RED_SHORT_ONLY))
+    webull_rows.append(book_row(
+        short, short_xl,
+        label="(A) short-only · Excel letter pre-filter",
+        mode="short_only_excel"))
     books["short_only"] = short
 
     grid = []
@@ -969,7 +1204,7 @@ def run(*, from_date: str = WINDOW_START, to_date: str | None = ASOF,
         fr = fire_stats(hard_red_fires(
             bk, bars=bars, fees=fees, side="long"))
         row = book_row(
-            bk, fr, label=f"(C) scoop {x:g}%",
+            bk, fr, label=f"(B) scoop {x:g}% · after 09:30",
             mode=fmc.HARD_RED_DIP_SCOOP, dip_pct=x)
         webull_rows.append(row)
         grid.append(row)
@@ -981,9 +1216,9 @@ def run(*, from_date: str = WINDOW_START, to_date: str | None = ASOF,
         except Exception:
             flatten_days = []
     flat_rows = [
-        {"label": "(A) full sit", "mode": fmc.HARD_RED_SIT,
+        {"label": "live sit (control)", "mode": fmc.HARD_RED_SIT,
          **fire_stats([])},
-        {"label": "(B) short-only (N/A — long book)",
+        {"label": "(A) short-only (N/A — flatten has no short kid)",
          "mode": fmc.HARD_RED_SHORT_ONLY, **fire_stats([])},
     ]
     flat_grid = []
@@ -992,7 +1227,7 @@ def run(*, from_date: str = WINDOW_START, to_date: str | None = ASOF,
             flatten_days, cal, bars=bars, fees=fees,
             dip_pct=x, mode=fmc.HARD_RED_DIP_SCOOP)
         st = fire_stats(fires)
-        row = {"label": "(C) scoop", "mode": fmc.HARD_RED_DIP_SCOOP,
+        row = {"label": "(B) scoop", "mode": fmc.HARD_RED_DIP_SCOOP,
                "dip_pct": x, **st}
         flat_rows.append(row)
         flat_grid.append(row)
@@ -1023,7 +1258,15 @@ def run(*, from_date: str = WINDOW_START, to_date: str | None = ASOF,
         win_rate=short_f.get("win_rate"),
         tapes_n=short_tapes,
         wf_ok=wf_payload.get("wf_short_ok"),
-        label="hard-red short-only",
+        label="A short-only (pre-open)",
+    )
+    v_short_xl = decide_verdict(
+        n_fires=short_xl.get("n_fires") or 0,
+        win_rate=short_xl.get("win_rate"),
+        tapes_n={"webull": {k: short_xl.get(k) for k in
+                            ("n_fires", "win_rate", "pnl")}},
+        wf_ok=None,
+        label="A short-only · Excel letter pre-filter",
     )
     # Single-tape exception: flatten cannot apply. Re-grade without
     # demanding both tapes, but keep thin / win / WF gates.
@@ -1080,7 +1323,7 @@ def run(*, from_date: str = WINDOW_START, to_date: str | None = ASOF,
         win_rate=pooled_wr,
         tapes_n=x_tapes,
         wf_ok=wf_x,
-        label=f"hard-red dip-scoop X={bx if bx is not None else '—'}",
+        label=f"B dip-scoop X={bx if bx is not None else '—'}% (intraday)",
     )
 
     cf = counterfactual_0914(
@@ -1119,7 +1362,20 @@ def run(*, from_date: str = WINDOW_START, to_date: str | None = ASOF,
             "wf_short_ok": wf_payload.get("wf_short_ok"),
             "wf_x_ok": wf_payload.get("wf_x_ok"),
         },
+        "clock_split": {
+            "A": "short-only · pre-open policy · Excel letters may filter",
+            "B": "long dip-scoop · after 09:30 · open known, close grades",
+            "excel_owns_sit": False,
+            "deep_corr": "not waited",
+            "open_letters": list(OPEN_LETTERS),
+            "short_stretch": list(SHORT_STRETCH),
+        },
         "verdict_short": v_short,
+        "verdict_short_excel": v_short_xl,
+        "excel_short": {
+            k: short_xl.get(k) for k in
+            ("n_fires", "n_graded", "n_wins", "win_rate", "pnl")
+        },
         "verdict_x": v_x,
         "counterfactual_0914": cf,
         "sit_hard_red_fires": sit_f.get("n_fires"),

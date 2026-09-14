@@ -452,12 +452,14 @@ def hard_red_skip_new(side: str | None, mode: str | None = HARD_RED_SIT) -> bool
 
 
 def dip_limit_px(open_px, low_px, dip_pct):
-    """Clock-clean limit: fill at open×(1−X%) only if the session low hit it.
+    """Intraday first-touch of open−X%. Close is never an input.
 
-    ``open_px`` must be the official 09:30 print (never Gap / last / close).
-    Returns ``(fill, kind)`` where kind is ``scoop`` / ``no_dip`` /
-    ``no_open`` / ``no_low``. Daily OHLC cannot prove the dip printed
-    after 09:30 — if low ≤ target we assume the limit filled.
+    ``open_px`` is the official 09:30 print (known at the open).
+    ``low_px`` is the session low — daily-bar proxy for “price first
+    hit the limit.” Do **not** pass close, last, Gap, or Finviz Price.
+    Returns ``(fill, kind)`` = ``scoop`` / ``no_dip`` / ``no_open`` /
+    ``no_low``. If low ≤ target we assume the limit filled (slightly
+    optimistic — OHLC cannot prove the print happened after 09:30).
     """
     try:
         o = float(open_px)
