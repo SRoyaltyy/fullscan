@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_news_g_h1/union_earn_react_h3 w=0.5,0.5 net=priority
 
-Cash book **+20.31%** ($12,031) · signal-only (no cash/fees) was —. Starts YES **11/21**. Fills 212 · skips 242 · realized $+1991.42.
+Cash book **+19.34%** ($11,934) · signal-only (no cash/fees) was —. Starts YES **6/22**. Fills 218 · skips 246 · realized $+1766.21.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $2,109.17.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $6,018.39.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -391,12 +391,26 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | `IOT` | 6 | $38.65 | $38.23 | -2.55 | — | +0.00 | -2.55 | -40.05 | — |
 | 2026-09-10 | `LULU` | 3 | $99.72 | $98.71 | -3.03 | — | +0.00 | -3.03 | +1.68 | — |
 | 2026-09-10 | `MAMA` | 19 | $15.23 | $15.26 | +0.48 | — | +0.00 | +0.48 | -8.36 | — |
+| 2026-09-11 | `ORCL` | 4 | — | $164.43 | +0.00 | $150.28 | -56.60 | -56.60 | +0.00 | -56.60 |
+| 2026-09-11 | `ADBE` | 3 | — | $242.17 | +0.00 | $252.23 | +30.18 | +30.18 | +0.00 | +30.18 |
+| 2026-09-11 | `RH` | 5 | — | $135.71 | +0.00 | $134.07 | -8.20 | -8.20 | +0.00 | -8.20 |
 | 2026-09-11 | `CPRT` | 23 | — | $32.01 | +0.00 | $29.95 | -47.38 | -47.38 | +0.00 | -47.38 |
+| 2026-09-11 | `DSGX` | 10 | — | $71.71 | +0.00 | $76.04 | +43.30 | +43.30 | +0.00 | +43.30 |
+| 2026-09-11 | `KR` | 13 | — | $56.02 | +0.00 | $58.49 | +32.11 | +32.11 | +0.00 | +32.11 |
 | 2026-09-11 | `LPTH` | 79 | — | $9.37 | +0.00 | $9.20 | -13.43 | -13.43 | +0.00 | -13.43 |
-| 2026-09-11 | `AMTX` | 1030 | — | $2.04 | +0.00 | $2.01 | -30.90 | -30.90 | +0.00 | -30.90 |
-| 2026-09-11 | `BAK` | 991 | — | $2.12 | +0.00 | $2.08 | -39.64 | -39.64 | +0.00 | -39.64 |
-| 2026-09-11 | `HPE` | 37 | — | $56.37 | +0.00 | $62.09 | +211.64 | +211.64 | +0.00 | +211.64 |
-| 2026-09-11 | `VST` | 14 | — | $148.82 | +0.00 | $148.38 | -6.16 | -6.16 | +0.00 | -6.16 |
+| 2026-09-11 | `REF` | 57 | — | $13.10 | +0.00 | $14.03 | +53.01 | +53.01 | +0.00 | +53.01 |
+| 2026-09-11 | `AMTX` | 1530 | — | $2.04 | +0.00 | $2.01 | -45.90 | -45.90 | +0.00 | -45.90 |
+| 2026-09-11 | `BAK` | 1454 | — | $2.12 | +0.00 | $2.08 | -58.16 | -58.16 | +0.00 | -58.16 |
+| 2026-09-14 | `ORCL` | 4 | $150.28 | $141.42 | -35.44 | $144.72 | +13.20 | -22.24 | -92.04 | -78.84 |
+| 2026-09-14 | `ADBE` | 3 | $252.23 | $261.51 | +27.84 | $265.60 | +12.27 | +40.11 | +58.02 | +70.29 |
+| 2026-09-14 | `RH` | 5 | $134.07 | $131.40 | -13.35 | $134.17 | +13.85 | +0.50 | -21.55 | -7.70 |
+| 2026-09-14 | `CPRT` | 23 | $29.95 | $30.63 | +15.64 | $31.73 | +25.30 | +40.94 | -31.74 | -6.44 |
+| 2026-09-14 | `DSGX` | 10 | $76.04 | $77.06 | +10.20 | $80.02 | +29.60 | +39.80 | +53.50 | +83.10 |
+| 2026-09-14 | `KR` | 13 | $58.49 | $59.31 | +10.66 | $60.91 | +20.80 | +31.46 | +42.77 | +63.57 |
+| 2026-09-14 | `LPTH` | 79 | $9.20 | $8.85 | -27.65 | $9.11 | +20.54 | -7.11 | -41.08 | -20.54 |
+| 2026-09-14 | `REF` | 57 | $14.03 | $14.16 | +7.41 | $14.51 | +19.95 | +27.36 | +60.42 | +80.37 |
+| 2026-09-14 | `AMTX` | 1530 | $2.01 | $2.01 | +0.00 | — | +0.00 | +0.00 | -45.90 | — |
+| 2026-09-14 | `BAK` | 1454 | $2.08 | $2.05 | -43.62 | — | +0.00 | -43.62 | -101.78 | — |
 
 ## Each session (cash + holdings state)
 
@@ -422,18 +436,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | -11.47 | $113.29 | AVGO×2, CIEN×2, HPE×15, AI×68, CHPT×106, CPB×32, FIVE×2, MEI×48, FRNM×77, AMBA×4, ASAN×35, DOCU×4, DOMO×85, GWRE×1, IOT×6, LULU×3, MAMA×19, CRM×2, BAK×284, MSTR×4, BE×2, MRX×7 | $12,095.49 | +50.34 | -26.74 | — | FRNM, CRM, BAK, BE | $2,986.19 | $12,058.75 | AVGO×2, CIEN×2, HPE×15, AI×68, CHPT×106, CPB×32, FIVE×2, MEI×48, AMBA×4, ASAN×35, DOCU×4, DOMO×85, GWRE×1, IOT×6, LULU×3, MAMA×19, MSTR×4, MRX×7 |
 | 2026-09-09 | -13.95 | $2,986.19 | AVGO×2, CIEN×2, HPE×15, AI×68, CHPT×106, CPB×32, FIVE×2, MEI×48, AMBA×4, ASAN×35, DOCU×4, DOMO×85, GWRE×1, IOT×6, LULU×3, MAMA×19, MSTR×4, MRX×7 | $12,057.03 | -1.72 | -17.57 | — | AVGO, CIEN, HPE, AI, CHPT, CPB, FIVE, MEI, MSTR, MRX | $9,912.69 | $12,018.50 | AMBA×4, ASAN×35, DOCU×4, DOMO×85, GWRE×1, IOT×6, LULU×3, MAMA×19 |
 | 2026-09-10 | -13.28 | $9,912.69 | AMBA×4, ASAN×35, DOCU×4, DOMO×85, GWRE×1, IOT×6, LULU×3, MAMA×19 | $12,007.40 | -11.10 | +0.00 | — | AMBA, ASAN, DOCU, DOMO, GWRE, IOT, LULU, MAMA | $11,991.41 | $11,991.41 | — |
-| 2026-09-11 | +0.50 | $11,991.41 | — | $11,991.41 | -0.00 | +74.13 | CPRT, LPTH, AMTX, BAK, HPE, VST | — | $2,109.17 | $12,031.05 | CPRT×23, LPTH×79, AMTX×1030, BAK×991, HPE×37, VST×14 |
+| 2026-09-11 | +0.50 | $11,991.41 | — | $11,991.41 | -0.00 | -71.07 | ORCL, ADBE, RH, CPRT, DSGX, KR, LPTH, REF, AMTX, BAK | — | $1.43 | $11,865.34 | ORCL×4, ADBE×3, RH×5, CPRT×23, DSGX×10, KR×13, LPTH×79, REF×57, AMTX×1530, BAK×1454 |
+| 2026-09-14 | -11.00 | $1.43 | ORCL×4, ADBE×3, RH×5, CPRT×23, DSGX×10, KR×13, LPTH×79, REF×57, AMTX×1530, BAK×1454 | $11,817.03 | -48.31 | +155.51 | — | AMTX, BAK | $6,018.39 | $11,933.50 | ORCL×4, ADBE×3, RH×5, CPRT×23, DSGX×10, KR×13, LPTH×79, REF×57 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
 | Date | Side | Ticker | Shares | Px | Fees | P/L | Cash after | Equity change (sells only) | Why | Cameras |
 |---|---|---|---:|---:|---:|---:|---:|---:|---|---|
 | 2026-08-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 (unchanged overnight, no fees) · equity $10,000.00 vs prior close $10,000.00 (+0.00) | — |
-| 2026-08-13 09:30 ET | **BUY** | `INO` | 6172 | $0.81 | $68.51 | — | $4,932.17 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list flatten; ⚪; ret5=+13.2; combo leftover $5000.00; owner union_earn_react_h3 | join🟢 sector🟢 gen🟢 judge🟢 |
-| 2026-08-13 09:30 ET | **BUY** | `VOR` | 223 | $22.01 | $2.88 | — | $21.06 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list flatten; ⚪; ret5=+0.3; combo leftover $5000.00; owner union_earn_react_h3 | join🟢 sector🟢 gen🟢 judge🟢 |
+| 2026-08-13 09:30 ET | **BUY** | `INO` | 6172 | $0.81 | $68.51 | — | $4,932.17 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list flatten; ⚪; ret5=+13.2; combo leftover $5000.00; owner union_earn_react_h3 | join🟢 sector🟢 gen🟢 judge🟡 |
+| 2026-08-13 09:30 ET | **BUY** | `VOR` | 223 | $22.01 | $2.88 | — | $21.06 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list flatten; ⚪; ret5=+0.3; combo leftover $5000.00; owner union_earn_react_h3 | join🟢 sector🟢 gen🟢 judge🟡 |
 | 2026-08-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $21.06 | ▲ close $10,769.53 vs 09:30 $10,000.00 (session +840.92) | 16:00 close · cash $21.06 · equity $10,769.53 vs 09:30 $10,000.00 (+769.53; session marks +840.92) · 2 name(s) marked open→close (per-name table). INO×6172 09:30 $0.81 → close $0.90 +555.48; VOR×223 09:30 $22.01 → close $23.29 +285.44 | — |
 | 2026-08-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $21.06 | ▲ 09:30 equity $10,963.61 vs yday $10,769.53 (+194.08) | 09:30 open · cash $21.06 (unchanged overnight, no fees) · equity $10,963.61 vs prior close $10,769.53 (+194.08) | — |
-| 2026-08-14 09:30 ET | **BUY** | `BZAI` | 1 | $0.77 | $0.01 | — | $20.29 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ⚪; ret5=+20.4; combo leftover $1.32; owner union_earn_react_h3 | join🟢 sector🟢 gen🟢 news🟡 judge🟢 vol🟡 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `BZAI` | 1 | $0.77 | $0.01 | — | $20.29 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ⚪; ret5=+20.4; combo leftover $1.32; owner union_earn_react_h3 | join🟢 sector🟢 gen🟢 news🟡 judge🟡 vol🟡 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `DEFT` | 2 | $0.47 | $0.02 | — | $19.33 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ⚪; ret5=+11.1; combo leftover $1.32; owner union_earn_react_h3 | join🟢 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
 | 2026-08-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19.33 | ▲ close $11,884.07 vs 09:30 $10,963.61 (session +920.49) | 16:00 close · cash $19.33 · equity $11,884.07 vs 09:30 $10,963.61 (+920.46; session marks +920.49) · 4 name(s) marked open→close (per-name table). INO×6172 09:30 $0.93 → close $1.09 +987.52; VOR×223 09:30 $23.33 → close $23.03 -66.90; BZAI×1 09:30 $0.77 → close $0.59 -0.17; DEFT×2 09:30 $0.47 → close $0.49 +0.04 | — |
 | 2026-08-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $19.33 | ▼ 09:30 equity $11,733.80 vs yday $11,884.07 (-150.27) | 09:30 open · cash $19.33 (unchanged overnight, no fees) · equity $11,733.80 vs prior close $11,884.07 (-150.27) | — |
@@ -675,13 +690,21 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 09:30 ET | **SELL** | `MAMA` | 19 | $15.26 | $2.07 | $-12.47 | $11,991.41 | ▼ -12.47 after sell → book $11,991.41; vs 09:30 mark -2.06 | union_earn_react_h3: dropped from list after 3 sess (min 3) | — |
 | 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,991.41 | ▲ close $11,991.41 vs 09:30 $12,007.40 (session +0.00) | 16:00 close · cash $11,991.41 · no lots left · equity $11,991.41. | — |
 | 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,991.41 | ▲ 09:30 equity $11,991.41 vs yday $11,991.41 (-0.00) | 09:30 open · cash $11,991.41 (unchanged overnight, no fees) · equity $11,991.41 vs prior close $11,991.41 (-0.00) | — |
-| 2026-09-11 09:30 ET | **BUY** | `CPRT` | 23 | $32.01 | $2.06 | — | $11,253.12 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-1.2; combo leftover $749.46; owner union_earn_react_h3 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `LPTH` | 79 | $9.37 | $2.23 | — | $10,510.66 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=+6.9; combo leftover $749.46; owner union_earn_react_h3 | join🔴 sector🟢 gen🟡 news🟡 digest🟡 judge🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `AMTX` | 1030 | $2.04 | $13.29 | — | $8,396.17 | — | union ∩ news_g, no 🚨; gate news=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-5.9; combo leftover $2102.13; owner union_news_g_h1 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `BAK` | 991 | $2.12 | $12.78 | — | $6,282.47 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; 🔵; ret5=+19.4; combo leftover $2102.13; owner union_news_g_h1 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `HPE` | 37 | $56.37 | $2.10 | — | $4,194.68 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; 🔵; ⚪; ret5=+15.8; combo leftover $2102.13; owner union_news_g_h1 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `VST` | 14 | $148.82 | $2.03 | — | $2,109.17 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+10.4; combo leftover $2102.13; owner union_news_g_h1 | join🔴 sector🔴 gen🟡 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,109.17 | ▲ close $12,031.05 vs 09:30 $11,991.41 (session +74.13) | 16:00 close · cash $2,109.17 · equity $12,031.05 vs 09:30 $11,991.41 (+39.64; session marks +74.13) · 6 name(s) marked open→close (per-name table). CPRT×23 09:30 $32.01 → close $29.95 -47.38; LPTH×79 09:30 $9.37 → close $9.20 -13.43; AMTX×1030 09:30 $2.04 → close $2.01 -30.90; BAK×991 09:30 $2.12 → close $2.08 -39.64; HPE×37 09:30 $56.37 → close $62.09 +211.64; VST×14 09:30 $148.82 → close $148.38 -6.16 | — |
+| 2026-09-11 09:30 ET | **BUY** | `ORCL` | 4 | $164.43 | $2.00 | — | $11,331.68 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list flatten,earn_react; ⚪; ret5=+4.9; combo leftover $749.46; owner union_earn_react_h3 | join🟢 sector🟢 gen🟡 news🟢 digest🟡 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `ADBE` | 3 | $242.17 | $2.00 | — | $10,603.18 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-11.1; combo leftover $749.46; owner union_earn_react_h3 | join🟢 sector🟢 gen🟡 news🟢 digest🟡 judge🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `RH` | 5 | $135.71 | $2.00 | — | $9,922.62 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-9.2; combo leftover $749.46; owner union_earn_react_h3 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `CPRT` | 23 | $32.01 | $2.06 | — | $9,184.33 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-4.4; combo leftover $749.46; owner union_earn_react_h3 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `DSGX` | 10 | $71.71 | $2.02 | — | $8,465.21 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-9.1; combo leftover $749.46; owner union_earn_react_h3 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `KR` | 13 | $56.02 | $2.03 | — | $7,734.92 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-2.2; combo leftover $749.46; owner union_earn_react_h3 | join🔴 sector🟡 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `LPTH` | 79 | $9.37 | $2.23 | — | $6,992.47 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=+1.5; combo leftover $749.46; owner union_earn_react_h3 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `REF` | 57 | $13.10 | $2.16 | — | $6,243.60 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-6.9; combo leftover $749.46; owner union_earn_react_h3 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `AMTX` | 1530 | $2.04 | $19.74 | — | $3,102.67 | — | union ∩ news_g, no 🚨; gate news=good; list probable,yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+6.8; combo leftover $3121.80; owner union_news_g_h1 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `BAK` | 1454 | $2.12 | $18.76 | — | $1.43 | — | union ∩ news_g, no 🚨; gate news=good; list probable,yday_gainer,ohlc_hot; 🔵; ret5=+7.1; combo leftover $3121.80; owner union_news_g_h1 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.43 | ▼ close $11,865.34 vs 09:30 $11,991.41 (session -71.07) | 16:00 close · cash $1.43 · equity $11,865.34 vs 09:30 $11,991.41 (-126.07; session marks -71.07) · 10 name(s) marked open→close (per-name table). ORCL×4 09:30 $164.43 → close $150.28 -56.60; ADBE×3 09:30 $242.17 → close $252.23 +30.18; RH×5 09:30 $135.71 → close $134.07 -8.20; CPRT×23 09:30 $32.01 → close $29.95 -47.38; DSGX×10 09:30 $71.71 → close $76.04 +43.30; KR×13 09:30 $56.02 → close $58.49 +32.11; LPTH×79 09:30 $9.37 → close $9.20 -13.43; REF×57 09:30 $13.10 → close $14.03 +53.01; AMTX×1530 09:30 $2.04 → close $2.01 -45.90; BAK×1454 09:30 $2.12 → close $2.08 -58.16 | — |
+| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.43 | ▼ 09:30 equity $11,817.03 vs yday $11,865.34 (-48.31) | 09:30 open · cash $1.43 (unchanged overnight, no fees) · equity $11,817.03 vs prior close $11,865.34 (-48.31) | — |
+| 2026-09-14 09:30 ET | **SELL** | `AMTX` | 1530 | $2.01 | $20.02 | $-85.65 | $3,056.72 | ▼ -85.65 after sell → book $11,797.02; vs 09:30 mark -20.01 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `BAK` | 1454 | $2.05 | $19.02 | $-139.56 | $6,018.39 | ▼ -139.56 after sell → book $11,777.99; vs 09:30 mark -19.03 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,018.39 | ▲ close $11,933.50 vs 09:30 $11,817.03 (session +155.51) | 16:00 close · cash $6,018.39 · equity $11,933.50 vs 09:30 $11,817.03 (+116.47; session marks +155.51) · 8 name(s) marked open→close (per-name table). ORCL×4 09:30 $141.42 → close $144.72 +13.20; ADBE×3 09:30 $261.51 → close $265.60 +12.27; RH×5 09:30 $131.40 → close $134.17 +13.85; CPRT×23 09:30 $30.63 → close $31.73 +25.30; DSGX×10 09:30 $77.06 → close $80.02 +29.60; KR×13 09:30 $59.31 → close $60.91 +20.80; LPTH×79 09:30 $8.85 → close $9.11 +20.54; REF×57 09:30 $14.16 → close $14.51 +19.95 | — |
 
 ## Not taken
 
@@ -714,34 +737,34 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-17 | `OUST` | cash | leftover split 3.87 < 1 share @ 49.00 |
 | 2026-08-18 | `BZAI` | min_hold | union_earn_react_h3: dropped but min-hold 2/3 |
 | 2026-08-18 | `DEFT` | min_hold | union_earn_react_h3: dropped but min-hold 2/3 |
-| 2026-08-18 | `OXY` | hard_red | hard-red S=-6.20 sit; no new union_news_g_h1 |
-| 2026-08-18 | `APA` | hard_red | hard-red S=-6.20 sit; no new union_news_g_h1 |
-| 2026-08-18 | `COP` | hard_red | hard-red S=-6.20 sit; no new union_news_g_h1 |
-| 2026-08-18 | `ANGX` | hard_red | hard-red S=-6.20 sit; no new union_news_g_h1 |
-| 2026-08-18 | `HTHT` | hard_red | hard-red S=-6.20 sit; no new union_news_g_h1 |
-| 2026-08-18 | `IOVA` | hard_red | hard-red S=-6.20 sit; no new union_news_g_h1 |
-| 2026-08-18 | `GO` | hard_red | hard-red S=-6.20 sit; no new union_news_g_h1 |
-| 2026-08-18 | `ZLAB` | hard_red | hard-red S=-6.20 sit; no new union_news_g_h1 |
-| 2026-08-18 | `JLHL` | hard_red | hard-red S=-6.20 sit; no new union_earn_react_h3 |
-| 2026-08-18 | `FN` | hard_red | hard-red S=-6.20 sit; no new union_earn_react_h3 |
-| 2026-08-18 | `AS` | hard_red | hard-red S=-6.20 sit; no new union_earn_react_h3 |
-| 2026-08-18 | `DUOT` | hard_red | hard-red S=-6.20 sit; no new union_earn_react_h3 |
-| 2026-08-18 | `HD` | hard_red | hard-red S=-6.20 sit; no new union_earn_react_h3 |
-| 2026-08-18 | `KLAR` | hard_red | hard-red S=-6.20 sit; no new union_earn_react_h3 |
-| 2026-08-18 | `VNET` | hard_red | hard-red S=-6.20 sit; no new union_earn_react_h3 |
-| 2026-08-19 | `AMLX` | hard_red | hard-red S=-7.20 sit; no new union_news_g_h1 |
-| 2026-08-19 | `REAX` | hard_red | hard-red S=-7.20 sit; no new union_news_g_h1 |
-| 2026-08-19 | `ANGX` | hard_red | hard-red S=-7.20 sit; no new union_news_g_h1 |
-| 2026-08-19 | `KLAR` | hard_red | hard-red S=-7.20 sit; no new union_news_g_h1 |
-| 2026-08-19 | `AS` | hard_red | hard-red S=-7.20 sit; no new union_news_g_h1 |
-| 2026-08-19 | `DVLT` | hard_red | hard-red S=-7.20 sit; no new union_earn_react_h3 |
-| 2026-08-19 | `ADI` | hard_red | hard-red S=-7.20 sit; no new union_earn_react_h3 |
-| 2026-08-19 | `JKHY` | hard_red | hard-red S=-7.20 sit; no new union_earn_react_h3 |
-| 2026-08-19 | `KC` | hard_red | hard-red S=-7.20 sit; no new union_earn_react_h3 |
-| 2026-08-19 | `KEYS` | hard_red | hard-red S=-7.20 sit; no new union_earn_react_h3 |
-| 2026-08-19 | `LOW` | hard_red | hard-red S=-7.20 sit; no new union_earn_react_h3 |
-| 2026-08-19 | `LZB` | hard_red | hard-red S=-7.20 sit; no new union_earn_react_h3 |
-| 2026-08-19 | `MRCY` | hard_red | hard-red S=-7.20 sit; no new union_earn_react_h3 |
+| 2026-08-18 | `OXY` | hard_red | hard-red S=-6.20 sit; no new long union_news_g_h1 |
+| 2026-08-18 | `APA` | hard_red | hard-red S=-6.20 sit; no new long union_news_g_h1 |
+| 2026-08-18 | `COP` | hard_red | hard-red S=-6.20 sit; no new long union_news_g_h1 |
+| 2026-08-18 | `ANGX` | hard_red | hard-red S=-6.20 sit; no new long union_news_g_h1 |
+| 2026-08-18 | `HTHT` | hard_red | hard-red S=-6.20 sit; no new long union_news_g_h1 |
+| 2026-08-18 | `IOVA` | hard_red | hard-red S=-6.20 sit; no new long union_news_g_h1 |
+| 2026-08-18 | `GO` | hard_red | hard-red S=-6.20 sit; no new long union_news_g_h1 |
+| 2026-08-18 | `ZLAB` | hard_red | hard-red S=-6.20 sit; no new long union_news_g_h1 |
+| 2026-08-18 | `JLHL` | hard_red | hard-red S=-6.20 sit; no new long union_earn_react_h3 |
+| 2026-08-18 | `FN` | hard_red | hard-red S=-6.20 sit; no new long union_earn_react_h3 |
+| 2026-08-18 | `AS` | hard_red | hard-red S=-6.20 sit; no new long union_earn_react_h3 |
+| 2026-08-18 | `DUOT` | hard_red | hard-red S=-6.20 sit; no new long union_earn_react_h3 |
+| 2026-08-18 | `HD` | hard_red | hard-red S=-6.20 sit; no new long union_earn_react_h3 |
+| 2026-08-18 | `KLAR` | hard_red | hard-red S=-6.20 sit; no new long union_earn_react_h3 |
+| 2026-08-18 | `VNET` | hard_red | hard-red S=-6.20 sit; no new long union_earn_react_h3 |
+| 2026-08-19 | `AMLX` | hard_red | hard-red S=-7.20 sit; no new long union_news_g_h1 |
+| 2026-08-19 | `REAX` | hard_red | hard-red S=-7.20 sit; no new long union_news_g_h1 |
+| 2026-08-19 | `ANGX` | hard_red | hard-red S=-7.20 sit; no new long union_news_g_h1 |
+| 2026-08-19 | `KLAR` | hard_red | hard-red S=-7.20 sit; no new long union_news_g_h1 |
+| 2026-08-19 | `AS` | hard_red | hard-red S=-7.20 sit; no new long union_news_g_h1 |
+| 2026-08-19 | `DVLT` | hard_red | hard-red S=-7.20 sit; no new long union_earn_react_h3 |
+| 2026-08-19 | `ADI` | hard_red | hard-red S=-7.20 sit; no new long union_earn_react_h3 |
+| 2026-08-19 | `JKHY` | hard_red | hard-red S=-7.20 sit; no new long union_earn_react_h3 |
+| 2026-08-19 | `KC` | hard_red | hard-red S=-7.20 sit; no new long union_earn_react_h3 |
+| 2026-08-19 | `KEYS` | hard_red | hard-red S=-7.20 sit; no new long union_earn_react_h3 |
+| 2026-08-19 | `LOW` | hard_red | hard-red S=-7.20 sit; no new long union_earn_react_h3 |
+| 2026-08-19 | `LZB` | hard_red | hard-red S=-7.20 sit; no new long union_earn_react_h3 |
+| 2026-08-19 | `MRCY` | hard_red | hard-red S=-7.20 sit; no new long union_earn_react_h3 |
 | 2026-08-21 | `AAP` | min_hold | union_earn_react_h3: dropped but min-hold 1/3 |
 | 2026-08-21 | `AEG` | min_hold | union_earn_react_h3: dropped but min-hold 1/3 |
 | 2026-08-21 | `ALVO` | min_hold | union_earn_react_h3: dropped but min-hold 1/3 |
@@ -764,12 +787,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-24 | `BKE` | min_hold | union_earn_react_h3: dropped but min-hold 1/3 |
 | 2026-08-24 | `PSEC` | min_hold | union_earn_react_h3: dropped but min-hold 1/3 |
 | 2026-08-24 | `ROST` | min_hold | union_earn_react_h3: dropped but min-hold 1/3 |
-| 2026-08-24 | `HOOD` | hard_red | hard-red S=-5.17 sit; no new union_news_g_h1 |
-| 2026-08-24 | `TRLV` | hard_red | hard-red S=-5.17 sit; no new union_news_g_h1 |
-| 2026-08-24 | `FCX` | hard_red | hard-red S=-5.17 sit; no new union_news_g_h1 |
-| 2026-08-24 | `NVAX` | hard_red | hard-red S=-5.17 sit; no new union_news_g_h1 |
-| 2026-08-24 | `ABUS` | hard_red | hard-red S=-5.17 sit; no new union_news_g_h1 |
-| 2026-08-24 | `PDD` | hard_red | hard-red S=-5.17 sit; no new union_earn_react_h3 |
+| 2026-08-24 | `HOOD` | hard_red | hard-red S=-5.17 sit; no new long union_news_g_h1 |
+| 2026-08-24 | `TRLV` | hard_red | hard-red S=-5.17 sit; no new long union_news_g_h1 |
+| 2026-08-24 | `FCX` | hard_red | hard-red S=-5.17 sit; no new long union_news_g_h1 |
+| 2026-08-24 | `NVAX` | hard_red | hard-red S=-5.17 sit; no new long union_news_g_h1 |
+| 2026-08-24 | `ABUS` | hard_red | hard-red S=-5.17 sit; no new long union_news_g_h1 |
+| 2026-08-24 | `PDD` | hard_red | hard-red S=-5.17 sit; no new long union_earn_react_h3 |
 | 2026-08-25 | `BEKE` | min_hold | union_earn_react_h3: dropped but min-hold 2/3 |
 | 2026-08-25 | `BJ` | min_hold | union_earn_react_h3: dropped but min-hold 2/3 |
 | 2026-08-25 | `BKE` | min_hold | union_earn_react_h3: dropped but min-hold 2/3 |
@@ -819,15 +842,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-31 | `GAP` | min_hold | union_earn_react_h3: dropped but min-hold 1/3 |
 | 2026-08-31 | `HAFN` | min_hold | union_earn_react_h3: dropped but min-hold 1/3 |
 | 2026-08-31 | `IREN` | min_hold | union_earn_react_h3: dropped but min-hold 1/3 |
-| 2026-08-31 | `TH` | hard_red | hard-red S=-5.85 sit; no new union_news_g_h1 |
-| 2026-08-31 | `CRM` | hard_red | hard-red S=-5.85 sit; no new union_news_g_h1 |
-| 2026-08-31 | `CRWD` | hard_red | hard-red S=-5.85 sit; no new union_news_g_h1 |
-| 2026-08-31 | `RBRK` | hard_red | hard-red S=-5.85 sit; no new union_news_g_h1 |
-| 2026-08-31 | `MRNA` | hard_red | hard-red S=-5.85 sit; no new union_news_g_h1 |
-| 2026-08-31 | `NOW` | hard_red | hard-red S=-5.85 sit; no new union_news_g_h1 |
-| 2026-08-31 | `MPC` | hard_red | hard-red S=-5.85 sit; no new union_news_g_h1 |
-| 2026-08-31 | `HAL` | hard_red | hard-red S=-5.85 sit; no new union_news_g_h1 |
-| 2026-08-31 | `LX` | hard_red | hard-red S=-5.85 sit; no new union_earn_react_h3 |
+| 2026-08-31 | `TH` | hard_red | hard-red S=-5.85 sit; no new long union_news_g_h1 |
+| 2026-08-31 | `CRM` | hard_red | hard-red S=-5.85 sit; no new long union_news_g_h1 |
+| 2026-08-31 | `CRWD` | hard_red | hard-red S=-5.85 sit; no new long union_news_g_h1 |
+| 2026-08-31 | `RBRK` | hard_red | hard-red S=-5.85 sit; no new long union_news_g_h1 |
+| 2026-08-31 | `MRNA` | hard_red | hard-red S=-5.85 sit; no new long union_news_g_h1 |
+| 2026-08-31 | `NOW` | hard_red | hard-red S=-5.85 sit; no new long union_news_g_h1 |
+| 2026-08-31 | `MPC` | hard_red | hard-red S=-5.85 sit; no new long union_news_g_h1 |
+| 2026-08-31 | `HAL` | hard_red | hard-red S=-5.85 sit; no new long union_news_g_h1 |
+| 2026-08-31 | `LX` | hard_red | hard-red S=-5.85 sit; no new long union_earn_react_h3 |
 | 2026-09-01 | `ADSK` | min_hold | union_earn_react_h3: dropped but min-hold 2/3 |
 | 2026-09-01 | `BBAR` | min_hold | union_earn_react_h3: dropped but min-hold 2/3 |
 | 2026-09-01 | `ESTC` | min_hold | union_earn_react_h3: dropped but min-hold 2/3 |
@@ -836,29 +859,29 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-01 | `GAP` | min_hold | union_earn_react_h3: dropped but min-hold 2/3 |
 | 2026-09-01 | `HAFN` | min_hold | union_earn_react_h3: dropped but min-hold 2/3 |
 | 2026-09-01 | `IREN` | min_hold | union_earn_react_h3: dropped but min-hold 2/3 |
-| 2026-09-01 | `BTE` | hard_red | hard-red S=-6.30 sit; no new union_news_g_h1 |
-| 2026-09-01 | `CTMX` | hard_red | hard-red S=-6.30 sit; no new union_news_g_h1 |
-| 2026-09-01 | `NTNX` | hard_red | hard-red S=-6.30 sit; no new union_news_g_h1 |
-| 2026-09-01 | `TRLV` | hard_red | hard-red S=-6.30 sit; no new union_news_g_h1 |
-| 2026-09-01 | `SLBT` | hard_red | hard-red S=-6.30 sit; no new union_news_g_h1 |
-| 2026-09-01 | `MRNA` | hard_red | hard-red S=-6.30 sit; no new union_news_g_h1 |
-| 2026-09-01 | `CNXC` | hard_red | hard-red S=-6.30 sit; no new union_news_g_h1 |
-| 2026-09-01 | `NOW` | hard_red | hard-red S=-6.30 sit; no new union_news_g_h1 |
-| 2026-09-01 | `NIO` | hard_red | hard-red S=-6.30 sit; no new union_earn_react_h3 |
-| 2026-09-02 | `AVXL` | hard_red | hard-red S=-3.83 sit; no new union_news_g_h1 |
-| 2026-09-02 | `TEL` | hard_red | hard-red S=-3.83 sit; no new union_news_g_h1 |
-| 2026-09-02 | `NVS` | hard_red | hard-red S=-3.83 sit; no new union_news_g_h1 |
-| 2026-09-02 | `RLMD` | hard_red | hard-red S=-3.83 sit; no new union_news_g_h1 |
-| 2026-09-02 | `POWW` | hard_red | hard-red S=-3.83 sit; no new union_news_g_h1 |
-| 2026-09-02 | `FRNM` | hard_red | hard-red S=-3.83 sit; no new union_news_g_h1 |
-| 2026-09-02 | `DE` | hard_red | hard-red S=-3.83 sit; no new union_news_g_h1 |
-| 2026-09-02 | `BCRX` | hard_red | hard-red S=-3.83 sit; no new union_news_g_h1 |
-| 2026-09-02 | `BF-B` | hard_red | hard-red S=-3.83 sit; no new union_earn_react_h3 |
-| 2026-09-02 | `FCEL` | hard_red | hard-red S=-3.83 sit; no new union_earn_react_h3 |
-| 2026-09-02 | `GTLB` | hard_red | hard-red S=-3.83 sit; no new union_earn_react_h3 |
-| 2026-09-02 | `MDB` | hard_red | hard-red S=-3.83 sit; no new union_earn_react_h3 |
-| 2026-09-02 | `OLLI` | hard_red | hard-red S=-3.83 sit; no new union_earn_react_h3 |
-| 2026-09-02 | `PANW` | hard_red | hard-red S=-3.83 sit; no new union_earn_react_h3 |
+| 2026-09-01 | `BTE` | hard_red | hard-red S=-6.30 sit; no new long union_news_g_h1 |
+| 2026-09-01 | `CTMX` | hard_red | hard-red S=-6.30 sit; no new long union_news_g_h1 |
+| 2026-09-01 | `NTNX` | hard_red | hard-red S=-6.30 sit; no new long union_news_g_h1 |
+| 2026-09-01 | `TRLV` | hard_red | hard-red S=-6.30 sit; no new long union_news_g_h1 |
+| 2026-09-01 | `SLBT` | hard_red | hard-red S=-6.30 sit; no new long union_news_g_h1 |
+| 2026-09-01 | `MRNA` | hard_red | hard-red S=-6.30 sit; no new long union_news_g_h1 |
+| 2026-09-01 | `CNXC` | hard_red | hard-red S=-6.30 sit; no new long union_news_g_h1 |
+| 2026-09-01 | `NOW` | hard_red | hard-red S=-6.30 sit; no new long union_news_g_h1 |
+| 2026-09-01 | `NIO` | hard_red | hard-red S=-6.30 sit; no new long union_earn_react_h3 |
+| 2026-09-02 | `AVXL` | hard_red | hard-red S=-3.83 sit; no new long union_news_g_h1 |
+| 2026-09-02 | `TEL` | hard_red | hard-red S=-3.83 sit; no new long union_news_g_h1 |
+| 2026-09-02 | `NVS` | hard_red | hard-red S=-3.83 sit; no new long union_news_g_h1 |
+| 2026-09-02 | `RLMD` | hard_red | hard-red S=-3.83 sit; no new long union_news_g_h1 |
+| 2026-09-02 | `POWW` | hard_red | hard-red S=-3.83 sit; no new long union_news_g_h1 |
+| 2026-09-02 | `FRNM` | hard_red | hard-red S=-3.83 sit; no new long union_news_g_h1 |
+| 2026-09-02 | `DE` | hard_red | hard-red S=-3.83 sit; no new long union_news_g_h1 |
+| 2026-09-02 | `BCRX` | hard_red | hard-red S=-3.83 sit; no new long union_news_g_h1 |
+| 2026-09-02 | `BF-B` | hard_red | hard-red S=-3.83 sit; no new long union_earn_react_h3 |
+| 2026-09-02 | `FCEL` | hard_red | hard-red S=-3.83 sit; no new long union_earn_react_h3 |
+| 2026-09-02 | `GTLB` | hard_red | hard-red S=-3.83 sit; no new long union_earn_react_h3 |
+| 2026-09-02 | `MDB` | hard_red | hard-red S=-3.83 sit; no new long union_earn_react_h3 |
+| 2026-09-02 | `OLLI` | hard_red | hard-red S=-3.83 sit; no new long union_earn_react_h3 |
+| 2026-09-02 | `PANW` | hard_red | hard-red S=-3.83 sit; no new long union_earn_react_h3 |
 | 2026-09-04 | `AVGO` | min_hold | union_earn_react_h3: dropped but min-hold 1/3 |
 | 2026-09-04 | `CIEN` | min_hold | union_earn_react_h3: dropped but min-hold 1/3 |
 | 2026-09-04 | `HPE` | min_hold | union_earn_react_h3: dropped but min-hold 1/3 |
@@ -883,12 +906,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | `IOT` | min_hold | union_earn_react_h3: dropped but min-hold 1/3 |
 | 2026-09-08 | `LULU` | min_hold | union_earn_react_h3: dropped but min-hold 1/3 |
 | 2026-09-08 | `MAMA` | min_hold | union_earn_react_h3: dropped but min-hold 1/3 |
-| 2026-09-08 | `SNOW` | hard_red | hard-red S=-11.47 sit; no new union_news_g_h1 |
-| 2026-09-08 | `SMMT` | hard_red | hard-red S=-11.47 sit; no new union_news_g_h1 |
-| 2026-09-08 | `JCI` | hard_red | hard-red S=-11.47 sit; no new union_news_g_h1 |
-| 2026-09-08 | `CAN` | hard_red | hard-red S=-11.47 sit; no new union_earn_react_h3 |
-| 2026-09-08 | `ABM` | hard_red | hard-red S=-11.47 sit; no new union_earn_react_h3 |
-| 2026-09-08 | `UNFI` | hard_red | hard-red S=-11.47 sit; no new union_earn_react_h3 |
+| 2026-09-08 | `SNOW` | hard_red | hard-red S=-11.47 sit; no new long union_news_g_h1 |
+| 2026-09-08 | `SMMT` | hard_red | hard-red S=-11.47 sit; no new long union_news_g_h1 |
+| 2026-09-08 | `JCI` | hard_red | hard-red S=-11.47 sit; no new long union_news_g_h1 |
+| 2026-09-08 | `CAN` | hard_red | hard-red S=-11.47 sit; no new long union_earn_react_h3 |
+| 2026-09-08 | `ABM` | hard_red | hard-red S=-11.47 sit; no new long union_earn_react_h3 |
+| 2026-09-08 | `UNFI` | hard_red | hard-red S=-11.47 sit; no new long union_earn_react_h3 |
 | 2026-09-09 | `AMBA` | min_hold | union_earn_react_h3: dropped but min-hold 2/3 |
 | 2026-09-09 | `ASAN` | min_hold | union_earn_react_h3: dropped but min-hold 2/3 |
 | 2026-09-09 | `DOCU` | min_hold | union_earn_react_h3: dropped but min-hold 2/3 |
@@ -897,46 +920,52 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `IOT` | min_hold | union_earn_react_h3: dropped but min-hold 2/3 |
 | 2026-09-09 | `LULU` | min_hold | union_earn_react_h3: dropped but min-hold 2/3 |
 | 2026-09-09 | `MAMA` | min_hold | union_earn_react_h3: dropped but min-hold 2/3 |
-| 2026-09-09 | `DFDV` | hard_red | hard-red S=-13.95 sit; no new union_news_g_h1 |
-| 2026-09-09 | `LITE` | hard_red | hard-red S=-13.95 sit; no new union_news_g_h1 |
-| 2026-09-09 | `TH` | hard_red | hard-red S=-13.95 sit; no new union_news_g_h1 |
-| 2026-09-09 | `ASO` | hard_red | hard-red S=-13.95 sit; no new union_earn_react_h3 |
-| 2026-09-09 | `AVO` | hard_red | hard-red S=-13.95 sit; no new union_earn_react_h3 |
-| 2026-09-09 | `JMKE` | hard_red | hard-red S=-13.95 sit; no new union_earn_react_h3 |
-| 2026-09-09 | `OCC` | hard_red | hard-red S=-13.95 sit; no new union_earn_react_h3 |
-| 2026-09-09 | `SAIL` | hard_red | hard-red S=-13.95 sit; no new union_earn_react_h3 |
-| 2026-09-09 | `TTAN` | hard_red | hard-red S=-13.95 sit; no new union_earn_react_h3 |
-| 2026-09-10 | `CLB` | hard_red | hard-red S=-13.28 sit; no new union_news_g_h1 |
-| 2026-09-10 | `ASO` | hard_red | hard-red S=-13.28 sit; no new union_news_g_h1 |
-| 2026-09-10 | `AMBQ` | hard_red | hard-red S=-13.28 sit; no new union_news_g_h1 |
-| 2026-09-10 | `CHYM` | hard_red | hard-red S=-13.28 sit; no new union_news_g_h1 |
-| 2026-09-10 | `META` | hard_red | hard-red S=-13.28 sit; no new union_news_g_h1 |
-| 2026-09-10 | `OCGN` | hard_red | hard-red S=-13.28 sit; no new union_news_g_h1 |
-| 2026-09-10 | `HPE` | hard_red | hard-red S=-13.28 sit; no new union_news_g_h1 |
-| 2026-09-10 | `CLSK` | hard_red | hard-red S=-13.28 sit; no new union_news_g_h1 |
-| 2026-09-10 | `AEO` | hard_red | hard-red S=-13.28 sit; no new union_earn_react_h3 |
-| 2026-09-10 | `AVAV` | hard_red | hard-red S=-13.28 sit; no new union_earn_react_h3 |
-| 2026-09-10 | `COO` | hard_red | hard-red S=-13.28 sit; no new union_earn_react_h3 |
-| 2026-09-10 | `DBI` | hard_red | hard-red S=-13.28 sit; no new union_earn_react_h3 |
-| 2026-09-10 | `M` | hard_red | hard-red S=-13.28 sit; no new union_earn_react_h3 |
-| 2026-09-10 | `NAVN` | hard_red | hard-red S=-13.28 sit; no new union_earn_react_h3 |
-| 2026-09-10 | `NB` | hard_red | hard-red S=-13.28 sit; no new union_earn_react_h3 |
-| 2026-09-10 | `SHOE` | hard_red | hard-red S=-13.28 sit; no new union_earn_react_h3 |
-| 2026-09-11 | `ORCL` | no_price | no 09:30 open |
-| 2026-09-11 | `ADBE` | no_price | no 09:30 open |
-| 2026-09-11 | `RH` | no_price | no 09:30 open |
-| 2026-09-11 | `DSGX` | no_price | no 09:30 open |
-| 2026-09-11 | `KR` | no_price | no 09:30 open |
-| 2026-09-11 | `REF` | no_price | no 09:30 open |
-| 2026-09-11 | `CLSK` | no_price | no 09:30 open |
+| 2026-09-09 | `DFDV` | hard_red | hard-red S=-13.95 sit; no new long union_news_g_h1 |
+| 2026-09-09 | `LITE` | hard_red | hard-red S=-13.95 sit; no new long union_news_g_h1 |
+| 2026-09-09 | `TH` | hard_red | hard-red S=-13.95 sit; no new long union_news_g_h1 |
+| 2026-09-09 | `ASO` | hard_red | hard-red S=-13.95 sit; no new long union_earn_react_h3 |
+| 2026-09-09 | `AVO` | hard_red | hard-red S=-13.95 sit; no new long union_earn_react_h3 |
+| 2026-09-09 | `JMKE` | hard_red | hard-red S=-13.95 sit; no new long union_earn_react_h3 |
+| 2026-09-09 | `OCC` | hard_red | hard-red S=-13.95 sit; no new long union_earn_react_h3 |
+| 2026-09-09 | `SAIL` | hard_red | hard-red S=-13.95 sit; no new long union_earn_react_h3 |
+| 2026-09-09 | `TTAN` | hard_red | hard-red S=-13.95 sit; no new long union_earn_react_h3 |
+| 2026-09-10 | `CLB` | hard_red | hard-red S=-13.28 sit; no new long union_news_g_h1 |
+| 2026-09-10 | `CHYM` | hard_red | hard-red S=-13.28 sit; no new long union_news_g_h1 |
+| 2026-09-10 | `ASO` | hard_red | hard-red S=-13.28 sit; no new long union_news_g_h1 |
+| 2026-09-10 | `AMBQ` | hard_red | hard-red S=-13.28 sit; no new long union_news_g_h1 |
+| 2026-09-10 | `META` | hard_red | hard-red S=-13.28 sit; no new long union_news_g_h1 |
+| 2026-09-10 | `OCGN` | hard_red | hard-red S=-13.28 sit; no new long union_news_g_h1 |
+| 2026-09-10 | `HPE` | hard_red | hard-red S=-13.28 sit; no new long union_news_g_h1 |
+| 2026-09-10 | `GME` | hard_red | hard-red S=-13.28 sit; no new long union_news_g_h1 |
+| 2026-09-10 | `AEO` | hard_red | hard-red S=-13.28 sit; no new long union_earn_react_h3 |
+| 2026-09-10 | `AVAV` | hard_red | hard-red S=-13.28 sit; no new long union_earn_react_h3 |
+| 2026-09-10 | `COO` | hard_red | hard-red S=-13.28 sit; no new long union_earn_react_h3 |
+| 2026-09-10 | `DBI` | hard_red | hard-red S=-13.28 sit; no new long union_earn_react_h3 |
+| 2026-09-10 | `M` | hard_red | hard-red S=-13.28 sit; no new long union_earn_react_h3 |
+| 2026-09-10 | `NAVN` | hard_red | hard-red S=-13.28 sit; no new long union_earn_react_h3 |
+| 2026-09-10 | `NB` | hard_red | hard-red S=-13.28 sit; no new long union_earn_react_h3 |
+| 2026-09-10 | `SHOE` | hard_red | hard-red S=-13.28 sit; no new long union_earn_react_h3 |
+| 2026-09-14 | `ORCL` | min_hold | union_earn_react_h3: dropped but min-hold 1/3 |
+| 2026-09-14 | `ADBE` | min_hold | union_earn_react_h3: dropped but min-hold 1/3 |
+| 2026-09-14 | `RH` | min_hold | union_earn_react_h3: dropped but min-hold 1/3 |
+| 2026-09-14 | `CPRT` | min_hold | union_earn_react_h3: dropped but min-hold 1/3 |
+| 2026-09-14 | `DSGX` | min_hold | union_earn_react_h3: dropped but min-hold 1/3 |
+| 2026-09-14 | `KR` | min_hold | union_earn_react_h3: dropped but min-hold 1/3 |
+| 2026-09-14 | `LPTH` | min_hold | union_earn_react_h3: dropped but min-hold 1/3 |
+| 2026-09-14 | `REF` | min_hold | union_earn_react_h3: dropped but min-hold 1/3 |
+| 2026-09-14 | `CVE` | hard_red | hard-red S=-11.00 sit; no new long union_news_g_h1 |
+| 2026-09-14 | `DELL` | hard_red | hard-red S=-11.00 sit; no new long union_news_g_h1 |
+| 2026-09-14 | `SLS` | hard_red | hard-red S=-11.00 sit; no new long union_news_g_h1 |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `CPRT` | 23 | 2026-09-11 @ $32.01 | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-1.2; combo leftover $749.46; owner union_earn_react_h3 |
-| `LPTH` | 79 | 2026-09-11 @ $9.37 | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=+6.9; combo leftover $749.46; owner union_earn_react_h3 |
-| `AMTX` | 1030 | 2026-09-11 @ $2.04 | union ∩ news_g, no 🚨; gate news=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-5.9; combo leftover $2102.13; owner union_news_g_h1 |
-| `BAK` | 991 | 2026-09-11 @ $2.12 | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; 🔵; ret5=+19.4; combo leftover $2102.13; owner union_news_g_h1 |
-| `HPE` | 37 | 2026-09-11 @ $56.37 | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; 🔵; ⚪; ret5=+15.8; combo leftover $2102.13; owner union_news_g_h1 |
-| `VST` | 14 | 2026-09-11 @ $148.82 | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+10.4; combo leftover $2102.13; owner union_news_g_h1 |
+| `ORCL` | 4 | 2026-09-11 @ $164.43 | union ∩ earn_react, no 🚨; gate earn_react=True; list flatten,earn_react; ⚪; ret5=+4.9; combo leftover $749.46; owner union_earn_react_h3 |
+| `ADBE` | 3 | 2026-09-11 @ $242.17 | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-11.1; combo leftover $749.46; owner union_earn_react_h3 |
+| `RH` | 5 | 2026-09-11 @ $135.71 | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-9.2; combo leftover $749.46; owner union_earn_react_h3 |
+| `CPRT` | 23 | 2026-09-11 @ $32.01 | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-4.4; combo leftover $749.46; owner union_earn_react_h3 |
+| `DSGX` | 10 | 2026-09-11 @ $71.71 | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-9.1; combo leftover $749.46; owner union_earn_react_h3 |
+| `KR` | 13 | 2026-09-11 @ $56.02 | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-2.2; combo leftover $749.46; owner union_earn_react_h3 |
+| `LPTH` | 79 | 2026-09-11 @ $9.37 | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=+1.5; combo leftover $749.46; owner union_earn_react_h3 |
+| `REF` | 57 | 2026-09-11 @ $13.10 | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-6.9; combo leftover $749.46; owner union_earn_react_h3 |

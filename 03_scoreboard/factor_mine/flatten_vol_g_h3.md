@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · flatten wish-list ∩ vol🟢
 
-Cash book **-11.14%** ($8,886) · signal-only (no cash/fees) was -7.36%. Starts YES **1/21**. Fills 48 · skips 55 · realized $-1113.54.
+Cash book **-21.80%** ($7,820) · signal-only (no cash/fees) was -21.92%. Starts YES **0/22**. Fills 49 · skips 56 · realized $-1113.54.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,886.43.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $5.06.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -166,7 +166,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | `OABI` | 2 | $4.01 | $3.92 | -0.19 | — | +0.00 | -0.19 | -1.72 | — |
 | 2026-09-10 | `OPK` | 8 | $1.54 | $1.53 | -0.08 | — | +0.00 | -0.08 | -0.48 | — |
 | 2026-09-10 | `VIR` | 1 | $10.81 | $10.57 | -0.24 | — | +0.00 | -0.24 | -0.74 | — |
-| 2026-09-11 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-11 | `ORCL` | 54 | — | $164.43 | +0.00 | $150.28 | -764.10 | -764.10 | +0.00 | -764.10 |
+| 2026-09-14 | `ORCL` | 54 | $150.28 | $141.42 | -478.44 | $144.72 | +178.20 | -300.24 | -1242.54 | -1064.34 |
 
 ## Each session (cash + holdings state)
 
@@ -192,7 +193,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | -11.47 | $16.50 | RVTY×70, CABA×3, ALEC×5, BHC×1, BMEA×7, OABI×2, OPK×8, VIR×1 | $9,087.12 | -121.42 | -100.54 | — | — | $16.50 | $8,986.58 | RVTY×70, CABA×3, ALEC×5, BHC×1, BMEA×7, OABI×2, OPK×8, VIR×1 |
 | 2026-09-09 | -13.95 | $16.50 | RVTY×70, CABA×3, ALEC×5, BHC×1, BMEA×7, OABI×2, OPK×8, VIR×1 | $8,894.65 | -91.93 | -3.93 | — | RVTY | $8,818.12 | $8,888.43 | CABA×3, ALEC×5, BHC×1, BMEA×7, OABI×2, OPK×8, VIR×1 |
 | 2026-09-10 | -13.28 | $8,818.12 | CABA×3, ALEC×5, BHC×1, BMEA×7, OABI×2, OPK×8, VIR×1 | $8,887.34 | -1.09 | +0.00 | — | CABA, ALEC, BHC, BMEA, OABI, OPK, VIR | $8,886.43 | $8,886.43 | — |
-| 2026-09-11 | +0.50 | $8,886.43 | — | $8,886.43 | -0.00 | +0.00 | — | — | $8,886.43 | $8,886.43 | — |
+| 2026-09-11 | +0.50 | $8,886.43 | — | $8,886.43 | -0.00 | -764.10 | ORCL | — | $5.06 | $8,120.18 | ORCL×54 |
+| 2026-09-14 | -11.00 | $5.06 | ORCL×54 | $7,641.74 | -478.44 | +178.20 | — | — | $5.06 | $7,819.94 | ORCL×54 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -287,7 +289,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 09:30 ET | **SELL** | `VIR` | 1 | $10.57 | $0.13 | $-0.98 | $8,886.43 | ▼ -0.98 after sell → book $8,886.43; vs 09:30 mark -0.13 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,886.43 | ▲ close $8,886.43 vs 09:30 $8,887.34 (session +0.00) | 16:00 close · cash $8,886.43 · no lots left · equity $8,886.43. | — |
 | 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,886.43 | ▲ 09:30 equity $8,886.43 vs yday $8,886.43 (-0.00) | 09:30 open · cash $8,886.43 · no holdings · equity $8,886.43 vs prior close $8,886.43 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,886.43 | ▲ close $8,886.43 vs 09:30 $8,886.43 (session +0.00) | 16:00 close · cash $8,886.43 · no lots left · equity $8,886.43. | — |
+| 2026-09-11 09:30 ET | **BUY** | `ORCL` | 54 | $164.43 | $2.15 | — | $5.06 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,earn_react; wish-list (live io HOLD — not a ticket); ⚪; ret5=+4.9; leftover $8886.43 | join🟢 sector🟢 gen🟡 news🟢 digest🟡 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.06 | ▼ close $8,120.18 vs 09:30 $8,886.43 (session -764.10) | 16:00 close · cash $5.06 · equity $8,120.18 vs 09:30 $8,886.43 (-766.25; session marks -764.10) · 1 name(s) marked open→close (per-name table). ORCL×54 09:30 $164.43 → close $150.28 -764.10 | — |
+| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5.06 | ▼ 09:30 equity $7,641.74 vs yday $8,120.18 (-478.44) | 09:30 open · cash $5.06 (unchanged overnight, no fees) · equity $7,641.74 vs prior close $8,120.18 (-478.44) · 1 name(s) re-marked at the open (per-name table). ORCL×54 yday $150.28 → 09:30 $141.42 -478.44 | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.06 | ▲ close $7,819.94 vs 09:30 $7,641.74 (session +178.20) | 16:00 close · cash $5.06 · equity $7,819.94 vs 09:30 $7,641.74 (+178.20; session marks +178.20) · 1 name(s) marked open→close (per-name table). ORCL×54 09:30 $141.42 → close $144.72 +178.20 | — |
 
 ## Not taken
 
@@ -347,4 +352,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `OABI` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-09 | `OPK` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-09 | `VIR` | min_hold | dropped but min-hold 2/3 sess — no sell |
-| 2026-09-11 | `ORCL` | no_price | no 09:30 open |
+| 2026-09-14 | `ORCL` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-14 | `DK` | hard_red | hard-red S=-11.00 sit; no new buys |
+
+## Still open (marked at last close)
+
+| Ticker | Shares | Entry | Why |
+|---|---:|---|---|
+| `ORCL` | 54 | 2026-09-11 @ $164.43 | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,earn_react; wish-list (live io HOLD — not a ticket); ⚪; ret5=+4.9; leftover $8886.43 |

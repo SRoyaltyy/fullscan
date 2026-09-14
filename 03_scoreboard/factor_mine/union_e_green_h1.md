@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-28.05%** ($7,195) · signal-only (no cash/fees) was -26.14%. Starts YES **0/21**. Fills 97 · skips 13 · realized $-2662.20.
+Cash book **-22.39%** ($7,761) · signal-only (no cash/fees) was -13.12%. Starts YES **5/22**. Fills 98 · skips 13 · realized $-2239.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $0.38.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $7,760.67.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -168,7 +168,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | `MAMA` | 95 | $15.16 | $15.20 | +3.80 | — | +0.00 | +3.80 | -47.50 | — |
 | 2026-09-09 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-10 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-11 | `LPTH` | 782 | — | $9.37 | +0.00 | $9.20 | -132.94 | -132.94 | +0.00 | -132.94 |
+| 2026-09-11 | `KR` | 130 | — | $56.02 | +0.00 | $58.49 | +321.10 | +321.10 | +0.00 | +321.10 |
+| 2026-09-14 | `KR` | 130 | $58.49 | $59.31 | +106.60 | — | +0.00 | +106.60 | +427.70 | — |
 
 ## Each session (cash + holdings state)
 
@@ -194,22 +195,23 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | -11.47 | $215.81 | DOMO×415, GWRE×8, IOT×33, LULU×15, MAMA×95 | $7,351.75 | -49.57 | +0.00 | — | DOMO, GWRE, IOT, LULU, MAMA | $7,337.81 | $7,337.81 | — |
 | 2026-09-09 | -13.95 | $7,337.81 | — | $7,337.81 | -0.00 | +0.00 | — | — | $7,337.81 | $7,337.81 | — |
 | 2026-09-10 | -13.28 | $7,337.81 | — | $7,337.81 | -0.00 | +0.00 | — | — | $7,337.81 | $7,337.81 | — |
-| 2026-09-11 | +0.50 | $7,337.81 | — | $7,337.81 | -0.00 | -132.94 | LPTH | — | $0.38 | $7,194.78 | LPTH×782 |
+| 2026-09-11 | +0.50 | $7,337.81 | — | $7,337.81 | -0.00 | +321.10 | KR | — | $52.83 | $7,656.53 | KR×130 |
+| 2026-09-14 | -11.00 | $52.83 | KR×130 | $7,763.13 | +106.60 | +0.00 | — | KR | $7,760.67 | $7,760.67 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
 | Date | Side | Ticker | Shares | Px | Fees | P/L | Cash after | Equity change (sells only) | Why | Cameras |
 |---|---|---|---:|---:|---:|---:|---:|---:|---|---|
 | 2026-08-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-08-13 09:30 ET | **BUY** | `INO` | 12176 | $0.81 | $135.15 | — | $2.29 | — | combo gate; gate earn_react=True,last_green=True; list flatten; ⚪; ret5=+13.2; leftover $10000.00 | join🟢 sector🟢 gen🟢 judge🟢 |
+| 2026-08-13 09:30 ET | **BUY** | `INO` | 12176 | $0.81 | $135.15 | — | $2.29 | — | combo gate; gate earn_react=True,last_green=True; list flatten; ⚪; ret5=+13.2; leftover $10000.00 | join🟢 sector🟢 gen🟢 judge🟡 |
 | 2026-08-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.29 | ▲ close $10,960.69 vs 09:30 $10,000.00 (session +1,095.84) | 16:00 close · cash $2.29 · equity $10,960.69 vs 09:30 $10,000.00 (+960.69; session marks +1095.84) · 1 name(s) marked open→close (per-name table). INO×12176 09:30 $0.81 → close $0.90 +1095.84 | — |
 | 2026-08-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.29 | ▲ 09:30 equity $11,325.97 vs yday $10,960.69 (+365.28) | 09:30 open · cash $2.29 (unchanged overnight, no fees) · equity $11,325.97 vs prior close $10,960.69 (+365.28) · 1 name(s) re-marked at the open (per-name table). INO×12176 yday $0.90 → 09:30 $0.93 +365.28 | — |
 | 2026-08-14 09:30 ET | **SELL** | `INO` | 12176 | $0.93 | $151.88 | $+1174.09 | $11,174.09 | ▲ +1,174.09 after sell → book $11,174.09; vs 09:30 mark -151.88 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-14 09:30 ET | **BUY** | `NMAX` | 141 | $9.89 | $2.41 | — | $9,776.48 | — | combo gate; gate earn_react=True,last_green=True; list ohlc_hot,earn_react; 🔵; ⚪; ret5=+10.9; leftover $1396.76 | join🟢 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `AIRJ` | 253 | $5.51 | $3.26 | — | $8,379.19 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ⚪; ret5=+13.1; leftover $1396.76 | join🟢 sector🟢 gen🟢 news🟡 judge🟡 vol🟡 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `BRUN` | 53 | $26.25 | $2.15 | — | $6,986.05 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ⚪; ret5=+31.2; leftover $1396.76 | join🟢 sector🟢 gen🟢 news🟡 judge🟢 vol🟢 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `BZAI` | 1823 | $0.77 | $19.43 | — | $5,570.20 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ⚪; ret5=+20.4; leftover $1396.76 | join🟢 sector🟢 gen🟢 news🟡 judge🟢 vol🟡 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `DLO` | 91 | $15.28 | $2.26 | — | $4,177.46 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ⚪; ret5=-0.1; leftover $1396.76 | join🟢 sector🟢 gen🟢 news🟡 judge🟢 vol🟡 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `AIRJ` | 253 | $5.51 | $3.26 | — | $8,379.19 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ⚪; ret5=+13.1; leftover $1396.76 | join🟢 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `BRUN` | 53 | $26.25 | $2.15 | — | $6,986.05 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ⚪; ret5=+31.2; leftover $1396.76 | join🟢 sector🟢 gen🟢 news🟡 judge🟡 vol🟢 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `BZAI` | 1823 | $0.77 | $19.43 | — | $5,570.20 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ⚪; ret5=+20.4; leftover $1396.76 | join🟢 sector🟢 gen🟢 news🟡 judge🟡 vol🟡 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `DLO` | 91 | $15.28 | $2.26 | — | $4,177.46 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ⚪; ret5=-0.1; leftover $1396.76 | join🟢 sector🟢 gen🟢 news🟡 judge🟡 vol🟡 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `ENHA` | 604 | $2.31 | $7.79 | — | $2,774.43 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ⚪; ret5=-5.3; leftover $1396.76 | join🟢 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `FIRY` | 143 | $9.74 | $2.42 | — | $1,379.19 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+1.2; leftover $1396.76 | join🟢 sector🟢 gen🟢 news🟡 vol🔴 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `GEMI` | 352 | $3.90 | $4.54 | — | $1.85 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ⚪; ret5=+8.0; leftover $1396.76 | join🟢 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
@@ -337,8 +339,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,337.81 | ▲ 09:30 equity $7,337.81 vs yday $7,337.81 (-0.00) | 09:30 open · cash $7,337.81 · no holdings · equity $7,337.81 vs prior close $7,337.81 (-0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,337.81 | ▲ close $7,337.81 vs 09:30 $7,337.81 (session +0.00) | 16:00 close · cash $7,337.81 · no lots left · equity $7,337.81. | — |
 | 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,337.81 | ▲ 09:30 equity $7,337.81 vs yday $7,337.81 (-0.00) | 09:30 open · cash $7,337.81 · no holdings · equity $7,337.81 vs prior close $7,337.81 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-11 09:30 ET | **BUY** | `LPTH` | 782 | $9.37 | $10.09 | — | $0.38 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+6.9; leftover $7337.81 | join🔴 sector🟢 gen🟡 news🟡 digest🟡 judge🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
-| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.38 | ▼ close $7,194.78 vs 09:30 $7,337.81 (session -132.94) | 16:00 close · cash $0.38 · equity $7,194.78 vs 09:30 $7,337.81 (-143.03; session marks -132.94) · 1 name(s) marked open→close (per-name table). LPTH×782 09:30 $9.37 → close $9.20 -132.94 | — |
+| 2026-09-11 09:30 ET | **BUY** | `KR` | 130 | $56.02 | $2.38 | — | $52.83 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=-2.2; leftover $7337.81 | join🔴 sector🟡 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $52.83 | ▲ close $7,656.53 vs 09:30 $7,337.81 (session +321.10) | 16:00 close · cash $52.83 · equity $7,656.53 vs 09:30 $7,337.81 (+318.72; session marks +321.10) · 1 name(s) marked open→close (per-name table). KR×130 09:30 $56.02 → close $58.49 +321.10 | — |
+| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $52.83 | ▲ 09:30 equity $7,763.13 vs yday $7,656.53 (+106.60) | 09:30 open · cash $52.83 (unchanged overnight, no fees) · equity $7,763.13 vs prior close $7,656.53 (+106.60) · 1 name(s) re-marked at the open (per-name table). KR×130 yday $58.49 → 09:30 $59.31 +106.60 | — |
+| 2026-09-14 09:30 ET | **SELL** | `KR` | 130 | $59.31 | $2.46 | $+422.86 | $7,760.67 | ▲ +422.86 after sell → book $7,760.67; vs 09:30 mark -2.46 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,760.67 | ▲ close $7,760.67 vs 09:30 $7,763.13 (session +0.00) | 16:00 close · cash $7,760.67 · no lots left · equity $7,760.67. | — |
 
 ## Not taken
 
@@ -356,10 +361,4 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | `ABM` | hard_red | hard-red S=-11.47 sit; no new buys |
 | 2026-09-08 | `UNFI` | hard_red | hard-red S=-11.47 sit; no new buys |
 | 2026-09-09 | `AVO` | hard_red | hard-red S=-13.95 sit; no new buys |
-| 2026-09-10 | `AVAV` | hard_red | hard-red S=-13.28 sit; no new buys |
-
-## Still open (marked at last close)
-
-| Ticker | Shares | Entry | Why |
-|---|---:|---|---|
-| `LPTH` | 782 | 2026-09-11 @ $9.37 | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+6.9; leftover $7337.81 |
+| 2026-09-10 | `DBI` | hard_red | hard-red S=-13.28 sit; no new buys |

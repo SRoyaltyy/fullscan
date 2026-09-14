@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hold 3d, sell next 09:30 if news🔴
 
-Cash book **+1.93%** ($10,193) · signal-only (no cash/fees) was +14.83%. Starts YES **1/21**. Fills 111 · skips 203 · realized $+209.56.
+Cash book **-1.93%** ($9,808) · signal-only (no cash/fees) was +7.29%. Starts YES **0/22**. Fills 118 · skips 210 · realized $+209.56.
 
 ## How this sleeve decides (like you are 10)
 
@@ -53,7 +53,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,937.50.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $200.69.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -285,6 +285,21 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | `BMEA` | 2 | $1.84 | $1.83 | -0.03 | — | +0.00 | -0.03 | -0.14 | — |
 | 2026-09-10 | `OABI` | 1 | $4.01 | $3.92 | -0.09 | — | +0.00 | -0.09 | -0.86 | — |
 | 2026-09-11 | `AUPH` | 78 | — | $16.28 | +0.00 | $16.10 | -14.04 | -14.04 | +0.00 | -14.04 |
+| 2026-09-11 | `OVID` | 467 | — | $2.73 | +0.00 | $2.69 | -18.68 | -18.68 | +0.00 | -18.68 |
+| 2026-09-11 | `SANM` | 6 | — | $206.84 | +0.00 | $216.00 | +54.96 | +54.96 | +0.00 | +54.96 |
+| 2026-09-11 | `ORCL` | 7 | — | $164.43 | +0.00 | $150.28 | -99.05 | -99.05 | +0.00 | -99.05 |
+| 2026-09-11 | `NVT` | 8 | — | $157.78 | +0.00 | $162.38 | +36.80 | +36.80 | +0.00 | +36.80 |
+| 2026-09-11 | `COHU` | 22 | — | $56.09 | +0.00 | $57.08 | +21.78 | +21.78 | +0.00 | +21.78 |
+| 2026-09-11 | `AMTX` | 625 | — | $2.04 | +0.00 | $2.01 | -18.75 | -18.75 | +0.00 | -18.75 |
+| 2026-09-11 | `CLOV` | 268 | — | $4.75 | +0.00 | $4.82 | +18.76 | +18.76 | +0.00 | +18.76 |
+| 2026-09-14 | `AUPH` | 78 | $16.10 | $16.03 | -5.46 | $16.41 | +29.64 | +24.18 | -19.50 | +10.14 |
+| 2026-09-14 | `OVID` | 467 | $2.69 | $2.75 | +30.35 | $2.74 | -7.00 | +23.35 | +11.67 | +4.67 |
+| 2026-09-14 | `SANM` | 6 | $216.00 | $206.50 | -57.00 | $196.04 | -62.76 | -119.76 | -2.04 | -64.80 |
+| 2026-09-14 | `ORCL` | 7 | $150.28 | $141.42 | -62.02 | $144.72 | +23.10 | -38.92 | -161.07 | -137.97 |
+| 2026-09-14 | `NVT` | 8 | $162.38 | $150.00 | -99.04 | $146.64 | -26.88 | -125.92 | -62.24 | -89.12 |
+| 2026-09-14 | `COHU` | 22 | $57.08 | $52.23 | -106.66 | $49.97 | -49.76 | -156.42 | -84.88 | -134.64 |
+| 2026-09-14 | `AMTX` | 625 | $2.01 | $2.01 | +0.00 | $1.95 | -37.50 | -37.50 | -18.75 | -56.25 |
+| 2026-09-14 | `CLOV` | 268 | $4.82 | $4.82 | +0.00 | $5.10 | +75.04 | +75.04 | +18.76 | +93.80 |
 
 ## Each session (cash + holdings state)
 
@@ -310,21 +325,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | -11.47 | $18.95 | ATRC×25, HRMY×31, CABA×366, VSTM×165, RVTY×10, CRK×86, MRNA×9, ARCT×79, ALEC×2, BMEA×2, OABI×1 | $10,460.29 | +32.97 | -178.56 | — | — | $18.95 | $10,281.73 | ATRC×25, HRMY×31, CABA×366, VSTM×165, RVTY×10, CRK×86, MRNA×9, ARCT×79, ALEC×2, BMEA×2, OABI×1 |
 | 2026-09-09 | -13.95 | $18.95 | ATRC×25, HRMY×31, CABA×366, VSTM×165, RVTY×10, CRK×86, MRNA×9, ARCT×79, ALEC×2, BMEA×2, OABI×1 | $10,230.87 | -50.86 | -0.79 | — | ATRC, HRMY, CABA, VSTM, RVTY, CRK, MRNA, ARCT | $10,197.74 | $10,209.98 | ALEC×2, BMEA×2, OABI×1 |
 | 2026-09-10 | -13.28 | $10,197.74 | ALEC×2, BMEA×2, OABI×1 | $10,209.76 | -0.22 | +0.00 | — | ALEC, BMEA, OABI | $10,209.56 | $10,209.56 | — |
-| 2026-09-11 | +0.50 | $10,209.56 | — | $10,209.56 | +0.00 | -14.04 | AUPH | — | $8,937.50 | $10,193.30 | AUPH×78 |
+| 2026-09-11 | +0.50 | $10,209.56 | — | $10,209.56 | +0.00 | -18.22 | AUPH, OVID, SANM, ORCL, NVT, COHU, AMTX, CLOV | — | $200.69 | $10,163.49 | AUPH×78, OVID×467, SANM×6, ORCL×7, NVT×8, COHU×22, AMTX×625, CLOV×268 |
+| 2026-09-14 | -11.00 | $200.69 | AUPH×78, OVID×467, SANM×6, ORCL×7, NVT×8, COHU×22, AMTX×625, CLOV×268 | $9,863.67 | -299.82 | -56.12 | — | — | $200.69 | $9,807.54 | AUPH×78, OVID×467, SANM×6, ORCL×7, NVT×8, COHU×22, AMTX×625, CLOV×268 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
 | Date | Side | Ticker | Shares | Px | Fees | P/L | Cash after | Equity change (sells only) | Why | Cameras |
 |---|---|---|---:|---:|---:|---:|---:|---:|---|---|
 | 2026-08-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-08-13 09:30 ET | **BUY** | `BTSG` | 20 | $59.80 | $2.05 | — | $8,801.95 | — | hold 3d, sell next 09:30 if news🔴; list flatten; ⚪; ret5=-5.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟢 |
+| 2026-08-13 09:30 ET | **BUY** | `BTSG` | 20 | $59.80 | $2.05 | — | $8,801.95 | — | hold 3d, sell next 09:30 if news🔴; list flatten; ⚪; ret5=-5.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟡 |
 | 2026-08-13 09:30 ET | **BUY** | `IREN` | 27 | $45.98 | $2.07 | — | $7,558.42 | — | hold 3d, sell next 09:30 if news🔴; list flatten; ⚪; ret5=+12.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 |
 | 2026-08-13 09:30 ET | **BUY** | `TPG` | 24 | $50.62 | $2.06 | — | $6,341.40 | — | hold 3d, sell next 09:30 if news🔴; list flatten; ⚪; ret5=+6.2; leftover $1250.00 | join🟢 sector🟢 gen🟢 |
-| 2026-08-13 09:30 ET | **BUY** | `TGTX` | 25 | $49.70 | $2.06 | — | $5,096.84 | — | hold 3d, sell next 09:30 if news🔴; list flatten; ⚪; ret5=-0.8; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟢 |
-| 2026-08-13 09:30 ET | **BUY** | `SLS` | 106 | $11.70 | $2.31 | — | $3,854.33 | — | hold 3d, sell next 09:30 if news🔴; list flatten; ⚪; ret5=-0.8; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟢 |
-| 2026-08-13 09:30 ET | **BUY** | `HIMS` | 42 | $29.74 | $2.12 | — | $2,603.13 | — | hold 3d, sell next 09:30 if news🔴; list flatten; ⚪; ret5=-5.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟢 |
-| 2026-08-13 09:30 ET | **BUY** | `INO` | 1543 | $0.81 | $17.13 | — | $1,336.17 | — | hold 3d, sell next 09:30 if news🔴; list flatten; ⚪; ret5=+13.2; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟢 |
-| 2026-08-13 09:30 ET | **BUY** | `TNDM` | 53 | $23.33 | $2.15 | — | $97.53 | — | hold 3d, sell next 09:30 if news🔴; list flatten; ⚪; ret5=+19.7; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟢 |
+| 2026-08-13 09:30 ET | **BUY** | `TGTX` | 25 | $49.70 | $2.06 | — | $5,096.84 | — | hold 3d, sell next 09:30 if news🔴; list flatten; ⚪; ret5=-0.8; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟡 |
+| 2026-08-13 09:30 ET | **BUY** | `SLS` | 106 | $11.70 | $2.31 | — | $3,854.33 | — | hold 3d, sell next 09:30 if news🔴; list flatten; ⚪; ret5=-0.8; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟡 |
+| 2026-08-13 09:30 ET | **BUY** | `HIMS` | 42 | $29.74 | $2.12 | — | $2,603.13 | — | hold 3d, sell next 09:30 if news🔴; list flatten; ⚪; ret5=-5.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟡 |
+| 2026-08-13 09:30 ET | **BUY** | `INO` | 1543 | $0.81 | $17.13 | — | $1,336.17 | — | hold 3d, sell next 09:30 if news🔴; list flatten; ⚪; ret5=+13.2; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟡 |
+| 2026-08-13 09:30 ET | **BUY** | `TNDM` | 53 | $23.33 | $2.15 | — | $97.53 | — | hold 3d, sell next 09:30 if news🔴; list flatten; ⚪; ret5=+19.7; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟡 |
 | 2026-08-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $97.53 | ▲ close $10,153.12 vs 09:30 $10,000.00 (session +185.07) | 16:00 close · cash $97.53 · equity $10,153.12 vs 09:30 $10,000.00 (+153.12; session marks +185.07) · 8 name(s) marked open→close (per-name table). BTSG×20 09:30 $59.80 → close $60.23 +8.60; IREN×27 09:30 $45.98 → close $44.76 -32.94; TPG×24 09:30 $50.62 → close $54.62 +95.92; TGTX×25 09:30 $49.70 → close $47.94 -44.00; SLS×106 09:30 $11.70 → close $12.36 +69.96; HIMS×42 09:30 $29.74 → close $28.77 -40.74; INO×1543 09:30 $0.81 → close $0.90 +138.87; TNDM×53 09:30 $23.33 → close $23.13 -10.60 | — |
 | 2026-08-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $97.53 | ▲ 09:30 equity $10,178.12 vs yday $10,153.12 (+25.00) | 09:30 open · cash $97.53 (unchanged overnight, no fees) · equity $10,178.12 vs prior close $10,153.12 (+25.00) · 8 name(s) re-marked at the open (per-name table). BTSG×20 yday $60.23 → 09:30 $59.65 -11.60; IREN×27 yday $44.76 → 09:30 $44.09 -18.09; TPG×24 yday $54.62 → 09:30 $55.29 +16.08; TGTX×25 yday $47.94 → 09:30 $47.27 -16.75; SLS×106 yday $12.36 → 09:30 $12.40 +4.24; HIMS×42 yday $28.77 → 09:30 $29.15 +15.96; INO×1543 yday $0.90 → 09:30 $0.93 +46.29; TNDM×53 yday $23.13 → 09:30 $22.92 -11.13 | — |
 | 2026-08-14 09:30 ET | **BUY** | `MARA` | 1 | $9.01 | $0.09 | — | $88.43 | — | hold 3d, sell next 09:30 if news🔴; list flatten; 🔵; ⚪; ret5=-13.5; leftover $12.19 | join🟢 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
@@ -333,7 +349,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $63.95 | ▲ close $10,435.42 vs 09:30 $10,178.12 (session +257.69) | 16:00 close · cash $63.95 · equity $10,435.42 vs 09:30 $10,178.12 (+257.30; session marks +257.69) · 11 name(s) marked open→close (per-name table). BTSG×20 09:30 $59.65 → close $61.71 +41.20; IREN×27 09:30 $44.09 → close $44.06 -0.81; TPG×24 09:30 $55.29 → close $53.03 -54.24; TGTX×25 09:30 $47.27 → close $48.74 +36.75; SLS×106 09:30 $12.40 → close $12.78 +40.28; HIMS×42 09:30 $29.15 → close $28.15 -42.00; INO×1543 09:30 $0.93 → close $1.09 +246.88; TNDM×53 09:30 $22.92 → close $22.72 -10.60; MARA×1 09:30 $9.01 → close $9.20 +0.19; LDI×13 09:30 $0.94 → close $0.90 -0.52; BTBT×8 09:30 $1.50 → close $1.57 +0.56 | — |
 | 2026-08-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $63.95 | ▼ 09:30 equity $10,414.78 vs yday $10,435.42 (-20.64) | 09:30 open · cash $63.95 (unchanged overnight, no fees) · equity $10,414.78 vs prior close $10,435.42 (-20.64) · 11 name(s) re-marked at the open (per-name table). BTSG×20 yday $61.71 → 09:30 $61.69 -0.40; IREN×27 yday $44.06 → 09:30 $45.23 +31.59; TPG×24 yday $53.03 → 09:30 $52.67 -8.64; TGTX×25 yday $48.74 → 09:30 $48.74 +0.00; SLS×106 yday $12.78 → 09:30 $12.78 +0.00; HIMS×42 yday $28.15 → 09:30 $28.14 -0.42; INO×1543 yday $1.09 → 09:30 $1.07 -30.86; TNDM×53 yday $22.72 → 09:30 $22.50 -11.66; MARA×1 yday $9.20 → 09:30 $9.22 +0.02; LDI×13 yday $0.90 → 09:30 $0.91 +0.13; BTBT×8 yday $1.57 → 09:30 $1.52 -0.40 | — |
 | 2026-08-17 09:30 ET | **BUY** | `TMC` | 1 | $4.05 | $0.04 | — | $59.85 | — | hold 3d, sell next 09:30 if news🔴; list flatten; 🔵; ⚪; ret5=-12.3; leftover $7.99 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
-| 2026-08-17 09:30 ET | **BUY** | `DNN` | 2 | $3.24 | $0.07 | — | $53.30 | — | hold 3d, sell next 09:30 if news🔴; list flatten; ⚪; ret5=+0.3; leftover $7.99 | join🟢 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
+| 2026-08-17 09:30 ET | **BUY** | `DNN` | 2 | $3.24 | $0.07 | — | $53.30 | — | hold 3d, sell next 09:30 if news🔴; list flatten; ret5=+0.3; leftover $7.99 | join🟢 sector🟢 gen🟢 news🟡 judge🔴 vol🟡 buy🟡 |
 | 2026-08-17 09:30 ET | **BUY** | `NB` | 1 | $5.07 | $0.05 | — | $48.18 | — | hold 3d, sell next 09:30 if news🔴; list flatten; ret5=-4.7; leftover $7.99 | join🟢 sector🟢 gen🟢 news🟡 vol🔴 buy🟡 |
 | 2026-08-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $48.18 | ▲ close $10,525.00 vs 09:30 $10,414.78 (session +110.38) | 16:00 close · cash $48.18 · equity $10,525.00 vs 09:30 $10,414.78 (+110.22; session marks +110.38) · 14 name(s) marked open→close (per-name table). BTSG×20 09:30 $61.69 → close $60.38 -26.20; IREN×27 09:30 $45.23 → close $44.90 -8.91; TPG×24 09:30 $52.67 → close $51.77 -21.60; TGTX×25 09:30 $48.74 → close $49.28 +13.50; SLS×106 09:30 $12.78 → close $13.00 +23.32; HIMS×42 09:30 $28.14 → close $28.61 +19.74; INO×1543 09:30 $1.07 → close $1.15 +123.44; TNDM×53 09:30 $22.50 → close $22.25 -12.99; MARA×1 09:30 $9.22 → close $9.72 +0.50; LDI×13 09:30 $0.91 → close $0.88 -0.42; BTBT×8 09:30 $1.52 → close $1.60 +0.64; TMC×1 09:30 $4.05 → close $3.77 -0.28; DNN×2 09:30 $3.24 → close $3.19 -0.10; NB×1 09:30 $5.07 → close $4.81 -0.26 | — |
 | 2026-08-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $48.18 | ▼ 09:30 equity $10,391.53 vs yday $10,525.00 (-133.47) | 09:30 open · cash $48.18 (unchanged overnight, no fees) · equity $10,391.53 vs prior close $10,525.00 (-133.47) · 14 name(s) re-marked at the open (per-name table). BTSG×20 yday $60.38 → 09:30 $60.00 -7.60; IREN×27 yday $44.90 → 09:30 $43.56 -36.18; TPG×24 yday $51.77 → 09:30 $51.77 +0.00; TGTX×25 yday $49.28 → 09:30 $49.28 +0.00; SLS×106 yday $13.00 → 09:30 $12.66 -36.04; HIMS×42 yday $28.61 → 09:30 $27.85 -31.92; INO×1543 yday $1.15 → 09:30 $1.14 -15.43; TNDM×53 yday $22.25 → 09:30 $22.16 -5.03; MARA×1 yday $9.72 → 09:30 $9.36 -0.36; LDI×13 yday $0.88 → 09:30 $0.87 -0.07; BTBT×8 yday $1.60 → 09:30 $1.54 -0.48; TMC×1 yday $3.77 → 09:30 $3.72 -0.05; DNN×2 yday $3.19 → 09:30 $3.11 -0.16; NB×1 yday $4.81 → 09:30 $4.66 -0.15 | — |
@@ -467,8 +483,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 09:30 ET | **SELL** | `OABI` | 1 | $3.92 | $0.06 | $-0.97 | $10,209.56 | ▼ -0.97 after sell → book $10,209.56; vs 09:30 mark -0.07 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,209.56 | ▲ close $10,209.56 vs 09:30 $10,209.76 (session +0.00) | 16:00 close · cash $10,209.56 · no lots left · equity $10,209.56. | — |
 | 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,209.56 | ▲ 09:30 equity $10,209.56 vs yday $10,209.56 (+0.00) | 09:30 open · cash $10,209.56 · no holdings · equity $10,209.56 vs prior close $10,209.56 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-11 09:30 ET | **BUY** | `AUPH` | 78 | $16.28 | $2.22 | — | $8,937.50 | — | hold 3d, sell next 09:30 if news🔴; list flatten; 🔵; ret5=-0.2; leftover $1276.20 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
-| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,937.50 | ▼ close $10,193.30 vs 09:30 $10,209.56 (session -14.04) | 16:00 close · cash $8,937.50 · equity $10,193.30 vs 09:30 $10,209.56 (-16.26; session marks -14.04) · 1 name(s) marked open→close (per-name table). AUPH×78 09:30 $16.28 → close $16.10 -14.04 | — |
+| 2026-09-11 09:30 ET | **BUY** | `AUPH` | 78 | $16.28 | $2.22 | — | $8,937.50 | — | hold 3d, sell next 09:30 if news🔴; list flatten; 🔵; ret5=-1.1; leftover $1276.20 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `OVID` | 467 | $2.73 | $6.02 | — | $7,656.57 | — | hold 3d, sell next 09:30 if news🔴; list flatten; 🔵; ret5=-3.0; leftover $1276.20 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `SANM` | 6 | $206.84 | $2.01 | — | $6,413.52 | — | hold 3d, sell next 09:30 if news🔴; list flatten; ret5=+8.3; leftover $1276.20 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `ORCL` | 7 | $164.43 | $2.01 | — | $5,260.50 | — | hold 3d, sell next 09:30 if news🔴; list flatten,earn_react; ⚪; ret5=+4.9; leftover $1276.20 | join🟢 sector🟢 gen🟡 news🟢 digest🟡 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `NVT` | 8 | $157.78 | $2.01 | — | $3,996.24 | — | hold 3d, sell next 09:30 if news🔴; list flatten; 🔵; ret5=+4.7; leftover $1276.20 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `COHU` | 22 | $56.09 | $2.06 | — | $2,760.21 | — | hold 3d, sell next 09:30 if news🔴; list flatten; 🔵; ret5=+19.6; leftover $1276.20 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `AMTX` | 625 | $2.04 | $8.06 | — | $1,477.14 | — | hold 3d, sell next 09:30 if news🔴; list probable,yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+6.8; leftover $1276.20 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `CLOV` | 268 | $4.75 | $3.46 | — | $200.69 | — | hold 3d, sell next 09:30 if news🔴; list probable,yday_gainer,ohlc_hot; 🔵; ret5=+9.5; leftover $1276.20 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $200.69 | ▼ close $10,163.49 vs 09:30 $10,209.56 (session -18.22) | 16:00 close · cash $200.69 · equity $10,163.49 vs 09:30 $10,209.56 (-46.07; session marks -18.22) · 8 name(s) marked open→close (per-name table). AUPH×78 09:30 $16.28 → close $16.10 -14.04; OVID×467 09:30 $2.73 → close $2.69 -18.68; SANM×6 09:30 $206.84 → close $216.00 +54.96; ORCL×7 09:30 $164.43 → close $150.28 -99.05; NVT×8 09:30 $157.78 → close $162.38 +36.80; COHU×22 09:30 $56.09 → close $57.08 +21.78; AMTX×625 09:30 $2.04 → close $2.01 -18.75; CLOV×268 09:30 $4.75 → close $4.82 +18.76 | — |
+| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $200.69 | ▼ 09:30 equity $9,863.67 vs yday $10,163.49 (-299.82) | 09:30 open · cash $200.69 (unchanged overnight, no fees) · equity $9,863.67 vs prior close $10,163.49 (-299.82) · 8 name(s) re-marked at the open (per-name table). AUPH×78 yday $16.10 → 09:30 $16.03 -5.46; OVID×467 yday $2.69 → 09:30 $2.75 +30.35; SANM×6 yday $216.00 → 09:30 $206.50 -57.00; ORCL×7 yday $150.28 → 09:30 $141.42 -62.02; NVT×8 yday $162.38 → 09:30 $150.00 -99.04; COHU×22 yday $57.08 → 09:30 $52.23 -106.66; AMTX×625 yday $2.01 → 09:30 $2.01 +0.00; CLOV×268 yday $4.82 → 09:30 $4.82 +0.00 | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $200.69 | ▼ close $9,807.54 vs 09:30 $9,863.67 (session -56.12) | 16:00 close · cash $200.69 · equity $9,807.54 vs 09:30 $9,863.67 (-56.13; session marks -56.12) · 8 name(s) marked open→close (per-name table). AUPH×78 09:30 $16.03 → close $16.41 +29.64; OVID×467 09:30 $2.75 → close $2.74 -7.00; SANM×6 09:30 $206.50 → close $196.04 -62.76; ORCL×7 09:30 $141.42 → close $144.72 +23.10; NVT×8 09:30 $150.00 → close $146.64 -26.88; COHU×22 09:30 $52.23 → close $49.97 -49.76; AMTX×625 09:30 $2.01 → close $1.95 -37.50; CLOV×268 09:30 $4.82 → close $5.10 +75.04 | — |
 
 ## Not taken
 
@@ -665,21 +690,35 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | `UGP` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `CLB` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `OIS` | hard_red | hard-red S=-13.28 sit; no new buys |
-| 2026-09-10 | `ODD` | hard_red | hard-red S=-13.28 sit; no new buys |
-| 2026-09-10 | `SIG` | hard_red | hard-red S=-13.28 sit; no new buys |
-| 2026-09-10 | `NAUT` | hard_red | hard-red S=-13.28 sit; no new buys |
-| 2026-09-10 | `ASO` | hard_red | hard-red S=-13.28 sit; no new buys |
-| 2026-09-10 | `XHLD` | hard_red | hard-red S=-13.28 sit; no new buys |
-| 2026-09-11 | `OVID` | no_price | no 09:30 open |
-| 2026-09-11 | `SANM` | no_price | no 09:30 open |
-| 2026-09-11 | `ORCL` | no_price | no 09:30 open |
-| 2026-09-11 | `NVT` | no_price | no 09:30 open |
-| 2026-09-11 | `COHU` | no_price | no 09:30 open |
-| 2026-09-11 | `CMRC` | no_price | no 09:30 open |
-| 2026-09-11 | `DBI` | no_price | no 09:30 open |
+| 2026-09-10 | `BAND` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `DDOG` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `INSP` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `CHYM` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `LAC` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-14 | `AUPH` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-14 | `OVID` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-14 | `SANM` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-14 | `ORCL` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-14 | `COHU` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-14 | `AMTX` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-14 | `CLOV` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-14 | `CVE` | hard_red | hard-red S=-11.00 sit; no new buys |
+| 2026-09-14 | `DK` | hard_red | hard-red S=-11.00 sit; no new buys |
+| 2026-09-14 | `ATEC` | hard_red | hard-red S=-11.00 sit; no new buys |
+| 2026-09-14 | `DELL` | hard_red | hard-red S=-11.00 sit; no new buys |
+| 2026-09-14 | `VICR` | hard_red | hard-red S=-11.00 sit; no new buys |
+| 2026-09-14 | `CAN` | hard_red | hard-red S=-11.00 sit; no new buys |
+| 2026-09-14 | `USDE` | hard_red | hard-red S=-11.00 sit; no new buys |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `AUPH` | 78 | 2026-09-11 @ $16.28 | hold 3d, sell next 09:30 if news🔴; list flatten; 🔵; ret5=-0.2; leftover $1276.20 |
+| `AUPH` | 78 | 2026-09-11 @ $16.28 | hold 3d, sell next 09:30 if news🔴; list flatten; 🔵; ret5=-1.1; leftover $1276.20 |
+| `OVID` | 467 | 2026-09-11 @ $2.73 | hold 3d, sell next 09:30 if news🔴; list flatten; 🔵; ret5=-3.0; leftover $1276.20 |
+| `SANM` | 6 | 2026-09-11 @ $206.84 | hold 3d, sell next 09:30 if news🔴; list flatten; ret5=+8.3; leftover $1276.20 |
+| `ORCL` | 7 | 2026-09-11 @ $164.43 | hold 3d, sell next 09:30 if news🔴; list flatten,earn_react; ⚪; ret5=+4.9; leftover $1276.20 |
+| `NVT` | 8 | 2026-09-11 @ $157.78 | hold 3d, sell next 09:30 if news🔴; list flatten; 🔵; ret5=+4.7; leftover $1276.20 |
+| `COHU` | 22 | 2026-09-11 @ $56.09 | hold 3d, sell next 09:30 if news🔴; list flatten; 🔵; ret5=+19.6; leftover $1276.20 |
+| `AMTX` | 625 | 2026-09-11 @ $2.04 | hold 3d, sell next 09:30 if news🔴; list probable,yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+6.8; leftover $1276.20 |
+| `CLOV` | 268 | 2026-09-11 @ $4.75 | hold 3d, sell next 09:30 if news🔴; list probable,yday_gainer,ohlc_hot; 🔵; ret5=+9.5; leftover $1276.20 |

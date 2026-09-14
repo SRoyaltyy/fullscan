@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_cond` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_cond
 
-Cash book **+5.34%** ($10,534) · signal-only (no cash/fees) was +325.19%. Starts YES **6/21**. Fills 125 · skips 206 · realized $+525.72.
+Cash book **+8.71%** ($10,871) · signal-only (no cash/fees) was +186.69%. Starts YES **10/22**. Fills 130 · skips 217 · realized $+528.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -53,7 +53,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $4,558.14.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $91.11.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -65,16 +65,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | 2026-08-13 | `IREN` | 27 | — | $45.98 | +0.00 | $44.76 | -32.94 | -32.94 | +0.00 | -32.94 |
 | 2026-08-13 | `TNDM` | 53 | — | $23.33 | +0.00 | $23.13 | -10.60 | -10.60 | +0.00 | -10.60 |
-| 2026-08-13 | `INO` | 1543 | — | $0.81 | +0.00 | $0.90 | +138.87 | +138.87 | +0.00 | +138.87 |
 | 2026-08-13 | `TPG` | 24 | — | $50.62 | +0.00 | $54.62 | +95.92 | +95.92 | +0.00 | +95.92 |
+| 2026-08-13 | `INO` | 1543 | — | $0.81 | +0.00 | $0.90 | +138.87 | +138.87 | +0.00 | +138.87 |
 | 2026-08-13 | `HIMS` | 42 | — | $29.74 | +0.00 | $28.77 | -40.74 | -40.74 | +0.00 | -40.74 |
 | 2026-08-13 | `SLS` | 106 | — | $11.70 | +0.00 | $12.36 | +69.96 | +69.96 | +0.00 | +69.96 |
 | 2026-08-13 | `VOR` | 56 | — | $22.01 | +0.00 | $23.29 | +71.68 | +71.68 | +0.00 | +71.68 |
 | 2026-08-13 | `BTSG` | 20 | — | $59.80 | +0.00 | $60.23 | +8.60 | +8.60 | +0.00 | +8.60 |
 | 2026-08-14 | `IREN` | 27 | $44.76 | $44.09 | -18.09 | $44.06 | -0.81 | -18.90 | -51.03 | -51.84 |
 | 2026-08-14 | `TNDM` | 53 | $23.13 | $22.92 | -11.13 | $22.72 | -10.60 | -21.73 | -21.73 | -32.33 |
-| 2026-08-14 | `INO` | 1543 | $0.90 | $0.93 | +46.29 | $1.09 | +246.88 | +293.17 | +185.16 | +432.04 |
 | 2026-08-14 | `TPG` | 24 | $54.62 | $55.29 | +16.08 | $53.03 | -54.24 | -38.16 | +112.00 | +57.76 |
+| 2026-08-14 | `INO` | 1543 | $0.90 | $0.93 | +46.29 | $1.09 | +246.88 | +293.17 | +185.16 | +432.04 |
 | 2026-08-14 | `HIMS` | 42 | $28.77 | $29.15 | +15.96 | $28.15 | -42.00 | -26.04 | -24.78 | -66.78 |
 | 2026-08-14 | `SLS` | 106 | $12.36 | $12.40 | +4.24 | $12.78 | +40.28 | +44.52 | +74.20 | +114.48 |
 | 2026-08-14 | `VOR` | 56 | $23.29 | $23.33 | +2.24 | $23.03 | -16.80 | -14.56 | +73.92 | +57.12 |
@@ -84,8 +84,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-14 | `BZAI` | 17 | — | $0.77 | +0.00 | $0.59 | -2.94 | -2.94 | +0.00 | -2.94 |
 | 2026-08-17 | `IREN` | 27 | $44.06 | $45.23 | +31.59 | $44.90 | -8.91 | +22.68 | -20.25 | -29.16 |
 | 2026-08-17 | `TNDM` | 53 | $22.72 | $22.50 | -11.66 | $22.25 | -12.99 | -24.65 | -43.99 | -56.97 |
-| 2026-08-17 | `INO` | 1543 | $1.09 | $1.07 | -30.86 | $1.15 | +123.44 | +92.58 | +401.18 | +524.62 |
 | 2026-08-17 | `TPG` | 24 | $53.03 | $52.67 | -8.64 | $51.77 | -21.60 | -30.24 | +49.12 | +27.52 |
+| 2026-08-17 | `INO` | 1543 | $1.09 | $1.07 | -30.86 | $1.15 | +123.44 | +92.58 | +401.18 | +524.62 |
 | 2026-08-17 | `HIMS` | 42 | $28.15 | $28.14 | -0.42 | $28.61 | +19.74 | +19.32 | -67.20 | -47.46 |
 | 2026-08-17 | `SLS` | 106 | $12.78 | $12.78 | +0.00 | $13.00 | +23.32 | +23.32 | +114.48 | +137.80 |
 | 2026-08-17 | `VOR` | 56 | $23.03 | $22.91 | -6.72 | $23.01 | +5.60 | -1.12 | +50.40 | +56.00 |
@@ -98,8 +98,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-17 | `NPWR` | 4 | — | $1.92 | +0.00 | $1.73 | -0.76 | -0.76 | +0.00 | -0.76 |
 | 2026-08-18 | `IREN` | 27 | $44.90 | $43.56 | -36.18 | — | +0.00 | -36.18 | -65.34 | — |
 | 2026-08-18 | `TNDM` | 53 | $22.25 | $22.16 | -5.03 | — | +0.00 | -5.03 | -62.01 | — |
-| 2026-08-18 | `INO` | 1543 | $1.15 | $1.14 | -15.43 | — | +0.00 | -15.43 | +509.19 | — |
 | 2026-08-18 | `TPG` | 24 | $51.77 | $51.77 | +0.00 | — | +0.00 | +0.00 | +27.52 | — |
+| 2026-08-18 | `INO` | 1543 | $1.15 | $1.14 | -15.43 | — | +0.00 | -15.43 | +509.19 | — |
 | 2026-08-18 | `HIMS` | 42 | $28.61 | $27.85 | -31.92 | — | +0.00 | -31.92 | -79.38 | — |
 | 2026-08-18 | `SLS` | 106 | $13.00 | $12.66 | -36.04 | — | +0.00 | -36.04 | +101.76 | — |
 | 2026-08-18 | `VOR` | 56 | $23.01 | $22.82 | -10.64 | — | +0.00 | -10.64 | +45.36 | — |
@@ -310,20 +310,32 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | `BRR` | 5 | $2.86 | $2.87 | +0.05 | — | +0.00 | +0.05 | +1.80 | — |
 | 2026-09-10 | `IRD` | 2 | $5.73 | $5.87 | +0.28 | $6.07 | +0.40 | +0.68 | +2.68 | +3.08 |
 | 2026-09-10 | `LENZ` | 2 | $4.91 | $4.85 | -0.12 | — | +0.00 | -0.12 | -1.80 | — |
-| 2026-09-11 | `IRD` | 2 | $6.07 | $6.16 | +0.18 | $6.04 | -0.24 | -0.06 | +3.26 | +3.02 |
-| 2026-09-11 | `INDP` | 556 | — | $2.70 | +0.00 | $2.77 | +38.92 | +38.92 | +0.00 | +38.92 |
-| 2026-09-11 | `CYPH` | 628 | — | $2.39 | +0.00 | $2.27 | -78.50 | -78.50 | +0.00 | -78.50 |
-| 2026-09-11 | `HPE` | 26 | — | $56.37 | +0.00 | $62.09 | +148.72 | +148.72 | +0.00 | +148.72 |
-| 2026-09-11 | `SEDG` | 40 | — | $36.78 | +0.00 | $34.68 | -84.00 | -84.00 | +0.00 | -84.00 |
+| 2026-09-11 | `IRD` | 2 | $6.07 | $6.16 | +0.18 | — | +0.00 | +0.18 | +3.26 | — |
+| 2026-09-11 | `INDP` | 487 | — | $2.70 | +0.00 | $2.77 | +34.09 | +34.09 | +0.00 | +34.09 |
+| 2026-09-11 | `BNC` | 268 | — | $4.91 | +0.00 | $4.80 | -29.48 | -29.48 | +0.00 | -29.48 |
+| 2026-09-11 | `CMRC` | 420 | — | $3.13 | +0.00 | $3.50 | +157.50 | +157.50 | +0.00 | +157.50 |
+| 2026-09-11 | `GPRO` | 940 | — | $1.40 | +0.00 | $1.38 | -18.80 | -18.80 | +0.00 | -18.80 |
+| 2026-09-11 | `SWKS` | 15 | — | $84.27 | +0.00 | $88.35 | +61.20 | +61.20 | +0.00 | +61.20 |
+| 2026-09-11 | `WLTH` | 120 | — | $10.95 | +0.00 | $10.38 | -68.40 | -68.40 | +0.00 | -68.40 |
+| 2026-09-11 | `ASO` | 23 | — | $54.91 | +0.00 | $55.36 | +10.35 | +10.35 | +0.00 | +10.35 |
+| 2026-09-11 | `PAYP` | 71 | — | $18.30 | +0.00 | $18.45 | +10.65 | +10.65 | +0.00 | +10.65 |
+| 2026-09-14 | `INDP` | 487 | $2.77 | $2.80 | +14.61 | $3.14 | +165.58 | +180.19 | +48.70 | +214.28 |
+| 2026-09-14 | `BNC` | 268 | $4.80 | $4.96 | +42.88 | $5.27 | +83.08 | +125.96 | +13.40 | +96.48 |
+| 2026-09-14 | `CMRC` | 420 | $3.50 | $3.51 | +2.10 | $3.64 | +54.60 | +56.70 | +159.60 | +214.20 |
+| 2026-09-14 | `GPRO` | 940 | $1.38 | $1.37 | -9.40 | $1.35 | -18.80 | -28.20 | -28.20 | -47.00 |
+| 2026-09-14 | `SWKS` | 15 | $88.35 | $86.06 | -34.35 | $79.26 | -102.00 | -136.35 | +26.85 | -75.15 |
+| 2026-09-14 | `WLTH` | 120 | $10.38 | $10.29 | -10.80 | $10.65 | +43.20 | +32.40 | -79.20 | -36.00 |
+| 2026-09-14 | `ASO` | 23 | $55.36 | $54.75 | -14.03 | $54.25 | -11.50 | -25.53 | -3.68 | -15.18 |
+| 2026-09-14 | `PAYP` | 71 | $18.45 | $18.28 | -12.07 | $18.68 | +28.40 | +16.33 | -1.42 | +26.98 |
 
 ## Each session (cash + holdings state)
 
 | Date | S | 09:30 cash | 09:30 held | 09:30 equity | Overnight $ | Intraday $ | Bought | Sold | Close cash | Close equity | Close held |
 |---|---:|---:|---|---:|---:|---:|---|---|---:|---:|---|
-| 2026-08-13 | +8.53 | $10,000.00 | — | $10,000.00 | +0.00 | +300.75 | IREN, TNDM, INO, TPG, HIMS, SLS, VOR, BTSG | — | $107.38 | $10,268.71 | IREN×27, TNDM×53, INO×1543, TPG×24, HIMS×42, SLS×106, VOR×56, BTSG×20 |
-| 2026-08-14 | +5.50 | $107.38 | IREN×27, TNDM×53, INO×1543, TPG×24, HIMS×42, SLS×106, VOR×56, BTSG×20 | $10,312.70 | +43.99 | +199.06 | ZENA, AIRO, BZAI | — | $69.59 | $10,511.32 | IREN×27, TNDM×53, INO×1543, TPG×24, HIMS×42, SLS×106, VOR×56, BTSG×20, ZENA×6, AIRO×1, BZAI×17 |
-| 2026-08-17 | +2.25 | $69.59 | IREN×27, TNDM×53, INO×1543, TPG×24, HIMS×42, SLS×106, VOR×56, BTSG×20, ZENA×6, AIRO×1, BZAI×17 | $10,483.18 | -28.14 | +100.76 | XHG, CAPR, NPWR | — | $46.41 | $10,583.70 | IREN×27, TNDM×53, INO×1543, TPG×24, HIMS×42, SLS×106, VOR×56, BTSG×20, ZENA×6, AIRO×1, BZAI×17, XHG×2, CAPR×1, NPWR×4 |
-| 2026-08-18 | -6.20 | $46.41 | IREN×27, TNDM×53, INO×1543, TPG×24, HIMS×42, SLS×106, VOR×56, BTSG×20, ZENA×6, AIRO×1, BZAI×17, XHG×2, CAPR×1, NPWR×4 | $10,439.30 | -144.40 | +1.74 | — | IREN, TNDM, INO, TPG, HIMS, SLS, VOR, BTSG | $10,352.86 | $10,405.80 | ZENA×6, AIRO×1, BZAI×17, XHG×2, CAPR×1, NPWR×4 |
+| 2026-08-13 | +8.53 | $10,000.00 | — | $10,000.00 | +0.00 | +300.75 | IREN, TNDM, TPG, INO, HIMS, SLS, VOR, BTSG | — | $107.38 | $10,268.71 | IREN×27, TNDM×53, TPG×24, INO×1543, HIMS×42, SLS×106, VOR×56, BTSG×20 |
+| 2026-08-14 | +5.50 | $107.38 | IREN×27, TNDM×53, TPG×24, INO×1543, HIMS×42, SLS×106, VOR×56, BTSG×20 | $10,312.70 | +43.99 | +199.06 | ZENA, AIRO, BZAI | — | $69.59 | $10,511.32 | IREN×27, TNDM×53, TPG×24, INO×1543, HIMS×42, SLS×106, VOR×56, BTSG×20, ZENA×6, AIRO×1, BZAI×17 |
+| 2026-08-17 | +2.25 | $69.59 | IREN×27, TNDM×53, TPG×24, INO×1543, HIMS×42, SLS×106, VOR×56, BTSG×20, ZENA×6, AIRO×1, BZAI×17 | $10,483.18 | -28.14 | +100.76 | XHG, CAPR, NPWR | — | $46.41 | $10,583.70 | IREN×27, TNDM×53, TPG×24, INO×1543, HIMS×42, SLS×106, VOR×56, BTSG×20, ZENA×6, AIRO×1, BZAI×17, XHG×2, CAPR×1, NPWR×4 |
+| 2026-08-18 | -6.20 | $46.41 | IREN×27, TNDM×53, TPG×24, INO×1543, HIMS×42, SLS×106, VOR×56, BTSG×20, ZENA×6, AIRO×1, BZAI×17, XHG×2, CAPR×1, NPWR×4 | $10,439.30 | -144.40 | +1.74 | — | IREN, TNDM, TPG, INO, HIMS, SLS, VOR, BTSG | $10,352.86 | $10,405.80 | ZENA×6, AIRO×1, BZAI×17, XHG×2, CAPR×1, NPWR×4 |
 | 2026-08-19 | -7.20 | $10,352.86 | ZENA×6, AIRO×1, BZAI×17, XHG×2, CAPR×1, NPWR×4 | $10,406.34 | +0.54 | +0.69 | — | ZENA, AIRO, BZAI | $10,383.27 | $10,406.59 | XHG×2, CAPR×1, NPWR×4 |
 | 2026-08-20 | +1.12 | $10,383.27 | XHG×2, CAPR×1, NPWR×4 | $10,405.69 | -0.90 | +69.74 | MRNA, CYPH, ABCL, SENS, AUTL, TEM, WPM, IAG | XHG, CAPR, NPWR | $228.07 | $10,440.73 | MRNA×8, CYPH×1131, ABCL×110, SENS×145, AUTL×526, TEM×21, WPM×8, IAG×66 |
 | 2026-08-21 | +3.25 | $228.07 | MRNA×8, CYPH×1131, ABCL×110, SENS×145, AUTL×526, TEM×21, WPM×8, IAG×66 | $10,710.01 | +269.28 | +391.90 | XHG, ARCT, IOVA, MRVI, CAPR | — | $53.47 | $11,100.11 | MRNA×8, CYPH×1131, ABCL×110, SENS×145, AUTL×526, TEM×21, WPM×8, IAG×66, XHG×8, ARCT×3, IOVA×4, MRVI×4, CAPR×5 |
@@ -340,7 +352,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | -11.47 | $46.34 | GPRO×763, REAX×73, BMEA×704, MMED×56, AGCO×10, ARCT×81, NVAX×130, VSTM×169, DFDV×2, BRR×5, IRD×2, LENZ×2 | $10,661.55 | -154.28 | -55.34 | — | — | $46.34 | $10,606.20 | GPRO×763, REAX×73, BMEA×704, MMED×56, AGCO×10, ARCT×81, NVAX×130, VSTM×169, DFDV×2, BRR×5, IRD×2, LENZ×2 |
 | 2026-09-09 | -13.95 | $46.34 | GPRO×763, REAX×73, BMEA×704, MMED×56, AGCO×10, ARCT×81, NVAX×130, VSTM×169, DFDV×2, BRR×5, IRD×2, LENZ×2 | $10,562.35 | -43.85 | -0.57 | — | GPRO, REAX, BMEA, MMED, AGCO, ARCT, NVAX, VSTM | $10,482.48 | $10,528.94 | DFDV×2, BRR×5, IRD×2, LENZ×2 |
 | 2026-09-10 | -13.28 | $10,482.48 | DFDV×2, BRR×5, IRD×2, LENZ×2 | $10,528.71 | -0.23 | +0.40 | — | DFDV, BRR, LENZ | $10,516.53 | $10,528.67 | IRD×2 |
-| 2026-09-11 | +0.50 | $10,516.53 | IRD×2 | $10,528.85 | +0.18 | +24.90 | INDP, CYPH, HPE, SEDG | — | $4,558.14 | $10,534.30 | IRD×2, INDP×556, CYPH×628, HPE×26, SEDG×40 |
+| 2026-09-11 | +0.50 | $10,516.53 | IRD×2 | $10,528.85 | +0.18 | +157.11 | INDP, BNC, CMRC, GPRO, SWKS, WLTH, ASO, PAYP | IRD | $91.11 | $10,649.88 | INDP×487, BNC×268, CMRC×420, GPRO×940, SWKS×15, WLTH×120, ASO×23, PAYP×71 |
+| 2026-09-14 | -11.00 | $91.11 | INDP×487, BNC×268, CMRC×420, GPRO×940, SWKS×15, WLTH×120, ASO×23, PAYP×71 | $10,628.82 | -21.06 | +242.56 | — | — | $91.11 | $10,871.38 | INDP×487, BNC×268, CMRC×420, GPRO×940, SWKS×15, WLTH×120, ASO×23, PAYP×71 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -348,29 +361,29 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 |---|---|---|---:|---:|---:|---:|---:|---:|---|---|
 | 2026-08-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-08-13 09:30 ET | **BUY** | `IREN` | 27 | $45.98 | $2.07 | — | $8,756.47 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=+12.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 |
-| 2026-08-13 09:30 ET | **BUY** | `TNDM` | 53 | $23.33 | $2.15 | — | $7,517.83 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=+19.7; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟢 |
-| 2026-08-13 09:30 ET | **BUY** | `INO` | 1543 | $0.81 | $17.13 | — | $6,250.87 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=+13.2; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟢 |
-| 2026-08-13 09:30 ET | **BUY** | `TPG` | 24 | $50.62 | $2.06 | — | $5,033.85 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=+6.2; leftover $1250.00 | join🟢 sector🟢 gen🟢 |
-| 2026-08-13 09:30 ET | **BUY** | `HIMS` | 42 | $29.74 | $2.12 | — | $3,782.66 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=-5.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟢 |
-| 2026-08-13 09:30 ET | **BUY** | `SLS` | 106 | $11.70 | $2.31 | — | $2,540.15 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=-0.8; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟢 |
-| 2026-08-13 09:30 ET | **BUY** | `VOR` | 56 | $22.01 | $2.16 | — | $1,305.43 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=+0.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟢 |
-| 2026-08-13 09:30 ET | **BUY** | `BTSG` | 20 | $59.80 | $2.05 | — | $107.38 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=-5.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟢 |
-| 2026-08-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $107.38 | ▲ close $10,268.71 vs 09:30 $10,000.00 (session +300.75) | 16:00 close · cash $107.38 · equity $10,268.71 vs 09:30 $10,000.00 (+268.71; session marks +300.75) · 8 name(s) marked open→close (per-name table). IREN×27 09:30 $45.98 → close $44.76 -32.94; TNDM×53 09:30 $23.33 → close $23.13 -10.60; INO×1543 09:30 $0.81 → close $0.90 +138.87; TPG×24 09:30 $50.62 → close $54.62 +95.92; HIMS×42 09:30 $29.74 → close $28.77 -40.74; SLS×106 09:30 $11.70 → close $12.36 +69.96; VOR×56 09:30 $22.01 → close $23.29 +71.68; BTSG×20 09:30 $59.80 → close $60.23 +8.60 | — |
-| 2026-08-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $107.38 | ▲ 09:30 equity $10,312.70 vs yday $10,268.71 (+43.99) | 09:30 open · cash $107.38 (unchanged overnight, no fees) · equity $10,312.70 vs prior close $10,268.71 (+43.99) · 8 name(s) re-marked at the open (per-name table). IREN×27 yday $44.76 → 09:30 $44.09 -18.09; TNDM×53 yday $23.13 → 09:30 $22.92 -11.13; INO×1543 yday $0.90 → 09:30 $0.93 +46.29; TPG×24 yday $54.62 → 09:30 $55.29 +16.08; HIMS×42 yday $28.77 → 09:30 $29.15 +15.96; SLS×106 yday $12.36 → 09:30 $12.40 +4.24; VOR×56 yday $23.29 → 09:30 $23.33 +2.24; BTSG×20 yday $60.23 → 09:30 $59.65 -11.60 | — |
-| 2026-08-14 09:30 ET | **BUY** | `ZENA` | 6 | $2.20 | $0.15 | — | $94.03 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer; 🔵; ⚪; ret5=+54.3; leftover $13.42 | join🟢 sector🟢 gen🟢 news🟡 judge🟢 vol🟢 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `AIRO` | 1 | $11.12 | $0.11 | — | $82.80 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+36.3; leftover $13.42 | join🟢 sector🟢 gen🟢 news🟡 judge🟡 vol🟢 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `BZAI` | 17 | $0.77 | $0.18 | — | $69.59 | — | rank by w_hot_cond; rank w_hot_cond; list earn_react; 🔵; ⚪; ret5=+20.4; leftover $13.42 | join🟢 sector🟢 gen🟢 news🟡 judge🟢 vol🟡 buy🟡 |
-| 2026-08-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $69.59 | ▲ close $10,511.32 vs 09:30 $10,312.70 (session +199.06) | 16:00 close · cash $69.59 · equity $10,511.32 vs 09:30 $10,312.70 (+198.62; session marks +199.06) · 11 name(s) marked open→close (per-name table). IREN×27 09:30 $44.09 → close $44.06 -0.81; TNDM×53 09:30 $22.92 → close $22.72 -10.60; INO×1543 09:30 $0.93 → close $1.09 +246.88; TPG×24 09:30 $55.29 → close $53.03 -54.24; HIMS×42 09:30 $29.15 → close $28.15 -42.00; SLS×106 09:30 $12.40 → close $12.78 +40.28; VOR×56 09:30 $23.33 → close $23.03 -16.80; BTSG×20 09:30 $59.65 → close $61.71 +41.20; ZENA×6 09:30 $2.20 → close $2.14 -0.36; AIRO×1 09:30 $11.12 → close $9.57 -1.55; BZAI×17 09:30 $0.77 → close $0.59 -2.94 | — |
-| 2026-08-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $69.59 | ▼ 09:30 equity $10,483.18 vs yday $10,511.32 (-28.14) | 09:30 open · cash $69.59 (unchanged overnight, no fees) · equity $10,483.18 vs prior close $10,511.32 (-28.14) · 11 name(s) re-marked at the open (per-name table). IREN×27 yday $44.06 → 09:30 $45.23 +31.59; TNDM×53 yday $22.72 → 09:30 $22.50 -11.66; INO×1543 yday $1.09 → 09:30 $1.07 -30.86; TPG×24 yday $53.03 → 09:30 $52.67 -8.64; HIMS×42 yday $28.15 → 09:30 $28.14 -0.42; SLS×106 yday $12.78 → 09:30 $12.78 +0.00; VOR×56 yday $23.03 → 09:30 $22.91 -6.72; BTSG×20 yday $61.71 → 09:30 $61.69 -0.40; ZENA×6 yday $2.14 → 09:30 $2.08 -0.33; AIRO×1 yday $9.57 → 09:30 $9.57 +0.00; BZAI×17 yday $0.59 → 09:30 $0.55 -0.70 | — |
+| 2026-08-13 09:30 ET | **BUY** | `TNDM` | 53 | $23.33 | $2.15 | — | $7,517.83 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=+19.7; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟡 |
+| 2026-08-13 09:30 ET | **BUY** | `TPG` | 24 | $50.62 | $2.06 | — | $6,300.81 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=+6.2; leftover $1250.00 | join🟢 sector🟢 gen🟢 |
+| 2026-08-13 09:30 ET | **BUY** | `INO` | 1543 | $0.81 | $17.13 | — | $5,033.85 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=+13.2; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟡 |
+| 2026-08-13 09:30 ET | **BUY** | `HIMS` | 42 | $29.74 | $2.12 | — | $3,782.66 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=-5.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟡 |
+| 2026-08-13 09:30 ET | **BUY** | `SLS` | 106 | $11.70 | $2.31 | — | $2,540.15 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=-0.8; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟡 |
+| 2026-08-13 09:30 ET | **BUY** | `VOR` | 56 | $22.01 | $2.16 | — | $1,305.43 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=+0.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟡 |
+| 2026-08-13 09:30 ET | **BUY** | `BTSG` | 20 | $59.80 | $2.05 | — | $107.38 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=-5.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 judge🟡 |
+| 2026-08-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $107.38 | ▲ close $10,268.71 vs 09:30 $10,000.00 (session +300.75) | 16:00 close · cash $107.38 · equity $10,268.71 vs 09:30 $10,000.00 (+268.71; session marks +300.75) · 8 name(s) marked open→close (per-name table). IREN×27 09:30 $45.98 → close $44.76 -32.94; TNDM×53 09:30 $23.33 → close $23.13 -10.60; TPG×24 09:30 $50.62 → close $54.62 +95.92; INO×1543 09:30 $0.81 → close $0.90 +138.87; HIMS×42 09:30 $29.74 → close $28.77 -40.74; SLS×106 09:30 $11.70 → close $12.36 +69.96; VOR×56 09:30 $22.01 → close $23.29 +71.68; BTSG×20 09:30 $59.80 → close $60.23 +8.60 | — |
+| 2026-08-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $107.38 | ▲ 09:30 equity $10,312.70 vs yday $10,268.71 (+43.99) | 09:30 open · cash $107.38 (unchanged overnight, no fees) · equity $10,312.70 vs prior close $10,268.71 (+43.99) · 8 name(s) re-marked at the open (per-name table). IREN×27 yday $44.76 → 09:30 $44.09 -18.09; TNDM×53 yday $23.13 → 09:30 $22.92 -11.13; TPG×24 yday $54.62 → 09:30 $55.29 +16.08; INO×1543 yday $0.90 → 09:30 $0.93 +46.29; HIMS×42 yday $28.77 → 09:30 $29.15 +15.96; SLS×106 yday $12.36 → 09:30 $12.40 +4.24; VOR×56 yday $23.29 → 09:30 $23.33 +2.24; BTSG×20 yday $60.23 → 09:30 $59.65 -11.60 | — |
+| 2026-08-14 09:30 ET | **BUY** | `ZENA` | 6 | $2.20 | $0.15 | — | $94.03 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer; 🔵; ⚪; ret5=+54.3; leftover $13.42 | join🟢 sector🟢 gen🟢 news🟡 judge🟡 vol🟢 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `AIRO` | 1 | $11.12 | $0.11 | — | $82.80 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+36.3; leftover $13.42 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `BZAI` | 17 | $0.77 | $0.18 | — | $69.59 | — | rank by w_hot_cond; rank w_hot_cond; list earn_react; 🔵; ⚪; ret5=+20.4; leftover $13.42 | join🟢 sector🟢 gen🟢 news🟡 judge🟡 vol🟡 buy🟡 |
+| 2026-08-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $69.59 | ▲ close $10,511.32 vs 09:30 $10,312.70 (session +199.06) | 16:00 close · cash $69.59 · equity $10,511.32 vs 09:30 $10,312.70 (+198.62; session marks +199.06) · 11 name(s) marked open→close (per-name table). IREN×27 09:30 $44.09 → close $44.06 -0.81; TNDM×53 09:30 $22.92 → close $22.72 -10.60; TPG×24 09:30 $55.29 → close $53.03 -54.24; INO×1543 09:30 $0.93 → close $1.09 +246.88; HIMS×42 09:30 $29.15 → close $28.15 -42.00; SLS×106 09:30 $12.40 → close $12.78 +40.28; VOR×56 09:30 $23.33 → close $23.03 -16.80; BTSG×20 09:30 $59.65 → close $61.71 +41.20; ZENA×6 09:30 $2.20 → close $2.14 -0.36; AIRO×1 09:30 $11.12 → close $9.57 -1.55; BZAI×17 09:30 $0.77 → close $0.59 -2.94 | — |
+| 2026-08-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $69.59 | ▼ 09:30 equity $10,483.18 vs yday $10,511.32 (-28.14) | 09:30 open · cash $69.59 (unchanged overnight, no fees) · equity $10,483.18 vs prior close $10,511.32 (-28.14) · 11 name(s) re-marked at the open (per-name table). IREN×27 yday $44.06 → 09:30 $45.23 +31.59; TNDM×53 yday $22.72 → 09:30 $22.50 -11.66; TPG×24 yday $53.03 → 09:30 $52.67 -8.64; INO×1543 yday $1.09 → 09:30 $1.07 -30.86; HIMS×42 yday $28.15 → 09:30 $28.14 -0.42; SLS×106 yday $12.78 → 09:30 $12.78 +0.00; VOR×56 yday $23.03 → 09:30 $22.91 -6.72; BTSG×20 yday $61.71 → 09:30 $61.69 -0.40; ZENA×6 yday $2.14 → 09:30 $2.08 -0.33; AIRO×1 yday $9.57 → 09:30 $9.57 +0.00; BZAI×17 yday $0.59 → 09:30 $0.55 -0.70 | — |
 | 2026-08-17 09:30 ET | **BUY** | `XHG` | 2 | $4.19 | $0.09 | — | $61.12 | — | rank by w_hot_cond; rank w_hot_cond; list yday_mover; ⚪; ret5=+291.8; leftover $8.70 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
-| 2026-08-17 09:30 ET | **BUY** | `CAPR` | 1 | $6.87 | $0.07 | — | $54.18 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; ret5=+62.6; leftover $8.70 | join🟡 sector🔴 gen🟢 news🟡 judge🟢 vol🟢 buy🟡 |
-| 2026-08-17 09:30 ET | **BUY** | `NPWR` | 4 | $1.92 | $0.09 | — | $46.41 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; ⚪; ret5=+28.3; leftover $8.70 | join🟡 sector🟢 gen🟢 news🟡 judge🟡 vol🟢 buy🟡 |
-| 2026-08-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $46.41 | ▲ close $10,583.70 vs 09:30 $10,483.18 (session +100.76) | 16:00 close · cash $46.41 · equity $10,583.70 vs 09:30 $10,483.18 (+100.52; session marks +100.76) · 14 name(s) marked open→close (per-name table). IREN×27 09:30 $45.23 → close $44.90 -8.91; TNDM×53 09:30 $22.50 → close $22.25 -12.99; INO×1543 09:30 $1.07 → close $1.15 +123.44; TPG×24 09:30 $52.67 → close $51.77 -21.60; HIMS×42 09:30 $28.14 → close $28.61 +19.74; SLS×106 09:30 $12.78 → close $13.00 +23.32; VOR×56 09:30 $22.91 → close $23.01 +5.60; BTSG×20 09:30 $61.69 → close $60.38 -26.20; ZENA×6 09:30 $2.08 → close $2.05 -0.21; AIRO×1 09:30 $9.57 → close $9.41 -0.16; BZAI×17 09:30 $0.55 → close $0.52 -0.53; XHG×2 09:30 $4.19 → close $3.91 -0.56; CAPR×1 09:30 $6.87 → close $7.45 +0.58; NPWR×4 09:30 $1.92 → close $1.73 -0.76 | — |
-| 2026-08-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $46.41 | ▼ 09:30 equity $10,439.30 vs yday $10,583.70 (-144.40) | 09:30 open · cash $46.41 (unchanged overnight, no fees) · equity $10,439.30 vs prior close $10,583.70 (-144.40) · 14 name(s) re-marked at the open (per-name table). IREN×27 yday $44.90 → 09:30 $43.56 -36.18; TNDM×53 yday $22.25 → 09:30 $22.16 -5.03; INO×1543 yday $1.15 → 09:30 $1.14 -15.43; TPG×24 yday $51.77 → 09:30 $51.77 +0.00; HIMS×42 yday $28.61 → 09:30 $27.85 -31.92; SLS×106 yday $13.00 → 09:30 $12.66 -36.04; VOR×56 yday $23.01 → 09:30 $22.82 -10.64; BTSG×20 yday $60.38 → 09:30 $60.00 -7.60; ZENA×6 yday $2.05 → 09:30 $1.95 -0.63; AIRO×1 yday $9.41 → 09:30 $9.01 -0.40; BZAI×17 yday $0.52 → 09:30 $0.49 -0.51; XHG×2 yday $3.91 → 09:30 $3.94 +0.06; CAPR×1 yday $7.45 → 09:30 $7.50 +0.05; NPWR×4 yday $1.73 → 09:30 $1.70 -0.12 | — |
+| 2026-08-17 09:30 ET | **BUY** | `CAPR` | 1 | $6.87 | $0.07 | — | $54.18 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; ret5=+62.6; leftover $8.70 | join🟡 sector🔴 gen🟢 news🟡 judge🟡 vol🟢 buy🟡 |
+| 2026-08-17 09:30 ET | **BUY** | `NPWR` | 4 | $1.92 | $0.09 | — | $46.41 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; ⚪; ret5=+28.3; leftover $8.70 | join🟡 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
+| 2026-08-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $46.41 | ▲ close $10,583.70 vs 09:30 $10,483.18 (session +100.76) | 16:00 close · cash $46.41 · equity $10,583.70 vs 09:30 $10,483.18 (+100.52; session marks +100.76) · 14 name(s) marked open→close (per-name table). IREN×27 09:30 $45.23 → close $44.90 -8.91; TNDM×53 09:30 $22.50 → close $22.25 -12.99; TPG×24 09:30 $52.67 → close $51.77 -21.60; INO×1543 09:30 $1.07 → close $1.15 +123.44; HIMS×42 09:30 $28.14 → close $28.61 +19.74; SLS×106 09:30 $12.78 → close $13.00 +23.32; VOR×56 09:30 $22.91 → close $23.01 +5.60; BTSG×20 09:30 $61.69 → close $60.38 -26.20; ZENA×6 09:30 $2.08 → close $2.05 -0.21; AIRO×1 09:30 $9.57 → close $9.41 -0.16; BZAI×17 09:30 $0.55 → close $0.52 -0.53; XHG×2 09:30 $4.19 → close $3.91 -0.56; CAPR×1 09:30 $6.87 → close $7.45 +0.58; NPWR×4 09:30 $1.92 → close $1.73 -0.76 | — |
+| 2026-08-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $46.41 | ▼ 09:30 equity $10,439.30 vs yday $10,583.70 (-144.40) | 09:30 open · cash $46.41 (unchanged overnight, no fees) · equity $10,439.30 vs prior close $10,583.70 (-144.40) · 14 name(s) re-marked at the open (per-name table). IREN×27 yday $44.90 → 09:30 $43.56 -36.18; TNDM×53 yday $22.25 → 09:30 $22.16 -5.03; TPG×24 yday $51.77 → 09:30 $51.77 +0.00; INO×1543 yday $1.15 → 09:30 $1.14 -15.43; HIMS×42 yday $28.61 → 09:30 $27.85 -31.92; SLS×106 yday $13.00 → 09:30 $12.66 -36.04; VOR×56 yday $23.01 → 09:30 $22.82 -10.64; BTSG×20 yday $60.38 → 09:30 $60.00 -7.60; ZENA×6 yday $2.05 → 09:30 $1.95 -0.63; AIRO×1 yday $9.41 → 09:30 $9.01 -0.40; BZAI×17 yday $0.52 → 09:30 $0.49 -0.51; XHG×2 yday $3.91 → 09:30 $3.94 +0.06; CAPR×1 yday $7.45 → 09:30 $7.50 +0.05; NPWR×4 yday $1.73 → 09:30 $1.70 -0.12 | — |
 | 2026-08-18 09:30 ET | **SELL** | `IREN` | 27 | $43.56 | $2.09 | $-69.50 | $1,220.44 | ▼ -69.50 after sell → book $10,437.21; vs 09:30 mark -2.09 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-18 09:30 ET | **SELL** | `TNDM` | 53 | $22.16 | $2.17 | $-66.33 | $2,392.75 | ▼ -66.33 after sell → book $10,435.04; vs 09:30 mark -2.17 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-18 09:30 ET | **SELL** | `INO` | 1543 | $1.14 | $20.17 | $+471.89 | $4,131.60 | ▲ +471.89 after sell → book $10,414.87; vs 09:30 mark -20.17 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-18 09:30 ET | **SELL** | `TPG` | 24 | $51.77 | $2.08 | $+23.38 | $5,372.00 | ▲ +23.38 after sell → book $10,412.78; vs 09:30 mark -2.09 | dropped from list after 3 sess (min 3) | — |
+| 2026-08-18 09:30 ET | **SELL** | `TPG` | 24 | $51.77 | $2.08 | $+23.38 | $3,633.15 | ▲ +23.38 after sell → book $10,432.96; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | — |
+| 2026-08-18 09:30 ET | **SELL** | `INO` | 1543 | $1.14 | $20.17 | $+471.89 | $5,372.00 | ▲ +471.89 after sell → book $10,412.78; vs 09:30 mark -20.18 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-18 09:30 ET | **SELL** | `HIMS` | 42 | $27.85 | $2.14 | $-83.63 | $6,539.56 | ▼ -83.63 after sell → book $10,410.65; vs 09:30 mark -2.13 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-18 09:30 ET | **SELL** | `SLS` | 106 | $12.66 | $2.34 | $+97.12 | $7,879.19 | ▲ +97.12 after sell → book $10,408.31; vs 09:30 mark -2.34 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-18 09:30 ET | **SELL** | `VOR` | 56 | $22.82 | $2.18 | $+41.02 | $9,154.93 | ▲ +41.02 after sell → book $10,406.13; vs 09:30 mark -2.18 | dropped from list after 3 sess (min 3) | — |
@@ -508,11 +521,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 09:30 ET | **SELL** | `LENZ` | 2 | $4.85 | $0.12 | $-2.04 | $10,516.53 | ▼ -2.04 after sell → book $10,528.27; vs 09:30 mark -0.13 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,516.53 | ▲ close $10,528.67 vs 09:30 $10,528.71 (session +0.40) | 16:00 close · cash $10,516.53 · equity $10,528.67 vs 09:30 $10,528.71 (-0.04; session marks +0.40) · 1 name(s) marked open→close (per-name table). IRD×2 09:30 $5.87 → close $6.07 +0.40 | — |
 | 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,516.53 | ▲ 09:30 equity $10,528.85 vs yday $10,528.67 (+0.18) | 09:30 open · cash $10,516.53 (unchanged overnight, no fees) · equity $10,528.85 vs prior close $10,528.67 (+0.18) · 1 name(s) re-marked at the open (per-name table). IRD×2 yday $6.07 → 09:30 $6.16 +0.18 | — |
-| 2026-09-11 09:30 ET | **BUY** | `INDP` | 556 | $2.70 | $7.17 | — | $9,008.16 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+61.6; leftover $1502.36 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `CYPH` | 628 | $2.39 | $8.10 | — | $7,499.14 | — | rank by w_hot_cond; rank w_hot_cond; list yday_mover; 🔵; ret5=+44.1; leftover $1502.36 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `HPE` | 26 | $56.37 | $2.07 | — | $6,031.45 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ⚪; ret5=+15.8; leftover $1502.36 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `SEDG` | 40 | $36.78 | $2.11 | — | $4,558.14 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ⚪; ret5=+13.1; leftover $1502.36 | join🟢 sector🟢 gen🟡 news🟡 digest🟡 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,558.14 | ▲ close $10,534.30 vs 09:30 $10,528.85 (session +24.90) | 16:00 close · cash $4,558.14 · equity $10,534.30 vs 09:30 $10,528.85 (+5.45; session marks +24.90) · 5 name(s) marked open→close (per-name table). IRD×2 09:30 $6.16 → close $6.04 -0.24; INDP×556 09:30 $2.70 → close $2.77 +38.92; CYPH×628 09:30 $2.39 → close $2.27 -78.50; HPE×26 09:30 $56.37 → close $62.09 +148.72; SEDG×40 09:30 $36.78 → close $34.68 -84.00 | — |
+| 2026-09-11 09:30 ET | **SELL** | `IRD` | 2 | $6.16 | $0.15 | $+3.01 | $10,528.70 | ▲ +3.01 after sell → book $10,528.70; vs 09:30 mark -0.15 | dropped from list after 4 sess (min 3) | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `INDP` | 487 | $2.70 | $6.28 | — | $9,207.52 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+118.8; leftover $1316.09 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `BNC` | 268 | $4.91 | $3.46 | — | $7,888.18 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+76.3; leftover $1316.09 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `CMRC` | 420 | $3.13 | $5.42 | — | $6,568.17 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; ret5=+24.2; leftover $1316.09 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `GPRO` | 940 | $1.40 | $12.13 | — | $5,240.04 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=-17.2; leftover $1316.09 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `SWKS` | 15 | $84.27 | $2.04 | — | $3,973.96 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,ohlc_hot; ret5=+17.2; leftover $1316.09 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `WLTH` | 120 | $10.95 | $2.35 | — | $2,657.61 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+20.8; leftover $1316.09 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `ASO` | 23 | $54.91 | $2.06 | — | $1,392.62 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer; 🔵; ret5=+24.3; leftover $1316.09 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `PAYP` | 71 | $18.30 | $2.20 | — | $91.11 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ⚪; ret5=+16.0; leftover $1316.09 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $91.11 | ▲ close $10,649.88 vs 09:30 $10,528.85 (session +157.11) | 16:00 close · cash $91.11 · equity $10,649.88 vs 09:30 $10,528.85 (+121.03; session marks +157.11) · 8 name(s) marked open→close (per-name table). INDP×487 09:30 $2.70 → close $2.77 +34.09; BNC×268 09:30 $4.91 → close $4.80 -29.48; CMRC×420 09:30 $3.13 → close $3.50 +157.50; GPRO×940 09:30 $1.40 → close $1.38 -18.80; SWKS×15 09:30 $84.27 → close $88.35 +61.20; WLTH×120 09:30 $10.95 → close $10.38 -68.40; ASO×23 09:30 $54.91 → close $55.36 +10.35; PAYP×71 09:30 $18.30 → close $18.45 +10.65 | — |
+| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $91.11 | ▼ 09:30 equity $10,628.82 vs yday $10,649.88 (-21.06) | 09:30 open · cash $91.11 (unchanged overnight, no fees) · equity $10,628.82 vs prior close $10,649.88 (-21.06) · 8 name(s) re-marked at the open (per-name table). INDP×487 yday $2.77 → 09:30 $2.80 +14.61; BNC×268 yday $4.80 → 09:30 $4.96 +42.88; CMRC×420 yday $3.50 → 09:30 $3.51 +2.10; GPRO×940 yday $1.38 → 09:30 $1.37 -9.40; SWKS×15 yday $88.35 → 09:30 $86.06 -34.35; WLTH×120 yday $10.38 → 09:30 $10.29 -10.80; ASO×23 yday $55.36 → 09:30 $54.75 -14.03; PAYP×71 yday $18.45 → 09:30 $18.28 -12.07 | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $91.11 | ▲ close $10,871.38 vs 09:30 $10,628.82 (session +242.56) | 16:00 close · cash $91.11 · equity $10,871.38 vs 09:30 $10,628.82 (+242.56; session marks +242.56) · 8 name(s) marked open→close (per-name table). INDP×487 09:30 $2.80 → close $3.14 +165.58; BNC×268 09:30 $4.96 → close $5.27 +83.08; CMRC×420 09:30 $3.51 → close $3.64 +54.60; GPRO×940 09:30 $1.37 → close $1.35 -18.80; SWKS×15 09:30 $86.06 → close $79.26 -102.00; WLTH×120 09:30 $10.29 → close $10.65 +43.20; ASO×23 09:30 $54.75 → close $54.25 -11.50; PAYP×71 09:30 $18.28 → close $18.68 +28.40 | — |
 
 ## Not taken
 
@@ -520,21 +540,21 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 |---|---|---|---|
 | 2026-08-14 | `IREN` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-08-14 | `TNDM` | min_hold | dropped but min-hold 1/3 sess — no sell |
-| 2026-08-14 | `INO` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-08-14 | `TPG` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-08-14 | `INO` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-08-14 | `HIMS` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-08-14 | `SLS` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-08-14 | `VOR` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-08-14 | `BTSG` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-08-14 | `QMCO` | cash | leftover split 13.42 < 1 share @ 24.68 |
 | 2026-08-14 | `ARX` | cash | leftover split 13.42 < 1 share @ 19.57 |
-| 2026-08-14 | `BRUN` | cash | leftover split 13.42 < 1 share @ 26.25 |
 | 2026-08-14 | `LIFE` | cash | leftover split 13.42 < 1 share @ 35.04 |
 | 2026-08-14 | `LUNR` | cash | leftover split 13.42 < 1 share @ 19.17 |
+| 2026-08-14 | `TBBB` | cash | leftover split 13.42 < 1 share @ 48.82 |
 | 2026-08-17 | `IREN` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-08-17 | `TNDM` | min_hold | dropped but min-hold 2/3 sess — no sell |
-| 2026-08-17 | `INO` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-08-17 | `TPG` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-08-17 | `INO` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-08-17 | `HIMS` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-08-17 | `SLS` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-08-17 | `VOR` | min_hold | dropped but min-hold 2/3 sess — no sell |
@@ -555,9 +575,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-18 | `OABI` | hard_red | hard-red S=-6.20 sit; no new buys |
 | 2026-08-18 | `FDMT` | hard_red | hard-red S=-6.20 sit; no new buys |
 | 2026-08-18 | `AVAH` | hard_red | hard-red S=-6.20 sit; no new buys |
-| 2026-08-18 | `OCUL` | hard_red | hard-red S=-6.20 sit; no new buys |
 | 2026-08-18 | `AXTI` | hard_red | hard-red S=-6.20 sit; no new buys |
 | 2026-08-18 | `FIGR` | hard_red | hard-red S=-6.20 sit; no new buys |
+| 2026-08-18 | `OCUL` | hard_red | hard-red S=-6.20 sit; no new buys |
 | 2026-08-18 | `IOVA` | hard_red | hard-red S=-6.20 sit; no new buys |
 | 2026-08-19 | `XHG` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-08-19 | `CAPR` | min_hold | dropped but min-hold 2/3 sess — no sell |
@@ -716,21 +736,35 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `DOCN` | hard_red | hard-red S=-13.95 sit; no new buys |
 | 2026-09-10 | `INDP` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `CVI` | hard_red | hard-red S=-13.28 sit; no new buys |
-| 2026-09-10 | `INTC` | hard_red | hard-red S=-13.28 sit; no new buys |
-| 2026-09-10 | `UGP` | hard_red | hard-red S=-13.28 sit; no new buys |
-| 2026-09-10 | `SWKS` | hard_red | hard-red S=-13.28 sit; no new buys |
-| 2026-09-10 | `UROY` | hard_red | hard-red S=-13.28 sit; no new buys |
-| 2026-09-10 | `DOCN` | hard_red | hard-red S=-13.28 sit; no new buys |
-| 2026-09-11 | `BNC` | no_price | no 09:30 open |
-| 2026-09-11 | `ORCL` | no_price | no 09:30 open |
-| 2026-09-11 | `INTC` | no_price | no 09:30 open |
+| 2026-09-10 | `SKHY` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `MXL` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `BKV` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `SIMO` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `AMBQ` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-14 | `INDP` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-14 | `BNC` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-14 | `GPRO` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-14 | `SWKS` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-14 | `WLTH` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-14 | `ASO` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-14 | `PAYP` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-14 | `DHT` | hard_red | hard-red S=-11.00 sit; no new buys |
+| 2026-09-14 | `HPQ` | hard_red | hard-red S=-11.00 sit; no new buys |
+| 2026-09-14 | `QRVO` | hard_red | hard-red S=-11.00 sit; no new buys |
+| 2026-09-14 | `FRO` | hard_red | hard-red S=-11.00 sit; no new buys |
+| 2026-09-14 | `HPE` | hard_red | hard-red S=-11.00 sit; no new buys |
+| 2026-09-14 | `DELL` | hard_red | hard-red S=-11.00 sit; no new buys |
+| 2026-09-14 | `TK` | hard_red | hard-red S=-11.00 sit; no new buys |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `IRD` | 2 | 2026-09-04 @ $4.53 | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+19.5; leftover $13.07 |
-| `INDP` | 556 | 2026-09-11 @ $2.70 | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+61.6; leftover $1502.36 |
-| `CYPH` | 628 | 2026-09-11 @ $2.39 | rank by w_hot_cond; rank w_hot_cond; list yday_mover; 🔵; ret5=+44.1; leftover $1502.36 |
-| `HPE` | 26 | 2026-09-11 @ $56.37 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ⚪; ret5=+15.8; leftover $1502.36 |
-| `SEDG` | 40 | 2026-09-11 @ $36.78 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ⚪; ret5=+13.1; leftover $1502.36 |
+| `INDP` | 487 | 2026-09-11 @ $2.70 | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+118.8; leftover $1316.09 |
+| `BNC` | 268 | 2026-09-11 @ $4.91 | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+76.3; leftover $1316.09 |
+| `CMRC` | 420 | 2026-09-11 @ $3.13 | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; ret5=+24.2; leftover $1316.09 |
+| `GPRO` | 940 | 2026-09-11 @ $1.40 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=-17.2; leftover $1316.09 |
+| `SWKS` | 15 | 2026-09-11 @ $84.27 | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,ohlc_hot; ret5=+17.2; leftover $1316.09 |
+| `WLTH` | 120 | 2026-09-11 @ $10.95 | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+20.8; leftover $1316.09 |
+| `ASO` | 23 | 2026-09-11 @ $54.91 | rank by w_hot_cond; rank w_hot_cond; list yday_gainer; 🔵; ret5=+24.3; leftover $1316.09 |
+| `PAYP` | 71 | 2026-09-11 @ $18.30 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ⚪; ret5=+16.0; leftover $1316.09 |

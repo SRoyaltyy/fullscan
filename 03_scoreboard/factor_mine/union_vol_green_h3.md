@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-15.78%** ($8,422) · signal-only (no cash/fees) was +17.60%. Starts YES **6/21**. Fills 97 · skips 161 · realized $-1588.03.
+Cash book **-11.20%** ($8,880) · signal-only (no cash/fees) was +16.52%. Starts YES **7/22**. Fills 102 · skips 170 · realized $-1588.03.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $5,255.28.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $85.79.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -255,9 +255,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | `ASST` | 1 | $26.69 | $26.06 | -0.63 | — | +0.00 | -0.63 | +0.88 | — |
 | 2026-09-10 | `DFDV` | 4 | $5.44 | $5.22 | -0.88 | — | +0.00 | -0.88 | -2.28 | — |
 | 2026-09-10 | `RSKD` | 4 | $5.92 | $5.92 | +0.00 | — | +0.00 | +0.00 | -3.68 | — |
+| 2026-09-11 | `TYRA` | 44 | — | $23.63 | +0.00 | $22.03 | -70.40 | -70.40 | +0.00 | -70.40 |
+| 2026-09-11 | `VIST` | 13 | — | $77.33 | +0.00 | $76.27 | -13.78 | -13.78 | +0.00 | -13.78 |
 | 2026-09-11 | `INDP` | 389 | — | $2.70 | +0.00 | $2.77 | +27.23 | +27.23 | +0.00 | +27.23 |
-| 2026-09-11 | `ANGX` | 195 | — | $5.38 | +0.00 | $5.45 | +13.65 | +13.65 | +0.00 | +13.65 |
-| 2026-09-11 | `IRD` | 170 | — | $6.16 | +0.00 | $6.04 | -20.40 | -20.40 | +0.00 | -20.40 |
+| 2026-09-11 | `CMRC` | 335 | — | $3.13 | +0.00 | $3.50 | +125.62 | +125.62 | +0.00 | +125.62 |
+| 2026-09-11 | `WLTH` | 96 | — | $10.95 | +0.00 | $10.38 | -54.72 | -54.72 | +0.00 | -54.72 |
+| 2026-09-11 | `DBI` | 177 | — | $5.91 | +0.00 | $5.88 | -5.31 | -5.31 | +0.00 | -5.31 |
+| 2026-09-11 | `BNC` | 214 | — | $4.91 | +0.00 | $4.80 | -23.54 | -23.54 | +0.00 | -23.54 |
+| 2026-09-11 | `SWKS` | 12 | — | $84.27 | +0.00 | $88.35 | +48.96 | +48.96 | +0.00 | +48.96 |
+| 2026-09-14 | `TYRA` | 44 | $22.03 | $23.20 | +51.48 | $25.07 | +82.28 | +133.76 | -18.92 | +63.36 |
+| 2026-09-14 | `VIST` | 13 | $76.27 | $77.10 | +10.79 | $76.41 | -8.97 | +1.82 | -2.99 | -11.96 |
+| 2026-09-14 | `INDP` | 389 | $2.77 | $2.80 | +11.67 | $3.14 | +132.26 | +143.93 | +38.90 | +171.16 |
+| 2026-09-14 | `CMRC` | 335 | $3.50 | $3.51 | +1.67 | $3.64 | +43.55 | +45.22 | +127.30 | +170.85 |
+| 2026-09-14 | `WLTH` | 96 | $10.38 | $10.29 | -8.64 | $10.65 | +34.56 | +25.92 | -63.36 | -28.80 |
+| 2026-09-14 | `DBI` | 177 | $5.88 | $5.86 | -3.54 | $6.53 | +118.59 | +115.05 | -8.85 | +109.74 |
+| 2026-09-14 | `BNC` | 214 | $4.80 | $4.96 | +34.24 | $5.27 | +66.34 | +100.58 | +10.70 | +77.04 |
+| 2026-09-14 | `SWKS` | 12 | $88.35 | $86.06 | -27.48 | $79.26 | -81.60 | -109.08 | +21.48 | -60.12 |
 
 ## Each session (cash + holdings state)
 
@@ -283,7 +296,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | -11.47 | $122.29 | RVTY×8, ARCT×66, CRDL×514, GPRO×630, MMED×46, NVAX×107, BMEA×581, DUOL×6, BRR×11, ASST×1, DFDV×4, RSKD×4 | $8,616.08 | -170.88 | -119.33 | — | — | $122.29 | $8,496.75 | RVTY×8, ARCT×66, CRDL×514, GPRO×630, MMED×46, NVAX×107, BMEA×581, DUOL×6, BRR×11, ASST×1, DFDV×4, RSKD×4 |
 | 2026-09-09 | -13.95 | $122.29 | RVTY×8, ARCT×66, CRDL×514, GPRO×630, MMED×46, NVAX×107, BMEA×581, DUOL×6, BRR×11, ASST×1, DFDV×4, RSKD×4 | $8,451.12 | -45.63 | -3.26 | — | RVTY, ARCT, CRDL, GPRO, MMED, NVAX, BMEA, DUOL | $8,310.94 | $8,414.53 | BRR×11, ASST×1, DFDV×4, RSKD×4 |
 | 2026-09-10 | -13.28 | $8,310.94 | BRR×11, ASST×1, DFDV×4, RSKD×4 | $8,413.13 | -1.40 | +0.00 | — | BRR, ASST, DFDV, RSKD | $8,411.97 | $8,411.97 | — |
-| 2026-09-11 | +0.50 | $8,411.97 | — | $8,411.97 | +0.00 | +20.48 | INDP, ANGX, IRD | — | $5,255.28 | $8,422.36 | INDP×389, ANGX×195, IRD×170 |
+| 2026-09-11 | +0.50 | $8,411.97 | — | $8,411.97 | +0.00 | +34.06 | TYRA, VIST, INDP, CMRC, WLTH, DBI, BNC, SWKS | — | $85.79 | $8,422.96 | TYRA×44, VIST×13, INDP×389, CMRC×335, WLTH×96, DBI×177, BNC×214, SWKS×12 |
+| 2026-09-14 | -11.00 | $85.79 | TYRA×44, VIST×13, INDP×389, CMRC×335, WLTH×96, DBI×177, BNC×214, SWKS×12 | $8,493.16 | +70.20 | +387.01 | — | — | $85.79 | $8,880.17 | TYRA×44, VIST×13, INDP×389, CMRC×335, WLTH×96, DBI×177, BNC×214, SWKS×12 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -295,11 +309,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-14 09:30 ET | **BUY** | `BTBT` | 833 | $1.50 | $10.75 | — | $8,739.75 | — | combo gate; gate vol=good,last_green=True; list flatten; 🔵; ⚪; ret5=+9.2; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `BETR` | 84 | $14.80 | $2.24 | — | $7,494.31 | — | combo gate; gate vol=good,last_green=True; list flatten; 🔵; ⚪; ret5=-9.9; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `ANGX` | 290 | $4.31 | $3.74 | — | $6,240.67 | — | combo gate; gate vol=good,last_green=True; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+0.5; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟢 vol🟢 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `HYLN` | 299 | $4.18 | $3.86 | — | $4,986.99 | — | combo gate; gate vol=good,last_green=True; list probable,yday_gainer; 🔵; ⚪; ret5=+4.1; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 judge🟡 vol🟢 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `ADUR` | 75 | $16.50 | $2.21 | — | $3,747.28 | — | combo gate; gate vol=good,last_green=True; list probable,ohlc_hot; 🔵; ⚪; ret5=+9.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 judge🟡 vol🟢 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `AIRO` | 112 | $11.12 | $2.33 | — | $2,499.51 | — | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+36.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 judge🟡 vol🟢 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `HYLN` | 299 | $4.18 | $3.86 | — | $4,986.99 | — | combo gate; gate vol=good,last_green=True; list probable,yday_gainer; 🔵; ⚪; ret5=+4.1; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `ADUR` | 75 | $16.50 | $2.21 | — | $3,747.28 | — | combo gate; gate vol=good,last_green=True; list probable,ohlc_hot; 🔵; ⚪; ret5=+9.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `AIRO` | 112 | $11.12 | $2.33 | — | $2,499.51 | — | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+36.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `NCMI` | 464 | $2.69 | $5.99 | — | $1,245.37 | — | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=-33.5; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `QMLS` | 170 | $7.29 | $2.50 | — | $3.57 | — | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+20.1; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 judge🟢 vol🟢 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `QMLS` | 170 | $7.29 | $2.50 | — | $3.57 | — | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+20.1; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 judge🟡 vol🟢 buy🟡 |
 | 2026-08-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.57 | ▼ close $9,801.97 vs 09:30 $10,000.00 (session -164.42) | 16:00 close · cash $3.57 · equity $9,801.97 vs 09:30 $10,000.00 (-198.03; session marks -164.42) · 8 name(s) marked open→close (per-name table). BTBT×833 09:30 $1.50 → close $1.57 +58.31; BETR×84 09:30 $14.80 → close $13.73 -89.88; ANGX×290 09:30 $4.31 → close $4.37 +17.40; HYLN×299 09:30 $4.18 → close $4.06 -35.88; ADUR×75 09:30 $16.50 → close $16.17 -24.75; AIRO×112 09:30 $11.12 → close $9.57 -173.60; NCMI×464 09:30 $2.69 → close $2.86 +78.88; QMLS×170 09:30 $7.29 → close $7.32 +5.10 | — |
 | 2026-08-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3.57 | ▼ 09:30 equity $9,759.50 vs yday $9,801.97 (-42.47) | 09:30 open · cash $3.57 (unchanged overnight, no fees) · equity $9,759.50 vs prior close $9,801.97 (-42.47) · 8 name(s) re-marked at the open (per-name table). BTBT×833 yday $1.57 → 09:30 $1.52 -41.65; BETR×84 yday $13.73 → 09:30 $13.67 -5.04; ANGX×290 yday $4.37 → 09:30 $4.60 +66.70; HYLN×299 yday $4.06 → 09:30 $4.10 +11.96; ADUR×75 yday $16.17 → 09:30 $15.73 -33.00; AIRO×112 yday $9.57 → 09:30 $9.57 +0.00; NCMI×464 yday $2.86 → 09:30 $2.80 -27.84; QMLS×170 yday $7.32 → 09:30 $7.24 -13.60 | — |
 | 2026-08-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.57 | ▲ close $9,785.73 vs 09:30 $9,759.50 (session +26.23) | 16:00 close · cash $3.57 · equity $9,785.73 vs 09:30 $9,759.50 (+26.23; session marks +26.23) · 8 name(s) marked open→close (per-name table). BTBT×833 09:30 $1.52 → close $1.60 +66.64; BETR×84 09:30 $13.67 → close $13.54 -10.92; ANGX×290 09:30 $4.60 → close $4.71 +31.90; HYLN×299 09:30 $4.10 → close $4.09 -2.99; ADUR×75 09:30 $15.73 → close $15.85 +9.00; AIRO×112 09:30 $9.57 → close $9.41 -17.92; NCMI×464 09:30 $2.80 → close $2.73 -32.48; QMLS×170 09:30 $7.24 → close $7.14 -17.00 | — |
@@ -424,10 +438,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 09:30 ET | **SELL** | `RSKD` | 4 | $5.92 | $0.27 | $-4.23 | $8,411.97 | ▼ -4.23 after sell → book $8,411.97; vs 09:30 mark -0.27 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,411.97 | ▲ close $8,411.97 vs 09:30 $8,413.13 (session +0.00) | 16:00 close · cash $8,411.97 · no lots left · equity $8,411.97. | — |
 | 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,411.97 | ▲ 09:30 equity $8,411.97 vs yday $8,411.97 (+0.00) | 09:30 open · cash $8,411.97 · no holdings · equity $8,411.97 vs prior close $8,411.97 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-11 09:30 ET | **BUY** | `INDP` | 389 | $2.70 | $5.02 | — | $7,356.65 | — | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ret5=+61.6; leftover $1051.50 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `ANGX` | 195 | $5.38 | $2.58 | — | $6,304.98 | — | combo gate; gate vol=good,last_green=True; list yday_gainer,ohlc_hot; 🔵; ret5=+15.4; leftover $1051.50 | join🔴 sector🟢 gen🟡 news🟡 digest🟡 ab🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `IRD` | 170 | $6.16 | $2.50 | — | $5,255.28 | — | combo gate; gate vol=good,last_green=True; list yday_gainer; 🔵; ret5=+49.6; leftover $1051.50 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,255.28 | ▲ close $8,422.36 vs 09:30 $8,411.97 (session +20.48) | 16:00 close · cash $5,255.28 · equity $8,422.36 vs 09:30 $8,411.97 (+10.39; session marks +20.48) · 3 name(s) marked open→close (per-name table). INDP×389 09:30 $2.70 → close $2.77 +27.23; ANGX×195 09:30 $5.38 → close $5.45 +13.65; IRD×170 09:30 $6.16 → close $6.04 -20.40 | — |
+| 2026-09-11 09:30 ET | **BUY** | `TYRA` | 44 | $23.63 | $2.12 | — | $7,370.13 | — | combo gate; gate vol=good,last_green=True; list probable,yday_gainer; ret5=-6.3; leftover $1051.50 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `VIST` | 13 | $77.33 | $2.03 | — | $6,362.81 | — | combo gate; gate vol=good,last_green=True; list probable,yday_gainer; ret5=+2.5; leftover $1051.50 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `INDP` | 389 | $2.70 | $5.02 | — | $5,307.49 | — | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ret5=+118.8; leftover $1051.50 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `CMRC` | 335 | $3.13 | $4.32 | — | $4,254.62 | — | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; ret5=+24.2; leftover $1051.50 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `WLTH` | 96 | $10.95 | $2.28 | — | $3,201.14 | — | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ret5=+20.8; leftover $1051.50 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `DBI` | 177 | $5.91 | $2.52 | — | $2,152.55 | — | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover,ohlc_hot; ret5=+14.1; leftover $1051.50 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `BNC` | 214 | $4.91 | $2.76 | — | $1,099.05 | — | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ret5=+76.3; leftover $1051.50 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `SWKS` | 12 | $84.27 | $2.03 | — | $85.79 | — | combo gate; gate vol=good,last_green=True; list yday_gainer,ohlc_hot; ret5=+17.2; leftover $1051.50 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $85.79 | ▲ close $8,422.96 vs 09:30 $8,411.97 (session +34.06) | 16:00 close · cash $85.79 · equity $8,422.96 vs 09:30 $8,411.97 (+10.99; session marks +34.06) · 8 name(s) marked open→close (per-name table). TYRA×44 09:30 $23.63 → close $22.03 -70.40; VIST×13 09:30 $77.33 → close $76.27 -13.78; INDP×389 09:30 $2.70 → close $2.77 +27.23; CMRC×335 09:30 $3.13 → close $3.50 +125.62; WLTH×96 09:30 $10.95 → close $10.38 -54.72; DBI×177 09:30 $5.91 → close $5.88 -5.31; BNC×214 09:30 $4.91 → close $4.80 -23.54; SWKS×12 09:30 $84.27 → close $88.35 +48.96 | — |
+| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $85.79 | ▲ 09:30 equity $8,493.16 vs yday $8,422.96 (+70.20) | 09:30 open · cash $85.79 (unchanged overnight, no fees) · equity $8,493.16 vs prior close $8,422.96 (+70.20) · 8 name(s) re-marked at the open (per-name table). TYRA×44 yday $22.03 → 09:30 $23.20 +51.48; VIST×13 yday $76.27 → 09:30 $77.10 +10.79; INDP×389 yday $2.77 → 09:30 $2.80 +11.67; CMRC×335 yday $3.50 → 09:30 $3.51 +1.67; WLTH×96 yday $10.38 → 09:30 $10.29 -8.64; DBI×177 yday $5.88 → 09:30 $5.86 -3.54; BNC×214 yday $4.80 → 09:30 $4.96 +34.24; SWKS×12 yday $88.35 → 09:30 $86.06 -27.48 | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $85.79 | ▲ close $8,880.17 vs 09:30 $8,493.16 (session +387.01) | 16:00 close · cash $85.79 · equity $8,880.17 vs 09:30 $8,493.16 (+387.01; session marks +387.01) · 8 name(s) marked open→close (per-name table). TYRA×44 09:30 $23.20 → close $25.07 +82.28; VIST×13 09:30 $77.10 → close $76.41 -8.97; INDP×389 09:30 $2.80 → close $3.14 +132.26; CMRC×335 09:30 $3.51 → close $3.64 +43.55; WLTH×96 09:30 $10.29 → close $10.65 +34.56; DBI×177 09:30 $5.86 → close $6.53 +118.59; BNC×214 09:30 $4.96 → close $5.27 +66.34; SWKS×12 09:30 $86.06 → close $79.26 -81.60 | — |
 
 ## Not taken
 
@@ -581,24 +602,38 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `DFDV` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-09 | `RSKD` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-09 | `BIDU` | hard_red | hard-red S=-13.95 sit; no new buys |
-| 2026-09-10 | `NAUT` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `SUNB` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `IRD` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `SIG` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `NAUT` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-10 | `ASO` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `INDP` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `SSL` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `AMBA` | hard_red | hard-red S=-13.28 sit; no new buys |
-| 2026-09-10 | `CMPS` | hard_red | hard-red S=-13.28 sit; no new buys |
-| 2026-09-10 | `SID` | hard_red | hard-red S=-13.28 sit; no new buys |
-| 2026-09-10 | `AMBQ` | hard_red | hard-red S=-13.28 sit; no new buys |
-| 2026-09-11 | `CMRC` | no_price | no 09:30 open |
-| 2026-09-11 | `SWKS` | no_price | no 09:30 open |
-| 2026-09-11 | `TSSI` | no_price | no 09:30 open |
-| 2026-09-11 | `VIST` | no_price | no 09:30 open |
-| 2026-09-11 | `NAUT` | no_price | no 09:30 open |
+| 2026-09-14 | `TYRA` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-14 | `VIST` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-14 | `INDP` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-14 | `WLTH` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-14 | `DBI` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-14 | `BNC` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-14 | `SWKS` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-14 | `DK` | hard_red | hard-red S=-11.00 sit; no new buys |
+| 2026-09-14 | `DELL` | hard_red | hard-red S=-11.00 sit; no new buys |
+| 2026-09-14 | `VERI` | hard_red | hard-red S=-11.00 sit; no new buys |
+| 2026-09-14 | `HPE` | hard_red | hard-red S=-11.00 sit; no new buys |
+| 2026-09-14 | `HPQ` | hard_red | hard-red S=-11.00 sit; no new buys |
+| 2026-09-14 | `SMR` | hard_red | hard-red S=-11.00 sit; no new buys |
+| 2026-09-14 | `INSP` | hard_red | hard-red S=-11.00 sit; no new buys |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `INDP` | 389 | 2026-09-11 @ $2.70 | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ret5=+61.6; leftover $1051.50 |
-| `ANGX` | 195 | 2026-09-11 @ $5.38 | combo gate; gate vol=good,last_green=True; list yday_gainer,ohlc_hot; 🔵; ret5=+15.4; leftover $1051.50 |
-| `IRD` | 170 | 2026-09-11 @ $6.16 | combo gate; gate vol=good,last_green=True; list yday_gainer; 🔵; ret5=+49.6; leftover $1051.50 |
+| `TYRA` | 44 | 2026-09-11 @ $23.63 | combo gate; gate vol=good,last_green=True; list probable,yday_gainer; ret5=-6.3; leftover $1051.50 |
+| `VIST` | 13 | 2026-09-11 @ $77.33 | combo gate; gate vol=good,last_green=True; list probable,yday_gainer; ret5=+2.5; leftover $1051.50 |
+| `INDP` | 389 | 2026-09-11 @ $2.70 | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ret5=+118.8; leftover $1051.50 |
+| `CMRC` | 335 | 2026-09-11 @ $3.13 | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; ret5=+24.2; leftover $1051.50 |
+| `WLTH` | 96 | 2026-09-11 @ $10.95 | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ret5=+20.8; leftover $1051.50 |
+| `DBI` | 177 | 2026-09-11 @ $5.91 | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover,ohlc_hot; ret5=+14.1; leftover $1051.50 |
+| `BNC` | 214 | 2026-09-11 @ $4.91 | combo gate; gate vol=good,last_green=True; list yday_gainer,yday_mover; 🔵; ret5=+76.3; leftover $1051.50 |
+| `SWKS` | 12 | 2026-09-11 @ $84.27 | combo gate; gate vol=good,last_green=True; list yday_gainer,ohlc_hot; ret5=+17.2; leftover $1051.50 |
