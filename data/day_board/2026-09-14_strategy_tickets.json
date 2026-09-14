@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T05:43:27.891687-04:00",
+  "generated_at": "2026-09-14T05:44:32.773559-04:00",
   "n": 322,
   "n_ok": 322,
   "families": [
@@ -17,82 +17,106 @@
       "side": "mixed",
       "buy": [
         {
-          "ticker": "CVE",
-          "score": 0.20688811957392966,
+          "ticker": "INSP",
+          "score": 0.8804952236175179,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "DK",
-          "score": 0.5551099454740418,
+          "ticker": "ICLR",
+          "score": 0.5943497941943456,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "CYPH",
+          "score": 0.5547267276791935,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "PTGX",
+          "score": 0.8362202827313832,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "ATRC",
+          "score": 0.8565059081699098,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "BMRN",
+          "score": 0.586302566095823,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "CLOV",
+          "score": 0.8501239232707993,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "ACAD",
+          "score": 0.8253706323417378,
           "side": "long",
           "predict": "UP"
         }
       ],
       "sell": [
         {
-          "ticker": "SERV",
-          "score": -0.517939121538224,
+          "ticker": "SGML",
+          "score": -0.40406612692294186,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "AHCO",
-          "score": -0.49244166379812604,
+          "ticker": "RUM",
+          "score": -0.2890136260357073,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "GRRR",
-          "score": -0.10175452749676267,
+          "ticker": "FUN",
+          "score": -0.443375697628102,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "CIFR",
-          "score": -0.2103819273667351,
+          "ticker": "GT",
+          "score": -0.28179242911679786,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "TDTH",
-          "score": -0.25106754321636665,
+          "ticker": "AXON",
+          "score": -0.03741729772725687,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "MSTR",
-          "score": -0.3150226364207752,
+          "ticker": "SMR",
+          "score": -0.24890150132301042,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "SPIR",
-          "score": -0.4482120448797816,
+          "ticker": "CHGG",
+          "score": -0.36478119494895334,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "SLQT",
-          "score": -0.4489276509586,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "OWL",
-          "score": -0.37378539118273224,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "MMYT",
-          "score": -0.5206500121818561,
+          "ticker": "XPOF",
+          "score": -0.38550226300087354,
           "side": "short",
           "predict": "DOWN"
         }
       ],
-      "buy_n": 2,
-      "sell_n": 10,
+      "buy_n": 8,
+      "sell_n": 8,
       "sit": false,
       "status": "ok",
       "note": "weighted ranker horizon"
@@ -104,82 +128,106 @@
       "side": "mixed",
       "buy": [
         {
-          "ticker": "CVE",
-          "score": 0.20688811957392966,
+          "ticker": "INSP",
+          "score": 0.8804952236175179,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "DK",
-          "score": 0.5551099454740418,
+          "ticker": "ICLR",
+          "score": 0.5943497941943456,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "CYPH",
+          "score": 0.5547267276791935,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "PTGX",
+          "score": 0.8362202827313832,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "ATRC",
+          "score": 0.8565059081699098,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "BMRN",
+          "score": 0.586302566095823,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "CLOV",
+          "score": 0.8501239232707993,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "ACAD",
+          "score": 0.8253706323417378,
           "side": "long",
           "predict": "UP"
         }
       ],
       "sell": [
         {
-          "ticker": "SERV",
-          "score": -0.517939121538224,
+          "ticker": "SGML",
+          "score": -0.40406612692294186,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "AHCO",
-          "score": -0.49244166379812604,
+          "ticker": "RUM",
+          "score": -0.2890136260357073,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "GRRR",
-          "score": -0.10175452749676267,
+          "ticker": "FUN",
+          "score": -0.443375697628102,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "CIFR",
-          "score": -0.2103819273667351,
+          "ticker": "GT",
+          "score": -0.28179242911679786,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "TDTH",
-          "score": -0.25106754321636665,
+          "ticker": "AXON",
+          "score": -0.03741729772725687,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "MSTR",
-          "score": -0.3150226364207752,
+          "ticker": "SMR",
+          "score": -0.24890150132301042,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "SPIR",
-          "score": -0.4482120448797816,
+          "ticker": "CHGG",
+          "score": -0.36478119494895334,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "SLQT",
-          "score": -0.4489276509586,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "OWL",
-          "score": -0.37378539118273224,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "MMYT",
-          "score": -0.5206500121818561,
+          "ticker": "XPOF",
+          "score": -0.38550226300087354,
           "side": "short",
           "predict": "DOWN"
         }
       ],
-      "buy_n": 2,
-      "sell_n": 10,
+      "buy_n": 8,
+      "sell_n": 8,
       "sit": false,
       "status": "ok",
       "note": "paper sleeve = same ranker list"
@@ -191,141 +239,189 @@
       "side": "mixed",
       "buy": [
         {
-          "ticker": "DK",
-          "score": 0.5844594083446494,
+          "ticker": "INSP",
+          "score": 0.9726794835749046,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "TEL",
-          "score": 0.3460236911302394,
+          "ticker": "ATRC",
+          "score": 0.9478569662418703,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "OLED",
-          "score": 0.34354141827825546,
+          "ticker": "CLOV",
+          "score": 0.9395209852090316,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "NVT",
-          "score": 0.30977203897457045,
+          "ticker": "PTGX",
+          "score": 0.9277376872648242,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "BG",
-          "score": 0.2678981104311932,
+          "ticker": "OBE",
+          "score": 0.8439575969002895,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "CVE",
-          "score": 0.2338795631601815,
+          "ticker": "DHT",
+          "score": 0.7558459866108957,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "HYLN",
-          "score": 0.04952224223183117,
+          "ticker": "WTTR",
+          "score": 0.7319669260307196,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "BFH",
+          "score": 0.726819284814638,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "KNTK",
+          "score": 0.7181930399137713,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "VCTR",
+          "score": 0.7166934183143325,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "ODD",
+          "score": 0.7081563306909868,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "ANF",
+          "score": 0.7046066975225167,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "SLDE",
+          "score": 0.6864261309914268,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "JXN",
+          "score": 0.6861446299727675,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "SSL",
+          "score": 0.6525578326821133,
           "side": "long",
           "predict": "UP"
         }
       ],
       "sell": [
         {
-          "ticker": "MBC",
-          "score": -0.7098969129508961,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "LCID",
-          "score": -0.7067059718120848,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "XPOF",
-          "score": -0.6921303672533812,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "ASPI",
-          "score": -0.6872933072663248,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
           "ticker": "FUN",
-          "score": -0.6821975102253556,
+          "score": -0.5383216901815133,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "SGML",
-          "score": -0.6694349164920271,
+          "ticker": "FOSL",
+          "score": -0.5245841531033671,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "GT",
-          "score": -0.6675482677081473,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "WHR",
-          "score": -0.6614866622193138,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "ZGN",
-          "score": -0.6521702928924614,
+          "ticker": "TU",
+          "score": -0.5220602150461557,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "TMC",
-          "score": -0.6399783267389716,
+          "score": -0.4992669288676745,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "SGML",
+          "score": -0.4991901535993129,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "AREC",
+          "score": -0.48344126854852365,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "CF",
+          "score": -0.4682225427107192,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "XPOF",
+          "score": -0.46254748016950076,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "SSTK",
+          "score": -0.4579646090335542,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "OPEN",
-          "score": -0.6354081417250952,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "TLRY",
-          "score": -0.6243932960486412,
+          "score": -0.44481642056611087,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "METC",
-          "score": -0.6236468744771884,
+          "score": -0.4441422007937561,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "DFH",
-          "score": -0.6232485826626661,
+          "ticker": "CHGG",
+          "score": -0.43874480921588566,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "BEAM",
-          "score": -0.61749610331108,
+          "ticker": "ZVIA",
+          "score": -0.43400830284734615,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "BIDU",
+          "score": -0.43129422660894745,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "ANGI",
+          "score": -0.42971132312156934,
           "side": "short",
           "predict": "DOWN"
         }
       ],
-      "buy_n": 7,
+      "buy_n": 15,
       "sell_n": 15,
       "sit": false,
       "status": "ok",
@@ -338,141 +434,189 @@
       "side": "mixed",
       "buy": [
         {
-          "ticker": "DK",
-          "score": 0.5844594083446494,
+          "ticker": "INSP",
+          "score": 0.9726794835749046,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "TEL",
-          "score": 0.3460236911302394,
+          "ticker": "ATRC",
+          "score": 0.9478569662418703,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "OLED",
-          "score": 0.34354141827825546,
+          "ticker": "CLOV",
+          "score": 0.9395209852090316,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "NVT",
-          "score": 0.30977203897457045,
+          "ticker": "PTGX",
+          "score": 0.9277376872648242,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "BG",
-          "score": 0.2678981104311932,
+          "ticker": "OBE",
+          "score": 0.8439575969002895,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "CVE",
-          "score": 0.2338795631601815,
+          "ticker": "DHT",
+          "score": 0.7558459866108957,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "HYLN",
-          "score": 0.04952224223183117,
+          "ticker": "WTTR",
+          "score": 0.7319669260307196,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "BFH",
+          "score": 0.726819284814638,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "KNTK",
+          "score": 0.7181930399137713,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "VCTR",
+          "score": 0.7166934183143325,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "ODD",
+          "score": 0.7081563306909868,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "ANF",
+          "score": 0.7046066975225167,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "SLDE",
+          "score": 0.6864261309914268,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "JXN",
+          "score": 0.6861446299727675,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "SSL",
+          "score": 0.6525578326821133,
           "side": "long",
           "predict": "UP"
         }
       ],
       "sell": [
         {
-          "ticker": "MBC",
-          "score": -0.7098969129508961,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "LCID",
-          "score": -0.7067059718120848,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "XPOF",
-          "score": -0.6921303672533812,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "ASPI",
-          "score": -0.6872933072663248,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
           "ticker": "FUN",
-          "score": -0.6821975102253556,
+          "score": -0.5383216901815133,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "SGML",
-          "score": -0.6694349164920271,
+          "ticker": "FOSL",
+          "score": -0.5245841531033671,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "GT",
-          "score": -0.6675482677081473,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "WHR",
-          "score": -0.6614866622193138,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "ZGN",
-          "score": -0.6521702928924614,
+          "ticker": "TU",
+          "score": -0.5220602150461557,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "TMC",
-          "score": -0.6399783267389716,
+          "score": -0.4992669288676745,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "SGML",
+          "score": -0.4991901535993129,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "AREC",
+          "score": -0.48344126854852365,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "CF",
+          "score": -0.4682225427107192,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "XPOF",
+          "score": -0.46254748016950076,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "SSTK",
+          "score": -0.4579646090335542,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "OPEN",
-          "score": -0.6354081417250952,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "TLRY",
-          "score": -0.6243932960486412,
+          "score": -0.44481642056611087,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "METC",
-          "score": -0.6236468744771884,
+          "score": -0.4441422007937561,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "DFH",
-          "score": -0.6232485826626661,
+          "ticker": "CHGG",
+          "score": -0.43874480921588566,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "BEAM",
-          "score": -0.61749610331108,
+          "ticker": "ZVIA",
+          "score": -0.43400830284734615,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "BIDU",
+          "score": -0.43129422660894745,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "ANGI",
+          "score": -0.42971132312156934,
           "side": "short",
           "predict": "DOWN"
         }
       ],
-      "buy_n": 7,
+      "buy_n": 15,
       "sell_n": 15,
       "sit": false,
       "status": "ok",
@@ -485,141 +629,189 @@
       "side": "mixed",
       "buy": [
         {
-          "ticker": "DK",
-          "score": 0.6105086558329799,
+          "ticker": "INSP",
+          "score": 1.0384535127424308,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "TEL",
-          "score": 0.37446545960508854,
+          "ticker": "ATRC",
+          "score": 1.0145664153385452,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "OLED",
-          "score": 0.35214439732600117,
+          "ticker": "CLOV",
+          "score": 1.0028447966468264,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "NVT",
-          "score": 0.3349308984445223,
+          "ticker": "PTGX",
+          "score": 0.9945308774141293,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "BG",
-          "score": 0.30160665582970775,
+          "ticker": "OBE",
+          "score": 0.9064007718465243,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "CVE",
-          "score": 0.24889943849401802,
+          "ticker": "DHT",
+          "score": 0.8098113995569267,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "HYLN",
-          "score": 0.04458939019884692,
+          "ticker": "BFH",
+          "score": 0.7876234321422144,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "WTTR",
+          "score": 0.7862629378860433,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "MGY",
+          "score": 0.7790412162722504,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "VCTR",
+          "score": 0.775424866388891,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "ANF",
+          "score": 0.7464033124427376,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "SLDE",
+          "score": 0.7457835815099298,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "JXN",
+          "score": 0.741775461710465,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "ODD",
+          "score": 0.7399704744244524,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "SSL",
+          "score": 0.6791060014600556,
           "side": "long",
           "predict": "UP"
         }
       ],
       "sell": [
         {
-          "ticker": "MBC",
-          "score": -0.7634152203179603,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "LCID",
-          "score": -0.7619242791791491,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "XPOF",
-          "score": -0.7434143899626725,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "ASPI",
-          "score": -0.7373285722770991,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
           "ticker": "FUN",
-          "score": -0.7364979082671166,
+          "score": -0.6074766261894009,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "TU",
+          "score": -0.5883083516322952,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "FOSL",
+          "score": -0.5736927078844298,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "SGML",
-          "score": -0.7220922074621959,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "GT",
-          "score": -0.7192835327189216,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "WHR",
-          "score": -0.7157508313014577,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "ZGN",
-          "score": -0.7025242536642861,
+          "score": -0.5679446212932724,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "TMC",
-          "score": -0.6884026071489878,
+          "score": -0.567576608721156,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "AREC",
+          "score": -0.5426284549676058,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "XPOF",
+          "score": -0.5167116238457682,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "SSTK",
+          "score": -0.5141668902768685,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "OPEN",
-          "score": -0.679812310807239,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "TLRY",
-          "score": -0.6704285610594156,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "DFH",
-          "score": -0.6696723535074597,
+          "score": -0.5131309587533586,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "METC",
-          "score": -0.6681463084072325,
+          "score": -0.5120637496313869,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "PRKS",
-          "score": -0.6614828891749185,
+          "ticker": "CF",
+          "score": -0.5107886380669813,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "ZVIA",
+          "score": -0.49187686367599504,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "JOBY",
+          "score": -0.49186752162301733,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "BIDU",
+          "score": -0.49143022446378914,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "ANGI",
+          "score": -0.49121147826567,
           "side": "short",
           "predict": "DOWN"
         }
       ],
-      "buy_n": 7,
+      "buy_n": 15,
       "sell_n": 15,
       "sit": false,
       "status": "ok",
@@ -632,141 +824,189 @@
       "side": "mixed",
       "buy": [
         {
-          "ticker": "DK",
-          "score": 0.6105086558329799,
+          "ticker": "INSP",
+          "score": 1.0384535127424308,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "TEL",
-          "score": 0.37446545960508854,
+          "ticker": "ATRC",
+          "score": 1.0145664153385452,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "OLED",
-          "score": 0.35214439732600117,
+          "ticker": "CLOV",
+          "score": 1.0028447966468264,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "NVT",
-          "score": 0.3349308984445223,
+          "ticker": "PTGX",
+          "score": 0.9945308774141293,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "BG",
-          "score": 0.30160665582970775,
+          "ticker": "OBE",
+          "score": 0.9064007718465243,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "CVE",
-          "score": 0.24889943849401802,
+          "ticker": "DHT",
+          "score": 0.8098113995569267,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "HYLN",
-          "score": 0.04458939019884692,
+          "ticker": "BFH",
+          "score": 0.7876234321422144,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "WTTR",
+          "score": 0.7862629378860433,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "MGY",
+          "score": 0.7790412162722504,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "VCTR",
+          "score": 0.775424866388891,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "ANF",
+          "score": 0.7464033124427376,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "SLDE",
+          "score": 0.7457835815099298,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "JXN",
+          "score": 0.741775461710465,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "ODD",
+          "score": 0.7399704744244524,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "SSL",
+          "score": 0.6791060014600556,
           "side": "long",
           "predict": "UP"
         }
       ],
       "sell": [
         {
-          "ticker": "MBC",
-          "score": -0.7634152203179603,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "LCID",
-          "score": -0.7619242791791491,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "XPOF",
-          "score": -0.7434143899626725,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "ASPI",
-          "score": -0.7373285722770991,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
           "ticker": "FUN",
-          "score": -0.7364979082671166,
+          "score": -0.6074766261894009,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "TU",
+          "score": -0.5883083516322952,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "FOSL",
+          "score": -0.5736927078844298,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "SGML",
-          "score": -0.7220922074621959,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "GT",
-          "score": -0.7192835327189216,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "WHR",
-          "score": -0.7157508313014577,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "ZGN",
-          "score": -0.7025242536642861,
+          "score": -0.5679446212932724,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "TMC",
-          "score": -0.6884026071489878,
+          "score": -0.567576608721156,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "AREC",
+          "score": -0.5426284549676058,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "XPOF",
+          "score": -0.5167116238457682,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "SSTK",
+          "score": -0.5141668902768685,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "OPEN",
-          "score": -0.679812310807239,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "TLRY",
-          "score": -0.6704285610594156,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "DFH",
-          "score": -0.6696723535074597,
+          "score": -0.5131309587533586,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "METC",
-          "score": -0.6681463084072325,
+          "score": -0.5120637496313869,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "PRKS",
-          "score": -0.6614828891749185,
+          "ticker": "CF",
+          "score": -0.5107886380669813,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "ZVIA",
+          "score": -0.49187686367599504,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "JOBY",
+          "score": -0.49186752162301733,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "BIDU",
+          "score": -0.49143022446378914,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "ANGI",
+          "score": -0.49121147826567,
           "side": "short",
           "predict": "DOWN"
         }
       ],
-      "buy_n": 7,
+      "buy_n": 15,
       "sell_n": 15,
       "sit": false,
       "status": "ok",
@@ -779,141 +1019,189 @@
       "side": "mixed",
       "buy": [
         {
-          "ticker": "DK",
-          "score": 0.6254718819172748,
+          "ticker": "INSP",
+          "score": 1.085950282740384,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "TEL",
-          "score": 0.40720424903219193,
+          "ticker": "ATRC",
+          "score": 1.0611565205792557,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "OLED",
-          "score": 0.3820443973260012,
+          "ticker": "CLOV",
+          "score": 1.0490497084447827,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "NVT",
-          "score": 0.3788578747953588,
+          "ticker": "PTGX",
+          "score": 1.041217855831163,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "BG",
-          "score": 0.3277122221804765,
+          "ticker": "OBE",
+          "score": 0.9478080678818717,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "CVE",
-          "score": 0.26596710910690713,
+          "ticker": "DHT",
+          "score": 0.84381121975173,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "HYLN",
-          "score": 0.06648939019884692,
+          "ticker": "BFH",
+          "score": 0.8263618791796397,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "WTTR",
+          "score": 0.8245281041520218,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "MGY",
+          "score": 0.8184554291124206,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "VCTR",
+          "score": 0.8116288737618922,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "SLDE",
+          "score": 0.7823930296241801,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "JXN",
+          "score": 0.7786223751284649,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "ANF",
+          "score": 0.7698771651719292,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "ODD",
+          "score": 0.7505224512054682,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "SSL",
+          "score": 0.6880071432003549,
           "side": "long",
           "predict": "UP"
         }
       ],
       "sell": [
         {
-          "ticker": "LCID",
-          "score": -0.7839565651421777,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
           "ticker": "FUN",
-          "score": -0.7716201942301452,
+          "score": -0.6559561394339077,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "MBC",
-          "score": -0.7667475062809889,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "XPOF",
-          "score": -0.7624665295528484,
+          "ticker": "TU",
+          "score": -0.6337514692937062,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "SGML",
-          "score": -0.7569465193846189,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "GT",
-          "score": -0.7413158186819503,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "ASPI",
-          "score": -0.7406608582401277,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "WHR",
-          "score": -0.7377831172644863,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "ZGN",
-          "score": -0.7231752353883647,
+          "score": -0.6166804175288265,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "TMC",
-          "score": -0.6917348931120164,
+          "score": -0.6146301325943171,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "PRKS",
-          "score": -0.6832040309733729,
+          "ticker": "FOSL",
+          "score": -0.6083251137073172,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "OPEN",
-          "score": -0.6749845967702677,
+          "ticker": "AREC",
+          "score": -0.5821247355676465,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "METC",
-          "score": -0.6714785943702613,
+          "score": -0.5592545182933806,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "TLRY",
-          "score": -0.6697608470224442,
+          "ticker": "OPEN",
+          "score": -0.5591653760794657,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "AVTX",
-          "score": -0.6694002998659714,
+          "ticker": "XPOF",
+          "score": -0.5566602294352593,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "SSTK",
+          "score": -0.5544167010003299,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "CF",
+          "score": -0.5407402886471053,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "JOBY",
+          "score": -0.536553747573846,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "BIDU",
+          "score": -0.5343180476677922,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "ASPI",
+          "score": -0.5331955012722154,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "ANGI",
+          "score": -0.5323266761927937,
           "side": "short",
           "predict": "DOWN"
         }
       ],
-      "buy_n": 7,
+      "buy_n": 15,
       "sell_n": 15,
       "sit": false,
       "status": "ok",
@@ -926,141 +1214,189 @@
       "side": "mixed",
       "buy": [
         {
-          "ticker": "DK",
-          "score": 0.6254718819172748,
+          "ticker": "INSP",
+          "score": 1.085950282740384,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "TEL",
-          "score": 0.40720424903219193,
+          "ticker": "ATRC",
+          "score": 1.0611565205792557,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "OLED",
-          "score": 0.3820443973260012,
+          "ticker": "CLOV",
+          "score": 1.0490497084447827,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "NVT",
-          "score": 0.3788578747953588,
+          "ticker": "PTGX",
+          "score": 1.041217855831163,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "BG",
-          "score": 0.3277122221804765,
+          "ticker": "OBE",
+          "score": 0.9478080678818717,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "CVE",
-          "score": 0.26596710910690713,
+          "ticker": "DHT",
+          "score": 0.84381121975173,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "HYLN",
-          "score": 0.06648939019884692,
+          "ticker": "BFH",
+          "score": 0.8263618791796397,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "WTTR",
+          "score": 0.8245281041520218,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "MGY",
+          "score": 0.8184554291124206,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "VCTR",
+          "score": 0.8116288737618922,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "SLDE",
+          "score": 0.7823930296241801,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "JXN",
+          "score": 0.7786223751284649,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "ANF",
+          "score": 0.7698771651719292,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "ODD",
+          "score": 0.7505224512054682,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "SSL",
+          "score": 0.6880071432003549,
           "side": "long",
           "predict": "UP"
         }
       ],
       "sell": [
         {
-          "ticker": "LCID",
-          "score": -0.7839565651421777,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
           "ticker": "FUN",
-          "score": -0.7716201942301452,
+          "score": -0.6559561394339077,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "MBC",
-          "score": -0.7667475062809889,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "XPOF",
-          "score": -0.7624665295528484,
+          "ticker": "TU",
+          "score": -0.6337514692937062,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "SGML",
-          "score": -0.7569465193846189,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "GT",
-          "score": -0.7413158186819503,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "ASPI",
-          "score": -0.7406608582401277,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "WHR",
-          "score": -0.7377831172644863,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "ZGN",
-          "score": -0.7231752353883647,
+          "score": -0.6166804175288265,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "TMC",
-          "score": -0.6917348931120164,
+          "score": -0.6146301325943171,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "PRKS",
-          "score": -0.6832040309733729,
+          "ticker": "FOSL",
+          "score": -0.6083251137073172,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "OPEN",
-          "score": -0.6749845967702677,
+          "ticker": "AREC",
+          "score": -0.5821247355676465,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "METC",
-          "score": -0.6714785943702613,
+          "score": -0.5592545182933806,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "TLRY",
-          "score": -0.6697608470224442,
+          "ticker": "OPEN",
+          "score": -0.5591653760794657,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "AVTX",
-          "score": -0.6694002998659714,
+          "ticker": "XPOF",
+          "score": -0.5566602294352593,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "SSTK",
+          "score": -0.5544167010003299,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "CF",
+          "score": -0.5407402886471053,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "JOBY",
+          "score": -0.536553747573846,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "BIDU",
+          "score": -0.5343180476677922,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "ASPI",
+          "score": -0.5331955012722154,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "ANGI",
+          "score": -0.5323266761927937,
           "side": "short",
           "predict": "DOWN"
         }
       ],
-      "buy_n": 7,
+      "buy_n": 15,
       "sell_n": 15,
       "sit": false,
       "status": "ok",
@@ -1073,141 +1409,189 @@
       "side": "mixed",
       "buy": [
         {
-          "ticker": "DK",
-          "score": 0.6510111294056052,
+          "ticker": "INSP",
+          "score": 1.1584858899129318,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "TEL",
-          "score": 0.4339460175070409,
+          "ticker": "ATRC",
+          "score": 1.1346913847808016,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "NVT",
-          "score": 0.4006167342653106,
+          "ticker": "CLOV",
+          "score": 1.1188985056125615,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "OLED",
-          "score": 0.3872473763737469,
+          "ticker": "PTGX",
+          "score": 1.1148529980643613,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "BG",
-          "score": 0.36091076757899104,
+          "ticker": "OBE",
+          "score": 1.016582112327358,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "CVE",
-          "score": 0.2804769844407436,
+          "ticker": "DHT",
+          "score": 0.903198688416629,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "HYLN",
-          "score": 0.05815653816586262,
+          "ticker": "BFH",
+          "score": 0.8933198226551611,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "MGY",
+          "score": 0.886124287508955,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "WTTR",
+          "score": 0.884400848495752,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "VCTR",
+          "score": 0.876268113190243,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "SLDE",
+          "score": 0.8477335481102266,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "JXN",
+          "score": 0.8399210028231419,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "ANF",
+          "score": 0.8157695568055072,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "ODD",
+          "score": 0.785210524877926,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "SSL",
+          "score": 0.7169468183602823,
           "side": "long",
           "predict": "UP"
         }
       ],
       "sell": [
         {
-          "ticker": "LCID",
-          "score": -0.8408748725092419,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
           "ticker": "FUN",
-          "score": -0.8264305922719062,
+          "score": -0.7321868392886248,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "MBC",
-          "score": -0.823665813648053,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "XPOF",
-          "score": -0.8154505522621397,
+          "ticker": "TU",
+          "score": -0.7067750037540007,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "SGML",
-          "score": -0.8101138103547877,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "GT",
-          "score": -0.7947510836927247,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "ASPI",
-          "score": -0.7940961232509022,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "WHR",
-          "score": -0.7937472863466303,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "ZGN",
-          "score": -0.7752291961601893,
+          "score": -0.692479583528361,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "TMC",
-          "score": -0.7435591735220327,
+          "score": -0.6899158593475019,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "PRKS",
-          "score": -0.7347171672188149,
+          "ticker": "FOSL",
+          "score": -0.6624639525717174,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "AREC",
+          "score": -0.6473086855077416,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "OPEN",
-          "score": -0.7227887658524116,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "OI",
-          "score": -0.7223647032182943,
+          "score": -0.634446031506821,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "METC",
-          "score": -0.7193780283003056,
+          "score": -0.6341240734083489,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "TLRY",
-          "score": -0.7191961120332185,
+          "ticker": "XPOF",
+          "score": -0.6164066003804468,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "SSTK",
+          "score": -0.6163871460137266,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "JOBY",
+          "score": -0.6061211306902279,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "ASPI",
+          "score": -0.6016477498615713,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "BIDU",
+          "score": -0.600660406263562,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "ANGI",
+          "score": -0.6000859726292443,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "WHR",
+          "score": -0.5929570952647769,
           "side": "short",
           "predict": "DOWN"
         }
       ],
-      "buy_n": 7,
+      "buy_n": 15,
       "sell_n": 15,
       "sit": false,
       "status": "ok",
@@ -1220,141 +1604,189 @@
       "side": "mixed",
       "buy": [
         {
-          "ticker": "DK",
-          "score": 0.6510111294056052,
+          "ticker": "INSP",
+          "score": 1.1584858899129318,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "TEL",
-          "score": 0.4339460175070409,
+          "ticker": "ATRC",
+          "score": 1.1346913847808016,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "NVT",
-          "score": 0.4006167342653106,
+          "ticker": "CLOV",
+          "score": 1.1188985056125615,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "OLED",
-          "score": 0.3872473763737469,
+          "ticker": "PTGX",
+          "score": 1.1148529980643613,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "BG",
-          "score": 0.36091076757899104,
+          "ticker": "OBE",
+          "score": 1.016582112327358,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "CVE",
-          "score": 0.2804769844407436,
+          "ticker": "DHT",
+          "score": 0.903198688416629,
           "side": "long",
           "predict": "UP"
         },
         {
-          "ticker": "HYLN",
-          "score": 0.05815653816586262,
+          "ticker": "BFH",
+          "score": 0.8933198226551611,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "MGY",
+          "score": 0.886124287508955,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "WTTR",
+          "score": 0.884400848495752,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "VCTR",
+          "score": 0.876268113190243,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "SLDE",
+          "score": 0.8477335481102266,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "JXN",
+          "score": 0.8399210028231419,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "ANF",
+          "score": 0.8157695568055072,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "ODD",
+          "score": 0.785210524877926,
+          "side": "long",
+          "predict": "UP"
+        },
+        {
+          "ticker": "SSL",
+          "score": 0.7169468183602823,
           "side": "long",
           "predict": "UP"
         }
       ],
       "sell": [
         {
-          "ticker": "LCID",
-          "score": -0.8408748725092419,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
           "ticker": "FUN",
-          "score": -0.8264305922719062,
+          "score": -0.7321868392886248,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "MBC",
-          "score": -0.823665813648053,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "XPOF",
-          "score": -0.8154505522621397,
+          "ticker": "TU",
+          "score": -0.7067750037540007,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "SGML",
-          "score": -0.8101138103547877,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "GT",
-          "score": -0.7947510836927247,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "ASPI",
-          "score": -0.7940961232509022,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "WHR",
-          "score": -0.7937472863466303,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "ZGN",
-          "score": -0.7752291961601893,
+          "score": -0.692479583528361,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "TMC",
-          "score": -0.7435591735220327,
+          "score": -0.6899158593475019,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "PRKS",
-          "score": -0.7347171672188149,
+          "ticker": "FOSL",
+          "score": -0.6624639525717174,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "AREC",
+          "score": -0.6473086855077416,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "OPEN",
-          "score": -0.7227887658524116,
-          "side": "short",
-          "predict": "DOWN"
-        },
-        {
-          "ticker": "OI",
-          "score": -0.7223647032182943,
+          "score": -0.634446031506821,
           "side": "short",
           "predict": "DOWN"
         },
         {
           "ticker": "METC",
-          "score": -0.7193780283003056,
+          "score": -0.6341240734083489,
           "side": "short",
           "predict": "DOWN"
         },
         {
-          "ticker": "TLRY",
-          "score": -0.7191961120332185,
+          "ticker": "XPOF",
+          "score": -0.6164066003804468,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "SSTK",
+          "score": -0.6163871460137266,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "JOBY",
+          "score": -0.6061211306902279,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "ASPI",
+          "score": -0.6016477498615713,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "BIDU",
+          "score": -0.600660406263562,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "ANGI",
+          "score": -0.6000859726292443,
+          "side": "short",
+          "predict": "DOWN"
+        },
+        {
+          "ticker": "WHR",
+          "score": -0.5929570952647769,
           "side": "short",
           "predict": "DOWN"
         }
       ],
-      "buy_n": 7,
+      "buy_n": 15,
       "sell_n": 15,
       "sit": false,
       "status": "ok",
@@ -21380,5 +21812,6 @@
     "combo_ee1_3070_shared"
   ],
   "errors": [],
-  "source": "strategy_tickets"
+  "source": "strategy_tickets",
+  "lands": []
 }
