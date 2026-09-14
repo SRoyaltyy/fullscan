@@ -1,4 +1,4 @@
-# Improvement tracker — 2026-09-12T03:45:06-04:00
+# Improvement tracker — 2026-09-14T17:43:24-04:00
 
 Rolling direction/magnitude hit of the *shipped* prediction vs three naive baselines computed on the same graded runs (always up, always down, same direction as the previous graded session of that topic). `edge` = engine direction hit minus the best baseline over the same window. Sessions are dated by the predicted session; sectors are pooled (11 per day).
 
@@ -47,19 +47,32 @@ Walk-forward replay estimate for v2 on the same history: **71%** direction / 57%
 | 2026-09-10 | legacy | 1 | 100% | **50%** | 60% | 40% | 60% | 60% | -10% | 50% | -5% |
 | 2026-09-11 | legacy | 1 | 0% | **40%** | 50% | 40% | 60% | 60% | -20% | 45% | -10% |
 
-## Sectors (11 ETFs pooled) — 183 graded runs over 17 sessions
+## Sectors (11 ETFs pooled) — 191 graded runs over 18 sessions
 
-**Read:** slipping; not beating best baseline by -18% (last 10 sessions)
+**Read:** slipping; not beating best baseline by -19% (last 10 sessions)
 
 ### Eras
 
 | Era | n | engine dir | engine mag | always up | always down | same as yesterday | edge vs best baseline |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| all graded | 183 | **46%** | 31% | 43% | 51% | 46% | **-6%** |
+| all graded | 191 | **47%** | 32% | 42% | 52% | 46% | **-5%** |
 | legacy engine era | 183 | **46%** | 31% | 43% | 51% | 46% | **-6%** |
-| v2 engine live | 0 | — | — | — | — | — | — |
+| v2 engine live (since 2026-09-14) | 8 | **75%** | 50% | 25% | 75% | 25% | **+0%** |
 
 Walk-forward replay estimate for v2 on the same history: **61%** direction / 48% magnitude (n=183, `REPLAY_HARNESS.md` 2026-09-12). The live v2 curve above should converge toward this as sessions accumulate; if it sits well below it for 20+ sessions, the anchor inputs or the LLM components changed.
+
+### Cumulative since v2 went live
+
+| # | Session | topic | cum dir | cum mag |
+|---:|---|---|---:|---:|
+| 1 | 2026-09-14 | sector:Consumer Defensive | 100% | 0% |
+| 2 | 2026-09-14 | sector:Energy | 50% | 50% |
+| 3 | 2026-09-14 | sector:Financial | 67% | 67% |
+| 4 | 2026-09-14 | sector:Healthcare | 50% | 50% |
+| 5 | 2026-09-14 | sector:Industrials | 60% | 60% |
+| 6 | 2026-09-14 | sector:Real Estate | 67% | 67% |
+| 7 | 2026-09-14 | sector:Technology | 71% | 57% |
+| 8 | 2026-09-14 | sector:Utilities | 75% | 50% |
 
 ### Session curve (last 30 sessions)
 
@@ -82,6 +95,7 @@ Walk-forward replay estimate for v2 on the same history: **61%** direction / 48%
 | 2026-09-09 | legacy | 11 | 73% | **37%** | 30% | 36% | 59% | 46% | -23% | 45% | -7% |
 | 2026-09-10 | legacy | 11 | 64% | **40%** | 36% | 35% | 59% | 49% | -20% | 46% | -8% |
 | 2026-09-11 | legacy | 11 | 46% | **37%** | 33% | 40% | 55% | 45% | -18% | 46% | -6% |
+| 2026-09-14 | v2 | 8 | 75% | **41%** | 35% | 35% | 60% | 45% | -19% | 47% | -5% |
 
 ### Per sector (all graded)
 
@@ -90,12 +104,12 @@ Walk-forward replay estimate for v2 on the same history: **61%** direction / 48%
 | Basic Materials | 17 | 53% | 47% | 35% | 59% | 50% | -6% |
 | Communication Services | 17 | 29% | 24% | 47% | 53% | 50% | -24% |
 | Consumer Cyclical | 17 | 65% | 24% | 29% | 71% | 56% | -6% |
-| Consumer Defensive | 17 | 47% | 41% | 41% | 53% | 50% | -6% |
-| Energy | 17 | 47% | 35% | 65% | 29% | 38% | -18% |
-| Financial | 17 | 41% | 24% | 47% | 41% | 44% | -6% |
-| Healthcare | 15 | 60% | 27% | 33% | 60% | 43% | +0% |
-| Industrials | 17 | 29% | 12% | 41% | 47% | 44% | -18% |
-| Real Estate | 17 | 47% | 29% | 29% | 59% | 44% | -12% |
-| Technology | 16 | 44% | 44% | 56% | 38% | 33% | -12% |
-| Utilities | 16 | 44% | 38% | 44% | 56% | 60% | -16% |
+| Consumer Defensive | 18 | 50% | 39% | 44% | 50% | 53% | -3% |
+| Energy | 18 | 44% | 39% | 61% | 33% | 35% | -17% |
+| Financial | 18 | 44% | 28% | 44% | 44% | 41% | +0% |
+| Healthcare | 16 | 56% | 25% | 38% | 56% | 40% | +0% |
+| Industrials | 18 | 33% | 17% | 39% | 50% | 41% | -17% |
+| Real Estate | 18 | 50% | 33% | 28% | 61% | 41% | -11% |
+| Technology | 17 | 47% | 41% | 53% | 41% | 31% | -6% |
+| Utilities | 17 | 47% | 35% | 41% | 59% | 62% | -15% |
 
