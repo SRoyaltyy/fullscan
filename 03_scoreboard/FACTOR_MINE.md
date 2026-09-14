@@ -1,6 +1,6 @@
 # Factor strategy mine — 2026-08-13 → 2026-09-11
 
-Leak-free 09:30 recipes: **256** · candidate rows **1650** · fill `09:30 open, whole shares, Futubull fees, leftover split, sell first, hard-red sit, cash+holdings audit`.
+Leak-free 09:30 recipes: **270** · candidate rows **1650** · fill `09:30 open, whole shares, Futubull fees, leftover split, sell first, hard-red sit, cash+holdings audit`.
 
 Cash book: $10k, whole shares, Futubull fees, leftover split, sell first, min-hold, 09:30 open, hard-red S≤−3 sit, shorts marked as a liability. Each session starts from leftover cash and lots actually held (butterfly). Cash-start buttons wake a sleeve on date X with $10k and no lots (same rules). Stock investigator quotes 09:30 cameras / coaches / news from repo files. Size / sell / S-boost tweaks sit on the same ledger. Signal-only % is the old equal-weight path (not a fill). `flatten_h*` = wish-list (io/HOLD mornings still buy). `flatten_live_*` = only when the live flatten gate fires. Research only — does not change live `flatten_robust`.
 
@@ -268,3 +268,17 @@ Action blotters: [FACTOR_MINE_ACTION.md](FACTOR_MINE_ACTION.md).
 | `combo_p2s_5050_shared` | mix | 5 | leftover | list | none | 67% | 71% | 17/21 | +11.71 | 0 | 0 | +4.69 | -3.42 | +23.87 | — | PASS | 75.714 |
 | `combo_ps_5050_shared` | mix | 5 | leftover | list | none | 68% | 71% | 17/21 | +10.82 | 0 | 0 | +4.56 | -3.78 | +23.20 | — | PASS | 74.932 |
 | `combo_ps_7030_shared` | mix | 5 | leftover | list | none | 66% | 71% | 17/21 | +9.07 | 0 | 0 | +4.62 | -3.72 | +21.88 | — | PASS | 73.862 |
+| `union_rsi_os_h1` | long | 1 | leftover | list | none | 54% | 29% | 4/21 | -7.69 | 2 | 18 | +2.78 | -5.68 | -10.85 | +4.98 | PASS | 24.373 |
+| `union_rsi_os_h3` | long | 3 | leftover | list | none | 49% | 33% | 5/21 | -5.67 | 2 | 30 | +3.62 | -6.02 | -11.95 | -25.20 | PASS | 18.709 |
+| `union_macd_up_h1` | long | 1 | leftover | list | none | 44% | 33% | 11/21 | +0.56 | 10 | 37 | +4.74 | -3.99 | +2.75 | +10.16 | PASS | 49.994 |
+| `union_macd_up_h3` | long | 3 | leftover | list | none | 42% | 52% | 10/21 | -2.20 | 19 | 85 | +8.04 | -5.70 | +0.23 | +16.50 | PASS | 37.858 |
+| `union_macd_xup_h1` | long | 1 | leftover | list | none | 35% | 33% | 9/21 | -1.74 | 4 | 23 | +2.86 | -5.03 | -12.05 | -16.99 | PASS | 27.464 |
+| `union_flow_in_h1` | long | 1 | leftover | list | none | 50% | 33% | 2/21 | -4.29 | 4 | 6 | +4.57 | -4.79 | +4.74 | +13.75 | PASS | 33.321 |
+| `union_flow_in_h3` | long | 3 | leftover | list | none | 46% | 24% | 0/21 | -4.93 | 5 | 25 | +1.89 | -4.94 | -4.93 | -13.62 | PASS | 15.837 |
+| `union_rsi_os_macd_h1` *(thin)* | long | 1 | leftover | list | none | 33% | 5% | 1/21 | -5.91 | 1 | 2 | +7.49 | -6.33 | -5.91 | +0.01 | PASS | -7.833 |
+| `union_flow_in_white_h1` *(thin)* | long | 1 | leftover | list | none | 64% | 24% | 17/21 | +0.29 | 0 | 2 | +3.42 | -2.35 | +9.83 | +12.54 | PASS | 45.579 |
+| `union_rsi_h1` | long | 1 | leftover | list | none | 43% | 24% | 4/21 | -7.96 | 6 | 63 | +3.97 | -6.35 | -11.20 | -9.00 | PASS | 21.385 |
+| `union_macd_hist_h1` | long | 1 | leftover | list | none | 43% | 33% | 1/21 | -0.81 | 8 | 55 | +3.77 | -3.86 | -4.59 | -7.41 | PASS | 23.593 |
+| `short_rsi_ob_h1` | short | 1 | leftover | list | none | 48% | 38% | 7/21 | -0.37 | 11 | 41 | +4.52 | -5.17 | -8.19 | -12.67 | PASS | 33.833 |
+| `short_rsi_ob_h3` | short | 3 | leftover | list | none | 48% | 43% | 10/21 | -0.37 | 21 | 86 | +6.13 | -7.34 | -3.70 | -127.23 | PASS | 34.13 |
+| `short_macd_dn_h3` | short | 3 | leftover | list | none | 51% | 43% | 11/21 | +0.03 | 15 | 81 | +3.99 | -5.67 | -8.74 | -17.31 | PASS | 45.654 |

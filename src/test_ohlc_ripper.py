@@ -56,6 +56,40 @@ def test_continuation_is_prior_tape_only() -> None:
         assert float(feat.get("ret_5") or 0) <= ohlc.CONT_RET5_MAX
 
 
+def test_rsi_macd_known_values_and_prior_only() -> None:
+    rising = [
+        {"date": f"d{i:03d}", "open": 10 + i, "high": 11 + i,
+         "low": 9 + i, "close": 10.5 + i, "volume": 1000}
+        for i in range(50)
+    ]
+    up = ohlc.from_bars(rising)
+    assert up["rsi"] is not None and up["rsi"] > 70
+    assert up["rsi_ob"] is True and up["rsi_os"] is False
+    assert up["macd_hist"] is not None and up["macd_up"] is True
+    falling = [
+        {"date": f"d{i:03d}", "open": 60 - i, "high": 61 - i,
+         "low": 59 - i, "close": 59.5 - i, "volume": 1000}
+        for i in range(50)
+    ]
+    down = ohlc.from_bars(falling)
+    assert down["rsi"] is not None and down["rsi"] < 30
+    assert down["rsi_os"] is True and down["rsi_ob"] is False
+    flat = [
+        {"date": f"d{i:03d}", "open": 10.0, "high": 10.1,
+         "low": 9.9, "close": 10.0, "volume": 1000}
+        for i in range(25)
+    ]
+    flat[-1]["volume"] = 3000
+    flat[-1]["close"] = 10.05
+    flow = ohlc.from_bars(flat)
+    assert flow["flow_in"] is True
+    feat = ohlc.features("TLN", "2026-08-17")
+    bars = ohlc.prior_bars("TLN", "2026-08-17", n=60)
+    assert bars and all(b["date"] < "2026-08-17" for b in bars)
+    if feat.get("rsi") is not None:
+        assert 0.0 <= float(feat["rsi"]) <= 100.0
+
+
 def test_html_has_ohlc_columns() -> None:
     from src.test_flatten_lookback_action import _sample_payload
     page = fla.render_html(_sample_payload())
@@ -70,4 +104,5 @@ if __name__ == "__main__":
     test_continuation_is_prior_tape_only()
     test_814_watchlist_keeps_earn_and_adds_ohlc_hot()
     test_html_has_ohlc_columns()
-    print("5 ohlc-ripper tests passed")
+    test_rsi_macd_known_values_and_prior_only()
+    print("6 ohlc-ripper tests passed")

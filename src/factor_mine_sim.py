@@ -28,6 +28,9 @@ ROW_KEEP = (
     "e_pol", "e_label", "r_pol", "r_label",
     "cond_good", "cond_bad",
     "news_box", "news_prior",
+    "rsi", "fv_rsi", "macd", "macd_hist", "macd_cross_up",
+    "rsi_os", "rsi_ob", "macd_up", "macd_down", "flow_in",
+    "fv_rvol", "fv_sma20", "fv_inst",
 )
 
 
@@ -86,6 +89,7 @@ def build_sim_pack(panel: dict) -> dict:
     """Rows + tape + fee schedule. No same-day Change%."""
     from . import factor_mine_probe as fmp
     panel = fm.rehydrate_panel(panel)
+    fm.ensure_sim_fields(panel)
     fmp.attach_erd_polarity(panel)
     cal = list(panel.get("session_dates") or [])
     rows = []

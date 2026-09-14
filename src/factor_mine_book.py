@@ -35,9 +35,10 @@ GATES = (
     "auto", "none", "vol_g", "news_g", "white", "white_any", "coil_off",
     "join_g", "last_green", "blue", "news_present", "join_present", "ab_g",
     "news_pack", "news_head", "news_both", "news_or",
+    "rsi_os", "rsi_ob", "macd_up", "macd_xup", "flow_in",
 )
 RANKS = ("auto", "none", "list", "hot_score", "cond", "w_hot_cond",
-         "w_hot_candle", "ret_5", "candle_score")
+         "w_hot_candle", "ret_5", "candle_score", "rsi", "macd_hist")
 SIDES = ("auto", "long", "short")
 TOP_NS = ("auto", "4", "8", "12")
 EXITS = ("auto", "none", "alarm", "last_red", "news_bad")
@@ -757,6 +758,16 @@ def recipes_from_action(*, universe="auto", hold="auto", gate="auto",
             return "join_present"
         if req.get("ab") == "good" and len(req) == 1:
             return "ab_g"
+        if req.get("rsi_os") and len(req) == 1:
+            return "rsi_os"
+        if req.get("rsi_ob") and len(req) == 1:
+            return "rsi_ob"
+        if req.get("macd_cross_up") and len(req) == 1:
+            return "macd_xup"
+        if req.get("macd_up") and len(req) == 1:
+            return "macd_up"
+        if req.get("flow_in") and len(req) == 1:
+            return "flow_in"
         return "other"
 
     def exit_name(rec: dict) -> str:

@@ -143,6 +143,14 @@
       e_pol: r.e_pol || "",
       e_label: r.e_label || "",
       earn_react: !!r.erd_earn_react,
+      rsi: r.rsi,
+      fv_rsi: r.fv_rsi,
+      macd_hist: r.macd_hist,
+      macd_cross_up: !!r.macd_cross_up,
+      rsi_os: !!r.rsi_os,
+      rsi_ob: !!r.rsi_ob,
+      macd_up: !!r.macd_up,
+      flow_in: !!r.flow_in,
     }, extra2);
     stamp.predict = polarityPredict(stamp, rec, false);
     stamp.pol_hit = polarityHit(stamp.predict, stamp.px_ret);
@@ -301,6 +309,14 @@
         && (!!row.ohlc_break_10 || (rvol != null && rvol >= 2));
       if (!burst) return false;
     }
+    if (req.rsi_os && !row.rsi_os) return false;
+    if (req.rsi_ob && !row.rsi_ob) return false;
+    if (req.macd_up && !row.macd_up) return false;
+    if (req.macd_down && !row.macd_down) return false;
+    if (req.macd_cross_up && !row.macd_cross_up) return false;
+    if (req.flow_in && !row.flow_in) return false;
+    if (req.rsi_min != null && !(row.rsi != null && row.rsi >= Number(req.rsi_min))) return false;
+    if (req.rsi_max != null && !(row.rsi != null && row.rsi <= Number(req.rsi_max))) return false;
     return true;
   }
   function kidGate(key, val) {
@@ -332,6 +348,14 @@
     if (key === "ret_5_max") return "prior 5-session return is at most " + val + "%";
     if (key === "rvol_min") return "prior relative volume is at least " + val;
     if (key === "rvol_max") return "prior relative volume is at most " + val;
+    if (key === "rsi_os") return "prior RSI is oversold (≤30)";
+    if (key === "rsi_ob") return "prior RSI is overbought (≥70)";
+    if (key === "macd_up") return "prior MACD histogram is above zero";
+    if (key === "macd_down") return "prior MACD histogram is below zero";
+    if (key === "macd_cross_up") return "MACD histogram just crossed up through zero";
+    if (key === "flow_in") return "money came in (rel vol ≥ 1.5) but price barely moved";
+    if (key === "rsi_min") return "prior RSI is at least " + val;
+    if (key === "rsi_max") return "prior RSI is at most " + val;
     if (key === "days_since_E_max") return "earnings (E) printed within the last " + val + " session(s)";
     if (key === "flag_E_min") return "the earnings flag is on";
     if (key === "days_since_R_max") return "an analyst revision (R) printed within the last " + val + " session(s)";
@@ -393,6 +417,14 @@
     if (req.major_catalyst) need(majorCatalyst(row), kidGate("major_catalyst", true));
     if (req.yday_or_catalyst) need(ydayUp(row) || majorCatalyst(row), kidGate("yday_or_catalyst", true));
     if (req.yday_and_catalyst) need(ydayUp(row) && majorCatalyst(row), kidGate("yday_and_catalyst", true));
+    if (req.rsi_os) need(!!row.rsi_os, kidGate("rsi_os", true));
+    if (req.rsi_ob) need(!!row.rsi_ob, kidGate("rsi_ob", true));
+    if (req.macd_up) need(!!row.macd_up, kidGate("macd_up", true));
+    if (req.macd_down) need(!!row.macd_down, kidGate("macd_down", true));
+    if (req.macd_cross_up) need(!!row.macd_cross_up, kidGate("macd_cross_up", true));
+    if (req.flow_in) need(!!row.flow_in, kidGate("flow_in", true));
+    if (req.rsi_min != null) need(row.rsi != null && row.rsi >= Number(req.rsi_min), kidGate("rsi_min", req.rsi_min));
+    if (req.rsi_max != null) need(row.rsi != null && row.rsi <= Number(req.rsi_max), kidGate("rsi_max", req.rsi_max));
     return {ok: !failed.length, failed, passed};
   }
   function decisionWhy(pack, rec, date, ticker, mornings) {
@@ -479,6 +511,8 @@
     if (how === "cond") return [-(row.cond_good || 0), (row.cond_bad || 0), row.ticker];
     if (how === "w_hot_cond") return [-(0.6 * hot + 0.4 * Math.max(cond, 0)), row.ticker];
     if (how === "w_hot_candle") return [-(0.6 * hot + 0.4 * candle), row.ticker];
+    if (how === "rsi") return [row.rsi == null ? 999 : Number(row.rsi), row.ticker];
+    if (how === "macd_hist") return [-(finite(row.macd_hist) || 0), row.ticker];
     const src = row.src_rank == null ? 99 : Number(row.src_rank);
     return [src, row.ticker];
   }
@@ -505,6 +539,8 @@
     if (how === "cond") return cond;
     if (how === "w_hot_cond") return Math.round((0.6 * hot + 0.4 * Math.max(cond, 0)) * 10000) / 10000;
     if (how === "w_hot_candle") return Math.round((0.6 * hot + 0.4 * candle) * 10000) / 10000;
+    if (how === "rsi") return row.rsi == null ? null : Math.round(Number(row.rsi) * 100) / 100;
+    if (how === "macd_hist") return Math.round((finite(row.macd_hist) || 0) * 10000) / 10000;
     return (row.src_rank == null ? 99 : Number(row.src_rank)) * -1 + 100;
   }
   function shouldExit(row, exitWhen) {
