@@ -2,8 +2,9 @@
 
 Stock-book horizons and flatten come off files that Pre-Open / Stock Book
 already wrote. Factor-mine recipes use pick_day on the leak-free panel
-when that date exists. Nothing here fetches prices. Soft-fail every
-source so publish_live_boards still writes a strip.
+when that **session** date exists, else combo_broker session-open look
+rows. Never last panel-bake asof. Nothing here fetches prices.
+Soft-fail every source so publish_live_boards still writes a strip.
 """
 from __future__ import annotations
 
@@ -116,6 +117,96 @@ def _load_json(path: Path):
         return None
 
 
+def session_look_mismatch(payload: dict, date: str) -> list[str]:
+    """Factor-mine recipes stamped with a panel date other than *date*."""
+    bad = []
+    for name, rec in (payload.get("strategies") or {}).items():
+        if not isinstance(rec, dict):
+            continue
+        if rec.get("family") != "factor_mine":
+            continue
+        if str(rec.get("date") or "") != date:
+            bad.append(f"{name} date={rec.get('date')}")
+    return bad
+
+
+def assert_session_look(payload: dict, date: str) -> None:
+    """Warn always; refuse to ship last-bake picks on a new session file."""
+    bad = session_look_mismatch(payload, date)
+    if not bad:
+        return
+    msg = (
+        f"panel date ≠ session {date}: {len(bad)} factor_mine recipes "
+        f"({bad[0]})"
+    )
+    print(f"[strategy-tickets] WARN: {msg}", flush=True)
+    errors = list(payload.get("errors") or [])
+    errors.append(msg)
+    payload["errors"] = errors
+    shipped = []
+    for name, rec in (payload.get("strategies") or {}).items():
+        if not isinstance(rec, dict):
+            continue
+        if rec.get("family") != "factor_mine":
+            continue
+        if str(rec.get("date") or "") != date and (rec.get("buy_n") or 0) > 0:
+            shipped.append(name)
+    if shipped:
+        raise AssertionError(
+            f"refusing to ship {len(shipped)} factor_mine recipes "
+            f"stamped {payload['strategies'][shipped[0]].get('date')} "
+            f"on session {date}: {shipped[:8]}"
+        )
+
+
+def _session_look(date: str, panel: dict) -> dict:
+    """Session-open rows. Never silently fall back to last panel bake.
+
+    Morning tickets must pick on the requested session (09-14), not the
+    last factor-mine bake (09-11 Friday). ``combo_broker.resolve_rows``
+    already builds leak-free look rows for an open morning; if that
+    look is stale, refuse the names instead of shipping Friday's list.
+    """
+    by_date = panel.get("by_date") or {}
+    if date in by_date and by_date[date]:
+        return {
+            "date": date, "rows": by_date[date], "stale": False,
+            "source": "panel", "want_date": date,
+        }
+    try:
+        from . import combo_broker as cb
+        looked = cb.resolve_rows(date, panel)
+    except Exception as e:  # noqa: BLE001 — live look is best-effort
+        err = f"session look {date}: {e}"
+        print(f"[strategy-tickets] WARN: {err}", flush=True)
+        return {
+            "date": date, "rows": [], "stale": True,
+            "source": "look_fail", "want_date": date, "error": err[:160],
+        }
+    look_date = str(looked.get("date") or "")
+    stale = bool(looked.get("stale")) or look_date != date
+    if stale:
+        err = (
+            f"panel/look date {look_date or looked.get('source')} "
+            f"≠ session {date} — refusing last-bake picks"
+        )
+        print(f"[strategy-tickets] WARN: {err}", flush=True)
+        return {
+            "date": date, "rows": [], "stale": True,
+            "source": looked.get("source") or "stale",
+            "want_date": date,
+            "error": err,
+            "bake_date": look_date,
+        }
+    return {
+        "date": date,
+        "rows": looked.get("rows") or [],
+        "stale": False,
+        "source": looked.get("source") or "look",
+        "want_date": date,
+    }
+
+
 def stock_book_strats(date: str) -> list[dict]:
     sug = _load_json(BOOK / f"{date}_suggestions.json") or _load_json(
         BOOK / "latest_suggestions.json"
@@ -194,7 +285,7 @@ def flatten_strat(date: str) -> dict:
     )
 
 
-def recipe_strats(date: str) -> list[dict]:
+def recipe_strats(date: str, look_out: dict | None = None) -> list[dict]:
     try:
         from . import factor_mine as fm
         from . import factor_mine_book as fmb
@@ -203,24 +294,27 @@ def recipe_strats(date: str) -> list[dict]:
         return []
     raw = _load_json(PANEL)
     if not raw:
+        if look_out is not None:
+            look_out.update({"source": "missing", "want_date": date,
+                             "stale": True, "error": "panel.json missing"})
         return [_entry("factor_mine", "factor_mine", date, [], [],
                        status="no_panel", note="panel.json missing")]
     panel = fm.rehydrate_panel(raw)
-    by_date = panel.get("by_date") or {}
-    use_date = date if date in by_date else None
-    if use_date is None:
-        dates = list(panel.get("session_dates") or [])
-        older = [d for d in dates if d <= date]
-        use_date = older[-1] if older else (dates[-1] if dates else None)
-    rows = by_date.get(use_date) or []
+    looked = _session_look(date, panel)
+    if look_out is not None:
+        look_out.update({
+            k: looked.get(k) for k in
+            ("source", "want_date", "stale", "error", "bake_date", "date")
+            if looked.get(k) is not None
+        })
+    rows = looked.get("rows") or []
+    look_stale = bool(looked.get("stale"))
+    look_err = str(looked.get("error") or "")
     s = None
     try:
         s = fmb.morning_s(fmb.load_regime(), date)
     except Exception:
-        try:
-            s = fmb.morning_s(fmb.load_regime(), use_date or date)
-        except Exception:
-            s = None
+        s = None
     hard = s is not None and float(s) <= -3.0
     recs = list(fm.build_recipes())
     have = {r["name"] for r in recs}
@@ -242,7 +336,10 @@ def recipe_strats(date: str) -> list[dict]:
                 have.add(name)
     rec_by = {r["name"]: r for r in recs}
     out = []
-    stale = use_date != date
+    empty_status = "look_stale" if look_stale else "no_panel_day"
+    empty_note = look_err or f"no session-open rows for {date}"
+    look_src = looked.get("source") or ""
+    look_note = f" · look {look_src}" if look_src and look_src != "panel" else ""
     for rec in recs:
         name = rec["name"]
         rec_side = str(rec.get("side") or "long")
@@ -258,7 +355,7 @@ def recipe_strats(date: str) -> list[dict]:
                 rec_side = next(iter(kid_sides))
             if not members:
                 out.append(_entry(
-                    name, "factor_mine", use_date or date, [], [],
+                    name, "factor_mine", date, [], [],
                     status="combo_unknown_members",
                     note="combo_* name not in combo_specs — cannot build a 09:30 list",
                     side=rec_side,
@@ -267,8 +364,8 @@ def recipe_strats(date: str) -> list[dict]:
             if not rows:
                 out.append(_entry(
                     name, "factor_mine", date, [], [],
-                    status="no_panel_day",
-                    note=f"no panel rows for {date}",
+                    status=empty_status,
+                    note=empty_note,
                     side=rec_side,
                 ))
                 continue
@@ -276,17 +373,16 @@ def recipe_strats(date: str) -> list[dict]:
                 buys = _combo_would_buy(rows, rec_by, members, spec, fm)
             except Exception as e:  # noqa: BLE001
                 out.append(_entry(
-                    name, "factor_mine", use_date or date, [], [],
+                    name, "factor_mine", date, [], [],
                     status="pick_fail", note=str(e)[:160],
                     side=rec_side,
                 ))
                 continue
             note = ("combo shopping list = member 09:30 lists (union); "
-                    "fills still need the cash-book roll"
-                    + (f" · panel {use_date}" if stale else ""))
+                    "fills still need the cash-book roll" + look_note)
             if hard:
                 out.append(_entry(
-                    name, "factor_mine", use_date or date, buys, [],
+                    name, "factor_mine", date, buys, [],
                     sit=True, hard_red=True, s=s,
                     status="sit",
                     note="hard-red S≤−3 — no new lots; names are would-buy",
@@ -295,9 +391,9 @@ def recipe_strats(date: str) -> list[dict]:
                 ))
             else:
                 out.append(_entry(
-                    name, "factor_mine", use_date or date, buys, [],
+                    name, "factor_mine", date, buys, [],
                     s=s,
-                    status="stale_panel" if stale else "ok",
+                    status="ok",
                     note=note,
                     side=rec_side,
                 ))
@@ -305,8 +401,8 @@ def recipe_strats(date: str) -> list[dict]:
         if not rows:
             out.append(_entry(
                 name, "factor_mine", date, [], [],
-                status="no_panel_day",
-                note=f"no panel rows for {date}",
+                status=empty_status,
+                note=empty_note,
                 side=rec_side,
             ))
             continue
@@ -314,18 +410,17 @@ def recipe_strats(date: str) -> list[dict]:
             picked = fm.pick_day(rows, rec)
         except Exception as e:  # noqa: BLE001
             out.append(_entry(
-                name, "factor_mine", use_date or date, [], [],
+                name, "factor_mine", date, [], [],
                 status="pick_fail", note=str(e)[:160],
                 side=rec_side,
             ))
             continue
         buys = [{"ticker": r["ticker"], "src": ",".join(r.get("sources") or [])}
                 for r in picked if r.get("ticker")]
-        note = ("would-buy at 09:30; sells need cash-book lots"
-                + (f" · panel {use_date}" if stale else ""))
+        note = ("would-buy at 09:30; sells need cash-book lots" + look_note)
         if hard:
             out.append(_entry(
-                name, "factor_mine", use_date or date, buys, [],
+                name, "factor_mine", date, buys, [],
                 sit=True, hard_red=True, s=s,
                 status="sit",
                 note="hard-red S≤−3 — no new lots; names are would-buy",
@@ -334,9 +429,9 @@ def recipe_strats(date: str) -> list[dict]:
             ))
         else:
             out.append(_entry(
-                name, "factor_mine", use_date or date, buys, [],
+                name, "factor_mine", date, buys, [],
                 s=s,
-                status="stale_panel" if stale else "ok",
+                status="ok",
                 note=note,
                 side=rec_side,
             ))
@@ -396,13 +491,14 @@ def build(date: str) -> dict:
         errors.append(f"flatten:{e}")
         strats.append(_entry("flatten_robust", "flatten", date, [], [],
                              status="error", note=str(e)[:160]))
+    look: dict = {}
     try:
-        strats.extend(recipe_strats(date))
+        strats.extend(recipe_strats(date, look_out=look))
     except Exception as e:  # noqa: BLE001
         errors.append(f"recipes:{e}")
     by_name = {s["name"]: s for s in strats}
-    ok = sum(1 for s in strats if s.get("status") in ("ok", "sit", "stale_panel"))
-    return {
+    ok = sum(1 for s in strats if s.get("status") in ("ok", "sit"))
+    payload = {
         "date": date,
         "generated_at": datetime.now(ET).isoformat(),
         "n": len(strats),
@@ -411,12 +507,23 @@ def build(date: str) -> dict:
         "strategies": by_name,
         "order": [s["name"] for s in strats],
         "errors": errors,
+        "look": look,
         "source": "strategy_tickets",
     }
+    mismatch = session_look_mismatch(payload, date)
+    if mismatch:
+        warn = (
+            f"panel date ≠ session {date}: {len(mismatch)} factor_mine "
+            f"recipes ({mismatch[0]})"
+        )
+        print(f"[strategy-tickets] WARN: {warn}", flush=True)
+        payload["errors"] = list(payload["errors"] or []) + [warn]
+    return payload
 
 
 def write(date: str, payload: dict | None = None) -> list[Path]:
     payload = payload or build(date)
+    assert_session_look(payload, date)
     text = json.dumps(payload, indent=2)
     paths = [
         DAY / "strategy_tickets.json",
