@@ -886,13 +886,18 @@ def today_panel_html(card: dict) -> str:
             last = json.loads(last_p.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError):
             return ""
+        extra = ""
+        if last.get("combo") or last.get("source"):
+            extra = f" · {_html.escape(str(last.get('combo') or last.get('source')))}"
         if last.get("connected"):
             st = (f"{name} {last.get('env')} cash ${last.get('cash') or 0:,.0f} · "
                   f"{last.get('n_tickets') or 0} live tickets · "
-                  f"{'submitted' if last.get('submit') else 'dry-run'}")
+                  f"{'submitted' if last.get('submit') else 'dry-run'}"
+                  f"{extra}")
         else:
             st = (f"{name} offline — "
-                  f"{_html.escape(str(last.get('error') or offline))}")
+                  f"{_html.escape(str(last.get('error') or offline))}"
+                  f"{extra}")
         return f"<p class='muted'>{st}</p>"
 
     def futubull_strip() -> str:
@@ -904,6 +909,7 @@ def today_panel_html(card: dict) -> str:
     def webull_strip() -> str:
         return _broker_strip(
             "Webull paper", "webull_last.json", "no API key",
+            "Paper overlay is <code>combo_sh_macd_5050_shared</code>. "
             "Set <code>WEBULL_APP_KEY</code> / <code>WEBULL_APP_SECRET</code> "
             "and run <code>python -m src.webull_exec --submit</code>.")
 

@@ -548,6 +548,9 @@ def build_recipes() -> list[dict]:
         for hold in (1, 3):
             add(name=f"{name}_h{hold}", universe="union", hold=hold,
                 side="short", require=req, note=note)
+    add(name="short_news_r_macd_h3", universe="union", hold=3, side="short",
+        require={"news": "bad", "macd_up": True},
+        note="short news🔴 ∩ prior MACD histogram > 0")
 
     # Cash-state tweaks on a few proven bases — not a full cartesian.
     bases = [

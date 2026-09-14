@@ -111,7 +111,6 @@ def test_env_strips_quoted_secrets() -> None:
 
 
 def test_not_connected_writes_last_without_replay(tmp_path=None) -> None:
-    import json
     from unittest import mock
     from src import webull_exec as we
 
@@ -123,23 +122,58 @@ def test_not_connected_writes_last_without_replay(tmp_path=None) -> None:
         def connect(self) -> bool:
             return False
 
-    today = {
-        "date": "2026-09-11",
-        "tickets": [],
-        "would_buy": {"rows": [{"ticker": "ORCL"}]},
-    }
     with mock.patch.object(we, "PaperAPI", return_value=Dead()), \
-            mock.patch.object(we, "TODAY_JSON") as today_p, \
+            mock.patch.object(we, "_plan", return_value={
+                "tickets": [], "stale": False, "policy": "combo_sh_macd_5050_shared",
+            }), \
             mock.patch.object(we, "write_last") as wl, \
             mock.patch.object(we, "inject_today_from_disk"):
-        today_p.is_file.return_value = True
-        today_p.read_text.return_value = json.dumps(today)
-        rc = we.run("2026-09-11", submit=True, write=True)
+        rc = we.run("2026-09-14", submit=True, write=True)
     assert rc == 0
     last = wl.call_args[0][0]
     assert last["connected"] is False
     assert last["n_tickets"] == 0
+    assert last["source"] == "combo"
+    assert last["combo"] == "combo_sh_macd_5050_shared"
     assert "401" in (last.get("error") or "")
+
+
+def test_stale_combo_does_not_submit() -> None:
+    from unittest import mock
+    from src import webull_exec as we
+
+    class Alive:
+        env = "paper"
+        host = "api.sandbox.webull.com"
+        err = None
+
+        def connect(self) -> bool:
+            return True
+
+        def snapshot(self):
+            return BrokerSnap(env="paper", cash=10_000, positions={},
+                              connected=True, acc_id="paper-1")
+
+        def place(self, *a, **k):
+            raise AssertionError("stale look must not place")
+
+    card = {
+        "date": "2026-09-11", "stale": True, "policy": "combo_sh_macd_5050_shared",
+        "combo": "combo_sh_macd_5050_shared", "tickets": [
+            {"side": "BUY", "ticker": "HOT1", "shares": 10, "px": 10.0,
+             "status": "plan", "date": "2026-09-11"},
+        ], "would_buy": {"rows": []},
+    }
+    with mock.patch.object(we, "PaperAPI", return_value=Alive()), \
+            mock.patch.object(we, "_plan", return_value=card), \
+            mock.patch.object(we, "write_last") as wl, \
+            mock.patch.object(we, "inject_today_from_disk"):
+        rc = we.run("2026-09-14", submit=True, write=True, source="combo")
+    assert rc == 0
+    last = wl.call_args[0][0]
+    assert last["submit"] is False
+    assert last["sent"][0]["status"] == "dry_run"
+    assert last["stale"] is True
 
 
 def test_yml_poke_on_main_submits() -> None:
@@ -150,6 +184,9 @@ def test_yml_poke_on_main_submits() -> None:
     assert "branches: [main]" in yml
     assert '".github/workflows/webull_paper.yml"' in yml
     assert "github.event_name == 'push'" in yml
+    assert "--source combo" in yml
+    assert "combo_sh_macd_5050_shared" in yml
+    assert "POKE 2026-09-14" in yml
 
 
 def main() -> None:
@@ -161,8 +198,9 @@ def main() -> None:
     test_submit_uses_paper_place()
     test_env_strips_quoted_secrets()
     test_not_connected_writes_last_without_replay()
+    test_stale_combo_does_not_submit()
     test_yml_poke_on_main_submits()
-    print("test_webull_exec: 9 ok")
+    print("test_webull_exec: 10 ok")
 
 
 if __name__ == "__main__":
