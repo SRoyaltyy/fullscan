@@ -929,8 +929,10 @@ document.getElementById('fees').textContent=
     if(!q) return "";
     var src = q.src || "";
     if(!src && !q.at) return "";
-    var live = (src === "elite_live" || src === "elite_live_file");
+    var banned = /theme|radar|_close|yesterday/i.test(src);
+    var live = !banned && (src === "elite_live" || src === "elite_live_file");
     var bit = " · px " + (src || "?") + (live ? " (now)" : " (not live)");
+    if(banned) bit += " — Theme Radar/close refused";
     if(q.at) bit += " @ " + q.at;
     return bit;
   }
@@ -973,15 +975,16 @@ document.getElementById('fees').textContent=
         var s = strats[name] || {};
         var b = names(s.buy, s.predict);
         var sl = names(s.sell, s.predict);
-        var tag = s.sit ? "SIT" : (s.status || "");
+        var sit = !!(s.sit || s.would_have || s.status === "sit");
         extra += '<div class="live-book-row' + (sl.length && !b.length ? " sell" : "") + '"><b>' + name + '</b> ';
         var side = String(s.side || "").toUpperCase();
         if(side) extra += side + " ";
-        if(tag && tag !== "ok") extra += tag + " ";
-        extra += (b.length ? "BUY " + b.join(" · ") : "");
+        if(sit) extra += "SIT would-have ";
+        else if(s.status && s.status !== "ok") extra += s.status + " ";
+        extra += (b.length ? (sit ? "" : "BUY ") + b.join(" · ") : "");
         extra += (b.length && sl.length ? " · " : "");
-        extra += (sl.length ? "SELL " + sl.join(" · ") : "");
-        if(!b.length && !sl.length) extra += (tag === "SIT" || s.sit ? "sit" : "—");
+        extra += (sl.length ? (sit ? "would-sell " : "SELL ") + sl.join(" · ") : "");
+        if(!b.length && !sl.length) extra += (sit ? "sit" : "—");
         var res = s.research;
         if(res && res.tag){
           extra += ' <span class="live-book-date">RESEARCH';
@@ -1017,7 +1020,7 @@ document.getElementById('fees').textContent=
       });
     }
     el.innerHTML =
-      '<div class="live-book-kicker">Today\'s tickets (every strategy)</div>' +
+      '<div class="live-book-kicker">Today\'s tickets (every strategy) — SIT = paper would-have, not a wire. Elite px after 09:30 only; Theme Radar close never live</div>' +
       '<div class="live-book-date">' + (d.date || "") +
         (d.clock_legal_for ? (" · open " + d.clock_legal_for) : "") +
         quoteLabel(d.quote) + '</div>' +
@@ -1025,12 +1028,21 @@ document.getElementById('fees').textContent=
       '<div class="live-book-row sell"><b>SELL 1d</b> ' + (sells.join(" · ") || "—") + '</div>' + extra;
   }
   function load(){
+    var rels = [
+      "today_strategies.json",
+      "factor-mine/today_strategies.json",
+      "../factor-mine/today_strategies.json"
+    ].map(function(u){
+      return fetch(u + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; });
+    });
     Promise.all([
       fetch(TODAY + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; }),
       fetch(STRAT + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; }),
       fetch(SUG + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; })
-    ]).then(function(arr){
+    ].concat(rels)).then(function(arr){
       var today = arr[0] || {}, strat = arr[1] || {}, sug = arr[2] || {};
+      var local = arr.slice(3).filter(function(x){ return x && x.strategies && Object.keys(x.strategies).length; })[0];
+      if(local && local.strategies) strat = local;
       var d = Object.assign({}, sug, today);
       if(strat && strat.strategies) d.strategies = strat.strategies;
       if(strat && strat.date) d.date = strat.date;

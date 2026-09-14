@@ -1732,13 +1732,14 @@ window.addEventListener('resize', draw);
       keys.forEach(function(name){
         var s=strats[name]||{};
         var b=names(s.buy,s.predict), sl=names(s.sell,s.predict);
-        var tag=s.sit?'SIT':(s.status&&s.status!=='ok'?s.status:'');
+        var sit=!!(s.sit||s.would_have||s.status==='sit');
         html+='<div class="mut" style="margin-top:3px"><b>'+name+'</b> ';
-        if(tag) html+=tag+' ';
-        html+=(b.length?'BUY '+b.join(' · '):'');
+        if(sit) html+='SIT would-have ';
+        else if(s.status&&s.status!=='ok') html+=s.status+' ';
+        html+=(b.length?(sit?'':'BUY ')+b.join(' · '):'');
         html+=(b.length&&sl.length?' · ':'');
-        html+=(sl.length?'SELL '+sl.join(' · '):'');
-        if(!b.length&&!sl.length) html+=(s.sit?'sit':'—');
+        html+=(sl.length?(sit?'would-sell ':'SELL ')+sl.join(' · '):'');
+        if(!b.length&&!sl.length) html+=(sit?'sit':'—');
         if(s.research&&s.research.tag){
           html+=' <span class="mut">RESEARCH';
           var so=s.research.short_only||[];

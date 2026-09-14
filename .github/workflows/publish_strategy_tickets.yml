@@ -82,6 +82,7 @@ jobs:
             data/factor_mine/strategy_tickets.json \
             dashboard/factor-mine/strategy_tickets.json \
             dashboard/factor-mine/today_strategies.json \
+            dashboard/today_strategies.json \
             dashboard/factor-mine/today.json \
             dashboard/sleeve-merge/index.html \
             dashboard/strategy-board/index.html \

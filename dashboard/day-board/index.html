@@ -154,13 +154,14 @@ function render(board){
         keys.map(name => {
           const s = d.strategies[name] || {};
           const b = names(s.buy, s.predict), sl = names(s.sell, s.predict);
-          const tag = s.sit ? "SIT" : (s.status && s.status !== "ok" ? s.status : "");
+          const sit = !!(s.sit || s.would_have || s.status === "sit");
           let line = `<div style="margin:4px 0"><b>${name}</b> `;
-          if(tag) line += tag + " ";
-          line += b.length ? ("BUY " + b.join(" · ")) : "";
+          if(sit) line += "SIT would-have ";
+          else if(s.status && s.status !== "ok") line += s.status + " ";
+          line += b.length ? ((sit ? "" : "BUY ") + b.join(" · ")) : "";
           line += (b.length && sl.length) ? " · " : "";
-          line += sl.length ? ("SELL " + sl.join(" · ")) : "";
-          if(!b.length && !sl.length) line += (s.sit ? "sit" : "—");
+          line += sl.length ? ((sit ? "would-sell " : "SELL ") + sl.join(" · ")) : "";
+          if(!b.length && !sl.length) line += (sit ? "sit" : "—");
           return line + "</div>";
         }).join("");
     }).catch(() => { const box=$("strats"); if(box) box.textContent="today_strategies.json not on main yet."; });

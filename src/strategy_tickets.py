@@ -853,6 +853,7 @@ def write(date: str, payload: dict | None = None) -> list[Path]:
                 "buy": _board_quote_rows(v.get("buy")),
                 "sell": _board_quote_rows(v.get("sell")),
                 "sit": v.get("sit"),
+                "would_have": bool(v.get("sit") or v.get("hard_red")),
                 "status": v.get("status"),
                 "family": v.get("family"),
                 "date": v.get("date"),
@@ -890,6 +891,10 @@ def write(date: str, payload: dict | None = None) -> list[Path]:
     slim_path = DAY / "today_strategies.json"
     slim_path.write_text(json.dumps(slim, indent=2), encoding="utf-8")
     wrote.append(slim_path)
+    dash_slim = ROOT / "dashboard" / "today_strategies.json"
+    dash_slim.parent.mkdir(parents=True, exist_ok=True)
+    dash_slim.write_text(json.dumps(slim, indent=2), encoding="utf-8")
+    wrote.append(dash_slim)
     try:
         from . import hard_red_sit_research as hrs
         hrs.write_per_sleeve(hrs.per_sleeve_from_tickets(payload), write=True)

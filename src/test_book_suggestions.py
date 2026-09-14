@@ -43,6 +43,7 @@ def test_land_stock_book_includes_suggestions() -> None:
     assert "2026-09-09_strategy_tickets.json" in live
     live_rel = {str(p.relative_to(land_file.ROOT))
                 for p in land_file.step_paths("2026-09-09", "live_boards")}
+    assert "dashboard/today_strategies.json" in live_rel
     assert "dashboard/factor-mine/strategy_tickets.json" in live_rel
     assert "dashboard/factor-mine/today_strategies.json" in live_rel
 
@@ -95,6 +96,7 @@ def test_factor_mine_template_paints_every_strategy() -> None:
     assert "(A) short-only" in html
     assert "(B) dip-scoop" in html
     assert "keep_bar" in html or "KEEP bar unchanged" in html
+    assert "SIT would-have" in html
     assert "liveStartRow" in html
     assert "pending — not 0%" in html
     assert html.index("<h1>Factor strategy mine") < html.index('id="liveDay"')
@@ -169,6 +171,7 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "past 09:30 ET" in orch
     assert "Publish strategy tickets" in dep
     assert "gh workflow run deploy-dashboard.yml" in pub
+    assert "dashboard/today_strategies.json" in pub
     assert "scripts/publish_dashboard.sh" in pub
     assert "FINVIZ_EMAIL" in pub
     assert "open_px" in book_suggestions._POLLER_JS
@@ -176,6 +179,9 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "(A) short-only" in book_suggestions._POLLER_JS
     assert "(B) dip-scoop" in book_suggestions._POLLER_JS
     assert "not a wire" in book_suggestions._POLLER_JS
+    assert "SIT would-have" in book_suggestions._POLLER_JS
+    assert "Theme Radar" in book_suggestions._POLLER_JS
+    assert "factor-mine/today_strategies.json" in book_suggestions._POLLER_JS
 
 
 def test_inspect_html_ok_when_poller_and_sidecar() -> None:
