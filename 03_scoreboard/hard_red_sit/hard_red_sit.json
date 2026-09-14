@@ -1,0 +1,2902 @@
+{
+  "generated_at": "2026-09-14T10:15:22.209995-04:00",
+  "live_untouched": [
+    "flatten_robust",
+    "combo_sh_macd_5050_shared"
+  ],
+  "combo": "combo_sh_macd_5050_shared",
+  "from_date": "2026-08-13",
+  "to_date": "2026-09-14",
+  "n_sessions": 22,
+  "hard_red_n": 10,
+  "hard_red_days": [
+    {
+      "date": "2026-08-18",
+      "s": -6.2
+    },
+    {
+      "date": "2026-08-19",
+      "s": -7.2
+    },
+    {
+      "date": "2026-08-24",
+      "s": -5.175
+    },
+    {
+      "date": "2026-08-31",
+      "s": -5.85
+    },
+    {
+      "date": "2026-09-01",
+      "s": -6.3
+    },
+    {
+      "date": "2026-09-02",
+      "s": -3.825
+    },
+    {
+      "date": "2026-09-08",
+      "s": -11.475
+    },
+    {
+      "date": "2026-09-09",
+      "s": -13.95
+    },
+    {
+      "date": "2026-09-10",
+      "s": -13.275
+    },
+    {
+      "date": "2026-09-14",
+      "s": -11.002
+    }
+  ],
+  "keep_bar": {
+    "min_fires": 30,
+    "win": 0.55
+  },
+  "dip_grid": [
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    3.0
+  ],
+  "webull_rows": [
+    {
+      "label": "live sit (control)",
+      "mode": "sit",
+      "dip_pct": null,
+      "name": "combo_sh_macd_5050_shared:sit",
+      "book_pct": 37.676,
+      "final_equity": 13767.63,
+      "n_trades": 140,
+      "n_closed": 67,
+      "book_win_rate": 0.6119,
+      "realized": 4035.59,
+      "audit_ok": true,
+      "hard_red_fires": 0,
+      "hard_red_win_rate": null,
+      "hard_red_pnl": 0,
+      "hard_red_n_graded": 0,
+      "hard_red_n_wins": 0
+    },
+    {
+      "label": "(A) short-only \u00b7 pre-open",
+      "mode": "short_only",
+      "dip_pct": null,
+      "name": "combo_sh_macd_5050_shared:short_only",
+      "book_pct": 51.828,
+      "final_equity": 15182.76,
+      "n_trades": 155,
+      "n_closed": 74,
+      "book_win_rate": 0.6216,
+      "realized": 5111.2,
+      "audit_ok": true,
+      "hard_red_fires": 11,
+      "hard_red_win_rate": 0.5,
+      "hard_red_pnl": -904.58,
+      "hard_red_n_graded": 10,
+      "hard_red_n_wins": 5
+    },
+    {
+      "label": "(A) short-only \u00b7 Excel letter pre-filter",
+      "mode": "short_only_excel",
+      "dip_pct": null,
+      "name": "combo_sh_macd_5050_shared:short_only",
+      "book_pct": 51.828,
+      "final_equity": 15182.76,
+      "n_trades": 155,
+      "n_closed": 74,
+      "book_win_rate": 0.6216,
+      "realized": 5111.2,
+      "audit_ok": true,
+      "hard_red_fires": 7,
+      "hard_red_win_rate": 0.5714,
+      "hard_red_pnl": -914.03,
+      "hard_red_n_graded": 7,
+      "hard_red_n_wins": 4
+    },
+    {
+      "label": "(B) scoop 0.5% \u00b7 after 09:30",
+      "mode": "dip_scoop",
+      "dip_pct": 0.5,
+      "name": "combo_sh_macd_5050_shared:dip_scoop:x0.5",
+      "book_pct": 74.177,
+      "final_equity": 17417.69,
+      "n_trades": 184,
+      "n_closed": 89,
+      "book_win_rate": 0.5955,
+      "realized": 4951.29,
+      "audit_ok": true,
+      "hard_red_fires": 26,
+      "hard_red_win_rate": 0.5,
+      "hard_red_pnl": 723.23,
+      "hard_red_n_graded": 24,
+      "hard_red_n_wins": 12
+    },
+    {
+      "label": "(B) scoop 1% \u00b7 after 09:30",
+      "mode": "dip_scoop",
+      "dip_pct": 1.0,
+      "name": "combo_sh_macd_5050_shared:dip_scoop:x1",
+      "book_pct": 83.237,
+      "final_equity": 18323.72,
+      "n_trades": 184,
+      "n_closed": 89,
+      "book_win_rate": 0.6067,
+      "realized": 5690.03,
+      "audit_ok": true,
+      "hard_red_fires": 26,
+      "hard_red_win_rate": 0.5417,
+      "hard_red_pnl": 1387.9,
+      "hard_red_n_graded": 24,
+      "hard_red_n_wins": 13
+    },
+    {
+      "label": "(B) scoop 1.5% \u00b7 after 09:30",
+      "mode": "dip_scoop",
+      "dip_pct": 1.5,
+      "name": "combo_sh_macd_5050_shared:dip_scoop:x1.5",
+      "book_pct": 88.867,
+      "final_equity": 18886.72,
+      "n_trades": 182,
+      "n_closed": 88,
+      "book_win_rate": 0.6023,
+      "realized": 6135.78,
+      "audit_ok": true,
+      "hard_red_fires": 25,
+      "hard_red_win_rate": 0.5217,
+      "hard_red_pnl": 1835.8,
+      "hard_red_n_graded": 23,
+      "hard_red_n_wins": 12
+    },
+    {
+      "label": "(B) scoop 2% \u00b7 after 09:30",
+      "mode": "dip_scoop",
+      "dip_pct": 2.0,
+      "name": "combo_sh_macd_5050_shared:dip_scoop:x2",
+      "book_pct": 66.45,
+      "final_equity": 16644.98,
+      "n_trades": 182,
+      "n_closed": 88,
+      "book_win_rate": 0.5795,
+      "realized": 6665.4,
+      "audit_ok": true,
+      "hard_red_fires": 23,
+      "hard_red_win_rate": 0.4545,
+      "hard_red_pnl": 2263.94,
+      "hard_red_n_graded": 22,
+      "hard_red_n_wins": 10
+    },
+    {
+      "label": "(B) scoop 3% \u00b7 after 09:30",
+      "mode": "dip_scoop",
+      "dip_pct": 3.0,
+      "name": "combo_sh_macd_5050_shared:dip_scoop:x3",
+      "book_pct": 63.298,
+      "final_equity": 16329.83,
+      "n_trades": 176,
+      "n_closed": 85,
+      "book_win_rate": 0.5882,
+      "realized": 6304.64,
+      "audit_ok": true,
+      "hard_red_fires": 20,
+      "hard_red_win_rate": 0.4737,
+      "hard_red_pnl": 2065.04,
+      "hard_red_n_graded": 19,
+      "hard_red_n_wins": 9
+    }
+  ],
+  "flatten_rows": [
+    {
+      "label": "live sit (control)",
+      "mode": "sit",
+      "n_fires": 0,
+      "n_graded": 0,
+      "n_wins": 0,
+      "win_rate": null,
+      "pnl": 0
+    },
+    {
+      "label": "(A) short-only (N/A \u2014 flatten has no short kid)",
+      "mode": "short_only",
+      "n_fires": 0,
+      "n_graded": 0,
+      "n_wins": 0,
+      "win_rate": null,
+      "pnl": 0
+    },
+    {
+      "label": "(B) scoop",
+      "mode": "dip_scoop",
+      "dip_pct": 0.5,
+      "n_fires": 34,
+      "n_graded": 34,
+      "n_wins": 11,
+      "win_rate": 0.3235,
+      "pnl": -17.09
+    },
+    {
+      "label": "(B) scoop",
+      "mode": "dip_scoop",
+      "dip_pct": 1.0,
+      "n_fires": 29,
+      "n_graded": 29,
+      "n_wins": 13,
+      "win_rate": 0.4483,
+      "pnl": -14.15
+    },
+    {
+      "label": "(B) scoop",
+      "mode": "dip_scoop",
+      "dip_pct": 1.5,
+      "n_fires": 23,
+      "n_graded": 23,
+      "n_wins": 10,
+      "win_rate": 0.4348,
+      "pnl": -4.35
+    },
+    {
+      "label": "(B) scoop",
+      "mode": "dip_scoop",
+      "dip_pct": 2.0,
+      "n_fires": 15,
+      "n_graded": 15,
+      "n_wins": 6,
+      "win_rate": 0.4,
+      "pnl": -3.2
+    },
+    {
+      "label": "(B) scoop",
+      "mode": "dip_scoop",
+      "dip_pct": 3.0,
+      "n_fires": 8,
+      "n_graded": 8,
+      "n_wins": 4,
+      "win_rate": 0.5,
+      "pnl": -1.81
+    }
+  ],
+  "flatten_days": [
+    {
+      "date": "2026-08-18",
+      "s": -6.2,
+      "route": "hold",
+      "tickers": [
+        "OXY",
+        "APA",
+        "COP",
+        "MUR",
+        "MLYS",
+        "TRMD",
+        "OBE",
+        "CYPH",
+        "TBPH"
+      ],
+      "io_picks": [
+        "OXY",
+        "APA",
+        "COP",
+        "MUR",
+        "MLYS",
+        "TRMD",
+        "OBE",
+        "CYPH",
+        "TBPH"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "s": -7.2,
+      "route": "hold",
+      "tickers": [
+        "OBE",
+        "STE",
+        "DHR",
+        "SYK",
+        "MUR",
+        "TRMD",
+        "MLYS",
+        "TBPH",
+        "INMD"
+      ],
+      "io_picks": [
+        "OBE",
+        "STE",
+        "DHR",
+        "SYK",
+        "MUR",
+        "TRMD",
+        "MLYS",
+        "TBPH",
+        "INMD"
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "s": -5.175,
+      "route": "hold",
+      "tickers": [
+        "RZLT",
+        "MOS",
+        "OCUL",
+        "INSP",
+        "CRMD",
+        "HCA"
+      ],
+      "io_picks": [
+        "RZLT",
+        "MOS",
+        "OCUL",
+        "INSP",
+        "CRMD",
+        "HCA"
+      ]
+    },
+    {
+      "date": "2026-08-31",
+      "s": -5.85,
+      "route": "hold",
+      "tickers": [
+        "RES",
+        "PBF",
+        "NOV",
+        "WTTR"
+      ],
+      "io_picks": [
+        "RES",
+        "PBF",
+        "NOV",
+        "WTTR"
+      ]
+    },
+    {
+      "date": "2026-09-01",
+      "s": -6.3,
+      "route": "hold",
+      "tickers": [
+        "DK",
+        "BTE",
+        "MTDR",
+        "RES",
+        "KOS",
+        "OIS",
+        "FTI",
+        "KMI",
+        "OKE"
+      ],
+      "io_picks": [
+        "DK",
+        "BTE",
+        "MTDR",
+        "RES",
+        "KOS",
+        "OIS",
+        "FTI",
+        "KMI",
+        "OKE"
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "s": -3.825,
+      "route": "hold",
+      "tickers": [
+        "PCRX",
+        "HRMY",
+        "PBH",
+        "VSTM",
+        "MGTX",
+        "PBR-A",
+        "PBR"
+      ],
+      "io_picks": [
+        "PCRX",
+        "HRMY",
+        "PBH",
+        "VSTM",
+        "MGTX",
+        "PBR-A",
+        "PBR"
+      ]
+    },
+    {
+      "date": "2026-09-08",
+      "s": -11.475,
+      "route": "hold",
+      "tickers": [
+        "GGB",
+        "SID",
+        "SUZ",
+        "TX"
+      ],
+      "io_picks": [
+        "GGB",
+        "SID",
+        "SUZ",
+        "TX"
+      ]
+    }
+  ],
+  "best_x": {
+    "dip_pct": 1.0,
+    "hard_red_fires": 26,
+    "hard_red_win_rate": 0.5417,
+    "hard_red_pnl": 1387.9,
+    "book_pct": 83.237,
+    "label": "(B) scoop 1% \u00b7 after 09:30"
+  },
+  "best_x_flatten": {
+    "dip_pct": 3.0,
+    "hard_red_fires": 8,
+    "hard_red_win_rate": 0.5,
+    "hard_red_pnl": -1.81
+  },
+  "walkforward": {
+    "n_folds": 4,
+    "folds": [
+      {
+        "cutoff": "2026-08-20",
+        "oos": "2026-08-21 \u2192 2026-08-26",
+        "picked_x": 1.0,
+        "is_best": {
+          "dip_pct": 1.0,
+          "hard_red_fires": 5,
+          "hard_red_win_rate": 0.8,
+          "hard_red_pnl": 738.76,
+          "book_pct": 14.37
+        },
+        "oos_short": {
+          "n_fires": 3,
+          "n_graded": 3,
+          "n_wins": 1,
+          "win_rate": 0.3333,
+          "pnl": -36.66,
+          "fires": [
+            {
+              "date": "2026-08-24",
+              "ticker": "OI",
+              "side": "short",
+              "shares": 243,
+              "entry": 7.33,
+              "exit": 7.44,
+              "exit_how": "mark",
+              "pnl": -33.05,
+              "owner": "short_news_r_macd_h3",
+              "win": false
+            },
+            {
+              "date": "2026-08-24",
+              "ticker": "TX",
+              "side": "short",
+              "shares": 31,
+              "entry": 55.9,
+              "exit": 55.13,
+              "exit_how": "mark",
+              "pnl": 19.68,
+              "owner": "short_news_r_macd_h3",
+              "win": true
+            },
+            {
+              "date": "2026-08-24",
+              "ticker": "AVAH",
+              "side": "short",
+              "shares": 132,
+              "entry": 13.48,
+              "exit": 13.62,
+              "exit_how": "mark",
+              "pnl": -23.29,
+              "owner": "short_news_r_macd_h3",
+              "win": false
+            }
+          ]
+        },
+        "oos_x": {
+          "0.5": {
+            "n_fires": 4,
+            "n_graded": 4,
+            "n_wins": 1,
+            "win_rate": 0.25,
+            "pnl": -279.08
+          },
+          "1.0": {
+            "n_fires": 4,
+            "n_graded": 4,
+            "n_wins": 1,
+            "win_rate": 0.25,
+            "pnl": -201.85
+          },
+          "1.5": {
+            "n_fires": 4,
+            "n_graded": 4,
+            "n_wins": 1,
+            "win_rate": 0.25,
+            "pnl": -123.82
+          },
+          "2.0": {
+            "n_fires": 4,
+            "n_graded": 4,
+            "n_wins": 1,
+            "win_rate": 0.25,
+            "pnl": -44.97
+          },
+          "3.0": {
+            "n_fires": 4,
+            "n_graded": 4,
+            "n_wins": 3,
+            "win_rate": 0.75,
+            "pnl": 116.41
+          }
+        }
+      },
+      {
+        "cutoff": "2026-08-26",
+        "oos": "2026-08-27 \u2192 2026-09-01",
+        "picked_x": 3.0,
+        "is_best": {
+          "dip_pct": 3.0,
+          "hard_red_fires": 6,
+          "hard_red_win_rate": 0.6667,
+          "hard_red_pnl": 262.18,
+          "book_pct": 27.116
+        },
+        "oos_short": {
+          "n_fires": 0,
+          "n_graded": 0,
+          "n_wins": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "fires": []
+        },
+        "oos_x": {
+          "0.5": {
+            "n_fires": 6,
+            "n_graded": 6,
+            "n_wins": 3,
+            "win_rate": 0.5,
+            "pnl": 255.54
+          },
+          "1.0": {
+            "n_fires": 6,
+            "n_graded": 6,
+            "n_wins": 3,
+            "win_rate": 0.5,
+            "pnl": 377.72
+          },
+          "1.5": {
+            "n_fires": 6,
+            "n_graded": 6,
+            "n_wins": 3,
+            "win_rate": 0.5,
+            "pnl": 515.5
+          },
+          "2.0": {
+            "n_fires": 5,
+            "n_graded": 5,
+            "n_wins": 2,
+            "win_rate": 0.4,
+            "pnl": 209.57
+          },
+          "3.0": {
+            "n_fires": 5,
+            "n_graded": 5,
+            "n_wins": 3,
+            "win_rate": 0.6,
+            "pnl": 420.38
+          }
+        }
+      },
+      {
+        "cutoff": "2026-09-01",
+        "oos": "2026-09-02 \u2192 2026-09-08",
+        "picked_x": 3.0,
+        "is_best": {
+          "dip_pct": 3.0,
+          "hard_red_fires": 11,
+          "hard_red_win_rate": 0.6364,
+          "hard_red_pnl": 783.07,
+          "book_pct": 44.191
+        },
+        "oos_short": {
+          "n_fires": 3,
+          "n_graded": 3,
+          "n_wins": 0,
+          "win_rate": 0.0,
+          "pnl": -755.16,
+          "fires": [
+            {
+              "date": "2026-09-02",
+              "ticker": "DFDV",
+              "side": "short",
+              "shares": 978,
+              "entry": 5.11,
+              "exit": 5.81,
+              "exit_how": "closed",
+              "pnl": -710.03,
+              "owner": "short_news_r_macd_h3",
+              "win": false
+            },
+            {
+              "date": "2026-09-08",
+              "ticker": "TX",
+              "side": "short",
+              "shares": 40,
+              "entry": 58.03,
+              "exit": 58.1,
+              "exit_how": "mark",
+              "pnl": -7.05,
+              "owner": "short_news_r_macd_h3",
+              "win": false
+            },
+            {
+              "date": "2026-09-08",
+              "ticker": "GEMI",
+              "side": "short",
+              "shares": 501,
+              "entry": 4.63,
+              "exit": 4.68,
+              "exit_how": "mark",
+              "pnl": -38.08,
+              "owner": "short_news_r_macd_h3",
+              "win": false
+            }
+          ]
+        },
+        "oos_x": {
+          "0.5": {
+            "n_fires": 8,
+            "n_graded": 8,
+            "n_wins": 3,
+            "win_rate": 0.375,
+            "pnl": 475.59
+          },
+          "1.0": {
+            "n_fires": 8,
+            "n_graded": 8,
+            "n_wins": 4,
+            "win_rate": 0.5,
+            "pnl": 618.92
+          },
+          "1.5": {
+            "n_fires": 8,
+            "n_graded": 8,
+            "n_wins": 5,
+            "win_rate": 0.625,
+            "pnl": 764.78
+          },
+          "2.0": {
+            "n_fires": 7,
+            "n_graded": 7,
+            "n_wins": 4,
+            "win_rate": 0.5714,
+            "pnl": 898.63
+          },
+          "3.0": {
+            "n_fires": 6,
+            "n_graded": 6,
+            "n_wins": 3,
+            "win_rate": 0.5,
+            "pnl": 1086.4
+          }
+        }
+      },
+      {
+        "cutoff": "2026-09-08",
+        "oos": "2026-09-09 \u2192 2026-09-14",
+        "picked_x": 1.5,
+        "is_best": {
+          "dip_pct": 1.5,
+          "hard_red_fires": 21,
+          "hard_red_win_rate": 0.5714,
+          "hard_red_pnl": 1869.07,
+          "book_pct": 60.864
+        },
+        "oos_short": {
+          "n_fires": 1,
+          "n_graded": 0,
+          "n_wins": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "fires": [
+            {
+              "date": "2026-09-10",
+              "ticker": "LBRT",
+              "side": "short",
+              "shares": 225,
+              "entry": 22.18,
+              "exit": null,
+              "exit_how": "no_exit",
+              "pnl": null,
+              "owner": "short_news_r_macd_h3",
+              "win": null
+            }
+          ]
+        },
+        "oos_x": {
+          "0.5": {
+            "n_fires": 4,
+            "n_graded": 2,
+            "n_wins": 0,
+            "win_rate": 0.0,
+            "pnl": -333.77
+          },
+          "1.0": {
+            "n_fires": 4,
+            "n_graded": 2,
+            "n_wins": 0,
+            "win_rate": 0.0,
+            "pnl": -309.72
+          },
+          "1.5": {
+            "n_fires": 4,
+            "n_graded": 2,
+            "n_wins": 0,
+            "win_rate": 0.0,
+            "pnl": -285.42
+          },
+          "2.0": {
+            "n_fires": 3,
+            "n_graded": 2,
+            "n_wins": 0,
+            "win_rate": 0.0,
+            "pnl": -261.52
+          },
+          "3.0": {
+            "n_fires": 3,
+            "n_graded": 2,
+            "n_wins": 0,
+            "win_rate": 0.0,
+            "pnl": -211.93
+          }
+        }
+      }
+    ],
+    "oos_short": {
+      "n_fires": 7,
+      "n_graded": 6,
+      "n_wins": 1,
+      "win_rate": 0.1667,
+      "pnl": -791.82,
+      "fires": [
+        {
+          "date": "2026-08-24",
+          "ticker": "OI",
+          "side": "short",
+          "shares": 243,
+          "entry": 7.33,
+          "exit": 7.44,
+          "exit_how": "mark",
+          "pnl": -33.05,
+          "owner": "short_news_r_macd_h3",
+          "win": false
+        },
+        {
+          "date": "2026-08-24",
+          "ticker": "TX",
+          "side": "short",
+          "shares": 31,
+          "entry": 55.9,
+          "exit": 55.13,
+          "exit_how": "mark",
+          "pnl": 19.68,
+          "owner": "short_news_r_macd_h3",
+          "win": true
+        },
+        {
+          "date": "2026-08-24",
+          "ticker": "AVAH",
+          "side": "short",
+          "shares": 132,
+          "entry": 13.48,
+          "exit": 13.62,
+          "exit_how": "mark",
+          "pnl": -23.29,
+          "owner": "short_news_r_macd_h3",
+          "win": false
+        },
+        {
+          "date": "2026-09-02",
+          "ticker": "DFDV",
+          "side": "short",
+          "shares": 978,
+          "entry": 5.11,
+          "exit": 5.81,
+          "exit_how": "closed",
+          "pnl": -710.03,
+          "owner": "short_news_r_macd_h3",
+          "win": false
+        },
+        {
+          "date": "2026-09-08",
+          "ticker": "TX",
+          "side": "short",
+          "shares": 40,
+          "entry": 58.03,
+          "exit": 58.1,
+          "exit_how": "mark",
+          "pnl": -7.05,
+          "owner": "short_news_r_macd_h3",
+          "win": false
+        },
+        {
+          "date": "2026-09-08",
+          "ticker": "GEMI",
+          "side": "short",
+          "shares": 501,
+          "entry": 4.63,
+          "exit": 4.68,
+          "exit_how": "mark",
+          "pnl": -38.08,
+          "owner": "short_news_r_macd_h3",
+          "win": false
+        },
+        {
+          "date": "2026-09-10",
+          "ticker": "LBRT",
+          "side": "short",
+          "shares": 225,
+          "entry": 22.18,
+          "exit": null,
+          "exit_how": "no_exit",
+          "pnl": null,
+          "owner": "short_news_r_macd_h3",
+          "win": null
+        }
+      ]
+    },
+    "oos_x": {
+      "0.5": {
+        "n_fires": 22,
+        "n_graded": 20,
+        "n_wins": 7,
+        "win_rate": 0.35,
+        "pnl": 118.28,
+        "fires": [
+          {
+            "date": "2026-08-24",
+            "ticker": "ALM",
+            "side": "long",
+            "shares": 210,
+            "entry": 18.6065,
+            "exit": 18.29,
+            "exit_how": "closed",
+            "pnl": -71.95,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-08-24",
+            "ticker": "DEFT",
+            "side": "long",
+            "shares": 6340,
+            "entry": 0.6169,
+            "exit": 0.62,
+            "exit_how": "closed",
+            "pnl": -97.89,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-08-24",
+            "ticker": "OMER",
+            "side": "long",
+            "shares": 205,
+            "entry": 19.0045,
+            "exit": 19.34,
+            "exit_how": "closed",
+            "pnl": 63.42,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-08-24",
+            "ticker": "HMY",
+            "side": "long",
+            "shares": 164,
+            "entry": 23.4322,
+            "exit": 22.41,
+            "exit_how": "closed",
+            "pnl": -172.66,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-08-31",
+            "ticker": "REAX",
+            "side": "long",
+            "shares": 218,
+            "entry": 21.0841,
+            "exit": 18.7,
+            "exit_how": "closed",
+            "pnl": -525.43,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-08-31",
+            "ticker": "CYPH",
+            "side": "long",
+            "shares": 2670,
+            "entry": 1.7263,
+            "exit": 1.71,
+            "exit_how": "mark",
+            "pnl": -112.89,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-08-31",
+            "ticker": "USDE",
+            "side": "long",
+            "shares": 680,
+            "entry": 6.7262,
+            "exit": 8.15,
+            "exit_how": "closed",
+            "pnl": 950.48,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-01",
+            "ticker": "NEOV",
+            "side": "long",
+            "shares": 858,
+            "entry": 4.186,
+            "exit": 3.65,
+            "exit_how": "mark",
+            "pnl": -482.19,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-01",
+            "ticker": "DPRO",
+            "side": "long",
+            "shares": 682,
+            "entry": 5.2635,
+            "exit": 5.38,
+            "exit_how": "mark",
+            "pnl": 61.71,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-01",
+            "ticker": "MRNA",
+            "side": "long",
+            "shares": 25,
+            "entry": 139.5488,
+            "exit": 154.27,
+            "exit_how": "mark",
+            "pnl": 363.86,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-02",
+            "ticker": "REAX",
+            "side": "long",
+            "shares": 137,
+            "entry": 18.1886,
+            "exit": 18.15,
+            "exit_how": "closed",
+            "pnl": -10.13,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-02",
+            "ticker": "GPRO",
+            "side": "long",
+            "shares": 2059,
+            "entry": 1.2139,
+            "exit": 1.565,
+            "exit_how": "closed",
+            "pnl": 669.43,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-02",
+            "ticker": "USDE",
+            "side": "long",
+            "shares": 311,
+            "entry": 8.0296,
+            "exit": 8.11,
+            "exit_how": "closed",
+            "pnl": 16.91,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-02",
+            "ticker": "MRNA",
+            "side": "long",
+            "shares": 16,
+            "entry": 150.643,
+            "exit": 145.945,
+            "exit_how": "closed",
+            "pnl": -79.27,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-08",
+            "ticker": "CHPT",
+            "side": "long",
+            "shares": 456,
+            "entry": 9.8604,
+            "exit": 9.37,
+            "exit_how": "mark",
+            "pnl": -235.5,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-08",
+            "ticker": "CYPH",
+            "side": "long",
+            "shares": 1862,
+            "entry": 2.4179,
+            "exit": 2.63,
+            "exit_how": "mark",
+            "pnl": 346.54,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-08",
+            "ticker": "SMMT",
+            "side": "long",
+            "shares": 259,
+            "entry": 17.3429,
+            "exit": 17.28,
+            "exit_how": "mark",
+            "pnl": -23.05,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-08",
+            "ticker": "CNH",
+            "side": "long",
+            "shares": 315,
+            "entry": 14.2385,
+            "exit": 13.6,
+            "exit_how": "mark",
+            "pnl": -209.34,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-09",
+            "ticker": "INDP",
+            "side": "long",
+            "shares": 1308,
+            "entry": 1.9104,
+            "exit": null,
+            "exit_how": "no_exit",
+            "pnl": null,
+            "owner": "union_hot_n4_h1",
+            "win": null
+          },
+          {
+            "date": "2026-09-09",
+            "ticker": "CRWV",
+            "side": "long",
+            "shares": 25,
+            "entry": 99.5348,
+            "exit": 89.91,
+            "exit_how": "closed",
+            "pnl": -244.78,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-10",
+            "ticker": "IRD",
+            "side": "long",
+            "shares": 413,
+            "entry": 5.8406,
+            "exit": null,
+            "exit_how": "no_exit",
+            "pnl": null,
+            "owner": "union_hot_n4_h1",
+            "win": null
+          },
+          {
+            "date": "2026-09-10",
+            "ticker": "EQ",
+            "side": "long",
+            "shares": 954,
+            "entry": 2.5273,
+            "exit": 2.46,
+            "exit_how": "closed",
+            "pnl": -88.99,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          }
+        ]
+      },
+      "1.0": {
+        "n_fires": 22,
+        "n_graded": 20,
+        "n_wins": 8,
+        "win_rate": 0.4,
+        "pnl": 485.07,
+        "fires": [
+          {
+            "date": "2026-08-24",
+            "ticker": "ALM",
+            "side": "long",
+            "shares": 211,
+            "entry": 18.513,
+            "exit": 18.29,
+            "exit_how": "closed",
+            "pnl": -52.56,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-08-24",
+            "ticker": "DEFT",
+            "side": "long",
+            "shares": 6372,
+            "entry": 0.6138,
+            "exit": 0.62,
+            "exit_how": "closed",
+            "pnl": -78.43,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-08-24",
+            "ticker": "OMER",
+            "side": "long",
+            "shares": 206,
+            "entry": 18.909,
+            "exit": 19.34,
+            "exit_how": "closed",
+            "pnl": 83.41,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-08-24",
+            "ticker": "HMY",
+            "side": "long",
+            "shares": 165,
+            "entry": 23.3145,
+            "exit": 22.41,
+            "exit_how": "closed",
+            "pnl": -154.27,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-08-31",
+            "ticker": "REAX",
+            "side": "long",
+            "shares": 219,
+            "entry": 20.9781,
+            "exit": 18.7,
+            "exit_how": "closed",
+            "pnl": -504.62,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-08-31",
+            "ticker": "CYPH",
+            "side": "long",
+            "shares": 2683,
+            "entry": 1.7177,
+            "exit": 1.71,
+            "exit_how": "mark",
+            "pnl": -90.36,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-08-31",
+            "ticker": "USDE",
+            "side": "long",
+            "shares": 684,
+            "entry": 6.6924,
+            "exit": 8.15,
+            "exit_how": "closed",
+            "pnl": 979.19,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-01",
+            "ticker": "NEOV",
+            "side": "long",
+            "shares": 866,
+            "entry": 4.1649,
+            "exit": 3.65,
+            "exit_how": "mark",
+            "pnl": -468.42,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-01",
+            "ticker": "DPRO",
+            "side": "long",
+            "shares": 689,
+            "entry": 5.2371,
+            "exit": 5.38,
+            "exit_how": "mark",
+            "pnl": 80.54,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-01",
+            "ticker": "MRNA",
+            "side": "long",
+            "shares": 25,
+            "entry": 138.8475,
+            "exit": 154.27,
+            "exit_how": "mark",
+            "pnl": 381.39,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-02",
+            "ticker": "REAX",
+            "side": "long",
+            "shares": 138,
+            "entry": 18.0972,
+            "exit": 18.15,
+            "exit_how": "closed",
+            "pnl": 2.44,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-02",
+            "ticker": "GPRO",
+            "side": "long",
+            "shares": 2069,
+            "entry": 1.2078,
+            "exit": 1.565,
+            "exit_how": "closed",
+            "pnl": 685.3,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-02",
+            "ticker": "USDE",
+            "side": "long",
+            "shares": 312,
+            "entry": 7.9893,
+            "exit": 8.11,
+            "exit_how": "closed",
+            "pnl": 29.54,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-02",
+            "ticker": "MRNA",
+            "side": "long",
+            "shares": 16,
+            "entry": 149.886,
+            "exit": 145.945,
+            "exit_how": "closed",
+            "pnl": -67.16,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-08",
+            "ticker": "CHPT",
+            "side": "long",
+            "shares": 460,
+            "entry": 9.8109,
+            "exit": 9.37,
+            "exit_how": "mark",
+            "pnl": -214.79,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-08",
+            "ticker": "CYPH",
+            "side": "long",
+            "shares": 1879,
+            "entry": 2.4057,
+            "exit": 2.63,
+            "exit_how": "mark",
+            "pnl": 372.63,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-08",
+            "ticker": "SMMT",
+            "side": "long",
+            "shares": 261,
+            "entry": 17.2557,
+            "exit": 17.28,
+            "exit_how": "mark",
+            "pnl": -0.47,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-08",
+            "ticker": "CNH",
+            "side": "long",
+            "shares": 318,
+            "entry": 14.1669,
+            "exit": 13.6,
+            "exit_how": "mark",
+            "pnl": -188.57,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-09",
+            "ticker": "INDP",
+            "side": "long",
+            "shares": 1315,
+            "entry": 1.9008,
+            "exit": null,
+            "exit_how": "no_exit",
+            "pnl": null,
+            "owner": "union_hot_n4_h1",
+            "win": null
+          },
+          {
+            "date": "2026-09-09",
+            "ticker": "CRWV",
+            "side": "long",
+            "shares": 25,
+            "entry": 99.0347,
+            "exit": 89.91,
+            "exit_how": "closed",
+            "pnl": -232.28,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-10",
+            "ticker": "IRD",
+            "side": "long",
+            "shares": 415,
+            "entry": 5.8113,
+            "exit": null,
+            "exit_how": "no_exit",
+            "pnl": null,
+            "owner": "union_hot_n4_h1",
+            "win": null
+          },
+          {
+            "date": "2026-09-10",
+            "ticker": "EQ",
+            "side": "long",
+            "shares": 961,
+            "entry": 2.5146,
+            "exit": 2.46,
+            "exit_how": "closed",
+            "pnl": -77.44,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          }
+        ]
+      },
+      "1.5": {
+        "n_fires": 22,
+        "n_graded": 20,
+        "n_wins": 9,
+        "win_rate": 0.45,
+        "pnl": 871.04,
+        "fires": [
+          {
+            "date": "2026-08-24",
+            "ticker": "ALM",
+            "side": "long",
+            "shares": 212,
+            "entry": 18.4195,
+            "exit": 18.29,
+            "exit_how": "closed",
+            "pnl": -32.99,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-08-24",
+            "ticker": "DEFT",
+            "side": "long",
+            "shares": 6405,
+            "entry": 0.6107,
+            "exit": 0.62,
+            "exit_how": "closed",
+            "pnl": -58.78,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-08-24",
+            "ticker": "OMER",
+            "side": "long",
+            "shares": 207,
+            "entry": 18.8135,
+            "exit": 19.34,
+            "exit_how": "closed",
+            "pnl": 103.58,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-08-24",
+            "ticker": "HMY",
+            "side": "long",
+            "shares": 166,
+            "entry": 23.1967,
+            "exit": 22.41,
+            "exit_how": "closed",
+            "pnl": -135.63,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-08-31",
+            "ticker": "REAX",
+            "side": "long",
+            "shares": 220,
+            "entry": 20.8722,
+            "exit": 18.7,
+            "exit_how": "closed",
+            "pnl": -483.63,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-08-31",
+            "ticker": "CYPH",
+            "side": "long",
+            "shares": 2697,
+            "entry": 1.709,
+            "exit": 1.71,
+            "exit_how": "mark",
+            "pnl": -67.37,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-08-31",
+            "ticker": "USDE",
+            "side": "long",
+            "shares": 687,
+            "entry": 6.6586,
+            "exit": 8.15,
+            "exit_how": "closed",
+            "pnl": 1006.71,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-01",
+            "ticker": "NEOV",
+            "side": "long",
+            "shares": 875,
+            "entry": 4.1439,
+            "exit": 3.65,
+            "exit_how": "mark",
+            "pnl": -454.91,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-01",
+            "ticker": "DPRO",
+            "side": "long",
+            "shares": 695,
+            "entry": 5.2106,
+            "exit": 5.38,
+            "exit_how": "mark",
+            "pnl": 99.66,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-01",
+            "ticker": "MRNA",
+            "side": "long",
+            "shares": 26,
+            "entry": 138.1463,
+            "exit": 154.27,
+            "exit_how": "mark",
+            "pnl": 415.04,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-02",
+            "ticker": "REAX",
+            "side": "long",
+            "shares": 138,
+            "entry": 18.0058,
+            "exit": 18.15,
+            "exit_how": "closed",
+            "pnl": 15.05,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-02",
+            "ticker": "GPRO",
+            "side": "long",
+            "shares": 2080,
+            "entry": 1.2017,
+            "exit": 1.565,
+            "exit_how": "closed",
+            "pnl": 701.63,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-02",
+            "ticker": "USDE",
+            "side": "long",
+            "shares": 314,
+            "entry": 7.9489,
+            "exit": 8.11,
+            "exit_how": "closed",
+            "pnl": 42.41,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-02",
+            "ticker": "MRNA",
+            "side": "long",
+            "shares": 16,
+            "entry": 149.129,
+            "exit": 145.945,
+            "exit_how": "closed",
+            "pnl": -55.05,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-08",
+            "ticker": "CHPT",
+            "side": "long",
+            "shares": 465,
+            "entry": 9.7613,
+            "exit": 9.37,
+            "exit_how": "mark",
+            "pnl": -194.06,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-08",
+            "ticker": "CYPH",
+            "side": "long",
+            "shares": 1897,
+            "entry": 2.3936,
+            "exit": 2.63,
+            "exit_how": "mark",
+            "pnl": 399.15,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-08",
+            "ticker": "SMMT",
+            "side": "long",
+            "shares": 264,
+            "entry": 17.1686,
+            "exit": 17.28,
+            "exit_how": "mark",
+            "pnl": 22.52,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-08",
+            "ticker": "CNH",
+            "side": "long",
+            "shares": 320,
+            "entry": 14.0954,
+            "exit": 13.6,
+            "exit_how": "mark",
+            "pnl": -166.87,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-09",
+            "ticker": "INDP",
+            "side": "long",
+            "shares": 1321,
+            "entry": 1.8912,
+            "exit": null,
+            "exit_how": "no_exit",
+            "pnl": null,
+            "owner": "union_hot_n4_h1",
+            "win": null
+          },
+          {
+            "date": "2026-09-09",
+            "ticker": "CRWV",
+            "side": "long",
+            "shares": 25,
+            "entry": 98.5345,
+            "exit": 89.91,
+            "exit_how": "closed",
+            "pnl": -219.77,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-10",
+            "ticker": "IRD",
+            "side": "long",
+            "shares": 418,
+            "entry": 5.7819,
+            "exit": null,
+            "exit_how": "no_exit",
+            "pnl": null,
+            "owner": "union_hot_n4_h1",
+            "win": null
+          },
+          {
+            "date": "2026-09-10",
+            "ticker": "EQ",
+            "side": "long",
+            "shares": 967,
+            "entry": 2.5019,
+            "exit": 2.46,
+            "exit_how": "closed",
+            "pnl": -65.65,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          }
+        ]
+      },
+      "2.0": {
+        "n_fires": 19,
+        "n_graded": 18,
+        "n_wins": 7,
+        "win_rate": 0.3889,
+        "pnl": 801.71,
+        "fires": [
+          {
+            "date": "2026-08-24",
+            "ticker": "ALM",
+            "side": "long",
+            "shares": 213,
+            "entry": 18.326,
+            "exit": 18.29,
+            "exit_how": "closed",
+            "pnl": -13.23,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-08-24",
+            "ticker": "DEFT",
+            "side": "long",
+            "shares": 6437,
+            "entry": 0.6076,
+            "exit": 0.62,
+            "exit_how": "closed",
+            "pnl": -38.92,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-08-24",
+            "ticker": "OMER",
+            "side": "long",
+            "shares": 208,
+            "entry": 18.718,
+            "exit": 19.34,
+            "exit_how": "closed",
+            "pnl": 123.94,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-08-24",
+            "ticker": "HMY",
+            "side": "long",
+            "shares": 167,
+            "entry": 23.079,
+            "exit": 22.41,
+            "exit_how": "closed",
+            "pnl": -116.76,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-08-31",
+            "ticker": "REAX",
+            "side": "long",
+            "shares": 221,
+            "entry": 20.7662,
+            "exit": 18.7,
+            "exit_how": "closed",
+            "pnl": -462.4,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-08-31",
+            "ticker": "CYPH",
+            "side": "long",
+            "shares": 2710,
+            "entry": 1.7003,
+            "exit": 1.71,
+            "exit_how": "mark",
+            "pnl": -44.12,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-08-31",
+            "ticker": "USDE",
+            "side": "long",
+            "shares": 692,
+            "entry": 6.6248,
+            "exit": 8.15,
+            "exit_how": "closed",
+            "pnl": 1037.42,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-01",
+            "ticker": "NEOV",
+            "side": "long",
+            "shares": 883,
+            "entry": 4.1229,
+            "exit": 3.65,
+            "exit_how": "mark",
+            "pnl": -440.52,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-01",
+            "ticker": "DPRO",
+            "side": "long",
+            "shares": 702,
+            "entry": 5.1842,
+            "exit": 5.38,
+            "exit_how": "mark",
+            "pnl": 119.19,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-02",
+            "ticker": "GPRO",
+            "side": "long",
+            "shares": 2091,
+            "entry": 1.1956,
+            "exit": 1.565,
+            "exit_how": "closed",
+            "pnl": 718.09,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-02",
+            "ticker": "USDE",
+            "side": "long",
+            "shares": 316,
+            "entry": 7.9086,
+            "exit": 8.11,
+            "exit_how": "closed",
+            "pnl": 55.42,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-02",
+            "ticker": "MRNA",
+            "side": "long",
+            "shares": 16,
+            "entry": 148.372,
+            "exit": 145.945,
+            "exit_how": "closed",
+            "pnl": -42.94,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-08",
+            "ticker": "CHPT",
+            "side": "long",
+            "shares": 511,
+            "entry": 9.7118,
+            "exit": 9.37,
+            "exit_how": "mark",
+            "pnl": -187.97,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-08",
+            "ticker": "CYPH",
+            "side": "long",
+            "shares": 2086,
+            "entry": 2.3814,
+            "exit": 2.63,
+            "exit_how": "mark",
+            "pnl": 464.37,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-08",
+            "ticker": "SMMT",
+            "side": "long",
+            "shares": 290,
+            "entry": 17.0814,
+            "exit": 17.28,
+            "exit_how": "mark",
+            "pnl": 50.02,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-08",
+            "ticker": "CNH",
+            "side": "long",
+            "shares": 352,
+            "entry": 14.0238,
+            "exit": 13.6,
+            "exit_how": "mark",
+            "pnl": -158.36,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-09",
+            "ticker": "CRWV",
+            "side": "long",
+            "shares": 25,
+            "entry": 98.0343,
+            "exit": 89.91,
+            "exit_how": "closed",
+            "pnl": -207.27,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-10",
+            "ticker": "IRD",
+            "side": "long",
+            "shares": 425,
+            "entry": 5.7526,
+            "exit": null,
+            "exit_how": "no_exit",
+            "pnl": null,
+            "owner": "union_hot_n4_h1",
+            "win": null
+          },
+          {
+            "date": "2026-09-10",
+            "ticker": "EQ",
+            "side": "long",
+            "shares": 983,
+            "entry": 2.4892,
+            "exit": 2.46,
+            "exit_how": "closed",
+            "pnl": -54.25,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          }
+        ]
+      },
+      "3.0": {
+        "n_fires": 18,
+        "n_graded": 17,
+        "n_wins": 9,
+        "win_rate": 0.5294,
+        "pnl": 1411.26,
+        "fires": [
+          {
+            "date": "2026-08-24",
+            "ticker": "ALM",
+            "side": "long",
+            "shares": 215,
+            "entry": 18.139,
+            "exit": 18.29,
+            "exit_how": "closed",
+            "pnl": 26.85,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-08-24",
+            "ticker": "DEFT",
+            "side": "long",
+            "shares": 6504,
+            "entry": 0.6014,
+            "exit": 0.62,
+            "exit_how": "closed",
+            "pnl": 1.4,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-08-24",
+            "ticker": "OMER",
+            "side": "long",
+            "shares": 211,
+            "entry": 18.527,
+            "exit": 19.34,
+            "exit_how": "closed",
+            "pnl": 166.03,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-08-24",
+            "ticker": "HMY",
+            "side": "long",
+            "shares": 168,
+            "entry": 22.8435,
+            "exit": 22.41,
+            "exit_how": "closed",
+            "pnl": -77.87,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-08-31",
+            "ticker": "REAX",
+            "side": "long",
+            "shares": 224,
+            "entry": 20.5543,
+            "exit": 18.7,
+            "exit_how": "closed",
+            "pnl": -421.21,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-08-31",
+            "ticker": "CYPH",
+            "side": "long",
+            "shares": 2738,
+            "entry": 1.683,
+            "exit": 1.71,
+            "exit_how": "mark",
+            "pnl": 2.79,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-08-31",
+            "ticker": "USDE",
+            "side": "long",
+            "shares": 696,
+            "entry": 6.5572,
+            "exit": 8.15,
+            "exit_how": "closed",
+            "pnl": 1090.47,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-01",
+            "ticker": "NEOV",
+            "side": "long",
+            "shares": 900,
+            "entry": 4.0808,
+            "exit": 3.65,
+            "exit_how": "mark",
+            "pnl": -411.12,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-01",
+            "ticker": "DPRO",
+            "side": "long",
+            "shares": 716,
+            "entry": 5.1313,
+            "exit": 5.38,
+            "exit_how": "mark",
+            "pnl": 159.45,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-02",
+            "ticker": "GPRO",
+            "side": "long",
+            "shares": 2112,
+            "entry": 1.1834,
+            "exit": 1.565,
+            "exit_how": "closed",
+            "pnl": 751.07,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-02",
+            "ticker": "USDE",
+            "side": "long",
+            "shares": 319,
+            "entry": 7.8279,
+            "exit": 8.11,
+            "exit_how": "closed",
+            "pnl": 81.69,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-02",
+            "ticker": "MRNA",
+            "side": "long",
+            "shares": 17,
+            "entry": 146.858,
+            "exit": 145.945,
+            "exit_how": "closed",
+            "pnl": -19.63,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-08",
+            "ticker": "CHPT",
+            "side": "long",
+            "shares": 520,
+            "entry": 9.6127,
+            "exit": 9.37,
+            "exit_how": "mark",
+            "pnl": -139.75,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-08",
+            "ticker": "CYPH",
+            "side": "long",
+            "shares": 2120,
+            "entry": 2.3571,
+            "exit": 2.63,
+            "exit_how": "mark",
+            "pnl": 523.46,
+            "owner": "union_hot_n4_h1",
+            "win": true
+          },
+          {
+            "date": "2026-09-08",
+            "ticker": "CNH",
+            "side": "long",
+            "shares": 360,
+            "entry": 13.8807,
+            "exit": 13.6,
+            "exit_how": "mark",
+            "pnl": -110.44,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-09",
+            "ticker": "CRWV",
+            "side": "long",
+            "shares": 25,
+            "entry": 97.034,
+            "exit": 89.91,
+            "exit_how": "closed",
+            "pnl": -182.26,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          },
+          {
+            "date": "2026-09-10",
+            "ticker": "IRD",
+            "side": "long",
+            "shares": 431,
+            "entry": 5.6939,
+            "exit": null,
+            "exit_how": "no_exit",
+            "pnl": null,
+            "owner": "union_hot_n4_h1",
+            "win": null
+          },
+          {
+            "date": "2026-09-10",
+            "ticker": "EQ",
+            "side": "long",
+            "shares": 996,
+            "entry": 2.4638,
+            "exit": 2.46,
+            "exit_how": "closed",
+            "pnl": -29.67,
+            "owner": "union_hot_n4_h1",
+            "win": false
+          }
+        ]
+      }
+    },
+    "wf_short_ok": false,
+    "wf_x_ok": {
+      "0.5": false,
+      "1.0": false,
+      "1.5": false,
+      "2.0": false,
+      "3.0": false
+    }
+  },
+  "clock_split": {
+    "A": "short-only \u00b7 pre-open policy \u00b7 Excel letters may filter",
+    "B": "long dip-scoop \u00b7 after 09:30 \u00b7 open known, close grades",
+    "excel_owns_sit": false,
+    "deep_corr": "not waited",
+    "open_letters": [
+      "FQ",
+      "ER",
+      "EP",
+      "AH",
+      "FR",
+      "DF_lag1"
+    ],
+    "short_stretch": [
+      "FQ",
+      "ER",
+      "EP"
+    ]
+  },
+  "verdict_short": {
+    "label": "KILL",
+    "keep": false,
+    "why": "KILL A short-only (pre-open): thin n=11 fires (bar \u226530). After-fee win 50.0%. webull n=11 win=50%; flatten n=0 win=\u2014. Do not change live sit on this sample.",
+    "n_fires": 11,
+    "win_rate": 0.5,
+    "thin": true,
+    "both_tapes": false,
+    "wf_ok": false,
+    "tapes": {
+      "webull": {
+        "n_fires": 11,
+        "win_rate": 0.5,
+        "pnl": -904.58,
+        "n_graded": 10
+      },
+      "flatten": {
+        "n_fires": 0,
+        "win_rate": null,
+        "pnl": 0,
+        "n_graded": 0,
+        "note": "no short kid"
+      }
+    }
+  },
+  "verdict_short_excel": {
+    "label": "KILL",
+    "keep": false,
+    "why": "KILL A short-only \u00b7 Excel letter pre-filter: thin n=7 fires (bar \u226530). After-fee win 57.1%. webull n=7 win=57%. Do not change live sit on this sample.",
+    "n_fires": 7,
+    "win_rate": 0.5714,
+    "thin": true,
+    "both_tapes": false,
+    "wf_ok": null,
+    "tapes": {
+      "webull": {
+        "n_fires": 7,
+        "win_rate": 0.5714,
+        "pnl": -914.03
+      }
+    }
+  },
+  "excel_short": {
+    "n_fires": 7,
+    "n_graded": 7,
+    "n_wins": 4,
+    "win_rate": 0.5714,
+    "pnl": -914.03
+  },
+  "verdict_x": {
+    "label": "KILL",
+    "keep": false,
+    "why": "KILL B dip-scoop X=1.0% (intraday): 55 fires but after-fee win 49.1% \u2264 55%. webull n=26 win=54%; flatten n=29 win=45%",
+    "n_fires": 55,
+    "win_rate": 0.4906,
+    "thin": false,
+    "both_tapes": true,
+    "wf_ok": false,
+    "tapes": {
+      "webull": {
+        "n_fires": 26,
+        "win_rate": 0.5417,
+        "pnl": 1387.9
+      },
+      "flatten": {
+        "n_fires": 29,
+        "win_rate": 0.4483,
+        "pnl": -14.15
+      }
+    }
+  },
+  "counterfactual_0914": {
+    "date": "2026-09-14",
+    "s": -11.002,
+    "hard_red": true,
+    "live": "combo combo_sh_macd_5050_shared + flatten_robust sat every new lot (S=-11.002)",
+    "webull_would": [
+      {
+        "ticker": "BKV",
+        "side": "short",
+        "sleeve": "short_news_r_macd_h3",
+        "open": 24.260000228881836,
+        "low": 24.084999084472656,
+        "close": 24.309999465942383,
+        "px_src": "yahoo_session",
+        "close_is_last": true,
+        "dip_from_open_pct": 0.721,
+        "same_day_oc_pnl_short": -0.5617,
+        "scoops": {
+          "0.5": {
+            "kind": "scoop",
+            "fill": 24.1387,
+            "same_day_pnl": -0.6818,
+            "win": false
+          },
+          "1.0": {
+            "kind": "no_dip",
+            "fill": null,
+            "same_day_pnl": null,
+            "win": null
+          },
+          "1.5": {
+            "kind": "no_dip",
+            "fill": null,
+            "same_day_pnl": null,
+            "win": null
+          },
+          "2.0": {
+            "kind": "no_dip",
+            "fill": null,
+            "same_day_pnl": null,
+            "win": null
+          },
+          "3.0": {
+            "kind": "no_dip",
+            "fill": null,
+            "same_day_pnl": null,
+            "win": null
+          }
+        },
+        "excel": {
+          "ok": false,
+          "status": "ineligible",
+          "hits": [],
+          "letters": {
+            "FQ": 0,
+            "ER": 0,
+            "EP": 0.005817345875711436,
+            "AH": 0,
+            "FR": 0,
+            "DF_lag1": "None"
+          },
+          "owns_sit": false
+        },
+        "letters": {
+          "FQ": 0,
+          "ER": 0,
+          "EP": 0.005817345875711436,
+          "AH": 0,
+          "FR": 0,
+          "DF_lag1": "None"
+        },
+        "letter_src": "open_features",
+        "no_price": false
+      },
+      {
+        "ticker": "AMD",
+        "side": "short",
+        "sleeve": "short_news_r_macd_h3",
+        "open": 486.1300048828125,
+        "low": 480.3299865722656,
+        "close": 491.9049987792969,
+        "px_src": "yahoo_session",
+        "close_is_last": true,
+        "dip_from_open_pct": 1.193,
+        "same_day_oc_pnl_short": -9.781,
+        "scoops": {
+          "0.5": {
+            "kind": "scoop",
+            "fill": 483.6994,
+            "same_day_pnl": -12.2116,
+            "win": false
+          },
+          "1.0": {
+            "kind": "scoop",
+            "fill": 481.2687,
+            "same_day_pnl": -14.6423,
+            "win": false
+          },
+          "1.5": {
+            "kind": "no_dip",
+            "fill": null,
+            "same_day_pnl": null,
+            "win": null
+          },
+          "2.0": {
+            "kind": "no_dip",
+            "fill": null,
+            "same_day_pnl": null,
+            "win": null
+          },
+          "3.0": {
+            "kind": "no_dip",
+            "fill": null,
+            "same_day_pnl": null,
+            "win": null
+          }
+        },
+        "excel": {
+          "ok": true,
+          "status": "eligible",
+          "hits": [
+            "FQ",
+            "EP"
+          ],
+          "letters": {
+            "FQ": 1,
+            "ER": 0,
+            "EP": 0.03412191052038908,
+            "AH": 0,
+            "FR": 1,
+            "DF_lag1": "None"
+          },
+          "owns_sit": false
+        },
+        "letters": {
+          "FQ": 1,
+          "ER": 0,
+          "EP": 0.03412191052038908,
+          "AH": 0,
+          "FR": 1,
+          "DF_lag1": "None"
+        },
+        "letter_src": "open_features",
+        "no_price": false
+      },
+      {
+        "ticker": "CMRC",
+        "side": "long",
+        "sleeve": "union_hot_n4_h1",
+        "open": 3.509999990463257,
+        "low": 3.4700000286102295,
+        "close": 3.4700000286102295,
+        "px_src": "yahoo_session",
+        "close_is_last": true,
+        "dip_from_open_pct": 1.14,
+        "same_day_oc_pnl_short": null,
+        "scoops": {
+          "0.5": {
+            "kind": "scoop",
+            "fill": 3.4924,
+            "same_day_pnl": -0.118,
+            "win": false
+          },
+          "1.0": {
+            "kind": "scoop",
+            "fill": 3.4749,
+            "same_day_pnl": -0.1003,
+            "win": false
+          },
+          "1.5": {
+            "kind": "no_dip",
+            "fill": null,
+            "same_day_pnl": null,
+            "win": null
+          },
+          "2.0": {
+            "kind": "no_dip",
+            "fill": null,
+            "same_day_pnl": null,
+            "win": null
+          },
+          "3.0": {
+            "kind": "no_dip",
+            "fill": null,
+            "same_day_pnl": null,
+            "win": null
+          }
+        },
+        "excel": null,
+        "letters": {
+          "FQ": 1,
+          "ER": 1,
+          "EP": 0.09671254311026065,
+          "AH": 0,
+          "FR": 1,
+          "DF_lag1": "Bullish Belt Hold"
+        },
+        "letter_src": "open_features",
+        "no_price": false
+      },
+      {
+        "ticker": "GPRO",
+        "side": "long",
+        "sleeve": "union_hot_n4_h1",
+        "open": 1.3700000047683716,
+        "low": 1.309999942779541,
+        "close": 1.3600000143051147,
+        "px_src": "yahoo_session",
+        "close_is_last": true,
+        "dip_from_open_pct": 4.38,
+        "same_day_oc_pnl_short": null,
+        "scoops": {
+          "0.5": {
+            "kind": "scoop",
+            "fill": 1.3632,
+            "same_day_pnl": -0.0563,
+            "win": false
+          },
+          "1.0": {
+            "kind": "scoop",
+            "fill": 1.3563,
+            "same_day_pnl": -0.0495,
+            "win": false
+          },
+          "1.5": {
+            "kind": "scoop",
+            "fill": 1.3495,
+            "same_day_pnl": -0.0425,
+            "win": false
+          },
+          "2.0": {
+            "kind": "scoop",
+            "fill": 1.3426,
+            "same_day_pnl": -0.0356,
+            "win": false
+          },
+          "3.0": {
+            "kind": "scoop",
+            "fill": 1.3289,
+            "same_day_pnl": -0.0218,
+            "win": false
+          }
+        },
+        "excel": null,
+        "letters": {
+          "FQ": 0,
+          "ER": 0,
+          "EP": 0.017330536246800615,
+          "AH": 2,
+          "FR": 1,
+          "DF_lag1": "Bearish Spinning Top"
+        },
+        "letter_src": "open_features",
+        "no_price": false
+      },
+      {
+        "ticker": "VERI",
+        "side": "long",
+        "sleeve": "union_hot_n4_h1",
+        "open": 1.034999966621399,
+        "low": 0.9800999760627747,
+        "close": 1.0750000476837158,
+        "px_src": "yahoo_session",
+        "close_is_last": true,
+        "dip_from_open_pct": 5.304,
+        "same_day_oc_pnl_short": null,
+        "scoops": {
+          "0.5": {
+            "kind": "scoop",
+            "fill": 1.0298,
+            "same_day_pnl": -0.0019,
+            "win": false
+          },
+          "1.0": {
+            "kind": "scoop",
+            "fill": 1.0246,
+            "same_day_pnl": 0.0034,
+            "win": true
+          },
+          "1.5": {
+            "kind": "scoop",
+            "fill": 1.0195,
+            "same_day_pnl": 0.0085,
+            "win": true
+          },
+          "2.0": {
+            "kind": "scoop",
+            "fill": 1.0143,
+            "same_day_pnl": 0.0138,
+            "win": true
+          },
+          "3.0": {
+            "kind": "scoop",
+            "fill": 1.0039,
+            "same_day_pnl": 0.0243,
+            "win": true
+          }
+        },
+        "excel": null,
+        "letters": {
+          "FQ": 1,
+          "ER": 1,
+          "EP": 0.13218433566523127,
+          "AH": 1,
+          "FR": 2,
+          "DF_lag1": "Bullish Belt Hold"
+        },
+        "letter_src": "open_features",
+        "no_price": false
+      },
+      {
+        "ticker": "HUT",
+        "side": "long",
+        "sleeve": "union_hot_n4_h1",
+        "open": 92.30000305175781,
+        "low": 89.57820129394531,
+        "close": 92.66999816894531,
+        "px_src": "yahoo_session",
+        "close_is_last": true,
+        "dip_from_open_pct": 2.949,
+        "same_day_oc_pnl_short": null,
+        "scoops": {
+          "0.5": {
+            "kind": "scoop",
+            "fill": 91.8385,
+            "same_day_pnl": -1.0396,
+            "win": false
+          },
+          "1.0": {
+            "kind": "scoop",
+            "fill": 91.377,
+            "same_day_pnl": -0.5735,
+            "win": false
+          },
+          "1.5": {
+            "kind": "scoop",
+            "fill": 90.9155,
+            "same_day_pnl": -0.1074,
+            "win": false
+          },
+          "2.0": {
+            "kind": "scoop",
+            "fill": 90.454,
+            "same_day_pnl": 0.3588,
+            "win": true
+          },
+          "3.0": {
+            "kind": "no_dip",
+            "fill": null,
+            "same_day_pnl": null,
+            "win": null
+          }
+        },
+        "excel": null,
+        "letters": {
+          "FQ": 1,
+          "ER": 0,
+          "EP": 0.0792421558768916,
+          "AH": 0,
+          "FR": 1,
+          "DF_lag1": "None"
+        },
+        "letter_src": "open_features",
+        "no_price": false
+      },
+      {
+        "ticker": "INDP",
+        "side": "long",
+        "sleeve": "pinned_war_room",
+        "open": 2.799999952316284,
+        "low": 2.7699999809265137,
+        "close": 2.890000104904175,
+        "px_src": "yahoo_session",
+        "close_is_last": true,
+        "dip_from_open_pct": 1.071,
+        "same_day_oc_pnl_short": null,
+        "scoops": {
+          "0.5": {
+            "kind": "scoop",
+            "fill": 2.786,
+            "same_day_pnl": 0.0212,
+            "win": true
+          },
+          "1.0": {
+            "kind": "scoop",
+            "fill": 2.772,
+            "same_day_pnl": 0.0354,
+            "win": true
+          },
+          "1.5": {
+            "kind": "no_dip",
+            "fill": null,
+            "same_day_pnl": null,
+            "win": null
+          },
+          "2.0": {
+            "kind": "no_dip",
+            "fill": null,
+            "same_day_pnl": null,
+            "win": null
+          },
+          "3.0": {
+            "kind": "no_dip",
+            "fill": null,
+            "same_day_pnl": null,
+            "win": null
+          }
+        },
+        "excel": null,
+        "letters": {
+          "FQ": 0,
+          "ER": 0,
+          "EP": 0.12755552900180922,
+          "AH": 0,
+          "FR": 1,
+          "DF_lag1": "Bullish Spinning Top"
+        },
+        "letter_src": "open_features",
+        "no_price": false
+      }
+    ],
+    "flatten_would": [
+      {
+        "ticker": "CVE",
+        "side": "long",
+        "sleeve": "flatten_io",
+        "open": 33.63999938964844,
+        "low": 33.470001220703125,
+        "close": 33.875,
+        "px_src": "yahoo_session",
+        "close_is_last": true,
+        "dip_from_open_pct": 0.505,
+        "same_day_oc_pnl_short": null,
+        "scoops": {
+          "0.5": {
+            "kind": "scoop",
+            "fill": 33.4718,
+            "same_day_pnl": -0.2963,
+            "win": false
+          },
+          "1.0": {
+            "kind": "no_dip",
+            "fill": null,
+            "same_day_pnl": null,
+            "win": null
+          },
+          "1.5": {
+            "kind": "no_dip",
+            "fill": null,
+            "same_day_pnl": null,
+            "win": null
+          },
+          "2.0": {
+            "kind": "no_dip",
+            "fill": null,
+            "same_day_pnl": null,
+            "win": null
+          },
+          "3.0": {
+            "kind": "no_dip",
+            "fill": null,
+            "same_day_pnl": null,
+            "win": null
+          }
+        },
+        "excel": null,
+        "letters": {
+          "FQ": 0,
+          "ER": 0,
+          "EP": 0.001953453489612908,
+          "AH": 0,
+          "FR": 1,
+          "DF_lag1": "Bullish Doji"
+        },
+        "letter_src": "open_features",
+        "no_price": false
+      },
+      {
+        "ticker": "BG",
+        "side": "long",
+        "sleeve": "flatten_io",
+        "open": 123.8499984741211,
+        "low": 123.44000244140625,
+        "close": 124.93000030517578,
+        "px_src": "yahoo_session",
+        "close_is_last": true,
+        "dip_from_open_pct": 0.331,
+        "same_day_oc_pnl_short": null,
+        "scoops": {
+          "0.5": {
+            "kind": "no_dip",
+            "fill": null,
+            "same_day_pnl": null,
+            "win": null
+          },
+          "1.0": {
+            "kind": "no_dip",
+            "fill": null,
+            "same_day_pnl": null,
+            "win": null
+          },
+          "1.5": {
+            "kind": "no_dip",
+            "fill": null,
+            "same_day_pnl": null,
+            "win": null
+          },
+          "2.0": {
+            "kind": "no_dip",
+            "fill": null,
+            "same_day_pnl": null,
+            "win": null
+          },
+          "3.0": {
+            "kind": "no_dip",
+            "fill": null,
+            "same_day_pnl": null,
+            "win": null
+          }
+        },
+        "excel": null,
+        "letters": {
+          "FQ": 0,
+          "ER": 0,
+          "EP": 0.015601668948792552,
+          "AH": 0,
+          "FR": 1,
+          "DF_lag1": "None"
+        },
+        "letter_src": "open_features",
+        "no_price": false
+      },
+      {
+        "ticker": "NVT",
+        "side": "long",
+        "sleeve": "flatten_io",
+        "open": 150.0,
+        "low": 145.8000030517578,
+        "close": 147.60000610351562,
+        "px_src": "yahoo_session",
+        "close_is_last": true,
+        "dip_from_open_pct": 2.8,
+        "same_day_oc_pnl_short": null,
+        "scoops": {
+          "0.5": {
+            "kind": "scoop",
+            "fill": 149.25,
+            "same_day_pnl": -4.6445,
+            "win": false
+          },
+          "1.0": {
+            "kind": "scoop",
+            "fill": 148.5,
+            "same_day_pnl": -3.887,
+            "win": false
+          },
+          "1.5": {
+            "kind": "scoop",
+            "fill": 147.75,
+            "same_day_pnl": -3.1295,
+            "win": false
+          },
+          "2.0": {
+            "kind": "scoop",
+            "fill": 147.0,
+            "same_day_pnl": -2.372,
+            "win": false
+          },
+          "3.0": {
+            "kind": "no_dip",
+            "fill": null,
+            "same_day_pnl": null,
+            "win": null
+          }
+        },
+        "excel": null,
+        "letters": {
+          "FQ": 0,
+          "ER": 0,
+          "EP": 0.019442313482024316,
+          "AH": 0,
+          "FR": 1,
+          "DF_lag1": "Bullish Belt Hold"
+        },
+        "letter_src": "open_features",
+        "no_price": false
+      },
+      {
+        "ticker": "DK",
+        "side": "long",
+        "sleeve": "flatten_io",
+        "open": 77.76000213623047,
+        "low": 75.37000274658203,
+        "close": 78.29000091552734,
+        "px_src": "yahoo_session",
+        "close_is_last": true,
+        "dip_from_open_pct": 3.074,
+        "same_day_oc_pnl_short": null,
+        "scoops": {
+          "0.5": {
+            "kind": "scoop",
+            "fill": 77.3712,
+            "same_day_pnl": -0.6638,
+            "win": false
+          },
+          "1.0": {
+            "kind": "scoop",
+            "fill": 76.9824,
+            "same_day_pnl": -0.2711,
+            "win": false
+          },
+          "1.5": {
+            "kind": "scoop",
+            "fill": 76.5936,
+            "same_day_pnl": 0.1216,
+            "win": true
+          },
+          "2.0": {
+            "kind": "scoop",
+            "fill": 76.2048,
+            "same_day_pnl": 0.5143,
+            "win": true
+          },
+          "3.0": {
+            "kind": "scoop",
+            "fill": 75.4272,
+            "same_day_pnl": 1.2996,
+            "win": true
+          }
+        },
+        "excel": null,
+        "letters": {
+          "FQ": 0,
+          "ER": 0,
+          "EP": 0.028078107966272785,
+          "AH": 0,
+          "FR": 1,
+          "DF_lag1": "Bullish Belt Hold"
+        },
+        "letter_src": "open_features",
+        "no_price": false
+      }
+    ],
+    "note": "Clock split: (A) short-only is a pre-open policy call \u2014 shorts fire at the clock-clean 09:30 open if S\u2264\u22123. Excel may pre-filter those names via open-knowable letters (FQ/ER/EP stretch); it does not own the sit. Deep-corr was not run. (B) long scoop is *intraday* after 09:30: trigger is first touch of open\u2212X% (session low as the daily proxy). Close / last grades the fire \u2014 it does not trigger it. 09-14 Yahoo close is last-so-far, not 16:00. Flatten's live card used last-close for DK; scoop uses the official 09:30 open.",
+    "yahoo_overlay_n": 11
+  },
+  "sit_hard_red_fires": 0,
+  "gate": {
+    "combo_broker": "size_combo_tickets hard_red \u2192 skip long+short",
+    "simulate_shared": "hard_red \u2192 no new lots (default sit)",
+    "flatten_robust": "hard_red_no_new sits .io / mover buys"
+  }
+}
