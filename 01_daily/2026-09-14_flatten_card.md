@@ -1,6 +1,6 @@
 # flatten_robust card — 2026-09-14
 
-_Generated 2026-09-14T18:44:50 — live `flatten_robust`._
+_Generated 2026-09-14T20:11:08 — live `flatten_robust`._
 
 **S=-11.00; hard-red: no new buys; holds and due 1d exits stay**
 
@@ -43,9 +43,9 @@ Sized from marked equity **$107,448.18** as if the book were flat. `io 3d_size (
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | CVE | io_core | 805 | $33.33 | $26,830.65 | hard-red |
-| 16:00 ET | DK | io_core | 360 | $74.58 | $26,850.60 | hard-red |
-| 16:00 ET | BG | io_core | 222 | $120.52 | $26,755.44 | hard-red |
-| 16:00 ET | NVT | io_core | 181 | $148.16 | $26,816.05 | hard-red |
+| 16:00 ET | CVE | io_core | 807 | $33.28 | $26,856.96 | hard-red |
+| 16:00 ET | DK | io_core | 360 | $74.42 | $26,791.20 | hard-red |
+| 16:00 ET | BG | io_core | 221 | $121.25 | $26,797.35 | hard-red |
+| 16:00 ET | NVT | io_core | 183 | $146.66 | $26,839.24 | hard-red |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
