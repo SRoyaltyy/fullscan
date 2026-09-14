@@ -1,0 +1,137 @@
+--- a/src/factor_mine_sim.js
++++ b/src/factor_mine_sim.js
+@@ -82,15 +82,57 @@
+       looker: name,
+     };
+   }
++  function recipeSide(rec, row) {
++    const s = String((row && row.side) || (rec && rec.side) || "long").toLowerCase();
++    return s === "short" ? "short" : "long";
++  }
++  function takeBucket(row, hard) {
++    if (hard) return "sit";
++    if (row && row.buy) return "buy";
++    if (row && row.pass) return "look";
++    return "no";
++  }
++  function polarityPredict(row, rec, hard) {
++    const side = recipeSide(rec, row);
++    const bucket = takeBucket(row, hard);
++    // BUY / LOOK / SIT keep the sleeve's intended direction.
++    // NO is a skip on that sleeve, so the call is the other way.
++    if (bucket === "no") return side === "short" ? "UP" : "DOWN";
++    return side === "short" ? "DOWN" : "UP";
++  }
++  function polarityHit(predict, pxRet) {
++    if (pxRet == null || !Number.isFinite(Number(pxRet)) || Number(pxRet) === 0) return null;
++    if (predict === "UP") return Number(pxRet) > 0;
++    if (predict === "DOWN") return Number(pxRet) < 0;
++    return null;
++  }
++  function packPolarity(flags) {
++    const v = (flags || []).filter(x => x != null);
++    if (!v.length) return {n: 0, hit: 0, miss: 0, win: null};
++    const hit = v.filter(Boolean).length;
++    return {
++      n: v.length,
++      hit,
++      miss: v.length - hit,
++      win: Math.round(10000 * hit / v.length) / 10000,
++    };
++  }
+   function lookStamp(pack, rec, r, date, extra) {
+     const nGood = camGood(r);
+     const nBad = camBad(r);
+     const nNeg = nBad + (r.alarm ? 1 : 0);
+     const yr = ydayRet(pack, r, date);
+-    return Object.assign({
++    const extra2 = extra || {};
++    const side = extra2.side || rec.side || "long";
++    const signed = holdReturn(pack, rec, r.ticker, date);
++    const pxRet = signed == null ? null
++      : ((String(side).toLowerCase() === "short") ? -signed : signed);
++    const stamp = Object.assign({
+       ticker: r.ticker,
+       score: rankScore(r, rec),
+-      ret: holdReturn(pack, rec, r.ticker, date),
++      ret: signed,
++      px_ret: pxRet,
++      side,
+       n_neg: nNeg,
+       n_pos: nGood,
+       cond_good: nGood,
+@@ -101,7 +143,10 @@
+       e_pol: r.e_pol || "",
+       e_label: r.e_label || "",
+       earn_react: !!r.erd_earn_react,
+-    }, extra);
++    }, extra2);
++    stamp.predict = polarityPredict(stamp, rec, false);
++    stamp.pol_hit = polarityHit(stamp.predict, stamp.px_ret);
++    return stamp;
+   }
+   function tone(boxes, key) {
+     return String((boxes || {})[key] || "missing").toLowerCase();
+@@ -394,21 +439,33 @@
+   }
+   function hitTally(pack, rec, mornings) {
+     const dates = pack.dates || [];
+-    const buy = [], no = [], sit = [], le2 = [], ge3 = [];
++    const buy = [], no = [], sit = [], look = [], le2 = [], ge3 = [];
++    const polBuy = [], polLook = [], polNo = [], polSit = [];
+     for (const date of dates) {
+       const looks = lookDay(pack, rec, date, mornings);
+       const morn = (mornings || {})[date] || {};
+       const s = morn.s != null ? morn.s : (pack.s || {})[date];
+       const hard = !!(morn.hard_red || (s != null && s <= (pack.hard_red != null ? pack.hard_red : -3)));
+       for (const x of looks) {
++        const pred = polarityPredict(x, rec, hard);
++        const hit = polarityHit(pred, x.px_ret);
++        if (hard) polSit.push(hit);
++        else if (x.buy) polBuy.push(hit);
++        else if (x.pass) polLook.push(hit);
++        else polNo.push(hit);
+         if (x.ret == null) continue;
+-        (hard ? sit : (x.buy ? buy : no)).push(x.ret);
++        if (hard) sit.push(x.ret);
++        else if (x.buy) buy.push(x.ret);
++        else if (x.pass) look.push(x.ret);
++        else no.push(x.ret);
+         ((x.n_neg || 0) >= 3 ? ge3 : le2).push(x.ret);
+       }
+     }
+     return {
+-      buy: packRets(buy), no: packRets(no), sit: packRets(sit),
++      buy: packRets(buy), look: packRets(look), no: packRets(no), sit: packRets(sit),
+       n_neg_le2: packRets(le2), n_neg_ge3: packRets(ge3),
++      pol_buy: packPolarity(polBuy), pol_look: packPolarity(polLook),
++      pol_no: packPolarity(polNo), pol_sit: packPolarity(polSit),
+     };
+   }
+   function rankKey(row, rec) {
+@@ -515,11 +572,14 @@
+       seen.add(r.ticker);
+       out.push(lookStamp(pack, rec, r, date, {
+         rank: i + 1, pass: true, buy: !hard && (i + 1) <= topN,
++        side: rec.side || "long",
+       }));
+     });
+     looked.filter(r => !seen.has(r.ticker)).sort((a, b) => cmpKey(rankKey(a, rec), rankKey(b, rec)))
+       .forEach(r => {
+-        out.push(lookStamp(pack, rec, r, date, {rank: null, pass: false, buy: false}));
++        out.push(lookStamp(pack, rec, r, date, {
++          rank: null, pass: false, buy: false, side: rec.side || "long",
++        }));
+       });
+     return out;
+   }
+@@ -946,7 +1006,8 @@
+ 
+   global.FMSim = {
+     matches, pickDay, rankScore, lookDay, holdReturn, simulateBook, orderFees,
+-    matchWhy, decisionWhy, hitTally, packRets,
++    matchWhy, decisionWhy, hitTally, packRets, packPolarity,
++    recipeSide, takeBucket, polarityPredict, polarityHit,
+     sessionHasClosed, dateHasClose, lastClosedDate,
+     ydayRet, ydayUp, majorCatalyst, whiteHorizonOverlay, whiteYdayOverlay, camGood, camBad,
+   };

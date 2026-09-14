@@ -75,11 +75,22 @@ _POLLER_JS = r"""
         var sl = names(s.sell);
         var tag = s.sit ? "SIT" : (s.status || "");
         extra += '<div class="live-book-row' + (sl.length && !b.length ? " sell" : "") + '"><b>' + name + '</b> ';
+        var side = String(s.side || "").toUpperCase();
+        if(side) extra += side + " ";
         if(tag && tag !== "ok") extra += tag + " ";
         extra += (b.length ? "BUY " + b.join(" · ") : "");
         extra += (b.length && sl.length ? " · " : "");
         extra += (sl.length ? "SELL " + sl.join(" · ") : "");
         if(!b.length && !sl.length) extra += (tag === "SIT" || s.sit ? "sit" : "—");
+        var preds = s.predict || [];
+        if(preds.length){
+          extra += " · ";
+          extra += preds.map(function(p){
+            var t = (p && p.ticker) || "";
+            var dir = (p && p.predict) || "";
+            return t ? (t + " " + dir) : "";
+          }).filter(Boolean).join(" · ");
+        }
         extra += "</div>";
       });
     }
