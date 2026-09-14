@@ -2,7 +2,7 @@
 
 ok=False
 
-Restamp against current 2026-09-14 files after late news_parse. parsed.json is present (80514 bytes, regex OK). communication_services predict is still missing (10/11; within the 8-of-11 tolerance — noted, not a day fail). Remaining hard fail: map_heat.md is still a 2026-09-09 carry-forward. General predict, events, judge, actions, digest, map_heat.json, baseline/research, and 10 sector essays are same-day and quality-ok.
+Core is otherwise strong and same-day: general predict takes a clear DOWN/mild direction with full SCORES_BEGIN markers; events JSON is a real 2026-09-14 scan (scan_date correct, new/carried/resolved statuses, no carry-forward stub); news judge and news parse are complete with NEWS_PARSE_BEGIN/END; finviz digest is a real 400-ticker export; map_heat tables are populated with a live futures tape (ES -0.67%, NQ -1.60%, oil +2.4-2.8%) and sector RS. 10 of 11 sector essays are quality-ok (communication_services missing, which is within the allowed single-missing-sector exception). The one hard fail is the map_heat research file: it claims phase=morning_refresh but its own SYNTHESIS admits the morning delta refresh failed QC (0/25 coverage) and it is reusing last night's post-close captain card
 
 ## Fails
-- `01_daily/map_heat/2026-09-14_map_heat.md`: wrong date — header still reads 'MAP HEAT — 2026-09-09' with export finviz_2026-09-08.csv and generated 2026-09-09T01:59 (09-09 carry). map_heat.json is same-day and regex-ok.
+- `01_daily/map_heat/2026-09-14_research.md`: phase=morning_refresh artifact that self-declares failure: 'Morning delta refresh failed captain-evidence QC (coverage:0/25<required:20). Using last night's post-close captain cards so the book still has heat. Overnight tape/news was not re-scored.' — a carried-forward, non-refreshed research file, not a same-day complete artifact.
