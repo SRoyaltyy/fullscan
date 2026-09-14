@@ -499,11 +499,12 @@ def run(
             if need("news_parse"):
                 print("[all] → News parse")
                 parse_t = 120
-                _run(
-                    [sys.executable, "-m", "src.news_parse", "--hours", "48",
-                     "--limit", "400", "--date", date],
-                    check=False, timeout_s=parse_t,
-                )
+                parse_cmd = [sys.executable, "-m", "src.news_parse",
+                             "--hours", "48", "--limit", "400", "--date", date]
+                parse_code = _run(parse_cmd, check=False, timeout_s=parse_t)
+                if parse_code == 124:
+                    print("[all] news_parse timed out — retry once before QC")
+                    _run(parse_cmd, check=False, timeout_s=parse_t)
             else:
                 print("[all] skip News parse (DONE for this day)")
             if need("finviz_digest"):

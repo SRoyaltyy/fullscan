@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T06:00:22.014577-04:00",
+  "generated_at": "2026-09-14T09:37:02.700458-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -70,12 +70,12 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 1,
-      "n_opt": 1,
+      "n_opt_ok": 3,
+      "n_opt": 5,
       "files": [
         {
           "key": "digest_json",
-          "name": "Finviz digest JSON",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-14_finviz_digest.json",
           "role": "required",
           "status": "OK",
@@ -84,12 +84,48 @@
         },
         {
           "key": "digest_md",
-          "name": "Finviz digest MD",
+          "name": "Quote-page digest MD (*_finviz_digest)",
           "path": "01_daily/news/2026-09-14_finviz_digest.md",
           "role": "optional",
           "status": "OK",
           "reason": "",
           "size": 11943
+        },
+        {
+          "key": "market_digest_json",
+          "name": "Homepage warm-up JSON (*_finviz_market_digest)",
+          "path": "01_daily/news/2026-09-14_finviz_market_digest.json",
+          "role": "optional",
+          "status": "OK",
+          "reason": "",
+          "size": 6027
+        },
+        {
+          "key": "market_digest_md",
+          "name": "Homepage warm-up MD (*_finviz_market_digest)",
+          "path": "01_daily/news/2026-09-14_finviz_market_digest.md",
+          "role": "optional",
+          "status": "OK",
+          "reason": "",
+          "size": 2787
+        },
+        {
+          "key": "market_digest_close_json",
+          "name": "Close answer-key JSON (*_finviz_market_digest_close)",
+          "path": "01_daily/news/2026-09-14_finviz_market_digest_close.json",
+          "role": "optional",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "market_digest_close_md",
+          "name": "Close answer-key MD (*_finviz_market_digest_close)",
+          "path": "01_daily/news/2026-09-14_finviz_market_digest_close.md",
+          "role": "optional",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         }
       ],
       "said": "",
@@ -103,17 +139,26 @@
       "inputs_ready": true,
       "n_req_ok": 19,
       "n_req": 20,
-      "n_opt_ok": 2,
-      "n_opt": 2,
+      "n_opt_ok": 3,
+      "n_opt": 3,
       "files": [
         {
           "key": "in_digest",
-          "name": "Finviz digest JSON",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-14_finviz_digest.json",
           "role": "input",
           "status": "OK",
           "reason": "",
           "size": 89013
+        },
+        {
+          "key": "in_market_digest",
+          "name": "Homepage warm-up JSON (*_finviz_market_digest)",
+          "path": "01_daily/news/2026-09-14_finviz_market_digest.json",
+          "role": "optional",
+          "status": "OK",
+          "reason": "",
+          "size": 6027
         },
         {
           "key": "in_baseline",
@@ -211,8 +256,8 @@
           "path": "01_daily/2026-09-14_preopen_qc.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False",
-          "size": 6638
+          "reason": "all_ok=True",
+          "size": 6634
         },
         {
           "key": "status",
@@ -220,8 +265,8 @@
           "path": "01_daily/2026-09-14_preopen_status.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False missing=['news_parse']",
-          "size": 6936
+          "reason": "all_ok=False",
+          "size": 6723
         },
         {
           "key": "review",
@@ -229,8 +274,8 @@
           "path": "01_daily/2026-09-14_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=False Core is otherwise strong: general predict takes a clear DOWN/mild direction with full SCORES markers, events JSON is a r",
-          "size": 1469
+          "reason": "ok=False Restamp against current 2026-09-14 files after late news_parse. parsed.json is present (80514 bytes, regex OK). communic",
+          "size": 911
         },
         {
           "key": "sector_basic_materials",
@@ -359,7 +404,7 @@
       "files": [
         {
           "key": "in_digest",
-          "name": "Finviz digest JSON",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-14_finviz_digest.json",
           "role": "input",
           "status": "OK",
@@ -439,7 +484,7 @@
         },
         {
           "key": "in_digest",
-          "name": "Finviz digest JSON",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-14_finviz_digest.json",
           "role": "input",
           "status": "OK",
@@ -499,7 +544,7 @@
         },
         {
           "key": "in_digest",
-          "name": "Finviz digest JSON",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-14_finviz_digest.json",
           "role": "input",
           "status": "OK",

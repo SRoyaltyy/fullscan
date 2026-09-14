@@ -275,7 +275,38 @@ def qc_map_heat(path: str | Path) -> QCResult:
         return _fail("map_heat", p, f"too_few_captains({n_caps})")
     if not (data.get("tape") or []):
         return _fail("map_heat", p, "empty_futures_tape")
+    md_reason = _map_heat_md_session(p, data)
+    if md_reason:
+        return _fail("map_heat", p, md_reason)
     return _ok("map_heat", p, f"industries={n_ind} captains={n_caps}")
+
+
+def _map_heat_md_session(json_path: str, data: dict) -> str:
+    """Fail a morning overlay whose sibling md is missing or a prior-day carry.
+
+    Filename date is the session being shipped. A 09-14 json with
+    `# MAP HEAT — 2026-09-09` is the 09-14 war-room hole.
+    """
+    name = os.path.basename(json_path)
+    if not name.endswith("_map_heat.json") or len(name) < 22:
+        return ""
+    file_date = name[:10]
+    is_morning = (
+        data.get("phase") == "morning_overlay" or bool(data.get("overlay_at")))
+    if not is_morning:
+        return ""
+    md = os.path.join(os.path.dirname(json_path) or ".",
+                      name.replace(".json", ".md"))
+    if not os.path.exists(md):
+        return "map_heat_md_missing"
+    try:
+        with open(md, encoding="utf-8") as fh:
+            head = fh.read(120)
+    except OSError:
+        return "map_heat_md_unreadable"
+    if f"# MAP HEAT — {file_date}" not in head:
+        return "stale_map_heat_md"
+    return ""
 
 
 def qc_map_heat_baseline(path: str | Path) -> QCResult:
@@ -613,6 +644,12 @@ def preopen_report(date_str: str) -> dict:
                              f"{date_str}_finviz_digest.md")
     items.append(qc_finviz_digest(
         digest_json if os.path.exists(digest_json) else digest_md))
+    items.append(qc_finviz_market_digest(
+        os.path.join("01_daily", "news",
+                     f"{date_str}_finviz_market_digest.json")))
+    items.append(qc_finviz_market_digest(
+        os.path.join("01_daily", "news",
+                     f"{date_str}_finviz_market_digest_close.json")))
     items.append(qc_map_heat(
         os.path.join("01_daily", "map_heat", f"{date_str}_map_heat.json")))
     items.append(qc_map_heat_baseline(
@@ -644,7 +681,8 @@ def preopen_report(date_str: str) -> dict:
         "all_ok": all(
             r.ok for r in items
             if r.kind not in (
-                "sector_predict", "map_heat_baseline", "map_heat_research")
+                "sector_predict", "map_heat_baseline", "map_heat_research",
+                "finviz_market_digest")
         )
                   and n_ok >= 8,
     }

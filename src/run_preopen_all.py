@@ -601,10 +601,17 @@ def run(date: str | None = None, force: bool = False,
         # Parse is required on the day-board and does not need DeepSeek —
         # digest / Channel 1 cache / events are enough when Postgres dies.
         parse_t = 120
-        step("news_parse", "News parse",
-             [py, "-m", "src.news_parse", "--hours", "48", "--limit", "400",
-              "--date", date, *fa], timeout_s=parse_t)
+        parse_cmd = [py, "-m", "src.news_parse", "--hours", "48",
+                     "--limit", "400", "--date", date, *fa]
+        parse_code = step("news_parse", "News parse",
+                          parse_cmd, timeout_s=parse_t)
         parsed_p = _p("01_daily", "news", f"{date}_parsed.json")
+        if parse_code == 124:
+            print("[preopen-all] news_parse timed out — retry once before QC")
+            retry_code = _run(parse_cmd, timeout_s=parse_t)
+            snapshot_persist(date)
+            if retry_code == 0 or output_qc.qc_news_parse(parsed_p).ok:
+                _land(date, "news_parse", "News parse (timeout retry)")
         if not output_qc.qc_news_parse(parsed_p).ok:
             print("[preopen-all] parse thin — retry --limit 80 (file/DB)")
             _run([py, "-m", "src.news_parse", "--hours", "48",

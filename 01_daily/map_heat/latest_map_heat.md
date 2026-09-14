@@ -1,6 +1,6 @@
-# MAP HEAT — 2026-09-09
+# MAP HEAT — 2026-09-14
 
-Export `finviz_2026-09-08.csv` · 11608 names · generated 2026-09-09T01:59:54.403331-04:00
+Export `finviz_2026-09-14.csv` · 11608 names · generated 2026-09-14T04:15:16.809073-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
