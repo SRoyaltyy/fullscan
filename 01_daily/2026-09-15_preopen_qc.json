@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T15:38:18.022012-04:00",
+  "generated_at": "2026-09-15T15:41:29.891676-04:00",
   "items": [
     {
       "ok": true,
@@ -29,7 +29,7 @@
       "kind": "news_judge",
       "path": "01_daily/news/2026-09-15_judge.md",
       "reason": "",
-      "size": 11802,
+      "size": 10950,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -51,7 +51,7 @@
       "kind": "news_actions",
       "path": "01_daily/news/2026-09-15_actions.json",
       "reason": "",
-      "size": 32252,
+      "size": 32549,
       "carried": false,
       "timeout": false,
       "empty": false,

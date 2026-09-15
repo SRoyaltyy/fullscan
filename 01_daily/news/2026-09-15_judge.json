@@ -2,21 +2,18 @@
  "risk_tilt": "off",
  "macros": [
   "hawkish",
-  "mixed",
+  "bearish",
   "hawkish",
-  "mixed"
+  "bearish"
  ],
  "sector_tilts": {
-  "Technology": "mixed",
-  "Financial": "bearish"
+  "Technology": "bearish",
+  "Energy": "bullish",
+  "Semi-Equip": "mixed"
  },
  "tickers": {
-  "SMH": -4.0,
-  "IGV": 4.0,
-  "ADBE": 5.5,
-  "XLF": -4.0,
-  "BAC": -5.5
+  "XLE": 8.0
  },
- "b1_inject": "NEWS_JUDGE: n=8 rescued=3\nMACRO rates: [hawkish] 10Y \u22655% + CPI core hike-lock + UMich 4.6% 1-yr inf exp; FOMC/Warsh unsigned until print (regime/1d-1w)\nMACRO risk: [mixed] Hormuz/Iran tanker war, Brent ~$106-108 \u2014 leftover vs fresh kinetic unconfirmed; no auto B1=-3 (session/1d-1w)\nSECTOR semis: [bearish] chipmaker weakness / AMD AI-slowdown vs still-sold-out EUV demand \u2014 mixed, do not double-count (SMH)\nSECTOR software: [bullish] ADBE beat/raise + NOW/INTU/CRM vs chips \u2014 IGV substitution, not duration tailwind (IGV)\nSECTOR banks: [bearish] BAC CEO soft Q3 into 5% 10Y (XLF)\nINTERACTION: one hawkish rates cluster + stagflation oil; software\u2260dovish-rates buy; semis mixed\nWATCH: FOMC/Warsh is still a two-sided binary \u2014 do not emit a signed B3 lean",
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=3\nMACRO rates: [hawkish] 10Y>5% + CPI hike-lock + UMich 4.6% inf exp; FOMC/Warsh still binary (regime/1d-1w)\nMACRO risk: [bearish] Hormuz tanker war, Brent $107-109 (session/1d-1w)\nSECTOR semis: [bearish] AI-pacing/slowdown calls, AMD/chipmaker-led drop (SMH/SOXX)\nSECTOR software: [mixed] ADBE beat + IGV vs SMH rotation \u2014 not duration risk-on (IGV)\nSECTOR energy: [bullish] Hormuz tightness + OPEC+ hold Oct quotas (XLE)\nSECTOR semi-equip: [mixed] ASML 2027 EUV sold out vs slowdown tape (SMH)\nINTERACTION: one hawkish-rates cluster; semis mixed (slowdown vs ASML/SK demand); oil+yields=stagflation; do not buy software as risk-on\nWATCH: do not pre-score Warsh/FOMC; gold cut-vs-hike headlines are leftover contradiction",
  "date": "2026-09-15"
 }
