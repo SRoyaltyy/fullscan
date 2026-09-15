@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T09:56:55.212422-04:00",
+  "generated_at": "2026-09-15T10:13:58.502026-04:00",
   "all_ok": false,
   "qc_all_ok": true,
   "book_ok": true,
@@ -183,7 +183,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-15_finviz_digest.json",
-        "size": 87969
+        "size": 87829
       },
       {
         "kind": "finviz_market_digest",

@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T09:53:08.387770-04:00",
+  "generated_at": "2026-09-15T10:13:58.094916-04:00",
   "export_used": "data/exports/finviz_2026-09-15.csv",
   "ticker_digest_count": 400,
   "signal_count": 400,
@@ -137,7 +137,7 @@
     {
       "ticker": "APP",
       "digest": "Piper Sandler cuts AppLovin price target to $325 from $385, maintains Neutral rating",
-      "news_title": "Should You Buy AppLovin Stock For Its Widening Margin?",
+      "news_title": "Wurl Launches Content Intelligence Platform to Scale Advanced Targeting Across Streaming TV",
       "sector": "Communication Services",
       "industry": "Advertising Agencies",
       "is_dividend": false,
@@ -632,7 +632,7 @@
     {
       "ticker": "LLY",
       "digest": "Berenberg upgrades Eli Lilly to Buy from Hold, raises price target to $1,400 on obesity and diabetes strength",
-      "news_title": "Ulta Beauty, Etsy upgraded: Wall Street's top analyst calls",
+      "news_title": "Eli Lilly To Present Fresh Data On Foundayo, Retatrutide In Europe  Heres Why Berenberg Sees A 21% Potential Upside In LLY Stock",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
@@ -1210,7 +1210,7 @@
       {
         "ticker": "APP",
         "digest": "Piper Sandler cuts AppLovin price target to $325 from $385, maintains Neutral rating",
-        "news_title": "Should You Buy AppLovin Stock For Its Widening Margin?",
+        "news_title": "Wurl Launches Content Intelligence Platform to Scale Advanced Targeting Across Streaming TV",
         "sector": "Communication Services",
         "industry": "Advertising Agencies",
         "is_dividend": false,
@@ -1384,7 +1384,7 @@
     {
       "ticker": "APP",
       "digest": "Piper Sandler cuts AppLovin price target to $325 from $385, maintains Neutral rating",
-      "news_title": "Should You Buy AppLovin Stock For Its Widening Margin?",
+      "news_title": "Wurl Launches Content Intelligence Platform to Scale Advanced Targeting Across Streaming TV",
       "sector": "Communication Services",
       "industry": "Advertising Agencies",
       "is_dividend": false,
@@ -1879,7 +1879,7 @@
     {
       "ticker": "LLY",
       "digest": "Berenberg upgrades Eli Lilly to Buy from Hold, raises price target to $1,400 on obesity and diabetes strength",
-      "news_title": "Ulta Beauty, Etsy upgraded: Wall Street's top analyst calls",
+      "news_title": "Eli Lilly To Present Fresh Data On Foundayo, Retatrutide In Europe  Heres Why Berenberg Sees A 21% Potential Upside In LLY Stock",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
@@ -1967,7 +1967,7 @@
     {
       "ticker": "NKE",
       "digest": "Baird downgrades Nike to Neutral from Outperform, cuts price target to $44 from $70 on post-earnings concerns",
-      "news_title": "Baird Downgrades Nike, adidas and Dick's on Oil and Rates",
+      "news_title": "Greg Brockman joins Forbes 400 as richest newcomer at $25.5 billion",
       "sector": "Consumer Cyclical",
       "industry": "Footwear & Accessories",
       "is_dividend": false,
