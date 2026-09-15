@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T04:05:09.244453-04:00",
+  "generated_at": "2026-09-15T04:06:55.640686-04:00",
   "phase": "morning_overlay",
   "export": "finviz_2026-09-15.csv",
   "n_tickers": 11608,
@@ -8673,25 +8673,25 @@
     {
       "ticker": "ES",
       "label": "S&P 500",
-      "last": 7656.5,
-      "change": -0.48
+      "last": 7656.25,
+      "change": -0.47
     },
     {
       "ticker": "NQ",
       "label": "Nasdaq 100",
-      "last": 29308.5,
-      "change": -0.46
+      "last": 29304.75,
+      "change": -0.48
     },
     {
       "ticker": "ER2",
       "label": "Russell 2000",
-      "last": 2896.3,
+      "last": 2896.4,
       "change": -0.68
     },
     {
       "ticker": "YM",
       "label": "DJIA",
-      "last": 52517.0,
+      "last": 52514.0,
       "change": -0.66
     },
     {
@@ -8704,72 +8704,72 @@
       "ticker": "CL",
       "label": "Crude Oil WTI",
       "last": 103.51,
-      "change": 2.08
+      "change": 2.13
     },
     {
       "ticker": "QA",
       "label": "Crude Oil Brent",
-      "last": 107.82,
-      "change": 2.02
+      "last": 107.81,
+      "change": 2.03
     },
     {
       "ticker": "NG",
       "label": "Natural Gas",
-      "last": 2.907,
-      "change": 0.35
+      "last": 2.908,
+      "change": 0.38
     },
     {
       "ticker": "HO",
       "label": "Heating Oil",
-      "last": 5.1016,
-      "change": 2.83
+      "last": 5.0996,
+      "change": 2.85
     },
     {
       "ticker": "RB",
       "label": "Gasoline RBOB",
-      "last": 3.3932,
-      "change": 2.32
+      "last": 3.3873,
+      "change": 2.3
     },
     {
       "ticker": "GC",
       "label": "Gold",
-      "last": 4317.6,
+      "last": 4319.0,
       "change": -0.79
     },
     {
       "ticker": "SI",
       "label": "Silver",
-      "last": 63.23,
-      "change": -1.42
+      "last": 63.25,
+      "change": -1.4
     },
     {
       "ticker": "HG",
       "label": "Copper",
-      "last": 6.3655,
-      "change": -0.6
+      "last": 6.3645,
+      "change": -0.65
     },
     {
       "ticker": "PL",
       "label": "Platinum",
-      "last": 1752.2,
-      "change": -1.55
+      "last": 1753.5,
+      "change": -1.51
     },
     {
       "ticker": "PA",
       "label": "Palladium",
-      "last": 1287.0,
-      "change": -1.51
+      "last": 1288.0,
+      "change": -1.58
     },
     {
       "ticker": "DX",
       "label": "USD",
-      "last": 99.34,
+      "last": 99.345,
       "change": 0.24
     },
     {
       "ticker": "6E",
       "label": "EUR",
-      "last": 1.15785,
+      "last": 1.1579,
       "change": -0.17
     },
     {
@@ -8781,14 +8781,14 @@
     {
       "ticker": "6B",
       "label": "GBP",
-      "last": 1.3477,
-      "change": -0.29
+      "last": 1.3479,
+      "change": -0.27
     },
     {
       "ticker": "6A",
       "label": "AUD",
-      "last": 0.7114,
-      "change": -0.31
+      "last": 0.71145,
+      "change": -0.29
     },
     {
       "ticker": "6C",
@@ -8799,56 +8799,56 @@
     {
       "ticker": "6S",
       "label": "CHF",
-      "last": 1.23555,
-      "change": -0.19
+      "last": 1.236,
+      "change": -0.18
     },
     {
       "ticker": "6N",
       "label": "NZD",
-      "last": 0.57755,
-      "change": -0.44
+      "last": 0.57775,
+      "change": -0.43
     },
     {
       "ticker": "ZN",
       "label": "10 Year Note",
-      "last": 105.671875,
+      "last": 105.6875,
       "change": -0.46
     },
     {
       "ticker": "ZF",
       "label": "5 Year Note",
-      "last": 104.21875,
-      "change": -0.29
+      "last": 104.2265625,
+      "change": -0.28
     },
     {
       "ticker": "ZT",
       "label": "2 Year Note",
       "last": 101.9921875,
-      "change": -0.08
+      "change": -0.09
     },
     {
       "ticker": "ZB",
       "label": "30 Year Bond",
       "last": 106.0625,
-      "change": -0.91
+      "change": -0.88
     },
     {
       "ticker": "NKD",
       "label": "Nikkei 225",
-      "last": 63105.0,
-      "change": -0.12
+      "last": 63070.0,
+      "change": -0.08
     },
     {
       "ticker": "DY",
       "label": "DAX",
-      "last": 25233.0,
-      "change": -0.8
+      "last": 25229.0,
+      "change": -0.78
     },
     {
       "ticker": "EX",
       "label": "Euro Stoxx 50",
-      "last": 6206.0,
-      "change": -0.89
+      "last": 6207.0,
+      "change": -0.83
     },
     {
       "ticker": "ZC",
@@ -8865,20 +8865,20 @@
     {
       "ticker": "ZW",
       "label": "Wheat",
-      "last": 720.25,
-      "change": -0.24
+      "last": 720.0,
+      "change": -0.31
     },
     {
       "ticker": "ZL",
       "label": "Soybean oil",
-      "last": 69.99,
-      "change": 0.47
+      "last": 70.02,
+      "change": 0.53
     },
     {
       "ticker": "ZM",
       "label": "Soybean Meal",
-      "last": 348.5,
-      "change": -0.43
+      "last": 348.4,
+      "change": -0.51
     },
     {
       "ticker": "ZO",
@@ -8901,7 +8901,7 @@
     {
       "ticker": "SB",
       "label": "Sugar",
-      "last": 18.07,
+      "last": 18.08,
       "change": -0.5
     },
     {
@@ -8949,7 +8949,7 @@
     {
       "ticker": "BTC",
       "label": "Bitcoin",
-      "last": 76900.0,
+      "last": 76905.0,
       "change": -2.84
     },
     {
@@ -8991,8 +8991,8 @@
     {
       "ticker": "G",
       "label": "Gasoil",
-      "last": 1511.5,
-      "change": 2.32
+      "last": 1510.5,
+      "change": 2.4
     },
     {
       "ticker": "TIO",
@@ -9009,8 +9009,8 @@
     {
       "ticker": "TN",
       "label": "Ultra 10 Year Note",
-      "last": 107.09375,
-      "change": -0.59
+      "last": 107.109375,
+      "change": -0.61
     },
     {
       "ticker": "UB",
@@ -9027,7 +9027,7 @@
   ],
   "ticker_news": [
     {
-      "time": "4 min",
+      "time": "6 min",
       "title": "Johnson Controls electrifies energy-intensive industries with new heat pumps that can triple energy efficiency and lower operating costs",
       "url": "/news/391904/johnson-controls-electrifies-energy-intensive-industries-with-new-heat-pumps-that-can-triple-energy-efficiency-and-lower-operating-costs",
       "source": "PR Newswire",
@@ -9036,7 +9036,7 @@
       ]
     },
     {
-      "time": "13 min",
+      "time": "15 min",
       "title": "FTSE 100 today: Stocks slip as oil surges, AI safety rift adds to unease",
       "url": "https://finance.yahoo.com/markets/world-indices/articles/ftse-100-today-stocks-slip-075124691.html",
       "source": "Investing.com",
@@ -9045,7 +9045,7 @@
       ]
     },
     {
-      "time": "16 min",
+      "time": "17 min",
       "title": "Watch Out SKHY, MU, SNDK: Japans Kioxia Reportedly Eyes $10B US Listing To Ride AI Memory Boom",
       "url": "https://finance.yahoo.com/m/1e97f70b-3ecf-3625-a441-e1b8e529c5f2/watch-out-skhy%2C-mu%2C-sndk%3A.html",
       "source": "Stocktwits",
@@ -9056,17 +9056,17 @@
       ]
     },
     {
-      "time": "20 min",
+      "time": "22 min",
       "title": "NIO Stock Rises Overnight: Nio Capital Joins Sequoia China And SMIC-Linked Backers In Robot-Sensor Bet",
       "url": "https://finance.yahoo.com/m/63ad46a5-2f62-3c39-ad25-91434eba2a20/nio-stock-rises-overnight%3A.html",
       "source": "Stocktwits",
       "tickers": [
-        "NIO",
-        "BABA"
+        "BABA",
+        "NIO"
       ]
     },
     {
-      "time": "34 min",
+      "time": "36 min",
       "title": "Fluke Expands iSee Mobile Series with New TC03A Thermal Camera and ii01 Acoustic Camera",
       "url": "/news/391903/fluke-expands-isee-mobile-series-with-new-tc03a-thermal-camera-and-ii01-acoustic-camera",
       "source": "GlobeNewswire",
@@ -9075,7 +9075,7 @@
       ]
     },
     {
-      "time": "49 min",
+      "time": "50 min",
       "title": "Industrial Occupancy Jumps as Big-Box Demand Returns",
       "url": "https://finance.yahoo.com/real-estate/articles/industrial-occupancy-jumps-big-box-071556996.html",
       "source": "CRE Daily",
@@ -9084,7 +9084,7 @@
       ]
     },
     {
-      "time": "52 min",
+      "time": "54 min",
       "title": "GSK splashes up to $750m on experimental cancer therapy",
       "url": "https://finance.yahoo.com/m/0828f07d-1656-3e33-a355-902b207b4285/gsk-splashes-up-to-%24750m-on.html",
       "source": "Proactive",
@@ -9093,25 +9093,17 @@
       ]
     },
     {
-      "time": "56 min",
+      "time": "58 min",
       "title": "Worldline launches UCP payment handler for agentic commerce payments",
       "url": "https://finance.yahoo.com/m/235da9f2-d06f-3527-95f6-d9015f971ec1/worldline-launches-ucp.html",
       "source": "Electronic Payments",
       "tickers": [
-        "GOOGL"
-      ]
-    },
-    {
-      "time": "56 min",
-      "title": "Worldline launches UCP payment handler for agentic commerce payments",
-      "url": "https://finance.yahoo.com/technology/ai/articles/worldline-launches-ucp-payment-handler-070835057.html",
-      "source": "Electronic Payments",
-      "tickers": [
+        "GOOGL",
         "GOOG"
       ]
     },
     {
-      "time": "58 min",
+      "time": "1 hour",
       "title": "Tesla, SpaceX Stocks Rise Overnight: Elon Musk Fuels Merger Speculation, Hints At Action Amid Close Collaboration",
       "url": "https://finance.yahoo.com/m/e760c2ac-fd44-3bb0-9d7d-251b160b45d2/tesla%2C-spacex-stocks-rise.html",
       "source": "Stocktwits",
@@ -9195,7 +9187,7 @@
     {
       "time": "1 hour",
       "title": "CryptoQuant Flags Volume Revival as Another Crack in Bear Market Downtrend",
-      "url": "https://finance.yahoo.com/markets/crypto/articles/cryptoquant-flags-volume-revival-another-065028599.html",
+      "url": "https://finance.yahoo.com/m/83c8b8ff-1557-3960-bba6-162b774475bf/cryptoquant-flags-volume.html",
       "source": "BeInCrypto",
       "tickers": [
         "COIN"
@@ -9238,14 +9230,14 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Chip Stocks Sink on AI Slowdown Calls, But Analysts Doubt a Crash Is Near",
       "url": "https://finance.yahoo.com/m/6f149258-dafd-3f10-870a-cb16d919d980/chip-stocks-sink-on-ai.html",
       "source": "BeInCrypto",
       "tickers": [
         "AMD",
-        "MU",
         "NVDA",
+        "MU",
         "AVGO",
         "SKHY"
       ]
@@ -9412,8 +9404,8 @@
       "url": "https://finance.yahoo.com/energy/articles/eq-resources-takes-stake-u-052500932.html",
       "source": "Oilprice.com",
       "tickers": [
-        "BMM",
-        "ELMT"
+        "ELMT",
+        "BMM"
       ]
     },
     {
@@ -9670,7 +9662,7 @@
       "source": "Stocktwits",
       "tickers": [
         "NOW",
-        "ADBE"
+        "CRM"
       ]
     },
     {
@@ -9680,7 +9672,7 @@
       "source": "Stocktwits",
       "tickers": [
         "INTU",
-        "CRM"
+        "ADBE"
       ]
     },
     {
@@ -9817,16 +9809,8 @@
       "url": "https://finance.yahoo.com/m/99eb6c72-cc4e-34c6-b488-70075624434c/be-stock-falls-most-in-nearly.html",
       "source": "Stocktwits",
       "tickers": [
+        "BE",
         "SPCX"
-      ]
-    },
-    {
-      "time": "Sep-14",
-      "title": "BE Stock Falls Most In Nearly A Month: Why This Analyst Sees Over 36% Upside",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/stock-falls-most-nearly-month-011328812.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "BE"
       ]
     },
     {
@@ -9865,8 +9849,27 @@
         "NXPI",
         "ADI",
         "MCHP",
+        "QCOM",
+        "CNXN"
+      ]
+    },
+    {
+      "time": "Sep-14",
+      "title": "Should You Buy Cirrus Logic Stock Because Its Buyback Got Cheaper?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/buy-cirrus-logic-stock-because-005405849.html",
+      "source": "Trefis",
+      "tickers": [
         "CRUS",
-        "QCOM"
+        "TXN"
+      ]
+    },
+    {
+      "time": "Sep-14",
+      "title": "XCF Global (NASDAQ:SAFX), DevvStream and Southern Energy Renewables Amend Business Combination Agreement, Increasing XCF Shareholder Ownership and Establishing Additional Capital Support; XCF Shareholder GL Also Investing $1.0 Million in XCF Through Warrants Exercisable at $2.50 Per Share",
+      "url": "/news/391868/xcf-global-nasdaq-safx-devvstream-and-southern-energy-renewables-amend-business-combination-agreement-increasing-xcf-shareholder-ownership-and-establishing-additional-capital-support-xcf-shareholder-gl-also-investing-10-million-in-xcf-through-warrants-exercisable-at-250-per-share",
+      "source": "ACCESSWIRE",
+      "tickers": [
+        "SAFX"
       ]
     }
   ],
@@ -9887,15 +9890,15 @@
     "INTC",
     "AAPL",
     "KEYS",
-    "LLY",
+    "LCO",
     "HPE",
     "HAWK",
     "GOOGL",
     "GOOG",
     "FDX",
     "ELMT",
+    "LLY",
     "ORCL",
-    "PLAY",
     "QQQ",
     "RLGT",
     "SNDK",
@@ -10585,5 +10588,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 211,
   "earnings_window_count": 46,
-  "overlay_at": "2026-09-15T04:05:09.244453-04:00"
+  "overlay_at": "2026-09-15T04:06:55.640686-04:00"
 }
