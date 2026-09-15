@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T10:15:18.097294-04:00",
+  "generated_at": "2026-09-15T10:34:45.410972-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -835,101 +835,6 @@
     }
   },
   "lands": [
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T06:12:51.107478-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 22414,
-          "preview": "2026-09-15 BUY AVAH, PACS, ACHC, DLO, VRSK, DBX, WIX, CARG \u00b7 SELL FLNC, OKLO, FCEL, AMPX, LVWR, EOSE, QBTS, METC"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 949,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-09-15.json",
-          "ok": true,
-          "reason": "",
-          "size": 160897,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-09-15_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 131077,
-          "preview": "2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 2399367,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-09-15_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 2474133,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 2650902,
-          "preview": "2026-09-15 BUY AVAH, PACS, ACHC, DLO, VRSK, DBX, WIX, CARG \u00b7 SELL FLNC, OKLO, FCEL, AMPX, LVWR, EOSE, QBTS, METC"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 2474118,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 131077,
-          "preview": "2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 2474118,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 2474118,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 2740111,
-          "preview": "2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN"
-        }
-      ],
-      "preview": "2026-09-15 BUY AVAH, PACS, ACHC, DLO, VRSK, DBX, WIX, CARG \u00b7 SELL FLNC, OKLO, FCEL, AMPX, LVWR, EOSE, QBTS, METC \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AVAH, PACS, ACHC, DLO, VRSK, DBX, WIX, CARG \u00b7 SELL FLNC, OKLO, FCEL, AMPX, LVWR, EOSE, QBTS, METC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, "
-    },
     {
       "key": "flatten",
       "title": "Flatten live card",
@@ -3485,6 +3390,101 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T10:15:16.823300-04:00"
+    },
+    {
+      "key": "live_boards",
+      "title": "live_boards",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T10:34:44.439754-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 22936,
+          "preview": "2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 949,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-15.json",
+          "ok": true,
+          "reason": "",
+          "size": 194645,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-15_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 173209,
+          "preview": "2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 827750,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-15_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 827750,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1208454,
+          "preview": "2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 827750,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 173209,
+          "preview": "2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 827750,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 827750,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1208454,
+          "preview": "2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR"
+        }
+      ],
+      "preview": "2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock"
     }
   ],
   "href": {
