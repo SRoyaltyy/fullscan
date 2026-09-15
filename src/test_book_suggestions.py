@@ -99,6 +99,11 @@ def test_factor_mine_template_paints_every_strategy() -> None:
     assert "SIT would-have" in html
     assert "liveStartRow" in html
     assert "pending — not 0%" in html
+    assert "attachLiveSessionDate" in html
+    assert "loadLiveDay" in html
+    assert "after 09:30 live" in html
+    assert "LIVE</span>" in html
+    assert "setInterval(loadLiveDay, afterBell()?20000:60000)" in html
     assert html.index("<h1>Factor strategy mine") < html.index('id="liveDay"')
     assert 'id="bracketOn"' in html
     assert 'id="takePct"' in html
@@ -186,6 +191,9 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "SIT would-have" in book_suggestions._POLLER_JS
     assert "Theme Radar" in book_suggestions._POLLER_JS
     assert "factor-mine/today_strategies.json" in book_suggestions._POLLER_JS
+    assert "afterBell() ? 20000 : 60000" in book_suggestions._POLLER_JS
+    assert 'cron: "32 13 * * 1-5"' in orch
+    assert 'cron: "35 14 * * 1-5"' in orch
 
 
 def test_inspect_html_ok_when_poller_and_sidecar() -> None:

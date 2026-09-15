@@ -87,6 +87,9 @@ def test_open_0930_yml_owns_the_bell() -> None:
     yml = (WF / "open_0930.yml").read_text(encoding="utf-8")
     assert 'cron: "30 13 * * 1-5"' in yml
     assert 'cron: "30 14 * * 1-5"' in yml
+    assert 'cron: "25 13 * * 1-5"' in yml
+    assert 'cron: "33 13 * * 1-5"' in yml
+    assert 'cron: "0 14-19 * * 1-5"' in yml
     assert "src.open_0930_clock" in yml
     assert "--max-wait-s 4200" in yml
     assert "scripts/publish_open_pack.sh" in yml
@@ -97,7 +100,9 @@ def test_open_0930_yml_owns_the_bell() -> None:
     assert "deploy-dashboard.yml" in yml
     assert "timeout-minutes: 90" in yml
     assert "group: webull-paper" in yml
-    assert "workflow_run:" not in yml
+    assert "workflow_run:" in yml
+    assert "Pre-Open ALL" in yml
+    assert "Publish strategy tickets" in yml
     assert "api.webull.com" not in yml
     assert "--env real" not in yml
     assert "flatten_robust" not in yml.lower() or "does not change" in yml.lower()
