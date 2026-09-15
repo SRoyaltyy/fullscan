@@ -77,6 +77,31 @@ const RAW = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_
 const mark = {OK:"ok", PARTIAL:"part", FAIL:"fail"};
 const fileMark = {OK:"✅", FAIL:"❌", MISSING:"⬜", SKIP:"➖", PARTIAL:"⚠️"};
 function $(id){return document.getElementById(id)}
+function afterBell(){
+  try{
+    const parts=new Intl.DateTimeFormat("en-US",{timeZone:"America/New_York",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date());
+    let h=0,m=0;
+    parts.forEach(p => { if(p.type==="hour") h=+p.value; if(p.type==="minute") m=+p.value; });
+    return h>9 || (h===9 && m>=30);
+  }catch(e){ return true; }
+}
+function ticketsLookLive(st){
+  if(!st || typeof st !== "object") return false;
+  const q = st.quote || {};
+  return !!(q.after_open && String(q.src || "").indexOf("elite_live")===0);
+}
+function firstOk(urls, ok){
+  let i=0, last={};
+  function next(){
+    if(i>=urls.length) return Promise.resolve(last);
+    return fetchJson(urls[i++]).then(d => {
+      last = d;
+      if(!ok || ok(d)) return d;
+      return next();
+    }).catch(next);
+  }
+  return next();
+}
 async function fetchJson(url){
   const u = url + (url.includes("?") ? "&" : "?") + "t=" + Date.now();
   const r = await fetch(u, {cache:"no-store"});
@@ -119,11 +144,21 @@ function render(board){
         if(b || s) $("sels").innerHTML = b + s;
       }).catch(()=>{});
   }
-  fetch("https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today_strategies.json?t="+Date.now(), {cache:"no-store"})
-    .then(r => r.ok ? r.json() : null)
+  firstOk([
+    "today_strategies.json",
+    "./today_strategies.json",
+    RAW + "/today_strategies.json"
+  ], afterBell() ? ticketsLookLive : null)
     .then(d => {
       const box = $("strats");
-      if(!box || !d || !d.strategies) { if(box) box.textContent = "No today_strategies.json on main."; return; }
+      if(!box) return;
+      const sb0 = (d && d.strategies && d.strategies.stock_book_1d) || {};
+      const earlyBuys = (d && d.buy_1d && d.buy_1d.length) ? d.buy_1d : (sb0.buy || []);
+      const earlySells = (d && d.sell_1d && d.sell_1d.length) ? d.sell_1d : (sb0.sell || []);
+      if(earlyBuys.length || earlySells.length){
+        $("sels").innerHTML = tickers(earlyBuys, "buy") + tickers(earlySells, "sell");
+      }
+      if(!d || !d.strategies) { box.textContent = "No today_strategies.json on main."; return; }
       if(d.date && board.date && d.date !== board.date) {
         box.textContent = "strategies file is " + d.date + " (board is " + board.date + ")";
       }
