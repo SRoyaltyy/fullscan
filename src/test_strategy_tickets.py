@@ -227,6 +227,32 @@ def test_assert_open_lock_requires_webull_sit_names() -> None:
     st.assert_session_look(payload, "2026-09-14")
 
 
+def test_stamp_fills_buy_1d_from_stock_book() -> None:
+    """Factor-mine today_strategies.json must carry Elite 1d rows at top level."""
+    payload = {
+        "strategies": {
+            "stock_book_1d": {
+                "buy": [{"ticker": "AVAH", "side": "long"}],
+                "sell": [{"ticker": "METC", "side": "short"}],
+            }
+        }
+    }
+    book = {
+        "src": "elite_live", "after_open": True, "at": "t", "n": 2,
+        "error": None, "clock_rule": "x",
+    }
+    with mock.patch("src.elite_live_px.quote_book", return_value=book), \
+            mock.patch("src.elite_live_px.official_opens", return_value={}), \
+            mock.patch(
+                "src.elite_live_px.stamp_rows",
+                side_effect=lambda rows, _book, opens=None: list(rows),
+            ):
+        out = st.stamp_live_quotes(payload, "2026-09-15")
+    assert out["quote"]["src"] == "elite_live"
+    assert [x["ticker"] for x in out["buy_1d"]] == ["AVAH"]
+    assert [x["ticker"] for x in out["sell_1d"]] == ["METC"]
+
+
 def main() -> None:
     test_combo_would_buy_unions_member_lists()
     test_combo_skip_drops_long_and_short_clash()
@@ -239,6 +265,7 @@ def main() -> None:
     test_assert_fails_when_bake_is_not_session_open()
     test_open_lock_pins_indp_and_drops_friday()
     test_assert_open_lock_requires_webull_sit_names()
+    test_stamp_fills_buy_1d_from_stock_book()
     print("ok")
 
 

@@ -67,6 +67,8 @@ def test_paper_template_polls_raw_main() -> None:
     assert "every strategy" in html
     assert "id=\"liveBook\"" in html
     assert html.index("<h1>Paper Trading") < html.index('id="liveBook"')
+    assert "stock_book_1d" in html
+    assert "strat.buy_1d && strat.buy_1d.length" in html
     baked = (root / "dashboard" / "index.html").read_text(encoding="utf-8")
     assert book_suggestions.POLLER_MARK in baked
     assert book_suggestions.TODAY_URL in baked
@@ -74,6 +76,7 @@ def test_paper_template_polls_raw_main() -> None:
     assert book_suggestions.STRAT_URL in baked
     assert "every strategy" in baked
     assert baked.index("<h1>Paper Trading") < baked.index('id="liveBook"')
+    assert "stock_book_1d" in baked
     sleeve = (root / "dashboard" / "sleeve-merge" / "index.html").read_text(
         encoding="utf-8")
     strat = (root / "dashboard" / "strategy-board" / "index.html").read_text(
@@ -82,6 +85,8 @@ def test_paper_template_polls_raw_main() -> None:
     assert book_suggestions.STRAT_URL in sleeve
     assert book_suggestions.POLLER_MARK in strat
     assert book_suggestions.STRAT_URL in strat
+    assert "stock_book_1d" in strat
+    assert (root / "src" / "paper_dash.html") in book_suggestions.LIVE_BOARD_HTML
 
 
 def test_factor_mine_template_paints_every_strategy() -> None:
@@ -103,6 +108,9 @@ def test_factor_mine_template_paints_every_strategy() -> None:
     assert "loadLiveDay" in html
     assert "today_strategies.json" in html
     assert "function firstOk" in html
+    assert "function ticketRows" in html
+    assert "function liveTicketsAreLive" in html
+    assert "liveDate===date && liveTicketsAreLive()" in html
     assert "after 09:30 live" in html
     assert "LIVE</span>" in html
     assert "setInterval(loadLiveDay, afterBell()?20000:60000)" in html
@@ -204,6 +212,8 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "factor-mine/today_strategies.json" in book_suggestions._POLLER_JS
     assert "afterBell() ? 20000 : 60000" in book_suggestions._POLLER_JS
     assert "function firstOk" in book_suggestions._POLLER_JS
+    assert "stock_book_1d" in book_suggestions._POLLER_JS
+    assert "strat.buy_1d && strat.buy_1d.length" in book_suggestions._POLLER_JS
     assert 'cron: "32 13 * * 1-5"' in orch
     assert 'cron: "35 14 * * 1-5"' in orch
 

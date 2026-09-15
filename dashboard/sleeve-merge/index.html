@@ -271,6 +271,11 @@ across 22 starts.
       if(strat && strat.n) d.n_strategies = strat.n;
       if(strat && strat.quote) d.quote = strat.quote;
       if(strat && strat.clock_legal_for) d.clock_legal_for = strat.clock_legal_for;
+      var sb = (strat && strat.strategies && strat.strategies.stock_book_1d) || {};
+      var buys = (strat && strat.buy_1d && strat.buy_1d.length) ? strat.buy_1d : (sb.buy || []);
+      var sells = (strat && strat.sell_1d && strat.sell_1d.length) ? strat.sell_1d : (sb.sell || []);
+      if(buys.length) d.buy_1d = buys;
+      if(sells.length) d.sell_1d = sells;
       if(!d.buy_1d && sug.buy_1d) d.buy_1d = sug.buy_1d;
       if(!d.sell_1d && sug.sell_1d) d.sell_1d = sug.sell_1d;
       paint(d);

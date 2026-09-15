@@ -667,8 +667,13 @@ def stamp_live_quotes(payload: dict, date: str) -> dict:
             continue
         rec["buy"] = elp.stamp_rows(rec.get("buy") or [], book, opens=opens)
         rec["sell"] = elp.stamp_rows(rec.get("sell") or [], book, opens=opens)
-    payload["buy_1d"] = elp.stamp_rows(payload.get("buy_1d") or [], book, opens=opens)
-    payload["sell_1d"] = elp.stamp_rows(payload.get("sell_1d") or [], book, opens=opens)
+    # Full factor-mine today_strategies.json used to omit top-level buy_1d,
+    # so local-first loaders kept stale today.json names (no Elite px).
+    sb = (payload.get("strategies") or {}).get("stock_book_1d") or {}
+    buys = payload.get("buy_1d") or sb.get("buy") or []
+    sells = payload.get("sell_1d") or sb.get("sell") or []
+    payload["buy_1d"] = elp.stamp_rows(buys, book, opens=opens)
+    payload["sell_1d"] = elp.stamp_rows(sells, book, opens=opens)
     return payload
 
 
