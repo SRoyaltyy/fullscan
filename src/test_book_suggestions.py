@@ -214,6 +214,8 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "Publish strategy tickets" in dep
     assert "Open 09:30 pack" in dep
     assert "Overlayed dashboard/index.html (paper) from main" in dep
+    assert "data/day_board/**" in dep
+    assert "Overlayed live strip" in dep
     assert "gh workflow run deploy-dashboard.yml" in pub
     assert "dashboard/today_strategies.json" in pub
     assert "scripts/publish_dashboard.sh" in pub

@@ -18,6 +18,7 @@ on:
     branches: [main]
     paths:
       - "dashboard/**"
+      - "data/day_board/**"
       - "data/stock_book/**"
       - "01_daily/*_stock_book.md"
   workflow_dispatch:
@@ -167,6 +168,30 @@ jobs:
               mkdir -p "pages_out/${sub}"
               cp -a "pages_out/dashboard/${sub}/." "pages_out/${sub}/"
               echo "Root copy pages_out/${sub}"
+            fi
+          done
+
+          # Paper / strategy-board firstOk looks for today.json and
+          # today_strategies.json next to the HTML. Those 404 today on
+          # .io (only factor-mine/ has copies). A later ranker today.json
+          # on raw main then wins and paints scores without Elite px.
+          mkdir -p pages_out/day-board pages_out/dashboard/day-board \
+                   pages_out/strategy-board pages_out/dashboard/strategy-board
+          for src in \
+              data/day_board/today.json \
+              data/day_board/today_strategies.json \
+              dashboard/factor-mine/today.json \
+              dashboard/factor-mine/today_strategies.json \
+              dashboard/today_strategies.json; do
+            if [ -f "$src" ]; then
+              base=$(basename "$src")
+              cp "$src" "pages_out/${base}"
+              cp "$src" "pages_out/dashboard/${base}"
+              cp "$src" "pages_out/day-board/${base}"
+              cp "$src" "pages_out/dashboard/day-board/${base}"
+              cp "$src" "pages_out/strategy-board/${base}"
+              cp "$src" "pages_out/dashboard/strategy-board/${base}"
+              echo "Overlayed live strip ${src}"
             fi
           done
 

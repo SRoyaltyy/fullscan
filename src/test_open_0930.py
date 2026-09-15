@@ -132,6 +132,8 @@ def test_open_pack_stamps_session_open_and_restamps_pages() -> None:
     assert "publish_dashboard.sh" in script
     assert "deploy-dashboard.yml" in yml
     assert "Open 09:30 pack" in dep
+    assert "data/day_board/**" in dep
+    assert "Overlayed live strip" in dep
 
 
 def test_boards_and_paper_share_the_bell() -> None:
