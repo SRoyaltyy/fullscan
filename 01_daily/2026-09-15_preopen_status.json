@@ -1,34 +1,14 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T06:11:10.574673-04:00",
+  "generated_at": "2026-09-15T06:15:40.355541-04:00",
   "all_ok": false,
   "qc_all_ok": true,
-  "book_ok": false,
+  "book_ok": true,
   "grok_ok": false,
   "grok_fails": [
     {
-      "path": "01_daily/sectors/2026-09-15/basic_materials_predict.md",
-      "reason": "missing"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-15/consumer_defensive_predict.md",
-      "reason": "missing"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-15/industrials_predict.md",
-      "reason": "missing"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-15/real_estate_predict.md",
-      "reason": "missing"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-15/technology_predict.md",
-      "reason": "missing"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-15/utilities_predict.md",
-      "reason": "missing"
+      "path": "01_daily/map_heat/2026-09-15_research.md",
+      "reason": "phase=morning_refresh artifact is self-declared failed: 'Morning delta refresh failed captain-evidence QC (coverage:0/26<required:21). Using last night's post-close captain cards... Overnight tape/news was not re-scored.' It is a carry-forward of the prior post-close baseline (identical 142 cards, size_gate flipped) with zero fresh evidence \u2014 not a same-day research artifact."
     }
   ],
   "missing_required": [],
@@ -71,7 +51,7 @@
     {
       "key": "sector_predict",
       "title": "Per-sector predict (all 11)",
-      "returncode": 1
+      "returncode": 0
     },
     {
       "key": "map_heat_research",
@@ -87,13 +67,13 @@
   "github_runs": [
     {
       "workflow": "preopen_all.yml",
-      "n_today": 4,
+      "n_today": 6,
       "latest": {
-        "id": 34946431321,
-        "status": "completed",
-        "conclusion": "failure",
+        "id": 34955668851,
+        "status": "queued",
+        "conclusion": null,
         "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/34946431321"
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/34955668851"
       }
     },
     {
