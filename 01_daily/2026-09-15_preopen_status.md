@@ -1,6 +1,6 @@
 # Pre-open ALL status — 2026-09-15
 
-all_ok=False  qc_all_ok=True  book_ok=True  grok_ok=False  missing=none
+all_ok=False  qc_all_ok=True  book_ok=False  grok_ok=False  missing=none
 
 Predictive modules + stock book (must land before 09:30 ET).
 Outcome / learn / tonight's captain research = Post-Close ALL.
@@ -12,6 +12,6 @@ Outcome / learn / tonight's captain research = Post-Close ALL.
 - News actions: exit 0
 - News judge: exit 0
 - General market predict: exit 0
-- Per-sector predict (all 11): exit 0
+- Per-sector predict (all 11): exit 1
 - Map heat morning delta refresh: exit 0
 - Catalyst dossiers (after book): exit 0

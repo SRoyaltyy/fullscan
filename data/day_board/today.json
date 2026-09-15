@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T08:11:23.719144-04:00",
+  "generated_at": "2026-09-15T08:15:42.502088-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -11,62 +11,86 @@
   },
   "buy_1d": [
     {
-      "ticker": "HITI",
-      "score": 0.3044362933651129
+      "ticker": "AVAH",
+      "score": 0.6813331956326887
     },
     {
-      "ticker": "MTCH",
-      "score": 0.5625355999916293
+      "ticker": "PACS",
+      "score": 0.6523856876658092
+    },
+    {
+      "ticker": "ZIP",
+      "score": 0.577269780484581
+    },
+    {
+      "ticker": "ASTH",
+      "score": 0.5858855076926901
+    },
+    {
+      "ticker": "WIX",
+      "score": 0.6981351189634262
+    },
+    {
+      "ticker": "VRSK",
+      "score": 0.4115313887726531
+    },
+    {
+      "ticker": "EPAM",
+      "score": 0.6486544512584855
+    },
+    {
+      "ticker": "DLO",
+      "score": 0.6220470253321195
     },
     {
       "ticker": "CARG",
-      "score": 0.7164691865201616
+      "score": 0.6859220972462057
     },
     {
-      "ticker": "FOX",
-      "score": 0.46246499218332093
+      "ticker": "AMN",
+      "score": 0.6227441834609622
     }
   ],
   "sell_1d": [
     {
+      "ticker": "FLNC",
+      "score": -0.38082232091807483
+    },
+    {
       "ticker": "OKLO",
-      "score": -0.4709917547759548
+      "score": -0.2189446768861193
     },
     {
       "ticker": "EOSE",
-      "score": -0.47634579173599406
+      "score": -0.23520754591436616
+    },
+    {
+      "ticker": "SMR",
+      "score": -0.30306987421833825
     },
     {
       "ticker": "QBTS",
-      "score": -0.21963178703680925
-    },
-    {
-      "ticker": "FUN",
-      "score": -0.6122755003348219
-    },
-    {
-      "ticker": "FLNC",
-      "score": -0.6150820569929332
+      "score": -0.1748534220136116
     },
     {
       "ticker": "METC",
-      "score": -0.6549472286273187
+      "score": -0.3861356085806234
     },
     {
-      "ticker": "FCEL",
-      "score": -0.60016714719896
+      "ticker": "LUNR",
+      "score": -0.3704877449128859
     },
     {
-      "ticker": "TE",
-      "score": -0.5004896009883154
+      "ticker": "BEPC",
+      "score": -0.1359649975397636
     },
     {
       "ticker": "TLN",
-      "score": -0.6230187099899102
+      "score": -0.4806656652691894
     },
     {
-      "ticker": "HNRG",
-      "score": -0.18088669874039975
+      "ticker": "LWLG",
+      "score": -0.3373330980484878
     }
   ],
   "flatten": {
@@ -89,40 +113,22 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "3 up / 7 down / 0 flat",
+    "said": "3 up / 2 down / 0 flat",
     "bullets": [
-      "XLB DOWN -7.6",
+      "XLB missing",
       "XLC UP +0.4",
       "XLY DOWN -4.7",
       "XLP missing",
       "XLE UP +4.0",
       "XLF DOWN -4.1",
       "XLV UP +0.9",
-      "XLI DOWN -5.9",
-      "XLRE DOWN -8.5",
-      "XLK DOWN -7.5",
-      "XLU DOWN -8.2"
+      "XLI missing",
+      "XLRE missing",
+      "XLK missing",
+      "XLU missing"
     ]
   },
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T07:51:25.322391-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-09-15_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2258757,
-          "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SKHY, DVN, PR, KSPI, MSFT"
-        }
-      ],
-      "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SKHY, DVN, PR, KSPI, MSFT"
-    },
     {
       "key": "ab",
       "title": "AB checklist",
@@ -430,6 +436,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T08:11:22.982569-04:00"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T08:15:41.106526-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 87526,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11377,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T07:31:21.815244-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T07:31:21.815244-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
