@@ -101,6 +101,8 @@ def test_factor_mine_template_paints_every_strategy() -> None:
     assert "pending — not 0%" in html
     assert "attachLiveSessionDate" in html
     assert "loadLiveDay" in html
+    assert "today_strategies.json" in html
+    assert "function firstOk" in html
     assert "after 09:30 live" in html
     assert "LIVE</span>" in html
     assert "setInterval(loadLiveDay, afterBell()?20000:60000)" in html
@@ -192,6 +194,7 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "Theme Radar" in book_suggestions._POLLER_JS
     assert "factor-mine/today_strategies.json" in book_suggestions._POLLER_JS
     assert "afterBell() ? 20000 : 60000" in book_suggestions._POLLER_JS
+    assert "function firstOk" in book_suggestions._POLLER_JS
     assert 'cron: "32 13 * * 1-5"' in orch
     assert 'cron: "35 14 * * 1-5"' in orch
 

@@ -2949,10 +2949,24 @@ window.addEventListener('resize', draw);
       return h>9 || (h===9 && m>=30);
     }catch(e){ return true; }
   }
+  function getJson(url){
+    return fetch(url+(url.indexOf('?')>=0?'&':'?')+'t='+Date.now(),{cache:'no-store'}).then(function(r){
+      if(!r.ok) throw new Error(String(r.status));
+      return r.json();
+    });
+  }
+  function firstOk(urls){
+    var i=0;
+    function next(){
+      if(i>=urls.length) return Promise.resolve({});
+      return getJson(urls[i++]).catch(next);
+    }
+    return next();
+  }
   function loadLiveDay(){
   Promise.all([
-    fetch(RAW+'?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.json():{};}).catch(function(){return {};}),
-    fetch(STRAT+'?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.json():{};}).catch(function(){return {};})
+    firstOk(['today.json','./today.json', RAW]),
+    firstOk(['today_strategies.json','./today_strategies.json', STRAT])
   ]).then(function(arr){
     var d=arr[0]||{}, st=arr[1]||{};
     window.__TODAY_STRATS=st;
