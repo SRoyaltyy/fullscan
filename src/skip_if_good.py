@@ -544,19 +544,66 @@ def check_strategy_tickets(date: str) -> bool:
     if missing:
         return _log(False, "strategy_tickets", date,
                     f"missing families {sorted(missing)}")
+    if not tickets_are_live_open(date):
+        return _log(False, "strategy_tickets", date,
+                    "tickets not after-open live px")
     return _log(True, "strategy_tickets", date,
                 f"legal_for={legal} n={len(strats)} n_ok={data.get('n_ok')}")
 
 
+def after_bell(when: datetime | None = None) -> bool:
+    """True at/after 09:30 ET. Same cut as elite_live_px.after_open."""
+    t = when or datetime.now(ET)
+    if t.tzinfo is None:
+        t = t.replace(tzinfo=ET)
+    else:
+        t = t.astimezone(ET)
+    return t.hour > 9 or (t.hour == 9 and t.minute >= 30)
+
+
+def tickets_are_live_open(date: str, when: datetime | None = None) -> bool:
+    """After 09:30 ET on this session, tickets must carry live after-open px.
+
+    A pre-bell ``session_open`` stamp (07:47 export, after_open=false) is
+    not the 09:30 pack. Other dates / before the bell are not judged here.
+    """
+    t = when or datetime.now(ET)
+    if t.tzinfo is None:
+        t = t.replace(tzinfo=ET)
+    else:
+        t = t.astimezone(ET)
+    if t.strftime("%Y-%m-%d") != str(date):
+        return True
+    if not after_bell(t):
+        return True
+    paths = [
+        ROOT / "data" / "day_board" / "today_strategies.json",
+        ROOT / "data" / "day_board" / f"{date}_strategy_tickets.json",
+        ROOT / "dashboard" / "factor-mine" / "strategy_tickets.json",
+    ]
+    found = next((p for p in paths if p.is_file()), None)
+    if found is None:
+        return False
+    try:
+        data = json.loads(found.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return False
+    return bool((data.get("quote") or {}).get("after_open"))
+
+
 def check_open_0930(date: str) -> bool:
-    """09:30 pack landed: session-open tickets + connected paper snapshot.
+    """09:30 pack landed: live after-open tickets + connected paper snapshot.
 
     A 401 / missing last file must not skip — 09:35 orch should heal.
+    A 07:47 session_open stamp without after_open is not done.
     Hard-red sit (0 tickets) still counts when the sandbox connected.
     Does not change flatten_robust.
     """
     if not check_strategy_tickets(date):
         return _log(False, "open_0930", date, "tickets not session-open")
+    if not tickets_are_live_open(date):
+        return _log(False, "open_0930", date,
+                    "tickets not after-open live px")
     path = ROOT / "data" / "sleeve_merge" / "webull_last.json"
     if not path.is_file():
         return _log(False, "open_0930", date, "webull_last missing")

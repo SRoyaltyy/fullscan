@@ -22,7 +22,13 @@ on:
     # 09:30 ET both DST sides. Clock wait holds an early EST fire
     # until the bell; a later EDT fire is a skip-held no-op.
     - cron: "30 13 * * 1-5"
+    - cron: "33 13 * * 1-5"
+    - cron: "40 13 * * 1-5"
+    - cron: "50 13 * * 1-5"
     - cron: "30 14 * * 1-5"
+    - cron: "33 14 * * 1-5"
+    - cron: "40 14 * * 1-5"
+    - cron: "50 14 * * 1-5"
   workflow_dispatch:
     inputs:
       run_date:
