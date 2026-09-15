@@ -272,6 +272,7 @@ def elite_ticket_1d(date: str) -> tuple[list, list, dict] | None:
     from . import elite_live_px as elp
 
     paths = (
+        BOARD_DIR / f"{date}_open_0930.json",
         BOARD_DIR / "today_strategies.json",
         BOARD_DIR / f"{date}_strategy_tickets.json",
         ROOT / "dashboard" / "factor-mine" / "strategy_tickets.json",

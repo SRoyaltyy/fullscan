@@ -645,6 +645,7 @@ def _combo_would_buy(rows, rec_by: dict, members: list[str],
 def load_existing_payload(date: str) -> dict:
     """On-disk tickets for this session, or {}."""
     paths = (
+        DAY / f"{date}_open_0930.json",
         DAY / f"{date}_strategy_tickets.json",
         DAY / "strategy_tickets.json",
         DASH_FM / "strategy_tickets.json",
@@ -666,19 +667,123 @@ def load_existing_payload(date: str) -> dict:
     return {}
 
 
+def open_0930_path(date: str) -> Path:
+    return DAY / f"{date}_open_0930.json"
+
+
+def _elite_for_date(data: dict, date: str) -> bool:
+    from . import elite_live_px as elp
+
+    if not isinstance(data, dict):
+        return False
+    legal = str(data.get("clock_legal_for") or data.get("date") or "")
+    if legal and legal != date:
+        return False
+    return elp.quote_is_elite_live(data.get("quote"))
+
+
+def recover_open_0930_from_git(date: str) -> dict:
+    """Earliest after-09:30 elite_live tickets for this date in git history."""
+    import subprocess
+
+    if not (ROOT / ".git").exists():
+        return {}
+    try:
+        out = subprocess.check_output(
+            ["git", "log", "--format=%H", "--",
+             "data/day_board/today_strategies.json"],
+            cwd=str(ROOT), text=True, timeout=30,
+        )
+    except (OSError, subprocess.SubprocessError):
+        return {}
+    best: dict = {}
+    best_at = ""
+    for sha in out.split():
+        try:
+            raw = subprocess.check_output(
+                ["git", "show", f"{sha}:data/day_board/today_strategies.json"],
+                cwd=str(ROOT), timeout=15,
+            )
+            data = json.loads(raw.decode("utf-8"))
+        except (OSError, subprocess.SubprocessError, ValueError,
+                json.JSONDecodeError, UnicodeDecodeError):
+            continue
+        if not _elite_for_date(data, date):
+            continue
+        at = str(data.get("generated_at") or "")
+        if not best or (at and (not best_at or at < best_at)):
+            best, best_at = data, at
+    return best
+
+
+def load_open_0930_book(date: str) -> dict:
+    """Locked 09:30 Elite names for this session, or {}."""
+    path = open_0930_path(date)
+    if path.is_file():
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError, json.JSONDecodeError):
+            data = {}
+        if _elite_for_date(data, date):
+            return data
+    real = (ROOT / "data" / "day_board").resolve()
+    if DAY.resolve() != real:
+        return {}
+    return recover_open_0930_from_git(date)
+
+
+def save_open_0930_book(date: str, payload: dict) -> Path | None:
+    """Write the 09:30 Elite lock once. Later restamps must not replace names."""
+    if not _elite_for_date(payload, date):
+        return None
+    path = open_0930_path(date)
+    if path.is_file():
+        try:
+            prev = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError, json.JSONDecodeError):
+            prev = {}
+        if _elite_for_date(prev, date):
+            return path
+    sb = (payload.get("strategies") or {}).get("stock_book_1d") or {}
+    slim = {
+        "date": payload.get("date") or date,
+        "generated_at": payload.get("generated_at"),
+        "clock_use": payload.get("clock_use") or "session_open",
+        "clock_legal_for": payload.get("clock_legal_for") or date,
+        "session_open": payload.get("session_open") or date,
+        "quote": payload.get("quote"),
+        "buy_1d": payload.get("buy_1d") or sb.get("buy") or [],
+        "sell_1d": payload.get("sell_1d") or sb.get("sell") or [],
+        "strategies": {
+            "stock_book_1d": {
+                "buy": sb.get("buy") or payload.get("buy_1d") or [],
+                "sell": sb.get("sell") or payload.get("sell_1d") or [],
+                "family": sb.get("family") or "stock_book",
+                "date": payload.get("date") or date,
+            }
+        },
+    }
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(slim, indent=2) + "\n", encoding="utf-8")
+    print(f"[strategy-tickets] locked 09:30 Elite book → {path.name}",
+          flush=True)
+    return path
+
+
 def keep_open_elite_book(date: str, payload: dict) -> dict:
     """After 09:30, do not replace today's Elite book with a failed restamp.
 
-    Noon live_boards / map_heat lands rebuilt tickets without ``requests``
-    and overwrote the 11:40 ET ``elite_live`` AVAH book with MTCH +
-    ``session_export+finviz_session: No module named 'requests'``.
-    Keep the 09:30 names; refresh px only when the new stamp is Elite live.
+    2026-09-15: a four-hour-late GH cron restamped ``session_export`` MPC
+    over the 12:47 ``elite_live`` MTCH book; a later Elite land then
+    locked MPC. The 09:30 snapshot (or earliest git elite) is the name
+    lock. Refresh px only when the new stamp is Elite live.
     """
     from . import elite_live_px as elp
 
     if not elp.after_open():
         return payload
-    existing = load_existing_payload(date)
+    locked = load_open_0930_book(date) or {}
+    existing = locked or load_existing_payload(date)
     if not elp.quote_is_elite_live((existing or {}).get("quote")):
         return payload
     if not elp.quote_is_elite_live(payload.get("quote")):
@@ -895,6 +1000,8 @@ def write(date: str, payload: dict | None = None) -> list[Path]:
     existing = load_existing_payload(date)
     payload = keep_open_elite_book(date, payload)
     from . import elite_live_px as elp
+    if elp.quote_is_elite_live(payload.get("quote")):
+        save_open_0930_book(date, payload)
     kept_elite = (
         elp.quote_is_elite_live((existing or {}).get("quote"))
         and elp.quote_is_elite_live(payload.get("quote"))

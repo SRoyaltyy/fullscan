@@ -128,6 +128,9 @@ def test_open_pack_stamps_session_open_and_restamps_pages() -> None:
     assert "assert_session_look(payload, date)" in st
     assert "keep_open_elite_book" in st
     assert "keep elite_live 09:30 book" in st
+    assert "save_open_0930_book" in st
+    assert "${DATE}_open_0930.json" in yml
+    assert "fetch-depth: 80" in yml
     assert "scripts/publish_open_pack.sh" in yml
     assert "publish_dashboard.sh" in script
     assert "deploy-dashboard.yml" in yml
