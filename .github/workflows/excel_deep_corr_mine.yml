@@ -4,8 +4,15 @@ name: Excel Deep Corr Mine
 # continue job re-dispatches this same workflow with reset=false so the
 # next runner skips processed tickers and keeps walking. Generation cap is
 # high because this is a deep remine (time-split invalidates the old board).
+# This agent cannot workflow_dispatch (403). A main push that touches this
+# file starts the remine (same poke as Pre-Open / paper).
+# POKE 2026-09-15: start the time-split remine; cancel the leaky name-split walk.
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/excel_deep_corr_mine.yml"
   workflow_dispatch:
     inputs:
       grids:
@@ -48,7 +55,9 @@ permissions:
 
 concurrency:
   group: excel-deep-corr-mine
-  cancel-in-progress: false
+  # A yml poke replaces a leaky/stale walk. Schedule + continue must not
+  # cancel a healthy in-progress remine (ckpt resume still applies).
+  cancel-in-progress: ${{ github.event_name == 'push' }}
 
 jobs:
   mine:
