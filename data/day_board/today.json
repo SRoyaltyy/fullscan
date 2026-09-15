@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T12:59:22.674239-04:00",
+  "generated_at": "2026-09-15T13:07:07.777827-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -105,31 +105,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T12:56:31.299670-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-15_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 87526,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-09-15_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11377,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T07:31:21.815244-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T07:31:21.815244-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -290,6 +265,31 @@
         }
       ],
       "preview": "raw=221 usable=21 single=29 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | OPEC+ holds October output quotas unchanged | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB \u00b7 # News Parse v2 \u2014 2026-09-15T12:59:14.736000-04:00\nWindow\u224848h | raw=221 | usable=21 | single_name=29 | noise_dropped=171\nusable polarity={'+': 1, '-': 5, 'mixed': 0, 'neutral': 15}"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T13:07:06.447948-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-09-15_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 117993,
+          "preview": "119 events \u00b7 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | ECB 25bp hike delivered; hawkish forecast upgrade | China August credit/social financing \u2014 bond & equity share tops loans  | US existing home sales fall to 14-month low; mortgage rates up 3rd wee"
+        },
+        {
+          "path": "01_daily/events/2026-09-15_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 52371,
+          "preview": "# Event Scan \u2014 2026-09-15\n- events tracked: **119** (via openclaw) (merged with earlier same-day scan)\n- uncertainty: **high**\n- summary: The next 48 hours are a stacked macro gauntlet: August retail sales and UK CPI tomorrow morning, then Chair Warsh's first hike decision with a full SEP, followed by BoE (hold expected) and a near-certain BoJ hike to 1.25%. That lands on a market already dealing with Brent ~$107-109, a shut Saudi East-West pipeline, a 10-year above 5%, and a Trump-Xi summit on Sept 24 that is the last clean shot at extending the Nov 10 US-China tariff truce. Shutdown risk is off the table until December; the live left tails are oil logistics, a hawkish dots/press conference, and a failed Washington summit."
+        }
+      ],
+      "preview": "119 events \u00b7 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | ECB 25bp hike delivered; hawkish forecast upgrade | China August credit/social financing \u2014 bond & equity share tops loans  | US existing home sales fall to 14-month low; mortgage rates up 3rd wee \u00b7 # Event Scan \u2014 2026-09-15\n- events tracked: **119** (via openclaw) (merged with earlier same-day scan)\n- uncertainty: **high**\n- summary: The next 48 hours are a stacked macro gauntlet: August retail sales and UK CPI tomorrow morning, then Chair Warsh's first hike decision with a full SEP, followed by BoE (hold expected) and a near-certain BoJ hike to 1.25%. That lands on a market already dealing with Brent ~$107-109, a shut Saudi East-West pipeline, a 10-year above 5%, and a Trump-Xi summit on Sept 24 that is the last clean shot at extending the Nov 10 US-China tariff truce. Shutdown risk is off the table until December; the live left tails are oil logistics, a hawkish dots/press conference, and a failed Washington summit."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
