@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T14:42:07.956009-04:00",
+  "generated_at": "2026-09-15T14:43:09.833982-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -602,8 +602,8 @@
           "path": "data/stock_book/2026-09-15_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=189",
-          "size": 1500924
+          "reason": "horizons=5 names=214",
+          "size": 1600177
         },
         {
           "key": "book_md",
@@ -612,7 +612,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 82483
+          "size": 82881
         },
         {
           "key": "green",
@@ -664,8 +664,8 @@
           "path": "data/stock_book/2026-09-15_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=189",
-          "size": 1500924
+          "reason": "horizons=5 names=214",
+          "size": 1600177
         },
         {
           "key": "dash_html",
@@ -702,62 +702,78 @@
   "selections": {
     "buy_1d": [
       {
+        "ticker": "MPC",
+        "score": 0.29209191309625154
+      },
+      {
+        "ticker": "ZD",
+        "score": 0.5589167166768818
+      },
+      {
         "ticker": "DBX",
-        "score": 0.6703885201679096
+        "score": 0.6655696991736344
       },
       {
-        "ticker": "APPN",
-        "score": 0.6208283227234574
+        "ticker": "OKTA",
+        "score": 0.3171949408503709
       },
       {
-        "ticker": "META",
-        "score": 0.10004151018196517
+        "ticker": "S",
+        "score": 0.6756555447512882
       },
       {
-        "ticker": "SNAP",
-        "score": 0.47600973989817624
+        "ticker": "MTCH",
+        "score": 0.2507798001669761
+      },
+      {
+        "ticker": "TWLO",
+        "score": 0.2344131255187727
+      },
+      {
+        "ticker": "AVAH",
+        "score": 0.6530342269261553
       }
     ],
     "sell_1d": [
       {
         "ticker": "METC",
-        "score": -0.6494356220511095
+        "score": -0.6641762679092023
       },
       {
         "ticker": "FLNC",
-        "score": -0.6024996110643821
+        "score": -0.6103319363103141
       },
       {
         "ticker": "HNRG",
-        "score": -0.19711615145848124
-      },
-      {
-        "ticker": "OKLO",
-        "score": -0.46637075466845285
-      },
-      {
-        "ticker": "TLN",
-        "score": -0.6051731507994839
-      },
-      {
-        "ticker": "NRG",
-        "score": -0.36939077442765333
+        "score": -0.19924177908326396
       },
       {
         "ticker": "FCEL",
-        "score": -0.5278310717430196
+        "score": -0.6033423724534289
       },
       {
-        "ticker": "LVWR",
-        "score": -0.5513448523029841
+        "ticker": "TLN",
+        "score": -0.6297909817709133
       },
       {
         "ticker": "TE",
-        "score": -0.39871432694503406
+        "score": -0.49727484901676977
       },
       {
-        "ticker": "AG",
-        "score": -0.47515655686471775
+        "ticker": "OKLO",
+        "score": -0.4664643178825578
+      },
+      {
+        "ticker": "NRG",
+        "score": -0.3840146345488047
+      },
+      {
+        "ticker": "QBTS",
+        "score": -0.28103494195941975
+      },
+      {
+        "ticker": "LVWR",
+        "score": -0.5557584204822905
       }
     ],
     "flatten": {
@@ -815,45 +831,6 @@
     }
   },
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T10:13:58.542715-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-15_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 87829,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-09-15_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11523,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T10:13:58.094916-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-        },
-        {
-          "path": "data/exports/finviz_2026-09-15.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11104042,
-          "preview": "11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11415288,
-          "preview": "11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T10:13:58.094916-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-    },
     {
       "key": "map_heat",
       "title": "Map heat morning overlay",
@@ -3570,6 +3547,59 @@
         }
       ],
       "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, SM, WDS, SFL, PBR"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T14:43:09.317964-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-15_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1600177,
+          "preview": "1d BUY MPC, ZD, DBX, OKTA, S, MTCH, TWLO, AVAH \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, NRG"
+        },
+        {
+          "path": "data/stock_book/2026-09-15_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-15_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2371,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-15_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12617,
+          "preview": "2026-09-15 BUY MPC, ZD, DBX, OKTA, S, MTCH, TWLO, AVAH \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, NRG"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12617,
+          "preview": "2026-09-15 BUY MPC, ZD, DBX, OKTA, S, MTCH, TWLO, AVAH \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, NRG"
+        },
+        {
+          "path": "01_daily/2026-09-15_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 84033,
+          "preview": "# Stock book \u2014 2026-09-15\n_Generated 2026-09-15T14:42:15.244747-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY MPC, ZD, DBX, OKTA, S, MTCH, TWLO, AVAH \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, NRG \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-15 BUY MPC, ZD, DBX, OKTA, S, MTCH, TWLO, AVAH \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, NRG \u00b7 2026-09-15 BUY MPC, ZD, DBX, OKTA, S, MTCH, TWLO, AVAH \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, NRG \u00b7 # Stock book \u2014 2026-09-15\n_Generated 2026-09-15T14:42:15.244747-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
