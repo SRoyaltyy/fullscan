@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T08:50:54.126707-04:00",
+  "generated_at": "2026-09-15T09:11:00.272818-04:00",
   "export_used": "data/exports/finviz_2026-09-15.csv",
   "ticker_digest_count": 400,
   "signal_count": 400,
@@ -48,8 +48,8 @@
     },
     {
       "ticker": "AJG",
-      "digest": "Goldman Sachs AI productivity call fuels 5.4% surge in AJG shares",
-      "news_title": "As Employers Plan for Growth, Workforce Pressures Continue to Mount",
+      "digest": "Arthur J. Gallagher & Co. announces acquisition of Colorado-based Innovise Business Consultants, expanding its commercial insurance and surety bonding capabilities in the Western U.S.",
+      "news_title": "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
       "sector": "Financial",
       "industry": "Insurance Brokers",
       "is_dividend": false,
@@ -214,7 +214,7 @@
     {
       "ticker": "BAC",
       "digest": "BAC CEO's soft Q3 outlook at Barclays conference drives 5% plunge",
-      "news_title": "Bonds, AI, Cryptoâ¦It's Make-or-Break Time for Markets",
+      "news_title": "Merrill Launches New Services to Support Portfolio Transitions and Systematic Cash Investing",
       "sector": "Financial",
       "industry": "Banks - Diversified",
       "is_dividend": false,
@@ -247,7 +247,7 @@
     {
       "ticker": "BE",
       "digest": "Mizuho raises Bloom Energy price target to $351 from $242, reiterates Outperform on stronger pricing and demand signals",
-      "news_title": "BE Stock Falls Most In Nearly A Month: Why This Analyst Sees Over 36% Upside",
+      "news_title": "Hedge Fund That Nearly Collapsed Bets Big on AMD Again",
       "sector": "Industrials",
       "industry": "Electrical Equipment & Parts",
       "is_dividend": false,
@@ -316,17 +316,6 @@
       "news_title": "Bull of the Day: Caterpillar (CAT)",
       "sector": "Industrials",
       "industry": "Farm & Heavy Construction Machinery",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "CDNS",
-      "digest": "Cadence beats Q2 2026 estimates with EPS $2.11, revenue $1.6B, signs major Intel deal underpinning raised 2026 AI-driven outlook",
-      "news_title": "What Kind Of Swing Are You Signing Up For With Synopsys Stock?",
-      "sector": "Technology",
-      "industry": "Software - Application",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -445,7 +434,7 @@
     {
       "ticker": "DASH",
       "digest": "Scotiabank initiated coverage of DoorDash with a Sector Outperform rating and a $275 price target, citing its scale, subscription-driven user lock-in and margin benefits.",
-      "news_title": "Is Uber Stock Cheap, Or Is The Cash Already Spent?",
+      "news_title": "DoorDash and Wonder Announce Strategic Partnership",
       "sector": "Consumer Cyclical",
       "industry": "Internet Retail",
       "is_dividend": false,
@@ -643,7 +632,7 @@
     {
       "ticker": "KO",
       "digest": "Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.",
-      "news_title": "Coca-Cola Co's Dividend Analysis",
+      "news_title": "The Coca-Cola System: A 140-Year Legacy That Continues to Deliver for America",
       "sector": "Consumer Defensive",
       "industry": "Beverages - Non-Alcoholic",
       "is_dividend": false,
@@ -694,14 +683,25 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export"
+    },
+    {
+      "ticker": "MNST",
+      "digest": "Q2 earnings momentum and recent stock split fuel MNST 4.09% gain",
+      "news_title": "KO Stock Near Highs: Has Momentum Outrun Value?",
+      "sector": "Consumer Defensive",
+      "industry": "Beverages - Non-Alcoholic",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
     }
   ],
   "by_sector": {
     "Financial": [
       {
         "ticker": "AJG",
-        "digest": "Goldman Sachs AI productivity call fuels 5.4% surge in AJG shares",
-        "news_title": "As Employers Plan for Growth, Workforce Pressures Continue to Mount",
+        "digest": "Arthur J. Gallagher & Co. announces acquisition of Colorado-based Innovise Business Consultants, expanding its commercial insurance and surety bonding capabilities in the Western U.S.",
+        "news_title": "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
         "sector": "Financial",
         "industry": "Insurance Brokers",
         "is_dividend": false,
@@ -723,7 +723,7 @@
       {
         "ticker": "BAC",
         "digest": "BAC CEO's soft Q3 outlook at Barclays conference drives 5% plunge",
-        "news_title": "Bonds, AI, Cryptoâ¦It's Make-or-Break Time for Markets",
+        "news_title": "Merrill Launches New Services to Support Portfolio Transitions and Systematic Cash Investing",
         "sector": "Financial",
         "industry": "Banks - Diversified",
         "is_dividend": false,
@@ -802,7 +802,7 @@
       {
         "ticker": "BE",
         "digest": "Mizuho raises Bloom Energy price target to $351 from $242, reiterates Outperform on stronger pricing and demand signals",
-        "news_title": "BE Stock Falls Most In Nearly A Month: Why This Analyst Sees Over 36% Upside",
+        "news_title": "Hedge Fund That Nearly Collapsed Bets Big on AMD Again",
         "sector": "Industrials",
         "industry": "Electrical Equipment & Parts",
         "is_dividend": false,
@@ -967,74 +967,6 @@
         "source": "finviz_export"
       }
     ],
-    "Technology": [
-      {
-        "ticker": "ADBE",
-        "digest": "Adobe posts record Q3 revenue $6.76B and non-GAAP EPS $6.13, raises FY26 outlook and leans into AI-driven freemium strategy",
-        "news_title": "NOW, INTU, ADBE, CRM Stocks Surge As AI Pacing Debate Hammers Chips: Analyst Says Hardware Vs Software Trade Is Turned On Its Head",
-        "sector": "Technology",
-        "industry": "Software - Application",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "AMD",
-        "digest": "AI leaders' call to slow frontier development sparks AMD's 5% premarket plunge",
-        "news_title": "Hedge Fund That Nearly Collapsed Bets Big on AMD Again",
-        "sector": "Technology",
-        "industry": "Semiconductors",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "APH",
-        "digest": "Fabrinet earnings weakness and rising yields spark 6.5% APH drop",
-        "news_title": "Top Stock Reports for Meta Platforms, Marvell & Amphenol",
-        "sector": "Technology",
-        "industry": "Electronic Components",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "ASML",
-        "digest": "ASML nearly sold out of 2027 EUV capacity amid very strong AI-driven demand, JPMorgan says",
-        "news_title": "Samsung Stock Falls as $18.7 Billion Power Proposal Highlights AI Infrastructure Costs",
-        "sector": "Technology",
-        "industry": "Semiconductor Equipment & Materials",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "CDNS",
-        "digest": "Cadence beats Q2 2026 estimates with EPS $2.11, revenue $1.6B, signs major Intel deal underpinning raised 2026 AI-driven outlook",
-        "news_title": "What Kind Of Swing Are You Signing Up For With Synopsys Stock?",
-        "sector": "Technology",
-        "industry": "Software - Application",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "DDOG",
-        "digest": "Snowflake's stronger-than-expected quarterly revenue and earnings support cloud and AI-focused enterprise software peers including Datadog",
-        "news_title": "French AI boom exposes Europes funding gap as startups turn to U.S.",
-        "sector": "Technology",
-        "industry": "Software - Application",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      }
-    ],
     "Basic Materials": [
       {
         "ticker": "APD",
@@ -1103,6 +1035,63 @@
         "source": "finviz_export"
       }
     ],
+    "Technology": [
+      {
+        "ticker": "ADBE",
+        "digest": "Adobe posts record Q3 revenue $6.76B and non-GAAP EPS $6.13, raises FY26 outlook and leans into AI-driven freemium strategy",
+        "news_title": "NOW, INTU, ADBE, CRM Stocks Surge As AI Pacing Debate Hammers Chips: Analyst Says Hardware Vs Software Trade Is Turned On Its Head",
+        "sector": "Technology",
+        "industry": "Software - Application",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "AMD",
+        "digest": "AI leaders' call to slow frontier development sparks AMD's 5% premarket plunge",
+        "news_title": "Hedge Fund That Nearly Collapsed Bets Big on AMD Again",
+        "sector": "Technology",
+        "industry": "Semiconductors",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "APH",
+        "digest": "Fabrinet earnings weakness and rising yields spark 6.5% APH drop",
+        "news_title": "Top Stock Reports for Meta Platforms, Marvell & Amphenol",
+        "sector": "Technology",
+        "industry": "Electronic Components",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "ASML",
+        "digest": "ASML nearly sold out of 2027 EUV capacity amid very strong AI-driven demand, JPMorgan says",
+        "news_title": "Samsung Stock Falls as $18.7 Billion Power Proposal Highlights AI Infrastructure Costs",
+        "sector": "Technology",
+        "industry": "Semiconductor Equipment & Materials",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "DDOG",
+        "digest": "Snowflake's stronger-than-expected quarterly revenue and earnings support cloud and AI-focused enterprise software peers including Datadog",
+        "news_title": "French AI boom exposes Europes funding gap as startups turn to U.S.",
+        "sector": "Technology",
+        "industry": "Software - Application",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      }
+    ],
     "Consumer Cyclical": [
       {
         "ticker": "AMZN",
@@ -1118,7 +1107,7 @@
       {
         "ticker": "DASH",
         "digest": "Scotiabank initiated coverage of DoorDash with a Sector Outperform rating and a $275 price target, citing its scale, subscription-driven user lock-in and margin benefits.",
-        "news_title": "Is Uber Stock Cheap, Or Is The Cash Already Spent?",
+        "news_title": "DoorDash and Wonder Announce Strategic Partnership",
         "sector": "Consumer Cyclical",
         "industry": "Internet Retail",
         "is_dividend": false,
@@ -1265,6 +1254,30 @@
         "source": "finviz_export"
       }
     ],
+    "Consumer Defensive": [
+      {
+        "ticker": "KO",
+        "digest": "Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.",
+        "news_title": "The Coca-Cola System: A 140-Year Legacy That Continues to Deliver for America",
+        "sector": "Consumer Defensive",
+        "industry": "Beverages - Non-Alcoholic",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "MNST",
+        "digest": "Q2 earnings momentum and recent stock split fuel MNST 4.09% gain",
+        "news_title": "KO Stock Near Highs: Has Momentum Outrun Value?",
+        "sector": "Consumer Defensive",
+        "industry": "Beverages - Non-Alcoholic",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      }
+    ],
     "Real Estate": [
       {
         "ticker": "EQIX",
@@ -1272,19 +1285,6 @@
         "news_title": "CoreWeave Shares Sink After Bernstein Warns Of Slower AI Training",
         "sector": "Real Estate",
         "industry": "REIT - Specialty",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      }
-    ],
-    "Consumer Defensive": [
-      {
-        "ticker": "KO",
-        "digest": "Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.",
-        "news_title": "Coca-Cola Co's Dividend Analysis",
-        "sector": "Consumer Defensive",
-        "industry": "Beverages - Non-Alcoholic",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
@@ -1306,8 +1306,8 @@
     },
     {
       "ticker": "AJG",
-      "digest": "Goldman Sachs AI productivity call fuels 5.4% surge in AJG shares",
-      "news_title": "As Employers Plan for Growth, Workforce Pressures Continue to Mount",
+      "digest": "Arthur J. Gallagher & Co. announces acquisition of Colorado-based Innovise Business Consultants, expanding its commercial insurance and surety bonding capabilities in the Western U.S.",
+      "news_title": "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
       "sector": "Financial",
       "industry": "Insurance Brokers",
       "is_dividend": false,
@@ -1472,7 +1472,7 @@
     {
       "ticker": "BAC",
       "digest": "BAC CEO's soft Q3 outlook at Barclays conference drives 5% plunge",
-      "news_title": "Bonds, AI, Cryptoâ¦It's Make-or-Break Time for Markets",
+      "news_title": "Merrill Launches New Services to Support Portfolio Transitions and Systematic Cash Investing",
       "sector": "Financial",
       "industry": "Banks - Diversified",
       "is_dividend": false,
@@ -1505,7 +1505,7 @@
     {
       "ticker": "BE",
       "digest": "Mizuho raises Bloom Energy price target to $351 from $242, reiterates Outperform on stronger pricing and demand signals",
-      "news_title": "BE Stock Falls Most In Nearly A Month: Why This Analyst Sees Over 36% Upside",
+      "news_title": "Hedge Fund That Nearly Collapsed Bets Big on AMD Again",
       "sector": "Industrials",
       "industry": "Electrical Equipment & Parts",
       "is_dividend": false,
@@ -1574,17 +1574,6 @@
       "news_title": "Bull of the Day: Caterpillar (CAT)",
       "sector": "Industrials",
       "industry": "Farm & Heavy Construction Machinery",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "CDNS",
-      "digest": "Cadence beats Q2 2026 estimates with EPS $2.11, revenue $1.6B, signs major Intel deal underpinning raised 2026 AI-driven outlook",
-      "news_title": "What Kind Of Swing Are You Signing Up For With Synopsys Stock?",
-      "sector": "Technology",
-      "industry": "Software - Application",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -1703,7 +1692,7 @@
     {
       "ticker": "DASH",
       "digest": "Scotiabank initiated coverage of DoorDash with a Sector Outperform rating and a $275 price target, citing its scale, subscription-driven user lock-in and margin benefits.",
-      "news_title": "Is Uber Stock Cheap, Or Is The Cash Already Spent?",
+      "news_title": "DoorDash and Wonder Announce Strategic Partnership",
       "sector": "Consumer Cyclical",
       "industry": "Internet Retail",
       "is_dividend": false,
@@ -1901,7 +1890,7 @@
     {
       "ticker": "KO",
       "digest": "Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.",
-      "news_title": "Coca-Cola Co's Dividend Analysis",
+      "news_title": "The Coca-Cola System: A 140-Year Legacy That Continues to Deliver for America",
       "sector": "Consumer Defensive",
       "industry": "Beverages - Non-Alcoholic",
       "is_dividend": false,
@@ -2010,8 +1999,8 @@
     },
     {
       "ticker": "NSC",
-      "digest": "Norfolk Southern and Union Pacific file STB response defending proposed merger, say it meets publicâinterest review threshold",
-      "news_title": "SC Ports, Norfolk Southern expand intermodal access to Huntsville",
+      "digest": "South Carolina Gov. McMaster backs proposed Union PacificâNorfolk Southern merger in letter to Surface Transportation Board",
+      "news_title": "SC Gov. Henry McMaster Voices Support for Union Pacific-Norfolk Southern Merger",
       "sector": "Industrials",
       "industry": "Railroads",
       "is_dividend": false,
@@ -2058,17 +2047,6 @@
       "news_title": "Amazon Is Selling Its First Sterling Bonds in Four-Part Deal",
       "sector": "Financial",
       "industry": "Banks - Regional",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "ORCL",
-      "digest": "Oracle begins new layoffs with potential double-digit cuts on some teams amid heavy AI infrastructure spending",
-      "news_title": "Bonds, AI, Cryptoâ¦It's Make-or-Break Time for Markets",
-      "sector": "Technology",
-      "industry": "Software - Infrastructure",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -2168,6 +2146,28 @@
       "news_title": "What off-price retailers are saying about tariff refunds",
       "sector": "Consumer Cyclical",
       "industry": "Apparel Retail",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "RSG",
+      "digest": "Republic Services beats Q2 estimates with non-GAAP EPS $1.85, revenue $4.43B, raises 2026 guidance on pricing strength, commodities and M&A",
+      "news_title": "Judge sets date for Colgate toothpaste tube recyclability trial",
+      "sector": "Industrials",
+      "industry": "Waste Management",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "RTX",
+      "digest": "RTX's Pratt & Whitney completes F135 Engine Core Upgrade Risk Reduction Design Review for F-35 propulsion modernization",
+      "news_title": "RTX's Pratt & Whitney completes F135 Engine Core Upgrade Risk Reduction Design Review",
+      "sector": "Industrials",
+      "industry": "Aerospace & Defense",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
