@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T16:23:28.024227-04:00",
+  "generated_at": "2026-09-15T16:26:28.910235-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -105,31 +105,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "events",
-      "title": "Event scanner (primary)",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T15:30:56.155324-04:00",
-      "files": [
-        {
-          "path": "01_daily/events/2026-09-15_events.json",
-          "ok": true,
-          "reason": "",
-          "size": 145805,
-          "preview": "147 events \u00b7 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | ECB 25bp hike delivered; hawkish forecast upgrade | China August credit/social financing \u2014 bond & equity share tops loans  | US existing home sales fall to 14-month low; mortgage rates up 3rd wee"
-        },
-        {
-          "path": "01_daily/events/2026-09-15_events.md",
-          "ok": true,
-          "reason": "",
-          "size": 60260,
-          "preview": "# Event Scan \u2014 2026-09-15\n- events tracked: **147** (via openclaw) (merged with earlier same-day scan)\n- uncertainty: **high**\n- summary: The next 48 hours are a stacked global-tightening event: US retail sales then Warsh's first FOMC hike (highly priced), followed by BoE (hold expected) and a near-certain BoJ hike to 1.25%. Overlay is a still-hot Iran/Hormuz oil shock with Brent ~$105-108 and a 5% 10-year, then a Sept 24 Trump-Xi summit that is the last clean window to extend the Nov 10 tariff truce. China just confirmed the split (strong IP, dead credit/retail), so the market is pricing policy, war, and geopolitics \u2014 not a quiet data week."
-        }
-      ],
-      "preview": "147 events \u00b7 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | ECB 25bp hike delivered; hawkish forecast upgrade | China August credit/social financing \u2014 bond & equity share tops loans  | US existing home sales fall to 14-month low; mortgage rates up 3rd wee \u00b7 # Event Scan \u2014 2026-09-15\n- events tracked: **147** (via openclaw) (merged with earlier same-day scan)\n- uncertainty: **high**\n- summary: The next 48 hours are a stacked global-tightening event: US retail sales then Warsh's first FOMC hike (highly priced), followed by BoE (hold expected) and a near-certain BoJ hike to 1.25%. Overlay is a still-hot Iran/Hormuz oil shock with Brent ~$105-108 and a 5% 10-year, then a Sept 24 Trump-Xi summit that is the last clean window to extend the Nov 10 tariff truce. China just confirmed the split (strong IP, dead credit/retail), so the market is pricing policy, war, and geopolitics \u2014 not a quiet data week."
-    },
     {
       "key": "events_catcher",
       "title": "Event catcher (gap hunt, no carry)",
@@ -283,6 +258,31 @@
         }
       ],
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-15\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T16:26:27.566023-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-15.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11109598,
+          "preview": "11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11415288,
+          "preview": "11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
