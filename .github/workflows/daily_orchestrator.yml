@@ -19,6 +19,7 @@ on:
     - cron: "45 13 * * 1-5"
     - cron: "35 14 * * 1-5"   # EST 09:35 heal
     - cron: "45 14 * * 1-5"
+    - cron: "15 14-19 * * 1-5"  # hourly mid-session if GH delayed the 09:30 cron
     - cron: "20 20 * * 1-5"   # ~16:20 ET — if the new 16:10 postclose cron skipped day 1
     - cron: "15 21 * * 1-5"   # ~17:15 ET — Post-Close ALL / sidecar if 16:10 still missed
     - cron: "30 16 * * 0"

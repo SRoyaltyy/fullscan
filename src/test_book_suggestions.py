@@ -239,6 +239,7 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "strat.buy_1d && strat.buy_1d.length" in book_suggestions._POLLER_JS
     assert 'cron: "32 13 * * 1-5"' in orch
     assert 'cron: "35 14 * * 1-5"' in orch
+    assert 'cron: "15 14-19 * * 1-5"' in orch
 
 
 def test_inspect_html_ok_when_poller_and_sidecar() -> None:
