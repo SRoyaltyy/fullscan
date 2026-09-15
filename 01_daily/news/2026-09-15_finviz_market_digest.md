@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-09-15
 
-**Generated:** 2026-09-15T08:10:15.522085-04:00 (America/New_York)
+**Generated:** 2026-09-15T08:30:12.060640-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US equity futures point lower as oil trades above $100 and 10-year yield hits 2007 high ahead of Fed meeting and Empire State data
 **Prior close:** SPX —  Nasdaq —  Dow —
