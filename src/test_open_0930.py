@@ -181,6 +181,7 @@ def test_orch_heals_open_0930() -> None:
     assert "open_0930.yml" in yml
     assert "publish_strategy_tickets.yml" in yml
     assert "skip_if_good --job open_0930" in yml
+    assert 'cron: "15 14-19 * * 1-5"' in yml
 
 
 def main_tests() -> None:
