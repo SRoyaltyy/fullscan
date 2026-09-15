@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T07:26:07.290237-04:00",
+  "generated_at": "2026-09-15T07:26:47.033306-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -123,31 +123,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T07:11:00.937944-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-15_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 270898,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-15_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 16882,
-          "preview": "# MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T07:11:00.729516-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T07:11:00.729516-04:00"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -308,6 +283,31 @@
         }
       ],
       "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SM, WDS, UHS, LFST, PBR"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T07:26:45.706040-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 86307,
+          "preview": "raw=166 usable=15 single=22 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | OPEC+ holds October output quotas unchanged | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 4670,
+          "preview": "# News Parse v2 \u2014 2026-09-15T07:26:45.351656-04:00\nWindow\u224848h | raw=166 | usable=15 | single_name=22 | noise_dropped=129\nusable polarity={'+': 1, '-': 4, 'mixed': 0, 'neutral': 10}"
+        }
+      ],
+      "preview": "raw=166 usable=15 single=22 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | OPEC+ holds October output quotas unchanged | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB \u00b7 # News Parse v2 \u2014 2026-09-15T07:26:45.351656-04:00\nWindow\u224848h | raw=166 | usable=15 | single_name=22 | noise_dropped=129\nusable polarity={'+': 1, '-': 4, 'mixed': 0, 'neutral': 10}"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

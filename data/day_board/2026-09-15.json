@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T07:26:07.290237-04:00",
+  "generated_at": "2026-09-15T07:26:47.033306-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -185,7 +185,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 61551
+          "size": 86307
         },
         {
           "key": "events",
@@ -377,7 +377,7 @@
           "size": 0
         }
       ],
-      "said": "general DOWN  -6.215 \u00b7 sectors 3 up / 2 down / 0 flat \u00b7 news 5 items",
+      "said": "general DOWN  -6.215 \u00b7 sectors 3 up / 2 down / 0 flat \u00b7 news 15 items",
       "bullets": [
         "bad: fresh Saudi pipeline outage + Houthi escalation, Brent $108",
         "bad: China Aug retail +0.4% / FAI -7.2% miss",
@@ -814,13 +814,14 @@
       ]
     },
     "news": {
-      "said": "5 items",
+      "said": "15 items",
       "bullets": [
         "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
+        "OPEC+ holds October output quotas unchanged",
+        "Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comments boost September U.S. rate hike expectations",
         "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year",
         "Another rate hike, just for insurance: Five questions for the ECB",
-        "S&P 500, Nasdaq, Dow Drop On Chipmaker Weakness, Treasury Yield Pressure  MSFT, NFLX, ORCL, CRWD, RBLX In Focus",
-        "Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first two ES-SCLC doses"
+        "10-year Treasury yield breaches 5% \u2014 global bond selloff"
       ]
     },
     "weather": {
@@ -832,24 +833,6 @@
     }
   },
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T04:24:33.064220-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-09-15_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1116846,
-          "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "ab",
       "title": "AB checklist",
@@ -3517,6 +3500,31 @@
         }
       ],
       "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SM, WDS, UHS, LFST, PBR"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T07:26:45.706040-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 86307,
+          "preview": "raw=166 usable=15 single=22 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | OPEC+ holds October output quotas unchanged | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 4670,
+          "preview": "# News Parse v2 \u2014 2026-09-15T07:26:45.351656-04:00\nWindow\u224848h | raw=166 | usable=15 | single_name=22 | noise_dropped=129\nusable polarity={'+': 1, '-': 4, 'mixed': 0, 'neutral': 10}"
+        }
+      ],
+      "preview": "raw=166 usable=15 single=22 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | OPEC+ holds October output quotas unchanged | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB \u00b7 # News Parse v2 \u2014 2026-09-15T07:26:45.351656-04:00\nWindow\u224848h | raw=166 | usable=15 | single_name=22 | noise_dropped=129\nusable polarity={'+': 1, '-': 4, 'mixed': 0, 'neutral': 10}"
     }
   ],
   "href": {
