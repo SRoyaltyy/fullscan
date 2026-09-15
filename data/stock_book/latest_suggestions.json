@@ -4,586 +4,611 @@
     "1d": {
       "buy": [
         {
-          "ticker": "MTCH",
-          "score": 0.3436758177117344
+          "ticker": "MPC",
+          "score": 0.29284159326632914
         },
         {
-          "ticker": "FOX",
-          "score": 0.39741166482656987
+          "ticker": "DBX",
+          "score": 0.6659268308303405
         },
         {
-          "ticker": "CARG",
-          "score": 0.5780830455379207
+          "ticker": "OKTA",
+          "score": 0.3767281691284467
+        },
+        {
+          "ticker": "AVAH",
+          "score": 0.6742815729117086
+        },
+        {
+          "ticker": "S",
+          "score": 0.6681106306723062
+        },
+        {
+          "ticker": "APPN",
+          "score": 0.5726047806801684
         },
         {
           "ticker": "SNAP",
-          "score": 0.4644227625704849
+          "score": 0.4293270119929244
+        },
+        {
+          "ticker": "CRWD",
+          "score": 0.14727221746579827
+        },
+        {
+          "ticker": "NXDR",
+          "score": 0.49772530846117596
         }
       ],
       "sell": [
         {
-          "ticker": "OKLO",
-          "score": -0.4769299257081444
-        },
-        {
-          "ticker": "QBTS",
-          "score": -0.25501616507320635
-        },
-        {
-          "ticker": "IONQ",
-          "score": -0.3644584064447287
-        },
-        {
-          "ticker": "EOSE",
-          "score": -0.4433263904578803
-        },
-        {
-          "ticker": "QUBT",
-          "score": -0.17704111275223555
-        },
-        {
-          "ticker": "RGTI",
-          "score": -0.13709147285058954
-        },
-        {
           "ticker": "METC",
-          "score": -0.6516193539580212
+          "score": -0.6570814025646101
         },
         {
           "ticker": "FLNC",
-          "score": -0.6051818574612539
+          "score": -0.6116762744053208
         },
         {
-          "ticker": "TE",
-          "score": -0.48409420520142854
+          "ticker": "HNRG",
+          "score": -0.19834883629987568
+        },
+        {
+          "ticker": "FCEL",
+          "score": -0.6018274608984249
         },
         {
           "ticker": "TLN",
-          "score": -0.6166439695921102
+          "score": -0.6307310675693985
+        },
+        {
+          "ticker": "TE",
+          "score": -0.5031593493192514
+        },
+        {
+          "ticker": "OKLO",
+          "score": -0.4621067662590356
+        },
+        {
+          "ticker": "QBTS",
+          "score": -0.28432953541578804
+        },
+        {
+          "ticker": "NRG",
+          "score": -0.3810403735763207
+        },
+        {
+          "ticker": "AMPX",
+          "score": -0.47440709139388143
         }
       ]
     },
     "3d": {
       "buy": [
         {
-          "ticker": "CARG",
-          "score": 0.6074154133016296
-        },
-        {
-          "ticker": "PRTH",
-          "score": 0.6012804906703391
-        },
-        {
-          "ticker": "PRDO",
-          "score": 0.5495392792296593
-        },
-        {
           "ticker": "WAY",
-          "score": 0.5343317416765214
+          "score": 0.8540536288866765
         },
         {
-          "ticker": "PD",
-          "score": 0.531517690375403
+          "ticker": "ATRC",
+          "score": 0.7513259437230959
         },
         {
-          "ticker": "SONO",
-          "score": 0.5186152348294368
+          "ticker": "AVAH",
+          "score": 0.7456262865694323
         },
         {
-          "ticker": "RNG",
-          "score": 0.5107259828781208
+          "ticker": "DUOL",
+          "score": 0.7329569858055087
         },
         {
-          "ticker": "MH",
-          "score": 0.5033195935004897
+          "ticker": "CLOV",
+          "score": 0.7234843820279837
         },
         {
-          "ticker": "OLLI",
-          "score": 0.483892816102561
+          "ticker": "S",
+          "score": 0.709240423385437
+        },
+        {
+          "ticker": "DSGX",
+          "score": 0.7089477103602531
+        },
+        {
+          "ticker": "DBX",
+          "score": 0.7033967228136706
+        },
+        {
+          "ticker": "ANGX",
+          "score": 0.5724468950518737
+        },
+        {
+          "ticker": "NXDR",
+          "score": 0.5459864242017438
+        },
+        {
+          "ticker": "COCO",
+          "score": 0.4863157564658374
+        },
+        {
+          "ticker": "TDS",
+          "score": 0.48038420300258117
+        },
+        {
+          "ticker": "ECO",
+          "score": 0.4795459365994704
         },
         {
           "ticker": "SNAP",
-          "score": 0.46882393414308504
+          "score": 0.4765456638021551
         },
         {
-          "ticker": "VSNT",
-          "score": 0.4624898291684856
-        },
-        {
-          "ticker": "FOX",
-          "score": 0.4391414809807497
-        },
-        {
-          "ticker": "FA",
-          "score": 0.4326723371572278
-        },
-        {
-          "ticker": "HAE",
-          "score": 0.419091482703295
-        },
-        {
-          "ticker": "BIIB",
-          "score": 0.40527607882813543
+          "ticker": "MPC",
+          "score": 0.3467934547162593
         }
       ],
       "sell": [
         {
           "ticker": "METC",
-          "score": -0.722015408420527
+          "score": -0.7308254570271161
         },
         {
           "ticker": "FUN",
-          "score": -0.6920132176194688
+          "score": -0.7066950313766398
         },
         {
           "ticker": "ASPI",
-          "score": -0.6854794538999469
+          "score": -0.7051179670046644
         },
         {
           "ticker": "TLN",
-          "score": -0.6750696834431726
+          "score": -0.6918339662803465
         },
         {
           "ticker": "TMC",
-          "score": -0.6651906971718456
-        },
-        {
-          "ticker": "FLNC",
-          "score": -0.6633398916404284
-        },
-        {
-          "ticker": "HGV",
-          "score": -0.6555160249807774
+          "score": -0.6855972786229486
         },
         {
           "ticker": "OPEN",
-          "score": -0.6535324532433153
-        },
-        {
-          "ticker": "UAMY",
-          "score": -0.647081293022101
-        },
-        {
-          "ticker": "LWLG",
-          "score": -0.6466126619066037
-        },
-        {
-          "ticker": "ORBS",
-          "score": -0.6450861731883839
-        },
-        {
-          "ticker": "LUNR",
-          "score": -0.6424360366284211
-        },
-        {
-          "ticker": "TROX",
-          "score": -0.6391287105810592
+          "score": -0.6775777368902263
         },
         {
           "ticker": "LODE",
-          "score": -0.6314328480663776
+          "score": -0.6735909821107318
+        },
+        {
+          "ticker": "FLNC",
+          "score": -0.6726223085844955
+        },
+        {
+          "ticker": "LWLG",
+          "score": -0.6653974148685184
+        },
+        {
+          "ticker": "LUNR",
+          "score": -0.6637870129294677
+        },
+        {
+          "ticker": "CDZI",
+          "score": -0.6623047762188712
         },
         {
           "ticker": "FCEL",
-          "score": -0.6301153314968589
+          "score": -0.6620028692240573
+        },
+        {
+          "ticker": "AIIO",
+          "score": -0.6577221105858786
+        },
+        {
+          "ticker": "UAMY",
+          "score": -0.652166625986772
+        },
+        {
+          "ticker": "JOBY",
+          "score": -0.6517939544854714
         }
       ]
     },
     "1w": {
       "buy": [
         {
-          "ticker": "PRTH",
-          "score": 0.6294184191301162
-        },
-        {
-          "ticker": "CARG",
-          "score": 0.6285305930187248
-        },
-        {
-          "ticker": "PRDO",
-          "score": 0.5744359135021774
-        },
-        {
           "ticker": "WAY",
-          "score": 0.561353484062417
+          "score": 0.9014259362537407
         },
         {
-          "ticker": "PD",
-          "score": 0.5568173646096967
+          "ticker": "ATRC",
+          "score": 0.7941876071440681
         },
         {
-          "ticker": "SONO",
-          "score": 0.5488509140365659
+          "ticker": "AVAH",
+          "score": 0.7930965557376306
         },
         {
-          "ticker": "JKHY",
-          "score": 0.5386391757657883
+          "ticker": "DUOL",
+          "score": 0.7715614620419315
         },
         {
-          "ticker": "MH",
-          "score": 0.5240881895174901
+          "ticker": "CLOV",
+          "score": 0.7664046882121094
         },
         {
-          "ticker": "OLLI",
-          "score": 0.49840644419853836
+          "ticker": "DSGX",
+          "score": 0.748054547924798
         },
         {
-          "ticker": "VSNT",
-          "score": 0.4819791308650992
+          "ticker": "S",
+          "score": 0.7404200038010519
         },
         {
-          "ticker": "SNAP",
-          "score": 0.4760862772882852
+          "ticker": "DBX",
+          "score": 0.731715003091145
         },
         {
-          "ticker": "FOX",
-          "score": 0.4737560679605388
+          "ticker": "ANGX",
+          "score": 0.605757329983911
         },
         {
-          "ticker": "FA",
-          "score": 0.45847312275176544
+          "ticker": "NXDR",
+          "score": 0.5741647620080834
         },
         {
-          "ticker": "HAE",
-          "score": 0.4419732864613848
+          "ticker": "WMG",
+          "score": 0.5229722863998579
         },
         {
-          "ticker": "BIIB",
-          "score": 0.4293987937429535
+          "ticker": "TDS",
+          "score": 0.5108708678906119
+        },
+        {
+          "ticker": "COCO",
+          "score": 0.5017814625740425
+        },
+        {
+          "ticker": "ECO",
+          "score": 0.5005235182419339
+        },
+        {
+          "ticker": "MPC",
+          "score": 0.3833527197270336
         }
       ],
       "sell": [
         {
           "ticker": "METC",
-          "score": -0.7745306594564532
+          "score": -0.780900708063042
         },
         {
           "ticker": "FUN",
-          "score": -0.7454051763816476
+          "score": -0.7595762824125658
         },
         {
           "ticker": "ASPI",
-          "score": -0.7360777612670112
+          "score": -0.7532762743717286
         },
         {
           "ticker": "TLN",
-          "score": -0.7224829540698411
+          "score": -0.7364718293369579
         },
         {
           "ticker": "TMC",
-          "score": -0.7184304939048202
-        },
-        {
-          "ticker": "FLNC",
-          "score": -0.7100391021096919
+          "score": -0.7363970753559229
         },
         {
           "ticker": "OPEN",
-          "score": -0.7055552908078604
-        },
-        {
-          "ticker": "HGV",
-          "score": -0.7038730695563776
-        },
-        {
-          "ticker": "UAMY",
-          "score": -0.7017115611339246
-        },
-        {
-          "ticker": "LWLG",
-          "score": -0.697210969273668
-        },
-        {
-          "ticker": "ORBS",
-          "score": -0.6907518232443484
-        },
-        {
-          "ticker": "TROX",
-          "score": -0.6907470179481234
-        },
-        {
-          "ticker": "LUNR",
-          "score": -0.6854612502682936
+          "score": -0.7268805744547713
         },
         {
           "ticker": "LODE",
-          "score": -0.6824759425128251
+          "score": -0.7209600138268948
         },
         {
-          "ticker": "LVWR",
-          "score": -0.6747721350005039
+          "ticker": "FLNC",
+          "score": -0.7166015190537588
+        },
+        {
+          "ticker": "LWLG",
+          "score": -0.7135557222355826
+        },
+        {
+          "ticker": "LUNR",
+          "score": -0.7068558328855361
+        },
+        {
+          "ticker": "UAMY",
+          "score": -0.7065678901576775
+        },
+        {
+          "ticker": "FCEL",
+          "score": -0.7044408279862361
+        },
+        {
+          "ticker": "CDZI",
+          "score": -0.7020596838578991
+        },
+        {
+          "ticker": "AIIO",
+          "score": -0.6986960123270454
+        },
+        {
+          "ticker": "CWH",
+          "score": -0.6955144533297526
         }
       ]
     },
     "2w": {
       "buy": [
         {
-          "ticker": "PRTH",
-          "score": 0.6691506747907432
-        },
-        {
-          "ticker": "CARG",
-          "score": 0.6528337782888323
-        },
-        {
-          "ticker": "SONO",
-          "score": 0.5935684811649626
-        },
-        {
-          "ticker": "PRDO",
-          "score": 0.5909135687269497
-        },
-        {
-          "ticker": "PD",
-          "score": 0.5778901143377554
-        },
-        {
           "ticker": "WAY",
-          "score": 0.5764732050442771
+          "score": 0.9375082222167692
         },
         {
-          "ticker": "JKHY",
-          "score": 0.562161461728817
+          "ticker": "AVAH",
+          "score": 0.8579749417867135
         },
         {
-          "ticker": "MH",
-          "score": 0.5310378204615932
+          "ticker": "ATRC",
+          "score": 0.8371832491610047
         },
         {
-          "ticker": "OLLI",
-          "score": 0.5019721891754003
+          "ticker": "CLOV",
+          "score": 0.8267331112771199
         },
         {
-          "ticker": "VSNT",
-          "score": 0.4976605494425976
+          "ticker": "DUOL",
+          "score": 0.8083829732054568
         },
         {
-          "ticker": "FOX",
-          "score": 0.493573749736729
+          "ticker": "DSGX",
+          "score": 0.7727768338878267
+        },
+        {
+          "ticker": "S",
+          "score": 0.7624174721379342
+        },
+        {
+          "ticker": "DBX",
+          "score": 0.7522263043208737
+        },
+        {
+          "ticker": "NXDR",
+          "score": 0.6300847265663487
+        },
+        {
+          "ticker": "ANGX",
+          "score": 0.6287318817968328
+        },
+        {
+          "ticker": "WMG",
+          "score": 0.5861261081016723
         },
         {
           "ticker": "SNAP",
-          "score": 0.4883862772882852
+          "score": 0.5450794871839858
         },
         {
-          "ticker": "FA",
-          "score": 0.48158823554715285
+          "ticker": "COCO",
+          "score": 0.5149760207152321
         },
         {
-          "ticker": "HAE",
-          "score": 0.4521734174203243
+          "ticker": "ECO",
+          "score": 0.5088005658913576
         },
         {
-          "ticker": "A",
-          "score": 0.4513966171200789
+          "ticker": "MPC",
+          "score": 0.4121050056900622
         }
       ],
       "sell": [
         {
-          "ticker": "METC",
-          "score": -0.7803829454194817
+          "ticker": "FUN",
+          "score": -0.7894585683755944
         },
         {
-          "ticker": "FUN",
-          "score": -0.7775474623446762
+          "ticker": "METC",
+          "score": -0.7802329940260706
         },
         {
           "ticker": "ASPI",
-          "score": -0.7419300472300397
+          "score": -0.7526085603347573
         },
         {
           "ticker": "UAMY",
-          "score": -0.7335509047395132
+          "score": -0.7375662298223482
         },
         {
           "ticker": "TMC",
-          "score": -0.7242827798678487
+          "score": -0.7357293613189515
         },
         {
           "ticker": "TLN",
-          "score": -0.7220556730949932
-        },
-        {
-          "ticker": "TROX",
-          "score": -0.7118993039111521
+          "score": -0.729189140792053
         },
         {
           "ticker": "OPEN",
-          "score": -0.7097375767708889
-        },
-        {
-          "ticker": "FLNC",
-          "score": -0.7096713880727206
-        },
-        {
-          "ticker": "HGV",
-          "score": -0.7095920020532454
-        },
-        {
-          "ticker": "LWLG",
-          "score": -0.7030632552366965
-        },
-        {
-          "ticker": "ORBS",
-          "score": -0.6967654788533253
-        },
-        {
-          "ticker": "ALMS",
-          "score": -0.6941378489378356
-        },
-        {
-          "ticker": "SGML",
-          "score": -0.6866489576679036
+          "score": -0.7242628604177999
         },
         {
           "ticker": "LODE",
-          "score": -0.6864521124530376
+          "score": -0.7171821210368232
+        },
+        {
+          "ticker": "LWLG",
+          "score": -0.7128880081986113
+        },
+        {
+          "ticker": "FLNC",
+          "score": -0.7094338050167875
+        },
+        {
+          "ticker": "LUNR",
+          "score": -0.6996881188485647
+        },
+        {
+          "ticker": "FCEL",
+          "score": -0.6972731139492647
+        },
+        {
+          "ticker": "NB",
+          "score": -0.6951341228605619
+        },
+        {
+          "ticker": "CWH",
+          "score": -0.6936067392927812
+        },
+        {
+          "ticker": "SGML",
+          "score": -0.691891779549803
         }
       ]
     },
     "1m": {
       "buy": [
         {
-          "ticker": "PRTH",
-          "score": 0.6666886032505202
-        },
-        {
-          "ticker": "CARG",
-          "score": 0.6586489580059274
-        },
-        {
-          "ticker": "PRDO",
-          "score": 0.6112202029994676
-        },
-        {
           "ticker": "WAY",
-          "score": 0.5989049474301726
+          "score": 0.9841665295838333
         },
         {
-          "ticker": "JKHY",
-          "score": 0.5956372584617914
+          "ticker": "AVAH",
+          "score": 0.9006852109549119
         },
         {
-          "ticker": "SONO",
-          "score": 0.5932041603720917
+          "ticker": "ATRC",
+          "score": 0.8776649125819769
         },
         {
-          "ticker": "PD",
-          "score": 0.587889788572049
+          "ticker": "CLOV",
+          "score": 0.8648934174612455
         },
         {
-          "ticker": "MH",
-          "score": 0.5472164164785934
+          "ticker": "DUOL",
+          "score": 0.8446074494418796
         },
         {
-          "ticker": "FOX",
-          "score": 0.5235983367165181
+          "ticker": "DSGX",
+          "score": 0.8111696714523715
         },
         {
-          "ticker": "OLLI",
-          "score": 0.5118958172713776
+          "ticker": "S",
+          "score": 0.7928830525535489
         },
         {
-          "ticker": "VSNT",
-          "score": 0.5049098511392112
+          "ticker": "DBX",
+          "score": 0.779830584598348
         },
         {
-          "ticker": "FA",
-          "score": 0.49208902114169045
+          "ticker": "ANGX",
+          "score": 0.6613283167288699
         },
         {
-          "ticker": "SNAP",
-          "score": 0.48034862043348536
+          "ticker": "NXDR",
+          "score": 0.6535030643726883
         },
         {
-          "ticker": "HAE",
-          "score": 0.47046522117841394
+          "ticker": "WMG",
+          "score": 0.6280659512075224
         },
         {
-          "ticker": "A",
-          "score": 0.46540050084659956
+          "ticker": "TDS",
+          "score": 0.5735391376312413
+        },
+        {
+          "ticker": "COCO",
+          "score": 0.5297277268234372
+        },
+        {
+          "ticker": "ECO",
+          "score": 0.5290641475338209
+        },
+        {
+          "ticker": "MPC",
+          "score": 0.44795027070083654
         }
       ],
       "sell": [
         {
-          "ticker": "METC",
-          "score": -0.8634981964554076
+          "ticker": "FUN",
+          "score": -0.8430538194115202
         },
         {
-          "ticker": "FUN",
-          "score": -0.835529421106855
+          "ticker": "METC",
+          "score": -0.8350682450619965
         },
         {
           "ticker": "ASPI",
-          "score": -0.8231283545971039
-        },
-        {
-          "ticker": "TMC",
-          "score": -0.808122576600823
-        },
-        {
-          "ticker": "TLN",
-          "score": -0.8000689437216617
+          "score": -0.8055268677018215
         },
         {
           "ticker": "UAMY",
-          "score": -0.7927711728513369
+          "score": -0.7926814939932538
+        },
+        {
+          "ticker": "TMC",
+          "score": -0.7912891580519258
+        },
+        {
+          "ticker": "TLN",
+          "score": -0.7785870038486642
         },
         {
           "ticker": "OPEN",
-          "score": -0.7923604143354339
-        },
-        {
-          "ticker": "HGV",
-          "score": -0.7885490466288455
-        },
-        {
-          "ticker": "FLNC",
-          "score": -0.7869705985419839
-        },
-        {
-          "ticker": "LWLG",
-          "score": -0.7842615626037607
-        },
-        {
-          "ticker": "TROX",
-          "score": -0.7788176112782164
-        },
-        {
-          "ticker": "ORBS",
-          "score": -0.7730311289092897
+          "score": -0.7783256979823449
         },
         {
           "ticker": "LODE",
-          "score": -0.7680952068994852
+          "score": -0.7693111527529863
         },
         {
-          "ticker": "LVWR",
-          "score": -0.7597377494863371
+          "ticker": "LWLG",
+          "score": -0.7658063155656756
+        },
+        {
+          "ticker": "FLNC",
+          "score": -0.758173015486051
+        },
+        {
+          "ticker": "NB",
+          "score": -0.7477084266123462
+        },
+        {
+          "ticker": "CWH",
+          "score": -0.7476059497620446
         },
         {
           "ticker": "LUNR",
-          "score": -0.755955143554999
+          "score": -0.747516938804633
+        },
+        {
+          "ticker": "SGML",
+          "score": -0.7465749006447916
+        },
+        {
+          "ticker": "FCEL",
+          "score": -0.7444710727114436
         }
       ]
     }
   },
   "buy_1d": [
-    "MTCH",
-    "FOX",
-    "CARG",
-    "SNAP"
+    "MPC",
+    "DBX",
+    "OKTA",
+    "AVAH",
+    "S",
+    "APPN",
+    "SNAP",
+    "CRWD",
+    "NXDR"
   ],
   "sell_1d": [
-    "OKLO",
-    "QBTS",
-    "IONQ",
-    "EOSE",
-    "QUBT",
-    "RGTI",
     "METC",
     "FLNC",
+    "HNRG",
+    "FCEL",
+    "TLN",
     "TE",
-    "TLN"
+    "OKLO",
+    "QBTS",
+    "NRG",
+    "AMPX"
   ]
 }
