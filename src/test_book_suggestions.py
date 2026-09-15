@@ -141,6 +141,7 @@ def test_day_board_falls_back_to_suggestions() -> None:
     assert "data/stock_book/latest_suggestions.json" in html
     assert "today_strategies.json" in html
     assert "Every strategy" in html
+    assert "stock_book_1d" in html
 
 
 def test_preopen_and_book_publish_strip_without_paper() -> None:

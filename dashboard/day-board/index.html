@@ -85,9 +85,10 @@ async function fetchJson(url){
 }
 function tickers(rows, cls){
   return (rows||[]).map(r => {
-    const t = (r.ticker||"").toUpperCase();
+    const t = ((r && r.ticker) || (typeof r === "string" ? r : "")).toUpperCase();
     if(!t) return "";
-    return `<span class="pill ${cls}">${t}</span>`;
+    const px = (r && typeof r === "object") ? r.px : null;
+    return `<span class="pill ${cls}">${t}${px!=null?(" "+px):""}</span>`;
   }).join("");
 }
 function render(board){
@@ -147,9 +148,15 @@ function render(board){
           return bit;
         }).filter(Boolean);
       };
+      const sb = (d.strategies && d.strategies.stock_book_1d) || {};
+      const liveBuys = (d.buy_1d && d.buy_1d.length) ? d.buy_1d : (sb.buy || []);
+      const liveSells = (d.sell_1d && d.sell_1d.length) ? d.sell_1d : (sb.sell || []);
+      if(liveBuys.length || liveSells.length){
+        $("sels").innerHTML = tickers(liveBuys, "buy") + tickers(liveSells, "sell");
+      }
       const keys = Object.keys(d.strategies);
       const q = d.quote || {};
-      const qbit = q.src ? (` · px ${q.src}${(q.src === "elite_live" || q.src === "elite_live_file") ? " (now)" : " (not live)"}`) : "";
+      const qbit = q.src ? (` · px ${q.src}${(String(q.src).indexOf("elite_live")===0) ? " (now)" : " (not live)"}`) : "";
       box.innerHTML = `<div>${keys.length} strategies · ${d.n_ok||0} with tickets · ${d.date||""}${qbit}</div>` +
         keys.map(name => {
           const s = d.strategies[name] || {};
