@@ -1,18 +1,17 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T04:31:06.442561-04:00",
+  "generated_at": "2026-09-15T04:31:10.541561-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-15_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-15/_board.json` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-09-15_actions.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-09-15_judge.md` \u2014 missing"
   ],
   "counts": {
     "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "partial": 4,
+    "fail": 0,
     "n": 8
   },
   "processes": [
@@ -144,7 +143,7 @@
       "inputs_ready": true,
       "n_req_ok": 4,
       "n_req": 20,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 3,
       "files": [
         {
@@ -233,9 +232,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-15_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 30911
         },
         {
           "key": "general",
@@ -465,8 +464,8 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "FAIL",
-      "inputs_ready": false,
+      "status": "PARTIAL",
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -477,9 +476,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-15_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 30911
         },
         {
           "key": "in_digest",
@@ -537,9 +536,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-15_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 30911
         },
         {
           "key": "in_digest",
@@ -1632,6 +1631,31 @@
         }
       ],
       "preview": "45 events \u00b7 FOMC decision, SEP/dot plot, Warsh press conference | August advance retail sales | 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | Bank of Japan decision \u2014 hike to 1.25% widely expected \u00b7 # Event Scan \u2014 2026-09-15\n- events tracked: **31** (via openclaw)\n- uncertainty: **?**\n- summary:"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T04:31:09.824544-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 30911,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 9756,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-09-15T04:31:09.819177-04:00\nraw=166 unique_events=4 tickers=52"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-15T04:31:09.819177-04:00\nraw=166 unique_events=4 tickers=52"
     }
   ],
   "href": {
