@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T07:50:01.554884-04:00",
+  "generated_at": "2026-09-15T08:10:15.522085-04:00",
   "timezone": "America/New_York",
   "source": "live",
   "source_url": "https://elite.finviz.com/",
@@ -15,45 +15,40 @@
   "kind": "finviz_homepage_market_digest",
   "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
   "error": null,
-  "headline": "US futures point to lower open as oil holds above $100 and 10-year yield reaches 2007 high ahead of FOMC meeting",
-  "raw_text": "- BDRX (BDRX) trades about 80–100% higher pre-market on heavy speculative volume, with traders citing clinical pipeline momentum.\n- VEEA (VEEA) gains roughly 58–67% after announcing a $750M merger agreement with NovaGen to create an AI-powered health platform and a $10M investment.\n- MYSZ (MYSZ) advances about 46–68% pre-market after pivoting to a defense-technology platform via acquisitions.\n- On the downside, CNTB (CNTB) falls around 35–46% despite positive Phase 2 data, FTFT (FTFT) declines roughly 19–30% on profit-taking, PLAY (PLAY) drops about 12–13% after a Q2 earnings miss featuring an adjusted loss and weak comps, and ENVA (ENVA) slips around 17%.\n- S&P 500 (@ES), Dow (@YM), Nasdaq 100 (@NQ) and Russell 2000 (@ER2) futures trade lower by about 0.18%, 0.26%, 0.14% and 0.21%, respectively, pointing to a gap-down US open.\n- Crude oil (@CL) trades above $100 a barrel, after briefly topping $102 overnight on gains of more than 1% tied to Middle East supply risks around the Strait of Hormuz and Saudi pipeline issues.\n- The 10-year Treasury yield stands at its highest level since 2007 as a two-day FOMC meeting begins today, with the policy decision and projections due Wednesday.\n- Overnight earnings are light, with FPS (FPS), VRA (VRA) (implied moves of roughly 16% and 20%) and smaller names such as COE (COE) reporting before the bell but showing no major beats driving broad moves so far.\n- Asian markets trade mixed, with the Nikkei (@NKD) edging higher while most other regional indices decline under pressure from higher oil and yields, and European shares open lower on the same factors as gold (@GC) holds recent losses.\n- Today’s data calendar features the NY Empire State Manufacturing Index at 8:30 a.m. ET along with Canadian wholesale trade and vehicle sales, with no additional major US releases scheduled ahead of the Fed.",
-  "raw_summary_md": "- **BDRX** ([BDRX](https://finviz.com/quote?t=BDRX)) trades about **80–100% higher pre-market** on **heavy speculative volume**, with traders citing **clinical pipeline momentum**.\n- **VEEA** ([VEEA](https://finviz.com/quote?t=VEEA)) gains roughly **58–67%** after announcing a **$750M merger agreement** with **NovaGen** to create an **AI-powered health platform** and a **$10M investment**.\n- **MYSZ** ([MYSZ](https://finviz.com/quote?t=MYSZ)) advances about **46–68% pre-market** after pivoting to a **defense-technology platform** via acquisitions.\n- **On the downside**, **CNTB** ([CNTB](https://finviz.com/quote?t=CNTB)) falls around **35–46%** despite **positive Phase 2 data**, **FTFT** ([FTFT](https://finviz.com/quote?t=FTFT)) declines roughly **19–30%** on profit-taking, **PLAY** ([PLAY](https://finviz.com/quote?t=PLAY)) drops about **12–13%** after a **Q2 earnings miss** featuring an **adjusted loss** and **weak comps**, and **ENVA** ([ENVA](https://finviz.com/quote?t=ENVA)) slips around **17%**.\n- **S&P 500** ([@ES](https://finviz.com/futures_charts?t=ES)), **Dow** ([@YM](https://finviz.com/futures_charts?t=YM)), **Nasdaq 100** ([@NQ](https://finviz.com/futures_charts?t=NQ)) and **Russell 2000** ([@ER2](https://finviz.com/futures_charts?t=ER2)) futures trade lower by about **0.18%, 0.26%, 0.14% and 0.21%**, respectively, pointing to a **gap-down US open**.\n- **Crude oil** ([@CL](https://finviz.com/futures_charts?t=CL)) trades above **$100 a barrel**, after briefly topping **$102** overnight on gains of **more than 1%** tied to **Middle East supply risks** around the **Strait of Hormuz** and **Saudi pipeline issues**.\n- The **10-year Treasury yield** stands at its **highest level since 2007** as a **two-day FOMC meeting begins today**, with the **policy decision and projections due Wednesday**.\n- **Overnight earnings are light**, with **FPS** ([FPS](https://finviz.com/quote?t=FPS)), **VRA** ([VRA](https://finviz.com/quote?t=VRA)) (implied moves of roughly **16% and 20%**) and smaller names such as **COE** ([COE](https://finviz.com/quote?t=COE)) reporting **before the bell** but showing **no major beats** driving broad moves so far.\n- **Asian markets trade mixed**, with the **Nikkei** ([@NKD](https://finviz.com/futures_charts?t=NKD)) edging higher while **most other regional indices decline** under pressure from **higher oil and yields**, and **European shares open lower** on the same factors as **gold** ([@GC](https://finviz.com/futures_charts?t=GC)) holds recent losses.\n- **Today’s data calendar** features the **NY Empire State Manufacturing Index** at **8:30 a.m. ET** along with **Canadian wholesale trade and vehicle sales**, with **no additional major US releases** scheduled **ahead of the Fed**.",
+  "headline": "US equity futures point lower as oil trades above $100 and 10-year yield hits 2007 high ahead of Fed meeting and Empire State data",
+  "raw_text": "- S&P 500, Dow, Nasdaq 100 (@NQ), and Russell 2000 futures (@ER2) are set for a weaker open, down -0.18%, -0.29%, -0.14%, and -0.22% respectively, ahead of a Fed meeting that begins today with a decision and projections due Wednesday\n- The 10-year Treasury yield reaches its highest level since 2007 and oil (@CL) trades above $100, pressuring rate-sensitive and growth stocks while supporting some energy names and reinforcing a yield- and oil (@CL)-driven pre-market tone\n- VEEA (VEEA) jumps 75–82% pre-market after signing a term sheet to combine with NovaGen and securing a $10M cornerstone investment\n- BDRX (BDRX) gains about 22% on Phase 3 FAP trial enrollment momentum\n- MYSZ (MYSZ) rises about 50% pre-market—after earlier trading up into the high-60% range—after announcing a pivot to a defense-tech acquisition strategy\n- CNTB (CNTB) falls around 38% pre-market after earlier losses in the mid-30s to mid-40s range, while FTFT (FTFT) is off roughly 24% after earlier declines near 19–28%\n- ENVA (ENVA) slips about 17% and PLAY (PLAY) drops about 14% after PLAY (PLAY) reported a Q2 earnings miss that included an adjusted loss and weak comparable sales\n- FPS (FPS) reported a pre-market earnings beat after options had implied roughly a 16% move in the stock\n- VRA (VRA) trades ahead of results with implied volatility pointing to about a 20% move, while high-profile name TCOM (TCOM) is scheduled to report after the close\n- Overnight, the Nikkei (@NKD) edged higher while broader Asian indices slipped on elevated oil (@CL), rising yields, and AI slowdown concerns, and European equities traded cautiously lower amid the global bond selloff, with the NY Empire State Manufacturing Index due at 8:30 AM ET on a relatively light US calendar",
+  "raw_summary_md": "- S&P 500, **Dow**, Nasdaq 100 ([@NQ](https://finviz.com/futures_charts?t=NQ)), and Russell 2000 futures ([@ER2](https://finviz.com/futures_charts?t=ER2)) are set for a **weaker open, down -0.18%, -0.29%, -0.14%, and -0.22%** respectively, ahead of a **Fed meeting** that begins today with a decision and projections due Wednesday\n- The **10-year Treasury yield reaches its highest level since 2007** and oil ([@CL](https://finviz.com/futures_charts?t=CL)) **trades above $100**, pressuring rate-sensitive and growth stocks while supporting some energy names and reinforcing a yield- and oil ([@CL](https://finviz.com/futures_charts?t=CL))-driven pre-market tone\n- **VEEA** ([VEEA](https://finviz.com/quote?t=VEEA)) **jumps 75–82% pre-market** after signing a term sheet to combine with NovaGen and securing a **$10M cornerstone investment**\n- **BDRX** ([BDRX](https://finviz.com/quote?t=BDRX)) **gains about 22%** on Phase 3 FAP trial enrollment momentum\n- **MYSZ** ([MYSZ](https://finviz.com/quote?t=MYSZ)) **rises about 50% pre-market**—after earlier trading up into the high-60% range—after announcing a pivot to a **defense-tech acquisition strategy**\n- **CNTB** ([CNTB](https://finviz.com/quote?t=CNTB)) **falls around 38% pre-market** after earlier losses in the mid-30s to mid-40s range, while **FTFT** ([FTFT](https://finviz.com/quote?t=FTFT)) is off **roughly 24%** after earlier declines near 19–28%\n- **ENVA** ([ENVA](https://finviz.com/quote?t=ENVA)) slips about **17%** and **PLAY** ([PLAY](https://finviz.com/quote?t=PLAY)) drops about **14%** after PLAY ([PLAY](https://finviz.com/quote?t=PLAY)) reported a **Q2 earnings miss** that included an **adjusted loss** and **weak comparable sales**\n- **FPS** ([FPS](https://finviz.com/quote?t=FPS)) reported a pre-market **earnings beat** after options had implied roughly a **16% move** in the stock\n- **VRA** ([VRA](https://finviz.com/quote?t=VRA)) trades ahead of results with implied volatility pointing to about a **20% move**, while high-profile name **TCOM** ([TCOM](https://finviz.com/quote?t=TCOM)) is scheduled to report **after the close**\n- Overnight, the **Nikkei** ([@NKD](https://finviz.com/futures_charts?t=NKD)) edged higher while **broader Asian indices slipped** on elevated oil ([@CL](https://finviz.com/futures_charts?t=CL)), rising yields, and AI slowdown concerns, and **European equities traded cautiously lower** amid the global bond selloff, with the **NY Empire State Manufacturing Index** due at **8:30 AM ET** on a relatively light US calendar",
   "index_moves": [],
-  "oil": {
-    "name": "Crude oil",
-    "price": 100.0,
-    "verb": null,
-    "direction": null
-  },
+  "oil": null,
   "cpi": null,
   "fed_odds": null,
   "named_tickers": [
-    "BDRX",
     "VEEA",
+    "BDRX",
     "MYSZ",
     "CNTB",
     "FTFT",
-    "PLAY",
     "ENVA",
+    "PLAY",
     "FPS",
     "VRA",
-    "COE"
+    "TCOM"
   ],
   "named_leaders": [
-    "BDRX",
     "VEEA",
+    "BDRX",
     "MYSZ",
     "CNTB",
     "FTFT",
-    "PLAY",
     "ENVA",
+    "PLAY",
     "FPS",
     "VRA",
-    "COE"
+    "TCOM"
   ],
   "calendar": [
-    "The 10-year Treasury yield stands at its highest level since 2007 as a two-day FOMC meeting begins today, with the policy decision and projections due Wednesday.",
-    "Today’s data calendar features the NY Empire State Manufacturing Index at 8:30 a.m. ET along with Canadian wholesale trade and vehicle sales, with no additional major US releases scheduled ahead of the Fed."
+    "S&P 500, Dow, Nasdaq 100 (@NQ), and Russell 2000 futures (@ER2) are set for a weaker open, down -0.18%, -0.29%, -0.14%, and -0.22% respectively, ahead of a Fed meeting that begins today with a decision and projections due Wednesday",
+    "Overnight, the Nikkei (@NKD) edged higher while broader Asian indices slipped on elevated oil (@CL), rising yields, and AI slowdown concerns, and European equities traded cautiously lower amid the global bond selloff, with the NY Empire State Manufacturing Index due at 8:30 AM ET on a relatively light US calendar"
   ],
   "prior_close": {
     "spx": null,
@@ -69,26 +64,24 @@
     "retail": false,
     "fed": true,
     "bullets": [
-      "The 10-year Treasury yield stands at its highest level since 2007 as a two-day FOMC meeting begins today, with the policy decision and projections due Wednesday.",
-      "Today’s data calendar features the NY Empire State Manufacturing Index at 8:30 a.m. ET along with Canadian wholesale trade and vehicle sales, with no additional major US releases scheduled ahead of the Fed."
+      "S&P 500, Dow, Nasdaq 100 (@NQ), and Russell 2000 futures (@ER2) are set for a weaker open, down -0.18%, -0.29%, -0.14%, and -0.22% respectively, ahead of a Fed meeting that begins today with a decision and projections due Wednesday",
+      "Overnight, the Nikkei (@NKD) edged higher while broader Asian indices slipped on elevated oil (@CL), rising yields, and AI slowdown concerns, and European equities traded cautiously lower amid the global bond selloff, with the NY Empire State Manufacturing Index due at 8:30 AM ET on a relatively light US calendar"
     ],
-    "text": "The 10-year Treasury yield stands at its highest level since 2007 as a two-day FOMC meeting begins today, with the policy decision and projections due Wednesday. Today’s data calendar features the NY Empire State Manufacturing Index at 8:30 a.m. ET along with Canadian wholesale trade and vehicle sales, with no additional major US releases scheduled ahead of the Fed."
+    "text": "S&P 500, Dow, Nasdaq 100 (@NQ), and Russell 2000 futures (@ER2) are set for a weaker open, down -0.18%, -0.29%, -0.14%, and -0.22% respectively, ahead of a Fed meeting that begins today with a decision and projections due Wednesday Overnight, the Nikkei (@NKD) edged higher while broader Asian indices slipped on elevated oil (@CL), rising yields, and AI slowdown concerns, and European equities traded cautiously lower amid the global bond selloff, with the NY Empire State Manufacturing Index due at 8:30 AM ET on a relatively light US calendar"
   },
   "earnings_slate": {
     "tickers": [],
     "text": ""
   },
   "geo_grain": {
-    "geo": true,
+    "geo": false,
     "grain": false,
-    "flags": [
-      "geo"
-    ],
-    "text": "Crude oil (@CL) trades above $100 a barrel, after briefly topping $102 overnight on gains of more than 1% tied to Middle East supply risks around the Strait of Hormuz and Saudi pipeline issues."
+    "flags": [],
+    "text": ""
   },
-  "finviz_id": 285634,
+  "finviz_id": 285669,
   "finviz_ticker": "$MARKET",
-  "finviz_published_at": "2026-09-15T07:36:38.063",
+  "finviz_published_at": "2026-09-15T08:06:41.393",
   "finviz_source": "market_summary",
   "finviz_sentiment": "bad"
 }

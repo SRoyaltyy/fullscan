@@ -1,16 +1,16 @@
 # Finviz homepage market digest — 2026-09-15
 
-**Generated:** 2026-09-15T07:50:01.554884-04:00 (America/New_York)
+**Generated:** 2026-09-15T08:10:15.522085-04:00 (America/New_York)
 **Source:** `live`
-**Banner:** US futures point to lower open as oil holds above $100 and 10-year yield reaches 2007 high ahead of FOMC meeting
+**Banner:** US equity futures point lower as oil trades above $100 and 10-year yield hits 2007 high ahead of Fed meeting and Empire State data
 **Prior close:** SPX —  Nasdaq —  Dow —
 **SPX:** —  **Nasdaq:** —  **Dow:** —
-**Oil:** Crude oil $100.0
+**Oil:** —
 **CPI/Fed:** —
-**Leaders:** BDRX, VEEA, MYSZ, CNTB, FTFT, PLAY, ENVA, FPS, VRA, COE
+**Leaders:** VEEA, BDRX, MYSZ, CNTB, FTFT, ENVA, PLAY, FPS, VRA, TCOM
 **Next session:** housing no · retail no · Fed yes
 **Earnings slate:** —
-**Geo/grain:** geo
+**Geo/grain:** —
 **Clock legal for:** 2026-09-15
 **Clock use:** `same_morning`
 
@@ -23,26 +23,26 @@ Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page h
 ## Theme Radar
 
 - **Prior close:** SPX — · Nasdaq — · Dow —
-- **Oil:** Crude oil $100.0
+- **Oil:** —
 - **CPI / Fed-odds:** —
-- **Named leaders:** BDRX, VEEA, MYSZ, CNTB, FTFT, PLAY, ENVA, FPS, VRA, COE
+- **Named leaders:** VEEA, BDRX, MYSZ, CNTB, FTFT, ENVA, PLAY, FPS, VRA, TCOM
 - **Next-session calendar:** housing no · retail no · Fed yes
-  - The 10-year Treasury yield stands at its highest level since 2007 as a two-day FOMC meeting begins today, with the policy decision and projections due Wednesday.
-  - Today’s data calendar features the NY Empire State Manufacturing Index at 8:30 a.m. ET along with Canadian wholesale trade and vehicle sales, with no additional major US releases scheduled ahead of the Fed.
+  - S&P 500, Dow, Nasdaq 100 (@NQ), and Russell 2000 futures (@ER2) are set for a weaker open, down -0.18%, -0.29%, -0.14%, and -0.22% respectively, ahead of a Fed meeting that begins today with a decision and projections due Wednesday
+  - Overnight, the Nikkei (@NKD) edged higher while broader Asian indices slipped on elevated oil (@CL), rising yields, and AI slowdown concerns, and European equities traded cautiously lower amid the global bond selloff, with the NY Empire State Manufacturing Index due at 8:30 AM ET on a relatively light US calendar
 - **Earnings slate:** —
-- **Geo / grain:** geo
+- **Geo / grain:** —
 
 ## Narrative
 
-**US futures point to lower open as oil holds above $100 and 10-year yield reaches 2007 high ahead of FOMC meeting**
+**US equity futures point lower as oil trades above $100 and 10-year yield hits 2007 high ahead of Fed meeting and Empire State data**
 
-- BDRX (BDRX) trades about 80–100% higher pre-market on heavy speculative volume, with traders citing clinical pipeline momentum.
-- VEEA (VEEA) gains roughly 58–67% after announcing a $750M merger agreement with NovaGen to create an AI-powered health platform and a $10M investment.
-- MYSZ (MYSZ) advances about 46–68% pre-market after pivoting to a defense-technology platform via acquisitions.
-- On the downside, CNTB (CNTB) falls around 35–46% despite positive Phase 2 data, FTFT (FTFT) declines roughly 19–30% on profit-taking, PLAY (PLAY) drops about 12–13% after a Q2 earnings miss featuring an adjusted loss and weak comps, and ENVA (ENVA) slips around 17%.
-- S&P 500 (@ES), Dow (@YM), Nasdaq 100 (@NQ) and Russell 2000 (@ER2) futures trade lower by about 0.18%, 0.26%, 0.14% and 0.21%, respectively, pointing to a gap-down US open.
-- Crude oil (@CL) trades above $100 a barrel, after briefly topping $102 overnight on gains of more than 1% tied to Middle East supply risks around the Strait of Hormuz and Saudi pipeline issues.
-- The 10-year Treasury yield stands at its highest level since 2007 as a two-day FOMC meeting begins today, with the policy decision and projections due Wednesday.
-- Overnight earnings are light, with FPS (FPS), VRA (VRA) (implied moves of roughly 16% and 20%) and smaller names such as COE (COE) reporting before the bell but showing no major beats driving broad moves so far.
-- Asian markets trade mixed, with the Nikkei (@NKD) edging higher while most other regional indices decline under pressure from higher oil and yields, and European shares open lower on the same factors as gold (@GC) holds recent losses.
-- Today’s data calendar features the NY Empire State Manufacturing Index at 8:30 a.m. ET along with Canadian wholesale trade and vehicle sales, with no additional major US releases scheduled ahead of the Fed.
+- S&P 500, Dow, Nasdaq 100 (@NQ), and Russell 2000 futures (@ER2) are set for a weaker open, down -0.18%, -0.29%, -0.14%, and -0.22% respectively, ahead of a Fed meeting that begins today with a decision and projections due Wednesday
+- The 10-year Treasury yield reaches its highest level since 2007 and oil (@CL) trades above $100, pressuring rate-sensitive and growth stocks while supporting some energy names and reinforcing a yield- and oil (@CL)-driven pre-market tone
+- VEEA (VEEA) jumps 75–82% pre-market after signing a term sheet to combine with NovaGen and securing a $10M cornerstone investment
+- BDRX (BDRX) gains about 22% on Phase 3 FAP trial enrollment momentum
+- MYSZ (MYSZ) rises about 50% pre-market—after earlier trading up into the high-60% range—after announcing a pivot to a defense-tech acquisition strategy
+- CNTB (CNTB) falls around 38% pre-market after earlier losses in the mid-30s to mid-40s range, while FTFT (FTFT) is off roughly 24% after earlier declines near 19–28%
+- ENVA (ENVA) slips about 17% and PLAY (PLAY) drops about 14% after PLAY (PLAY) reported a Q2 earnings miss that included an adjusted loss and weak comparable sales
+- FPS (FPS) reported a pre-market earnings beat after options had implied roughly a 16% move in the stock
+- VRA (VRA) trades ahead of results with implied volatility pointing to about a 20% move, while high-profile name TCOM (TCOM) is scheduled to report after the close
+- Overnight, the Nikkei (@NKD) edged higher while broader Asian indices slipped on elevated oil (@CL), rising yields, and AI slowdown concerns, and European equities traded cautiously lower amid the global bond selloff, with the NY Empire State Manufacturing Index due at 8:30 AM ET on a relatively light US calendar
