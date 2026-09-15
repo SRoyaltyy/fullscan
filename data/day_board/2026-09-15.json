@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T15:21:42.132041-04:00",
+  "generated_at": "2026-09-15T15:21:56.748483-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -815,24 +815,6 @@
     }
   },
   "lands": [
-    {
-      "key": "general_predict",
-      "title": "General market predict",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T08:45:54.161614-04:00",
-      "files": [
-        {
-          "path": "01_daily/general/2026-09-15_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 15135,
-          "preview": "# Premarket Prediction \u2014 2026-09-15\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -2.865 (uncertainty multiplier \u00d71.0) | confidence 0.515\n>\n> **Good news vs bad news:** good +0.25 pts vs bad -8.25 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - ES/NQ green vs cash close\n> - HY tight 2.65\n> - AMD bounce after 09-14 dump\n> - China IP +5.2% beat\n> - software rotation leftover (ADBE paid)\n>\n> **Bad news driving this:**\n> - Brent ~$108 Hormuz/Saudi pipeline outage\n> - 1w 10Y +19bp / 5% handle\n> - FOMC-eve hike ~87-90%\n> - China retail/FAI miss\n> - Canada 50% tariff-list changes live\n>\n> **market uncertainty: **elevated** | VIX 17.04 | policy-uncertainty index 395.54 (1d +189.93)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight"
-        }
-      ],
-      "preview": "# Premarket Prediction \u2014 2026-09-15\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -2.865 (uncertainty multiplier \u00d71.0) | confidence 0.515\n>\n> **Good news vs bad news:** good +0.25 pts vs bad -8.25 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - ES/NQ green vs cash close\n> - HY tight 2.65\n> - AMD bounce after 09-14 dump\n> - China IP +5.2% beat\n> - software rotation leftover (ADBE paid)\n>\n> **Bad news driving this:**\n> - Brent ~$108 Hormuz/Saudi pipeline outage\n> - 1w 10Y +19bp / 5% handle\n> - FOMC-eve hike ~87-90%\n> - China retail/FAI miss\n> - Canada 50% tariff-list changes live\n>\n> **market uncertainty: **elevated** | VIX 17.04 | policy-uncertainty index 395.54 (1d +189.93)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -3563,6 +3545,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T07:31:21.815244-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat tables",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T15:21:55.377050-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-15_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 269893,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-15_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 17316,
+          "preview": "# MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T04:25:19.101684-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T04:25:19.101684-04:00"
     }
   ],
   "href": {
