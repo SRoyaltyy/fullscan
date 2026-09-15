@@ -1,6 +1,6 @@
 {
  "date": "2026-09-15",
- "generated_at": "2026-09-15T12:57:17.380886-04:00",
+ "generated_at": "2026-09-15T14:12:05.814431-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -9,9 +9,9 @@
  ],
  "signals": {
   "date": "2026-09-15",
-  "general_score": -6.215,
+  "general_score": -3.65,
   "general_direction": "down",
-  "general_confidence": 0.749,
+  "general_confidence": 0.546,
   "risk": "off",
   "yields_score": -1.0,
   "fed_score": 0.0,
@@ -23,46 +23,46 @@
   "dgs10_current": 4.96,
   "dollar": "strong",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.17,
-  "vix_ratio": 0.896,
-  "vix_spot": 17.49,
-  "vix_delta_1d": 0.39,
+  "dxy_pct_1d": 0.21,
+  "vix_ratio": 0.898,
+  "vix_spot": 17.56,
+  "vix_delta_1d": 0.46,
   "vix_ratio_source": "vix/vix3m",
   "vix": "falling",
-  "oil_pct_1d": 4.57,
+  "oil_pct_1d": 4.85,
   "oil": "rising",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": -0.168,
+  "regime_corr": -0.181,
   "sectors": {
    "Communication Services": {
-    "score": 0.396,
-    "dir": "up",
-    "conf": 0.416,
+    "score": -3.82,
+    "dir": "flat",
+    "conf": 0.55,
     "source": "llm"
    },
    "Consumer Cyclical": {
-    "score": -4.704,
+    "score": -3.327,
     "dir": "down",
-    "conf": 0.588,
+    "conf": 0.633,
     "source": "llm"
    },
    "Energy": {
-    "score": 4.023,
+    "score": 6.75,
     "dir": "up",
-    "conf": 0.661,
+    "conf": 0.65,
     "source": "llm"
    },
    "Financial": {
-    "score": -4.063,
+    "score": -3.834,
     "dir": "down",
-    "conf": 0.563,
+    "conf": 0.553,
     "source": "llm"
    },
    "Healthcare": {
-    "score": 0.93,
-    "dir": "up",
-    "conf": 0.537,
+    "score": -2.943,
+    "dir": "down",
+    "conf": 0.518,
     "source": "llm"
    },
    "Basic Materials": {
@@ -72,31 +72,31 @@
     "source": "llm"
    },
    "Industrials": {
-    "score": -5.881,
+    "score": -0.541,
     "dir": "down",
-    "conf": 0.65,
+    "conf": 0.422,
     "source": "llm"
    },
    "Real Estate": {
-    "score": -8.5,
+    "score": -6.267,
     "dir": "down",
     "conf": 0.65,
     "source": "llm"
    },
    "Technology": {
-    "score": -1.543,
+    "score": -1.103,
     "dir": "down",
-    "conf": 0.462,
+    "conf": 0.444,
     "source": "llm"
    },
    "Utilities": {
-    "score": -8.152,
+    "score": -6.499,
     "dir": "down",
     "conf": 0.65,
     "source": "llm"
    },
    "Consumer Defensive": {
-    "score": -8.086,
+    "score": -5.038,
     "dir": "flat",
     "conf": 0.55,
     "source": "llm"
@@ -115,9 +115,10 @@
    "Technology": -3.035,
    "Utilities": -3.51
   },
-  "events_bull": 4,
-  "events_bear": 14,
-  "china_event_dir": null
+  "events_bull": 8,
+  "events_bear": 26,
+  "china_event_dir": null,
+  "risk_source": "news_judge"
  },
  "stances": {
   "sector": {
@@ -127,76 +128,76 @@
     "why": "sector predict score -7.6 dir down conf 0.65 [sector board]"
    },
    "Communication Services": {
-    "stance": "neutral",
+    "stance": "hostile",
     "confidence": "high",
-    "why": "sector predict score +0.4 dir up conf 0.416 [sector board]"
+    "why": "sector predict score -3.8 dir flat conf 0.55 [sector board]"
    },
    "Consumer Cyclical": {
     "stance": "hostile",
     "confidence": "high",
-    "why": "sector predict score -4.7 dir down conf 0.588 [sector board]"
+    "why": "sector predict score -3.3 dir down conf 0.633 [sector board]"
    },
    "Consumer Defensive": {
     "stance": "hostile",
     "confidence": "high",
-    "why": "sector predict score -8.1 dir flat conf 0.55 [sector board]"
+    "why": "sector predict score -5.0 dir flat conf 0.55 [sector board]"
    },
    "Energy": {
     "stance": "favorable",
-    "confidence": "medium",
-    "why": "news_judge SECTOR Energy [bullish]"
+    "confidence": "high",
+    "why": "sector predict score +6.8 dir up conf 0.65 [sector board]"
    },
    "Financial": {
     "stance": "hostile",
-    "confidence": "high",
-    "why": "sector predict score -4.1 dir down conf 0.563 [sector board]"
+    "confidence": "medium",
+    "why": "news_judge SECTOR Financial [bearish]"
    },
    "Healthcare": {
     "stance": "neutral",
     "confidence": "high",
-    "why": "sector predict score +0.9 dir up conf 0.537 [sector board]"
+    "why": "sector predict score -2.9 dir down conf 0.518 [sector board]"
    },
    "Industrials": {
-    "stance": "hostile",
+    "stance": "neutral",
     "confidence": "high",
-    "why": "sector predict score -5.9 dir down conf 0.65 [sector board]"
+    "why": "sector predict score -0.5 dir down conf 0.422 [sector board]"
    },
    "Real Estate": {
     "stance": "hostile",
     "confidence": "high",
-    "why": "sector predict score -8.5 dir down conf 0.65 [sector board]"
+    "why": "sector predict score -6.3 dir down conf 0.65 [sector board]"
    },
    "Technology": {
     "stance": "neutral",
     "confidence": "high",
-    "why": "sector predict score -1.5 dir down conf 0.462 [sector board]"
+    "why": "sector predict score -1.1 dir down conf 0.444 [sector board]"
    },
    "Utilities": {
     "stance": "hostile",
     "confidence": "high",
-    "why": "sector predict score -8.2 dir down conf 0.65 [sector board]"
+    "why": "sector predict score -6.5 dir down conf 0.65 [sector board]"
    }
   },
   "size": {
    "micro": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "risk-off — small caps de-rate first; risk-off, dollar strong [general predict + factors]"
+    "why": "strong dollar — small caps de-rate first; risk-mixed, dollar strong [general predict + factors]"
    },
    "small": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "risk-off — small caps de-rate first; risk-off, dollar strong [general predict + factors]"
+    "why": "strong dollar — small caps de-rate first; risk-mixed, dollar strong [general predict + factors]"
    },
    "large": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "risk-off — defensive/quality bid concentrates in large & mega [general predict]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "risk-mixed [general predict]"
    },
    "mega": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "risk-off — defensive/quality bid concentrates in large & mega [general predict]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "risk-mixed [general predict]"
    },
    "mid": {
     "stance": "neutral",
@@ -206,24 +207,24 @@
   },
   "index": {
    "sp500": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "risk-off — defensive/quality bid concentrates in large & mega [general predict]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "risk-mixed [general predict]"
    },
    "ndx": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "risk-off — defensive/quality bid concentrates in large & mega [general predict]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "risk-mixed [general predict]"
    },
    "djia": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "risk-off — defensive/quality bid concentrates in large & mega [general predict]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "risk-mixed [general predict]"
    },
    "rut": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "risk-off — small caps de-rate first; risk-off, dollar strong [general predict + factors]"
+    "why": "strong dollar — small caps de-rate first; risk-mixed, dollar strong [general predict + factors]"
    },
    "none": {
     "stance": "neutral",
@@ -233,9 +234,9 @@
   },
   "geo": {
    "US": {
-    "stance": "hostile",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "mirrors general risk-off [general predict]"
+    "why": "mirrors general risk-mixed [general predict]"
    },
    "ADR-China": {
     "stance": "neutral",
@@ -245,14 +246,14 @@
   },
   "beta": {
    "high": {
-    "stance": "hostile",
-    "confidence": "medium",
-    "why": "risk-off — high beta is the exit door [channel1 + general]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "risk-mixed, VIX falling"
    },
    "low": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "defensive ballast bid in stress [general + channel1]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "risk-mixed, VIX falling"
    },
    "mid": {
     "stance": "neutral",
@@ -262,14 +263,14 @@
   },
   "short": {
    "high": {
-    "stance": "hostile",
-    "confidence": "medium",
-    "why": "risk-off — heavy short interest marks balance-sheet/dilution stress; it amplifies falls [general]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "mixed tape — squeeze/stress unresolved"
    },
    "extreme": {
-    "stance": "hostile",
-    "confidence": "medium",
-    "why": "risk-off — heavy short interest marks balance-sheet/dilution stress; it amplifies falls [general]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "mixed tape — squeeze/stress unresolved"
    },
    "low": {
     "stance": "neutral",
@@ -284,14 +285,14 @@
   },
   "vol": {
    "high": {
-    "stance": "hostile",
-    "confidence": "medium",
-    "why": "stress market — high-vol names de-rate fast [general + channel1]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "calm tape — vol regime not decisive [general + channel1]"
    },
    "low": {
-    "stance": "favorable",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "low-vol preferred in stress"
+    "why": "calm tape"
    },
    "mid": {
     "stance": "neutral",
@@ -301,14 +302,14 @@
   },
   "profit": {
    "no": {
-    "stance": "hostile",
-    "confidence": "high",
-    "why": "risk-off — unprofitable names are sold first [general]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "risk-mixed, F&G None"
    },
    "yes": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "risk-off — quality/profitability bid [general]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
    },
    "thin": {
     "stance": "neutral",
@@ -318,14 +319,14 @@
   },
   "lev": {
    "high": {
-    "stance": "hostile",
-    "confidence": "medium",
-    "why": "risk-off — leverage amplifies the downside [factors + general]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
    },
    "low": {
-    "stance": "favorable",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "balance-sheet strength preferred in stress"
+    "why": "—"
    },
    "mid": {
     "stance": "neutral",
@@ -359,12 +360,12 @@
    "uptrend": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "uptrends under test in risk-off"
+    "why": "mixed tape"
    },
    "downtrend": {
-    "stance": "hostile",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "downtrends get no bid in risk-off"
+    "why": "—"
    },
    "mixed": {
     "stance": "neutral",
@@ -374,19 +375,19 @@
   },
   "ext": {
    "washed": {
-    "stance": "hostile",
-    "confidence": "medium",
-    "why": "falling knives stay sharp in risk-off"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "mixed tape"
    },
    "extended": {
-    "stance": "hostile",
-    "confidence": "medium",
-    "why": "parabolic + risk-off = nasty unwind risk"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "extension tolerated while tape is firm"
    },
    "extreme": {
-    "stance": "hostile",
-    "confidence": "medium",
-    "why": "parabolic + risk-off = nasty unwind risk"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "extension tolerated while tape is firm"
    },
    "neutral": {
     "stance": "neutral",
@@ -396,19 +397,19 @@
   },
   "range": {
    "deep_low": {
-    "stance": "hostile",
-    "confidence": "medium",
-    "why": "falling knife zone in risk-off"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "mixed tape"
    },
    "top": {
-    "stance": "hostile",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "high-zone names unwind in risk-off"
+    "why": "—"
    },
    "breakout": {
-    "stance": "hostile",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "high-zone names unwind in risk-off"
+    "why": "—"
    },
    "low": {
     "stance": "neutral",
@@ -438,5 +439,7 @@
   "veto_earn_today": true,
   "veto_extreme_risk_off": true
  },
- "data_gaps": []
+ "data_gaps": [
+  "risk tilted off by news_judge"
+ ]
 }
