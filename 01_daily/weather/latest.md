@@ -5,8 +5,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** OFF (general predict down score -6.2, conf 0.749)
-- **Yields:** rising (llm_factor_fallback) | **Dollar:** flat (dxy) | **Oil:** rising | **VIX:** falling (ratio 0.88 via vix/vix3m) spot 17.0
-- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** n/a
+- **Yields:** flat (fred_dgs10) | **Dollar:** strong (dxy) | **Oil:** rising | **VIX:** calm (ratio 0.90 via vix/vix3m) spot 17.76
+- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.16
 - **High-impact events:** 4 bullish vs 14 bearish
 
 ## Sectors
@@ -16,21 +16,21 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 | sector:Basic Materials | 🌧️ hostile | high | sector predict score -7.6 dir down conf 0.65 [sector board] |
 | sector:Communication Services | ⛅ neutral | high | sector predict score +0.4 dir up conf 0.416 [sector board] |
 | sector:Consumer Cyclical | 🌧️ hostile | high | sector predict score -4.7 dir down conf 0.588 [sector board] |
-| sector:Consumer Defensive | 🌧️ hostile | medium | finviz sector median week -2.44% [tape] |
-| sector:Energy | 🌤️ favorable | high | sector predict score +4.0 dir up conf 0.661 [sector board] |
-| sector:Financial | 🌧️ hostile | medium | news_judge SECTOR Financial [bearish] |
+| sector:Consumer Defensive | 🌧️ hostile | high | sector predict score -8.1 dir flat conf 0.55 [sector board] |
+| sector:Energy | 🌤️ favorable | medium | news_judge SECTOR Energy [bullish] |
+| sector:Financial | 🌧️ hostile | high | sector predict score -4.1 dir down conf 0.563 [sector board] |
 | sector:Healthcare | ⛅ neutral | high | sector predict score +0.9 dir up conf 0.537 [sector board] |
 | sector:Industrials | 🌧️ hostile | high | sector predict score -5.9 dir down conf 0.65 [sector board] |
 | sector:Real Estate | 🌧️ hostile | high | sector predict score -8.5 dir down conf 0.65 [sector board] |
-| sector:Technology | 🌧️ hostile | high | sector predict score -7.5 dir down conf 0.65 [sector board] |
+| sector:Technology | ⛅ neutral | high | sector predict score -1.5 dir down conf 0.462 [sector board] |
 | sector:Utilities | 🌧️ hostile | high | sector predict score -8.2 dir down conf 0.65 [sector board] |
 
 ## Size
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| size:micro | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar flat [general predict + factors] |
-| size:small | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar flat [general predict + factors] |
+| size:micro | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar strong [general predict + factors] |
+| size:small | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar strong [general predict + factors] |
 | size:large | 🌤️ favorable | medium | risk-off — defensive/quality bid concentrates in large & mega [general predict] |
 | size:mega | 🌤️ favorable | medium | risk-off — defensive/quality bid concentrates in large & mega [general predict] |
 | size:mid | ⛅ neutral | low | no dedicated mid-cap signal in v1 |
@@ -64,15 +64,15 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| style:growth | 🌧️ hostile | medium | yields rising — long-duration growth de-rates [factor: Bond yields] |
-| style:value | 🌤️ favorable | medium | rising yields/reflation favors value & cyclicals [factor: Bond yields] |
+| style:growth | ⛅ neutral | low | yields flat/unknown |
+| style:value | ⛅ neutral | low | yields flat/unknown |
 | style:blend | ⛅ neutral | low | — |
 
 ## Leverage
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| lev:high | 🌧️ hostile | medium | yields rising — leverage amplifies the downside [factors + general] |
+| lev:high | 🌧️ hostile | medium | risk-off — leverage amplifies the downside [factors + general] |
 | lev:low | 🌤️ favorable | low | balance-sheet strength preferred in stress |
 | lev:mid | ⛅ neutral | low | — |
 | lev:neg_equity | 🌧️ hostile | low | negative equity is distressed in any regime |
