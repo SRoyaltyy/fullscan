@@ -4,6 +4,7 @@ Run: PYTHONPATH=. python3 -m src.test_strategy_tickets
 """
 from __future__ import annotations
 
+import json
 from unittest import mock
 
 from src import strategy_tickets as st
@@ -253,6 +254,96 @@ def test_stamp_fills_buy_1d_from_stock_book() -> None:
     assert [x["ticker"] for x in out["sell_1d"]] == ["METC"]
 
 
+def test_keep_open_elite_book_refuses_session_export() -> None:
+    """Noon restamp without requests must not replace the 09:30 Elite book."""
+    import tempfile
+    from pathlib import Path
+    from src import elite_live_px as elp
+
+    elite = {
+        "date": "2026-09-15",
+        "clock_legal_for": "2026-09-15",
+        "quote": {"src": "elite_live", "after_open": True},
+        "buy_1d": [{"ticker": "AVAH", "px": 14.24, "px_src": "elite_live"}],
+        "strategies": {"stock_book_1d": {
+            "buy": [{"ticker": "AVAH", "px": 14.24, "px_src": "elite_live"}],
+        }},
+    }
+    bad = {
+        "date": "2026-09-15",
+        "clock_legal_for": "2026-09-15",
+        "quote": {
+            "src": "session_export+finviz_session: No module named 'requests'",
+            "after_open": True,
+        },
+        "buy_1d": [{"ticker": "MTCH", "px": 42.69, "px_src": "session_export"}],
+        "strategies": {"stock_book_1d": {
+            "buy": [{"ticker": "MTCH", "px": 42.69, "px_src": "session_export"}],
+        }},
+    }
+    with tempfile.TemporaryDirectory() as d:
+        day = Path(d)
+        (day / "today_strategies.json").write_text(
+            json.dumps(elite), encoding="utf-8")
+        old_day, old_dash = st.DAY, st.DASH_FM
+        st.DAY = day
+        st.DASH_FM = day / "dash"
+        st.DASH_FM.mkdir()
+        try:
+            with mock.patch.object(elp, "after_open", return_value=True):
+                out = st.keep_open_elite_book("2026-09-15", bad)
+        finally:
+            st.DAY = old_day
+            st.DASH_FM = old_dash
+    assert out["buy_1d"][0]["ticker"] == "AVAH"
+    assert out["quote"]["src"] == "elite_live"
+
+
+def test_keep_open_elite_book_restamps_px_on_0930_names() -> None:
+    elite = {
+        "date": "2026-09-15",
+        "clock_legal_for": "2026-09-15",
+        "quote": {"src": "elite_live", "after_open": True},
+        "buy_1d": [{"ticker": "AVAH", "px": 14.24, "px_src": "elite_live"}],
+        "strategies": {"stock_book_1d": {
+            "buy": [{"ticker": "AVAH", "px": 14.24, "px_src": "elite_live"}],
+        }},
+    }
+    fresh = {
+        "date": "2026-09-15",
+        "quote": {"src": "elite_live", "after_open": True, "at": "noon"},
+        "buy_1d": [{"ticker": "MTCH", "px": 42.69, "px_src": "elite_live"}],
+    }
+    book = {
+        "src": "elite_live", "after_open": True, "at": "noon", "n": 1,
+        "error": None, "clock_rule": "x",
+        "prices": {"AVAH": 14.55},
+    }
+    import tempfile
+    from pathlib import Path
+    from src import elite_live_px as elp
+
+    with tempfile.TemporaryDirectory() as d:
+        day = Path(d)
+        (day / "today_strategies.json").write_text(
+            json.dumps(elite), encoding="utf-8")
+        old_day, old_dash = st.DAY, st.DASH_FM
+        st.DAY = day
+        st.DASH_FM = day / "dash"
+        st.DASH_FM.mkdir()
+        try:
+            with mock.patch.object(elp, "after_open", return_value=True), \
+                    mock.patch.object(elp, "quote_book", return_value=book), \
+                    mock.patch.object(elp, "official_opens", return_value={}):
+                out = st.keep_open_elite_book("2026-09-15", fresh)
+        finally:
+            st.DAY = old_day
+            st.DASH_FM = old_dash
+    assert out["buy_1d"][0]["ticker"] == "AVAH"
+    assert out["buy_1d"][0]["px"] == 14.55
+    assert out["quote"]["src"] == "elite_live"
+
+
 def main() -> None:
     test_combo_would_buy_unions_member_lists()
     test_combo_skip_drops_long_and_short_clash()
@@ -266,6 +357,8 @@ def main() -> None:
     test_open_lock_pins_indp_and_drops_friday()
     test_assert_open_lock_requires_webull_sit_names()
     test_stamp_fills_buy_1d_from_stock_book()
+    test_keep_open_elite_book_refuses_session_export()
+    test_keep_open_elite_book_restamps_px_on_0930_names()
     print("ok")
 
 

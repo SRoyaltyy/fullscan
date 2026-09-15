@@ -128,6 +128,8 @@ def test_open_pack_stamps_session_open_and_restamps_pages() -> None:
     assert 'clock_use": "session_open"' in st
     assert "clock_legal_for" in st
     assert "assert_session_look(payload, date)" in st
+    assert "keep_open_elite_book" in st
+    assert "keep elite_live 09:30 book" in st
     assert "scripts/publish_open_pack.sh" in yml
     assert "publish_dashboard.sh" in script
     assert "deploy-dashboard.yml" in yml

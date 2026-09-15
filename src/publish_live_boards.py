@@ -202,13 +202,16 @@ def publish(date: str, *, write: bool = True, extras: bool = True) -> dict:
             payload_st = st.build(date)
             paths = st.write(date, payload_st)
             out["wrote"].extend(str(p.relative_to(ROOT)) for p in paths)
-            out["n_strategies"] = payload_st.get("n")
-            out["n_strategies_ok"] = payload_st.get("n_ok")
-            buys, sells, quote = ticket_1d_rows(payload_st)
-            if buys or sells:
+            live = load_live_ticket_payload(date)
+            src = live or payload_st
+            out["n_strategies"] = src.get("n")
+            out["n_strategies_ok"] = src.get("n_ok")
+            if live:
+                buys, sells, quote = ticket_1d_rows(live)
                 synced = rewrite_today_strip(
                     date, buys, sells, quote,
-                    generated_at=payload_st.get("generated_at"),
+                    generated_at=live.get("generated_at")
+                    or payload_st.get("generated_at"),
                 )
                 out["wrote"].extend(synced)
                 out["buy_1d"] = [
@@ -218,6 +221,12 @@ def publish(date: str, *, write: bool = True, extras: bool = True) -> dict:
                     r.get("ticker") for r in sells if isinstance(r, dict)
                 ]
                 out["quote"] = quote
+            else:
+                print(
+                    "[live-boards] skip today.json rewrite — "
+                    "tickets not elite_live after rebuild",
+                    flush=True,
+                )
         except Exception as e:  # noqa: BLE001
             print(f"[live-boards] WARN: strategy tickets: {e}", flush=True)
 

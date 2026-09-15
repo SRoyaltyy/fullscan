@@ -588,12 +588,9 @@ def tickets_are_live_open(date: str, when: datetime | None = None) -> bool:
         data = json.loads(found.read_text(encoding="utf-8"))
     except (OSError, ValueError):
         return False
-    quote = data.get("quote") or {}
-    if not quote.get("after_open"):
-        return False
-    src = str(quote.get("src") or "")
+    from . import elite_live_px as elp
     # Clock after_open with a 07:47 session_export is not live Elite px.
-    return src.startswith("elite_live")
+    return elp.quote_is_elite_live(data.get("quote"))
 
 
 def check_open_0930(date: str) -> bool:
