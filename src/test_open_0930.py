@@ -121,6 +121,8 @@ def test_open_pack_stamps_session_open_and_restamps_pages() -> None:
     assert "set -euo pipefail" in script
     assert "clock_legal_for" in script
     assert "session_open" in script
+    assert "open-pack live px miss" in script
+    assert 'python3 -c "import requests"' in script
     assert "publish_dashboard.sh" in script
     assert "assert_session_look" in st
     assert 'clock_use": "session_open"' in st

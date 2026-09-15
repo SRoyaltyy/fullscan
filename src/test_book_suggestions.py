@@ -176,6 +176,10 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "src.webull_exec" not in script
     assert "write_per_sleeve" in (root / "src" / "strategy_tickets.py").read_text(encoding="utf-8")
     assert "unset FINVIZ_SKIP_LIVE" in script
+    assert 'python3 -c "import requests"' in script
+    assert "open-pack live px miss" in script
+    assert "openpyxl requests" in pre
+    assert "openpyxl requests" in book
     assert "FINVIZ_SKIP_LIVE: \"\"" in pre
     assert "FINVIZ_SKIP_LIVE: \"\"" in book
     assert "quoteLabel" in book_suggestions._POLLER_JS
