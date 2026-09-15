@@ -18,28 +18,28 @@
 
 | Ticker | enr | base | ctx | rs_w | beat% | ind_med_w | sector | board | label |
 |--------|----:|-----:|----:|-----:|------:|----------:|--------|-------|-------|
-| CFFN | +19 | +17 | +2 | +0.7 | 78% | +0.1 | Financial | down | LEAD,peers↑,ind↑,sec↓ |
-| CDNA | +19 | +15 | +4 | +0.4 | 67% | +1.6 | Healthcare | up | LEAD,peers↑,ind↑,sec↑ |
-| PBR | +19 | +15 | +4 | +0.1 | 50% | +3.1 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
-| SM | +19 | +15 | +4 | +2.8 | 100% | +2.2 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
-| WDS | +18 | +16 | +2 | -3.5 | 0% | +2.2 | Energy | up | LAG,peers↑,ind↑,sec↑ |
-| UHS | +18 | +14 | +4 | +1.9 | 83% | +0.9 | Healthcare | up | LEAD,peers↑,ind↑,sec↑ |
-| FOX | +17 | +13 | +4 | +1.8 | 88% | +0.5 | Communication Serv | up | LEAD,peers↑,ind↑,sec↑ |
-| SFL | +17 | +15 | +2 | +0.1 | 60% | +0.4 | Industrials | down | LEAD,peers↑,ind↑,sec↓ |
-| NWBI | +17 | +15 | +2 | +0.7 | 80% | +0.1 | Financial | down | LEAD,peers↑,ind↑,sec↓ |
-| CXW | +16 | +16 | +0 | +0.6 | 62% | -1.4 | Industrials | down | LEAD,peers↑,ind↓,sec↓ |
-| MD | +16 | +14 | +2 | -0.9 | 33% | +0.9 | Healthcare | up | LAG,peers↑,ind↑,sec↑ |
-| EC | +16 | +14 | +2 | -0.9 | 33% | +3.1 | Energy | up | LAG,peers↑,ind↑,sec↑ |
-| A | +16 | +12 | +4 | +2.0 | 62% | +1.6 | Healthcare | up | LEAD,peers↑,ind↑,sec↑ |
-| FCF | +16 | +14 | +2 | +1.5 | 89% | +0.1 | Financial | down | LEAD,peers↑,ind↑,sec↓ |
-| LFST | +16 | +14 | +2 | -1.2 | 30% | +0.9 | Healthcare | up | LAG,peers↑,ind↑,sec↑ |
-| CON | +16 | +12 | +4 | +4.6 | 100% | +0.9 | Healthcare | up | LEAD,peers↑,ind↑,sec↑ |
-| DSGX | +16 | +16 | +0 | +2.9 | 80% | -1.1 | Technology | down | LEAD,peers↑,ind↓,sec↓ |
-| SKM | +16 | +16 | +0 | -7.1 | 11% | -0.6 | Communication Serv | up | LAG,peers↑,ind↓,sec↑ |
-| BMRN | +16 | +16 | +0 | +4.5 | 100% | -7.0 | Healthcare | up | LEAD,peers↓,ind↓,sec↑ |
-| SHEL | +16 | +14 | +2 | -1.0 | 33% | +3.1 | Energy | up | LAG,peers↑,ind↑,sec↑ |
-| ILMN | +15 | +13 | +2 | -0.5 | 44% | +1.6 | Healthcare | up | LAG,peers↑,ind↑,sec↑ |
-| AMN | +15 | +13 | +2 | -0.5 | 29% | +0.9 | Healthcare | up | LAG,peers↑,ind↑,sec↑ |
-| LH | +15 | +13 | +2 | -4.9 | 33% | +1.6 | Healthcare | up | LAG,peers↑,ind↑,sec↑ |
-| INSW | +15 | +13 | +2 | +0.0 | 50% | -0.7 | Energy | up | LEAD,peers↑,ind↓,sec↑ |
-| DGX | +15 | +11 | +4 | +2.3 | 50% | +1.6 | Healthcare | up | LEAD,peers↑,ind↑,sec↑ |
+| SM | +19 | +15 | +4 | +3.7 | 100% | +2.7 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
+| WDS | +18 | +16 | +2 | -3.5 | 0% | +2.7 | Energy | up | LAG,peers↑,ind↑,sec↑ |
+| PBR | +17 | +15 | +2 | -0.7 | 25% | +3.3 | Energy | up | LAG,peers↑,ind↑,sec↑ |
+| CDNA | +17 | +15 | +2 | +0.6 | 56% | +2.1 | Healthcare | down | LEAD,peers↑,ind↑,sec↓ |
+| SFL | +17 | +15 | +2 | +0.5 | 60% | +0.2 | Industrials | down | LEAD,peers↑,ind↑,sec↓ |
+| CFFN | +17 | +17 | +0 | +0.5 | 89% | -0.1 | Financial | down | LEAD,peers↑,ind↓,sec↓ |
+| DSGX | +16 | +16 | +0 | +3.5 | 80% | -0.6 | Technology | down | LEAD,peers↑,ind↓,sec↓ |
+| EC | +16 | +14 | +2 | -1.3 | 11% | +3.3 | Energy | up | LAG,peers↑,ind↑,sec↑ |
+| UHS | +16 | +14 | +2 | +1.6 | 83% | +0.8 | Healthcare | down | LEAD,peers↑,ind↑,sec↓ |
+| SHEL | +16 | +14 | +2 | -0.9 | 33% | +3.3 | Energy | up | LAG,peers↑,ind↑,sec↑ |
+| BP | +15 | +11 | +4 | +0.3 | 56% | +3.3 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
+| SLDE | +15 | +15 | +0 | — | — | +0.1 | Financial | down | ind↑,sec↓ |
+| ANET | +15 | +17 | -2 | -2.3 | 22% | -6.3 | Technology | down | LAG,peers↑,ind↓,sec↓ |
+| AVT | +15 | +15 | +0 | -1.4 | 44% | +0.5 | Technology | down | LAG,peers↑,ind↑,sec↓ |
+| FOX | +15 | +13 | +2 | +1.7 | 88% | +0.6 | Communication Serv | flat | LEAD,peers↑,ind↑,sec↓ |
+| ILMN | +15 | +13 | +2 | +1.0 | 56% | +2.1 | Healthcare | down | LEAD,peers↑,ind↑,sec↓ |
+| DVN | +15 | +11 | +4 | +0.8 | 67% | +2.7 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
+| BKV | +14 | +12 | +2 | — | — | +2.7 | Energy | up | ind↑,sec↑ |
+| EPAM | +14 | +14 | +0 | +1.0 | 62% | -0.4 | Technology | down | LEAD,peers↑,ind↓,sec↓ |
+| OBE | +14 | +10 | +4 | +1.2 | 75% | +2.7 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
+| SOBO | +14 | +14 | +0 | — | — | -0.7 | Energy | up | ind↓,sec↑ |
+| YPF | +14 | +10 | +4 | +5.3 | 100% | +3.3 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
+| SU | +14 | +10 | +4 | +1.3 | 78% | +3.3 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
+| BMRN | +14 | +16 | -2 | +3.4 | 100% | -6.6 | Healthcare | down | LEAD,peers↓,ind↓,sec↓ |
+| MGY | +14 | +12 | +2 | -1.5 | 25% | +2.7 | Energy | up | LAG,peers↑,ind↑,sec↑ |
