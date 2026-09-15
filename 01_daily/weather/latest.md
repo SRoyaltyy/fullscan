@@ -5,24 +5,24 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** OFF (general predict down score -6.2, conf 0.749)
-- **Yields:** flat (fred_dgs10) | **Dollar:** flat (dxy) | **Oil:** flat | **VIX:** calm (ratio 1.09 via vix/ma20) spot 17.07
-- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.11
+- **Yields:** rising (llm_factor_fallback) | **Dollar:** flat (dxy) | **Oil:** rising | **VIX:** falling (ratio 0.88 via vix/vix3m) spot 17.0
+- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** n/a
 - **High-impact events:** 4 bullish vs 14 bearish
 
 ## Sectors
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| sector:Basic Materials | 🌧️ hostile | medium | news_judge SECTOR Basic Materials [bearish] |
+| sector:Basic Materials | 🌧️ hostile | high | sector predict score -7.6 dir down conf 0.65 [sector board] |
 | sector:Communication Services | ⛅ neutral | high | sector predict score +0.4 dir up conf 0.416 [sector board] |
 | sector:Consumer Cyclical | 🌧️ hostile | high | sector predict score -4.7 dir down conf 0.588 [sector board] |
-| sector:Consumer Defensive | 🌧️ hostile | medium | finviz sector median week -2.05% [tape] |
+| sector:Consumer Defensive | 🌧️ hostile | medium | finviz sector median week -2.44% [tape] |
 | sector:Energy | 🌤️ favorable | high | sector predict score +4.0 dir up conf 0.661 [sector board] |
 | sector:Financial | 🌧️ hostile | medium | news_judge SECTOR Financial [bearish] |
 | sector:Healthcare | ⛅ neutral | high | sector predict score +0.9 dir up conf 0.537 [sector board] |
 | sector:Industrials | 🌧️ hostile | high | sector predict score -5.9 dir down conf 0.65 [sector board] |
 | sector:Real Estate | 🌧️ hostile | high | sector predict score -8.5 dir down conf 0.65 [sector board] |
-| sector:Technology | 🌤️ favorable | medium | news_judge SECTOR Technology [bullish] |
+| sector:Technology | 🌧️ hostile | high | sector predict score -7.5 dir down conf 0.65 [sector board] |
 | sector:Utilities | 🌧️ hostile | high | sector predict score -8.2 dir down conf 0.65 [sector board] |
 
 ## Size
@@ -64,15 +64,15 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| style:growth | ⛅ neutral | low | yields flat/unknown |
-| style:value | ⛅ neutral | low | yields flat/unknown |
+| style:growth | 🌧️ hostile | medium | yields rising — long-duration growth de-rates [factor: Bond yields] |
+| style:value | 🌤️ favorable | medium | rising yields/reflation favors value & cyclicals [factor: Bond yields] |
 | style:blend | ⛅ neutral | low | — |
 
 ## Leverage
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| lev:high | 🌧️ hostile | medium | risk-off — leverage amplifies the downside [factors + general] |
+| lev:high | 🌧️ hostile | medium | yields rising — leverage amplifies the downside [factors + general] |
 | lev:low | 🌤️ favorable | low | balance-sheet strength preferred in stress |
 | lev:mid | ⛅ neutral | low | — |
 | lev:neg_equity | 🌧️ hostile | low | negative equity is distressed in any regime |

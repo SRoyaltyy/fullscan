@@ -1,6 +1,6 @@
 {
  "date": "2026-09-15",
- "generated_at": "2026-09-15T07:51:20.334808-04:00",
+ "generated_at": "2026-09-15T10:02:56.300391-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -14,26 +14,24 @@
   "general_confidence": 0.749,
   "risk": "off",
   "yields_score": -1.0,
-  "fed_score": -1.0,
-  "dollar_oil_score": -1.0,
-  "futures_score": -0.5,
-  "yields": "flat",
-  "yields_source": "fred_dgs10",
-  "dgs10_delta_1d": 0.01,
-  "dgs10_current": 4.96,
+  "fed_score": -0.5,
+  "dollar_oil_score": -0.5,
+  "futures_score": 0.5,
+  "yields": "rising",
+  "yields_source": "llm_factor_fallback",
   "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.12,
-  "vix_ratio": 1.094,
-  "vix_spot": 17.07,
-  "vix_delta_1d": -0.03,
-  "vix_ratio_source": "vix/ma20",
-  "vix": "calm",
-  "oil_pct_1d": 0.92,
-  "oil": "flat",
+  "dxy_pct_1d": 0.09,
+  "vix_ratio": 0.882,
+  "vix_spot": 17.0,
+  "vix_delta_1d": -0.1,
+  "vix_ratio_source": "vix/vix3m",
+  "vix": "falling",
+  "oil_pct_1d": 1.52,
+  "oil": "rising",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": -0.107,
+  "regime_corr": null,
   "sectors": {
    "Communication Services": {
     "score": 0.396,
@@ -96,24 +94,24 @@
     "source": "llm"
    },
    "Consumer Defensive": {
-    "score": -2.0549999999999997,
+    "score": -2.44,
     "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
    }
   },
   "sector_tape": {
-   "Basic Materials": -4.89,
-   "Communication Services": -0.545,
-   "Consumer Cyclical": -2.73,
-   "Consumer Defensive": -2.0549999999999997,
-   "Energy": -0.77,
-   "Financial": -1.21,
-   "Healthcare": -2.99,
-   "Industrials": -3.21,
-   "Real Estate": -2.57,
-   "Technology": -2.3099999999999996,
-   "Utilities": -2.9
+   "Basic Materials": -5.15,
+   "Communication Services": -0.495,
+   "Consumer Cyclical": -2.65,
+   "Consumer Defensive": -2.44,
+   "Energy": -0.74,
+   "Financial": -1.17,
+   "Healthcare": -3.92,
+   "Industrials": -3.29,
+   "Real Estate": -2.7,
+   "Technology": -2.45,
+   "Utilities": -3.41
   },
   "events_bull": 4,
   "events_bear": 14,
@@ -123,8 +121,8 @@
   "sector": {
    "Basic Materials": {
     "stance": "hostile",
-    "confidence": "medium",
-    "why": "news_judge SECTOR Basic Materials [bearish]"
+    "confidence": "high",
+    "why": "sector predict score -7.6 dir down conf 0.65 [sector board]"
    },
    "Communication Services": {
     "stance": "neutral",
@@ -139,7 +137,7 @@
    "Consumer Defensive": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "finviz sector median week -2.05% [tape]"
+    "why": "finviz sector median week -2.44% [tape]"
    },
    "Energy": {
     "stance": "favorable",
@@ -167,9 +165,9 @@
     "why": "sector predict score -8.5 dir down conf 0.65 [sector board]"
    },
    "Technology": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "news_judge SECTOR Technology [bullish]"
+    "stance": "hostile",
+    "confidence": "high",
+    "why": "sector predict score -7.5 dir down conf 0.65 [sector board]"
    },
    "Utilities": {
     "stance": "hostile",
@@ -320,7 +318,7 @@
    "high": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "risk-off — leverage amplifies the downside [factors + general]"
+    "why": "yields rising — leverage amplifies the downside [factors + general]"
    },
    "low": {
     "stance": "favorable",
@@ -340,14 +338,14 @@
   },
   "style": {
    "growth": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "yields flat/unknown"
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "yields rising — long-duration growth de-rates [factor: Bond yields]"
    },
    "value": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "yields flat/unknown"
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "rising yields/reflation favors value & cyclicals [factor: Bond yields]"
    },
    "blend": {
     "stance": "neutral",
