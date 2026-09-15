@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T09:33:51.295855-04:00",
+  "generated_at": "2026-09-15T09:43:11.198559-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -11,62 +11,50 @@
   },
   "buy_1d": [
     {
-      "ticker": "HITI",
-      "score": 0.3044362933651129
+      "ticker": "WEX",
+      "score": 0.5040713137553983
     },
     {
-      "ticker": "MTCH",
-      "score": 0.5625355999916293
+      "ticker": "LFST",
+      "score": 0.386729538747364
     },
     {
-      "ticker": "CARG",
-      "score": 0.7164691865201616
-    },
-    {
-      "ticker": "FOX",
-      "score": 0.46246499218332093
+      "ticker": "VRSK",
+      "score": 0.26021441998687833
     }
   ],
   "sell_1d": [
     {
       "ticker": "OKLO",
-      "score": -0.4709917547759548
+      "score": -0.4609068195172936
     },
     {
-      "ticker": "EOSE",
-      "score": -0.47634579173599406
+      "ticker": "IONQ",
+      "score": -0.39059974142799925
     },
     {
       "ticker": "QBTS",
-      "score": -0.21963178703680925
+      "score": -0.25144340072426397
     },
     {
-      "ticker": "FUN",
-      "score": -0.6122755003348219
-    },
-    {
-      "ticker": "FLNC",
-      "score": -0.6150820569929332
+      "ticker": "EOSE",
+      "score": -0.43378258027819
     },
     {
       "ticker": "METC",
-      "score": -0.6549472286273187
+      "score": -0.6258237009331186
+    },
+    {
+      "ticker": "FLNC",
+      "score": -0.592091523723564
     },
     {
       "ticker": "FCEL",
-      "score": -0.60016714719896
-    },
-    {
-      "ticker": "TE",
-      "score": -0.5004896009883154
-    },
-    {
-      "ticker": "TLN",
-      "score": -0.6230187099899102
+      "score": -0.581579576942252
     },
     {
       "ticker": "HNRG",
-      "score": -0.18088669874039975
+      "score": -0.188670121599966
     }
   ],
   "flatten": {
@@ -105,31 +93,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "map_heat_research",
-      "title": "Map heat morning delta refresh",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T09:27:42.507169-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-15_research.json",
-          "ok": true,
-          "reason": "",
-          "size": 43645,
-          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-15_research.md",
-          "ok": true,
-          "reason": "",
-          "size": 43645,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-15\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-15\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
-    },
     {
       "key": "finviz",
       "title": "Finviz universe export",
@@ -304,6 +267,59 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T09:33:50.007626-04:00"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T09:43:05.322174-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-15_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1554572,
+          "preview": "1d BUY WEX, LFST, VRSK \u00b7 SELL OKLO, IONQ, QBTS, EOSE, METC, FLNC, FCEL, HNRG"
+        },
+        {
+          "path": "data/stock_book/2026-09-15_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-15_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2386,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-15_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11963,
+          "preview": "2026-09-15 BUY WEX, LFST, VRSK \u00b7 SELL OKLO, IONQ, QBTS, EOSE, METC, FLNC, FCEL, HNRG"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11963,
+          "preview": "2026-09-15 BUY WEX, LFST, VRSK \u00b7 SELL OKLO, IONQ, QBTS, EOSE, METC, FLNC, FCEL, HNRG"
+        },
+        {
+          "path": "01_daily/2026-09-15_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 78754,
+          "preview": "# Stock book \u2014 2026-09-15\n_Generated 2026-09-15T09:32:32.003153-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY WEX, LFST, VRSK \u00b7 SELL OKLO, IONQ, QBTS, EOSE, METC, FLNC, FCEL, HNRG \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-15 BUY WEX, LFST, VRSK \u00b7 SELL OKLO, IONQ, QBTS, EOSE, METC, FLNC, FCEL, HNRG \u00b7 2026-09-15 BUY WEX, LFST, VRSK \u00b7 SELL OKLO, IONQ, QBTS, EOSE, METC, FLNC, FCEL, HNRG \u00b7 # Stock book \u2014 2026-09-15\n_Generated 2026-09-15T09:32:32.003153-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

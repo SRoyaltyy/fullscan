@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T07:51:46.587966-04:00",
+  "generated_at": "2026-09-15T09:32:22.725808-04:00",
   "inputs": [
     {
       "name": "finviz_export",
@@ -21,13 +21,13 @@
       "family": "join",
       "status": "ok",
       "n": 5897,
-      "detail": "std=0.963"
+      "detail": "std=0.870"
     },
     {
       "name": "news_actions",
       "family": "news",
       "status": "ok",
-      "n": 55,
+      "n": 54,
       "detail": ""
     },
     {
@@ -70,7 +70,7 @@
       "family": "addon",
       "status": "ok",
       "n": null,
-      "detail": "45 events, scan_date=2026-09-15"
+      "detail": "76 events, scan_date=2026-09-15"
     },
     {
       "name": "map_heat",
@@ -90,8 +90,8 @@
       "name": "sector_predicts",
       "family": "sector",
       "status": "degraded",
-      "n": 10,
-      "detail": "10/11 quality"
+      "n": 9,
+      "detail": "9/11 quality"
     },
     {
       "name": "price_store",
