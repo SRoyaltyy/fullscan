@@ -1,9 +1,9 @@
-# Reasoning trace — SECTOR PREDICT Communication Services 2026-09-15 retry1
+# Reasoning trace — SECTOR PREDICT Communication Services 2026-09-15
 
 
 
-**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (144,879 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
+**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (144,623 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
 
 
 
-**Step 1 — Done researching.** The model stopped searching and wrote its full analysis (11,843 characters).
+**Step 1 — Done researching.** The model stopped searching and wrote its full analysis (13,360 characters).

@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T11:38:57.206273-04:00",
+  "generated_at": "2026-09-15T11:42:38.279156-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -11,69 +11,57 @@
   },
   "buy_1d": [
     {
-      "ticker": "AVAH",
-      "score": 0.6996000445023314
+      "ticker": "WEX",
+      "score": 0.5040713137553983
     },
     {
-      "ticker": "DBX",
-      "score": 0.666101281302991
+      "ticker": "LFST",
+      "score": 0.386729538747364
     },
     {
-      "ticker": "APPN",
-      "score": 0.5841142486822075
-    },
-    {
-      "ticker": "META",
-      "score": 0.3478692592822346
+      "ticker": "VRSK",
+      "score": 0.26021441998687833
     }
   ],
   "sell_1d": [
     {
-      "ticker": "METC",
-      "score": -0.6636563227288841
-    },
-    {
-      "ticker": "FLNC",
-      "score": -0.617361980539522
-    },
-    {
-      "ticker": "HNRG",
-      "score": -0.19783164109434712
-    },
-    {
-      "ticker": "FCEL",
-      "score": -0.6032009715140413
-    },
-    {
-      "ticker": "TLN",
-      "score": -0.6297351655781135
-    },
-    {
-      "ticker": "TE",
-      "score": -0.5019682632704072
-    },
-    {
       "ticker": "OKLO",
-      "score": -0.4756679355169902
+      "score": -0.4609068195172936
+    },
+    {
+      "ticker": "IONQ",
+      "score": -0.39059974142799925
     },
     {
       "ticker": "QBTS",
-      "score": -0.2950377170604041
+      "score": -0.25144340072426397
     },
     {
-      "ticker": "LVWR",
-      "score": -0.5782237050300606
+      "ticker": "EOSE",
+      "score": -0.43378258027819
     },
     {
-      "ticker": "NRG",
-      "score": -0.38100823809427076
+      "ticker": "METC",
+      "score": -0.6258237009331186
+    },
+    {
+      "ticker": "FLNC",
+      "score": -0.592091523723564
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.581579576942252
+    },
+    {
+      "ticker": "HNRG",
+      "score": -0.188670121599966
     }
   ],
   "flatten": {
-    "said": "0 priced buys \u00b7 cash $107,448.18",
+    "said": "0 priced buys \u00b7 cash $108,616.66",
     "bullets": [
       "0 priced buys",
-      "cash $107,448.18"
+      "cash $108,616.66"
     ]
   },
   "general": {
@@ -89,19 +77,19 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "3 up / 7 down / 1 flat",
+    "said": "1 up / 8 down / 1 flat",
     "bullets": [
-      "XLB DOWN -7.6",
-      "XLC UP +0.4",
-      "XLY DOWN -4.7",
-      "XLP FLAT -8.1",
-      "XLE UP +4.0",
-      "XLF DOWN -4.1",
-      "XLV UP +0.9",
-      "XLI DOWN -5.9",
-      "XLRE DOWN -8.5",
-      "XLK DOWN -1.5",
-      "XLU DOWN -8.2"
+      "XLB DOWN -3.7",
+      "XLC FLAT -2.7",
+      "XLY DOWN -2.3",
+      "XLP missing",
+      "XLE UP +6.8",
+      "XLF DOWN -3.9",
+      "XLV DOWN -3.3",
+      "XLI DOWN -3.3",
+      "XLRE DOWN -4.5",
+      "XLK DOWN -7.5",
+      "XLU DOWN -6.1"
     ]
   },
   "lands": [
@@ -405,6 +393,24 @@
         }
       ],
       "preview": "2026-09-15 BUY AVAH, DBX, APPN, META \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-15 BUY AVAH, DBX, APPN, META \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AVAH, DBX, APPN, META \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AVAH, DBX, APPN, META \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AVAH, DBX, APPN, META \u00b7 SELL METC, FLN"
+    },
+    {
+      "key": "sector_predict",
+      "title": "Per-sector predict (all 11)",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T11:42:36.961897-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-15",
+          "ok": true,
+          "reason": "",
+          "size": 4096,
+          "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
+        }
+      ],
+      "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
