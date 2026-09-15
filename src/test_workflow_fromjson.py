@@ -581,12 +581,13 @@ def test_lane_json_zero_dollar_hoppers() -> None:
 
     block = py.split("def direct_ask")[1].split("def via_lane")[0]
     ordered = re.findall(
-        r'hop_models\(\s*"(openrouter|deepseek|qwen|siliconflow|modelscope|'
-        r'github_models|cloudflare|sambanova|ollama|hf|groq|gemini)"',
+        r'hop_models\(\s*"(openrouter|deepseek|qwen|zhipu|moonshot|siliconflow|'
+        r'modelscope|github_models|cloudflare|sambanova|ollama|hf|groq|gemini)"',
         block,
     )
     assert ordered == [
-        "openrouter", "deepseek", "qwen", "siliconflow", "modelscope",
+        "openrouter", "deepseek", "qwen", "zhipu", "moonshot",
+        "siliconflow", "modelscope",
         "github_models", "cloudflare", "sambanova",
         "ollama", "hf", "groq", "gemini",
     ], ordered
@@ -604,6 +605,9 @@ def test_lane_json_zero_dollar_hoppers() -> None:
         "DASHSCOPE_API_KEY",
         "QWEN_API_KEY",
         "SILICONFLOW_API_KEY",
+        "ZHIPU_API_KEY",
+        "GLM_API_KEY",
+        "MOONSHOT_API_KEY",
         "MODELSCOPE_API_KEY",
         "OLLAMA_URL",
         "GROQ_API_KEY",
@@ -626,6 +630,8 @@ def test_lane_json_zero_dollar_hoppers() -> None:
     assert "api.deepseek.com" in py
     assert "dashscope.aliyuncs.com" in py
     assert "api.siliconflow.cn" in py
+    assert "open.bigmodel.cn" in py
+    assert "api.moonshot.cn" in py
     assert "api-inference.modelscope.cn" in py
     assert "models.github.ai" in py
     assert "api.cloudflare.com" in py
@@ -646,6 +652,9 @@ def test_lane_json_zero_dollar_hoppers() -> None:
     assert first_named and any(n in first_named.lower() for n in cn_needles), first_named
     sf_ids = re.findall(r'"(Qwen/[^"]+|THUDM/[^"]+|deepseek-ai/[^"]+)"', py.split("SF_MODELS")[1].split("SF_URLS")[0])
     assert sf_ids and not any(m.startswith("Pro/") for m in sf_ids), sf_ids
+    zhipu_ids = re.findall(r'"(glm-[^"]+)"', py.split("ZHIPU_MODELS")[1].split("ZHIPU_URLS")[0])
+    assert zhipu_ids and all("flash" in m for m in zhipu_ids), zhipu_ids
+    assert "glm-5." not in py.split("ZHIPU_MODELS")[1].split("ZHIPU_URLS")[0]
 
     assert "not required" in header.lower() or "Skip if unset" in header
 
