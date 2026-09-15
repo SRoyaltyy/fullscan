@@ -26,254 +26,269 @@ Clock split: (A) short-only is a pre-open policy call — shorts fire at the clo
 
 ## RESEARCH per sleeve (paper, not a wire)
 
-**2026-09-14** — `242` sit sleeves with looked names / `312` sit sleeves total. Live policy sits. KEEP bar unchanged. Label: **RESEARCH**.
+**2026-09-15** — `257` sit sleeves with looked names / `312` sit sleeves total. Live policy sits. KEEP bar unchanged. Label: **RESEARCH**.
 
 Per-sleeve paper counterfactuals on looked names. Live sit stays default. KEEP bar unchanged. (A) short-only fires the short kid at the 09:30 open. (B) dip-scoop longs wait for open−X% (session low / Elite live). Close does not trigger.
 
 | Sleeve | Side | (A) short-only @ open | (B) dip-scoop X% |
 |---|---|---|---|
-| `flatten_robust` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `union_h1` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `union_h3` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `union_h5` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `flatten_h1` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `flatten_h3` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `flatten_h5` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `probable_h1` | long | — | ACVA miss; ATEC miss; DELL miss; VICR miss; RLMD miss; HTFL miss; CAN miss; USDE miss |
-| `probable_h3` | long | — | ACVA miss; ATEC miss; DELL miss; VICR miss; RLMD miss; HTFL miss; CAN miss; USDE miss |
-| `probable_h5` | long | — | ACVA miss; ATEC miss; DELL miss; VICR miss; RLMD miss; HTFL miss; CAN miss; USDE miss |
-| `yday_gainer_h1` | long | — | ACVA miss; ATEC miss; DELL miss; VICR miss; RLMD miss; HTFL miss; CAN miss; USDE miss |
-| `yday_gainer_h3` | long | — | ACVA miss; ATEC miss; DELL miss; VICR miss; RLMD miss; HTFL miss; CAN miss; USDE miss |
-| `yday_gainer_h5` | long | — | ACVA miss; ATEC miss; DELL miss; VICR miss; RLMD miss; HTFL miss; CAN miss; USDE miss |
-| `ohlc_hot_h1` | long | — | DELL miss; HPE miss; HPQ miss; GPRO scoop 0.5,1,1.5,2,3%; INSP miss; TJGC miss; QRVO miss; SION miss |
-| `ohlc_hot_h3` | long | — | DELL miss; HPE miss; HPQ miss; GPRO scoop 0.5,1,1.5,2,3%; INSP miss; TJGC miss; QRVO miss; SION miss |
-| `ohlc_hot_h5` | long | — | DELL miss; HPE miss; HPQ miss; GPRO scoop 0.5,1,1.5,2,3%; INSP miss; TJGC miss; QRVO miss; SION miss |
-| `union_vol_g_h1` | long | — | DK scoop 0.5,1,1.5,2,3%; ATEC miss; DELL miss; VERI scoop 0.5,1,1.5,2,3%; CMRC scoop 0.5,1%; HPE miss; HPQ miss; SMR miss |
-| `union_vol_g_h3` | long | — | DK scoop 0.5,1,1.5,2,3%; ATEC miss; DELL miss; VERI scoop 0.5,1,1.5,2,3%; CMRC scoop 0.5,1%; HPE miss; HPQ miss; SMR miss |
-| `union_ab_g_h1` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; NVT scoop 0.5,1,1.5,2%; DELL miss; VICR miss; HPE miss; BW miss; FPS miss |
-| `union_ab_g_h3` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; NVT scoop 0.5,1,1.5,2%; DELL miss; VICR miss; HPE miss; BW miss; FPS miss |
-| `union_join_g_h1` | long | — | CVE scoop 0.5%; NVT scoop 0.5,1,1.5,2%; DELL miss; HPE miss; NTAP miss; HPQ miss; CDW miss; EQ miss |
-| `union_join_g_h3` | long | — | CVE scoop 0.5%; NVT scoop 0.5,1,1.5,2%; DELL miss; HPE miss; NTAP miss; HPQ miss; CDW miss; EQ miss |
-| `union_join_present_h1` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; NVT scoop 0.5,1,1.5,2%; ATEC miss; DELL miss; VICR miss; CAN miss; USDE miss |
-| `union_join_present_h3` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; NVT scoop 0.5,1,1.5,2%; ATEC miss; DELL miss; VICR miss; CAN miss; USDE miss |
-| `union_news_g_h1` | long | — | CVE scoop 0.5%; DELL miss; SLS miss |
-| `union_news_g_h3` | long | — | CVE scoop 0.5%; DELL miss; SLS miss |
-| `union_news_present_h1` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; NVT scoop 0.5,1,1.5,2%; ATEC miss; DELL miss; VICR miss; CAN miss; USDE miss |
-| `union_news_present_h3` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; NVT scoop 0.5,1,1.5,2%; ATEC miss; DELL miss; VICR miss; CAN miss; USDE miss |
-| `union_blue_h1` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; DHT miss; FRO miss; BKV scoop 0.5%; TK miss; KGS miss |
-| `union_blue_h3` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; DHT miss; FRO miss; BKV scoop 0.5%; TK miss; KGS miss |
-| `union_last_green_h1` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; NVT scoop 0.5,1,1.5,2%; DELL miss; VICR miss; CAN miss; USDE miss; VERI scoop 0.5,1,1.5,2,3% |
-| `union_last_green_h3` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; NVT scoop 0.5,1,1.5,2%; DELL miss; VICR miss; CAN miss; USDE miss; VERI scoop 0.5,1,1.5,2,3% |
-| `union_last_red_h1` | long | — | ATEC miss; ON miss; SYNA miss; CDW miss; ADBT miss; TLS miss; SLS miss; EQ miss |
-| `union_last_red_h3` | long | — | ATEC miss; ON miss; SYNA miss; CDW miss; ADBT miss; TLS miss; SLS miss; EQ miss |
-| `union_candle_h1` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; NVT scoop 0.5,1,1.5,2%; DELL miss; CAN miss; USDE miss; VERI scoop 0.5,1,1.5,2,3%; CMRC scoop 0.5,1% |
-| `union_candle_h3` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; NVT scoop 0.5,1,1.5,2%; DELL miss; CAN miss; USDE miss; VERI scoop 0.5,1,1.5,2,3%; CMRC scoop 0.5,1% |
-| `union_coil_off_h1` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; DELL miss; FPS miss; NTAP miss; XRX miss; IMSR miss; GME miss |
-| `union_coil_off_h3` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; DELL miss; FPS miss; NTAP miss; XRX miss; IMSR miss; GME miss |
-| `union_break10_h1` | long | — | DELL miss; VERI scoop 0.5,1,1.5,2,3%; CMRC scoop 0.5,1%; HPE miss; HUT scoop 0.5,1,1.5,2%; NTAP miss; HPQ miss; SMR miss |
-| `union_break10_h3` | long | — | DELL miss; VERI scoop 0.5,1,1.5,2,3%; CMRC scoop 0.5,1%; HPE miss; HUT scoop 0.5,1,1.5,2%; NTAP miss; HPQ miss; SMR miss |
-| `union_macd_up_h1` | long | — | DK scoop 0.5,1,1.5,2,3%; NVT scoop 0.5,1,1.5,2%; DELL miss; VICR miss; VERI scoop 0.5,1,1.5,2,3%; CMRC scoop 0.5,1%; HPE miss; BW miss |
-| `union_macd_up_h3` | long | — | DK scoop 0.5,1,1.5,2,3%; NVT scoop 0.5,1,1.5,2%; DELL miss; VICR miss; VERI scoop 0.5,1,1.5,2,3%; CMRC scoop 0.5,1%; HPE miss; BW miss |
-| `union_macd_xup_h1` | long | — | VICR miss; IMSR miss |
-| `union_macd_xup_h3` | long | — | VICR miss; IMSR miss |
-| `union_vol_g_h5` | long | — | DK scoop 0.5,1,1.5,2,3%; ATEC miss; DELL miss; VERI scoop 0.5,1,1.5,2,3%; CMRC scoop 0.5,1%; HPE miss; HPQ miss; SMR miss |
-| `union_coil_off_h5` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; DELL miss; FPS miss; NTAP miss; XRX miss; IMSR miss; GME miss |
-| `union_last_green_h5` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; NVT scoop 0.5,1,1.5,2%; DELL miss; VICR miss; CAN miss; USDE miss; VERI scoop 0.5,1,1.5,2,3% |
-| `union_news_g_h5` | long | — | CVE scoop 0.5%; DELL miss; SLS miss |
-| `union_news_pack_h1` | long | — | CVE scoop 0.5%; DELL miss |
-| `union_news_head_h1` | long | — | SLS miss |
-| `union_news_or_h1` | long | — | CVE scoop 0.5%; DELL miss; SLS miss |
-| `union_news_g_cond_h1` | long | — | CVE scoop 0.5%; DELL miss; SLS miss |
-| `union_news_or_net2_h1` | long | — | CVE scoop 0.5%; DELL miss |
-| `union_news_or_net3_h1` | long | — | CVE scoop 0.5%; DELL miss |
-| `union_news_or_net4_h1` | long | — | CVE scoop 0.5% |
-| `union_news_pack_net3_h1` | long | — | CVE scoop 0.5%; DELL miss |
-| `union_news_pack_net2_h1` | long | — | CVE scoop 0.5%; DELL miss |
-| `union_news_pack_h3` | long | — | CVE scoop 0.5%; DELL miss |
-| `union_news_head_h3` | long | — | SLS miss |
-| `union_news_or_h3` | long | — | CVE scoop 0.5%; DELL miss; SLS miss |
-| `union_news_g_cond_h3` | long | — | CVE scoop 0.5%; DELL miss; SLS miss |
-| `union_news_or_net2_h3` | long | — | CVE scoop 0.5%; DELL miss |
-| `union_news_or_net3_h3` | long | — | CVE scoop 0.5%; DELL miss |
-| `union_news_or_net4_h3` | long | — | CVE scoop 0.5% |
-| `union_news_pack_net3_h3` | long | — | CVE scoop 0.5%; DELL miss |
-| `union_news_pack_net2_h3` | long | — | CVE scoop 0.5%; DELL miss |
-| `union_news_or_net4_rw_h1` | long | — | CVE scoop 0.5% |
-| `union_news_or_net4_conv_h1` | long | — | CVE scoop 0.5% |
-| `union_news_g_conv_h1` | long | — | CVE scoop 0.5%; DELL miss; SLS miss |
-| `union_news_g_conv_h3` | long | — | CVE scoop 0.5%; DELL miss; SLS miss |
-| `short_news_pack_h3` | short | AMD @486.130 | — |
-| `short_news_head_h3` | short | BKV @24.260 | — |
-| `short_news_or_h3` | short | BKV @24.260; AMD @486.130 | — |
-| `union_vol_ab_h1` | long | — | DK scoop 0.5,1,1.5,2,3%; DELL miss; HPE miss; HPQ miss; TLS miss; SLS miss; INSP miss; QRVO miss |
-| `union_vol_ab_h3` | long | — | DK scoop 0.5,1,1.5,2,3%; DELL miss; HPE miss; HPQ miss; TLS miss; SLS miss; INSP miss; QRVO miss |
-| `union_blue_vol_h1` | long | — | DK scoop 0.5,1,1.5,2,3%; DHT miss |
-| `union_blue_vol_h3` | long | — | DK scoop 0.5,1,1.5,2,3%; DHT miss |
-| `union_news_vol_h1` | long | — | DELL miss; SLS miss |
-| `union_news_vol_h3` | long | — | DELL miss; SLS miss |
-| `probable_probable_ok_h1` | long | — | DELL miss; VICR miss; CAN miss; USDE miss |
-| `probable_probable_ok_h3` | long | — | DELL miss; VICR miss; CAN miss; USDE miss |
-| `union_vol_green_h1` | long | — | DK scoop 0.5,1,1.5,2,3%; DELL miss; VERI scoop 0.5,1,1.5,2,3%; CMRC scoop 0.5,1%; HPE miss; HPQ miss; SMR miss; INSP miss |
-| `union_vol_green_h3` | long | — | DK scoop 0.5,1,1.5,2,3%; DELL miss; VERI scoop 0.5,1,1.5,2,3%; CMRC scoop 0.5,1%; HPE miss; HPQ miss; SMR miss; INSP miss |
-| `union_coil_green_h1` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; DELL miss; FPS miss; NTAP miss; XRX miss; IMSR miss; GME miss |
-| `union_coil_green_h3` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; DELL miss; FPS miss; NTAP miss; XRX miss; IMSR miss; GME miss |
-| `union_blue_coil_h1` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; DHT miss; FRO miss; TK miss; KGS miss |
-| `union_blue_coil_h3` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; DHT miss; FRO miss; TK miss; KGS miss |
-| `union_join_vol_green_h1` | long | — | DELL miss; HPE miss; HPQ miss; INSP miss; GME miss; DHT miss; AVT miss |
-| `union_join_vol_green_h3` | long | — | DELL miss; HPE miss; HPQ miss; INSP miss; GME miss; DHT miss; AVT miss |
-| `flatten_vol_g_h3` | long | — | DK scoop 0.5,1,1.5,2,3% |
-| `ohlc_hot_coil_h1` | long | — | DELL miss; GME miss; DHT miss; AVT miss; UMC miss; FRO miss; AESI miss; AMD scoop 0.5,1% |
-| `union_hot_score_h1` | long | — | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2%; SMR miss; INSP miss; TJGC miss; QRVO miss |
-| `union_hot_score_h3` | long | — | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2%; SMR miss; INSP miss; TJGC miss; QRVO miss |
-| `union_candle_score_h1` | long | — | SMR miss; BE miss; DHT miss; HPQ miss; CMRC scoop 0.5,1%; QRVO miss; SPCX miss; VERI scoop 0.5,1,1.5,2,3% |
-| `union_candle_score_h3` | long | — | SMR miss; BE miss; DHT miss; HPQ miss; CMRC scoop 0.5,1%; QRVO miss; SPCX miss; VERI scoop 0.5,1,1.5,2,3% |
-| `union_ret_5_h1` | long | — | CMRC scoop 0.5,1%; HUT scoop 0.5,1,1.5,2%; VERI scoop 0.5,1,1.5,2,3%; SMR miss; INSP miss; BE miss; QRVO miss; HPE miss |
-| `union_ret_5_h3` | long | — | CMRC scoop 0.5,1%; HUT scoop 0.5,1,1.5,2%; VERI scoop 0.5,1,1.5,2,3%; SMR miss; INSP miss; BE miss; QRVO miss; HPE miss |
-| `union_cond_h1` | long | — | DHT miss; CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; FRO miss; HPQ miss; NVT scoop 0.5,1,1.5,2%; TK miss; DELL miss |
-| `union_cond_h3` | long | — | DHT miss; CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; FRO miss; HPQ miss; NVT scoop 0.5,1,1.5,2%; TK miss; DELL miss |
-| `union_w_hot_cond_h1` | long | — | CMRC scoop 0.5,1%; DHT miss; HPQ miss; QRVO miss; FRO miss; HPE miss; DELL miss; TK miss |
-| `union_w_hot_cond_h3` | long | — | CMRC scoop 0.5,1%; DHT miss; HPQ miss; QRVO miss; FRO miss; HPE miss; DELL miss; TK miss |
-| `union_w_hot_candle_h1` | long | — | CMRC scoop 0.5,1%; SMR miss; VERI scoop 0.5,1,1.5,2,3%; QRVO miss; TJGC miss; HPQ miss; INSP miss; DHT miss |
-| `union_w_hot_candle_h3` | long | — | CMRC scoop 0.5,1%; SMR miss; VERI scoop 0.5,1,1.5,2,3%; QRVO miss; TJGC miss; HPQ miss; INSP miss; DHT miss |
-| `union_rsi_h1` | long | — | TLS miss; IMSR miss; SLS miss; EQ miss; SMR miss; FPS miss; BKV scoop 0.5%; BW miss |
-| `union_rsi_h3` | long | — | TLS miss; IMSR miss; SLS miss; EQ miss; SMR miss; FPS miss; BKV scoop 0.5%; BW miss |
-| `union_macd_hist_h1` | long | — | DELL miss; BE miss; AMD scoop 0.5,1%; CLS miss; HUT scoop 0.5,1,1.5,2%; QRVO miss; SPCX miss; NVT scoop 0.5,1,1.5,2% |
-| `union_macd_hist_h3` | long | — | DELL miss; BE miss; AMD scoop 0.5,1%; CLS miss; HUT scoop 0.5,1,1.5,2%; QRVO miss; SPCX miss; NVT scoop 0.5,1,1.5,2% |
-| `union_hot_n4_h1` | long | — | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2% |
-| `union_hot_n12_h1` | long | — | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2%; SMR miss; INSP miss; TJGC miss; QRVO miss; HPQ miss; HPE miss; DELL miss; GME miss |
-| `union_cond_n4_h3` | long | — | DHT miss; CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; FRO miss |
-| `union_h3_exit_alarm` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; NVT scoop 0.5,1,1.5,2%; ATEC miss; DELL miss; VICR miss; CAN miss; USDE miss |
-| `union_h5_exit_alarm` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; NVT scoop 0.5,1,1.5,2%; ATEC miss; DELL miss; VICR miss; CAN miss; USDE miss |
-| `union_h3_exit_red` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; NVT scoop 0.5,1,1.5,2%; DELL miss; VICR miss; CAN miss; USDE miss; VERI scoop 0.5,1,1.5,2,3% |
-| `union_h3_exit_news_r` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; NVT scoop 0.5,1,1.5,2%; ATEC miss; DELL miss; VICR miss; CAN miss; USDE miss |
-| `coil_h3_exit_alarm` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; NVT scoop 0.5,1,1.5,2%; DELL miss; VICR miss; FPS miss; NTAP miss; XRX miss |
-| `short_alarm_h1` | short | BG @123.850; ACVA @—; RLMD @—; HTFL @—; XHLD @—; ODD @—; BAND @—; REAX @— | — |
-| `short_alarm_h3` | short | BG @123.850; ACVA @—; RLMD @—; HTFL @—; XHLD @—; ODD @—; BAND @—; REAX @— | — |
-| `short_news_r_h1` | short | BKV @24.260; AMD @486.130 | — |
-| `short_news_r_h3` | short | BKV @24.260; AMD @486.130 | — |
-| `short_extended_h1` | short | VERI @1.035; XHLD @—; ODD @—; CMRC @3.510; BAND @—; HUT @92.300; INDP @2.800; SMR @— | — |
-| `short_extended_h3` | short | VERI @1.035; XHLD @—; ODD @—; CMRC @3.510; BAND @—; HUT @92.300; INDP @2.800; SMR @— | — |
-| `short_last_red_h1` | short | BG @123.850; ATEC @—; RLMD @—; ON @—; SYNA @—; CDW @—; ADBT @—; TLS @— | — |
-| `short_last_red_h3` | short | BG @123.850; ATEC @—; RLMD @—; ON @—; SYNA @—; CDW @—; ADBT @—; TLS @— | — |
-| `short_rsi_ob_h1` | short | ACVA @—; XHLD @—; CMRC @3.510; HPQ @—; INDP @2.800; INSP @—; TJGC @—; QRVO @— | — |
-| `short_rsi_ob_h3` | short | ACVA @—; XHLD @—; CMRC @3.510; HPQ @—; INDP @2.800; INSP @—; TJGC @—; QRVO @— | — |
-| `short_macd_dn_h1` | short | CVE @33.640; ACVA @—; ATEC @—; HTFL @—; CAN @—; USDE @—; REAX @—; NTAP @— | — |
-| `short_macd_dn_h3` | short | CVE @33.640; ACVA @—; ATEC @—; HTFL @—; CAN @—; USDE @—; REAX @—; NTAP @— | — |
-| `short_news_r_macd_h3` | short | BKV @24.260; AMD @486.130 | — |
-| `flatten_h5_rankw` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `flatten_h5_topheavy` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `flatten_h5_half` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `flatten_h5_time` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `flatten_h5_cut` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `flatten_h5_trail` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `flatten_h5_sboost` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `flatten_h5_sizeup` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `flatten_h3_rankw` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `flatten_h3_topheavy` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `flatten_h3_half` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `flatten_h3_time` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `flatten_h3_cut` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `flatten_h3_trail` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `flatten_h3_sboost` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `flatten_h3_sizeup` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `union_h5_rankw` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `union_h5_topheavy` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `union_h5_half` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `union_h5_time` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `union_h5_cut` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `union_h5_trail` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `union_h5_sboost` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `union_h5_sizeup` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `union_h3_rankw` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `union_h3_topheavy` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `union_h3_half` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `union_h3_time` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `union_h3_cut` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `union_h3_trail` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `union_h3_sboost` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `union_h3_sizeup` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `union_h1_rankw` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `union_h1_topheavy` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `union_h1_half` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `union_h1_time` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `union_h1_cut` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `union_h1_trail` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `union_h1_sboost` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `union_h1_sizeup` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; ACVA miss; ATEC miss; DELL miss; VICR miss |
-| `flatten_h5_s8` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `combo_seh_333_shared` | mixed | BKV @24.260; AMD @486.130 | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2% |
-| `combo_seh_333_split` | mixed | BKV @24.260; AMD @486.130 | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2% |
-| `combo_seh_502525_shared` | mixed | BKV @24.260; AMD @486.130 | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2% |
-| `combo_seh_502525_split` | mixed | BKV @24.260; AMD @486.130 | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2% |
-| `combo_seh_404020_shared` | mixed | BKV @24.260; AMD @486.130 | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2% |
-| `combo_seh_403525_shared` | mixed | BKV @24.260; AMD @486.130 | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2% |
-| `combo_seh_451540_shared` | mixed | BKV @24.260; AMD @486.130 | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2% |
-| `combo_seh_601525_shared` | mixed | BKV @24.260; AMD @486.130 | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2% |
-| `combo_se_5050_shared` | mixed | BKV @24.260; AMD @486.130 | — |
-| `combo_se_7030_shared` | mixed | BKV @24.260; AMD @486.130 | — |
-| `combo_eh_5050_shared` | long | — | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2% |
-| `combo_sh_5050_shared` | mixed | BKV @24.260; AMD @486.130 | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2% |
-| `combo_sh_macd_5050_shared` | mixed | BKV @24.260; AMD @486.130 | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2%; INDP scoop 0.5,1% |
-| `combo_se_5050_skip` | mixed | BKV @24.260; AMD @486.130 | — |
-| `combo_seh_333_skip` | mixed | BKV @24.260; AMD @486.130 | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2% |
-| `combo_seh_333_weather` | mixed | BKV @24.260; AMD @486.130 | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2% |
-| `combo_se_5050_weather` | mixed | BKV @24.260; AMD @486.130 | — |
-| `combo_se_5050_split` | mixed | BKV @24.260; AMD @486.130 | — |
-| `combo_es_8020_shared` | mixed | BKV @24.260; AMD @486.130 | — |
-| `combo_es_9010_shared` | mixed | BKV @24.260; AMD @486.130 | — |
-| `combo_ehs_702010_shared` | mixed | BKV @24.260; AMD @486.130 | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2% |
-| `combo_ehs_601525_shared` | mixed | BKV @24.260; AMD @486.130 | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2% |
-| `combo_ps_5050_shared` | mixed | BKV @24.260; AMD @486.130 | CVE scoop 0.5%; DELL miss |
-| `combo_ps_7030_shared` | mixed | BKV @24.260; AMD @486.130 | CVE scoop 0.5%; DELL miss |
-| `combo_p2s_5050_shared` | mixed | BKV @24.260; AMD @486.130 | CVE scoop 0.5%; DELL miss |
-| `combo_sn_5050_shared` | mixed | BKV @24.260; AMD @486.130 | CVE scoop 0.5%; DELL miss; SLS miss |
-| `combo_sj_5050_shared` | mixed | BKV @24.260; AMD @486.130 | DELL miss; HPE miss; HPQ miss; INSP miss; GME miss; DHT miss; AVT miss |
-| `combo_sf_5050_shared` | mixed | BKV @24.260; AMD @486.130 | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `combo_snj_333_shared` | mixed | BKV @24.260; AMD @486.130 | CVE scoop 0.5%; DELL miss; SLS miss; HPE miss; HPQ miss; INSP miss; GME miss; DHT miss; AVT miss |
-| `combo_nse_333_shared` | mixed | BKV @24.260; AMD @486.130 | CVE scoop 0.5%; DELL miss; SLS miss |
-| `combo_jse_333_shared` | mixed | BKV @24.260; AMD @486.130 | DELL miss; HPE miss; HPQ miss; INSP miss; GME miss; DHT miss; AVT miss |
-| `combo_fse_333_shared` | mixed | BKV @24.260; AMD @486.130 | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `combo_e1s_7030_shared` | mixed | BKV @24.260; AMD @486.130 | — |
-| `combo_ers_7030_shared` | mixed | BKV @24.260; AMD @486.130 | — |
-| `combo_eh_7030_shared` | long | — | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2% |
-| `combo_fh_7030_shared` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2%; CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2% |
-| `combo_fe_5050_shared` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `combo_fes_403030_shared` | mixed | BKV @24.260; AMD @486.130 | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `combo_se1_5050_shared` | mixed | BKV @24.260; AMD @486.130 | — |
-| `combo_ser_5050_shared` | mixed | BKV @24.260; AMD @486.130 | — |
-| `combo_en_5050_shared` | long | — | CVE scoop 0.5%; DELL miss; SLS miss |
-| `combo_ej_5050_shared` | long | — | DELL miss; HPE miss; HPQ miss; INSP miss; GME miss; DHT miss; AVT miss |
-| `combo_ef_5050_shared` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `combo_hn_5050_shared` | long | — | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2%; CVE scoop 0.5%; DELL miss; SLS miss |
-| `combo_hj_5050_shared` | long | — | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2%; DELL miss; HPE miss; HPQ miss; INSP miss; GME miss; DHT miss; AVT miss |
-| `combo_hf_5050_shared` | long | — | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2%; CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `combo_he1_5050_shared` | long | — | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2% |
-| `combo_her_5050_shared` | long | — | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2% |
-| `combo_nj_5050_shared` | long | — | CVE scoop 0.5%; DELL miss; SLS miss; HPE miss; HPQ miss; INSP miss; GME miss; DHT miss; AVT miss |
-| `combo_nf_5050_shared` | long | — | CVE scoop 0.5%; DELL miss; SLS miss; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `combo_ne1_5050_shared` | long | — | CVE scoop 0.5%; DELL miss; SLS miss |
-| `combo_ner_5050_shared` | long | — | CVE scoop 0.5%; DELL miss; SLS miss |
-| `combo_jf_5050_shared` | long | — | DELL miss; HPE miss; HPQ miss; INSP miss; GME miss; DHT miss; AVT miss; CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `combo_je1_5050_shared` | long | — | DELL miss; HPE miss; HPQ miss; INSP miss; GME miss; DHT miss; AVT miss |
-| `combo_jer_5050_shared` | long | — | DELL miss; HPE miss; HPQ miss; INSP miss; GME miss; DHT miss; AVT miss |
-| `combo_fe1_5050_shared` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `combo_fer_5050_shared` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `combo_se_3070_shared` | mixed | BKV @24.260; AMD @486.130 | — |
-| `combo_sh_7030_shared` | mixed | BKV @24.260; AMD @486.130 | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2% |
-| `combo_sh_3070_shared` | mixed | BKV @24.260; AMD @486.130 | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2% |
-| `combo_eh_3070_shared` | long | — | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2% |
-| `combo_sn_7030_shared` | mixed | BKV @24.260; AMD @486.130 | CVE scoop 0.5%; DELL miss; SLS miss |
-| `combo_sn_3070_shared` | mixed | BKV @24.260; AMD @486.130 | CVE scoop 0.5%; DELL miss; SLS miss |
-| `combo_sj_7030_shared` | mixed | BKV @24.260; AMD @486.130 | DELL miss; HPE miss; HPQ miss; INSP miss; GME miss; DHT miss; AVT miss |
-| `combo_sj_3070_shared` | mixed | BKV @24.260; AMD @486.130 | DELL miss; HPE miss; HPQ miss; INSP miss; GME miss; DHT miss; AVT miss |
-| `combo_sf_7030_shared` | mixed | BKV @24.260; AMD @486.130 | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `combo_sf_3070_shared` | mixed | BKV @24.260; AMD @486.130 | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `combo_en_7030_shared` | long | — | CVE scoop 0.5%; DELL miss; SLS miss |
-| `combo_en_3070_shared` | long | — | CVE scoop 0.5%; DELL miss; SLS miss |
-| `combo_ef_7030_shared` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `combo_ef_3070_shared` | long | — | CVE scoop 0.5%; DK scoop 0.5,1,1.5,2,3%; BG miss; NVT scoop 0.5,1,1.5,2% |
-| `combo_hn_7030_shared` | long | — | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2%; CVE scoop 0.5%; DELL miss; SLS miss |
-| `combo_hn_3070_shared` | long | — | CMRC scoop 0.5,1%; GPRO scoop 0.5,1,1.5,2,3%; VERI scoop 0.5,1,1.5,2,3%; HUT scoop 0.5,1,1.5,2%; CVE scoop 0.5%; DELL miss; SLS miss |
+| `flatten_robust` | long | — | CVE miss; DK miss; BG miss; NVT miss |
+| `union_h1` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `union_h3` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `union_h5` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `flatten_h1` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss |
+| `flatten_h3` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss |
+| `flatten_h5` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss |
+| `probable_h1` | long | — | HLP miss; RPD miss; ZS miss; SES miss; NTSK miss; RBRK miss; SAIL miss; QLYS miss |
+| `probable_h3` | long | — | HLP miss; RPD miss; ZS miss; SES miss; NTSK miss; RBRK miss; SAIL miss; QLYS miss |
+| `probable_h5` | long | — | HLP miss; RPD miss; ZS miss; SES miss; NTSK miss; RBRK miss; SAIL miss; QLYS miss |
+| `yday_gainer_h1` | long | — | HLP miss; RPD miss; ZS miss; SES miss; NTSK miss; RBRK miss; SAIL miss; QLYS miss |
+| `yday_gainer_h3` | long | — | HLP miss; RPD miss; ZS miss; SES miss; NTSK miss; RBRK miss; SAIL miss; QLYS miss |
+| `yday_gainer_h5` | long | — | HLP miss; RPD miss; ZS miss; SES miss; NTSK miss; RBRK miss; SAIL miss; QLYS miss |
+| `ohlc_hot_h1` | long | — | SES miss; GPRO miss; INSP miss; TJGC miss; QRVO miss; SION miss; HPQ miss; HPE miss |
+| `ohlc_hot_h3` | long | — | SES miss; GPRO miss; INSP miss; TJGC miss; QRVO miss; SION miss; HPQ miss; HPE miss |
+| `ohlc_hot_h5` | long | — | SES miss; GPRO miss; INSP miss; TJGC miss; QRVO miss; SION miss; HPQ miss; HPE miss |
+| `union_vol_g_h1` | long | — | RPD miss; ZS miss; NTSK miss; RBRK miss; SAIL miss; TENB miss; S miss; TRX miss |
+| `union_vol_g_h3` | long | — | RPD miss; ZS miss; NTSK miss; RBRK miss; SAIL miss; TENB miss; S miss; TRX miss |
+| `union_ab_g_h1` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; RPD miss; NTSK miss; SAIL miss; QLYS miss |
+| `union_ab_g_h3` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; RPD miss; NTSK miss; SAIL miss; QLYS miss |
+| `union_join_g_h1` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; RPD miss; ZS miss; NTSK miss; RBRK miss |
+| `union_join_g_h3` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; RPD miss; ZS miss; NTSK miss; RBRK miss |
+| `union_join_present_h1` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; RPD miss; ZS miss; NTSK miss; RBRK miss |
+| `union_join_present_h3` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; RPD miss; ZS miss; NTSK miss; RBRK miss |
+| `union_news_g_h1` | long | — | OKTA miss |
+| `union_news_g_h3` | long | — | OKTA miss |
+| `union_news_present_h1` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; RPD miss; ZS miss; NTSK miss; RBRK miss |
+| `union_news_present_h3` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; RPD miss; ZS miss; NTSK miss; RBRK miss |
+| `union_blue_h1` | long | — | SYK miss; HAE miss; DCTH miss; RPD miss; ZS miss; NTSK miss; RBRK miss; SAIL miss |
+| `union_blue_h3` | long | — | SYK miss; HAE miss; DCTH miss; RPD miss; ZS miss; NTSK miss; RBRK miss; SAIL miss |
+| `union_last_green_h1` | long | — | SYK miss; HAE miss; LFST miss; ZS miss; QLYS miss; INDP miss; RBLX miss; QNC miss |
+| `union_last_green_h3` | long | — | SYK miss; HAE miss; LFST miss; ZS miss; QLYS miss; INDP miss; RBLX miss; QNC miss |
+| `union_last_red_h1` | long | — | DCTH miss; RPD miss; NTSK miss; RBRK miss; SAIL miss; TENB miss; S miss; TRX miss |
+| `union_last_red_h3` | long | — | DCTH miss; RPD miss; NTSK miss; RBRK miss; SAIL miss; TENB miss; S miss; TRX miss |
+| `union_candle_h1` | long | — | LFST miss; INDP miss; QNC miss; XHLD miss; SIMO miss; BAND miss; INSP miss; QRVO miss |
+| `union_candle_h3` | long | — | LFST miss; INDP miss; QNC miss; XHLD miss; SIMO miss; BAND miss; INSP miss; QRVO miss |
+| `union_coil_off_h1` | long | — | LFST miss; NTSK miss; LFMD miss; CNTB miss; INIO miss; DELL miss; GME miss; AVT miss |
+| `union_coil_off_h3` | long | — | LFST miss; NTSK miss; LFMD miss; CNTB miss; INIO miss; DELL miss; GME miss; AVT miss |
+| `union_earn_react_h1` | long | — | FPS miss; HITI miss; PLAY miss |
+| `union_earn_react_h3` | long | — | FPS miss; HITI miss; PLAY miss |
+| `union_e_fresh_h1` | long | — | FPS miss; HITI miss; PLAY miss |
+| `union_e_fresh_h3` | long | — | FPS miss; HITI miss; PLAY miss |
+| `union_break10_h1` | long | — | INDP miss; XHLD miss; SIMO miss; BAND miss; INSP miss; QRVO miss; SION miss; HPQ miss |
+| `union_break10_h3` | long | — | INDP miss; XHLD miss; SIMO miss; BAND miss; INSP miss; QRVO miss; SION miss; HPQ miss |
+| `union_macd_up_h1` | long | — | CYPH miss; INDP miss; LFMD miss; RBLX miss; OKTA miss; XHLD miss; SIMO miss; INIO miss |
+| `union_macd_up_h3` | long | — | CYPH miss; INDP miss; LFMD miss; RBLX miss; OKTA miss; XHLD miss; SIMO miss; INIO miss |
+| `union_macd_xup_h1` | long | — | INIO miss |
+| `union_macd_xup_h3` | long | — | INIO miss |
+| `union_flow_in_h1` | long | — | LFMD miss; ARLO miss |
+| `union_flow_in_h3` | long | — | LFMD miss; ARLO miss |
+| `union_vol_g_h5` | long | — | RPD miss; ZS miss; NTSK miss; RBRK miss; SAIL miss; TENB miss; S miss; TRX miss |
+| `union_coil_off_h5` | long | — | LFST miss; NTSK miss; LFMD miss; CNTB miss; INIO miss; DELL miss; GME miss; AVT miss |
+| `union_last_green_h5` | long | — | SYK miss; HAE miss; LFST miss; ZS miss; QLYS miss; INDP miss; RBLX miss; QNC miss |
+| `union_news_g_h5` | long | — | OKTA miss |
+| `union_flow_in_h5` | long | — | LFMD miss; ARLO miss |
+| `union_news_head_h1` | long | — | OKTA miss |
+| `union_news_or_h1` | long | — | OKTA miss |
+| `union_news_g_cond_h1` | long | — | OKTA miss |
+| `union_news_g_cam71_h1` | long | — | OKTA miss |
+| `union_news_g_cam61_h1` | long | — | OKTA miss |
+| `union_news_or_net2_h1` | long | — | OKTA miss |
+| `union_news_or_net3_h1` | long | — | OKTA miss |
+| `union_news_or_net4_h1` | long | — | OKTA miss |
+| `union_news_or_net5_h1` | long | — | OKTA miss |
+| `union_news_head_h3` | long | — | OKTA miss |
+| `union_news_or_h3` | long | — | OKTA miss |
+| `union_news_g_cond_h3` | long | — | OKTA miss |
+| `union_news_g_cam71_h3` | long | — | OKTA miss |
+| `union_news_g_cam61_h3` | long | — | OKTA miss |
+| `union_news_or_net2_h3` | long | — | OKTA miss |
+| `union_news_or_net3_h3` | long | — | OKTA miss |
+| `union_news_or_net4_h3` | long | — | OKTA miss |
+| `union_news_or_net5_h3` | long | — | OKTA miss |
+| `union_news_or_net4_rw_h1` | long | — | OKTA miss |
+| `union_news_or_net4_conv_h1` | long | — | OKTA miss |
+| `union_news_g_cam71_n2_h1` | long | — | OKTA miss |
+| `union_news_g_conv_h1` | long | — | OKTA miss |
+| `union_news_g_conv_h3` | long | — | OKTA miss |
+| `union_news_g_cam71_conv_h1` | long | — | OKTA miss |
+| `short_news_pack_h3` | short | AMD @— | — |
+| `short_news_head_h3` | short | ZS @—; TYRA @—; HPE @—; BKV @—; SPCX @— | — |
+| `short_news_or_h3` | short | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | — |
+| `union_vol_ab_h1` | long | — | RPD miss; NTSK miss; SAIL miss; TENB miss; S miss; CYPH miss; CRWD miss; PANW miss |
+| `union_vol_ab_h3` | long | — | RPD miss; NTSK miss; SAIL miss; TENB miss; S miss; CYPH miss; CRWD miss; PANW miss |
+| `union_blue_vol_h1` | long | — | RPD miss; NTSK miss; RBRK miss; SAIL miss; TENB miss; S miss; CYPH miss; CRWD miss |
+| `union_blue_vol_h3` | long | — | RPD miss; NTSK miss; RBRK miss; SAIL miss; TENB miss; S miss; CYPH miss; CRWD miss |
+| `union_news_vol_h1` | long | — | OKTA miss |
+| `union_news_vol_h3` | long | — | OKTA miss |
+| `union_e_green_h1` | long | — | FPS miss |
+| `union_e_green_h3` | long | — | FPS miss |
+| `probable_probable_ok_h1` | long | — | QLYS miss |
+| `probable_probable_ok_h3` | long | — | QLYS miss |
+| `union_vol_green_h1` | long | — | INDP miss; RBLX miss; QNC miss; FRO miss; KGS miss; FPS miss |
+| `union_vol_green_h3` | long | — | INDP miss; RBLX miss; QNC miss; FRO miss; KGS miss; FPS miss |
+| `union_coil_green_h1` | long | — | LFST miss; INIO miss; DELL miss; GME miss; AVT miss; UMC miss; FRO miss; ASX miss |
+| `union_coil_green_h3` | long | — | LFST miss; INIO miss; DELL miss; GME miss; AVT miss; UMC miss; FRO miss; ASX miss |
+| `union_blue_coil_h1` | long | — | SYK miss; HAE miss; DCTH miss; RPD miss; NTSK miss; RBRK miss; SAIL miss; TENB miss |
+| `union_blue_coil_h3` | long | — | SYK miss; HAE miss; DCTH miss; RPD miss; NTSK miss; RBRK miss; SAIL miss; TENB miss |
+| `union_join_vol_green_h1` | long | — | INDP miss; QNC miss; FRO miss; KGS miss |
+| `union_join_vol_green_h3` | long | — | INDP miss; QNC miss; FRO miss; KGS miss |
+| `ohlc_hot_coil_h1` | long | — | DELL miss; GME miss; AVT miss; UMC miss; FRO miss; AMD miss; ASX miss; ARLO miss |
+| `union_hot_score_h1` | long | — | INDP miss; XHLD miss; GPRO miss; INSP miss; QRVO miss; SION miss; BAND miss; SIMO miss |
+| `union_hot_score_h3` | long | — | INDP miss; XHLD miss; GPRO miss; INSP miss; QRVO miss; SION miss; BAND miss; SIMO miss |
+| `union_candle_score_h1` | long | — | ZVRA miss; HPQ miss; CLOV miss; INDP miss; QRVO miss; SION miss; CECO miss; LFST miss |
+| `union_candle_score_h3` | long | — | ZVRA miss; HPQ miss; CLOV miss; INDP miss; QRVO miss; SION miss; CECO miss; LFST miss |
+| `union_ret_5_h1` | long | — | INDP miss; XHLD miss; BAND miss; SIMO miss; INSP miss; SION miss; QRVO miss; HPE miss |
+| `union_ret_5_h3` | long | — | INDP miss; XHLD miss; BAND miss; SIMO miss; INSP miss; SION miss; QRVO miss; HPE miss |
+| `union_cond_h1` | long | — | CRWD miss; OKTA miss; PANW miss; S miss; BAND miss; DELL miss; NTSK miss; SAIL miss |
+| `union_cond_h3` | long | — | CRWD miss; OKTA miss; PANW miss; S miss; BAND miss; DELL miss; NTSK miss; SAIL miss |
+| `union_w_hot_cond_h1` | long | — | INDP miss; BAND miss; DELL miss; QRVO miss; XHLD miss; INSP miss; SIMO miss; HPQ miss |
+| `union_w_hot_cond_h3` | long | — | INDP miss; BAND miss; DELL miss; QRVO miss; XHLD miss; INSP miss; SIMO miss; HPQ miss |
+| `union_w_hot_candle_h1` | long | — | INDP miss; XHLD miss; QRVO miss; SION miss; HPQ miss; INSP miss; CLOV miss; SIMO miss |
+| `union_w_hot_candle_h3` | long | — | INDP miss; XHLD miss; QRVO miss; SION miss; HPQ miss; INSP miss; CLOV miss; SIMO miss |
+| `union_rsi_h1` | long | — | INIO miss; HQ miss; EU miss; SYK miss; SION miss; ARQQ miss; FPS miss; CNTB miss |
+| `union_rsi_h3` | long | — | INIO miss; HQ miss; EU miss; SYK miss; SION miss; ARQQ miss; FPS miss; CNTB miss |
+| `union_macd_hist_h1` | long | — | DELL miss; SIMO miss; AMD miss; CLS miss; QRVO miss; SION miss; OKTA miss; RBLX miss |
+| `union_macd_hist_h3` | long | — | DELL miss; SIMO miss; AMD miss; CLS miss; QRVO miss; SION miss; OKTA miss; RBLX miss |
+| `union_hot_n4_h1` | long | — | INDP miss; XHLD miss; GPRO miss; INSP miss |
+| `union_hot_n12_h1` | long | — | INDP miss; XHLD miss; GPRO miss; INSP miss; QRVO miss; SION miss; BAND miss; SIMO miss; HPQ miss; HPE miss; DELL miss; CLOV miss |
+| `union_cond_n4_h3` | long | — | CRWD miss; OKTA miss; PANW miss; S miss |
+| `union_h3_exit_alarm` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; RPD miss; ZS miss; NTSK miss; RBRK miss |
+| `union_h5_exit_alarm` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; RPD miss; ZS miss; NTSK miss; RBRK miss |
+| `union_h3_exit_red` | long | — | SYK miss; HAE miss; LFST miss; ZS miss; QLYS miss; INDP miss; RBLX miss; QNC miss |
+| `union_h3_exit_news_r` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; RPD miss; NTSK miss; RBRK miss; SAIL miss |
+| `coil_h3_exit_alarm` | long | — | LFST miss; NTSK miss; LFMD miss; RBLX miss; CNTB miss; INIO miss; DELL miss; GME miss |
+| `short_alarm_h1` | short | HLP @—; SES @—; DBI @—; TJGC @—; DHT @—; VSTS @—; AESI @—; BE @— | — |
+| `short_alarm_h3` | short | HLP @—; SES @—; DBI @—; TJGC @—; DHT @—; VSTS @—; AESI @—; BE @— | — |
+| `short_news_r_h1` | short | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | — |
+| `short_news_r_h3` | short | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | — |
+| `short_extended_h1` | short | INDP @—; XHLD @—; SIMO @—; BAND @—; INSP @—; QRVO @—; SION @—; BE @— | — |
+| `short_extended_h3` | short | INDP @—; XHLD @—; SIMO @—; BAND @—; INSP @—; QRVO @—; SION @—; BE @— | — |
+| `short_last_red_h1` | short | DCTH @—; HLP @—; RPD @—; NTSK @—; RBRK @—; SAIL @—; TENB @—; S @— | — |
+| `short_last_red_h3` | short | DCTH @—; HLP @—; RPD @—; NTSK @—; RBRK @—; SAIL @—; TENB @—; S @— | — |
+| `short_rsi_ob_h1` | short | CYPH @—; INDP @—; RBLX @—; INSP @—; TJGC @—; CLOV @—; GME @—; DHT @— | — |
+| `short_rsi_ob_h3` | short | CYPH @—; INDP @—; RBLX @—; INSP @—; TJGC @—; CLOV @—; GME @—; DHT @— | — |
+| `short_macd_dn_h1` | short | SYK @—; HAE @—; LFST @—; DCTH @—; RPD @—; ZS @—; NTSK @—; RBRK @— | — |
+| `short_macd_dn_h3` | short | SYK @—; HAE @—; LFST @—; DCTH @—; RPD @—; ZS @—; NTSK @—; RBRK @— | — |
+| `short_news_r_macd_h3` | short | HPE @—; BKV @—; AMD @—; SPCX @— | — |
+| `flatten_h5_rankw` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss |
+| `flatten_h5_topheavy` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss |
+| `flatten_h5_half` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss |
+| `flatten_h5_time` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss |
+| `flatten_h5_cut` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss |
+| `flatten_h5_trail` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss |
+| `flatten_h5_sboost` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss |
+| `flatten_h5_sizeup` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss |
+| `flatten_h3_rankw` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss |
+| `flatten_h3_topheavy` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss |
+| `flatten_h3_half` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss |
+| `flatten_h3_time` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss |
+| `flatten_h3_cut` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss |
+| `flatten_h3_trail` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss |
+| `flatten_h3_sboost` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss |
+| `flatten_h3_sizeup` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss |
+| `union_h5_rankw` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `union_h5_topheavy` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `union_h5_half` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `union_h5_time` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `union_h5_cut` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `union_h5_trail` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `union_h5_sboost` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `union_h5_sizeup` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `union_h3_rankw` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `union_h3_topheavy` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `union_h3_half` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `union_h3_time` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `union_h3_cut` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `union_h3_trail` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `union_h3_sboost` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `union_h3_sizeup` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `union_h1_rankw` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `union_h1_topheavy` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `union_h1_half` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `union_h1_time` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `union_h1_cut` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `union_h1_trail` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `union_h1_sboost` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `union_h1_sizeup` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; HLP miss; RPD miss; ZS miss; SES miss |
+| `flatten_h5_s8` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss |
+| `combo_seh_333_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | FPS miss; HITI miss; PLAY miss; INDP miss; XHLD miss; GPRO miss; INSP miss |
+| `combo_seh_333_split` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | FPS miss; HITI miss; PLAY miss; INDP miss; XHLD miss; GPRO miss; INSP miss |
+| `combo_seh_502525_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | FPS miss; HITI miss; PLAY miss; INDP miss; XHLD miss; GPRO miss; INSP miss |
+| `combo_seh_502525_split` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | FPS miss; HITI miss; PLAY miss; INDP miss; XHLD miss; GPRO miss; INSP miss |
+| `combo_seh_404020_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | FPS miss; HITI miss; PLAY miss; INDP miss; XHLD miss; GPRO miss; INSP miss |
+| `combo_seh_403525_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | FPS miss; HITI miss; PLAY miss; INDP miss; XHLD miss; GPRO miss; INSP miss |
+| `combo_seh_451540_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | FPS miss; HITI miss; PLAY miss; INDP miss; XHLD miss; GPRO miss; INSP miss |
+| `combo_seh_601525_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | FPS miss; HITI miss; PLAY miss; INDP miss; XHLD miss; GPRO miss; INSP miss |
+| `combo_se_5050_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | FPS miss; HITI miss; PLAY miss |
+| `combo_se_7030_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | FPS miss; HITI miss; PLAY miss |
+| `combo_eh_5050_shared` | long | — | FPS miss; HITI miss; PLAY miss; INDP miss; XHLD miss; GPRO miss; INSP miss |
+| `combo_sh_5050_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | INDP miss; XHLD miss; GPRO miss; INSP miss |
+| `combo_sh_macd_5050_shared` | mixed | HPE @—; BKV @—; AMD @—; SPCX @— | INDP miss; XHLD miss; GPRO miss; INSP miss |
+| `combo_se_5050_skip` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | FPS miss; HITI miss; PLAY miss |
+| `combo_seh_333_skip` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | FPS miss; HITI miss; PLAY miss; INDP miss; XHLD miss; GPRO miss; INSP miss |
+| `combo_seh_333_weather` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | FPS miss; HITI miss; PLAY miss; INDP miss; XHLD miss; GPRO miss; INSP miss |
+| `combo_se_5050_weather` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | FPS miss; HITI miss; PLAY miss |
+| `combo_se_5050_split` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | FPS miss; HITI miss; PLAY miss |
+| `combo_es_8020_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | FPS miss; HITI miss; PLAY miss |
+| `combo_es_9010_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | FPS miss; HITI miss; PLAY miss |
+| `combo_ehs_702010_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | FPS miss; HITI miss; PLAY miss; INDP miss; XHLD miss; GPRO miss; INSP miss |
+| `combo_ehs_601525_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | FPS miss; HITI miss; PLAY miss; INDP miss; XHLD miss; GPRO miss; INSP miss |
+| `combo_ps_5050_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | — |
+| `combo_ps_7030_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | — |
+| `combo_p2s_5050_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | — |
+| `combo_sn_5050_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | OKTA miss |
+| `combo_sj_5050_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | INDP miss; QNC miss; FRO miss; KGS miss |
+| `combo_sf_5050_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | SYK miss; HAE miss; LFST miss; DCTH miss |
+| `combo_snj_333_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | OKTA miss; INDP miss; QNC miss; FRO miss; KGS miss |
+| `combo_nse_333_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | OKTA miss; FPS miss; HITI miss; PLAY miss |
+| `combo_jse_333_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | INDP miss; QNC miss; FRO miss; KGS miss; FPS miss; HITI miss; PLAY miss |
+| `combo_fse_333_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | SYK miss; HAE miss; LFST miss; DCTH miss; FPS miss; HITI miss; PLAY miss |
+| `combo_e1s_7030_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | FPS miss; HITI miss; PLAY miss |
+| `combo_ers_7030_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | FPS miss; HITI miss; PLAY miss |
+| `combo_eh_7030_shared` | long | — | FPS miss; HITI miss; PLAY miss; INDP miss; XHLD miss; GPRO miss; INSP miss |
+| `combo_fh_7030_shared` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; INDP miss; XHLD miss; GPRO miss; INSP miss |
+| `combo_fe_5050_shared` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; FPS miss; HITI miss; PLAY miss |
+| `combo_fes_403030_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | SYK miss; HAE miss; LFST miss; DCTH miss; FPS miss; HITI miss; PLAY miss |
+| `combo_se1_5050_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | FPS miss; HITI miss; PLAY miss |
+| `combo_ser_5050_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | FPS miss; HITI miss; PLAY miss |
+| `combo_en_5050_shared` | long | — | FPS miss; HITI miss; PLAY miss; OKTA miss |
+| `combo_ej_5050_shared` | long | — | FPS miss; HITI miss; PLAY miss; INDP miss; QNC miss; FRO miss; KGS miss |
+| `combo_ef_5050_shared` | long | — | FPS miss; HITI miss; PLAY miss; SYK miss; HAE miss; LFST miss; DCTH miss |
+| `combo_ee1_5050_shared` | long | — | FPS miss; HITI miss; PLAY miss |
+| `combo_eer_5050_shared` | long | — | FPS miss; HITI miss; PLAY miss |
+| `combo_hn_5050_shared` | long | — | INDP miss; XHLD miss; GPRO miss; INSP miss; OKTA miss |
+| `combo_hj_5050_shared` | long | — | INDP miss; XHLD miss; GPRO miss; INSP miss; QNC miss; FRO miss; KGS miss |
+| `combo_hf_5050_shared` | long | — | INDP miss; XHLD miss; GPRO miss; INSP miss; SYK miss; HAE miss; LFST miss; DCTH miss |
+| `combo_he1_5050_shared` | long | — | INDP miss; XHLD miss; GPRO miss; INSP miss; FPS miss; HITI miss; PLAY miss |
+| `combo_her_5050_shared` | long | — | INDP miss; XHLD miss; GPRO miss; INSP miss; FPS miss; HITI miss; PLAY miss |
+| `combo_nj_5050_shared` | long | — | OKTA miss; INDP miss; QNC miss; FRO miss; KGS miss |
+| `combo_nf_5050_shared` | long | — | OKTA miss; SYK miss; HAE miss; LFST miss; DCTH miss |
+| `combo_ne1_5050_shared` | long | — | OKTA miss; FPS miss; HITI miss; PLAY miss |
+| `combo_ner_5050_shared` | long | — | OKTA miss; FPS miss; HITI miss; PLAY miss |
+| `combo_jf_5050_shared` | long | — | INDP miss; QNC miss; FRO miss; KGS miss; SYK miss; HAE miss; LFST miss; DCTH miss |
+| `combo_je1_5050_shared` | long | — | INDP miss; QNC miss; FRO miss; KGS miss; FPS miss; HITI miss; PLAY miss |
+| `combo_jer_5050_shared` | long | — | INDP miss; QNC miss; FRO miss; KGS miss; FPS miss; HITI miss; PLAY miss |
+| `combo_fe1_5050_shared` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; FPS miss; HITI miss; PLAY miss |
+| `combo_fer_5050_shared` | long | — | SYK miss; HAE miss; LFST miss; DCTH miss; FPS miss; HITI miss; PLAY miss |
+| `combo_e1er_5050_shared` | long | — | FPS miss; HITI miss; PLAY miss |
+| `combo_se_3070_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | FPS miss; HITI miss; PLAY miss |
+| `combo_sh_7030_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | INDP miss; XHLD miss; GPRO miss; INSP miss |
+| `combo_sh_3070_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | INDP miss; XHLD miss; GPRO miss; INSP miss |
+| `combo_eh_3070_shared` | long | — | FPS miss; HITI miss; PLAY miss; INDP miss; XHLD miss; GPRO miss; INSP miss |
+| `combo_sn_7030_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | OKTA miss |
+| `combo_sn_3070_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | OKTA miss |
+| `combo_sj_7030_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | INDP miss; QNC miss; FRO miss; KGS miss |
+| `combo_sj_3070_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | INDP miss; QNC miss; FRO miss; KGS miss |
+| `combo_sf_7030_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | SYK miss; HAE miss; LFST miss; DCTH miss |
+| `combo_sf_3070_shared` | mixed | ZS @—; TYRA @—; HPE @—; BKV @—; AMD @—; SPCX @— | SYK miss; HAE miss; LFST miss; DCTH miss |
+| `combo_en_7030_shared` | long | — | FPS miss; HITI miss; PLAY miss; OKTA miss |
+| `combo_en_3070_shared` | long | — | FPS miss; HITI miss; PLAY miss; OKTA miss |
+| `combo_ef_7030_shared` | long | — | FPS miss; HITI miss; PLAY miss; SYK miss; HAE miss; LFST miss; DCTH miss |
+| `combo_ef_3070_shared` | long | — | FPS miss; HITI miss; PLAY miss; SYK miss; HAE miss; LFST miss; DCTH miss |
+| `combo_hn_7030_shared` | long | — | INDP miss; XHLD miss; GPRO miss; INSP miss; OKTA miss |
+| `combo_hn_3070_shared` | long | — | INDP miss; XHLD miss; GPRO miss; INSP miss; OKTA miss |
+| `combo_ee1_7030_shared` | long | — | FPS miss; HITI miss; PLAY miss |
+| `combo_ee1_3070_shared` | long | — | FPS miss; HITI miss; PLAY miss |
 
 Scoop trigger = official open + session low (Elite live only when the low has not printed). Close / last / Theme Radar never trigger. #236 KILL of global short-only / dip-scoop stands — this table is display/paper only.
 
