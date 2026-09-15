@@ -120,10 +120,10 @@ AEI,Real Estate,Real Estate - Development,micro,none,US,high,low,low,quiet,high,
 AEIS,Industrials,Electrical Equipment & Parts,large,none,US,high,low,high,quiet,high,yes,mid,growth,downtrend,neutral,mid,past,big_beat,strong_buy,,0,mid,below,down,high,cheap,fast,good,some
 AEM,Basic Materials,Gold,large,none,ADR-Canada,low,low,high,quiet,mid,yes,low,growth,uptrend,neutral,mid,past,inline,strong_buy,,0,mid,below,up,mid,fair,fast,good,some
 AEMD,Healthcare,Medical Devices,micro,none,US,high,extreme,low,quiet,high,unknown,low,growth,downtrend,washed,deep_low,past,inline,hold,,0,oversold,below,down,low,unknown,unknown,none,unknown
-AENT,Communication Services,Entertainment,micro,none,US,low,mid,low,normal,high,thin,mid,value,downtrend,neutral,low,past,big_beat,strong_buy,,0,mid,above,up,low,unknown,slow,good,unknown
+AENT,Communication Services,Entertainment,micro,none,US,low,mid,low,normal,high,thin,mid,value,mixed,neutral,low,past,big_beat,strong_buy,,0,mid,above,up,low,unknown,slow,good,unknown
 AEO,Consumer Cyclical,Apparel Retail,mid,rut,US,mid,mid,mid,quiet,high,thin,high,value,downtrend,neutral,deep_low,past,big_beat,hold,,0,mid,below,down,high,cheap,slow,good,some
 AEON,Healthcare,Biotechnology,micro,none,US,low,mid,low,quiet,high,unknown,unknown,blend,downtrend,neutral,deep_low,past,big_beat,strong_buy,theme:biotech,1,mid,above,down,mid,unknown,unknown,unknown,unknown
-AEP,Utilities,Utilities - Regulated Electric,large,ndx|sp500,US,low,low,high,quiet,low,yes,high,blend,downtrend,neutral,mid,past,miss,buy,,0,mid,below,flat,high,rich,slow,good,high
+AEP,Utilities,Utilities - Regulated Electric,large,ndx|sp500,US,low,low,high,quiet,low,yes,high,blend,downtrend,neutral,mid,past,miss,buy,,0,mid,below,down,high,rich,slow,good,high
 AER,Industrials,Rental & Leasing Services,large,none,ADR-Ireland,mid,low,high,quiet,low,yes,high,value,downtrend,neutral,mid,past,big_beat,strong_buy,,0,oversold,below,flat,high,cheap,shrink,good,some
 AERO,Industrials,Airlines,mid,none,ADR-Mexico,unknown,low,low,quiet,mid,thin,unknown,growth,mixed,neutral,low,past,big_miss,strong_buy,,0,mid,above,down,mid,fair,slow,unknown,unknown
 AERT,Industrials,Consulting Services,micro,none,ADR-Singapore,low,low,low,quiet,high,thin,unknown,blend,uptrend,neutral,high,unknown,unknown,unknown,,0,mid,above,up,low,unknown,slow,unknown,unknown
@@ -383,7 +383,7 @@ ARAY,Healthcare,Medical Devices,micro,none,US,high,low,low,quiet,high,no,high,bl
 ARBB,Technology,Information Technology Services,micro,none,ADR-Singapore,mid,low,low,hot,high,no,low,growth,mixed,neutral,deep_low,unknown,unknown,strong_buy,,0,mid,above,down,low,unknown,fast,none,unknown
 ARBE,Technology,Scientific & Technical Instruments,micro,none,ADR-Israel,mid,mid,low,quiet,high,no,mid,growth,mixed,neutral,deep_low,past,beat,strong_buy,theme:defense,1,mid,above,down,mid,unknown,fast,none,unknown
 ARBK,Financial,Capital Markets,micro,none,ADR-United Kingdom,high,unknown,low,quiet,mid,yes,low,unknown,downtrend,neutral,deep_low,unknown,unknown,sell,,0,mid,below,down,low,unknown,unknown,unknown,unknown
-ARCB,Industrials,Trucking,mid,rut,US,high,mid,mid,quiet,mid,thin,mid,growth,mixed,neutral,high,past,beat,buy,,0,mid,above,down,high,cheap,slow,thin,some
+ARCB,Industrials,Trucking,mid,rut,US,high,mid,mid,quiet,mid,thin,mid,growth,mixed,neutral,high,past,beat,buy,,0,mid,below,down,high,cheap,slow,thin,some
 ARCC,Financial,Asset Management,large,none,US,low,mid,mid,quiet,low,yes,high,blend,mixed,neutral,mid,past,inline,strong_buy,,0,mid,below,flat,mid,unknown,slow,thin,high
 ARCI,Financial,Shell Companies,small,none,US,unknown,low,low,quiet,low,unknown,low,unknown,uptrend,neutral,top,unknown,unknown,unknown,,0,mid,below,flat,mid,unknown,unknown,unknown,unknown
 ARCL,Financial,Shell Companies,micro,none,US,unknown,low,low,quiet,low,unknown,low,unknown,uptrend,neutral,top,unknown,unknown,unknown,,0,mid,above,flat,mid,unknown,unknown,unknown,unknown
@@ -651,7 +651,7 @@ BEEM,Technology,Solar,micro,none,US,high,mid,low,quiet,high,no,low,growth,mixed,
 BEEP,Industrials,Infrastructure Operations,micro,none,US,low,low,low,quiet,high,no,high,growth,uptrend,neutral,high,past,beat,strong_buy,,0,mid,below,up,high,unknown,shrink,none,unknown
 BEKE,Real Estate,Real Estate Services,large,none,ADR-China,low,low,mid,quiet,mid,thin,low,value,downtrend,neutral,low,past,big_beat,strong_buy,,0,mid,below,flat,low,fair,shrink,thin,some
 BELFA,Technology,Electronic Components,mid,rut,US,high,mid,mid,quiet,high,thin,low,growth,downtrend,neutral,mid,past,big_beat,unknown,,0,oversold,below,down,low,cheap,fast,thin,some
-BELFB,Technology,Electronic Components,mid,rut,US,high,mid,mid,quiet,high,thin,low,growth,downtrend,neutral,mid,past,big_beat,strong_buy,,0,mid,below,down,high,cheap,fast,thin,some
+BELFB,Technology,Electronic Components,mid,rut,US,high,mid,mid,quiet,high,thin,low,growth,downtrend,neutral,mid,past,big_beat,strong_buy,,0,oversold,below,down,high,cheap,fast,thin,some
 BEN,Financial,Asset Management,large,sp500,US,high,mid,high,quiet,mid,thin,high,value,mixed,neutral,top,past,beat,hold,,0,mid,below,flat,mid,cheap,slow,thin,high
 BENF,Financial,Asset Management,micro,none,US,low,mid,low,hot,high,no,unknown,blend,downtrend,washed,deep_low,past,big_beat,unknown,,0,oversold,below,down,low,unknown,shrink,unknown,unknown
 BEP,Utilities,Utilities - Renewable,mid,none,ADR-Bermuda,mid,low,mid,quiet,mid,no,high,blend,downtrend,neutral,low,past,beat,buy,theme:solar_renewable,1,oversold,below,down,mid,unknown,slow,none,high
@@ -834,7 +834,7 @@ BRLS,Consumer Defensive,Packaged Foods,micro,none,ADR-Canada,low,low,low,quiet,h
 BRLT,Consumer Cyclical,Luxury Goods,micro,none,US,high,low,low,quiet,high,no,high,growth,uptrend,neutral,deep_low,past,big_beat,hold,,0,mid,above,up,mid,unknown,slow,none,unknown
 BRN,Energy,Oil & Gas E&P,micro,none,US,low,low,low,quiet,mid,no,low,blend,mixed,neutral,low,unknown,unknown,unknown,theme:oil_gas,1,mid,above,flat,low,unknown,shrink,none,unknown
 BRNS,Healthcare,Biotechnology,micro,none,ADR-United Kingdom,low,low,low,quiet,high,unknown,low,blend,uptrend,neutral,deep_low,past,unknown,strong_buy,theme:biotech,1,mid,above,up,low,unknown,shrink,none,unknown
-BRNX,Utilities,Utilities - Renewable,micro,none,ADR-Israel,low,extreme,low,quiet,high,unknown,high,blend,downtrend,washed,deep_low,past,unknown,unknown,theme:solar_renewable,1,mid,below,down,low,unknown,shrink,none,unknown
+BRNX,Utilities,Utilities - Renewable,micro,none,ADR-Israel,low,extreme,low,quiet,high,unknown,high,blend,downtrend,neutral,deep_low,past,unknown,unknown,theme:solar_renewable,1,mid,below,down,low,unknown,shrink,none,unknown
 BRO,Financial,Insurance Brokers,large,sp500,US,low,low,high,quiet,mid,yes,mid,growth,downtrend,neutral,low,past,inline,hold,theme:ai_capex,1,mid,below,up,high,fair,fast,thin,some
 BROS,Consumer Cyclical,Restaurants,mid,none,US,high,high,high,quiet,mid,thin,high,growth,downtrend,neutral,deep_low,past,beat,strong_buy,,0,oversold,below,down,high,fair,fast,good,unknown
 BRR,Financial,Capital Markets,micro,none,US,mid,low,low,quiet,high,unknown,mid,unknown,uptrend,extreme,deep_low,unknown,unknown,unknown,,0,overbought,above,up,mid,unknown,unknown,unknown,unknown
@@ -1127,7 +1127,7 @@ CHYM,Technology,Software - Application,large,none,US,low,mid,high,quiet,mid,no,l
 CI,Healthcare,Healthcare Plans,large,sp500,US,low,low,high,quiet,mid,thin,mid,value,uptrend,neutral,high,past,inline,strong_buy,,0,mid,above,flat,high,fair,slow,good,some
 CIA,Financial,Insurance - Life,micro,rut,US,low,mid,low,quiet,high,thin,low,growth,downtrend,neutral,deep_low,past,big_miss,strong_buy,,0,mid,below,down,mid,rich,slow,thin,unknown
 CIB,Financial,Banks - Regional,large,none,ADR-Colombia,low,low,mid,quiet,mid,thin,mid,value,uptrend,neutral,top,past,big_beat,hold,,0,mid,above,up,low,cheap,slow,good,high
-CIEN,Technology,Communication Equipment,large,sp500,US,high,low,high,quiet,high,yes,high,growth,downtrend,washed,low,past,big_beat,strong_buy,theme:ai_capex,1,mid,below,down,high,cheap,fast,good,unknown
+CIEN,Technology,Communication Equipment,large,sp500,US,high,low,high,quiet,high,yes,high,growth,downtrend,neutral,low,past,big_beat,strong_buy,theme:ai_capex,1,mid,below,down,high,cheap,fast,good,unknown
 CIFR,Technology,Information Technology Services,mid,rut,US,high,high,high,quiet,high,no,high,growth,downtrend,neutral,low,past,big_miss,strong_buy,,0,mid,below,down,high,unknown,fast,none,unknown
 CIG,Utilities,Utilities - Regulated Electric,mid,none,ADR-Brazil,low,low,mid,quiet,mid,yes,mid,blend,mixed,neutral,low,past,big_beat,hold,,0,mid,above,flat,low,unknown,slow,good,high
 CIGI,Real Estate,Real Estate Services,mid,none,ADR-Canada,mid,low,mid,quiet,mid,thin,high,growth,downtrend,neutral,deep_low,past,inline,strong_buy,,0,mid,below,flat,high,cheap,fast,thin,some
@@ -1181,7 +1181,7 @@ CLST,Financial,Banks - Regional,micro,none,US,low,low,low,quiet,mid,yes,low,blen
 CLVT,Technology,Information Technology Services,small,rut,ADR-United Kingdom,high,mid,mid,quiet,high,no,mid,value,downtrend,neutral,deep_low,past,inline,hold,theme:ai_capex,1,mid,below,down,mid,cheap,shrink,none,unknown
 CLW,Basic Materials,Paper & Paper Products,small,rut,US,low,low,low,quiet,mid,no,mid,growth,uptrend,neutral,high,past,miss,hold,,0,mid,above,up,high,unknown,shrink,none,unknown
 CLWT,Industrials,Pollution & Treatment Controls,micro,none,ADR-Hong Kong,mid,low,low,quiet,high,thin,low,blend,mixed,neutral,low,unknown,unknown,unknown,,0,mid,below,up,low,unknown,shrink,thin,unknown
-CLX,Consumer Defensive,Household & Personal Products,large,sp500,US,low,mid,high,quiet,mid,thin,high,value,downtrend,neutral,deep_low,past,inline,hold,,0,oversold,below,down,high,rich,shrink,good,high
+CLX,Consumer Defensive,Household & Personal Products,large,sp500,US,low,mid,high,quiet,mid,thin,high,value,downtrend,washed,deep_low,past,inline,hold,,0,oversold,below,down,high,rich,shrink,good,high
 CLYM,Healthcare,Biotechnology,small,rut,US,low,mid,mid,quiet,high,unknown,low,blend,uptrend,neutral,high,past,beat,strong_buy,theme:biotech,1,mid,below,up,high,unknown,unknown,none,unknown
 CM,Financial,Banks - Diversified,large,none,ADR-Canada,mid,low,high,quiet,low,yes,high,value,mixed,neutral,high,past,beat,buy,,0,mid,below,flat,mid,fair,slow,good,some
 CMBT,Energy,Oil & Gas Midstream,mid,none,ADR-Belgium,low,low,mid,quiet,mid,yes,high,growth,uptrend,neutral,top,past,big_beat,strong_buy,,0,overbought,above,up,low,cheap,fast,good,high
@@ -1311,7 +1311,7 @@ CRCL,Financial,Capital Markets,large,none,US,low,mid,high,quiet,high,yes,low,gro
 CRCT,Technology,Computer Hardware,small,rut,US,low,mid,low,quiet,mid,yes,low,blend,uptrend,neutral,mid,past,big_beat,sell,,0,mid,above,up,low,unknown,shrink,good,high
 CRD-A,Financial,Insurance Brokers,small,rut,US,low,low,low,quiet,mid,thin,high,value,uptrend,neutral,high,past,big_beat,strong_buy,,0,mid,below,up,mid,unknown,shrink,good,some
 CRD-B,Financial,Insurance Brokers,small,none,US,low,low,low,quiet,mid,thin,high,value,uptrend,neutral,mid,past,big_beat,strong_buy,,0,mid,below,up,low,unknown,shrink,good,some
-CRDF,Healthcare,Biotechnology,micro,none,US,high,high,low,quiet,high,no,low,blend,mixed,neutral,deep_low,past,miss,hold,theme:biotech,1,overbought,above,down,mid,unknown,shrink,none,unknown
+CRDF,Healthcare,Biotechnology,micro,none,US,high,high,low,quiet,high,no,low,blend,mixed,neutral,deep_low,past,miss,hold,theme:biotech,1,overbought,above,flat,mid,unknown,shrink,none,unknown
 CRDL,Healthcare,Drug Manufacturers - Specialty & Generic,micro,none,ADR-Canada,mid,low,low,quiet,high,unknown,low,growth,uptrend,neutral,high,past,big_beat,strong_buy,,0,mid,below,up,mid,unknown,unknown,none,unknown
 CRDO,Technology,Semiconductors,large,none,ADR-Cayman Islands,high,low,high,quiet,high,yes,low,growth,downtrend,washed,low,past,inline,strong_buy,theme:ai_capex,1,oversold,below,down,high,cheap,fast,good,unknown
 CRE,Industrials,Specialty Business Services,micro,none,ADR-Hong Kong,low,low,low,quiet,high,thin,mid,growth,downtrend,neutral,deep_low,unknown,unknown,unknown,,0,mid,below,down,low,unknown,fast,good,unknown
@@ -1828,7 +1828,7 @@ ESRT,Real Estate,REIT - Diversified,small,rut,US,high,mid,low,quiet,mid,thin,hig
 ESS,Real Estate,REIT - Residential,large,sp500,US,low,low,high,quiet,mid,yes,high,blend,downtrend,washed,deep_low,past,big_miss,hold,,0,oversold,below,down,high,unknown,slow,thin,high
 ESTA,Healthcare,Medical Devices,mid,rut,US,mid,high,mid,quiet,mid,no,high,growth,downtrend,neutral,mid,past,miss,strong_buy,,0,mid,below,down,high,unknown,fast,none,unknown
 ESTC,Technology,Software - Application,mid,none,US,mid,low,high,quiet,high,yes,mid,growth,uptrend,neutral,high,past,beat,buy,,0,mid,below,up,high,cheap,fast,good,some
-ET,Energy,Oil & Gas Midstream,large,none,US,low,low,high,quiet,low,thin,high,growth,uptrend,neutral,top,past,big_beat,strong_buy,,0,mid,above,up,mid,cheap,fast,good,high
+ET,Energy,Oil & Gas Midstream,large,none,US,low,low,high,quiet,low,thin,high,growth,uptrend,neutral,top,past,big_beat,strong_buy,,0,mid,below,up,mid,cheap,fast,good,high
 ETB,Financial,Closed-End Fund - Equity,small,none,US,mid,low,low,quiet,low,unknown,unknown,unknown,mixed,neutral,top,unknown,unknown,unknown,,0,mid,below,flat,mid,unknown,unknown,unknown,high
 ETD,Consumer Cyclical,"Furnishings, Fixtures & Appliances",small,rut,US,mid,mid,mid,quiet,mid,thin,low,blend,uptrend,neutral,mid,past,beat,hold,,0,overbought,above,up,high,unknown,shrink,thin,high
 ETG,Financial,Closed-End Fund - Equity,small,none,US,mid,low,low,quiet,low,unknown,unknown,unknown,mixed,neutral,high,unknown,unknown,unknown,,0,mid,below,flat,low,unknown,unknown,unknown,high
@@ -1879,7 +1879,7 @@ EXE,Energy,Oil & Gas E&P,large,sp500,US,low,low,high,quiet,mid,yes,low,growth,mi
 EXEL,Healthcare,Biotechnology,large,none,US,low,mid,high,quiet,mid,yes,low,value,uptrend,neutral,top,past,beat,buy,theme:biotech,1,mid,above,up,high,cheap,slow,good,unknown
 EXFY,Technology,Software - Application,micro,none,US,high,low,low,quiet,high,no,low,blend,uptrend,neutral,high,past,big_beat,buy,theme:ai_capex,1,mid,below,up,mid,cheap,shrink,none,unknown
 EXG,Financial,Closed-End Fund - Foreign,mid,none,US,mid,low,low,quiet,low,unknown,unknown,unknown,mixed,neutral,high,unknown,unknown,unknown,,0,mid,below,flat,mid,unknown,unknown,unknown,high
-EXK,Basic Materials,Silver,mid,none,ADR-Canada,high,mid,mid,quiet,high,thin,mid,growth,mixed,neutral,mid,past,inline,strong_buy,,0,mid,below,flat,mid,unknown,fast,good,unknown
+EXK,Basic Materials,Silver,mid,none,ADR-Canada,high,mid,mid,quiet,high,thin,mid,growth,mixed,neutral,mid,past,inline,strong_buy,,0,mid,below,up,mid,unknown,fast,good,unknown
 EXLS,Technology,Information Technology Services,mid,none,US,mid,mid,mid,quiet,mid,yes,mid,blend,uptrend,neutral,mid,past,beat,strong_buy,,0,mid,below,up,high,cheap,slow,good,unknown
 EXOD,Technology,Software - Infrastructure,micro,none,US,high,mid,low,quiet,high,no,low,growth,downtrend,neutral,deep_low,past,big_miss,strong_buy,,0,mid,below,down,low,unknown,shrink,none,unknown
 EXOZ,Healthcare,Biotechnology,micro,none,US,high,low,low,quiet,high,unknown,mid,unknown,mixed,neutral,deep_low,past,unknown,unknown,theme:biotech,1,mid,below,down,low,unknown,unknown,none,unknown
@@ -2397,7 +2397,7 @@ HACQ,Financial,Shell Companies,small,none,US,unknown,low,low,quiet,low,unknown,l
 HAE,Healthcare,Medical Devices,mid,rut,US,low,mid,mid,quiet,mid,thin,high,blend,uptrend,neutral,top,past,beat,strong_buy,,0,overbought,above,up,high,rich,slow,good,some
 HAFC,Financial,Banks - Regional,small,rut,US,low,low,low,quiet,low,yes,low,value,mixed,neutral,top,past,inline,hold,,0,mid,above,flat,high,unknown,slow,good,high
 HAFN,Industrials,Marine Shipping,mid,none,ADR-Singapore,low,low,mid,quiet,mid,yes,mid,blend,uptrend,neutral,top,past,miss,strong_buy,,0,overbought,above,up,mid,rich,slow,good,high
-HAIN,Consumer Defensive,Packaged Foods,micro,none,US,mid,mid,low,hot,high,no,high,value,downtrend,neutral,deep_low,today,big_miss,sell,,0,mid,below,down,high,unknown,shrink,none,unknown
+HAIN,Consumer Defensive,Packaged Foods,micro,none,US,mid,mid,low,hot,high,no,high,value,downtrend,neutral,deep_low,today,big_miss,sell,,0,mid,below,flat,high,unknown,shrink,none,unknown
 HAL,Energy,Oil & Gas Equipment & Services,large,sp500,US,mid,low,high,quiet,mid,thin,mid,growth,uptrend,neutral,high,past,inline,strong_buy,,0,mid,below,down,high,fair,slow,good,some
 HALO,Healthcare,Biotechnology,large,none,US,mid,mid,high,quiet,mid,yes,high,growth,uptrend,neutral,top,past,big_beat,strong_buy,theme:biotech,1,mid,above,up,high,cheap,fast,good,unknown
 HAO,Communication Services,Advertising Agencies,micro,none,ADR-China,low,mid,low,quiet,high,no,low,blend,downtrend,washed,deep_low,unknown,unknown,unknown,,0,oversold,below,down,low,unknown,shrink,none,unknown
@@ -3263,7 +3263,7 @@ MAT,Consumer Cyclical,Leisure,mid,none,US,low,mid,mid,quiet,mid,thin,high,growth
 MATH,Financial,Capital Markets,micro,none,ADR-Hong Kong,low,low,low,hot,high,unknown,low,unknown,mixed,neutral,deep_low,unknown,unknown,unknown,,0,mid,above,down,low,unknown,unknown,thin,unknown
 MATV,Basic Materials,Specialty Chemicals,small,rut,US,mid,low,low,quiet,mid,thin,high,growth,uptrend,neutral,mid,past,big_beat,strong_buy,,0,mid,below,up,high,unknown,slow,good,high
 MATW,Industrials,Conglomerates,small,rut,US,mid,mid,mid,quiet,mid,no,high,growth,downtrend,washed,deep_low,past,big_miss,strong_buy,,0,oversold,below,down,high,unknown,shrink,none,high
-MATX,Industrials,Marine Shipping,mid,rut,US,mid,low,mid,quiet,mid,yes,low,value,uptrend,neutral,top,past,beat,strong_buy,,0,overbought,above,up,high,fair,shrink,good,some
+MATX,Industrials,Marine Shipping,mid,rut,US,mid,low,mid,quiet,mid,yes,low,value,uptrend,neutral,breakout,past,beat,strong_buy,,0,overbought,above,up,high,fair,shrink,good,some
 MAX,Communication Services,Internet Content & Information,small,rut,US,mid,mid,low,quiet,mid,thin,high,blend,mixed,neutral,mid,past,big_beat,strong_buy,,0,mid,below,up,mid,cheap,slow,good,unknown
 MAYS,Real Estate,Real Estate Services,micro,none,US,low,low,low,quiet,mid,no,mid,blend,downtrend,neutral,deep_low,unknown,unknown,unknown,,0,mid,below,flat,low,unknown,shrink,none,unknown
 MAZE,Healthcare,Biotechnology,small,rut,US,high,high,mid,quiet,high,no,low,growth,downtrend,neutral,deep_low,past,miss,strong_buy,theme:biotech,1,oversold,below,flat,mid,unknown,fast,none,unknown
@@ -3860,7 +3860,7 @@ OACC,Financial,Shell Companies,micro,none,US,low,low,low,quiet,low,unknown,low,u
 OBA,Financial,Shell Companies,small,none,ADR-Canada,low,low,low,quiet,low,unknown,low,unknown,uptrend,neutral,top,unknown,unknown,unknown,,0,overbought,above,flat,high,unknown,unknown,thin,unknown
 OBAI,Technology,Software - Infrastructure,micro,none,US,unknown,mid,low,quiet,high,no,unknown,unknown,downtrend,washed,deep_low,past,beat,strong_buy,,0,mid,below,down,low,unknown,unknown,unknown,unknown
 OBDC,Financial,Asset Management,mid,none,US,low,low,mid,quiet,low,yes,high,value,downtrend,neutral,deep_low,past,beat,strong_buy,,0,mid,below,flat,mid,unknown,slow,thin,high
-OBE,Energy,Oil & Gas E&P,small,none,ADR-Canada,low,mid,mid,quiet,high,thin,low,growth,uptrend,neutral,high,past,big_beat,buy,theme:oil_gas,1,mid,above,up,mid,cheap,shrink,thin,unknown
+OBE,Energy,Oil & Gas E&P,small,none,ADR-Canada,low,mid,mid,quiet,mid,thin,low,growth,uptrend,neutral,top,past,big_beat,buy,theme:oil_gas,1,mid,above,up,mid,cheap,shrink,thin,unknown
 OBIO,Healthcare,Biotechnology,small,rut,US,low,mid,low,quiet,high,no,high,growth,uptrend,neutral,top,past,inline,strong_buy,theme:biotech,1,overbought,above,up,mid,unknown,fast,none,unknown
 OBK,Financial,Banks - Regional,small,rut,US,low,low,low,quiet,low,yes,low,value,uptrend,neutral,top,past,beat,strong_buy,,0,mid,above,up,mid,unknown,slow,thin,some
 OBT,Financial,Banks - Regional,small,rut,US,low,low,low,quiet,mid,yes,low,value,uptrend,neutral,top,past,beat,strong_buy,,0,mid,below,up,mid,unknown,slow,good,some
@@ -3951,7 +3951,7 @@ OPEN,Real Estate,Real Estate Services,mid,rut,US,high,extreme,high,quiet,high,no
 OPFI,Financial,Credit Services,small,rut,US,high,mid,low,quiet,mid,yes,mid,growth,downtrend,neutral,deep_low,past,big_miss,strong_buy,,0,mid,above,down,mid,cheap,slow,good,unknown
 OPHC,Financial,Banks - Regional,micro,none,US,low,low,low,quiet,high,yes,mid,growth,uptrend,neutral,high,past,big_beat,strong_buy,,0,mid,below,up,low,cheap,fast,good,unknown
 OPI,Real Estate,REIT - Office,small,none,US,unknown,low,low,quiet,high,no,high,blend,downtrend,neutral,deep_low,past,unknown,strong_buy,,0,mid,below,unknown,mid,unknown,shrink,none,unknown
-OPK,Healthcare,Diagnostics & Research,small,rut,US,high,mid,low,quiet,high,no,mid,blend,uptrend,neutral,high,past,big_beat,strong_buy,,0,mid,above,up,mid,unknown,shrink,none,unknown
+OPK,Healthcare,Diagnostics & Research,small,rut,US,high,mid,low,quiet,mid,no,mid,blend,uptrend,neutral,high,past,big_beat,strong_buy,,0,mid,above,up,mid,unknown,shrink,none,unknown
 OPLN,Consumer Cyclical,Auto & Truck Dealerships,mid,rut,US,mid,low,mid,quiet,mid,no,high,blend,mixed,neutral,mid,past,beat,strong_buy,,0,mid,above,down,high,cheap,slow,good,unknown
 OPP,Financial,Closed-End Fund - Debt,micro,none,US,low,low,low,quiet,low,unknown,unknown,unknown,downtrend,washed,deep_low,unknown,unknown,unknown,,0,oversold,below,flat,mid,unknown,unknown,unknown,high
 OPRA,Communication Services,Internet Content & Information,small,none,ADR-Norway,mid,unknown,low,quiet,mid,yes,low,growth,mixed,neutral,high,past,beat,strong_buy,,0,mid,below,down,low,fair,fast,good,high
@@ -4132,7 +4132,7 @@ PFLT,Financial,Asset Management,small,none,US,low,low,low,quiet,low,yes,high,ble
 PFN,Financial,Closed-End Fund - Debt,small,none,US,low,low,low,quiet,low,unknown,unknown,unknown,downtrend,washed,deep_low,unknown,unknown,unknown,,0,oversold,below,flat,low,unknown,unknown,unknown,high
 PFO,Financial,Closed-End Fund - Debt,micro,none,US,low,low,low,quiet,low,unknown,unknown,unknown,downtrend,washed,deep_low,unknown,unknown,unknown,,0,oversold,below,flat,mid,unknown,unknown,unknown,high
 PFS,Financial,Banks - Regional,mid,rut,US,mid,low,mid,quiet,low,yes,mid,value,mixed,neutral,high,past,beat,strong_buy,,0,mid,below,flat,high,unknown,slow,good,high
-PFSA,Healthcare,Medical Devices,micro,none,US,high,mid,low,quiet,high,unknown,unknown,unknown,downtrend,neutral,deep_low,unknown,unknown,unknown,,0,mid,below,down,low,unknown,unknown,unknown,unknown
+PFSA,Healthcare,Medical Devices,micro,none,US,high,mid,low,normal,high,unknown,unknown,unknown,downtrend,neutral,deep_low,unknown,unknown,unknown,,0,mid,below,down,low,unknown,unknown,unknown,unknown
 PFSI,Financial,Mortgage Finance,mid,rut,US,high,mid,mid,quiet,mid,thin,high,growth,downtrend,neutral,deep_low,past,big_miss,buy,theme:housing,1,oversold,below,down,mid,cheap,fast,thin,some
 PFX,Financial,Asset Management,micro,none,US,low,low,low,quiet,mid,yes,mid,growth,uptrend,neutral,mid,past,big_beat,unknown,,0,mid,below,up,low,unknown,fast,thin,unknown
 PG,Consumer Defensive,Household & Personal Products,mega,djia|sp500,US,low,low,high,quiet,low,yes,mid,blend,downtrend,neutral,low,past,inline,buy,,0,mid,above,flat,high,rich,slow,good,high
@@ -4307,7 +4307,7 @@ PSLV,Financial,Asset Management,large,none,ADR-Canada,low,low,high,quiet,mid,unk
 PSMT,Consumer Defensive,Discount Stores,mid,rut,US,low,mid,mid,quiet,mid,thin,low,blend,mixed,neutral,high,past,inline,hold,,0,mid,below,down,high,fair,slow,good,some
 PSN,Technology,Information Technology Services,mid,none,US,low,mid,mid,quiet,mid,thin,mid,growth,downtrend,neutral,deep_low,past,big_miss,strong_buy,theme:defense,1,mid,below,down,high,rich,shrink,thin,unknown
 PSNL,Healthcare,Diagnostics & Research,small,rut,US,high,mid,mid,quiet,mid,no,low,blend,uptrend,neutral,top,past,miss,hold,,0,mid,below,up,mid,unknown,shrink,none,unknown
-PSNY,Consumer Cyclical,Auto Manufacturers,small,none,ADR-Sweden,high,low,low,normal,high,no,unknown,growth,downtrend,washed,deep_low,past,big_miss,sell,,0,oversold,below,down,mid,unknown,fast,unknown,unknown
+PSNY,Consumer Cyclical,Auto Manufacturers,small,none,ADR-Sweden,high,low,low,hot,high,no,unknown,growth,downtrend,washed,deep_low,past,big_miss,sell,,0,oversold,below,down,mid,unknown,fast,unknown,unknown
 PSO,Communication Services,Publishing,mid,none,ADR-United Kingdom,low,low,mid,quiet,low,thin,mid,value,mixed,neutral,high,past,beat,hold,,0,mid,below,flat,low,fair,slow,thin,some
 PSQH,Technology,Software - Application,micro,none,US,low,mid,low,quiet,high,no,high,growth,mixed,neutral,deep_low,past,big_miss,strong_buy,,0,mid,below,down,low,unknown,shrink,none,unknown
 PSQL,Technology,Computer Hardware,small,none,ADR-France,unknown,low,low,quiet,high,unknown,low,unknown,downtrend,neutral,deep_low,unknown,unknown,strong_buy,,0,mid,below,down,low,unknown,unknown,unknown,unknown
@@ -4389,7 +4389,7 @@ QTWO,Technology,Software - Application,mid,rut,US,high,mid,mid,quiet,mid,yes,low
 QUAD,Industrials,Specialty Business Services,small,rut,US,mid,low,low,quiet,mid,thin,high,value,uptrend,neutral,top,past,big_beat,strong_buy,,0,mid,above,up,mid,unknown,shrink,good,high
 QUBT,Technology,Computer Hardware,small,rut,US,high,extreme,mid,quiet,high,no,low,growth,downtrend,neutral,deep_low,past,big_miss,strong_buy,,0,mid,below,down,mid,unknown,fast,none,unknown
 QUCY,Healthcare,Diagnostics & Research,micro,none,US,high,mid,low,quiet,high,unknown,low,unknown,mixed,neutral,deep_low,past,unknown,strong_buy,,0,mid,below,down,low,unknown,unknown,unknown,unknown
-QUIK,Technology,Semiconductors,micro,rut,US,mid,mid,low,quiet,high,no,low,growth,downtrend,neutral,low,past,big_miss,strong_buy,,0,oversold,below,down,mid,unknown,shrink,none,unknown
+QUIK,Technology,Semiconductors,micro,rut,US,mid,mid,low,quiet,high,no,low,growth,downtrend,neutral,low,past,big_miss,strong_buy,,0,mid,below,down,mid,unknown,shrink,none,unknown
 QUMS,Financial,Shell Companies,micro,none,US,low,low,low,quiet,low,unknown,low,unknown,uptrend,extended,top,unknown,unknown,unknown,,0,overbought,above,flat,high,unknown,unknown,thin,unknown
 QURE,Healthcare,Biotechnology,mid,none,ADR-Netherlands,mid,high,mid,quiet,mid,no,high,growth,uptrend,neutral,mid,past,big_miss,strong_buy,theme:biotech,1,mid,below,up,high,unknown,fast,none,unknown
 QVCG,Consumer Cyclical,Specialty Retail,small,none,US,unknown,low,low,quiet,high,no,unknown,blend,uptrend,neutral,low,unknown,unknown,unknown,,0,mid,above,unknown,high,unknown,shrink,unknown,unknown
@@ -4422,7 +4422,7 @@ RBKB,Financial,Banks - Regional,micro,rut,US,low,low,low,quiet,mid,yes,low,growt
 RBLX,Communication Services,Electronic Gaming & Multimedia,large,none,US,high,low,high,quiet,mid,no,high,growth,mixed,neutral,deep_low,past,big_beat,buy,,0,overbought,above,up,high,unknown,fast,none,unknown
 RBNE,Energy,Oil & Gas Midstream,micro,none,ADR-Cyprus,mid,low,low,quiet,high,thin,low,unknown,downtrend,neutral,deep_low,unknown,unknown,unknown,,0,mid,above,down,low,unknown,unknown,unknown,unknown
 RBRK,Technology,Software - Infrastructure,large,none,US,mid,mid,high,quiet,high,no,unknown,growth,uptrend,neutral,top,past,big_beat,strong_buy,theme:ai_capex,1,mid,above,up,mid,unknown,fast,unknown,unknown
-RC,Real Estate,REIT - Mortgage,micro,rut,US,high,mid,low,quiet,mid,no,high,growth,downtrend,neutral,deep_low,past,inline,hold,theme:housing,1,mid,below,flat,mid,unknown,shrink,none,some
+RC,Real Estate,REIT - Mortgage,micro,rut,US,high,mid,low,quiet,mid,no,high,growth,downtrend,neutral,deep_low,past,inline,hold,theme:housing,1,mid,below,down,mid,unknown,shrink,none,some
 RCAT,Industrials,Aerospace & Defense,small,rut,US,high,high,mid,quiet,high,no,low,blend,downtrend,washed,deep_low,past,big_miss,strong_buy,theme:defense,1,mid,below,down,mid,unknown,unknown,none,unknown
 RCBC,Financial,Banks - Regional,small,none,US,low,low,low,quiet,mid,yes,low,unknown,uptrend,neutral,top,past,inline,buy,,0,overbought,above,up,low,unknown,unknown,good,some
 RCEL,Healthcare,Medical Devices,micro,none,US,high,mid,low,quiet,high,no,unknown,growth,uptrend,extreme,top,past,beat,strong_buy,,0,mid,above,up,low,unknown,slow,none,unknown
@@ -4892,7 +4892,7 @@ SNX,Technology,Electronics & Computer Distribution,large,none,US,high,low,high,q
 SNY,Healthcare,Drug Manufacturers - General,large,none,ADR-France,low,low,high,quiet,low,thin,mid,growth,downtrend,neutral,deep_low,past,inline,buy,,0,mid,below,flat,low,fair,fast,thin,high
 SNYR,Healthcare,Medical Distribution,micro,none,US,low,low,low,quiet,high,no,unknown,growth,downtrend,neutral,deep_low,past,inline,strong_buy,,0,mid,below,down,low,unknown,shrink,unknown,unknown
 SO,Utilities,Utilities - Regulated Electric,large,sp500,US,low,low,high,quiet,low,yes,high,blend,downtrend,washed,deep_low,past,beat,hold,theme:data_center_power,1,oversold,below,down,high,rich,slow,good,high
-SOAR,Industrials,Airports & Air Services,micro,none,US,mid,high,low,normal,high,no,low,blend,mixed,neutral,deep_low,unknown,unknown,unknown,theme:data_center_power|theme:ai_capex,2,mid,below,down,low,unknown,shrink,unknown,unknown
+SOAR,Industrials,Airports & Air Services,micro,none,US,mid,high,low,normal,high,no,low,blend,mixed,neutral,deep_low,unknown,unknown,unknown,theme:data_center_power|theme:ai_capex,2,mid,below,flat,low,unknown,shrink,unknown,unknown
 SOBO,Energy,Oil & Gas Midstream,mid,none,ADR-Canada,low,mid,mid,quiet,mid,yes,high,blend,mixed,neutral,high,past,beat,hold,,0,mid,below,down,mid,rich,shrink,good,high
 SOBR,Technology,Scientific & Technical Instruments,micro,none,US,mid,low,low,quiet,high,no,unknown,growth,downtrend,washed,deep_low,unknown,unknown,unknown,,0,mid,below,down,low,unknown,fast,none,unknown
 SOC,Energy,Oil & Gas Drilling,small,rut,US,low,extreme,mid,quiet,high,no,high,growth,mixed,neutral,deep_low,past,big_miss,strong_buy,,0,mid,above,down,high,unknown,unknown,none,unknown
@@ -4919,7 +4919,7 @@ SPAI,Industrials,Aerospace & Defense,micro,none,US,high,low,low,quiet,high,no,lo
 SPB,Consumer Defensive,Household & Personal Products,small,rut,US,low,high,mid,quiet,mid,thin,mid,blend,mixed,neutral,high,past,big_beat,buy,,0,mid,below,flat,high,rich,slow,thin,some
 SPCB,Industrials,Security & Protection Services,micro,none,ADR-Israel,mid,low,low,quiet,mid,thin,mid,value,mixed,neutral,mid,past,big_beat,strong_buy,,0,mid,below,flat,low,unknown,slow,thin,unknown
 SPCE,Industrials,Aerospace & Defense,small,rut,US,high,high,mid,quiet,high,no,mid,growth,mixed,neutral,deep_low,past,big_beat,hold,theme:defense,1,mid,below,down,mid,unknown,shrink,none,unknown
-SPCX,Industrials,Aerospace & Defense,mega,ndx,US,unknown,mid,high,quiet,mid,unknown,mid,unknown,uptrend,neutral,low,past,big_beat,strong_buy,theme:defense,1,mid,above,down,low,unknown,unknown,unknown,unknown
+SPCX,Industrials,Aerospace & Defense,mega,ndx,US,unknown,mid,high,quiet,mid,unknown,mid,unknown,uptrend,neutral,low,past,big_beat,strong_buy,theme:ai_capex|theme:defense,2,mid,above,down,low,unknown,unknown,unknown,unknown
 SPE,Financial,Closed-End Fund - Equity,micro,none,US,low,low,low,quiet,low,unknown,unknown,unknown,downtrend,neutral,deep_low,unknown,unknown,unknown,,0,oversold,below,flat,mid,unknown,unknown,unknown,high
 SPEG,Financial,Shell Companies,micro,none,US,low,low,low,quiet,low,unknown,low,unknown,uptrend,neutral,low,unknown,unknown,unknown,,0,mid,above,flat,high,unknown,unknown,thin,unknown
 SPFI,Financial,Banks - Regional,small,rut,US,low,low,low,quiet,mid,yes,low,value,mixed,neutral,high,past,inline,strong_buy,,0,mid,below,flat,mid,unknown,slow,good,some
@@ -4947,7 +4947,7 @@ SPWH,Consumer Cyclical,Specialty Retail,micro,none,US,low,low,low,quiet,mid,no,h
 SPWR,Technology,Solar,micro,none,US,low,mid,low,quiet,high,no,unknown,growth,downtrend,neutral,deep_low,past,big_beat,strong_buy,theme:solar_renewable,1,mid,above,down,low,unknown,slow,unknown,unknown
 SPXC,Industrials,Building Products & Equipment,mid,none,US,mid,low,high,quiet,mid,yes,low,growth,downtrend,neutral,deep_low,past,beat,strong_buy,,0,oversold,below,down,high,fair,fast,good,unknown
 SPXX,Financial,Closed-End Fund - Equity,mid,none,US,mid,low,low,quiet,low,unknown,unknown,unknown,uptrend,neutral,top,unknown,unknown,unknown,,0,mid,below,flat,mid,unknown,unknown,unknown,high
-SQFT,Real Estate,REIT - Diversified,micro,none,US,high,mid,low,quiet,high,no,high,blend,downtrend,neutral,deep_low,unknown,unknown,hold,,0,mid,below,down,low,unknown,shrink,none,unknown
+SQFT,Real Estate,REIT - Diversified,micro,none,US,high,mid,low,quiet,high,no,high,blend,downtrend,neutral,deep_low,unknown,unknown,hold,,0,oversold,below,down,low,unknown,shrink,none,unknown
 SQM,Basic Materials,Specialty Chemicals,mid,none,ADR-Chile,mid,low,mid,quiet,mid,yes,mid,growth,downtrend,neutral,mid,past,beat,buy,theme:copper_metals,1,mid,below,down,mid,cheap,fast,good,high
 SQNS,Technology,Semiconductors,micro,none,ADR-France,mid,low,low,quiet,high,no,low,growth,downtrend,neutral,deep_low,past,big_beat,strong_buy,,0,mid,below,down,mid,unknown,shrink,none,unknown
 SR,Utilities,Utilities - Regulated Gas,mid,rut,US,low,low,mid,quiet,mid,yes,high,growth,downtrend,neutral,low,past,beat,strong_buy,,0,mid,below,flat,high,fair,slow,thin,high
@@ -5172,7 +5172,7 @@ TH,Industrials,Specialty Business Services,small,rut,US,high,mid,mid,quiet,high,
 THC,Healthcare,Medical Care Facilities,large,none,US,mid,low,high,quiet,mid,yes,high,value,uptrend,neutral,top,past,big_beat,strong_buy,,0,mid,below,up,high,fair,slow,good,unknown
 THCH,Consumer Cyclical,Restaurants,micro,none,ADR-China,low,low,low,quiet,high,no,unknown,growth,downtrend,neutral,deep_low,past,big_miss,unknown,,0,mid,above,down,low,unknown,shrink,unknown,unknown
 THEO,Financial,Shell Companies,micro,none,US,unknown,low,low,quiet,low,unknown,unknown,unknown,uptrend,neutral,low,unknown,unknown,unknown,,0,mid,above,unknown,low,unknown,unknown,unknown,unknown
-THFF,Financial,Banks - Regional,small,rut,US,low,low,low,normal,mid,yes,mid,value,mixed,neutral,top,past,beat,hold,,0,mid,below,up,mid,fair,slow,good,some
+THFF,Financial,Banks - Regional,small,rut,US,low,low,low,normal,mid,yes,mid,value,uptrend,neutral,top,past,beat,hold,,0,mid,above,up,mid,fair,slow,good,some
 THG,Financial,Insurance - Property & Casualty,mid,none,US,low,low,mid,quiet,low,yes,low,value,uptrend,neutral,top,past,big_beat,hold,,0,mid,above,up,high,rich,slow,good,some
 THH,Industrials,Specialty Business Services,micro,none,ADR-Japan,high,low,low,quiet,high,unknown,unknown,unknown,downtrend,washed,deep_low,unknown,unknown,unknown,,0,oversold,below,down,low,unknown,unknown,unknown,unknown
 THM,Basic Materials,Gold,small,none,ADR-Canada,mid,low,low,quiet,high,unknown,low,unknown,downtrend,neutral,mid,past,unknown,strong_buy,,0,mid,below,up,mid,unknown,unknown,none,unknown
@@ -5488,7 +5488,7 @@ VCX,Financial,Closed-End Fund - Equity,small,none,US,unknown,low,mid,quiet,high,
 VCYT,Healthcare,Diagnostics & Research,mid,rut,US,high,mid,mid,quiet,mid,yes,low,growth,downtrend,neutral,low,past,big_beat,strong_buy,,0,mid,below,down,high,rich,fast,thin,unknown
 VECA,Financial,Shell Companies,micro,none,ADR-Singapore,unknown,low,low,quiet,low,unknown,low,unknown,uptrend,neutral,deep_low,unknown,unknown,unknown,,0,mid,above,flat,mid,unknown,unknown,unknown,unknown
 VECO,Technology,Semiconductor Equipment & Materials,mid,rut,US,high,mid,mid,quiet,high,thin,low,growth,downtrend,neutral,low,past,big_beat,buy,theme:semiconductor_equip,1,mid,below,down,high,unknown,shrink,thin,unknown
-VEEA,Technology,Information Technology Services,micro,none,US,low,extreme,low,hot,high,no,high,growth,mixed,extended,deep_low,unknown,unknown,unknown,theme:ai_capex,1,overbought,above,down,low,unknown,fast,none,unknown
+VEEA,Technology,Information Technology Services,micro,none,US,low,extreme,low,hot,high,no,high,growth,mixed,extreme,deep_low,unknown,unknown,unknown,theme:ai_capex,1,overbought,above,down,low,unknown,fast,none,unknown
 VEEE,Consumer Cyclical,Recreational Vehicles,micro,none,US,mid,mid,mid,quiet,high,no,low,blend,downtrend,neutral,deep_low,past,unknown,strong_buy,,0,mid,below,up,low,unknown,slow,none,unknown
 VEEV,Healthcare,Health Information Services,large,sp500,US,mid,low,high,quiet,mid,yes,low,growth,uptrend,neutral,high,past,beat,strong_buy,theme:ai_capex,1,mid,above,up,high,rich,fast,good,unknown
 VEL,Financial,Mortgage Finance,small,rut,US,low,mid,low,quiet,mid,yes,high,growth,downtrend,neutral,deep_low,past,beat,buy,theme:housing,1,mid,below,flat,mid,fair,fast,good,unknown
@@ -5765,7 +5765,7 @@ XBP,Technology,Software - Infrastructure,micro,none,US,low,low,low,quiet,high,ye
 XCBE,Financial,Shell Companies,micro,none,US,unknown,low,low,quiet,low,unknown,low,unknown,uptrend,neutral,breakout,unknown,unknown,unknown,,0,overbought,above,flat,mid,unknown,unknown,unknown,unknown
 XCH,Industrials,Electrical Equipment & Parts,micro,none,ADR-Germany,low,low,low,quiet,high,no,mid,unknown,downtrend,washed,deep_low,unknown,unknown,unknown,,0,oversold,below,down,low,unknown,unknown,unknown,unknown
 XCUR,Healthcare,Biotechnology,micro,none,US,high,low,low,quiet,high,unknown,low,blend,downtrend,neutral,deep_low,past,unknown,strong_buy,theme:biotech,1,mid,above,down,low,unknown,shrink,none,unknown
-XE,Industrials,Specialty Industrial Machinery,mid,none,US,unknown,mid,mid,quiet,high,unknown,low,growth,downtrend,washed,deep_low,past,big_miss,strong_buy,theme:ai_capex,1,mid,below,down,mid,unknown,unknown,unknown,unknown
+XE,Industrials,Specialty Industrial Machinery,mid,none,US,unknown,mid,mid,quiet,high,unknown,low,growth,downtrend,washed,deep_low,past,big_miss,strong_buy,theme:nuclear_smr,1,mid,below,down,mid,unknown,unknown,unknown,unknown
 XEL,Utilities,Utilities - Regulated Electric,large,ndx|sp500,US,low,mid,high,quiet,low,yes,high,blend,downtrend,neutral,deep_low,past,beat,strong_buy,,0,oversold,below,down,high,fair,slow,thin,high
 XELB,Consumer Cyclical,Apparel Manufacturing,micro,none,US,mid,low,low,quiet,high,no,high,growth,downtrend,neutral,deep_low,past,big_beat,strong_buy,,0,mid,above,down,low,unknown,shrink,none,unknown
 XENE,Healthcare,Biotechnology,mid,rut,ADR-Canada,low,mid,mid,quiet,mid,unknown,low,blend,mixed,neutral,mid,past,inline,strong_buy,theme:biotech,1,mid,below,up,high,unknown,shrink,none,unknown
