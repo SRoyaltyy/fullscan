@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-09-15
 
-**Generated:** 2026-09-15T03:42:35.387213-04:00 (America/New_York)
+**Generated:** 2026-09-15T04:04:00.548424-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US stocks closed lower as AI slowdown fears weighed on tech and chipmakers while surging oil and a near-5% 10-year yield sharpened focus on this week’s FOMC meeting
 **Prior close:** SPX -0.48%  Nasdaq -0.56%  Dow -0.29%
