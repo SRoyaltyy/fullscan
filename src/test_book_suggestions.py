@@ -664,6 +664,39 @@ def test_overlay_prefers_quoted_tickets_and_restamps_score_only_strip() -> None:
             assert strip["quote"]["src"] == "elite_live"
 
 
+def test_overlay_restamps_empty_today_from_open_0930_lock() -> None:
+    """14:44 ET today.json had buy_1d=[] while tickets were elite DBX."""
+    from src import overlay_live_strip as ols
+
+    with tempfile.TemporaryDirectory() as d:
+        repo = Path(d)
+        dest = repo / "pages_out"
+        day = repo / "data" / "day_board"
+        day.mkdir(parents=True)
+        (day / "2026-09-15_open_0930.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+        }), encoding="utf-8")
+        (day / "today_strategies.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "DBX", "px": 38.07, "px_src": "elite_live"}],
+        }), encoding="utf-8")
+        (day / "today.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "buy_1d": [],
+        }), encoding="utf-8")
+        ols.overlay(dest, repo=repo)
+        tickets = json.loads((dest / "today_strategies.json").read_text())
+        strip = json.loads((dest / "today.json").read_text())
+        assert tickets["buy_1d"][0]["ticker"] == "MTCH"
+        assert tickets["buy_1d"][0]["px"] == 43.04
+        assert strip["buy_1d"][0]["ticker"] == "MTCH"
+        assert strip["buy_1d"][0]["px"] == 43.04
+        assert strip["quote"]["src"] == "elite_live"
+
+
 def main() -> None:
     test_suggestions_from_book_lists_1d_names()
     test_write_skips_degraded_book()
@@ -685,6 +718,7 @@ def main() -> None:
     test_publish_keeps_elite_when_rebuild_is_session_export()
     test_day_board_write_json_keeps_elite_when_news_parse_lands()
     test_overlay_prefers_quoted_tickets_and_restamps_score_only_strip()
+    test_overlay_restamps_empty_today_from_open_0930_lock()
     print("ok")
 
 
