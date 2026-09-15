@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T04:32:36.742376-04:00",
+  "generated_at": "2026-09-15T05:55:41.865001-04:00",
   "items": [
     {
       "ok": true,
@@ -51,7 +51,7 @@
       "kind": "news_actions",
       "path": "01_daily/news/2026-09-15_actions.json",
       "reason": "",
-      "size": 30911,
+      "size": 33183,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -113,14 +113,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "map_heat_research",
       "path": "01_daily/map_heat/2026-09-15_research.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 43645,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -135,25 +135,25 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-15/communication_services_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 13149,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-15/consumer_cyclical_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 21914,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -168,36 +168,36 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-15/energy_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 15111,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-15/financial_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 12125,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-15/healthcare_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 15924,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -254,15 +254,15 @@
     },
     {
       "sector": "Communication Services",
-      "ok": false,
-      "reason": "missing",
-      "size": 0
+      "ok": true,
+      "reason": "",
+      "size": 13149
     },
     {
       "sector": "Consumer Cyclical",
-      "ok": false,
-      "reason": "missing",
-      "size": 0
+      "ok": true,
+      "reason": "",
+      "size": 21914
     },
     {
       "sector": "Consumer Defensive",
@@ -272,21 +272,21 @@
     },
     {
       "sector": "Energy",
-      "ok": false,
-      "reason": "missing",
-      "size": 0
+      "ok": true,
+      "reason": "",
+      "size": 15111
     },
     {
       "sector": "Financial",
-      "ok": false,
-      "reason": "missing",
-      "size": 0
+      "ok": true,
+      "reason": "",
+      "size": 12125
     },
     {
       "sector": "Healthcare",
-      "ok": false,
-      "reason": "missing",
-      "size": 0
+      "ok": true,
+      "reason": "",
+      "size": 15924
     },
     {
       "sector": "Industrials",
@@ -313,7 +313,7 @@
       "size": 0
     }
   ],
-  "sector_n_ok": 0,
+  "sector_n_ok": 5,
   "sector_n_total": 11,
   "all_ok": false
 }
