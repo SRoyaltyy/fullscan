@@ -132,7 +132,8 @@ def restamp_strip(strip: dict, tickets: dict) -> dict:
 
 
 def candidate_ticket_paths(repo: Path) -> list[Path]:
-    return [
+    locked = sorted((repo / "data" / "day_board").glob("*_open_0930.json"))
+    return locked + [
         repo / "data" / "day_board" / "today_strategies.json",
         repo / "dashboard" / "today_strategies.json",
         repo / "dashboard" / "factor-mine" / "today_strategies.json",

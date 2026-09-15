@@ -66,7 +66,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 80
 
       - uses: actions/setup-python@v5
         with:
@@ -110,6 +110,7 @@ jobs:
             "auto: open 09:30 tickets ${DATE}" \
             data/day_board/strategy_tickets.json \
             data/day_board/today_strategies.json \
+            data/day_board/${DATE}_open_0930.json \
             data/day_board/today.json \
             data/factor_mine/strategy_tickets.json \
             dashboard/factor-mine/strategy_tickets.json \

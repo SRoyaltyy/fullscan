@@ -344,6 +344,58 @@ def test_keep_open_elite_book_restamps_px_on_0930_names() -> None:
     assert out["quote"]["src"] == "elite_live"
 
 
+def test_open_0930_snapshot_beats_later_elite_rerank() -> None:
+    """13:50 elite_live MPC must not replace the locked 09:30 MTCH names."""
+    import tempfile
+    from pathlib import Path
+    from src import elite_live_px as elp
+
+    locked = {
+        "date": "2026-09-15",
+        "clock_legal_for": "2026-09-15",
+        "generated_at": "2026-09-15T12:47:05",
+        "quote": {"src": "elite_live", "after_open": True},
+        "buy_1d": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+        "strategies": {"stock_book_1d": {
+            "buy": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+        }},
+    }
+    later = {
+        "date": "2026-09-15",
+        "clock_legal_for": "2026-09-15",
+        "quote": {"src": "elite_live", "after_open": True, "at": "13:50"},
+        "buy_1d": [{"ticker": "MPC", "px": 412.55, "px_src": "elite_live"}],
+        "strategies": {"stock_book_1d": {
+            "buy": [{"ticker": "MPC", "px": 412.55, "px_src": "elite_live"}],
+        }},
+    }
+    book = {
+        "src": "elite_live", "after_open": True, "at": "13:50", "n": 1,
+        "error": None, "clock_rule": "x", "prices": {"MTCH": 44.01},
+    }
+    with tempfile.TemporaryDirectory() as d:
+        day = Path(d)
+        (day / "2026-09-15_open_0930.json").write_text(
+            json.dumps(locked), encoding="utf-8")
+        (day / "today_strategies.json").write_text(
+            json.dumps(later), encoding="utf-8")
+        old_day, old_dash = st.DAY, st.DASH_FM
+        st.DAY = day
+        st.DASH_FM = day / "dash"
+        st.DASH_FM.mkdir()
+        try:
+            with mock.patch.object(elp, "after_open", return_value=True), \
+                    mock.patch.object(elp, "quote_book", return_value=book), \
+                    mock.patch.object(elp, "official_opens", return_value={}):
+                out = st.keep_open_elite_book("2026-09-15", later)
+        finally:
+            st.DAY = old_day
+            st.DASH_FM = old_dash
+    assert out["buy_1d"][0]["ticker"] == "MTCH"
+    assert out["buy_1d"][0]["px"] == 44.01
+    assert out["quote"]["src"] == "elite_live"
+
+
 def test_write_fm_today_strategies_is_slim_with_quote() -> None:
     """Factor-mine same-origin tickets must carry quote + top-level buy_1d."""
     import tempfile
@@ -415,6 +467,7 @@ def main() -> None:
     test_keep_open_elite_book_refuses_session_export()
     test_keep_open_elite_book_restamps_px_on_0930_names()
     test_write_fm_today_strategies_is_slim_with_quote()
+    test_open_0930_snapshot_beats_later_elite_rerank()
     print("ok")
 
 
