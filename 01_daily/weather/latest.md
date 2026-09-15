@@ -5,7 +5,7 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** OFF (general predict down score -6.2, conf 0.749)
-- **Yields:** flat (fred_dgs10) | **Dollar:** strong (dxy) | **Oil:** rising | **VIX:** falling (ratio 0.90 via vix/vix3m) spot 17.48
+- **Yields:** flat (fred_dgs10) | **Dollar:** strong (dxy) | **Oil:** rising | **VIX:** falling (ratio 0.90 via vix/vix3m) spot 17.49
 - **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.16
 - **High-impact events:** 4 bullish vs 14 bearish
 
@@ -17,8 +17,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 | sector:Communication Services | ⛅ neutral | high | sector predict score +0.4 dir up conf 0.416 [sector board] |
 | sector:Consumer Cyclical | 🌧️ hostile | high | sector predict score -4.7 dir down conf 0.588 [sector board] |
 | sector:Consumer Defensive | 🌧️ hostile | high | sector predict score -8.1 dir flat conf 0.55 [sector board] |
-| sector:Energy | 🌤️ favorable | medium | news_judge SECTOR Energy [bullish] |
-| sector:Financial | 🌧️ hostile | high | sector predict score -4.1 dir down conf 0.563 [sector board] |
+| sector:Energy | 🌤️ favorable | high | sector predict score +4.0 dir up conf 0.661 [sector board] |
+| sector:Financial | 🌧️ hostile | medium | news_judge SECTOR Financial [bearish] |
 | sector:Healthcare | ⛅ neutral | high | sector predict score +0.9 dir up conf 0.537 [sector board] |
 | sector:Industrials | 🌧️ hostile | high | sector predict score -5.9 dir down conf 0.65 [sector board] |
 | sector:Real Estate | 🌧️ hostile | high | sector predict score -8.5 dir down conf 0.65 [sector board] |
