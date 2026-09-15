@@ -257,7 +257,7 @@ jobs:
   preopen:
     needs: [gate, scrape]
     if: ${{ needs.gate.outputs.go == 'yes' && always() }}
-    runs-on: ${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('[\"self-hosted\",\"ecs\"]') }}
+    runs-on: ${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
     timeout-minutes: 240
     env:
       OPENCLAW_TIMEOUT: "10800"
