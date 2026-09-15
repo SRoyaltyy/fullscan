@@ -206,6 +206,7 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "past 09:30 ET" in orch
     assert "Publish strategy tickets" in dep
     assert "Open 09:30 pack" in dep
+    assert "Overlayed dashboard/index.html (paper) from main" in dep
     assert "gh workflow run deploy-dashboard.yml" in pub
     assert "dashboard/today_strategies.json" in pub
     assert "scripts/publish_dashboard.sh" in pub

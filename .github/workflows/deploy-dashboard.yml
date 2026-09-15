@@ -82,6 +82,15 @@ jobs:
             echo "Used dashboard/index.html from main"
           fi
 
+          # Overlay paper + sub-dashes from this checkout. A Stock Book
+          # artifact can carry last night's paper HTML; without this
+          # overlay, .io liveBook stays on a stale poller after 09:30.
+          if [ -f dashboard/index.html ]; then
+            mkdir -p pages_out/dashboard
+            cp dashboard/index.html pages_out/dashboard/index.html
+            cp dashboard/index.html pages_out/index.html
+            echo "Overlayed dashboard/index.html (paper) from main"
+          fi
           # Overlay sub-dashboards from this checkout so orphan deploys keep them.
           if [ -f dashboard/boring-winners/index.html ]; then
             mkdir -p pages_out/dashboard/boring-winners
