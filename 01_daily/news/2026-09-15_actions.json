@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-15T13:17:52.676841-04:00",
+  "generated_at": "2026-09-15T15:38:37.743645-04:00",
   "hours": 48,
-  "raw_headlines": 252,
-  "news_source": "local_files:db_timeout",
+  "raw_headlines": 280,
+  "news_source": "local_files:empty",
   "unique_events": 4,
   "universe_rows": 11617,
   "interactions": [
@@ -11,7 +11,7 @@
   "reasoned_events": [
     {
       "event": "fed_rate_path",
-      "headline_count": 15,
+      "headline_count": 16,
       "framework": {
         "keep": "conditional",
         "us_relevance": "high",
@@ -27,7 +27,7 @@
         "confidence": 0.55,
         "drop_reason": "",
         "notes": [
-          "headline_count=15 supports non-noise severity",
+          "headline_count=16 supports non-noise severity",
           "rates polarity unclear → lower confidence / soft book"
         ]
       },
@@ -46,13 +46,13 @@
           "published_at": ""
         },
         {
-          "title": "FOMC decision, SEP/dot plot, Warsh press conference",
+          "title": "Fed Beige Book — modest activity, moderate price gains into FOMC",
           "source": "events",
           "url": "",
           "published_at": ""
         },
         {
-          "title": "Fed Beige Book — modest activity, moderate price gains into FOMC",
+          "title": "FOMC decision, SEP/dot plot, Warsh press conference",
           "source": "events",
           "url": "",
           "published_at": ""
@@ -154,7 +154,7 @@
       ],
       "evidence": [
         {
-          "title": "US-Iran tanker war; Hormuz traffic impaired; Brent ~$107-109",
+          "title": "US-Iran tanker war; Brent ~$105-108, Hormuz impaired",
           "source": "events",
           "url": "",
           "published_at": ""
@@ -175,7 +175,7 @@
     },
     {
       "event": "weak_labor_print",
-      "headline_count": 3,
+      "headline_count": 4,
       "framework": {
         "keep": "keep",
         "us_relevance": "high",
@@ -216,6 +216,12 @@
         },
         {
           "title": "US initial jobless claims (week ending Sept 12)",
+          "source": "events",
+          "url": "",
+          "published_at": ""
+        },
+        {
+          "title": "ADP August private payrolls +38k",
           "source": "events",
           "url": "",
           "published_at": ""
@@ -405,21 +411,6 @@
   ],
   "ticker_actions": [
     {
-      "ticker": "XLE",
-      "buy_score": 8.0,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "news_judge",
-          "side": "buy",
-          "weight": 8.0,
-          "bucket": "judge"
-        }
-      ],
-      "net": 8.0,
-      "side": "buy"
-    },
-    {
       "ticker": "COP",
       "buy_score": 6.8,
       "sell_score": 0.0,
@@ -546,6 +537,43 @@
       "net": 6.8,
       "side": "buy",
       "size": "large"
+    },
+    {
+      "ticker": "BAC",
+      "buy_score": 0.0,
+      "sell_score": 6.55,
+      "events": [
+        {
+          "event": "weak_labor_print",
+          "side": "sell",
+          "weight": 1.05,
+          "bucket": "banks_diversified"
+        },
+        {
+          "event": "news_judge",
+          "side": "sell",
+          "weight": 5.5,
+          "bucket": "judge"
+        }
+      ],
+      "net": -6.55,
+      "side": "sell",
+      "size": "mega"
+    },
+    {
+      "ticker": "ADBE",
+      "buy_score": 5.5,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "news_judge",
+          "side": "buy",
+          "weight": 5.5,
+          "bucket": "judge"
+        }
+      ],
+      "net": 5.5,
+      "side": "buy"
     },
     {
       "ticker": "XOM",
@@ -740,7 +768,7 @@
       "size": "mid"
     },
     {
-      "ticker": "SOXX",
+      "ticker": "SMH",
       "buy_score": 0.0,
       "sell_score": 4.0,
       "events": [
@@ -770,19 +798,19 @@
       "side": "buy"
     },
     {
-      "ticker": "ADBE",
-      "buy_score": 4.0,
-      "sell_score": 0.0,
+      "ticker": "XLF",
+      "buy_score": 0.0,
+      "sell_score": 4.0,
       "events": [
         {
           "event": "news_judge",
-          "side": "buy",
+          "side": "sell",
           "weight": 4.0,
           "bucket": "judge"
         }
       ],
-      "net": 4.0,
-      "side": "buy"
+      "net": -4.0,
+      "side": "sell"
     },
     {
       "ticker": "CEG",
@@ -1057,22 +1085,6 @@
       "size": "mega"
     },
     {
-      "ticker": "BAC",
-      "buy_score": 0.0,
-      "sell_score": 1.05,
-      "events": [
-        {
-          "event": "weak_labor_print",
-          "side": "sell",
-          "weight": 1.05,
-          "bucket": "banks_diversified"
-        }
-      ],
-      "net": -1.05,
-      "side": "sell",
-      "size": "mega"
-    },
-    {
       "ticker": "FRBT",
       "buy_score": 0.0,
       "sell_score": 1.05,
@@ -1198,7 +1210,7 @@
       ],
       "net": 0.88,
       "side": "buy",
-      "size": "mid"
+      "size": "large"
     },
     {
       "ticker": "BSY",
@@ -1266,9 +1278,10 @@
     }
   ],
   "judge_tickers": {
-    "SOXX": -4.0,
+    "SMH": -4.0,
     "IGV": 4.0,
-    "ADBE": 4.0,
-    "XLE": 8.0
+    "ADBE": 5.5,
+    "XLF": -4.0,
+    "BAC": -5.5
   }
 }
