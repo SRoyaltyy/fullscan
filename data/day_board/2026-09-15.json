@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T08:33:58.129300-04:00",
+  "generated_at": "2026-09-15T08:37:03.267186-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -203,7 +203,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 13042
+          "size": 10920
         },
         {
           "key": "research_json",
@@ -558,7 +558,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 13042
+          "size": 10920
         },
         {
           "key": "in_weather",
@@ -839,101 +839,6 @@
     }
   },
   "lands": [
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T06:07:45.680514-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 23581,
-          "preview": "2026-09-15 BUY AVAH, PACS, ACHC, VRSK, DBX, DLO, WIX, CARG \u00b7 SELL FLNC, OKLO, FCEL, AMPX, LVWR, EOSE, QBTS, METC"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 949,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-09-15.json",
-          "ok": true,
-          "reason": "",
-          "size": 131772,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-09-15_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 107639,
-          "preview": "2026-09-15 BUY AVAH, PACS, ACHC, VRSK, DBX, DLO, WIX, CARG \u00b7 SELL FLNC, OKLO, FCEL, AMPX, LVWR, EOSE, QBTS, METC"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 2404562,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-09-15_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 2404577,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 2656038,
-          "preview": "2026-09-15 BUY AVAH, PACS, ACHC, VRSK, DBX, DLO, WIX, CARG \u00b7 SELL FLNC, OKLO, FCEL, AMPX, LVWR, EOSE, QBTS, METC"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 2404562,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 107639,
-          "preview": "2026-09-15 BUY AVAH, PACS, ACHC, VRSK, DBX, DLO, WIX, CARG \u00b7 SELL FLNC, OKLO, FCEL, AMPX, LVWR, EOSE, QBTS, METC"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 2404562,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 2404562,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 2656038,
-          "preview": "2026-09-15 BUY AVAH, PACS, ACHC, VRSK, DBX, DLO, WIX, CARG \u00b7 SELL FLNC, OKLO, FCEL, AMPX, LVWR, EOSE, QBTS, METC"
-        }
-      ],
-      "preview": "2026-09-15 BUY AVAH, PACS, ACHC, VRSK, DBX, DLO, WIX, CARG \u00b7 SELL FLNC, OKLO, FCEL, AMPX, LVWR, EOSE, QBTS, METC \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-15 BUY AVAH, PACS, ACHC, VRSK, DBX, DLO, WIX, CARG \u00b7 SELL FLNC, OKLO, FCEL, AMPX, LVWR, EOSE, QBTS, METC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AVAH, PACS, ACHC, VRSK, DBX, DLO, WIX, CARG \u00b7 SELL FLNC, OKLO, FCEL, AMPX, LVWR, EOSE, QBTS, METC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AVAH, PACS, ACHC, VRSK, DBX, DLO, WIX, CARG \u00b7 SELL FLNC, OKLO, FCEL, AMPX, LVWR, EOSE, QBTS, METC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, lo"
-    },
     {
       "key": "finviz",
       "title": "Finviz universe export",
@@ -3531,6 +3436,31 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-15T08:33:51.127518-04:00\nraw=197 unique_events=4 tickers=54"
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T08:37:01.923765-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 10920,
+          "preview": "# News Judge \u2014 2026-09-15"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1070,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-09-15 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
     }
   ],
   "href": {

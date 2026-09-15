@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T08:33:58.129300-04:00",
+  "generated_at": "2026-09-15T08:37:03.267186-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -129,31 +129,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "ab",
-      "title": "AB checklist",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T08:16:48.833513-04:00",
-      "files": [
-        {
-          "path": "data/ab_checklist/2026-09-15_ab_checklist.csv",
-          "ok": true,
-          "reason": "",
-          "size": 7626799,
-          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM"
-        },
-        {
-          "path": "data/ab_checklist/2026-09-15_ab_checklist_enriched.csv",
-          "ok": true,
-          "reason": "",
-          "size": 8460228,
-          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SM, WDS, LFST, PACS, AMN"
-        }
-      ],
-      "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SM, WDS, LFST, PACS, AMN"
-    },
     {
       "key": "news_parse",
       "title": "News parse (timeout retry)",
@@ -342,6 +317,31 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-15T08:33:51.127518-04:00\nraw=197 unique_events=4 tickers=54"
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T08:37:01.923765-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 10920,
+          "preview": "# News Judge \u2014 2026-09-15"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1070,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-09-15 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

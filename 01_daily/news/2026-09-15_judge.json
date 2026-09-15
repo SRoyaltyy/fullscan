@@ -1,23 +1,21 @@
 {
- "risk_tilt": null,
+ "risk_tilt": "off",
  "macros": [
+  "hawkish",
   "mixed",
+  "hawkish",
   "mixed"
  ],
  "sector_tilts": {
-  "Technology": "bullish",
-  "Financial": "bearish",
-  "Basic Materials": "bearish",
-  "Gold": "bullish"
+  "Technology": "mixed",
+  "Financial": "bearish"
  },
  "tickers": {
   "IGV": 4.0,
-  "ADBE": 7.0,
-  "BAC": -5.5,
-  "GDX": 4.0,
-  "JPM": 3.0,
-  "GS": 1.5
+  "ADBE": 4.0,
+  "XLF": -4.0,
+  "BAC": -5.5
  },
- "b1_inject": "NEWS_JUDGE: n=8 rescued=7\nMACRO rates: [dovish] Gold surge + yield pressure = one rates cluster; market pricing cuts but yields backing up (session/1d-1w)\nMACRO risk: [mixed] AI-pacing rotation flips hardware\u2192software; chips drag, SaaS lifts \u2014 net SPX beta ambiguous (session/1d-1w)\nSECTOR semis: [mixed] Chip selloff on AI-slowdown calls vs ASML sold-out 2027 EUV capacity \u2014 demand intact, sentiment negative (SOXX/SMH)\nSECTOR software: [bullish] NOW/INTU/ADBE/CRM surge on AI-pacing rotation; ADBE beat-and-raise anchors (IGV)\nSECTOR banks: [bearish] BAC soft Q3 outlook \u22125%, BNY expense guidance up \u2014 Q3 NII read (XLF/regional banks)\nSECTOR materials: [bearish] Copper retreats from record on US refined-copper tariff uncertainty (XME/copper miners)\nSECTOR gold: [bullish] Fed rate-cut bets lift Barrick +8.2% (GDX)\nINTERACTION: AI chip demand + AI-slowdown sentiment \u2192 semis mixed, do not short on headline alone; yields up + software up = rotation not rates trade\nWATCH: net SPX direction genuinely two-sided \u2014 chips vs software offset; do not emit strong directional call without futures confirmation",
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=3\nMACRO rates: [hawkish] 10Y >5% + CPI core surprise locking a September hike (regime/1d-1w)\nMACRO policy: [mixed] FOMC/SEP/Warsh PC unresolved \u2014 B3=0 until print (regime/1d)\nMACRO geo-oil: [mixed] Hormuz war, Brent ~$107; leftover vs fresh increment unproven (session/1d-1w)\nSECTOR semis: [bearish] AI-slowdown calls, AMD plunge, Asia memory (SMH/SOXX/QQQ)\nSECTOR software: [bullish] ADBE beat/raise + AI-pacing rotation vs hardware (IGV)\nSECTOR financials: [bearish] BAC CEO soft Q3 outlook into 5% yields (XLF)\nINTERACTION: one rates cluster (CPI+10Y+FOMC); semis mixed vs ASML EUV sold-out; oil+hawkish = stagflation tax not isolated XLE\nWATCH: do not emit a signed FOMC direction; do not auto B1=-3 kinetic without fresh increment + confirming futures",
  "date": "2026-09-15"
 }
