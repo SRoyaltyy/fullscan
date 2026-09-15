@@ -1,8 +1,9 @@
 name: Excel Deep Corr Mine
 
-# Crash contract: stream + ckpt every 25 tickers. On timeout/fail the
+# Crash contract: stream + ckpt every 25 tickers. On timeout/fail/cancel the
 # continue job re-dispatches this same workflow with reset=false so the
-# next runner skips processed tickers and keeps walking.
+# next runner skips processed tickers and keeps walking. Generation cap is
+# high because this is a deep remine (time-split invalidates the old board).
 
 on:
   workflow_dispatch:
@@ -39,6 +40,7 @@ on:
         type: string
   schedule:
     - cron: "20 11 * * 6"
+    - cron: "20 5,11,17,23 * * *"
 
 permissions:
   contents: write
@@ -52,10 +54,13 @@ jobs:
   mine:
     runs-on: ubuntu-latest
     timeout-minutes: 330
+    outputs:
+      skip: ${{ steps.ckpt.outputs.skip }}
     steps:
       - uses: actions/checkout@v4
 
       - name: Restore previous mine checkpoint from main
+        id: ckpt
         run: |
           set -euo pipefail
           git fetch origin main --depth=1 || true
@@ -64,13 +69,39 @@ jobs:
           do
             git checkout origin/main -- "$f" 2>/dev/null || echo "no prior $f on main"
           done
+          SKIP=false
           if [ -f 03_scoreboard/excel_stat_mine_ckpt.json ]; then
-            python3 -c "import json; raw=json.load(open('03_scoreboard/excel_stat_mine_ckpt.json')); print('restored', raw.get('phase'), 'tickers', len(raw.get('processed') or []), 'done', raw.get('done'))"
+            set +e
+            python3 - <<'PY'
+          import json, os, sys
+          p = "03_scoreboard/excel_stat_mine_ckpt.json"
+          raw = json.load(open(p))
+          kind = raw.get("split_kind")
+          cutoff = raw.get("cutoff")
+          print("restored", raw.get("phase"), "kind", kind, "cutoff", cutoff,
+                "tickers", len(raw.get("processed") or []), "done", raw.get("done"))
+          if kind != "time" or not cutoff:
+              print("stale ticker-split ckpt — discard and remine")
+              os.remove(p)
+              for f in ("03_scoreboard/EXCEL_STAT_MINE.md",
+                        "03_scoreboard/excel_stat_mine.json"):
+                  if os.path.isfile(f):
+                      os.remove(f)
+              sys.exit(0)
+          if raw.get("done"):
+              print("already done time-split")
+              sys.exit(2)
+          PY
+            RC=$?
+            set -e
+            if [ "$RC" = "2" ]; then SKIP=true; fi
           else
             echo "no checkpoint - fresh walk"
           fi
+          echo "skip=$SKIP" >> "$GITHUB_OUTPUT"
 
       - name: Restore price-cache state (excel-state branch)
+        if: steps.ckpt.outputs.skip != 'true'
         run: |
           set -euo pipefail
           mkdir -p excel_bot/data/rows
@@ -79,13 +110,16 @@ jobs:
           echo "restored $(ls excel_bot/data/rows | wc -l) ticker caches"
 
       - uses: actions/setup-python@v5
+        if: steps.ckpt.outputs.skip != 'true'
         with:
           python-version: "3.12"
 
       - name: Install
+        if: steps.ckpt.outputs.skip != 'true'
         run: pip install openpyxl pandas pyarrow
 
       - name: Unit tests
+        if: steps.ckpt.outputs.skip != 'true'
         run: |
           python excel_bot/engine/test_excel_pixel_desc.py
           python excel_bot/engine/test_excel_deep_corr_mine.py
@@ -93,6 +127,7 @@ jobs:
           python excel_bot/engine/test_region_corr_mine.py || true
 
       - name: Build emulator grids from price cache
+        if: steps.ckpt.outputs.skip != 'true'
         env:
           LIMIT: ${{ inputs.limit || '0' }}
         run: |
@@ -107,6 +142,7 @@ jobs:
           if [ "$N" -le 0 ]; then echo "NO GRID JSON"; exit 1; fi
 
       - name: Mine
+        if: steps.ckpt.outputs.skip != 'true'
         env:
           GRIDS: ${{ inputs.grids || 'grids_deep' }}
           LIMIT: ${{ inputs.limit || '0' }}
@@ -137,7 +173,7 @@ jobs:
           if [ -f 03_scoreboard/EXCEL_STAT_MINE.md ]; then head -n 80 03_scoreboard/EXCEL_STAT_MINE.md; else echo NO BOARD; fi
 
       - name: Publish board + checkpoint
-        if: always()
+        if: always() && steps.ckpt.outputs.skip != 'true'
         run: |
           bash scripts/safe_git_push.sh "chore: excel stat mine ckpt" \
             03_scoreboard/EXCEL_STAT_MINE.md 03_scoreboard/excel_stat_mine.json \
@@ -145,7 +181,7 @@ jobs:
             03_scoreboard/excel_deep_corr_mine.json 03_scoreboard/excel_deep_corr_mine.csv
 
       - name: Upload
-        if: always()
+        if: always() && steps.ckpt.outputs.skip != 'true'
         uses: actions/upload-artifact@v4
         with:
           name: excel-deep-corr-mine
@@ -161,11 +197,11 @@ jobs:
       - name: Summary
         if: always()
         run: |
-          { echo "## Excel stat mine"; echo; echo "ckpt + auto-continue"; echo; [ -f 03_scoreboard/EXCEL_STAT_MINE.md ] && sed -n '1,60p' 03_scoreboard/EXCEL_STAT_MINE.md; } >> "$GITHUB_STEP_SUMMARY"
+          { echo "## Excel stat mine"; echo; echo "time-split ckpt + auto-continue"; echo; [ -f 03_scoreboard/EXCEL_STAT_MINE.md ] && sed -n '1,60p' 03_scoreboard/EXCEL_STAT_MINE.md; } >> "$GITHUB_STEP_SUMMARY"
 
   continue:
     needs: mine
-    if: always() && !cancelled()
+    if: always()
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -177,24 +213,34 @@ jobs:
           LIMIT: ${{ github.event.inputs.limit || '0' }}
           MIN_DISC: ${{ github.event.inputs.min_disc || '200' }}
           MIN_HOLD: ${{ github.event.inputs.min_hold || '80' }}
+          THIS_RUN: ${{ github.run_id }}
         run: |
           set -uo pipefail
           GEN="${GEN:-0}"
           case "$GEN" in ''|*[!0-9]*) GEN=0 ;; esac
-          if [ "$GEN" -ge 8 ]; then echo "generation=$GEN stop"; exit 0; fi
+          if [ "$GEN" -ge 200 ]; then echo "generation=$GEN stop"; exit 0; fi
+          if [ "${{ needs.mine.outputs.skip }}" = "true" ]; then echo "already done — no continue"; exit 0; fi
+          OTHER=$(gh run list --workflow excel_deep_corr_mine.yml --limit 20 \
+            --json databaseId,status --jq "[.[] | select((.status==\"queued\" or .status==\"in_progress\") and (.databaseId != ${THIS_RUN}))] | length" \
+            || echo 0)
+          if [ "${OTHER:-0}" -gt 0 ]; then echo "another run already queued/in_progress ($OTHER) — skip redispatch"; exit 0; fi
           curl -fsSL "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/03_scoreboard/excel_stat_mine_ckpt.json" -o /tmp/ckpt.json || true
           python3 - <<'PY'
           import json, os, sys
           p="/tmp/ckpt.json"
           if not os.path.isfile(p) or os.path.getsize(p) < 8:
-              print("no ckpt"); sys.exit(3)
+              print("no ckpt — remine"); sys.exit(0)
           raw=json.load(open(p))
-          print("ckpt", raw.get("phase"), "done", raw.get("done"), "tickers", len(raw.get("processed") or []))
+          print("ckpt", raw.get("phase"), "kind", raw.get("split_kind"),
+                "cutoff", raw.get("cutoff"), "done", raw.get("done"),
+                "tickers", len(raw.get("processed") or []))
+          if raw.get("split_kind") != "time" or not raw.get("cutoff"):
+              print("stale ticker-split — remine"); sys.exit(0)
           if raw.get("done"):
               print("finished"); sys.exit(2)
           PY
           RC=$?
-          if [ "$RC" = "2" ] || [ "$RC" = "3" ]; then echo "no continue rc=$RC"; exit 0; fi
+          if [ "$RC" = "2" ]; then echo "no continue rc=$RC"; exit 0; fi
           NEXT=$((GEN + 1))
           echo "redispatch generation=$NEXT"
           gh workflow run excel_deep_corr_mine.yml --ref main -f reset=false -f generation="$NEXT" -f grids="$GRIDS" -f limit="$LIMIT" -f min_disc="$MIN_DISC" -f min_hold="$MIN_HOLD"

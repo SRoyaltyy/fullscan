@@ -13,13 +13,14 @@ from excel_pixel_desc import ALL_LETTERS
 from excel_pixel_shade import features_with_shade
 
 
-def discovery_quantiles_5(ticker_days, split_map):
+def discovery_quantiles_5(ticker_days, cutoff):
     bags = defaultdict(list)
     for tkr, raw in ticker_days.items():
-        if split_map.get(tkr) == "holdout":
-            continue
         days = m.normalize_days(raw)
         for t in range(1, len(days)):
+            feat = days[t].get("date") or ""
+            if not cutoff or not feat or feat >= cutoff:
+                continue
             for let, v in days[t - 1]["vals"].items():
                 x = m._f(v)
                 if x is not None and math.isfinite(x):

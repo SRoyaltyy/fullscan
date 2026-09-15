@@ -7,6 +7,10 @@ Runtime is controlled by statistics, not by dropping columns:
   3. Benjamini-Hochberg FDR on discovery p-values
   4. holdout must keep lift > 1
   5. Apriori pairs among FDR survivors
+
+Holdout is the last 30% of *session dates*. Discovery may use a row only
+when the feature date AND the label window (I1 / I5 last close) are
+strictly before that cutoff. A ticker-name split is not leak-free.
 """
 from __future__ import annotations
 
@@ -22,7 +26,8 @@ sys.path.insert(0, HERE)
 
 from excel_clock_gate import FILL_OPEN, VALUE_OPEN_44, assert_excel_clock_gate, gate_payload  # noqa: E402
 from excel_deep_corr_mine import (  # noqa: E402
-    AVGVOL_MIN, MCAP_MIN_M, _f, _fwd, find_grids, load_finviz_filter, load_grids,
+    AVGVOL_MIN, HOLD_FRAC, MCAP_MIN_M, SPLIT_KIND, _f, _fwd,
+    find_grids, iso_date, load_finviz_filter, load_grids, time_split_cutoff,
 )
 from signals import classify_fill  # noqa: E402
 
@@ -31,6 +36,9 @@ MIN_SUPPORT = 0.02
 MIN_DISC_N = 200
 MIN_HOLD_N = 80
 PAIR_MAX_SEEDS = 80
+# Re-export so ckpt / pixel hook / tests can keep importing from here.
+HOLD_FRAC = HOLD_FRAC
+SPLIT_KIND = SPLIT_KIND
 
 
 def col_letters(end="JL"):
@@ -161,6 +169,7 @@ def normalize_days(raw):
         H = ((h - l) / o) if o and h is not None and l is not None and o > 0 else None
         I = ((c / prev_c) - 1.0) if c and prev_c and prev_c > 0 else None
         out.append({
+            "date": iso_date(d.get("date")),
             "o": o, "h": h, "l": l, "c": c, "H": H, "I": I,
             "fills": fills, "vals": vals, "fams": fams,
             "texts": {k: str(v) for k, v in vals.items()
@@ -170,13 +179,36 @@ def normalize_days(raw):
     return out
 
 
-def discovery_quantiles(ticker_days, split_map):
+def label_horizon(label_key):
+    k = str(label_key or "I1_green")
+    if "10" in k:
+        return 10
+    if "5" in k:
+        return 5
+    return 1
+
+
+def label_end_date(days, t, horizon):
+    sl = days[t:t + horizon]
+    if len(sl) < horizon:
+        return ""
+    return iso_date(sl[-1].get("date"))
+
+
+def disc_label_ok(feat_date, label_end, cutoff):
+    """True only if feature date AND the label's last close are < cutoff."""
+    return bool(cutoff and feat_date and label_end
+                and feat_date < cutoff and label_end < cutoff)
+
+
+def discovery_quantiles(ticker_days, cutoff):
     bags = defaultdict(list)
     for tkr, raw in ticker_days.items():
-        if split_map.get(tkr) == "holdout":
-            continue
         days = normalize_days(raw)
         for t in range(1, len(days)):
+            feat = days[t].get("date") or ""
+            if not cutoff or not feat or feat >= cutoff:
+                continue
             for let, v in days[t - 1]["vals"].items():
                 x = _f(v)
                 if x is not None and math.isfinite(x):
@@ -251,22 +283,25 @@ def _labels(days, t):
     return out
 
 
-def collect(ticker_days, split_map, quant, which):
+def collect(ticker_days, cutoff, quant, which, label_key="I1_green"):
     rows = []
+    hzn = label_horizon(label_key)
     for tkr, raw in ticker_days.items():
-        split = split_map.get(tkr, "discovery")
-        if which == "disc" and split == "holdout":
-            continue
-        if which == "hold" and split != "holdout":
-            continue
         days = normalize_days(raw)
         if len(days) < 30:
             continue
         for t in range(20, len(days)):
             if not days[t]["o"]:
                 continue
+            feat = days[t].get("date") or ""
+            end = label_end_date(days, t, hzn)
+            if which == "disc":
+                if not disc_label_ok(feat, end, cutoff):
+                    continue
+            elif not feat or feat < cutoff:
+                continue
             labs = _labels(days, t)
-            if "I1_green" not in labs:
+            if label_key not in labs:
                 continue
             rows.append((features_at(days, t, quant), labs))
     return rows
@@ -364,6 +399,8 @@ def write_board(path, meta, singles, pairs, base_disc, base_hold):
         "Method: every letter as lag-1 fill / value / 10-row paint + same-row "
         "open-12 fills and open-44 numbers. chi2 + mutual info on discovery, "
         f"Benjamini-Hochberg FDR q={FDR_Q}, holdout must keep lift>1. "
+        "TIME-SPLIT: last 30% of session dates are holdout. Discovery feature "
+        "date AND the full label window must be strictly before the cutoff. "
         "Pairs = Apriori AND of FDR survivors.", "",
         f"Discovery base P(I1 green)={base_disc:.3f} · holdout base={base_hold:.3f}", "",
         "## Holdout-confirmed singles (lowest p, lift>1 both sides)", "",
@@ -410,18 +447,15 @@ def main():
         files = files[: args.limit]
     ticker_days = load_grids(files, allow if allow else None)
     print(f"[grids] {len(ticker_days)} tickers", flush=True)
-    split_path = args.split or next(
-        (p for p in ("excel_bot/engine/holdout_split.json",
-                     "engine/holdout_split.json") if os.path.isfile(p)), "")
-    split_map = {}
-    if split_path:
-        raw = json.load(open(split_path, encoding="utf-8"))
-        split_map = {t: "discovery" for t in raw.get("discovery", [])}
-        split_map.update({t: "holdout" for t in raw.get("holdout", [])})
-    quant = discovery_quantiles(ticker_days, split_map)
+    cutoff = time_split_cutoff(ticker_days)
+    print(f"[split] kind=time cutoff={cutoff} hold_frac={HOLD_FRAC} "
+          f"(ticker split ignored)", flush=True)
+    if not cutoff:
+        raise SystemExit("no session dates — cannot time-split")
+    quant = discovery_quantiles(ticker_days, cutoff)
     print(f"[quant] {len(quant)} letters with discovery numeric bins", flush=True)
-    disc_rows = collect(ticker_days, split_map, quant, "disc")
-    hold_rows = collect(ticker_days, split_map, quant, "hold")
+    disc_rows = collect(ticker_days, cutoff, quant, "disc", args.label)
+    hold_rows = collect(ticker_days, cutoff, quant, "hold", args.label)
     print(f"[rows] disc={len(disc_rows)} hold={len(hold_rows)}", flush=True)
     uni, n_d, lab_d = score_univariate(disc_rows, args.label)
     keep = bh_keep(uni, FDR_Q)
@@ -455,7 +489,8 @@ def main():
     elif confirmed:
         base_h = hold_stats.get(confirmed[0]["rule"], {}).get("hold_base") or 0
     write_board(args.out_md,
-                f"Tickers={len(ticker_days)} letters={len(ALL_LETTERS)} "
+                f"TIME-SPLIT cutoff={cutoff} Tickers={len(ticker_days)} "
+                f"letters={len(ALL_LETTERS)} "
                 f"univ=mcap>${MCAP_MIN_M:.0f}M & vol>{AVGVOL_MIN:.0f} "
                 f"gate={gate_payload()['gate']}",
                 confirmed, pairs_ok, (lab_d / n_d if n_d else 0), base_h)
@@ -464,7 +499,7 @@ def main():
             "n_univariate_tested": len(uni), "n_fdr": len(uni_fdr),
             "n_confirmed": len(confirmed), "n_pairs_confirmed": len(pairs_ok),
             "top_singles": confirmed[:30], "top_pairs": pairs_ok[:30],
-            "gate": gate_payload()}
+            "gate": gate_payload(), "split_kind": SPLIT_KIND, "cutoff": cutoff}
     os.makedirs(os.path.dirname(args.out_json) or ".", exist_ok=True)
     json.dump(slim, open(args.out_json, "w"), indent=1, default=str)
     print(f"[out] {args.out_md}", flush=True)
