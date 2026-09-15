@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T10:35:54.701323-04:00",
+  "generated_at": "2026-09-15T10:40:23.454385-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -509,13 +509,13 @@
       "date": "2026-09-15",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-15T10:35:53.935414-04:00",
+      "at": "2026-09-15T10:40:22.477187-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 22936,
+          "size": 29812,
           "preview": "2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR"
         },
         {
@@ -529,14 +529,14 @@
           "path": "data/day_board/2026-09-15.json",
           "ok": true,
           "reason": "",
-          "size": 194645,
+          "size": 194263,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
         },
         {
           "path": "data/day_board/2026-09-15_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 173209,
+          "size": 172827,
           "preview": "2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR"
         },
         {
@@ -571,7 +571,7 @@
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 173209,
+          "size": 172827,
           "preview": "2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR"
         },
         {
