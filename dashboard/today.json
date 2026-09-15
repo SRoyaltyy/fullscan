@@ -1,0 +1,127 @@
+{
+  "date": "2026-09-15",
+  "buy_1d": [
+    {
+      "ticker": "MTCH",
+      "side": "long",
+      "predict": "UP",
+      "px": 43.04,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-15T12:47:05.652833-04:00"
+    },
+    {
+      "ticker": "FOX",
+      "side": "long",
+      "predict": "UP",
+      "px": 60.32,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-15T12:47:05.652833-04:00"
+    },
+    {
+      "ticker": "CARG",
+      "side": "long",
+      "predict": "UP",
+      "px": 34.94,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-15T12:47:05.652833-04:00"
+    },
+    {
+      "ticker": "SNAP",
+      "side": "long",
+      "predict": "UP",
+      "px": 5.92,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-15T12:47:05.652833-04:00"
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "OKLO",
+      "side": "short",
+      "predict": "DOWN",
+      "px": 36.14,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-15T12:47:05.652833-04:00"
+    },
+    {
+      "ticker": "QBTS",
+      "side": "short",
+      "predict": "DOWN",
+      "px": 16.59,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-15T12:47:05.652833-04:00"
+    },
+    {
+      "ticker": "IONQ",
+      "side": "short",
+      "predict": "DOWN",
+      "px": 37.49,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-15T12:47:05.652833-04:00"
+    },
+    {
+      "ticker": "EOSE",
+      "side": "short",
+      "predict": "DOWN",
+      "px": 4.11,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-15T12:47:05.652833-04:00"
+    },
+    {
+      "ticker": "QUBT",
+      "side": "short",
+      "predict": "DOWN",
+      "px": 7.95,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-15T12:47:05.652833-04:00"
+    },
+    {
+      "ticker": "RGTI",
+      "side": "short",
+      "predict": "DOWN",
+      "px": 15.3,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-15T12:47:05.652833-04:00"
+    },
+    {
+      "ticker": "METC",
+      "side": "short",
+      "predict": "DOWN",
+      "px": 10.01,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-15T12:47:05.652833-04:00"
+    },
+    {
+      "ticker": "FLNC",
+      "side": "short",
+      "predict": "DOWN",
+      "px": 9.4,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-15T12:47:05.652833-04:00"
+    },
+    {
+      "ticker": "TE",
+      "side": "short",
+      "predict": "DOWN",
+      "px": 4.28,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-15T12:47:05.652833-04:00"
+    },
+    {
+      "ticker": "TLN",
+      "side": "short",
+      "predict": "DOWN",
+      "px": 282.94,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-15T12:47:05.652833-04:00"
+    }
+  ],
+  "quote": {
+    "src": "elite_live",
+    "at": "2026-09-15T12:47:05.652833-04:00",
+    "after_open": true,
+    "n": 11621,
+    "error": null,
+    "clock_rule": "px is Finviz Elite Price from a fresh post-09:30 Overview export when live is allowed. Theme Radar close dump and yesterday Price are never live."
+  }
+}
