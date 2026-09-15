@@ -1,15 +1,11 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T04:32:37.494355-04:00",
-  "overall": "PARTIAL",
-  "ranker_ready": false,
-  "counts": {
-    "ok": 4,
-    "partial": 4,
-    "fail": 0,
-    "n": 8
-  },
+  "generated_at": "2026-09-15T04:34:25.611755-04:00",
+  "overall": null,
+  "ranker_ready": null,
+  "counts": {},
   "dates": [
+    "2026-09-15_tickets",
     "2026-09-15_strategy_tickets",
     "2026-09-15",
     "2026-09-14_tickets",
