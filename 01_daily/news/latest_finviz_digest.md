@@ -1,11 +1,11 @@
 # Finviz Daily Digest — 2026-09-15
 
-_Generated 2026-09-15T04:24:05.914452-04:00 · export=data/exports/finviz_2026-09-15.csv · ticker digests=400 · high-signal=400_
+_Generated 2026-09-15T06:03:08.084091-04:00 · export=data/exports/finviz_2026-09-15.csv · ticker digests=400 · high-signal=400_
 
 ## Major indices (live quote page)
 
-- **S&P 500 (SPY)**: Stock Market: Will S&P 500 Open Up or Down Today?
-- **Nasdaq-100 (QQQ)**: Stock Market: Will S&P 500 Open Up or Down Today?
+- **S&P 500 (SPY)**: AI, Fed And 5% Treasury Yield: Three Risks Putting Nasdaq, Dow Futures On Edge Ahead Of Wednesdays Rate Decision
+- **Nasdaq-100 (QQQ)**: AI, Fed And 5% Treasury Yield: Three Risks Putting Nasdaq, Dow Futures On Edge Ahead Of Wednesdays Rate Decision
 - **Dow Jones (DIA)**: S&P 500, Nasdaq, Dow Drop On Chipmaker Weakness, Treasury Yield Pressure  MSFT, NFLX, ORCL, CRWD, RBLX In Focus
 - **Russell 2000 (IWM)**: Investors worried about rising bond yields are keeping a close eye on this corner of the market
 
