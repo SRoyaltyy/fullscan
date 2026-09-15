@@ -90,6 +90,8 @@ def test_open_0930_yml_owns_the_bell() -> None:
     assert 'cron: "25 13 * * 1-5"' in yml
     assert 'cron: "33 13 * * 1-5"' in yml
     assert 'cron: "0 14-19 * * 1-5"' in yml
+    assert 'cron: "30 9 * * 1-5"' in yml
+    assert 'cron: "0 12 * * 1-5"' in yml
     assert "src.open_0930_clock" in yml
     assert "--max-wait-s 4200" in yml
     assert "scripts/publish_open_pack.sh" in yml
