@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T07:51:12.084038-04:00",
+  "generated_at": "2026-09-15T07:51:21.364259-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -47,7 +47,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 267942
+          "size": 268371
         },
         {
           "key": "heat_md",
@@ -56,7 +56,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 17370
+          "size": 17278
         }
       ],
       "said": "tables on disk",
@@ -80,7 +80,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 87910
+          "size": 87526
         },
         {
           "key": "digest_md",
@@ -89,7 +89,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11565
+          "size": 11332
         },
         {
           "key": "market_digest_json",
@@ -98,7 +98,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 8240
+          "size": 7048
         },
         {
           "key": "market_digest_md",
@@ -107,7 +107,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 3618
+          "size": 3090
         },
         {
           "key": "market_digest_close_json",
@@ -149,7 +149,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87910
+          "size": 87526
         },
         {
           "key": "in_market_digest",
@@ -158,7 +158,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 8240
+          "size": 7048
         },
         {
           "key": "in_baseline",
@@ -176,7 +176,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 267942
+          "size": 268371
         },
         {
           "key": "parsed",
@@ -409,7 +409,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87910
+          "size": 87526
         },
         {
           "key": "weather",
@@ -417,8 +417,8 @@
           "path": "01_daily/weather/2026-09-15_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10487 vix=calm yields=flat",
-          "size": 10487
+          "reason": "sectors=11 bytes=10532 vix=calm yields=flat",
+          "size": 10532
         }
       ],
       "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
@@ -489,7 +489,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87910
+          "size": 87526
         },
         {
           "key": "dossiers",
@@ -549,7 +549,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87910
+          "size": 87526
         },
         {
           "key": "in_judge",
@@ -566,8 +566,8 @@
           "path": "01_daily/weather/2026-09-15_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10487 vix=calm yields=flat",
-          "size": 10487
+          "reason": "sectors=11 bytes=10532 vix=calm yields=flat",
+          "size": 10532
         },
         {
           "key": "in_ab",
@@ -839,31 +839,6 @@
     }
   },
   "lands": [
-    {
-      "key": "catalyst",
-      "title": "Catalyst dossiers (after book)",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T05:55:21.927078-04:00",
-      "files": [
-        {
-          "path": "01_daily/catalyst/2026-09-15_dossiers.json",
-          "ok": true,
-          "reason": "",
-          "size": 13211,
-          "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, targets, dossiers"
-        },
-        {
-          "path": "01_daily/catalyst/2026-09-15_dossiers.md",
-          "ok": true,
-          "reason": "",
-          "size": 5891,
-          "preview": "# CATALYST DAILY \u2014 2026-09-15\n3/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
-        }
-      ],
-      "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-09-15\n3/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
-    },
     {
       "key": "status",
       "title": "Pre-open status packet",
@@ -3657,6 +3632,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T07:51:10.865565-04:00"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T07:51:20.436856-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-15_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10532,
+          "preview": "weather sectors 11 \u00b7 Communication Services={'score': 0.396, 'dir': 'up', 'conf': 0.416, 'source': 'llm'}, Consumer Cyclical={'score': -4.704, 'dir': 'down', 'conf': 0.588, 'source': 'llm'}, Energy={'score': 4.023, 'dir': 'up', 'conf': 0.661, 'source': 'llm'}, Financial={'score': -4.063, 'dir': 'down', 'conf': 0.563, 'source': 'llm'}, Healthcare={'score': 0.93, 'dir': 'up', 'conf': 0.537, 'source': 'llm'}, Basic Materials={'score': -7.604, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Industrials={'score': -5.881, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Real Estate={'score': -8.5, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-15_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5993,
+          "preview": "# Weather report \u2014 2026-09-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Communication Services={'score': 0.396, 'dir': 'up', 'conf': 0.416, 'source': 'llm'}, Consumer Cyclical={'score': -4.704, 'dir': 'down', 'conf': 0.588, 'source': 'llm'}, Energy={'score': 4.023, 'dir': 'up', 'conf': 0.661, 'source': 'llm'}, Financial={'score': -4.063, 'dir': 'down', 'conf': 0.563, 'source': 'llm'}, Healthcare={'score': 0.93, 'dir': 'up', 'conf': 0.537, 'source': 'llm'}, Basic Materials={'score': -7.604, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Industrials={'score': -5.881, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Real Estate={'score': -8.5, 'dir': 'down', 'conf': 0.65, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
