@@ -1,6 +1,6 @@
 {
  "date": "2026-09-15",
- "generated_at": "2026-09-15T06:11:36.550841-04:00",
+ "generated_at": "2026-09-15T07:25:49.640013-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -23,13 +23,13 @@
   "dgs10_current": 4.96,
   "dollar": "strong",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.15,
-  "vix_ratio": 1.12,
-  "vix_spot": 17.5,
-  "vix_delta_1d": 0.4,
+  "dxy_pct_1d": 0.16,
+  "vix_ratio": 1.093,
+  "vix_spot": 17.05,
+  "vix_delta_1d": -0.05,
   "vix_ratio_source": "vix/ma20",
-  "vix": "spiking",
-  "oil_pct_1d": 2.19,
+  "vix": "calm",
+  "oil_pct_1d": 1.15,
   "oil": "rising",
   "fear_greed": null,
   "fear_greed_label": null,
@@ -66,37 +66,37 @@
     "source": "llm"
    },
    "Basic Materials": {
-    "score": -7.604,
+    "score": -5.16,
     "dir": "down",
-    "conf": 0.65,
-    "source": "llm"
-   },
-   "Industrials": {
-    "score": -5.881,
-    "dir": "down",
-    "conf": 0.65,
-    "source": "llm"
-   },
-   "Real Estate": {
-    "score": -8.5,
-    "dir": "down",
-    "conf": 0.65,
-    "source": "llm"
-   },
-   "Technology": {
-    "score": -7.491,
-    "dir": "down",
-    "conf": 0.65,
-    "source": "llm"
-   },
-   "Utilities": {
-    "score": -8.152,
-    "dir": "down",
-    "conf": 0.65,
-    "source": "llm"
+    "conf": 0.4,
+    "source": "finviz_week"
    },
    "Consumer Defensive": {
     "score": -2.13,
+    "dir": "down",
+    "conf": 0.4,
+    "source": "finviz_week"
+   },
+   "Industrials": {
+    "score": -3.435,
+    "dir": "down",
+    "conf": 0.4,
+    "source": "finviz_week"
+   },
+   "Real Estate": {
+    "score": -2.92,
+    "dir": "down",
+    "conf": 0.4,
+    "source": "finviz_week"
+   },
+   "Technology": {
+    "score": -2.83,
+    "dir": "down",
+    "conf": 0.4,
+    "source": "finviz_week"
+   },
+   "Utilities": {
+    "score": -2.75,
     "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
@@ -158,13 +158,13 @@
    },
    "Industrials": {
     "stance": "hostile",
-    "confidence": "high",
-    "why": "sector predict score -5.9 dir down conf 0.65 [sector board]"
+    "confidence": "medium",
+    "why": "finviz sector median week -3.44% [tape]"
    },
    "Real Estate": {
     "stance": "hostile",
-    "confidence": "high",
-    "why": "sector predict score -8.5 dir down conf 0.65 [sector board]"
+    "confidence": "medium",
+    "why": "finviz sector median week -2.92% [tape]"
    },
    "Technology": {
     "stance": "favorable",
@@ -173,8 +173,8 @@
    },
    "Utilities": {
     "stance": "hostile",
-    "confidence": "high",
-    "why": "sector predict score -8.2 dir down conf 0.65 [sector board]"
+    "confidence": "medium",
+    "why": "finviz sector median week -2.75% [tape]"
    }
   },
   "size": {
@@ -246,8 +246,8 @@
   "beta": {
    "high": {
     "stance": "hostile",
-    "confidence": "high",
-    "why": "VIX spiking — high beta is the exit door [channel1 + general]"
+    "confidence": "medium",
+    "why": "risk-off — high beta is the exit door [channel1 + general]"
    },
    "low": {
     "stance": "favorable",
