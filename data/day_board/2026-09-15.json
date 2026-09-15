@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T06:13:30.180816-04:00",
+  "generated_at": "2026-09-15T06:13:38.952545-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -80,7 +80,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 87542
+          "size": 87439
         },
         {
           "key": "digest_md",
@@ -89,7 +89,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11332
+          "size": 11492
         },
         {
           "key": "market_digest_json",
@@ -137,7 +137,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 19,
+      "n_req_ok": 14,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -149,7 +149,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87542
+          "size": 87439
         },
         {
           "key": "in_market_digest",
@@ -248,7 +248,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6954
+          "size": 6090
         },
         {
           "key": "qc",
@@ -256,8 +256,8 @@
           "path": "01_daily/2026-09-15_preopen_qc.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=True",
-          "size": 7194
+          "reason": "all_ok=False",
+          "size": 7229
         },
         {
           "key": "status",
@@ -265,8 +265,8 @@
           "path": "01_daily/2026-09-15_preopen_status.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False",
-          "size": 7712
+          "reason": "all_ok=False missing=['sector_predict']",
+          "size": 7834
         },
         {
           "key": "review",
@@ -274,17 +274,17 @@
           "path": "01_daily/2026-09-15_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=False Only 5 of 11 sector essays exist (communication_services, consumer_cyclical, energy, financial, healthcare) \u2014 6 missing,",
-          "size": 1631
+          "reason": "ok=False Core artifacts (general predict, events JSON, news judge, news parse, finviz digest, map-heat tables) are all real, same",
+          "size": 1740
         },
         {
           "key": "sector_basic_materials",
           "name": "Sector predict \u2014 basic_materials",
           "path": "01_daily/sectors/2026-09-15/basic_materials_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 16185
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "sector_communication_services",
@@ -345,46 +345,46 @@
           "name": "Sector predict \u2014 industrials",
           "path": "01_daily/sectors/2026-09-15/industrials_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 17775
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "sector_real_estate",
           "name": "Sector predict \u2014 real_estate",
           "path": "01_daily/sectors/2026-09-15/real_estate_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 14617
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "sector_technology",
           "name": "Sector predict \u2014 technology",
           "path": "01_daily/sectors/2026-09-15/technology_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 17161
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "sector_utilities",
           "name": "Sector predict \u2014 utilities",
           "path": "01_daily/sectors/2026-09-15/utilities_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 14255
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         }
       ],
-      "said": "general DOWN  -6.215 \u00b7 sectors 3 up / 7 down / 0 flat \u00b7 news 5 items",
+      "said": "general DOWN  -6.215 \u00b7 sectors 3 up / 2 down / 0 flat \u00b7 news 5 items",
       "bullets": [
         "bad: fresh Saudi pipeline outage + Houthi escalation, Brent $108",
         "bad: China Aug retail +0.4% / FAI -7.2% miss",
         "bad: FOMC Sep 16 hike odds ~81%",
         "good: ASML sold out of 2027 EUV capacity",
         "good: software rotation (NOW/INTU/ADBE/CRM) surges",
-        "XLB DOWN -7.6",
+        "XLB missing",
         "XLC UP +0.4",
         "XLY DOWN -4.7",
         "XLP missing",
@@ -409,7 +409,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87542
+          "size": 87439
         },
         {
           "key": "weather",
@@ -417,8 +417,8 @@
           "path": "01_daily/weather/2026-09-15_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10516 vix=spiking yields=flat",
-          "size": 10516
+          "reason": "sectors=11 bytes=10550 vix=spiking yields=flat",
+          "size": 10550
         }
       ],
       "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
@@ -454,12 +454,12 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2653",
-          "size": 8469155
+          "size": 8458148
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "SM, WDS, PBR, SOBO, SHEL"
+        "SM, WDS, LFST, PBR, PACS"
       ]
     },
     {
@@ -489,7 +489,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87542
+          "size": 87439
         },
         {
           "key": "dossiers",
@@ -531,7 +531,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 6954
+          "size": 6090
         },
         {
           "key": "in_actions",
@@ -549,7 +549,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87542
+          "size": 87439
         },
         {
           "key": "in_judge",
@@ -566,8 +566,8 @@
           "path": "01_daily/weather/2026-09-15_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10516 vix=spiking yields=flat",
-          "size": 10516
+          "reason": "sectors=11 bytes=10550 vix=spiking yields=flat",
+          "size": 10550
         },
         {
           "key": "in_ab",
@@ -576,7 +576,7 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2653",
-          "size": 8469155
+          "size": 8458148
         },
         {
           "key": "join",
@@ -585,7 +585,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5897",
-          "size": 2258282
+          "size": 2258733
         },
         {
           "key": "peers",
@@ -594,7 +594,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5111",
-          "size": 817895
+          "size": 819816
         },
         {
           "key": "book_json",
@@ -602,8 +602,8 @@
           "path": "data/stock_book/2026-09-15_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=220",
-          "size": 1616142
+          "reason": "horizons=5 names=218",
+          "size": 1587833
         },
         {
           "key": "book_md",
@@ -612,7 +612,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 88494
+          "size": 85929
         },
         {
           "key": "green",
@@ -630,7 +630,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 1803
+          "size": 1806
         },
         {
           "key": "dashboard",
@@ -639,12 +639,12 @@
           "role": "optional",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-09-15)",
-          "size": 5867646
+          "size": 6099769
         }
       ],
-      "said": "215 rows",
+      "said": "214 rows",
       "bullets": [
-        "SKHY, DVN, PR, MSFT, PBR"
+        "SKHY, DVN, PR, KSPI, MSFT"
       ]
     },
     {
@@ -664,8 +664,8 @@
           "path": "data/stock_book/2026-09-15_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=220",
-          "size": 1616142
+          "reason": "horizons=5 names=218",
+          "size": 1587833
         },
         {
           "key": "dash_html",
@@ -674,7 +674,7 @@
           "role": "required",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-09-15)",
-          "size": 5867646
+          "size": 6099769
         },
         {
           "key": "paper",
@@ -683,7 +683,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 1803
+          "size": 1806
         },
         {
           "key": "pages",
@@ -703,85 +703,77 @@
     "buy_1d": [
       {
         "ticker": "AVAH",
-        "score": 0.6596608246322517
+        "score": 0.6891299965039788
       },
       {
         "ticker": "PACS",
-        "score": 0.665462301955157
+        "score": 0.6545209947350785
       },
       {
-        "ticker": "ZIP",
-        "score": 0.615142908807446
-      },
-      {
-        "ticker": "ASTH",
-        "score": 0.5542742068005707
-      },
-      {
-        "ticker": "WIX",
-        "score": 0.6463005173143059
+        "ticker": "ACHC",
+        "score": 0.5333061345689342
       },
       {
         "ticker": "VRSK",
-        "score": 0.28020786688577604
+        "score": 0.41158070320563833
       },
       {
-        "ticker": "EPAM",
-        "score": 0.6129870208378201
+        "ticker": "DBX",
+        "score": 0.7127346184756272
       },
       {
         "ticker": "DLO",
-        "score": 0.5711132330742299
+        "score": 0.643371651067643
+      },
+      {
+        "ticker": "WIX",
+        "score": 0.6836879320429612
       },
       {
         "ticker": "CARG",
-        "score": 0.6687329343588724
-      },
-      {
-        "ticker": "LFST",
-        "score": 0.68320473670538
+        "score": 0.6859529852673028
       }
     ],
     "sell_1d": [
       {
         "ticker": "FLNC",
-        "score": -0.6196283071916829
+        "score": -0.38027772770142615
       },
       {
         "ticker": "OKLO",
-        "score": -0.47913678572837526
+        "score": -0.21649415527305338
+      },
+      {
+        "ticker": "FCEL",
+        "score": -0.3292090243504339
+      },
+      {
+        "ticker": "AMPX",
+        "score": -0.23332400027668693
+      },
+      {
+        "ticker": "LVWR",
+        "score": -0.567950405015973
       },
       {
         "ticker": "EOSE",
-        "score": -0.4887325334936342
+        "score": -0.21862039842527486
       },
       {
         "ticker": "QBTS",
-        "score": -0.23275436275728906
-      },
-      {
-        "ticker": "SMR",
-        "score": -0.5586704105250774
+        "score": -0.18348016415421053
       },
       {
         "ticker": "METC",
-        "score": -0.6574659970788439
+        "score": -0.3861356085806234
       },
       {
-        "ticker": "LUNR",
-        "score": -0.6142234041628993
-      },
-      {
-        "ticker": "TLN",
-        "score": -0.6260154354998333
+        "ticker": "BEPC",
+        "score": -0.13821113180987793
       },
       {
         "ticker": "TE",
-        "score": -0.49599482450987425
-      },
-      {
-        "ticker": "WULF",
-        "score": -0.5635504946695946
+        "score": -0.2403418027461937
       }
     ],
     "flatten": {
@@ -804,19 +796,19 @@
       "direction": "down"
     },
     "sectors": {
-      "said": "3 up / 7 down / 0 flat",
+      "said": "3 up / 2 down / 0 flat",
       "bullets": [
-        "XLB DOWN -7.6",
+        "XLB missing",
         "XLC UP +0.4",
         "XLY DOWN -4.7",
         "XLP missing",
         "XLE UP +4.0",
         "XLF DOWN -4.1",
         "XLV UP +0.9",
-        "XLI DOWN -5.9",
-        "XLRE DOWN -8.5",
-        "XLK DOWN -7.5",
-        "XLU DOWN -8.2"
+        "XLI missing",
+        "XLRE missing",
+        "XLK missing",
+        "XLU missing"
       ]
     },
     "news": {
@@ -838,31 +830,6 @@
     }
   },
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T04:04:00.566167-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-15_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 9080,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-09-15_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 3976,
-          "preview": "# Finviz homepage market digest \u2014 2026-09-15\n**Generated:** 2026-09-15T04:04:00.548424-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as AI slowdown fears weighed on tech and chipmakers while surging oil and a near-5% 10-year yield sharpened focus on this week\u2019s FOMC meeting\n**Prior close:** SPX -0.48%  Nasdaq -0.56%  Dow -0.29%\n**SPX:** -0.48%  **Nasdaq:** -0.56%  **Dow:** -0.29%\n**Oil:** Brent crude $105.0\n**CPI/Fed:** 90.0% hike (90% chance of a 25-basis-point rate hike)\n**Leaders:** NFLX, ZS, RBRK, S, PANW, CRWD, GLW, COHR, TER, NVDA, BAC, PLAY, RLGT\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-15\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-15\n**Generated:** 2026-09-15T04:04:00.548424-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as AI slowdown fears weighed on tech and chipmakers while surging oil and a near-5% 10-year yield sharpened focus on this week\u2019s FOMC meeting\n**Prior close:** SPX -0.48%  Nasdaq -0.56%  Dow -0.29%\n**SPX:** -0.48%  **Nasdaq:** -0.56%  **Dow:** -0.29%\n**Oil:** Brent crude $105.0\n**CPI/Fed:** 90.0% hike (90% chance of a 25-basis-point rate hike)\n**Leaders:** NFLX, ZS, RBRK, S, PANW, CRWD, GLW, COHR, TER, NVDA, BAC, PLAY, RLGT\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-15\n**Clock use:** `same_morning`"
-    },
     {
       "key": "map_heat",
       "title": "Map heat morning overlay",
@@ -3355,6 +3322,52 @@
         }
       ],
       "preview": "1d BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN \u00b7 2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN \u00b7 # Stock book \u2014 2026-09-15\n_Generated 2026-09-15T06:11:47.528005-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "flatten",
+      "title": "Flatten live card",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T06:13:38.058863-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-09-15_flatten_card.md",
+          "ok": true,
+          "reason": "",
+          "size": 2065,
+          "preview": "# flatten_robust card \u2014 2026-09-15\n_Generated 2026-09-15T10:13:37 \u2014 live `flatten_robust`._\n**S=-6.21; hard-red: no new buys; holds and due 1d exits stay**\n- Score **-6.21** (DOWN) \u00b7 route **hold** \u00b7 HARD-RED\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Prior close **$108,616.66** \u00b7 09:30 **$108,616.66** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$108,616.66**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66**"
+        },
+        {
+          "path": "data/sleeve_merge/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 4443,
+          "preview": "2026-09-15 BUY \u2014 \u00b7 SELL \u2014"
+        },
+        {
+          "path": "data/sleeve_merge/daily_marks.json",
+          "ok": true,
+          "reason": "",
+          "size": 141233,
+          "preview": "[{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\""
+        },
+        {
+          "path": "data/sleeve_merge/equity_curve.csv",
+          "ok": true,
+          "reason": "",
+          "size": 3540,
+          "preview": "22 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19"
+        },
+        {
+          "path": "dashboard/sleeve-merge/index.html",
+          "ok": true,
+          "reason": "",
+          "size": 45359,
+          "preview": "<!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Combined sleeve \u2014 .io \u00d7 mover</title>\n<style>\n:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}\n*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}\nmain{max-width:1240px;margin:auto;padding:16px}h1,h2{margin:.4em 0}\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0}\n.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}\n.card b{display:block;font-size:22px;margin-top:4px}\n.muted{color:var(--muted)}a{color:#93c5fd}\n.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}\ntable{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}\nth,td{padding:7px 8"
+        }
+      ],
+      "preview": "# flatten_robust card \u2014 2026-09-15\n_Generated 2026-09-15T10:13:37 \u2014 live `flatten_robust`._\n**S=-6.21; hard-red: no new buys; holds and due 1d exits stay**\n- Score **-6.21** (DOWN) \u00b7 route **hold** \u00b7 HARD-RED\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Prior close **$108,616.66** \u00b7 09:30 **$108,616.66** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$108,616.66**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66** \u00b7 2026-09-15 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, "
     }
   ],
   "href": {
