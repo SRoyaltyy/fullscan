@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T07:25:00.336342-04:00",
+  "generated_at": "2026-09-15T07:25:19.788213-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -832,24 +832,6 @@
     }
   },
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T04:23:49.233648-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-09-15_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1116884,
-          "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "weather",
       "title": "Weather / regime (offline retry)",
@@ -3531,6 +3513,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T04:24:05.914452-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat tables",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T07:25:18.435615-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-15_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 269893,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-15_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 17316,
+          "preview": "# MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T04:25:19.101684-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T04:25:19.101684-04:00"
     }
   ],
   "href": {
