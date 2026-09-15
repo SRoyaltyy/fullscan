@@ -337,7 +337,7 @@ def run(
         _run(
             [sys.executable, "-m", "src.publish_live_boards",
              "--date", date, "--write", "--no-extras"],
-            check=False, timeout_s=180,
+            check=False, timeout_s=420,
         )
         _land(date, "stock_book", "Stock book + green")
         _land(date, "live_boards", "Live 1d BUY/SELL strip")
@@ -593,7 +593,7 @@ def run(
         _run(
             [sys.executable, "-m", "src.publish_live_boards",
              "--date", date, "--write", "--no-extras"],
-            check=False, timeout_s=180,
+            check=False, timeout_s=420,
         )
         _land(date, "stock_book", "Stock book + green")
         _land(date, "live_boards", "Live 1d BUY/SELL strip")

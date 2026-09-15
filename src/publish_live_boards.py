@@ -80,6 +80,36 @@ def rewrite_today_strip(date: str, buys: list, sells: list, quote: dict | None,
     return wrote
 
 
+def load_live_ticket_payload(date: str) -> dict:
+    """On-disk 09:30 tickets with Elite live px, or {}."""
+    paths = (
+        DAY_BOARD / "today_strategies.json",
+        DAY_BOARD / f"{date}_strategy_tickets.json",
+        ROOT / "dashboard" / "factor-mine" / "strategy_tickets.json",
+        ROOT / "dashboard" / "today_strategies.json",
+    )
+    for path in paths:
+        if not path.is_file():
+            continue
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError, json.JSONDecodeError):
+            continue
+        if not isinstance(data, dict):
+            continue
+        legal = str(data.get("clock_legal_for") or data.get("date") or "")
+        if legal and legal != date:
+            continue
+        quote = data.get("quote") or {}
+        src = str(quote.get("src") or "")
+        if not quote.get("after_open") or not src.startswith("elite_live"):
+            continue
+        buys, sells, _quote = ticket_1d_rows(data)
+        if buys or sells:
+            return data
+    return {}
+
+
 def _today() -> str:
     return datetime.now(ET).date().isoformat()
 
@@ -116,6 +146,18 @@ def publish(date: str, *, write: bool = True, extras: bool = True) -> dict:
     try:
         from . import day_board
         board = day_board.build(date)
+        live = load_live_ticket_payload(date)
+        if live:
+            buys, sells, quote = ticket_1d_rows(live)
+            sel = board.setdefault("selections", {})
+            sel["buy_1d"] = buys
+            sel["sell_1d"] = sells
+            board["quote"] = quote
+            print(
+                "[live-boards] keep 09:30 Elite 1d "
+                f"buy={[r.get('ticker') for r in buys[:6] if isinstance(r, dict)]}",
+                flush=True,
+            )
         if write:
             paths = day_board.write_json(board)
             out["wrote"].extend(str(p.relative_to(ROOT)) for p in paths)
@@ -138,6 +180,7 @@ def publish(date: str, *, write: bool = True, extras: bool = True) -> dict:
                 "counts": board.get("counts") or {},
                 "buy_1d": sel.get("buy_1d") or [],
                 "sell_1d": sel.get("sell_1d") or [],
+                "quote": board.get("quote") or {},
                 "flatten": sel.get("flatten") or {},
                 "general": sel.get("general") or {},
                 "sectors": sel.get("sectors") or {},
