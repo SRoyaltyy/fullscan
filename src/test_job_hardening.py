@@ -116,6 +116,17 @@ def test_cancel_in_progress_off_on_grok_jobs() -> None:
     assert "cancel-in-progress: ${{ github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu' }}" in pre
 
 
+def test_excel_mine_poke_on_main() -> None:
+    """Cloud agent cannot workflow_dispatch; a main poke must start the remine."""
+    text = (WF / "excel_deep_corr_mine.yml").read_text(encoding="utf-8")
+    assert "branches: [main]" in text
+    assert '".github/workflows/excel_deep_corr_mine.yml"' in text
+    assert "POKE 2026-09-15" in text
+    assert "cancel-in-progress: ${{ github.event_name == 'push' }}" in text
+    assert 'cron: "20 5,11,17,23 * * *"' in text
+    assert "split_kind" in text
+
+
 def test_safe_git_push_used_by_failing_commit_jobs() -> None:
     for name in (
         "preopen_all.yml",
@@ -1180,6 +1191,7 @@ def main() -> None:
         test_deepseek_402_returns_empty,
         test_db_optional_when_url_missing,
         test_cancel_in_progress_off_on_grok_jobs,
+        test_excel_mine_poke_on_main,
         test_safe_git_push_used_by_failing_commit_jobs,
         test_deploy_dashboard_follows_preopen_and_book,
         test_jobs_publish_dashboard_in_place,
