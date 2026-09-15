@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T03:42:35.547984-04:00",
+  "generated_at": "2026-09-15T03:43:42.260807-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -12,8 +12,8 @@
     "MISSING AB checklist enriched `data/ab_checklist/2026-09-15_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 1,
-    "partial": 3,
+    "ok": 2,
+    "partial": 2,
     "fail": 4,
     "n": 8
   },
@@ -22,9 +22,9 @@
       "key": "postclose",
       "name": "Post-close research",
       "yaml": "map_heat_postclose.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 2,
       "n_opt": 2,
@@ -52,9 +52,9 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-09-15_map_heat.json",
           "role": "required",
-          "status": "FAIL",
-          "reason": "stale_map_heat_md",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 272153
         },
         {
           "key": "heat_md",
@@ -63,7 +63,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 17210
+          "size": 17009
         }
       ],
       "said": "tables on disk",
@@ -143,7 +143,7 @@
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 2,
       "n_req": 20,
       "n_opt_ok": 1,
@@ -181,9 +181,9 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-09-15_map_heat.json",
           "role": "input",
-          "status": "FAIL",
-          "reason": "stale_map_heat_md",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 272153
         },
         {
           "key": "parsed",
@@ -264,7 +264,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7299
+          "size": 7282
         },
         {
           "key": "status",
@@ -761,6 +761,31 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-15\n**Generated:** 2026-09-15T03:42:35.387213-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as AI slowdown fears weighed on tech and chipmakers while surging oil and a near-5% 10-year yield sharpened focus on this week\u2019s FOMC meeting\n**Prior close:** SPX -0.48%  Nasdaq -0.56%  Dow -0.29%\n**SPX:** -0.48%  **Nasdaq:** -0.56%  **Dow:** -0.29%\n**Oil:** Brent crude $105.0\n**CPI/Fed:** 90.0% hike (90% chance of a 25-basis-point rate hike)\n**Leaders:** NFLX, ZS, RBRK, S, PANW, CRWD, GLW, COHR, TER, NVDA, BAC, PLAY, RLGT\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-15\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T03:43:42.123046-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-15_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 272153,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-15_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 17372,
+          "preview": "# MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11608 names \u00b7 generated 2026-09-15T03:43:42.081587-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11608 names \u00b7 generated 2026-09-15T03:43:42.081587-04:00"
     }
   ],
   "href": {
