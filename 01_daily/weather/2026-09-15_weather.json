@@ -1,6 +1,6 @@
 {
  "date": "2026-09-15",
- "generated_at": "2026-09-15T06:08:59.928266-04:00",
+ "generated_at": "2026-09-15T06:09:40.069173-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -24,12 +24,12 @@
   "dollar": "strong",
   "dollar_source": "dxy",
   "dxy_pct_1d": 0.15,
-  "vix_ratio": 1.123,
-  "vix_spot": 17.55,
-  "vix_delta_1d": 0.45,
+  "vix_ratio": 1.121,
+  "vix_spot": 17.52,
+  "vix_delta_1d": 0.42,
   "vix_ratio_source": "vix/ma20",
   "vix": "spiking",
-  "oil_pct_1d": 2.4,
+  "oil_pct_1d": 2.31,
   "oil": "rising",
   "fear_greed": null,
   "fear_greed_label": null,
@@ -66,19 +66,19 @@
     "source": "llm"
    },
    "Basic Materials": {
-    "score": -5.16,
+    "score": -5.0,
     "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Consumer Defensive": {
-    "score": -2.165,
+    "score": -2.1550000000000002,
     "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Industrials": {
-    "score": -3.52,
+    "score": -3.57,
     "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
@@ -103,14 +103,14 @@
    }
   },
   "sector_tape": {
-   "Basic Materials": -5.16,
+   "Basic Materials": -5.0,
    "Communication Services": -0.725,
    "Consumer Cyclical": -3.15,
-   "Consumer Defensive": -2.165,
-   "Energy": -0.65,
+   "Consumer Defensive": -2.1550000000000002,
+   "Energy": -0.51,
    "Financial": -1.27,
    "Healthcare": -3.19,
-   "Industrials": -3.52,
+   "Industrials": -3.57,
    "Real Estate": -2.82,
    "Technology": -2.685,
    "Utilities": -2.9
@@ -139,7 +139,7 @@
    "Consumer Defensive": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "finviz sector median week -2.17% [tape]"
+    "why": "finviz sector median week -2.16% [tape]"
    },
    "Energy": {
     "stance": "favorable",
@@ -159,7 +159,7 @@
    "Industrials": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "finviz sector median week -3.52% [tape]"
+    "why": "finviz sector median week -3.57% [tape]"
    },
    "Real Estate": {
     "stance": "hostile",
