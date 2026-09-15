@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T11:28:33.985511-04:00",
+  "generated_at": "2026-09-15T11:55:33.411099-04:00",
   "inputs": [
     {
       "name": "finviz_export",
@@ -21,7 +21,7 @@
       "family": "join",
       "status": "ok",
       "n": 5897,
-      "detail": "std=0.950"
+      "detail": "std=0.952"
     },
     {
       "name": "news_actions",
