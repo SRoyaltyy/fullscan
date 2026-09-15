@@ -1,0 +1,247 @@
+{
+  "ticker": "NMAX",
+  "analysis_date": "2026-09-15",
+  "current_price": "10.71",
+  "net_signal": "Strong Bullish",
+  "conviction": 70,
+  "catalyst_stack": "On 2026-07-28, Newsmax entered an AI content partnership with Meta Platforms, giving Meta access to Newsmax's current and archived digital news content \u2014 a strategic alliance that monetizes its archive and validates its content library. On 2026-08-06, the FCC voted to end the 39% local TV station ownership cap, a regulatory greenlight that expands Newsmax's broadcast strategy, though on 2026-08-11 CEO Christopher Ruddy said the company is preparing a lawsuit over the cap vote, adding legal uncertainty. On 2026-09-15, Newsmax posted its first quarterly net profit as a public company, beating Q2 estimates with non-GAAP EPS of $0.02 and record revenue of $54.1M, a milestone that confirms operating leverage. With short float at 11.31% and days-to-cover at 6.65, the positive catalyst cluster (Meta deal, FCC ruling, first profit, guidance raise) creates squeeze potential, though the stock remains far below its SMA50 of $16.78 and SMA200 of $38.38.",
+  "key_assumption": "The Meta AI content partnership and FCC ownership-cap ruling translate into durable revenue and distribution expansion, and the Q2 2026 first-profit milestone is repeatable rather than a one-time accounting event.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 7,
+      "event_ids": [
+        1
+      ],
+      "event_date": "2026-07-28",
+      "evidence_excerpt": "\"the Company has entered into an AI content partnership with Meta Platforms\"",
+      "source_urls": [
+        "https://ir.newsmax.com/news/news-details/2026/Newsmax-and-Meta-Enter-AI-Content-Partnership-/default.aspx",
+        "https://www.newsmax.com/newsfront/newsmax-meta-ai/2026/07/28/id/1264261/"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Regulatory approval (FDA, FCC, FTC clearance)",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "event_ids": [
+        2
+      ],
+      "event_date": "2026-08-06",
+      "evidence_excerpt": "\"FCC Votes to End 39% Local TV Station Ownership Cap\"",
+      "source_urls": [
+        "https://www.newsmax.com/us/fcc-tv/2026/08/06/id/1265282/"
+      ],
+      "confidence": 85
+    },
+    {
+      "taxonomy": "Government policy (tariffs, subsidies, mandates)",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 6,
+      "event_ids": [
+        2
+      ],
+      "event_date": "2026-08-06",
+      "evidence_excerpt": "\"FCC Votes to End 39% Local TV Station Ownership Cap\"",
+      "source_urls": [
+        "https://www.newsmax.com/us/fcc-tv/2026/08/06/id/1265282/"
+      ],
+      "confidence": 85
+    },
+    {
+      "taxonomy": "Adverse litigation outcome/patent invalidation/antitrust ruling",
+      "type": "negative",
+      "category": "external",
+      "status": "MISS",
+      "base_weight": 8,
+      "adjusted_weight": 0,
+      "event_ids": [
+        3
+      ],
+      "event_date": "2026-08-11",
+      "evidence_excerpt": "\"Ruddy says Newsmax is readying a similar lawsuit focused specifically on the FCC's recent vote on the ownership cap\"",
+      "source_urls": [
+        "https://thedesk.net/2026/08/newsmax-preps-lawsuit-over-fcc-broadcast-tv-ownership-vote/"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Policy reversal/new regulation/tax increase",
+      "type": "negative",
+      "category": "external",
+      "status": "MISS",
+      "base_weight": 7,
+      "adjusted_weight": 0,
+      "event_ids": [
+        3
+      ],
+      "event_date": "2026-08-11",
+      "evidence_excerpt": "\"Ruddy says Newsmax is readying a similar lawsuit focused specifically on the FCC's recent vote on the ownership cap\"",
+      "source_urls": [
+        "https://thedesk.net/2026/08/newsmax-preps-lawsuit-over-fcc-broadcast-tv-ownership-vote/"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        0,
+        9
+      ],
+      "event_date": "2026-09-15",
+      "evidence_excerpt": "Newsmax posts first quarterly net profit as public company, beats Q2 estimates with non-GAAP EPS $0.02 and record revenue $54.1M",
+      "source_urls": [
+        "https://finance.yahoo.com/markets/stocks/articles/newsmax-inc-q2-2026-earnings-123000825.html"
+      ],
+      "confidence": 75
+    },
+    {
+      "taxonomy": "Earnings guidance raise",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 10,
+      "event_ids": [
+        7
+      ],
+      "event_date": "2026-03-27",
+      "evidence_excerpt": "\"Newsmax Stock Climbs After Revenue Estimate Beat And Full Year Guidance Rise\"",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMisgFBVV95cUxOQkxTczBzU0gtc3dCckh5ZWhzaUR1bVlEOU5UY3NxNHk2MEwwb2FEZXRFOFQ1YlVoNGVxNVQ2ckdOU0JsYjZGNTB0ampxaG1ZVnhUMk16NzBHTXFYNkY5MG9fdkFxX0wyZTZGVGhlUkJtTndOTGFXN0thNWFGWXJFZjhGdnJJbS15X043blppanJmMVJYbkx1M05FcV9ua29Vdmp1S2xUTEJTT29zSlM3V0RR?oc=5"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Operational milestone (e.g., first patient dosed, satellite commissioned)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 7,
+      "event_ids": [
+        0
+      ],
+      "event_date": "2026-09-15",
+      "evidence_excerpt": "Newsmax posts first quarterly net profit as public company, beats Q2 estimates with non-GAAP EPS $0.02 and record revenue $54.1M",
+      "source_urls": [
+        "https://finance.yahoo.com/markets/stocks/articles/newsmax-inc-q2-2026-earnings-123000825.html"
+      ],
+      "confidence": 75
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 8,
+      "event_ids": [
+        5
+      ],
+      "event_date": "2026-05-15",
+      "evidence_excerpt": "\"Newsmax Earnings Call: Strong Growth, Analyst Sees $20 Share\"",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxOYlp1RnM5eW1FVmFYNHNPenEzOXZrTkZJdDNoTGNRNmhpcnpWVmdhX0dUOTFydlRJMzF3Sk1LVmhfT2ljZ0Q0aXJEaGRyZ3BCb2lFMDgxQkV4TmNCNXAydzV0Qzh0UDhGNUx0MUdHQmNVUko2YXowVkRzQTdmQXhUSVJMZHhmWDRzYlhka2JrNTd0VjZFaEY5dVdDN2piRVVxdVo1aVNXVktpSkNLRnJHZE5uSQ?oc=5"
+      ],
+      "confidence": 75
+    },
+    {
+      "taxonomy": "Short squeeze (rapid covering of heavily shorted stock)",
+      "type": "positive",
+      "category": "technical",
+      "status": "MISS",
+      "base_weight": 8,
+      "adjusted_weight": 0,
+      "event_ids": [
+        0,
+        1,
+        2,
+        7
+      ],
+      "event_date": "2026-09-15",
+      "evidence_excerpt": "Positive catalyst cluster (Meta deal, FCC ruling, first profit, guidance raise) with short float 11.31% and days-to-cover 6.65",
+      "source_urls": [
+        "https://finance.yahoo.com/markets/stocks/articles/newsmax-inc-q2-2026-earnings-123000825.html"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Technical breakdown (below support, death cross)",
+      "type": "negative",
+      "category": "technical",
+      "status": "MISS",
+      "base_weight": 5,
+      "adjusted_weight": 0,
+      "event_ids": [
+        0
+      ],
+      "event_date": "2026-09-15",
+      "evidence_excerpt": "Stock far below SMA50 ($16.78) and SMA200 ($38.38); long downtrend persists despite positive catalysts",
+      "source_urls": [
+        "https://finance.yahoo.com/markets/stocks/articles/newsmax-inc-q2-2026-earnings-123000825.html"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Insider selling",
+      "type": "negative",
+      "event_date": "2026-09-14",
+      "evidence_excerpt": "Insider at Newsmax (NMAX) sells 24,736.5 shares",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxORERzaHlyYm94YXhuMzRKUFNUbFBXdEYtRTBELTZVQko3NU5wZjVEaUpYTjI4WXR4SnB3X0RLWE43S191MUlmLUV5Z0hQYUpOemVTWjBZYnlCbFVmSFZsY0pRamtlSnZYSlE5UnZhUWxoTlhLaXZXUmlWTDRVQ3czQkh1S1hWSlo2ZzBmXzNGR3pyanZJd3Z2dU9OdGVvb3VNSmZkalJFYmU?oc=5"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Insider selling",
+      "type": "negative",
+      "event_date": "2026-09-14",
+      "evidence_excerpt": "Insider Selling: Newsmax (NYSE:NMAX) Major Shareholder Sells 24,448 Shares",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMizAFBVV95cUxQWHo3Q0RCOFM4YkRkajNSVlhVZG5WX194U0hfVFkyeHc0Y1dseTFYazJpcXB2OTNNU2xDRXEyNFFZSENHXy1jazZFajJyQ1A5bGZ1SjJGRVFpTHh0OEJ3MnZlNWREZ0xxZjVpOXVJZzM3NUVuaVBJOHlWTE9lV1VDR0hydWpfMTV3WlUwN3h2Q1FOcXhmWTVXVzk5d05mZzVzLUFoZnE1Tng0b1dUU3lSeXpXZi1CdGN6WXNhNHhFT1NzU0pvd3B0LVQwZWY?oc=5"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst downgrade/PT cut",
+      "type": "negative",
+      "event_date": "2026-08-14",
+      "evidence_excerpt": "Momentum Builds After FCC Ruling But Newsmax Remains Stuck At Hold (NYSE:NMAX)",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNS2dUVTdKMlhndFk3X0hXUnZrVVhtOWo1RUFpSzRLZlFpcGgtX2VYMmltNUFMbVRzQWUxNUVGRXBZSWp3a01ZRVdrMk5iVTZ5aGpUMm5qcnVMcmlLczJZRFlOVS1ZbXV6aFhPTklLVFZ5Yll2SUJ0RTk2U3p3OVlKa0hKU0hlaVYwWHNjcDluNzJudi05REh6RHI1amZjV0Y5S1AyOGVUQWZ3UXc?oc=5"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": null,
+  "search_backend": "deepseek_fallback",
+  "generated_at": "2026-09-15",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

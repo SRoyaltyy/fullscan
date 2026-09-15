@@ -859,6 +859,26 @@
       "size": "small"
     },
     {
+      "ticker": "NMAX",
+      "buy_score": 2.1,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "catalyst",
+          "side": "buy",
+          "weight": 2.1,
+          "bucket": "override_captain",
+          "net_signal": "Strong Bullish",
+          "conviction": 70
+        }
+      ],
+      "net": 2.1,
+      "side": "buy",
+      "catalyst_signal": "Strong Bullish",
+      "catalyst_conviction": 70,
+      "catalyst_stack": "On 2026-07-28, Newsmax entered an AI content partnership with Meta Platforms, giving Meta access to Newsmax's current and archived digital news content — a strategic alliance that monetizes its archive and validates its content library. On 2026-08-06, the FCC voted to end the 39%"
+    },
+    {
       "ticker": "NEM",
       "buy_score": 1.4,
       "sell_score": 0.0,
@@ -1209,10 +1229,52 @@
       "net": 0.88,
       "side": "buy",
       "size": "large"
+    },
+    {
+      "ticker": "MPC",
+      "buy_score": 0.61,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "catalyst",
+          "side": "buy",
+          "weight": 0.61,
+          "bucket": "override_captain",
+          "net_signal": "Bullish",
+          "conviction": 34
+        }
+      ],
+      "net": 0.61,
+      "side": "buy",
+      "catalyst_signal": "Bullish",
+      "catalyst_conviction": 34,
+      "catalyst_stack": "On 2026-08-04, Marathon Petroleum reported Q2 2026 net income of $5.1B ($17.73/diluted share) versus $1.2B a year earlier, with revenue of $52.0B beating the $40.9B consensus by $11.1B and EPS beating by $3.46, alongside $8.5B adjusted EBITDA and a 112% capture rate. On 2026-05-0"
+    },
+    {
+      "ticker": "CSTM",
+      "buy_score": 0.47,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "catalyst",
+          "side": "buy",
+          "weight": 0.47,
+          "bucket": "override_captain",
+          "net_signal": "Bullish",
+          "conviction": 26
+        }
+      ],
+      "net": 0.47,
+      "side": "buy",
+      "catalyst_signal": "Bullish",
+      "catalyst_conviction": 26,
+      "catalyst_stack": "Constellium's fundamental momentum is anchored by a record Q1 2026 on 2026-04-29 (segment Adjusted EBITDA of $359M, revenue up 24%, net income of $196M) and an even stronger Q2 2026 on 2026-07-29 (revenue $2,748M, Adjusted EBITDA $439M), with full-year 2026 Adjusted EBITDA guidan"
     }
   ],
   "judge_tickers": {
     "XLE": -6.5,
     "AAPL": -5.5
-  }
+  },
+  "catalyst_tickers": 3,
+  "catalyst_date": "2026-09-15"
 }

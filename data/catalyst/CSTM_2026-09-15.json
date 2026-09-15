@@ -1,0 +1,272 @@
+{
+  "ticker": "CSTM",
+  "analysis_date": "2026-09-15",
+  "current_price": "27.48",
+  "net_signal": "Bullish",
+  "conviction": 26,
+  "catalyst_stack": "Constellium's fundamental momentum is anchored by a record Q1 2026 on 2026-04-29 (segment Adjusted EBITDA of $359M, revenue up 24%, net income of $196M) and an even stronger Q2 2026 on 2026-07-29 (revenue $2,748M, Adjusted EBITDA $439M), with full-year 2026 Adjusted EBITDA guidance raised to $980M-$1.02B and leverage cut to 1.8x. On 2026-04-21 the company deepened its aerospace franchise via a multi-year Airbus agreement for aluminum alloy extrusions, including Airware aluminum-lithium, from Issoire and Montreuil-Juign\u00e9. Deleveraging continued on 2026-06-29 with the sale of the Changchun, China automotive structures joint venture, while a 2026-07-15 10-year renewable solar power agreement for German facilities supports cost and ESG positioning. Offsetting these positives, CSTM fell 4.5% to $25.99 on 2026-09-10 and dropped about 6% on 2026-09-15 as easing aluminum supply concerns pressured the stock, leaving the shares near the low end of their 52-week range despite a $37.20 consensus target.",
+  "key_assumption": "The bullish thesis assumes Constellium's record 2026 EBITDA and raised guidance are sustainable and that the September 2026 aluminum price weakness is a temporary supply-driven pullback rather than the start of a demand-led downcycle; if aluminum prices keep falling or auto/aerospace demand softens, the earnings-beat and guidance-raise catalysts would be invalidated.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        1,
+        4
+      ],
+      "event_date": "2026-07-29",
+      "evidence_excerpt": "Revenue climbed to $2,748 million and Adjusted EBITDA to $439 million in Q2 2026 as Constellium raised full-year guidance",
+      "source_urls": [
+        "https://www.constellium.com/news/constellium-reports-strong-second-quarter-and-first-half-2026-results-including-record-segment-adjusted-ebitda-raises-full-year-2026-guidance",
+        "https://www.investing.com/news/stock-market-news/constellium-raises-2026-guidance-after-q2-profit-triples-93CH-4819427"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Earnings guidance raise",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 9,
+      "event_ids": [
+        1,
+        4
+      ],
+      "event_date": "2026-07-29",
+      "evidence_excerpt": "raised full-year 2026 adjusted EBITDA guidance to $980 million-$1.02 billion while cutting leverage to 1.8x",
+      "source_urls": [
+        "https://www.constellium.com/news/constellium-reports-strong-second-quarter-and-first-half-2026-results-including-record-segment-adjusted-ebitda-raises-full-year-2026-guidance",
+        "https://www.stocktitan.net/sec-filings/CSTM/8-k-constellium-se-reports-material-event-981e1fe53c6f.html"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        2
+      ],
+      "event_date": "2026-04-21",
+      "evidence_excerpt": "entered a multi-year agreement with Airbus for the supply of aluminum alloy extrusions, reinforcing our role as a trusted supplier",
+      "source_urls": [
+        "https://www.quiverquant.com/news/Constellium+SE+Enters+Multi-Year+Agreement+with+Airbus+for+Advanced+Aluminum+Alloy+Extrusions",
+        "https://www.stocktitan.net/news/CSTM/constellium-enters-multi-year-agreement-with-airbus-for-the-supply-sfjcsrjlndwc.html"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Customer concentration expansion (existing customer deepens relationship)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        2
+      ],
+      "event_date": "2026-04-21",
+      "evidence_excerpt": "multi-year agreement with Airbus for the supply of aluminum alloy extrusions, including its Airware aluminum-lithium solution",
+      "source_urls": [
+        "https://www.advfn.com/stock-market/NYSE/CSTM/stock-news/98324679/constellium-enters-multi-year-agreement-with-airbu",
+        "https://www.stocktitan.net/news/CSTM/constellium-enters-multi-year-agreement-with-airbus-for-the-supply-sfjcsrjlndwc.html"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Deleveraging/sale of toxic assets/spin-off of loss-making unit",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        3
+      ],
+      "event_date": "2026-06-29",
+      "evidence_excerpt": "announced today that it sold its ownership stake in its automotive structures joint venture in Changchun, China",
+      "source_urls": [
+        "https://www.nasdaq.com/press-release/constellium-sells-automotive-structures-joint-venture-changchun-china-2026-06-29",
+        "https://www.gurufocus.com/news/8935787/constellium-cstm-divests-stake-in-china-automotive-joint-venture"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 7,
+      "event_ids": [
+        5
+      ],
+      "event_date": "2026-07-15",
+      "evidence_excerpt": "Constellium to Source Local Renewable Energy for its German Facilities",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQOTBCT3ZYcnJlWERTQ3hkTzlreVlMQWdkODZBWS1IZ0o2di1kU0RTeW1ndjdDOUxqUlRrMzE3N0oyYXpnVDd3U0UyWmRhNmdJV1lPLXhNb2hVa2dTQmRMTlJ4dEtuaW8xNXJCamlROE94YXhVX25fcFpaSUp3c2t2UWw4c1Jkb2dzeEp5Y2VKcGlDSDIzaFA4cmdpRmpnVHowVkxJTzAyX0FtZHlpVzl1dTBKeVpCZDlvdjh1R1NpekY0dVdjTVNQcmp3LVRtTmxTWURNTFVlOXVmUQ"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "ESG mandate/green subsidy qualification",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 4,
+      "adjusted_weight": 5,
+      "event_ids": [
+        5
+      ],
+      "event_date": "2026-07-15",
+      "evidence_excerpt": "10-year agreement to source local renewable solar energy for its German facilities",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQOTBCT3ZYcnJlWERTQ3hkTzlreVlMQWdkODZBWS1IZ0o2di1kU0RTeW1ndjdDOUxqUlRrMzE3N0oyYXpnVDd3U0UyWmRhNmdJV1lPLXhNb2hVa2dTQmRMTlJ4dEtuaW8xNXJCamlROE94YXhVX25fcFpaSUp3c2t2UWw4c1Jkb2dzeEp5Y2VKcGlDSDIzaFA4cmdpRmpnVHowVkxJTzAyX0FtZHlpVzl1dTBKeVpCZDlvdjh1R1NpekY0dVdjTVNQcmp3LVRtTmxTWURNTFVlOXVmUQ"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Commodity price move favorable to the company",
+      "type": "positive",
+      "category": "external",
+      "status": "MISS",
+      "base_weight": 6,
+      "adjusted_weight": 0,
+      "event_ids": [
+        0
+      ],
+      "event_date": "2026-09-15",
+      "evidence_excerpt": "Pentagon War Game Exposed a Critical US Aluminum Risk Months Before Iran Attacks",
+      "source_urls": [
+        "https://finance.yahoo.com/markets/commodities/articles/pentagon-war-game-exposed-critical-100021661.html"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Unfavorable commodity price move (higher input costs)",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 8,
+      "event_ids": [
+        0
+      ],
+      "event_date": "2026-09-15",
+      "evidence_excerpt": "Aluminum price drop on eased supply concerns drives 6% CSTM decline",
+      "source_urls": [
+        "https://finance.yahoo.com/markets/commodities/articles/pentagon-war-game-exposed-critical-100021661.html"
+      ],
+      "confidence": 75
+    },
+    {
+      "taxonomy": "Technical breakdown (below support, 'death cross')",
+      "type": "negative",
+      "category": "technical",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        6
+      ],
+      "event_date": "2026-09-10",
+      "evidence_excerpt": "On September 10, 2026, Constellium SE CSTM shares fell 4.5%, closing at $25.99.",
+      "source_urls": [
+        "https://www.gurufocus.com/news/9076361/constellium-se-cstm-shares-fall-45-what-gf-score-of-76-tells-investors"
+      ],
+      "confidence": 85
+    },
+    {
+      "taxonomy": "Workforce reduction/layoffs",
+      "type": "negative",
+      "event_date": "2026-06-01",
+      "evidence_excerpt": "the company is laying off 57 of the 99 employees at its plant, located at 1 Constellium Drive",
+      "source_urls": [
+        "https://www.daily-tribune.com/news/constellium-to-lay-off-over-half-its-workforce/article_bec3627b-4e87-592b-ab76-4c74e9b63269.html",
+        "https://aluminiumtoday.com/news/constellium-to-reduce-workforce-at-us-facility"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst downgrade",
+      "type": "negative",
+      "event_date": "2026-07-09",
+      "evidence_excerpt": "Constellium Has Made A Nice Move; Consider Selling (Rating Downgrade) (NYSE:CSTM)",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNa2NLcnpkbXl1c09acW5RcTJhMHpHcHJVSjE0Y2lBWU9mdEp4TXJ2T1dzSm9nUjJXdEZGSEJsQ2R1M0gxeFdielVlR3lEOFVtTjRrN0FIR2FMZ2J2NUxUdGFxTkFTZW8wV2xXU1I3ODZiUXRRZkpMcHlTSm5Bc0wxMmVKdEkzUG0zS1hWeGVxRkJJVHpkb2tfbDlISU9SV2xhc240dkRyVzFTOEk?oc=5"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst downgrade",
+      "type": "negative",
+      "event_date": "2026-08-12",
+      "evidence_excerpt": "Constellium: Downgrading To Hold, But Quality Remains Intact (Rating Downgrade)",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOdjU1ZlEza0FGVjk5OWJ6WFd4SW9jem1ISVZJTTJEYUM3NVRpWTJMdkwyRFBJQmJ0MGI5QUo0ZFhiNklpZ1RubFIxcDNaVW13QWtUT0ZZSVduLVJlZGFEcWZNT2lYeTBIV3Zla09FZmpNRkN2bzJ2bkczUlV6NEhBMlBRaGRjMlRMSnhFMEJrN3FIblVmMGlvamJoaG1QVkhrWHp5WU41bFM?oc=5"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Insider selling",
+      "type": "negative",
+      "event_date": "2026-03-04",
+      "evidence_excerpt": "Philippe Hoffmann, President A&T, reported selling a total of 80,000 ordinary shares in two open-market transactions on March 4, 2026",
+      "source_urls": [
+        "https://www.stocktitan.net/sec-filings/CSTM/form-4-constellium-se-insider-trading-activity-f060d5e76ae3.html"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Insider selling",
+      "type": "negative",
+      "event_date": "2026-06-08",
+      "evidence_excerpt": "CONSTELLIUM SE (CSTM) has filed 13 SEC Form 4 insider transactions in the last 90 days, with the most recent on 2026-06-08. 11 Form 144 notices of proposed sale were filed",
+      "source_urls": [
+        "https://insideralpha.ai/company/CSTM"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Rising short interest",
+      "type": "negative",
+      "event_date": "2026-08-31",
+      "evidence_excerpt": "As of August 31, 2026, Constellium (CSTM) had a short interest of 6.93 million shares sold short, representing 5.18% of the public float. This marks a 3.16% increase in short interest since the prior report.",
+      "source_urls": [
+        "https://www.marketbeat.com/stocks/NYSE/CSTM/short-interest/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bullish",
+  "search_backend": "deepseek_fallback",
+  "generated_at": "2026-09-15",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

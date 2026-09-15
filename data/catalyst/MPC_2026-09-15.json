@@ -1,0 +1,356 @@
+{
+  "ticker": "MPC",
+  "analysis_date": "2026-09-15",
+  "current_price": "397.77",
+  "net_signal": "Bullish",
+  "conviction": 34,
+  "catalyst_stack": "On 2026-08-04, Marathon Petroleum reported Q2 2026 net income of $5.1B ($17.73/diluted share) versus $1.2B a year earlier, with revenue of $52.0B beating the $40.9B consensus by $11.1B and EPS beating by $3.46, alongside $8.5B adjusted EBITDA and a 112% capture rate. On 2026-05-05, the company beat Q1 estimates on Iran war-driven refining margins and raised its equity buyback authorization by $5,000M to $55,100M, while on 2026-07-29 the board declared a $1.00/share quarterly dividend payable Sept. 10, 2026. On 2026-08-20, the City of Carson reached a $370M settlement with Marathon resolving a yearslong local tax dispute tied to its West Coast refinery, removing a legal overhang. On 2026-09-15, Raymond James lifted its price target to $445 from $350 amid higher oil prices following a Saudi pipeline shutdown, with U.S. refiner margins spiking to record highs on 2026-07-18 as fuel shortage concerns grew.",
+  "key_assumption": "The bull case rests on sustained wide crack spreads and tight refined-product markets (reinforced by the Saudi pipeline shutdown and record U.S. refiner margins) continuing to drive outsized earnings and cash returns, even as the stock trades near 52-week highs with RSI at 80.42 and a consensus price target ($351.65) below the current price ($397.77).",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 9,
+      "event_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "event_date": "2026-08-04",
+      "evidence_excerpt": "Marathon Petroleum reported Q2 2026 net income attributable to MPC of $5.1 billion, or $17.73 per diluted share, versus $1.2 billion, or $3.96 per diluted share, a year earlier.",
+      "source_urls": [
+        "https://ir.marathonpetroleum.com/investor/news-releases/news-details/2026/Marathon-Petroleum-Corp--Reports-Second-Quarter-2026-Results/default.aspx",
+        "https://www.reuters.com/business/energy/marathon-petroleum-beats-quarterly-profit-estimates-refining-margin-boom-2026-08-04/"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Share repurchase program/increased dividend",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        5,
+        6,
+        7
+      ],
+      "event_date": "2026-05-05",
+      "evidence_excerpt": "The company increased its plan by $5,000 million, thereby bringing the total authorization to $55,100 million.",
+      "source_urls": [
+        "https://www.marketscreener.com/news/marathon-petroleum-corporation-announces-an-increase-in-equity-buyback-ce7f58ddde81f427",
+        "https://ir.marathonpetroleum.com/investor/news-releases/default.aspx"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Favorable court ruling/patent grant",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 9,
+      "event_ids": [
+        8
+      ],
+      "event_date": "2026-08-20",
+      "evidence_excerpt": "After years of legal dispute over local tax payments, Carson and Marathon Petroleum have reached a settlement in which the refinery will pay $370 million to the city.",
+      "source_urls": [
+        "https://www.latimes.com/environment/story/2026-08-20/carson-reaches-370-million-settlement-with-marathon-petroleum",
+        "https://finance.yahoo.com/economy/policy/articles/city-carson-secures-370-million-161500995.html"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Commodity price move favorable to the company",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 8,
+      "event_ids": [
+        15,
+        0
+      ],
+      "event_date": "2026-07-18",
+      "evidence_excerpt": "U.S. refiner margins spiked to record highs this week as fuel shortage concerns grow.",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMivgFBVV95cUxNVGd6NmVmZ3FyVGFsdVI4TkNqWnpudjhHZndXUDREeXUtYWR2bHNxVzhob28zandMU2FBVkk1VFB1M2N2cFFYT0hsUjYtWVFoTkRGaXdYZzNmMXZpTVVrd0hIb2JISkVsdkdiMWRjQk55Nng1RkVOVWNNeTFENVpLR0RWeDVUV1RLYnh1c2czSnNvWWlLN2lVeExLWUJxXzBzSnczRlFzSVpJdF94Y3hDb0I3NGNQMnZFWm9aSjJR?oc=5"
+      ],
+      "confidence": 75
+    },
+    {
+      "taxonomy": "Geopolitical event that boosts sector (e.g., defense spending surge)",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 8,
+      "event_ids": [
+        4,
+        0
+      ],
+      "event_date": "2026-05-05",
+      "evidence_excerpt": "Marathon Petroleum profit beats estimates as Iran war boosts refining margins.",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPaTJNaDcyNFpURFppT0FIVXVsNFVtRkJWNkplT1NZWnpHeEx2T2h6TjVBUkdodC16MlJ1ODhZcTFlS29lcFN5eFVjLU1jb2R0T2lkUmRYbF9jRWl2alB2dkVRVmZ3TW82NFpyY01wRHFITDE5TnFDcnJQUDhtLV9ZdDZuS0lTeHM2cE1SWTlYZjBUYXFzTWhzYnFfS19aZm45ZVMzeTd0R3BMYjlEM3RnQkYzY2xPUXRyOEFDSGRCRjJkQ2dMcWRKbQ?oc=5"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 3,
+      "event_ids": [
+        0,
+        26
+      ],
+      "event_date": "2026-09-15",
+      "evidence_excerpt": "Raymond James lifts its price target to $445 from $350 amid higher oil prices following a Saudi pipeline shutdown; average PT $349.13 sits below the $397.77 price.",
+      "source_urls": [
+        "https://finance.yahoo.com/energy/articles/global-fuel-squeeze-triggers-u-220000201.html",
+        "https://www.marketbeat.com/stocks/NYSE/MPC/forecast/"
+      ],
+      "confidence": 75
+    },
+    {
+      "taxonomy": "Insider selling (especially by CEO/CFO, or clustered sales)",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 6,
+      "event_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "event_date": "2026-08-19",
+      "evidence_excerpt": "Marathon Petroleum (NYSE: MPC) CLO exercises options, sells stock under 10b5-1 plan; VP sells 570 shares; SVP sells near $376; EVP exercises options and sells 6,336 shares.",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxPLVlWZmlrWU95V1Z3STQwVjRIRWU5Q2V5OGZ1SmJyT19GOERMcHpUWm9OVWF1YTRFVWt3V3l4TlluZFhmNHRJRGtmaFZZcEctMGxrTGNHQ0JVR0NBdFhoNUlmM21RQWxoaHhFZWZTbWpPYmtCeXBVbmt5c2JSYkhib0xWM0hxUHpvbG9aMGJjTXY4UVFFdkJESHlvSkxqbFNjd2FGdUh5MkgyMWNPVldaeWJQYUVmYTA?oc=5",
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxPeGtaZDFUZThzUm1pbnNrR1ZEWHgzTzFFVHBlamZEakpCeC01czVMb05KcWJYVWRURFRMbDFVUlVoNFotWHVVVDhzaUV5MGd3MVUtbzRGNWFJYUNnbEg3VEpabVlBWHBuNjNDQVJBbExxTHRjM1hQSXY1Y3NvVXhFZFlkc2JuaER5dFQ4bmZHcXkyUFB2MDhWeGxsU3d6dXJjLUh5bVJtbU91US1iTTVQV0ZHS2R2dTA?oc=5"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Insider-earnings divergence",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 1,
+      "adjusted_weight": 1,
+      "event_ids": [
+        1,
+        9,
+        10,
+        11,
+        12
+      ],
+      "event_date": "2026-08-19",
+      "evidence_excerpt": "Q2 2026 earnings beat (2026-08-04) followed within 14 days by clustered insider selling by CLO, VP, SVP and EVP (2026-08-19 to 2026-09-01).",
+      "source_urls": [
+        "https://ir.marathonpetroleum.com/investor/news-releases/news-details/2026/Marathon-Petroleum-Corp--Reports-Second-Quarter-2026-Results/default.aspx",
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxPLVlWZmlrWU95V1Z3STQwVjRIRWU5Q2V5OGZ1SmJyT19GOERMcHpUWm9OVWF1YTRFVWt3V3l4TlluZFhmNHRJRGtmaFZZcEctMGxrTGNHQ0JVR0NBdFhoNUlmM21RQWxoaHhFZWZTbWpPYmtCeXBVbmt5c2JSYkhib0xWM0hxUHpvbG9aMGJjTXY4UVFFdkJESHlvSkxqbFNjd2FGdUh5MkgyMWNPVldaeWJQYUVmYTA?oc=5"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Institutional ownership increase (13F filings showing accumulation)",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 4,
+      "event_ids": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        24,
+        25
+      ],
+      "event_date": "2026-09-11",
+      "evidence_excerpt": "NewEdge Advisors LLC raises position; Alyeska invests $5.98M; Saudi Central Bank holds $5.27M; Ancora buys 8,918 shares; NEOS purchases 5,568 shares.",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOaHNYQ2s0NTVUTEZwRnBNNTU3S0UxWFd4ZW5sQmxDU1YyTEJNNUlHTkpLcU5HV09RUW5JOW1kMEk1eUFDNVRSVnNGMjJ4THRjemFTRkF0WjJUWkRsbzA1UW5ZcTBBUWdZY19PWXNfRnpqc0ZYdzJ2UzZqZjNCRklQYnJEMG9QY1pDTVhXb19wWFZrVGc3dk5xRmw0Ml9sdFYwUWkzbl9sZFhfaDdDaFRVMGIxRFgtMXRtNERtNWRkSEpGSk5INVJiblIzV29iTW14?oc=5",
+        "https://news.google.com/rss/articles/CBMi3wFBVV95cUxORFNGeDFzYkIxMWhCUnRicmQtaGloNUFMaE5MOWk4TXhBcVo1WFVTZDFPX21DRlVIZURsLVJHOUZKSVRXWlhGNUhYVE5LLVU3MUVkMkJNRWJPUzNrOTdzeTFTWGhQelNzQm1adVphQ0Z0NUNVTEVvbkg3VEd1SFpLSGxMeW9BQ1UyczA2d3RwZDJTZlY0VUduRUd5SWxZOGxMcmFfdDh5MlFLOUZnWmFUX29JbENGblVJWldzVm40MXpuMmptT2JNekIzR1VlRmxxMy1JTnJueF9pZ1FxUjJR?oc=5"
+      ],
+      "confidence": 70
+    },
+    {
+      "taxonomy": "Sector tailwind/index inclusion",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        13,
+        14,
+        17
+      ],
+      "event_date": "2026-08-25",
+      "evidence_excerpt": "Marathon Petroleum (MPC) and Valero Energy (VLO) Have Exploded in 2026. But Barron's Sees More Upside; MPC up 121% in 2026.",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMimAFBVV95cUxNU1haXzA3SVh2S0gyWlMtMVRqNFdVU1NtLXc5YnpRUXRrLVR4NkpwN1NfVDJLR3dTLWxCWTMzVFRKSENCUHNnTUdlUUNMQTduRVNxclJOWkFsOTNGN0N2M0hLRVRmMGFfRVlhUmdhVWozbXc4NV9lQ3AzeEdJUkoxejEydDV0T2JjNGx3SWFqOXpaYnBPM1VfWA?oc=5",
+        "https://news.google.com/rss/articles/CBMinAFBVV95cUxNLWFPTy1FZUI0OHMtM3NURV9JWm5JVmpLR0hIM0R5d3Y4YTkzRV9Sbks3MHlSa1UtbF9JN3ZPRHRmbGNFMkd0czdNbkZ3MlhyTmp4S2RrSGlCZ25JY3g2VjM0ZHZOMDhnanNIQ2haUlU4RE5aNVM3MFplY1FzVGs2QVk3Ul9NcWoybnNoWHlXek5OZmtHX09jZHNUS3E?oc=5"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "ESG mandate/green subsidy qualification",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 4,
+      "adjusted_weight": 4,
+      "event_ids": [
+        16
+      ],
+      "event_date": "2026-08-03",
+      "evidence_excerpt": "Marathon Petroleum Corporation (NYSE: MPC) and its midstream affiliate MPLX LP (NYSE: MPLX) have published their Sustainability Report.",
+      "source_urls": [
+        "https://www.marathonpetroleum.com/Newsroom/Company-News/Marathon-and-MPLX-publish-reports-on-sustainability-and-climate-related-scenarios-1/"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Lawsuit/regulatory action (antitrust/consumer class action)",
+      "type": "negative",
+      "event_date": "2026-06-22",
+      "evidence_excerpt": "Gas station operators including BP, Circle K, Marathon Petroleum, 7-Eleven, Walmart and Albertsons were sued on Monday by California drivers who accused them of using artificial intelligence to artificially raise gas prices",
+      "source_urls": [
+        "https://www.reuters.com/business/bp-marathon-7-eleven-walmart-sued-allegedly-using-ai-boost-california-gas-prices-2026-06-22/",
+        "https://www.gurufocus.com/news/8926095/marathon-petroleum-mpc-faces-classaction-lawsuit-over-price-inflation-claims"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Safety issue / environmental incident (refinery flaring event)",
+      "type": "negative",
+      "event_date": "2026-07-05",
+      "evidence_excerpt": "The Michigan Department of Environment, Great Lakes and Energy is investigating after a power outage required gas to be burned off at the Marathon Detroit Refinery",
+      "source_urls": [
+        "https://www.thenewsherald.com/2026/07/06/egle-investigating-after-power-outage-forces-gas-burn-off-at-marathon-refinery/",
+        "https://www.freep.com/story/news/local/michigan/detroit/2026/07/06/marathon-detroit-refinery-power-outage-flaring-event/90820184007/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Regulatory action (Clean Air Act consent decree / civil penalty)",
+      "type": "negative",
+      "event_date": "2026-04-24",
+      "evidence_excerpt": "This is the consent decree for Marathon Refining. This is the settlement page for Marathon Refining.",
+      "source_urls": [
+        "https://www.epa.gov/enforcement/consent-decree-marathon-petroleum-company-lp-and-catlettsburg-refining-llc"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Short interest increase",
+      "type": "negative",
+      "event_date": "2026-08-31",
+      "evidence_excerpt": "As of August 31, 2026, Marathon Petroleum (MPC) had a short interest of 7.60 million shares sold short, representing 2.61% of the public float. This marks a 16.55% increase in short interest since the prior report.",
+      "source_urls": [
+        "https://www.marketbeat.com/stocks/NYSE/MPC/short-interest/",
+        "https://www.shortinteresthistory.com/symbol/mpc/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst downgrade",
+      "type": "negative",
+      "event_date": "2026-07-08",
+      "evidence_excerpt": "Crack Spreads And Marathon Petroleum's Explosive Rally (Rating Downgrade) (NYSE:MPC)",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMirwFBVV95cUxNdW9Sakh3aVRGQy1GVjFmQThxSktlS3hmZ0dPQno3bkJhbFpfSFdTSUYwUTdiMVlSbkZDTjM2cnVLTGdwZ0lGVlRkelQ2ZUhPcTVoblNsRkw3VWVjOEFFZFFXQnh3NW0tYUJTMWR0YzBub2pFcW5KaUhRQW12N3JHejROSWtoSkh0cEpZdWdaMGRLbjNMUmV1OGsyb1dqLWhKTkY2NTlKajhscUxHejBZ?oc=5"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Insider selling (additional Form 4 sales)",
+      "type": "negative",
+      "event_date": "2026-08-17",
+      "evidence_excerpt": "insider Molly Benson sold 17,196 shares of the stock in a transaction dated Monday, August 17th. The shares were sold at an average price of $358.57, for a total transaction of $6,165,969.72.",
+      "source_urls": [
+        "https://www.insidertrades.com/alerts/nyse-mpc-insider-buying-and-selling-2026-08-26/",
+        "https://insider-alpha.com/insider/MPC"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Insider selling (additional Form 4 sales)",
+      "type": "negative",
+      "event_date": "2026-08-31",
+      "evidence_excerpt": "Shawn M. Lyon sold a total of 1,425 shares of Marathon Petroleum Corp common stock, consisting of 1,000 shares on August 31, 2026 and 425 shares on August 28, 2026.",
+      "source_urls": [
+        "https://www.stocktitan.net/sec-filings/MPC/form-4-marathon-petroleum-corp-insider-trading-activity-d2ffe863e9d4.html"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Favorable court ruling/settlement (Carson tax dispute resolution)",
+      "type": "positive",
+      "event_date": "2026-08-20",
+      "evidence_excerpt": "Carson reaches $370-million settlement with Marathon Petroleum, resolving tax dispute",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMimgFBVV95cUxNcTNPaGlmWDVNendkZnp4UjZPTzdMQ2hONWh5SG5Dek9ZSXJqRzZaTjctLVYxRDd4QWdfZTM5LWZFT1F6N3pHU0lnN0tqeUF0TzBlNDA3ZlpEWGNiaDFqYlRBMEllOXE3RGZZU0pubkE2eHJGaldBNWtnT1JCenNQUk1kMWtUZm1vTlJvaGs1NkVaVmtERnM2MkdR?oc=5"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Regulatory approval / permit granted (Detroit refinery expansion)",
+      "type": "positive",
+      "event_date": "2026-07-30",
+      "evidence_excerpt": "Michigan regulators approve air quality permit for Marathon Petroleum's Southwest Detroit refinery.",
+      "source_urls": [
+        "https://planetdetroit.org/2026/07/marathon-refinery-expansion-approval-detroit/",
+        "https://www.bridgedetroit.com/marathon-petroleum-wins-air-quality-permit-approval-for-detroit-refinery-expansion/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Unclear",
+  "search_backend": "deepseek_fallback",
+  "generated_at": "2026-09-15",
+  "cutoff_date": null,
+  "role": "override_captain"
+}
