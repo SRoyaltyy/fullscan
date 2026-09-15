@@ -537,6 +537,51 @@ not interchangeable: <b>fill</b> is one Futubull cash account,
 sleeves, <b>confirm</b> is Excel (not capital), <b>leak</b> is a known
 same-day recycle. <b>factor mine</b> is a $10k research sleeve (09:30 open);
 <code>flatten_h*</code> is the wish-list, <code>flatten_live_*</code> is the gated book.</p>
+<details class="card" style="margin:12px 0" open>
+<summary>Open-bell slip — research overlay (not a wire)</summary>
+<p class="muted">Ideal 09:30 open vs MARKET-like delay/slip vs LIMIT fill/miss.
+KEEP ≥30 filled fires and &gt;55% after-fee hit rate. After-fee P&amp;L vs the
+zero-slip / ideal-open baseline. Live <b>flatten_robust</b>, hard-red sit, and
+Webull paper are untouched.</p>
+<div id="openBellSlipBody" class="muted">loading open-bell slip…</div>
+<p class="muted"><a href="../factor-mine/open-bell-slip.html">full overlay</a></p>
+</details>
+<script>
+(function(){{
+  var host = document.getElementById('openBellSlipBody');
+  if(!host) return;
+  fetch('../factor-mine/open_bell_slip.json', {{cache:'no-store'}})
+    .then(function(r){{ if(!r.ok) throw 0; return r.json(); }})
+    .then(function(d){{
+      var reps = d.reports || {{}};
+      var names = d.sleeves || Object.keys(reps);
+      var html = '<p>'+ (d.headline || d.note || '') +'</p><div class="sheet"><table><tr>'
+        +'<th>Sleeve</th><th>Reality</th><th>Filled</th><th>After-fee win</th>'
+        +'<th>After-fee $</th><th>vs ideal $</th><th>Verdict</th></tr>';
+      names.forEach(function(name){{
+        var rep = reps[name] || {{}};
+        var cols = rep.columns || {{}};
+        var verd = rep.verdicts || {{}};
+        ['ideal','market','limit_open','limit_prior'].forEach(function(r){{
+          var st = cols[r] || {{}}; var v = verd[r] || {{}};
+          var vs = v.vs_ideal_pnl;
+          var wr = st.win_rate==null ? '—' : (100*st.win_rate).toFixed(1)+'%';
+          html += '<tr><td class="name">'+name+'</td><td>'+r+'</td><td>'
+            +(st.n_filled||0)+'/'+(st.n_fires||0)+'</td><td>'+wr+'</td><td>'
+            +(st.pnl==null?'—':Number(st.pnl).toFixed(2))+'</td><td>'
+            +(vs==null?'—':Number(vs).toFixed(2))+'</td><td><b>'
+            +(v.label||'KILL')+'</b></td></tr>';
+        }});
+      }});
+      html += '</table></div>';
+      host.innerHTML = html;
+    }})
+    .catch(function(){{
+      host.textContent = 'open-bell slip JSON not on this deploy yet. '
+        + 'Run python -m src.open_bell_slip --write.';
+    }});
+}})();
+</script>
 <div class="cards">
 <div class="card">Live method<b>flatten_robust</b></div>
 <div class="card">Live return<b>{live_ret}</b></div>
@@ -648,7 +693,16 @@ def write_md(rows: list[dict]) -> str:
             f"{r.get('family')} | {('#' + str(r['pr'])) if r.get('pr') else '—'} | "
             f"{r.get('integrity')} | {rs} | {dd} | {r.get('trades') or '—'} | "
             f"{hit} | {r.get('capital') or '—'} |")
-    lines += ["", "Dashboard: `dashboard/strategy-board/index.html`.", ""]
+    lines += [
+        "",
+        "Dashboard: `dashboard/strategy-board/index.html`.",
+        "",
+        "Research overlay (not a wire): open-bell MARKET / LIMIT fills vs "
+        "ideal 09:30 open live on "
+        "[OPEN_BELL_SLIP.md](OPEN_BELL_SLIP.md). "
+        "Does not change live `flatten_robust`, hard-red sit, or Webull paper.",
+        "",
+    ]
     return "\n".join(lines)
 
 

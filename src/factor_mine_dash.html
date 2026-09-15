@@ -169,6 +169,7 @@
   <li><b>Sustainability.</b> For every start date X, replay the cash book from X's 09:30 open through the last session that has a 16:00 close. Count how often that path is still green. A start on 9/9 while 9/10 has not opened is the 9/9 open\u2192close book, labelled prelim. An unopened start date is pending, not 0%. Cash-start <code>&lt;&lt; &lt; &gt; &gt;&gt;</code> is that replay: $10k and no lots on morning X, same hard-red / leftover / min-hold rules. It is not “add on top of the 8-13 book.”</li>
   <li><b>Stock investigator.</b> Dropdown = names that sleeve actually bought. Date buttons = 09:30 that morning. A big BUY / SIT / NO badge says whether this recipe would take the name, plus the gates that fired or failed. E / R dots are beat-miss / upgrade-downgrade from the session-morning Finviz EPS Surprise when the print is already public (yday AMC / today BMO). A date-only stamp with no surprise number stays unknown — not green. Today's AMC is not used. Horizon % is hold-H from the 09:30 open. Cameras / coaches / news are quoted from repo files — never same-day Change%.</li>
   <li><b>Morning board.</b> Every name this recipe looked at that 09:30, ranked by its own rank key, plus would-be horizon % if bought here. <b>Side</b> is the sleeve's intended trade (LONG or SHORT). <b>Buy</b> is the 09:30 open (the fill). <b>Sell</b> / cover is the exit print — horizon close, or a later 09:30 open if 🚨 / last-red / news🔴 fired, or if <b>sell%</b> take/stop is on and that 09:30 open hit the bracket. Sell is green when that exit locked a profit for the sleeve's side (long: sell &gt; buy; short: cover &lt; buy), else red. <b>E</b> is the leak-free morning-export EPS surprise (beat / miss / unknown) — same number as the investigator chip. <b>Cams</b> is +green −red camera counts (e.g. +5 −1). <b>Yday</b> is yesterday's close-to-close % — never today's tape. <b>RSI</b> / <b>MACD</b> / <b>Flow</b> are prior-session only: RSI OS/OB (≤30 / ≥70), MACD hist + or X+ (just crossed up), FLOW IN when volume arrived and price barely moved. Hit-rate tally covers BUY / LOOK / NO / SIT, polarity hits vs the actual price move, and the ≤2 vs ≥3 red-camera split. The white+yday toggle keeps this looker list but buys only 0-red names that were up yesterday, ranked by +G−R. <b>sell%</b> in the filter bar replays every single recipe with a 09:30 take and/or stop (open vs our fill, even inside min-hold). Cards, table Book%, and curves switch to the replay; each Book% shows was / Δ vs the baked hold. Combos stay on the baked shared-pile book. The morning-board take/stop box is the same control. Marks chips, blotter BUY rows, and the session bought list also print that E so a beat like INO +67.7% is visible without opening the investigator.</li>
+  <li><b>Open-bell slip / no-fill.</b> Research overlay only. Same 09:30 shopping lists, three fill realities: ideal official open, MARKET-like delay + adverse slip (α from prior OHLC, this session’s high/low is the path after the order), LIMIT at the intended open or prior close (fill or miss). KEEP bar ≥30 filled fires and &gt;55% after-fee hit rate vs the zero-slip baseline. Does <em>not</em> change live flatten_robust, hard-red sit, or Webull paper.</li>
   <li><b>−N / burst / green-news sweep.</b> Research overlays on the current cash-book leaders. A new gate is kept only if it beats flatten_h5 on the $10k book. If none do, current methods stay. Live flatten_robust is never changed.</li>
   <li><b>News packet / headline / cameras.</b> Green is <em>OR</em> for the looker: packet🟢 or headline🟢 — both are not required, and +9 −1 was only an example. On 08-13→09-11 $10k the OR set itself does not beat <code>flatten_h5</code> (<code>union_news_or_h1</code> +4.98); adding a camera-net floor to that OR set also lost. What printed is packet-green hold-1 with a mild positive net: <code>union_news_pack_net2_h1</code> (+G −R ≥ 2) +16.53. Packet with no net floor is +12.49. +9 −1 all-in and leftover conviction still lose. A gate stays only if the $10k book beats <code>flatten_h5</code>.</li>
   <li><b>RSI / MACD / flow-in.</b> Oversold (RSI≤30), overbought (RSI≥70), MACD histogram &gt; 0 or a fresh cross up, and flow-in (volume without a matching price move) are 09:30 gates on the same looker list. Shorts use overbought / MACD down. Rankers <code>rsi</code> (more oversold first) and <code>macd_hist</code> sit next to the existing hot / cond ranks. Same leak rule: prior Finviz export + prior bars only.</li>
@@ -182,6 +183,17 @@
   <li><b>Long-led.</b> We do not only win via shorts. Closed-trade $ is stamped long vs short on every sleeve. <b>Long-led</b> means long $ ≥ short $, Book% ≥ 20, and start YES ≥ 75% (16/21). The +35 <code>combo_sh_5050</code> is ~47% long / 53% short — the long is <code>union_hot_n4_h1</code>, which made most of its money in one week (8/21–8/25) and is red if you start after that burst (10/21 starts). The short is the grind that keeps the combo’s start chips green. If you want longs to carry: <code>union_e_fresh_h3</code> (pure long +23, 16/21), <code>combo_ej_5050</code> (two longs, no short), <code>combo_jse_333</code> (~80% long $), <code>combo_es_9010</code> (90% fresh-E / 10% short). The Long-led filter is that bar.</li>
 </ol>
 <p class="note">Research miner only. Live <code>flatten_robust</code> is untouched.</p>
+</details>
+<details id="openBellSlip" class="how" open>
+<summary>Open-bell slip — research overlay (not a wire)</summary>
+<p class="mut">Ideal 09:30 open vs MARKET-like delay/slip vs LIMIT fill/miss.
+KEEP bar ≥30 filled fires and &gt;55% after-fee hit rate. After-fee P&amp;L is
+always shown vs the zero-slip / ideal-open baseline. Live
+<code>flatten_robust</code>, hard-red sit, and Webull paper are untouched.
+This is not a change to <code>flatten_robust</code> or sit policy.</p>
+<div id="openBellSlipBody" class="mut">loading open-bell slip…</div>
+<p class="mut"><a href="open-bell-slip.html" style="color:#93c5fd">full overlay</a>
+ · <a href="https://github.com/SRoyaltyy/fullscan/blob/main/03_scoreboard/OPEN_BELL_SLIP.md" style="color:#93c5fd">OPEN_BELL_SLIP.md</a></p>
 </details>
 <div id="liveDay" class="audit" style="margin:16px 0 10px">
   <b>Today’s packet</b>
@@ -1781,6 +1793,48 @@ window.addEventListener('resize', draw);
     }
     if(typeof renderTable==='function') try{ renderTable(); }catch(e){}
   }).catch(function(){ stamp.textContent='day board JSON not on main yet'; });
+})();
+</script>
+<script>
+(function(){
+  var host = document.getElementById('openBellSlipBody');
+  if(!host) return;
+  var urls = ['open_bell_slip.json','./open_bell_slip.json'];
+  function paint(d){
+    var reps = d.reports || {};
+    var names = d.sleeves || Object.keys(reps);
+    var html = '<p>'+ (d.headline || d.note || '') +'</p>';
+    html += '<div class="tbl-wrap"><table><tr><th>Sleeve</th><th>Reality</th>'
+      +'<th>Filled</th><th>After-fee win</th><th>After-fee $</th>'
+      +'<th>vs ideal $</th><th>Verdict</th></tr>';
+    names.forEach(function(name){
+      var rep = reps[name] || {};
+      var cols = rep.columns || {};
+      var verd = rep.verdicts || {};
+      ['ideal','market','limit_open','limit_prior'].forEach(function(r){
+        var st = cols[r] || {}; var v = verd[r] || {};
+        var vs = v.vs_ideal_pnl;
+        var wr = st.win_rate==null ? '—' : (100*st.win_rate).toFixed(1)+'%';
+        html += '<tr><td>'+name+'</td><td>'+r+'</td><td>'
+          +(st.n_filled||0)+'/'+(st.n_fires||0)+'</td><td>'+wr+'</td><td>'
+          +(st.pnl==null?'—':(st.pnl>=0?'+':'')+Number(st.pnl).toFixed(2))
+          +'</td><td>'+(vs==null?'—':((vs>=0?'+':'')+Number(vs).toFixed(2)))
+          +'</td><td><b>'+(v.label||'KILL')+'</b></td></tr>';
+      });
+    });
+    html += '</table></div>';
+    host.innerHTML = html;
+  }
+  function tryFetch(i){
+    if(i>=urls.length){
+      host.textContent = 'open-bell slip JSON not on this deploy yet. Run python -m src.open_bell_slip --write.';
+      return;
+    }
+    fetch(urls[i], {cache:'no-store'}).then(function(r){
+      if(!r.ok) throw 0; return r.json();
+    }).then(paint).catch(function(){ tryFetch(i+1); });
+  }
+  tryFetch(0);
 })();
 </script>
 <script>

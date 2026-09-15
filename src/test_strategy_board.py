@@ -32,12 +32,15 @@ def test_render_marks_integrity() -> None:
             or "hard-red" in html.lower() or "robust" in html.lower())
     assert "fill" in html and "stitch" in html
     assert "Excel" in html or "excel" in html
+    assert "Open-bell slip" in html
+    assert "flatten_robust" in html
 
 
 def test_md_names_live_method() -> None:
     md = write_md(collect())
     assert "flatten_robust" in md or "flatten_hard_red" in md
     assert "fill" in md
+    assert "OPEN_BELL_SLIP" in md or "open-bell" in md.lower()
 
 
 def main() -> None:

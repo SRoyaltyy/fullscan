@@ -1,0 +1,80 @@
+name: Open-bell slip research
+
+# Research overlay: 09:30 ET MARKET-like slip + LIMIT fill/miss vs
+# ideal open. Does not change flatten_robust, hard-red sit, or Webull
+# paper execution. Regenerates 03_scoreboard/OPEN_BELL_SLIP.md and the
+# factor-mine / strategy-board overlay JSON.
+
+on:
+  workflow_dispatch:
+    inputs:
+      from_date:
+        description: "First session YYYY-MM-DD"
+        required: false
+        default: "2026-08-13"
+      to_date:
+        description: "Last session YYYY-MM-DD (empty = panel end)"
+        required: false
+        default: ""
+  pull_request:
+    paths:
+      - "src/open_bell_slip.py"
+      - "src/test_open_bell_slip.py"
+      - ".github/workflows/open_bell_slip.yml"
+  workflow_run:
+    workflows:
+      - "Factor strategy mine"
+    types: [completed]
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: open-bell-slip
+  cancel-in-progress: true
+
+jobs:
+  research:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pandas pyarrow
+      - name: Unit tests
+        run: PYTHONPATH=. python3 -m src.test_open_bell_slip
+      - name: Regenerate board
+        if: ${{ github.event_name != 'pull_request' }}
+        env:
+          FROM_DATE: ${{ inputs.from_date }}
+          TO_DATE: ${{ inputs.to_date }}
+        run: |
+          set -euo pipefail
+          ARGS=(--write)
+          [ -n "${FROM_DATE:-}" ] && ARGS+=(--from-date "$FROM_DATE")
+          [ -n "${TO_DATE:-}" ] && ARGS+=(--to-date "$TO_DATE")
+          PYTHONPATH=. python3 -m src.open_bell_slip "${ARGS[@]}"
+          test -s 03_scoreboard/OPEN_BELL_SLIP.md
+          test -s 03_scoreboard/open_bell_slip.json
+          test -s dashboard/factor-mine/open-bell-slip.html
+          test -s dashboard/factor-mine/open_bell_slip.json
+      - name: Publish scoreboard
+        if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
+        run: |
+          bash scripts/safe_git_push.sh \
+            "chore: open-bell slip research overlay" \
+            03_scoreboard/OPEN_BELL_SLIP.md \
+            03_scoreboard/open_bell_slip.json \
+            dashboard/factor-mine/open_bell_slip.json \
+            dashboard/factor-mine/open-bell-slip.html \
+            dashboard/strategy-board/open_bell_slip.json
+      - name: Refresh GitHub Pages
+        if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy-dashboard.yml --ref main || true
