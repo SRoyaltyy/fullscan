@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T11:28:28.573596-04:00",
+  "generated_at": "2026-09-15T11:33:06.845359-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -11,82 +11,62 @@
   },
   "buy_1d": [
     {
-      "ticker": "AMGN",
-      "score": 0.09080014125288889
+      "ticker": "AVAH",
+      "score": 0.6996000445023314
     },
     {
-      "ticker": "LLY",
-      "score": 0.35620503368166595
+      "ticker": "DBX",
+      "score": 0.666101281302991
     },
     {
-      "ticker": "S",
-      "score": 0.5383606939554906
-    },
-    {
-      "ticker": "FFIV",
-      "score": 0.19348888952122334
+      "ticker": "APPN",
+      "score": 0.5841142486822075
     },
     {
       "ticker": "META",
-      "score": 0.3469506591337837
-    },
-    {
-      "ticker": "SNAP",
-      "score": 0.48958801256022805
-    },
-    {
-      "ticker": "ANGX",
-      "score": 0.5324899263792778
-    },
-    {
-      "ticker": "RPD",
-      "score": 0.5251915855613591
-    },
-    {
-      "ticker": "HITI",
-      "score": 0.2895286042792773
+      "score": 0.3478692592822346
     }
   ],
   "sell_1d": [
     {
       "ticker": "METC",
-      "score": -0.6600195692423577
+      "score": -0.6636563227288841
     },
     {
       "ticker": "FLNC",
-      "score": -0.6059014779891931
+      "score": -0.617361980539522
+    },
+    {
+      "ticker": "HNRG",
+      "score": -0.19783164109434712
     },
     {
       "ticker": "FCEL",
-      "score": -0.5946383246876308
-    },
-    {
-      "ticker": "OKLO",
-      "score": -0.4471021843609181
+      "score": -0.6032009715140413
     },
     {
       "ticker": "TLN",
-      "score": -0.619963013242493
+      "score": -0.6297351655781135
     },
     {
       "ticker": "TE",
-      "score": -0.44936729631534666
+      "score": -0.5019682632704072
     },
     {
-      "ticker": "IONQ",
-      "score": -0.3829046741509327
-    },
-    {
-      "ticker": "LVWR",
-      "score": -0.5841307624748288
+      "ticker": "OKLO",
+      "score": -0.4756679355169902
     },
     {
       "ticker": "QBTS",
-      "score": -0.28547887599745464
+      "score": -0.2950377170604041
+    },
+    {
+      "ticker": "LVWR",
+      "score": -0.5782237050300606
     },
     {
       "ticker": "NRG",
-      "score": -0.34849244421389436
+      "score": -0.38100823809427076
     }
   ],
   "flatten": {
@@ -330,6 +310,101 @@
         }
       ],
       "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, CDNA, PBR, SM, WDS"
+    },
+    {
+      "key": "live_boards",
+      "title": "live_boards",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T11:33:05.862411-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 12108,
+          "preview": "2026-09-15 BUY AVAH, DBX, APPN, META \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 944,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-15.json",
+          "ok": true,
+          "reason": "",
+          "size": 33441,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-15_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 12067,
+          "preview": "2026-09-15 BUY AVAH, DBX, APPN, META \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2689954,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-15_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2689954,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 3046414,
+          "preview": "2026-09-15 BUY AVAH, DBX, APPN, META \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2689954,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 12067,
+          "preview": "2026-09-15 BUY AVAH, DBX, APPN, META \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2689954,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2689954,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 3046414,
+          "preview": "2026-09-15 BUY AVAH, DBX, APPN, META \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS"
+        }
+      ],
+      "preview": "2026-09-15 BUY AVAH, DBX, APPN, META \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-15 BUY AVAH, DBX, APPN, META \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AVAH, DBX, APPN, META \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AVAH, DBX, APPN, META \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AVAH, DBX, APPN, META \u00b7 SELL METC, FLN"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
