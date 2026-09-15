@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "n_ok": 9,
+  "n_ok": 11,
   "n_total": 11,
   "sectors": [
     {
@@ -23,9 +23,9 @@
     },
     {
       "sector": "Consumer Defensive",
-      "ok": false,
-      "reason": "missing",
-      "size": 0
+      "ok": true,
+      "reason": "",
+      "size": 17675
     },
     {
       "sector": "Energy",
@@ -59,9 +59,9 @@
     },
     {
       "sector": "Technology",
-      "ok": false,
-      "reason": "missing",
-      "size": 0
+      "ok": true,
+      "reason": "",
+      "size": 19231
     },
     {
       "sector": "Utilities",

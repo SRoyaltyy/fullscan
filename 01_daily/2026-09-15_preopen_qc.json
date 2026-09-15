@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T10:15:16.970931-04:00",
+  "generated_at": "2026-09-15T10:43:27.736676-04:00",
   "items": [
     {
       "ok": true,
@@ -62,7 +62,7 @@
       "kind": "finviz_digest",
       "path": "01_daily/news/2026-09-15_finviz_digest.json",
       "reason": "",
-      "size": 87829,
+      "size": 87969,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -95,7 +95,7 @@
       "kind": "map_heat",
       "path": "01_daily/map_heat/2026-09-15_map_heat.json",
       "reason": "",
-      "size": 269258,
+      "size": 269446,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -157,14 +157,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-15/consumer_defensive_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 17675,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -227,7 +227,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-15/technology_predict.md",
       "reason": "",
-      "size": 17161,
+      "size": 19231,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -266,9 +266,9 @@
     },
     {
       "sector": "Consumer Defensive",
-      "ok": false,
-      "reason": "missing",
-      "size": 0
+      "ok": true,
+      "reason": "",
+      "size": 17675
     },
     {
       "sector": "Energy",
@@ -304,7 +304,7 @@
       "sector": "Technology",
       "ok": true,
       "reason": "",
-      "size": 17161
+      "size": 19231
     },
     {
       "sector": "Utilities",
@@ -313,7 +313,7 @@
       "size": 13006
     }
   ],
-  "sector_n_ok": 10,
+  "sector_n_ok": 11,
   "sector_n_total": 11,
   "all_ok": true
 }
