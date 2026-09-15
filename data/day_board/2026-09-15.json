@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T14:28:29.335539-04:00",
+  "generated_at": "2026-09-15T14:36:47.126004-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -47,7 +47,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 269303
+          "size": 269788
         },
         {
           "key": "heat_md",
@@ -56,7 +56,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 16928
+          "size": 16939
         }
       ],
       "said": "tables on disk",
@@ -176,7 +176,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 269303
+          "size": 269788
         },
         {
           "key": "parsed",
@@ -239,7 +239,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 16035
+          "size": 13897
         },
         {
           "key": "board",
@@ -248,7 +248,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7134
+          "size": 7127
         },
         {
           "key": "qc",
@@ -257,7 +257,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 7196
+          "size": 7189
         },
         {
           "key": "status",
@@ -266,7 +266,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7713
+          "size": 7135
         },
         {
           "key": "review",
@@ -293,7 +293,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 13559
+          "size": 15325
         },
         {
           "key": "sector_consumer_cyclical",
@@ -302,7 +302,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 18574
+          "size": 17810
         },
         {
           "key": "sector_consumer_defensive",
@@ -311,7 +311,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 17804
+          "size": 20709
         },
         {
           "key": "sector_energy",
@@ -320,7 +320,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 16615
+          "size": 15083
         },
         {
           "key": "sector_financial",
@@ -329,7 +329,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 13311
+          "size": 13690
         },
         {
           "key": "sector_healthcare",
@@ -338,7 +338,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 16994
+          "size": 14618
         },
         {
           "key": "sector_industrials",
@@ -347,7 +347,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 16239
+          "size": 15883
         },
         {
           "key": "sector_real_estate",
@@ -356,7 +356,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 14640
+          "size": 18003
         },
         {
           "key": "sector_technology",
@@ -365,7 +365,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 17826
+          "size": 16602
         },
         {
           "key": "sector_utilities",
@@ -374,21 +374,21 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 16029
+          "size": 16861
         }
       ],
-      "said": "general DOWN  -3.65 \u00b7 sectors 1 up / 8 down / 2 flat \u00b7 news 21 items",
+      "said": "general DOWN  -4.389 \u00b7 sectors 1 up / 8 down / 2 flat \u00b7 news 21 items",
       "bullets": [
-        "bad: Asia -0.72% (Kospi -3.26%)",
+        "bad: Asia -1.10% (Kospi -3.26%)",
         "bad: 1w 10Y +19bp / 5% handle",
-        "bad: WTI +5% leftover Hormuz/Petroline",
-        "good: ES/NQ +0.4%/+0.38% not confirming",
-        "good: HY contained 2.71",
-        "XLB DOWN -7.6",
-        "XLC FLAT -3.8",
-        "XLY DOWN -3.3",
-        "XLP FLAT -5.0",
-        "XLE UP +6.8"
+        "bad: WTI +3% leftover Hormuz/Petroline",
+        "good: ES/NQ +0.3% vs cash (not confirming)",
+        "good: HY still contained at 2.71",
+        "XLB DOWN -5.9",
+        "XLC FLAT -4.1",
+        "XLY DOWN -4.9",
+        "XLP FLAT -4.8",
+        "XLE UP +7.3"
       ]
     },
     {
@@ -417,14 +417,14 @@
           "path": "01_daily/weather/2026-09-15_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9759 vix=falling yields=flat",
-          "size": 9759
+          "reason": "sectors=11 bytes=10547 vix=falling yields=flat",
+          "size": 10547
         }
       ],
       "said": "favorable 1 \u00b7 hostile 7 \u00b7 neutral 3",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Financial, Real Estate, Utilities",
-        "events bull 8 / bear 26"
+        "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Financial, Industrials, Real Estate, Utilities",
+        "events bull 4 / bear 14"
       ]
     },
     {
@@ -454,12 +454,12 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2653",
-          "size": 8472685
+          "size": 8467821
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "CFFN, SM, PBR, WDS, NWBI"
+        "SM, WDS, NWBI, CDNA, CFFN"
       ]
     },
     {
@@ -522,7 +522,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 16035
+          "size": 13897
         },
         {
           "key": "in_board",
@@ -531,7 +531,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 7134
+          "size": 7127
         },
         {
           "key": "in_actions",
@@ -566,8 +566,8 @@
           "path": "01_daily/weather/2026-09-15_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9759 vix=falling yields=flat",
-          "size": 9759
+          "reason": "sectors=11 bytes=10547 vix=falling yields=flat",
+          "size": 10547
         },
         {
           "key": "in_ab",
@@ -576,7 +576,7 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2653",
-          "size": 8472685
+          "size": 8467821
         },
         {
           "key": "join",
@@ -585,7 +585,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5897",
-          "size": 2253285
+          "size": 2260233
         },
         {
           "key": "peers",
@@ -602,8 +602,8 @@
           "path": "data/stock_book/2026-09-15_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=189",
-          "size": 1500924
+          "reason": "horizons=5 names=210",
+          "size": 1593324
         },
         {
           "key": "book_md",
@@ -612,7 +612,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 66974
+          "size": 82483
         },
         {
           "key": "green",
@@ -642,9 +642,9 @@
           "size": 5954895
         }
       ],
-      "said": "210 rows",
+      "said": "216 rows",
       "bullets": [
-        "RRC, SM, DVN, EXE, MTDR"
+        "RRC, AR, DVN, PBR, EXE"
       ]
     },
     {
@@ -664,8 +664,8 @@
           "path": "data/stock_book/2026-09-15_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=189",
-          "size": 1500924
+          "reason": "horizons=5 names=210",
+          "size": 1593324
         },
         {
           "key": "dash_html",
@@ -702,97 +702,117 @@
   "selections": {
     "buy_1d": [
       {
+        "ticker": "MPC",
+        "score": 0.29284159326632914
+      },
+      {
         "ticker": "DBX",
-        "score": 0.6703885201679096
+        "score": 0.6659268308303405
+      },
+      {
+        "ticker": "OKTA",
+        "score": 0.3767281691284467
+      },
+      {
+        "ticker": "AVAH",
+        "score": 0.6742815729117086
+      },
+      {
+        "ticker": "S",
+        "score": 0.6681106306723062
       },
       {
         "ticker": "APPN",
-        "score": 0.6208283227234574
-      },
-      {
-        "ticker": "META",
-        "score": 0.10004151018196517
+        "score": 0.5726047806801684
       },
       {
         "ticker": "SNAP",
-        "score": 0.47600973989817624
+        "score": 0.4293270119929244
+      },
+      {
+        "ticker": "CRWD",
+        "score": 0.14727221746579827
+      },
+      {
+        "ticker": "NXDR",
+        "score": 0.49772530846117596
       }
     ],
     "sell_1d": [
       {
         "ticker": "METC",
-        "score": -0.6494356220511095
+        "score": -0.6570814025646101
       },
       {
         "ticker": "FLNC",
-        "score": -0.6024996110643821
+        "score": -0.6116762744053208
       },
       {
         "ticker": "HNRG",
-        "score": -0.19711615145848124
-      },
-      {
-        "ticker": "OKLO",
-        "score": -0.46637075466845285
-      },
-      {
-        "ticker": "TLN",
-        "score": -0.6051731507994839
-      },
-      {
-        "ticker": "NRG",
-        "score": -0.36939077442765333
+        "score": -0.19834883629987568
       },
       {
         "ticker": "FCEL",
-        "score": -0.5278310717430196
+        "score": -0.6018274608984249
       },
       {
-        "ticker": "LVWR",
-        "score": -0.5513448523029841
+        "ticker": "TLN",
+        "score": -0.6307310675693985
       },
       {
         "ticker": "TE",
-        "score": -0.39871432694503406
+        "score": -0.5031593493192514
       },
       {
-        "ticker": "AG",
-        "score": -0.47515655686471775
+        "ticker": "OKLO",
+        "score": -0.4621067662590356
+      },
+      {
+        "ticker": "QBTS",
+        "score": -0.28432953541578804
+      },
+      {
+        "ticker": "NRG",
+        "score": -0.3810403735763207
+      },
+      {
+        "ticker": "AMPX",
+        "score": -0.47440709139388143
       }
     ],
     "flatten": {
-      "said": "0 priced buys \u00b7 cash $107,448.18",
+      "said": "0 priced buys \u00b7 cash $108,616.66",
       "bullets": [
         "0 priced buys",
-        "cash $107,448.18"
+        "cash $108,616.66"
       ]
     },
     "general": {
-      "said": "DOWN  -3.65",
+      "said": "DOWN  -4.389",
       "bullets": [
-        "bad: Asia -0.72% (Kospi -3.26%)",
+        "bad: Asia -1.10% (Kospi -3.26%)",
         "bad: 1w 10Y +19bp / 5% handle",
-        "bad: WTI +5% leftover Hormuz/Petroline",
-        "good: ES/NQ +0.4%/+0.38% not confirming",
-        "good: HY contained 2.71"
+        "bad: WTI +3% leftover Hormuz/Petroline",
+        "good: ES/NQ +0.3% vs cash (not confirming)",
+        "good: HY still contained at 2.71"
       ],
-      "score": "-3.65",
+      "score": "-4.389",
       "direction": "down"
     },
     "sectors": {
       "said": "1 up / 8 down / 2 flat",
       "bullets": [
-        "XLB DOWN -7.6",
-        "XLC FLAT -3.8",
-        "XLY DOWN -3.3",
-        "XLP FLAT -5.0",
-        "XLE UP +6.8",
-        "XLF DOWN -3.8",
-        "XLV DOWN -2.9",
-        "XLI DOWN -0.5",
-        "XLRE DOWN -6.3",
-        "XLK DOWN -1.1",
-        "XLU DOWN -6.5"
+        "XLB DOWN -5.9",
+        "XLC FLAT -4.1",
+        "XLY DOWN -4.9",
+        "XLP FLAT -4.8",
+        "XLE UP +7.3",
+        "XLF DOWN -3.4",
+        "XLV DOWN -1.5",
+        "XLI DOWN -0.8",
+        "XLRE DOWN -4.9",
+        "XLK DOWN -2.0",
+        "XLU DOWN -6.7"
       ]
     },
     "news": {
@@ -809,30 +829,12 @@
     "weather": {
       "said": "favorable 1 \u00b7 hostile 7 \u00b7 neutral 3",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Financial, Real Estate, Utilities",
-        "events bull 8 / bear 26"
+        "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Financial, Industrials, Real Estate, Utilities",
+        "events bull 4 / bear 14"
       ]
     }
   },
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T10:02:05.002074-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-09-15_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1117761,
-          "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -3619,6 +3621,31 @@
         }
       ],
       "preview": "2026-09-15 BUY DBX, APPN, META, SNAP \u00b7 SELL METC, FLNC, HNRG, OKLO, TLN, NRG, FCEL, LVWR \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-15 BUY DBX, APPN, META, SNAP \u00b7 SELL METC, FLNC, HNRG, OKLO, TLN, NRG, FCEL, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY DBX, APPN, META, SNAP \u00b7 SELL METC, FLNC, HNRG, OKLO, TLN, NRG, FCEL, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY DBX, APPN, META, SNAP \u00b7 SELL METC, FLNC, HNRG, OKLO, TLN, NRG, FCEL, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY DBX, APPN, META, SNAP \u00b7 SELL METC,"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T14:36:46.055528-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-15_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 269788,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-15_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 17290,
+          "preview": "# MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T14:36:45.648008-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T14:36:45.648008-04:00"
     }
   ],
   "href": {
