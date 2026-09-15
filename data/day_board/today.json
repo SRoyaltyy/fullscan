@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T09:11:01.903840-04:00",
+  "generated_at": "2026-09-15T09:11:10.100759-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -105,31 +105,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "events_catcher",
-      "title": "Event catcher (gap hunt, no carry)",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T08:33:30.432362-04:00",
-      "files": [
-        {
-          "path": "01_daily/events/2026-09-15_events.json",
-          "ok": true,
-          "reason": "",
-          "size": 77546,
-          "preview": "76 events \u00b7 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | ECB 25bp hike delivered; hawkish forecast upgrade | China August credit/social financing \u2014 bond & equity share tops loans  | US existing home sales fall to 14-month low; mortgage rates up 3rd wee"
-        },
-        {
-          "path": "01_daily/events/2026-09-15_events.md",
-          "ok": true,
-          "reason": "",
-          "size": 36469,
-          "preview": "# Event Scan \u2014 2026-09-15\n- events tracked: **63** (via openclaw) (merged with earlier same-day scan)\n- uncertainty: **high**\n- summary: The tape is a three-day central-bank cluster (Fed Sept 16, BoE 17, BoJ 18) colliding with a still-hot oil war: Hormuz traffic is a fraction of normal, Brent is ~$107, and the 10-year is holding 5%. China printed a producer-strong/demand-weak split today, the US-Canada tariff war goes live on new 50% lines, and the Sept 24 Trump-Xi summit is the only plausible off-ramp for the November tariff truce. Mega-cap earnings are empty; housing (Lennar, starts) and Holtec/SpaceX supply are the micro calendar."
-        }
-      ],
-      "preview": "76 events \u00b7 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | ECB 25bp hike delivered; hawkish forecast upgrade | China August credit/social financing \u2014 bond & equity share tops loans  | US existing home sales fall to 14-month low; mortgage rates up 3rd wee \u00b7 # Event Scan \u2014 2026-09-15\n- events tracked: **63** (via openclaw) (merged with earlier same-day scan)\n- uncertainty: **high**\n- summary: The tape is a three-day central-bank cluster (Fed Sept 16, BoE 17, BoJ 18) colliding with a still-hot oil war: Hormuz traffic is a fraction of normal, Brent is ~$107, and the 10-year is holding 5%. China printed a producer-strong/demand-weak split today, the US-Canada tariff war goes live on new 50% lines, and the Sept 24 Trump-Xi summit is the only plausible off-ramp for the November tariff truce. Mega-cap earnings are empty; housing (Lennar, starts) and Holtec/SpaceX supply are the micro calendar."
-    },
     {
       "key": "news_actions",
       "title": "News actions",
@@ -325,6 +300,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T09:11:00.272818-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "finviz_market_digest",
+      "title": "Finviz homepage market digest",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T09:11:09.134495-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_finviz_market_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 7656,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_finviz_market_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 3409,
+          "preview": "# Finviz homepage market digest \u2014 2026-09-15\n**Generated:** 2026-09-15T09:11:09.116832-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures trade flat as 10-year yield tops 5% and oil stays above $100 ahead of Fed meeting and Empire State manufacturing data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** WTI crude $103.0\n**CPI/Fed:** \u2014\n**Leaders:** VEEA, MYSZ, SUGP, VERA, VRA, FPS, ENVA, CNTB, PLAY\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-15\n**Clock use:** `same_morning`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-15\n**Generated:** 2026-09-15T09:11:09.116832-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures trade flat as 10-year yield tops 5% and oil stays above $100 ahead of Fed meeting and Empire State manufacturing data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** WTI crude $103.0\n**CPI/Fed:** \u2014\n**Leaders:** VEEA, MYSZ, SUGP, VERA, VRA, FPS, ENVA, CNTB, PLAY\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-15\n**Clock use:** `same_morning`"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T08:51:02.246339-04:00",
+  "generated_at": "2026-09-15T09:11:09.116832-04:00",
   "timezone": "America/New_York",
   "source": "live",
   "source_url": "https://elite.finviz.com/",
@@ -15,9 +15,9 @@
   "kind": "finviz_homepage_market_digest",
   "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
   "error": null,
-  "headline": "US stock futures point to a lower open as 10-year yield tops 5% and oil holds above $100 ahead of Fed meeting",
-  "raw_text": "- VEEA (VEEA) rises around 75% pre-market after announcing a $750M merger agreement with NovaGen to create an Edge AI health platform.\n- BDRX (BDRX) trades higher on heavy speculative volume after entering a warrant exercise agreement to raise approximately $2.3M, while MYSZ (MYSZ) gains more than 40% after pivoting to a defense-technology acquisition strategy and VERA (VERA) climbs about 17% on positive trial data.\n- FTFT (FTFT) slides roughly 23% in pre-market trading on profit-taking after its recent surge amid sharp moves in select small-cap names.\n- VRA (VRA) rises about 25% after Q2 revenue of $71.6M, up 1.1% YoY, a return to profitability, and maintained guidance, while FPS (FPS) advances after reporting an earnings beat.\n- ENVA (ENVA) drops about 20% after withdrawing regulatory applications for its proposed Grasshopper Bancorp acquisition even as it reaffirmed 2026 guidance, and PLAY (PLAY) falls roughly 13% after an earnings miss that included an unexpected adjusted loss.\n- CNTB (CNTB) falls more than 29% on a sell-the-news reaction to positive Phase 2 asthma trial data.\n- S&P 500 (@ES), Dow (@YM), Nasdaq 100 (@NQ), and Russell 2000 (@ER2) futures are down 0.15%, 0.28%, 0.12%, and 0.19%, respectively, as WTI crude (@CL) hovers near $103 and the 10-year Treasury yield moves above 5% for the first time since 2007 ahead of the Fed’s two-day policy meeting.\n- Today’s U.S. calendar features the NY Empire State Manufacturing Index at 8:30 AM ET as investors position for tomorrow’s Fed decision and updated projections.\n- Asian equity markets trade mixed, with the Nikkei (@NKD) slightly higher and most other indices lower amid elevated oil and bond yields and lingering AI-related caution.\n- European shares trade lower in early action ahead of the Federal Reserve meeting.",
-  "raw_summary_md": "- **VEEA** ([VEEA](https://finviz.com/quote?t=VEEA)) rises around **75%** pre-market after announcing a **$750M** merger agreement with **NovaGen** to create an Edge AI health platform.\n- **BDRX** ([BDRX](https://finviz.com/quote?t=BDRX)) trades higher on heavy speculative volume after entering a warrant exercise agreement to raise approximately **$2.3M**, while **MYSZ** ([MYSZ](https://finviz.com/quote?t=MYSZ)) gains more than **40%** after pivoting to a defense-technology acquisition strategy and **VERA** ([VERA](https://finviz.com/quote?t=VERA)) climbs about **17%** on positive trial data.\n- **FTFT** ([FTFT](https://finviz.com/quote?t=FTFT)) slides roughly **23%** in pre-market trading on profit-taking after its recent surge amid sharp moves in select small-cap names.\n- **VRA** ([VRA](https://finviz.com/quote?t=VRA)) rises about **25%** after **Q2 revenue of $71.6M, up 1.1% YoY, a return to profitability, and maintained guidance**, while **FPS** ([FPS](https://finviz.com/quote?t=FPS)) advances after reporting an **earnings beat**.\n- **ENVA** ([ENVA](https://finviz.com/quote?t=ENVA)) drops about **20%** after withdrawing regulatory applications for its proposed **Grasshopper Bancorp** acquisition even as it **reaffirmed 2026 guidance**, and **PLAY** ([PLAY](https://finviz.com/quote?t=PLAY)) falls roughly **13%** after an **earnings miss** that included an **unexpected adjusted loss**.\n- **CNTB** ([CNTB](https://finviz.com/quote?t=CNTB)) falls more than **29%** on a **sell-the-news reaction** to **positive Phase 2 asthma trial data**.\n- **S&P 500** ([@ES](https://finviz.com/futures_charts?t=ES)), **Dow** ([@YM](https://finviz.com/futures_charts?t=YM)), **Nasdaq 100** ([@NQ](https://finviz.com/futures_charts?t=NQ)), and **Russell 2000** ([@ER2](https://finviz.com/futures_charts?t=ER2)) futures are down **0.15%**, **0.28%**, **0.12%**, and **0.19%**, respectively, as **WTI crude** ([@CL](https://finviz.com/futures_charts?t=CL)) hovers near **$103** and the **10-year Treasury yield** moves above **5%** for the first time since **2007** ahead of the Fed’s two-day policy meeting.\n- **Today’s U.S. calendar** features the **NY Empire State Manufacturing Index** at **8:30 AM ET** as investors position for **tomorrow’s Fed decision** and updated projections.\n- **Asian equity markets** trade **mixed**, with the **Nikkei** ([@NKD](https://finviz.com/futures_charts?t=NKD)) slightly higher and **most other indices lower** amid **elevated oil and bond yields** and lingering AI-related caution.\n- **European shares** trade **lower** in early action ahead of the **Federal Reserve meeting**.",
+  "headline": "US futures trade flat as 10-year yield tops 5% and oil stays above $100 ahead of Fed meeting and Empire State manufacturing data",
+  "raw_text": "- VEEA (VEEA) jumps about 80% pre-market after agreeing to a $750M merger to create an Edge AI health platform.\n- MYSZ (MYSZ) gains roughly 48% after outlining an acquisition-led pivot toward defense technology.\n- SUGP (SUGP) rises more than 50% on news of new exclusive distribution rights and a small acquisition.\n- VERA (VERA) climbs around 18% on positive data or momentum following recent updates.\n- VRA (VRA) earlier spiked about 17% after reporting Q2 revenue of $71.6M (up 1.1% YoY), a return to profitability, and maintained guidance, but major coverage now flags limited immediate reaction even as options imply an expected move of roughly 20%; FPS (FPS) also reports pre-market with options implying a ~16% move and a similarly muted initial response.\n- ENVA (ENVA) sinks about 20% after withdrawing its regulatory application to acquire Grasshopper Bancorp, even as the company reaffirms its 2026 guidance.\n- CNTB (CNTB) slides roughly 29–36% on a sell-the-news reaction to Phase 2 asthma data.\n- PLAY (PLAY) is off about 14% after posting an unexpected adjusted loss.\n- US index futures are roughly flat, with S&P 500 futures (@ES) +0.04%, Dow (@YM) -0.07%, Nasdaq 100 (@NQ) +0.07% and Russell 2000 (@ER2) -0.03%, as the 10-year Treasury yield moves above 5% for the first time since 2007 and WTI crude (@CL) trades near $103 amid Middle East pipeline disruptions and multi-year-high bond yields reinforcing rate-hike expectations ahead of the Fed’s two-day meeting.\n- Asian markets are mixed, with the Nikkei (@NKD) modestly higher and most other regional indices lower, while European shares retreat ahead of the NY Empire State Manufacturing Index at 8:30 AM ET and the Fed’s rate decision and projections scheduled for tomorrow.",
+  "raw_summary_md": "- **VEEA** ([VEEA](https://finviz.com/quote?t=VEEA)) **jumps about 80% pre-market** after agreeing to a $750M merger to create an Edge AI health platform.\n- **MYSZ** ([MYSZ](https://finviz.com/quote?t=MYSZ)) **gains roughly 48%** after outlining an acquisition-led pivot toward defense technology.\n- **SUGP** ([SUGP](https://finviz.com/quote?t=SUGP)) **rises more than 50%** on news of new exclusive distribution rights and a small acquisition.\n- **VERA** ([VERA](https://finviz.com/quote?t=VERA)) **climbs around 18%** on positive data or momentum following recent updates.\n- **VRA** ([VRA](https://finviz.com/quote?t=VRA)) earlier **spiked about 17%** after reporting **Q2 revenue of $71.6M (up 1.1% YoY), a return to profitability, and maintained guidance**, but major coverage now flags limited immediate reaction even as **options imply an expected move of roughly 20%**; **FPS** ([FPS](https://finviz.com/quote?t=FPS)) also reports pre-market with **options implying a ~16% move** and a similarly muted initial response.\n- **ENVA** ([ENVA](https://finviz.com/quote?t=ENVA)) **sinks about 20%** after withdrawing its regulatory application to acquire Grasshopper Bancorp, even as the company reaffirms its 2026 guidance.\n- **CNTB** ([CNTB](https://finviz.com/quote?t=CNTB)) **slides roughly 29–36%** on a sell-the-news reaction to Phase 2 asthma data.\n- **PLAY** ([PLAY](https://finviz.com/quote?t=PLAY)) is **off about 14%** after posting an **unexpected adjusted loss**.\n- **US index futures are roughly flat**, with S&P 500 futures ([@ES](https://finviz.com/futures_charts?t=ES)) +0.04%, Dow ([@YM](https://finviz.com/futures_charts?t=YM)) -0.07%, Nasdaq 100 ([@NQ](https://finviz.com/futures_charts?t=NQ)) +0.07% and Russell 2000 ([@ER2](https://finviz.com/futures_charts?t=ER2)) -0.03%, as the **10-year Treasury yield moves above 5% for the first time since 2007** and **WTI crude** ([@CL](https://finviz.com/futures_charts?t=CL)) **trades near $103** amid Middle East pipeline disruptions and multi-year-high bond yields reinforcing rate-hike expectations ahead of the Fed’s two-day meeting.\n- **Asian markets are mixed**, with the Nikkei ([@NKD](https://finviz.com/futures_charts?t=NKD)) modestly higher and most other regional indices lower, while **European shares retreat** ahead of the NY Empire State Manufacturing Index at 8:30 AM ET and the **Fed’s rate decision and projections scheduled for tomorrow**.",
   "index_moves": [],
   "oil": {
     "name": "WTI crude",
@@ -29,30 +29,28 @@
   "fed_odds": null,
   "named_tickers": [
     "VEEA",
-    "BDRX",
     "MYSZ",
+    "SUGP",
     "VERA",
-    "FTFT",
     "VRA",
     "FPS",
     "ENVA",
-    "PLAY",
-    "CNTB"
+    "CNTB",
+    "PLAY"
   ],
   "named_leaders": [
     "VEEA",
-    "BDRX",
     "MYSZ",
+    "SUGP",
     "VERA",
-    "FTFT",
     "VRA",
     "FPS",
     "ENVA",
-    "PLAY",
-    "CNTB"
+    "CNTB",
+    "PLAY"
   ],
   "calendar": [
-    "Today’s U.S. calendar features the NY Empire State Manufacturing Index at 8:30 AM ET as investors position for tomorrow’s Fed decision and updated projections."
+    "Asian markets are mixed, with the Nikkei (@NKD) modestly higher and most other regional indices lower, while European shares retreat ahead of the NY Empire State Manufacturing Index at 8:30 AM ET and the Fed’s rate decision and projections scheduled for tomorrow."
   ],
   "prior_close": {
     "spx": null,
@@ -68,24 +66,25 @@
     "retail": false,
     "fed": true,
     "bullets": [
-      "Today’s U.S. calendar features the NY Empire State Manufacturing Index at 8:30 AM ET as investors position for tomorrow’s Fed decision and updated projections.",
-      "European shares trade lower in early action ahead of the Federal Reserve meeting."
+      "Asian markets are mixed, with the Nikkei (@NKD) modestly higher and most other regional indices lower, while European shares retreat ahead of the NY Empire State Manufacturing Index at 8:30 AM ET and the Fed’s rate decision and projections scheduled for tomorrow."
     ],
-    "text": "Today’s U.S. calendar features the NY Empire State Manufacturing Index at 8:30 AM ET as investors position for tomorrow’s Fed decision and updated projections. European shares trade lower in early action ahead of the Federal Reserve meeting."
+    "text": "Asian markets are mixed, with the Nikkei (@NKD) modestly higher and most other regional indices lower, while European shares retreat ahead of the NY Empire State Manufacturing Index at 8:30 AM ET and the Fed’s rate decision and projections scheduled for tomorrow."
   },
   "earnings_slate": {
     "tickers": [],
     "text": ""
   },
   "geo_grain": {
-    "geo": false,
+    "geo": true,
     "grain": false,
-    "flags": [],
-    "text": ""
+    "flags": [
+      "geo"
+    ],
+    "text": "US index futures are roughly flat, with S&P 500 futures (@ES) +0.04%, Dow (@YM) -0.07%, Nasdaq 100 (@NQ) +0.07% and Russell 2000 (@ER2) -0.03%, as the 10-year Treasury yield moves above 5% for the first time since 2007 and WTI crude (@CL) trades near $103 amid Middle East pipeline disruptions and multi-year-high bond yields reinforcing rate-hike expectations ahead of the Fed’s two-day meeting."
   },
-  "finviz_id": 285731,
+  "finviz_id": 285745,
   "finviz_ticker": "$MARKET",
-  "finviz_published_at": "2026-09-15T08:37:05.58",
+  "finviz_published_at": "2026-09-15T09:07:09.557",
   "finviz_source": "market_summary",
-  "finviz_sentiment": "bad"
+  "finviz_sentiment": "neutral"
 }
