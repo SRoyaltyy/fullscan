@@ -7,7 +7,7 @@ error_category: "D"
 falsifier: "Same setup (leftover d1 and w1 RS positive, live PM/1d rel confirming down, oil/duration shock live, veto suppressed) but XLC closes flat-to-up because leftover RS correctly signaled the two anchors being bought — then restore the veto and treat leftover RS as the better signal."
 sector: "Communication Services"
 date: "2026-09-15"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Communication Services — 2026-09-15

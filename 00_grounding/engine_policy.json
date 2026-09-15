@@ -1,33 +1,33 @@
 {
   "general": {
     "B0_ASIA": {
-      "n": 14,
-      "hit": 0.429,
-      "mult": 0.0
+      "n": 15,
+      "hit": 0.467,
+      "mult": 0.5
     },
     "B0_EUROPE": {
-      "n": 8,
+      "n": 9,
       "hit": 1.0,
       "mult": 1.25
     },
     "B1_CATALYSTS": {
-      "n": 22,
-      "hit": 0.773,
+      "n": 23,
+      "hit": 0.783,
       "mult": 1.25
     },
     "B2_BONDS": {
-      "n": 25,
-      "hit": 0.36,
+      "n": 26,
+      "hit": 0.385,
       "mult": 0.0
     },
     "B3_FEDPATH": {
-      "n": 24,
-      "hit": 0.5,
+      "n": 25,
+      "hit": 0.52,
       "mult": 0.5
     },
     "B4_VIX": {
-      "n": 9,
-      "hit": 0.556,
+      "n": 10,
+      "hit": 0.6,
       "mult": 1.0
     },
     "B5_SENTIMENT": {
@@ -36,59 +36,59 @@
       "mult": 0.0
     },
     "B6_FUTURES": {
-      "n": 16,
-      "hit": 0.75,
+      "n": 17,
+      "hit": 0.765,
       "mult": 1.25
     },
     "B7_OIL_DOLLAR": {
-      "n": 22,
-      "hit": 0.682,
+      "n": 23,
+      "hit": 0.696,
       "mult": 1.25
     }
   },
   "sector_pooled": {
     "S0_SHARED_MACRO": {
-      "n": 122,
-      "hit": 0.607,
+      "n": 131,
+      "hit": 0.611,
       "mult": 1.0
     },
     "S1_SECTOR_FACTORS": {
-      "n": 150,
-      "hit": 0.547,
-      "mult": 0.5
+      "n": 157,
+      "hit": 0.561,
+      "mult": 1.0
     },
     "S2_BREADTH": {
-      "n": 122,
-      "hit": 0.59,
+      "n": 127,
+      "hit": 0.598,
       "mult": 1.0
     },
     "S3_FLOWS_POSITIONING": {
-      "n": 90,
+      "n": 92,
       "hit": 0.489,
       "mult": 0.5
     },
     "S4_ETF_TAPE": {
-      "n": 126,
-      "hit": 0.627,
+      "n": 132,
+      "hit": 0.629,
       "mult": 1.0
     }
   },
   "sectors": {
     "Basic Materials": {
       "S0_SHARED_MACRO": {
-        "n": 13,
-        "hit": 0.769,
+        "n": 14,
+        "hit": 0.714,
         "mult": 1.25
       },
       "S1_SECTOR_FACTORS": {
-        "n": 15,
-        "hit": 0.533,
+        "n": 16,
+        "hit": 0.5,
         "mult": 0.5
       },
       "S2_BREADTH": {
-        "n": 10,
-        "hit": 0.6,
-        "mult": 1.0
+        "n": 11,
+        "hit": 0.545,
+        "mult": 0.5
       },
       "S3_FLOWS_POSITIONING": {
         "n": 9,
@@ -103,14 +103,14 @@
     },
     "Communication Services": {
       "S0_SHARED_MACRO": {
-        "n": 11,
-        "hit": 0.455,
+        "n": 12,
+        "hit": 0.5,
         "mult": 0.5
       },
       "S1_SECTOR_FACTORS": {
-        "n": 150,
-        "hit": 0.547,
-        "mult": 0.5,
+        "n": 157,
+        "hit": 0.561,
+        "mult": 1.0,
         "pooled": true
       },
       "S2_BREADTH": {
@@ -119,26 +119,26 @@
         "mult": 0.5
       },
       "S3_FLOWS_POSITIONING": {
-        "n": 90,
+        "n": 92,
         "hit": 0.489,
         "mult": 0.5,
         "pooled": true
       },
       "S4_ETF_TAPE": {
-        "n": 10,
-        "hit": 0.5,
+        "n": 11,
+        "hit": 0.455,
         "mult": 0.5
       }
     },
     "Consumer Cyclical": {
       "S0_SHARED_MACRO": {
-        "n": 14,
-        "hit": 0.714,
+        "n": 15,
+        "hit": 0.733,
         "mult": 1.25
       },
       "S1_SECTOR_FACTORS": {
-        "n": 16,
-        "hit": 0.562,
+        "n": 17,
+        "hit": 0.588,
         "mult": 1.0
       },
       "S2_BREADTH": {
@@ -159,19 +159,18 @@
     },
     "Consumer Defensive": {
       "S0_SHARED_MACRO": {
-        "n": 122,
-        "hit": 0.607,
-        "mult": 1.0,
-        "pooled": true
+        "n": 8,
+        "hit": 0.625,
+        "mult": 1.0
       },
       "S1_SECTOR_FACTORS": {
-        "n": 16,
-        "hit": 0.5,
+        "n": 17,
+        "hit": 0.529,
         "mult": 0.5
       },
       "S2_BREADTH": {
-        "n": 9,
-        "hit": 0.667,
+        "n": 10,
+        "hit": 0.7,
         "mult": 1.25
       },
       "S3_FLOWS_POSITIONING": {
@@ -180,20 +179,20 @@
         "mult": 1.0
       },
       "S4_ETF_TAPE": {
-        "n": 15,
-        "hit": 0.733,
+        "n": 16,
+        "hit": 0.75,
         "mult": 1.25
       }
     },
     "Energy": {
       "S0_SHARED_MACRO": {
-        "n": 8,
-        "hit": 0.75,
+        "n": 9,
+        "hit": 0.667,
         "mult": 1.25
       },
       "S1_SECTOR_FACTORS": {
-        "n": 18,
-        "hit": 0.556,
+        "n": 19,
+        "hit": 0.579,
         "mult": 1.0
       },
       "S2_BREADTH": {
@@ -202,8 +201,8 @@
         "mult": 1.0
       },
       "S3_FLOWS_POSITIONING": {
-        "n": 10,
-        "hit": 0.5,
+        "n": 11,
+        "hit": 0.455,
         "mult": 0.5
       },
       "S4_ETF_TAPE": {
@@ -214,19 +213,19 @@
     },
     "Financial": {
       "S0_SHARED_MACRO": {
-        "n": 14,
-        "hit": 0.571,
+        "n": 15,
+        "hit": 0.6,
         "mult": 1.0
       },
       "S1_SECTOR_FACTORS": {
-        "n": 13,
-        "hit": 0.462,
+        "n": 14,
+        "hit": 0.5,
         "mult": 0.5
       },
       "S2_BREADTH": {
-        "n": 15,
-        "hit": 0.533,
-        "mult": 0.5
+        "n": 16,
+        "hit": 0.562,
+        "mult": 1.0
       },
       "S3_FLOWS_POSITIONING": {
         "n": 12,
@@ -234,16 +233,16 @@
         "mult": 0.0
       },
       "S4_ETF_TAPE": {
-        "n": 10,
-        "hit": 0.8,
+        "n": 11,
+        "hit": 0.818,
         "mult": 1.25
       }
     },
     "Healthcare": {
       "S0_SHARED_MACRO": {
-        "n": 9,
-        "hit": 0.556,
-        "mult": 1.0
+        "n": 10,
+        "hit": 0.5,
+        "mult": 0.5
       },
       "S1_SECTOR_FACTORS": {
         "n": 12,
@@ -261,64 +260,64 @@
         "mult": 1.25
       },
       "S4_ETF_TAPE": {
-        "n": 12,
-        "hit": 0.75,
+        "n": 13,
+        "hit": 0.692,
         "mult": 1.25
       }
     },
     "Industrials": {
       "S0_SHARED_MACRO": {
-        "n": 13,
-        "hit": 0.615,
+        "n": 14,
+        "hit": 0.643,
         "mult": 1.0
       },
       "S1_SECTOR_FACTORS": {
-        "n": 13,
-        "hit": 0.538,
-        "mult": 0.5
+        "n": 14,
+        "hit": 0.571,
+        "mult": 1.0
       },
       "S2_BREADTH": {
-        "n": 14,
-        "hit": 0.429,
-        "mult": 0.0
+        "n": 15,
+        "hit": 0.467,
+        "mult": 0.5
       },
       "S3_FLOWS_POSITIONING": {
-        "n": 90,
+        "n": 92,
         "hit": 0.489,
         "mult": 0.5,
         "pooled": true
       },
       "S4_ETF_TAPE": {
-        "n": 12,
-        "hit": 0.5,
+        "n": 13,
+        "hit": 0.538,
         "mult": 0.5
       }
     },
     "Real Estate": {
       "S0_SHARED_MACRO": {
-        "n": 11,
-        "hit": 0.545,
-        "mult": 0.5
+        "n": 12,
+        "hit": 0.583,
+        "mult": 1.0
       },
       "S1_SECTOR_FACTORS": {
-        "n": 13,
-        "hit": 0.462,
+        "n": 14,
+        "hit": 0.5,
         "mult": 0.5
       },
       "S2_BREADTH": {
-        "n": 10,
-        "hit": 0.6,
+        "n": 11,
+        "hit": 0.636,
         "mult": 1.0
       },
       "S3_FLOWS_POSITIONING": {
-        "n": 90,
+        "n": 92,
         "hit": 0.489,
         "mult": 0.5,
         "pooled": true
       },
       "S4_ETF_TAPE": {
-        "n": 12,
-        "hit": 0.583,
+        "n": 13,
+        "hit": 0.615,
         "mult": 1.0
       }
     },
@@ -366,7 +365,7 @@
         "mult": 1.0
       },
       "S3_FLOWS_POSITIONING": {
-        "n": 90,
+        "n": 92,
         "hit": 0.489,
         "mult": 0.5,
         "pooled": true
@@ -378,8 +377,8 @@
       }
     }
   },
-  "version": 3,
-  "updated": "2026-09-14T18:09:47-04:00",
+  "version": 4,
+  "updated": "2026-09-15T18:11:09-04:00",
   "rules": {
     "min_n": 8,
     "mute_below": 0.45,
@@ -454,6 +453,19 @@
       "changes": [
         "general.B4_VIX: 0.5 -> 1.0 (n=9, hit=0.556)",
         "Basic Materials.S3_FLOWS_POSITIONING: 1.0 -> 1.25 (n=9, hit=0.667)"
+      ]
+    },
+    {
+      "at": "2026-09-15T18:11:09-04:00",
+      "changes": [
+        "general.B0_ASIA: 0.0 -> 0.5 (n=15, hit=0.467)",
+        "Basic Materials.S2_BREADTH: 1.0 -> 0.5 (n=11, hit=0.545)",
+        "Communication Services.S1_SECTOR_FACTORS: 0.5 -> 1.0 (n=157, hit=0.561)",
+        "Financial.S2_BREADTH: 0.5 -> 1.0 (n=16, hit=0.562)",
+        "Healthcare.S0_SHARED_MACRO: 1.0 -> 0.5 (n=10, hit=0.5)",
+        "Industrials.S1_SECTOR_FACTORS: 0.5 -> 1.0 (n=14, hit=0.571)",
+        "Industrials.S2_BREADTH: 0.0 -> 0.5 (n=15, hit=0.467)",
+        "Real Estate.S0_SHARED_MACRO: 0.5 -> 1.0 (n=12, hit=0.583)"
       ]
     }
   ]
