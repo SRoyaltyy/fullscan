@@ -54,6 +54,11 @@ def test_parse_account_and_book() -> None:
     })
     assert abs(cash - 98765.4) < 1e-6
     assert abs(power - 120000) < 1e-6
+    camel_cash, camel_power = parse_balance({
+        "data": {"availableCash": "5000", "buyingPower": "8000"},
+    })
+    assert abs(camel_cash - 5000) < 1e-6
+    assert abs(camel_power - 8000) < 1e-6
     pos = parse_positions({"positions": [
         {"symbol": "SOFI", "quantity": "10", "cost_price": "19",
          "last_price": "18", "market_value": "180"},
@@ -184,9 +189,15 @@ def test_yml_poke_on_main_submits() -> None:
     assert "branches: [main]" in yml
     assert '".github/workflows/webull_paper.yml"' in yml
     assert "github.event_name == 'push'" in yml
+    assert "github.event_name == 'schedule'" in yml
     assert "--source combo" in yml
     assert "combo_sh_macd_5050_shared" in yml
     assert "POKE 2026-09-14" in yml
+    assert 'cron: "30 13 * * 1-5"' in yml
+    assert 'cron: "30 14 * * 1-5"' in yml
+    assert "src.open_0930_clock" in yml
+    assert "workflow_dispatch" in yml
+    # A 01:00 merge poke is clock-gated; daytime poke still submits.
 
 
 def main() -> None:

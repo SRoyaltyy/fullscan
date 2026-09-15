@@ -93,6 +93,15 @@ def test_skip_held_and_hard_red_sit() -> None:
     assert any(s["kind"] == "hard_red" for s in skips)
 
 
+def test_leftover_uses_buying_power_when_cash_empty() -> None:
+    assert cb.leftover_for_snap(None) == 0.0
+    assert cb.leftover_for_snap(BrokerSnap(env="paper", cash=0, positions={})) == 0.0
+    cash_first = BrokerSnap(env="paper", cash=50, positions={}, buying_power=10_000)
+    assert cb.leftover_for_snap(cash_first) == 50
+    power_only = BrokerSnap(env="paper", cash=0, positions={}, buying_power=10_000)
+    assert cb.leftover_for_snap(power_only) == 10_000
+
+
 def test_plan_marks_stale_when_look_is_asof() -> None:
     panel = {
         "to_date": "2026-09-11",
@@ -115,8 +124,9 @@ def main() -> None:
     test_macd_short_drops_news_red_without_macd()
     test_shared_5050_sizes_longs_and_short_sells()
     test_skip_held_and_hard_red_sit()
+    test_leftover_uses_buying_power_when_cash_empty()
     test_plan_marks_stale_when_look_is_asof()
-    print("test_combo_broker: 4 ok")
+    print("test_combo_broker: 5 ok")
 
 
 if __name__ == "__main__":

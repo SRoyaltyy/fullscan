@@ -33,7 +33,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install
-        run: pip install pandas pyarrow openpyxl
+        run: pip install pandas pyarrow openpyxl requests
       - name: Apply pending ticket patches if present
         run: |
           set +e

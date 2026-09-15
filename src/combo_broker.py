@@ -293,6 +293,19 @@ def size_combo_tickets(rows: list[dict], recs: list[dict],
     return tickets, skips
 
 
+def leftover_for_snap(snap: BrokerSnap | None) -> float:
+    """Spend cash when the book has it; else buying power. Never invent."""
+    if snap is None:
+        return 0.0
+    cash = max(float(snap.cash or 0), 0.0)
+    power = max(float(getattr(snap, "buying_power", 0) or 0), 0.0)
+    if cash > 1:
+        return cash
+    if power > 1:
+        return power
+    return cash
+
+
 def plan_combo_for_broker(date: str, snap: BrokerSnap,
                           combo: str = PAPER_COMBO,
                           panel: dict | None = None) -> dict:
@@ -309,7 +322,7 @@ def plan_combo_for_broker(date: str, snap: BrokerSnap,
         except Exception:
             s = None
     held = set((snap.positions or {}) if snap else {})
-    cash = float((snap.cash if snap else 0) or 0)
+    cash = leftover_for_snap(snap)
     tickets, skips = size_combo_tickets(
         rows, recs, spec["weights"], cash=cash, held=held,
         date=use_date, s=s, net=spec.get("net") or "priority",

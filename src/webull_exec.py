@@ -141,12 +141,18 @@ def parse_account_id(payload, preferred: str = "") -> str:
 
 def parse_balance(payload) -> tuple[float, float]:
     row = payload if isinstance(payload, dict) else {}
-    if "data" in row and isinstance(row["data"], dict):
-        row = row["data"]
-    cash = _num(row, "available_cash", "cash_balance", "cash",
-                "total_cash", "settled_cash")
-    power = _num(row, "buying_power", "available_buying_power",
-                 "day_buying_power", default=cash)
+    data = row.get("data") if isinstance(row, dict) else None
+    if isinstance(data, dict):
+        row = data
+    elif isinstance(data, list) and data and isinstance(data[0], dict):
+        row = data[0]
+    cash = _num(row, "available_cash", "availableCash", "cash_balance",
+                "cashBalance", "cash", "total_cash", "totalCash",
+                "total_cash_value", "totalCashValue", "settled_cash",
+                "settledCash")
+    power = _num(row, "buying_power", "buyingPower",
+                 "available_buying_power", "availableBuyingPower",
+                 "day_buying_power", "dayBuyingPower", default=cash)
     return cash, power
 
 
