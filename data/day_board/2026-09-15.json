@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T13:59:50.692758-04:00",
+  "generated_at": "2026-09-15T13:59:58.865803-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -248,7 +248,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7127
+          "size": 7134
         },
         {
           "key": "qc",
@@ -384,11 +384,11 @@
         "bad: WTI +5% leftover Hormuz/Petroline",
         "good: ES/NQ +0.4%/+0.38% not confirming",
         "good: HY contained 2.71",
-        "XLB DOWN -5.9",
-        "XLC FLAT -4.1",
-        "XLY DOWN -4.9",
-        "XLP FLAT -4.8",
-        "XLE UP +7.3"
+        "XLB DOWN -7.6",
+        "XLC FLAT -3.8",
+        "XLY DOWN -3.3",
+        "XLP FLAT -5.0",
+        "XLE UP +6.8"
       ]
     },
     {
@@ -531,7 +531,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 7127
+          "size": 7134
         },
         {
           "key": "in_actions",
@@ -782,17 +782,17 @@
     "sectors": {
       "said": "1 up / 8 down / 2 flat",
       "bullets": [
-        "XLB DOWN -5.9",
-        "XLC FLAT -4.1",
-        "XLY DOWN -4.9",
-        "XLP FLAT -4.8",
-        "XLE UP +7.3",
-        "XLF DOWN -3.4",
-        "XLV DOWN -1.5",
-        "XLI DOWN -0.8",
-        "XLRE DOWN -4.9",
-        "XLK DOWN -2.0",
-        "XLU DOWN -6.7"
+        "XLB DOWN -7.6",
+        "XLC FLAT -3.8",
+        "XLY DOWN -3.3",
+        "XLP FLAT -5.0",
+        "XLE UP +6.8",
+        "XLF DOWN -3.8",
+        "XLV DOWN -2.9",
+        "XLI DOWN -0.5",
+        "XLRE DOWN -6.3",
+        "XLK DOWN -1.1",
+        "XLU DOWN -6.5"
       ]
     },
     "news": {
@@ -815,45 +815,6 @@
     }
   },
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T08:50:54.526998-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-15_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 87541,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-09-15_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11534,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T08:50:54.126707-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-        },
-        {
-          "path": "data/exports/finviz_2026-09-15.csv",
-          "ok": true,
-          "reason": "",
-          "size": 10997494,
-          "preview": "11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11415288,
-          "preview": "11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T08:50:54.126707-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-    },
     {
       "key": "finviz_market_digest",
       "title": "Finviz homepage market digest",
@@ -3556,6 +3517,24 @@
         }
       ],
       "preview": "10/10 sector predicts ok: communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials, real_estate"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T13:59:57.482097-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-15/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 7134,
+          "preview": "keys: date, generated_at, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, sectors"
     }
   ],
   "href": {

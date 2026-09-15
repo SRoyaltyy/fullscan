@@ -1,21 +1,21 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T11:42:45.523729-04:00",
+  "generated_at": "2026-09-15T13:59:57.444893-04:00",
   "sectors": [
     {
       "sector": "Basic Materials",
       "etf": "XLB",
       "predicted_direction": "down",
       "predicted_magnitude_band": "mild",
-      "total_score": -5.904,
-      "confidence_score": 0.636,
+      "total_score": -7.604,
+      "confidence_score": 0.65,
       "multiplier": 0.9,
-      "divergence_flagged": true,
+      "divergence_flagged": false,
       "actual_pct_change": null,
       "actual_direction": null,
       "direction_hit": null,
       "magnitude_hit": null,
-      "has_predict_md": true,
+      "has_predict_md": false,
       "has_outcome_md": false,
       "components": {
         "S0_SHARED_MACRO": -1.0,
@@ -30,7 +30,7 @@
       "etf": "XLC",
       "predicted_direction": "flat",
       "predicted_magnitude_band": "flat",
-      "total_score": -4.058,
+      "total_score": -3.82,
       "confidence_score": 0.55,
       "multiplier": 0.9,
       "divergence_flagged": false,
@@ -53,8 +53,8 @@
       "etf": "XLY",
       "predicted_direction": "down",
       "predicted_magnitude_band": "mild",
-      "total_score": -4.948,
-      "confidence_score": 0.65,
+      "total_score": -3.327,
+      "confidence_score": 0.633,
       "multiplier": 0.9,
       "divergence_flagged": false,
       "actual_pct_change": null,
@@ -65,10 +65,10 @@
       "has_outcome_md": false,
       "components": {
         "S0_SHARED_MACRO": -1.0,
-        "S1_SECTOR_FACTORS": -0.5,
+        "S1_SECTOR_FACTORS": 0.0,
         "S2_BREADTH": 0.0,
         "S3_FLOWS_POSITIONING": 0.0,
-        "S4_ETF_TAPE": 0.0
+        "S4_ETF_TAPE": -1.0
       }
     },
     {
@@ -76,7 +76,7 @@
       "etf": "XLP",
       "predicted_direction": "flat",
       "predicted_magnitude_band": "flat",
-      "total_score": -4.821,
+      "total_score": -5.038,
       "confidence_score": 0.55,
       "multiplier": 0.9,
       "divergence_flagged": false,
@@ -87,11 +87,11 @@
       "has_predict_md": true,
       "has_outcome_md": false,
       "components": {
-        "S0_SHARED_MACRO": 0.0,
+        "S0_SHARED_MACRO": -0.5,
         "S1_SECTOR_FACTORS": -0.5,
-        "S2_BREADTH": -1.0,
-        "S3_FLOWS_POSITIONING": 0.5,
-        "S4_ETF_TAPE": 0.0
+        "S2_BREADTH": -0.5,
+        "S3_FLOWS_POSITIONING": 0.0,
+        "S4_ETF_TAPE": -0.25
       }
     },
     {
@@ -99,7 +99,7 @@
       "etf": "XLE",
       "predicted_direction": "up",
       "predicted_magnitude_band": "mild",
-      "total_score": 7.35,
+      "total_score": 6.75,
       "confidence_score": 0.65,
       "multiplier": 0.85,
       "divergence_flagged": false,
@@ -112,7 +112,7 @@
       "components": {
         "S0_SHARED_MACRO": -0.5,
         "S1_SECTOR_FACTORS": 2.0,
-        "S2_BREADTH": 1.0,
+        "S2_BREADTH": 0.5,
         "S3_FLOWS_POSITIONING": -0.5,
         "S4_ETF_TAPE": 0.0
       }
@@ -122,8 +122,8 @@
       "etf": "XLF",
       "predicted_direction": "down",
       "predicted_magnitude_band": "mild",
-      "total_score": -3.429,
-      "confidence_score": 0.537,
+      "total_score": -3.834,
+      "confidence_score": 0.553,
       "multiplier": 0.9,
       "divergence_flagged": true,
       "actual_pct_change": null,
@@ -134,7 +134,7 @@
       "has_outcome_md": false,
       "components": {
         "S0_SHARED_MACRO": -1.0,
-        "S1_SECTOR_FACTORS": -0.5,
+        "S1_SECTOR_FACTORS": -1.0,
         "S2_BREADTH": -0.5,
         "S3_FLOWS_POSITIONING": 0.0,
         "S4_ETF_TAPE": -0.5
@@ -145,8 +145,8 @@
       "etf": "XLV",
       "predicted_direction": "down",
       "predicted_magnitude_band": "mild",
-      "total_score": -1.505,
-      "confidence_score": 0.46,
+      "total_score": -2.943,
+      "confidence_score": 0.518,
       "multiplier": 0.9,
       "divergence_flagged": true,
       "actual_pct_change": null,
@@ -157,10 +157,10 @@
       "has_outcome_md": false,
       "components": {
         "S0_SHARED_MACRO": -0.5,
-        "S1_SECTOR_FACTORS": 0.0,
+        "S1_SECTOR_FACTORS": -0.5,
         "S2_BREADTH": 0.0,
         "S3_FLOWS_POSITIONING": 0.0,
-        "S4_ETF_TAPE": 0.0
+        "S4_ETF_TAPE": -0.5
       }
     },
     {
@@ -168,8 +168,8 @@
       "etf": "XLI",
       "predicted_direction": "down",
       "predicted_magnitude_band": "mild",
-      "total_score": -0.813,
-      "confidence_score": 0.433,
+      "total_score": -0.541,
+      "confidence_score": 0.422,
       "multiplier": 0.9,
       "divergence_flagged": true,
       "actual_pct_change": null,
@@ -191,7 +191,7 @@
       "etf": "XLRE",
       "predicted_direction": "down",
       "predicted_magnitude_band": "mild",
-      "total_score": -4.931,
+      "total_score": -6.267,
       "confidence_score": 0.65,
       "multiplier": 0.9,
       "divergence_flagged": false,
@@ -203,10 +203,10 @@
       "has_outcome_md": false,
       "components": {
         "S0_SHARED_MACRO": -1.0,
-        "S1_SECTOR_FACTORS": -0.5,
-        "S2_BREADTH": -0.5,
+        "S1_SECTOR_FACTORS": -1.0,
+        "S2_BREADTH": -1.0,
         "S3_FLOWS_POSITIONING": 0.0,
-        "S4_ETF_TAPE": -0.5
+        "S4_ETF_TAPE": 0.0
       }
     },
     {
@@ -214,8 +214,8 @@
       "etf": "XLK",
       "predicted_direction": "down",
       "predicted_magnitude_band": "mild",
-      "total_score": -1.994,
-      "confidence_score": 0.48,
+      "total_score": -1.103,
+      "confidence_score": 0.444,
       "multiplier": 0.9,
       "divergence_flagged": true,
       "actual_pct_change": null,
@@ -226,7 +226,7 @@
       "has_outcome_md": false,
       "components": {
         "S0_SHARED_MACRO": -1.5,
-        "S1_SECTOR_FACTORS": 0.5,
+        "S1_SECTOR_FACTORS": 1.0,
         "S2_BREADTH": 0.0,
         "S3_FLOWS_POSITIONING": -0.5,
         "S4_ETF_TAPE": 0.5
@@ -237,7 +237,7 @@
       "etf": "XLU",
       "predicted_direction": "down",
       "predicted_magnitude_band": "mild",
-      "total_score": -6.716,
+      "total_score": -6.499,
       "confidence_score": 0.65,
       "multiplier": 1.0,
       "divergence_flagged": true,
@@ -249,8 +249,8 @@
       "has_outcome_md": false,
       "components": {
         "S0_SHARED_MACRO": -1.0,
-        "S1_SECTOR_FACTORS": -1.5,
-        "S2_BREADTH": -0.5,
+        "S1_SECTOR_FACTORS": -2.0,
+        "S2_BREADTH": -1.0,
         "S3_FLOWS_POSITIONING": -0.5,
         "S4_ETF_TAPE": -1.0
       }
