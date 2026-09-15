@@ -344,6 +344,61 @@ def test_keep_open_elite_book_restamps_px_on_0930_names() -> None:
     assert out["quote"]["src"] == "elite_live"
 
 
+def test_write_fm_today_strategies_is_slim_with_quote() -> None:
+    """Factor-mine same-origin tickets must carry quote + top-level buy_1d."""
+    import tempfile
+    from pathlib import Path
+
+    payload = {
+        "date": "2026-09-15",
+        "generated_at": "t",
+        "clock_legal_for": "2026-09-15",
+        "session_open": "2026-09-15",
+        "n": 1,
+        "n_ok": 1,
+        "families": ["stock_book"],
+        "quote": {"src": "elite_live", "after_open": True},
+        "buy_1d": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+        "sell_1d": [],
+        "strategies": {
+            "stock_book_1d": {
+                "buy": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live",
+                         "side": "long"}],
+                "sell": [],
+                "family": "stock_book",
+                "status": "ok",
+                "date": "2026-09-15",
+            }
+        },
+    }
+    with tempfile.TemporaryDirectory() as d:
+        tmp = Path(d)
+        day = tmp / "data" / "day_board"
+        fm = tmp / "data" / "factor_mine"
+        dash = tmp / "dashboard" / "factor-mine"
+        day.mkdir(parents=True)
+        fm.mkdir(parents=True)
+        dash.mkdir(parents=True)
+        old = (st.ROOT, st.DAY, st.FM_DIR, st.DASH_FM)
+        st.ROOT, st.DAY, st.FM_DIR, st.DASH_FM = tmp, day, fm, dash
+        try:
+            with mock.patch.object(st, "keep_open_elite_book",
+                                   side_effect=lambda _d, p: p), \
+                    mock.patch.object(st, "assert_session_look"), \
+                    mock.patch.object(st, "load_existing_payload",
+                                      return_value={}):
+                st.write("2026-09-15", payload)
+        finally:
+            st.ROOT, st.DAY, st.FM_DIR, st.DASH_FM = old
+        slim = json.loads((dash / "today_strategies.json").read_text())
+        assert slim["quote"]["src"] == "elite_live"
+        assert slim["buy_1d"][0]["ticker"] == "MTCH"
+        assert slim["buy_1d"][0]["px"] == 43.04
+        assert "families" not in slim
+        full = json.loads((dash / "strategy_tickets.json").read_text())
+        assert full["families"] == ["stock_book"]
+
+
 def main() -> None:
     test_combo_would_buy_unions_member_lists()
     test_combo_skip_drops_long_and_short_clash()
@@ -359,6 +414,7 @@ def main() -> None:
     test_stamp_fills_buy_1d_from_stock_book()
     test_keep_open_elite_book_refuses_session_export()
     test_keep_open_elite_book_restamps_px_on_0930_names()
+    test_write_fm_today_strategies_is_slim_with_quote()
     print("ok")
 
 

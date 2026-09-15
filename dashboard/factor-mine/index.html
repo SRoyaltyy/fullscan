@@ -2912,11 +2912,28 @@ window.addEventListener('resize', draw);
       return r.json();
     });
   }
-  function firstOk(urls){
+  function ticketsLookLive(st){
+    if(!st || typeof st !== 'object') return false;
+    var q=st.quote||{};
+    return !!(q.after_open && String(q.src||'').indexOf('elite_live')===0);
+  }
+  function stripLooksLive(d){
+    if(!d || typeof d !== 'object') return false;
+    var q=d.quote||{};
+    var row=(d.buy_1d&&d.buy_1d[0])||{};
+    var src=String(row.px_src||q.src||'');
+    return !!(row.px!=null && src.indexOf('elite_live')===0);
+  }
+  function firstOk(urls, ok){
     var i=0;
+    var last={};
     function next(){
-      if(i>=urls.length) return Promise.resolve({});
-      return getJson(urls[i++]).catch(next);
+      if(i>=urls.length) return Promise.resolve(last);
+      return getJson(urls[i++]).then(function(d){
+        last=d;
+        if(!ok || ok(d)) return d;
+        return next();
+      }).catch(next);
     }
     return next();
   }
@@ -2928,8 +2945,8 @@ window.addEventListener('resize', draw);
   }
   function loadLiveDay(){
   Promise.all([
-    firstOk(['today.json','./today.json', RAW]),
-    firstOk(['today_strategies.json','./today_strategies.json', STRAT])
+    firstOk(['today.json','./today.json', RAW], afterBell()?stripLooksLive:null),
+    firstOk(['today_strategies.json','./today_strategies.json', STRAT], afterBell()?ticketsLookLive:null)
   ]).then(function(arr){
     var d=arr[0]||{}, st=arr[1]||{};
     var buys=ticketRows(st,'buy_1d'), sells=ticketRows(st,'sell_1d');

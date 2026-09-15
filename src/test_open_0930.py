@@ -134,6 +134,7 @@ def test_open_pack_stamps_session_open_and_restamps_pages() -> None:
     assert "Open 09:30 pack" in dep
     assert "data/day_board/**" in dep
     assert "Overlayed live strip" in dep
+    assert "src.overlay_live_strip" in dep
 
 
 def test_boards_and_paper_share_the_bell() -> None:
