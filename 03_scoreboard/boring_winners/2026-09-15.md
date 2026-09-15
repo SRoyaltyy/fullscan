@@ -27,11 +27,11 @@ Overlay 1d — · 2d — · 3d — · 1w — · W/L 0/0 · stock-book BUY 1d —
 
 | # | action | Ticker | src | stack | Marks | Cond | Hall-pass | cameras | coaches | 1d | 2d | 3d | 1w |
 |---:|---|---|---|---|---|---|---|---|---|---:|---:|---:|---:|
-| — | sell | `CCJ` | extra | `blue` | 🔵 — — | 🟢 5/2/3 | blocked | join🟢 sect🟢 gen🔴 news⬛ dig🟢 jdg🔴 AB🟢 peer🟡 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🔴 | mkt🔴 par🟢 chd🟢 co🟡 set🟡 flw🟡 | -0.95 | — | — | — |
-| — | sell | `CVE` | book | `blue` | 🔵 — — | 🟢 6/3/2 | probable | join🟢 sect🟢 gen🔴 news🟢 dig🟢 jdg🔴 AB🟢 peer🟡 heat🟢 vol🟡 cat⬛ buy🟡 yΔ🔴 | mkt🔴 par🟢 chd🟢 co🟡 set🟢 flw🟢 | +1.35 | — | — | — |
-| — | sell | `ETN` | extra | `blue` | 🔵 — — | 🟢 5/2/2 | probable | join🟢 sect🔴 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🟡 cat⬛ buy🟡 yΔ🟢 | mkt🔴 par🔴 chd🟢 co🟡 set🟢 flw🟡 | -0.81 | — | — | — |
-| — | sell | `KEYS` | extra | `blue` | 🔵 — — | 🟡 4/2/4 | probable | join🟢 sect🔴 gen🔴 news⬛ dig🟢 jdg🟡 AB🟢 peer🔴 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟢 | mkt🔴 par🔴 chd🟢 co🟡 set🟢 flw🟢 | -0.28 | — | — | — |
-| — | sell | `SM` | extra | `blue` | 🔵 — — | 🟢 5/3/3 | probable | join🟢 sect🟢 gen🔴 news🟢 dig🟢 jdg🔴 AB🟢 peer🟡 heat🔴 vol🟡 cat⬛ buy🟡 yΔ🔴 | mkt🔴 par🟢 chd🟢 co🟡 set🟢 flw🟢 | +5.61 | — | — | — |
+| — | sell | `CCJ` | extra | `blue` | 🔵 — — | 🟢 5/2/3 | blocked | join🟢 sect🟢 gen🔴 news⬛ dig🟢 jdg🔴 AB🟢 peer🟡 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🔴 | mkt🔴 par🟢 chd🟢 co🟡 set🟡 flw🟡 | -1.62 | — | — | — |
+| — | sell | `CVE` | book | `blue` | 🔵 — — | 🟢 6/3/2 | probable | join🟢 sect🟢 gen🔴 news🟢 dig🟢 jdg🔴 AB🟢 peer🟡 heat🟢 vol🟡 cat⬛ buy🟡 yΔ🔴 | mkt🔴 par🟢 chd🟢 co🟡 set🟢 flw🟢 | +1.89 | — | — | — |
+| — | sell | `ETN` | extra | `blue` | 🔵 — — | 🟢 5/2/2 | probable | join🟢 sect🔴 gen🔴 news⬛ dig🟢 jdg⬛ AB🟢 peer🟢 heat🟢 vol🟡 cat⬛ buy🟡 yΔ🟢 | mkt🔴 par🔴 chd🟢 co🟡 set🟢 flw🟡 | -0.62 | — | — | — |
+| — | sell | `KEYS` | extra | `blue` | 🔵 — — | 🟡 4/2/4 | probable | join🟢 sect🔴 gen🔴 news⬛ dig🟢 jdg🟡 AB🟢 peer🔴 heat🟢 vol🔴 cat⬛ buy🟡 yΔ🟢 | mkt🔴 par🔴 chd🟢 co🟡 set🟢 flw🟢 | -0.76 | — | — | — |
+| — | sell | `SM` | extra | `blue` | 🔵 — — | 🟢 5/3/3 | probable | join🟢 sect🟢 gen🔴 news🟢 dig🟢 jdg🔴 AB🟢 peer🟡 heat🔴 vol🟡 cat⬛ buy🟡 yΔ🔴 | mkt🔴 par🟢 chd🟢 co🟡 set🟢 flw🟢 | +5.92 | — | — | — |
 
 ## Short overlay (SELL ∩ fade)
 
