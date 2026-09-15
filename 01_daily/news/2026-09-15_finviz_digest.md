@@ -1,6 +1,6 @@
 # Finviz Daily Digest — 2026-09-15
 
-_Generated 2026-09-15T04:22:19.258516-04:00 · export=data/exports/finviz_2026-09-15.csv · ticker digests=400 · high-signal=400_
+_Generated 2026-09-15T04:24:05.914452-04:00 · export=data/exports/finviz_2026-09-15.csv · ticker digests=400 · high-signal=400_
 
 ## Major indices (live quote page)
 
@@ -23,6 +23,7 @@ _Generated 2026-09-15T04:22:19.258516-04:00 · export=data/exports/finviz_2026-0
 - **APP** [Communication Serv]: Piper Sandler cuts AppLovin price target to $325 from $385, maintains Neutral rating
 - **ARGX** [Healthcare]: argenx announces it has completed the acquisition of Forte Biosciences for $77 per share in cash, adding first-in-class anti-CD122 antibody FB102 to its immunology pipeline.
 - **ASML** [Technology]: ASML nearly sold out of 2027 EUV capacity amid very strong AI-driven demand, JPMorgan says
+- **AU** [Basic Materials]: Gold prices slide more than 3% after Fed Chair Kevin Warshâs Jackson Hole comments boost September U.S. rate hike expectations
 - **AZN** [Healthcare]: AstraZeneca late-stage SERENA-4 trial of breast cancer drug Etcamah as first-line therapy misses primary endpoint
 - **B** [Basic Materials]: Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%
 - **BAC** [Financial]: BAC CEO's soft Q3 outlook at Barclays conference drives 5% plunge
@@ -50,7 +51,6 @@ _Generated 2026-09-15T04:22:19.258516-04:00 · export=data/exports/finviz_2026-0
 - **DDOG** [Technology]: Snowflake's stronger-than-expected quarterly revenue and earnings support cloud and AI-focused enterprise software peers including Datadog
 - **DUK** [Utilities]: Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year
 - **E** [Energy]: Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results
-- **ELV** [Healthcare]: Elevance Health disclosed in an SEC filing that it reaffirmed its 2026 guidance for at least $27.00 in adjusted EPS and a 90.2% benefit expense ratio.
 
 ## By sector (top signal)
 
@@ -75,19 +75,19 @@ _Generated 2026-09-15T04:22:19.258516-04:00 · export=data/exports/finviz_2026-0
 - BSX: Boston Scientific says cyberattack will materially hit Q3 and full-year 2026 results, no longer expects to meet sales and adjusted profit guidance
 - CAH: Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.
 
-### Technology (n=7)
+### Technology (n=6)
 - ADBE: Adobe posts record Q3 revenue $6.76B and non-GAAP EPS $6.13, raises FY26 outlook and leans into AI-driven freemium strategy
 - AMD: AI leaders' call to slow frontier development sparks AMD's 5% premarket plunge
 - APH: Fabrinet earnings weakness and rising yields spark 6.5% APH drop
 - ASML: ASML nearly sold out of 2027 EUV capacity amid very strong AI-driven demand, JPMorgan says
 - CDNS: Cadence beats Q2 2026 estimates with EPS $2.11, revenue $1.6B, signs major Intel deal underpinning raised 2026 AI-driven outlook
 
-### Basic Materials (n=5)
+### Basic Materials (n=6)
 - APD: Air Products beats fiscal Q3 2026 EPS with non-GAAP $3.47, raises FY26 EPS outlook, takes $2.9B clean energy exit charge
+- AU: Gold prices slide more than 3% after Fed Chair Kevin Warshâs Jackson Hole comments boost September U.S. rate hike expectations
 - B: Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%
 - BHP: BHP Group ADRs fall after copper prices retreat from record highs amid U.S. tariff uncertainty on refined copper.
 - CRH: Berenberg price target cut to $140 from $146 triggers CRH 3.87% drop to near 52-week low
-- LIN: Linde posts record Q2 EPS, raises 2026 EPS guidance floor as project backlog grows about $1B to $8.1B
 
 ### Energy (n=5)
 - CNQ: Canadian Natural Resources posts record Q2 2026 results with EPS $1.58, raises 2026 production guidance and returns about $4B to shareholders

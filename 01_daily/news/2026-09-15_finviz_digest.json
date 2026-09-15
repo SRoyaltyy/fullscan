@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T04:22:19.258516-04:00",
+  "generated_at": "2026-09-15T04:24:05.914452-04:00",
   "export_used": "data/exports/finviz_2026-09-15.csv",
   "ticker_digest_count": 400,
   "signal_count": 400,
@@ -162,6 +162,17 @@
       "news_title": "Samsung Stock Falls as $18.7 Billion Power Proposal Highlights AI Infrastructure Costs",
       "sector": "Technology",
       "industry": "Semiconductor Equipment & Materials",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "AU",
+      "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warshâs Jackson Hole comments boost September U.S. rate hike expectations",
+      "news_title": "Kavango appoints Jasper Musadaidzwa as CEO and executive director",
+      "sector": "Basic Materials",
+      "industry": "Gold",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -683,17 +694,6 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export"
-    },
-    {
-      "ticker": "MSI",
-      "digest": "Motorola Solutions wins $139 million 10-year public safety technology contract from State of Louisiana",
-      "news_title": "Louisiana Modernizes Statewide Public Safety Response with $139 Million Motorola Solutions Contract",
-      "sector": "Technology",
-      "industry": "Communication Equipment",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
     }
   ],
   "by_sector": {
@@ -1033,17 +1033,6 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export"
-      },
-      {
-        "ticker": "MSI",
-        "digest": "Motorola Solutions wins $139 million 10-year public safety technology contract from State of Louisiana",
-        "news_title": "Louisiana Modernizes Statewide Public Safety Response with $139 Million Motorola Solutions Contract",
-        "sector": "Technology",
-        "industry": "Communication Equipment",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
       }
     ],
     "Basic Materials": [
@@ -1053,6 +1042,17 @@
         "news_title": "Air Products to Showcase Industrial Gas Solutions at the 87th Conference on Glass Problems in Toledo, Ohio",
         "sector": "Basic Materials",
         "industry": "Specialty Chemicals",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "AU",
+        "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warshâs Jackson Hole comments boost September U.S. rate hike expectations",
+        "news_title": "Kavango appoints Jasper Musadaidzwa as CEO and executive director",
+        "sector": "Basic Materials",
+        "industry": "Gold",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
@@ -1420,6 +1420,17 @@
       "news_title": "Samsung Stock Falls as $18.7 Billion Power Proposal Highlights AI Infrastructure Costs",
       "sector": "Technology",
       "industry": "Semiconductor Equipment & Materials",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "AU",
+      "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warshâs Jackson Hole comments boost September U.S. rate hike expectations",
+      "news_title": "Kavango appoints Jasper Musadaidzwa as CEO and executive director",
+      "sector": "Basic Materials",
+      "industry": "Gold",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -2157,17 +2168,6 @@
       "news_title": "Judge sets date for Colgate toothpaste tube recyclability trial",
       "sector": "Industrials",
       "industry": "Waste Management",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "RY",
-      "digest": "Royal Bank of Canada beats fiscal Q3 2026 estimates and outlines U.S. expansion plans for City National Bank",
-      "news_title": "Royal Bank of Canada (RY) (Q3 2026) Earnings Call Highlights: Record Earnings and Strategic ...",
-      "sector": "Financial",
-      "industry": "Banks - Diversified",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
