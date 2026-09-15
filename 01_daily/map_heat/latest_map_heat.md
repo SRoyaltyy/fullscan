@@ -1,49 +1,49 @@
 # MAP HEAT — 2026-09-15
 
-Export `finviz_2026-09-15.csv` · 11608 names · generated 2026-09-15T04:05:09.244453-04:00
+Export `finviz_2026-09-15.csv` · 11608 names · generated 2026-09-15T04:06:55.640686-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7656.5 | -0.48% |
-| Nasdaq 100 (NQ) | 29308.5 | -0.46% |
-| Russell 2000 (ER2) | 2896.3 | -0.68% |
-| DJIA (YM) | 52517.0 | -0.66% |
+| S&P 500 (ES) | 7656.25 | -0.47% |
+| Nasdaq 100 (NQ) | 29304.75 | -0.48% |
+| Russell 2000 (ER2) | 2896.4 | -0.68% |
+| DJIA (YM) | 52514.0 | -0.66% |
 | VIX (VX) | 17.4 | +3.26% |
-| Crude Oil WTI (CL) | 103.51 | +2.08% |
-| Crude Oil Brent (QA) | 107.82 | +2.02% |
-| Natural Gas (NG) | 2.907 | +0.35% |
-| Heating Oil (HO) | 5.1016 | +2.83% |
-| Gasoline RBOB (RB) | 3.3932 | +2.32% |
-| Gold (GC) | 4317.6 | -0.79% |
-| Silver (SI) | 63.23 | -1.42% |
-| Copper (HG) | 6.3655 | -0.60% |
-| Platinum (PL) | 1752.2 | -1.55% |
-| Palladium (PA) | 1287.0 | -1.51% |
-| USD (DX) | 99.34 | +0.24% |
-| EUR (6E) | 1.15785 | -0.17% |
+| Crude Oil WTI (CL) | 103.51 | +2.13% |
+| Crude Oil Brent (QA) | 107.81 | +2.03% |
+| Natural Gas (NG) | 2.908 | +0.38% |
+| Heating Oil (HO) | 5.0996 | +2.85% |
+| Gasoline RBOB (RB) | 3.3873 | +2.30% |
+| Gold (GC) | 4319.0 | -0.79% |
+| Silver (SI) | 63.25 | -1.40% |
+| Copper (HG) | 6.3645 | -0.65% |
+| Platinum (PL) | 1753.5 | -1.51% |
+| Palladium (PA) | 1288.0 | -1.58% |
+| USD (DX) | 99.345 | +0.24% |
+| EUR (6E) | 1.1579 | -0.17% |
 | JPY (6J) | 0.6503 | -0.58% |
-| GBP (6B) | 1.3477 | -0.29% |
-| AUD (6A) | 0.7114 | -0.31% |
+| GBP (6B) | 1.3479 | -0.27% |
+| AUD (6A) | 0.71145 | -0.29% |
 | CAD (6C) | 0.72235 | -0.01% |
-| CHF (6S) | 1.23555 | -0.19% |
-| NZD (6N) | 0.57755 | -0.44% |
-| 10 Year Note (ZN) | 105.671875 | -0.46% |
-| 5 Year Note (ZF) | 104.21875 | -0.29% |
-| 2 Year Note (ZT) | 101.9921875 | -0.08% |
-| 30 Year Bond (ZB) | 106.0625 | -0.91% |
-| Nikkei 225 (NKD) | 63105.0 | -0.12% |
-| DAX (DY) | 25233.0 | -0.80% |
-| Euro Stoxx 50 (EX) | 6206.0 | -0.89% |
+| CHF (6S) | 1.236 | -0.18% |
+| NZD (6N) | 0.57775 | -0.43% |
+| 10 Year Note (ZN) | 105.6875 | -0.46% |
+| 5 Year Note (ZF) | 104.2265625 | -0.28% |
+| 2 Year Note (ZT) | 101.9921875 | -0.09% |
+| 30 Year Bond (ZB) | 106.0625 | -0.88% |
+| Nikkei 225 (NKD) | 63070.0 | -0.08% |
+| DAX (DY) | 25229.0 | -0.78% |
+| Euro Stoxx 50 (EX) | 6207.0 | -0.83% |
 | Corn (ZC) | 532.0 | -0.23% |
 | Soybeans (ZS) | 1300.5 | -0.29% |
-| Wheat (ZW) | 720.25 | -0.24% |
-| Soybean oil (ZL) | 69.99 | +0.47% |
-| Soybean Meal (ZM) | 348.5 | -0.43% |
+| Wheat (ZW) | 720.0 | -0.31% |
+| Soybean oil (ZL) | 70.02 | +0.53% |
+| Soybean Meal (ZM) | 348.4 | -0.51% |
 | Oats (ZO) | 394.75 | +1.15% |
 | Rough Rice (ZR) | 15.985 | -0.06% |
 | Coffee (KC) | 289.25 | +1.68% |
-| Sugar (SB) | 18.07 | -0.50% |
+| Sugar (SB) | 18.08 | -0.50% |
 | Cotton (CT) | 84.7 | +0.18% |
 | Cocoa (CC) | 6029.0 | +1.04% |
 | Orange Juice (JO) | 153.55 | +5.30% |
@@ -51,17 +51,17 @@ Export `finviz_2026-09-15.csv` · 11608 names · generated 2026-09-15T04:05:09.2
 | Live Cattle (LC) | 222.2 | +1.17% |
 | Lean Hogs (LH) | 79.725 | -2.36% |
 | Feeder Cattle (FC) | 337.9 | +1.61% |
-| Bitcoin (BTC) | 76900.0 | -2.84% |
+| Bitcoin (BTC) | 76905.0 | -2.84% |
 | 3 Month SOFR (SR3) | 96.0175 | -0.01% |
 | 30 Day Fed Funds (ZQ) | 96.2625 | +0.00% |
 | Aluminum (ALI) | 3410.5 | -0.03% |
 | Canola (RS) | 818.5 | -0.55% |
 | Coal Newcastle (NCF) | 146.85 | +0.07% |
 | Ethanol (ZK) | 2.055 | +0.00% |
-| Gasoil (G) | 1511.5 | +2.32% |
+| Gasoil (G) | 1510.5 | +2.40% |
 | Iron Ore (TIO) | 97.55 | -0.48% |
 | Steel HRC (HRC) | 1234.0 | +0.00% |
-| Ultra 10 Year Note (TN) | 107.09375 | -0.59% |
+| Ultra 10 Year Note (TN) | 107.109375 | -0.61% |
 | Ultra Bond (UB) | 107.46875 | -1.09% |
 | Uranium (UX) | 89.9 | -0.11% |
 
@@ -255,16 +255,15 @@ COLD (1w):
 - **Innovation / Patent Based** 0.0% 1d -0.2% 1w · ARKK, XT, BULZ
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 4 min **JCI** Johnson Controls electrifies energy-intensive industries with new heat pumps that can triple energy efficiency and lower operating costs (PR Newswire)
-- 13 min **LCO** FTSE 100 today: Stocks slip as oil surges, AI safety rift adds to unease (Investing.com)
-- 16 min **MU,SNDK,SKHY** Watch Out SKHY, MU, SNDK: Japans Kioxia Reportedly Eyes $10B US Listing To Ride AI Memory Boom (Stocktwits)
-- 20 min **NIO,BABA** NIO Stock Rises Overnight: Nio Capital Joins Sequoia China And SMIC-Linked Backers In Robot-Sensor Bet (Stocktwits)
-- 34 min **FTV** Fluke Expands iSee Mobile Series with New TC03A Thermal Camera and ii01 Acoustic Camera (GlobeNewswire)
-- 49 min **CIGI** Industrial Occupancy Jumps as Big-Box Demand Returns (CRE Daily)
-- 52 min **GSK** GSK splashes up to $750m on experimental cancer therapy (Proactive)
-- 56 min **GOOGL** Worldline launches UCP payment handler for agentic commerce payments (Electronic Payments)
-- 56 min **GOOG** Worldline launches UCP payment handler for agentic commerce payments (Electronic Payments)
-- 58 min **TSLA,SPCX** Tesla, SpaceX Stocks Rise Overnight: Elon Musk Fuels Merger Speculation, Hints At Action Amid Close Collaboration (Stocktwits)
+- 6 min **JCI** Johnson Controls electrifies energy-intensive industries with new heat pumps that can triple energy efficiency and lower operating costs (PR Newswire)
+- 15 min **LCO** FTSE 100 today: Stocks slip as oil surges, AI safety rift adds to unease (Investing.com)
+- 17 min **MU,SNDK,SKHY** Watch Out SKHY, MU, SNDK: Japans Kioxia Reportedly Eyes $10B US Listing To Ride AI Memory Boom (Stocktwits)
+- 22 min **BABA,NIO** NIO Stock Rises Overnight: Nio Capital Joins Sequoia China And SMIC-Linked Backers In Robot-Sensor Bet (Stocktwits)
+- 36 min **FTV** Fluke Expands iSee Mobile Series with New TC03A Thermal Camera and ii01 Acoustic Camera (GlobeNewswire)
+- 50 min **CIGI** Industrial Occupancy Jumps as Big-Box Demand Returns (CRE Daily)
+- 54 min **GSK** GSK splashes up to $750m on experimental cancer therapy (Proactive)
+- 58 min **GOOGL,GOOG** Worldline launches UCP payment handler for agentic commerce payments (Electronic Payments)
+- 1 hour **TSLA,SPCX** Tesla, SpaceX Stocks Rise Overnight: Elon Musk Fuels Merger Speculation, Hints At Action Amid Close Collaboration (Stocktwits)
 - 1 hour **GAP** GAP Stock Heads For Monthly Loss Despite CEO Optimism On Old Navy  Cardi B Campaign Fails To Lift Retail Mood (Stocktwits)
 - 1 hour **KMTS** Kestra Medical Technologies Ltd (KMTS) (Q1 2027) Earnings Call Highlights: Revenue Jumps 60% as ... (GuruFocus.com)
 - 1 hour **MKL** Markel International bolsters leadership in new Marine Transportation business with two key appointments (PR Newswire)
@@ -278,8 +277,9 @@ COLD (1w):
 - 1 hour **ABNB** Airbnb Commits $250M to Housing Construction Fund (CRE Daily)
 - 1 hour **HUHU** NOTICE TO DISREGARD - HUHUTECH International Group Inc. (GlobeNewswire)
 - 1 hour **BORR** Borr Drilling Limited - Streamlines Mexico Operations (PR Newswire)
-- 1 hour **AMD,MU,NVDA,AVGO,SKHY** Chip Stocks Sink on AI Slowdown Calls, But Analysts Doubt a Crash Is Near (BeInCrypto)
+- 2 hours **AMD,NVDA,MU,AVGO,SKHY** Chip Stocks Sink on AI Slowdown Calls, But Analysts Doubt a Crash Is Near (BeInCrypto)
 - 2 hours **VKTX** Can Viking Therapeutics Beat Big Pharma With Monthly Weight-Loss Shots? Heres The Risk CEO Says Could Derail It (Stocktwits)
+- 2 hours **HAWK** HawkEye 360 Establishes First European Subsidiary in Luxembourg (PR Newswire)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
