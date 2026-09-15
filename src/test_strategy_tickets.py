@@ -396,6 +396,48 @@ def test_open_0930_snapshot_beats_later_elite_rerank() -> None:
     assert out["quote"]["src"] == "elite_live"
 
 
+def test_keep_open_does_not_reuse_yesterdays_today_strategies() -> None:
+    """09-15 slim tickets must not become the 09-16 name lock."""
+    import tempfile
+    from pathlib import Path
+    from src import elite_live_px as elp
+
+    stale = {
+        "date": "2026-09-15",
+        "clock_legal_for": "2026-09-15",
+        "quote": {"src": "elite_live", "after_open": True},
+        "buy_1d": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+        "strategies": {"stock_book_1d": {
+            "buy": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+        }},
+    }
+    fresh = {
+        "date": "2026-09-16",
+        "clock_legal_for": "2026-09-16",
+        "quote": {"src": "elite_live", "after_open": True},
+        "buy_1d": [{"ticker": "AAPL", "px": 221.1, "px_src": "elite_live"}],
+        "strategies": {"stock_book_1d": {
+            "buy": [{"ticker": "AAPL", "px": 221.1, "px_src": "elite_live"}],
+        }},
+    }
+    with tempfile.TemporaryDirectory() as d:
+        day = Path(d)
+        (day / "today_strategies.json").write_text(
+            json.dumps(stale), encoding="utf-8")
+        old_day, old_dash = st.DAY, st.DASH_FM
+        st.DAY = day
+        st.DASH_FM = day / "dash"
+        st.DASH_FM.mkdir()
+        try:
+            with mock.patch.object(elp, "after_open", return_value=True):
+                out = st.keep_open_elite_book("2026-09-16", fresh)
+        finally:
+            st.DAY = old_day
+            st.DASH_FM = old_dash
+    assert out["buy_1d"][0]["ticker"] == "AAPL"
+    assert out["buy_1d"][0]["px"] == 221.1
+
+
 def test_write_fm_today_strategies_is_slim_with_quote() -> None:
     """Factor-mine same-origin tickets must carry quote + top-level buy_1d."""
     import tempfile
@@ -468,6 +510,7 @@ def main() -> None:
     test_keep_open_elite_book_restamps_px_on_0930_names()
     test_write_fm_today_strategies_is_slim_with_quote()
     test_open_0930_snapshot_beats_later_elite_rerank()
+    test_keep_open_does_not_reuse_yesterdays_today_strategies()
     print("ok")
 
 
