@@ -5,7 +5,7 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** OFF (general predict down score -6.2, conf 0.749)
-- **Yields:** flat (fred_dgs10) | **Dollar:** strong (dxy) | **Oil:** rising | **VIX:** spiking (ratio 1.14 via vix/ma20) spot 17.83
+- **Yields:** flat (fred_dgs10) | **Dollar:** strong (dxy) | **Oil:** rising | **VIX:** spiking (ratio 1.13 via vix/ma20) spot 17.68
 - **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.11
 - **High-impact events:** 4 bullish vs 14 bearish
 
@@ -16,14 +16,14 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 | sector:Basic Materials | 🌧️ hostile | medium | news_judge SECTOR Basic Materials [bearish] |
 | sector:Communication Services | ⛅ neutral | high | sector predict score +0.4 dir up conf 0.416 [sector board] |
 | sector:Consumer Cyclical | 🌧️ hostile | high | sector predict score -4.7 dir down conf 0.588 [sector board] |
-| sector:Consumer Defensive | 🌧️ hostile | medium | finviz sector median week -2.16% [tape] |
+| sector:Consumer Defensive | 🌧️ hostile | medium | finviz sector median week -2.13% [tape] |
 | sector:Energy | 🌤️ favorable | high | sector predict score +4.0 dir up conf 0.661 [sector board] |
 | sector:Financial | 🌧️ hostile | medium | news_judge SECTOR Financial [bearish] |
 | sector:Healthcare | ⛅ neutral | high | sector predict score +0.9 dir up conf 0.537 [sector board] |
 | sector:Industrials | 🌧️ hostile | medium | finviz sector median week -3.44% [tape] |
-| sector:Real Estate | 🌧️ hostile | medium | finviz sector median week -2.87% [tape] |
+| sector:Real Estate | 🌧️ hostile | medium | finviz sector median week -2.92% [tape] |
 | sector:Technology | 🌤️ favorable | medium | news_judge SECTOR Technology [bullish] |
-| sector:Utilities | 🌧️ hostile | medium | finviz sector median week -2.66% [tape] |
+| sector:Utilities | 🌧️ hostile | medium | finviz sector median week -2.75% [tape] |
 
 ## Size
 
