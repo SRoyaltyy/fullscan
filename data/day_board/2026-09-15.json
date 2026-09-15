@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T07:29:00.778268-04:00",
+  "generated_at": "2026-09-15T07:30:09.687737-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -47,7 +47,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 270898
+          "size": 268785
         },
         {
           "key": "heat_md",
@@ -56,7 +56,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 16521
+          "size": 16086
         }
       ],
       "said": "tables on disk",
@@ -176,7 +176,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 270898
+          "size": 268785
         },
         {
           "key": "parsed",
@@ -839,31 +839,6 @@
     }
   },
   "lands": [
-    {
-      "key": "finviz",
-      "title": "Finviz universe export",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T04:25:03.095909-04:00",
-      "files": [
-        {
-          "path": "data/exports/finviz_2026-09-15.csv",
-          "ok": true,
-          "reason": "",
-          "size": 10945111,
-          "preview": "11617 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11415288,
-          "preview": "11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        }
-      ],
-      "preview": "11617 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-    },
     {
       "key": "map_heat",
       "title": "Map heat morning overlay",
@@ -3545,6 +3520,31 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-15\n**Generated:** 2026-09-15T07:29:00.251652-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a lower open as oil tops $102 and 10-year yield exceeds 5% ahead of FOMC decision\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** WTI crude $102.0\n**CPI/Fed:** \u2014\n**Leaders:** BDRX, VEEA, MYSZ, FTFT, FPS, COE, VRA\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** FPS, COE, VRA\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-15\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T07:30:09.175758-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-15_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 268785,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-15_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 16443,
+          "preview": "# MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T07:30:09.018767-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T07:30:09.018767-04:00"
     }
   ],
   "href": {

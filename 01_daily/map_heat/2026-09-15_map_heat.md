@@ -1,68 +1,68 @@
 # MAP HEAT — 2026-09-15
 
-Export `finviz_2026-09-15.csv` · 11616 names · generated 2026-09-15T07:11:00.729516-04:00
+Export `finviz_2026-09-15.csv` · 11616 names · generated 2026-09-15T07:30:09.018767-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7676.25 | -0.22% |
-| Nasdaq 100 (NQ) | 29393.5 | -0.21% |
-| Russell 2000 (ER2) | 2908.1 | -0.28% |
-| DJIA (YM) | 52709.0 | -0.29% |
-| VIX (VX) | 17.05 | +1.18% |
-| Crude Oil WTI (CL) | 102.58 | +1.13% |
-| Crude Oil Brent (QA) | 106.18 | +0.46% |
-| Natural Gas (NG) | 2.888 | -0.28% |
-| Heating Oil (HO) | 5.0816 | +2.42% |
-| Gasoline RBOB (RB) | 3.3549 | +1.13% |
-| Gold (GC) | 4321.8 | -0.70% |
-| Silver (SI) | 63.64 | -0.78% |
-| Copper (HG) | 6.402 | -0.04% |
-| Platinum (PL) | 1768.2 | -0.69% |
-| Palladium (PA) | 1303.5 | -0.32% |
-| USD (DX) | 99.365 | +0.26% |
-| EUR (6E) | 1.15765 | -0.19% |
-| JPY (6J) | 0.6505000000000001 | -0.55% |
-| GBP (6B) | 1.3478 | -0.27% |
-| AUD (6A) | 0.71175 | -0.25% |
+| S&P 500 (ES) | 7680.75 | -0.16% |
+| Nasdaq 100 (NQ) | 29424.5 | -0.10% |
+| Russell 2000 (ER2) | 2910.6 | -0.19% |
+| DJIA (YM) | 52741.0 | -0.24% |
+| VIX (VX) | 17.0 | +0.88% |
+| Crude Oil WTI (CL) | 102.41 | +0.96% |
+| Crude Oil Brent (QA) | 106.04 | +0.32% |
+| Natural Gas (NG) | 2.9 | +0.10% |
+| Heating Oil (HO) | 5.075 | +2.28% |
+| Gasoline RBOB (RB) | 3.3477 | +0.90% |
+| Gold (GC) | 4325.4 | -0.61% |
+| Silver (SI) | 63.68 | -0.74% |
+| Copper (HG) | 6.41 | +0.09% |
+| Platinum (PL) | 1774.0 | -0.37% |
+| Palladium (PA) | 1307.0 | -0.05% |
+| USD (DX) | 99.315 | +0.21% |
+| EUR (6E) | 1.1582 | -0.14% |
+| JPY (6J) | 0.6507 | -0.52% |
+| GBP (6B) | 1.3488 | -0.20% |
+| AUD (6A) | 0.7121 | -0.20% |
 | CAD (6C) | 0.7217 | -0.10% |
-| CHF (6S) | 1.23495 | -0.23% |
-| NZD (6N) | 0.57775 | -0.41% |
-| 10 Year Note (ZN) | 105.890625 | -0.28% |
-| 5 Year Note (ZF) | 104.3515625 | -0.16% |
-| 2 Year Note (ZT) | 102.04296875 | -0.04% |
-| 30 Year Bond (ZB) | 106.4375 | -0.55% |
-| Nikkei 225 (NKD) | 63730.0 | +0.84% |
-| DAX (DY) | 25430.0 | +0.01% |
-| Euro Stoxx 50 (EX) | 6259.0 | -0.02% |
-| Corn (ZC) | 529.75 | -0.66% |
-| Soybeans (ZS) | 1299.75 | -0.33% |
-| Wheat (ZW) | 716.5 | -0.73% |
-| Soybean oil (ZL) | 70.01 | +0.47% |
-| Soybean Meal (ZM) | 348.0 | -0.63% |
+| CHF (6S) | 1.23545 | -0.22% |
+| NZD (6N) | 0.5781 | -0.35% |
+| 10 Year Note (ZN) | 105.921875 | -0.22% |
+| 5 Year Note (ZF) | 104.3828125 | -0.13% |
+| 2 Year Note (ZT) | 102.0546875 | -0.03% |
+| 30 Year Bond (ZB) | 106.53125 | -0.47% |
+| Nikkei 225 (NKD) | 63805.0 | +0.99% |
+| DAX (DY) | 25426.0 | +0.00% |
+| Euro Stoxx 50 (EX) | 6256.0 | -0.05% |
+| Corn (ZC) | 530.0 | -0.61% |
+| Soybeans (ZS) | 1299.0 | -0.40% |
+| Wheat (ZW) | 717.0 | -0.69% |
+| Soybean oil (ZL) | 69.93 | +0.40% |
+| Soybean Meal (ZM) | 347.9 | -0.66% |
 | Oats (ZO) | 394.5 | +0.38% |
 | Rough Rice (ZR) | 15.985 | -0.06% |
-| Coffee (KC) | 289.75 | -0.26% |
-| Sugar (SB) | 18.28 | +0.66% |
-| Cotton (CT) | 84.92 | +0.39% |
-| Cocoa (CC) | 5839.0 | -3.20% |
+| Coffee (KC) | 289.4 | -0.43% |
+| Sugar (SB) | 18.22 | +0.33% |
+| Cotton (CT) | 84.53 | -0.06% |
+| Cocoa (CC) | 5867.0 | -2.59% |
 | Orange Juice (JO) | 153.55 | +5.30% |
 | Lumber (LB) | 566.0 | +0.18% |
 | Live Cattle (LC) | 222.2 | +1.17% |
 | Lean Hogs (LH) | 79.725 | -2.36% |
 | Feeder Cattle (FC) | 337.9 | +1.61% |
-| Bitcoin (BTC) | 77025.0 | -2.70% |
+| Bitcoin (BTC) | 77065.0 | -2.64% |
 | 3 Month SOFR (SR3) | 96.0225 | -0.00% |
 | 30 Day Fed Funds (ZQ) | 96.2625 | +0.00% |
 | Aluminum (ALI) | 3410.5 | -0.03% |
-| Canola (RS) | 819.4 | -0.43% |
+| Canola (RS) | 818.7 | -0.52% |
 | Coal Newcastle (NCF) | 146.85 | +0.07% |
 | Ethanol (ZK) | 2.055 | +0.00% |
-| Gasoil (G) | 1500.5 | +1.61% |
+| Gasoil (G) | 1498.5 | +1.42% |
 | Iron Ore (TIO) | 97.55 | -0.48% |
 | Steel HRC (HRC) | 1234.0 | +0.00% |
-| Ultra 10 Year Note (TN) | 107.359375 | -0.36% |
-| Ultra Bond (UB) | 107.875 | -0.75% |
+| Ultra 10 Year Note (TN) | 107.421875 | -0.30% |
+| Ultra Bond (UB) | 107.96875 | -0.66% |
 | Uranium (UX) | 89.9 | -0.11% |
 
 ## CALENDAR
@@ -128,11 +128,11 @@ Mega-cap earnings:
 - AMC **JEF**  EPS est 0.926  (Jefferies Financial Group Inc)
 
 Options event-vol flags (NOT direction):
-- **MU** exp 2026-09-16 ATM IV 0.002 implied move +0.0% put/call OI —
+- **MU** exp 2026-09-16 ATM IV 0.002 implied move +0.0% put/call OI 0.695
 - **COST** exp 2026-09-18 ATM IV 0.002 implied move +0.0% put/call OI 2.844
-- **ACN** exp 2026-09-18 ATM IV 0.0001 implied move 0.0% put/call OI 0.0
+- **ACN** exp 2026-09-18 ATM IV 0.0001 implied move 0.0% put/call OI 0.386
 - **CTAS** exp 2026-09-18 ATM IV 0.0078 implied move +0.1% put/call OI 0.494
-- **NKE** exp 2026-09-18 ATM IV 0.0039 implied move +0.0% put/call OI —
+- **NKE** exp 2026-09-18 ATM IV 0.0039 implied move +0.0% put/call OI 1.648
 - **AZO** exp 2026-09-18 ATM IV 0.002 implied move +0.0% put/call OI 1.325
 - **PAYX** exp 2026-09-18 ATM IV 0.0156 implied move +0.1% put/call OI 0.677
 - **JBL** exp 2026-09-18 ATM IV 0.0156 implied move +0.1% put/call OI 0.25
@@ -255,31 +255,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 3 min **TROW** T. Rowe Price Group Inc's Dividend Analysis (GuruFocus.com)
-- 3 min **VRSK** Verisk Analytics Inc's Dividend Analysis (GuruFocus.com)
-- 5 min **CCI** Crown Castle Inc's Dividend Analysis (GuruFocus.com)
-- 5 min **AXON** Axon Announces Proposed Offering of $1.0 Billion of 0% Convertible Senior Notes (PR Newswire)
-- 6 min **XEL** Xcel Energy Inc's Dividend Analysis (GuruFocus.com)
-- 6 min **VEON** VEON and Beeline Kazakhstan Sign Payments Cooperation Memorandum with National Bank of Kazakhstan (GlobeNewswire)
-- 7 min **PSA** Public Storage's Dividend Analysis (GuruFocus.com)
-- 7 min **VEEV** Leading Biotech Selects Veeva Vault CRM Globally (PR Newswire)
-- 8 min **CVE** Cenovus Energy Inc's Dividend Analysis (GuruFocus.com)
-- 8 min **DLR** Digital Realty Trust Inc's Dividend Analysis (GuruFocus.com)
-- 8 min **ECL** Ecolab Inc's Dividend Analysis (GuruFocus.com)
-- 8 min **AMZN,GXO** Factory robots long posed a safety threat to human workers. One company says it's solved that problem. (MarketWatch)
-- 9 min **MO** Altria Group Inc's Dividend Analysis (GuruFocus.com)
-- 9 min **GILD** Gilead Sciences Inc's Dividend Analysis (GuruFocus.com)
-- 10 min **MRK** Merck & Co Inc's Dividend Analysis (GuruFocus.com)
-- 10 min **KO** Coca-Cola Co's Dividend Analysis (GuruFocus.com)
-- 10 min **CCXI** Agility Unveils Digit 5 Humanoid Robot Built for Cooperatively Safe Work at Scale (PR Newswire)
-- 10 min **NWL** Crock-Pot Brand and Valspar Team Up to Bring Color to the Heart of the Home (PR Newswire)
-- 10 min **CEVA** Ceva Appoints Semiconductor Industry Veteran Ziv Hammer as Executive Vice President to Lead Connectivity & Sensing (PR Newswire)
-- 10 min **RTX** RTX's Pratt & Whitney completes F135 Engine Core Upgrade Risk Reduction Design Review (PR Newswire)
-- 10 min **CSTL** New Decision Modeling Study Demonstrates TissueCypher Significantly Improves Risk-Aligned Management for Patients with Barrett's Esophagus (PR Newswire)
-- 10 min **LIND** LINDBLAD EXPEDITIONS HOLDINGS, INC. EXPANDS PORTFOLIO WITH THE ACQUISITION OF WHITE DESERT ANTARCTICA AND ECHO CHARLIE TO CREATE A LEADING FORCE IN EXPERIENTIAL TRAVEL (PR Newswire)
-- 10 min **QSR** Restaurant Brands International to Report Third Quarter 2026 Results on October 29, 2026 (PR Newswire)
-- 10 min **EU** enCore Energy Provides Update on Distribution of Verdera Common Shares to its Shareholders (PR Newswire)
-- 10 min **COE** 51Talk Online Education Group Announces Second Quarter 2026 Results (PR Newswire)
+- 5 min **SPCX,TSLA** Elon Musk Is Teasing a Tesla and SpaceX Merger Again (Barrons.com)
+- 10 min **ALM** Almonty enters into tungsten partnership with Rwanda Government (Mining Technology)
+- 11 min **WH** Wyndham Hotels & Resorts Inc's Dividend Analysis (GuruFocus.com)
+- 11 min **IBP** Installed Building Products Inc's Dividend Analysis (GuruFocus.com)
+- 12 min **M** Macy's Inc's Dividend Analysis (GuruFocus.com)
+- 12 min **GATX** GATX Corp's Dividend Analysis (GuruFocus.com)
+- 13 min **VLY** Valley National Bancorp's Dividend Analysis (GuruFocus.com)
+- 13 min **EMN,KODK** Eastman Chemical Co's Dividend Analysis (GuruFocus.com)
+- 14 min **UGI** UGI Corp's Dividend Analysis (GuruFocus.com)
+- 14 min **NEU** NewMarket Corp's Dividend Analysis (GuruFocus.com)
+- 14 min **PB** Prosperity Bancshares Inc's Dividend Analysis (GuruFocus.com)
+- 14 min **DRVN** Driven Brands Announces Updated Capital Allocation Priorities (Business Wire)
+- 15 min **JXN** Jackson Financial Inc's Dividend Analysis (GuruFocus.com)
+- 15 min **DPZ** Domino's Pizza Inc's Dividend Analysis (GuruFocus.com)
+- 16 min **UDR** UDR Inc's Dividend Analysis (GuruFocus.com)
+- 16 min **AMH** American Homes 4 Rent's Dividend Analysis (GuruFocus.com)
+- 18 min **ALLO** CLLS Stock Heads For 14-Month Low After 40% Rout: Citizens Flags Delayed Cellectis Catalysts After Cancer Pipeline Pivot (Stocktwits)
+- 18 min **CLLS,AZN,IOVA** CLLS Stock Heads For 14-Month Low After 40% Rout: Citizens Flags Delayed Cellectis Catalysts After Cancer Pipeline Pivot (Stocktwits)
+- 18 min **PSKY** Paramount Skydance Corp's Dividend Analysis (GuruFocus.com)
+- 18 min **SOXX,AVGO** Broadcom CEO Hock Tan defends $230B AI chip revenue target (Quartz)
+- 19 min **TKO** TKO Group Holdings Inc's Dividend Analysis (GuruFocus.com)
+- 19 min **ARCC** Ares Capital Corp's Dividend Analysis (GuruFocus.com)
+- 19 min **LDOS** Leidos Holdings Inc's Dividend Analysis (GuruFocus.com)
+- 20 min **OVV** Ovintiv Inc's Dividend Analysis (GuruFocus.com)
+- 20 min **PKG** Packaging Corp of America's Dividend Analysis (GuruFocus.com)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.

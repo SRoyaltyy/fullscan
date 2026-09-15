@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T07:28:53.855059-04:00",
+  "generated_at": "2026-09-15T07:30:09.146194-04:00",
   "all_ok": false,
   "qc_all_ok": true,
   "book_ok": true,
@@ -204,7 +204,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/map_heat/2026-09-15_map_heat.json",
-        "size": 270898
+        "size": 268785
       },
       {
         "kind": "map_heat_baseline",

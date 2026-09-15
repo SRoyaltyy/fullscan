@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T07:28:53.673240-04:00",
+  "generated_at": "2026-09-15T07:30:09.087299-04:00",
   "items": [
     {
       "ok": true,
@@ -95,7 +95,7 @@
       "kind": "map_heat",
       "path": "01_daily/map_heat/2026-09-15_map_heat.json",
       "reason": "",
-      "size": 270898,
+      "size": 268785,
       "carried": false,
       "timeout": false,
       "empty": false,
