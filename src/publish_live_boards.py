@@ -38,6 +38,79 @@ DAY_BOARD = ROOT / "data" / "day_board"
 FM_TODAY = ROOT / "dashboard" / "factor-mine" / "today.json"
 
 
+def ticket_1d_rows(payload: dict) -> tuple[list, list, dict]:
+    """Session-open 1d names + Elite quote from tickets, not a later re-rank."""
+    sb = (payload.get("strategies") or {}).get("stock_book_1d") or {}
+    buys = list(payload.get("buy_1d") or sb.get("buy") or [])
+    sells = list(payload.get("sell_1d") or sb.get("sell") or [])
+    return buys, sells, payload.get("quote") or {}
+
+
+def rewrite_today_strip(date: str, buys: list, sells: list, quote: dict | None,
+                        generated_at: str | None = None) -> list[str]:
+    """Keep today.json / factor-mine today.json on the same live 1d book."""
+    wrote = []
+    paths = (
+        DAY_BOARD / "today.json",
+        FM_TODAY,
+        DAY_BOARD / f"{date}_tickets.json",
+    )
+    for path in paths:
+        prev: dict = {}
+        if path.is_file():
+            try:
+                raw = json.loads(path.read_text(encoding="utf-8"))
+            except (OSError, ValueError, json.JSONDecodeError):
+                raw = {}
+            if isinstance(raw, dict):
+                prev = raw
+        prev["date"] = date
+        if generated_at:
+            prev["generated_at"] = generated_at
+        prev["buy_1d"] = buys
+        prev["sell_1d"] = sells
+        if quote:
+            prev["quote"] = quote
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(prev, indent=2), encoding="utf-8")
+        try:
+            wrote.append(str(path.relative_to(ROOT)))
+        except ValueError:
+            wrote.append(str(path))
+    return wrote
+
+
+def load_live_ticket_payload(date: str) -> dict:
+    """On-disk 09:30 tickets with Elite live px, or {}."""
+    paths = (
+        DAY_BOARD / f"{date}_open_0930.json",
+        DAY_BOARD / "today_strategies.json",
+        DAY_BOARD / f"{date}_strategy_tickets.json",
+        ROOT / "dashboard" / "factor-mine" / "strategy_tickets.json",
+        ROOT / "dashboard" / "today_strategies.json",
+    )
+    for path in paths:
+        if not path.is_file():
+            continue
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError, json.JSONDecodeError):
+            continue
+        if not isinstance(data, dict):
+            continue
+        legal = str(data.get("clock_legal_for") or data.get("date") or "")
+        if legal and legal != date:
+            continue
+        quote = data.get("quote") or {}
+        src = str(quote.get("src") or "")
+        if not quote.get("after_open") or not src.startswith("elite_live"):
+            continue
+        buys, sells, _quote = ticket_1d_rows(data)
+        if buys or sells:
+            return data
+    return {}
+
+
 def _today() -> str:
     return datetime.now(ET).date().isoformat()
 
@@ -74,6 +147,18 @@ def publish(date: str, *, write: bool = True, extras: bool = True) -> dict:
     try:
         from . import day_board
         board = day_board.build(date)
+        live = load_live_ticket_payload(date)
+        if live:
+            buys, sells, quote = ticket_1d_rows(live)
+            sel = board.setdefault("selections", {})
+            sel["buy_1d"] = buys
+            sel["sell_1d"] = sells
+            board["quote"] = quote
+            print(
+                "[live-boards] keep 09:30 Elite 1d "
+                f"buy={[r.get('ticker') for r in buys[:6] if isinstance(r, dict)]}",
+                flush=True,
+            )
         if write:
             paths = day_board.write_json(board)
             out["wrote"].extend(str(p.relative_to(ROOT)) for p in paths)
@@ -96,6 +181,7 @@ def publish(date: str, *, write: bool = True, extras: bool = True) -> dict:
                 "counts": board.get("counts") or {},
                 "buy_1d": sel.get("buy_1d") or [],
                 "sell_1d": sel.get("sell_1d") or [],
+                "quote": board.get("quote") or {},
                 "flatten": sel.get("flatten") or {},
                 "general": sel.get("general") or {},
                 "sectors": sel.get("sectors") or {},
@@ -117,8 +203,31 @@ def publish(date: str, *, write: bool = True, extras: bool = True) -> dict:
             payload_st = st.build(date)
             paths = st.write(date, payload_st)
             out["wrote"].extend(str(p.relative_to(ROOT)) for p in paths)
-            out["n_strategies"] = payload_st.get("n")
-            out["n_strategies_ok"] = payload_st.get("n_ok")
+            live = load_live_ticket_payload(date)
+            src = live or payload_st
+            out["n_strategies"] = src.get("n")
+            out["n_strategies_ok"] = src.get("n_ok")
+            if live:
+                buys, sells, quote = ticket_1d_rows(live)
+                synced = rewrite_today_strip(
+                    date, buys, sells, quote,
+                    generated_at=live.get("generated_at")
+                    or payload_st.get("generated_at"),
+                )
+                out["wrote"].extend(synced)
+                out["buy_1d"] = [
+                    r.get("ticker") for r in buys if isinstance(r, dict)
+                ]
+                out["sell_1d"] = [
+                    r.get("ticker") for r in sells if isinstance(r, dict)
+                ]
+                out["quote"] = quote
+            else:
+                print(
+                    "[live-boards] skip today.json rewrite — "
+                    "tickets not elite_live after rebuild",
+                    flush=True,
+                )
         except Exception as e:  # noqa: BLE001
             print(f"[live-boards] WARN: strategy tickets: {e}", flush=True)
 

@@ -87,6 +87,11 @@ def test_open_0930_yml_owns_the_bell() -> None:
     yml = (WF / "open_0930.yml").read_text(encoding="utf-8")
     assert 'cron: "30 13 * * 1-5"' in yml
     assert 'cron: "30 14 * * 1-5"' in yml
+    assert 'cron: "25 13 * * 1-5"' in yml
+    assert 'cron: "33 13 * * 1-5"' in yml
+    assert 'cron: "0 14-19 * * 1-5"' in yml
+    assert 'cron: "30 9 * * 1-5"' in yml
+    assert 'cron: "0 12 * * 1-5"' in yml
     assert "src.open_0930_clock" in yml
     assert "--max-wait-s 4200" in yml
     assert "scripts/publish_open_pack.sh" in yml
@@ -97,7 +102,9 @@ def test_open_0930_yml_owns_the_bell() -> None:
     assert "deploy-dashboard.yml" in yml
     assert "timeout-minutes: 90" in yml
     assert "group: webull-paper" in yml
-    assert "workflow_run:" not in yml
+    assert "workflow_run:" in yml
+    assert "Pre-Open ALL" in yml
+    assert "Publish strategy tickets" in yml
     assert "api.webull.com" not in yml
     assert "--env real" not in yml
     assert "flatten_robust" not in yml.lower() or "does not change" in yml.lower()
@@ -114,15 +121,25 @@ def test_open_pack_stamps_session_open_and_restamps_pages() -> None:
     assert "set -euo pipefail" in script
     assert "clock_legal_for" in script
     assert "session_open" in script
+    assert "open-pack live px miss" in script
+    assert 'python3 -c "import requests"' in script
     assert "publish_dashboard.sh" in script
     assert "assert_session_look" in st
     assert 'clock_use": "session_open"' in st
     assert "clock_legal_for" in st
     assert "assert_session_look(payload, date)" in st
+    assert "keep_open_elite_book" in st
+    assert "keep elite_live 09:30 book" in st
+    assert "save_open_0930_book" in st
+    assert "${DATE}_open_0930.json" in yml
+    assert "fetch-depth: 80" in yml
     assert "scripts/publish_open_pack.sh" in yml
     assert "publish_dashboard.sh" in script
     assert "deploy-dashboard.yml" in yml
     assert "Open 09:30 pack" in dep
+    assert "data/day_board/**" in dep
+    assert "Overlayed live strip" in dep
+    assert "src.overlay_live_strip" in dep
 
 
 def test_boards_and_paper_share_the_bell() -> None:
@@ -158,6 +175,8 @@ def test_ci_gates_the_bell_contract() -> None:
     assert "src.test_webull_exec" in yml
     assert "src.test_combo_broker" in yml
     assert "src.test_skip_if_good" in yml
+    assert "src.test_elite_live_px" in yml
+    assert "src.test_book_suggestions" in yml
     assert "api.webull.com" not in yml
 
 
@@ -167,6 +186,7 @@ def test_orch_heals_open_0930() -> None:
     assert "open_0930.yml" in yml
     assert "publish_strategy_tickets.yml" in yml
     assert "skip_if_good --job open_0930" in yml
+    assert 'cron: "15 14-19 * * 1-5"' in yml
 
 
 def main_tests() -> None:

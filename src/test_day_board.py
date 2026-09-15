@@ -194,6 +194,77 @@ def test_day_board_html_has_raw_poll() -> None:
     assert "Stock Book readiness" in html
     assert "What was just pushed" in html
     assert "factor-mine" in html
+    assert "stock_book_1d" in html
+    assert 'indexOf("elite_live")===0' in html
+    assert "function firstOk" in html
+    assert "ok ? {} : last" in html
+    assert "function ticketsLookLive" in html
+    assert "function stripLooksLive" in html
+    assert "function sessionDate" in html
+    assert '"today_strategies.json"' in html
+    assert '"today.json"' in html
+    assert "RAW + \"/today.json\"" in html
+    assert "afterBell() ? stripLooksLive" in html
+    assert "viewingToday && afterBell() && !liveBoard" in html
+    assert "afterBell() && dates.indexOf(today) < 0" in html
+    assert "today && afterBell() && dates.includes(today)" in html
+    assert 'board = {date: date, overall: "—", counts: {}, lands: [], processes: []}' in html
+    assert "earlyBuys" in html
+    assert "!buys && !sells && !afterBell()" in html
+
+
+def test_write_json_keeps_open_0930_lock_over_ranker_scores() -> None:
+    """news_parse-style write_json must not replace locked MTCH with DBX scores."""
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        board_dir = root / "data" / "day_board"
+        board_dir.mkdir(parents=True)
+        lock = {
+            "date": "2026-09-15",
+            "clock_legal_for": "2026-09-15",
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+            "sell_1d": [{"ticker": "OKLO", "px": 36.14, "px_src": "elite_live"}],
+            "strategies": {"stock_book_1d": {
+                "buy": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+                "sell": [{"ticker": "OKLO", "px": 36.14, "px_src": "elite_live"}],
+            }},
+        }
+        (board_dir / "2026-09-15_open_0930.json").write_text(
+            json.dumps(lock), encoding="utf-8")
+        (board_dir / "today_strategies.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "DBX", "px": 38.07, "px_src": "elite_live"}],
+        }), encoding="utf-8")
+        board = {
+            "date": "2026-09-15",
+            "generated_at": "t",
+            "overall": "OK",
+            "ranker_ready": True,
+            "counts": {"ok": 1},
+            "selections": {
+                "buy_1d": [{"ticker": "DBX", "score": 0.67}],
+                "sell_1d": [{"ticker": "OKTA", "score": 0.1}],
+            },
+            "lands": [],
+        }
+        with mock.patch.object(day_board, "ROOT", root), \
+                mock.patch.object(day_board, "BOARD_DIR", board_dir):
+            wrote = day_board.write_json(board)
+        today = json.loads((board_dir / "today.json").read_text())
+        assert today["buy_1d"][0]["ticker"] == "MTCH"
+        assert today["buy_1d"][0]["px"] == 43.04
+        assert today["quote"]["src"] == "elite_live"
+        dated = json.loads((board_dir / "2026-09-15.json").read_text())
+        assert dated["selections"]["buy_1d"][0]["ticker"] == "MTCH"
+        assert dated["selections"]["buy_1d"][0]["px"] == 43.04
+        assert dated["quote"]["src"] == "elite_live"
+        fm = root / "dashboard" / "factor-mine" / "today.json"
+        assert fm.is_file()
+        fm_today = json.loads(fm.read_text())
+        assert fm_today["buy_1d"][0]["ticker"] == "MTCH"
+        assert any(p == board_dir / "today.json" for p in wrote)
 
 
 def test_should_not_push_locally() -> None:
@@ -253,6 +324,7 @@ def main() -> None:
         test_merge_boards_unions_lands,
         test_qc_rejects_2b_digest,
         test_day_board_html_has_raw_poll,
+        test_write_json_keeps_open_0930_lock_over_ranker_scores,
         test_day_board_splits_finviz_digest_rows,
         test_should_not_push_locally,
         test_land_never_raises,

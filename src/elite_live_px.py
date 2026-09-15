@@ -38,6 +38,14 @@ def after_open(when: datetime | None = None) -> bool:
     return t.hour > 9 or (t.hour == 9 and t.minute >= 30)
 
 
+def quote_is_elite_live(quote: object) -> bool:
+    """True when the ticket quote is after-open Elite live px (not session_export)."""
+    if not isinstance(quote, dict):
+        return False
+    src = str(quote.get("src") or "")
+    return bool(quote.get("after_open")) and src.startswith("elite_live")
+
+
 def _num(v):
     if v is None or v == "":
         return None
@@ -114,6 +122,17 @@ def pull_elite_overview() -> tuple[dict[str, float], str | None]:
     return prices, None
 
 
+def written_after_open(path: Path, date: str) -> bool:
+    """True when this file was written at/after 09:30 ET on ``date``."""
+    try:
+        mtime = datetime.fromtimestamp(path.stat().st_mtime, ET)
+    except OSError:
+        return False
+    if mtime.strftime("%Y-%m-%d") != str(date):
+        return False
+    return after_open(mtime)
+
+
 def fallback_export(date: str) -> tuple[Path | None, str]:
     """Same-session / latest Elite CSV. Skip Theme Radar and prior-day Price."""
     candidates = [
@@ -126,7 +145,8 @@ def fallback_export(date: str) -> tuple[Path | None, str]:
         if path.is_file() and not _is_theme_radar(path) and load_csv_prices(path):
             src = "elite_live_file" if path == LIVE_CSV else "preopen_export"
             if path.name.startswith(f"finviz_{date}"):
-                src = "session_export"
+                src = ("elite_live_file" if written_after_open(path, date)
+                       else "session_export")
             return path, src
     return None, "missing"
 
@@ -154,9 +174,9 @@ def quote_book(date: str, *, pull_live: bool | None = None) -> dict:
         path, src = fallback_export(date)
         if path:
             prices = load_csv_prices(path)
-        if want_live and src != "elite_live":
+        if want_live and not str(src).startswith("elite_live"):
             src = src if src != "missing" else "last_available"
-            if err and src != "elite_live":
+            if err:
                 src = f"{src}+{err}"
     return {
         "date": date,

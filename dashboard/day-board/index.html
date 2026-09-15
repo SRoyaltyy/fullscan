@@ -77,6 +77,49 @@ const RAW = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_
 const mark = {OK:"ok", PARTIAL:"part", FAIL:"fail"};
 const fileMark = {OK:"✅", FAIL:"❌", MISSING:"⬜", SKIP:"➖", PARTIAL:"⚠️"};
 function $(id){return document.getElementById(id)}
+function afterBell(){
+  try{
+    const parts=new Intl.DateTimeFormat("en-US",{timeZone:"America/New_York",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date());
+    let h=0,m=0;
+    parts.forEach(p => { if(p.type==="hour") h=+p.value; if(p.type==="minute") m=+p.value; });
+    return h>9 || (h===9 && m>=30);
+  }catch(e){ return true; }
+}
+function sessionDate(){
+  try{
+    return new Intl.DateTimeFormat("en-CA",{timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
+  }catch(e){ return ""; }
+}
+function ticketsLookLive(st){
+  if(!st || typeof st !== "object") return false;
+  const q = st.quote || {};
+  const d = String(st.date || st.clock_legal_for || "");
+  const today = sessionDate();
+  if(today && d && d !== today) return false;
+  return !!(q.after_open && String(q.src || "").indexOf("elite_live")===0);
+}
+function stripLooksLive(d){
+  if(!d || typeof d !== "object") return false;
+  const q = d.quote || {};
+  const row = (d.buy_1d && d.buy_1d[0]) || {};
+  const src = String(row.px_src || q.src || "");
+  const day = String(d.date || d.clock_legal_for || "");
+  const today = sessionDate();
+  if(today && day && day !== today) return false;
+  return !!(row.px != null && src.indexOf("elite_live")===0);
+}
+function firstOk(urls, ok){
+  let i=0, last={};
+  function next(){
+    if(i>=urls.length) return Promise.resolve(ok ? {} : last);
+    return fetchJson(urls[i++]).then(d => {
+      last = d;
+      if(!ok || ok(d)) return d;
+      return next();
+    }).catch(next);
+  }
+  return next();
+}
 async function fetchJson(url){
   const u = url + (url.includes("?") ? "&" : "?") + "t=" + Date.now();
   const r = await fetch(u, {cache:"no-store"});
@@ -85,9 +128,10 @@ async function fetchJson(url){
 }
 function tickers(rows, cls){
   return (rows||[]).map(r => {
-    const t = (r.ticker||"").toUpperCase();
+    const t = ((r && r.ticker) || (typeof r === "string" ? r : "")).toUpperCase();
     if(!t) return "";
-    return `<span class="pill ${cls}">${t}</span>`;
+    const px = (r && typeof r === "object") ? r.px : null;
+    return `<span class="pill ${cls}">${t}${px!=null?(" "+px):""}</span>`;
   }).join("");
 }
 function render(board){
@@ -103,26 +147,63 @@ function render(board){
     ["Fail / missing", c.fail??"—", "fail"],
   ].map(([k,v,cls]) => `<div class="card">${k}<b class="${cls}">${v}</b></div>`).join("");
   const sel = board.selections||{};
-  let buys = tickers(sel.buy_1d, "buy");
-  let sells = tickers(sel.sell_1d, "sell");
+  const today = sessionDate();
+  const viewingToday = !!(today && board.date === today);
+  const liveBoard = !!(board.quote && board.quote.after_open && String(board.quote.src||"").indexOf("elite_live")===0);
+  let buyRows = (board.buy_1d && board.buy_1d.length) ? board.buy_1d : (sel.buy_1d||[]);
+  let sellRows = (board.sell_1d && board.sell_1d.length) ? board.sell_1d : (sel.sell_1d||[]);
+  // After 09:30 the dated ranker file stays score-only MPC/DBX. Do not
+  // paint that as Today's book — wait for the live today.json strip.
+  if(viewingToday && afterBell() && !liveBoard){
+    buyRows = [];
+    sellRows = [];
+  }
+  let buys = tickers(buyRows, "buy");
+  let sells = tickers(sellRows, "sell");
   $("sels").innerHTML = (buys || sells)
     ? (buys + sells)
     : `<span class="mut">No 1d BUY/SELL on disk for ${board.date}.</span>`;
-  if(!buys && !sells){
+  if(!buys && !sells && !afterBell()){
     fetch("https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/stock_book/latest_suggestions.json?t="+Date.now(), {cache:"no-store"})
       .then(r => r.ok ? r.json() : null)
       .then(d => {
         if(!d || d.date !== board.date) return;
+        if(afterBell()) return;
         const b = (d.buy_1d||[]).map(t => `<span class="pill buy">${t}</span>`).join("");
         const s = (d.sell_1d||[]).map(t => `<span class="pill sell">${t}</span>`).join("");
         if(b || s) $("sels").innerHTML = b + s;
       }).catch(()=>{});
   }
-  fetch("https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today_strategies.json?t="+Date.now(), {cache:"no-store"})
-    .then(r => r.ok ? r.json() : null)
+  if(viewingToday){
+    firstOk([
+      "today.json",
+      "./today.json",
+      RAW + "/today.json"
+    ], afterBell() ? stripLooksLive : null)
+      .then(strip => {
+        if(!strip || typeof strip !== "object") return;
+        const b = strip.buy_1d || [];
+        const s = strip.sell_1d || [];
+        if(b.length || s.length){
+          $("sels").innerHTML = tickers(b, "buy") + tickers(s, "sell");
+        }
+      });
+  }
+  firstOk([
+    "today_strategies.json",
+    "./today_strategies.json",
+    RAW + "/today_strategies.json"
+  ], afterBell() ? ticketsLookLive : null)
     .then(d => {
       const box = $("strats");
-      if(!box || !d || !d.strategies) { if(box) box.textContent = "No today_strategies.json on main."; return; }
+      if(!box) return;
+      const sb0 = (d && d.strategies && d.strategies.stock_book_1d) || {};
+      const earlyBuys = (d && d.buy_1d && d.buy_1d.length) ? d.buy_1d : (sb0.buy || []);
+      const earlySells = (d && d.sell_1d && d.sell_1d.length) ? d.sell_1d : (sb0.sell || []);
+      if(earlyBuys.length || earlySells.length){
+        $("sels").innerHTML = tickers(earlyBuys, "buy") + tickers(earlySells, "sell");
+      }
+      if(!d || !d.strategies) { box.textContent = "No today_strategies.json on main."; return; }
       if(d.date && board.date && d.date !== board.date) {
         box.textContent = "strategies file is " + d.date + " (board is " + board.date + ")";
       }
@@ -147,9 +228,15 @@ function render(board){
           return bit;
         }).filter(Boolean);
       };
+      const sb = (d.strategies && d.strategies.stock_book_1d) || {};
+      const liveBuys = (d.buy_1d && d.buy_1d.length) ? d.buy_1d : (sb.buy || []);
+      const liveSells = (d.sell_1d && d.sell_1d.length) ? d.sell_1d : (sb.sell || []);
+      if(liveBuys.length || liveSells.length){
+        $("sels").innerHTML = tickers(liveBuys, "buy") + tickers(liveSells, "sell");
+      }
       const keys = Object.keys(d.strategies);
       const q = d.quote || {};
-      const qbit = q.src ? (` · px ${q.src}${(q.src === "elite_live" || q.src === "elite_live_file") ? " (now)" : " (not live)"}`) : "";
+      const qbit = q.src ? (` · px ${q.src}${(String(q.src).indexOf("elite_live")===0) ? " (now)" : " (not live)"}`) : "";
       box.innerHTML = `<div>${keys.length} strategies · ${d.n_ok||0} with tickets · ${d.date||""}${qbit}</div>` +
         keys.map(name => {
           const s = d.strategies[name] || {};
@@ -209,7 +296,9 @@ function esc(s){
   return String(s||"").replace(/[&<>]/g, ch => ({'&':'&','<':'<','>':'>'}[ch]));
 }
 async function loadDate(date){
-  const board = await fetchJson(`${RAW}/${date}.json`);
+  let board;
+  try { board = await fetchJson(`${RAW}/${date}.json`); }
+  catch(e){ board = {date: date, overall: "—", counts: {}, lands: [], processes: []}; }
   render(board);
 }
 async function boot(){
@@ -217,10 +306,14 @@ async function boot(){
   try { latest = await fetchJson(`${RAW}/latest.json`); }
   catch(e){ $("stamp").textContent = "Could not reach main JSON: "+e; return; }
   const dates = latest.dates || [latest.date];
+  const today = sessionDate();
+  // After 09:30 open on today's session, not last night's latest.date.
+  if(today && afterBell() && dates.indexOf(today) < 0) dates.unshift(today);
   const sel = $("dateSel");
   sel.innerHTML = dates.map(d => `<option value="${d}">${d}</option>`).join("");
   const q = new URLSearchParams(location.search).get("date");
-  const want = q && dates.includes(q) ? q : (latest.date || dates[0]);
+  const want = (q && dates.includes(q)) ? q
+    : ((today && afterBell() && dates.includes(today)) ? today : (latest.date || dates[0]));
   sel.value = want;
   await loadDate(want);
   sel.onchange = () => loadDate(sel.value);

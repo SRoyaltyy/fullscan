@@ -911,6 +911,10 @@ def test_incremental_land_and_day_board() -> None:
     dep = (WF / "deploy-dashboard.yml").read_text(encoding="utf-8")
     assert "id-token: write" in dep
     assert "day-board" in dep
+    assert "Overlayed dashboard/index.html (paper) from main" in dep
+    assert "data/day_board/**" in dep
+    assert "Overlayed live strip" in dep
+    assert "src.overlay_live_strip" in dep
     orch = (WF / "daily_orchestrator.yml").read_text(encoding="utf-8")
     assert "news_parse.yml" in orch
     assert "news_judge.yml" in orch

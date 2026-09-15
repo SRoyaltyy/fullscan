@@ -6,9 +6,17 @@ from __future__ import annotations
 
 import json
 import tempfile
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
-from src import book_suggestions, land_file, stock_book_diag_signals as signals
+from src import (
+    book_suggestions,
+    land_file,
+    publish_live_boards,
+    stock_book_diag_signals as signals,
+    strategy_tickets as st,
+)
 
 
 def test_suggestions_from_book_lists_1d_names() -> None:
@@ -67,6 +75,8 @@ def test_paper_template_polls_raw_main() -> None:
     assert "every strategy" in html
     assert "id=\"liveBook\"" in html
     assert html.index("<h1>Paper Trading") < html.index('id="liveBook"')
+    assert "stock_book_1d" in html
+    assert "strat.buy_1d && strat.buy_1d.length" in html
     baked = (root / "dashboard" / "index.html").read_text(encoding="utf-8")
     assert book_suggestions.POLLER_MARK in baked
     assert book_suggestions.TODAY_URL in baked
@@ -74,6 +84,7 @@ def test_paper_template_polls_raw_main() -> None:
     assert book_suggestions.STRAT_URL in baked
     assert "every strategy" in baked
     assert baked.index("<h1>Paper Trading") < baked.index('id="liveBook"')
+    assert "stock_book_1d" in baked
     sleeve = (root / "dashboard" / "sleeve-merge" / "index.html").read_text(
         encoding="utf-8")
     strat = (root / "dashboard" / "strategy-board" / "index.html").read_text(
@@ -82,6 +93,8 @@ def test_paper_template_polls_raw_main() -> None:
     assert book_suggestions.STRAT_URL in sleeve
     assert book_suggestions.POLLER_MARK in strat
     assert book_suggestions.STRAT_URL in strat
+    assert "stock_book_1d" in strat
+    assert (root / "src" / "paper_dash.html") in book_suggestions.LIVE_BOARD_HTML
 
 
 def test_factor_mine_template_paints_every_strategy() -> None:
@@ -99,7 +112,31 @@ def test_factor_mine_template_paints_every_strategy() -> None:
     assert "SIT would-have" in html
     assert "liveStartRow" in html
     assert "pending — not 0%" in html
+    assert "attachLiveSessionDate" in html
+    assert "let d=liveTicketsDate();" in html
+    assert "h>9 || (h===9 && m>=30)" in html
+    assert "D._closedDate" in html
+    assert "loadLiveDay" in html
+    assert "today_strategies.json" in html
+    assert "function firstOk" in html
+    assert "ok ? {} : last" in html
+    assert "function ticketsLookLive" in html
+    assert "function stripLooksLive" in html
+    assert "function sessionDate" in html
+    assert "d!==today" in html or "d !== today" in html
+    assert "function ticketRows" in html
+    assert "function liveTicketsAreLive" in html
+    assert "d!==today" in html
+    assert "liveDate===date && liveTicketsAreLive()" in html
+    assert "after 09:30 live" in html
+    assert "LIVE</span>" in html
+    assert "setInterval(loadLiveDay, afterBell()?20000:60000)" in html
     assert html.index("<h1>Factor strategy mine") < html.index('id="liveDay"')
+    assert 'id="live-day-loader"' in html
+    assert html.index('id="liveDay"') < html.index('id="cards"')
+    fm_main = html.split('id="fm-main"')[1].split('id="live-day-loader"')[0]
+    assert "function loadLiveDay" not in fm_main
+    assert "function loadLiveDay" in html.split('id="live-day-loader"')[1]
     assert 'id="bracketOn"' in html
     assert 'id="takePct"' in html
     assert 'id="stopPct"' in html
@@ -121,6 +158,20 @@ def test_day_board_falls_back_to_suggestions() -> None:
     assert "data/stock_book/latest_suggestions.json" in html
     assert "today_strategies.json" in html
     assert "Every strategy" in html
+    assert "stock_book_1d" in html
+    assert "function firstOk" in html
+    assert "ok ? {} : last" in html
+    assert "function ticketsLookLive" in html
+    assert "function stripLooksLive" in html
+    assert "function sessionDate" in html
+    assert "afterBell() ? ticketsLookLive" in html
+    assert "afterBell() ? stripLooksLive" in html
+    assert '"today.json"' in html
+    assert "viewingToday && afterBell() && !liveBoard" in html
+    assert "afterBell() && dates.indexOf(today) < 0" in html
+    assert "today && afterBell() && dates.includes(today)" in html
+    assert "earlyBuys" in html
+    assert "!buys && !sells && !afterBell()" in html
 
 
 def test_preopen_and_book_publish_strip_without_paper() -> None:
@@ -134,9 +185,18 @@ def test_preopen_and_book_publish_strip_without_paper() -> None:
     live_idx = pre.index("src.publish_live_boards")
     paper_idx = pre.index("src.paper_trade")
     assert live_idx < paper_idx
+    assert "timeout_s=420" in pre
     assert "src.publish_live_boards" in book
+    pub_py = (root / "src" / "publish_live_boards.py").read_text(encoding="utf-8")
+    assert "rewrite_today_strip" in pub_py
+    assert "ticket_1d_rows" in pub_py
+    assert "load_live_ticket_payload" in pub_py
+    assert '{date}_open_0930.json' in pub_py
+    assert "keep 09:30 Elite 1d" in pub_py
+    assert "tickets not elite_live after rebuild" in pub_py
     assert "skip extras (catalyst/backtest/paper/sleeve)" in book
-    assert "timeout_s=180" in book
+    assert "timeout_s=420" in book
+    assert book.count("timeout_s=420") >= 2
     assert "book_suggestions.write" in sb
     assert "ensure_dashboard_poller" in sb
 
@@ -164,6 +224,10 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "src.webull_exec" not in script
     assert "write_per_sleeve" in (root / "src" / "strategy_tickets.py").read_text(encoding="utf-8")
     assert "unset FINVIZ_SKIP_LIVE" in script
+    assert 'python3 -c "import requests"' in script
+    assert "open-pack live px miss" in script
+    assert "openpyxl requests" in pre
+    assert "openpyxl requests" in book
     assert "FINVIZ_SKIP_LIVE: \"\"" in pre
     assert "FINVIZ_SKIP_LIVE: \"\"" in book
     assert "quoteLabel" in book_suggestions._POLLER_JS
@@ -174,6 +238,9 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "past 09:30 ET" in orch
     assert "Publish strategy tickets" in dep
     assert "Open 09:30 pack" in dep
+    assert "Overlayed dashboard/index.html (paper) from main" in dep
+    assert "data/day_board/**" in dep
+    assert "Overlayed live strip" in dep
     assert "gh workflow run deploy-dashboard.yml" in pub
     assert "dashboard/today_strategies.json" in pub
     assert "scripts/publish_dashboard.sh" in pub
@@ -186,6 +253,20 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "SIT would-have" in book_suggestions._POLLER_JS
     assert "Theme Radar" in book_suggestions._POLLER_JS
     assert "factor-mine/today_strategies.json" in book_suggestions._POLLER_JS
+    assert "afterBell() ? 20000 : 60000" in book_suggestions._POLLER_JS
+    assert "function firstOk" in book_suggestions._POLLER_JS
+    assert "ok ? {} : last" in book_suggestions._POLLER_JS
+    assert "afterBell() ? Object.assign({}, today)" in book_suggestions._POLLER_JS
+    assert "if(!afterBell())" in book_suggestions._POLLER_JS
+    assert "function ticketsLookLive" in book_suggestions._POLLER_JS
+    assert "function stripLooksLive" in book_suggestions._POLLER_JS
+    assert "function sessionDate" in book_suggestions._POLLER_JS
+    assert "src.overlay_live_strip" in dep
+    assert "stock_book_1d" in book_suggestions._POLLER_JS
+    assert "strat.buy_1d && strat.buy_1d.length" in book_suggestions._POLLER_JS
+    assert 'cron: "32 13 * * 1-5"' in orch
+    assert 'cron: "35 14 * * 1-5"' in orch
+    assert 'cron: "15 14-19 * * 1-5"' in orch
 
 
 def test_inspect_html_ok_when_poller_and_sidecar() -> None:
@@ -264,6 +345,459 @@ def test_ensure_poller_refreshes_old_uniform_strip() -> None:
         assert "https://example/today.json" not in text
 
 
+def test_ticket_1d_rows_fall_back_to_stock_book() -> None:
+    buys, sells, quote = publish_live_boards.ticket_1d_rows({
+        "quote": {"src": "elite_live", "after_open": True},
+        "strategies": {
+            "stock_book_1d": {
+                "buy": [{"ticker": "AVAH", "px": 14.24, "px_src": "elite_live"}],
+                "sell": [{"ticker": "METC", "px": 9.98, "px_src": "elite_live"}],
+            }
+        },
+    })
+    assert [x["ticker"] for x in buys] == ["AVAH"]
+    assert [x["ticker"] for x in sells] == ["METC"]
+    assert quote["src"] == "elite_live"
+
+
+def test_rewrite_today_strip_overwrites_reranked_names() -> None:
+    """A noon live_boards land must not leave today.json on MTCH without px."""
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        day = root / "data" / "day_board"
+        fm = root / "dashboard" / "factor-mine"
+        day.mkdir(parents=True)
+        fm.mkdir(parents=True)
+        (day / "today.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "buy_1d": [{"ticker": "MTCH", "score": 0.3}],
+        }), encoding="utf-8")
+        old_day = publish_live_boards.DAY_BOARD
+        old_fm = publish_live_boards.FM_TODAY
+        old_root = publish_live_boards.ROOT
+        publish_live_boards.ROOT = root
+        publish_live_boards.DAY_BOARD = day
+        publish_live_boards.FM_TODAY = fm / "today.json"
+        try:
+            wrote = publish_live_boards.rewrite_today_strip(
+                "2026-09-15",
+                [{"ticker": "AVAH", "px": 14.24, "px_src": "elite_live"}],
+                [{"ticker": "METC", "px": 9.98, "px_src": "elite_live"}],
+                {"src": "elite_live", "after_open": True},
+                generated_at="t",
+            )
+        finally:
+            publish_live_boards.ROOT = old_root
+            publish_live_boards.DAY_BOARD = old_day
+            publish_live_boards.FM_TODAY = old_fm
+        assert any(p.endswith("today.json") for p in wrote)
+        strip = json.loads((day / "today.json").read_text(encoding="utf-8"))
+        assert strip["buy_1d"][0]["ticker"] == "AVAH"
+        assert strip["buy_1d"][0]["px"] == 14.24
+        assert strip["quote"]["src"] == "elite_live"
+        fm_strip = json.loads((fm / "today.json").read_text(encoding="utf-8"))
+        assert fm_strip["buy_1d"][0]["ticker"] == "AVAH"
+
+
+def test_load_live_ticket_payload_requires_elite_live() -> None:
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        day = root / "data" / "day_board"
+        day.mkdir(parents=True)
+        (day / "today_strategies.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "clock_legal_for": "2026-09-15",
+            "quote": {"after_open": True, "src": "session_export"},
+            "buy_1d": [{"ticker": "AVAH", "px": 14.24}],
+        }), encoding="utf-8")
+        old_root = publish_live_boards.ROOT
+        old_day = publish_live_boards.DAY_BOARD
+        publish_live_boards.ROOT = root
+        publish_live_boards.DAY_BOARD = day
+        try:
+            assert publish_live_boards.load_live_ticket_payload("2026-09-15") == {}
+            payload = json.loads((day / "today_strategies.json").read_text())
+            payload["quote"]["src"] = "elite_live"
+            (day / "today_strategies.json").write_text(
+                json.dumps(payload), encoding="utf-8")
+            got = publish_live_boards.load_live_ticket_payload("2026-09-15")
+            assert got["buy_1d"][0]["ticker"] == "AVAH"
+        finally:
+            publish_live_boards.ROOT = old_root
+            publish_live_boards.DAY_BOARD = old_day
+
+
+def test_load_live_ticket_payload_prefers_open_0930_lock() -> None:
+    """A later elite DBX today_strategies.json must not beat the 09:30 lock."""
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        day = root / "data" / "day_board"
+        day.mkdir(parents=True)
+        (day / "2026-09-15_open_0930.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "clock_legal_for": "2026-09-15",
+            "quote": {"after_open": True, "src": "elite_live"},
+            "buy_1d": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+        }), encoding="utf-8")
+        (day / "today_strategies.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "clock_legal_for": "2026-09-15",
+            "quote": {"after_open": True, "src": "elite_live"},
+            "buy_1d": [{"ticker": "DBX", "px": 38.07, "px_src": "elite_live"}],
+        }), encoding="utf-8")
+        old_root = publish_live_boards.ROOT
+        old_day = publish_live_boards.DAY_BOARD
+        publish_live_boards.ROOT = root
+        publish_live_boards.DAY_BOARD = day
+        try:
+            got = publish_live_boards.load_live_ticket_payload("2026-09-15")
+        finally:
+            publish_live_boards.ROOT = old_root
+            publish_live_boards.DAY_BOARD = old_day
+        assert got["buy_1d"][0]["ticker"] == "MTCH"
+        assert got["buy_1d"][0]["px"] == 43.04
+
+
+def test_publish_keeps_elite_1d_when_tickets_rebuild_fails() -> None:
+    """Noon skip-if-good land must not leave MTCH on today.json."""
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        day = root / "data" / "day_board"
+        fm = root / "dashboard" / "factor-mine"
+        book = root / "data" / "stock_book"
+        day.mkdir(parents=True)
+        fm.mkdir(parents=True)
+        book.mkdir(parents=True)
+        (book / "2026-09-15_stock_book.json").write_text("{}", encoding="utf-8")
+        (day / "today_strategies.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "clock_legal_for": "2026-09-15",
+            "generated_at": "t",
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "AVAH", "px": 14.24, "px_src": "elite_live"}],
+            "sell_1d": [{"ticker": "METC", "px": 9.98, "px_src": "elite_live"}],
+            "strategies": {"stock_book_1d": {
+                "buy": [{"ticker": "AVAH", "px": 14.24, "px_src": "elite_live"}],
+                "sell": [{"ticker": "METC", "px": 9.98, "px_src": "elite_live"}],
+            }},
+        }), encoding="utf-8")
+        board = {
+            "date": "2026-09-15",
+            "generated_at": "noon",
+            "overall": "ok",
+            "ranker_ready": True,
+            "counts": {},
+            "selections": {"buy_1d": [{"ticker": "MTCH", "score": 0.3}]},
+            "lands": [],
+        }
+        old = {
+            "ROOT": publish_live_boards.ROOT,
+            "DAY_BOARD": publish_live_boards.DAY_BOARD,
+            "FM_TODAY": publish_live_boards.FM_TODAY,
+            "BOOK": publish_live_boards.BOOK,
+        }
+        publish_live_boards.ROOT = root
+        publish_live_boards.DAY_BOARD = day
+        publish_live_boards.FM_TODAY = fm / "today.json"
+        publish_live_boards.BOOK = book
+        from unittest import mock
+        from src import day_board
+        try:
+            with mock.patch.object(day_board, "BOARD_DIR", day), \
+                    mock.patch.object(day_board, "build", return_value=board), \
+                    mock.patch.object(day_board, "write_html",
+                                     side_effect=RuntimeError("skip html")), \
+                    mock.patch("src.strategy_tickets.build",
+                               side_effect=RuntimeError("timeout")):
+                out = publish_live_boards.publish(
+                    "2026-09-15", write=True, extras=False)
+        finally:
+            for k, v in old.items():
+                setattr(publish_live_boards, k, v)
+        strip = json.loads((day / "today.json").read_text(encoding="utf-8"))
+        assert strip["buy_1d"][0]["ticker"] == "AVAH"
+        assert strip["buy_1d"][0]["px"] == 14.24
+        assert out["buy_1d"] == ["AVAH"]
+
+
+def test_day_board_write_json_keeps_elite_when_news_parse_lands() -> None:
+    """note_land / write_json must not drop Elite px for a ranker restamp."""
+    import tempfile
+    from src import day_board
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        board_dir = root / "data" / "day_board"
+        board_dir.mkdir(parents=True)
+        (board_dir / "today_strategies.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "clock_legal_for": "2026-09-15",
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+            "sell_1d": [{"ticker": "METC", "px": 9.98, "px_src": "elite_live"}],
+        }), encoding="utf-8")
+        old = day_board.BOARD_DIR
+        day_board.BOARD_DIR = board_dir
+        try:
+            day_board.write_json({
+                "date": "2026-09-15",
+                "generated_at": "news_parse",
+                "overall": "ok",
+                "ranker_ready": True,
+                "counts": {},
+                "selections": {"buy_1d": [{"ticker": "MTCH", "score": 0.34}]},
+                "lands": [{"key": "news_parse"}],
+            })
+        finally:
+            day_board.BOARD_DIR = old
+        strip = json.loads((board_dir / "today.json").read_text(encoding="utf-8"))
+        assert strip["buy_1d"][0]["ticker"] == "MTCH"
+        assert strip["buy_1d"][0]["px"] == 43.04
+        assert strip["quote"]["src"] == "elite_live"
+        fm = root / "dashboard" / "factor-mine" / "today.json"
+        fm_strip = json.loads(fm.read_text(encoding="utf-8"))
+        assert fm_strip["buy_1d"][0]["px"] == 43.04
+        assert fm_strip["quote"]["src"] == "elite_live"
+
+
+def test_publish_keeps_elite_when_rebuild_is_session_export() -> None:
+    """A failed Elite restamp must not replace AVAH elite_live with MTCH."""
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        day = root / "data" / "day_board"
+        fm = root / "dashboard" / "factor-mine"
+        book = root / "data" / "stock_book"
+        fmd = root / "data" / "factor_mine"
+        day.mkdir(parents=True)
+        fm.mkdir(parents=True)
+        book.mkdir(parents=True)
+        fmd.mkdir(parents=True)
+        (book / "2026-09-15_stock_book.json").write_text("{}", encoding="utf-8")
+        elite = {
+            "date": "2026-09-15",
+            "clock_legal_for": "2026-09-15",
+            "generated_at": "0930",
+            "n": 1,
+            "n_ok": 1,
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "AVAH", "px": 14.24, "px_src": "elite_live"}],
+            "sell_1d": [{"ticker": "METC", "px": 9.98, "px_src": "elite_live"}],
+            "strategies": {"stock_book_1d": {
+                "buy": [{"ticker": "AVAH", "px": 14.24, "px_src": "elite_live"}],
+                "sell": [{"ticker": "METC", "px": 9.98, "px_src": "elite_live"}],
+            }},
+        }
+        (day / "today_strategies.json").write_text(
+            json.dumps(elite), encoding="utf-8")
+        (day / "2026-09-15_strategy_tickets.json").write_text(
+            json.dumps(elite), encoding="utf-8")
+        board = {
+            "date": "2026-09-15",
+            "generated_at": "noon",
+            "overall": "ok",
+            "ranker_ready": True,
+            "counts": {},
+            "selections": {"buy_1d": [{"ticker": "MTCH", "score": 0.3}]},
+            "lands": [],
+        }
+        bad = {
+            "date": "2026-09-15",
+            "clock_legal_for": "2026-09-15",
+            "clock_use": "session_open",
+            "generated_at": "1226",
+            "n": 1,
+            "n_ok": 1,
+            "look": {"source": "look"},
+            "quote": {
+                "src": "session_export+finviz_session: No module named 'requests'",
+                "after_open": True,
+            },
+            "buy_1d": [{"ticker": "MTCH", "px": 42.69,
+                        "px_src": "session_export"}],
+            "strategies": {"stock_book_1d": {
+                "buy": [{"ticker": "MTCH", "px": 42.69,
+                         "px_src": "session_export"}],
+                "sell": [],
+            }},
+        }
+        old_pub = {
+            "ROOT": publish_live_boards.ROOT,
+            "DAY_BOARD": publish_live_boards.DAY_BOARD,
+            "FM_TODAY": publish_live_boards.FM_TODAY,
+            "BOOK": publish_live_boards.BOOK,
+        }
+        old_st = {
+            "ROOT": st.ROOT,
+            "DAY": st.DAY,
+            "DASH_FM": st.DASH_FM,
+            "FM_DIR": st.FM_DIR,
+        }
+        publish_live_boards.ROOT = root
+        publish_live_boards.DAY_BOARD = day
+        publish_live_boards.FM_TODAY = fm / "today.json"
+        publish_live_boards.BOOK = book
+        st.ROOT = root
+        st.DAY = day
+        st.DASH_FM = fm
+        st.FM_DIR = fmd
+        from unittest import mock
+        from src import day_board
+        from src import elite_live_px as elp
+        try:
+            with mock.patch.object(day_board, "BOARD_DIR", day), \
+                    mock.patch.object(day_board, "build", return_value=board), \
+                    mock.patch.object(day_board, "write_html",
+                                     side_effect=RuntimeError("skip html")), \
+                    mock.patch.object(elp, "after_open", return_value=True), \
+                    mock.patch("src.strategy_tickets.build", return_value=bad), \
+                    mock.patch("src.hard_red_sit_research.write_per_sleeve"), \
+                    mock.patch("src.book_suggestions.write", return_value=None), \
+                    mock.patch("src.book_suggestions.ensure_dashboard_poller",
+                               return_value=False), \
+                    mock.patch("src.book_suggestions.ensure_live_board_pollers",
+                               return_value=[]):
+                out = publish_live_boards.publish(
+                    "2026-09-15", write=True, extras=False)
+        finally:
+            for k, v in old_pub.items():
+                setattr(publish_live_boards, k, v)
+            for k, v in old_st.items():
+                setattr(st, k, v)
+        tickets = json.loads((day / "today_strategies.json").read_text())
+        assert tickets["buy_1d"][0]["ticker"] == "AVAH"
+        assert tickets["quote"]["src"].startswith("elite_live")
+        strip = json.loads((day / "today.json").read_text(encoding="utf-8"))
+        assert strip["buy_1d"][0]["ticker"] == "AVAH"
+        assert strip["buy_1d"][0]["px"] == 14.24
+        assert out["buy_1d"] == ["AVAH"]
+
+
+def test_overlay_prefers_quoted_tickets_and_restamps_score_only_strip() -> None:
+    """Pages must not publish stripped factor-mine tickets over the slim."""
+    from src import overlay_live_strip as ols
+
+    with tempfile.TemporaryDirectory() as d:
+        repo = Path(d)
+        dest = repo / "pages_out"
+        day = repo / "data" / "day_board"
+        fm = repo / "dashboard" / "factor-mine"
+        day.mkdir(parents=True)
+        fm.mkdir(parents=True)
+        (day / "today_strategies.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+            "sell_1d": [{"ticker": "OKLO", "px": 36.14, "px_src": "elite_live"}],
+            "strategies": {"stock_book_1d": {
+                "buy": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+                "sell": [{"ticker": "OKLO", "px": 36.14, "px_src": "elite_live"}],
+            }},
+        }), encoding="utf-8")
+        (fm / "today_strategies.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "n": 327,
+            "families": ["excel"],
+            "strategies": {"stock_book_1d": {
+                "buy": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+            }},
+        }), encoding="utf-8")
+        (day / "today.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "buy_1d": [{"ticker": "MTCH", "score": 0.3}],
+        }), encoding="utf-8")
+        (fm / "today.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "buy_1d": [{"ticker": "MPC", "score": 0.9}],
+        }), encoding="utf-8")
+        wrote = ols.overlay(
+            dest, repo=repo, date="2026-09-15",
+            when=datetime(2026, 9, 15, 15, 5, tzinfo=ZoneInfo("America/New_York")),
+        )
+        assert wrote
+        for rel in ("", "factor-mine", "strategy-board", "day-board"):
+            base = dest / rel if rel else dest
+            tickets = json.loads((base / "today_strategies.json").read_text())
+            strip = json.loads((base / "today.json").read_text())
+            assert tickets["quote"]["src"] == "elite_live"
+            assert tickets["buy_1d"][0]["px"] == 43.04
+            assert "families" not in tickets
+            assert strip["buy_1d"][0]["ticker"] == "MTCH"
+            assert strip["buy_1d"][0]["px"] == 43.04
+            assert strip["quote"]["src"] == "elite_live"
+
+
+def test_overlay_restamps_empty_today_from_open_0930_lock() -> None:
+    """14:44 ET today.json had buy_1d=[] while tickets were elite DBX."""
+    from src import overlay_live_strip as ols
+
+    with tempfile.TemporaryDirectory() as d:
+        repo = Path(d)
+        dest = repo / "pages_out"
+        day = repo / "data" / "day_board"
+        day.mkdir(parents=True)
+        (day / "2026-09-15_open_0930.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+        }), encoding="utf-8")
+        (day / "today_strategies.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "DBX", "px": 38.07, "px_src": "elite_live"}],
+        }), encoding="utf-8")
+        (day / "today.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "buy_1d": [],
+        }), encoding="utf-8")
+        ols.overlay(
+            dest, repo=repo, date="2026-09-15",
+            when=datetime(2026, 9, 15, 15, 5, tzinfo=ZoneInfo("America/New_York")),
+        )
+        tickets = json.loads((dest / "today_strategies.json").read_text())
+        strip = json.loads((dest / "today.json").read_text())
+        assert tickets["buy_1d"][0]["ticker"] == "MTCH"
+        assert tickets["buy_1d"][0]["px"] == 43.04
+        assert strip["buy_1d"][0]["ticker"] == "MTCH"
+        assert strip["buy_1d"][0]["px"] == 43.04
+        assert strip["quote"]["src"] == "elite_live"
+
+
+def test_overlay_ignores_yesterdays_open_0930_lock() -> None:
+    """A 09-15 lock must not keep Pages on MTCH after the 09-16 bell."""
+    from src import overlay_live_strip as ols
+
+    with tempfile.TemporaryDirectory() as d:
+        repo = Path(d)
+        dest = repo / "pages_out"
+        day = repo / "data" / "day_board"
+        day.mkdir(parents=True)
+        (day / "2026-09-15_open_0930.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "clock_legal_for": "2026-09-15",
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+        }), encoding="utf-8")
+        (day / "today_strategies.json").write_text(json.dumps({
+            "date": "2026-09-16",
+            "clock_legal_for": "2026-09-16",
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "AAPL", "px": 221.1, "px_src": "elite_live"}],
+        }), encoding="utf-8")
+        (day / "today.json").write_text(json.dumps({
+            "date": "2026-09-16",
+            "buy_1d": [{"ticker": "AAPL", "score": 0.4}],
+        }), encoding="utf-8")
+        ols.overlay(
+            dest, repo=repo, date="2026-09-16",
+            when=datetime(2026, 9, 16, 9, 35, tzinfo=ZoneInfo("America/New_York")),
+        )
+        tickets = json.loads((dest / "today_strategies.json").read_text())
+        strip = json.loads((dest / "today.json").read_text())
+        assert tickets["buy_1d"][0]["ticker"] == "AAPL"
+        assert tickets["buy_1d"][0]["px"] == 221.1
+        assert strip["buy_1d"][0]["ticker"] == "AAPL"
+        assert strip["buy_1d"][0]["px"] == 221.1
+
+
 def main() -> None:
     test_suggestions_from_book_lists_1d_names()
     test_write_skips_degraded_book()
@@ -278,6 +812,16 @@ def main() -> None:
     test_ensure_poller_is_idempotent()
     test_ensure_poller_injects_into_main_sleeve_page()
     test_ensure_poller_refreshes_old_uniform_strip()
+    test_ticket_1d_rows_fall_back_to_stock_book()
+    test_rewrite_today_strip_overwrites_reranked_names()
+    test_load_live_ticket_payload_requires_elite_live()
+    test_load_live_ticket_payload_prefers_open_0930_lock()
+    test_publish_keeps_elite_1d_when_tickets_rebuild_fails()
+    test_publish_keeps_elite_when_rebuild_is_session_export()
+    test_day_board_write_json_keeps_elite_when_news_parse_lands()
+    test_overlay_prefers_quoted_tickets_and_restamps_score_only_strip()
+    test_overlay_restamps_empty_today_from_open_0930_lock()
+    test_overlay_ignores_yesterdays_open_0930_lock()
     print("ok")
 
 

@@ -180,7 +180,7 @@ machine data/strategy_board/catalog.json · write-up 03_scoreboard/STRATEGY_BOAR
     var src = q.src || "";
     if(!src && !q.at) return "";
     var banned = /theme|radar|_close|yesterday/i.test(src);
-    var live = !banned && (src === "elite_live" || src === "elite_live_file");
+    var live = !banned && String(src).indexOf("elite_live") === 0;
     var bit = " · px " + (src || "?") + (live ? " (now)" : " (not live)");
     if(banned) bit += " — Theme Radar/close refused";
     if(q.at) bit += " @ " + q.at;
@@ -277,35 +277,93 @@ machine data/strategy_board/catalog.json · write-up 03_scoreboard/STRATEGY_BOAR
       '<div class="live-book-row"><b>BUY 1d</b> ' + (buys.join(" · ") || "—") + '</div>' +
       '<div class="live-book-row sell"><b>SELL 1d</b> ' + (sells.join(" · ") || "—") + '</div>' + extra;
   }
-  function load(){
-    var rels = [
-      "today_strategies.json",
-      "factor-mine/today_strategies.json",
-      "../factor-mine/today_strategies.json"
-    ].map(function(u){
-      return fetch(u + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; });
+  function getJson(url){
+    return fetch(url + (url.indexOf("?")>=0 ? "&" : "?") + "t=" + Date.now(), {cache: "no-store"}).then(function(r){
+      if(!r.ok) throw new Error(String(r.status));
+      return r.json();
     });
+  }
+  function sessionDate(){
+    try{
+      return new Intl.DateTimeFormat("en-CA",{timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
+    }catch(e){ return ""; }
+  }
+  function ticketsLookLive(st){
+    if(!st || typeof st !== "object") return false;
+    var q = st.quote || {};
+    var d = String(st.date || st.clock_legal_for || "");
+    var today = sessionDate();
+    if(today && d && d !== today) return false;
+    return !!(q.after_open && String(q.src || "").indexOf("elite_live") === 0);
+  }
+  function stripLooksLive(d){
+    if(!d || typeof d !== "object") return false;
+    var q = d.quote || {};
+    var row = (d.buy_1d && d.buy_1d[0]) || {};
+    var src = String(row.px_src || q.src || "");
+    var day = String(d.date || d.clock_legal_for || "");
+    var today = sessionDate();
+    if(today && day && day !== today) return false;
+    return !!(row.px != null && src.indexOf("elite_live") === 0);
+  }
+  function firstOk(urls, ok){
+    var i = 0;
+    var last = {};
+    function next(){
+      if(i >= urls.length) return Promise.resolve(ok ? {} : last);
+      return getJson(urls[i++]).then(function(d){
+        last = d;
+        if(!ok || ok(d)) return d;
+        return next();
+      }).catch(next);
+    }
+    return next();
+  }
+  function load(){
     Promise.all([
-      fetch(TODAY + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; }),
-      fetch(STRAT + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; }),
-      fetch(SUG + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; })
-    ].concat(rels)).then(function(arr){
+      firstOk(["today.json", "../day-board/today.json", TODAY], afterBell() ? stripLooksLive : null),
+      firstOk([
+        "today_strategies.json",
+        "factor-mine/today_strategies.json",
+        "../factor-mine/today_strategies.json",
+        STRAT
+      ], afterBell() ? ticketsLookLive : null),
+      firstOk(["latest_suggestions.json", SUG])
+    ]).then(function(arr){
       var today = arr[0] || {}, strat = arr[1] || {}, sug = arr[2] || {};
-      var local = arr.slice(3).filter(function(x){ return x && x.strategies && Object.keys(x.strategies).length; })[0];
-      if(local && local.strategies) strat = local;
-      var d = Object.assign({}, sug, today);
+      var d = afterBell() ? Object.assign({}, today) : Object.assign({}, sug, today);
       if(strat && strat.strategies) d.strategies = strat.strategies;
       if(strat && strat.date) d.date = strat.date;
       if(strat && strat.n) d.n_strategies = strat.n;
       if(strat && strat.quote) d.quote = strat.quote;
       if(strat && strat.clock_legal_for) d.clock_legal_for = strat.clock_legal_for;
-      if(!d.buy_1d && sug.buy_1d) d.buy_1d = sug.buy_1d;
-      if(!d.sell_1d && sug.sell_1d) d.sell_1d = sug.sell_1d;
+      var sb = (strat && strat.strategies && strat.strategies.stock_book_1d) || {};
+      var buys = (strat && strat.buy_1d && strat.buy_1d.length) ? strat.buy_1d : (sb.buy || []);
+      var sells = (strat && strat.sell_1d && strat.sell_1d.length) ? strat.sell_1d : (sb.sell || []);
+      if(buys.length) d.buy_1d = buys;
+      if(sells.length) d.sell_1d = sells;
+      if(!afterBell()){
+        if(!d.buy_1d && sug.buy_1d) d.buy_1d = sug.buy_1d;
+        if(!d.sell_1d && sug.sell_1d) d.sell_1d = sug.sell_1d;
+      }
       paint(d);
     });
   }
+  function afterBell(){
+    try{
+      var parts=new Intl.DateTimeFormat("en-US",{
+        timeZone:"America/New_York",hour:"2-digit",minute:"2-digit",hour12:false
+      }).formatToParts(new Date());
+      var h=0,m=0;
+      parts.forEach(function(p){
+        if(p.type==="hour") h=+p.value;
+        if(p.type==="minute") m=+p.value;
+      });
+      return h>9 || (h===9 && m>=30);
+    }catch(e){ return true; }
+  }
   load();
-  setInterval(load, 60000);
+  setInterval(load, afterBell() ? 20000 : 60000);
 })();
 </script>
 

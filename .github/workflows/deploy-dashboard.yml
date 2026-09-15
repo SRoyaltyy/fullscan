@@ -18,6 +18,7 @@ on:
     branches: [main]
     paths:
       - "dashboard/**"
+      - "data/day_board/**"
       - "data/stock_book/**"
       - "01_daily/*_stock_book.md"
   workflow_dispatch:
@@ -82,6 +83,15 @@ jobs:
             echo "Used dashboard/index.html from main"
           fi
 
+          # Overlay paper + sub-dashes from this checkout. A Stock Book
+          # artifact can carry last night's paper HTML; without this
+          # overlay, .io liveBook stays on a stale poller after 09:30.
+          if [ -f dashboard/index.html ]; then
+            mkdir -p pages_out/dashboard
+            cp dashboard/index.html pages_out/dashboard/index.html
+            cp dashboard/index.html pages_out/index.html
+            echo "Overlayed dashboard/index.html (paper) from main"
+          fi
           # Overlay sub-dashboards from this checkout so orphan deploys keep them.
           if [ -f dashboard/boring-winners/index.html ]; then
             mkdir -p pages_out/dashboard/boring-winners
@@ -160,6 +170,15 @@ jobs:
               echo "Root copy pages_out/${sub}"
             fi
           done
+
+          # Paper / strategy-board firstOk looks for today.json and
+          # today_strategies.json next to the HTML. Those 404 today on
+          # .io (only factor-mine/ has copies). A later ranker today.json
+          # on raw main then wins and paints scores without Elite px.
+          # Last-write-wins copy is wrong: factor-mine tickets can be a
+          # stripped 200 (no quote) that clobbers the day_board slim.
+          PYTHONPATH=. python3 -m src.overlay_live_strip --dest pages_out
+          echo "Overlayed live strip"
 
           if [ ! -f pages_out/dashboard/index.html ]; then
             echo "ERROR: no dashboard index.html to publish"

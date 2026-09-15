@@ -7,6 +7,7 @@ from __future__ import annotations
 import json
 import os
 import tempfile
+from datetime import datetime
 from pathlib import Path
 from unittest import mock
 
@@ -336,6 +337,7 @@ def test_open_0930_requires_tickets_and_connected_paper() -> None:
         "clock_legal_for": "2026-09-15",
         "session_open": "2026-09-15",
         "n_ok": 20,
+        "quote": {"after_open": True, "src": "elite_live"},
         "strategies": {
             "stock_book_1d": {"family": "stock_book"},
             "flatten_robust": {"family": "flatten"},
@@ -348,6 +350,11 @@ def test_open_0930_requires_tickets_and_connected_paper() -> None:
         day.mkdir(parents=True)
         (day / "today_strategies.json").write_text(
             json.dumps(good_tickets), encoding="utf-8")
+        (day / "today.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+        }), encoding="utf-8")
         sleeve = root / "data" / "sleeve_merge"
         sleeve.mkdir(parents=True)
         last = sleeve / "webull_last.json"
@@ -367,6 +374,129 @@ def test_open_0930_requires_tickets_and_connected_paper() -> None:
                 "n_tickets": 0,
             }), encoding="utf-8")
             assert skip_if_good.check_open_0930("2026-09-15") is True
+
+
+def test_score_only_today_json_is_not_open_0930_good() -> None:
+    """Elite tickets + connected paper still heal when today.json has no px."""
+    after = datetime(2026, 9, 15, 12, 50, tzinfo=skip_if_good.ET)
+    tickets = {
+        "date": "2026-09-15",
+        "clock_legal_for": "2026-09-15",
+        "session_open": "2026-09-15",
+        "n_ok": 20,
+        "quote": {"after_open": True, "src": "elite_live"},
+        "strategies": {
+            "stock_book_1d": {"family": "stock_book"},
+            "flatten_robust": {"family": "flatten"},
+            **{f"r{i}": {"family": "factor_mine"} for i in range(10)},
+        },
+    }
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        day = root / "data" / "day_board"
+        day.mkdir(parents=True)
+        (day / "today_strategies.json").write_text(
+            json.dumps(tickets), encoding="utf-8")
+        (day / "today.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "buy_1d": [{"ticker": "MTCH", "score": 0.34}],
+        }), encoding="utf-8")
+        sleeve = root / "data" / "sleeve_merge"
+        sleeve.mkdir(parents=True)
+        (sleeve / "webull_last.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "combo": "combo_sh_macd_5050_shared",
+            "connected": True,
+            "n_tickets": 0,
+        }), encoding="utf-8")
+        with mock.patch.object(skip_if_good, "ROOT", root):
+            assert skip_if_good.today_strip_is_live_open(
+                "2026-09-15", after) is False
+            assert skip_if_good.check_open_0930("2026-09-15") is False
+            (day / "today.json").write_text(json.dumps({
+                "date": "2026-09-15",
+                "quote": {"src": "elite_live", "after_open": True},
+                "buy_1d": [{"ticker": "MTCH", "px": 43.04,
+                            "px_src": "elite_live"}],
+            }), encoding="utf-8")
+            assert skip_if_good.today_strip_is_live_open(
+                "2026-09-15", after) is True
+            assert skip_if_good.check_open_0930("2026-09-15") is True
+
+
+def test_yesterday_elite_tickets_are_not_todays_open() -> None:
+    """A leftover 09-15 elite_live file must not skip the 09-16 pack."""
+    after = datetime(2026, 9, 16, 9, 40, tzinfo=skip_if_good.ET)
+    stale = {
+        "date": "2026-09-15",
+        "clock_legal_for": "2026-09-15",
+        "session_open": "2026-09-15",
+        "quote": {"after_open": True, "src": "elite_live"},
+        "buy_1d": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+    }
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        day = root / "data" / "day_board"
+        day.mkdir(parents=True)
+        (day / "2026-09-15_open_0930.json").write_text(
+            json.dumps(stale), encoding="utf-8")
+        (day / "today_strategies.json").write_text(
+            json.dumps(stale), encoding="utf-8")
+        with mock.patch.object(skip_if_good, "ROOT", root):
+            assert skip_if_good.tickets_are_live_open(
+                "2026-09-16", after) is False
+            (day / "2026-09-16_open_0930.json").write_text(json.dumps({
+                "date": "2026-09-16",
+                "clock_legal_for": "2026-09-16",
+                "quote": {"after_open": True, "src": "elite_live"},
+                "buy_1d": [{"ticker": "AAPL", "px": 221.1,
+                            "px_src": "elite_live"}],
+            }), encoding="utf-8")
+            assert skip_if_good.tickets_are_live_open(
+                "2026-09-16", after) is True
+
+
+def test_preopen_stamp_is_not_good_after_bell() -> None:
+    """07:47 session_open / after_open=false must not skip the 09:30 pack."""
+    tickets = {
+        "date": "2026-09-15",
+        "clock_legal_for": "2026-09-15",
+        "session_open": "2026-09-15",
+        "clock_use": "session_open",
+        "n_ok": 20,
+        "quote": {"after_open": False, "src": "session_export"},
+        "strategies": {
+            "stock_book_1d": {"family": "stock_book"},
+            "flatten_robust": {"family": "flatten"},
+            **{f"r{i}": {"family": "factor_mine"} for i in range(10)},
+        },
+    }
+    after = datetime(2026, 9, 15, 9, 31, tzinfo=skip_if_good.ET)
+    before = datetime(2026, 9, 15, 7, 47, tzinfo=skip_if_good.ET)
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        day = root / "data" / "day_board"
+        day.mkdir(parents=True)
+        (day / "today_strategies.json").write_text(
+            json.dumps(tickets), encoding="utf-8")
+        with mock.patch.object(skip_if_good, "ROOT", root):
+            assert skip_if_good.tickets_are_live_open(
+                "2026-09-15", before) is True
+            assert skip_if_good.tickets_are_live_open(
+                "2026-09-15", after) is False
+            assert skip_if_good.tickets_are_live_open(
+                "2026-09-14", after) is True
+            tickets["quote"]["after_open"] = True
+            tickets["quote"]["src"] = "session_export"
+            (day / "today_strategies.json").write_text(
+                json.dumps(tickets), encoding="utf-8")
+            assert skip_if_good.tickets_are_live_open(
+                "2026-09-15", after) is False
+            tickets["quote"]["src"] = "elite_live"
+            (day / "today_strategies.json").write_text(
+                json.dumps(tickets), encoding="utf-8")
+            assert skip_if_good.tickets_are_live_open(
+                "2026-09-15", after) is True
 
 
 def test_postclose_all_workflow_name_matches_yml() -> None:
@@ -495,6 +625,9 @@ if __name__ == "__main__":
     test_jobs_include_label_weather()
     test_strategy_tickets_require_session_open_look()
     test_open_0930_requires_tickets_and_connected_paper()
+    test_score_only_today_json_is_not_open_0930_good()
+    test_yesterday_elite_tickets_are_not_todays_open()
+    test_preopen_stamp_is_not_good_after_bell()
     test_postclose_all_workflow_name_matches_yml()
     test_sidecar_running_false_without_github_env()
     test_postclose_all_cli_yields_to_sidecar_only_for_all_workflow()
