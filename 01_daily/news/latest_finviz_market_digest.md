@@ -1,15 +1,15 @@
 # Finviz homepage market digest — 2026-09-15
 
-**Generated:** 2026-09-15T04:24:12.283454-04:00 (America/New_York)
+**Generated:** 2026-09-15T07:09:52.750509-04:00 (America/New_York)
 **Source:** `live`
-**Banner:** US futures point to a lower open as oil extends gains and bond yields rise ahead of the FOMC meeting
+**Banner:** US futures point to a lower open as oil tops $102 and 10-year yield exceeds 5% ahead of FOMC decision
 **Prior close:** SPX —  Nasdaq —  Dow —
 **SPX:** —  **Nasdaq:** —  **Dow:** —
-**Oil:** WTI crude $103.5
+**Oil:** WTI crude $102.0
 **CPI/Fed:** —
-**Leaders:** MU, MRVL, INTC, VRT, VEEA, MYSZ, SLGB, RYDE, COE, FPS, VRA
+**Leaders:** BDRX, VEEA, MYSZ, FTFT, FPS, COE, VRA
 **Next session:** housing no · retail no · Fed yes
-**Earnings slate:** —
+**Earnings slate:** FPS, COE, VRA
 **Geo/grain:** geo
 **Clock legal for:** 2026-09-15
 **Clock use:** `same_morning`
@@ -23,25 +23,26 @@ Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page h
 ## Theme Radar
 
 - **Prior close:** SPX — · Nasdaq — · Dow —
-- **Oil:** WTI crude $103.5
+- **Oil:** WTI crude $102.0
 - **CPI / Fed-odds:** —
-- **Named leaders:** MU, MRVL, INTC, VRT, VEEA, MYSZ, SLGB, RYDE, COE, FPS, VRA
+- **Named leaders:** BDRX, VEEA, MYSZ, FTFT, FPS, COE, VRA
 - **Next-session calendar:** housing no · retail no · Fed yes
-  - The US economic calendar features the Empire State Manufacturing Index at 8:30 AM ET in an otherwise quiet data session
-  - The Federal Reserve’s two-day FOMC meeting begins today, with rising bond yields underscoring market focus on inflation and policy guidance
-- **Earnings slate:** —
+  - The 10-year Treasury yield crosses 5%, its highest level since 2007, as the bond selloff continues ahead of tomorrow’s FOMC decision.
+  - Today’s calendar includes the NY Empire State Manufacturing Index at 8:30 AM ET, alongside Canadian wholesale trade and vehicle sales data.
+- **Earnings slate:** FPS, COE, VRA
 - **Geo / grain:** geo
 
 ## Narrative
 
-**US futures point to a lower open as oil extends gains and bond yields rise ahead of the FOMC meeting**
+**US futures point to a lower open as oil tops $102 and 10-year yield exceeds 5% ahead of FOMC decision**
 
-- S&P 500 Futures (@ES) fall 0.47%, Dow Jones Futures (@YM) fall 0.65%, Nasdaq 100 Futures (@NQ) fall 0.49%, and Russell 2000 Futures (@ER2) fall 0.68%, signaling a gap-down open
-- Micron Technology (MU), Marvell Technology (MRVL), Intel (INTC), and Vertiv Holdings (VRT) trade mixed to slightly lower pre-market amid ongoing AI slowdown worries in semiconductors and tech hardware
-- Small-cap and low-float names including VEEA (VEEA) (+67%), My Size (MYSZ) (+86%), SLGB (SLGB) (+20%), and RYDE (RYDE) post double-digit percentage gains on low volume
-- Overnight earnings remain light, with limited pre-market reactions ahead of reports from COE (COE), FPS (FPS), VRA (VRA), and other smaller names before the bell
-- WTI crude (@CL) gains over 2% to trade near $103.50 on Middle East supply risks tied to Saudi pipeline disruptions
-- Gold (@GC) prices trade lower as higher oil and rising bond yields stoke inflation concerns
-- The US economic calendar features the Empire State Manufacturing Index at 8:30 AM ET in an otherwise quiet data session
-- The Federal Reserve’s two-day FOMC meeting begins today, with rising bond yields underscoring market focus on inflation and policy guidance
-- Asian markets trade mixed with the Nikkei (@NKD) roughly flat and the Hang Seng modestly higher, while major European indices edge lower
+- S&P 500 (@ES), Dow Jones (@YM), Nasdaq 100 (@NQ), and Russell 2000 (@ER2) futures indicate gap-down opens, off about -0.22%, -0.29%, -0.22%, and -0.27% respectively.
+- BDRX (BDRX) jumps roughly 80–120% in pre-market trading on clinical pipeline momentum and heavy volume.
+- VEEA (VEEA) gains about 53–58% after announcing a merger with NovaGen to create an edge AI-powered health platform and securing a $10M investment.
+- MYSZ (MYSZ) rises about 50–68% after pivoting to a defense technology platform via acquisitions.
+- FTFT (FTFT) falls roughly 27–30% on profit-taking despite no clear fresh catalyst.
+- WTI crude (@CL) trades above $102 and Brent (@QA) sits near $106 as Middle East supply risks, including Strait of Hormuz and Saudi pipeline issues, support oil prices.
+- The 10-year Treasury yield crosses 5%, its highest level since 2007, as the bond selloff continues ahead of tomorrow’s FOMC decision.
+- FPS (FPS) along with smaller names such as COE (COE) and VRA (VRA) report earnings before the bell, with no major beats or reactions that would drive the broader tape.
+- Today’s calendar includes the NY Empire State Manufacturing Index at 8:30 AM ET, alongside Canadian wholesale trade and vehicle sales data.
+- Asian trading is mixed with the Nikkei (@NKD) edging higher while most other indices move lower, and European shares open mostly lower to slightly mixed as elevated oil and bond yields weigh on markets and gold (@GC) holds recent losses.

@@ -1,6 +1,6 @@
 # Finviz Daily Digest — 2026-09-15
 
-_Generated 2026-09-15T06:05:56.763437-04:00 · export=data/exports/finviz_2026-09-15.csv · ticker digests=400 · high-signal=400_
+_Generated 2026-09-15T07:09:44.609758-04:00 · export=data/exports/finviz_2026-09-15.csv · ticker digests=400 · high-signal=400_
 
 ## Major indices (live quote page)
 
@@ -111,8 +111,9 @@ _Generated 2026-09-15T06:05:56.763437-04:00 · export=data/exports/finviz_2026-0
 - D: Dominion, NextEra enhance Virginia merger benefits with 1,000 new jobs, doubled bill credits and $1B-a-year supplier program
 - DUK: Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year
 
+### Consumer Defensive (n=2)
+- KO: Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.
+- MNST: Q2 earnings momentum and recent stock split fuel MNST 4.09% gain
+
 ### Real Estate (n=1)
 - EQIX: Equinix, CPP Investments close US$4B atNorth acquisition with Equinix investing about US$895M for roughly 34% stake
-
-### Consumer Defensive (n=1)
-- KO: Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.
