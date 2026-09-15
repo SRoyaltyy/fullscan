@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T07:31:21.815244-04:00",
+  "generated_at": "2026-09-15T08:30:04.805853-04:00",
   "export_used": "data/exports/finviz_2026-09-15.csv",
   "ticker_digest_count": 400,
   "signal_count": 400,
@@ -8,29 +8,29 @@
     {
       "ticker": "SPY",
       "index": "S&P 500",
-      "digest": "Stock Market: Will S&P 500 Open Up or Down Today?",
-      "source": "finviz_export",
+      "digest": "AI, Fed And 5% Treasury Yield: Three Risks Putting Nasdaq, Dow Futures On Edge Ahead Of Wednesdays Rate Decision",
+      "source": "finviz_elite_news",
       "error": null
     },
     {
       "ticker": "QQQ",
       "index": "Nasdaq-100",
-      "digest": "Stock Market: Will S&P 500 Open Up or Down Today?",
-      "source": "finviz_export",
+      "digest": "AI, Fed And 5% Treasury Yield: Three Risks Putting Nasdaq, Dow Futures On Edge Ahead Of Wednesdays Rate Decision",
+      "source": "finviz_elite_news",
       "error": null
     },
     {
       "ticker": "DIA",
       "index": "Dow Jones",
       "digest": "S&P 500, Nasdaq, Dow Drop On Chipmaker Weakness, Treasury Yield Pressure  MSFT, NFLX, ORCL, CRWD, RBLX In Focus",
-      "source": "finviz_export",
+      "source": "finviz_elite_news",
       "error": null
     },
     {
       "ticker": "IWM",
       "index": "Russell 2000",
       "digest": "Investors worried about rising bond yields are keeping a close eye on this corner of the market",
-      "source": "finviz_export",
+      "source": "finviz_elite_news",
       "error": null
     }
   ],
@@ -82,7 +82,7 @@
     {
       "ticker": "AMGN",
       "digest": "Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first two ES-SCLC doses",
-      "news_title": "Is This LLY Stock Dip Big Enough To Be Worth Buying?",
+      "news_title": "FDA reduces monitoring time for Amgen's Imdelltra infusions",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
@@ -96,6 +96,17 @@
       "news_title": "Norwegian Cruise downgrade, Duolingo upgraded: Wall Street's top analyst calls",
       "sector": "Communication Services",
       "industry": "Telecom Services",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "AMZN",
+      "digest": "Amazon's India quick-commerce unit Amazon Now tops $1bn in gross annualised sales as volumes surge",
+      "news_title": "Factory robots long posed a safety threat to human workers. One company says it's solved that problem.",
+      "sector": "Consumer Cyclical",
+      "industry": "Internet Retail",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -181,7 +192,7 @@
     {
       "ticker": "AZN",
       "digest": "AstraZeneca late-stage SERENA-4 trial of breast cancer drug Etcamah as first-line therapy misses primary endpoint",
-      "news_title": "AstraZenecas cancer pipeline posts two wins and a loss",
+      "news_title": "CLLS Stock Heads For 14-Month Low After 40% Rout: Citizens Flags Delayed Cellectis Catalysts After Cancer Pipeline Pivot",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
@@ -203,7 +214,7 @@
     {
       "ticker": "BAC",
       "digest": "BAC CEO's soft Q3 outlook at Barclays conference drives 5% plunge",
-      "news_title": "Stock-picking, multi-manager hedge funds attract more capital from investors in 2026, BofA says",
+      "news_title": "Bonds, AI, Cryptoâ¦It's Make-or-Break Time for Markets",
       "sector": "Financial",
       "industry": "Banks - Diversified",
       "is_dividend": false,
@@ -302,7 +313,7 @@
     {
       "ticker": "CAT",
       "digest": "Freedom Broker upgrades Caterpillar to Buy, lifts price target to $980 on U.S.-Canada tariff benefits",
-      "news_title": "3 Stocks That Offer AI Exposure and Dividends",
+      "news_title": "Bull of the Day: Caterpillar (CAT)",
       "sector": "Industrials",
       "industry": "Farm & Heavy Construction Machinery",
       "is_dividend": false,
@@ -412,7 +423,7 @@
     {
       "ticker": "CVE",
       "digest": "Cenovus Energy Q2 2026 non-GAAP EPS $1.08 misses estimates, revenue $14.7B beats, company raises full-year production guidance",
-      "news_title": "This International Manager Is Betting Big on Banks and Energy, but Not Tech",
+      "news_title": "Cenovus Energy Inc's Dividend Analysis",
       "sector": "Energy",
       "industry": "Oil & Gas Integrated",
       "is_dividend": false,
@@ -467,7 +478,7 @@
     {
       "ticker": "E",
       "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results",
-      "news_title": "YPF Lines Up Buyers for $24 Billion Vaca Muerta LNG Project",
+      "news_title": "Saipem wins $350m offshore contract from Azule Energy Angola",
       "sector": "Energy",
       "industry": "Oil & Gas Integrated",
       "is_dividend": false,
@@ -621,7 +632,7 @@
     {
       "ticker": "KO",
       "digest": "Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.",
-      "news_title": "KO Stock Near Highs: Has Momentum Outrun Value?",
+      "news_title": "Coca-Cola Co's Dividend Analysis",
       "sector": "Consumer Defensive",
       "industry": "Beverages - Non-Alcoholic",
       "is_dividend": false,
@@ -635,17 +646,6 @@
       "news_title": "The Bloom Energy Stock Signal Hiding Behind The Demand Story",
       "sector": "Basic Materials",
       "industry": "Specialty Chemicals",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "LLY",
-      "digest": "Eli Lilly completes acquisition of AtaiBeckley, adding its rapid-acting neuroplastogen pipeline including lead TRD candidate BPL-003 to Lillyâs neuroscience portfolio.",
-      "news_title": "AI Safety Fears Drive Investors to J&J, Costco, and CrowdStrike for Cybersecurity",
-      "sector": "Healthcare",
-      "industry": "Drug Manufacturers - General",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -723,7 +723,7 @@
       {
         "ticker": "BAC",
         "digest": "BAC CEO's soft Q3 outlook at Barclays conference drives 5% plunge",
-        "news_title": "Stock-picking, multi-manager hedge funds attract more capital from investors in 2026, BofA says",
+        "news_title": "Bonds, AI, Cryptoâ¦It's Make-or-Break Time for Markets",
         "sector": "Financial",
         "industry": "Banks - Diversified",
         "is_dividend": false,
@@ -813,7 +813,7 @@
       {
         "ticker": "CAT",
         "digest": "Freedom Broker upgrades Caterpillar to Buy, lifts price target to $980 on U.S.-Canada tariff benefits",
-        "news_title": "3 Stocks That Offer AI Exposure and Dividends",
+        "news_title": "Bull of the Day: Caterpillar (CAT)",
         "sector": "Industrials",
         "industry": "Farm & Heavy Construction Machinery",
         "is_dividend": false,
@@ -881,7 +881,7 @@
       {
         "ticker": "AMGN",
         "digest": "Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first two ES-SCLC doses",
-        "news_title": "Is This LLY Stock Dip Big Enough To Be Worth Buying?",
+        "news_title": "FDA reduces monitoring time for Amgen's Imdelltra infusions",
         "sector": "Healthcare",
         "industry": "Drug Manufacturers - General",
         "is_dividend": false,
@@ -903,7 +903,7 @@
       {
         "ticker": "AZN",
         "digest": "AstraZeneca late-stage SERENA-4 trial of breast cancer drug Etcamah as first-line therapy misses primary endpoint",
-        "news_title": "AstraZenecas cancer pipeline posts two wins and a loss",
+        "news_title": "CLLS Stock Heads For 14-Month Low After 40% Rout: Citizens Flags Delayed Cellectis Catalysts After Cancer Pipeline Pivot",
         "sector": "Healthcare",
         "industry": "Drug Manufacturers - General",
         "is_dividend": false,
@@ -1103,64 +1103,18 @@
         "source": "finviz_export"
       }
     ],
-    "Energy": [
-      {
-        "ticker": "CNQ",
-        "digest": "Canadian Natural Resources posts record Q2 2026 results with EPS $1.58, raises 2026 production guidance and returns about $4B to shareholders",
-        "news_title": "Canadian Natural Resources Ltd's Dividend Analysis",
-        "sector": "Energy",
-        "industry": "Oil & Gas E&P",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "CVE",
-        "digest": "Cenovus Energy Q2 2026 non-GAAP EPS $1.08 misses estimates, revenue $14.7B beats, company raises full-year production guidance",
-        "news_title": "This International Manager Is Betting Big on Banks and Energy, but Not Tech",
-        "sector": "Energy",
-        "industry": "Oil & Gas Integrated",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "E",
-        "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results",
-        "news_title": "YPF Lines Up Buyers for $24 Billion Vaca Muerta LNG Project",
-        "sector": "Energy",
-        "industry": "Oil & Gas Integrated",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "EOG",
-        "digest": "EOG posts record EPS and free cash flow, reiterates 2026 guidance and highlights strong UAE unconventional exploration results",
-        "news_title": "EOG Resources to Present at Upcoming Conference",
-        "sector": "Energy",
-        "industry": "Oil & Gas E&P",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "KMI",
-        "digest": "KMI rebounds on pipeline project momentum and raised 2026 guidance",
-        "news_title": "Trump oil and gas holdings gained up to $4.4M during Iran war",
-        "sector": "Energy",
-        "industry": "Oil & Gas Midstream",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      }
-    ],
     "Consumer Cyclical": [
+      {
+        "ticker": "AMZN",
+        "digest": "Amazon's India quick-commerce unit Amazon Now tops $1bn in gross annualised sales as volumes surge",
+        "news_title": "Factory robots long posed a safety threat to human workers. One company says it's solved that problem.",
+        "sector": "Consumer Cyclical",
+        "industry": "Internet Retail",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
       {
         "ticker": "DASH",
         "digest": "Scotiabank initiated coverage of DoorDash with a Sector Outperform rating and a $275 price target, citing its scale, subscription-driven user lock-in and margin benefits.",
@@ -1200,6 +1154,63 @@
         "news_title": "The biggest threat to your retirement is based on a myth  it could rip through your nest egg and even ruin your health",
         "sector": "Consumer Cyclical",
         "industry": "Home Improvement Retail",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      }
+    ],
+    "Energy": [
+      {
+        "ticker": "CNQ",
+        "digest": "Canadian Natural Resources posts record Q2 2026 results with EPS $1.58, raises 2026 production guidance and returns about $4B to shareholders",
+        "news_title": "Canadian Natural Resources Ltd's Dividend Analysis",
+        "sector": "Energy",
+        "industry": "Oil & Gas E&P",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "CVE",
+        "digest": "Cenovus Energy Q2 2026 non-GAAP EPS $1.08 misses estimates, revenue $14.7B beats, company raises full-year production guidance",
+        "news_title": "Cenovus Energy Inc's Dividend Analysis",
+        "sector": "Energy",
+        "industry": "Oil & Gas Integrated",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "E",
+        "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results",
+        "news_title": "Saipem wins $350m offshore contract from Azule Energy Angola",
+        "sector": "Energy",
+        "industry": "Oil & Gas Integrated",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "EOG",
+        "digest": "EOG posts record EPS and free cash flow, reiterates 2026 guidance and highlights strong UAE unconventional exploration results",
+        "news_title": "EOG Resources to Present at Upcoming Conference",
+        "sector": "Energy",
+        "industry": "Oil & Gas E&P",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "KMI",
+        "digest": "KMI rebounds on pipeline project momentum and raised 2026 guidance",
+        "news_title": "Trump oil and gas holdings gained up to $4.4M during Iran war",
+        "sector": "Energy",
+        "industry": "Oil & Gas Midstream",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
@@ -1258,7 +1269,7 @@
       {
         "ticker": "KO",
         "digest": "Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.",
-        "news_title": "KO Stock Near Highs: Has Momentum Outrun Value?",
+        "news_title": "Coca-Cola Co's Dividend Analysis",
         "sector": "Consumer Defensive",
         "industry": "Beverages - Non-Alcoholic",
         "is_dividend": false,
@@ -1340,7 +1351,7 @@
     {
       "ticker": "AMGN",
       "digest": "Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first two ES-SCLC doses",
-      "news_title": "Is This LLY Stock Dip Big Enough To Be Worth Buying?",
+      "news_title": "FDA reduces monitoring time for Amgen's Imdelltra infusions",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
@@ -1354,6 +1365,17 @@
       "news_title": "Norwegian Cruise downgrade, Duolingo upgraded: Wall Street's top analyst calls",
       "sector": "Communication Services",
       "industry": "Telecom Services",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "AMZN",
+      "digest": "Amazon's India quick-commerce unit Amazon Now tops $1bn in gross annualised sales as volumes surge",
+      "news_title": "Factory robots long posed a safety threat to human workers. One company says it's solved that problem.",
+      "sector": "Consumer Cyclical",
+      "industry": "Internet Retail",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -1439,7 +1461,7 @@
     {
       "ticker": "AZN",
       "digest": "AstraZeneca late-stage SERENA-4 trial of breast cancer drug Etcamah as first-line therapy misses primary endpoint",
-      "news_title": "AstraZenecas cancer pipeline posts two wins and a loss",
+      "news_title": "CLLS Stock Heads For 14-Month Low After 40% Rout: Citizens Flags Delayed Cellectis Catalysts After Cancer Pipeline Pivot",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
@@ -1461,7 +1483,7 @@
     {
       "ticker": "BAC",
       "digest": "BAC CEO's soft Q3 outlook at Barclays conference drives 5% plunge",
-      "news_title": "Stock-picking, multi-manager hedge funds attract more capital from investors in 2026, BofA says",
+      "news_title": "Bonds, AI, Cryptoâ¦It's Make-or-Break Time for Markets",
       "sector": "Financial",
       "industry": "Banks - Diversified",
       "is_dividend": false,
@@ -1560,7 +1582,7 @@
     {
       "ticker": "CAT",
       "digest": "Freedom Broker upgrades Caterpillar to Buy, lifts price target to $980 on U.S.-Canada tariff benefits",
-      "news_title": "3 Stocks That Offer AI Exposure and Dividends",
+      "news_title": "Bull of the Day: Caterpillar (CAT)",
       "sector": "Industrials",
       "industry": "Farm & Heavy Construction Machinery",
       "is_dividend": false,
@@ -1670,7 +1692,7 @@
     {
       "ticker": "CVE",
       "digest": "Cenovus Energy Q2 2026 non-GAAP EPS $1.08 misses estimates, revenue $14.7B beats, company raises full-year production guidance",
-      "news_title": "This International Manager Is Betting Big on Banks and Energy, but Not Tech",
+      "news_title": "Cenovus Energy Inc's Dividend Analysis",
       "sector": "Energy",
       "industry": "Oil & Gas Integrated",
       "is_dividend": false,
@@ -1725,7 +1747,7 @@
     {
       "ticker": "E",
       "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results",
-      "news_title": "YPF Lines Up Buyers for $24 Billion Vaca Muerta LNG Project",
+      "news_title": "Saipem wins $350m offshore contract from Azule Energy Angola",
       "sector": "Energy",
       "industry": "Oil & Gas Integrated",
       "is_dividend": false,
@@ -1879,7 +1901,7 @@
     {
       "ticker": "KO",
       "digest": "Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.",
-      "news_title": "KO Stock Near Highs: Has Momentum Outrun Value?",
+      "news_title": "Coca-Cola Co's Dividend Analysis",
       "sector": "Consumer Defensive",
       "industry": "Beverages - Non-Alcoholic",
       "is_dividend": false,
@@ -1893,17 +1915,6 @@
       "news_title": "The Bloom Energy Stock Signal Hiding Behind The Demand Story",
       "sector": "Basic Materials",
       "industry": "Specialty Chemicals",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "LLY",
-      "digest": "Eli Lilly completes acquisition of AtaiBeckley, adding its rapid-acting neuroplastogen pipeline including lead TRD candidate BPL-003 to Lillyâs neuroscience portfolio.",
-      "news_title": "AI Safety Fears Drive Investors to J&J, Costco, and CrowdStrike for Cybersecurity",
-      "sector": "Healthcare",
-      "industry": "Drug Manufacturers - General",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -2055,7 +2066,7 @@
     {
       "ticker": "ORCL",
       "digest": "Oracle begins new layoffs with potential double-digit cuts on some teams amid heavy AI infrastructure spending",
-      "news_title": "HPE Stock Drops 11% To Worst Day In Over A Year After Evercore Downgrades On Lack Of Near-Term Catalysts",
+      "news_title": "Bonds, AI, Cryptoâ¦It's Make-or-Break Time for Markets",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
       "is_dividend": false,
