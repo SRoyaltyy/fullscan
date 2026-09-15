@@ -1,68 +1,68 @@
 # MAP HEAT — 2026-09-15
 
-Export `finviz_2026-09-15.csv` · 11616 names · generated 2026-09-15T09:12:19.021750-04:00
+Export `finviz_2026-09-15.csv` · 11616 names · generated 2026-09-15T09:33:50.007626-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7689.0 | -0.05% |
-| Nasdaq 100 (NQ) | 29433.5 | -0.06% |
-| Russell 2000 (ER2) | 2912.5 | -0.12% |
-| DJIA (YM) | 52787.0 | -0.14% |
+| S&P 500 (ES) | 7688.5 | -0.05% |
+| Nasdaq 100 (NQ) | 29414.0 | -0.13% |
+| Russell 2000 (ER2) | 2910.7 | -0.20% |
+| DJIA (YM) | 52769.0 | -0.16% |
 | VIX (VX) | 16.75 | -0.60% |
-| Crude Oil WTI (CL) | 101.8 | +0.38% |
-| Crude Oil Brent (QA) | 105.89 | +0.20% |
-| Natural Gas (NG) | 2.939 | +1.52% |
-| Heating Oil (HO) | 5.1227 | +3.02% |
-| Gasoline RBOB (RB) | 3.3487 | +0.86% |
-| Gold (GC) | 4330.6 | -0.47% |
-| Silver (SI) | 64.35 | +0.30% |
-| Copper (HG) | 6.4395 | +0.55% |
-| Platinum (PL) | 1777.9 | -0.25% |
-| Palladium (PA) | 1311.0 | +0.21% |
-| USD (DX) | 99.31 | +0.21% |
-| EUR (6E) | 1.15885 | -0.09% |
-| JPY (6J) | 0.6501 | -0.61% |
-| GBP (6B) | 1.3487 | -0.21% |
-| AUD (6A) | 0.71185 | -0.24% |
-| CAD (6C) | 0.72125 | -0.17% |
-| CHF (6S) | 1.23475 | -0.26% |
-| NZD (6N) | 0.5774 | -0.47% |
+| Crude Oil WTI (CL) | 101.79 | +0.33% |
+| Crude Oil Brent (QA) | 105.94 | +0.19% |
+| Natural Gas (NG) | 2.946 | +1.76% |
+| Heating Oil (HO) | 5.1289 | +3.55% |
+| Gasoline RBOB (RB) | 3.3542 | +1.14% |
+| Gold (GC) | 4328.2 | -0.54% |
+| Silver (SI) | 64.205 | +0.06% |
+| Copper (HG) | 6.4405 | +0.52% |
+| Platinum (PL) | 1781.0 | +0.04% |
+| Palladium (PA) | 1310.5 | +0.18% |
+| USD (DX) | 99.345 | +0.24% |
+| EUR (6E) | 1.1584 | -0.13% |
+| JPY (6J) | 0.6497499999999999 | -0.65% |
+| GBP (6B) | 1.3485 | -0.22% |
+| AUD (6A) | 0.71175 | -0.25% |
+| CAD (6C) | 0.72115 | -0.19% |
+| CHF (6S) | 1.23435 | -0.29% |
+| NZD (6N) | 0.5768 | -0.55% |
 | 10 Year Note (ZN) | 105.953125 | -0.21% |
-| 5 Year Note (ZF) | 104.3984375 | -0.12% |
-| 2 Year Note (ZT) | 102.0546875 | -0.03% |
-| 30 Year Bond (ZB) | 106.5625 | -0.44% |
-| Nikkei 225 (NKD) | 63850.0 | +1.08% |
-| DAX (DY) | 25474.0 | +0.19% |
-| Euro Stoxx 50 (EX) | 6264.0 | +0.08% |
-| Corn (ZC) | 528.25 | -0.98% |
-| Soybeans (ZS) | 1298.75 | -0.38% |
-| Wheat (ZW) | 712.5 | -1.35% |
+| 5 Year Note (ZF) | 104.3984375 | -0.11% |
+| 2 Year Note (ZT) | 102.05859375 | -0.02% |
+| 30 Year Bond (ZB) | 106.53125 | -0.47% |
+| Nikkei 225 (NKD) | 63820.0 | +1.01% |
+| DAX (DY) | 25483.0 | +0.21% |
+| Euro Stoxx 50 (EX) | 6269.0 | +0.13% |
+| Corn (ZC) | 528.25 | -0.94% |
+| Soybeans (ZS) | 1298.75 | -0.42% |
+| Wheat (ZW) | 712.5 | -1.32% |
 | Soybean oil (ZL) | 69.71 | +0.07% |
-| Soybean Meal (ZM) | 349.4 | -0.20% |
-| Oats (ZO) | 393.0 | +0.38% |
+| Soybean Meal (ZM) | 349.4 | -0.23% |
+| Oats (ZO) | 393.0 | +0.00% |
 | Rough Rice (ZR) | 15.985 | -0.06% |
-| Coffee (KC) | 286.7 | -1.24% |
-| Sugar (SB) | 18.02 | -0.72% |
-| Cotton (CT) | 83.87 | -0.67% |
-| Cocoa (CC) | 6036.0 | +0.32% |
-| Orange Juice (JO) | 154.75 | +1.18% |
+| Coffee (KC) | 286.3 | -1.39% |
+| Sugar (SB) | 18.03 | -0.83% |
+| Cotton (CT) | 84.16 | -0.38% |
+| Cocoa (CC) | 6031.0 | +0.03% |
+| Orange Juice (JO) | 154.6 | +1.08% |
 | Lumber (LB) | 566.0 | +0.18% |
 | Live Cattle (LC) | 222.2 | +1.17% |
 | Lean Hogs (LH) | 79.725 | -2.36% |
 | Feeder Cattle (FC) | 337.9 | +1.61% |
-| Bitcoin (BTC) | 76995.0 | -2.80% |
-| 3 Month SOFR (SR3) | 96.03 | +0.01% |
-| 30 Day Fed Funds (ZQ) | 96.265 | +0.01% |
+| Bitcoin (BTC) | 76925.0 | -2.82% |
+| 3 Month SOFR (SR3) | 96.0325 | +0.01% |
+| 30 Day Fed Funds (ZQ) | 96.2625 | +0.00% |
 | Aluminum (ALI) | 3410.5 | -0.03% |
-| Canola (RS) | 818.7 | -0.52% |
+| Canola (RS) | 818.3 | -0.58% |
 | Coal Newcastle (NCF) | 146.85 | +0.07% |
 | Ethanol (ZK) | 2.055 | +0.00% |
-| Gasoil (G) | 1509.5 | +2.27% |
+| Gasoil (G) | 1514.75 | +2.40% |
 | Iron Ore (TIO) | 97.55 | -0.48% |
 | Steel HRC (HRC) | 1230.0 | -0.32% |
-| Ultra 10 Year Note (TN) | 107.46875 | -0.28% |
-| Ultra Bond (UB) | 108.0 | -0.60% |
+| Ultra 10 Year Note (TN) | 107.4375 | -0.28% |
+| Ultra Bond (UB) | 107.9375 | -0.66% |
 | Uranium (UX) | 89.9 | -0.11% |
 
 ## CALENDAR
@@ -128,14 +128,14 @@ Mega-cap earnings:
 - AMC **JEF**  EPS est 0.926  (Jefferies Financial Group Inc)
 
 Options event-vol flags (NOT direction):
-- **MU** exp 2026-09-16 ATM IV 0.002 implied move +0.0% put/call OI 0.695
-- **COST** exp 2026-09-18 ATM IV 0.002 implied move +0.0% put/call OI 2.844
-- **ACN** exp 2026-09-18 ATM IV 0.0001 implied move 0.0% put/call OI 0.386
-- **CTAS** exp 2026-09-18 ATM IV 0.0078 implied move +0.1% put/call OI 0.494
-- **NKE** exp 2026-09-18 ATM IV 0.0039 implied move +0.0% put/call OI 1.648
-- **AZO** exp 2026-09-18 ATM IV 0.002 implied move +0.0% put/call OI 1.325
-- **PAYX** exp 2026-09-18 ATM IV 0.0156 implied move +0.1% put/call OI 0.677
-- **JBL** exp 2026-09-18 ATM IV 0.0156 implied move +0.1% put/call OI 0.25
+- **MU** exp 2026-09-16 ATM IV 0.002 implied move +0.0% put/call OI 0.458
+- **COST** exp 2026-09-18 ATM IV 0.0039 implied move +0.0% put/call OI 2.214
+- **ACN** exp 2026-09-18 ATM IV 0.0039 implied move +0.0% put/call OI 0.386
+- **CTAS** exp 2026-09-18 ATM IV 0.0039 implied move +0.0% put/call OI 0.494
+- **NKE** exp 2026-09-18 ATM IV 0.0156 implied move +0.1% put/call OI 1.648
+- **AZO** exp 2026-09-18 ATM IV 0.0005 implied move 0.0% put/call OI 4.3
+- **PAYX** exp 2026-09-18 ATM IV 0.0313 implied move +0.3% put/call OI 0.569
+- **JBL** exp 2026-09-18 ATM IV 0.0039 implied move +0.0% put/call OI 15.5
 
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
@@ -255,31 +255,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 4 min **CG** Ballooning US debt is a ticking time bomb, billionaire investor David Rubenstein says (Yahoo Finance)
-- 5 min **LOVE** Lovesac Expands Seating Offerings with Snugg Collection Launch (PR Newswire)
-- 6 min **MCY** The Home Insurance Savings Hiding in Plain Sight (PR Newswire)
-- 7 min **FBNC** First Bancorp Announces Cash Dividend (PR Newswire)
-- 7 min **XMTR** Xometry Marketplace Enables Deeper Enterprise Integration and Smart Procurement with TradeCentric (GlobeNewswire)
-- 9 min **AMN** AMN Healthcare Survey Reveals Critical Divide Between Healthcare Leaders and Frontline Workers (PR Newswire)
-- 10 min **BAND** Bandwidth and Salesforce Expand Collaboration to Support The Global Rollout of Salesforce's Native Contact Center (PR Newswire)
-- 11 min **MU** Micron Advances Memory Innovation With the World's First Ultra-Dense Module for Next-Generation Servers (GlobeNewswire)
-- 11 min **LBTYA,LBTYK** Newly Established Ziggo Group Appoints Experienced Leadership Team (GlobeNewswire)
-- 12 min **BTCT** BTC Digital Signs Strategic Cooperation Memorandum of Understanding with Tianci International, Inc. for Approximately 3 MW Crypto Computing Power Project (PR Newswire)
-- 12 min **PAYX** Paychex's WISE Named a 2026 Top HR Product of the Year by HR Executive (GlobeNewswire)
-- 12 min **AIP** Arteris Accelerates Industry Transition to Multi-Die Chiplet-Based Architecture (GlobeNewswire)
-- 12 min **NTSK** Netskope Enables Security Teams to Stop Risky AI Agent Actions Before They Execute (GlobeNewswire)
-- 12 min **FTNT** Fortinet Expands U.S. Presence with New Company-Owned Innovation Hub in New York City (GlobeNewswire)
-- 12 min **JAGX** Jaguar Health, Inc. Announces Reverse Stock Split (ACCESSWIRE)
-- 12 min **STGW** Code and Theory Honored by Fast Company's Innovation by Design for Four Consecutive Years (ACCESSWIRE)
-- 12 min **BTCT,CIIT** Tianci International, Inc. Announces Launch of Approximately 3 MW Crypto Computing Project and Signs Memorandum of Understanding with BTC Digital (ACCESSWIRE)
-- 12 min **FEAM** 5E Advanced Materials Enters into Agreement to Acquire Certain Assets of Searles Valley Minerals (ACCESSWIRE)
-- 12 min **CVS** Thank You! CVS Health Awards Grant to Windy City Harvest During Grace Manor Community Event in Chicago, Illinois (ACCESSWIRE)
-- 12 min **NAMI** Jinxin Technology Holding Company Deploys AIGC Content Assets, Exploring Industrialization and Global Distribution Loop for AI Micro-Dramas and Unlocking Potential Long-Term Valuation Upside (PR Newswire)
-- 12 min **LGCY** Legacy Education Expands into Texas with New Central Coast College Campus in Houston (PR Newswire)
-- 12 min **GAP** Athleta Named Official Off-Court Apparel Partner of the Golden State Valkyries (PR Newswire)
-- 12 min **AJG** Arthur J. Gallagher & Co. Acquires Innovise Business Consultants (PR Newswire)
-- 12 min **ORCL** Quorum Health Unifies Enterprise, Financial, and Clinical Technology Platforms with Oracle (PR Newswire)
-- 12 min **KMT** Kennametal Introduces Exclusive Additive Tungsten Carbide Grade Enabling Next-Generation Metal Cutting Tools (PR Newswire)
+- 2 min **COIN** Coinbase Shares Fall 4.4% as Bitcoin and Ether Decline Ahead of CLARITY Act Vote (InvestorsHub)
+- 2 min **TTGT** Informa TechTarget Launches AI-driven Buyer Intelligence Solution to Accelerate B2B GTM Workflows With Actionable, Person-Level Intent Data and Insights (Business Wire)
+- 3 min **CPRT** NWPG's NFI Empire Advances Project Reborn-001 Toward Auction Benefiting The Brett Boyer Foundation (ACCESSWIRE)
+- 3 min **FWDI** Forward Industries Announces Updated Proposal to Acquire SkyAI, Inc. (GlobeNewswire)
+- 3 min **ROP** DAT: Spot van rate falls 20 cents in steepest August pullback on record (GlobeNewswire)
+- 3 min **RIME** Algorhythm Completes Transformational $23 Million Acquisition of Leading Renewable Power Plant Developer Serving Fortune 500, AI Data Center and Advanced Manufacturing Clients (GlobeNewswire)
+- 3 min **LCII** Lippert Selects ketteQ as Strategic Partner for Supply Chain Planning (PR Newswire)
+- 4 min **AMZN** Amazon AWS Says Access Cannot Be Restored to Bahrain Facility After War Damage (InvestorsHub)
+- 5 min **VRTX** Vera Makes A Bullish Move - Times Three. Will It Hold Up To Competition? (Investor's Business Daily)
+- 6 min **VTIX** Virtuix Sells First Omni One Systems to U.S. Department of Veterans Affairs, the Largest Integrated Healthcare System in U.S. (GlobeNewswire)
+- 6 min **WMT** Philadelphia cream cheese launches 3 new flavors in 2026 (Quartz)
+- 7 min **CCS** Century Complete Now Selling New Homes from the Mid $200s at Shockley Bend in Anderson, SC (PR Newswire)
+- 7 min **HCAI** Huachen AI Parking Management Technology Holding Co., Ltd. Announces Pricing of $2.75 Million Registered Direct Offering (GlobeNewswire)
+- 7 min **PCPP** Insurance, Ranked By Who's Good At It: Tuttle Capital Launches the Porter & Company Property & Casualty Index ETF (PCPC) (TMX Newsfile)
+- 8 min **NNVC** Clinical Trial of the Oral Drug NV-387 to Treat Ebola to Start Next Week, Hoping to Reduce Fatalities and Spread, As the Largest Ebola Outbreak is Expanding in ?DR Congo with 48% Crude Fatality Rate, Says NanoViricides (ACCESSWIRE)
+- 8 min **HSCS** HeartSciences Reports Fiscal First Quarter 2027 Financial Results and Provides Business Update (GlobeNewswire)
+- 8 min **HLSQ** Tessera Defense and Homeland Security CEO Issues Letter to Shareholders (GlobeNewswire)
+- 8 min **CPRT,HSTM** HealthStream Completes $40 Million Private Placement of Its Common Stock (Business Wire)
+- 13 min **MVIS** MicroVision Showcases Expanding Perception Portfolio at IAA Transportation 2026 (ACCESSWIRE)
+- 14 min **NTES** Produced by a World-Class International Team! Adam Fan's Official New Album SKYFALL Makes Exclusive Debut on NetEase Cloud Music (PR Newswire)
+- 16 min **DJIA** Stock Futures Fall as 10-Year Treasury Yield Hits 19-Year High (Schaeffer's Research)
+- 17 min **OBK** Origin Bancorp, Inc. to Transfer Stock Exchange Listing to Texas Stock Exchange (GlobeNewswire)
+- 18 min **CAT** Luck Stone Builds on Autonomous Hauling Success with Caterpillar (PR Newswire)
+- 18 min **GTBP** GT Biopharma Announces Potential New Indication for GTB-5550, a B7-H3-Targeted Natural Killer (NK) Cell Engager, for Multiple Myeloma (GlobeNewswire)
+- 18 min **SMID** Smith-Midland Secures $2.2M Contract for Newport News Navy Project (ACCESSWIRE)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
