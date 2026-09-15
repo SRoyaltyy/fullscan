@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T06:07:46.565806-04:00",
+  "generated_at": "2026-09-15T06:08:31.631087-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -47,7 +47,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 269893
+          "size": 269015
         },
         {
           "key": "heat_md",
@@ -56,7 +56,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 16943
+          "size": 17186
         }
       ],
       "said": "tables on disk",
@@ -80,7 +80,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 87439
+          "size": 87668
         },
         {
           "key": "digest_md",
@@ -89,7 +89,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11492
+          "size": 11458
         },
         {
           "key": "market_digest_json",
@@ -149,7 +149,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87439
+          "size": 87668
         },
         {
           "key": "in_market_digest",
@@ -176,7 +176,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 269893
+          "size": 269015
         },
         {
           "key": "parsed",
@@ -266,7 +266,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False missing=['sector_predict']",
-          "size": 7834
+          "size": 7756
         },
         {
           "key": "review",
@@ -274,8 +274,8 @@
           "path": "01_daily/2026-09-15_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=False Core artifacts (general predict, events JSON, news judge, news parse, finviz digest, map-heat tables) are all real, same",
-          "size": 1740
+          "reason": "ok=False Only 5 of 11 sector essays exist (communication_services, consumer_cyclical, energy, financial, healthcare) \u2014 6 missing,",
+          "size": 1631
         },
         {
           "key": "sector_basic_materials",
@@ -409,7 +409,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87439
+          "size": 87668
         },
         {
           "key": "weather",
@@ -489,7 +489,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87439
+          "size": 87668
         },
         {
           "key": "dossiers",
@@ -549,7 +549,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87439
+          "size": 87668
         },
         {
           "key": "in_judge",
@@ -594,7 +594,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5111",
-          "size": 819816
+          "size": 817895
         },
         {
           "key": "book_json",
@@ -602,8 +602,8 @@
           "path": "data/stock_book/2026-09-15_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=218",
-          "size": 1587833
+          "reason": "horizons=5 names=220",
+          "size": 1600584
         },
         {
           "key": "book_md",
@@ -612,7 +612,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 85929
+          "size": 88517
         },
         {
           "key": "green",
@@ -664,8 +664,8 @@
           "path": "data/stock_book/2026-09-15_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=218",
-          "size": 1587833
+          "reason": "horizons=5 names=220",
+          "size": 1600584
         },
         {
           "key": "dash_html",
@@ -703,77 +703,85 @@
     "buy_1d": [
       {
         "ticker": "AVAH",
-        "score": 0.6891299965039788
+        "score": 0.6596608246322517
       },
       {
         "ticker": "PACS",
-        "score": 0.6545209947350785
+        "score": 0.665462301955157
       },
       {
-        "ticker": "ACHC",
-        "score": 0.5333061345689342
+        "ticker": "ZIP",
+        "score": 0.615142908807446
       },
       {
-        "ticker": "VRSK",
-        "score": 0.41158070320563833
-      },
-      {
-        "ticker": "DBX",
-        "score": 0.7127346184756272
-      },
-      {
-        "ticker": "DLO",
-        "score": 0.643371651067643
+        "ticker": "ASTH",
+        "score": 0.5542742068005707
       },
       {
         "ticker": "WIX",
-        "score": 0.6836879320429612
+        "score": 0.6788005173143059
+      },
+      {
+        "ticker": "VRSK",
+        "score": 0.382707866885776
+      },
+      {
+        "ticker": "EPAM",
+        "score": 0.6454870208378202
+      },
+      {
+        "ticker": "DLO",
+        "score": 0.6036132330742299
       },
       {
         "ticker": "CARG",
-        "score": 0.6859529852673028
+        "score": 0.6687329343588724
+      },
+      {
+        "ticker": "LFST",
+        "score": 0.68320473670538
       }
     ],
     "sell_1d": [
       {
         "ticker": "FLNC",
-        "score": -0.38027772770142615
+        "score": -0.38712830719168295
       },
       {
         "ticker": "OKLO",
-        "score": -0.21649415527305338
-      },
-      {
-        "ticker": "FCEL",
-        "score": -0.3292090243504339
-      },
-      {
-        "ticker": "AMPX",
-        "score": -0.23332400027668693
-      },
-      {
-        "ticker": "LVWR",
-        "score": -0.567950405015973
+        "score": -0.24663678572837527
       },
       {
         "ticker": "EOSE",
-        "score": -0.21862039842527486
+        "score": -0.25623253349363423
       },
       {
         "ticker": "QBTS",
-        "score": -0.18348016415421053
+        "score": -0.20025436275728903
+      },
+      {
+        "ticker": "SMR",
+        "score": -0.3261704105250774
       },
       {
         "ticker": "METC",
-        "score": -0.3861356085806234
+        "score": -0.39246599707884383
       },
       {
-        "ticker": "BEPC",
-        "score": -0.13821113180987793
+        "ticker": "LUNR",
+        "score": -0.38172340416289935
+      },
+      {
+        "ticker": "TLN",
+        "score": -0.4835154354998332
       },
       {
         "ticker": "TE",
-        "score": -0.2403418027461937
+        "score": -0.26349482450987427
+      },
+      {
+        "ticker": "WULF",
+        "score": -0.5635504946695946
       }
     ],
     "flatten": {},
@@ -2809,6 +2817,31 @@
         }
       ],
       "preview": "2026-09-15 BUY AVAH, PACS, ACHC, VRSK, DBX, DLO, WIX, CARG \u00b7 SELL FLNC, OKLO, FCEL, AMPX, LVWR, EOSE, QBTS, METC \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-15 BUY AVAH, PACS, ACHC, VRSK, DBX, DLO, WIX, CARG \u00b7 SELL FLNC, OKLO, FCEL, AMPX, LVWR, EOSE, QBTS, METC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AVAH, PACS, ACHC, VRSK, DBX, DLO, WIX, CARG \u00b7 SELL FLNC, OKLO, FCEL, AMPX, LVWR, EOSE, QBTS, METC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AVAH, PACS, ACHC, VRSK, DBX, DLO, WIX, CARG \u00b7 SELL FLNC, OKLO, FCEL, AMPX, LVWR, EOSE, QBTS, METC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, lo"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T06:08:30.159695-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-15.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10978253,
+          "preview": "11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11415288,
+          "preview": "11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
