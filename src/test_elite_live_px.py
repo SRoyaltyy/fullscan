@@ -33,6 +33,20 @@ def test_after_open_clock() -> None:
     assert elp.after_open(datetime(2026, 9, 14, 16, 30, tzinfo=et)) is True
 
 
+def test_quote_is_elite_live() -> None:
+    assert elp.quote_is_elite_live(
+        {"src": "elite_live", "after_open": True}) is True
+    assert elp.quote_is_elite_live(
+        {"src": "elite_live_file", "after_open": True}) is True
+    assert elp.quote_is_elite_live({
+        "src": "session_export+finviz_session: No module named 'requests'",
+        "after_open": True,
+    }) is False
+    assert elp.quote_is_elite_live(
+        {"src": "elite_live", "after_open": False}) is False
+    assert elp.quote_is_elite_live({}) is False
+
+
 def test_stamp_rows_keeps_open_and_live() -> None:
     book = {
         "prices": {"INDP": 2.89},
@@ -206,6 +220,7 @@ def main() -> None:
     test_parse_elite_overview_prices()
     test_theme_radar_close_is_never_live()
     test_after_open_clock()
+    test_quote_is_elite_live()
     test_stamp_rows_keeps_open_and_live()
     test_quote_book_offline_uses_fallback_not_theme_radar()
     test_after_bell_dated_export_is_elite_live_file()

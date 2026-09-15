@@ -38,6 +38,14 @@ def after_open(when: datetime | None = None) -> bool:
     return t.hour > 9 or (t.hour == 9 and t.minute >= 30)
 
 
+def quote_is_elite_live(quote: object) -> bool:
+    """True when the ticket quote is after-open Elite live px (not session_export)."""
+    if not isinstance(quote, dict):
+        return False
+    src = str(quote.get("src") or "")
+    return bool(quote.get("after_open")) and src.startswith("elite_live")
+
+
 def _num(v):
     if v is None or v == "":
         return None

@@ -642,6 +642,69 @@ def _combo_would_buy(rows, rec_by: dict, members: list[str],
     return out
 
 
+def load_existing_payload(date: str) -> dict:
+    """On-disk tickets for this session, or {}."""
+    paths = (
+        DAY / f"{date}_strategy_tickets.json",
+        DAY / "strategy_tickets.json",
+        DASH_FM / "strategy_tickets.json",
+        DAY / "today_strategies.json",
+    )
+    for path in paths:
+        if not path.is_file():
+            continue
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError, json.JSONDecodeError):
+            continue
+        if not isinstance(data, dict):
+            continue
+        legal = str(data.get("clock_legal_for") or data.get("date") or "")
+        if legal and legal != date:
+            continue
+        return data
+    return {}
+
+
+def keep_open_elite_book(date: str, payload: dict) -> dict:
+    """After 09:30, do not replace today's Elite book with a failed restamp.
+
+    Noon live_boards / map_heat lands rebuilt tickets without ``requests``
+    and overwrote the 11:40 ET ``elite_live`` AVAH book with MTCH +
+    ``session_export+finviz_session: No module named 'requests'``.
+    Keep the 09:30 names; refresh px only when the new stamp is Elite live.
+    """
+    from . import elite_live_px as elp
+
+    if not elp.after_open():
+        return payload
+    existing = load_existing_payload(date)
+    if not elp.quote_is_elite_live((existing or {}).get("quote")):
+        return payload
+    if not elp.quote_is_elite_live(payload.get("quote")):
+        src = str((payload.get("quote") or {}).get("src") or "")
+        print(
+            f"[strategy-tickets] keep elite_live 09:30 book; "
+            f"new src={src!r}",
+            flush=True,
+        )
+        return existing
+    try:
+        restamped = stamp_live_quotes(dict(existing), date)
+    except Exception as e:  # noqa: BLE001
+        print(f"[strategy-tickets] keep elite_live; restamp failed: {e}",
+              flush=True)
+        return existing
+    if not elp.quote_is_elite_live(restamped.get("quote")):
+        print(
+            "[strategy-tickets] keep elite_live; restamp lost live src",
+            flush=True,
+        )
+        return existing
+    print("[strategy-tickets] restamp Elite px on 09:30 names", flush=True)
+    return restamped
+
+
 def stamp_live_quotes(payload: dict, date: str) -> dict:
     """Elite Price as-of-now on every buy/sell row. Not Theme Radar."""
     from . import elite_live_px as elp
@@ -829,7 +892,21 @@ def build(date: str) -> dict:
 
 def write(date: str, payload: dict | None = None) -> list[Path]:
     payload = payload or build(date)
-    assert_session_look(payload, date)
+    existing = load_existing_payload(date)
+    payload = keep_open_elite_book(date, payload)
+    from . import elite_live_px as elp
+    kept_elite = (
+        elp.quote_is_elite_live((existing or {}).get("quote"))
+        and elp.quote_is_elite_live(payload.get("quote"))
+    )
+    if kept_elite:
+        # 09:30 book already published; skip clock re-assert so a later
+        # land cannot fail the keep/restamp write.
+        legal = str(payload.get("clock_legal_for") or payload.get("date") or "")
+        if legal != date:
+            assert_session_look(payload, date)
+    else:
+        assert_session_look(payload, date)
     text = json.dumps(payload, indent=2)
     paths = [
         DAY / "strategy_tickets.json",
