@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T07:26:45.351656-04:00",
+  "generated_at": "2026-09-15T08:19:14.403267-04:00",
   "hours": 48,
   "raw_count": 166,
   "parsed_count": 166,
@@ -148,7 +148,7 @@
           "rank_score": 1.0
         },
         {
-          "source": "finviz_elite_news",
+          "source": "finviz_export",
           "title": "S&P 500, Nasdaq, Dow Drop On Chipmaker Weakness, Treasury Yield Pressure  MSFT, NFLX, ORCL, CRWD, RBLX In Focus",
           "url": "",
           "published_at": "",
@@ -456,7 +456,7 @@
       "rank_score": 1.0
     },
     {
-      "source": "finviz_elite_news",
+      "source": "finviz_export",
       "title": "S&P 500, Nasdaq, Dow Drop On Chipmaker Weakness, Treasury Yield Pressure  MSFT, NFLX, ORCL, CRWD, RBLX In Focus",
       "url": "",
       "published_at": "",
@@ -1016,7 +1016,7 @@
       "rank_score": 1.0
     },
     {
-      "source": "finviz_elite_news",
+      "source": "finviz_export",
       "title": "S&P 500, Nasdaq, Dow Drop On Chipmaker Weakness, Treasury Yield Pressure  MSFT, NFLX, ORCL, CRWD, RBLX In Focus",
       "url": "",
       "published_at": "",
@@ -1580,7 +1580,7 @@
       "rank_score": -0.05
     },
     {
-      "source": "finviz_elite_news",
+      "source": "finviz_export",
       "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
       "url": "",
       "published_at": "",
@@ -1593,7 +1593,7 @@
       "rank_score": -0.1
     },
     {
-      "source": "finviz_elite_news",
+      "source": "finviz_export",
       "title": "Investors worried about rising bond yields are keeping a close eye on this corner of the market",
       "url": "",
       "published_at": "",
