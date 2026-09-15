@@ -330,7 +330,7 @@ def write_json(board: dict) -> list[Path]:
         "pages": PAGES_URL,
     }
     latest_p.write_text(json.dumps(latest, indent=2), encoding="utf-8")
-    today_p.write_text(json.dumps({
+    today_payload = {
         "date": date,
         "generated_at": board.get("generated_at"),
         "overall": board.get("overall"),
@@ -344,8 +344,16 @@ def write_json(board: dict) -> list[Path]:
         "sectors": sel.get("sectors") or {},
         "lands": (board.get("lands") or [])[-8:],
         "day_board": PAGES_URL,
-    }, indent=2), encoding="utf-8")
-    return [day_p, latest_p, today_p]
+    }
+    today_p.write_text(json.dumps(today_payload, indent=2), encoding="utf-8")
+    wrote = [day_p, latest_p, today_p]
+    # Pages factor-mine same-origin today.json — same strip, not ranker scores.
+    fm_today = BOARD_DIR.parent.parent / "dashboard" / "factor-mine" / "today.json"
+    if fm_today.parent.is_dir() or live:
+        fm_today.parent.mkdir(parents=True, exist_ok=True)
+        fm_today.write_text(json.dumps(today_payload, indent=2), encoding="utf-8")
+        wrote.append(fm_today)
+    return wrote
 
 
 def note_land(date: str, *, key: str, title: str, files: list[dict],
