@@ -1,76 +1,76 @@
 # MAP HEAT — 2026-09-15
 
-Export `finviz_2026-09-15.csv` · 11616 names · generated 2026-09-15T08:11:22.982569-04:00
+Export `finviz_2026-09-15.csv` · 11616 names · generated 2026-09-15T08:31:19.553336-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7681.75 | -0.14% |
-| Nasdaq 100 (NQ) | 29416.5 | -0.10% |
-| Russell 2000 (ER2) | 2911.1 | -0.16% |
-| DJIA (YM) | 52730.0 | -0.25% |
+| S&P 500 (ES) | 7683.5 | -0.12% |
+| Nasdaq 100 (NQ) | 29422.0 | -0.06% |
+| Russell 2000 (ER2) | 2909.9 | -0.20% |
+| DJIA (YM) | 52720.0 | -0.27% |
 | VIX (VX) | 16.85 | -0.01% |
-| Crude Oil WTI (CL) | 102.31 | +0.96% |
-| Crude Oil Brent (QA) | 105.98 | +0.29% |
-| Natural Gas (NG) | 2.913 | +0.66% |
-| Heating Oil (HO) | 5.0591 | +2.11% |
-| Gasoline RBOB (RB) | 3.3486 | +0.89% |
-| Gold (GC) | 4324.3 | -0.64% |
-| Silver (SI) | 63.765 | -0.58% |
-| Copper (HG) | 6.4065 | +0.07% |
-| Platinum (PL) | 1769.7 | -0.63% |
-| Palladium (PA) | 1306.0 | -0.02% |
-| USD (DX) | 99.34 | +0.24% |
-| EUR (6E) | 1.1581 | -0.15% |
-| JPY (6J) | 0.6503 | -0.58% |
-| GBP (6B) | 1.3487 | -0.20% |
-| AUD (6A) | 0.7118 | -0.24% |
-| CAD (6C) | 0.7213 | -0.15% |
-| CHF (6S) | 1.2348 | -0.26% |
-| NZD (6N) | 0.5776 | -0.43% |
-| 10 Year Note (ZN) | 105.953125 | -0.22% |
-| 5 Year Note (ZF) | 104.390625 | -0.12% |
-| 2 Year Note (ZT) | 102.05859375 | -0.02% |
-| 30 Year Bond (ZB) | 106.53125 | -0.47% |
-| Nikkei 225 (NKD) | 63810.0 | +1.00% |
-| DAX (DY) | 25441.0 | +0.05% |
-| Euro Stoxx 50 (EX) | 6256.0 | -0.05% |
-| Corn (ZC) | 527.5 | -0.98% |
-| Soybeans (ZS) | 1294.5 | -0.73% |
-| Wheat (ZW) | 711.75 | -1.42% |
-| Soybean oil (ZL) | 69.68 | +0.07% |
-| Soybean Meal (ZM) | 347.4 | -0.80% |
+| Crude Oil WTI (CL) | 102.9 | +1.52% |
+| Crude Oil Brent (QA) | 106.57 | +0.85% |
+| Natural Gas (NG) | 2.933 | +1.28% |
+| Heating Oil (HO) | 5.0762 | +2.33% |
+| Gasoline RBOB (RB) | 3.3574 | +1.21% |
+| Gold (GC) | 4314.0 | -0.87% |
+| Silver (SI) | 63.645 | -0.83% |
+| Copper (HG) | 6.41 | +0.09% |
+| Platinum (PL) | 1761.1 | -1.06% |
+| Palladium (PA) | 1300.0 | -0.59% |
+| USD (DX) | 99.36 | +0.26% |
+| EUR (6E) | 1.15805 | -0.16% |
+| JPY (6J) | 0.6496 | -0.69% |
+| GBP (6B) | 1.3484 | -0.22% |
+| AUD (6A) | 0.71145 | -0.29% |
+| CAD (6C) | 0.72145 | -0.14% |
+| CHF (6S) | 1.23445 | -0.28% |
+| NZD (6N) | 0.5771 | -0.52% |
+| 10 Year Note (ZN) | 105.875 | -0.28% |
+| 5 Year Note (ZF) | 104.34375 | -0.18% |
+| 2 Year Note (ZT) | 102.04296875 | -0.04% |
+| 30 Year Bond (ZB) | 106.40625 | -0.61% |
+| Nikkei 225 (NKD) | 63805.0 | +0.99% |
+| DAX (DY) | 25432.0 | +0.01% |
+| Euro Stoxx 50 (EX) | 6257.0 | -0.06% |
+| Corn (ZC) | 528.5 | -0.89% |
+| Soybeans (ZS) | 1298.5 | -0.40% |
+| Wheat (ZW) | 713.25 | -1.25% |
+| Soybean oil (ZL) | 69.85 | +0.32% |
+| Soybean Meal (ZM) | 348.6 | -0.46% |
 | Oats (ZO) | 394.5 | +0.38% |
 | Rough Rice (ZR) | 15.985 | -0.06% |
-| Coffee (KC) | 287.9 | -0.90% |
-| Sugar (SB) | 17.98 | -0.99% |
-| Cotton (CT) | 83.68 | -0.93% |
-| Cocoa (CC) | 5923.0 | -1.71% |
-| Orange Juice (JO) | 153.55 | +5.30% |
+| Coffee (KC) | 288.35 | -0.67% |
+| Sugar (SB) | 18.06 | -0.61% |
+| Cotton (CT) | 84.15 | -0.47% |
+| Cocoa (CC) | 5976.0 | -0.71% |
+| Orange Juice (JO) | 155.0 | +0.72% |
 | Lumber (LB) | 566.0 | +0.18% |
 | Live Cattle (LC) | 222.2 | +1.17% |
 | Lean Hogs (LH) | 79.725 | -2.36% |
 | Feeder Cattle (FC) | 337.9 | +1.61% |
-| Bitcoin (BTC) | 76905.0 | -2.84% |
-| 3 Month SOFR (SR3) | 96.025 | -0.00% |
+| Bitcoin (BTC) | 76980.0 | -2.74% |
+| 3 Month SOFR (SR3) | 96.0275 | +0.00% |
 | 30 Day Fed Funds (ZQ) | 96.2625 | +0.00% |
 | Aluminum (ALI) | 3410.5 | -0.03% |
-| Canola (RS) | 816.7 | -0.77% |
+| Canola (RS) | 818.8 | -0.47% |
 | Coal Newcastle (NCF) | 146.85 | +0.07% |
 | Ethanol (ZK) | 2.055 | +0.00% |
-| Gasoil (G) | 1495.75 | +1.41% |
+| Gasoil (G) | 1501.25 | +1.64% |
 | Iron Ore (TIO) | 97.55 | -0.48% |
 | Steel HRC (HRC) | 1234.0 | +0.00% |
-| Ultra 10 Year Note (TN) | 107.453125 | -0.28% |
-| Ultra Bond (UB) | 108.0 | -0.60% |
+| Ultra 10 Year Note (TN) | 107.34375 | -0.36% |
+| Ultra Bond (UB) | 107.84375 | -0.78% |
 | Uranium (UX) | 89.9 | -0.11% |
 
 ## CALENDAR
 **SIZE GATE on** — high-impact print and/or mega-cap earnings today.
 
 Econ (importance ≥ 2):
-- 08:15 ET  ADP Employment Change Weekly  actual —  cons —  surprise —  prev 12K
-- 08:30 ET  NY Empire State Manufacturing Index  actual —  cons 14.75  surprise —  prev 20.60
+- 08:15 ET  ADP Employment Change Weekly  actual 16.25K  cons —  surprise —  prev 12K
+- 08:30 ET  NY Empire State Manufacturing Index  actual 7.60  cons 14.75  surprise -7.15  prev 20.60
 - 16:30 ET  API Crude Oil Stock Change  actual —  cons —  surprise —  prev -0.3M
 - 07:00 ET  MBA 30-Year Mortgage Rate  actual —  cons —  surprise —  prev 6.85%
 - 08:30 ET  Retail Sales MoM  actual —  cons 0.9%  surprise —  prev -0.6%
@@ -255,31 +255,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 6 min **NUR** NuRAN Wireless Announces US ATM Offering (ACCESSWIRE)
-- 7 min **CRM** Salesforce Puts AI Strategy In Spotlight At Dreamforce, Investor Day (Investor's Business Daily)
-- 7 min **HPE** AI Stock Among Those That Funds Are Buying Despite Misgivings (Investor's Business Daily)
-- 8 min **NTWK** BMO Equipment Finance Selects NETSOL's Transcend Finance Platform (GlobeNewswire)
-- 10 min **SUGP** SU Group Secures Exclusive Distribution Rights for Portable X-Ray System in Hong Kong and Macau (PR Newswire)
-- 10 min **NTRP** NextTrip's JOURNY TV to Premiere first Original Series "I DO: In Destination" October 4 and 5 Across Global Streaming Network (ACCESSWIRE)
-- 10 min **NXPL** NextPlat Secures E-Commerce Agreement with Decathlon, a Leading Global Sporting-Goods Retailer, Opening New Consumer Sales Channel for Satellite Connectivity Products (PR Newswire)
-- 11 min **SCWO** 374Water Completes $600,000 Waste Destruction Services in St. Cloud, MN (ACCESSWIRE)
-- 11 min **LASE** Laser Photonics Announces Closing of $7.9 Million Public Offering (ACCESSWIRE)
-- 11 min **LFWD** Peer-Reviewed Study of Lifeward's ReWalk Exoskeleton Reports Significant Improvements in Daily Activity Performance, Satisfaction, and Pain (GlobeNewswire)
-- 11 min **CTGO** Contango Intersects 506 g/t AgEq over 13.90 Meters at Torbrit and 807 g/t AgEq over 4.96 Meters at North Star Infill and Expansion Drilling (Newsfile Corp.)
-- 11 min **ABBV** Allergan Aesthetics to Advance Scientific Dialogue on Skin Longevity, Aging Biology and Exosome Science at the 2026 Science of Skin Summit (PR Newswire)
-- 11 min **SABR** New Sabre industry study finds travel companies making next AI moves amid maneuvering macroeconomic 'fog' (PR Newswire)
-- 11 min **CTVA** Vylor Confirms Breakthrough Wheat Technology Will Launch in 2027 (PR Newswire)
-- 11 min **CTVA** Vylor to Expand Soybean Leadership: Next-Gen Tech Platforms Maintain North America Yield Advantage, Accelerate Latin America Lineup via Broad Spectrum Insect Control (PR Newswire)
-- 11 min **WHR** KitchenAid Brand Debuts its 2026 Design Series Stand Mixer: Luminaire, Developed to Illuminate the Countertop and Make the Everyday Extraordinary (PR Newswire)
-- 11 min **LSPD** Lightspeed Introduces "On Deck" to Help Golf Courses Recapture Canceled Tee-Time Demand (PR Newswire)
-- 11 min **SUGP** SU Group Holdings Limited Announces Proposed Acquisition of KM Safety Solution Company Limited (PR Newswire)
-- 11 min **NUVB** Nuvation Bio Announces New Analyses Reinforcing the Durable, Consistent Efficacy of IBTROZI (taletrectinib) Across Key Patient Subgroups in Advanced ROS1+ NSCLC at 2026 World Conference on Lung Cancer (PR Newswire)
-- 11 min **RIME** Algorhythm Announces CEO Transition in Connection with Transformational Acquisition and Strategic Refocus (GlobeNewswire)
-- 11 min **MMA** NYSE:MMA - MMA.INC Confirms BJJLink Deployment at UFC GYM Jiu-Jitsu Studio Locations (GlobeNewswire)
-- 11 min **COGT** Cogent Biosciences Announces FDA Acceptance of New Drug Application (NDA) for Bezuclastinib in Patients with Advanced Systemic Mastocytosis (AdvSM) (GlobeNewswire)
-- 11 min **OKE** ONEOK Announces Early Results of Cash Tender Offers (GlobeNewswire)
-- 11 min **HPQ** HP Redefines the Mobile Workstation for the Era of Agentic AI (GlobeNewswire)
-- 11 min **WGO** See what's next in RV travel as Winnebago Industries showcases three premium brands at America's largest RV show (GlobeNewswire)
+- 4 min **BRNX** BrenX Signs Strategic Settlement with European Investment Bank (EIB) to Eliminate Approximately $4.8 Million of Debt and Strengthen the Balance Sheet (Newsfile)
+- 5 min **WFC** Wells Fargo just cuts its S&P 500 price target. Will others follow? (MarketWatch)
+- 5 min **CRWV** Bernstein Drops Stark Take On CoreWeave Stock (GuruFocus.com)
+- 6 min **SMCI** Super Micro Stock Tumbles on AI Spending Fears (GuruFocus.com)
+- 6 min **SPCX** SpaceX stock may need a major reset before this investor buys (GuruFocus.com)
+- 7 min **KDP** Bank of America Reveals What Keurig Dr Pepper Split Could Unlock (GuruFocus.com)
+- 8 min **GEV** GLJ Starts GE Vernova at Sell With EBITDA 22% Below Consensus (GuruFocus.com)
+- 10 min **IREN** IREN Draws a Two-Notch Upgrade on Neocloud Pricing (GuruFocus.com)
+- 11 min **GOOG,META** Cathie Wood Makes Striking Switch Between AI Stock Giants (GuruFocus.com)
+- 14 min **NVDA** Nvidia eyes a $10 billion Anthropic bet at an awkward moment (GuruFocus.com)
+- 14 min **LTH** ISSA and Life Time Launch Guaranteed Interview Program for Eligible Certified Personal Trainers (PR Newswire)
+- 16 min **PRZO** ParaZero and ThirdEye Systems Sign MOU to Develop a 360 Detect-To-Defeat Counter-UAS Solution for Armored Vehicles and Critical Assets (GlobeNewswire)
+- 16 min **MTSI** MACOM Demonstrates Technologies Enabling the Future of High Speed Connectivity at ECOC 2026 (GlobeNewswire)
+- 16 min **ADP** ADP National Employment Report Preliminary Estimate for August 29, 2026 (PR Newswire)
+- 16 min **MAIA** MAIA Biotechnology Announces Open Market Purchases of Company Stock by Long-Standing Board Member and CEO (GlobeNewswire)
+- 16 min **CEPL** Capstone Energy+ Delivers Additional 2 MW for Major U.S. Natural Gas Infrastructure Project (Business Wire)
+- 16 min **LADR** Ladder Capital Corp Announces Third Quarter 2026 Dividend to Holders of Class A Common Stock (Business Wire)
+- 16 min **HYPR** Hyperfine Announces Completion of Enrollment in the Contrast PMR Study to Support the Submission to Expand Indications for Use of the Swoop System with Contrast Agents (Business Wire)
+- 16 min **LLY,NVO** Eli Lilly and Novo Nordisk have paid more than 270,000 doctors  one as much as $1M  to promote GLP-1 weight-loss drugs (Moneywise)
+- 16 min **AQB** AquaBounty Announces Engagement of Colliers as Exclusive Agent for its Ohio Property (Newsfile)
+- 19 min **ROLR** High Roller Technologies Launches Beta Version of ROLR Prediction Markets Platform; Commercial Launch on Track for October 2026 (GlobeNewswire)
+- 20 min **FPS** FPS Stock Shot Up As Much As 13% Today Pre-Market  Record Orders, $3B Backlog And 76% FY27 Growth Guide Draw Investor Cheer (Stocktwits)
+- 21 min **NVDA** Stock Market Today: Dow Falls As Yields, Oil Prices Rise Ahead Of Fed Meeting; Nvidia Set To Rebound (Live Coverage) (Investor's Business Daily)
+- 22 min **MCHP** AnalogAI Selects memBrain SAGE Intellectual Property from Silicon Storage Technology for its First Real-world Edge AI Processors (GlobeNewswire)
+- 22 min **TSM,NVDA,AVGO** AI chip sell-off overblown: Zero GPU slowdown after Anthropic essay, analyst says (Investing.com)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
