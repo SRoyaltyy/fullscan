@@ -157,6 +157,7 @@ def test_ci_gates_the_bell_contract() -> None:
     assert "src.test_strategy_tickets" in yml
     assert "src.test_webull_exec" in yml
     assert "src.test_combo_broker" in yml
+    assert "src.test_skip_if_good" in yml
     assert "api.webull.com" not in yml
 
 
@@ -165,6 +166,7 @@ def test_orch_heals_open_0930() -> None:
     assert "past 09:30 ET" in yml
     assert "open_0930.yml" in yml
     assert "publish_strategy_tickets.yml" in yml
+    assert "skip_if_good --job open_0930" in yml
 
 
 def main_tests() -> None:

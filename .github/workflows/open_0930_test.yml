@@ -16,6 +16,8 @@ on:
       - "src/webull_exec.py"
       - "src/combo_broker.py"
       - "src/strategy_tickets.py"
+      - "src/skip_if_good.py"
+      - "src/test_skip_if_good.py"
       - "scripts/publish_open_pack.sh"
   push:
     branches: [main]
@@ -50,3 +52,4 @@ jobs:
           PYTHONPATH=. python3 -m src.test_strategy_tickets
           PYTHONPATH=. python3 -m src.test_webull_exec
           PYTHONPATH=. python3 -m src.test_combo_broker
+          PYTHONPATH=. python3 -m src.test_skip_if_good

@@ -296,6 +296,7 @@ def test_jobs_include_label_weather() -> None:
     assert "stock_book_all" in skip_if_good.JOBS
     assert "postclose_all" in skip_if_good.JOBS
     assert "strategy_tickets" in skip_if_good.JOBS
+    assert "open_0930" in skip_if_good.JOBS
 
 
 def test_strategy_tickets_require_session_open_look() -> None:
@@ -327,6 +328,45 @@ def test_strategy_tickets_require_session_open_look() -> None:
                 },
             }), encoding="utf-8")
             assert skip_if_good.check_strategy_tickets("2026-09-14") is True
+
+
+def test_open_0930_requires_tickets_and_connected_paper() -> None:
+    good_tickets = {
+        "date": "2026-09-15",
+        "clock_legal_for": "2026-09-15",
+        "session_open": "2026-09-15",
+        "n_ok": 20,
+        "strategies": {
+            "stock_book_1d": {"family": "stock_book"},
+            "flatten_robust": {"family": "flatten"},
+            **{f"r{i}": {"family": "factor_mine"} for i in range(10)},
+        },
+    }
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        day = root / "data" / "day_board"
+        day.mkdir(parents=True)
+        (day / "today_strategies.json").write_text(
+            json.dumps(good_tickets), encoding="utf-8")
+        sleeve = root / "data" / "sleeve_merge"
+        sleeve.mkdir(parents=True)
+        last = sleeve / "webull_last.json"
+        with mock.patch.object(skip_if_good, "ROOT", root):
+            assert skip_if_good.check_open_0930("2026-09-15") is False
+            last.write_text(json.dumps({
+                "date": "2026-09-15",
+                "combo": "combo_sh_macd_5050_shared",
+                "connected": False,
+                "n_tickets": 0,
+            }), encoding="utf-8")
+            assert skip_if_good.check_open_0930("2026-09-15") is False
+            last.write_text(json.dumps({
+                "date": "2026-09-15",
+                "combo": "combo_sh_macd_5050_shared",
+                "connected": True,
+                "n_tickets": 0,
+            }), encoding="utf-8")
+            assert skip_if_good.check_open_0930("2026-09-15") is True
 
 
 def test_postclose_all_workflow_name_matches_yml() -> None:
@@ -454,6 +494,7 @@ if __name__ == "__main__":
     test_finviz_scrape_requires_elite_export()
     test_jobs_include_label_weather()
     test_strategy_tickets_require_session_open_look()
+    test_open_0930_requires_tickets_and_connected_paper()
     test_postclose_all_workflow_name_matches_yml()
     test_sidecar_running_false_without_github_env()
     test_postclose_all_cli_yields_to_sidecar_only_for_all_workflow()
