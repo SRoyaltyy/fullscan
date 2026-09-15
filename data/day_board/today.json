@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T08:15:53.400783-04:00",
+  "generated_at": "2026-09-15T08:16:06.490790-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -129,59 +129,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T07:53:23.174295-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-15_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1560341,
-          "preview": "1d BUY HITI, MTCH, CARG, FOX \u00b7 SELL OKLO, EOSE, QBTS, FUN, FLNC, METC, FCEL, TE"
-        },
-        {
-          "path": "data/stock_book/2026-09-15_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-09-15_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2388,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-09-15_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12234,
-          "preview": "2026-09-15 BUY HITI, MTCH, CARG, FOX \u00b7 SELL OKLO, EOSE, QBTS, FUN, FLNC, METC, FCEL, TE"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12234,
-          "preview": "2026-09-15 BUY HITI, MTCH, CARG, FOX \u00b7 SELL OKLO, EOSE, QBTS, FUN, FLNC, METC, FCEL, TE"
-        },
-        {
-          "path": "01_daily/2026-09-15_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 78650,
-          "preview": "# Stock book \u2014 2026-09-15\n_Generated 2026-09-15T07:51:50.523074-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY HITI, MTCH, CARG, FOX \u00b7 SELL OKLO, EOSE, QBTS, FUN, FLNC, METC, FCEL, TE \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-15 BUY HITI, MTCH, CARG, FOX \u00b7 SELL OKLO, EOSE, QBTS, FUN, FLNC, METC, FCEL, TE \u00b7 2026-09-15 BUY HITI, MTCH, CARG, FOX \u00b7 SELL OKLO, EOSE, QBTS, FUN, FLNC, METC, FCEL, TE \u00b7 # Stock book \u2014 2026-09-15\n_Generated 2026-09-15T07:51:50.523074-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -461,6 +408,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T04:25:19.101684-04:00"
+    },
+    {
+      "key": "map_heat_baseline",
+      "title": "Map heat night baseline",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T08:16:05.153244-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-15_research_baseline.json",
+          "ok": true,
+          "reason": "",
+          "size": 351492,
+          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-15_research_baseline.md",
+          "ok": true,
+          "reason": "",
+          "size": 43443,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-15\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-15\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
