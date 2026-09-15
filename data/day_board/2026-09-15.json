@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T16:26:52.657278-04:00",
+  "generated_at": "2026-09-15T16:26:59.234766-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -815,31 +815,6 @@
     }
   },
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T10:15:17.150339-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-15_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 269258,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-15_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 17227,
-          "preview": "# MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T10:15:16.823300-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T10:15:16.823300-04:00"
-    },
     {
       "key": "live_boards",
       "title": "live_boards",
@@ -3395,6 +3370,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Communication Services={'score': -4.64, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -7.185, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Energy={'score': 5.832, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Financial={'score': -4.134, 'dir': 'down', 'conf': 0.565, 'source': 'llm'}, Healthcare={'score': -4.136, 'dir': 'down', 'conf': 0.565, 'source': 'llm'}, Basic Materials={'score': -5.723, 'dir': 'down', 'conf': 0.629, 'source': 'llm'}, Industrials={'score': -0.617, 'dir': 'down', 'conf': 0.425, 'source': 'llm'}, Real Estate={'score': -7.345, 'dir': 'down', 'conf': 0.65, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T16:26:57.895647-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-15_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2282919,
+          "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 RRC, SM, DVN, PR, EXE"
+        }
+      ],
+      "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 RRC, SM, DVN, PR, EXE"
     }
   ],
   "href": {
