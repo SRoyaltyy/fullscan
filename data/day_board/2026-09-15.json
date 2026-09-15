@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T03:49:41.870308-04:00",
+  "generated_at": "2026-09-15T04:03:53.279756-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -8,13 +8,12 @@
     "MISSING Sector board JSON `01_daily/sectors/2026-09-15/_board.json` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-09-15_actions.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-09-15_judge.md` \u2014 missing",
-    "MISSING Weather JSON `01_daily/weather/2026-09-15_weather.json` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-09-15_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 2,
+    "ok": 3,
     "partial": 2,
-    "fail": 4,
+    "fail": 3,
     "n": 8
   },
   "processes": [
@@ -87,7 +86,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 87216
+          "size": 87598
         },
         {
           "key": "digest_md",
@@ -96,7 +95,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11268
+          "size": 11324
         },
         {
           "key": "market_digest_json",
@@ -156,7 +155,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87216
+          "size": 87598
         },
         {
           "key": "in_market_digest",
@@ -264,7 +263,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7299
+          "size": 7282
         },
         {
           "key": "status",
@@ -391,9 +390,9 @@
       "key": "weather",
       "name": "Label + weather",
       "yaml": "label_weather.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
       "n_opt_ok": 0,
       "n_opt": 0,
@@ -405,20 +404,23 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87216
+          "size": 87598
         },
         {
           "key": "weather",
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-09-15_weather.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "sectors=11 bytes=9427 vix=spiking yields=flat",
+          "size": 9427
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "hostile 9 \u00b7 neutral 2",
+      "bullets": [
+        "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+        "events bull 2 / bear 8"
+      ]
     },
     {
       "key": "ab",
@@ -480,7 +482,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87216
+          "size": 87598
         },
         {
           "key": "dossiers",
@@ -540,7 +542,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87216
+          "size": 87598
         },
         {
           "key": "in_judge",
@@ -556,9 +558,9 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-09-15_weather.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "sectors=11 bytes=9427 vix=spiking yields=flat",
+          "size": 9427
         },
         {
           "key": "in_ab",
@@ -695,7 +697,13 @@
     "general": {},
     "sectors": {},
     "news": {},
-    "weather": {}
+    "weather": {
+      "said": "hostile 9 \u00b7 neutral 2",
+      "bullets": [
+        "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+        "events bull 2 / bear 8"
+      ]
+    }
   },
   "lands": [
     {
@@ -893,6 +901,45 @@
         }
       ],
       "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T04:03:53.121126-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 87598,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11363,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T04:03:52.987640-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-15.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10943012,
+          "preview": "11617 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11415288,
+          "preview": "11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T04:03:52.987640-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11617 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
