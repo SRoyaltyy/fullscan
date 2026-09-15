@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T15:41:37.964605-04:00",
+  "generated_at": "2026-09-15T15:46:50.077797-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -239,7 +239,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 16035
+          "size": 15217
         },
         {
           "key": "board",
@@ -377,12 +377,12 @@
           "size": 16029
         }
       ],
-      "said": "general DOWN  -3.65 \u00b7 sectors 1 up / 8 down / 2 flat \u00b7 news 27 items",
+      "said": "general DOWN  -3.836 \u00b7 sectors 1 up / 8 down / 2 flat \u00b7 news 27 items",
       "bullets": [
         "bad: Asia -0.72% (Kospi -3.26%)",
         "bad: 1w 10Y +19bp / 5% handle",
-        "bad: WTI +5% leftover Hormuz/Petroline",
-        "good: ES/NQ +0.4%/+0.38% not confirming",
+        "bad: WTI +4% leftover Hormuz",
+        "good: ES/NQ not independently weak",
         "good: HY contained 2.71",
         "XLB DOWN -7.6",
         "XLC FLAT -3.8",
@@ -522,7 +522,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 16035
+          "size": 15217
         },
         {
           "key": "in_board",
@@ -768,15 +768,15 @@
       ]
     },
     "general": {
-      "said": "DOWN  -3.65",
+      "said": "DOWN  -3.836",
       "bullets": [
         "bad: Asia -0.72% (Kospi -3.26%)",
         "bad: 1w 10Y +19bp / 5% handle",
-        "bad: WTI +5% leftover Hormuz/Petroline",
-        "good: ES/NQ +0.4%/+0.38% not confirming",
+        "bad: WTI +4% leftover Hormuz",
+        "good: ES/NQ not independently weak",
         "good: HY contained 2.71"
       ],
-      "score": "-3.65",
+      "score": "-3.836",
       "direction": "down"
     },
     "sectors": {
@@ -815,31 +815,6 @@
     }
   },
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T10:02:56.405472-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-09-15_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 10596,
-          "preview": "weather sectors 11 \u00b7 Communication Services={'score': 0.396, 'dir': 'up', 'conf': 0.416, 'source': 'llm'}, Consumer Cyclical={'score': -4.704, 'dir': 'down', 'conf': 0.588, 'source': 'llm'}, Energy={'score': 4.023, 'dir': 'up', 'conf': 0.661, 'source': 'llm'}, Financial={'score': -4.063, 'dir': 'down', 'conf': 0.563, 'source': 'llm'}, Healthcare={'score': 0.93, 'dir': 'up', 'conf': 0.537, 'source': 'llm'}, Basic Materials={'score': -7.604, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Industrials={'score': -5.881, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Real Estate={'score': -8.5, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}"
-        },
-        {
-          "path": "01_daily/weather/2026-09-15_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 6160,
-          "preview": "# Weather report \u2014 2026-09-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Communication Services={'score': 0.396, 'dir': 'up', 'conf': 0.416, 'source': 'llm'}, Consumer Cyclical={'score': -4.704, 'dir': 'down', 'conf': 0.588, 'source': 'llm'}, Energy={'score': 4.023, 'dir': 'up', 'conf': 0.661, 'source': 'llm'}, Financial={'score': -4.063, 'dir': 'down', 'conf': 0.563, 'source': 'llm'}, Healthcare={'score': 0.93, 'dir': 'up', 'conf': 0.537, 'source': 'llm'}, Basic Materials={'score': -7.604, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Industrials={'score': -5.881, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Real Estate={'score': -8.5, 'dir': 'down', 'conf': 0.65, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -3549,6 +3524,24 @@
         }
       ],
       "preview": "# News Judge \u2014 2026-09-15 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T15:46:48.742288-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-09-15_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 15217,
+          "preview": "# Premarket Prediction \u2014 2026-09-15\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -3.836 (uncertainty multiplier \u00d71.0) | confidence 0.553\n>\n> **Good news vs bad news:** good +0 pts vs bad -6.5 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - ES/NQ not independently weak\n> - HY contained 2.71\n> - VIX contango 0.90\n> - China IP +5.2% beat\n> - ASML 2027 EUV sold out\n>\n> **Bad news driving this:**\n> - Asia -0.72% (Kospi -3.26%)\n> - 1w 10Y +19bp / 5% handle\n> - WTI +4% leftover Hormuz\n> - FOMC-eve hike ~87-92% unprinted\n> - AI-chip T+1 hangover\n>\n> **market uncertainty: **elevated** | VIX 17.48 | policy-uncertainty index 215.48 (1d -202.54)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight news & catalysts: -1.0 \u00d7 3.0 = -3.0\n> -"
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-09-15\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -3.836 (uncertainty multiplier \u00d71.0) | confidence 0.553\n>\n> **Good news vs bad news:** good +0 pts vs bad -6.5 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - ES/NQ not independently weak\n> - HY contained 2.71\n> - VIX contango 0.90\n> - China IP +5.2% beat\n> - ASML 2027 EUV sold out\n>\n> **Bad news driving this:**\n> - Asia -0.72% (Kospi -3.26%)\n> - 1w 10Y +19bp / 5% handle\n> - WTI +4% leftover Hormuz\n> - FOMC-eve hike ~87-92% unprinted\n> - AI-chip T+1 hangover\n>\n> **market uncertainty: **elevated** | VIX 17.48 | policy-uncertainty index 215.48 (1d -202.54)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight news & catalysts: -1.0 \u00d7 3.0 = -3.0\n> -"
     }
   ],
   "href": {

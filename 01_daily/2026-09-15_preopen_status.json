@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T15:41:36.554500-04:00",
+  "generated_at": "2026-09-15T15:46:48.654698-04:00",
   "all_ok": false,
   "qc_all_ok": true,
   "book_ok": true,
@@ -168,7 +168,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/general/2026-09-15_predict.md",
-        "size": 16035
+        "size": 15217
       },
       {
         "kind": "events",
