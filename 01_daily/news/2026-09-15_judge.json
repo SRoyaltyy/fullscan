@@ -2,20 +2,20 @@
  "risk_tilt": "off",
  "macros": [
   "hawkish",
-  "mixed",
+  "bearish",
   "hawkish",
-  "mixed"
+  "bearish"
  ],
  "sector_tilts": {
   "Technology": "mixed",
-  "Financial": "bearish"
+  "Energy": "bullish"
  },
  "tickers": {
+  "SOXX": -4.0,
   "IGV": 4.0,
   "ADBE": 4.0,
-  "XLF": -4.0,
-  "BAC": -5.5
+  "XLE": 8.0
  },
- "b1_inject": "NEWS_JUDGE: n=8 rescued=3\nMACRO rates: [hawkish] 10Y >5% + CPI core surprise locking a September hike (regime/1d-1w)\nMACRO policy: [mixed] FOMC/SEP/Warsh PC unresolved \u2014 B3=0 until print (regime/1d)\nMACRO geo-oil: [mixed] Hormuz war, Brent ~$107; leftover vs fresh increment unproven (session/1d-1w)\nSECTOR semis: [bearish] AI-slowdown calls, AMD plunge, Asia memory (SMH/SOXX/QQQ)\nSECTOR software: [bullish] ADBE beat/raise + AI-pacing rotation vs hardware (IGV)\nSECTOR financials: [bearish] BAC CEO soft Q3 outlook into 5% yields (XLF)\nINTERACTION: one rates cluster (CPI+10Y+FOMC); semis mixed vs ASML EUV sold-out; oil+hawkish = stagflation tax not isolated XLE\nWATCH: do not emit a signed FOMC direction; do not auto B1=-3 kinetic without fresh increment + confirming futures",
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=3\nMACRO rates: [hawkish] 10Y>5% + CPI hike-lock + UMich 1y inf exp 4.6%; FOMC/Warsh unprinted (regime/1d-1w)\nMACRO risk: [bearish] cash indices already dropping on chips + yield pressure (session/1d)\nMACRO geo-oil: [mixed] Hormuz impaired, Brent ~$107; leftover not fresh kinetic (session/1d-1w)\nSECTOR semis: [bearish] AMD/AI-slowdown tape dominates; ASML sold-out is not a buy signal (SOXX)\nSECTOR software: [bullish] ADBE beat/raise + NOW/CRM/INTU; substitution vs hardware, not cut-bet (IGV)\nSECTOR energy: [bullish] $107 Brent / Hormuz \u2014 XLE support, ex-energy drag (XLE)\nINTERACTION: one hawkish rates cluster + hardware/software split; do not buy IGV on dovish-duration hope; semis mixed\nWATCH: FOMC/Warsh PC unresolved \u2014 B3=0 until print; Barrick gold-cut-bet headline is stale",
  "date": "2026-09-15"
 }
