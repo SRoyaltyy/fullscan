@@ -339,3 +339,5 @@ Integrity: **fill** = one Futubull cash account. **stitch** = daily mark overlay
 |  | Excel L5_long_green_hold2_midhibeta | excel | — | confirm | -5.14% | — | 116 | 32.8% | — |
 
 Dashboard: `dashboard/strategy-board/index.html`.
+
+Research overlay (not a wire): open-bell MARKET / LIMIT fills vs ideal 09:30 open live on [OPEN_BELL_SLIP.md](OPEN_BELL_SLIP.md). Does not change live `flatten_robust`, hard-red sit, or Webull paper.
