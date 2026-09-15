@@ -1,68 +1,68 @@
 # MAP HEAT — 2026-09-15
 
-Export `finviz_2026-09-15.csv` · 11616 names · generated 2026-09-15T09:56:54.920953-04:00
+Export `finviz_2026-09-15.csv` · 11616 names · generated 2026-09-15T10:15:16.823300-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7682.5 | -0.13% |
-| Nasdaq 100 (NQ) | 29429.25 | -0.06% |
-| Russell 2000 (ER2) | 2901.3 | -0.47% |
-| DJIA (YM) | 52563.0 | -0.53% |
-| VIX (VX) | 16.8 | -0.30% |
-| Crude Oil WTI (CL) | 103.56 | +2.11% |
-| Crude Oil Brent (QA) | 107.46 | +1.70% |
-| Natural Gas (NG) | 2.946 | +1.73% |
-| Heating Oil (HO) | 5.2325 | +5.35% |
-| Gasoline RBOB (RB) | 3.405 | +2.55% |
-| Gold (GC) | 4329.6 | -0.55% |
-| Silver (SI) | 64.255 | +0.15% |
-| Copper (HG) | 6.4395 | +0.52% |
-| Platinum (PL) | 1779.2 | -0.03% |
-| Palladium (PA) | 1312.0 | +0.33% |
-| USD (DX) | 99.325 | +0.22% |
-| EUR (6E) | 1.1585 | -0.12% |
-| JPY (6J) | 0.6497499999999999 | -0.67% |
-| GBP (6B) | 1.3491 | -0.18% |
-| AUD (6A) | 0.71185 | -0.24% |
-| CAD (6C) | 0.72175 | -0.10% |
-| CHF (6S) | 1.2347 | -0.27% |
-| NZD (6N) | 0.5774 | -0.48% |
-| 10 Year Note (ZN) | 105.890625 | -0.28% |
-| 5 Year Note (ZF) | 104.3515625 | -0.16% |
-| 2 Year Note (ZT) | 102.0390625 | -0.04% |
-| 30 Year Bond (ZB) | 106.4375 | -0.58% |
-| Nikkei 225 (NKD) | 63640.0 | +0.66% |
-| DAX (DY) | 25445.0 | +0.07% |
-| Euro Stoxx 50 (EX) | 6246.0 | -0.21% |
-| Corn (ZC) | 528.75 | -0.84% |
-| Soybeans (ZS) | 1302.75 | -0.13% |
-| Wheat (ZW) | 717.0 | -0.80% |
-| Soybean oil (ZL) | 69.9 | +0.36% |
-| Soybean Meal (ZM) | 351.3 | +0.31% |
-| Oats (ZO) | 398.0 | +1.27% |
-| Rough Rice (ZR) | 15.9 | -0.59% |
-| Coffee (KC) | 286.1 | -1.53% |
-| Sugar (SB) | 18.04 | -0.66% |
-| Cotton (CT) | 84.44 | -0.06% |
-| Cocoa (CC) | 6012.0 | -0.18% |
-| Orange Juice (JO) | 155.65 | +1.63% |
-| Lumber (LB) | 566.0 | +0.18% |
-| Live Cattle (LC) | 221.525 | -0.39% |
-| Lean Hogs (LH) | 79.95 | +0.44% |
-| Feeder Cattle (FC) | 336.2 | -0.51% |
-| Bitcoin (BTC) | 76390.0 | -3.47% |
-| 3 Month SOFR (SR3) | 96.03 | +0.00% |
-| 30 Day Fed Funds (ZQ) | 96.2625 | +0.00% |
+| S&P 500 (ES) | 7672.0 | -0.25% |
+| Nasdaq 100 (NQ) | 29402.25 | -0.12% |
+| Russell 2000 (ER2) | 2897.1 | -0.61% |
+| DJIA (YM) | 52481.0 | -0.71% |
+| VIX (VX) | 16.95 | +0.29% |
+| Crude Oil WTI (CL) | 103.41 | +1.97% |
+| Crude Oil Brent (QA) | 107.41 | +1.60% |
+| Natural Gas (NG) | 2.931 | +1.21% |
+| Heating Oil (HO) | 5.2227 | +5.26% |
+| Gasoline RBOB (RB) | 3.4087 | +2.66% |
+| Gold (GC) | 4336.7 | -0.34% |
+| Silver (SI) | 64.195 | +0.20% |
+| Copper (HG) | 6.4345 | +0.47% |
+| Platinum (PL) | 1777.9 | +0.01% |
+| Palladium (PA) | 1311.0 | +0.29% |
+| USD (DX) | 99.3 | +0.19% |
+| EUR (6E) | 1.15895 | -0.08% |
+| JPY (6J) | 0.6498 | -0.66% |
+| GBP (6B) | 1.3494 | -0.16% |
+| AUD (6A) | 0.71225 | -0.18% |
+| CAD (6C) | 0.722 | -0.06% |
+| CHF (6S) | 1.23425 | -0.29% |
+| NZD (6N) | 0.57755 | -0.44% |
+| 10 Year Note (ZN) | 105.890625 | -0.26% |
+| 5 Year Note (ZF) | 104.3671875 | -0.15% |
+| 2 Year Note (ZT) | 102.046875 | -0.04% |
+| 30 Year Bond (ZB) | 106.4375 | -0.55% |
+| Nikkei 225 (NKD) | 63620.0 | +0.82% |
+| DAX (DY) | 25473.0 | +0.14% |
+| Euro Stoxx 50 (EX) | 6251.0 | -0.14% |
+| Corn (ZC) | 530.75 | -0.66% |
+| Soybeans (ZS) | 1303.0 | -0.15% |
+| Wheat (ZW) | 717.25 | -0.73% |
+| Soybean oil (ZL) | 69.86 | +0.27% |
+| Soybean Meal (ZM) | 352.0 | +0.40% |
+| Oats (ZO) | 393.25 | +0.13% |
+| Rough Rice (ZR) | 15.89 | -0.66% |
+| Coffee (KC) | 287.0 | -0.98% |
+| Sugar (SB) | 17.99 | -0.99% |
+| Cotton (CT) | 84.29 | -0.26% |
+| Cocoa (CC) | 6067.0 | +0.65% |
+| Orange Juice (JO) | 154.8 | +1.21% |
+| Lumber (LB) | 569.0 | -0.18% |
+| Live Cattle (LC) | 222.35 | +0.07% |
+| Lean Hogs (LH) | 79.55 | +0.03% |
+| Feeder Cattle (FC) | 336.875 | -0.33% |
+| Bitcoin (BTC) | 76580.0 | -3.35% |
+| 3 Month SOFR (SR3) | 96.03 | +0.01% |
+| 30 Day Fed Funds (ZQ) | 96.265 | +0.01% |
 | Aluminum (ALI) | 3410.5 | -0.03% |
-| Canola (RS) | 821.8 | -0.21% |
+| Canola (RS) | 822.2 | -0.12% |
 | Coal Newcastle (NCF) | 146.85 | +0.07% |
 | Ethanol (ZK) | 2.055 | +0.00% |
-| Gasoil (G) | 1547.75 | +4.72% |
+| Gasoil (G) | 1542.75 | +4.42% |
 | Iron Ore (TIO) | 97.55 | -0.48% |
 | Steel HRC (HRC) | 1230.0 | -0.32% |
-| Ultra 10 Year Note (TN) | 107.375 | -0.36% |
-| Ultra Bond (UB) | 107.84375 | -0.78% |
+| Ultra 10 Year Note (TN) | 107.375 | -0.35% |
+| Ultra Bond (UB) | 107.8125 | -0.75% |
 | Uranium (UX) | 89.9 | -0.11% |
 
 ## CALENDAR
@@ -128,14 +128,14 @@ Mega-cap earnings:
 - AMC **JEF**  EPS est 0.926  (Jefferies Financial Group Inc)
 
 Options event-vol flags (NOT direction):
-- **MU** exp 2026-09-16 ATM IV 0.4899 implied move +2.6% put/call OI 0.458
-- **COST** exp 2026-09-18 ATM IV 0.2405 implied move +2.2% put/call OI 4.784
-- **ACN** exp 2026-09-18 ATM IV 0.6141 implied move +5.6% put/call OI 0.386
-- **CTAS** exp 2026-09-18 ATM IV 0.4188 implied move +3.8% put/call OI 0.494
-- **NKE** exp 2026-09-18 ATM IV 0.3638 implied move +3.3% put/call OI 5.169
-- **AZO** exp 2026-09-18 ATM IV 0.4634 implied move +4.2% put/call OI 0.848
-- **PAYX** exp 2026-09-18 ATM IV 0.5491 implied move +5.0% put/call OI 0.677
-- **JBL** exp 2026-09-18 ATM IV 0.5742 implied move +5.2% put/call OI 21.444
+- **MU** exp 2026-09-16 ATM IV 0.4406 implied move +2.3% put/call OI 0.458
+- **COST** exp 2026-09-18 ATM IV 0.2123 implied move +1.9% put/call OI 4.784
+- **ACN** exp 2026-09-18 ATM IV 0.5126 implied move +4.7% put/call OI 0.127
+- **CTAS** exp 2026-09-18 ATM IV 0.3998 implied move +3.6% put/call OI 0.494
+- **NKE** exp 2026-09-18 ATM IV 0.3457 implied move +3.1% put/call OI 5.169
+- **AZO** exp 2026-09-18 ATM IV 0.454 implied move +4.1% put/call OI 0.848
+- **PAYX** exp 2026-09-18 ATM IV 0.4849 implied move +4.4% put/call OI 0.677
+- **JBL** exp 2026-09-18 ATM IV 0.5757 implied move +5.2% put/call OI 0.25
 
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
@@ -255,31 +255,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 3 min **NTHI** Investor Determination to Beat Cancer Puts NeOnc's Novel Therapies and Patented Platform in Focus (GlobeNewswire)
-- 3 min **SPCX,NVDA,MSFT,TSLA** AI Doomerism Unleashed: 'Most Predictions Are Wrong' (Barrons.com)
-- 6 min **SPCX** Musk hints (again) at possible SpaceX, Tesla merger (Yahoo Finance)
-- 7 min **MU** Micron Stock Moves Past AI Fears With Launch of New Memory Module (Barrons.com)
-- 8 min **PLAY** Dave and Buster's Stock Gaps Lower on Earnings Fumble (Schaeffer's Research)
-- 10 min **NKE** Greg Brockman joins Forbes 400 as richest newcomer at $25.5 billion (Quartz)
-- 10 min **SPCX,TSLA** The Tesla Roadster Will 'Blow People's Minds' (Barrons.com)
-- 11 min **EXYN** Exyn Technologies Extends ExynAI Autonomy to CHCNAV's X500 Drone, Expanding Its Third-Party Robotics Ecosystem (GlobeNewswire)
-- 11 min **HLNE,AMP** Columbia Threadneedle Investments and Hamilton Lane Announce Strategic Collaboration to Deliver Investment Solutions to the Wealth Channel (Business Wire)
-- 11 min **SMX** SMX Brings a New Layer of trust to Gold as Global Uncertainty Drives Investors Toward Physical Assets (ACCESSWIRE)
-- 12 min **MSFT** Tech stocks today: AI warnings send shock through chip stocks (Yahoo Finance)
-- 15 min **NVDA** Cathie Wood Backs AI Slowdown but Calls Extinction Fears Ridiculous: What Do Prediction Markets Say? (Benzinga Prediction Markets)
-- 17 min **FPS** Forgent Power Solutions Shares Rise 10.9% After FY26 Results (InvestorsHub)
-- 18 min **VERA** Vera Therapeutics Shares Rise 13% After TRUTAKNA Meets ORIGIN 3 Trial Endpoints (InvestorsHub)
-- 19 min **AXON** Axon Enterprise Shares Fall 5% After $1 Billion Convertible Notes Offering Announced (InvestorsHub)
-- 20 min **SPCX,TSLA** Cathie Wood backs AI slowdown pledge, dismisses extinction warnings (Quartz)
-- 21 min **CLLS,ASND,DAVE,AGL,APTV** Ulta Beauty, Etsy upgraded: Wall Street's top analyst calls (The Fly)
-- 21 min **TRMD** Torm Shares Fall 6.3% After Major Shareholder Launches Secondary Offering (InvestorsHub)
-- 22 min **CRCL** Circle Internet Shares Fall 4.7% Ahead of Senate Vote on Crypto Legislation (InvestorsHub)
-- 23 min **LLY** Eli Lilly Shares Rise 1.6% as Berenberg Upgrades Stock to Buy (InvestorsHub)
-- 24 min **LLY** Berenberg bullish on Eli Lilly, sees nearly 25% upside (Investing.com)
-- 24 min **MICC** Big bank cautious on Magnum as ice cream maker's hot streak looks hard to repeat (Proactive)
-- 25 min **ZS,PANW,SAIL** What Actually Lifted Okta Stock To A One-Year High? (Trefis)
-- 25 min **MSFT,OKTA,CRWD** What Actually Lifted Okta Stock To A One-Year High? (Trefis)
-- 25 min **COIN** Coinbase Shares Fall 4.4% as Bitcoin and Ether Decline Ahead of CLARITY Act Vote (InvestorsHub)
+- 2 min **BLSM** BlossomHill Therapeutics Shares Rise 4.4% After BH-30643 Trial Update (InvestorsHub)
+- 2 min **FLEX** Flex Shares Rise 2.6% as Company Names Planned Axiom Solutions Spin-Off (InvestorsHub)
+- 3 min **WPM** Generation Mining obtains $245m to fund Marathon Project in Ontario (Mining Technology)
+- 3 min **MU** Micron Demonstrates 512GB DDR5 Memory Module for Server Platforms (InvestorsHub)
+- 4 min **ZM** Zoom Launches AI-Powered Revenue Platform With New Sales and Forecasting Tools (InvestorsHub)
+- 5 min **ACB** Curaleaf Urges Aurora Cannabis Shareholders to Tender Shares to Takeover Offer (InvestorsHub)
+- 6 min **SPCX** SpaceX Readies For Starship Flight 14 Next Week, Musk Plans Ship Catch (Investor's Business Daily)
+- 8 min **PLAY,COIN,MSTR,HAL,CRWD** Stocks to Watch: UBS, Dave & Buster's, Coinbase (The Wall Street Journal)
+- 9 min **ACCO** PowerA Brings the Magic of Harry Potter to Gaming Accessories Through New Partnership with Warner Bros. Discovery Global Consumer Products (PR Newswire)
+- 12 min **RTB** Roundtable Shareholder Call Scheduled. Anticipated, Transformative Transaction Signed, CEO Heckman to Share Details, Economics (GlobeNewswire)
+- 14 min **NVDA** 10-year Treasury hits 2007 high as oil stays above $100: AlphaCheck (Yahoo Finance)
+- 15 min **UTMD** UTMD Announces Self-Tender for 20% of Its Shares (ACCESSWIRE)
+- 15 min **SFWL** Shengfeng Development Limited Announces Unaudited 2026 First Half Financial Results (PR Newswire)
+- 15 min **ALKT** Embers Credit Union is Live with MANTL Loan Origination (PR Newswire)
+- 15 min **RCL** ROYAL CARIBBEAN NAMES RETIRED U.S. AIR FORCE GEN. LORI J. ROBINSON GODMOTHER OF LEGEND OF THE SEAS (PR Newswire)
+- 15 min **SPG** Simon Launches 'It's a Simon Thing' National Brand Campaign Celebrating the Moments That Bring People Together (PR Newswire)
+- 15 min **GTN** Gray Media Promotes Ronna Steber to Chief Revenue Officer (GlobeNewswire)
+- 15 min **APP** Wurl Launches Content Intelligence Platform to Scale Advanced Targeting Across Streaming TV (Business Wire)
+- 15 min **ROP** Illumia Appoints Don Smith to Lead Higher Education Portfolio (Business Wire)
+- 15 min **SPSC** SPS Commerce Brings Network Intelligence to AI, Enabling Supply Chain Leaders to Turn Investment into Insight (Business Wire)
+- 15 min **CMCSA** Xfinity and Comcast Business Services Now Available in Beaufort and Edisto, South Carolina (Business Wire)
+- 15 min **PFE** Pfizer Invites Public to Listen to Webcast of Pfizer Discussion at Healthcare Conference (Business Wire)
+- 15 min **S** SentinelOne Named an AI Security Platform Leader in Latio 2026 AI Security Market Report (Business Wire)
+- 15 min **RIOT,TSLA** Ethereum leads way as large cryptocurrencies fall (MarketWatch)
+- 15 min **PKX** Santos agrees LNG arrangements with POSCO and Ksi Lisims (Offshore Technology)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
