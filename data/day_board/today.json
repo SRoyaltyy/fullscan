@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T12:04:35.347631-04:00",
+  "generated_at": "2026-09-15T12:04:45.604580-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -105,24 +105,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "sector_board",
-      "title": "Sector board",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T11:42:45.570303-04:00",
-      "files": [
-        {
-          "path": "01_daily/sectors/2026-09-15/_board.json",
-          "ok": true,
-          "reason": "",
-          "size": 7127,
-          "preview": "keys: date, generated_at, sectors"
-        }
-      ],
-      "preview": "keys: date, generated_at, sectors"
-    },
     {
       "key": "map_heat_research",
       "title": "Map heat morning delta refresh",
@@ -311,6 +293,101 @@
         }
       ],
       "preview": "1d BUY MTCH, FOX, CARG, SNAP \u00b7 SELL OKLO, QBTS, IONQ, EOSE, QUBT, RGTI, METC, FLNC \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-15 BUY MTCH, FOX, CARG, SNAP \u00b7 SELL OKLO, QBTS, IONQ, EOSE, QUBT, RGTI, METC, FLNC \u00b7 2026-09-15 BUY MTCH, FOX, CARG, SNAP \u00b7 SELL OKLO, QBTS, IONQ, EOSE, QUBT, RGTI, METC, FLNC \u00b7 # Stock book \u2014 2026-09-15\n_Generated 2026-09-15T11:55:41.802511-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T12:04:44.214593-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 12563,
+          "preview": "2026-09-15 BUY MTCH, FOX, CARG, SNAP \u00b7 SELL OKLO, QBTS, IONQ, EOSE, QUBT, RGTI, METC, FLNC"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 944,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-15.json",
+          "ok": true,
+          "reason": "",
+          "size": 179598,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-15_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 158023,
+          "preview": "2026-09-15 BUY MTCH, FOX, CARG, SNAP \u00b7 SELL OKLO, QBTS, IONQ, EOSE, QUBT, RGTI, METC, FLNC"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2543512,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-15_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2482435,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2817834,
+          "preview": "2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2476752,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 158023,
+          "preview": "2026-09-15 BUY MTCH, FOX, CARG, SNAP \u00b7 SELL OKLO, QBTS, IONQ, EOSE, QUBT, RGTI, METC, FLNC"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2476752,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2476752,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2742979,
+          "preview": "2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN"
+        }
+      ],
+      "preview": "2026-09-15 BUY MTCH, FOX, CARG, SNAP \u00b7 SELL OKLO, QBTS, IONQ, EOSE, QUBT, RGTI, METC, FLNC \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-15 BUY MTCH, FOX, CARG, SNAP \u00b7 SELL OKLO, QBTS, IONQ, EOSE, QUBT, RGTI, METC, FLNC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY MTCH, FOX, CARG, SNAP \u00b7 SELL OKLO, QBTS, IONQ, EOSE, QUBT, RGTI, METC, FLNC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AVAH, "
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
