@@ -1,0 +1,23 @@
+{
+ "risk_tilt": "off",
+ "macros": [
+  "hawkish",
+  "bearish",
+  "bullish",
+  "hawkish",
+  "bearish",
+  "bullish"
+ ],
+ "sector_tilts": {
+  "Technology": "mixed",
+  "Healthcare": "mixed",
+  "Energy": "bearish",
+  "Mega-Cap Tech": "bearish"
+ },
+ "tickers": {
+  "XLE": -6.5,
+  "AAPL": -5.5
+ },
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=4\nMACRO rates: [hawkish] Warsh Jackson Hole lifts Sept hike odds, gold \u22123%, front end repriced (regime/1w-1m)\nMACRO rates: [bearish] rising yields flagged as key risk for Russell 2000 / small caps (session/1d-1w)\nMACRO risk: [bullish] oil retreats, SPX/Dow snap four-day losing streak (session/1d)\nSECTOR software: [mixed] ADBE record Q3 beat + FY26 raise, AI freemium pivot \u2014 stock-specific, not a sector re-rating (IGV)\nSECTOR healthcare: [mixed] AZN SERENA-4 Phase-3 miss (bearish oncology) vs ABT TactiFlex Duo FDA approval (bullish med-tech) (XLV)\nSECTOR energy: [bearish] lower crude is a headwind to the heavy energy cluster despite green index (XLE)\nSECTOR mega-cap tech: [bearish] AAPL PT cut to $370 on iPhone 18 margin pressure (AAPL, spillover)\nSECTOR index-flow: [context] SpaceX Nasdaq-100 weighting to more than double (QQQ)\nINTERACTION: Warsh hike-odds + rising yields + IWM warning = ONE rates cluster, not two bearish inputs; do not buy software or small caps on dovish-rates hope\nINTERACTION: oil retreat helps index but hurts the energy cluster \u2014 do not double-count index green as energy bullish\nWATCH: no hard macro print today; dominant driver is a carried Warsh repricing \u2014 if ES/NQ do not confirm, cap conviction",
+ "date": "2026-09-15"
+}
