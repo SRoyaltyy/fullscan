@@ -293,7 +293,7 @@ across 24 starts.
       firstOk(["latest_suggestions.json", SUG])
     ]).then(function(arr){
       var today = arr[0] || {}, strat = arr[1] || {}, sug = arr[2] || {};
-      var d = Object.assign({}, sug, today);
+      var d = afterBell() ? Object.assign({}, today) : Object.assign({}, sug, today);
       if(strat && strat.strategies) d.strategies = strat.strategies;
       if(strat && strat.date) d.date = strat.date;
       if(strat && strat.n) d.n_strategies = strat.n;
@@ -304,8 +304,10 @@ across 24 starts.
       var sells = (strat && strat.sell_1d && strat.sell_1d.length) ? strat.sell_1d : (sb.sell || []);
       if(buys.length) d.buy_1d = buys;
       if(sells.length) d.sell_1d = sells;
-      if(!d.buy_1d && sug.buy_1d) d.buy_1d = sug.buy_1d;
-      if(!d.sell_1d && sug.sell_1d) d.sell_1d = sug.sell_1d;
+      if(!afterBell()){
+        if(!d.buy_1d && sug.buy_1d) d.buy_1d = sug.buy_1d;
+        if(!d.sell_1d && sug.sell_1d) d.sell_1d = sug.sell_1d;
+      }
       paint(d);
     });
   }

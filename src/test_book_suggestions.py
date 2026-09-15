@@ -246,6 +246,8 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "afterBell() ? 20000 : 60000" in book_suggestions._POLLER_JS
     assert "function firstOk" in book_suggestions._POLLER_JS
     assert "ok ? {} : last" in book_suggestions._POLLER_JS
+    assert "afterBell() ? Object.assign({}, today)" in book_suggestions._POLLER_JS
+    assert "if(!afterBell())" in book_suggestions._POLLER_JS
     assert "function ticketsLookLive" in book_suggestions._POLLER_JS
     assert "function stripLooksLive" in book_suggestions._POLLER_JS
     assert "function sessionDate" in book_suggestions._POLLER_JS
