@@ -1,18 +1,19 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T04:25:03.706070-04:00",
+  "generated_at": "2026-09-15T04:25:19.268986-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-15_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-15/_board.json` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-09-15_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-09-15_judge.md` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-09-15_judge.md` \u2014 missing",
+    "MISSING AB checklist enriched `data/ab_checklist/2026-09-15_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "ok": 3,
+    "partial": 2,
+    "fail": 3,
     "n": 8
   },
   "processes": [
@@ -52,7 +53,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 269906
+          "size": 269893
         },
         {
           "key": "heat_md",
@@ -61,7 +62,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 16934
+          "size": 16943
         }
       ],
       "said": "tables on disk",
@@ -85,7 +86,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 87598
+          "size": 87542
         },
         {
           "key": "digest_md",
@@ -94,7 +95,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11324
+          "size": 11332
         },
         {
           "key": "market_digest_json",
@@ -103,7 +104,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 9080
+          "size": 6662
         },
         {
           "key": "market_digest_md",
@@ -112,7 +113,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 3976
+          "size": 2949
         },
         {
           "key": "market_digest_close_json",
@@ -154,7 +155,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87598
+          "size": 87542
         },
         {
           "key": "in_market_digest",
@@ -163,7 +164,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 9080
+          "size": 6662
         },
         {
           "key": "in_baseline",
@@ -181,7 +182,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 269906
+          "size": 269893
         },
         {
           "key": "parsed",
@@ -403,7 +404,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87598
+          "size": 87542
         },
         {
           "key": "weather",
@@ -425,9 +426,9 @@
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "OK",
+      "status": "FAIL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 0,
       "n_req": 1,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -446,15 +447,13 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-15_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=11617",
-          "size": 3347303
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         }
       ],
-      "said": "222 rows",
-      "bullets": [
-        "BTE, MTDR, SU, NVGS, KGEI"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "catalyst",
@@ -483,7 +482,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87598
+          "size": 87542
         },
         {
           "key": "dossiers",
@@ -502,9 +501,9 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "FAIL",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 0,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -543,7 +542,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87598
+          "size": 87542
         },
         {
           "key": "in_judge",
@@ -568,9 +567,9 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-15_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "OK",
-          "reason": "rows=11617",
-          "size": 3347303
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "join",
@@ -586,9 +585,9 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-09-15_peer_rs.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=5111",
-          "size": 817895
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "book_json",
@@ -1480,6 +1479,31 @@
         }
       ],
       "preview": "11617 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T04:25:19.140864-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-15_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 269893,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-15_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 17316,
+          "preview": "# MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T04:25:19.101684-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T04:25:19.101684-04:00"
     }
   ],
   "href": {

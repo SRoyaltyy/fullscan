@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T04:23:26.355288-04:00",
+  "generated_at": "2026-09-15T04:25:19.101684-04:00",
   "phase": "morning_overlay",
   "export": "finviz_2026-09-15.csv",
   "n_tickers": 11616,
@@ -8581,140 +8581,140 @@
     {
       "ticker": "ES",
       "label": "S&P 500",
-      "last": 7649.5,
-      "change": -0.57
+      "last": 7653.25,
+      "change": -0.54
     },
     {
       "ticker": "NQ",
       "label": "Nasdaq 100",
-      "last": 29253.25,
-      "change": -0.66
+      "last": 29276.5,
+      "change": -0.62
     },
     {
       "ticker": "ER2",
       "label": "Russell 2000",
-      "last": 2894.0,
-      "change": -0.77
+      "last": 2896.4,
+      "change": -0.73
     },
     {
       "ticker": "YM",
       "label": "DJIA",
-      "last": 52475.0,
-      "change": -0.78
+      "last": 52489.0,
+      "change": -0.71
     },
     {
       "ticker": "VX",
       "label": "VIX",
-      "last": 17.55,
-      "change": 4.45
+      "last": 17.5,
+      "change": 3.85
     },
     {
       "ticker": "CL",
       "label": "Crude Oil WTI",
-      "last": 103.73,
-      "change": 2.24
+      "last": 103.79,
+      "change": 2.37
     },
     {
       "ticker": "QA",
       "label": "Crude Oil Brent",
-      "last": 108.03,
-      "change": 2.21
+      "last": 108.11,
+      "change": 2.31
     },
     {
       "ticker": "NG",
       "label": "Natural Gas",
-      "last": 2.894,
+      "last": 2.893,
       "change": -0.07
     },
     {
       "ticker": "HO",
       "label": "Heating Oil",
-      "last": 5.1114,
-      "change": 3.01
+      "last": 5.1167,
+      "change": 3.09
     },
     {
       "ticker": "RB",
       "label": "Gasoline RBOB",
-      "last": 3.3759,
-      "change": 1.73
+      "last": 3.3807,
+      "change": 1.92
     },
     {
       "ticker": "GC",
       "label": "Gold",
-      "last": 4304.9,
-      "change": -1.08
+      "last": 4307.7,
+      "change": -1.01
     },
     {
       "ticker": "SI",
       "label": "Silver",
-      "last": 63.115,
-      "change": -1.63
+      "last": 63.205,
+      "change": -1.47
     },
     {
       "ticker": "HG",
       "label": "Copper",
-      "last": 6.35,
-      "change": -0.89
+      "last": 6.359,
+      "change": -0.76
     },
     {
       "ticker": "PL",
       "label": "Platinum",
-      "last": 1746.7,
-      "change": -1.87
+      "last": 1750.0,
+      "change": -1.67
     },
     {
       "ticker": "PA",
       "label": "Palladium",
-      "last": 1283.5,
-      "change": -1.89
+      "last": 1284.5,
+      "change": -1.85
     },
     {
       "ticker": "DX",
       "label": "USD",
       "last": 99.36,
-      "change": 0.27
+      "change": 0.25
     },
     {
       "ticker": "6E",
       "label": "EUR",
       "last": 1.15795,
-      "change": -0.17
+      "change": -0.16
     },
     {
       "ticker": "6J",
       "label": "JPY",
-      "last": 0.64925,
-      "change": -0.76
+      "last": 0.6494,
+      "change": -0.73
     },
     {
       "ticker": "6B",
       "label": "GBP",
-      "last": 1.3474,
-      "change": -0.3
+      "last": 1.3477,
+      "change": -0.29
     },
     {
       "ticker": "6A",
       "label": "AUD",
-      "last": 0.71105,
-      "change": -0.36
+      "last": 0.7114,
+      "change": -0.32
     },
     {
       "ticker": "6C",
       "label": "CAD",
       "last": 0.7226,
-      "change": 0.01
+      "change": 0.02
     },
     {
       "ticker": "6S",
       "label": "CHF",
-      "last": 1.2368,
-      "change": -0.1
+      "last": 1.237,
+      "change": -0.09
     },
     {
       "ticker": "6N",
       "label": "NZD",
-      "last": 0.5778,
-      "change": -0.42
+      "last": 0.578,
+      "change": -0.38
     },
     {
       "ticker": "ZN",
@@ -8725,67 +8725,67 @@
     {
       "ticker": "ZF",
       "label": "5 Year Note",
-      "last": 104.2265625,
+      "last": 104.234375,
       "change": -0.28
     },
     {
       "ticker": "ZT",
       "label": "2 Year Note",
-      "last": 101.98828125,
+      "last": 101.99609375,
       "change": -0.09
     },
     {
       "ticker": "ZB",
       "label": "30 Year Bond",
       "last": 106.0625,
-      "change": -0.91
+      "change": -0.93
     },
     {
       "ticker": "NKD",
       "label": "Nikkei 225",
-      "last": 63080.0,
-      "change": -0.16
+      "last": 63140.0,
+      "change": -0.11
     },
     {
       "ticker": "DY",
       "label": "DAX",
-      "last": 25214.0,
-      "change": -0.85
+      "last": 25194.0,
+      "change": -0.91
     },
     {
       "ticker": "EX",
       "label": "Euro Stoxx 50",
-      "last": 6205.0,
-      "change": -0.88
+      "last": 6200.0,
+      "change": -0.96
     },
     {
       "ticker": "ZC",
       "label": "Corn",
-      "last": 531.25,
-      "change": -0.38
+      "last": 531.75,
+      "change": -0.28
     },
     {
       "ticker": "ZS",
       "label": "Soybeans",
-      "last": 1299.5,
-      "change": -0.38
+      "last": 1300.25,
+      "change": -0.33
     },
     {
       "ticker": "ZW",
       "label": "Wheat",
-      "last": 720.25,
-      "change": -0.24
+      "last": 721.0,
+      "change": -0.17
     },
     {
       "ticker": "ZL",
       "label": "Soybean oil",
-      "last": 69.98,
-      "change": 0.47
+      "last": 70.02,
+      "change": 0.53
     },
     {
       "ticker": "ZM",
       "label": "Soybean Meal",
-      "last": 347.9,
+      "last": 348.0,
       "change": -0.66
     },
     {
@@ -8810,12 +8810,12 @@
       "ticker": "SB",
       "label": "Sugar",
       "last": 18.11,
-      "change": -0.33
+      "change": -0.28
     },
     {
       "ticker": "CT",
       "label": "Cotton",
-      "last": 84.71,
+      "last": 84.8,
       "change": 0.19
     },
     {
@@ -8857,8 +8857,8 @@
     {
       "ticker": "BTC",
       "label": "Bitcoin",
-      "last": 76720.0,
-      "change": -3.05
+      "last": 76765.0,
+      "change": -3.01
     },
     {
       "ticker": "SR3",
@@ -8881,7 +8881,7 @@
     {
       "ticker": "RS",
       "label": "Canola",
-      "last": 819.0,
+      "last": 818.9,
       "change": -0.49
     },
     {
@@ -8899,8 +8899,8 @@
     {
       "ticker": "G",
       "label": "Gasoil",
-      "last": 1514.75,
-      "change": 2.57
+      "last": 1516.25,
+      "change": 2.68
     },
     {
       "ticker": "TIO",
@@ -8923,8 +8923,8 @@
     {
       "ticker": "UB",
       "label": "Ultra Bond",
-      "last": 107.46875,
-      "change": -1.06
+      "last": 107.5,
+      "change": -1.09
     },
     {
       "ticker": "UX",
@@ -8935,7 +8935,7 @@
   ],
   "ticker_news": [
     {
-      "time": "13 min",
+      "time": "15 min",
       "title": "Sophia High Tech Flight Hardware on Board VEGA-C VV30 as the European Launcher Carries Sentinel-3C and FLEX into Orbit",
       "url": "/news/391907/sophia-high-tech-flight-hardware-on-board-vega-c-vv30-as-the-european-launcher-carries-sentinel-3c-and-flex-into-orbit",
       "source": "GlobeNewswire",
@@ -8944,7 +8944,7 @@
       ]
     },
     {
-      "time": "23 min",
+      "time": "25 min",
       "title": "Johnson Controls electrifies energy-intensive industries with new heat pumps that can triple energy efficiency and lower operating costs",
       "url": "/news/391904/johnson-controls-electrifies-energy-intensive-industries-with-new-heat-pumps-that-can-triple-energy-efficiency-and-lower-operating-costs",
       "source": "PR Newswire",
@@ -8953,7 +8953,7 @@
       ]
     },
     {
-      "time": "23 min",
+      "time": "25 min",
       "title": "FICO European Fraud Map: UK Resilient as Other European Countries See Losses Climb by up to 21%",
       "url": "/news/391905/fico-european-fraud-map-uk-resilient-as-other-european-countries-see-losses-climb-by-up-to-21",
       "source": "Business Wire",
@@ -8962,7 +8962,7 @@
       ]
     },
     {
-      "time": "23 min",
+      "time": "25 min",
       "title": "Northern Trust Survey: Asset Managers Sharpen Focus on Core Capabilities to Drive Growth",
       "url": "/news/391906/northern-trust-survey-asset-managers-sharpen-focus-on-core-capabilities-to-drive-growth",
       "source": "Business Wire",
@@ -8971,7 +8971,7 @@
       ]
     },
     {
-      "time": "31 min",
+      "time": "33 min",
       "title": "FTSE 100 today: Stocks slip as oil surges, AI safety rift adds to unease",
       "url": "https://finance.yahoo.com/markets/world-indices/articles/ftse-100-today-stocks-slip-075124691.html",
       "source": "Investing.com",
@@ -8980,26 +8980,18 @@
       ]
     },
     {
-      "time": "34 min",
+      "time": "36 min",
       "title": "Watch Out SKHY, MU, SNDK: Japans Kioxia Reportedly Eyes $10B US Listing To Ride AI Memory Boom",
       "url": "https://finance.yahoo.com/m/1e97f70b-3ecf-3625-a441-e1b8e529c5f2/watch-out-skhy%2C-mu%2C-sndk%3A.html",
       "source": "Stocktwits",
       "tickers": [
+        "MU",
         "SNDK",
         "SKHY"
       ]
     },
     {
-      "time": "34 min",
-      "title": "Watch Out SKHY, MU, SNDK: Japans Kioxia Reportedly Eyes $10B US Listing To Ride AI Memory Boom",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/watch-skhy-mu-sndk-japan-074852026.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "MU"
-      ]
-    },
-    {
-      "time": "39 min",
+      "time": "41 min",
       "title": "NIO Stock Rises Overnight: Nio Capital Joins Sequoia China And SMIC-Linked Backers In Robot-Sensor Bet",
       "url": "https://finance.yahoo.com/m/63ad46a5-2f62-3c39-ad25-91434eba2a20/nio-stock-rises-overnight%3A.html",
       "source": "Stocktwits",
@@ -9009,7 +9001,7 @@
       ]
     },
     {
-      "time": "53 min",
+      "time": "55 min",
       "title": "Fluke Expands iSee Mobile Series with New TC03A Thermal Camera and ii01 Acoustic Camera",
       "url": "/news/391903/fluke-expands-isee-mobile-series-with-new-tc03a-thermal-camera-and-ii01-acoustic-camera",
       "source": "GlobeNewswire",
@@ -9051,14 +9043,22 @@
       "url": "https://finance.yahoo.com/m/e760c2ac-fd44-3bb0-9d7d-251b160b45d2/tesla%2C-spacex-stocks-rise.html",
       "source": "Stocktwits",
       "tickers": [
-        "TSLA",
         "SPCX"
       ]
     },
     {
       "time": "1 hour",
+      "title": "Tesla, SpaceX Stocks Rise Overnight: Elon Musk Fuels Merger Speculation, Hints At Action Amid Close Collaboration",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/tesla-spacex-stocks-rise-overnight-070611962.html",
+      "source": "Stocktwits",
+      "tickers": [
+        "TSLA"
+      ]
+    },
+    {
+      "time": "1 hour",
       "title": "GAP Stock Heads For Monthly Loss Despite CEO Optimism On Old Navy  Cardi B Campaign Fails To Lift Retail Mood",
-      "url": "https://finance.yahoo.com/m/e10a3409-5fa4-36ec-a084-683cc9301678/gap-stock-heads-for-monthly.html",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/gap-stock-heads-monthly-loss-070331272.html",
       "source": "Stocktwits",
       "tickers": [
         "GAP"
@@ -9179,7 +9179,7 @@
       "source": "BeInCrypto",
       "tickers": [
         "AMD",
-        "NVDA",
+        "MU",
         "SKHY"
       ]
     },
@@ -9189,14 +9189,14 @@
       "url": "https://finance.yahoo.com/technology/ai/articles/chip-stocks-sink-ai-slowdown-060500112.html",
       "source": "BeInCrypto",
       "tickers": [
-        "MU",
-        "AVGO"
+        "AVGO",
+        "NVDA"
       ]
     },
     {
       "time": "2 hours",
       "title": "Can Viking Therapeutics Beat Big Pharma With Monthly Weight-Loss Shots? Heres The Risk CEO Says Could Derail It",
-      "url": "https://finance.yahoo.com/healthcare/articles/viking-therapeutics-beat-big-pharma-060315932.html",
+      "url": "https://finance.yahoo.com/m/7458ce0d-eed2-3d31-a5bd-c976a9e7961c/can-viking-therapeutics-beat.html",
       "source": "Stocktwits",
       "tickers": [
         "VKTX"
@@ -9345,12 +9345,20 @@
       "url": "https://finance.yahoo.com/m/77d8475d-d701-369d-b520-72535d8e2ee3/rocket-lab-expects-iridium.html",
       "source": "Stocktwits",
       "tickers": [
-        "IRDM",
         "RKLB"
       ]
     },
     {
       "time": "2 hours",
+      "title": "Rocket Lab Expects Iridium Deal To Double Its Size Overnight  CFO Says More Space Deals May Follow",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-expects-iridium-deal-052520819.html",
+      "source": "Stocktwits",
+      "tickers": [
+        "IRDM"
+      ]
+    },
+    {
+      "time": "3 hours",
       "title": "EQ Resources Takes Stake in U.S. Tungsten Processing JV",
       "url": "https://finance.yahoo.com/energy/articles/eq-resources-takes-stake-u-052500932.html",
       "source": "Oilprice.com",
@@ -9495,8 +9503,8 @@
       "url": "https://finance.yahoo.com/healthcare/articles/sls-ibrx-iova-focus-amid-040047202.html",
       "source": "Stocktwits",
       "tickers": [
-        "IBRX",
-        "PFE"
+        "SLS",
+        "IBRX"
       ]
     },
     {
@@ -9506,7 +9514,7 @@
       "source": "Stocktwits",
       "tickers": [
         "IOVA",
-        "SLS",
+        "PFE",
         "JNJ"
       ]
     },
@@ -9526,7 +9534,15 @@
       "source": "BeInCrypto",
       "tickers": [
         "MSTR",
-        "BMNR",
+        "BMNR"
+      ]
+    },
+    {
+      "time": "Sep-14",
+      "title": "Treasury Firms Stack Ethereum, Solana, and Bitcoin Through a Jittery September Market",
+      "url": "https://finance.yahoo.com/markets/crypto/articles/treasury-firms-stack-ethereum-solana-034013133.html",
+      "source": "BeInCrypto",
+      "tickers": [
         "STRC"
       ]
     },
@@ -9612,7 +9628,7 @@
       "url": "https://finance.yahoo.com/m/3c0a8257-3296-3207-98d2-b0cdd194fb2d/now%2C-intu%2C-adbe%2C-crm-stocks.html",
       "source": "Stocktwits",
       "tickers": [
-        "NOW",
+        "INTU",
         "ADBE",
         "CRM"
       ]
@@ -9623,7 +9639,7 @@
       "url": "https://finance.yahoo.com/technology/ai/articles/now-intu-adbe-crm-stocks-022524205.html",
       "source": "Stocktwits",
       "tickers": [
-        "INTU"
+        "NOW"
       ]
     },
     {
@@ -9752,25 +9768,6 @@
       "source": "WSJ",
       "tickers": [
         "FDX"
-      ]
-    },
-    {
-      "time": "Sep-14",
-      "title": "BE Stock Falls Most In Nearly A Month: Why This Analyst Sees Over 36% Upside",
-      "url": "https://finance.yahoo.com/m/99eb6c72-cc4e-34c6-b488-70075624434c/be-stock-falls-most-in-nearly.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "BE",
-        "SPCX"
-      ]
-    },
-    {
-      "time": "Sep-14",
-      "title": "Champions Oncology Inc (CSBR) (Q1 2027) Earnings Call Highlights: Data Licensing Surge and ...",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/champions-oncology-inc-csbr-q1-010034142.html",
-      "source": "GuruFocus.com",
-      "tickers": [
-        "CSBR"
       ]
     }
   ],
@@ -10486,5 +10483,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 211,
   "earnings_window_count": 46,
-  "overlay_at": "2026-09-15T04:23:26.355288-04:00"
+  "overlay_at": "2026-09-15T04:25:19.101684-04:00"
 }

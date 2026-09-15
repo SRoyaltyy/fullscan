@@ -1,68 +1,68 @@
 # MAP HEAT — 2026-09-15
 
-Export `finviz_2026-09-15.csv` · 11616 names · generated 2026-09-15T04:23:26.355288-04:00
+Export `finviz_2026-09-15.csv` · 11616 names · generated 2026-09-15T04:25:19.101684-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7649.5 | -0.57% |
-| Nasdaq 100 (NQ) | 29253.25 | -0.66% |
-| Russell 2000 (ER2) | 2894.0 | -0.77% |
-| DJIA (YM) | 52475.0 | -0.78% |
-| VIX (VX) | 17.55 | +4.45% |
-| Crude Oil WTI (CL) | 103.73 | +2.24% |
-| Crude Oil Brent (QA) | 108.03 | +2.21% |
-| Natural Gas (NG) | 2.894 | -0.07% |
-| Heating Oil (HO) | 5.1114 | +3.01% |
-| Gasoline RBOB (RB) | 3.3759 | +1.73% |
-| Gold (GC) | 4304.9 | -1.08% |
-| Silver (SI) | 63.115 | -1.63% |
-| Copper (HG) | 6.35 | -0.89% |
-| Platinum (PL) | 1746.7 | -1.87% |
-| Palladium (PA) | 1283.5 | -1.89% |
-| USD (DX) | 99.36 | +0.27% |
-| EUR (6E) | 1.15795 | -0.17% |
-| JPY (6J) | 0.64925 | -0.76% |
-| GBP (6B) | 1.3474 | -0.30% |
-| AUD (6A) | 0.71105 | -0.36% |
-| CAD (6C) | 0.7226 | +0.01% |
-| CHF (6S) | 1.2368 | -0.10% |
-| NZD (6N) | 0.5778 | -0.42% |
+| S&P 500 (ES) | 7653.25 | -0.54% |
+| Nasdaq 100 (NQ) | 29276.5 | -0.62% |
+| Russell 2000 (ER2) | 2896.4 | -0.73% |
+| DJIA (YM) | 52489.0 | -0.71% |
+| VIX (VX) | 17.5 | +3.85% |
+| Crude Oil WTI (CL) | 103.79 | +2.37% |
+| Crude Oil Brent (QA) | 108.11 | +2.31% |
+| Natural Gas (NG) | 2.893 | -0.07% |
+| Heating Oil (HO) | 5.1167 | +3.09% |
+| Gasoline RBOB (RB) | 3.3807 | +1.92% |
+| Gold (GC) | 4307.7 | -1.01% |
+| Silver (SI) | 63.205 | -1.47% |
+| Copper (HG) | 6.359 | -0.76% |
+| Platinum (PL) | 1750.0 | -1.67% |
+| Palladium (PA) | 1284.5 | -1.85% |
+| USD (DX) | 99.36 | +0.25% |
+| EUR (6E) | 1.15795 | -0.16% |
+| JPY (6J) | 0.6494 | -0.73% |
+| GBP (6B) | 1.3477 | -0.29% |
+| AUD (6A) | 0.7114 | -0.32% |
+| CAD (6C) | 0.7226 | +0.02% |
+| CHF (6S) | 1.237 | -0.09% |
+| NZD (6N) | 0.578 | -0.38% |
 | 10 Year Note (ZN) | 105.6875 | -0.46% |
-| 5 Year Note (ZF) | 104.2265625 | -0.28% |
-| 2 Year Note (ZT) | 101.98828125 | -0.09% |
-| 30 Year Bond (ZB) | 106.0625 | -0.91% |
-| Nikkei 225 (NKD) | 63080.0 | -0.16% |
-| DAX (DY) | 25214.0 | -0.85% |
-| Euro Stoxx 50 (EX) | 6205.0 | -0.88% |
-| Corn (ZC) | 531.25 | -0.38% |
-| Soybeans (ZS) | 1299.5 | -0.38% |
-| Wheat (ZW) | 720.25 | -0.24% |
-| Soybean oil (ZL) | 69.98 | +0.47% |
-| Soybean Meal (ZM) | 347.9 | -0.66% |
+| 5 Year Note (ZF) | 104.234375 | -0.28% |
+| 2 Year Note (ZT) | 101.99609375 | -0.09% |
+| 30 Year Bond (ZB) | 106.0625 | -0.93% |
+| Nikkei 225 (NKD) | 63140.0 | -0.11% |
+| DAX (DY) | 25194.0 | -0.91% |
+| Euro Stoxx 50 (EX) | 6200.0 | -0.96% |
+| Corn (ZC) | 531.75 | -0.28% |
+| Soybeans (ZS) | 1300.25 | -0.33% |
+| Wheat (ZW) | 721.0 | -0.17% |
+| Soybean oil (ZL) | 70.02 | +0.53% |
+| Soybean Meal (ZM) | 348.0 | -0.66% |
 | Oats (ZO) | 394.75 | +0.45% |
 | Rough Rice (ZR) | 15.985 | -0.06% |
 | Coffee (KC) | 289.25 | +1.68% |
-| Sugar (SB) | 18.11 | -0.33% |
-| Cotton (CT) | 84.71 | +0.19% |
+| Sugar (SB) | 18.11 | -0.28% |
+| Cotton (CT) | 84.8 | +0.19% |
 | Cocoa (CC) | 6029.0 | +1.04% |
 | Orange Juice (JO) | 153.55 | +5.30% |
 | Lumber (LB) | 566.0 | +0.18% |
 | Live Cattle (LC) | 222.2 | +1.17% |
 | Lean Hogs (LH) | 79.725 | -2.36% |
 | Feeder Cattle (FC) | 337.9 | +1.61% |
-| Bitcoin (BTC) | 76720.0 | -3.05% |
+| Bitcoin (BTC) | 76765.0 | -3.01% |
 | 3 Month SOFR (SR3) | 96.015 | -0.01% |
 | 30 Day Fed Funds (ZQ) | 96.26 | +0.00% |
 | Aluminum (ALI) | 3410.5 | -0.03% |
-| Canola (RS) | 819.0 | -0.49% |
+| Canola (RS) | 818.9 | -0.49% |
 | Coal Newcastle (NCF) | 146.85 | +0.07% |
 | Ethanol (ZK) | 2.055 | +0.00% |
-| Gasoil (G) | 1514.75 | +2.57% |
+| Gasoil (G) | 1516.25 | +2.68% |
 | Iron Ore (TIO) | 97.55 | -0.48% |
 | Steel HRC (HRC) | 1234.0 | +0.00% |
 | Ultra 10 Year Note (TN) | 107.09375 | -0.61% |
-| Ultra Bond (UB) | 107.46875 | -1.06% |
+| Ultra Bond (UB) | 107.5 | -1.09% |
 | Uranium (UX) | 89.9 | -0.11% |
 
 ## CALENDAR
@@ -255,19 +255,19 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 13 min **GNTA** Sophia High Tech Flight Hardware on Board VEGA-C VV30 as the European Launcher Carries Sentinel-3C and FLEX into Orbit (GlobeNewswire)
-- 23 min **JCI** Johnson Controls electrifies energy-intensive industries with new heat pumps that can triple energy efficiency and lower operating costs (PR Newswire)
-- 23 min **FICO** FICO European Fraud Map: UK Resilient as Other European Countries See Losses Climb by up to 21% (Business Wire)
-- 23 min **NTRS** Northern Trust Survey: Asset Managers Sharpen Focus on Core Capabilities to Drive Growth (Business Wire)
-- 31 min **LCO** FTSE 100 today: Stocks slip as oil surges, AI safety rift adds to unease (Investing.com)
-- 34 min **SNDK,SKHY** Watch Out SKHY, MU, SNDK: Japans Kioxia Reportedly Eyes $10B US Listing To Ride AI Memory Boom (Stocktwits)
-- 34 min **MU** Watch Out SKHY, MU, SNDK: Japans Kioxia Reportedly Eyes $10B US Listing To Ride AI Memory Boom (Stocktwits)
-- 39 min **NIO,BABA** NIO Stock Rises Overnight: Nio Capital Joins Sequoia China And SMIC-Linked Backers In Robot-Sensor Bet (Stocktwits)
-- 53 min **FTV** Fluke Expands iSee Mobile Series with New TC03A Thermal Camera and ii01 Acoustic Camera (GlobeNewswire)
+- 15 min **GNTA** Sophia High Tech Flight Hardware on Board VEGA-C VV30 as the European Launcher Carries Sentinel-3C and FLEX into Orbit (GlobeNewswire)
+- 25 min **JCI** Johnson Controls electrifies energy-intensive industries with new heat pumps that can triple energy efficiency and lower operating costs (PR Newswire)
+- 25 min **FICO** FICO European Fraud Map: UK Resilient as Other European Countries See Losses Climb by up to 21% (Business Wire)
+- 25 min **NTRS** Northern Trust Survey: Asset Managers Sharpen Focus on Core Capabilities to Drive Growth (Business Wire)
+- 33 min **LCO** FTSE 100 today: Stocks slip as oil surges, AI safety rift adds to unease (Investing.com)
+- 36 min **MU,SNDK,SKHY** Watch Out SKHY, MU, SNDK: Japans Kioxia Reportedly Eyes $10B US Listing To Ride AI Memory Boom (Stocktwits)
+- 41 min **NIO,BABA** NIO Stock Rises Overnight: Nio Capital Joins Sequoia China And SMIC-Linked Backers In Robot-Sensor Bet (Stocktwits)
+- 55 min **FTV** Fluke Expands iSee Mobile Series with New TC03A Thermal Camera and ii01 Acoustic Camera (GlobeNewswire)
 - 1 hour **CIGI** Industrial Occupancy Jumps as Big-Box Demand Returns (CRE Daily)
 - 1 hour **GSK** GSK splashes up to $750m on experimental cancer therapy (Proactive)
 - 1 hour **GOOGL,GOOG** Worldline launches UCP payment handler for agentic commerce payments (Electronic Payments)
-- 1 hour **TSLA,SPCX** Tesla, SpaceX Stocks Rise Overnight: Elon Musk Fuels Merger Speculation, Hints At Action Amid Close Collaboration (Stocktwits)
+- 1 hour **SPCX** Tesla, SpaceX Stocks Rise Overnight: Elon Musk Fuels Merger Speculation, Hints At Action Amid Close Collaboration (Stocktwits)
+- 1 hour **TSLA** Tesla, SpaceX Stocks Rise Overnight: Elon Musk Fuels Merger Speculation, Hints At Action Amid Close Collaboration (Stocktwits)
 - 1 hour **GAP** GAP Stock Heads For Monthly Loss Despite CEO Optimism On Old Navy  Cardi B Campaign Fails To Lift Retail Mood (Stocktwits)
 - 1 hour **KMTS** Kestra Medical Technologies Ltd (KMTS) (Q1 2027) Earnings Call Highlights: Revenue Jumps 60% as ... (GuruFocus.com)
 - 1 hour **MKL** Markel International bolsters leadership in new Marine Transportation business with two key appointments (PR Newswire)
