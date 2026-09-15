@@ -168,8 +168,10 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "elite_live" in book_suggestions._POLLER_JS
     assert "px_src" in book_suggestions._POLLER_JS or "open_px" in book_suggestions._POLLER_JS
     assert "publish_strategy_tickets.yml" in orch
+    assert "open_0930.yml" in orch
     assert "past 09:30 ET" in orch
     assert "Publish strategy tickets" in dep
+    assert "Open 09:30 pack" in dep
     assert "gh workflow run deploy-dashboard.yml" in pub
     assert "dashboard/today_strategies.json" in pub
     assert "scripts/publish_dashboard.sh" in pub

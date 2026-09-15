@@ -97,7 +97,39 @@ def test_open_0930_yml_owns_the_bell() -> None:
     assert "deploy-dashboard.yml" in yml
     assert "timeout-minutes: 90" in yml
     assert "group: webull-paper" in yml
+    assert "workflow_run:" not in yml
+    assert "api.webull.com" not in yml
+    assert "--env real" not in yml
     assert "flatten_robust" not in yml.lower() or "does not change" in yml.lower()
+
+
+def test_open_pack_stamps_session_open_and_restamps_pages() -> None:
+    """Named verify: clock_legal_for=session open + Pages restamp."""
+    script = (ROOT / "scripts" / "publish_open_pack.sh").read_text(encoding="utf-8")
+    st = (ROOT / "src" / "strategy_tickets.py").read_text(encoding="utf-8")
+    yml = (WF / "open_0930.yml").read_text(encoding="utf-8")
+    dep = (WF / "deploy-dashboard.yml").read_text(encoding="utf-8")
+    assert "src.strategy_tickets --date" in script
+    assert "--write" in script
+    assert "publish_dashboard.sh" in script
+    assert "assert_session_look" in st
+    assert 'clock_use": "session_open"' in st
+    assert "clock_legal_for" in st
+    assert "assert_session_look(payload, date)" in st
+    assert "scripts/publish_open_pack.sh" in yml
+    assert "publish_dashboard.sh" in script
+    assert "deploy-dashboard.yml" in yml
+    assert "Open 09:30 pack" in dep
+
+
+def test_boards_and_paper_share_the_bell() -> None:
+    """Named verify: Webull --submit at the same 09:30 clock as boards."""
+    yml = (WF / "open_0930.yml").read_text(encoding="utf-8")
+    assert yml.count("src.open_0930_clock --wait --max-wait-s 4200") == 2
+    assert yml.count("name: Clock gate (09:30 ET)") == 2
+    assert "--source combo --combo combo_sh_macd_5050_shared" in yml
+    assert "--submit" in yml
+    assert "src.webull_exec" in yml
 
 
 def test_webull_backup_schedule_is_clock_gated() -> None:
@@ -116,6 +148,15 @@ def test_tickets_install_requests() -> None:
     assert "openpyxl requests" in yml
 
 
+def test_ci_gates_the_bell_contract() -> None:
+    yml = (WF / "open_0930_test.yml").read_text(encoding="utf-8")
+    assert "src.test_open_0930" in yml
+    assert "src.test_strategy_tickets" in yml
+    assert "src.test_webull_exec" in yml
+    assert "src.test_combo_broker" in yml
+    assert "api.webull.com" not in yml
+
+
 def test_orch_heals_open_0930() -> None:
     yml = (WF / "daily_orchestrator.yml").read_text(encoding="utf-8")
     assert "past 09:30 ET" in yml
@@ -131,10 +172,13 @@ def main_tests() -> None:
     test_cli_now_and_exit_codes()
     test_now_et_aware()
     test_open_0930_yml_owns_the_bell()
+    test_open_pack_stamps_session_open_and_restamps_pages()
+    test_boards_and_paper_share_the_bell()
     test_webull_backup_schedule_is_clock_gated()
     test_tickets_install_requests()
+    test_ci_gates_the_bell_contract()
     test_orch_heals_open_0930()
-    print("test_open_0930: 10 ok")
+    print("test_open_0930: 13 ok")
 
 
 if __name__ == "__main__":
