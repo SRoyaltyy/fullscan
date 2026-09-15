@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T16:14:55.088539-04:00",
+  "generated_at": "2026-09-15T16:23:28.024227-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -105,31 +105,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T15:23:11.002371-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-15_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 124659,
-          "preview": "raw=252 usable=27 single=34 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | OPEC+ holds October output quotas unchanged | OPEC+ holds October quotas unchanged | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027"
-        },
-        {
-          "path": "01_daily/news/2026-09-15_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 5509,
-          "preview": "# News Parse v2 \u2014 2026-09-15T15:23:04.395304-04:00\nWindow\u224848h | raw=252 | usable=27 | single_name=34 | noise_dropped=191\nusable polarity={'+': 1, '-': 4, 'mixed': 0, 'neutral': 22}"
-        }
-      ],
-      "preview": "raw=252 usable=27 single=34 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | OPEC+ holds October output quotas unchanged | OPEC+ holds October quotas unchanged | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 \u00b7 # News Parse v2 \u2014 2026-09-15T15:23:04.395304-04:00\nWindow\u224848h | raw=252 | usable=27 | single_name=34 | noise_dropped=191\nusable polarity={'+': 1, '-': 4, 'mixed': 0, 'neutral': 22}"
-    },
     {
       "key": "events",
       "title": "Event scanner (primary)",
@@ -283,6 +258,31 @@
         }
       ],
       "preview": "keys: date, generated_at, sectors"
+    },
+    {
+      "key": "map_heat_research",
+      "title": "Map heat morning delta refresh",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T16:23:26.679780-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-15_research.json",
+          "ok": true,
+          "reason": "",
+          "size": 43645,
+          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-15_research.md",
+          "ok": true,
+          "reason": "",
+          "size": 43645,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-15\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-15\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
