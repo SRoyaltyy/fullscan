@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T04:25:02.051778-04:00",
+  "generated_at": "2026-09-15T04:25:03.706070-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -142,7 +142,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 3,
+      "n_req_ok": 2,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -188,9 +188,9 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-09-15_parsed.json",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 61551
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "events",
@@ -262,7 +262,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7279
+          "size": 7282
         },
         {
           "key": "status",
@@ -382,13 +382,8 @@
           "size": 0
         }
       ],
-      "said": "news 5 items",
-      "bullets": [
-        "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
-        "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year",
-        "Another rate hike, just for insurance: Five questions for the ECB",
-        "S&P 500, Nasdaq, Dow Drop On Chipmaker Weakness, Treasury Yield Pressure  MSFT, NFLX, ORCL, CRWD, RBLX In Focus"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "weather",
@@ -434,7 +429,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 1,
       "files": [
         {
@@ -442,9 +437,9 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-15_ab_checklist.csv",
           "role": "optional",
-          "status": "OK",
-          "reason": "rows=2653",
-          "size": 7626799
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "ab_enriched",
@@ -452,13 +447,13 @@
           "path": "data/ab_checklist/2026-09-15_ab_checklist_enriched.csv",
           "role": "required",
           "status": "OK",
-          "reason": "rows=2653",
-          "size": 8469155
+          "reason": "rows=11617",
+          "size": 3347303
         }
       ],
-      "said": "25 rows",
+      "said": "222 rows",
       "bullets": [
-        "SM, WDS, PBR, SOBO, SHEL"
+        "BTE, MTDR, SU, NVGS, KGEI"
       ]
     },
     {
@@ -509,7 +504,7 @@
       "yaml": "stock_book_all.yml",
       "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 1,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -574,17 +569,17 @@
           "path": "data/ab_checklist/2026-09-15_ab_checklist_enriched.csv",
           "role": "input",
           "status": "OK",
-          "reason": "rows=2653",
-          "size": 8469155
+          "reason": "rows=11617",
+          "size": 3347303
         },
         {
           "key": "join",
           "name": "Join ranked CSV",
           "path": "data/join/2026-09-15_ranked.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=5897",
-          "size": 2248550
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "peers",
@@ -641,10 +636,8 @@
           "size": 5867646
         }
       ],
-      "said": "229 rows",
-      "bullets": [
-        "RGA, SSB, MA, PLMR, SCHW"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "publish",
@@ -704,16 +697,7 @@
     "flatten": {},
     "general": {},
     "sectors": {},
-    "news": {
-      "said": "5 items",
-      "bullets": [
-        "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
-        "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year",
-        "Another rate hike, just for insurance: Five questions for the ECB",
-        "S&P 500, Nasdaq, Dow Drop On Chipmaker Weakness, Treasury Yield Pressure  MSFT, NFLX, ORCL, CRWD, RBLX In Focus",
-        "Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first two ES-SCLC doses"
-      ]
-    },
+    "news": {},
     "weather": {
       "said": "hostile 9 \u00b7 neutral 2",
       "bullets": [
@@ -1471,6 +1455,31 @@
         }
       ],
       "preview": "raw=121 usable=5 single=18 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB | S&P 500, Nasdaq, Dow Drop On Chipmaker Weakness, Treasury Yield Pressure  MSFT,  | Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first \u00b7 # News Parse v2 \u2014 2026-09-15T04:24:58.263461-04:00\nWindow\u224848h | raw=121 | usable=5 | single_name=18 | noise_dropped=98\nusable polarity={'+': 1, '-': 2, 'mixed': 0, 'neutral': 2}"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T04:25:03.095909-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-15.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10945111,
+          "preview": "11617 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11415288,
+          "preview": "11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11617 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
