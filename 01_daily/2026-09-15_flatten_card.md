@@ -1,6 +1,6 @@
 # flatten_robust card — 2026-09-15
 
-_Generated 2026-09-15T10:15:26 — live `flatten_robust`._
+_Generated 2026-09-15T11:54:18 — live `flatten_robust`._
 
 **S=-6.21; hard-red: no new buys; holds and due 1d exits stay**
 
@@ -35,10 +35,10 @@ _Generated 2026-09-15T10:15:26 — live `flatten_robust`._
 | 16:00 ET | SYK | hard-red: no new buys |
 | 16:00 ET | GMED | hard-red: no new buys |
 | 16:00 ET | HAE | hard-red: no new buys |
-| 16:00 ET | LFST | hard-red: no new buys |
-| 16:00 ET | DCTH | hard-red: no new buys |
+| 16:00 ET | CLOV | hard-red: no new buys |
+| 16:00 ET | CRON | hard-red: no new buys |
+| 16:00 ET | MGTX | hard-red: no new buys |
 | 16:00 ET | BLFS | hard-red: no new buys |
-| 16:00 ET | AMN | hard-red: no new buys |
 
 ## Would have bought — holdings disregarded
 
@@ -49,9 +49,9 @@ Sized from marked equity **$108,616.66** as if the book were flat. `io 3d_size (
 | 16:00 ET | SYK | io_core | 55 | $281.87 | $15,502.85 | hard-red |
 | 16:00 ET | GMED | io_core | 204 | $75.77 | $15,457.08 | hard-red |
 | 16:00 ET | HAE | io_core | 145 | $106.31 | $15,414.95 | hard-red |
-| 16:00 ET | LFST | io_core | 1159 | $13.38 | $15,507.42 | hard-red |
-| 16:00 ET | DCTH | io_core | 943 | $16.44 | $15,502.92 | hard-red |
+| 16:00 ET | CLOV | io_core | 3042 | $5.10 | $15,514.20 | hard-red |
+| 16:00 ET | CRON | io_core | 4796 | $3.23 | $15,515.06 | hard-red |
+| 16:00 ET | MGTX | io_core | 1204 | $12.88 | $15,507.52 | hard-red |
 | 16:00 ET | BLFS | io_core | 437 | $35.43 | $15,482.91 | hard-red |
-| 16:00 ET | AMN | io_core | 453 | $34.19 | $15,488.07 | hard-red |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
