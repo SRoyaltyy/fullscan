@@ -5336,6 +5336,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-09-15",
+          "actual_pct": -2.06,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       },
       "lesson_schema_ok": true
@@ -17069,6 +17081,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-14",
+          "actual_pct": -3.72,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       }
     },
@@ -17214,6 +17238,18 @@
           "actual_magnitude_band": "notable",
           "direction_hit": false,
           "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-14",
+          "actual_pct": -1.79,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
@@ -18069,6 +18105,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-15",
+          "actual_pct": -1.14,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": true,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       },
       "lesson_schema_ok": true
@@ -19630,7 +19678,20 @@
       "knowable_at_9am": "yes — the dominant driver (oil/Iran) was fully in the morning file; only the weak 30-year auction was a genuine intraday shock",
       "attribution_contested": "yes — TheStreet/Yahoo lead with oil, Morningstar/MarketWatch with Treasury yields, Investopedia with PPI; same causal chain, contested emphasis",
       "outlier_watch": "Gold fell -1.25% (with silver -2.43%, copper -2.89%) on a war-escalation risk-off day — a liquidation/liquidity unwind rather than a safe-haven bid, the day's biggest divergence",
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-15",
+          "actual_pct": -0.08,
+          "actual_direction": "flat",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.62
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -21242,7 +21303,7 @@
       "direction_hit": true,
       "magnitude_hit": true,
       "divergence_flagged": false,
-      "divergence_verdict": null,
+      "divergence_verdict": "none_flagged — pipeline divergence_flagged=True is a leading_sum(−6) vs B6(0) threshold artifact; morning Section C correctly states \"DIVERGENCE_NOTE: none\"; no leading indicator or futures signal was the deciding factor.",
       "per_factor_breakdown": [
         {
           "factor": "B0_ASIA",
@@ -21290,7 +21351,7 @@
           "status": "hit"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-09-15_lesson.md",
       "sources_used": [
         {
           "url": "https://www.cnbc.com/2026/09/14/stock-market-today-live-updates.html",
@@ -21383,7 +21444,9 @@
       "key_interaction": "Oil spike amplified the yield backup via the inflation channel (oil → breakevens → 5% 10Y → equity discount rates), while the intraday chip recovery MASKED how much worse the tape could have been — indices fell anyway",
       "knowable_at_9am": "yes — the 10Y was already above 5% at 1:25am ET and oil was up pre-open; no genuine intraday shock",
       "attribution_contested": "yes — CNBC/AP lead with dual oil+bonds; Trading Economics leads with yields; Motley Fool leads with AI (contradicted by its own chip-recovery headline); Benzinga leads with FOMC positioning",
-      "outlier_watch": "Chip stocks recovered intraday while indices fell (Motley Fool), and gold fell alongside equities — a real-yield/rates regime, not risk-off flight"
+      "outlier_watch": "Chip stocks recovered intraday while indices fell (Motley Fool), and gold fell alongside equities — a real-yield/rates regime, not risk-off flight",
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-09-15",
