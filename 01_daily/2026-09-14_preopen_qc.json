@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T09:45:48.540486-04:00",
+  "generated_at": "2026-09-15T02:10:09.656308-04:00",
   "items": [
     {
       "ok": true,
@@ -62,7 +62,7 @@
       "kind": "finviz_digest",
       "path": "01_daily/news/2026-09-14_finviz_digest.json",
       "reason": "",
-      "size": 89013,
+      "size": 87214,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -80,14 +80,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "finviz_market_digest",
       "path": "01_daily/news/2026-09-14_finviz_market_digest_close.json",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 12140,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {

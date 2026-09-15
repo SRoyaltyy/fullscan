@@ -1,14 +1,14 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T09:45:53.154654-04:00",
+  "generated_at": "2026-09-15T02:10:09.765916-04:00",
   "all_ok": false,
   "qc_all_ok": true,
   "book_ok": true,
   "grok_ok": false,
   "grok_fails": [
     {
-      "path": "01_daily/map_heat/2026-09-14_research.md",
-      "reason": "phase=morning_refresh artifact that self-declares failure: 'Morning delta refresh failed captain-evidence QC (coverage:0/25<required:20). Using last night's post-close captain cards so the book still has heat. Overnight tape/news was not re-scored.' \u2014 a carried-forward, non-refreshed research file, not a same-day complete artifact."
+      "path": "(review)",
+      "reason": "empty_review_reply"
     }
   ],
   "missing_required": [],
@@ -177,7 +177,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-14_finviz_digest.json",
-        "size": 89013
+        "size": 87214
       },
       {
         "kind": "finviz_market_digest",
@@ -188,10 +188,10 @@
       },
       {
         "kind": "finviz_market_digest",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/news/2026-09-14_finviz_market_digest_close.json",
-        "size": 0
+        "size": 12140
       },
       {
         "kind": "map_heat",

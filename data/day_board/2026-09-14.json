@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-14T16:23:25.708781-04:00",
+  "generated_at": "2026-09-15T02:10:10.603920-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -80,7 +80,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 89013
+          "size": 87214
         },
         {
           "key": "digest_md",
@@ -89,7 +89,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11943
+          "size": 11368
         },
         {
           "key": "market_digest_json",
@@ -149,7 +149,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 89013
+          "size": 87214
         },
         {
           "key": "in_market_digest",
@@ -248,7 +248,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6967
+          "size": 7131
         },
         {
           "key": "qc",
@@ -257,7 +257,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 7194
+          "size": 7191
         },
         {
           "key": "status",
@@ -266,7 +266,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7267
+          "size": 6911
         },
         {
           "key": "review",
@@ -274,8 +274,8 @@
           "path": "01_daily/2026-09-14_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=False Core is otherwise strong and same-day: general predict takes a clear DOWN/mild direction with full SCORES_BEGIN markers;",
-          "size": 1435
+          "reason": "ok=False Grok returned an empty review",
+          "size": 309
         },
         {
           "key": "sector_basic_materials",
@@ -409,7 +409,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 89013
+          "size": 87214
         },
         {
           "key": "weather",
@@ -489,7 +489,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 89013
+          "size": 87214
         },
         {
           "key": "dossiers",
@@ -531,7 +531,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 6967
+          "size": 7131
         },
         {
           "key": "in_actions",
@@ -549,7 +549,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 89013
+          "size": 87214
         },
         {
           "key": "in_judge",
@@ -1457,6 +1457,45 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-14\n**Generated:** 2026-09-14T16:23:25.091239-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as AI warnings hit semiconductors and Saudi pipeline shutdown pushed oil above $103 and briefly lifted 10-year yields past 5% ahead of Fed decision\n**Prior close:** SPX \u2014  Nasdaq -0.73%  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** -0.73%  **Dow:** \u2014\n**Oil:** Brent $108.0\n**CPI/Fed:** 6.0% pause (6% range on AI-pause)\n**Leaders:** OAIW, ANTW, TER, COHR, GLW, MU, NVDA, AMD, INTC, AVGO, ZS, CRWD, RBRK, PANW, CRM, FTFT, ELMT, CLLS, BAC, CVX, PLAY, RLGT\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-15\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T02:10:09.791068-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-14_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 87214,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-14_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11397,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-14\n_Generated 2026-09-15T02:10:09.450007-04:00 \u00b7 export=data/exports/finviz_2026-09-14.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-14.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11415288,
+          "preview": "11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11415288,
+          "preview": "11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-14\n_Generated 2026-09-15T02:10:09.450007-04:00 \u00b7 export=data/exports/finviz_2026-09-14.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
