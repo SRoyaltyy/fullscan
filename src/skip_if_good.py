@@ -577,20 +577,32 @@ def tickets_are_live_open(date: str, when: datetime | None = None) -> bool:
     if not after_bell(t):
         return True
     paths = [
+        ROOT / "data" / "day_board" / f"{date}_open_0930.json",
         ROOT / "data" / "day_board" / "today_strategies.json",
         ROOT / "data" / "day_board" / f"{date}_strategy_tickets.json",
         ROOT / "dashboard" / "factor-mine" / "strategy_tickets.json",
     ]
-    found = next((p for p in paths if p.is_file()), None)
-    if found is None:
-        return False
-    try:
-        data = json.loads(found.read_text(encoding="utf-8"))
-    except (OSError, ValueError):
-        return False
     from . import elite_live_px as elp
-    # Clock after_open with a 07:47 session_export is not live Elite px.
-    return elp.quote_is_elite_live(data.get("quote"))
+    for found in paths:
+        if not found.is_file():
+            continue
+        try:
+            data = json.loads(found.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        if not isinstance(data, dict):
+            continue
+        legal = str(
+            data.get("clock_legal_for")
+            or data.get("session_open")
+            or data.get("date")
+            or ""
+        )
+        if legal and legal != str(date):
+            continue
+        # Clock after_open with a 07:47 session_export is not live Elite px.
+        return elp.quote_is_elite_live(data.get("quote"))
+    return False
 
 
 def today_strip_is_live_open(date: str, when: datetime | None = None) -> bool:
