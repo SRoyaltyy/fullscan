@@ -1,67 +1,67 @@
 # MAP HEAT — 2026-09-15
 
-Export `finviz_2026-09-15.csv` · 11616 names · generated 2026-09-15T07:30:09.018767-04:00
+Export `finviz_2026-09-15.csv` · 11616 names · generated 2026-09-15T07:46:04.893541-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7680.75 | -0.16% |
-| Nasdaq 100 (NQ) | 29424.5 | -0.10% |
-| Russell 2000 (ER2) | 2910.6 | -0.19% |
-| DJIA (YM) | 52741.0 | -0.24% |
-| VIX (VX) | 17.0 | +0.88% |
-| Crude Oil WTI (CL) | 102.41 | +0.96% |
-| Crude Oil Brent (QA) | 106.04 | +0.32% |
-| Natural Gas (NG) | 2.9 | +0.10% |
-| Heating Oil (HO) | 5.075 | +2.28% |
-| Gasoline RBOB (RB) | 3.3477 | +0.90% |
-| Gold (GC) | 4325.4 | -0.61% |
-| Silver (SI) | 63.68 | -0.74% |
-| Copper (HG) | 6.41 | +0.09% |
-| Platinum (PL) | 1774.0 | -0.37% |
-| Palladium (PA) | 1307.0 | -0.05% |
-| USD (DX) | 99.315 | +0.21% |
+| S&P 500 (ES) | 7678.5 | -0.20% |
+| Nasdaq 100 (NQ) | 29391.75 | -0.20% |
+| Russell 2000 (ER2) | 2910.2 | -0.24% |
+| DJIA (YM) | 52718.0 | -0.28% |
+| VIX (VX) | 16.95 | +0.59% |
+| Crude Oil WTI (CL) | 102.29 | +0.89% |
+| Crude Oil Brent (QA) | 105.89 | +0.18% |
+| Natural Gas (NG) | 2.885 | -0.35% |
+| Heating Oil (HO) | 5.0638 | +2.01% |
+| Gasoline RBOB (RB) | 3.3446 | +0.83% |
+| Gold (GC) | 4324.3 | -0.68% |
+| Silver (SI) | 63.685 | -0.74% |
+| Copper (HG) | 6.4155 | +0.15% |
+| Platinum (PL) | 1773.6 | -0.36% |
+| Palladium (PA) | 1308.5 | -0.17% |
+| USD (DX) | 99.305 | +0.21% |
 | EUR (6E) | 1.1582 | -0.14% |
-| JPY (6J) | 0.6507 | -0.52% |
-| GBP (6B) | 1.3488 | -0.20% |
-| AUD (6A) | 0.7121 | -0.20% |
-| CAD (6C) | 0.7217 | -0.10% |
+| JPY (6J) | 0.6508 | -0.50% |
+| GBP (6B) | 1.3492 | -0.17% |
+| AUD (6A) | 0.7121 | -0.21% |
+| CAD (6C) | 0.7219 | -0.08% |
 | CHF (6S) | 1.23545 | -0.22% |
-| NZD (6N) | 0.5781 | -0.35% |
-| 10 Year Note (ZN) | 105.921875 | -0.22% |
-| 5 Year Note (ZF) | 104.3828125 | -0.13% |
-| 2 Year Note (ZT) | 102.0546875 | -0.03% |
-| 30 Year Bond (ZB) | 106.53125 | -0.47% |
-| Nikkei 225 (NKD) | 63805.0 | +0.99% |
-| DAX (DY) | 25426.0 | +0.00% |
-| Euro Stoxx 50 (EX) | 6256.0 | -0.05% |
-| Corn (ZC) | 530.0 | -0.61% |
-| Soybeans (ZS) | 1299.0 | -0.40% |
-| Wheat (ZW) | 717.0 | -0.69% |
-| Soybean oil (ZL) | 69.93 | +0.40% |
+| NZD (6N) | 0.5779 | -0.39% |
+| 10 Year Note (ZN) | 105.953125 | -0.22% |
+| 5 Year Note (ZF) | 104.390625 | -0.13% |
+| 2 Year Note (ZT) | 102.0625 | -0.02% |
+| 30 Year Bond (ZB) | 106.53125 | -0.50% |
+| Nikkei 225 (NKD) | 63750.0 | +0.89% |
+| DAX (DY) | 25433.0 | +0.02% |
+| Euro Stoxx 50 (EX) | 6258.0 | -0.05% |
+| Corn (ZC) | 529.5 | -0.70% |
+| Soybeans (ZS) | 1298.75 | -0.42% |
+| Wheat (ZW) | 716.5 | -0.76% |
+| Soybean oil (ZL) | 69.9 | +0.36% |
 | Soybean Meal (ZM) | 347.9 | -0.66% |
 | Oats (ZO) | 394.5 | +0.38% |
 | Rough Rice (ZR) | 15.985 | -0.06% |
-| Coffee (KC) | 289.4 | -0.43% |
-| Sugar (SB) | 18.22 | +0.33% |
-| Cotton (CT) | 84.53 | -0.06% |
-| Cocoa (CC) | 5867.0 | -2.59% |
+| Coffee (KC) | 289.3 | -0.34% |
+| Sugar (SB) | 18.13 | -0.11% |
+| Cotton (CT) | 84.44 | -0.13% |
+| Cocoa (CC) | 5863.0 | -2.64% |
 | Orange Juice (JO) | 153.55 | +5.30% |
 | Lumber (LB) | 566.0 | +0.18% |
 | Live Cattle (LC) | 222.2 | +1.17% |
 | Lean Hogs (LH) | 79.725 | -2.36% |
 | Feeder Cattle (FC) | 337.9 | +1.61% |
-| Bitcoin (BTC) | 77065.0 | -2.64% |
-| 3 Month SOFR (SR3) | 96.0225 | -0.00% |
+| Bitcoin (BTC) | 76885.0 | -2.86% |
+| 3 Month SOFR (SR3) | 96.025 | +0.00% |
 | 30 Day Fed Funds (ZQ) | 96.2625 | +0.00% |
 | Aluminum (ALI) | 3410.5 | -0.03% |
-| Canola (RS) | 818.7 | -0.52% |
+| Canola (RS) | 818.4 | -0.57% |
 | Coal Newcastle (NCF) | 146.85 | +0.07% |
 | Ethanol (ZK) | 2.055 | +0.00% |
-| Gasoil (G) | 1498.5 | +1.42% |
+| Gasoil (G) | 1495.25 | +1.22% |
 | Iron Ore (TIO) | 97.55 | -0.48% |
 | Steel HRC (HRC) | 1234.0 | +0.00% |
-| Ultra 10 Year Note (TN) | 107.421875 | -0.30% |
+| Ultra 10 Year Note (TN) | 107.4375 | -0.30% |
 | Ultra Bond (UB) | 107.96875 | -0.66% |
 | Uranium (UX) | 89.9 | -0.11% |
 
@@ -255,31 +255,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 5 min **SPCX,TSLA** Elon Musk Is Teasing a Tesla and SpaceX Merger Again (Barrons.com)
-- 10 min **ALM** Almonty enters into tungsten partnership with Rwanda Government (Mining Technology)
-- 11 min **WH** Wyndham Hotels & Resorts Inc's Dividend Analysis (GuruFocus.com)
-- 11 min **IBP** Installed Building Products Inc's Dividend Analysis (GuruFocus.com)
-- 12 min **M** Macy's Inc's Dividend Analysis (GuruFocus.com)
-- 12 min **GATX** GATX Corp's Dividend Analysis (GuruFocus.com)
-- 13 min **VLY** Valley National Bancorp's Dividend Analysis (GuruFocus.com)
-- 13 min **EMN,KODK** Eastman Chemical Co's Dividend Analysis (GuruFocus.com)
-- 14 min **UGI** UGI Corp's Dividend Analysis (GuruFocus.com)
-- 14 min **NEU** NewMarket Corp's Dividend Analysis (GuruFocus.com)
-- 14 min **PB** Prosperity Bancshares Inc's Dividend Analysis (GuruFocus.com)
-- 14 min **DRVN** Driven Brands Announces Updated Capital Allocation Priorities (Business Wire)
-- 15 min **JXN** Jackson Financial Inc's Dividend Analysis (GuruFocus.com)
-- 15 min **DPZ** Domino's Pizza Inc's Dividend Analysis (GuruFocus.com)
-- 16 min **UDR** UDR Inc's Dividend Analysis (GuruFocus.com)
-- 16 min **AMH** American Homes 4 Rent's Dividend Analysis (GuruFocus.com)
-- 18 min **ALLO** CLLS Stock Heads For 14-Month Low After 40% Rout: Citizens Flags Delayed Cellectis Catalysts After Cancer Pipeline Pivot (Stocktwits)
-- 18 min **CLLS,AZN,IOVA** CLLS Stock Heads For 14-Month Low After 40% Rout: Citizens Flags Delayed Cellectis Catalysts After Cancer Pipeline Pivot (Stocktwits)
-- 18 min **PSKY** Paramount Skydance Corp's Dividend Analysis (GuruFocus.com)
-- 18 min **SOXX,AVGO** Broadcom CEO Hock Tan defends $230B AI chip revenue target (Quartz)
-- 19 min **TKO** TKO Group Holdings Inc's Dividend Analysis (GuruFocus.com)
-- 19 min **ARCC** Ares Capital Corp's Dividend Analysis (GuruFocus.com)
-- 19 min **LDOS** Leidos Holdings Inc's Dividend Analysis (GuruFocus.com)
-- 20 min **OVV** Ovintiv Inc's Dividend Analysis (GuruFocus.com)
-- 20 min **PKG** Packaging Corp of America's Dividend Analysis (GuruFocus.com)
+- 6 min **MSFT,BAC,ORCL,NVDA** Bonds, AI, Crypto…It's Make-or-Break Time for Markets (Barrons.com)
+- 8 min **THC** Tenet Signs Agreement to Sell its Stake in Chinese Financial Services Subsidiary for CAD $10.2M (TMX Newsfile)
+- 11 min **MU** Micron Stock Rises but a Strike Threat Looms Large (Barrons.com)
+- 12 min **MORN** Morningstar Says "Game On" to Helping Investors Make Sense of the Public-Private Market Reality (Business Wire)
+- 13 min **QXL** Former Mossad Chief, Yossi Cohen, Strategic Advisor to SoftBank, Joins Quantum X Labs as President of Scientific Advisory Board (GlobeNewswire)
+- 15 min **DRH** DIAMONDROCK HOSPITALITY ANNOUNCES THIRD QUARTER 2026 EARNINGS RELEASE AND CONFERENCE CALL (PR Newswire)
+- 15 min **TGT** Target Circle Deal Days Returns With Major Savings on Stylish Fall and Holiday Finds (PR Newswire)
+- 15 min **SAFE** Safehold Declares Third Quarter 2026 Common Stock Dividend (PR Newswire)
+- 15 min **VVX** V2X Awarded Position on $46 Million U.S. Air Force Contract Supporting B-52 Long Range Standoff Cruise Missile Program (PR Newswire)
+- 15 min **SDST** Stardust Power Secures Long-Lead Electrical Infrastructure for Muskogee Lithium Refinery (GlobeNewswire)
+- 15 min **FCN** FTI Consulting and Compass Lexecon Lead Lexology Index Consulting Experts List for Eleventh Consecutive Year (GlobeNewswire)
+- 15 min **BIVI** BioVie Announces Topline Results from Phase 2 ADDRESS-LC Trial Evaluating Bezisterim for the Treatment of Neurological Symptoms Associated with Long COVID (GlobeNewswire)
+- 15 min **ZENA** ZenaTech Closes 29th Drone as a Service Acquisition Adding Solar and Railroad Customers with Georgia-based U.S. Land Surveying Company Holding Licenses in 17 States (GlobeNewswire)
+- 15 min **TSPY** One Year, $330 Million: TappAlpha's TDAQ Triples a Threshold Nearly 90% of Active ETFs Never Reach (GlobeNewswire)
+- 15 min **COIN,MSTR,HOOD,INTC,MU** Intel, Sandisk, Palantir, Coinbase, and More Stocks That Explain Today's Market (Barrons.com)
+- 15 min **VRTX** Vertex Partners With World Champion Skier Lindsey Vonn to Raise Awareness of JOURNAVX, a Non-Opioid Medicine Approved for the Treatment of Moderate-to-Severe Acute Pain (Business Wire)
+- 15 min **ARWR** Arrowhead Pharmaceuticals Announces Interim Topline Clinical Data for the First Dual-Functional RNAi Therapeutic for the Treatment of Mixed Hyperlipidemia (Business Wire)
+- 15 min **FISN** Deep Fission Publishes DOE-Approved Nuclear Safety Design Agreement for Gravity Pilot Reactor, Demonstrating Commitment to Transparency (Business Wire)
+- 15 min **PAR** Kwik Fill Selects PAR Technology to Power Its Guest Engagement Strategy and Accelerate AI-Driven Innovation (Business Wire)
+- 15 min **LEGN** Legend Naming Novartis Executive as CEO (The Wall Street Journal)
+- 20 min **STLA** Stellantis to invest over 1bn in French van plant upgrade  report (Just Auto)
+- 21 min **SPCX,TSLA** Elon Musk Is Teasing a Tesla and SpaceX Merger Again (Barrons.com)
+- 23 min **FPS** Forgent Power Sees Double-digit Growth In FY27 On Strong Q4 Results; Stock Surges 10.4% (RTT News)
+- 26 min **ALM** Almonty enters into tungsten partnership with Rwanda Government (Mining Technology)
+- 27 min **WH** Wyndham Hotels & Resorts Inc's Dividend Analysis (GuruFocus.com)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
