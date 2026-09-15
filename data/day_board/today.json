@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T09:54:23.534754-04:00",
+  "generated_at": "2026-09-15T09:56:56.150317-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -11,50 +11,62 @@
   },
   "buy_1d": [
     {
-      "ticker": "WEX",
-      "score": 0.5040713137553983
+      "ticker": "HITI",
+      "score": 0.3044362933651129
     },
     {
-      "ticker": "LFST",
-      "score": 0.386729538747364
+      "ticker": "MTCH",
+      "score": 0.5625355999916293
     },
     {
-      "ticker": "VRSK",
-      "score": 0.26021441998687833
+      "ticker": "CARG",
+      "score": 0.7164691865201616
+    },
+    {
+      "ticker": "FOX",
+      "score": 0.46246499218332093
     }
   ],
   "sell_1d": [
     {
       "ticker": "OKLO",
-      "score": -0.4609068195172936
-    },
-    {
-      "ticker": "IONQ",
-      "score": -0.39059974142799925
-    },
-    {
-      "ticker": "QBTS",
-      "score": -0.25144340072426397
+      "score": -0.4709917547759548
     },
     {
       "ticker": "EOSE",
-      "score": -0.43378258027819
+      "score": -0.47634579173599406
     },
     {
-      "ticker": "METC",
-      "score": -0.6258237009331186
+      "ticker": "QBTS",
+      "score": -0.21963178703680925
+    },
+    {
+      "ticker": "FUN",
+      "score": -0.6122755003348219
     },
     {
       "ticker": "FLNC",
-      "score": -0.592091523723564
+      "score": -0.6150820569929332
+    },
+    {
+      "ticker": "METC",
+      "score": -0.6549472286273187
     },
     {
       "ticker": "FCEL",
-      "score": -0.581579576942252
+      "score": -0.60016714719896
+    },
+    {
+      "ticker": "TE",
+      "score": -0.5004896009883154
+    },
+    {
+      "ticker": "TLN",
+      "score": -0.6230187099899102
     },
     {
       "ticker": "HNRG",
-      "score": -0.188670121599966
+      "score": -0.18088669874039975
     }
   ],
   "flatten": {
@@ -93,24 +105,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T09:31:48.163141-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-09-15_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2220845,
-          "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 DVN, PR, FTK, ET, CHRD"
-        }
-      ],
-      "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 DVN, PR, FTK, ET, CHRD"
-    },
     {
       "key": "ab",
       "title": "AB checklist",
@@ -411,6 +405,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T09:54:22.257291-04:00"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T09:56:55.256403-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-15_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 269318,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-15_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 17106,
+          "preview": "# MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T09:56:54.920953-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T09:56:54.920953-04:00"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
