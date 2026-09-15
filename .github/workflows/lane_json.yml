@@ -1,17 +1,30 @@
 name: Lane JSON wire
 
-# Official free APIs only. No browser, no Gemini website, no DeepSeek chat.
-# Secrets (any subset): OPENROUTER_API_KEY, GROQ_API_KEY, GEMINI_API_KEY, DEEPSEEK_API_KEY
-# Variable: LANE_URL = this app after you publish it (https://….grok.me)
+# Official free APIs only. No browser, no Gemini website, no DeepSeek chat,
+# no CAPTCHA, no cloakbrowser.
 #
 # Inbox:  02_lessons/lane/inbox.json
 # Outbox: 02_lessons/lane/outbox/YYYY-MM-DD.json
 #
-# OpenRouter-first (free) is primary: when OPENROUTER_API_KEY is set, try
-# openrouter/free and :free models only (no paid OpenRouter IDs).
-# Groq is dead for HK / optional fallback. Gemini and DeepSeek remain if keyed.
-# One question per POST, 2.1s sleep. If Lane times out, this job calls
-# providers directly with the same keys (OpenRouter → Groq → Gemini).
+# Variable: LANE_URL = Lane app after publish (https://….grok.me)
+#
+# Secrets / vars (any subset — missing hoppers skip, they do not fail the job):
+#   OPENROUTER_API_KEY          — PRIMARY. :free / openrouter/free only. Never paid IDs.
+#   GITHUB_MODELS_TOKEN         — GitHub Models (models.github.ai). Prefer this PAT.
+#   GITHUB_TOKEN                — fallback if it can call models.github.ai (retired
+#                                 2026-07-30; hopper tries once and skips on 401/403/410).
+#   CLOUDFLARE_API_TOKEN        — Workers AI free allocation. Requires ACCOUNT_ID too.
+#   CLOUDFLARE_ACCOUNT_ID       — Cloudflare account id (skip hopper if either missing).
+#   SAMBANOVA_API_KEY           — SambaNova Cloud free tier. Skip if missing.
+#   HF_TOKEN                    — Hugging Face Inference router, free providers only.
+#   OLLAMA_URL                  — optional US-box offline/batch (secret or var).
+#                                 Skip if unset. Not required on this ubuntu job.
+#   GROQ_API_KEY                — last-resort only (dead for HK). Do not prefer.
+#   GEMINI_API_KEY, DEEPSEEK_API_KEY
+#
+# Direct hopper order (rotate to next model/provider on 429/5xx):
+#   OpenRouter free → GitHub Models → Cloudflare Workers AI → SambaNova
+#   → Ollama (if OLLAMA_URL) → HF free router → Groq (last-resort) → Gemini
 
 on:
   workflow_dispatch:
@@ -31,6 +44,13 @@ jobs:
         env:
           LANE_URL: ${{ vars.LANE_URL }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GITHUB_MODELS_TOKEN: ${{ secrets.GITHUB_MODELS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          SAMBANOVA_API_KEY: ${{ secrets.SAMBANOVA_API_KEY }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          OLLAMA_URL: ${{ secrets.OLLAMA_URL || vars.OLLAMA_URL }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
@@ -47,14 +67,30 @@ jobs:
           if isinstance(questions, dict):
               questions = [questions]
 
-          keys = {k: os.environ[env] for k, env in (
+          keys = {}
+          for k, env in (
               ("openrouter", "OPENROUTER_API_KEY"),
+              ("github_models", "GITHUB_MODELS_TOKEN"),
+              ("sambanova", "SAMBANOVA_API_KEY"),
+              ("hf", "HF_TOKEN"),
               ("groq", "GROQ_API_KEY"),
               ("gemini", "GEMINI_API_KEY"),
               ("deepseek", "DEEPSEEK_API_KEY"),
-          ) if os.environ.get(env)}
-          if not keys:
-              raise SystemExit("no free-lane secrets set — add OPENROUTER_API_KEY")
+          ):
+              if os.environ.get(env):
+                  keys[k] = os.environ[env]
+          if os.environ.get("CLOUDFLARE_API_TOKEN") and os.environ.get("CLOUDFLARE_ACCOUNT_ID"):
+              keys["cloudflare"] = os.environ["CLOUDFLARE_API_TOKEN"]
+              keys["cloudflare_account"] = os.environ["CLOUDFLARE_ACCOUNT_ID"]
+          elif os.environ.get("CLOUDFLARE_API_TOKEN") or os.environ.get("CLOUDFLARE_ACCOUNT_ID"):
+              print("cloudflare hopper skipped — need both CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID")
+
+          ollama_url = (os.environ.get("OLLAMA_URL") or "").rstrip("/")
+          gh_direct = keys.get("github_models") or os.environ.get("GITHUB_TOKEN") or ""
+
+          if not keys and not ollama_url and not gh_direct:
+              print("no free-lane secrets set — skip (add OPENROUTER_API_KEY)")
+              raise SystemExit(0)
 
           SYSTEM = "You answer simple factual questions about public companies for a trading desk.\nReturn ONE JSON object only. No markdown fences. No preamble. No commentary.\nUse the schema the user provides. If a field is unknown, use null and list it in \"unknowns\".\nNever invent precise financial figures — null is better than a guess."
           GROQ_MODELS = ["openai/gpt-oss-20b","openai/gpt-oss-120b","qwen/qwen3.8-27b","qwen/qwen3.6-27b"]
@@ -68,7 +104,35 @@ jobs:
               "nvidia/nemotron-3.5-lightning:free",
           ]
           OR_MODELS = [m for m in _OR_CANDIDATES if m == "openrouter/free" or str(m).endswith(":free")]
+          # GitHub Models playground/API retired 2026-07-30; keep as optional skip-clean hopper.
+          GH_MODELS = [
+              "microsoft/Phi-4-mini-instruct",
+              "openai/gpt-4o-mini",
+              "meta/Llama-3.2-3B-Instruct",
+          ]
+          # Workers AI free allocation (10k neurons/day). No paid-plan-only models.
+          CF_MODELS = [
+              "@cf/ibm-granite/granite-4.0-h-micro",
+              "@cf/meta/llama-3.2-1b-instruct",
+              "@cf/meta/llama-3.2-3b-instruct",
+              "@cf/meta/llama-3.1-8b-instruct",
+          ]
+          # SambaNova Cloud free tier (no payment method linked).
+          SN_MODELS = [
+              "Meta-Llama-3.1-8B-Instruct",
+              "gemma-4-31B-it",
+              "Meta-Llama-3.3-70B-Instruct",
+              "DeepSeek-V3.1",
+          ]
+          HF_FALLBACK = [
+              "HuggingFaceTB/SmolLM3-3B",
+              "google/gemma-2-2b-it",
+              "Qwen/Qwen2.5-7B-Instruct",
+          ]
           PACE = 2.1
+          DEAD_PROVIDER = (401, 403, 410, 402)
+          _HF_CACHE = []
+          _SKIP = set()
 
           def extract_json(text):
               text = (text or "").strip()
@@ -84,16 +148,23 @@ jobs:
                       return None
               return None
 
-          def http_json(url, payload, headers, timeout=20):
-              req = urllib.request.Request(
-                  url,
-                  data=json.dumps(payload).encode(),
-                  headers={"Content-Type": "application/json", **headers},
-                  method="POST",
-              )
+          def http_json(url, payload=None, headers=None, timeout=20):
+              headers = dict(headers or {})
+              data = None
+              method = "GET"
+              if payload is not None:
+                  data = json.dumps(payload).encode()
+                  headers = {"Content-Type": "application/json", **headers}
+                  method = "POST"
+              req = urllib.request.Request(url, data=data, headers=headers, method=method)
               try:
                   with urllib.request.urlopen(req, timeout=timeout) as r:
-                      return r.status, json.loads(r.read().decode()), dict(r.headers)
+                      raw = r.read().decode()
+                      try:
+                          body = json.loads(raw) if raw else {}
+                      except Exception:
+                          body = {"error": raw[:400]}
+                      return r.status, body, dict(r.headers)
               except urllib.error.HTTPError as e:
                   raw = e.read().decode("utf-8", "replace")
                   try:
@@ -185,39 +256,226 @@ jobs:
           def _or_is_free(model):
               return model == "openrouter/free" or str(model).endswith(":free")
 
+          def _rotate(status):
+              """Next model after 429 / 5xx (and other model-level failures)."""
+              if status == 429:
+                  time.sleep(2)
+              return status == 429 or status == 0 or status >= 500
+
+          def _ok(ticker, tmpl, question, lane, model, parsed):
+              return {"ok": True, "ticker": ticker, "template": tmpl, "question": question,
+                      "lane": lane, "model": model, "json": parsed, "via": "direct"}
+
+          def _provider_is_free(p):
+              if p.get("is_free") is True:
+                  return True
+              pr = p.get("pricing") or {}
+              if "input" not in pr and "output" not in pr:
+                  return False
+              try:
+                  return float(pr.get("input") or 0) == 0 and float(pr.get("output") or 0) == 0
+              except (TypeError, ValueError):
+                  return False
+
+          def hf_free_models(token):
+              global _HF_CACHE
+              if _HF_CACHE:
+                  return _HF_CACHE
+              status, body, _ = http_json(
+                  "https://router.huggingface.co/v1/models",
+                  None,
+                  {"Authorization": "Bearer " + token},
+                  timeout=20,
+              )
+              found = []
+              if status == 200:
+                  for m in (body.get("data") or []):
+                      mid = (m.get("id") or "").strip()
+                      if not mid:
+                          continue
+                      for p in m.get("providers") or []:
+                          if _provider_is_free(p):
+                              prov = (p.get("provider") or "").strip()
+                              found.append(f"{mid}:{prov}" if prov else mid)
+                              break
+              seen, out = set(), []
+              for x in found:
+                  if x not in seen:
+                      seen.add(x)
+                      out.append(x)
+              _HF_CACHE = out[:6] or list(HF_FALLBACK)
+              if not out:
+                  print("  hf catalog had no is_free providers — using fallback (skip on 402)")
+              return _HF_CACHE
+
+          def ollama_models(base):
+              status, body, _ = http_json(base + "/api/tags", None, {}, timeout=8)
+              if status == 0:
+                  return []
+              names = []
+              for m in (body.get("models") or []):
+                  n = m.get("name") or m.get("model")
+                  if n:
+                      names.append(n)
+              return names[:4] or ["llama3.2", "llama3.1", "mistral"]
+
+          def ollama_chat(base, model, prompt):
+              dummy = os.environ.get("OLLAMA_API_KEY") or "ollama"
+              parsed, status, info = openai_chat(
+                  base + "/v1/chat/completions", dummy, model, prompt,
+              )
+              if parsed is not None or status not in (0, 404):
+                  return parsed, status, info
+              status, body, _ = http_json(
+                  base + "/api/chat",
+                  {
+                      "model": model,
+                      "stream": False,
+                      "messages": [
+                          {"role": "system", "content": SYSTEM},
+                          {"role": "user", "content": prompt},
+                      ],
+                      "options": {"temperature": 0.1, "num_predict": 320},
+                  },
+                  {},
+                  timeout=30,
+              )
+              if status != 200:
+                  return None, status, str(body.get("error") or body)[:240]
+              text = ((body.get("message") or {}).get("content")) or body.get("response") or ""
+              parsed = extract_json(text)
+              if parsed is None:
+                  return None, status, "not json"
+              return parsed, status, model
+
+          def hop_models(lane, models, call, abandon_404=False):
+              """call(model) -> (parsed, status, info). None = skip to next provider."""
+              if lane in _SKIP:
+                  print(f"  {lane} skip (cached)")
+                  return None, None
+              n404 = 0
+              for model in models:
+                  parsed, status, info = call(model)
+                  print(f"  {lane}/{model} status={status}")
+                  if parsed is not None:
+                      return parsed, info
+                  if status in DEAD_PROVIDER:
+                      print(f"  {lane} skip ({status})")
+                      _SKIP.add(lane)
+                      return None, None
+                  if status == 404 and abandon_404:
+                      n404 += 1
+                      if n404 >= 2:
+                          print(f"  {lane} skip (repeated 404)")
+                          _SKIP.add(lane)
+                          return None, None
+                  _rotate(status)
+              return None, None
+
           def direct_ask(q):
               ticker, tmpl, question, prompt = prompt_for(q)
+
               if keys.get("openrouter"):
                   extra = {"HTTP-Referer": "https://github.com/SRoyaltyy/fullscan", "X-Title": "Lane"}
-                  for model in OR_MODELS:
-                      if not _or_is_free(model):
-                          continue
-                      parsed, status, info = openai_chat(
+                  parsed, info = hop_models(
+                      "openrouter",
+                      [m for m in OR_MODELS if _or_is_free(m)],
+                      lambda model: openai_chat(
                           "https://openrouter.ai/api/v1/chat/completions",
                           keys["openrouter"], model, prompt, extra,
+                      ),
+                  )
+                  if parsed is not None:
+                      return _ok(ticker, tmpl, question, "openrouter", info, parsed)
+
+              if gh_direct:
+                  extra = {
+                      "Accept": "application/vnd.github+json",
+                      "X-GitHub-Api-Version": "2022-11-28",
+                  }
+                  parsed, info = hop_models(
+                      "github_models",
+                      GH_MODELS,
+                      lambda model: openai_chat(
+                          "https://models.github.ai/inference/chat/completions",
+                          gh_direct, model, prompt, extra,
+                      ),
+                      abandon_404=True,
+                  )
+                  if parsed is not None:
+                      return _ok(ticker, tmpl, question, "github_models", info, parsed)
+
+              if keys.get("cloudflare") and keys.get("cloudflare_account"):
+                  cf_url = (
+                      "https://api.cloudflare.com/client/v4/accounts/"
+                      + urllib.request.quote(keys["cloudflare_account"], safe="")
+                      + "/ai/v1/chat/completions"
+                  )
+                  parsed, info = hop_models(
+                      "cloudflare",
+                      CF_MODELS,
+                      lambda model: openai_chat(cf_url, keys["cloudflare"], model, prompt),
+                  )
+                  if parsed is not None:
+                      return _ok(ticker, tmpl, question, "cloudflare", info, parsed)
+
+              if keys.get("sambanova"):
+                  parsed, info = hop_models(
+                      "sambanova",
+                      SN_MODELS,
+                      lambda model: openai_chat(
+                          "https://api.sambanova.ai/v1/chat/completions",
+                          keys["sambanova"], model, prompt,
+                      ),
+                  )
+                  if parsed is not None:
+                      return _ok(ticker, tmpl, question, "sambanova", info, parsed)
+
+              if ollama_url and "ollama" not in _SKIP:
+                  models = ollama_models(ollama_url)
+                  if not models:
+                      print("  ollama skip (OLLAMA_URL unreachable)")
+                      _SKIP.add("ollama")
+                  else:
+                      parsed, info = hop_models(
+                          "ollama", models, lambda model: ollama_chat(ollama_url, model, prompt),
                       )
                       if parsed is not None:
-                          return {"ok": True, "ticker": ticker, "template": tmpl, "question": question,
-                                  "lane": "openrouter", "model": info, "json": parsed, "via": "direct"}
-                      if status == 429:
-                          continue
+                          return _ok(ticker, tmpl, question, "ollama", info, parsed)
+
+              if keys.get("hf"):
+                  parsed, info = hop_models(
+                      "hf",
+                      hf_free_models(keys["hf"]),
+                      lambda model: openai_chat(
+                          "https://router.huggingface.co/v1/chat/completions",
+                          keys["hf"], model, prompt,
+                      ),
+                  )
+                  if parsed is not None:
+                      return _ok(ticker, tmpl, question, "hf", info, parsed)
+
               if keys.get("groq"):
-                  for model in GROQ_MODELS:
-                      parsed, status, info = openai_chat(
+                  parsed, info = hop_models(
+                      "groq",
+                      GROQ_MODELS,
+                      lambda model: openai_chat(
                           "https://api.groq.com/openai/v1/chat/completions",
                           keys["groq"], model, prompt,
-                      )
-                      if parsed is not None:
-                          return {"ok": True, "ticker": ticker, "template": tmpl, "question": question,
-                                  "lane": "groq", "model": info, "json": parsed, "via": "direct"}
-                      if status == 429:
-                          continue
+                      ),
+                  )
+                  if parsed is not None:
+                      return _ok(ticker, tmpl, question, "groq", info, parsed)
+
               if keys.get("gemini"):
-                  for model in GEMINI_MODELS:
-                      parsed, status, info = gemini_chat(keys["gemini"], model, prompt)
-                      if parsed is not None:
-                          return {"ok": True, "ticker": ticker, "template": tmpl, "question": question,
-                                  "lane": "gemini", "model": info, "json": parsed, "via": "direct"}
+                  parsed, info = hop_models(
+                      "gemini",
+                      GEMINI_MODELS,
+                      lambda model: gemini_chat(keys["gemini"], model, prompt),
+                  )
+                  if parsed is not None:
+                      return _ok(ticker, tmpl, question, "gemini", info, parsed)
+
               return {"ok": False, "ticker": ticker, "template": tmpl, "question": question,
                       "error": "all direct lanes failed", "via": "direct"}
 

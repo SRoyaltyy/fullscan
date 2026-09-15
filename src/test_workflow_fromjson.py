@@ -563,6 +563,75 @@ def test_self_hosted_fromjson_jobs_resolve_both_sides() -> None:
     assert checked >= 4, f"expected several fromJSON jobs, found {checked}"
 
 
+def _lane_json_python(text: str) -> str:
+    start = text.find("python - <<'PY'")
+    end = text.find("\n          PY\n", start)
+    assert start >= 0 and end > start, "lane_json.yml missing Route inbox python"
+    return text[start:end]
+
+
+def test_lane_json_zero_dollar_hoppers() -> None:
+    """OpenRouter-first $0 hopper stack: parse, order, secrets, no browser."""
+    import ast
+
+    text = (WF / "lane_json.yml").read_text(encoding="utf-8")
+    py = _lane_json_python(text)
+    ast.parse("\n".join(line[10:] if line.startswith("          ") else line
+                        for line in py.splitlines()[1:]))
+
+    block = py.split("def direct_ask")[1].split("def via_lane")[0]
+    ordered = re.findall(
+        r'hop_models\(\s*"(openrouter|github_models|cloudflare|sambanova|ollama|hf|groq|gemini)"',
+        block,
+    )
+    assert ordered == [
+        "openrouter", "github_models", "cloudflare", "sambanova",
+        "ollama", "hf", "groq", "gemini",
+    ], ordered
+
+    header = text.split("on:", 1)[0]
+    for secret in (
+        "OPENROUTER_API_KEY",
+        "GITHUB_MODELS_TOKEN",
+        "GITHUB_TOKEN",
+        "CLOUDFLARE_API_TOKEN",
+        "CLOUDFLARE_ACCOUNT_ID",
+        "SAMBANOVA_API_KEY",
+        "HF_TOKEN",
+        "OLLAMA_URL",
+        "GROQ_API_KEY",
+    ):
+        assert secret in header, secret
+        assert secret in text.split("env:", 1)[1].split("run:", 1)[0], secret
+
+    assert "02_lessons/lane/inbox.json" in text
+    assert "02_lessons/lane/outbox" in text
+    assert "status == 429" in py
+    assert "def _rotate" in py
+    assert "raise SystemExit(0)" in py
+    assert "skip (add OPENROUTER_API_KEY)" in py
+    assert "cloakbrowser" not in text.lower() or "no cloakbrowser" in text.lower()
+    assert "playwright" not in py.lower()
+    assert "selenium" not in py.lower()
+    assert "no paid" in header.lower() or "Never paid" in header
+    assert ":free" in py
+    assert "openrouter/free" in py
+    assert "models.github.ai" in py
+    assert "api.cloudflare.com" in py
+    assert "api.sambanova.ai" in py
+    assert "router.huggingface.co" in py
+    assert "last-resort" in header.lower() or "dead for HK" in header
+
+    # Paid OpenRouter IDs must not appear as model candidates.
+    banned = ("gpt-4o", "gpt-4.1", "claude-3", "o1-preview", "openai/gpt-5")
+    candidates = py.split("_OR_CANDIDATES")[1].split("OR_MODELS")[0]
+    for bad in banned:
+        assert bad not in candidates, bad
+    assert 'endswith(":free")' in py
+
+    assert "not required" in header.lower() or "Skip if unset" in header
+
+
 def test_ci_workflow_is_wired() -> None:
     yml = (WF / "workflow_selfcheck.yml").read_text(encoding="utf-8")
     assert "pull_request:" in yml
@@ -588,6 +657,7 @@ def main() -> None:
         test_stock_book_all_fromjson_resolves,
         test_openclaw_probe_stays_on_ecs,
         test_self_hosted_fromjson_jobs_resolve_both_sides,
+        test_lane_json_zero_dollar_hoppers,
         test_ci_workflow_is_wired,
     ]
     failed = 0
