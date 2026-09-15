@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T06:11:11.453553-04:00",
+  "generated_at": "2026-09-15T06:11:18.119960-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -248,7 +248,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6090
+          "size": 6954
         },
         {
           "key": "qc",
@@ -377,14 +377,14 @@
           "size": 14255
         }
       ],
-      "said": "general DOWN  -6.215 \u00b7 sectors 3 up / 2 down / 0 flat \u00b7 news 5 items",
+      "said": "general DOWN  -6.215 \u00b7 sectors 3 up / 7 down / 0 flat \u00b7 news 5 items",
       "bullets": [
         "bad: fresh Saudi pipeline outage + Houthi escalation, Brent $108",
         "bad: China Aug retail +0.4% / FAI -7.2% miss",
         "bad: FOMC Sep 16 hike odds ~81%",
         "good: ASML sold out of 2027 EUV capacity",
         "good: software rotation (NOW/INTU/ADBE/CRM) surges",
-        "XLB missing",
+        "XLB DOWN -7.6",
         "XLC UP +0.4",
         "XLY DOWN -4.7",
         "XLP missing",
@@ -531,7 +531,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 6090
+          "size": 6954
         },
         {
           "key": "in_actions",
@@ -798,19 +798,19 @@
       "direction": "down"
     },
     "sectors": {
-      "said": "3 up / 2 down / 0 flat",
+      "said": "3 up / 7 down / 0 flat",
       "bullets": [
-        "XLB missing",
+        "XLB DOWN -7.6",
         "XLC UP +0.4",
         "XLY DOWN -4.7",
         "XLP missing",
         "XLE UP +4.0",
         "XLF DOWN -4.1",
         "XLV UP +0.9",
-        "XLI missing",
-        "XLRE missing",
-        "XLK missing",
-        "XLU missing"
+        "XLI DOWN -5.9",
+        "XLRE DOWN -8.5",
+        "XLK DOWN -7.5",
+        "XLU DOWN -8.2"
       ]
     },
     "news": {
@@ -3057,6 +3057,24 @@
         }
       ],
       "preview": "10/10 sector predicts ok: basic_materials, communication_services, consumer_cyclical, energy, financial, healthcare, industrials, real_estate"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T06:11:17.260853-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-15/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 6954,
+          "preview": "keys: date, generated_at, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, sectors"
     }
   ],
   "href": {
