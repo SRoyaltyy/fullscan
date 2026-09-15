@@ -187,7 +187,7 @@ _POLLER_JS = r"""
     var i = 0;
     var last = {};
     function next(){
-      if(i >= urls.length) return Promise.resolve(last);
+      if(i >= urls.length) return Promise.resolve(ok ? {} : last);
       return getJson(urls[i++]).then(function(d){
         last = d;
         if(!ok || ok(d)) return d;

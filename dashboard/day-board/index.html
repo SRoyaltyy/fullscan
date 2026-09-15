@@ -101,7 +101,7 @@ function ticketsLookLive(st){
 function firstOk(urls, ok){
   let i=0, last={};
   function next(){
-    if(i>=urls.length) return Promise.resolve(last);
+    if(i>=urls.length) return Promise.resolve(ok ? {} : last);
     return fetchJson(urls[i++]).then(d => {
       last = d;
       if(!ok || ok(d)) return d;
