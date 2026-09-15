@@ -1,14 +1,17 @@
 name: Lane JSON wire
 
 # Official free APIs only. No browser, no Gemini website, no DeepSeek chat.
-# Secrets (any subset): GROQ_API_KEY, GEMINI_API_KEY, OPENROUTER_API_KEY, DEEPSEEK_API_KEY
+# Secrets (any subset): OPENROUTER_API_KEY, GROQ_API_KEY, GEMINI_API_KEY, DEEPSEEK_API_KEY
 # Variable: LANE_URL = this app after you publish it (https://….grok.me)
 #
 # Inbox:  02_lessons/lane/inbox.json
 # Outbox: 02_lessons/lane/outbox/YYYY-MM-DD.json
 #
-# One question per POST, 2.1s sleep. Groq rotates 4 free models (~4,000/day).
-# If Lane times out, this job calls Groq/Gemini directly with the same keys.
+# OpenRouter-first (free) is primary: when OPENROUTER_API_KEY is set, try
+# openrouter/free and :free models only (no paid OpenRouter IDs).
+# Groq is dead for HK / optional fallback. Gemini and DeepSeek remain if keyed.
+# One question per POST, 2.1s sleep. If Lane times out, this job calls
+# providers directly with the same keys (OpenRouter → Groq → Gemini).
 
 on:
   workflow_dispatch:
@@ -27,9 +30,9 @@ jobs:
       - name: Route inbox
         env:
           LANE_URL: ${{ vars.LANE_URL }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: |
           python - <<'PY'
@@ -45,18 +48,26 @@ jobs:
               questions = [questions]
 
           keys = {k: os.environ[env] for k, env in (
+              ("openrouter", "OPENROUTER_API_KEY"),
               ("groq", "GROQ_API_KEY"),
               ("gemini", "GEMINI_API_KEY"),
-              ("openrouter", "OPENROUTER_API_KEY"),
               ("deepseek", "DEEPSEEK_API_KEY"),
           ) if os.environ.get(env)}
           if not keys:
-              raise SystemExit("no free-lane secrets set — add GROQ_API_KEY")
+              raise SystemExit("no free-lane secrets set — add OPENROUTER_API_KEY")
 
           SYSTEM = "You answer simple factual questions about public companies for a trading desk.\nReturn ONE JSON object only. No markdown fences. No preamble. No commentary.\nUse the schema the user provides. If a field is unknown, use null and list it in \"unknowns\".\nNever invent precise financial figures — null is better than a guess."
           GROQ_MODELS = ["openai/gpt-oss-20b","openai/gpt-oss-120b","qwen/qwen3.8-27b","qwen/qwen3.6-27b"]
           GEMINI_MODELS = ["gemini-2.5-flash-lite","gemini-2.5-flash"]
-          OR_MODELS = ["openrouter/free","google/gemma-4-31b-it:free"]
+          # $0 only: documented free router and/or :free suffix. Never paid IDs.
+          _OR_CANDIDATES = [
+              "openrouter/free",
+              "google/gemma-4-31b-it:free",
+              "google/gemma-4-26b-a4b-it:free",
+              "z-ai/glm-5.2:free",
+              "nvidia/nemotron-3.5-lightning:free",
+          ]
+          OR_MODELS = [m for m in _OR_CANDIDATES if m == "openrouter/free" or str(m).endswith(":free")]
           PACE = 2.1
 
           def extract_json(text):
@@ -171,8 +182,25 @@ jobs:
                   "Return ONE JSON object. Unknown fields = null. No markdown."
               )
 
+          def _or_is_free(model):
+              return model == "openrouter/free" or str(model).endswith(":free")
+
           def direct_ask(q):
               ticker, tmpl, question, prompt = prompt_for(q)
+              if keys.get("openrouter"):
+                  extra = {"HTTP-Referer": "https://github.com/SRoyaltyy/fullscan", "X-Title": "Lane"}
+                  for model in OR_MODELS:
+                      if not _or_is_free(model):
+                          continue
+                      parsed, status, info = openai_chat(
+                          "https://openrouter.ai/api/v1/chat/completions",
+                          keys["openrouter"], model, prompt, extra,
+                      )
+                      if parsed is not None:
+                          return {"ok": True, "ticker": ticker, "template": tmpl, "question": question,
+                                  "lane": "openrouter", "model": info, "json": parsed, "via": "direct"}
+                      if status == 429:
+                          continue
               if keys.get("groq"):
                   for model in GROQ_MODELS:
                       parsed, status, info = openai_chat(
@@ -190,16 +218,6 @@ jobs:
                       if parsed is not None:
                           return {"ok": True, "ticker": ticker, "template": tmpl, "question": question,
                                   "lane": "gemini", "model": info, "json": parsed, "via": "direct"}
-              if keys.get("openrouter"):
-                  extra = {"HTTP-Referer": "https://github.com/SRoyaltyy/fullscan", "X-Title": "Lane"}
-                  for model in OR_MODELS:
-                      parsed, status, info = openai_chat(
-                          "https://openrouter.ai/api/v1/chat/completions",
-                          keys["openrouter"], model, prompt, extra,
-                      )
-                      if parsed is not None:
-                          return {"ok": True, "ticker": ticker, "template": tmpl, "question": question,
-                                  "lane": "openrouter", "model": info, "json": parsed, "via": "direct"}
               return {"ok": False, "ticker": ticker, "template": tmpl, "question": question,
                       "error": "all direct lanes failed", "via": "direct"}
 
