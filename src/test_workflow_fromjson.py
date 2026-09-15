@@ -581,11 +581,13 @@ def test_lane_json_zero_dollar_hoppers() -> None:
 
     block = py.split("def direct_ask")[1].split("def via_lane")[0]
     ordered = re.findall(
-        r'hop_models\(\s*"(openrouter|github_models|cloudflare|sambanova|ollama|hf|groq|gemini)"',
+        r'hop_models\(\s*"(openrouter|deepseek|qwen|siliconflow|modelscope|'
+        r'github_models|cloudflare|sambanova|ollama|hf|groq|gemini)"',
         block,
     )
     assert ordered == [
-        "openrouter", "github_models", "cloudflare", "sambanova",
+        "openrouter", "deepseek", "qwen", "siliconflow", "modelscope",
+        "github_models", "cloudflare", "sambanova",
         "ollama", "hf", "groq", "gemini",
     ], ordered
 
@@ -598,6 +600,11 @@ def test_lane_json_zero_dollar_hoppers() -> None:
         "CLOUDFLARE_ACCOUNT_ID",
         "SAMBANOVA_API_KEY",
         "HF_TOKEN",
+        "DEEPSEEK_API_KEY",
+        "DASHSCOPE_API_KEY",
+        "QWEN_API_KEY",
+        "SILICONFLOW_API_KEY",
+        "MODELSCOPE_API_KEY",
         "OLLAMA_URL",
         "GROQ_API_KEY",
     ):
@@ -616,6 +623,10 @@ def test_lane_json_zero_dollar_hoppers() -> None:
     assert "no paid" in header.lower() or "Never paid" in header
     assert ":free" in py
     assert "openrouter/free" in py
+    assert "api.deepseek.com" in py
+    assert "dashscope.aliyuncs.com" in py
+    assert "api.siliconflow.cn" in py
+    assert "api-inference.modelscope.cn" in py
     assert "models.github.ai" in py
     assert "api.cloudflare.com" in py
     assert "api.sambanova.ai" in py
@@ -628,6 +639,13 @@ def test_lane_json_zero_dollar_hoppers() -> None:
     for bad in banned:
         assert bad not in candidates, bad
     assert 'endswith(":free")' in py
+
+    or_ids = re.findall(r'"([^"]+:free)"', candidates)
+    cn_needles = ("qwen", "deepseek", "glm", "z-ai", "minimax", "inclusionai", "ling-")
+    first_named = next((m for m in or_ids if m != "openrouter/free"), None)
+    assert first_named and any(n in first_named.lower() for n in cn_needles), first_named
+    sf_ids = re.findall(r'"(Qwen/[^"]+|THUDM/[^"]+|deepseek-ai/[^"]+)"', py.split("SF_MODELS")[1].split("SF_URLS")[0])
+    assert sf_ids and not any(m.startswith("Pro/") for m in sf_ids), sf_ids
 
     assert "not required" in header.lower() or "Skip if unset" in header
 

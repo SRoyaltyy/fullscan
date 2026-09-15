@@ -17,13 +17,20 @@ name: Lane JSON wire
 #   CLOUDFLARE_ACCOUNT_ID       — Cloudflare account id (skip hopper if either missing).
 #   SAMBANOVA_API_KEY           — SambaNova Cloud free tier. Skip if missing.
 #   HF_TOKEN                    — Hugging Face Inference router, free providers only.
+#   DEEPSEEK_API_KEY            — official api.deepseek.com (after OpenRouter; skip 402).
+#   DASHSCOPE_API_KEY           — Qwen / DashScope free quota (or QWEN_API_KEY).
+#   QWEN_API_KEY                — alias for DashScope.
+#   SILICONFLOW_API_KEY         — SiliconFlow free models only (no Pro/ prefix).
+#   MODELSCOPE_API_KEY          — ModelScope API-Inference (or MODELSCOPE_API_TOKEN /
+#                                 MODELSCOPE_SDK_TOKEN). Skip if missing.
 #   OLLAMA_URL                  — optional US-box offline/batch (secret or var).
 #                                 Skip if unset. Not required on this ubuntu job.
 #   GROQ_API_KEY                — last-resort only (dead for HK). Do not prefer.
-#   GEMINI_API_KEY, DEEPSEEK_API_KEY
+#   GEMINI_API_KEY
 #
 # Direct hopper order (rotate to next model/provider on 429/5xx):
-#   OpenRouter free → GitHub Models → Cloudflare Workers AI → SambaNova
+#   OpenRouter free (CN-origin :free first) → DeepSeek → Qwen/DashScope
+#   → SiliconFlow → ModelScope → GitHub Models → Cloudflare → SambaNova
 #   → Ollama (if OLLAMA_URL) → HF free router → Groq (last-resort) → Gemini
 
 on:
@@ -51,9 +58,15 @@ jobs:
           SAMBANOVA_API_KEY: ${{ secrets.SAMBANOVA_API_KEY }}
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           OLLAMA_URL: ${{ secrets.OLLAMA_URL || vars.OLLAMA_URL }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+          QWEN_API_KEY: ${{ secrets.QWEN_API_KEY }}
+          SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
+          MODELSCOPE_API_KEY: ${{ secrets.MODELSCOPE_API_KEY }}
+          MODELSCOPE_API_TOKEN: ${{ secrets.MODELSCOPE_API_TOKEN }}
+          MODELSCOPE_SDK_TOKEN: ${{ secrets.MODELSCOPE_SDK_TOKEN }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: |
           python - <<'PY'
           import json, os, time, urllib.request, urllib.error, datetime, pathlib
@@ -70,15 +83,27 @@ jobs:
           keys = {}
           for k, env in (
               ("openrouter", "OPENROUTER_API_KEY"),
+              ("deepseek", "DEEPSEEK_API_KEY"),
+              ("siliconflow", "SILICONFLOW_API_KEY"),
               ("github_models", "GITHUB_MODELS_TOKEN"),
               ("sambanova", "SAMBANOVA_API_KEY"),
               ("hf", "HF_TOKEN"),
               ("groq", "GROQ_API_KEY"),
               ("gemini", "GEMINI_API_KEY"),
-              ("deepseek", "DEEPSEEK_API_KEY"),
           ):
               if os.environ.get(env):
                   keys[k] = os.environ[env]
+          qwen_key = os.environ.get("DASHSCOPE_API_KEY") or os.environ.get("QWEN_API_KEY") or ""
+          if qwen_key:
+              keys["qwen"] = qwen_key
+          ms_key = (
+              os.environ.get("MODELSCOPE_API_KEY")
+              or os.environ.get("MODELSCOPE_API_TOKEN")
+              or os.environ.get("MODELSCOPE_SDK_TOKEN")
+              or ""
+          )
+          if ms_key:
+              keys["modelscope"] = ms_key
           if os.environ.get("CLOUDFLARE_API_TOKEN") and os.environ.get("CLOUDFLARE_ACCOUNT_ID"):
               keys["cloudflare"] = os.environ["CLOUDFLARE_API_TOKEN"]
               keys["cloudflare_account"] = os.environ["CLOUDFLARE_ACCOUNT_ID"]
@@ -96,14 +121,39 @@ jobs:
           GROQ_MODELS = ["openai/gpt-oss-20b","openai/gpt-oss-120b","qwen/qwen3.8-27b","qwen/qwen3.6-27b"]
           GEMINI_MODELS = ["gemini-2.5-flash-lite","gemini-2.5-flash"]
           # $0 only: documented free router and/or :free suffix. Never paid IDs.
+          # CN-origin :free first (GLM / InclusionAI Ling). Live OpenRouter catalog
+          # has no Qwen/DeepSeek :free right now — those go through native hoppers.
           _OR_CANDIDATES = [
               "openrouter/free",
+              "z-ai/glm-5.2:free",
+              "inclusionai/ling-3.0-flash-fin:free",
+              "inclusionai/ling-3.0-flash-sante:free",
+              "minimax/minimax-m3:free",
               "google/gemma-4-31b-it:free",
               "google/gemma-4-26b-a4b-it:free",
-              "z-ai/glm-5.2:free",
               "nvidia/nemotron-3.5-lightning:free",
           ]
           OR_MODELS = [m for m in _OR_CANDIDATES if m == "openrouter/free" or str(m).endswith(":free")]
+          DS_MODELS = ["deepseek-flash", "deepseek-chat"]
+          QWEN_MODELS = ["qwen-turbo", "qwen2.5-7b-instruct", "qwen3-8b"]
+          QWEN_URLS = [
+              "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions",
+              "https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions",
+          ]
+          SF_MODELS = [m for m in (
+              "Qwen/Qwen3-8B",
+              "Qwen/Qwen2.5-7B-Instruct",
+              "THUDM/GLM-Z1-9B-0414",
+          ) if not str(m).startswith("Pro/")]
+          SF_URLS = [
+              "https://api.siliconflow.cn/v1/chat/completions",
+              "https://api.siliconflow.com/v1/chat/completions",
+          ]
+          MS_MODELS = [
+              "Qwen/Qwen2.5-7B-Instruct",
+              "Qwen/Qwen3-8B",
+              "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+          ]
           # GitHub Models playground/API retired 2026-07-30; keep as optional skip-clean hopper.
           GH_MODELS = [
               "microsoft/Phi-4-mini-instruct",
@@ -372,6 +422,16 @@ jobs:
                   _rotate(status)
               return None, None
 
+          def first_live_url(urls, key, model, prompt):
+              """Try regional bases; use the first that answers HTTP (not connect-fail)."""
+              last = (None, 0, "no url")
+              for url in urls:
+                  parsed, status, info = openai_chat(url, key, model, prompt)
+                  last = (parsed, status, info)
+                  if parsed is not None or status != 0:
+                      return last
+              return last
+
           def direct_ask(q):
               ticker, tmpl, question, prompt = prompt_for(q)
 
@@ -387,6 +447,48 @@ jobs:
                   )
                   if parsed is not None:
                       return _ok(ticker, tmpl, question, "openrouter", info, parsed)
+
+              if keys.get("deepseek"):
+                  parsed, info = hop_models(
+                      "deepseek",
+                      DS_MODELS,
+                      lambda model: openai_chat(
+                          "https://api.deepseek.com/chat/completions",
+                          keys["deepseek"], model, prompt,
+                      ),
+                  )
+                  if parsed is not None:
+                      return _ok(ticker, tmpl, question, "deepseek", info, parsed)
+
+              if keys.get("qwen"):
+                  parsed, info = hop_models(
+                      "qwen",
+                      QWEN_MODELS,
+                      lambda model: first_live_url(QWEN_URLS, keys["qwen"], model, prompt),
+                  )
+                  if parsed is not None:
+                      return _ok(ticker, tmpl, question, "qwen", info, parsed)
+
+              if keys.get("siliconflow"):
+                  parsed, info = hop_models(
+                      "siliconflow",
+                      SF_MODELS,
+                      lambda model: first_live_url(SF_URLS, keys["siliconflow"], model, prompt),
+                  )
+                  if parsed is not None:
+                      return _ok(ticker, tmpl, question, "siliconflow", info, parsed)
+
+              if keys.get("modelscope"):
+                  parsed, info = hop_models(
+                      "modelscope",
+                      MS_MODELS,
+                      lambda model: openai_chat(
+                          "https://api-inference.modelscope.cn/v1/chat/completions",
+                          keys["modelscope"], model, prompt,
+                      ),
+                  )
+                  if parsed is not None:
+                      return _ok(ticker, tmpl, question, "modelscope", info, parsed)
 
               if gh_direct:
                   extra = {
