@@ -1,6 +1,6 @@
 # Finviz Daily Digest — 2026-09-15
 
-_Generated 2026-09-15T09:32:34.917904-04:00 · export=data/exports/finviz_2026-09-15.csv · ticker digests=400 · high-signal=400_
+_Generated 2026-09-15T09:53:08.387770-04:00 · export=data/exports/finviz_2026-09-15.csv · ticker digests=400 · high-signal=400_
 
 ## Major indices (live quote page)
 
@@ -61,19 +61,19 @@ _Generated 2026-09-15T09:32:34.917904-04:00 · export=data/exports/finviz_2026-0
 - BBVA: BBVA posts record Q2 2026 net profit, upgrades Mexico and South America guidance, announces extraordinary â¬2 billion share buyback program
 - BCS: Strong H1 profits, guidance upgrade and Â£1bn buyback drive BCS 6.48% surge
 
-### Industrials (n=8)
-- AME: AMETEK completes $5.0 billion all-cash acquisition of Indicor Instrumentation
-- BE: Mizuho raises Bloom Energy price target to $351 from $242, reiterates Outperform on stronger pricing and demand signals
-- CMI: Cummins wins largest-ever BESS contract to supply storage systems for major U.S. data center project
-- CNI: Canadian National Railway outlines conditions to U.S. regulators for proposed Union PacificâNorfolk Southern merger
-- CSX: CSX delivers record revenue, raises 2026 margin and free cash flow outlook
-
 ### Healthcare (n=8)
 - AMGN: Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first two ES-SCLC doses
 - ARGX: argenx announces it has completed the acquisition of Forte Biosciences for $77 per share in cash, adding first-in-class anti-CD122 antibody FB102 to its immunology pipeline.
 - AZN: AstraZeneca late-stage SERENA-4 trial of breast cancer drug Etcamah as first-line therapy misses primary endpoint
 - BSX: Boston Scientific says cyberattack will materially hit Q3 and full-year 2026 results, no longer expects to meet sales and adjusted profit guidance
 - CAH: Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.
+
+### Industrials (n=8)
+- AME: AMETEK completes $5.0 billion all-cash acquisition of Indicor Instrumentation
+- BE: Mizuho raises Bloom Energy price target to $351 from $242, reiterates Outperform on stronger pricing and demand signals
+- CMI: Cummins wins largest-ever BESS contract to supply storage systems for major U.S. data center project
+- CNI: Canadian National Railway outlines conditions to U.S. regulators for proposed Union PacificâNorfolk Southern merger
+- CSX: CSX delivers record revenue, raises 2026 margin and free cash flow outlook
 
 ### Technology (n=6)
 - ADBE: Adobe posts record Q3 revenue $6.76B and non-GAAP EPS $6.13, raises FY26 outlook and leans into AI-driven freemium strategy
@@ -96,20 +96,18 @@ _Generated 2026-09-15T09:32:34.917904-04:00 · export=data/exports/finviz_2026-0
 - EOG: EOG posts record EPS and free cash flow, reiterates 2026 guidance and highlights strong UAE unconventional exploration results
 - KMI: KMI rebounds on pipeline project momentum and raised 2026 guidance
 
-### Communication Services (n=3)
-- AMX: JPMorgan upgrades America Movil to Overweight from Neutral and raises its price target to $32 from $30.
-- APP: Piper Sandler cuts AppLovin price target to $325 from $385, maintains Neutral rating
-- NFLX: Evercore ISI raises Netflix price target to $110 from $100, reiterates outperform on live events and short-form growth
-
-### Utilities (n=3)
-- D: Dominion, NextEra enhance Virginia merger benefits with 1,000 new jobs, doubled bill credits and $1B-a-year supplier program
-- DUK: Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year
-- NEE: NextEra and Dominion unveil expanded Virginia benefits package for proposed merger, doubling bill credits and adding major investments
-
 ### Consumer Cyclical (n=3)
 - HD: Home Depot announces the nationwide rollout of its Magic Apron AI-powered in-store assistant with localized, personalized shopping guidance now live in all U.S. stores.
 - HLT: Deutsche Bank upgrades Hilton Worldwide to Buy from Hold, raises price target to $365
 - LOW: Bernstein cuts Loweâs price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery
+
+### Communication Services (n=2)
+- AMX: JPMorgan upgrades America Movil to Overweight from Neutral and raises its price target to $32 from $30.
+- APP: Piper Sandler cuts AppLovin price target to $325 from $385, maintains Neutral rating
+
+### Utilities (n=2)
+- D: Dominion, NextEra enhance Virginia merger benefits with 1,000 new jobs, doubled bill credits and $1B-a-year supplier program
+- DUK: Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year
 
 ### Consumer Defensive (n=2)
 - KO: Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.
