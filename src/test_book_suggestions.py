@@ -150,6 +150,10 @@ def test_day_board_falls_back_to_suggestions() -> None:
     assert "today_strategies.json" in html
     assert "Every strategy" in html
     assert "stock_book_1d" in html
+    assert "function firstOk" in html
+    assert "function ticketsLookLive" in html
+    assert "afterBell() ? ticketsLookLive" in html
+    assert "earlyBuys" in html
 
 
 def test_preopen_and_book_publish_strip_without_paper() -> None:

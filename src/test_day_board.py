@@ -196,6 +196,10 @@ def test_day_board_html_has_raw_poll() -> None:
     assert "factor-mine" in html
     assert "stock_book_1d" in html
     assert 'indexOf("elite_live")===0' in html
+    assert "function firstOk" in html
+    assert "function ticketsLookLive" in html
+    assert '"today_strategies.json"' in html
+    assert "earlyBuys" in html
 
 
 def test_should_not_push_locally() -> None:
