@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T07:09:44.609758-04:00",
+  "generated_at": "2026-09-15T07:28:53.542431-04:00",
   "export_used": "data/exports/finviz_2026-09-15.csv",
   "ticker_digest_count": 400,
   "signal_count": 400,
@@ -192,7 +192,7 @@
     {
       "ticker": "AZN",
       "digest": "AstraZeneca late-stage SERENA-4 trial of breast cancer drug Etcamah as first-line therapy misses primary endpoint",
-      "news_title": "AstraZenecas cancer pipeline posts two wins and a loss",
+      "news_title": "CLLS Stock Heads For 14-Month Low After 40% Rout: Citizens Flags Delayed Cellectis Catalysts After Cancer Pipeline Pivot",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
@@ -903,7 +903,7 @@
       {
         "ticker": "AZN",
         "digest": "AstraZeneca late-stage SERENA-4 trial of breast cancer drug Etcamah as first-line therapy misses primary endpoint",
-        "news_title": "AstraZenecas cancer pipeline posts two wins and a loss",
+        "news_title": "CLLS Stock Heads For 14-Month Low After 40% Rout: Citizens Flags Delayed Cellectis Catalysts After Cancer Pipeline Pivot",
         "sector": "Healthcare",
         "industry": "Drug Manufacturers - General",
         "is_dividend": false,
@@ -1461,7 +1461,7 @@
     {
       "ticker": "AZN",
       "digest": "AstraZeneca late-stage SERENA-4 trial of breast cancer drug Etcamah as first-line therapy misses primary endpoint",
-      "news_title": "AstraZenecas cancer pipeline posts two wins and a loss",
+      "news_title": "CLLS Stock Heads For 14-Month Low After 40% Rout: Citizens Flags Delayed Cellectis Catalysts After Cancer Pipeline Pivot",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
