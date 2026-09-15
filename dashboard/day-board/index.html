@@ -85,9 +85,17 @@ function afterBell(){
     return h>9 || (h===9 && m>=30);
   }catch(e){ return true; }
 }
+function sessionDate(){
+  try{
+    return new Intl.DateTimeFormat("en-CA",{timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
+  }catch(e){ return ""; }
+}
 function ticketsLookLive(st){
   if(!st || typeof st !== "object") return false;
   const q = st.quote || {};
+  const d = String(st.date || st.clock_legal_for || "");
+  const today = sessionDate();
+  if(today && d && d !== today) return false;
   return !!(q.after_open && String(q.src || "").indexOf("elite_live")===0);
 }
 function firstOk(urls, ok){
