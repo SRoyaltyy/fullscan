@@ -1,6 +1,6 @@
 {
  "date": "2026-09-15",
- "generated_at": "2026-09-15T10:02:56.300391-04:00",
+ "generated_at": "2026-09-15T10:46:27.988579-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -17,21 +17,23 @@
   "fed_score": -0.5,
   "dollar_oil_score": -0.5,
   "futures_score": 0.5,
-  "yields": "rising",
-  "yields_source": "llm_factor_fallback",
+  "yields": "flat",
+  "yields_source": "fred_dgs10",
+  "dgs10_delta_1d": 0.01,
+  "dgs10_current": 4.96,
   "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.09,
-  "vix_ratio": 0.882,
-  "vix_spot": 17.0,
-  "vix_delta_1d": -0.1,
+  "dxy_pct_1d": 0.13,
+  "vix_ratio": 0.897,
+  "vix_spot": 17.52,
+  "vix_delta_1d": 0.42,
   "vix_ratio_source": "vix/vix3m",
   "vix": "falling",
-  "oil_pct_1d": 1.52,
+  "oil_pct_1d": 2.84,
   "oil": "rising",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": null,
+  "regime_corr": -0.181,
   "sectors": {
    "Communication Services": {
     "score": 0.396,
@@ -94,24 +96,24 @@
     "source": "llm"
    },
    "Consumer Defensive": {
-    "score": -2.44,
+    "score": -1.9849999999999999,
     "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
    }
   },
   "sector_tape": {
-   "Basic Materials": -5.15,
-   "Communication Services": -0.495,
-   "Consumer Cyclical": -2.65,
-   "Consumer Defensive": -2.44,
-   "Energy": -0.74,
+   "Basic Materials": -4.78,
+   "Communication Services": -0.585,
+   "Consumer Cyclical": -2.3,
+   "Consumer Defensive": -1.9849999999999999,
+   "Energy": -0.97,
    "Financial": -1.17,
-   "Healthcare": -3.92,
-   "Industrials": -3.29,
-   "Real Estate": -2.7,
-   "Technology": -2.45,
-   "Utilities": -3.41
+   "Healthcare": -2.745,
+   "Industrials": -3.12,
+   "Real Estate": -2.61,
+   "Technology": -2.105,
+   "Utilities": -2.8
   },
   "events_bull": 4,
   "events_bear": 14,
@@ -137,7 +139,7 @@
    "Consumer Defensive": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "finviz sector median week -2.44% [tape]"
+    "why": "finviz sector median week -1.98% [tape]"
    },
    "Energy": {
     "stance": "favorable",
@@ -318,7 +320,7 @@
    "high": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "yields rising — leverage amplifies the downside [factors + general]"
+    "why": "risk-off — leverage amplifies the downside [factors + general]"
    },
    "low": {
     "stance": "favorable",
@@ -338,14 +340,14 @@
   },
   "style": {
    "growth": {
-    "stance": "hostile",
-    "confidence": "medium",
-    "why": "yields rising — long-duration growth de-rates [factor: Bond yields]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "yields flat/unknown"
    },
    "value": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "rising yields/reflation favors value & cyclicals [factor: Bond yields]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "yields flat/unknown"
    },
    "blend": {
     "stance": "neutral",
