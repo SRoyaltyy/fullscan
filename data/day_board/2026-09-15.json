@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T12:57:35.664255-04:00",
+  "generated_at": "2026-09-15T12:59:16.659758-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -185,7 +185,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 98729
+          "size": 109264
         },
         {
           "key": "events",
@@ -257,7 +257,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 7188
+          "size": 7189
         },
         {
           "key": "status",
@@ -266,7 +266,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7708
+          "size": 7709
         },
         {
           "key": "review",
@@ -377,7 +377,7 @@
           "size": 16861
         }
       ],
-      "said": "general DOWN  -4.389 \u00b7 sectors 1 up / 8 down / 2 flat \u00b7 news 18 items",
+      "said": "general DOWN  -4.389 \u00b7 sectors 1 up / 8 down / 2 flat \u00b7 news 21 items",
       "bullets": [
         "bad: Asia -1.10% (Kospi -3.26%)",
         "bad: 1w 10Y +19bp / 5% handle",
@@ -796,7 +796,7 @@
       ]
     },
     "news": {
-      "said": "18 items",
+      "said": "21 items",
       "bullets": [
         "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
         "OPEC+ holds October output quotas unchanged",
@@ -815,31 +815,6 @@
     }
   },
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse (timeout retry)",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T08:19:20.539870-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-15_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 86287,
-          "preview": "raw=166 usable=15 single=22 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | OPEC+ holds October output quotas unchanged | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB"
-        },
-        {
-          "path": "01_daily/news/2026-09-15_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 4666,
-          "preview": "# News Parse v2 \u2014 2026-09-15T08:19:14.403267-04:00\nWindow\u224848h | raw=166 | usable=15 | single_name=22 | noise_dropped=129\nusable polarity={'+': 1, '-': 4, 'mixed': 0, 'neutral': 10}"
-        }
-      ],
-      "preview": "raw=166 usable=15 single=22 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | OPEC+ holds October output quotas unchanged | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB \u00b7 # News Parse v2 \u2014 2026-09-15T08:19:14.403267-04:00\nWindow\u224848h | raw=166 | usable=15 | single_name=22 | noise_dropped=129\nusable polarity={'+': 1, '-': 4, 'mixed': 0, 'neutral': 10}"
-    },
     {
       "key": "events",
       "title": "Event scanner (primary)",
@@ -3563,6 +3538,31 @@
         }
       ],
       "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SM, WDS, NWBI, CDNA, CFFN"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T12:59:15.260180-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 109264,
+          "preview": "raw=221 usable=21 single=29 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | OPEC+ holds October output quotas unchanged | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 5058,
+          "preview": "# News Parse v2 \u2014 2026-09-15T12:59:14.736000-04:00\nWindow\u224848h | raw=221 | usable=21 | single_name=29 | noise_dropped=171\nusable polarity={'+': 1, '-': 5, 'mixed': 0, 'neutral': 15}"
+        }
+      ],
+      "preview": "raw=221 usable=21 single=29 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | OPEC+ holds October output quotas unchanged | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB \u00b7 # News Parse v2 \u2014 2026-09-15T12:59:14.736000-04:00\nWindow\u224848h | raw=221 | usable=21 | single_name=29 | noise_dropped=171\nusable polarity={'+': 1, '-': 5, 'mixed': 0, 'neutral': 15}"
     }
   ],
   "href": {

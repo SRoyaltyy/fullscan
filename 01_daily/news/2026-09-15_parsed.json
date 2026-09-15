@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-09-15T10:47:06.091768-04:00",
+  "generated_at": "2026-09-15T12:59:14.736000-04:00",
   "hours": 48,
-  "raw_count": 197,
-  "parsed_count": 197,
-  "usable_count": 18,
-  "single_name_count": 25,
-  "noise_count": 154,
+  "raw_count": 221,
+  "parsed_count": 221,
+  "usable_count": 21,
+  "single_name_count": 29,
+  "noise_count": 171,
   "polarity_usable": {
     "+": 1,
-    "-": 4,
+    "-": 5,
     "mixed": 0,
-    "neutral": 13
+    "neutral": 15
   },
   "by_macro_usable": {
     "fed_path": {
@@ -127,14 +127,29 @@
     },
     "rates": {
       "+": 0,
-      "-": 1,
+      "-": 2,
       "mixed": 0,
-      "neutral": 2,
+      "neutral": 1,
       "n": 3,
       "top": [
         {
           "source": "events",
           "title": "10-year Treasury yield breaches 5% — global bond selloff",
+          "url": "",
+          "published_at": "",
+          "class": "macro_relevant",
+          "usable": true,
+          "sectors": [],
+          "macro_themes": [
+            "rates"
+          ],
+          "polarity": "-",
+          "source_weight": 0.4,
+          "rank_score": 1.0
+        },
+        {
+          "source": "events",
+          "title": "10-year Treasury yield at/above 5% — global bond selloff",
           "url": "",
           "published_at": "",
           "class": "macro_relevant",
@@ -161,21 +176,6 @@
           "polarity": "neutral",
           "source_weight": 0.4,
           "rank_score": 0.95
-        },
-        {
-          "source": "events",
-          "title": "10-year Treasury yield holds above 5%",
-          "url": "",
-          "published_at": "",
-          "class": "macro_relevant",
-          "usable": true,
-          "sectors": [],
-          "macro_themes": [
-            "rates"
-          ],
-          "polarity": "neutral",
-          "source_weight": 0.4,
-          "rank_score": 0.95
         }
       ]
     },
@@ -183,8 +183,8 @@
       "+": 0,
       "-": 0,
       "mixed": 0,
-      "neutral": 4,
-      "n": 4,
+      "neutral": 6,
+      "n": 6,
       "top": [
         {
           "source": "events",
@@ -234,6 +234,36 @@
         {
           "source": "events",
           "title": "August CPI — core 0.3% MoM locks in September hike",
+          "url": "",
+          "published_at": "",
+          "class": "macro_relevant",
+          "usable": true,
+          "sectors": [],
+          "macro_themes": [
+            "inflation"
+          ],
+          "polarity": "neutral",
+          "source_weight": 0.4,
+          "rank_score": 0.95
+        },
+        {
+          "source": "events",
+          "title": "UK August CPI (ahead of BoE)",
+          "url": "",
+          "published_at": "",
+          "class": "macro_relevant",
+          "usable": true,
+          "sectors": [],
+          "macro_themes": [
+            "inflation"
+          ],
+          "polarity": "neutral",
+          "source_weight": 0.4,
+          "rank_score": 0.95
+        },
+        {
+          "source": "events",
+          "title": "August CPI — core monthly surprise locked in September hike",
           "url": "",
           "published_at": "",
           "class": "macro_relevant",
@@ -350,7 +380,7 @@
         },
         {
           "source": "events",
-          "title": "US-Iran tanker war; Hormuz impaired, Brent ~$107",
+          "title": "US-Iran tanker war; Hormuz impaired; Brent ~$106-108",
           "url": "",
           "published_at": "",
           "class": "sector_relevant",
@@ -405,6 +435,30 @@
           "usable": true,
           "sectors": [
             "Consumer Cyclical"
+          ],
+          "macro_themes": [],
+          "polarity": "neutral",
+          "source_weight": 0.4,
+          "rank_score": 0.9
+        }
+      ]
+    },
+    "Technology": {
+      "+": 0,
+      "-": 0,
+      "mixed": 0,
+      "neutral": 1,
+      "n": 1,
+      "top": [
+        {
+          "source": "events",
+          "title": "South Korea semiconductor export boom vs BOK hikes",
+          "url": "",
+          "published_at": "",
+          "class": "sector_relevant",
+          "usable": true,
+          "sectors": [
+            "Technology"
           ],
           "macro_themes": [],
           "polarity": "neutral",
@@ -510,6 +564,21 @@
       "rank_score": 1.0
     },
     {
+      "source": "events",
+      "title": "10-year Treasury yield at/above 5% — global bond selloff",
+      "url": "",
+      "published_at": "",
+      "class": "macro_relevant",
+      "usable": true,
+      "sectors": [],
+      "macro_themes": [
+        "rates"
+      ],
+      "polarity": "-",
+      "source_weight": 0.4,
+      "rank_score": 1.0
+    },
+    {
       "source": "finviz_export",
       "title": "S&P 500, Nasdaq, Dow Drop On Chipmaker Weakness, Treasury Yield Pressure  MSFT, NFLX, ORCL, CRWD, RBLX In Focus",
       "url": "",
@@ -571,21 +640,6 @@
     },
     {
       "source": "events",
-      "title": "FOMC decision, SEP/dot plot, Warsh press conference",
-      "url": "",
-      "published_at": "",
-      "class": "macro_relevant",
-      "usable": true,
-      "sectors": [],
-      "macro_themes": [
-        "fed_path"
-      ],
-      "polarity": "neutral",
-      "source_weight": 0.4,
-      "rank_score": 0.95
-    },
-    {
-      "source": "events",
       "title": "UK August CPI (pre-BoE)",
       "url": "",
       "published_at": "",
@@ -616,14 +670,14 @@
     },
     {
       "source": "events",
-      "title": "10-year Treasury yield holds above 5%",
+      "title": "August CPI — core 0.3% MoM locks in September hike",
       "url": "",
       "published_at": "",
       "class": "macro_relevant",
       "usable": true,
       "sectors": [],
       "macro_themes": [
-        "rates"
+        "inflation"
       ],
       "polarity": "neutral",
       "source_weight": 0.4,
@@ -631,7 +685,37 @@
     },
     {
       "source": "events",
-      "title": "August CPI — core 0.3% MoM locks in September hike",
+      "title": "FOMC decision, SEP/dot plot, Warsh press conference",
+      "url": "",
+      "published_at": "",
+      "class": "macro_relevant",
+      "usable": true,
+      "sectors": [],
+      "macro_themes": [
+        "fed_path"
+      ],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.95
+    },
+    {
+      "source": "events",
+      "title": "UK August CPI (ahead of BoE)",
+      "url": "",
+      "published_at": "",
+      "class": "macro_relevant",
+      "usable": true,
+      "sectors": [],
+      "macro_themes": [
+        "inflation"
+      ],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.95
+    },
+    {
+      "source": "events",
+      "title": "August CPI — core monthly surprise locked in September hike",
       "url": "",
       "published_at": "",
       "class": "macro_relevant",
@@ -676,13 +760,28 @@
     },
     {
       "source": "events",
-      "title": "US-Iran tanker war; Hormuz impaired, Brent ~$107",
+      "title": "US-Iran tanker war; Hormuz impaired; Brent ~$106-108",
       "url": "",
       "published_at": "",
       "class": "sector_relevant",
       "usable": true,
       "sectors": [
         "Energy"
+      ],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.9
+    },
+    {
+      "source": "events",
+      "title": "South Korea semiconductor export boom vs BOK hikes",
+      "url": "",
+      "published_at": "",
+      "class": "sector_relevant",
+      "usable": true,
+      "sectors": [
+        "Technology"
       ],
       "macro_themes": [],
       "polarity": "neutral",
@@ -1115,6 +1214,21 @@
       "rank_score": 1.0
     },
     {
+      "source": "events",
+      "title": "10-year Treasury yield at/above 5% — global bond selloff",
+      "url": "",
+      "published_at": "",
+      "class": "macro_relevant",
+      "usable": true,
+      "sectors": [],
+      "macro_themes": [
+        "rates"
+      ],
+      "polarity": "-",
+      "source_weight": 0.4,
+      "rank_score": 1.0
+    },
+    {
       "source": "finviz_export",
       "title": "S&P 500, Nasdaq, Dow Drop On Chipmaker Weakness, Treasury Yield Pressure  MSFT, NFLX, ORCL, CRWD, RBLX In Focus",
       "url": "",
@@ -1176,21 +1290,6 @@
     },
     {
       "source": "events",
-      "title": "FOMC decision, SEP/dot plot, Warsh press conference",
-      "url": "",
-      "published_at": "",
-      "class": "macro_relevant",
-      "usable": true,
-      "sectors": [],
-      "macro_themes": [
-        "fed_path"
-      ],
-      "polarity": "neutral",
-      "source_weight": 0.4,
-      "rank_score": 0.95
-    },
-    {
-      "source": "events",
       "title": "UK August CPI (pre-BoE)",
       "url": "",
       "published_at": "",
@@ -1221,14 +1320,14 @@
     },
     {
       "source": "events",
-      "title": "10-year Treasury yield holds above 5%",
+      "title": "August CPI — core 0.3% MoM locks in September hike",
       "url": "",
       "published_at": "",
       "class": "macro_relevant",
       "usable": true,
       "sectors": [],
       "macro_themes": [
-        "rates"
+        "inflation"
       ],
       "polarity": "neutral",
       "source_weight": 0.4,
@@ -1236,7 +1335,37 @@
     },
     {
       "source": "events",
-      "title": "August CPI — core 0.3% MoM locks in September hike",
+      "title": "FOMC decision, SEP/dot plot, Warsh press conference",
+      "url": "",
+      "published_at": "",
+      "class": "macro_relevant",
+      "usable": true,
+      "sectors": [],
+      "macro_themes": [
+        "fed_path"
+      ],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.95
+    },
+    {
+      "source": "events",
+      "title": "UK August CPI (ahead of BoE)",
+      "url": "",
+      "published_at": "",
+      "class": "macro_relevant",
+      "usable": true,
+      "sectors": [],
+      "macro_themes": [
+        "inflation"
+      ],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.95
+    },
+    {
+      "source": "events",
+      "title": "August CPI — core monthly surprise locked in September hike",
       "url": "",
       "published_at": "",
       "class": "macro_relevant",
@@ -1281,13 +1410,28 @@
     },
     {
       "source": "events",
-      "title": "US-Iran tanker war; Hormuz impaired, Brent ~$107",
+      "title": "US-Iran tanker war; Hormuz impaired; Brent ~$106-108",
       "url": "",
       "published_at": "",
       "class": "sector_relevant",
       "usable": true,
       "sectors": [
         "Energy"
+      ],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.9
+    },
+    {
+      "source": "events",
+      "title": "South Korea semiconductor export boom vs BOK hikes",
+      "url": "",
+      "published_at": "",
+      "class": "sector_relevant",
+      "usable": true,
+      "sectors": [
+        "Technology"
       ],
       "macro_themes": [],
       "polarity": "neutral",
@@ -1595,7 +1739,7 @@
     },
     {
       "source": "events",
-      "title": "DOJ probe of Nvidia-Groq licensing/acquihire",
+      "title": "Lennar Q3 earnings (housing bellwether)",
       "url": "",
       "published_at": "",
       "class": "single_name",
@@ -1608,7 +1752,59 @@
     },
     {
       "source": "events",
-      "title": "Lennar Q3 earnings (housing bellwether)",
+      "title": "Google ad-tech remedies: no breakup, behavioral only",
+      "url": "",
+      "published_at": "",
+      "class": "single_name",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.2
+    },
+    {
+      "source": "events",
+      "title": "FedEx Q1 FY2027 earnings (freight/oil-cost bellwether)",
+      "url": "",
+      "published_at": "",
+      "class": "single_name",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.2
+    },
+    {
+      "source": "events",
+      "title": "Mega-cap earnings this week — quiet",
+      "url": "",
+      "published_at": "",
+      "class": "single_name",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.2
+    },
+    {
+      "source": "events",
+      "title": "Japan Q2 GDP revised up to 1.4% annualized",
+      "url": "",
+      "published_at": "",
+      "class": "single_name",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": 0.2
+    },
+    {
+      "source": "events",
+      "title": "AutoZone Q4 FY2026 earnings",
       "url": "",
       "published_at": "",
       "class": "single_name",
@@ -3194,33 +3390,7 @@
     },
     {
       "source": "events",
-      "title": "Bank of England decision — hold at 3.75% expected",
-      "url": "",
-      "published_at": "",
-      "class": "noise",
-      "usable": false,
-      "sectors": [],
-      "macro_themes": [],
-      "polarity": "neutral",
-      "source_weight": 0.4,
-      "rank_score": -0.1
-    },
-    {
-      "source": "events",
       "title": "August housing starts and building permits",
-      "url": "",
-      "published_at": "",
-      "class": "noise",
-      "usable": false,
-      "sectors": [],
-      "macro_themes": [],
-      "polarity": "neutral",
-      "source_weight": 0.4,
-      "rank_score": -0.1
-    },
-    {
-      "source": "events",
-      "title": "Bank of Japan decision — hike to 1.25% widely expected",
       "url": "",
       "published_at": "",
       "class": "noise",
@@ -3247,19 +3417,6 @@
     {
       "source": "events",
       "title": "August JOLTS job openings",
-      "url": "",
-      "published_at": "",
-      "class": "noise",
-      "usable": false,
-      "sectors": [],
-      "macro_themes": [],
-      "polarity": "neutral",
-      "source_weight": 0.4,
-      "rank_score": -0.1
-    },
-    {
-      "source": "events",
-      "title": "China August activity data — IP beats, retail and FAI miss",
       "url": "",
       "published_at": "",
       "class": "noise",
@@ -3337,59 +3494,7 @@
     },
     {
       "source": "events",
-      "title": "Trump-Xi Washington state visit / summit",
-      "url": "",
-      "published_at": "",
-      "class": "noise",
-      "usable": false,
-      "sectors": [],
-      "macro_themes": [],
-      "polarity": "neutral",
-      "source_weight": 0.4,
-      "rank_score": -0.1
-    },
-    {
-      "source": "events",
-      "title": "US-China trade truce — pre-summit positioning into Nov 10 expiry",
-      "url": "",
-      "published_at": "",
-      "class": "noise",
-      "usable": false,
-      "sectors": [],
-      "macro_themes": [],
-      "polarity": "neutral",
-      "source_weight": 0.4,
-      "rank_score": -0.1
-    },
-    {
-      "source": "events",
       "title": "Trump Ukraine-Russia energy-infrastructure truce proposal",
-      "url": "",
-      "published_at": "",
-      "class": "noise",
-      "usable": false,
-      "sectors": [],
-      "macro_themes": [],
-      "polarity": "neutral",
-      "source_weight": 0.4,
-      "rank_score": -0.1
-    },
-    {
-      "source": "events",
-      "title": "US-Canada Section 338 tariff-scope changes take effect",
-      "url": "",
-      "published_at": "",
-      "class": "noise",
-      "usable": false,
-      "sectors": [],
-      "macro_themes": [],
-      "polarity": "neutral",
-      "source_weight": 0.4,
-      "rank_score": -0.1
-    },
-    {
-      "source": "events",
-      "title": "US import bans on selected Canadian goods",
       "url": "",
       "published_at": "",
       "class": "noise",
@@ -3611,6 +3716,318 @@
     {
       "source": "events",
       "title": "Eurozone flash PMIs (September)",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "Bank of England decision — hold at 3.75% expected",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "Bank of Japan decision — hike to 1.25% widely expected",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "August industrial production and capacity utilization",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "August PPI — energy-led wholesale inflation",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "China August activity — IP beats, retail and FAI miss",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "China August credit — loans miss; bonds/equity exceed loans YTD",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "US existing-home sales fall to 2026 low",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "Saudi East-West pipeline (Petroline) shut after drone attacks",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "Trump-Xi Washington state visit / summit",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "US-China trade truce expiry (Nov 10) — pre-summit talks",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "UNGA High-level Week / Trump General Debate speech",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "US-Canada Section 338 tariff list changes and import bans",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "Canada retaliatory tariffs on ~C$27.6bn of US goods",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "FY2027 CR signed — shutdown risk deferred to Dec 11",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "Holtec Nuclear IPO (HNUC) pricing/listing",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "SpaceX (SPCX) staggered lockup — next ~328m-share tranche",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "IG Metall Germany auto protests (job-cut wave)",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "US East/Gulf ILA dockworkers — strike averted",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "Commerce final AD/CVD on solar cells from India, Indonesia, Laos",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "European Parliament adopts CBAM expansion / anti-circumvention mandate",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "MIIT/NDRC 15th Five-Year Plan for electronic information manufacturing",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "China State Council notice on SME overdue-payment governance",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "FDA opens Expedited IND pilot under Operation TrialBlazer",
+      "url": "",
+      "published_at": "",
+      "class": "noise",
+      "usable": false,
+      "sectors": [],
+      "macro_themes": [],
+      "polarity": "neutral",
+      "source_weight": 0.4,
+      "rank_score": -0.1
+    },
+    {
+      "source": "events",
+      "title": "Treasury doubles long-end coupon buybacks; $6bn 10–20yr op",
       "url": "",
       "published_at": "",
       "class": "noise",
