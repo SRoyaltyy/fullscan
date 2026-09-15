@@ -1,10 +1,10 @@
 # Finviz Daily Digest — 2026-09-15
 
-_Generated 2026-09-15T12:24:52.681497-04:00 · export=data/exports/finviz_2026-09-15.csv · ticker digests=400 · high-signal=400_
+_Generated 2026-09-15T12:46:13.585626-04:00 · export=data/exports/finviz_2026-09-15.csv · ticker digests=400 · high-signal=400_
 
 ## Major indices (live quote page)
 
-- **S&P 500 (SPY)**: Gaming the Fed Odds for a Rate Hike Wednesday
+- **S&P 500 (SPY)**: 12 Investment Must Reads for This Week (Sept. 15, 2026)
 - **Nasdaq-100 (QQQ)**: 2 Areas of Wall Street to Avoid This Fed Week
 - **Dow Jones (DIA)**: Gaming the Fed Odds for a Rate Hike Wednesday
 - **Russell 2000 (IWM)**: Investors worried about rising bond yields are keeping a close eye on this corner of the market
