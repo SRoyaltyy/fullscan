@@ -1,10 +1,10 @@
 # Excel statistical mine — whole sheet A..JL
 
-status=PARTIAL phase=hold_uni TIME-SPLIT cutoff=2026-07-02 tickers_done=50 sessions=167163 letters=275 univ=mcap>$50M & vol>100000
+status=PARTIAL phase=hold_uni TIME-SPLIT cutoff=2026-07-02 tickers_done=75 sessions=167163 letters=275 univ=mcap>$50M & vol>100000
 
 Method: every letter as lag-1 fill / value / 10-row paint + same-row open-12 fills and open-44 numbers. chi2 + mutual info on discovery, Benjamini-Hochberg FDR q=0.1, holdout must keep lift>1. TIME-SPLIT: last 30% of session dates are holdout. Discovery feature date AND the full label window must be strictly before the cutoff. Pairs = Apriori AND of FDR survivors.
 
-Discovery base P(I1 green)=0.513 · holdout base=0.478
+Discovery base P(I1 green)=0.513 · holdout base=0.477
 
 ## Holdout-confirmed singles (lowest p, lift>1 both sides)
 
