@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T09:11:00.272818-04:00",
+  "generated_at": "2026-09-15T09:32:34.917904-04:00",
   "export_used": "data/exports/finviz_2026-09-15.csv",
   "ticker_digest_count": 400,
   "signal_count": 400,
@@ -96,17 +96,6 @@
       "news_title": "Norwegian Cruise downgrade, Duolingo upgraded: Wall Street's top analyst calls",
       "sector": "Communication Services",
       "industry": "Telecom Services",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "AMZN",
-      "digest": "Amazon's India quick-commerce unit Amazon Now tops $1bn in gross annualised sales as volumes surge",
-      "news_title": "Amazon Gains 1.6% as Its $53 Billion Anthropic Windfall Meets a Weapons Test",
-      "sector": "Consumer Cyclical",
-      "industry": "Internet Retail",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -311,17 +300,6 @@
       "source": "finviz_export"
     },
     {
-      "ticker": "CAT",
-      "digest": "Freedom Broker upgrades Caterpillar to Buy, lifts price target to $980 on U.S.-Canada tariff benefits",
-      "news_title": "Bull of the Day: Caterpillar (CAT)",
-      "sector": "Industrials",
-      "industry": "Farm & Heavy Construction Machinery",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
       "ticker": "CI",
       "digest": "Jefferies downgrades Cigna to Hold from Buy, cuts price target to $307 from $336 on concern consensus too high post EviCore sale, Centene prescription drug plan shrinkage",
       "news_title": "CVS Stock Returned $24B In Cash: Why Did It Still Lag The Market?",
@@ -426,17 +404,6 @@
       "news_title": "NextEra and Dominion Sweeten Merger Deal With Bill Credits and New Jobs",
       "sector": "Utilities",
       "industry": "Utilities - Regulated Electric",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "DASH",
-      "digest": "Scotiabank initiated coverage of DoorDash with a Sector Outperform rating and a $275 price target, citing its scale, subscription-driven user lock-in and margin benefits.",
-      "news_title": "DoorDash and Wonder Announce Strategic Partnership",
-      "sector": "Consumer Cyclical",
-      "industry": "Internet Retail",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -632,7 +599,7 @@
     {
       "ticker": "KO",
       "digest": "Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.",
-      "news_title": "The Coca-Cola System: A 140-Year Legacy That Continues to Deliver for America",
+      "news_title": "Tribunal conditionally clears Coca-Cola bottling deal",
       "sector": "Consumer Defensive",
       "industry": "Beverages - Non-Alcoholic",
       "is_dividend": false,
@@ -690,6 +657,39 @@
       "news_title": "KO Stock Near Highs: Has Momentum Outrun Value?",
       "sector": "Consumer Defensive",
       "industry": "Beverages - Non-Alcoholic",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "MSI",
+      "digest": "Motorola Solutions wins $139 million 10-year public safety technology contract from State of Louisiana",
+      "news_title": "Louisiana Modernizes Statewide Public Safety Response with $139 Million Motorola Solutions Contract",
+      "sector": "Technology",
+      "industry": "Communication Equipment",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "NEE",
+      "digest": "NextEra and Dominion unveil expanded Virginia benefits package for proposed merger, doubling bill credits and adding major investments",
+      "news_title": "NextEra and Dominion Sweeten Merger Deal With Bill Credits and New Jobs",
+      "sector": "Utilities",
+      "industry": "Utilities - Regulated Electric",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "NFLX",
+      "digest": "Evercore ISI raises Netflix price target to $110 from $100, reiterates outperform on live events and short-form growth",
+      "news_title": "S&P 500, Nasdaq, Dow Drop On Chipmaker Weakness, Treasury Yield Pressure  MSFT, NFLX, ORCL, CRWD, RBLX In Focus",
+      "sector": "Communication Services",
+      "industry": "Entertainment",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -811,17 +811,6 @@
         "source": "finviz_export"
       },
       {
-        "ticker": "CAT",
-        "digest": "Freedom Broker upgrades Caterpillar to Buy, lifts price target to $980 on U.S.-Canada tariff benefits",
-        "news_title": "Bull of the Day: Caterpillar (CAT)",
-        "sector": "Industrials",
-        "industry": "Farm & Heavy Construction Machinery",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
         "ticker": "CMI",
         "digest": "Cummins wins largest-ever BESS contract to supply storage systems for major U.S. data center project",
         "news_title": "Caterpillar Stock Looks Expensive Until You Price The Backlog, And Then The Margins",
@@ -871,6 +860,17 @@
         "news_title": "Top 10 S&P 500 Stocks of the Past Decade Share One Clear Theme",
         "sector": "Industrials",
         "industry": "Engineering & Construction",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "GD",
+        "digest": "General Dynamics' GDIT wins $1.3B multi-year Enterprise Network Operations and Cybersecurity Support contract for Army National Guard, federal partners",
+        "news_title": "How Far Could Boeing Stock Fall If The Market Turns?",
+        "sector": "Industrials",
+        "industry": "Aerospace & Defense",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
@@ -967,6 +967,74 @@
         "source": "finviz_export"
       }
     ],
+    "Technology": [
+      {
+        "ticker": "ADBE",
+        "digest": "Adobe posts record Q3 revenue $6.76B and non-GAAP EPS $6.13, raises FY26 outlook and leans into AI-driven freemium strategy",
+        "news_title": "NOW, INTU, ADBE, CRM Stocks Surge As AI Pacing Debate Hammers Chips: Analyst Says Hardware Vs Software Trade Is Turned On Its Head",
+        "sector": "Technology",
+        "industry": "Software - Application",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "AMD",
+        "digest": "AI leaders' call to slow frontier development sparks AMD's 5% premarket plunge",
+        "news_title": "Hedge Fund That Nearly Collapsed Bets Big on AMD Again",
+        "sector": "Technology",
+        "industry": "Semiconductors",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "APH",
+        "digest": "Fabrinet earnings weakness and rising yields spark 6.5% APH drop",
+        "news_title": "Top Stock Reports for Meta Platforms, Marvell & Amphenol",
+        "sector": "Technology",
+        "industry": "Electronic Components",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "ASML",
+        "digest": "ASML nearly sold out of 2027 EUV capacity amid very strong AI-driven demand, JPMorgan says",
+        "news_title": "Samsung Stock Falls as $18.7 Billion Power Proposal Highlights AI Infrastructure Costs",
+        "sector": "Technology",
+        "industry": "Semiconductor Equipment & Materials",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "DDOG",
+        "digest": "Snowflake's stronger-than-expected quarterly revenue and earnings support cloud and AI-focused enterprise software peers including Datadog",
+        "news_title": "French AI boom exposes Europes funding gap as startups turn to U.S.",
+        "sector": "Technology",
+        "industry": "Software - Application",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "MSI",
+        "digest": "Motorola Solutions wins $139 million 10-year public safety technology contract from State of Louisiana",
+        "news_title": "Louisiana Modernizes Statewide Public Safety Response with $139 Million Motorola Solutions Contract",
+        "sector": "Technology",
+        "industry": "Communication Equipment",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      }
+    ],
     "Basic Materials": [
       {
         "ticker": "APD",
@@ -1029,120 +1097,6 @@
         "news_title": "The Bloom Energy Stock Signal Hiding Behind The Demand Story",
         "sector": "Basic Materials",
         "industry": "Specialty Chemicals",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      }
-    ],
-    "Technology": [
-      {
-        "ticker": "ADBE",
-        "digest": "Adobe posts record Q3 revenue $6.76B and non-GAAP EPS $6.13, raises FY26 outlook and leans into AI-driven freemium strategy",
-        "news_title": "NOW, INTU, ADBE, CRM Stocks Surge As AI Pacing Debate Hammers Chips: Analyst Says Hardware Vs Software Trade Is Turned On Its Head",
-        "sector": "Technology",
-        "industry": "Software - Application",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "AMD",
-        "digest": "AI leaders' call to slow frontier development sparks AMD's 5% premarket plunge",
-        "news_title": "Hedge Fund That Nearly Collapsed Bets Big on AMD Again",
-        "sector": "Technology",
-        "industry": "Semiconductors",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "APH",
-        "digest": "Fabrinet earnings weakness and rising yields spark 6.5% APH drop",
-        "news_title": "Top Stock Reports for Meta Platforms, Marvell & Amphenol",
-        "sector": "Technology",
-        "industry": "Electronic Components",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "ASML",
-        "digest": "ASML nearly sold out of 2027 EUV capacity amid very strong AI-driven demand, JPMorgan says",
-        "news_title": "Samsung Stock Falls as $18.7 Billion Power Proposal Highlights AI Infrastructure Costs",
-        "sector": "Technology",
-        "industry": "Semiconductor Equipment & Materials",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "DDOG",
-        "digest": "Snowflake's stronger-than-expected quarterly revenue and earnings support cloud and AI-focused enterprise software peers including Datadog",
-        "news_title": "French AI boom exposes Europes funding gap as startups turn to U.S.",
-        "sector": "Technology",
-        "industry": "Software - Application",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      }
-    ],
-    "Consumer Cyclical": [
-      {
-        "ticker": "AMZN",
-        "digest": "Amazon's India quick-commerce unit Amazon Now tops $1bn in gross annualised sales as volumes surge",
-        "news_title": "Amazon Gains 1.6% as Its $53 Billion Anthropic Windfall Meets a Weapons Test",
-        "sector": "Consumer Cyclical",
-        "industry": "Internet Retail",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "DASH",
-        "digest": "Scotiabank initiated coverage of DoorDash with a Sector Outperform rating and a $275 price target, citing its scale, subscription-driven user lock-in and margin benefits.",
-        "news_title": "DoorDash and Wonder Announce Strategic Partnership",
-        "sector": "Consumer Cyclical",
-        "industry": "Internet Retail",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "HD",
-        "digest": "Home Depot announces the nationwide rollout of its Magic Apron AI-powered in-store assistant with localized, personalized shopping guidance now live in all U.S. stores.",
-        "news_title": "What Happens To Home Depot Stock If Shoppers Keep Visiting Less?",
-        "sector": "Consumer Cyclical",
-        "industry": "Home Improvement Retail",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "HLT",
-        "digest": "Deutsche Bank upgrades Hilton Worldwide to Buy from Hold, raises price target to $365",
-        "news_title": "Summer Travel Season May Be Ending, but Marriott's Stock Is Worth Checking In For",
-        "sector": "Consumer Cyclical",
-        "industry": "Lodging",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "LOW",
-        "digest": "Bernstein cuts Loweâs price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery",
-        "news_title": "The biggest threat to your retirement is based on a myth  it could rip through your nest egg and even ruin your health",
-        "sector": "Consumer Cyclical",
-        "industry": "Home Improvement Retail",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
@@ -1228,6 +1182,17 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export"
+      },
+      {
+        "ticker": "NFLX",
+        "digest": "Evercore ISI raises Netflix price target to $110 from $100, reiterates outperform on live events and short-form growth",
+        "news_title": "S&P 500, Nasdaq, Dow Drop On Chipmaker Weakness, Treasury Yield Pressure  MSFT, NFLX, ORCL, CRWD, RBLX In Focus",
+        "sector": "Communication Services",
+        "industry": "Entertainment",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
       }
     ],
     "Utilities": [
@@ -1252,13 +1217,59 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export"
+      },
+      {
+        "ticker": "NEE",
+        "digest": "NextEra and Dominion unveil expanded Virginia benefits package for proposed merger, doubling bill credits and adding major investments",
+        "news_title": "NextEra and Dominion Sweeten Merger Deal With Bill Credits and New Jobs",
+        "sector": "Utilities",
+        "industry": "Utilities - Regulated Electric",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      }
+    ],
+    "Consumer Cyclical": [
+      {
+        "ticker": "HD",
+        "digest": "Home Depot announces the nationwide rollout of its Magic Apron AI-powered in-store assistant with localized, personalized shopping guidance now live in all U.S. stores.",
+        "news_title": "What Happens To Home Depot Stock If Shoppers Keep Visiting Less?",
+        "sector": "Consumer Cyclical",
+        "industry": "Home Improvement Retail",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "HLT",
+        "digest": "Deutsche Bank upgrades Hilton Worldwide to Buy from Hold, raises price target to $365",
+        "news_title": "Summer Travel Season May Be Ending, but Marriott's Stock Is Worth Checking In For",
+        "sector": "Consumer Cyclical",
+        "industry": "Lodging",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "LOW",
+        "digest": "Bernstein cuts Loweâs price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery",
+        "news_title": "The biggest threat to your retirement is based on a myth  it could rip through your nest egg and even ruin your health",
+        "sector": "Consumer Cyclical",
+        "industry": "Home Improvement Retail",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
       }
     ],
     "Consumer Defensive": [
       {
         "ticker": "KO",
         "digest": "Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.",
-        "news_title": "The Coca-Cola System: A 140-Year Legacy That Continues to Deliver for America",
+        "news_title": "Tribunal conditionally clears Coca-Cola bottling deal",
         "sector": "Consumer Defensive",
         "industry": "Beverages - Non-Alcoholic",
         "is_dividend": false,
@@ -1354,17 +1365,6 @@
       "news_title": "Norwegian Cruise downgrade, Duolingo upgraded: Wall Street's top analyst calls",
       "sector": "Communication Services",
       "industry": "Telecom Services",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "AMZN",
-      "digest": "Amazon's India quick-commerce unit Amazon Now tops $1bn in gross annualised sales as volumes surge",
-      "news_title": "Amazon Gains 1.6% as Its $53 Billion Anthropic Windfall Meets a Weapons Test",
-      "sector": "Consumer Cyclical",
-      "industry": "Internet Retail",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -1569,17 +1569,6 @@
       "source": "finviz_export"
     },
     {
-      "ticker": "CAT",
-      "digest": "Freedom Broker upgrades Caterpillar to Buy, lifts price target to $980 on U.S.-Canada tariff benefits",
-      "news_title": "Bull of the Day: Caterpillar (CAT)",
-      "sector": "Industrials",
-      "industry": "Farm & Heavy Construction Machinery",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
       "ticker": "CI",
       "digest": "Jefferies downgrades Cigna to Hold from Buy, cuts price target to $307 from $336 on concern consensus too high post EviCore sale, Centene prescription drug plan shrinkage",
       "news_title": "CVS Stock Returned $24B In Cash: Why Did It Still Lag The Market?",
@@ -1684,17 +1673,6 @@
       "news_title": "NextEra and Dominion Sweeten Merger Deal With Bill Credits and New Jobs",
       "sector": "Utilities",
       "industry": "Utilities - Regulated Electric",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "DASH",
-      "digest": "Scotiabank initiated coverage of DoorDash with a Sector Outperform rating and a $275 price target, citing its scale, subscription-driven user lock-in and margin benefits.",
-      "news_title": "DoorDash and Wonder Announce Strategic Partnership",
-      "sector": "Consumer Cyclical",
-      "industry": "Internet Retail",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -1890,7 +1868,7 @@
     {
       "ticker": "KO",
       "digest": "Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.",
-      "news_title": "The Coca-Cola System: A 140-Year Legacy That Continues to Deliver for America",
+      "news_title": "Tribunal conditionally clears Coca-Cola bottling deal",
       "sector": "Consumer Defensive",
       "industry": "Beverages - Non-Alcoholic",
       "is_dividend": false,
@@ -2011,7 +1989,7 @@
     {
       "ticker": "NTES",
       "digest": "Goldman Sachs conviction buy and PT hike fuel NTES premarket rebound after mixed Q2 earnings",
-      "news_title": "The $71B Shadow Market: What DeepSeeks Valuation Signals for Chinese AI",
+      "news_title": "Produced by a World-Class International Team! Adam Fan's Official New Album SKYFALL Makes Exclusive Debut on NetEase Cloud Music",
       "sector": "Communication Services",
       "industry": "Electronic Gaming & Multimedia",
       "is_dividend": false,
@@ -2168,6 +2146,39 @@
       "news_title": "RTX's Pratt & Whitney completes F135 Engine Core Upgrade Risk Reduction Design Review",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "RY",
+      "digest": "Royal Bank of Canada beats fiscal Q3 2026 estimates and outlines U.S. expansion plans for City National Bank",
+      "news_title": "Royal Bank of Canada (RY) (Q3 2026) Earnings Call Highlights: Record Earnings and Strategic ...",
+      "sector": "Financial",
+      "industry": "Banks - Diversified",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "SAN",
+      "digest": "Banco Santander completes Webster Financial acquisition, creating leading U.S. retail and commercial bank with about $327B assets, targets 18% RoTE in U.S. by 2028",
+      "news_title": "Santander Holdings USA, Inc. Announces Redemption of All Outstanding Depositary Shares Representing Interests in Its Fixed-Rate Reset Non-Cumulative Perpetual Preferred Stock, Series I",
+      "sector": "Financial",
+      "industry": "Banks - Diversified",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "SAP",
+      "digest": "NTT DATA AI-cloud win and buybacks drive SAP 5% surge",
+      "news_title": "SAP has a 'once-in-a-lifetime opportunity' with AI: CEO explains how",
+      "sector": "Technology",
+      "industry": "Software - Application",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
