@@ -454,6 +454,41 @@ def test_publish_keeps_elite_1d_when_tickets_rebuild_fails() -> None:
         assert out["buy_1d"] == ["AVAH"]
 
 
+def test_day_board_write_json_keeps_elite_when_news_parse_lands() -> None:
+    """note_land / write_json must not drop Elite px for a ranker restamp."""
+    import tempfile
+    from src import day_board
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        board_dir = root / "data" / "day_board"
+        board_dir.mkdir(parents=True)
+        (board_dir / "today_strategies.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "clock_legal_for": "2026-09-15",
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+            "sell_1d": [{"ticker": "METC", "px": 9.98, "px_src": "elite_live"}],
+        }), encoding="utf-8")
+        old = day_board.BOARD_DIR
+        day_board.BOARD_DIR = board_dir
+        try:
+            day_board.write_json({
+                "date": "2026-09-15",
+                "generated_at": "news_parse",
+                "overall": "ok",
+                "ranker_ready": True,
+                "counts": {},
+                "selections": {"buy_1d": [{"ticker": "MTCH", "score": 0.34}]},
+                "lands": [{"key": "news_parse"}],
+            })
+        finally:
+            day_board.BOARD_DIR = old
+        strip = json.loads((board_dir / "today.json").read_text(encoding="utf-8"))
+        assert strip["buy_1d"][0]["ticker"] == "MTCH"
+        assert strip["buy_1d"][0]["px"] == 43.04
+        assert strip["quote"]["src"] == "elite_live"
+
+
 def test_publish_keeps_elite_when_rebuild_is_session_export() -> None:
     """A failed Elite restamp must not replace AVAH elite_live with MTCH."""
     with tempfile.TemporaryDirectory() as d:
@@ -585,6 +620,7 @@ def main() -> None:
     test_load_live_ticket_payload_requires_elite_live()
     test_publish_keeps_elite_1d_when_tickets_rebuild_fails()
     test_publish_keeps_elite_when_rebuild_is_session_export()
+    test_day_board_write_json_keeps_elite_when_news_parse_lands()
     print("ok")
 
 
