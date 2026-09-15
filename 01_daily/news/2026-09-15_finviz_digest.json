@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T06:05:56.763437-04:00",
+  "generated_at": "2026-09-15T07:09:44.609758-04:00",
   "export_used": "data/exports/finviz_2026-09-15.csv",
   "ticker_digest_count": 400,
   "signal_count": 400,
@@ -9,28 +9,28 @@
       "ticker": "SPY",
       "index": "S&P 500",
       "digest": "AI, Fed And 5% Treasury Yield: Three Risks Putting Nasdaq, Dow Futures On Edge Ahead Of Wednesdays Rate Decision",
-      "source": "finviz_export",
+      "source": "finviz_elite_news",
       "error": null
     },
     {
       "ticker": "QQQ",
       "index": "Nasdaq-100",
       "digest": "AI, Fed And 5% Treasury Yield: Three Risks Putting Nasdaq, Dow Futures On Edge Ahead Of Wednesdays Rate Decision",
-      "source": "finviz_export",
+      "source": "finviz_elite_news",
       "error": null
     },
     {
       "ticker": "DIA",
       "index": "Dow Jones",
       "digest": "S&P 500, Nasdaq, Dow Drop On Chipmaker Weakness, Treasury Yield Pressure  MSFT, NFLX, ORCL, CRWD, RBLX In Focus",
-      "source": "finviz_export",
+      "source": "finviz_elite_news",
       "error": null
     },
     {
       "ticker": "IWM",
       "index": "Russell 2000",
       "digest": "Investors worried about rising bond yields are keeping a close eye on this corner of the market",
-      "source": "finviz_export",
+      "source": "finviz_elite_news",
       "error": null
     }
   ],
@@ -82,7 +82,7 @@
     {
       "ticker": "AMGN",
       "digest": "Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first two ES-SCLC doses",
-      "news_title": "Is This LLY Stock Dip Big Enough To Be Worth Buying?",
+      "news_title": "FDA reduces monitoring time for Amgen's Imdelltra infusions",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
@@ -104,7 +104,7 @@
     {
       "ticker": "AMZN",
       "digest": "Amazon's India quick-commerce unit Amazon Now tops $1bn in gross annualised sales as volumes surge",
-      "news_title": "Amazon Now crosses $1bn in gross annualised sales  report",
+      "news_title": "Factory robots long posed a safety threat to human workers. One company says it's solved that problem.",
       "sector": "Consumer Cyclical",
       "industry": "Internet Retail",
       "is_dividend": false,
@@ -214,7 +214,7 @@
     {
       "ticker": "BAC",
       "digest": "BAC CEO's soft Q3 outlook at Barclays conference drives 5% plunge",
-      "news_title": "Stock Market Today: 10-Year Yield Forges Above 5%",
+      "news_title": "US Semiconductor Market Seen Nearly Doubling By 2030, BofA Says  Memory And AI To Drive The Next Leg: Report",
       "sector": "Financial",
       "industry": "Banks - Diversified",
       "is_dividend": false,
@@ -423,7 +423,7 @@
     {
       "ticker": "CVE",
       "digest": "Cenovus Energy Q2 2026 non-GAAP EPS $1.08 misses estimates, revenue $14.7B beats, company raises full-year production guidance",
-      "news_title": "This International Manager Is Betting Big on Banks and Energy, but Not Tech",
+      "news_title": "Cenovus Energy Inc's Dividend Analysis",
       "sector": "Energy",
       "industry": "Oil & Gas Integrated",
       "is_dividend": false,
@@ -478,7 +478,7 @@
     {
       "ticker": "E",
       "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results",
-      "news_title": "YPF Lines Up Buyers for $24 Billion Vaca Muerta LNG Project",
+      "news_title": "Saipem wins $350m offshore contract from Azule Energy Angola",
       "sector": "Energy",
       "industry": "Oil & Gas Integrated",
       "is_dividend": false,
@@ -632,7 +632,7 @@
     {
       "ticker": "KO",
       "digest": "Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.",
-      "news_title": "KO Stock Near Highs: Has Momentum Outrun Value?",
+      "news_title": "Coca-Cola Co's Dividend Analysis",
       "sector": "Consumer Defensive",
       "industry": "Beverages - Non-Alcoholic",
       "is_dividend": false,
@@ -646,17 +646,6 @@
       "news_title": "The Bloom Energy Stock Signal Hiding Behind The Demand Story",
       "sector": "Basic Materials",
       "industry": "Specialty Chemicals",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "LLY",
-      "digest": "Eli Lilly completes acquisition of AtaiBeckley, adding its rapid-acting neuroplastogen pipeline including lead TRD candidate BPL-003 to Lillyâs neuroscience portfolio.",
-      "news_title": "AI Safety Fears Drive Investors to J&J, Costco, and CrowdStrike for Cybersecurity",
-      "sector": "Healthcare",
-      "industry": "Drug Manufacturers - General",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -694,6 +683,17 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export"
+    },
+    {
+      "ticker": "MNST",
+      "digest": "Q2 earnings momentum and recent stock split fuel MNST 4.09% gain",
+      "news_title": "KO Stock Near Highs: Has Momentum Outrun Value?",
+      "sector": "Consumer Defensive",
+      "industry": "Beverages - Non-Alcoholic",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
     }
   ],
   "by_sector": {
@@ -723,7 +723,7 @@
       {
         "ticker": "BAC",
         "digest": "BAC CEO's soft Q3 outlook at Barclays conference drives 5% plunge",
-        "news_title": "Stock Market Today: 10-Year Yield Forges Above 5%",
+        "news_title": "US Semiconductor Market Seen Nearly Doubling By 2030, BofA Says  Memory And AI To Drive The Next Leg: Report",
         "sector": "Financial",
         "industry": "Banks - Diversified",
         "is_dividend": false,
@@ -881,7 +881,7 @@
       {
         "ticker": "AMGN",
         "digest": "Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first two ES-SCLC doses",
-        "news_title": "Is This LLY Stock Dip Big Enough To Be Worth Buying?",
+        "news_title": "FDA reduces monitoring time for Amgen's Imdelltra infusions",
         "sector": "Healthcare",
         "industry": "Drug Manufacturers - General",
         "is_dividend": false,
@@ -1107,7 +1107,7 @@
       {
         "ticker": "AMZN",
         "digest": "Amazon's India quick-commerce unit Amazon Now tops $1bn in gross annualised sales as volumes surge",
-        "news_title": "Amazon Now crosses $1bn in gross annualised sales  report",
+        "news_title": "Factory robots long posed a safety threat to human workers. One company says it's solved that problem.",
         "sector": "Consumer Cyclical",
         "industry": "Internet Retail",
         "is_dividend": false,
@@ -1175,7 +1175,7 @@
       {
         "ticker": "CVE",
         "digest": "Cenovus Energy Q2 2026 non-GAAP EPS $1.08 misses estimates, revenue $14.7B beats, company raises full-year production guidance",
-        "news_title": "This International Manager Is Betting Big on Banks and Energy, but Not Tech",
+        "news_title": "Cenovus Energy Inc's Dividend Analysis",
         "sector": "Energy",
         "industry": "Oil & Gas Integrated",
         "is_dividend": false,
@@ -1186,7 +1186,7 @@
       {
         "ticker": "E",
         "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results",
-        "news_title": "YPF Lines Up Buyers for $24 Billion Vaca Muerta LNG Project",
+        "news_title": "Saipem wins $350m offshore contract from Azule Energy Angola",
         "sector": "Energy",
         "industry": "Oil & Gas Integrated",
         "is_dividend": false,
@@ -1265,6 +1265,30 @@
         "source": "finviz_export"
       }
     ],
+    "Consumer Defensive": [
+      {
+        "ticker": "KO",
+        "digest": "Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.",
+        "news_title": "Coca-Cola Co's Dividend Analysis",
+        "sector": "Consumer Defensive",
+        "industry": "Beverages - Non-Alcoholic",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "MNST",
+        "digest": "Q2 earnings momentum and recent stock split fuel MNST 4.09% gain",
+        "news_title": "KO Stock Near Highs: Has Momentum Outrun Value?",
+        "sector": "Consumer Defensive",
+        "industry": "Beverages - Non-Alcoholic",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      }
+    ],
     "Real Estate": [
       {
         "ticker": "EQIX",
@@ -1272,19 +1296,6 @@
         "news_title": "CoreWeave Shares Sink After Bernstein Warns Of Slower AI Training",
         "sector": "Real Estate",
         "industry": "REIT - Specialty",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      }
-    ],
-    "Consumer Defensive": [
-      {
-        "ticker": "KO",
-        "digest": "Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.",
-        "news_title": "KO Stock Near Highs: Has Momentum Outrun Value?",
-        "sector": "Consumer Defensive",
-        "industry": "Beverages - Non-Alcoholic",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
@@ -1340,7 +1351,7 @@
     {
       "ticker": "AMGN",
       "digest": "Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first two ES-SCLC doses",
-      "news_title": "Is This LLY Stock Dip Big Enough To Be Worth Buying?",
+      "news_title": "FDA reduces monitoring time for Amgen's Imdelltra infusions",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
@@ -1362,7 +1373,7 @@
     {
       "ticker": "AMZN",
       "digest": "Amazon's India quick-commerce unit Amazon Now tops $1bn in gross annualised sales as volumes surge",
-      "news_title": "Amazon Now crosses $1bn in gross annualised sales  report",
+      "news_title": "Factory robots long posed a safety threat to human workers. One company says it's solved that problem.",
       "sector": "Consumer Cyclical",
       "industry": "Internet Retail",
       "is_dividend": false,
@@ -1472,7 +1483,7 @@
     {
       "ticker": "BAC",
       "digest": "BAC CEO's soft Q3 outlook at Barclays conference drives 5% plunge",
-      "news_title": "Stock Market Today: 10-Year Yield Forges Above 5%",
+      "news_title": "US Semiconductor Market Seen Nearly Doubling By 2030, BofA Says  Memory And AI To Drive The Next Leg: Report",
       "sector": "Financial",
       "industry": "Banks - Diversified",
       "is_dividend": false,
@@ -1681,7 +1692,7 @@
     {
       "ticker": "CVE",
       "digest": "Cenovus Energy Q2 2026 non-GAAP EPS $1.08 misses estimates, revenue $14.7B beats, company raises full-year production guidance",
-      "news_title": "This International Manager Is Betting Big on Banks and Energy, but Not Tech",
+      "news_title": "Cenovus Energy Inc's Dividend Analysis",
       "sector": "Energy",
       "industry": "Oil & Gas Integrated",
       "is_dividend": false,
@@ -1736,7 +1747,7 @@
     {
       "ticker": "E",
       "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results",
-      "news_title": "YPF Lines Up Buyers for $24 Billion Vaca Muerta LNG Project",
+      "news_title": "Saipem wins $350m offshore contract from Azule Energy Angola",
       "sector": "Energy",
       "industry": "Oil & Gas Integrated",
       "is_dividend": false,
@@ -1890,7 +1901,7 @@
     {
       "ticker": "KO",
       "digest": "Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.",
-      "news_title": "KO Stock Near Highs: Has Momentum Outrun Value?",
+      "news_title": "Coca-Cola Co's Dividend Analysis",
       "sector": "Consumer Defensive",
       "industry": "Beverages - Non-Alcoholic",
       "is_dividend": false,
@@ -1904,17 +1915,6 @@
       "news_title": "The Bloom Energy Stock Signal Hiding Behind The Demand Story",
       "sector": "Basic Materials",
       "industry": "Specialty Chemicals",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "LLY",
-      "digest": "Eli Lilly completes acquisition of AtaiBeckley, adding its rapid-acting neuroplastogen pipeline including lead TRD candidate BPL-003 to Lillyâs neuroscience portfolio.",
-      "news_title": "AI Safety Fears Drive Investors to J&J, Costco, and CrowdStrike for Cybersecurity",
-      "sector": "Healthcare",
-      "industry": "Drug Manufacturers - General",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -2168,6 +2168,17 @@
       "news_title": "What off-price retailers are saying about tariff refunds",
       "sector": "Consumer Cyclical",
       "industry": "Apparel Retail",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "RSG",
+      "digest": "Republic Services beats Q2 estimates with non-GAAP EPS $1.85, revenue $4.43B, raises 2026 guidance on pricing strength, commodities and M&A",
+      "news_title": "Judge sets date for Colgate toothpaste tube recyclability trial",
+      "sector": "Industrials",
+      "industry": "Waste Management",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,

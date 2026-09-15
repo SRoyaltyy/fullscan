@@ -1,14 +1,14 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T06:15:40.355541-04:00",
+  "generated_at": "2026-09-15T07:09:44.915427-04:00",
   "all_ok": false,
   "qc_all_ok": true,
   "book_ok": true,
   "grok_ok": false,
   "grok_fails": [
     {
-      "path": "01_daily/map_heat/2026-09-15_research.md",
-      "reason": "phase=morning_refresh artifact is self-declared failed: 'Morning delta refresh failed captain-evidence QC (coverage:0/26<required:21). Using last night's post-close captain cards... Overnight tape/news was not re-scored.' It is a carry-forward of the prior post-close baseline (identical 142 cards, size_gate flipped) with zero fresh evidence \u2014 not a same-day research artifact."
+      "path": "(review)",
+      "reason": "empty_review_reply"
     }
   ],
   "missing_required": [],
@@ -183,7 +183,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-15_finviz_digest.json",
-        "size": 87542
+        "size": 87841
       },
       {
         "kind": "finviz_market_digest",
@@ -204,7 +204,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/map_heat/2026-09-15_map_heat.json",
-        "size": 269893
+        "size": 269015
       },
       {
         "kind": "map_heat_baseline",

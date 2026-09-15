@@ -2,7 +2,7 @@
 
 ok=False
 
-Core is otherwise a genuine same-day packet: general predict takes a real direction (down/mild, -6.215) with MEMORY_CONFIRM/SCORES markers; events JSON is a real 2026-09-15 scan (scan_date today, catcher ran, 14 found, today's China data + CLARITY Act gap); news judge and parsed JSON are complete with NEWS_PARSE markers; finviz digest and map-heat tables are populated with a live futures tape (ES -0.54%, NQ -0.62%, WTI +2.37%) and real sector RS/industry heat; 10 of 11 sector essays are quality-ok with SECTOR_SCORES/HIT_GRID markers and distinct, non-copy-paste analysis. Consumer Defensive is the single missing sector (allowed, 10/11 >= 8). The one fail is the map_heat_research file, which claims phase=morning_refresh but explicitly reports a failed refresh and reuses last night's post-clo
+Grok returned an empty review
 
 ## Fails
-- `01_daily/map_heat/2026-09-15_research.md`: phase=morning_refresh artifact is self-declared failed: 'Morning delta refresh failed captain-evidence QC (coverage:0/26<required:21). Using last night's post-close captain cards... Overnight tape/news was not re-scored.' It is a carry-forward of the prior post-close baseline (identical 142 cards, size_gate flipped) with zero fresh evidence — not a same-day research artifact.
+- `(review)`: empty_review_reply

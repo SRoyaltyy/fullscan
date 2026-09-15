@@ -1,15 +1,15 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T06:15:34.902684-04:00",
+  "generated_at": "2026-09-15T07:09:44.914969-04:00",
   "ok": false,
   "fails": [
     {
-      "path": "01_daily/map_heat/2026-09-15_research.md",
-      "reason": "phase=morning_refresh artifact is self-declared failed: 'Morning delta refresh failed captain-evidence QC (coverage:0/26<required:21). Using last night's post-close captain cards... Overnight tape/news was not re-scored.' It is a carry-forward of the prior post-close baseline (identical 142 cards, size_gate flipped) with zero fresh evidence \u2014 not a same-day research artifact."
+      "path": "(review)",
+      "reason": "empty_review_reply"
     }
   ],
-  "notes": "Core is otherwise a genuine same-day packet: general predict takes a real direction (down/mild, -6.215) with MEMORY_CONFIRM/SCORES markers; events JSON is a real 2026-09-15 scan (scan_date today, catcher ran, 14 found, today's China data + CLARITY Act gap); news judge and parsed JSON are complete with NEWS_PARSE markers; finviz digest and map-heat tables are populated with a live futures tape (ES -0.54%, NQ -0.62%, WTI +2.37%) and real sector RS/industry heat; 10 of 11 sector essays are quality-ok with SECTOR_SCORES/HIT_GRID markers and distinct, non-copy-paste analysis. Consumer Defensive is the single missing sector (allowed, 10/11 >= 8). The one fail is the map_heat_research file, which claims phase=morning_refresh but explicitly reports a failed refresh and reuses last night's post-clo",
+  "notes": "Grok returned an empty review",
   "prompt_chars": 251444,
-  "reply_chars": 1531,
+  "reply_chars": 0,
   "reviewer": "grok-4.6-text"
 }
