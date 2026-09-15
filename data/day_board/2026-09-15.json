@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T10:02:57.347326-04:00",
+  "generated_at": "2026-09-15T10:03:01.779395-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -585,7 +585,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5897",
-          "size": 2220845
+          "size": 2248116
         },
         {
           "key": "peers",
@@ -642,9 +642,9 @@
           "size": 6103082
         }
       ],
-      "said": "214 rows",
+      "said": "218 rows",
       "bullets": [
-        "DVN, PR, FTK, ET, CHRD"
+        "PR, RRC, AR, TS, MGY"
       ]
     },
     {
@@ -803,31 +803,6 @@
     }
   },
   "lands": [
-    {
-      "key": "map_heat_research",
-      "title": "Map heat morning delta refresh",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T06:11:20.784662-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-15_research.json",
-          "ok": true,
-          "reason": "",
-          "size": 43645,
-          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-15_research.md",
-          "ok": true,
-          "reason": "",
-          "size": 43645,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-15\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-15\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -3467,6 +3442,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Communication Services={'score': 0.396, 'dir': 'up', 'conf': 0.416, 'source': 'llm'}, Consumer Cyclical={'score': -4.704, 'dir': 'down', 'conf': 0.588, 'source': 'llm'}, Energy={'score': 4.023, 'dir': 'up', 'conf': 0.661, 'source': 'llm'}, Financial={'score': -4.063, 'dir': 'down', 'conf': 0.563, 'source': 'llm'}, Healthcare={'score': 0.93, 'dir': 'up', 'conf': 0.537, 'source': 'llm'}, Basic Materials={'score': -7.604, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Industrials={'score': -5.881, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Real Estate={'score': -8.5, 'dir': 'down', 'conf': 0.65, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T10:03:00.851968-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-15_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2248116,
+          "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 PR, RRC, AR, TS, MGY"
+        }
+      ],
+      "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 PR, RRC, AR, TS, MGY"
     }
   ],
   "href": {
