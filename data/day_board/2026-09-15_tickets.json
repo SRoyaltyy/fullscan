@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T05:58:29.197031-04:00",
+  "generated_at": "2026-09-15T06:03:41.279088-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -1286,6 +1286,261 @@
         }
       ],
       "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 DVN, SKHY, PR, MSFT, PBR"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T05:59:54.082787-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-15_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1600584,
+          "preview": "1d BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN"
+        },
+        {
+          "path": "data/stock_book/2026-09-15_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-15_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2453,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-15_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12811,
+          "preview": "2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12811,
+          "preview": "2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN"
+        },
+        {
+          "path": "01_daily/2026-09-15_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 89702,
+          "preview": "# Stock book \u2014 2026-09-15\n_Generated 2026-09-15T05:58:26.178461-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN \u00b7 2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN \u00b7 # Stock book \u2014 2026-09-15\n_Generated 2026-09-15T05:58:26.178461-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T05:59:57.685933-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 14669,
+          "preview": "2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 949,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-15.json",
+          "ok": true,
+          "reason": "",
+          "size": 92881,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-15_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 68740,
+          "preview": "2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2360815,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-15_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2360815,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2606292,
+          "preview": "2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2360815,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 68740,
+          "preview": "2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2360815,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2360815,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2606292,
+          "preview": "2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN"
+        }
+      ],
+      "preview": "2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, cloc"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T06:03:08.332689-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 87668,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11503,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T06:03:08.084091-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-15.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10974945,
+          "preview": "11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11415288,
+          "preview": "11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T06:03:08.084091-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T06:03:17.096221-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-15.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10978095,
+          "preview": "11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11415288,
+          "preview": "11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T06:03:25.186440-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-15_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10498,
+          "preview": "weather sectors 11 \u00b7 Communication Services={'score': 0.396, 'dir': 'up', 'conf': 0.416, 'source': 'llm'}, Consumer Cyclical={'score': -4.704, 'dir': 'down', 'conf': 0.588, 'source': 'llm'}, Energy={'score': 4.023, 'dir': 'up', 'conf': 0.661, 'source': 'llm'}, Financial={'score': -4.063, 'dir': 'down', 'conf': 0.563, 'source': 'llm'}, Healthcare={'score': 0.93, 'dir': 'up', 'conf': 0.537, 'source': 'llm'}, Basic Materials={'score': -5.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.13, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -3.435, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-15_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5951,
+          "preview": "# Weather report \u2014 2026-09-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Communication Services={'score': 0.396, 'dir': 'up', 'conf': 0.416, 'source': 'llm'}, Consumer Cyclical={'score': -4.704, 'dir': 'down', 'conf': 0.588, 'source': 'llm'}, Energy={'score': 4.023, 'dir': 'up', 'conf': 0.661, 'source': 'llm'}, Financial={'score': -4.063, 'dir': 'down', 'conf': 0.563, 'source': 'llm'}, Healthcare={'score': 0.93, 'dir': 'up', 'conf': 0.537, 'source': 'llm'}, Basic Materials={'score': -5.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.13, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -3.435, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T06:03:30.501419-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-15_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2258282,
+          "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SKHY, DVN, PR, MSFT, PBR"
+        }
+      ],
+      "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SKHY, DVN, PR, MSFT, PBR"
     }
   ],
   "source": "publish_live_boards"

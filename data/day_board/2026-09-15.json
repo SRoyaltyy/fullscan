@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T06:04:18.871410-04:00",
+  "generated_at": "2026-09-15T06:05:00.296315-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -47,7 +47,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 269015
+          "size": 269893
         },
         {
           "key": "heat_md",
@@ -56,7 +56,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 17186
+          "size": 16943
         }
       ],
       "said": "tables on disk",
@@ -80,7 +80,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 87668
+          "size": 87542
         },
         {
           "key": "digest_md",
@@ -89,7 +89,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11458
+          "size": 11332
         },
         {
           "key": "market_digest_json",
@@ -149,7 +149,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87668
+          "size": 87542
         },
         {
           "key": "in_market_digest",
@@ -176,7 +176,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 269015
+          "size": 269893
         },
         {
           "key": "parsed",
@@ -266,7 +266,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False missing=['sector_predict']",
-          "size": 7182
+          "size": 7756
         },
         {
           "key": "review",
@@ -274,8 +274,8 @@
           "path": "01_daily/2026-09-15_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=False Grok returned an empty review",
-          "size": 309
+          "reason": "ok=False Only 5 of 11 sector essays exist (communication_services, consumer_cyclical, energy, financial, healthcare) \u2014 6 missing,",
+          "size": 1631
         },
         {
           "key": "sector_basic_materials",
@@ -409,7 +409,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87668
+          "size": 87542
         },
         {
           "key": "weather",
@@ -417,8 +417,8 @@
           "path": "01_daily/weather/2026-09-15_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10497 vix=spiking yields=flat",
-          "size": 10497
+          "reason": "sectors=11 bytes=10498 vix=spiking yields=flat",
+          "size": 10498
         }
       ],
       "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
@@ -489,7 +489,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87668
+          "size": 87542
         },
         {
           "key": "dossiers",
@@ -549,7 +549,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87668
+          "size": 87542
         },
         {
           "key": "in_judge",
@@ -566,8 +566,8 @@
           "path": "01_daily/weather/2026-09-15_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10497 vix=spiking yields=flat",
-          "size": 10497
+          "reason": "sectors=11 bytes=10498 vix=spiking yields=flat",
+          "size": 10498
         },
         {
           "key": "in_ab",
@@ -644,7 +644,7 @@
       ],
       "said": "215 rows",
       "bullets": [
-        "DVN, SKHY, PR, MSFT, PBR"
+        "SKHY, DVN, PR, MSFT, PBR"
       ]
     },
     {
@@ -2436,6 +2436,59 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T06:04:17.985549-04:00"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T06:04:59.456496-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-15_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1600584,
+          "preview": "1d BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN"
+        },
+        {
+          "path": "data/stock_book/2026-09-15_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-15_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2453,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-15_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12811,
+          "preview": "2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12811,
+          "preview": "2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN"
+        },
+        {
+          "path": "01_daily/2026-09-15_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 89702,
+          "preview": "# Stock book \u2014 2026-09-15\n_Generated 2026-09-15T06:03:38.504304-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN \u00b7 2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN \u00b7 # Stock book \u2014 2026-09-15\n_Generated 2026-09-15T06:03:38.504304-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
