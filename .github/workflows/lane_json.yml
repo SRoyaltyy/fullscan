@@ -1,0 +1,271 @@
+name: Lane JSON wire
+
+# Official free APIs only. No browser, no Gemini website, no DeepSeek chat.
+# Secrets (any subset): GROQ_API_KEY, GEMINI_API_KEY, OPENROUTER_API_KEY, DEEPSEEK_API_KEY
+# Variable: LANE_URL = this app after you publish it (https://….grok.me)
+#
+# Inbox:  02_lessons/lane/inbox.json
+# Outbox: 02_lessons/lane/outbox/YYYY-MM-DD.json
+#
+# One question per POST, 2.1s sleep. Groq rotates 4 free models (~4,000/day).
+# If Lane times out, this job calls Groq/Gemini directly with the same keys.
+
+on:
+  workflow_dispatch:
+  # schedule:
+  #   - cron: "20 10 * * 1-5"
+
+permissions:
+  contents: write
+
+jobs:
+  ask:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Route inbox
+        env:
+          LANE_URL: ${{ vars.LANE_URL }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: |
+          python - <<'PY'
+          import json, os, time, urllib.request, urllib.error, datetime, pathlib
+
+          origin = os.environ.get("LANE_URL", "").rstrip("/")
+          inbox_path = pathlib.Path("02_lessons/lane/inbox.json")
+          if not inbox_path.exists():
+              print("no inbox"); raise SystemExit(0)
+          inbox = json.loads(inbox_path.read_text())
+          questions = inbox.get("questions") or inbox
+          if isinstance(questions, dict):
+              questions = [questions]
+
+          keys = {k: os.environ[env] for k, env in (
+              ("groq", "GROQ_API_KEY"),
+              ("gemini", "GEMINI_API_KEY"),
+              ("openrouter", "OPENROUTER_API_KEY"),
+              ("deepseek", "DEEPSEEK_API_KEY"),
+          ) if os.environ.get(env)}
+          if not keys:
+              raise SystemExit("no free-lane secrets set — add GROQ_API_KEY")
+
+          SYSTEM = "You answer simple factual questions about public companies for a trading desk.\nReturn ONE JSON object only. No markdown fences. No preamble. No commentary.\nUse the schema the user provides. If a field is unknown, use null and list it in \"unknowns\".\nNever invent precise financial figures — null is better than a guess."
+          GROQ_MODELS = ["openai/gpt-oss-20b","openai/gpt-oss-120b","qwen/qwen3.8-27b","qwen/qwen3.6-27b"]
+          GEMINI_MODELS = ["gemini-2.5-flash-lite","gemini-2.5-flash"]
+          OR_MODELS = ["openrouter/free","google/gemma-4-31b-it:free"]
+          PACE = 2.1
+
+          def extract_json(text):
+              text = (text or "").strip()
+              try:
+                  return json.loads(text)
+              except Exception:
+                  pass
+              a, b = text.find("{"), text.rfind("}")
+              if a >= 0 and b > a:
+                  try:
+                      return json.loads(text[a:b+1])
+                  except Exception:
+                      return None
+              return None
+
+          def http_json(url, payload, headers, timeout=20):
+              req = urllib.request.Request(
+                  url,
+                  data=json.dumps(payload).encode(),
+                  headers={"Content-Type": "application/json", **headers},
+                  method="POST",
+              )
+              try:
+                  with urllib.request.urlopen(req, timeout=timeout) as r:
+                      return r.status, json.loads(r.read().decode()), dict(r.headers)
+              except urllib.error.HTTPError as e:
+                  raw = e.read().decode("utf-8", "replace")
+                  try:
+                      body = json.loads(raw)
+                  except Exception:
+                      body = {"error": raw[:400]}
+                  return e.code, body, dict(e.headers)
+              except Exception as e:
+                  return 0, {"error": str(e)}, {}
+
+          def openai_chat(url, key, model, prompt, extra=None):
+              status, body, _ = http_json(
+                  url,
+                  {
+                      "model": model,
+                      "messages": [
+                          {"role": "system", "content": SYSTEM},
+                          {"role": "user", "content": prompt},
+                      ],
+                      "max_tokens": 320,
+                      "temperature": 0.1,
+                      "response_format": {"type": "json_object"},
+                  },
+                  {"Authorization": "Bearer " + key, **(extra or {})},
+                  timeout=30,
+              )
+              if status == 400:
+                  status, body, _ = http_json(
+                      url,
+                      {
+                          "model": model,
+                          "messages": [
+                              {"role": "system", "content": SYSTEM},
+                              {"role": "user", "content": prompt},
+                          ],
+                          "max_tokens": 320,
+                          "temperature": 0.1,
+                      },
+                      {"Authorization": "Bearer " + key, **(extra or {})},
+                      timeout=30,
+                  )
+              if status != 200:
+                  return None, status, str(body.get("error") or body)[:240]
+              text = (((body.get("choices") or [{}])[0].get("message") or {}).get("content")) or ""
+              parsed = extract_json(text)
+              if parsed is None:
+                  return None, status, "not json"
+              return parsed, status, model
+
+          def gemini_chat(key, model, prompt):
+              url = (
+                  "https://generativelanguage.googleapis.com/v1beta/models/"
+                  + urllib.request.quote(model)
+                  + ":generateContent?key="
+                  + urllib.request.quote(key)
+              )
+              status, body, _ = http_json(
+                  url,
+                  {
+                      "systemInstruction": {"parts": [{"text": SYSTEM}]},
+                      "contents": [{"role": "user", "parts": [{"text": prompt}]}],
+                      "generationConfig": {
+                          "temperature": 0.1,
+                          "maxOutputTokens": 320,
+                          "responseMimeType": "application/json",
+                      },
+                  },
+                  {},
+                  timeout=30,
+              )
+              if status != 200:
+                  return None, status, str(body.get("error") or body)[:240]
+              parts = (((body.get("candidates") or [{}])[0].get("content") or {}).get("parts") or [])
+              text = "".join(p.get("text") or "" for p in parts)
+              parsed = extract_json(text)
+              if parsed is None:
+                  return None, status, "not json"
+              return parsed, status, model
+
+          def prompt_for(q):
+              ticker = str(q.get("ticker") or "").strip().upper()
+              tmpl = q.get("template") or "custom"
+              question = (q.get("question") or tmpl).strip()
+              return ticker, tmpl, question, (
+                  f"Ticker: {ticker}\nTemplate: {tmpl}\nQuestion: {question}\n\n"
+                  "Return ONE JSON object. Unknown fields = null. No markdown."
+              )
+
+          def direct_ask(q):
+              ticker, tmpl, question, prompt = prompt_for(q)
+              if keys.get("groq"):
+                  for model in GROQ_MODELS:
+                      parsed, status, info = openai_chat(
+                          "https://api.groq.com/openai/v1/chat/completions",
+                          keys["groq"], model, prompt,
+                      )
+                      if parsed is not None:
+                          return {"ok": True, "ticker": ticker, "template": tmpl, "question": question,
+                                  "lane": "groq", "model": info, "json": parsed, "via": "direct"}
+                      if status == 429:
+                          continue
+              if keys.get("gemini"):
+                  for model in GEMINI_MODELS:
+                      parsed, status, info = gemini_chat(keys["gemini"], model, prompt)
+                      if parsed is not None:
+                          return {"ok": True, "ticker": ticker, "template": tmpl, "question": question,
+                                  "lane": "gemini", "model": info, "json": parsed, "via": "direct"}
+              if keys.get("openrouter"):
+                  extra = {"HTTP-Referer": "https://github.com/SRoyaltyy/fullscan", "X-Title": "Lane"}
+                  for model in OR_MODELS:
+                      parsed, status, info = openai_chat(
+                          "https://openrouter.ai/api/v1/chat/completions",
+                          keys["openrouter"], model, prompt, extra,
+                      )
+                      if parsed is not None:
+                          return {"ok": True, "ticker": ticker, "template": tmpl, "question": question,
+                                  "lane": "openrouter", "model": info, "json": parsed, "via": "direct"}
+              return {"ok": False, "ticker": ticker, "template": tmpl, "question": question,
+                      "error": "all direct lanes failed", "via": "direct"}
+
+          def via_lane(q):
+              if not origin or "YOUR-LANE" in origin:
+                  return None
+              for attempt in range(4):
+                  status, body, headers = http_json(
+                      origin + "/api/ask",
+                      {"keys": keys, "questions": [q]},
+                      {},
+                      timeout=20,
+                  )
+                  if status == 429:
+                      wait = 15
+                      try:
+                          wait = int(float(headers.get("Retry-After") or headers.get("retry-after") or 15))
+                      except Exception:
+                          pass
+                      time.sleep(min(60, max(2, wait)))
+                      continue
+                  if status in (0, 502, 503, 504) or (status >= 500):
+                      return None
+                  results = (body or {}).get("results") or []
+                  return results[0] if results else None
+              return None
+
+          out = []
+          for i, q in enumerate(questions):
+              if not isinstance(q, dict) or not q.get("ticker"):
+                  out.append({"ok": False, "error": "ticker is required", "raw": q})
+                  continue
+              print(f"lane {i+1}/{len(questions)} {q.get('ticker')} {q.get('template')}")
+              row = via_lane(q)
+              if row is None:
+                  print("  lane hop failed — direct")
+                  row = direct_ask(q)
+              out.append(row)
+              time.sleep(PACE)
+
+          day = datetime.datetime.utcnow().strftime("%Y-%m-%d")
+          dest = pathlib.Path("02_lessons/lane/outbox") / f"{day}.json"
+          dest.parent.mkdir(parents=True, exist_ok=True)
+          existing = []
+          if dest.exists():
+              try:
+                  existing = json.loads(dest.read_text()).get("results") or []
+              except Exception:
+                  existing = []
+          dest.write_text(json.dumps({
+              "generated_at": datetime.datetime.utcnow().isoformat() + "Z",
+              "count": len(existing) + len(out),
+              "ok": sum(1 for r in out if r.get("ok")),
+              "results": existing + out,
+          }, indent=2), encoding="utf-8")
+          print("wrote", dest, "n=", len(out), "ok=", sum(1 for r in out if r.get("ok")))
+          PY
+      - name: Commit outbox
+        run: |
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add 02_lessons/lane/outbox || true
+          if git diff --staged --quiet; then
+            echo "No answers to commit"
+            exit 0
+          fi
+          git commit -m "auto: lane json [$(date -u +%F)]"
+          git pull --rebase origin main || true
+          git push origin main

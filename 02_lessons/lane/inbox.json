@@ -1,0 +1,8 @@
+{
+  "questions": [
+    { "id": "NVDA-people", "ticker": "NVDA", "template": "key_people" },
+    { "id": "NVDA-products", "ticker": "NVDA", "template": "key_products" },
+    { "id": "NVDA-revenue", "ticker": "NVDA", "template": "revenue_mix" },
+    { "id": "NVDA-ceo", "ticker": "NVDA", "template": "custom", "question": "Who is the CEO?" }
+  ]
+}
