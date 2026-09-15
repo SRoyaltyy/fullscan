@@ -65,6 +65,25 @@ def test_quote_book_offline_uses_fallback_not_theme_radar() -> None:
         assert book["src"] == "session_export"
 
 
+def test_after_bell_dated_export_is_elite_live_file() -> None:
+    import os
+    import tempfile
+    et = ZoneInfo("America/New_York")
+    with tempfile.TemporaryDirectory() as d:
+        tmp = Path(d)
+        exports = tmp / "exports"
+        exports.mkdir()
+        path = exports / "finviz_2026-09-15.csv"
+        path.write_text("Ticker,Price\nAVAH,15.10\n", encoding="utf-8")
+        os.utime(path, (datetime(2026, 9, 15, 9, 49, tzinfo=et).timestamp(),) * 2)
+        with mock.patch.object(elp, "EXPORTS", exports), \
+                mock.patch.object(elp, "FINVIZ", tmp / "finviz"), \
+                mock.patch.object(elp, "LIVE_CSV", exports / "finviz_live.csv"):
+            book = elp.quote_book("2026-09-15", pull_live=False)
+        assert book["src"] == "elite_live_file"
+        assert book["prices"]["AVAH"] == 15.10
+
+
 def test_excel_clock_is_session_open_not_run_date() -> None:
     import tempfile
     from unittest import mock
@@ -189,6 +208,7 @@ def main() -> None:
     test_after_open_clock()
     test_stamp_rows_keeps_open_and_live()
     test_quote_book_offline_uses_fallback_not_theme_radar()
+    test_after_bell_dated_export_is_elite_live_file()
     test_excel_clock_is_session_open_not_run_date()
     test_slim_board_keeps_live_px()
     test_hard_red_research_is_tagged_not_a_wire()

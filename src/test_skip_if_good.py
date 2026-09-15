@@ -402,6 +402,11 @@ def test_preopen_stamp_is_not_good_after_bell() -> None:
             assert skip_if_good.tickets_are_live_open(
                 "2026-09-14", after) is True
             tickets["quote"]["after_open"] = True
+            tickets["quote"]["src"] = "session_export"
+            (day / "today_strategies.json").write_text(
+                json.dumps(tickets), encoding="utf-8")
+            assert skip_if_good.tickets_are_live_open(
+                "2026-09-15", after) is False
             tickets["quote"]["src"] = "elite_live"
             (day / "today_strategies.json").write_text(
                 json.dumps(tickets), encoding="utf-8")

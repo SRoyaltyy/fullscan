@@ -667,6 +667,8 @@ def stamp_live_quotes(payload: dict, date: str) -> dict:
             continue
         rec["buy"] = elp.stamp_rows(rec.get("buy") or [], book, opens=opens)
         rec["sell"] = elp.stamp_rows(rec.get("sell") or [], book, opens=opens)
+    payload["buy_1d"] = elp.stamp_rows(payload.get("buy_1d") or [], book, opens=opens)
+    payload["sell_1d"] = elp.stamp_rows(payload.get("sell_1d") or [], book, opens=opens)
     return payload
 
 

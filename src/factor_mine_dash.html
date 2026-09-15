@@ -1839,13 +1839,15 @@ window.addEventListener('resize', draw);
     firstOk(['today_strategies.json','./today_strategies.json', STRAT])
   ]).then(function(arr){
     var d=arr[0]||{}, st=arr[1]||{};
+    if(st.buy_1d) d.buy_1d=st.buy_1d;
+    if(st.sell_1d) d.sell_1d=st.sell_1d;
     window.__TODAY_STRATS=st;
     if(typeof attachLiveSessionDate==='function') try{ attachLiveSessionDate(); }catch(e){}
     var c=d.counts||{};
     stamp.textContent=(st.date||d.date||'')+' · '+(d.overall||'?')+' · ranker '+(d.ranker_ready?'READY':'BLOCKED')+' · processes ok '+(c.ok||0)+'/'+(c.n||'?')
       +(st.n?(' · '+st.n+' strategies ('+(st.n_ok||0)+' with tickets)'):'')
       +(st.quote&&st.quote.after_open?' · after 09:30 live':' · not after-open')
-      +(st.quote&&st.quote.src?(' · px '+st.quote.src+(st.quote.src==='elite_live'||st.quote.src==='elite_live_file'?' (now)':' (not live)')):'');
+      +(st.quote&&st.quote.src?(' · px '+st.quote.src+(String(st.quote.src).indexOf('elite_live')===0?' (now)':' (not live)')):'');
     var html='';
     (d.buy_1d||[]).forEach(function(x){if(x.ticker) html+='<span class="pill on">BUY '+x.ticker+(x.px!=null?(' '+x.px):'')+'</span>';});
     (d.sell_1d||[]).forEach(function(x){if(x.ticker) html+='<span class="pill">SELL '+x.ticker+(x.px!=null?(' '+x.px):'')+'</span>';});
