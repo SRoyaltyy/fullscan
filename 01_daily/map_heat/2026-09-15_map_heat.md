@@ -1,68 +1,68 @@
 # MAP HEAT — 2026-09-15
 
-Export `finviz_2026-09-15.csv` · 11616 names · generated 2026-09-15T12:26:06.969331-04:00
+Export `finviz_2026-09-15.csv` · 11616 names · generated 2026-09-15T12:38:40.010122-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7649.75 | -0.56% |
-| Nasdaq 100 (NQ) | 29247.5 | -0.69% |
-| Russell 2000 (ER2) | 2887.2 | -0.99% |
-| DJIA (YM) | 52363.0 | -0.94% |
-| VIX (VX) | 17.4 | +3.56% |
-| Crude Oil WTI (CL) | 105.61 | +4.06% |
-| Crude Oil Brent (QA) | 108.53 | +2.57% |
-| Natural Gas (NG) | 2.914 | +0.66% |
-| Heating Oil (HO) | 5.239 | +5.63% |
-| Gasoline RBOB (RB) | 3.4318 | +3.49% |
-| Gold (GC) | 4326.2 | -0.57% |
-| Silver (SI) | 63.675 | -0.75% |
-| Copper (HG) | 6.432 | +0.43% |
-| Platinum (PL) | 1767.7 | -0.69% |
-| Palladium (PA) | 1300.5 | -0.55% |
+| S&P 500 (ES) | 7659.0 | -0.44% |
+| Nasdaq 100 (NQ) | 29296.25 | -0.55% |
+| Russell 2000 (ER2) | 2893.3 | -0.79% |
+| DJIA (YM) | 52434.0 | -0.80% |
+| VIX (VX) | 17.25 | +2.37% |
+| Crude Oil WTI (CL) | 105.25 | +3.82% |
+| Crude Oil Brent (QA) | 108.14 | +2.31% |
+| Natural Gas (NG) | 2.913 | +0.66% |
+| Heating Oil (HO) | 5.2292 | +5.41% |
+| Gasoline RBOB (RB) | 3.4311 | +3.41% |
+| Gold (GC) | 4335.1 | -0.38% |
+| Silver (SI) | 63.895 | -0.36% |
+| Copper (HG) | 6.444 | +0.60% |
+| Platinum (PL) | 1772.0 | -0.37% |
+| Palladium (PA) | 1301.5 | -0.47% |
 | USD (DX) | 99.37 | +0.27% |
 | EUR (6E) | 1.15825 | -0.14% |
-| JPY (6J) | 0.6494 | -0.72% |
-| GBP (6B) | 1.3477 | -0.29% |
-| AUD (6A) | 0.7116 | -0.27% |
-| CAD (6C) | 0.7217 | -0.11% |
-| CHF (6S) | 1.23375 | -0.34% |
-| NZD (6N) | 0.57715 | -0.53% |
+| JPY (6J) | 0.6494500000000001 | -0.71% |
+| GBP (6B) | 1.3474 | -0.30% |
+| AUD (6A) | 0.7118 | -0.25% |
+| CAD (6C) | 0.7219 | -0.08% |
+| CHF (6S) | 1.2338 | -0.34% |
+| NZD (6N) | 0.5773 | -0.47% |
 | 10 Year Note (ZN) | 105.953125 | -0.21% |
-| 5 Year Note (ZF) | 104.390625 | -0.13% |
-| 2 Year Note (ZT) | 102.04296875 | -0.04% |
-| 30 Year Bond (ZB) | 106.5625 | -0.44% |
-| Nikkei 225 (NKD) | 63315.0 | +0.21% |
-| DAX (DY) | 25423.0 | -0.02% |
-| Euro Stoxx 50 (EX) | 6241.0 | -0.30% |
-| Corn (ZC) | 532.75 | -0.14% |
-| Soybeans (ZS) | 1313.25 | +0.71% |
-| Wheat (ZW) | 724.0 | +0.28% |
-| Soybean oil (ZL) | 69.57 | -0.10% |
-| Soybean Meal (ZM) | 359.2 | +2.60% |
-| Oats (ZO) | 395.25 | +0.57% |
-| Rough Rice (ZR) | 15.815 | -1.00% |
-| Coffee (KC) | 284.0 | -2.17% |
-| Sugar (SB) | 17.98 | -0.99% |
-| Cotton (CT) | 84.3 | -0.30% |
-| Cocoa (CC) | 5866.0 | -2.57% |
-| Orange Juice (JO) | 151.1 | -1.21% |
-| Lumber (LB) | 562.5 | -1.32% |
-| Live Cattle (LC) | 221.125 | -0.51% |
-| Lean Hogs (LH) | 79.35 | -0.22% |
-| Feeder Cattle (FC) | 334.4 | -1.02% |
-| Bitcoin (BTC) | 76280.0 | -3.63% |
-| 3 Month SOFR (SR3) | 96.025 | +0.00% |
+| 5 Year Note (ZF) | 104.3984375 | -0.12% |
+| 2 Year Note (ZT) | 102.046875 | -0.04% |
+| 30 Year Bond (ZB) | 106.59375 | -0.41% |
+| Nikkei 225 (NKD) | 63450.0 | +0.39% |
+| DAX (DY) | 25443.0 | +0.04% |
+| Euro Stoxx 50 (EX) | 6247.0 | -0.22% |
+| Corn (ZC) | 532.0 | -0.19% |
+| Soybeans (ZS) | 1313.75 | +0.77% |
+| Wheat (ZW) | 723.75 | +0.24% |
+| Soybean oil (ZL) | 69.64 | -0.01% |
+| Soybean Meal (ZM) | 359.5 | +2.68% |
+| Oats (ZO) | 395.0 | +0.51% |
+| Rough Rice (ZR) | 15.815 | -1.09% |
+| Coffee (KC) | 283.15 | -2.41% |
+| Sugar (SB) | 17.94 | -1.05% |
+| Cotton (CT) | 84.29 | -0.28% |
+| Cocoa (CC) | 5872.0 | -2.91% |
+| Orange Juice (JO) | 152.5 | -0.29% |
+| Lumber (LB) | 563.0 | -1.23% |
+| Live Cattle (LC) | 220.725 | -0.70% |
+| Lean Hogs (LH) | 79.25 | -0.44% |
+| Feeder Cattle (FC) | 334.05 | -1.10% |
+| Bitcoin (BTC) | 76475.0 | -3.40% |
+| 3 Month SOFR (SR3) | 96.0275 | +0.00% |
 | 30 Day Fed Funds (ZQ) | 96.2625 | +0.00% |
 | Aluminum (ALI) | 3410.5 | -0.03% |
-| Canola (RS) | 828.7 | +0.67% |
+| Canola (RS) | 828.6 | +0.79% |
 | Coal Newcastle (NCF) | 146.85 | +0.07% |
 | Ethanol (ZK) | 2.055 | +0.00% |
-| Gasoil (G) | 1555.0 | +5.33% |
+| Gasoil (G) | 1552.5 | +5.16% |
 | Iron Ore (TIO) | 97.55 | -0.48% |
-| Steel HRC (HRC) | 1230.0 | -0.32% |
-| Ultra 10 Year Note (TN) | 107.4375 | -0.29% |
-| Ultra Bond (UB) | 108.03125 | -0.58% |
+| Steel HRC (HRC) | 1230.0 | -0.16% |
+| Ultra 10 Year Note (TN) | 107.453125 | -0.26% |
+| Ultra Bond (UB) | 108.09375 | -0.52% |
 | Uranium (UX) | 89.9 | -0.11% |
 
 ## CALENDAR
@@ -129,14 +129,14 @@ Mega-cap earnings:
 - BMO **FDS**  EPS est 4.3473  (Factset Research Systems Inc)
 
 Options event-vol flags (NOT direction):
-- **MU** exp 2026-09-16 ATM IV 0.4454 implied move +2.3% put/call OI 0.695
-- **COST** exp 2026-09-18 ATM IV 0.2057 implied move +1.9% put/call OI 3.392
-- **ACN** exp 2026-09-18 ATM IV 0.4787 implied move +4.3% put/call OI 0.033
-- **CTAS** exp 2026-09-18 ATM IV 0.3181 implied move +2.9% put/call OI 0.494
-- **NKE** exp 2026-09-18 ATM IV 0.3364 implied move +3.0% put/call OI 5.169
-- **AZO** exp 2026-09-18 ATM IV 0.3701 implied move +3.4% put/call OI 9.0
-- **PAYX** exp 2026-09-18 ATM IV 0.3713 implied move +3.4% put/call OI 0.677
-- **JBL** exp 2026-09-18 ATM IV 0.5139 implied move +4.7% put/call OI 0.778
+- **MU** exp 2026-09-16 ATM IV 0.4346 implied move +2.3% put/call OI 0.695
+- **COST** exp 2026-09-18 ATM IV 0.2036 implied move +1.9% put/call OI 3.392
+- **ACN** exp 2026-09-18 ATM IV 0.4721 implied move +4.3% put/call OI 0.033
+- **CTAS** exp 2026-09-18 ATM IV 0.3252 implied move +3.0% put/call OI 0.494
+- **NKE** exp 2026-09-18 ATM IV 0.3413 implied move +3.1% put/call OI 5.169
+- **AZO** exp 2026-09-18 ATM IV 0.3733 implied move +3.4% put/call OI 3.297
+- **PAYX** exp 2026-09-18 ATM IV 0.3925 implied move +3.6% put/call OI 0.677
+- **JBL** exp 2026-09-18 ATM IV 0.5308 implied move +4.8% put/call OI 0.467
 
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
@@ -256,31 +256,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 57 sec **KR** Harris Teeter Announces $253 Million Investment to Enhance Stores and Expand Footprint Across Charlotte Over the Next Three Years (PR Newswire)
-- 5 min **BLX** Bladex Structures USD 1.0 Billion Loan for the Republic of Panama (PR Newswire)
-- 7 min **RIG,EOG** 2 Energy Stocks Call Traders Are Targeting (Schaeffer's Research)
-- 10 min **IREN** Bitcoin Mining Faces A Shakeout As CORZ, KEEL, IREN, CIFR Get Ready To Exit, Says CoinShares (Stocktwits)
-- 10 min **IBKR** Interactive Brokers Integrates with X Cashtags (Business Wire)
-- 10 min **EXFY** Expensify Becomes One of the First Expense Management Tools Available in Claude for Small Business (Business Wire)
-- 20 min **ELAN** Expanding Tick and Itch Season Supports Momentum in Elanco Innovation, Meeting Pet Owner Demand for Health and Wellness Care (ACCESSWIRE)
-- 21 min **DEO** CROWN ROYAL INVITES FANS TO "BRING IT" TO GAME DAY WITH "ROYAL RITUALS," AN EPISODIC CONTENT SERIES CREATED WITH SPORTS ILLUSTRATED (PR Newswire)
-- 22 min **VRTX,VERA** Why Vera Therapeutics Stock Is Jumping on New Kidney Drug Trial Results (Barrons.com)
-- 22 min **AMD,NVDA** Nvidia, AI Chip Stocks Look To Stem The Bleeding After Sell-Off (Investor's Business Daily)
-- 23 min **GLD** China Found a Ton of Gold. Now Comes the Hard Part. (Moby)
-- 23 min **QQQ,LEN** 2 Areas of Wall Street to Avoid This Fed Week (Schaeffer's Research)
-- 25 min **G** Genpact Wins in the Inaugural 2026 HFS Services-as-Software Awards (PR Newswire)
-- 25 min **SO** Georgia Power's Robins Battery Storage achieves commercial operation helping to ensure reliable energy in Georgia (PR Newswire)
-- 25 min **ADSK** Autodesk Advances Agentic AI in Its Three Industry Clouds (PR Newswire)
-- 25 min **FUTU** Moomoo Named to X's U.S. Cashtag Partner Program (GlobeNewswire)
-- 25 min **STGW** Stagwell Agencies Assembly and MONO Team Up with Hypebeast to Bring Agave Leather to the Runway for Lunazul Tequila - A New York Fashion Week First (ACCESSWIRE)
-- 25 min **NWL** Newell Brands Opens Atlanta Design Center to Accelerate Brand Building Through Consumer-Led Design and Innovation (Business Wire)
-- 25 min **MAT** Mattel and BBC Studios Expand the World of Bluey Through Multi-Brand Global Licensing Partnership (Business Wire)
-- 25 min **UBER** OXEA taps Uber Freight to manage North American, European logistics (FreightWaves)
-- 28 min **AADX,HWM,LHX,KTOS,NOC** This Stock Can Rise 150%, Plus 12 More Aerospace Buys (Barrons.com)
-- 29 min **COST,NVDA** The Oil Crisis Has Reached Costcos Motor Oil Aisle (Moby)
-- 29 min **CCL** CARNIVAL CORPORATION LTD. TO HOLD CONFERENCE CALL ON THIRD QUARTER EARNINGS (PR Newswire)
-- 32 min **SNAP,AMZN,GOOGL,MSFT,BLK** Is Meta Stock Still The Self-Funding Ad Business You Bought? (Trefis)
-- 32 min **PINS,GOOG** Is Meta Stock Still The Self-Funding Ad Business You Bought? (Trefis)
+- 2 min **EC** Updates to the Board of Directors of Ecopetrol S.A. (PR Newswire)
+- 6 min **BAC** Carolina Panthers and Bank of America Launch 3rd & Goal (PR Newswire)
+- 8 min **FNGR** FingerMotion Advances 99 MW Behind-the-Meter Power and Compute Development Program in Alberta (GlobeNewswire)
+- 12 min **AMZN,SOXX** Tech stocks haven't been this cheap since the launch of ChatGPT. Should you buy in? (MarketWatch)
+- 13 min **KR** Harris Teeter Announces $253 Million Investment to Enhance Stores and Expand Footprint Across Charlotte Over the Next Three Years (PR Newswire)
+- 13 min **NCLH** NORWEGIAN CRUISE LINE UNVEILS SHOW-STOPPING ENTERTAINMENT LINEUP ABOARD NORWEGIAN AURA WITH "WHITNEY: A CELEBRATION OF WHITNEY HOUSTON" TAKING CENTER STAGE (PR Newswire)
+- 14 min **MAN** Global Tech Hiring Steadies as Skills Take Priority (PR Newswire)
+- 18 min **BLX** Bladex Structures USD 1.0 Billion Loan for the Republic of Panama (PR Newswire)
+- 19 min **RIG,EOG** 2 Energy Stocks Call Traders Are Targeting (Schaeffer's Research)
+- 22 min **CSHR,IREN,CORZ,KEEL,CIFR** Bitcoin Mining Faces A Shakeout As CORZ, KEEL, IREN, CIFR Get Ready To Exit, Says CoinShares (Stocktwits)
+- 23 min **IBKR** Interactive Brokers Integrates with X Cashtags (Business Wire)
+- 23 min **EXFY** Expensify Becomes One of the First Expense Management Tools Available in Claude for Small Business (Business Wire)
+- 33 min **ELAN** Expanding Tick and Itch Season Supports Momentum in Elanco Innovation, Meeting Pet Owner Demand for Health and Wellness Care (ACCESSWIRE)
+- 34 min **DEO** CROWN ROYAL INVITES FANS TO "BRING IT" TO GAME DAY WITH "ROYAL RITUALS," AN EPISODIC CONTENT SERIES CREATED WITH SPORTS ILLUSTRATED (PR Newswire)
+- 35 min **VERA,VRTX** Why Vera Therapeutics Stock Is Jumping on New Kidney Drug Trial Results (Barrons.com)
+- 35 min **AMD,NVDA** Nvidia, AI Chip Stocks Look To Stem The Bleeding After Sell-Off (Investor's Business Daily)
+- 36 min **GLD** China Found a Ton of Gold. Now Comes the Hard Part. (Moby)
+- 36 min **QQQ,LEN** 2 Areas of Wall Street to Avoid This Fed Week (Schaeffer's Research)
+- 38 min **G** Genpact Wins in the Inaugural 2026 HFS Services-as-Software Awards (PR Newswire)
+- 38 min **SO** Georgia Power's Robins Battery Storage achieves commercial operation helping to ensure reliable energy in Georgia (PR Newswire)
+- 38 min **ADSK** Autodesk Advances Agentic AI in Its Three Industry Clouds (PR Newswire)
+- 38 min **FUTU** Moomoo Named to X's U.S. Cashtag Partner Program (GlobeNewswire)
+- 38 min **STGW** Stagwell Agencies Assembly and MONO Team Up with Hypebeast to Bring Agave Leather to the Runway for Lunazul Tequila - A New York Fashion Week First (ACCESSWIRE)
+- 38 min **NWL** Newell Brands Opens Atlanta Design Center to Accelerate Brand Building Through Consumer-Led Design and Innovation (Business Wire)
+- 38 min **MAT** Mattel and BBC Studios Expand the World of Bluey Through Multi-Brand Global Licensing Partnership (Business Wire)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.

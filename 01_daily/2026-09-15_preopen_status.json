@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T12:26:07.192040-04:00",
+  "generated_at": "2026-09-15T12:38:40.354433-04:00",
   "all_ok": false,
   "qc_all_ok": true,
   "book_ok": true,
@@ -183,7 +183,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-15_finviz_digest.json",
-        "size": 87612
+        "size": 87526
       },
       {
         "kind": "finviz_market_digest",
@@ -204,7 +204,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/map_heat/2026-09-15_map_heat.json",
-        "size": 269164
+        "size": 269278
       },
       {
         "kind": "map_heat_baseline",
