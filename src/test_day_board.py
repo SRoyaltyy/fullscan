@@ -256,6 +256,10 @@ def test_write_json_keeps_open_0930_lock_over_ranker_scores() -> None:
         assert today["buy_1d"][0]["ticker"] == "MTCH"
         assert today["buy_1d"][0]["px"] == 43.04
         assert today["quote"]["src"] == "elite_live"
+        dated = json.loads((board_dir / "2026-09-15.json").read_text())
+        assert dated["selections"]["buy_1d"][0]["ticker"] == "MTCH"
+        assert dated["selections"]["buy_1d"][0]["px"] == 43.04
+        assert dated["quote"]["src"] == "elite_live"
         fm = root / "dashboard" / "factor-mine" / "today.json"
         assert fm.is_file()
         fm_today = json.loads(fm.read_text())
