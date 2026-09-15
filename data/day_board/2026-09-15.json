@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T09:19:21.104603-04:00",
+  "generated_at": "2026-09-15T09:19:29.272752-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -248,7 +248,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6090
+          "size": 6961
         },
         {
           "key": "qc",
@@ -377,18 +377,18 @@
           "size": 13006
         }
       ],
-      "said": "general DOWN  -2.865 \u00b7 sectors 3 up / 2 down / 0 flat \u00b7 news 15 items",
+      "said": "general DOWN  -2.865 \u00b7 sectors 1 up / 8 down / 1 flat \u00b7 news 15 items",
       "bullets": [
         "bad: Brent ~$108 Hormuz/Saudi pipeline outage",
         "bad: 1w 10Y +19bp / 5% handle",
         "bad: FOMC-eve hike ~87-90%",
         "good: ES/NQ green vs cash close",
         "good: HY tight 2.65",
-        "XLB missing",
-        "XLC UP +0.4",
-        "XLY DOWN -4.7",
+        "XLB DOWN -3.7",
+        "XLC FLAT -2.7",
+        "XLY DOWN -2.3",
         "XLP missing",
-        "XLE UP +4.0"
+        "XLE UP +6.8"
       ]
     },
     {
@@ -531,7 +531,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 6090
+          "size": 6961
         },
         {
           "key": "in_actions",
@@ -804,19 +804,19 @@
       "direction": "down"
     },
     "sectors": {
-      "said": "3 up / 2 down / 0 flat",
+      "said": "1 up / 8 down / 1 flat",
       "bullets": [
-        "XLB missing",
-        "XLC UP +0.4",
-        "XLY DOWN -4.7",
+        "XLB DOWN -3.7",
+        "XLC FLAT -2.7",
+        "XLY DOWN -2.3",
         "XLP missing",
-        "XLE UP +4.0",
-        "XLF DOWN -4.1",
-        "XLV UP +0.9",
-        "XLI missing",
-        "XLRE missing",
-        "XLK missing",
-        "XLU missing"
+        "XLE UP +6.8",
+        "XLF DOWN -3.9",
+        "XLV DOWN -3.3",
+        "XLI DOWN -3.3",
+        "XLRE DOWN -4.5",
+        "XLK DOWN -7.5",
+        "XLU DOWN -6.1"
       ]
     },
     "news": {
@@ -839,24 +839,6 @@
     }
   },
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T06:09:43.960828-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-09-15_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2258873,
-          "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SKHY, DVN, PR, KSPI, MSFT"
-        }
-      ],
-      "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SKHY, DVN, PR, KSPI, MSFT"
-    },
     {
       "key": "ab",
       "title": "AB checklist",
@@ -3496,6 +3478,24 @@
         }
       ],
       "preview": "9/9 sector predicts ok: basic_materials, communication_services, consumer_cyclical, energy, financial, healthcare, industrials, real_estate"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T09:19:27.951747-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-15/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 6961,
+          "preview": "keys: date, generated_at, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, sectors"
     }
   ],
   "href": {

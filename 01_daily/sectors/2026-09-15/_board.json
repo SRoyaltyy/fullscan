@@ -1,31 +1,60 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T05:00:36.593421-04:00",
+  "generated_at": "2026-09-15T09:19:27.889586-04:00",
   "sectors": [
     {
       "sector": "Basic Materials",
       "etf": "XLB",
-      "predicted_direction": null,
-      "predicted_magnitude_band": null,
-      "total_score": null,
-      "confidence_score": null,
-      "multiplier": null,
-      "divergence_flagged": null,
+      "predicted_direction": "down",
+      "predicted_magnitude_band": "mild",
+      "total_score": -3.723,
+      "confidence_score": 0.549,
+      "multiplier": 0.9,
+      "divergence_flagged": true,
       "actual_pct_change": null,
       "actual_direction": null,
       "direction_hit": null,
       "magnitude_hit": null,
-      "has_predict_md": false,
+      "has_predict_md": true,
       "has_outcome_md": false,
-      "components": {}
+      "components": {
+        "S0_SHARED_MACRO": -1.0,
+        "S1_SECTOR_FACTORS": -2.0,
+        "S2_BREADTH": -1.0,
+        "S3_FLOWS_POSITIONING": 0.0,
+        "S4_ETF_TAPE": 0.0
+      }
     },
     {
       "sector": "Communication Services",
       "etf": "XLC",
-      "predicted_direction": "up",
+      "predicted_direction": "flat",
+      "predicted_magnitude_band": "flat",
+      "total_score": -2.687,
+      "confidence_score": 0.55,
+      "multiplier": 0.9,
+      "divergence_flagged": false,
+      "actual_pct_change": null,
+      "actual_direction": null,
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "has_predict_md": true,
+      "has_outcome_md": false,
+      "components": {
+        "S0_SHARED_MACRO": -1.0,
+        "S1_SECTOR_FACTORS": 0.0,
+        "S2_BREADTH": 0.0,
+        "S3_FLOWS_POSITIONING": 0.0,
+        "S4_ETF_TAPE": -1.0
+      }
+    },
+    {
+      "sector": "Consumer Cyclical",
+      "etf": "XLY",
+      "predicted_direction": "down",
       "predicted_magnitude_band": "mild",
-      "total_score": 0.396,
-      "confidence_score": 0.416,
+      "total_score": -2.281,
+      "confidence_score": 0.491,
       "multiplier": 0.9,
       "divergence_flagged": true,
       "actual_pct_change": null,
@@ -40,29 +69,6 @@
         "S2_BREADTH": 0.0,
         "S3_FLOWS_POSITIONING": 0.0,
         "S4_ETF_TAPE": 1.0
-      }
-    },
-    {
-      "sector": "Consumer Cyclical",
-      "etf": "XLY",
-      "predicted_direction": "down",
-      "predicted_magnitude_band": "mild",
-      "total_score": -4.704,
-      "confidence_score": 0.588,
-      "multiplier": 0.9,
-      "divergence_flagged": true,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
-      "has_predict_md": true,
-      "has_outcome_md": false,
-      "components": {
-        "S0_SHARED_MACRO": -1.0,
-        "S1_SECTOR_FACTORS": -1.0,
-        "S2_BREADTH": 0.0,
-        "S3_FLOWS_POSITIONING": 0.0,
-        "S4_ETF_TAPE": 0.0
       }
     },
     {
@@ -87,8 +93,8 @@
       "etf": "XLE",
       "predicted_direction": "up",
       "predicted_magnitude_band": "mild",
-      "total_score": 4.023,
-      "confidence_score": 0.661,
+      "total_score": 6.779,
+      "confidence_score": 0.65,
       "multiplier": 0.85,
       "divergence_flagged": false,
       "actual_pct_change": null,
@@ -100,9 +106,9 @@
       "components": {
         "S0_SHARED_MACRO": -1.0,
         "S1_SECTOR_FACTORS": 2.0,
-        "S2_BREADTH": 0.0,
-        "S3_FLOWS_POSITIONING": -1.0,
-        "S4_ETF_TAPE": 0.0
+        "S2_BREADTH": 0.5,
+        "S3_FLOWS_POSITIONING": -0.5,
+        "S4_ETF_TAPE": -0.5
       }
     },
     {
@@ -110,8 +116,54 @@
       "etf": "XLF",
       "predicted_direction": "down",
       "predicted_magnitude_band": "mild",
-      "total_score": -4.063,
-      "confidence_score": 0.563,
+      "total_score": -3.9,
+      "confidence_score": 0.556,
+      "multiplier": 0.9,
+      "divergence_flagged": true,
+      "actual_pct_change": null,
+      "actual_direction": null,
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "has_predict_md": true,
+      "has_outcome_md": false,
+      "components": {
+        "S0_SHARED_MACRO": -1.5,
+        "S1_SECTOR_FACTORS": -0.5,
+        "S2_BREADTH": -0.5,
+        "S3_FLOWS_POSITIONING": 0.0,
+        "S4_ETF_TAPE": 0.0
+      }
+    },
+    {
+      "sector": "Healthcare",
+      "etf": "XLV",
+      "predicted_direction": "down",
+      "predicted_magnitude_band": "mild",
+      "total_score": -3.271,
+      "confidence_score": 0.531,
+      "multiplier": 0.9,
+      "divergence_flagged": true,
+      "actual_pct_change": null,
+      "actual_direction": null,
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "has_predict_md": true,
+      "has_outcome_md": false,
+      "components": {
+        "S0_SHARED_MACRO": -0.5,
+        "S1_SECTOR_FACTORS": -0.5,
+        "S2_BREADTH": -0.5,
+        "S3_FLOWS_POSITIONING": 0.0,
+        "S4_ETF_TAPE": 0.0
+      }
+    },
+    {
+      "sector": "Industrials",
+      "etf": "XLI",
+      "predicted_direction": "down",
+      "predicted_magnitude_band": "mild",
+      "total_score": -3.324,
+      "confidence_score": 0.533,
       "multiplier": 0.9,
       "divergence_flagged": true,
       "actual_pct_change": null,
@@ -122,21 +174,21 @@
       "has_outcome_md": false,
       "components": {
         "S0_SHARED_MACRO": -1.0,
-        "S1_SECTOR_FACTORS": -0.5,
-        "S2_BREADTH": -0.5,
+        "S1_SECTOR_FACTORS": -1.0,
+        "S2_BREADTH": -1.0,
         "S3_FLOWS_POSITIONING": 0.0,
-        "S4_ETF_TAPE": -0.5
+        "S4_ETF_TAPE": -1.0
       }
     },
     {
-      "sector": "Healthcare",
-      "etf": "XLV",
-      "predicted_direction": "up",
+      "sector": "Real Estate",
+      "etf": "XLRE",
+      "predicted_direction": "down",
       "predicted_magnitude_band": "mild",
-      "total_score": 0.93,
-      "confidence_score": 0.537,
+      "total_score": -4.541,
+      "confidence_score": 0.582,
       "multiplier": 0.9,
-      "divergence_flagged": false,
+      "divergence_flagged": true,
       "actual_pct_change": null,
       "actual_direction": null,
       "direction_hit": null,
@@ -144,80 +196,58 @@
       "has_predict_md": true,
       "has_outcome_md": false,
       "components": {
-        "S0_SHARED_MACRO": 0.5,
-        "S1_SECTOR_FACTORS": 0.0,
-        "S2_BREADTH": 0.0,
+        "S0_SHARED_MACRO": -1.0,
+        "S1_SECTOR_FACTORS": -1.0,
+        "S2_BREADTH": -1.0,
         "S3_FLOWS_POSITIONING": 0.0,
-        "S4_ETF_TAPE": 0.5
+        "S4_ETF_TAPE": -1.0
       }
-    },
-    {
-      "sector": "Industrials",
-      "etf": "XLI",
-      "predicted_direction": null,
-      "predicted_magnitude_band": null,
-      "total_score": null,
-      "confidence_score": null,
-      "multiplier": null,
-      "divergence_flagged": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
-      "has_predict_md": false,
-      "has_outcome_md": false,
-      "components": {}
-    },
-    {
-      "sector": "Real Estate",
-      "etf": "XLRE",
-      "predicted_direction": null,
-      "predicted_magnitude_band": null,
-      "total_score": null,
-      "confidence_score": null,
-      "multiplier": null,
-      "divergence_flagged": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
-      "has_predict_md": false,
-      "has_outcome_md": false,
-      "components": {}
     },
     {
       "sector": "Technology",
       "etf": "XLK",
-      "predicted_direction": null,
-      "predicted_magnitude_band": null,
-      "total_score": null,
-      "confidence_score": null,
-      "multiplier": null,
-      "divergence_flagged": null,
+      "predicted_direction": "down",
+      "predicted_magnitude_band": "mild",
+      "total_score": -7.491,
+      "confidence_score": 0.65,
+      "multiplier": 0.9,
+      "divergence_flagged": true,
       "actual_pct_change": null,
       "actual_direction": null,
       "direction_hit": null,
       "magnitude_hit": null,
       "has_predict_md": false,
       "has_outcome_md": false,
-      "components": {}
+      "components": {
+        "S0_SHARED_MACRO": -2.0,
+        "S1_SECTOR_FACTORS": -1.0,
+        "S2_BREADTH": -1.0,
+        "S3_FLOWS_POSITIONING": -1.0,
+        "S4_ETF_TAPE": -1.0
+      }
     },
     {
       "sector": "Utilities",
       "etf": "XLU",
-      "predicted_direction": null,
-      "predicted_magnitude_band": null,
-      "total_score": null,
-      "confidence_score": null,
-      "multiplier": null,
-      "divergence_flagged": null,
+      "predicted_direction": "down",
+      "predicted_magnitude_band": "mild",
+      "total_score": -6.107,
+      "confidence_score": 0.644,
+      "multiplier": 1.0,
+      "divergence_flagged": true,
       "actual_pct_change": null,
       "actual_direction": null,
       "direction_hit": null,
       "magnitude_hit": null,
-      "has_predict_md": false,
+      "has_predict_md": true,
       "has_outcome_md": false,
-      "components": {}
+      "components": {
+        "S0_SHARED_MACRO": -1.0,
+        "S1_SECTOR_FACTORS": -1.5,
+        "S2_BREADTH": -1.0,
+        "S3_FLOWS_POSITIONING": 0.0,
+        "S4_ETF_TAPE": -1.0
+      }
     }
   ]
 }
