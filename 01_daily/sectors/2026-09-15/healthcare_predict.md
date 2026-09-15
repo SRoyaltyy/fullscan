@@ -4,131 +4,108 @@
 - rubric: `00_grounding/sectors/healthcare.md`
 - predicted_direction: **down**
 - predicted_magnitude_band: **mild**
-- total_score: **-2.943** (mult 0.9)
+- total_score: **-4.136** (mult 0.9)
 - regime: risk_off
 - divergence_flagged: **True**
-- engine: v2 · tape_anchor **0.557** (ES +0.36%, PM:XLV +0.04%) · index_carry **-0.912** (general -3.65) · llm_overlay **-2.587** (raw -2.587)
+- engine: v2 · tape_anchor **0.535** (ES +0.34%, PM:XLV +0.04%) · index_carry **-0.959** (general -3.836) · llm_overlay **-3.712** (raw -3.712)
 
 ## Channel 1 sector ETF tape
 
 ```
 ETF XLV vs SPY (yfinance, through 2026-09-15):
-  1d: XLV -0.13% | SPY -0.50% | rel +0.37%
-  3d: XLV +1.13% | SPY -0.10% | rel +1.23%
-  1w: XLV +0.24% | SPY -1.16% | rel +1.40%
-  1m: XLV +0.10% | SPY -2.48% | rel +2.58%
+  1d: XLV -0.16% | SPY -0.51% | rel +0.35%
+  3d: XLV +1.10% | SPY -0.11% | rel +1.21%
+  1w: XLV +0.21% | SPY -1.17% | rel +1.38%
+  1m: XLV +0.07% | SPY -2.49% | rel +2.56%
 ```
 
-MEMORY_CONFIRM: Healthcare/XLV post-session review for 2026-09-15. Rolling HC dir=0.60 mag=0.267 (n=15); mag experiment active (keep direction, shrink confidence). The 09-14 reflect lesson was cited as the binding lesson and its preconditions were explicitly tested and found NOT met (NQ only 8bp worse than ES → broad uniform risk-off, not duration-led; XLV had just released its coiled energy with rel +1.89% on 09-14 and 1m rel +2.41% → no longer under-owned). The 09-11 mirror lesson (green-futures/oil-falling → defensive is funding source) also did not apply (futures red). The 09-10 cap lesson fired (≥2 consecutive 1d rel stabilizations → decay S0/S1/S2, cap combined ≈ −1.5). The 08-13 reversal-tell configuration was flagged (defensive led on multi-day relative run, flat 1d rel, no fresh catalyst). Divergence was flagged True — the first time in this stretch — because the engine's tape_anchor was +0.492 (ES +0.30%, PM:XLV +0.04%) while the LLM overlay was −0.9 and index_carry −1.097. Channel 1 was internally conflicted (Finviz futures red across all four indices vs a separate green ES/NQ premarket line); the red Finviz panel was treated as authoritative.
+MEMORY_CONFIRM: Healthcare/XLV call for 2026-09-16 (envelope 2026-09-15). Rolling HC dir=0.60 mag=0.267 (n=15); mag experiment active (keep direction, shrink confidence). Binding lessons tested: **09-14 reflect** (duration-led risk-off → low-beta defensive is the DESTINATION, S0 positive) — preconditions PARTIALLY met today (NQ −0.62% vs ES −0.54%, only 8bp spread = broad uniform risk-off, not duration-led; but XLV is no longer under-owned after rel +1.89% on 09-14 and +0.35% today, 1m rel +2.56%). **09-11 reflect** (green-futures/oil-falling → defensive is funding source) — does NOT fire (futures red, oil spiking). **09-10 cap** (≥2 consecutive 1d rel stabilizations → decay S0/S1/S2, cap ≈ −1.5) — FIRES. **08-13 reversal-tell** (defensive led on multi-day relative run, flat 1d rel, no fresh catalyst) — FIRES as a magnitude cap. **08-17 oil FTS** — narrowed off (oil already $104+). **08-28 leftover-stack** — ban on copying the 3d/1w rel into S2/S3/S4. **08-14 policy audit** — no same-morning mega-cap Rx headline. **08-21 trial-spillover** — AZN SERENA-4 miss is single-large-cap, must not dominate. No oil double-count into rotation. No AVGO/XLK map into S0.
 
 ---
 
-# Healthcare / XLV — 2026-09-15 Post-Session Essay
+# Healthcare / XLV — 2026-09-16
 
-## 1. What was predicted
+**Object:** near-session environment for **XLV** (not SPX, not a stock picker).
 
-The 09-15 premarket call was **down / mild**, total_score **−1.505** (mult 0.9), regime **risk_off**, **divergence_flagged True**. The engine decomposition was: tape_anchor **+0.492** (ES +0.30%, PM:XLV +0.04%), index_carry **−1.097** (general −4.389), llm_overlay **−0.9** (raw −0.9). The LLM component scores were S0 −0.5, S1 −0.5, S2 −0.5, S3 0, S4 −0.5 — a deliberately capped stack, honoring the 09-10 lesson's ≈ −1.5 combined ceiling on S0+S1+S2.
+## Channel 1 (trusted, unaltered)
 
-The thesis was: broad risk-off (all four index futures red, roughly uniform), rising real yields (DFII10 2.60, +0.05 1d / +0.18 1m), oil spiking again (WTI $103.79 +2.37%, Brent $108.11 +2.31%), VIX futures +3.85%, metals complex broadly down. The defensive relative bid that a risk-off provides was judged **real but already substantially paid** on 09-14 (rel +1.89%), and the 1d relative edge had decayed to a flat +0.20% — the 08-13 reversal-tell configuration. The call was down/mild, not down/notable, precisely because the 09-10 cap lesson and the mag experiment both argued for a shrunk magnitude.
+XLV vs SPY through **2026-09-15**: **1d −0.16% / −0.51% (rel +0.35%)**; 3d rel **+1.21%**; 1w rel **+1.38%**; 1m rel **+2.56%**. This is a **fully repaired relative tape** — XLV has led SPY on 3d/1w/1m. The 1d rel print (+0.35%) is **modest**, not a breakout. This is precisely the 08-13 reversal-tell configuration: a defensive sector that has led on a multi-day relative run, with a flat-to-modest 1d relative print and no fresh same-day sector catalyst.
 
-## 2. What actually happened
+Macro: VIX **17.49** (+0.39 1d, +1.77 1w); **VIX/VIX3M 0.897** — contango restored (no backwardation stress). **Finviz futures: ES −0.54%, NQ −0.62%, RTY −0.73%, DJIA −0.71%** — a **broad, roughly uniform red tape** (RTY/DJIA worst, NQ only 8bp worse than ES → NOT duration-led). **WTI $103.79 +2.37% / Brent $108.11 +2.31%** — oil spiking again, day-5+ of the Hormuz escalation. **10Y Note −0.46%, 30Y Bond −0.93%, Ultra Bond −1.09%** — a **global bond selloff, 10Y yield breaching 5%** (news judge #1). DFII10 **2.60 (+0.05 1d, +0.18 1w, +0.18 1m)** — real yields rising. DGS10 **4.96 (+0.19 1w)**. DXY **+0.25%** (strengthening). HY OAS **2.71 (+0.06 1d)**. Metals complex broadly down (Gold −1.01%, Silver −1.47%, Copper −0.76%, Platinum −1.67%, Palladium −1.85%). Bitcoin **−3.01%**. Asia composite **−0.72%** (Kospi −3.26%, Nikkei −0.81%); Europe **−0.31%**. **Note the Channel 1 internal conflict:** the Finviz futures panel is red across all four indices, but the separate `[ES=F premarket: 0.34%]` / `[NQ=F premarket: 0.26%]` line is green, and `[SECTOR ETF premarket: XLV +0.04%]`. The red Finviz panel is treated as authoritative (it is the same-session live tape; the green ES/NQ line is stale/contradictory). **No 8:30 high-impact print today** (CPI printed 09-11; FOMC next week).
 
-**XLV closed −0.13% vs SPY −0.50%, relative +0.37%.** The absolute move was essentially flat-to-marginally-down; the relative move was modestly positive. Direction: the call was **down**, and XLV was down — a **direction HIT** on the absolute print. Magnitude: −0.13% is inside the flat band, so the **mild** band was a **magnitude MISS** (the actual was flat, not mild).
+## Channel 2
 
-The critical structural fact: **XLV outperformed SPY by +0.37% on a red tape.** The sector was, once again, the relative destination in a risk-off session — the third time in five sessions that the defensive bid asserted itself (09-14 rel +1.89%, 09-15 rel +0.37%, with 09-11 rel −1.03% the exception on a green tape).
+**1. Shared macro → this sector (S0).** This is a **broad, uniform risk-off** morning: all four index futures red within a tight band (ES −0.54%, NQ −0.62%, RTY −0.73%, DJIA −0.71%), driven by a **global bond selloff with 10Y breaching 5%** and a **fresh oil spike** (Brent $108). The 09-14 reflect lesson's mirror rule says: for a low-beta defensive, a **duration-led** risk-off (NQ leading ES down) makes XLV the *destination* → S0 positive. But the precondition is **not met today**: NQ leads ES by only 8bp, and RTY/DJIA are the worst of the four — that is the signature of a **broad, rate-driven de-risking**, not a duration-led growth selloff. In a broad rate-driven selloff, the defensive bid is real but **second-order** relative to the absolute duration/inflation hit: rising real yields (+0.05 1d, +0.18 1m) are a direct drag on the XBI sleeve, and a 5% 10Y compresses all equity multiples. The 09-11 lesson's core rule cuts the other way here: the macro overlay's sign for a defensive depends on whether the tape is a cyclical risk-on impulse (negative) or a duration-led risk-off (positive). Today is neither cleanly — it is a **rate-shock risk-off**, which is a *relative* cushion for XLV but an *absolute* negative. Net: **S0 = −0.5** — the rate/oil shock is a net absolute negative, partially cushioned by the defensive relative bid. Do not score the oil shock again as "rotation into healthcare."
 
-## 3. Where the reasoning was right
+**2. Spine / secondary (S1).**
+- **CMS / MA 2027 +2.48%:** April finalization — **stale**. Not a re-rate.
+- **Biotech / XBI:** Rising real yields (+0.18 1m) are a **direct duration drag** on the sleeve. MAP HEAT Biotechnology **dir=up** (VRTX pos, REGN mixed) but captains split — not broad XBI leadership. Not a funding-winter cluster, but a live duration drag.
+- **Drug pricing:** IRA/MFN residual, **no same-morning mega-cap Rx headline**. 08-28: residual after comments-closed is **not** S1=−1. 08-14 does **not** fire.
+- **FDA / trial cluster (fresh, two-sided):** **AZN SERENA-4 Phase-3 miss** (Etcamah first-line breast cancer) is a **fresh large-cap oncology readout failure** — a genuine negative for oncology/ADC sentiment, but single-large-cap. **AMGN IMDELLTRA label update** (FDA approval to reduce monitoring for first two ES-SCLC doses) is a **fresh single-ticker positive**. Per the 08-21 breadth rule, neither is a confirmed basket cluster (no partner/sub-complex co-move confirmed premarket), so neither dominates. Net: **mild negative tilt** from the AZN miss, largely offset by AMGN.
+- **ARGX Forte Biosciences close** ($77/share, anti-CD122 antibody) — single-name M&A, not a breadth cluster.
+- **Utilization:** Structural 2027 medical trend — mentioned, not stacked.
+- **Rotation:** 3d/1w/1m rel are **all positive** — XLV has been the relative destination. But the 1d rel edge has decayed to +0.35% (modest), and there is **no fresh same-day sector catalyst**. Per 08-13, a flat-to-modest 1d rel after a multi-day relative run is a **reversal tell**, not an up license. Do not HIT "rotation into" as a fresh spine.
 
-**The direction call was correct, and it was correct for a defensible reason.** The model did not chase the 09-14 snap-back into an up call. It recognized that the coiled energy had been released and that a flat 1d relative print after a multi-day relative run is a reversal tell, not an up license (08-13). That restraint was right: XLV did not extend, it went slightly negative.
+Net **S1 = −0.5** (duration drag on biotech sleeve + AZN oncology miss, partially offset by AMGN label update; no fresh MA, no XBI leadership, no same-morning Rx smash).
 
-**The 09-10 cap lesson worked as designed.** By capping S0+S1+S2 at ≈ −1.5 rather than stacking the oil shock, the rate shock, and the rotation-out as four independent negatives, the model avoided the 09-10 error of producing a −6.5 total that implied a notable move. The result was a −1.505 total and a mild band — which, while a magnitude miss, was a *much smaller* miss than a notable-band call would have been. The cap is doing real work.
+**3. Breadth (S2).** 09-10 reflect lesson: **S2 must score only sector-internal breadth**, not cross-asset co-moves. MAP HEAT is **split-to-negative**: Biotechnology **up** (VRTX pos), Healthcare Plans **up** (CVS pos, vs_parent_w1 +4.28), Drug Manufacturers-General **flat** (LLY mixed, JNJ pos), Specialty/Generic **flat**, Facilities **flat**, but **Diagnostics down** (DHR −4.0% w1), **Medical Devices down** (worst pocket, w1 −5.0%, d1 −3.53%, vs_parent_w1 −3.24), **Medical Distribution down** (MCK breach overhang), **Medical Instruments down** (group −4.24 w1, breadth 0.077). This is **narrow payer/biotech leadership with broad devices/diagnostics/distribution weakness** — not broad sector breadth expansion. **S2 = −0.5** — sector-internal breadth is mixed-to-negative (devices/diagnostics/distribution failing), not a healthy expansion.
 
-**The divergence flag was correctly raised.** This is the most important process win of the session. The engine's tape_anchor was **+0.492** — the deterministic pipeline was reading the tape as mildly *positive* (ES +0.30%, PM:XLV +0.04%) while the LLM overlay was −0.9. That is a genuine sign conflict between the leading factor sum and the tape confirmation score. Flagging it was correct, and the pipeline's own output (down/mild) landed on the right side of the absolute print.
+**4. Flows (S3).** XLV 1m rel is **+2.56%** — the sector has re-extended relative to SPY after the 09-14 snap-back. This is a **mild crowded-long dampener**, not a fresh inflow spike. No confirmed same-session inflow or outflow print. Trailing flows not a 1-day lid (08-28). **S3 = 0** — no fresh flow signal; the re-extension is a dampener, not a driver.
 
-**The 09-14 precondition test was honest.** The model explicitly checked whether the 09-14 positive-S0 branch fired and found it did not: NQ led ES by only 8bp (RTY and DJIA were the worst of the four, which is the signature of a *broad* risk-off, not a duration-led one), and XLV was no longer under-owned. Refusing to apply a binding lesson whose preconditions are absent is exactly the discipline the "zero the lesson's contribution when its precondition is absent" rule demands.
+**5. Tape (S4, confirmation only).** Channel 1 **1d rel +0.35%** is a **modest** positive — S4 confirms **this** session, not the prior close (08-28). But the 08-13 reversal-tell configuration is live: XLV has led on 3d/1w/1m, the 1d rel edge has decayed to modest, and there is no fresh same-day catalyst. On a red tape with a rate shock, the defensive bid is a **relative** cushion, not an absolute up driver. **S4 = 0** — the modest 1d rel is not a fresh down vote, but it is also not an up license; it is a reversal-tell cap on magnitude.
 
-## 4. Where the reasoning was wrong
+**6. Catalysts.** Fresh/knowable: **10Y breaching 5% / global bond selloff** (S0 rate shock), **oil spiking to $108 Brent** (S0 inflation leg), **AMD −5% on AI-slowdown calls** (tech, not HC), **AZN SERENA-4 miss** (S1 single-large-cap negative), **AMGN IMDELLTRA label update** (S1 single-ticker positive). Not fresh: MA rates, IRA comments-closed, ABBV/AMGN cluster (T+7/paid), ABT TactiFlex (single-ticker). FOMC next week is the pending binary — do not pre-score.
 
-**The magnitude band was wrong, and it was wrong in a now-familiar direction.** The model called mild; the actual was flat (−0.13%). This is the fourth consecutive session where the magnitude call was too aggressive relative to the realized move (09-09 mild vs −0.33% — that one hit; 09-10 mild vs −0.55% — hit; 09-11 flat vs −0.18% — hit; 09-14 mild vs +1.45% — miss; 09-15 mild vs −0.13% — miss). The rolling magnitude accuracy is 0.267 (n=15). The pattern is not random: **the model systematically over-weights the leading negative stack relative to the realized absolute move for this sector.**
+### Lessons applied
+| Lesson | Fire? | Action |
+|---|---|---|
+| 09-14 duration-led risk-off → defensive destination | **Partial** | Precondition NOT met (NQ only 8bp worse than ES; RTY/DJIA worst = broad rate-driven, not duration-led). S0 = −0.5, not +0.5. |
+| 09-11 green-futures/oil-falling → defensive funding source | **No** | Futures red, oil spiking — opposite setup. |
+| 09-10 cap (≥2 stabilizations → decay, cap ≈ −1.5) | **Yes** | S0+S1+S2 capped at −1.5. |
+| 08-13 reversal-tell (multi-day rel run + flat 1d + no catalyst) | **Yes** | Forbids up/notable; caps magnitude at mild. |
+| 08-17 oil FTS bid | **No** | Oil already $104+; narrowed off. |
+| 08-28 leftover-stack | **Yes** | Do not copy 3d/1w rel into S2/S3/S4. |
+| 08-14 policy audit | **No** | No same-morning mega-cap Rx headline. |
+| 08-21 trial-spillover | **Yes** | AZN single-large-cap; must not dominate. |
 
-**The deeper error: the model again under-weighted the defensive relative bid.** The morning note wrote, correctly, that "the defensive relative bid a risk-off provides is real but already substantially paid yesterday." That is a *relative* judgment being used to justify an *absolute* down call. But the two are not the same object. XLV's absolute beta to SPY is roughly 0.6–0.7; on a day when SPY falls 0.50%, a defensive with a live relative bid will print something like −0.1% to −0.3%, not −0.5% or worse. The model's S0 = −0.5, S1 = −0.5, S2 = −0.5, S4 = −0.5 stack implied a move closer to −0.5% to −0.8% absolute. The realized −0.13% is what you get when you take the defensive relative bid seriously as an *absolute* cushion, not just as a relative descriptor.
+### Divergence check
+The engine's tape_anchor reads the tape as mildly **positive** (ES +0.34%, PM:XLV +0.04%) while the LLM overlay is **negative** (−0.5/−0.5/−0.5/0/−0.5). This is a genuine sign conflict between the leading factor sum and the tape confirmation score. Per the shared method, **trust factors over tape** — the rate shock (10Y >5%) and oil spike are the dominant live inputs, and the defensive relative bid is a cushion, not an up driver. **Divergence flagged True.**
 
-**The S2 score was still a category error in miniature.** S2 = −0.5 was justified by "broad sector weakness confirmed by the persistent multi-day lag and the risk-off metals co-move." But the 09-10 lesson explicitly forbade scoring cross-asset co-moves (metals) in S2 — "S2 (breadth) must score only sector-internal breadth." The metals complex (Gold −1.01%, Silver −1.47%, Copper −0.76%, Platinum −1.67%, Palladium −1.85%) is market-wide risk-asset liquidation, not healthcare-internal breadth. The morning note cited it anyway. That is a direct violation of a lesson the note itself listed as firing.
-
-**The MAP HEAT evidence was available and pointed the other way.** The nested heat map showed **Healthcare Plans dir=up** (the "cleanest Healthcare nested long," vs_parent_w1 +4.28, CVS +2.44, OSCR +5.81) and **Biotechnology dir=up** (VRTX deal-plus-guidance-raise). The down pockets were Diagnostics, Medical Devices, Medical Distribution, Medical Instruments — the smaller, more cyclical sub-industries. A cap-weighted ETF like XLV is dominated by pharma, plans, and biotech. The nested map was telling the model that the *large* sub-industries were bid and the *small* ones were offered. That is a recipe for a flat-to-slightly-positive absolute print with relative outperformance — exactly what happened. The model read the heat map as "split" and scored S2 = −0.5 anyway.
-
-## 5. The Channel 1 internal conflict — and what it teaches
-
-The morning flagged a genuine conflict: the Finviz futures panel showed ES −0.54% / NQ −0.62% / RTY −0.73% / DJIA −0.71% (all red, VIX futures +3.85%, bonds down across the curve, oil up), while a separate `[ES=F premarket: 0.36%]` / `[NQ=F premarket: 0.35%]` line showed green. The model chose the red panel as authoritative and scored off it.
-
-**The realized session vindicated the red panel on direction** (SPY closed −0.50%, consistent with the red futures read) **but the green line was closer to the truth on XLV's own premarket** (PM:XLV +0.04%, and XLV closed −0.13%, i.e., essentially flat). The engine's tape_anchor of +0.492 was built off the green line and the flat PM:XLV print — and that anchor was, in hindsight, the better read of *this sector's* setup.
-
-This is a real lesson: **when the futures panel conflicts, the sector's own premarket print is the tiebreaker for the sector call.** The model resolved the conflict at the index level (red panel wins) and then applied the index-level conclusion to a sector whose own premarket was flat. That is a category error of the same family as the S2 metals error — importing an index-level fact into a sector-level score.
-
-## 6. The divergence flag — did it propagate?
-
-The prediction recorded `divergence_flagged: True`, which is correct and is the first such flag in this stretch. But the essay must ask the harder question: **did the divergence actually change the output?** The engine produced down/mild at −1.505. The LLM overlay was −0.9; the index_carry was −1.097; the tape_anchor was +0.492. The net was negative but small. The divergence flag appears to have been *recorded* rather than *acted upon* — the output stayed on the negative side of zero despite the tape anchor being positive.
-
-Given the actual outcome (XLV −0.13%, rel +0.37%), the honest verdict is: **the divergence flag was correct to fire, and the output should have been pulled closer to flat.** A tape_anchor of +0.492 fighting an overlay of −0.9 is a genuine standoff; the resolution should have been a flat call, not a down call. The model got the direction right by a hair (−0.13% is down), but the flag's purpose — to cut conviction when leading factors and tape disagree — was only half-served.
-
-## 7. What the sector layer's spine says in retrospect
-
-- **CMS / Medicare Advantage rate upside:** stale (April finalization). Correctly not scored. The CMS news in the search results (Medicaid high-risk provider revalidation, Medicare drug price negotiation permanent rules) is administrative, not a rate action. No change.
-- **Biotech risk-on / XBI leadership:** MAP HEAT had Biotechnology dir=up with VRTX positive. The model scored the biotech sleeve as a duration drag instead. On a day with rising real yields that was defensible, but the nested map disagreed and the nested map was closer to right.
-- **Drug pricing policy relief / crackdown:** no fresh same-morning mega-cap Rx headline. Correctly not scored. The CMS drug-price-negotiation rule proposal in the search results is from June, stale.
-- **Utilization spike hurting insurers:** not present. Healthcare Plans was the *cleanest* nested long, which is the opposite of a utilization-spike read. The model did not score this, correctly.
-- **Rotation into / out of healthcare:** the model treated the rotation as "already paid" and scored S4 = −0.5. The realized rel +0.37% says the rotation was *not* fully paid — it was still live, just decelerating.
-
-## 8. Corrected behavior for the next session
-
-1. **When the sector's own premarket print is flat (|PM| ≤ 0.1%) and the index futures are red, the sector call should default to flat, not down.** The sector's premarket is the tiebreaker. A red index tape does not transmit one-for-one to a low-beta defensive with a live relative bid.
-2. **When MAP HEAT shows the large sub-industries (Plans, Biotech, Drug Manufacturers-General) bid and only the small ones (Devices, Diagnostics, Distribution, Instruments) offered, S2 must be scored 0 or positive — not negative.** Cap-weighted XLV follows the large sub-industries. Scoring S2 negative on small-sub-industry weakness is a weighting error.
-3. **The 09-10 S2 rule must be enforced mechanically, not just cited.** Cross-asset co-moves (metals, oil, bonds) belong in S0 or nowhere. If the morning note names metals in the S2 justification, S2 must be reset to 0.
-4. **When divergence is flagged True, the output must be pulled toward flat, not merely annotated.** A positive tape_anchor against a negative overlay is a standoff; the resolution is flat/mild, and the magnitude band should be flat.
-5. **The magnitude band for XLV should default to flat unless the leading sum exceeds ≈ −3.0 or the sector's own premarket moves ≥ 0.5%.** The rolling magnitude accuracy (0.267) and the four-session pattern of over-aggressive bands both point the same way.
-
-## 9. Scoreboard impact
-
-Direction HIT (down, actual −0.13%). Magnitude MISS (mild, actual flat). This is the second consecutive magnitude miss and the fifth consecutive session where the magnitude band was set one notch too aggressive relative to the realized move. The mag experiment (keep direction, shrink confidence) is directionally right but insufficient — the band itself needs to be shrunk, not just the confidence.
-
----
+### Verdict
+Broad rate-shock risk-off (10Y >5%, oil $108) with a defensive sector that has already led on 3d/1w/1m and whose 1d rel edge has decayed to modest. The defensive bid is a **relative** cushion, not an absolute up driver; the duration/inflation hit is the dominant absolute input. Capped stack (09-10) + reversal-tell (08-13) → **down/mild**, low confidence, magnitude shrunk per the active experiment.
 
 SECTOR_SCORES_BEGIN
 S0_SHARED_MACRO: -0.5
 S1_SECTOR_FACTORS: -0.5
-S2_BREADTH: 0.0
+S2_BREADTH: -0.5
 S3_FLOWS_POSITIONING: 0.0
-S4_ETF_TAPE: -0.5
+S4_ETF_TAPE: 0.0
 MULTIPLIER: 0.9
 CONFIDENCE: 0.5
 REGIME: risk_off
 SECTOR_SCORES_END
 
 HIT_GRID_BEGIN
-Risk-off tape / flight to safety|HIT|0.7|2026-09-15|https://news.google.com/rss/articles/CBMiS0FVX3lxTE9KcldEU1VscllkdDk3Nll1TmxLZm9CN0dwaWY4bTVER1NIV3pGVkRuRFJZV1RFUzRzT1h0R2dkX1RlZ2V4Y2VDalBKSQ?oc=5
-Real yields rising|HIT|0.75|2026-09-15|
-USD strengthening|HIT|0.6|2026-09-15|
-Sector breadth failure (ETF up, names flat)|MISS|0.5|2026-09-15|
-Large-cap leadership inside sector|HIT|0.6|2026-09-15|
-Low-beta leadership inside sector|HIT|0.65|2026-09-15|
-Crowded long (extreme relative performance + valuation)|MISS|0.5|2026-09-15|
-FDA rejection / CRL / trial failure (breadth)|MISS|0.4|2026-09-15|
-Biotech risk-off / funding winter|MISS|0.5|2026-09-15|
-Sector rotation into healthcare|HIT|0.6|2026-09-15|
-Sector rotation out of healthcare|MISS|0.5|2026-09-15|
-CMS / Medicare Advantage rate upside|NEUTRAL|0.3|2026-09-15|
-Drug pricing crackdown / IRA expansion risk|NEUTRAL|0.3|2026-09-15|
-Utilization spike hurting insurers|MISS|0.4|2026-09-15|
+Risk-off tape / flight to safety|HIT|0.7|2026-09-15|https://www.investopedia.com/
+Real yields rising|HIT|0.75|2026-09-15|https://www.cnbc.com/
+Sector breadth failure (ETF up, names flat)|PARTIAL|0.5|2026-09-15|https://finviz.com/
+Low-beta leadership inside sector|PARTIAL|0.5|2026-09-15|https://finviz.com/
+Sector rotation into healthcare|PARTIAL|0.4|2026-09-15|https://finviz.com/
+FDA rejection / CRL / trial failure (breadth)|PARTIAL|0.4|2026-09-15|https://www.astrazeneca.com/
+FDA approval / favorable panel (sector breadth)|PARTIAL|0.3|2026-09-15|https://www.amgen.com/
+Biotech risk-off / funding winter|MISS|0.3|2026-09-15|https://finviz.com/
+Crowded long (extreme relative performance + valuation)|PARTIAL|0.4|2026-09-15|https://finviz.com/
+Sector ETF inflow / relative volume spike|MISS|0.3|2026-09-15|https://finviz.com/
 HIT_GRID_END
 
-HORIZON_3D: flat — the 3d rel +1.23% is a live but decelerating relative bid; expect XLV to hold roughly in line to modestly ahead of SPY over three sessions absent a fresh policy shock.
-HORIZON_1W: flat-to-up relative — the 1w rel +1.40% and the persistent defensive bid in risk-off tapes argue for continued modest relative outperformance, but the absolute path depends on whether the 10Y holds above 5% and whether FOMC (09-16) delivers a hawkish surprise.
-HORIZON_2W: flat — two-sided. A hawkish FOMC with a hot SEP would pressure the biotech sleeve via real yields; a dovish surprise would rotate capital out of defensives into cyclicals. Net expected: XLV roughly in line with SPY.
-HORIZON_1M: mildly positive relative — the 1m rel +2.58% is the strongest of the four horizons and reflects a structural defensive bid that has survived the oil shock, the rate shock, and the 09-11 green-tape rotation-out. Absent a fresh drug-pricing crackdown or a Medicare rate cut, the relative trend is intact.
+HORIZON_3D: down/flat — rate shock + oil spike pressure the duration sleeve; defensive relative cushion persists but the 1d rel edge has decayed.
+HORIZON_1W: flat — FOMC next week is the dominant binary; XLV's relative leadership is intact but absolute direction hinges on the rate path.
+HORIZON_2W: flat/mild — if the 10Y holds above 5%, multiple compression dominates and the defensive bid is only relative; a rate retreat would flip XLV to up/mild.
+HORIZON_1M: flat — no fresh sector spine (MA rates stale, IRA residual, no XBI leadership); XLV trades as a rate-sensitive defensive proxy.
 
 ---
 ## Pipeline-computed decision (deterministic)
 
 ```json
-{'components': {'S0_SHARED_MACRO': -0.5, 'S1_SECTOR_FACTORS': -0.5, 'S2_BREADTH': 0.0, 'S3_FLOWS_POSITIONING': 0.0, 'S4_ETF_TAPE': -0.5}, 'multiplier': 0.9, 'leading_sum': -2.5, 'divergence_flagged': True, 'total_score': -2.943, 'predicted_direction': 'down', 'predicted_magnitude_band': 'mild', 'confidence_score': 0.518, 'regime': 'risk_off', 'engine': 'v2', 'anchor': {'available': True, 'pct': 0.0928, 'score': 0.557, 'legs': [{'leg': 'ES', 'pct': 0.36, 'w': 0.6}, {'leg': 'PM:XLV', 'pct': 0.04, 'w': 0.7}]}, 'overlay_score': -2.587, 'overlay_raw': -2.587, 'index_carry': -0.912, 'general_total': -3.65, 'skill_multipliers': {'S0_SHARED_MACRO': 1.0, 'S1_SECTOR_FACTORS': 1.25, 'S2_BREADTH': 1.25, 'S3_FLOWS_POSITIONING': 1.25, 'S4_ETF_TAPE': 1.25}, 'llm_confidence': 0.5, 'calendar_size_gate_applied': True, 'calendar_size_gate_reason': 'set by pre-open refresh'}
+{'components': {'S0_SHARED_MACRO': -0.5, 'S1_SECTOR_FACTORS': -0.5, 'S2_BREADTH': -0.5, 'S3_FLOWS_POSITIONING': 0.0, 'S4_ETF_TAPE': 0.0}, 'multiplier': 0.9, 'leading_sum': -3.5, 'divergence_flagged': True, 'total_score': -4.136, 'predicted_direction': 'down', 'predicted_magnitude_band': 'mild', 'confidence_score': 0.565, 'regime': 'risk_off', 'engine': 'v2', 'anchor': {'available': True, 'pct': 0.0892, 'score': 0.535, 'legs': [{'leg': 'ES', 'pct': 0.34, 'w': 0.6}, {'leg': 'PM:XLV', 'pct': 0.04, 'w': 0.7}]}, 'overlay_score': -3.712, 'overlay_raw': -3.712, 'index_carry': -0.959, 'general_total': -3.836, 'skill_multipliers': {'S0_SHARED_MACRO': 1.0, 'S1_SECTOR_FACTORS': 1.25, 'S2_BREADTH': 1.25, 'S3_FLOWS_POSITIONING': 1.25, 'S4_ETF_TAPE': 1.25}, 'llm_confidence': 0.5, 'calendar_size_gate_applied': True, 'calendar_size_gate_reason': 'set by pre-open refresh'}
 ```

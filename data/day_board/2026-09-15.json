@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T15:46:50.077797-04:00",
+  "generated_at": "2026-09-15T16:14:41.992280-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -284,7 +284,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 16404
+          "size": 16822
         },
         {
           "key": "sector_communication_services",
@@ -293,7 +293,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 13559
+          "size": 15828
         },
         {
           "key": "sector_consumer_cyclical",
@@ -302,7 +302,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 18574
+          "size": 19593
         },
         {
           "key": "sector_consumer_defensive",
@@ -311,7 +311,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 17804
+          "size": 19733
         },
         {
           "key": "sector_energy",
@@ -320,7 +320,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 16615
+          "size": 15277
         },
         {
           "key": "sector_financial",
@@ -329,7 +329,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 13311
+          "size": 14053
         },
         {
           "key": "sector_healthcare",
@@ -338,7 +338,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 16994
+          "size": 13765
         },
         {
           "key": "sector_industrials",
@@ -347,7 +347,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 16239
+          "size": 17914
         },
         {
           "key": "sector_real_estate",
@@ -356,7 +356,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 14640
+          "size": 17163
         },
         {
           "key": "sector_technology",
@@ -365,7 +365,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 17826
+          "size": 13619
         },
         {
           "key": "sector_utilities",
@@ -374,7 +374,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 16029
+          "size": 16686
         }
       ],
       "said": "general DOWN  -3.836 \u00b7 sectors 1 up / 8 down / 2 flat \u00b7 news 27 items",
@@ -815,24 +815,6 @@
     }
   },
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T10:03:00.851968-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-09-15_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2248116,
-          "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 PR, RRC, AR, TS, MGY"
-        }
-      ],
-      "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 PR, RRC, AR, TS, MGY"
-    },
     {
       "key": "ab",
       "title": "AB checklist",
@@ -3542,6 +3524,24 @@
         }
       ],
       "preview": "# Premarket Prediction \u2014 2026-09-15\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -3.836 (uncertainty multiplier \u00d71.0) | confidence 0.553\n>\n> **Good news vs bad news:** good +0 pts vs bad -6.5 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - ES/NQ not independently weak\n> - HY contained 2.71\n> - VIX contango 0.90\n> - China IP +5.2% beat\n> - ASML 2027 EUV sold out\n>\n> **Bad news driving this:**\n> - Asia -0.72% (Kospi -3.26%)\n> - 1w 10Y +19bp / 5% handle\n> - WTI +4% leftover Hormuz\n> - FOMC-eve hike ~87-92% unprinted\n> - AI-chip T+1 hangover\n>\n> **market uncertainty: **elevated** | VIX 17.48 | policy-uncertainty index 215.48 (1d -202.54)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight news & catalysts: -1.0 \u00d7 3.0 = -3.0\n> -"
+    },
+    {
+      "key": "sector_predict",
+      "title": "Per-sector predict (all 11)",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T16:14:40.498778-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-15",
+          "ok": true,
+          "reason": "",
+          "size": 4096,
+          "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
+        }
+      ],
+      "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
     }
   ],
   "href": {

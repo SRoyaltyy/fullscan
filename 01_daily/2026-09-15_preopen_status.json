@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T15:46:48.654698-04:00",
+  "generated_at": "2026-09-15T16:14:40.424642-04:00",
   "all_ok": false,
   "qc_all_ok": true,
   "book_ok": true,
@@ -245,77 +245,77 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-15/basic_materials_predict.md",
-        "size": 16404
+        "size": 16822
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-15/communication_services_predict.md",
-        "size": 13559
+        "size": 15828
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-15/consumer_cyclical_predict.md",
-        "size": 18574
+        "size": 19593
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-15/consumer_defensive_predict.md",
-        "size": 17804
+        "size": 19733
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-15/energy_predict.md",
-        "size": 16615
+        "size": 15277
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-15/financial_predict.md",
-        "size": 13311
+        "size": 14053
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-15/healthcare_predict.md",
-        "size": 16994
+        "size": 13765
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-15/industrials_predict.md",
-        "size": 16239
+        "size": 17914
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-15/real_estate_predict.md",
-        "size": 14640
+        "size": 17163
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-15/technology_predict.md",
-        "size": 17826
+        "size": 13619
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-15/utilities_predict.md",
-        "size": 16029
+        "size": 16686
       }
     ]
   }
