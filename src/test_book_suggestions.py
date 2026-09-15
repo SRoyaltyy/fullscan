@@ -107,6 +107,11 @@ def test_factor_mine_template_paints_every_strategy() -> None:
     assert "LIVE</span>" in html
     assert "setInterval(loadLiveDay, afterBell()?20000:60000)" in html
     assert html.index("<h1>Factor strategy mine") < html.index('id="liveDay"')
+    assert 'id="live-day-loader"' in html
+    assert html.index('id="liveDay"') < html.index('id="cards"')
+    fm_main = html.split('id="fm-main"')[1].split('id="live-day-loader"')[0]
+    assert "function loadLiveDay" not in fm_main
+    assert "function loadLiveDay" in html.split('id="live-day-loader"')[1]
     assert 'id="bracketOn"' in html
     assert 'id="takePct"' in html
     assert 'id="stopPct"' in html

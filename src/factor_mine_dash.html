@@ -125,6 +125,14 @@
  · <a href="../flatten-lookback/" style="color:#93c5fd">flatten lookback</a>
  · <a href="../sleeve-combine/" style="color:#93c5fd">sleeve combine</a>
 </div>
+<div id="liveDay" class="audit" style="margin:8px 0 12px">
+  <b>Today’s packet</b>
+  <div class="mut" id="liveDayStamp">loading day board…</div>
+  <div class="pills" id="liveDayPills"></div>
+  <div class="tbl-wrap" id="liveResearch" style="margin-top:8px"></div>
+  <div class="mut"><a href="../day-board/" style="color:#93c5fd">day board</a>
+   — which processes ran, plus what was just pushed.</div>
+</div>
 <div class="cards" id="cards"></div>
 <div class="bar" id="filterBar"></div>
 <div class="bar" id="sleeveBar"></div>
@@ -199,14 +207,6 @@ This is not a change to <code>flatten_robust</code> or sit policy.</p>
 <p class="mut"><a href="open-bell-slip.html" style="color:#93c5fd">full overlay</a>
  · <a href="https://github.com/SRoyaltyy/fullscan/blob/main/03_scoreboard/OPEN_BELL_SLIP.md" style="color:#93c5fd">OPEN_BELL_SLIP.md</a></p>
 </details>
-<div id="liveDay" class="audit" style="margin:16px 0 10px">
-  <b>Today’s packet</b>
-  <div class="mut" id="liveDayStamp">loading day board…</div>
-  <div class="pills" id="liveDayPills"></div>
-  <div class="tbl-wrap" id="liveResearch" style="margin-top:8px"></div>
-  <div class="mut"><a href="../day-board/" style="color:#93c5fd">day board</a>
-   — which processes ran, plus what was just pushed.</div>
-</div>
 <div class="note" id="fees"></div>
 </div>
 <script>
@@ -1833,6 +1833,8 @@ function renderAll(){
 renderFilters();
 renderAll();
 window.addEventListener('resize', draw);
+</script>
+<script id="live-day-loader">
 (function(){
   var RAW='https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today.json';
   var STRAT='https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today_strategies.json';
@@ -1911,7 +1913,7 @@ window.addEventListener('resize', draw);
     var strats=st.strategies||{};
     var keys=Object.keys(strats);
     if(keys.length){
-      html+='<div class="mut" style="margin-top:8px">every strategy — own BUY/SELL, not the 1d book</div>';
+      html+='<details style="margin-top:8px"><summary class="mut">every strategy — own BUY/SELL, not the 1d book</summary>';
       keys.forEach(function(name){
         var s=strats[name]||{};
         var b=names(s.buy,s.predict), sl=names(s.sell,s.predict);
@@ -1937,6 +1939,7 @@ window.addEventListener('resize', draw);
         }
         html+='</div>';
       });
+      html+='</details>';
     }
     var last=(d.lands||[])[0];
     if(last&&last.preview) html+='<div class="mut" style="margin-top:6px">last land: '+String(last.key||'')+' — '+String(last.preview).slice(0,220)+'</div>';
