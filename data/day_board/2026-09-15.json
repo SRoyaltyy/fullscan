@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T13:17:59.944347-04:00",
+  "generated_at": "2026-09-15T13:20:08.765838-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -203,7 +203,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 11373
+          "size": 11802
         },
         {
           "key": "research_json",
@@ -558,7 +558,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 11373
+          "size": 11802
         },
         {
           "key": "in_weather",
@@ -815,31 +815,6 @@
     }
   },
   "lands": [
-    {
-      "key": "news_actions",
-      "title": "News actions",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T08:33:56.825212-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-15_actions.json",
-          "ok": true,
-          "reason": "",
-          "size": 32043,
-          "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
-        },
-        {
-          "path": "01_daily/news/2026-09-15_actions.md",
-          "ok": true,
-          "reason": "",
-          "size": 9712,
-          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-09-15T08:33:51.127518-04:00\nraw=197 unique_events=4 tickers=54"
-        }
-      ],
-      "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-15T08:33:51.127518-04:00\nraw=197 unique_events=4 tickers=54"
-    },
     {
       "key": "news_judge",
       "title": "News judge",
@@ -3563,6 +3538,31 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-15T13:17:52.676841-04:00\nraw=252 unique_events=4 tickers=54"
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T13:20:07.305884-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 11802,
+          "preview": "# News Judge \u2014 2026-09-15"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1083,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-09-15 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
     }
   ],
   "href": {

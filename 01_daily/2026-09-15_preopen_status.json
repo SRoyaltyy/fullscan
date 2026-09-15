@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T13:14:27.696740-04:00",
+  "generated_at": "2026-09-15T13:20:07.193790-04:00",
   "all_ok": false,
   "qc_all_ok": true,
   "book_ok": true,
@@ -182,7 +182,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-15_judge.md",
-        "size": 11373
+        "size": 11802
       },
       {
         "kind": "news_parse",
@@ -196,7 +196,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-15_actions.json",
-        "size": 31610
+        "size": 32252
       },
       {
         "kind": "finviz_digest",

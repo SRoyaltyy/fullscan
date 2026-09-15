@@ -2,20 +2,21 @@
  "risk_tilt": "off",
  "macros": [
   "hawkish",
-  "bearish",
+  "mixed",
   "hawkish",
-  "bearish"
+  "mixed"
  ],
  "sector_tilts": {
   "Technology": "mixed",
-  "Energy": "bullish"
+  "Financial": "bearish"
  },
  "tickers": {
-  "SOXX": -4.0,
+  "SMH": -4.0,
   "IGV": 4.0,
-  "ADBE": 4.0,
-  "XLE": 8.0
+  "ADBE": 5.5,
+  "XLF": -4.0,
+  "BAC": -5.5
  },
- "b1_inject": "NEWS_JUDGE: n=8 rescued=3\nMACRO rates: [hawkish] 10Y>5% + CPI hike-lock + UMich 1y inf exp 4.6%; FOMC/Warsh unprinted (regime/1d-1w)\nMACRO risk: [bearish] cash indices already dropping on chips + yield pressure (session/1d)\nMACRO geo-oil: [mixed] Hormuz impaired, Brent ~$107; leftover not fresh kinetic (session/1d-1w)\nSECTOR semis: [bearish] AMD/AI-slowdown tape dominates; ASML sold-out is not a buy signal (SOXX)\nSECTOR software: [bullish] ADBE beat/raise + NOW/CRM/INTU; substitution vs hardware, not cut-bet (IGV)\nSECTOR energy: [bullish] $107 Brent / Hormuz \u2014 XLE support, ex-energy drag (XLE)\nINTERACTION: one hawkish rates cluster + hardware/software split; do not buy IGV on dovish-duration hope; semis mixed\nWATCH: FOMC/Warsh PC unresolved \u2014 B3=0 until print; Barrick gold-cut-bet headline is stale",
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=3\nMACRO rates: [hawkish] 10Y \u22655% + CPI core hike-lock + UMich 4.6% 1-yr inf exp; FOMC/Warsh unsigned until print (regime/1d-1w)\nMACRO risk: [mixed] Hormuz/Iran tanker war, Brent ~$106-108 \u2014 leftover vs fresh kinetic unconfirmed; no auto B1=-3 (session/1d-1w)\nSECTOR semis: [bearish] chipmaker weakness / AMD AI-slowdown vs still-sold-out EUV demand \u2014 mixed, do not double-count (SMH)\nSECTOR software: [bullish] ADBE beat/raise + NOW/INTU/CRM vs chips \u2014 IGV substitution, not duration tailwind (IGV)\nSECTOR banks: [bearish] BAC CEO soft Q3 into 5% 10Y (XLF)\nINTERACTION: one hawkish rates cluster + stagflation oil; software\u2260dovish-rates buy; semis mixed\nWATCH: FOMC/Warsh is still a two-sided binary \u2014 do not emit a signed B3 lean",
  "date": "2026-09-15"
 }
