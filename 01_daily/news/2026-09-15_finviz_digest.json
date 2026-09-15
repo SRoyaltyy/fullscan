@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T09:32:34.917904-04:00",
+  "generated_at": "2026-09-15T09:53:08.387770-04:00",
   "export_used": "data/exports/finviz_2026-09-15.csv",
   "ticker_digest_count": 400,
   "signal_count": 400,
@@ -487,6 +487,17 @@
       "source": "finviz_export"
     },
     {
+      "ticker": "FITB",
+      "digest": "Fifth Third completes tech and brand conversion of 600,000 Comerica accounts and 293 branches, fully integrating February merger",
+      "news_title": "Fifth Third-Comerica merger leaves some customers angry over glitches",
+      "sector": "Financial",
+      "industry": "Banks - Regional",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
       "ticker": "FIX",
       "digest": "Zacks Strong Buy upgrade and AI data center backlog drive 11% FIX surge",
       "news_title": "Top 10 S&P 500 Stocks of the Past Decade Share One Clear Theme",
@@ -619,6 +630,17 @@
       "source": "finviz_export"
     },
     {
+      "ticker": "LLY",
+      "digest": "Berenberg upgrades Eli Lilly to Buy from Hold, raises price target to $1,400 on obesity and diabetes strength",
+      "news_title": "Ulta Beauty, Etsy upgraded: Wall Street's top analyst calls",
+      "sector": "Healthcare",
+      "industry": "Drug Manufacturers - General",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
       "ticker": "LOW",
       "digest": "Bernstein cuts Loweâs price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery",
       "news_title": "The biggest threat to your retirement is based on a myth  it could rip through your nest egg and even ruin your health",
@@ -668,28 +690,6 @@
       "news_title": "Louisiana Modernizes Statewide Public Safety Response with $139 Million Motorola Solutions Contract",
       "sector": "Technology",
       "industry": "Communication Equipment",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "NEE",
-      "digest": "NextEra and Dominion unveil expanded Virginia benefits package for proposed merger, doubling bill credits and adding major investments",
-      "news_title": "NextEra and Dominion Sweeten Merger Deal With Bill Credits and New Jobs",
-      "sector": "Utilities",
-      "industry": "Utilities - Regulated Electric",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "NFLX",
-      "digest": "Evercore ISI raises Netflix price target to $110 from $100, reiterates outperform on live events and short-form growth",
-      "news_title": "S&P 500, Nasdaq, Dow Drop On Chipmaker Weakness, Treasury Yield Pressure  MSFT, NFLX, ORCL, CRWD, RBLX In Focus",
-      "sector": "Communication Services",
-      "industry": "Entertainment",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -787,96 +787,6 @@
         "source": "finviz_export"
       }
     ],
-    "Industrials": [
-      {
-        "ticker": "AME",
-        "digest": "AMETEK completes $5.0 billion all-cash acquisition of Indicor Instrumentation",
-        "news_title": "AMETEK Completes Acquisition of Indicor Instrumentation",
-        "sector": "Industrials",
-        "industry": "Specialty Industrial Machinery",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "BE",
-        "digest": "Mizuho raises Bloom Energy price target to $351 from $242, reiterates Outperform on stronger pricing and demand signals",
-        "news_title": "Hedge Fund That Nearly Collapsed Bets Big on AMD Again",
-        "sector": "Industrials",
-        "industry": "Electrical Equipment & Parts",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "CMI",
-        "digest": "Cummins wins largest-ever BESS contract to supply storage systems for major U.S. data center project",
-        "news_title": "Caterpillar Stock Looks Expensive Until You Price The Backlog, And Then The Margins",
-        "sector": "Industrials",
-        "industry": "Specialty Industrial Machinery",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "CNI",
-        "digest": "Canadian National Railway outlines conditions to U.S. regulators for proposed Union PacificâNorfolk Southern merger",
-        "news_title": "CN Files Description of Anticipated Requested Conditions to Preserve Rail Competition and Expand Customer Options in the Midwest",
-        "sector": "Industrials",
-        "industry": "Railroads",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "CSX",
-        "digest": "CSX delivers record revenue, raises 2026 margin and free cash flow outlook",
-        "news_title": "CSX Corp's Dividend Analysis",
-        "sector": "Industrials",
-        "industry": "Railroads",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "FAST",
-        "digest": "Fastenal beats Q2 estimates with EPS $0.33 (+14% YoY), revenue $2.4B (+15% YoY), notes gross margin pressure and lowers 2026 digital sales mix target",
-        "news_title": "Ferguson Added to S&P 500 and the Plumbing Stock Pops. Where It Can Go Next.",
-        "sector": "Industrials",
-        "industry": "Industrial Distribution",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "FIX",
-        "digest": "Zacks Strong Buy upgrade and AI data center backlog drive 11% FIX surge",
-        "news_title": "Top 10 S&P 500 Stocks of the Past Decade Share One Clear Theme",
-        "sector": "Industrials",
-        "industry": "Engineering & Construction",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "GD",
-        "digest": "General Dynamics' GDIT wins $1.3B multi-year Enterprise Network Operations and Cybersecurity Support contract for Army National Guard, federal partners",
-        "news_title": "How Far Could Boeing Stock Fall If The Market Turns?",
-        "sector": "Industrials",
-        "industry": "Aerospace & Defense",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      }
-    ],
     "Healthcare": [
       {
         "ticker": "AMGN",
@@ -961,6 +871,96 @@
         "news_title": "CVS Stock Returned $24B In Cash: Why Did It Still Lag The Market?",
         "sector": "Healthcare",
         "industry": "Healthcare Plans",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      }
+    ],
+    "Industrials": [
+      {
+        "ticker": "AME",
+        "digest": "AMETEK completes $5.0 billion all-cash acquisition of Indicor Instrumentation",
+        "news_title": "AMETEK Completes Acquisition of Indicor Instrumentation",
+        "sector": "Industrials",
+        "industry": "Specialty Industrial Machinery",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "BE",
+        "digest": "Mizuho raises Bloom Energy price target to $351 from $242, reiterates Outperform on stronger pricing and demand signals",
+        "news_title": "Hedge Fund That Nearly Collapsed Bets Big on AMD Again",
+        "sector": "Industrials",
+        "industry": "Electrical Equipment & Parts",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "CMI",
+        "digest": "Cummins wins largest-ever BESS contract to supply storage systems for major U.S. data center project",
+        "news_title": "Caterpillar Stock Looks Expensive Until You Price The Backlog, And Then The Margins",
+        "sector": "Industrials",
+        "industry": "Specialty Industrial Machinery",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "CNI",
+        "digest": "Canadian National Railway outlines conditions to U.S. regulators for proposed Union PacificâNorfolk Southern merger",
+        "news_title": "CN Files Description of Anticipated Requested Conditions to Preserve Rail Competition and Expand Customer Options in the Midwest",
+        "sector": "Industrials",
+        "industry": "Railroads",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "CSX",
+        "digest": "CSX delivers record revenue, raises 2026 margin and free cash flow outlook",
+        "news_title": "CSX Corp's Dividend Analysis",
+        "sector": "Industrials",
+        "industry": "Railroads",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "FAST",
+        "digest": "Fastenal beats Q2 estimates with EPS $0.33 (+14% YoY), revenue $2.4B (+15% YoY), notes gross margin pressure and lowers 2026 digital sales mix target",
+        "news_title": "Ferguson Added to S&P 500 and the Plumbing Stock Pops. Where It Can Go Next.",
+        "sector": "Industrials",
+        "industry": "Industrial Distribution",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "FIX",
+        "digest": "Zacks Strong Buy upgrade and AI data center backlog drive 11% FIX surge",
+        "news_title": "Top 10 S&P 500 Stocks of the Past Decade Share One Clear Theme",
+        "sector": "Industrials",
+        "industry": "Engineering & Construction",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "GD",
+        "digest": "General Dynamics' GDIT wins $1.3B multi-year Enterprise Network Operations and Cybersecurity Support contract for Army National Guard, federal partners",
+        "news_title": "How Far Could Boeing Stock Fall If The Market Turns?",
+        "sector": "Industrials",
+        "industry": "Aerospace & Defense",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
@@ -1160,76 +1160,6 @@
         "source": "finviz_export"
       }
     ],
-    "Communication Services": [
-      {
-        "ticker": "AMX",
-        "digest": "JPMorgan upgrades America Movil to Overweight from Neutral and raises its price target to $32 from $30.",
-        "news_title": "Norwegian Cruise downgrade, Duolingo upgraded: Wall Street's top analyst calls",
-        "sector": "Communication Services",
-        "industry": "Telecom Services",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "APP",
-        "digest": "Piper Sandler cuts AppLovin price target to $325 from $385, maintains Neutral rating",
-        "news_title": "Should You Buy AppLovin Stock For Its Widening Margin?",
-        "sector": "Communication Services",
-        "industry": "Advertising Agencies",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "NFLX",
-        "digest": "Evercore ISI raises Netflix price target to $110 from $100, reiterates outperform on live events and short-form growth",
-        "news_title": "S&P 500, Nasdaq, Dow Drop On Chipmaker Weakness, Treasury Yield Pressure  MSFT, NFLX, ORCL, CRWD, RBLX In Focus",
-        "sector": "Communication Services",
-        "industry": "Entertainment",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      }
-    ],
-    "Utilities": [
-      {
-        "ticker": "D",
-        "digest": "Dominion, NextEra enhance Virginia merger benefits with 1,000 new jobs, doubled bill credits and $1B-a-year supplier program",
-        "news_title": "NextEra and Dominion Sweeten Merger Deal With Bill Credits and New Jobs",
-        "sector": "Utilities",
-        "industry": "Utilities - Regulated Electric",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "DUK",
-        "digest": "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year",
-        "news_title": "OpenAI meets with utility leaders on grid risks from rogue AI - report",
-        "sector": "Utilities",
-        "industry": "Utilities - Regulated Electric",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "NEE",
-        "digest": "NextEra and Dominion unveil expanded Virginia benefits package for proposed merger, doubling bill credits and adding major investments",
-        "news_title": "NextEra and Dominion Sweeten Merger Deal With Bill Credits and New Jobs",
-        "sector": "Utilities",
-        "industry": "Utilities - Regulated Electric",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      }
-    ],
     "Consumer Cyclical": [
       {
         "ticker": "HD",
@@ -1259,6 +1189,54 @@
         "news_title": "The biggest threat to your retirement is based on a myth  it could rip through your nest egg and even ruin your health",
         "sector": "Consumer Cyclical",
         "industry": "Home Improvement Retail",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      }
+    ],
+    "Communication Services": [
+      {
+        "ticker": "AMX",
+        "digest": "JPMorgan upgrades America Movil to Overweight from Neutral and raises its price target to $32 from $30.",
+        "news_title": "Norwegian Cruise downgrade, Duolingo upgraded: Wall Street's top analyst calls",
+        "sector": "Communication Services",
+        "industry": "Telecom Services",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "APP",
+        "digest": "Piper Sandler cuts AppLovin price target to $325 from $385, maintains Neutral rating",
+        "news_title": "Should You Buy AppLovin Stock For Its Widening Margin?",
+        "sector": "Communication Services",
+        "industry": "Advertising Agencies",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      }
+    ],
+    "Utilities": [
+      {
+        "ticker": "D",
+        "digest": "Dominion, NextEra enhance Virginia merger benefits with 1,000 new jobs, doubled bill credits and $1B-a-year supplier program",
+        "news_title": "NextEra and Dominion Sweeten Merger Deal With Bill Credits and New Jobs",
+        "sector": "Utilities",
+        "industry": "Utilities - Regulated Electric",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "DUK",
+        "digest": "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year",
+        "news_title": "OpenAI meets with utility leaders on grid risks from rogue AI - report",
+        "sector": "Utilities",
+        "industry": "Utilities - Regulated Electric",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
@@ -1756,6 +1734,17 @@
       "source": "finviz_export"
     },
     {
+      "ticker": "FITB",
+      "digest": "Fifth Third completes tech and brand conversion of 600,000 Comerica accounts and 293 branches, fully integrating February merger",
+      "news_title": "Fifth Third-Comerica merger leaves some customers angry over glitches",
+      "sector": "Financial",
+      "industry": "Banks - Regional",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
       "ticker": "FIX",
       "digest": "Zacks Strong Buy upgrade and AI data center backlog drive 11% FIX surge",
       "news_title": "Top 10 S&P 500 Stocks of the Past Decade Share One Clear Theme",
@@ -1882,6 +1871,17 @@
       "news_title": "The Bloom Energy Stock Signal Hiding Behind The Demand Story",
       "sector": "Basic Materials",
       "industry": "Specialty Chemicals",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "LLY",
+      "digest": "Berenberg upgrades Eli Lilly to Buy from Hold, raises price target to $1,400 on obesity and diabetes strength",
+      "news_title": "Ulta Beauty, Etsy upgraded: Wall Street's top analyst calls",
+      "sector": "Healthcare",
+      "industry": "Drug Manufacturers - General",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -2157,28 +2157,6 @@
       "news_title": "Royal Bank of Canada (RY) (Q3 2026) Earnings Call Highlights: Record Earnings and Strategic ...",
       "sector": "Financial",
       "industry": "Banks - Diversified",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "SAN",
-      "digest": "Banco Santander completes Webster Financial acquisition, creating leading U.S. retail and commercial bank with about $327B assets, targets 18% RoTE in U.S. by 2028",
-      "news_title": "Santander Holdings USA, Inc. Announces Redemption of All Outstanding Depositary Shares Representing Interests in Its Fixed-Rate Reset Non-Cumulative Perpetual Preferred Stock, Series I",
-      "sector": "Financial",
-      "industry": "Banks - Diversified",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "SAP",
-      "digest": "NTT DATA AI-cloud win and buybacks drive SAP 5% surge",
-      "news_title": "SAP has a 'once-in-a-lifetime opportunity' with AI: CEO explains how",
-      "sector": "Technology",
-      "industry": "Software - Application",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
