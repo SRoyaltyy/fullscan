@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T08:31:20.531037-04:00",
+  "generated_at": "2026-09-15T08:33:31.735780-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -47,7 +47,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 270580
+          "size": 269893
         },
         {
           "key": "heat_md",
@@ -56,7 +56,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 17178
+          "size": 16943
         }
       ],
       "said": "tables on disk",
@@ -80,7 +80,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 87910
+          "size": 87526
         },
         {
           "key": "digest_md",
@@ -89,7 +89,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11565
+          "size": 11332
         },
         {
           "key": "market_digest_json",
@@ -98,7 +98,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 8155
+          "size": 6662
         },
         {
           "key": "market_digest_md",
@@ -107,7 +107,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 3692
+          "size": 2949
         },
         {
           "key": "market_digest_close_json",
@@ -149,7 +149,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87910
+          "size": 87526
         },
         {
           "key": "in_market_digest",
@@ -158,7 +158,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 8155
+          "size": 6662
         },
         {
           "key": "in_baseline",
@@ -176,7 +176,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 270580
+          "size": 269893
         },
         {
           "key": "parsed",
@@ -194,7 +194,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 64159
+          "size": 77546
         },
         {
           "key": "judge",
@@ -248,7 +248,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6954
+          "size": 6090
         },
         {
           "key": "qc",
@@ -266,7 +266,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7137
+          "size": 7712
         },
         {
           "key": "review",
@@ -274,8 +274,8 @@
           "path": "01_daily/2026-09-15_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=False Grok returned an empty review",
-          "size": 309
+          "reason": "ok=False Only 5 of 11 sector essays exist (communication_services, consumer_cyclical, energy, financial, healthcare) \u2014 6 missing,",
+          "size": 1631
         },
         {
           "key": "sector_basic_materials",
@@ -377,14 +377,14 @@
           "size": 14255
         }
       ],
-      "said": "general DOWN  -6.215 \u00b7 sectors 3 up / 7 down / 0 flat \u00b7 news 15 items",
+      "said": "general DOWN  -6.215 \u00b7 sectors 3 up / 2 down / 0 flat \u00b7 news 15 items",
       "bullets": [
         "bad: fresh Saudi pipeline outage + Houthi escalation, Brent $108",
         "bad: China Aug retail +0.4% / FAI -7.2% miss",
         "bad: FOMC Sep 16 hike odds ~81%",
         "good: ASML sold out of 2027 EUV capacity",
         "good: software rotation (NOW/INTU/ADBE/CRM) surges",
-        "XLB DOWN -7.6",
+        "XLB missing",
         "XLC UP +0.4",
         "XLY DOWN -4.7",
         "XLP missing",
@@ -409,7 +409,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87910
+          "size": 87526
         },
         {
           "key": "weather",
@@ -489,7 +489,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87910
+          "size": 87526
         },
         {
           "key": "dossiers",
@@ -531,7 +531,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 6954
+          "size": 6090
         },
         {
           "key": "in_actions",
@@ -549,7 +549,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87910
+          "size": 87526
         },
         {
           "key": "in_judge",
@@ -594,7 +594,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5111",
-          "size": 822145
+          "size": 821087
         },
         {
           "key": "book_json",
@@ -602,8 +602,8 @@
           "path": "data/stock_book/2026-09-15_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=210",
-          "size": 1560341
+          "reason": "horizons=5 names=220",
+          "size": 1598950
         },
         {
           "key": "book_md",
@@ -612,7 +612,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 77529
+          "size": 88569
         },
         {
           "key": "green",
@@ -664,8 +664,8 @@
           "path": "data/stock_book/2026-09-15_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=210",
-          "size": 1560341
+          "reason": "horizons=5 names=220",
+          "size": 1598950
         },
         {
           "key": "dash_html",
@@ -702,62 +702,86 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "HITI",
-        "score": 0.3044362933651129
+        "ticker": "AVAH",
+        "score": 0.6813331956326887
       },
       {
-        "ticker": "MTCH",
-        "score": 0.5625355999916293
+        "ticker": "PACS",
+        "score": 0.6523856876658092
+      },
+      {
+        "ticker": "ZIP",
+        "score": 0.577269780484581
+      },
+      {
+        "ticker": "ASTH",
+        "score": 0.5858855076926901
+      },
+      {
+        "ticker": "WIX",
+        "score": 0.6981351189634262
+      },
+      {
+        "ticker": "VRSK",
+        "score": 0.4115313887726531
+      },
+      {
+        "ticker": "EPAM",
+        "score": 0.6486544512584855
+      },
+      {
+        "ticker": "DLO",
+        "score": 0.6220470253321195
       },
       {
         "ticker": "CARG",
-        "score": 0.7164691865201616
+        "score": 0.6859220972462057
       },
       {
-        "ticker": "FOX",
-        "score": 0.46246499218332093
+        "ticker": "AMN",
+        "score": 0.6227441834609622
       }
     ],
     "sell_1d": [
       {
+        "ticker": "FLNC",
+        "score": -0.38082232091807483
+      },
+      {
         "ticker": "OKLO",
-        "score": -0.4709917547759548
+        "score": -0.2189446768861193
       },
       {
         "ticker": "EOSE",
-        "score": -0.47634579173599406
+        "score": -0.23520754591436616
+      },
+      {
+        "ticker": "SMR",
+        "score": -0.30306987421833825
       },
       {
         "ticker": "QBTS",
-        "score": -0.21963178703680925
-      },
-      {
-        "ticker": "FUN",
-        "score": -0.6122755003348219
-      },
-      {
-        "ticker": "FLNC",
-        "score": -0.6150820569929332
+        "score": -0.1748534220136116
       },
       {
         "ticker": "METC",
-        "score": -0.6549472286273187
+        "score": -0.3861356085806234
       },
       {
-        "ticker": "FCEL",
-        "score": -0.60016714719896
+        "ticker": "LUNR",
+        "score": -0.3704877449128859
       },
       {
-        "ticker": "TE",
-        "score": -0.5004896009883154
+        "ticker": "BEPC",
+        "score": -0.1359649975397636
       },
       {
         "ticker": "TLN",
-        "score": -0.6230187099899102
+        "score": -0.4806656652691894
       },
       {
-        "ticker": "HNRG",
-        "score": -0.18088669874039975
+        "ticker": "LWLG",
+        "score": -0.3373330980484878
       }
     ],
     "flatten": {
@@ -780,19 +804,19 @@
       "direction": "down"
     },
     "sectors": {
-      "said": "3 up / 7 down / 0 flat",
+      "said": "3 up / 2 down / 0 flat",
       "bullets": [
-        "XLB DOWN -7.6",
+        "XLB missing",
         "XLC UP +0.4",
         "XLY DOWN -4.7",
         "XLP missing",
         "XLE UP +4.0",
         "XLF DOWN -4.1",
         "XLV UP +0.9",
-        "XLI DOWN -5.9",
-        "XLRE DOWN -8.5",
-        "XLK DOWN -7.5",
-        "XLU DOWN -8.2"
+        "XLI missing",
+        "XLRE missing",
+        "XLK missing",
+        "XLU missing"
       ]
     },
     "news": {
@@ -815,45 +839,6 @@
     }
   },
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T06:06:00.024101-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-15_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 87439,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-09-15_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11534,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T06:05:56.763437-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-        },
-        {
-          "path": "data/exports/finviz_2026-09-15.csv",
-          "ok": true,
-          "reason": "",
-          "size": 10978095,
-          "preview": "11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11415288,
-          "preview": "11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T06:05:56.763437-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -3549,6 +3534,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T08:31:19.553336-04:00"
+    },
+    {
+      "key": "events_catcher",
+      "title": "Event catcher (gap hunt, no carry)",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T08:33:30.432362-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-09-15_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 77546,
+          "preview": "76 events \u00b7 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | ECB 25bp hike delivered; hawkish forecast upgrade | China August credit/social financing \u2014 bond & equity share tops loans  | US existing home sales fall to 14-month low; mortgage rates up 3rd wee"
+        },
+        {
+          "path": "01_daily/events/2026-09-15_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 36469,
+          "preview": "# Event Scan \u2014 2026-09-15\n- events tracked: **63** (via openclaw) (merged with earlier same-day scan)\n- uncertainty: **high**\n- summary: The tape is a three-day central-bank cluster (Fed Sept 16, BoE 17, BoJ 18) colliding with a still-hot oil war: Hormuz traffic is a fraction of normal, Brent is ~$107, and the 10-year is holding 5%. China printed a producer-strong/demand-weak split today, the US-Canada tariff war goes live on new 50% lines, and the Sept 24 Trump-Xi summit is the only plausible off-ramp for the November tariff truce. Mega-cap earnings are empty; housing (Lennar, starts) and Holtec/SpaceX supply are the micro calendar."
+        }
+      ],
+      "preview": "76 events \u00b7 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | ECB 25bp hike delivered; hawkish forecast upgrade | China August credit/social financing \u2014 bond & equity share tops loans  | US existing home sales fall to 14-month low; mortgage rates up 3rd wee \u00b7 # Event Scan \u2014 2026-09-15\n- events tracked: **63** (via openclaw) (merged with earlier same-day scan)\n- uncertainty: **high**\n- summary: The tape is a three-day central-bank cluster (Fed Sept 16, BoE 17, BoJ 18) colliding with a still-hot oil war: Hormuz traffic is a fraction of normal, Brent is ~$107, and the 10-year is holding 5%. China printed a producer-strong/demand-weak split today, the US-Canada tariff war goes live on new 50% lines, and the Sept 24 Trump-Xi summit is the only plausible off-ramp for the November tariff truce. Mega-cap earnings are empty; housing (Lennar, starts) and Holtec/SpaceX supply are the micro calendar."
     }
   ],
   "href": {
