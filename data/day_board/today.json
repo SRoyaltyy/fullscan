@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T13:07:07.777827-04:00",
+  "generated_at": "2026-09-15T13:07:08.121149-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -11,62 +11,82 @@
   },
   "buy_1d": [
     {
-      "ticker": "MTCH",
-      "score": 0.3436758177117344
+      "ticker": "MPC",
+      "score": 0.29284159326632914
     },
     {
-      "ticker": "FOX",
-      "score": 0.39741166482656987
+      "ticker": "DBX",
+      "score": 0.6659268308303405
     },
     {
-      "ticker": "CARG",
-      "score": 0.5780830455379207
+      "ticker": "OKTA",
+      "score": 0.3767281691284467
+    },
+    {
+      "ticker": "AVAH",
+      "score": 0.6742815729117086
+    },
+    {
+      "ticker": "S",
+      "score": 0.6681106306723062
+    },
+    {
+      "ticker": "APPN",
+      "score": 0.5726047806801684
     },
     {
       "ticker": "SNAP",
-      "score": 0.4644227625704849
+      "score": 0.4293270119929244
+    },
+    {
+      "ticker": "CRWD",
+      "score": 0.14727221746579827
+    },
+    {
+      "ticker": "NXDR",
+      "score": 0.49772530846117596
     }
   ],
   "sell_1d": [
     {
-      "ticker": "OKLO",
-      "score": -0.4769299257081444
-    },
-    {
-      "ticker": "QBTS",
-      "score": -0.25501616507320635
-    },
-    {
-      "ticker": "IONQ",
-      "score": -0.3644584064447287
-    },
-    {
-      "ticker": "EOSE",
-      "score": -0.4433263904578803
-    },
-    {
-      "ticker": "QUBT",
-      "score": -0.17704111275223555
-    },
-    {
-      "ticker": "RGTI",
-      "score": -0.13709147285058954
-    },
-    {
       "ticker": "METC",
-      "score": -0.6516193539580212
+      "score": -0.6570814025646101
     },
     {
       "ticker": "FLNC",
-      "score": -0.6051818574612539
+      "score": -0.6116762744053208
     },
     {
-      "ticker": "TE",
-      "score": -0.48409420520142854
+      "ticker": "HNRG",
+      "score": -0.19834883629987568
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.6018274608984249
     },
     {
       "ticker": "TLN",
-      "score": -0.6166439695921102
+      "score": -0.6307310675693985
+    },
+    {
+      "ticker": "TE",
+      "score": -0.5031593493192514
+    },
+    {
+      "ticker": "OKLO",
+      "score": -0.4621067662590356
+    },
+    {
+      "ticker": "QBTS",
+      "score": -0.28432953541578804
+    },
+    {
+      "ticker": "NRG",
+      "score": -0.3810403735763207
+    },
+    {
+      "ticker": "AMPX",
+      "score": -0.47440709139388143
     }
   ],
   "flatten": {
@@ -105,31 +125,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat tables",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T12:56:45.847076-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-15_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 269893,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-15_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 17316,
-          "preview": "# MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T04:25:19.101684-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T04:25:19.101684-04:00"
-    },
     {
       "key": "map_heat_baseline",
       "title": "Map heat night baseline",
@@ -290,6 +285,45 @@
         }
       ],
       "preview": "119 events \u00b7 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | ECB 25bp hike delivered; hawkish forecast upgrade | China August credit/social financing \u2014 bond & equity share tops loans  | US existing home sales fall to 14-month low; mortgage rates up 3rd wee \u00b7 # Event Scan \u2014 2026-09-15\n- events tracked: **119** (via openclaw) (merged with earlier same-day scan)\n- uncertainty: **high**\n- summary: The next 48 hours are a stacked macro gauntlet: August retail sales and UK CPI tomorrow morning, then Chair Warsh's first hike decision with a full SEP, followed by BoE (hold expected) and a near-certain BoJ hike to 1.25%. That lands on a market already dealing with Brent ~$107-109, a shut Saudi East-West pipeline, a 10-year above 5%, and a Trump-Xi summit on Sept 24 that is the last clean shot at extending the Nov 10 US-China tariff truce. Shutdown risk is off the table until December; the live left tails are oil logistics, a hawkish dots/press conference, and a failed Washington summit."
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T13:07:07.171437-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 87547,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11528,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T13:07:06.772040-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-15.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11109598,
+          "preview": "11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11415288,
+          "preview": "11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T13:07:06.772040-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

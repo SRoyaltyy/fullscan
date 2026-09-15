@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T12:46:13.585626-04:00",
+  "generated_at": "2026-09-15T13:07:06.772040-04:00",
   "export_used": "data/exports/finviz_2026-09-15.csv",
   "ticker_digest_count": 400,
   "signal_count": 400,
@@ -500,7 +500,7 @@
     {
       "ticker": "GS",
       "digest": "Goldman Sachs raises $11.7B for new private equity funds, including $9.6B for West Street Capital Partners IX",
-      "news_title": "Goldman Sachs, Nike share losses lead Dow's nearly 500-point fall",
+      "news_title": "Dow's 366-point fall led by losses in Goldman Sachs, UnitedHealth stocks",
       "sector": "Financial",
       "industry": "Capital Markets",
       "is_dividend": false,
@@ -868,7 +868,7 @@
       {
         "ticker": "GS",
         "digest": "Goldman Sachs raises $11.7B for new private equity funds, including $9.6B for West Street Capital Partners IX",
-        "news_title": "Goldman Sachs, Nike share losses lead Dow's nearly 500-point fall",
+        "news_title": "Dow's 366-point fall led by losses in Goldman Sachs, UnitedHealth stocks",
         "sector": "Financial",
         "industry": "Capital Markets",
         "is_dividend": false,
@@ -1747,7 +1747,7 @@
     {
       "ticker": "GS",
       "digest": "Goldman Sachs raises $11.7B for new private equity funds, including $9.6B for West Street Capital Partners IX",
-      "news_title": "Goldman Sachs, Nike share losses lead Dow's nearly 500-point fall",
+      "news_title": "Dow's 366-point fall led by losses in Goldman Sachs, UnitedHealth stocks",
       "sector": "Financial",
       "industry": "Capital Markets",
       "is_dividend": false,
