@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T03:42:30.495622-04:00",
+  "generated_at": "2026-09-15T03:42:35.547984-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -77,7 +77,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 5,
       "files": [
         {
@@ -103,18 +103,18 @@
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-15_finviz_market_digest.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 9080
         },
         {
           "key": "market_digest_md",
           "name": "Homepage warm-up MD (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-15_finviz_market_digest.md",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 3976
         },
         {
           "key": "market_digest_close_json",
@@ -146,7 +146,7 @@
       "inputs_ready": false,
       "n_req_ok": 2,
       "n_req": 20,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 3,
       "files": [
         {
@@ -163,9 +163,9 @@
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-15_finviz_market_digest.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 9080
         },
         {
           "key": "in_baseline",
@@ -736,6 +736,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T03:42:30.190568-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11617 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "finviz_market_digest",
+      "title": "Finviz homepage market digest",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T03:42:35.407984-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_finviz_market_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 9080,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_finviz_market_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 3976,
+          "preview": "# Finviz homepage market digest \u2014 2026-09-15\n**Generated:** 2026-09-15T03:42:35.387213-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as AI slowdown fears weighed on tech and chipmakers while surging oil and a near-5% 10-year yield sharpened focus on this week\u2019s FOMC meeting\n**Prior close:** SPX -0.48%  Nasdaq -0.56%  Dow -0.29%\n**SPX:** -0.48%  **Nasdaq:** -0.56%  **Dow:** -0.29%\n**Oil:** Brent crude $105.0\n**CPI/Fed:** 90.0% hike (90% chance of a 25-basis-point rate hike)\n**Leaders:** NFLX, ZS, RBRK, S, PANW, CRWD, GLW, COHR, TER, NVDA, BAC, PLAY, RLGT\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-15\n**Clock use:** `same_morning`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-15\n**Generated:** 2026-09-15T03:42:35.387213-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as AI slowdown fears weighed on tech and chipmakers while surging oil and a near-5% 10-year yield sharpened focus on this week\u2019s FOMC meeting\n**Prior close:** SPX -0.48%  Nasdaq -0.56%  Dow -0.29%\n**SPX:** -0.48%  **Nasdaq:** -0.56%  **Dow:** -0.29%\n**Oil:** Brent crude $105.0\n**CPI/Fed:** 90.0% hike (90% chance of a 25-basis-point rate hike)\n**Leaders:** NFLX, ZS, RBRK, S, PANW, CRWD, GLW, COHR, TER, NVDA, BAC, PLAY, RLGT\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-15\n**Clock use:** `same_morning`"
     }
   ],
   "href": {
