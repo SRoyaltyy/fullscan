@@ -1,6 +1,6 @@
 # Finviz Daily Digest — 2026-09-15
 
-_Generated 2026-09-15T06:03:08.084091-04:00 · export=data/exports/finviz_2026-09-15.csv · ticker digests=400 · high-signal=400_
+_Generated 2026-09-15T06:05:56.763437-04:00 · export=data/exports/finviz_2026-09-15.csv · ticker digests=400 · high-signal=400_
 
 ## Major indices (live quote page)
 
@@ -17,6 +17,7 @@ _Generated 2026-09-15T06:03:08.084091-04:00 · export=data/exports/finviz_2026-0
 - **AME** [Industrials]: AMETEK completes $5.0 billion all-cash acquisition of Indicor Instrumentation
 - **AMGN** [Healthcare]: Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first two ES-SCLC doses
 - **AMX** [Communication Serv]: JPMorgan upgrades America Movil to Overweight from Neutral and raises its price target to $32 from $30.
+- **AMZN** [Consumer Cyclical]: Amazon's India quick-commerce unit Amazon Now tops $1bn in gross annualised sales as volumes surge
 - **AON** [Financial]: Aon files audited and pro forma financials with SEC for pending USI Advantage merger
 - **APD** [Basic Materials]: Air Products beats fiscal Q3 2026 EPS with non-GAAP $3.47, raises FY26 EPS outlook, takes $2.9B clean energy exit charge
 - **APH** [Technology]: Fabrinet earnings weakness and rising yields spark 6.5% APH drop
@@ -50,7 +51,6 @@ _Generated 2026-09-15T06:03:08.084091-04:00 · export=data/exports/finviz_2026-0
 - **DASH** [Consumer Cyclical]: Scotiabank initiated coverage of DoorDash with a Sector Outperform rating and a $275 price target, citing its scale, subscription-driven user lock-in and margin benefits.
 - **DDOG** [Technology]: Snowflake's stronger-than-expected quarterly revenue and earnings support cloud and AI-focused enterprise software peers including Datadog
 - **DUK** [Utilities]: Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year
-- **E** [Energy]: Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results
 
 ## By sector (top signal)
 
@@ -89,18 +89,19 @@ _Generated 2026-09-15T06:03:08.084091-04:00 · export=data/exports/finviz_2026-0
 - BHP: BHP Group ADRs fall after copper prices retreat from record highs amid U.S. tariff uncertainty on refined copper.
 - CRH: Berenberg price target cut to $140 from $146 triggers CRH 3.87% drop to near 52-week low
 
+### Consumer Cyclical (n=5)
+- AMZN: Amazon's India quick-commerce unit Amazon Now tops $1bn in gross annualised sales as volumes surge
+- DASH: Scotiabank initiated coverage of DoorDash with a Sector Outperform rating and a $275 price target, citing its scale, subscription-driven user lock-in and margin benefits.
+- HD: Home Depot announces the nationwide rollout of its Magic Apron AI-powered in-store assistant with localized, personalized shopping guidance now live in all U.S. stores.
+- HLT: Deutsche Bank upgrades Hilton Worldwide to Buy from Hold, raises price target to $365
+- LOW: Bernstein cuts Loweâs price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery
+
 ### Energy (n=5)
 - CNQ: Canadian Natural Resources posts record Q2 2026 results with EPS $1.58, raises 2026 production guidance and returns about $4B to shareholders
 - CVE: Cenovus Energy Q2 2026 non-GAAP EPS $1.08 misses estimates, revenue $14.7B beats, company raises full-year production guidance
 - E: Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results
 - EOG: EOG posts record EPS and free cash flow, reiterates 2026 guidance and highlights strong UAE unconventional exploration results
 - KMI: KMI rebounds on pipeline project momentum and raised 2026 guidance
-
-### Consumer Cyclical (n=4)
-- DASH: Scotiabank initiated coverage of DoorDash with a Sector Outperform rating and a $275 price target, citing its scale, subscription-driven user lock-in and margin benefits.
-- HD: Home Depot announces the nationwide rollout of its Magic Apron AI-powered in-store assistant with localized, personalized shopping guidance now live in all U.S. stores.
-- HLT: Deutsche Bank upgrades Hilton Worldwide to Buy from Hold, raises price target to $365
-- LOW: Bernstein cuts Loweâs price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery
 
 ### Communication Services (n=2)
 - AMX: JPMorgan upgrades America Movil to Overweight from Neutral and raises its price target to $32 from $30.
@@ -110,9 +111,8 @@ _Generated 2026-09-15T06:03:08.084091-04:00 · export=data/exports/finviz_2026-0
 - D: Dominion, NextEra enhance Virginia merger benefits with 1,000 new jobs, doubled bill credits and $1B-a-year supplier program
 - DUK: Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year
 
-### Consumer Defensive (n=2)
-- KO: Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.
-- MNST: Q2 earnings momentum and recent stock split fuel MNST 4.09% gain
-
 ### Real Estate (n=1)
 - EQIX: Equinix, CPP Investments close US$4B atNorth acquisition with Equinix investing about US$895M for roughly 34% stake
+
+### Consumer Defensive (n=1)
+- KO: Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.
