@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T12:57:25.748401-04:00",
+  "generated_at": "2026-09-15T12:57:35.664255-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -454,12 +454,12 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2653",
-          "size": 8469854
+          "size": 8467821
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "SM, WDS, PBR, CDNA, CXW"
+        "SM, WDS, NWBI, CDNA, CFFN"
       ]
     },
     {
@@ -576,7 +576,7 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2653",
-          "size": 8469854
+          "size": 8467821
         },
         {
           "key": "join",
@@ -815,31 +815,6 @@
     }
   },
   "lands": [
-    {
-      "key": "ab",
-      "title": "AB checklist",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T08:16:48.833513-04:00",
-      "files": [
-        {
-          "path": "data/ab_checklist/2026-09-15_ab_checklist.csv",
-          "ok": true,
-          "reason": "",
-          "size": 7626799,
-          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM"
-        },
-        {
-          "path": "data/ab_checklist/2026-09-15_ab_checklist_enriched.csv",
-          "ok": true,
-          "reason": "",
-          "size": 8460228,
-          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SM, WDS, LFST, PACS, AMN"
-        }
-      ],
-      "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SM, WDS, LFST, PACS, AMN"
-    },
     {
       "key": "news_parse",
       "title": "News parse (timeout retry)",
@@ -3563,6 +3538,31 @@
         }
       ],
       "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 RRC, AR, DVN, PBR, EXE"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T12:57:34.335738-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-15_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7626799,
+          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-15_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8467821,
+          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SM, WDS, NWBI, CDNA, CFFN"
+        }
+      ],
+      "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SM, WDS, NWBI, CDNA, CFFN"
     }
   ],
   "href": {
