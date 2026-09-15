@@ -17,6 +17,11 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/webull_paper.yml"
+  schedule:
+    # 09:30 ET both DST sides. Clock wait holds an early EST fire
+    # until the bell; a later EDT fire is a skip-held no-op.
+    - cron: "30 13 * * 1-5"
+    - cron: "30 14 * * 1-5"
   workflow_dispatch:
     inputs:
       run_date:
@@ -43,7 +48,7 @@ jobs:
   paper:
     if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
         with:
@@ -53,16 +58,38 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Clock gate (09:30 ET)
+        id: clock
+        run: |
+          set -euo pipefail
+          # Manual dispatch is a daytime retry — do not wait.
+          # Schedule / sleeve-merge / main poke wait until the bell
+          # (or skip before 08:00 / after the close / holiday).
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "go=yes" >> "$GITHUB_OUTPUT"
+            echo "workflow_dispatch — submit now"
+            exit 0
+          fi
+          if python3 -m src.open_0930_clock --wait --max-wait-s 4200; then
+            echo "go=yes" >> "$GITHUB_OUTPUT"
+            echo "09:30 window — paper submit"
+          else
+            echo "go=no" >> "$GITHUB_OUTPUT"
+            echo "outside 08:00–16:00 ET session / holiday — skip paper"
+          fi
+
       - name: Install
-        run: pip install webull-openapi-python-sdk pandas numpy yfinance
+        if: steps.clock.outputs.go == 'yes'
+        run: pip install webull-openapi-python-sdk pandas numpy yfinance requests
 
       - name: Send combo 5050+MACD tickets to Webull paper
+        if: steps.clock.outputs.go == 'yes'
         env:
           WEBULL_APP_KEY: ${{ secrets.WEBULL_APP_KEY }}
           WEBULL_APP_SECRET: ${{ secrets.WEBULL_APP_SECRET }}
           WEBULL_ACCOUNT_ID: ${{ secrets.WEBULL_ACCOUNT_ID }}
           RUN_DATE: ${{ github.event.inputs.run_date }}
-          WANT_SUBMIT: ${{ (github.event_name == 'workflow_run' || github.event_name == 'push' || inputs.submit) && 'true' || 'false' }}
+          WANT_SUBMIT: ${{ (github.event_name == 'workflow_run' || github.event_name == 'push' || github.event_name == 'schedule' || inputs.submit) && 'true' || 'false' }}
         run: |
           set -euo pipefail
           DATE="${RUN_DATE:-}"
@@ -91,6 +118,7 @@ jobs:
           PY
 
       - name: Land last snapshot
+        if: steps.clock.outputs.go == 'yes'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |

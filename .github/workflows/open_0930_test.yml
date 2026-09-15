@@ -1,0 +1,55 @@
+name: Open 09:30 tests
+
+# Gates the bell contract on PRs. No secrets. No flatten_robust. No REAL.
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/open_0930.yml"
+      - ".github/workflows/open_0930_test.yml"
+      - ".github/workflows/webull_paper.yml"
+      - ".github/workflows/daily_orchestrator.yml"
+      - ".github/workflows/publish_strategy_tickets.yml"
+      - ".github/workflows/deploy-dashboard.yml"
+      - "src/open_0930_clock.py"
+      - "src/test_open_0930.py"
+      - "src/webull_exec.py"
+      - "src/combo_broker.py"
+      - "src/strategy_tickets.py"
+      - "src/skip_if_good.py"
+      - "src/test_skip_if_good.py"
+      - "scripts/publish_open_pack.sh"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/open_0930.yml"
+      - ".github/workflows/open_0930_test.yml"
+      - ".github/workflows/webull_paper.yml"
+      - "src/open_0930_clock.py"
+      - "src/test_open_0930.py"
+      - "scripts/publish_open_pack.sh"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pandas numpy pyarrow openpyxl
+      - name: Clock + pack + paper contract
+        run: |
+          set -euo pipefail
+          PYTHONPATH=. python3 -m src.test_open_0930
+          PYTHONPATH=. python3 -m src.test_strategy_tickets
+          PYTHONPATH=. python3 -m src.test_webull_exec
+          PYTHONPATH=. python3 -m src.test_combo_broker
+          PYTHONPATH=. python3 -m src.test_skip_if_good

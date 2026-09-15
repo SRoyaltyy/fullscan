@@ -138,6 +138,7 @@ def test_deploy_dashboard_follows_preopen_and_book() -> None:
     assert "Pre-Open ALL (predictive one-shot)" in text
     assert "Stock Book ALL (one-shot)" in text
     assert "Publish strategy tickets" in text
+    assert "Open 09:30 pack" in text
     assert "dashboard/**" in text
     assert "github.event_name == 'push'" in text
     assert "Root copy pages_out/${sub}" in text

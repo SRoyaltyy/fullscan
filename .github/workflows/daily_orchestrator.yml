@@ -197,19 +197,30 @@ jobs:
               echo "past 09:25 ET — ubuntu Pre-Open late heal (--bypass-cutoff)"
               maybe preopen_all.yml
             fi
-            # 09:35 cron: every-sleeve open pack. Book skip-if-good must
-            # not leave today_strategies.json on a pre-bell / Friday bake.
-            # Republish even when tickets exist — 09:30 opens may have printed.
+            # 09:35 heal: if the 09:30 pack skipped (GH cron miss) or
+            # wrote a Friday bake / 401 paper snapshot, fire it now.
+            # A good 09:30 (session-open tickets + connected paper) skips.
             if [ "$ET_HM" -ge 930 ]; then
               echo "past 09:30 ET — publish open-pack tickets + restamp Pages"
-              if already_running "publish_strategy_tickets.yml"; then
+              if already_running "open_0930.yml"; then
+                echo "OK — open_0930 already running"
+              elif already_running "publish_strategy_tickets.yml"; then
                 echo "OK — publish_strategy_tickets already running"
+              elif [ "$FORCE" != "true" ] \
+                   && python3 -m src.skip_if_good --job open_0930 --date "$TODAY"; then
+                echo "OK — skip-if-good: 09:30 pack already on disk"
               else
-                echo "OPEN PACK → publish_strategy_tickets.yml"
-                gh api --method POST \
-                  "repos/${REPO}/actions/workflows/publish_strategy_tickets.yml/dispatches" \
+                echo "OPEN PACK → open_0930.yml (boards + paper)"
+                if ! gh api --method POST \
+                  "repos/${REPO}/actions/workflows/open_0930.yml/dispatches" \
                   -f ref=main \
-                  -f "inputs[run_date]=$TODAY" || true
+                  -f "inputs[run_date]=$TODAY"; then
+                  echo "OPEN PACK fallback → publish_strategy_tickets.yml"
+                  gh api --method POST \
+                    "repos/${REPO}/actions/workflows/publish_strategy_tickets.yml/dispatches" \
+                    -f ref=main \
+                    -f "inputs[run_date]=$TODAY" || true
+                fi
               fi
             fi
             # 09-08: Pre-Open skipped essays after 09:25 and standalone

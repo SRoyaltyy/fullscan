@@ -548,6 +548,34 @@ def check_strategy_tickets(date: str) -> bool:
                 f"legal_for={legal} n={len(strats)} n_ok={data.get('n_ok')}")
 
 
+def check_open_0930(date: str) -> bool:
+    """09:30 pack landed: session-open tickets + connected paper snapshot.
+
+    A 401 / missing last file must not skip — 09:35 orch should heal.
+    Hard-red sit (0 tickets) still counts when the sandbox connected.
+    Does not change flatten_robust.
+    """
+    if not check_strategy_tickets(date):
+        return _log(False, "open_0930", date, "tickets not session-open")
+    path = ROOT / "data" / "sleeve_merge" / "webull_last.json"
+    if not path.is_file():
+        return _log(False, "open_0930", date, "webull_last missing")
+    try:
+        last = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return _log(False, "open_0930", date, "webull_last unreadable")
+    if str(last.get("date") or "") != date:
+        return _log(False, "open_0930", date,
+                    f"webull date={last.get('date')!r} ≠ {date}")
+    if str(last.get("combo") or "") != "combo_sh_macd_5050_shared":
+        return _log(False, "open_0930", date,
+                    f"webull combo={last.get('combo')!r}")
+    if not last.get("connected"):
+        return _log(False, "open_0930", date, "webull not connected")
+    return _log(True, "open_0930", date,
+                f"paper connected tickets={last.get('n_tickets')}")
+
+
 def check_preopen_full(date: str) -> bool:
     """Morning packet AND today's stock book — one-click pre-open done."""
     if not check_preopen_all(date):
@@ -707,6 +735,7 @@ JOBS = {
     "map_heat_postclose": check_map_heat_postclose,
     "stock_book_all": check_stock_book_all,
     "strategy_tickets": check_strategy_tickets,
+    "open_0930": check_open_0930,
     "label_weather": check_label_weather,
     "ab_checklist": check_ab_checklist,
     "daily_pipeline": check_daily_pipeline_outcome,

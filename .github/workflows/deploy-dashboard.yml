@@ -12,6 +12,7 @@ on:
       - "Stock Book ALL (one-shot)"
       - "Pre-Open ALL (predictive one-shot)"
       - "Publish strategy tickets"
+      - "Open 09:30 pack"
     types: [completed]
   push:
     branches: [main]
