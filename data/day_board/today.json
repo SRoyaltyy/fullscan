@@ -1,155 +1,98 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T11:12:30.450145-04:00",
-  "overall": "OK",
+  "generated_at": "2026-09-15T11:12:46.410934-04:00",
+  "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 8,
-    "partial": 0,
+    "ok": 7,
+    "partial": 1,
     "fail": 0,
     "n": 8
   },
   "buy_1d": [
     {
-      "ticker": "AMGN",
-      "score": 0.09080014125288889
+      "ticker": "WEX",
+      "score": 0.5040713137553983
     },
     {
-      "ticker": "LLY",
-      "score": 0.35620503368166595
+      "ticker": "LFST",
+      "score": 0.386729538747364
     },
     {
-      "ticker": "S",
-      "score": 0.5383606939554906
-    },
-    {
-      "ticker": "FFIV",
-      "score": 0.19348888952122334
-    },
-    {
-      "ticker": "META",
-      "score": 0.3469506591337837
-    },
-    {
-      "ticker": "SNAP",
-      "score": 0.48958801256022805
-    },
-    {
-      "ticker": "ANGX",
-      "score": 0.5324899263792778
-    },
-    {
-      "ticker": "RPD",
-      "score": 0.5251915855613591
-    },
-    {
-      "ticker": "HITI",
-      "score": 0.2895286042792773
+      "ticker": "VRSK",
+      "score": 0.26021441998687833
     }
   ],
   "sell_1d": [
     {
-      "ticker": "METC",
-      "score": -0.6600195692423577
-    },
-    {
-      "ticker": "FLNC",
-      "score": -0.6059014779891931
-    },
-    {
-      "ticker": "FCEL",
-      "score": -0.5946383246876308
-    },
-    {
       "ticker": "OKLO",
-      "score": -0.4471021843609181
-    },
-    {
-      "ticker": "TLN",
-      "score": -0.619963013242493
-    },
-    {
-      "ticker": "TE",
-      "score": -0.44936729631534666
+      "score": -0.4609068195172936
     },
     {
       "ticker": "IONQ",
-      "score": -0.3829046741509327
-    },
-    {
-      "ticker": "LVWR",
-      "score": -0.5841307624748288
+      "score": -0.39059974142799925
     },
     {
       "ticker": "QBTS",
-      "score": -0.28547887599745464
+      "score": -0.25144340072426397
     },
     {
-      "ticker": "NRG",
-      "score": -0.34849244421389436
+      "ticker": "EOSE",
+      "score": -0.43378258027819
+    },
+    {
+      "ticker": "METC",
+      "score": -0.6258237009331186
+    },
+    {
+      "ticker": "FLNC",
+      "score": -0.592091523723564
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.581579576942252
+    },
+    {
+      "ticker": "HNRG",
+      "score": -0.188670121599966
     }
   ],
   "flatten": {
-    "said": "0 priced buys \u00b7 cash $107,448.18",
+    "said": "0 priced buys \u00b7 cash $108,616.66",
     "bullets": [
       "0 priced buys",
-      "cash $107,448.18"
+      "cash $108,616.66"
     ]
   },
   "general": {
-    "said": "DOWN  -2.865",
+    "said": "DOWN  -4.389",
     "bullets": [
-      "bad: Brent ~$108 Hormuz/Saudi pipeline outage",
+      "bad: Asia -1.10% (Kospi -3.26%)",
       "bad: 1w 10Y +19bp / 5% handle",
-      "bad: FOMC-eve hike ~87-90%",
-      "good: ES/NQ green vs cash close",
-      "good: HY tight 2.65"
+      "bad: WTI +3% leftover Hormuz/Petroline",
+      "good: ES/NQ +0.3% vs cash (not confirming)",
+      "good: HY still contained at 2.71"
     ],
-    "score": "-2.865",
+    "score": "-4.389",
     "direction": "down"
   },
   "sectors": {
-    "said": "3 up / 7 down / 1 flat",
+    "said": "1 up / 8 down / 1 flat",
     "bullets": [
-      "XLB DOWN -7.6",
-      "XLC UP +0.4",
-      "XLY DOWN -4.7",
-      "XLP FLAT -8.1",
-      "XLE UP +4.0",
-      "XLF DOWN -4.1",
-      "XLV UP +0.9",
-      "XLI DOWN -5.9",
-      "XLRE DOWN -8.5",
-      "XLK DOWN -1.5",
-      "XLU DOWN -8.2"
+      "XLB DOWN -3.7",
+      "XLC FLAT -2.7",
+      "XLY DOWN -2.3",
+      "XLP missing",
+      "XLE UP +6.8",
+      "XLF DOWN -3.9",
+      "XLV DOWN -3.3",
+      "XLI DOWN -3.3",
+      "XLRE DOWN -4.5",
+      "XLK DOWN -7.5",
+      "XLU DOWN -6.1"
     ]
   },
   "lands": [
-    {
-      "key": "ab",
-      "title": "AB checklist",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T10:46:46.469995-04:00",
-      "files": [
-        {
-          "path": "data/ab_checklist/2026-09-15_ab_checklist.csv",
-          "ok": true,
-          "reason": "",
-          "size": 7626799,
-          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM"
-        },
-        {
-          "path": "data/ab_checklist/2026-09-15_ab_checklist_enriched.csv",
-          "ok": true,
-          "reason": "",
-          "size": 8469669,
-          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SM, WDS, PBR, SFL, EC"
-        }
-      ],
-      "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SM, WDS, PBR, SFL, EC"
-    },
     {
       "key": "news_parse",
       "title": "News parse",
@@ -464,6 +407,24 @@
         }
       ],
       "preview": "2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T11:12:45.095965-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-09-15_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 13897,
+          "preview": "# Premarket Prediction \u2014 2026-09-15\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -4.389 (uncertainty multiplier \u00d71.0) | confidence 0.65\n>\n> **Good news vs bad news:** good +0 pts vs bad -7.5 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - ES/NQ +0.3% vs cash (not confirming)\n> - HY still contained at 2.71\n> - VIX/VIX3M 0.90 contango\n> - China IP +5.2% beat\n> - AMD T+1 bounce not a fresh miss\n>\n> **Bad news driving this:**\n> - Asia -1.10% (Kospi -3.26%)\n> - 1w 10Y +19bp / 5% handle\n> - WTI +3% leftover Hormuz/Petroline\n> - FOMC-eve hike ~87-92% unprinted\n> - Canada 50% tariff-list live\n>\n> **market uncertainty: **elevated** | VIX 17.78 | policy-uncertainty index 215.48 (1d -202.54)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -1.0 \u00d7 2.0 = -2.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 O"
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-09-15\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -4.389 (uncertainty multiplier \u00d71.0) | confidence 0.65\n>\n> **Good news vs bad news:** good +0 pts vs bad -7.5 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - ES/NQ +0.3% vs cash (not confirming)\n> - HY still contained at 2.71\n> - VIX/VIX3M 0.90 contango\n> - China IP +5.2% beat\n> - AMD T+1 bounce not a fresh miss\n>\n> **Bad news driving this:**\n> - Asia -1.10% (Kospi -3.26%)\n> - 1w 10Y +19bp / 5% handle\n> - WTI +3% leftover Hormuz/Petroline\n> - FOMC-eve hike ~87-92% unprinted\n> - Canada 50% tariff-list live\n>\n> **market uncertainty: **elevated** | VIX 17.78 | policy-uncertainty index 215.48 (1d -202.54)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -1.0 \u00d7 2.0 = -2.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 O"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
