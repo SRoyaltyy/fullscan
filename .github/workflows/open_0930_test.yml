@@ -21,6 +21,7 @@ on:
       - "src/elite_live_px.py"
       - "src/test_elite_live_px.py"
       - "src/publish_live_boards.py"
+      - "src/day_board.py"
       - "src/book_suggestions.py"
       - "src/test_book_suggestions.py"
       - "scripts/publish_open_pack.sh"

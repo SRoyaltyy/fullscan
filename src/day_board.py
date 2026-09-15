@@ -262,12 +262,62 @@ def merge_ours_dir(ours_dir: str) -> None:
         print(f"[day-board] merged {ours_dir} -> {newest_date} ({n} lands)")
 
 
+def elite_ticket_1d(date: str) -> tuple[list, list, dict] | None:
+    """On-disk 09:30 Elite 1d rows, or None.
+
+    news_parse / map_heat / join lands call write_json and used to replace
+    the live strip with ranker scores (no px). Prefer today's elite_live
+    tickets when they exist.
+    """
+    from . import elite_live_px as elp
+
+    paths = (
+        BOARD_DIR / "today_strategies.json",
+        BOARD_DIR / f"{date}_strategy_tickets.json",
+        ROOT / "dashboard" / "factor-mine" / "strategy_tickets.json",
+        ROOT / "dashboard" / "today_strategies.json",
+    )
+    for path in paths:
+        data = _load_json(path)
+        if not data:
+            continue
+        legal = str(data.get("clock_legal_for") or data.get("date") or "")
+        if legal and legal != date:
+            continue
+        quote = data.get("quote") or {}
+        if not elp.quote_is_elite_live(quote):
+            continue
+        sb = (data.get("strategies") or {}).get("stock_book_1d") or {}
+        buys = list(data.get("buy_1d") or sb.get("buy") or [])
+        sells = list(data.get("sell_1d") or sb.get("sell") or [])
+        if buys or sells:
+            return buys, sells, quote
+    return None
+
+
 def write_json(board: dict) -> list[Path]:
     BOARD_DIR.mkdir(parents=True, exist_ok=True)
     date = str(board.get("date") or _today())
     day_p = BOARD_DIR / f"{date}.json"
     latest_p = BOARD_DIR / "latest.json"
     today_p = BOARD_DIR / "today.json"
+    sel = board.get("selections") or {}
+    buys = list(sel.get("buy_1d") or [])
+    sells = list(sel.get("sell_1d") or [])
+    quote = dict(board.get("quote") or {})
+    live = elite_ticket_1d(date)
+    if live:
+        buys, sells, quote = live
+        sel = dict(sel)
+        sel["buy_1d"] = buys
+        sel["sell_1d"] = sells
+        board["selections"] = sel
+        board["quote"] = quote
+        print(
+            "[day-board] keep 09:30 Elite 1d "
+            f"buy={[r.get('ticker') for r in buys[:6] if isinstance(r, dict)]}",
+            flush=True,
+        )
     day_p.write_text(json.dumps(board, indent=2), encoding="utf-8")
     latest = {
         "date": date,
@@ -280,15 +330,15 @@ def write_json(board: dict) -> list[Path]:
         "pages": PAGES_URL,
     }
     latest_p.write_text(json.dumps(latest, indent=2), encoding="utf-8")
-    sel = board.get("selections") or {}
     today_p.write_text(json.dumps({
         "date": date,
         "generated_at": board.get("generated_at"),
         "overall": board.get("overall"),
         "ranker_ready": board.get("ranker_ready"),
         "counts": board.get("counts") or {},
-        "buy_1d": sel.get("buy_1d") or [],
-        "sell_1d": sel.get("sell_1d") or [],
+        "buy_1d": buys,
+        "sell_1d": sells,
+        "quote": quote,
         "flatten": sel.get("flatten") or {},
         "general": sel.get("general") or {},
         "sectors": sel.get("sectors") or {},
