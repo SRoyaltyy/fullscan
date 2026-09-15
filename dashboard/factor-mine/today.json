@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T11:11:23.939742-04:00",
+  "generated_at": "2026-09-15T11:16:33.802229-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -125,31 +125,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "map_heat_baseline",
-      "title": "Map heat night baseline",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T07:25:23.604312-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-15_research_baseline.json",
-          "ok": true,
-          "reason": "",
-          "size": 351492,
-          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-15_research_baseline.md",
-          "ok": true,
-          "reason": "",
-          "size": 43443,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-15\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-15\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-    },
     {
       "key": "universe",
       "title": "Universe labels",
@@ -2649,6 +2624,101 @@
         }
       ],
       "preview": "# News Judge \u2014 2026-09-15 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "live_boards",
+      "title": "live_boards",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T11:12:29.677149-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 18512,
+          "preview": "2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 944,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-15.json",
+          "ok": true,
+          "reason": "",
+          "size": 176110,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-15_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 154691,
+          "preview": "2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 850435,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-15_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 850435,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1244794,
+          "preview": "2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 850435,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 154691,
+          "preview": "2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 850435,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 850435,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1244794,
+          "preview": "2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR"
+        }
+      ],
+      "preview": "2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock"
     }
   ],
   "source": "publish_live_boards"
