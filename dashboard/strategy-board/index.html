@@ -180,7 +180,7 @@ machine data/strategy_board/catalog.json · write-up 03_scoreboard/STRATEGY_BOAR
     var src = q.src || "";
     if(!src && !q.at) return "";
     var banned = /theme|radar|_close|yesterday/i.test(src);
-    var live = !banned && (src === "elite_live" || src === "elite_live_file");
+    var live = !banned && String(src).indexOf("elite_live") === 0;
     var bit = " · px " + (src || "?") + (live ? " (now)" : " (not live)");
     if(banned) bit += " — Theme Radar/close refused";
     if(q.at) bit += " @ " + q.at;
