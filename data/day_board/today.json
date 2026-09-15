@@ -1,14 +1,129 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T11:17:40.810633-04:00",
-  "overall": null,
-  "ranker_ready": null,
-  "counts": {},
-  "buy_1d": [],
-  "sell_1d": [],
-  "flatten": {},
-  "general": {},
-  "sectors": {},
+  "generated_at": "2026-09-15T11:25:51.268910-04:00",
+  "overall": "OK",
+  "ranker_ready": true,
+  "counts": {
+    "ok": 8,
+    "partial": 0,
+    "fail": 0,
+    "n": 8
+  },
+  "buy_1d": [
+    {
+      "ticker": "AMGN",
+      "score": 0.09080014125288889
+    },
+    {
+      "ticker": "LLY",
+      "score": 0.35620503368166595
+    },
+    {
+      "ticker": "S",
+      "score": 0.5383606939554906
+    },
+    {
+      "ticker": "FFIV",
+      "score": 0.19348888952122334
+    },
+    {
+      "ticker": "META",
+      "score": 0.3469506591337837
+    },
+    {
+      "ticker": "SNAP",
+      "score": 0.48958801256022805
+    },
+    {
+      "ticker": "ANGX",
+      "score": 0.5324899263792778
+    },
+    {
+      "ticker": "RPD",
+      "score": 0.5251915855613591
+    },
+    {
+      "ticker": "HITI",
+      "score": 0.2895286042792773
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "METC",
+      "score": -0.6600195692423577
+    },
+    {
+      "ticker": "FLNC",
+      "score": -0.6059014779891931
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.5946383246876308
+    },
+    {
+      "ticker": "OKLO",
+      "score": -0.4471021843609181
+    },
+    {
+      "ticker": "TLN",
+      "score": -0.619963013242493
+    },
+    {
+      "ticker": "TE",
+      "score": -0.44936729631534666
+    },
+    {
+      "ticker": "IONQ",
+      "score": -0.3829046741509327
+    },
+    {
+      "ticker": "LVWR",
+      "score": -0.5841307624748288
+    },
+    {
+      "ticker": "QBTS",
+      "score": -0.28547887599745464
+    },
+    {
+      "ticker": "NRG",
+      "score": -0.34849244421389436
+    }
+  ],
+  "flatten": {
+    "said": "0 priced buys \u00b7 cash $107,448.18",
+    "bullets": [
+      "0 priced buys",
+      "cash $107,448.18"
+    ]
+  },
+  "general": {
+    "said": "DOWN  -4.389",
+    "bullets": [
+      "bad: Asia -1.10% (Kospi -3.26%)",
+      "bad: 1w 10Y +19bp / 5% handle",
+      "bad: WTI +3% leftover Hormuz/Petroline",
+      "good: ES/NQ +0.3% vs cash (not confirming)",
+      "good: HY still contained at 2.71"
+    ],
+    "score": "-4.389",
+    "direction": "down"
+  },
+  "sectors": {
+    "said": "3 up / 7 down / 1 flat",
+    "bullets": [
+      "XLB DOWN -7.6",
+      "XLC UP +0.4",
+      "XLY DOWN -4.7",
+      "XLP FLAT -8.1",
+      "XLE UP +4.0",
+      "XLF DOWN -4.1",
+      "XLV UP +0.9",
+      "XLI DOWN -5.9",
+      "XLRE DOWN -8.5",
+      "XLK DOWN -1.5",
+      "XLU DOWN -8.2"
+    ]
+  },
   "lands": [],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
 }
