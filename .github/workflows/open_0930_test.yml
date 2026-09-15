@@ -22,6 +22,7 @@ on:
       - "src/test_elite_live_px.py"
       - "src/publish_live_boards.py"
       - "src/day_board.py"
+      - "src/test_day_board.py"
       - "src/book_suggestions.py"
       - "src/test_book_suggestions.py"
       - "src/overlay_live_strip.py"
@@ -62,3 +63,12 @@ jobs:
           PYTHONPATH=. python3 -m src.test_skip_if_good
           PYTHONPATH=. python3 -m src.test_elite_live_px
           PYTHONPATH=. python3 -m src.test_book_suggestions
+          PYTHONPATH=. python3 -c "
+          from src.test_day_board import (
+              test_write_json_keeps_open_0930_lock_over_ranker_scores,
+              test_day_board_html_has_raw_poll,
+          )
+          test_write_json_keeps_open_0930_lock_over_ranker_scores()
+          test_day_board_html_has_raw_poll()
+          print('day_board lock+html ok')
+          "

@@ -203,6 +203,56 @@ def test_day_board_html_has_raw_poll() -> None:
     assert "!buys && !sells && !afterBell()" in html
 
 
+def test_write_json_keeps_open_0930_lock_over_ranker_scores() -> None:
+    """news_parse-style write_json must not replace locked MTCH with DBX scores."""
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        board_dir = root / "data" / "day_board"
+        board_dir.mkdir(parents=True)
+        lock = {
+            "date": "2026-09-15",
+            "clock_legal_for": "2026-09-15",
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+            "sell_1d": [{"ticker": "OKLO", "px": 36.14, "px_src": "elite_live"}],
+            "strategies": {"stock_book_1d": {
+                "buy": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+                "sell": [{"ticker": "OKLO", "px": 36.14, "px_src": "elite_live"}],
+            }},
+        }
+        (board_dir / "2026-09-15_open_0930.json").write_text(
+            json.dumps(lock), encoding="utf-8")
+        (board_dir / "today_strategies.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "DBX", "px": 38.07, "px_src": "elite_live"}],
+        }), encoding="utf-8")
+        board = {
+            "date": "2026-09-15",
+            "generated_at": "t",
+            "overall": "OK",
+            "ranker_ready": True,
+            "counts": {"ok": 1},
+            "selections": {
+                "buy_1d": [{"ticker": "DBX", "score": 0.67}],
+                "sell_1d": [{"ticker": "OKTA", "score": 0.1}],
+            },
+            "lands": [],
+        }
+        with mock.patch.object(day_board, "ROOT", root), \
+                mock.patch.object(day_board, "BOARD_DIR", board_dir):
+            wrote = day_board.write_json(board)
+        today = json.loads((board_dir / "today.json").read_text())
+        assert today["buy_1d"][0]["ticker"] == "MTCH"
+        assert today["buy_1d"][0]["px"] == 43.04
+        assert today["quote"]["src"] == "elite_live"
+        fm = root / "dashboard" / "factor-mine" / "today.json"
+        assert fm.is_file()
+        fm_today = json.loads(fm.read_text())
+        assert fm_today["buy_1d"][0]["ticker"] == "MTCH"
+        assert any(p == board_dir / "today.json" for p in wrote)
+
+
 def test_should_not_push_locally() -> None:
     os.environ.pop("GITHUB_ACTIONS", None)
     os.environ.pop("FULLSCAN_LAND", None)
@@ -260,6 +310,7 @@ def main() -> None:
         test_merge_boards_unions_lands,
         test_qc_rejects_2b_digest,
         test_day_board_html_has_raw_poll,
+        test_write_json_keeps_open_0930_lock_over_ranker_scores,
         test_day_board_splits_finviz_digest_rows,
         test_should_not_push_locally,
         test_land_never_raises,
