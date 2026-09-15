@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T16:14:41.992280-04:00",
+  "generated_at": "2026-09-15T16:14:55.088539-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -248,7 +248,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7134
+          "size": 7135
         },
         {
           "key": "qc",
@@ -384,11 +384,11 @@
         "bad: WTI +4% leftover Hormuz",
         "good: ES/NQ not independently weak",
         "good: HY contained 2.71",
-        "XLB DOWN -7.6",
-        "XLC FLAT -3.8",
-        "XLY DOWN -3.3",
-        "XLP FLAT -5.0",
-        "XLE UP +6.8"
+        "XLB DOWN -5.7",
+        "XLC FLAT -4.6",
+        "XLY DOWN -7.2",
+        "XLP FLAT -5.8",
+        "XLE UP +5.8"
       ]
     },
     {
@@ -531,7 +531,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 7134
+          "size": 7135
         },
         {
           "key": "in_actions",
@@ -782,17 +782,17 @@
     "sectors": {
       "said": "1 up / 8 down / 2 flat",
       "bullets": [
-        "XLB DOWN -7.6",
-        "XLC FLAT -3.8",
-        "XLY DOWN -3.3",
-        "XLP FLAT -5.0",
-        "XLE UP +6.8",
-        "XLF DOWN -3.8",
-        "XLV DOWN -2.9",
-        "XLI DOWN -0.5",
-        "XLRE DOWN -6.3",
-        "XLK DOWN -1.1",
-        "XLU DOWN -6.5"
+        "XLB DOWN -5.7",
+        "XLC FLAT -4.6",
+        "XLY DOWN -7.2",
+        "XLP FLAT -5.8",
+        "XLE UP +5.8",
+        "XLF DOWN -4.1",
+        "XLV DOWN -4.1",
+        "XLI DOWN -0.6",
+        "XLRE DOWN -7.3",
+        "XLK DOWN -2.6",
+        "XLU DOWN -6.6"
       ]
     },
     "news": {
@@ -815,31 +815,6 @@
     }
   },
   "lands": [
-    {
-      "key": "ab",
-      "title": "AB checklist",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T10:03:16.094382-04:00",
-      "files": [
-        {
-          "path": "data/ab_checklist/2026-09-15_ab_checklist.csv",
-          "ok": true,
-          "reason": "",
-          "size": 7626799,
-          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM"
-        },
-        {
-          "path": "data/ab_checklist/2026-09-15_ab_checklist_enriched.csv",
-          "ok": true,
-          "reason": "",
-          "size": 8449403,
-          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, CDNA, SM, AVT, WDS"
-        }
-      ],
-      "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, CDNA, SM, AVT, WDS"
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -3542,6 +3517,24 @@
         }
       ],
       "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T16:14:53.742160-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-15/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 7135,
+          "preview": "keys: date, generated_at, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, sectors"
     }
   ],
   "href": {
