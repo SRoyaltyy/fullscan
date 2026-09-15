@@ -668,6 +668,12 @@ function liveTicketsAreOpen(){
 function liveTicketsAreLive(){
   const st=liveTickets();
   const src=String((st.quote&&st.quote.src)||'');
+  const d=String(st.date||st.clock_legal_for||'');
+  let today='';
+  try{
+    today=new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+  }catch(e){}
+  if(today && d && d!==today) return false;
   return !!(st.quote && st.quote.after_open && src.indexOf('elite_live')===0);
 }
 function attachLiveSessionDate(){

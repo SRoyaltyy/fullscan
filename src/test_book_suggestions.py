@@ -122,6 +122,7 @@ def test_factor_mine_template_paints_every_strategy() -> None:
     assert "d!==today" in html or "d !== today" in html
     assert "function ticketRows" in html
     assert "function liveTicketsAreLive" in html
+    assert "d!==today" in html
     assert "liveDate===date && liveTicketsAreLive()" in html
     assert "after 09:30 live" in html
     assert "LIVE</span>" in html
