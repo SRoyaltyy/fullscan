@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T04:24:33.973380-04:00",
+  "generated_at": "2026-09-15T04:24:58.971605-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -142,7 +142,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 3,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -188,9 +188,9 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-09-15_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 61551
         },
         {
           "key": "events",
@@ -262,7 +262,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7282
+          "size": 7279
         },
         {
           "key": "status",
@@ -382,8 +382,13 @@
           "size": 0
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "news 5 items",
+      "bullets": [
+        "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
+        "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year",
+        "Another rate hike, just for insurance: Five questions for the ECB",
+        "S&P 500, Nasdaq, Dow Drop On Chipmaker Weakness, Treasury Yield Pressure  MSFT, NFLX, ORCL, CRWD, RBLX In Focus"
+      ]
     },
     {
       "key": "weather",
@@ -699,7 +704,16 @@
     "flatten": {},
     "general": {},
     "sectors": {},
-    "news": {},
+    "news": {
+      "said": "5 items",
+      "bullets": [
+        "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
+        "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year",
+        "Another rate hike, just for insurance: Five questions for the ECB",
+        "S&P 500, Nasdaq, Dow Drop On Chipmaker Weakness, Treasury Yield Pressure  MSFT, NFLX, ORCL, CRWD, RBLX In Focus",
+        "Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first two ES-SCLC doses"
+      ]
+    },
     "weather": {
       "said": "hostile 9 \u00b7 neutral 2",
       "bullets": [
@@ -1432,6 +1446,31 @@
         }
       ],
       "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SM, WDS, PBR, SOBO, SHEL"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T04:24:58.284598-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 61551,
+          "preview": "raw=121 usable=5 single=18 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB | S&P 500, Nasdaq, Dow Drop On Chipmaker Weakness, Treasury Yield Pressure  MSFT,  | Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 3679,
+          "preview": "# News Parse v2 \u2014 2026-09-15T04:24:58.263461-04:00\nWindow\u224848h | raw=121 | usable=5 | single_name=18 | noise_dropped=98\nusable polarity={'+': 1, '-': 2, 'mixed': 0, 'neutral': 2}"
+        }
+      ],
+      "preview": "raw=121 usable=5 single=18 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB | S&P 500, Nasdaq, Dow Drop On Chipmaker Weakness, Treasury Yield Pressure  MSFT,  | Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first \u00b7 # News Parse v2 \u2014 2026-09-15T04:24:58.263461-04:00\nWindow\u224848h | raw=121 | usable=5 | single_name=18 | noise_dropped=98\nusable polarity={'+': 1, '-': 2, 'mixed': 0, 'neutral': 2}"
     }
   ],
   "href": {

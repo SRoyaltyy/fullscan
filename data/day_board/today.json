@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T04:24:33.973380-04:00",
+  "generated_at": "2026-09-15T04:24:58.971605-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,24 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T04:23:49.233648-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-09-15_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1116884,
-          "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "weather",
       "title": "Weather / regime (offline retry)",
@@ -207,6 +189,31 @@
         }
       ],
       "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SM, WDS, PBR, SOBO, SHEL"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T04:24:58.284598-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 61551,
+          "preview": "raw=121 usable=5 single=18 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB | S&P 500, Nasdaq, Dow Drop On Chipmaker Weakness, Treasury Yield Pressure  MSFT,  | Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 3679,
+          "preview": "# News Parse v2 \u2014 2026-09-15T04:24:58.263461-04:00\nWindow\u224848h | raw=121 | usable=5 | single_name=18 | noise_dropped=98\nusable polarity={'+': 1, '-': 2, 'mixed': 0, 'neutral': 2}"
+        }
+      ],
+      "preview": "raw=121 usable=5 single=18 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB | S&P 500, Nasdaq, Dow Drop On Chipmaker Weakness, Treasury Yield Pressure  MSFT,  | Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first \u00b7 # News Parse v2 \u2014 2026-09-15T04:24:58.263461-04:00\nWindow\u224848h | raw=121 | usable=5 | single_name=18 | noise_dropped=98\nusable polarity={'+': 1, '-': 2, 'mixed': 0, 'neutral': 2}"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
