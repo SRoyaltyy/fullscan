@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T11:02:02.340095-04:00",
+  "generated_at": "2026-09-15T11:02:23.827361-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -93,24 +93,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T10:46:15.259753-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-09-15_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1116667,
-          "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -348,6 +330,31 @@
         }
       ],
       "preview": "100 events \u00b7 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | ECB 25bp hike delivered; hawkish forecast upgrade | China August credit/social financing \u2014 bond & equity share tops loans  | US existing home sales fall to 14-month low; mortgage rates up 3rd wee \u00b7 # Event Scan \u2014 2026-09-15\n- events tracked: **92** (via openclaw) (merged with earlier same-day scan)\n- uncertainty: **high**\n- summary: The next 48 hours are a stacked global-tightening event: US retail sales then Warsh's first FOMC, UK CPI then BoE, then BoJ \u2014 all with Brent still ~$106-108 because Hormuz is impaired and Saudi's East-West pipeline is shut. China printed a split economy today (strong IP, dead consumption/investment), the US-Canada tariff war escalated this morning, and the Sept 24 Trump-Xi summit is the last clean shot at extending the Nov 10 trade truce. Mega-cap earnings are empty; the tape will be rates, oil, and geopolitics."
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T11:02:22.444392-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 31610,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 9718,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-09-15T11:02:22.434671-04:00\nraw=221 unique_events=4 tickers=53"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-15T11:02:22.434671-04:00\nraw=221 unique_events=4 tickers=53"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

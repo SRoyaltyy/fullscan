@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T11:02:02.340095-04:00",
+  "generated_at": "2026-09-15T11:02:23.827361-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -230,7 +230,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 32043
+          "size": 31610
         },
         {
           "key": "general",
@@ -480,7 +480,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 32043
+          "size": 31610
         },
         {
           "key": "in_digest",
@@ -540,7 +540,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 32043
+          "size": 31610
         },
         {
           "key": "in_digest",
@@ -803,31 +803,6 @@
     }
   },
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T07:24:58.923317-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-15_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 87542,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-09-15_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11377,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T04:24:05.914452-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T04:24:05.914452-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -3327,6 +3302,31 @@
         }
       ],
       "preview": "100 events \u00b7 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | ECB 25bp hike delivered; hawkish forecast upgrade | China August credit/social financing \u2014 bond & equity share tops loans  | US existing home sales fall to 14-month low; mortgage rates up 3rd wee \u00b7 # Event Scan \u2014 2026-09-15\n- events tracked: **92** (via openclaw) (merged with earlier same-day scan)\n- uncertainty: **high**\n- summary: The next 48 hours are a stacked global-tightening event: US retail sales then Warsh's first FOMC, UK CPI then BoE, then BoJ \u2014 all with Brent still ~$106-108 because Hormuz is impaired and Saudi's East-West pipeline is shut. China printed a split economy today (strong IP, dead consumption/investment), the US-Canada tariff war escalated this morning, and the Sept 24 Trump-Xi summit is the last clean shot at extending the Nov 10 trade truce. Mega-cap earnings are empty; the tape will be rates, oil, and geopolitics."
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T11:02:22.444392-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 31610,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 9718,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-09-15T11:02:22.434671-04:00\nraw=221 unique_events=4 tickers=53"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-15T11:02:22.434671-04:00\nraw=221 unique_events=4 tickers=53"
     }
   ],
   "href": {

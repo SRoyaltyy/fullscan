@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-15T08:33:51.127518-04:00",
+  "generated_at": "2026-09-15T11:02:22.434671-04:00",
   "hours": 48,
-  "raw_headlines": 197,
+  "raw_headlines": 221,
   "news_source": "local_files:empty",
   "unique_events": 4,
   "universe_rows": 11617,
@@ -154,7 +154,7 @@
       ],
       "evidence": [
         {
-          "title": "US-Iran tanker war; Hormuz impaired, Brent ~$107",
+          "title": "US-Iran tanker war; Hormuz impaired; Brent ~$106-108",
           "source": "events",
           "url": "",
           "published_at": ""
@@ -386,21 +386,6 @@
     }
   ],
   "ticker_actions": [
-    {
-      "ticker": "ADBE",
-      "buy_score": 7.0,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "news_judge",
-          "side": "buy",
-          "weight": 7.0,
-          "bucket": "judge"
-        }
-      ],
-      "net": 7.0,
-      "side": "buy"
-    },
     {
       "ticker": "COP",
       "buy_score": 6.8,
@@ -759,7 +744,7 @@
       "side": "buy"
     },
     {
-      "ticker": "GDX",
+      "ticker": "ADBE",
       "buy_score": 4.0,
       "sell_score": 0.0,
       "events": [
@@ -772,6 +757,21 @@
       ],
       "net": 4.0,
       "side": "buy"
+    },
+    {
+      "ticker": "XLF",
+      "buy_score": 0.0,
+      "sell_score": 4.0,
+      "events": [
+        {
+          "event": "news_judge",
+          "side": "sell",
+          "weight": 4.0,
+          "bucket": "judge"
+        }
+      ],
+      "net": -4.0,
+      "side": "sell"
     },
     {
       "ticker": "CEG",
@@ -902,43 +902,6 @@
       "size": "small"
     },
     {
-      "ticker": "JPM",
-      "buy_score": 3.0,
-      "sell_score": 1.05,
-      "events": [
-        {
-          "event": "weak_labor_print",
-          "side": "sell",
-          "weight": 1.05,
-          "bucket": "banks_diversified"
-        },
-        {
-          "event": "news_judge",
-          "side": "buy",
-          "weight": 3.0,
-          "bucket": "judge"
-        }
-      ],
-      "net": 1.95,
-      "side": "buy",
-      "size": "mega"
-    },
-    {
-      "ticker": "GS",
-      "buy_score": 1.5,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "news_judge",
-          "side": "buy",
-          "weight": 1.5,
-          "bucket": "judge"
-        }
-      ],
-      "net": 1.5,
-      "side": "buy"
-    },
-    {
       "ticker": "NEM",
       "buy_score": 1.4,
       "sell_score": 0.0,
@@ -1065,6 +1028,22 @@
       "net": 1.4,
       "side": "buy",
       "size": "large"
+    },
+    {
+      "ticker": "JPM",
+      "buy_score": 0.0,
+      "sell_score": 1.05,
+      "events": [
+        {
+          "event": "weak_labor_print",
+          "side": "sell",
+          "weight": 1.05,
+          "bucket": "banks_diversified"
+        }
+      ],
+      "net": -1.05,
+      "side": "sell",
+      "size": "mega"
     },
     {
       "ticker": "FRBT",
@@ -1261,10 +1240,8 @@
   ],
   "judge_tickers": {
     "IGV": 4.0,
-    "ADBE": 7.0,
-    "BAC": -5.5,
-    "GDX": 4.0,
-    "JPM": 3.0,
-    "GS": 1.5
+    "ADBE": 4.0,
+    "XLF": -4.0,
+    "BAC": -5.5
   }
 }
