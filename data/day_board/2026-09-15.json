@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T16:28:05.492048-04:00",
+  "generated_at": "2026-09-15T16:43:34.005178-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -417,14 +417,14 @@
           "path": "01_daily/weather/2026-09-15_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10561 vix=falling yields=flat",
-          "size": 10561
+          "reason": "sectors=11 bytes=9755 vix=falling yields=flat",
+          "size": 9755
         }
       ],
-      "said": "favorable 1 \u00b7 hostile 7 \u00b7 neutral 3",
+      "said": "favorable 1 \u00b7 hostile 9 \u00b7 neutral 1",
       "bullets": [
-        "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Financial, Industrials, Real Estate, Utilities",
-        "events bull 4 / bear 14"
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Financial, Healthcare, Real Estate, Technology, Utilities",
+        "events bull 10 / bear 29"
       ]
     },
     {
@@ -454,12 +454,12 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2653",
-          "size": 8478400
+          "size": 8478333
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "PBR, SM, WDS, CFFN, SFL"
+        "SM, WDS, SFL, CFFN, CDNA"
       ]
     },
     {
@@ -566,8 +566,8 @@
           "path": "01_daily/weather/2026-09-15_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10561 vix=falling yields=flat",
-          "size": 10561
+          "reason": "sectors=11 bytes=9755 vix=falling yields=flat",
+          "size": 9755
         },
         {
           "key": "in_ab",
@@ -576,7 +576,7 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2653",
-          "size": 8478400
+          "size": 8478333
         },
         {
           "key": "join",
@@ -585,7 +585,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5897",
-          "size": 2259846
+          "size": 2282919
         },
         {
           "key": "peers",
@@ -642,9 +642,9 @@
           "size": 5954895
         }
       ],
-      "said": "215 rows",
+      "said": "210 rows",
       "bullets": [
-        "RRC, AR, DVN, PBR, EXE"
+        "RRC, SM, DVN, PR, EXE"
       ]
     },
     {
@@ -823,39 +823,14 @@
       ]
     },
     "weather": {
-      "said": "favorable 1 \u00b7 hostile 7 \u00b7 neutral 3",
+      "said": "favorable 1 \u00b7 hostile 9 \u00b7 neutral 1",
       "bullets": [
-        "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Financial, Industrials, Real Estate, Utilities",
-        "events bull 4 / bear 14"
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Financial, Healthcare, Real Estate, Technology, Utilities",
+        "events bull 10 / bear 29"
       ]
     }
   },
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T10:45:39.590760-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-15_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 87526,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-09-15_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11377,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T07:31:21.815244-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T07:31:21.815244-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -3264,6 +3239,101 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-15\n**Generated:** 2026-09-15T16:28:04.327568-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks fell as the 10-year yield hit a 19-year high and Brent hovered near $108 ahead of Fed rate decision\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow -0.80%\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** -0.80%\n**Oil:** Brent crude $108.0\n**CPI/Fed:** 90.0% hike (90% chance of a 25-basis-point rate hike)\n**Leaders:** PLAY, INTC, QCOM, AMD, NVDA, MU, GS, JPM, COIN, HOOD, TCOM\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-16\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "live_boards",
+      "title": "live_boards",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T16:43:32.963639-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 12827,
+          "preview": "2026-09-15 BUY MPC, ZD, DBX, OKTA, S, MTCH, TWLO, AVAH \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, NRG"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 944,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-15.json",
+          "ok": true,
+          "reason": "",
+          "size": 168439,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-15_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 147027,
+          "preview": "2026-09-15 BUY MPC, ZD, DBX, OKTA, S, MTCH, TWLO, AVAH \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, NRG"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2619728,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-15_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2619728,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2988794,
+          "preview": "2026-09-15 BUY MPC, ZD, DBX, OKTA, S, MTCH, TWLO, AVAH \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, NRG"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2619728,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 147027,
+          "preview": "2026-09-15 BUY MPC, ZD, DBX, OKTA, S, MTCH, TWLO, AVAH \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, NRG"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2619728,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2619728,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2988794,
+          "preview": "2026-09-15 BUY MPC, ZD, DBX, OKTA, S, MTCH, TWLO, AVAH \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, NRG"
+        }
+      ],
+      "preview": "2026-09-15 BUY MPC, ZD, DBX, OKTA, S, MTCH, TWLO, AVAH \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, NRG \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-15 BUY MPC, ZD, DBX, OKTA, S, MTCH, TWLO, AVAH \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, NRG \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY MPC, ZD, DBX, OKTA, S, MTCH, TWLO, AVAH \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, NRG \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY MPC, ZD, DBX, OKTA, S, MTCH, TWLO, AVAH \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, NRG \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, "
     }
   ],
   "href": {
