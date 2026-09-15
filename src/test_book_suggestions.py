@@ -159,8 +159,12 @@ def test_day_board_falls_back_to_suggestions() -> None:
     assert "function firstOk" in html
     assert "ok ? {} : last" in html
     assert "function ticketsLookLive" in html
+    assert "function stripLooksLive" in html
     assert "function sessionDate" in html
     assert "afterBell() ? ticketsLookLive" in html
+    assert "afterBell() ? stripLooksLive" in html
+    assert '"today.json"' in html
+    assert "viewingToday && afterBell() && !liveBoard" in html
     assert "earlyBuys" in html
     assert "!buys && !sells && !afterBell()" in html
 

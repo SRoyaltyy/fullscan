@@ -199,8 +199,13 @@ def test_day_board_html_has_raw_poll() -> None:
     assert "function firstOk" in html
     assert "ok ? {} : last" in html
     assert "function ticketsLookLive" in html
+    assert "function stripLooksLive" in html
     assert "function sessionDate" in html
     assert '"today_strategies.json"' in html
+    assert '"today.json"' in html
+    assert "RAW + \"/today.json\"" in html
+    assert "afterBell() ? stripLooksLive" in html
+    assert "viewingToday && afterBell() && !liveBoard" in html
     assert "earlyBuys" in html
     assert "!buys && !sells && !afterBell()" in html
 
