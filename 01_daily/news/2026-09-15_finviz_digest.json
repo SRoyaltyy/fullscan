@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T06:03:08.084091-04:00",
+  "generated_at": "2026-09-15T06:05:56.763437-04:00",
   "export_used": "data/exports/finviz_2026-09-15.csv",
   "ticker_digest_count": 400,
   "signal_count": 400,
@@ -9,28 +9,28 @@
       "ticker": "SPY",
       "index": "S&P 500",
       "digest": "AI, Fed And 5% Treasury Yield: Three Risks Putting Nasdaq, Dow Futures On Edge Ahead Of Wednesdays Rate Decision",
-      "source": "finviz_elite_news",
+      "source": "finviz_export",
       "error": null
     },
     {
       "ticker": "QQQ",
       "index": "Nasdaq-100",
       "digest": "AI, Fed And 5% Treasury Yield: Three Risks Putting Nasdaq, Dow Futures On Edge Ahead Of Wednesdays Rate Decision",
-      "source": "finviz_elite_news",
+      "source": "finviz_export",
       "error": null
     },
     {
       "ticker": "DIA",
       "index": "Dow Jones",
       "digest": "S&P 500, Nasdaq, Dow Drop On Chipmaker Weakness, Treasury Yield Pressure  MSFT, NFLX, ORCL, CRWD, RBLX In Focus",
-      "source": "finviz_elite_news",
+      "source": "finviz_export",
       "error": null
     },
     {
       "ticker": "IWM",
       "index": "Russell 2000",
       "digest": "Investors worried about rising bond yields are keeping a close eye on this corner of the market",
-      "source": "finviz_elite_news",
+      "source": "finviz_export",
       "error": null
     }
   ],
@@ -96,6 +96,17 @@
       "news_title": "Norwegian Cruise downgrade, Duolingo upgraded: Wall Street's top analyst calls",
       "sector": "Communication Services",
       "industry": "Telecom Services",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "AMZN",
+      "digest": "Amazon's India quick-commerce unit Amazon Now tops $1bn in gross annualised sales as volumes surge",
+      "news_title": "Amazon Now crosses $1bn in gross annualised sales  report",
+      "sector": "Consumer Cyclical",
+      "industry": "Internet Retail",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -203,7 +214,7 @@
     {
       "ticker": "BAC",
       "digest": "BAC CEO's soft Q3 outlook at Barclays conference drives 5% plunge",
-      "news_title": "Stock-picking, multi-manager hedge funds attract more capital from investors in 2026, BofA says",
+      "news_title": "Stock Market Today: 10-Year Yield Forges Above 5%",
       "sector": "Financial",
       "industry": "Banks - Diversified",
       "is_dividend": false,
@@ -302,7 +313,7 @@
     {
       "ticker": "CAT",
       "digest": "Freedom Broker upgrades Caterpillar to Buy, lifts price target to $980 on U.S.-Canada tariff benefits",
-      "news_title": "3 Stocks That Offer AI Exposure and Dividends",
+      "news_title": "Bull of the Day: Caterpillar (CAT)",
       "sector": "Industrials",
       "industry": "Farm & Heavy Construction Machinery",
       "is_dividend": false,
@@ -683,17 +694,6 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export"
-    },
-    {
-      "ticker": "MNST",
-      "digest": "Q2 earnings momentum and recent stock split fuel MNST 4.09% gain",
-      "news_title": "KO Stock Near Highs: Has Momentum Outrun Value?",
-      "sector": "Consumer Defensive",
-      "industry": "Beverages - Non-Alcoholic",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
     }
   ],
   "by_sector": {
@@ -723,7 +723,7 @@
       {
         "ticker": "BAC",
         "digest": "BAC CEO's soft Q3 outlook at Barclays conference drives 5% plunge",
-        "news_title": "Stock-picking, multi-manager hedge funds attract more capital from investors in 2026, BofA says",
+        "news_title": "Stock Market Today: 10-Year Yield Forges Above 5%",
         "sector": "Financial",
         "industry": "Banks - Diversified",
         "is_dividend": false,
@@ -813,7 +813,7 @@
       {
         "ticker": "CAT",
         "digest": "Freedom Broker upgrades Caterpillar to Buy, lifts price target to $980 on U.S.-Canada tariff benefits",
-        "news_title": "3 Stocks That Offer AI Exposure and Dividends",
+        "news_title": "Bull of the Day: Caterpillar (CAT)",
         "sector": "Industrials",
         "industry": "Farm & Heavy Construction Machinery",
         "is_dividend": false,
@@ -1103,6 +1103,63 @@
         "source": "finviz_export"
       }
     ],
+    "Consumer Cyclical": [
+      {
+        "ticker": "AMZN",
+        "digest": "Amazon's India quick-commerce unit Amazon Now tops $1bn in gross annualised sales as volumes surge",
+        "news_title": "Amazon Now crosses $1bn in gross annualised sales  report",
+        "sector": "Consumer Cyclical",
+        "industry": "Internet Retail",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "DASH",
+        "digest": "Scotiabank initiated coverage of DoorDash with a Sector Outperform rating and a $275 price target, citing its scale, subscription-driven user lock-in and margin benefits.",
+        "news_title": "Is Uber Stock Cheap, Or Is The Cash Already Spent?",
+        "sector": "Consumer Cyclical",
+        "industry": "Internet Retail",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "HD",
+        "digest": "Home Depot announces the nationwide rollout of its Magic Apron AI-powered in-store assistant with localized, personalized shopping guidance now live in all U.S. stores.",
+        "news_title": "What Happens To Home Depot Stock If Shoppers Keep Visiting Less?",
+        "sector": "Consumer Cyclical",
+        "industry": "Home Improvement Retail",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "HLT",
+        "digest": "Deutsche Bank upgrades Hilton Worldwide to Buy from Hold, raises price target to $365",
+        "news_title": "Summer Travel Season May Be Ending, but Marriott's Stock Is Worth Checking In For",
+        "sector": "Consumer Cyclical",
+        "industry": "Lodging",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "LOW",
+        "digest": "Bernstein cuts Loweâs price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery",
+        "news_title": "The biggest threat to your retirement is based on a myth  it could rip through your nest egg and even ruin your health",
+        "sector": "Consumer Cyclical",
+        "industry": "Home Improvement Retail",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      }
+    ],
     "Energy": [
       {
         "ticker": "CNQ",
@@ -1160,52 +1217,6 @@
         "source": "finviz_export"
       }
     ],
-    "Consumer Cyclical": [
-      {
-        "ticker": "DASH",
-        "digest": "Scotiabank initiated coverage of DoorDash with a Sector Outperform rating and a $275 price target, citing its scale, subscription-driven user lock-in and margin benefits.",
-        "news_title": "Is Uber Stock Cheap, Or Is The Cash Already Spent?",
-        "sector": "Consumer Cyclical",
-        "industry": "Internet Retail",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "HD",
-        "digest": "Home Depot announces the nationwide rollout of its Magic Apron AI-powered in-store assistant with localized, personalized shopping guidance now live in all U.S. stores.",
-        "news_title": "What Happens To Home Depot Stock If Shoppers Keep Visiting Less?",
-        "sector": "Consumer Cyclical",
-        "industry": "Home Improvement Retail",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "HLT",
-        "digest": "Deutsche Bank upgrades Hilton Worldwide to Buy from Hold, raises price target to $365",
-        "news_title": "Summer Travel Season May Be Ending, but Marriott's Stock Is Worth Checking In For",
-        "sector": "Consumer Cyclical",
-        "industry": "Lodging",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "LOW",
-        "digest": "Bernstein cuts Loweâs price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery",
-        "news_title": "The biggest threat to your retirement is based on a myth  it could rip through your nest egg and even ruin your health",
-        "sector": "Consumer Cyclical",
-        "industry": "Home Improvement Retail",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      }
-    ],
     "Communication Services": [
       {
         "ticker": "AMX",
@@ -1254,30 +1265,6 @@
         "source": "finviz_export"
       }
     ],
-    "Consumer Defensive": [
-      {
-        "ticker": "KO",
-        "digest": "Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.",
-        "news_title": "KO Stock Near Highs: Has Momentum Outrun Value?",
-        "sector": "Consumer Defensive",
-        "industry": "Beverages - Non-Alcoholic",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "MNST",
-        "digest": "Q2 earnings momentum and recent stock split fuel MNST 4.09% gain",
-        "news_title": "KO Stock Near Highs: Has Momentum Outrun Value?",
-        "sector": "Consumer Defensive",
-        "industry": "Beverages - Non-Alcoholic",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      }
-    ],
     "Real Estate": [
       {
         "ticker": "EQIX",
@@ -1285,6 +1272,19 @@
         "news_title": "CoreWeave Shares Sink After Bernstein Warns Of Slower AI Training",
         "sector": "Real Estate",
         "industry": "REIT - Specialty",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      }
+    ],
+    "Consumer Defensive": [
+      {
+        "ticker": "KO",
+        "digest": "Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.",
+        "news_title": "KO Stock Near Highs: Has Momentum Outrun Value?",
+        "sector": "Consumer Defensive",
+        "industry": "Beverages - Non-Alcoholic",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
@@ -1354,6 +1354,17 @@
       "news_title": "Norwegian Cruise downgrade, Duolingo upgraded: Wall Street's top analyst calls",
       "sector": "Communication Services",
       "industry": "Telecom Services",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "AMZN",
+      "digest": "Amazon's India quick-commerce unit Amazon Now tops $1bn in gross annualised sales as volumes surge",
+      "news_title": "Amazon Now crosses $1bn in gross annualised sales  report",
+      "sector": "Consumer Cyclical",
+      "industry": "Internet Retail",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -1461,7 +1472,7 @@
     {
       "ticker": "BAC",
       "digest": "BAC CEO's soft Q3 outlook at Barclays conference drives 5% plunge",
-      "news_title": "Stock-picking, multi-manager hedge funds attract more capital from investors in 2026, BofA says",
+      "news_title": "Stock Market Today: 10-Year Yield Forges Above 5%",
       "sector": "Financial",
       "industry": "Banks - Diversified",
       "is_dividend": false,
@@ -1560,7 +1571,7 @@
     {
       "ticker": "CAT",
       "digest": "Freedom Broker upgrades Caterpillar to Buy, lifts price target to $980 on U.S.-Canada tariff benefits",
-      "news_title": "3 Stocks That Offer AI Exposure and Dividends",
+      "news_title": "Bull of the Day: Caterpillar (CAT)",
       "sector": "Industrials",
       "industry": "Farm & Heavy Construction Machinery",
       "is_dividend": false,
@@ -2055,7 +2066,7 @@
     {
       "ticker": "ORCL",
       "digest": "Oracle begins new layoffs with potential double-digit cuts on some teams amid heavy AI infrastructure spending",
-      "news_title": "HPE Stock Drops 11% To Worst Day In Over A Year After Evercore Downgrades On Lack Of Near-Term Catalysts",
+      "news_title": "Why Is ORCL Stock Slipping Premarket?",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
       "is_dividend": false,
@@ -2157,17 +2168,6 @@
       "news_title": "What off-price retailers are saying about tariff refunds",
       "sector": "Consumer Cyclical",
       "industry": "Apparel Retail",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "RSG",
-      "digest": "Republic Services beats Q2 estimates with non-GAAP EPS $1.85, revenue $4.43B, raises 2026 guidance on pricing strength, commodities and M&A",
-      "news_title": "Judge sets date for Colgate toothpaste tube recyclability trial",
-      "sector": "Industrials",
-      "industry": "Waste Management",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
