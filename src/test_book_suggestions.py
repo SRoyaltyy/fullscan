@@ -8,7 +8,7 @@ import json
 import tempfile
 from pathlib import Path
 
-from src import book_suggestions, land_file, stock_book_diag_signals as signals
+from src import book_suggestions, land_file, publish_live_boards, stock_book_diag_signals as signals
 
 
 def test_suggestions_from_book_lists_1d_names() -> None:
@@ -155,6 +155,9 @@ def test_preopen_and_book_publish_strip_without_paper() -> None:
     paper_idx = pre.index("src.paper_trade")
     assert live_idx < paper_idx
     assert "src.publish_live_boards" in book
+    pub_py = (root / "src" / "publish_live_boards.py").read_text(encoding="utf-8")
+    assert "rewrite_today_strip" in pub_py
+    assert "ticket_1d_rows" in pub_py
     assert "skip extras (catalyst/backtest/paper/sleeve)" in book
     assert "timeout_s=180" in book
     assert "book_suggestions.write" in sb
@@ -294,6 +297,60 @@ def test_ensure_poller_refreshes_old_uniform_strip() -> None:
         assert "https://example/today.json" not in text
 
 
+def test_ticket_1d_rows_fall_back_to_stock_book() -> None:
+    buys, sells, quote = publish_live_boards.ticket_1d_rows({
+        "quote": {"src": "elite_live", "after_open": True},
+        "strategies": {
+            "stock_book_1d": {
+                "buy": [{"ticker": "AVAH", "px": 14.24, "px_src": "elite_live"}],
+                "sell": [{"ticker": "METC", "px": 9.98, "px_src": "elite_live"}],
+            }
+        },
+    })
+    assert [x["ticker"] for x in buys] == ["AVAH"]
+    assert [x["ticker"] for x in sells] == ["METC"]
+    assert quote["src"] == "elite_live"
+
+
+def test_rewrite_today_strip_overwrites_reranked_names() -> None:
+    """A noon live_boards land must not leave today.json on MTCH without px."""
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        day = root / "data" / "day_board"
+        fm = root / "dashboard" / "factor-mine"
+        day.mkdir(parents=True)
+        fm.mkdir(parents=True)
+        (day / "today.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "buy_1d": [{"ticker": "MTCH", "score": 0.3}],
+        }), encoding="utf-8")
+        old_day = publish_live_boards.DAY_BOARD
+        old_fm = publish_live_boards.FM_TODAY
+        old_root = publish_live_boards.ROOT
+        publish_live_boards.ROOT = root
+        publish_live_boards.DAY_BOARD = day
+        publish_live_boards.FM_TODAY = fm / "today.json"
+        try:
+            wrote = publish_live_boards.rewrite_today_strip(
+                "2026-09-15",
+                [{"ticker": "AVAH", "px": 14.24, "px_src": "elite_live"}],
+                [{"ticker": "METC", "px": 9.98, "px_src": "elite_live"}],
+                {"src": "elite_live", "after_open": True},
+                generated_at="t",
+            )
+        finally:
+            publish_live_boards.ROOT = old_root
+            publish_live_boards.DAY_BOARD = old_day
+            publish_live_boards.FM_TODAY = old_fm
+        assert any(p.endswith("today.json") for p in wrote)
+        strip = json.loads((day / "today.json").read_text(encoding="utf-8"))
+        assert strip["buy_1d"][0]["ticker"] == "AVAH"
+        assert strip["buy_1d"][0]["px"] == 14.24
+        assert strip["quote"]["src"] == "elite_live"
+        fm_strip = json.loads((fm / "today.json").read_text(encoding="utf-8"))
+        assert fm_strip["buy_1d"][0]["ticker"] == "AVAH"
+
+
 def main() -> None:
     test_suggestions_from_book_lists_1d_names()
     test_write_skips_degraded_book()
@@ -308,6 +365,8 @@ def main() -> None:
     test_ensure_poller_is_idempotent()
     test_ensure_poller_injects_into_main_sleeve_page()
     test_ensure_poller_refreshes_old_uniform_strip()
+    test_ticket_1d_rows_fall_back_to_stock_book()
+    test_rewrite_today_strip_overwrites_reranked_names()
     print("ok")
 
 
