@@ -1,8 +1,8 @@
 {
   "ok": false,
   "n_fail": 2,
-  "grok_busy": false,
-  "updated_at": "2026-09-15T03:43:40.344121-04:00",
+  "grok_busy": true,
+  "updated_at": "2026-09-15T04:05:04.069438-04:00",
   "source": "runtime_status",
   "doors": [
     {
@@ -45,18 +45,18 @@
       "id": "pong",
       "name": "PONG",
       "group": "classroom",
-      "status": "OK",
-      "required": true,
-      "detail": "classroom live (Hey. I just came online.) model=openclaw/default",
+      "status": "SKIP",
+      "required": false,
+      "detail": "Grok job running \u2014 not poking the classroom",
       "action": "none"
     },
     {
       "id": "model",
       "name": "Classroom model",
       "group": "classroom",
-      "status": "OK",
-      "required": true,
-      "detail": "model=openclaw/default",
+      "status": "SKIP",
+      "required": false,
+      "detail": "probe skipped",
       "action": "none"
     },
     {
@@ -81,9 +81,9 @@
       "id": "http401",
       "name": "HTTP 401",
       "group": "classroom",
-      "status": "OK",
-      "required": true,
-      "detail": "live PONG 200 \u2014 last packet 401 is history",
+      "status": "WARN",
+      "required": false,
+      "detail": "401 in last packet 2026-09-14_map_heat.json \u2014 not live",
       "action": "none"
     },
     {
@@ -128,7 +128,7 @@
       "group": "preopen",
       "status": "WARN",
       "required": false,
-      "detail": "latest=success systemd=exit-code",
+      "detail": "latest=in_progress systemd=exit-code",
       "action": "none"
     },
     {
@@ -168,7 +168,5 @@
       "action": "none"
     }
   ],
-  "healed": [
-    "ensure_openclaw_timeouts.sh exit=0                PASSED  UNIT                   ACTIVATES | Tue 2026-09-15 17:55:00 CST 2h 12min left Mon 2026-09-14 17:55:04 CST 21h ago full"
-  ]
+  "healed": []
 }
