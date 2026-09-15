@@ -1,68 +1,68 @@
 # MAP HEAT — 2026-09-15
 
-Export `finviz_2026-09-15.csv` · 11616 names · generated 2026-09-15T08:52:10.306647-04:00
+Export `finviz_2026-09-15.csv` · 11616 names · generated 2026-09-15T09:12:19.021750-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7685.25 | -0.10% |
-| Nasdaq 100 (NQ) | 29431.25 | -0.09% |
-| Russell 2000 (ER2) | 2912.3 | -0.14% |
-| DJIA (YM) | 52746.0 | -0.22% |
-| VIX (VX) | 16.85 | +0.29% |
-| Crude Oil WTI (CL) | 102.69 | +1.38% |
-| Crude Oil Brent (QA) | 106.38 | +0.73% |
-| Natural Gas (NG) | 2.933 | +1.14% |
-| Heating Oil (HO) | 5.1163 | +3.09% |
-| Gasoline RBOB (RB) | 3.3604 | +1.31% |
-| Gold (GC) | 4318.9 | -0.75% |
-| Silver (SI) | 63.915 | -0.36% |
-| Copper (HG) | 6.422 | +0.28% |
-| Platinum (PL) | 1765.2 | -0.82% |
-| Palladium (PA) | 1302.0 | -0.40% |
+| S&P 500 (ES) | 7689.0 | -0.05% |
+| Nasdaq 100 (NQ) | 29433.5 | -0.06% |
+| Russell 2000 (ER2) | 2912.5 | -0.12% |
+| DJIA (YM) | 52787.0 | -0.14% |
+| VIX (VX) | 16.75 | -0.60% |
+| Crude Oil WTI (CL) | 101.8 | +0.38% |
+| Crude Oil Brent (QA) | 105.89 | +0.20% |
+| Natural Gas (NG) | 2.939 | +1.52% |
+| Heating Oil (HO) | 5.1227 | +3.02% |
+| Gasoline RBOB (RB) | 3.3487 | +0.86% |
+| Gold (GC) | 4330.6 | -0.47% |
+| Silver (SI) | 64.35 | +0.30% |
+| Copper (HG) | 6.4395 | +0.55% |
+| Platinum (PL) | 1777.9 | -0.25% |
+| Palladium (PA) | 1311.0 | +0.21% |
 | USD (DX) | 99.31 | +0.21% |
-| EUR (6E) | 1.15865 | -0.10% |
-| JPY (6J) | 0.64985 | -0.64% |
-| GBP (6B) | 1.3487 | -0.20% |
-| AUD (6A) | 0.7117 | -0.25% |
-| CAD (6C) | 0.72125 | -0.15% |
-| CHF (6S) | 1.2348 | -0.25% |
-| NZD (6N) | 0.57735 | -0.47% |
-| 10 Year Note (ZN) | 105.9375 | -0.24% |
-| 5 Year Note (ZF) | 104.390625 | -0.13% |
-| 2 Year Note (ZT) | 102.05859375 | -0.02% |
-| 30 Year Bond (ZB) | 106.46875 | -0.53% |
-| Nikkei 225 (NKD) | 63735.0 | +0.88% |
-| DAX (DY) | 25435.0 | +0.02% |
-| Euro Stoxx 50 (EX) | 6257.0 | -0.03% |
-| Corn (ZC) | 528.5 | -0.98% |
-| Soybeans (ZS) | 1299.75 | -0.35% |
-| Wheat (ZW) | 712.5 | -1.28% |
-| Soybean oil (ZL) | 69.76 | +0.14% |
-| Soybean Meal (ZM) | 349.4 | -0.23% |
+| EUR (6E) | 1.15885 | -0.09% |
+| JPY (6J) | 0.6501 | -0.61% |
+| GBP (6B) | 1.3487 | -0.21% |
+| AUD (6A) | 0.71185 | -0.24% |
+| CAD (6C) | 0.72125 | -0.17% |
+| CHF (6S) | 1.23475 | -0.26% |
+| NZD (6N) | 0.5774 | -0.47% |
+| 10 Year Note (ZN) | 105.953125 | -0.21% |
+| 5 Year Note (ZF) | 104.3984375 | -0.12% |
+| 2 Year Note (ZT) | 102.0546875 | -0.03% |
+| 30 Year Bond (ZB) | 106.5625 | -0.44% |
+| Nikkei 225 (NKD) | 63850.0 | +1.08% |
+| DAX (DY) | 25474.0 | +0.19% |
+| Euro Stoxx 50 (EX) | 6264.0 | +0.08% |
+| Corn (ZC) | 528.25 | -0.98% |
+| Soybeans (ZS) | 1298.75 | -0.38% |
+| Wheat (ZW) | 712.5 | -1.35% |
+| Soybean oil (ZL) | 69.71 | +0.07% |
+| Soybean Meal (ZM) | 349.4 | -0.20% |
 | Oats (ZO) | 393.0 | +0.38% |
 | Rough Rice (ZR) | 15.985 | -0.06% |
-| Coffee (KC) | 286.8 | -1.26% |
-| Sugar (SB) | 18.04 | -0.66% |
-| Cotton (CT) | 84.1 | -0.53% |
-| Cocoa (CC) | 6020.0 | -0.17% |
-| Orange Juice (JO) | 154.7 | +1.14% |
+| Coffee (KC) | 286.7 | -1.24% |
+| Sugar (SB) | 18.02 | -0.72% |
+| Cotton (CT) | 83.87 | -0.67% |
+| Cocoa (CC) | 6036.0 | +0.32% |
+| Orange Juice (JO) | 154.75 | +1.18% |
 | Lumber (LB) | 566.0 | +0.18% |
 | Live Cattle (LC) | 222.2 | +1.17% |
 | Lean Hogs (LH) | 79.725 | -2.36% |
 | Feeder Cattle (FC) | 337.9 | +1.61% |
-| Bitcoin (BTC) | 76935.0 | -2.80% |
-| 3 Month SOFR (SR3) | 96.025 | +0.00% |
+| Bitcoin (BTC) | 76995.0 | -2.80% |
+| 3 Month SOFR (SR3) | 96.03 | +0.01% |
 | 30 Day Fed Funds (ZQ) | 96.265 | +0.01% |
 | Aluminum (ALI) | 3410.5 | -0.03% |
-| Canola (RS) | 819.5 | -0.41% |
+| Canola (RS) | 818.7 | -0.52% |
 | Coal Newcastle (NCF) | 146.85 | +0.07% |
 | Ethanol (ZK) | 2.055 | +0.00% |
-| Gasoil (G) | 1510.75 | +2.30% |
+| Gasoil (G) | 1509.5 | +2.27% |
 | Iron Ore (TIO) | 97.55 | -0.48% |
 | Steel HRC (HRC) | 1230.0 | -0.32% |
-| Ultra 10 Year Note (TN) | 107.4375 | -0.30% |
-| Ultra Bond (UB) | 107.90625 | -0.69% |
+| Ultra 10 Year Note (TN) | 107.46875 | -0.28% |
+| Ultra Bond (UB) | 108.0 | -0.60% |
 | Uranium (UX) | 89.9 | -0.11% |
 
 ## CALENDAR
@@ -255,31 +255,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 2 min **FCEL** HAGENS BERMAN, NATIONAL TRIAL ATTORNEYS, Encourages FuelCell Energy, Inc. (NASDAQ: FCEL) Investors with Substantial Losses to Contact Firm (PR Newswire)
-- 3 min **AMD,CRWV** Hedge Fund That Nearly Collapsed Bets Big on AMD Again (GuruFocus.com)
-- 7 min **NXXT** NextNRG's EzFill to License Proprietary Telematics Platform to Fleet and Fuel Operators (GlobeNewswire)
-- 7 min **FIRY** FIRY Inc. Names Avenue Capital Chairman and CEO Marc Lasry to Board of Directors (Business Wire)
-- 7 min **SCHW** Schwab Reports Monthly Activity Highlights (Business Wire)
-- 10 min **ERNA** Ernexa Therapeutics Reports Positive Disease Modifying ERNA-201 Preclinical Data, Reinforcing iMSC Platform as Company Accelerates Oncology Strategy and ERNA-101 Toward First-in-Human Dosing (GlobeNewswire)
-- 10 min **QMLS** QumulusAI Completes B200 Deployment Under Its $71.9 Million Contracted Blackwell Agreement (Business Wire)
-- 10 min **HIVE** HIVE Digital subsidiary BUZZ HPC names capital-markets veteran to board (Proactive)
-- 10 min **AMZN** Amazon Gains 1.6% as Its $53 Billion Anthropic Windfall Meets a Weapons Test (GuruFocus.com)
-- 12 min **SPCX,TSLA** Elon Musk Makes Strongest Hint Yet About A Tesla-SpaceX Merger (Investor's Business Daily)
-- 12 min **AVGO** Broadcom CEO Sends Urgent Message on AI Slowdown Fears (GuruFocus.com)
-- 13 min **INTC,NVDA** Chip stocks are heading toward a broad bounce (MarketWatch)
-- 14 min **SPCX,TSLA** The Tesla Roadster Will 'Blow People's Minds' (Barrons.com)
-- 14 min **NVDA** Anthropic moving forward with $2 trillion IPO on Nasdaq (Quartz)
-- 15 min **CVM** CEL-SCI Invited to Deliver Keynote Address on Multikine at 6th World Congress on Otology, Rhinology and Laryngology (Business Wire)
-- 18 min **GIXI** Gix Makes Strategic Investment in Ottonomy, a Physical AI, L4 Autonomy and Robotics Technology Company (GlobeNewswire)
-- 18 min **MU** Micron Stock Moves Past AI Fears but Now Faces Another Threat (Barrons.com)
-- 19 min **CRML** Critical Metals Corp. Merger with European Lithium Advances to Shareholder Vote Following Court Ruling (GlobeNewswire)
-- 20 min **XTND** XTEND Expands Global Footprint with New Site in Mexico as Mexico Allocates $17.5 Billion to Defense and Security in 2026¹ (GlobeNewswire)
-- 20 min **NVDA,SPCX,TSLA** How Deep Does the AI Doom and Gloom Run? 'We Don't Know' Is the Only Sure Answer. (Barrons.com)
-- 21 min **FBDT** First Breach Secures Federal Explosives License for Attritible Drone Manufacturing (ACCESSWIRE)
-- 21 min **DRTS** Alpha Tau's Cancer Trials Keep Beating Expectations. Three Major Data Readouts Are Next. (FinanceWire)
-- 21 min **ELMT,EMAT,TMCR** A New U.S. Mine Takes Almost 29 Years To Build. The Rare Earths Are Already Above Ground (NASDAQ: EMAT) (FinanceWire)
-- 22 min **CVLT** Commvault Expands FedRAMP High Authorized Cyber Resilience Services to Managed Service Providers (PR Newswire)
-- 22 min **ABBV** AbbVie Named Official Pharmaceutical Sponsor of the PGA TOUR and 2026 Presidents Cup, Launches Birdies for Brain Health Campaign (PR Newswire)
+- 4 min **CG** Ballooning US debt is a ticking time bomb, billionaire investor David Rubenstein says (Yahoo Finance)
+- 5 min **LOVE** Lovesac Expands Seating Offerings with Snugg Collection Launch (PR Newswire)
+- 6 min **MCY** The Home Insurance Savings Hiding in Plain Sight (PR Newswire)
+- 7 min **FBNC** First Bancorp Announces Cash Dividend (PR Newswire)
+- 7 min **XMTR** Xometry Marketplace Enables Deeper Enterprise Integration and Smart Procurement with TradeCentric (GlobeNewswire)
+- 9 min **AMN** AMN Healthcare Survey Reveals Critical Divide Between Healthcare Leaders and Frontline Workers (PR Newswire)
+- 10 min **BAND** Bandwidth and Salesforce Expand Collaboration to Support The Global Rollout of Salesforce's Native Contact Center (PR Newswire)
+- 11 min **MU** Micron Advances Memory Innovation With the World's First Ultra-Dense Module for Next-Generation Servers (GlobeNewswire)
+- 11 min **LBTYA,LBTYK** Newly Established Ziggo Group Appoints Experienced Leadership Team (GlobeNewswire)
+- 12 min **BTCT** BTC Digital Signs Strategic Cooperation Memorandum of Understanding with Tianci International, Inc. for Approximately 3 MW Crypto Computing Power Project (PR Newswire)
+- 12 min **PAYX** Paychex's WISE Named a 2026 Top HR Product of the Year by HR Executive (GlobeNewswire)
+- 12 min **AIP** Arteris Accelerates Industry Transition to Multi-Die Chiplet-Based Architecture (GlobeNewswire)
+- 12 min **NTSK** Netskope Enables Security Teams to Stop Risky AI Agent Actions Before They Execute (GlobeNewswire)
+- 12 min **FTNT** Fortinet Expands U.S. Presence with New Company-Owned Innovation Hub in New York City (GlobeNewswire)
+- 12 min **JAGX** Jaguar Health, Inc. Announces Reverse Stock Split (ACCESSWIRE)
+- 12 min **STGW** Code and Theory Honored by Fast Company's Innovation by Design for Four Consecutive Years (ACCESSWIRE)
+- 12 min **BTCT,CIIT** Tianci International, Inc. Announces Launch of Approximately 3 MW Crypto Computing Project and Signs Memorandum of Understanding with BTC Digital (ACCESSWIRE)
+- 12 min **FEAM** 5E Advanced Materials Enters into Agreement to Acquire Certain Assets of Searles Valley Minerals (ACCESSWIRE)
+- 12 min **CVS** Thank You! CVS Health Awards Grant to Windy City Harvest During Grace Manor Community Event in Chicago, Illinois (ACCESSWIRE)
+- 12 min **NAMI** Jinxin Technology Holding Company Deploys AIGC Content Assets, Exploring Industrialization and Global Distribution Loop for AI Micro-Dramas and Unlocking Potential Long-Term Valuation Upside (PR Newswire)
+- 12 min **LGCY** Legacy Education Expands into Texas with New Central Coast College Campus in Houston (PR Newswire)
+- 12 min **GAP** Athleta Named Official Off-Court Apparel Partner of the Golden State Valkyries (PR Newswire)
+- 12 min **AJG** Arthur J. Gallagher & Co. Acquires Innovise Business Consultants (PR Newswire)
+- 12 min **ORCL** Quorum Health Unifies Enterprise, Financial, and Clinical Technology Platforms with Oracle (PR Newswire)
+- 12 min **KMT** Kennametal Introduces Exclusive Additive Tungsten Carbide Grade Enabling Next-Generation Metal Cutting Tools (PR Newswire)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
