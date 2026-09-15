@@ -182,6 +182,7 @@ def test_preopen_and_book_publish_strip_without_paper() -> None:
     assert "rewrite_today_strip" in pub_py
     assert "ticket_1d_rows" in pub_py
     assert "load_live_ticket_payload" in pub_py
+    assert '{date}_open_0930.json' in pub_py
     assert "keep 09:30 Elite 1d" in pub_py
     assert "tickets not elite_live after rebuild" in pub_py
     assert "skip extras (catalyst/backtest/paper/sleeve)" in book
@@ -415,6 +416,37 @@ def test_load_live_ticket_payload_requires_elite_live() -> None:
         finally:
             publish_live_boards.ROOT = old_root
             publish_live_boards.DAY_BOARD = old_day
+
+
+def test_load_live_ticket_payload_prefers_open_0930_lock() -> None:
+    """A later elite DBX today_strategies.json must not beat the 09:30 lock."""
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        day = root / "data" / "day_board"
+        day.mkdir(parents=True)
+        (day / "2026-09-15_open_0930.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "clock_legal_for": "2026-09-15",
+            "quote": {"after_open": True, "src": "elite_live"},
+            "buy_1d": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+        }), encoding="utf-8")
+        (day / "today_strategies.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "clock_legal_for": "2026-09-15",
+            "quote": {"after_open": True, "src": "elite_live"},
+            "buy_1d": [{"ticker": "DBX", "px": 38.07, "px_src": "elite_live"}],
+        }), encoding="utf-8")
+        old_root = publish_live_boards.ROOT
+        old_day = publish_live_boards.DAY_BOARD
+        publish_live_boards.ROOT = root
+        publish_live_boards.DAY_BOARD = day
+        try:
+            got = publish_live_boards.load_live_ticket_payload("2026-09-15")
+        finally:
+            publish_live_boards.ROOT = old_root
+            publish_live_boards.DAY_BOARD = old_day
+        assert got["buy_1d"][0]["ticker"] == "MTCH"
+        assert got["buy_1d"][0]["px"] == 43.04
 
 
 def test_publish_keeps_elite_1d_when_tickets_rebuild_fails() -> None:
@@ -774,6 +806,7 @@ def main() -> None:
     test_ticket_1d_rows_fall_back_to_stock_book()
     test_rewrite_today_strip_overwrites_reranked_names()
     test_load_live_ticket_payload_requires_elite_live()
+    test_load_live_ticket_payload_prefers_open_0930_lock()
     test_publish_keeps_elite_1d_when_tickets_rebuild_fails()
     test_publish_keeps_elite_when_rebuild_is_session_export()
     test_day_board_write_json_keeps_elite_when_news_parse_lands()

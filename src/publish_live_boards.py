@@ -83,6 +83,7 @@ def rewrite_today_strip(date: str, buys: list, sells: list, quote: dict | None,
 def load_live_ticket_payload(date: str) -> dict:
     """On-disk 09:30 tickets with Elite live px, or {}."""
     paths = (
+        DAY_BOARD / f"{date}_open_0930.json",
         DAY_BOARD / "today_strategies.json",
         DAY_BOARD / f"{date}_strategy_tickets.json",
         ROOT / "dashboard" / "factor-mine" / "strategy_tickets.json",
