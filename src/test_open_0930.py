@@ -173,6 +173,8 @@ def test_ci_gates_the_bell_contract() -> None:
     assert "src.test_webull_exec" in yml
     assert "src.test_combo_broker" in yml
     assert "src.test_skip_if_good" in yml
+    assert "src.test_elite_live_px" in yml
+    assert "src.test_book_suggestions" in yml
     assert "api.webull.com" not in yml
 
 

@@ -593,6 +593,51 @@ def tickets_are_live_open(date: str, when: datetime | None = None) -> bool:
     return elp.quote_is_elite_live(data.get("quote"))
 
 
+def today_strip_is_live_open(date: str, when: datetime | None = None) -> bool:
+    """After 09:30 on this session, today.json must carry Elite 1d px.
+
+    2026-09-15: tickets were elite_live (MTCH 43.04) while today.json
+    stayed a noon ranker strip (same names, scores only, no quote).
+    Old Pages pollers read today.json first, so the live book looked
+    dead. Other dates / before the bell are not judged here.
+    """
+    t = when or datetime.now(ET)
+    if t.tzinfo is None:
+        t = t.replace(tzinfo=ET)
+    else:
+        t = t.astimezone(ET)
+    if t.strftime("%Y-%m-%d") != str(date):
+        return True
+    if not after_bell(t):
+        return True
+    from . import elite_live_px as elp
+    paths = [
+        ROOT / "data" / "day_board" / "today.json",
+        ROOT / "dashboard" / "factor-mine" / "today.json",
+    ]
+    found = next((p for p in paths if p.is_file()), None)
+    if found is None:
+        return False
+    try:
+        data = json.loads(found.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return False
+    if not isinstance(data, dict):
+        return False
+    legal = str(data.get("date") or "")
+    if legal and legal != date:
+        return False
+    quote = data.get("quote") or {}
+    buys = data.get("buy_1d") or []
+    if not buys:
+        return False
+    row0 = buys[0] if isinstance(buys[0], dict) else {}
+    if row0.get("px") is None:
+        return False
+    src = str(row0.get("px_src") or quote.get("src") or "")
+    return elp.quote_is_elite_live(quote) or src.startswith("elite_live")
+
+
 def check_open_0930(date: str) -> bool:
     """09:30 pack landed: live after-open tickets + connected paper snapshot.
 
@@ -606,6 +651,9 @@ def check_open_0930(date: str) -> bool:
     if not tickets_are_live_open(date):
         return _log(False, "open_0930", date,
                     "tickets not after-open live px")
+    if not today_strip_is_live_open(date):
+        return _log(False, "open_0930", date,
+                    "today.json 1d strip not Elite live px")
     path = ROOT / "data" / "sleeve_merge" / "webull_last.json"
     if not path.is_file():
         return _log(False, "open_0930", date, "webull_last missing")
