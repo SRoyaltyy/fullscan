@@ -1,68 +1,68 @@
 # MAP HEAT — 2026-09-15
 
-Export `finviz_2026-09-15.csv` · 11608 names · generated 2026-09-15T03:43:42.081587-04:00
+Export `finviz_2026-09-15.csv` · 11608 names · generated 2026-09-15T03:46:32.145663-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7665.75 | -0.34% |
-| Nasdaq 100 (NQ) | 29359.5 | -0.29% |
-| Russell 2000 (ER2) | 2902.1 | -0.46% |
-| DJIA (YM) | 52606.0 | -0.50% |
+| S&P 500 (ES) | 7665.0 | -0.36% |
+| Nasdaq 100 (NQ) | 29354.75 | -0.32% |
+| Russell 2000 (ER2) | 2901.9 | -0.49% |
+| DJIA (YM) | 52598.0 | -0.50% |
 | VIX (VX) | 17.2 | +2.07% |
-| Crude Oil WTI (CL) | 103.08 | +1.70% |
-| Crude Oil Brent (QA) | 107.37 | +1.63% |
-| Natural Gas (NG) | 2.897 | +0.07% |
-| Heating Oil (HO) | 5.0734 | +2.26% |
-| Gasoline RBOB (RB) | 3.39 | +2.16% |
-| Gold (GC) | 4332.6 | -0.44% |
-| Silver (SI) | 63.605 | -0.82% |
-| Copper (HG) | 6.386 | -0.30% |
-| Platinum (PL) | 1768.4 | -0.65% |
+| Crude Oil WTI (CL) | 103.26 | +1.79% |
+| Crude Oil Brent (QA) | 107.49 | +1.70% |
+| Natural Gas (NG) | 2.897 | +0.03% |
+| Heating Oil (HO) | 5.0804 | +2.36% |
+| Gasoline RBOB (RB) | 3.3949 | +2.29% |
+| Gold (GC) | 4329.5 | -0.51% |
+| Silver (SI) | 63.485 | -0.97% |
+| Copper (HG) | 6.384 | -0.34% |
+| Platinum (PL) | 1764.9 | -0.83% |
 | Palladium (PA) | 1297.5 | -0.78% |
-| USD (DX) | 99.325 | +0.22% |
-| EUR (6E) | 1.15805 | -0.16% |
-| JPY (6J) | 0.6505000000000001 | -0.54% |
-| GBP (6B) | 1.3478 | -0.27% |
-| AUD (6A) | 0.71145 | -0.29% |
-| CAD (6C) | 0.7224 | -0.01% |
-| CHF (6S) | 1.23605 | -0.15% |
-| NZD (6N) | 0.57755 | -0.45% |
-| 10 Year Note (ZN) | 105.734375 | -0.40% |
-| 5 Year Note (ZF) | 104.265625 | -0.25% |
+| USD (DX) | 99.33 | +0.22% |
+| EUR (6E) | 1.158 | -0.16% |
+| JPY (6J) | 0.6504 | -0.56% |
+| GBP (6B) | 1.3479 | -0.27% |
+| AUD (6A) | 0.7113 | -0.30% |
+| CAD (6C) | 0.72245 | +0.00% |
+| CHF (6S) | 1.23595 | -0.16% |
+| NZD (6N) | 0.57755 | -0.44% |
+| 10 Year Note (ZN) | 105.75 | -0.40% |
+| 5 Year Note (ZF) | 104.265625 | -0.24% |
 | 2 Year Note (ZT) | 102.0078125 | -0.07% |
-| 30 Year Bond (ZB) | 106.1875 | -0.82% |
+| 30 Year Bond (ZB) | 106.1875 | -0.79% |
 | Nikkei 225 (NKD) | 63285.0 | +0.19% |
-| DAX (DY) | 25347.0 | -0.33% |
-| Euro Stoxx 50 (EX) | 6228.0 | -0.48% |
-| Corn (ZC) | 532.25 | -0.19% |
-| Soybeans (ZS) | 1301.0 | -0.27% |
-| Wheat (ZW) | 723.0 | +0.17% |
-| Soybean oil (ZL) | 69.98 | +0.47% |
-| Soybean Meal (ZM) | 348.5 | -0.49% |
+| DAX (DY) | 25332.0 | -0.36% |
+| Euro Stoxx 50 (EX) | 6225.0 | -0.54% |
+| Corn (ZC) | 532.5 | -0.14% |
+| Soybeans (ZS) | 1300.75 | -0.25% |
+| Wheat (ZW) | 721.75 | -0.03% |
+| Soybean oil (ZL) | 70.06 | +0.52% |
+| Soybean Meal (ZM) | 348.4 | -0.49% |
 | Oats (ZO) | 397.5 | +1.02% |
 | Rough Rice (ZR) | 15.985 | -0.06% |
 | Coffee (KC) | 289.25 | +1.68% |
-| Sugar (SB) | 18.2 | +0.17% |
-| Cotton (CT) | 84.85 | +0.35% |
+| Sugar (SB) | 18.22 | +0.33% |
+| Cotton (CT) | 84.9 | +0.41% |
 | Cocoa (CC) | 6029.0 | +1.04% |
 | Orange Juice (JO) | 153.55 | +5.30% |
 | Lumber (LB) | 566.0 | +0.18% |
 | Live Cattle (LC) | 222.2 | +1.17% |
 | Lean Hogs (LH) | 79.725 | -2.36% |
 | Feeder Cattle (FC) | 337.9 | +1.61% |
-| Bitcoin (BTC) | 77255.0 | -2.39% |
+| Bitcoin (BTC) | 77120.0 | -2.49% |
 | 3 Month SOFR (SR3) | 96.02 | -0.01% |
 | 30 Day Fed Funds (ZQ) | 96.2625 | +0.00% |
 | Aluminum (ALI) | 3410.5 | -0.03% |
-| Canola (RS) | 819.0 | -0.47% |
+| Canola (RS) | 819.3 | -0.47% |
 | Coal Newcastle (NCF) | 146.85 | +0.07% |
 | Ethanol (ZK) | 2.055 | +0.00% |
-| Gasoil (G) | 1501.5 | +1.71% |
+| Gasoil (G) | 1503.25 | +1.85% |
 | Iron Ore (TIO) | 97.55 | -0.48% |
 | Steel HRC (HRC) | 1234.0 | +0.00% |
-| Ultra 10 Year Note (TN) | 107.15625 | -0.54% |
-| Ultra Bond (UB) | 107.625 | -0.95% |
+| Ultra 10 Year Note (TN) | 107.171875 | -0.54% |
+| Ultra Bond (UB) | 107.59375 | -0.98% |
 | Uranium (UX) | 89.9 | -0.11% |
 
 ## CALENDAR
@@ -255,22 +255,22 @@ COLD (1w):
 - **Innovation / Patent Based** 0.0% 1d -0.2% 1w · ARKK, XT, BULZ
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 13 min **FTV** Fluke Expands iSee Mobile Series with New TC03A Thermal Camera and ii01 Acoustic Camera (GlobeNewswire)
-- 27 min **CIGI** Industrial Occupancy Jumps as Big-Box Demand Returns (CRE Daily)
-- 31 min **GSK** GSK splashes up to $750m on experimental cancer therapy (Proactive)
-- 34 min **GOOG,GOOGL** Worldline launches UCP payment handler for agentic commerce payments (Electronic Payments)
-- 37 min **TSLA** Tesla, SpaceX Stocks Rise Overnight: Elon Musk Fuels Merger Speculation, Hints At Action Amid Close Collaboration (Stocktwits)
-- 37 min **SPCX** Tesla, SpaceX Stocks Rise Overnight: Elon Musk Fuels Merger Speculation, Hints At Action Amid Close Collaboration (Stocktwits)
-- 40 min **GAP** GAP Stock Heads For Monthly Loss Despite CEO Optimism On Old Navy  Cardi B Campaign Fails To Lift Retail Mood (Stocktwits)
-- 43 min **KMTS** Kestra Medical Technologies Ltd (KMTS) (Q1 2027) Earnings Call Highlights: Revenue Jumps 60% as ... (GuruFocus.com)
-- 43 min **MKL** Markel International bolsters leadership in new Marine Transportation business with two key appointments (PR Newswire)
-- 43 min **WTW** Willis: Power companies must strengthen resilience as electrification drives a new wave of industrial growth (GlobeNewswire)
-- 43 min **EGO** Eldorado Gold to Host Greek Asset Site Tour (GlobeNewswire)
-- 43 min **IRM** Iron Mountain Partners with the Opera national de Paris to Preserve and Digitize its Visual Heritage (Business Wire)
-- 43 min **IRM** Iron Mountain Partners with the Opra national de Paris to Preserve and Digitize its Visual Heritage (Business Wire)
-- 46 min **CIGI** Tampa Multifamily Nears a Pricing Power Reset (CRE Daily)
-- 53 min **COIN** CryptoQuant Flags Volume Revival as Another Crack in Bear Market Downtrend (BeInCrypto)
-- 56 min **O** Realty Income and KKR Form 528M European JV (CRE Daily)
+- 16 min **FTV** Fluke Expands iSee Mobile Series with New TC03A Thermal Camera and ii01 Acoustic Camera (GlobeNewswire)
+- 30 min **CIGI** Industrial Occupancy Jumps as Big-Box Demand Returns (CRE Daily)
+- 34 min **GSK** GSK splashes up to $750m on experimental cancer therapy (Proactive)
+- 37 min **GOOG** Worldline launches UCP payment handler for agentic commerce payments (Electronic Payments)
+- 37 min **GOOGL** Worldline launches UCP payment handler for agentic commerce payments (Electronic Payments)
+- 40 min **SPCX,TSLA** Tesla, SpaceX Stocks Rise Overnight: Elon Musk Fuels Merger Speculation, Hints At Action Amid Close Collaboration (Stocktwits)
+- 42 min **GAP** GAP Stock Heads For Monthly Loss Despite CEO Optimism On Old Navy  Cardi B Campaign Fails To Lift Retail Mood (Stocktwits)
+- 45 min **KMTS** Kestra Medical Technologies Ltd (KMTS) (Q1 2027) Earnings Call Highlights: Revenue Jumps 60% as ... (GuruFocus.com)
+- 46 min **MKL** Markel International bolsters leadership in new Marine Transportation business with two key appointments (PR Newswire)
+- 46 min **WTW** Willis: Power companies must strengthen resilience as electrification drives a new wave of industrial growth (GlobeNewswire)
+- 46 min **EGO** Eldorado Gold to Host Greek Asset Site Tour (GlobeNewswire)
+- 46 min **IRM** Iron Mountain Partners with the Opera national de Paris to Preserve and Digitize its Visual Heritage (Business Wire)
+- 46 min **IRM** Iron Mountain Partners with the Opra national de Paris to Preserve and Digitize its Visual Heritage (Business Wire)
+- 49 min **CIGI** Tampa Multifamily Nears a Pricing Power Reset (CRE Daily)
+- 55 min **COIN** CryptoQuant Flags Volume Revival as Another Crack in Bear Market Downtrend (BeInCrypto)
+- 59 min **O** Realty Income and KKR Form 528M European JV (CRE Daily)
 - 1 hour **ABNB** Airbnb Commits $250M to Housing Construction Fund (CRE Daily)
 - 1 hour **HUHU** NOTICE TO DISREGARD - HUHUTECH International Group Inc. (GlobeNewswire)
 - 1 hour **BORR** Borr Drilling Limited - Streamlines Mexico Operations (PR Newswire)
