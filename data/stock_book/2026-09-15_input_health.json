@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T06:06:06.227857-04:00",
+  "generated_at": "2026-09-15T06:10:05.669848-04:00",
   "inputs": [
     {
       "name": "finviz_export",
@@ -61,9 +61,9 @@
     {
       "name": "ticker_checklist",
       "family": "addon",
-      "status": "ok",
-      "n": 11704,
-      "detail": ""
+      "status": "stale",
+      "n": null,
+      "detail": "no dated file \u2014 rebound flags use latest/history (can be stale)"
     },
     {
       "name": "events",
@@ -120,5 +120,5 @@
     "sector": true
   },
   "learn_grade": true,
-  "worst": "degraded"
+  "worst": "stale"
 }

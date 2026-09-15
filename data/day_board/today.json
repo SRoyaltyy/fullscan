@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T06:11:41.166706-04:00",
+  "generated_at": "2026-09-15T06:11:44.362722-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -12,85 +12,77 @@
   "buy_1d": [
     {
       "ticker": "AVAH",
-      "score": 0.6596608246322517
+      "score": 0.689119483031255
     },
     {
       "ticker": "PACS",
-      "score": 0.665462301955157
+      "score": 0.6545094488979668
     },
     {
-      "ticker": "ZIP",
-      "score": 0.615142908807446
-    },
-    {
-      "ticker": "ASTH",
-      "score": 0.5542742068005707
-    },
-    {
-      "ticker": "WIX",
-      "score": 0.6788005173143059
-    },
-    {
-      "ticker": "VRSK",
-      "score": 0.382707866885776
-    },
-    {
-      "ticker": "EPAM",
-      "score": 0.6454870208378202
+      "ticker": "ACHC",
+      "score": 0.5332842149782162
     },
     {
       "ticker": "DLO",
-      "score": 0.6036132330742299
+      "score": 0.6277519591020699
+    },
+    {
+      "ticker": "VRSK",
+      "score": 0.4115659168233998
+    },
+    {
+      "ticker": "DBX",
+      "score": 0.7122761855659575
+    },
+    {
+      "ticker": "WIX",
+      "score": 0.6858683658422284
     },
     {
       "ticker": "CARG",
-      "score": 0.6687329343588724
-    },
-    {
-      "ticker": "LFST",
-      "score": 0.68320473670538
+      "score": 0.6859458636447096
     }
   ],
   "sell_1d": [
     {
       "ticker": "FLNC",
-      "score": -0.38712830719168295
+      "score": -0.3804152644624849
     },
     {
       "ticker": "OKLO",
-      "score": -0.24663678572837527
+      "score": -0.21582450599461517
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.32986487729520303
+    },
+    {
+      "ticker": "AMPX",
+      "score": -0.23350451710252873
+    },
+    {
+      "ticker": "LVWR",
+      "score": -0.5679532247841763
     },
     {
       "ticker": "EOSE",
-      "score": -0.25623253349363423
+      "score": -0.21378862225967538
     },
     {
       "ticker": "QBTS",
-      "score": -0.20025436275728903
-    },
-    {
-      "ticker": "SMR",
-      "score": -0.3261704105250774
+      "score": -0.18281952518934375
     },
     {
       "ticker": "METC",
-      "score": -0.39246599707884383
+      "score": -0.3861356085806234
     },
     {
-      "ticker": "LUNR",
-      "score": -0.38172340416289935
+      "ticker": "BEPC",
+      "score": -0.13719791193606085
     },
     {
       "ticker": "TLN",
-      "score": -0.4835154354998332
-    },
-    {
-      "ticker": "TE",
-      "score": -0.26349482450987427
-    },
-    {
-      "ticker": "WULF",
-      "score": -0.5635504946695946
+      "score": -0.48011788998592786
     }
   ],
   "flatten": {},
@@ -107,47 +99,22 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "3 up / 7 down / 0 flat",
+    "said": "3 up / 2 down / 0 flat",
     "bullets": [
-      "XLB DOWN -7.6",
+      "XLB missing",
       "XLC UP +0.4",
       "XLY DOWN -4.7",
       "XLP missing",
       "XLE UP +4.0",
       "XLF DOWN -4.1",
       "XLV UP +0.9",
-      "XLI DOWN -5.9",
-      "XLRE DOWN -8.5",
-      "XLK DOWN -7.5",
-      "XLU DOWN -8.2"
+      "XLI missing",
+      "XLRE missing",
+      "XLK missing",
+      "XLU missing"
     ]
   },
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T06:09:40.165686-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-09-15_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 10508,
-          "preview": "weather sectors 11 \u00b7 Communication Services={'score': 0.396, 'dir': 'up', 'conf': 0.416, 'source': 'llm'}, Consumer Cyclical={'score': -4.704, 'dir': 'down', 'conf': 0.588, 'source': 'llm'}, Energy={'score': 4.023, 'dir': 'up', 'conf': 0.661, 'source': 'llm'}, Financial={'score': -4.063, 'dir': 'down', 'conf': 0.563, 'source': 'llm'}, Healthcare={'score': 0.93, 'dir': 'up', 'conf': 0.537, 'source': 'llm'}, Basic Materials={'score': -5.0, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.1550000000000002, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -3.57, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-09-15_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5951,
-          "preview": "# Weather report \u2014 2026-09-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Communication Services={'score': 0.396, 'dir': 'up', 'conf': 0.416, 'source': 'llm'}, Consumer Cyclical={'score': -4.704, 'dir': 'down', 'conf': 0.588, 'source': 'llm'}, Energy={'score': 4.023, 'dir': 'up', 'conf': 0.661, 'source': 'llm'}, Financial={'score': -4.063, 'dir': 'down', 'conf': 0.563, 'source': 'llm'}, Healthcare={'score': 0.93, 'dir': 'up', 'conf': 0.537, 'source': 'llm'}, Basic Materials={'score': -5.0, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.1550000000000002, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -3.57, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -294,6 +261,59 @@
         }
       ],
       "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SKHY, DVN, PR, MSFT, PBR"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T06:11:43.462416-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-15_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1574889,
+          "preview": "1d BUY AVAH, PACS, ACHC, DLO, VRSK, DBX, WIX, CARG \u00b7 SELL FLNC, OKLO, FCEL, AMPX, LVWR, EOSE, QBTS, METC"
+        },
+        {
+          "path": "data/stock_book/2026-09-15_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-15_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2453,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-15_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12627,
+          "preview": "2026-09-15 BUY AVAH, PACS, ACHC, DLO, VRSK, DBX, WIX, CARG \u00b7 SELL FLNC, OKLO, FCEL, AMPX, LVWR, EOSE, QBTS, METC"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12627,
+          "preview": "2026-09-15 BUY AVAH, PACS, ACHC, DLO, VRSK, DBX, WIX, CARG \u00b7 SELL FLNC, OKLO, FCEL, AMPX, LVWR, EOSE, QBTS, METC"
+        },
+        {
+          "path": "01_daily/2026-09-15_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 85236,
+          "preview": "# Stock book \u2014 2026-09-15\n_Generated 2026-09-15T06:10:09.613076-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY AVAH, PACS, ACHC, DLO, VRSK, DBX, WIX, CARG \u00b7 SELL FLNC, OKLO, FCEL, AMPX, LVWR, EOSE, QBTS, METC \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-15 BUY AVAH, PACS, ACHC, DLO, VRSK, DBX, WIX, CARG \u00b7 SELL FLNC, OKLO, FCEL, AMPX, LVWR, EOSE, QBTS, METC \u00b7 2026-09-15 BUY AVAH, PACS, ACHC, DLO, VRSK, DBX, WIX, CARG \u00b7 SELL FLNC, OKLO, FCEL, AMPX, LVWR, EOSE, QBTS, METC \u00b7 # Stock book \u2014 2026-09-15\n_Generated 2026-09-15T06:10:09.613076-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
