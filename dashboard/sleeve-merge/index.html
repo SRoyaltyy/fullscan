@@ -245,9 +245,17 @@ across 22 starts.
       return r.json();
     });
   }
+  function sessionDate(){
+    try{
+      return new Intl.DateTimeFormat("en-CA",{timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
+    }catch(e){ return ""; }
+  }
   function ticketsLookLive(st){
     if(!st || typeof st !== "object") return false;
     var q = st.quote || {};
+    var d = String(st.date || st.clock_legal_for || "");
+    var today = sessionDate();
+    if(today && d && d !== today) return false;
     return !!(q.after_open && String(q.src || "").indexOf("elite_live") === 0);
   }
   function stripLooksLive(d){
@@ -255,6 +263,9 @@ across 22 starts.
     var q = d.quote || {};
     var row = (d.buy_1d && d.buy_1d[0]) || {};
     var src = String(row.px_src || q.src || "");
+    var day = String(d.date || d.clock_legal_for || "");
+    var today = sessionDate();
+    if(today && day && day !== today) return false;
     return !!(row.px != null && src.indexOf("elite_live") === 0);
   }
   function firstOk(urls, ok){

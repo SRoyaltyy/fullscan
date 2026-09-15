@@ -6,7 +6,9 @@ from __future__ import annotations
 
 import json
 import tempfile
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from src import (
     book_suggestions,
@@ -116,6 +118,8 @@ def test_factor_mine_template_paints_every_strategy() -> None:
     assert "function firstOk" in html
     assert "function ticketsLookLive" in html
     assert "function stripLooksLive" in html
+    assert "function sessionDate" in html
+    assert "d!==today" in html or "d !== today" in html
     assert "function ticketRows" in html
     assert "function liveTicketsAreLive" in html
     assert "liveDate===date && liveTicketsAreLive()" in html
@@ -152,6 +156,7 @@ def test_day_board_falls_back_to_suggestions() -> None:
     assert "stock_book_1d" in html
     assert "function firstOk" in html
     assert "function ticketsLookLive" in html
+    assert "function sessionDate" in html
     assert "afterBell() ? ticketsLookLive" in html
     assert "earlyBuys" in html
     assert "!buys && !sells && !afterBell()" in html
@@ -239,6 +244,7 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "function firstOk" in book_suggestions._POLLER_JS
     assert "function ticketsLookLive" in book_suggestions._POLLER_JS
     assert "function stripLooksLive" in book_suggestions._POLLER_JS
+    assert "function sessionDate" in book_suggestions._POLLER_JS
     assert "src.overlay_live_strip" in dep
     assert "stock_book_1d" in book_suggestions._POLLER_JS
     assert "strat.buy_1d && strat.buy_1d.length" in book_suggestions._POLLER_JS
@@ -655,7 +661,10 @@ def test_overlay_prefers_quoted_tickets_and_restamps_score_only_strip() -> None:
             "date": "2026-09-15",
             "buy_1d": [{"ticker": "MPC", "score": 0.9}],
         }), encoding="utf-8")
-        wrote = ols.overlay(dest, repo=repo)
+        wrote = ols.overlay(
+            dest, repo=repo, date="2026-09-15",
+            when=datetime(2026, 9, 15, 15, 5, tzinfo=ZoneInfo("America/New_York")),
+        )
         assert wrote
         for rel in ("", "factor-mine", "strategy-board", "day-board"):
             base = dest / rel if rel else dest
@@ -692,7 +701,10 @@ def test_overlay_restamps_empty_today_from_open_0930_lock() -> None:
             "date": "2026-09-15",
             "buy_1d": [],
         }), encoding="utf-8")
-        ols.overlay(dest, repo=repo)
+        ols.overlay(
+            dest, repo=repo, date="2026-09-15",
+            when=datetime(2026, 9, 15, 15, 5, tzinfo=ZoneInfo("America/New_York")),
+        )
         tickets = json.loads((dest / "today_strategies.json").read_text())
         strip = json.loads((dest / "today.json").read_text())
         assert tickets["buy_1d"][0]["ticker"] == "MTCH"
@@ -700,6 +712,43 @@ def test_overlay_restamps_empty_today_from_open_0930_lock() -> None:
         assert strip["buy_1d"][0]["ticker"] == "MTCH"
         assert strip["buy_1d"][0]["px"] == 43.04
         assert strip["quote"]["src"] == "elite_live"
+
+
+def test_overlay_ignores_yesterdays_open_0930_lock() -> None:
+    """A 09-15 lock must not keep Pages on MTCH after the 09-16 bell."""
+    from src import overlay_live_strip as ols
+
+    with tempfile.TemporaryDirectory() as d:
+        repo = Path(d)
+        dest = repo / "pages_out"
+        day = repo / "data" / "day_board"
+        day.mkdir(parents=True)
+        (day / "2026-09-15_open_0930.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "clock_legal_for": "2026-09-15",
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+        }), encoding="utf-8")
+        (day / "today_strategies.json").write_text(json.dumps({
+            "date": "2026-09-16",
+            "clock_legal_for": "2026-09-16",
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "AAPL", "px": 221.1, "px_src": "elite_live"}],
+        }), encoding="utf-8")
+        (day / "today.json").write_text(json.dumps({
+            "date": "2026-09-16",
+            "buy_1d": [{"ticker": "AAPL", "score": 0.4}],
+        }), encoding="utf-8")
+        ols.overlay(
+            dest, repo=repo, date="2026-09-16",
+            when=datetime(2026, 9, 16, 9, 35, tzinfo=ZoneInfo("America/New_York")),
+        )
+        tickets = json.loads((dest / "today_strategies.json").read_text())
+        strip = json.loads((dest / "today.json").read_text())
+        assert tickets["buy_1d"][0]["ticker"] == "AAPL"
+        assert tickets["buy_1d"][0]["px"] == 221.1
+        assert strip["buy_1d"][0]["ticker"] == "AAPL"
+        assert strip["buy_1d"][0]["px"] == 221.1
 
 
 def main() -> None:
@@ -724,6 +773,7 @@ def main() -> None:
     test_day_board_write_json_keeps_elite_when_news_parse_lands()
     test_overlay_prefers_quoted_tickets_and_restamps_score_only_strip()
     test_overlay_restamps_empty_today_from_open_0930_lock()
+    test_overlay_ignores_yesterdays_open_0930_lock()
     print("ok")
 
 

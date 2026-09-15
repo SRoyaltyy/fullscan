@@ -14,9 +14,12 @@ from __future__ import annotations
 import argparse
 import json
 import shutil
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parent.parent
+ET = ZoneInfo("America/New_York")
 
 DEST_REL = (
     ".",
@@ -30,6 +33,33 @@ DEST_REL = (
     "sleeve-merge",
     "dashboard/sleeve-merge",
 )
+
+
+def session_date(when: datetime | None = None) -> str:
+    t = when or datetime.now(ET)
+    if t.tzinfo is None:
+        t = t.replace(tzinfo=ET)
+    else:
+        t = t.astimezone(ET)
+    return t.date().isoformat()
+
+
+def after_bell(when: datetime | None = None) -> bool:
+    t = when or datetime.now(ET)
+    if t.tzinfo is None:
+        t = t.replace(tzinfo=ET)
+    else:
+        t = t.astimezone(ET)
+    return t.hour > 9 or (t.hour == 9 and t.minute >= 30)
+
+
+def _legal_date(data: dict) -> str:
+    return str(
+        data.get("clock_legal_for")
+        or data.get("session_open")
+        or data.get("date")
+        or ""
+    )
 
 
 def _load(path: Path) -> dict:
@@ -55,8 +85,12 @@ def _row0(rows: object) -> dict:
     return {}
 
 
-def tickets_score(data: dict) -> int:
+def tickets_score(data: dict, want_date: str | None = None,
+                  *, require_today: bool = False) -> int:
     if not data:
+        return -1
+    legal = _legal_date(data)
+    if require_today and want_date and legal and legal != want_date:
         return -1
     sb = (data.get("strategies") or {}).get("stock_book_1d") or {}
     buys = data.get("buy_1d") or sb.get("buy") or []
@@ -74,11 +108,17 @@ def tickets_score(data: dict) -> int:
         score += 2
     if data.get("date"):
         score += 1
+    if want_date and legal == want_date:
+        score += 20
     return score
 
 
-def strip_score(data: dict) -> int:
+def strip_score(data: dict, want_date: str | None = None,
+                *, require_today: bool = False) -> int:
     if not data:
+        return -1
+    legal = _legal_date(data)
+    if require_today and want_date and legal and legal != want_date:
         return -1
     row = _row0(data.get("buy_1d"))
     score = 0
@@ -90,6 +130,8 @@ def strip_score(data: dict) -> int:
         score += 10
     if data.get("date"):
         score += 1
+    if want_date and legal == want_date:
+        score += 20
     return score
 
 
@@ -131,9 +173,11 @@ def restamp_strip(strip: dict, tickets: dict) -> dict:
     return out
 
 
-def candidate_ticket_paths(repo: Path) -> list[Path]:
-    locked = sorted((repo / "data" / "day_board").glob("*_open_0930.json"))
-    return locked + [
+def candidate_ticket_paths(repo: Path, date: str | None = None) -> list[Path]:
+    want = date or session_date()
+    locked = repo / "data" / "day_board" / f"{want}_open_0930.json"
+    paths = [locked] if locked.is_file() else []
+    return paths + [
         repo / "data" / "day_board" / "today_strategies.json",
         repo / "dashboard" / "today_strategies.json",
         repo / "dashboard" / "factor-mine" / "today_strategies.json",
@@ -150,13 +194,23 @@ def candidate_strip_paths(repo: Path) -> list[Path]:
     ]
 
 
-def overlay(dest_root: Path, repo: Path | None = None) -> list[str]:
+def overlay(dest_root: Path, repo: Path | None = None,
+            date: str | None = None, when: datetime | None = None) -> list[str]:
     """Write the winning today.json + today_strategies.json under dest_root."""
     repo = repo or ROOT
     dest_root = Path(dest_root)
-    t_path, tickets = pick_best(candidate_ticket_paths(repo), tickets_score)
-    s_path, strip = pick_best(candidate_strip_paths(repo), strip_score)
-    if tickets and strip_score(strip) < 100 and tickets_score(tickets) >= 100:
+    want = date or session_date(when)
+    require = after_bell(when)
+    t_path, tickets = pick_best(
+        candidate_ticket_paths(repo, want),
+        lambda d: tickets_score(d, want, require_today=require),
+    )
+    s_path, strip = pick_best(
+        candidate_strip_paths(repo),
+        lambda d: strip_score(d, want, require_today=require),
+    )
+    if tickets and strip_score(strip, want, require_today=require) < 100 and \
+            tickets_score(tickets, want, require_today=require) >= 100:
         strip = restamp_strip(strip, tickets)
         s_path = None
     wrote: list[str] = []
@@ -190,9 +244,10 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--dest", required=True, help="pages_out directory")
     ap.add_argument("--repo", default="", help="repo root (default: this tree)")
+    ap.add_argument("--date", default="", help="YYYY-MM-DD session (default: today ET)")
     args = ap.parse_args(argv)
     repo = Path(args.repo) if args.repo else ROOT
-    wrote = overlay(Path(args.dest), repo=repo)
+    wrote = overlay(Path(args.dest), repo=repo, date=args.date or None)
     if not wrote:
         print("WARN: no live strip to overlay", flush=True)
         return 0

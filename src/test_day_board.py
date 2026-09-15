@@ -198,6 +198,7 @@ def test_day_board_html_has_raw_poll() -> None:
     assert 'indexOf("elite_live")===0' in html
     assert "function firstOk" in html
     assert "function ticketsLookLive" in html
+    assert "function sessionDate" in html
     assert '"today_strategies.json"' in html
     assert "earlyBuys" in html
     assert "!buys && !sells && !afterBell()" in html
